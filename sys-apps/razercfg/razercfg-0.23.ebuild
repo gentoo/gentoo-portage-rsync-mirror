@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.22.ebuild,v 1.1 2014/01/03 19:14:35 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.23.ebuild,v 1.1 2014/02/23 22:04:05 joker Exp $
 
 EAPI=5
 
-inherit cmake-utils multilib eutils udev
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit cmake-utils multilib eutils udev python-single-r1
 
 DESCRIPTION="Utility for advanced configuration of Razer mice (DeathAdder, Krait, Lachesis)"
 
@@ -17,8 +19,7 @@ IUSE="+pm-utils qt4"
 
 RDEPEND="${DEPEND}
 	pm-utils? ( sys-power/pm-utils )
-	qt4? ( dev-python/PyQt4 )
-	dev-lang/python"
+	qt4? ( dev-python/PyQt4 )"
 
 DEPEND="${DEPEND}"
 
@@ -46,6 +47,8 @@ src_install() {
 	fi
 
 	use pm-utils || rm "${D}"/usr/$(get_libdir)/pm-utils/sleep.d/80razer
+
+	python_fix_shebang "${ED}"usr/bin
 }
 
 pkg_postinst() {

@@ -1,9 +1,9 @@
 DEFINED_PHASES=compile configure install prepare setup unpack
-DEPEND=>=dev-vcs/git-1.8.2.1 dev-vcs/git
+DEPEND=dev-vcs/git dev-vcs/git
 DESCRIPTION=The NUMA daemon that manages application locality
 EAPI=5
 HOMEPAGE=http://fedoraproject.org/wiki/Features/numad
 LICENSE=LGPL-2.1
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	7b45ecf6493d63a9e9f4cb5940d49ac2	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6482a2e3a72de5770f0b611cfe68f62d

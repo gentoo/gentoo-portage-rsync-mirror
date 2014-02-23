@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtxmlpatterns:4 !media-libs/herqq >=dev-vcs/git-1.8.2.1
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtxmlpatterns:4 !media-libs/herqq dev-vcs/git
 DESCRIPTION=A software library for building UPnP devices, fork of herqq
 EAPI=5
 HOMEPAGE=https://github.com/0xd34df00d/hupnp-ng
 LICENSE=LGPL-3
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtxmlpatterns:4 !media-libs/herqq
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	7b45ecf6493d63a9e9f4cb5940d49ac2	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=699f3583c81716cb797543567b866046

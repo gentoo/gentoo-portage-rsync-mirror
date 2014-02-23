@@ -7,5 +7,5 @@ IUSE=savedconfig
 LICENSE=MIT
 RDEPEND=!sci-chemistry/surf dev-libs/glib net-libs/libsoup net-libs/webkit-gtk:2 x11-libs/gtk+:2 x11-libs/libX11 x11-apps/xprop x11-misc/dmenu
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	fac675dcccf94392371a6abee62d909f	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	7b45ecf6493d63a9e9f4cb5940d49ac2	multilib	fac675dcccf94392371a6abee62d909f	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2fac42d4d77cbcfa5690a5752f968234

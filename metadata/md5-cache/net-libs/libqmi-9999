@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=>=dev-libs/glib-2.32 doc? ( dev-util/gtk-doc ) virtual/pkgconfig dev-util/gtk-doc >=dev-vcs/git-1.8.2.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/glib-2.32 doc? ( dev-util/gtk-doc ) virtual/pkgconfig dev-util/gtk-doc dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=QMI modem protocol helper library
 EAPI=5
 HOMEPAGE=http://cgit.freedesktop.org/libqmi/
@@ -7,5 +7,5 @@ IUSE=doc static-libs test
 LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.32
 SLOT=0
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	7b45ecf6493d63a9e9f4cb5940d49ac2	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=eec8d4d4b6ca064ce5e9472b389e9d5a

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=X? ( dev-qt/qthelp:4 dev-python/markdown2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[sqlite?] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite?] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=dev-vcs/git-1.8.2.1
+DEPEND=X? ( dev-qt/qthelp:4 dev-python/markdown2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[sqlite?] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite?] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-vcs/git
 DESCRIPTION=Check websites for broken links
 EAPI=5
 HOMEPAGE=http://wummel.github.com/linkchecker/ http://pypi.python.org/pypi/linkchecker/
@@ -9,5 +9,5 @@ RDEPEND=dev-python/dnspython[python_targets_python2_6(-)?,python_targets_python2
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 RESTRICT=test
 SLOT=0
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	f089608c770d9ad72a2c92b547d2b20d	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	7b45ecf6493d63a9e9f4cb5940d49ac2	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=037ee6470f303d45ca1b5177b0e59a31

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.23 2013/11/15 23:03:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.24 2014/02/23 22:05:55 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -8,8 +8,7 @@
 # @BLURB: Eclass for fetching and unpacking git repositories.
 # @DESCRIPTION:
 # Third generation eclass for easing maitenance of live ebuilds using
-# git as remote repository. The eclass supports lightweight (shallow)
-# clones and bare clones of submodules.
+# git as remote repository.
 
 case "${EAPI:-0}" in
 	0|1|2|3|4|5)
@@ -30,7 +29,7 @@ EXPORT_FUNCTIONS src_unpack
 if [[ ! ${_GIT_R3} ]]; then
 
 if [[ ! ${_INHERITED_BY_GIT_2} ]]; then
-	DEPEND=">=dev-vcs/git-1.8.2.1"
+	DEPEND="dev-vcs/git"
 fi
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
@@ -82,18 +81,6 @@ fi
 # The directory to check the git sources out to.
 #
 # EGIT_CHECKOUT_DIR=${WORKDIR}/${P}
-
-# @ECLASS-VARIABLE: EGIT_NONSHALLOW
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Disable performing shallow fetches/clones. Shallow clones have
-# a fair number of limitations. Therefore, if you'd like the eclass to
-# perform complete clones instead, set this to a non-null value.
-#
-# This variable can be set in make.conf and ebuilds. The make.conf
-# value specifies user-specific default, while ebuilds may use it
-# to force deep clones when the server does not support shallow clones
-# (e.g. Google Code).
 
 # @FUNCTION: _git-r3_env_setup
 # @INTERNAL
@@ -217,14 +204,13 @@ _git-r3_set_gitdir() {
 	fi
 
 	addwrite "${EGIT3_STORE_DIR}"
+	if [[ -e ${GIT_DIR}/shallow ]]; then
+		einfo "${GIT_DIR} was a shallow clone, recreating..."
+		rm -r "${GIT_DIR}" || die
+	fi
 	if [[ ! -d ${GIT_DIR} ]]; then
 		mkdir "${GIT_DIR}" || die
 		git init --bare || die
-
-		if [[ ! ${EGIT_NONSHALLOW} ]]; then
-			# avoid auto-unshallow :)
-			touch "${GIT_DIR}"/shallow || die
-		fi
 	fi
 }
 
@@ -265,93 +251,6 @@ _git-r3_set_submodules() {
 				submodule."${subname}".path || die)"
 		)
 	done < <(echo "${data}" | git config -f /dev/fd/0 -l || die)
-}
-
-# @FUNCTION: _git-r3_smart_fetch
-# @USAGE: <git-fetch-args>...
-# @DESCRIPTION:
-# Try fetching without '--depth' and switch to '--depth 1' if that
-# will involve less objects fetched.
-_git-r3_smart_fetch() {
-	debug-print-function ${FUNCNAME} "$@"
-
-	local sed_regexp='.*Counting objects: \([0-9]*\), done\..*'
-
-	# start the main fetch
-	local cmd=( git fetch --progress "${@}" )
-	echo "${cmd[@]}" >&2
-
-	# we copy the output to the 'sed' pipe for parsing. whenever sed finds
-	# the process count, it quits quickly to avoid delays in writing it.
-	# then, we start a dummy 'cat' to keep the pipe alive
-
-	"${cmd[@]}" 2>&1 \
-		| tee >(
-			sed -n -e "/${sed_regexp}/{s/${sed_regexp}/\1/p;q}" \
-				> "${T}"/git-r3_main.count
-			exec cat >/dev/null
-		) &
-	local main_pid=${!}
-
-	# start the helper process
-	_git-r3_sub_fetch() {
-		# wait for main fetch to get object count; if the server doesn't
-		# output it, we won't even launch the parallel process
-		while [[ ! -s ${T}/git-r3_main.count ]]; do
-			sleep 0.25
-		done
-
-		# ok, let's see if parallel fetch gives us smaller count
-		# --dry-run will prevent it from writing to the local clone
-		# and sed should terminate git with SIGPIPE
-		local sub_count=$(git fetch --progress --dry-run --depth 1 "${@}" 2>&1 \
-			| sed -n -e "/${sed_regexp}/{s/${sed_regexp}/\1/p;q}")
-		local main_count=$(<"${T}"/git-r3_main.count)
-
-		# let's be real sure that '--depth 1' will be good for us.
-		# note that we have purely objects counts, and '--depth 1'
-		# may involve much bigger objects
-		if [[ ${main_count} && ${main_count} -ge $(( sub_count * 3/2 )) ]]
-		then
-			# signal that we want shallow fetch instead,
-			# and terminate the non-shallow fetch process
-			touch "${T}"/git-r3_want_shallow || die
-			kill ${main_pid} &>/dev/null
-			exit 0
-		fi
-
-		exit 1
-	}
-	_git-r3_sub_fetch "${@}" &
-	local sub_pid=${!}
-
-	# wait for main process to terminate, either of its own
-	# or by signal from subprocess
-	wait ${main_pid}
-	local main_ret=${?}
-
-	# wait for subprocess to terminate, killing it if necessary.
-	# if main fetch finished before it, there's no point in keeping
-	# it alive. if main fetch was killed by it, it's done anyway
-	kill ${sub_pid} &>/dev/null
-	wait ${sub_pid}
-
-	# now see if subprocess wanted to tell us something...
-	if [[ -f ${T}/git-r3_want_shallow ]]; then
-		rm "${T}"/git-r3_want_shallow || die
-
-		# if fetch finished already (wasn't killed), ignore it
-		[[ ${main_ret} -eq 0 ]] && return 0
-
-		# otherwise, restart as shallow fetch
-		einfo "Restarting fetch using --depth 1 to save bandwidth ..."
-		local cmd=( git fetch --progress --depth 1 "${@}" )
-		echo "${cmd[@]}" >&2
-		"${cmd[@]}"
-		main_ret=${?}
-	fi
-
-	return ${main_ret}
 }
 
 # @FUNCTION: _git-r3_is_local_repo
@@ -413,7 +312,7 @@ git-r3_fetch() {
 	local branch=${EGIT_BRANCH:+refs/heads/${EGIT_BRANCH}}
 	local remote_ref=${2:-${EGIT_COMMIT:-${branch:-HEAD}}}
 	local local_id=${3:-${CATEGORY}/${PN}/${SLOT%/*}}
-	local local_ref=refs/heads/${local_id}/__main__
+	local local_ref=refs/git-r3/${local_id}/__main__
 
 	[[ ${repos[@]} ]] || die "No URI provided and EGIT_REPO_URI unset"
 
@@ -423,93 +322,36 @@ git-r3_fetch() {
 	# try to fetch from the remote
 	local r success
 	for r in "${repos[@]}"; do
-		einfo "Fetching ${remote_ref} from ${r} ..."
+		einfo "Fetching ${r} ..."
 
-		local is_branch lookup_ref
-		if [[ ${remote_ref} == refs/heads/* || ${remote_ref} == HEAD ]]
-		then
-			is_branch=1
-			lookup_ref=${remote_ref}
-		else
-			# ls-remote by commit is going to fail anyway,
-			# so we may as well pass refs/tags/ABCDEF...
-			lookup_ref=refs/tags/${remote_ref}
-		fi
-
-		# first, try ls-remote to see if ${remote_ref} is a real ref
-		# and not a commit id. if it succeeds, we can pass ${remote_ref}
-		# to 'fetch'. otherwise, we will just fetch everything
-
-		# split on whitespace
-		local ref=(
-			$(git ls-remote "${r}" "${lookup_ref}" || echo __FAIL__)
+		local fetch_command=(
+			git fetch --prune "${r}"
+			# mirror the remote branches as local branches
+			"refs/heads/*:refs/heads/*"
+			# pull tags explicitly in order to prune them properly
+			"refs/tags/*:refs/tags/*"
 		)
 
-		# normally, ref[0] is a hash, so we can do magic strings here
-		[[ ${ref[0]} == __FAIL__ ]] && continue
-
-		local nonshallow=${EGIT_NONSHALLOW}
-		local ref_param=()
-		if [[ ! ${ref[0]} ]]; then
-			nonshallow=1
-		fi
-
-		# trying to do a shallow clone of a local repo makes git try to
-		# write to the repo. we don't want that to happen.
-		_git-r3_is_local_repo "${r}" && nonshallow=1
-
-		# 1. if we need a non-shallow clone and we have a shallow one,
-		#    we need to unshallow it explicitly.
-		# 2. if we want a shallow clone, we just pass '--depth 1'
-		#    to the first fetch in the repo. passing '--depth'
-		#    to further requests usually results in more data being
-		#    downloaded than without it.
-		# 3. if we update a shallow clone, we try without '--depth'
-		#    first since that usually transfers less data. however,
-		#    we use git-r3_smart_fetch that can switch into '--depth 1'
-		#    if that looks beneficial.
-
-		local fetch_command=( git fetch )
-		if [[ ${nonshallow} ]]; then
-			if [[ -f ${GIT_DIR}/shallow ]]; then
-				ref_param+=( --unshallow )
-			fi
-			# fetch all branches
-			ref_param+=( "refs/heads/*:refs/remotes/origin/*" )
-		else
-			# 'git show-ref --heads' returns 1 when there are no branches
-			if ! git show-ref --heads -q; then
-				ref_param+=( --depth 1 )
-			else
-				fetch_command=( _git-r3_smart_fetch )
-			fi
-		fi
-
-		# now, another important thing. we may only fetch a remote
-		# branch directly to a local branch. Otherwise, we need to fetch
-		# the commit and re-create the branch on top of it.
-
-		if [[ ${ref[0]} ]]; then
-			if [[ ${is_branch} ]]; then
-				ref_param+=( -f "${remote_ref}:${local_id}/__main__" )
-			else
-				ref_param+=( "refs/tags/${remote_ref}" )
-			fi
-		fi
-
-		# if ${remote_ref} is branch or tag, ${ref[@]} will contain
-		# the respective commit id. otherwise, it will be an empty
-		# array, so the following won't evaluate to a parameter.
-		set -- "${fetch_command[@]}" --no-tags "${r}" "${ref_param[@]}"
+		set -- "${fetch_command[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
-			if [[ ! ${is_branch} ]]; then
-				set -- git branch -f "${local_id}/__main__" \
-					"${ref[0]:-${remote_ref}}"
-				echo "${@}" >&2
-				if ! "${@}"; then
-					die "Creating branch for ${remote_ref} failed (wrong ref?)."
-				fi
+			# now let's see what the user wants from us
+			local full_remote_ref=$(
+				git rev-parse --verify --symbolic-full-name "${remote_ref}"
+			)
+
+			if [[ ${full_remote_ref} ]]; then
+				# when we are given a ref, create a symbolic ref
+				# so that we preserve the actual argument
+				set -- git symbolic-ref "${local_ref}" "${full_remote_ref}"
+			else
+				# otherwise, we were likely given a commit id
+				set -- git update-ref --no-deref "${local_ref}" "${remote_ref}"
+			fi
+
+			echo "${@}" >&2
+			if ! "${@}"; then
+				die "Referencing ${remote_ref} failed (wrong ref?)."
 			fi
 
 			success=1
@@ -581,53 +423,53 @@ git-r3_checkout() {
 	local out_dir=${2:-${EGIT_CHECKOUT_DIR:-${WORKDIR}/${P}}}
 	local local_id=${3:-${CATEGORY}/${PN}/${SLOT%/*}}
 
-	local -x GIT_DIR GIT_WORK_TREE
+	local -x GIT_DIR
 	_git-r3_set_gitdir "${repos[0]}"
-	GIT_WORK_TREE=${out_dir}
-	mkdir -p "${GIT_WORK_TREE}" || die
 
 	einfo "Checking out ${repos[0]} to ${out_dir} ..."
 
-	if ! git cat-file -e refs/heads/"${local_id}"/__main__
-	then
+	if ! git cat-file -e refs/git-r3/"${local_id}"/__main__; then
 		if [[ ${EVCS_OFFLINE} ]]; then
 			die "No local clone of ${repos[0]}. Unable to work with EVCS_OFFLINE."
 		else
 			die "Logic error: no local clone of ${repos[0]}. git-r3_fetch not used?"
 		fi
 	fi
-
-	# Note: this is a hack to avoid parallel checkout issues.
-	# I will try to handle it without locks when I have more time.
-	local lockfile=${GIT_DIR}/.git-r3_checkout_lock
-	local lockfile_l=${lockfile}.${BASHPID}
-	touch "${lockfile_l}" || die
-	until ln "${lockfile_l}" "${lockfile}" &>/dev/null; do
-		sleep 1
-	done
-	rm "${lockfile_l}" || die
-
-	set -- git checkout -f "${local_id}"/__main__ .
-	echo "${@}" >&2
-	"${@}"
-	local ret=${?}
-
-	# Remove the lock!
-	rm "${lockfile}" || die
-
-	[[ ${ret} == 0 ]] || die "git checkout ${local_id}/__main__ failed"
-
-	# diff against previous revision (if any)
-	local new_commit_id=$(git rev-parse --verify "${local_id}"/__main__)
-	local old_commit_id=$(
-		git rev-parse --verify "${local_id}"/__old__ 2>/dev/null
+	local remote_ref=$(
+		git symbolic-ref --quiet refs/git-r3/"${local_id}"/__main__
+	)
+	local new_commit_id=$(
+		git rev-parse --verify refs/git-r3/"${local_id}"/__main__
 	)
 
+	set -- git clone --quiet --shared --no-checkout "${GIT_DIR}" "${out_dir}"/
+	echo "${@}" >&2
+	"${@}" || die "git clone (for checkout) failed"
+
+	git-r3_sub_checkout() {
+		local -x GIT_DIR=${out_dir}/.git
+		local -x GIT_WORK_TREE=${out_dir}
+
+		set -- git checkout --quiet
+		if [[ ${remote_ref} ]]; then
+			set -- "${@}" "${remote_ref#refs/heads/}"
+		else
+			set -- "${@}" "${new_commit_id}"
+		fi
+		echo "${@}" >&2
+		"${@}" || die "git checkout ${remote_ref:-${new_commit_id}} failed"
+	}
+	git-r3_sub_checkout
+
+	local old_commit_id=$(
+		git rev-parse --quiet --verify refs/git-r3/"${local_id}"/__old__
+	)
 	if [[ ! ${old_commit_id} ]]; then
 		echo "GIT NEW branch -->"
 		echo "   repository:               ${repos[0]}"
 		echo "   at the commit:            ${new_commit_id}"
 	else
+		# diff against previous revision
 		echo "GIT update -->"
 		echo "   repository:               ${repos[0]}"
 		# write out message based on the revisions
@@ -641,13 +483,13 @@ git-r3_checkout() {
 			echo "   at the commit:            ${new_commit_id}"
 		fi
 	fi
-	git branch -f "${local_id}"/{__old__,__main__} || die
+	git update-ref --no-deref refs/git-r3/"${local_id}"/{__old__,__main__} || die
 
 	# recursively checkout submodules
-	if [[ -f ${GIT_WORK_TREE}/.gitmodules ]]; then
+	if [[ -f ${out_dir}/.gitmodules ]]; then
 		local submodules
 		_git-r3_set_submodules \
-			"$(<"${GIT_WORK_TREE}"/.gitmodules)"
+			"$(<"${out_dir}"/.gitmodules)"
 
 		while [[ ${submodules[@]} ]]; do
 			local subname=${submodules[0]}
@@ -658,7 +500,7 @@ git-r3_checkout() {
 				url=${repos[0]%%/}/${url}
 			fi
 
-			git-r3_checkout "${url}" "${GIT_WORK_TREE}/${path}" \
+			git-r3_checkout "${url}" "${out_dir}/${path}" \
 				"${local_id}/${subname}"
 
 			submodules=( "${submodules[@]:3}" ) # shift
@@ -668,11 +510,6 @@ git-r3_checkout() {
 	# keep this *after* submodules
 	export EGIT_DIR=${GIT_DIR}
 	export EGIT_VERSION=${new_commit_id}
-
-	# create a fake '.git' directory to satisfy 'git rev-parse HEAD'
-	GIT_DIR=${GIT_WORK_TREE}/.git
-	git init || die
-	echo "${EGIT_VERSION}" > "${GIT_WORK_TREE}"/.git/HEAD || die
 }
 
 # @FUNCTION: git-r3_peek_remote_ref
