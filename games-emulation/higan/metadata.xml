@@ -13,6 +13,7 @@
 			Compile a binary with balanced optimization</flag>
 		<flag name='profile_performance'>
 			Compile a binary optimized for performance</flag>
+		<flag name='udev'>Enable udev based input</flag>
 	</use>
 </pkgmetadata>
 
