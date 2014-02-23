@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.222 2014/02/22 03:51:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.223 2014/02/23 15:43:31 floppym Exp $
+
+  23 Feb 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  systemd-9999.ebuild:
+  Remove networkd use flag in favor of a runtime switch.
 
   22 Feb 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Add build-time dep on docbook-xml-dtd:4.5, thanks to ssuomien.

@@ -16,7 +16,6 @@
 		<flag name="keymap">Map custom hardware's multimedia keys</flag>
 		<flag name='kdbus'>Connect to kernel dbus (KDBUS) instead of userspace dbus if available</flag>
 		<flag name='kmod'>Enable kernel module loading via <pkg>sys-apps/kmod</pkg></flag>
-		<flag name='networkd'>Enable systemd's built-in network management daemon</flag>
 		<flag name='openrc'>Depend on <pkg>sys-fs/udev-init-scripts</pkg></flag>
 		<flag name='qrcode'>Enable qrcode output support in journal</flag>
 		<flag name='seccomp'>Enable system call filtering via seccomp</flag>

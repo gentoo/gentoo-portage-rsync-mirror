@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.87 2014/02/22 03:51:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.88 2014/02/23 15:43:31 floppym Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/1"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
-	kdbus +kmod lzma networkd pam policykit python qrcode +seccomp selinux tcpd
+	kdbus +kmod lzma pam policykit python qrcode +seccomp selinux tcpd
 	test vanilla xattr"
 
 MINKV="3.0"
@@ -188,7 +188,6 @@ multilib_src_configure() {
 		$(use_enable kdbus)
 		$(use_enable kmod)
 		$(use_enable lzma xz)
-		$(use_enable networkd)
 		$(use_enable pam)
 		$(use_enable policykit polkit)
 		$(use_enable python python-devel)
