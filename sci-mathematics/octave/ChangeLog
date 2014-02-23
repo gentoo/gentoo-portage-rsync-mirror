@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.155 2014/02/20 09:54:46 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.156 2014/02/23 00:04:30 gienah Exp $
+
+  23 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.8.1_rc3.ebuild:
+  Thanks to Andreas Proteus for the fix and reporting: fix Bug 502164 - sci-
+  mathematics/octave-3.8.1_rc3 USE=java fails to install octave.jar (file not
+  found)
 
 *octave-3.8.1_rc3 (20 Feb 2014)
 
