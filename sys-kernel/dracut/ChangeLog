@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.153 2014/02/17 11:42:11 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.154 2014/02/23 17:07:41 aidecoe Exp $
+
+*dracut-036-r2 (23 Feb 2014)
+
+  23 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-036-r2.ebuild,
+  +files/036-0007-Added-missing-quotes.patch:
+  Fixed bug #502064 and bug #501566.
+
+  Commit on behalf of Alexander Tsoy <alexander@tsoy.me>.
 
 *dracut-036-r1 (17 Feb 2014)
 

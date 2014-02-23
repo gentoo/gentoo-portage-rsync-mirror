@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.164 2014/02/23 16:08:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.165 2014/02/23 17:11:26 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> polkit-0.112-r1.ebuild:
+  x86 stable, bug #500758
 
   23 Feb 2014; Pacho Ramos <pacho@gentoo.org> polkit-0.112-r1.ebuild:
   amd64 stable, bug #500758

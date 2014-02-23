@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.136 2014/02/23 16:07:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.137 2014/02/23 17:10:37 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> spidermonkey-17.0.0-r2.ebuild:
+  x86 stable, bug #500758
 
   23 Feb 2014; Pacho Ramos <pacho@gentoo.org> spidermonkey-17.0.0-r2.ebuild:
   amd64 stable, bug #500758
