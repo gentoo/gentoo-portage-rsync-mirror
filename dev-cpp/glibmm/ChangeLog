@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.206 2014/02/22 14:33:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.207 2014/02/23 09:31:48 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> glibmm-2.38.1.ebuild:
+  Revert wrong commit
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> glibmm-2.38.1.ebuild:
   arch stable, bug 888

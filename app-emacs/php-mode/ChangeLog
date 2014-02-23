@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/php-mode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.32 2009/11/24 21:09:12 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.33 2014/02/23 09:38:33 ulm Exp $
+
+  23 Feb 2014; Ulrich Müller <ulm@gentoo.org> php-mode-1.5.0.ebuild,
+  +files/50php-mode-gentoo.el, -files/51php-mode-gentoo.el:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely. Move site-init file
+  to canonical name.
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   php-mode-1.5.0.ebuild:
