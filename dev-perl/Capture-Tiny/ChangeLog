@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Capture-Tiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.50 2014/02/15 16:15:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.51 2014/02/23 14:59:14 naota Exp $
+
+  23 Feb 2014; Naohiro Aota <naota@gentoo.org> Capture-Tiny-0.240.0.ebuild:
+  Add ~x86-fbsd wrt bug #501346
 
   15 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> -Capture-Tiny-0.170.0.ebuild,
   -Capture-Tiny-0.210.0.ebuild:

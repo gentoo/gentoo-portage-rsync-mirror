@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.61 2014/02/22 19:24:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.62 2014/02/23 15:00:03 naota Exp $
+
+  23 Feb 2014; Naohiro Aota <naota@gentoo.org> Try-Tiny-0.190.0.ebuild:
+  Add ~x86-fbsd wrt bug #501346
 
   22 Feb 2014; Markus Meier <maekke@gentoo.org> Try-Tiny-0.180.0.ebuild:
   arm stable, bug #495496

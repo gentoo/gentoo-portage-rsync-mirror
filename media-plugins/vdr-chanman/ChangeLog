@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-chanman
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/ChangeLog,v 1.4 2013/03/17 15:32:52 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-chanman/ChangeLog,v 1.5 2014/02/23 14:32:26 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-chanman-0.0.6.ebuild:
+  cleanup vdr-plugin.eclass depended ebuild
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

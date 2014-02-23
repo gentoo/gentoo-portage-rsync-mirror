@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/scoop
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scoop/ChangeLog,v 1.1 2014/02/23 14:47:50 slis Exp $
+
+*scoop-0.7.0 (23 Feb 2014)
+
+  23 Feb 2014; Sławek Lis <slis@gentoo.org> +metadata.xml, +scoop-0.7.0.ebuild:
+  Added scoop package

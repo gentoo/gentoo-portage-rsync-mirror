@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Name
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.26 2014/02/01 23:36:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.27 2014/02/23 14:53:17 naota Exp $
+
+  23 Feb 2014; Naohiro Aota <naota@gentoo.org> Sub-Name-0.50.0.ebuild:
+  Add ~x86-fbsd.
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Sub-Name-0.50.0.ebuild:
   Add arm64 love.
