@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.6 2013/09/21 13:58:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.7 2014/02/23 11:57:34 ago Exp $
 
 EAPI=5
 
@@ -10,14 +10,15 @@ inherit cmake-utils git-2
 
 DESCRIPTION="A suite for man in the middle attacks"
 HOMEPAGE="http://ettercap.sourceforge.net https://github.com/Ettercap/ettercap"
-EGIT_REPO_URI="https://github.com/Ettercap/ettercap.git"
+EGIT_REPO_URI="https://github.com/Ettercap/${PN}.git"
 
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk ipv6 ncurses +plugins ssl"
+IUSE="gtk ipv6 ncurses +plugins"
 
-RDEPEND="dev-libs/libpcre
+RDEPEND="dev-libs/openssl
+	dev-libs/libpcre
 	net-libs/libnet:1.1
 	>=net-libs/libpcap-0.8.1
 	sys-libs/zlib
@@ -34,8 +35,8 @@ RDEPEND="dev-libs/libpcre
 	plugins? (
 		>=net-misc/curl-7.26.0
 		sys-devel/libtool
-	)
-	ssl? ( dev-libs/openssl )"
+	)"
+
 DEPEND="${RDEPEND}
 	app-text/ghostscript-gpl
 	sys-devel/flex
@@ -49,9 +50,9 @@ src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_enable ncurses CURSES)
 		$(cmake-utils_use_enable gtk)
-		$(cmake-utils_use_enable ssl)
 		$(cmake-utils_use_enable plugins)
 		$(cmake-utils_use_enable ipv6)
+		-DENABLE_SSL=ON
 		-DINSTALL_SYSCONFDIR="${EROOT}"etc
 	)
 	cmake-utils_src_configure
