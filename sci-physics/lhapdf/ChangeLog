@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/lhapdf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.24 2013/11/06 05:28:12 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.25 2014/02/23 02:16:37 bicatali Exp $
+
+*lhapdf-6.0.5 (23 Feb 2014)
+
+  23 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +lhapdf-6.0.5.ebuild:
+  Version bump
 
   06 Nov 2013; Patrick Lauer <patrick@gentoo.org> lhapdf-6.0.4.ebuild:
   Whitespace
