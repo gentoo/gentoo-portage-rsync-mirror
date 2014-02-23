@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-xine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/ChangeLog,v 1.5 2014/02/22 14:03:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/ChangeLog,v 1.6 2014/02/23 21:10:57 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-xine-0.9.4.ebuild:
+  cleanup old, depended on vdr-plugin.eclass
 
   22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Remove myself as maintainer

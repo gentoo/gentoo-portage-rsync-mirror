@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.9.ebuild,v 1.3 2012/04/24 10:15:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.9.ebuild,v 1.4 2014/02/23 21:17:45 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit eutils vdr-plugin
+inherit vdr-plugin-2
 
 VERSION="502" # every bump, new version
 
@@ -23,7 +23,7 @@ DEPEND=">=media-video/vdr-1.6
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	vdr-plugin_pkg_setup
+	vdr-plugin-2_pkg_setup
 
 	if ! getent group lp | grep -q vdr; then
 		echo
@@ -42,7 +42,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	sed -i "s:/usr/local:/usr:" Makefile
 
@@ -54,8 +54,7 @@ src_prepare() {
 }
 
 src_install() {
-
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insopts -m0644 -ovdr -gvdr
 
@@ -94,7 +93,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	elog "Add additional options in /etc/conf.d/vdr.graphlcd"
 	elog

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-freecell/vdr-freecell-0.0.2-r2.ebuild,v 1.5 2011/01/29 00:19:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-freecell/vdr-freecell-0.0.2-r2.ebuild,v 1.6 2014/02/23 21:15:46 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: play 'Freecell' on the On Screen Display"
 HOMEPAGE="http://www.magoa.net/linux/index.php?view=freecell"
@@ -24,7 +24,7 @@ PATCHES=("${FILESDIR}/${PN}-time_ms.diff"
 		"${FILESDIR}/${P}_vdr-1.5.4-compile.diff")
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insopts -m0644 -ovdr -gvdr
 	insinto /usr/share/vdr/freecell

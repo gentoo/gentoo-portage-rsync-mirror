@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-osdserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdserver/ChangeLog,v 1.3 2014/02/23 20:33:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdserver/ChangeLog,v 1.4 2014/02/23 21:21:01 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-osdserver-0.1.1.ebuild:
+  cleanup old
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-osdserver-0.1.2.ebuild:

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wirbelscan/vdr-wirbelscan-0.0.7.ebuild,v 1.1 2011/09/15 14:18:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wirbelscan/vdr-wirbelscan-0.0.7.ebuild,v 1.2 2014/02/23 21:05:05 hd_brummy Exp $
 
-EAPI=3
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: Scan for channels on DVB-? and on PVR*-Cards"
 HOMEPAGE="http://wirbel.htpc-forum.de/wirbelscan/index2.html"
@@ -23,9 +23,7 @@ DEPEND="media-video/vdr
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
-	fix_vdr_libsi_include scanfilter.h
-	fix_vdr_libsi_include scanfilter.c
-	fix_vdr_libsi_include caDescriptor.h
+	fix_vdr_libsi_include scanfilter.h scanfilter.c caDescriptor.h
 }

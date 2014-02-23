@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-vcd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/ChangeLog,v 1.13 2013/03/30 12:59:21 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/ChangeLog,v 1.14 2014/02/23 21:28:09 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-vcd-0.9.ebuild:
+  cleanup old, depended on vdr-plugin.eclass2
 
   30 Mar 2013; Agostino Sarubbo <ago@gentoo.org> vdr-vcd-0.9-r1.ebuild:
   Stable for x86, wrt bug #457396

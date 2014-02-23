@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/vdr-wapd-0.9_p1.ebuild,v 1.2 2009/10/20 11:39:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/vdr-wapd-0.9_p1.ebuild,v 1.3 2014/02/23 21:03:35 hd_brummy Exp $
 
-inherit vdr-plugin
+EAPI=5
+
+inherit vdr-plugin-2
 
 MY_P="${PN}-${PV%_p*}"
 
@@ -26,7 +28,7 @@ PATCHES=("${FILESDIR}/${MY_P}_gcc-4.1.x.diff"
 S="${WORKDIR}/${MY_P#vdr-}"
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	dobin "${S}/wappasswd"
 

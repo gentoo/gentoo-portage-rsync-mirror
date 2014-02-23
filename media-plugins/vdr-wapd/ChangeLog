@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-wapd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/ChangeLog,v 1.4 2010/12/02 16:59:41 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/ChangeLog,v 1.5 2014/02/23 21:03:35 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-wapd-0.9.ebuild,
+  vdr-wapd-0.9_p1.ebuild:
+  eapi=5; converted to vdr-plugin-2.eclass
 
   02 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/vdr-wapd-0.9-as-needed.patch:
