@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxls/ChangeLog,v 1.6 2014/02/07 20:14:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxls/ChangeLog,v 1.7 2014/02/24 00:44:25 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libxls-0.3.0_pre107.ebuild:
+  x86 stable wrt bug #500642
 
   07 Feb 2014; Chris Reffett <creffett@gentoo.org> libxls-0.3.0_pre107.ebuild:
   EAPI bump

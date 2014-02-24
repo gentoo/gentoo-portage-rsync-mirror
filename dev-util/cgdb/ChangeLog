@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cgdb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.50 2013/08/23 02:06:06 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/ChangeLog,v 1.51 2014/02/24 00:43:01 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> cgdb-0.6.7.ebuild:
+  x86 stable wrt bug #495662
 
 *cgdb-0.6.7 (23 Aug 2013)
 

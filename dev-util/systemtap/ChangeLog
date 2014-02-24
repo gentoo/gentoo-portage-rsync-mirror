@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.110 2013/11/07 19:56:12 swegener Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.111 2014/02/24 00:45:04 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> systemtap-2.4.ebuild:
+  x86 stable wrt bug #500728
 
 *systemtap-2.4 (07 Nov 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/ck
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.12 2013/04/27 16:25:54 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.13 2014/02/24 00:55:20 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ck-8.0-r4.ebuild:
+  x86 stable wrt bug #474210
 
 *ck-8.0-r4 (27 Apr 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.57 2014/02/19 19:28:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.58 2014/02/24 00:52:26 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> fbpanel-6.1-r1.ebuild:
+  x86 stable wrt bug #500494
 
 *fbpanel-6.1-r2 (19 Feb 2014)
 

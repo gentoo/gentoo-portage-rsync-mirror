@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1382 2014/02/13 11:37:51 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1383 2014/02/24 00:52:08 jer Exp $
+
+  24 Feb 2014; Jeroen Roovers <jer@gentoo.org> portage-2.2.8-r1.ebuild:
+  Stable for HPPA (bug #502282).
 
   13 Feb 2014; Vikraman Choudhury <vikraman@gentoo.org> portage-9999.ebuild:
   Fix patching of VERSION  Because of upstream commit b1197c

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r2.ebuild,v 1.1 2013/03/26 04:44:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r2.ebuild,v 1.2 2014/02/24 00:41:43 phajdan.jr Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc source"
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/${MY_P}-src.tar.gz"
 
 LICENSE="JDOM"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 
 COMMON_DEP="
 	dev-java/jdom:1.0

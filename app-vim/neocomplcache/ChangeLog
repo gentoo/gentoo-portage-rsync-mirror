@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/neocomplcache
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/neocomplcache/ChangeLog,v 1.4 2012/09/18 04:03:24 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/neocomplcache/ChangeLog,v 1.5 2014/02/24 00:52:51 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  neocomplcache-7.1.ebuild:
+  x86 stable wrt bug #481880
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> -neocomplcache-6.0.ebuild:
   Remove old.

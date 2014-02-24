@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.9_p20130915.ebuild,v 1.2 2014/01/18 18:56:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.9_p20130915.ebuild,v 1.3 2014/02/24 00:59:02 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

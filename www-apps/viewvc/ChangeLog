@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.91 2013/05/25 19:35:32 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.92 2014/02/24 00:49:33 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> viewvc-1.1.20.ebuild:
+  x86 stable wrt bug #495972
 
   25 May 2013; Christian Ruppert <idl0r@gentoo.org> viewvc-1.1.20.ebuild:
   Install .fcgi/.wsgi files as suggested in bug 326901

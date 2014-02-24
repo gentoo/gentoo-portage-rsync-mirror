@@ -4,10 +4,10 @@ DESCRIPTION=Minimal Xml parser and printer for OCaml
 EAPI=5
 HOMEPAGE=http://tech.motion-twin.com/xmllight.html
 IUSE=doc
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 x86
 LICENSE=LGPL-2.1
 RDEPEND=dev-lang/ocaml:=
 SLOT=0/2.2
 SRC_URI=http://tech.motion-twin.com/zip/xml-light-2.2.zip
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a817e0a830027445fb07dd556fbd0b3e
+_md5_=a2bcd648b630287d82b912fd89045774
