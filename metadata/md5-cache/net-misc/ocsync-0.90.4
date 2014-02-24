@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=app-text/asciidoc doc? ( app-doc/doxygen ) test? ( dev-libs/check dev-util/cmocka ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=A file synchronizer especially designed for you, the normal user
+EAPI=5
+HOMEPAGE=http://csync.org/
+IUSE=doc iconv samba +sftp test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-db/sqlite:3 >=dev-libs/iniparser-3.1 net-libs/neon[ssl] iconv? ( virtual/libiconv ) samba? ( net-fs/samba ) sftp? ( net-libs/libssh ) !net-misc/csync !>=net-misc/owncloud-client-1.5.1
+RESTRICT=test
+SLOT=0
+SRC_URI=http://download.owncloud.com/download/ocsync-0.90.4.tar.bz2
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=2797b06dcf2e25e0ba6a2c0ff3f7e097

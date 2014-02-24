@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ocsync-0.91.4.ebuild,v 1.3 2014/02/10 13:41:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ocsync-0.91.4.ebuild,v 1.4 2014/02/24 13:55:54 voyageur Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-db/sqlite-3.4:3
 	iconv? ( virtual/libiconv )
 	samba? ( >=net-fs/samba-3.5 )
 	sftp? ( >=net-libs/libssh-0.5 )
-	!net-misc/csync"
+	!net-misc/csync
+	!>=net-misc/owncloud-client-1.5.1"
 DEPEND="${DEPEND}
 	doc? (
 		app-doc/doxygen

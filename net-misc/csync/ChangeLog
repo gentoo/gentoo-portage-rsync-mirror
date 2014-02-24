@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/csync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.22 2014/02/06 14:11:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.23 2014/02/24 13:47:26 voyageur Exp $
+
+  24 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org> csync-0.50.0.ebuild:
+  Also block newer owncloud-client, as it bundles ocsync
 
 *csync-0.50.0 (06 Feb 2014)
 
