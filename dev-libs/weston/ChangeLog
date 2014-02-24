@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/weston
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.6 2014/01/30 12:24:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.7 2014/02/24 20:30:10 chithanh Exp $
+
+  24 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  weston-1.4.0.ebuild:
+  Fix automagic dependency on libwebp and specify slot for libpng.
 
 *weston-1.4.0 (30 Jan 2014)
 
