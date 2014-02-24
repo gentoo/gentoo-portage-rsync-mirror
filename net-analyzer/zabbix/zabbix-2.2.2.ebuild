@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.2_rc2-r3.ebuild,v 1.1 2014/02/23 01:16:41 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.2.ebuild,v 1.1 2014/02/24 04:55:05 mattm Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS="~amd64 ~x86"
-IUSE="agent java curl frontend ipv6 jabber ldap libxml2 mysql openipmi oracle postgres proxy server ssh snmp sqlite odbc static"
+IUSE="agent java curl frontend ipv6 jabber ldap libxml2 mysql openipmi oracle postgres proxy server ssh snmp sqlite odbc static systemd"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
