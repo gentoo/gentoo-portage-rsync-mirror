@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.6 2014/02/20 08:50:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.7 2014/02/24 11:16:44 gienah Exp $
 
 EAPI=5
 
@@ -204,6 +204,6 @@ src_install() {
 	use doc && dodoc $(find doc -name \*.pdf)
 	[[ -e test/fntests.log ]] && dodoc test/fntests.log
 	use java && java-pkg_regjar "${ED}/usr/share/${PN}/${PV}/m/java/octave.jar"
-	echo "LDPATH=${EROOT%/}/usr/$(get_libdir)/${P}" > 99octave
+	echo "LDPATH=${EROOT}usr/$(get_libdir)/${PN}/${PV}" > 99octave
 	doenvd 99octave
 }

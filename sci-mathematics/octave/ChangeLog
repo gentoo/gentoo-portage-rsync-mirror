@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.156 2014/02/23 00:04:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.157 2014/02/24 11:16:44 gienah Exp $
+
+  24 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.6.4-r1.ebuild,
+  octave-3.6.4.ebuild, octave-3.8.0.ebuild, octave-3.8.1_rc3.ebuild:
+  Thanks to Arfrever Frehtes Taifersar Arahesis for fixing, reporting and
+  testing: fix bug 502316 - sci-mathematics/octave installs /etc/env.d/99octave
+  with wrong LDPATH
 
   23 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.8.1_rc3.ebuild:
   Thanks to Andreas Proteus for the fix and reporting: fix Bug 502164 - sci-

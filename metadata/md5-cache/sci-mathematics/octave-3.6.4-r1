@@ -10,4 +10,4 @@ RDEPEND=app-text/ghostscript-gpl dev-libs/libpcre sys-libs/ncurses virtual/lapac
 SLOT=0/3.6.4
 SRC_URI=mirror://gnu/octave/octave-3.6.4.tar.bz2
 _eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=0ea3f238b68c6bd20bbdfda4855db9d7
+_md5_=61c25478c18da8cd0ceecfb854b12da7

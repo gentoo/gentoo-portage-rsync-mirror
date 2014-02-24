@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4.ebuild,v 1.9 2013/07/18 17:46:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4.ebuild,v 1.10 2014/02/24 11:16:44 gienah Exp $
 
 EAPI=5
 
@@ -127,6 +127,6 @@ src_install() {
 	autotools-utils_src_install
 	use doc && dodoc $(find doc -name \*.pdf)
 	[[ -e test/fntests.log ]] && dodoc test/fntests.log
-	echo "LDPATH=${EROOT%/}/usr/$(get_libdir)/${P}" > 99octave
+	echo "LDPATH=${EROOT}usr/$(get_libdir)/${PN}/${PV}" > 99octave
 	doenvd 99octave
 }
