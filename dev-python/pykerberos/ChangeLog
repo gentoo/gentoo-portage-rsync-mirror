@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pykerberos
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.8 2013/12/07 14:23:02 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.9 2014/02/24 00:14:26 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pykerberos-1.1-r2.ebuild:
+  x86 stable wrt bug #495616
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> pykerberos-1.1-r1.ebuild:
   x86 stable, bug #488744

@@ -4,11 +4,11 @@ DESCRIPTION=Python bindings for the ogg library
 EAPI=5
 HOMEPAGE=http://www.andrewchatham.com/pyogg/
 IUSE=python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=LGPL-2
 RDEPEND=>=media-libs/libogg-1.0 python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://gentoo/pyogg-1.3-r1.tar.gz
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b3bfddc27fcb12d01340aa048e4b35cb
+_md5_=5b56465af3f21b292878ea569ead93f4

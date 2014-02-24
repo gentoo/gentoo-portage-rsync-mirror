@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/ifuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.13 2014/02/04 07:13:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.14 2014/02/24 00:19:55 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ifuse-1.1.2-r1.ebuild:
+  x86 stable wrt bug #500238
 
 *ifuse-1.1.2-r1 (04 Feb 2014)
 

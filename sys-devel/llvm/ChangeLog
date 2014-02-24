@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.176 2014/02/21 08:54:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.177 2014/02/24 00:18:12 phajdan.jr Exp $
+
+  23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> llvm-3.3-r3.ebuild:
+  x86 stable wrt bug #491018
 
   21 Feb 2014; Michał Górny <mgorny@gentoo.org>
   files/clang-3.5-gentoo-install.patch:

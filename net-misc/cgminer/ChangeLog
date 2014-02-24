@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.61 2014/02/08 23:07:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.62 2014/02/24 00:21:41 blueness Exp $
+
+*cgminer-4.0.0 (24 Feb 2014)
+
+  24 Feb 2014; Anthony G. Basile <blueness@gentoo.org> +cgminer-4.0.0.ebuild,
+  cgminer-3.9.0.1.ebuild, metadata.xml:
+  Version bump to 4.x branch
 
 *cgminer-3.12.3 (08 Feb 2014)
 
