@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15417 2014/02/21 13:07:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15418 2014/02/24 05:34:05 grozin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andrey Grozin <grozin@gentoo.org> (24 Feb 2014)
+# Many incompatibilities with dev-python/pyx-0.12.1-r1
+dev-python/pyfeyn
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE introduction mask

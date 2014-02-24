@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.266 2014/02/21 13:53:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.267 2014/02/24 05:58:09 ssuominen Exp $
 
 EAPI=5
 
@@ -325,7 +325,6 @@ multilib_src_install() {
 		fi
 
 		# add final values of variables:
-		# TODO: networkdir follows prefix, not rootprefix, which is an upstream bug
 		targets+=(
 			rootlibexec_PROGRAMS=systemd-udevd
 			rootbin_PROGRAMS=udevadm
@@ -335,7 +334,7 @@ multilib_src_install() {
 					$(sysconfdir)/udev/hwdb.d \
 					$(sysconfdir)/systemd/network'
 			dist_bashcompletion_DATA="shell-completion/bash/udevadm"
-			networkdir=/lib/systemd/network
+			dist_network_DATA="network/99-default.link"
 		)
 		emake -j1 DESTDIR="${D}" "${targets[@]}"
 
