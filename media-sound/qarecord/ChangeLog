@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qarecord
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qarecord/ChangeLog,v 1.3 2013/03/02 21:59:29 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qarecord/ChangeLog,v 1.4 2014/02/24 01:27:22 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> qarecord-0.5.0.ebuild:
+  x86 stable wrt bug #434416
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qarecord-0.5.0.ebuild:
   Move Qt dependencies to the new category

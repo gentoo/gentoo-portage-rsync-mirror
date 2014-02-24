@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.36 2014/01/06 14:43:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.37 2014/02/24 01:10:39 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> indilib-0.9.6-r1.ebuild:
+  x86 stable wrt bug #500400
 
 *indilib-0.9.6-r1 (06 Jan 2014)
 

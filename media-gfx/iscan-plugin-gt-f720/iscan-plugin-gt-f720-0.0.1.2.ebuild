@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/iscan-plugin-gt-f720-0.0.1.2.ebuild,v 1.1 2013/02/18 09:47:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/iscan-plugin-gt-f720-0.0.1.2.ebuild,v 1.2 2014/02/24 01:19:57 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="amd64? ( http://dev.gentoo.org/~flameeyes/avasys/${MY_P}.x86_64.rpm )
 
 LICENSE="AVASYS"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 
 IUSE=""
 IUSE_LINGUAS="ja"

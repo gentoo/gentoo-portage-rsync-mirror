@@ -4,10 +4,10 @@ DESCRIPTION=Web content filtering via proxy
 EAPI=5
 HOMEPAGE=http://www.dansguardian.org
 IUSE=avast backtrace clamav commandline debug email +fancydm icap kaspersky +lfs logrotate ntlm orig-ip +pcre static-libs trickledm
-KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2
 RDEPEND=sys-libs/zlib clamav? ( app-antivirus/clamav ) logrotate? ( app-admin/logrotate ) ntlm? ( virtual/libiconv ) pcre? ( >=dev-libs/libpcre-8.32 )
 SLOT=0
 SRC_URI=mirror://sourceforge/dansguardian/dansguardian-2.12.0.3.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4c8c76a8afab6d34fd81901a768a8e63
+_md5_=d6abb5f0f4aa780824ab0d4b6ad2498a

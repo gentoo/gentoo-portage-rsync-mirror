@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qt-gstreamer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.7 2013/11/09 13:11:35 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.8 2014/02/24 01:30:11 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qt-gstreamer-0.10.3.ebuild:
+  x86 stable wrt bug #495744
 
 *qt-gstreamer-0.10.3 (09 Nov 2013)
 

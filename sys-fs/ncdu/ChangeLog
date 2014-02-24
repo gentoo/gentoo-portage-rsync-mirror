@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.44 2013/07/18 07:05:03 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.45 2014/02/24 01:15:32 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ncdu-1.10.ebuild:
+  x86 stable wrt bug #474308
 
   18 Jul 2013; Michael Weber <xmw@gentoo.org> ncdu-1.10.ebuild:
   Add ~arm keyword.

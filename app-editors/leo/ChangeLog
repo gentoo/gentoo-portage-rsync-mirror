@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.27 2013/11/22 08:17:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.28 2014/02/24 01:25:03 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> leo-4.11.ebuild:
+  x86 stable wrt bug #495332
 
 *leo-4.11 (22 Nov 2013)
 

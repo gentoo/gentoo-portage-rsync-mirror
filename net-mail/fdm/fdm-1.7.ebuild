@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.7.ebuild,v 1.2 2013/06/26 14:37:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.7.ebuild,v 1.3 2014/02/24 01:29:36 phajdan.jr Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="courierauth examples pcre"
 
 DEPEND="dev-libs/openssl

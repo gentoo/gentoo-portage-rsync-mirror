@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logbook
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.12 2013/09/12 20:59:31 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.13 2014/02/24 01:22:38 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> logbook-0.5.0.ebuild:
+  x86 stable wrt bug #499834
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> logbook-0.4.1.ebuild,
   logbook-0.4.2.ebuild, logbook-0.5.0.ebuild:

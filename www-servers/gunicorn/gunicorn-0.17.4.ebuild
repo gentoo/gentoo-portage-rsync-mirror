@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-0.17.4.ebuild,v 1.1 2013/05/02 04:05:08 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-0.17.4.ebuild,v 1.2 2014/02/24 01:20:36 phajdan.jr Exp $
 
 EAPI="5"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 IUSE="doc test"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="dev-python/setproctitle"
 DEPEND="dev-python/setuptools

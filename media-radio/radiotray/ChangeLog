@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/radiotray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.31 2013/09/13 23:58:59 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.32 2014/02/24 01:10:11 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  radiotray-0.7.3-r2.ebuild:
+  x86 stable wrt bug #495790
 
   13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> radiotray-0.7.2.ebuild,
   radiotray-0.7.3-r2.ebuild, radiotray-9999.ebuild:

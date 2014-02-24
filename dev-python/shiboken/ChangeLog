@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/shiboken
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.49 2013/12/25 17:44:15 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.50 2014/02/24 01:19:01 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  shiboken-1.2.1-r1.ebuild:
+  x86 stable wrt bug #499408
 
   25 Dec 2013; Davide Pesavento <pesa@gentoo.org> shiboken-1.2.1-r1.ebuild:
   numpy is not really necessary for tests.

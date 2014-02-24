@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-3.5.ebuild,v 1.2 2013/09/05 18:46:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-3.5.ebuild,v 1.3 2014/02/24 01:26:15 phajdan.jr Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/i/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE="doc test"
 DOCS="README.rst"
 

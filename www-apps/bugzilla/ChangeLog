@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.219 2013/10/23 23:19:59 creffett Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.220 2014/02/24 01:08:17 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> bugzilla-4.4.1.ebuild:
+  x86 stable wrt bug #498854
 
   23 Oct 2013; Chris Reffett <creffett@gentoo.org> -bugzilla-3.6.13.ebuild:
   Drop affected versions wrt bug 488432

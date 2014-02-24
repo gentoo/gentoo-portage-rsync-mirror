@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan-plugin-gt-f720
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/ChangeLog,v 1.7 2013/06/18 11:18:25 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/ChangeLog,v 1.8 2014/02/24 01:19:57 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  iscan-plugin-gt-f720-0.0.1.2.ebuild:
+  x86 stable wrt bug #474232
 
   18 Jun 2013; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Take over.

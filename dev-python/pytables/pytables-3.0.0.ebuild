@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-3.0.0.ebuild,v 1.3 2014/01/12 20:43:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-3.0.0.ebuild,v 1.4 2014/02/24 01:17:47 phajdan.jr Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.pytables.org/"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 IUSE="doc contrib examples"
 

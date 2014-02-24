@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.163 2014/02/12 08:44:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.164 2014/02/24 01:25:37 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> org-mode-8.2.1.ebuild:
+  x86 stable wrt bug #495334
 
 *org-mode-8.2.5h (12 Feb 2014)
 

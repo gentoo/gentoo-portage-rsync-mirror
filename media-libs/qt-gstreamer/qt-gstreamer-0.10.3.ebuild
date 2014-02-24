@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.3.ebuild,v 1.1 2013/11/09 13:11:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.3.ebuild,v 1.2 2014/02/24 01:30:11 phajdan.jr Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ QT_MINIMAL="4.7.0"
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 x86"
 else
 	GIT_ECLASS="git-r3"
 	EGIT_REPO_URI=( "git://anongit.freedesktop.org/gstreamer/${PN}" )

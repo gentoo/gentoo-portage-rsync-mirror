@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.4.1.ebuild,v 1.1 2013/10/21 02:32:30 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.4.1.ebuild,v 1.2 2014/02/24 01:08:17 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE="modperl extras graphviz mysql postgres sqlite test"
 

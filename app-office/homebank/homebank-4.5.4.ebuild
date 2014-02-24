@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.5.4.ebuild,v 1.2 2014/02/08 12:08:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.5.4.ebuild,v 1.3 2014/02/24 01:27:50 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://homebank.free.fr/public/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+ofx"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/glib-2.17
