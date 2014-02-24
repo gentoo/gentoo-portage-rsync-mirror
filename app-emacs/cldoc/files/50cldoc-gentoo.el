@@ -1,6 +1,3 @@
-
-;;; cldoc site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 
 (autoload 'cldoc-mode "cldoc" nil t)

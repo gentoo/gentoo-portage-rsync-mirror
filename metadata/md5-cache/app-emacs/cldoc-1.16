@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=virtual/emacs-21
 DESCRIPTION=Show Common Lisp operators and variables information in echo area
+EAPI=5
 HOMEPAGE=http://homepage1.nifty.com/bmonkey/lisp/index-en.html
 KEYWORDS=amd64 x86
-LICENSE=GPL-2
+LICENSE=GPL-2+
 RDEPEND=app-emacs/slime >=virtual/emacs-21
 SLOT=0
-SRC_URI=mirror://gentoo/cldoc-1.16.el.bz2
+SRC_URI=http://dev.gentoo.org/~ulm/distfiles/cldoc-1.16.el.bz2
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f4aafa46a98d716e99903f183140f053
+_md5_=3a7c44aea64de155458b5425d4a94b61

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cldoc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cldoc/ChangeLog,v 1.4 2008/06/14 23:22:46 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cldoc/ChangeLog,v 1.5 2014/02/24 20:44:02 ulm Exp $
+
+  24 Feb 2014; Ulrich Müller <ulm@gentoo.org> cldoc-1.16.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> cldoc-1.16.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
