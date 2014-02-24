@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyspf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.22 2013/04/05 08:31:58 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.23 2014/02/24 06:05:44 patrick Exp $
+
+*pyspf-2.0.8 (24 Feb 2014)
+
+  24 Feb 2014; Patrick Lauer <patrick@gentoo.org> +pyspf-2.0.8.ebuild:
+  Bump for #488474
 
 *pyspf-2.0.7-r1 (05 Apr 2013)
 
