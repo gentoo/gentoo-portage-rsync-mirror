@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_LMTP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LMTP/ChangeLog,v 1.22 2014/02/14 15:54:00 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LMTP/ChangeLog,v 1.23 2014/02/24 02:31:23 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  PEAR-Net_LMTP-1.0.2.ebuild:
+  x86 stable wrt bug #495568
 
   14 Feb 2014; Akinori Hattori <hattya@gentoo.org> PEAR-Net_LMTP-1.0.2.ebuild:
   ia64 stable wrt bug #495568

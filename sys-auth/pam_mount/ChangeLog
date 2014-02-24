@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.76 2014/02/24 01:52:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.77 2014/02/24 02:33:08 mattst88 Exp $
+
+  24 Feb 2014; Matt Turner <mattst88@gentoo.org>
+  -files/pam_mount-2.13-fix-build-without-cryptsetup.patch,
+  -files/pam_mount-2.13-remove-useless-log-message.patch,
+  -pam_mount-2.13-r1.ebuild:
+  Remove old.
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pam_mount-2.14.ebuild:
   x86 stable wrt bug #495960

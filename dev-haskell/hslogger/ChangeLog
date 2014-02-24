@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hslogger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.23 2014/02/22 08:53:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.24 2014/02/24 02:33:13 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  hslogger-1.2.1-r2.ebuild:
+  x86 stable wrt bug #491990
 
   22 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> hslogger-1.2.3.ebuild:
   Resore accidentally dropped ~amd64-linux.

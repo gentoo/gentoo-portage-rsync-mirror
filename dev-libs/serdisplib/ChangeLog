@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/serdisplib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.17 2014/02/11 18:43:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.18 2014/02/24 02:34:14 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  serdisplib-1.97.9.ebuild:
+  x86 stable wrt bug #500644
 
   11 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -serdisplib-1.97.5.ebuild:
