@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/edb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.12 2010/09/09 11:44:30 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.13 2014/02/24 08:08:38 ulm Exp $
+
+  24 Feb 2014; Ulrich Müller <ulm@gentoo.org> edb-1.31.ebuild,
+  +files/50edb-gentoo.el, -files/52edb-gentoo.el:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely. Move site-init file
+  to canonical name.
 
   09 Sep 2010; Ulrich Mueller <ulm@gentoo.org> edb-1.31.ebuild,
   +files/edb-1.31-skram-path.patch:

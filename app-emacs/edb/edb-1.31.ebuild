@@ -1,31 +1,34 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.31.ebuild,v 1.2 2010/09/09 11:44:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.31.ebuild,v 1.3 2014/02/24 08:08:38 ulm Exp $
 
-inherit elisp eutils
+EAPI=5
+
+inherit elisp
 
 DESCRIPTION="EDB, The Emacs Database"
-HOMEPAGE="http://www.gnuvola.org/software/edb/"
+HOMEPAGE="http://www.gnuvola.org/software/edb/
+	http://www.emacswiki.org/emacs/EmacsDataBase"
 SRC_URI="http://www.gnuvola.org/software/edb/${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+ Texinfo-manual"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 ELISP_PATCHES="${P}-skram-path.patch"
-SITEFILE="52${PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
+
+src_configure() {
+	default
+}
 
 src_compile() {
-	econf
-	emake -j1 || die
+	emake -j1
 }
 
 src_install() {
-	einstall sitelisp="${D}${SITELISP}" || die "einstall failed"
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-		|| die "elisp-site-file-install failed"
-	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README THANKS TODO \
-		doc/refcard.ps || die "dodoc failed"
+	einstall sitelisp="${D}${SITELISP}"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README THANKS TODO doc/refcard.ps
 	insinto /usr/share/doc/${PF}; doins -r examples
 }
