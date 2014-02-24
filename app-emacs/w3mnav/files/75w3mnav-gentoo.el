@@ -1,6 +1,3 @@
-
-;;; w3mnav site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 
 (autoload 'w3m-nav-go-top "w3mnav" nil t)
