@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/snappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.12 2014/02/24 01:01:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.13 2014/02/24 09:32:37 nimiux Exp $
+
+  24 Feb 2014; Chema Alonso <nimiux@gentoo.org> snappy-1.1.1.ebuild:
+  Stable for amd64 wrt bug #495326
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> snappy-1.1.1.ebuild:
   x86 stable wrt bug #495326

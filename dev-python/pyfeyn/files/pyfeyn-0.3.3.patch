@@ -1,0 +1,32 @@
+diff -r -U1 pyfeyn-0.3.3.orig/pyfeyn/__init__.py pyfeyn-0.3.3/pyfeyn/__init__.py
+--- pyfeyn-0.3.3.orig/pyfeyn/__init__.py	2013-10-03 20:24:30.000000000 +0700
++++ pyfeyn-0.3.3/pyfeyn/__init__.py	2014-02-24 20:19:42.908082109 +0700
+@@ -15,8 +15,2 @@
+     import pyx
+-
+-    ## Check the version
+-    from distutils.version import StrictVersion as Version
+-    if Version(pyx.version.version) < Version("0.9.0"):
+-        print "Warning: PyFeyn may not work with PyX versions older than 0.9!"
+-
+     ## Units
+@@ -24,10 +18,5 @@
+     pyx.unit.set(defaultunit = "cm")
+-
+     ## TeX stuff
+     pyx.text.defaulttexrunner.set(mode="latex")
+-    if pyx.pykpathsea.find_file("hepnames.sty", pyx.pykpathsea.kpse_tex_format):
+-        pyx.text.defaulttexrunner.preamble(r"\usepackage{hepnames}")
+-    else:
+-        print "Warning: hepnames LaTeX package not found!"
+-
++    pyx.text.defaulttexrunner.preamble(r"\usepackage{hepnames}")
+ except:
+diff -r -U1 pyfeyn-0.3.3.orig/pyfeyn/deco.py pyfeyn-0.3.3/pyfeyn/deco.py
+--- pyfeyn-0.3.3.orig/pyfeyn/deco.py	2011-02-20 23:29:40.000000000 +0600
++++ pyfeyn-0.3.3/pyfeyn/deco.py	2014-02-24 20:21:53.935087856 +0700
+@@ -27,3 +27,3 @@
+         arrowpath = pyx.deco._arrowhead(arrowtopath, self.pos*dp.path.arclen(),
+-                                        1, self.size, 45, constrictionlen)
++                                        1, self.size, 45, self.constriction, constrictionlen)
+         dp.ornaments.fill(arrowpath)
