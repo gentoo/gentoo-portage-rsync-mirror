@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.109 2014/02/21 14:12:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.110 2014/02/24 11:40:50 jlec Exp $
+
+  24 Feb 2014; Justin Lecher <jlec@gentoo.org> cython-0.20.1.ebuild:
+  Correct heck made for testing, thanks Arfrever spotting this
 
 *cython-0.20.1 (21 Feb 2014)
 

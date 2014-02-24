@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.20.1.ebuild,v 1.1 2014/02/21 14:12:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.20.1.ebuild,v 1.2 2014/02/24 11:40:50 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc test"
 
 RDEPEND=""
-_DEPEND="${RDEPEND}
+DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/numpy[$(python_gen_usedep python{2_6,2_7,3_2,3_3})] )"
 
