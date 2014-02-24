@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare unpack
+DEPEND=dev-libs/boost[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] <=dev-libs/leveldb-1.12.0[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 ) >=app-shells/bash-4.1 >=sys-apps/sed-4
+DESCRIPTION=P2P Internet currency favored by Shiba Inus worldwide.
+EAPI=5
+HOMEPAGE=https://dogecoin.com/
+IUSE=dbus ipv6 kde +qrcode upnp linguas_af_ZA linguas_ar linguas_bg linguas_bs linguas_ca linguas_ca_ES linguas_cs linguas_cy linguas_da linguas_de linguas_el_GR linguas_en linguas_eo linguas_es linguas_es_CL linguas_et linguas_eu_ES linguas_fa linguas_fa_IR linguas_fi linguas_fr linguas_fr_CA linguas_gu_IN linguas_he linguas_hi_IN linguas_hr linguas_hu linguas_it linguas_ja linguas_la linguas_lt linguas_lv_LV linguas_nb linguas_nl linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_sk linguas_sr linguas_sv linguas_th_TH linguas_tr linguas_uk linguas_zh_CN linguas_zh_TW
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT ISC GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1 )
+RDEPEND=dev-libs/boost[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] <=dev-libs/leveldb-1.12.0[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 )
+SLOT=0
+SRC_URI=https://github.com/dogecoin/dogecoin/archive/1.5.1.tar.gz -> dogecoin-1.5.1.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	db-use	1c719875d6599536f956fafea9e1f404	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=0d3e52d6741833b031e2e7f2f5dac5f0
