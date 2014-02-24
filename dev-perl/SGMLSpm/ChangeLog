@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.58 2014/02/21 18:40:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.59 2014/02/24 21:32:22 vapier Exp $
+
+  24 Feb 2014; Mike Frysinger <vapier@gentoo.org> SGMLSpm-1.03-r7.ebuild:
+  Mark m68k/s390/sh stable.
 
   21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> SGMLSpm-1.03-r7.ebuild:
   Add missing || die
