@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.24 2014/02/23 22:05:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.25 2014/02/24 08:43:34 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -330,6 +330,8 @@ git-r3_fetch() {
 			"refs/heads/*:refs/heads/*"
 			# pull tags explicitly in order to prune them properly
 			"refs/tags/*:refs/tags/*"
+			# notes in case something needs them
+			"refs/notes/*:refs/notes/*"
 		)
 
 		set -- "${fetch_command[@]}"
@@ -447,8 +449,12 @@ git-r3_checkout() {
 	"${@}" || die "git clone (for checkout) failed"
 
 	git-r3_sub_checkout() {
+		local orig_repo=${GIT_DIR}
 		local -x GIT_DIR=${out_dir}/.git
 		local -x GIT_WORK_TREE=${out_dir}
+
+		# pull notes
+		git fetch "${orig_repo}" "refs/notes/*:refs/notes/*" || die
 
 		set -- git checkout --quiet
 		if [[ ${remote_ref} ]]; then

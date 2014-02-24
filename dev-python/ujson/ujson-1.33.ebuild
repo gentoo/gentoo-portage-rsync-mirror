@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ujson-1.33.ebuild,v 1.2 2013/09/15 17:23:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ujson-1.33.ebuild,v 1.3 2014/02/24 08:43:55 jlec Exp $
 
 EAPI="5"
 
 # One test; FAIL: test_encodeToUTF8 (__main__.UltraJSONTests) under py2.5.
 # Fix and repair and re-insert if it's REALLY needed
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit distutils-r1
 
@@ -19,15 +19,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+DEPEND="
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	app-arch/unzip"
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-test-py3.patch
+)
 
 python_test() {
 	# See setup.py; line 72. Again "${S}" is used for reading tests
 	# Since py3_2 is first in the queue it needs its own copy 
 	# or else all py2s to follow will be reading read py3 tests
-	if [[ "${EPYTHON}" == 'python3.2' ]]; then
+	if [[ "${EPYTHON}" =~ 'python3' ]]; then
 		cd "${BUILD_DIR}"/lib || die
 		cp -a "${S}"/tests/ .  || die
 		2to3 -w tests/tests.py

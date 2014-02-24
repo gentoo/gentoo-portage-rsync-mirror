@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.6.1.ebuild,v 1.3 2013/09/15 17:23:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.6.1.ebuild,v 1.4 2014/02/24 08:45:37 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 
 inherit distutils-r1
 
@@ -19,7 +19,8 @@ IUSE="test"
 
 RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/feedparser[${PYTHON_USEDEP}]
+	test? (
+		dev-python/feedparser[${PYTHON_USEDEP}]
 		dev-python/ujson[${PYTHON_USEDEP}] )"
 
 python_test() {

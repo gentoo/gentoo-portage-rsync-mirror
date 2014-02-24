@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.3:= media-libs/openjpeg:2 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 )
 RESTRICT=!ocamlopt? ( strip )
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	7b45ecf6493d63a9e9f4cb5940d49ac2	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	e4c980c06989f41e85fb7322d7c969fb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=47cf83db419fc01f87c6c3ada847f42b
