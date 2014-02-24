@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/fgdc-emergency/fgdc-emergency-2.20.ebuild,v 1.2 2011/06/14 10:54:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fgdc-emergency/fgdc-emergency-2.20.ebuild,v 1.3 2014/02/24 04:22:21 phajdan.jr Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fgdc.gov/HSWG/symbol_downloads/ers_v${PV//./}.zip"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"

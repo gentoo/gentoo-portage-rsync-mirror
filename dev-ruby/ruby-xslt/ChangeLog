@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-xslt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.36 2013/10/30 04:16:31 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.37 2014/02/24 04:16:28 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ruby-xslt-0.9.9-r2.ebuild:
+  x86 stable wrt bug #500896
 
   30 Oct 2013; Manuel Rüger <mrueg@gentoo.org> ruby-xslt-0.9.9-r2.ebuild:
   Fix whitespace.

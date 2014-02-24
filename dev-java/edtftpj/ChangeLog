@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
-# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.50 2013/07/08 13:48:17 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.51 2014/02/24 04:14:41 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> edtftpj-2.0.4.ebuild:
+  x86 stable wrt bug #492006
 
 *edtftpj-2.0.4 (08 Jul 2013)
 

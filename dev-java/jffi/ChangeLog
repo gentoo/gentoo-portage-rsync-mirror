@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jffi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.29 2013/09/17 14:22:37 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.30 2014/02/24 04:18:03 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jffi-1.2.7.ebuild:
+  x86 stable wrt bug #492014
 
 *jffi-1.2.7 (17 Sep 2013)
 

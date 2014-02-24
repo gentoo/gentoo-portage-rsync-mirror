@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fondu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.11 2013/10/21 12:24:33 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.12 2014/02/24 04:21:47 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fondu-20060102-r1.ebuild:
+  x86 stable wrt bug #495700
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> fondu-20060102-r1.ebuild:
   Marked ~x64-macos, bug #486818
