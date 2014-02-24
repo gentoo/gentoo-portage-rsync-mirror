@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/kvpm/kvpm-0.9.8.ebuild,v 1.2 2014/02/18 00:55:24 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/kvpm/kvpm-0.9.8.ebuild,v 1.3 2014/02/24 12:54:47 kensington Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://kvpm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 

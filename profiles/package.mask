@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15419 2014/02/24 09:47:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15420 2014/02/24 12:43:59 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (24 Feb 2014)
+# Does not work any more, AOL has shut off
+# the TOC2 protocol for the AIM service.
+# Masked for removal in 30 days, bug 502322.
+app-emacs/tnt
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE introduction mask
