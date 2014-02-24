@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc2.ebuild,v 1.2 2014/02/10 10:34:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc2.ebuild,v 1.3 2014/02/24 05:04:03 ssuominen Exp $
 
 EAPI=5
 
@@ -29,6 +29,11 @@ DOCS="README RELEASE_NOTES TODO" # ChangeLog is bogus, see git instead
 RESTRICT="test" # Disabled because of sandbox violation(s)
 
 S=${WORKDIR}/${MY_P}
+
+src_configure() {
+	export ac_cv_path_XMLTO="$(type -P xmlto) --skip-validation" #502166
+	default
+}
 
 src_install() {
 	default
