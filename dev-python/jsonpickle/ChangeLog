@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.18 2014/02/24 08:45:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.19 2014/02/24 09:12:10 jlec Exp $
+
+  24 Feb 2014; Justin Lecher <jlec@gentoo.org> jsonpickle-0.6.1.ebuild,
+  +files/jsonpickle-0.6.1-drop-brocken-backend.patch,
+  +files/jsonpickle-0.6.1-test-fix-backport.patch:
+  Fix tests
 
   24 Feb 2014; Justin Lecher <jlec@gentoo.org> jsonpickle-0.6.1.ebuild:
   add py3 support

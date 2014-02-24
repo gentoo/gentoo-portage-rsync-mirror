@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.6.1.ebuild,v 1.4 2014/02/24 08:45:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.6.1.ebuild,v 1.5 2014/02/24 09:12:10 jlec Exp $
 
 EAPI=5
 
@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/feedparser[${PYTHON_USEDEP}]
 		dev-python/ujson[${PYTHON_USEDEP}] )"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-test-fix-backport.patch
+	"${FILESDIR}"/${P}-drop-brocken-backend.patch
+)
 
 python_test() {
 	${PYTHON} tests/runtests.py || die

@@ -1,0 +1,27 @@
+From 4302389b1e4e5ba753b2f76427408910c05f683c Mon Sep 17 00:00:00 2001
+From: David Aguilar <davvid@gmail.com>
+Date: Thu, 13 Feb 2014 13:44:01 -0800
+Subject: [PATCH] tests: replace our single use of assertEquals with
+ assertEqual
+
+Signed-off-by: David Aguilar <davvid@gmail.com>
+---
+ tests/thirdparty_tests.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/thirdparty_tests.py b/tests/thirdparty_tests.py
+index 70f7f2c..b069641 100644
+--- a/tests/thirdparty_tests.py
++++ b/tests/thirdparty_tests.py
+@@ -71,7 +71,7 @@ def setUp(self):
+     def test(self):
+         pickled = jsonpickle.encode(self.doc)
+         unpickled = jsonpickle.decode(pickled)
+-        self.assertEquals(self.doc['feed']['title'], unpickled['feed']['title'])
++        self.assertEqual(self.doc['feed']['title'], unpickled['feed']['title'])
+ 
+ 
+ def suite():
+-- 
+1.8.5.5
+
