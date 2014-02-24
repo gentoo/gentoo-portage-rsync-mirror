@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/crcmod-1.7-r1.ebuild,v 1.2 2012/02/10 04:08:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/crcmod-1.7-r1.ebuild,v 1.3 2014/02/24 22:33:41 vapier Exp $
 
 # For the 2.x versions of Python, these versions have been tested: 2.4 2.5 2.6 2.7
 # For the 3.x versions of Python, these versions have been tested: 3.1
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/crcmod/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 DOCS="changelog test/examples.py"
