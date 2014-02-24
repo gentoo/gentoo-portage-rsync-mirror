@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.70 2014/02/24 02:05:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.72 2014/02/24 17:56:09 zlogene Exp $
+
+*Test-Class-0.410.0 (24 Feb 2014)
+
+  24 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> +Test-Class-0.410.0.ebuild,
+  -Test-Class-0.370.0.ebuild, -Test-Class-0.380.0.ebuild:
+  Version bump; Drop old.
+
+  24 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Class-0.390.0.ebuild:
+  amd64 stable wrt bug #495486
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Test-Class-0.390.0.ebuild:
