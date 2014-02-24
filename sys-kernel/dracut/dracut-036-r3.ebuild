@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r3.ebuild,v 1.1 2014/02/24 09:11:38 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r3.ebuild,v 1.2 2014/02/24 14:11:06 aidecoe Exp $
 
 EAPI=4
 
@@ -219,8 +219,9 @@ pkg_postinst() {
 		ewarn ""
 	fi
 
-	elog "To get additional features, a number of optional runtime dependencies may be"
-	elog "installed."
+	elog "To get additional features, a number of optional runtime"
+	elog "dependencies may be installed:"
+	elog ""
 	optfeature "Networking support"  net-misc/curl "net-misc/dhcp[client]" \
 		sys-apps/iproute2
 	optfeature \
