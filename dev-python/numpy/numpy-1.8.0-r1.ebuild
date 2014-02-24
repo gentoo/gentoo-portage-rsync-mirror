@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0-r1.ebuild,v 1.10 2014/02/17 21:07:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0-r1.ebuild,v 1.11 2014/02/24 12:15:10 jlec Exp $
 
 EAPI=5
 
@@ -37,8 +37,13 @@ DEPEND="${RDEPEND}
 # Uses distutils.command.config.
 DISTUTILS_IN_SOURCE_BUILD=1
 
+PATCHES=(
+		"${FILESDIR}"/${P}-no-hardcode-blas.patch
+		"${FILESDIR}"/${P}-f2py-insecure-temporary.patch
+)
+
 src_unpack() {
-	unpack ${P}.tar.gz
+	default
 	if use doc; then
 		unzip -qo "${DISTDIR}"/${PN}-html-${DOC_PV}.zip -d html || die
 	fi
@@ -62,10 +67,6 @@ pc_libs() {
 }
 
 python_prepare_all() {
-	epatch \
-		"${FILESDIR}"/${P}-no-hardcode-blas.patch \
-		"${FILESDIR}"/${P}-f2py-insecure-temporary.patch
-
 	if use lapack; then
 		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-other cblas lapack)"
 		local libdir="${EPREFIX}"/usr/$(get_libdir)
@@ -121,7 +122,7 @@ python_test() {
 	cd "${TMPDIR}" || die
 	${EPYTHON} -c "
 import numpy, sys
-r = numpy.test(verbose=3)
+r = numpy.test(label='full', verbose=3)
 sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"
 }
 
