@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5.ebuild,v 1.2 2014/02/23 18:49:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5.ebuild,v 1.3 2014/02/24 07:44:35 pacho Exp $
 
 EAPI="5"
 
@@ -250,7 +250,8 @@ src_test() {
 }
 
 src_install() {
-	default
+	# https://bugs.webkit.org/show_bug.cgi?id=129242
+	MAKEOPTS="${MAKEOPTS} -j1" default
 
 	newdoc Source/WebKit/gtk/ChangeLog ChangeLog.gtk
 	newdoc Source/JavaScriptCore/ChangeLog ChangeLog.JavaScriptCore
