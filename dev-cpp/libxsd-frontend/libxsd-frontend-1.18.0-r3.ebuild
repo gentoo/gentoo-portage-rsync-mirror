@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/libxsd-frontend-1.18.0-r2.ebuild,v 1.1 2014/01/20 12:04:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/libxsd-frontend-1.18.0-r3.ebuild,v 1.1 2014/02/24 15:01:52 pinkbyte Exp $
 
 EAPI="5"
 
@@ -11,10 +11,10 @@ HOMEPAGE="http://www.codesynthesis.com/projects/libxsd-frontend/"
 SRC_URI="http://www.codesynthesis.com/download/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc64 x86"
 
 RDEPEND=">=dev-libs/xerces-c-3
-	>=dev-libs/boost-1.52.0-r1[threads]
+	>=dev-libs/boost-1.52.0-r1:=[threads]
 	>=dev-cpp/libcult-1.4.6-r1
 	>=dev-cpp/libfrontend-elements-1.1.4"
 DEPEND="${RDEPEND}
