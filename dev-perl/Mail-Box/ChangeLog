@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Box
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Box/ChangeLog,v 1.10 2013/12/14 17:26:47 aidecoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Box/ChangeLog,v 1.11 2014/02/24 01:48:56 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> Mail-Box-2.109.0.ebuild:
+  x86 stable wrt bug #495428
 
   14 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> Mail-Box-2.108.ebuild,
   Mail-Box-2.109.0.ebuild:

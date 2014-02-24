@@ -4,10 +4,10 @@ DESCRIPTION=Libraries/utilities to handle ELF objects (drop in replacement for l
 EAPI=4
 HOMEPAGE=https://fedorahosted.org/elfutils/
 IUSE=bzip2 lzma nls static-libs test +threads +utils zlib abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
-KEYWORDS=alpha ~amd64 arm arm64 hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux
+KEYWORDS=alpha ~amd64 arm arm64 hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux
 LICENSE=GPL-2-with-exceptions
 RDEPEND=zlib? ( >=sys-libs/zlib-1.2.2.3[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] ) bzip2? ( app-arch/bzip2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] ) lzma? ( app-arch/xz-utils[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] ) !dev-libs/libelf abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r11 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/e/l/elfutils/0.158/elfutils-0.158.tar.bz2 https://fedorahosted.org/releases/e/l/elfutils/0.158/elfutils-portability.patch -> elfutils-0.158-portability.patch https://fedorahosted.org/releases/e/l/elfutils/0.158/elfutils-robustify.patch -> elfutils-0.158-robustify.patch
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=be73fee44602f2e5aa52dd6fa2b7a6ec
+_md5_=7e3b8c70a21144c20f5d163cc3c96f26

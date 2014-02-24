@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.95 2014/02/22 09:04:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.96 2014/02/24 01:34:06 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> cabal-1.18.1.2.ebuild:
+  x86 stable wrt bug #495370
 
   22 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> cabal-1.14.0.ebuild,
   cabal-1.16.0.3.ebuild:

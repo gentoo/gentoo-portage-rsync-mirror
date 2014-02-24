@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Log-Log4perl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.88 2013/08/25 10:09:35 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.89 2014/02/24 01:48:27 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Log-Log4perl-1.420.0.ebuild:
+  x86 stable wrt bug #495426
 
 *Log-Log4perl-1.420.0 (25 Aug 2013)
 

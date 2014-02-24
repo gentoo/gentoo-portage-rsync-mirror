@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.3.0.ebuild,v 1.1 2013/11/18 02:11:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.3.0.ebuild,v 1.2 2014/02/24 01:40:31 phajdan.jr Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gtklp/${P}.src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="nls ssl"
 
 RDEPEND="x11-libs/gtk+:2

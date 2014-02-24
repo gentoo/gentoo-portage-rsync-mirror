@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/the_silver_searcher
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.31 2013/10/31 01:21:20 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.32 2014/02/24 01:47:28 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  the_silver_searcher-0.18.ebuild:
+  x86 stable wrt bug #495934
 
 *the_silver_searcher-0.18 (31 Oct 2013)
 

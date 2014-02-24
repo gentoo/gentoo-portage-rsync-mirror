@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.13.1.ebuild,v 1.1 2013/12/06 23:18:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.13.1.ebuild,v 1.2 2014/02/24 01:36:13 phajdan.jr Exp $
 
 ## TODO
 # add sound support (no build switch, no sound files)
@@ -26,7 +26,7 @@ SRC_URI="mirror://sourceforge/crawl-ref/Stone%20Soup/${PV}/${MY_P}-nodeps.tar.xz
 # MIT: json.cc/json.h, some .js files in webserver/static/scripts/contrib/
 LICENSE="GPL-2 BSD BSD-2 public-domain CC0-1.0 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug ncurses test +tiles"
 REQUIRED_USE="|| ( ncurses tiles )"
 # test is broken

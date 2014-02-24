@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission-remote-gtk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/ChangeLog,v 1.17 2013/06/13 03:56:56 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/ChangeLog,v 1.18 2014/02/24 01:39:58 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  transmission-remote-gtk-1.1.1.ebuild:
+  x86 stable wrt bug #495898
 
 *transmission-remote-gtk-1.1.1 (13 Jun 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.65 2014/02/15 22:11:38 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.66 2014/02/24 01:31:43 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> fish-2.1.0-r2.ebuild:
+  x86 stable wrt bug #493316
 
   15 Feb 2014; Chema Alonso <nimiux@gentoo.org> fish-2.1.0-r2.ebuild:
   Stable for amd64 wrt bug #493316

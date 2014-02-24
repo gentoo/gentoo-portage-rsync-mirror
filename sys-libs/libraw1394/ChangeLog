@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.74 2014/02/22 13:40:52 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.75 2014/02/24 01:54:01 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libraw1394-2.1.0-r1.ebuild:
+  x86 stable wrt bug #495964
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org> libraw1394-2.1.0-r1.ebuild:
   ia64 stable wrt bug #495964

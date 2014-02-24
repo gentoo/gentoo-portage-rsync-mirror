@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/UNIVERSAL-require-0.150.0.ebuild,v 1.1 2013/10/29 07:04:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/UNIVERSAL-require-0.150.0.ebuild,v 1.2 2014/02/24 01:46:55 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="UNIVERSAL::require - require() modules from a variable"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 SRC_TEST="do"

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.123 2014/01/02 19:00:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.124 2014/02/24 01:59:30 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> qmmp-0.7.3.ebuild:
+  x86 stable wrt bug #492908
 
 *qmmp-0.7.4 (02 Jan 2014)
 

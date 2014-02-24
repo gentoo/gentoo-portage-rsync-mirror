@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmdns
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.15 2013/10/08 16:28:53 ercpe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.16 2014/02/24 01:42:22 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jmdns-3.4.1.ebuild:
+  x86 stable wrt bug #495394
 
 *jmdns-3.4.1 (08 Oct 2013)
 

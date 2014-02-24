@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libavc1394
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.45 2014/02/22 13:39:35 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.46 2014/02/24 01:51:53 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libavc1394-0.5.4-r1.ebuild:
+  x86 stable wrt bug #495958
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org> libavc1394-0.5.4-r1.ebuild:
   ia64 stable wrt bug #495958

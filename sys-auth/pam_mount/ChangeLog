@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.75 2014/01/20 15:54:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.76 2014/02/24 01:52:38 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pam_mount-2.14.ebuild:
+  x86 stable wrt bug #495960
 
   20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pam_mount-2.14.ebuild:
   Stable for ppc, wrt bug #495960

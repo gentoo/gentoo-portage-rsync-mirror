@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/qmmp-plugin-pack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.16 2014/01/02 19:01:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.17 2014/02/24 01:59:54 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qmmp-plugin-pack-0.7.3.ebuild:
+  x86 stable wrt bug #492908
 
 *qmmp-plugin-pack-0.7.4 (02 Jan 2014)
 

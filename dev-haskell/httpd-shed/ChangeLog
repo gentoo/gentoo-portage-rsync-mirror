@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/httpd-shed
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.8 2013/10/20 02:20:19 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.9 2014/02/24 01:38:35 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  httpd-shed-0.4-r1.ebuild:
+  x86 stable wrt bug #495382
 
 *httpd-shed-0.4-r1 (20 Oct 2013)
 

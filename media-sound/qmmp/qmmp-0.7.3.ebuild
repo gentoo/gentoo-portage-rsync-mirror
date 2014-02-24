@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.7.3.ebuild,v 1.3 2013/12/08 19:12:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.7.3.ebuild,v 1.4 2014/02/24 01:59:30 phajdan.jr Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Qt4-based audio player with winamp/xmms skins support"
 HOMEPAGE="http://qmmp.ylsoftware.com"
 if [ "$PV" != "9999" ]; then
 	SRC_URI="http://qmmp.ylsoftware.com/files/${P}.tar.bz2"
-	KEYWORDS="amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc x86"
 else
 	SRC_URI=""
 	ESVN_REPO_URI="http://qmmp.googlecode.com/svn/trunk/qmmp/"
