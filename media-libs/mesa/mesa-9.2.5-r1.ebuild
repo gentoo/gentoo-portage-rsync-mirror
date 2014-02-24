@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.0.3.ebuild,v 1.2 2014/02/24 19:42:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5-r1.ebuild,v 1.1 2014/02/24 19:42:05 chithanh Exp $
 
 EAPI=5
 
@@ -22,12 +22,12 @@ MY_PN="${PN/m/M}"
 MY_P="${MY_PN}-${PV/_/-}"
 MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 
-FOLDER="${PV}"
+FOLDER="${PV/_rc*/}"
 
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-#SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
+SRC_PATCHES="mirror://gentoo/${PN}-9.2-gentoo-patches-04.tar.xz"
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
@@ -50,14 +50,15 @@ done
 
 IUSE="${IUSE_VIDEO_CARDS}
 	bindist +classic debug +egl +gallium gbm gles1 gles2 +llvm +nptl
-	llvm-shared-libs opencl openvg osmesa pax_kernel pic r600-llvm-compiler
-	selinux vdpau wayland xvmc xa kernel_FreeBSD"
+	llvm-shared-libs opencl	openvg osmesa pax_kernel pic r600-llvm-compiler
+	selinux vdpau wayland xvmc xa xorg kernel_FreeBSD"
 
 REQUIRED_USE="
 	llvm?   ( gallium )
 	openvg? ( egl gallium )
 	opencl? (
 		gallium
+		llvm-shared-libs
 		video_cards_r600? ( r600-llvm-compiler )
 		video_cards_radeon? ( r600-llvm-compiler )
 		video_cards_radeonsi? ( r600-llvm-compiler )
@@ -65,8 +66,9 @@ REQUIRED_USE="
 	gles1?  ( egl )
 	gles2?  ( egl )
 	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeonsi video_cards_radeon ) )
-	wayland? ( egl gbm )
+	wayland? ( egl )
 	xa?  ( gallium )
+	xorg?  ( gallium )
 	video_cards_freedreno?  ( gallium )
 	video_cards_intel?  ( || ( classic gallium ) )
 	video_cards_i915?   ( || ( classic gallium ) )
@@ -83,7 +85,7 @@ REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 "
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.49"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.46"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
 RDEPEND="
@@ -96,11 +98,10 @@ RDEPEND="
 	dev-libs/expat[${MULTILIB_USEDEP}]
 	gbm? ( virtual/udev[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.3.99.901[${MULTILIB_USEDEP}]
-	>=x11-libs/libxshmfence-1.0[${MULTILIB_USEDEP}]
 	x11-libs/libXdamage[${MULTILIB_USEDEP}]
 	x11-libs/libXext[${MULTILIB_USEDEP}]
 	x11-libs/libXxf86vm[${MULTILIB_USEDEP}]
-	>=x11-libs/libxcb-1.9.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libxcb-1.8.1[${MULTILIB_USEDEP}]
 	llvm? (
 		video_cards_radeonsi? ( || (
 			dev-libs/elfutils[${MULTILIB_USEDEP}]
@@ -123,7 +124,11 @@ RDEPEND="
 				dev-libs/libclc
 			)
 	vdpau? ( >=x11-libs/libvdpau-0.4.1[${MULTILIB_USEDEP}] )
-	wayland? ( >=dev-libs/wayland-1.2.0[${MULTILIB_USEDEP}] )
+	wayland? ( >=dev-libs/wayland-1.0.3[${MULTILIB_USEDEP}] )
+	xorg? (
+		x11-base/xorg-server:=
+		x11-libs/libdrm[libkms]
+	)
 	xvmc? ( >=x11-libs/libXvMC-1.0.6[${MULTILIB_USEDEP}] )
 	${LIBDRM_DEPSTRING}[video_cards_freedreno?,video_cards_nouveau?,video_cards_vmware?,${MULTILIB_USEDEP}]
 "
@@ -146,16 +151,14 @@ DEPEND="${RDEPEND}
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
-				>=sys-devel/llvm-3.3-r1[video_cards_radeon,${MULTILIB_USEDEP}]
-				>=sys-devel/clang-3.3[${MULTILIB_USEDEP}]
-				>=sys-devel/gcc-4.6
+		>=sys-devel/llvm-3.3-r1[video_cards_radeon,${MULTILIB_USEDEP}]
+		>=sys-devel/clang-3.3[${MULTILIB_USEDEP}]
+		>=sys-devel/gcc-4.6
 	)
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
 	>=x11-proto/dri2proto-2.6[${MULTILIB_USEDEP}]
-	>=x11-proto/dri3proto-1.0[${MULTILIB_USEDEP}]
-	>=x11-proto/presentproto-1.0[${MULTILIB_USEDEP}]
 	>=x11-proto/glproto-1.4.15-r1[${MULTILIB_USEDEP}]
 	>=x11-proto/xextproto-7.0.99.1[${MULTILIB_USEDEP}]
 	x11-proto/xf86driproto[${MULTILIB_USEDEP}]
@@ -204,7 +207,7 @@ src_prepare() {
 	fi
 
 	# relax the requirement that r300 must have llvm, bug 380303
-	epatch "${FILESDIR}"/mesa-9.2-dont-require-llvm-for-r300.patch
+	epatch "${FILESDIR}"/${PN}-9.2-dont-require-llvm-for-r300.patch
 
 	# fix for hardened pax_kernel, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch
@@ -248,17 +251,18 @@ multilib_src_configure() {
 	fi
 
 	if use egl; then
-		myconf+="--with-egl-platforms=x11$(use wayland && echo ",wayland")$(use gbm && echo ",drm") "
+		myconf+="
+			--with-egl-platforms=x11$(use wayland && echo ",wayland")$(use gbm && echo ",drm")
+			$(use_enable gallium gallium-egl)
+		"
 	fi
 
 	if use gallium; then
 		myconf+="
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openvg)
-			$(use_enable openvg gallium-egl)
 			$(use_enable r600-llvm-compiler)
 			$(use_enable vdpau)
-			$(use_enable xa)
 			$(use_enable xvmc)
 		"
 		gallium_enable swrast
@@ -301,7 +305,8 @@ multilib_src_configure() {
 	use userland_GNU || export INDENT=cat
 
 	if ! multilib_is_native_abi; then
-		myconf+="LLVM_CONFIG=${EPREFIX}/usr/bin/llvm-config.${ABI}"
+		myconf+="--disable-xorg
+			LLVM_CONFIG=${EPREFIX}/usr/bin/llvm-config.${ABI}"
 	fi
 
 	econf \
@@ -317,6 +322,8 @@ multilib_src_configure() {
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
 		$(use_enable !pic asm) \
+		$(use_enable xa) \
+		$(use_enable xorg) \
 		$(use_with llvm-shared-libs) \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \
@@ -413,10 +420,6 @@ multilib_src_install_all() {
 	# Install config file for eselect mesa
 	insinto /usr/share/mesa
 	newins "${FILESDIR}/eselect-mesa.conf.9.2" eselect-mesa.conf
-}
-
-multilib_src_test() {
-	emake check
 }
 
 pkg_postinst() {

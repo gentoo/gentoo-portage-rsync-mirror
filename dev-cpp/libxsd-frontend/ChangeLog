@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/libxsd-frontend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.16 2014/02/24 19:24:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.18 2014/02/24 19:33:59 zlogene Exp $
+
+  24 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -libxsd-frontend-1.18.0-r1.ebuild, -libxsd-frontend-1.18.0.ebuild:
+  Drop old.
+
+  24 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  libxsd-frontend-1.18.0-r3.ebuild:
+  ppc64 stable wrt bug #496784
 
   24 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
   libxsd-frontend-1.18.0-r3.ebuild:

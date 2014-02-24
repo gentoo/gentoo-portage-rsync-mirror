@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.538 2014/02/04 20:49:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.539 2014/02/24 19:42:05 chithanh Exp $
+
+*mesa-9.2.5-r1 (24 Feb 2014)
+
+  24 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-9.2.5-r1.ebuild, mesa-10.0.3.ebuild:
+  Warn against debug USE flag mismatch with llvm, bug #459306. Add REQUIRED_USE
+  for python, bug #472054. Find libLLVM in the correct path, bug #488216. Depend
+  on elfutils/libelf for radeon-llvm, bug #490092. Fix GLXFBConfig attibutes for
+  xorg state tracker, bug #492934. Always use C++ linking for libvdpau_r600, bug
+  #494970. Add runtime dependency on llvm when used as shared library, bug
+  #498812.
 
   04 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-9.2.5.ebuild:

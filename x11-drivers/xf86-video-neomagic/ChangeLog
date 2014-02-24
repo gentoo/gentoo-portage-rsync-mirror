@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-neomagic
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.52 2013/08/16 19:00:13 chithanh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.53 2014/02/24 20:00:41 chithanh Exp $
+
+  24 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xf86-video-neomagic-1.2.5.ebuild, -xf86-video-neomagic-1.2.6.ebuild,
+  -xf86-video-neomagic-1.2.7.ebuild, xf86-video-neomagic-1.2.8.ebuild:
+  Relax xorg-server dependency per user report.
 
   16 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xf86-video-neomagic-1.2.8.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.137 2014/02/23 17:10:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.138 2014/02/24 19:34:52 axs Exp $
+
+  24 Feb 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -spidermonkey-17.0.0-r1.ebuild, spidermonkey-17.0.0-r2.ebuild,
+  spidermonkey-24.2.0.ebuild:
+  added missing zlib dep, bug 502332 ; remove old
 
   23 Feb 2014; Pacho Ramos <pacho@gentoo.org> spidermonkey-17.0.0-r2.ebuild:
   x86 stable, bug #500758
