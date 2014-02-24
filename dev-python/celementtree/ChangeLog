@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.34 2014/02/11 15:05:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.35 2014/02/24 02:13:07 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  celementtree-1.0.5-r2.ebuild:
+  x86 stable wrt bug #474180
 
   11 Feb 2014; Akinori Hattori <hattya@gentoo.org> celementtree-1.0.5-r2.ebuild:
   ia64 stable wrt bug #474180

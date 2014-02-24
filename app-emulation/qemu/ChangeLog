@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.246 2014/01/19 23:04:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.247 2014/02/24 02:20:18 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> qemu-1.5.3.ebuild:
+  x86 stable wrt bug #483760
 
   19 Jan 2014; Doug Goldstein <cardoe@gentoo.org> qemu-1.7.0.ebuild:
   Nudge the SeaBIOS depend to the correct version for this release.

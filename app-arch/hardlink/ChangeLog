@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/hardlink
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/ChangeLog,v 1.8 2013/08/03 00:14:11 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/ChangeLog,v 1.9 2014/02/24 02:08:19 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> hardlink-0.2.0.ebuild:
+  x86 stable wrt bug #476042
 
   03 Aug 2013; Michael Weber <xmw@gentoo.org> hardlink-0.2.0.ebuild:
   Adding ~arm keyword.

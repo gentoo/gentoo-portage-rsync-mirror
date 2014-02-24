@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/zinnia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.10 2014/01/11 06:59:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.11 2014/02/24 02:09:38 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> zinnia-0.06-r3.ebuild:
+  x86 stable wrt bug #491920
 
   11 Jan 2014; Naohiro Aota <naota@gentoo.org> zinnia-0.06-r3.ebuild:
   Proper empty array setting. #497670

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-Syscall
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Syscall/ChangeLog,v 1.11 2013/08/16 08:40:45 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Syscall/ChangeLog,v 1.12 2014/02/24 02:03:15 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Sys-Syscall-0.250.0.ebuild:
+  x86 stable wrt bug #495478
 
 *Sys-Syscall-0.250.0 (16 Aug 2013)
 

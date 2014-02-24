@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.28 2013/08/29 16:04:28 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.29 2014/02/24 02:29:20 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mytop-1.6-r4.ebuild:
+  x86 stable wrt bug #491978
 
 *mytop-1.6-r4 (29 Aug 2013)
 

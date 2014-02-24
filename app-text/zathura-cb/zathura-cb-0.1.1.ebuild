@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-0.1.1.ebuild,v 1.3 2013/06/20 23:13:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-0.1.1.ebuild,v 1.4 2014/02/24 02:23:02 phajdan.jr Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm x86"
 IUSE=""
 
 COMMON_DEPEND=">=app-text/zathura-0.2.0

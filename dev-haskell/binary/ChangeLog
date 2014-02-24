@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.34 2014/02/21 19:40:00 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.35 2014/02/24 02:29:46 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> binary-0.7.1.0.ebuild:
+  x86 stable wrt bug #491980
 
   21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> binary-0.7.1.0.ebuild:
   Marked as ghc-7.8 core lib.

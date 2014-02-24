@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/File_Iterator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/File_Iterator/ChangeLog,v 1.7 2014/02/11 19:00:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/File_Iterator/ChangeLog,v 1.8 2014/02/24 02:27:46 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  File_Iterator-1.3.4.ebuild:
+  x86 stable wrt bug #495558
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> File_Iterator-1.3.4.ebuild:
   Stable for HPPA (bug #495558).

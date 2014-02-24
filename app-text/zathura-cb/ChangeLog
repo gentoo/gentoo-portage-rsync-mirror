@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-cb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.9 2013/06/23 12:35:32 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.10 2014/02/24 02:23:02 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> zathura-cb-0.1.1.ebuild:
+  x86 stable wrt bug #491958
 
 *zathura-cb-9999 (23 Jun 2013)
 

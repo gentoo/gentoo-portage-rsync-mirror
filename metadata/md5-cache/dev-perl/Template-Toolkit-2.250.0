@@ -4,11 +4,11 @@ DESCRIPTION=The Template Toolkit
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Template-Toolkit/
 IUSE=xml gd mysql postgres latex vim-syntax
-KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~ppc-aix ~x86-fbsd ~x86-solaris
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 x86 ~ppc-aix ~x86-fbsd ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 PDEPEND=dev-perl/text-autoformat vim-syntax? ( app-vim/tt2-syntax ) xml? ( dev-perl/Template-XML ) gd? ( dev-perl/Template-GD ) mysql? ( dev-perl/Template-DBI ) latex? ( dev-perl/Template-Latex ) postgres? ( dev-perl/Template-DBI )
 RDEPEND=dev-perl/text-autoformat mysql? ( dev-perl/DBD-mysql ) postgres? ( dev-perl/DBD-Pg ) >=dev-perl/AppConfig-1.56 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AB/ABW/Template-Toolkit-2.25.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=cdc3283228894782b07818cbe0c7a570
+_md5_=4348705ca59bce0dd5ec22fc54ce665b

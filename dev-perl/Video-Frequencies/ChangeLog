@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Frequencies
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.14 2014/02/11 15:37:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.15 2014/02/24 02:09:10 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Video-Frequencies-0.03-r1.ebuild:
+  x86 stable wrt bug #495502
 
   11 Feb 2014; Akinori Hattori <hattya@gentoo.org>
   Video-Frequencies-0.03-r1.ebuild:

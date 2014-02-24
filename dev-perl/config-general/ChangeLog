@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/config-general
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.86 2013/08/15 06:51:32 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.87 2014/02/24 02:18:06 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  config-general-2.520.0.ebuild:
+  x86 stable wrt bug #495530
 
 *config-general-2.520.0 (15 Aug 2013)
 

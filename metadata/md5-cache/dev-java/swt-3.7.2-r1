@@ -4,10 +4,10 @@ DESCRIPTION=GTK based SWT Library
 EAPI=4
 HOMEPAGE=http://www.eclipse.org/
 IUSE=cairo gnome opengl webkit elibc_FreeBSD elibc_FreeBSD elibc_FreeBSD
-KEYWORDS=~amd64 ppc ~ppc64 ~x86
+KEYWORDS=~amd64 ppc ~ppc64 x86
 LICENSE=CPL-1.0 LGPL-2.1 MPL-1.1
 RDEPEND=>=virtual/jre-1.4 >=dev-libs/glib-2.6 >=x11-libs/gtk+-2.6.8:2 >=dev-libs/atk-1.10.2 cairo? ( >=x11-libs/cairo-1.4.14 ) gnome? ( =gnome-base/libgnome-2* =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* ) opengl? ( virtual/opengl virtual/glu ) webkit? ( >=net-libs/webkit-gtk-1.2:2 ) x11-libs/libXtst >=dev-java/java-config-2.1.9-r1
 SLOT=3.7
 SRC_URI=x86? ( http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/swt-3.7.2-gtk-linux-x86.zip ) x86-fbsd? ( http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/swt-3.7.2-gtk-linux-x86.zip ) amd64? ( http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/swt-3.7.2-gtk-linux-x86_64.zip ) ppc? ( http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/swt-3.7.2-gtk-linux-x86.zip ) ppc64? ( http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/swt-3.7.2-gtk-linux-ppc64.zip )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-osgi	fb81d0ede6b5759b64ec19226fe6d2f2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ea7ca4829231fe83d79b6431f577bfc2
+_md5_=1785cdcb7b2504695463db6c49ceb573

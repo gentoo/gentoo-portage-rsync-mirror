@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.9.9.ebuild,v 1.1 2013/06/30 10:30:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.9.9.ebuild,v 1.2 2014/02/24 02:20:22 patrick Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ RDEPEND="sys-process/at
 
 src_prepare() {
 	# prepare sources with new Makefile handling
-	cp ${FILESDIR}/music.mk "${S}"/Makefile
+	cp "${FILESDIR}/music.mk" "${S}"/Makefile
 
 	# clean up from untranslated .po files
 	rm "${S}"/po/{ca_ES,cs_CZ,da_DK,el_GR,es_ES,et_EE,fi_FI,fr_FR,hr_HR,hu_HU,it_IT,nl_NL,nn_NO,pl_PL,pt_PT,ro_RO,ru_RU,sl_SI,sv_SE,tr_TR}.po

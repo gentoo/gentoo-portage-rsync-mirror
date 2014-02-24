@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/shoutcast2vdr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/shoutcast2vdr/ChangeLog,v 1.1 2008/01/13 14:28:46 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/shoutcast2vdr/ChangeLog,v 1.2 2014/02/24 02:17:00 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  shoutcast2vdr-0.0.8.ebuild:
+  x86 stable wrt bug #287141
 
 *shoutcast2vdr-0.0.8 (13 Jan 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-music
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.13 2014/02/23 20:25:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.14 2014/02/24 02:20:22 patrick Exp $
+
+  24 Feb 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  vdr-music-0.9.9.ebuild:
+  Remove redundant useflag descriptions from metadata.xml, fix quoting
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-music-0.2.0.ebuild,
   -files/vdr-music-0.2.0-ImageMagick-header.diff,
@@ -65,4 +69,3 @@
   +files/vdr-music-0.2.0-lyrics.diff, +files/vdr-music-0.2.0-vdr-1.5.x.diff,
   +metadata.xml, +vdr-music-0.2.0.ebuild:
   initial ebuild; moved from vdr-testing overlay; Thanks to T.Kost T.Rheinhold
-

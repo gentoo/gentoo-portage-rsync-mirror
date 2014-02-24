@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/kawa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.13 2010/09/23 22:59:36 chiiph Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.14 2014/02/24 02:27:12 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> kawa-1.10.ebuild:
+  x86 stable wrt bug #354753
 
   23 Sep 2010; Tomas Touceda <chiiph@gentoo.org> files/kawa-1.10.patch:
   Update patch to make kawa respect JAVACFLAGS wrt bug 337728

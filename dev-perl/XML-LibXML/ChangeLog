@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.151 2014/02/16 21:21:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.152 2014/02/24 02:12:41 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  XML-LibXML-2.1.400.ebuild:
+  x86 stable wrt bug #495512
 
   16 Feb 2014; Markus Meier <maekke@gentoo.org> XML-LibXML-2.1.400.ebuild:
   arm stable, bug #495512

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/kawa-1.10.ebuild,v 1.1 2010/09/16 15:14:21 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/kawa-1.10.ebuild,v 1.2 2014/02/24 02:27:12 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ LICENSE="MIT public-domain
 		 jemacs? ( GPL-2 )
 		 krl? ( GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="+awt echo2 +frontend jemacs krl +sax servlets +swing swt +xml xqtests"
 
 COMMON_DEPEND="( >=virtual/jdk-1.5 )

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/symbola/symbola-7.12.ebuild,v 1.1 2013/09/15 21:09:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/symbola/symbola-7.12.ebuild,v 1.2 2014/02/24 02:28:49 phajdan.jr Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://users.teilar.gr/~g1951d/${MY_PN}.ttf -> ${P}.ttf
 LICENSE="Unicode_Fonts_for_Ancient_Scripts"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc x86"
 IUSE="doc"
 
 S="${WORKDIR}"

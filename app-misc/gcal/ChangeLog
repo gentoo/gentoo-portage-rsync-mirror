@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.47 2014/01/12 20:21:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.48 2014/02/24 02:15:30 phajdan.jr Exp $
+
+  24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcal-3.6.2.ebuild:
+  x86 stable wrt bug #497136
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> gcal-3.6.2.ebuild:
   amd64 stable, bug #497136

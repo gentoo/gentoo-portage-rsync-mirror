@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/hardlink-0.2.0.ebuild,v 1.4 2013/08/03 00:14:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/hardlink-0.2.0.ebuild,v 1.5 2014/02/24 02:08:20 phajdan.jr Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://jak-linux.org/projects/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/libpcre"
