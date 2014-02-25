@@ -2,11 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>qt</herd>
-<use>
-<flag name="kde">Use kdesu to gain root access</flag>
-<flag name="gnome">Use gksu to gain root access</flag>
-</use>
-<longdescription lang="en">
-</longdescription>
 </pkgmetadata>
 
