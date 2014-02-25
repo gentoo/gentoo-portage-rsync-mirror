@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.21 2014/02/02 15:11:16 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.22 2014/02/25 12:49:00 scarabeus Exp $
+
+  25 Feb 2014; Tomáš Chvátal <scarabeus@gentoo.org>
+  -suse-build-2013.10.15-r1.ebuild, -suse-build-2013.10.15.ebuild,
+  suse-build-2013.12.05.ebuild:
+  Stabilise on amd64 and x86. Drop older.
 
 *suse-build-2013.12.05 (02 Feb 2014)
 

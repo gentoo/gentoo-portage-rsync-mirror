@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/osc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.26 2014/02/23 16:26:00 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.28 2014/02/25 12:41:31 scarabeus Exp $
+
+  25 Feb 2014; Tomáš Chvátal <scarabeus@gentoo.org> -osc-0.142.2.ebuild,
+  osc-0.143.0.ebuild:
+  Stabilise 0.143.0 on amd64 and x86. Drop older.
+
+  25 Feb 2014; Tomáš Chvátal <scarabeus@gentoo.org> osc-0.143.0.ebuild,
+  osc-9999.ebuild:
+  we want python[xml] not pyxml.
 
 *osc-0.143.0 (23 Feb 2014)
 

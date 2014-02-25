@@ -1,12 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.143.0.ebuild,v 1.1 2014/02/23 16:26:00 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.143.0.ebuild,v 1.3 2014/02/25 12:41:31 scarabeus Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/openSUSE/osc.git"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="xml"
 
 if [[ "${PV}" == "9999" ]]; then
 	EXTRA_ECLASS="git-2"
@@ -30,11 +31,10 @@ IUSE=""
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ "${PV}" == "9999" ]] || \
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="
 	dev-python/urlgrabber[${PYTHON_USEDEP}]
-	dev-python/pyxml[${PYTHON_USEDEP}]
 	app-arch/rpm[python,${PYTHON_USEDEP}]
 	dev-python/m2crypto[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}

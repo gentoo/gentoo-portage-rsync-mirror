@@ -1,12 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.13 2013/07/24 17:40:50 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.14 2014/02/25 12:40:00 scarabeus Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/openSUSE/osc.git"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="xml"
 
 if [[ "${PV}" == "9999" ]]; then
 	EXTRA_ECLASS="git-2"
@@ -34,7 +35,6 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	dev-python/urlgrabber[${PYTHON_USEDEP}]
-	dev-python/pyxml[${PYTHON_USEDEP}]
 	app-arch/rpm[python,${PYTHON_USEDEP}]
 	dev-python/m2crypto[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}

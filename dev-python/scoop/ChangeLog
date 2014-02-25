@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/scoop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scoop/ChangeLog,v 1.1 2014/02/23 14:47:50 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scoop/ChangeLog,v 1.2 2014/02/25 12:32:31 slis Exp $
+
+*scoop-0.7.0-r1 (25 Feb 2014)
+
+  25 Feb 2014; Sławek Lis <slis@gentoo.org> +scoop-0.7.0-r1.ebuild,
+  -scoop-0.7.0.ebuild:
+  Use virtual/python-argparse instead dev-python/argparse (bug #502328)
 
 *scoop-0.7.0 (23 Feb 2014)
 
