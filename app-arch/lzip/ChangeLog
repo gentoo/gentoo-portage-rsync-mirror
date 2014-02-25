@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.49 2014/02/22 14:19:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.50 2014/02/25 00:07:16 bicatali Exp $
+
+  25 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> lzip-1.15.ebuild:
+  Keyword amd64-linux and x86-linux
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org> lzip-1.14.ebuild,
   lzip-1.15.ebuild:
