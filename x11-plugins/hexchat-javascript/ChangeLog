@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/hexchat-javascript
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/ChangeLog,v 1.3 2014/01/07 21:49:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/ChangeLog,v 1.4 2014/02/25 19:53:48 hasufell Exp $
+
+  25 Feb 2014; Julian Ospald <hasufell@gentoo.org>
+  hexchat-javascript-0.3.1.ebuild:
+  fix dependency on dev-lang/spidermonkey (set SLOT to 0)
 
 *hexchat-javascript-0.3.1 (07 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/hexchat-javascript-0.3.1.ebuild,v 1.1 2014/01/07 21:49:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/hexchat-javascript-0.3.1.ebuild,v 1.2 2014/02/25 19:53:48 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="
-	dev-lang/spidermonkey
+	dev-lang/spidermonkey:0
 	>=net-irc/hexchat-2.9.6[plugins]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

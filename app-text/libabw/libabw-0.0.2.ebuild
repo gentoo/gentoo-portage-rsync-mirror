@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/libabw-0.0.1.ebuild,v 1.1 2014/01/27 15:32:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/libabw-0.0.2.ebuild,v 1.1 2014/02/25 19:47:04 scarabeus Exp $
 
 EAPI=5
 
@@ -17,7 +17,6 @@ IUSE="doc static-libs"
 
 RDEPEND="
 	app-text/libwpd:0.9
-	>=app-text/libwpg-0.2.2:0.2
 	dev-libs/libxml2
 	sys-libs/zlib
 "
