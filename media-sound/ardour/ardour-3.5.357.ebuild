@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.14.ebuild,v 1.4 2013/11/08 12:34:31 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.357.ebuild,v 1.1 2014/02/25 16:17:24 nativemad Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs flag-o-matic waf-utils
@@ -14,7 +14,7 @@ if [ ${PV} = 9999 ]; then
 	inherit git-2
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://github.com/Ardour/ardour/archive/${PV}.zip -> ${P}.zip"
+	SRC_URI="https://github.com/Ardour/ardour/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 LICENSE="GPL-2"
@@ -65,8 +65,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen[dot] )"
 	if ! [ ${PV} = 9999 ]; then
-		DEPEND="${DEPEND}
-		app-arch/unzip"
+		DEPEND="${DEPEND}"
 	fi
 
 src_unpack() {
@@ -79,11 +78,15 @@ src_unpack() {
 
 src_prepare(){
 	if ! [ ${PV} = 9999 ]; then
-		sed -e '/cmd = "git describe --tags/,/utf-8/{s:cmd = \"git describe --tags HEAD\":rev = \"'${PV}'\":p;d}' -i "${S}"/wscript
+		PVTEMP=`echo "${PV}" | sed "s/\./-/2"`
+		sed -e '/cmd = "git describe HEAD/,/utf-8/{s:cmd = \"git describe HEAD\":rev = \"'${PVTEMP}-gentoo'\":p;d}' -i "${S}"/wscript
+		sed -e 's/'os.getcwd\(\),\ \'.git'/'os.getcwd\(\),\ \'libs/'' -i "${S}"/wscript
 		sed -e 's/'os.path.exists\(\'.git'/'os.path.exists\(\'wscript/'' -i "${S}"/wscript
+
 	fi
-	epatch "${FILESDIR}"/${PN}-3.5-syslibs.patch
+	epatch "${FILESDIR}"/${PN}-3.5.7-syslibs.patch
 	sed 's/python/python2/' -i waf
+	sed 's/'FLAGS\'\,\ optimization_flags'/'FLAGS\'\,\ \'\''/g' -i "${S}"/wscript
 }
 
 src_configure() {
@@ -95,7 +98,7 @@ src_configure() {
 		--configdir=/etc \
 		$(use lv2 && echo "--lv2" || echo "--no-lv2") \
 		$(use nls && echo "--nls" || echo "--no-nls") \
-		$(use debug && echo "--stl-debug") \
+		$(use debug && echo "--stl-debug" || echo "--optimize") \
 		$((use altivec || use sse) && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
 		$(use doc && echo "--docs")
 }
@@ -106,4 +109,9 @@ src_install() {
 	doman ${PN}${SLOT}.1
 	newicon icons/icon/ardour_icon_mac.png ${PN}${SLOT}.png
 	make_desktop_entry ardour3 ardour3 ardour3 AudioVideo
+}
+
+pkg_postinst() {
+	elog "If you are using Ardour and want to keep its development alive"
+	elog "then please consider to do a donation upstream at ardour.org. Thanks!"
 }

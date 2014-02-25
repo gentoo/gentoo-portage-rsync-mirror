@@ -1,6 +1,15 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.73 2014/02/02 16:14:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.75 2014/02/25 16:21:32 mgorny Exp $
+
+*udev-208-r1 (25 Feb 2014)
+
+  25 Feb 2014; Michał Górny <mgorny@gentoo.org> +udev-208-r1.ebuild,
+  -udev-208.ebuild:
+  Revbump to enforce the dep update.
+
+  25 Feb 2014; Michał Górny <mgorny@gentoo.org> udev-208.ebuild:
+  Add systemd subslot 2 since it did not change libudev.so.
 
   02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-200.ebuild,
   -udev-204.ebuild, metadata.xml:

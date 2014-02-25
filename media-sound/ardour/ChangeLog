@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.127 2014/02/07 14:22:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.128 2014/02/25 16:17:24 nativemad Exp $
+
+*ardour-3.5.357 (25 Feb 2014)
+
+  25 Feb 2014; Andreas Schuerch <nativemad@gentoo.org> -ardour-3.0.ebuild,
+  -ardour-3.2.ebuild, -ardour-3.3.ebuild, -ardour-3.4.ebuild,
+  -ardour-3.5.14.ebuild, -ardour-3.5.143.ebuild, -ardour-3.5.308.ebuild,
+  +ardour-3.5.357.ebuild:
+  remove old 3.X ebuilds and bump to 3.5.357
 
 *ardour-3.5.308-r1 (07 Feb 2014)
 
