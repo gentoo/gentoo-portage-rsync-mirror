@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-209.ebuild,v 1.5 2014/02/24 08:40:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.1 2014/02/25 08:20:24 ssuominen Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ else
 					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
 					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.xz"
 			fi
-	#The 80-net-name-slot.rules -> 99-default.link change needs some documentation work first:
+	#TODO: Release news item before keywording
 	#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
@@ -318,7 +318,6 @@ multilib_src_install() {
 		fi
 
 		# add final values of variables:
-		# TODO: networkdir follows prefix, not rootprefix, which is an upstream bug
 		targets+=(
 			rootlibexec_PROGRAMS=systemd-udevd
 			rootbin_PROGRAMS=udevadm
@@ -328,7 +327,7 @@ multilib_src_install() {
 					$(sysconfdir)/udev/hwdb.d \
 					$(sysconfdir)/systemd/network'
 			dist_bashcompletion_DATA="shell-completion/bash/udevadm"
-			networkdir=/lib/systemd/network
+			dist_network_DATA="network/99-default.link"
 		)
 		emake -j1 DESTDIR="${D}" "${targets[@]}"
 

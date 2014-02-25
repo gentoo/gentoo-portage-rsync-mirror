@@ -3,10 +3,10 @@ DEPEND=app-crypt/trousers app-arch/xz-utils:= dev-libs/libyaml:= dev-libs/openss
 DESCRIPTION=Chrome OS verified boot tools
 EAPI=5
 HOMEPAGE=http://git.chromium.org/gitweb/?p=chromiumos/platform/vboot_reference.git
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=BSD
 RDEPEND=app-arch/xz-utils:= dev-libs/libyaml:= dev-libs/openssl:0= sys-apps/util-linux:=
 SLOT=0
 SRC_URI=http://kojipkgs.fedoraproject.org/packages/vboot-utils/20130222gite6cf2c2/3.fc19/src/vboot-utils-20130222gite6cf2c2-3.fc19.src.rpm
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=353851966bc1adb89a324d724dc442c0
+_md5_=3590ce5eb1143a9b03d9ebd131dcd616

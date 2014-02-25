@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/bcrypt-ruby-3.1.6.ebuild,v 1.1 2014/02/23 07:03:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/bcrypt-ruby-3.1.6.ebuild,v 1.2 2014/02/25 08:02:32 graaff Exp $
 
 EAPI=5
 
@@ -46,12 +46,12 @@ each_ruby_install() {
 		# bcrypt` was already part of bcrypt-ruby requirements.
 		cat - <<EOF > "${T}/bcrypt-ruby.gemspec"
 Gem::Specification.new do |s|
-  s.name = "bcrypt-ruby"
-  s.version = "${RUBY_FAKEGEM_VERSION}"
-  s.summary = "Fake gem to load bcrypt"
-  s.homepage = "${HOMEPAGE}"
-  s.specification_version = 3
-  s.add_runtime_dependency("${RUBY_FAKEGEM_NAME}", ["= ${RUBY_FAKEGEM_VERSION}"])
+	s.name = "bcrypt-ruby"
+	s.version = "${RUBY_FAKEGEM_VERSION}"
+	s.summary = "Fake gem to load bcrypt"
+	s.homepage = "${HOMEPAGE}"
+	s.specification_version = 3
+	s.add_runtime_dependency("${RUBY_FAKEGEM_NAME}", ["= ${RUBY_FAKEGEM_VERSION}"])
 end
 EOF
 		RUBY_FAKEGEM_NAME=bcrypt-ruby \
