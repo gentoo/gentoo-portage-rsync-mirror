@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.133 2014/02/18 07:05:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.134 2014/02/25 09:07:42 polynomial-c Exp $
+
+*grep-2.18 (25 Feb 2014)
+
+  25 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +grep-2.18.ebuild:
+  Version bump.
 
 *grep-2.17 (18 Feb 2014)
 
