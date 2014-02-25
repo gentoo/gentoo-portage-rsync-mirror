@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.79 2014/01/15 13:05:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.80 2014/02/25 18:27:17 kensington Exp $
+
+*pycups-1.9.66 (25 Feb 2014)
+
+  25 Feb 2014; Michael Palimaka <kensington@gentoo.org> +pycups-1.9.66.ebuild:
+  Version bump wrt bug #500534, adding Python 3 support.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.63.ebuild:
   Stable for alpha, wrt bug #488760

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.93 2014/02/25 15:07:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.94 2014/02/25 18:03:00 mgorny Exp $
 
 EAPI=5
 
@@ -292,11 +292,6 @@ multilib_src_install() {
 		# Even with --enable-networkd, it's not right to have this running by default
 		# when it's unconfigured.
 		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
-
-		# install compat pkg-config files
-		local pcfiles=( src/compat-libs/libsystemd-{daemon,id128,journal,login}.pc )
-		emake "${mymakeopts[@]}" install-pkgconfiglibDATA \
-			pkgconfiglib_DATA="${pcfiles[*]}"
 	else
 		mymakeopts+=(
 			install-libLTLIBRARIES
@@ -309,6 +304,11 @@ multilib_src_install() {
 
 		emake "${mymakeopts[@]}"
 	fi
+
+	# install compat pkg-config files
+	local pcfiles=( src/compat-libs/libsystemd-{daemon,id128,journal,login}.pc )
+	emake "${mymakeopts[@]}" install-pkgconfiglibDATA \
+		pkgconfiglib_DATA="${pcfiles[*]}"
 }
 
 multilib_src_install_all() {

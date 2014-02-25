@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/primecoind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.2 2014/01/08 06:27:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.3 2014/02/25 18:26:59 blueness Exp $
+
+*primecoind-0.1.2-r1 (25 Feb 2014)
+
+  25 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/primecoin.initd-r1, +primecoind-0.1.2-r1.ebuild:
+  Add improved initd, bug #500602
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> primecoind-0.1.2.ebuild:
   Inherit the user eclass for enewuser/etc...

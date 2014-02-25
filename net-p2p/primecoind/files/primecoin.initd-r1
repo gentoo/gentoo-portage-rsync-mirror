@@ -1,25 +1,25 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/files/datacoin.initd,v 1.2 2014/02/25 18:22:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/files/primecoin.initd-r1,v 1.1 2014/02/25 18:26:59 blueness Exp $
 
-vardir="/var/lib/datacoin"
-conffile="${vardir}/.datacoin/datacoin.conf"
-datacoind_user="${DATACOIN_USER:-nobody:nobody}"
+vardir="/var/lib/primecoin"
+conffile="${vardir}/.primecoin/primecoin.conf"
+primecoind_user="${PRIMECOIN_USER:-nobody:nobody}"
 
 description="Bitcoin crypto-currency wallet for automated services"
 pidfile="/run/${SVCNAME}.pid"
-command="/usr/bin/datacoind"
-command_args="${DATACOIN_OPTS}"
+command="/usr/bin/primecoind"
+command_args="${PRIMECOIN_OPTS}"
 command_background="true"
-start_stop_daemon_args="-u ${datacoind_user} -e HOME=${vardir} -N ${NICELEVEL:-0} -w 2000"
+start_stop_daemon_args="-u ${primecoind_user} -e HOME=${vardir} -N ${NICELEVEL:-0} -w 2000"
 
 depend() {
 	need net
 }
 
 start_pre() {
-	checkpath -f -o ${datacoind_user} -m 0400 ${conffile} || return 1
+	checkpath -f -o ${primecoind_user} -m 0400 ${conffile} || return 1
 
 	if ! grep -q '^rpcpassword=' "${conffile}"; then
 		eerror "Please edit `readlink -f ${conffile}`"
