@@ -1,0 +1,9 @@
+# ChangeLog for perl-core/Devel-PPPort
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Devel-PPPort/ChangeLog,v 1.1 2014/02/25 15:26:21 zlogene Exp $
+
+*Devel-PPPort-3.200 (25 Feb 2014)
+
+  25 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> +Devel-PPPort-3.200.ebuild,
+  +metadata.xml:
+  Initial commit, fix bug #483994, bug #502380
