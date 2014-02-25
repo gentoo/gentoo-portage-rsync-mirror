@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.60 2014/02/02 11:08:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.61 2014/02/24 23:47:03 blueness Exp $
+
+*libmicrohttpd-0.9.34 (24 Feb 2014)
+
+  24 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  +libmicrohttpd-0.9.34.ebuild,
+  -files/libmicrohttpd-0.9.28-fix-no-messages.patch:
+  Version bump
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.32.ebuild:
   Stable for alpha, wrt bug #487344

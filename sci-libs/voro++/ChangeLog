@@ -1,0 +1,9 @@
+# ChangeLog for sci-libs/voro++
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/voro++/ChangeLog,v 1.1 2014/02/24 23:36:07 ottxor Exp $
+
+*voro++-0.4.6 (24 Feb 2014)
+
+  24 Feb 2014; Christoph Junghans <ottxor@gentoo.org>
+  +files/voro++-0.4.6-cmake.patch, +metadata.xml, +voro++-0.4.6.ebuild:
+  initial commit
