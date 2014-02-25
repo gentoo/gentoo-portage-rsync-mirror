@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sure
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sure/ChangeLog,v 1.1 2013/12/02 01:04:19 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sure/ChangeLog,v 1.2 2014/02/25 12:21:14 scarabeus Exp $
+
+*sure-1.2.5 (25 Feb 2014)
+
+  25 Feb 2014; Tomáš Chvátal <scarabeus@gentoo.org> +sure-1.2.5.ebuild,
+  sure-1.2.3.ebuild:
+  Enable python3_3 build as it seems to work. While at it bump to latest version
+  that is available.
 
 *sure-1.2.3 (02 Dec 2013)
 
