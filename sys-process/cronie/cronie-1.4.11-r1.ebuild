@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.11.ebuild,v 1.11 2014/01/11 09:53:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.11-r1.ebuild,v 1.1 2014/02/25 19:08:17 polynomial-c Exp $
 
 EAPI=5
 
@@ -66,6 +66,7 @@ src_install() {
 
 		insinto /etc
 
+		doins contrib/anacrontab
 		newinitd "${FILESDIR}"/anacron-1.0-initd anacron
 
 		# Install this without execute permission.
