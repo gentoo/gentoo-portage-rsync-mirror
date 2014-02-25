@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.291 2014/02/23 20:08:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.293 2014/02/25 21:16:28 maekke Exp $
+
+  25 Feb 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
+  remove package.use.mask media-video/totem[flash], bug #495254
+
+  25 Feb 2014; Markus Meier <maekke@gentoo.org> package.use.mask, use.mask:
+  remove quvi use.mask, but package.use.mask stable versions of
+  dev-libs/totem-pl-parser[quvi] and media-video/mplayer2[quvi] reverse
+  dependencies of media-libs/libquvi, bug #495254
 
   23 Feb 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask dev-libs/efl[physics], bug #499974

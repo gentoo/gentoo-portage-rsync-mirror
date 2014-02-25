@@ -127,7 +127,6 @@ iplayer
 plotutils
 lpsol
 upnp
-quvi
 bluray
 libtar
 zvbi

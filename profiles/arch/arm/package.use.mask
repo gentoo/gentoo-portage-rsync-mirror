@@ -1,8 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.193 2014/02/23 20:08:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.195 2014/02/25 21:16:28 maekke Exp $
 
-# Markus Meier <zx2c4@gentoo.org> (23 Feb 2014)
+# Markus Meier <maekke@gentoo.org> (25 Feb 2014)
+# stable reverse deps of media-libs/libquvi, bug #495254
+=dev-libs/totem-pl-parser-2.32.6-r3 quvi
+=media-video/mplayer2-2.0_p20130126 quvi
+=media-video/mplayer2-2.0_p20130428-r1 quvi
+
+# Markus Meier <maekke@gentoo.org> (23 Feb 2014)
 # unkeyworded dep, bug #499974
 dev-libs/efl physics
 
@@ -304,7 +310,7 @@ app-cdr/brasero vcd
 
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now
-media-video/totem flash youtube
+media-video/totem youtube
 
 # Markus Meier <maekke@gentoo.org> (13 Mar 2011)
 # needs stable kde stuff
