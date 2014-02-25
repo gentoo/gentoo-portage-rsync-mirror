@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/pdlzip
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdlzip/ChangeLog,v 1.1 2014/02/25 08:45:22 mgorny Exp $
+
+*pdlzip-1.5 (25 Feb 2014)
+
+  25 Feb 2014; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +pdlzip-1.5.ebuild:
+  Introduce a public-domain C variant of lzip. It should more lightweight than
+  app-arch/lzip.
