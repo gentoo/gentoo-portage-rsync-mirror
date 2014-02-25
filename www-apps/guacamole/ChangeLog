@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/guacamole
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.8 2013/11/26 12:53:33 nativemad Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.9 2014/02/25 15:56:28 nativemad Exp $
+
+  25 Feb 2014; Andreas Schuerch <nativemad@gentoo.org> -guacamole-0.6.2.ebuild,
+  -guacamole-0.7.0.ebuild, -guacamole-0.8.0.ebuild:
+  deleted old ebuilds. see bug 497262
 
 *guacamole-0.8.3 (26 Nov 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.3.2.2-r1.ebuild,v 1.1 2013/12/10 11:25:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.3.2.2-r1.ebuild,v 1.2 2014/02/25 15:40:58 slyfox Exp $
 
 EAPI=5
 
@@ -39,6 +39,7 @@ RDEPEND=">=dev-haskell/binary-0.4.4:=[profile?] <dev-haskell/binary-0.8:=[profil
 		( >=dev-haskell/mtl-2.1.1:=[profile?] <dev-haskell/mtl-2.2:=[profile?] ) )
 	|| ( ( >=dev-haskell/hashable-1.1.2.3:=[profile?] <dev-haskell/hashable-1.2:=[profile?] )
 		( >=dev-haskell/hashable-1.2.1.0:=[profile?] <dev-haskell/hashable-1.3:=[profile?] ) )
+	virtual/emacs
 "
 PDEPEND="stdlib? ( sci-mathematics/agda-stdlib )"
 DEPEND="${RDEPEND}
@@ -53,12 +54,18 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	CABAL_FILE=${MY_PN}.cabal cabal_chdeps \
 		'binary >= 0.4.4 && < 0.6' 'binary >= 0.4.4 && < 0.8' \
-		'text == 0.11.*' 'text >= 0.11'
+		'text == 0.11.*' 'text >= 0.11' \
+		'base >= 4.2 && < 4.7' 'base >= 4.2 && < 4.8' \
+		'array >= 0.1 && < 0.5' 'array >= 0.1 && < 0.6' \
+		'process >= 1.0.1.0 && < 1.2' 'process >= 1.0.1.0 && < 1.3'
+
 	sed -e '/.*emacs-mode.*$/d' \
 		-e '/^executable agda/,$d' \
 		-i "${S}/${MY_PN}.cabal" \
 		|| die "Could not remove agda and agda-mode from ${MY_PN}.cabal"
+
 	cabal-mksetup
+
 	if use epic && use stdlib; then
 		ewarn "Note that the agda-stdlib README:"
 		ewarn "http://www.cse.chalmers.se/~nad/listings/lib/README.html"
@@ -84,6 +91,7 @@ src_configure() {
 }
 
 src_compile() {
+	BYTECOMPFLAGS="-L ./src/data/emacs-mode"
 	elisp-compile src/data/emacs-mode/*.el \
 		|| die "Failed to compile emacs mode"
 	haskell-cabal_src_compile
