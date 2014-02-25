@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1147 2014/02/24 08:43:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1148 2014/02/25 13:01:49 mgorny Exp $
+
+  25 Feb 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Use git init+fetch rather than clone in order to fix checking out to
+  non-empty directory. Fixes bug #502400.
 
   24 Feb 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Fetch and preserve git notes as well.

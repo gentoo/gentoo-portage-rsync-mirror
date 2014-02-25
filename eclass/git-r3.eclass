@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.25 2014/02/24 08:43:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.26 2014/02/25 13:01:49 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -444,17 +444,24 @@ git-r3_checkout() {
 		git rev-parse --verify refs/git-r3/"${local_id}"/__main__
 	)
 
-	set -- git clone --quiet --shared --no-checkout "${GIT_DIR}" "${out_dir}"/
-	echo "${@}" >&2
-	"${@}" || die "git clone (for checkout) failed"
-
 	git-r3_sub_checkout() {
 		local orig_repo=${GIT_DIR}
 		local -x GIT_DIR=${out_dir}/.git
 		local -x GIT_WORK_TREE=${out_dir}
 
-		# pull notes
-		git fetch "${orig_repo}" "refs/notes/*:refs/notes/*" || die
+		mkdir -p "${out_dir}" || die
+
+		# use git init+fetch instead of clone since the latter doesn't like
+		# non-empty directories.
+
+		git init --quiet || die
+		set -- git fetch --update-head-ok "${orig_repo}" \
+			"refs/heads/*:refs/heads/*" \
+			"refs/tags/*:refs/tags/*" \
+			"refs/notes/*:refs/notes/*"
+
+		echo "${@}" >&2
+		"${@}" || die "git fetch into checkout dir failed"
 
 		set -- git checkout --quiet
 		if [[ ${remote_ref} ]]; then
