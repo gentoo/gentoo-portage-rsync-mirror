@@ -4,6 +4,7 @@ DESCRIPTION=Linux dynamic and persistent device naming support (aka userspace de
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/systemd
 IUSE=acl doc +firmware-loader gudev introspection +kmod +openrc selinux static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 LICENSE=LGPL-2.1 MIT GPL-2
 PDEPEND=>=virtual/udev-208 >=sys-apps/hwids-20140101[udev] openrc? ( >=sys-fs/udev-init-scripts-26 )
 RDEPEND=>=sys-apps/util-linux-2.20 acl? ( sys-apps/acl ) gudev? ( >=dev-libs/glib-2.22 ) introspection? ( >=dev-libs/gobject-introspection-1.31.1 ) kmod? ( >=sys-apps/kmod-16 ) selinux? ( >=sys-libs/libselinux-2.1.9 ) !<sys-libs/glibc-2.11 !sys-apps/systemd abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r7 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) !<sys-fs/lvm2-2.02.103 !<sec-policy/selinux-base-2.20120725-r10
@@ -11,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/systemd/systemd-210.tar.xz
 _eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=64f7975c87606945b4ad7ddbc42e4ae8
+_md5_=468e1c3453ddcb43a7dd5d52f727fa63
