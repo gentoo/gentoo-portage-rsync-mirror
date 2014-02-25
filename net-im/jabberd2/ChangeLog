@@ -1,6 +1,11 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.59 2014/02/19 15:03:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.60 2014/02/25 21:40:21 hasufell Exp $
+
+*jabberd2-2.3.2 (25 Feb 2014)
+
+  25 Feb 2014; Julian Ospald <hasufell@gentoo.org> +jabberd2-2.3.2.ebuild:
+  version bump
 
   19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> jabberd2-2.3.1-r1.ebuild:
   QA: change quoting style wrt bug #314473, thanks to Marcin Mirosław <bug AT
