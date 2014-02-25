@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0_p20131206.ebuild,v 1.1 2013/12/06 13:35:53 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0_p20131206.ebuild,v 1.2 2014/02/25 01:56:52 heroxbd Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ DEPEND="doc? ( >=dev-python/epydoc-3[${PYTHON_USEDEP}] )
 RDEPEND="dev-python/pygccxml[${PYTHON_USEDEP}]"
 
 src_prepare() {
-	use numpy && epatch "${FILESDIR}"/${PN}-1.0.0_p20131206-numpy.patch
+	use numpy && epatch --binary "${FILESDIR}"/${PN}-1.0.0_p20131206-numpy.patch
 }
 
 python_compile_all() {

@@ -98,11 +98,11 @@ Index: pyplusplus/code_creators/member_variable.py
 +        if self.declaration.type_qualifiers.has_static:
 +            tmpl = [ "static %(wrapper_type)s %(wrapper_creator_name)s( ){" ]
 +            tmpl.append( self.indent( "return bn::from_data( %(parent_class_type)s::%(mem_var_ref)s," ) )
-+            owner = "bp::object()"
 +        else:
 +            tmpl = [ "static %(wrapper_type)s %(wrapper_creator_name)s( %(py_class_type)s inst ){" ]
 +            tmpl.append( self.indent( "return bn::from_data(bp::extract< %(wrapped_class_type)s >(inst)().%(mem_var_ref)s," ) )
-+            owner = "inst"
++        owner = "bp::object()"
++
 +        tmpl.append( self.indent(self.indent("bn::dtype::get_builtin< %(item_type)s >(), bp::make_tuple(%(array_size)s),")) )
 +        tmpl.append( self.indent(self.indent("bp::make_tuple(sizeof(%(item_type)s)), %(owner)s);")) )
 +        tmpl.append( "}" )

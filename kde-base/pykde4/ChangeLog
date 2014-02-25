@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.265 2014/02/23 10:01:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.266 2014/02/25 01:32:04 creffett Exp $
+
+  25 Feb 2014; Chris Reffett <creffett@gentoo.org> pykde4-4.11.5.ebuild,
+  pykde4-4.12.2.ebuild:
+  Change base_src_install_docs calls to einstalldocs calls wrt bug 501544
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> -pykde4-4.11.2-r1.ebuild:
   Remove old
