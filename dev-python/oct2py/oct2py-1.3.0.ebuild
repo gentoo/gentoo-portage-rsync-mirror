@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-1.3.0.ebuild,v 1.1 2014/02/23 00:24:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-1.3.0.ebuild,v 1.2 2014/02/25 17:24:45 bicatali Exp $
 
 EAPI=5
 
@@ -21,15 +21,18 @@ RDEPEND="
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	sci-mathematics/octave"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	doc? (
+		dev-python/sphinx-bootstrap-theme
+		dev-python/numpydoc
+	)
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/ipython[${PYTHON_USEDEP}]
-		)"
+	)"
 
 python_compile_all() {
 	if use doc; then
-		sphinx-build doc html || die
+		sphinx-build docs html || die
 	fi
 }
 
