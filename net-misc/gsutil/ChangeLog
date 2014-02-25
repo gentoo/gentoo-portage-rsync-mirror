@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gsutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.14 2014/02/24 22:35:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.15 2014/02/25 01:13:37 vapier Exp $
+
+*gsutil-3.38 (25 Feb 2014)
+
+  25 Feb 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/gsutil-3.38-use-friendy-version-checks.patch, +gsutil-3.38.ebuild:
+  Version bump.
 
   24 Feb 2014; Mike Frysinger <vapier@gentoo.org> gsutil-3.42.ebuild:
   Add arm love for Chromium OS.
