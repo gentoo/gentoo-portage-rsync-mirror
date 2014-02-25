@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.91 2014/02/24 22:40:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.92 2014/02/25 14:40:21 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
-SLOT="0/1"
+SLOT="0/2"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
 	kdbus +kmod lzma pam policykit python qrcode +seccomp selinux tcpd
@@ -177,8 +177,6 @@ multilib_src_configure() {
 		# no deps
 		--enable-efi
 		--enable-ima
-		# we enable compat libs, for now. hopefully we can drop this flag later
-		--enable-compat-libs
 		# optional components/dependencies
 		$(use_enable acl)
 		$(use_enable audit)
@@ -294,6 +292,11 @@ multilib_src_install() {
 		# Even with --enable-networkd, it's not right to have this running by default
 		# when it's unconfigured.
 		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
+
+		# install compat pkg-config files
+		local pcfiles=( src/compat-libs/libsystemd-{daemon,id128,journal,login}.pc )
+		emake "${mymakeopts[@]}" install-pkgconfiglibDATA \
+			pkgconfiglib_DATA="${pcfiles[*]}"
 	else
 		mymakeopts+=(
 			install-libLTLIBRARIES

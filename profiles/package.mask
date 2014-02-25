@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15420 2014/02/24 12:43:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15421 2014/02/25 14:40:16 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (25 Feb 2014)
+# Mask for testing.
+~sys-apps/systemd-210
 
 # Ulrich Müller <ulm@gentoo.org> (24 Feb 2014)
 # Does not work any more, AOL has shut off

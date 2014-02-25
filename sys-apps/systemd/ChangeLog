@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.226 2014/02/24 22:40:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.227 2014/02/25 14:40:21 mgorny Exp $
+
+  25 Feb 2014; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Install compat pkg-config files only, and not compat libs. Bump subslot
+  appropriately.
 
   24 Feb 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   We no longer need libxslt and docbook for non-LIVE builds.
