@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/bespin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.8 2014/02/10 15:47:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.9 2014/02/25 17:57:01 kensington Exp $
+
+*bespin-0_p20140225 (25 Feb 2014)
+
+  25 Feb 2014; Michael Palimaka <kensington@gentoo.org>
+  +bespin-0_p20140225.ebuild, -bespin-0_p20120929.ebuild:
+  Add new snapshot. Update ebuild to avoid build failure with USE="-kde" wrt bug
+  #484204. Remove old.
 
 *bespin-0_p20131020 (10 Feb 2014)
 
