@@ -7,8 +7,8 @@
 # Find l10n packs for libreoffice and format it for use in ebuilds.
 #
 
-VERSION=${1:-4.1.0}
-BASE_SRC_URI="http://download.documentfoundation.org/libreoffice/testing/${VERSION}/rpm/x86"
+VERSION=${1:-4.1.5}
+BASE_SRC_URI="http://download.documentfoundation.org/libreoffice/stable/${VERSION}/rpm/x86"
 
 # needs lxml
 print_available_tarballs() {
@@ -61,5 +61,5 @@ for lpack in "${lang_packs[@]}"; do
 	lang_packs_reduced+=( ${lpack} )
 done
 
-echo "LANGUAGES_HELP=\"${help_packs[@]}\""
-echo "LANGUAGES=\"\${LANGUAGES_HELP} ${lang_packs_reduced[@]}\""
+echo "LANGUAGES_HELP=\" ${help_packs[@]} \""
+echo "LANGUAGES=\"\${LANGUAGES_HELP}${lang_packs_reduced[@]} \""

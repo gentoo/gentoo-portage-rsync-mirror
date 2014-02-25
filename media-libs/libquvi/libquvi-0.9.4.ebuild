@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.4.ebuild,v 1.3 2014/02/23 16:31:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.4.ebuild,v 1.4 2014/02/25 20:51:40 maekke Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/quvi/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="AGPL-3"
 SLOT="0/8" # subslot = libquvi soname version
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 ~arm ~hppa x86"
 IUSE="examples nls static-libs"
 
 RDEPEND="!<media-libs/quvi-0.4.0
