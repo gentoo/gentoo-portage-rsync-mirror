@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.27 2014/02/07 08:03:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.28 2014/02/26 18:03:50 vapier Exp $
+
+  26 Feb 2014; Mike Frysinger <vapier@gentoo.org> perf-3.13.1.ebuild:
+  Add USE=gtk to control gtk+ dep; fix by Sonny Rao.
 
 *perf-3.13.1 (07 Feb 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.13.1.ebuild,v 1.1 2014/02/07 08:03:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.13.1.ebuild,v 1.2 2014/02/26 18:03:50 vapier Exp $
 
 EAPI="5"
 
@@ -39,10 +39,11 @@ SRC_URI+=" mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="audit +demangle +doc perl python slang unwind"
+IUSE="audit +demangle +doc gtk perl python slang unwind"
 
 RDEPEND="audit? ( sys-process/audit )
 	demangle? ( sys-devel/binutils )
+	gtk? ( x11-libs/gtk+:2 )
 	perl? ( || ( >=dev-lang/perl-5.10 sys-devel/libperl ) )
 	slang? ( dev-libs/newt )
 	unwind? ( sys-libs/libunwind )
@@ -141,6 +142,7 @@ perf_make() {
 		LDFLAGS_OPTIMIZE="${LDFLAGS}" \
 		ARCH="${arch}" \
 		NO_DEMANGLE=$(puse demangle) \
+		NO_GTK2=$(puse gtk) \
 		NO_LIBAUDIT=$(puse audit) \
 		NO_LIBPERL=$(puse perl) \
 		NO_LIBPYTHON=$(puse python) \

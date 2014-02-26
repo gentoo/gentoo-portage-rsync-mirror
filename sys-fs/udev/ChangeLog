@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.998 2014/02/25 13:54:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.999 2014/02/26 18:20:37 ssuominen Exp $
+
+  26 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Install systemd.link(5) manpage since the information for configuring
+  99-default.link moved to there from udev(7) wrt http://cgit.freedesktop.org/sy
+  stemd/systemd/commit/?id=1ff28eaee33d9d0cee46bd176b6d6f8805c95036
 
   25 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild:
   Release >=sys-fs/udev-210 to ~arch since the information about the network

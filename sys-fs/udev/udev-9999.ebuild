@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.272 2014/02/25 11:12:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.273 2014/02/26 18:20:37 ssuominen Exp $
 
 EAPI=5
 
@@ -269,6 +269,7 @@ multilib_src_compile() {
 
 		if [[ ${PV} = 9999* ]]; then
 			local man_targets=(
+				man/systemd.link.5
 				man/udev.7
 				man/udevadm.8
 				man/systemd-udevd.service.8
@@ -339,9 +340,9 @@ multilib_src_install() {
 		dosym {../bin,sbin}/udevadm
 
 		if [[ ${PV} = 9999* ]]; then
-			doman man/{udev.7,udevadm.8,systemd-udevd.service.8}
+			doman man/{systemd.link.5,udev.7,udevadm.8,systemd-udevd.service.8}
 		else
-			doman "${S}"/man/{udev.7,udevadm.8,systemd-udevd.service.8}
+			doman "${S}"/man/{systemd.link.5,udev.7,udevadm.8,systemd-udevd.service.8}
 		fi
 	else
 		local lib_LTLIBRARIES="libudev.la" \
