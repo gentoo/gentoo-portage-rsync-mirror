@@ -80,6 +80,8 @@ lxde-base
 mail-client
 mail-filter
 mail-mta
+mate-base
+mate-extra
 media-fonts
 media-gfx
 media-libs

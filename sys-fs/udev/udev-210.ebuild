@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.4 2014/02/25 13:54:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.5 2014/02/26 18:40:51 ssuominen Exp $
 
 EAPI=5
 
@@ -43,6 +43,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	)"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
+	sys-libs/libcap
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-devel/make-3.82-r4
@@ -174,8 +175,6 @@ multilib_src_configure() {
 	# when *required* to avoid external deps or unnecessary compile
 	local econf_args
 	econf_args=(
-		ac_cv_search_cap_init=
-		ac_cv_header_sys_capability_h=yes
 		--libdir=/usr/$(get_libdir)
 		--docdir=/usr/share/doc/${PF}
 		--disable-nls
