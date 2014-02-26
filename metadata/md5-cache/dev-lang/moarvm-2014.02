@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/libuv
+DESCRIPTION=A 6model-based VM for NQP and Rakudo Perl 6
+EAPI=5
+HOMEPAGE=http://moarvm.org
+IUSE=doc
+KEYWORDS=~amd64 ~x86
+LICENSE=Artistic-2
+RDEPEND=dev-libs/libuv
+SLOT=0
+SRC_URI=http://moarvm.org/releases/MoarVM-2014.02.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=af954ab5add12098aa57133297291e2b

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.388 2014/02/02 11:01:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.389 2014/02/26 08:13:00 williamh Exp $
+
+*dhcpcd-6.3.0 (26 Feb 2014)
+
+  26 Feb 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.3.0.ebuild:
+  version bump
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> dhcpcd-6.2.0-r1.ebuild:
   Stable for ppc, wrt bug #499262
