@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/man-pages-de
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.27 2014/01/30 20:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.28 2014/02/26 21:32:27 mrueg Exp $
+
+*man-pages-de-1.5 (26 Feb 2014)
+
+  26 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +man-pages-de-1.5.ebuild,
+  -man-pages-de-1.3.ebuild:
+  Version bump. Cleanup older version. Proxy commit for Markus Oehme. Fixes bug
+  #502518.
 
   30 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-de-0.12.ebuild,
   man-pages-de-0.8.ebuild, man-pages-de-1.3.ebuild, man-pages-de-1.4.ebuild:

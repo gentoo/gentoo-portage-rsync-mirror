@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-1.3.ebuild,v 1.2 2014/01/30 20:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-1.5.ebuild,v 1.1 2014/02/26 21:32:27 mrueg Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${PN/-/}-${PV}"
 
 DESCRIPTION="A somewhat comprehensive collection of Linux german man page translations"
 HOMEPAGE="http://alioth.debian.org/projects/manpages-de/"
-SRC_URI="http://manpages-de.alioth.debian.org/downloads/${MY_P}.tar.bz2"
+SRC_URI="http://manpages-de.alioth.debian.org/downloads/${MY_P}.tar.xz"
 
 LICENSE="GPL-3+ man-pages GPL-2+ GPL-2 BSD"
 SLOT="0"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-bzip2.patch
+	epatch "${FILESDIR}"/${PN}-1.3-bzip2.patch
 
 	# Use the same compression as every other manpage
 	local PORTAGE_COMPRESS_LOCAL=${PORTAGE_COMPRESS-bzip2}
