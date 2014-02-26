@@ -1,6 +1,12 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.39 2014/02/14 19:15:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.40 2014/02/26 07:11:02 yngwin Exp $
+
+*qupzilla-1.6.3 (26 Feb 2014)
+
+  26 Feb 2014; Ben de Groot <yngwin@gentoo.org>
+  +files/qupzilla-1.6.3-plugins-version-check-fix.patch, +qupzilla-1.6.3.ebuild:
+  version bump
 
   14 Feb 2014; Markus Meier <maekke@gentoo.org> qupzilla-1.6.1.ebuild:
   add ~arm, bug #500700

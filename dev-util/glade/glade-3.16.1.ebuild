@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.3 2014/02/23 10:48:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.4 2014/02/26 07:20:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -36,6 +36,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.41.0
 	virtual/pkgconfig
+
+	dev-libs/gobject-introspection-common
+	gnome-base/gnome-common
 "
 # eautoreconf requires:
 #	dev-libs/gobject-introspection-common
