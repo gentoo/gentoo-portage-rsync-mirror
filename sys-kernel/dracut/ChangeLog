@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.157 2014/02/24 14:22:35 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.158 2014/02/26 20:16:30 aidecoe Exp $
+
+*dracut-036-r4 (26 Feb 2014)
+
+  26 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-036-r4.ebuild,
+  +files/036-0008-Add-legacy-flag-l-to-lz4-and-update-ma.patch:
+  Fixed bug #502102.
+
+  Commit on behalf of Alexander Tsoy <alexander@tsoy.me>.
 
   24 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-036.ebuild,
   -dracut-036-r1.ebuild, -dracut-036-r2.ebuild:

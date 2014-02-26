@@ -1,13 +1,14 @@
 DEFINED_PHASES=compile configure install postinst prerm setup test
-DEPEND=dev-haskell/attoparsec:=[profile?] dev-haskell/attoparsec-conduit:=[profile?] dev-haskell/binary:=[profile?] dev-haskell/blaze-builder:=[profile?] dev-haskell/conduit:=[profile?] >=dev-haskell/iproute-1.2.4:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/network:=[profile?] dev-haskell/network-bytestring:=[profile?] dev-haskell/network-conduit:=[profile?] dev-haskell/random:=[profile?] >=dev-lang/ghc-6.10.4:= >=dev-haskell/cabal-1.10 test? ( dev-haskell/hspec ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DEPEND=dev-haskell/attoparsec:=[profile?] dev-haskell/attoparsec-conduit:=[profile?] dev-haskell/binary:=[profile?] dev-haskell/blaze-builder:=[profile?] dev-haskell/conduit:=[profile?] >=dev-haskell/iproute-1.2.4:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/network:=[profile?] dev-haskell/network-bytestring:=[profile?] dev-haskell/network-conduit:=[profile?] dev-haskell/random:=[profile?] >=dev-lang/ghc-6.10.4:= >=dev-haskell/cabal-1.10 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
 DESCRIPTION=DNS library in Haskell
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/dns
-IUSE=doc hscolour profile test
+IUSE=doc hscolour profile
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 RDEPEND=dev-haskell/attoparsec:=[profile?] dev-haskell/attoparsec-conduit:=[profile?] dev-haskell/binary:=[profile?] dev-haskell/blaze-builder:=[profile?] dev-haskell/conduit:=[profile?] >=dev-haskell/iproute-1.2.4:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/network:=[profile?] dev-haskell/network-bytestring:=[profile?] dev-haskell/network-conduit:=[profile?] dev-haskell/random:=[profile?] >=dev-lang/ghc-6.10.4:=
+RESTRICT=test
 SLOT=0/0.3.8
 SRC_URI=mirror://hackage/packages/archive/dns/0.3.8/dns-0.3.8.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=a911129cecf3ead0103b2045667db0ad
+_md5_=4c1cd0b02a689162b3399618fee1f2ec
