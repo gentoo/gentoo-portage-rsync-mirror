@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.1.2.ebuild,v 1.1 2013/10/15 19:04:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.1.6.ebuild,v 1.1 2014/02/26 07:35:07 graaff Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -8,14 +8,9 @@ inherit eutils autotools toolchain-funcs
 #MY_P=${P/_/-}
 MY_P=${P}-release
 
-# This has been added by Gentoo, to explicitly version libstemmer.
-# It is the date that http://snowball.tartarus.org/dist/libstemmer_c.tgz was
-# fetched.
-STEMMER_PV="20091122"
 DESCRIPTION="Full-text search engine with support for MySQL and PostgreSQL"
 HOMEPAGE="http://www.sphinxsearch.com/"
-SRC_URI="http://sphinxsearch.com/files/${MY_P}.tar.gz
-	stemmer? ( mirror://gentoo/libstemmer_c-${STEMMER_PV}.tgz )"
+SRC_URI="http://sphinxsearch.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,18 +20,11 @@ IUSE="debug id64 mysql odbc postgres stemmer syslog test xml"
 RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	odbc? ( dev-db/unixODBC )
+	stemmer? ( dev-libs/snowball-stemmer )
 	xml? ( dev-libs/expat )
 	virtual/libiconv"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-	if use stemmer; then
-		cd "${S}"
-		unpack libstemmer_c-${STEMMER_PV}.tgz
-	fi
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.1_beta-darwin8.patch
