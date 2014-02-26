@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0.ebuild,v 1.2 2014/01/09 08:02:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0.ebuild,v 1.3 2014/02/25 23:17:50 calchan Exp $
 EAPI=5
 
 inherit eutils
@@ -32,7 +32,10 @@ S="${WORKDIR}"
 JULIAMAKEARGS="QUIET_MAKE= USE_SYSTEM_LLVM=1 USE_SYSTEM_READLINE=1 USE_SYSTEM_PCRE=1 USE_SYSTEM_LIBM=1 \
 		USE_SYSTEM_GMP=1 USE_SYSTEM_LIBUNWIND=1 USE_SYSTEM_PATCHELF=1 USE_SYSTEM_FFTW=1 USE_SYSTEM_ZLIB=1 \
 		USE_SYSTEM_MPFR=1 USE_SYSTEM_SUITESPARSE=1  USE_SYSTEM_ARPACK=1 USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 \
-		LLVM_CONFIG=/usr/bin/llvm-config"
+		LLVM_CONFIG=/usr/bin/llvm-config USE_BLAS64=0"
+
+# Forcing use of 64-bit integers. If you want 64-bit integers then you need to use a BLAS implementation from the
+# science overlay and julia-9999 also from the science overlay.
 
 # scons is a dep of double-conversion
 DEPEND="
@@ -62,9 +65,15 @@ src_prepare() {
 	mkdir -p deps/random
 	cp "${DISTDIR}/dsfmt-2.2.tar.gz" deps/random/
 	cp "${DISTDIR}/double-conversion-1.1.1.tar.gz" deps/
-	# Some cleanups to avoid an OpenBlas dep, and remove some useless git errors
-	sed -e "s|-lblas|$($(tc-getPKG_CONFIG) --libs blas)|" Make.inc || die
-	sed -e 's/$(shell git rev-parse --short=10 HEAD)/v0.2.0/' Make.inc || die
+	# Detect what BLAS and LAPACK implementations are being used
+	local BLAS_LIB="$($(tc-getPKG_CONFIG) --libs blas | sed 's/ .*$//')"
+	local LAPACK_LIB="$($(tc-getPKG_CONFIG) --libs lapack | sed 's/ .*$//')"
+	sed -e "s|-lblas|${BLAS_LIB}|" -i Make.inc || die
+	sed -e "s|libblas|${BLAS_LIB/-l/lib}.so|" -i Make.inc || die
+	sed -e "s|-llapack|${LAPACK_LIB}|" -i Make.inc || die
+	sed -e "s|liblapack|${LAPACK_LIB/-l/lib}.so|" -i Make.inc || die
+	# Set version to package version instead of git commit number
+	sed -e "s|^JULIA_COMMIT = .*|JULIA_COMMIT = v${PV}|" -i Make.inc || die
 }
 
 src_compile() {

@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/distel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.5 2009/03/07 21:57:25 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.6 2014/02/25 23:25:00 ulm Exp $
+
+*distel-4.0.6 (25 Feb 2014)
+
+  25 Feb 2014; Ulrich Müller <ulm@gentoo.org> +distel-4.0.6.ebuild,
+  -distel-4.03.ebuild, -files/distel-4.03-fix-ebin-path.patch:
+  Version bump. Remove old; distel-4.03 fails to build with R15 and later.
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   -distel-3.2_p20071103.ebuild:
