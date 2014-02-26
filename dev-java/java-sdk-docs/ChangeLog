@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-sdk-docs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.95 2013/10/19 05:29:42 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.96 2014/02/26 17:27:08 tomwij Exp $
+
+*java-sdk-docs-1.7.0.51 (26 Feb 2014)
+
+  26 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +java-sdk-docs-1.7.0.51.ebuild:
+  Version bump to 1.7.0.51, requested by cookiemon5ter on IRC.
 
 *java-sdk-docs-1.7.0.45 (19 Oct 2013)
 
