@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0-r1.ebuild,v 1.1 2014/02/26 09:22:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0-r1.ebuild,v 1.2 2014/02/26 09:41:27 gienah Exp $
 EAPI=5
 
 inherit eutils multilib pax-utils
@@ -66,8 +66,8 @@ src_prepare() {
 	cp "${DISTDIR}/dsfmt-2.2.tar.gz" deps/random/
 	cp "${DISTDIR}/double-conversion-1.1.1.tar.gz" deps/
 	# Detect what BLAS and LAPACK implementations are being used
-	local BLAS_LIB="$($(tc-getPKG_CONFIG) --libs blas | sed 's/ .*$//')"
-	local LAPACK_LIB="$($(tc-getPKG_CONFIG) --libs lapack | sed 's/ .*$//')"
+	local BLAS_LIB="$($(tc-getPKG_CONFIG) --libs-only-l blas | sed 's/ .*$//')"
+	local LAPACK_LIB="$($(tc-getPKG_CONFIG) --libs-only-l lapack | sed 's/ .*$//')"
 	sed -e "s|-lblas|${BLAS_LIB}|" -i Make.inc || die
 	sed -e "s|libblas|${BLAS_LIB/-l/lib}.so|" -i Make.inc || die
 	sed -e "s|-llapack|${LAPACK_LIB}|" -i Make.inc || die
