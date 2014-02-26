@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.5 2014/02/03 23:44:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.6 2014/02/26 22:38:30 bicatali Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_prepare() {
 	else
 		append-cflags "-DSCOTCH_PTHREAD_NUMBER=1"
 		sed -i \
-			-e e 's/ -DSCOTCH_PTHREAD//' \
+			-e 's/ -DSCOTCH_PTHREAD//' \
 			src/Make.inc/Makefile.inc.i686_pc_linux3 || die
 	fi
 	sed -e "s/gcc/$(tc-getCC)/" \
