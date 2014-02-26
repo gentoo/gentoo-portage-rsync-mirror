@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.17.ebuild,v 1.1 2014/01/30 11:34:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.17.ebuild,v 1.2 2014/02/26 19:55:07 jer Exp $
 
 EAPI=5
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Program suite to record, replay and distribute user actions."
 HOMEPAGE="http://www.sandklef.com/xnee/"
@@ -42,6 +42,11 @@ DEPEND="${RDEPEND}
 # This needs RECORD extension from X.org server which isn't necessarily
 # enabled. Xlib: extension "RECORD" missing on display ":0.0".
 RESTRICT="test"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3.18-linker.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
