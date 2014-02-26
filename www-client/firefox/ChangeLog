@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.307 2014/02/22 08:42:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.308 2014/02/26 12:50:31 polynomial-c Exp $
+
+*firefox-27.0.1 (26 Feb 2014)
+
+  26 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +firefox-27.0.1.ebuild:
+  Version bump (bug #502512).
 
   22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -firefox-24.1.1.ebuild,
   -firefox-24.2.0.ebuild, -firefox-26.0.ebuild:
