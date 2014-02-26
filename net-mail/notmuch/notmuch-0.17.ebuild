@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.3 2014/02/18 14:30:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.4 2014/02/26 09:01:37 aidecoe Exp $
 
 EAPI=5
 
@@ -98,7 +98,7 @@ src_configure() {
 }
 
 src_compile() {
-	default
+	V=1 default
 	bindings python distutils-r1_src_compile
 
 	if use mutt; then

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.87 2014/02/18 14:30:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.88 2014/02/26 09:01:37 aidecoe Exp $
+
+  26 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.15.2.ebuild,
+  notmuch-0.16-r1.ebuild, notmuch-0.17.ebuild:
+  Verbose compilation.
 
   18 Feb 2014; Chema Alonso <nimiux@gentoo.org> notmuch-0.17.ebuild:
   Stable for amd64 wrt bug #500556
