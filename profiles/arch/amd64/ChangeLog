@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.241 2014/02/16 15:10:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.242 2014/02/26 06:31:07 floppym Exp $
+
+  26 Feb 2014; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Unmask avx2
 
   16 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask experimental USE="sse2" for libmikmod.

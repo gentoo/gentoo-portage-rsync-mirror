@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.640 2014/02/20 05:45:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.641 2014/02/26 06:31:07 floppym Exp $
+
+  26 Feb 2014; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Mask avx2
 
   18 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.use.mask:
   Mask aura for chromium-34 (build failures).
