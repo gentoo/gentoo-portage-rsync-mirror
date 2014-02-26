@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/julia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.3 2014/02/25 23:17:50 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.4 2014/02/26 03:37:12 patrick Exp $
+
+  26 Feb 2014; Patrick Lauer <patrick@gentoo.org> julia-0.2.0.ebuild:
+  Revert changes that break build #501868
 
   25 Feb 2014; Denis Dupeyron <calchan@gentoo.org> julia-0.2.0.ebuild:
   Fixed bug #501868 as well as general brokenness.

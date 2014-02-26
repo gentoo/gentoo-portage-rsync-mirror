@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.ebuild,v 1.2 2014/02/25 18:03:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.ebuild,v 1.3 2014/02/26 03:36:44 floppym Exp $
 
 EAPI=5
 
@@ -35,10 +35,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	kmod? ( >=sys-apps/kmod-15:0= )
 	lzma? ( app-arch/xz-utils:0=[${MULTILIB_USEDEP}] )
 	pam? ( virtual/pam:= )
-	python? (
-		${PYTHON_DEPS}
-		dev-python/lxml[${PYTHON_USEDEP}]
-	)
+	python? ( ${PYTHON_DEPS} )
 	qrcode? ( media-gfx/qrencode:0= )
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
@@ -76,6 +73,7 @@ DEPEND="${COMMON_DEPEND}
 	ia64? ( >=sys-kernel/linux-headers-3.9 )
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )
+	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
 src_prepare() {
