@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.199 2014/02/23 10:01:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.200 2014/02/25 23:57:16 dilfridge Exp $
+
+*powerdevil-4.11.6-r1 (26 Feb 2014)
+
+  26 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/powerdevil-4.11.6-systemd.patch, +powerdevil-4.11.6-r1.ebuild:
+  Add backport for correct detection of systemd-210, bug 502440
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> -powerdevil-4.11.2.ebuild:
   Remove old
