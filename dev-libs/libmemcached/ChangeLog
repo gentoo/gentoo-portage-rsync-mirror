@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.70 2014/02/09 06:05:43 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.71 2014/02/26 05:36:58 patrick Exp $
+
+*libmemcached-1.0.18 (26 Feb 2014)
+
+  26 Feb 2014; Patrick Lauer <patrick@gentoo.org> +libmemcached-1.0.18.ebuild:
+  Bump
 
   09 Feb 2014; Matthew Thode <prometheanfire@gentoo.org>
   libmemcached-1.0.17-r3.ebuild:
