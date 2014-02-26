@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.640 2014/02/23 10:24:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.641 2014/02/26 14:20:28 graaff Exp $
+
+*ruby-1.9.3_p545 (26 Feb 2014)
+
+  26 Feb 2014; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p545.ebuild:
+  Version bump. Drop tk USE flag due to bug 500894.
 
 *ruby-2.0.0_p353-r2 (23 Feb 2014)
 
