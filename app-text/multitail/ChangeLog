@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.112 2014/02/24 02:18:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.113 2014/02/26 11:52:33 jer Exp $
+
+  26 Feb 2014; Jeroen Roovers <jer@gentoo.org> multitail-5.2.13.ebuild:
+  Stable for HPPA (bug #491948).
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> multitail-5.2.13.ebuild:
   x86 stable wrt bug #491948
