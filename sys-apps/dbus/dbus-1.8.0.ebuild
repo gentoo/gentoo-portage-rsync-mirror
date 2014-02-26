@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.0.ebuild,v 1.3 2014/02/13 05:45:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.0.ebuild,v 1.5 2014/02/26 19:21:07 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/expat-2
 		sec-policy/selinux-dbus
 		sys-libs/libselinux
 		)
-	systemd? ( sys-apps/systemd )
+	systemd? ( sys-apps/systemd:0= )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXt
