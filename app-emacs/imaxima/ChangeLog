@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.40 2013/01/02 21:03:31 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.41 2014/02/27 17:39:53 ulm Exp $
+
+  27 Feb 2014; Ulrich Müller <ulm@gentoo.org> imaxima-1.0-r3.ebuild:
+  Define ELISP_{PATCHES,REMOVE} for elisp.eclass.
 
 *imaxima-1.0-r3 (02 Jan 2013)
 

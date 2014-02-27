@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.1 2013/01/02 21:03:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.2 2014/02/27 17:39:53 ulm Exp $
 
 EAPI=5
 
@@ -16,21 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="examples"
 
-DEPEND=""
 RDEPEND="virtual/latex-base
 	app-text/ghostscript-gpl
 	dev-tex/mh
 	>=sci-mathematics/maxima-5.29"
 
 S="${WORKDIR}/${MY_P}"
+ELISP_PATCHES="${P}-1.03.patch ${P}-mlabel.patch"
+ELISP_REMOVE="imaxima.info"		# remove broken Info file (will be recreated)
 SITEFILE="50${PN}-gentoo.el"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-1.03.patch
-	epatch "${FILESDIR}"/${P}-mlabel.patch
-	# Remove broken Info file (will be recreated)
-	rm imaxima.info
-}
 
 src_configure() {
 	econf --with-lispdir="${EPREFIX}${SITELISP}/${PN}"

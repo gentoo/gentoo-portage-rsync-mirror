@@ -1,0 +1,15 @@
+DEFINED_PHASES=config configure install postinst prepare
+DEPEND=acl? ( virtual/acl ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) selinux? ( sys-libs/libselinux ) tokyocabinet? ( dev-db/tokyocabinet ) qdbm? ( dev-db/qdbm ) libvirt? ( app-emulation/libvirt ) xml? ( dev-libs/libxml2:2 ) dev-libs/openssl dev-libs/libpcre !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=An automated suite of programs for configuring and maintaining Unix-like computers
+EAPI=5
+HOMEPAGE=http://www.cfengine.org/
+IUSE=acl examples libvirt mysql postgres +qdbm selinux tokyocabinet vim-syntax xml
+KEYWORDS=~amd64 ~arm ~ppc ~s390 ~sparc ~x86
+LICENSE=GPL-3
+PDEPEND=vim-syntax? ( app-vim/cfengine-syntax )
+RDEPEND=acl? ( virtual/acl ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) selinux? ( sys-libs/libselinux ) tokyocabinet? ( dev-db/tokyocabinet ) qdbm? ( dev-db/qdbm ) libvirt? ( app-emulation/libvirt ) xml? ( dev-libs/libxml2:2 ) dev-libs/openssl dev-libs/libpcre
+REQUIRED_USE=qdbm? ( !tokyocabinet ) tokyocabinet? ( !qdbm ) !tokyocabinet? ( qdbm ) !qdbm? ( tokyocabinet )
+SLOT=3
+SRC_URI=http://cfengine.com/source-code/download?file=cfengine-3.5.3.tar.gz -> cfengine-3.5.3.tar.gz
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=d5e56b0ad94294f5cce29be09e92afb3

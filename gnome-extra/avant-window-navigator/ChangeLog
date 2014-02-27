@@ -1,6 +1,18 @@
 # ChangeLog for gnome-extra/avant-window-navigator
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.38 2013/05/12 11:50:09 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.40 2014/02/27 17:59:48 ssuominen Exp $
+
+  27 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  avant-window-navigator-0.4.0.ebuild:
+  Pass --disable-shave to make the build verbose (almost same as --disable-
+  silent-rules)
+
+  27 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/avant-window-navigator-0.4.0-underlinking.patch,
+  avant-window-navigator-0.4.0.ebuild:
+  Fix missing $(AWN_LIBS) from src/Makefile.am for avant-window-navigator. Use
+  python-single-r1.eclass instead of the deprecated python.eclass. Convert
+  shebang in awn-settings wrt #469340 by Michael Jones
 
   12 May 2013; Pacho Ramos <pacho@gentoo.org>
   avant-window-navigator-0.4.0.ebuild:
