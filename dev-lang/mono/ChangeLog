@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.257 2013/09/26 14:02:55 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.258 2014/02/27 06:38:21 cynede Exp $
+
+*mono-3.2.8 (27 Feb 2014)
+
+  27 Feb 2014; Heather Cynede <cynede@gentoo.org> +mono-3.2.8.ebuild:
+  mono 3.2.8
 
   26 Sep 2013; Tom Wijsman <TomWij@gentoo.org> mono-3.2.3.ebuild:
   Change to the right directory before running test checks, fixes bug #485900.
