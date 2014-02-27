@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.192 2014/01/20 06:34:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.193 2014/02/27 10:08:13 polynomial-c Exp $
+
+*readline-6.3 (27 Feb 2014)
+
+  27 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +readline-6.3.ebuild:
+  Version bump.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> readline-6.2_p5-r1.ebuild:
   Depend on virtual/pkgconfig for ncurses needs #498586 by palme3000.
