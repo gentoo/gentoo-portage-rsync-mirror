@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libdivecomputer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.8 2014/02/16 12:52:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/ChangeLog,v 1.9 2014/02/27 08:30:09 pinkbyte Exp $
+
+  27 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> libdivecomputer-0.4.1.ebuild,
+  libdivecomputer-9999.ebuild:
+  Port USE='tools' fix into live ebuild. QA fixes: move
+  AUTOTOOLS_IN_SOURCE_BUILD before inheriting apropriate eclass, correct
+  src_prepare to call autotools-utils_src_prepare instead of plain eautoreconf,
+  epatch_user in non-live ebuild
 
   16 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Fix maintainer's email address, fix spelling

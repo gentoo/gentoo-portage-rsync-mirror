@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/libdivecomputer-9999.ebuild,v 1.1 2013/03/28 18:43:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdivecomputer/libdivecomputer-9999.ebuild,v 1.2 2014/02/27 08:30:09 pinkbyte Exp $
 
 EAPI="5"
 
@@ -10,6 +10,7 @@ if [[ ${PV} = *9999* ]]; then
 	AUTOTOOLIZE=yes
 fi
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit eutils autotools-utils ${GIT_ECLASS}
 
 if [[ ${PV} = *9999* ]]; then
@@ -22,30 +23,26 @@ DESCRIPTION="Library for communication with dive computers from various manufact
 HOMEPAGE="http://www.divesoftware.org/libdc"
 LICENSE="LGPL-2.1"
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="usb examples +static-libs"
+IUSE="usb +static-libs -tools"
 
-RDEPEND="usb? ( virtual/libusb )"
+RDEPEND="usb? ( virtual/libusb:1 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
 src_prepare() {
 	if [[ -n ${AUTOTOOLIZE} ]]; then
-		eautoreconf
+		autotools-utils_src_prepare
+	else
+		epatch_user
 	fi
 }
 
 src_configure() {
 	autotools-utils_src_configure
 
-	if use usb ; then
-		sed -i 's|#define HAVE_LIBUSB 1||' config.h || die "sed failed"
-	fi
-
-	if use examples ; then
+	if ! use tools ; then
 		sed -i 's|examples||' Makefile || die "sed failed"
 	fi
 }
@@ -56,4 +53,21 @@ src_compile() {
 
 src_install() {
 	autotools-utils_src_install
+
+	if use tools ; then
+		einfo "prefixing tools with 'dctool_'"
+		pushd "${D}/usr/bin/"
+		for file in * ; do
+			mv "${file}" "dctool_${file}" || die "prefixing tools failed"
+		done
+		popd
+	fi
+}
+
+pkg_postinst() {
+	if use tools ; then
+		elog "The 'tools' USE flag has been enabled,"
+		elog "to avoid file collisions, all ${PN}"
+		elog "related tools have been prefixed with 'dctool_'"
+	fi
 }
