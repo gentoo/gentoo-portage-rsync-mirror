@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/voro++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/voro++/ChangeLog,v 1.2 2014/02/25 03:03:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/voro++/ChangeLog,v 1.3 2014/02/26 23:10:15 ottxor Exp $
+
+*voro++-0.4.6-r1 (26 Feb 2014)
+
+  26 Feb 2014; Christoph Junghans <ottxor@gentoo.org> +voro++-0.4.6-r1.ebuild,
+  -voro++-0.4.6.ebuild, files/voro++-0.4.6-cmake.patch:
+  fixed installed headers
 
   25 Feb 2014; Christoph Junghans <ottxor@gentoo.org> voro++-0.4.6.ebuild:
   fixed multilib

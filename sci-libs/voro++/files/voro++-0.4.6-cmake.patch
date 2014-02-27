@@ -101,8 +101,8 @@ Index: CMakeLists.txt
 +  endif()
 +endforeach(SOURCE)
 +
-+file(GLOB_RECURSE VORO_HEADERS src/voro++.hh)
-+install(FILES ${VORO_HEADERS} DESTINATION include)
++file(GLOB_RECURSE VORO_HEADERS src/*.hh)
++install(FILES ${VORO_HEADERS} DESTINATION include/voro++)
 +install(FILES ${CMAKE_SOURCE_DIR}/man/voro++.1 DESTINATION ${MAN}/man1)
 +
 +if (DOXYGEN_FOUND)
