@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.133 2014/02/24 02:11:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.136 2014/02/27 11:27:16 ssuominen Exp $
+
+*upower-0.99.0 (27 Feb 2014)
+
+  27 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> +upower-0.99.0.ebuild:
+  Version bump without KEYWORDS because of major API change. Introduce subslot
+  0/2 based on libupower-glib.so SONAME.
+
+  27 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.23.ebuild:
+  amd64 stable wrt #496532
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> upower-0.9.23.ebuild:
   x86 stable wrt bug #496532
