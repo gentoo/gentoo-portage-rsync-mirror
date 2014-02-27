@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.57 2014/02/24 00:40:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.58 2014/02/27 12:19:57 lordvan Exp $
+
+*dbmail-3.1.11 (27 Feb 2014)
+
+  27 Feb 2014; Thomas Raschbacher <lordvan@gentoo.org> +dbmail-3.1.11.ebuild:
+  version bump
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> dbmail-3.1.9.ebuild:
   x86 stable wrt bug #498954

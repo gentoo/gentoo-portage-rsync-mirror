@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libaosd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.6 2013/12/06 07:59:10 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.7 2014/02/27 12:05:57 ssuominen Exp $
+
+  27 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> libaosd-0.2.7.ebuild:
+  Set AT_M4DIR to find buildsys.m4 for BUILDSYS_TOUCH_DEPS wrt #502958 by
+  "Colin"
 
   06 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> libaosd-0.2.7.ebuild:
   Stable for x86.

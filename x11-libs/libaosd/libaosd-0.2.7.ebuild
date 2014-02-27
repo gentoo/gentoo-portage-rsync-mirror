@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/libaosd-0.2.7.ebuild,v 1.5 2013/12/06 07:59:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/libaosd-0.2.7.ebuild,v 1.6 2014/02/27 12:05:57 ssuominen Exp $
 
 EAPI=5
 inherit autotools-utils
@@ -26,11 +26,11 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=( Changelog )
 
 src_prepare() {
-	eautoreconf
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_configure() {
-	myeconfargs=(
+	local myeconfargs=(
 		$(use_enable tools glib)
 		$(use_enable pango pangocairo)
 		$(use_enable xcomposite)
