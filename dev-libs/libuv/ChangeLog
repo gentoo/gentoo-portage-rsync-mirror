@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.11 2014/02/16 21:17:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.12 2014/02/27 14:20:55 hasufell Exp $
+
+*libuv-0.11.21 (27 Feb 2014)
+
+  27 Feb 2014; Julian Ospald <hasufell@gentoo.org> +libuv-0.11.21.ebuild:
+  version bump wrt #502964
 
   16 Feb 2014; Markus Meier <maekke@gentoo.org> libuv-0.11.18.ebuild:
   add ~arm, bug #499146

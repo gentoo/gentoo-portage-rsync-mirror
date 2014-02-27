@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/tumbler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.58 2014/01/28 14:17:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.59 2014/02/27 14:23:03 ssuominen Exp $
+
+*tumbler-0.1.30 (27 Feb 2014)
+
+  27 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> +tumbler-0.1.30.ebuild:
+  Version bump.
 
   28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tumbler-0.1.29.ebuild:
   Stable for x86, wrt bug #496018

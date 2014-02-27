@@ -16,10 +16,8 @@
     An open source dive log program.
   </longdescription>
   <use>
-    <flag name="map">Adds support for OpenStreetMap maps that can be used with your dive logs.</flag>
     <flag name="linguas_da_DK">Language support for da_DK.</flag>
     <flag name="linguas_de_CH">Language support for de_CH.</flag>
-    <flag name="linguas_dk">Language support for dk.</flag>
     <flag name="linguas_gsw">Language support for gsw.</flag>
     <flag name="linguas_hr_HR">Language support for hr_HR.</flag>
   </use>
