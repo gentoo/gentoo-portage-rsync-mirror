@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.28.ebuild,v 1.2 2014/01/28 03:51:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.28.ebuild,v 1.3 2014/02/27 12:53:16 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tardy/${P}.D001.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 RDEPEND="app-arch/bzip2
 	app-arch/xz-utils

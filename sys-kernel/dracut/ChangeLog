@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.158 2014/02/26 20:16:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.159 2014/02/27 12:37:48 aidecoe Exp $
+
+  27 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
+  dracut-036-r3.ebuild, dracut-036-r4.ebuild:
+  udevd has been moved once again to remind us of its existence, thus I'm
+  blocking 210.
 
 *dracut-036-r4 (26 Feb 2014)
 

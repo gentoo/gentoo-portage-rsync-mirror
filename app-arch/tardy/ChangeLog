@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tardy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.21 2014/01/28 03:51:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.22 2014/02/27 12:53:16 nimiux Exp $
+
+  27 Feb 2014; Chema Alonso <nimiux@gentoo.org> tardy-1.28.ebuild:
+  Stable for amd64 wrt bug #499534
 
   28 Jan 2014; Tim Harder <radhermit@gentoo.org> tardy-1.28.ebuild:
   Add missing boost build dep.
