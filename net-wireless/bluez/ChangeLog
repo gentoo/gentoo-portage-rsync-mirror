@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.189 2014/02/22 20:27:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.190 2014/02/27 20:48:29 pacho Exp $
+
+*bluez-5.15 (27 Feb 2014)
+
+  27 Feb 2014; Pacho Ramos <pacho@gentoo.org> +bluez-5.15.ebuild:
+  Version bump (#502582 by Manuel Ruger)
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> bluez-5.14-r1.ebuild:
   Fix wrong commit, bug 502160

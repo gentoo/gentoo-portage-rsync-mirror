@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.41 2014/02/22 21:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.42 2014/02/27 20:59:37 pacho Exp $
+
+*gnote-3.10.3 (27 Feb 2014)
+
+  27 Feb 2014; Pacho Ramos <pacho@gentoo.org> +gnote-3.10.3.ebuild,
+  -gnote-3.10.1.ebuild:
+  Version bump, drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnote-3.10.2.ebuild:
   Fix wrong commit, bug 502160
