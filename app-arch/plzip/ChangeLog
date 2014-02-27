@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/plzip
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/plzip/ChangeLog,v 1.1 2014/02/27 10:55:49 mgorny Exp $
+
+*plzip-1.1 (27 Feb 2014)
+
+  27 Feb 2014; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +plzip-1.1.ebuild:
+  Introduce the parallel variant of app-arch/lzip.
