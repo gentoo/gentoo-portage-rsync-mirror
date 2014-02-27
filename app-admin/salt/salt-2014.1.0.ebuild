@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.16.4.ebuild,v 1.3 2013/12/09 23:19:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.0.ebuild,v 1.1 2014/02/27 00:02:32 chutzpah Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=(python{2_6,2_7})
 
-inherit eutils distutils-r1
+inherit eutils distutils-r1 systemd
 
 DESCRIPTION="Salt is a remote execution and configuration manager."
 HOMEPAGE="http://saltstack.org/"
@@ -19,14 +19,14 @@ if [[ ${PV} == 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-	KEYWORDS=""
+	KEYWORDS="~x86 ~amd64"
 fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="ldap libvirt mako mongodb mysql openssl redis test"
+IUSE="ldap libvirt mako mongodb mysql openssl redis timelib test"
 
-RDEPEND=">=dev-python/pyzmq-2.1.9[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		dev-python/m2crypto[${PYTHON_USEDEP}]
@@ -34,6 +34,7 @@ RDEPEND=">=dev-python/pyzmq-2.1.9[${PYTHON_USEDEP}]
 		dev-python/pycryptopp[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/setuptools[${PYTHON_USEDEP}]
+		>=dev-python/libcloud-0.14.0[${PYTHON_USEDEP}]
 		sys-apps/pciutils
 		mako? ( dev-python/mako[${PYTHON_USEDEP}] )
 		ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
@@ -45,32 +46,40 @@ RDEPEND=">=dev-python/pyzmq-2.1.9[${PYTHON_USEDEP}]
 		)
 		mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
 		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
-		redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )"
+		redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )
+		timelib? ( dev-python/timelib[${PYTHON_USEDEP}] )"
 DEPEND="test? (
+			dev-python/pip
 			dev-python/virtualenv
+			dev-python/SaltTesting
 			${RDEPEND}
 		)"
 
+PATCHES=("${FILESDIR}/${PN}-0.17.1-tests-nonroot.patch")
+DOCS=(README.rst AUTHORS)
+
 python_prepare() {
 	sed -i '/install_requires=/ d' setup.py || die "sed failed"
+
+	# this test fails because it trys to "pip install distribute"
+	rm tests/unit/{modules,states}/zcbuildout_test.py
 }
 
 python_install_all() {
-	distutils-r1_python_install_all
+	USE_SETUPTOOLS=1 distutils-r1_python_install_all
 
 	for s in minion master syndic; do
-		newinitd "${FILESDIR}"/${s}-initd-1 salt-${s}
+		newinitd "${FILESDIR}"/${s}-initd-3 salt-${s}
 		newconfd "${FILESDIR}"/${s}-confd-1 salt-${s}
+		systemd_dounit "${FILESDIR}"/salt-${s}.service
 	done
 
 	insinto /etc/${PN}
 	doins conf/*
-
-	dodoc README.rst AUTHORS
 }
 
 python_test() {
 	# testsuite likes lots of files
 	ulimit -n 3072
-	SHELL="/bin/bash" TMPDIR=/tmp ./tests/runtests.py --unit-tests --no-report || die
+	USE_SETUPTOOLS=1 SHELL="/bin/bash" TMPDIR=/tmp ./tests/runtests.py --unit-tests --no-report --verbose || die
 }

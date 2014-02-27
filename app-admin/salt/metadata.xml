@@ -26,6 +26,7 @@ backbone of cloud and data center management.
 		<flag name="mongodb">Support returning data to a mongodb server.</flag>
 		<flag name="redis">Support returning data to a redis database.</flag>
 		<flag name="mako">Add support for using the mako template engine for parsing salt states.</flag>
+		<flag name="timelib">Use timelib to parse english textual date descriptions.</flag>
 	</use>
 </pkgmetadata>
 

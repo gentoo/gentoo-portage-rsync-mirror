@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.8 2012/12/30 14:59:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2014.2.15.ebuild,v 1.1 2014/02/27 00:25:13 chutzpah Exp $
 
 EAPI=5
 inherit eutils linux-info udev
@@ -14,12 +14,12 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
-IUSE="acl crypt debug +external-fuse +ntfsprogs static-libs suid xattr"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+IUSE="acl debug +external-fuse ntfsdecrypt +ntfsprogs static-libs suid xattr"
 
 RDEPEND="!<sys-apps/util-linux-2.20.1-r2
 	!sys-fs/ntfsprogs
-	crypt? (
+	ntfsdecrypt? (
 		>=dev-libs/libgcrypt-1.2.2
 		>=net-libs/gnutls-1.4.4
 		)
@@ -43,8 +43,15 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	# add missing $(sbindir) references
+	sed -e 's:sbin\($\|/\):$(sbindir)\1:g' \
+		-i ntfsprogs/Makefile.in src/Makefile.in || die
+}
+
 src_configure() {
 	econf \
+		--prefix="${EPREFIX}"/usr \
 		--exec-prefix="${EPREFIX}"/usr \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable debug) \
@@ -52,8 +59,9 @@ src_configure() {
 		--disable-ldconfig \
 		$(use_enable acl posix-acls) \
 		$(use_enable xattr xattr-mappings) \
-		$(use_enable crypt crypto) \
+		$(use_enable ntfsdecrypt crypto) \
 		$(use_enable ntfsprogs) \
+		--without-uuid \
 		--enable-extras \
 		$(use_enable static-libs static) \
 		--with-fuse=$(usex external-fuse external internal)
@@ -67,9 +75,18 @@ src_install() {
 	prune_libtool_files
 
 	# http://bugs.gentoo.org/398069
-	dodir /usr/sbin
-	mv "${ED}"/sbin/* "${ED}"/usr/sbin || die
-	rm -r "${ED}"/sbin
+	rmdir "${D}"/sbin
 
 	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
+}
+
+pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		# Bug 450024
+		if $(tc-getLD) --version | grep -q "GNU gold"; then
+			eerror "ntfs-3g does not function correctly when built with the gold linker."
+			eerror "Please select the bfd linker with binutils-config."
+			die "GNU gold detected"
+		fi
+	fi
 }

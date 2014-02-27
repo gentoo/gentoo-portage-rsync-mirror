@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.31 2014/01/22 20:40:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.32 2014/02/27 00:02:32 chutzpah Exp $
+
+*salt-2014.1.0 (26 Feb 2014)
+
+  26 Feb 2014; Patrick McLean <chutzpah@gentoo.org> -salt-0.16.4.ebuild,
+  -salt-0.17.2.ebuild, -salt-0.17.4.ebuild, -salt-0.17.4-r1.ebuild,
+  +salt-2014.1.0.ebuild, salt-9999.ebuild, -files/master-initd-1,
+  -files/minion-initd-1, -files/syndic-initd-1, +files/master-initd-3,
+  +files/minion-initd-3, +files/syndic-initd-3, metadata.xml:
+  Version bump. Update 9999 to match current release. Add "use logger" to init
+  script (bug #502550). Clean out old versions.
 
 *salt-0.17.4-r2 (22 Jan 2014)
 

@@ -8,5 +8,5 @@ RDEPEND=!sys-kernel/ps3-sources selinux? ( sys-libs/libselinux ) !sys-libs/nss-d
 RESTRICT=strip
 SLOT=2.2
 SRC_URI=mirror://gnu/glibc/glibc-2.19.tar.xz ftp://sourceware.org/pub/glibc/releases/glibc-2.19.tar.xz ftp://sourceware.org/pub/glibc/snapshots/glibc-2.19.tar.xz mirror://gentoo/glibc-2.19.tar.xz mirror://gentoo/glibc-2.19-patches-1.tar.bz2 http://dev.gentoo.org/~vapier/dist/glibc-2.19-patches-1.tar.bz2 http://dev.gentoo.org/~azarah/glibc/glibc-2.19-patches-1.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	738214fbf4fe7254493d5fc8a248262a	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=313e75aabb2678434a797eadcfad577f
