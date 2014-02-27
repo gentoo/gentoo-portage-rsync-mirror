@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r3.ebuild,v 1.3 2014/02/27 12:37:48 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r3.ebuild,v 1.4 2014/02/27 13:02:33 aidecoe Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ RESTRICT="test"
 
 CDEPEND="virtual/udev
 	!>=sys-fs/udev-210
+	!>=sys-apps/systemd-210
 	systemd? ( >=sys-apps/systemd-199 )
 	selinux? ( sec-policy/selinux-dracut )
 	"

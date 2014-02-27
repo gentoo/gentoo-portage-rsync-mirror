@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.251 2014/02/25 20:47:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.252 2014/02/27 13:15:08 nimiux Exp $
+
+  27 Feb 2014; Chema Alonso <nimiux@gentoo.org> debootstrap-1.0.56.ebuild:
+  Stable for amd64 wrt bug #500686
 
   25 Feb 2014; Markus Meier <maekke@gentoo.org> debootstrap-1.0.56.ebuild:
   arm stable, bug #500686
