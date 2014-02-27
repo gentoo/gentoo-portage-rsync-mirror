@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.19 2014/02/19 22:49:50 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.20 2014/02/27 03:47:31 nicolasbock Exp $
+
+*lammps-20140214-r2 (27 Feb 2014)
+
+  27 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140214-r2.ebuild,
+  metadata.xml:
+  sci-physics/lammps-20140214-r2: Add Voronoi package.
 
   19 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> lammps-20140214-r1.ebuild:
   sci-physics/lammps-20140214-r1: Fixed some issues:  * Fixed file collision of

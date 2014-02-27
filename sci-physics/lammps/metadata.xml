@@ -26,6 +26,7 @@
 		<flag name="lammps-package-meam">modified EAM potential</flag>
 		<flag name="lammps-package-reax">ReaxFF potential</flag>
 		<flag name="lammps-package-rigid">rigid bodies</flag>
+		<flag name="lammps-package-voronoi">Voronoi tesselations</flag>
 	</use>
 	<herd>sci-physics</herd>
 	<maintainer>

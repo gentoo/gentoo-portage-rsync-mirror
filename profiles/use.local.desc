@@ -6080,6 +6080,7 @@ sci-physics/lammps:lammps-package-dipole - point dipole particles
 sci-physics/lammps:lammps-package-meam - modified EAM potential
 sci-physics/lammps:lammps-package-reax - ReaxFF potential
 sci-physics/lammps:lammps-package-rigid - rigid bodies
+sci-physics/lammps:lammps-package-voronoi - Voronoi tesselations
 sci-physics/lammps:package-dipole - point dipole particles
 sci-physics/lammps:package-meam - modified EAM potential
 sci-physics/lammps:package-rigid - rigid bodies
