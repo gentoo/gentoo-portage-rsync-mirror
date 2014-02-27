@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.1.ebuild,v 1.4 2013/07/29 21:25:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.1.ebuild,v 1.5 2014/02/27 16:25:19 hasufell Exp $
 
 EAPI=5
 inherit eutils cmake-utils games
@@ -44,7 +44,8 @@ PATCHES=(
 	)
 
 src_prepare() {
-	base_src_prepare
+	epatch ${PATCHES[@]}
+	epatch_user
 
 	if [[ ${LINGUAS+set} ]]; then
 		for lang in $(grep -v ^# po/LINGUAS); do
