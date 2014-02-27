@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/subsurface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.8 2014/02/27 08:34:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.9 2014/02/27 11:55:10 pinkbyte Exp $
+
+  27 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> subsurface-4.0.ebuild,
+  subsurface-9999.ebuild:
+  Correct dependency on dev-libs/libdivecomputer
 
   27 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -subsurface-3.0.2-r1.ebuild,
   -subsurface-3.1.ebuild:

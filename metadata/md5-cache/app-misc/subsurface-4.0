@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2 dev-libs/libxslt dev-libs/libzip dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 dev-qt/qtwebkit:4 kde-base/marble >=dev-libs/libdivecomputer-0.4.1[static-libs,usb?] virtual/pkgconfig doc? ( app-text/asciidoc )
+DEPEND=dev-db/sqlite:3 dev-libs/glib:2 >=dev-libs/libdivecomputer-0.4.1[usb?] dev-libs/libxml2 dev-libs/libxslt dev-libs/libzip dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 dev-qt/qtwebkit:4 kde-base/marble virtual/pkgconfig doc? ( app-text/asciidoc )
 DESCRIPTION=An open source dive log program
 EAPI=5
 HOMEPAGE=http://subsurface.hohndel.org
 IUSE=debug doc usb linguas_bg_BG linguas_da_DK linguas_de_CH linguas_de_DE linguas_es_ES linguas_et_EE linguas_fi_FI linguas_fr_FR linguas_he linguas_it_IT linguas_nb_NO linguas_nl_NL linguas_pl_PL linguas_pt_BR linguas_pt_PT linguas_ru_RU linguas_sk_SK linguas_sv_SE linguas_zh_TW
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-db/sqlite:3 dev-libs/glib:2 dev-libs/libxml2 dev-libs/libxslt dev-libs/libzip dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 dev-qt/qtwebkit:4 kde-base/marble
+RDEPEND=dev-db/sqlite:3 dev-libs/glib:2 >=dev-libs/libdivecomputer-0.4.1[usb?] dev-libs/libxml2 dev-libs/libxslt dev-libs/libzip dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 dev-qt/qtwebkit:4 kde-base/marble
 SLOT=0
 SRC_URI=http://subsurface.hohndel.org/downloads/Subsurface-4.0.tgz https://bitbucket.org/bearsh/bearshlay/downloads/Subsurface-4.0.tgz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=336004ded001c7753f68272e3a534e6d
+_md5_=424e93382380447ef6f96939cebfe2b0

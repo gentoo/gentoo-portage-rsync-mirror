@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.4 2013/12/23 16:57:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.5 2014/02/27 11:55:10 pinkbyte Exp $
 
 EAPI="5"
 
@@ -30,6 +30,7 @@ IUSE="debug doc usb"
 
 RDEPEND="dev-db/sqlite:3
 	dev-libs/glib:2
+	>=dev-libs/libdivecomputer-${LIBDC_V}[usb?]
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/libzip
@@ -40,7 +41,6 @@ RDEPEND="dev-db/sqlite:3
 	kde-base/marble
 "
 DEPEND="${RDEPEND}
-	>=dev-libs/libdivecomputer-${LIBDC_V}[static-libs,usb?]
 	virtual/pkgconfig
 	doc? ( app-text/asciidoc )
 "
