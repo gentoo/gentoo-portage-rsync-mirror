@@ -1,0 +1,15 @@
+# ChangeLog for mate-base/mate-session-manager
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.1 2014/02/27 18:41:22 tomwij Exp $
+
+*mate-session-manager-1.6.1-r1 (27 Feb 2014)
+
+  27 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +files/10-user-dirs-update-mate,
+  +files/15-xdg-data-mate, +files/MATE, +files/defaults.list,
+  +files/mate-session-manager-1.2.0-idle-transition.patch,
+  +files/mate-session-manager-1.5.2-save-session-ui.patch,
+  +files/mate-session-manager-1.6-gnome-keyring.patch,
+  +files/mate-session-manager-1.6.1-login1.patch,
+  +mate-session-manager-1.6.1-r1.ebuild, +metadata.xml:
+  New ebuild for mate-base/mate-session-manager, MATE session manager; imported
+  from the mate-overlay, reviewed and adjusted.

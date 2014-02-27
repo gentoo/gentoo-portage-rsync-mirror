@@ -1,23 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-cxx/netcdf-cxx-4.2.1.ebuild,v 1.1 2014/01/01 17:19:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-cxx/netcdf-cxx-4.2.1.ebuild,v 1.3 2014/02/27 18:44:24 bicatali Exp $
 
 EAPI=5
 
-inherit autotools-utils versionator
+inherit autotools-utils
 
 MYP=${PN}4-${PV}
 
 DESCRIPTION="C++ library for netCDF"
 HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
-SRC_URI="https://github.com/Unidata/netcdf-cxx4/archive/v4.2.1.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Unidata/netcdf-cxx4/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="UCAR-Unidata"
-SLOT="0"
+SLOT="0/1"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples static-libs"
 
-RDEPEND=">=sci-libs/netcdf-4.2"
+RDEPEND=">=sci-libs/netcdf-4.2:="
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYP}"
