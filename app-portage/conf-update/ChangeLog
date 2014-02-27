@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/conf-update
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.37 2012/09/30 18:01:12 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.38 2014/02/27 09:00:13 nimiux Exp $
+
+  27 Feb 2014; Chema Alonso <nimiux@gentoo.org> -conf-update-1.0.ebuild,
+  -conf-update-1.0-r1.ebuild, -conf-update-1.0.1.ebuild,
+  -files/conf-update-1.0-asneeded.patch,
+  -files/conf-update-1.0-regex-classes.patch, metadata.xml:
+  Drop old versions
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> conf-update-1.0.ebuild,
   conf-update-1.0-r1.ebuild, conf-update-1.0.1.ebuild,

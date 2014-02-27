@@ -8,6 +8,10 @@
 <longdescription lang="en">
   conf-update is a ncurses-based config managment tool
 </longdescription>
+<longdescription lang="es">
+  conf-update es una herramienta de gestión de la configuración
+  basada en ncurses
+</longdescription>
 <use>
   <flag name='colordiff'>Use colors when displaying diffs
     (<pkg>app-misc/colordiff</pkg>)</flag>
