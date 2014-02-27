@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.1.0.ebuild,v 1.2 2013/02/10 08:52:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.3.0.ebuild,v 1.1 2014/02/27 06:19:14 patrick Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils versionator multilib toolchain-funcs
 
@@ -12,14 +12,14 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Open Field Operation and Manipulation - CFD Simulation Toolbox"
 HOMEPAGE="http://www.openfoam.org"
-SRC_URI="http://downloads.sourceforge.net/project/foam/foam/${PV}/${MY_P}.tgz"
+SRC_URI="http://downloads.sourceforge.net/foam/${MY_P}.tgz"
 
 LICENSE="GPL-2"
-SLOT="2.1"
+SLOT="2.2"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples"
+IUSE="doc examples opendx src paraview"
 
-DEPEND="!=sci-libs/openfoam-bin-${MY_PV}*
+RDEPEND="!=sci-libs/openfoam-bin-${MY_PV}*
 	!=sci-libs/openfoam-kernel-${MY_PV}*
 	!=sci-libs/openfoam-meta-${MY_PV}*
 	!=sci-libs/openfoam-solvers-${MY_PV}*
@@ -28,9 +28,11 @@ DEPEND="!=sci-libs/openfoam-bin-${MY_PV}*
 	sci-libs/parmetis
 	sci-libs/parmgridgen
 	sci-libs/scotch
-	sci-visualization/opendx
-	virtual/mpi"
-RDEPEND="${DEPEND}"
+	virtual/mpi
+	opendx? ( sci-visualization/opendx )
+	paraview? ( ~sci-visualization/paraview-4.1.0[development] )"
+DEPEND="${DEPEND}
+	doc? ( app-doc/doxygen[dot] )"
 
 S=${WORKDIR}/${MY_P}
 INSDIR="/usr/$(get_libdir)/${MY_PN}/${MY_P}"
@@ -63,6 +65,12 @@ src_configure() {
 
 	sed -i -e "s|WM_MPLIB:=OPENMPI|WM_MPLIB:="${WM_MPLIB}"|" etc/bashrc
 	sed -i -e "s|setenv WM_MPLIB OPENMPI|setenv WM_MPLIB "${WM_MPLIB}"|" etc/cshrc
+
+	sed -i -e "s|^foamInstall=\$HOME|foamInstall=/usr/$(get_libdir)|" etc/bashrc
+	sed -i -e "s|^set foamInstall = \$HOME|set foamInstall = /usr/$(get_libdir)|" etc/cshrc
+
+	sed -i -e 's|^export ParaView_DIR=$WM_THIRD_PARTY_DIR/platforms/$WM_ARCH$WM_COMPILER/$paraviewArchName|export ParaView_DIR=/usr|' etc/config/paraview.sh
+	sed -i -e 's|^setenv ParaView_DIR $WM_THIRD_PARTY_DIR/platforms/$WM_ARCH$WM_COMPILER/$paraviewArchName|setenv ParaView_DIR /usr|' etc/config/paraview.csh
 }
 
 src_compile() {
@@ -82,12 +90,16 @@ src_compile() {
 	find wmake -name wmkdep | xargs rm -rf
 
 	./Allwmake || die "could not build"
+	if use doc ; then
+		doc/Allwmake || die "could not build"
+	fi
 }
 
-src_test() {
-	cd bin
-	./foamInstallationTest
-}
+# Doesn't do anything sane
+#src_test() {
+#	cd bin
+#	./foamInstallationTest
+#}
 
 src_install() {
 	insinto ${INSDIR}
@@ -95,19 +107,12 @@ src_install() {
 
 	use examples && doins -r tutorials
 
+	use src && doins -r src
+
 	insopts -m0755
-	doins -r bin
+	doins -r bin applications platforms wmake
 
-	insinto ${INSDIR}/applications/bin
-	doins -r applications/bin/*
-
-	insinto ${INSDIR}/lib
-	doins -r lib/*
-
-	insinto ${INSDIR}/wmake
-	doins -r wmake/*
-
-	dodoc {doc/Guides-a4/*.pdf,README}
+	dodoc README.html doc/Guides-a4/*.pdf
 
 	if use doc ; then
 		dohtml -r doc/Doxygen

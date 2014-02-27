@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/openfoam
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/ChangeLog,v 1.17 2013/11/01 05:17:08 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/ChangeLog,v 1.18 2014/02/27 06:19:14 patrick Exp $
+
+*openfoam-2.3.0 (27 Feb 2014)
+
+  27 Feb 2014; Patrick Lauer <patrick@gentoo.org> +openfoam-2.3.0.ebuild,
+  -openfoam-1.7.1.ebuild, -openfoam-2.1.0.ebuild, -openfoam-2.1.1-r1.ebuild,
+  -openfoam-2.1.1.ebuild, -openfoam-2.2.0.ebuild, metadata.xml:
+  Bump for #502556, clean up old
 
 *openfoam-2.2.2 (01 Nov 2013)
 

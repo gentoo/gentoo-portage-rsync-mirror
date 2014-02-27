@@ -13,5 +13,6 @@
 	<use>
 		<flag name="opendx"> Install opendx visualisation tool</flag>
 		<flag name="src"> Install source files</flag>
+		<flag name="paraview">Enable support for paraview library</flag>
 	</use>
 </pkgmetadata>
