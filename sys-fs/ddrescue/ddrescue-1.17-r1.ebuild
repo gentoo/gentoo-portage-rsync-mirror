@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17-r1.ebuild,v 1.1 2014/01/05 21:22:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17-r1.ebuild,v 1.2 2014/02/27 05:46:10 polynomial-c Exp $
 
 EAPI=5
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic unpacker
 
 DESCRIPTION="Copy data from one file or block device to another with read-error recovery"
 HOMEPAGE="http://www.gnu.org/software/ddrescue/ddrescue.html"
@@ -12,16 +12,11 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.lz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux"
 IUSE="static"
 
-DEPEND="app-arch/lzip"
+DEPEND=""
 RDEPEND=""
-
-src_unpack() {
-	# Upstream only provides an lzip compressed tarball for this version
-	tar --lzip -xf "${DISTDIR}"/${P}.tar.lz || die
-}
 
 src_configure() {
 	use static && append-ldflags -static

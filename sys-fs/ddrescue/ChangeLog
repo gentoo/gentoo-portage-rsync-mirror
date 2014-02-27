@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ddrescue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.44 2014/01/05 21:22:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.45 2014/02/27 05:46:10 polynomial-c Exp $
+
+  27 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -ddrescue-1.17.ebuild,
+  ddrescue-1.17-r1.ebuild:
+  Use unpacker.eclass for lzip compressed releases. Removed old. Readded ia64
+  KEYWORD.
 
 *ddrescue-1.17-r1 (05 Jan 2014)
 
