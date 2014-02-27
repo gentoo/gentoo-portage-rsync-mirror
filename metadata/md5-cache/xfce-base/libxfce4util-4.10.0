@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEFINED_PHASES=configure install postinst postrm preinst prepare setup
 DEPEND=>=dev-libs/glib-2.24 dev-util/intltool virtual/pkgconfig sys-devel/gettext >=sys-apps/sed-4
 DESCRIPTION=A basic utility library for the Xfce desktop environment
 EAPI=5
@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.24
 SLOT=0
 SRC_URI=mirror://xfce/src/xfce/libxfce4util/4.10/libxfce4util-4.10.0.tar.bz2
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	ba58c6f43e7fdfc116752aa58b488d83
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	20671cc91311ca7e3446047c1175cf16
 _md5_=78f1e4ead00a8f512a86bd789c647eb5
