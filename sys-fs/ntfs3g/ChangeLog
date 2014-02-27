@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.156 2014/02/27 00:25:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.157 2014/02/27 05:18:29 patrick Exp $
+
+  27 Feb 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Cleanup metadata.xml
 
 *ntfs3g-2014.2.15 (27 Feb 2014)
 

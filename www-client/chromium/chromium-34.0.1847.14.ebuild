@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1833.5.ebuild,v 1.1 2014/02/13 04:41:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.14.ebuild,v 1.1 2014/02/27 05:30:56 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -164,10 +164,9 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-system-jinja-r3.patch"
+	epatch "${FILESDIR}/${PN}-system-jinja-r4.patch"
 	epatch "${FILESDIR}/${PN}-gn-r1.patch"
 	epatch "${FILESDIR}/${PN}-depot-tools-r0.patch"
-	epatch "${FILESDIR}/${PN}-d8-r0.patch"
 
 	epatch_user
 
@@ -507,7 +506,7 @@ chromium_test() {
 		local cmd=$1
 		shift
 		local IFS=:
-		set -- "${cmd}" "--gtest_filter=-$*"
+		set -- "${cmd}" --test-launcher-bot-mode "--gtest_filter=-$*"
 		einfo "$@"
 		"$@"
 		local st=$?
