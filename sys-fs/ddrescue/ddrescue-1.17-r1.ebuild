@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17-r1.ebuild,v 1.2 2014/02/27 05:46:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17-r1.ebuild,v 1.3 2014/02/27 21:08:15 ssuominen Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux"
 IUSE="static"
 
-DEPEND=""
+DEPEND="$(unpacker_src_uri_depends)"
 RDEPEND=""
 
 src_configure() {
