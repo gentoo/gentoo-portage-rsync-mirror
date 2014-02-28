@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/libmatekbd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/ChangeLog,v 1.1 2014/02/28 13:15:03 tomwij Exp $
+
+*libmatekbd-1.6.2 (28 Feb 2014)
+
+  28 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +libmatekbd-1.6.2.ebuild,
+  +metadata.xml:
+  New ebuild for mate-base/libmatekbd, MATE keyboard configuration library;
+  imported from the mate-overlay, reviewed and adjusted.
