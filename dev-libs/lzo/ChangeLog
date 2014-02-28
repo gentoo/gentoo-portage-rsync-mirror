@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.77 2014/01/18 01:50:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.78 2014/02/28 20:37:12 mgorny Exp $
+
+*lzo-2.06-r1 (28 Feb 2014)
+
+  28 Feb 2014; Michał Górny <mgorny@gentoo.org> +lzo-2.06-r1.ebuild:
+  Introduce multilib support.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> lzo-2.06.ebuild:
   Add arm64 love.

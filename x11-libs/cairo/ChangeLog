@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.358 2014/01/20 12:55:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.359 2014/02/28 20:42:55 mgorny Exp $
+
+*cairo-1.12.16-r1 (28 Feb 2014)
+
+  28 Feb 2014; Michał Górny <mgorny@gentoo.org> +cairo-1.12.16-r1.ebuild,
+  cairo-9999.ebuild:
+  Introduce multilib support, bug #488672.
 
   20 Jan 2014; Ben de Groot <yngwin@gentoo.org> cairo-1.12.14-r4.ebuild,
   cairo-1.12.16.ebuild:

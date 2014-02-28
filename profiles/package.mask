@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15430 2014/02/28 19:52:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15432 2014/02/28 20:50:29 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,6 +38,8 @@
 dev-libs/libgcrypt:11
 >=dev-libs/lzo-2.06-r1
 >=x11-libs/cairo-1.12.16-r1
+>=app-emulation/emul-linux-x86-baselibs-20131008-r20
+>=app-emulation/emul-linux-x86-gtklibs-20131008-r2
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (27 Feb 2014)
 # Dev channel releases are only for people who are developers or want more
