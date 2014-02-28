@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r3.ebuild,v 1.8 2013/12/22 13:23:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r3.ebuild,v 1.9 2014/02/28 15:52:08 axs Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXft
+	x11-libs/libXrandr
 	media-libs/libpng:0=
 	virtual/jpeg:=
 	x11-apps/sessreg
@@ -44,6 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-systemd-session.patch
 	epatch "${FILESDIR}"/${P}-session-chooser.patch
 	epatch "${FILESDIR}"/${P}-fix-slimlock-nopam.patch
+	epatch "${FILESDIR}"/${P}-drop-zlib.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
