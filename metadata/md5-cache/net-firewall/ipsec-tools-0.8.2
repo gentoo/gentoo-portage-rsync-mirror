@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst preinst prepare setup
+DEPEND=dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec ) >=sys-kernel/linux-headers-2.6.30 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=A port of KAME's IPsec utilities to the Linux-2.6 IPsec implementation
+EAPI=5
+HOMEPAGE=http://ipsec-tools.sourceforge.net/
+IUSE=hybrid idea ipv6 kerberos ldap nat pam rc5 readline selinux stats
+KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
+LICENSE=BSD GPL-2
+RDEPEND=dev-libs/openssl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( sys-libs/pam ) readline? ( sys-libs/readline ) selinux? ( sys-libs/libselinux sec-policy/selinux-ipsec )
+SLOT=0
+SRC_URI=mirror://sourceforge/ipsec-tools/ipsec-tools-0.8.2.tar.bz2
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=c415e324e691384be47b901271d8380d
