@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.0.0.ebuild,v 1.1 2014/02/24 00:21:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.0.1.ebuild,v 1.1 2014/02/28 13:41:15 blueness Exp $
 
 EAPI=5
 
