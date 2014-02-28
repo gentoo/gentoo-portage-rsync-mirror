@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.193 2014/02/27 10:08:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.194 2014/02/28 22:29:45 vapier Exp $
+
+  28 Feb 2014; Mike Frysinger <vapier@gentoo.org> readline-6.3.ebuild:
+  Unmask for all.
 
 *readline-6.3 (27 Feb 2014)
 
