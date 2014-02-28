@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r1.ebuild,v 1.1 2014/02/28 20:42:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r1.ebuild,v 1.2 2014/02/28 21:24:00 mgorny Exp $
 
 EAPI=5
 
@@ -48,6 +48,10 @@ RDEPEND="dev-libs/lzo[${MULTILIB_USEDEP}]
 	)
 	xcb? (
 		x11-libs/libxcb[${MULTILIB_USEDEP}]
+	)
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtklibs-20131008-r1
+		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
