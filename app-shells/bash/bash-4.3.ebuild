@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3.ebuild,v 1.1 2014/02/27 10:28:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3.ebuild,v 1.2 2014/02/28 22:45:30 vapier Exp $
 
-EAPI=4
+EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -61,8 +61,11 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${MY_P}.tar.gz
+}
+
 src_prepare() {
-	#use mem-scramble
 	# Include official patches
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 
@@ -125,7 +128,8 @@ src_configure() {
 	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
 	tc-export AR #444070
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir='$(datarootdir)'/doc/${PF} \
+		--htmldir='$(docdir)/html' \
 		--with-curses \
 		$(use_with afs) \
 		$(use_enable net net-redirections) \
@@ -147,7 +151,9 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	local d f
+
+	default
 
 	dodir /bin
 	mv "${D}"/usr/bin/bash "${D}"/bin/ || die
@@ -198,17 +204,17 @@ src_install() {
 	fi
 
 	doman doc/*.1
-	dodoc AUTHORS Y2K
+	newdoc CWRU/changelog ChangeLog
 	dosym bash.info /usr/share/info/bashref.info
 }
 
 pkg_preinst() {
-	if [[ -e ${ROOT}/etc/bashrc ]] && [[ ! -d ${ROOT}/etc/bash ]] ; then
-		mkdir -p "${ROOT}"/etc/bash || die
+	if [ -e "${ROOT}/etc/bashrc" ] && [ ! -d "${ROOT}/etc/bash" ] ; then
+		mkdir -p "${ROOT}"/etc/bash
 		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
 	fi
 
-	if [[ -L ${ROOT}/bin/sh ]] ; then
+	if [ -L "${ROOT}/bin/sh" ] ; then
 		# rewrite the symlink to ensure that its mtime changes. having /bin/sh
 		# missing even temporarily causes a fatal error with paludis.
 		local target=$(readlink "${ROOT}"/bin/sh)
@@ -220,7 +226,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	# If /bin/sh does not exist, provide it
-	if [[ ! -e ${ROOT}/bin/sh ]] ; then
+	if [ ! -e "${ROOT}/bin/sh" ] ; then
 		ln -sf bash "${ROOT}"/bin/sh
 	fi
 }
