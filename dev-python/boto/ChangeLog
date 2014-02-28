@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.91 2014/02/24 22:31:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.92 2014/02/28 04:46:47 radhermit Exp $
+
+*boto-2.26.0 (28 Feb 2014)
+
+  28 Feb 2014; Tim Harder <radhermit@gentoo.org> +boto-2.26.0.ebuild:
+  Version bump.
 
   24 Feb 2014; Mike Frysinger <vapier@gentoo.org> boto-2.25.0.ebuild:
   Add arm love for Chromium OS.

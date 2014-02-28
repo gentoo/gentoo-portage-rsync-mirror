@@ -5,4 +5,8 @@
 		<email>swegener@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
+	<maintainer>
+		<email>radhermit@gentoo.org</email>
+		<name>Tim Harder</name>
+	</maintainer>
 </pkgmetadata>
