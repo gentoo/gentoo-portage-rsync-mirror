@@ -1,6 +1,31 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.304 2014/02/13 02:29:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.307 2014/02/28 18:14:39 floppym Exp $
+
+  28 Feb 2014; Mike Gilbert <floppym@gentoo.org>
+  -files/1.99-call_proper_grub_probe.patch,
+  -files/1.99-do_not_stat_so_often.patch, -files/1.99-improve_devmapper.patch,
+  -files/1.99-stat_root_device_properly-p1.patch,
+  -files/1.99-stat_root_device_properly-p2.patch,
+  -files/grub-2.00-20_linux_xen.patch, -files/grub-2.00-compression.patch,
+  -files/grub-2.00-config-quoting.patch, -files/grub-2.00-dmraid.patch,
+  -files/grub-2.00-freebsd.patch, -files/grub-2.00-hardcoded-awk.patch,
+  -files/grub-2.00-no-gets.patch, -files/grub-2.00-os-prober-efi-system.patch,
+  -files/grub-2.00-parallel-make.patch, -files/grub-2.00-texinfo.patch,
+  -files/grub-2.00-tftp-endian.patch,
+  -files/grub-2.00-zfs-feature-flag-support-r1.patch,
+  -files/grub-2.00-zfs-feature-flag-support.patch,
+  -files/grub-2.02_beta1-only-use-scripts-that-are-executable.patch,
+  -files/grub.default:
+  Remove unused files in FILESDIR.
+
+  28 Feb 2014; Mike Gilbert <floppym@gentoo.org> -grub-0.97-r10.ebuild,
+  -grub-0.97-r11.ebuild, -grub-1.99-r2.ebuild, -grub-2.00-r4.ebuild,
+  -grub-2.00_p5107.ebuild, -grub-2.02_beta1-r1.ebuild:
+  Remove old ebuilds.
+
+  28 Feb 2014; Mike Gilbert <floppym@gentoo.org> files/grub.default-3:
+  Add a couple of examples for GRUB_CMDLINE_LINUX.
 
   13 Feb 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2.ebuild,
   grub-9999-r1.ebuild:

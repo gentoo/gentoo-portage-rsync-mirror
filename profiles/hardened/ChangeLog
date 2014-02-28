@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.37 2014/02/21 19:44:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.38 2014/02/28 18:17:06 blueness Exp $
+
+  28 Feb 2014; Anthony G. Basile <blueness@gentoo.org> +linux/musl/mips/eapi,
+  +linux/musl/mips/make.defaults, +linux/musl/mips/mipsel/make.defaults,
+  +linux/musl/mips/mipsel/parent, +linux/musl/mips/parent,
+  +linux/musl/mips/use.force, +linux/musl/mips/use.mask:
+  Add linux/musl/mips and linux/musl/mips/mipsel
 
   21 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
   +linux/musl/arm/armv7a/eapi, +linux/musl/arm/armv7a/make.defaults,

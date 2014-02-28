@@ -1,0 +1,16 @@
+# Copyright 1999-2014 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/mips/make.defaults,v 1.1 2014/02/28 18:17:06 blueness Exp $
+
+ARCH="mips"
+ACCEPT_KEYWORDS="${ARCH} ~${ARCH}"
+
+CHOST="mips-gentoo-linux-musl"
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
+
+DEFAULT_ABI="o32"
+ABI="${DEFAULT_ABI}"
+LIBDIR_o32="lib"
