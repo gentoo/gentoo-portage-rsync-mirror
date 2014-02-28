@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debhelper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.97 2013/12/28 13:25:47 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.98 2014/02/28 16:14:15 jer Exp $
+
+*debhelper-9.20140227 (28 Feb 2014)
+
+  28 Feb 2014; Jeroen Roovers <jer@gentoo.org> +debhelper-9.20140227.ebuild:
+  Version bump.
 
 *debhelper-9.20131227 (28 Dec 2013)
 
