@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-apple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.23 2012/06/11 18:26:50 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.24 2014/02/28 19:35:04 grobian Exp $
+
+  28 Feb 2014; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.2.1_p5666-r1.ebuild:
+  Do not override CC, but rather append what we need in 64-bits mode
 
   11 Jun 2012; Fabian Groffen <grobian@gentoo.org>
   -files/gcc-apple-4.2.1-gfortran.patch,
@@ -335,4 +339,3 @@
   New organisation of Apple's GCC ebuilds.  Ebuilds now carry the GCC
   version in their name.  All ebuilds rely on gcc-config, and appropriate
   slotting is applied.
-

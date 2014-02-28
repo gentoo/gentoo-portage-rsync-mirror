@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.202 2014/02/04 02:43:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.203 2014/02/28 19:59:59 mgorny Exp $
+
+*libgcrypt-1.5.3-r100 (28 Feb 2014)
+*libgcrypt-1.6.1-r1 (28 Feb 2014)
+
+  28 Feb 2014; Michał Górny <mgorny@gentoo.org> +libgcrypt-1.5.3-r100.ebuild,
+  +libgcrypt-1.6.1-r1.ebuild, metadata.xml:
+  Introduce multilib support and a binary compatibility slot.
 
   04 Feb 2014; Tim Harder <radhermit@gentoo.org> -libgcrypt-1.4.6.ebuild,
   -libgcrypt-1.4.6-r1.ebuild, -libgcrypt-1.5.0.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.1 2012/06/11 18:06:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.2 2014/02/28 19:35:04 grobian Exp $
 
 EAPI="3"
 
@@ -159,7 +159,7 @@ src_configure() {
 		--mandir=${EPREFIX}/usr/share/gcc-data/${CTARGET}/${GCC_VERS}/man \
 		--infodir=${EPREFIX}/usr/share/gcc-data/${CTARGET}/${GCC_VERS}/info \
 		--with-gxx-include-dir=${STDCXX_INCDIR} \
-		--host=${CHOST}
+		--host=${CHOST} \
 		--enable-version-specific-runtime-libs"
 
 	if is_crosscompile ; then
@@ -220,7 +220,7 @@ src_configure() {
 	# (won't hurt if already 64-bits, but is essential when coming from a
 	# multilib compiler -- the default)
 	[[ ${CTARGET} == powerpc64-* || ${CTARGET} == x86_64-* ]] && \
-		export CC="gcc -m64"
+		export CC="${CC:-$(tc-getCC)} -m64"
 
 	mkdir -p "${WORKDIR}"/build
 	cd "${WORKDIR}"/build
