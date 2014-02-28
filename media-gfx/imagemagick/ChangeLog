@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.530 2014/02/20 14:45:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.531 2014/02/28 21:47:57 maekke Exp $
+
+  28 Feb 2014; Markus Meier <maekke@gentoo.org> imagemagick-6.8.8.5.ebuild:
+  arm stable, bug #500988
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.8.8.5.ebuild:
   Add ~alpha, wrt bug #491876

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.251 2014/02/22 02:07:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.252 2014/02/28 21:44:59 maekke Exp $
+
+  28 Feb 2014; Markus Meier <maekke@gentoo.org> git-1.8.5.5.ebuild:
+  arm stable, bug #501662
 
 *git-9999-r3 (22 Feb 2014)
 *git-9999-r1 (22 Feb 2014)
