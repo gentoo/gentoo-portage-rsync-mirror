@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.230.100.ebuild,v 1.3 2014/02/02 00:00:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.230.100.ebuild,v 1.4 2014/02/28 15:11:43 zlogene Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=DAGOLDEN
 MODULE_VERSION=0.2301
