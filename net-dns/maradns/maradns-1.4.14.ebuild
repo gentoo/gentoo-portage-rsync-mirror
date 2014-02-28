@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.4.14.ebuild,v 1.1 2014/02/26 14:13:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.4.14.ebuild,v 1.4 2014/02/28 09:54:31 pinkbyte Exp $
 
 EAPI="5"
 
-inherit toolchain-funcs user
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="A security-aware DNS server"
 HOMEPAGE="http://www.maradns.org/"
@@ -12,7 +12,7 @@ SRC_URI="http://maradns.samiam.org/download/${PV%.*}/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="authonly"
 
 DEPEND="dev-lang/perl"

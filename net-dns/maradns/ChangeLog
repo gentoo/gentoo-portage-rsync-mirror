@@ -1,6 +1,22 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.59 2014/02/26 14:13:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.63 2014/02/28 09:57:10 pinkbyte Exp $
+
+  28 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -maradns-1.4.12.ebuild,
+  -maradns-2.0.06.ebuild, -files/maradns-2.0.06-build.patch,
+  -files/maradns-2.0.06-groff.patch:
+  Security cleanup, wrt bug #501686
+
+  28 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> maradns-1.4.14.ebuild,
+  maradns-2.0.09.ebuild:
+  Stable on amd64 and x86, wrt bug #501686
+
+  28 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> maradns-1.4.14.ebuild,
+  maradns-2.0.09.ebuild:
+  ppc stable wrt bug #501686
+
+  28 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> maradns-1.4.14.ebuild:
+  Added eutils for calling epatch_user
 
 *maradns-2.0.09 (26 Feb 2014)
 *maradns-1.4.14 (26 Feb 2014)
