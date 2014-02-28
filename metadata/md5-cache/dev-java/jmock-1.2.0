@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install preinst prepare setup unpack
+DEPEND=>=virtual/jdk-1.6 dev-java/junit:0 app-arch/unzip >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+DESCRIPTION=Library for testing Java code using mock objects.
+EAPI=5
+HOMEPAGE=http://jmock.codehaus.org
+IUSE=elibc_FreeBSD doc source elibc_FreeBSD
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=BSD
+RDEPEND=>=virtual/jre-1.6 dev-java/cglib:2.2 dev-java/junit:0 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+SLOT=1.0
+SRC_URI=http://jmock.codehaus.org/dist/jmock-1.2.0-jars.zip
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=a8501b7ac8f4f18691b2b5ad7bc43630

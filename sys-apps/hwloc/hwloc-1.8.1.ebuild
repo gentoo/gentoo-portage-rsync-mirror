@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.8.1.ebuild,v 1.1 2014/02/16 02:43:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.8.1.ebuild,v 1.2 2014/02/28 17:25:45 bicatali Exp $
 
 EAPI=5
 
@@ -35,6 +35,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS=( AUTHORS NEWS README VERSION )
+
+PATCHES=( "${FILESDIR}/${P}-gl.patch" )
+AUTOTOOLS_AUTORECONF=1
 
 src_prepare() {
 	if use cuda ; then
