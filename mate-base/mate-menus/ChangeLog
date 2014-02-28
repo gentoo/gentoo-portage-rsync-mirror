@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/mate-menus
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/ChangeLog,v 1.1 2014/02/28 01:06:25 tomwij Exp $
+
+*mate-menus-1.6.0 (28 Feb 2014)
+
+  28 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +files/10-xdg-menu-mate,
+  +mate-menus-1.6.0.ebuild, +metadata.xml:
+  New ebuild for mate-base/mate-menus, MATE menu system, implementing the F.D.O
+  cross-desktop spec; imported from the mate-overlay, reviewed and adjusted.
