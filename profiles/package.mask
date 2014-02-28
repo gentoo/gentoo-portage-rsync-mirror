@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15426 2014/02/28 05:52:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15427 2014/02/28 12:49:14 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -52,12 +52,16 @@ app-emacs/tnt
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE introduction mask
+app-text/mate-doc-utils
+mate-base/libmatekbd
 mate-base/mate-common
 mate-base/mate-menus
 mate-base/mate-session-manager
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE 1.7 mask
+>=app-text/mate-doc-utils-1.7
+>=mate-base/libmatekbd-1.7
 >=mate-base/mate-common-1.7
 >=mate-base/mate-menus-1.7
 >=mate-base/mate-session-manager-1.7
