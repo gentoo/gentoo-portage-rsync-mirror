@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxpolkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.17 2012/05/04 05:50:41 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.18 2014/02/28 14:15:50 ssuominen Exp $
+
+*lxpolkit-0.1.0-r2 (28 Feb 2014)
+
+  28 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> +lxpolkit-0.1.0-r2.ebuild:
+  Insert MATE to NotShowIn= in the xdg autostart .desktop file since they have
+  their own mate-polkit with a pkg-config file, library and headers -- and a
+  .desktop file with OnlyShowIn= set to MATE
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> lxpolkit-0.1.0-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -66,4 +73,3 @@
   25 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
   +lxpolkit-0_p20101225.ebuild:
   Initial commit.
-

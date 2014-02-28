@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmonad-log-applet/xmonad-log-applet-2.0.0-r300.ebuild,v 1.1 2013/06/07 20:00:08 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmonad-log-applet/xmonad-log-applet-2.0.0-r300.ebuild,v 1.2 2014/02/28 14:30:11 ssuominen Exp $
 
 EAPI=4
 
@@ -13,13 +13,13 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+gnome xfce4"
+IUSE="+gnome xfce_plugins_xmonad"
 
 RESTRICT="mirror"
 
 RDEPEND="sys-apps/dbus
 	gnome? ( >=gnome-base/gnome-panel-3.0.2 )
-	xfce4? ( xfce-base/xfce4-panel )
+	xfce_plugins_xmonad? ( xfce-base/xfce4-panel )
 	dev-libs/glib:2
 	dev-haskell/dbus
 	x11-libs/gtk+:3"
@@ -34,7 +34,7 @@ src_configure() {
 	myconf=""
 
 	use gnome && myconf="${myconf} --with-panel=gnome3"
-	use xfce4 && myconf="${myconf} --with-panel=xfce4"
+	use xfce_plugins_xmonad && myconf="${myconf} --with-panel=xfce4"
 
 	econf --sysconfdir=/etc ${myconf}
 }

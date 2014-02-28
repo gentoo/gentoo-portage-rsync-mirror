@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8645 2014/02/28 13:48:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8646 2014/02/28 14:28:16 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> desc/xfce_plugins.desc:
+  Introduce xfce_plugins_xmonad to get rid of USE="xfce4" in xmonad-log-applet
+  as per Xfce policy to not include generic flags like USE="xfce xfce4" in
+  gentoo-x86
 
   28 Feb 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Mask dev-libs/libmateweather, mate-base/mate-desktop,
