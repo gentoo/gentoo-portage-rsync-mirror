@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8642 2014/02/28 01:04:38 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8643 2014/02/28 05:52:46 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Update dev channel mask for chromium-35.
 
   27 Feb 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Mask mate-base/mate-menus for MATE introduction.

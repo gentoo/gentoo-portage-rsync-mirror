@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1029 2014/02/27 05:30:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1030 2014/02/28 05:47:02 phajdan.jr Exp $
+
+*chromium-35.0.1862.2 (26 Feb 2014)
+
+  26 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-35.0.1862.2.ebuild, +files/chromium-cups-r0.patch,
+  +files/chromium-gn-r2.patch, -chromium-32.0.1700.102.ebuild,
+  -chromium-32.0.1700.107.ebuild, -chromium-33.0.1750.115.ebuild,
+  chromium-34.0.1847.14.ebuild, chromium-34.0.1847.3.ebuild:
+  Dev channel bump. Aura is now default. Use bundled libvpx. Remove old.
 
 *chromium-34.0.1847.14 (26 Feb 2014)
 

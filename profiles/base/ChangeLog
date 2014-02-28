@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.642 2014/02/27 10:25:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.643 2014/02/28 05:50:07 phajdan.jr Exp $
+
+  27 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.use.mask:
+  Unmask aura for chromium-34 (build works now).
 
   27 Feb 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask experimental USE=kdbus on systemd.
