@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-voaacenc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voaacenc/ChangeLog,v 1.12 2013/10/11 05:20:10 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voaacenc/ChangeLog,v 1.13 2014/03/01 10:27:38 leio Exp $
+
+*gst-plugins-voaacenc-1.2.3 (01 Mar 2014)
+
+  01 Mar 2014; <leio@gentoo.org> -gst-plugins-voaacenc-1.0.5.ebuild,
+  -gst-plugins-voaacenc-1.0.6.ebuild, -gst-plugins-voaacenc-1.0.7.ebuild,
+  -gst-plugins-voaacenc-1.0.8.ebuild, +gst-plugins-voaacenc-1.2.3.ebuild:
+  Version bump to be in sync with the rest; no code changes. Remove old.
 
   11 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-voaacenc-1.0.10.ebuild:

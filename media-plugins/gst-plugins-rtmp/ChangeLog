@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-rtmp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.18 2013/10/11 05:19:39 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.19 2014/03/01 10:01:22 leio Exp $
+
+*gst-plugins-rtmp-1.2.3 (01 Mar 2014)
+
+  01 Mar 2014; <leio@gentoo.org> -gst-plugins-rtmp-1.0.5.ebuild,
+  -gst-plugins-rtmp-1.0.6.ebuild, -gst-plugins-rtmp-1.0.7.ebuild,
+  -gst-plugins-rtmp-1.0.8.ebuild, +gst-plugins-rtmp-1.2.3.ebuild:
+  Version bump to be in sync with the rest; no code changes. Remove old.
 
   11 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-rtmp-1.0.10.ebuild:
   Stable for x86, wrt bug #480908

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/dbus-python-0.80 >=dev-libs/dbus-glib-0.71 dev-python/pygobject:2 >=x11-libs/pango-1.6 >=dev-python/gconf-python-2.14 >=dev-python/gnome-applets-python-2.14 >=dev-python/notify-python-0.1.1-r2 >=dev-python/pygtk-2.16:2 mpd? ( >=dev-python/python-mpd-0.2.1 ) !gnome-extra/music-applet || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://launchpad.net/panflute/0.7/0.7.0/+download/panflute-0.7.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=9b3dc6c27d42c7a362315cfea49c9709

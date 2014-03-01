@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/mono-2.0 >=dev-dotnet/gtk-sharp-2.12 >=dev-dotnet/gnome-sharp-2.20 >=dev-dotnet/gnomevfs-sharp-2.20 >=dev-dotnet/gconf-sharp-2.20 gnome-keyring? ( >=dev-dotnet/gnome-keyring-sharp-1.0.0-r2 )
 SLOT=0
 SRC_URI=http://www.bareftp.org/release/bareftp-0.3.10.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=0f1c1c02481da85581d28bc0c1ca7ef0

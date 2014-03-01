@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.115 2014/02/28 21:24:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.116 2014/03/01 10:20:27 mgorny Exp $
+
+*emul-linux-x86-gtklibs-20131008-r3 (01 Mar 2014)
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-gtklibs-20131008-r3.ebuild, +files/remove-native-20131008-r3:
+  Add gdk-pixbuf.
 
 *emul-linux-x86-gtklibs-20131008-r2 (28 Feb 2014)
 

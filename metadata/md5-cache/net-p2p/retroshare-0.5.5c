@@ -10,5 +10,5 @@ RDEPEND=app-arch/bzip2 dev-libs/openssl:0 gnome-base/libgnome-keyring net-libs/l
 REQUIRED_USE=|| ( cli qt4 ) feedreader? ( qt4 ) links-cloud? ( qt4 ) voip? ( qt4 )
 SLOT=0
 SRC_URI=mirror://sourceforge/retroshare/retroshare_0.5.5-0.7068.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=7a4ab99182e43bb29421c8c4fc4e7d31

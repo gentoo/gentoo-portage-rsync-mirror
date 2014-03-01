@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=x11-libs/gtk+-2.4:2 net-misc/curl app-text/scrollkeeper xiph? ( dev-libs/libxml2:2 ) >=media-libs/taglib-1.2 python? ( dev-python/pygtk:2 ) x11-misc/xdg-utils
 SLOT=0
 SRC_URI=http://savannah.nongnu.org/download/streamtuner/streamtuner-0.99.99.tar.gz http://savannah.nongnu.org/download/streamtuner/streamtuner-0.99.99-pygtk-2.6.diff
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=e0b1cd0416de0141fcc9e77c80cd290d

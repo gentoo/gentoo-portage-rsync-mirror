@@ -8,5 +8,5 @@ LICENSE=CC-BY-SA-3.0
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://gentoo/echo-icon-theme-0.3.89.0_pre20081031.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=49b03c352464ea861ba858e84f51a7b5

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.34:2 gnome-base/librsvg:2 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 media-plugins/gst-plugins-meta:1.0 dev-db/sqlite:3 >=media-libs/libtaginfo-0.2.0 x11-libs/cairo x11-libs/libX11 ayatana? ( dev-libs/libappindicator:3 ) lastfm? ( net-libs/libsoup:2.4 ) lyrics? ( net-libs/libsoup:2.4 dev-libs/libxml2:2 )
 SLOT=0
 SRC_URI=mirror://bitbucket/shuerhaaken/xnoise/downloads/xnoise-0.2.20.tar.gz
-_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ca02b108b78d430308bc9b1718b6dc3f

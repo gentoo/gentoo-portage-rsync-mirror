@@ -9,5 +9,5 @@ LICENSE=GPL-2+ CC-BY-SA-3.0
 RDEPEND=>=app-arch/libarchive-3:= >=dev-libs/glib-2.29.14:2 >=dev-libs/json-glib-0.14 >=x11-libs/gtk+-3.6:3 >=x11-libs/libnotify-0.4.3:= sys-apps/file x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/libICE x11-libs/libSM x11-libs/pango nautilus? ( >=gnome-base/nautilus-3 ) packagekit? ( app-admin/packagekit-base )
 SLOT=0
 SRC_URI=mirror://gnome/sources/file-roller/3.8/file-roller-3.8.4.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=71ae83feefb0a98b528070f5c805daa1

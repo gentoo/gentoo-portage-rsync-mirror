@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite] ) dev
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/Bitmessage/PyBitmessage/archive/v0.4.0.tar.gz -> pybitmessage-0.4.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=7cf65af50136b93e7440e91f22ebd229

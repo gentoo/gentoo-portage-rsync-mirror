@@ -9,5 +9,5 @@ LICENSE=Ximian-logos GPL-2
 RDEPEND=>=gnome-base/libbonobo-2 >=dev-libs/glib-2.16:2 >=dev-libs/libxml2-2.4.6 >=x11-libs/gtk+-2.14:2 >=net-libs/libsoup-2.4:2.4 >=gnome-base/libgtop-2.13.3:2 >=gnome-base/gconf-2:2 || ( dev-libs/elfutils dev-libs/libelf ) >=sys-devel/gdb-5.1 eds? ( <gnome-extra/evolution-data-server-3.6 )
 SLOT=2
 SRC_URI=mirror://gnome/sources/bug-buddy/2.32/bug-buddy-2.32.0.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=284211a153e7c72e7bc0b7fe8ca4cd16

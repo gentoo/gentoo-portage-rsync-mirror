@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/glib-2.28:2 >=media-libs/gstreamer-1.2:1.0 >=media-libs/gst-plugins-base-1.2:1.0 >=media-libs/gst-plugins-bad-1.2:1.0 x11-libs/libdrm x11-libs/libX11 x11-libs/libXrandr >=x11-libs/libva-1.1.0[X?,opengl?,wayland?] virtual/opengl virtual/udev wayland? ( >=dev-libs/wayland-1 ) >=dev-util/gtk-doc-am-1.12 virtual/pkgconfig
+DESCRIPTION=Hardware accelerated video decoding through VA-API plugin
+EAPI=5
+HOMEPAGE=http://gitorious.org/vaapi/gstreamer-vaapi
+IUSE=+X opengl wayland
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1
+RDEPEND=>=dev-libs/glib-2.28:2 >=media-libs/gstreamer-1.2:1.0 >=media-libs/gst-plugins-base-1.2:1.0 >=media-libs/gst-plugins-bad-1.2:1.0 x11-libs/libdrm x11-libs/libX11 x11-libs/libXrandr >=x11-libs/libva-1.1.0[X?,opengl?,wayland?] virtual/opengl virtual/udev wayland? ( >=dev-libs/wayland-1 )
+SLOT=1.0
+SRC_URI=http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/gstreamer-vaapi-0.5.8.tar.bz2
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=b44d0438adafeb420f2f2baa96357bf0
