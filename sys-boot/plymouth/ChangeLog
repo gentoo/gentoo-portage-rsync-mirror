@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.50 2014/02/02 15:56:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.51 2014/03/01 19:21:50 maksbotan Exp $
+
+*plymouth-0.8.8-r5 (01 Mar 2014)
+
+  01 Mar 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/0.8.8-initrd-binaries-paths.patch, +plymouth-0.8.8-r5.ebuild:
+  Add patch from upstream git to fix installation paths in populate-initrd, bug
+  #499388. Thanks to Enrico Tagliavini.
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> plymouth-0.8.8-r4.ebuild:
   Stable for sparc, wrt bug #487674
