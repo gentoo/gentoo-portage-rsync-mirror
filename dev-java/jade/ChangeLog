@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jade
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.22 2007/10/24 23:52:25 betelgeuse Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.23 2014/03/01 17:12:45 ercpe Exp $
+
+*jade-3.3-r2 (01 Mar 2014)
+
+  01 Mar 2014; Johann Schmitz <ercpe@gentoo.org> +jade-3.3-r2.ebuild:
+  Fixed installation of doc (bug #449854)
 
   24 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> -jade-3.2.ebuild,
   -jade-3.3.ebuild:
@@ -74,4 +79,3 @@
   17 Feb 2004; Chris Aniszczyk <zx@gentoo.org> :
   Initial Import.
   Thanks to Owen Cliffe <zoot@zoot.org.uk> for the initial ebuild. Bug #41494
-
