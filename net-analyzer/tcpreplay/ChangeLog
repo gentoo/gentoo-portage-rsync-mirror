@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.51 2014/02/01 14:19:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.52 2014/03/01 15:37:20 jer Exp $
+
+*tcpreplay-4.0.3 (01 Mar 2014)
+
+  01 Mar 2014; Jeroen Roovers <jer@gentoo.org> -tcpreplay-4.0.2.ebuild,
+  +tcpreplay-4.0.3.ebuild:
+  Version bump, fixes compile failure (bug #503048).
 
   01 Feb 2014; Jeroen Roovers <jer@gentoo.org> tcpreplay-4.0.2.ebuild:
   Add new HOMEPAGE.
