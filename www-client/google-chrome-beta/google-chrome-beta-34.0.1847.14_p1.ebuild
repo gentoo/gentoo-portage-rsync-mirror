@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/google-chrome-beta-34.0.1847.14_p1.ebuild,v 1.1 2014/02/28 01:18:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/google-chrome-beta-34.0.1847.14_p1.ebuild,v 1.2 2014/03/01 18:16:19 floppym Exp $
 
 EAPI="5"
 
@@ -21,17 +21,12 @@ fi
 
 MY_P="${MY_PN}_${PV/_p/-}"
 
-# Bundle a copy of libgcrypt, bug 494596
-LIBGCRYPT="libgcrypt.so.11.8.2"
-
 SRC_URI="
 	amd64? (
 		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
-		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
 	)
 	x86? (
 		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
-		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
 	)
 "
 
@@ -47,7 +42,7 @@ RDEPEND="
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/glib:2
-	dev-libs/libgcrypt
+	|| ( dev-libs/libgcrypt:11 dev-libs/libgcrypt:0/11 )
 	dev-libs/nspr
 	dev-libs/nss
 	gnome-base/gconf:2
@@ -157,9 +152,6 @@ src_install() {
 	fperms 4755 "/${CHROME_HOME}/chrome-sandbox"
 	pax-mark m "${ED}${CHROME_HOME}/chrome"
 	dosym /usr/$(get_libdir)/libudev.so "${CHROME_HOME}/libudev.so.0"
-
-	insinto "${CHROME_HOME}"
-	newins "${WORKDIR}/${LIBGCRYPT}-$(usev amd64)$(usev x86)" libgcrypt.so.11
 
 	readme.gentoo_create_doc
 }

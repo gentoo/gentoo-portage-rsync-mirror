@@ -1,6 +1,10 @@
 # ChangeLog for www-client/google-chrome-beta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/ChangeLog,v 1.9 2014/02/28 01:18:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/ChangeLog,v 1.10 2014/03/01 18:16:19 floppym Exp $
+
+  01 Mar 2014; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-beta-34.0.1847.14_p1.ebuild:
+  Stop bundling libgcrypt now that a compatibility slot exists.
 
 *google-chrome-beta-34.0.1847.14_p1 (28 Feb 2014)
 
