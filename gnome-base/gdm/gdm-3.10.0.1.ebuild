@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1.ebuild,v 1.2 2014/02/01 09:12:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1.ebuild,v 1.3 2014/02/28 23:05:46 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -83,9 +83,6 @@ RDEPEND="${COMMON_DEPEND}
 	fprint? (
 		sys-auth/fprintd
 		sys-auth/pam_fprint )
-	smartcard? (
-		app-crypt/coolkey
-		sys-auth/pam_pkcs11 )
 
 	!gnome-extra/fast-user-switch-applet
 "
@@ -106,7 +103,10 @@ DOC_CONTENTS="
 	\n
 	For passwordless login to unlock your keyring, you need to install
 	sys-auth/pambase with USE=gnome-keyring and set an empty password
-	on your keyring. Use app-crypt/seahorse for that.
+	on your keyring. Use app-crypt/seahorse for that.\n
+	\n
+	You may need to install app-crypt/coolkey and sys-auth/pam_pkcs11
+	for smartcard support
 "
 
 pkg_setup() {

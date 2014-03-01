@@ -1,0 +1,13 @@
+# ChangeLog for dev-libs/libmateweather
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/ChangeLog,v 1.1 2014/02/28 23:09:59 tomwij Exp $
+
+*libmateweather-1.6.2 (28 Feb 2014)
+
+  28 Feb 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/libmateweather-1.5.0-fix-automagic-python-support.patch,
+  +files/libmateweather-1.6.1-fix-mkdirp.patch, +libmateweather-1.6.2.ebuild,
+  +metadata.xml:
+  New ebuild for dev-libs/libmateweather, MATE library to access weather
+  information from online services; imported from the mate-overlay, reviewed and
+  adjusted.

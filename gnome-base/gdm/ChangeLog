@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.392 2014/02/22 21:37:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.393 2014/02/28 23:05:46 pacho Exp $
+
+  28 Feb 2014; Pacho Ramos <pacho@gentoo.org> gdm-3.10.0.1.ebuild:
+  Not RDEPEND on coolkey and pam_pkcs11 as discussed on IRC and bugs #502204
+  #502200
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gdm-3.10.0.1.ebuild:
   Fix wrong commit, bug 502160
