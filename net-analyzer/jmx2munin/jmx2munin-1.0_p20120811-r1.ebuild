@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jmx2munin/jmx2munin-1.0_p20120811.ebuild,v 1.1 2012/08/10 23:33:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jmx2munin/jmx2munin-1.0_p20120811-r1.ebuild,v 1.1 2014/03/01 16:57:00 ercpe Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils java-pkg-2 java-pkg-simple
+JAVA_PKG_IUSE="doc source"
+
+inherit java-pkg-2 java-pkg-simple
 
 MY_P="${PN}-gentoo-${PV}"
 
@@ -36,8 +38,12 @@ src_unpack() {
 	mv gentoo-${PN}-* ${MY_P}
 }
 
+java_prepare() {
+	rm pom.xml || die
+}
+
 src_install() {
-	java-pkg_dojar ${PN}.jar
+	java-pkg-simple_src_install
 	java-pkg_dolauncher ${PN} --main org.vafer.jmx.munin.Munin
 
 	exeinto /usr/libexec/munin/plugins

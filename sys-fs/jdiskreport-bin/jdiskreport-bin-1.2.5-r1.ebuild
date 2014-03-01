@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/jdiskreport-bin-1.2.5-r1.ebuild,v 1.2 2012/12/08 09:09:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/jdiskreport-bin-1.2.5-r1.ebuild,v 1.3 2014/03/01 16:31:37 ercpe Exp $
+
+EAPI=5
 
 inherit java-pkg-2
 
@@ -9,7 +11,7 @@ MY_PV=${PV//\./_}
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="JDiskReport helps you to understand disk drive usage"
-HOMEPAGE="http://www.jgoodies.com/freeware/jdiskreport/index.html"
+HOMEPAGE="http://www.jgoodies.com/freeware/jdiskreport/"
 SRC_URI="http://www.jgoodies.com/download/${MY_PN}/${MY_P}.zip"
 
 LICENSE="freedist"

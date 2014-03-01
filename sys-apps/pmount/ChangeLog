@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.100 2014/02/21 08:54:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.101 2014/03/01 16:34:55 jer Exp $
+
+  01 Mar 2014; Jeroen Roovers <jer@gentoo.org> pmount-0.9.99_alpha-r3.ebuild:
+  Stable for HPPA (bug #501956).
 
   21 Feb 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Add myself as a maintainer.

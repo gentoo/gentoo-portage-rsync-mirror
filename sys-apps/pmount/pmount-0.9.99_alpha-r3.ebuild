@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.99_alpha-r3.ebuild,v 1.1 2014/02/21 06:06:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.99_alpha-r3.ebuild,v 1.2 2014/03/01 16:34:55 jer Exp $
 
 EAPI=5
 inherit eutils user
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV/_/-}.orig.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="crypt"
 
 RDEPEND=">=sys-apps/util-linux-2.17.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/jdiskreport-bin-1.3.0.ebuild,v 1.3 2014/03/01 16:31:37 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jdiskreport-bin/jdiskreport-bin-1.4.1.ebuild,v 1.1 2014/03/01 16:31:37 ercpe Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.6"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
