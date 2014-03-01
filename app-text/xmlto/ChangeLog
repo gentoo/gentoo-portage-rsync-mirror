@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.81 2014/02/07 07:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.82 2014/03/01 16:28:49 jer Exp $
+
+  01 Mar 2014; Jeroen Roovers <jer@gentoo.org> xmlto-0.0.25.ebuild:
+  Stable for HPPA (bug #502630).
 
   07 Feb 2014; Mike Frysinger <vapier@gentoo.org> xmlto-0.0.25.ebuild:
   Force configure to always detect bash as /bin/bash.  Drop unused flex dep and

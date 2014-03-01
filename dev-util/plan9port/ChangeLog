@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/plan9port
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.33 2014/02/25 14:41:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.34 2014/03/01 16:24:54 blueness Exp $
+
+*plan9port-20140228 (01 Mar 2014)
+
+  01 Mar 2014; Anthony G. Basile <blueness@gentoo.org>
+  +plan9port-20140228.ebuild, -plan9port-20140107.ebuild,
+  -plan9port-20140123.ebuild:
+  Version bump, remove older
 
 *plan9port-20140224 (25 Feb 2014)
 

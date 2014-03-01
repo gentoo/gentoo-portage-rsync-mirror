@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/luajit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.16 2013/10/21 01:08:41 rafaelmartins Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.17 2014/03/01 16:22:32 maekke Exp $
+
+  01 Mar 2014; Markus Meier <maekke@gentoo.org> luajit-2.0.2.ebuild:
+  add ~arm for dev-libs/efl as requested by tommy
 
 *luajit-2.0.2 (21 Oct 2013)
 
