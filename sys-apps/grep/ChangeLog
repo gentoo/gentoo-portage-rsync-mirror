@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.134 2014/02/25 09:07:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.135 2014/03/01 15:21:50 jer Exp $
+
+  01 Mar 2014; Jeroen Roovers <jer@gentoo.org> grep-2.16.ebuild:
+  Stable for HPPA (bug #502392).
 
 *grep-2.18 (25 Feb 2014)
 

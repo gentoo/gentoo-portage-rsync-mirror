@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1_rc3.ebuild,v 1.3 2014/02/24 11:16:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1_rc4-r1.ebuild,v 1.1 2014/03/01 15:17:35 gienah Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.octave.org/"
 SRC_URI="mirror://gnu-alpha/octave/${MY_P}.tar.gz"
 
 SLOT="0/${PV}"
-IUSE="curl doc fftw +glpk gnuplot hdf5 +imagemagick java jit opengl postscript
+IUSE="curl doc fftw +glpk gnuplot gui hdf5 +imagemagick java jit opengl postscript
 	+qhull +qrupdate readline +sparse static-libs X zlib"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
@@ -32,6 +32,7 @@ RDEPEND="
 	fftw? ( sci-libs/fftw:3.0 )
 	glpk? ( sci-mathematics/glpk )
 	gnuplot? ( sci-visualization/gnuplot )
+	gui? ( !hppa? ( !arm? ( x11-libs/qscintilla ) ) )
 	hdf5? ( sci-libs/hdf5 )
 	imagemagick? ( || (
 			media-gfx/graphicsmagick[cxx]
@@ -84,7 +85,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_pretend() {
 	if use qrupdate || use sparse; then
-		local blaslib=$(pkg-config --libs-only-l blas | sed -e 's@-l\([^ \t]*\)@lib\1@' | cut -d' ' -f 1)
+		local blaslib=$($(tc-getPKG_CONFIG) --libs-only-l blas | sed -e 's@-l\([^ \t]*\)@lib\1@' | cut -d' ' -f 1)
 		einfo "Checking dependencies are built with the same blas lib = ${blaslib}"
 		local usr_lib="${ROOT}usr/$(get_libdir)"
 		local libs=( )
@@ -161,7 +162,7 @@ src_configure() {
 		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"
 		$(use_enable doc docs)
 		$(use_enable java)
-		$(use_enable opengl gui)
+		$(use_enable gui gui)
 		$(use_enable jit)
 		$(use_enable readline)
 		$(use_with curl)
