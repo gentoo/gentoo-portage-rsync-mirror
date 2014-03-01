@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1030 2014/02/28 05:47:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1031 2014/03/01 20:19:07 floppym Exp $
+
+*chromium-34.0.1847.14-r1 (01 Mar 2014)
+
+  01 Mar 2014; Mike Gilbert <floppym@gentoo.org>
+  +chromium-34.0.1847.14-r1.ebuild, -chromium-34.0.1847.14.ebuild:
+  Switch to bundled protobuf, bug 503084.
 
 *chromium-35.0.1862.2 (26 Feb 2014)
 
