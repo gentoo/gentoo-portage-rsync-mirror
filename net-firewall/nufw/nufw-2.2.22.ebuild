@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.22.ebuild,v 1.3 2013/02/08 20:23:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.22.ebuild,v 1.4 2014/03/01 22:49:17 mgorny Exp $
 
+EAPI=1
 SSL_CERT_MANDATORY=1
 
 inherit ssl-cert eutils pam
@@ -17,7 +18,7 @@ IUSE="debug ldap mysql pam pam_nuauth plaintext postgres prelude \
 unicode nfqueue nfconntrack static syslog test"
 
 DEPEND=">=dev-libs/glib-2
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	>=dev-libs/cyrus-sasl-2
 	net-firewall/iptables
 	>=net-libs/gnutls-1.1

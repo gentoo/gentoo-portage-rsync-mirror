@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.8.ebuild,v 1.2 2013/09/28 09:13:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.8.ebuild,v 1.3 2014/03/01 22:34:46 mgorny Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/eina-${PV}
 	sys-libs/zlib
 	gnutls? (
 		net-libs/gnutls
-		dev-libs/libgcrypt
+		dev-libs/libgcrypt:0
 	)
 	!gnutls? ( ssl? ( dev-libs/openssl ) )"
 DEPEND="${RDEPEND}

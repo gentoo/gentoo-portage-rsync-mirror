@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-1.0.0.ebuild,v 1.5 2012/05/03 18:49:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-1.0.0.ebuild,v 1.6 2014/03/01 22:52:31 mgorny Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ IUSE="audiofile bzip2 gcrypt zlib"
 RDEPEND="zlib? ( sys-libs/zlib )
 	bzip2? ( >=app-arch/bzip2-1.0 )
 	>=dev-libs/glib-2
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	audiofile? ( >=media-libs/audiofile-0.2.3 )"
 DEPEND="${RDEPEND}
 	dev-lang/perl

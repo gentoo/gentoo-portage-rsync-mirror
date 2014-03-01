@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.74 2014/01/22 03:47:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.75 2014/03/01 22:38:07 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> libvncserver-0.9.8.2-r2.ebuild,
+  libvncserver-0.9.9-r1.ebuild, libvncserver-0.9.9.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   22 Jan 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Remove myself.

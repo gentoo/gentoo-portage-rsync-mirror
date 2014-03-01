@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-101.ebuild,v 1.2 2013/02/26 22:09:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-101.ebuild,v 1.3 2014/03/01 22:40:21 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc gpg gtk openssl pam pkcs11 python suid tpm"
 
 RDEPEND=">=sys-apps/keyutils-1.0
-	>=dev-libs/libgcrypt-1.2.0
+	>=dev-libs/libgcrypt-1.2.0:0
 	dev-libs/nss
 	gpg? ( app-crypt/gpgme )
 	gtk? ( x11-libs/gtk+:2 )

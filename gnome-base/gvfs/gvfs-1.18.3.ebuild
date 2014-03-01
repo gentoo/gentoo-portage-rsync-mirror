@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.18.3.ebuild,v 1.2 2014/01/22 21:59:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.18.3.ebuild,v 1.3 2014/03/01 22:33:49 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND="
 	sys-apps/dbus
 	dev-libs/libxml2:2
 	net-misc/openssh
-	afp? ( >=dev-libs/libgcrypt-1.2.2:= )
+	afp? ( >=dev-libs/libgcrypt-1.2.2:0= )
 	archive? ( app-arch/libarchive:= )
 	avahi? ( >=net-dns/avahi-0.6 )
 	bluetooth? (
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 		|| (
 			net-analyzer/netcat
 			net-analyzer/netcat6 ) )
-	!udev? ( >=dev-libs/libgcrypt-1.2.2 )
+	!udev? ( >=dev-libs/libgcrypt-1.2.2:0 )
 "
 # libgcrypt.m4, provided by libgcrypt, needed for eautoreconf, bug #399043
 # test dependencies needed per https://bugzilla.gnome.org/700162

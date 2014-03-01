@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.15.ebuild,v 1.1 2014/02/19 07:15:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.15.ebuild,v 1.2 2014/03/01 22:33:48 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -53,7 +53,7 @@ CDEPEND="${PYTHON_DEPS}
 	cups? ( net-print/cups )
 	dmapi? ( sys-apps/dmapi )
 	fam? ( virtual/fam )
-	gnutls? ( dev-libs/libgcrypt
+	gnutls? ( dev-libs/libgcrypt:0
 		>=net-libs/gnutls-1.4.0 )
 	ldap? ( net-nds/openldap )
 	selinux? ( sec-policy/selinux-samba )"

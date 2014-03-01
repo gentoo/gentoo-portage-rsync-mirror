@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.8 2013/09/28 08:40:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.9 2014/03/01 22:39:54 billie Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="mplayer"
 # DEPEND="media-libs/libdvdread"
 
 DEPEND=">=media-libs/libmpeg2-0.5.1
-	virtual/ffmpeg
+	media-video/ffmpeg
 	dev-qt/qtgui:4
 	dev-qt/qtdbus:4
 	|| ( dev-qt/qtphonon:4 media-libs/phonon )"

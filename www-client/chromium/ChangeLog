@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1032 2014/03/01 20:55:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1033 2014/03/01 22:44:27 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> chromium-33.0.1750.117.ebuild,
+  chromium-34.0.1847.14-r1.ebuild, chromium-34.0.1847.3.ebuild,
+  chromium-35.0.1862.2.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   01 Mar 2014; Mike Gilbert <floppym@gentoo.org> files/chromium-launcher-r3.sh:
   Add some logic to the launcher to enable execution as root without creating

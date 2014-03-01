@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.51 2014/02/22 16:01:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.52 2014/03/01 22:33:47 mgorny Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ RDEPEND="
 	selinux? ( sec-policy/selinux-cups )
 	ssl? (
 		gnutls? (
-			dev-libs/libgcrypt
+			dev-libs/libgcrypt:0
 			net-libs/gnutls
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )

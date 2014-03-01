@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.744 2014/02/17 18:20:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.745 2014/03/01 22:49:32 floppym Exp $
+
+  01 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-3.4.0_rc1.ebuild:
+  Disable ensurepip.
 
 *python-3.4.0_rc1 (17 Feb 2014)
 

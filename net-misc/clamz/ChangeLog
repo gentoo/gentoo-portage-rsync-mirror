@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/clamz
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/ChangeLog,v 1.6 2013/06/01 11:18:54 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/ChangeLog,v 1.7 2014/03/01 22:39:08 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> clamz-0.4.ebuild,
+  clamz-0.5.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #144305

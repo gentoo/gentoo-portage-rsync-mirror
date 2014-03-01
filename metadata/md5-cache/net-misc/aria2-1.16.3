@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=sys-libs/zlib ssl? ( app-misc/ca-certificates gnutls? ( >=net-libs/gnutls-1.2.9 ) !gnutls? ( dev-libs/openssl ) ) adns? ( >=net-dns/c-ares-1.5.0 ) bittorrent? ( ssl? ( gnutls? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2 ) ) ) !ssl? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2 ) ) ) metalink? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) sqlite? ( dev-db/sqlite:3 ) xmlrpc? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) virtual/pkgconfig nls? ( sys-devel/gettext ) test? ( >=dev-util/cppunit-1.12.0 )
+DEPEND=sys-libs/zlib ssl? ( app-misc/ca-certificates gnutls? ( >=net-libs/gnutls-1.2.9 ) !gnutls? ( dev-libs/openssl ) ) adns? ( >=net-dns/c-ares-1.5.0 ) bittorrent? ( ssl? ( gnutls? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2:0 ) ) ) !ssl? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2:0 ) ) ) metalink? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) sqlite? ( dev-db/sqlite:3 ) xmlrpc? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) virtual/pkgconfig nls? ( sys-devel/gettext ) test? ( >=dev-util/cppunit-1.12.0 )
 DESCRIPTION=A download utility with segmented downloading with BitTorrent support
 EAPI=5
 HOMEPAGE=http://aria2.sourceforge.net/
 IUSE=adns bittorrent +gnutls +libxml2 metalink +nettle nls sqlite scripts ssl test xmlrpc
 KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2
-RDEPEND=sys-libs/zlib ssl? ( app-misc/ca-certificates gnutls? ( >=net-libs/gnutls-1.2.9 ) !gnutls? ( dev-libs/openssl ) ) adns? ( >=net-dns/c-ares-1.5.0 ) bittorrent? ( ssl? ( gnutls? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2 ) ) ) !ssl? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2 ) ) ) metalink? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) sqlite? ( dev-db/sqlite:3 ) xmlrpc? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) nls? ( virtual/libiconv virtual/libintl ) scripts? ( dev-lang/ruby )
+RDEPEND=sys-libs/zlib ssl? ( app-misc/ca-certificates gnutls? ( >=net-libs/gnutls-1.2.9 ) !gnutls? ( dev-libs/openssl ) ) adns? ( >=net-dns/c-ares-1.5.0 ) bittorrent? ( ssl? ( gnutls? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2:0 ) ) ) !ssl? ( nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 ) !nettle? ( >=dev-libs/libgcrypt-1.2.2:0 ) ) ) metalink? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) sqlite? ( dev-db/sqlite:3 ) xmlrpc? ( libxml2? ( >=dev-libs/libxml2-2.6.26 ) !libxml2? ( dev-libs/expat ) ) nls? ( virtual/libiconv virtual/libintl ) scripts? ( dev-lang/ruby )
 SLOT=0
 SRC_URI=mirror://sourceforge/aria2/aria2-1.16.3.tar.bz2
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=73b0330c9fb2eddac1ee33762f7f1387
+_md5_=9eab8351284595b90e0941613746d6ac

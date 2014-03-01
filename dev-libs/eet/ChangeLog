@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/eet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.31 2013/11/12 18:05:45 tommy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.32 2014/03/01 22:34:46 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> eet-1.7.8.ebuild,
+  eet-1.7.9.ebuild, eet-9999.ebuild:
+  Update libgcrypt dep to use slot :0.
 
 *eet-1.7.9 (12 Nov 2013)
 

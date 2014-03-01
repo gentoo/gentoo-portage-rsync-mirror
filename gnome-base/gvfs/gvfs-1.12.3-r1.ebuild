@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.13 2013/04/09 16:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.14 2014/03/01 22:33:49 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.31.0:2
 	sys-apps/dbus:=
 	dev-libs/libxml2:=
 	net-misc/openssh
-	afp? ( >=dev-libs/libgcrypt-1.2.2:= )
+	afp? ( >=dev-libs/libgcrypt-1.2.2:0= )
 	archive? ( app-arch/libarchive:= )
 	avahi? ( >=net-dns/avahi-0.6 )
 	bluetooth? (

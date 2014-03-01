@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.3-r3.ebuild,v 1.8 2012/11/29 00:15:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.3-r3.ebuild,v 1.9 2014/03/01 22:49:18 mgorny Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="dynamic nls selinux"
 S=${WORKDIR}/${MY_P}
 
 RDEPEND=">=sys-fs/lvm2-2.02.64
-	>=dev-libs/libgcrypt-1.1.42
+	>=dev-libs/libgcrypt-1.1.42:0
 	>=dev-libs/libgpg-error-1.0-r1
 	>=dev-libs/popt-1.7
 	virtual/udev
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	!dynamic? (
 		|| ( >=dev-libs/libgpg-error-1.10[static-libs] <dev-libs/libgpg-error-1.10 )
 		|| ( >=dev-libs/popt-1.16-r1[static-libs] <dev-libs/popt-1.16-r1 )
-		dev-libs/libgcrypt[static-libs]
+		dev-libs/libgcrypt:0[static-libs]
 		|| ( >=sys-apps/util-linux-2.20[static-libs] <sys-apps/util-linux-2.20 )
 	)"
 

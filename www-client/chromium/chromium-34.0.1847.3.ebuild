@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.3.ebuild,v 1.2 2014/02/28 05:47:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.3.ebuild,v 1.3 2014/03/01 22:44:27 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -33,7 +33,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
 	cups? (
-		dev-libs/libgcrypt:=
+		dev-libs/libgcrypt:0=
 		>=net-print/cups-1.3.11:=
 	)
 	>=dev-libs/elfutils-0.149

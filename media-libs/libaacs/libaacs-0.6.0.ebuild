@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/libaacs-0.6.0.ebuild,v 1.1 2013/04/08 05:18:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/libaacs-0.6.0.ebuild,v 1.2 2014/03/01 22:36:39 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd"
 IUSE="static-libs"
 
-RDEPEND="dev-libs/libgcrypt
+RDEPEND="dev-libs/libgcrypt:0
 	dev-libs/libgpg-error"
 DEPEND="${RDEPEND}"
 

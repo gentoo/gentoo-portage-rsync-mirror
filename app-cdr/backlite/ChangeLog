@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/backlite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.40 2013/09/28 08:40:37 billie Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.41 2014/03/01 22:39:54 billie Exp $
+
+  01 Mar 2014; Daniel Pielmeier <billie@gentoo.org> backlite-1.0.3-r1.ebuild:
+  Depend on media-video/ffmpeg instead of virtual/ffmpeg. See bug #443192.
 
   28 Sep 2013; Daniel Pielmeier <billie@gentoo.org> backlite-1.0.3-r1.ebuild:
   Depend on dev-qt/qtdbus. This fixes bug #484162. Thanks to Nikoli for the

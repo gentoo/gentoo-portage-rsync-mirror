@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.23 2014/02/13 08:31:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.24 2014/03/01 22:36:39 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> libaacs-0.5.0.ebuild,
+  libaacs-0.6.0.ebuild, libaacs-0.7.0.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   13 Feb 2014; Tim Harder <radhermit@gentoo.org> libaacs-0.7.0.ebuild:
   Add yacc and flex build deps (bug #497658).

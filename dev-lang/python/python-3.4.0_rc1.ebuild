@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.4.0_rc1.ebuild,v 1.1 2014/02/17 18:19:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.4.0_rc1.ebuild,v 1.2 2014/03/01 22:49:32 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -166,7 +166,8 @@ src_configure() {
 		--with-libc="" \
 		--enable-loadable-sqlite-extensions \
 		--with-system-expat \
-		--with-system-ffi
+		--with-system-ffi \
+		--without-ensurepip
 
 	if use threads && grep -q "#define POSIX_SEMAPHORES_NOT_ENABLED 1" pyconfig.h; then
 		eerror "configure has detected that the sem_open function is broken."

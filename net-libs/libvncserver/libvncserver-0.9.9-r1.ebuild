@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9-r1.ebuild,v 1.4 2013/02/27 04:24:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9-r1.ebuild,v 1.5 2014/03/01 22:38:07 mgorny Exp $
 
 EAPI="4"
 
@@ -19,10 +19,10 @@ IUSE="+24bpp gcrypt gnutls ipv6 +jpeg +png ssl static-libs test threads +zlib"
 REQUIRED_USE="png? ( zlib )"
 
 DEPEND="
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	gnutls? (
 		net-libs/gnutls
-		dev-libs/libgcrypt
+		dev-libs/libgcrypt:0
 	)
 	!gnutls? (
 		ssl? ( dev-libs/openssl )

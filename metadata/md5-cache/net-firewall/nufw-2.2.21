@@ -1,12 +1,13 @@
 DEFINED_PHASES=compile install postinst test unpack
-DEPEND=>=dev-libs/glib-2 dev-libs/libgcrypt >=dev-libs/cyrus-sasl-2 net-firewall/iptables >=net-libs/gnutls-1.1 ldap? ( >=net-nds/openldap-2 ) mysql? ( virtual/mysql ) pam? ( sys-libs/pam ) pam_nuauth? ( sys-libs/pam ) postgres? ( dev-db/postgresql-server ) nfqueue? ( net-libs/libnfnetlink net-libs/libnetfilter_queue ) nfconntrack? ( net-libs/libnetfilter_conntrack ) prelude? ( dev-libs/libprelude ) dev-python/ipy !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool ssl? ( dev-libs/openssl )
+DEPEND=>=dev-libs/glib-2 dev-libs/libgcrypt:0 >=dev-libs/cyrus-sasl-2 net-firewall/iptables >=net-libs/gnutls-1.1 ldap? ( >=net-nds/openldap-2 ) mysql? ( virtual/mysql ) pam? ( sys-libs/pam ) pam_nuauth? ( sys-libs/pam ) postgres? ( dev-db/postgresql-server ) nfqueue? ( net-libs/libnfnetlink net-libs/libnetfilter_queue ) nfconntrack? ( net-libs/libnetfilter_conntrack ) prelude? ( dev-libs/libprelude ) dev-python/ipy !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool ssl? ( dev-libs/openssl )
 DESCRIPTION=An enterprise grade authenticating firewall based on netfilter
+EAPI=1
 HOMEPAGE=http://www.nufw.org/
 IUSE=debug ldap mysql pam pam_nuauth plaintext postgres prelude unicode nfqueue nfconntrack static syslog test ssl
 KEYWORDS=x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2 dev-libs/libgcrypt >=dev-libs/cyrus-sasl-2 net-firewall/iptables >=net-libs/gnutls-1.1 ldap? ( >=net-nds/openldap-2 ) mysql? ( virtual/mysql ) pam? ( sys-libs/pam ) pam_nuauth? ( sys-libs/pam ) postgres? ( dev-db/postgresql-server ) nfqueue? ( net-libs/libnfnetlink net-libs/libnetfilter_queue ) nfconntrack? ( net-libs/libnetfilter_conntrack ) prelude? ( dev-libs/libprelude ) dev-python/ipy
+RDEPEND=>=dev-libs/glib-2 dev-libs/libgcrypt:0 >=dev-libs/cyrus-sasl-2 net-firewall/iptables >=net-libs/gnutls-1.1 ldap? ( >=net-nds/openldap-2 ) mysql? ( virtual/mysql ) pam? ( sys-libs/pam ) pam_nuauth? ( sys-libs/pam ) postgres? ( dev-db/postgresql-server ) nfqueue? ( net-libs/libnfnetlink net-libs/libnetfilter_queue ) nfconntrack? ( net-libs/libnetfilter_conntrack ) prelude? ( dev-libs/libprelude ) dev-python/ipy
 SLOT=0
 SRC_URI=http://www.nufw.org/download/nufw/nufw-2.2.21.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=e63a65ab4e1f1f5b2f4dfe0642a3895f
+_md5_=0218bfd0dc8474345bd31440374600a9

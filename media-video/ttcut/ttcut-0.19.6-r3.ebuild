@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r3.ebuild,v 1.7 2013/03/04 19:25:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r3.ebuild,v 1.8 2014/03/01 22:43:38 billie Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/libmpeg2-0.4.0
 	virtual/opengl"
 RDEPEND="${DEPEND}
 	media-video/mplayer
-	>=virtual/ffmpeg-0.6.90[encode]"
+	>=media-video/ffmpeg-1.0.8[encode]"
 
 S=${WORKDIR}/${PN}
 

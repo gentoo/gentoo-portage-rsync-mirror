@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3.ebuild,v 1.11 2013/08/06 13:11:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3.ebuild,v 1.12 2014/03/01 22:37:05 mgorny Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fb
 IUSE="gcrypt static-libs test zlib"
 
 DEPEND="!gcrypt? ( dev-libs/openssl )
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 

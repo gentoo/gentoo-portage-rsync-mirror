@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7.3.1.ebuild,v 1.1 2011/12/06 10:04:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7.3.1.ebuild,v 1.2 2014/03/01 22:38:56 mgorny Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ fi
 
 RDEPEND="virtual/pam
 	>=dev-db/postgresql-base-8.0
-	>=dev-libs/libgcrypt-1.2.0"
+	>=dev-libs/libgcrypt-1.2.0:0"
 DEPEND="${RDEPEND}"
 
 LICENSE="GPL-2"

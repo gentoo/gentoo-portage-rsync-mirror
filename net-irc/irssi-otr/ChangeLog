@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi-otr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.14 2013/10/13 08:05:42 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.15 2014/03/01 22:37:04 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> irssi-otr-0.2.ebuild,
+  irssi-otr-0.3-r1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> irssi-otr-0.3-r1.ebuild:
   Also compatible with python3_3

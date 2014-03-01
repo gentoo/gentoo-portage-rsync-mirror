@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.10-r1.ebuild,v 1.11 2014/01/19 13:46:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.10-r1.ebuild,v 1.12 2014/03/01 22:38:37 mgorny Exp $
 
 EAPI=4
 inherit user
@@ -16,7 +16,7 @@ IUSE="gcrypt"
 
 DEPEND="app-arch/bzip2
 	sys-libs/zlib
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	!gcrypt? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
 

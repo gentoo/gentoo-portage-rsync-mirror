@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.55 2014/01/25 08:34:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.56 2014/03/01 22:40:21 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> ecryptfs-utils-101.ebuild,
+  ecryptfs-utils-103.ebuild, ecryptfs-utils-104.ebuild:
+  Update libgcrypt dep to use slot :0.
 
 *ecryptfs-utils-104 (25 Jan 2014)
 

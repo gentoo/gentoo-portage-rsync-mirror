@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.1.ebuild,v 1.1 2014/02/11 10:23:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.1.ebuild,v 1.2 2014/03/01 22:34:59 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="debug doc examples gcrypt gssapi pcap +sftp ssh1 server static-libs test z
 RDEPEND="
 	zlib? ( >=sys-libs/zlib-1.2 )
 	!gcrypt? ( >=dev-libs/openssl-0.9.8 )
-	gcrypt? ( >=dev-libs/libgcrypt-1.5 )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5:0 )
 	gssapi? ( virtual/krb5 )
 "
 DEPEND="${RDEPEND}

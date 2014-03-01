@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.8 2013/06/01 14:42:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.9 2014/03/01 22:37:04 mgorny Exp $
 EAPI=2
 
 inherit cmake-utils eutils
@@ -21,7 +21,7 @@ IUSE="debug"
 
 RDEPEND="net-libs/libotr
 	dev-libs/glib
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libgpg-error
 	|| (
 		net-irc/irssi

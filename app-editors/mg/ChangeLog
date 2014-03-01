@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.67 2014/02/13 14:24:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.68 2014/03/01 22:53:40 ulm Exp $
+
+*mg-20140220 (01 Mar 2014)
+
+  01 Mar 2014; Ulrich Müller <ulm@gentoo.org> +mg-20140220.ebuild:
+  Version bump. The dev-libs/clens dependency is replaced by dev-libs/libbsd.
+  Dropped some keywords again.
 
   13 Feb 2014; Jeroen Roovers <jer@gentoo.org> mg-20131118.ebuild:
   Stable for HPPA (bug #501184).

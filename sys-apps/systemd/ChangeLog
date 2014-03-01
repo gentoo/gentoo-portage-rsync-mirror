@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.230 2014/02/26 03:36:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.231 2014/03/01 22:37:05 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> systemd-204-r1.ebuild,
+  systemd-208-r2.ebuild, systemd-208-r3.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   26 Feb 2014; Mike Gilbert <floppym@gentoo.org> systemd-210.ebuild,
   systemd-9999.ebuild:

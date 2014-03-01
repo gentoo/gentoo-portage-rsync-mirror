@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.91 2014/01/27 11:48:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.92 2014/03/01 22:35:51 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> inspircd-2.0.13.ebuild,
+  inspircd-2.0.14.ebuild, inspircd-2.0.15.ebuild:
+  Update libgcrypt dep to use slot :0.
 
 *inspircd-2.0.15 (27 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-1.0.0-r1.ebuild,v 1.1 2014/01/26 09:07:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-1.0.0-r1.ebuild,v 1.2 2014/03/01 22:37:55 mgorny Exp $
 
 EAPI=5
 inherit autotools elisp-common eutils pam
@@ -21,7 +21,7 @@ IUSE="consolekit crypt directfb emacs gpm opensslcrypt pam static X"
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7:=
 	opensslcrypt? ( dev-libs/openssl:0= )
-	crypt? ( >=dev-libs/libgcrypt-1.2.1:= )
+	crypt? ( >=dev-libs/libgcrypt-1.2.1:0= )
 	directfb? ( >=dev-libs/DirectFB-1.4.2[fbcon,jpeg,png,truetype] )
 	emacs? ( virtual/emacs )
 	pam? ( >=sys-libs/pam-0.75-r11 )

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/shishi-1.0.1-r1.ebuild,v 1.1 2012/10/09 08:50:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/shishi-1.0.1-r1.ebuild,v 1.2 2014/03/01 22:34:29 mgorny Exp $
 
 EAPI=4
 inherit multilib autotools eutils
@@ -17,7 +17,7 @@ IUSE="gnutls idn ipv6 nls pam +des +3des +aes +md +null +arcfour static-libs"
 DEPEND="gnutls? ( net-libs/gnutls )
 		idn? ( net-dns/libidn )
 		dev-libs/libtasn1
-		dev-libs/libgcrypt
+		dev-libs/libgcrypt:0
 		dev-libs/libgpg-error
 		virtual/libiconv
 		virtual/libintl"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.15.2.ebuild,v 1.3 2012/12/16 16:28:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.15.2.ebuild,v 1.4 2014/03/01 22:38:48 mgorny Exp $
 
 EAPI="4"
 
@@ -24,10 +24,10 @@ CDEPEND="sys-libs/zlib
 		ssl? (
 			gnutls? (
 				nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 )
-				!nettle? ( >=dev-libs/libgcrypt-1.2.2 ) ) )
+				!nettle? ( >=dev-libs/libgcrypt-1.2.2:0 ) ) )
 		!ssl? (
 			nettle? ( >=dev-libs/nettle-2.4[gmp] >=dev-libs/gmp-5 )
-			!nettle? ( >=dev-libs/libgcrypt-1.2.2 ) ) )
+			!nettle? ( >=dev-libs/libgcrypt-1.2.2:0 ) ) )
 	metalink? (
 		libxml2? ( >=dev-libs/libxml2-2.6.26 )
 		!libxml2? ( dev-libs/expat ) )

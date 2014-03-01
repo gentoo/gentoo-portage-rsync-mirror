@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.3.ebuild,v 1.9 2013/01/21 21:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.3.ebuild,v 1.10 2014/03/01 22:49:18 mgorny Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${MY_P}
 LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	>=dev-libs/popt-1.7[static-libs(+)]
 	>=sys-apps/util-linux-2.17.2[static-libs(+)]
-	>=dev-libs/libgcrypt-1.1.42[static-libs(+)]
+	>=dev-libs/libgcrypt-1.1.42:0[static-libs(+)]
 	>=sys-fs/lvm2-2.02.64[static-libs(+)]
 	>=sys-libs/e2fsprogs-libs-1.41[static-libs(+)]
 	udev? ( virtual/udev[static-libs(+)] )"
