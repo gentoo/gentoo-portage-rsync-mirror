@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.113 2014/02/10 03:20:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.114 2014/03/01 05:56:41 radhermit Exp $
+
+*pyopenssl-0.14 (01 Mar 2014)
+
+  01 Mar 2014; Tim Harder <radhermit@gentoo.org> +pyopenssl-0.14.ebuild:
+  Version bump, add examples use flag.
 
   10 Feb 2014; Mike Frysinger <vapier@gentoo.org> pyopenssl-0.13.1-r1.ebuild,
   pyopenssl-0.13.1.ebuild:
