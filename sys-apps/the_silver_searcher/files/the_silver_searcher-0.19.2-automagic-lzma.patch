@@ -1,0 +1,24 @@
+--- the_silver_searcher-0.19.2/configure.ac
++++ the_silver_searcher-0.19.2/configure.ac
+@@ -21,14 +21,15 @@
+ CFLAGS="$CFLAGS $PCRE_CFLAGS -Wall -Wextra -std=gnu89 -D_GNU_SOURCE"
+ LDFLAGS="$LDFLAGS"
+ 
+-AC_CHECK_HEADERS([pthread.h zlib.h lzma.h])
++AC_CHECK_HEADERS([pthread.h zlib.h])
+ 
+-if test "$ac_cv_header_lzma_h" == yes
+-then
++AC_ARG_ENABLE([lzma],
++    AS_HELP_STRING([--disable-lzma], [Disable compressed search support]))
++
++AS_IF([test "x$enable_lzma" != "xno"], [
++    AC_CHECK_HEADERS([lzma.h])
+     PKG_CHECK_MODULES([LZMA], [liblzma])
+-else
+-    AC_MSG_WARN([LZMA lib not found. Compiling without compressed search support.])
+-fi
++])
+ 
+ AC_CHECK_DECL([PCRE_CONFIG_JIT], [AC_DEFINE([USE_PCRE_JIT], [], [Use PCRE JIT])], [], [#include <pcre.h>])
+ 
