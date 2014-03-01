@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.246 2014/02/24 07:44:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.247 2014/03/01 18:49:11 pacho Exp $
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.2.5-hppa-platform.patch,
+  +files/webkit-gtk-2.2.5-ia64-malloc.patch,
+  +files/webkit-gtk-2.2.5-ia64-platform.patch, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  Apply various fixes to improve support on some arches (#502492 by Emeric
+  Maschino)
 
   24 Feb 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.5-r200.ebuild,
   webkit-gtk-2.2.5.ebuild:

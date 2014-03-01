@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.204 2014/03/01 12:01:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.205 2014/03/01 18:49:18 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> libgcrypt-1.5.3-r100.ebuild:
+  Disable static libs in the compat slot, bug #503146.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> libgcrypt-1.5.3-r100.ebuild,
   libgcrypt-1.6.1-r1.ebuild:

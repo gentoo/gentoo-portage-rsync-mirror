@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.107 2014/02/20 14:03:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.108 2014/03/01 18:37:11 jer Exp $
+
+  01 Mar 2014; Jeroen Roovers <jer@gentoo.org> synergy-1.4.15.ebuild,
+  synergy-1.4.16_p1969.ebuild:
+  Set minimum crypto++ dependency (bug #503144 by Ben Roberts).
 
   20 Feb 2014; Jeroen Roovers <jer@gentoo.org> synergy-1.4.16_p1969.ebuild,
   +files/synergy-1.4.16_p1969-pthread.patch:

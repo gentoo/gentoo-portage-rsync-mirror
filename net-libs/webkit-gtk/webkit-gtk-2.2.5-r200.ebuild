@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5-r200.ebuild,v 1.3 2014/02/24 07:44:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5-r200.ebuild,v 1.4 2014/03/01 18:49:11 pacho Exp $
 
 EAPI="5"
 
@@ -172,6 +172,12 @@ src_prepare() {
 	# Do not build unittests unless requested, upstream bug #128163
 	epatch "${FILESDIR}"/${PN}-2.2.4-unittests-build.patch
 
+	# Debian patches to fix support for some arches
+	# https://bugs.webkit.org/show_bug.cgi?id=129540
+	epatch "${FILESDIR}"/${PN}-2.2.5-{hppa,ia64}-platform.patch
+	# https://bugs.webkit.org/show_bug.cgi?id=129542
+	epatch "${FILESDIR}"/${PN}-2.2.5-ia64-malloc.patch
+
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
 }
@@ -187,7 +193,10 @@ src_configure() {
 	use ppc64 && append-flags "-mminimal-toc"
 
 	# Try to use less memory, bug #469942 (see Fedora .spec for reference)
-	append-ldflags "-Wl,--no-keep-memory"
+	# --no-keep-memory doesn't work on ia64, bug #502492
+	if ! use ia64; then
+		append-ldflags "-Wl,--no-keep-memory"
+	fi
 	if ! $(tc-getLD) --version | grep -q "GNU gold"; then
 		append-ldflags "-Wl,--reduce-memory-overheads"
 	fi

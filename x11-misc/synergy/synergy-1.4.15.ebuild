@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.15.ebuild,v 1.6 2013/11/02 09:58:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.15.ebuild,v 1.7 2014/03/01 18:37:11 jer Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha amd64 ~arm ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-l
 IUSE="qt4"
 
 COMMON_DEPEND="
-	dev-libs/crypto++
+	>=dev-libs/crypto++-5.6.2
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11

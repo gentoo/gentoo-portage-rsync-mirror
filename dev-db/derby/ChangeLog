@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/derby
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/derby/ChangeLog,v 1.1 2014/03/01 18:57:12 ercpe Exp $
+
+*derby-10.10.1.1 (01 Mar 2014)
+
+  01 Mar 2014; Johann Schmitz <ercpe@gentoo.org> +derby-10.10.1.1.ebuild,
+  +metadata.xml:
+  Ebuild for derby (bug #268422).  Originally written by Kyle Cavin and updated
+  by Joe Sapp
