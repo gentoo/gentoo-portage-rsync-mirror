@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pugixml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.10 2012/11/21 11:18:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.11 2014/03/01 07:09:18 radhermit Exp $
+
+*pugixml-1.4 (01 Mar 2014)
+
+  01 Mar 2014; Tim Harder <radhermit@gentoo.org> +pugixml-1.4.ebuild:
+  Version bump.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pugixml-1.2.ebuild:
   Stable for x86, wrt bug #436690

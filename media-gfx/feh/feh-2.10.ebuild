@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-2.9.2.ebuild,v 1.5 2013/08/16 11:33:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-2.10.ebuild,v 1.2 2014/03/01 07:28:34 radhermit Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,12 +11,12 @@ SRC_URI="http://feh.finalrewind.org/${P}.tar.bz2"
 
 LICENSE="feh"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="debug curl exif test xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
 	media-libs/imlib2
-	>=media-libs/libpng-1.2:0
+	>=media-libs/libpng-1.2:0=
 	x11-libs/libX11
 	curl? ( net-misc/curl )
 	exif? ( media-libs/libexif )

@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.139 2014/01/26 10:58:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.142 2014/03/01 07:29:32 radhermit Exp $
+
+  01 Mar 2014; Tim Harder <radhermit@gentoo.org> -feh-2.9.1-r1.ebuild,
+  -feh-2.9.2.ebuild:
+  Remove old.
+
+  01 Mar 2014; Tim Harder <radhermit@gentoo.org> feh-2.10.ebuild:
+  Force rebuild on libpng slot change.
+
+*feh-2.10 (01 Mar 2014)
+
+  01 Mar 2014; Tim Harder <radhermit@gentoo.org> +feh-2.10.ebuild:
+  Version bump.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> feh-2.9.3.ebuild:
   Stable for x86, wrt bug #496132
