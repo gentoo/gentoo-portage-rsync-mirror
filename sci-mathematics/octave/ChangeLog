@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.157 2014/02/24 11:16:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.158 2014/03/01 02:46:54 gienah Exp $
+
+*octave-3.8.1_rc4 (01 Mar 2014)
+
+  01 Mar 2014; Mark Wright <gienah@gentoo.org> +octave-3.8.1_rc4.ebuild:
+  Bump octave to 3.8.1-rc4
 
   24 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.6.4-r1.ebuild,
   octave-3.6.4.ebuild, octave-3.8.0.ebuild, octave-3.8.1_rc3.ebuild:
