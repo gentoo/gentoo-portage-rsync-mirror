@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/gst-plugins-dts-1.0.6.ebuild,v 1.1 2013/04/01 13:06:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/gst-plugins-dts-1.2.3.ebuild,v 1.1 2014/03/01 08:52:23 leio Exp $
 
 EAPI="5"
 
