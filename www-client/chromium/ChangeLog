@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1031 2014/03/01 20:19:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1032 2014/03/01 20:55:57 floppym Exp $
+
+  01 Mar 2014; Mike Gilbert <floppym@gentoo.org> files/chromium-launcher-r3.sh:
+  Add some logic to the launcher to enable execution as root without creating
+  permission problems when using sudo.
 
 *chromium-34.0.1847.14-r1 (01 Mar 2014)
 
