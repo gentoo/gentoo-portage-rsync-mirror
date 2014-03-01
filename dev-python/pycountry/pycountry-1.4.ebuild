@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/pycountry-1.2.ebuild,v 1.2 2013/12/07 11:11:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/pycountry-1.4.ebuild,v 1.1 2014/03/01 04:26:57 radhermit Exp $
 
 EAPI=5
-# pypy pennding actioning of bug filed upstream
+# pypy pending actioning of bug filed upstream
 PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 
 inherit distutils-r1
