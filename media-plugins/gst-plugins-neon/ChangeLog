@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-neon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.74 2013/09/29 18:06:00 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.75 2014/03/01 09:31:19 leio Exp $
+
+*gst-plugins-neon-1.2.3 (01 Mar 2014)
+
+  01 Mar 2014; <leio@gentoo.org> -gst-plugins-neon-1.0.8.ebuild,
+  +gst-plugins-neon-1.2.3.ebuild:
+  Version bump to be in sync with the rest; no code changes. Remove old.
 
 *gst-plugins-neon-1.2.0 (29 Sep 2013)
 
