@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.71 2013/10/19 15:20:22 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.72 2014/03/01 11:28:22 slyfox Exp $
+
+*blackbox-0.70.1-r1 (01 Mar 2014)
+
+  01 Mar 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +blackbox-0.70.1-r1.ebuild, +files/blackbox-0.70.1-no-LDFLAGS-pc.patch:
+  Fixed LDFLAGS leak to pkgconfig file.
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal
