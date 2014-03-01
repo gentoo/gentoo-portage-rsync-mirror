@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.39 2014/01/18 04:49:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.40 2014/03/01 04:44:51 radhermit Exp $
+
+*keyutils-1.5.9 (01 Mar 2014)
+
+  01 Mar 2014; Tim Harder <radhermit@gentoo.org> +keyutils-1.5.9.ebuild:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> keyutils-1.5.5.ebuild,
   keyutils-1.5.8.ebuild:
