@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-sipe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.28 2014/03/01 12:01:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.29 2014/03/01 12:02:58 pacho Exp $
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org> pidgin-sipe-1.18.0-r1.ebuild:
+  x86 stable, bug #502212
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> pidgin-sipe-1.18.0-r1.ebuild:
   amd64 stable, bug #502212
