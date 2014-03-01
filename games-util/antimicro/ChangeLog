@@ -1,6 +1,11 @@
 # ChangeLog for games-util/antimicro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/antimicro/ChangeLog,v 1.8 2014/01/20 18:18:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/antimicro/ChangeLog,v 1.9 2014/03/01 14:49:14 hasufell Exp $
+
+*antimicro-2.1 (01 Mar 2014)
+
+  01 Mar 2014; Julian Ospald <hasufell@gentoo.org> +antimicro-2.1.ebuild:
+  version bump
 
   20 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org> -antimicro-1.1.ebuild,
   -antimicro-1.2.ebuild:
