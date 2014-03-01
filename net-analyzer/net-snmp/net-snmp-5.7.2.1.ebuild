@@ -1,28 +1,26 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.14 2013/09/20 15:23:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.1.ebuild,v 1.1 2014/03/01 19:51:59 jer Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2"
-
+EAPI=5
+PYTHON_COMPAT=( python2_{6,7} )
+DISTUTILS_SINGLE_IMPL=yesplz
+DISTUTILS_OPTIONAL=yesplz
 WANT_AUTOMAKE=none
+PATCHSET=1
 
-PATCHSET=3
-
-inherit eutils perl-module python autotools
-
-MY_P="${P/_rc/.rc}"
+inherit autotools distutils-r1 eutils perl-module systemd
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-	http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-patches-${PATCHSET}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.gz
+	http://dev.gentoo.org/~flameeyes/${PN}/${PN}-5.7.2-patches-${PATCHSET}.tar.xz"
 
 # GPL-2 for the init scripts
 LICENSE="HPND BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat pci netlink mysql"
 
 COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -33,9 +31,11 @@ COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	elf? ( dev-libs/elfutils )
-	python? ( dev-python/setuptools )
-	sys-apps/pciutils
-	lm_sensors? ( sys-apps/lm_sensors )"
+	python? ( dev-python/setuptools ${PYTHON_DEPS} )
+	pci? ( sys-apps/pciutils )
+	lm_sensors? ( sys-apps/lm_sensors )
+	netlink? ( dev-libs/libnl:1.1 )
+	mysql? ( virtual/mysql )"
 
 RDEPEND="${COMMON}
 	perl? (
@@ -54,15 +54,6 @@ REQUIRED_USE="rpm? ( bzip2 zlib )"
 
 RESTRICT=test
 
-S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
 src_prepare() {
 	# snmpconf generates config files with proper selinux context
 	use selinux && epatch "${FILESDIR}"/${PN}-5.1.2-snmpconf-selinux.patch
@@ -76,42 +67,40 @@ src_configure() {
 	local mibs="host ucd-snmp/dlmod ucd-snmp/diskio ucd-snmp/extensible mibII/mta_sendmail smux"
 	use lm_sensors && mibs="${mibs} ucd-snmp/lmsensorsMib"
 
-	use python && export PYTHON_DIR="$(python_get_sitedir)"
-
 	econf \
-		--with-install-prefix="${D}" \
-		--with-sys-location="Unknown" \
-		--with-sys-contact="root@Unknown" \
-		--with-default-snmp-version="3" \
-		--with-mib-modules="${mibs}" \
-		--with-logfile="/var/log/net-snmpd.log" \
-		--with-persistent-directory="/var/lib/net-snmp" \
-		$(use_enable ucd-compat ucd-snmp-compatibility) \
-		--enable-shared --disable-static \
-		--with-ldflags="${LDFLAGS}" \
+		$(use_enable !ssl internal-md5) \
 		$(use_enable ipv6) \
 		$(use_enable mfd-rewrites) \
 		$(use_enable perl embedded-perl) \
-		$(use_enable !ssl internal-md5) \
+		$(use_enable ucd-compat ucd-snmp-compatibility) \
+		$(use_with bzip2) \
 		$(use_with elf) \
+		$(use_with mysql) \
+		$(use_with netlink nl) \
+		$(use_with pci) \
 		$(use_with perl perl-modules INSTALLDIRS=vendor) \
 		$(use_with python python-modules) \
+		$(use_with rpm) \
 		$(use_with ssl openssl) \
 		$(use_with tcpd libwrap) \
-		$(use_with bzip2) \
 		$(use_with zlib) \
-		$(use_with rpm) \
-		--without-nl \
-		--with-pci
+		--enable-shared --disable-static \
+		--with-default-snmp-version="3" \
+		--with-install-prefix="${D}" \
+		--with-ldflags="${LDFLAGS}" \
+		--with-logfile="/var/log/net-snmpd.log" \
+		--with-mib-modules="${mibs}" \
+		--with-persistent-directory="/var/lib/net-snmp" \
+		--with-sys-contact="root@Unknown" \
+		--with-sys-location="Unknown"
 }
 
 src_compile() {
-	emake OTHERLDFLAGS="${LDFLAGS}" sedscript all
+	emake \
+		OTHERLDFLAGS="${LDFLAGS}" \
+		sedscript all
 
-	if use doc ; then
-		einfo "Building HTML Documentation"
-		emake docsdox
-	fi
+	use doc && emake docsdox
 }
 
 src_install () {
@@ -138,6 +127,9 @@ src_install () {
 	newinitd "${FILESDIR}"/snmptrapd.init.2 snmptrapd
 	newconfd "${FILESDIR}"/snmptrapd.conf snmptrapd
 
+	systemd_dounit "${FILESDIR}"/snmpd.service
+	systemd_dounit "${FILESDIR}"/snmptrapd.service
+
 	insinto /etc/snmp
 	newins "${S}"/EXAMPLE.conf snmpd.conf.example
 
@@ -149,20 +141,5 @@ src_install () {
 			"${D}"/usr/share/snmp/snmpconf-data \
 			"${D}"/usr/share/snmp/*.conf \
 			"${D}"/**/*.pl
-	fi
-}
-
-pkg_postinst() {
-	if use python; then
-		python_mod_optimize netsnmp
-	fi
-
-	elog "An example configuration file has been installed in"
-	elog "/etc/snmp/snmpd.conf.example."
-}
-
-pkg_postrm() {
-	if use python; then
-		python_mod_cleanup netsnmp
 	fi
 }

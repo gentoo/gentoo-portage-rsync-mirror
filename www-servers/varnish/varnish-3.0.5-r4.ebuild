@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r1.ebuild,v 1.1 2013/12/20 01:06:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r4.ebuild,v 1.1 2014/03/01 19:53:58 blueness Exp $
 
 EAPI="5"
 
-inherit autotools-utils eutils systemd
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+
+inherit autotools-utils eutils systemd python-single-r1
 
 DESCRIPTION="Varnish is a state-of-the-art, high-performance HTTP accelerator"
 HOMEPAGE="http://www.varnish-cache.org/"
@@ -23,12 +25,15 @@ CDEPEND="
 
 #varnish compiles stuff at run time
 RDEPEND="
+	${PYTHON_DEPS}
 	${CDEPEND}
 	sys-devel/gcc"
 
 DEPEND="
 	${CDEPEND}
 	virtual/pkgconfig"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RESTRICT="test" #315725
 
@@ -38,9 +43,15 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.0.4-fix-automake-1.13.patch
 	"${FILESDIR}"/${PN}-3.0.4-automagic.patch
 	"${FILESDIR}"/${PN}-3.0.3-pthread-uclibc.patch
+	"${FILESDIR}"/${PN}-3.0.5-fix-python-path.patch
+	"${FILESDIR}"/${PN}-3.0.5-path-to-vmod_vcc.patch
 )
 
 AUTOTOOLS_AUTORECONF="yes"
+
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	# Remove bundled libjemalloc. We also fix
@@ -65,8 +76,8 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 
-	newinitd "${FILESDIR}"/varnishd.initd-r1 varnishd
-	newconfd "${FILESDIR}"/varnishd.confd-r1 varnishd
+	newinitd "${FILESDIR}"/varnishd.initd-r2 varnishd
+	newconfd "${FILESDIR}"/varnishd.confd-r2 varnishd
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/varnishd.logrotate" varnishd
@@ -76,6 +87,10 @@ src_install() {
 	use doc && dohtml -r "doc/sphinx/=build/html/"
 
 	systemd_dounit "${FILESDIR}/${PN}d.service"
+
+	python_doscript lib/libvmod_std/vmod.py
+	insinto /etc/varnish
+	doins  lib/libvmod_std/vmod.vcc
 }
 
 pkg_postinst () {
