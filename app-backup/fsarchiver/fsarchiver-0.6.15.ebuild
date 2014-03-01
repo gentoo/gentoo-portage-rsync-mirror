@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/fsarchiver/fsarchiver-0.6.15.ebuild,v 1.1 2012/06/03 09:30:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/fsarchiver/fsarchiver-0.6.15.ebuild,v 1.2 2014/03/01 22:17:15 mgorny Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug lzma lzo static"
 
-DEPEND="dev-libs/libgcrypt
+DEPEND="dev-libs/libgcrypt:0
 	>=sys-fs/e2fsprogs-1.41.4
 	lzma? ( >=app-arch/xz-utils-4.999.9_beta )
 	lzo? ( >=dev-libs/lzo-2.02 )

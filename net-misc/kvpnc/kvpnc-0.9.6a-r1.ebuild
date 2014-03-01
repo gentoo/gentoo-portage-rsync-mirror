@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a-r1.ebuild,v 1.5 2012/08/25 20:02:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a-r1.ebuild,v 1.6 2014/03/01 22:12:53 mgorny Exp $
 
 EAPI=4
 KDE_LINGUAS="ar br cs da de el en_GB eo es et eu fr ga gl hi hne it ja ka lt
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext

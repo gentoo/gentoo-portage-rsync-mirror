@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.5.ebuild,v 1.10 2014/01/12 13:17:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.5.ebuild,v 1.11 2014/03/01 22:26:46 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils fcaps user
@@ -31,7 +31,7 @@ RDEPEND="
 	>=dev-libs/glib-2.14:2
 	netlink? ( dev-libs/libnl )
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
-	crypt? ( dev-libs/libgcrypt:= )
+	crypt? ( dev-libs/libgcrypt:0= )
 	caps? ( sys-libs/libcap )
 	geoip? ( dev-libs/geoip )
 	gtk2? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.12.ebuild,v 1.9 2014/01/12 13:17:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.12.ebuild,v 1.10 2014/03/01 22:26:46 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -25,7 +25,7 @@ RDEPEND="
 	>=dev-libs/glib-2.14:2
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
 	caps? ( sys-libs/libcap )
-	crypt? ( dev-libs/libgcrypt:= )
+	crypt? ( dev-libs/libgcrypt:0= )
 	geoip? ( dev-libs/geoip )
 	gtk? (
 		>=x11-libs/gtk+-2.4.0:2

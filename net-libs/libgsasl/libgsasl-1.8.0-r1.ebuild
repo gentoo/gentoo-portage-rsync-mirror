@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.8.0-r1.ebuild,v 1.8 2012/12/16 19:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.8.0-r1.ebuild,v 1.9 2014/03/01 22:22:40 mgorny Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="idn gcrypt kerberos nls ntlm static-libs"
 DEPEND="
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	idn? ( net-dns/libidn )
 	kerberos? ( virtual/krb5 )
 	nls? ( >=sys-devel/gettext-0.18.1 )

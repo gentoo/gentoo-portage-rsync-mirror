@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.60 2012/12/21 13:54:47 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.61 2014/03/01 22:11:24 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> gsasl-1.8.0-r1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   21 Dec 2012; Eray Aslan <eras@gentoo.org> -gsasl-1.6.1.ebuild,
   -gsasl-1.8.0.ebuild:

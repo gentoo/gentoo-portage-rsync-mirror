@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tntnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.26 2014/02/09 01:33:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.27 2014/03/01 22:14:27 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> tntnet-2.2.1.ebuild,
+  tntnet-2.2.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   09 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> tntnet-2.2.ebuild:
   fixed depend

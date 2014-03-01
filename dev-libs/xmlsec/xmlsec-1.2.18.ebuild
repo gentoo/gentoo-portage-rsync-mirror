@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.18.ebuild,v 1.4 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.18.ebuild,v 1.5 2014/03/01 22:21:39 mgorny Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ REQUIRED_USE="|| ( gcrypt gnutls nss openssl ) gnutls? ( gcrypt )"
 
 RDEPEND=">=dev-libs/libxml2-2.7.4
 	>=dev-libs/libxslt-1.0.20
-	gcrypt? ( >=dev-libs/libgcrypt-1.4.0 )
+	gcrypt? ( >=dev-libs/libgcrypt-1.4.0:0 )
 	gnutls? ( >=net-libs/gnutls-2.8.0 )
 	nss? (
 		>=dev-libs/nspr-4.4.1

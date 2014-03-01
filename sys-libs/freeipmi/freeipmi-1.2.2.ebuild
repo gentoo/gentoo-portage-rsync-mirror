@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.2.ebuild,v 1.3 2013/02/28 19:51:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.2.ebuild,v 1.4 2014/03/01 22:12:26 mgorny Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-RDEPEND="dev-libs/libgcrypt"
+RDEPEND="dev-libs/libgcrypt:0"
 DEPEND="${RDEPEND}
 		virtual/os-headers"
 RDEPEND="${RDEPEND}

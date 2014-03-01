@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.2.ebuild,v 1.1 2013/10/29 17:12:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.2.ebuild,v 1.2 2014/03/01 22:10:13 mgorny Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ SCRIPT_LANGS="guile lua +perl +python ruby tcl"
 IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} doc nls +ssl"
 
 RDEPEND="
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	net-misc/curl[ssl]
 	sys-libs/ncurses
 	sys-libs/zlib

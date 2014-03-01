@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_rc1.ebuild,v 1.10 2014/01/12 13:17:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_rc1.ebuild,v 1.11 2014/03/01 22:21:04 mgorny Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND="sys-libs/ncurses[unicode?]
 	ssl? (
 		!gnutls? ( >=dev-libs/openssl-0.9.8 )
 		gnutls? (
-			dev-libs/libgcrypt
+			dev-libs/libgcrypt:0
 			>=net-libs/gnutls-2.6.4
 		)
 	)

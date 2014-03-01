@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-13.03.ebuild,v 1.4 2013/07/05 03:59:29 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-13.03.ebuild,v 1.5 2014/03/01 22:15:48 mgorny Exp $
 
 EAPI=4
 inherit eutils multilib qt4-r2 user
@@ -19,7 +19,7 @@ RDEPEND="dev-lang/tcl
 	dev-qt/qtgui:4
 	media-libs/alsa-lib
 	media-sound/gsm
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	media-libs/speex
 	dev-libs/libsigc++:2
 	dev-libs/popt"

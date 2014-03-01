@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4-r4.ebuild,v 1.4 2013/02/24 12:15:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4-r4.ebuild,v 1.5 2014/03/01 22:19:35 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE="gnutls"
 RDEPEND=">=app-pda/libplist-1.8-r1
 	>=app-pda/usbmuxd-1.0.8
 	gnutls? (
-		dev-libs/libgcrypt
+		dev-libs/libgcrypt:0
 		>=dev-libs/libtasn1-1.1
 		>=net-libs/gnutls-2.2.0
 		)

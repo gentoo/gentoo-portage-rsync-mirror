@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/ovaldi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.5 2013/09/26 11:50:45 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.6 2014/03/01 22:12:04 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> ovaldi-5.10.1.2.ebuild,
+  ovaldi-5.10.1.4.ebuild, ovaldi-5.9.1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   26 Sep 2013; Sven Vermeulen <swift@gentoo.org> +files/disable-acl.patch:
   Fix bug #485834 - Fix build failure if USE=-acl is set

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.8.2.ebuild,v 1.3 2013/12/08 17:38:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.8.2.ebuild,v 1.4 2014/03/01 22:23:44 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ COMMON_DEPEND="
 	>=app-crypt/gnupg-2
 	>=app-crypt/p11-kit-0.6
 	>=dev-libs/glib-2.32:2
-	>=dev-libs/libgcrypt-1.2.2:=
+	>=dev-libs/libgcrypt-1.2.2:0=
 	>=dev-libs/libtasn1-1:=
 	>=sys-apps/dbus-1
 	gtk? ( >=x11-libs/gtk+-3:3 )

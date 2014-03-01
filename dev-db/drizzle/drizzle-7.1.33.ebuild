@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.1.33.ebuild,v 1.3 2012/06/21 16:11:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.1.33.ebuild,v 1.4 2014/03/01 22:26:02 mgorny Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		pam? ( sys-libs/pam )
 		curl? ( net-misc/curl )
 		memcache? ( >=dev-libs/libmemcached-0.39 )
-		md5? ( >=dev-libs/libgcrypt-1.4.2 )
+		md5? ( >=dev-libs/libgcrypt-1.4.2:0 )
 		haildb? ( >=dev-db/haildb-2.3.2 )
 		>=dev-libs/boost-1.32
 		ldap? ( net-nds/openldap )

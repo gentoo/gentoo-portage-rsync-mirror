@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.3.3.ebuild,v 1.6 2013/03/02 23:38:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.3.3.ebuild,v 1.7 2014/03/01 22:14:45 mgorny Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 hppa ppc ~ppc64 ~sparc x86"
 IUSE="debug doc fox gtk qt4"
 
 RDEPEND="dev-libs/libgpg-error
-	>=dev-libs/libgcrypt-1.2.0
+	>=dev-libs/libgcrypt-1.2.0:0
 	dev-libs/openssl:0
 	>=net-libs/gnutls-2.0.1
 	virtual/libiconv

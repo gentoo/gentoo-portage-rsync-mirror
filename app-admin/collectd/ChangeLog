@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/collectd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.57 2013/12/23 00:38:03 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.58 2014/03/01 22:08:15 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> collectd-5.1.0-r1.ebuild,
+  collectd-5.1.0-r2.ebuild, collectd-5.1.1-r1.ebuild, collectd-5.1.1.ebuild,
+  collectd-5.2.0-r1.ebuild, collectd-5.2.0.ebuild, collectd-5.2.1.ebuild,
+  collectd-5.2.2.ebuild, collectd-5.3.0.ebuild, collectd-5.4.0.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   23 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
   -files/collectd-4.10.1-libiptc.patch, -files/collectd-4.10.1-noowniptc.patch,

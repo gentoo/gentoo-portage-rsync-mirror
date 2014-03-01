@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.49 2012/08/29 03:22:02 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.50 2014/03/01 22:17:19 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> jpilot-1.8.0.ebuild,
+  jpilot-1.8.1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   29 Aug 2012; Anthony G. Basile <blueness@gentoo.org> jpilot-1.8.1.ebuild:
   Keyword ~arm
@@ -242,4 +246,3 @@
   source compatible with packages such as GNOME's Pilot support.
 
 *jpilot-0.99-r2 (1 Feb 2002)
-

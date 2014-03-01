@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.36 2014/02/12 10:31:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.37 2014/03/01 22:26:02 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> drizzle-7.1.33.ebuild,
+  drizzle-7.2.4.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   12 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> drizzle-7.2.4.ebuild,
   +files/drizzle-7.2.4-fix-boost_thread-detection.patch:

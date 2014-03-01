@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.28.ebuild,v 1.8 2012/05/18 16:03:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.28.ebuild,v 1.9 2014/03/01 22:12:53 mgorny Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/raptor-2.0.6:2
 	!gmp? ( dev-libs/mpfr )
 	gmp? ( dev-libs/gmp )
 	crypt? (
-		!mhash? ( dev-libs/libgcrypt )
+		!mhash? ( dev-libs/libgcrypt:0 )
 		mhash? ( app-crypt/mhash )
 	)"
 DEPEND="${RDEPEND}

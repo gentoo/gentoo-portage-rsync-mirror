@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.3.ebuild,v 1.1 2013/11/06 06:21:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.3.ebuild,v 1.2 2014/03/01 22:10:25 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -18,7 +18,7 @@ IUSE="examples nls static-libs"
 
 RDEPEND="!<media-libs/quvi-0.4.0
 	>=dev-libs/glib-2.24.2:2
-	>=dev-libs/libgcrypt-1.4.5:=
+	>=dev-libs/libgcrypt-1.4.5:0=
 	>=media-libs/libquvi-scripts-0.9
 	>=net-libs/libproxy-0.3.1
 	>=net-misc/curl-7.21.0

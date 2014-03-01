@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.7 2012/05/21 12:19:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.8 2014/03/01 22:11:33 mgorny Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -22,7 +22,7 @@ IUSE="debug"
 RDEPEND="net-libs/libotr
 	net-irc/xchat
 	dev-libs/glib:2
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libgpg-error"
 
 DEPEND="${RDEPEND}

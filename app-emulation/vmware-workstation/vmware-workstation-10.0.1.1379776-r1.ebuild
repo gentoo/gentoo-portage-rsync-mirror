@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-10.0.1.1379776-r1.ebuild,v 1.1 2014/01/07 03:44:14 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-10.0.1.1379776-r1.ebuild,v 1.2 2014/03/01 22:09:35 mgorny Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ RDEPEND="dev-cpp/cairomm
 	dev-libs/icu
 	dev-libs/expat
 	dev-libs/libaio
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libsigc++
 	dev-libs/libxml2
 	=dev-libs/openssl-0.9.8*

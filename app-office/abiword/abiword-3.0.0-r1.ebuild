@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.8 2014/02/09 12:15:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.9 2014/03/01 22:15:16 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -24,7 +24,7 @@ RDEPEND="
 	>=app-text/wv-1.2
 	>=dev-libs/fribidi-0.10.4
 	>=dev-libs/glib-2.16:2
-	>=dev-libs/libgcrypt-1.4.5
+	>=dev-libs/libgcrypt-1.4.5:0
 	dev-libs/libxslt
 	>=gnome-base/librsvg-2.16:2
 	>=gnome-extra/libgsf-1.14.18

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.8 2014/02/22 22:33:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.9 2014/03/01 22:16:15 mgorny Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -41,7 +41,7 @@ COMMON_DEPEND="
 		net-dns/dnsmasq[dhcp]
 		net-firewall/iptables )
 	gnutls? (
-		dev-libs/libgcrypt:=
+		dev-libs/libgcrypt:0=
 		net-libs/gnutls:= )
 	modemmanager? ( >=net-misc/modemmanager-0.7.991 )
 	nss? ( >=dev-libs/nss-3.11:= )

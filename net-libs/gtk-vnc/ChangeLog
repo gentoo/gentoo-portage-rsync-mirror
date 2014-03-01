@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.121 2014/02/22 22:25:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.122 2014/03/01 22:19:38 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> gtk-vnc-0.5.2.ebuild,
+  gtk-vnc-0.5.3.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtk-vnc-0.5.3.ebuild:
   Fix wrong commit, bug 502160

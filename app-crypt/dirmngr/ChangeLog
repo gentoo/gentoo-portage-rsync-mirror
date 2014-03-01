@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/dirmngr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.64 2013/07/28 20:19:36 alonbl Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.65 2014/03/01 22:20:16 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> dirmngr-1.1.0.ebuild,
+  dirmngr-1.1.1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
 *dirmngr-1.1.1 (28 Jul 2013)
 

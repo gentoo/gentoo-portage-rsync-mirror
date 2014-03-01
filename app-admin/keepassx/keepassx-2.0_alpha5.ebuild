@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-2.0_alpha5.ebuild,v 1.2 2014/01/14 14:20:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-2.0_alpha5.ebuild,v 1.3 2014/03/01 22:09:39 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 DEPEND="
-	dev-libs/libgcrypt:=
+	dev-libs/libgcrypt:0=
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4

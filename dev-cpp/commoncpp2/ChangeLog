@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/commoncpp2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.58 2013/06/17 13:31:14 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.59 2014/03/01 22:24:51 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> commoncpp2-1.8.0.ebuild,
+  commoncpp2-1.8.1-r1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   17 Jun 2013; Tiziano Müller <dev-zero@gentoo.org>
   -files/1.8.1-fix-no-ssl-build.patch, commoncpp2-1.8.1-r1.ebuild:

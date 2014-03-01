@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=!nss? ( dev-libs/libgcrypt ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl perl? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( app-arch/unzip dev-perl/XML-XPath net-misc/ipcalc sys-apps/grep ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEPEND=!nss? ( dev-libs/libgcrypt:0 ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl perl? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( app-arch/unzip dev-perl/XML-XPath net-misc/ipcalc sys-apps/grep ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Framework which enables integration with the Security Content Automation Protocol (SCAP)
 EAPI=5
 HOMEPAGE=http://www.open-scap.org/
 IUSE=bash-completion doc ldap nss perl python rpm selinux sce sql test python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
-RDEPEND=!nss? ( dev-libs/libgcrypt ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl
+RDEPEND=!nss? ( dev-libs/libgcrypt:0 ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl
 RESTRICT=test
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/o/p/openscap/openscap-0.9.12.tar.gz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=54ffd819d6e1c418c74ea71bbb105bba
+_md5_=299aec460d61f9447d2b3a7be643feab

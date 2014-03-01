@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/openscap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.27 2013/12/26 16:52:27 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.28 2014/03/01 22:10:52 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> openscap-0.9.12.ebuild,
+  openscap-0.9.8.ebuild, openscap-1.0.1.ebuild, openscap-9999.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   26 Dec 2013; Sven Vermeulen <swift@gentoo.org> openscap-0.9.12.ebuild,
   openscap-1.0.1.ebuild, openscap-9999.ebuild:

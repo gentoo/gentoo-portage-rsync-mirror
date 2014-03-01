@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/dar-2.4.2.ebuild,v 1.2 2012/02/08 21:01:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/dar-2.4.2.ebuild,v 1.3 2014/03/01 22:16:10 mgorny Exp $
 
 EAPI="3"
 inherit confutils eutils flag-o-matic
@@ -22,7 +22,7 @@ RDEPEND=">=sys-libs/zlib-1.2.3
 		static? ( sys-apps/attr[static-libs] )
 		!static? ( sys-apps/attr )
 	)
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	lzo? ( dev-libs/lzo )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}

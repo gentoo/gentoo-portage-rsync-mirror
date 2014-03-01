@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/srecord-1.62.ebuild,v 1.1 2013/07/21 10:56:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/srecord-1.62.ebuild,v 1.2 2014/03/01 22:29:15 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="static-libs test"
 
-RDEPEND="dev-libs/libgcrypt"
+RDEPEND="dev-libs/libgcrypt:0"
 DEPEND="${RDEPEND}
 	dev-libs/boost
 	sys-apps/groff

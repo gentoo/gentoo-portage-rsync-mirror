@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.891 2014/02/23 08:44:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.892 2014/03/01 22:23:36 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.7.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   23 Feb 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.0.ebuild,
   vlc-2.1.1.ebuild, vlc-2.1.2.ebuild, vlc-2.1.4.ebuild, vlc-2.1.9999.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cockatrice
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.5 2013/03/02 21:11:59 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.6 2014/03/01 22:24:04 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> cockatrice-20120702.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cockatrice-20120702.ebuild:
   Move Qt dependencies to the new category

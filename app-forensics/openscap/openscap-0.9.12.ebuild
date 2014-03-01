@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.9.12.ebuild,v 1.2 2013/12/26 16:52:27 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.9.12.ebuild,v 1.3 2014/03/01 22:10:52 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="bash-completion doc ldap nss perl python rpm selinux sce sql test"
 RESTRICT="test"
 
-RDEPEND="!nss? ( dev-libs/libgcrypt )
+RDEPEND="!nss? ( dev-libs/libgcrypt:0 )
 	nss? ( dev-libs/nss )
 	ldap? ( net-nds/openldap )
 	rpm? ( >=app-arch/rpm-4.9 )

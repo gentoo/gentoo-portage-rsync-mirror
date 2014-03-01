@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.458 2014/01/10 23:48:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.459 2014/03/01 22:30:21 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> openldap-2.4.30.ebuild,
+  openldap-2.4.35-r1.ebuild, openldap-2.4.35.ebuild, openldap-2.4.38-r1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   10 Jan 2014; Pacho Ramos <pacho@gentoo.org> openldap-2.4.35-r1.ebuild:
   ia64 stable, bug #486302

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.6.1.ebuild,v 1.1 2013/10/02 07:56:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.6.1.ebuild,v 1.2 2014/03/01 22:26:58 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ RESTRICT="test"
 RDEPEND=">=media-libs/skstream-0.3.9
 	>=dev-games/wfmath-1.0.1
 	>=dev-games/mercator-0.3.3
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libsigc++:2
 	sys-libs/ncurses
 	sys-libs/readline

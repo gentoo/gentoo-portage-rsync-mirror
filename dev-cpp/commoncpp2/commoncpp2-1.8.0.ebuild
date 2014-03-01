@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.0.ebuild,v 1.6 2010/10/23 22:24:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.8.0.ebuild,v 1.7 2014/03/01 22:24:51 mgorny Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="debug doc examples ipv6 gnutls"
 
-RDEPEND="gnutls? ( dev-libs/libgcrypt
+RDEPEND="gnutls? ( dev-libs/libgcrypt:0
 		net-libs/gnutls )
 	!gnutls? ( dev-libs/openssl )
 	sys-libs/zlib"

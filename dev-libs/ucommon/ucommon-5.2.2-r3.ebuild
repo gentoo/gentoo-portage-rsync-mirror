@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r3.ebuild,v 1.8 2012/11/22 10:06:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r3.ebuild,v 1.9 2014/03/01 22:19:31 mgorny Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND="ssl? (
 		!gnutls? ( dev-libs/openssl )
 		gnutls? (
 			net-libs/gnutls[-nettle]
-			dev-libs/libgcrypt
+			dev-libs/libgcrypt:0
 		)
 	)"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.15 2013/01/02 17:43:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.16 2014/03/01 22:23:50 mgorny Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ IUSE="+curl debug nls static-libs test"
 COMMON_DEPEND="
 	app-crypt/gpgme
 	dev-libs/expat
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libxml2
 	curl? ( net-misc/curl[ssl] )
 "

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=!nss? ( dev-libs/libgcrypt ) nss? ( dev-libs/nss ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) gconf? ( gnome-base/gconf ) ldap? ( net-nds/openldap ) pcre? ( dev-libs/libpcre ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) xattr? ( sys-apps/attr ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl doc? ( app-doc/doxygen ) perl? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( app-arch/unzip dev-perl/XML-XPath net-misc/ipcalc sys-apps/grep ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEPEND=!nss? ( dev-libs/libgcrypt:0 ) nss? ( dev-libs/nss ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) gconf? ( gnome-base/gconf ) ldap? ( net-nds/openldap ) pcre? ( dev-libs/libpcre ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) xattr? ( sys-apps/attr ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl doc? ( app-doc/doxygen ) perl? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( app-arch/unzip dev-perl/XML-XPath net-misc/ipcalc sys-apps/grep ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Framework which enables integration with the Security Content Automation Protocol (SCAP)
 EAPI=5
 HOMEPAGE=http://www.open-scap.org/
 IUSE=acl bash-completion caps debug doc gconf ldap nss pcre perl python rpm selinux sce sql test xattr python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
-RDEPEND=!nss? ( dev-libs/libgcrypt ) nss? ( dev-libs/nss ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) gconf? ( gnome-base/gconf ) ldap? ( net-nds/openldap ) pcre? ( dev-libs/libpcre ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) xattr? ( sys-apps/attr ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl
+RDEPEND=!nss? ( dev-libs/libgcrypt:0 ) nss? ( dev-libs/nss ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) gconf? ( gnome-base/gconf ) ldap? ( net-nds/openldap ) pcre? ( dev-libs/libpcre ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) xattr? ( sys-apps/attr ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/o/p/openscap/openscap-1.0.1.tar.gz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=84425d5e5e8e2d24d4a6dcbeeb185313
+_md5_=2a93ec11a9c5748fc649e2b20125ba22

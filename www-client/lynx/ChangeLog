@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.147 2014/01/12 13:17:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.148 2014/03/01 22:21:04 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> lynx-2.8.8_pre12.ebuild,
+  lynx-2.8.8_pre14.ebuild, lynx-2.8.8_pre15.ebuild, lynx-2.8.8_rc1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lynx-2.8.8_rc1.ebuild:
   Stable for ia64, wrt bug #441906

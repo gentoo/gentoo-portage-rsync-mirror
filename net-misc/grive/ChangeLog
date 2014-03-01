@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grive
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.12 2013/04/27 23:02:56 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.13 2014/03/01 22:09:38 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> grive-0.2.0-r1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   27 Apr 2013; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0-r1.ebuild:
   fix build with >=dev-libs/json-c-0.11:0 (bug #467432, thx to Jouni Kosonen for

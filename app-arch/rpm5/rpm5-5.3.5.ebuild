@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm5/rpm5-5.3.5.ebuild,v 1.2 2012/08/21 03:39:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm5/rpm5-5.3.5.ebuild,v 1.3 2014/03/01 22:13:59 mgorny Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="!app-arch/rpm
 	augeas? ( app-admin/augeas )
 	berkdb? ( sys-libs/db )
 	bzip2? ( app-arch/bzip2 )
-	crypt? ( dev-libs/libgcrypt )
+	crypt? ( dev-libs/libgcrypt:0 )
 	expat? ( dev-libs/expat )
 	keyutils? ( sys-apps/keyutils )
 	lua? ( dev-lang/lua )

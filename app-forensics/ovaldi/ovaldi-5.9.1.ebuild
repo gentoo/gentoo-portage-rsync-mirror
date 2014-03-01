@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ovaldi-5.9.1.ebuild,v 1.1 2011/06/16 09:30:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ovaldi-5.9.1.ebuild,v 1.2 2014/03/01 22:12:04 mgorny Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ldap rpm"
 
 DEPEND="rpm? ( app-arch/rpm )
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libpcre
 	dev-libs/xalan-c
 	dev-libs/xerces-c

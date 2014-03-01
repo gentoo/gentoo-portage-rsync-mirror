@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.17 2014/01/18 05:07:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.18 2014/03/01 22:09:55 mgorny Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="crypt debug python static-libs"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND=">=dev-libs/libxml2-2.8.0:2
-	crypt?  ( >=dev-libs/libgcrypt-1.1.42:= )
+	crypt?  ( >=dev-libs/libgcrypt-1.1.42:0= )
 	python? (
 		${PYTHON_DEPS}
 		dev-libs/libxml2:2[python,${PYTHON_USEDEP}] )"

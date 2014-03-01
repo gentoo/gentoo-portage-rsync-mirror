@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=!nss? ( dev-libs/libgcrypt ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl perl? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( app-arch/unzip dev-perl/XML-XPath net-misc/ipcalc sys-apps/grep ) =dev-lang/python-2*
+DEPEND=!nss? ( dev-libs/libgcrypt:0 ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl perl? ( dev-lang/swig ) python? ( dev-lang/swig ) test? ( app-arch/unzip dev-perl/XML-XPath net-misc/ipcalc sys-apps/grep ) =dev-lang/python-2*
 DESCRIPTION=Framework which enables integration with the Security Content Automation Protocol (SCAP)
 EAPI=3
 HOMEPAGE=http://www.open-scap.org/
 IUSE=bash-completion doc ldap nss perl python rpm selinux sql test
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
-RDEPEND=!nss? ( dev-libs/libgcrypt ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl =dev-lang/python-2*
+RDEPEND=!nss? ( dev-libs/libgcrypt:0 ) nss? ( dev-libs/nss ) ldap? ( net-nds/openldap ) rpm? ( >=app-arch/rpm-4.9 ) sql? ( dev-db/opendbx ) dev-libs/libpcre dev-libs/libxml2 dev-libs/libxslt net-misc/curl =dev-lang/python-2*
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/o/p/openscap/openscap-0.9.8.tar.gz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a772c6e322d1dd0645120d2ae7c627a5
+_md5_=d3a5ccd09dc19b069a6fe1ec23cfcec1

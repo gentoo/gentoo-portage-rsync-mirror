@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.2.ebuild,v 1.12 2013/09/06 18:35:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.2.ebuild,v 1.13 2014/03/01 22:19:38 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -25,7 +25,7 @@ REQUIRED_USE="
 # glib-2.30.1 needed to avoid linking failure due to .la files (bug #399129)
 COMMON_DEPEND="
 	>=dev-libs/glib-2.30.1:2
-	>=dev-libs/libgcrypt-1.4.2
+	>=dev-libs/libgcrypt-1.4.2:0
 	dev-libs/libgpg-error
 	>=net-libs/gnutls-1.4
 	>=x11-libs/cairo-1.2

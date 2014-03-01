@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.35.ebuild,v 1.12 2014/01/08 06:32:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.35.ebuild,v 1.13 2014/03/01 22:30:21 mgorny Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ REQUIRED_USE="cxx? ( sasl )"
 # openssl is needed to generate lanman-passwords required by samba
 RDEPEND="icu? ( dev-libs/icu )
 	ssl? ( !gnutls? ( dev-libs/openssl )
-		gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) )
+		gnutls? ( net-libs/gnutls dev-libs/libgcrypt:0 ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	!minimal? (
 		sys-devel/libtool

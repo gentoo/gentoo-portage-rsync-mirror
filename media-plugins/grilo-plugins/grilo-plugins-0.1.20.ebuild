@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.20.ebuild,v 1.11 2013/12/08 19:15:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.20.ebuild,v 1.12 2014/03/01 22:13:27 mgorny Exp $
 
 EAPI="4"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -31,7 +31,7 @@ RDEPEND="
 	upnp-av? ( >=net-libs/gupnp-0.13
 		>=net-libs/gupnp-av-0.5 )
 	vimeo? ( net-libs/libsoup:2.4
-		dev-libs/libgcrypt )"
+		dev-libs/libgcrypt:0 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

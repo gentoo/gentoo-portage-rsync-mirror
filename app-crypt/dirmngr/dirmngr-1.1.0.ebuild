@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.1.0.ebuild,v 1.9 2011/06/01 14:18:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.1.0.ebuild,v 1.10 2014/03/01 22:20:16 mgorny Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="nls"
 
 RDEPEND=">=net-nds/openldap-2.1.26
 	>=dev-libs/libgpg-error-1.4
-	>=dev-libs/libgcrypt-1.4.0
+	>=dev-libs/libgcrypt-1.4.0:0
 	>=dev-libs/libksba-1.0.2
 	>=dev-libs/pth-1.3.7
 	nls? ( virtual/libintl )"

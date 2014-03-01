@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg-pkcs11-scd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.14 2012/05/03 18:16:40 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.15 2014/03/01 22:27:46 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> gnupg-pkcs11-scd-0.7.2.ebuild,
+  gnupg-pkcs11-scd-0.7.3.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnupg-pkcs11-scd-0.7.2.ebuild,
   gnupg-pkcs11-scd-0.7.3.ebuild:
@@ -76,4 +80,3 @@
   20 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org> +metadata.xml,
   +gnupg-pkcs11-scd-0.02.ebuild:
   Initial import
-

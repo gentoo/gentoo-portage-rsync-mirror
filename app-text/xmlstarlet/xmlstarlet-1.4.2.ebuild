@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.4.2.ebuild,v 1.5 2013/02/18 20:32:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.4.2.ebuild,v 1.6 2014/03/01 22:22:40 mgorny Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.27
 	>=dev-libs/libxslt-1.1.9
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	virtual/libiconv"
 
 DEPEND="${RDEPEND}

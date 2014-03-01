@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.8.0-r1.ebuild,v 1.4 2012/11/29 20:47:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.8.0-r1.ebuild,v 1.5 2014/03/01 22:11:24 mgorny Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc gcrypt idn kerberos nls ntlm static-libs +threads"
 
 DEPEND="
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	idn? ( net-dns/libidn )
 	kerberos? ( virtual/krb5 )
 	nls? ( >=sys-devel/gettext-0.18.1 )

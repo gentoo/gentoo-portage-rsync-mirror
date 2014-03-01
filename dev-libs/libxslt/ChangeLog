@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.274 2014/01/18 05:07:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.275 2014/03/01 22:09:55 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> libxslt-1.1.28-r1.ebuild,
+  libxslt-1.1.28.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libxslt-1.1.28-r1.ebuild:
   Add arm64 love.

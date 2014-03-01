@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.30.ebuild,v 1.2 2013/04/01 18:10:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.30.ebuild,v 1.3 2014/03/01 22:12:53 mgorny Exp $
 
 EAPI=5
 inherit libtool
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/raptor-2.0.7:2
 	!gmp? ( dev-libs/mpfr )
 	gmp? ( dev-libs/gmp )
 	crypt? (
-		!mhash? ( dev-libs/libgcrypt )
+		!mhash? ( dev-libs/libgcrypt:0 )
 		mhash? ( app-crypt/mhash )
 	)"
 DEPEND="${RDEPEND}

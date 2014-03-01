@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.143 2014/02/22 21:20:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.144 2014/03/01 22:17:20 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> totem-pl-parser-3.10.0.ebuild,
+  totem-pl-parser-3.10.1.ebuild, totem-pl-parser-3.4.5.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> totem-pl-parser-3.10.1.ebuild,
   totem-pl-parser-3.4.5.ebuild:

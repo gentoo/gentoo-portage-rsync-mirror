@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.126 2014/02/08 12:34:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.127 2014/03/01 22:26:53 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   08 Feb 2014; Justin Lecher <jlec@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
   Set subslot for libgcrypt

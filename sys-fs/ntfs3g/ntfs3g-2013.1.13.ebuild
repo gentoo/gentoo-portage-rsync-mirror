@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.12 2014/02/27 00:25:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.13 2014/03/01 22:11:24 mgorny Exp $
 
 EAPI=5
 inherit eutils linux-info udev
@@ -20,8 +20,8 @@ IUSE="acl debug +external-fuse ntfsdecrypt +ntfsprogs static-libs suid xattr"
 RDEPEND="!<sys-apps/util-linux-2.20.1-r2
 	!sys-fs/ntfsprogs
 	ntfsdecrypt? (
-		>=dev-libs/libgcrypt-1.2.2
-		<dev-libs/libgcrypt-1.6.0
+		>=dev-libs/libgcrypt-1.2.2:0
+		<dev-libs/libgcrypt-1.6.0:0
 		>=net-libs/gnutls-1.4.4
 		)
 	external-fuse? ( >=sys-fs/fuse-2.8.0 )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.15.ebuild,v 1.3 2013/10/17 20:36:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.15.ebuild,v 1.4 2014/03/01 22:30:47 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -20,7 +20,7 @@ KEYWORDS="~alpha ~amd64 arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32.0:2
-	crypt? ( >=dev-libs/libgcrypt-1.2.2:= )
+	crypt? ( >=dev-libs/libgcrypt-1.2.2:0= )
 	introspection? ( >=dev-libs/gobject-introspection-1.29 )"
 RDEPEND="${COMMON_DEPEND}"
 # Temporarily removed from RDEPEND to allow stabilization:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.32.ebuild,v 1.10 2014/02/02 11:08:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.32.ebuild,v 1.11 2014/03/01 22:28:57 mgorny Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 RDEPEND="ssl? (
-		dev-libs/libgcrypt
+		dev-libs/libgcrypt:0
 		net-libs/gnutls
 	)"
 

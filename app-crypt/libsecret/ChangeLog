@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.25 2014/02/22 20:56:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.26 2014/03/01 22:30:47 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> libsecret-0.15-r1.ebuild,
+  libsecret-0.15.ebuild, libsecret-0.16.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libsecret-0.16.ebuild:
   Fix wrong commit, bug 502160

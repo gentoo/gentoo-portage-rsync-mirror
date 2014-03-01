@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.1.7.ebuild,v 1.1 2014/02/21 21:10:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.1.7.ebuild,v 1.2 2014/03/01 22:27:57 mgorny Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-libs/libaio
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-libs/libgpg-error"
 
 if use amd64; then

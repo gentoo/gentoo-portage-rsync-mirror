@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-1.8.0.ebuild,v 1.9 2012/05/03 20:20:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-1.8.0.ebuild,v 1.10 2014/03/01 22:17:19 mgorny Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 ia64 ppc x86"
 IUSE="nls"
 
 RDEPEND=">=app-pda/pilot-link-0.12.5
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	>=x11-libs/gtk+-2.18.9:2"
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/rasqal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.89 2013/04/13 08:09:33 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.90 2014/03/01 22:12:53 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> rasqal-0.9.28.ebuild,
+  rasqal-0.9.29.ebuild, rasqal-0.9.30.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rasqal-0.9.29.ebuild:
   Stable for sparc, wrt bug #464112

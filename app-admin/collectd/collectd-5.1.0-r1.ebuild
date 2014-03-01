@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0-r1.ebuild,v 1.4 2013/11/24 12:26:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0-r1.ebuild,v 1.5 2014/03/01 22:08:15 mgorny Exp $
 
 EAPI=4
 
@@ -49,7 +49,7 @@ unset plugin
 # Now come the dependencies.
 
 COMMON_DEPEND="
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	sys-devel/libtool
 	perl?					( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
 	collectd_plugins_apache?		( net-misc/curl )

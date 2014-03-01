@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gwenhywfar
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.106 2013/03/02 23:38:02 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.107 2014/03/01 22:14:45 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> gwenhywfar-4.2.1.ebuild,
+  gwenhywfar-4.3.3.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gwenhywfar-4.2.1.ebuild,
   gwenhywfar-4.3.3.ebuild:

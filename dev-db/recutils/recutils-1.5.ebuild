@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/recutils-1.5.ebuild,v 1.3 2012/11/02 03:36:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/recutils-1.5.ebuild,v 1.4 2014/03/01 22:27:01 mgorny Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="crypt curl emacs mdb nls static-libs"
 
 RDEPEND="sys-libs/readline
 	crypt? (
-		dev-libs/libgcrypt
+		dev-libs/libgcrypt:0
 		dev-libs/libgpg-error
 	)
 	curl? ( net-misc/curl )

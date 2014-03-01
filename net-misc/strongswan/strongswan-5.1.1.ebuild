@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.1.ebuild,v 1.6 2014/01/05 00:54:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.1.ebuild,v 1.7 2014/03/01 22:21:33 mgorny Exp $
 
 EAPI=5
 inherit eutils linux-info systemd user
@@ -16,7 +16,7 @@ IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root 
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
-	gcrypt? ( dev-libs/libgcrypt )
+	gcrypt? ( dev-libs/libgcrypt:0 )
 	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlsec
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.36 2013/07/04 12:26:15 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.37 2014/03/01 22:21:39 mgorny Exp $
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> xmlsec-1.2.18.ebuild,
+  xmlsec-1.2.19.ebuild:
+  Update libgcrypt dep to use slot :0.
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> xmlsec-1.2.19.ebuild:
   Stable for x86, wrt bug #475688
