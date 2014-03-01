@@ -1,15 +1,16 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.160 2014/02/27 13:02:33 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.161 2014/03/01 06:33:01 ssuominen Exp $
 
   27 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
   dracut-036-r3.ebuild, dracut-036-r4.ebuild:
-  The same goes for systemd: blocking 210.
+  The same goes for systemd: blocking 210, for the new 99-default.link file
 
   27 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
   dracut-036-r3.ebuild, dracut-036-r4.ebuild:
-  udevd has been moved once again to remind us of its existence, thus I'm
-  blocking 210.
+  >=sys-fs/udev-210 moved /sbin/udevd to /lib/systemd/systemd-udevd, and
+  started installing a new file for network interface naming setup at
+  /lib/systemd/network/99-default.link
 
 *dracut-036-r4 (26 Feb 2014)
 
