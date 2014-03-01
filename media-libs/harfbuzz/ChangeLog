@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.64 2014/02/22 22:22:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.65 2014/03/01 13:33:20 mgorny Exp $
+
+*harfbuzz-0.9.26-r1 (01 Mar 2014)
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> +harfbuzz-0.9.26-r1.ebuild:
+  Introduce multilib support as a dependency of pango, bug #488864.
 
   22 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   harfbuzz-0.9.23.ebuild, harfbuzz-0.9.26.ebuild, harfbuzz-9999.ebuild:

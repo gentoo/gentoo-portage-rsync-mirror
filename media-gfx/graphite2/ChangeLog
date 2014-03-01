@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.64 2014/01/25 21:55:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.65 2014/03/01 13:33:00 mgorny Exp $
+
+*graphite2-1.2.4-r1 (01 Mar 2014)
+
+  01 Mar 2014; Michał Górny <mgorny@gentoo.org> +graphite2-1.2.4-r1.ebuild:
+  Introduce multilib support as a dependency of pango, bug #488860.
 
 *graphite2-1.2.4 (25 Jan 2014)
 
