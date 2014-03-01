@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.101 2014/02/24 00:18:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.102 2014/03/01 21:17:05 pacho Exp $
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org> clang-3.3-r100.ebuild:
+  amd64 stable, bug #491018
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> clang-3.3-r100.ebuild:
   x86 stable wrt bug #491018
