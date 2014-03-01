@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.49.ebuild,v 1.1 2013/07/21 09:33:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.51.ebuild,v 1.1 2014/03/01 07:40:12 radhermit Exp $
 
 EAPI=5
-inherit eutils toolchain-funcs prefix
+inherit eutils toolchain-funcs
 
 DESCRIPTION="a growing collection of the unix tools that nobody thought to write thirty years ago"
 HOMEPAGE="http://joeyh.name/code/moreutils/"
@@ -31,9 +31,6 @@ DEPEND="
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.47-dtd-path.patch
-	eprefixify *.docbook
-
 	# don't build manpages
 	if ! use doc ; then
 		sed -i -e '/^all:/s/$(MANS)//' -e '/man1/d' Makefile || die

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-cdio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.88 2013/10/15 08:09:58 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.89 2014/03/01 07:58:07 pacho Exp $
+
+*gst-plugins-cdio-1.2.3 (01 Mar 2014)
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org> +gst-plugins-cdio-1.2.3.ebuild,
+  gst-plugins-cdio-1.2.0.ebuild:
+  Version bump
 
   15 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-cdio-1.0.10.ebuild:
   Stable for alpha, wrt bug #480908
