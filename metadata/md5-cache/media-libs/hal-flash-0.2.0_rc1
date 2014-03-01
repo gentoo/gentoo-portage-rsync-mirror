@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/dbus !sys-apps/hal sys-fs/udisks:0
 SLOT=0
 SRC_URI=http://build.opensuse.org/package/rawsourcefile/devel:openSUSE:Factory/hal-flash/libhal1-flash_0.2.0rc1.tar.gz
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=816cbc28da3e6c978f0f13057ec38a40

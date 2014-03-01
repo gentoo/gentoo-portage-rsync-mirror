@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.160 2014/02/18 03:57:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.161 2014/03/01 11:51:08 slyfox Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -353,7 +353,7 @@ eautomake() {
 	done
 
 	_automake_version() {
-		automake --version 2>/dev/null | sed -n -e '1{s:.*(GNU automake) ::p;q}'
+		autotools_run_tool automake --version 2>/dev/null | sed -n -e '1{s:.*(GNU automake) ::p;q}'
 	}
 
 	if [[ -z ${makefile_name} ]] ; then

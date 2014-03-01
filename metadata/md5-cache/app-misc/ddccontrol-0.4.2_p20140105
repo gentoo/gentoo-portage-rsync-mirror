@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-misc/ddccontrol-db dev-libs/libxml2:2 sys-apps/pciutils gtk? ( x11-libs/gtk+:2 ) gnome? ( >=gnome-base/gnome-panel-2.10 ) nls? ( sys-devel/gettext ) video_cards_fglrx? ( x11-libs/amd-adl-sdk )
 SLOT=0
 SRC_URI=https://github.com/ddccontrol/ddccontrol/archive/9d89d8c0b959a4da62ecc50fb2aeb23142d4bfb4.tar.gz -> ddccontrol-0.4.2_p20140105.tar.gz
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a0a2b47f13694d72bfa77945bc0133ef

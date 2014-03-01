@@ -10,5 +10,5 @@ RDEPEND=!app-admin/fam !<app-admin/gamin-0.1.10 python? ( =dev-lang/python-2* )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnome/sources/gamin/0.1/gamin-0.1.10.tar.bz2 mirror://gentoo/gamin-0.1.9-freebsd.patch.bz2 http://dev.gentoo.org/~grobian/patches/libgamin-0.1.10-opensolaris.patch.bz2 http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=2a4cf2dd701f260c0ee87f35051ff626

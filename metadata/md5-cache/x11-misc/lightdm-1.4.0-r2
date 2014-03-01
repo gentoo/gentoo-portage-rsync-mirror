@@ -11,5 +11,5 @@ RDEPEND=>=dev-libs/glib-2.32.3:2 dev-libs/libxml2 sys-apps/accountsservice virtu
 REQUIRED_USE=|| ( gtk kde razor )
 SLOT=0
 SRC_URI=http://launchpad.net/lightdm/1.4/1.4.0/+download/lightdm-1.4.0.tar.gz mirror://gentoo/introspection-20110205.m4.tar.bz2
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=6a7441d7efe678a3b406b1554f4d7e7c

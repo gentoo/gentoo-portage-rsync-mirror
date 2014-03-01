@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=x11-libs/gtk+-3:3 >=gnome-base/libglade-2.3 dev-libs/popt password? ( dev-libs/openssl ) fam? ( virtual/fam ) gnome? ( >=gnome-base/gnome-panel-3.0 ) x11-proto/xproto x11-libs/libX11 x11-libs/pango x11-libs/gdk-pixbuf
 SLOT=0
 SRC_URI=mirror://sourceforge/gnubiff/gnubiff-2.2.15.tar.gz
-_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=1ae878688b1de2e48137985697d6940a

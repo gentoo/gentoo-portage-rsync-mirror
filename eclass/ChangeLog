@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1150 2014/03/01 10:18:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1151 2014/03/01 11:51:08 slyfox Exp $
+
+  01 Mar 2014; Sergei Trofimovich <slyfox@gentoo.org> autotools.eclass:
+  Call 'automake' via 'autotools_run_tool' (found by 'ebuild.sh' QA warnings).
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> gnome2-utils.eclass:
   Add multilib love for gnome2_gdk_pixbuf_update().
