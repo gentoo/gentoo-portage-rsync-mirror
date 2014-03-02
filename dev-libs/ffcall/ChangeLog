@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ffcall
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.43 2014/02/08 13:42:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.44 2014/03/02 09:39:44 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> ffcall-1.10-r2.ebuild:
+  amd64 stable, bug #438334
 
 *ffcall-1.10-r4 (08 Feb 2014)
 

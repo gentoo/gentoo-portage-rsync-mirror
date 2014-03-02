@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/createtorrent-1.1.4.ebuild,v 1.2 2008/10/25 21:42:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/createtorrent-1.1.4.ebuild,v 1.3 2014/03/02 09:38:58 pacho Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.createtorrent.com/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"

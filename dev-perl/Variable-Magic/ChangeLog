@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Variable-Magic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.63 2014/02/24 02:08:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.64 2014/03/02 09:52:13 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> Variable-Magic-0.530.0.ebuild:
+  amd64 stable, bug #495500
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Variable-Magic-0.530.0.ebuild:

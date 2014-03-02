@@ -1,6 +1,9 @@
 # ChangeLog for games-util/ucon64
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.16 2012/03/19 07:46:07 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.17 2014/03/02 09:39:21 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> ucon64-2.0.0.ebuild:
+  amd64 stable, bug #382169
 
   19 Mar 2012; Tupone Alfredo <tupone@gentoo.org>
   files/ucon64-2.0.0-zlib.patch:
@@ -62,4 +65,3 @@
   ucon64-1.9.8.3.ebuild:
   initial commit; ebuild submitted by Luca Marra and heavily modified (bug
   #42078)
-
