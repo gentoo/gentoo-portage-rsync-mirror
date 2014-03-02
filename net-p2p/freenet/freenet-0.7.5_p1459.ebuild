@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1459.ebuild,v 1.1 2014/02/13 19:33:24 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1459.ebuild,v 1.2 2014/03/02 14:47:05 tomwij Exp $
 
 EAPI="3"
 DATE=20130915
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-CDEPEND=">=dev-java/bcprov-1.45:0
+CDEPEND="dev-java/bcprov:1.49
 	dev-java/commons-compress:0
 	dev-db/db-je:3.3
 	dev-java/fec:0
@@ -50,7 +50,7 @@ JAVA_ANT_ENCODING="utf8"
 EANT_BUILD_TARGET="package"
 EANT_TEST_TARGET="unit"
 EANT_BUILD_XML="build-clean.xml"
-EANT_GENTOO_CLASSPATH="bcprov,commons-compress,db4o-jdk5,db4o-jdk12,db4o-jdk11,db-je-3.3,fec,java-service-wrapper,jbitcollider-core,lzma,lzmajio,mersennetwister"
+EANT_GENTOO_CLASSPATH="bcprov-1.49,commons-compress,db4o-jdk5,db4o-jdk12,db4o-jdk11,db-je-3.3,fec,java-service-wrapper,jbitcollider-core,lzma,lzmajio,mersennetwister"
 EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.bouncycastle.present=true -Dlib.junit.present=true -Dtest.skip=true"
 
 S=${WORKDIR}/fred-official-build0${PV#*p}

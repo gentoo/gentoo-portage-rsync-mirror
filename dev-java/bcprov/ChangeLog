@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.59 2014/02/06 13:58:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.60 2014/03/02 14:45:06 tomwij Exp $
+
+*bcprov-1.49-r3 (02 Mar 2014)
+
+  02 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +bcprov-1.49-r3.ebuild:
+  Make slot for 1.49 to unbreak reverse dependency net-p2p/freenet.
 
 *bcprov-1.50 (06 Feb 2014)
 
