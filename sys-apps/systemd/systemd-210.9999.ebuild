@@ -1,8 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.ebuild,v 1.7 2014/03/02 16:51:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.9999.ebuild,v 1.3 2014/03/02 16:51:29 mgorny Exp $
 
 EAPI=5
+
+#if LIVE
+AUTOTOOLS_AUTORECONF=yes
+EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}-stable
+	http://cgit.freedesktop.org/${PN}/${PN}-stable/"
+EGIT_BRANCH=v210-stable
+
+inherit git-r3
+#endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -76,7 +85,28 @@ DEPEND="${COMMON_DEPEND}
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
+#if LIVE
+DEPEND="${DEPEND}
+	app-text/docbook-xml-dtd:4.2
+	app-text/docbook-xml-dtd:4.5
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt:0
+	dev-libs/gobject-introspection
+	>=dev-libs/libgcrypt-1.4.5:0"
+
+SRC_URI=
+KEYWORDS=
+#endif
+
 src_prepare() {
+#if LIVE
+	if use doc; then
+		gtkdocize --docdir docs/ || die
+	else
+		echo 'EXTRA_DIST =' > docs/gtk-doc.make
+	fi
+
+#endif
 	# Bug 463376
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 

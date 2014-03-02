@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.97 2014/03/02 16:15:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.99 2014/03/02 16:51:29 mgorny Exp $
 
 EAPI=5
 
@@ -98,12 +98,14 @@ KEYWORDS=
 #endif
 
 src_prepare() {
+#if LIVE
 	if use doc; then
 		gtkdocize --docdir docs/ || die
 	else
 		echo 'EXTRA_DIST =' > docs/gtk-doc.make
 	fi
 
+#endif
 	# Bug 463376
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
@@ -162,6 +164,10 @@ pkg_setup() {
 
 multilib_src_configure() {
 	local myeconfargs=(
+		# disable -flto since it is an optimization flag
+		# and makes distcc less effective
+		cc_cv_CFLAGS__flto=no
+
 		--disable-maintainer-mode
 		--localstatedir=/var
 		--with-pamlibdir=$(getpam_mod_dir)
