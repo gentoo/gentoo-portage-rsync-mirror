@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.6 2014/03/01 09:27:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.7 2014/03/02 14:04:51 ssuominen Exp $
 
 EAPI=5
 
@@ -469,6 +469,33 @@ pkg_postinst() {
 	elog "fixing known issues visit:"
 	elog "http://wiki.gentoo.org/wiki/Udev"
 	elog "http://wiki.gentoo.org/wiki/Udev/upgrade"
+
+	# If user has disabled 80-net-name-slot.rules using a empty file or a symlink to /dev/null,
+	# do the same for 80-net-setup-link.rules to keep the old behavior
+	local net_move=no
+	local net_name_slot_sym=no
+	local net_rules_path="${ROOT}"/etc/udev/rules.d
+	local net_name_slot="${net_rules_path}"/80-net-name-slot.rules
+	local net_setup_link="${net_rules_path}"/80-net-setup-link.rules
+	if [[ -e ${net_setup_link} ]]; then
+		net_move=no
+	else
+		[[ -f ${net_name_slot} && $(sed -e "/^#/d" -e "/^\W*$/d" ${net_name_slot} | wc -l) == 0 ]] && net_move=yes
+		if [[ -L ${net_name_slot} && $(readlink ${net_name_slot}) == /dev/null ]]; then
+			net_move=yes
+			net_name_slot_sym=yes
+		fi
+	fi
+	if [[ ${net_move} == yes ]]; then
+		ebegin "Because empty ${net_name_slot} was detected, we're adding ${net_setup_link}"
+
+		if [[ ${net_name_slot_sym} == yes ]]; then
+			ln -nfs /dev/null "${net_setup_link}"
+		else
+			cp "${net_name_slot}" "${net_setup_link}"
+		fi
+		eend $?
+	fi
 
 	# Update hwdb database in case the format is changed by udev version.
 	if has_version 'sys-apps/hwids[udev]'; then

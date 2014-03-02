@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-1.4_pre20140301.ebuild,v 1.1 2014/03/02 03:17:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-1.4_pre20140301.ebuild,v 1.2 2014/03/02 14:09:56 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT="python2_7"
@@ -22,11 +22,10 @@ else
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-DEPEND=""
-RDEPEND="${DEPEND}
-	>=net-wireless/gr-osmosdr-0.0.1
+DEPEND=">=net-wireless/gr-osmosdr-0.0.1
 	>=net-wireless/gnuradio-3.7:=[utils]
 	>=net-wireless/rtl-sdr-0.5.0"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	newbin ${PN}.py ${PN}

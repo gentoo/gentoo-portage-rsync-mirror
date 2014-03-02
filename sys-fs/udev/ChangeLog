@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1001 2014/03/01 09:27:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1002 2014/03/02 14:04:51 ssuominen Exp $
+
+  02 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild,
+  udev-9999.ebuild:
+  Create /etc/udev/rules.d/80-net-setup-link.rules if user has empty
+  /etc/udev/rules.d/80-net-name-slot.rules or it's a symlink to /dev/null wrt
+  #503140 by Jorge Manuel B. S. Vicetto
 
   01 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild,
   udev-9999.ebuild:
