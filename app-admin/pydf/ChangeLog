@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.44 2014/02/24 02:05:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.45 2014/03/02 00:03:31 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> pydf-10-r1.ebuild:
+  amd64 stable, bug #491900
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pydf-10-r1.ebuild:
   x86 stable wrt bug #491900
