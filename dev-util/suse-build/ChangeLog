@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.22 2014/02/25 12:49:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.23 2014/03/02 17:28:39 miska Exp $
+
+*suse-build-2014.02.20 (02 Mar 2014)
+
+  02 Mar 2014; Michal Hrusecky <miska@gentoo.org>
+  +suse-build-2014.02.20.ebuild,
+  +files/suse-build-20140220-libexec-paths.patch:
+  Update to new version 20140220
 
   25 Feb 2014; Tomáš Chvátal <scarabeus@gentoo.org>
   -suse-build-2013.10.15-r1.ebuild, -suse-build-2013.10.15.ebuild,

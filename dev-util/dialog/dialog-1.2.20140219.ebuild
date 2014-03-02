@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.2.20130523.ebuild,v 1.1 2013/08/27 20:13:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.2.20140219.ebuild,v 1.1 2014/03/02 17:23:40 jer Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit eutils multilib versionator
 
 MY_PV="$(get_version_component_range 1-2)-$(get_version_component_range 3)"
@@ -29,7 +28,7 @@ DEPEND="
 "
 
 src_prepare() {
-	sed -i configure -e '/LIB_CREATE=/s:${CC}:& ${LDFLAGS}:g' || die
+	sed -i -e '/LIB_CREATE=/s:${CC}:& ${LDFLAGS}:g' configure || die
 	sed -i '/$(LIBTOOL_COMPILE)/s:$: $(LIBTOOL_OPTS):' makefile.in || die
 }
 
@@ -43,15 +42,11 @@ src_configure() {
 }
 
 src_install() {
-	if use minimal; then
-		default
-	else
-		emake DESTDIR="${D}" install-full
-	fi
-
-	dodoc CHANGES README
+	use minimal && default || emake DESTDIR="${D}" install-full
 
 	use examples && dodoc -r samples
 
-	use static-libs || prune_libtool_files
+	dodoc CHANGES README
+
+	prune_libtool_files
 }
