@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.269 2014/02/22 08:51:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.270 2014/03/02 02:54:55 vapier Exp $
+
+  02 Mar 2014; Mike Frysinger <vapier@gentoo.org> file-5.17.ebuild,
+  file-9999.ebuild:
+  Mark arm64/m68k/mips/s390/sh stable.
 
   22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -file-5.15.ebuild,
   -file-5.16.ebuild:

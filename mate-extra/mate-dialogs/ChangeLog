@@ -1,0 +1,11 @@
+# ChangeLog for mate-extra/mate-dialogs
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-dialogs/ChangeLog,v 1.1 2014/03/02 02:32:25 tomwij Exp $
+
+*mate-dialogs-1.6.2 (02 Mar 2014)
+
+  02 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-dialogs-1.6.2.ebuild,
+  +metadata.xml:
+  New ebuild for mate-extra/mate-dialogs, display MATE dialogs from the
+  commandline and shell scripts; imported from the mate-overlay, reviewed and
+  adjusted.
