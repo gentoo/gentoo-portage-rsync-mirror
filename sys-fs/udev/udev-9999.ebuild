@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.277 2014/03/02 17:55:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.278 2014/03/02 19:32:37 ssuominen Exp $
 
 EAPI=5
 
@@ -335,9 +335,6 @@ multilib_src_install() {
 			emake -C docs/libudev DESTDIR="${D}" install
 			use gudev && emake -C docs/gudev DESTDIR="${D}" install
 		fi
-
-		# install udevadm compatibility symlink
-		dosym {../bin,sbin}/udevadm
 
 		if [[ ${PV} = 9999* ]]; then
 			doman man/{systemd.link.5,udev.7,udevadm.8,systemd-udevd.service.8}

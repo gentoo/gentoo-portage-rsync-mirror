@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-streamdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.25 2014/01/29 14:10:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.26 2014/03/02 19:42:41 hd_brummy Exp $
+
+  02 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-streamdev-0.6.1.ebuild:
+  stable amd64 x86, wrt bug 502848
 
   29 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-streamdev-0.6.1.ebuild:

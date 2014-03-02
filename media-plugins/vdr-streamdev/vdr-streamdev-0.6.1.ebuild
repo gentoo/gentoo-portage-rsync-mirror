@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.6.1.ebuild,v 1.3 2014/01/29 14:10:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.6.1.ebuild,v 1.4 2014/03/02 19:42:41 hd_brummy Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="client +server"
 
 DEPEND=">=media-video/vdr-1.7.25"

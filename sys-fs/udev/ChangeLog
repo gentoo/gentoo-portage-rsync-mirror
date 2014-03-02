@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1003 2014/03/02 17:55:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1004 2014/03/02 19:32:37 ssuominen Exp $
+
+  02 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Punt /sbin/udevadm compability symlink which has been removed from sys-
+  apps/systemd with 207's ebuild without bugs filed. The consumers should be
+  fixed to not hardcode the path.
 
   02 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild,
   udev-9999.ebuild:
