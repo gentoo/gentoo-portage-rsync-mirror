@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.7 2014/03/02 14:04:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.8 2014/03/02 17:55:48 ssuominen Exp $
 
 EAPI=5
 
@@ -383,8 +383,8 @@ multilib_src_install_all() {
 pkg_preinst() {
 	local htmldir
 	for htmldir in gudev libudev; do
-		if [[ -d ${ROOT}usr/share/gtk-doc/html/${htmldir} ]]; then
-			rm -rf "${ROOT}"usr/share/gtk-doc/html/${htmldir}
+		if [[ -d ${ROOT%/}/usr/share/gtk-doc/html/${htmldir} ]]; then
+			rm -rf "${ROOT%/}"/usr/share/gtk-doc/html/${htmldir}
 		fi
 		if [[ -d ${D}/usr/share/doc/${PF}/html/${htmldir} ]]; then
 			dosym ../../doc/${PF}/html/${htmldir} \
@@ -394,17 +394,17 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	mkdir -p "${ROOT}"run
+	mkdir -p "${ROOT%/}"/run
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
-	rmdir "${ROOT}"dev/loop 2>/dev/null
-	if [[ -d ${ROOT}dev/loop ]]; then
+	rmdir "${ROOT%/}"/dev/loop 2>/dev/null
+	if [[ -d ${ROOT%/}/dev/loop ]]; then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
 	fi
 
-	local fstab="${ROOT}"etc/fstab dev path fstype rest
+	local fstab="${ROOT%/}"/etc/fstab dev path fstype rest
 	while read -r dev path fstype rest; do
 		if [[ ${path} == /dev && ${fstype} != devtmpfs ]]; then
 			ewarn "You need to edit your /dev line in ${fstab} to have devtmpfs"
@@ -413,7 +413,7 @@ pkg_postinst() {
 		fi
 	done < "${fstab}"
 
-	if [[ -d ${ROOT}usr/lib/udev ]]; then
+	if [[ -d ${ROOT%/}/usr/lib/udev ]]; then
 		ewarn
 		ewarn "Please re-emerge all packages on your system which install"
 		ewarn "rules and helpers in /usr/lib/udev. They should now be in"
@@ -424,8 +424,8 @@ pkg_postinst() {
 		ewarn "Note that qfile can be found in app-portage/portage-utils"
 	fi
 
-	local old_cd_rules="${ROOT}"etc/udev/rules.d/70-persistent-cd.rules
-	local old_net_rules="${ROOT}"etc/udev/rules.d/70-persistent-net.rules
+	local old_cd_rules="${ROOT%/}"/etc/udev/rules.d/70-persistent-cd.rules
+	local old_net_rules="${ROOT%/}"/etc/udev/rules.d/70-persistent-net.rules
 	for old_rules in "${old_cd_rules}" "${old_net_rules}"; do
 		if [[ -f ${old_rules} ]]; then
 			ewarn
@@ -449,7 +449,7 @@ pkg_postinst() {
 	elog "file /etc/systemd/network/99-default.link, or symlink it to /dev/null"
 	elog "to disable the feature."
 
-	if has_version sys-apps/biosdevname; then
+	if has_version 'sys-apps/biosdevname'; then
 		ewarn
 		ewarn "You can replace the functionality of sys-apps/biosdevname which has been"
 		ewarn "detected to be installed with the new predictable network interface names."
@@ -474,7 +474,7 @@ pkg_postinst() {
 	# do the same for 80-net-setup-link.rules to keep the old behavior
 	local net_move=no
 	local net_name_slot_sym=no
-	local net_rules_path="${ROOT}"/etc/udev/rules.d
+	local net_rules_path="${ROOT%/}"/etc/udev/rules.d
 	local net_name_slot="${net_rules_path}"/80-net-name-slot.rules
 	local net_setup_link="${net_rules_path}"/80-net-setup-link.rules
 	if [[ -e ${net_setup_link} ]]; then
@@ -487,7 +487,7 @@ pkg_postinst() {
 		fi
 	fi
 	if [[ ${net_move} == yes ]]; then
-		ebegin "Because empty ${net_name_slot} was detected, we're adding ${net_setup_link}"
+		ebegin "Copying ${net_name_slot} to ${net_setup_link}"
 
 		if [[ ${net_name_slot_sym} == yes ]]; then
 			ln -nfs /dev/null "${net_setup_link}"
