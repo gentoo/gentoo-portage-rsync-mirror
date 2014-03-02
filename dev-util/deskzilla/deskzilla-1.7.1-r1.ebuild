@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.6.1.ebuild,v 1.4 2012/05/21 20:04:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.7.1-r1.ebuild,v 1.1 2014/03/02 07:30:00 ercpe Exp $
 
-EAPI=1
+EAPI=5
 
-inherit eutils java-pkg-2 versionator
+inherit java-pkg-2 versionator
 
 DESCRIPTION="A desktop client for Mozilla's Bugzilla bug tracking system."
 HOMEPAGE="http://almworks.com/deskzilla"
@@ -12,7 +12,8 @@ HOMEPAGE="http://almworks.com/deskzilla"
 MY_PV=$(replace_all_version_separators '_') #${PV/beta/b})
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="http://d1.almworks.com/.files/${MY_P}_without_jre.tar.gz"
+SRC_URI="http://d1.almworks.com/.files/${MY_P}_without_jre.tar.gz
+		http://dev.gentoo.org/~ercpe/distfiles/${CATEGORY}/${PN}/deskzilla_gentoo.license"
 LICENSE="ALMWorks-1.2"
 # license does not allow redistributing, and they seem to silently update
 # distfiles...
@@ -61,7 +62,7 @@ src_install () {
 	insinto "${dir}"
 	doins -r components etc license lib log deskzilla.url
 	insinto "${dir}/license"
-	doins "${FILESDIR}"/${PN}_gentoo.license
+	doins "${DISTDIR}"/deskzilla_gentoo.license
 
 	java-pkg_jarinto "${dir}"
 	java-pkg_dojar ${PN}.jar
