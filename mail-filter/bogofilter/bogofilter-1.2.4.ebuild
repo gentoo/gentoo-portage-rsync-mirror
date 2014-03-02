@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.9 2012/06/04 23:40:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.4.ebuild,v 1.1 2014/03/02 13:44:54 pacho Exp $
 
-EAPI=2
-
-inherit db-use eutils flag-o-matic toolchain-funcs
+EAPI=5
+inherit autotools db-use eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -12,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb sqlite tokyocabinet"
 
 DEPEND="virtual/libiconv
@@ -24,8 +23,9 @@ DEPEND="virtual/libiconv
 			!tokyocabinet? ( >=sys-libs/db-3.2 )
 		)
 	)
-	sci-libs/gsl"
-#	app-arch/pax" # only needed for bf_tar
+	sci-libs/gsl
+	app-arch/pax"
+# pax needed for bf_tar
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -43,6 +43,11 @@ pkg_setup() {
 		ewarn "with the current version (old use flags) and load it with the new version!"
 		ewarn
 	fi
+}
+
+src_prepare() {
+	sed -i -e 's/ -ggdb//' configure.ac || die # bug 445918
+	eautoreconf
 }
 
 src_configure() {
@@ -74,43 +79,37 @@ src_configure() {
 
 	# Include the right berkdb headers for FreeBSD
 	if ${berkdb} ; then
-		append-flags "-I$(db_includedir)"
+		append-cppflags "-I$(db_includedir)"
 	fi
 
 	# bug #324405
 	if [[ $(gcc-version) == "3.4" ]] ; then
-		epatch "${FILESDIR}"/${P}-gcc34.patch
+		epatch "${FILESDIR}"/${PN}-1.2.2-gcc34.patch
 	fi
 
-	econf ${myconf} || die "configure failed"
+	econf ${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
 	exeinto /usr/share/${PN}/contrib
 	doexe contrib/{bogofilter-qfe,parmtest,randomtrain}.sh \
 		contrib/{bfproxy,bogominitrain,mime.get.rfc822,printmaildir}.pl \
-		contrib/{spamitarium,stripsearch}.pl || die "doexec failed"
+		contrib/{spamitarium,stripsearch}.pl
 
 	insinto /usr/share/${PN}/contrib
 	doins contrib/{README.*,dot-qmail-bogofilter-default} \
 		contrib/{bogogrep.c,bogo.R,bogofilter-milter.pl,*.example} \
 		contrib/vm-bogofilter.el \
-		contrib/{trainbogo,scramble}.sh || die "doins failed"
+		contrib/{trainbogo,scramble}.sh
 
 	dodoc AUTHORS NEWS README RELEASE.NOTES* TODO GETTING.STARTED \
-		doc/integrating-with-* doc/README.{db,sqlite} || die "dodoc failed"
+		doc/integrating-with-* doc/README.{db,sqlite}
 
 	dohtml doc/*.html
 
 	dodir /usr/share/doc/${PF}/samples
 	mv "${D}"/etc/bogofilter.cf.example "${D}"/usr/share/doc/${PF}/samples/
 	rmdir "${D}"/etc
-}
-
-pkg_postinst() {
-	echo
-	elog "If you need \"${ROOT}usr/bin/bf_tar\" please install app-arch/pax."
-	echo
 }
