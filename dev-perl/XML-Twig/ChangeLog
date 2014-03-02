@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.104 2014/02/24 02:15:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.105 2014/03/02 10:37:12 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> XML-Twig-3.440.0.ebuild:
+  amd64 stable, bug #495522
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> XML-Twig-3.440.0.ebuild:
   x86 stable wrt bug #495522

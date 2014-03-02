@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=Video Frequencies perl module, for use with ivtv-ptune
 EAPI=5
 HOMEPAGE=http://ivtv.sourceforge.net
-KEYWORDS=~amd64 ia64 ~ppc x86
+KEYWORDS=amd64 ia64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://sourceforge/ivtv/Video-Frequencies-0.03.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=44a8ee4e9c4ac3c0268fcb02a3bac278
+_md5_=6c949bf66d77c1f609465528b11f1a81

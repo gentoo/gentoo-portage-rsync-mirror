@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.4-r1.ebuild,v 1.5 2014/02/24 02:33:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.4-r1.ebuild,v 1.6 2014/03/02 10:42:59 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~arm ia64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm ia64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 SLOT="0"
 
 RDEPEND="dev-python/markdown[${PYTHON_USEDEP}]"
