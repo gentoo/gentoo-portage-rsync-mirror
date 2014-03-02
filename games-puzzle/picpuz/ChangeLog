@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/picpuz
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.17 2013/01/24 00:20:53 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.18 2014/03/02 19:27:15 slyfox Exp $
+
+  02 Mar 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/picpuz-2.5-pthread-underlinking.patch, picpuz-2.5.ebuild:
+  Fix pthread underlinking.
 
   24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/picpuz-2.1.1-build.patch, -picpuz-2.1.1.ebuild:
