@@ -4,10 +4,10 @@ DESCRIPTION=Log::Log4perl is a Perl port of the widely popular log4j logging pac
 EAPI=4
 HOMEPAGE=http://log4perl.sourceforge.net/
 IUSE=test
-KEYWORDS=~amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=virtual/perl-Time-HiRes || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSCHILLI/Log-Log4perl-1.42.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=4bd05555ac7de027db72fab4950fef32
+_md5_=526a6bb387bc7e96b7b06b0ab02f7338

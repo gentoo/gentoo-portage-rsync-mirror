@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.360.0.ebuild,v 1.1 2013/08/17 13:54:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.360.0.ebuild,v 1.2 2014/03/02 10:26:45 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="The Perl Image-Info Module"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-perl/IO-String-1.01
