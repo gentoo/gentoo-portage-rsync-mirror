@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/text-icu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/ChangeLog,v 1.4 2013/12/10 11:06:08 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/ChangeLog,v 1.5 2014/03/02 21:32:52 dilfridge Exp $
+
+  02 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  text-icu-0.6.3.7.ebuild:
+  Add subslot dependency on dev-libs/icu
 
 *text-icu-0.6.3.7 (10 Dec 2013)
 

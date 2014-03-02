@@ -1,15 +1,15 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
-DEPEND=app-arch/bzip2 app-text/ghostscript-gpl dev-libs/libpcre virtual/blas || ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath ) cairo? ( x11-libs/cairo[X] x11-libs/pango ) icu? ( dev-libs/icu ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) readline? ( sys-libs/readline ) tk? ( dev-lang/tk ) X? ( x11-libs/libXmu x11-misc/xdg-utils ) virtual/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-fontsrecommended ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran
+DEPEND=app-arch/bzip2 app-text/ghostscript-gpl dev-libs/libpcre virtual/blas || ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath ) cairo? ( x11-libs/cairo[X] x11-libs/pango ) icu? ( dev-libs/icu:= ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) readline? ( sys-libs/readline ) tk? ( dev-lang/tk ) X? ( x11-libs/libXmu x11-misc/xdg-utils ) virtual/pkgconfig doc? ( virtual/latex-base dev-texlive/texlive-fontsrecommended ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran
 DESCRIPTION=Language and environment for statistical computing and graphics
 EAPI=5
 HOMEPAGE=http://www.r-project.org/
 IUSE=bash-completion cairo doc icu java jpeg lapack minimal nls openmp perl png prefix profile readline static-libs tiff tk X
 KEYWORDS=~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos
 LICENSE=|| ( GPL-2 GPL-3 ) LGPL-2.1
-RDEPEND=app-arch/bzip2 app-text/ghostscript-gpl dev-libs/libpcre virtual/blas || ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath ) cairo? ( x11-libs/cairo[X] x11-libs/pango ) icu? ( dev-libs/icu ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) readline? ( sys-libs/readline ) tk? ( dev-lang/tk ) X? ( x11-libs/libXmu x11-misc/xdg-utils ) ( || ( <sys-libs/zlib-1.2.5.1-r1 >=sys-libs/zlib-1.2.5.1-r2[minizip] ) ) app-arch/xz-utils java? ( >=virtual/jre-1.5 ) virtual/fortran
+RDEPEND=app-arch/bzip2 app-text/ghostscript-gpl dev-libs/libpcre virtual/blas || ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath ) cairo? ( x11-libs/cairo[X] x11-libs/pango ) icu? ( dev-libs/icu:= ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) perl? ( dev-lang/perl ) png? ( media-libs/libpng ) readline? ( sys-libs/readline ) tk? ( dev-lang/tk ) X? ( x11-libs/libXmu x11-misc/xdg-utils ) ( || ( <sys-libs/zlib-1.2.5.1-r1 >=sys-libs/zlib-1.2.5.1-r2[minizip] ) ) app-arch/xz-utils java? ( >=virtual/jre-1.5 ) virtual/fortran
 REQUIRED_USE=png? ( || ( cairo X ) ) jpeg? ( || ( cairo X ) ) tiff? ( || ( cairo X ) )
 RESTRICT=minimal? ( test )
 SLOT=0
 SRC_URI=mirror://cran/src/base/R-3/R-3.0.2.tar.gz bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/R-20130129.bash_completion.bz2 )
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=32a80c2812e720391a24395f0f29dcf6
+_md5_=e09ca0f086ae6ce8f216b4154198d9a6

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.2.ebuild,v 1.4 2014/02/17 12:34:34 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.2.ebuild,v 1.5 2014/03/02 21:33:49 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ CDEPEND="
 	virtual/blas
 	|| ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath )
 	cairo? ( x11-libs/cairo[X] x11-libs/pango )
-	icu? ( dev-libs/icu )
+	icu? ( dev-libs/icu:= )
 	jpeg? ( virtual/jpeg:0 )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )

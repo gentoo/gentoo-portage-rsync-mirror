@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-6.1.0.ebuild,v 1.1 2014/02/26 08:26:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-6.1.0.ebuild,v 1.2 2014/03/02 21:34:47 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="opengl nls doc examples gdbm gmp ssl +unicode pcre"
 RDEPEND="sys-libs/readline
 	opengl? ( media-libs/freeglut )
 	nls? ( sys-devel/gettext )
-	unicode? ( >=dev-libs/icu-2.6 )
+	unicode? ( >=dev-libs/icu-2.6:= )
 	gdbm? ( >=sys-libs/gdbm-1.8.3-r1 )
 	gmp? ( >=dev-libs/gmp-4.1.4 )
 	ssl? ( dev-libs/openssl )

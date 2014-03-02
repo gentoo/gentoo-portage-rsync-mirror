@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.230 2014/02/17 12:34:34 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.231 2014/03/02 21:33:49 dilfridge Exp $
+
+  02 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> R-3.0.2.ebuild:
+  Add subslot dependency on dev-libs/icu
 
   17 Feb 2014; Benda Xu <heroxbd@gentoo.org> R-3.0.2.ebuild:
   Pass correct blas path to configure, pass {tk,tcl}-config scripts to configure

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.15_p20130222.ebuild,v 1.3 2013/09/01 23:15:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.15_p20130222.ebuild,v 1.4 2014/03/02 21:40:04 ulm Exp $
 
 EAPI=4
 
@@ -10,12 +10,11 @@ DESCRIPTION="uEmacs/PK is an enhanced version of MicroEMACS"
 HOMEPAGE="http://git.kernel.org/?p=editors/uemacs/uemacs.git;a=summary
 	ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK"
 # snapshot from git repo
-SRC_URI="mirror://gentoo/uemacs-${PV}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ulm/distfiles/uemacs-${PV}.tar.xz"
 
 LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
-IUSE=""
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
