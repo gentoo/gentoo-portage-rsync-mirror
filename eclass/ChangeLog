@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1163 2014/03/02 11:50:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1164 2014/03/02 15:41:20 mgorny Exp $
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
+  Use git-r3 for live ebuilds.
 
   02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Clarify where EGIT_CLONE_TYPE and EGIT_MIN_CLONE_TYPE is supposed to be set.

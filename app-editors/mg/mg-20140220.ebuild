@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20140220.ebuild,v 1.2 2014/03/02 15:07:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20140220.ebuild,v 1.3 2014/03/02 15:37:43 ulm Exp $
 
 EAPI=5
 
@@ -35,10 +35,10 @@ src_compile() {
 	local pkgc=$(tc-getPKG_CONFIG)
 
 	emake CC="$(tc-getCC)" \
-		CPPFLAGS="-DFKEYS -DREGEX -DXKEYS -D__dead=__dead2 \
-			$("${pkgc}" --cflags libbsd-overlay)" \
+		CPPFLAGS="-DFKEYS -DREGEX -DXKEYS -D__dead=__dead2 $("${pkgc}" \
+			--cflags libbsd-overlay)" \
 		CFLAGS="${CFLAGS}" \
-		LIBS="$("${pkgc}" --libs ncurses) $("${pkgc}" --libs libbsd-overlay)"
+		LIBS="$("${pkgc}" --libs ncurses libbsd-overlay)"
 }
 
 src_install()  {

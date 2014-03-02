@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.272 2014/01/18 11:38:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.273 2014/03/02 15:54:54 dolsen Exp $
+
+  02 Mar 2014; Brian Dolbec <dolsen@gentoo.org> catalyst-9999.ebuild:
+  Swap out the ebuild for the new python structure.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> catalyst-2.0.12.2.ebuild,
   catalyst-2.0.14.ebuild, catalyst-2.0.15.ebuild, catalyst-2.0.16.ebuild,

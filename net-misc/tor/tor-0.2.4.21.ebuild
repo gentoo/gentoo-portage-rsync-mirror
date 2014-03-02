@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r2.ebuild,v 1.4 2014/01/08 06:31:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.21.ebuild,v 1.1 2014/03/02 15:50:46 blueness Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator user
+inherit eutils flag-o-matic readme.gentoo versionator toolchain-funcs user
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads test upnp web"
+IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
@@ -55,13 +55,7 @@ src_configure() {
 		$(use_enable transparent-proxy transparent) \
 		$(use_enable threads) \
 		$(use_enable upnp) \
-		$(use_enable web tor2web-mode) \
-		$(use_enable test unittests) \
-		$(use_enable test coverage)
-}
-
-src_test() {
-	emake check
+		$(use_enable web tor2web-mode)
 }
 
 src_install() {
@@ -69,7 +63,6 @@ src_install() {
 
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r6 tor
-	systemd_dounit "${FILESDIR}/${PN}.service"
 
 	emake DESTDIR="${D}" install
 
