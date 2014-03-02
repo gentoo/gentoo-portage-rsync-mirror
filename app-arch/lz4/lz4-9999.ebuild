@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.8 2013/10/13 12:13:49 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.9 2014/03/02 15:23:50 mgorny Exp $
 
 EAPI=5
 
 inherit cmake-utils multilib
 
-CMAKE_USE_DIR="${S}/cmake"
+CMAKE_USE_DIR="${S}/cmake_unofficial"
 
 if [ ${PV} == "9999" ] ; then
 	inherit subversion
@@ -28,7 +28,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	if [ ${PV} == "9999" ]
+	if [[ ${PV} == "9999" ]]
 	then
 		subversion_src_prepare
 	else
@@ -38,24 +38,19 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs=(-DBUILD_SHARED_LIBS=ON)
+	local mycmakeargs=(-DBUILD_LIBS=ON -DBUILD_SHARED_LIBS=ON)
 	cmake-utils_src_configure
 }
 
 src_install() {
-	dodir /usr
-	dodir "/usr/$(get_libdir)"
-	ln -s "$(get_libdir)" "${ED}usr/lib" || \
-		die "Cannot create temporary symlink from usr/lib to usr/$(get_libdir)"
+	if [[ $(get_libdir) != lib ]]; then
+		dodir "/usr/$(get_libdir)"
+		dosym "$(get_libdir)" /usr/lib
+	fi
 
 	cmake-utils_src_install
 
-	rm "${ED}usr/lib"
-
-	if [ -f "${ED}usr/bin/lz4c64" ]
-	then
-		dosym lz4c64 /usr/bin/lz4c
-	else
-		dosym lz4c32 /usr/bin/lz4c
+	if [[ $(get_libdir) != lib ]]; then
+		rm "${ED}usr/lib" || die
 	fi
 }

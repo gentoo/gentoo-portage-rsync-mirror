@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.13 2014/02/14 19:13:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.14 2014/03/02 15:23:50 mgorny Exp $
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> lz4-9999.ebuild:
+  Update the live ebuild to conform with changes upstream. Fix the src_install()
+  lib hack to handle $(get_libdir) == lib safely.
 
   14 Feb 2014; Markus Meier <maekke@gentoo.org> lz4-0_p106-r1.ebuild:
   add ~arm, bug #499468

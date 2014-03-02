@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/masscan/masscan-1.0.3.ebuild,v 1.1 2014/03/01 21:31:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/masscan/masscan-1.0.3-r1.ebuild,v 1.1 2014/03/02 15:30:07 jer Exp $
 
 EAPI=5
+inherit toolchain-funcs
 
 DESCRIPTION="Mass IP port scanner"
 HOMEPAGE="https://github.com/robertdavidgraham/masscan"
@@ -11,7 +12,6 @@ SRC_URI="${HOMEPAGE}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 SLOT="0"
 LICENSE="AGPL-3"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}"
@@ -22,7 +22,11 @@ src_prepare(){
 		-e "/^GITVER :=/s!= .(.*!=!g" \
 		-e '/$(CC)/s!-DGIT=\"$(GITVER)\"!!g' \
 		-e '/^CFLAGS =/{s,=,+=,;s,-g -ggdb,,;s,-O3,,;}' \
-		Makefile
+		Makefile || die
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
