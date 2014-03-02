@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp3splt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.35 2013/07/22 19:12:06 sping Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.36 2014/03/02 22:26:03 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> libmp3splt-0.9.0.ebuild:
+  amd64 stable, bug #495738
 
 *libmp3splt-0.9.0 (22 Jul 2013)
 
@@ -155,4 +158,3 @@
   13 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   +libmp3splt-0.4_rc1.ebuild:
   Initial commit for new mp3splt release candidate.
-

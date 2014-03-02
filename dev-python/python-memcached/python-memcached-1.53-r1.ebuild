@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.53-r1.ebuild,v 1.3 2014/02/24 00:20:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.53-r1.ebuild,v 1.4 2014/03/02 22:20:39 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.tummy.com/pub/python-memcached/old-releases/${P}.tar.gz"
 
 LICENSE="OSL-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]

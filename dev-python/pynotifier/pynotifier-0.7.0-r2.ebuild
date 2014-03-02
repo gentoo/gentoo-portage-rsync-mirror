@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0-r2.ebuild,v 1.4 2014/02/24 00:36:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/pynotifier-0.7.0-r2.ebuild,v 1.5 2014/03/02 22:19:26 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -13,7 +13,7 @@ SRC_URI="http://www.bitkipper.net/bytes/debian/dists/unstable/source/${PN}_${PV}
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="qt4 gtk"
 
 DEPEND=""

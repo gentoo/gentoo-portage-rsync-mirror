@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.3.ebuild,v 1.2 2014/02/07 20:44:29 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.3.ebuild,v 1.3 2014/03/02 22:12:23 pacho Exp $
 
 EAPI=5
 inherit eutils
@@ -33,6 +33,8 @@ RDEPEND="virtual/perl-Digest-MD5
 	xmlrpc? ( dev-perl/PlRPC )"
 
 DEPEND="app-arch/unzip"
+
+S="${WORKDIR}"
 
 src_prepare() {
 	local f

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.90 2014/03/02 21:58:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.91 2014/03/02 22:20:58 mrueg Exp $
+
+  02 Mar 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.7.5-r1.ebuild:
+  Add test removal back, because not everyone has access to /sys/block
 
 *facter-1.7.5-r1 (02 Mar 2014)
 

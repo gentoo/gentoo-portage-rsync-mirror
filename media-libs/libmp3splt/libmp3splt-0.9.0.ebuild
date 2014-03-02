@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.9.0.ebuild,v 1.1 2013/07/22 19:12:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.9.0.ebuild,v 1.2 2014/03/02 22:26:03 pacho Exp $
 
 EAPI=4
 inherit versionator autotools eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN:3}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc flac pcre"
 
 RDEPEND="media-libs/libmad

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-1.4.0.ebuild,v 1.1 2014/01/20 07:16:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-1.4.2.ebuild,v 1.1 2014/03/02 22:05:51 mrueg Exp $
 
 EAPI=5
 

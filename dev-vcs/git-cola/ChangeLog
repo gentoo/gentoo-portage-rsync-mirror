@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.23 2014/02/24 09:13:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.24 2014/03/02 22:21:54 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> git-cola-1.9.4.ebuild:
+  amd64 stable, bug #495680
 
 *git-cola-2.0.0 (24 Feb 2014)
 

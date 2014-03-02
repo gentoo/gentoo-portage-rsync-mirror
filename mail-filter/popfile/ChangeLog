@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.26 2014/02/07 20:44:29 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.27 2014/03/02 22:12:23 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> popfile-1.1.3.ebuild:
+  Fix build due eapi bump (#502086)
 
   07 Feb 2014; Chris Reffett <creffett@gentoo.org> popfile-1.1.3.ebuild:
   EAPI bump
