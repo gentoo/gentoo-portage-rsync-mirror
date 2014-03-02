@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/extra-syntax
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.24 2012/11/26 18:35:38 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.25 2014/03/01 23:13:31 pacho Exp $
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org> extra-syntax-4.ebuild:
+  amd64 stable, bug #218855
 
   26 Nov 2012; Tim Harder <radhermit@gentoo.org> extra-syntax-2.ebuild,
   extra-syntax-3.ebuild, extra-syntax-4.ebuild:
@@ -86,4 +89,3 @@
   12 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
   +extra-syntax-1.ebuild:
   New package
-

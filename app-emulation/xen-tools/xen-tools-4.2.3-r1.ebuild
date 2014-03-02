@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.3-r1.ebuild,v 1.5 2014/02/21 04:49:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.3-r1.ebuild,v 1.6 2014/03/01 23:06:15 mgorny Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ REQUIRED_USE="hvm? ( qemu )
 DEPEND="dev-libs/lzo:2
 	dev-libs/glib:2
 	dev-libs/yajl
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pypam[${PYTHON_USEDEP}]
 	sys-libs/zlib
@@ -97,7 +97,7 @@ pkg_setup() {
 	python-single-r1_pkg_setup
 	export "CONFIG_LOMOUNT=y"
 
-	if has_version dev-libs/libgcrypt; then
+	if has_version dev-libs/libgcrypt:0; then
 		export "CONFIG_GCRYPT=y"
 	fi
 
