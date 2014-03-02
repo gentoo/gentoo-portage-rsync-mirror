@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/quilt-el
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.20 2014/02/25 20:50:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.21 2014/03/02 22:44:56 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> quilt-el-0.48.0.ebuild:
+  amd64 stable, bug #501230
 
   25 Feb 2014; Markus Meier <maekke@gentoo.org> quilt-el-0.48.0.ebuild:
   arm stable, bug #501230
@@ -75,4 +78,3 @@
   +quilt-el-0.45.4.ebuild:
   Initial import, from Emacs overlay. Ebuild originally contributed by
   Diego Pettenò <flameeyes@gentoo.org>.
-

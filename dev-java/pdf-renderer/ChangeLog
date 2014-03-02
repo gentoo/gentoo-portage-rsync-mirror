@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdf-renderer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/ChangeLog,v 1.9 2014/02/19 18:01:02 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/ChangeLog,v 1.10 2014/03/02 22:34:33 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> pdf-renderer-0.9.1.ebuild:
+  amd64 stable, bug #496916
 
 *pdf-renderer-1.0.5 (19 Feb 2014)
 

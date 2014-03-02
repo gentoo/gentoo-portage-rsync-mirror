@@ -1,6 +1,9 @@
 # ChangeLog for media-video/devede
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.43 2013/01/16 13:03:09 lu_zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.44 2014/03/02 22:33:17 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> devede-3.23.0.ebuild:
+  amd64 stable, bug #496538
 
 *devede-3.23.0 (16 Jan 2013)
 

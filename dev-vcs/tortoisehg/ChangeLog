@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.52 2014/02/05 09:04:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.53 2014/03/02 22:38:32 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> tortoisehg-2.10.2.ebuild:
+  amd64 stable, bug #500348
 
 *tortoisehg-2.11 (05 Feb 2014)
 

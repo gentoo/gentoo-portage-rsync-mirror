@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.39 2014/02/24 01:54:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.40 2014/03/02 22:31:38 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> mod_wsgi-3.4-r1.ebuild:
+  amd64 stable, bug #495968
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mod_wsgi-3.4-r1.ebuild:
   x86 stable wrt bug #495968

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cipher-rc4
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-rc4/ChangeLog,v 1.4 2013/12/11 05:24:01 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-rc4/ChangeLog,v 1.5 2014/03/02 23:00:24 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> cipher-rc4-0.1.4.ebuild:
+  amd64 stable, bug #502658
 
 *cipher-rc4-0.1.4 (11 Dec 2013)
 

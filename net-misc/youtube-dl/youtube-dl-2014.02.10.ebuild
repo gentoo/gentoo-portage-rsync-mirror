@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.02.10.ebuild,v 1.3 2014/02/24 01:55:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.02.10.ebuild,v 1.4 2014/03/02 22:44:32 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://youtube-dl.org/downloads/${PV}/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ppc ~ppc64 x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="offensive test"
 
 DEPEND="

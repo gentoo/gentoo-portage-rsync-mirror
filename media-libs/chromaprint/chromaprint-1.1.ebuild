@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.1.ebuild,v 1.3 2014/02/10 16:47:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.1.ebuild,v 1.4 2014/03/02 22:43:42 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://bitbucket.org/acoustid/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-fbsd"
 IUSE="test tools"
 
 # note: use ffmpeg instead of fftw because it's recommended and required for tools

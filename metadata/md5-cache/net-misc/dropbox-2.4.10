@@ -4,11 +4,11 @@ DESCRIPTION=Dropbox daemon (pretends to be GUI-less)
 EAPI=5
 HOMEPAGE=http://dropbox.com/
 IUSE=+librsync-bundled X
-KEYWORDS=~amd64 ~x86 ~x86-linux
+KEYWORDS=amd64 ~x86 ~x86-linux
 LICENSE=CC-BY-ND-3.0 FTL MIT LGPL-2 openssl dropbox
 RDEPEND=X? ( dev-libs/glib:2 media-libs/libpng:1.2 sys-libs/zlib virtual/jpeg x11-libs/gtk+:2 x11-libs/libSM x11-libs/libXinerama x11-libs/libXxf86vm x11-libs/pango[X] x11-themes/hicolor-icon-theme ) app-arch/bzip2 dev-libs/popt !librsync-bundled? ( net-libs/librsync ) net-misc/wget >=sys-devel/gcc-4.2.0 sys-libs/zlib
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=x86? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-2.4.10.tar.gz ) amd64? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-2.4.10.tar.gz )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2c4d6c91dd4f997712c026f8c3ba334d
+_md5_=e1157c4576484fe03094e03ac95b0b21

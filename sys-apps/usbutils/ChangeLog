@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.171 2014/02/22 13:52:26 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.172 2014/03/02 22:32:26 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> usbutils-007.ebuild:
+  amd64 stable, bug #496534
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org> usbutils-007.ebuild:
   ia64 stable wrt bug #496534

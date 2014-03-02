@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.28 2013/08/31 05:26:02 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.29 2014/03/02 22:33:41 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> xchm-1.23.ebuild:
+  amd64 stable, bug #496624
 
 *xchm-1.23 (31 Aug 2013)
 

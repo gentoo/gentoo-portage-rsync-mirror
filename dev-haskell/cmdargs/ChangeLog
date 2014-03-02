@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cmdargs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdargs/ChangeLog,v 1.4 2013/12/11 05:48:16 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdargs/ChangeLog,v 1.5 2014/03/02 23:00:49 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> cmdargs-0.10.7.ebuild:
+  amd64 stable, bug #502660
 
 *cmdargs-0.10.7 (11 Dec 2013)
 

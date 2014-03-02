@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.247 2014/01/23 21:37:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.248 2014/03/02 22:37:38 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> lirc-0.9.0-r5.ebuild:
+  amd64 stable, bug #500082
 
   23 Jan 2014; Mike Frysinger <vapier@gentoo.org> files/lircd-0.8.6-r2:
   Fix bashism with output redirect.

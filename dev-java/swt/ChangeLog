@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.151 2014/02/24 02:10:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.152 2014/03/02 22:36:18 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> swt-3.7.2-r1.ebuild:
+  amd64 stable, bug #499478
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> swt-3.7.2-r1.ebuild:
   x86 stable wrt bug #499478

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/lgi-0.7.2.ebuild,v 1.2 2014/02/24 00:45:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/lgi-0.7.2.ebuild,v 1.3 2014/03/02 22:41:57 pacho Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/pavouk/lgi/archive/0.7.2.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=dev-lang/lua-5.1

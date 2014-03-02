@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mrrescue/mrrescue-1.02b.ebuild,v 1.1 2013/12/15 13:16:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mrrescue/mrrescue-1.02b.ebuild,v 1.2 2014/03/02 22:51:55 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/SimonLarsen/mrrescue/releases/download/v${PV}/${P}-l
 
 LICENSE="CC-BY-SA-3.0 MIT ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="games-engines/love:0"

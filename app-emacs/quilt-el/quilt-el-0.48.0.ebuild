@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/quilt-el-0.48.0.ebuild,v 1.2 2014/02/25 20:50:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/quilt-el-0.48.0.ebuild,v 1.3 2014/03/02 22:44:56 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://satoru-takeuchi.org/dev/${PN}/download/${P}.tar.gz"
 
 LICENSE="GPL-1+"
 SLOT="0"
-KEYWORDS="~amd64 arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 arm ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="dev-util/quilt"
 

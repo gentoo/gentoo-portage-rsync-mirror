@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/lgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.4 2014/02/24 00:45:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.5 2014/03/02 22:41:57 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> lgi-0.7.2.ebuild:
+  amd64 stable, bug #500796
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> lgi-0.7.2.ebuild:
   x86 stable wrt bug #500796

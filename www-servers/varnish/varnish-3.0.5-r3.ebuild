@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r3.ebuild,v 1.1 2014/01/16 18:49:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r3.ebuild,v 1.2 2014/03/02 22:45:21 pacho Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://repo.varnish-cache.org/source/${P}.tar.gz"
 
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="amd64 ~mips ~x86"
 IUSE="doc jemalloc jit static-libs +tools"
 
 CDEPEND="
