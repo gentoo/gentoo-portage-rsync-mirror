@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.5 2013/10/17 07:13:38 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.6 2014/03/02 08:35:11 dolsen Exp $
 
 EAPI="5"
 
@@ -25,6 +25,7 @@ KEYWORDS=""
 RDEPEND="
 	dev-util/dialog
 	net-analyzer/netselect
+	=dev-python/ssl-fetch-9999
 	"
 
 python_prepare_all()  {

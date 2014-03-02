@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/renpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.30 2014/03/01 14:41:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.31 2014/03/02 08:43:01 mgorny Exp $
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> renpy-6.16.5.ebuild,
+  renpy-6.17.1.ebuild, renpy-6.17.2.ebuild:
+  Update to use dev-lang/python-exec. Again.
 
 *renpy-6.17.2 (01 Mar 2014)
 
