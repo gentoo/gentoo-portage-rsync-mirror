@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/unar-1.6.ebuild,v 1.1 2013/06/19 06:08:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/unar-1.6.ebuild,v 1.2 2014/03/02 21:28:19 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="gnustep-base/gnustep-base
 	>=gnustep-base/gnustep-make-2.6.0[native-exceptions]
-	dev-libs/icu"
+	dev-libs/icu:="
 DEPEND="${RDEPEND}
 	sys-devel/gcc[objc]"
 
