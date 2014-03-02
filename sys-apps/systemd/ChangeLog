@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.231 2014/03/01 22:37:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.232 2014/03/02 16:12:01 floppym Exp $
+
+  02 Mar 2014; Mike Gilbert <floppym@gentoo.org> systemd-210.ebuild,
+  systemd-9999.ebuild:
+  Copy 80-net-name-slot.rules migration code from sys-fs/udev.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> systemd-204-r1.ebuild,
   systemd-208-r2.ebuild, systemd-208-r3.ebuild:

@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/hamcrest-integration
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-integration/ChangeLog,v 1.1 2014/03/02 16:26:05 ercpe Exp $
+
+*hamcrest-integration-1.3 (02 Mar 2014)
+*hamcrest-integration-1.2 (02 Mar 2014)
+*hamcrest-integration-1.1 (02 Mar 2014)
+
+  02 Mar 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/1.1-remove-targets.patch, +files/1.2-remove-targets.patch,
+  +files/1.3-remove-targets.patch, +hamcrest-integration-1.1.ebuild,
+  +hamcrest-integration-1.2.ebuild, +hamcrest-integration-1.3.ebuild,
+  +metadata.xml:
+  New ebuild for hamcrest-integration in all slots (:0, :1.2 and :1.3) wrt bug
+  #287777.  This commit also solves bug #205489.
