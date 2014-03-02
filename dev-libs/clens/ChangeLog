@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clens
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/ChangeLog,v 1.5 2014/02/13 14:23:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/ChangeLog,v 1.6 2014/03/02 00:41:59 ulm Exp $
+
+  02 Mar 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Drop maintainership, package no longer needed for app-editors/mg.
 
   13 Feb 2014; Jeroen Roovers <jer@gentoo.org> clens-0.7.0.ebuild:
   Stable for HPPA (bug #501182).
