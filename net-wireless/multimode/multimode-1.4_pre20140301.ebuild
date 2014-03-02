@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-1.00.ebuild,v 1.4 2013/09/22 03:41:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-1.4_pre20140301.ebuild,v 1.1 2014/03/02 03:17:32 zerochaos Exp $
 
 EAPI=5
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT="python2_7"
 
-inherit python
+inherit python-single-r1
 
 DESCRIPTION="multimode radio decoder for rtl-sdr devices using gnuradio"
 HOMEPAGE="https://www.cgran.org/browser/projects/multimode/trunk"
@@ -18,27 +18,21 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 	KEYWORDS=""
 else
-	SRC_URI="http://www.sbrac.org/files/${PN}-r${PV}.tar.gz"
+	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~x86"
-	S="${WORKDIR}"
 fi
 
 DEPEND=""
 RDEPEND="${DEPEND}
 	>=net-wireless/gr-osmosdr-0.0.1
-	>=net-wireless/gnuradio-3.6.1:=[utils]
+	>=net-wireless/gnuradio-3.7:=[utils]
 	>=net-wireless/rtl-sdr-0.5.0"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_install() {
-	python_convert_shebangs $(python_get_version) ${PN}.py
 	newbin ${PN}.py ${PN}
 	insinto $(python_get_sitedir)
 	doins ${PN}_helper.py
 	insinto /usr/share/${PN}
 	doins ${PN}.grc
+	python_fix_shebang "${ED}"/usr/bin
 }
