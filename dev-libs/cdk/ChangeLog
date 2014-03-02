@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.80 2014/02/22 13:35:26 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.81 2014/03/01 23:41:49 pacho Exp $
+
+  01 Mar 2014; Pacho Ramos <pacho@gentoo.org> cdk-5.0.20131107.ebuild:
+  amd64 stable, bug #474162
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org> cdk-5.0.20131107.ebuild:
   ia64 stable wrt bug #474162

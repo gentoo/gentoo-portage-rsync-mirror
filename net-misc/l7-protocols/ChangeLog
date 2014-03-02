@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-protocols
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.67 2013/02/16 12:55:47 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.68 2014/03/02 00:00:32 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> l7-protocols-2009.05.28.ebuild:
+  amd64 stable, bug #474280
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

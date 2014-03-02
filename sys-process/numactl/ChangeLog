@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.29 2014/01/05 16:10:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.30 2014/03/02 00:01:28 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> numactl-2.0.9.ebuild:
+  amd64 stable, bug #474314
 
 *numactl-2.0.9 (05 Jan 2014)
 

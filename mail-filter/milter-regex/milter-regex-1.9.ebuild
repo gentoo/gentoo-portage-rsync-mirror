@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.9.ebuild,v 1.1 2012/08/05 15:31:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.9.ebuild,v 1.2 2014/03/01 23:39:11 pacho Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.benzedrine.cx/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )"

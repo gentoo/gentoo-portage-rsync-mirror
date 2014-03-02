@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/collectd-web/collectd-web-0.4.0.ebuild,v 1.2 2012/12/28 09:35:59 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/collectd-web/collectd-web-0.4.0.ebuild,v 1.3 2014/03/01 23:36:26 pacho Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://collectdweb.appspot.com/"
 SRC_URI="https://github.com/httpdss/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 need_httpd_cgi

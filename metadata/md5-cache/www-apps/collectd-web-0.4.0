@@ -4,10 +4,10 @@ DESCRIPTION=Collectd-web is a web-based front-end for RRD data collected by coll
 EAPI=3
 HOMEPAGE=http://collectdweb.appspot.com/
 IUSE=vhosts
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-perl/HTML-Parser net-analyzer/rrdtool[perl] dev-perl/JSON virtual/perl-CGI dev-perl/URI virtual/perl-Time-Local virtual/ttf-fonts >=app-admin/webapp-config-1.50.15
 SLOT=0.4.0
 SRC_URI=https://github.com/httpdss/collectd-web/tarball/0.4.0 -> collectd-web-0.4.0.tar.gz
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=64dba4eb7e2531e0e04e305695e2efbf
+_md5_=6cdb3aaac85351782e17799d8e579482
