@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_IPv4
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IPv4/ChangeLog,v 1.4 2011/03/05 21:23:33 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IPv4/ChangeLog,v 1.5 2014/03/02 09:21:21 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> PEAR-Net_IPv4-1.3.4.ebuild:
+  amd64 stable, bug #488652
 
   05 Mar 2011; <olemarkus@gentoo.org> -PEAR-Net_IPv4-1.3.0.ebuild,
   -PEAR-Net_IPv4-1.3.1.ebuild, +PEAR-Net_IPv4-1.3.4.ebuild:
@@ -23,4 +26,3 @@
   24 Aug 2006; Jason Huebel <jhuebel@gentoo.org> +metadata.xml,
   +PEAR-Net_IPv4-1.3.0.ebuild:
   initial ebuild
-

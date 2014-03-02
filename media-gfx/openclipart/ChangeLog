@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/openclipart
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.6 2009/08/08 10:37:03 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.7 2014/03/02 09:22:21 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> openclipart-0.20.ebuild:
+  amd64 stable, bug #489124
 
 *openclipart-0.20 (08 Aug 2009)
 
@@ -99,4 +102,3 @@
   +openclipart-0.12.ebuild:
   initial commit for #62278; thanks to Stefan Briesenick <sbriesen@gentoo.org>
   for the ebuild
-
