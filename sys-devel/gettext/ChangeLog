@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.232 2014/03/01 16:27:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.233 2014/03/02 11:37:49 hattya Exp $
+
+  02 Mar 2014; Akinori Hattori <hattya@gentoo.org> gettext-0.18.3.2.ebuild:
+  ia64 stable wrt bug #500872
 
   01 Mar 2014; Jeroen Roovers <jer@gentoo.org> gettext-0.18.3.2.ebuild:
   Stable for HPPA (bug #500872).

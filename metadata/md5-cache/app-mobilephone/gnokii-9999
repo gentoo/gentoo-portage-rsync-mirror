@@ -7,5 +7,5 @@ IUSE=nls bluetooth ical irda sms postgres mysql usb X debug +pcsc-lite linguas_c
 LICENSE=GPL-2
 RDEPEND=!app-mobilephone/smstools pcsc-lite? ( sys-apps/pcsc-lite ) X? ( x11-libs/gtk+:2 ) bluetooth? ( kernel_linux? ( net-wireless/bluez ) ) sms? ( !app-mobilephone/smstools >=dev-libs/glib-2 postgres? ( >=dev-db/postgresql-base-8.0 ) mysql? ( >=virtual/mysql-4.1 ) ) ical? ( dev-libs/libical ) usb? ( =virtual/libusb-0* )
 SLOT=0
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	a01d126c1a6c2959f0d31ad7d61e7b0e	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	03d64f818eb15e925a9ae64137a06e5d	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=5903436705aed32b3247a2e4fce1fe9c

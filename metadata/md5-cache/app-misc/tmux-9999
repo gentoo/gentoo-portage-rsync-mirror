@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-libs/libevent-2.0.10 sys-libs/ncurses virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+DEPEND=>=dev-libs/libevent-2.0.10 sys-libs/ncurses virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Terminal multiplexer
 EAPI=5
 HOMEPAGE=http://tmux.sourceforge.net
@@ -7,5 +7,5 @@ IUSE=debug vim-syntax
 LICENSE=ISC
 RDEPEND=>=dev-libs/libevent-2.0.10 sys-libs/ncurses vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 SLOT=0
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	559ed17194292ec42d68145dcca2fa32	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	a01d126c1a6c2959f0d31ad7d61e7b0e	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	559ed17194292ec42d68145dcca2fa32	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	03d64f818eb15e925a9ae64137a06e5d	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b3fb58d0978803e64c770eda8ae6b15f

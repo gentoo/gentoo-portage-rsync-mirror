@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.26 2014/02/25 13:01:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.38 2014/03/02 11:50:48 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -29,14 +29,76 @@ EXPORT_FUNCTIONS src_unpack
 if [[ ! ${_GIT_R3} ]]; then
 
 if [[ ! ${_INHERITED_BY_GIT_2} ]]; then
-	DEPEND="dev-vcs/git"
+	DEPEND=">=dev-vcs/git-1.8.2.1"
 fi
+
+# @ECLASS-VARIABLE: EGIT_CLONE_TYPE
+# @DESCRIPTION:
+# Type of clone that should be used against the remote repository.
+# This can be either of: 'mirror', 'single', 'shallow'.
+#
+# This is intended to be set by user in make.conf. Ebuilds are supposed
+# to set EGIT_MIN_CLONE_TYPE if necessary instead.
+#
+# The 'mirror' type clones all remote branches and tags with complete
+# history and all notes. EGIT_COMMIT can specify any commit hash.
+# Upstream-removed branches and tags are purged from the local clone
+# while fetching. This mode is suitable for cloning the local copy
+# for development or hosting a local git mirror. However, clones
+# of repositories with large diverged branches may quickly grow large.
+#
+# The 'single' type clones only the requested branch or tag. Tags
+# referencing commits throughout the branch history are fetched as well,
+# and all notes. EGIT_COMMIT can safely specify only hashes
+# in the current branch. No purging of old references is done (if you
+# often switch branches, you may need to remove stale branches
+# yourself). This mode is suitable for general use.
+#
+# The 'shallow' type clones only the newest commit on requested branch
+# or tag. EGIT_COMMIT can only specify tags, and since the history is
+# unavailable calls like 'git describe' will not reference prior tags.
+# No purging of old references is done. This mode is intended mostly for
+# embedded systems with limited disk space.
+: ${EGIT_CLONE_TYPE:=single}
+
+# @ECLASS-VARIABLE: EGIT_MIN_CLONE_TYPE
+# @DESCRIPTION:
+# 'Minimum' clone type supported by the ebuild. Takes same values
+# as EGIT_CLONE_TYPE. When user sets a type that's 'lower' (that is,
+# later on the list) than EGIT_MIN_CLONE_TYPE, the eclass uses
+# EGIT_MIN_CLONE_TYPE instead.
+#
+# This variable is intended to be used by ebuilds only. Users are
+# supposed to set EGIT_CLONE_TYPE instead.
+#
+# A common case is to use 'single' whenever the build system requires
+# access to full branch history or the remote (Google Code) does not
+# support shallow clones. Please use sparingly, and to fix fatal errors
+# rather than 'non-pretty versions'.
+: ${EGIT_MIN_CLONE_TYPE:=shallow}
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
 # @DESCRIPTION:
 # Storage directory for git sources.
 #
+# This is intended to be set by user in make.conf. Ebuilds must not set
+# it.
+#
 # EGIT3_STORE_DIR=${DISTDIR}/git3-src
+
+# @ECLASS-VARIABLE: EGIT_MIRROR_URI
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# 'Top' URI to a local git mirror. If specified, the eclass will try
+# to fetch from the local mirror instead of using the remote repository.
+#
+# The mirror needs to follow EGIT3_STORE_DIR structure. The directory
+# created by eclass can be used for that purpose.
+#
+# Example:
+# @CODE
+# EGIT_MIRROR_URI="git://mirror.lan/"
+# @CODE
 
 # @ECLASS-VARIABLE: EGIT_REPO_URI
 # @REQUIRED
@@ -89,6 +151,32 @@ fi
 # setting EGIT_* to defaults or ${PN}_LIVE_* variables.
 _git-r3_env_setup() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	# check the clone type
+	case "${EGIT_CLONE_TYPE}" in
+		mirror|single|shallow)
+			;;
+		*)
+			die "Invalid EGIT_CLONE_TYPE=${EGIT_CLONE_TYPE}"
+	esac
+	case "${EGIT_MIN_CLONE_TYPE}" in
+		shallow)
+			;;
+		single)
+			if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+				einfo "git-r3: ebuild needs to be cloned in 'single' mode, adjusting"
+				EGIT_CLONE_TYPE=single
+			fi
+			;;
+		mirror)
+			if [[ ${EGIT_CLONE_TYPE} != mirror ]]; then
+				einfo "git-r3: ebuild needs to be cloned in 'mirror' mode, adjusting"
+				EGIT_CLONE_TYPE=mirror
+			fi
+			;;
+		*)
+			die "Invalid EGIT_MIN_CLONE_TYPE=${EGIT_MIN_CLONE_TYPE}"
+	esac
 
 	local esc_pn livevar
 	esc_pn=${PN//[-+]/_}
@@ -204,10 +292,6 @@ _git-r3_set_gitdir() {
 	fi
 
 	addwrite "${EGIT3_STORE_DIR}"
-	if [[ -e ${GIT_DIR}/shallow ]]; then
-		einfo "${GIT_DIR} was a shallow clone, recreating..."
-		rm -r "${GIT_DIR}" || die
-	fi
 	if [[ ! -d ${GIT_DIR} ]]; then
 		mkdir "${GIT_DIR}" || die
 		git init --bare || die
@@ -267,6 +351,42 @@ _git-r3_is_local_repo() {
 	[[ ${uri} == file://* || ${uri} == /* ]]
 }
 
+# @FUNCTION: _git-r3_find_head
+# @USAGE: <head-ref>
+# @INTERNAL
+# @DESCRIPTION:
+# Given a ref to which remote HEAD was fetched, try to find
+# a branch matching the commit. Expects 'git show-ref'
+# or 'git ls-remote' output on stdin.
+_git-r3_find_head() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local head_ref=${1}
+	local head_hash=$(git rev-parse --verify "${1}" || die)
+	local matching_ref
+
+	# TODO: some transports support peeking at symbolic remote refs
+	# find a way to use that rather than guessing
+
+	# (based on guess_remote_head() in git-1.9.0/remote.c)
+	local h ref
+	while read h ref; do
+		# look for matching head
+		if [[ ${h} == ${head_hash} ]]; then
+			# either take the first matching ref, or master if it is there
+			if [[ ! ${matching_ref} || ${ref} == refs/heads/master ]]; then
+				matching_ref=${ref}
+			fi
+		fi
+	done
+
+	if [[ ! ${matching_ref} ]]; then
+		die "Unable to find a matching branch for remote HEAD (${head_hash})"
+	fi
+
+	echo "${matching_ref}"
+}
+
 # @FUNCTION: git-r3_fetch
 # @USAGE: [<repo-uri> [<remote-ref> [<local-id>]]]
 # @DESCRIPTION:
@@ -319,24 +439,120 @@ git-r3_fetch() {
 	local -x GIT_DIR
 	_git-r3_set_gitdir "${repos[0]}"
 
+	# prepend the local mirror if applicable
+	if [[ ${EGIT_MIRROR_URI} ]]; then
+		repos=(
+			"${EGIT_MIRROR_URI%/}/${GIT_DIR##*/}"
+			"${repos[@]}"
+		)
+	fi
+
 	# try to fetch from the remote
 	local r success
 	for r in "${repos[@]}"; do
 		einfo "Fetching ${r} ..."
 
-		local fetch_command=(
-			git fetch --prune "${r}"
-			# mirror the remote branches as local branches
-			"refs/heads/*:refs/heads/*"
-			# pull tags explicitly in order to prune them properly
-			"refs/tags/*:refs/tags/*"
-			# notes in case something needs them
-			"refs/notes/*:refs/notes/*"
-		)
+		local fetch_command=( git fetch "${r}" )
+
+		if [[ ${EGIT_CLONE_TYPE} == mirror ]]; then
+			fetch_command+=(
+				--prune
+				# mirror the remote branches as local branches
+				"+refs/heads/*:refs/heads/*"
+				# pull tags explicitly in order to prune them properly
+				"+refs/tags/*:refs/tags/*"
+				# notes in case something needs them
+				"+refs/notes/*:refs/notes/*"
+				# and HEAD in case we need the default branch
+				# (we keep it in refs/git-r3 since otherwise --prune interferes)
+				"+HEAD:refs/git-r3/HEAD"
+			)
+		else # single or shallow
+			local fetch_l fetch_r
+
+			if [[ ${remote_ref} == HEAD ]]; then
+				# HEAD
+				fetch_l=HEAD
+			elif [[ ${remote_ref} == refs/heads/* ]]; then
+				# regular branch
+				fetch_l=${remote_ref}
+			else
+				# tag or commit...
+				# let ls-remote figure it out
+				local tagref=$(git ls-remote "${r}" "refs/tags/${remote_ref}")
+
+				# if it was a tag, ls-remote obtained a hash
+				if [[ ${tagref} ]]; then
+					# tag
+					fetch_l=refs/tags/${remote_ref}
+				else
+					# commit
+					# so we need to fetch the branch
+					if [[ ${branch} ]]; then
+						fetch_l=${branch}
+					else
+						fetch_l=HEAD
+					fi
+
+					# fetching by commit in shallow mode? can't do.
+					if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+						local EGIT_CLONE_TYPE=single
+					fi
+				fi
+			fi
+
+			if [[ ${fetch_l} == HEAD ]]; then
+				fetch_r=refs/git-r3/HEAD
+			else
+				fetch_r=${fetch_l}
+			fi
+
+			fetch_command+=(
+				"+${fetch_l}:${fetch_r}"
+			)
+		fi
+
+		if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+			if _git-r3_is_local_repo; then
+				# '--depth 1' causes sandbox violations with local repos
+				# bug #491260
+				local EGIT_CLONE_TYPE=single
+			elif [[ ! $(git rev-parse --quiet --verify "${fetch_r}") ]]
+			then
+				# use '--depth 1' when fetching a new branch
+				fetch_command+=( --depth 1 )
+			fi
+		else # non-shallow mode
+			if [[ -f ${GIT_DIR}/shallow ]]; then
+				fetch_command+=( --unshallow )
+			fi
+		fi
 
 		set -- "${fetch_command[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
+			if [[ ${EGIT_CLONE_TYPE} == mirror ]]; then
+				# find remote HEAD and update our HEAD properly
+				git symbolic-ref HEAD \
+					"$(_git-r3_find_head refs/git-r3/HEAD \
+						< <(git show-ref --heads || die))" \
+						|| die "Unable to update HEAD"
+			else # single or shallow
+				if [[ ${fetch_l} == HEAD ]]; then
+					# find out what branch we fetched as HEAD
+					local head_branch=$(_git-r3_find_head \
+						refs/git-r3/HEAD \
+						< <(git ls-remote --heads "${r}" || die))
+
+					# and move it to its regular place
+					git update-ref --no-deref "${head_branch}" \
+						refs/git-r3/HEAD \
+						|| die "Unable to sync HEAD branch ${head_branch}"
+					git symbolic-ref HEAD "${head_branch}" \
+						|| die "Unable to update HEAD"
+				fi
+			fi
+
 			# now let's see what the user wants from us
 			local full_remote_ref=$(
 				git rev-parse --verify --symbolic-full-name "${remote_ref}"
@@ -455,13 +671,18 @@ git-r3_checkout() {
 		# non-empty directories.
 
 		git init --quiet || die
-		set -- git fetch --update-head-ok "${orig_repo}" \
-			"refs/heads/*:refs/heads/*" \
-			"refs/tags/*:refs/tags/*" \
-			"refs/notes/*:refs/notes/*"
+		# setup 'alternates' to avoid copying objects
+		echo "${orig_repo}/objects" > "${GIT_DIR}"/objects/info/alternates || die
+		# now copy the refs
+		# [htn]* safely catches heads, tags, notes without complaining
+		# on non-existing ones, and omits internal 'git-r3' ref
+		cp -R "${orig_repo}"/refs/[htn]* "${GIT_DIR}"/refs/ || die
 
-		echo "${@}" >&2
-		"${@}" || die "git fetch into checkout dir failed"
+		# (no need to copy HEAD, we will set it via checkout)
+
+		if [[ -f ${orig_repo}/shallow ]]; then
+			cp "${orig_repo}"/shallow "${GIT_DIR}"/ || die
+		fi
 
 		set -- git checkout --quiet
 		if [[ ${remote_ref} ]]; then

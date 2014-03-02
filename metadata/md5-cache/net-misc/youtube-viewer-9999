@@ -7,5 +7,5 @@ IUSE=gtk
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-lang/perl-5.16.0 dev-perl/Data-Dump dev-perl/libwww-perl || ( media-video/mplayer[X,network] media-video/mplayer2[X,network] ) virtual/perl-File-Spec virtual/perl-Getopt-Long virtual/perl-Term-ANSIColor virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap gtk? ( dev-perl/File-ShareDir >=dev-perl/gtk2-perl-1.244.0 virtual/freedesktop-icon-theme x11-libs/gdk-pixbuf:2[X,jpeg] ) dev-lang/perl:=[-build(-)]
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	a01d126c1a6c2959f0d31ad7d61e7b0e	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	03d64f818eb15e925a9ae64137a06e5d	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=5a8aa154cad468d8daa97736f5fd058e

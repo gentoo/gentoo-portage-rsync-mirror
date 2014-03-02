@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsndfile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.139 2013/11/14 12:25:24 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.141 2014/03/02 11:50:20 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> libsndfile-1.0.25-r1.ebuild:
+  amd64 stable, bug #502210
+
+  02 Mar 2014; Akinori Hattori <hattya@gentoo.org> libsndfile-1.0.25-r1.ebuild:
+  ia64 stable wrt bug #502210
 
   14 Nov 2013; Justin Lecher <jlec@gentoo.org> libsndfile-1.0.25-r1.ebuild,
   metadata.xml:

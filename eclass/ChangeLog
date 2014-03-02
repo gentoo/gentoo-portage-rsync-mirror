@@ -1,6 +1,43 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1151 2014/03/01 11:51:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1163 2014/03/02 11:50:48 mgorny Exp $
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Clarify where EGIT_CLONE_TYPE and EGIT_MIN_CLONE_TYPE is supposed to be set.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Do not try shallow clones on local repositories.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Force non-forward updates on git refs.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Add EGIT_MIN_CLONE_TYPE to control clone type via ebuilds.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Auto-unshallow when fetching by commit hash.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Support EGIT_CLONE_TYPE=shallow.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Support EGIT_CLONE_TYPE=single.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Introduce EGIT_CLONE_TYPE for future use.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Support using a local git mirror.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Fix support for non-master default branch.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Replace "git fetch" checkout with more efficient and compatible pseudo-shared
+  clone.
+
+  02 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Improve docs.
 
   01 Mar 2014; Sergei Trofimovich <slyfox@gentoo.org> autotools.eclass:
   Call 'automake' via 'autotools_run_tool' (found by 'ebuild.sh' QA warnings).

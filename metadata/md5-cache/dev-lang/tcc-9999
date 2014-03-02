@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-lang/perl dev-vcs/git
+DEPEND=dev-lang/perl >=dev-vcs/git-1.8.2.1
 DESCRIPTION=A very small C compiler for ix86/amd64
 EAPI=5
 HOMEPAGE=http://bellard.org/tcc/
@@ -7,5 +7,5 @@ IUSE=test
 LICENSE=LGPL-2.1
 RDEPEND=!dev-lang/tendra
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	a01d126c1a6c2959f0d31ad7d61e7b0e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	03d64f818eb15e925a9ae64137a06e5d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=62d21d545bdfbf270ce5ae978fb96040
