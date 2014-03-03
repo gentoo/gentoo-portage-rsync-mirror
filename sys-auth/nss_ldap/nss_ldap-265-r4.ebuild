@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r3.ebuild,v 1.1 2014/02/17 05:41:10 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r4.ebuild,v 1.1 2014/03/03 00:26:20 prometheanfire Exp $
 
 EAPI=5
 inherit fixheadtails eutils multilib autotools prefix
@@ -114,8 +114,12 @@ src_configure() {
 src_install() {
 	dodir /$(get_libdir)
 
-	emake -j1 DESTDIR="${D}" install \
-		INST_UID=${PORTAGE_USER:-root} INST_GID=${PORTAGE_GROUP:-root}
+	if use kernel_FreeBSD; then
+		emake -j1 DESTDIR="${D}" install || die "make install failed"
+	else
+		emake -j1 DESTDIR="${D}" install \
+			INST_UID=${PORTAGE_USER:-root} INST_GID=${PORTAGE_GROUP:-root}
+	fi
 
 	insinto /etc
 	doins ldap.conf
