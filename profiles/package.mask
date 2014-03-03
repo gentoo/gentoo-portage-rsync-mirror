@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15438 2014/03/03 13:01:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15439 2014/03/03 15:19:13 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -612,10 +612,6 @@ net-irc/xchat-otr
 dev-java/sun-jdk
 dev-java/sun-jre-bin
 dev-java/sun-jce-bin
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (30 Jun 2013)
-# temp masked for testing, wrt bug 474888
-=media-plugins/vdr-music-0.9.9
 
 # Alexis Ballier <aballier@gentoo.org> (26 Jun 2013)
 # New major release. Rev. deps need to be checked first.

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.9.9.ebuild,v 1.2 2014/02/24 02:20:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.9.9.ebuild,v 1.3 2014/03/03 15:23:59 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit vdr-plugin-2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.glaserei-franz.de/VDR/Moronimo/files/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+imagemagick debug graphtft sndfile vorbis"
 
 DEPEND=">=media-video/vdr-1.6.0
@@ -34,8 +34,8 @@ RDEPEND="sys-process/at
 		graphtft? ( >=media-plugins/vdr-graphtft-0.1.5 )"
 
 src_prepare() {
-	# prepare sources with new Makefile handling
-	cp "${FILESDIR}/music.mk" "${S}"/Makefile
+#	# prepare sources with new Makefile handling
+#	cp "${FILESDIR}/music.mk" "${S}"/Makefile
 
 	# clean up from untranslated .po files
 	rm "${S}"/po/{ca_ES,cs_CZ,da_DK,el_GR,es_ES,et_EE,fi_FI,fr_FR,hr_HR,hu_HU,it_IT,nl_NL,nn_NO,pl_PL,pt_PT,ro_RO,ru_RU,sl_SI,sv_SE,tr_TR}.po

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/files/rc-addon-v3.sh,v 1.1 2014/01/12 21:33:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/files/rc-addon-v3.sh,v 1.2 2014/03/03 15:07:36 hd_brummy Exp $
 #
 # rc-addon-script for plugin osdteletext
 #
@@ -10,7 +10,17 @@
 : ${OSDTELETEXT_DIR:=/var/cache/vdr/osdteletext}
 : ${OSDTELETEXT_STORETOPTEXT:=no}
 
+# depends on QA, create paths in /var/cache on the fly at runtime as needed
+init_cache_dir() {
+	if [ ! -d "${OSDTELETEXT_DIR}" ]; then
+		mkdir -p ${OSDTELETEXT_DIR}
+		chown vdr:vdr ${OSDTELETEXT_DIR}
+	fi
+}
+
 plugin_pre_vdr_start() {
+	init_cache_dir
+
 	add_plugin_param "-d ${OSDTELETEXT_DIR}"
 	add_plugin_param "-n ${OSDTELETEXT_SIZE}"
 
