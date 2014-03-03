@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/spyder
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.32 2013/07/18 16:41:22 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.33 2014/03/03 20:59:40 bicatali Exp $
+
+*spyder-2.2.5 (03 Mar 2014)
+
+  03 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/spyder-2.2.5-disable_sphinx_dependency.patch, +spyder-2.2.5.ebuild:
+  Version bump
 
 *spyder-2.2.1 (18 Jul 2013)
 
