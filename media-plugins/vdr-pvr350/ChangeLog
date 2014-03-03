@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-pvr350
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.21 2012/06/28 17:36:45 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.23 2014/03/03 12:01:08 hd_brummy Exp $
+
+  03 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-pvr350-1.7.5.ebuild:
+  depend fixed
+
+*vdr-pvr350-1.7.5 (03 Mar 2014)
+
+  03 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-pvr350-1.7.5.ebuild:
+  bump, keyword ~amd64
 
   28 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> vdr-pvr350-1.7.3.ebuild,
   vdr-pvr350-1.7.4.ebuild:

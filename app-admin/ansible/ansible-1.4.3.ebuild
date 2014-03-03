@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.4.3.ebuild,v 1.1 2013/12/29 09:15:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.4.3.ebuild,v 1.2 2014/03/03 11:42:24 pinkbyte Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 inherit distutils-r1 readme.gentoo
 
 DESCRIPTION="Radically simple deployment, model-driven configuration management, and command execution framework"
-HOMEPAGE="http://ansible.cc/"
+HOMEPAGE="http://ansible.com/"
 SRC_URI="https://github.com/ansible/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
@@ -32,7 +32,7 @@ RDEPEND="
 DOC_CONTENTS="You can define parameters through shell variables OR use config files
 Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
 You have to create ansible hosts file!\n
-More info on http://ansible.cc/docs/gettingstarted.html"
+More info on http://docs.ansible.com/intro_getting_started.html"
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
