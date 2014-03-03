@@ -1,15 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.1.ebuild,v 1.6 2014/03/01 22:49:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.4.ebuild,v 1.1 2014/03/03 09:28:07 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit autotools python-single-r1 linux-info libtool eutils
+inherit autotools python-single-r1 linux-info libtool eutils versionator
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://code.google.com/p/cryptsetup/"
-SRC_URI="http://cryptsetup.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="http://cryptsetup.googlecode.com/files/${P}.tar.xz"
+SRC_URI="mirror://kernel/linux/utils/${PN}/v$(get_version_component_range 1-2)/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -52,7 +53,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i '/^LOOPDEV=/s:$: || exit 0:' tests/{compat,mode}-test || die
-	epatch "${FILESDIR}"/${P}-openssl-static.patch
 	eautoreconf
 }
 
