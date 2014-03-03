@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/siproxd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.27 2014/01/08 06:37:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.29 2014/03/03 13:51:58 polynomial-c Exp $
+
+  03 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> files/siproxd.rc8:
+  Fixed pidfile location for non-linux systems.
+
+*siproxd-0.8.1-r1 (03 Mar 2014)
+
+  03 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> +siproxd-0.8.1-r1.ebuild,
+  +files/siproxd-0.8.1-amd64_static_build.patch, +files/siproxd.rc8:
+  EAPI-bump. Rewrote init script. Fixed static build on amd64 (bug #380835).
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> siproxd-0.8.0-r2.ebuild,
   siproxd-0.8.1.ebuild:

@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/files/uptimed.init,v 1.9 2014/02/04 09:06:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/files/uptimed.init,v 1.10 2014/03/03 13:55:09 polynomial-c Exp $
 
 description="uptimed - a daemon to record uptime records"
-pidfile="/run/uptimed/uptimed.pid"
+pidfile="/var/run/uptimed/uptimed.pid"
 command="/usr/sbin/uptimed"
 command_args="-p ${pidfile}"
 start_stop_daemon_args="-u uptimed"

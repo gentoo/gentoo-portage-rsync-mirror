@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.99 2014/02/04 09:06:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.100 2014/03/03 13:55:08 polynomial-c Exp $
+
+  03 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> files/uptimed.init:
+  Fixed pidfile location for non-linux systems.
 
   04 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> files/uptimed.init:
   Fixed pidfile location and removed obsolete code in init script.

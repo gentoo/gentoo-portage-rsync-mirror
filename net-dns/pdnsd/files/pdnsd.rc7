@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc7,v 1.4 2014/02/07 14:48:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.rc7,v 1.5 2014/03/03 13:57:09 polynomial-c Exp $
 
-pidfile="/run/pdnsd.pid"
+pidfile="/var/run/pdnsd.pid"
 command="/usr/sbin/pdnsd"
 command_args="-s -t -d -p ${pidfile} ${PDNSDCONFIG}"
 extra_started_commands="reload"
