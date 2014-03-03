@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/Fiona
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.1 2014/03/03 07:15:54 slis Exp $
+
+*Fiona-9999 (03 Mar 2014)
+*Fiona-1.1.2 (03 Mar 2014)
+
+  03 Mar 2014; Sławek Lis <slis@gentoo.org> +Fiona-1.1.2.ebuild,
+  +Fiona-9999.ebuild, +metadata.xml:
+  Added Fiona package
