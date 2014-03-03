@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.73 2014/01/26 11:09:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.74 2014/03/03 19:58:54 radhermit Exp $
+
+*libmediainfo-0.7.67 (03 Mar 2014)
+
+  03 Mar 2014; Tim Harder <radhermit@gentoo.org> +libmediainfo-0.7.67.ebuild:
+  Version bump.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libmediainfo-0.7.65.ebuild:
   Stable for x86, wrt bug #495734

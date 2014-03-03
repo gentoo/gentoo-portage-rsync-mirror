@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/hiredis-0.11.0.ebuild,v 1.2 2013/08/07 02:06:32 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/hiredis-0.11.0.ebuild,v 1.3 2014/03/03 19:44:40 grobian Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/redis/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x64-solaris"
 IUSE="debug"
 
 DEPEND=""
@@ -22,6 +22,9 @@ DOCS="CHANGELOG.md README.md"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-disable-network-tests.patch"
+
+	# use GNU ld syntax on Solaris
+	sed -i -e '/DYLIB_MAKE_CMD=.* -G/d' Makefile || die
 }
 
 src_compile() {

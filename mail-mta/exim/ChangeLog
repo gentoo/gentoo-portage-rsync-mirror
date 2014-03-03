@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.270 2013/12/30 08:08:58 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.271 2014/03/03 19:37:43 grobian Exp $
+
+*exim-4.82-r1 (03 Mar 2014)
+
+  03 Mar 2014; Fabian Groffen <grobian@gentoo.org> +exim-4.82-r1.ebuild,
+  metadata.xml:
+  Add support for redis, by Marcin Mirosław, bug #489736
 
   30 Dec 2013; Naohiro Aota <naota@gentoo.org> exim-4.82.ebuild,
   files/exim-4.82-makefile-freebsd.patch:

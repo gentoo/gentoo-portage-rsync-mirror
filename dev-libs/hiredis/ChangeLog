@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hiredis
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.4 2013/08/07 02:06:32 neurogeek Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.5 2014/03/03 19:44:40 grobian Exp $
+
+  03 Mar 2014; Fabian Groffen <grobian@gentoo.org> hiredis-0.11.0.ebuild:
+  Marked and fixed for ~x64-solaris
 
   07 Aug 2013; <neurogeek@gentoo.org> hiredis-0.11.0.ebuild:
   Added multilib support. Closes bug #479484. Thanks to Emery Hemingway for the
@@ -18,4 +21,3 @@
   01 Feb 2013; <neurogeek@gentoo.org> +hiredis-0.11.0.ebuild,
   +files/hiredis-0.11.0-disable-network-tests.patch, +metadata.xml:
   Initial commit
-
