@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.2.1-r1.ebuild,v 1.1 2014/03/03 04:35:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.2.1-r1.ebuild,v 1.2 2014/03/03 17:25:08 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -21,9 +21,10 @@ else
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-IUSE="alsa +analog +digital doc examples fcd +filter grc jack oss performance-counters pager portaudio qt4 sdl uhd +utils wavelet wxwidgets"
+IUSE="alsa +analog +digital doc examples fcd +filter grc jack oss pager performance-counters portaudio qt4 sdl uhd +utils wavelet wxwidgets"
 
-REQUIRED_USE="analog? ( filter )
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
+		analog? ( filter )
 		digital? ( filter analog )
 		pager? ( filter analog )
 		qt4? ( filter )
@@ -36,19 +37,20 @@ REQUIRED_USE="analog? ( filter )
 # comedi? ( >=sci-electronics/comedilib-0.7 )
 # boost-1.52.0 is blacklisted, bug #461578, upstream #513, boost #7669
 # gr-ctrlport needs "ice 3.5"
-RDEPEND=">=dev-lang/orc-0.4.12
-	dev-libs/boost:0=
+RDEPEND="${PYTHON_DEPS}
+	>=dev-lang/orc-0.4.12
+	dev-libs/boost:0=[${PYTHON_USEDEP}]
 	!<=dev-libs/boost-1.52.0-r6:0/1.52
 	dev-python/cheetah
 	dev-util/cppunit
 	sci-libs/fftw:3.0=
 	fcd? ( virtual/libusb:1 )
 	alsa? (
-		media-libs/alsa-lib
+		media-libs/alsa-lib[${PYTHON_USEDEP}]
 	)
 	grc? (
-		dev-python/lxml
-		dev-python/numpy
+		dev-python/lxml[${PYTHON_USEDEP}]
+		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/pygtk:2
 	)
 	jack? (
@@ -58,18 +60,18 @@ RDEPEND=">=dev-lang/orc-0.4.12
 		>=media-libs/portaudio-19_pre
 	)
 	qt4? (
-		dev-python/PyQt4[X,opengl]
+		dev-python/PyQt4[X,opengl,${PYTHON_USEDEP}]
 		dev-python/pyqwt:5
 		dev-qt/qtgui:4
 	)
 	sdl? ( media-libs/libsdl )
-	uhd? ( >=net-wireless/uhd-3.4.3-r1:= )
+	uhd? ( >=net-wireless/uhd-3.4.3-r1:=[${PYTHON_USEDEP}] )
 	wavelet? (
 		sci-libs/gsl
 	)
 	wxwidgets? (
-		dev-python/wxpython:2.8
-		dev-python/numpy
+		dev-python/wxpython:2.8[${PYTHON_USEDEP}]
+		dev-python/numpy[${PYTHON_USEDEP}]
 	)
 "
 DEPEND="${RDEPEND}
@@ -77,7 +79,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
 		>=app-doc/doxygen-1.5.7.1
-		dev-python/sphinx
+		dev-python/sphinx[${PYTHON_USEDEP}]
 	)
 	grc? (
 		x11-misc/xdg-utils
