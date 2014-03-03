@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8657 2014/03/03 15:19:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8658 2014/03/03 18:36:17 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Mar 2014; Alexis Ballier <aballier@gentoo.org> arch/amd64/use.mask,
+  arch/x86/use.mask, base/use.mask:
+  mask fma3 useflag and unmask on x86/amd64
 
   03 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   removed pmask for media-plugins/vdr-music-0.9.9

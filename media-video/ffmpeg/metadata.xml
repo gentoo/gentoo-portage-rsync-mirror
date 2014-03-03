@@ -29,6 +29,7 @@
 	<flag name="faac">Use external faac library for AAC encoding</flag>
 	<flag name="fdk">Use external fdk-aac library for AAC encoding</flag>
 	<flag name="flite">Adds a text-to-speech filter based on <pkg>app-accessibility/flite</pkg>.</flag>
+	<flag name="fma3">Enables FMA3 optimizations: AMD processors starting with Piledriver architecture and Intel Haswell based processors or later.</flag>
 	<flag name="fma4">Enables FMA4 optimizations: AMD processors starting with Bulldozer architecture.</flag>
 	<flag name="frei0r">Enable frei0r wrapping in libavfilter</flag>
     <flag name="gme">Enables support for <pkg>media-libs/game-music-emu</pkg> for playing various video game music formats.</flag>
