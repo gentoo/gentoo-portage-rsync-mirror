@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.114 2014/03/01 05:56:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.115 2014/03/03 01:49:50 jer Exp $
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> pyopenssl-0.14.ebuild:
+  Marked ~hppa (bug #503094).
 
 *pyopenssl-0.14 (01 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iso8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.10 2014/03/01 03:02:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.11 2014/03/03 01:48:04 jer Exp $
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> iso8601-0.1.10.ebuild:
+  Marked ~hppa (bug #503094).
 
 *iso8601-0.1.10 (01 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ply
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.27 2013/12/07 19:13:44 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.28 2014/03/03 01:45:07 jer Exp $
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> ply-3.4-r1.ebuild:
+  Marked ~hppa (bug #503094).
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> ply-3.4-r1.ebuild:
   x86 stable, bug #488738

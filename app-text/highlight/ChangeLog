@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.81 2014/03/02 22:57:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.82 2014/03/03 01:52:18 jer Exp $
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> highlight-3.17.ebuild:
+  Stable for HPPA (bug #502628).
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> highlight-3.17.ebuild:
   amd64 stable, bug #502628

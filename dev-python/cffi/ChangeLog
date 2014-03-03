@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.20 2014/03/02 23:06:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.21 2014/03/03 01:47:08 jer Exp $
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> cffi-0.8.1.ebuild:
+  Marked ~hppa (bug #503094).
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> cffi-0.8.1.ebuild:
   amd64 stable, bug #502774
