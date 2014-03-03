@@ -1,6 +1,22 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.66 2014/02/24 01:31:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.67 2014/03/03 00:45:14 jer Exp $
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> +fish-2.1.0-r3.ebuild,
+  -files/fish-1.22.3-gettext.patch, -files/fish-1.23.0-gentoo-alt.patch,
+  -files/fish-1.23.0-glibc-2.8.patch, -files/fish-1.23.1-fish_indent.patch,
+  -files/fish-1.23.1-gentoo-alt.patch,
+  -files/fish-1.23.1-multi-line_prompts.patch, +files/fish-2.1.0-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #459768).
+
+*fish-2.1.0-r3 (03 Mar 2014)
+
+  03 Mar 2014; Jeroen Roovers <jer@gentoo.org> +fish-2.1.0-r3.ebuild,
+  -files/fish-1.22.3-gettext.patch, -files/fish-1.23.0-gentoo-alt.patch,
+  -files/fish-1.23.0-glibc-2.8.patch, -files/fish-1.23.1-fish_indent.patch,
+  -files/fish-1.23.1-gentoo-alt.patch,
+  -files/fish-1.23.1-multi-line_prompts.patch, +files/fish-2.1.0-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #).
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> fish-2.1.0-r2.ebuild:
   x86 stable wrt bug #493316
