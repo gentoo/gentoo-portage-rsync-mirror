@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.9999.ebuild,v 1.3 2014/03/02 16:51:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-210.9999.ebuild,v 1.4 2014/03/03 22:19:31 floppym Exp $
 
 EAPI=5
 
@@ -219,6 +219,14 @@ multilib_src_configure() {
 	if use firmware-loader; then
 		myeconfargs+=(
 			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
+		)
+	fi
+
+	# Added for testing; this is UNSUPPORTED by the Gentoo systemd team!
+	if [[ -n ${ROOTPREFIX+set} ]]; then
+		myeconfargs+=(
+			--with-rootprefix="${ROOTPREFIX}"
+			--with-rootlibdir="${ROOTPREFIX}/$(get_libdir)"
 		)
 	fi
 
