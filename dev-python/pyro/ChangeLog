@@ -1,6 +1,23 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.101 2014/03/02 23:09:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.102 2014/03/03 11:01:57 aidecoe Exp $
+
+*pyro-4.24 (03 Mar 2014)
+
+  03 Mar 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +pyro-4.24.ebuild:
+  Version bump. Added python3_4 support.
+
+  NEWS
+  ~~~~
+  - Python 3.4 compatibility added (fixed pickle/marshal issues)
+  - a backwards incompatible change has been implemented regarding the
+    threadpool implementation and configuration, see next two items.
+  - threadpool is now again a fixed size determined by the new THREADPOOL_SIZE
+    config item (defaults to 16)
+  - config items removed: THREADPOOL_MINTHREADS, THREADPOOL_MAXTHREADS,
+    THREADPOOL_IDLETIMEOUT
+  - daemon no longer sends an exception response when a communication error
+    occurred (such as a timeout). This fixes the MSG_PING/disconnect example.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> pyro-4.23.ebuild:
   amd64 stable, bug #502792
