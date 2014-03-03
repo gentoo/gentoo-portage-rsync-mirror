@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15437 2014/03/03 10:11:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15438 2014/03/03 13:01:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,21 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2013)
+# gnome-extra/polkit-gnome is the "GTK+ polkit agent" and has no extra
+# dependencies that installing lxde-base/lxpolkit would solve, thus
+# the only motivation for creation of lxpolkit was to drop the word
+# 'gnome' from the package's name. The packages are near identical
+# by the outlook, determined by the used GTK+ theme.
+#
+# Raise yourself above the word 'gnome' and install the de facto GTK+ agent:
+# emerge -C lxpolkit
+# emerge -1 polkit-gnome
+#
+# Removal will happen at later date, but since there is no hurry, give it
+# until rest of the year.
+lxde-base/lxpolkit
 
 # Ulrich Müller <ulm@gentoo.org> (1 Mar 2014)
 # Version 0.3 does not work with Emacs 24; git master
