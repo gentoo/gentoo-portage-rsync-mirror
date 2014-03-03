@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r2.ebuild,v 1.1 2014/02/21 19:46:35 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r3.ebuild,v 1.1 2014/03/03 16:50:33 teiresias Exp $
 
 EAPI="5"
 
@@ -168,6 +168,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/niash_array_index.patch \
 		"${FILESDIR}"/${P}-unused-cups.patch \
 		"${FILESDIR}"/${P}-automagic_systemd.patch \
+		"${FILESDIR}"/${P}-systemd_pkgconfig.patch \
 		"${FILESDIR}"/${P}-kodakaio_avahi.patch \
 		"${FILESDIR}"/${P}-saned_pidfile_location.patch
 	# Fix for "make check".
