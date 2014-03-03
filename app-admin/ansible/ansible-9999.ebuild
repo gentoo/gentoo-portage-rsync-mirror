@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.14 2014/03/03 11:42:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.16 2014/03/03 12:21:30 pinkbyte Exp $
 
 EAPI="5"
 
@@ -21,13 +21,14 @@ SLOT="0"
 IUSE="test"
 
 DEPEND="test? (
-		dev-python/nose
+		dev-python/nose[${PYTHON_USEDEP}]
 		dev-vcs/git
 	)"
 RDEPEND="
-	dev-python/jinja
-	dev-python/pyyaml
-	dev-python/paramiko
+	dev-python/jinja[${PYTHON_USEDEP}]
+	dev-python/keyczar[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
+	dev-python/paramiko[${PYTHON_USEDEP}]
 	net-misc/sshpass
 	virtual/ssh
 "
@@ -36,12 +37,6 @@ DOC_CONTENTS="You can define parameters through shell variables OR use config fi
 Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
 You have to create ansible hosts file!\n
 More info on http://docs.ansible.com/intro_getting_started.html"
-
-python_prepare_all() {
-	distutils-r1_python_prepare_all
-	# Skip tests which need ssh access
-	sed -i 's:$(NOSETESTS) -d -v:\0 -e \\(TestPlayBook.py\\|TestRunner.py\\):' Makefile || die "sed failed"
-}
 
 python_test() {
 	make tests || die "tests failed"
