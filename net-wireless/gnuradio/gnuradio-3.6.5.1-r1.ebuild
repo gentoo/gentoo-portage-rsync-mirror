@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.10 2014/03/03 04:35:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.5.1-r1.ebuild,v 1.1 2014/03/03 04:35:27 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -35,7 +35,6 @@ REQUIRED_USE="analog? ( filter )
 # bug #348206
 # comedi? ( >=sci-electronics/comedilib-0.7 )
 # boost-1.52.0 is blacklisted, bug #461578, upstream #513, boost #7669
-# gr-ctrlport needs "ice 3.5"
 RDEPEND=">=dev-lang/orc-0.4.12
 	dev-libs/boost:0=
 	!<=dev-libs/boost-1.52.0-r6:0/1.52
