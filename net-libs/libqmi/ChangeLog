@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libqmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.16 2014/01/20 05:01:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.17 2014/03/02 23:14:32 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> libqmi-1.8.0.ebuild:
+  amd64 stable, bug #502886
 
   20 Jan 2014; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
   [net-libs/libqmi] Add me as maintainer

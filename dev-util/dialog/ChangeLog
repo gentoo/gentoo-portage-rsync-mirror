@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.196 2014/03/02 17:23:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.198 2014/03/02 23:21:30 zerochaos Exp $
+
+*dialog-1.2.20121230 (02 Mar 2014)
+
+  02 Mar 2014; Rick Farina <zerochaos@gentoo.org> +dialog-1.2.20121230.ebuild,
+  -dialog-1.2.20130523.ebuild:
+  restoring the correct file this time... sorry for the extra noise
+
+*dialog-1.2.20130523 (02 Mar 2014)
+
+  02 Mar 2014; Rick Farina <zerochaos@gentoo.org> +dialog-1.2.20130523.ebuild:
+  restoring accidently removed dialog-1.2.20130523.ebuild pending alpha
+  stabilization
 
   02 Mar 2014; Jeroen Roovers <jer@gentoo.org> -dialog-1.2.20121230.ebuild,
   -dialog-1.2.20130523.ebuild, +dialog-1.2.20140219.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/t-prot
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.45 2013/12/23 17:36:48 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.46 2014/03/02 23:15:45 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> t-prot-3.0.ebuild:
+  amd64 stable, bug #502892
 
 *t-prot-3.0 (23 Dec 2013)
 

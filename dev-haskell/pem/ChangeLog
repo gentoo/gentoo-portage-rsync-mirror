@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/pem
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pem/ChangeLog,v 1.5 2013/12/11 00:24:11 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pem/ChangeLog,v 1.6 2014/03/02 23:05:17 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> pem-0.2.1.ebuild:
+  amd64 stable, bug #502688
 
 *pem-0.2.1 (11 Dec 2013)
 

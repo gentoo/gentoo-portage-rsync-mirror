@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.118 2014/01/18 15:33:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.119 2014/03/02 23:11:27 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> global-6.2.10.ebuild:
+  amd64 stable, bug #502806
 
 *global-6.2.10 (18 Jan 2014)
 

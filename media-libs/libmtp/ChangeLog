@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.140 2014/03/01 22:37:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.141 2014/03/02 23:22:05 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> libmtp-1.1.6-r1.ebuild:
+  amd64 stable, bug #503054
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> libmtp-1.1.6-r1.ebuild,
   libmtp-1.1.6.ebuild, libmtp-9999.ebuild:

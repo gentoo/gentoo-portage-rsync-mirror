@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/htmlgen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.16 2013/09/05 18:46:56 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.17 2014/03/02 23:08:10 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> htmlgen-2.2.2-r1.ebuild:
+  amd64 stable, bug #502782
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> htmlgen-2.2.2-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

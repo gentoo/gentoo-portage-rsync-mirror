@@ -4,10 +4,10 @@ DESCRIPTION=JACK Rack is an effects rack for the JACK low latency audio API.
 EAPI=4
 HOMEPAGE=http://jack-rack.sourceforge.net/
 IUSE=alsa gnome lash +xml
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/j/jack-rack/jack-rack_1.4.8~rc1.orig.tar.gz mirror://debian/pool/main/j/jack-rack/jack-rack_1.4.8~rc1-1.debian.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d3b4dd610bedef70967154ddcab31460
+_md5_=4e4865965b9d1261ca83330fa0f71960

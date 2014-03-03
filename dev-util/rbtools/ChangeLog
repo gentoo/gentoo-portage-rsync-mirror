@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rbtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/ChangeLog,v 1.27 2014/03/02 16:53:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rbtools/ChangeLog,v 1.28 2014/03/02 23:11:51 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> rbtools-0.5.3.ebuild:
+  amd64 stable, bug #502808
 
 *rbtools-0.5.7 (02 Mar 2014)
 

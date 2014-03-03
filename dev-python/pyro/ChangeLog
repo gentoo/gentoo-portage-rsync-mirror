@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.100 2014/01/23 08:42:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.101 2014/03/02 23:09:49 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> pyro-4.23.ebuild:
+  amd64 stable, bug #502792
 
 *pyro-4.23 (23 Jan 2014)
 

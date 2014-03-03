@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.8.0.ebuild,v 1.1 2014/01/20 04:58:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.8.0.ebuild,v 1.2 2014/03/02 23:14:32 pacho Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3 autotools
 	EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}"
 else
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm ~x86"
 	SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 fi
 

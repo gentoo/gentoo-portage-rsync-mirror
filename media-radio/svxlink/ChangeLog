@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.33 2014/03/01 22:15:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.34 2014/03/02 23:13:46 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> svxlink-13.12.ebuild:
+  amd64 stable, bug #502852
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> svxlink-13.03.ebuild,
   svxlink-13.07.ebuild, svxlink-13.12.ebuild:

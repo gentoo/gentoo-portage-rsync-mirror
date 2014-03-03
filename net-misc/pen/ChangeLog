@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.17 2013/12/16 05:32:28 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.18 2014/03/02 23:17:19 pacho Exp $
+
+  02 Mar 2014; Pacho Ramos <pacho@gentoo.org> pen-0.20.1.ebuild:
+  amd64 stable, bug #502904
 
 *pen-0.20.1 (16 Dec 2013)
 

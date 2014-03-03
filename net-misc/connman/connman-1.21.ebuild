@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.21.ebuild,v 1.1 2014/01/21 08:40:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.21.ebuild,v 1.2 2014/03/02 23:16:09 pacho Exp $
 
 EAPI="5"
 inherit base systemd
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="bluetooth debug doc examples +ethernet ofono openvpn openconnect policykit tools vpnc +wifi"
 
 RDEPEND=">=dev-libs/glib-2.16
