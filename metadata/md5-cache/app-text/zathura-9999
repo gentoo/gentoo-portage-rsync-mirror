@@ -7,5 +7,5 @@ IUSE=+doc +deprecated magic sqlite test test
 LICENSE=ZLIB
 RDEPEND=>=dev-libs/glib-2.28:2 x11-libs/cairo:= deprecated? ( >=dev-libs/girara-0.1.8:2 ) !deprecated? ( >=dev-libs/girara-0.1.8:3 ) magic? ( sys-apps/file ) sqlite? ( dev-db/sqlite:3 )
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	03d64f818eb15e925a9ae64137a06e5d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=29efe5b3018ce62dc5c89ee7441a3f3c

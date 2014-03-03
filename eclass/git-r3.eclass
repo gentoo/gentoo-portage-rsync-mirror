@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.38 2014/03/02 11:50:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.39 2014/03/03 21:45:06 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -577,6 +577,10 @@ git-r3_fetch() {
 		fi
 	done
 	[[ ${success} ]] || die "Unable to fetch from any of EGIT_REPO_URI"
+
+	# submodules can reference commits in any branch
+	# always use the 'clone' mode to accomodate that, bug #503332
+	local EGIT_CLONE_TYPE=mirror
 
 	# recursively fetch submodules
 	if git cat-file -e "${local_ref}":.gitmodules &>/dev/null; then

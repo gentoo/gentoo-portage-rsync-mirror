@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1164 2014/03/02 15:41:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1165 2014/03/03 21:45:06 mgorny Exp $
+
+  03 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Force EGIT_CLONE_TYPE=mirror for submodules since they can reference commits
+  in any branch without explicitly naming the branch, bug #503332.
 
   02 Mar 2014; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
   Use git-r3 for live ebuilds.
