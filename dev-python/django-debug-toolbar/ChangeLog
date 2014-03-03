@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-debug-toolbar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/ChangeLog,v 1.8 2014/01/23 09:55:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/ChangeLog,v 1.9 2014/03/03 11:00:45 ultrabug Exp $
+
+  03 Mar 2014; Ultrabug <ultrabug@gentoo.org>
+  django-debug-toolbar-0.10.2.ebuild, django-debug-toolbar-0.11.0.ebuild:
+  fix IUSE examples usage
 
 *django-debug-toolbar-0.11.0 (23 Jan 2014)
 *django-debug-toolbar-0.10.2 (23 Jan 2014)

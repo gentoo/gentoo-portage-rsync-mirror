@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/django-debug-toolbar-0.11.0.ebuild,v 1.1 2014/01/23 09:55:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/django-debug-toolbar-0.11.0.ebuild,v 1.2 2014/03/03 11:00:45 ultrabug Exp $
 
 EAPI=5
 
@@ -64,6 +64,6 @@ python_install() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/_build/html/. )
-	use example && local EXAMPLES=( example/. )
+	use examples && local EXAMPLES=( example/. )
 	distutils-r1_python_install_all
 }
