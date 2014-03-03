@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-9999.ebuild,v 1.7 2014/03/02 03:17:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-9999.ebuild,v 1.8 2014/03/03 18:01:49 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT="python2_7"
@@ -25,7 +25,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 	=net-wireless/gr-osmosdr-9999
-	=net-wireless/gnuradio-9999:=[utils]
+	=net-wireless/gnuradio-9999:=[utils,${PYTHON_USEDEP}]
 	=net-wireless/rtl-sdr-9999"
 
 src_install() {

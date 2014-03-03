@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r2.ebuild,v 1.2 2014/02/10 21:35:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r2.ebuild,v 1.3 2014/03/03 18:05:15 chithanh Exp $
 
 EAPI=5
 
@@ -24,16 +24,17 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
 RDEPEND="x11-libs/libva[X(+),opengl?,${MULTILIB_USEDEP}]
-	x11-libs/libvdpau[${MULTILIB_USEDEP}]
-	x11-drivers/ati-drivers"
+	x11-libs/libvdpau[${MULTILIB_USEDEP}]"
 DEPEND="${DEPEND}
 	${PYTHON_DEPS}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	x11-drivers/ati-drivers"
 
 DOCS=( NEWS README AUTHORS )
 PATCHES=(
 	"${FILESDIR}"/${PN}-fix-mesa-gl.h.patch
 	"${FILESDIR}"/${PN}-fix-out-of-source-builds.patch
+	"${FILESDIR}"/${P}-VAEncH264VUIBufferType.patch
 )
 
 S="${WORKDIR}/xvba-driver-${PV}"

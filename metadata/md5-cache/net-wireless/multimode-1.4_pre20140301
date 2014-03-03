@@ -1,13 +1,13 @@
 DEFINED_PHASES=install setup
-DEPEND=>=net-wireless/gr-osmosdr-0.0.1 >=net-wireless/gnuradio-3.7:=[utils] >=net-wireless/rtl-sdr-0.5.0
+DEPEND=>=net-wireless/gr-osmosdr-0.0.1 >=net-wireless/gnuradio-3.7:=[utils,python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=net-wireless/rtl-sdr-0.5.0
 DESCRIPTION=multimode radio decoder for rtl-sdr devices using gnuradio
 EAPI=5
 HOMEPAGE=https://www.cgran.org/browser/projects/multimode/trunk
 IUSE=python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=BSD
-RDEPEND=>=net-wireless/gr-osmosdr-0.0.1 >=net-wireless/gnuradio-3.7:=[utils] >=net-wireless/rtl-sdr-0.5.0
+RDEPEND=>=net-wireless/gr-osmosdr-0.0.1 >=net-wireless/gnuradio-3.7:=[utils,python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=net-wireless/rtl-sdr-0.5.0
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~zerochaos/distfiles/multimode-1.4_pre20140301.tar.xz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=007a052a62900f1d55910fd721e8c9c3
+_md5_=2c15428478f2c9c90a370d4c4e991cf4
