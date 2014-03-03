@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.45 2014/02/26 17:13:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.46 2014/03/03 20:27:38 bicatali Exp $
+
+  03 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> pyfits-3.2.ebuild:
+  renaming of binary for all python implementations
 
   26 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> pyfits-3.2.ebuild:
   Use scriptdir for python execs

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.2.ebuild,v 1.4 2014/02/26 17:13:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.2.ebuild,v 1.5 2014/03/03 20:27:38 bicatali Exp $
 
 EAPI=5
 
@@ -54,9 +54,12 @@ python_install_all() {
 	use doc && local HTML_DOCS=( docs/build/html )
 	distutils-r1_python_install_all
 	dodoc FAQ.txt CHANGES.txt
-	local binary
-	for binary in "${ED}"/usr/bin/* "${D}$(python_get_scriptdir)"/*
-	do
-		mv ${binary}{,-${PN}} || die "failed renaming"
-	done
+	rename_binary() {
+		local binary
+		for binary in "${ED}"/usr/bin/* "${D}$(python_get_scriptdir)"/*
+		do
+			mv ${binary}{,-${PN}} || die "failed renaming"
+		done
+	}
+	python_foreach_impl rename_binary
 }
