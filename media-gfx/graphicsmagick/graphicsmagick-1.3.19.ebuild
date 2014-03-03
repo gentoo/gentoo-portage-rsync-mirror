@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.19.ebuild,v 1.2 2014/01/06 13:58:26 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.19.ebuild,v 1.3 2014/03/03 19:22:50 ssuominen Exp $
 
 EAPI=5
-inherit toolchain-funcs eutils autotools
+inherit autotools eutils toolchain-funcs
 
 MY_P=${P/graphicsm/GraphicsM}
 
@@ -51,6 +51,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3.19-flags.patch
 	epatch "${FILESDIR}"/${PN}-1.3.19-perl.patch
 	epatch "${FILESDIR}"/${PN}-1.3.18-powerpc.patch
+
+	epatch_user #498942
 
 	eautoreconf
 }

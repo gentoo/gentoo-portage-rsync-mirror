@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.253 2014/03/03 17:36:10 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.254 2014/03/03 19:21:29 polynomial-c Exp $
+
+  03 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -git-1.9.0_rc3.ebuild,
+  files/git-daemon-r1.initd:
+  Fixed pidfile location for non-linux systems. Removed old.
 
   03 Mar 2014; Jason A. Donenfeld <zx2c4@gentoo.org> files/git-daemon-r1.initd:
   Before this commit, clones would warn of "remote: warning: unable to access
