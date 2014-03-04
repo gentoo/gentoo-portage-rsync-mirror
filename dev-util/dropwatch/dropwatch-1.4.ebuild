@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/dropwatch-1.4.ebuild,v 1.3 2013/02/18 11:57:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/dropwatch-1.4.ebuild,v 1.4 2014/03/04 08:29:33 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
-inherit base linux-info toolchain-funcs
+inherit linux-info toolchain-funcs
 
 DESCRIPTION="An utility to interface to the kernel to monitor for dropped network packets"
 HOMEPAGE="https://fedorahosted.org/dropwatch/"
@@ -13,10 +13,10 @@ SRC_URI="https://fedorahosted.org/releases/d/r/dropwatch/${P}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 RDEPEND="dev-libs/libnl:3
-	sys-libs/readline"
+	sys-libs/readline
+	sys-devel/binutils"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -26,6 +26,11 @@ PATCHES=(
 	"${FILESDIR}/${P}-makefile.patch"
 	"${FILESDIR}/${P}-binutils-2.23.patch"
 )
+
+src_prepare() {
+	epatch ${PATCHES[@]}
+	epatch_user
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" -C src
