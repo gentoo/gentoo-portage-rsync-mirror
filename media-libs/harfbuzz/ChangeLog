@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.66 2014/03/01 14:04:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.67 2014/03/04 19:40:30 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  harfbuzz-0.9.26.ebuild:
+  Add ~mips keyword.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-9999.ebuild:
   Update the live ebuild to use multilib.

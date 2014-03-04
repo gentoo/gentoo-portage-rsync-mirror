@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.10.ebuild,v 1.2 2014/03/02 22:30:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.10.ebuild,v 1.3 2014/03/04 19:56:32 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="LSI"
 SLOT="0"
 # This package can never enter stable, it can't be mirrored and upstream
 # can remove the distfiles from their mirror anytime.
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip

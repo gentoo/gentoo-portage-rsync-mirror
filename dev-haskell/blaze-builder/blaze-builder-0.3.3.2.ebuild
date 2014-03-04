@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder/blaze-builder-0.3.3.2.ebuild,v 1.2 2014/03/02 22:58:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder/blaze-builder-0.3.3.2.ebuild,v 1.3 2014/03/04 19:59:12 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/text-0.10:=[profile?] <dev-haskell/text-1.2:=[profile?]

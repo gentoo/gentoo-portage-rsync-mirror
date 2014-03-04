@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20131223-r1.ebuild,v 1.2 2014/03/02 22:52:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20131223-r1.ebuild,v 1.3 2014/03/04 19:55:40 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/OpenRA/OpenRA/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="tools"
 
 DEPEND="dev-dotnet/libgdiplus

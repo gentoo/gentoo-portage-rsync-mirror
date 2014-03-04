@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/bbswitch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.16 2014/03/02 23:19:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.17 2014/03/04 19:57:30 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bbswitch-0.8.ebuild:
+  Stable for x86, wrt bug #502936
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> bbswitch-0.8.ebuild:
   amd64 stable, bug #502936

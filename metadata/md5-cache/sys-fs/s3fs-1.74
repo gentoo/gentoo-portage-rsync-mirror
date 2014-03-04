@@ -3,11 +3,11 @@ DEPEND=>=dev-libs/libxml2-2.6:2 dev-libs/openssl >=net-misc/curl-7.0 >=sys-fs/fu
 DESCRIPTION=Amazon mounting S3 via fuse
 EAPI=5
 HOMEPAGE=http://s3fs.googlecode.com/
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/libxml2-2.6:2 dev-libs/openssl >=net-misc/curl-7.0 >=sys-fs/fuse-2.8.4 app-misc/mime-types
 RESTRICT=test
 SLOT=0
 SRC_URI=http://s3fs.googlecode.com/files/s3fs-1.74.tar.gz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=e8f75967c70c18942589739c7ef28fc4
+_md5_=3c296ade46d6a3eef3dcf2da29c7db61

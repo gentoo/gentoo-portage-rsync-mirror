@@ -3,10 +3,10 @@ DEPEND=app-arch/unzip app-admin/chrpath >=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=LSI Logic MegaRAID Command Line Interface management tool
 EAPI=5
 HOMEPAGE=http://www.lsi.com/
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=LSI
 RESTRICT=mirror fetch
 SLOT=0
 SRC_URI=http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/8.07.10_MegaCLI_Linux.zip
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c0ef987ef6440ac677acf832f0408767
+_md5_=a9a0d3d40b2d20cd3aaf393d3794b98d

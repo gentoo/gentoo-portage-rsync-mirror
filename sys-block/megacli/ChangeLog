@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.21 2014/03/02 22:30:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.22 2014/03/04 19:56:32 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> megacli-8.07.10.ebuild:
+  Stable for x86, wrt bug #495942
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> megacli-8.07.10.ebuild:
   amd64 stable, bug #495942

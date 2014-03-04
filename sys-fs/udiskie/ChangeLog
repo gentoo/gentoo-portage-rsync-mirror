@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udiskie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.28 2014/03/02 23:19:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.29 2014/03/04 19:57:17 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> udiskie-0.6.2.ebuild:
+  Stable for x86, wrt bug #502934
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> udiskie-0.6.2.ebuild:
   amd64 stable, bug #502934

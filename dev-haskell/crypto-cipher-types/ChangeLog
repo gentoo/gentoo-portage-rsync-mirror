@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/crypto-cipher-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-cipher-types/ChangeLog,v 1.6 2014/03/02 23:01:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-cipher-types/ChangeLog,v 1.7 2014/03/04 20:00:57 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  crypto-cipher-types-0.0.9.ebuild:
+  Stable for x86, wrt bug #502664
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> crypto-cipher-types-0.0.9.ebuild:
   amd64 stable, bug #502664
