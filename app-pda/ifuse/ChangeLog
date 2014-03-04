@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/ifuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.15 2014/03/03 23:56:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.16 2014/03/04 07:02:50 ssuominen Exp $
+
+  04 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -ifuse-1.1.2.ebuild:
+  old
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> ifuse-1.1.2-r1.ebuild:
   amd64 stable, bug #500238
