@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.38.2.ebuild,v 1.2 2014/01/18 04:44:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.38.2.ebuild,v 1.3 2014/03/04 16:45:38 naota Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -149,6 +149,8 @@ src_prepare() {
 
 	# Support compilation in clang until upstream solves this, upstream bug #691608
 	append-flags -Wno-format-nonliteral
+
+	epatch "${FILESDIR}"/${P}-configure.patch #500996
 
 	epatch_user
 

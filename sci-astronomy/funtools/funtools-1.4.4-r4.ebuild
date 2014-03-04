@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r3.ebuild,v 1.1 2014/02/23 20:18:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r4.ebuild,v 1.1 2014/03/04 16:48:24 bicatali Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib autotools
@@ -53,6 +53,7 @@ src_compile() {
 
 src_install () {
 	default
+	dosym libtclfun.so.1 /usr/$(get_libdir)/libtclfun.so
 	# install missing includes
 	insinto /usr/include/funtools/fitsy
 	doins fitsy/*.h

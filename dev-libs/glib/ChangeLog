@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.591 2014/02/22 14:37:00 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.592 2014/03/04 16:45:38 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org>
+  +files/glib-2.38.2-configure.patch, glib-2.38.2.ebuild:
+  Apply a upstream patch to fix non POSIX test construction. #500996
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org> glib-2.36.4-r1.ebuild:
   ia64 stable wrt bug #494132

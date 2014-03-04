@@ -1,6 +1,6 @@
 diff -Nur funtools-1.4.4.orig/filter/Makefile.in funtools-1.4.4/filter/Makefile.in
---- funtools-1.4.4.orig/filter/Makefile.in	2013-07-08 14:28:30.169439760 -0700
-+++ funtools-1.4.4/filter/Makefile.in	2013-07-08 14:29:44.026841106 -0700
+--- funtools-1.4.4.orig/filter/Makefile.in	2014-03-04 08:35:59.665478514 -0800
++++ funtools-1.4.4/filter/Makefile.in	2014-03-04 08:36:38.196760766 -0800
 @@ -29,6 +29,9 @@
  
  prefix =		@prefix@
@@ -33,7 +33,7 @@ diff -Nur funtools-1.4.4.orig/filter/Makefile.in funtools-1.4.4/filter/Makefile.
  
  # wcs files are in the wcs subdirectory
 -WCS_INC =		-I../wcs
-+WCS_INC =		-I/usr/include/wcs
++#WCS_INC =		-I../wcs
  #WCS_LIBS =		-L../wcs -lwcs
  
  # extra includes for compiling
@@ -58,8 +58,8 @@ diff -Nur funtools-1.4.4.orig/filter/Makefile.in funtools-1.4.4/filter/Makefile.
  
  events_c.h:	evfilter.c inc.sed
 diff -Nur funtools-1.4.4.orig/fitsy/Makefile.in funtools-1.4.4/fitsy/Makefile.in
---- funtools-1.4.4.orig/fitsy/Makefile.in	2013-07-08 14:28:30.147439547 -0700
-+++ funtools-1.4.4/fitsy/Makefile.in	2013-07-08 14:29:44.026841106 -0700
+--- funtools-1.4.4.orig/fitsy/Makefile.in	2014-03-04 08:35:59.638478312 -0800
++++ funtools-1.4.4/fitsy/Makefile.in	2014-03-04 08:36:38.197760773 -0800
 @@ -28,6 +28,11 @@
  
  prefix =		@prefix@
@@ -99,8 +99,8 @@ diff -Nur funtools-1.4.4.orig/fitsy/Makefile.in funtools-1.4.4/fitsy/Makefile.in
  		else true; \
  		fi; \
 diff -Nur funtools-1.4.4.orig/gnu/Makefile.in funtools-1.4.4/gnu/Makefile.in
---- funtools-1.4.4.orig/gnu/Makefile.in	2013-07-08 14:28:30.151439619 -0700
-+++ funtools-1.4.4/gnu/Makefile.in	2013-07-08 14:29:44.026841106 -0700
+--- funtools-1.4.4.orig/gnu/Makefile.in	2014-03-04 08:35:59.642478341 -0800
++++ funtools-1.4.4/gnu/Makefile.in	2014-03-04 08:36:38.197760773 -0800
 @@ -21,6 +21,11 @@
  
  prefix =		@prefix@
@@ -131,8 +131,8 @@ diff -Nur funtools-1.4.4.orig/gnu/Makefile.in funtools-1.4.4/gnu/Makefile.in
  # There are just too many different versions of "install" around;
  # better to use the install-sh script that comes with the distribution,
 diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
---- funtools-1.4.4.orig/Makefile.in	2013-07-08 14:28:30.170439766 -0700
-+++ funtools-1.4.4/Makefile.in	2013-07-08 15:49:21.427756907 -0700
+--- funtools-1.4.4.orig/Makefile.in	2014-03-04 08:35:59.665478514 -0800
++++ funtools-1.4.4/Makefile.in	2014-03-04 08:37:40.214224788 -0800
 @@ -28,28 +28,33 @@
  
  prefix =		@prefix@
@@ -233,6 +233,15 @@ diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
  		(cd $(PACKAGE)tmp && ar x ../$(LIB) && ar x ../libtclfun.a); \
  		CC='$(CC)' CXX='$(CXX)' \
  		./mklib -o tclfun $(PACKAGE)tmp/*.o; \
+@@ -386,7 +391,7 @@
+ 		@for dir in $(SUBDIRS); do \
+ 		   echo " "; \
+ 		   echo Installing in $$dir ...; \
+-		   (cd $$dir; $(MAKE) $@) ; \
++		   (cd $$dir; $(MAKE) INSTALL_ROOT=$(INSTALL_ROOT) INCLUDE_INSTALL_DIR=$(INCLUDE_INSTALL_DIR) $@) ; \
+ 		done
+ 
+ install::	install-man
 @@ -422,7 +427,7 @@
  	    do \
  	    if [ ! -d $$i ] ; then \
@@ -261,8 +270,8 @@ diff -Nur funtools-1.4.4.orig/Makefile.in funtools-1.4.4/Makefile.in
  		    else true; \
  		fi; \
 diff -Nur funtools-1.4.4.orig/util/Makefile.in funtools-1.4.4/util/Makefile.in
---- funtools-1.4.4.orig/util/Makefile.in	2013-07-08 14:28:30.160439699 -0700
-+++ funtools-1.4.4/util/Makefile.in	2013-07-08 14:29:44.026841106 -0700
+--- funtools-1.4.4.orig/util/Makefile.in	2014-03-04 08:35:59.653478425 -0800
++++ funtools-1.4.4/util/Makefile.in	2014-03-04 08:36:38.197760773 -0800
 @@ -29,6 +29,11 @@
  
  prefix =		@prefix@

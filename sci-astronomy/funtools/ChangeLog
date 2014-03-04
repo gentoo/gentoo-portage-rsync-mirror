@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/funtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.10 2014/02/23 20:18:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.11 2014/03/04 16:48:24 bicatali Exp $
+
+*funtools-1.4.4-r4 (04 Mar 2014)
+
+  04 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> +funtools-1.4.4-r4.ebuild,
+  -funtools-1.4.4-r3.ebuild, files/funtools-1.4.4-makefiles.patch:
+  Fixed sandbox violation (bug #486690, thanks Joseph Booker), add missing link
+  for shared lib
 
 *funtools-1.4.4-r3 (23 Feb 2014)
 
