@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mg4j
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.18 2014/02/24 00:43:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.19 2014/03/03 23:29:48 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> mg4j-0.9.1-r2.ebuild:
+  amd64 stable, bug #474160
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mg4j-0.9.1-r2.ebuild:
   x86 stable wrt bug #474160
