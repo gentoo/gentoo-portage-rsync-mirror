@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/weakling
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/weakling/ChangeLog,v 1.10 2014/03/04 20:19:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/weakling/ChangeLog,v 1.11 2014/03/04 20:58:21 mrueg Exp $
+
+  04 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -weakling-0.0.3-r1.ebuild:
+  Cleanup old.
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> weakling-0.0.4.ebuild:
   Stable for x86, wrt bug #502298

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.2-r2.ebuild,v 1.1 2014/03/04 19:14:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.2-r2.ebuild,v 1.2 2014/03/04 20:41:11 ssuominen Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
@@ -63,7 +63,7 @@ multilib_src_install() {
 
 	if multilib_is_native_abi && use python; then
 		installation() {
-			emake DESTDIR="${D}" install-pywrap
+			LIBDIR="\$(PREFIX)/$(get_libdir)" emake DESTDIR="${D}" install-pywrap
 		}
 		python_foreach_impl installation
 	fi

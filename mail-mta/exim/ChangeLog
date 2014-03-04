@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.272 2014/03/03 23:41:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.273 2014/03/04 20:47:50 grobian Exp $
+
+  04 Mar 2014; Fabian Groffen <grobian@gentoo.org> exim-4.82-r1.ebuild,
+  metadata.xml:
+  Add support for PRDR and TPDA, bug #489736
 
   03 Mar 2014; Jeroen Roovers <jer@gentoo.org> exim-4.82-r1.ebuild:
   Marked ~hppa (bug #489736).

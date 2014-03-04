@@ -1,6 +1,10 @@
 # ChangeLog for virtual/linuxtv-dvb-headers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linuxtv-dvb-headers/ChangeLog,v 1.6 2013/05/11 14:47:30 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/linuxtv-dvb-headers/ChangeLog,v 1.7 2014/03/04 20:44:57 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  linuxtv-dvb-headers-5.8.ebuild:
+  Add ~mips keyword.
 
   11 May 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
   linuxtv-dvb-headers-5.8.ebuild:
@@ -133,4 +137,3 @@
   22 Jun 2005; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +linuxtv-dvb-headers-3.1.ebuild:
   initial import of package for dvb-headers
-

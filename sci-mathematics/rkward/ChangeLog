@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.40 2014/03/04 20:20:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.41 2014/03/04 20:32:14 bicatali Exp $
+
+  04 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> -rkward-0.5.7.ebuild,
+  -rkward-0.6.0-r1.ebuild:
+  Removed old, fixing bug #501584
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> rkward-0.6.1.ebuild:
   Stable for x86, wrt bug #502416

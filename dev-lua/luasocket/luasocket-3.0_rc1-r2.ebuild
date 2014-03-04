@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1-r2.ebuild,v 1.4 2014/02/22 17:50:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1-r2.ebuild,v 1.5 2014/03/04 20:36:49 vincent Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/diegonehab/${PN}/archive/v${PV/_/-}.tar.gz -> ${P}.t
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips x86"
 IUSE="debug"
 
 RDEPEND=">=dev-lang/lua-5.1[deprecated]"

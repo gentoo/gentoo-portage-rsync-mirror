@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libquvi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.33 2014/03/01 22:10:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.34 2014/03/04 20:42:46 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> libquvi-0.4.1.ebuild:
+  Add ~mips keyword.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> libquvi-0.9.3.ebuild,
   libquvi-0.9.4.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/luaexpat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.13 2014/02/22 17:42:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.14 2014/03/04 20:37:39 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  luaexpat-1.2.0-r1.ebuild:
+  Add ~mips keyword.
 
   22 Feb 2014; Jeroen Roovers <jer@gentoo.org> luaexpat-1.2.0-r1.ebuild:
   Marked ~hppa (bug #495254).
@@ -59,4 +63,3 @@
   02 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +luaexpat-1.1.ebuild,
   +files/luaexpat-1.1-makefile.patch, +metadata.xml:
   Add initial version 1.1, required for net-im/prosody (bug 290590).
-

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo10-backgrounds
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo10-backgrounds/ChangeLog,v 1.5 2013/02/07 22:48:45 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo10-backgrounds/ChangeLog,v 1.6 2014/03/04 20:33:01 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  gentoo10-backgrounds-20110309.ebuild:
+  Add ~mips keyword.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
   gentoo10-backgrounds-20110309.ebuild:
@@ -23,4 +27,3 @@
   09 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   +gentoo10-backgrounds-20110309.ebuild, +metadata.xml:
   Initial import of backgrounds ebuilds.
-

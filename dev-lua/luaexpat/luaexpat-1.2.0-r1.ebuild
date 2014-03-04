@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0-r1.ebuild,v 1.7 2014/02/22 17:42:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0-r1.ebuild,v 1.8 2014/03/04 20:37:39 vincent Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib toolchain-funcs flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://matthewwild.co.uk/projects/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/lua-5.1[deprecated]

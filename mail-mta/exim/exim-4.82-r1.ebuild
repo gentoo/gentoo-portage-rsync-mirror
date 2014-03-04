@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82-r1.ebuild,v 1.2 2014/03/03 23:41:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82-r1.ebuild,v 1.3 2014/03/04 20:47:50 grobian Exp $
 
 EAPI="5"
 
 inherit eutils toolchain-funcs multilib pam systemd
 
-IUSE="dcc +dkim dlfunc dmarc dnsdb doc dovecot-sasl dsn exiscan-acl gnutls ipv6 ldap lmtp maildir mbx mysql nis pam perl pkcs11 postgres radius redis sasl selinux spf sqlite srs ssl syslog tcpd X"
+IUSE="dcc +dkim dlfunc dmarc dnsdb doc dovecot-sasl dsn exiscan-acl gnutls ipv6 ldap lmtp maildir mbx mysql nis pam perl pkcs11 postgres prdr radius redis sasl selinux spf sqlite srs ssl syslog tcpd tpda X"
 REQUIRED_USE="spf? ( exiscan-acl ) srs? ( exiscan-acl ) dmarc? ( spf dkim ) pkcs11? ( gnutls )"
 
 DSN_EXIM_V=482  # local version patched by us
@@ -284,6 +284,12 @@ src_configure() {
 	fi
 	if use dlfunc; then
 		sed -i -e "/^# EXPAND_DLFUNC=yes/s/^# //" Makefile
+	fi
+	if use prdr; then
+		sed -i -e "s:# EXPERIMENTAL_PRDR=yes:EXPERIMENTAL_PRDR=yes:" Makefile
+	fi
+	if use tpda; then
+		sed -i -e "s:# EXPERIMENTAL_TPDA=yes:EXPERIMENTAL_TPDA=yes:" Makefile
 	fi
 
 	# use the "native" interface to the DBM library

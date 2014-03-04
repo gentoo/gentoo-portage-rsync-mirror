@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.15 2014/03/03 01:45:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.16 2014/03/04 20:51:37 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> pycparser-2.10.ebuild:
+  Add ~x86-fbsd wrt bug #503094
 
   03 Mar 2014; Jeroen Roovers <jer@gentoo.org> pycparser-2.10.ebuild:
   Marked ~hppa (bug #503094).

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.7 2012/07/29 18:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.8 2014/03/04 20:31:55 vincent Exp $
 
-EAPI="1"
+EAPI="5"
 
 BI_VER="20060811"
 
@@ -31,13 +31,14 @@ SRC_URI="pixmaps? (
 	)"
 HOMEPAGE="http://www.gentoo.org/index-graphics.html"
 
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="kde offensive +icons +pixmaps +grub lilo"
 RESTRICT="binchecks strip"
 
 DEPEND=""
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	mkdir -p "${WORKDIR}"/${PN}-0.2

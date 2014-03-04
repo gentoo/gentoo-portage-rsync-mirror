@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pretend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.3 2014/03/03 01:48:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.4 2014/03/04 20:54:28 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> pretend-1.0.7.ebuild:
+  Add ~x86-fbsd wrt bug #503094
 
   03 Mar 2014; Jeroen Roovers <jer@gentoo.org> pretend-1.0.7.ebuild:
   Marked ~hppa (bug #503094).
@@ -13,4 +16,3 @@
   01 Mar 2014; Tim Harder <radhermit@gentoo.org> +pretend-1.0.7.ebuild,
   +metadata.xml:
   Initial import.
-

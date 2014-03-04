@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.28 2014/03/03 01:45:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.29 2014/03/04 20:50:52 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> ply-3.4-r1.ebuild:
+  Add ~x86-fbsd wrt bug #503094
 
   03 Mar 2014; Jeroen Roovers <jer@gentoo.org> ply-3.4-r1.ebuild:
   Marked ~hppa (bug #503094).
