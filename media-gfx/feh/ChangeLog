@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.142 2014/03/01 07:29:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.143 2014/03/04 19:29:52 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> feh-2.10.ebuild:
+  Add ~mips keyword.
 
   01 Mar 2014; Tim Harder <radhermit@gentoo.org> -feh-2.9.1-r1.ebuild,
   -feh-2.9.2.ebuild:

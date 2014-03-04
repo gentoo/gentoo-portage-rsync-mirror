@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.35.0.ebuild,v 1.10 2014/02/17 21:08:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.35.0.ebuild,v 1.11 2014/03/04 19:16:46 naota Exp $
 
 EAPI="5"
 
@@ -83,6 +83,7 @@ DOCS=( CHANGES README docs/FEATURES docs/INTERNALS \
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-7.30.0-prefix.patch \
+		"${FILESDIR}"/${PN}-7.30.0-configure.patch \
 		"${FILESDIR}"/${PN}-respect-cflags-3.patch \
 		"${FILESDIR}"/${PN}-fix-gnutls-nettle.patch
 	sed -i '/LD_LIBRARY_PATH=/d' configure.ac || die #382241

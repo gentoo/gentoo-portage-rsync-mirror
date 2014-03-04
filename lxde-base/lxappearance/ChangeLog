@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxappearance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.38 2014/03/02 23:12:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.39 2014/03/04 19:23:14 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  lxappearance-0.5.5.ebuild:
+  Add ~mips keyword.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> lxappearance-0.5.5.ebuild:
   amd64 stable, bug #502818

@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.309 2014/02/23 10:01:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.311 2014/03/04 19:30:47 johu Exp $
+
+  04 Mar 2014; Johannes Huber <johu@gentoo.org> files/libkonq-4.9.0-cmake.patch:
+  Version bump KDE Workspace 4.11.7
+
+*libkonq-4.12.3 (04 Mar 2014)
+
+  04 Mar 2014; Johannes Huber <johu@gentoo.org> +libkonq-4.12.3.ebuild:
+  Version bump KDE SC 4.12.3
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> -libkonq-4.11.2.ebuild:
   Remove old

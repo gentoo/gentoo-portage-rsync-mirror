@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.0.ebuild,v 1.1 2014/02/27 00:02:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.0.ebuild,v 1.2 2014/03/04 19:22:43 chutzpah Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="ldap libvirt mako mongodb mysql openssl redis timelib test"
+IUSE="ldap libcloud libvirt mako mongodb mysql openssl redis timelib test"
 
 RDEPEND=">=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
 		dev-python/msgpack[${PYTHON_USEDEP}]
@@ -34,7 +34,7 @@ RDEPEND=">=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
 		dev-python/pycryptopp[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/setuptools[${PYTHON_USEDEP}]
-		>=dev-python/libcloud-0.14.0[${PYTHON_USEDEP}]
+		libcloud? ( >=dev-python/libcloud-0.14.0[${PYTHON_USEDEP}] )
 		sys-apps/pciutils
 		mako? ( dev-python/mako[${PYTHON_USEDEP}] )
 		ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )

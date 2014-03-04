@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.32 2014/02/27 00:02:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.33 2014/03/04 19:22:43 chutzpah Exp $
+
+  04 Mar 2014; Patrick McLean <chutzpah@gentoo.org> salt-2014.1.0.ebuild,
+  metadata.xml:
+  Make the libcloud dep optional (bug #503396).
 
 *salt-2014.1.0 (26 Feb 2014)
 

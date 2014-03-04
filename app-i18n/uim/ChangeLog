@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.263 2014/01/29 01:47:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.264 2014/03/04 19:06:10 naota Exp $
+
+*uim-1.8.6 (04 Mar 2014)
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> +uim-1.8.6.ebuild:
+  version bump and ebuild clean up by miflab@gmail.com #501938
 
   29 Jan 2014; Naohiro Aota <naota@gentoo.org> metadata.xml,
   uim-1.7.3-r1.ebuild, uim-1.7.3.ebuild, uim-1.8.0-r1.ebuild, uim-1.8.0.ebuild,

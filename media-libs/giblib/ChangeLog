@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/giblib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.25 2013/07/27 20:18:03 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.26 2014/03/04 19:28:29 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  giblib-1.2.4-r1.ebuild:
+  Add ~mips keyword.
 
   27 Jul 2013; Alexis Ballier <aballier@gentoo.org> giblib-1.2.4-r1.ebuild:
   Call elibtoolize and keywords ~amd64-fbsd, bug #477644

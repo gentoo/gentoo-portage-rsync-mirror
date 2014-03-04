@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.317 2014/02/23 10:01:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.318 2014/03/04 19:13:57 johu Exp $
+
+*kstars-4.12.3 (04 Mar 2014)
+
+  04 Mar 2014; Johannes Huber <johu@gentoo.org> +kstars-4.12.3.ebuild:
+  Version bump KDE SC 4.12.3
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> -kstars-4.11.2.ebuild:
   Remove old

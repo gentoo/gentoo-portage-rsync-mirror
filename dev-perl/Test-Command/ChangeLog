@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Command
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.11 2012/06/24 13:00:32 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.12 2014/03/04 19:26:47 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  Test-Command-0.80.0.ebuild:
+  Add ~mips keyword.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

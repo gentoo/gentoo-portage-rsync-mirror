@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/kwalletmanager
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.97 2014/03/04 19:13:26 johu Exp $
+
+*kwalletmanager-4.12.3 (04 Mar 2014)
+
+  04 Mar 2014; Johannes Huber <johu@gentoo.org> +kwalletmanager-4.12.3.ebuild:
+  Version bump KDE SC 4.12.3
+

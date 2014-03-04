@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.156 2014/02/23 10:01:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.157 2014/03/04 19:13:56 johu Exp $
+
+*kigo-4.12.3 (04 Mar 2014)
+
+  04 Mar 2014; Johannes Huber <johu@gentoo.org> +kigo-4.12.3.ebuild:
+  Version bump KDE SC 4.12.3
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> -kigo-4.11.2.ebuild:
   Remove old
