@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.10.3.ebuild,v 1.1 2014/02/27 20:51:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.10.3.ebuild,v 1.2 2014/03/04 22:37:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -39,7 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/gstreamer:1.0[introspection]
 	media-libs/gst-plugins-base:1.0[introspection]
 	media-plugins/gst-plugins-meta:1.0
-	media-plugins/grilo-plugins:0.2
+	media-plugins/grilo-plugins:0.2[tracker]
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.26
