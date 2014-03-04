@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8663 2014/03/04 12:02:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8665 2014/03/04 15:40:58 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Mar 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Restore mask on www-plugins/chrome-binary-plugins:unstable.
+
+  04 Mar 2014; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-misc/papers-please for no-multilib
 
   04 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Unmask Boost 1.54 and 1.55

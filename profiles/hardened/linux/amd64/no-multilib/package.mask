@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.29 2013/12/27 16:58:18 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.30 2014/03/04 15:38:17 hasufell Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
 dev-lang/rebol-bin
+
 games-action/brutal-legend
 games-action/hotline-miami
 games-action/trine2
@@ -13,6 +14,7 @@ games-action/beathazardultra
 games-action/solar2
 games-arcade/dynamitejack
 games-kids/crayon-physics
+games-misc/papers-please
 games-rpg/dungeon-defenders
 games-rpg/bastion
 

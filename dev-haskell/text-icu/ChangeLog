@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/text-icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/ChangeLog,v 1.5 2014/03/02 21:32:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/ChangeLog,v 1.6 2014/03/04 15:40:43 qnikst Exp $
+
+*text-icu-0.6.3.7-r1 (04 Mar 2014)
+
+  04 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  +text-icu-0.6.3.7-r1.ebuild, -text-icu-0.6.3.7.ebuild:
+  update dependencies
 
   02 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   text-icu-0.6.3.7.ebuild:

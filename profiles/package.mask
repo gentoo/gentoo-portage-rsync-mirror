@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15443 2014/03/04 12:02:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15444 2014/03/04 15:40:58 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,7 +30,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2013)
+# Mike Gilbert <floppym@gentoo.org> (04 Mar 2014)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+www-plugins/chrome-binary-plugins:unstable
+
+# Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2014)
 # gnome-extra/polkit-gnome is the "GTK+ polkit agent" and has no extra
 # dependencies that installing lxde-base/lxpolkit would solve, thus
 # the only motivation for creation of lxpolkit was to drop the word

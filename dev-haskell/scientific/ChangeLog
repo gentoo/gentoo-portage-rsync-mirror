@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/scientific
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/scientific/ChangeLog,v 1.1 2014/03/04 15:56:54 qnikst Exp $
+
+*scientific-0.2.0.1 (04 Mar 2014)
+
+  04 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +scientific-0.2.0.1.ebuild:
+  new package

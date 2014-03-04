@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/geoipupdate-2.0.0.ebuild,v 1.8 2014/02/23 17:09:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/geoipupdate-2.0.0.ebuild,v 1.9 2014/03/04 15:39:22 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="https://github.com/maxmind/${PN}/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ia64 ~s390 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ia64 ~s390 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="
