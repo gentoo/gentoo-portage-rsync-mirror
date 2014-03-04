@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/edac-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/edac-utils/ChangeLog,v 1.4 2013/04/09 12:16:34 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/edac-utils/ChangeLog,v 1.5 2014/03/03 23:55:39 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> edac-utils-0.18.ebuild:
+  amd64 stable, bug #500066
 
 *edac-utils-0.18 (09 Apr 2013)
 

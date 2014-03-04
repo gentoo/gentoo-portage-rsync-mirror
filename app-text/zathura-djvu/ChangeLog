@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-djvu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.22 2014/02/24 02:23:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.23 2014/03/03 23:35:11 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> zathura-djvu-0.2.3.ebuild:
+  amd64 stable, bug #491960
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   zathura-djvu-0.2.3.ebuild:

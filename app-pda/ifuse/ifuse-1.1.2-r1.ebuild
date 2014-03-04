@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.1.2-r1.ebuild,v 1.2 2014/02/24 00:19:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.1.2-r1.ebuild,v 1.3 2014/03/03 23:56:08 pacho Exp $
 
 EAPI=5
 inherit autotools readme.gentoo
@@ -11,7 +11,7 @@ SRC_URI="http://www.libimobiledevice.org/downloads/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=app-pda/libimobiledevice-1.1.4:=

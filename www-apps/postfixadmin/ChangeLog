@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.30 2014/02/24 02:28:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.31 2014/03/03 23:33:05 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> postfixadmin-2.3.6.ebuild:
+  amd64 stable, bug #482760
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   postfixadmin-2.3.6.ebuild:

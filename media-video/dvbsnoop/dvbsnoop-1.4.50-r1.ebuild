@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbsnoop/dvbsnoop-1.4.50-r1.ebuild,v 1.2 2014/02/24 01:16:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbsnoop/dvbsnoop-1.4.50-r1.ebuild,v 1.3 2014/03/03 23:50:07 pacho Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="DVB/MPEG stream analyzer program"
 SRC_URI="mirror://sourceforge/dvbsnoop/${P}.tar.gz"
 HOMEPAGE="http://dvbsnoop.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 DEPEND="virtual/linuxtv-dvb-headers"
 
 RDEPEND=""

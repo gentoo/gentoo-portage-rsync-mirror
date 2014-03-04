@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.37 2014/02/24 04:16:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.38 2014/03/03 23:58:20 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> ruby-xslt-0.9.9-r2.ebuild:
+  amd64 stable, bug #500896
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ruby-xslt-0.9.9-r2.ebuild:

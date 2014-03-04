@@ -3,10 +3,10 @@ DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Advanced text manipulations in images.
 EAPI=5
 HOMEPAGE=http://pear.php.net/Image_Text
-KEYWORDS=~amd64 x86
+KEYWORDS=amd64 x86
 LICENSE=PHP-3
 RDEPEND=dev-lang/php[gd] dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Image_Text-0.7.0.tgz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=111186be2ca14f2889287bd49014ab53
+_md5_=4723f0463cfce69cb892eb8b212ff291

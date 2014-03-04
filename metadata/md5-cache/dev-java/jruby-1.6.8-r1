@@ -4,7 +4,7 @@ DESCRIPTION=Java-based Ruby interpreter implementation
 EAPI=4
 HOMEPAGE=http://jruby.codehaus.org/
 IUSE=bsf ssl elibc_FreeBSD doc source test elibc_FreeBSD
-KEYWORDS=~amd64 x86 ~amd64-linux ~x86-linux ~x86-macos
+KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux ~x86-macos
 LICENSE=|| ( CPL-1.0 GPL-2 LGPL-2.1 )
 PDEPEND=ssl? ( dev-ruby/jruby-openssl )
 RDEPEND=>=dev-java/bytelist-1.0.8:0 >=dev-java/jline-1.0:0 >=dev-java/joni-1.1.3:0 >=dev-java/jnr-netdb-1.0:0 >=dev-java/jvyamlb-0.2.5:0 >=dev-java/asm-3.3.1:3 >=dev-java/jcodings-1.0.5:0 dev-java/jffi:1.0 dev-java/jnr-constants:0 dev-java/jnr-ffi:0.5 dev-java/jnr-posix:1.1 >=dev-java/joda-time-1.6:0 dev-util/jay:0[java] dev-java/nailgun:0 dev-java/jgrapht:0 dev-java/ant-core:0 dev-java/bsf:2.3 dev-java/osgi-core-api:0 dev-java/snakeyaml:1.9 dev-java/jzlib:1.1 >=virtual/jre-1.6 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://jruby.org.s3.amazonaws.com/downloads/1.6.8/jruby-src-1.6.8.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=d221d52e161afca3cf973332d8b694ce
+_md5_=f9407bb19722c116c696e3426505186c

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/xml-light
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.9 2014/02/24 00:39:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/ChangeLog,v 1.10 2014/03/03 23:38:59 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> xml-light-2.2-r2.ebuild:
+  amd64 stable, bug #492064
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xml-light-2.2-r2.ebuild:
   x86 stable wrt bug #492064
@@ -42,4 +45,3 @@
   11 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +xml-light-2.2.ebuild,
   +metadata.xml:
   Add dev-ml/xml-light, bug 342391. Thanks to slepnoga
-

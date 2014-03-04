@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/ganeti
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.78 2013/12/23 15:58:43 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.79 2014/03/03 23:59:44 chutzpah Exp $
+
+*ganeti-2.10.0 (03 Mar 2014)
+*ganeti-2.9.5 (03 Mar 2014)
+
+  03 Mar 2014; Patrick McLean <chutzpah@gentoo.org> +ganeti-2.9.5.ebuild,
+  +ganeti-2.10.0.ebuild, +files/ganeti-2.2.initd:
+  Version bump for 2.9 and 2.10. Add new version of init script that has a "use
+  net" (bug #501238). Install HA examples to docs (bug #491558). Port over to
+  subslot deps for haskell packages.
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #66351

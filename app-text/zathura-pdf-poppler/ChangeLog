@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-pdf-poppler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/ChangeLog,v 1.24 2014/02/24 02:25:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/ChangeLog,v 1.25 2014/03/03 23:35:39 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> zathura-pdf-poppler-0.2.3.ebuild:
+  amd64 stable, bug #491962
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   zathura-pdf-poppler-0.2.3.ebuild:

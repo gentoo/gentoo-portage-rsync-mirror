@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.33 2014/02/24 01:20:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.34 2014/03/03 23:31:50 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> gunicorn-0.17.4.ebuild:
+  amd64 stable, bug #474322
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gunicorn-0.17.4.ebuild:
   x86 stable wrt bug #474322

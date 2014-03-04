@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/xml-simple-1.1.3.ebuild,v 1.1 2013/12/26 06:28:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/xml-simple-1.1.3.ebuild,v 1.2 2014/03/03 23:58:44 pacho Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20 jruby"
@@ -16,5 +16,5 @@ HOMEPAGE="http://rubyforge.org/projects/xml-simple/ https://github.com/maik/xml-
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""

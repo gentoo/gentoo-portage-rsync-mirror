@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/radiusclient-ng-0.5.6-r1.ebuild,v 1.2 2014/02/24 01:22:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/radiusclient-ng-0.5.6-r1.ebuild,v 1.3 2014/03/03 23:50:31 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="static-libs"
 
 DEPEND="!net-dialup/radiusclient

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.6.ebuild,v 1.2 2014/02/24 00:40:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.6.ebuild,v 1.3 2014/03/03 23:51:20 pacho Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.remlab.net/files/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+caps"
 
 RDEPEND="sys-apps/iproute2

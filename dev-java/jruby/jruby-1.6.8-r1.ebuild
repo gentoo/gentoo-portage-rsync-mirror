@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8-r1.ebuild,v 1.2 2014/02/24 02:17:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8-r1.ebuild,v 1.3 2014/03/03 23:39:57 pacho Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://jruby.org.s3.amazonaws.com/downloads/${PV}/${PN}-src-${PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="bsf ssl"
 
 # jffi still needed? Or do we call that jnr-ffi?

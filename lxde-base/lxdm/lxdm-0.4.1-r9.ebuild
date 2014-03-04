@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r9.ebuild,v 1.2 2014/02/24 00:58:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r9.ebuild,v 1.3 2014/03/03 23:54:43 pacho Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 
 IUSE="consolekit debug gtk3 nls pam"
 

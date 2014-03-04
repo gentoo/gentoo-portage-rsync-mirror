@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.1.1.ebuild,v 1.2 2014/02/24 01:39:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.1.1.ebuild,v 1.3 2014/03/03 23:51:46 pacho Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="ayatana debug geoip libnotify libproxy"
 
 RESTRICT="test"

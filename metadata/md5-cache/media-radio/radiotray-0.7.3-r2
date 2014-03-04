@@ -4,11 +4,11 @@ DESCRIPTION=Online radio streaming player
 EAPI=5
 HOMEPAGE=http://radiotray.sourceforge.net/
 IUSE=python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~amd64 x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-1+
 RDEPEND=sys-apps/dbus[X] dev-python/dbus-python[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/gst-python:0.10[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/pygtk[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/lxml[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/pyxdg[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/pygobject:2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/notify-python[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] media-libs/gst-plugins-good:0.10 media-libs/gst-plugins-ugly:0.10 media-plugins/gst-plugins-alsa:0.10 media-plugins/gst-plugins-libmms:0.10 media-plugins/gst-plugins-ffmpeg:0.10 media-plugins/gst-plugins-mad:0.10 media-plugins/gst-plugins-ogg:0.10 media-plugins/gst-plugins-soup:0.10 media-plugins/gst-plugins-vorbis:0.10 python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/radiotray/radiotray-0.7.3.tar.gz
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=fc935239534b5cedef1598107d56ba39
+_md5_=3ea48198a2df832282e1004f3f4073db

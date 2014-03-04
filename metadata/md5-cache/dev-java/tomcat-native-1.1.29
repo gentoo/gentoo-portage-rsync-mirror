@@ -4,10 +4,10 @@ DESCRIPTION=Native APR library for Tomcat
 EAPI=5
 HOMEPAGE=http://tomcat.apache.org/
 IUSE=elibc_FreeBSD
-KEYWORDS=~amd64 x86
+KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
 RDEPEND==dev-libs/apr-1* dev-libs/openssl >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://apache/tomcat/tomcat-connectors/native/1.1.29/source/tomcat-native-1.1.29-src.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=5a6771713ccf89cfedf7ee504a2d45b8
+_md5_=c9b85e64df0ff71a195d98e8adb927fe

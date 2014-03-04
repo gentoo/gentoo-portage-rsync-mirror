@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyaudio/ChangeLog,v 1.16 2014/02/24 04:20:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyaudio/ChangeLog,v 1.17 2014/03/03 23:45:54 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> pyaudio-0.2.7-r1.ebuild:
+  amd64 stable, bug #495606
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyaudio-0.2.7-r1.ebuild:
   x86 stable wrt bug #495606

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.94 2014/02/24 02:17:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.95 2014/03/03 23:39:57 pacho Exp $
+
+  03 Mar 2014; Pacho Ramos <pacho@gentoo.org> jruby-1.6.8-r1.ebuild:
+  amd64 stable, bug #495016
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jruby-1.6.8-r1.ebuild:
   x86 stable wrt bug #495016

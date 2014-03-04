@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-3.2.ebuild,v 1.3 2014/02/24 02:35:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/commons-math-3.2.ebuild,v 1.4 2014/03/03 23:37:22 pacho Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://apache/commons/math/source/${MY_P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=">=virtual/jdk-1.5"
 

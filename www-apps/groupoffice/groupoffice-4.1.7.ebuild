@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-4.1.7.ebuild,v 1.1 2013/01/02 19:26:25 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-4.1.7.ebuild,v 1.2 2014/03/03 23:52:34 pacho Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://group-office.sourceforge.net/"
 SRC_URI="mirror://sourceforge/group-office/${MY_P}.tar.gz"
 
 LICENSE="AGPL-3"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="app-arch/zip

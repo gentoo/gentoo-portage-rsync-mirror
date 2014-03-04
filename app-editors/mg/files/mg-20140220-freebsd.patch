@@ -11,9 +11,11 @@
  
 --- mg-20140220-orig/tags.c
 +++ mg-20140220/tags.c
-@@ -16,8 +16,10 @@
+@@ -15,9 +15,12 @@
+ #include <err.h>
  #include <stdlib.h>
  #include <string.h>
++#include <stdio.h>
  
 -#ifndef LIBBSD_OVERLAY
 -#include <util.h>
