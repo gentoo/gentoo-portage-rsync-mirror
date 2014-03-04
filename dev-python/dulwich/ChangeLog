@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.72 2014/03/02 23:07:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.73 2014/03/04 20:05:47 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dulwich-0.9.4.ebuild:
+  Stable for x86, wrt bug #502778
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> dulwich-0.9.4.ebuild:
   amd64 stable, bug #502778

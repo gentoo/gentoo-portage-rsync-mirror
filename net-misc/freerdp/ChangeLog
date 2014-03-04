@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.59 2014/03/02 22:43:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.60 2014/03/04 20:13:20 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  freerdp-1.1.0_beta1_p20130710.ebuild:
+  Stable for x86, wrt bug #500878
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org>
   freerdp-1.1.0_beta1_p20130710.ebuild:

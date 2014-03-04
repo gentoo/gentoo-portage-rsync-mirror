@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Number-Delta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/ChangeLog,v 1.23 2014/02/19 10:47:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/ChangeLog,v 1.24 2014/03/04 20:10:08 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  Test-Number-Delta-1.40.0.ebuild:
+  Add ~mips keyword.
 
 *Test-Number-Delta-1.40.0 (19 Feb 2014)
 

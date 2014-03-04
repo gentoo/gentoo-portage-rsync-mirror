@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.46 2014/03/02 23:21:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.47 2014/03/04 20:22:08 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> jack-rack-1.4.8_rc1.ebuild:
+  Stable for x86, wrt bug #503044
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> jack-rack-1.4.8_rc1.ebuild:
   amd64 stable, bug #503044

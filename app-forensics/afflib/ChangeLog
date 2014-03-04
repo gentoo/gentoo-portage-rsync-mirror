@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.47 2014/03/02 22:57:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.48 2014/03/04 20:21:25 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> afflib-3.7.4.ebuild:
+  Stable for x86, wrt bug #502620
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> afflib-3.7.4.ebuild:
   amd64 stable, bug #502620

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.311 2014/03/02 22:50:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.312 2014/03/04 20:18:30 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> calibre-1.20.ebuild:
+  Stable for x86, wrt bug #502198
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> calibre-1.20.ebuild:
   amd64 stable, bug #502198

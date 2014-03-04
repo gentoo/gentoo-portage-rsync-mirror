@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.4.ebuild,v 1.2 2014/03/02 22:57:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.4.ebuild,v 1.3 2014/03/04 20:21:25 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/simsong/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc x86"
 IUSE="fuse ncurses python qemu readline s3 static-libs threads"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 

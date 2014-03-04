@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.118 2013/10/05 08:33:53 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.119 2014/03/04 20:22:12 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> midori-0.5.5.ebuild:
+  Add ~mips keyword.
 
   05 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> -midori-0.5.4.ebuild:
   old

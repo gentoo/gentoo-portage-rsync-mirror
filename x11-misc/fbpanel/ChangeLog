@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.59 2014/03/02 22:39:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.60 2014/03/04 20:23:11 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> fbpanel-6.1-r2.ebuild:
+  Add ~mips keyword.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> fbpanel-6.1-r2.ebuild:
   amd64 stable, bug #500494

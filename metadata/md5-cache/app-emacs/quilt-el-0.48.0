@@ -3,10 +3,10 @@ DEPEND=>=virtual/emacs-21
 DESCRIPTION=Quilt mode for Emacs
 EAPI=5
 HOMEPAGE=http://satoru-takeuchi.org/dev/quilt-el/
-KEYWORDS=amd64 arm ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=amd64 arm ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-1+
 RDEPEND=dev-util/quilt >=virtual/emacs-21
 SLOT=0
 SRC_URI=http://satoru-takeuchi.org/dev/quilt-el/download/quilt-el-0.48.0.tar.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=8b520486b20c7ec87b69b5fdf6ca17f5
+_md5_=df4f8053727a5c6ddb9cff739082f132

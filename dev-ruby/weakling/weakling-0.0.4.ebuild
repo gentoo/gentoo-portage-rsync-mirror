@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/weakling/weakling-0.0.4.ebuild,v 1.2 2014/03/02 22:51:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/weakling/weakling-0.0.4.ebuild,v 1.3 2014/03/04 20:19:19 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DESCRIPTION="weakling: a collection of weakref utilities for Ruby"
 HOMEPAGE="http://github.com/headius/weakling"
 LICENSE="Apache-2.0"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

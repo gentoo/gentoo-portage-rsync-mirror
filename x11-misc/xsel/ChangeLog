@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.25 2013/09/10 13:07:58 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.26 2014/03/04 20:28:41 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> xsel-1.2.0.ebuild:
+  Add ~mips keyword.
 
   10 Sep 2013; Michael Weber <xmw@gentoo.org> xsel-1.2.0.ebuild:
   Adding ~arm keyword.

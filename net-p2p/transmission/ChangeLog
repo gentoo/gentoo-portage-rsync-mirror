@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.249 2013/09/26 05:42:46 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.250 2014/03/04 20:18:56 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  transmission-2.82-r3.ebuild:
+  Add ~mips keyword.
 
   26 Sep 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/transmission-2.77-translations-path-fix.patch,

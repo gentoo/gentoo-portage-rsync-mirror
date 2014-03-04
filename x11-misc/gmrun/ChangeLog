@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gmrun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/ChangeLog,v 1.26 2012/05/05 04:53:53 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/ChangeLog,v 1.27 2014/03/04 20:24:07 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> gmrun-0.9.2-r1.ebuild:
+  Add ~mips keyword.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gmrun-0.9.2.ebuild,
   gmrun-0.9.2-r1.ebuild:

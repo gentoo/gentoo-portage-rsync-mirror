@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.60 2013/09/25 17:25:59 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.61 2014/03/04 20:02:39 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> babl-0.1.10-r1.ebuild:
+  Add ~mips keyword.
 
   25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> babl-0.1.10-r1.ebuild:
   Stable for ppc, wrt bug #481736

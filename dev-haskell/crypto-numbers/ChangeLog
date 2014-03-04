@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/crypto-numbers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-numbers/ChangeLog,v 1.6 2014/03/02 23:02:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-numbers/ChangeLog,v 1.7 2014/03/04 20:01:12 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> crypto-numbers-0.2.3.ebuild:
+  Stable for x86, wrt bug #502666
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> crypto-numbers-0.2.3.ebuild:
   amd64 stable, bug #502666

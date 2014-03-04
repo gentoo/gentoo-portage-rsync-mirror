@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/volwheel-0.2.8-r1.ebuild,v 1.3 2012/12/16 13:52:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/volwheel-0.2.8-r1.ebuild,v 1.4 2014/03/04 20:17:38 vincent Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils gnome2-utils
 
 DESCRIPTION="A volume control trayicon with mouse wheel support"
@@ -11,7 +11,7 @@ SRC_URI="http://olwtools.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~mips x86"
 IUSE="alsa"
 
 DEPEND="dev-lang/perl"

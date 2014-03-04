@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/adjustableclock-4.1.3.ebuild,v 1.2 2014/03/02 23:12:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/adjustableclock-4.1.3.ebuild,v 1.3 2014/03/04 20:09:32 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://kde-look.org/content/show.php/Adjustable+Clock?content=92825"
 SRC_URI="http://kde-look.org/CONTENT/content-files/92825-${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.95 2014/02/22 19:48:53 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.96 2014/03/04 20:26:44 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> libfm-1.1.4.ebuild:
+  Add ~mips keyword.
 
   22 Feb 2014; Chema Alonso <nimiux@gentoo.org> libfm-1.1.4.ebuild:
   Stable for amd64 wrt bug #494440

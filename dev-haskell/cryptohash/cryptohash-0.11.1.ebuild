@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptohash/cryptohash-0.11.1.ebuild,v 1.2 2014/03/02 23:02:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptohash/cryptohash-0.11.1.ebuild,v 1.3 2014/03/04 20:01:26 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-haskell/byteable:=[profile?]

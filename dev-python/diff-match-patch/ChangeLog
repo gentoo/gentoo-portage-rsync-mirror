@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/diff-match-patch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.16 2014/03/02 22:47:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.17 2014/03/04 20:05:31 ago Exp $
+
+  04 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  diff-match-patch-20121119.ebuild:
+  Stable for x86, wrt bug #501494
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> diff-match-patch-20121119.ebuild:
   amd64 stable, bug #501494

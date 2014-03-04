@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.172 2014/02/01 13:52:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.173 2014/03/04 20:15:07 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  glib-perl-1.301.0.ebuild:
+  Add ~mips keyword.
 
   01 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> glib-perl-1.301.0.ebuild:
   ppc64 stable wrt bug #495540

@@ -4,11 +4,11 @@ DESCRIPTION=A Fast, Easy and Free BitTorrent client
 EAPI=5
 HOMEPAGE=http://www.transmissionbt.com/
 IUSE=ayatana gtk lightweight systemd qt4 xfs
-KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux
+KEYWORDS=amd64 ~arm ~mips ppc ppc64 x86 ~x86-fbsd ~amd64-linux
 LICENSE=GPL-2 MIT
 RDEPEND=>=dev-libs/libevent-2.0.10:= dev-libs/openssl:0= net-libs/libnatpmp:= >=net-libs/miniupnpc-1.6.20120509:= >=net-misc/curl-7.16.3:=[ssl] sys-libs/zlib:= gtk? ( >=dev-libs/dbus-glib-0.100:= >=dev-libs/glib-2.32:2= >=x11-libs/gtk+-3.4:3= ayatana? ( >=dev-libs/libappindicator-0.4.90:3= ) ) systemd? ( sys-apps/systemd ) qt4? ( dev-qt/qtcore:4= dev-qt/qtgui:4= dev-qt/qtdbus:4= )
 REQUIRED_USE=ayatana? ( gtk )
 SLOT=0
 SRC_URI=http://download.transmissionbt.com/transmission/files/transmission-2.82.tar.xz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fe0985826900969c01b65a4cbe394203
+_md5_=c7b9d8ac63783b5f078cd34960f4205d

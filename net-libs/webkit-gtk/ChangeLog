@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.248 2014/03/04 19:41:49 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.249 2014/03/04 20:21:03 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  webkit-gtk-2.2.5.ebuild:
+  Add ~mips keyword.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   webkit-gtk-2.2.5-r200.ebuild:

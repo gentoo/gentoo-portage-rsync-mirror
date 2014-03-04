@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.0.10.ebuild,v 1.2 2014/03/02 22:54:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.0.10.ebuild,v 1.3 2014/03/04 20:20:17 ago Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -19,7 +19,7 @@ SRC_URI="http://sphinxsearch.com/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc x86 ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="debug id64 mysql odbc postgres stemmer test"
 
 RDEPEND="mysql? ( virtual/mysql )

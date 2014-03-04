@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/menu-cache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.37 2014/01/14 15:32:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.38 2014/03/04 20:25:45 vincent Exp $
+
+  04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
+  menu-cache-0.5.1.ebuild:
+  Add ~mips keyword.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> menu-cache-0.5.1.ebuild:
   Stable for ppc, wrt bug #496882

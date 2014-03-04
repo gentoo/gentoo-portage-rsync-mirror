@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.20.ebuild,v 1.2 2014/03/02 22:50:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.20.ebuild,v 1.3 2014/03/04 20:18:30 ago Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ LICENSE="
 	unRAR
 "
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="+udisks"
 
