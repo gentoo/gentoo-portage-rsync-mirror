@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.470 2014/02/06 16:48:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.471 2014/03/04 09:22:37 chainsaw Exp $
+
+*asterisk-11.8.0 (04 Mar 2014)
+
+  04 Mar 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.8.0.ebuild:
+  Fixes a crash on hangup cause set, which is a regression introduced by an
+  earlier fix. Performance improvements for high console verbosity. Updated
+  G729 VAD detection patch by Jaco Kroon, closes bug #496584.
 
 *asterisk-11.7.0-r1 (06 Feb 2014)
 
