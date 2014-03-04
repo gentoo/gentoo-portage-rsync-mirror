@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15442 2014/03/04 05:48:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15443 2014/03/04 12:02:12 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -437,11 +437,6 @@ games-emulation/m64py
 # Causes build failures, bug #492800
 =media-libs/mesa-10.0*
 
-# Sergey Popov <pinkbyte@gentoo.org> (14 Nov 2013)
-# Masked for testing
-~dev-util/boost-build-1.55.0
-~dev-libs/boost-1.55.0
-
 # Ben de Groot <yngwin@gentoo.org> (11 Nov 2013)
 # Mask older roboto versions to give users a regular upgrade path
 # now that we've switched to upstream versioning
@@ -539,11 +534,6 @@ virtual/perl-B-Debug
 # Mask 5.1 series because the backport of the CVE-2012-5627
 # has not be done. bug #446240 comment 2
 =dev-db/mariadb-5.1.67
-
-# Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2013)
-# Masked for testing
-~dev-util/boost-build-1.54.0
-~dev-libs/boost-1.54.0
 
 # Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
 # Masking live ebuilds

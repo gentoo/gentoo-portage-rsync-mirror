@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.102 2014/03/02 23:16:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.103 2014/03/04 12:16:27 pinkbyte Exp $
+
+  04 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> openntpd-20080406-r7.ebuild:
+  Stable on x86, wrt bug #502902
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> openntpd-20080406-r7.ebuild:
   amd64 stable, bug #502902

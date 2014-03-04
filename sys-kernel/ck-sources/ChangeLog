@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.229 2014/03/01 00:44:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.230 2014/03/04 12:13:59 pinkbyte Exp $
+
+  04 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -ck-sources-2.6.38-r3.ebuild:
+  Drop old version as suggested by proxied maintainer in bug #502442
 
 *ck-sources-3.4.82 (01 Mar 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-24.3.0.ebuild,v 1.3 2014/02/15 06:03:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-24.3.0-r1.ebuild,v 1.1 2014/03/04 12:20:48 polynomial-c Exp $
 
 EAPI="5"
 MOZ_ESR="0"
@@ -43,7 +43,7 @@ IUSE="+crashreporter"
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/freedesktop-icon-theme
 	dev-libs/dbus-glib
-	=media-libs/libpng-1.5*
+	=media-libs/libpng-1.6*
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
