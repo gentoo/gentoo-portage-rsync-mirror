@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.4.ebuild,v 1.1 2014/02/09 06:41:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.5.4.ebuild,v 1.2 2014/03/04 07:35:04 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19"
@@ -25,7 +25,7 @@ DEPEND="${DEPEND} test? ( sys-devel/bc )"
 RDEPEND="${RDEPEND}"
 
 ruby_add_rdepend "
-	>=dev-ruby/childprocess-0.3.6 =dev-ruby/childprocess-0.3*
+	>=dev-ruby/childprocess-0.3.6
 	>=dev-ruby/rspec-expectations-2.7:2
 	>=dev-util/cucumber-1.1.1"
 

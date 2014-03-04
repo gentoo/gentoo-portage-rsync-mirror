@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.33 2014/02/09 06:41:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.34 2014/03/04 07:35:04 graaff Exp $
+
+  04 Mar 2014; Hans de Graaff <graaff@gentoo.org> aruba-0.5.4.ebuild:
+  Relax dev-ruby/childprocess dependency in accordance with the gemspec.
 
 *aruba-0.5.4 (09 Feb 2014)
 
