@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.22 2014/01/04 16:29:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.23 2014/03/04 02:48:47 tetromino Exp $
 
 # Required by folks, needed by empathy
 >=gnome-extra/evolution-data-server-3.8 vala
@@ -30,6 +30,9 @@ dev-ml/lablgtk -gnome
 
 # incompatible with >=evolution-data-server-3.6, bug #449138
 dev-vcs/giggle -eds
+
+# Pulled in by grilo-plugins which is needed for gnome-music
+media-libs/grilo playlist
 
 # Required for webkit-gtk-2
 media-libs/harfbuzz icu
