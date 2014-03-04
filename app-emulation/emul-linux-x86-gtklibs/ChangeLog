@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.117 2014/03/01 13:34:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.118 2014/03/04 03:25:28 tetromino Exp $
+
+  04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  emul-linux-x86-gtklibs-20131008-r4.ebuild:
+  Add missing pangox-compat dependency (/usr/lib32/libpangox-1.0.so was being
+  removed, but pangox-compat[abi_x86_32] was not being pulled in).
 
 *emul-linux-x86-gtklibs-20131008-r4 (01 Mar 2014)
 
