@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.8 2014/03/02 17:55:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.9 2014/03/04 06:37:57 ssuominen Exp $
 
 EAPI=5
 
@@ -170,6 +170,7 @@ src_prepare() {
 
 multilib_src_configure() {
 	tc-export CC #463846
+	export cc_cv_CFLAGS__flto=no #502950
 
 	# Keep sorted by ./configure --help and only pass --disable flags
 	# when *required* to avoid external deps or unnecessary compile

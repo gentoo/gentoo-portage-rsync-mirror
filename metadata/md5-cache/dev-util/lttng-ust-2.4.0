@@ -1,0 +1,13 @@
+DEFINED_PHASES=prepare
+DEPEND=dev-libs/userspace-rcu !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Linux Trace Toolkit - UST library
+EAPI=5
+HOMEPAGE=http://lttng.org
+IUSE=examples
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/userspace-rcu
+SLOT=0
+SRC_URI=http://lttng.org/files/lttng-ust/lttng-ust-2.4.0.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=912bdde1a7c29ae196e427cb3648ba5a
