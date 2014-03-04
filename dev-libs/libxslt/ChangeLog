@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.275 2014/03/01 22:09:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.277 2014/03/04 05:53:10 tetromino Exp $
+
+  04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  files/libxslt-1.1.28-libgcrypt-config.patch:
+  Update patch
+
+*libxslt-1.1.28-r2 (04 Mar 2014)
+
+  04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libxslt-1.1.28.ebuild, +libxslt-1.1.28-r2.ebuild,
+  +files/libxslt-1.1.28-libgcrypt-config.patch:
+  Add multilib support (bug #480402, thanks to David Heidelberger (okias) and
+  Michał Górny). Punt old.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> libxslt-1.1.28-r1.ebuild,
   libxslt-1.1.28.ebuild:

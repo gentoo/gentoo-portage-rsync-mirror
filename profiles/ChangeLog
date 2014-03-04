@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8661 2014/03/04 03:21:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8662 2014/03/04 05:48:55 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Mask multilib libxslt until multilib libgcrypt is unmasked (bug #480402).
 
   04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Mask multilib pangox-compat until multilib graphite2 is unmasked (bug
