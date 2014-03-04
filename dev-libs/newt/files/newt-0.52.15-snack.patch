@@ -2,15 +2,6 @@ diff --git a/Makefile.in b/Makefile.in
 index 75764e1..ca95bb6 100644
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -78,7 +78,7 @@ showkey:	showkey.o $(LIBNEWT)
- 
- _snackmodule.so:   snackmodule.c $(LIBNEWTSH)
- 	@[ -n "$(PYTHONVERS)" ] && for ver in $(PYTHONVERS); do \
--		pyconfig=$$ver-config; \
-+		pyconfig=$${ver/python/python-config-}; \
- 		if ! $$pyconfig --cflags > /dev/null 2>&1 && \
- 				python-config --cflags > /dev/null 2>&1; then \
- 			echo $$pyconfig not found, using python-config; \
 @@ -90,7 +90,7 @@ _snackmodule.so:   snackmodule.c $(LIBNEWTSH)
  		PLDFLAGS=`$$pyconfig --ldflags`; \
  		PLFLAGS=`$$pyconfig --libs`; \
