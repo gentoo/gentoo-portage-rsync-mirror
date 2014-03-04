@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/parted
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.45 2014/01/30 12:38:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.46 2014/03/04 00:25:41 jer Exp $
+
+  04 Mar 2014; Jeroen Roovers <jer@gentoo.org> parted-2.4.ebuild,
+  parted-3.1-r1.ebuild, +files/parted-2.4-readline.patch,
+  +files/parted-3.1-readline.patch:
+  Fix building against sys-libs/readline-6.3 (bug #503314 by eroen).
 
   30 Jan 2014; Jeroen Roovers <jer@gentoo.org> parted-2.4.ebuild,
   parted-3.1-r1.ebuild:

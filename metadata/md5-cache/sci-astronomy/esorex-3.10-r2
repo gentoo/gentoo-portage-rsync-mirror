@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=sci-astronomy/cpl-6.3:= !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=ESO Recipe Execution Tool to exec cpl scripts
+EAPI=5
+HOMEPAGE=http://www.eso.org/sci/software/cpl/esorex.html
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=sci-astronomy/cpl-6.3:=
+SLOT=0
+SRC_URI=ftp://ftp.eso.org/pub/dfs/pipelines/libraries/esorex/esorex-3.10.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=6444348560a796c988aa51c0c3647fb9

@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/gasgano
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/gasgano/ChangeLog,v 1.9 2012/12/07 17:14:23 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/gasgano/ChangeLog,v 1.10 2014/03/04 00:30:02 bicatali Exp $
+
+*gasgano-2.4.5 (04 Mar 2014)
+
+  04 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> +gasgano-2.4.5.ebuild:
+  Version bump
 
 *gasgano-2.4.3-r2 (07 Dec 2012)
 

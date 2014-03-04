@@ -1,7 +1,7 @@
 Author: Ole Streicher <debian@liska.ath.cx>
 Subject: Fix autotools files to allow the current version.
---- a/configure.ac
-+++ b/configure.ac
+--- esorex-3.10/configure.ac.orig
++++ esorex-2.10/configure.ac
 @@ -5,6 +5,7 @@
  
  AC_CONFIG_SRCDIR([Makefile.am])

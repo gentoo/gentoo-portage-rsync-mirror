@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/files/anacron-1.0-initd,v 1.3 2014/02/25 19:08:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/files/anacron-1.0-initd,v 1.4 2014/03/04 00:17:58 polynomial-c Exp $
 
 # anacron forks itself when -d gets omitted. So s-s-d fails to create a valid
 # pidfile. DO NOT remove -d from command_args and let s-s-d start anacron
@@ -9,7 +9,7 @@
 
 command="/usr/sbin/anacron"
 command_args="-d -s -S /var/spool/anacron"
-pidfile="/run/anacron.pid"
+pidfile="/var/run/anacron.pid"
 command_background="true"
 
 depend() {

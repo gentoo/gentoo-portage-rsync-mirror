@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.9.5.ebuild,v 1.1 2014/03/03 23:59:44 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.9.5.ebuild,v 1.2 2014/03/04 00:12:09 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -141,7 +141,7 @@ src_install () {
 	rm -rf "${D}"/usr/share/doc/ganeti
 
 	docinto examples
-	dodoc doc/examples/{ganeti.cron,gnt-config-backup}
+	dodoc doc/examples/{ganeti.cron,gnt-config-backup} doc/examples/*.ocf
 
 	docinto examples/hooks
 	dodoc doc/examples/hooks/{ipsec,ethers}

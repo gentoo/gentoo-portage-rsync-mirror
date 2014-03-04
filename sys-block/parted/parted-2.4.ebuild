@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.17 2014/01/30 12:38:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.18 2014/03/04 00:25:40 jer Exp $
 
 EAPI="3"
 
@@ -32,6 +32,7 @@ DEPEND="
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-gets.patch
+	epatch "${FILESDIR}"/${P}-readline.patch
 
 	# Remove tests known to FAIL instead of SKIP without OS/userland support
 	sed -i libparted/tests/Makefile.am \
