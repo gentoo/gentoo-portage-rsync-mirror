@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libshout
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.48 2013/08/28 18:26:44 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.50 2014/03/04 14:38:20 ssuominen Exp $
+
+  04 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libshout-2.3.1-underlinking.patch, libshout-2.3.1-r1.ebuild:
+  Link libshout against $(OGG_LIBS) in src/Makefile.am because the configure.ac
+  is already checking for it, and the code is directly using libogg functions
+  wrt #499458 by Justin Lecher
 
   28 Aug 2013; Alexis Ballier <aballier@gentoo.org> libshout-2.3.1-r1.ebuild:
   keyword ~amd64-fbsd

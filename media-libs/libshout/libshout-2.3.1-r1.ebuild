@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.3.1-r1.ebuild,v 1.2 2013/08/28 18:26:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.3.1-r1.ebuild,v 1.3 2014/03/04 14:37:25 ssuominen Exp $
 
 EAPI=5
-inherit eutils multilib-minimal
+inherit autotools eutils multilib-minimal
 
 DESCRIPTION="library for connecting and sending data to icecast servers"
 HOMEPAGE="http://www.icecast.org/"
@@ -22,6 +22,11 @@ RDEPEND="media-libs/libogg[${MULTILIB_USEDEP}]
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+	eautoreconf
+}
 
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
