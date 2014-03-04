@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-5.0.14a.ebuild,v 1.1 2013/12/22 23:47:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-6.0.2.ebuild,v 1.1 2014/03/04 08:52:25 voyageur Exp $
 
 EAPI=5
 
@@ -35,10 +35,6 @@ src_prepare() {
 
 src_install() {
 	webapp_src_preinst
-
-	local docs="README"
-	dodoc ${docs}
-	rm -f ${docs}
 
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
