@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.156 2014/02/04 23:33:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.157 2014/03/04 22:30:42 dilfridge Exp $
+
+  04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> -raptor-2.0.8.ebuild:
+  Remove old so we can close bug 468042
 
   04 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org> raptor-2.0.8.ebuild,
   raptor-2.0.9.ebuild:
