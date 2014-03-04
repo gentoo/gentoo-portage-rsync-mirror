@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.472 2014/03/04 09:36:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.473 2014/03/04 10:15:17 chainsaw Exp $
+
+*asterisk-12.1.0 (04 Mar 2014)
+
+  04 Mar 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-12.1.0.ebuild:
+  Version bump on the 12 branch. This, at long last, merges the TLS chaining
+  support. Still not recommended for production deployments at this time.
 
 *asterisk-1.8.26.0 (04 Mar 2014)
 
