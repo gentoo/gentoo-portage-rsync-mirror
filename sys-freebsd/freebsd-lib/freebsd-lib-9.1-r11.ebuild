@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r11.ebuild,v 1.1 2013/08/09 14:27:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r11.ebuild,v 1.2 2014/03/04 21:13:24 naota Exp $
 
 EAPI=5
 
@@ -57,6 +57,8 @@ fi
 IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
 	build crosscompile_opts_headers-only zfs
 	userland_GNU userland_BSD"
+
+QA_DT_NEEDED="lib/libc.so.7"
 
 pkg_setup() {
 	[ -c /dev/zero ] || \
@@ -566,6 +568,9 @@ src_install() {
 	# Install ttys file
 	local MACHINE="$(tc-arch-kernel)"
 	doins "etc.${MACHINE}"/*
+
+	# unset to run QA check properly
+	unset ESED
 }
 
 install_includes()

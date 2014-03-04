@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.5 2014/03/04 15:10:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.15.ebuild,v 1.6 2014/03/04 21:02:32 naota Exp $
 
 EAPI="5"
 
@@ -68,7 +68,7 @@ src_configure() {
 }
 
 python_compile() {
-	emake SHELL=/bin/dash PYTHONVERS="${PYTHON}" || die "emake failed"
+	emake PYTHONVERS="${PYTHON}" || die "emake failed"
 }
 
 python_install() {

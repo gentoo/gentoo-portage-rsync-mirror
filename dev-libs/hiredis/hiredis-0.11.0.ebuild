@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/hiredis-0.11.0.ebuild,v 1.4 2014/03/03 23:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/hiredis-0.11.0.ebuild,v 1.5 2014/03/04 21:11:35 naota Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/redis/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x64-solaris"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~x64-solaris"
 IUSE="debug"
 
 DEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hiredis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.6 2014/03/03 23:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.7 2014/03/04 21:11:35 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> hiredis-0.11.0.ebuild:
+  Add ~x86-fbsd
 
   03 Mar 2014; Jeroen Roovers <jer@gentoo.org> hiredis-0.11.0.ebuild:
   Marked ~hppa (bug #489736).

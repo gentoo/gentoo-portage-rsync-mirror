@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.273 2014/03/04 20:47:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.274 2014/03/04 21:22:02 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> exim-4.82-r1.ebuild:
+  Add ~x86-fbsd #489736
 
   04 Mar 2014; Fabian Groffen <grobian@gentoo.org> exim-4.82-r1.ebuild,
   metadata.xml:

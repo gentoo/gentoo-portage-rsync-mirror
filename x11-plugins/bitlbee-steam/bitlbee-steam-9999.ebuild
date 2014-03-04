@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/bitlbee-steam-9999.ebuild,v 1.1 2013/08/19 00:41:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/bitlbee-steam-9999.ebuild,v 1.2 2014/03/04 21:04:19 hasufell Exp $
 
 EAPI=5
 
@@ -17,11 +17,16 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/gmp:0
-	>=net-im/bitlbee-3.2[plugins]"
+	>=net-im/bitlbee-3.2.1[plugins]"
 DEPEND="${RDEPEND}
 	dev-libs/glib:2
 	virtual/pkgconfig"
 
 src_prepare() {
 	eautoreconf
+}
+
+src_install() {
+	default
+	prune_libtool_files
 }

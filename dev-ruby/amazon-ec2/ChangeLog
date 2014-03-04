@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amazon-ec2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.14 2013/10/15 19:16:19 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.15 2014/03/04 21:02:57 mrueg Exp $
+
+  04 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -amazon-ec2-0.9.17.ebuild:
+  Cleanup old.
 
 *amazon-ec2-0.9.17-r1 (15 Oct 2013)
 
@@ -77,4 +80,3 @@
   +amazon-ec2-0.9.3.ebuild, +files/amazon-ec2-0.9.3-fixes.patch,
   +metadata.xml:
   Initial import of amazon-ec2 gem. Pushed the fixes upstream.
-
