@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.1 2014/03/01 16:30:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.2 2014/03/04 18:42:47 tommy Exp $
 
 EAPI="5"
 
@@ -247,11 +247,13 @@ src_configure() {
 
 	--disable-tizen
 	--disable-gesture
+	--disable-gstreamer1
 	--enable-xinput2
 	--disable-xinput22
 	--disable-multisense
 	--enable-libmount
 	"
+# disable gstreamer:1.0 support until evas_generic_loaders has it too
 
 	enlightenment_src_configure
 }

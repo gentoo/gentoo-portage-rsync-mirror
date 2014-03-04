@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.4 2014/03/01 16:30:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.5 2014/03/04 18:42:47 tommy Exp $
+
+  04 Mar 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> efl-1.9.0.ebuild:
+  Disable support for gstreamer:1.0 in favour of gstreamer:0.10 for now until
+  evas_generic_loaders also supports gstreamer:1.0
 
 *efl-1.9.0 (01 Mar 2014)
 
