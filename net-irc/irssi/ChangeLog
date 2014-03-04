@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/irssi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.182 2013/12/28 18:04:35 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.183 2014/03/04 13:08:52 gienah Exp $
+
+*irssi-0.8.15-r2 (04 Mar 2014)
+
+  04 Mar 2014; Mark Wright <gienah@gentoo.org> +files/irssi-0.8.15-tinfo.patch,
+  +irssi-0.8.15-r2.ebuild:
+  Fix Bug 453396 - net-irc/irssi with sys-libs/ncurses[tinfo] -
+  .../work/irssi-0.8.15/src/fe-text/terminfo-core.c:281: undefined reference to
+  tputs, thanks to Ben Longbons for reporting, jer, Paul Osmialowski, ssuominen
+  and Zhu Sha Zang for working on it. Patch by me. Fix bug Bug 459012 - net-
+  irc/irssi calls unnecessarily epunt_cxx, thanks to ago for reporting.
 
   28 Dec 2013; Jeroen Roovers <jer@gentoo.org> -irssi-0.8.15-r2.ebuild,
   irssi-9999.ebuild, metadata.xml:
