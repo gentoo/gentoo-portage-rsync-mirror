@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.9.1.ebuild,v 1.1 2014/03/04 08:29:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.9.1.ebuild,v 1.2 2014/03/04 21:37:58 polynomial-c Exp $
 
 EAPI=5
 
@@ -104,17 +104,6 @@ src_test() {
 	rm -f test-convert-tla*		# GNU Arch tla
 	#rm -f test-doctest*		# doctest always fails with python 2.5.x
 	rm -f test-largefiles*		# tends to time out
-	if [[ ${EUID} -eq 0 ]]; then
-		einfo "Removing tests which require user privileges to succeed"
-		rm -f test-command-template*
-		rm -f test-convert*
-		rm -f test-lock-badness*
-		rm -f test-permissions*
-		rm -f test-pull-permission*
-		rm -f test-clone-failure*
-		rm -f test-journal-exists*
-		rm -f test-repair-strip*
-	fi
 
 	popd &>/dev/null || die
 	distutils-r1_src_test

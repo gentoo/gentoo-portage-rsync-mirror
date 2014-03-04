@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.3.0.2-r1.ebuild,v 1.1 2013/08/22 17:16:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.3.0.2-r1.ebuild,v 1.2 2014/03/04 21:44:36 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="autobind auto-dn-suffix debug doc +pam-passthru +dna +ldapi +bitwise +pres
 
 ALL_DEPEND="!>=sys-libs/db-5.0
 	>=dev-libs/cyrus-sasl-2.1.19
-	>=dev-libs/icu-3.4
+	>=dev-libs/icu-3.4:=
 	dev-libs/nss[utils]
 	dev-libs/nspr
 	dev-libs/svrcore

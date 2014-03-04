@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.459 2014/03/01 22:30:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.460 2014/03/04 21:43:43 dilfridge Exp $
+
+  04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  openldap-2.4.38-r1.ebuild:
+  Add subslot dependency on dev-libs/icu
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> openldap-2.4.30.ebuild,
   openldap-2.4.35-r1.ebuild, openldap-2.4.35.ebuild, openldap-2.4.38-r1.ebuild:

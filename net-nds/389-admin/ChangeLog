@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/389-admin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.11 2013/03/14 18:02:26 lxnay Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.12 2014/03/04 21:46:12 dilfridge Exp $
+
+  04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  389-admin-1.1.31.ebuild:
+  Add subslot dependency on dev-libs/icu
 
 *389-admin-1.1.31 (14 Mar 2013)
 

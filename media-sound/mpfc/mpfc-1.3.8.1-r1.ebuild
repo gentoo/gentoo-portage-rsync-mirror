@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.8.1-r1.ebuild,v 1.1 2012/02/15 22:56:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.8.1-r1.ebuild,v 1.2 2014/03/04 21:54:45 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Music Player For Console"
 HOMEPAGE="http://mpfc.sourceforge.net/"
@@ -19,7 +19,7 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0 )
 	mad? ( media-libs/libmad )
 	vorbis? ( media-libs/libvorbis )
 	sys-libs/ncurses[unicode]
-	dev-libs/icu"
+	dev-libs/icu:="
 DEPEND="${RDEPEND}"
 
 src_configure() {

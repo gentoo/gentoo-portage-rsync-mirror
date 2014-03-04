@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/389-ds-base
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.25 2013/08/22 17:16:44 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.26 2014/03/04 21:44:36 dilfridge Exp $
+
+  04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  389-ds-base-1.3.0.2.ebuild, 389-ds-base-1.3.0.2-r1.ebuild:
+  Add subslot dependency on dev-libs/icu
 
 *389-ds-base-1.3.0.2-r1 (22 Aug 2013)
 

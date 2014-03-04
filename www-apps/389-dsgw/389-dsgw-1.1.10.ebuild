@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/389-dsgw-1.1.10.ebuild,v 1.1 2013/03/14 17:50:00 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/389-dsgw-1.1.10.ebuild,v 1.2 2014/03/04 21:40:35 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DEPEND="adminserver? ( net-nds/389-admin )
 	dev-libs/nspr
 	dev-libs/nss
 	dev-libs/cyrus-sasl
-	dev-libs/icu
+	dev-libs/icu:=
 	dev-libs/389-adminutil
 	net-nds/openldap"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.87 2014/03/04 21:02:32 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.88 2014/03/04 21:43:48 naota Exp $
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> newt-0.52.15.ebuild:
+  Update to use python-r1 properly #502960
 
   04 Mar 2014; Naohiro Aota <naota@gentoo.org> newt-0.52.15.ebuild:
   Drop mis-added SHELL setting.

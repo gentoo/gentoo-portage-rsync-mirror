@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.31.ebuild,v 1.1 2013/03/14 18:02:26 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.31.ebuild,v 1.2 2014/03/04 21:46:12 dilfridge Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=app-admin/389-admin-console-1.1.0
 	app-misc/mime-types
 	dev-libs/389-adminutil
 	dev-libs/cyrus-sasl
-	dev-libs/icu
+	dev-libs/icu:=
 	dev-libs/nss[utils]
 	|| ( <=dev-libs/nspr-4.8.3-r3[ipv6?] >=dev-libs/nspr-4.8.4 )
 	dev-libs/svrcore

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-6.3.20140204.ebuild,v 1.3 2014/02/23 20:10:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-6.3.20140204.ebuild,v 1.4 2014/03/04 21:48:54 floppym Exp $
 
 EAPI=5
 
@@ -29,6 +29,8 @@ RDEPEND="
 
 src_prepare() {
 	sed -i -e 's/install -s/install/' src/Makefile || die
+	epatch "${FILESDIR}/unifont-6.3.20140204-make.patch"
+	epatch_user
 }
 
 src_compile() {

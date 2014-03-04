@@ -1,6 +1,11 @@
 # ChangeLog for media-video/v4l2loopback
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/v4l2loopback/ChangeLog,v 1.5 2013/05/15 22:57:45 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/v4l2loopback/ChangeLog,v 1.6 2014/03/04 21:42:45 naota Exp $
+
+*v4l2loopback-0.8.0 (04 Mar 2014)
+
+  04 Mar 2014; Naohiro Aota <naota@gentoo.org> +v4l2loopback-0.8.0.ebuild:
+  Version bump wrt #488448
 
 *v4l2loopback-0.6.3-r1 (15 May 2013)
 

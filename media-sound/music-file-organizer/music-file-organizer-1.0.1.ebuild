@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/music-file-organizer/music-file-organizer-1.0.1.ebuild,v 1.1 2013/02/28 12:12:33 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/music-file-organizer/music-file-organizer-1.0.1.ebuild,v 1.2 2014/03/04 21:50:52 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Organizes audio files into directories based on metadata tags,
 along with other metadata utilities."
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/taglib dev-libs/icu"
+RDEPEND="media-libs/taglib dev-libs/icu:="
 DEPEND="${RDEPEND} virtual/pkgconfig"
 
 pkg_postinst() {
