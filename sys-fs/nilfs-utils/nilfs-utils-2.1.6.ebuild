@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.1.ebuild,v 1.2 2012/05/17 20:43:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.6.ebuild,v 1.1 2014/03/04 18:01:37 naota Exp $
 
-EAPI=3
+EAPI=5
 
 inherit multilib linux-info
 
@@ -15,21 +15,23 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="static-libs"
 
-RDEPEND="sys-libs/e2fsprogs-libs"
-DEPEND="${DEPEND}
+RDEPEND="sys-libs/e2fsprogs-libs
+	sys-apps/util-linux"
+DEPEND="${RDEPEND}
 	sys-kernel/linux-headers"
 
 CONFIG_CHECK="~POSIX_MQUEUE"
 
+DOCS=( AUTHORS ChangeLog NEWS README )
+
 src_configure() {
-	econf $(use_enable static-libs static) \
-		--libdir=/$(get_libdir)
+	econf \
+		$(use_enable static-libs static) \
+		--libdir=/$(get_libdir) \
+		--enable-libmount
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
-	dodoc AUTHORS ChangeLog NEWS README || die
-
+	default
 	rm -f "${ED}"/$(get_libdir)/*.la || die
 }
