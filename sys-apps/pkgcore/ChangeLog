@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.172 2013/10/22 19:48:38 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.173 2014/03/05 10:36:23 mgorny Exp $
+
+  05 Mar 2014; Michał Górny <mgorny@gentoo.org> pkgcore-9999.ebuild:
+  Require EGIT_MIN_CLONE_TYPE=single due to server limitations.
 
   22 Oct 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Make myself primary maintainer.
