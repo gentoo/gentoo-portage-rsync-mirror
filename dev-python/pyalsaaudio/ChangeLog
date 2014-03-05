@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.33 2014/03/01 23:59:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.34 2014/03/05 14:00:35 ssuominen Exp $
+
+*pyalsaaudio-0.7-r2 (05 Mar 2014)
+
+  05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +pyalsaaudio-0.7-r2.ebuild:
+  Punt unported (to -r1) src_test() with non-existing function
+  python_execute_function. Use 2to3 for python3_2 and python3_3 wrt #503508
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> pyalsaaudio-0.7-r1.ebuild:
   amd64 stable, bug #474192
