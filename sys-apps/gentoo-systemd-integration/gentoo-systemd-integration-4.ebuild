@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/gentoo-systemd-integration-4.ebuild,v 1.1 2014/02/20 05:49:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/gentoo-systemd-integration-4.ebuild,v 1.2 2014/03/05 17:55:40 ssuominen Exp $
 
 EAPI=5
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=sys-apps/systemd-207"
+DEPEND="!sys-fs/udev"
+RDEPEND="${DEPEND}
+	>=sys-apps/systemd-207"
 
 src_configure() {
 	local myeconfargs=(

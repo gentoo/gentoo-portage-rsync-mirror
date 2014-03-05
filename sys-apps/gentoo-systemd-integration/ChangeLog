@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.22 2014/02/20 05:49:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.23 2014/03/05 17:55:40 ssuominen Exp $
+
+  05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  gentoo-systemd-integration-4.ebuild, gentoo-systemd-integration-9999.ebuild:
+  Block sys-fs/udev for /lib/udev/rules.d/40-gentoo.rules file collision.
 
 *gentoo-systemd-integration-4 (20 Feb 2014)
 

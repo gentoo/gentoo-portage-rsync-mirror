@@ -1,15 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.2.0.ebuild,v 1.2 2013/05/28 06:33:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.6.0.ebuild,v 1.1 2014/03/05 17:32:20 ssuominen Exp $
 
-EAPI=4
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="sqlite"
+# Required for python_fix_shebang:
+DISTUTILS_SINGLE_IMPL=1
 
-PYTHON_DEPEND="2:2.6"
-PYTHON_USE_WITH="sqlite"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-
-inherit distutils gnome2-utils
+inherit distutils-r1 gnome2-utils
 
 DESCRIPTION="A free cross-platform podcast aggregator"
 HOMEPAGE="http://gpodder.org/"
@@ -21,10 +20,10 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="+dbus bluetooth gstreamer ipod mtp test webkit"
 
 #TODO: add QML UI deps (USE=qt4) and make pygtk optional, see README
-RDEPEND="dev-python/eyeD3
-	dev-python/feedparser
-	>=dev-python/mygpoclient-1.4
-	>=dev-python/pygtk-2.12:2
+RDEPEND=">=dev-python/eyeD3-0.7
+	>=dev-python/feedparser-5.1.2
+	>=dev-python/mygpoclient-1.7
+	>=dev-python/pygtk-2.16:2
 	dbus? ( dev-python/dbus-python )
 	bluetooth? ( net-wireless/bluez )
 	gstreamer? ( dev-python/gst-python )
@@ -34,15 +33,24 @@ RDEPEND="dev-python/eyeD3
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-apps/help2man
-	test? ( dev-python/minimock
-		dev-python/coverage )"
+	test? (
+		dev-python/minimock
+		dev-python/coverage
+	)"
 
-src_compile() {
-	emake DESTDIR="${D}" install || die
+src_prepare() {
+	sed -i -e '/setup.py.*install/d' makefile || die
+	# Fix for "AttributeError: 'gPodder' object has no attribute 'toolbar'":
+	python_fix_shebang .
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	distutils-r1_src_install
 }
 
 src_test() {
-	emake releasetest || die
+	emake releasetest
 }
 
 pkg_preinst() {
@@ -51,10 +59,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	distutils_pkg_postinst
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	distutils_pkg_postrm
 }

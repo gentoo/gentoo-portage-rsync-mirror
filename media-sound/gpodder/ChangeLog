@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/gpodder
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/ChangeLog,v 1.31 2013/05/28 06:33:08 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/ChangeLog,v 1.33 2014/03/05 17:33:03 ssuominen Exp $
+
+  05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -gpodder-3.2.0.ebuild:
+  old
+
+*gpodder-3.6.0 (05 Mar 2014)
+
+  05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +gpodder-3.6.0.ebuild:
+  Version bump wrt #448466 by "Coran", Iván Atienza and David Parrish
 
   28 May 2013; Samuli Suominen <ssuominen@gentoo.org> gpodder-3.2.0.ebuild:
   Punt unused dev-python/imaging dependency wrt #471570 by Arfrever Frehtes

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1005 2014/03/04 06:37:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1006 2014/03/05 17:44:35 ssuominen Exp $
+
+  05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208.ebuild,
+  udev-210.ebuild, udev-9999.ebuild:
+  Block sys-apps/gentoo-systemd-integration because of
+  /lib/udev/rules.d/40-gentoo.rules file collision.
 
   04 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild,
   udev-9999.ebuild:

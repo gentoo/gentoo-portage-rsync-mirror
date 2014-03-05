@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=sys-devel/systemd-m4 dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DEPEND=!sys-fs/udev sys-devel/systemd-m4 dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=systemd integration files for Gentoo
 EAPI=5
 HOMEPAGE=https://bitbucket.org/mgorny/gentoo-systemd-integration
 LICENSE=BSD
-RDEPEND=>=sys-apps/systemd-207
+RDEPEND=!sys-fs/udev >=sys-apps/systemd-207
 SLOT=0
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1c7b4c1cb816885c90a85dcb44f15c85
+_md5_=15a59b3f7ce815380141393e6a9c2108
