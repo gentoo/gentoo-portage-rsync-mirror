@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crackle/crackle-0.1.ebuild,v 1.1 2014/03/05 16:32:52 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crackle/crackle-0.1.ebuild,v 1.2 2014/03/05 18:22:34 zerochaos Exp $
 
 EAPI=5
 
@@ -23,5 +23,5 @@ src_prepare() {
 }
 
 src_install() {
-	dosbin crackle
+	dobin crackle
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crackle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crackle/ChangeLog,v 1.1 2014/03/05 16:32:52 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crackle/ChangeLog,v 1.2 2014/03/05 18:22:34 zerochaos Exp $
+
+  05 Mar 2014; Rick Farina <zerochaos@gentoo.org> crackle-0.1.ebuild:
+  move from sbin to bin to follow upstream
 
 *crackle-0.1 (05 Mar 2014)
 

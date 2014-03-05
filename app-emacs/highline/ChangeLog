@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/highline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.37 2014/03/05 15:16:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.38 2014/03/05 18:10:28 ulm Exp $
+
+  05 Mar 2014; Ulrich Müller <ulm@gentoo.org> -highline-7.2.1.ebuild,
+  -files/51highline-gentoo.el:
+  Remove old.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> highline-7.2.2.ebuild:
   Stable for ppc, wrt bug #500906

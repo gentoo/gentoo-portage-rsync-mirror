@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.43 2014/03/04 20:18:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.44 2014/03/05 18:28:41 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mime-types-1.23.ebuild:
+  Stable for ppc, wrt bug #502272
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mime-types-1.23.ebuild:
   Stable for x86, wrt bug #502272
