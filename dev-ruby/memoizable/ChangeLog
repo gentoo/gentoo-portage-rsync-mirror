@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/memoizable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.4 2014/01/03 22:14:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.5 2014/03/05 22:40:31 mrueg Exp $
+
+*memoizable-0.4.1 (05 Mar 2014)
+
+  05 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +memoizable-0.4.1.ebuild:
+  Version bump.
 
 *memoizable-0.4.0 (03 Jan 2014)
 

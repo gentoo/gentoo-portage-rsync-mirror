@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/systemu-2.6.1.ebuild,v 1.1 2014/02/14 06:42:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/systemu-2.6.4.ebuild,v 1.1 2014/03/05 22:43:02 mrueg Exp $
 
 EAPI=5
 # Test hangs on jruby
