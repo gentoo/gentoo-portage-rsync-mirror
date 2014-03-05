@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.183 2014/03/04 13:08:52 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.184 2014/03/05 03:11:15 gienah Exp $
+
+  05 Mar 2014; Mark Wright <gienah@gentoo.org> irssi-0.8.15-r2.ebuild:
+  Thanks for jer for reporting in bug 453396 that "And now cross-compiling might
+  fail because you use pkg-config directly." - correct this by using a sed to in
+  src_prepare to change pkg-config to $(tc-getPKG_CONFIG). Add "-Wl,--as-needed"
+  to LDFLAGS, thanks to jer in comment 23 of bug 453396.
 
 *irssi-0.8.15-r2 (04 Mar 2014)
 
