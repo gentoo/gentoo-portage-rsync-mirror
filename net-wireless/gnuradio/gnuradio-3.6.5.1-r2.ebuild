@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.2.1-r1.ebuild,v 1.2 2014/03/03 17:25:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.5.1-r2.ebuild,v 1.1 2014/03/05 16:18:40 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -36,7 +36,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 # bug #348206
 # comedi? ( >=sci-electronics/comedilib-0.7 )
 # boost-1.52.0 is blacklisted, bug #461578, upstream #513, boost #7669
-# gr-ctrlport needs "ice 3.5"
 RDEPEND="${PYTHON_DEPS}
 	>=dev-lang/orc-0.4.12
 	dev-libs/boost:0=[${PYTHON_USEDEP}]
@@ -51,7 +50,7 @@ RDEPEND="${PYTHON_DEPS}
 	grc? (
 		dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/numpy[${PYTHON_USEDEP}]
-		dev-python/pygtk:2
+		dev-python/pygtk:2[${PYTHON_USEDEP}]
 	)
 	jack? (
 		media-sound/jack-audio-connection-kit
@@ -118,8 +117,9 @@ src_configure() {
 		$(cmake-utils_use_enable wxwidgets GR_WXGUI) \
 		$(cmake-utils_use_enable qt4 GR_QTGUI) \
 		$(cmake-utils_use_enable sdl GR_VIDEO_SDL) \
-		-DENABLE_GR_CORE=ON
-		-DSYSCONFDIR="${EPREFIX}"/etc
+		-DENABLE_GR_CORE=ON \
+		-DSYSCONFDIR="${EPREFIX}"/etc \
+		-DPYTHON_EXECUTABLE="${PYTHON}"
 	)
 	use qt4 && mycmakeargs+=( -DQWT_INCLUDE_DIRS="${EPREFIX}"/usr/include/qwt5 )
 	cmake-utils_src_configure
@@ -150,7 +150,7 @@ src_install() {
 		doicon "${fd_path}/"*.png
 	fi
 
-	python_fix_shebang "${ED}"usr/share/${PN}/
+	python_fix_shebang "${ED}"
 }
 
 src_test()

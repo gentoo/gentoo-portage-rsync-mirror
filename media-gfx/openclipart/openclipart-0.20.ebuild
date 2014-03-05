@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/openclipart-0.20.ebuild,v 1.3 2014/03/04 20:23:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/openclipart-0.20.ebuild,v 1.4 2014/03/05 16:10:25 ago Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.openclipart.org/"
 SRC_URI="http://download.openclipart.org/downloads/${PV}/${P}.tar.bz2"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="svg png gzip"
 
 # We don't really need anything to run

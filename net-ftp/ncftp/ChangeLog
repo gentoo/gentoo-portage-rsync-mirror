@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.147 2014/02/27 12:34:56 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.148 2014/03/05 16:11:17 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ncftp-3.2.5-r3.ebuild:
+  Stable for ppc, wrt bug #500286
 
   27 Feb 2014; Chema Alonso <nimiux@gentoo.org> ncftp-3.2.5-r3.ebuild:
   Stable for amd64 wrt bug #500286

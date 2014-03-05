@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.76 2014/03/02 08:05:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.77 2014/03/05 16:07:57 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> elogv-0.7.6.1-r1.ebuild:
+  Stable for ppc, wrt bug #448374
 
   02 Mar 2014; Agostino Sarubbo <ago@gentoo.org> elogv-0.7.6.1-r1.ebuild:
   Stable for x86, wrt bug #448374

@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.43 2014/03/04 19:54:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.44 2014/03/05 16:07:26 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> iverilog-0.9.6.ebuild:
+  Stable for ppc, wrt bug #501716
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> iverilog-0.9.6.ebuild:
   Stable for x86, wrt bug #501716

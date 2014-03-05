@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.11 2014/03/03 17:25:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.12 2014/03/05 16:18:40 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -118,8 +118,9 @@ src_configure() {
 		$(cmake-utils_use_enable wxwidgets GR_WXGUI) \
 		$(cmake-utils_use_enable qt4 GR_QTGUI) \
 		$(cmake-utils_use_enable sdl GR_VIDEO_SDL) \
-		-DENABLE_GR_CORE=ON
-		-DSYSCONFDIR="${EPREFIX}"/etc
+		-DENABLE_GR_CORE=ON \
+		-DSYSCONFDIR="${EPREFIX}"/etc \
+		-DPYTHON_EXECUTABLE="${PYTHON}"
 	)
 	use qt4 && mycmakeargs+=( -DQWT_INCLUDE_DIRS="${EPREFIX}"/usr/include/qwt5 )
 	cmake-utils_src_configure
@@ -150,7 +151,7 @@ src_install() {
 		doicon "${fd_path}/"*.png
 	fi
 
-	python_fix_shebang "${ED}"usr/share/${PN}/
+	python_fix_shebang "${ED}"
 }
 
 src_test()

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.38 2014/03/02 22:38:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.39 2014/03/05 16:07:41 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> indilib-0.9.6-r1.ebuild:
+  Stable for ppc, wrt bug #500400
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> indilib-0.9.6-r1.ebuild:
   amd64 stable, bug #500400

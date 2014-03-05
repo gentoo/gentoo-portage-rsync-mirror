@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/nilfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.28 2014/03/04 18:03:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.29 2014/03/05 16:13:14 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nilfs-utils-2.1.5-r1.ebuild:
+  Stable for ppc, wrt bug #444486
 
   04 Mar 2014; Naohiro Aota <naota@gentoo.org> -nilfs-utils-2.1.0-r1.ebuild,
   -nilfs-utils-2.1.0.ebuild, -nilfs-utils-2.1.1.ebuild,

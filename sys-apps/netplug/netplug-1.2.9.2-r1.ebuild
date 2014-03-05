@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9.2-r1.ebuild,v 1.5 2014/03/02 22:44:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9.2-r1.ebuild,v 1.6 2014/03/05 16:12:25 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.red-bean.com/~bos/netplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ~ppc ~sparc x86"
+KEYWORDS="amd64 arm ~mips ppc ~sparc x86"
 IUSE="debug doc"
 
 DEPEND="doc? ( app-text/ghostscript-gpl
