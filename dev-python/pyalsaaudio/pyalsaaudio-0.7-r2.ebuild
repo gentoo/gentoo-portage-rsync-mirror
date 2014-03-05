@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.7-r2.ebuild,v 1.1 2014/03/05 14:00:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.7-r2.ebuild,v 1.2 2014/03/05 14:10:15 mgorny Exp $
 
 EAPI=5
 
@@ -19,31 +19,19 @@ IUSE="doc"
 
 RDEPEND="media-libs/alsa-lib"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-python/sphinx-0.6 )"
+	doc? ( >=dev-python/sphinx-0.6[${PYTHON_USEDEP}] )"
 
 RESTRICT="test" # Direct access to ALSA, shouln't be used
 
 DOCS=( CHANGES README )
 
-python_compile() {
-	if [[ ${EPYTHON} == python3.* ]]; then
-		2to3 -w --no-diffs -n *.py
-	fi
-
-	distutils-r1_python_compile
-}
-
 python_compile_all() {
-	if use doc; then
-		cd doc
-		emake html
-	fi
+	use doc && emake -C doc html
 }
 
 python_install_all() {
-	use doc && dohtml -r doc/html/
-	insinto /usr/share/doc/${PF}/examples
-	doins *test.py
+	use doc && local HTML_DOCS=( doc/html/. )
+	local EXAMPLES=( *test.py )
 
 	distutils-r1_python_install_all
 }

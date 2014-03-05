@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15445 2014/03/05 09:27:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15446 2014/03/05 14:08:15 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -516,7 +516,7 @@ www-apache/mod_spdy
 # Mikle Kolyada <zlogene@gentoo.org> (08 Sep 2013)
 # Untested / unconfirmed major bump of perl #479064
 # Needs proper testing before being unleashed
-=dev-lang/perl-5.18.1
+=dev-lang/perl-5.18*
 =virtual/perl-Attribute-Handlers-0.940.0
 =virtual/perl-CPAN-2.0.0
 =virtual/perl-Devel-PPPort-3.200.0-r2

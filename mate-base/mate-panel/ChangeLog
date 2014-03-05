@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/mate-panel
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.1 2014/03/05 14:23:51 tomwij Exp $
+
+*mate-panel-1.6.1 (05 Mar 2014)
+
+  05 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-panel-1.6.1.ebuild,
+  +metadata.xml:
+  New ebuild for mate-base/mate-panel, the MATE panel; imported from the mate-
+  overlay, reviewed and adjusted.
