@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.0.ebuild,v 1.4 2014/03/01 22:34:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.3.ebuild,v 1.1 2014/03/05 12:40:55 polynomial-c Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils cmake-utils multilib
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
-SRC_URI="https://red.libssh.org/attachments/download/71/${MY_P}.tar.xz -> ${P}.tar.xz"
+SRC_URI="https://red.libssh.org/attachments/download/87/${MY_P}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux"
@@ -34,7 +34,6 @@ S=${WORKDIR}/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.5.0-tests.patch"
-	"${FILESDIR}/${PN}-0.6.0-libgcrypt-1.6.0.patch"
 )
 
 src_prepare() {
