@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.7.11.ebuild,v 1.1 2013/07/11 23:13:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.7.21.ebuild,v 1.1 2014/03/05 17:08:12 jer Exp $
 
 EAPI=5
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Clients for net-analyzer/argus"
 HOMEPAGE="http://www.qosient.com/argus/"
@@ -19,6 +19,7 @@ MY_CDEPEND="
 	net-libs/libpcap
 	sys-libs/ncurses
 	sys-libs/readline
+	sys-libs/zlib
 	ft? ( net-analyzer/flow-tools )
 	geoip? ( dev-libs/geoip )
 	mysql? ( virtual/mysql )
@@ -33,12 +34,18 @@ DEPEND="
 	${MY_CDEPEND}
 	sys-devel/bison
 	sys-devel/flex
+	virtual/pkgconfig
 "
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-3.0.4.1-disable-tcp-wrappers-automagic.patch \
-		"${FILESDIR}"/${PN}-3.0.7.4-overflow.patch
+		"${FILESDIR}"/${PN}-3.0.7.18-sasl.patch \
+		"${FILESDIR}"/${PN}-3.0.7.21-curses-readline.patch
+
+	sed -i -e 's| ar | $(AR) |g' common/Makefile.in || die
+	tc-export AR RANLIB
+
 	eautoreconf
 }
 
@@ -53,11 +60,14 @@ src_configure() {
 }
 
 src_compile() {
-	emake CCOPT="${CFLAGS} ${LDFLAGS}"
+	# racurses uses both libncurses and libtinfo, if present
+	emake \
+		CCOPT="${CFLAGS} ${LDFLAGS}" \
+		RANLIB=$(tc-getRANLIB) \
+		CURSESLIB="$( $(tc-getPKG_CONFIG) --libs ncurses)"
 }
 
 src_install() {
-	# argus_parse.a and argus_common.a are supplied by net-analyzer/argus
 	dobin bin/ra*
 	dodoc ChangeLog CREDITS README CHANGES
 	doman man/man{1,5}/*
