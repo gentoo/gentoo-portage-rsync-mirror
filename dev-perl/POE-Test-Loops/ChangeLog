@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/POE-Test-Loops
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.40 2014/03/02 10:28:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.41 2014/03/05 15:26:59 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> POE-Test-Loops-1.353.0.ebuild:
+  Stable for ppc, wrt bug #495442
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> POE-Test-Loops-1.353.0.ebuild:
   amd64 stable, bug #495442

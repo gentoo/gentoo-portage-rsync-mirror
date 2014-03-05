@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.39 2014/03/04 20:04:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.40 2014/03/05 15:27:45 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Sub-Exporter-0.986.0.ebuild:
+  Stable for ppc, wrt bug #495474
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Sub-Exporter-0.986.0.ebuild:
   Stable for x86, wrt bug #495474

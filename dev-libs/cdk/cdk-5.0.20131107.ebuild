@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20131107.ebuild,v 1.5 2014/03/02 08:05:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20131107.ebuild,v 1.6 2014/03/05 15:22:10 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://invisible-island.net/cdk/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0/5" # subslot = soname version
-KEYWORDS="~alpha amd64 hppa ia64 ~ppc ~ppc64 ~s390 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc64 ~s390 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="examples static-libs unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2[unicode?]"

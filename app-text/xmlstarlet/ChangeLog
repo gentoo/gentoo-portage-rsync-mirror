@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.53 2014/03/02 00:05:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.54 2014/03/05 15:20:27 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xmlstarlet-1.5.0.ebuild:
+  Stable for ppc, wrt bug #491956
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> xmlstarlet-1.5.0.ebuild:
   amd64 stable, bug #491956

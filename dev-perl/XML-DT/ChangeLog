@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.93 2014/03/04 20:04:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.94 2014/03/05 15:30:51 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> XML-DT-0.630.0.ebuild:
+  Stable for ppc, wrt bug #495510
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> XML-DT-0.630.0.ebuild:
   Stable for x86, wrt bug #495510

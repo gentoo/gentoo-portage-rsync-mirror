@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.3 2014/03/04 20:21:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.4 2014/03/05 15:17:12 ago Exp $
 
 EAPI=5
 NEED_EMACS=23
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/jdee-${PV}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 RDEPEND=">=virtual/jdk-1.3
 	app-emacs/elib

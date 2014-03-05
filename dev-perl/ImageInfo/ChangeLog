@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.105 2014/03/04 20:03:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.106 2014/03/05 15:24:23 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ImageInfo-1.360.0.ebuild:
+  Stable for ppc, wrt bug #495424
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ImageInfo-1.360.0.ebuild:
   Stable for x86, wrt bug #495424

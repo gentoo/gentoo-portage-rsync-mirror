@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/module-info
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.73 2014/03/02 10:39:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.74 2014/03/05 15:25:09 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> module-info-0.350.0.ebuild:
+  Stable for ppc, wrt bug #495546
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> module-info-0.350.0.ebuild:
   amd64 stable, bug #495546

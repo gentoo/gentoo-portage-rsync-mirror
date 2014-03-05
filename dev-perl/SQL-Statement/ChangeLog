@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.66 2014/03/02 10:30:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.67 2014/03/05 15:27:29 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> SQL-Statement-1.405.0.ebuild:
+  Stable for ppc, wrt bug #495464
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> SQL-Statement-1.405.0.ebuild:
   amd64 stable, bug #495464

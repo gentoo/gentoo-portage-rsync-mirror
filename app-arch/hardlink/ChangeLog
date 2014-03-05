@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/hardlink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/ChangeLog,v 1.10 2014/03/01 23:13:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/ChangeLog,v 1.11 2014/03/05 15:15:48 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> hardlink-0.2.0.ebuild:
+  Stable for ppc, wrt bug #476042
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> hardlink-0.2.0.ebuild:
   amd64 stable, bug #476042

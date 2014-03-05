@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Template-Toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.80 2014/03/02 10:32:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.81 2014/03/05 15:28:33 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  Template-Toolkit-2.250.0.ebuild:
+  Stable for ppc, wrt bug #495480
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> Template-Toolkit-2.250.0.ebuild:
   amd64 stable, bug #495480

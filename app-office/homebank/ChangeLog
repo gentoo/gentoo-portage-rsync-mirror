@@ -1,6 +1,9 @@
 # ChangeLog for app-office/homebank
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.36 2014/02/24 14:10:04 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.37 2014/03/05 15:19:04 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> homebank-4.5.4.ebuild:
+  Stable for ppc, wrt bug #495346
 
   24 Feb 2014; Chema Alonso <nimiux@gentoo.org> homebank-4.5.4.ebuild:
   Stable for amd64 wrt bug #495346

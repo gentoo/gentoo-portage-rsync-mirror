@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.267 2014/02/27 13:02:55 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.268 2014/03/05 15:15:03 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> eselect-1.4.ebuild:
+  Stable for ppc, wrt bug #500298
 
   27 Feb 2014; Chema Alonso <nimiux@gentoo.org> eselect-1.4.ebuild:
   Stable for amd64 wrt bug #500298

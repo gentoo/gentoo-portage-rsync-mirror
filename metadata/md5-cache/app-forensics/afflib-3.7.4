@@ -4,11 +4,11 @@ DESCRIPTION=Library that implements the AFF image standard
 EAPI=5
 HOMEPAGE=https://github.com/simsong/AFFLIBv3/
 IUSE=fuse ncurses python qemu readline s3 static-libs threads python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
-KEYWORDS=amd64 ~hppa ~ppc x86
+KEYWORDS=amd64 hppa ppc x86
 LICENSE=BSD
 RDEPEND=dev-libs/expat dev-libs/openssl sys-libs/zlib fuse? ( sys-fs/fuse ) ncurses? ( sys-libs/ncurses ) python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) readline? ( sys-libs/readline ) s3? ( net-misc/curl )
 REQUIRED_USE=python? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=https://github.com/simsong/AFFLIBv3/archive/v3.7.4.tar.gz -> afflib-3.7.4.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=572928aaaf8a758d150f77b2a3898fcb
+_md5_=28ae34e00d03044cd1903d478ea55158
