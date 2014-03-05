@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/conduit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/conduit/ChangeLog,v 1.9 2014/03/04 20:00:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/conduit/ChangeLog,v 1.10 2014/03/05 08:26:48 qnikst Exp $
+
+  05 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> -conduit-1.0.7.3.ebuild,
+  -conduit-1.0.7.4.ebuild:
+  drop old
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> conduit-1.0.9.3.ebuild:
   Stable for x86, wrt bug #502662
