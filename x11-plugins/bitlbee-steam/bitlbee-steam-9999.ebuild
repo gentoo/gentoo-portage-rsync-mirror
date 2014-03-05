@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/bitlbee-steam-9999.ebuild,v 1.2 2014/03/04 21:04:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/bitlbee-steam-9999.ebuild,v 1.3 2014/03/05 13:16:00 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/jgeboski/bitlbee-steam.git"
 LICENSE="GPL-2 LGPL-2.1 BSD-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="debug"
 
 RDEPEND="
 	dev-libs/gmp:0
@@ -24,6 +24,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	eautoreconf
+}
+
+src_configure() {
+	econf \
+		$(use_enable debug) \
+		--enable-minimal-flags
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/bitlbee-steam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/ChangeLog,v 1.7 2014/03/04 21:17:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bitlbee-steam/ChangeLog,v 1.8 2014/03/05 13:16:00 hasufell Exp $
+
+  05 Mar 2014; Julian Ospald <hasufell@gentoo.org> bitlbee-steam-9999.ebuild:
+  add debug USE flag to live ebuild
 
   04 Mar 2014; Julian Ospald <hasufell@gentoo.org>
   +files/bitlbee-steam-1.0.0-debug.patch, bitlbee-steam-1.0.0.ebuild:
