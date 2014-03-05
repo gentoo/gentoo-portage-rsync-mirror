@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/blaze-html
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/ChangeLog,v 1.14 2014/03/04 19:59:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/ChangeLog,v 1.15 2014/03/05 07:25:47 qnikst Exp $
+
+  05 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  -blaze-html-0.4.3.3.ebuild:
+  drop old
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> blaze-html-0.6.1.2.ebuild:
   Stable for x86, wrt bug #502652
