@@ -1,0 +1,12 @@
+# ChangeLog for mate-base/mate-settings-daemon
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/ChangeLog,v 1.1 2014/03/05 14:48:06 tomwij Exp $
+
+*mate-settings-daemon-1.6.2 (05 Mar 2014)
+
+  05 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/mate-settings-daemon-1.2.0-syndaemon-mode.patch,
+  +files/mate-settings-daemon-1.4.0-netfs-monitor.patch,
+  +mate-settings-daemon-1.6.2.ebuild, +metadata.xml:
+  New ebuild for mate-base/mate-settings-daemon, MATE Settings Daemon; imported
+  from the mate-overlay, reviewed and adjusted.
