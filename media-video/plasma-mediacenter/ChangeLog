@@ -1,6 +1,10 @@
 # ChangeLog for media-video/plasma-mediacenter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/plasma-mediacenter/ChangeLog,v 1.4 2014/03/03 23:59:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/plasma-mediacenter/ChangeLog,v 1.5 2014/03/05 07:32:27 kensington Exp $
+
+  05 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -plasma-mediacenter-1.1.0.ebuild:
+  Remove old.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> plasma-mediacenter-1.2.0.ebuild:
   amd64 stable, bug #502508

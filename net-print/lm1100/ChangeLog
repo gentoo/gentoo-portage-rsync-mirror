@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lm1100
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lm1100/ChangeLog,v 1.6 2014/03/04 20:14:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lm1100/ChangeLog,v 1.7 2014/03/05 07:47:20 kensington Exp $
+
+  05 Mar 2014; Michael Palimaka <kensington@gentoo.org> -lm1100-1.0.2a.ebuild:
+  Remove old.
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> lm1100-1.0.2a-r1.ebuild:
   Stable for x86, wrt bug #502908
