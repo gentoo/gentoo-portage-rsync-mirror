@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.65 2013/10/30 19:21:36 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.66 2014/03/05 10:30:26 mgorny Exp $
+
+  05 Mar 2014; Michał Górny <mgorny@gentoo.org> snakeoil-9999.ebuild:
+  Require EGIT_MIN_CLONE_TYPE=single due to server limitations.
 
   30 Oct 2013; Michał Górny <mgorny@gentoo.org> snakeoil-0.5.2.ebuild:
   Update the dep to use dev-lang/python-exec.
