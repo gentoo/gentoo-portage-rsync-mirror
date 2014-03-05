@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13-r1.ebuild,v 1.1 2012/09/27 13:38:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13-r1.ebuild,v 1.2 2014/03/04 23:13:10 pacho Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="freemarker"
 SLOT="2.3"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 COMMON_DEP="

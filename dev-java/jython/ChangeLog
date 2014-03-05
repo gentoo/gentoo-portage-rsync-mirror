@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.88 2013/09/21 13:58:29 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.89 2014/03/04 23:13:36 pacho Exp $
+
+  04 Mar 2014; Pacho Ramos <pacho@gentoo.org> jython-2.2.1-r2.ebuild:
+  amd64 stable, bug 315557
 
 *jython-2.5.3-r3 (21 Sep 2013)
 

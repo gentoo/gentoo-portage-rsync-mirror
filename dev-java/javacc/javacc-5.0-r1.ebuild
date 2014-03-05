@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-5.0-r1.ebuild,v 1.1 2012/09/28 10:18:50 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-5.0-r1.ebuild,v 1.2 2014/03/04 23:15:37 pacho Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://java.net/projects/${PN}/downloads/download/${P}src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 
 COMMON_DEP="
 	dev-java/junit:0"

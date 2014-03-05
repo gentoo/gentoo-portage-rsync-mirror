@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xjavadoc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/ChangeLog,v 1.16 2012/12/07 18:32:28 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/ChangeLog,v 1.17 2014/03/04 23:15:17 pacho Exp $
+
+  04 Mar 2014; Pacho Ramos <pacho@gentoo.org> xjavadoc-1.1-r2.ebuild:
+  amd64 stable, bug 315557
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xjavadoc-1.1-r2.ebuild:
   Stable for ppc, wrt bug #441174
@@ -59,4 +62,3 @@
   +files/xjavadoc-1.1-buildfile.patch, +xjavadoc-1.1.ebuild:
   Initial import, ebuild based on the contribution by Dan
   <dan@intuitivelyobvious.net>. Fixes #66727
-

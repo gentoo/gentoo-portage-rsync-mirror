@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.38 2012/09/28 10:18:50 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.39 2014/03/04 23:15:37 pacho Exp $
+
+  04 Mar 2014; Pacho Ramos <pacho@gentoo.org> javacc-5.0-r1.ebuild:
+  amd64 stable, bug 315557
 
 *javacc-5.0-r1 (28 Sep 2012)
 
@@ -170,4 +173,3 @@
   metadata.xml:
   Initial Import. Thanks to Dominik Diesch <dominik@dominik.homeunix.org> for
   the initial ebuild. Closes #20419
-

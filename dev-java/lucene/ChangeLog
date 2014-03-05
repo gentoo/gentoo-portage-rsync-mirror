@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.96 2013/12/29 11:31:23 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.97 2014/03/04 23:14:01 pacho Exp $
+
+  04 Mar 2014; Pacho Ramos <pacho@gentoo.org> lucene-2.1.0-r2.ebuild,
+  lucene-2.2.0-r1.ebuild, lucene-2.3.2-r2.ebuild, lucene-2.4.1-r1.ebuild:
+  amd64 stable, bug 315557
 
   29 Dec 2013; Patrick Lauer <patrick@gentoo.org> lucene-3.6.2.ebuild:
   Whitespace
