@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/http-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-types/ChangeLog,v 1.8 2014/03/04 20:02:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-types/ChangeLog,v 1.9 2014/03/05 09:08:58 qnikst Exp $
+
+  05 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> -http-types-0.8.0.ebuild,
+  -http-types-0.8.1.ebuild:
+  drop old
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> http-types-0.8.3.ebuild:
   Stable for x86, wrt bug #502682

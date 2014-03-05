@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15444 2014/03/04 15:40:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15445 2014/03/05 09:27:27 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -121,10 +121,15 @@ mate-base/libmatekbd
 mate-base/mate-common
 mate-base/mate-desktop
 mate-base/mate-menus
+mate-base/mate-panel
 mate-base/mate-session-manager
+mate-base/mate-settings-daemon
 mate-extra/mate-dialogs
 mate-extra/mate-polkit
+net-wireless/mate-bluetooth
 x11-libs/libmatewnck
+x11-themes/mate-icon-theme
+x11-wm/mate-window-manager
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE Desktop Environment >=1.7 introduction mask:
@@ -137,10 +142,15 @@ x11-libs/libmatewnck
 >=mate-base/mate-common-1.7
 >=mate-base/mate-desktop-1.7
 >=mate-base/mate-menus-1.7
+>=mate-base/mate-panel-1.7
 >=mate-base/mate-session-manager-1.7
+>=mate-base/mate-settings-daemon-1.7
 >=mate-extra/mate-dialogs-1.7
 >=mate-extra/mate-polkit-1.7
+>=net-wireless/mate-bluetooth-1.7
 >=x11-libs/libmatewnck-1.7
+>=x11-themes/mate-icon-theme-1.7
+>=x11-wm/mate-window-manager-1.7
 
 # Ulrich Müller <ulm@gentoo.org> (21 Feb 2014)
 # Included with Emacs since version 23.
