@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.95 2014/02/24 01:14:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.96 2014/03/05 20:52:23 mrueg Exp $
+
+  05 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -test-unit-2.1.2-r1.ebuild,
+  -test-unit-2.4.8.ebuild, -test-unit-2.5.5.ebuild:
+  Cleanup old.
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   test-unit-2.5.5-r1.ebuild:
