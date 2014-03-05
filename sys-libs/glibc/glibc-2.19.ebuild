@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19.ebuild,v 1.1 2014/02/08 14:59:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19.ebuild,v 1.2 2014/03/05 19:25:54 zorry Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -160,7 +160,7 @@ eblit-src_unpack-post() {
 		cd "${S}"
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
 		gcc-specs-pie && epatch "${FILESDIR}"/2.17/glibc-2.17-hardened-pie.patch
-		epatch "${FILESDIR}"/2.10/glibc-2.10-hardened-configure-picdefault.patch
+		epatch "${FILESDIR}"/2.19/glibc-2.19-hardened-configure-picdefault.patch
 		epatch "${FILESDIR}"/2.18/glibc-2.18-hardened-inittls-nosysenter.patch
 
 		einfo "Installing Hardened Gentoo SSP and FORTIFY_SOURCE handler"
