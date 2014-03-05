@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/papers-please/papers-please-1.1.60.ebuild,v 1.1 2014/03/04 15:38:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/papers-please/papers-please-1.1.62.ebuild,v 1.1 2014/03/05 02:16:28 hasufell Exp $
 
 EAPI=5
 

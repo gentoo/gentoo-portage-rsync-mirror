@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1165 2014/03/03 21:45:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1166 2014/03/05 02:12:51 patrick Exp $
+
+  05 Mar 2014; Patrick Lauer <patrick@gentoo.org> kde4-base.eclass:
+  Fix KDE 4.11.7 SRC_URI
 
   03 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Force EGIT_CLONE_TYPE=mirror for submodules since they can reference commits
