@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3-r100.ebuild,v 1.9 2014/03/01 21:17:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.3-r100.ebuild,v 1.10 2014/03/05 21:19:19 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="amd64 arm ~ppc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="debug multitarget python +static-analyzer"
 
 RDEPEND="~sys-devel/llvm-${PV}[clang(-),debug=,multitarget?,python?,static-analyzer,${MULTILIB_USEDEP}]"

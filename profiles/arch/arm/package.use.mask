@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.195 2014/02/25 21:16:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.196 2014/03/05 21:23:59 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (25 Feb 2014)
 # stable reverse deps of media-libs/libquvi, bug #495254
@@ -173,6 +173,7 @@ net-print/cups java
 =sys-devel/gettext-0.18.1.1-r1 java
 =sys-devel/gettext-0.18.1.1-r3 java
 =sys-devel/gettext-0.18.2 java
+=sys-devel/gettext-0.18.3.2 java
 =sys-libs/db-1.85-r3 java
 =sys-libs/db-3.2.9_p2 java
 =sys-libs/db-4.2.52_p5-r1 java

@@ -1,6 +1,11 @@
 # ChangeLog for net-im/centerim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.56 2013/02/17 13:33:08 swegener Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.57 2014/03/05 21:04:31 swegener Exp $
+
+*centerim-5.0.0_beta2 (05 Mar 2014)
+
+  05 Mar 2014; Sven Wegener <swegener@gentoo.org> +centerim-5.0.0_beta2.ebuild:
+  Version bump.
 
 *centerim-5.0.0_beta1 (17 Feb 2013)
 

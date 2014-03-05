@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/runsnakerun
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/runsnakerun/ChangeLog,v 1.2 2013/02/24 10:10:34 swegener Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/runsnakerun/ChangeLog,v 1.3 2014/03/05 21:30:29 swegener Exp $
+
+*runsnakerun-2.0.4 (05 Mar 2014)
+
+  05 Mar 2014; Sven Wegener <swegener@gentoo.org> +runsnakerun-2.0.4.ebuild:
+  Version bump, bug #483818.
 
   24 Feb 2013; Sven Wegener <swegener@gentoo.org> runsnakerun-2.0.1.ebuild:
   bump EAPI
