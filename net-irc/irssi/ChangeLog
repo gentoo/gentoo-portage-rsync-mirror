@@ -1,6 +1,19 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.184 2014/03/05 03:11:15 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.185 2014/03/05 21:51:36 swegener Exp $
+
+  05 Mar 2014; Sven Wegener <swegener@gentoo.org> irssi-0.8.15-r2.ebuild,
+  +irssi-0.8.16_rc1.ebuild, irssi-9999.ebuild:
+  Switch live ebuild to git, bug #486716.
+
+*irssi-0.8.16_rc1 (05 Mar 2014)
+
+  05 Mar 2014; Sven Wegener <swegener@gentoo.org> irssi-0.8.15-r2.ebuild,
+  +irssi-0.8.16_rc1.ebuild:
+  Version bump, bug #486716.
+
+  05 Mar 2014; Sven Wegener <swegener@gentoo.org> irssi-0.8.15-r2.ebuild:
+  Drop forced -Wl,--as-needed, it's a profile setting.
 
   05 Mar 2014; Mark Wright <gienah@gentoo.org> irssi-0.8.15-r2.ebuild:
   Thanks for jer for reporting in bug 453396 that "And now cross-compiling might
