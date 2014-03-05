@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1037 2014/03/04 13:56:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1038 2014/03/05 04:37:08 phajdan.jr Exp $
+
+*chromium-35.0.1870.2 (05 Mar 2014)
+
+  05 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-35.0.1870.2.ebuild, +files/chromium-system-jinja-r5.patch:
+  Dev channel bump. Use bundled protobuf, bug #503084 by Craig Chasseur, also
+  tested by Martin Jansa.
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> -chromium-33.0.1750.117.ebuild:
   Remove old

@@ -1,0 +1,31 @@
+--- third_party/WebKit/Source/bindings/generated_bindings.gyp.orig	2014-03-04 23:10:29.140572304 +0000
++++ third_party/WebKit/Source/bindings/generated_bindings.gyp	2014-03-04 23:12:53.991556052 +0000
+@@ -109,15 +109,9 @@
+ 
+     # Python source
+     'jinja_module_files': [
+-      # jinja2/__init__.py contains version string, so sufficient for package
+-      '<(DEPTH)/third_party/jinja2/__init__.py',
+-      '<(DEPTH)/third_party/markupsafe/__init__.py',  # jinja2 dep
+     ],
+     'idl_compiler_files': [
+       'scripts/idl_compiler.py',
+-      # PLY (Python Lex-Yacc)
+-      '<(DEPTH)/third_party/ply/lex.py',
+-      '<(DEPTH)/third_party/ply/yacc.py',
+       # Web IDL lexer/parser (base parser)
+       '<(DEPTH)/tools/idl_parser/idl_lexer.py',
+       '<(DEPTH)/tools/idl_parser/idl_node.py',
+--- third_party/WebKit/Source/build/scripts/scripts.gypi.orig	2014-03-04 23:11:54.731153647 +0000
++++ third_party/WebKit/Source/build/scripts/scripts.gypi	2014-03-04 23:12:05.861229233 +0000
+@@ -1,10 +1,6 @@
+ {
+     'variables': {
+         'scripts_for_in_files': [
+-            # jinja2/__init__.py contains version string, so sufficient as
+-            # dependency for whole jinja2 package
+-            '<(DEPTH)/third_party/jinja2/__init__.py',
+-            '<(DEPTH)/third_party/markupsafe/__init__.py',  # jinja2 dep
+             'hasher.py',
+             'in_file.py',
+             'in_generator.py',
