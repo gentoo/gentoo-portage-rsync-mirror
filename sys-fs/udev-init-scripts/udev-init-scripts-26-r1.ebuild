@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26.ebuild,v 1.16 2014/03/05 18:59:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26-r1.ebuild,v 1.1 2014/03/05 18:59:49 ssuominen Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils udev
 
 if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/udev-gentoo-scripts.git"
@@ -20,22 +20,26 @@ IUSE=""
 
 if [ "${PV}" != "9999" ]; then
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"
-	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
 RESTRICT="test"
 
-# net.sh and 90-network.rules are part of >=net-misc/netifrc-0.2.1:
-COMMON_DEPEND="!>=net-misc/netifrc-0.2.1"
-DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig"
-RDEPEND="${COMMON_DEPEND}
-	>=virtual/udev-180
+DEPEND="virtual/pkgconfig"
+RDEPEND=">=virtual/udev-180
 	!<sys-fs/udev-186"
 
 src_prepare()
 {
 	epatch_user
+}
+
+src_install()
+{
+	default
+
+	# These are now part of >=net-misc/netifrc-0.2.1:
+	rm -f "${D}"/$(get_udevdir)/{net.sh,rules.d/90-network.rules}
 }
 
 pkg_postinst()

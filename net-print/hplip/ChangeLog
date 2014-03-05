@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.296 2014/01/24 18:30:00 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.297 2014/03/05 18:51:58 billie Exp $
+
+*hplip-3.14.1-r1 (05 Mar 2014)
+
+  05 Mar 2014; Daniel Pielmeier <billie@gentoo.org> +hplip-3.14.1-r1.ebuild:
+  Only depend on dev-python/dbus-python if USE=minimal. This fixes bug #449402.
+  Thanks to turtle for the report and Nick Bowler for the suggested dependency
+  change.
 
   24 Jan 2014; Daniel Pielmeier <billie@gentoo.org> -hplip-3.12.10a.ebuild,
   -hplip-3.13.9.ebuild, -hplip-3.13.11-r1.ebuild:
