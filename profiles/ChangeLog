@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8670 2014/03/05 16:09:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8671 2014/03/05 20:33:34 mrueg Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Mar 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
+  Mask further ruby18-only packages.
 
   05 Mar 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask the systemd-stable snapshot due to bugs 503470, 503472.

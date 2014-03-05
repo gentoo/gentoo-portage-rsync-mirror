@@ -6608,7 +6608,6 @@ sys-kernel/aufs-sources:vanilla - Use vanilla kernel sources without applying ge
 sys-kernel/ck-sources:bfsonly - BFS by itslef vs The full ck patchset
 sys-kernel/ck-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/ck-sources:experimental - Allow experimental code. Can break or degrade performances. (UNSUPPORTED)
-sys-kernel/ck-sources:hibernate - Affine tasks to CPU0 as CPUs go offline. (EXPERIMENTAL)
 sys-kernel/ck-sources:kvm - Enable boot on kvm
 sys-kernel/ck-sources:urwlocks - Use upgradable read/write locks in place of the grq spinlock. (EXPERIMENTAL)
 sys-kernel/dracut:debug - Module installing additional tools like strace, file editor, ssh and more

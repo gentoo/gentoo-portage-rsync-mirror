@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.230 2014/03/04 12:13:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.232 2014/03/05 20:42:18 tomwij Exp $
+
+*ck-sources-3.12.13 (05 Mar 2014)
+*ck-sources-3.13.5 (05 Mar 2014)
+*ck-sources-3.10.32 (05 Mar 2014)
+
+  05 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +ck-sources-3.10.32.ebuild,
+  +ck-sources-3.12.13.ebuild, +ck-sources-3.13.5.ebuild,
+  -ck-sources-3.12.2.ebuild, metadata.xml:
+  Version bump to 3.10.32, 3.12.13 and 3.13.5. Removed 3.12.2. Updated
+  metadata.xml to drop hibernate USE flag. Proxied commit for Eric F. GARIOUD, 
+  fixes bug #503142.
 
   04 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -ck-sources-2.6.38-r3.ebuild:
   Drop old version as suggested by proxied maintainer in bug #502442

@@ -9,7 +9,6 @@
 	<use>
 		<flag name='bfsonly'>BFS by itslef vs The full ck patchset</flag>
 		<flag name='experimental'>Allow experimental code. Can break or degrade performances. (UNSUPPORTED)</flag>
-		<flag name='hibernate'>Affine tasks to CPU0 as CPUs go offline. (EXPERIMENTAL)</flag>
 		<flag name='urwlocks'>Use upgradable read/write locks in place of the grq spinlock. (EXPERIMENTAL)</flag>
 		<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
 		<flag name='kvm'>Enable boot on kvm</flag>

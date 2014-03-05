@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.12.2.ebuild,v 1.1 2013/12/03 18:51:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.12.13.ebuild,v 1.1 2014/03/05 20:25:39 tomwij Exp $
 
 EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64 ~x86"
-IUSE="bfsonly experimental hibernate"
+IUSE="bfsonly"
 
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
@@ -13,7 +13,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 K_WANT_GENPATCHES="base extras experimental"
 K_EXP_GENPATCHES_PULL="1"
 K_EXP_GENPATCHES_NOUSE="1"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="14"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -32,18 +32,16 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="1"
-BFS_VERSION="443"
+CK_VERSION="2"
+BFS_VERSION="444"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
-XPR_1_FILE="bfs${BFS_VERSION}-hibernate_test2.patch"
 
 CK_BASE_URL="http://ck.kolivas.org/patches/3.0"
 CK_LVER_URL="${CK_BASE_URL}/${K_BRANCH_ID}/${K_BRANCH_ID}-ck${CK_VERSION}"
 CK_URI="${CK_LVER_URL}/${CK_FILE}"
 BFS_URI="${CK_LVER_URL}/patches/${BFS_FILE}"
-XPR_1_URI="http://ck.kolivas.org/patches/bfs/3.0/${K_BRANCH_ID}/${XPR_1_FILE}"
 
 #-- Build extra incremental patches list --------------------------------------
 
@@ -72,9 +70,7 @@ POST_CK_FIX=""
 
 SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_INCP_URI}
 	!bfsonly? ( ${CK_URI} )
-	bfsonly? ( ${BFS_URI} )
-	experimental? (
-		hibernate? ( ${XPR_1_URI} ) )"
+	bfsonly? ( ${BFS_URI} )"
 
 UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}"
 
@@ -85,12 +81,6 @@ else
 fi
 
 UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_INCP_LIST} ${POST_CK_FIX}"
-
-if use experimental ; then
-	if use hibernate ; then
-		UNIPATCH_LIST="${UNIPATCH_LIST} ${DISTDIR}/${XPR_1_FILE}"
-	fi
-fi
 
 UNIPATCH_STRICTORDER="yes"
 

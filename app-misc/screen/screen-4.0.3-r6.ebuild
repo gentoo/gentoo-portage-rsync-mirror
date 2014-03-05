@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r6.ebuild,v 1.3 2014/01/18 05:42:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r6.ebuild,v 1.4 2014/03/05 20:16:05 swegener Exp $
 
 EAPI=4
 
@@ -89,6 +89,9 @@ src_prepare() {
 	# Allow usernames up to 32 chars
 	epatch "${FILESDIR}"/${PV}-extend-d_termname-ng2.patch
 
+	# support CPPFLAGS
+	epatch "${FILESDIR}"/${P}-cppflags.patch
+
 	sed \
 		-e 's:termlib:tinfo:g' \
 		-i configure.in || die
@@ -98,12 +101,12 @@ src_prepare() {
 }
 
 src_configure() {
-	append-flags "-DMAXWIN=${MAX_SCREEN_WINDOWS:-100}"
+	append-cppflags "-DMAXWIN=${MAX_SCREEN_WINDOWS:-100}"
 
 	[[ ${CHOST} == *-solaris* ]] && append-libs -lsocket -lnsl
 
-	use nethack || append-flags "-DNONETHACK"
-	use debug && append-flags "-DDEBUG"
+	use nethack || append-cppflags "-DNONETHACK"
+	use debug && append-cppflags "-DDEBUG"
 
 	econf \
 		--with-socket-dir="${EPREFIX}/var/run/screen" \
