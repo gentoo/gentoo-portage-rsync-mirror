@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.64 2014/01/14 16:16:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.65 2014/03/05 15:45:24 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> tkimg-1.4-r9.ebuild:
+  Stable for ppc, wrt bug #497706
 
   14 Jan 2014; Justin Lecher <jlec@gentoo.org> +tkimg-1.4-r7.ebuild:
   Readd old version

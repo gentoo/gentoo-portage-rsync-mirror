@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.36 2014/03/01 23:58:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.37 2014/03/05 15:35:14 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> celementtree-1.0.5-r2.ebuild:
+  Stable for ppc, wrt bug #474180
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> celementtree-1.0.5-r2.ebuild:
   amd64 stable, bug #474180

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/migemo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.44 2014/01/19 05:26:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.45 2014/03/05 15:46:12 jer Exp $
+
+  05 Mar 2014; Jeroen Roovers <jer@gentoo.org> migemo-0.40_p2.ebuild:
+  Stable for HPPA (bug #493028).
 
 *migemo-0.40_p2 (19 Jan 2014)
 

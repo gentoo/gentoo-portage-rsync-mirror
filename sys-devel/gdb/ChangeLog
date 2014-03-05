@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.258 2014/03/04 19:56:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.259 2014/03/05 15:53:52 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gdb-7.6.2.ebuild:
+  Stable for ppc, wrt bug #501528
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gdb-7.6.2.ebuild:
   Stable for x86, wrt bug #501528

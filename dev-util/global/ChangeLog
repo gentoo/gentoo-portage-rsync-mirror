@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.120 2014/03/04 20:09:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.121 2014/03/05 15:46:10 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> global-6.2.10.ebuild:
+  Stable for ppc, wrt bug #502806
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> global-6.2.10.ebuild:
   Stable for x86, wrt bug #502806

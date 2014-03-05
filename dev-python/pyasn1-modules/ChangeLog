@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.24 2014/03/01 23:59:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.25 2014/03/05 15:38:42 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyasn1-modules-0.0.5.ebuild:
+  Stable for ppc, wrt bug #474196
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> pyasn1-modules-0.0.5.ebuild:
   amd64 stable, bug #474196

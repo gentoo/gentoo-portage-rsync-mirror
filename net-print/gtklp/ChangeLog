@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gtklp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.58 2014/03/02 22:29:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.59 2014/03/05 15:53:05 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gtklp-1.3.0.ebuild:
+  Stable for ppc, wrt bug #495900
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> gtklp-1.3.0.ebuild:
   amd64 stable, bug #495900

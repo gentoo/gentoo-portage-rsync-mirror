@@ -4,10 +4,10 @@ DESCRIPTION=Library to query devices using IEEE1284
 EAPI=4
 HOMEPAGE=http://cyberelk.net/tim/libieee1284/index.html
 IUSE=doc python static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
-KEYWORDS=amd64 ~ppc x86 ~x86-fbsd
+KEYWORDS=amd64 ppc x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r9 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] ) python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=mirror://sourceforge/libieee1284/libieee1284-0.2.11.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=44a19f800e7d412fd2f440217887d1c4
+_md5_=eab66c8ac7abfe03ed39ca8be406b3ec

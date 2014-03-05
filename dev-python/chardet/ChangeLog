@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/chardet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.36 2014/03/04 20:05:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.37 2014/03/05 15:35:29 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> chardet-2.2.1.ebuild:
+  Stable for ppc, wrt bug #502776
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> chardet-2.2.1.ebuild:
   Stable for x86, wrt bug #502776

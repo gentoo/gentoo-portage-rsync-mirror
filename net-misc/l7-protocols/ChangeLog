@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.69 2014/03/02 08:06:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.70 2014/03/05 15:51:59 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> l7-protocols-2009.05.28.ebuild:
+  Stable for ppc, wrt bug #474280
 
   02 Mar 2014; Agostino Sarubbo <ago@gentoo.org> l7-protocols-2009.05.28.ebuild:
   Stable for x86, wrt bug #474280

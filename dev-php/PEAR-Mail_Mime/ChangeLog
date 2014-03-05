@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Mail_Mime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.84 2014/03/01 23:40:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/ChangeLog,v 1.85 2014/03/05 15:33:36 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> PEAR-Mail_Mime-1.8.8.ebuild:
+  Stable for ppc, wrt bug #470680
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> PEAR-Mail_Mime-1.8.8.ebuild:
   amd64 stable, bug #470680

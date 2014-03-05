@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r9.ebuild,v 1.3 2014/01/14 13:56:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r9.ebuild,v 1.4 2014/03/05 15:45:24 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc test static-libs"
 
 RDEPEND="

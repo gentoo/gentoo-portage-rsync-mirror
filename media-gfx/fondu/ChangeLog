@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fondu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.13 2014/03/02 22:24:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.14 2014/03/05 15:48:11 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> fondu-20060102-r1.ebuild:
+  Stable for ppc, wrt bug #495700
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> fondu-20060102-r1.ebuild:
   amd64 stable, bug #495700

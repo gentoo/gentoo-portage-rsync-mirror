@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.35 2014/03/05 14:10:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.36 2014/03/05 15:38:26 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyalsaaudio-0.7-r1.ebuild:
+  Stable for ppc, wrt bug #474192
 
   05 Mar 2014; Michał Górny <mgorny@gentoo.org> pyalsaaudio-0.7-r2.ebuild:
   Fix distutils-r1 use. Remove meaningless 2to3 since no Python files are

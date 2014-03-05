@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freealut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.33 2014/03/02 22:25:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.34 2014/03/05 15:48:43 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> freealut-1.1.0-r2.ebuild:
+  Stable for ppc, wrt bug #495714
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> freealut-1.1.0-r2.ebuild:
   amd64 stable, bug #495714

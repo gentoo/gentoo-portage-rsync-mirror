@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/streamripper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.72 2014/03/01 23:40:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.73 2014/03/05 15:49:39 ago Exp $
+
+  05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> streamripper-1.64.6.ebuild:
+  Stable for ppc, wrt bug #471688
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> streamripper-1.64.6.ebuild:
   amd64 stable, bug #471688
