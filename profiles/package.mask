@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15450 2014/03/05 21:15:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15451 2014/03/06 08:02:23 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (06 Mar 2014)
+# Compatibility packages masked for removal in 30 days.
+<dev-lang/python-exec-0.3.1-r1:0
+<dev-lang/python-exec-2.0.1-r1:2
+dev-python/python-exec
+
 # Manuel Rüger <mrueg@gentoo.org> (05 Mar 2014)
 # Mask further ruby18-only packages
 # Removal in 30 days
@@ -40,7 +46,6 @@ dev-ruby/rack:0
 dev-ruby/rspec-rails:0
 dev-ruby/ruby2ruby:0
 dev-ruby/rubymail
-
 
 # Michał Górny <mgorny@gentoo.org> (05 Mar 2014)
 # Seems to cause more trouble than it fixes. Bugs #503470, #503472.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r4.ebuild,v 1.3 2014/02/27 13:02:33 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-036-r4.ebuild,v 1.4 2014/03/06 08:31:30 aidecoe Exp $
 
 EAPI=4
 
@@ -174,6 +174,7 @@ src_install() {
 		# With systemd following modules do not make sense
 		rm_module 96securityfs 97masterkey 98integrity
 	else
+		rm_module 98systemd
 		# Without systemd following modules do not make sense
 		rm_module 00systemd-bootchart
 	fi

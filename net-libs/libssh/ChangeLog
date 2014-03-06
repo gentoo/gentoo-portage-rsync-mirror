@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.100 2014/03/05 12:40:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.101 2014/03/06 08:24:11 pinkbyte Exp $
+
+  06 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> libssh-0.6.1.ebuild,
+  libssh-0.6.3.ebuild:
+  Add ~s390, wrt bug #488696
 
 *libssh-0.6.3 (05 Mar 2014)
 

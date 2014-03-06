@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmocka
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.6 2014/01/06 06:12:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.8 2014/03/06 08:25:06 pinkbyte Exp $
+
+  06 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> cmocka-0.3.1.ebuild:
+  Add ~s390, wrt bug #488696
 
   06 Jan 2014; Naohiro Aota <naota@gentoo.org> cmocka-0.3.1.ebuild:
   Add ~x86-fbsd. #488696
