@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.62 2014/02/23 08:53:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.63 2014/03/06 10:45:44 ago Exp $
+
+  06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> jbigkit-2.0-r2.ebuild:
+  Stable for ppc64, wrt bug #495720
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> jbigkit-2.0-r2.ebuild:
   Stable for ppc, wrt bug #495720

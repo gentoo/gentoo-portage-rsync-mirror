@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/deja-dup-29.5.ebuild,v 1.3 2014/02/22 20:54:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/deja-dup-29.5.ebuild,v 1.4 2014/03/06 10:42:26 jlec Exp $
 
 EAPI=5
 
@@ -26,10 +26,10 @@ COMMON_DEPEND="
 	app-crypt/libsecret[vala]
 	>=dev-libs/glib-2.34:2
 	>=dev-libs/libpeas-1.0
-	x11-libs/gtk+:3
+	>=x11-libs/gtk+-3.6:3
 	>=x11-libs/libnotify-0.7
 
-	>=app-backup/duplicity-0.6.21
+	>=app-backup/duplicity-0.6.23
 	dev-libs/dbus-glib
 
 	nautilus? ( gnome-base/nautilus )"

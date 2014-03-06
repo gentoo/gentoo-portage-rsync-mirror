@@ -3,10 +3,10 @@ DEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Config file parser module
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Config-General/
-KEYWORDS=amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TL/TLINDEN/Config-General-2.52.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=8a679b3d27090a380fe59e84a1706ea4
+_md5_=b19f4d8edad7bc3ec18b34400a375a46

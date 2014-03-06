@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.250.0.ebuild,v 1.4 2014/03/05 15:28:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.250.0.ebuild,v 1.5 2014/03/06 10:36:15 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="The Template Toolkit"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~ppc-aix ~x86-fbsd ~x86-solaris"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~ppc-aix ~x86-fbsd ~x86-solaris"
 IUSE="xml gd mysql postgres latex vim-syntax"
 
 RDEPEND="dev-perl/text-autoformat

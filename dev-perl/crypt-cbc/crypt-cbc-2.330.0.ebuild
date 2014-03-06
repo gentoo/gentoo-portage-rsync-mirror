@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.330.0.ebuild,v 1.6 2014/03/05 15:23:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.330.0.ebuild,v 1.7 2014/03/06 10:33:30 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Encrypt Data with Cipher Block Chaining Mode"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="virtual/perl-Digest-MD5"

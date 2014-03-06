@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LMTP/PEAR-Net_LMTP-1.0.2.ebuild,v 1.6 2014/03/05 15:34:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LMTP/PEAR-Net_LMTP-1.0.2.ebuild,v 1.7 2014/03/06 10:39:51 ago Exp $
 
 EAPI=5
 
@@ -10,6 +10,6 @@ DESCRIPTION="Provides an implementation of the RFC2033 LMTP protocol."
 
 LICENSE="PHP-2.02"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 RDEPEND=">=dev-php/PEAR-Net_Socket-1.0.6-r1"

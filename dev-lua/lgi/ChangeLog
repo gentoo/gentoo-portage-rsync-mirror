@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/lgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.6 2014/03/05 15:23:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.7 2014/03/06 10:33:00 ago Exp $
+
+  06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> lgi-0.7.2.ebuild:
+  Stable for ppc64, wrt bug #500796
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> lgi-0.7.2.ebuild:
   Stable for ppc, wrt bug #500796

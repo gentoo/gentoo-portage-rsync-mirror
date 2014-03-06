@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.40 2014/03/05 15:38:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.41 2014/03/06 10:42:05 ago Exp $
+
+  06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyalsa-1.0.26-r1.ebuild:
+  Stable for ppc64, wrt bug #495604
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyalsa-1.0.26-r1.ebuild:
   Stable for ppc, wrt bug #495604
