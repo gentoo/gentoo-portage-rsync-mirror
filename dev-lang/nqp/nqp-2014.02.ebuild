@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.02.ebuild,v 1.1 2014/02/26 08:27:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.02.ebuild,v 1.2 2014/03/06 06:47:41 patrick Exp $
 
 EAPI=5
 
@@ -20,10 +20,10 @@ IUSE="doc +parrot java moar"
 REQUIRED_USE="|| ( parrot java moar )"
 
 RDEPEND="parrot? ( >=dev-lang/parrot-${PARROT_VERSION}:=[unicode] )
-	java? ( virtual/jre )
+	java? ( >=virtual/jre-1.7 )
 	moar? ( =dev-lang/moarvm-${PV} )"
 DEPEND="${RDEPEND}
-	java? ( virtual/jdk )
+	java? ( >=virtual/jdk-1.7 )
 	dev-lang/perl"
 
 S=${WORKDIR}/perl6-nqp-${GITCRAP}

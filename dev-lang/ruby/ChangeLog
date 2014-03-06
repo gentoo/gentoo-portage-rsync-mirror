@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.642 2014/03/05 07:37:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.643 2014/03/06 06:33:07 graaff Exp $
+
+*ruby-2.1.1 (06 Mar 2014)
+
+  06 Mar 2014; Hans de Graaff <graaff@gentoo.org> +ruby-2.1.1.ebuild:
+  Version bump. Update module selection code to fix automagic dependencies.
+  Remove USE=tk for bug 500894. Backport fix for readline 6.3 breakage, bug
+  503106.
 
 *ruby-2.0.0_p451 (05 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.41 2014/02/26 08:38:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.42 2014/03/06 06:47:41 patrick Exp $
+
+  06 Mar 2014; Patrick Lauer <patrick@gentoo.org> nqp-2014.02.ebuild:
+  Tighten java deps #503520
 
   26 Feb 2014; Patrick Lauer <patrick@gentoo.org> -nqp-2013.08.ebuild,
   -nqp-2013.09.ebuild, -nqp-2013.11-r1.ebuild, -nqp-2013.11.ebuild,
