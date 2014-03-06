@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.185 2014/03/05 21:51:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.186 2014/03/06 06:20:38 gienah Exp $
+
+  06 Mar 2014; Mark Wright <gienah@gentoo.org> files/irssi-0.8.15-tinfo.patch,
+  irssi-0.8.15-r2.ebuild:
+  Thanks to jer for help, try to address some concerns in
+  https://bugs.gentoo.org/show_bug.cgi?id=453396#c25 : Change irssi-0.8.15-r2 to
+  link against -lncurses -ltinfo when sys-libs/ncurses it built with the tinfo
+  USE flag to be consistent with how irssi-0.8.15-r1 links against -lncurses
+  when sys-libs/ncurses it built without the tinfo USE flag. Replace the pkg-
+  config --libs ncurses with logic in curses.m4 that checks if irssi needs to
+  also link with -ltinfo or not.  Add the --without-terminfo configure flag as
+  without this irssi defaults to linking with -ltinfo without -lncurses
 
   05 Mar 2014; Sven Wegener <swegener@gentoo.org> irssi-0.8.15-r2.ebuild,
   +irssi-0.8.16_rc1.ebuild, irssi-9999.ebuild:

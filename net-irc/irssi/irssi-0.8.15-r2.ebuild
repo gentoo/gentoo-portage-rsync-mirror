@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.15-r2.ebuild,v 1.5 2014/03/05 21:51:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.15-r2.ebuild,v 1.6 2014/03/06 06:20:38 gienah Exp $
 
 EAPI=4
 
-inherit autotools-utils eutils flag-o-matic perl-module toolchain-funcs
+inherit autotools-utils eutils perl-module
 
 # Keep for _rc compability
 MY_P="${P/_/-}"
@@ -32,9 +32,6 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.8.15-tinfo.patch"
-	sed -e "s@pkg-config@$(tc-getPKG_CONFIG)@g" \
-		-i "${S}/curses.m4" \
-		|| die "Could not configure pkg-config in curses.m4"
 	AUTOTOOLS_AUTORECONF=1
 	autotools-utils_src_prepare
 }
@@ -43,6 +40,7 @@ src_configure() {
 	econf \
 		--with-proxy \
 		--with-ncurses="${EPREFIX}"/usr \
+		--without-terminfo \
 		--with-perl-lib=vendor \
 		$(use_with perl) \
 		$(use_with socks5 socks) \

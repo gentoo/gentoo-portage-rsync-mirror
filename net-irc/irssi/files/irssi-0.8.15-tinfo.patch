@@ -1,35 +1,21 @@
 --- irssi-0.8.15-orig/curses.m4	2010-04-04 02:19:58.000000000 +1000
-+++ irssi-0.8.15/curses.m4	2014-03-02 13:06:29.834097805 +1100
-@@ -95,6 +95,7 @@
- 
- 	AC_SUBST(CURSES_LIBS)
- 	AC_SUBST(CURSES_INCLUDEDIR)
-+	AC_SUBST(NCURSES_LIBS)
- 
- 	AC_ARG_WITH(sco,
- 	  [  --with-sco              Use this to turn on SCO-specific code],[
-@@ -131,7 +132,8 @@
- 	  if test x$withval = xno ; then
- 		search_ncurses=false
- 	  elif test x$withval != xyes ; then
--		AC_NCURSES($withval/include, ncurses.h, -L$withval/lib -lncurses, -I$withval/include, "ncurses on $withval/include")
-+		NCURSES_LIBS="`pkg-config --libs-only-l ncurses`"
-+		AC_NCURSES($withval/include, ncurses.h, -L$withval/lib "$NCURSES_LIBS", -I$withval/include, "ncurses on $withval/include")
- 	  fi
- 	)
- 
-@@ -230,8 +232,14 @@
- ])
- 
- AC_DEFUN([AC_SEARCH_NCURSES], [
-+    AC_SUBST(NCURSES_LIBS)
-+    AC_SUBST(NCURSES_INCLUDES)
-+    NCURSES_LIBS=`pkg-config --libs-only-l ncurses`
-+    NCURSES_INCLUDES=`pkg-config --cflags-only-I ncurses`
-     AC_CHECKING("location of ncurses.h file")
- 
-+    AC_NCURSES($NCURSES_INCLUDES, ncurses.h, $NCURSES_LIBS,,
-+	       [ncurses in $NCURSES_INCLUDES])
-     AC_NCURSES(/usr/include, ncurses.h, -lncurses,,
- 	       [ncurses in /usr/include])
-     AC_NCURSES(/usr/include/ncurses, ncurses.h, -lncurses, -I/usr/include/ncurses,
++++ irssi-0.8.15/curses.m4	2014-03-06 16:36:12.404404130 +1100
+@@ -218,9 +218,17 @@
+ 			CURSES_LIBS="$CHECKLIBS"
+ 		],, $CHECKLIBS)
+ 	    ], $CURSES_LIBS)
++	    AC_CHECK_LIB(ncurses, tputs, [
++	        true;
++	    ], [
++                CHECKLIBS=`echo "$3"|sed 's/-lncurses/-lncurses -ltinfo/g'`
++		AC_CHECK_LIB(tinfo, tputs, [
++			CURSES_LIBS="$CHECKLIBS"
++		],, $CHECKLIBS)
++	    ], $CURSES_LIBS)
+ 	    CURSES_INCLUDEDIR="$4"
+ 	    search_ncurses=false
+-	    screen_manager="$5"
++	    screen_manager=$5
+             AC_DEFINE(HAS_CURSES)
+             has_curses=true
+ 	    has_ncurses=true
