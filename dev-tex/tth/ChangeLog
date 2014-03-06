@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.19 2013/02/20 19:42:39 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.20 2014/03/06 15:49:32 jer Exp $
+
+  06 Mar 2014; Jeroen Roovers <jer@gentoo.org> tth-3.77.ebuild:
+  Marked ~hppa (bug #503594).
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tth-3.77.ebuild:
   Add ~arm, wrt bug #455960

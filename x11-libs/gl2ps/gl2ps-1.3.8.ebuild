@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.8.ebuild,v 1.2 2013/02/20 19:41:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.8.ebuild,v 1.3 2014/03/06 15:50:46 jer Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://geuz.org/${PN}/src/${P}.tgz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc png zlib"
 
 RDEPEND="

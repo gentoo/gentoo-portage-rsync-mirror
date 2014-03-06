@@ -1,8 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.136 2014/02/18 11:31:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.137 2014/03/06 15:33:47 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (6 Mar 2014)
+# USE=gui requires x11-libs/qscintilla,
+# USE=jit requires sys-devel/llvm (bug #503594)
+sci-mathematics/octave gui jit
 
 # Jeroen Roovers <jer@gentoo.org> (31 Jan 2014)
 # Mask x11-libs/libgksu dependency (bug #499900)

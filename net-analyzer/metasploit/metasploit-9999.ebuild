@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.11 2014/02/10 16:35:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.12 2014/03/06 15:44:07 zerochaos Exp $
 
 EAPI="5"
 
@@ -120,7 +120,8 @@ all_ruby_unpack() {
 
 all_ruby_prepare() {
 	# add psexec patch from pull request 2657 to allow custom exe templates from any files, bypassing most AVs
-	epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	#epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	epatch_user
 
 	#unbundle johntheripper, at least it now defaults to running the system version
 	rm -r data/john/run.*

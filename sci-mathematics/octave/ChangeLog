@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.160 2014/03/06 15:23:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.161 2014/03/06 15:51:14 jer Exp $
+
+  06 Mar 2014; Jeroen Roovers <jer@gentoo.org> octave-3.8.0.ebuild,
+  octave-3.8.1_rc4.ebuild, octave-3.8.1_rc4-r1.ebuild:
+  Marked ~hppa (bug #503594).
 
   06 Mar 2014; Jeroen Roovers <jer@gentoo.org> octave-3.8.0.ebuild,
   octave-3.8.1_rc4.ebuild, octave-3.8.1_rc4-r1.ebuild:

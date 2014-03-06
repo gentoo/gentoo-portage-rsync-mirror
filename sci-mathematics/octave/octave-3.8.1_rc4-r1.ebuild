@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1_rc4-r1.ebuild,v 1.2 2014/03/06 15:23:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1_rc4-r1.ebuild,v 1.3 2014/03/06 15:51:14 jer Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gnu-alpha/octave/${MY_P}.tar.gz"
 SLOT="0/${PV}"
 IUSE="curl doc fftw +glpk gnuplot gui hdf5 +imagemagick java jit opengl postscript
 	+qhull +qrupdate readline +sparse static-libs X zlib"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	app-text/ghostscript-gpl
