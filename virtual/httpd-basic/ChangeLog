@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-basic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.9 2012/03/24 12:27:18 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.10 2014/03/06 16:03:03 mrueg Exp $
+
+  06 Mar 2014; Manuel Rüger <mrueg@gentoo.org> httpd-basic-0.ebuild:
+  Drop www-servers/mongrel.
 
   24 Mar 2012; Pacho Ramos <pacho@gentoo.org> httpd-basic-0.ebuild:
   www-servers/mini_httpd will be dropped soon.
@@ -29,4 +32,3 @@
 
   20 Oct 2007; <wrobel@gentoo.org> +metadata.xml, +httpd-basic-0.ebuild:
   Finally adding virtual/httpd-basic to close #11007.
-

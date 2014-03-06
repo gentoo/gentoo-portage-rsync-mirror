@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.11.0.ebuild,v 1.1 2013/05/04 15:55:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.13.0.ebuild,v 1.1 2014/03/06 16:14:25 mrueg Exp $
 
 EAPI=5
 
@@ -28,9 +28,6 @@ ruby_add_rdepend '=dev-ruby/multi_json-1* >=dev-ruby/multi_xml-0.5.2'
 
 ruby_add_bdepend 'dev-ruby/rspec:0 dev-ruby/fakeweb'
 
-USE_RUBY=ruby18 \
-	ruby_add_bdepend 'test? ( dev-util/cucumber www-servers/mongrel )'
-
 all_ruby_prepare() {
 	# Remove bundler
 	rm Gemfile || die
@@ -40,20 +37,12 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	case ${RUBY} in
-		*ruby18)
-			# Cucumber-based tests only work on Ruby 1.8, as of today, so we only call them
-			${RUBY} -S rake spec features || die "cucumber tests failed"
-			;;
-		*)
-			${RUBY} -S rake spec || die "cucumber tests failed"
-			;;
-	esac
+	${RUBY} -S rake spec || die
 }
 
 all_ruby_install() {
 	all_fakegem_install
 
 	docinto examples
-	dodoc examples/* || die
+	dodoc examples/*
 }

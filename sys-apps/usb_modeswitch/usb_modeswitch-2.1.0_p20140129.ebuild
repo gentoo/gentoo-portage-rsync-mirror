@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-2.1.0_p20140129.ebuild,v 1.1 2014/02/27 20:07:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-2.1.0_p20140129.ebuild,v 1.2 2014/03/06 16:30:07 ssuominen Exp $
 
 EAPI=5
 inherit eutils linux-info toolchain-funcs udev systemd
@@ -16,7 +16,7 @@ SRC_URI="http://www.draisberghof.de/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE="jimtcl"
 
 COMMON_DEPEND="virtual/udev
