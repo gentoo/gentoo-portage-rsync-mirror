@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/wxpython:2.9[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-chemistry/molmol sci-chemistry/pymol[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-chemistry/vmd >=sci-libs/bmrblib-1.0.3[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=sci-libs/minfx-1.0.5[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-libs/scipy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-visualization/grace sci-visualization/opendx x11-libs/wxGTK:2.9[X] media-gfx/pngcrush dev-util/scons test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DESCRIPTION=Molecular dynamics by NMR data analysis
+EAPI=5
+HOMEPAGE=http://www.nmr-relax.com/
+IUSE=python_targets_python2_7 python_single_target_python2_7 test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/numpy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/wxpython:2.9[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-chemistry/molmol sci-chemistry/pymol[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-chemistry/vmd >=sci-libs/bmrblib-1.0.3[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=sci-libs/minfx-1.0.5[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-libs/scipy[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sci-visualization/grace sci-visualization/opendx x11-libs/wxGTK:2.9[X]
+REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
+SLOT=0
+SRC_URI=http://download.gna.org/relax/relax-3.1.6.src.tar.bz2
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86	wxwidgets	755f4b28ecdf7c1213011108e566babc
+_md5_=d511f7802e582f459528844c9f2dfd79

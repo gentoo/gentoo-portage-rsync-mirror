@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/quilt-el
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.23 2014/03/05 15:17:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.24 2014/03/06 10:28:17 ago Exp $
+
+  06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> quilt-el-0.48.0.ebuild:
+  Stable for ppc64, wrt bug #501230
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> quilt-el-0.48.0.ebuild:
   Stable for ppc, wrt bug #501230

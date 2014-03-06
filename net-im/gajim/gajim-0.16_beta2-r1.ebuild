@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16_beta2.ebuild,v 1.4 2014/03/06 10:30:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16_beta2-r1.ebuild,v 1.2 2014/03/06 10:30:04 jlec Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
@@ -41,7 +41,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17-r1"
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyasn1[${PYTHON_USEDEP}]
-	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
 	>=dev-python/python-nbxmpp-0.3[${PYTHON_USEDEP}]
 	crypt? (
 		app-crypt/gnupg
@@ -76,6 +76,11 @@ RDEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 S="${WORKDIR}"/${MY_P}
+
+PATCHES=(
+	"${FILESDIR}"/${P}-pyopenssl-backport-1.patch
+	"${FILESDIR}"/${P}-pyopenssl-backport-2.patch
+)
 
 src_prepare() {
 	autotools-utils_src_prepare

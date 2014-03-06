@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.65 2014/02/23 08:54:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.66 2014/03/06 10:29:45 ago Exp $
+
+  06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libpaper-1.1.24-r2.ebuild:
+  Stable for ppc64, wrt bug #491946
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libpaper-1.1.24-r2.ebuild:
   Stable for ppc, wrt bug #491946
