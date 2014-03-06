@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0.ebuild,v 1.4 2013/08/07 17:42:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0-r1.ebuild,v 1.1 2014/03/06 22:21:39 bicatali Exp $
 
 EAPI=5
 
@@ -16,14 +16,14 @@ SLOT="0"
 IUSE="+data doc fftw hdf5 openmp threads test"
 
 RDEPEND="
-	sci-libs/cfitsio
-	sci-astronomy/wcslib
-	sys-libs/readline
+	sci-libs/cfitsio:0=
+	sci-astronomy/wcslib:0=
+	sys-libs/readline:0=
 	virtual/blas
 	virtual/lapack
 	data? ( sci-astronomy/casa-data )
-	fftw? ( >=sci-libs/fftw-3 )
-	hdf5? ( sci-libs/hdf5 )"
+	fftw? ( sci-libs/fftw:3.0= )
+	hdf5? ( sci-libs/hdf5:0= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
@@ -34,6 +34,7 @@ PATCHES=(
 	"${FILESDIR}"/1.3.0-libdir.patch
 	"${FILESDIR}"/1.5.0-sysdep.patch
 	"${FILESDIR}"/1.5.0-gcc47.patch
+	"${FILESDIR}"/1.5.0-gcc48.patch
 )
 
 pkg_setup() {
