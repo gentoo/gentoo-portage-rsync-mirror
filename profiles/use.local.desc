@@ -5327,6 +5327,7 @@ net-misc/ofono:provision - Enable GPRS provisioning support
 net-misc/ofono:qmimodem - Enable Qualcomm QMI modem support
 net-misc/ofono:tools - Enable testing tools
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
+net-misc/openconnect:java - Build JNI bindings using jni.h
 net-misc/openconnect:libproxy - Enable proxy support.
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
