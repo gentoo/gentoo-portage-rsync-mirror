@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libfaketime
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.6 2013/01/22 17:32:41 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.7 2014/03/06 04:16:57 radhermit Exp $
+
+*libfaketime-0.9.5 (06 Mar 2014)
+
+  06 Mar 2014; Tim Harder <radhermit@gentoo.org> +libfaketime-0.9.5.ebuild,
+  +files/0001-Fake-__clock_gettime-and-similar-calls-using-__.-cal.patch,
+  +files/0002-Finish-safe-faking-of-internal-calls.patch:
+  Version bump.
 
   22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libfaketime-0.9.1.ebuild:
   Stable for x86, wrt bug #452834
