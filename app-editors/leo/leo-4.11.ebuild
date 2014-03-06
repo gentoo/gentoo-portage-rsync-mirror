@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-4.11.ebuild,v 1.2 2014/02/24 01:25:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-4.11.ebuild,v 1.3 2014/03/06 08:33:02 nimiux Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="app-text/silvercity
