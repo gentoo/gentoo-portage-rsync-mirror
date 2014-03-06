@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bcrypt-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.18 2014/02/25 08:02:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.19 2014/03/06 08:00:22 graaff Exp $
+
+*bcrypt-ruby-3.1.7 (06 Mar 2014)
+
+  06 Mar 2014; Hans de Graaff <graaff@gentoo.org> +bcrypt-ruby-3.1.7.ebuild:
+  Version bump. Ebuild by Peter Wilmott in the ruby overlay.
 
   25 Feb 2014; Hans de Graaff <graaff@gentoo.org> bcrypt-ruby-3.1.6.ebuild:
   Fix gem specification to not use leading spaces, fixing a repoman warning.

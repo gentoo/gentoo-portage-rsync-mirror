@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/python-exec-0.9999.ebuild,v 1.4 2014/01/29 05:04:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/python-exec-0.9999.ebuild,v 1.5 2014/03/06 08:00:34 mgorny Exp $
 
 EAPI=5
 
@@ -27,7 +27,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE=""
 
 RDEPEND="!<dev-python/python-exec-10000"
-PDEPEND=">=dev-python/python-exec-10000:$SLOT"
 
 #if LIVE
 KEYWORDS=
