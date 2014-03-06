@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.1.ebuild,v 1.3 2012/10/22 22:01:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.1.ebuild,v 1.4 2014/03/06 17:26:35 jer Exp $
 
 EAPI="4"
 
@@ -97,10 +97,6 @@ src_configure() {
 }
 
 src_compile() {
-	if use hppa; then
-		mymake=DLLD\="${EPREFIX}"/usr/bin/gcc\ DLLDFLAGS\=-shared\ -Wl,-soname=\$\(LIBPARI_SONAME\)\ -lm
-	fi
-
 	local installdir=$(get_compile_dir)
 	cd "${installdir}" || die "failed to change directory"
 
