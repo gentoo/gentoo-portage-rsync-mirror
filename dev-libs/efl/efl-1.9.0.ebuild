@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.2 2014/03/04 18:42:47 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.3 2014/03/06 01:04:33 zerochaos Exp $
 
 EAPI="5"
 
@@ -126,8 +126,25 @@ RDEPEND="
 	sys-apps/dbus
 	>=sys-apps/util-linux-2.20.0
 	sys-libs/zlib
+
+	!dev-libs/ecore
+	!dev-libs/edbus
+	!dev-libs/eet
+	!dev-libs/eeze
+	!dev-libs/efreet
+	!dev-libs/eina
+	!dev-libs/eio
+	!dev-libs/embryo
+	!dev-libs/eobj
+	!dev-libs/ephysics
+	!media-libs/edje
+	!media-libs/emotion
+	!media-libs/ethumb
+	!media-libs/evas
 "
 
+#soft blockers added above for binpkg users
+#hard blocks are needed for building
 CORE_EFL_CONFLICTS="
 	!!dev-libs/ecore
 	!!dev-libs/edbus
