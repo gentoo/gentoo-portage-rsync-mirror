@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gmtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/ChangeLog,v 1.17 2014/02/24 00:55:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/ChangeLog,v 1.18 2014/03/06 14:32:40 nimiux Exp $
+
+  06 Mar 2014; Chema Alonso <nimiux@gentoo.org> gmtk-1.0.8.ebuild:
+  Stable for amd64 wrt bug #495718
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmtk-1.0.8.ebuild:
   x86 stable wrt bug #495718
