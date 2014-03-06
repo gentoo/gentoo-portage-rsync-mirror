@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libepoxy
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/ChangeLog,v 1.1 2014/03/06 21:18:13 mattst88 Exp $
+
+*libepoxy-9999 (06 Mar 2014)
+*libepoxy-1.1 (06 Mar 2014)
+
+  06 Mar 2014; Matt Turner <mattst88@gentoo.org> +libepoxy-1.1.ebuild,
+  +libepoxy-9999.ebuild, +metadata.xml:
+  Initial import of libepoxy, versions 1.1 and 9999.
