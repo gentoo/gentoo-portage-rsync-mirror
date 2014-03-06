@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/frescobaldi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.23 2014/01/01 05:08:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.25 2014/03/06 20:35:59 radhermit Exp $
+
+  06 Mar 2014; Tim Harder <radhermit@gentoo.org> -frescobaldi-2.0.9.ebuild,
+  -frescobaldi-2.0.10.ebuild, -frescobaldi-2.0.11.ebuild,
+  -frescobaldi-2.0.12.ebuild:
+  Remove old.
+
+*frescobaldi-2.0.14 (06 Mar 2014)
+
+  06 Mar 2014; Tim Harder <radhermit@gentoo.org> +frescobaldi-2.0.14.ebuild:
+  Version bump.
 
 *frescobaldi-2.0.13 (01 Jan 2014)
 
