@@ -1,6 +1,23 @@
 # ChangeLog for mail-client/geary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.12 2014/02/15 20:42:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.14 2014/03/05 23:50:06 hasufell Exp $
+
+  05 Mar 2014; Julian Ospald <hasufell@gentoo.org>
+  -files/geary-0.3.1-ayatana.patch, -files/geary-0.3.1-cflags.patch,
+  -files/geary-0.4.0-cflags.patch, -files/geary-0.4.0-unity.patch,
+  -files/geary-0.4.2-cflags.patch, -files/geary-0.4.2-unity.patch,
+  -files/geary-0.5.0-cflags.patch, -files/geary-0.5.0-unity.patch,
+  -files/geary-0.5.1-cflags.patch, -files/geary-0.5.1-unity.patch,
+  -files/geary-0.5.1-vapigen.patch:
+  rm obsolete patches
+
+*geary-0.5.3 (05 Mar 2014)
+
+  05 Mar 2014; Julian Ospald <hasufell@gentoo.org> -geary-0.3.1.ebuild,
+  -geary-0.4.0.ebuild, -geary-0.4.2.ebuild, -geary-0.5.0.ebuild,
+  -geary-0.5.1.ebuild, +geary-0.5.3.ebuild, +files/geary-0.5.3-cflags.patch,
+  +files/geary-0.5.3-unity.patch, +files/geary-0.5.3-vapigen.patch:
+  version bump wrt #503486, remove old
 
 *geary-0.5.2 (15 Feb 2014)
 

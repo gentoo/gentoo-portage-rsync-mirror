@@ -1,17 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.2.ebuild,v 1.1 2013/12/25 00:55:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.5.3.ebuild,v 1.1 2014/03/05 23:48:05 hasufell Exp $
 
 EAPI=5
 
-VALA_MIN_API_VERSION=0.20
+VALA_MIN_API_VERSION=0.22
 
 inherit eutils fdo-mime gnome2-utils vala cmake-utils
 
 MY_P=${P/_pre/pr}
 DESCRIPTION="A lightweight, easy-to-use, feature-rich email client"
 HOMEPAGE="http://www.yorba.org/projects/geary/"
-SRC_URI="http://yorba.org/download/geary/${PV:0:3}/${MY_P}.tar.xz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/geary/${PV:0:3}/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,7 +23,6 @@ DEPEND="
 	dev-db/sqlite:3
 	dev-libs/glib:2
 	>=dev-libs/libgee-0.8.5:0.8
-	dev-libs/libunique:3
 	dev-libs/libxml2:2
 	dev-libs/gmime:2.6
 	media-libs/libcanberra
@@ -43,15 +42,14 @@ DOCS=( AUTHORS MAINTAINERS README NEWS THANKS )
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{unity,cflags}.patch
+	epatch "${FILESDIR}"/${P}-{unity,cflags,vapigen}.patch
 
 	local i
 	if use nls ; then
 		if [[ -n "${LINGUAS+x}" ]] ; then
 			for i in $(cd po ; echo *.po) ; do
 				if ! has ${i%.po} ${LINGUAS} ; then
-					sed -i -e "s/\s${i%.po}$//" po/CMakeLists.txt || die
-					rm po/${i} || die
+					sed -i -e "/^${i%.po}$/d" po/LINGUAS || die
 				fi
 			done
 		fi
