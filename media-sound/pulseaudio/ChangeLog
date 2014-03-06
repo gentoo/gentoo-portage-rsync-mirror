@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.323 2014/02/22 22:18:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.324 2014/03/06 19:57:53 eva Exp $
+
+*pulseaudio-5.0 (06 Mar 2014)
+
+  06 Mar 2014; Gilles Dartiguelongue <eva@gentoo.org> +pulseaudio-5.0.ebuild:
+  Version bump. Bluetooth proximity module was removed.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-4.99.4-r1.ebuild:
   Fix wrong commit, bug 502160
