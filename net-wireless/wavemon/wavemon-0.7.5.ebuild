@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.5.ebuild,v 1.11 2013/02/19 02:37:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.5.ebuild,v 1.12 2014/03/06 07:12:56 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -18,12 +18,16 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ppc sparc x86"
 
 IUSE="caps"
-DEPEND="sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	caps? ( sys-libs/libcap )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS )
-PATCHES=( "${FILESDIR}/${PN}-0.6.7-dont-override-CFLAGS.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-0.6.7-dont-override-CFLAGS.patch"
+	"${FILESDIR}/${P}-ncurses-tinfo.patch"
+)
 
 src_prepare() {
 	# Do not install docs to /usr/share

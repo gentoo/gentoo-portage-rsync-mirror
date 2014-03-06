@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wavemon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.55 2013/02/19 02:37:10 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.56 2014/03/06 07:12:56 pinkbyte Exp $
+
+  06 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> wavemon-0.7.5.ebuild,
+  +files/wavemon-0.7.5-ncurses-tinfo.patch:
+  Bump EAPI to 5, fix building with sys-libs/ncurses[tinfo], wrt bug #503494,
+  thanks to Stefan Huber <shuber-bgo AT sthu.org>
 
   19 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> wavemon-0.7.5.ebuild:
   Stable on arm, wrt bug #448406
