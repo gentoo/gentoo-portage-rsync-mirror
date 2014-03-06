@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.73 2014/01/23 18:10:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.74 2014/03/06 19:28:23 hwoarang Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
+
+# Markos Chandras <hwoarang@gentoo.org>
+# app-arch/lz4 does not seem to build on MIPS
+# Original bug report: #501600
+lz4
 
 # Markos Chandras <hwoarang@gentoo.org>
 # Profiles are ISA agnostic so these

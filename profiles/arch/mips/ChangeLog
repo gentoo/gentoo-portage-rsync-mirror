@@ -1,12 +1,18 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.131 2014/02/02 10:30:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.132 2014/03/06 19:28:23 hwoarang Exp $
+
+  06 Mar 2014; Markos Chandras <hwoarang@gentoo.org> use.mask:
+  Mask lz4 per #501600
 
   02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Mask nvtt USE flag in media-libs/devil
 
   23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Remove old gentoo-sources entry.
+
+  23 Jan 2014; Markos Chandras <hwoarang@gentoo.org> use.mask:
+  Unmask ffmpeg MIPS use flags per #498082
 
   14 Jan 2014; Mike Frysinger <vapier@gentoo.org> parent, use.mask:
   Use unified arch/base/ like all other arches.
