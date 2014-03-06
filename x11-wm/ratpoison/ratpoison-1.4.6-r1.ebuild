@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-9999.ebuild,v 1.2 2014/03/06 18:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.6-r1.ebuild,v 1.1 2014/03/06 18:31:27 jer Exp $
 
 EAPI=5
 
-inherit autotools elisp-common eutils git-r3 toolchain-funcs
+inherit elisp-common eutils toolchain-funcs
 
 DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled after screen"
 HOMEPAGE="http://www.nongnu.org/ratpoison/"
-EGIT_REPO_URI="git://git.savannah.nongnu.org/ratpoison.git"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="debug emacs +history sloppy +xft"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+IUSE="debug emacs +history +xft sloppy"
 
 RDEPEND="
 	emacs? ( virtual/emacs )
@@ -34,12 +34,10 @@ DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}/ratpoison.el-gentoo.patch"
-	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--without-electric-fence \
 		$(use_enable debug) \
 		$(use_with xft) \
 		$(usex history '' --disable-history)

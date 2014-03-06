@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare
+DEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-PodParser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft ) app-arch/xz-utils virtual/pkgconfig
+DESCRIPTION=Ratpoison is an extremely light-weight and barebones wm modelled after screen
+EAPI=5
+HOMEPAGE=http://www.nongnu.org/ratpoison/
+IUSE=debug emacs +history +xft sloppy
+KEYWORDS=~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-PodParser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft )
+SLOT=0
+SRC_URI=http://savannah.nongnu.org/download/ratpoison/ratpoison-1.4.6.tar.xz
+_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=5e15db03b819076796866fe7b952d8e5
