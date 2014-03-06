@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.54.ebuild,v 1.3 2014/03/06 16:42:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.00.ebuild,v 1.1 2014/03/06 16:42:13 blueness Exp $
 
 EAPI="5"
 
-inherit autotools ssl-cert eutils user
+inherit ssl-cert eutils systemd user
 
 DESCRIPTION="TLS/SSL - Port Wrapper"
-HOMEPAGE="http://stunnel.mirt.net/"
-SRC_URI="ftp://ftp.stunnel.org/stunnel/${P}.tar.gz"
+HOMEPAGE="http://www.stunnel.org/index.html"
+SRC_URI="http://www.stunnel.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,9 +26,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use xforward && epatch "${FILESDIR}/stunnel-${PV}-xforwarded-for.patch"
-	use listen-queue && epatch "${FILESDIR}/stunnel-${PV}-listen-queue.patch"
-	eautoreconf
+	use xforward && epatch "${FILESDIR}/${PN}-4.56-xforwarded-for.patch"
+	use listen-queue && epatch "${FILESDIR}/${PN}-4.56-listen-queue.patch"
 
 	# Hack away generation of certificate
 	sed -i -e "s/^install-data-local:/do-not-run-this:/" \
@@ -36,9 +35,11 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable ipv6) \
+	econf \
+		$(use_enable ipv6) \
+		$(use_enable tcpd libwrap) \
 		--with-ssl="${EPREFIX}"/usr \
-		$(use_enable tcpd libwrap)
+		--disable-fips
 }
 
 src_install() {
@@ -59,8 +60,8 @@ src_install() {
 	doins "${FILESDIR}"/stunnel.conf
 	newinitd "${FILESDIR}"/stunnel.initd-start-stop-daemon stunnel
 
-	keepdir /var/run/stunnel
-	fowners stunnel:stunnel /var/run/stunnel
+	systemd_dounit "${S}/tools/stunnel.service"
+	systemd_newtmpfilesd "${FILESDIR}"/stunnel.tmpfiles.conf stunnel.conf
 }
 
 pkg_postinst() {

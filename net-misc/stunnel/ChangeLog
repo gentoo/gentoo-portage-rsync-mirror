@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.156 2014/02/20 20:36:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.157 2014/03/06 16:42:13 blueness Exp $
+
+*stunnel-5.00 (06 Mar 2014)
+
+  06 Mar 2014; Anthony G. Basile <blueness@gentoo.org> +stunnel-5.00.ebuild,
+  stunnel-4.44.ebuild, stunnel-4.54.ebuild:
+  Version bump
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> stunnel-4.56-r2.ebuild:
   Stable for x86, wrt bug #499310
