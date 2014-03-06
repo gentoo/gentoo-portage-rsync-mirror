@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre15.ebuild,v 1.3 2014/03/01 22:21:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_p1.ebuild,v 1.1 2014/03/06 03:38:19 radhermit Exp $
 
 EAPI=5
 
@@ -51,10 +51,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix configure for openssl compiled with kerberos (bug #267749)
-	epatch "${FILESDIR}/lynx-2.8.7-configure-openssl.patch"
 	epatch "${FILESDIR}"/${PN}-2.8.6-mint.patch
-	epatch "${FILESDIR}"/${PN}-2.8.8_pre14-parallel.patch
+	epatch "${FILESDIR}"/${P}-parallel.patch
 }
 
 src_configure() {
@@ -84,12 +82,13 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}"
 
-	sed -i -e "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help_main.html|" \
+	sed -i "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help_main.html|" \
 			"${ED}"/etc/lynx.cfg || die "lynx.cfg not found"
 	if use unicode ; then
-		sed -i -e '/^#CHARACTER_SET:/ c\CHARACTER_SET:utf-8' \
+		sed -i '/^#CHARACTER_SET:/ c\CHARACTER_SET:utf-8' \
 				"${ED}"/etc/lynx.cfg || die "lynx.cfg not found"
 	fi
+
 	dodoc CHANGES COPYHEADER PROBLEMS README
 	docinto docs
 	dodoc docs/*

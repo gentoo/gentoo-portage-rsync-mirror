@@ -1,6 +1,18 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.148 2014/03/01 22:21:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.150 2014/03/06 03:40:08 radhermit Exp $
+
+  06 Mar 2014; Tim Harder <radhermit@gentoo.org> -lynx-2.8.8_pre12.ebuild,
+  -lynx-2.8.8_pre14.ebuild, -lynx-2.8.8_pre15.ebuild,
+  -files/lynx-2.8.8_pre12-jobserver.patch,
+  -files/lynx-2.8.8_pre12-parallel.patch:
+  Remove old.
+
+*lynx-2.8.8_p1 (06 Mar 2014)
+
+  06 Mar 2014; Tim Harder <radhermit@gentoo.org> +lynx-2.8.8_p1.ebuild,
+  +files/lynx-2.8.8_p1-parallel.patch:
+  Version bump.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> lynx-2.8.8_pre12.ebuild,
   lynx-2.8.8_pre14.ebuild, lynx-2.8.8_pre15.ebuild, lynx-2.8.8_rc1.ebuild:
