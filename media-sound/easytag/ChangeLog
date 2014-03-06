@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.178 2014/02/08 15:39:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.179 2014/03/06 12:23:54 polynomial-c Exp $
+
+*easytag-2.1.10 (06 Mar 2014)
+
+  06 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -easytag-2.1.9.ebuild,
+  +easytag-2.1.10.ebuild:
+  Version bump. Removed old. Dropped some keywords due to new build-time
+  dependency dev-util/appdata-tools.
 
 *easytag-2.1.9-r1 (08 Feb 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.9.ebuild,v 1.2 2014/01/19 21:23:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.10.ebuild,v 1.1 2014/03/06 12:23:54 polynomial-c Exp $
 
 EAPI=5
 inherit eutils autotools gnome.org fdo-mime
@@ -10,7 +10,7 @@ HOMEPAGE="http://projects.gnome.org/easytag/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~x86"
 IUSE="flac mp3 mp4 nls speex vorbis wavpack"
 
 RDEPEND=">=x11-libs/gtk+-2.24:2
@@ -31,6 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.24:2
 		)"
 DEPEND="${RDEPEND}
 	app-text/yelp-tools
+	dev-util/appdata-tools
 	dev-util/intltool
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
