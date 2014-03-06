@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/appdata-tools-0.1.7.ebuild,v 1.1 2014/03/06 12:12:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/appdata-tools-0.1.7.ebuild,v 1.2 2014/03/06 20:02:47 polynomial-c Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-libs/glib-2.14
 	>=net-libs/libsoup-2.4
 	>=x11-libs/gdk-pixbuf-2.0"
 DEPEND="${RDEPEND}
+	app-text/docbook-xml-dtd:4.3
 	dev-libs/libxslt
 	nls? ( >=dev-util/intltool-0.35.0
 		sys-devel/gettext )"
