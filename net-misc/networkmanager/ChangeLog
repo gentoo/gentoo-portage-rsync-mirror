@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.192 2014/03/01 22:16:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.193 2014/03/06 22:34:41 pacho Exp $
+
+  06 Mar 2014; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.8.ebuild:
+  Enable modemmanager support to allow 3G USB modems to work by default instead
+  of failing silently, also needed by latest gnome-control-center
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> networkmanager-0.9.6.4.ebuild,
   networkmanager-0.9.8.8.ebuild:
