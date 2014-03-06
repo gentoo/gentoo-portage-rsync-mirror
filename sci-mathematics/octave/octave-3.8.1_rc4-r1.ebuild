@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1_rc4-r1.ebuild,v 1.1 2014/03/01 15:17:35 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1_rc4-r1.ebuild,v 1.2 2014/03/06 15:23:21 jer Exp $
 
 EAPI=5
 
@@ -20,19 +20,19 @@ SRC_URI="mirror://gnu-alpha/octave/${MY_P}.tar.gz"
 SLOT="0/${PV}"
 IUSE="curl doc fftw +glpk gnuplot gui hdf5 +imagemagick java jit opengl postscript
 	+qhull +qrupdate readline +sparse static-libs X zlib"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
 	sys-libs/ncurses
-	jit? ( !hppa? ( sys-devel/llvm ) )
+	jit? ( sys-devel/llvm )
 	virtual/lapack
 	curl? ( net-misc/curl )
 	fftw? ( sci-libs/fftw:3.0 )
 	glpk? ( sci-mathematics/glpk )
 	gnuplot? ( sci-visualization/gnuplot )
-	gui? ( !hppa? ( !arm? ( x11-libs/qscintilla ) ) )
+	gui? ( x11-libs/qscintilla )
 	hdf5? ( sci-libs/hdf5 )
 	imagemagick? ( || (
 			media-gfx/graphicsmagick[cxx]
@@ -41,7 +41,7 @@ RDEPEND="
 		media-libs/freetype:2
 		media-libs/fontconfig
 		>=x11-libs/fltk-1.3:1[opengl]
-		!hppa? ( x11-libs/gl2ps )
+		x11-libs/gl2ps
 		virtual/glu )
 	postscript? (
 		app-text/epstool
@@ -133,11 +133,6 @@ src_prepare() {
 	fi
 	if has_version ">=sys-devel/llvm-3.4"; then
 		epatch "${FILESDIR}"/${PN}-3.8.0-llvm-3.4.patch
-	fi
-	if use hppa && use opengl; then
-		ewarn "http://www.gnu.org/software/octave/NEWS-3.8.html says Printing or saving figures"
-		ewarn "with OpenGL graphics requires the gl2ps - but at the time of writing x11-libs/gl2ps"
-		ewarn "does not have the hppa keyword"
 	fi
 	# Fix bug 501756 - sci-mathematics/octave-3.8.0 LC_ALL=et_EE - octave.cc:485:56:
 	# error: 'Fallow_noninteger_range_as_index' was not declared in this scope

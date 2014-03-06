@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140303.ebuild,v 1.1 2014/03/06 11:45:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140303.ebuild,v 1.2 2014/03/06 15:25:50 jlec Exp $
 
 EAPI=5
 
@@ -54,7 +54,7 @@ pkg_setup() {
 
 	if [[ "${KV_MINOR}" -gt "${PATCH_MAX_VER}" ]]; then
 		PATCH_BRANCH="x-rcN"
-	elif [[ "${KV_MINOR}" == "10" ]] && [[ "${KV_PATCH}" == "28" ]]; then
+	elif [[ "${KV_MINOR}" == "10" ]] && [[ "${KV_PATCH}" -ge "28" ]]; then
 		PATCH_BRANCH="${KV_MINOR}".x
 	elif [[ "${KV_MINOR}" == "12" ]]; then
 		PATCH_BRANCH="${KV_MINOR}".x
@@ -79,6 +79,7 @@ pkg_setup() {
 	unpack ${A}
 	cd ${PN}-standalone || die
 	local module_branch=origin/${PN}.${PATCH_BRANCH}
+	einfo "Using ${module_branch} as patch source"
 	git checkout -q -b local-${PN}.${PATCH_BRANCH} ${module_branch} || die
 	combinediff ${PN}-base.patch ${PN}-standalone.patch  > "${T}"/combined-1.patch
 	combinediff "${T}"/combined-1.patch ${PN}-mmap.patch > ${PN}-standalone-base-mmap-combined.patch
