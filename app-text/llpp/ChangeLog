@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.56 2014/01/23 06:48:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.57 2014/03/07 21:43:50 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> llpp-17_p20140112.ebuild:
+  amd64 stable, bug 472532
 
   23 Jan 2014; Michael Weber <xmw@gentoo.org> -llpp-12.ebuild, -llpp-16.ebuild,
   -llpp-16_p20130828.ebuild:

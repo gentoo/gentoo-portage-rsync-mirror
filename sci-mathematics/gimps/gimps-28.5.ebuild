@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-28.5.ebuild,v 1.1 2014/03/07 19:32:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-28.5.ebuild,v 1.2 2014/03/07 21:40:07 tomka Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ src_install() {
 	newinitd "${FILESDIR}/${PN}-26.6-r1-init.d" gimps
 	newconfd "${FILESDIR}/${PN}-25.6-conf.d" gimps
 
-	systemd_dounit "${FILESDIR}/${PN}.service-r1" "${PN}.service"
+	systemd_dounit "${FILESDIR}/${PN}.service"
 	systemd_newtmpfilesd "${FILESDIR}/${PN}.tmpfiles" "${PN}.conf"
 }
 
