@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.70 2014/03/03 21:49:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.71 2014/03/07 13:44:12 ulm Exp $
+
+*mg-20140306 (07 Mar 2014)
+
+  07 Mar 2014; Ulrich Müller <ulm@gentoo.org> +mg-20140306.ebuild:
+  Version bump.
 
   03 Mar 2014; Ulrich Müller <ulm@gentoo.org> mg-20140220.ebuild,
   +files/mg-20140220-freebsd.patch:

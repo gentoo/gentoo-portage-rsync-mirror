@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1276 2014/03/06 15:05:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1277 2014/03/07 13:52:50 mpagano Exp $
+
+*gentoo-sources-3.13.6 (07 Mar 2014)
+
+  07 Mar 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.13.6.ebuild:
+  Linux patch 3.13.6
 
   06 Mar 2014; Jeroen Roovers <jer@gentoo.org> gentoo-sources-3.10.32.ebuild:
   Stable for HPPA (bug #503402).
