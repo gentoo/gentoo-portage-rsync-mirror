@@ -3,11 +3,11 @@ DEPEND=app-emacs/volume sys-apps/texinfo >=virtual/emacs-22
 DESCRIPTION=Buffer-oriented media player for Emacs
 EAPI=5
 HOMEPAGE=http://www.brockman.se/software/bongo/
-IUSE=mplayer taglib
+IUSE=mplayer
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+ FDL-1.2+
-RDEPEND=app-emacs/volume taglib? ( dev-ruby/ruby-taglib ) >=virtual/emacs-22
+RDEPEND=app-emacs/volume >=virtual/emacs-22
 SLOT=0
 SRC_URI=mirror://gentoo/bongo-20110621.tar.xz mplayer? ( mirror://gentoo/bongo-mplayer-20070204.tar.bz2 )
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=6e8f2cf485c2862954c3b7ba24171bd7
+_md5_=d1cb93b1c80dc6362f0087a738bc4d38

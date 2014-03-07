@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20110621.ebuild,v 1.1 2013/04/05 18:58:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20110621.ebuild,v 1.2 2014/03/07 07:32:31 ulm Exp $
 
 EAPI=5
 NEED_EMACS=22
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz
 LICENSE="GPL-2+ FDL-1.2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="mplayer taglib"
+IUSE="mplayer"
 
 # NOTE: Bongo can use almost anything for playing media files, therefore
 # the dependency possibilities are so broad that we refrain from including
@@ -26,8 +26,6 @@ IUSE="mplayer taglib"
 RDEPEND="app-emacs/volume"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo"
-RDEPEND="${RDEPEND}
-	taglib? ( dev-ruby/ruby-taglib )"
 
 S="${WORKDIR}/${PN}"
 DOCS="AUTHORS HISTORY NEWS README.rdoc"
@@ -41,5 +39,4 @@ src_install() {
 	elisp_src_install
 	insinto "${SITEETC}/${PN}"
 	doins etc/*.pbm etc/*.png
-	use taglib && dobin contrib/tree-from-tags.rb
 }
