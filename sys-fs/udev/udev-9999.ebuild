@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.280 2014/03/05 17:44:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.281 2014/03/07 06:08:31 ssuominen Exp $
 
 EAPI=5
 
@@ -369,7 +369,7 @@ multilib_src_install_all() {
 	prune_libtool_files --all
 	rm -f \
 		"${D}"/lib/udev/rules.d/99-systemd.rules \
-		"${D}"/usr/share/doc/${PF}/{LICENSE.*,sd-shutdown.h}
+		"${D}"/usr/share/doc/${PF}/{LICENSE.*,GVARIANT-SERIALIZATION,DIFFERENCES,PORTING-DBUS1,sd-shutdown.h}
 
 	# see src_prepare() for content of 40-gentoo.rules
 	insinto /lib/udev/rules.d
