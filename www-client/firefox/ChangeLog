@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.308 2014/02/26 12:50:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.309 2014/03/07 09:17:46 polynomial-c Exp $
+
+  07 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> firefox-24.3.0.ebuild:
+  Fixed dependency on dev-libs/nss (bug #503704).
 
 *firefox-27.0.1 (26 Feb 2014)
 
