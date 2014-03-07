@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sysinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sysinfo/ChangeLog,v 1.8 2014/02/14 06:33:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sysinfo/ChangeLog,v 1.9 2014/03/07 01:45:15 mrueg Exp $
+
+  07 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -sysinfo-0.8.0.ebuild:
+  Cleanup old.
 
 *sysinfo-0.8.1 (14 Feb 2014)
 
@@ -40,4 +43,3 @@
   12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +sysinfo-0.7.1.ebuild, +files/sysinfo-0.7.1-hanna.patch, +metadata.xml:
   Initial import of sysinfo needed by Rudy.
-
