@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.22 2014/03/05 20:22:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.23 2014/03/07 17:38:31 robbat2 Exp $
+
+*netifrc-0.2.2 (07 Mar 2014)
+
+  07 Mar 2014; Robin H. Johnson <robbat2@gentoo.org> +netifrc-0.2.2.ebuild:
+  Bump for bug #503530: support newnet users better.
 
   05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> netifrc-0.2.1.ebuild:
   Use udev.eclass and get_udevdir to set a default value for UDEVDIR even if

@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-feedparser
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-feedparser/ChangeLog,v 1.1 2014/03/07 17:59:39 mrueg Exp $
+
+*ruby-feedparser-0.9.3 (07 Mar 2014)
+
+  07 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +ruby-feedparser-0.9.3.ebuild:
+  Original ebuild imported from sunrise overlay.

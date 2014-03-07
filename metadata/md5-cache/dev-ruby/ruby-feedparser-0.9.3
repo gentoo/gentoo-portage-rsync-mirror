@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( dev-ruby/magic[ruby_targets_ruby19] ) ruby_targets_ruby20? ( dev-ruby/magic[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) )
+DESCRIPTION=Ruby library to parse ATOM/RSS feeds
+EAPI=5
+HOMEPAGE=http://github.com/feed2imap/ruby-feedparser
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 test test
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=ruby_targets_ruby19? ( dev-ruby/magic[ruby_targets_ruby19] ) ruby_targets_ruby20? ( dev-ruby/magic[ruby_targets_ruby20] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
+SLOT=0
+SRC_URI=http://github.com/feed2imap/ruby-feedparser/archive/ruby_feedparser_0.9.3.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=5f63faa67c627054128195754f7688fe
