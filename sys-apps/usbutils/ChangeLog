@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.174 2014/03/05 15:53:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.175 2014/03/07 18:54:21 vapier Exp $
+
+  07 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  files/usbutils-006-stdint.patch:
+  Link to upstream bug report.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> usbutils-007.ebuild:
   Stable for ppc, wrt bug #496534

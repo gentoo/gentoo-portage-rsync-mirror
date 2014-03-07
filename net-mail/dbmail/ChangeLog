@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.59 2014/03/03 23:53:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.60 2014/03/07 18:48:33 lordvan Exp $
+
+*dbmail-3.1.12 (07 Mar 2014)
+
+  07 Mar 2014; Thomas Raschbacher <lordvan@gentoo.org> +dbmail-3.1.12.ebuild,
+  files/dbmail-imapd.initd, files/dbmail-lmtpd.initd, files/dbmail-pop3d.initd,
+  files/dbmail-timsieved.initd, -dbmail-3.0.2.ebuild:
+  new init scripts (seperate for each service again)
+  version bump and removed 3.0.2
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> dbmail-3.1.9.ebuild:
   amd64 stable, bug #498954
