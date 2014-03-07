@@ -3,10 +3,10 @@ DEPEND=>=virtual/emacs-21
 DESCRIPTION=Emacs modes for editing ebuilds and other Gentoo specific files
 EAPI=5
 HOMEPAGE=http://wiki.gentoo.org/wiki/Project:Emacs
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ulm/emacs/ebuild-mode-1.26.tar.xz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2c9778e2fade2d9e04375fbd4d1478ca
+_md5_=f6ef52edb910f1f817ab62c726157daf

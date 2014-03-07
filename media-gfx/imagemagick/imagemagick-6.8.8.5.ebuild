@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.5.ebuild,v 1.7 2014/02/28 21:47:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.5.ebuild,v 1.8 2014/03/07 16:31:35 ssuominen Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs versionator libtool flag-o-matic eutils
@@ -13,8 +13,7 @@ SRC_URI="mirror://${PN}/${MY_P}.tar.xz"
 
 LICENSE="imagemagick"
 SLOT="0/${PV}"
-# KEYWORDS="~alpha ~ppc64 ~sparc ~amd64-fbsd" dropped because of missing KEYWORDS in app-text/mupdf wrt #491876
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris ~amd64-fbsd"
 IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp pango pdf perl png postscript q32 q64 q8 raw static-libs svg test tiff truetype webp wmf X xml zlib"
 
 RESTRICT="perl? ( userpriv )"
@@ -36,7 +35,6 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	opencl? ( virtual/opencl )
 	openexr? ( media-libs/openexr:0= )
 	pango? ( x11-libs/pango )
-	pdf? ( app-text/mupdf:0= )
 	perl? ( >=dev-lang/perl-5.8.8:0= )
 	png? ( media-libs/libpng:0= )
 	postscript? ( app-text/ghostscript-gpl )
@@ -69,6 +67,8 @@ REQUIRED_USE="corefonts? ( truetype )
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	sed -i -e '/LIBS/s:-lmupdf::' configure || die #503690
+
 	elibtoolize # for Darwin modules
 
 	# http://bugs.gentoo.org/472766
@@ -81,6 +81,11 @@ src_prepare() {
 }
 
 src_configure() {
+	if use pdf; then
+		export ac_cv_lib_mupdf_fz_new_context=yes
+		export ac_cv_header_mupdf_fitz_h=yes
+	fi
+
 	local depth=16
 	use q8 && depth=8
 	use q32 && depth=32

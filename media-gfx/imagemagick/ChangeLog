@@ -1,6 +1,19 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.531 2014/02/28 21:47:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.533 2014/03/07 16:38:28 ssuominen Exp $
+
+  07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/imagemagick-6.8.6.8-broken_glib_version_check.patch.patch,
+  -imagemagick-6.8.6.1.ebuild, -imagemagick-6.8.6.8-r1.ebuild,
+  -imagemagick-6.8.7.5.ebuild, -imagemagick-6.8.8.1.ebuild,
+  -imagemagick-6.8.8.2.ebuild:
+  old
+
+*imagemagick-6.8.8.7 (07 Mar 2014)
+
+  07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +imagemagick-6.8.8.7.ebuild, imagemagick-6.8.8.5.ebuild:
+  Fix building of the PDF plug-in wrt #503690 by Alexander Miller
 
   28 Feb 2014; Markus Meier <maekke@gentoo.org> imagemagick-6.8.8.5.ebuild:
   arm stable, bug #500988
