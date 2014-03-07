@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1008 2014/03/07 11:09:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1009 2014/03/07 15:04:12 ssuominen Exp $
+
+  07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild,
+  udev-9999.ebuild:
+  Update sys-apps/hwids dependency to 20140304 for 20-net-ifname.hwdb
 
   07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Overwrite libudev.so symlink (for now) because upstream commit http://cgit.fre

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.10 2014/03/05 17:44:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-210.ebuild,v 1.11 2014/03/07 15:04:12 ssuominen Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
 	!<sec-policy/selinux-base-2.20120725-r10"
 PDEPEND=">=virtual/udev-208
-	>=sys-apps/hwids-20140101[udev]
+	>=sys-apps/hwids-20140304[udev]
 	openrc? ( >=sys-fs/udev-init-scripts-26 )"
 
 S=${WORKDIR}/systemd-${PV}
