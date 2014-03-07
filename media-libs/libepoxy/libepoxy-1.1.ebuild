@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/libepoxy-1.1.ebuild,v 1.1 2014/03/06 21:18:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/libepoxy-1.1.ebuild,v 1.2 2014/03/07 02:42:21 patrick Exp $
 
 EAPI=5
 
@@ -35,6 +35,6 @@ DEPEND="dev-lang/python
 RDEPEND=""
 
 src_unpack() {
-    default
+	default
 	[[ $PV = 9999* ]] && git-r3_src_unpack
 }
