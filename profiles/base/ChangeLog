@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.643 2014/02/28 05:50:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.644 2014/03/07 00:35:27 mrueg Exp $
+
+  07 Mar 2014; Manuel Rüger <mrueg@gentoo.org> package.use.mask:
+  Mask ruby18-only compatible flags
 
   27 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.use.mask:
   Unmask aura for chromium-34 (build works now).

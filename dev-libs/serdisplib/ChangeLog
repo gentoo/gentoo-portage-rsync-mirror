@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/serdisplib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.20 2014/03/05 15:22:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.21 2014/03/07 00:59:32 creffett Exp $
+
+  07 Mar 2014; Chris Reffett <creffett@gentoo.org> -serdisplib-1.97.6.ebuild:
+  Remove old
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> serdisplib-1.97.9.ebuild:
   Stable for ppc, wrt bug #500644
