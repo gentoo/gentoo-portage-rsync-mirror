@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/appdata-tools-0.1.7.ebuild,v 1.2 2014/03/06 20:02:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/appdata-tools-0.1.7.ebuild,v 1.3 2014/03/07 16:14:03 jer Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/hughsie/appdata-tools/"
 SRC_URI="https://github.com/hughsie/${PN}/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="nls"
 RDEPEND=">=dev-libs/glib-2.14
 	>=net-libs/libsoup-2.4

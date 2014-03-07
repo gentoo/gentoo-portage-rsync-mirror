@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/appdata-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.2 2014/03/06 20:02:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.3 2014/03/07 16:14:03 jer Exp $
+
+  07 Mar 2014; Jeroen Roovers <jer@gentoo.org> appdata-tools-0.1.7.ebuild:
+  Marked ~hppa (bug #503606).
 
   06 Mar 2014; Lars Wendler <polynomial-c@gentoo.org>
   appdata-tools-0.1.7.ebuild:
