@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.9-r1.ebuild,v 1.1 2014/02/08 15:39:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.9-r2.ebuild,v 1.1 2014/03/07 08:51:45 polynomial-c Exp $
 
 EAPI=5
 inherit eutils autotools gnome.org fdo-mime
@@ -55,7 +55,10 @@ src_prepare() {
 DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
 
 src_configure() {
-	econf \
+		# Kludge to make easytag find its locales (bug #503698)
+		export DATADIRNAME="share"
+
+		econf \
 		$(use_enable nls) \
 		$(use_enable mp3) \
 		$(use_enable mp3 id3v23) \

@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.10.ebuild,v 1.1 2014/03/06 12:23:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.10-r1.ebuild,v 1.1 2014/03/07 08:51:45 polynomial-c Exp $
 
 EAPI=5
 inherit eutils autotools gnome.org fdo-mime
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
-HOMEPAGE="http://projects.gnome.org/easytag/"
+HOMEPAGE="https://wiki.gnome.org/Apps/EasyTAG"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,6 +44,9 @@ src_prepare() {
 DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
 
 src_configure() {
+	# Kludge to make easytag find its locales (bug #503698)
+	export DATADIRNAME="share"
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable mp3) \

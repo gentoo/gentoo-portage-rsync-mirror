@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.179 2014/03/06 12:23:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.180 2014/03/07 08:51:45 polynomial-c Exp $
+
+*easytag-2.1.10-r1 (07 Mar 2014)
+*easytag-2.1.9-r2 (07 Mar 2014)
+
+  07 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -easytag-2.1.9-r1.ebuild,
+  +easytag-2.1.9-r2.ebuild, -easytag-2.1.10.ebuild, +easytag-2.1.10-r1.ebuild:
+  Revbump to make easytag find its locales (bug #503698).
 
 *easytag-2.1.10 (06 Mar 2014)
 
