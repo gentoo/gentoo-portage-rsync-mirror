@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/pydot
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.72 2013/09/26 17:31:50 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.73 2014/03/07 14:22:31 jlec Exp $
+
+*pydot-1.0.28-r2 (07 Mar 2014)
+
+  07 Mar 2014; Justin Lecher <jlec@gentoo.org> pydot-1.0.28-r1.ebuild,
+  +pydot-1.0.28-r2.ebuild, +files/pydot-1.0.28-pyparsing2fix.patch,
+  metadata.xml:
+  Get patch from Fedora to fix compatibility with dev-python/pyparsing-2.0.1,
+  #490426
 
   26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pydot-1.0.28-r1.ebuild:
   Stable for arm, wrt bug #484724

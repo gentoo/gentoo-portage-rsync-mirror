@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-pkla-compat/polkit-pkla-compat-0.1.ebuild,v 1.1 2013/05/11 13:42:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-pkla-compat/polkit-pkla-compat-0.1.ebuild,v 1.2 2014/03/07 14:24:04 ssuominen Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://fedorahosted.org/releases/${PN:0:1}/${PN:1:1}/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.30
