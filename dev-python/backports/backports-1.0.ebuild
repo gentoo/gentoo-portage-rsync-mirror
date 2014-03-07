@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/backports-1.0.ebuild,v 1.1 2014/01/26 12:42:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/backports-1.0.ebuild,v 1.2 2014/03/07 19:28:53 radhermit Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit distutils-r1
 
