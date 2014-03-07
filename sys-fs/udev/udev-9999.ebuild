@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.281 2014/03/07 06:08:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.284 2014/03/07 11:12:17 ssuominen Exp $
 
 EAPI=5
 
@@ -136,15 +136,15 @@ src_prepare() {
 		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
 	fi
 
-	# apply user patches
-	epatch_user
-
 	# compile with older versions of gcc #451110
 	version_is_at_least 4.6 $(gcc-version) || \
 		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
 
 	# change rules back to group uucp instead of dialout for now wrt #454556
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
+
+	# apply user patches
+	epatch_user
 
 	if [[ ! -e configure ]]; then
 		if use doc; then
@@ -343,6 +343,10 @@ multilib_src_install() {
 		else
 			doman "${S}"/man/{systemd.link.5,udev.7,udevadm.8,systemd-udevd.service.8}
 		fi
+
+		# Use of --relative doesn't work with $(DESTDIR) and --with-rootlibdir=/lib. The broken commit is:
+		# http://cgit.freedesktop.org/systemd/systemd/commit/Makefile.am?id=e2438b7a321de8050f5db6793599a1668c91ccf5
+		ln -s -f "${D}"/usr/$(get_libdir)/libudev.so ../../$(readlink "${D}"/$(get_libdir)/libudev.so.1)
 	else
 		local lib_LTLIBRARIES="libudev.la" \
 			pkgconfiglib_DATA="src/libudev/libudev.pc" \

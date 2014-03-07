@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1007 2014/03/07 06:08:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1008 2014/03/07 11:09:57 ssuominen Exp $
+
+  07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Overwrite libudev.so symlink (for now) because upstream commit http://cgit.fre
+  edesktop.org/systemd/systemd/commit/Makefile.am?id=e2438b7a321de8050f5db679359
+  9a1668c91ccf5 broke it by introducing use of --relative for ln. The bug is
+  only visible when setting eg. --with-rootlibdir=/lib away from /usr to
+  alternative location together with the use of $(DESTDIR) with multiple
+  directory levels.
 
   07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Punt kdbus documentation which are irrelevant to sys-fs/udev.

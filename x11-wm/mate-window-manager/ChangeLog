@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/mate-window-manager
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mate-window-manager/ChangeLog,v 1.1 2014/03/07 11:19:44 tomwij Exp $
+
+*mate-window-manager-1.6.2 (07 Mar 2014)
+
+  07 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-window-manager-1.6.2.ebuild, +metadata.xml:
+  New ebuild for x11-wm/mate-window-manager, MATE default window manager;
+  imported from the mate-overlay, reviewed and adjusted.

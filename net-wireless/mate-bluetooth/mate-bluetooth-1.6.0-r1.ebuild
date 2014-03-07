@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/mate-bluetooth/mate-bluetooth-1.6.0.ebuild,v 1.1 2014/03/07 10:30:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/mate-bluetooth/mate-bluetooth-1.6.0-r1.ebuild,v 1.1 2014/03/07 11:30:54 tomwij Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="yes"
 
-inherit autotools gnome2 multilib user versionator
+inherit autotools gnome2 multilib udev user versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
@@ -75,7 +75,7 @@ DOCS="AUTHORS README NEWS ChangeLog"
 src_install() {
 	gnome2_src_install
 
-	insinto /lib/udev/rules.d/
+	insinto "$(get_udevdir)"/rules.d/
 	doins "${FILESDIR}"/80-mate-rfkill.rules
 }
 
