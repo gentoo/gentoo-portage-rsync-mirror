@@ -1,0 +1,19 @@
+[Unit]
+Description=Great Internet Mersenne Prime Search client
+After=network.target local-fs.target
+Wants=local-fs.target
+
+[Service]
+EnvironmentFile=/etc/conf.d/gimps
+User=nobody
+Group=nobody
+PermissionsStartOnly=true
+ConditionPathIsDirectory=${GIMPS_DIR}
+ExecStartPre=-/bin/sh -c "chown %u ${GIMPS_DIR}"
+ConditionPathExist=${GIMPS_DIR}/local.txt
+ExecStart=/opt/gimps/mprime -w${GIMPS_DIR} ${GIMPS_OPTIONS}
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
