@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.10.1.ebuild,v 1.1 2014/03/06 19:56:01 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.10.1.ebuild,v 1.3 2014/03/07 03:51:14 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -11,6 +11,7 @@ inherit eutils confutils autotools bash-completion-r1 python-single-r1 versionat
 MY_PV="${PV/_rc/~rc}"
 #MY_PV="${PV/_beta/~beta}"
 MY_P="${PN}-${MY_PV}"
+SERIES="$(get_version_component_range 1-2)"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.ganeti.org/ganeti.git"
@@ -24,7 +25,7 @@ if [[ ${PV} == "9999" ]] ; then
 		media-gfx/graphviz
 		media-fonts/urw-fonts"
 else
-	SRC_URI="http://downloads.ganeti.org/releases/$(get_version_component_range 1-2)/${P}.tar.gz"
+	SRC_URI="http://downloads.ganeti.org/releases/${SERIES}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -103,6 +104,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.9-disable-root-tests.patch"
 	"${FILESDIR}/${PN}-2.9-regex-builtin.patch"
 	"${FILESDIR}/${PN}-2.9-skip-cli-test.patch"
+	"${FILESDIR}/${PN}-2.10-rundir.patch"
 )
 
 pkg_setup () {
@@ -120,6 +122,8 @@ src_prepare() {
 
 src_configure () {
 	econf --localstatedir=/var \
+		--sharedstatedir=/var \
+		--disable-symlinks \
 		--docdir=/usr/share/doc/${P} \
 		--with-ssh-initscript=/etc/init.d/sshd \
 		--with-export-dir=/var/lib/ganeti-storage/export \
@@ -154,9 +158,12 @@ src_install () {
 
 	python_fix_shebang "${D}"/usr/sbin/ "${D}"/usr/"$(get_libdir)"/ganeti/ensure-dirs
 
-	keepdir /var/{lib,log,run}/ganeti/
-	keepdir /usr/share/ganeti/os/
+	keepdir /var/{lib,log}/ganeti/
+	keepdir /usr/share/ganeti/${SERIES}/os/
 	keepdir /var/lib/ganeti-storage/{export,file,shared}/
+
+	dosym ${SERIES} "/usr/share/ganeti/default"
+	dosym ${SERIES} "/usr/$(get_libdir)/ganeti/default"
 
 	python_fix_shebang "${ED}"
 }
