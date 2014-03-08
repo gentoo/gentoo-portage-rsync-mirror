@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.39 2014/02/09 17:28:26 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.40 2014/03/08 21:36:20 nixphoeni Exp $
+
+*gourmet-0.17.0 (08 Mar 2014)
+
+  08 Mar 2014; Joe Sapp <nixphoeni@gentoo.org> +gourmet-0.17.0.ebuild,
+  +files/no-docs-0.17.0.patch:
+  Version bump
 
 *gourmet-0.16.1-r3 (09 Feb 2014)
 
