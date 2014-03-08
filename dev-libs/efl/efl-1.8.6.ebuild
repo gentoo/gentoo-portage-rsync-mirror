@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.8.4.ebuild,v 1.2 2014/02/01 15:12:17 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.8.6.ebuild,v 1.1 2014/03/08 16:49:26 tommy Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ inherit enlightenment
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE="audio +bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k +jpeg opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl systemd tga tiff tslib v4l2 wayland webp X xcb xim xine xpm"
 
@@ -27,10 +27,10 @@ REQUIRED_USE="
 	X?		( !xcb )
 	pulseaudio?	( audio )
 	opengl?		( || ( X xcb sdl wayland ) )
-	gles?		( || ( X xcb sdl wayland ) )
+	gles?		( || ( X xcb wayland ) )
+	gles?		( !sdl )
 	gles?		( egl )
 	xcb?		( pixman )
-	sdl?		( || ( opengl gles ) )
 	wayland?	( egl !opengl gles )
 	xim?		( || ( X xcb ) )
 "
@@ -121,8 +121,25 @@ RDEPEND="
 	sys-apps/dbus
 	>=sys-apps/util-linux-2.20.0
 	sys-libs/zlib
+
+	!dev-libs/ecore
+	!dev-libs/edbus
+	!dev-libs/eet
+	!dev-libs/eeze
+	!dev-libs/efreet
+	!dev-libs/eina
+	!dev-libs/eio
+	!dev-libs/embryo
+	!dev-libs/eobj
+	!dev-libs/ephysics
+	!media-libs/edje
+	!media-libs/emotion
+	!media-libs/ethumb
+	!media-libs/evas
 "
 
+#soft blockers added above for binpkg users
+#hard blocks are needed for building
 CORE_EFL_CONFLICTS="
 	!!dev-libs/ecore
 	!!dev-libs/edbus

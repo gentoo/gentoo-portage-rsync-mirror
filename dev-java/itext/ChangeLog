@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.100 2014/01/08 17:48:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.101 2014/03/08 16:42:23 tomwij Exp $
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -itext-2.0.8-r1.ebuild:
+  Remove old.
 
   08 Jan 2014; Tom Wijsman <TomWij@gentoo.org> itext-5.2.0.ebuild:
   Fixed up Copyright year.

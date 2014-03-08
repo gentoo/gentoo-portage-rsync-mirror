@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jcommon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.31 2013/03/10 12:36:26 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.32 2014/03/08 16:45:43 tomwij Exp $
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -jcommon-1.0.12.ebuild,
+  -jcommon-1.0.13.ebuild:
+  Remove old.
 
 *jcommon-1.0.18 (10 Mar 2013)
 
@@ -135,4 +139,3 @@
   30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +jcommon-0.9.4.ebuild:
   initial import, depend of jfreechart
-

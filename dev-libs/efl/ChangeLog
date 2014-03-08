@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.6 2014/03/06 01:04:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.9 2014/03/08 16:51:13 tommy Exp $
+
+  08 Mar 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -efl-1.8.4.ebuild:
+  Drop old version
+
+  08 Mar 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> efl-1.8.5.ebuild:
+  Also drop sdl requirement for gles
+
+*efl-1.8.6 (08 Mar 2014)
+
+  08 Mar 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +efl-1.8.6.ebuild,
+  efl-1.8.5.ebuild:
+  Version bump, require disabled sdl for gles for bug 496256
 
   06 Mar 2014; Rick Farina <zerochaos@gentoo.org> efl-1.8.5.ebuild,
   efl-1.9.0.ebuild:
