@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/dbunit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.25 2009/07/19 13:42:31 nixnut Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.26 2014/03/08 18:12:34 tomwij Exp $
+
+*dbunit-2.4.5 (08 Mar 2014)
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +dbunit-2.4.5.ebuild,
+  -dbunit-2.2.ebuild:
+  Version bump to 2.4.5. EAPI 5. Fixes bug #274091, reported by Mike Weissman.
+  Removed old.
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> dbunit-2.4.1.ebuild:
   ppc stable #258723
@@ -69,4 +76,3 @@
   +files/build.xml, +dbunit-2.1.ebuild:
   Initial import. Builds dbunit from source and removes packed jars. Fixes
   #63290.
-
