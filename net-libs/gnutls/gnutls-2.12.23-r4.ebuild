@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r4.ebuild,v 1.4 2014/03/08 17:20:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r4.ebuild,v 1.5 2014/03/08 20:21:37 alonbl Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.12.23-hppa.patch
 	epatch "${FILESDIR}"/${PN}-2.12.23-CVE-2014-0092.patch
 	epatch "${FILESDIR}"/${PN}-2.12.23-CVE-2014-1959.patch
+	epatch "${FILESDIR}"/${P}-gl-tests-getaddrinfo-skip-if-no-network.patch
 
 	# support user patches
 	epatch_user

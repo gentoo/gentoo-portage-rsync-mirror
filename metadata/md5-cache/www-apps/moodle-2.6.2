@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst prepare prerm setup
+DEPEND=>=app-admin/webapp-config-1.50.15
+DESCRIPTION=The Moodle Course Management System
+EAPI=5
+HOMEPAGE=http://moodle.org
+IUSE=mysqli postgres imap ldap odbc vhosts vhosts
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/php-5.3.3[mysqli?,postgres?,imap?,ldap?,odbc?,ctype,curl,iconv,json,session,simplexml,xml,zip,gd,intl,soap,ssl,tokenizer,xmlrpc] virtual/httpd-php virtual/cron >=app-admin/webapp-config-1.50.15
+REQUIRED_USE=|| ( mysqli postgres )
+SLOT=2.6.2
+SRC_URI=http://download.moodle.org/stable26/moodle-2.6.2.tgz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_md5_=573c4fbf7bc3186ba82c4db7114cd133
