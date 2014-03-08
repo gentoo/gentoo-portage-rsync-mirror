@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.16.2.ebuild,v 1.1 2013/12/24 17:22:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.16.4-r1.ebuild,v 1.1 2014/03/08 11:16:37 pacho Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
 # since clutter-project.org doesn't provide .xz tarballs
-inherit clutter gnome2 virtualx
+inherit clutter eutils gnome2 virtualx
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
@@ -52,7 +52,7 @@ DEPEND="${RDEPEND}
 
 # Tests fail with both swrast and llvmpipe
 # They pass under r600g or i965, so the bug is in mesa
-#RESTRICT="test"
+RESTRICT="test"
 
 src_prepare() {
 	# We only need conformance tests, the rest are useless for us
@@ -60,6 +60,9 @@ src_prepare() {
 		-i tests/Makefile.am || die "am tests sed failed"
 	sed -e 's/^\(SUBDIRS =\)[^\]*/\1  accessibility data conform/g' \
 		-i tests/Makefile.in || die "in tests sed failed"
+
+	# Fix buffer_age code path, bug #503560
+	epatch "${FILESDIR}/${P}-buffer-age.patch"
 
 	gnome2_src_prepare
 }

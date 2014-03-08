@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.164 2014/02/22 22:40:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.165 2014/03/08 11:30:01 pacho Exp $
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org> -epiphany-extensions-3.6.0.ebuild,
+  -files/epiphany-extensions-3.2.0-dbus-libs.patch:
+  Drop version not installable for a long time due being obsolete since 3.8
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> epiphany-extensions-3.6.0.ebuild:
   Fix wrong commit, bug 502160
