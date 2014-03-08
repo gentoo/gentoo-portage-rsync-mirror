@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-java/eselect-java-0.1.0.ebuild,v 1.4 2013/07/12 15:26:51 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-java/eselect-java-0.1.0.ebuild,v 1.5 2014/03/08 14:11:16 pacho Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~sera/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
