@@ -1,14 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.2-r1.ebuild,v 1.2 2014/02/07 18:17:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre1889.ebuild,v 1.1 2014/03/08 19:00:38 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps user
+inherit autotools eutils fcaps qt4-r2 user versionator
 
-[[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
+WS_PV="$(get_version_component_range 1-3)"
+WS_REV="$(get_version_component_range 4)"
+WS_REV="${WS_REV/pre/}"
+WS_GIT="g5f16578"
+
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
+SRC_URI="http://www.wireshark.org/download/automated/src/${PN}-${WS_PV}-${WS_REV}-${WS_GIT}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
@@ -76,7 +80,7 @@ DEPEND="
 	virtual/pkgconfig
 "
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${PN}-${WS_PV}-${WS_REV}-${WS_GIT}
 
 pkg_setup() {
 	enewgroup wireshark
@@ -86,7 +90,11 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
-		"${FILESDIR}"/${PN}-1.11.2-gtk-deprecated-warnings.patch
+		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch
+
+	# Qt5 support is broken since the build system does not determine
+	# properly which `moc' it ought to use
+	sed -i -e 's|Qt5||g' acinclude.m4 || die
 
 	epatch_user
 
