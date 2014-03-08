@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcptraceroute
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.53 2013/02/21 02:25:40 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.54 2014/03/08 17:34:50 jer Exp $
+
+*tcptraceroute-1.5_beta7-r2 (08 Mar 2014)
+
+  08 Mar 2014; Jeroen Roovers <jer@gentoo.org>
+  +tcptraceroute-1.5_beta7-r2.ebuild:
+  New HOMEPAGE, SRC_URI (bug #503836 by Jonas Stein). Clean up ebuild.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org>
   tcptraceroute-1.5_beta7-r1.ebuild:

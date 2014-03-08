@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.60 2012/12/08 15:57:45 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.61 2014/03/08 17:31:23 tomwij Exp $
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -bsh-2.0_beta4-r3.ebuild:
+  Remove old.
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> bsh-2.0_beta4-r4.ebuild:
   Stable for ppc64, wrt bug #436564
@@ -229,4 +232,3 @@
   14 May 2003; Dylan Carlson <absinthe@gentoo.org> bsh-1.2-r7.ebuild,
   files/bsh.Console, files/bsh.Interpreter:
   Initial import.
-

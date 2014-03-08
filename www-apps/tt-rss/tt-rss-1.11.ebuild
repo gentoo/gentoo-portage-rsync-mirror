@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.11.ebuild,v 1.1 2013/12/21 20:29:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.11.ebuild,v 1.2 2014/03/08 17:31:56 hwoarang Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://tt-rss.org/"
 SRC_URI="https://github.com/gothfox/Tiny-Tiny-RSS/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="daemon +mysql postgres"
 
 DEPEND="

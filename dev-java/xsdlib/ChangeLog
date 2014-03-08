@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xsdlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.42 2013/06/27 21:41:54 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.43 2014/03/08 17:42:54 tomwij Exp $
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -xsdlib-20050627-r1.ebuild,
+  -xsdlib-20050627-r2.ebuild:
+  Remove old.
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> xsdlib-20090415.ebuild:
   keyword ~amd64-fbsd

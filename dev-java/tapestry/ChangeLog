@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/tapestry
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tapestry/ChangeLog,v 1.3 2008/10/21 20:48:35 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tapestry/ChangeLog,v 1.4 2014/03/08 17:55:22 tomwij Exp $
+
+*tapestry-3.0.4-r1 (08 Mar 2014)
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +tapestry-3.0.4-r1.ebuild,
+  -tapestry-3.0.4.ebuild:
+  Revision bump. EAPI 5.
 
   21 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> tapestry-3.0.4.ebuild:
   Migrate to slot dependencies.
@@ -15,4 +21,3 @@
   +files/common.properties, +metadata.xml, +tapestry-3.0.4.ebuild:
   Adding tapestry package. Ebuild provided by elvantor <elvanor2007@gmail.com>
   with some cleanup performed by myself.
-

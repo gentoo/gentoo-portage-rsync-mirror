@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-attributes
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.13 2008/04/13 14:35:48 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.14 2014/03/08 17:56:16 tomwij Exp $
+
+*commons-attributes-2.2-r2 (08 Mar 2014)
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +commons-attributes-2.2-r2.ebuild:
+  Revision bump. EAPI 5.
 
   13 Apr 2008; Markus Meier <maekke@gentoo.org>
   commons-attributes-2.2-r1.ebuild:
@@ -66,4 +72,3 @@
   +files/commons-attributes-2.1-gentoo.patch, +files/anttasks.properties,
   +metadata.xml, +commons-attributes-2.1.ebuild:
   Initial commit (bug #97008).
-
