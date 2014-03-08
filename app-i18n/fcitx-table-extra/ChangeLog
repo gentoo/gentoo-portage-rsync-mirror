@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx-table-extra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-table-extra/ChangeLog,v 1.6 2014/01/20 15:37:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-table-extra/ChangeLog,v 1.7 2014/03/08 12:04:40 pacho Exp $
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org> fcitx-table-extra-0.3.4.ebuild:
+  amd64 stable, bug 498688
 
 *fcitx-table-extra-0.3.5 (20 Jan 2014)
 

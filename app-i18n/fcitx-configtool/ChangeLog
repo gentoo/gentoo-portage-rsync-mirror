@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx-configtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.23 2014/01/20 15:12:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.24 2014/03/08 12:03:18 pacho Exp $
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org> fcitx-configtool-0.4.7.ebuild:
+  amd64 stable, bug 498688
 
 *fcitx-configtool-0.4.8 (20 Jan 2014)
 

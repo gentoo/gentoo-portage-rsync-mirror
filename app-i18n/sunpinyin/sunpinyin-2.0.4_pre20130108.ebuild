@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.4_pre20130108.ebuild,v 1.2 2013/01/31 10:56:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.4_pre20130108.ebuild,v 1.3 2014/03/08 12:05:30 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~yngwin/distfiles/${P}.tar.xz"
 
 LICENSE="LGPL-2.1 CDDL"
 SLOT="0/1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-db/sqlite:3"

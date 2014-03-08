@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.1.ebuild,v 1.3 2013/10/01 21:06:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.1.ebuild,v 1.4 2014/03/08 12:02:09 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.fcitx-im.org/fcitx/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="+X +autostart +cairo +dbus debug +enchant gtk gtk3 icu introspection lua
 nls opencc +pango qt4 static-libs +table test +xml"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xz-java
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.6 2014/03/07 23:38:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.7 2014/03/08 12:21:49 radhermit Exp $
+
+*xz-java-1.5 (08 Mar 2014)
+
+  08 Mar 2014; Tim Harder <radhermit@gentoo.org> +xz-java-1.5.ebuild:
+  Version bump.
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> xz-java-1.4.ebuild:
   amd64 stable, bug #502712
