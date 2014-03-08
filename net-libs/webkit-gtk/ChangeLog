@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.251 2014/03/08 09:22:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.252 2014/03/08 09:57:34 pacho Exp $
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.2.5-gir-nvidia-hangs.patch, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  webkit-gtk can keep compiling forever due deadlock issue between gir and
+  nvidia-drivers, applied patch solves the issue (at least for me), bug #463960
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org>
   +files/webkit-gtk-2.2.5-sparc64-build.patch, webkit-gtk-2.2.5-r200.ebuild,
