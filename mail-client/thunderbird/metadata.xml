@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>mozilla</herd>
 <use>
-	<flag name="bindist">Disable official Firefox branding (icons, name) which 
+	<flag name="bindist">Disable official Thunderbird branding (icons, name) which 
 		are not binary-redistributable according to upstream.</flag>
 	<flag name='crypt'> Enable encryption support with enigmail</flag>
 	<flag name='mozdom'>Enable Mozilla's DOM inspector</flag>
