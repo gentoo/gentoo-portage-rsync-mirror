@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/oscache
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/ChangeLog,v 1.11 2010/01/03 21:26:24 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/ChangeLog,v 1.12 2014/03/08 16:25:27 tomwij Exp $
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -oscache-2.0.2-r2.ebuild:
+  Remove old.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   oscache-2.0.2-r3.ebuild:
@@ -49,4 +52,3 @@
   30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +oscache-2.0.2.ebuild:
   inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
-
