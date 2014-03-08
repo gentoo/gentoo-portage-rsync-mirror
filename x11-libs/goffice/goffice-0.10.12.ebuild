@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.10.ebuild,v 1.1 2014/02/15 10:31:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.12.ebuild,v 1.1 2014/03/08 10:46:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 flag-o-matic
+inherit autotools gnome2 flag-o-matic
 
 DESCRIPTION="A library of document-centric objects and utilities"
 HOMEPAGE="http://git.gnome.org/browse/goffice/"
@@ -21,6 +21,7 @@ IUSE="+introspection"
 RDEPEND="
 	>=app-text/libspectre-0.2.6:=
 	>=dev-libs/glib-2.28:2
+	dev-libs/libxslt
 	>=gnome-base/librsvg-2.22:2
 	>=gnome-extra/libgsf-1.14.9:=[introspection?]
 	>=dev-libs/libxml2-2.4.12:2
@@ -38,9 +39,18 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
+
+	gnome-base/gnome-common
 "
 # eautoreconf requires:
 # gnome-base/gnome-common
+
+src_prepare() {
+	# Fix DESTDIR, upstream bug #725935
+	sed -i -e 's/$(DESTDIR)//' mmlitex/Makefile.am || die
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	filter-flags -ffast-math
