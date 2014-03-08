@@ -3,9 +3,9 @@ DEPEND=>=dev-libs/glib-2.32 doc? ( dev-util/gtk-doc ) virtual/pkgconfig dev-util
 DESCRIPTION=QMI modem protocol helper library
 EAPI=5
 HOMEPAGE=http://cgit.freedesktop.org/libqmi/
-IUSE=doc static-libs test
+IUSE=doc static-libs
 LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.32
 SLOT=0
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	9fcd81e4cb49fd37511fce461544153f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=eec8d4d4b6ca064ce5e9472b389e9d5a
+_md5_=8b1feff99bd07930ef5530de07a68d37

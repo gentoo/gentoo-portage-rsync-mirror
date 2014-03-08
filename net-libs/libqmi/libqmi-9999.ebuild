@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.7 2014/01/20 04:58:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-9999.ebuild,v 1.8 2014/03/08 22:12:24 vapier Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://cgit.freedesktop.org/libqmi/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="doc static-libs test"
+IUSE="doc static-libs"
 
 RDEPEND=">=dev-libs/glib-2.32"
 DEPEND="${RDEPEND}
@@ -34,8 +34,7 @@ src_configure() {
 	econf \
 		--disable-more-warnings \
 		$(use_enable static{-libs,}) \
-		$(use_enable {,gtk-}doc) \
-		$(use_with test{,s})
+		$(use_enable {,gtk-}doc)
 }
 
 src_install() {

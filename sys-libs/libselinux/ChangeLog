@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.112 2014/03/04 20:41:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.113 2014/03/08 22:11:32 vapier Exp $
+
+*libselinux-2.2.2-r3 (08 Mar 2014)
+
+  08 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/libselinux-2.2.2-build.patch, +libselinux-2.2.2-r3.ebuild:
+  Clean up linking behavior #500674 by SpanKY.
 
   04 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   libselinux-2.2.2-r2.ebuild:
