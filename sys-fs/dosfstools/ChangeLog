@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.138 2014/01/18 00:02:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.139 2014/03/08 04:16:13 radhermit Exp $
+
+*dosfstools-3.0.26 (08 Mar 2014)
+
+  08 Mar 2014; Tim Harder <radhermit@gentoo.org> +dosfstools-3.0.26.ebuild:
+  Version bump.
 
 *dosfstools-3.0.25 (18 Jan 2014)
 
