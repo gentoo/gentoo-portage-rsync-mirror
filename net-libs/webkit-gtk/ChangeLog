@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.250 2014/03/08 08:49:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.251 2014/03/08 09:22:29 pacho Exp $
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.2.5-sparc64-build.patch, webkit-gtk-2.2.5-r200.ebuild,
+  webkit-gtk-2.2.5.ebuild:
+  Apply openBSD patch for compat with sparc64
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.5-r200.ebuild,
   webkit-gtk-2.2.5.ebuild:

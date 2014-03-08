@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5-r200.ebuild,v 1.6 2014/03/08 08:49:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5-r200.ebuild,v 1.7 2014/03/08 09:22:29 pacho Exp $
 
 EAPI="5"
 
@@ -177,6 +177,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.5-{hppa,ia64}-platform.patch
 	# https://bugs.webkit.org/show_bug.cgi?id=129542
 	epatch "${FILESDIR}"/${PN}-2.2.5-ia64-malloc.patch
+
+	# OpenBSD patches to fix support for some arches
+	# https://bugs.webkit.org/show_bug.cgi?id=86835
+	epatch "${FILESDIR}"/${PN}-2.2.5-sparc64-build.patch
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
