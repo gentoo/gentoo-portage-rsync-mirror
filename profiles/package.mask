@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15453 2014/03/08 02:23:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15454 2014/03/08 08:39:35 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,7 +40,6 @@ www-servers/mongrel
 # Compatibility packages masked for removal in 30 days.
 <dev-lang/python-exec-0.3.1-r1:0
 <dev-lang/python-exec-2.0.1-r1:2
-dev-python/python-exec
 
 # Manuel Rüger <mrueg@gentoo.org> (05 Mar 2014)
 # Mask further ruby18-only packages

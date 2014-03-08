@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5-r200.ebuild,v 1.5 2014/03/04 19:41:49 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5-r200.ebuild,v 1.6 2014/03/08 08:49:45 pacho Exp $
 
 EAPI="5"
 
@@ -183,6 +183,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Arches without JIT support also need this to really disable it in all places
+	use jit || append-cppflags -DENABLE_JIT=0 -DENABLE_YARR_JIT=0 -DENABLE_ASSEMBLER=0
+
 	# It doesn't compile on alpha without this in LDFLAGS, bug #???
 	use alpha && append-ldflags "-Wl,--no-relax"
 
