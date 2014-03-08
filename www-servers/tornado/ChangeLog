@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.42 2014/03/08 01:34:43 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.43 2014/03/08 03:10:33 yac Exp $
+
+*tornado-3.2 (08 Mar 2014)
+
+  08 Mar 2014; Jan Matejka <yac@gentoo.org> +tornado-3.2.ebuild:
+  verbump fixes bgo#503252
 
 *tornado-3.1.1-r1 (08 Mar 2014)
 
