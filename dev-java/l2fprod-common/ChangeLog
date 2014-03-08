@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/l2fprod-common
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/ChangeLog,v 1.6 2012/04/13 18:48:55 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/ChangeLog,v 1.7 2014/03/08 17:23:06 tomwij Exp $
+
+*l2fprod-common-7.3-r2 (08 Mar 2014)
+
+  08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +l2fprod-common-7.3-r2.ebuild,
+  -l2fprod-common-7.3-r1.ebuild:
+  Revision bump. EAPI 5.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> l2fprod-common-7.3-r1.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
@@ -30,4 +36,3 @@
   +files/l2fprod-common-6.9.1-nodeps.patch, +metadata.xml,
   +l2fprod-common-6.9.1.ebuild:
   Initial commit for bug #143253.
-

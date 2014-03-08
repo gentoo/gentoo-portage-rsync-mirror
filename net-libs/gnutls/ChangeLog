@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.474 2014/03/05 19:42:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.475 2014/03/08 17:20:24 phajdan.jr Exp $
+
+  06 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnutls-2.12.23-r4.ebuild:
+  x86 stable wrt security bug #503394
 
 *gnutls-3.2.12.1 (05 Mar 2014)
 
