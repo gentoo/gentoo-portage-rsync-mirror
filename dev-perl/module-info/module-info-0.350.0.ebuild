@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/module-info-0.350.0.ebuild,v 1.6 2014/03/06 10:34:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/module-info-0.350.0.ebuild,v 1.7 2014/03/08 12:44:58 zlogene Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Information about Perl modules"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 x86"
 IUSE="test"
 
 RDEPEND=""

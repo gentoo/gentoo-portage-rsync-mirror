@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.630.0.ebuild,v 1.5 2014/03/05 15:30:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.630.0.ebuild,v 1.6 2014/03/08 12:52:10 zlogene Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="A perl XML down translate module"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc x86"
+KEYWORDS="alpha amd64 hppa ppc x86"
 IUSE="test"
 
 RDEPEND="
