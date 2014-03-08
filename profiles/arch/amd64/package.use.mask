@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.178 2014/02/16 15:10:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.179 2014/03/08 02:44:07 mattst88 Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Matt Turner <mattst88@gentoo.org> (07 Mar 2014)
+# media-libs/libomxil-bellagio keyworded on amd64/x86
+media-libs/mesa -openmax
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Feb 2014)
 # Still considered experimental by upstream:

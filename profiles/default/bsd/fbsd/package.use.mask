@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.36 2013/08/27 22:07:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.37 2014/03/08 02:47:41 mattst88 Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -93,3 +93,7 @@ net-fs/samba dmapi
 # Naohiro Aota <naota@gentoo.org> (15 Oct 2012)
 # Mask numa on sys-apps/hwloc. numactl not available on FreeBSD
 sys-apps/hwloc numa
+
+# Matt Turner <mattst88@gentoo.org> (07 Mar 2014)
+# media-libs/libomxil-bellagio keyworded on amd64/x86
+media-libs/mesa openmax
