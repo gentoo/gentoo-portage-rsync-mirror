@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r2.ebuild,v 1.7 2014/03/03 16:30:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r3.ebuild,v 1.1 2014/03/08 14:38:51 anarchy Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -44,6 +44,7 @@ pkg_setup(){
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-${SLOT}-js-config-shebang.patch
 	epatch "${FILESDIR}"/${PN}-${SLOT}-ia64-mmap.patch
+	epatch "${FILESDIR}"/${PN}-17.0.0-fix-file-permissions.patch
 	epatch_user
 
 	if [[ ${CHOST} == *-freebsd* ]]; then

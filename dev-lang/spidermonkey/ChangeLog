@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.141 2014/03/03 16:30:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.142 2014/03/08 14:38:51 anarchy Exp $
+
+*spidermonkey-24.2.0-r1 (08 Mar 2014)
+*spidermonkey-17.0.0-r3 (08 Mar 2014)
+
+  08 Mar 2014;  <anarchy@gentoo.org>
+  +files/spidermonkey-17.0.0-fix-file-permissions.patch,
+  +files/spidermonkey-24.2.0-fix-file-permissions.patch,
+  +spidermonkey-17.0.0-r3.ebuild, +spidermonkey-24.2.0-r1.ebuild,
+  -spidermonkey-17.0.0-r2.ebuild, -spidermonkey-24.2.0.ebuild:
+  Fix bug #502348
 
   03 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   spidermonkey-17.0.0-r2.ebuild:
