@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.80 2014/02/24 01:01:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.81 2014/03/07 23:24:56 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> Geo-IP-1.420.0.ebuild:
+  amd64 stable, bug #492158
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> Geo-IP-1.420.0.ebuild:
   x86 stable wrt bug #492158

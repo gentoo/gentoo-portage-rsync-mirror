@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.70 2014/02/24 04:20:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.71 2014/03/07 23:23:36 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> xom-1.2.10.ebuild:
+  amd64 stable, bug #492020
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xom-1.2.10.ebuild:
   x86 stable wrt bug #492020

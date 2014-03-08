@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.14 2014/01/26 14:12:38 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.15 2014/03/07 23:18:33 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> ecdsa-0.10.ebuild:
+  amd64 stable, bug #490376
 
   26 Jan 2014; Akinori Hattori <hattya@gentoo.org> ecdsa-0.10.ebuild:
   ia64 stable wrt bug #490376

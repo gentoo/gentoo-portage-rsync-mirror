@@ -4,10 +4,10 @@ DESCRIPTION=A library that implements a user interface that focuses on simplicit
 EAPI=5
 HOMEPAGE=http://pwmt.org/projects/girara/
 IUSE=static-libs
-KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~arm ~x86 ~amd64-linux ~x86-linux
 LICENSE=ZLIB
 RDEPEND=>=x11-libs/gtk+-3.0.11:3 !<dev-libs/girara-0.1.5-r200
 SLOT=3
 SRC_URI=http://pwmt.org/projects/girara/download/girara-0.1.6.tar.gz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3dde10100f4687deb9dd8a750a35c29c
+_md5_=4e88421514619943d2b39102aad3ab42

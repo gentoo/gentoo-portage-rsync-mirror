@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcalendar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.21 2014/02/24 04:16:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.22 2014/03/07 23:22:18 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> jcalendar-1.3.3.ebuild:
+  amd64 stable, bug #492012
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jcalendar-1.3.3.ebuild:
   x86 stable wrt bug #492012

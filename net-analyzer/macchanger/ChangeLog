@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/macchanger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.28 2014/02/24 00:37:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.29 2014/03/07 23:30:30 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> macchanger-1.6.0.ebuild:
+  amd64 stable, bug #496504
 
   23 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> macchanger-1.6.0.ebuild:
   x86 stable wrt bug #496504

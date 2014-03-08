@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.112 2014/02/20 18:11:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.113 2014/03/07 23:28:01 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> libmatroska-1.4.1.ebuild:
+  amd64 stable, bug #492246
 
   20 Feb 2014; Markus Meier <maekke@gentoo.org> libmatroska-1.4.1.ebuild:
   arm stable, bug #492246
