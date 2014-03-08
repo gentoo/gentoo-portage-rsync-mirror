@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.65 2014/02/21 19:05:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.66 2014/03/08 13:20:18 maekke Exp $
+
+  08 Mar 2014; Markus Meier <maekke@gentoo.org> eyeD3-0.7.4.ebuild:
+  add ~arm, bug #454638
 
   21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> eyeD3-0.7.4.ebuild:
   Drop python-magic dep wrt #488270

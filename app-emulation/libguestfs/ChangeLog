@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.33 2014/01/20 17:22:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.34 2014/03/08 13:15:42 zlogene Exp $
+
+  08 Mar 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -files/1.20/0001_add_gentoo_names_to_configure.patch,
+  -files/1.20/0002_add_gentooway_to_remove_la_files.patch,
+  -files/1.20/0003_add_doc_more_option.patch,
+  -files/1.20/0004_add_icoutils_configure_drop_automagic.patch,
+  -files/1.20/0005_enable_gtk_docs_in_broken_autotools-utils-eclass.patch,
+  -files/1.20/0103_disable_php_bindings_makefile.patch,
+  -files/1.22/0001_add_gentoo_names_to_configure.patch,
+  -files/1.22/0002_add_gentooway_to_remove_la_files.patch,
+  -files/1.22/0003_add_doc_more_option.patch,
+  -files/1.22/0004_add_icoutils_configure_drop_automagic.patch,
+  -files/1.22/0005_enable_gtk_docs_in_broken_autotools-utils-eclass.patch,
+  -files/1.22/0103_disable_php_bindings_makefile.patch,
+  -libguestfs-1.20.6.ebuild, -libguestfs-1.22.7.ebuild:
+  Drop insecure versions (bug #488532)
 
   20 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> libguestfs-1.24.0.ebuild:
   Raise augeas dependency to 1.0.0, bug #498080.
