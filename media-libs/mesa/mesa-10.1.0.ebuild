@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.0.ebuild,v 1.1 2014/03/08 02:47:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.0.ebuild,v 1.2 2014/03/08 19:29:01 mattst88 Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ done
 
 IUSE="${IUSE_VIDEO_CARDS}
 	bindist +classic debug +egl +gallium gbm gles1 gles2 +llvm +nptl
-	+llvm-shared-libs opencl openvg osmesa pax_kernel openmax pic
+	+llvm-shared-libs opencl openvg osmesa pax_kernel pic
 	r600-llvm-compiler selinux vdpau wayland xvmc xa kernel_FreeBSD"
 
 REQUIRED_USE="
@@ -62,7 +62,6 @@ REQUIRED_USE="
 		video_cards_radeon? ( r600-llvm-compiler )
 		video_cards_radeonsi? ( r600-llvm-compiler )
 	)
-	openmax? ( gallium )
 	gles1?  ( egl )
 	gles2?  ( egl )
 	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeonsi video_cards_radeon ) )
@@ -123,7 +122,6 @@ RDEPEND="
 				app-admin/eselect-opencl
 				dev-libs/libclc
 			)
-	openmax? ( media-libs/libomxil-bellagio[${MULTILIB_USEDEP}] )
 	vdpau? ( >=x11-libs/libvdpau-0.4.1[${MULTILIB_USEDEP}] )
 	wayland? ( >=dev-libs/wayland-1.2.0[${MULTILIB_USEDEP}] )
 	xvmc? ( >=x11-libs/libXvMC-1.0.6[${MULTILIB_USEDEP}] )
@@ -259,7 +257,6 @@ multilib_src_configure() {
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openvg)
 			$(use_enable openvg gallium-egl)
-			$(use_enable openmax omx)
 			$(use_enable r600-llvm-compiler)
 			$(use_enable vdpau)
 			$(use_enable xa)
@@ -321,7 +318,7 @@ multilib_src_configure() {
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
 		$(use_enable !pic asm) \
-		$(use_enable llvm-shared-libs) \
+		$(use_with llvm-shared-libs) \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \
 		PYTHON2="${PYTHON}" \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.136 2014/03/08 13:12:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.137 2014/03/08 19:29:46 pacho Exp $
+
+  08 Mar 2014; Pacho Ramos <pacho@gentoo.org> libisoburn-1.3.4.ebuild:
+  amd64 stable, bug 502718
 
   08 Mar 2014; Markus Meier <maekke@gentoo.org> libisoburn-1.3.4.ebuild:
   arm stable, bug #502718
