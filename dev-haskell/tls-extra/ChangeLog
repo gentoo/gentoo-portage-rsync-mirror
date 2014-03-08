@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/tls-extra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.6 2013/12/11 06:33:05 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.7 2014/03/07 23:36:13 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> tls-extra-0.6.6.ebuild:
+  amd64 stable, bug #502698
 
 *tls-extra-0.6.6 (11 Dec 2013)
 

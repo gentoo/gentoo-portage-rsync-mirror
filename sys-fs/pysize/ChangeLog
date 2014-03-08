@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/pysize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.7 2013/12/04 09:17:46 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.8 2014/03/07 23:40:43 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> pysize-0.2-r1.ebuild:
+  amd64 stable, bug #502930
 
 *pysize-0.2-r1 (04 Dec 2013)
 
@@ -29,4 +32,3 @@
   +files/0.2-setuptools-automagic.patch, +pysize-0.2.ebuild,
   +files/psyco-0.2-automagic.patch, +metadata.xml:
   Import from sunrise
-

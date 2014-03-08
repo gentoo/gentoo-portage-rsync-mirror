@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/simple-sendfile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/simple-sendfile/ChangeLog,v 1.4 2013/12/11 06:19:33 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/simple-sendfile/ChangeLog,v 1.5 2014/03/07 23:35:21 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> simple-sendfile-0.2.13.ebuild:
+  amd64 stable, bug #502692
 
 *simple-sendfile-0.2.13 (11 Dec 2013)
 

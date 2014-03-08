@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.21 2014/01/21 02:48:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.22 2014/03/07 23:41:31 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> luadbi-0.5-r5.ebuild:
+  amd64 stable, bug #503278
 
 *luadbi-0.5-r5 (21 Jan 2014)
 

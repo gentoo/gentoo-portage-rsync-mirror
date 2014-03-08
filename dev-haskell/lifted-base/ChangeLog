@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lifted-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.15 2014/03/04 15:30:37 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.16 2014/03/07 23:34:32 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> lifted-base-0.2.1.1.ebuild:
+  amd64 stable, bug #502684
 
 *lifted-base-0.2.2.0 (04 Mar 2014)
 

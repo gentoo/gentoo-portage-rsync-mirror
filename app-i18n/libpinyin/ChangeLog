@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libpinyin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libpinyin/ChangeLog,v 1.6 2014/01/20 14:44:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libpinyin/ChangeLog,v 1.7 2014/03/07 23:33:17 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> libpinyin-1.0.0.ebuild:
+  amd64 stable, bug #502622
 
 *libpinyin-1.0.0 (20 Jan 2014)
 

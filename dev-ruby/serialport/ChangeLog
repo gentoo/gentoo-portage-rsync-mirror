@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/serialport
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/serialport/ChangeLog,v 1.10 2013/11/26 01:46:08 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/serialport/ChangeLog,v 1.11 2014/03/07 23:45:12 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> serialport-1.3.0.ebuild:
+  amd64 stable, bug #503688
 
 *serialport-1.3.0 (26 Nov 2013)
 

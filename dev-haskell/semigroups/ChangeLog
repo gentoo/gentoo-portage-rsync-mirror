@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/semigroups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroups/ChangeLog,v 1.6 2014/03/04 15:33:07 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroups/ChangeLog,v 1.7 2014/03/07 23:34:57 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> semigroups-0.12.1.ebuild:
+  amd64 stable, bug #502690
 
 *semigroups-0.12.2 (04 Mar 2014)
 

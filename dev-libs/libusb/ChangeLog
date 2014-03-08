@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.153 2014/03/05 15:32:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.154 2014/03/07 23:42:35 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> libusb-1.0.18.ebuild:
+  amd64 stable, bug #503404
 
   05 Mar 2014; Jeroen Roovers <jer@gentoo.org> libusb-1.0.18.ebuild:
   Stable for HPPA (bug #503404).

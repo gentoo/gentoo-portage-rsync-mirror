@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.55 2014/03/05 15:33:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.56 2014/03/07 23:41:07 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> fxscintilla-3.3.5.ebuild:
+  amd64 stable, bug #503236
 
   05 Mar 2014; Jeroen Roovers <jer@gentoo.org> fxscintilla-3.3.5.ebuild:
   Stable for HPPA (bug #503236).

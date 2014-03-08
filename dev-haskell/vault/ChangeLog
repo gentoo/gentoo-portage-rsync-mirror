@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/vault
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vault/ChangeLog,v 1.5 2013/12/10 23:29:04 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vault/ChangeLog,v 1.6 2014/03/07 23:36:37 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> vault-0.3.0.3.ebuild:
+  amd64 stable, bug #502700
 
 *vault-0.3.0.3 (10 Dec 2013)
 

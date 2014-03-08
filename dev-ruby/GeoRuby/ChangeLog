@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/GeoRuby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/ChangeLog,v 1.6 2014/03/02 23:17:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/ChangeLog,v 1.7 2014/03/07 23:42:18 mrueg Exp $
+
+*GeoRuby-2.2.1-r2 (07 Mar 2014)
+
+  07 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +GeoRuby-2.2.1-r2.ebuild,
+  GeoRuby-2.2.1-r1.ebuild:
+  Move ruby20 to new revision.
 
 *GeoRuby-2.2.1-r1 (02 Mar 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-3.3.5.ebuild,v 1.2 2014/03/05 15:33:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-3.3.5.ebuild,v 1.3 2014/03/07 23:41:07 pacho Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/yetanothergeek/fxscintilla/archive/FXSCINTILLA-${MY_
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="|| ( x11-libs/fox:1.6 x11-libs/fox:1.7 )"

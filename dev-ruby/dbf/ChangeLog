@@ -1,10 +1,15 @@
 # ChangeLog for dev-ruby/dbf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.1 2013/12/27 07:10:53 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.2 2014/03/07 23:41:31 mrueg Exp $
+
+*dbf-2.0.7-r1 (07 Mar 2014)
+
+  07 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +dbf-2.0.7-r1.ebuild,
+  dbf-2.0.7.ebuild:
+  Move ruby20 to new revision.
 
 *dbf-2.0.7 (27 Dec 2013)
 
   27 Dec 2013; Hans de Graaff <graaff@gentoo.org> +dbf-2.0.7.ebuild,
   +metadata.xml:
   Initial import. New dependency for dev-ruby/GeoRuby.
-

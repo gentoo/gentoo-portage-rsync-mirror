@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yaml/ChangeLog,v 1.5 2014/03/04 16:06:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yaml/ChangeLog,v 1.6 2014/03/07 23:37:51 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> yaml-0.8.5.2.ebuild:
+  amd64 stable, bug #502706
 
 *yaml-0.8.7.2 (04 Mar 2014)
 

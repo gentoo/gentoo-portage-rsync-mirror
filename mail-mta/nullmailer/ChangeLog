@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.82 2014/01/08 15:14:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.83 2014/03/07 23:39:03 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> nullmailer-1.13-r4.ebuild:
+  amd64 stable, bug #502832
 
   08 Jan 2014; Justin Lecher <jlec@gentoo.org> files/nullmailer.service:
   Also enable logging for systemd systems

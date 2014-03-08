@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/profile-sync-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.19 2014/02/12 23:03:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.20 2014/03/07 23:31:40 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> profile-sync-daemon-5.45.1.ebuild:
+  amd64 stable, bug #502366
 
 *profile-sync-daemon-5.45.1 (12 Feb 2014)
 

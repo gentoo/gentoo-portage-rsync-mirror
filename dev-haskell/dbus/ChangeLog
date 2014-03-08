@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/ChangeLog,v 1.14 2014/03/05 14:05:31 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/ChangeLog,v 1.15 2014/03/07 23:34:07 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> dbus-0.10.5-r1.ebuild:
+  amd64 stable, bug #502672
 
 *dbus-0.10.6 (05 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/hexchat-javascript
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/ChangeLog,v 1.5 2014/03/02 22:23:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/ChangeLog,v 1.6 2014/03/07 23:32:04 pacho Exp $
+
+  07 Mar 2014; Pacho Ramos <pacho@gentoo.org> hexchat-javascript-0.3.1.ebuild:
+  amd64 stable, bug #502368
 
   02 Mar 2014; Julian Ospald <hasufell@gentoo.org>
   -hexchat-javascript-0.3.ebuild:
