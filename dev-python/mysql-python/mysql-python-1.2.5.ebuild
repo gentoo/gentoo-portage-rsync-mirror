@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.5.ebuild,v 1.1 2014/03/07 14:13:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.5.ebuild,v 1.2 2014/03/08 08:22:37 jlec Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ IUSE=""
 
 RDEPEND="virtual/mysql"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"

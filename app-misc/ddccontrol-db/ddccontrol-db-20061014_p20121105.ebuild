@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20061014_p20121105.ebuild,v 1.1 2014/01/03 18:55:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ddccontrol-db-20061014_p20121105.ebuild,v 1.2 2014/03/08 08:10:17 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/ddccontrol/ddccontrol-db/archive/${COMMIT_ID}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="nls"
 
 S=${WORKDIR}/${PN}-${COMMIT_ID}

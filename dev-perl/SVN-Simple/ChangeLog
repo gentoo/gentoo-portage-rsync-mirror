@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVN-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.30 2014/03/05 15:28:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.31 2014/03/08 08:20:29 zlogene Exp $
+
+  08 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> SVN-Simple-0.280.0.ebuild:
+  sparc stable wrt bug #495468
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> SVN-Simple-0.280.0.ebuild:
   Stable for ppc, wrt bug #495468

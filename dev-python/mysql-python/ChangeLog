@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.95 2014/03/07 14:13:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.96 2014/03/08 08:22:37 jlec Exp $
+
+  08 Mar 2014; Justin Lecher <jlec@gentoo.org> mysql-python-1.2.5.ebuild:
+  Add missing dep on app-arch/unzip, thanks Arfrever spotting this
 
 *mysql-python-1.2.5 (07 Mar 2014)
 

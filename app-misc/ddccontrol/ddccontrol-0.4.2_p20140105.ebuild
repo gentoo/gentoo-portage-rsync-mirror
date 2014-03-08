@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2_p20140105.ebuild,v 1.1 2014/01/30 18:49:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2_p20140105.ebuild,v 1.2 2014/03/08 08:10:00 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/ddccontrol/ddccontrol/archive/${COMMIT_ID}.tar.gz ->
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+ddcpci doc gnome gtk nls static-libs video_cards_fglrx"
 S=${WORKDIR}/${PN}-${COMMIT_ID}
 
