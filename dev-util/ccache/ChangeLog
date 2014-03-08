@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.137 2014/01/26 12:13:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.138 2014/03/08 21:29:38 vapier Exp $
+
+  08 Mar 2014; Mike Frysinger <vapier@gentoo.org> files/ccache-config-2:
+  Use `command` rather than `type` #503428 by Naohiro Aota.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ccache-3.1.9-r3.ebuild:
   Stable for sparc, wrt bug #495658

@@ -2,8 +2,8 @@
 #
 # ccache-config - helper script for ccache and its ebuild
 #
-# Copyright 2003-2013 Superlucidity Services, LLC
-# Copyright 2013 Gentoo Foundation
+# Copyright 2003-2014 Superlucidity Services, LLC
+# Copyright 2013-2014 Gentoo Foundation
 # This program licensed under the GNU GPL version 2.
 #
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
@@ -54,10 +54,10 @@ cc_install_link() {
 	# Search the PATH for the specified compiler
 	#  then create shadow link in /usr/lib/ccache/bin to ccache
 
-	if [ -n "$(type -p ${1})" ]; then
+	if command -v "$1" >/dev/null ; then
 		# first be sure any old link is removed
 		_CC_QUIET=1
-		cc_remove_link "${1}"
+		cc_remove_link "$1"
 		unset _CC_QUIET
 
 		# then create the new link
@@ -77,14 +77,14 @@ cc_links() {
 ###
 # main routine
 
-case "${1}" in
+case $1 in
 	--install-links )
-		cc_links install "${2}"
+		cc_links install "$2"
 		;;
 	--remove-links )
-		cc_links remove "${2}"
+		cc_links remove "$2"
 		;;
 	* )
-		echo "usage: ${0} {--install-links|--remove-links} [ CHOST ]"
+		echo "usage: $0 {--install-links|--remove-links} [ CHOST ]"
 		;;
 esac

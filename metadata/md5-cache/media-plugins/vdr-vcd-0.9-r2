@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile config install postinst postrm prepare setup unpack
+DEPEND=>=media-video/vdr-1.5.9 >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linuxtv-dvb-headers
+DESCRIPTION=VDR plugin: play video cds
+EAPI=5
+HOMEPAGE=http://www.heiligenmann.de/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=media-video/vdr-1.5.9 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
+SLOT=0
+SRC_URI=http://www.heiligenmann.de/vdr/download/vdr-vcd-0.9.tgz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
+_md5_=c72c2b484963c16da63290040031bc74
