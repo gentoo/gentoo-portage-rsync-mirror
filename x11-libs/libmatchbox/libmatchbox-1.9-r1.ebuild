@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.6 2014/03/09 17:18:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.7 2014/03/09 19:48:47 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -45,7 +45,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-libpng1{4,5}.patch \
 		"${FILESDIR}"/${P}-underlinking.patch
-	
+
 	AT_M4DIR="${WORKDIR}" eautoreconf
 }
 

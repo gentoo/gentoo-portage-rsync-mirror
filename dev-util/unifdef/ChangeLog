@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.39 2014/01/08 12:34:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.40 2014/03/09 19:33:03 vapier Exp $
+
+  09 Mar 2014; Mike Frysinger <vapier@gentoo.org> unifdef-2.10.ebuild:
+  Stabilize for all #502810 by Paweł Hajdan, Jr..
 
 *unifdef-2.10 (08 Jan 2014)
 
