@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/resourcet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resourcet/ChangeLog,v 1.5 2013/11/24 19:34:42 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resourcet/ChangeLog,v 1.6 2014/03/09 12:56:40 gienah Exp $
+
+*resourcet-0.4.10 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +resourcet-0.4.10.ebuild:
+  Bump resourcet to 0.4.10
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> resourcet-0.4.9.ebuild:
   Stable for x86, wrt bug #488750

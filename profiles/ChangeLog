@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8681 2014/03/09 12:30:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8684 2014/03/09 12:58:20 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Mar 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask latest libdvbpsi now that vlc seems ok
+
+  09 Mar 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask flac-1.3, bug #472950
+
+  09 Mar 2014; Alexis Ballier <aballier@gentoo.org> base/package.use.mask:
+  unmask vaapi on multilib ffmpeg
 
   09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Mask mate-base/mate-file-manager, mate-extra/mate-calc,

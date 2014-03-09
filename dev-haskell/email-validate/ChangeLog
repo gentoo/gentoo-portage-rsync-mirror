@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/email-validate
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/email-validate/ChangeLog,v 1.1 2013/08/26 11:53:13 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/email-validate/ChangeLog,v 1.2 2014/03/09 12:39:41 gienah Exp $
+
+*email-validate-2.0.1 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +email-validate-2.0.1.ebuild:
+  Bump email-validate to 2.0.1
 
 *email-validate-1.0.0 (26 Aug 2013)
 

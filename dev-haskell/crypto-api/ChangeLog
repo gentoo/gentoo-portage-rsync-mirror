@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/crypto-api
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-api/ChangeLog,v 1.1 2013/08/25 06:23:47 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-api/ChangeLog,v 1.2 2014/03/09 12:36:48 gienah Exp $
+
+*crypto-api-0.13 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +crypto-api-0.13.ebuild:
+  Bump crypto-api to 0.13
 
 *crypto-api-0.12.2.2 (25 Aug 2013)
 

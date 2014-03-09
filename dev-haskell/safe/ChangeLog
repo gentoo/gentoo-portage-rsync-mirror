@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/safe
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/safe/ChangeLog,v 1.1 2013/06/20 06:21:00 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/safe/ChangeLog,v 1.2 2014/03/09 12:57:24 gienah Exp $
+
+*safe-0.3.4 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +safe-0.3.4.ebuild:
+  Bump safe to 0.3.4
 
 *safe-0.3.3-r1 (20 Jun 2013)
 

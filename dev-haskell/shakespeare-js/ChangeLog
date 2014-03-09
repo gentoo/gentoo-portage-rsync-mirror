@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/shakespeare-js
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shakespeare-js/ChangeLog,v 1.3 2013/12/10 23:54:14 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shakespeare-js/ChangeLog,v 1.4 2014/03/09 12:59:01 gienah Exp $
+
+*shakespeare-js-1.2.0.4 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +shakespeare-js-1.2.0.4.ebuild:
+  Bump shakespeare-js to 1.2.0.4
 
 *shakespeare-js-1.2.0.2 (10 Dec 2013)
 

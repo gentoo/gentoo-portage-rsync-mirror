@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/foldl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/foldl/ChangeLog,v 1.1 2014/03/09 12:42:47 gienah Exp $
+
+*foldl-1.0.2 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +foldl-1.0.2.ebuild,
+  +metadata.xml:
+  Add foldl
