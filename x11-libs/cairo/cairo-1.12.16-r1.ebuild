@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r1.ebuild,v 1.2 2014/02/28 21:24:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r1.ebuild,v 1.3 2014/03/09 09:19:24 mgorny Exp $
 
 EAPI=5
 
@@ -77,6 +77,11 @@ REQUIRED_USE="
 	openvg? ( || ( gles2 opengl ) )
 	xlib-xcb? ( xcb )
 "
+
+MULTILIB_WRAPPED_HEADERS=(
+	/usr/include/cairo/cairo-features.h
+	/usr/include/cairo/cairo-directfb.h
+)
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
