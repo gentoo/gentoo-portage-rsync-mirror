@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-2.4.8-r1.ebuild,v 1.1 2013/12/28 13:27:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-2.4.8-r1.ebuild,v 1.2 2014/03/09 17:46:56 vapier Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="
 		x11-libs/pango[X]
 		x11-themes/hicolor-icon-theme
 	)
-	app-arch/bzip2
+	>=app-arch/bzip2-1.0.6-r1
 	dev-libs/popt
 	!librsync-bundled? ( net-libs/librsync )
 	net-misc/wget

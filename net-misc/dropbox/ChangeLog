@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.49 2014/03/04 20:42:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.50 2014/03/09 17:46:56 vapier Exp $
+
+  09 Mar 2014; Mike Frysinger <vapier@gentoo.org> dropbox-2.4.8-r1.ebuild:
+  Require bzip2 which provides specific symlink #482004 by Florian Berger.
 
   04 Mar 2014; Naohiro Aota <naota@gentoo.org> files/dropbox.initd:
   Update init script to use dropbox itselfs pid file. #503300

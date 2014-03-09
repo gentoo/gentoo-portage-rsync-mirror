@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.92 2014/03/04 14:36:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.93 2014/03/09 17:51:45 blueness Exp $
+
+*eudev-1.5.2 (09 Mar 2014)
+
+  09 Mar 2014; Anthony G. Basile <blueness@gentoo.org> +eudev-1.5.2.ebuild,
+  -eudev-1.5.1.ebuild, -eudev-1.5.ebuild:
+  Version bump: add <linux/fcntl.h> for uclibc
 
 *eudev-1.5.1 (04 Mar 2014)
 
