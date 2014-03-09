@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pdfcrack/pdfcrack-0.10.ebuild,v 1.1 2008/05/01 00:06:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pdfcrack/pdfcrack-0.13.ebuild,v 1.1 2014/03/09 02:39:36 radhermit Exp $
 
-inherit eutils
+EAPI=5
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool for recovering passwords and content from PDF-files"
 HOMEPAGE="http://pdfcrack.sourceforge.net/"
@@ -10,16 +11,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
 }
 
+src_compile() {
+	emake CC="$(tc-getCC)"
+}
+
 src_install() {
-	dobin pdfcrack || die
-	dodoc changelog README TODO
+	dobin pdfcrack
+	dodoc changelog README
 }

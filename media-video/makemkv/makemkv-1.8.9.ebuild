@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.8.ebuild,v 1.2 2014/03/09 02:44:17 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.9.ebuild,v 1.1 2014/03/09 02:44:18 mattm Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib flag-o-matic
@@ -10,8 +10,8 @@ MY_PB=makemkv-bin-${PV}
 
 DESCRIPTION="Tool for ripping Blu-Ray, HD-DVD and DVD discs and copying content to a Matroska container"
 HOMEPAGE="http://www.makemkv.com/"
-SRC_URI="http://www.makemkv.com/download/old/${MY_P}.tar.gz
-	http://www.makemkv.com/download/old/${MY_PB}.tar.gz"
+SRC_URI="http://www.makemkv.com/download/${MY_P}.tar.gz
+	http://www.makemkv.com/download/${MY_PB}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1 MakeMKV-EULA openssl"
 SLOT="0"
@@ -53,10 +53,13 @@ src_install() {
 	# install oss package
 	dolib.so out/libdriveio.so.0
 	dolib.so out/libmakemkv.so.1
+	dolib.so out/libmmbd.so.0
 	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so.0.${PV}
 	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so
 	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so.1.${PV}
 	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so
+	dosym libmmbd.so.0    /usr/$(get_libdir)/libmmbd.so
+	dosym libmmbd.so.0    /usr/$(get_libdir)/libmmbd.so.0.${PV}
 	into /opt
 	dobin out/makemkv
 
