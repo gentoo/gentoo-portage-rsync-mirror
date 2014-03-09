@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2013.ebuild,v 1.1 2013/06/28 16:08:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2013.ebuild,v 1.2 2014/03/09 18:56:33 ulm Exp $
 
 EAPI="5"
 
@@ -58,7 +58,7 @@ src_prepare() {
 	# No need to install these .exe
 	rm -rf texmf-dist/scripts/context/stubs/mswin || die
 
-	base_src_prepare
+	texlive-module_src_prepare
 }
 
 TL_MODULE_INFORMATION="For using ConTeXt mkII simply use 'texexec' to generate

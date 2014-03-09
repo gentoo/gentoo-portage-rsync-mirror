@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.0.ebuild,v 1.2 2014/03/08 19:29:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.0.ebuild,v 1.3 2014/03/09 18:38:01 mattst88 Exp $
 
 EAPI=5
 
@@ -96,7 +96,7 @@ RDEPEND="
 	dev-libs/expat[${MULTILIB_USEDEP}]
 	gbm? ( virtual/udev[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.3.99.901[${MULTILIB_USEDEP}]
-	>=x11-libs/libxshmfence-1.0[${MULTILIB_USEDEP}]
+	>=x11-libs/libxshmfence-1.1[${MULTILIB_USEDEP}]
 	x11-libs/libXdamage[${MULTILIB_USEDEP}]
 	x11-libs/libXext[${MULTILIB_USEDEP}]
 	x11-libs/libXxf86vm[${MULTILIB_USEDEP}]

@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-context
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.74 2013/07/02 22:03:35 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.75 2014/03/09 18:56:33 ulm Exp $
+
+  09 Mar 2014; Ulrich Müller <ulm@gentoo.org> texlive-context-2012-r1.ebuild,
+  texlive-context-2013.ebuild, texlive-context-2013-r1.ebuild:
+  Call texlive-module_src_prepare instead of base_src_prepare, bug 497054.
 
 *texlive-context-2013-r1 (02 Jul 2013)
 
