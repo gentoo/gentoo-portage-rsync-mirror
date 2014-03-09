@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.7.4.ebuild,v 1.2 2012/12/25 11:19:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.7.4.ebuild,v 1.3 2014/03/09 04:41:56 tristan Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ src_prepare() {
 		src/optipng/osys.c || die
 
 	tc-export CC AR RANLIB
+	export LD=$(tc-getCC)
 }
 
 src_configure() {
@@ -41,10 +42,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake \
-		-C src/optipng \
-		GENTOO_CFLAGS="${CFLAGS}" \
-		GENTOO_LDFLAGS="${LDFLAGS}"
+	emake -C src/optipng
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/optipng
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.90 2012/12/25 11:19:41 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.91 2014/03/09 04:41:56 tristan Exp $
+
+  09 Mar 2014; Tristan Heaven <tristan@gentoo.org> optipng-0.7.4.ebuild:
+  Fix building when LD is set, bug #503924
 
   25 Dec 2012; Markus Meier <maekke@gentoo.org> optipng-0.7.4.ebuild:
   add ~arm
