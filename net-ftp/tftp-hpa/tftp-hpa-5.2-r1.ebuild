@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.8 2013/12/22 12:45:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2-r1.ebuild,v 1.9 2014/03/09 20:18:21 vapier Exp $
 
 EAPI="4"
 
-inherit systemd toolchain-funcs
+inherit systemd eutils toolchain-funcs
 
 DESCRIPTION="port of the OpenBSD TFTP server"
 HOMEPAGE="http://www.kernel.org/pub/software/network/tftp/"
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 src_prepare() {
+	epatch_user
+
 	sed -i "/^AR/s:ar:$(tc-getAR):" MCONFIG.in || die
 }
 
