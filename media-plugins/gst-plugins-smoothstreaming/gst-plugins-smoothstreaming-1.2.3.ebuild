@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-smoothstreaming/gst-plugins-smoothstreaming-1.2.3.ebuild,v 1.1 2014/03/01 10:13:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-smoothstreaming/gst-plugins-smoothstreaming-1.2.3.ebuild,v 1.2 2014/03/09 11:01:27 pacho Exp $
 
 EAPI="5"
 
 inherit gst-plugins10 gst-plugins-bad
 
 DESCRIPTION="Smooth Streaming plugin"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2"

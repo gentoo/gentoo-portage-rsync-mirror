@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-wavpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-wavpack/ChangeLog,v 1.85 2014/02/16 23:36:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-wavpack/ChangeLog,v 1.86 2014/03/09 11:02:21 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gst-plugins-wavpack-1.2.3.ebuild:
+  amd64 stable, bug 499954
 
 *gst-plugins-wavpack-1.2.3 (16 Feb 2014)
 

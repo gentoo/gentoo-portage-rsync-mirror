@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sonic-visualiser
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.27 2013/03/02 22:03:47 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.28 2014/03/09 11:04:08 aballier Exp $
+
+*sonic-visualiser-2.3 (09 Mar 2014)
+
+  09 Mar 2014; Alexis Ballier <aballier@gentoo.org>
+  +sonic-visualiser-2.3.ebuild:
+  version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   sonic-visualiser-1.9.ebuild:

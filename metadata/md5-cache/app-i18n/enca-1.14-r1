@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=recode? ( >=app-text/recode-3.6_p15 ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DESCRIPTION=ENCA detects the character coding of a file and converts it if desired
+EAPI=4
+HOMEPAGE=http://gitorious.org/enca
+IUSE=doc +recode abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=recode? ( >=app-text/recode-3.6_p15 )
+SLOT=0
+SRC_URI=http://dl.cihar.com/enca/enca-1.14.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	5beadd9860130ff93bfad7eb91d499e9	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=2a34b19e982e829f1a533bc93b6ff1d3

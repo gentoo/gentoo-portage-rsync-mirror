@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-3.350.0.ebuild,v 1.1 2013/11/26 07:48:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-3.350.0.ebuild,v 1.2 2014/03/09 11:25:45 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=PLOBBES
 MODULE_VERSION=3.35
