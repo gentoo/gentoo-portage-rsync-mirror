@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/monad-par
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-par/ChangeLog,v 1.2 2013/10/19 12:11:15 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-par/ChangeLog,v 1.3 2014/03/09 05:57:29 gienah Exp $
+
+*monad-par-0.3.4.6 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +monad-par-0.3.4.6.ebuild:
+  Bump monad-par to 0.3.4.6
 
 *monad-par-0.3.4.5 (19 Oct 2013)
 

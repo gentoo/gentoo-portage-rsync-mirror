@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/abstract-deque-tests
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/abstract-deque-tests/ChangeLog,v 1.1 2014/03/09 05:56:11 gienah Exp $
+
+*abstract-deque-tests-0.3 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +abstract-deque-tests-0.3.ebuild,
+  +metadata.xml:
+  Add abstract-deque-tests
