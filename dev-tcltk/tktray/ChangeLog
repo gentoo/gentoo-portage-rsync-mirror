@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktray
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.7 2012/12/05 08:13:18 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.8 2014/03/09 09:51:09 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> tktray-1.1-r1.ebuild:
+  amd64 stable, bug 503942
 
   05 Dec 2012; Ulrich Müller <ulm@gentoo.org> tktray-1.1.ebuild,
   tktray-1.1-r1.ebuild:
@@ -27,4 +30,3 @@
 
   31 Aug 2008; Olivier Crête <tester@gentoo.org> ChangeLog:
   Initial import from bug #168385
-

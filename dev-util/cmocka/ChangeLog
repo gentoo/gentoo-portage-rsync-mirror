@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cmocka
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.8 2014/03/06 08:25:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.10 2014/03/09 09:52:55 ago Exp $
+
+  09 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cmocka-0.3.1.ebuild:
+  Stable for x86, wrt bug #503504
+
+  09 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cmocka-0.3.1.ebuild:
+  Stable for amd64, wrt bug #503504
 
   06 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> cmocka-0.3.1.ebuild:
   Add ~s390, wrt bug #488696

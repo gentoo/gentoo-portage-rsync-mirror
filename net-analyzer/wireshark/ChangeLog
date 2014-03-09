@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.592 2014/03/08 19:00:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.594 2014/03/09 09:53:00 ago Exp $
+
+  09 Mar 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.6.ebuild,
+  wireshark-1.8.13.ebuild:
+  Stable for x86, wrt bug #503792
+
+  09 Mar 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.6.ebuild,
+  wireshark-1.8.13.ebuild:
+  Stable for amd64, wrt bug #503792
 
 *wireshark-1.11.3_pre1889 (08 Mar 2014)
 

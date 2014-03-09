@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.1-r1.ebuild,v 1.2 2013/08/19 09:14:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.1-r1.ebuild,v 1.3 2014/03/09 09:51:14 pacho Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 #	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 SLOT="0"
 
 src_compile() {
