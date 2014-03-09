@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.14_p6.ebuild,v 1.3 2014/03/09 06:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.14_p7.ebuild,v 1.1 2014/03/09 06:54:27 vapier Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/x3270/${MY_P}-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc s390 sparc x86"
+KEYWORDS="~amd64 ~ppc ~s390 ~sparc ~x86"
 IUSE="cjk doc ncurses ssl tcl X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
