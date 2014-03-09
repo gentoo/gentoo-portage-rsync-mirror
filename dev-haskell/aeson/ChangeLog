@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/aeson
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/ChangeLog,v 1.7 2013/11/24 19:32:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/ChangeLog,v 1.8 2014/03/09 06:28:22 gienah Exp $
+
+*aeson-0.7.0.2 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +aeson-0.7.0.2.ebuild:
+  Bump aeson to 0.7.0.2
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> aeson-0.6.2.1.ebuild:
   Stable for x86, wrt bug #488750
