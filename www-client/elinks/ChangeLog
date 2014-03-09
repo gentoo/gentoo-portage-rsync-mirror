@@ -1,6 +1,12 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.167 2014/01/30 12:04:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.168 2014/03/09 01:58:04 mrueg Exp $
+
+  09 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -elinks-0.11.7.ebuild,
+  -elinks-0.12_pre5-r2.ebuild, -files/elinks-0.10.1-utf_8_io-default.patch,
+  -files/elinks-0.11.2-lua-5.patch, -files/elinks-0.11.3-lua-5.patch,
+  -files/elinks-0.12_pre5-ruby-config.patch:
+  Cleanup old.
 
   30 Jan 2014; Fabian Groffen <grobian@gentoo.org> elinks-0.12_pre6.ebuild:
   Marked ~x64-macos

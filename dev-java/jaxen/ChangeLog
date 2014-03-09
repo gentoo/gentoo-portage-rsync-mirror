@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.62 2014/03/08 23:04:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.63 2014/03/09 01:33:38 tomwij Exp $
+
+  09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> jaxen-1.1.1.ebuild,
+  jaxen-1.1.4.ebuild:
+  Revert ~ia64 removal commit by adding ~ia64 back, prevents a cascade removal.
 
   08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> jaxen-1.1.1.ebuild,
   jaxen-1.1.4.ebuild:

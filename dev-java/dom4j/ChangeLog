@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.66 2014/03/08 16:22:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.67 2014/03/09 01:31:16 tomwij Exp $
+
+*dom4j-1.6.1-r3 (09 Mar 2014)
+
+  09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +dom4j-1.6.1-r3.ebuild:
+  Restore EAPI=1 dom4j ~ia64 ebuild from the past until newer dom4j is
+  keyworded.
 
   08 Mar 2014; Tom Wijsman <TomWij@gentoo.org> -dom4j-1.6.1-r2.ebuild,
   -dom4j-1.6.1-r3.ebuild:
