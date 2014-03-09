@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/exceptions
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/exceptions/ChangeLog,v 1.1 2014/03/09 07:40:44 gienah Exp $
+
+*exceptions-0.3.3 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +exceptions-0.3.3.ebuild,
+  +metadata.xml:
+  Add exceptions

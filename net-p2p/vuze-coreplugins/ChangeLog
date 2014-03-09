@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/vuze-coreplugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/ChangeLog,v 1.42 2014/03/09 03:43:27 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/ChangeLog,v 1.43 2014/03/09 07:39:42 rhill Exp $
+
+*vuze-coreplugins-5.3.0.0 (09 Mar 2014)
+
+  09 Mar 2014; Ryan Hill <rhill@gentoo.org> -vuze-coreplugins-4.7.1.2.ebuild,
+  +vuze-coreplugins-5.3.0.0.ebuild:
+  Version bump (bug #481582). Remove old.
 
   09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
   Change my email.

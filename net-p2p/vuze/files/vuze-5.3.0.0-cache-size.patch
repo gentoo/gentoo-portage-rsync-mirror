@@ -1,0 +1,11 @@
+--- a/org/gudy/azureus2/core3/config/COConfigurationManager.java
++++ b/org/gudy/azureus2/core3/config/COConfigurationManager.java
+@@ -52,7 +52,7 @@ COConfigurationManager
+ 	public static final int CONFIG_CACHE_SIZE_MAX_MB;
+ 	
+ 	static{
+-		long max_mem_bytes 	= Runtime.getRuntime().maxMemory();
++		long max_mem_bytes 	= Math.min (Runtime.getRuntime().maxMemory(), 64*1024*1024);
+ 	    long mb_1			= 1*1024*1024;
+ 	    long mb_32			= 32*mb_1;
+ 	    int size = (int)(( max_mem_bytes - mb_32 )/mb_1);	    
