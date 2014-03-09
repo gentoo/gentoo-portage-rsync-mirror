@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.2-r1.ebuild,v 1.1 2014/02/15 20:44:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.2-r1.ebuild,v 1.2 2014/03/09 00:41:06 alonbl Exp $
 
 EAPI=5
 
@@ -19,6 +19,11 @@ REQUIRED_USE="trust? ( asn1 )"
 RDEPEND="asn1? ( >=dev-libs/libtasn1-2.14[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+pkg_setup() {
+	# disable unsafe tests, bug#502088
+	export FAKED_MODE=1
+}
 
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
