@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.213 2013/09/11 17:40:11 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.214 2014/03/09 11:39:06 aballier Exp $
+
+  09 Mar 2014; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2013-r1.ebuild:
+  bump harfbuzz dep and require the graphite useflag too, bug #483544
 
   11 Sep 2013; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2013-r1.ebuild:

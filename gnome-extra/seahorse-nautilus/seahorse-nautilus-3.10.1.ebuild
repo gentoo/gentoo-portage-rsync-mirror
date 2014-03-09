@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/seahorse-nautilus/seahorse-nautilus-3.10.1.ebuild,v 1.5 2014/03/09 10:51:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/seahorse-nautilus/seahorse-nautilus-3.10.1.ebuild,v 1.6 2014/03/09 12:00:59 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --disable-debug disables all assertions
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Seahorse"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEPEND="

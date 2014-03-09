@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.28 2014/03/09 10:41:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.29 2014/03/09 11:53:20 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> libsecret-0.16.ebuild:
+  x86 stable, bug 499954
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> libsecret-0.16.ebuild:
   amd64 stable, bug 499954

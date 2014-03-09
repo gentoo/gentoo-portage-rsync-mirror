@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.12.ebuild,v 1.2 2014/03/09 10:44:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.12.ebuild,v 1.3 2014/03/09 11:55:31 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Libgit2-glib"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
