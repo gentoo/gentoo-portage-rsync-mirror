@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libopensync-plugin-syncml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.16 2011/03/19 06:45:16 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.17 2014/03/09 03:41:44 rhill Exp $
+
+  09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
+  Change my email.
 
   19 Mar 2011; Ryan Hill <dirtyepic@gentoo.org>
   libopensync-plugin-syncml-0.39.ebuild, libopensync-plugin-syncml-9999.ebuild,

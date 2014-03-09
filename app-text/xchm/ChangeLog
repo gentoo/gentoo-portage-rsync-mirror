@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.31 2014/03/05 15:20:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.32 2014/03/09 03:43:14 rhill Exp $
+
+  09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
+  Change my email.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xchm-1.23.ebuild:
   Stable for ppc, wrt bug #496624

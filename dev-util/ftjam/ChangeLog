@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ftjam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ChangeLog,v 1.18 2010/01/15 21:36:38 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftjam/ChangeLog,v 1.19 2014/03/09 03:41:09 rhill Exp $
+
+  09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
+  Change my email.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   ftjam-2.5.3_rc2-r1.ebuild:

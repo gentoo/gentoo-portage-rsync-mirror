@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/chmlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.23 2011/09/29 02:09:38 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.24 2014/03/09 03:40:20 rhill Exp $
+
+  09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
+  Change my email.
 
   29 Sep 2011; Ryan Hill <dirtyepic@gentoo.org> -chmlib-0.40.ebuild,
   chmlib-0.40-r1.ebuild:

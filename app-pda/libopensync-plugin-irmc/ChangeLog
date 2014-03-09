@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libopensync-plugin-irmc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.17 2012/05/03 20:20:58 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.18 2014/03/09 03:42:51 rhill Exp $
+
+  09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
+  Change my email.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org>
   libopensync-plugin-irmc-0.22.ebuild, libopensync-plugin-irmc-9999.ebuild:
