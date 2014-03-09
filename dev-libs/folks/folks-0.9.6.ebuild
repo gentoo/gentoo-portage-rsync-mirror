@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.6.ebuild,v 1.1 2013/12/24 15:47:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.6.ebuild,v 1.2 2014/03/09 10:43:51 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/Folks"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/25" # subslot = libfolks soname version
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 # TODO: --enable-profiling
 # Vala isn't really optional, https://bugzilla.gnome.org/show_bug.cgi?id=701099
 IUSE="bluetooth eds socialweb +telepathy test tracker utils zeitgeist"

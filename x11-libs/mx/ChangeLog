@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/mx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.18 2014/02/22 22:47:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.19 2014/03/09 10:56:08 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> mx-1.4.7-r1.ebuild:
+  amd64 stable, bug 499954
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> mx-1.4.7-r1.ebuild:
   Fix wrong commit, bug 502160

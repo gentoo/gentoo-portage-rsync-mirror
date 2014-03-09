@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-cdio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.90 2014/03/01 08:34:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.91 2014/03/09 10:58:32 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gst-plugins-cdio-1.2.3.ebuild:
+  amd64 stable, bug 499954
 
   01 Mar 2014; Pacho Ramos <pacho@gentoo.org> -gst-plugins-cdio-1.0.5.ebuild,
   -gst-plugins-cdio-1.0.6.ebuild, -gst-plugins-cdio-1.0.8.ebuild,

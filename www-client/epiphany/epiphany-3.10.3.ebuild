@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.10.3.ebuild,v 1.2 2014/02/22 22:41:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.10.3.ebuild,v 1.3 2014/03/09 10:55:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.gnome.org/epiphany/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+jit +nss test"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
 	>=app-crypt/gcr-3.5.5

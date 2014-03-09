@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.10.1.ebuild,v 1.4 2014/02/22 22:08:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.10.1.ebuild,v 1.5 2014/03/09 10:51:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/EyeOfGnome/Plugins"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+exif +flickr map +picasa +python"
 REQUIRED_USE="
 	map? ( exif )

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.203 2014/02/26 21:50:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.204 2014/03/09 10:45:38 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild:
+  amd64 stable, bug 499954
 
   26 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild:
   Add missing DEPEND (#502520 by Andrew Church)

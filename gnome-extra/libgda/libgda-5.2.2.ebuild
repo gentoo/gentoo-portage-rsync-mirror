@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.1 2014/02/09 13:00:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.2 2014/03/09 10:51:00 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -27,7 +27,7 @@ REQUIRED_USE="
 # firebird license is not GPL compatible
 
 SLOT="5/4" # subslot = libgda-5.0 soname version
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="
 	app-text/iso-codes

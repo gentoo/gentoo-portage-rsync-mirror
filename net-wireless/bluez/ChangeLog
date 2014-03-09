@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.190 2014/02/27 20:48:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.191 2014/03/09 10:57:16 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> bluez-5.15.ebuild:
+  amd64 stable, bug 499954
 
 *bluez-5.15 (27 Feb 2014)
 

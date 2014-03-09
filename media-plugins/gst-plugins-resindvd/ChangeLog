@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.71 2014/03/01 09:59:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.72 2014/03/09 11:01:02 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gst-plugins-resindvd-1.2.3.ebuild:
+  amd64 stable, bug 499954
 
 *gst-plugins-resindvd-1.2.3 (01 Mar 2014)
 
