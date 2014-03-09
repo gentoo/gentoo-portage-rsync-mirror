@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile install setup
-DEPEND=media-libs/xine-lib dev-libs/libcdio curl? ( net-misc/curl ) joystick? ( media-libs/libjsw ) jpeg? ( media-gfx/imagemagick media-libs/netpbm media-video/mjpegtools ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl sys-devel/gettext ) png? ( media-gfx/imagemagick media-libs/netpbm media-video/mjpegtools ) X? ( x11-libs/libXext x11-libs/libX11 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.9* >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEFINED_PHASES=configure install
+DEPEND=media-libs/xine-lib[v4l?,X,imagemagick] dvb? ( media-libs/xine-lib[v4l] ) dev-libs/libcdio curl? ( net-misc/curl ) joystick? ( media-libs/libjsw ) jpeg? ( media-gfx/imagemagick media-libs/netpbm[jpeg,zlib] media-video/mjpegtools ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl sys-devel/gettext ) png? ( media-gfx/imagemagick media-libs/netpbm[png,zlib] media-video/mjpegtools ) X? ( x11-libs/libXext x11-libs/libX11 ) virtual/pkgconfig
 DESCRIPTION=OSD frontend for Xine
+EAPI=5
 HOMEPAGE=http://oxine.sourceforge.net/
 IUSE=X curl debug dvb exif joystick jpeg lirc nls png v4l
 KEYWORDS=amd64 ppc ~ppc64 x86
 LICENSE=GPL-2
-RDEPEND=media-libs/xine-lib dev-libs/libcdio curl? ( net-misc/curl ) joystick? ( media-libs/libjsw ) jpeg? ( media-gfx/imagemagick media-libs/netpbm media-video/mjpegtools ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl sys-devel/gettext ) png? ( media-gfx/imagemagick media-libs/netpbm media-video/mjpegtools ) X? ( x11-libs/libXext x11-libs/libX11 ) virtual/eject
+RDEPEND=media-libs/xine-lib[v4l?,X,imagemagick] dvb? ( media-libs/xine-lib[v4l] ) dev-libs/libcdio curl? ( net-misc/curl ) joystick? ( media-libs/libjsw ) jpeg? ( media-gfx/imagemagick media-libs/netpbm[jpeg,zlib] media-video/mjpegtools ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl sys-devel/gettext ) png? ( media-gfx/imagemagick media-libs/netpbm[png,zlib] media-video/mjpegtools ) X? ( x11-libs/libXext x11-libs/libX11 ) virtual/eject
 SLOT=0
 SRC_URI=mirror://sourceforge/oxine/oxine-0.7.1.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=4519e15404b005e1112033272bb8fb4a
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=75c7c243966b3d22a2122bc3119da66c
