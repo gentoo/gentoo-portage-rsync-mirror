@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1166 2014/03/05 02:12:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1167 2014/03/09 15:51:40 kensington Exp $
+
+  09 Mar 2014; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Add missing quotes wrt bug #503336.
 
   05 Mar 2014; Patrick Lauer <patrick@gentoo.org> kde4-base.eclass:
   Fix KDE 4.11.7 SRC_URI

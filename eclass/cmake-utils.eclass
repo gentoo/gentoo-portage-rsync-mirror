@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+W# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.103 2014/02/08 01:42:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.104 2014/03/09 15:51:40 kensington Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -592,7 +592,7 @@ cmake-utils_src_make() {
 	_check_build_dir
 	pushd "${BUILD_DIR}" >/dev/null
 
-	${CMAKE_MAKEFILE_GENERATOR}_src_make $@
+	${CMAKE_MAKEFILE_GENERATOR}_src_make "$@"
 
 	popd >/dev/null
 }
