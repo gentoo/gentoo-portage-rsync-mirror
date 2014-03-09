@@ -1,0 +1,10 @@
+# ChangeLog for mate-extra/mate-character-map
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.1 2014/03/09 15:19:49 tomwij Exp $
+
+*mate-character-map-1.6.0 (09 Mar 2014)
+
+  09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-character-map-1.6.0.ebuild,
+  +metadata.xml:
+  New ebuild for mate-extra/mate-character-map, unicode character map viewer;
+  imported from the mate-overlay, reviewed and adjusted.
