@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.6 2013/12/09 23:27:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.7 2014/03/09 07:12:47 vapier Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ inherit autotools-utils bash-completion-r1 eutils flag-o-matic mount-boot multib
 
 if [[ ${PV} != 9999 ]]; then
 	if [[ ${PV} == *_alpha* || ${PV} == *_beta* || ${PV} == *_rc* ]]; then
-		MY_P=${P/_/~}
+		# The quote style is to work with <=bash-4.2 and >=bash-4.3 #503860
+		MY_P=${P/_/'~'}
 		SRC_URI="mirror://gnu-alpha/${PN}/${MY_P}.tar.xz"
 		S=${WORKDIR}/${MY_P}
 	else

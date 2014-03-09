@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=2
 SRC_URI=truetype? ( mirror://sourceforge/dejavu/dejavu-sans-ttf-2.34.zip http://unifoundry.com/pub/unifont-6.3.20131217/unifont-6.3.20131217.pcf.gz )
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	559ed17194292ec42d68145dcca2fa32	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	9fcd81e4cb49fd37511fce461544153f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pax-utils	2424f959506320f5196de8f79fa05297	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=85e79807ba1c5aaa83401d12ab5b7be6
+_md5_=918b0ef4efa3aaaef630226dbc647787

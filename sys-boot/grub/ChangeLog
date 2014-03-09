@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.307 2014/02/28 18:14:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.308 2014/03/09 07:12:47 vapier Exp $
+
+  09 Mar 2014; Mike Frysinger <vapier@gentoo.org> grub-2.00_p5107-r2.ebuild,
+  grub-2.02_beta2.ebuild, grub-9999-r1.ebuild:
+  Use single quotes around ~ to get consistent behavior in <=bash-4.2 and
+  >=bash-4.3 versions #503860 by Lars Wendler.
 
   28 Feb 2014; Mike Gilbert <floppym@gentoo.org>
   -files/1.99-call_proper_grub_probe.patch,

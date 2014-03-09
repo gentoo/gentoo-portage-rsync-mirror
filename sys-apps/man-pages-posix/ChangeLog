@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages-posix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages-posix/ChangeLog,v 1.16 2014/01/23 18:59:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages-posix/ChangeLog,v 1.17 2014/03/09 07:24:37 vapier Exp $
+
+  09 Mar 2014; Mike Frysinger <vapier@gentoo.org> man-pages-posix-2013a.ebuild:
+  Stabilize for all #502918 by Paweł Hajdan, Jr..
 
   23 Jan 2014; Ulrich Müller <ulm@gentoo.org> man-pages-posix-2013a.ebuild:
   License POSIX-COPYRIGHT renamed to man-pages-posix-2013, as discussed with

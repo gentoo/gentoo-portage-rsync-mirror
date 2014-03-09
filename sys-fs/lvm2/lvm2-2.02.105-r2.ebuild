@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.5 2014/02/04 02:46:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.6 2014/03/09 07:01:44 vapier Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -75,7 +75,7 @@ src_prepare() {
 		-e "s:CC ?= @CC@:CC = $(tc-getCC):" \
 		make.tmpl.in || die #444082
 
-	sed -i -e '/FLAG/s:-O2::' configure{,.in} || die #480212
+	sed -i -e '/FLAG/s:-O2::' configure{.in,} || die #480212
 
 	# For upstream -- review and forward:
 	epatch "${FILESDIR}"/${PN}-2.02.63-always-make-static-libdm.patch
@@ -87,6 +87,7 @@ src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-2.02.100-selinux_and_udev_static.patch #370217, #439414
 	epatch "${FILESDIR}"/${PN}-2.02.105-static-pkgconfig-libs.patch #370217, #439414 + blkid
 	epatch "${FILESDIR}"/${PN}-2.02.105-pthread-pkgconfig.patch #492450
+	epatch "${FILESDIR}"/${PN}-2.02.105-readline-6.3.patch #503234
 
 	eautoreconf
 }
