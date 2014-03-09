@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-2.1-r2.ebuild,v 1.2 2014/01/20 12:36:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-2.1-r2.ebuild,v 1.3 2014/03/09 13:07:51 aballier Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ IUSE="alsa cli doc examples ext-sound ffmpeg g711 g722 g7221 gsm ilbc l16 oss py
 #small-filter large-filter speex-aec ssl
 
 DEPEND="alsa? ( media-libs/alsa-lib )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( >=virtual/ffmpeg-9 )
 	gsm? ( media-sound/gsm )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
 	speex? ( media-libs/speex )"
@@ -31,6 +31,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-new-ffmpeg-workaround.patch"
 	# bug #496430
 	epatch "${FILESDIR}/${P}-multilib.patch"
+	# bug #498454
+	epatch "${FILESDIR}/${P}-codecid.patch"
 
 	epatch_user
 }

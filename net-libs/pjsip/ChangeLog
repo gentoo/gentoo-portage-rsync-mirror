@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/pjsip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.16 2014/01/20 12:36:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.17 2014/03/09 13:07:51 aballier Exp $
+
+  09 Mar 2014; Alexis Ballier <aballier@gentoo.org> pjsip-2.1-r2.ebuild,
+  +files/pjsip-2.1-codecid.patch:
+  fix build with ffmpeg2, bug #498454
 
   20 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> pjsip-2.1-r2.ebuild:
   Fix install failure on non-multilib systems, bug #497744. Thanks to Luke-Jr

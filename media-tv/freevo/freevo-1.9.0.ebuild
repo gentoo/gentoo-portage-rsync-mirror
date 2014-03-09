@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.17 2013/08/03 09:45:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.18 2014/03/09 13:09:53 hasufell Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -66,6 +66,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-PIL.patch
+
 	distutils_src_prepare
 	python_convert_shebangs -r 2 .
 }

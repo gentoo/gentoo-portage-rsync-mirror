@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.81 2013/08/03 09:45:47 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.82 2014/03/09 13:09:53 hasufell Exp $
+
+  09 Mar 2014; Julian Ospald <hasufell@gentoo.org> freevo-1.9.0.ebuild,
+  +files/freevo-1.9.0-PIL.patch:
+  fix ImageFile import wrt #471528
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> freevo-1.7.6.1.ebuild,
   freevo-1.9.0.ebuild:

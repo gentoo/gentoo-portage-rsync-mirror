@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/x509-system
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x509-system/ChangeLog,v 1.1 2014/03/09 13:15:41 gienah Exp $
+
+*x509-system-1.4.2 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +x509-system-1.4.2.ebuild:
+  Add x509-system

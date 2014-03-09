@@ -1,0 +1,47 @@
+Index: pjproject-2.1.0/pjmedia/src/pjmedia/ffmpeg_util.c
+===================================================================
+--- pjproject-2.1.0.orig/pjmedia/src/pjmedia/ffmpeg_util.c
++++ pjproject-2.1.0/pjmedia/src/pjmedia/ffmpeg_util.c
+@@ -62,7 +62,7 @@ static const struct ffmpeg_fmt_table_t
+ static const struct ffmpeg_codec_table_t
+ {
+     pjmedia_format_id	id;
+-    enum CodecID	codec_id;
++    enum AVCodecID	codec_id;
+ } ffmpeg_codec_table[] =
+ {
+     {PJMEDIA_FORMAT_H261,	CODEC_ID_H261},
+@@ -165,7 +165,7 @@ pj_status_t PixelFormat_to_pjmedia_forma
+ }
+ 
+ pj_status_t pjmedia_format_id_to_CodecID(pjmedia_format_id fmt_id,
+-					 enum CodecID *codec_id)
++					 enum AVCodecID *codec_id)
+ {
+     unsigned i;
+     for (i=0; i<PJ_ARRAY_SIZE(ffmpeg_codec_table); ++i) {
+@@ -180,7 +180,7 @@ pj_status_t pjmedia_format_id_to_CodecID
+     return PJ_ENOTFOUND;
+ }
+ 
+-pj_status_t CodecID_to_pjmedia_format_id(enum CodecID codec_id,
++pj_status_t CodecID_to_pjmedia_format_id(enum AVCodecID codec_id,
+ 					 pjmedia_format_id *fmt_id)
+ {
+     unsigned i;
+Index: pjproject-2.1.0/pjmedia/src/pjmedia/ffmpeg_util.h
+===================================================================
+--- pjproject-2.1.0.orig/pjmedia/src/pjmedia/ffmpeg_util.h
++++ pjproject-2.1.0/pjmedia/src/pjmedia/ffmpeg_util.h
+@@ -51,9 +51,9 @@ pj_status_t PixelFormat_to_pjmedia_forma
+ 					     pjmedia_format_id *fmt_id);
+ 
+ pj_status_t pjmedia_format_id_to_CodecID(pjmedia_format_id fmt_id,
+-					 enum CodecID *codec_id);
++					 enum AVCodecID *codec_id);
+ 
+-pj_status_t CodecID_to_pjmedia_format_id(enum CodecID codec_id,
++pj_status_t CodecID_to_pjmedia_format_id(enum AVCodecID codec_id,
+ 					 pjmedia_format_id *fmt_id);
+ 
+ #endif /* __PJMEDIA_FFMPEG_UTIL_H__ */

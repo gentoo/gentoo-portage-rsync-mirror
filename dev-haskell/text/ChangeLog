@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.39 2014/03/04 16:02:16 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.40 2014/03/09 13:01:40 gienah Exp $
+
+*text-1.1.0.1 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +text-1.1.0.1.ebuild:
+  Bump text to 1.1.0.1
 
 *text-1.1.0.0 (04 Mar 2014)
 
