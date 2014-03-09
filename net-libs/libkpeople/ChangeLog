@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkpeople
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.4 2014/02/23 22:25:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.5 2014/03/09 16:45:19 johu Exp $
+
+  09 Mar 2014; Johannes Huber <johu@gentoo.org> libkpeople-0.2.1.ebuild:
+  Fix DEPEND by upstream changes.
 
   23 Feb 2014; Manuel Rüger <mrueg@gentoo.org> -libkpeople-0.2.0.ebuild:
   Really cleanup 0.2.0.
