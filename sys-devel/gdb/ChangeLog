@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.259 2014/03/05 15:53:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.260 2014/03/08 23:09:01 vapier Exp $
+
+  08 Mar 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.6.1.ebuild,
+  gdb-7.6.2.ebuild, gdb-7.6.ebuild, gdb-7.7.ebuild, gdb-9999.ebuild,
+  metadata.xml:
+  Add USE=lzma to control lzma linkage support #503850 by Nikoli.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gdb-7.6.2.ebuild:
   Stable for ppc, wrt bug #501528

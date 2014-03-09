@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.1.ebuild,v 1.6 2013/12/10 19:45:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.1.ebuild,v 1.7 2014/03/08 23:22:37 hasufell Exp $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.ogre3d.org/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_src_v${MY_PV}.tar.bz2"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/1.8.1"
 KEYWORDS="amd64 x86"
 IUSE="+boost cg doc double-precision examples +freeimage gles2 ois +opengl poco profile tbb threads tools +zip"
 REQUIRED_USE="threads? ( || ( boost poco tbb ) )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/mygui-3.2.0-r1.ebuild,v 1.4 2013/12/10 19:50:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/mygui-3.2.0-r1.ebuild,v 1.5 2014/03/08 23:17:25 hasufell Exp $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug doc plugins samples static-libs test tools linguas_ru"
 
-RDEPEND="dev-games/ogre[freeimage,opengl]
+RDEPEND="dev-games/ogre:=[freeimage,opengl]
 	media-libs/freetype:2
 	samples? ( dev-games/ois )
 	tools? ( dev-games/ois )"
