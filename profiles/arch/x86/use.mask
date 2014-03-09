@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.57 2014/03/03 18:36:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.58 2014/03/09 14:37:22 grozin Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -180,6 +180,7 @@ win64
 # available on x86
 -cmucl
 -clozurecl
+-gcl
 
 # Michał Górny <mgorny@gentoo.org> (4 May 2013)
 # Unmask systemd since it is keyworded here.

@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/mate-file-manager
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.1 2014/03/09 14:59:59 tomwij Exp $
+
+*mate-file-manager-1.6.3 (09 Mar 2014)
+
+  09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-file-manager-1.6.3.ebuild,
+  +metadata.xml:
+  New ebuild for mate-base/mate-file-manager, Caja file manager for the MATE
+  desktop; imported from the mate-overlay, reviewed and adjusted.

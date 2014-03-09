@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8684 2014/03/09 12:58:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8685 2014/03/09 14:32:05 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Mar 2014; Andrey Grozin <grozin@gentoo.org> package.mask:
+  unmask dev-lisp/gcl-2.6.10
 
   09 Mar 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask latest libdvbpsi now that vlc seems ok

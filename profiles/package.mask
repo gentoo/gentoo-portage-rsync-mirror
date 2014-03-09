@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15460 2014/03/09 12:58:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15461 2014/03/09 14:32:05 grozin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1071,11 +1071,9 @@ sys-kernel/zen-sources
 =www-plugins/google-talkplugin-9999
 ~x11-wm/openbox-9999
 
-# Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
-# Masked for increasingly many problems. Upstream is flaky and hasn't released since 2005.
-# Maxima is the only consumer and can be built with sbcl or clisp.
-# Hopefully upstream will do a release that we can add to revive this package.
-dev-lisp/gcl
+# Andrey Grozin <grozin@gentoo.org> (09 Mar 2013)
+# Unmasking gcl-2.6.10
+<dev-lisp/gcl-2.6.9
 
 # Jeremy Olexa <darkside@gentoo.org> (28 Jul 2009)
 # On behalf of Robin H. Johnson <robbat2@gentoo.org>.

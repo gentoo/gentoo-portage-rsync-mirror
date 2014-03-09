@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.243 2014/03/08 02:44:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.244 2014/03/09 14:35:40 grozin Exp $
+
+  09 Mar 2014; Andrey Grozin <grozin@gentoo.org> use.mask:
+  Unmask gcl
 
   08 Mar 2014; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Add media-libs/mesa -openmax to package.use.mask.
