@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/xss-sanitize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xss-sanitize/ChangeLog,v 1.2 2013/09/13 06:44:35 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xss-sanitize/ChangeLog,v 1.3 2014/03/09 05:18:03 gienah Exp $
+
+*xss-sanitize-0.3.5 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +xss-sanitize-0.3.5.ebuild:
+  Bump xss-sanitize to 0.3.5
 
 *xss-sanitize-0.3.4 (13 Sep 2013)
 

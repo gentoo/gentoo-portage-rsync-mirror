@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gnuidn
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gnuidn/ChangeLog,v 1.1 2013/08/26 11:35:13 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gnuidn/ChangeLog,v 1.2 2014/03/09 05:12:52 gienah Exp $
+
+*gnuidn-0.2.1 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +gnuidn-0.2.1.ebuild:
+  Bump gnuidn to 0.2.1
 
 *gnuidn-0.2 (26 Aug 2013)
 

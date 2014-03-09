@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/dbus-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus-core/ChangeLog,v 1.5 2014/02/21 21:07:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus-core/ChangeLog,v 1.6 2014/03/09 05:12:10 gienah Exp $
+
+*dbus-core-0.9.3-r3 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +dbus-core-0.9.3-r3.ebuild:
+  Loosen text and some other deps in dbus-core-0.9.3-r3
 
   21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> -dbus-core-0.9.2.1.ebuild,
   -dbus-core-0.9.3-r1.ebuild:
