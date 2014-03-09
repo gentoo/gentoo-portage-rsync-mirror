@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.ebuild,v 1.6 2014/03/08 23:09:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.ebuild,v 1.7 2014/03/08 23:59:24 vapier Exp $
 
 EAPI="3"
 
@@ -87,14 +87,15 @@ gdb_branding() {
 src_configure() {
 	strip-unsupported-flags
 
-	local sysroot="${EPREFIX}"/usr/${CTARGET}
 	local myconf=(
 		--with-pkgversion="$(gdb_branding)"
 		--with-bugurl='http://bugs.gentoo.org/'
 		--disable-werror
-		$(is_cross && echo \
-			--with-sysroot="${sysroot}" \
-			--includedir="${sysroot}/usr/include")
+	)
+	local sysroot="${EPREFIX}/usr/${CTARGET}"
+	is_cross && myconf+=(
+		--with-sysroot="${sysroot}"
+		--includedir="${sysroot}/usr/include"
 	)
 
 	if use server && ! use client ; then

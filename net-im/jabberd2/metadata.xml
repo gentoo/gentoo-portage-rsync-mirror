@@ -7,6 +7,8 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<use>
+		<flag name='experimental'>Enable experimental features such
+			as TLS Everywhere.</flag>
 		<flag name='memdebug'>Enable nad and pool debug.
 			Requires USE="debug" to be set.
 		</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.2.ebuild,v 1.1 2014/02/25 21:40:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.2.ebuild,v 1.2 2014/03/08 23:58:05 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/jabberd2/jabberd2/releases/download/jabberd-${PV}/ja
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="berkdb debug ldap memdebug mysql pam postgres sqlite ssl test zlib"
+IUSE="berkdb debug experimental ldap memdebug mysql pam postgres sqlite ssl test zlib"
 REQUIRED_USE="memdebug? ( debug )"
 
 # broken
@@ -96,6 +96,7 @@ src_configure() {
 		--enable-pipe \
 		--enable-anon \
 		--enable-fs \
+		$(use_enable experimental) \
 		$(use_enable test tests) \
 		$(usex berkdb "--with-extra-include-path=$(db_includedir)" "") \
 		$(use_with zlib)
