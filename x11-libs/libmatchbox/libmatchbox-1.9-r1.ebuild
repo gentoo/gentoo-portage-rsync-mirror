@@ -1,26 +1,26 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.5 2012/06/04 00:20:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9-r1.ebuild,v 1.6 2014/03/09 17:18:18 ssuominen Exp $
 
-EAPI=4
-inherit eutils libtool
+EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="The Matchbox Library."
 HOMEPAGE="http://matchbox-project.org/"
-SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2"
+SRC_URI="http://matchbox-project.org/sources/${PN}/${PV}/${P}.tar.bz2
+	mirror://sourceforge/check/check-0.9.12.tar.gz" # For check.m4
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~hppa ~mips ppc x86"
 IUSE="debug doc jpeg pango png static-libs test truetype X xsettings"
 
-RDEPEND="x11-libs/libXext
-	truetype? ( x11-libs/libXft )
-	pango? ( x11-libs/pango )
-	jpeg? ( virtual/jpeg )
-	png? ( media-libs/libpng )
+RDEPEND="x11-libs/libXext:=
+	truetype? ( x11-libs/libXft:= )
+	pango? ( x11-libs/pango:= )
+	jpeg? ( virtual/jpeg:0 )
+	png? ( media-libs/libpng:0= )
 	xsettings? ( x11-libs/libxsettings-client )"
-
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-libs/check )"
@@ -40,8 +40,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng1{4,5}.patch
-	elibtoolize
+	mv "${WORKDIR}"/check-*/check.m4 "${WORKDIR}"/ || die
+
+	epatch \
+		"${FILESDIR}"/${P}-libpng1{4,5}.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
+	
+	AT_M4DIR="${WORKDIR}" eautoreconf
 }
 
 src_configure() {
@@ -62,5 +67,5 @@ src_install() {
 	default
 	use doc && dohtml doc/html/*
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
