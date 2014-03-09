@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.34 2014/03/09 10:57:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.35 2014/03/09 12:06:14 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> orc-0.4.18.ebuild:
+  x86 stable, bug 499954
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> orc-0.4.18.ebuild:
   amd64 stable, bug 499954

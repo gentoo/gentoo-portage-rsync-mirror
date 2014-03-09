@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8679 2014/03/09 11:56:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8681 2014/03/09 12:30:48 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Mask mate-base/mate-file-manager, mate-extra/mate-calc,
+  mate-extra/mate-character-map, mate-extra/mate-power-manager,
+  mate-extra/mate-screensaver, mate-extra/mate-sensors-applet,
+  mate-extra/mate-system-monitor, mate-extra/mate-utils,
+  x11-terms/mate-terminal, x11-themes/mate-backgrounds, x11-themes/mate-themes
+  and x11-wm/marco for MATE introduction.
+
+  09 Mar 2014; Tristan Heaven <tristan@gentoo.org> thirdpartymirrors:
+  Remove dead lokigames mirror, bug #494852
 
   09 Mar 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask latest libva now that its consumers should work

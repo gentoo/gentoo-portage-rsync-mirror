@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/attoparsec-enumerator
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/attoparsec-enumerator/ChangeLog,v 1.1 2013/11/14 09:18:46 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/attoparsec-enumerator/ChangeLog,v 1.2 2014/03/09 12:30:51 gienah Exp $
+
+*attoparsec-enumerator-0.3.2 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org>
+  +attoparsec-enumerator-0.3.2.ebuild:
+  Bump attoparsec-enumerator to 0.3.2
 
 *attoparsec-enumerator-0.3.1-r1 (14 Nov 2013)
 

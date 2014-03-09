@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.48 2014/03/09 10:54:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.49 2014/03/09 12:03:56 pacho Exp $
+
+  09 Mar 2014; Pacho Ramos <pacho@gentoo.org> rygel-0.20.3.ebuild:
+  x86 stable, bug 499954
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> rygel-0.20.3.ebuild:
   amd64 stable, bug 499954

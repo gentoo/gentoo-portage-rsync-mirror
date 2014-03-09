@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/asn1-parse
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-parse/ChangeLog,v 1.1 2014/03/09 12:28:03 gienah Exp $
+
+*asn1-parse-0.8.1 (09 Mar 2014)
+
+  09 Mar 2014; Mark Wright <gienah@gentoo.org> +asn1-parse-0.8.1.ebuild,
+  +metadata.xml:
+  Add asn1-parse
