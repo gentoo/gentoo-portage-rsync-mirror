@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.5 2014/03/02 22:35:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.6 2014/03/09 03:13:00 zx2c4 Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs udev
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-systemd-pkgconfig.patch
 	epatch_user
 }
 

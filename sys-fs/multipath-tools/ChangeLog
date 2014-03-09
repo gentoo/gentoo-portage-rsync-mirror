@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.64 2014/03/02 22:35:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.65 2014/03/09 03:13:00 zx2c4 Exp $
+
+  09 Mar 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/multipath-tools-0.5.0-systemd-pkgconfig.patch,
+  multipath-tools-0.5.0-r1.ebuild:
+  Use pkg-config to find correct systemd libraries. Fixes #502446.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> multipath-tools-0.5.0-r1.ebuild:
   amd64 stable, bug #499320
