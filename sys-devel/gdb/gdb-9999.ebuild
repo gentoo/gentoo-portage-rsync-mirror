@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.23 2014/03/08 23:59:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.24 2014/03/09 00:04:37 vapier Exp $
 
 EAPI="4"
+PYTHON_COMPAT=( python{2_7,3_3} )
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils python-single-r1
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
@@ -59,7 +60,7 @@ RDEPEND="!dev-util/gdbserver
 	sys-libs/readline
 	expat? ( dev-libs/expat )
 	lzma? ( app-arch/xz-utils )
-	python? ( =dev-lang/python-2* )
+	python? ( ${PYTHON_DEPS} )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
@@ -73,17 +74,6 @@ src_prepare() {
 	[[ -n ${RPM} ]] && rpm_spec_epatch "${WORKDIR}"/gdb.spec
 	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	strip-linguas -u bfd/po opcodes/po
-	if [[ ${CHOST} == *-darwin* ]] ; then
-		# make sure we have a python-config that matches our install,
-		# such that the python check doesn't fail just because the
-		# gdb-provided copy isn't quite what our python installed
-		# version is
-		rm -f "${S}"/gdb/python/python-config.py || die
-		pushd "${S}"/gdb/python > /dev/null || die
-		ln -s "${EROOT}"/usr/bin/$(eselect python show --python2)-config \
-			python-config.py || die
-		popd > /dev/null || die
-	fi
 }
 
 gdb_branding() {
@@ -141,7 +131,7 @@ src_configure() {
 			$(use_with lzma)
 			$(use_enable nls)
 			$(use multitarget && echo --enable-targets=all)
-			$(use_with python python "${EPREFIX}/usr/bin/python2")
+			$(use_with python python "${EPYTHON}")
 			$(use_with zlib)
 		)
 	fi
