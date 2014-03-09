@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/asdf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.15 2013/12/12 09:52:38 nimiux Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.16 2014/03/09 14:16:24 grozin Exp $
+
+*asdf-3.0.3 (09 Mar 2014)
+
+  09 Mar 2014; Andrey Grozin <grozin@gentoo.org> +asdf-3.0.3.ebuild:
+  Version bump
 
   12 Dec 2013; Chema Alonso <nimiux@gentoo.org> asdf-3.0.2.4.ebuild:
   Revoke stable for amd64 wrt bug #485632

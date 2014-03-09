@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyfeyn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfeyn/ChangeLog,v 1.2 2014/02/24 09:40:06 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfeyn/ChangeLog,v 1.3 2014/03/09 14:19:58 grozin Exp $
+
+*pyfeyn-0.3.4 (09 Mar 2014)
+
+  09 Mar 2014; Andrey Grozin <grozin@gentoo.org> +pyfeyn-0.3.4.ebuild:
+  Version bump
 
   24 Feb 2014; Andrey Grozin <grozin@gentoo.org> pyfeyn-0.3.3.ebuild,
   +files/pyfeyn-0.3.3.patch:

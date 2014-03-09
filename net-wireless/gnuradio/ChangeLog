@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.40 2014/03/05 16:18:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.41 2014/03/09 14:13:47 zerochaos Exp $
+
+*gnuradio-3.7.3 (09 Mar 2014)
+*gnuradio-3.7.2.2 (09 Mar 2014)
+
+  09 Mar 2014; Rick Farina <zerochaos@gentoo.org> +gnuradio-3.7.2.2.ebuild,
+  +gnuradio-3.7.3.ebuild, -gnuradio-3.6.5.1.ebuild, -gnuradio-3.7.2.1.ebuild:
+  bump, remove non-python-r1 ebuilds
 
 *gnuradio-3.6.5.1-r2 (05 Mar 2014)
 *gnuradio-3.7.2.1-r2 (05 Mar 2014)

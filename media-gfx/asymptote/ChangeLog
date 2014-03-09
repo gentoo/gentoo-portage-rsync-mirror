@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/asymptote
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.106 2013/08/15 17:38:06 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.107 2014/03/09 14:26:45 grozin Exp $
+
+  09 Mar 2014; Andrey Grozin <grozin@gentoo.org> asymptote-2.24.ebuild:
+  pdf generation depends on >=dev-texlive/texlive-latexextra-2013, bug #481076
 
 *asymptote-2.24 (15 Aug 2013)
 
