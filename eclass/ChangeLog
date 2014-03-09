@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1167 2014/03/09 15:51:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1168 2014/03/09 18:16:04 kensington Exp $
+
+  09 Mar 2014; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Remove stray character thanks to mimi_vx.
 
   09 Mar 2014; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
   Add missing quotes wrt bug #503336.
