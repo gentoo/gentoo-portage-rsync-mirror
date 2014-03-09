@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-femon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.33 2014/02/23 19:49:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.34 2014/03/09 10:15:23 hd_brummy Exp $
+
+*vdr-femon-2.0.3 (09 Mar 2014)
+
+  09 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-femon-2.0.3.ebuild:
+  bump, includes support for SAT>IP devices
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-femon-1.6.7.ebuild:
   converted to vdr-plugin-2.eclass
@@ -166,4 +171,3 @@
   07 Aug 2005; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +vdr-femon-0.9.1.ebuild:
   first import of ebuild written by me
-

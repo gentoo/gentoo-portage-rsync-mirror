@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-9999.ebuild,v 1.7 2013/06/26 04:40:11 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-9999.ebuild,v 1.8 2014/03/09 10:19:46 aballier Exp $
 
 EAPI=5
 
@@ -49,6 +49,7 @@ src_configure() {
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--system-libx264 \
 		--host="${CHOST}" \
+		--disable-lsmash \
 		$(usex 10bit "--bit-depth=10" "") \
 		$(usex avs "" "--disable-avs") \
 		$(usex ffmpeg "" "--disable-lavf --disable-swscale") \
