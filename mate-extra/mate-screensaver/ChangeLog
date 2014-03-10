@@ -1,6 +1,11 @@
 # ChangeLog for mate-extra/mate-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.1 2014/03/10 00:31:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.2 2014/03/10 13:10:15 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  mate-screensaver-1.6.1.ebuild:
+  Remove invalid SLOT dependencies from pkg-config, gettext, intltool and
+  consolekit. Remove unrequired virtual/libc dependency.
 
 *mate-screensaver-1.6.1 (10 Mar 2014)
 

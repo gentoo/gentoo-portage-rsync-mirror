@@ -1,6 +1,11 @@
 # ChangeLog for mate-extra/mate-character-map
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.1 2014/03/09 15:19:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.2 2014/03/10 13:06:01 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  mate-character-map-1.6.0.ebuild:
+  Remove invalid SLOT dependencies from pkg-config, gettext and intltool. Remove
+  bogus sys-libs/glibc dependency.
 
 *mate-character-map-1.6.0 (09 Mar 2014)
 

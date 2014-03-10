@@ -1,6 +1,14 @@
 # ChangeLog for mate-base/mate-file-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.2 2014/03/10 13:00:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.4 2014/03/10 13:16:53 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  mate-file-manager-1.6.3.ebuild:
+  Revert and remove bogus dependencies (again) from the packages I'm
+  maintaining. They wouldn't be slotted like this for a fact.
+
+  10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-file-manager-1.6.3.ebuild:
+  Further review of dependencies.
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   mate-file-manager-1.6.3.ebuild:

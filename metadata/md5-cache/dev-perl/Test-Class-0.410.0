@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=virtual/perl-Storable-2 >=virtual/perl-Test-Simple-0.78 dev-perl/MRO-Compat >=virtual/perl-Module-Build-0.380.0 test? ( >=dev-perl/Test-Exception-0.25 ) dev-lang/perl:=[-build(-)]
+DEPEND=>=virtual/perl-Storable-2 >=virtual/perl-Test-Simple-0.78 dev-perl/MRO-Compat >=virtual/perl-Module-Build-0.420.0 test? ( >=dev-perl/Test-Exception-0.25 ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Easily create test classes in an xUnit style.
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Test-Class/
@@ -10,4 +10,4 @@ RDEPEND=>=virtual/perl-Storable-2 >=virtual/perl-Test-Simple-0.78 dev-perl/MRO-C
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RJ/RJBS/Test-Class-0.41.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=8068e200b1d8c7cb2eb2089ceaa5f591
+_md5_=8300f1857e9a8147d601bc0a1d222981

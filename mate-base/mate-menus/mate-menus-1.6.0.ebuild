@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.6.0.ebuild,v 1.1 2014/02/28 01:06:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.6.0.ebuild,v 1.4 2014/03/10 13:17:33 ssuominen Exp $
 
 EAPI="5"
 
@@ -25,7 +25,6 @@ IUSE="debug +introspection python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND=">=dev-libs/glib-2.15.2:2
-	sys-libs/glibc:2.2
 	virtual/libintl:0
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7:0 )
 	python? (
@@ -34,10 +33,10 @@ RDEPEND=">=dev-libs/glib-2.15.2:2
 	)"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.40:0
-	>=mate-base/mate-common-${MATE_BRANCH}:0
-	sys-devel/gettext:0
-	virtual/pkgconfig:0"
+	>=dev-util/intltool-0.40
+	>=mate-base/mate-common-1.6:0
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 src_prepare() {
 	eautoreconf
