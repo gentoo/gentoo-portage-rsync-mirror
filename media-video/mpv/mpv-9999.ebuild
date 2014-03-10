@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.39 2014/01/25 13:29:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.40 2014/03/10 19:32:43 maksbotan Exp $
 
 EAPI=5
 
@@ -9,9 +9,11 @@ EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 inherit base waf-utils pax-utils
 [[ ${PV} == *9999* ]] && inherit git-r3
 
+WAF_V="1.7.15"
+
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
-SRC_URI="https://waf.googlecode.com/files/waf-1.7.13"
+SRC_URI="https://waf.googlecode.com/files/waf-${WAF_V}"
 [[ ${PV} == *9999* ]] || \
 SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -109,7 +111,7 @@ RDEPEND+="
 	samba? ( net-fs/samba )
 	v4l? ( media-libs/libv4l )
 	wayland? (
-		>=dev-libs/wayland-1.2.0
+		>=dev-libs/wayland-1.3.0
 		media-libs/mesa[egl,wayland]
 		>=x11-libs/libxkbcommon-0.3.0
 	)
@@ -150,7 +152,7 @@ src_unpack() {
 		default_src_unpack
 	fi
 
-	cp "${DISTDIR}"/waf-1.7.13 "${S}"/waf || die
+	cp "${DISTDIR}"/waf-${WAF_V} "${S}"/waf || die
 	chmod 0755 "${S}"/waf || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.3 2014/03/08 12:15:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.4 2014/03/10 19:58:28 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org> dbf-2.0.7.ebuild:
+  x86 stable, bug #499132
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> dbf-2.0.7.ebuild:
   amd64 stable, bug 499132

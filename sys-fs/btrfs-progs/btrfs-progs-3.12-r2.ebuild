@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.32 2014/03/10 19:34:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-3.12-r2.ebuild,v 1.1 2014/03/10 19:34:28 slyfox Exp $
 
 EAPI=5
 
@@ -35,8 +35,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.12-fix-send-subvol-492776.patch
-	epatch "${FILESDIR}"/${PN}-3.12-defrag-sockets.patch
+	epatch "${FILESDIR}"/${P}-fix-send-subvol-492776.patch
+	epatch "${FILESDIR}"/${P}-defrag-sockets.patch
 	epatch_user
 }
 
