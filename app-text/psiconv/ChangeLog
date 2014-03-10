@@ -1,6 +1,13 @@
 # ChangeLog for app-text/psiconv
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.10 2012/10/28 19:20:07 ago Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.12 2014/03/10 10:57:14 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -psiconv-0.8.3.ebuild:
+  old
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> psiconv-0.8.3-r1.ebuild,
+  psiconv-0.8.3.ebuild:
+  Punt virtual/libc dependency.
 
 *psiconv-0.8.3-r1 (28 Oct 2012)
 

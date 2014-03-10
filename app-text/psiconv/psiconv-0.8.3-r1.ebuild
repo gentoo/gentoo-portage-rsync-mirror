@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/psiconv-0.8.3-r1.ebuild,v 1.1 2012/10/28 19:20:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/psiconv-0.8.3-r1.ebuild,v 1.2 2014/03/10 10:56:13 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -14,9 +14,6 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="static-libs"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-
-DEPEND="virtual/libc"
-RDEPEND=""
 
 src_prepare() {
 	tc-export AR

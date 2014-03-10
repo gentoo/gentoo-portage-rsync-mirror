@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-17.1.ebuild,v 1.4 2014/01/08 06:34:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-17.1.ebuild,v 1.5 2014/03/10 10:58:31 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,6 @@ IUSE="debug gnutls ident ipv6 pam ssl tcpd zlib"
 
 DEPEND="
 	>=sys-apps/sed-4
-	virtual/libc
 	ident? ( net-libs/libident )
 	ssl? (
 		gnutls? ( net-libs/gnutls )

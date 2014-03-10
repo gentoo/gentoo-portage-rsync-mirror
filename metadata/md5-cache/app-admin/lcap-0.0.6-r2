@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile install unpack
-DEPEND=virtual/libc virtual/os-headers
+DEFINED_PHASES=compile install prepare
+DEPEND=virtual/os-headers
 DESCRIPTION=kernel capability remover
+EAPI=5
 HOMEPAGE=http://packages.qa.debian.org/l/lcap.html
 IUSE=lids
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=virtual/libc
 SLOT=0
 SRC_URI=mirror://debian/pool/main/l/lcap/lcap_0.0.6.orig.tar.gz mirror://debian/pool/main/l/lcap/lcap_0.0.6-3.1.diff.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=56333f2dce02ae381be9eb030fae2f8a
+_md5_=82aa72c1766b25c1fbf015d254da93b3

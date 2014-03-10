@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/libhtmlparse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.12 2012/11/02 11:09:34 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.15 2014/03/10 10:51:10 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -libhtmlparse-0.1.13.ebuild:
+  old
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libhtmlparse-0.1.13-r1.ebuild:
+  Use prune_libtool_files from eutils.eclass to drop libhtmlparse.la when it's
+  not required. Mark stable for x86 as prereq for dropping -r0.
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libhtmlparse-0.1.13-r1.ebuild, libhtmlparse-0.1.13.ebuild:
+  Punt virtual/libc dependency.
 
 *libhtmlparse-0.1.13-r1 (02 Nov 2012)
 

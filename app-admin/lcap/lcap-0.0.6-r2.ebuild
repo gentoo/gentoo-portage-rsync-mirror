@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r2.ebuild,v 1.4 2007/12/22 09:55:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r2.ebuild,v 1.5 2014/03/10 10:31:31 ssuominen Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs
 
 PATCH_LEVEL=3.1
@@ -16,20 +17,16 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="lids"
 
-RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	virtual/os-headers"
+DEPEND="virtual/os-headers"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}"/${P/-/_}-${PATCH_LEVEL}.diff
-	use lids || sed -i -e "s:LIDS =:#\0:" Makefile
-	sed -i -e "s:-O3:${CFLAGS}:" Makefile
+	use lids || { sed -i -e "s:LIDS =:#\0:" Makefile || die; }
+	sed -i -e "s:-O3:${CFLAGS}:" Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" || die "emake failed."
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nstx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.12 2010/07/07 09:21:44 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.13 2014/03/10 10:59:21 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> nstx-1.1_beta6-r3.ebuild:
+  Punt virtual/libc dependency.
 
   07 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   nstx-1.1_beta6-r3.ebuild:
@@ -62,4 +65,3 @@
   +nstx-1.1_beta6.ebuild:
   Bug #74322. Based on initial submission by Andre Kloth
   <bugs-gentoo@blubbmon.de>.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-server
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.82 2013/08/03 07:28:37 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.83 2014/03/10 10:55:36 zlogene Exp $
+
+  10 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -net-server-0.97.ebuild,
+  -net-server-0.990.0.ebuild, -net-server-2.6.0.ebuild:
+  Drop old
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> net-server-2.7.0.ebuild:
   Stable for sparc, wrt bug #475794
