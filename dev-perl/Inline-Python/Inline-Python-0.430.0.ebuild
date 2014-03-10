@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/Inline-Python-0.430.0.ebuild,v 1.1 2013/09/18 03:48:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/Inline-Python-0.430.0.ebuild,v 1.2 2014/03/10 14:51:15 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 MODULE_AUTHOR=NINE
 MODULE_VERSION=0.43

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.112 2014/01/18 01:43:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.113 2014/03/10 14:34:34 jer Exp $
+
+  10 Mar 2014; Jeroen Roovers <jer@gentoo.org> bzip2-1.0.6-r6.ebuild:
+  Stable for HPPA (bug #504004).
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> bzip2-1.0.6-r3.ebuild,
   bzip2-1.0.6-r4.ebuild, bzip2-1.0.6-r6.ebuild:

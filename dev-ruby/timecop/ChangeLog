@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/timecop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timecop/ChangeLog,v 1.11 2014/03/08 19:25:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timecop/ChangeLog,v 1.12 2014/03/10 14:46:20 jer Exp $
+
+  10 Mar 2014; Jeroen Roovers <jer@gentoo.org> timecop-0.6.0.ebuild:
+  Stable for HPPA (bug #503684).
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> timecop-0.6.0.ebuild:
   amd64 stable, bug 503684

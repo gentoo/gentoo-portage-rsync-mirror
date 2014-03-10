@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/avogadrolibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/ChangeLog,v 1.4 2014/01/16 19:26:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/ChangeLog,v 1.5 2014/03/10 14:34:01 kensington Exp $
+
+  10 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  avogadrolibs-0.7.2-r1.ebuild:
+  Pin Qt dependencies to SLOT 4.
 
 *avogadrolibs-0.7.2-r1 (16 Jan 2014)
 
@@ -39,4 +43,3 @@
   23 Jul 2013; Justin Lecher <jlec@gentoo.org> +avogadro-libs-0.6.0.ebuild,
   +metadata.xml:
   New addition written by me
-

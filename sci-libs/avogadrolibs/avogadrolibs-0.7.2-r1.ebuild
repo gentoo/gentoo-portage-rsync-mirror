@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2-r1.ebuild,v 1.1 2014/01/16 19:26:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2-r1.ebuild,v 1.2 2014/03/10 14:34:01 kensington Exp $
 
 EAPI=5
 
@@ -22,12 +22,12 @@ RDEPEND="
 	sci-libs/chemkit
 	sci-libs/hdf5
 	opengl? (
-		dev-qt/qtopengl
+		dev-qt/qtopengl:4
 		media-libs/glew
 		)
 	qt4? (
-		dev-qt/qtcore
-		dev-qt/qtgui
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 		)
 	vtk? ( sci-libs/vtk )
 "

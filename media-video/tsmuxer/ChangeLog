@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tsmuxer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.11 2013/12/30 08:10:35 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.12 2014/03/10 14:31:55 kensington Exp $
+
+  10 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  tsmuxer-1.10.6-r1.ebuild:
+  Pin Qt dependencies to SLOT 4.
 
   30 Dec 2013; Alexis Ballier <aballier@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
   update multilib deps to use multilib converted packages when available. bug

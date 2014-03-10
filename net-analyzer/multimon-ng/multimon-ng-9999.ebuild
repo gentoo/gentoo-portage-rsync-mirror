@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/multimon-ng/multimon-ng-9999.ebuild,v 1.4 2013/12/16 05:04:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/multimon-ng/multimon-ng-9999.ebuild,v 1.5 2014/03/10 14:55:19 kensington Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="pulseaudio"
 
 DEPEND="pulseaudio? ( media-sound/pulseaudio )
-	dev-qt/qtcore
+	dev-qt/qtcore:4
 	x11-libs/libX11"
 RDEPEND="${DEPEND}"
 
