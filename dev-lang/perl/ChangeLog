@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.416 2014/03/09 23:29:34 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.417 2014/03/10 08:22:37 zlogene Exp $
+
+  10 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -perl-5.18.1.ebuild:
+  Drop old
 
   09 Mar 2014; Vladimir Smirnov <civil@gentoo.org> perl-5.18.2.ebuild:
   Add first version of patchset for perl 5.18.2
