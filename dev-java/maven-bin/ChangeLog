@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/maven-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.87 2013/11/11 19:46:11 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.88 2014/03/10 21:05:30 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org> maven-bin-3.1.1.ebuild:
+  ~x86 added, bug #491036
 
 *maven-bin-3.1.1 (11 Nov 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.5 2014/01/18 05:42:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r8.ebuild,v 1.6 2014/03/10 21:21:35 swegener Exp $
 
 EAPI=4
 
@@ -163,9 +163,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Some dangerous key bindings have been removed or changed to more safe values."
-	elog "We enable some xterm hacks in our default screenrc, which might break some"
-	elog "applications. Please check /etc/screenrc for information on these changes."
+	if [[ -z ${REPLACING_VERSIONS} ]]
+	then
+		elog "Some dangerous key bindings have been removed or changed to more safe values."
+		elog "We enable some xterm hacks in our default screenrc, which might break some"
+		elog "applications. Please check /etc/screenrc for information on these changes."
+	fi
 
 	ewarn "This revision changes the screen socket location to /run/screen."
 }

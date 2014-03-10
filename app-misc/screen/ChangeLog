@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.185 2014/03/05 20:16:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.186 2014/03/10 21:21:35 swegener Exp $
+
+  10 Mar 2014; Sven Wegener <swegener@gentoo.org> screen-4.0.3-r6.ebuild,
+  screen-4.0.3-r7.ebuild, screen-4.0.3-r8.ebuild, screen-9999.ebuild:
+  Only show elog for new installs, bug #440588.
 
   05 Mar 2014; Sven Wegener <swegener@gentoo.org> screen-4.0.3-r6.ebuild:
   Backport append-cppflags, bug #498616.

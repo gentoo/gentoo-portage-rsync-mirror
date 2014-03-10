@@ -1169,6 +1169,7 @@ dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/
 dev-db/mysql:test - Install upstream testsuites for end use.
 dev-db/mysql:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
 dev-db/mysql-connector-c++:gcov - Build coverage support
+dev-db/opendbx:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
 dev-db/pgadmin3:databasedesigner - Enable the Database Designer component
 dev-db/pgbouncer:libevent - Use libevent 2.0+ and evdns as the DNS backend
 dev-db/pgbouncer:udns - Use udns as the DNS backend. Supports IPv4 only.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.1.1.ebuild,v 1.1 2013/11/11 19:42:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.1.1.ebuild,v 1.2 2014/03/10 21:05:30 johu Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://maven.apache.org/"
 
 LICENSE="Apache-2.0"
 SLOT="3.1"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 # TODO: Needs further resolution:
 #

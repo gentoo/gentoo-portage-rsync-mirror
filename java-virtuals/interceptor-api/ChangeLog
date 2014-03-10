@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/interceptor-api
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/interceptor-api/ChangeLog,v 1.1 2013/10/23 18:04:48 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/interceptor-api/ChangeLog,v 1.2 2014/03/10 21:05:51 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org> interceptor-api-0.ebuild:
+  ~x86 added, bug #491036
 
 *interceptor-api-0 (23 Oct 2013)
 

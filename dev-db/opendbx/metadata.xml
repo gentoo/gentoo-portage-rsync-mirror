@@ -5,4 +5,8 @@
 	<email>swegener@gentoo.org</email>
 	<description>Primary Maintainer</description>
 </maintainer>
+<use>
+	<flag name="bindist">Disable support for <pkg>dev-db/firebird</pkg> database
+		which is not GPL compatible.</flag>
+</use>
 </pkgmetadata>

@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/opendbx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.36 2013/10/28 18:13:58 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.37 2014/03/10 21:15:06 swegener Exp $
+
+*opendbx-1.4.5-r1 (10 Mar 2014)
+
+  10 Mar 2014; Sven Wegener <swegener@gentoo.org> +opendbx-1.4.5-r1.ebuild,
+  opendbx-1.4.6.ebuild, opendbx-1.5.0.ebuild, metadata.xml:
+  Add local description for bindist USE flag, bug #448918. Bump EAPI for
+  REQUIRED_USE support.
 
   28 Oct 2013; Fabian Groffen <grobian@gentoo.org> opendbx-1.4.6.ebuild,
   opendbx-1.5.0.ebuild:

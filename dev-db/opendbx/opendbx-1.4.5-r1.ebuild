@@ -1,21 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.5.0.ebuild,v 1.3 2014/03/10 21:15:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5-r1.ebuild,v 1.1 2014/03/10 21:15:06 swegener Exp $
 
 EAPI="5"
 
 inherit flag-o-matic multilib
 
-MY_PN="lib${PN}"
-MY_P="${MY_PN}-${PV}"
-
 DESCRIPTION="OpenDBX - A database abstraction layer"
 HOMEPAGE="http://www.linuxnetworks.de/doc/index.php/OpenDBX"
-SRC_URI="http://www.linuxnetworks.de/opendbx/download/${MY_P}.tar.gz"
+SRC_URI="http://www.linuxnetworks.de/opendbx/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x64-solaris"
+KEYWORDS="~amd64 ~x86"
 IUSE="bindist firebird +mysql oracle postgres sqlite sqlite3"
 
 DEPEND="mysql? ( virtual/mysql )
@@ -27,8 +24,6 @@ DEPEND="mysql? ( virtual/mysql )
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="bindist? ( !firebird )"
-
-S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
 	if ! ( use firebird || use mysql || use oracle || use postgres || use sqlite || use sqlite3 )
