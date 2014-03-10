@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/amd64/use.force,v 1.1 2012/11/21 18:15:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/amd64/use.force,v 1.2 2014/03/09 23:12:07 blueness Exp $
 
 # Force the flag which corresponds to ARCH.
 amd64
+
+# Force the flag corresponding to the default ABI.
+abi_x86_64

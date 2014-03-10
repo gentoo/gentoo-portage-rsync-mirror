@@ -1,19 +1,26 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.38 2014/02/28 18:17:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.39 2014/03/09 23:18:34 blueness Exp $
+
+  09 Mar 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/uclibc/amd64/use.force, linux/uclibc/amd64/use.mask,
+  linux/uclibc/x86/use.force, linux/uclibc/x86/use.mask,
+  linux/musl/amd64/use.force, linux/musl/amd64/use.mask,
+  linux/musl/x86/use.force, linux/musl/x86/use.mask:
+  hardened/linux/{uclibc,musl}/{amd64,x86}: force default abi flags
 
   28 Feb 2014; Anthony G. Basile <blueness@gentoo.org> +linux/musl/mips/eapi,
   +linux/musl/mips/make.defaults, +linux/musl/mips/mipsel/make.defaults,
   +linux/musl/mips/mipsel/parent, +linux/musl/mips/parent,
   +linux/musl/mips/use.force, +linux/musl/mips/use.mask:
-  Add linux/musl/mips and linux/musl/mips/mipsel
+  Add hardened/linux/musl/mips and hardened/linux/musl/mips/mipsel
 
   21 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
   +linux/musl/arm/armv7a/eapi, +linux/musl/arm/armv7a/make.defaults,
   +linux/musl/arm/armv7a/parent, +linux/musl/arm/eapi,
   +linux/musl/arm/make.defaults, +linux/musl/arm/parent,
   +linux/musl/arm/use.force, +linux/musl/arm/use.mask:
-  Add linux/musl/arm/armv7a
+  Add hardened/linux/musl/arm/armv7a
 
   17 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
   linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:

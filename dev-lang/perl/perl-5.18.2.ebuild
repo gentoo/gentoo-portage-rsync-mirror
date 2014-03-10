@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.18.2.ebuild,v 1.1 2014/03/05 14:10:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.18.2.ebuild,v 1.2 2014/03/09 23:29:34 civil Exp $
 
 EAPI=5
 
@@ -18,10 +18,10 @@ MY_PV="${PV%_rc*}"
 DESCRIPTION="Larry Wall's Practical Extraction and Report Language"
 
 SRC_URI="
-$(true	mirror://cpan/src/${MY_P}.tar.bz2)
+	mirror://cpan/src/5.0/${MY_P}.tar.bz2
 	mirror://cpan/authors/id/${MODULE_AUTHOR:0:1}/${MODULE_AUTHOR:0:2}/${MODULE_AUTHOR}/${MY_P}.tar.bz2
-$(true	mirror://gentoo/${MY_P}-${PATCH_VER}.tar.bz2)
-$(true	http://dev.gentoo.org/~tove/distfiles/${CATEGORY}/${PN}/${MY_P}-${PATCH_VER}.tar.bz2)
+	mirror://gentoo/${MY_P}-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~civil/distfiles/${CATEGORY}/${PN}/${MY_P}-${PATCH_VER}.tar.bz2
 "
 HOMEPAGE="http://www.perl.org/"
 
