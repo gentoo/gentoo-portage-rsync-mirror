@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.4.ebuild,v 1.3 2014/03/03 23:57:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.4.ebuild,v 1.4 2014/03/10 21:45:58 swegener Exp $
 
 EAPI=4
 
@@ -17,12 +17,10 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE="sqlite"
 
-DEPEND=">=dev-libs/elfutils-0.142
+RDEPEND=">=dev-libs/elfutils-0.142
 	sys-libs/libcap
 	sqlite? ( dev-db/sqlite:3 )"
-RDEPEND="${DEPEND}
-	virtual/linux-sources"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.18.2"
 
 CONFIG_CHECK="~KPROBES ~RELAY ~DEBUG_FS"
