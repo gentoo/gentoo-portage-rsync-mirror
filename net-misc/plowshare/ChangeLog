@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/plowshare
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.25 2014/01/05 21:33:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.26 2014/03/10 20:39:41 voyageur Exp $
+
+*plowshare-1.0.0 (10 Mar 2014)
+*plowshare-0_p20131130 (10 Mar 2014)
+
+  10 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +plowshare-0_p20131130.ebuild, +plowshare-1.0.0.ebuild,
+  -plowshare-20130520.ebuild, -plowshare-20131130.ebuild:
+  Version bump, rename older ebuild for new upstream versioning
 
 *plowshare-20131130 (05 Jan 2014)
 

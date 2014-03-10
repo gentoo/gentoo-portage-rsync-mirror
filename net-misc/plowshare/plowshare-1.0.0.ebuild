@@ -1,21 +1,22 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-20130520.ebuild,v 1.3 2013/08/09 13:44:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-1.0.0.ebuild,v 1.1 2014/03/10 20:39:41 voyageur Exp $
 
 EAPI=5
 
 inherit bash-completion-r1
 
-MY_P="${PN}4-snapshot-git${PV}.2b2d736"
+# Git rev of the tag
+MY_P="${PN}-8d0540cd0dfc"
 
 DESCRIPTION="Command-line downloader and uploader for file-sharing websites"
 HOMEPAGE="http://code.google.com/p/plowshare/"
-SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/archive/v${PV}.zip -> ${P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="bash-completion +javascript scripts view-captcha"
+IUSE="bash-completion +javascript view-captcha"
 
 RDEPEND="
 	>=app-shells/bash-4
@@ -32,23 +33,24 @@ S=${WORKDIR}/${MY_P}
 # NOTES:
 # javascript dep should be any javascript interpreter using /usr/bin/js
 
+# Modules using detect_javascript
+JS_MODULES="letitbit nowdownload_co rapidgator zalaa zalil_ru zippyshare"
+
 src_prepare() {
-	# Modules using detect_javascript
 	if ! use javascript; then
-		sed -i -e 's:^rapidgator.*::' \
-			-e 's:^zalaa*::' \
-			-e 's:^zippyshare*::' \
-			src/modules/config || die "sed failed"
-		rm src/modules/{rapidgator,zalaa,zippyshare}.sh || die "rm failed"
+		for module in ${JS_MODULES}; do
+			sed -i -e "s:^${module}.*::" src/modules/config || die "${module} sed failed"
+			rm src/modules/${module}.sh || die "${module} rm failed"
+		done
 	fi
 
-	# Don't let 'make install' install docs.
-	sed -i -e "/INSTALL.*DOCDIR/d" Makefile || die "sed failed"
+	# Fix doc install path
+	sed -i -e "/^DOCDIR/s|plowshare4|${P}|" Makefile || die "sed failed"
 
-	if use bash-completion; then
-		sed -i -e \
-			"s,/usr/local\(/share/plowshare4/modules/config\),${EPREFIX}/usr\1," \
-			etc/plowshare.completion || die "sed failed"
+	if ! use bash-completion
+	then
+		sed -i -e \ "/^install:/s/install_bash_completion//" \
+			Makefile || die "sed failed"
 	fi
 }
 
@@ -64,22 +66,11 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
-
-	dodoc AUTHORS README
-
-	if use scripts; then
-		exeinto /usr/bin/
-		doexe contrib/{plowdown_{add_remote_loop,loop,parallel}}.sh
-	fi
-
-	if use bash-completion; then
-		newbashcomp etc/${PN}.completion ${PN}
-	fi
 }
 
 pkg_postinst() {
 	if ! use javascript; then
 		ewarn "Without javascript you will not be able to use:"
-		ewarn " rapidgator, zalaa, zippyshare"
+		ewarn " ${JS_MODULES}"
 	fi
 }

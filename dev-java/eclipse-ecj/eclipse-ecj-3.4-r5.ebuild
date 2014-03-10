@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r5.ebuild,v 1.1 2012/07/10 14:55:24 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r5.ebuild,v 1.2 2014/03/10 20:43:52 johu Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://archive.eclipse.org/eclipse/downloads/drops/${DMF}/${MY_PN}src-$
 IUSE="java6"
 
 LICENSE="EPL-1.0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 SLOT="3.4"
 
 CDEPEND="|| ( app-admin/eselect-java app-admin/eselect-ecj )"

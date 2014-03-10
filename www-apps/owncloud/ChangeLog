@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.53 2014/03/04 08:52:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.54 2014/03/10 20:47:58 voyageur Exp $
+
+  10 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org> owncloud-5.0.15.ebuild,
+  owncloud-6.0.2.ebuild:
+  sqlite3 USE-flag is long gone in dev-lang/php, thanks Robert Cernansky
+  <openhs@users.sourceforge.net> in bug #504064
 
 *owncloud-6.0.2 (02 Mar 2014)
 *owncloud-5.0.15 (02 Mar 2014)

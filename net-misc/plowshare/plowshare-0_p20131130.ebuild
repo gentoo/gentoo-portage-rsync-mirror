@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-20131130.ebuild,v 1.1 2014/01/05 21:33:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0_p20131130.ebuild,v 1.1 2014/03/10 20:39:41 voyageur Exp $
 
 EAPI=5
 
 inherit bash-completion-r1
 
-MY_P="${PN}4-snapshot-git${PV}.3c63b19"
+MY_P="${PN}4-snapshot-git${PV/0_p}.3c63b19"
 
 DESCRIPTION="Command-line downloader and uploader for file-sharing websites"
 HOMEPAGE="http://code.google.com/p/plowshare/"
