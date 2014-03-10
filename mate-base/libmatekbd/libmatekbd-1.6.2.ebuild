@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/libmatekbd-1.6.2.ebuild,v 1.1 2014/02/28 13:15:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/libmatekbd-1.6.2.ebuild,v 1.2 2014/03/10 12:17:09 tomwij Exp $
 
 EAPI="5"
 
@@ -22,7 +22,6 @@ KEYWORDS="~amd64"
 IUSE="X test"
 
 RDEPEND=">=dev-libs/glib-2.18:2
-	sys-libs/glibc:2.2
 	x11-libs/cairo:0
 	>=x11-libs/gdk-pixbuf-2.18:2
 	>=x11-libs/gtk+-2.18:2

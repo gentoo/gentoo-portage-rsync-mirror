@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.6.2.ebuild,v 1.1 2014/02/28 23:09:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.6.2.ebuild,v 1.2 2014/03/10 12:12:07 tomwij Exp $
 
 EAPI="5"
 
@@ -25,13 +25,12 @@ IUSE="python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND=">=dev-libs/glib-2.13:2[${PYTHON_USEDEP}]
-	>=dev-libs/libxml2-2.6.0:2
+	>=dev-libs/libxml2-2.6:2
 	>=net-libs/libsoup-2.42.1:2.4
 	>=net-libs/libsoup-gnome-2.25.1:2.4
 	>=sys-libs/timezone-data-2010k:0
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.11:2
-	sys-libs/glibc:2.2
 	virtual/libintl:0
 
 	python? (
