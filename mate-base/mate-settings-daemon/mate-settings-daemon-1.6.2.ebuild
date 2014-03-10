@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/mate-settings-daemon-1.6.2.ebuild,v 1.2 2014/03/10 13:03:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/mate-settings-daemon-1.6.2.ebuild,v 1.3 2014/03/10 16:12:59 tomwij Exp $
 
 EAPI="5"
 
@@ -36,7 +36,6 @@ RDEPEND=">=dev-libs/dbus-glib-0.74:0
 	x11-libs/libXxf86misc:0
 	>=x11-libs/libxklavier-5:0
 	virtual/libintl:0
-
 	libnotify? ( >=x11-libs/libnotify-0.7:0 )
 	policykit? (
 		>=dev-libs/dbus-glib-0.71:0
@@ -54,9 +53,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.74:0
 	smartcard? ( >=dev-libs/nss-3.11.2:0 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.37.1
-	sys-devel/gettext
-	virtual/pkgconfig
+	>=dev-util/intltool-0.37.1:0
+	sys-devel/gettext:0
+	virtual/pkgconfig:0
 	x11-proto/inputproto:0
 	x11-proto/xproto:0"
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/storable
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.20 2012/09/23 08:41:52 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.21 2014/03/10 16:15:31 mrueg Exp $
+
+*storable-0.8.9-r1 (10 Mar 2014)
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +storable-0.8.9-r1.ebuild,
+  -storable-0.8.9.ebuild:
+  EAPI bump.
 
   23 Sep 2012; Hans de Graaff <graaff@gentoo.org> -storable-0.8.7.ebuild:
   Cleanup.
@@ -111,4 +117,3 @@
   12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +storable-0.6.1.ebuild, +files/storable-0.6.1-hanna.patch, +metadata.xml:
   Initial import of storable, needed for Rudy.
-

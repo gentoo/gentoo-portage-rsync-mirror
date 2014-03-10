@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/duby/duby-0.0.2.ebuild,v 1.1 2010/02/19 12:01:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/duby/duby-0.0.2-r1.ebuild,v 1.1 2014/03/10 16:20:52 mrueg Exp $
 
-EAPI=2
+EAPI=5
 
 USE_RUBY="jruby"
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend virtual/ruby-test-unit
+ruby_add_rdepend "dev-ruby/bitescript"
 
 all_ruby_install() {
 	all_fakegem_install

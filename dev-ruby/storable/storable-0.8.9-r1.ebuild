@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.8.9.ebuild,v 1.1 2011/05/22 06:10:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.8.9-r1.ebuild,v 1.1 2014/03/10 16:15:31 mrueg Exp $
 
-EAPI=2
+EAPI=5
 
 # jruby → yajl-ruby won't work, as it's compiled extension
 USE_RUBY="ruby18 ruby19"
@@ -48,5 +48,5 @@ all_ruby_install() {
 	all_fakegem_install
 
 	docinto examples
-	dodoc examples/* || die
+	dodoc examples/*
 }
