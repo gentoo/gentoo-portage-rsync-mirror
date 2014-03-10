@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/freemarker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.29 2014/03/04 23:13:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.30 2014/03/10 16:56:19 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org> freemarker-2.3.13-r1.ebuild:
+  x86 stable, bug #315557
 
   04 Mar 2014; Pacho Ramos <pacho@gentoo.org> freemarker-2.3.13-r1.ebuild:
   amd64 stable, bug 315557

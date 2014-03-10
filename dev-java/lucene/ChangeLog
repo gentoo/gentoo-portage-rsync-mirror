@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.97 2014/03/04 23:14:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.98 2014/03/10 16:56:51 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org> lucene-2.1.0-r2.ebuild,
+  lucene-2.2.0-r1.ebuild, lucene-2.3.2-r2.ebuild, lucene-2.4.1-r1.ebuild:
+  x86 stable, bug #315557
 
   04 Mar 2014; Pacho Ramos <pacho@gentoo.org> lucene-2.1.0-r2.ebuild,
   lucene-2.2.0-r1.ebuild, lucene-2.3.2-r2.ebuild, lucene-2.4.1-r1.ebuild:
