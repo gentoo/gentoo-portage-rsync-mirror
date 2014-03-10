@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.1.1.ebuild,v 1.2 2014/02/25 21:03:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.1.1.ebuild,v 1.3 2014/03/10 08:48:41 scarabeus Exp $
 
 EAPI=5
 
@@ -404,7 +404,7 @@ src_configure() {
 			--without-system-hsqldb
 			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
-			--with-jvm-path="${EPREFIX}/usr/$(get_libdir)/"
+			--with-jvm-path="${EPREFIX}/usr/lib/"
 		"
 
 		use libreoffice_extensions_scripting-beanshell && \
