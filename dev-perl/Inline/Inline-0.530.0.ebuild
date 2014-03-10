@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.530.0.ebuild,v 1.4 2014/02/23 14:58:33 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.530.0.ebuild,v 1.5 2014/03/10 11:09:29 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=SISYPHUS
 MODULE_VERSION=0.53
