@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.128 2014/03/07 23:26:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.129 2014/03/10 18:20:33 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org>
+  gentoolkit-dev-0.2.8.3-r1.ebuild:
+  x86 stable, bug #492236
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> gentoolkit-dev-0.2.8.3-r1.ebuild:
   amd64 stable, bug #492236
