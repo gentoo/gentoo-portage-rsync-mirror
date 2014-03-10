@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=!<media-video/avidemux-2.6.5:2.6 dev-db/sqlite:3 sdl? ( media-libs/libsdl:0 ) system-ffmpeg? ( >=virtual/ffmpeg-9:0[mp3,theora] ) xv? ( x11-libs/libXv:0 ) vaapi? ( x11-libs/libva:0 ) vdpau? ( x11-libs/libvdpau:0 ) video_cards_fglrx? ( x11-libs/xvba-video:0 ) virtual/pkgconfig:0 nls? ( sys-devel/gettext:0 ) !system-ffmpeg? ( dev-lang/yasm:0[nls=] ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=!<media-video/avidemux-2.6.5:2.6 dev-db/sqlite:3 sdl? ( media-libs/libsdl:0 ) system-ffmpeg? ( >=virtual/ffmpeg-9:0[mp3,theora] ) xv? ( x11-libs/libXv:0 ) vaapi? ( x11-libs/libva:0 ) vdpau? ( x11-libs/libvdpau:0 ) video_cards_fglrx? ( x11-libs/xvba-video:0 ) virtual/pkgconfig nls? ( sys-devel/gettext ) !system-ffmpeg? ( dev-lang/yasm[nls=] ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Core libraries for a video editor designed for simple cutting, filtering and encoding tasks.
 EAPI=5
 HOMEPAGE=http://fixounet.free.fr/avidemux
@@ -10,4 +10,4 @@ RDEPEND=nls? ( virtual/libintl:0 ) !<media-video/avidemux-2.6.5:2.6 dev-db/sqlit
 SLOT=2.6
 SRC_URI=mirror://sourceforge/avidemux/2.6.5/avidemux_2.6.5.tar.gz
 _eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1878ec240c90e46f2d74fb38b8245625
+_md5_=96fea7e9f708cfda42b58b05d0d80c6f

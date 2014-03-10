@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/mate-bluetooth/mate-bluetooth-1.6.0-r1.ebuild,v 1.1 2014/03/07 11:30:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/mate-bluetooth/mate-bluetooth-1.6.0-r1.ebuild,v 1.2 2014/03/10 13:52:43 ssuominen Exp $
 
 EAPI="5"
 
@@ -31,21 +31,20 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.74:0
 RDEPEND="${COMMON_DEPEND}
 	app-mobilephone/obexd:0
 	net-wireless/bluez:0=
-	virtual/udev:0
+	virtual/udev
 	virtual/libintl:0
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7:0 )"
 
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/mate-doc-utils-1.2.1:0
-	app-text/scrollkeeper:0
+	app-text/rarian
 	dev-libs/libxml2:2
 	>=dev-util/gtk-doc-1.9:0
-	>=dev-util/intltool-0.35:0
+	>=dev-util/intltool-0.35
 	>=mate-base/mate-common-1.6
-	sys-devel/gettext:0
-	sys-libs/glibc:2.2
-	virtual/pkgconfig:0
+	sys-devel/gettext
+	virtual/pkgconfig
 	x11-libs/libX11:0
 	x11-libs/libXi:0
 	x11-proto/xproto:0"

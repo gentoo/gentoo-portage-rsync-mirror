@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7.ebuild,v 1.3 2014/03/07 23:22:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.7.ebuild,v 1.4 2014/03/10 13:44:51 ssuominen Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ RDEPEND="${COMMON_DEP}
 
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.5
-	virtual/pkgconfig:0
+	virtual/pkgconfig
 	test? (
 		dev-java/ant-junit4:0
 		dev-java/junit:4
