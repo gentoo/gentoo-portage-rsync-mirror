@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0-r2.ebuild,v 1.2 2014/01/18 03:19:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0-r3.ebuild,v 1.1 2014/03/10 03:32:07 dolsen Exp $
 
 EAPI="5"
 
@@ -34,6 +34,7 @@ RDEPEND="
 		)
 	)
 	virtual/python-argparse[${PYTHON_USEDEP}]
+	sys-apps/portage[${PYTHON_USEDEP}]
 	"
 
 python_prepare_all()  {

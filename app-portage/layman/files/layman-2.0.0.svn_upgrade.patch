@@ -25,7 +25,7 @@ index 4804925..374a516 100644
          file_to_run = _resolve_command(self.command(), self.output.error)[1]
 -        args = file_to_run + ' -q --version'
 +        args = " ".join([file_to_run, " upgrade", target])
-         pipe = Popen(args, shell=True, stdout=PIPE)
+         pipe = Popen(args, shell=True, stdout=PIPE, stderr=PIPE)
          if pipe:
 -            self.output.debug("SVN: check_upgrade()... have a valid pipe", 4)
 -            version = pipe.stdout.readline().strip('\n')

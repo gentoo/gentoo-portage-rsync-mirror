@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.32 2014/01/07 02:54:58 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.33 2014/03/10 03:32:07 dolsen Exp $
 
 EAPI="5"
 
@@ -37,6 +37,7 @@ RDEPEND="
 	)
 	gpg? ( =dev-python/pyGPG-9999 )
 	virtual/python-argparse[${PYTHON_USEDEP}]
+	sys-apps/portage[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.2.1
 	dev-python/ndg-httpsclient
 	dev-python/pyasn1
