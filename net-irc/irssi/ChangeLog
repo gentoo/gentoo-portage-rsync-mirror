@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.186 2014/03/06 06:20:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.188 2014/03/10 22:22:19 swegener Exp $
+
+  10 Mar 2014; Sven Wegener <swegener@gentoo.org> irssi-0.8.16_rc1.ebuild,
+  irssi-9999.ebuild, metadata.xml:
+  Add support for proxy USE flag, bug #440302 by Sean McGovern.
 
   06 Mar 2014; Mark Wright <gienah@gentoo.org> files/irssi-0.8.15-tinfo.patch,
   irssi-0.8.15-r2.ebuild:

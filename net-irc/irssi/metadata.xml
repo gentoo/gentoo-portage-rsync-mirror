@@ -6,4 +6,7 @@
 	<email>swegener@gentoo.org</email>
 	<description>Primary Maintainer</description>
 </maintainer>
+<use>
+	<flag name="proxy">Adds support for a loadable IRC proxy module</flag>
+</use>
 </pkgmetadata>
