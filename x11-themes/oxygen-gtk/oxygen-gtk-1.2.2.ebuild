@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.2.2.ebuild,v 1.3 2014/01/21 01:41:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.2.2.ebuild,v 1.4 2014/03/10 12:47:25 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://projects.kde.org/projects/playground/artwork/oxygen-gtk"
 SRC_URI="mirror://kde/stable/${MY_PN}/${PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="3"
 IUSE="debug doc"
 

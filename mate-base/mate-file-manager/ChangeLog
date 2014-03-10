@@ -1,6 +1,11 @@
 # ChangeLog for mate-base/mate-file-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.1 2014/03/09 14:59:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.2 2014/03/10 13:00:57 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  mate-file-manager-1.6.3.ebuild:
+  Remove invalid SLOT dependencies from pkg-config, gettext and intltool. Remove
+  bogus sys-libs/glibc dependency.
 
 *mate-file-manager-1.6.3 (09 Mar 2014)
 

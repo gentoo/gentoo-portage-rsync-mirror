@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.109 2014/03/01 22:11:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.110 2014/03/10 13:00:19 ultrabug Exp $
+
+*rsyslog-7.4.10 (10 Mar 2014)
+
+  10 Mar 2014; Ultrabug <ultrabug@gentoo.org> +rsyslog-7.4.10.ebuild,
+  metadata.xml:
+  version bump fix #501978 thx to Thomas D., add Thomas D. as proxy-maintainer
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> rsyslog-7.2.7.ebuild,
   rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild, rsyslog-7.4.6.ebuild,

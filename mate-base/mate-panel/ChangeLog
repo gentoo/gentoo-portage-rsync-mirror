@@ -1,6 +1,10 @@
 # ChangeLog for mate-base/mate-panel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.2 2014/03/09 14:45:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.3 2014/03/10 13:00:14 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> mate-panel-1.6.1.ebuild:
+  Remove invalid SLOT dependencies from pkg-config, gettext and intltool. Remove
+  bogus sys-libs/glibc dependency.
 
   09 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-panel-1.6.1.ebuild:
   Remove gtk-doc dependency as we don't build documentation.

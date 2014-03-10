@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.6.2.ebuild,v 1.2 2014/03/10 12:20:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.6.2.ebuild,v 1.3 2014/03/10 12:59:16 ssuominen Exp $
 
 EAPI="5"
 
@@ -37,11 +37,11 @@ RDEPEND=">=dev-libs/glib-2.34:2
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/mate-doc-utils-1.6:0
-	>=dev-util/intltool-0.40:0
-	sys-devel/gettext:0
+	>=dev-util/intltool-0.40
+	sys-devel/gettext
 	>=x11-proto/randrproto-1.2:0
 	x11-proto/xproto:0
-	virtual/pkgconfig:0"
+	virtual/pkgconfig"
 
 src_configure() {
 	gnome2_src_configure \

@@ -6,6 +6,11 @@
     <name>Ultrabug</name>
     <description>Primary Maintainer</description>
   </maintainer>
+  <maintainer>
+    <email>whissi@whissi.de</email>
+    <name>Thomas D. (Whissi)</name>
+    <description>Proxy-Maintainer, CC. bugs</description>
+  </maintainer>
   <use>
     <flag name="extras">Add support for the UDP spoofing module (omudpspoof) using <pkg>net-libs/libnet</pkg></flag>
     <flag name="mongodb">Add support for the MongoDB output template module using <pkg>dev-libs/libmongo-client</pkg></flag>

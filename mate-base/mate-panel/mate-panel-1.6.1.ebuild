@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/mate-panel-1.6.1.ebuild,v 1.2 2014/03/09 14:45:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/mate-panel-1.6.1.ebuild,v 1.3 2014/03/10 13:00:14 ssuominen Exp $
 
 EAPI="5"
 
@@ -51,11 +51,10 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/mate-doc-utils-1.2.1:0
 	>=dev-lang/perl-5:0=
-	>=dev-util/intltool-0.40:0
+	>=dev-util/intltool-0.40
 	>=mate-base/mate-common-1.6:0
-	sys-devel/gettext:0
-	sys-libs/glibc:2.2
-	virtual/pkgconfig:0"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Disable python check.
