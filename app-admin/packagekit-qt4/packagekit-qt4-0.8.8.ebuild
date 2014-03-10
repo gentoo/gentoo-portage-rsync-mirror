@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.8.8.ebuild,v 1.1 2013/12/19 10:21:32 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.8.8.ebuild,v 1.2 2014/03/10 14:26:35 kensington Exp $
 
 EAPI="5"
 
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND=">=dev-qt/qtcore-4.4.0
-	>=dev-qt/qtdbus-4.4.0
-	>=dev-qt/qtsql-4.4.0
+RDEPEND=">=dev-qt/qtcore-4.4.0:4
+	>=dev-qt/qtdbus-4.4.0:4
+	>=dev-qt/qtsql-4.4.0:4
 	>=app-admin/packagekit-base-0.8.15-r1"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt

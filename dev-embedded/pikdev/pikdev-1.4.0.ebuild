@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-1.4.0.ebuild,v 1.1 2013/12/25 18:52:32 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-1.4.0.ebuild,v 1.2 2014/03/10 14:29:09 kensington Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-qt/qtcore
-	dev-qt/qtgui
-	dev-qt/qt3support
-	dev-qt/qtwebkit"
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qt3support:4
+	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}
 	>=dev-embedded/gputils-1.0.0"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/cpik/cpik-0.7.2_p4.ebuild,v 1.1 2013/12/15 19:51:19 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/cpik/cpik-0.7.2_p4.ebuild,v 1.2 2014/03/10 14:27:58 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-qt/qtcore"
+DEPEND="dev-qt/qtcore:4"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"

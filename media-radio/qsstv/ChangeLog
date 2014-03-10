@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/qsstv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.15 2014/02/02 15:19:26 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.16 2014/03/10 14:30:21 kensington Exp $
+
+  10 Mar 2014; Michael Palimaka <kensington@gentoo.org> qsstv-8.1.14.ebuild:
+  Pin Qt dependencies to SLOT 4.
 
 *qsstv-8.1.14 (02 Feb 2014)
 

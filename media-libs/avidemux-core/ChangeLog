@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/avidemux-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.19 2014/03/10 13:50:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.20 2014/03/10 14:13:47 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  avidemux-core-2.6.2-r1.ebuild, avidemux-core-2.6.3.ebuild,
+  avidemux-core-2.6.4.ebuild:
+  Remove guessed SLOTs from sys-devel/gettext dependency.
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   avidemux-core-2.6.5.ebuild, avidemux-core-2.6.7.ebuild,
