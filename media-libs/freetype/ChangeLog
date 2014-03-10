@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.388 2014/01/20 12:41:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.389 2014/03/10 15:21:07 polynomial-c Exp $
+
+*freetype-2.5.3 (10 Mar 2014)
+
+  10 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> +freetype-2.5.3.ebuild:
+  Security bump (bug #504088).
 
 *freetype-2.5.2-r1 (20 Jan 2014)
 
