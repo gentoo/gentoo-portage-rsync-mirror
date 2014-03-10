@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-0.9.15.ebuild,v 1.3 2014/01/27 16:11:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-0.9.15.ebuild,v 1.4 2014/03/10 20:27:04 blueness Exp $
 
 EAPI=5
 
@@ -30,9 +30,10 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="crosscompile_opts_headers-only nls"
 
-RDEPEND="
-	nls? ( sys-devel/gettext )
-	sys-apps/getent"
+RDEPEND="nls? ( sys-devel/gettext )"
+if [[ ${CATEGORY} != cross-* ]] ; then
+	RDEPEND+=" sys-apps/getent"
+fi
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]

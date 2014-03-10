@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sbd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.10 2011/12/19 18:18:16 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.11 2014/03/10 20:15:19 swegener Exp $
+
+  10 Mar 2014; Sven Wegener <swegener@gentoo.org> sbd-1.37-r1.ebuild,
+  metadata.xml:
+  Bump EAPI, move to maintainer-needed.
 
   19 Dec 2011; Tim Harder <radhermit@gentoo.org> -sbd-1.37.ebuild:
   Remove old.

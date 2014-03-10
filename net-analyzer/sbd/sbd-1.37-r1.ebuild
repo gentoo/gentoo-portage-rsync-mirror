@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/sbd-1.37-r1.ebuild,v 1.3 2011/12/15 14:24:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/sbd-1.37-r1.ebuild,v 1.4 2014/03/10 20:15:19 swegener Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit toolchain-funcs
 
@@ -16,6 +16,7 @@ KEYWORDS="amd64 ~hppa ~ppc x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i Makefile \
@@ -30,10 +31,10 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		unix || die "emake failed"
+		unix
 }
 
 src_install() {
-	dobin sbd || die "dobin failed"
-	dodoc CHANGES README || die "dodoc failed"
+	dobin sbd
+	dodoc CHANGES README
 }

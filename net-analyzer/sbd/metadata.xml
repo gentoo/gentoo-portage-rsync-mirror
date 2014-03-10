@@ -3,8 +3,7 @@
 <pkgmetadata>
 	<herd>netmon</herd>
 	<maintainer>
-		<email>swegener@gentoo.org</email>
-		<name>Sven Wegener</name>
+		<email>smaintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 sbd is a Netcat-clone, designed to be portable and offer strong encryption. It
