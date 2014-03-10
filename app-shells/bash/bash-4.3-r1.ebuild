@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3.ebuild,v 1.2 2014/02/28 22:45:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r1.ebuild,v 1.1 2014/03/10 01:15:31 vapier Exp $
 
 EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-4.2-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-4.3-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -82,6 +82,10 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
 	epatch "${FILESDIR}"/${PN}-4.2-no-readline.patch
+	epatch "${FILESDIR}"/${P}-debug-trap.patch
+	epatch "${FILESDIR}"/${P}-jobs-exit.patch
+	epatch "${FILESDIR}"/${P}-parse-ansi-expand.patch
+	epatch "${FILESDIR}"/${P}-pcomplete-dequote.patch
 
 	epatch_user
 }

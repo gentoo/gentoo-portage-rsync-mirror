@@ -1,0 +1,19 @@
+fix from upstream
+
+https://lists.gnu.org/archive/html/bug-bash/2014-03/msg00040.html
+
+*** ../bash-4.3/parse.y	2014-02-11 09:42:10.000000000 -0500
+--- parse.y	2014-03-07 20:57:15.000000000 -0500
+***************
+*** 3399,3403 ****
+           unescaped double-quotes or single-quotes, if any, shall occur." */
+        /* This was changed in Austin Group Interp 221 */
+!       if MBTEST(posixly_correct && shell_compatibility_level > 41 && dolbrace_state != DOLBRACE_QUOTE && (flags & P_DQUOTE) && (flags & P_DOLBRACE) && ch == '\'')
+  	continue;
+  
+--- 3399,3403 ----
+           unescaped double-quotes or single-quotes, if any, shall occur." */
+        /* This was changed in Austin Group Interp 221 */
+!       if MBTEST(posixly_correct && shell_compatibility_level > 41 && dolbrace_state != DOLBRACE_QUOTE && dolbrace_state != DOLBRACE_QUOTE2 && (flags & P_DQUOTE) && (flags & P_DOLBRACE) && ch == '\'')
+  	continue;
+  

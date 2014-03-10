@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
+	<maintainer><email>jer@gentoo.org</email></maintainer>
 	<maintainer>
 		<email>ninox+pmg@posteo.net</email>
 		<name>Andreas Schlick</name>
@@ -14,4 +15,8 @@
 		location, grouping and title rewriting properties, keychains, Xinerama
 		support, pixmap theming, and dynamic menus.
 	</longdescription>	
+	<use>
+		<flag name='contrib'>Install optional extras in the documentation directory</flag>
+		<flag name='themes'>Install additional themes</flag>
+	</use>
 </pkgmetadata>

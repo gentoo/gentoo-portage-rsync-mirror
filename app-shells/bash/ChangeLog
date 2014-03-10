@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.353 2014/02/28 22:45:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.354 2014/03/10 01:15:31 vapier Exp $
+
+*bash-4.3-r1 (10 Mar 2014)
+
+  10 Mar 2014; Mike Frysinger <vapier@gentoo.org> +bash-4.3-r1.ebuild,
+  +files/bash-4.3-debug-trap.patch, +files/bash-4.3-jobs-exit.patch,
+  +files/bash-4.3-parse-ansi-expand.patch,
+  +files/bash-4.3-pcomplete-dequote.patch, -bash-4.3.ebuild:
+  Add misc fixes from upstream.
 
   28 Feb 2014; Mike Frysinger <vapier@gentoo.org> -bash-4.3_rc2.ebuild,
   bash-4.3.ebuild:
