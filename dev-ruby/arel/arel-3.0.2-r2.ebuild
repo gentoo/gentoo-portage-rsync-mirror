@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/arel-3.0.2-r1.ebuild,v 1.2 2013/01/15 02:39:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/arel-3.0.2-r2.ebuild,v 1.1 2014/03/10 15:54:07 mrueg Exp $
 
-EAPI="2"
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+EAPI=5
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"

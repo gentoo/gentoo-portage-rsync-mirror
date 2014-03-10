@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amqp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.11 2013/12/22 07:44:26 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.12 2014/03/10 15:51:04 mrueg Exp $
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -amqp-1.1.6.ebuild,
+  amqp-0.6.7-r1.ebuild:
+  Cleanup old. Add ruby20 to amqp:0. Remove ree18.
 
 *amqp-1.1.8 (22 Dec 2013)
 

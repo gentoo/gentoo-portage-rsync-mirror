@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rest-client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.18 2013/09/02 08:05:56 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.19 2014/03/10 15:59:48 mrueg Exp $
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> rest-client-1.6.7-r1.ebuild:
+  Remove ree18.
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rest-client-1.6.7-r1.ebuild:
   Stable for x86, wrt bug #447586

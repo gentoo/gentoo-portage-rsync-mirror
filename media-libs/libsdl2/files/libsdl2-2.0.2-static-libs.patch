@@ -1,5 +1,5 @@
---- a/Makefile.in
-+++ b/Makefile.in
+--- SDL2-2.0.2.orig/Makefile.in
++++ SDL2-2.0.2/Makefile.in
 @@ -33,10 +33,10 @@
  OBJECTS = @OBJECTS@
  VERSION_OBJECTS = @VERSION_OBJECTS@
@@ -45,18 +45,18 @@
  install-data:
  	$(SHELL) $(auxdir)/mkinstalldirs $(DESTDIR)$(datadir)/aclocal
  	$(INSTALL) -m 644 $(srcdir)/sdl2.m4 $(DESTDIR)$(datadir)/aclocal/sdl2.m4
---- a/configure.in
-+++ b/configure.in
-@@ -2597,7 +2597,7 @@
-             have_loadso=yes
+--- SDL2-2.0.2.orig/configure.in
++++ SDL2-2.0.2/configure.in
+@@ -2858,7 +2858,7 @@
+         if test -f /lib/w32api/libuuid.a; then
+             LIBUUID=/lib/w32api/libuuid.a
+         else
+-            LIBUUID=-luuid
++            LIBUUID=-Wl,-luuid
          fi
-         # Set up the system libraries we need
--        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion -luuid -XCClinker -static-libgcc"
-+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion -Wl,-luuid -XCClinker -static-libgcc"
+         EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion $LIBUUID -XCClinker -static-libgcc"
          # The Windows platform requires special setup
-         VERSION_SOURCES="$srcdir/src/main/windows/*.rc"
-         SDLMAIN_SOURCES="$srcdir/src/main/windows/*.c"
-@@ -2873,23 +2873,23 @@
+@@ -3132,23 +3132,23 @@
  
  VERSION_OBJECTS=`echo $VERSION_SOURCES`
  VERSION_DEPENDS=`echo $VERSION_SOURCES`

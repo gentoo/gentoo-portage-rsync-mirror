@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/arel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.37 2013/12/24 16:03:53 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.38 2014/03/10 15:54:07 mrueg Exp $
+
+*arel-3.0.2-r2 (10 Mar 2014)
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +arel-3.0.2-r2.ebuild,
+  -arel-3.0.2-r1.ebuild:
+  Add ruby20 to arel:3.0. Remove ree18.
 
 *arel-5.0.0 (24 Dec 2013)
 

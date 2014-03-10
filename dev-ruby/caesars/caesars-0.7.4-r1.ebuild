@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/caesars-0.7.4.ebuild,v 1.2 2010/09/09 18:04:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/caesars/caesars-0.7.4-r1.ebuild,v 1.1 2014/03/10 15:55:42 mrueg Exp $
 
-EAPI=2
+EAPI=5
 
 USE_RUBY="ruby18 ruby19"
 

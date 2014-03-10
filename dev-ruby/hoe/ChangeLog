@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.150 2014/03/01 08:01:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.151 2014/03/10 15:58:00 mrueg Exp $
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -hoe-2.13.0.ebuild:
+  Cleanup unused.
 
   01 Mar 2014; Hans de Graaff <graaff@gentoo.org> hoe-3.9.0.ebuild:
   Add back amd64-fbsd keyword that got dropped by accident.
