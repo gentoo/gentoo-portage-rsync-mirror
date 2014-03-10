@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/birdie/birdie-1.1.ebuild,v 1.1 2014/02/12 10:09:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/birdie/birdie-1.1.ebuild,v 1.2 2014/03/10 07:29:09 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	media-libs/libcanberra
 	net-im/pidgin
 	net-libs/webkit-gtk:3
-	x11-libs/gtk+:3
+	>=x11-libs/gtk+-3.10:3
 	x11-libs/gtksourceview:3.0
 	x11-libs/libnotify
 	x11-libs/libXtst
