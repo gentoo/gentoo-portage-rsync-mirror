@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/mate-sensors-applet-1.6.1.ebuild,v 1.2 2014/03/10 13:11:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/mate-sensors-applet-1.6.1.ebuild,v 1.4 2014/03/10 22:36:29 tomwij Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64"
 
 IUSE="+dbus hddtemp libnotify lm_sensors video_cards_fglrx video_cards_nvidia"
 
-RDEPEND="
+RDEPEND="app-text/rarian:0
 	>=dev-libs/glib-2.26:2
 	>=mate-base/mate-panel-1.6:0
 	>=x11-libs/cairo-1.0.4:0
@@ -34,19 +34,19 @@ RDEPEND="
 			>=dev-libs/libatasmart-0.16:0 )
 		!dbus? ( >=app-admin/hddtemp-0.3_beta13:0 ) )
 	libnotify? ( >=x11-libs/libnotify-0.7:0 )
-	lm_sensors? ( sys-apps/lm_sensors )
-	video_cards_fglrx? ( x11-drivers/ati-drivers )
+	lm_sensors? ( sys-apps/lm_sensors:0 )
+	video_cards_fglrx? ( x11-drivers/ati-drivers:* )
 	video_cards_nvidia? ( || (
 		>=x11-drivers/nvidia-drivers-100.14.09:0
 		media-video/nvidia-settings:0
 	) )"
 
 DEPEND="${RDEPEND}
-	dev-util/intltool
+	dev-util/intltool:*
 	>=app-text/mate-doc-utils-1.6:0
-	app-text/rarian
-	sys-devel/gettext
-	virtual/pkgconfig"
+	>=app-text/scrollkeeper-dtd-1:1.0
+	sys-devel/gettext:*
+	virtual/pkgconfig:*"
 
 # Requires libxslt only for use by gnome-doc-utils.
 PDEPEND="hddtemp? ( dbus? ( sys-fs/udisks:0 ) )"
@@ -61,7 +61,6 @@ src_configure() {
 	fi
 
 	gnome2_src_configure \
-		--disable-scrollkeeper \
 		--disable-static \
 		$(use_enable libnotify) \
 		$(use_with lm_sensors libsensors) \

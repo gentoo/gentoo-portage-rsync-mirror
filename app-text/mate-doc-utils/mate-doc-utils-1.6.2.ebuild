@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mate-doc-utils/mate-doc-utils-1.6.2.ebuild,v 1.3 2014/03/10 13:13:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mate-doc-utils/mate-doc-utils-1.6.2.ebuild,v 1.4 2014/03/10 23:00:16 tomwij Exp $
 
 EAPI="5"
 
@@ -29,11 +29,11 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.4
 	>=app-text/gnome-doc-utils-0.20.10:0[${PYTHON_USEDEP}]
 	app-text/scrollkeeper-dtd:1.0
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.35:*
 	>=mate-base/mate-common-1.6:0
-	>=sys-apps/gawk-3
-	sys-devel/gettext
-	virtual/pkgconfig"
+	>=sys-apps/gawk-3:0
+	sys-devel/gettext:*
+	virtual/pkgconfig:*"
 
 src_prepare() {
 	gnome2_src_prepare

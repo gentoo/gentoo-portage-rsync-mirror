@@ -1,6 +1,12 @@
 # ChangeLog for mate-extra/mate-sensors-applet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/ChangeLog,v 1.2 2014/03/10 13:11:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/ChangeLog,v 1.4 2014/03/10 22:36:29 tomwij Exp $
+
+  10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-sensors-applet-1.6.1.ebuild:
+  Remove scrollkeeper configure flag.
+
+  10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-sensors-applet-1.6.1.ebuild:
+  Further review of dependencies.
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   mate-sensors-applet-1.6.1.ebuild:

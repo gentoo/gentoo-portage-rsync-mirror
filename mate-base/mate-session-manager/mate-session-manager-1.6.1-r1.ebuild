@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.6.1-r1.ebuild,v 1.4 2014/03/10 14:14:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.6.1-r1.ebuild,v 1.5 2014/03/10 22:58:29 tomwij Exp $
 
 EAPI="5"
 
@@ -41,18 +41,18 @@ RDEPEND=">=dev-libs/dbus-glib-0.76:0
 	x11-libs/libXtst:0
 	x11-libs/pango:0
 	x11-libs/xtrans:0
-	x11-misc/xdg-user-dirs
-	x11-misc/xdg-user-dirs-gtk
+	x11-misc/xdg-user-dirs:0
+	x11-misc/xdg-user-dirs-gtk:0
 	virtual/libintl:0
 	elibc_FreeBSD? ( dev-libs/libexecinfo:0 )
 	gnome-keyring? ( gnome-base/gnome-keyring:0 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.40:*
 	>=dev-lang/perl-5:0
 	>=mate-base/mate-common-1.6:0
-	>=sys-devel/gettext-0.10.40
-	virtual/pkgconfig
+	>=sys-devel/gettext-0.10.40:*
+	virtual/pkgconfig:*
 	!<gnome-base/gdm-2.20.4:0
 	systemd? ( sys-apps/systemd:0 )"
 

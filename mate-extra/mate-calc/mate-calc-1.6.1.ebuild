@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-calc/mate-calc-1.6.1.ebuild,v 1.4 2014/03/10 16:49:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-calc/mate-calc-1.6.1.ebuild,v 1.5 2014/03/10 22:49:19 tomwij Exp $
 
 EAPI="5"
 
@@ -29,8 +29,8 @@ RDEPEND="app-text/rarian:0
 DEPEND="${RDEPEND}
 	>=app-text/mate-doc-utils-1.6
 	>=app-text/scrollkeeper-dtd-1:1.0
-	>=dev-util/intltool-0.35
-	sys-devel/gettext
-	virtual/pkgconfig"
+	>=dev-util/intltool-0.35:*
+	sys-devel/gettext:*
+	virtual/pkgconfig:*"
 
 DOCS="AUTHORS ChangeLog NEWS README"
