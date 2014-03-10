@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.20.ebuild,v 1.7 2011/04/24 17:42:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.20.ebuild,v 1.8 2014/03/10 17:35:15 ssuominen Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~
 IUSE="test"
 
 RDEPEND=""
-DEPEND="test? (	dev-python/eyeD3
+DEPEND="test? (	dev-python/eyeD3:0
 			dev-python/pyvorbis
 			media-libs/flac[ogg]
 			media-sound/vorbis-tools )"

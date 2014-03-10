@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-java
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-java/ChangeLog,v 1.5 2014/03/08 14:11:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-java/ChangeLog,v 1.6 2014/03/10 17:35:32 johu Exp $
+
+  10 Mar 2014; Johannes Huber <johu@gentoo.org> eselect-java-0.1.0.ebuild:
+  x86 stable, bug #500398
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> eselect-java-0.1.0.ebuild:
   amd64 stable, bug 500398

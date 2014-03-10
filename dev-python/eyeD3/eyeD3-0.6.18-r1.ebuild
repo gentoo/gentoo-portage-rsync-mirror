@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.18-r1.ebuild,v 1.6 2014/02/14 15:39:56 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.18-r1.ebuild,v 1.7 2014/03/10 17:36:22 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -17,9 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-DEPEND=""
-# Pull in eyeD3 binary
-RDEPEND="${CATEGORY}/${PN}:0.7"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"

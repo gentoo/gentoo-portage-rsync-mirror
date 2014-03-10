@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mutagen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.95 2013/12/08 04:48:58 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.96 2014/03/10 17:35:15 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> mutagen-1.20.ebuild,
+  mutagen-1.22.ebuild:
+  Force old eyeD3 SLOT for 1.20 and 1.21 because the old python files are used.
+  Let 1.22 pull in any version, even if the test fails, since it's only a test.
 
 *mutagen-1.22 (08 Dec 2013)
 

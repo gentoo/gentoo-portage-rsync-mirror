@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.4.ebuild,v 1.3 2013/01/23 11:52:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.4.ebuild,v 1.4 2014/03/10 17:32:31 ssuominen Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="media-sound/cd-discid
 	cdr? ( virtual/cdrtools )
 	flac? ( media-libs/flac )
 	id3tag? (
-		dev-python/eyeD3
+		=dev-python/eyeD3-0.6.18
 		>=media-sound/id3-0.12
 		media-sound/id3v2
 		)
