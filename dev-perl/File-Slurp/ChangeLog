@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Slurp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.64 2014/02/23 14:57:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.65 2014/03/10 10:22:03 zlogene Exp $
+
+  10 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -File-Slurp-9999.13.ebuild:
+  Remove version with old EAPI
 
   23 Feb 2014; Naohiro Aota <naota@gentoo.org> File-Slurp-9999.190.0.ebuild:
   Add ~x86-fbsd wrt bug #501346

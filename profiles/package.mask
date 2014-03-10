@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15461 2014/03/09 14:32:05 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15462 2014/03/10 10:23:17 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -334,11 +334,6 @@ media-plugins/vdr-amarok
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Masked for testing
 =media-sound/lilypond-2.19*
-
-# Aaron W. Swenson <titanofold@gentoo.org> (30 Jan 2014)
-# Package no longer maintained separately from x11-misc/slim. Removal
-# in 30 days.
-x11-misc/slimlock
 
 # Mike Gilbert <floppym@gentoo.org> (29 Jan 2014)
 # I suspect this package is not used. If you are using it, please contact me.
