@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/pyrenamer-0.6.0-r1.ebuild,v 1.1 2013/02/16 00:24:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/pyrenamer-0.6.0-r1.ebuild,v 1.2 2014/03/10 17:29:49 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ IUSE="music"
 
 RDEPEND="dev-python/pygtk:2
 	dev-python/gconf-python
-	music? ( || ( dev-python/eyeD3 app-misc/hachoir-metadata ) )"
+	music? ( || ( app-misc/hachoir-metadata <dev-python/eyeD3-0.7 ) )"
 
 pkg_setup() {
 	python_pkg_setup

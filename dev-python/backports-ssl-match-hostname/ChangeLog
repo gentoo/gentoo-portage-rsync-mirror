@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/backports-ssl-match-hostname
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-ssl-match-hostname/ChangeLog,v 1.2 2014/03/07 19:29:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-ssl-match-hostname/ChangeLog,v 1.3 2014/03/10 17:03:57 bicatali Exp $
+
+  10 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  backports-ssl-match-hostname-3.4.0.2.ebuild:
+  Keyword amd64-linux and x86-linux, fixed for prefix
 
   07 Mar 2014; Tim Harder <radhermit@gentoo.org>
   backports-ssl-match-hostname-3.4.0.2.ebuild:
@@ -11,4 +15,3 @@
   26 Jan 2014; Tim Harder <radhermit@gentoo.org>
   +backports-ssl-match-hostname-3.4.0.2.ebuild, +metadata.xml:
   Initial import, ebuild by me.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik-world-boundaries/mapnik-world-boundaries-20090514.ebuild,v 1.3 2014/03/07 23:16:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik-world-boundaries/mapnik-world-boundaries-20090514.ebuild,v 1.4 2014/03/10 17:11:53 johu Exp $
 EAPI=2
 
 DESCRIPTION="Mapnik World Boundaries"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/world_boundaries-spherical-20090331.tgz
 LICENSE="CC-BY-SA-2.0"
 SLOT="0"
 
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 

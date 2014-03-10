@@ -1,6 +1,12 @@
 # ChangeLog for net-print/c2esp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/c2esp/ChangeLog,v 1.4 2012/07/25 03:27:46 binki Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/c2esp/ChangeLog,v 1.5 2014/03/10 17:07:29 mrueg Exp $
+
+*c2esp-26 (10 Mar 2014)
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +c2esp-26.ebuild,
+  +files/c2esp-26-ldflags-cppflags.patch, -c2esp-24.ebuild:
+  Version bump. Thanks to Lukasz Jankowski. Fixes bug #479430.
 
 *c2esp-25c (25 Jul 2012)
 

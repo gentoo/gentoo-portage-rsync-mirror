@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.63 2014/02/23 16:12:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.64 2014/03/10 17:20:20 mrueg Exp $
+
+  10 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -rspec-mocks-2.14.1.ebuild,
+  -rspec-mocks-2.14.2.ebuild, -rspec-mocks-2.14.3.ebuild,
+  -rspec-mocks-2.14.4.ebuild:
+  Cleanup old.
 
 *rspec-mocks-2.14.6 (23 Feb 2014)
 
