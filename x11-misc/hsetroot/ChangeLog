@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/hsetroot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.13 2012/06/04 20:13:08 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.14 2014/03/10 09:39:12 ssuominen Exp $
+
+  10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/hsetroot-1.0.2-underlinking.patch, hsetroot-1.0.2.ebuild:
+  Use pkg-config to get $(X11_LIBS) for the hsetroot binary in src/Makefile.am
+  wrt #504056 by techno156
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> hsetroot-1.0.2.ebuild:
   Fix SRC_URI/HOMEPAGE (reported by df, bug 416293)
@@ -43,4 +48,3 @@
 
   05 Dec 2004; <pyrania@gentoo.org> +metadata.xml, +hsetroot-1.0.2.ebuild:
   Initial import.
-
