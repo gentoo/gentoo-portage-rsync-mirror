@@ -10,4 +10,4 @@ RDEPEND=!mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/n
 SLOT=0
 SRC_URI=mirror://gnu-alpha/mailutils/mailutils-2.99.98.tar.xz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=20c9e94a15e73f6a90622f84f7fdb2e7
+_md5_=d274ccc52b46f435202697ca1a24c90f

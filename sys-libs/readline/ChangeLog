@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.194 2014/02/28 22:29:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.195 2014/03/10 00:53:24 vapier Exp $
+
+*readline-6.3-r1 (10 Mar 2014)
+
+  10 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/readline-6.3-vi-last.patch, +readline-6.3-r1.ebuild,
+  -readline-6.3.ebuild:
+  Force some cross-compile tests to the right answer #503312 by Hristo Venev.
+  Add fix from upstream for vi mode.
 
   28 Feb 2014; Mike Frysinger <vapier@gentoo.org> readline-6.3.ebuild:
   Unmask for all.

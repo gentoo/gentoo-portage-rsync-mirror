@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3.ebuild,v 1.2 2014/02/28 22:29:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3-r1.ebuild,v 1.1 2014/03/10 00:53:24 vapier Exp $
 
 EAPI=4
 
 inherit eutils multilib toolchain-funcs flag-o-matic multilib-minimal
 
 # Official patches
-# See ftp://ftp.cwru.edu/pub/bash/readline-6.2-patches/
+# See ftp://ftp.cwru.edu/pub/bash/readline-6.3-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -55,6 +55,7 @@ src_prepare() {
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${PN}-6.2-rlfe-tgoto.patch #385091
+	epatch "${FILESDIR}"/${PN}-6.3-vi-last.patch
 
 	# Force ncurses linking. #71420
 	# Use pkg-config to get the right values. #457558
@@ -84,6 +85,15 @@ src_configure() {
 
 	# Force the test since we used sed above to force it.
 	export bash_cv_termcap_lib=ncurses
+
+	# Control cross-compiling cases when we know the right answer.
+	# In cases where the C library doesn't support wide characters, readline
+	# itself won't work correctly, so forcing the answer below should be OK.
+	if tc-is-cross-compiler ; then
+		export bash_cv_func_sigsetjmp='present'
+		export bash_cv_func_ctype_nonascii='yes'
+		export bash_cv_wcwidth_broken='no' #503312
+	fi
 
 	# This is for rlfe, but we need to make sure LDFLAGS doesn't change
 	# so we can re-use the config cache file between the two.

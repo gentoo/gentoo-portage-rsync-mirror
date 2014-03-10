@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/pry
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.11 2013/01/20 13:41:55 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.12 2014/03/10 00:37:41 vikraman Exp $
+
+*pry-0.9.12.6 (10 Mar 2014)
+
+  10 Mar 2014; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  +pry-0.9.12.6.ebuild, pry-0.9.11.4.ebuild:
+  Patch coderay dependency in gemspec, fix test dependencies, bump to 0.12.6.
 
 *pry-0.9.11.4 (20 Jan 2013)
 
