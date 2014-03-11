@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.6.ebuild,v 1.1 2014/03/10 18:00:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.6.ebuild,v 1.2 2014/03/11 03:14:28 patrick Exp $
 
 EAPI=5
 
@@ -37,7 +37,6 @@ pkg_setup() {
 	enewgroup xrootd
 	enewuser xrootd -1 -1 "${EPREFIX}"/var/spool/xrootd xrootd
 }
-
 
 src_configure() {
 	local mycmakeargs=(
