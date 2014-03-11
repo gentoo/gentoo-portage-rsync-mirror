@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.8.4.ebuild,v 1.9 2014/01/26 12:12:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.8.4.ebuild,v 1.10 2014/03/11 06:41:52 patrick Exp $
 
 EAPI="5"
 
@@ -33,4 +33,5 @@ src_compile() {
 	unset XTPAX
 	use ptpax && export PTPAX="yes"
 	use xtpax && export XTPAX="yes"
+	distutils-r1_src_compile
 }

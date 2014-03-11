@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>hardened</herd>
+	<herd>python</herd>
 	<maintainer>
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
