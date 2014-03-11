@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15462 2014/03/10 10:23:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15463 2014/03/11 02:14:30 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -143,9 +143,14 @@ app-emacs/tnt
 #     https://gist.github.com/TomWij/cf9cdd0fe90ac08b8ded
 #
 # If you use another overlay, replace the ::mate-overlay suffix by that overlay.
+app-arch/mate-file-archiver
+app-editors/mate-text-editor
 app-text/mate-doc-utils
+app-text/mate-document-viewer
 dev-libs/libmateweather
+dev-python/python-caja
 mate-base/libmatekbd
+mate-base/mate-applets
 mate-base/mate-common
 mate-base/mate-desktop
 mate-base/mate-file-manager
@@ -153,22 +158,31 @@ mate-base/mate-menus
 mate-base/mate-panel
 mate-base/mate-session-manager
 mate-base/mate-settings-daemon
+mate-extra/caja-dropbox
 mate-extra/mate-calc
 mate-extra/mate-character-map
 mate-extra/mate-dialogs
+mate-extra/mate-file-manager-image-converter
+mate-extra/mate-file-manager-open-terminal
+mate-extra/mate-file-manager-sendto
+mate-extra/mate-file-manager-share
 mate-extra/mate-polkit
 mate-extra/mate-power-manager
 mate-extra/mate-screensaver
 mate-extra/mate-sensors-applet
 mate-extra/mate-system-monitor
 mate-extra/mate-utils
+media-gfx/mate-image-viewer
+net-analyzer/mate-netspeed
 net-wireless/mate-bluetooth
 x11-libs/libmatewnck
+x11-misc/mate-menu-editor
+x11-misc/mate-notification-daemon
 x11-terms/mate-terminal
 x11-themes/mate-backgrounds
 x11-themes/mate-icon-theme
+x11-themes/mate-icon-theme-faenza
 x11-themes/mate-themes
-x11-wm/marco
 x11-wm/mate-window-manager
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
@@ -176,9 +190,14 @@ x11-wm/mate-window-manager
 #
 # Given that MATE Desktop Environment 1.8 will release soon, this mask is 
 # placed in advance to allow to bump to it as soon as it hits.
+>=app-arch/mate-file-archiver-1.7
+>=app-editors/mate-text-editor-1.7
 >=app-text/mate-doc-utils-1.7
+>=app-text/mate-document-viewer-1.7
 >=dev-libs/libmateweather-1.7
+>=dev-python/python-caja-1.7
 >=mate-base/libmatekbd-1.7
+>=mate-base/mate-applets-1.7
 >=mate-base/mate-common-1.7
 >=mate-base/mate-desktop-1.7
 >=mate-base/mate-file-manager-1.7
@@ -186,22 +205,31 @@ x11-wm/mate-window-manager
 >=mate-base/mate-panel-1.7
 >=mate-base/mate-session-manager-1.7
 >=mate-base/mate-settings-daemon-1.7
+>=mate-extra/caja-dropbox-0.7.2
 >=mate-extra/mate-calc-1.7
 >=mate-extra/mate-character-map-1.7
 >=mate-extra/mate-dialogs-1.7
+>=mate-extra/mate-file-manager-image-converter-1.7
+>=mate-extra/mate-file-manager-open-terminal-1.7
+>=mate-extra/mate-file-manager-sendto-1.7
+>=mate-extra/mate-file-manager-share-1.7
 >=mate-extra/mate-polkit-1.7
 >=mate-extra/mate-power-manager-1.7
 >=mate-extra/mate-screensaver-1.7
 >=mate-extra/mate-sensors-applet-1.7
 >=mate-extra/mate-system-monitor-1.7
 >=mate-extra/mate-utils-1.7
+>=media-gfx/mate-image-viewer-1.7
+>=net-analyzer/mate-netspeed-1.7
 >=net-wireless/mate-bluetooth-1.7
 >=x11-libs/libmatewnck-1.7
+>=x11-misc/mate-menu-editor-1.7
+>=x11-misc/mate-notification-daemon-1.7
 >=x11-terms/mate-terminal-1.7
 >=x11-themes/mate-backgrounds-1.7
 >=x11-themes/mate-icon-theme-1.7
+>=x11-themes/mate-icon-theme-faenza-1.7
 >=x11-themes/mate-themes-1.7
->=x11-wm/marco-1.7
 >=x11-wm/mate-window-manager-1.7
 
 # Ulrich Müller <ulm@gentoo.org> (21 Feb 2014)

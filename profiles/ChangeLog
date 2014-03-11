@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8686 2014/03/10 10:23:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8687 2014/03/11 02:14:30 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Mask app-arch/mate-file-archiver, app-editors/mate-text-editor,
+  app-text/mate-document-viewer, dev-python/python-caja,
+  mate-base/mate-applets, mate-extra/caja-dropbox,
+  mate-extra/mate-file-manager-image-converter,
+  mate-extra/mate-file-manager-open-terminal,
+  mate-extra/mate-file-manager-sendto, mate-extra/mate-file-manager-share,
+  media-gfx/mate-image-viewer, x11-misc/mate-menu-editor,
+  net-analyzer/mate-netspeed, x11-misc/mate-notification-daemon and
+  x11-themes/mate-icon-theme-faenza for MATE introduction. Removed x11-wm/marco
+  mask which will be reintroduced later at or after 1.8 version bumps.
 
   10 Mar 2014; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
   x11-misc/slimlock removed from tree. Removing mask. Project merged with
