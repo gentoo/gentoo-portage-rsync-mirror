@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.78 2014/01/15 18:08:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.79 2014/03/11 18:40:17 mgorny Exp $
 
 EAPI=5
 
@@ -202,9 +202,6 @@ multilib_src_configure() {
 		$(use_enable libffi)
 	)
 
-	if use clang; then
-		conf_flags+=( --with-clang-resource-dir=../lib/clang/3.5 )
-	fi
 	# well, it's used only by clang executable c-index-test
 	if multilib_build_binaries && use clang && use xml; then
 		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )

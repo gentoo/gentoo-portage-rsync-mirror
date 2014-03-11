@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.148 2014/03/03 18:34:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.149 2014/03/11 19:01:11 aballier Exp $
 
 EAPI="5"
 
@@ -175,7 +175,8 @@ src_configure() {
 	# This will feed configure with $(use_enable foo bar)
 	# or $(use_enable foo foo) if no :bar is set.
 	local ffuse="bzip2:bzlib cpudetection:runtime-cpudetect debug doc
-			     gnutls hardcoded-tables iconv network openssl sdl:ffplay vaapi vdpau zlib"
+			     gnutls hardcoded-tables iconv network openssl sdl:ffplay vaapi
+				 vdpau X:xlib zlib"
 	use openssl && myconf="${myconf} --enable-nonfree"
 
 	# Encoders
