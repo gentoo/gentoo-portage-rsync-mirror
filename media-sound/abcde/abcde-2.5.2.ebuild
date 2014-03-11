@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.2.ebuild,v 1.7 2012/11/25 09:32:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.2.ebuild,v 1.8 2014/03/11 19:11:24 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND="media-sound/cd-discid
 	virtual/eject
 	aac? (
 		media-libs/faac
-		media-video/atomicparsley
+		|| ( media-video/atomicparsley media-video/atomicparsley-wez )
 		)
 	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.19.ebuild,v 1.4 2011/01/06 16:44:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiotag/audiotag-0.19.ebuild,v 1.5 2014/03/11 19:10:07 ssuominen Exp $
 
 DESCRIPTION="A command-line tool for mass tagging/renaming of audio files."
 HOMEPAGE="http://github.com/Daenyth/audiotag"
@@ -15,7 +15,7 @@ RDEPEND="dev-lang/perl
 	flac? ( media-libs/flac )
 	vorbis? ( media-sound/vorbis-tools )
 	mp3? ( media-libs/id3lib )
-	aac? ( media-video/atomicparsley )"
+	aac? ( || ( media-video/atomicparsley media-video/atomicparsley-wez ) )"
 DEPEND=""
 
 src_install() {
