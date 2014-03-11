@@ -1,0 +1,10 @@
+# ChangeLog for x11-terms/mate-terminal
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/ChangeLog,v 1.1 2014/03/11 01:27:52 tomwij Exp $
+
+*mate-terminal-1.6.2 (11 Mar 2014)
+
+  11 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-terminal-1.6.2.ebuild,
+  +metadata.xml:
+  New ebuild for x11-terms/mate-terminal, the MATE Terminal; imported from the
+  mate-overlay, reviewed and adjusted.
