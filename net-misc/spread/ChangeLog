@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/spread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.12 2014/01/08 06:32:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.13 2014/03/11 09:50:44 kumba Exp $
+
+*spread-4.3.0 (11 Mar 2014)
+*spread-4.1.0-r1 (11 Mar 2014)
+
+  11 Mar 2014; Joshua Kinard <kumba@gentoo.org> +spread-4.1.0-r1.ebuild,
+  +spread-4.3.0.ebuild, files/spread.init.d:
+  Add 4.3.0 ebuild, fix init script to create /var/run/spread at startup to
+  resolve #449242.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> spread-4.1.0.ebuild:
   Inherit the user eclass for enewuser/etc...
