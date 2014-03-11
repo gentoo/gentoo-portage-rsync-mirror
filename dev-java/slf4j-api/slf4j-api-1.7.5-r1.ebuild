@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/slf4j-api-1.7.5.ebuild,v 1.1 2013/11/30 09:41:28 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/slf4j-api-1.7.5-r1.ebuild,v 1.1 2014/03/11 04:15:19 radhermit Exp $
 
 EAPI=5
-
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2

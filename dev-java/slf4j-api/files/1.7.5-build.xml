@@ -35,6 +35,7 @@
 			</src>
 			<classpath refid="build.classpath" />
 		</javac>
+		<delete dir="${maven.build.outputDir}/org/slf4j/impl" />
 		<copy todir="${maven.build.outputDir}">
 			<fileset dir="${maven.build.resourceDir.0}" />
 		</copy>
