@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
+DESCRIPTION=Full sources including the Gentoo patchset for the 3.12 kernel tree
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches
+IUSE=deblob experimental symlink build deblob
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+PDEPEND=!build? ( virtual/dev-manager )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.12.14
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.12.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.12.N/deblob-3.12 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.12.N/deblob-check -> deblob-check-3.12 ) mirror://gentoo/genpatches-3.12-15.base.tar.xz mirror://gentoo/genpatches-3.12-15.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.12-15.experimental.tar.xz )
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	kernel-2	263afd0e4a90481352469cff577efe1b	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=cd8b170603098ce28607e0f64bce0fea

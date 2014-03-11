@@ -1,0 +1,10 @@
+# ChangeLog for mate-extra/mate-system-monitor
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-system-monitor/ChangeLog,v 1.1 2014/03/10 23:53:58 tomwij Exp $
+
+*mate-system-monitor-1.6.1 (10 Mar 2014)
+
+  10 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-system-monitor-1.6.1.ebuild, +metadata.xml:
+  New ebuild for mate-extra/mate-system-monitor, the MATE System Monitor;
+  imported from the mate-overlay, reviewed and adjusted.
