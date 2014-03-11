@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.60 2014/02/11 13:22:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.61 2014/03/11 20:22:29 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> i18n-0.6.9-r1.ebuild:
+  ~x86 added, bug #487206
 
   11 Feb 2014; Manuel Rüger <mrueg@gentoo.org> -i18n-0.6.5.ebuild:
   Cleanup old.

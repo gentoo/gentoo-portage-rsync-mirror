@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/coffee-rails-4.0.0.ebuild,v 1.2 2013/10/13 22:10:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/coffee-rails-4.0.0.ebuild,v 1.3 2014/03/11 20:08:47 johu Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/rails/coffee-rails"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE=""
 

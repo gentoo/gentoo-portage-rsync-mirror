@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.10.1.ebuild,v 1.4 2014/03/09 12:02:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.10.1.ebuild,v 1.5 2014/03/11 20:24:50 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -81,6 +81,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.5
 	app-text/scrollkeeper
+	app-text/yelp-tools
 	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.40
 	sys-devel/gettext

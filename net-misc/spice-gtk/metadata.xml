@@ -6,15 +6,9 @@
     <email>dev-zero@gentoo.org</email>
     <name>Tiziano Müller</name>
   </maintainer>
-  <maintainer>
-    <email>nirbheek@gentoo.org</email>
-    <name>Nirbheek Chauhan</name>
-  </maintainer>
   <use>
     <flag name="gtk3">Link against <pkg>x11-libs/gtk+:3</pkg> instead of
 			<pkg>x11-libs/gtk+:2</pkg></flag>
-    <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-			for introspection</flag>
     <flag name="policykit">Enable <pkg>sys-auth/polkit</pkg> support for the
 			usbredir acl helper</flag>
     <flag name="usbredir">Use <pkg>sys-apps/usbredir</pkg> to redirect USB

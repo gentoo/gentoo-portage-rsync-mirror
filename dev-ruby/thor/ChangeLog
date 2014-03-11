@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/thor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.18 2013/11/17 10:45:01 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.19 2014/03/11 20:23:39 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> thor-0.18.1.ebuild:
+  ~x86 added, bug #487206
 
   17 Nov 2013; Hans de Graaff <graaff@gentoo.org> thor-0.18.1.ebuild:
   Add ruby20. Avoid spec failing with LANG=C, fixing bug 430402.

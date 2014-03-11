@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.370 2014/03/09 12:02:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.371 2014/03/11 20:24:50 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> -totem-3.8.2-r1.ebuild,
+  totem-3.10.1.ebuild:
+  Add missing DEPEND on yelp-tools (#504174 by nvinson), drop old
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> totem-3.10.1.ebuild:
   x86 stable, bug 499954

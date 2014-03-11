@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>nirbheek@gentoo.org</email>
-		<name>Nirbheek Chauhan</name>
+	<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">python-snappy</remote-id>

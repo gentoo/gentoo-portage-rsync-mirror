@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.3.ebuild,v 1.2 2014/03/11 20:41:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.1 2014/03/11 20:48:29 eras Exp $
 
 EAPI=5
 
@@ -36,6 +36,7 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	dev-lang/perl
 	sys-devel/libtool"
 DEPEND="${COMMON_DEPEND}
+	ecap? ( virtual/pkgconfig )
 	sys-apps/ed
 	test? ( dev-util/cppunit )"
 RDEPEND="${COMMON_DEPEND}
@@ -62,8 +63,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.4-gentoo.patch"
-	#sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
-	#	lib/libTrie/configure.ac || die
 	sed -i -e 's:/usr/local/squid/etc:/etc/squid:' \
 		INSTALL QUICKSTART \
 		helpers/basic_auth/MSNT/README.html \

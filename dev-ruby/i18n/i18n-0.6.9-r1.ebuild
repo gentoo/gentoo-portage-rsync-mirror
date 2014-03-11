@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.1 2013/12/25 09:43:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.2 2014/03/11 20:22:29 johu Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://rails-i18n.org/"
 
 LICENSE="MIT"
 SLOT="0.6"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/activesupport

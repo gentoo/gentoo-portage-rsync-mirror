@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.256 2014/02/19 08:05:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.257 2014/03/11 20:24:05 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> activerecord-4.0.2.ebuild,
+  activerecord-4.0.3.ebuild:
+  ~x86 added, bug #487206
 
 *activerecord-4.0.3 (19 Feb 2014)
 

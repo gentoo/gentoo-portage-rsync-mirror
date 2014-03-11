@@ -3,8 +3,4 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<herd>gstreamer</herd>
-	<maintainer>
-		<email>nirbheek@gentoo.org</email>
-		<name>Nirbheek Chauhan</name>
-	</maintainer>
 </pkgmetadata>

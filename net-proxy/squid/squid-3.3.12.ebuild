@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.3.ebuild,v 1.2 2014/03/11 20:41:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.12.ebuild,v 1.1 2014/03/11 20:48:29 eras Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools eutils linux-info pam toolchain-funcs user versionator
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
-SRC_URI="ftp://ftp.squid-cache.org/pub/archive/3.4/${P}.tar.xz"
+SRC_URI="ftp://ftp.squid-cache.org/pub/archive/3.3/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,6 @@ IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrota
 	ecap icap-client ssl-crtd \
 	mysql postgres sqlite \
 	qos tproxy \
-	+htcp +wccp +wccpv2 \
 	pf-transparent ipf-transparent kqueue \
 	elibc_uclibc kernel_linux"
 
@@ -62,8 +61,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.4-gentoo.patch"
-	#sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
-	#	lib/libTrie/configure.ac || die
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+		lib/libTrie/configure.ac || die
 	sed -i -e 's:/usr/local/squid/etc:/etc/squid:' \
 		INSTALL QUICKSTART \
 		helpers/basic_auth/MSNT/README.html \
@@ -188,9 +187,6 @@ src_configure() {
 		$(use_enable ssl-crtd) \
 		$(use_enable icap-client) \
 		$(use_enable ecap) \
-		$(use_enable htcp) \
-		$(use_enable wccp) \
-		$(use_enable wccpv2) \
 		${transparent}
 }
 
@@ -239,9 +235,9 @@ src_install() {
 
 pkg_postinst() {
 	if [[ $(get_version_component_range 1 ${REPLACING_VERSIONS}) -lt 3 ]] || \
-		[[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 4 ]]; then
+		[[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 3 ]]; then
 		elog "Please read the release notes at:"
-		elog "  http://www.squid-cache.org/Versions/v3/3.4/RELEASENOTES.html"
+		elog "  http://www.squid-cache.org/Versions/v3/3.3/RELEASENOTES.html"
 		echo
 	fi
 }
