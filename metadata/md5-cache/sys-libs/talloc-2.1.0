@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup unpack
-DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !!<sys-libs/talloc-2.0.5 dev-libs/libxslt || ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] ) dev-lang/python !dev-lang/python[-threads]
+DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !!<sys-libs/talloc-2.0.5 sys-devel/gettext dev-libs/libxslt || ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] ) dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=Samba talloc library
 EAPI=5
 HOMEPAGE=http://talloc.samba.org/
@@ -11,4 +11,4 @@ REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python
 SLOT=0
 SRC_URI=http://samba.org/ftp/talloc/talloc-2.1.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
-_md5_=48bc8bd628fd4f5df1479631eab04e6b
+_md5_=608157ac6025d431c7796be70d1f7815

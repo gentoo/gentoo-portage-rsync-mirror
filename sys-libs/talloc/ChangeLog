@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.63 2014/02/02 17:40:57 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.64 2014/03/11 03:44:04 patrick Exp $
+
+  11 Mar 2014; Patrick Lauer <patrick@gentoo.org> talloc-2.1.0.ebuild:
+  Add gettext dep #503820
 
   02 Feb 2014; Victor Ostorga <vostorga@gentoo.org> talloc-2.1.0.ebuild:
   Reverting commit on talloc-2.1.0 , because emul-linux-x86-baselibs still

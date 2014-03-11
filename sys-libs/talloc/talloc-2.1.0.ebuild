@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.1.0.ebuild,v 1.4 2014/02/02 17:40:57 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.1.0.ebuild,v 1.5 2014/03/11 03:44:04 patrick Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RDEPEND="${PYTHON_DEPS}
 	!!<sys-libs/talloc-2.0.5"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	dev-libs/libxslt
 	|| ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] )"
 
