@@ -14,16 +14,19 @@
 	</maintainer>
 	<use>
 		<flag name="aufs">
-			Enables dependencies for the "aufs" driver, including necessary
-			kernel flags.
+			Enables dependencies for the "aufs" graph driver, including
+			necessary kernel flags.
 		</flag>
 		<flag name="btrfs">
-			Enables dependencies for the experimental "btrfs" driver,
-			including necessary kernel flags.
+			Enables dependencies for the "btrfs" graph driver, including
+			necessary kernel flags.
 		</flag>
 		<flag name="device-mapper">
-			Enables dependencies for the "device-mapper" driver, including
+			Enables dependencies for the "devicemapper" graph driver, including
 			necessary kernel flags.
+		</flag>
+		<flag name="lxc">
+			Enables dependencies for the "lxc" execution driver.
 		</flag>
 	</use>
 </pkgmetadata>
