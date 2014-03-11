@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.301 2014/03/11 13:32:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.302 2014/03/11 16:19:21 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> ksmserver-4.11.7.ebuild:
+  Add RDEPEND on kde-base/kdm, fixes bug #496306.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> -ksmserver-4.11.6.ebuild:
   Remove KDE Workspace 4.11.6
