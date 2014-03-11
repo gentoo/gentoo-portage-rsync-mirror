@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
+		<email>hasufell@gentoo.org</email>
+	</maintainer>
+	<maintainer>
 		<email>tommy@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
@@ -9,9 +12,9 @@
 		cryptographic library written in C and targeted at embedded systems.
 	</longdescription>
 	<use>
-		<flag name="havege">Enable the HAVEGE random generator. 
-			Warning: the HAVEGE random generator is not suitable for virtualized
-			environments
+		<flag name="havege">Enable the HAVEGE random generator.
+			Warning: the HAVEGE random generator is not suitable for
+			virtualized environments
 		</flag>
 	</use>
 </pkgmetadata>

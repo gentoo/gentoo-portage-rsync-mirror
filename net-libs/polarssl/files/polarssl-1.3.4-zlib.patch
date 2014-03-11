@@ -1,0 +1,15 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Thu Mar  6 13:52:39 UTC 2014
+Subject: fix zlib include dir
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -43,7 +43,7 @@
+   find_package(ZLIB)
+ 
+   if(ZLIB_FOUND)
+-    include_directories(ZLIB_INCLUDE_DIR)
++    include_directories(${ZLIB_INCLUDE_DIR})
+   endif(ZLIB_FOUND)
+ endif(ENABLE_ZLIB_SUPPORT)
+ 
