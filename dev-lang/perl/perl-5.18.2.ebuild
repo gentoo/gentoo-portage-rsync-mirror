@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.18.2.ebuild,v 1.2 2014/03/09 23:29:34 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.18.2.ebuild,v 1.3 2014/03/11 17:01:15 civil Exp $
 
 EAPI=5
 
@@ -100,7 +100,7 @@ eblit-run() {
 
 #src_unpack()	{ eblit-run src_unpack    v50160001 ; }
 src_prepare()	{ eblit-run src_prepare   v50160001 ; }
-src_configure()	{ eblit-run src_configure v50160001 ; }
+src_configure()	{ eblit-run src_configure v50180002 ; }
 #src_compile()	{ eblit-run src_compile   v50160001 ; }
 src_test()		{ eblit-run src_test      v50160001 ; }
 src_install()	{ eblit-run src_install   v50160001 ; }

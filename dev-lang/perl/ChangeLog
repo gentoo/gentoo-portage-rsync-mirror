@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.417 2014/03/10 08:22:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.418 2014/03/11 17:01:15 civil Exp $
+
+  11 Mar 2014; Vladimir Smirnov <civil@gentoo.org>
+  +files/eblits/src_configure-v50180002.eblit,
+  files/eblits/src_configure-v50160001.eblit, perl-5.18.2.ebuild:
+  Replace prefix-specific hack to find valid libdirs with saner autotool-ish
+  library check. Thanks to Ruud Koolen (redlizard@gentoo.org)
 
   10 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -perl-5.18.1.ebuild:
   Drop old
