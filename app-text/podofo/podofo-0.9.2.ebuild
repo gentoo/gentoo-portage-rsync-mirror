@@ -1,13 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.10 2013/08/05 09:32:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.2.ebuild,v 1.11 2014/03/11 10:06:48 polynomial-c Exp $
 
 EAPI=5
 inherit cmake-utils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="PoDoFo is a C++ library to work with the PDF file format."
 HOMEPAGE="http://sourceforge.net/projects/podofo/"
-SRC_URI="mirror://sourceforge/podofo/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/podofo/${P}.tar.gz
+	http://dev.gentoo.org/~polynomial-c/${PN}-0.9.2-freetype251.patch"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -31,6 +32,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog TODO"
 
 src_prepare() {
+	epatch "${DISTDIR}"/${PN}-0.9.2-freetype251.patch
+
 	local x sed_args
 
 	sed -i \
