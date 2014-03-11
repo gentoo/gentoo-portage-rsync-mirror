@@ -1,0 +1,31 @@
+From 922db161c4cae5ac39203a1b24b194e209231055 Mon Sep 17 00:00:00 2001
+From: Dominique Leuenberger <dimstar@opensuse.org>
+Date: Mon, 16 Dec 2013 22:30:40 +0000
+Subject: plugin: Use the Freetype developer's proposed way if #include'ing their headers.
+
+Allows us to build against Freetype 2.5.1 (without breaking older
+versions).
+
+https://bugzilla.gnome.org/show_bug.cgi?id=720573
+
+Signed-off-by: Hans Breuer <hans@breuer.org>
+(cherry picked from commit 0b863adcad031c70601e375d72dae64fdd967752)
+---
+diff --git a/plug-ins/postscript/diapsft2renderer.c b/plug-ins/postscript/diapsft2renderer.c
+index 06675f8..09f6edb 100644
+--- a/plug-ins/postscript/diapsft2renderer.c
++++ b/plug-ins/postscript/diapsft2renderer.c
+@@ -29,8 +29,9 @@
+ #include <pango/pangoft2.h>
+ #include <pango/pango-engine.h>
+ /* I'd really rather avoid this */
+-#include <freetype/ftglyph.h>
+-#include <freetype/ftoutln.h>
++#include <ft2build.h>
++#include FT_GLYPH_H
++#include FT_OUTLINE_H
+ 
+ #define DPI 300
+ 
+--
+cgit v0.9.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r2.ebuild,v 1.7 2014/02/22 21:01:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r2.ebuild,v 1.8 2014/03/11 11:22:46 polynomial-c Exp $
 
 EAPI=5
 GCONF_DEBUG=yes
@@ -55,6 +55,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.97.2-underlinking.patch #420685
 	epatch "${FILESDIR}"/${PN}-0.97.2-implicit-declaration.patch #468166
 	epatch "${FILESDIR}"/${PN}-0.97.2-glib2.36.patch #469040
+	epatch "${FILESDIR}"/${PN}-0.97.2-freetype251.patch #493604
 
 	if use python; then
 		python_fix_shebang .
@@ -82,8 +83,8 @@ src_configure() {
 	# --enable-gnome only adds support for deprecated stuff, bug #442294
 	# https://bugzilla.redhat.com/show_bug.cgi?id=996759
 	gnome2_src_configure \
-		--exec-prefix=${EPREFIX}/usr \
-		--docdir=${EPREFIX}/usr/share/doc/${PF} \
+		--exec-prefix="${EPREFIX}/usr" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-gnome \
 		--disable-libemf \
 		$(use_enable doc db2html) \

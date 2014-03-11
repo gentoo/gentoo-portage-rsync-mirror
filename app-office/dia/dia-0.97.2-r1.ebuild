@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.11 2012/10/28 15:22:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.12 2014/03/11 11:22:46 polynomial-c Exp $
 
 EAPI=4
 
@@ -70,6 +70,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159831
 	epatch "${FILESDIR}"/${PN}-0.97.2-glib-2.31.patch #401331
 	epatch "${FILESDIR}"/${PN}-0.97.2-underlinking.patch #420685
+	epatch "${FILESDIR}"/${PN}-0.97.2-freetype251.patch #493604
 
 	if use python; then
 		python_convert_shebangs -r 2 .
