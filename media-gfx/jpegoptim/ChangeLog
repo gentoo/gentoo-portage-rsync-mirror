@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/jpegoptim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.24 2013/05/20 08:44:37 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.26 2014/03/11 07:54:36 ssuominen Exp $
+
+  11 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -jpegoptim-1.2.4.ebuild:
+  old
+
+*jpegoptim-1.3.0 (11 Mar 2014)
+
+  11 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +jpegoptim-1.3.0.ebuild:
+  Version bump wrt #494702 by Viktar Patotski. Correct LICENSE from GPL-2 to
+  GPL-2+ because COPYRIGHT file is clarifying it to be "any later version".
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> jpegoptim-1.2.5.ebuild:
   Stable for x86, wrt bug #470496
