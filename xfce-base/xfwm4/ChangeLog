@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.219 2014/01/28 14:17:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.220 2014/03/11 16:00:38 ssuominen Exp $
+
+*xfwm4-4.11.1 (11 Mar 2014)
+
+  11 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +xfwm4-4.11.1.ebuild:
+  Prerelease version bump.
 
   28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> xfwm4-4.10.1.ebuild:
   Stable for x86, wrt bug #496018
