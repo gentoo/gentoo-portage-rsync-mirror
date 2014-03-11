@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-debug-base/jruby-debug-base-0.10.3.1.ebuild,v 1.3 2010/05/28 17:21:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-debug-base/jruby-debug-base-0.10.3.1-r1.ebuild,v 1.1 2014/03/11 01:39:03 mrueg Exp $
 
-EAPI="2"
+EAPI=5
 USE_RUBY="jruby"
 
 # No tests shipped :(

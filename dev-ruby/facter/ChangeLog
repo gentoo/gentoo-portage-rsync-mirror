@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.92 2014/03/02 23:46:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.93 2014/03/11 01:36:51 mrueg Exp $
+
+  11 Mar 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.6.16.ebuild,
+  facter-1.6.18.ebuild:
+  Remove ree18.
 
   02 Mar 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.7.5-r1.ebuild:
   Add ruby20 support. Fixes bug #503250

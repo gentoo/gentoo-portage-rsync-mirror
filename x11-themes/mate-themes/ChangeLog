@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/mate-themes
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mate-themes/ChangeLog,v 1.1 2014/03/11 01:57:34 tomwij Exp $
+
+*mate-themes-1.6.3 (11 Mar 2014)
+
+  11 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-themes-1.6.3.ebuild,
+  +metadata.xml:
+  New ebuild for x11-themes/mate-themes, a set of MATE themes, with sets for
+  users with limited or low vision; imported from the mate-overlay, reviewed and
+  adjusted.

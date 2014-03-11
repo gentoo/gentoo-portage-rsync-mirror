@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-net-ldap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ChangeLog,v 1.8 2013/09/05 00:32:51 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-net-ldap/ChangeLog,v 1.9 2014/03/11 01:35:52 mrueg Exp $
+
+*ruby-net-ldap-0.3.1-r1 (11 Mar 2014)
+
+  11 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +ruby-net-ldap-0.3.1-r1.ebuild,
+  -ruby-net-ldap-0.3.1.ebuild:
+  Remove ree18. EAPI bump. Sort deps.
 
   05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -ruby-net-ldap-0.0.4-r1.ebuild,
   -ruby-net-ldap-0.2.2.ebuild:
