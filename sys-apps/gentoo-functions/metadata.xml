@@ -5,7 +5,7 @@
 		<email>williamh@gentoo.org</email>
 		<name>William Hubbs</name>
 	</maintainer>
-	<herd>base-system@gentoo.org</herd>
+	<herd>base-system</herd>
 	<longdescription lang="en">
 		This package contains base shell functions which are required by
 		all Gentoo systems.

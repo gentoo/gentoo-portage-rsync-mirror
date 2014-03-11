@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2-r1.ebuild,v 1.13 2014/03/11 02:06:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2-r1.ebuild,v 1.14 2014/03/11 02:52:27 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,11 +22,14 @@ REQUIRED_USE="test? ( cairo )"
 COMMON_DEPEND=">=dev-libs/glib-2.31.0:2
 	>=dev-libs/gobject-introspection-1.34.1.1
 	virtual/libffi:=
-	cairo? ( >=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}] )
+	cairo? (
+		>=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}]
+		x11-libs/cairo )
 	${PYTHON_DEPS}
 "
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
+	cairo? ( x11-libs/cairo[glib] )
 	test? (
 		dev-libs/atk[introspection]
 		media-fonts/font-cursor-misc
