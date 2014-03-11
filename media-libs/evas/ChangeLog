@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/evas
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.30 2013/11/11 20:22:43 tommy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.31 2014/03/11 09:17:31 polynomial-c Exp $
+
+  11 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> evas-1.7.9.ebuild:
+  Fixed compilation with >=freetype-2.5.1 (bug #493586).
 
 *evas-1.7.9 (11 Nov 2013)
 

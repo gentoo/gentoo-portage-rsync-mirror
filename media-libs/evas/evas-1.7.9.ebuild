@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9.ebuild,v 1.1 2013/11/11 20:22:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9.ebuild,v 1.2 2014/03/11 09:17:31 polynomial-c Exp $
 
 EAPI="5"
 
@@ -9,7 +9,8 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_URI_APPEND=${PN}
 	EGIT_BRANCH=${PN}-1.7
 else
-	SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
+	SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2
+		http://dev.gentoo.org/~polynomial-c/${PN}-1.7.9-freetype251.patch"
 	EKEY_STATE="snap"
 fi
 
@@ -47,6 +48,7 @@ RDEPEND=">=dev-libs/eina-1.7.9
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${DISTDIR}"/${PN}-1.7.9-freetype251.patch
 	sed -i "s:1.7.9:1.7.8:g" configure.ac
 	eautoreconf
 	enlightenment_src_prepare

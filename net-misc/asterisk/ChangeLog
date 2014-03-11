@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.473 2014/03/04 10:15:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.474 2014/03/11 09:05:12 chainsaw Exp $
+
+*asterisk-12.1.1 (11 Mar 2014)
+*asterisk-11.8.1 (11 Mar 2014)
+*asterisk-1.8.26.1 (11 Mar 2014)
+
+  11 Mar 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.26.0.ebuild,
+  +asterisk-1.8.26.1.ebuild, -asterisk-11.7.0-r1.ebuild,
+  -asterisk-11.8.0.ebuild, +asterisk-11.8.1.ebuild, -asterisk-12.0.0.ebuild,
+  -asterisk-12.1.0.ebuild, +asterisk-12.1.1.ebuild:
+  New releases in all three branches to address a stack overflow in HTTP cookie
+  header processing, a file descriptor exhaustion through session timers in
+  chan_sip and two remote crashes in PJSIP (12 branch only). Removed all
+  vulnerable non-stable ebuilds. Upstream vulnerability reports AST-2014-001,
+  002, 003 & 004.
 
 *asterisk-12.1.0 (04 Mar 2014)
 
