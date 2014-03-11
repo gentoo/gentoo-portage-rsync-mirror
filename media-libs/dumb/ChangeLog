@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/dumb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.45 2014/03/06 10:45:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.46 2014/03/11 14:31:38 hasufell Exp $
+
+*dumb-0.9.3-r3 (11 Mar 2014)
+
+  11 Mar 2014; Julian Ospald <hasufell@gentoo.org> +dumb-0.9.3-r3.ebuild:
+  don't install 64bit libs into /usr/lib32
 
   06 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dumb-0.9.3-r2.ebuild:
   Stable for ppc64, wrt bug #495710
