@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>shell-tools</herd>
-	<maintainer>
-		<email>swegener@gentoo.org</email>
-		<name>Sven Wegener</name>
-	</maintainer>
 	<longdescription>binclock displays a binary clock in your terminal.</longdescription>
 </pkgmetadata>

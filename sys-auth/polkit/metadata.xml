@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>freedesktop</herd>
-  <maintainer>
-    <email>nirbheek@gentoo.org</email>
-    <name>Nirbheek Chauhan</name>
-  </maintainer>
   <use>
     <flag name='introspection'>Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
     <flag name='systemd'>Use <pkg>sys-apps/systemd</pkg> instead of <pkg>sys-auth/consolekit</pkg> for session tracking</flag>

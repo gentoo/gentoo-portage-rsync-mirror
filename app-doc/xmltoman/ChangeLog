@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/xmltoman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.12 2011/12/02 19:13:19 beandog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.13 2014/03/11 19:56:06 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   02 Dec 2011; Steve Dibb <beandog@gentoo.org> xmltoman-0.4.ebuild:
   amd64 stable, bug 391559
@@ -42,4 +45,3 @@
   12 Sep 2005; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +xmltoman-0.3.ebuild:
   Initial commit, ebuild written by me.
-

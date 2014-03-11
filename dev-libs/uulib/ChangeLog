@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uulib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.20 2012/06/03 02:21:55 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.21 2014/03/11 19:49:51 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   03 Jun 2012; Mike Frysinger <vapier@gentoo.org> uulib-0.5.20.ebuild:
   Update to EAPI=4 and respect ar/ranlib settings.
@@ -61,4 +64,3 @@
   17 Jun 2004; Sven Wegener <swegener@gentoo.org> +uulib-0.5.20.ebuild:
   Initial import, ebuild written by me. Needed as a dependency for the to be
   added net-news/nzbget.
-

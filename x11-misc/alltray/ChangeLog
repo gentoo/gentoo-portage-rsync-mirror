@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.48 2013/05/12 12:07:14 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.49 2014/03/11 19:48:50 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   12 May 2013; Pacho Ramos <pacho@gentoo.org> -alltray-0.7.4.ebuild,
   alltray-0.7.5.1.ebuild:

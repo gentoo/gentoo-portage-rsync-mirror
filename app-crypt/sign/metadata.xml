@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>swegener@gentoo.org</email>
-    <name>Sven Wegener</name>
-    <description>primary maintainer</description>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 sign is a file signing and signature verification utility. It's main purpose is

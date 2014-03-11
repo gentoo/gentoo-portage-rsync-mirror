@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/tiobench
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.17 2012/11/04 22:46:26 swegener Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.18 2014/03/11 19:56:33 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   04 Nov 2012; Sven Wegener <swegener@gentoo.org> tiobench-0.3.3-r2.ebuild,
   +files/0.3.3-glibc-2.16.patch:
@@ -54,4 +57,3 @@
   15 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> tiobench-0.3.3.ebuild:
   initial commit; ebuild modified from the one submitted by Sven Wegener via bug
   32499
-

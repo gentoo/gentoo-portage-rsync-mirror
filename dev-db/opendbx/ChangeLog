@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.37 2014/03/10 21:15:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.38 2014/03/11 19:54:53 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> -opendbx-1.4.5-r1.ebuild,
+  metadata.xml:
+  Cleanup due #53266
 
 *opendbx-1.4.5-r1 (10 Mar 2014)
 

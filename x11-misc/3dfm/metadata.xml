@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>desktop-effects</herd>
-	<maintainer>
-		<email>swegener@gentoo.org</email>
-		<name>Sven Wegener</name>
-		<description>An ebuild I had in my overlay. Please take over if you want it.</description>
-	</maintainer>
 </pkgmetadata>

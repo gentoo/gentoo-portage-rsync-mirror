@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
-  <maintainer>
-    <email>nirbheek@gentoo.org</email>
-  </maintainer>
   <use>
     <flag name="sandbox">Enable sandboxing functionality</flag>
     <flag name="shadowstack">Use a shadow stack for finding GC roots</flag>

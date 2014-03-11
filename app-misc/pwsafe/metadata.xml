@@ -7,10 +7,6 @@
 	<name>Christopher Head</name>	
 	<description>Proxy maintainer, assign bugs</description>
   </maintainer>
-  <maintainer>
-    <email>nirbheek@gentoo.org</email>
-	<name>Nirbheek Chauhan</name>	
-  </maintainer>
   <longdescription lang="en">
     pwsafe is a commandline password database utility compatible with
     Counterpane's Password Safe. It is compatible with Counterpane Password

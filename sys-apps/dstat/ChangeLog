@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dstat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.44 2012/12/16 17:41:47 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.45 2014/03/11 19:54:04 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> dstat-0.7.2-r1.ebuild:
   sparc stable wrt #435650

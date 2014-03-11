@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>swegener@gentoo.org</email>
-		<description>Primary Maintainer</description>
+	<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		cfv is a utility to both test and create .sfv, .csv, .crc,

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/superswitcher
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.10 2012/07/21 14:19:50 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.11 2014/03/11 19:49:14 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
   +files/superswitcher-0.6-glib-single-include.patch, superswitcher-0.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.11 2014/03/10 20:15:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.12 2014/03/11 19:52:25 pacho Exp $
+
+  11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #53266
 
   10 Mar 2014; Sven Wegener <swegener@gentoo.org> sbd-1.37-r1.ebuild,
   metadata.xml:
@@ -66,4 +69,3 @@
   23 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +sbd-1.31.ebuild:
   Initial import, ebuild written by me.
-
