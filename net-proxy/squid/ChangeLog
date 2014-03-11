@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.450 2014/03/11 20:48:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.451 2014/03/11 21:01:40 eras Exp $
+
+  11 Mar 2014; Eray Aslan <eras@gentoo.org> metadata.xml, squid-3.4.4.ebuild:
+  Add esi USE flag - bug #501898
 
 *squid-3.4.4 (11 Mar 2014)
 *squid-3.3.12 (11 Mar 2014)

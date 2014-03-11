@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.1 2014/03/11 20:48:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.2 2014/03/11 21:01:40 eras Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrotate test \
-	ecap icap-client ssl-crtd \
+	ecap esi icap-client ssl-crtd \
 	mysql postgres sqlite \
 	qos tproxy \
 	+htcp +wccp +wccpv2 \
@@ -29,6 +29,7 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
 	ecap? ( net-libs/libecap:0.2 )
+	esi? ( dev-libs/expat dev-libs/libxml2 )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
@@ -63,6 +64,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.4-gentoo.patch"
+	#sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' \
+	#	lib/libTrie/configure.ac || die
 	sed -i -e 's:/usr/local/squid/etc:/etc/squid:' \
 		INSTALL QUICKSTART \
 		helpers/basic_auth/MSNT/README.html \
@@ -177,7 +180,6 @@ src_configure() {
 		--enable-eui \
 		--enable-icmp \
 		--enable-follow-x-forwarded-for \
-		--enable-esi \
 		--with-large-files \
 		--disable-strict-error-checking \
 		$(use_with caps libcap) \
@@ -187,6 +189,7 @@ src_configure() {
 		$(use_enable ssl-crtd) \
 		$(use_enable icap-client) \
 		$(use_enable ecap) \
+		$(use_enable esi) \
 		$(use_enable htcp) \
 		$(use_enable wccp) \
 		$(use_enable wccpv2) \
