@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.6.0.ebuild,v 1.4 2014/03/10 13:17:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.6.0.ebuild,v 1.5 2014/03/10 23:11:17 tomwij Exp $
 
 EAPI="5"
 
@@ -33,10 +33,10 @@ RDEPEND=">=dev-libs/glib-2.15.2:2
 	)"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.40:*
 	>=mate-base/mate-common-1.6:0
-	sys-devel/gettext
-	virtual/pkgconfig"
+	sys-devel/gettext:*
+	virtual/pkgconfig:*"
 
 src_prepare() {
 	eautoreconf

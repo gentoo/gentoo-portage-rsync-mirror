@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.6.2.ebuild,v 1.3 2014/03/10 13:47:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.6.2.ebuild,v 1.4 2014/03/10 23:02:10 tomwij Exp $
 
 EAPI="5"
 
@@ -40,11 +40,10 @@ RDEPEND=">=dev-libs/glib-2.13:2[${PYTHON_USEDEP}]
 	)"
 
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-1.9:0
-	>=dev-util/intltool-0.40.3
+	>=dev-util/intltool-0.40.3:*
 	>=mate-base/mate-common-1.6:0
-	sys-devel/gettext
-	virtual/pkgconfig"
+	sys-devel/gettext:*
+	virtual/pkgconfig:*"
 
 src_prepare() {
 	# Fix python automagic dependency in configure.in.
