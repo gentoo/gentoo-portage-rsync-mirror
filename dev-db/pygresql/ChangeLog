@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.70 2014/01/27 11:28:53 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.71 2014/03/11 22:26:44 titanofold Exp $
+
+*pygresql-4.1.1-r1 (11 Mar 2014)
+
+  11 Mar 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  +pygresql-4.1.1-r1.ebuild:
+  4.1.1 is not actually compatible with <dev-db/postgresql-9.0. Updated
+  POSTGRES_COMPAT to include 9.3. Fixes bug 499006.
 
   27 Jan 2014; Aaron W. Swenson <titanofold@gentoo.org> -pygresql-3.8.1.ebuild,
   -pygresql-4.0.ebuild:

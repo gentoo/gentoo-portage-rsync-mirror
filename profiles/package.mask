@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15464 2014/03/11 13:03:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15465 2014/03/11 22:16:23 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -132,7 +132,7 @@ media-gfx/kgraphviewer
 
 # Michał Górny <mgorny@gentoo.org> (25 Feb 2014)
 # Mask for testing.
-~sys-apps/systemd-210
+>=sys-apps/systemd-210
 
 # Ulrich Müller <ulm@gentoo.org> (24 Feb 2014)
 # Does not work any more, AOL has shut off

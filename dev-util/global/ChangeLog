@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.121 2014/03/05 15:46:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.122 2014/03/11 22:23:53 floppym Exp $
+
+  11 Mar 2014; Mike Gilbert <floppym@gentoo.org> -global-6.2.8.ebuild,
+  -global-6.2.9.ebuild:
+  Remove per Arfrever.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> global-6.2.10.ebuild:
   Stable for ppc, wrt bug #502806
