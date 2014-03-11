@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/proot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.5 2014/02/25 08:15:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.6 2014/03/11 08:13:00 pinkbyte Exp $
+
+*proot-3.2.2-r1 (11 Mar 2014)
+
+  11 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -proot-3.2.1.ebuild,
+  -proot-3.2.1-r1.ebuild, +proot-3.2.2-r1.ebuild,
+  +files/proot-3.2.2-build-care.patch, metadata.xml:
+  Revision bump: add support for optional building of CARE binary, wrt bug
+  #502388, thanks to Patrick Lauer. Drop old
 
 *proot-3.2.2 (25 Feb 2014)
 
