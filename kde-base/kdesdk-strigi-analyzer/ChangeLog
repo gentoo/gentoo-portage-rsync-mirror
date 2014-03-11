@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-strigi-analyzer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.178 2014/03/04 19:13:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.179 2014/03/11 13:07:04 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org>
+  -kdesdk-strigi-analyzer-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
 *kdesdk-strigi-analyzer-4.12.3 (04 Mar 2014)
 

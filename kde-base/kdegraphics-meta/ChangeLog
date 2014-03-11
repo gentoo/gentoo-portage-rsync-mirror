@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.304 2014/03/04 19:14:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.305 2014/03/11 13:06:34 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org>
+  -kdegraphics-meta-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
 *kdegraphics-meta-4.12.3 (04 Mar 2014)
 

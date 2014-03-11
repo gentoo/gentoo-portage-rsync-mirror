@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knavalbattle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knavalbattle/ChangeLog,v 1.74 2014/03/04 19:13:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knavalbattle/ChangeLog,v 1.75 2014/03/11 13:06:26 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -knavalbattle-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
 *knavalbattle-4.12.3 (04 Mar 2014)
 

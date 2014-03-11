@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15463 2014/03/11 02:14:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15464 2014/03/11 13:03:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2014)
+# Xfce 4.12 unannounced prerelease, use at your own risk
+=dev-util/xfce4-dev-tools-4.11*
+=xfce-base/garcon-0.3*
+=xfce-base/libxfce4ui-4.11*
+=xfce-base/libxfce4util-4.11*
+=xfce-base/xfce4-appfinder-4.11*
+=xfce-base/xfce4-panel-4.11*
+=xfce-base/xfce4-session-4.11*
+=xfce-base/xfce4-settings-4.11*
+=xfce-base/xfdesktop-4.11*
+=xfce-base/xfwm4-4.11*
 
 # Manuel Rüger <mrueg@gentoo.org> (06 Mar 2014)
 # Mask further ruby18-only packages

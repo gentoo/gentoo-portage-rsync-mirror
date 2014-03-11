@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.211 2014/03/04 19:13:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.212 2014/03/11 13:06:30 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -phonon-kde-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
 *phonon-kde-4.12.3 (04 Mar 2014)
 

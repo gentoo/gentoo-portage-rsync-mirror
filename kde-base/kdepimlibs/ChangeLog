@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.249 2014/03/04 19:30:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.250 2014/03/11 13:06:40 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -kdepimlibs-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
   04 Mar 2014; Johannes Huber <johu@gentoo.org>
   files/kdepimlibs-4.9.1-boostincludes.patch:

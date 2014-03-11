@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwallet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.204 2014/02/23 10:01:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.205 2014/03/11 13:06:46 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -kwallet-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> -kwallet-4.11.2.ebuild:
   Remove old

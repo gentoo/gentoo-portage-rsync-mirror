@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktimer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.293 2014/03/04 19:13:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.294 2014/03/11 13:06:48 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -ktimer-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
 *ktimer-4.12.3 (04 Mar 2014)
 

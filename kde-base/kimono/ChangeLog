@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimono
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.110 2014/03/04 19:13:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.111 2014/03/11 13:06:57 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -kimono-4.12.2.ebuild:
+  Remove KDE SC 4.12.2
 
 *kimono-4.12.3 (04 Mar 2014)
 
