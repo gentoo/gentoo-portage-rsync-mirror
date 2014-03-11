@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.12.3.ebuild,v 1.1 2014/03/04 19:13:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.12.3-r1.ebuild,v 1.1 2014/03/11 16:55:50 johu Exp $
 
 EAPI=5
 
@@ -62,6 +62,7 @@ KMEXTRA="
 	libksieve/
 	mailcommon/
 	mailimporter/
+	mboximporter/
 	ontologies/
 	pimsettingexporter/
 	plugins/messageviewer/

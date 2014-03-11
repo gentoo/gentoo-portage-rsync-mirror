@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.397 2014/03/11 13:06:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.398 2014/03/11 16:55:50 johu Exp $
+
+*kmail-4.12.3-r1 (11 Mar 2014)
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> +kmail-4.12.3-r1.ebuild,
+  -kmail-4.12.3.ebuild:
+  Revision bump adds missing mboximporter/ subfolder, bug #491406.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> -kmail-4.12.2.ebuild:
   Remove KDE SC 4.12.2
