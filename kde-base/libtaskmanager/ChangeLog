@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libtaskmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.204 2014/03/04 19:30:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.205 2014/03/11 13:32:18 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -libtaskmanager-4.11.6.ebuild:
+  Remove KDE Workspace 4.11.6
 
 *libtaskmanager-4.11.7 (04 Mar 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.43.ebuild,v 1.9 2013/09/02 08:33:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.43.ebuild,v 1.10 2014/03/11 13:36:51 polynomial-c Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -47,7 +47,8 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-5.31-configure.in.patch \
-		"${FILESDIR}"/${PN}-5.31-ldflags.patch
+		"${FILESDIR}"/${PN}-5.31-ldflags.patch \
+		"${FILESDIR}"/${PN}-5.43-freetype251.patch
 
 	eautoreconf
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.138 2013/09/02 08:33:12 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.139 2014/03/11 13:36:51 polynomial-c Exp $
+
+  11 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> xlockmore-5.43.ebuild,
+  +files/xlockmore-5.43-freetype251.patch:
+  Fixed compilation with >=freetype-2.5.1 (bug #498782).
 
   02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> xlockmore-5.43.ebuild:
   Make PAM and xlockrc support mutually exclusive as defined in configure file,

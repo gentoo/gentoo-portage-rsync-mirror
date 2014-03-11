@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.304 2014/03/04 19:30:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.305 2014/03/11 13:32:20 johu Exp $
+
+  11 Mar 2014; Johannes Huber <johu@gentoo.org> -khotkeys-4.11.6.ebuild:
+  Remove KDE Workspace 4.11.6
 
 *khotkeys-4.11.7 (04 Mar 2014)
 
