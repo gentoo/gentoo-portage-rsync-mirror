@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.1 2014/03/12 08:21:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.2 2014/03/12 09:14:21 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 pypy2_0 pypy2_2 )
+PYTHON_COMPAT=( python2_7 pypy2_0 )
 inherit check-reqs eutils multilib multiprocessing pax-utils \
 	python-any-r1 toolchain-funcs versionator
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://pypy.org/"
 SRC_URI="mirror://bitbucket/pypy/pypy/downloads/${P}-src.tar.bz2"
 
 LICENSE="MIT"
-SLOT=$(get_version_component_range 1-2 ${PV})
+SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 doc +jit ncurses sandbox shadowstack sqlite sse2"
 
@@ -118,11 +118,11 @@ src_test() {
 
 src_install() {
 	einfo "Installing PyPy ..."
-	insinto "/usr/$(get_libdir)/pypy${SLOT}"
+	insinto "/usr/$(get_libdir)/pypy"
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSDESTTREE}/pypy-c
 	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
-	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
+	dosym ../$(get_libdir)/pypy/pypy-c /usr/bin/pypy
 	dodoc README.rst
 
 	if ! use sqlite; then
@@ -135,7 +135,7 @@ src_install() {
 
 	einfo "Generating caches and byte-compiling ..."
 
-	python_export pypy-c${SLOT} EPYTHON PYTHON PYTHON_SITEDIR
+	python_export pypy EPYTHON PYTHON PYTHON_SITEDIR
 	local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15467 2014/03/12 08:51:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15468 2014/03/12 09:21:35 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,8 +31,9 @@
 #--- END OF EXAMPLES ---
 
 # Michał Górny <mgorny@gentoo.org> (12 Mar 2014)
-# Broken and not slotted properly.
+# Masked for testing, and binary package build.
 >=dev-python/pypy-2.2
+>=virtual/pypy-2.2
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2014)
 # Xfce 4.12 unannounced prerelease, use at your own risk

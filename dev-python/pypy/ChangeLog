@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.54 2014/03/12 08:21:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.55 2014/03/12 09:14:21 mgorny Exp $
+
+  12 Mar 2014; Michał Górny <mgorny@gentoo.org> pypy-2.2.1.ebuild:
+  Fix to be non-slotted.
 
 *pypy-2.2.1 (12 Mar 2014)
 
