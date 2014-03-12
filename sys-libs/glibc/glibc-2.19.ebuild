@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19.ebuild,v 1.2 2014/03/05 19:25:54 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19.ebuild,v 1.3 2014/03/12 13:34:07 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -150,10 +150,6 @@ for x in setup {pre,post}inst ; do
 		eval "pkg_${x}() { eblit-run pkg_${x} ; }"
 	fi
 done
-
-eblit-src_unpack-pre() {
-	GLIBC_PATCH_EXCLUDE+=" 00_all_0012-mips-add-clock_-g-s-ettime-symbol-compat-hacks.patch" #456912 #481438
-}
 
 eblit-src_unpack-post() {
 	if use hardened ; then

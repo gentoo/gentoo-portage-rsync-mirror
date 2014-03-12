@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r3.ebuild,v 1.3 2014/03/12 11:04:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r3.ebuild,v 1.4 2014/03/12 13:31:22 ulm Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -87,7 +87,7 @@ src_prepare() {
 	# Run autoconf. XEmacs tries to be smart by providing a stub
 	# configure.ac file for autoconf 2.59 but this throws our
 	# autotools eclass so it must be removed first.
-	rm "${S}"/configure.ac
+	rm "${S}"/configure.ac || die
 	eautoconf
 
 	use neXt && cp "${WORKDIR}"/NeXT.XEmacs/xemacs-icons/* "${S}"/etc/toolbar/

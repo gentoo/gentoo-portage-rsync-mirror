@@ -11,4 +11,4 @@ RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) >=sys-libs/zlib-
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/xemacs-21.4/xemacs-21.4.22.tar.gz http://www.malfunction.de/afterstep/files/NeXT_XEmacs.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a75163a2e75af80d89574a1432a3e2c4
+_md5_=046a63cda6a4b16c68aec53b45218dd4

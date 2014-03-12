@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.982 2014/03/05 19:25:54 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.985 2014/03/12 13:35:10 vapier Exp $
+
+  12 Mar 2014; Mike Frysinger <vapier@gentoo.org> glibc-9999.ebuild:
+  Sync with glibc-2.19 ebuild.
+
+  12 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit:
+  Install the systemd files from upstream with glibc-2.19+.
+
+  12 Mar 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.19.ebuild:
+  Drop unused mips patch filtering since it isn't in the patchset anymore.
 
   05 Mar 2014; Magnus Granberg <zorry@gentoo.org> glibc-2.19.ebuild,
   +files/2.19/glibc-2.19-hardened-configure-picdefault.patch:
