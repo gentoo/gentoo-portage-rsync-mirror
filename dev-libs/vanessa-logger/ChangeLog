@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/vanessa-logger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.35 2012/09/30 18:41:02 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.36 2014/03/12 03:05:26 patrick Exp $
+
+  12 Mar 2014; Patrick Lauer <patrick@gentoo.org> vanessa-logger-0.0.10.ebuild,
+  vanessa-logger-0.0.7.ebuild, vanessa-logger-0.0.8.ebuild,
+  vanessa-logger-0.0.9.ebuild:
+  Shorten description for improved repoman happy
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> vanessa-logger-0.0.7.ebuild,
   vanessa-logger-0.0.8.ebuild, vanessa-logger-0.0.9.ebuild,

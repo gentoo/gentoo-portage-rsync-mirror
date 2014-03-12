@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.7.ebuild,v 1.10 2012/09/30 18:41:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.7.ebuild,v 1.11 2014/03/12 03:05:26 patrick Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="Generic logging layer that may be used to log to one or more of syslog, an open file handle or a file name."
+DESCRIPTION="Generic logging layer that to log to syslog, an open file handle or a file name."
 HOMEPAGE="http://www.vergenet.net/linux/vanessa/"
 SRC_URI="http://www.vergenet.net/linux/vanessa/download/${MY_PN}/${PV}/${MY_P}.tar.gz"
 

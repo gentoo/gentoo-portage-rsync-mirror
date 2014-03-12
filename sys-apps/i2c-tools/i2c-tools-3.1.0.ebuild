@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.1.0.ebuild,v 1.3 2013/10/18 21:59:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.1.0.ebuild,v 1.4 2014/03/12 03:15:18 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit flag-o-matic toolchain-funcs distutils
 
-DESCRIPTION="I2C tools for bus probing, chip dumping, register-level access helpers, EEPROM decoding scripts, and more"
+DESCRIPTION="I2C tools for bus probing, chip dumping, register-level access helpers, EEPROM decoding, and more"
 HOMEPAGE="http://www.lm-sensors.org/wiki/I2CTools"
 SRC_URI="http://dl.lm-sensors.org/i2c-tools/releases/${P}.tar.bz2"
 

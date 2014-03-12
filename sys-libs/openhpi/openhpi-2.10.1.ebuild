@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.10.1.ebuild,v 1.1 2008/11/01 08:19:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.10.1.ebuild,v 1.2 2014/03/12 03:11:06 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="OpenHPI provides an open source implementation of the Service Availability Forum (SAF) Hardware Platform Interface (HPI)"
+DESCRIPTION="Open source implementation of the Service Availability Forum (SAF) Hardware Platform Interface (HPI)"
 HOMEPAGE="http://www.openhpi.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

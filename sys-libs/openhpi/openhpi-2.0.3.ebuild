@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.0.3.ebuild,v 1.3 2009/09/23 21:17:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.0.3.ebuild,v 1.4 2014/03/12 03:11:06 patrick Exp $
 
 inherit flag-o-matic
 
-DESCRIPTION="OpenHPI is an open implementation of the SA Forum's HPI spec"
+DESCRIPTION="Open source implementation of the Service Availability Forum (SAF) Hardware Platform Interface (HPI)"
 HOMEPAGE="http://openhpi.sourceforge.net/"
 MY_P="${P}-1"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
