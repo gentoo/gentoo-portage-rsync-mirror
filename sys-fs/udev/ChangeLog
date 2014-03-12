@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1009 2014/03/07 15:04:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1010 2014/03/12 06:59:30 ssuominen Exp $
+
+  12 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Stop overwriting libudev.so, since git is working again after http://cgit.free
+  desktop.org/systemd/systemd/commit/?id=0ce91e4e3ba60d5c87307c1be4a3f6095790c4c
+  2
 
   07 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-210.ebuild,
   udev-9999.ebuild:
