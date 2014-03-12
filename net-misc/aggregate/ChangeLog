@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.16 2012/12/22 17:24:28 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.17 2014/03/12 03:49:32 patrick Exp $
+
+  12 Mar 2014; Patrick Lauer <patrick@gentoo.org> aggregate-1.6.ebuild:
+  Shorten description for improved repoman happy
 
   22 Dec 2012; Ulrich Müller <ulm@gentoo.org> aggregate-1.6.ebuild:
   Fix LICENSE, see LICENCE and LICENSE files in tarball, bug 446488.
@@ -52,4 +55,3 @@
   13 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> aggregate-1.6.ebuild,
   metadata.xml:
   initial commit
-

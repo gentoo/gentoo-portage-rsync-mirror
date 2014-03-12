@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcapnav
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.8 2008/03/21 15:57:56 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.9 2014/03/12 03:53:59 patrick Exp $
+
+  12 Mar 2014; Patrick Lauer <patrick@gentoo.org> libpcapnav-0.7.ebuild,
+  libpcapnav-0.8.ebuild:
+  Shorten description for improved repoman happy
 
   21 Mar 2008; Markus Meier <maekke@gentoo.org> libpcapnav-0.8.ebuild:
   amd64 stable, needed for bug #201842
@@ -36,4 +40,3 @@
   16 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
   +libpcapnav-0.5.ebuild:
   Initial commit. Thanks to soulse in bug 84895 for the ebuild.
-

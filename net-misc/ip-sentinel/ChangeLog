@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ip-sentinel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.11 2014/01/08 06:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.12 2014/03/12 03:44:32 patrick Exp $
+
+  12 Mar 2014; Patrick Lauer <patrick@gentoo.org> ip-sentinel-0.12.ebuild:
+  Shorten description for improved repoman happy
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ip-sentinel-0.12.ebuild:
   Inherit the user eclass for enewuser/etc...
