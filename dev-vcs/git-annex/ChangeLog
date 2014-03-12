@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.20 2014/02/10 09:01:13 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.21 2014/03/12 21:33:28 qnikst Exp $
+
+*git-annex-5.20140306 (12 Mar 2014)
+
+  12 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  +git-annex-5.20140306.ebuild, -git-annex-3.20111203-r1.ebuild,
+  -git-annex-3.20120605.ebuild, -git-annex-5.20131130.ebuild, metadata.xml:
+  Add new version, drop old #500688
 
   10 Feb 2014; Alexander Vershilov <qnikst@gentoo.org>
   git-annex-5.20131130.ebuild:
