@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15468 2014/03/12 09:21:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15469 2014/03/12 11:50:34 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -106,7 +106,10 @@ app-emacs/delicious
 # emul-linux bumps. Please unmask in order, after getting ACK from
 # package maintainer.
 #
-# Note: yngwin explicitly requested 30 days + 1 version bump for cairo.
+# Notes:
+# - yngwin explicitly requested 30 days + 1 version bump for cairo.
+# - always unmask in order, with emul-linux of choice and *all* packages
+# preceding it
 >=dev-libs/libgcrypt-1.6.1-r1
 dev-libs/libgcrypt:11
 >=dev-libs/lzo-2.06-r1
@@ -119,7 +122,6 @@ dev-libs/libgcrypt:11
 >=app-emulation/emul-linux-x86-gtklibs-20131008-r3
 >=media-gfx/graphite2-1.2.4-r1
 >=media-libs/harfbuzz-0.9.26-r1
-# libass needs multilib harfbuzz, unmask at the same time (aballier@g.o)
 >=media-libs/libass-0.11
 >=x11-libs/pango-1.36.2-r1
 >=x11-libs/pangox-compat-0.0.2-r1
