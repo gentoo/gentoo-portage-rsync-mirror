@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.72 2013/11/24 10:53:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.73 2014/03/11 23:55:44 floppym Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -96,7 +96,7 @@ esac
 # @ECLASS-VARIABLE: AUTOTOOLS_AUTORECONF
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Set to a non-empty value in order to enable running autoreconf
+# Set to a non-empty value before calling inherit to enable running autoreconf
 # in src_prepare() and adding autotools dependencies.
 #
 # This is usually necessary when using live sources or applying patches

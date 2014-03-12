@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=!amd64? ( dev-libs/libxml2 ) amd64? ( abi_x86_64? ( dev-libs/libxml2 ) abi_x86_32? ( app-emulation/emul-linux-x86-baselibs ) )
 SLOT=0
 SRC_URI=ftp://ftp.markus-raab.org/elektra/elektra-0.7.1.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	5beadd9860130ff93bfad7eb91d499e9	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	5beadd9860130ff93bfad7eb91d499e9	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a09e206071c89b1504dc0f88da5bace9

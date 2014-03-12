@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1169 2014/03/09 18:54:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1170 2014/03/11 23:55:44 floppym Exp $
+
+  11 Mar 2014; Mike Gilbert <floppym@gentoo.org> autotools-utils.eclass:
+  Indicate that AUTOTOOLS_AUTORECONF should be set before calling inherit.
 
   09 Mar 2014; Ulrich Müller <ulm@gentoo.org> texlive-module.eclass:
   Do not inherit base.eclass, bug 497054.
