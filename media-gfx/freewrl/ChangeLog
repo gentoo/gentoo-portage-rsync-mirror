@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.53 2013/12/23 16:20:49 axs Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.54 2014/03/12 14:24:13 axs Exp $
+
+  12 Mar 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  freewrl-1.22.13-r1.ebuild, freewrl-1.22.13-r3.ebuild, freewrl-9999.ebuild:
+  fixed configuration error when building against spidermonkeys older than
+  1.8.5; migrated live ebuild to new git upstream repo
 
 *freewrl-1.22.13-r3 (23 Dec 2013)
 

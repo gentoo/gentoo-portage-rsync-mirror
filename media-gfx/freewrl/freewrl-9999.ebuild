@@ -1,20 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.3 2013/12/23 16:20:49 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.4 2014/03/12 14:24:13 axs Exp $
 
 EAPI=5
 
 inherit autotools nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
 
 if [[ ${PV} == "9999" ]]; then
-	inherit cvs
-	ECVS_SERVER="freewrl.cvs.sourceforge.net:/cvsroot/freewrl/"
-	ECVS_USER="anonymous"
-	ECVS_PASS=""
-	ECVS_AUTH="pserver"
-	ECVS_MODULE="freewrl/freex3d"
-	ECVS_TOP_DIR="${DISTDIR}/cvs-src/freewrl/freex3d"
-	S="${WORKDIR}/freewrl/freex3d"
+	inherit git-r3
+	EGIT_REPO_URI="git://git.code.sf.net/p/freewrl/git"
+	S="${WORKDIR}/${P}/freex3d"
 	SRC_URI=
 	KEYWORDS=
 else

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.1 2013/12/23 16:20:49 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.2 2014/03/12 14:24:13 axs Exp $
 
 EAPI=5
 
@@ -72,7 +72,7 @@ src_configure() {
 		myconf+=" --with-soundconv=/usr/bin/sox"
 	fi
 	# disable the checks for other js libs, in case they are installed
-	if has_version ">=dev-lang/spidermonkey-1.8.5" ; then
+	if has_version ">=dev-lang/spidermonkey-1.8.5:0" ; then
 		# spidermonkey-1.8.5 provides a .pc to pkg-config, it should be findable via mozjs185
 		for x in mozilla-js xulrunner-js firefox-js firefox2-js seamonkey-js; do
 			myconf+=" --disable-${x}"
@@ -83,7 +83,7 @@ src_configure() {
 		done
 		# spidermonkey pre-1.8.5 has no pkg-config, so override ./configure
 		JAVASCRIPT_ENGINE_CFLAGS="-I/usr/include/js -DXP_UNIX"
-		if has_version ">=dev-lang/spidermonkey-1.8" ; then
+		if has_version ">=dev-lang/spidermonkey-1.8:0" ; then
 			# spidermonkey-1.8 changed the name of the lib
 			JAVASCRIPT_ENGINE_LIBS="-lmozjs"
 		else

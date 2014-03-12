@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.11 2014/03/07 12:04:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.12 2014/03/12 14:03:08 dilfridge Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ "${PV}" != "9999" ]]; then
 	KEYWORDS="~amd64 ~x86"
 	inherit perl-module
 else
-	EGIT_REPO_URI="git://gitorious.org/lab-measurement/lab.git"
+	EGIT_REPO_URI="https://github.com/lab-measurement/lab-measurement.git"
 	EGIT_BRANCH="master"
 	EGIT_SOURCEDIR=${S}
 	KEYWORDS=""
