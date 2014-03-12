@@ -2865,6 +2865,7 @@ kde-misc/kepas:oscar - Enables ICQ (AIM) support.
 kde-misc/krusader:bookmarks - Add dependency on bookmark package.
 kde-misc/networkmanagement:openconnect - Build support for the OpenConnect VPN client
 kde-misc/plasma-nm:modemmanager - Enable support for mobile broadband devices
+kde-misc/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-misc/synaptiks:upower - Handle mouse devices correctly across suspend and resume with upower
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit

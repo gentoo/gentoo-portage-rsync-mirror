@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.3.ebuild,v 1.1 2014/02/28 00:21:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.3.ebuild,v 1.2 2014/03/12 15:11:28 johu Exp $
 
 EAPI=5
 
@@ -22,20 +22,24 @@ HOMEPAGE="https://projects.kde.org/projects/playground/network/plasma-nm"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="4"
-IUSE="debug modemmanager"
+IUSE="debug modemmanager openconnect"
 
 DEPEND="
 	>=net-libs/libnm-qt-0.9.8.0[modemmanager?]
 	>=net-misc/networkmanager-0.9.8.0
 	modemmanager? ( >=net-libs/libmm-qt-1.0.0 )
+	openconnect? ( net-misc/openconnect )
 "
 RDEPEND="${DEPEND}
 	!kde-misc/networkmanagement
 "
 
+PATCHES=( "${FILESDIR}/${P}-openconnect-build.patch" )
+
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use !modemmanager DISABLE_MODEMMANAGER_SUPPORT)
+		$(cmake-utils_use_find_package openconnect OpenConnect)
 	)
 
 	kde4-base_src_configure
