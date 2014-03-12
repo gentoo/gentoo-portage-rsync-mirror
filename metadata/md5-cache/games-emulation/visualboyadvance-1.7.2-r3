@@ -6,8 +6,8 @@ HOMEPAGE=http://vba.ngemu.com/
 IUSE=gtk mmx nls
 KEYWORDS=amd64 ppc x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=media-libs/libpng media-libs/libsdl sys-libs/zlib[minizip] gtk? ( >=x11-libs/gtk+-2.4:2 >=dev-cpp/gtkmm-2.4:2.4 >=dev-cpp/libglademm-2.4:2.4 ) nls? ( virtual/libintl )
+RDEPEND=media-libs/libpng media-libs/libsdl sys-libs/zlib[minizip] gtk? ( >=x11-libs/gtk+-2.4:2 >=dev-cpp/gtkmm-2.4:2.4 >=dev-cpp/libglademm-2.4:2.4 ) nls? ( virtual/libintl ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/vba/VisualBoyAdvance-src-1.7.2.tar.gz mirror://gentoo/visualboyadvance-1.7.2-deprecatedsigc++.patch.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	0e2f69d5415e0363531260d2eabb0826	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=54c4f1a491c84f6733ca6e2f6855d00b

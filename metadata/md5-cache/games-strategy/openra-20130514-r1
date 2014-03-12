@@ -6,8 +6,8 @@ HOMEPAGE=http://open-ra.org/
 IUSE=cg tools
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
-RDEPEND=dev-dotnet/libgdiplus dev-lang/mono media-libs/freetype:2[X] media-libs/libsdl[X,opengl,video] media-libs/openal virtual/jpeg virtual/opengl cg? ( >=media-gfx/nvidia-cg-toolkit-2.1.0017 )
+RDEPEND=dev-dotnet/libgdiplus dev-lang/mono media-libs/freetype:2[X] media-libs/libsdl[X,opengl,video] media-libs/openal virtual/jpeg virtual/opengl cg? ( >=media-gfx/nvidia-cg-toolkit-2.1.0017 ) games-misc/games-envd
 SLOT=0
 SRC_URI=https://github.com/OpenRA/OpenRA/tarball/release-20130514 -> openra-20130514.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=e427413f3cac95449c2f3d1575a74222

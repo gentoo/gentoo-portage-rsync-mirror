@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.156 2014/02/02 12:15:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.157 2014/03/12 18:54:12 hasufell Exp $
 
 # devlist: games@gentoo.org
 #
@@ -18,6 +18,11 @@ case ${EAPI:-0} in
 	2|3|4|5) EXPORT_FUNCTIONS pkg_setup src_configure src_compile pkg_preinst pkg_postinst ;;
 	*) die "no support for EAPI=${EAPI} yet" ;;
 esac
+
+if [[ ${CATEGORY}/${PN} != "games-misc/games-envd" ]] ; then
+	# environment file
+	RDEPEND="games-misc/games-envd"
+fi
 
 export GAMES_PREFIX=${GAMES_PREFIX:-/usr/games}
 export GAMES_PREFIX_OPT=${GAMES_PREFIX_OPT:-/opt}
@@ -124,23 +129,6 @@ prepgamesdirs() {
 	find "${D}/${GAMES_BINDIR}" -maxdepth 1 -type f -exec chmod 750 '{}' \;
 }
 
-gamesenv() {
-	local d libdirs
-
-	for d in $(get_all_libdirs) ; do
-		libdirs="${libdirs}:${GAMES_PREFIX}/${d}"
-	done
-
-	# Wish we could use doevnd here, but we dont want the env
-	# file to be tracked in the CONTENTS of every game
-	cat <<-EOF > "${ROOT}"/etc/env.d/${GAMES_ENVD}
-	LDPATH="${libdirs:1}"
-	PATH="${GAMES_BINDIR}"
-	EOF
-	gamesowners "${ROOT}"/etc/env.d/${GAMES_ENVD}
-	gamesperms  "${ROOT}"/etc/env.d/${GAMES_ENVD}
-}
-
 games_pkg_setup() {
 	tc-export CC CXX LD AR RANLIB
 
@@ -183,9 +171,8 @@ games_pkg_preinst() {
 	done < <(find "${D}/${GAMES_STATEDIR}" -type f -printf '%P\n' 2>/dev/null)
 }
 
-# pkg_postinst function ... create env.d entry and warn about games group
+# pkg_postinst function ... warn about games group
 games_pkg_postinst() {
-	gamesenv
 	if [[ -z "${GAMES_SHOW_WARNING}" ]] ; then
 		ewarn "Remember, in order to play games, you have to"
 		ewarn "be in the '${GAMES_GROUP}' group."

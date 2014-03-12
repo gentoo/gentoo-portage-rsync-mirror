@@ -6,9 +6,9 @@ HOMEPAGE=http://code.google.com/p/snes9x-gtk/
 IUSE=alsa debug gtk joystick multilib netplay nls opengl oss png pulseaudio portaudio +xv +xrandr zlib
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd
 LICENSE=Snes9x GPL-2 GPL-2+ LGPL-2.1 LGPL-2.1+ ISC MIT ZLIB Info-ZIP
-RDEPEND=x11-libs/libX11 x11-libs/libXext png? ( >=media-libs/libpng-1.2.43:0 ) gtk? ( >=x11-libs/gtk+-2.10:2 x11-misc/xdg-utils portaudio? ( >=media-libs/portaudio-19_pre ) joystick? ( >=media-libs/libsdl-1.2.12[joystick] ) opengl? ( virtual/opengl ) xv? ( x11-libs/libXv ) xrandr? ( x11-libs/libXrandr ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) )
+RDEPEND=x11-libs/libX11 x11-libs/libXext png? ( >=media-libs/libpng-1.2.43:0 ) gtk? ( >=x11-libs/gtk+-2.10:2 x11-misc/xdg-utils portaudio? ( >=media-libs/portaudio-19_pre ) joystick? ( >=media-libs/libsdl-1.2.12[joystick] ) opengl? ( virtual/opengl ) xv? ( x11-libs/libXv ) xrandr? ( x11-libs/libXrandr ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) games-misc/games-envd
 RESTRICT=bindist
 SLOT=0
 SRC_URI=http://snes9x-gtk.googlecode.com/files/snes9x-1.53-src.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	0e2f69d5415e0363531260d2eabb0826	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=fcfce8de9f72dd065404f64a60852f4b

@@ -5,8 +5,8 @@ HOMEPAGE=http://www.slashem.org/
 IUSE=X sdl opengl
 KEYWORDS=amd64 ppc x86
 LICENSE=nethack
-RDEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXmu x11-libs/libXext x11-libs/libXt x11-libs/libXpm x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp ) opengl? ( virtual/opengl media-libs/libsdl ) sdl? ( media-libs/libsdl )
+RDEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXmu x11-libs/libXext x11-libs/libXt x11-libs/libXpm x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp ) opengl? ( virtual/opengl media-libs/libsdl ) sdl? ( media-libs/libsdl ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/slashem/se007e7f2.tar.gz http://www.juiblex.co.uk/nethack/config/conf12s.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=444bcc888e0e93d2fee1636a7510f2a1

@@ -5,8 +5,8 @@ EAPI=3
 HOMEPAGE=http://www.widelands.org/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=dev-lang/lua media-libs/libsdl[video] media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-gfx media-libs/sdl-net media-libs/libpng sys-libs/zlib media-libs/glew media-libs/sdl-ttf >=dev-libs/boost-1.37
+RDEPEND=dev-lang/lua media-libs/libsdl[video] media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-gfx media-libs/sdl-net media-libs/libpng sys-libs/zlib media-libs/glew media-libs/sdl-ttf >=dev-libs/boost-1.37 games-misc/games-envd
 SLOT=0
 SRC_URI=http://launchpad.net/widelands/build17/build-17/+download/widelands-build17-src.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=ce4a4669bb7a5e3f2d9706eabf7f575f

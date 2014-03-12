@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.238 2014/03/11 15:44:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.239 2014/03/12 19:01:39 ssuominen Exp $
+
+  12 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/xfdesktop-4.11.3-always-pull-in-dbus-glib.patch,
+  xfdesktop-4.11.3.ebuild:
+  Always pull in dev-libs/dbus-glib because there are 3 source files always
+  using it without #ifdef of anykind.
 
 *xfdesktop-4.11.3 (11 Mar 2014)
 

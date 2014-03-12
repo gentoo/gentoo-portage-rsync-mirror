@@ -4,9 +4,9 @@ EAPI=2
 HOMEPAGE=http://belfry.com/fuzzball/trebuchet/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
-RDEPEND=>=dev-lang/tk-8.3.3 dev-lang/tcl
+RDEPEND=>=dev-lang/tk-8.3.3 dev-lang/tcl games-misc/games-envd
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/trebuchet/trebuchet-1.075.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=344f5be25ddf4ac0e495e42f43188221

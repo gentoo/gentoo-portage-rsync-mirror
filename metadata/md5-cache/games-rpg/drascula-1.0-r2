@@ -6,9 +6,9 @@ HOMEPAGE=http://www.alcachofasoft.com/
 IUSE=linguas_es linguas_de linguas_fr linguas_it +sound
 KEYWORDS=~amd64 ~x86
 LICENSE=drascula
-RDEPEND=>=games-engines/scummvm-0.13.1
+RDEPEND=>=games-engines/scummvm-0.13.1 games-misc/games-envd
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/scummvm/drascula-1.0.zip https://github.com/scummvm/scummvm/raw/v1.5.0/dists/engine-data/drascula.dat -> drascula-1.5.0.dat sound? ( mirror://sourceforge/scummvm/drascula-audio-2.0.zip ) linguas_es? ( mirror://sourceforge/scummvm/drascula-int-1.1.zip ) linguas_de? ( mirror://sourceforge/scummvm/drascula-int-1.1.zip ) linguas_fr? ( mirror://sourceforge/scummvm/drascula-int-1.1.zip ) linguas_it? ( mirror://sourceforge/scummvm/drascula-int-1.1.zip )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=35d2f3a02a38c5ddfa5d045e5fccb441
