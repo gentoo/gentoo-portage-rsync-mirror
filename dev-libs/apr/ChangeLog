@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.212 2014/02/04 03:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.213 2014/03/12 07:41:07 polynomial-c Exp $
+
+  12 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -apr-1.5.0.ebuild,
+  -apr-1.5.0-r1.ebuild:
+  Removed old.
 
   04 Feb 2014; Mike Frysinger <vapier@gentoo.org> apr-1.5.0-r2.ebuild:
   Add more cross-compile related variables to force sane results.
