@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8689 2014/03/11 22:16:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8690 2014/03/12 04:03:30 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2014; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Remove mask on >=media-libs/freetype-2.5.1 (tracker bug #493570)
 
   11 Mar 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Update the systemd mask to catch 211.
@@ -363,7 +366,7 @@
   Mask =media-sound/lilypond-2.19* for testing.
 
   03 Feb 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
-  sys-kernel/module-rebuild removal (pending 1st February 2014), see bug 
+  sys-kernel/module-rebuild removal (pending 1st February 2014), see bug
   #410739 for reference.
 
   03 Feb 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
