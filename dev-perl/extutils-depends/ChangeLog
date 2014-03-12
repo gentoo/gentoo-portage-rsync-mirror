@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-depends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.75 2014/03/06 10:33:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.76 2014/03/12 09:57:14 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  extutils-depends-0.305.0.ebuild:
+  Stable for sparc, wrt bug #495538
 
   06 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   extutils-depends-0.305.0.ebuild:

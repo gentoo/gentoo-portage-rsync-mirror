@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.30 2014/03/07 23:19:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.31 2014/03/12 09:54:05 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mytop-1.6-r4.ebuild:
+  Stable for sparc, wrt bug #491978
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> mytop-1.6-r4.ebuild:
   amd64 stable, bug #491978

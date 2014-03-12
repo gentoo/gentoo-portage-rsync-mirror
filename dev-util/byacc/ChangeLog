@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.90 2014/03/08 13:14:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.91 2014/03/12 09:53:35 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> byacc-20140101.ebuild:
+  Stable for sparc, wrt bug #502802
 
   08 Mar 2014; Markus Meier <maekke@gentoo.org> byacc-20140101.ebuild:
   arm stable, bug #502802

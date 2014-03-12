@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-1.4.1.ebuild,v 1.4 2014/03/07 23:28:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-1.4.1.ebuild,v 1.5 2014/03/12 09:55:01 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Matroska-Org/libmatroska/archive/release-${PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0/6" # subslot = soname major version
-KEYWORDS="~alpha amd64 arm ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-linux"
+KEYWORDS="~alpha amd64 arm ia64 ~ppc ~ppc64 sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-linux"
 IUSE="static-libs"
 RESTRICT="test"
 

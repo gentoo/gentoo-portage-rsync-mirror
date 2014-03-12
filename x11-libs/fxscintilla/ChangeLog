@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.57 2014/03/12 05:04:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.58 2014/03/12 09:50:59 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> fxscintilla-3.3.5.ebuild:
+  Stable for sparc, wrt bug #503236
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   fxscintilla-3.3.5.ebuild:

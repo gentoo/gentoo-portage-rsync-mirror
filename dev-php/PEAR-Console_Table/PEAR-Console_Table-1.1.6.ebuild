@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/PEAR-Console_Table-1.1.6.ebuild,v 1.7 2014/03/06 10:38:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Table/PEAR-Console_Table-1.1.6.ebuild,v 1.8 2014/03/12 09:59:27 ago Exp $
 
 EAPI="4"
 
 inherit php-pear-r1
 
-KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 DESCRIPTION="Class that makes it easy to build console style tables."
 LICENSE="BSD"
 SLOT="0"

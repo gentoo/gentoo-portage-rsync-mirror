@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.237 2014/03/12 05:00:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.238 2014/03/12 09:50:30 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gettext-0.18.3.2.ebuild:
+  Stable for sparc, wrt bug #500872
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gettext-0.18.3.2.ebuild:
   x86 stable wrt bug #500872

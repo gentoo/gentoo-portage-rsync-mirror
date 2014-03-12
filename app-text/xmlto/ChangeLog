@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.88 2014/03/08 13:10:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.89 2014/03/12 09:53:00 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xmlto-0.0.25.ebuild:
+  Stable for sparc, wrt bug #502630
 
   08 Mar 2014; Markus Meier <maekke@gentoo.org> xmlto-0.0.25.ebuild:
   arm stable, bug #502630

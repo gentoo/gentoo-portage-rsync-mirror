@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.389 2014/03/10 15:21:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.390 2014/03/12 09:55:55 yngwin Exp $
+
+  12 Mar 2014; Ben de Groot <yngwin@gentoo.org> -freetype-2.4.11-r2.ebuild,
+  -freetype-2.4.12.ebuild, -freetype-2.5.2-r1.ebuild:
+  remove obsoleted versions
 
 *freetype-2.5.3 (10 Mar 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.129 2014/03/10 18:20:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.130 2014/03/12 09:52:03 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  gentoolkit-dev-0.2.8.3-r1.ebuild:
+  Stable for sparc, wrt bug #492236
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org>
   gentoolkit-dev-0.2.8.3-r1.ebuild:

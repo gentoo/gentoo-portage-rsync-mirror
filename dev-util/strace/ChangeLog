@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.195 2014/03/10 19:39:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.196 2014/03/12 09:52:23 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> strace-4.8.ebuild:
+  Stable for sparc, wrt bug #501648
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> strace-4.8.ebuild:
   x86 stable, bug #501648

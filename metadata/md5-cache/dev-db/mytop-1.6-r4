@@ -3,10 +3,10 @@ DEPEND=dev-perl/DBD-mysql virtual/perl-Getopt-Long dev-perl/TermReadKey virtual/
 DESCRIPTION=mytop - a top clone for mysql
 EAPI=5
 HOMEPAGE=http://jeremy.zawodny.com/mysql/mytop/
-KEYWORDS=~alpha amd64 ~ppc ~sparc x86
+KEYWORDS=~alpha amd64 ~ppc sparc x86
 LICENSE=|| ( Artistic GPL-2 )
 RDEPEND=dev-perl/DBD-mysql virtual/perl-Getopt-Long dev-perl/TermReadKey virtual/perl-Term-ANSIColor virtual/perl-Time-HiRes dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://jeremy.zawodny.com/mysql/mytop/mytop-1.6.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=87ba53c32c737ff342d421e4fcd128c6
+_md5_=347350eed692973249b4ba0765f1e6f9

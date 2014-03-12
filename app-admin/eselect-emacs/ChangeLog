@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.109 2014/03/12 08:57:17 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.110 2014/03/12 09:49:59 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> eselect-emacs-1.15.ebuild:
+  Stable for sparc, wrt bug #503108
 
   12 Mar 2014; Chema Alonso <nimiux@gentoo.org> eselect-emacs-1.15.ebuild:
   Stable for amd64 wrt bug #503108
@@ -409,4 +412,3 @@
   initial import from Emacs Overlay. Features: switch the target of the
   /usr/bin/emacs symlink, man and info pages so several versions can be
   installed in parallel on a system
-

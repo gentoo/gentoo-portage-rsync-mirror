@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.457 2014/03/12 05:27:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.458 2014/03/12 09:49:10 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> lftp-4.4.15.ebuild:
+  Stable for sparc, wrt bug #503784
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> lftp-4.4.15.ebuild:
   x86 stable wrt bug #503784
