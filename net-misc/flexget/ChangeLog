@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.50 2014/02/22 15:08:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.51 2014/03/12 02:07:14 floppym Exp $
+
+  12 Mar 2014; Mike Gilbert <floppym@gentoo.org> flexget-1.2.31.ebuild,
+  flexget-1.2.97.ebuild, flexget-9999.ebuild:
+  Block beautifulsoup-4.2.0, bug 503962 by Wicla.
 
   22 Feb 2014; Mike Gilbert <floppym@gentoo.org> flexget-1.2.97.ebuild,
   flexget-9999.ebuild:
