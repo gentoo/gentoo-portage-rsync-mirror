@@ -1,0 +1,12 @@
+Index: x265-9999/source/x265.pc.in
+===================================================================
+--- x265-9999.orig/source/x265.pc.in
++++ x265-9999/source/x265.pc.in
+@@ -1,6 +1,6 @@
+ prefix=@CMAKE_INSTALL_PREFIX@
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
++libdir=${exec_prefix}/@CMAKE_INSTALL_LIBDIR@
+ includedir=${prefix}/include
+ 
+ Name: @CMAKE_PROJECT_NAME@

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.26 2014/03/11 01:45:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.27 2014/03/12 20:58:12 maekke Exp $
+
+  12 Mar 2014; Markus Meier <maekke@gentoo.org> allison-2.0.3-r2.ebuild:
+  arm stable, bug #503564
 
 *allison-2.0.3-r3 (11 Mar 2014)
 

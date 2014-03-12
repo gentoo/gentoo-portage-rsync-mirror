@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.14-r1.ebuild,v 1.3 2014/02/22 20:27:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.16.ebuild,v 1.1 2014/03/12 20:52:46 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -14,19 +14,19 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/3"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="cups debug +obex readline selinux systemd test"
+IUSE="cups debug +obex +readline selinux systemd test +udev"
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	>=dev-libs/glib-2.28:2
 	>=sys-apps/dbus-1.6:=
 	>=sys-apps/hwids-20121202.2
-	>=virtual/udev-171
 	cups? ( net-print/cups:= )
 	obex? ( dev-libs/libical )
 	readline? ( sys-libs/readline:= )
 	selinux? ( sec-policy/selinux-bluetooth )
 	systemd? ( sys-apps/systemd )
+	udev? ( >=virtual/udev-171 )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -46,6 +46,14 @@ DOC_CONTENTS="
 pkg_setup() {
 	enewgroup plugdev
 	use test && python-any-r1_pkg_setup
+
+	if ! use udev; then
+		ewarn
+		ewarn "You are installing ${PN} with USE=-udev. This means various bluetooth"
+		ewarn "devices and adapters from Apple, Dell, Logitech etc. will not work,"
+		ewarn "and hid2hci will not be available."
+		ewarn
+	fi
 }
 
 src_prepare() {
@@ -77,11 +85,13 @@ src_prepare() {
 
 src_configure() {
 	# readline is automagic when client is enabled
+	# --enable-client always needs readline, bug #504038
 	export ac_cv_header_readline_readline_h=$(usex readline)
 
 	# Missing flags: experimental (sap, nfc, ...)
 	econf \
 		--localstatedir=/var \
+		--disable-android \
 		--enable-experimental \
 		--enable-optimization \
 		$(use_enable debug) \
@@ -91,13 +101,13 @@ src_configure() {
 		$(use_enable test) \
 		--enable-tools \
 		--enable-monitor \
-		--enable-udev \
 		$(use_enable cups) \
 		$(use_enable obex) \
-		--enable-client \
+		$(use_enable readline client) \
 		$(use_enable systemd) \
 		$(systemd_with_unitdir) \
-		--enable-sixaxis
+		$(use_enable udev) \
+		$(use_enable udev sixaxis)
 }
 
 src_install() {
@@ -133,7 +143,7 @@ src_install() {
 pkg_postinst() {
 	readme.gentoo_print_elog
 
-	udev_reload
+	use udev && udev_reload
 
 	has_version net-dialup/ppp || elog "To use dial up networking you must install net-dialup/ppp."
 

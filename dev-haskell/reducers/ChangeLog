@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/reducers
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/reducers/ChangeLog,v 1.1 2014/03/12 20:33:18 qnikst Exp $
+
+*reducers-3.10.2 (12 Mar 2014)
+
+  12 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +reducers-3.10.2.ebuild:
+  initial version

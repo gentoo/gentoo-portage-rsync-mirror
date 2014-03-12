@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.149 2014/03/11 19:01:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.150 2014/03/12 20:50:25 aballier Exp $
 
 EAPI="5"
 
@@ -46,7 +46,7 @@ IUSE="
 	ladspa libass libcaca libsoxr libv4l modplug mp3 +network openal opengl
 	openssl opus oss pic pulseaudio quvi rtmp schroedinger sdl speex ssh
 	static-libs test theora threads truetype twolame v4l vaapi vdpau vorbis vpx
-	wavpack X x264 xvid +zlib zvbi
+	wavpack X x264 x265 xvid +zlib zvbi
 	"
 
 ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
@@ -92,6 +92,7 @@ RDEPEND="
 		twolame? ( media-sound/twolame )
 		wavpack? ( media-sound/wavpack )
 		x264? ( >=media-libs/x264-0.0.20111017:= )
+		x265? ( >=media-libs/x265-0.9:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	fdk? ( >=media-libs/fdk-aac-0.1.3 )
@@ -183,7 +184,7 @@ src_configure() {
 	if use encode
 	then
 		ffuse="${ffuse} aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame"
-		for i in aacplus faac theora twolame wavpack x264 xvid; do
+		for i in aacplus faac theora twolame wavpack x264 x265 xvid; do
 			ffuse="${ffuse} ${i}:lib${i}"
 		done
 

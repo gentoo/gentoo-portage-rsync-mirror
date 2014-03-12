@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.720 2014/03/11 19:01:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.721 2014/03/12 20:50:25 aballier Exp $
+
+  12 Mar 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add x265 support, bug #502068 by Michal Feix
 
   11 Mar 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   disable xlib with USE=-X

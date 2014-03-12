@@ -57,6 +57,7 @@
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 	<flag name="vis"> Adds support for SIMD optimizations for UltraSPARC processors.</flag>
 	<flag name="vpx">Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.</flag>
+	<flag name="x265">Enables HEVC encoding with <pkg>media-libs/x265</pkg>.</flag>
 	<flag name="zvbi">Enables <pkg>media-libs/zvbi</pkg> based teletext decoder.</flag>
   </use>
 </pkgmetadata>
