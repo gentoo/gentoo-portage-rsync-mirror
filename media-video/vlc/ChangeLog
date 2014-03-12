@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.893 2014/03/10 13:44:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.894 2014/03/12 16:15:16 tomwij Exp $
+
+  12 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.7.ebuild, vlc-2.0.8.ebuild, vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild,
+  vlc-2.0.9999.ebuild, vlc-2.1.0.ebuild, vlc-2.1.1.ebuild, vlc-2.1.2.ebuild,
+  vlc-2.1.4.ebuild, vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Removed newer rdp patch from 9999 as it has been patched upstream. Fixes bug
+  #503464, reported by David Heidelberger (okias). Updated SLOT dependencies per
+  consensus with ssuominen.
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> vlc-2.0.5.ebuild,
   vlc-2.0.7.ebuild, vlc-2.0.8.ebuild, vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild,

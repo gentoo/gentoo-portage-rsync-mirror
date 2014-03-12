@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.213 2014/03/10 13:44:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.214 2014/03/12 16:15:16 tomwij Exp $
 
 EAPI="5"
 
@@ -158,9 +158,9 @@ DEPEND="${RDEPEND}
 	kde? ( >=kde-base/kdelibs-4:4 )
 	xcb? ( x11-proto/xproto:0 )
 	app-arch/xz-utils:0
-	dev-lang/yasm
-	>=sys-devel/gettext-0.18.3
-	virtual/pkgconfig
+	dev-lang/yasm:*
+	>=sys-devel/gettext-0.18.3:*
+	virtual/pkgconfig:*
 "
 
 REQUIRED_USE="
@@ -240,7 +240,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch
 
 	# Patch up incompatibilities and reconfigure autotools.
-	epatch "${FILESDIR}"/${PN}-2.1.0-newer-rdp.patch
 	epatch "${FILESDIR}"/${PN}-2.1.0-libva-1.2.1-compat.patch
 
 	# Fix up broken audio when skipping using a fixed reversed bisected commit.
