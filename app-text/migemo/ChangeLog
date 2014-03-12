@@ -1,6 +1,9 @@
 # ChangeLog for app-text/migemo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.46 2014/03/10 20:16:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.47 2014/03/11 23:11:39 nimiux Exp $
+
+  11 Mar 2014; Chema Alonso <nimiux@gentoo.org> migemo-0.40_p2.ebuild:
+  Stable for amd64 wrt bug #493028
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> migemo-0.40_p2.ebuild:
   x86 stable, bug #493028
