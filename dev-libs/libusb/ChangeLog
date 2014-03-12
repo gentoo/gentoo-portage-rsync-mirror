@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.155 2014/03/09 14:35:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.156 2014/03/12 05:24:15 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libusb-1.0.18.ebuild:
+  x86 stable wrt bug #503404
 
   09 Mar 2014; Markus Meier <maekke@gentoo.org> libusb-1.0.18.ebuild:
   arm stable, bug #503404

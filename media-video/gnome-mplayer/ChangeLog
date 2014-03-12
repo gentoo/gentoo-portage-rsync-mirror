@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.86 2014/03/06 14:33:39 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.87 2014/03/12 05:23:21 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-mplayer-1.0.8.ebuild:
+  x86 stable wrt bug #495718
 
   06 Mar 2014; Chema Alonso <nimiux@gentoo.org> gnome-mplayer-1.0.8.ebuild:
   Stable for amd64 wrt bug #495718

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.28 2014/03/07 23:45:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.29 2014/03/12 05:29:17 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  linux-gpib-3.2.20-r1.ebuild:
+  x86 stable wrt bug #503722
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> linux-gpib-3.2.20-r1.ebuild:
   amd64 stable, bug #503722

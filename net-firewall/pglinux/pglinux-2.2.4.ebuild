@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.4.ebuild,v 1.1 2014/01/28 13:09:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.4.ebuild,v 1.2 2014/03/12 05:21:06 phajdan.jr Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://sourceforge.net/projects/peerguardian/"
 SRC_URI="mirror://sourceforge/peerguardian/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 IUSE="cron dbus logrotate networkmanager qt4 zlib"
 

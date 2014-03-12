@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.41.ebuild,v 1.1 2013/12/11 13:27:11 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/tinyscheme-1.41.ebuild,v 1.2 2014/03/12 05:14:57 phajdan.jr Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/tinyscheme/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 #KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x64-macos"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="static-libs"
 
 DEPEND=""

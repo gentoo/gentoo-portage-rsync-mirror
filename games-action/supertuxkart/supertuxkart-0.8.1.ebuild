@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.8.1.ebuild,v 1.3 2014/03/07 23:28:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.8.1.ebuild,v 1.4 2014/03/12 05:18:28 phajdan.jr Exp $
 
 EAPI=5
 inherit gnome2-utils cmake-utils eutils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/supertuxkart/SuperTuxKart/${PV}/${P}-src.tar.bz2
 
 LICENSE="GPL-3 CC-BY-SA-3.0 CC-BY-2.0 public-domain ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug fribidi wiimote"
 
 # don't unbundle irrlicht and bullet

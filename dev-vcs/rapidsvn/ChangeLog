@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.21 2014/01/07 16:24:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.22 2014/03/12 05:06:43 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rapidsvn-0.12.1-r1.ebuild:
+  x86 stable wrt bug #502814
 
 *rapidsvn-0.12.1-r1 (07 Jan 2014)
 

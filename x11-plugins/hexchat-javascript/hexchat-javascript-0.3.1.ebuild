@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/hexchat-javascript-0.3.1.ebuild,v 1.3 2014/03/07 23:32:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/hexchat-javascript-0.3.1.ebuild,v 1.4 2014/03/12 05:21:57 phajdan.jr Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/TingPing/hexchat-javascript/archive/${PV}.tar.gz -> 
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 RDEPEND="

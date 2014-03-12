@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/girara
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.27 2014/03/07 23:24:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.28 2014/03/12 05:29:41 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  girara-0.1.6-r300.ebuild:
+  x86 stable wrt bug #492030
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> girara-0.1.6-r300.ebuild:
   amd64 stable, bug #492030

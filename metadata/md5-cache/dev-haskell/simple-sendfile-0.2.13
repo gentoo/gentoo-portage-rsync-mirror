@@ -4,11 +4,11 @@ DESCRIPTION=Cross platform library for the sendfile system call
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/simple-sendfile
 IUSE=+allow-bsd doc hscolour profile test
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=BSD
 RDEPEND=dev-haskell/network:=[profile?] >=dev-lang/ghc-6.10.4:=
 RESTRICT=test
 SLOT=0/0.2.13
 SRC_URI=mirror://hackage/packages/archive/simple-sendfile/0.2.13/simple-sendfile-0.2.13.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=fb9be8e8bd83464f8dc3bfaa53d320d5
+_md5_=047f8e2e16e8412fb25aafe0110e184e

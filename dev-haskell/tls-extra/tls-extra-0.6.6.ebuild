@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/tls-extra-0.6.6.ebuild,v 1.2 2014/03/07 23:36:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/tls-extra-0.6.6.ebuild,v 1.3 2014/03/12 05:09:22 phajdan.jr Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RESTRICT=test # Could not find module `Tests.Ciphers'

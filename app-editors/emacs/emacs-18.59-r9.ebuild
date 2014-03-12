@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r9.ebuild,v 1.3 2014/02/20 20:59:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r9.ebuild,v 1.4 2014/03/12 05:27:57 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-1+ GPL-2+ BSD" #HPND
 SLOT="18"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+abi_x86_32 abi_x86_x32"
 REQUIRED_USE="amd64? ( || ( abi_x86_32 abi_x86_x32 ) )"
 

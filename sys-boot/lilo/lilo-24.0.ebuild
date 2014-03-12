@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-24.0.ebuild,v 1.1 2013/09/23 12:21:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-24.0.ebuild,v 1.2 2014/03/12 05:13:18 phajdan.jr Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 
 DEPEND=">=sys-devel/bin86-0.15.5"
 RDEPEND="device-mapper? ( >=sys-fs/lvm2-2.02.45 )"

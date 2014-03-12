@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.28 2014/03/02 22:40:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.29 2014/03/12 05:08:50 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> popfile-1.1.3.ebuild:
+  x86 stable wrt bug #500648
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> popfile-1.1.3.ebuild:
   amd64 stable, bug #500648

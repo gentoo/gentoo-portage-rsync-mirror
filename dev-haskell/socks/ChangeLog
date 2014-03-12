@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/socks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/socks/ChangeLog,v 1.6 2014/03/07 23:35:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/socks/ChangeLog,v 1.7 2014/03/12 05:08:25 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> socks-0.5.4.ebuild:
+  x86 stable wrt bug #502694
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> socks-0.5.4.ebuild:
   amd64 stable, bug #502694
