@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lz4/ChangeLog,v 1.1 2014/01/27 16:28:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lz4/ChangeLog,v 1.2 2014/03/12 07:25:22 jlec Exp $
+
+  12 Mar 2014; Justin Lecher <jlec@gentoo.org> lz4-0.6.0_p20140104.ebuild:
+  We don't need nose for installation, #499558
 
 *lz4-0.6.0_p20140104 (27 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/simpy-3.0.3.ebuild,v 1.1 2014/03/07 15:19:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/simpy-3.0.3.ebuild,v 1.2 2014/03/12 07:17:48 jlec Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ python_install_all() {
 	DOCS=( AUTHORS.txt CHANGES.txt README.txt )
 	if use doc; then
 		pushd docs > /dev/null || die
-		PYTHONPATH=.. emake html && HTML_DOCS=( docs/html/. docs/build/doctrees/. )
+		PYTHONPATH=.. emake html && HTML_DOCS=( docs/_build/html/. docs/_build/doctrees/. )
 		popd > /dev/null || die
 	fi
 
