@@ -1041,6 +1041,11 @@ app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspe
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
+app-text/mate-document-viewer:caja - Enable property page extension in mate-base/mate-file-manager
+app-text/mate-document-viewer:dvi - Enable build-in DVI viewer
+app-text/mate-document-viewer:ps - Enable build-in postscript viewer
+app-text/mate-document-viewer:t1lib - Enable the Type-1 fonts for the build-in DVI viewer (media-libs/t1lib)
+app-text/mate-document-viewer:xps - Enable XPS viewer using app-text/libxps
 app-text/mathtex:png - Generate png images by default instead of gif
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
 app-text/pandoc:http-conduit - Enable downloading of resources over https.
