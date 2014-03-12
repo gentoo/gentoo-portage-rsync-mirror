@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.7.0-r1.ebuild,v 1.1 2013/11/17 12:07:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.7.0-r1.ebuild,v 1.2 2014/03/12 11:09:34 mrueg Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ each_ruby_test() {
 			einfo "Tests are not compatible with ruby 1.9.3 with Psych as YAML module."
 			;;
 		*ruby20)
-			einfo "Tests are not compatible with ruby 1.9.3 with Psych as YAML module."
+			einfo "Tests are not compatible with ruby 2.0.0 with Psych as YAML module."
 			;;
 		*)
 			PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -I. test/test.rb || die

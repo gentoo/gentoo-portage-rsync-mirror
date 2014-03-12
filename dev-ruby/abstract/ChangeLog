@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/abstract
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.19 2013/12/24 14:19:08 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.20 2014/03/12 11:07:14 mrueg Exp $
+
+*abstract-1.0.0-r3 (12 Mar 2014)
+
+  12 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +abstract-1.0.0-r3.ebuild:
+  Add ruby21 target.
 
   24 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -abstract-1.0.0-r1.ebuild:
   Cleanup old.

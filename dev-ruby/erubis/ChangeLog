@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.25 2013/11/17 12:07:02 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.26 2014/03/12 11:09:34 mrueg Exp $
+
+  12 Mar 2014; Manuel Rüger <mrueg@gentoo.org> erubis-2.7.0-r1.ebuild:
+  Fix info output for tests.
 
 *erubis-2.7.0-r1 (17 Nov 2013)
 
