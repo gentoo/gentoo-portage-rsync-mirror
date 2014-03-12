@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install nofetch postinst postrm preinst prepare setup unpack
 DEPEND=>=sys-apps/sed-4
-DESCRIPTION=Indie Adventure RPG, about two doctors traversing through the memories of a dying man to fulfill his last wish
+DESCRIPTION=Indie Adventure RPG, two doctors traversing the memories of a dying man to fulfill his last wish
 EAPI=5
 HOMEPAGE=http://freebirdgames.com/games/to-the-moon
 IUSE=bundled-libs
@@ -11,4 +11,4 @@ RESTRICT=fetch bindist splitdebug
 SLOT=0
 SRC_URI=ToTheMoon_linux_1389114090.sh
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=63a72974cdce4a6ff18443132c08e5bd
+_md5_=bcd2044b78ec708237dcb0a820be26b2

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Pager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.39 2012/03/18 18:36:52 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.40 2014/03/12 04:47:12 patrick Exp $
+
+  12 Mar 2014; Patrick Lauer <patrick@gentoo.org> PEAR-Pager-2.4.5.ebuild,
+  PEAR-Pager-2.4.8.ebuild:
+  Shorten description for improved repoman happy
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Pager-2.4.8.ebuild:
   ia64/sparc stable wrt #396993
@@ -148,4 +152,3 @@
   21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Pager-2.3.3.ebuild:
   Initial ebuild.
-

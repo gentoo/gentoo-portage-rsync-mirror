@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/to-the-moon-0.ebuild,v 1.1 2014/01/12 21:26:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/to-the-moon-0.ebuild,v 1.2 2014/03/12 04:36:34 patrick Exp $
 
 # TODO: unbundling sdl-sound breaks the game
 
@@ -9,7 +9,7 @@ EAPI=5
 inherit eutils unpacker gnome2-utils games
 
 MY_PN=ToTheMoon
-DESCRIPTION="Indie Adventure RPG, about two doctors traversing through the memories of a dying man to fulfill his last wish"
+DESCRIPTION="Indie Adventure RPG, two doctors traversing the memories of a dying man to fulfill his last wish"
 HOMEPAGE="http://freebirdgames.com/games/to-the-moon"
 SRC_URI="${MY_PN}_linux_1389114090.sh"
 

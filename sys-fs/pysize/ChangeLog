@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/pysize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.8 2014/03/07 23:40:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.9 2014/03/12 05:00:58 phajdan.jr Exp $
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> pysize-0.2-r1.ebuild:
+  x86 stable wrt bug #502930
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> pysize-0.2-r1.ebuild:
   amd64 stable, bug #502930

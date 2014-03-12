@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Net_UserAgent_Detect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_UserAgent_Detect/ChangeLog,v 1.40 2012/02/07 16:26:55 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_UserAgent_Detect/ChangeLog,v 1.41 2014/03/12 04:50:23 patrick Exp $
+
+  12 Mar 2014; Patrick Lauer <patrick@gentoo.org>
+  PEAR-Net_UserAgent_Detect-2.3.0.ebuild,
+  PEAR-Net_UserAgent_Detect-2.4.0.ebuild,
+  PEAR-Net_UserAgent_Detect-2.5.1.ebuild,
+  PEAR-Net_UserAgent_Detect-2.5.2.ebuild:
+  Shorten description for improved repoman happy
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org>
   PEAR-Net_UserAgent_Detect-2.5.2.ebuild:
@@ -177,4 +184,3 @@
   07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Net_UserAgent_Detect-2.1.0.ebuild:
   Initial ebuild, closes bug 103603.
-

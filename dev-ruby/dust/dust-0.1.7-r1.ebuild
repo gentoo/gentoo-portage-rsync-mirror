@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/dust-0.1.7-r1.ebuild,v 1.2 2014/03/07 23:43:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/dust-0.1.7-r1.ebuild,v 1.3 2014/03/12 04:58:43 phajdan.jr Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
@@ -14,7 +14,7 @@ HOMEPAGE="http://dust.rubyforge.org/"
 LICENSE="MIT"
 SRC_URI="mirror://rubyforge/dust/${P}.gem"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
