@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.3 2014/03/11 21:55:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.4 2014/03/12 22:06:42 williamh Exp $
+
+*gentoo-functions-0.2 (12 Mar 2014)
+
+  12 Mar 2014; William Hubbs <williamh@gentoo.org>
+  +files/gentoo-functions-0.2.sh, +gentoo-functions-0.2.ebuild:
+  Version bump for prefix fixes: do not hardcode paths to consoletype or
+  portageq. Thanks to Ruud Koolen <redlizard@gentoo.org>
 
 *gentoo-functions-0.1 (11 Mar 2014)
 
