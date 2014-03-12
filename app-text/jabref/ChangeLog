@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jabref
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.95 2014/02/19 17:26:28 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.96 2014/03/12 13:21:44 nicolasbock Exp $
+
+*jabref-2.10 (12 Mar 2014)
+
+  12 Mar 2014; Nicolas Bock <nicolasbock@gentoo.org> +jabref-2.10.ebuild:
+  app-text/jabref-2.10: Version bump.
 
   19 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> jabref-2.6.ebuild:
   app-text/jabref-2.6: Small fix for jdk dependence.
