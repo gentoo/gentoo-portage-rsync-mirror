@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surfraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.77 2014/03/12 10:09:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.78 2014/03/12 15:39:42 jer Exp $
+
+  12 Mar 2014; Jeroen Roovers <jer@gentoo.org> -surfraw-2.2.8.ebuild:
+  Old.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> surfraw-2.2.9.ebuild:
   Stable for sparc, wrt bug #502942
