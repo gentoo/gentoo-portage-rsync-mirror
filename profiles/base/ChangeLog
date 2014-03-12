@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.644 2014/03/07 00:35:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.645 2014/03/12 12:11:21 mgorny Exp $
+
+  12 Mar 2014; Michał Górny <mgorny@gentoo.org> package.use.force:
+  Force pypy on python-exec.
 
   07 Mar 2014; Manuel Rüger <mrueg@gentoo.org> package.use.mask:
   Mask ruby18-only compatible flags

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/ChangeLog,v 1.8 2014/02/09 12:10:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/ChangeLog,v 1.9 2014/03/12 12:13:24 johu Exp $
+
+*kdevelop-python-1.6.0 (12 Mar 2014)
+
+  12 Mar 2014; Johannes Huber <johu@gentoo.org> +kdevelop-python-1.6.0.ebuild:
+  Version bump, bug #493854.
 
   09 Feb 2014; Johannes Huber <johu@gentoo.org> -kdevelop-python-1.5.1.ebuild:
   Remove old.
