@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perltidy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.69 2014/03/11 18:40:27 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.70 2014/03/12 16:54:35 zlogene Exp $
+
+  12 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -perltidy-20120714.0.0.ebuild,
+  -perltidy-20121207.0.0.ebuild, perltidy-20130922.0.0.ebuild:
+  amd64/ppc/x86 stable, drop insecure versions wrt bug #504178
 
 *perltidy-20130922.0.0 (11 Mar 2014)
 
