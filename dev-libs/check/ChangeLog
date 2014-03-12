@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.92 2014/03/05 18:32:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.93 2014/03/12 10:11:39 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> check-0.9.11.ebuild:
+  Stable for sparc, wrt bug #489366
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> check-0.9.11.ebuild:
   Stable for ppc, wrt bug #489366

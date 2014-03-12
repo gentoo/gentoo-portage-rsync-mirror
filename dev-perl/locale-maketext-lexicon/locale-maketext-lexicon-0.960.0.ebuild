@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.960.0.ebuild,v 1.5 2014/03/02 10:39:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.960.0.ebuild,v 1.6 2014/03/12 10:21:38 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Use other catalog formats in Maketext"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ~ppc ~sparc x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 hppa ia64 ~ppc sparc x86 ~amd64-fbsd"
 IUSE="test"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.167 2014/03/09 22:07:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.168 2014/03/12 10:04:42 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> msmtp-1.4.31-r1.ebuild:
+  Stable for sparc, wrt bug #495690
 
   09 Mar 2014; Tim Harder <radhermit@gentoo.org> msmtp-1.4.32.ebuild:
   Add explicit python deps when gnome-keyring support is enabled.

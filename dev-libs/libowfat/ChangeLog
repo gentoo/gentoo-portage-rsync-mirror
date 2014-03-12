@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libowfat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.37 2014/03/02 08:04:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.38 2014/03/12 10:21:10 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libowfat-0.29.ebuild:
+  Stable for sparc, wrt bug #417341
 
   02 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libowfat-0.29.ebuild:
   Stable for x86, wrt bug #417341

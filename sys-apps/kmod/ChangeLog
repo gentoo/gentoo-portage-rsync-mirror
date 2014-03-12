@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.134 2014/02/23 19:49:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.135 2014/03/12 10:18:34 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> kmod-16.ebuild:
+  Stable for sparc, wrt bug #500106
 
   23 Feb 2014; Markus Meier <maekke@gentoo.org> kmod-16.ebuild:
   arm stable, bug #500106

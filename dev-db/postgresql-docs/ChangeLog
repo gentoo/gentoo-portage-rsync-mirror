@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.233 2014/02/23 08:28:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.235 2014/03/12 10:26:40 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> -postgresql-docs-8.4.19.ebuild,
+  -postgresql-docs-9.0.15.ebuild, -postgresql-docs-9.1.11.ebuild,
+  -postgresql-docs-9.2.6.ebuild, -postgresql-docs-9.3.2.ebuild:
+  Remove old
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> postgresql-docs-8.4.20.ebuild,
+  postgresql-docs-9.0.16.ebuild, postgresql-docs-9.1.12.ebuild,
+  postgresql-docs-9.2.7.ebuild, postgresql-docs-9.3.3.ebuild:
+  Stable for sparc, wrt bug #501946
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> postgresql-docs-8.4.20.ebuild,
   postgresql-docs-9.0.16.ebuild, postgresql-docs-9.1.12.ebuild,

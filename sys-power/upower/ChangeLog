@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.137 2014/03/05 16:13:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.138 2014/03/12 10:11:07 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> upower-0.9.23.ebuild:
+  Stable for sparc, wrt bug #496532
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> upower-0.9.23.ebuild:
   Stable for ppc, wrt bug #496532

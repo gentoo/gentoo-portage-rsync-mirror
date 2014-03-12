@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.60.ebuild,v 1.1 2014/02/18 14:56:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.62.ebuild,v 1.1 2014/03/12 10:19:27 polynomial-c Exp $
 
-EAPI=3
+EAPI=4
 
 GENTOO_PATCH=2
 
@@ -42,11 +42,11 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	emake install prefix="${EPREFIX}/usr" DESTDIR="${D}" || die
+	emake install prefix="${EPREFIX}/usr" DESTDIR="${D}"
 	dodoc man-pages-*.Announce README Changes*
 
 	# Override with Gentoo specific or additional Gentoo pages
 	cd "${WORKDIR}"/man-pages-gentoo
-	doman */* || die
+	doman */*
 	dodoc README.Gentoo
 }

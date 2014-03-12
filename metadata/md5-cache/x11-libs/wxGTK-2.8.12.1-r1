@@ -4,11 +4,11 @@ DESCRIPTION=GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit
 EAPI=5
 HOMEPAGE=http://wxwidgets.org/
 IUSE=+X aqua doc debug gnome gstreamer odbc opengl pch sdl tiff
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=wxWinLL-3 GPL-2 odbc? ( LGPL-2 ) doc? ( wxWinFDL-3 )
 PDEPEND=>=app-admin/eselect-wxwidgets-0.7
 RDEPEND=dev-libs/expat odbc? ( dev-db/unixODBC ) sdl? ( media-libs/libsdl ) X? ( dev-libs/glib:2 media-libs/libpng:0= sys-libs/zlib virtual/jpeg x11-libs/gtk+:2 x11-libs/libSM x11-libs/libXinerama x11-libs/libXxf86vm x11-libs/pango[X] gnome? ( gnome-base/libgnomeprintui:2.2 ) gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) opengl? ( virtual/opengl ) tiff? ( media-libs/tiff:0 ) ) aqua? ( >=x11-libs/gtk+-2.4[aqua=] virtual/jpeg tiff? ( media-libs/tiff:0 ) )
 SLOT=2.8
 SRC_URI=mirror://sourceforge/wxpython/wxPython-src-2.8.12.1.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=7c832001f3ac06fdba06207f3b8bdc57
+_md5_=9367f468a45e889e6e3fbf79827bf364

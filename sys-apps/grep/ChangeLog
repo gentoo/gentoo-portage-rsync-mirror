@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.141 2014/03/08 21:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.142 2014/03/12 10:12:23 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> grep-2.16.ebuild:
+  Stable for sparc, wrt bug #502392
 
   08 Mar 2014; Mike Frysinger <vapier@gentoo.org> grep-2.14.ebuild,
   grep-2.15-r1.ebuild, grep-2.16.ebuild, grep-2.17.ebuild, grep-2.18.ebuild:

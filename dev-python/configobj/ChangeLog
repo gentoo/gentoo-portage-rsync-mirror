@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.43 2014/03/11 03:36:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.44 2014/03/12 10:01:57 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> configobj-4.7.2-r2.ebuild:
+  Stable for sparc, wrt bug #495582
 
 *configobj-5.0.2 (11 Mar 2014)
 

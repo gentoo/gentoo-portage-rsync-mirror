@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/set-scalar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.49 2014/03/05 15:27:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.50 2014/03/12 10:05:46 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> set-scalar-1.260.0.ebuild:
+  Stable for sparc, wrt bug #495552
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> set-scalar-1.260.0.ebuild:
   Stable for ppc, wrt bug #495552

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r2.ebuild,v 1.7 2014/03/02 00:01:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r2.ebuild,v 1.8 2014/03/12 10:20:52 ago Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://aubio.piem.org/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 IUSE="alsa doc examples jack lash static-libs"
 
 RDEPEND="sci-libs/fftw:3.0

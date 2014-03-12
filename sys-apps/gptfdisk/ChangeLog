@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.41 2014/03/05 15:53:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.42 2014/03/12 10:07:54 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gptfdisk-0.8.8.ebuild:
+  Stable for sparc, wrt bug #496530
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gptfdisk-0.8.8.ebuild:
   Stable for ppc, wrt bug #496530

@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.44 2014/03/05 16:07:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.45 2014/03/12 10:09:35 ago Exp $
+
+  12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> iverilog-0.9.6.ebuild:
+  Stable for sparc, wrt bug #501716
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> iverilog-0.9.6.ebuild:
   Stable for ppc, wrt bug #501716
