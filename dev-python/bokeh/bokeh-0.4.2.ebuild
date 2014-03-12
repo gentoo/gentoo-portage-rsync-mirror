@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/bokeh-0.4.1.ebuild,v 1.2 2014/03/12 19:16:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/bokeh-0.4.2.ebuild,v 1.1 2014/03/12 19:16:25 bicatali Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ RDEPEND="
 	>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
 	>=dev-python/redis-py-2.7.6[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.2.3[${PYTHON_USEDEP}]
-	>=dev-python/six-1.3.0[${PYTHON_USEDEP}]
+	>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
 	>=dev-python/traits-4.4[$(python_gen_usedep 'python2_7')]
 	>=dev-python/werkzeug-0.9.1[${PYTHON_USEDEP}]
 	>=virtual/python-argparse-1[${PYTHON_USEDEP}]
@@ -46,9 +46,9 @@ RDEPEND="
 #			>=dev-python/websocket[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	test? (
-			>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
-			>=dev-python/colorama-0.2.7[${PYTHON_USEDEP}]
-		  )
+		>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
+		>=dev-python/colorama-0.2.7[${PYTHON_USEDEP}]
+	)
 "
 python_test() {
 	cd "${BUILD_DIR}"/lib || die
