@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.6 2012/05/03 06:01:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.7 2014/03/12 02:48:18 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -18,6 +18,7 @@ KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="dbus examples pcre"
 
 RDEPEND=">=www-client/epiphany-2.30.0
+	<www-client/epiphany-3
 	app-text/opensp
 	>=dev-libs/glib-2.28.7:2
 	>=gnome-base/gconf-2.0:2

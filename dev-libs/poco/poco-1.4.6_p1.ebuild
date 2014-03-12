@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.4.6_p1.ebuild,v 1.1 2013/09/01 11:14:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.4.6_p1.ebuild,v 1.2 2014/03/12 02:54:33 patrick Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs flag-o-matic multilib versionator
 MY_P="${P/_}"
 MY_DOCP="${PN}-$(get_version_component_range 1-3)-all-doc"
 
-DESCRIPTION="C++ class libraries that simplify and accelerate the development of network-centric, portable applications"
+DESCRIPTION="C++ class libraries to simplify the development of network-centric, portable applications."
 HOMEPAGE="http://pocoproject.org/"
 SRC_URI="mirror://sourceforge/poco/${MY_P}-all.tar.bz2
 	doc? ( mirror://sourceforge/poco/${MY_DOCP}.zip )"

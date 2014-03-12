@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.303 2014/03/09 12:04:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.304 2014/03/12 02:49:01 tetromino Exp $
+
+  12 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  epiphany-3.8.2.ebuild, epiphany-3.10.3.ebuild:
+  Block epiphany-extensions, it no longer works with >epiphany-3.7 (bug
+  #504186).
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> epiphany-3.10.3.ebuild:
   x86 stable, bug 499954

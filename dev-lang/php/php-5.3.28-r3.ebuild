@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.28-r3.ebuild,v 1.1 2014/03/11 14:17:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.28-r3.ebuild,v 1.2 2014/03/12 02:44:12 patrick Exp $
 
 EAPI=5
 
@@ -308,7 +308,6 @@ src_prepare() {
 
 	# Fix for freetype-2.5.1 bug #494272
 	epatch "${FILESDIR}"/freetype-2.5.1-linking-fix.patch
-
 
 	# Patch PHP to show Gentoo as the server platform
 	sed -e 's/PHP_UNAME=`uname -a | xargs`/PHP_UNAME=`uname -s -n -r -v | xargs`/g' \

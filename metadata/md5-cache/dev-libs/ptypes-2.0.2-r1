@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DESCRIPTION=PTypes (C++ Portable Types Library) is a simple alternative to the STL that includes multithreading and networking.
+DESCRIPTION=PTypes (C++ Portable Types Library), alternative to the STL including multithreading and networking.
 HOMEPAGE=http://www.melikyan.com/ptypes/
 IUSE=debug
 KEYWORDS=amd64 x86
@@ -7,4 +7,4 @@ LICENSE=ZLIB
 SLOT=0
 SRC_URI=mirror://sourceforge/ptypes/ptypes-2.0.2.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=68be067d570eed8768c102a2f3783b56
+_md5_=c2ee74b8f3c087c2059ce0bf4a98608f

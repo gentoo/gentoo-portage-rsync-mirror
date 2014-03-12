@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.165 2014/03/08 11:30:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.166 2014/03/12 02:48:18 tetromino Exp $
+
+  12 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  epiphany-extensions-2.32.0-r1.ebuild:
+  epiphany-extenions-2.x requires epiphany-2.x (bug #504186, thanks to Juergen
+  Rose).
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> -epiphany-extensions-3.6.0.ebuild,
   -files/epiphany-extensions-3.2.0-dbus-libs.patch:

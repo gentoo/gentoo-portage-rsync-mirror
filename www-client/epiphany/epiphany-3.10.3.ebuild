@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.10.3.ebuild,v 1.4 2014/03/09 12:04:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.10.3.ebuild,v 1.5 2014/03/12 02:49:01 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE="+jit +nss test"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
-RDEPEND="
+COMMON_DEPEND="
 	>=app-crypt/gcr-3.5.5
 	>=app-crypt/libsecret-0.14
 	>=app-text/iso-codes-0.35
@@ -41,9 +41,13 @@ RDEPEND="
 
 	nss? ( dev-libs/nss )
 "
+# epiphany-extensions support was removed in 3.7; let's not pretend it still works
+RDEPEND="${COMMON_DEPEND}
+	!www-client/epiphany-extensions
+"
 # paxctl needed for bug #407085
 # eautoreconf requires gnome-common-3.5.5
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.50
 	sys-apps/paxctl
 	sys-devel/gettext
