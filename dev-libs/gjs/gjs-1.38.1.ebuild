@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.38.1.ebuild,v 1.6 2014/03/09 11:54:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.38.1.ebuild,v 1.7 2014/03/13 21:26:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,6 +25,7 @@ RDEPEND="
 	cairo? ( x11-libs/cairo )
 "
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	sys-devel/gettext
 	virtual/pkgconfig
 	test? ( sys-apps/dbus )
