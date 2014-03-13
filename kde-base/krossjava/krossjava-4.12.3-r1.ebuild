@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.12.3.ebuild,v 1.1 2014/03/04 19:13:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.12.3-r1.ebuild,v 1.1 2014/03/13 17:56:41 johu Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ src_install() {
 	kde4-meta_src_install
 	java-pkg_dojar "${ED}/usr/$(get_libdir)/kde4/kross/kross.jar"
 
-	dosym ../../../share/${PN}-${SLOT}/lib/kross.jar \
+	dosym ../../../share/${PN}-$(get_major_version ${SLOT})/lib/kross.jar \
 		/usr/$(get_libdir)/kde4/kross/kross.jar
 	java-pkg_regso "${ED}/usr/$(get_libdir)/kde4/krossjava.so"
 }
