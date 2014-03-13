@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.5-r1.ebuild,v 1.1 2014/03/06 09:35:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.5-r1.ebuild,v 1.2 2014/03/13 15:35:07 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -99,7 +99,7 @@ src_configure() {
 		--localstatedir=/var \
 		--with-modulesdir=/usr/$(get_libdir)/samba \
 		--with-pammodulesdir=/$(get_libdir)/security \
-		--with-piddir=/run/${PN} \
+		--with-piddir=/var/run/${PN} \
 		--disable-rpath \
 		--disable-rpath-install \
 		--nopyc \
