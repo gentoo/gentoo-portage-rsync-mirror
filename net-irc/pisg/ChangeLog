@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/pisg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.67 2014/03/05 15:51:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.68 2014/03/13 11:42:52 zlogene Exp $
+
+  13 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -pisg-0.73.ebuild:
+  Drop revision with old EAPI
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pisg-0.73-r1.ebuild:
   Stable for ppc, wrt bug #495846
