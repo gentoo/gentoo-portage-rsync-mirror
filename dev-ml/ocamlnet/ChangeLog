@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.81 2014/02/14 13:03:57 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.82 2014/03/13 20:39:47 aballier Exp $
+
+  13 Mar 2014; Alexis Ballier <aballier@gentoo.org> -ocamlnet-3.6.3.ebuild,
+  -ocamlnet-3.6.5.ebuild, -ocamlnet-3.6.6.ebuild,
+  -files/ocamlnet-3.6.6-ocaml-4.01.patch:
+  remove old
 
   14 Feb 2014; Chema Alonso <nimiux@gentoo.org> ocamlnet-3.7.3.ebuild:
   Stable for amd64 wrt bug #492050

@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.253 2014/03/09 11:45:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.254 2014/03/13 20:44:53 qnikst Exp $
+
+*mutt-1.5.22-r3 (13 Mar 2014)
+
+  13 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  +files/mutt-1.5.22-cve-2014-0567.patch, +mutt-1.5.22-r3.ebuild,
+  -mutt-1.5.22-r2.ebuild:
+  fix buffer overflow issue (CVE-2014-0567), bug #504462
 
 *mutt-1.5.22-r2 (09 Mar 2014)
 

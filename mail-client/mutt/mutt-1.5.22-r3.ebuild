@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r2.ebuild,v 1.1 2014/03/09 11:45:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r3.ebuild,v 1.1 2014/03/13 20:44:53 qnikst Exp $
 
 EAPI="5"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r2"
+PATCHSET_REV="-r1"
 
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org/"
@@ -75,9 +75,10 @@ src_prepare() {
 		[[ -e ${revpatch} ]] && \
 			epatch "${revpatch}"
 	done
-
 	# fix compilation with ncurses[tinfo], #459260
 	epatch "${PATCHDIR}"/ncurses-tinfo.patch
+	# fix buffer overflow issut, #504462
+	epatch "${FILESDIR}"/${P}-cve-2014-0567.patch
 
 	# this patch is non-generic and only works because we use a sysconfdir
 	# different from the one used by the mailbase ebuild
