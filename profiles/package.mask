@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15469 2014/03/12 11:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15471 2014/03/13 07:10:31 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
+# No reverse dependencies. Use dev-libs/libbsd instead.
+# Masked for removal in 60 days, bug 504456.
+dev-libs/clens
 
 # Michał Górny <mgorny@gentoo.org> (12 Mar 2014)
 # Masked for testing, and binary package build.
@@ -101,6 +106,73 @@ lxde-base/lxpolkit
 # Masked for removal in 60 days, bug 502168.
 app-emacs/delicious
 
+# Ulrich Müller <ulm@gentoo.org> (24 Feb 2014)
+# Does not work any more, AOL has shut off
+# the TOC2 protocol for the AIM service.
+# Masked for removal in 30 days, bug 502322.
+app-emacs/tnt
+
+# Ulrich Müller <ulm@gentoo.org> (21 Feb 2014)
+# Included with Emacs since version 23.
+# Last stand-alone release in 2008.
+# Masked for removal in 30 days, bug 501964.
+app-emacs/mairix
+
+# Ulrich Müller <ulm@gentoo.org> (20 Feb 2014)
+# Abandoned by upstream: Last release in 2003, last visible
+# upstream activity in 2004. Does not work with Emacs 24.
+# File a bug for moving app-emacs/oddmuse (currently in emacs
+# overlay) to the main tree if you need a replacement.
+# Masked for removal in 30 days, bug 501926.
+app-emacs/http-emacs
+
+# Ulrich Müller <ulm@gentoo.org> (18 Feb 2014)
+# Last upstream release in 1996.
+# Doesn't appear to work with Emacs 23 and 24.
+# Masked for removal in 30 days, bug 501660.
+app-emacs/view-process
+
+# Ulrich Müller <ulm@gentoo.org> (16 Feb 2014)
+# Last upstream release in 2005.
+# Does not work with Emacs 24.
+# Masked for removal in 30 days, bug 501502.
+app-emacs/eperiodic
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Support library for app-emacs/prime-el, which is masked
+# for removal itself. No other reverse dependencies.
+# Masked for removal in 30 days, bug 501426.
+app-emacs/mell
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Now included with app-emacs/vm.
+# Masked for removal in 30 days, bug 501414.
+app-emacs/u-vm-color
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Doesn't appear to work with Emacs 24.
+# Last upstream release in 2002.
+# Masked for removal in 30 days, bug 501412.
+app-emacs/alt-font-menu
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Included with Emacs since version 23.
+# cperl-mode-6.2 does not work with Emacs 24.
+# Masked for removal in 30 days, bug 501410.
+app-emacs/cperl-mode
+
+# Ulrich Müller <ulm@gentoo.org> (14 Feb 2014)
+# Included with Emacs since version 22.3.
+# Last stand-alone release in 2008, last commit to repo in 2009.
+# Masked for removal in 30 days, bug 501274.
+app-emacs/erc
+
+# Ulrich Müller <ulm@gentoo.org> (13 Feb 2014)
+# Included with Emacs since version 23.
+# Last stand-alone release in 2004.
+# Masked for removal in 30 days, bug 501234.
+app-emacs/nxml-mode
+
 # Michał Górny <mgorny@gentoo.org> (28 Feb 2014)
 # New multilib conversions for testing, grouped with corresponding
 # emul-linux bumps. Please unmask in order, after getting ACK from
@@ -140,12 +212,6 @@ media-gfx/kgraphviewer
 # Michał Górny <mgorny@gentoo.org> (25 Feb 2014)
 # Mask for testing.
 >=sys-apps/systemd-210
-
-# Ulrich Müller <ulm@gentoo.org> (24 Feb 2014)
-# Does not work any more, AOL has shut off
-# the TOC2 protocol for the AIM service.
-# Masked for removal in 30 days, bug 502322.
-app-emacs/tnt
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE Desktop Environment 1.6 introduction mask:
@@ -252,20 +318,6 @@ x11-wm/mate-window-manager
 >=x11-themes/mate-themes-1.7
 >=x11-wm/mate-window-manager-1.7
 
-# Ulrich Müller <ulm@gentoo.org> (21 Feb 2014)
-# Included with Emacs since version 23.
-# Last stand-alone release in 2008.
-# Masked for removal in 30 days, bug 501964.
-app-emacs/mairix
-
-# Ulrich Müller <ulm@gentoo.org> (20 Feb 2014)
-# Abandoned by upstream: Last release in 2003, last visible
-# upstream activity in 2004. Does not work with Emacs 24.
-# File a bug for moving app-emacs/oddmuse (currently in emacs
-# overlay) to the main tree if you need a replacement.
-# Masked for removal in 30 days, bug 501926.
-app-emacs/http-emacs
-
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.
 ~media-video/libav-10_beta1
@@ -276,12 +328,6 @@ app-emacs/http-emacs
 # me know such that we can continue to keep it around. Guess nobody even still
 # uses this package either, but that's for another day...
 =dev-java/jikes-1.22-r1
-
-# Ulrich Müller <ulm@gentoo.org> (18 Feb 2014)
-# Last upstream release in 1996.
-# Doesn't appear to work with Emacs 23 and 24.
-# Masked for removal in 30 days, bug 501660.
-app-emacs/view-process
 
 # Mike Gilbert <floppym@gentoo.org> (17 Feb 2014)
 # Masked for testing.
@@ -295,45 +341,10 @@ dev-lang/python:3.4
 =net-mail/dovecot-2.1*
 <mail-filter/dovecot_deleted_to_trash-0.5-r1
 
-# Ulrich Müller <ulm@gentoo.org> (16 Feb 2014)
-# Last upstream release in 2005.
-# Does not work with Emacs 24.
-# Masked for removal in 30 days, bug 501502.
-app-emacs/eperiodic
-
 # Jeroen Roovers <jer@gentoo.org> (16 Feb 2014)
 # Unmaintained, has several problems on modern systems,
 # superseded by net-analyzer/ifstatus (bug #501432)
 net-analyzer/ethstatus
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Support library for app-emacs/prime-el, which is masked
-# for removal itself. No other reverse dependencies.
-# Masked for removal in 30 days, bug 501426.
-app-emacs/mell
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Doesn't appear to work with Emacs 24.
-# Last upstream release in 2002.
-# Masked for removal in 30 days, bug 501412.
-app-emacs/alt-font-menu
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Included with Emacs since version 23.
-# cperl-mode-6.2 does not work with Emacs 24.
-# Masked for removal in 30 days, bug 501410.
-app-emacs/cperl-mode
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Now included with app-emacs/vm.
-# Masked for removal in 30 days, bug 501414.
-app-emacs/u-vm-color
-
-# Ulrich Müller <ulm@gentoo.org> (14 Feb 2014)
-# Included with Emacs since version 22.3.
-# Last stand-alone release in 2008, last commit to repo in 2009.
-# Masked for removal in 30 days, bug 501274.
-app-emacs/erc
 
 # Manuel Rüger <mrueg@gentoo.org> (14 Feb 2014)
 # Mask further ruby18-only packages
@@ -346,12 +357,6 @@ www-servers/mongrel_cluster
 # Removal in 30 days
 dev-ruby/ruby-bdb
 =net-irc/rbot-0.9.15
-
-# Ulrich Müller <ulm@gentoo.org> (13 Feb 2014)
-# Included with Emacs since version 23.
-# Last stand-alone release in 2004.
-# Masked for removal in 30 days, bug 501234.
-app-emacs/nxml-mode
 
 # Bernard Cafarelli <voyageur@gentoo.org> (13 Feb 2014)
 # Dead original upstream (last release in 2003)
