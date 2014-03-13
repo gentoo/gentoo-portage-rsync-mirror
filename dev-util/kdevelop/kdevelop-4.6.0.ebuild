@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.6.0.ebuild,v 1.1 2014/03/12 12:11:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.6.0.ebuild,v 1.2 2014/03/13 09:48:04 johu Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit kde4-base
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 LICENSE="GPL-2 LGPL-2"
-IUSE="+cmake +cxx debug okteta qthelp reviewboard"
+IUSE="+cmake +cxx debug okteta qthelp"
 SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.xz"
 
 if [[ $PV == *9999* ]]; then
@@ -21,12 +21,12 @@ else
 fi
 
 DEPEND="
-	>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}[reviewboard?]
+	dev-libs/qjson
+	>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}
 	$(add_kdebase_dep ksysguard)
 	$(add_kdebase_dep libkworkspace)
 	okteta? ( $(add_kdebase_dep okteta) )
 	qthelp? ( dev-qt/qthelp:4 )
-	reviewboard? ( dev-libs/qjson )
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kapptemplate)
@@ -45,7 +45,6 @@ src_configure() {
 		$(cmake-utils_use_with okteta LibOkteta)
 		$(cmake-utils_use_with okteta LibOktetaKasten)
 		$(cmake-utils_use_build qthelp)
-		$(cmake-utils_use_find_package reviewboard QJSON)
 	)
 
 	kde4-base_src_configure

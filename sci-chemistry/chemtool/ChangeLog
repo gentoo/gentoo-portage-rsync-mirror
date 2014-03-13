@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.35 2014/02/11 19:00:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.36 2014/03/13 09:56:52 nimiux Exp $
+
+  13 Mar 2014; Chema Alonso <nimiux@gentoo.org> chemtool-1.6.13.ebuild:
+  Stable for amd64 wrt bug #501046
 
 *chemtool-1.6.14 (11 Feb 2014)
 
