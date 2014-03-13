@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">nvidia-drivers</product>
   <announced>February 02, 2014</announced>
-  <revised>February 02, 2014: 2</revised>
+  <revised>March 13, 2014: 3</revised>
   <bug>493448</bug>
   <access>local</access>
   <affected>
@@ -17,6 +17,8 @@
       <unaffected range="ge">331.20</unaffected>
       <unaffected range="rge">319.76</unaffected>
       <unaffected range="rge">304.116</unaffected>
+      <unaffected range="rge">304.119</unaffected>
+      <unaffected range="rge">304.121</unaffected>
       <vulnerable range="lt">331.20</vulnerable>
     </package>
   </affected>
@@ -74,7 +76,7 @@
   <metadata tag="requester" timestamp="Sat, 14 Dec 2013 04:12:07 +0000">
     BlueKnight
   </metadata>
-  <metadata tag="submitter" timestamp="Sun, 02 Feb 2014 18:03:28 +0000">
+  <metadata tag="submitter" timestamp="Thu, 13 Mar 2014 06:49:59 +0000">
     BlueKnight
   </metadata>
 </glsa>
