@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.7.ebuild,v 1.8 2012/05/24 02:54:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.7.ebuild,v 1.9 2014/03/13 22:37:54 vapier Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc-4.4.patch #269240
+	epatch "${FILESDIR}"/${P}-readline-6.3.patch #504472
 	printf '#!/bin/sh\ntrue\n' > run-ldconfig
 }
 

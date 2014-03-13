@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libaal
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.20 2008/05/31 17:35:39 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.21 2014/03/13 22:36:40 vapier Exp $
+
+*libaal-1.0.5-r1 (13 Mar 2014)
+
+  13 Mar 2014; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.5-r1.ebuild:
+  Upgrade to EAPI=4 and rewrite the whole ebuild in the process.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> libaal-1.0.5.ebuild:
   Add arm love #203718 by Shvetsov Alexey.
