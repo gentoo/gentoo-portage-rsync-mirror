@@ -1,12 +1,12 @@
-DEFINED_PHASES=install unpack
-DEPEND=>=dev-libs/glib-2 media-libs/freeglut virtual/opengl virtual/pkgconfig
+DEFINED_PHASES=prepare
+DEPEND=dev-libs/glib:2 media-libs/freeglut virtual/opengl virtual/pkgconfig
 DESCRIPTION=3D File Browser
+EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/dz3d/
-KEYWORDS=x86 ppc
+KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2 media-libs/freeglut virtual/opengl
-RESTRICT=mirror
+RDEPEND=dev-libs/glib:2 media-libs/freeglut virtual/opengl
 SLOT=0
 SRC_URI=mirror://sourceforge/dz3d/3dfb-0.6.1.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=fb71de5c9e42605b67d95dc8e59965ea
+_md5_=20c63a580b06f9ad5f88659978a089ad

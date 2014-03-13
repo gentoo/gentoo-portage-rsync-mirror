@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/3dfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.11 2014/03/11 19:47:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.13 2014/03/13 09:04:35 pinkbyte Exp $
+
+  13 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -3dfb-0.6.1.ebuild,
+  3dfb-0.6.1-r1.ebuild:
+  Transfer stable keywords from previous revision and drop it, cause it's
+  broken. First-time stabilization on amd64
+
+*3dfb-0.6.1-r1 (13 Mar 2014)
+
+  13 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> +3dfb-0.6.1-r1.ebuild,
+  +files/3dfb-0.6.1-freeglut-compat.patch, metadata.xml:
+  Revision bump: EAPI 5, epatch_user, add ~amd64 keyword, fix work with new
+  media-libs/freeglut, add desktop-effects herd to metadata
 
   11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #53266
