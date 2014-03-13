@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.38 2014/03/09 11:52:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.39 2014/03/13 19:48:14 ottxor Exp $
+
+  13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> at-spi2-atk-2.10.2.ebuild:
+  added ~x64-macos (tested by me)
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> at-spi2-atk-2.10.2.ebuild:
   x86 stable, bug 499954

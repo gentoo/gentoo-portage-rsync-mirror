@@ -20,7 +20,7 @@
  	if(isgentoo){
 -		"emerge --info | grep PORTDIR" | getline
 -		split($0,PORTDIR,/\"/)
-+		"portageq envvar / PORTDIR" | getline PORTDIR 
++		"portageq get_repo_path $(portageq envvar EROOT) gentoo" | getline PORTDIR
  	}
  }
  {

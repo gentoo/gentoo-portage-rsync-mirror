@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.66 2014/01/24 18:16:17 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.67 2014/03/13 19:31:53 billie Exp $
+
+  13 Mar 2014; Daniel Pielmeier <billie@gentoo.org>
+  files/e-file-20110906-portageq.patch:
+  Update portageq patch for e-file. This fixes bug #504164. Thanks to
+  Konstantin for the report and the patch.
 
   24 Jan 2014; Daniel Pielmeier <billie@gentoo.org> -pfl-2.3.ebuild:
   Remove old.
