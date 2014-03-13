@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.82 2014/03/12 09:58:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.83 2014/03/13 11:31:06 zlogene Exp $
+
+  13 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -Test-Pod-1.42.ebuild,
+  -Test-Pod-1.460.0.ebuild, Test-Pod-1.480.0.ebuild:
+  alpha stable wrt bug #495490; Drop old.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Test-Pod-1.480.0.ebuild:
   Stable for sparc, wrt bug #495490

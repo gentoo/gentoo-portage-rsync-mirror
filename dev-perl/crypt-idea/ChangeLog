@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-idea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.42 2014/03/12 05:12:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.43 2014/03/13 11:10:20 zlogene Exp $
+
+  13 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> crypt-idea-1.100.0.ebuild:
+  amd64 stable wrt bug #502750
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   crypt-idea-1.100.0.ebuild:
