@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/kdocker-4.8-r1.ebuild,v 1.1 2013/10/27 15:14:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/kdocker-4.8-r2.ebuild,v 1.1 2014/03/13 22:09:14 johu Exp $
 
 EAPI=5
 
@@ -36,6 +36,9 @@ src_prepare() {
 	if ! use linguas_it ; then
 		sed -e '/^INSTALLS +=/s/translations//' -i kdocker.pro || die "sed failed"
 	fi
+
+	sed -i -e '/completion.path/s%/etc/bash_completion.d%/usr/share/bash-completion%' \
+		kdocker.pro || die "sed failed"
 }
 
 src_configure() {

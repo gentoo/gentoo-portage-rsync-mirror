@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15471 2014/03/13 07:10:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15472 2014/03/13 22:08:08 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
+# No license, therefore not redistributable. SRC_URI dead.
+# Gentoo live media don't use gdm any more.
+# Masked for removal in 30 days, bug 446794.
+x11-themes/gdm-themes-livecd
 
 # Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
 # No reverse dependencies. Use dev-libs/libbsd instead.
