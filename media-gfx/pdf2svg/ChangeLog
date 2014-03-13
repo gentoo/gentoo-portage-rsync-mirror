@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pdf2svg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/ChangeLog,v 1.8 2014/01/15 01:51:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/ChangeLog,v 1.9 2014/03/13 05:45:44 ssuominen Exp $
+
+  13 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> pdf2svg-0.2.2.ebuild:
+  Explicitely define DOCS to skip build instruction README.md file.
 
 *pdf2svg-0.2.2 (15 Jan 2014)
 
@@ -30,4 +33,3 @@
 
   27 Jun 2008; Samuli Suominen <drac@gentoo.org> +pdf2svg-0.2.1.ebuild:
   Initial commit for bug 207693, thanks to Oliver Borm.
-

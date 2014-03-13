@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/libewf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.54 2013/12/17 10:34:43 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.55 2014/03/13 05:32:50 radhermit Exp $
+
+*libewf-20140227 (13 Mar 2014)
+
+  13 Mar 2014; Tim Harder <radhermit@gentoo.org> +libewf-20140227.ebuild:
+  Version bump.
 
 *libewf-20131210 (17 Dec 2013)
 
