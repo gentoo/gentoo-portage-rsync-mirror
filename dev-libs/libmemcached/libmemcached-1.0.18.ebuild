@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-1.0.18.ebuild,v 1.1 2014/02/26 05:36:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-1.0.18.ebuild,v 1.2 2014/03/13 06:30:31 patrick Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i '6i CFLAGS = @CFLAGS@' Makefile.am
+	sed -e "/_APPEND_COMPILE_FLAGS_ERROR(\[-fmudflapth\?\])/d" -i m4/ax_harden_compiler_flags.m4
 	eautoreconf
 }
 
