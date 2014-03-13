@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw3d
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.21 2012/08/07 15:49:44 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.22 2014/03/13 20:14:32 ottxor Exp $
+
+  13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> libXaw3d-1.6.2.ebuild:
+  added ~x64-macos (tested by me)
 
   07 Aug 2012; Matt Turner <mattst88@gentoo.org> -files/Xaw3d-out-of-tree.diff,
   -files/Xaw3d-xfree86.diff, -libXaw3d-1.5-r1.ebuild:

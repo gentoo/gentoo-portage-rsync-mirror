@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/cwdiff-0.2.6.ebuild,v 1.1 2014/01/17 17:53:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/cwdiff-0.2.6.ebuild,v 1.2 2014/03/13 20:25:28 ottxor Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ RESTRICT="primaryuri"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-macos"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x64-macos ~x86-macos"
 IUSE="a2ps mercurial"
 
 DEPEND=""

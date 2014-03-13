@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2-r3.ebuild,v 1.1 2014/01/09 06:41:41 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2-r3.ebuild,v 1.2 2014/03/13 20:06:32 nullishzero Exp $
 
 EAPI=5
 
 VALA_MIN_API_VERSION="0.14"
-VALA_MAX_API_VERSION="0.20"
+VALA_MAX_API_VERSION="0.22"
 
 inherit vala autotools eutils
 

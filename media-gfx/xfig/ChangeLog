@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.88 2013/07/07 17:58:08 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.89 2014/03/13 20:02:20 ottxor Exp $
+
+  13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> xfig-3.2.5b-r3.ebuild:
+  added ~x64-macos (tested by me)
 
   07 Jul 2013; Michael Palimaka <kensington@gentoo.org> -xfig-3.2.5b-r1.ebuild,
   -xfig-3.2.5b-r2.ebuild:
