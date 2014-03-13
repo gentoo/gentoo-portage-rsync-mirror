@@ -3392,6 +3392,7 @@ media-libs/opus:custom-modes - Build with custom-modes.
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
+media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/phonon:vlc - Install VLC Phonon backend
 media-libs/phonon:zeitgeist - Add support for Zeitgeist event tracking system
 media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup

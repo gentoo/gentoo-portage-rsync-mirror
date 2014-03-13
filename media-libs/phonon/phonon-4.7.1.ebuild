@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.7.1.ebuild,v 1.1 2013/12/06 12:54:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.7.1.ebuild,v 1.2 2014/03/13 10:52:48 kensington Exp $
 
 EAPI=5
 
@@ -20,16 +20,15 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="aqua debug +gstreamer pulseaudio +qt4 qt5 vlc zeitgeist"
+IUSE="aqua debug designer +gstreamer pulseaudio +qt4 qt5 vlc zeitgeist"
 
 COMMON_DEPEND="
 	!!dev-qt/qtphonon:4
 	qt4? (
 		dev-qt/qtcore:4
-		dev-qt/designer:4
 		dev-qt/qtdbus:4
 		dev-qt/qtgui:4
-		dev-qt/qttest:4
+		designer? ( dev-qt/designer:4 )
 	)
 	qt5? (
 		dev-qt/qtcore:5
@@ -37,7 +36,8 @@ COMMON_DEPEND="
 		dev-qt/qtdeclarative:5
 		dev-qt/qtgui:5
 		dev-qt/qtopengl:5
-		dev-qt/qttest:5
+		dev-qt/qtwidgets:5
+		designer? ( dev-qt/designer:5 )
 	)
 	pulseaudio? (
 		dev-libs/glib:2
@@ -78,6 +78,7 @@ src_configure() {
 	myconfigure() {
 		local mycmakeargs=(
 			-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT=TRUE
+			$(cmake-utils_use designer PHONON_BUILD_DESIGNER_PLUGIN)
 			$(cmake-utils_use_with pulseaudio GLIB2)
 			$(cmake-utils_use_with pulseaudio PulseAudio)
 		)
