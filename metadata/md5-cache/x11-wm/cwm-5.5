@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=x11-libs/libXft x11-libs/libXinerama x11-libs/libXrandr virtual/pkgconfig sys-devel/bison
+DESCRIPTION=OpenBSD fork of calmwm, a clean and lightweight window manager
+EAPI=5
+HOMEPAGE=http://www.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/ http://github.com/chneukirchen/cwm
+IUSE=vanilla
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=ISC
+RDEPEND=x11-libs/libXft x11-libs/libXinerama x11-libs/libXrandr
+SLOT=0
+SRC_URI=vanilla? ( http://chneukirchen.org/releases/cwm-5.5.tar.gz -> cwm-5.5-chneukirchen.tar.gz ) !vanilla? ( https://github.com/xmw/cwm/tarball/67cc266 -> cwm-5.5-xmw.tar.gz )
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=1ee266df1234d60f5aa6ba672afca300

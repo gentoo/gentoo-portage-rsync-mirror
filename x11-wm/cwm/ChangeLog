@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/cwm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.45 2013/08/27 20:23:58 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.46 2014/03/13 18:48:10 xmw Exp $
+
+*cwm-5.5 (13 Mar 2014)
+
+  13 Mar 2014; Michael Weber <xmw@gentoo.org> +cwm-5.5.ebuild:
+  Version bump
 
 *cwm-5.1_p20130728 (27 Aug 2013)
 
