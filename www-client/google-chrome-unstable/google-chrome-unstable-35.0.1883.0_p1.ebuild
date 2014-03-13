@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-35.0.1883.0_p1.ebuild,v 1.1 2014/03/11 17:00:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-35.0.1883.0_p1.ebuild,v 1.2 2014/03/13 04:47:04 floppym Exp $
 
 EAPI="5"
 
@@ -70,23 +70,9 @@ RDEPEND="
 	x11-misc/xdg-utils
 "
 
-if [[ ${PN} == google-chrome ]]; then
-	RDEPEND+="
-		!www-client/google-chrome:beta
-		!www-client/google-chrome:stable
-		!www-client/google-chrome:unstable
-	"
-fi
-
-for x in google-chrome{,-beta,-unstable}; do
-	if [[ ${PN} != ${x} ]]; then
-		RDEPEND+=" !www-client/${x}"
-	fi
-done
-unset x
-
 QA_PREBUILT="*"
 S=${WORKDIR}
+CHROME_HOME="opt/google/chrome${PN#google-chrome}"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="
@@ -124,10 +110,7 @@ pkg_setup() {
 }
 
 src_install() {
-	CHROME_HOME="opt/google/chrome${PN#google-chrome}"
-
 	rm -r usr/share/menu || die
-	rmdir usr/share/doc/google-chrome || die
 	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
 
 	pushd "${CHROME_HOME}/locales" > /dev/null || die
@@ -137,21 +120,20 @@ src_install() {
 	if use plugins ; then
 		local plugins="--extra-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins"
 		sed -e "/^exec/ i set -- \"${plugins}\" \"\$@\"" \
-			-i "${CHROME_HOME}/google-chrome" || die
+			-i "${CHROME_HOME}/${PN}" || die
 	fi
 
 	local size
 	for size in 16 22 24 32 48 64 128 256 ; do
-		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" google-chrome.png
+		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
 	done
 
 	insinto /
 	doins -r opt usr
 
-	fperms 755 "/${CHROME_HOME}"/{{,google-}chrome,nacl_helper{,_bootstrap},xdg-{mime,settings}}
-	fperms 4755 "/${CHROME_HOME}/chrome-sandbox"
+	chmod 755 "${ED}${CHROME_HOME}"/{chrome,${PN},nacl_helper{,_bootstrap},xdg-{mime,settings}} || die
+	chmod 4755 "${ED}${CHROME_HOME}/chrome-sandbox" || die
 	pax-mark m "${ED}${CHROME_HOME}/chrome"
-	dosym /usr/$(get_libdir)/libudev.so "${CHROME_HOME}/libudev.so.0"
 
 	readme.gentoo_create_doc
 }
@@ -173,7 +155,21 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	local lib libdir target
+	for libdir in {,usr/}$(get_libdir); do
+		lib=${EROOT}${libdir}/libudev.so.1
+		if [[ -e ${lib} ]]; then
+			target=$(realpath -ms --relative-to="${EROOT}${CHROME_HOME}" "${lib}")
+			ln -fs "${target}" "${EROOT}${CHROME_HOME}/libudev.so.0"
+			break
+		fi
+	done
+
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 	readme.gentoo_print_elog
+}
+
+pkg_prerm() {
+	rm -f "${EROOT}${CHROME_HOME}/libudev.so.0"
 }
