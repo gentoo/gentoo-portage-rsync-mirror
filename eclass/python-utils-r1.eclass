@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.51 2014/03/12 09:29:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.52 2014/03/13 08:10:46 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -694,49 +694,32 @@ python_scriptinto() {
 	python_scriptroot=${1}
 }
 
-# @FUNCTION: python_doscript
+# @FUNCTION: python_doexe
 # @USAGE: <files>...
 # @DESCRIPTION:
-# Install the given scripts into current python_scriptroot,
+# Install the given executables into current python_scriptroot,
 # for the current Python implementation (${EPYTHON}).
 #
-# All specified files must start with a 'python' shebang. The shebang
-# will be converted, the file will be renamed to be EPYTHON-suffixed
-# and a wrapper will be installed in place of the original name.
-#
-# Example:
-# @CODE
-# src_install() {
-#   python_foreach_impl python_doscript ${PN}
-# }
-# @CODE
-python_doscript() {
+# The executable will be wrapped properly for the Python implementation,
+# though no shebang mangling will be performed.
+python_doexe() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	local f
 	for f; do
-		python_newscript "${f}" "${f##*/}"
+		python_newexe "${f}" "${f##*/}"
 	done
 }
 
-# @FUNCTION: python_newscript
+# @FUNCTION: python_newexe
 # @USAGE: <path> <new-name>
-# @DESCRIPTION:
-# Install the given script into current python_scriptroot
-# for the current Python implementation (${EPYTHON}), and name it
-# <new-name>.
+# Install the given executable into current python_scriptroot,
+# for the current Python implementation (${EPYTHON}).
 #
-# The file must start with a 'python' shebang. The shebang will be
-# converted, the file will be renamed to be EPYTHON-suffixed
-# and a wrapper will be installed in place of the <new-name>.
-#
-# Example:
-# @CODE
-# src_install() {
-#   python_foreach_impl python_newscript foo.py foo
-# }
-# @CODE
-python_newscript() {
+# The executable will be wrapped properly for the Python implementation,
+# though no shebang mangling will be performed. It will be renamed
+# to <new-name>.
+python_newexe() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
@@ -763,11 +746,62 @@ python_newscript() {
 		exeinto "${d}"
 		newexe "${f}" "${newfn}" || die
 	)
-	_python_rewrite_shebang "${ED%/}/${d}/${newfn}"
 
 	# install the wrapper
 	_python_ln_rel "${ED%/}"$(_python_get_wrapper_path) \
 		"${ED%/}/${wrapd}/${barefn}" || die
+
+	# don't use this at home, just call python_doscript() instead
+	if [[ ${_PYTHON_REWRITE_SHEBANG} ]]; then
+		_python_rewrite_shebang "${ED%/}/${d}/${newfn}"
+	fi
+}
+
+# @FUNCTION: python_doscript
+# @USAGE: <files>...
+# @DESCRIPTION:
+# Install the given scripts into current python_scriptroot,
+# for the current Python implementation (${EPYTHON}).
+#
+# All specified files must start with a 'python' shebang. The shebang
+# will be converted, and the files will be wrapped properly
+# for the Python implementation.
+#
+# Example:
+# @CODE
+# src_install() {
+#   python_foreach_impl python_doscript ${PN}
+# }
+# @CODE
+python_doscript() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local _PYTHON_REWRITE_SHEBANG=1
+	python_doexe "${@}"
+}
+
+# @FUNCTION: python_newscript
+# @USAGE: <path> <new-name>
+# @DESCRIPTION:
+# Install the given script into current python_scriptroot
+# for the current Python implementation (${EPYTHON}), and name it
+# <new-name>.
+#
+# The file must start with a 'python' shebang. The shebang will be
+# converted, and the file will be wrapped properly for the Python
+# implementation. It will be renamed to <new-name>.
+#
+# Example:
+# @CODE
+# src_install() {
+#   python_foreach_impl python_newscript foo.py foo
+# }
+# @CODE
+python_newscript() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local _PYTHON_REWRITE_SHEBANG=1
+	python_newexe "${@}"
 }
 
 # @ECLASS-VARIABLE: python_moduleroot

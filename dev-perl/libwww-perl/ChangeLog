@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.168 2014/03/12 05:15:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.169 2014/03/13 08:25:17 zlogene Exp $
+
+  13 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> libwww-perl-6.50.0.ebuild:
+  amd64 stable wrt bug #502752
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libwww-perl-6.50.0.ebuild:

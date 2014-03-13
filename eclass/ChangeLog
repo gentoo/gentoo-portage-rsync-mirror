@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1175 2014/03/12 18:54:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1176 2014/03/13 08:10:46 mgorny Exp $
+
+  13 Mar 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Add python_doexe() and python_newexe() to handle implementation-specific
+  executables without shebangs.
 
   12 Mar 2014; Julian Ospald <hasufell@gentoo.org> games.eclass:
   fix games.eclass to use games-misc/games-envd

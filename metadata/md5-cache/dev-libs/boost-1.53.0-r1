@@ -10,5 +10,5 @@ RDEPEND=icu? ( >=dev-libs/icu-3.6:= ) !icu? ( virtual/libiconv ) mpi? ( || ( sys
 REQUIRED_USE=python? ( || ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 ) )
 SLOT=0/1.53
 SRC_URI=mirror://sourceforge/boost/boost_1_53_0.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	bc5dd8010b606a31eb215f8f5c7b4918	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=9434305c917538b40716ca8e94eb9ad6

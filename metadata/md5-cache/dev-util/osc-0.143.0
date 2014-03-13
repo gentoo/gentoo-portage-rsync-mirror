@@ -11,5 +11,5 @@ RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) 
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=https://api.opensuse.org/public/source/openSUSE:Tools/osc/osc-0.143.0.tar.gz
-_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	obs-download	8b22473fde39f5051ce00b61062dd086	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	bc5dd8010b606a31eb215f8f5c7b4918	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	obs-download	8b22473fde39f5051ce00b61062dd086	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=41013c5f85d5c804ad998a6d154063d4

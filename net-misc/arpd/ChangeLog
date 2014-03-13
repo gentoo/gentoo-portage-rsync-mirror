@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/arpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.21 2012/07/20 01:30:30 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.22 2014/03/13 08:19:27 nimiux Exp $
+
+  13 Mar 2014; Chema Alonso <nimiux@gentoo.org> arpd-0.2-r1.ebuild:
+  Stable for amd64 wrt bug #385265
 
   20 Jul 2012; Anthony G. Basile <blueness@gentoo.org> arpd-0.2-r1.ebuild:
   Keyword ~ppc64
