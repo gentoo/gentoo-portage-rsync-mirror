@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-vera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.28 2014/03/12 10:13:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.29 2014/03/12 23:21:05 kensington Exp $
+
+  12 Mar 2014; Michael Palimaka <kensington@gentoo.org> -dictd-vera-1.12.ebuild:
+  Remove old.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dictd-vera-1.21a.ebuild:
   Stable for sparc, wrt bug #502616
