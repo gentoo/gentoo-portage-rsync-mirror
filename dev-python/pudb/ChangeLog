@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pudb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/ChangeLog,v 1.21 2014/01/25 10:02:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/ChangeLog,v 1.22 2014/03/13 18:10:59 radhermit Exp $
+
+*pudb-2014.1 (13 Mar 2014)
+
+  13 Mar 2014; Tim Harder <radhermit@gentoo.org> +pudb-2014.1.ebuild:
+  Version bump.
 
   25 Jan 2014; Tim Harder <radhermit@gentoo.org> -pudb-2012.3-r1.ebuild,
   -pudb-2013.1.ebuild, -pudb-2013.2.ebuild, -pudb-2013.3.2.ebuild,
