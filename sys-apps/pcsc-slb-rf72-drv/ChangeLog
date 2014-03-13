@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-slb-rf72-drv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.15 2012/05/04 09:17:30 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/ChangeLog,v 1.16 2014/03/13 21:36:11 ulm Exp $
+
+  13 Mar 2014; Ulrich Müller <ulm@gentoo.org>
+  pcsc-slb-rf72-drv-1.1.0-r1.ebuild, pcsc-slb-rf72-drv-1.1.0-r2.ebuild:
+  Fix LICENSE, add mirror and bindist restriction, bug 445750.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   pcsc-slb-rf72-drv-1.1.0-r1.ebuild, pcsc-slb-rf72-drv-1.1.0-r2.ebuild:

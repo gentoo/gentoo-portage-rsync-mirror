@@ -1,0 +1,11 @@
+diff -urN kbibtex-0.5.old/src/program/docklets/referencepreview.h kbibtex-0.5/src/program/docklets/referencepreview.h
+--- kbibtex-0.5.old/src/program/docklets/referencepreview.h	2013-12-29 20:06:23.000000000 +0100
++++ kbibtex-0.5/src/program/docklets/referencepreview.h	2014-03-13 22:31:38.456418630 +0100
+@@ -23,6 +23,7 @@
+ 
+ #include <QWidget>
+ #include <QUrl>
++#include <KUrl>
+ 
+ class Element;
+ class File;

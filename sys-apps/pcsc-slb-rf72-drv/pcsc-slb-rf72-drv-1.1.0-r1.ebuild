@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.10 2012/05/04 09:17:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0-r1.ebuild,v 1.11 2014/03/13 21:36:11 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,11 +8,13 @@ MY_P="slb_rf72"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Schlumberger Reflex 72 Serial Smartcard Reader"
 HOMEPAGE="http://www.linuxnet.com/sourcedrivers.html"
-LICENSE="as-is"
+LICENSE="all-rights-reserved BSD LGPL-2.1+"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 SLOT="0"
 SRC_URI="http://www.linuxnet.com/drivers/readers/files/slb_rf72-drv-1.1.0.tar.gz"
+RESTRICT="mirror bindist"
+
 RDEPEND="sys-apps/pcsc-lite
 	dev-libs/openct"
 DEPEND="${RDEPEND}

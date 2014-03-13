@@ -7,7 +7,7 @@ Index: webapp-config-1.50.16/sbin/webapp-cleaner
  WEBAPP_CONFIG=
  
 -[[ -z ${RC_GOT_FUNCTIONS} ]] && source /sbin/functions.sh
-+[[ -z ${RC_GOT_FUNCTIONS} ]] && source /etc/init.d/functions.sh
++[[ -z ${RC_GOT_FUNCTIONS} ]] && source /lib/gentoo/functions.sh
  
  function help() {
  	echo "Remove obsolete and unused versions of web applications"
