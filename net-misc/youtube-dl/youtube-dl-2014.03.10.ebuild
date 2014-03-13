@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.03.10.ebuild,v 1.1 2014/03/10 14:26:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.03.10.ebuild,v 1.2 2014/03/13 16:06:33 jer Exp $
 
 EAPI=5
 
@@ -26,6 +26,8 @@ S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	if ! use offensive; then
+		sed -i -e "/__version__/s|'$|-gentoo_no_offensive_sites'|g" \
+			youtube_dl/version.py || die
 		local xxx=(
 			extremetube fourtube mofosex pornhd pornhub pornotube redtube
 			spankwire thisav trutube tube8 xhamster xnxx xtube xvideos youjizz youporn

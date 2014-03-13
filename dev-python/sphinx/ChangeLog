@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.161 2014/03/03 23:29:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.162 2014/03/13 16:11:29 grozin Exp $
+
+  13 Mar 2014; Andrey Grozin <grozin@gentoo.org> sphinx-1.2.2.ebuild:
+  Fix for #498960 by ero-sennin <ag+services@sologoc.com>
 
   03 Mar 2014; Tim Harder <radhermit@gentoo.org> -sphinx-1.1.3-r3.ebuild,
   -sphinx-1.1.3-r5.ebuild, -sphinx-1.1.3-r6.ebuild, -sphinx-1.2.ebuild:

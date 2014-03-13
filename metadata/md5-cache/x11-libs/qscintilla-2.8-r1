@@ -4,10 +4,10 @@ DESCRIPTION=A Qt port of Neil Hodgson's Scintilla C++ editor class
 EAPI=5
 HOMEPAGE=http://www.riverbankcomputing.co.uk/software/qscintilla/intro
 IUSE=doc
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux ~amd64-linux
 LICENSE=|| ( GPL-2 GPL-3 )
 RDEPEND=>=dev-qt/designer-4.8.5:4 >=dev-qt/qtcore-4.8.5:4 >=dev-qt/qtgui-4.8.5:4
 SLOT=0/11
 SRC_URI=mirror://sourceforge/pyqt/QScintilla-gpl-2.8.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=860c5273c91bbfc64f577aa33e3020fa
+_md5_=60a43998d83e06092300f1f463107aa5
