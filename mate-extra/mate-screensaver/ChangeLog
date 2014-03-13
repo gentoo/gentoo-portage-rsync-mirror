@@ -1,6 +1,20 @@
 # ChangeLog for mate-extra/mate-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.3 2014/03/10 22:12:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.5 2014/03/13 17:15:33 tomwij Exp $
+
+*mate-screensaver-1.6.1-r2 (13 Mar 2014)
+
+  13 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-screensaver-1.6.1-r2.ebuild, -mate-screensaver-1.6.1-r1.ebuild:
+  Revision bump, fixed up gnome-keyring dependency by adding it in the pam USE
+  flag check; fixes bug #504350, reported by Thibaud "thican" CANALE.
+
+*mate-screensaver-1.6.1-r1 (13 Mar 2014)
+
+  13 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-screensaver-1.6.1-r1.ebuild, -mate-screensaver-1.6.1.ebuild:
+  Added dependencies on gnome-keyring and pam; fixes bug #504350, reported by
+  Thibaud "thican" CANALE.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-screensaver-1.6.1.ebuild:
   Further review of dependencies.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.7.ebuild,v 1.2 2014/02/05 23:40:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.7.ebuild,v 1.3 2014/03/13 17:07:48 bicatali Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_prepare() {
 		-e "s|./xpa-${XPAPV}|${EROOT%/}/usr/$(get_libdir)|" \
 		xpa.py || die
 	sed -i \
-		-e "s|sys.path|${EROOT%/}/usr/bin|" \
+		-e "s|sys.path|['${EROOT%/}/usr/bin']|" \
 		ds9.py || die
 	distutils-r1_src_prepare
 }
