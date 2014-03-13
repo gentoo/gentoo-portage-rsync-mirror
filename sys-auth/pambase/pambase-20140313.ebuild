@@ -1,18 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417-r1.ebuild,v 1.3 2014/01/18 04:03:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20140313.ebuild,v 1.1 2014/03/13 14:29:23 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 DESCRIPTION="PAM base configuration files"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/pam/"
-SRC_URI="http://dev.gentoo.org/~flameeyes/${PN}/${P}.tar.bz2
-	http://dev.gentoo.org/~phajdan.jr/${PN}/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 -sparc-fbsd -x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -sparc-fbsd -x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="consolekit cracklib debug gnome-keyring minimal mktemp pam_krb5 pam_ssh passwdqc selinux +sha512 systemd"
 
 RESTRICT=binchecks
@@ -24,7 +23,7 @@ RDEPEND="
 		>=sys-libs/pam-${MIN_PAM_REQ}
 		( sys-auth/openpam || ( sys-freebsd/freebsd-pam-modules sys-netbsd/netbsd-pam-modules ) )
 		)
-	consolekit? ( >=sys-auth/consolekit-0.4.5_p2012[pam] )
+	consolekit? ( >=sys-auth/consolekit-0.4.6[pam] )
 	cracklib? ( >=sys-libs/pam-${MIN_PAM_REQ}[cracklib] )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.32[pam] )
 	mktemp? ( sys-auth/pam_mktemp )
@@ -36,15 +35,11 @@ RDEPEND="
 	passwdqc? ( >=sys-auth/pam_passwdqc-1.0.4 )
 	selinux? ( >=sys-libs/pam-${MIN_PAM_REQ}[selinux] )
 	sha512? ( >=sys-libs/pam-${MIN_PAM_REQ} )
-	systemd? ( >=sys-apps/systemd-44-r1[pam] )
+	systemd? ( >=sys-apps/systemd-204[pam] )
 	!<sys-apps/shadow-4.1.5-r1
 	!<sys-freebsd/freebsd-pam-modules-6.2-r1
 	!<sys-libs/pam-0.99.9.0-r1"
 DEPEND="app-portage/portage-utils"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-systemd.patch
-}
 
 src_compile() {
 	local implementation=
@@ -101,5 +96,11 @@ pkg_postinst() {
 		elog "Please note that the change only affects the newly-changed passwords"
 		elog "and that SHA512-hashed passwords will not work on earlier versions"
 		elog "of glibc or Linux-PAM."
+	fi
+
+	if use systemd && use consolekit; then
+		ewarn "You are enabling 2 session trackers, ConsoleKit and systemd-logind"
+		ewarn "at the same time. This is not recommended setup to have, please"
+		ewarn "consider disabling either USE=\"consolekit\" or USE=\"systemd\."
 	fi
 }

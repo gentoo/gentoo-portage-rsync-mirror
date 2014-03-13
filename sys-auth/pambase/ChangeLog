@@ -1,6 +1,17 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.136 2014/01/18 05:16:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.138 2014/03/13 14:31:20 ssuominen Exp $
+
+  13 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -pambase-20120417-r1.ebuild, -pambase-20120417-r2.ebuild,
+  -pambase-20120417.ebuild:
+  old
+
+*pambase-20140313 (13 Mar 2014)
+
+  13 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +pambase-20140313.ebuild:
+  Version bump (imported -systemd.patch, -systemd-auth.patch and -lastlog-
+  silent.patch)
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pambase-20120417-r3.ebuild:
   Add arm64 love.
