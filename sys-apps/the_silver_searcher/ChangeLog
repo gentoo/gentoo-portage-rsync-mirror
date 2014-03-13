@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/the_silver_searcher
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.34 2014/03/03 23:52:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.36 2014/03/13 01:05:23 radhermit Exp $
+
+  13 Mar 2014; Tim Harder <radhermit@gentoo.org>
+  the_silver_searcher-0.20.0.ebuild:
+  Drop unused eutils eclass.
+
+*the_silver_searcher-0.20.0 (13 Mar 2014)
+
+  13 Mar 2014; Tim Harder <radhermit@gentoo.org>
+  +the_silver_searcher-0.20.0.ebuild:
+  Version bump, add zlib use flag.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> the_silver_searcher-0.18.ebuild:
   amd64 stable, bug #495934
