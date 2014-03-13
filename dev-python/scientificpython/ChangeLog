@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/scientificpython
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.44 2013/10/30 19:20:11 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.45 2014/03/13 14:58:03 mgorny Exp $
+
+*scientificpython-2.9.3 (13 Mar 2014)
+
+  13 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  +files/scientificpython-2.9.3-mpi-netcdf.patch,
+  +scientificpython-2.9.3.ebuild:
+  Version bump. Use python_doexe() to switch Python wrapping to eclass, bug
+  #484416.
 
   30 Oct 2013; Michał Górny <mgorny@gentoo.org> scientificpython-2.9.2.ebuild:
   Update the dep to use dev-lang/python-exec.
