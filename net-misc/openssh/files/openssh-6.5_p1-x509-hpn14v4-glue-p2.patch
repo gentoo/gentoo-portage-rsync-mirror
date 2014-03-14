@@ -1,0 +1,26 @@
+make the hpn patch apply when the x509 patch has also been applied
+
+--- openssh-6.5p1-hpnssh14v4.diff
++++ openssh-6.5p1-hpnssh14v4.diff
+@@ -1790,18 +1790,14 @@
+  	if (options->ip_qos_interactive == -1)
+  		options->ip_qos_interactive = IPTOS_LOWDELAY;
+  	if (options->ip_qos_bulk == -1)
+-@@ -348,9 +396,10 @@ typedef enum {
++@@ -348,6 +396,7 @@ typedef enum {
+  	sUsePrivilegeSeparation, sAllowAgentForwarding,
+  	sZeroKnowledgePasswordAuthentication, sHostCertificate,
+  	sRevokedKeys, sTrustedUserCAKeys, sAuthorizedPrincipalsFile,
+-+	sTcpRcvBufPoll, sHPNDisabled, sHPNBufferSize,
+++	sTcpRcvBufPoll, sHPNDisabled, sHPNBufferSize, sNoneEnabled,
+  	sKexAlgorithms, sIPQoS, sVersionAddendum,
+  	sAuthorizedKeysCommand, sAuthorizedKeysCommandUser,
+--	sAuthenticationMethods, sHostKeyAgent,
+-+	sAuthenticationMethods, sNoneEnabled, sHostKeyAgent,
+- 	sDeprecated, sUnsupported
+- } ServerOpCodes;
+- 
++ 	sAuthenticationMethods, sHostKeyAgent,
+ @@ -476,6 +525,10 @@ static struct {
+  	{ "revokedkeys", sRevokedKeys, SSHCFG_ALL },
+  	{ "trustedusercakeys", sTrustedUserCAKeys, SSHCFG_ALL },

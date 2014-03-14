@@ -117,6 +117,7 @@ darcs
 bs2b
 toolame
 ladspa
+ldns
 ggi
 nut
 xanim
