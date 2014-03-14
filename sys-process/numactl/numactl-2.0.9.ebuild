@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.9.ebuild,v 1.4 2014/03/05 15:55:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.9.ebuild,v 1.5 2014/03/14 10:52:47 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux"
 IUSE="static-libs"
 
 src_prepare() {

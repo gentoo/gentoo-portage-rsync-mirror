@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.47 2014/03/05 15:54:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.48 2014/03/14 10:51:57 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ncdu-1.10.ebuild:
+  Stable for ppc64, wrt bug #474308
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ncdu-1.10.ebuild:
   Stable for ppc, wrt bug #474308

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.154 2014/03/09 07:19:51 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.155 2014/03/14 10:50:34 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> swt-3.7.2-r1.ebuild:
+  Stable for ppc64, wrt bug #499478
 
 *swt-3.8.2 (09 Mar 2014)
 

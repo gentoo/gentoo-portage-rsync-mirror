@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.6 2014/03/09 03:13:00 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.5.0-r1.ebuild,v 1.7 2014/03/14 10:51:44 ago Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs udev
@@ -11,7 +11,7 @@ SRC_URI="http://christophe.varoqui.free.fr/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86"
 IUSE="systemd"
 
 RDEPEND=">=sys-fs/lvm2-2.02.45
