@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.3.ebuild,v 1.3 2014/03/01 22:44:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.60.ebuild,v 1.1 2014/03/14 14:42:53 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -44,7 +44,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	dev-libs/libxslt:=
 	dev-libs/nspr:=
 	>=dev-libs/nss-3.14.3:=
-	>=dev-libs/protobuf-2.5.0:=
 	dev-libs/re2:=
 	gnome? ( >=gnome-base/gconf-2.24.0:= )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2:= )
@@ -218,6 +217,7 @@ src_prepare() {
 		'third_party/nss.isolate' \
 		'third_party/ots' \
 		'third_party/polymer' \
+		'third_party/protobuf' \
 		'third_party/pywebsocket' \
 		'third_party/qcms' \
 		'third_party/readability' \
@@ -287,7 +287,6 @@ src_configure() {
 		-Duse_system_nspr=1
 		-Duse_system_openssl=1
 		-Duse_system_opus=1
-		-Duse_system_protobuf=1
 		-Duse_system_re2=1
 		-Duse_system_snappy=1
 		-Duse_system_speex=1

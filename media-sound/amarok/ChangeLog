@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.467 2013/12/13 02:43:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.468 2014/03/14 14:47:58 johu Exp $
+
+*amarok-2.8.0-r1 (14 Mar 2014)
+
+  14 Mar 2014; Johannes Huber <johu@gentoo.org> +amarok-2.8.0-r1.ebuild,
+  +files/amarok-2.8.0-gmock-1.7.patch:
+  Revision bump marks pax on /usr/bin/amarok, bug #481592. Adds a patch to
+  unbreak build of tests with gmock-1.7.
 
   13 Dec 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag from metadata.xml
