@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.359 2014/03/13 15:45:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.360 2014/03/14 14:09:18 polynomial-c Exp $
+
+*sudo-1.8.10_p1 (14 Mar 2014)
+
+  14 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -sudo-1.8.10.ebuild,
+  +sudo-1.8.10_p1.ebuild:
+  Version bump. Removed old.
 
 *sudo-1.8.10 (13 Mar 2014)
 

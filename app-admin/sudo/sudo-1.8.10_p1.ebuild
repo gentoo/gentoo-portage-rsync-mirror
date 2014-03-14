@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.10.ebuild,v 1.1 2014/03/13 15:45:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.10_p1.ebuild,v 1.1 2014/03/14 14:09:18 polynomial-c Exp $
 
 EAPI=5
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/plowshare
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.26 2014/03/10 20:39:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.27 2014/03/14 14:04:04 voyageur Exp $
+
+  14 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org> plowshare-1.0.0.ebuild:
+  Host tarball as a workaround for #504512, thanks James Cloos
+  <cloos@jhcloos.com>
 
 *plowshare-1.0.0 (10 Mar 2014)
 *plowshare-0_p20131130 (10 Mar 2014)

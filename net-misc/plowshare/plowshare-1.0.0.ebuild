@@ -1,17 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-1.0.0.ebuild,v 1.1 2014/03/10 20:39:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-1.0.0.ebuild,v 1.2 2014/03/14 14:04:04 voyageur Exp $
 
 EAPI=5
 
 inherit bash-completion-r1
 
-# Git rev of the tag
-MY_P="${PN}-8d0540cd0dfc"
-
 DESCRIPTION="Command-line downloader and uploader for file-sharing websites"
 HOMEPAGE="http://code.google.com/p/plowshare/"
-SRC_URI="http://${PN}.googlecode.com/archive/v${PV}.zip -> ${P}.zip"
+SRC_URI="http://dev.gentoo.org/~voyageur/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,8 +24,6 @@ RDEPEND="
 	javascript? ( || ( dev-lang/spidermonkey:0 dev-java/rhino ) )
 	view-captcha? ( || ( media-gfx/aview media-libs/libcaca ) )"
 DEPEND=""
-
-S=${WORKDIR}/${MY_P}
 
 # NOTES:
 # javascript dep should be any javascript interpreter using /usr/bin/js
