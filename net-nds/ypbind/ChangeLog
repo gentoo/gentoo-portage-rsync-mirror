@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.82 2014/02/20 20:36:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.83 2014/03/14 10:16:58 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ypbind-1.37.1.ebuild:
+  Stable for ppc64, wrt bug #499314
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ypbind-1.37.1.ebuild:
   Stable for x86, wrt bug #499314

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.35 2014/03/05 15:50:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.36 2014/03/14 10:13:59 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mpeg-tools-1.5b-r5.ebuild:
+  Stable for ppc64, wrt bug #495822
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mpeg-tools-1.5b-r5.ebuild:
   Stable for ppc, wrt bug #495822

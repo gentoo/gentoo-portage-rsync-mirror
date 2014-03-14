@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.71 2014/03/12 10:07:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.72 2014/03/14 10:15:59 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> l7-protocols-2009.05.28.ebuild:
+  Stable for ppc64, wrt bug #474280
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> l7-protocols-2009.05.28.ebuild:
   Stable for sparc, wrt bug #474280

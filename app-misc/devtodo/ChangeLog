@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.94 2014/03/12 10:11:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.95 2014/03/14 10:02:03 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> devtodo-0.1.20-r1.ebuild:
+  Stable for ppc64, wrt bug #500780
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> devtodo-0.1.20-r1.ebuild:
   Stable for sparc, wrt bug #500780

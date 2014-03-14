@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdbackup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.35 2014/03/05 15:49:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.36 2014/03/14 10:13:29 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dvdbackup-0.4.2.ebuild:
+  Stable for ppc64, wrt bug #495816
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dvdbackup-0.4.2.ebuild:
   Stable for ppc, wrt bug #495816

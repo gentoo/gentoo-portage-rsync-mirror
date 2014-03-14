@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.336 2014/03/11 13:06:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.337 2014/03/14 10:06:02 johu Exp $
+
+  14 Mar 2014; Johannes Huber <johu@gentoo.org> konqueror-4.12.3.ebuild:
+  Add missing RDEPEND on kde-base/kurifilter-plugins by Fabio Rossi
+  <rossi.f@inwind.it>, bug #497458.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> -konqueror-4.12.2.ebuild:
   Remove KDE SC 4.12.2

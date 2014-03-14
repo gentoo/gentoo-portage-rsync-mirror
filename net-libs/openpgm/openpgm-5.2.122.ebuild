@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/openpgm-5.2.122.ebuild,v 1.5 2014/03/08 13:17:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/openpgm-5.2.122.ebuild,v 1.6 2014/03/14 10:15:05 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://openpgm.googlecode.com/files/libpgm-${PV}~dfsg.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="static-libs"
 
 DEPEND="${PYTHON_DEPS}"

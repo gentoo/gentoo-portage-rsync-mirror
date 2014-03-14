@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.12.3.ebuild,v 1.1 2014/03/04 19:13:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.12.3.ebuild,v 1.2 2014/03/14 10:06:02 johu Exp $
 
 EAPI=5
 
@@ -24,6 +24,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kfind)
 	$(add_kdebase_dep kfmclient)
+	$(add_kdebase_dep kurifilter-plugins)
 	bookmarks? ( $(add_kdebase_dep keditbookmarks) )
 	svg? ( $(add_kdebase_dep svgpart) )
 "

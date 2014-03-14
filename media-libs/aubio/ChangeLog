@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aubio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.28 2014/03/12 10:20:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.29 2014/03/14 10:04:20 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> aubio-0.3.2-r2.ebuild:
+  Stable for ppc64, wrt bug #474886
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> aubio-0.3.2-r2.ebuild:
   Stable for sparc, wrt bug #474886

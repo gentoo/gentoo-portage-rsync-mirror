@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-1.3.0.ebuild,v 1.7 2014/03/12 09:48:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-1.3.0.ebuild,v 1.8 2014/03/14 10:09:53 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Matroska-Org/${PN}/archive/release-${PV}.tar.gz -> $
 
 LICENSE="LGPL-2.1"
 SLOT="0/4" # subslot = soname major version
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="debug static-libs"
 
 S=${WORKDIR}/${PN}-release-${PV}/make/linux
