@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.548 2014/03/09 12:36:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.549 2014/03/14 16:59:54 mrueg Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -11,6 +11,7 @@
 # Bugs: 483104, 483102
 media-libs/libcaca ruby
 =dev-vcs/subversion-1.7* ruby
+=media-sound/podcatcher bittorrent
 
 # Michał Górny <mgorny@gentoo.org> (27 Feb 2014)
 # Very experimental with unstable kernel- and userspace API.
