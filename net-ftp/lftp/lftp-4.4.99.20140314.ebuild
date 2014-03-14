@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.99.20140205.ebuild,v 1.1 2014/02/05 12:09:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.99.20140314.ebuild,v 1.1 2014/03/14 15:18:32 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
