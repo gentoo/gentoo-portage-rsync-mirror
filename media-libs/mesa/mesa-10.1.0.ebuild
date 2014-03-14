@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.0.ebuild,v 1.3 2014/03/09 18:38:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.0.ebuild,v 1.4 2014/03/13 23:21:42 mattst88 Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic debug +egl +gallium gbm gles1 gles2 +llvm +nptl
+	bindist +classic debug +dri3 +egl +gallium gbm gles1 gles2 +llvm +nptl
 	+llvm-shared-libs opencl openvg osmesa pax_kernel pic
 	r600-llvm-compiler selinux vdpau wayland xvmc xa kernel_FreeBSD"
 
@@ -95,6 +95,7 @@ RDEPEND="
 	>=app-admin/eselect-opengl-1.2.7
 	dev-libs/expat[${MULTILIB_USEDEP}]
 	gbm? ( virtual/udev[${MULTILIB_USEDEP}] )
+	dri3? ( virtual/udev[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.3.99.901[${MULTILIB_USEDEP}]
 	>=x11-libs/libxshmfence-1.1[${MULTILIB_USEDEP}]
 	x11-libs/libXdamage[${MULTILIB_USEDEP}]
@@ -154,8 +155,10 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/pkgconfig
 	>=x11-proto/dri2proto-2.6[${MULTILIB_USEDEP}]
-	>=x11-proto/dri3proto-1.0[${MULTILIB_USEDEP}]
-	>=x11-proto/presentproto-1.0[${MULTILIB_USEDEP}]
+	dri3? (
+		>=x11-proto/dri3proto-1.0[${MULTILIB_USEDEP}]
+		>=x11-proto/presentproto-1.0[${MULTILIB_USEDEP}]
+	)
 	>=x11-proto/glproto-1.4.15-r1[${MULTILIB_USEDEP}]
 	>=x11-proto/xextproto-7.0.99.1[${MULTILIB_USEDEP}]
 	x11-proto/xf86driproto[${MULTILIB_USEDEP}]
@@ -311,6 +314,7 @@ multilib_src_configure() {
 		--enable-shared-glapi \
 		$(use_enable !bindist texture-float) \
 		$(use_enable debug) \
+		$(use_enable dri3) \
 		$(use_enable egl) \
 		$(use_enable gbm) \
 		$(use_enable gles1) \

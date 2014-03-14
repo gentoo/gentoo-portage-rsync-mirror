@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.162 2014/03/08 02:47:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.163 2014/03/13 23:22:27 mattst88 Exp $
+
+  13 Mar 2014; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Add media-libs/mesa dri3 to package.use.mask because of its dependence on
+  udev.
 
   08 Mar 2014; Matt Turner <mattst88@gentoo.org> fbsd/package.use.mask:
   Add media-libs/mesa openmax to package.use.mask.

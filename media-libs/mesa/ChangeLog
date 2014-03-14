@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.543 2014/03/09 18:38:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.544 2014/03/13 23:21:42 mattst88 Exp $
+
+  13 Mar 2014; Matt Turner <mattst88@gentoo.org> mesa-10.1.0.ebuild,
+  metadata.xml:
+  Add dri3 USE flag, and add udev as a dependency, bug #504356.
 
   09 Mar 2014; Matt Turner <mattst88@gentoo.org> mesa-10.1.0.ebuild:
   Update libxshmfence dependency to 1.1, bug #503932.

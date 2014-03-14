@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.95 2014/03/12 10:13:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.96 2014/03/13 23:31:00 radhermit Exp $
+
+*ca-certificates-20140223 (13 Mar 2014)
+
+  13 Mar 2014; Tim Harder <radhermit@gentoo.org>
+  +ca-certificates-20140223.ebuild:
+  Version bump.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   ca-certificates-20130906.ebuild:
