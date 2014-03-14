@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.2 2014/03/12 14:24:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.3 2014/03/14 13:45:19 axs Exp $
 
 EAPI=5
 
@@ -46,11 +46,12 @@ RDEPEND="${COMMONDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fontconfig-match.patch
-	if has_version ">=dev-lang/spidermonkey-1.8.7" ; then
+	if has_version ">=dev-lang/spidermonkey-1.8.7:0" ; then
 		epatch "${FILESDIR}"/${P}-mozjs187-config.patch
-		eautoreconf
 	fi
 	epatch "${FILESDIR}"/${P}-desktop.patch
+	epatch "${FILESDIR}"/${P}-java-fix.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -89,7 +90,7 @@ src_configure() {
 		else
 			JAVASCRIPT_ENGINE_LIBS="-ljs"
 		fi
-		if has_version dev-lang/spidermonkey[threadsafe] ; then
+		if has_version "dev-lang/spidermonkey:0[threadsafe]" ; then
 			JAVASCRIPT_ENGINE_CFLAGS+=" -DJS_THREADSAFE $(pkg-config --cflags nspr)"
 			JAVASCRIPT_ENGINE_LIBS="$(pkg-config --libs nspr) ${JAVASCRIPT_ENGINE_LIBS}"
 		fi

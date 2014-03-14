@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/tasty-hunit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-hunit/ChangeLog,v 1.2 2013/12/10 23:33:50 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-hunit/ChangeLog,v 1.3 2014/03/14 14:00:53 qnikst Exp $
+
+*tasty-hunit-0.8.0.1 (14 Mar 2014)
+
+  14 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  +tasty-hunit-0.8.0.1.ebuild:
+  add new version, bug #504500
 
 *tasty-hunit-0.4.1 (10 Dec 2013)
 

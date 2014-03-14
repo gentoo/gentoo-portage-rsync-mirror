@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.4 2014/03/12 14:24:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.5 2014/03/14 13:45:19 axs Exp $
 
 EAPI=5
 
@@ -80,13 +80,13 @@ src_configure() {
 		# spidermonkey pre-1.8.5 has no pkg-config, so override ./configure
 		myconf+="${spidermonkeys_pc[@]/#/ --disable-}"
 		JAVASCRIPT_ENGINE_CFLAGS="-I/usr/include/js -DXP_UNIX"
-		if has_version ">=dev-lang/spidermonkey-1.8" ; then
+		if has_version ">=dev-lang/spidermonkey-1.8:0" ; then
 			# spidermonkey-1.8 changed the name of the lib
 			JAVASCRIPT_ENGINE_LIBS="-lmozjs"
 		else
 			JAVASCRIPT_ENGINE_LIBS="-ljs"
 		fi
-		if has_version dev-lang/spidermonkey[threadsafe] ; then
+		if has_version "dev-lang/spidermonkey:0[threadsafe]" ; then
 			JAVASCRIPT_ENGINE_CFLAGS+=" -DJS_THREADSAFE $(pkg-config --cflags nspr)"
 			JAVASCRIPT_ENGINE_LIBS="$(pkg-config --libs nspr) ${JAVASCRIPT_ENGINE_LIBS}"
 		fi
