@@ -4,6 +4,5 @@
 	<maintainer>
 		<email>neurogeek@gentoo.org</email>
 		<name>Jesus Rivero</name>
-		<description>Minimalistic C client library for the Redis database</description>
 	</maintainer>
 </pkgmetadata>
