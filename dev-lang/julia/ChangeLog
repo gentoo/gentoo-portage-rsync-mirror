@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/julia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.6 2014/02/26 09:41:27 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.7 2014/03/14 19:53:58 calchan Exp $
+
+  14 Mar 2014; Denis Dupeyron <calchan@gentoo.org> julia-0.2.0-r1.ebuild:
+  Fixed confusing comment, bug #502482.
 
   26 Feb 2014; Mark Wright <gienah@gentoo.org> julia-0.2.0-r1.ebuild:
   Fix for bug #501868 requires pkg-config --libs-only-l blas

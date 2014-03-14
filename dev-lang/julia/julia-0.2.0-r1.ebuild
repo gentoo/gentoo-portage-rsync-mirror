@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0-r1.ebuild,v 1.2 2014/02/26 09:41:27 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0-r1.ebuild,v 1.3 2014/03/14 19:53:58 calchan Exp $
 EAPI=5
 
 inherit eutils multilib pax-utils
@@ -34,8 +34,8 @@ JULIAMAKEARGS="QUIET_MAKE= USE_SYSTEM_LLVM=1 USE_SYSTEM_READLINE=1 USE_SYSTEM_PC
 		USE_SYSTEM_MPFR=1 USE_SYSTEM_SUITESPARSE=1  USE_SYSTEM_ARPACK=1 USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 \
 		LLVM_CONFIG=/usr/bin/llvm-config USE_BLAS64=0"
 
-# Forcing use of 64-bit integers. If you want 64-bit integers then you need to use a BLAS implementation from the
-# science overlay and julia-9999 also from the science overlay.
+# Disabling use of 64-bit integers. If you want 64-bit integers then you need to use a BLAS implementation from the
+# science overlay, and julia-9999 also from the science overlay.
 
 # scons is a dep of double-conversion
 DEPEND="
