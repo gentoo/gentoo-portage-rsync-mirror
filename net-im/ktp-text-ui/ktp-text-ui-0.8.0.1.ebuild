@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ktp-text-ui-0.8.0.ebuild,v 1.1 2014/03/12 10:49:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ktp-text-ui-0.8.0.1.ebuild,v 1.1 2014/03/14 07:30:28 johu Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit kde4-base
 DESCRIPTION="KDE Telepathy text chat window"
 HOMEPAGE="http://community.kde.org/Real-Time_Communication_and_Collaboration"
 if [[ ${PV} != *9999* ]]; then
-	SRC_URI="mirror://kde/stable/kde-telepathy/${PV}/src/${P}.tar.bz2"
+	SRC_URI="mirror://kde/stable/kde-telepathy/0.8.0/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 else
 	KEYWORDS=""
@@ -27,5 +27,5 @@ DEPEND="
 	>=net-libs/telepathy-logger-qt-0.8
 "
 RDEPEND="${DEPEND}
-	>=net-im/ktp-contact-list-${PV}
+	>=net-im/ktp-contact-list-0.8.0
 "
