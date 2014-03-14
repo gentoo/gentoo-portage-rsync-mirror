@@ -1,0 +1,9 @@
+# ChangeLog for perl-core/Math-Complex
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.1 2014/03/14 21:28:21 zlogene Exp $
+
+*Math-Complex-1.590.0 (14 Mar 2014)
+
+  14 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> +Math-Complex-1.590.0.ebuild,
+  +metadata.xml:
+  Initial commit for perl-5.18
