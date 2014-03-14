@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.24 2014/03/09 00:04:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.25 2014/03/14 05:52:45 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_7,3_3} )
@@ -73,6 +73,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 src_prepare() {
 	[[ -n ${RPM} ]] && rpm_spec_epatch "${WORKDIR}"/gdb.spec
 	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+	epatch_user
 	strip-linguas -u bfd/po opcodes/po
 }
 

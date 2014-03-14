@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.262 2014/03/09 00:04:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.264 2014/03/14 05:52:45 vapier Exp $
+
+  14 Mar 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.7.ebuild,
+  gdb-9999.ebuild:
+  Add epatch_user support.
+
+  14 Mar 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.6.2.ebuild:
+  Mark alpha/ia64/m68k/ppc64/s390 stable #501528.
 
   09 Mar 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.7.ebuild,
   gdb-9999.ebuild:
