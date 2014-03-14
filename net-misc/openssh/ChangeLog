@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.501 2014/03/14 06:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.502 2014/03/14 12:12:13 vapier Exp $
+
+*openssh-6.5_p1-r1 (14 Mar 2014)
+
+  14 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.5_p1-hpn-cipher-align.patch, +openssh-6.5_p1-r1.ebuild,
+  -openssh-6.5_p1.ebuild:
+  Avoid unaligned loads/stores in USE=hpn cipher code #498632 by Bruno.
 
 *openssh-6.5_p1 (14 Mar 2014)
 

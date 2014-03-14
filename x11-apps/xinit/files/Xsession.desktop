@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=XSession
 Comment=This session logs you into your custom Xsession
 Exec=/etc/X11/Sessions/Xsession

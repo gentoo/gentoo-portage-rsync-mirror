@@ -1,6 +1,17 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.178 2014/02/20 08:57:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.179 2014/03/14 12:26:01 scarabeus Exp $
+
+*libav-9.12 (14 Mar 2014)
+*libav-0.8.11 (14 Mar 2014)
+
+  14 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.8.11.ebuild,
+  +libav-9.12.ebuild, -libav-0.8.10.ebuild, -libav-0.8.8.ebuild,
+  -libav-0.8.9.ebuild, -libav-10_alpha1.ebuild, -libav-9.10.ebuild,
+  -libav-9.11.ebuild, libav-10_alpha1-r1.ebuild, libav-10_beta1.ebuild,
+  libav-9999.ebuild:
+  Version bump to bugfix releases 0.8.11 and 9.12. Drop some overshadowed
+  versions. Update slot on 10 series.
 
 *libav-10_beta1 (20 Feb 2014)
 

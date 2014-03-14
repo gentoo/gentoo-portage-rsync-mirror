@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.5_p1.ebuild,v 1.1 2014/03/14 06:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.5_p1-r1.ebuild,v 1.1 2014/03/14 12:12:13 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -119,6 +119,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.7_p1-GSSAPI-dns.patch #165444 integrated into gsskex
 	if [[ -n ${HPN_PATCH} ]] && use hpn; then
 		epatch "${WORKDIR}"/${HPN_PATCH%.*}
+		epatch "${FILESDIR}"/${PN}-6.5_p1-hpn-cipher-align.patch #498632
 		save_version HPN
 	fi
 

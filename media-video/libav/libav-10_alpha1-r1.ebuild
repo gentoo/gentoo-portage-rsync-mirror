@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10_alpha1-r1.ebuild,v 1.1 2014/01/29 18:35:18 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10_alpha1-r1.ebuild,v 1.2 2014/03/14 12:26:01 scarabeus Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ fi
 SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-10.tar.xz )"
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
-SLOT="0/9"
+SLOT="0/10"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == *9999 ]] || \
