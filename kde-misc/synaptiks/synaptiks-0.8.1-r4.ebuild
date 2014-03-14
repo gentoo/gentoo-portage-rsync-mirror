@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1-r4.ebuild,v 1.2 2013/12/15 16:52:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1-r4.ebuild,v 1.3 2014/03/14 06:24:37 kensington Exp $
 
 EAPI=5
 
-KDE_HANDBOOK=optional
+KDE_HANDBOOK="optional"
 PYTHON_COMPAT=( python{2_6,2_7} )
 inherit kde4-base distutils-r1
 
@@ -27,22 +27,28 @@ RDEPEND="
 	>=x11-drivers/xf86-input-synaptics-1.3
 	>=x11-libs/libXi-1.4
 	x11-libs/libXtst
-	upower? ( dev-python/dbus-python[${PYTHON_USEDEP}]
-		sys-power/upower )"
+	upower? (
+		dev-python/dbus-python[${PYTHON_USEDEP}]
+		sys-power/upower
+	)
+"
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	sys-devel/gettext
 	doc? (
 		dev-python/sphinx[${PYTHON_USEDEP}]
 		>=dev-python/sphinxcontrib-issuetracker-0.11-r1[${PYTHON_USEDEP}]
-	)"
+	)
+"
 
-PATCHES=( "${FILESDIR}/${P}-templatesfix.patch"
-	"${FILESDIR}/${PN}-0.8.1-removedfeatures.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-templatesfix.patch"
+	"${FILESDIR}/${PN}-0.8.1-removedfeatures.patch"
+)
 
 python_compile_all() {
 	if use doc; then
-		einfo "Generation of documentation"
+		einfo "Generating documentation"
 		pushd doc > /dev/null
 		sphinx-build . _build || die
 		popd > /dev/null

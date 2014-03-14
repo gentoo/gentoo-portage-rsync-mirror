@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.6.0.ebuild,v 1.1 2014/03/05 17:32:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.6.0.ebuild,v 1.2 2014/03/14 06:28:14 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,10 +17,10 @@ SRC_URI="http://gpodder.org/src/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+dbus bluetooth gstreamer ipod mtp test webkit"
+IUSE="+dbus bluetooth gstreamer ipod kernel_linux mtp test webkit"
 
 #TODO: add QML UI deps (USE=qt4) and make pygtk optional, see README
-RDEPEND=">=dev-python/eyeD3-0.7
+COMMON_DEPEND=">=dev-python/eyeD3-0.7
 	>=dev-python/feedparser-5.1.2
 	>=dev-python/mygpoclient-1.7
 	>=dev-python/pygtk-2.16:2
@@ -30,7 +30,9 @@ RDEPEND=">=dev-python/eyeD3-0.7
 	ipod? ( media-libs/libgpod[python] )
 	mtp? ( >=media-libs/libmtp-1.0.0 )
 	webkit? ( dev-python/pywebkitgtk )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	kernel_linux? ( sys-apps/iproute2 )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-apps/help2man
 	test? (

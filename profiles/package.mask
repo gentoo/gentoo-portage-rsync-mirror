@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15472 2014/03/13 22:08:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15473 2014/03/14 06:13:37 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Palimaka <kensington@gentoo.org> (14 Mar 2014)
+# Not compatible with latest KDE. Backend script can't
+# fetch videos anymore. Dead upstream.
+# Masked for removal in 30 days. Bug #504550.
+kde-misc/youtube-servicemenu
 
 # Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
 # No license, therefore not redistributable. SRC_URI dead.
