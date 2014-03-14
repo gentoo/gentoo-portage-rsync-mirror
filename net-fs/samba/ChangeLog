@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.655 2014/03/13 15:35:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.656 2014/03/14 09:30:41 polynomial-c Exp $
+
+*samba-4.1.6 (14 Mar 2014)
+*samba-4.0.16 (14 Mar 2014)
+*samba-3.6.23 (14 Mar 2014)
+
+  14 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -samba-3.6.19.ebuild,
+  -samba-3.6.20.ebuild, -samba-3.6.21.ebuild, +samba-3.6.23.ebuild,
+  -samba-4.0.15-r1.ebuild, +samba-4.0.16.ebuild, -samba-4.1.5-r1.ebuild,
+  +samba-4.1.6.ebuild, files/3.6/samba.initd:
+  Security bump (bug #504494). Removed old.
 
   13 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> samba-4.0.15-r1.ebuild,
   samba-4.1.5-r1.ebuild, files/4.0/samba4.initd-r1, files/4.1/samba4.initd-r1,

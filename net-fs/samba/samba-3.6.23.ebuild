@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.19.ebuild,v 1.14 2013/11/15 23:56:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.23.ebuild,v 1.1 2014/03/14 09:30:41 polynomial-c Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
 	swat syslog +winbind"
@@ -89,7 +89,8 @@ pkg_setup() {
 	if use server ; then
 		SBINPROGS="${SBINPROGS} bin/smbd bin/nmbd"
 		BINPROGS="${BINPROGS} bin/testparm bin/smbstatus bin/smbcontrol bin/pdbedit
-			bin/profiles bin/sharesec bin/eventlogadm bin/smbta-util"
+			bin/profiles bin/sharesec bin/eventlogadm bin/smbta-util
+			$(usex client "" "bin/smbclient")"
 
 		use swat && SBINPROGS="${SBINPROGS} bin/swat"
 		use winbind && SBINPROGS="${SBINPROGS} bin/winbindd"
