@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.147 2014/02/23 16:17:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.148 2014/03/14 22:11:22 mattst88 Exp $
+
+  14 Mar 2014; Matt Turner <mattst88@gentoo.org> dbus-glib-0.100.2-r1.ebuild:
+  alpha stable, bug 496628.
 
   23 Feb 2014; Pacho Ramos <pacho@gentoo.org> dbus-glib-0.100.2-r1.ebuild:
   x86 stable, bug #496628

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.502 2014/03/14 12:12:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.503 2014/03/14 22:15:51 vapier Exp $
+
+  14 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  files/openssh-6.5_p1-hpn-cipher-align.patch:
+  Fix build on 32bit systems #504616 by Toralf Förster.
 
 *openssh-6.5_p1-r1 (14 Mar 2014)
 
