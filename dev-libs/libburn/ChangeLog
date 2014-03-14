@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.172 2014/03/12 05:14:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.175 2014/03/14 20:39:35 billie Exp $
+
+  14 Mar 2014; Daniel Pielmeier <billie@gentoo.org> libburn-1.3.4.ebuild,
+  libburn-1.3.6.ebuild, +files/libburn-1.3.6-buffer-overflow.patch:
+  Add patch to prevent a buffer overflow in libburn/write.c which may occur for
+  certain tracks when trying to burn a CD in TAO mode. Thanks to Richard
+  Goedeken for the report (bug #504488) and proposed patch. Additional thanks
+  go to upstream   author Thomas Schmitt for his quick response regarding the
+  issue.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libburn-1.3.4.ebuild:
   x86 stable wrt bug #502718

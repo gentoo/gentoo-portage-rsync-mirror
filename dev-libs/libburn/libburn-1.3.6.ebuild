@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.3.6.ebuild,v 1.1 2014/03/07 16:45:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.3.6.ebuild,v 1.2 2014/03/14 20:33:05 billie Exp $
 
 EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Libburn is an open-source library for reading, mastering and writing optical discs."
 HOMEPAGE="http://libburnia-project.org"
@@ -16,6 +18,10 @@ IUSE="cdio debug static-libs track-src-odirect"
 RDEPEND="cdio? ( >=dev-libs/libcdio-0.83 )"
 DEPEND="$RDEPEND
 	virtual/pkgconfig"
+
+src_prepare () {
+	epatch "${FILESDIR}/${P}-buffer-overflow.patch"
+}
 
 src_configure() {
 	econf \
