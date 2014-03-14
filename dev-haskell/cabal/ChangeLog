@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.97 2014/03/06 11:07:09 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.98 2014/03/14 11:10:11 ago Exp $
+
+  14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cabal-1.18.1.2.ebuild:
+  Stable for ppc64, wrt bug #495370
 
   06 Mar 2014; Chema Alonso <nimiux@gentoo.org> cabal-1.18.1.2.ebuild:
   Stable for amd64 wrt bug #495370
