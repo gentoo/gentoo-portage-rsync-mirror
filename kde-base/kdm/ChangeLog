@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.388 2014/03/11 13:32:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.389 2014/03/15 08:55:32 johu Exp $
+
+*kdm-4.11.7-r1 (15 Mar 2014)
+
+  15 Mar 2014; Johannes Huber <johu@gentoo.org> +kdm-4.11.7-r1.ebuild:
+  DEPEND on sys-apps/systemd-sysv-utils to fix bug #479426. Thanks to Manuel
+  "Sput" Nickschas for the hint.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> -kdm-4.11.6.ebuild:
   Remove KDE Workspace 4.11.6
