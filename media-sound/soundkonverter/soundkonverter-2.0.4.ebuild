@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-2.0.4.ebuild,v 1.1 2013/11/03 11:31:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-2.0.4.ebuild,v 1.2 2014/03/15 07:31:23 kensington Exp $
 
 EAPI=5
 
@@ -16,12 +16,14 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="
+RDEPEND="
 	$(add_kdebase_dep libkcddb)
 	media-libs/taglib
 	media-sound/cdparanoia
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+"
 
 pkg_postinst() {
 	elog "soundKonverter optionally supports many different audio formats."
