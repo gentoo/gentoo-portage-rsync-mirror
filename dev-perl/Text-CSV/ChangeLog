@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.55 2014/03/12 09:58:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.56 2014/03/15 10:03:00 zlogene Exp $
+
+  15 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Text-CSV-1.320.0.ebuild:
+  alpha stable wrt bug #495494
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Text-CSV-1.320.0.ebuild:
   Stable for sparc, wrt bug #495494

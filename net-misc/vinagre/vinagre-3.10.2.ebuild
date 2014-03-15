@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.10.2.ebuild,v 1.4 2014/03/09 12:04:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.10.2.ebuild,v 1.5 2014/03/15 10:27:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -30,7 +30,7 @@ RDEPEND="
 	x11-themes/gnome-icon-theme
 
 	avahi? ( >=net-dns/avahi-0.6.26[dbus,gtk3] )
-	rdp? ( net-misc/rdesktop )
+	rdp? ( net-misc/freerdp )
 	ssh? ( >=x11-libs/vte-0.20:2.90 )
 	spice? ( >=net-misc/spice-gtk-0.5[gtk3] )
 	telepathy? (

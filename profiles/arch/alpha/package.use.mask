@@ -1,15 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.147 2014/02/22 08:38:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.148 2014/03/15 10:26:55 pacho Exp $
 
-# Pacho Ramos <pacho@gentoo.org> (22 Feb 2013)
+# Pacho Ramos <pacho@gentoo.org> (15 Mar 2014)
+# Missing keywords, bug #504672
+>=net-misc/vinagre-3.10 rdp
+
+# Pacho Ramos <pacho@gentoo.org> (22 Feb 2014)
 # Missing keywords, bug #495250
 >=gnome-base/gnome-extra-apps-3.10 tracker
 
-# Pacho Ramos <pacho@gentoo.org> (11 Jan 2013)
+# Pacho Ramos <pacho@gentoo.org> (11 Jan 2014)
 sys-kernel/dracut -dracut_modules_systemd
 
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2013)
+# Pacho Ramos <pacho@gentoo.org> (08 Jan 2014)
 # systemd[pam] cannot be provided for alpha, bug #438368
 gnome-base/gdm systemd
 sys-auth/pambase systemd

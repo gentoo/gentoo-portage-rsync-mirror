@@ -1,12 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.140 2014/02/23 10:49:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.141 2014/03/15 10:26:55 pacho Exp $
 
-# Pacho Ramos <pacho@gentoo.org> (23 Feb 2013)
+# Pacho Ramos <pacho@gentoo.org> (15 Mar 2014)
+# Missing keywords, bug #504672
+>=net-misc/vinagre-3.10 rdp
+
+# Pacho Ramos <pacho@gentoo.org> (23 Feb 2014)
 # Needed dependencies cannot be installed on ia64, bug #498638
 dev-util/dbus-test-runner test
 
-# Pacho Ramos <pacho@gentoo.org> (22 Feb 2013)
+# Pacho Ramos <pacho@gentoo.org> (22 Feb 2014)
 # Missing keywords, bug #495250
 >=gnome-base/gnome-extra-apps-3.10 tracker
 

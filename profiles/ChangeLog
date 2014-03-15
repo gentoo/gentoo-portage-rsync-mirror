@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8697 2014/03/14 08:56:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8698 2014/03/15 10:26:54 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2014; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask, arch/sparc/package.use.mask:
+  Mask rdp USE due missing keywords, bug #504672
 
   14 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Masked <net-fs/samba-3.6 for security reasons.

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm unpack
+DEPEND=dev-texlive/texlive-latexrecommended >=dev-tex/xcolor-2.11 app-arch/unzip virtual/latex-base >=sys-apps/texinfo-4.2-r5
+DESCRIPTION=pgf -- The TeX Portable Graphic Format
+HOMEPAGE=http://sourceforge.net/projects/pgf
+IUSE=doc source
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2 LPPL-1.3c FDL-1.2
+RDEPEND=dev-texlive/texlive-latexrecommended >=dev-tex/xcolor-2.11 virtual/latex-base
+SLOT=0
+SRC_URI=mirror://sourceforge/pgf/pgf_3.0.0.tds.zip
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=0b009f0b23ddefc79e07483b59b856d1
