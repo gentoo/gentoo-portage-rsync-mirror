@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.25 2014/02/08 14:33:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.26 2014/03/15 15:04:20 sping Exp $
+
+  15 Mar 2014; Sebastian Pipping <sping@gentoo.org> gitg-0.3.2.ebuild:
+  eautoreconf needs GNOME_COMPILE_WARNINGS from
+  /usr/share/aclocal/gnome-compiler-flags.m4 to rebuild configure script (bug
+  #504070)
 
 *gitg-0.3.2 (08 Feb 2014)
 

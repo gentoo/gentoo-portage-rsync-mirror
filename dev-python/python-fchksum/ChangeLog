@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/python-fchksum
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.38 2010/12/24 23:21:08 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.40 2014/03/15 15:16:53 vapier Exp $
+
+*python-fchksum-1.7.1-r1 (15 Mar 2014)
+
+  15 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/python-fchksum-1.7.1-md5-align.patch, +python-fchksum-1.7.1-r1.ebuild:
+  Update to distutils-r1 and fix unaligned accesses in md5 module.
+
+  15 Mar 2014; Mike Frysinger <vapier@gentoo.org> python-fchksum-1.7.1.ebuild:
+  Update HOMEPAGE/SRC_URI.
 
   24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-fchksum-1.7.1.ebuild:

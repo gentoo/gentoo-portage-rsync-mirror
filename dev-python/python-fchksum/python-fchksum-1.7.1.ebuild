@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.30 2010/12/24 23:21:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.31 2014/03/15 15:02:19 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,8 +10,8 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 inherit distutils
 
 DESCRIPTION="Python module to find the checksum of files"
-HOMEPAGE="http://www.dakotacom.net/~donut/programs/fchksum.html"
-SRC_URI="http://www.dakotacom.net/~donut/programs/fchksum/${P}.tar.gz"
+HOMEPAGE="http://code.fluffytapeworm.com/projects"
+SRC_URI="http://code.fluffytapeworm.com/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

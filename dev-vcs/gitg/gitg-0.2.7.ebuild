@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.2.7.ebuild,v 1.3 2013/08/18 13:26:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.2.7.ebuild,v 1.4 2014/03/15 15:04:20 sping Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	glade? ( >=dev-util/glade-3.2:3.10 )
 "
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
