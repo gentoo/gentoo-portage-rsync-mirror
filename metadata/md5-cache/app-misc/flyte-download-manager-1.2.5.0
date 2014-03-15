@@ -8,5 +8,5 @@ RDEPEND=x11-libs/libSM x11-libs/libICE x11-libs/libXext x11-libs/libX11
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://downloadi.flipkart.com/fkdm/1.2.5.0/FlyteDownloadManager-amd64.deb -> FlyteDownloadManager-1.2.5.0-amd64.deb ) x86? ( http://downloadi.flipkart.com/fkdm/1.2.5.0/FlyteDownloadManager-i386.deb -> FlyteDownloadManager-1.2.5.0-x86.deb )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=72b829a66e3bf13575fd757672a7da90

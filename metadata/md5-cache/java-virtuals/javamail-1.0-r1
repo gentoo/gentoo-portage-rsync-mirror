@@ -7,5 +7,5 @@ KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux
 LICENSE=public-domain
 RDEPEND=|| ( dev-java/sun-javamail >=dev-java/gnu-javamail-1.0-r2 ) !<dev-java/gnu-javamail-1.0-r2 >=dev-java/java-config-2.1.6
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b47a5268b70f78a012257718635dede0

@@ -11,5 +11,5 @@ RDEPEND=media-libs/flac media-libs/libogg media-libs/libsdl[X,joystick,opengl?,v
 REQUIRED_USE=?? ( opl-musicpack sc55-musicpack )
 SLOT=0
 SRC_URI=http://dukeworld.duke4.net/eduke32/synthesis/20131119-4169/eduke32_src_20131119-4169.tar.xz http://dev.gentoo.org/~hasufell/distfiles/eduke32-icons.tar textures? ( http://www.duke4.org/files/nightfright/duke3d_hrp.zip -> duke3d_hrp_5.2.zip ) sc55-musicpack? ( http://www.duke4.org/files/nightfright/music/duke3d_mus.zip -> duke3d_mus_3.0.zip ) opl-musicpack? ( http://www.duke4.org/files/nightfright/music/duke3d_musopl.zip -> duke3d_musopl_2.0.zip ) offensive? ( http://www.duke4.org/files/nightfright/duke3d_xxx.zip -> duke3d_xxx_1.33.zip )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c37052d476d8d6ef09abf21e4ec1264d

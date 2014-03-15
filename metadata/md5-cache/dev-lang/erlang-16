@@ -9,5 +9,5 @@ LICENSE=ErlPL-1.1
 RDEPEND=>=dev-lang/perl-5.6.1 ssl? ( >=dev-libs/openssl-0.9.7d ) emacs? ( virtual/emacs ) java? ( >=virtual/jdk-1.2 ) odbc? ( dev-db/unixODBC ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=http://www.erlang.org/download/otp_src_R16B.tar.gz http://erlang.org/download/otp_doc_man_R16B.tar.gz doc? ( http://erlang.org/download/otp_doc_html_R16B.tar.gz )
-_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	wxwidgets	755f4b28ecdf7c1213011108e566babc
+_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	wxwidgets	755f4b28ecdf7c1213011108e566babc
 _md5_=a9350bd07c88caaa62fab8f83d1a4ca8

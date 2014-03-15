@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=virtual/jre-1.5 dev-java/junit >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=http://java.freehep.org/maven2/org/freehep/freehep-record/2.0/freehep-record-2.0-sources.jar
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-mvn-src	8f34189713bfd1a69e8ead66bedff242	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-mvn-src	8f34189713bfd1a69e8ead66bedff242	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=1d5ceb5e0ae2266f557053d9aecd7aed

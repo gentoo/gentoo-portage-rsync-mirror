@@ -8,5 +8,5 @@ LICENSE=BSD-2
 RDEPEND=>=net-misc/dhcpcd-5.0 sys-apps/dbus
 SLOT=0
 SRC_URI=http://roy.marples.name/downloads/dhcpcd/dhcpcd-dbus-0.5.0.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=987e11b6e219381a766f7dbe57d8c1f1

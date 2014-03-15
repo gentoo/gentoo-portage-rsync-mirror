@@ -9,5 +9,5 @@ LICENSE=mpich2
 RDEPEND=dev-libs/libaio romio? ( net-fs/nfs-utils ) !media-sound/mpd !sys-cluster/mpich !sys-cluster/openmpi fortran? ( virtual/fortran ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.2.1p1/mpich2-1.2.1p1.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4b1969e4f773d9b38ccff792cf89dbc3

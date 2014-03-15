@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=fits? ( sci-libs/cfitsio ) pgplot? ( sci-libs/pgplot ) fortran? ( virtual/fortran )
 SLOT=0/4
 SRC_URI=ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib-4.19.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e08859e7b6bc031ac498b67a6f0569d6

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-1.2.6 >=media-libs/alsa-lib-0.9.8 >=media-sound/alsa-utils-0.9.8 >=media-libs/libmad-0.14.2b-r2 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://sourceforge/bitstreamout/vdr-bitstreamout-0.89c.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vdr-plugin	51b50b0854d0431b2c6758bf9d8bcd75
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vdr-plugin	51b50b0854d0431b2c6758bf9d8bcd75
 _md5_=4a784f4801f9af74c20fef0fab4db72f

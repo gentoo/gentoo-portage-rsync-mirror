@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=vdr? ( >=media-video/vdr-1.4.0 !>=media-video/vdr-1.7 ) xine? ( >=media-libs/xine-lib-1.1.1 ) virtual/jpeg libextractor? ( >=media-libs/libextractor-0.5.20 ) X? ( x11-libs/libX11 x11-libs/libXv x11-libs/libXext x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) ) >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://sourceforge/xineliboutput/vdr-xineliboutput-1.0.5.tgz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=445e3ea40667a311574498e8496f27e8

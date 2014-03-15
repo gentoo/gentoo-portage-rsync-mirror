@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=virtual/daemontools sys-apps/ucspi-tcp doc? ( app-doc/djbdns-man ) selinux? ( sec-policy/selinux-djbdns )
 SLOT=0
 SRC_URI=http://cr.yp.to/djbdns/djbdns-1.05.tar.gz ipv6? ( http://www.fefe.de/dns/djbdns-1.05-test23.diff.bz2 )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d43ecb665cdd00770423d6c36acc089a

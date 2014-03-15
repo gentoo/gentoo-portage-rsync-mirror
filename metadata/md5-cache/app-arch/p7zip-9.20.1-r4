@@ -10,5 +10,5 @@ RDEPEND=kde? ( x11-libs/wxGTK:2.8[X,-odbc] kde-base/kdelibs ) wxwidgets? ( x11-l
 REQUIRED_USE=kde? ( wxwidgets )
 SLOT=0
 SRC_URI=mirror://sourceforge/p7zip/p7zip_9.20.1_src_all.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
 _md5_=395e32c83a6e1bb6152cdc108cc3134b

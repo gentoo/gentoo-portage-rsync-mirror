@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-python/PyQt4-4.4[svg,webkit] ipython? ( dev-python/ipython ) matplotlib? ( dev-python/matplotlib ) numpy? ( dev-python/numpy ) pep8? ( dev-python/pep8 ) pyflakes? ( >=dev-python/pyflakes-0.3 ) pylint? ( dev-python/pylint ) rope? ( >=dev-python/rope-0.9.3 ) scipy? ( sci-libs/scipy ) sphinx? ( dev-python/sphinx ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://spyderlib.googlecode.com/files/spyder-2.1.13.zip
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=382e9b3a34e074cb5936b67bf80499d1

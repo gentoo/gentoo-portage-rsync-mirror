@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=app-text/ghostscript-gpl app-arch/gzip
 SLOT=0
 SRC_URI=http://www.peps.redprince.net/peps/peps-2.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ba7d660a5c43b2cd8d22613974e5b932

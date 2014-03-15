@@ -5,5 +5,5 @@ KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://debian/pool/main/m/mac-fdisk/mac-fdisk_0.1.orig.tar.gz mirror://debian/pool/main/m/mac-fdisk/mac-fdisk_0.1-13.diff.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=26fc8a8187947ba2784358d88c87e4b4

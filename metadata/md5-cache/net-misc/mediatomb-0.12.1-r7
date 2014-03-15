@@ -10,5 +10,5 @@ RDEPEND=mysql? ( virtual/mysql ) dev-libs/expat id3tag? ( media-libs/id3lib ) ja
 REQUIRED_USE=|| ( mysql sqlite ) taglib? ( !id3tag ) id3tag? ( !taglib ) thumbnail? ( ffmpeg !libextractor ) ffmpeg? ( !libextractor ) libextractor? ( !ffmpeg !thumbnail )
 SLOT=0
 SRC_URI=mirror://sourceforge/mediatomb/mediatomb-0.12.1.tar.gz mirror://debian/pool/main/m/mediatomb/mediatomb_0.12.1-4.debian.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6651a2ea23a86285f7e0addd5492737a

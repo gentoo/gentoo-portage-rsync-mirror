@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libpipeline berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) !berkdb? ( !gdbm? ( sys-libs/gdbm ) ) sys-apps/groff selinux? ( sec-policy/selinux-mandb ) zlib? ( sys-libs/zlib ) !sys-apps/man
 SLOT=0
 SRC_URI=mirror://nongnu/man-db/man-db-2.6.3.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b5d85c38d0fc99c392c34987a4c5e38b

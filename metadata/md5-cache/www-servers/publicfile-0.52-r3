@@ -9,5 +9,5 @@ RDEPEND=virtual/daemontools >=sys-apps/ucspi-tcp-0.83 selinux? ( sec-policy/seli
 RESTRICT=mirror bindist test
 SLOT=0
 SRC_URI=http://cr.yp.to/publicfile/publicfile-0.52.tar.gz http://www.ohse.de/uwe/patches/publicfile-0.52-filetype-diff http://www.publicfile.org/ftp-ls-patch
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e9b680d26287d1f10d9c5e07a2341caf

@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RDEPEND=dev-lang/php[cli,curl,gd,json,posix,pcntl,truetype,zip] dev-php/pecl-ps
 SLOT=0
 SRC_URI=http://www.phoronix-test-suite.com/download.php?file=phoronix-test-suite-4.6.0 -> phoronix-test-suite-4.6.0.tar.gz
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=1b44638cdb8f993960f9d1487a81e895

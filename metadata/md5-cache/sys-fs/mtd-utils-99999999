@@ -7,5 +7,5 @@ IUSE=xattr
 LICENSE=GPL-2
 RDEPEND=!sys-fs/mtd dev-libs/lzo sys-libs/zlib >=sys-apps/util-linux-2.16
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=a1d8b7f33af68d517f496ca833edbca2

@@ -7,5 +7,5 @@ LICENSE=docbook
 RDEPEND=>=app-text/build-docbook-catalog-1.6
 SLOT=4.1.2.5
 SRC_URI=http://www.nwalsh.com/docbook/simple/4.1.2.5/simple4125.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	sgml-catalog	115ce04390f5bb32de8fef875ea71b4b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	sgml-catalog	115ce04390f5bb32de8fef875ea71b4b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=9de78014fdadbc83d377b410ee8e72d5

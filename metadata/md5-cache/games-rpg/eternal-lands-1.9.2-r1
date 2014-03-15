@@ -9,5 +9,5 @@ LICENSE=eternal_lands
 RDEPEND=x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext virtual/opengl virtual/glu media-libs/libsdl[X] media-libs/sdl-net media-libs/sdl-image media-libs/openal media-libs/freealut media-libs/libvorbis dev-libs/libxml2 media-libs/cal3d[-16bit-indices] media-libs/libpng >=games-rpg/eternal-lands-data-1.9.2 games-misc/games-envd
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~rich0/distfiles/elc_1.9.2-20110618.tar.bz2 http://dev.gentoo.org/~rich0/distfiles/eternal-lands.png
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=abfd24ff6737731bd0603a581ffc57e5

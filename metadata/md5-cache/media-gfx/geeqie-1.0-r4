@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 virtual/libintl doc? ( app-text/gnome-doc-utils ) lcms? ( =media-libs/lcms-1* ) lirc? ( app-misc/lirc ) xmp? ( >=media-gfx/exiv2-0.17[xmp] ) !xmp? ( exif? ( >=media-gfx/exiv2-0.17 ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/geeqie/geeqie-1.0.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=59c0ee57757548dce69ffd17c1589e21

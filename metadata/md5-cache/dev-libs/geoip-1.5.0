@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 GPL-2 MaxMind2
 RDEPEND=sys-libs/zlib perl-geoipupdate? ( dev-perl/PerlIO-gzip dev-perl/libwww-perl )
 SLOT=0
 SRC_URI=http://www.maxmind.com/download/geoip/api/c/GeoIP-1.5.0.tar.gz http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz city? ( http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz ) ipv6? ( http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz city? ( http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz ) )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4c8126875c1ccec985dcc4f5995816f1

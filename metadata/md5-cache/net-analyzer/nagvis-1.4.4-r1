@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-analyzer/ndoutils-1.4_beta4 automap? ( >=media-gfx/graphviz-2.14 ) virtual/httpd-php dev-lang/php[gd,mysql,unicode]
 SLOT=0
 SRC_URI=mirror://sourceforge/nagvis/nagvis-1.4.4.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c4e4b63c50ab893c963765a634de61cc

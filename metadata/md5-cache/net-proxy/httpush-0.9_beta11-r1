@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=dev-perl/URI virtual/perl-MIME-Base64 dev-perl/libwww-perl dev-perl/Net-SSLeay dev-perl/Crypt-SSLeay dev-perl/HTML-Parser xml? ( dev-perl/XML-Twig )
 SLOT=0
 SRC_URI=mirror://sourceforge/httpush/httpush-0.9b11.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c6599519e058b43882dc3c1b94909cf0

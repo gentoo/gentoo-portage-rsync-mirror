@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib:0= ssl? ( app-misc/ca-certificates gnutls? ( >=net-libs/gnutls-1.2.9:0= ) !gnutls? ( dev-libs/openssl:0= ) ) adns? ( >=net-dns/c-ares-1.5.0:0= ) bittorrent? ( ssl? ( gnutls? ( nettle? ( >=dev-libs/nettle-2.4:0=[gmp] >=dev-libs/gmp-5:0= ) !nettle? ( >=dev-libs/libgcrypt-1.2.2:0= ) ) ) !ssl? ( nettle? ( >=dev-libs/nettle-2.4:0=[gmp] >=dev-libs/gmp-5:0= ) !nettle? ( >=dev-libs/libgcrypt-1.2.2:0= ) ) ) libuv? ( dev-libs/libuv:0= ) metalink? ( libxml2? ( >=dev-libs/libxml2-2.6.26:2= ) !libxml2? ( dev-libs/expat:0= ) ) sqlite? ( dev-db/sqlite:3= ) xmlrpc? ( libxml2? ( >=dev-libs/libxml2-2.6.26:2= ) !libxml2? ( dev-libs/expat:0= ) ) nls? ( virtual/libiconv virtual/libintl ) scripts? ( dev-lang/ruby )
 SLOT=0
 SRC_URI=mirror://sourceforge/aria2/aria2-1.18.0.tar.bz2
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=74dfce47f016bc5e0e4339f9a2ada555

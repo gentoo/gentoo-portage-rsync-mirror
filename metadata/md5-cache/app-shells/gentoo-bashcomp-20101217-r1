@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash-completion
 SLOT=0
 SRC_URI=mirror://gentoo/gentoo-bashcomp-20101217.tar.bz2 http://dev.gentoo.org/~darkside/tmp/gentoo-bashcomp-20101217.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a77b74e1828418bfb76f381f11162771

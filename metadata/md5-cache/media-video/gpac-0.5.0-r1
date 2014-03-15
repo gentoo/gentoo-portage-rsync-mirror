@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=a52? ( media-libs/a52dec ) aac? ( >=media-libs/faad2-2.0 ) alsa? ( media-libs/alsa-lib ) dvb? ( media-tv/linuxtv-dvb-apps ) ffmpeg? ( virtual/ffmpeg ) jack? ( media-sound/jack-audio-connection-kit ) jpeg? ( virtual/jpeg ) mad? ( >=media-libs/libmad-0.15.1b ) opengl? ( virtual/opengl media-libs/freeglut virtual/glu ) >=media-libs/libogg-1.1 png? ( >=media-libs/libpng-1.4 ) vorbis? ( >=media-libs/libvorbis-1.1 ) theora? ( media-libs/libtheora ) truetype? ( >=media-libs/freetype-2.1.4 ) xml? ( >=dev-libs/libxml2-2.6.0 ) xvid? ( >=media-libs/xvid-1.0.1 ) sdl? ( media-libs/libsdl ) jpeg2k? ( media-libs/openjpeg:0 ) ssl? ( dev-libs/openssl ) pulseaudio? ( media-sound/pulseaudio ) x11-libs/libXt x11-libs/libX11 x11-libs/libXv x11-libs/libXext
 SLOT=0
 SRC_URI=mirror://sourceforge/gpac/gpac-0.5.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b835a3c8212ec8e5ab5944f1d5aebab8

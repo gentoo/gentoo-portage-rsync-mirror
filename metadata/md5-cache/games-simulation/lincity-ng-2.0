@@ -8,5 +8,5 @@ LICENSE=GPL-2 BitstreamVera
 RDEPEND=virtual/opengl sys-libs/zlib dev-libs/libxml2 media-libs/libsdl[audio,joystick,opengl,video] media-libs/sdl-mixer[vorbis] media-libs/sdl-image[png] media-libs/sdl-ttf media-libs/sdl-gfx dev-games/physfs games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://berlios/lincity-ng/lincity-ng-2.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7a324f5d848f939d360d83341fd07b71

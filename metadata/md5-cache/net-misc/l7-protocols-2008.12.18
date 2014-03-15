@@ -6,5 +6,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/l7-filter/l7-protocols-2008-12-18.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=16326542c4a125f1a83bd226d0ae847d

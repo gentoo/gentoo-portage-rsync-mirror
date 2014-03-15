@@ -10,5 +10,5 @@ RDEPEND=x11-libs/goocanvas:2.0 ruby_targets_ruby19? ( >=dev-ruby/ruby-gtk2-2.1.0
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
 SLOT=0
 SRC_URI=mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-2.1.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	ruby-ng-gnome2	e4cff284a3481220aed757f422ae56c7	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	ruby-ng-gnome2	e4cff284a3481220aed757f422ae56c7	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=8b9bd567f0aafab79d4ee5f8ea0b9e3f

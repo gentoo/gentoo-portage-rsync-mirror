@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=net-firewall/iptables || ( <sys-apps/coreutils-8.20 >sys-apps/coreutils-8.20-r1 ) sys-apps/iproute2 plugins? ( net-dns/bind-tools )
 SLOT=0
 SRC_URI=http://rocky.eld.leidenuniv.nl/arno-iptables-firewall/arno-iptables-firewall_2.0.1d.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=04324be80761c12ba9cc07a46128d9b3

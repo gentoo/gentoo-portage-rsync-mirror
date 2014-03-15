@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-ml/type-conv-109.60:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/110.01.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/110.01.00/individual/pipebang-110.01.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/pipebang-110.01.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=87956e56d2dde3e9ee59bf2c45fab566

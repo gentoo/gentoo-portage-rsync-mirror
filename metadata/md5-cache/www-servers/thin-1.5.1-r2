@@ -10,5 +10,5 @@ RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/daemons-1.0.9[ruby_targets_ruby19] >=d
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=https://github.com/macournoyer/thin/archive/v1.5.1.tar.gz -> thin-1.5.1.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=4aa62fb773992e515349ebecf495726f

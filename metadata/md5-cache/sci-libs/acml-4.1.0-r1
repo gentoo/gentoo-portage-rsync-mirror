@@ -10,5 +10,5 @@ RDEPEND=ifc? ( dev-lang/ifc ) gfortran? ( sys-devel/gcc:4.2 ) !gfortran? ( !ifc?
 RESTRICT=strip fetch
 SLOT=0
 SRC_URI=amd64? ( ifc? ( acml-4-1-0-ifort-64bit.tgz int64? ( acml-4-1-0-ifort-64bit-int64.tgz ) ) gfortran? ( acml-4-1-0-gfortran-64bit.tgz int64? ( acml-4-1-0-gfortran-64bit-int64.tgz ) ) !ifc? ( !gfortran? ( acml-4-1-0-gfortran-64bit.tgz int64? ( acml-4-1-0-gfortran-64bit-int64.tgz ) ) ) ) x86? ( ifc? ( acml-4-1-0-ifort-32bit.tgz ) gfortran? ( acml-4-1-0-gfortran-32bit.tgz ) !ifc? ( !gfortran? ( acml-4-1-0-gfortran-32bit.tgz ) ) )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a912f2402b782615543bd533ba4f4961

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-haskell/mtl-2.0:=[profile?] <dev-haskell/mtl-2.2:=[profile?] >=dev-haskell/network-2.1:=[profile?] <dev-haskell/network-2.5:=[profile?] =dev-haskell/text-0.11*:=[profile?] >=dev-haskell/utf8-string-0.3.1:=[profile?] <dev-haskell/utf8-string-0.4:=[profile?] >=dev-lang/ghc-6.12.1:=
 SLOT=0
 SRC_URI=mirror://hackage/packages/archive/libmpd/0.8.0.1/libmpd-0.8.0.1.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=69496f008b73b51726a7925c0eb80472

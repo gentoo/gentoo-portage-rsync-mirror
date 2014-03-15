@@ -9,5 +9,5 @@ LICENSE=|| ( MPL-1.1 GPL-2 LGPL-2 )
 RDEPEND=dev-libs/nss dev-libs/nspr doc? ( dev-python/docutils dev-python/epydoc ) dev-lang/python
 SLOT=0
 SRC_URI=http://rion-overlay.googlecode.com/files/python-nss-0.8.tar.lzma
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=fb5c7d3da9080090347e11f804a9441a

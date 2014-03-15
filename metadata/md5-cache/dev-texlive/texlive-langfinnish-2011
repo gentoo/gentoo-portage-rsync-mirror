@@ -9,5 +9,5 @@ LICENSE=GPL-2 public-domain TeX-other-free
 RDEPEND=>=dev-texlive/texlive-basic-2011 >=app-text/texlive-core-2011
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-finbib-2011.tar.xz mirror://gentoo/texlive-module-hyphen-finnish-2011.tar.xz mirror://gentoo/texlive-module-collection-langfinnish-2011.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	texlive-module	ac55527a81ebf0b2ba40fe5dbcb5d3be	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	texlive-module	ac55527a81ebf0b2ba40fe5dbcb5d3be	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=92fb42798ff5f93d7a981571dffc214f

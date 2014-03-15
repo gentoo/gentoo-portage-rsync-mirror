@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=dev-libs/libxml2 >=gnome-base/gconf-2.0:2 >=gnome-base/libgnome-2 >=gnome-base/libgnomeui-2 net-misc/curl >=x11-libs/gtk+-2.10:2
 SLOT=0
 SRC_URI=mirror://sourceforge/glosung/glosung-3.6.2.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=5c3645c1e33a38b1b63e63f3dbd31f8f

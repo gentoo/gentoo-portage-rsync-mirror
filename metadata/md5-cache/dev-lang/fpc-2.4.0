@@ -10,5 +10,5 @@ RDEPEND=!dev-lang/fpc-bin !dev-lang/fpc-source
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://sourceforge/freepascal/fpcbuild-2.4.0.tar.gz amd64? ( mirror://sourceforge/freepascal/fpc-2.4.0.x86_64-linux.tar ) ppc? ( mirror://sourceforge/freepascal/fpc-2.4.0.powerpc-linux.tar ) sparc? ( mirror://sourceforge/freepascal/fpc-2.2.4.sparc-linux.tar ) x86? ( mirror://sourceforge/freepascal/fpc-2.4.0.i386-linux.tar ) doc? ( mirror://sourceforge/freepascal/Documentation/2.4.0/doc-html.tar.gz -> fpc-2.4.0-doc-html.tar.gz mirror://gentoo/fpc-2.4.0-fpctoc.htx.bz2 )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=bc237aa5768574107c06c940a0ed60f5

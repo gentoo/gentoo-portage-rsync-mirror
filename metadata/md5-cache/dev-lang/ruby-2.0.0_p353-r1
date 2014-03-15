@@ -10,5 +10,5 @@ PDEPEND=>=dev-ruby/rubygems-2.0.2[ruby_targets_ruby20] >=dev-ruby/json-1.7.7[rub
 RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) ssl? ( dev-libs/openssl ) socks5? ( >=net-proxy/dante-1.1.13 ) tk? ( <dev-lang/tcl-8.6[threads] <dev-lang/tk-8.6[threads] ) ncurses? ( sys-libs/ncurses ) readline? ( sys-libs/readline ) dev-libs/libyaml virtual/libffi sys-libs/zlib >=app-admin/eselect-ruby-20100402 !<dev-ruby/rdoc-3.9.4 !<dev-ruby/rubygems-1.8.10-r1
 SLOT=2.0
 SRC_URI=mirror://ruby/2.0/ruby-2.0.0-p353.tar.bz2 http://dev.gentoo.org/~flameeyes/ruby-team/ruby-patches-2.0.0_p353-r1.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6f1d06a730dd6957109aac7a03df102d

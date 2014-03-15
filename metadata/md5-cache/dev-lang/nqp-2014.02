@@ -10,5 +10,5 @@ RDEPEND=parrot? ( >=dev-lang/parrot-5.9.0:=[unicode] ) java? ( >=virtual/jre-1.7
 REQUIRED_USE=|| ( parrot java moar )
 SLOT=0
 SRC_URI=http://github.com/perl6/nqp/tarball/2014.02 -> nqp-2014.02.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=5ef3f846296466af1e903290af372160

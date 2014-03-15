@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/openssl geoip? ( >=dev-libs/geoip-1.4.7 )
 SLOT=0
 SRC_URI=ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/ipv6calc-0.96.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=708aba09ee4fd3ede500b165b1bb806b

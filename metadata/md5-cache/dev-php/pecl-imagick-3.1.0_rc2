@@ -10,5 +10,5 @@ RDEPEND=>=media-gfx/imagemagick-6.2.4 php_targets_php5-5? ( dev-lang/php:5.5 ) p
 REQUIRED_USE=|| ( php_targets_php5-5 php_targets_php5-3 php_targets_php5-4 )
 SLOT=0
 SRC_URI=http://pecl.php.net/get/imagick-3.1.0RC2.tgz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=83782b51d4203de72b8b6d2150494f56

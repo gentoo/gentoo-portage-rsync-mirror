@@ -5,5 +5,5 @@ KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://sourceforge/cvector/cvector/CVector-1.0.3/CVector-1.0.3.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=f872353cd638ab57e8c26337342cd87e

@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-ml/core-109.24.00:= >=dev-ml/pa_ounit-109.18.00:= >=dev-ml/sexplib-109.20.00:= dev-ml/async:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/109.53.03
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.53.00/individual/textutils-109.53.03.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=308ed3d6401f51e23172a9f5958ef1a3

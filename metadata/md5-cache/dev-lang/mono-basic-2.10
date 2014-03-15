@@ -9,5 +9,5 @@ RDEPEND=>=dev-lang/mono-2.10
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.mono-project.com/sources/mono-basic/mono-basic-2.10.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	go-mono	95f4d6f11343dd05b134d8d1d2efd9e0	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	go-mono	95f4d6f11343dd05b134d8d1d2efd9e0	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=c870dbef1b5a141bd4b2be0805285763

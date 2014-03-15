@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!static? ( >=sys-libs/ncurses-5.2-r2 ) selinux? ( sys-libs/libselinux ) !sys-apps/util-linux
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/util-linux/util-linux-2.12r.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=178e6b41ce41a761c70359f0ef853dab

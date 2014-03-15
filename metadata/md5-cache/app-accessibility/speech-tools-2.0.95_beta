@@ -9,5 +9,5 @@ LICENSE=FESTIVAL HPND BSD rc regexp-UofT
 RDEPEND=nas? ( media-libs/nas ) X? ( x11-libs/libX11 x11-libs/libXt ) !<app-accessibility/festival-1.96_beta !sys-power/powerman
 SLOT=0
 SRC_URI=http://www.festvox.org/packed/festival/2.0.95/speech_tools-2.0.95-beta.tar.gz mirror://gentoo/speech_tools-2.0.95-beta-patches.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4f4c31d71c3d719f9d7c16f76e65653d

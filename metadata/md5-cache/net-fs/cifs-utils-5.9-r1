@@ -10,5 +10,5 @@ RDEPEND=!net-fs/mount-cifs !<net-fs/samba-3.6_rc1 ads? ( sys-libs/talloc virtual
 REQUIRED_USE=^^ ( caps caps-ng )
 SLOT=0
 SRC_URI=ftp://ftp.samba.org/pub/linux-cifs/cifs-utils/cifs-utils-5.9.tar.bz2
-_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	af81d52c25ec93fbdff71e0efb0de7b7	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a38df9f469b33daffe30a4589925e892

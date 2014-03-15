@@ -7,5 +7,5 @@ LICENSE=free-noncomm
 RDEPEND=!<games-action/d2x-0.2.5-r3 games-misc/games-envd
 SLOT=0
 SRC_URI=ftp://ftp.funet.fi/pub/msdos/games/interplay/d2demo10.zip ftp://ftp.demon.co.uk/pub/ibmpc/dos/games/descent/d2demo10.zip mirror://3dgamers/descent2/d2demo10.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=458908ad51773d5671390203aa477302

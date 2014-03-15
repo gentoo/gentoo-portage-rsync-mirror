@@ -10,5 +10,5 @@ RDEPEND=app-text/iso-codes >=dev-libs/glib-2.32:2 >=media-libs/gstreamer-1.2.0:1
 REQUIRED_USE=ivorbis? ( ogg ) theora? ( ogg ) vorbis? ( ogg )
 SLOT=1.0
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.2.0.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gst-plugins-base	ff4b09b7caed6e0ea884fbd72c79ced0	gst-plugins10	947efdfd64977cceacabacfad1e28eba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	gst-plugins-base	ff4b09b7caed6e0ea884fbd72c79ced0	gst-plugins10	947efdfd64977cceacabacfad1e28eba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=08f25ed73a13c321529d3c1d39ae0db2

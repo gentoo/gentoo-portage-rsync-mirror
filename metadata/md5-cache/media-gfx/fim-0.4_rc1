@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-fonts/terminus-font aalib? ( media-libs/aalib[slang] ) dia? ( app-office/dia ) djvu? ( app-text/djvu ) exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) graphicsmagick? ( media-gfx/graphicsmagick ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) jpeg? ( virtual/jpeg ) pdf? ( app-text/poppler ) png? ( media-libs/libpng ) postscript? ( app-text/libspectre ) readline? ( sys-libs/readline ) sdl? ( media-libs/libsdl ) svg? ( media-gfx/inkscape ) tiff? ( media-libs/tiff ) xfig? ( media-gfx/xfig )
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/fbi-improved/fim-0.4-rc1.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c977de1e16cff79073fd16f145d34f97

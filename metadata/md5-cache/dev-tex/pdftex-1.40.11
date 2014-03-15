@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/poppler-0.12.3-r3[xpdf-headers(+)] >=media-libs/libpng-1.4 sys-libs/zlib dev-libs/kpathsea app-admin/eselect-pdftex
 SLOT=0
 SRC_URI=http://sarovar.org/frs/download.php/1300/pdftex-1.40.11.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=415787de86c07ea3192fff248abd75b0

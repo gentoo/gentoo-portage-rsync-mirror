@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1 MIT
 RDEPEND=!<media-libs/slv2-0.4.2
 SLOT=0
 SRC_URI=http://lv2plug.in/spec/lv2core-6.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
 _md5_=b2ea2591b3f975cbb546fba0a11609de

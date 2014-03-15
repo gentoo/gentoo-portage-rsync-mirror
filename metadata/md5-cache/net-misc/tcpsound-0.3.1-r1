@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=net-analyzer/tcpdump media-libs/libsdl dev-libs/libmba
 SLOT=0
 SRC_URI=http://www.ioplex.com/~miallen/tcpsound/dl/tcpsound-0.3.1.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b5f0a704a26f0cf8ca424855b707e4ce

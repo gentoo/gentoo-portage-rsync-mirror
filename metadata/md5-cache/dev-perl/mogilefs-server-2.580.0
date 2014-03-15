@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-2 )
 RDEPEND=dev-perl/Net-Netmask >=dev-perl/Danga-Socket-1.61 >=dev-perl/Sys-Syscall-0.22 >=dev-perl/Perlbal-1.790 dev-perl/IO-AIO dev-perl/libwww-perl >=dev-perl/MogileFS-Client-1.14 >=dev-perl/MogileFS-Utils-2.20 dev-perl/Cache-Memcached mysql? ( dev-perl/DBD-mysql ) postgres? ( dev-perl/DBD-Pg ) sqlite? ( dev-perl/DBD-SQLite ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DO/DORMANDO/MogileFS-Server-2.58.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7bda7111f2a6b1c5fb7a7e659b52f93b

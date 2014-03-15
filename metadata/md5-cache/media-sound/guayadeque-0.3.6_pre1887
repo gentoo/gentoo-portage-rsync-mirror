@@ -10,5 +10,5 @@ RDEPEND=dev-db/sqlite:3 dev-db/wxsqlite3 dev-libs/glib:2 media-libs/flac media-l
 RESTRICT=test
 SLOT=0
 SRC_URI=http://sourceforge.net/code-snapshots/svn/g/gu/guayadeque/code/guayadeque-code-1887.zip -> guayadeque-0.3.6_pre1887.zip
-_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
+_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
 _md5_=3751855aec9a109c1c2952e1bcc975bd

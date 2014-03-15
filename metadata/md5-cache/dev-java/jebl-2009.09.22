@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://gentoo/jebl-2009.09.22.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a38f6b400519fb7fc787704fba9a4d77

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/asciidoc sys-fs/e2fsprogs selinux? ( sys-libs/libselinux ) !sys-kernel/genkernel cryptsetup? ( sys-fs/cryptsetup ) dmraid? ( >=sys-fs/dmraid-1.0.0_rc16 ) gpg? ( app-crypt/gnupg ) iscsi? ( sys-block/open-iscsi ) plymouth? ( sys-boot/plymouth ) app-portage/portage-utils app-arch/cpio >=app-misc/pax-utils-0.6 !<sys-apps/openrc-0.9.9 sys-apps/util-linux sys-block/thin-provisioning-tools sys-fs/lvm2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~lxnay/genkernel-next/genkernel-next-35.tar.xz
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=0a9cec447f8ee322db8bc0b2f9bd455e

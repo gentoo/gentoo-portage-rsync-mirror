@@ -9,5 +9,5 @@ LICENSE=|| ( MPL-1.1 LGPL-2 )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/freeassociation/libical/libical-0.48/libical-0.48.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=65aec4acf5af525dfd04421747d8c3b3

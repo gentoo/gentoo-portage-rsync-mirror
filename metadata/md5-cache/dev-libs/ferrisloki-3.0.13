@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=stlport? ( >=dev-libs/STLport-5 ) dev-libs/libsigc++:2
 SLOT=0
 SRC_URI=mirror://sourceforge/witme/ferrisloki-3.0.13.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b33d1c4c55348bb074a97bcea2c0425e

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXaw3d x11-libs/libXmu x11-libs/libXt x11-libs/libXtst
 SLOT=0
 SRC_URI=http://homepage3.nifty.com/tsato/xvkbd/xvkbd-3.4a.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b6d473f4bdcfb12b610d3876cbecb965

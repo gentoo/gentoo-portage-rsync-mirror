@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib xz? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) lzma? ( app-arch/xz-utils ) !xz? ( !lzo? ( sys-libs/zlib ) ) xattr? ( sys-apps/attr )
 SLOT=0
 SRC_URI=mirror://sourceforge/squashfs/squashfs4.2.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=989816ceccca766c0c3db57ca5db1788

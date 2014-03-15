@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=python? ( =dev-lang/python-2.7* )
 SLOT=0
 SRC_URI=http://pkgs.fedoraproject.org/repo/pkgs/deltarpm/deltarpm-git-20110223.tar.bz2/70f8884be63614ca7c3fc888cf20ebc8/deltarpm-git-20110223.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=86edbe85aa90194f77da95e66e3a1123

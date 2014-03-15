@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=alsa? ( media-libs/alsa-lib ) ffmpeg? ( virtual/ffmpeg ) gsm? ( media-sound/gsm ) ilbc? ( dev-libs/ilbc-rfc3951 ) speex? ( media-libs/speex )
 SLOT=0
 SRC_URI=http://www.pjsip.org/release/2.1/pjproject-2.1.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a1b8190f7ef830fae5096c99933c1ff4

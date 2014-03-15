@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-utils-5.0.4-r1 ) openrc? ( !<sys-apps/openrc-0.12 ) zlib? ( >=sys-libs/zlib-1.2.6 )
 RESTRICT=test
 SLOT=0
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=9cd55c67882e4f7d2efcfc72103e2cb8

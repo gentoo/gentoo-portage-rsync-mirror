@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=net-nds/yp-tools debug? ( dev-libs/dmalloc ) dbus? ( dev-libs/dbus-glib ) slp? ( net-libs/openslp ) || ( net-nds/portmap net-nds/rpcbind )
 SLOT=0
 SRC_URI=ftp://ftp.kernel.org/pub/linux/utils/net/NIS/ypbind-mt-1.33.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=8b78a59e64272639375041f2b9de0b64

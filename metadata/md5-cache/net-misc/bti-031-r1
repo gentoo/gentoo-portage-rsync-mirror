@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-misc/curl dev-libs/libxml2 dev-libs/libpcre net-libs/liboauth || ( sys-libs/readline dev-libs/libedit )
 SLOT=0
 SRC_URI=mirror://kernel/software/web/bti/bti-031.tar.bz2
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=28efb4a1362a11846efde1d7dd89779a

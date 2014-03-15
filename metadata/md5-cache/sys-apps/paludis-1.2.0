@@ -9,5 +9,5 @@ PDEPEND=vim-syntax? ( >=app-editors/vim-core-7 ) app-admin/eselect-package-manag
 RDEPEND=>=app-admin/eselect-1.2.13 >=app-shells/bash-3.2 >=sys-devel/gcc-4.4 dev-libs/libpcre sys-apps/file pbins? ( >=app-arch/libarchive-3.0.4 ) python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 ) ruby-bindings? ( >=dev-lang/ruby-1.8 ) xml? ( >=dev-libs/libxml2-2.6 ) search-index? ( >=dev-db/sqlite-3 ) sys-apps/sandbox
 SLOT=0
 SRC_URI=http://paludis.exherbo.org/download/paludis-1.2.0.tar.bz2
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ab28d13d57eb5e8f8bd243259379095b

@@ -11,5 +11,5 @@ REQUIRED_USE=vala? ( introspection )
 RESTRICT=test
 SLOT=0/1
 SRC_URI=http://www.freedesktop.org/software/colord/releases/colord-gtk-0.1.24.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356
 _md5_=45738b2124a8ee5f8a35c0aed06c256a
