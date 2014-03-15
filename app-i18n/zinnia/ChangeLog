@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/zinnia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.12 2014/03/03 23:34:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.13 2014/03/15 05:50:53 zlogene Exp $
+
+  15 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -zinnia-0.06-r1.ebuild,
+  -zinnia-0.06-r2.ebuild:
+  Drop version with old EAPI
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> zinnia-0.06-r3.ebuild:
   amd64 stable, bug #491920
