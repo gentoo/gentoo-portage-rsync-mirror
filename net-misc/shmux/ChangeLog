@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.31 2014/03/11 19:53:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.32 2014/03/15 13:53:44 mrueg Exp $
+
+  15 Mar 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add Alice Ferrazzi as maintainer. Proxied by me.
 
   11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #53266
