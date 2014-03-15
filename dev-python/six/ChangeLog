@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.37 2014/01/08 05:35:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.39 2014/03/15 06:30:42 radhermit Exp $
+
+  15 Mar 2014; Tim Harder <radhermit@gentoo.org> six-1.6.1.ebuild,
+  six-9999.ebuild:
+  Drop python version specific sphinx use deps and update live ebuild.
+
+*six-1.6.1 (15 Mar 2014)
+
+  15 Mar 2014; Tim Harder <radhermit@gentoo.org> +six-1.6.1.ebuild:
+  Version bump.
 
   08 Jan 2014; Ian Delaney <idella4@gentoo.org> six-1.5.2.ebuild:
   Add ~sparc keyword, again
