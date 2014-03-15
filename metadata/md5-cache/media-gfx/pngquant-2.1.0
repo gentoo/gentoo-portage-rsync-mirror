@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=media-libs/libpng:0= sys-libs/zlib:=
+DESCRIPTION=a command-line utility for converting 24/32-bit PNG images to paletted (8-bit) PNGs
+EAPI=5
+HOMEPAGE=http://pngquant.org/
+IUSE=debug openmp sse2
+KEYWORDS=~amd64 ~x86
+LICENSE=HPND rwpng
+RDEPEND=media-libs/libpng:0= sys-libs/zlib:=
+SLOT=0
+SRC_URI=http://pngquant.org/pngquant-2.1.0-src.tar.bz2
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=52a2da945fe9e2bf2330950577d14ae5
