@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.13 2014/03/09 07:12:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.14 2014/03/15 03:31:16 floppym Exp $
 
 EAPI=5
 
@@ -111,6 +111,7 @@ RDEPEND+="
 		grub_platforms_efi-64? ( sys-boot/efibootmgr )
 	)
 	!multislot? ( !sys-boot/grub:0 )
+	nls? ( sys-devel/gettext )
 "
 
 STRIP_MASK="*/grub/*/*.{mod,img}"
