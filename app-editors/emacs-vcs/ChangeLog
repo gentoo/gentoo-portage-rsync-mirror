@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.147 2014/03/01 09:43:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.148 2014/03/15 19:56:16 ulm Exp $
+
+  15 Mar 2014; Ulrich Müller <ulm@gentoo.org>
+  -emacs-vcs-24.3.50_pre20131231.ebuild, emacs-vcs-24.3.50_pre20140131.ebuild,
+  emacs-vcs-24.3.50_pre20140228.ebuild, emacs-vcs-24.3.9999.ebuild:
+  Install emacs man page under the same name as the binary. Remove old.
 
 *emacs-vcs-24.3.50_pre20140228 (01 Mar 2014)
 

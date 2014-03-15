@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0u.ebuild,v 1.1 2013/07/03 14:14:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0u.ebuild,v 1.2 2014/03/15 19:56:24 vapier Exp $
 
 EAPI=5
 
@@ -29,6 +29,11 @@ QA_EXECSTACK="usr/*/lib*efi.a:* usr/*/crt*.o"
 
 src_prepare() {
 	EPATCH_OPTS="-p1" epatch "${WORKDIR}"/*.diff
+	if ! use amd64 && ! use x86 ; then
+		sed -i \
+			-e '/CPPFLAGS/s:-maccumulate-outgoing-args::' \
+			Make.defaults || die #503210
+	fi
 }
 
 _emake() {

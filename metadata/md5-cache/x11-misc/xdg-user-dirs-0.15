@@ -1,5 +1,5 @@
-DEFINED_PHASES=-
-DEPEND=dev-libs/libxslt sys-devel/gettext
+DEFINED_PHASES=prepare
+DEPEND=app-text/docbook-xml-dtd:4.3 dev-libs/libxslt sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A tool to help manage 'well known' user directories
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/xdg-user-dirs
@@ -9,4 +9,5 @@ LICENSE=GPL-2
 PDEPEND=gtk? ( x11-misc/xdg-user-dirs-gtk )
 SLOT=0
 SRC_URI=http://user-dirs.freedesktop.org/releases/xdg-user-dirs-0.15.tar.gz
-_md5_=f98fa98e7379aad71c190fd4773d4e5a
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=9b20479593606e36d6c7959bc53d7a67
