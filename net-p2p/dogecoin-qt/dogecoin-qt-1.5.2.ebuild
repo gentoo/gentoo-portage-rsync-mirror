@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/dogecoin-qt-1.4.1.ebuild,v 1.1 2014/01/30 18:12:56 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/dogecoin-qt-1.5.2.ebuild,v 1.1 2014/03/15 16:58:32 sdamashek Exp $
 
 EAPI=5
 
@@ -48,19 +48,19 @@ S="${WORKDIR}/${MyP}"
 
 src_prepare() {
 #	epatch "${FILESDIR}"/${MyPN}-sys_leveldb.patch
-	rm -r src/leveldb
+#	rm -r src/leveldb || die
 
-	sed 's/BDB_INCLUDE_PATH=.*//' -i 'dogecoin-qt.pro'
+	sed 's/BDB_INCLUDE_PATH=.*//' -i 'dogecoin-qt.pro' || die
 
 	cd src || die
 
 	local filt= yeslang= nolang=
 
-	for lan in $LANGS; do
-		if [ ! -e qt/locale/bitcoin_$lan.ts ]; then
-			ewarn "Language '$lan' no longer supported. Ebuild needs update."
-		fi
-	done
+	#for lan in $LANGS; do
+	#	if [ ! -e qt/locale/bitcoin_$lan.ts ]; then
+	#		ewarn "Language '$lan' no longer supported. Ebuild needs update."
+	#	fi
+	#done
 
 	for ts in $(ls qt/locale/*.ts)
 	do
@@ -76,7 +76,7 @@ src_prepare() {
 	done
 
 	filt="bitcoin_\\(${filt:2}\\)\\.\(qm\|ts\)"
-	sed "/${filt}/d" -i 'qt/bitcoin.qrc'
+	sed "/${filt}/d" -i 'qt/bitcoin.qrc' || die
 	einfo "Languages -- Enabled:$yeslang -- Disabled:$nolang"
 }
 
@@ -102,7 +102,7 @@ src_configure() {
 	fi
 
 	#The litecoin codebase is mostly taken from bitcoin-qt
-	eqmake4 dogecoin-qt.pro "${OPTS[@]}"
+	eqmake4 dogecoin-qt.pro "${OPTS[@]}" || die
 }
 
 #Tests are broken with and without our litecoin-sys_leveldb.patch
