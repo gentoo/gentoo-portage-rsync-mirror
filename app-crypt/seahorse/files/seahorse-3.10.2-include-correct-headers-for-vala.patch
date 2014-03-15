@@ -1,0 +1,35 @@
+From 577c4ba0fc84d904338280c0ead77177c9d94ea3 Mon Sep 17 00:00:00 2001
+From: Stef Walter <stefw@gnome.org>
+Date: Thu, 20 Feb 2014 08:41:54 +0000
+Subject: common: Include correct headers for vala calling C code
+
+These caused crashes due to pointers being casted to int.
+
+Due to the way vala code is generated, this fix may require
+you to:
+
+$ rm common/*.c
+$ make clean all
+
+https://bugzilla.gnome.org/show_bug.cgi?id=708996
+---
+diff --git a/common/config.vapi b/common/config.vapi
+index b814388..056021f 100644
+--- a/common/config.vapi
++++ b/common/config.vapi
+@@ -16,11 +16,13 @@ namespace Config
+  */
+ namespace Seahorse {
+ 
++[CCode (cheader_filename = "libseahorse/seahorse-prefs.h")]
+ namespace Prefs {
+ 	public void show(Gtk.Window window, string? tabid);
+ 	public bool available();
+ }
+ 
++[CCode (cheader_filename = "libseahorse/seahorse-application.h")]
+ namespace Application {
+ 	public unowned Gtk.Application @get();
+ }
+--
+cgit v0.9.2

@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.176 2014/03/09 11:53:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.177 2014/03/15 10:48:43 pacho Exp $
+
+*seahorse-3.10.2-r1 (15 Mar 2014)
+
+  15 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/seahorse-3.10.2-include-correct-headers-for-vala.patch,
+  +seahorse-3.10.2-r1.ebuild, -seahorse-3.10.1.ebuild:
+  Fix crash with patch approved by upstream, bug #504582 by 504582
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> seahorse-3.10.2.ebuild:
   x86 stable, bug 499954
