@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.253 2014/01/26 11:37:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.254 2014/03/15 22:54:39 hwoarang Exp $
+
+*shorewall-4.5.21.7 (15 Mar 2014)
+
+  15 Mar 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/4.5.21.7/10-releasenotes.patch, +files/4.5.21.7/shorewall.confd,
+  +files/4.5.21.7/shorewall.initd, +files/4.5.21.7/shorewall.systemd,
+  +files/4.5.21.7/shorewallrc, +shorewall-4.5.21.7.ebuild, metadata.xml:
+  Version bump. Bug #499174 thanks to Thomas D.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> shorewall-4.5.18-r1.ebuild:
   Stable for x86, wrt bug #487690

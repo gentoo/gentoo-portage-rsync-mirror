@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.145 2014/01/26 11:37:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.146 2014/03/15 22:58:10 hwoarang Exp $
+
+*shorewall-lite-4.5.21.7 (15 Mar 2014)
+
+  15 Mar 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/4.5.21.7/10-releasenotes.patch, +files/4.5.21.7/shorewall-lite.confd,
+  +files/4.5.21.7/shorewall-lite.initd, +files/4.5.21.7/shorewall-lite.systemd,
+  +files/4.5.21.7/shorewallrc, +shorewall-lite-4.5.21.7.ebuild, metadata.xml:
+  Version bump. Bug #499174 thanks to Thomas D.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   shorewall-lite-4.5.18-r1.ebuild:
