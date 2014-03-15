@@ -1,3 +1,9 @@
+*ruby-clutter-gstreamer-2.2.0 (15 Mar 2014)
+
+  15 Mar 2014; Naohiro Aota <naota@gentoo.org>
+  +ruby-clutter-gstreamer-2.2.0.ebuild:
+  version bump
+
 *ruby-clutter-gstreamer-2.1.0 (15 Jan 2014)
 
   15 Jan 2014; Naohiro Aota <naota@gentoo.org>
