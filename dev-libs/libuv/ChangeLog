@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.12 2014/02/27 14:20:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.13 2014/03/15 16:10:09 hasufell Exp $
+
+*libuv-0.11.22 (15 Mar 2014)
+
+  15 Mar 2014; Julian Ospald <hasufell@gentoo.org> -libuv-0.11.6.ebuild,
+  -libuv-0.11.8.ebuild, -libuv-0.11.10.ebuild, -libuv-0.11.12.ebuild,
+  -libuv-0.11.13.ebuild, -libuv-0.11.16.ebuild, -libuv-0.11.18.ebuild,
+  -libuv-0.11.21.ebuild, +libuv-0.11.22.ebuild:
+  version bump (fixes bug #504542), add subslot, remove old
 
 *libuv-0.11.21 (27 Feb 2014)
 
