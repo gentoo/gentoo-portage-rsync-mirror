@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.93 2014/03/12 09:57:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.94 2014/03/15 05:20:11 zlogene Exp $
+
+  15 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> crypt-cbc-2.330.0.ebuild:
+  alpha stable wrt bug #495532
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> crypt-cbc-2.330.0.ebuild:
   Stable for sparc, wrt bug #495532
