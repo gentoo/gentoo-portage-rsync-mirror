@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.13 2014/03/15 16:10:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.14 2014/03/15 20:09:41 hasufell Exp $
+
+*libuv-0.11.22-r1 (15 Mar 2014)
+
+  15 Mar 2014; Julian Ospald <hasufell@gentoo.org> +libuv-0.11.22-r1.ebuild:
+  add multilib support
 
 *libuv-0.11.22 (15 Mar 2014)
 

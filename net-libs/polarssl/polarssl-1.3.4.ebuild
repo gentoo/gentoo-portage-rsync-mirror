@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.4.ebuild,v 1.1 2014/03/11 12:31:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.4.ebuild,v 1.2 2014/03/15 20:06:18 hasufell Exp $
 
 EAPI=5
 
@@ -75,6 +75,8 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
+
 	if use examples ; then
 		# avoid file collisions with sys-apps/coreutils
 		local p e
