@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.12 2013/09/06 18:33:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.13 2014/03/15 12:06:26 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam systemd
@@ -17,7 +17,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="acl debug doc kernel_linux pam policykit selinux systemd-units test"
 
+# TODO: Cleanup the || () hack later, like end of the year:
+# Skip certain broken glib 2.38 releases wrt #501330
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100:=
+	|| (  >=dev-libs/glib-2.38.2-r1:2 <dev-libs/glib-2.38:2 )
 	>=dev-libs/glib-2.22:2=
 	sys-libs/zlib:=
 	x11-libs/libX11:=
@@ -116,4 +119,6 @@ src_install() {
 	prune_libtool_files --all # --all for pam_ck_connector.la
 
 	use systemd-units || rm -rf "${ED}"/tmp
+
+	rm -rf "${ED}"/var/run # let the init script create the directory
 }

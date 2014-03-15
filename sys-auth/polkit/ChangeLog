@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.167 2014/03/11 20:08:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.169 2014/03/15 12:20:18 ssuominen Exp $
+
+  15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Add proper metadata for freedesktop-bugs@g.o
+
+*polkit-0.112-r2 (15 Mar 2014)
+
+  15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +polkit-0.112-r2.ebuild:
+  USE="jit" to determine which pax-mark, if any, should be applied wrt #485910
 
   11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #239126
