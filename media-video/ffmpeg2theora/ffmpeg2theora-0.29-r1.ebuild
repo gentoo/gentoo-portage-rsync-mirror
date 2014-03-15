@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29-r1.ebuild,v 1.3 2014/01/14 13:55:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.29-r1.ebuild,v 1.4 2014/03/15 19:04:18 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs scons-utils
@@ -25,8 +25,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-swr.patch" \
-		"${FILESDIR}/${P}-ffmpeg2.patch"
+	epatch \
+		"${FILESDIR}"/${P}-swr.patch \
+		"${FILESDIR}"/${P}-ffmpeg2.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
 }
 
 src_configure() {

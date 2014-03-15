@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/haskell-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.49 2014/02/16 13:24:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.50 2014/03/15 19:27:10 ulm Exp $
+
+  15 Mar 2014; Ulrich Müller <ulm@gentoo.org> haskell-mode-13.07.ebuild:
+  Perform tests in a separate directory because "make check" removes the
+  byte-compiled elisp files, bug 540660.
 
 *haskell-mode-13.07 (16 Feb 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.191 2014/03/11 15:18:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.192 2014/03/15 19:30:21 ssuominen Exp $
+
+  15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-session-4.10.1-r1.ebuild, xfce4-session-4.11.0.ebuild:
+  Utilize USE="nls" to optionalize xdg-user-dirs for portability.
 
 *xfce4-session-4.11.0 (11 Mar 2014)
 

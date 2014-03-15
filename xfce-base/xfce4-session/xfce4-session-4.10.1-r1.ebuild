@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r1.ebuild,v 1.2 2014/03/05 11:52:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r1.ebuild,v 1.3 2014/03/15 19:30:21 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="debug systemd udev +xscreensaver"
+IUSE="debug nls systemd udev +xscreensaver"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	x11-apps/iceauth
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	systemd? ( >=sys-auth/polkit-0.100 )"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xrdb
-	x11-misc/xdg-user-dirs
+	nls? ( x11-misc/xdg-user-dirs )
 	udev? ( >=sys-power/upower-0.9.20 )
 	xscreensaver? ( || (
 		>=x11-misc/xscreensaver-5.26

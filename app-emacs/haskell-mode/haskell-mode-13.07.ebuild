@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-13.07.ebuild,v 1.1 2014/02/16 13:24:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/haskell-mode-13.07.ebuild,v 1.2 2014/03/15 19:27:10 ulm Exp $
 
 EAPI=5
 
@@ -30,6 +30,12 @@ src_prepare() {
 src_compile() {
 	elisp_src_compile
 	elisp-make-autoload-file haskell-site-file.el
+}
+
+src_test() {
+	# perform tests in a separate directory #504660
+	mkdir test && cp *.el Makefile test || die
+	emake -C test check
 }
 
 src_install() {
