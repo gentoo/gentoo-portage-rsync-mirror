@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.746 2014/03/15 20:58:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.747 2014/03/15 21:48:51 floppym Exp $
+
+*python-3.4.0_rc3 (15 Mar 2014)
+
+  15 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-3.4.0_rc3.ebuild:
+  Bump.
 
   15 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-2.7.6.ebuild:
   Backport upstream fixes for bug 503180.

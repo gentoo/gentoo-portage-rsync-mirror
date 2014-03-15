@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtester
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.51 2012/10/23 04:58:53 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.52 2014/03/15 21:39:36 mattst88 Exp $
+
+  15 Mar 2014; Matt Turner <mattst88@gentoo.org> memtester-4.3.0.ebuild:
+  Added ~alpha.
 
   23 Oct 2012; Raúl Porcel <armin76@gentoo.org> memtester-4.3.0.ebuild:
   sparc stable because its used in the installcd
@@ -169,4 +172,3 @@
   07 Nov 2002, Mark Guertin <gerk@gentoo.org> memtest-2.93.1.ebuild :
   Added initial build, this works on ppc (there are no other mem testers
   in portage that do currently).
-
