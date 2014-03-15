@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20140306.ebuild,v 1.1 2014/03/12 21:33:28 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20140306-r1.ebuild,v 1.1 2014/03/15 20:59:23 qnikst Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="android androidsplice +assistant +cryptohash +dbus +dns doc ekg +feed +inotify +pairing tahoe +production +quvi +s3 +tdfa +testsuite +webapp +webdav +xmpp"
 
 RDEPEND="dev-vcs/git
+	assistant? ( sys-process/lsof )
 "
 DEPEND="${RDEPEND}
 	dev-haskell/async
