@@ -1,6 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.23 2014/03/04 02:48:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.24 2014/03/15 18:42:25 tetromino Exp $
+
+# For eautoreconf in =app-crypt/seahorse-3.10.2-r1
+app-crypt/gcr vala
 
 # Required by folks, needed by empathy
 >=gnome-extra/evolution-data-server-3.8 vala
