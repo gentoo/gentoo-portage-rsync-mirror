@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libindicator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.15 2012/07/30 20:51:21 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.16 2014/03/15 14:03:58 ssuominen Exp $
+
+*libindicator-12.10.1-r200 (15 Mar 2014)
+*libindicator-12.10.1-r300 (15 Mar 2014)
+
+  15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +libindicator-12.10.1-r200.ebuild, +libindicator-12.10.1-r300.ebuild:
+  Version bump wrt #467976 by Agostino Sarubbo
 
   30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   libindicator-12.10.0-r200.ebuild, libindicator-12.10.0-r300.ebuild:
@@ -82,4 +89,3 @@
   +libindicator-0.2.0.ebuild:
   Initial commit. Used by gnome-extra/indicator-applet and
   xfce-extra/xfce4-indicator-plugin.
-
