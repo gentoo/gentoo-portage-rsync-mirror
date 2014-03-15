@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15474 2014/03/14 08:56:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15476 2014/03/15 13:01:27 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -70,6 +70,8 @@ dev-libs/clens
 =xfce-base/xfce4-settings-4.11*
 =xfce-base/xfdesktop-4.11*
 =xfce-base/xfwm4-4.11*
+=media-video/parole-0.6*
+=xfce-extra/xfce4-xkb-plugin-0.7*
 
 # Manuel Rüger <mrueg@gentoo.org> (06 Mar 2014)
 # Mask further ruby18-only packages

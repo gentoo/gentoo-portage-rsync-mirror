@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-wmdock-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.12 2012/11/28 12:44:47 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.13 2014/03/15 12:51:17 ssuominen Exp $
+
+*xfce4-wmdock-plugin-0.6.0 (15 Mar 2014)
+
+  15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-wmdock-plugin-0.6.0.ebuild:
+  Version bump.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-wmdock-plugin-0.3.4.ebuild:
@@ -57,4 +63,3 @@
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-wmdock-plugin-0.3.0.ebuild, +xfce4-wmdock-plugin-0.3.2.ebuild:
   Rename xfce4-wmdock to xfce4-wmdock-plugin.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.13 2014/03/15 12:06:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.6.ebuild,v 1.14 2014/03/15 12:33:36 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam systemd
@@ -10,7 +10,8 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Framework for defining and tracking users, login sessions and seats."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/ConsoleKit"
-SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.xz"
+SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.xz
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-4.debian.tar.gz" # for logrotate file
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -121,4 +122,7 @@ src_install() {
 	use systemd-units || rm -rf "${ED}"/tmp
 
 	rm -rf "${ED}"/var/run # let the init script create the directory
+
+	insinto /etc/logrotate.d
+	newins "${WORKDIR}"/debian/${PN}.logrotate ${PN} #374513
 }
