@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.113 2014/02/13 08:19:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.114 2014/03/16 05:06:44 vapier Exp $
+
+*flex-2.5.38-r1 (16 Mar 2014)
+
+  16 Mar 2014; Mike Frysinger <vapier@gentoo.org> +flex-2.5.38-r1.ebuild,
+  -flex-2.5.38.ebuild:
+  Drop shared lib since it makes no sense #503522 by Andrés Becerra Sandoval.
 
 *flex-2.5.38 (13 Feb 2014)
 
