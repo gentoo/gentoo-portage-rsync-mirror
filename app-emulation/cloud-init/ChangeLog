@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/cloud-init
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/ChangeLog,v 1.3 2014/03/11 08:31:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/ChangeLog,v 1.4 2014/03/16 21:05:11 prometheanfire Exp $
+
+*cloud-init-0.7.4-r1 (16 Mar 2014)
+
+  16 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +cloud-init-0.7.4-r1.ebuild, +files/cloud-config.init,
+  +files/cloud-final.init, +files/cloud-init-local.init, +files/cloud-init.init,
+  -cloud-init-0.7.2.ebuild, -cloud-init-0.7.4.ebuild:
+  adding init scripts
 
 *cloud-init-0.7.4 (11 Mar 2014)
 

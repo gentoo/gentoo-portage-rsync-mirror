@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/cloud-init-0.7.4.ebuild,v 1.1 2014/03/11 08:31:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/cloud-init-0.7.4-r1.ebuild,v 1.1 2014/03/16 21:05:11 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -32,4 +32,11 @@ RDEPEND="dev-python/cheetah[${PYTHON_USEDEP}]
 src_prepare() {
 	sed -i "s/'tests'//g" "${S}/setup.py"
 	rm -R "${S}/tests"
+}
+
+python_install() {
+	distutils-r1_python_install
+	for svc in config final init init-local; do
+		newinitd "${FILESDIR}/cloud-${svc}.init" "cloud-${svc}"
+	done
 }

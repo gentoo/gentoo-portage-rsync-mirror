@@ -1,0 +1,15 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/files/cloud-init-local.init,v 1.1 2014/03/16 21:05:12 prometheanfire Exp $
+
+depend() {
+    after net
+    before cloud-init
+    provide cloud-init-local
+}
+
+start() {
+    cloud-init init --local
+    eend 0
+}
