@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.199 2014/03/12 07:45:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.200 2014/03/16 03:11:41 jer Exp $
+
+  16 Mar 2014; Jeroen Roovers <jer@gentoo.org> apr-util-1.5.3-r1.ebuild:
+  Stable for HPPA (bug #504300).
 
   12 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -apr-util-1.5.3.ebuild:
   Removed old.
