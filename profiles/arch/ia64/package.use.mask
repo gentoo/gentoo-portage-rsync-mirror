@@ -1,6 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.141 2014/03/15 10:26:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.142 2014/03/16 02:43:33 vapier Exp $
+
+# Mike Frysinger <vapier@gentoo.org> (15 Mar 2014)
+# Various deps not ported to ia64.
+dev-python/ipython nbconvert notebook
+
+# Mike Frysinger <vapier@gentoo.org> (15 Mar 2014)
+# dev-python/greenlet is not ported to ia64.
+dev-python/pyzmq green test
 
 # Pacho Ramos <pacho@gentoo.org> (15 Mar 2014)
 # Missing keywords, bug #504672

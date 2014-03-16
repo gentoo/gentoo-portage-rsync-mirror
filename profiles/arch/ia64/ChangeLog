@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.199 2014/01/22 22:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.200 2014/03/16 02:43:33 vapier Exp $
+
+  16 Mar 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask, use.mask:
+  Mask out various USE flags that need packages that are not yet
+  keyworded/ported.
 
   22 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   libquvi is available stable on ia64.

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.71 2014/02/10 03:17:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.72 2014/03/16 02:51:12 vapier Exp $
+
+  16 Mar 2014; Mike Frysinger <vapier@gentoo.org> neon-0.30.0.ebuild:
+  Add arm64 love.
 
   10 Feb 2014; Mike Gilbert <floppym@gentoo.org> -files/neon-0.29.6-doc.patch,
   -files/neon-0.29.6-gnutls-3-backport.patch,
