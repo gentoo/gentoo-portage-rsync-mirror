@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/proot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.6 2014/03/11 08:13:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.7 2014/03/16 07:56:21 pinkbyte Exp $
+
+  16 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -proot-3.2.2.ebuild,
+  metadata.xml:
+  Add upstream information to metadata, drop old revision
 
 *proot-3.2.2-r1 (11 Mar 2014)
 

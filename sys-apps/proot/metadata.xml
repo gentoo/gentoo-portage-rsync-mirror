@@ -9,7 +9,15 @@
 	PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc.
 	This means that users don't need any privilege or setup to do things like: using an arbitrary directory as the new root filesystem,
 	making files accessible somewhere else in the filesystem hierarchy, or executing programs built for another CPU architecture
-	transparently through QEMU user-mode.</longdescription>
+	transparently through QEMU user-mode.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">cedric-vincent/PRoot</remote-id>
+		<maintainer>
+			<email>cedric.vincent@gmail.com</email>
+			<name>Cédric Vincent</name>
+		</maintainer>
+	</upstream>
 	<use>
 		<flag name="care">Build dynamic CARE binary (more info - http://reproducible.io/)</flag>
 	</use>
