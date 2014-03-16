@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.93 2014/01/20 02:49:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.94 2014/03/16 18:16:41 floppym Exp $
+
+*python-updater-0.12 (16 Mar 2014)
+
+  16 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-updater-0.12.ebuild,
+  python-updater-9999.ebuild:
+  Version bump. Incorporate prefix support. Source /lib/gentoo/functions.sh, bug
+  504130.
 
   20 Jan 2014; Mike Gilbert <floppym@gentoo.org> python-updater-0.11.ebuild,
   python-updater-9999.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.57 2014/01/03 13:27:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.58 2014/03/16 18:26:37 jer Exp $
+
+  16 Mar 2014; Jeroen Roovers <jer@gentoo.org> -whowatch-1.8.3-r1.ebuild,
+  -whowatch-1.8.4.ebuild, -files/whowatch-1.8.3-exit.patch,
+  -files/whowatch-1.8.3-verbose.patch:
+  Old.
 
   03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> whowatch-1.8.5.ebuild:
   Add ~arm and ~mips keywords
