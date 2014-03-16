@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.97 2014/02/05 11:25:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.98 2014/03/16 17:12:42 maekke Exp $
+
+  16 Mar 2014; Markus Meier <maekke@gentoo.org>
+  portaudio-19_pre20140130.ebuild:
+  arm stable, bug #503920
 
 *portaudio-19_pre20140130 (05 Feb 2014)
 

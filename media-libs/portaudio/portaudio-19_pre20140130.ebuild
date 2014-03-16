@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20140130.ebuild,v 1.1 2014/02/05 11:25:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20140130.ebuild,v 1.2 2014/03/16 17:12:42 maekke Exp $
 
 EAPI=5
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
@@ -14,7 +14,7 @@ SRC_URI="http://www.portaudio.com/archives/${MY_P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="alsa +cxx debug jack oss static-libs"
 
 RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )

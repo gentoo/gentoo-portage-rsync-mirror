@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.16 2014/03/11 18:12:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.17 2014/03/16 17:13:54 maekke Exp $
+
+  16 Mar 2014; Markus Meier <maekke@gentoo.org> ecdsa-0.10.ebuild:
+  arm stable, bug #490376
 
 *ecdsa-0.11 (11 Mar 2014)
 
