@@ -1,25 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-browser/color-browser-0.3-r1.ebuild,v 1.2 2009/05/05 07:50:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-browser/color-browser-0.3-r1.ebuild,v 1.3 2014/03/16 11:57:11 ulm Exp $
 
-inherit elisp eutils
+EAPI=5
+
+inherit elisp
 
 DESCRIPTION="A utility for designing Emacs color themes"
-HOMEPAGE="http://www.emacswiki.org/elisp/"
+HOMEPAGE="http://www.emacswiki.org/emacs/KahlilHodgson"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="app-emacs/color-theme"
 RDEPEND="${DEPEND}"
 
-SITEFILE=60${PN}-gentoo.el
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-gentoo.patch"
-}
+ELISP_PATCHES="${PV}-gentoo.patch"
+SITEFILE="60${PN}-gentoo.el"

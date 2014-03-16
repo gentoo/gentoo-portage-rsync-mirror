@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/color-browser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-browser/ChangeLog,v 1.5 2009/05/05 07:50:46 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-browser/ChangeLog,v 1.6 2014/03/16 11:57:11 ulm Exp $
+
+  18 Feb 2014; Ulrich Müller <ulm@gentoo.org> color-browser-0.3-r1.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   color-browser-0.3-r1.ebuild:
