@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/dbf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.4 2014/03/10 19:58:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.5 2014/03/16 00:27:17 mrueg Exp $
+
+  16 Mar 2014; Manuel Rüger <mrueg@gentoo.org> dbf-2.0.7-r1.ebuild,
+  dbf-2.0.7.ebuild:
+  Remove ruby18 target.
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> dbf-2.0.7.ebuild:
   x86 stable, bug #499132

@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.18 2014/01/22 07:14:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.20 2014/03/16 00:24:24 mrueg Exp $
+
+  16 Mar 2014; Manuel Rüger <mrueg@gentoo.org> faraday-0.8.8.ebuild,
+  faraday-0.9.0.ebuild:
+  Missed to remove ruby18 target.
+
+  16 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -faraday-0.7.6.ebuild,
+  -faraday-0.8.1.ebuild, faraday-0.8.8.ebuild, faraday-0.9.0.ebuild:
+  Cleanup old. Remove ruby18-only dependencies.
 
 *faraday-0.9.0 (22 Jan 2014)
 

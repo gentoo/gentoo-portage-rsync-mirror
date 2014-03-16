@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15480 2014/03/15 23:58:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15481 2014/03/16 00:19:50 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,32 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+
+# Manuel Rüger <mrueg@gentoo.org> (16 Mar 2014)
+# Ruby 1.8 has no longer been supported upstream since July 2013 and
+# has known security issues (bug #492282). Ruby packages in general
+# are no longer compatible with ruby 1.8. Removal is tracked in bug
+# 434064.
+#
+# This mask also includes all packages still depending in ruby 1.8.
+# Removal in 30 days
+dev-lang/ruby:1.8
+virtual/rubygems:ruby18
+virtual/ruby-rdoc:ruby18
+virtual/ruby-ssl:ruby18
+virtual/ruby-threads:ruby18
+app-misc/alexandria
+dev-ruby/fastercsv
+dev-ruby/oniguruma
+dev-ruby/rand
+dev-ruby/revolution
+dev-ruby/ruby-taglib
+dev-ruby/rubytorrent
+dev-ruby/sary-ruby
+dev-ruby/system_timer
+<app-text/migemo-0.40_p2
+=dev-ruby/mecab-ruby-0.98-r1
 
 # Ulrich Müller <ulm@gentoo.org> (15 Mar 2014)
 # No license, unknown copyright holder. No Gentoo maintainer.

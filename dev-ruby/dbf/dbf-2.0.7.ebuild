@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/dbf-2.0.7.ebuild,v 1.4 2014/03/10 19:58:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/dbf-2.0.7.ebuild,v 1.5 2014/03/16 00:27:17 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -24,15 +24,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-USE_RUBY="ruby18" ruby_add_rdepend ">=dev-ruby/fastercsv-1.5.5"
-
-each_ruby_prepare() {
-	# We only support fastercsv for ruby 1.8.
-	case ${RUBY} in
-		*/ruby18)
-			;;
-		*)
-			sed -i -e '/fastercsv/d' ${RUBY_FAKEGEM_GEMSPEC} || die
-			;;
-	esac
+all_ruby_prepare() {
+	sed -i -e '/fastercsv/d' ${RUBY_FAKEGEM_GEMSPEC} || die
 }
