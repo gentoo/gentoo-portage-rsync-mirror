@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-documents
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/ChangeLog,v 1.29 2014/03/09 11:59:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/ChangeLog,v 1.30 2014/03/16 15:03:41 pacho Exp $
+
+*gnome-documents-3.10.2 (16 Mar 2014)
+
+  16 Mar 2014; Pacho Ramos <pacho@gentoo.org> +gnome-documents-3.10.2.ebuild:
+  Version bump
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gnome-documents-3.10.1.ebuild:
   x86 stable, bug 499954
