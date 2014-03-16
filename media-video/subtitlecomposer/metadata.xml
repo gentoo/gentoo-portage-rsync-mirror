@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>video</herd>
 	<herd>kde</herd>
+	<upstream>
+		<remote-id type="github">maxrd2/subtitlecomposer</remote-id>
+	</upstream>
 </pkgmetadata>

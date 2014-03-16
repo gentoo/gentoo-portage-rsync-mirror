@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.440.0.ebuild,v 1.8 2014/03/16 12:12:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.460.0.ebuild,v 1.1 2014/03/16 12:14:45 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MIROD
-MODULE_VERSION=3.44
+MODULE_VERSION=3.46
 inherit perl-module
 
 DESCRIPTION="Process huge XML documents in tree mode"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="nls"
 
 RDEPEND="
