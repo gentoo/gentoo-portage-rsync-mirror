@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14-r1.ebuild,v 1.1 2014/03/09 11:24:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14-r1.ebuild,v 1.2 2014/03/16 09:41:14 tommy Exp $
 
 EAPI="4"
 
@@ -48,7 +48,7 @@ multilib_src_compile() {
 		popd > /dev/null
 	fi
 	# It will fail if we run these twice...
-	if ! multilib_is_native_abi ; then
+	if ! multilib_build_binaries ; then
 		sed -i -e 's/ src / /' Makefile || die
 		sed -i -e '/SUBDIRS/s/ test//' Makefile || die
 		sed -i -e 's/install-data-hook:/install-data-hook:\n\ndisabled:/' Makefile || die
