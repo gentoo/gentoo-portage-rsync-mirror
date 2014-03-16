@@ -1,6 +1,16 @@
 # ChangeLog for the default/linux/alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.14 2014/01/11 16:28:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.15 2014/03/16 19:29:51 dilfridge Exp $
+
+  16 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> -10.0/deprecated,
+  -10.0/desktop/deprecated, -10.0/desktop/eapi, -10.0/desktop/gnome/deprecated,
+  -10.0/desktop/gnome/eapi, -10.0/desktop/gnome/parent,
+  -10.0/desktop/kde/deprecated, -10.0/desktop/kde/eapi,
+  -10.0/desktop/kde/parent, -10.0/desktop/parent, -10.0/developer/deprecated,
+  -10.0/developer/eapi, -10.0/developer/parent, -10.0/eapi, -10.0/parent,
+  -10.0/server/deprecated, -10.0/server/eapi, -10.0/server/parent,
+  -10.0/use.mask:
+  Remove deprecated 10.0 profiles
 
   11 Jan 2014; Tom Wijsman <TomWij@gentoo.org> +13.0/package.use.stable.mask:
   [QA] Mask stable =dev-python/dbus-python-1.2.0[test] until

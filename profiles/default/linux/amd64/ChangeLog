@@ -1,6 +1,19 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.11 2014/01/23 11:37:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.12 2014/03/16 19:30:43 dilfridge Exp $
+
+  16 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> -10.0/deprecated,
+  -10.0/desktop/deprecated, -10.0/desktop/eapi, -10.0/desktop/gnome/deprecated,
+  -10.0/desktop/gnome/eapi, -10.0/desktop/gnome/parent,
+  -10.0/desktop/kde/deprecated, -10.0/desktop/kde/eapi,
+  -10.0/desktop/kde/parent, -10.0/desktop/parent, -10.0/developer/deprecated,
+  -10.0/developer/eapi, -10.0/developer/make.defaults, -10.0/developer/parent,
+  -10.0/eapi, -10.0/no-multilib/deprecated, -10.0/no-multilib/eapi,
+  -10.0/no-multilib/parent, -10.0/parent, -10.0/selinux/deprecated,
+  -10.0/selinux/eapi, -10.0/selinux/parent, -10.0/server/deprecated,
+  -10.0/server/eapi, -10.0/server/parent, -10.0/x32/deprecated, -10.0/x32/eapi,
+  -10.0/x32/make.defaults, -10.0/x32/parent:
+  Remove deprecated 10.0 profiles
 
   23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
   13.0/package.use.stable.mask:

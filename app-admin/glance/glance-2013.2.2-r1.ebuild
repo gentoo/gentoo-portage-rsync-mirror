@@ -1,21 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.9999.ebuild,v 1.7 2014/03/16 19:27:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.2-r1.ebuild,v 1.1 2014/03/16 19:27:13 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit git-2 distutils-r1 user
+inherit distutils-r1 user
 
 DESCRIPTION="Provides services for discovering, registering, and retrieving
 virtual machine images with Openstack"
 HOMEPAGE="https://launchpad.net/glance"
-EGIT_REPO_URI="https://github.com/openstack/glance.git"
-EGIT_BRANCH="stable/havana"
+SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="doc mysql postgres +sqlite +swift test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
@@ -86,7 +85,7 @@ RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		dev-python/pyopenssl[${PYTHON_USEDEP}]
 		>=dev-python/six-1.4.1[${PYTHON_USEDEP}]"
 
-PATCHES=( "${FILESDIR}"/${PN}-2013.2-sphinx_mapping.patch )
+PATCHES=( "${FILESDIR}/${PN}-2013.2-sphinx_mapping.patch" )
 
 pkg_setup() {
 	enewgroup glance
@@ -100,7 +99,7 @@ python_compile_all() {
 python_test() {
 	# https://bugs.launchpad.net/glance/+bug/1251105
 	# https://bugs.launchpad.net/glance/+bug/1242501
-	# 2013.2.9999 requires >=dev-python/iso8601-0.1.8
+	# 2013.2 requires =dev-python/iso8601-0.1.4
 	nosetests glance/ || die "tests failed under python2.7"
 }
 
