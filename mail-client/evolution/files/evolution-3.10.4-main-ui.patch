@@ -1,0 +1,68 @@
+From 37a95e0e6b74fa9fe1692c788983142d8d4774d4 Mon Sep 17 00:00:00 2001
+From: Milan Crha <mcrha@redhat.com>
+Date: Mon, 10 Feb 2014 14:59:24 +0000
+Subject: Bug #724023 - Run EMailFormatter in the main/UI thread
+
+Any GtkWidget creation or manipulation should be done exclusively
+from the main/UI thread, thus make sure it is done that way.
+Of course, evolution can freeze for a little time (depends on the message
+size), until its formatting is done. It's unnoticeable with usual messages.
+---
+diff --git a/em-format/e-mail-part-attachment-bar.c b/em-format/e-mail-part-attachment-bar.c
+index 5cebd9b..57f49be 100644
+--- a/em-format/e-mail-part-attachment-bar.c
++++ b/em-format/e-mail-part-attachment-bar.c
+@@ -60,12 +60,7 @@ e_mail_part_attachment_bar_class_init (EMailPartAttachmentBarClass *class)
+ static void
+ e_mail_part_attachment_bar_init (EMailPartAttachmentBar *part)
+ {
+-	GtkTreeModel *tree_model;
+-
+ 	part->priv = E_MAIL_PART_ATTACHMENT_BAR_GET_PRIVATE (part);
+-
+-	tree_model = e_attachment_store_new ();
+-	part->priv->store = E_ATTACHMENT_STORE (tree_model);
+ }
+ 
+ EMailPart *
+@@ -84,6 +79,18 @@ e_mail_part_attachment_bar_get_store (EMailPartAttachmentBar *part)
+ {
+ 	g_return_val_if_fail (E_IS_MAIL_PART_ATTACHMENT_BAR (part), NULL);
+ 
++	if (!part->priv->store) {
++		GtkTreeModel *tree_model;
++
++		/* Create the store only on demand. The EMailParser runs in a dedicated
++		   thread, but the EAttachmentStore is a GtkWidget descendant, which should
++		   be manipulated only from the main/UI thread, thus postpone its creating
++		   until it's really needed, which might be during the EMailFormatter run,
++		   which runs from the main/UI thread. */
++		tree_model = e_attachment_store_new ();
++		part->priv->store = E_ATTACHMENT_STORE (tree_model);
++	}
++
+ 	return part->priv->store;
+ }
+ 
+diff --git a/mail/e-mail-request.c b/mail/e-mail-request.c
+index bfbedc3..615bce3 100644
+--- a/mail/e-mail-request.c
++++ b/mail/e-mail-request.c
+@@ -365,9 +365,12 @@ mail_request_send_async (SoupRequest *request,
+ 			simple, handle_contact_photo_request,
+ 			G_PRIORITY_DEFAULT, cancellable);
+ 	} else {
+-		g_simple_async_result_run_in_thread (
+-			simple, handle_mail_request,
+-			G_PRIORITY_DEFAULT, cancellable);
++		/* Process e-mail mail requests in this thread, which should be
++		   the main/UI thread, because any EMailFormatter can create
++		   GtkWidget-s, or manipulate with them, which should be always
++		   done in the main/UI thread. */
++		handle_mail_request (simple, G_OBJECT (request), cancellable);
++		g_simple_async_result_complete_in_idle (simple);
+ 	}
+ 
+ 	g_object_unref (simple);
+--
+cgit v0.9.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.3.ebuild,v 1.3 2014/01/21 22:57:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.4-r1.ebuild,v 1.1 2014/03/16 14:41:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit eutils flag-o-matic readme.gentoo gnome2 #autotools
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
-HOMEPAGE="https://live.gnome.org/Evolution http://projects.gnome.org/evolution/"
+HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
@@ -99,6 +99,15 @@ src_prepare() {
 	ELTCONF="--reverse-deps"
 
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
+
+	# Run EMailFormatter in the main/UI thread (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-main-ui.patch"
+
+	# NNTP Messages are silently dropped from Outbox (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-nntp-outbox.patch"
+
+	# Crash creating a new folder (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-imap-crash.patch"
 
 	#eautoreconf # See https://bugzilla.gnome.org/701904
 
