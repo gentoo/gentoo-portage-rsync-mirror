@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.55 2013/04/07 21:21:53 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.56 2014/03/16 08:57:32 mr_bones_ Exp $
+
+*crafty-23.8 (16 Mar 2014)
+
+  16 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org> +crafty-23.8.ebuild:
+  version bump (bug #501884)
 
   07 Apr 2013; Alfredo Tupone <tupone@gentoo.org> crafty-23.4.ebuild,
   +files/crafty-23.4-64bits.patch:
