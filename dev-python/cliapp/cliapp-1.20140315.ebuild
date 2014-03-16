@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-1.20130313.ebuild,v 1.2 2013/03/24 12:24:13 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-1.20140315.ebuild,v 1.1 2014/03/16 17:39:39 mschiff Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="${PYTHON_DEPS}
 	test? ( dev-python/CoverageTestRunner )"
 
 src_test() {
-	addwrite /proc/self/comm
+	use test && addwrite /proc/self/comm
 	local DISTUTILS_NO_PARALLEL_BUILD=1
 	distutils-r1_src_test
 }

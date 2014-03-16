@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.5.ebuild,v 1.2 2013/12/04 14:34:52 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.7.ebuild,v 1.1 2014/03/16 17:58:00 mschiff Exp $
 
 EAPI=5
 
@@ -22,14 +22,15 @@ IUSE=""
 
 DEPEND="${PYTHON_DEPS}
 	dev-python/cliapp
-	>=dev-python/larch-1.20130808
+	dev-python/larch
 	dev-python/paramiko
+	dev-python/pyyaml
 	dev-python/tracing
 	dev-python/ttystatus
 	"
 RDEPEND="${DEPEND}"
 
-PATCHES=( ${FILESDIR}/${PN}-gnupg-ownertrust.patch )
+PATCHES=( )
 
 src_compile() {
 	addwrite /proc/self/comm
@@ -38,8 +39,7 @@ src_compile() {
 
 src_install() {
 	distutils-r1_src_install
-	rm "${D}"/usr/bin/obnam-{benchmark,viewprof}*
-	rm "${D}"/usr/share/man/man1/obnam-{benchmark,viewprof}*
+	find "${D}" -name "obnam-viewprof*" -delete
 	insinto /etc
 	doins "${FILESDIR}"/obnam.conf
 	keepdir /var/log/obnam

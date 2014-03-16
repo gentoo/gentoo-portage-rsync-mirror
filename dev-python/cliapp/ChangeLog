@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cliapp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.9 2013/08/09 15:27:25 mschiff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.10 2014/03/16 17:39:39 mschiff Exp $
+
+*cliapp-1.20140315 (16 Mar 2014)
+
+  16 Mar 2014; Marc Schiffbauer <mschiff@gentoo.org> -cliapp-1.20130313.ebuild,
+  +cliapp-1.20140315.ebuild:
+  Bump version. Remove oldest version.
 
 *cliapp-1.20130808 (09 Aug 2013)
 
