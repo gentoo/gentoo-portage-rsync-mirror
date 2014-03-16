@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.4.3.ebuild,v 1.1 2014/03/03 00:09:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.4.3-r1.ebuild,v 1.1 2014/03/16 21:52:37 prometheanfire Exp $
 
 EAPI="5"
 
@@ -51,8 +51,6 @@ pkg_setup() {
 }
 
 all_ruby_compile() {
-	all_fakegem_compile
-
 	if use emacs ; then
 		elisp-compile ext/emacs/puppet-mode.el
 	fi
