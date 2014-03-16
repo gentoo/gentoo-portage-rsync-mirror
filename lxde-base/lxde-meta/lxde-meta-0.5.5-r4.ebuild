@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.5-r4.ebuild,v 1.1 2014/03/16 10:27:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.5-r4.ebuild,v 1.2 2014/03/16 13:20:58 hwoarang Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND=">=lxde-base/menu-cache-0.3.3
 	|| ( ( <=lxde-base/lxsession-0.4.6.1
 		=lxde-base/lxsession-edit-0.2* )
 		>lxde-base/lxsession-0.4.6.1 )
-	=lxde-base/lxshortcut-0.1*
+	|| ( >=x11-libs/libfm-1.2.0 =lxde-base/lxshortcut-0.1* )
 	=lxde-base/lxtask-0.1*
 	=lxde-base/lxterminal-0.1.11*
 	media-gfx/gpicview
