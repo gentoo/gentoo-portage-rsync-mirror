@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/livestreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.7 2014/02/22 08:07:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.9 2014/03/16 10:22:25 hwoarang Exp $
+
+  16 Mar 2014; Markos Chandras <hwoarang@gentoo.org> -livestreamer-1.6.1.ebuild:
+  Also remove livestreamer-1.6.1.ebuild as requested
+
+*livestreamer-1.7.5 (16 Mar 2014)
+
+  16 Mar 2014; Markos Chandras <hwoarang@gentoo.org> +livestreamer-1.7.5.ebuild,
+  -livestreamer-1.7.0.ebuild, -livestreamer-1.7.1.ebuild:
+  Version bump. Bug #500588 by Nikos Chantziaras  <realnc@gmail.com>
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> livestreamer-1.7.2.ebuild:
   Stable for x86, wrt bug #499130
