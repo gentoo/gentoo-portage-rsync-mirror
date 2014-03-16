@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.23 2014/03/04 20:53:08 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.24 2014/03/16 16:30:42 floppym Exp $
+
+  16 Mar 2014; Mike Gilbert <floppym@gentoo.org> cffi-0.7.2.ebuild,
+  cffi-0.8.1.ebuild, cffi-0.8.ebuild:
+  Drop depencency on htdistver per Arferver.
 
   04 Mar 2014; Naohiro Aota <naota@gentoo.org> cffi-0.8.1.ebuild:
   Add ~x86-fbsd wrt bug #503094
