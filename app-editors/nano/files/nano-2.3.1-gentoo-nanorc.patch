@@ -85,3 +85,11 @@ index 2ad1597..ad89fce 100644
 -- 
 1.8.3.2
 
+--- a/doc/syntax/gentoo.nanorc
++++ b/doc/syntax/gentoo.nanorc
+@@ -61,3 +61,5 @@ color cyan "^[[:space:]]*.*/"
+ color brightmagenta "^[[:space:]]*(=|~|<|<=|=<|>|>=|=>)"
+ ## Comments:
+ color yellow "#.*$"
++## Trailing space is bad!
++color ,green "[[:space:]]+$"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/libsodium-0.4.5.ebuild,v 1.4 2013/12/07 13:34:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/libsodium-0.4.5.ebuild,v 1.5 2014/03/16 02:25:23 vapier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.libsodium.org/${PN}/releases/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+asm static-libs +urandom"
 
 src_configure() {

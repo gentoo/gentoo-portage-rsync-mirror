@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.79 2014/02/13 16:21:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.80 2014/03/16 02:18:55 jer Exp $
+
+  16 Mar 2014; Jeroen Roovers <jer@gentoo.org> pv-1.5.2.ebuild:
+  Stable for HPPA (bug #504508).
 
 *pv-1.5.2 (13 Feb 2014)
 

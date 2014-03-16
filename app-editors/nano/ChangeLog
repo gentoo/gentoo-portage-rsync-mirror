@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.305 2014/02/17 19:32:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.306 2014/03/16 02:16:28 vapier Exp $
+
+  16 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  files/nano-2.3.1-gentoo-nanorc.patch:
+  Highlight trailing whitespace in /etc/portage files.
 
   17 Feb 2014; Mike Frysinger <vapier@gentoo.org> nano-2.3.2-r1.ebuild:
   Enable USE=spell by default as it does not require dependencies and adds <10k
