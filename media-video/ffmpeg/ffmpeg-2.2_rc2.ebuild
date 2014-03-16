@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.152 2014/03/16 22:34:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2_rc2.ebuild,v 1.1 2014/03/16 22:43:00 aballier Exp $
 
 EAPI="5"
 
@@ -91,7 +91,7 @@ RDEPEND="
 		wavpack? ( media-sound/wavpack )
 		webp? ( media-libs/libwebp )
 		x264? ( >=media-libs/x264-0.0.20111017:= )
-		x265? ( >=media-libs/x265-0.9:= )
+		x265? ( <media-libs/x265-0.9:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	fdk? ( >=media-libs/fdk-aac-0.1.3 )
@@ -176,7 +176,7 @@ src_configure() {
 	# or $(use_enable foo foo) if no :bar is set.
 	local ffuse="bzip2:bzlib cpudetection:runtime-cpudetect debug doc
 			     gnutls hardcoded-tables iconv network openssl sdl:ffplay vaapi
-				 vdpau X:xlib zlib"
+				 vdpau zlib"
 	use openssl && myconf="${myconf} --enable-nonfree"
 
 	# Encoders
