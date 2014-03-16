@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.121 2014/03/14 10:04:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.122 2014/03/16 04:07:47 vapier Exp $
+
+  16 Mar 2014; Mike Frysinger <vapier@gentoo.org> ipsec-tools-0.8.0-r5.ebuild,
+  ipsec-tools-0.8.1-r1.ebuild, ipsec-tools-0.8.1.ebuild,
+  ipsec-tools-0.8.2.ebuild:
+  Drop unused `mv` config call that spits a warning.
 
   14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ipsec-tools-0.8.1-r1.ebuild:
   Stable for ppc64, wrt bug #503062

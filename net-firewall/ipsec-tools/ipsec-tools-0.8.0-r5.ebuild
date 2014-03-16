@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r5.ebuild,v 1.8 2014/01/05 00:58:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r5.ebuild,v 1.9 2014/03/16 04:07:47 vapier Exp $
 
 EAPI="4"
 
@@ -243,7 +243,6 @@ src_install() {
 	dodoc -r src/racoon/samples
 	dodoc -r src/racoon/doc
 	docinto samples
-	mv ipsec.conf ipsec-tools.conf
 	newdoc src/setkey/sample.cf ipsec-tools.conf
 }
 
