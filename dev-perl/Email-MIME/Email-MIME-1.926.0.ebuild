@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.924.0.ebuild,v 1.2 2014/03/16 12:55:04 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.926.0.ebuild,v 1.1 2014/03/16 12:58:40 zlogene Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=RJBS
-MODULE_VERSION=1.924
+MODULE_VERSION=1.926
 inherit perl-module
 
 DESCRIPTION="Easy MIME message parsing"

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Email-MIME
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.69 2013/08/15 07:33:48 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.71 2014/03/16 12:58:40 zlogene Exp $
+
+*Email-MIME-1.926.0 (16 Mar 2014)
+
+  16 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> +Email-MIME-1.926.0.ebuild:
+  Version bump
+
+  16 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Email-MIME-1.924.0.ebuild:
+  Bump to EAPI=5
 
 *Email-MIME-1.924.0 (15 Aug 2013)
 
