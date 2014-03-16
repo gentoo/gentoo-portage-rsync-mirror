@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15481 2014/03/16 00:19:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15482 2014/03/16 08:09:55 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -264,6 +264,7 @@ media-gfx/kgraphviewer
 # Michał Górny <mgorny@gentoo.org> (25 Feb 2014)
 # Mask for testing.
 >=sys-apps/systemd-210
+>=sys-apps/systemd-sysv-utils-210
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE Desktop Environment 1.6 introduction mask:

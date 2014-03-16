@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8706 2014/03/16 00:19:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8708 2014/03/16 08:25:12 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  desc/python_single_target.desc, desc/python_targets.desc:
+  Update PyPy flag descriptions.
+
+  16 Mar 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask new versions of systemd-sysv-utils as well.
 
   16 Mar 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Mask ruby-1.8

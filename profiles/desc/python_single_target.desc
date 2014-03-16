@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/python_single_target.desc,v 1.7 2014/02/17 17:26:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/python_single_target.desc,v 1.8 2014/03/16 08:25:13 mgorny Exp $
 
 # This file contains descriptions of PYTHON_SINGLE_TARGET USE_EXPAND flags.
 
@@ -12,4 +12,4 @@ python3_4 - Build for Python 3.4 only
 jython2_5 - Build for Jython 2.5 only
 jython2_7 - Build for Jython 2.7 only
 pypy2_0 - Build for PyPy 2.0 only
-pypy2_1 - Build for PyPy 2.1 only
+pypy - Build for PyPy (Python 2 branch) only

@@ -1,6 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.189 2014/03/03 18:36:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.191 2014/03/16 08:23:40 mgorny Exp $
+
+# on the way out
+ruby_targets_ruby18
 
 # masking here and unmasking in default/linux/
 kmod
@@ -322,6 +325,8 @@ orc
 # please switch to one of the testing 13.0 profiles to get it.
 python_targets_pypy2_0
 python_single_target_pypy2_0
+python_targets_pypy
+python_single_target_pypy
 
 # Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
 # Mask the multilib flags globally. Unmasked in specific arches.
