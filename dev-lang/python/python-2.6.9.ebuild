@@ -1,20 +1,20 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.9.ebuild,v 1.3 2013/12/30 21:57:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.9.ebuild,v 1.4 2014/03/16 18:36:25 floppym Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
 WANT_LIBTOOL="none"
 
-inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs multiprocessing
+inherit autotools eutils flag-o-matic multilib multiprocessing pax-utils python-utils-r1 toolchain-funcs unpacker
 
 MY_P="Python-${PV}"
-PATCHSET_REVISION="0"
+PATCHSET_VERSION="${PV}-0"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tgz
-	mirror://gentoo/python-gentoo-patches-2.6.8-${PATCHSET_REVISION}.tar.bz2"
+	http://dev.gentoo.org/~floppym/python/python-gentoo-patches-${PATCHSET_VERSION}.tar.xz"
 
 LICENSE="PSF-2"
 SLOT="2.6"
@@ -91,7 +91,7 @@ src_prepare() {
 	fi
 
 	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" \
-		epatch "${WORKDIR}/2.6.8-${PATCHSET_REVISION}"
+		epatch "${WORKDIR}/patches"
 
 	epatch "${FILESDIR}/python-2.5-tcl86.patch"
 

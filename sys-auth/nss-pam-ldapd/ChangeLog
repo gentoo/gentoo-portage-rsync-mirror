@@ -1,6 +1,18 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.12 2013/11/10 23:09:41 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.14 2014/03/16 18:57:47 prometheanfire Exp $
+
+  16 Mar 2014; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
+  update metadata
+
+*nss-pam-ldapd-0.8.14 (16 Mar 2014)
+*nss-pam-ldapd-0.9.3 (16 Mar 2014)
+
+  16 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.8.14.ebuild, +nss-pam-ldapd-0.9.3.ebuild,
+  -nss-pam-ldapd-0.8.12.ebuild, -nss-pam-ldapd-0.9.1.ebuild,
+  nss-pam-ldapd-0.9.2.ebuild:
+  bump
 
 *nss-pam-ldapd-0.9.2 (10 Nov 2013)
 

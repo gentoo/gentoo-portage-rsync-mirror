@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1176 2014/03/13 08:10:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1177 2014/03/16 18:38:37 rhill Exp $
+
+  16 Mar 2014; Ryan Hill <rhill@gentoo.org> toolchain.eclass:
+  Update my src_uri.
 
   13 Mar 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Add python_doexe() and python_newexe() to handle implementation-specific
