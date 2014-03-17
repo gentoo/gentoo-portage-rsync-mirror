@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.986 2014/03/14 12:40:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.987 2014/03/17 22:14:11 johu Exp $
+
+  17 Mar 2014; Johannes Huber <johu@gentoo.org> -kdelibs-4.12.3-r1.ebuild:
+  Revert revision bump, requested by Matt Summers (quantumsummers) from
+  hardened.
 
 *kdelibs-4.12.3-r1 (14 Mar 2014)
 

@@ -1,0 +1,10 @@
+# ChangeLog for mate-extra/mate-file-manager-open-terminal
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-file-manager-open-terminal/ChangeLog,v 1.1 2014/03/17 22:17:55 tomwij Exp $
+
+*mate-file-manager-open-terminal-1.6.0 (17 Mar 2014)
+
+  17 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-file-manager-open-terminal-1.6.0.ebuild, +metadata.xml:
+  New ebuild for mate-extra/mate-file-manager-open-terminal, Caja plugin for
+  opening terminals; imported from the mate-overlay, reviewed and adjusted.
