@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.18 2014/03/17 08:57:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.19 2014/03/17 09:21:38 pinkbyte Exp $
+
+  17 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> ecdsa-0.10.ebuild,
+  ecdsa-0.11.ebuild:
+  Add ~s390, wrt bug #490374
 
   17 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> ecdsa-0.10.ebuild:
   Stable on x86, wrt bug #490376
