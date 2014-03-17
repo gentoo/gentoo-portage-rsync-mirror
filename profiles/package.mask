@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15485 2014/03/17 17:52:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15486 2014/03/17 21:05:07 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -195,35 +195,6 @@ app-emacs/eperiodic
 # for removal itself. No other reverse dependencies.
 # Masked for removal in 30 days, bug 501426.
 app-emacs/mell
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Now included with app-emacs/vm.
-# Masked for removal in 30 days, bug 501414.
-app-emacs/u-vm-color
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Doesn't appear to work with Emacs 24.
-# Last upstream release in 2002.
-# Masked for removal in 30 days, bug 501412.
-app-emacs/alt-font-menu
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Included with Emacs since version 23.
-# cperl-mode-6.2 does not work with Emacs 24.
-# Masked for removal in 30 days, bug 501410.
-app-emacs/cperl-mode
-
-# Ulrich Müller <ulm@gentoo.org> (14 Feb 2014)
-# Included with Emacs since version 22.3.
-# Last stand-alone release in 2008, last commit to repo in 2009.
-# Masked for removal in 30 days, bug 501274.
-app-emacs/erc
-
-# Ulrich Müller <ulm@gentoo.org> (13 Feb 2014)
-# Included with Emacs since version 23.
-# Last stand-alone release in 2004.
-# Masked for removal in 30 days, bug 501234.
-app-emacs/nxml-mode
 
 # Michał Górny <mgorny@gentoo.org> (28 Feb 2014)
 # New multilib conversions for testing, grouped with corresponding

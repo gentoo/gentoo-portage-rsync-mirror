@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
+DESCRIPTION=Hardened kernel sources (kernel series 3.2)
+EAPI=5
+HOMEPAGE=http://www.gentoo.org/proj/en/hardened/
+IUSE=deblob symlink build deblob
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+PDEPEND=!build? ( virtual/dev-manager )
+RDEPEND=>=sys-devel/gcc-4.5 !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.2.55-r4
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.2.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-3.2 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-check -> deblob-check-3.2 ) http://dev.gentoo.org/~blueness/hardened-sources/hardened-patches/hardened-patches-3.2.55-5.extras.tar.bz2 mirror://gentoo/genpatches-3.2-16.base.tar.xz mirror://gentoo/genpatches-3.2-16.extras.tar.xz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	kernel-2	263afd0e4a90481352469cff577efe1b	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=348409724cc7671911d4e1504ab0530b

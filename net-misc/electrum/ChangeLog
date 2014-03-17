@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/electrum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.22 2014/01/26 18:17:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.23 2014/03/17 21:15:47 blueness Exp $
+
+*electrum-1.9.8 (17 Mar 2014)
+
+  17 Mar 2014; Anthony G. Basile <blueness@gentoo.org> +electrum-1.9.8.ebuild:
+  Version bump
 
   26 Jan 2014; Anthony G. Basile <blueness@gentoo.org> electrum-1.7.4.ebuild,
   electrum-1.8.1.ebuild, electrum-1.9.7.ebuild:

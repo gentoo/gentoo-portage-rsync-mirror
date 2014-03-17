@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/mate-applets
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/ChangeLog,v 1.1 2014/03/17 21:13:24 tomwij Exp $
+
+*mate-applets-1.6.2 (17 Mar 2014)
+
+  17 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-applets-1.6.2.ebuild,
+  +metadata.xml:
+  New ebuild for mate-base/mate-applets, applets for the MATE Desktop and Panel;
+  imported from the mate-overlay, reviewed and adjusted.
