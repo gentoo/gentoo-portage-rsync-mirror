@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.34 2014/01/08 06:32:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.35 2014/03/17 06:59:53 xarthisius Exp $
+
+  17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> sobby-0.4.7.ebuild,
   sobby-0.4.8.ebuild:

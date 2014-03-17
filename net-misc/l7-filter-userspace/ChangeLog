@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter-userspace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.16 2012/10/21 08:54:04 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.17 2014/03/17 06:59:18 xarthisius Exp $
+
+  17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org>
   l7-filter-userspace-0.12_beta1.ebuild:
@@ -97,4 +100,3 @@
   +files/l7-filter-userspace-0.4-misc.patch, +files/Makefile.am,
   +files/configure.ac, +metadata.xml, +l7-filter-userspace-0.4.ebuild:
   inital import thanks to Nebojsa Trpkovics request in bug 173390/
-

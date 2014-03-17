@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci</herd>
-	<maintainer>
-		<email>xarthisius@gentoo.org</email>
-		<name>Kacper Kowalik</name>
-	</maintainer>
 	<longdescription>
 	The PathScale EKOPath Compiler Suite offers programmers a rich set of tools and 
 	one of the world's most sophisticated optimization infrastructures to maximize 

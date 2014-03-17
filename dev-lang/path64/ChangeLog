@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/path64
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/ChangeLog,v 1.7 2012/02/23 12:57:51 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/ChangeLog,v 1.8 2014/03/17 06:52:54 xarthisius Exp $
+
+  17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
 
 *path64-1.0.0_pre20120223 (23 Feb 2012)
 
@@ -41,4 +44,3 @@
   +path64-1.0.0_pre20110729.ebuild, +metadata.xml:
   Initial import, fixes bug 374739. Thanks to DaggyStyle
   <stompdagger1@yahoo.com> for his work.
-

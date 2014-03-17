@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libinfinity
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.16 2013/07/21 08:39:02 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.17 2014/03/17 06:56:15 xarthisius Exp $
+
+  17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
 
 *libinfinity-0.5.4 (21 Jul 2013)
 

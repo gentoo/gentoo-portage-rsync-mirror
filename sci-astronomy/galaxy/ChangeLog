@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/galaxy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.9 2013/08/25 10:19:14 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.10 2014/03/17 07:00:55 xarthisius Exp $
+
+  17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
 
   25 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> galaxy-2.2.ebuild:
   Append -pthread to ldflags for proper linking of threading library. Fixes bug

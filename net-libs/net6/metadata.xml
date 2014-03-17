@@ -5,10 +5,6 @@
     <email>dev-zero@gentoo.org</email>
     <name>Tiziano Müller</name>
   </maintainer>
-  <maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
-  </maintainer>
   <longdescription>
     Network access framework for IPv4/IPv6 written in C++ used by obby
   </longdescription>
