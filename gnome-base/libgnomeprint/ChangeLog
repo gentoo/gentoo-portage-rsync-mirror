@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libgnomeprint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.194 2012/05/29 14:24:01 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.195 2014/03/17 04:05:13 tetromino Exp $
+
+  17 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgnomeprint-2.18.8.ebuild,
+  +files/libgnomeprint-2.18.8-freetype-2.5.1.patch:
+  Fix building with >=freetype-2.5.1 (bug #504850, thanks to Harris
+  Landgarten).
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   libgnomeprint-2.18.8.ebuild:

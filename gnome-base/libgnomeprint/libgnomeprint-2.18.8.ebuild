@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.8.ebuild,v 1.11 2012/05/29 14:24:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.8.ebuild,v 1.12 2014/03/17 04:05:13 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -45,6 +45,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-stdio-include.patch
+	epatch "${FILESDIR}"/${P}-freetype-2.5.1.patch
 	gnome2_src_prepare
 
 	# Drop DEPRECATED flags, bug #384807
