@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.5.0.ebuild,v 1.2 2014/03/17 10:07:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.5.3.ebuild,v 1.1 2014/03/17 10:26:52 pinkbyte Exp $
 
 EAPI="5"
 

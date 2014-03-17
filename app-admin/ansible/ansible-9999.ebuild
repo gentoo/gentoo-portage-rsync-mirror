@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.16 2014/03/03 12:21:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.17 2014/03/17 10:07:49 pinkbyte Exp $
 
 EAPI="5"
 
@@ -26,9 +26,7 @@ DEPEND="test? (
 	)"
 RDEPEND="
 	dev-python/jinja[${PYTHON_USEDEP}]
-	dev-python/keyczar[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/paramiko[${PYTHON_USEDEP}]
 	net-misc/sshpass
 	virtual/ssh
 "
@@ -36,7 +34,11 @@ RDEPEND="
 DOC_CONTENTS="You can define parameters through shell variables OR use config files
 Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
 You have to create ansible hosts file!\n
-More info on http://docs.ansible.com/intro_getting_started.html"
+More info on http://docs.ansible.com/intro_getting_started.html
+
+Some optional dependencies, you might want to install:
+dev-python/keyczar - needed to support accelerated mode
+dev-python/paramiko - alternative SSH backend"
 
 python_test() {
 	make tests || die "tests failed"

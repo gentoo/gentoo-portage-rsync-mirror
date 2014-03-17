@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15483 2014/03/17 00:59:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15484 2014/03/17 10:17:06 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -398,12 +398,6 @@ dev-lang/python:3.4
 # Unmaintained, has several problems on modern systems,
 # superseded by net-analyzer/ifstatus (bug #501432)
 net-analyzer/ethstatus
-
-# Bernard Cafarelli <voyageur@gentoo.org> (13 Feb 2014)
-# Dead original upstream (last release in 2003)
-# Now its only consumer gnustep-apps/cdplayer bundles it directly
-# Removal in 30 days (bug #501160)
-gnustep-libs/cddb
 
 # Dion Moult <moult@gentoo.org> (13 Feb 2014)
 # Masked for removal in 30 days. Unclear license, desklets dead. (bug #446776)

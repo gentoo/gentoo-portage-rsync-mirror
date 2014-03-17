@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8709 2014/03/16 20:08:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8710 2014/03/17 10:17:06 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Remove mask on gnustep-libs/cddb after last rites, bug #501160
 
   16 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   targets/developer/make.defaults, targets/developer/parent:
