@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/lasi-1.1.1.ebuild,v 1.13 2014/02/02 16:51:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/lasi-1.1.1.ebuild,v 1.14 2014/03/17 13:06:21 polynomial-c Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ S=${WORKDIR}/${MY_P}
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.1.0-cmake.patch
 	"${FILESDIR}"/${PN}-1.1.0-pkgconfig.patch
+	"${FILESDIR}"/${PN}-1.1.1-freetype251.patch
 	)
 
 src_prepare() {

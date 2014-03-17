@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.35 2014/02/02 16:51:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.36 2014/03/17 13:06:21 polynomial-c Exp $
+
+  17 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> lasi-1.1.1.ebuild,
+  +files/lasi-1.1.1-freetype251.patch:
+  Added compatibility fix for >=media-libs/freetype-2.5.1 (bug #504888).
 
   02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> lasi-1.1.1.ebuild:
   Add ~mips, wrt bug #499866
