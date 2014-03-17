@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.3-r1.ebuild,v 1.1 2014/03/16 10:38:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.3-r1.ebuild,v 1.2 2014/03/17 18:09:23 mgorny Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ REQUIRED_USE="harfbuzz? ( auto-hinter )"
 
 DEPEND="sys-libs/zlib[${MULTILIB_USEDEP}]
 	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
-	harfbuzz? ( media-libs/harfbuzz[truetype] )
+	harfbuzz? ( media-libs/harfbuzz[truetype,${MULTILIB_USEDEP}] )
 	png? ( media-libs/libpng[${MULTILIB_USEDEP}] )
 	X?	( x11-libs/libX11[${MULTILIB_USEDEP}]
 		  x11-libs/libXau[${MULTILIB_USEDEP}]
