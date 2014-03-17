@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.37 2014/03/16 22:10:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.38 2014/03/16 23:58:11 dilfridge Exp $
 
-# This file requires eapi 5 or later. New entries go on top.
-# Please use the same syntax as in package.use.mask
+# PLEASE DO NOT ADD NEW ENTRIES HERE. 
+# Use profiles/base/package.use.stable.mask or another appropriate file instead
+# PLEASE DO NOT ADD NEW ENTRIES HERE. 
 
 # Ian Delaney <idella4@gentoo.org> (09 Dec 2013)
 # subsequent to the total inaction of the maintainer of
