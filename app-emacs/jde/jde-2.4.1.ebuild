@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.4 2014/03/05 15:17:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.5 2014/03/17 00:17:17 ulm Exp $
 
 EAPI=5
 NEED_EMACS=23
@@ -20,7 +20,6 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 RDEPEND=">=virtual/jdk-1.3
 	app-emacs/elib
-	virtual/emacs-cedet
 	dev-java/bsh:0
 	dev-java/junit:0
 	dev-util/checkstyle:0"

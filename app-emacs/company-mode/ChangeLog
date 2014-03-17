@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/company-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.14 2014/02/13 18:19:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.15 2014/03/17 00:02:10 ulm Exp $
+
+  17 Mar 2014; Ulrich Müller <ulm@gentoo.org> -company-mode-0.6.11.ebuild,
+  company-mode-0.6.14.ebuild, metadata.xml:
+  Drop dependency on virtual/emacs-cedet and semantic USE flag, as CEDET is
+  included with Emacs 23.2 and later. Remove old.
 
   13 Feb 2014; Ulrich Müller <ulm@gentoo.org> company-mode-0.6.11.ebuild,
   company-mode-0.6.14.ebuild:

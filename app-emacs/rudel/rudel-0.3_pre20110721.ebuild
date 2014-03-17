@@ -1,26 +1,21 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/rudel-0.3_pre20110721.ebuild,v 1.3 2011/12/26 14:09:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/rudel-0.3_pre20110721.ebuild,v 1.4 2014/03/17 00:14:56 ulm Exp $
 
-EAPI=4
+EAPI=5
 NEED_EMACS=23
 
-inherit elisp
+inherit readme.gentoo elisp
 
 DESCRIPTION="Collaborative editing environment for GNU Emacs"
 HOMEPAGE="http://rudel.sourceforge.net/
 	http://www.emacswiki.org/emacs/Rudel"
 # snapshot of bzr://rudel.bzr.sourceforge.net/bzrroot/rudel/trunk
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.tar.xz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
-
-RDEPEND="virtual/emacs-cedet"
-DEPEND="${RDEPEND}
-	app-arch/xz-utils"
 
 S="${WORKDIR}/${PN}"
 SITEFILE="60${PN}-gentoo.el"
@@ -39,19 +34,16 @@ src_install() {
 		doins ${dir}/*.{el,elc}
 	done
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
 	insinto "${SITEETC}/${PN}"
 	doins -r icons
 
 	dodoc README INSTALL ChangeLog TODO doc/card.pdf
-}
 
-pkg_postinst() {
-	elisp_pkg_postinst
-
-	elog "Connections to Gobby servers require the gnutls-cli program"
-	elog "(net-libs/gnutls)."
-	elog "The Avahi daemon (net-dns/avahi) is required for automatic"
-	elog "session discovery and advertising."
+	DOC_CONTENTS="Connections to Gobby servers require the gnutls-cli program
+		(net-libs/gnutls).
+		\\n\\nThe Avahi daemon (net-dns/avahi) is required for automatic
+		session discovery and advertising."
+	readme.gentoo_create_doc
 }

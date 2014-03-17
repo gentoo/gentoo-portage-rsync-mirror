@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>emacs</herd>
 <use>
-  <flag name='ropemacs'>Install backend for <pkg>dev-python/ropemacs</pkg>
-  </flag>
-  <flag name='semantic'>Install backend for semantic
-    (<pkg>app-emacs/cedet</pkg>)</flag>
+  <flag name='ropemacs'>Install backend for
+    <pkg>dev-python/ropemacs</pkg></flag>
 </use>
 </pkgmetadata>
