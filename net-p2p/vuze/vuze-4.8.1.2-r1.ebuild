@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.8.1.2-r1.ebuild,v 1.1 2013/08/15 16:23:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.8.1.2-r1.ebuild,v 1.2 2014/03/17 03:39:43 rhill Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RDEPEND="
 	dev-java/bcprov:1.40
 	>=dev-java/commons-cli-1.0:1
 	>=dev-java/log4j-1.2.8:0
-	dev-java/swt:3.7[cairo]
+	>=dev-java/swt-3.7.2-r1:3.7[cairo]
 	>=virtual/jre-1.5"
 
 DEPEND="${RDEPEND}

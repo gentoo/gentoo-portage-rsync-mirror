@@ -1,6 +1,12 @@
 # ChangeLog for www-client/dwb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.20 2013/05/10 04:32:58 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.21 2014/03/17 03:44:45 radhermit Exp $
+
+*dwb-2014.03.07 (17 Mar 2014)
+
+  17 Mar 2014; Tim Harder <radhermit@gentoo.org> +dwb-2014.03.07.ebuild,
+  dwb-9999.ebuild, +files/dwb-2014.03.07-verbose-build.patch:
+  Version bump.
 
   10 May 2013; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild:
   Drop workaround for uclibc build that's been fixed upstream.
