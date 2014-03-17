@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/owncloud-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.6 2014/03/10 20:53:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.7 2014/03/17 11:01:02 voyageur Exp $
+
+  17 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  owncloud-client-1.5.1.ebuild, owncloud-client-1.5.2.ebuild,
+  owncloud-client-1.5.3.ebuild:
+  dev-qt/qtsql dependency was lost in the ebuilds merge from ocsync, thanks
+  again Daniel Kenzelmann in bug #504696
 
 *owncloud-client-1.5.3 (10 Mar 2014)
 

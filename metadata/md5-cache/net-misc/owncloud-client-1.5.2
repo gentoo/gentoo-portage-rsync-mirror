@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-db/sqlite-3.4:3 dev-libs/qtkeychain dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qttest:4 dev-qt/qtwebkit:4 net-libs/neon[ssl] sys-fs/inotify-tools virtual/libiconv samba? ( >=net-fs/samba-3.5 ) sftp? ( >=net-libs/libssh-0.5 ) !net-misc/ocsync app-text/asciidoc doc? ( dev-python/sphinx dev-texlive/texlive-latexextra virtual/latex-base ) test? ( dev-util/cmocka ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=dev-db/sqlite-3.4:3 dev-libs/qtkeychain dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsql:4 dev-qt/qttest:4 dev-qt/qtwebkit:4 net-libs/neon[ssl] sys-fs/inotify-tools virtual/libiconv samba? ( >=net-fs/samba-3.5 ) sftp? ( >=net-libs/libssh-0.5 ) !net-misc/ocsync app-text/asciidoc doc? ( dev-python/sphinx dev-texlive/texlive-latexextra virtual/latex-base ) test? ( dev-util/cmocka ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Synchronize files from ownCloud Server with your computer
 EAPI=5
 HOMEPAGE=http://owncloud.org/
 IUSE=doc samba +sftp test
 KEYWORDS=~amd64 ~x86
 LICENSE=CC-BY-3.0 GPL-2
-RDEPEND=>=dev-db/sqlite-3.4:3 dev-libs/qtkeychain dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qttest:4 dev-qt/qtwebkit:4 net-libs/neon[ssl] sys-fs/inotify-tools virtual/libiconv samba? ( >=net-fs/samba-3.5 ) sftp? ( >=net-libs/libssh-0.5 ) !net-misc/ocsync
+RDEPEND=>=dev-db/sqlite-3.4:3 dev-libs/qtkeychain dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsql:4 dev-qt/qttest:4 dev-qt/qtwebkit:4 net-libs/neon[ssl] sys-fs/inotify-tools virtual/libiconv samba? ( >=net-fs/samba-3.5 ) sftp? ( >=net-libs/libssh-0.5 ) !net-misc/ocsync
 SLOT=0
 SRC_URI=http://download.owncloud.com/desktop/stable/mirall-1.5.2.tar.bz2
 _eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b53dd32318f4371054456bb0457e892c
+_md5_=00188154739bc039adaeac18c4750c85

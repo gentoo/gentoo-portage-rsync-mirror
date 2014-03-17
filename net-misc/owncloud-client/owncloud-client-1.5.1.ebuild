@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.1.ebuild,v 1.1 2014/02/24 15:43:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.1.ebuild,v 1.2 2014/03/17 11:01:02 voyageur Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-db/sqlite-3.4:3
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
+	dev-qt/qtsql:4
 	dev-qt/qttest:4
 	dev-qt/qtwebkit:4
 	net-libs/neon[ssl]
