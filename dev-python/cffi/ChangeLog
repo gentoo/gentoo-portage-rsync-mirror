@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.24 2014/03/16 16:30:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.25 2014/03/17 01:52:38 floppym Exp $
+
+  17 Mar 2014; Mike Gilbert <floppym@gentoo.org> cffi-0.7.2.ebuild,
+  cffi-0.8.1.ebuild, cffi-0.8.ebuild:
+  We don't run test_zintegration, so don't need virtualenv. Thanks to Arfrever
+  for pointing this out.
 
   16 Mar 2014; Mike Gilbert <floppym@gentoo.org> cffi-0.7.2.ebuild,
   cffi-0.8.1.ebuild, cffi-0.8.ebuild:
