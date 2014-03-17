@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cluster</herd>
-<maintainer>
-  <email>xarthisius@gentoo.org</email>
-  <name>Kacper Kowalik</name>
-</maintainer>
 <longdescription> 
   The Portable Hardware Locality (hwloc) software package provides a portable abstraction 
   (across OS, versions, architectures, ...) of the hierarchical topology of modern architectures, 

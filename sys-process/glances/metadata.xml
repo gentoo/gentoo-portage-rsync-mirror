@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
-<maintainer>
-  <email>xarthisius@gentoo.org</email>
-  <name>Kacper Kowalik</name>
-</maintainer>
 <longdescription>
   Glances is a cross-platform curses-based monitoring tool written in
   Python.
