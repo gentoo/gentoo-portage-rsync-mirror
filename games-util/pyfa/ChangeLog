@@ -1,6 +1,13 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.26 2014/02/20 03:18:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.27 2014/03/17 01:08:46 tetromino Exp $
+
+*pyfa-1.1.22 (17 Mar 2014)
+
+  17 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.20.ebuild,
+  +pyfa-1.1.22.ebuild:
+  Bump for Rubicon 1.3; includes HTML export update and improved fleet booster
+  UI.
 
 *pyfa-1.1.21 (20 Feb 2014)
 
