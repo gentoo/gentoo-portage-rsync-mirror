@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.6.2.ebuild,v 1.1 2014/03/17 21:13:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.6.2.ebuild,v 1.2 2014/03/17 21:32:58 tomwij Exp $
 
 EAPI="5"
 
@@ -45,6 +45,7 @@ RDEPEND="${PYTHON_DEPS}
 	>=x11-libs/libxklavier-4:0
 	x11-libs/pango:0
 	>=x11-themes/mate-icon-theme-1.6:0
+	virtual/libintl:0
 	networkmanager? ( >=net-misc/networkmanager-0.7:0 )
 	policykit? ( >=sys-auth/polkit-0.92:0 )"
 

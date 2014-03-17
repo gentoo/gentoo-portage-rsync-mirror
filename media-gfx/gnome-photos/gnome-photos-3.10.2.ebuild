@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.10.2.ebuild,v 1.4 2014/03/09 10:52:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.10.2.ebuild,v 1.5 2014/03/17 21:36:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -37,8 +37,3 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.50.1
 	virtual/pkgconfig
 "
-
-src_install() {
-	default
-	rm -r "${D}/usr/share/doc/${PN}" || die
-}
