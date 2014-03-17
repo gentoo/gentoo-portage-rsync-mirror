@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/kdevelop-python-1.6.0.ebuild,v 1.1 2014/03/12 12:13:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/kdevelop-python-1.6.0.ebuild,v 1.2 2014/03/17 09:54:03 kensington Exp $
 
 EAPI=5
 
@@ -28,14 +28,11 @@ HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
 IUSE="debug"
 
-COMMON_DEPEND="
+DEPEND="
 	>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}
 "
-DEPEND="${COMMON_DEPEND}
-	>=dev-util/kdevelop-pg-qt-1.0.0
-"
 RDEPEND="
-	${COMMON_DEPEND}
+	${DEPEND}
 	dev-util/kdevelop
 "
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/ChangeLog,v 1.9 2014/03/12 12:13:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/ChangeLog,v 1.10 2014/03/17 09:54:03 kensington Exp $
+
+  17 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  kdevelop-python-1.6.0.ebuild:
+  Remove unused dependency wrt bug #478504.
 
 *kdevelop-python-1.6.0 (12 Mar 2014)
 
