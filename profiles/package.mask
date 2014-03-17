@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15484 2014/03/17 10:17:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15485 2014/03/17 17:52:02 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -245,6 +245,7 @@ dev-libs/libgcrypt:11
 >=x11-libs/gdk-pixbuf-2.30.6-r1
 >=app-emulation/emul-linux-x86-gtklibs-20131008-r3
 >=media-gfx/graphite2-1.2.4-r1
+>=media-libs/freetype-2.5.3-r1
 >=media-libs/harfbuzz-0.9.26-r1
 >=media-libs/libass-0.11
 >=x11-libs/pango-1.36.2-r1
