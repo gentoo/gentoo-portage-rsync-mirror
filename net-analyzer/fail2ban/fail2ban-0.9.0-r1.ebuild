@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.0.ebuild,v 1.1 2014/03/15 13:42:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.0-r1.ebuild,v 1.1 2014/03/17 00:43:21 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -31,6 +31,9 @@ src_prepare() {
 
 	# Do not install /run/fail2ban
 	epatch "${FILESDIR}"/${P}-empty-run-dir.patch
+
+	# Upstream patch
+	epatch "${FILESDIR}"/${P}-python3-regex.patch
 
 	distutils-r1_src_prepare
 }
