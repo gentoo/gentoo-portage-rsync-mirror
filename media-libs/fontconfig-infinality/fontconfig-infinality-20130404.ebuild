@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/fontconfig-infinality-20130404.ebuild,v 1.3 2013/07/02 08:59:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/fontconfig-infinality-20130404.ebuild,v 1.4 2014/03/17 08:14:10 jlec Exp $
 
 EAPI=5
 inherit readme.gentoo
@@ -23,12 +23,6 @@ RDEPEND="app-admin/eselect-fontconfig
 	nyx? ( media-fonts/croscorefonts )"
 PDEPEND="media-libs/freetype:2[infinality]"
 
-DOC_CONTENTS="Use eselect fontconfig enable 52-infinality.conf to enable the
-configuration. Then use eselect infinality to set your fontconfig style and
-eselect lcdfilter to set freetype variables. If you run into trouble with
-applications not being able to find Type-1 fonts, then comment out the
-relevant lines in /etc/fonts/infinality/infinality.conf"
-
 src_configure() {
 	:
 }
@@ -38,6 +32,12 @@ src_compile() {
 }
 
 src_install() {
+	DOC_CONTENTS="Use eselect fontconfig enable 52-infinality.conf to enable the
+	configuration. Then use eselect infinality to set your fontconfig style and
+	eselect lcdfilter to set freetype variables. If you run into trouble with
+	applications not being able to find Type-1 fonts, then comment out the
+	relevant lines in ${EPREFIX}/etc/fonts/infinality/infinality.conf"
+
 	dodoc infinality/{CHANGELOG,CHANGELOG.pre_git,README}
 	readme.gentoo_create_doc
 

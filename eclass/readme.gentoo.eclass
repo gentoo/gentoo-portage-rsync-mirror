@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.7 2013/05/24 18:05:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.8 2014/03/17 08:17:27 jlec Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -99,7 +99,7 @@ readme.gentoo_print_elog() {
 		echo -e "${README_GENTOO_DOC_VALUE}" | while read -r ELINE; do elog "${ELINE}"; done
 		elog ""
 		elog "(Note: Above message is only printed the first time package is"
-		elog "installed. Please look at /usr/share/doc/${PF}/README.gentoo*"
+		elog "installed. Please look at ${EPREFIX}/usr/share/doc/${PF}/README.gentoo*"
 		elog "for future reference)"
 	fi
 }

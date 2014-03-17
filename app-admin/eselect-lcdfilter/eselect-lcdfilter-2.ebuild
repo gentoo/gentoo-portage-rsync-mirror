@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/eselect-lcdfilter-2.ebuild,v 1.1 2013/04/05 09:12:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/eselect-lcdfilter-2.ebuild,v 1.2 2014/03/17 08:15:20 jlec Exp $
 
 EAPI=5
 inherit vcs-snapshot readme.gentoo
@@ -18,13 +18,13 @@ DEPEND=""
 RDEPEND="app-admin/eselect"
 PDEPEND="media-libs/freetype[infinality]"
 
-DOC_CONTENTS="Use eselect lcdfilter to select an lcdfiltering font style.
-You can customize /usr/share/${PN}/env.d/custom with your own settings.
-See /usr/share/doc/${PF}/infinality-settings.sh for an explanation and
-examples of the variables. This module is supposed to be used in pair with
-eselect infinality."
-
 src_install() {
+	DOC_CONTENTS="Use eselect lcdfilter to select an lcdfiltering font style.
+	You can customize ${EPREFIX}/usr/share/${PN}/env.d/custom with your own settings.
+	See ${EPREFIX}/usr/share/doc/${PF}/infinality-settings.sh for an explanation and
+	examples of the variables. This module is supposed to be used in pair with
+	eselect infinality."
+
 	dodoc README.rst infinality-settings.sh
 	readme.gentoo_create_doc
 
