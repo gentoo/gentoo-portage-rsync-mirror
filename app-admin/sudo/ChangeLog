@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.360 2014/03/14 14:09:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.361 2014/03/17 05:17:53 polynomial-c Exp $
+
+  17 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> sudo-1.8.10_p1.ebuild:
+  Don't install into /var/run as that is a tmpfs most of the time (bug
+  #504854).
 
 *sudo-1.8.10_p1 (14 Mar 2014)
 

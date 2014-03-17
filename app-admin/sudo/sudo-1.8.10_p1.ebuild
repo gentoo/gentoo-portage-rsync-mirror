@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.10_p1.ebuild,v 1.1 2014/03/14 14:09:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.10_p1.ebuild,v 1.2 2014/03/17 05:17:53 polynomial-c Exp $
 
 EAPI=5
 
@@ -149,6 +149,10 @@ src_install() {
 
 	keepdir /var/db/sudo
 	fperms 0700 /var/db/sudo
+
+	# Don't install into /var/run as that is a tmpfs most of the time
+	# (bug #504854)
+	rm -rf "${D}"/var/run
 }
 
 pkg_postinst() {
