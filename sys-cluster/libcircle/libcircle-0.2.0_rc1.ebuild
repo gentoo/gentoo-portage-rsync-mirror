@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcircle/libcircle-0.1.0_rc1.ebuild,v 1.3 2014/01/19 19:27:26 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcircle/libcircle-0.2.0_rc1.ebuild,v 1.1 2014/03/17 19:04:20 ottxor Exp $
 
 EAPI=5
 
@@ -11,9 +11,8 @@ if [ "${PV}" = "9999" ]; then
 	inherit git-2
 	KEYWORDS=""
 else
-	[[ ${PV} = *rc* ]] && MY_PV="${PV%%_rc*}-rc.${PV#*_rc}" || MY_PV="${PV}"
 	inherit vcs-snapshot
-	SRC_URI="https://github.com/hpc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/hpc/${PN}/archive/${PV/_rc/-rc.}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -29,14 +28,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-libs/check )"
 
-PATCHES=( "${FILESDIR}/${P}-out-of-source.patch" )
-AUTOTOOLS_AUTORECONF=1
 DOCS=( HACKING.md README.md )
 
 src_configure() {
 	local myeconfargs=(
-		$(usex test '--enable-tests' '')
-		$(usex doc '--enable-doxygen' '')
+		$(use_enable test tests)
+		$(use_enable doc doxygen)
 	)
 	autotools-utils_src_configure
 }
