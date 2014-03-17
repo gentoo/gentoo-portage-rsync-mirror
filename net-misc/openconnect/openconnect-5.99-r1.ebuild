@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-5.99.ebuild,v 1.3 2014/03/17 17:05:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-5.99-r1.ebuild,v 1.1 2014/03/17 17:05:14 hasufell Exp $
 
 EAPI="5"
 
@@ -115,7 +115,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	dodoc AUTHORS TODO
-	newinitd "${FILESDIR}"/openconnect.init.in-r1 openconnect
+	newinitd "${FILESDIR}"/openconnect.init.in-r2 openconnect
 	dodir /etc/openconnect
 	insinto /etc/openconnect
 	newconfd "${FILESDIR}"/openconnect.conf.in openconnect
