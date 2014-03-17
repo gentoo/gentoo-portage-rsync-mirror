@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.7.ebuild,v 1.3 2014/03/09 12:04:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.7.ebuild,v 1.4 2014/03/17 13:36:30 hasufell Exp $
 
 EAPI="5"
 
@@ -119,6 +119,8 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS examples Makefile.am
 		strip_builddir SRC_SUBDIRS examples Makefile.in
 	fi
+
+	epatch "${FILESDIR}"/${P}-clang.patch
 }
 
 src_configure() {

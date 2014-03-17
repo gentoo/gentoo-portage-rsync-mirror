@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.697 2014/03/09 12:04:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.698 2014/03/17 13:36:30 hasufell Exp $
+
+  17 Mar 2014; Julian Ospald <hasufell@gentoo.org> gtk+-3.10.7.ebuild,
+  +files/gtk+-3.10.7-clang.patch:
+  fix build with clang wrt #504228
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gtk+-3.10.7.ebuild:
   x86 stable, bug 499954
