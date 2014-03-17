@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.130 2014/02/18 09:09:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.131 2014/03/17 16:07:50 bicatali Exp $
+
+  17 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> socat-1.7.2.3.ebuild:
+  Keyword amd64-linux and x86-linux
 
   18 Feb 2014; Jeroen Roovers <jer@gentoo.org> -socat-1.7.2.2.ebuild:
   Old.
