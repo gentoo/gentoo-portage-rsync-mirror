@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.1.ebuild,v 1.7 2014/03/16 11:07:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.1.ebuild,v 1.8 2014/03/17 14:18:48 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -59,6 +59,9 @@ src_prepare() {
 	use selinux && epatch "${FILESDIR}"/${PN}-5.1.2-snmpconf-selinux.patch
 
 	epatch "${WORKDIR}"/patches/*.patch
+
+	epatch_user
+
 	eautoconf
 }
 
