@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/htmlgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.19 2014/03/05 15:36:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.20 2014/03/18 16:43:28 ago Exp $
+
+  18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> htmlgen-2.2.2-r1.ebuild:
+  Stable for ia64, wrt bug #502782
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> htmlgen-2.2.2-r1.ebuild:
   Stable for ppc, wrt bug #502782

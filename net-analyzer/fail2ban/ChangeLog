@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.130 2014/03/17 00:43:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.131 2014/03/18 16:51:01 jer Exp $
+
+  18 Mar 2014; Jeroen Roovers <jer@gentoo.org> fail2ban-0.9.0-r1.ebuild:
+  Add more useful suggestions in pkg_postinst() (bug #504926 by Jaakko
+  Perttilä).
 
 *fail2ban-0.9.0-r1 (17 Mar 2014)
 

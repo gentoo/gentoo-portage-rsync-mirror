@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.0-r1.ebuild,v 1.1 2014/03/17 00:43:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.0-r1.ebuild,v 1.2 2014/03/18 16:51:01 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -78,10 +78,19 @@ pkg_postinst() {
 		elog "You are upgrading from version 0.6.x, please see:"
 		elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
 	fi
-	if ! has_version ${CATEGORY}/${PN} && \
-		! has_version dev-python/pyinotify && ! has_version app-admin/gamin; then
-		elog "For most jail.conf configurations, it is recommended you install either"
-		elog "dev-python/pyinotify or app-admin/gamin (in order of preference)"
-		elog "to control how log file modifications are detected"
+	if ! has_version ${CATEGORY}/${PN}; then
+		if ! has_version dev-python/pyinotify && ! has_version app-admin/gamin; then
+			elog "For most jail.conf configurations, it is recommended you install either"
+			elog "dev-python/pyinotify or app-admin/gamin (in order of preference)"
+			elog "to control how log file modifications are detected"
+		fi
+		if ! has_version dev-lang/python[sqlite]; then
+			elog "If you want to use ${PN}'s persistent database, then reinstall"
+			elog "dev-lang/python with USE=sqlite"
+		fi
+		if has_version sys-apps/systemd[-python]; then
+			elog "If you want to track logins through sys-apps/systemd's"
+			elog "journal backend, then reinstall sys-apps/systemd with USE=python"
+		fi
 	fi
 }

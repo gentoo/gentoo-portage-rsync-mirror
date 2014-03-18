@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.748 2014/03/16 18:36:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.749 2014/03/18 16:43:13 ago Exp $
+
+  18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> python-3.3.3.ebuild:
+  Stable for ia64, wrt bug #497758
 
   16 Mar 2014; Mike Gilbert <floppym@gentoo.org> python-2.6.9.ebuild:
   Backport fix for bug 503180.

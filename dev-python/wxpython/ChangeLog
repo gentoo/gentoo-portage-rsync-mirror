@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.204 2014/03/12 20:52:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.205 2014/03/18 16:44:47 ago Exp $
+
+  18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> wxpython-2.8.12.1-r2.ebuild:
+  Stable for ia64, wrt bug #499472
 
   12 Mar 2014; Markus Meier <maekke@gentoo.org> wxpython-2.8.12.1-r2.ebuild:
   arm stable, bug #499472
