@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lsdvd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.45 2010/01/07 15:20:38 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.46 2014/03/18 15:43:54 beandog Exp $
+
+  18 Mar 2014; Steve Dibb <beandog@gentoo.org> lsdvd-0.16-r1.ebuild,
+  lsdvd-0.16-r2.ebuild:
+  Update homepage, mirror
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> lsdvd-0.16-r2.ebuild:
   Transfer Prefix keywords
