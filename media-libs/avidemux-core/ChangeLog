@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/avidemux-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.20 2014/03/10 14:13:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.21 2014/03/17 23:45:24 tomwij Exp $
+
+*avidemux-core-2.6.8 (17 Mar 2014)
+
+  17 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +avidemux-core-2.6.8.ebuild:
+  Version bump to 2.6.8; fixes bug #504780, reported by Frank Krömmelbein.
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   avidemux-core-2.6.2-r1.ebuild, avidemux-core-2.6.3.ebuild,

@@ -1,14 +1,48 @@
-From 9ed3ddc0cefd9aec123eeee3ce494289bf080495 Mon Sep 17 00:00:00 2001
+From cf17a44bd5b8aac1c73f3bb00ca872cd8f08df4a Mon Sep 17 00:00:00 2001
 From: Alexandre Rostovtsev <tetromino@gentoo.org>
 Date: Mon, 17 Mar 2014 00:01:10 -0400
 Subject: [PATCH] Update freetype includes to work with >=freetype-2.5.1
 
 ---
- libgnomeprint/gnome-font-face.c | 2 +-
- libgnomeprint/gnome-print-gdi.c | 2 +-
- libgnomeprint/gnome-rfont.c     | 4 ++--
- 3 files changed, 4 insertions(+), 4 deletions(-)
+ configure.in                    | 22 +++-------------------
+ libgnomeprint/gnome-font-face.c |  2 +-
+ libgnomeprint/gnome-print-gdi.c |  2 +-
+ libgnomeprint/gnome-rfont.c     |  4 ++--
+ 4 files changed, 7 insertions(+), 23 deletions(-)
 
+diff --git a/configure.in b/configure.in
+index c15bb69..aebe591 100644
+--- a/configure.in
++++ b/configure.in
+@@ -162,25 +162,9 @@ LDFLAGS="$LDFLAGS $LIBM"
+ dnl =================================
+ dnl Checking for freetype2
+ dnl =================================
+-FREETYPE_LIBS=
+-FREETYPE_CFLAGS=
+-AC_PATH_PROG(FREETYPE_CONFIG, freetype-config, no)
+-if test "x$FREETYPE_CONFIG" = "xno" ; then
+-	AC_MSG_ERROR(You need FreeType2 (freetype-devel v 2.x package) for this version of libgnomeprint)
+-else
+-	FREETYPE_CFLAGS=`$FREETYPE_CONFIG --cflags`
+-	FREETYPE_LIBS=`$FREETYPE_CONFIG --libs`
+-fi
+-
+-libgnomeprint_save_ldflags=$LDFLAGS
+-LDFLAGS="$LDFLAGS $FREETYPE_LIBS"
+-
+-freetype_version=false
+-AC_MSG_NOTICE([checking for sufficiently new FreeType (at least 2.0.5)])
+-AC_CHECK_LIB(freetype, FT_Get_Postscript_Name,:,[
+-    AC_MSG_ERROR(You need FreeType2 (freetype-devel 2.0.5 or greater package) for this version of libgnomeprint)])
+-
+-LDFLAGS=$libgnomeprint_save_ldflags
++dnl "freetype2 >= 17" means freetype-2.5.1
++PKG_CHECK_MODULES(FREETYPE, freetype2 >= 17, ,
++	[PKG_CHECK_MODULES(FREETYPE, freetype2, [FREETYPE_CFLAGS="$FREETYPE_CFLAGS -I`$PKG_CONFIG --variable=includedir freetype2`/freetype2/freetype"])])
+ 
+ dnl =================================
+ dnl END: Checking for freetype2
 diff --git a/libgnomeprint/gnome-font-face.c b/libgnomeprint/gnome-font-face.c
 index 0447377..f9f8f3e 100644
 --- a/libgnomeprint/gnome-font-face.c
@@ -23,7 +57,7 @@ index 0447377..f9f8f3e 100644
  #include <libgnomeprint/gnome-print-private.h>
  #include <libgnomeprint/gnome-font-private.h>
 diff --git a/libgnomeprint/gnome-print-gdi.c b/libgnomeprint/gnome-print-gdi.c
-index f89a8e8..d30672b 100755
+index f89a8e8..7755673 100755
 --- a/libgnomeprint/gnome-print-gdi.c
 +++ b/libgnomeprint/gnome-print-gdi.c
 @@ -36,7 +36,7 @@
@@ -31,7 +65,7 @@ index f89a8e8..d30672b 100755
  
  #include <ft2build.h>
 -#include <freetype/freetype.h>
-+#include <freetype.h>
++#include FT_FREETYPE_H
  
  #define WIN32_LEAN_AND_MEAN
  #include <windows.h>

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.227 2013/12/17 23:26:58 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.228 2014/03/17 23:45:25 tomwij Exp $
+
+*avidemux-2.6.8 (17 Mar 2014)
+
+  17 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +avidemux-2.6.8.ebuild:
+  Version bump to 2.6.8; fixes bug #504780, reported by Frank Krömmelbein.
 
 *avidemux-2.6.7 (17 Dec 2013)
 
