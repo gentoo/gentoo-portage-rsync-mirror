@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.19 2014/02/03 21:03:22 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.20 2014/03/18 13:21:31 zlogene Exp $
+
+  18 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Readonly-1.30.0.ebuild:
+  Add ~sh keyword wrt bug #484458
 
   03 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Readonly-1.30.0.ebuild:
   Add ~s390 wrt bug #484456

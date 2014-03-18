@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-nbxmpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nbxmpp/ChangeLog,v 1.4 2014/01/09 07:27:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nbxmpp/ChangeLog,v 1.5 2014/03/18 13:27:51 jlec Exp $
+
+*python-nbxmpp-0.4 (18 Mar 2014)
+
+  18 Mar 2014; Justin Lecher <jlec@gentoo.org> +python-nbxmpp-0.4.ebuild:
+  Version Bump
 
 *python-nbxmpp-0.3 (09 Jan 2014)
 
