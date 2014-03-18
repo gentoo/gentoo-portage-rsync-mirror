@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/nco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/ChangeLog,v 1.22 2014/02/27 18:58:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/ChangeLog,v 1.23 2014/03/18 19:22:48 bicatali Exp $
+
+  18 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> nco-4.4.2.ebuild:
+  Build in source, fixing bug #504606
 
 *nco-4.4.2 (27 Feb 2014)
 

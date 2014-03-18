@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/runit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.43 2014/03/18 16:15:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.44 2014/03/18 19:27:03 jer Exp $
+
+  18 Mar 2014; Jeroen Roovers <jer@gentoo.org> runit-2.1.1-r1.ebuild:
+  Stable for HPPA (bug #407329).
 
   18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> runit-2.1.1-r1.ebuild:
   Stable for ia64, wrt bug #407329

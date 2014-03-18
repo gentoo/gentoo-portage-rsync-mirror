@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-4.4.2.ebuild,v 1.1 2014/02/27 18:58:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-4.4.2.ebuild,v 1.2 2014/03/18 19:22:48 bicatali Exp $
 
 EAPI=5
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils eutils flag-o-matic
 
 DESCRIPTION="Command line utilities for operating on netCDF files"

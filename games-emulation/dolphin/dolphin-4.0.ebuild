@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.ebuild,v 1.4 2014/02/17 01:49:47 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.ebuild,v 1.5 2014/03/18 19:11:07 twitch153 Exp $
 
 EAPI=5
 
@@ -45,8 +45,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.6.0
 	x11-libs/wxGTK:2.9
 	"
-
-S="${WORKDIR}/${PN}-emu"
 
 pkg_pretend() {
 

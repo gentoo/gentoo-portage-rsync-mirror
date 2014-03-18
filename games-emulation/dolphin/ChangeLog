@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.17 2014/02/17 01:49:47 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.18 2014/03/18 19:11:07 twitch153 Exp $
+
+  18 Mar 2014; Devan Franchini <twitch153@gentoo.org> dolphin-4.0.ebuild:
+  Removes unnecessary S variable, bug #504964
 
   17 Feb 2014; Devan Franchini <twitch153@gentoo.org> dolphin-3.5.ebuild,
   dolphin-4.0.ebuild:
