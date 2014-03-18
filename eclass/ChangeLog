@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1178 2014/03/17 08:17:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1179 2014/03/18 10:35:39 mgorny Exp $
+
+  18 Mar 2014; Michał Górny <mgorny@gentoo.org> boost-utils.eclass:
+  Mark @DEAD.
 
   17 Mar 2014; Justin Lecher <jlec@gentoo.org> python-utils-r1.eclass,
   readme.gentoo.eclass:

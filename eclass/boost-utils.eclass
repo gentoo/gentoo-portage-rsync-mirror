@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/boost-utils.eclass,v 1.3 2012/10/07 08:29:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/boost-utils.eclass,v 1.4 2014/03/18 10:35:39 mgorny Exp $
 
 if [[ ! ${_BOOST_ECLASS} ]]; then
+
+# @DEAD
 
 # @ECLASS: boost-utils.eclass
 # @MAINTAINER:

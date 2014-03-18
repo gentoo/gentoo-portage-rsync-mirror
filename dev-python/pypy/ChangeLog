@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.56 2014/03/12 13:00:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.57 2014/03/18 10:39:34 mgorny Exp $
+
+  18 Mar 2014; Michał Górny <mgorny@gentoo.org> -pypy-9999.ebuild:
+  Remove the live ebuild since it is outdated and not supported.
 
   12 Mar 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Add Alice Ferrazzi as proxy-maintainer.
