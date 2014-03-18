@@ -1,6 +1,12 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.179 2014/03/14 12:26:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.180 2014/03/18 15:27:10 beandog Exp $
+
+  18 Mar 2014; Steve Dibb <beandog@gentoo.org> libav-0.8.7.ebuild,
+  libav-0.8.9-r1.ebuild, libav-0.8.11.ebuild, libav-0.8.9999.ebuild,
+  libav-9.10-r1.ebuild, libav-9.12.ebuild, libav-9.9999.ebuild,
+  libav-10_alpha1-r1.ebuild, libav-10_beta1.ebuild, libav-9999.ebuild:
+  Enable network use flag by default, bug 488762
 
 *libav-9.12 (14 Mar 2014)
 *libav-0.8.11 (14 Mar 2014)

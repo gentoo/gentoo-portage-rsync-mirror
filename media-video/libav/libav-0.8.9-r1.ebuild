@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9-r1.ebuild,v 1.3 2014/02/09 22:07:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9-r1.ebuild,v 1.4 2014/03/18 15:27:10 beandog Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 
 IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  custom-cflags debug dirac doc +encode faac truetype frei0r +gpl gsm
-	  +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network openssl
+	  +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 +network openssl
 	  oss pic pulseaudio +qt-faststart rtmp schroedinger sdl speex ssl +ssse3
 	  static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid
 	  +zlib"

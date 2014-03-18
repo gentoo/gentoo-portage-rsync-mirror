@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.97 2014/03/18 14:58:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.98 2014/03/18 15:26:44 idella4 Exp $
+
+  18 Mar 2014; Ian Delaney <idella4@gentoo.org> mysql-python-1.2.5.ebuild:
+  Add IUSE doc, dep, doc build and install, prompted by Bug #503750
 
   18 Mar 2014; Ian Delaney <idella4@gentoo.org> mysql-python-1.2.5.ebuild:
   correction to DOCS var, fixes Bug #503750

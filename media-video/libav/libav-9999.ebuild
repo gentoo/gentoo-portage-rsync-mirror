@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.63 2014/03/14 12:26:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.64 2014/03/18 15:27:10 beandog Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ SLOT="0/10"
 ~x64-solaris ~x86-solaris"
 IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
-	network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
+	+network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
 	x264 xvid +zlib"
 
