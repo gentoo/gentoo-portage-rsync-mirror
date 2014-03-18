@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-social-auth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-social-auth/ChangeLog,v 1.4 2013/06/01 17:24:37 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-social-auth/ChangeLog,v 1.5 2014/03/18 10:06:46 idella4 Exp $
+
+*django-social-auth-0.7.28 (18 Mar 2014)
+
+  18 Mar 2014; Ian Delaney <idella4@gentoo.org>
+  +django-social-auth-0.7.28.ebuild, -django-social-auth-0.7.23.ebuild:
+  bump; add IUSE doc, examples, update deps, remove old
 
   01 Jun 2013; Ian Delaney <idella4@gentoo.org>
   django-social-auth-0.7.23.ebuild:
