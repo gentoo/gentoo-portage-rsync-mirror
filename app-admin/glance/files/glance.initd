@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.5 2014/03/16 19:27:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.6 2014/03/18 17:43:33 prometheanfire Exp $
 
 description="Starts ${SVCNAME}  service for OpenStack"
 
@@ -17,6 +17,6 @@ depend() {
 }
 
 start_pre() {
-	checkpath --dir --owner ${GLANCE_USER:-glance}:${GLANCE_GROUP:-glance} --mode 0664 ${GLANCE_RUN:-/var/run/glance}
+	checkpath --directory --owner ${GLANCE_USER:-glance}:${GLANCE_GROUP:-glance} --mode 0664 ${GLANCE_RUN:-/var/run/glance}
 }
 

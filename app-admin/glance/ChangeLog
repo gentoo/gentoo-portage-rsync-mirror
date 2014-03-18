@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.33 2014/03/16 19:27:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.34 2014/03/18 17:43:33 prometheanfire Exp $
+
+  18 Mar 2014; Matthew Thode <prometheanfire@gentoo.org> files/glance.initd:
+  fixing --dir to --directory in init script
 
 *glance-2013.2.2-r1 (16 Mar 2014)
 
