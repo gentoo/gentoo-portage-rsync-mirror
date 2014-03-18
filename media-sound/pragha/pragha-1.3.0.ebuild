@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.0.ebuild,v 1.1 2014/03/18 21:28:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.0.ebuild,v 1.3 2014/03/18 21:33:43 ssuominen Exp $
 
 EAPI=5
-EAUTORECONF=1
-inherit flag-o-matic xfconf
+inherit autotools xfconf
 
 DESCRIPTION="A lightweight music player (with support for the Xfce desktop environment)"
 HOMEPAGE="http://pragha.wikispaces.com/ http://github.com/matiasdelellis/pragha"
@@ -83,11 +82,4 @@ src_prepare() {
 	eaclocal; eautoconf; eautoheader; eautomake
 
 	xfconf_src_prepare
-}
-
-src_configure() {
-	# src/cdda.h should #include config.h to get this defined:
-	# http://github.com/matiasdelellis/pragha/issues/46
-#	append-cppflags -DHAVE_PARANOIA_NEW_INCLUDES
-	xfconf_src_configure
 }
