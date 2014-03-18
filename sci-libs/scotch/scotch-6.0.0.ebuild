@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.6 2014/02/26 22:38:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.7 2014/03/18 20:39:01 bicatali Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ src_compile() {
 	emake -C src CLIBFLAGS=-fPIC scotch esmumps
 	static_to_shared lib/libscotcherr.a
 	static_to_shared lib/libscotcherrexit.a
-	static_to_shared lib/libscotch.a -Llib -lz -lm -lrt -lscotcherr
+	static_to_shared lib/libscotch.a -Llib -lz -lm -lrt -lpthread -lscotcherr
 	static_to_shared lib/libesmumps.a -Llib -lscotch
 	static_to_shared lib/libscotchmetis.a -Llib -lscotch
 
