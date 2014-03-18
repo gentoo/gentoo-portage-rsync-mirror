@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kcmsystemd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/ChangeLog,v 1.1 2014/03/18 22:17:59 johu Exp $
+
+*kcmsystemd-0.5.0 (18 Mar 2014)
+
+  18 Mar 2014; Johannes Huber <johu@gentoo.org> +kcmsystemd-0.5.0.ebuild,
+  +metadata.xml:
+  New package. Import from kde overlay. Ebuild by David Heidelberger
+  <david.heidelberger@ixit.cz>.
+
