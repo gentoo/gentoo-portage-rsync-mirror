@@ -1,6 +1,9 @@
 # ChangeLog for games-action/garden
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.9 2013/06/30 07:05:30 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.10 2014/03/18 21:04:56 mr_bones_ Exp $
+
+  18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org> garden-1.0.8-r1.ebuild:
+  better icon handling
 
 *garden-1.0.8-r1 (30 Jun 2013)
 

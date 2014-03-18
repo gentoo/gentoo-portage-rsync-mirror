@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8712 2014/03/17 21:05:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8713 2014/03/18 21:27:56 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask new media-sound/pragha together with GTK+-3.x libxfce4ui from Xfce 4.12
+  (git)
 
   17 Mar 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
   Remove app-emacs/{alt-font-menu,cperl-mode,erc,nxml-mode,u-vm-color} masks,

@@ -3722,7 +3722,9 @@ media-sound/picard:acoustid - Use media-libs/chromaprint for acoustic fingerprin
 media-sound/pms:regex - Enable regular expression searches using dev-libs/boost
 media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
 media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
+media-sound/pragha:keybinder - Enable shortcut support using dev-libs/keybinder
 media-sound/pragha:lastfm - Enable last.fm support using media-libs/libclastfm
+media-sound/pragha:peas - Enable various plugins that will pull in dev-libs/libpeas as a dependency
 media-sound/pragha:playlist - Enable enhanced playlist support using dev-libs/totem-pl-parser
 media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 media-sound/puddletag:cover - Enables editing of FLAC cover art
