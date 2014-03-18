@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.23 2014/03/12 05:25:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.24 2014/03/18 02:55:33 mrueg Exp $
+
+  18 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -files/0.5-postgres-path.patch,
+  -luadbi-0.5-r3.ebuild:
+  Cleanup old. Fixes bug #500252.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> luadbi-0.5-r5.ebuild:
   x86 stable wrt bug #503278
