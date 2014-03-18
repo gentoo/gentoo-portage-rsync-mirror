@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.22 2014/03/15 20:59:23 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.23 2014/03/18 12:17:20 qnikst Exp $
+
+  18 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  git-annex-5.20140306-r1.ebuild:
+  move git-annex webapp desktop icon to utils, bug #486622
 
 *git-annex-5.20140306-r1 (15 Mar 2014)
 
