@@ -1,6 +1,12 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.41 2014/03/12 05:18:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.42 2014/03/18 18:43:30 mr_bones_ Exp $
+
+  18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/supertuxkart-0.8-desktopfile.patch,
+  -files/supertuxkart-0.8-fribidi.patch, -files/supertuxkart-0.8-gentoo.patch,
+  -files/supertuxkart-0.8-irrlicht.patch, -supertuxkart-0.8.ebuild:
+  old
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   supertuxkart-0.8.1.ebuild:

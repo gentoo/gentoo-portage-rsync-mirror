@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.177 2014/01/31 08:24:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.178 2014/03/18 18:48:45 polynomial-c Exp $
+
+*apache-tools-2.4.9 (18 Mar 2014)
+
+  18 Mar 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -apache-tools-2.4.4-r1.ebuild, -apache-tools-2.4.6.ebuild,
+  -apache-tools-2.4.7.ebuild, +apache-tools-2.4.9.ebuild:
+  Security bump (bug #504990). Removed old.
 
   31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-tools-2.2.24.ebuild,
   apache-tools-2.2.25.ebuild, apache-tools-2.2.26.ebuild,

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.6-r2.ebuild,v 1.5 2014/02/19 09:20:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.9.ebuild,v 1.1 2014/03/18 18:50:08 polynomial-c Exp $
 
-EAPI="2"
+EAPI=5
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20130801"
@@ -66,6 +66,7 @@ MODULE_DEPENDS="
 	mime_magic:mime
 	proxy_ajp:proxy
 	proxy_balancer:proxy
+	proxy_balancer:slotmem_shm
 	proxy_connect:proxy
 	proxy_ftp:proxy
 	proxy_http:proxy
@@ -93,6 +94,7 @@ MODULE_DEFINES="
 	proxy_ftp:PROXY
 	proxy_http:PROXY
 	proxy_fcgi:PROXY
+	proxy_scgi:PROXY
 	socache_shmcb:SSL
 	ssl:SSL
 	status:STATUS
@@ -109,7 +111,6 @@ MODULE_CRITICAL="
 	mime
 	unixd
 "
-
 inherit eutils apache-2 systemd toolchain-funcs
 
 DESCRIPTION="The Apache Web Server."
@@ -125,9 +126,9 @@ DEPEND="${DEPEND}
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_deflate? ( sys-libs/zlib )"
 
-# dependency on >=dev-libs/apr-1.4.5 for bug #368651
+# dependency on >=dev-libs/apr-1.5.0 for bug #492578
 RDEPEND="${RDEPEND}
-	>=dev-libs/apr-1.4.5
+	>=dev-libs/apr-1.5.0
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_mime? ( app-misc/mime-types )"
 
@@ -145,8 +146,7 @@ src_prepare() {
 	# GENTOO_PATCHNAME="gentoo-apache-2.4.1" ...
 	if [ -f "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch" ]; then
 		cd "${GENTOO_PATCHDIR}" || die "Failed to cd to ${GENTOO_PATCHDIR}"
-		epatch "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch" \
-			|| die "epatch failed"
+		epatch "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch"
 		cd "${S}" || die "Failed to cd to ${S}"
 	fi
 	apache-2_src_prepare
@@ -160,6 +160,20 @@ src_configure() {
 	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
 
 	apache-2_src_configure
+}
+
+src_compile() {
+	if tc-is-cross-compiler; then
+		# This header is the same across targets, so use the build compiler.
+		pushd server >/dev/null
+		emake gen_test_char
+		tc-export_build_env BUILD_CC
+		${BUILD_CC} ${BUILD_CFLAGS} ${BUILD_CPPFLAGS} ${BUILD_LDFLAGS} \
+			gen_test_char.c -o gen_test_char $(apr-1-config --includes) || die
+		popd >/dev/null
+	fi
+
+	default
 }
 
 src_install() {

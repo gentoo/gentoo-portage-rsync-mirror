@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.259 2014/02/19 09:20:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.260 2014/03/18 18:50:08 polynomial-c Exp $
+
+*apache-2.4.9 (18 Mar 2014)
+
+  18 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.4.6-r2.ebuild,
+  +apache-2.4.9.ebuild:
+  Security bump (bug #504990). Removed old.
 
   19 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.4.6-r1.ebuild,
   apache-2.4.6-r2.ebuild, apache-2.4.7.ebuild:
