@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0-r1.ebuild,v 1.11 2014/02/24 12:15:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0-r1.ebuild,v 1.12 2014/03/18 20:21:22 bicatali Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ pc_libs() {
 	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
 		sed -e 's/[ ]-l*\(pthread\|m\)\([ ]\|$\)//g' \
 		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//' \
-		| sort | uniq | tr '\n' ','
+		| tr ',' '\n' | sort | uniq | tr '\n' ','
 }
 
 python_prepare_all() {

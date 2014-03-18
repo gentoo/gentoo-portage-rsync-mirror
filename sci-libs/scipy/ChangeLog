@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.112 2014/02/21 14:13:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.113 2014/03/18 20:26:21 bicatali Exp $
+
+  18 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  scipy-0.13.3.ebuild:
+  Fix sed to allow complex pkg-config lines from mkl, thanks
+  weihan3@illinois.edu, bug #504618
 
 *scipy-0.13.3 (21 Feb 2014)
 
