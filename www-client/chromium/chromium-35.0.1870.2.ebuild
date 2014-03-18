@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1870.2.ebuild,v 1.1 2014/03/05 04:37:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1870.2.ebuild,v 1.2 2014/03/18 16:29:13 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -165,6 +165,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-system-jinja-r5.patch"
 	epatch "${FILESDIR}/${PN}-gn-r2.patch"
 	epatch "${FILESDIR}/${PN}-cups-r0.patch"
+	epatch "${FILESDIR}/${PN}-arm-r0.patch"
 
 	epatch_user
 

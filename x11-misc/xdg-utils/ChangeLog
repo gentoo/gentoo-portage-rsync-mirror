@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.127 2014/03/14 10:08:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.128 2014/03/18 16:15:35 ago Exp $
+
+  18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xdg-utils-1.1.0_rc2.ebuild:
+  Stable for ia64, wrt bug #503488
 
   14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xdg-utils-1.1.0_rc2.ebuild:
   Stable for ppc64, wrt bug #503488

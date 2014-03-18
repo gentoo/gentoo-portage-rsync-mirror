@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.112 2014/03/14 10:09:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.113 2014/03/18 16:15:07 ago Exp $
+
+  18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> eselect-emacs-1.15.ebuild:
+  Stable for ia64, wrt bug #503108
 
   14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> eselect-emacs-1.15.ebuild:
   Stable for ppc64, wrt bug #503108

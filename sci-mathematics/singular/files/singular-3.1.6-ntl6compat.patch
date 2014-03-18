@@ -4,7 +4,7 @@ Index: Singular/claptmpl.cc
 ===================================================================
 --- a/Singular/claptmpl.cc
 +++ b/Singular/claptmpl.cc
-@@ -123,3 +123,36 @@ template class std::list<PolyMinorValue>;
+@@ -123,3 +123,37 @@ template class std::list<PolyMinorValue>;
  template class Cache<MinorKey, IntMinorValue>;
  template class Cache<MinorKey, PolyMinorValue>;
  
@@ -38,6 +38,7 @@ Index: Singular/claptmpl.cc
 +template class Vec<Pair<GF2X, long> >;
 +template void swap<zz_pE>(Vec<zz_pE>&, Vec<zz_pE>&);
 +template long operator==<zz_p>(Vec<zz_p> const&, Vec<zz_p> const&);
++template Vec<Pair<zz_pX, long> >& Vec<Pair<zz_pX, long> >::operator=(const Vec<Pair<zz_pX, long> >&);
 +#endif
 +
 +#endif
