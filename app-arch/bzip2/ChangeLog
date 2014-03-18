@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.116 2014/03/14 22:36:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.117 2014/03/18 01:21:06 vapier Exp $
+
+*bzip2-1.0.6-r7 (18 Mar 2014)
+
+  18 Mar 2014; Mike Frysinger <vapier@gentoo.org> +bzip2-1.0.6-r7.ebuild:
+  Link bzip2 against the shared lib #504648 by Nikoli.
 
   14 Mar 2014; Johannes Huber <johu@gentoo.org> bzip2-1.0.6-r6.ebuild:
   x86 stable, bug #504004

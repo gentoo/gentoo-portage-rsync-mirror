@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.265 2014/03/14 06:11:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.266 2014/03/18 01:04:59 vapier Exp $
+
+  18 Mar 2014; Mike Frysinger <vapier@gentoo.org> gdb-7.7-r1.ebuild,
+  gdb-9999.ebuild:
+  Fix by Jonathan Callen for USE=-python handling #504830.
 
 *gdb-7.7-r1 (14 Mar 2014)
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.9.1.ebuild,v 1.7 2013/04/02 20:56:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.9.1.ebuild,v 1.8 2014/03/18 01:14:30 mr_bones_ Exp $
 
 EAPI=2
 inherit games
 
 DESCRIPTION="A Go-playing program"
 HOMEPAGE="http://www.gnu.org/software/gnugo/devel.html"
-SRC_URI="http://match.stanford.edu/gnugo/archive/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
