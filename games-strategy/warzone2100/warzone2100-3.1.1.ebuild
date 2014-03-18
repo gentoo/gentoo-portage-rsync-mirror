@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-3.1.1.ebuild,v 1.1 2014/02/05 06:31:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-3.1.1.ebuild,v 1.2 2014/03/18 00:52:10 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools toolchain-funcs eutils versionator gnome2-utils games
@@ -87,6 +87,10 @@ src_install() {
 	fi
 	doman doc/warzone2100.6
 	dodoc doc/quickstartguide.pdf
+
+	elog "If you are using opensource drivers you should consider installing: "
+	elog "    media-libs/libtxc_dxtn"
+
 	prepgamesdirs
 }
 

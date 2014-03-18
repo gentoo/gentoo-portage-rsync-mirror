@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.7.0.ebuild,v 1.2 2013/06/15 19:50:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.7.0.ebuild,v 1.3 2014/03/18 00:53:30 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils check-reqs games
@@ -109,6 +109,6 @@ src_install() {
 	doins -r key_0.d0pk server data
 	prepgamesdirs
 
-	elog "If you are using opensource drivers you should condider installing: "
+	elog "If you are using opensource drivers you should consider installing: "
 	elog "    media-libs/libtxc_dxtn"
 }
