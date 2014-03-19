@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.536 2014/03/19 17:04:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.537 2014/03/19 19:48:14 ssuominen Exp $
 
 *imagemagick-6.8.8.8 (19 Mar 2014)
 
@@ -8,7 +8,7 @@
   +files/imagemagick-6.8.8.8-openjpeg-2.0.0-has-no-opj_stream_destroy_v3.patch,
   +imagemagick-6.8.8.8.ebuild:
   Change use of function opj_stream_destroy_v3() to opj_stream_destroy() which
-  is present in the openkpeg-2.0.0 release wrt #503692 by Alexander Miller
+  is present in the openjpeg-2.0.0 release wrt #503692 by Alexander Miller
   Pass --without-mupdf because there is no other code than in configure.ac
   for it yet; thus, USE="pdf" present in 6.8.8.5 was completely premature.
 
