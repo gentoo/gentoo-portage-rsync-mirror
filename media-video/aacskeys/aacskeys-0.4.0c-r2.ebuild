@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/aacskeys-0.4.0c-r1.ebuild,v 1.6 2014/02/21 04:59:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/aacskeys-0.4.0c-r2.ebuild,v 1.1 2014/03/19 05:39:44 beandog Exp $
 
 EAPI=5
 inherit eutils java-pkg-2
@@ -21,6 +21,10 @@ DEPEND=">=virtual/jdk-1.6
 src_prepare() {
 	epatch "${FILESDIR}/${P}-aacskeys-makefile.patch"
 	epatch "${FILESDIR}/${P}-libaacskeys-makefile.patch"
+}
+
+src_compile() {
+	emake || die "emake failed"
 }
 
 src_install() {
