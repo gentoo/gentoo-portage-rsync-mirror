@@ -7,4 +7,7 @@
 </maintainer>
 <longdescription lang="en">
 </longdescription>
+<use>
+<flag name="system-binutils">Use the gentoo binutils instead of building against an unpatched vanilla version</flag>
+</use>
 </pkgmetadata>
