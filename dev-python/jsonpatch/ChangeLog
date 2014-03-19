@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jsonpatch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/ChangeLog,v 1.3 2013/01/20 06:18:47 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/ChangeLog,v 1.4 2014/03/19 18:24:09 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> jsonpatch-0.12.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *jsonpatch-0.10 (20 Jan 2013)
 

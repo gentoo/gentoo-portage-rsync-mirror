@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.165 2012/12/10 17:04:49 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.166 2014/03/19 18:21:39 johu Exp $
+
+*kile-2.1.3-r1 (19 Mar 2014)
+
+  19 Mar 2014; Johannes Huber <johu@gentoo.org> +kile-2.1.3-r1.ebuild:
+  Revision bump syncs with kde overlay ebuild state. EAPI 5 and less code.
 
   10 Dec 2012; Michael Palimaka <kensington@gentoo.org> kile-2.1.3.ebuild:
   Drop ppc64 keyword due to unkeyworded required dependencies.

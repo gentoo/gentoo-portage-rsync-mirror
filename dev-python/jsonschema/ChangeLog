@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jsonschema
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.8 2013/11/14 23:38:36 chutzpah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.9 2014/03/19 18:21:15 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> jsonschema-2.3.0.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *jsonschema-2.3.0 (14 Nov 2013)
 

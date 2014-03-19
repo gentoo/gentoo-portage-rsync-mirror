@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15488 2014/03/19 16:41:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15489 2014/03/19 18:24:12 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mikle Kolyada <zlogene@gentoo.org> (19 Mar 2014)
+# Dead upstream (no releases since 2006),
+# GUI no longer supported (bug #250971).
+# Removal in 30 days.
+app-misc/bins
 
 # Samuli Suominen <ssuominnen@gentoo.org> (19 Mar 2014)
 # The ebuild is appending CFLAGS -O0 to prevent segfaulting

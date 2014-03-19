@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.310 2014/03/12 18:26:32 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.311 2014/03/19 18:29:03 fuzzyray Exp $
+
+*gentoolkit-0.3.0.9-r1 (19 Mar 2014)
+
+  19 Mar 2014; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.3.0.9-r1.ebuild,
+  gentoolkit-9999.ebuild, +files/0.3.0.9-revdep-rebuild-py-504654-1.patch,
+  +files/0.3.0.9-revdep-rebuild-py-504654-2.patch:
+  Revision bump to fix issues with revdep-rebuild.py (Bug 504654).
+  Fix portage dependency and add dependency on sys-apps/gentoo-functions.
 
 *gentoolkit-0.3.0.9 (12 Mar 2014)
 
