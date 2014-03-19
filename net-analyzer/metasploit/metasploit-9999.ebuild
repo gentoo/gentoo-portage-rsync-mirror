@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.12 2014/03/06 15:44:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.13 2014/03/19 21:04:57 zerochaos Exp $
 
 EAPI="5"
 
@@ -41,6 +41,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/builder:3
 	>=dev-ruby/pg-0.11
 	=dev-ruby/packetfu-1.1.9
+	dev-ruby/rb-readline
 	dev-ruby/robots
 	dev-ruby/kissfft
 	java? ( dev-ruby/rjb )
@@ -137,6 +138,11 @@ all_ruby_prepare() {
 	#we regen this file in each_ruby_prepare
 	rm Gemfile.lock
 	#The Gemfile contains real known deps
+	#add our dep on upstream rb-readline instead of bundled one
+	sed -i "/gem 'packetfu'/a #use upstream readline instead of bundled\ngem 'rb-readline'" Gemfile || die
+	#remove the bundled readline
+	#https://github.com/rapid7/metasploit-framework/pull/3105
+	rm lib/rbreadline.rb
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then
