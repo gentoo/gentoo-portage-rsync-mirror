@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.2.8.ebuild,v 1.1 2014/02/27 06:38:21 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.2.8.ebuild,v 1.2 2014/03/19 09:29:38 tomwij Exp $
 
 EAPI="5"
 AUTOTOOLS_PRUNE_LIBTOOL_FILES="all"
@@ -61,6 +61,10 @@ src_prepare() {
 
 	# Remove this at your own peril. Mono will barf in unexpected ways.
 	append-flags -fno-strict-aliasing
+
+	# Bug #504108, dlls/test-883.il unexisting; TODO: Figure out how to make it.
+	epatch "${FILESDIR}"/${P}-disable-missing-test.patch
+	rm mcs/tests/test-883{,-lib}.cs|| die
 
 	autotools-utils_src_prepare
 }

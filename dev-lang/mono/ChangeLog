@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.258 2014/02/27 06:38:21 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.259 2014/03/19 09:29:38 tomwij Exp $
+
+  19 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/mono-3.2.8-disable-missing-test.patch, mono-3.2.8.ebuild:
+  Temporarily remove broken test 883; fixes bug #504108, reported by eroen.
 
 *mono-3.2.8 (27 Feb 2014)
 
