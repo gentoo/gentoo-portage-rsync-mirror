@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-1.80.0.ebuild,v 1.3 2014/02/02 00:06:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/Params-Validate-1.80.0.ebuild,v 1.4 2014/03/19 17:54:43 zlogene Exp $
 
 EAPI=5
 
@@ -23,6 +23,9 @@ DEPEND="${RDEPEND}
 	>=virtual/perl-Module-Build-0.35
 	test? (
 		dev-perl/Test-Fatal
+		dev-perl/Readonly
+		dev-perl/Readonly-XS
+		dev-perl/Test-Taint
 	)
 "
 
