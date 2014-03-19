@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.42 2014/03/16 02:36:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.43 2014/03/18 23:03:55 radhermit Exp $
+
+*pyzmq-14.1.1 (18 Mar 2014)
+
+  18 Mar 2014; Tim Harder <radhermit@gentoo.org> +pyzmq-14.1.1.ebuild:
+  Version bump.
 
   16 Mar 2014; Mike Frysinger <vapier@gentoo.org> pyzmq-14.0.1.ebuild:
   Add ia64 love.
