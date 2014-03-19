@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.55 2014/03/19 13:14:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.56 2014/03/19 22:07:36 teiresias Exp $
+
+*emacspeak-39.0-r2 (19 Mar 2014)
+
+  19 Mar 2014; Christopher Brannon <teiresias@gentoo.org>
+  +emacspeak-39.0-r2.ebuild:
+  Fix dependency. Emacspeak 39.0 won't work with < app-editors/emacs-24.
+  Closes bug #505074.
 
   19 Mar 2014; William Hubbs <williamh@gentoo.org> metadata.xml:
   fix maintainer

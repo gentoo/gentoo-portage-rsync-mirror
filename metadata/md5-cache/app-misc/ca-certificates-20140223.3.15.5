@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst prepare setup unpack
+DESCRIPTION=Common CA Certificates PEM files
+EAPI=4
+HOMEPAGE=http://packages.debian.org/sid/ca-certificates
+IUSE=+cacert
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
+LICENSE=MPL-1.1
+RDEPEND=dev-libs/openssl sys-apps/debianutils
+SLOT=0
+SRC_URI=mirror://debian/pool/main/c/ca-certificates/ca-certificates_20140223.tar.xz ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_15_5_RTM/src/nss-3.15.5.tar.gz cacert? ( http://dev.gentoo.org/~anarchy/patches/nss-3.14.1-add_spi+cacerts_ca_certs.patch )
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=03f1ac4a515504de9f187d5edccb57a2

@@ -1,6 +1,12 @@
 # ChangeLog for the default/linux/alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.16 2014/03/16 22:49:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.17 2014/03/19 22:08:05 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> 13.0/desktop/eapi,
+  13.0/desktop/gnome/eapi, +13.0/desktop/gnome/systemd/eapi,
+  13.0/desktop/kde/eapi, +13.0/desktop/kde/systemd/eapi, 13.0/developer/eapi,
+  +eapi:
+  Increase EAPI to 5
 
   16 Mar 2014; Tom Wijsman <TomWij@gentoo.org> 13.0/package.use.stable.mask:
   Mask unstable USE flags on media-video/vlc, see security bug #499806.

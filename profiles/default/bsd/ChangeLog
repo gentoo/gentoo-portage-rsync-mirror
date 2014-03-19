@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.163 2014/03/13 23:22:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.164 2014/03/19 22:05:51 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi,
+  +fbsd/amd64/9.1/eapi, +fbsd/amd64/9.2/eapi, +fbsd/amd64/eapi, +fbsd/eapi,
+  +fbsd/sparc/8.2/eapi, +fbsd/sparc/eapi, +fbsd/x86/9.1/eapi,
+  +fbsd/x86/9.2/eapi, +fbsd/x86/eapi:
+  Increase EAPI to 5
 
   13 Mar 2014; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Add media-libs/mesa dri3 to package.use.mask because of its dependence on

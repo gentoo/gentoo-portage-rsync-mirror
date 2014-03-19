@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.818 2014/03/19 14:21:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.819 2014/03/19 22:09:48 jer Exp $
+
+  19 Mar 2014; Jeroen Roovers <jer@gentoo.org> php-5.3.28-r3.ebuild:
+  Stable for HPPA (bug #501376).
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> php-5.4.26.ebuild,
   php-5.5.10.ebuild:
