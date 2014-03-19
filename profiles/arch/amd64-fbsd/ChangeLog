@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.49 2013/09/05 10:08:25 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.50 2014/03/19 00:08:40 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi, +todo/eapi:
+  Increase EAPI to 5
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> use.mask:
   Python 2.5 and 3.1 were removed from the tree.

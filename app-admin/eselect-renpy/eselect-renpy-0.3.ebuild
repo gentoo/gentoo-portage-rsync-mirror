@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-renpy/eselect-renpy-0.3.ebuild,v 1.2 2014/02/24 01:58:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-renpy/eselect-renpy-0.3.ebuild,v 1.3 2014/03/19 00:07:33 hasufell Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="app-admin/eselect-lib-bin-symlink"
 

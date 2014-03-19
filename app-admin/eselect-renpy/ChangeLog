@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-renpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-renpy/ChangeLog,v 1.7 2014/02/24 01:58:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-renpy/ChangeLog,v 1.8 2014/03/19 00:07:33 hasufell Exp $
+
+  19 Mar 2014; Julian Ospald <hasufell@gentoo.org> eselect-renpy-0.3.ebuild:
+  amd64 stable wrt #499832
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   eselect-renpy-0.3.ebuild:

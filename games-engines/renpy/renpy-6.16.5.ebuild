@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.16.5.ebuild,v 1.3 2014/03/02 08:43:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.16.5.ebuild,v 1.4 2014/03/19 00:08:30 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://www.renpy.org/dl/${PV}/${P}-source.tar.bz2"
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
 MYSLOT=$(delete_all_version_separators ${SLOT})
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="development doc examples"
 REQUIRED_USE="examples? ( development )"
 

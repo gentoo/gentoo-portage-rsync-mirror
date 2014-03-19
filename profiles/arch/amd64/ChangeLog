@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.244 2014/03/09 14:35:40 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.245 2014/03/19 00:07:35 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi,
+  +no-multilib/eapi, +x32/eapi:
+  Increase EAPI to 5
 
   09 Mar 2014; Andrey Grozin <grozin@gentoo.org> use.mask:
   Unmask gcl

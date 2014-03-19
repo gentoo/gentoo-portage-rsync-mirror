@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.200 2014/03/16 02:43:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.201 2014/03/19 00:14:31 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi:
+  Increase EAPI to 5
 
   16 Mar 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask, use.mask:
   Mask out various USE flags that need packages that are not yet

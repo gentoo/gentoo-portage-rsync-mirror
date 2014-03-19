@@ -3,9 +3,9 @@ DEPEND=app-arch/unzip
 DESCRIPTION=Clearlooks-Phenix is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2
 EAPI=5
 HOMEPAGE=http://www.jpfleury.net/en/software/clearlooks-phenix.php
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND==x11-libs/gtk+-3.4*:3 x11-themes/gtk-engines
 SLOT=3.4
 SRC_URI=https://gitorious.org/projets-divers/clearlooks-phenix/archive/2.0.18.tar.gz -> clearlooks-phenix-2.0.18.tar.gz
-_md5_=e04937f92db3c988b3040c2f3e218920
+_md5_=badc8bb981f799cc03f4d13d3d451205

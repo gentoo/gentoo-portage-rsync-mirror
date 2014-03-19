@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.206 2014/03/06 15:33:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.207 2014/03/19 00:14:04 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi:
+  Increase EAPI to 5
 
   06 Mar 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=gui and USE=jit for sci-mathematics/octave (bug #503594).

@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.255 2014/03/12 05:06:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.256 2014/03/19 00:16:46 robbat2 Exp $
+
+*git-1.9.1 (19 Mar 2014)
+
+  19 Mar 2014; Robin H. Johnson <robbat2@gentoo.org> +git-1.9.1.ebuild:
+  Bump.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> git-1.8.5.5.ebuild:
   x86 stable wrt bug #501662

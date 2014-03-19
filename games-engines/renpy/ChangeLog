@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/renpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.32 2014/03/05 23:35:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.33 2014/03/19 00:08:30 hasufell Exp $
+
+  19 Mar 2014; Julian Ospald <hasufell@gentoo.org> renpy-6.16.5.ebuild:
+  amd64 stable wrt #499832
 
 *renpy-6.17.3 (05 Mar 2014)
 

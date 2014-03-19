@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.186 2014/01/18 01:03:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.187 2014/03/19 00:06:32 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi:
+  Increase EAPI to 5
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
   Drop python targets hacks now that base/ has it #474128.

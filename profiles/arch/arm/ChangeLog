@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.294 2014/03/05 21:23:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.295 2014/03/19 00:09:45 dilfridge Exp $
+
+  19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +armv4/eapi,
+  +armv4t/eapi, +armv5te/eapi, +armv6j/eapi, +armv7a/eapi, +eapi:
+  Increase EAPI to 5
 
   05 Mar 2014; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask =sys-devel/gettext-0.18.3.2[java], bug #500872
