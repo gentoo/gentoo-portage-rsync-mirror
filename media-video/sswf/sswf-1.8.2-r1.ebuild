@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.8.2.ebuild,v 1.4 2012/12/18 07:22:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.8.2-r1.ebuild,v 1.2 2014/03/19 04:20:27 beandog Exp $
+
+EAPI=5
 
 DESCRIPTION="A C++ Library and a script language tool to create Flash (SWF) movies up to version 8."
-HOMEPAGE="http://sswf.sourceforge.net"
+HOMEPAGE="http://www.m2osw.com/sswf.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
 	mirror://sourceforge/${PN}/${P}-doc.tar.bz2"
 
@@ -17,10 +19,9 @@ RDEPEND="virtual/jpeg
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_compile() {
+src_configure() {
 	econf --disable-dependency-tracking --disable-docs \
 		$(use_enable debug) $(use_enable debug yydebug)
-	emake || die "emake failed."
 }
 
 src_install () {
@@ -34,7 +35,9 @@ src_install () {
 	doman doc/man/man1/*.1
 
 	if use doc; then
-		doman doc/man/man3/*.3
+		doman doc/man/man3/action_script_v3.3
+		doman doc/man/man3/libsswf*.3
+		doman doc/man/man3/sswf*.3
 		dohtml -r doc/html/*
 	fi
 }
