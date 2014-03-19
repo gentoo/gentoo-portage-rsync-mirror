@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.96 2014/03/13 23:31:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.97 2014/03/19 07:46:25 vapier Exp $
+
+  19 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  ca-certificates-20130906.ebuild:
+  Mark alpha/arm64/m68k/s390/sh stable #498518.
 
 *ca-certificates-20140223 (13 Mar 2014)
 
