@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1045 2014/03/18 16:29:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1046 2014/03/19 06:59:20 phajdan.jr Exp $
+
+*chromium-35.0.1897.2 (18 Mar 2014)
+
+  18 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-35.0.1862.2.ebuild, +chromium-35.0.1897.2.ebuild,
+  +files/chromium-system-zlib-r0.patch:
+  Dev channel bump. Use bundled opus, jinja2, markupsafe, ply. Remove old.
 
   18 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-34.0.1847.60.ebuild, chromium-35.0.1870.2.ebuild,

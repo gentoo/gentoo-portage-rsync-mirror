@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1862.2.ebuild,v 1.2 2014/03/01 22:44:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1897.2.ebuild,v 1.1 2014/03/19 06:59:20 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -44,7 +44,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	dev-libs/libxslt:=
 	dev-libs/nspr:=
 	>=dev-libs/nss-3.14.3:=
-	>=dev-libs/protobuf-2.5.0:=
 	dev-libs/re2:=
 	gnome? ( >=gnome-base/gconf-2.24.0:= )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2:= )
@@ -54,7 +53,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
 	media-libs/libpng:0=
 	>=media-libs/libwebp-0.4.0:=
-	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
 	sys-apps/dbus:=
@@ -94,15 +92,11 @@ RDEPEND+="
 # Python dependencies. The DEPEND part needs to be kept in sync
 # with python_check_deps.
 DEPEND+=" $(python_gen_any_dep '
-	>=dev-python/jinja-2.7[${PYTHON_USEDEP}]
-	dev-python/ply[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]
 	test? ( dev-python/pyftpdlib[${PYTHON_USEDEP}] )
 ')"
 python_check_deps() {
-	has_version ">=dev-python/jinja-2.7[${PYTHON_USEDEP}]" && \
-		has_version "dev-python/ply[${PYTHON_USEDEP}]" && \
-		has_version "dev-python/simplejson[${PYTHON_USEDEP}]" && \
+	has_version "dev-python/simplejson[${PYTHON_USEDEP}]" && \
 		{ ! use test || has_version "dev-python/pyftpdlib[${PYTHON_USEDEP}]"; }
 }
 
@@ -163,9 +157,8 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-system-jinja-r4.patch"
-	epatch "${FILESDIR}/${PN}-gn-r2.patch"
-	epatch "${FILESDIR}/${PN}-cups-r0.patch"
+	epatch "${FILESDIR}/${PN}-arm-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 
 	epatch_user
 
@@ -175,6 +168,7 @@ src_prepare() {
 		'base/third_party/dynamic_annotations' \
 		'base/third_party/icu' \
 		'base/third_party/nspr' \
+		'base/third_party/superfasthash' \
 		'base/third_party/symbolize' \
 		'base/third_party/valgrind' \
 		'base/third_party/xdg_mime' \
@@ -195,6 +189,7 @@ src_prepare() {
 		'third_party/hunspell' \
 		'third_party/iccjpeg' \
 		'third_party/icu' \
+		'third_party/jinja2' \
 		'third_party/jstemplate' \
 		'third_party/khronos' \
 		'third_party/leveldatabase' \
@@ -210,13 +205,17 @@ src_prepare() {
 		'third_party/libyuv' \
 		'third_party/lss' \
 		'third_party/lzma_sdk' \
+		'third_party/markupsafe' \
 		'third_party/mesa' \
 		'third_party/modp_b64' \
 		'third_party/mt19937ar' \
 		'third_party/npapi' \
 		'third_party/nss.isolate' \
+		'third_party/opus' \
 		'third_party/ots' \
 		'third_party/polymer' \
+		'third_party/ply' \
+		'third_party/protobuf' \
 		'third_party/pywebsocket' \
 		'third_party/qcms' \
 		'third_party/readability' \
@@ -269,6 +268,8 @@ src_configure() {
 	# TODO: use_system_libsrtp (bug #459932).
 	# TODO: use_system_libvpx (http://crbug.com/347823).
 	# TODO: use_system_libusb (http://crbug.com/266149).
+	# TODO: use_system_opus (https://code.google.com/p/webrtc/issues/detail?id=3077).
+	# TODO: use_system_protobuf (bug #503084).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
@@ -285,8 +286,6 @@ src_configure() {
 		-Duse_system_minizip=1
 		-Duse_system_nspr=1
 		-Duse_system_openssl=1
-		-Duse_system_opus=1
-		-Duse_system_protobuf=1
 		-Duse_system_re2=1
 		-Duse_system_snappy=1
 		-Duse_system_speex=1
@@ -535,6 +534,7 @@ chromium_test() {
 		"NetUtilTest.IDNToUnicode*" # bug 361885
 		"NetUtilTest.FormatUrl*" # see above
 		"SpdyFramerTests/SpdyFramerTest.CreatePushPromiseCompressed/2" # bug #478168
+		"SpdyFramerTests/SpdyFramerTest.CreateContinuationCompressed/2" # see above
 		"HostResolverImplTest.BypassCache" # bug #498304
 		"HostResolverImplTest.FlushCacheOnIPAddressChange" # bug #481812
 		"HostResolverImplTest.ResolveFromCache" # see above
