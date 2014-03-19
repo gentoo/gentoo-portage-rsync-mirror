@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.895 2014/03/19 07:57:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.896 2014/03/19 13:57:10 tomwij Exp $
+
+  19 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
+  Temporarly block non-live FFMPEG versions in live VLC with USE flag vdpau;
+  fixes bug #503168, reported by jospezial.
 
   19 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.9.ebuild:
   Adjust upper bound of dvbpsi dependency on vlc 2.0.9; fixes bug #504738,

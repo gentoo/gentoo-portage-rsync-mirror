@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.146 2014/03/18 18:14:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.147 2014/03/19 13:46:14 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> scons-2.3.0.ebuild:
+  Stable for alpha, wrt bug #498868
 
   18 Mar 2014; Tim Harder <radhermit@gentoo.org> -scons-2.0.1.ebuild,
   -scons-2.0.1-r1.ebuild, -scons-2.1.0.ebuild, -scons-2.2.0-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/customizable-weather-1.10.0.ebuild,v 1.1 2014/01/27 13:45:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/customizable-weather-1.10.2.ebuild,v 1.1 2014/03/19 13:48:51 mrueg Exp $
 
 EAPI=5
 

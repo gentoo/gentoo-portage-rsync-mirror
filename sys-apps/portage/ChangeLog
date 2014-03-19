@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1388 2014/03/14 10:51:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1389 2014/03/19 13:53:25 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> portage-2.2.8-r1.ebuild:
+  Stable for alpha, wrt bug #502282
 
   14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> portage-2.2.8-r1.ebuild:
   Stable for ppc64, wrt bug #502282

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.95 2014/03/12 09:56:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.96 2014/03/19 13:52:25 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r1.ebuild:
+  Stable for alpha, wrt bug #499322
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r1.ebuild:
   Stable for sparc, wrt bug #499322

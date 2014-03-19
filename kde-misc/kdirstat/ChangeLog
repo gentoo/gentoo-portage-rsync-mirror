@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/kdirstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.29 2014/03/18 17:09:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.32 2014/03/19 13:43:23 kensington Exp $
+
+  19 Mar 2014; Michael Palimaka <kensington@gentoo.org> -kdirstat-2.7.3.ebuild:
+  Remove old version vulnerable to CVE-2014-2527 wrt bug #504994.
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> kdirstat-2.7.5.ebuild:
+  Stable for x86, wrt bug #504994
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> kdirstat-2.7.5.ebuild:
+  Stable for amd64, wrt bug #504994
 
 *kdirstat-2.7.5 (18 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.198 2014/03/18 16:14:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.199 2014/03/19 13:50:19 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> strace-4.8.ebuild:
+  Stable for alpha, wrt bug #501648
 
   18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> strace-4.8.ebuild:
   Stable for ia64, wrt bug #501648

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.64.6.ebuild,v 1.9 2014/03/14 10:13:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.64.6.ebuild,v 1.10 2014/03/19 13:47:02 ago Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="vorbis"
 
 RDEPEND="media-libs/libmad
