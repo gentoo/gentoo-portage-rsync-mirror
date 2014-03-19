@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/mate-netspeed
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mate-netspeed/ChangeLog,v 1.1 2014/03/19 16:41:51 tomwij Exp $
+
+*mate-netspeed-1.6.1 (19 Mar 2014)
+
+  19 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-netspeed-1.6.1.ebuild,
+  +metadata.xml:
+  New ebuild for net-analyzer/mate-netspeed, applet showing network traffic for
+  MATE; imported from the mate-overlay, reviewed and adjusted.

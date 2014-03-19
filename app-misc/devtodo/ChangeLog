@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.96 2014/03/19 16:12:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.97 2014/03/19 16:40:27 jlec Exp $
+
+  19 Mar 2014; Justin Lecher <jlec@gentoo.org> -devtodo-0.1.20.ebuild:
+  Drop old
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> devtodo-0.1.20-r1.ebuild:
   Stable for alpha, wrt bug #500780

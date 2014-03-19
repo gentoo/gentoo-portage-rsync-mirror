@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.534 2014/03/19 15:02:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.535 2014/03/19 16:59:21 ssuominen Exp $
+
+*imagemagick-6.8.8.8 (19 Mar 2014)
+
+  19 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/imagemagick-6.8.8.8-openjpeg-2.0.0-has-no-opj_stream_destroy_v3.patch,
+  +imagemagick-6.8.8.8.ebuild:
+  Change use of function opj_stream_destroy_v3() to opj_stream_destroy() which
+  is present in the openkpeg-2.0.0 release wrt #503692 by Alexander Miller
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.8.8.5.ebuild:
   Stable for alpha, wrt bug #500988

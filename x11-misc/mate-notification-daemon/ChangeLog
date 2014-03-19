@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/mate-notification-daemon
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-notification-daemon/ChangeLog,v 1.1 2014/03/19 16:50:58 tomwij Exp $
+
+*mate-notification-daemon-1.6.1 (19 Mar 2014)
+
+  19 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-notification-daemon-1.6.1.ebuild, +metadata.xml:
+  New ebuild for x11-misc/mate-notification-daemon; imported from the mate-
+  overlay, reviewed and adjusted.

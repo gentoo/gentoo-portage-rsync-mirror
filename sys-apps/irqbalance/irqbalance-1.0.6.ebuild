@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.6.ebuild,v 1.4 2013/07/27 22:23:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.6.ebuild,v 1.5 2014/03/19 16:58:31 jlec Exp $
 
 EAPI=4
 
 inherit systemd linux-info
 
 DESCRIPTION="Distribute hardware interrupts across processors on a multiprocessor system"
-HOMEPAGE="http://irqbalance.googlecode.com/"
-SRC_URI="http://irqbalance.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://github.com/Irqbalance/irqbalance"
+SRC_URI="https://github.com/Irqbalance/irqbalancefiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

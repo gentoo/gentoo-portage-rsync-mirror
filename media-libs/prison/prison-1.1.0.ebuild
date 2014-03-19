@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/prison-1.1.0.ebuild,v 1.1 2014/03/19 13:43:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/prison-1.1.0.ebuild,v 1.2 2014/03/19 16:52:28 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 

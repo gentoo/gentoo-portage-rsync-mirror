@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15487 2014/03/18 21:27:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15488 2014/03/19 16:41:19 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Samuli Suominen <ssuominnen@gentoo.org> (19 Mar 2014)
+# The ebuild is appending CFLAGS -O0 to prevent segfaulting
+# on 64bit, a workaround that doesn't always work.
+# The ebuild fails to build wrt bug #500408, but it's no use
+# to fix the build if the end result is just constantly crashing.
+# Removal in 30 days, use alternative panels like x11-misc/fbpanel
+x11-misc/suxpanel
 
 # Manuel Rüger <mrueg@gentoo.org> (16 Mar 2014)
 # Ruby 1.8 has no longer been supported upstream since July 2013 and

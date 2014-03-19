@@ -1,6 +1,9 @@
-Update for zlib header changes 
+Update for zlib header changes for zlib > 1.2.5
 
-https://bugs.gentoo.org/show_bug.cgi?id=383431
+Gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=383431
+R bug: https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14951
+
+Patch by Michael Schreckenbauer
 
 --- src/main/unzip.h.orig	2011-09-24 19:35:53.000000000 -0700
 +++ src/main/unzip.h	2011-09-24 19:37:06.000000000 -0700

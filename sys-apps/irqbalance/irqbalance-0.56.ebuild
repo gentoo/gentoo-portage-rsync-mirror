@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.56.ebuild,v 1.7 2012/05/04 09:17:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.56.ebuild,v 1.8 2014/03/19 16:58:31 jlec Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils autotools
 
 DESCRIPTION="Distribute hardware interrupts across processors on a multiprocessor system"
 HOMEPAGE="http://www.irqbalance.org/"
-SRC_URI="http://irqbalance.googlecode.com/files/${P}.tbz2"
+SRC_URI="https://github.com/Irqbalance/irqbalancefiles/${P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
