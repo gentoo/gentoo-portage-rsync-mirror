@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.17 2013/06/27 17:23:33 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.18 2014/03/19 00:55:48 hasufell Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -238,7 +238,10 @@ mysql-cmake_src_configure() {
 
 	CMAKE_BUILD_TYPE="RelWithDebInfo"
 
+	# debug hack wrt #497532
 	mycmakeargs=(
+		-DCMAKE_C_FLAGS_RELWITHDEBINFO="$(usex debug "" "-DNDEBUG")"
+		-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(usex debug "" "-DNDEBUG")"
 		-DCMAKE_INSTALL_PREFIX=${EPREFIX}/usr
 		-DMYSQL_DATADIR=${EPREFIX}/var/lib/mysql
 		-DSYSCONFDIR=${EPREFIX}/etc/mysql

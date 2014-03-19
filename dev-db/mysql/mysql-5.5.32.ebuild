@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.5.32.ebuild,v 1.1 2013/06/06 17:06:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.5.32.ebuild,v 1.2 2014/03/19 00:52:45 hasufell Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ MY_PV="${MY_PV//_/-}"
 # Build type
 BUILD="cmake"
 
-inherit toolchain-funcs mysql-v2
+inherit eutils toolchain-funcs mysql-v2
 # only to make repoman happy. it is really set in the eclass
 IUSE="$IUSE"
 
@@ -30,6 +30,11 @@ RDEPEND="${RDEPEND}"
 # Please do not add a naive src_unpack to this ebuild
 # If you want to add a single patch, copy the ebuild to an overlay
 # and create your own mysql-extras tarball, looking at 000_index.txt
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-5.5.32-Werror.patch
+	mysql-v2_src_prepare
+}
 
 # Official test instructions:
 # USE='berkdb -cluster embedded extraengine perl ssl community' \

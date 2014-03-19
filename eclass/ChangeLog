@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1180 2014/03/18 16:52:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1181 2014/03/19 00:55:48 hasufell Exp $
+
+  19 Mar 2014; Julian Ospald <hasufell@gentoo.org> mysql-cmake.eclass:
+  respect CFLAGS wrt #497532
 
   18 Mar 2014; Christoph Junghans <ottxor@gentoo.org> texlive-common.eclass:
   added prefix support (bug #485608)
