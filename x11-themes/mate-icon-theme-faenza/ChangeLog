@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/mate-icon-theme-faenza
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mate-icon-theme-faenza/ChangeLog,v 1.1 2014/03/19 17:21:41 tomwij Exp $
+
+*mate-icon-theme-faenza-1.6.0 (19 Mar 2014)
+
+  19 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-icon-theme-faenza-1.6.0.ebuild, +metadata.xml:
+  New ebuild for x11-themes/mate-icon-theme-faenza, Faenza icon theme, that was
+  adapted for MATE desktop; imported from mate-overlay, reviewed and adapted.

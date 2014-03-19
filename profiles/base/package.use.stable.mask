@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.3 2014/03/18 23:59:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.4 2014/03/19 17:15:46 ssuominen Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -14,3 +14,8 @@ net-libs/libkolabxml php
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 Mar 2013)
 # No stable sci-chemistry/avogadro yet but we want kde-4.10 to go stable
 >=kde-base/kalzium-4.10.0 editor
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Mar 2014)
+# Some open source OpenCL providers cause sandbox violation while accessing /dev/dri/card*
+# from a command like eg. `/usr/bin/mogrify -version`, see bug #472766
+media-gfx/imagemagick opencl
