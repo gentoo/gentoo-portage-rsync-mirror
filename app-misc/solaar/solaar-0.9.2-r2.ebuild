@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/solaar/solaar-0.9.2.ebuild,v 1.1 2013/08/27 20:55:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/solaar/solaar-0.9.2-r2.ebuild,v 1.1 2014/03/19 08:22:18 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -17,11 +17,18 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-python/pyudev-0.13[${PYTHON_USEDEP}]
-	dev-python/pygobject[${PYTHON_USEDEP}]"
+	dev-python/pygobject:3[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Solaar-${PV}
 
-CONFIG_CHECK="~HID_LOGITECH_DJ"
+CONFIG_CHECK="~HID_LOGITECH_DJ ~HIDRAW"
+
+python_prepare_all() {
+	# don't autostart (bug #494608)
+	sed -i '/yield autostart_path/d' setup.py || die
+
+	distutils-r1_python_prepare_all
+}
 
 python_install_all() {
 	distutils-r1_python_install_all
