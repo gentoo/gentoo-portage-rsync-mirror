@@ -1,9 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.2 2014/03/16 22:09:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.3 2014/03/18 23:59:30 dilfridge Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
+# CMake's PHP module can't find our install location, so
+# libkolab(xml) fails with the php flag enabled, bug #430858.
+net-libs/libkolab php
+net-libs/libkolabxml php
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 Mar 2013)
 # No stable sci-chemistry/avogadro yet but we want kde-4.10 to go stable

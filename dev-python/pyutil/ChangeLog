@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyutil
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyutil/ChangeLog,v 1.4 2013/11/24 13:48:41 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyutil/ChangeLog,v 1.5 2014/03/18 23:52:40 hasufell Exp $
+
+*pyutil-2.0.0 (18 Mar 2014)
+
+  18 Mar 2014; Julian Ospald <hasufell@gentoo.org> +pyutil-2.0.0.ebuild:
+  version bump
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> pyutil-1.9.7.ebuild:
   Stable for x86, wrt bug #491540

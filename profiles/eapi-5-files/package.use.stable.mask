@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.39 2014/03/17 00:51:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.40 2014/03/19 00:00:00 dilfridge Exp $
 
 # PLEASE DO NOT ADD NEW ENTRIES HERE. 
 # Use profiles/base/package.use.stable.mask or another appropriate file instead
@@ -40,12 +40,6 @@ app-portage/eix clang
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2013)
 # The dependencies for these flags are still in ~arch.
 sys-fs/lvm2 clvm cman
-
-# Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
-# CMake's PHP module can't find our install location, so
-# libkolab(xml) fails with the php flag enabled, bug #430858.
-net-libs/libkolab php
-net-libs/libkolabxml php
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2013)
 # Waiting for >=app-cdr/brasero-3 stabilization

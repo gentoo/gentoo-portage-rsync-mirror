@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.654 2014/03/16 23:39:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.655 2014/03/18 23:59:30 dilfridge Exp $
+
+  18 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  package.use.stable.mask:
+  Migrate net-libs/libkolab entry from eapi-5-files
 
   16 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -package.use.mask.example:
