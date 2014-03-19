@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.1.5.ebuild,v 1.1 2013/11/07 03:49:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.1.5.ebuild,v 1.2 2014/03/19 03:37:55 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils java-pkg-2 java-ant-2 games
 
 DESCRIPTION="The well-known board game, written in java"

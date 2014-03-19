@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.26 2014/03/18 22:57:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.27 2014/03/19 03:38:24 idella4 Exp $
+
+  19 Mar 2014; Ian Delaney <idella4@gentoo.org> greenlet-0.4.2.ebuild:
+  set to 'in source build' to fix tests run to fix Bug #503660 by maekke
 
   18 Mar 2014; Tim Harder <radhermit@gentoo.org> -greenlet-0.3.1.ebuild,
   -greenlet-0.3.3.ebuild, -greenlet-0.3.4.ebuild, -greenlet-0.3.4-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r1.ebuild,v 1.1 2014/03/10 01:15:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r1.ebuild,v 1.3 2014/03/19 03:37:33 vapier Exp $
 
 EAPI="4"
 
@@ -28,6 +28,9 @@ patches() {
 	fi
 }
 
+# The version of readline this bash normally ships with.
+READLINE_VER="6.3"
+
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://tiswww.case.edu/php/chet/bash/bashtop.html"
 SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
@@ -39,7 +42,7 @@ SLOT="0"
 IUSE="afs bashlogger examples mem-scramble +net nls plugins +readline vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-	readline? ( >=sys-libs/readline-6.3 )
+	readline? ( >=sys-libs/readline-${READLINE_VER} )
 	nls? ( virtual/libintl )"
 RDEPEND="${DEPEND}
 	!<sys-apps/portage-2.1.6.7_p1
@@ -80,8 +83,6 @@ src_prepare() {
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
 
-	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
-	epatch "${FILESDIR}"/${PN}-4.2-no-readline.patch
 	epatch "${FILESDIR}"/${P}-debug-trap.patch
 	epatch "${FILESDIR}"/${P}-jobs-exit.patch
 	epatch "${FILESDIR}"/${P}-parse-ansi-expand.patch
@@ -117,7 +118,7 @@ src_configure() {
 	# be safe.
 	# Exact cached version here doesn't really matter as long as it
 	# is at least what's in the DEPEND up above.
-	export ac_cv_rl_version=6.2
+	export ac_cv_rl_version=${READLINE_VER}
 
 	# Force linking with system curses ... the bundled termcap lib
 	# sucks bad compared to ncurses.  For the most part, ncurses

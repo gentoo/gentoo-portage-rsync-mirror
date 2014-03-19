@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.4.2.ebuild,v 1.6 2014/03/16 02:33:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.4.2.ebuild,v 1.7 2014/03/19 03:38:24 idella4 Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="doc"
 DEPEND="app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_compile() {
 	if [[ ${EPYTHON} == python2* ]]; then
