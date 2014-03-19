@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/itsdangerous
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.7 2014/02/11 06:26:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.8 2014/03/19 03:08:36 idella4 Exp $
+
+  19 Mar 2014; Ian Delaney <idella4@gentoo.org> itsdangerous-0.23.ebuild:
+  fix test phase; rm un-needed dep nose, IUSE test, fixes Bug #503744 by an
+  eroen
 
   11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> itsdangerous-0.23.ebuild:
   Added python-3.2 compat
