@@ -2972,6 +2972,7 @@ mail-filter/maildrop:tools - Install maildirmake and deliverquota tools
 mail-filter/maildrop:trashquota - Count deleted messages as part of the maildir quota
 mail-filter/mimedefang:poll - Use poll instead of select
 mail-filter/opendkim:ldap - Enable openldap as a dataset facilitator or keys, determining domains to sign for, and any other dataset that opendkim supports.
+mail-filter/opendkim:lmdb - Add support for using dev-db/lmdb
 mail-filter/opendkim:lua - Enables control over signature verification, filtering and policy to be controlled by user defined lua scripts.
 mail-filter/opendkim:memcached - Add support for using dev-libs/libmemcached
 mail-filter/opendkim:opendbx - Use opendbx backend to facilitate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of database types

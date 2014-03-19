@@ -23,5 +23,6 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 	asynchronous resolver library.</flag>
 	<flag name='memcached'>Add support for using <pkg>dev-libs/libmemcached</pkg>
 	</flag>
+	<flag name='lmdb'>Add support for using <pkg>dev-db/lmdb</pkg></flag>
 </use>
 </pkgmetadata>
