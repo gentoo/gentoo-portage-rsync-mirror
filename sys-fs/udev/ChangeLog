@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1012 2014/03/12 13:57:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1013 2014/03/19 16:23:12 ssuominen Exp $
+
+  19 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-211.ebuild,
+  udev-9999.ebuild:
+  Temporarily use ld.bfd for ia64 wrt #504700; note: waiting for upstream to
+  merge a patch.
 
   12 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-210.ebuild:
   old

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-211.ebuild,v 1.1 2014/03/12 07:03:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-211.ebuild,v 1.2 2014/03/19 16:23:12 ssuominen Exp $
 
 EAPI=5
 
@@ -162,6 +162,13 @@ src_prepare() {
 	sed -i \
 		-e '/--enable-static is not supported by systemd/s:as_fn_error:echo:' \
 		configure || die
+
+	# Force ld.bfd for arches with no -Wl,--gc-sections support in ld.gold wrt #504700
+	# Do this here to make use of CC_CHECK_FLAGS_APPEND in configure.ac, as older binutils
+	# version doesn't necessarily support whole -Wl,-fuse-ld= flag
+	if use ia64; then
+		sed -i -e '/fuse-ld/s:gold:bfd:' configure || die
+	fi
 
 	if ! use elibc_glibc; then #443030
 		echo '#define secure_getenv(x) NULL' >> config.h.in

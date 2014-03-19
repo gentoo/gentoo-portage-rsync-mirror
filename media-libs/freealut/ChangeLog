@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freealut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.36 2014/03/12 10:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.37 2014/03/19 16:13:10 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> freealut-1.1.0-r2.ebuild:
+  Stable for alpha, wrt bug #495714
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> freealut-1.1.0-r2.ebuild:
   Stable for sparc, wrt bug #495714

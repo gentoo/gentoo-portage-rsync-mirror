@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8716 2014/03/19 13:08:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8717 2014/03/19 16:04:30 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> use.desc:
+  Don't explicitely mention sys-fs/udev in USE="udev" description as the flag
+  can be used also with sys-fs/eudev and sys-apps/systemd wrt #505090 by
+  Francesco Turco
 
   19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -targets/server/make.defaults:
