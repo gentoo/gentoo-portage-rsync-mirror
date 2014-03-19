@@ -9,4 +9,4 @@ RDEPEND=media-libs/a52dec media-libs/faac media-libs/libass media-libs/libbluray
 REQUIRED_USE=!ffmpeg? ( gstreamer )
 SLOT=0
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=4a8e0efe8baf1c94b60a1e428e9d0fc9
+_md5_=4bd80ec959b3e0143f6f584b2b28e79e

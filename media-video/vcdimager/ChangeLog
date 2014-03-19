@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.78 2014/03/18 16:41:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.79 2014/03/19 15:18:29 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> vcdimager-0.7.24.ebuild:
+  Stable for alpha, wrt bug #495826
 
   18 Mar 2014; Agostino Sarubbo <ago@gentoo.org> vcdimager-0.7.24.ebuild:
   Stable for ia64, wrt bug #495826

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/celementtree
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.39 2014/03/12 10:01:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.40 2014/03/19 15:22:37 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> celementtree-1.0.5-r2.ebuild:
+  Stable for alpha, wrt bug #474180
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> celementtree-1.0.5-r2.ebuild:
   Stable for sparc, wrt bug #474180

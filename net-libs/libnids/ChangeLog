@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnids
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.61 2013/06/29 18:36:23 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.62 2014/03/19 15:30:47 jer Exp $
+
+*libnids-1.24-r4 (19 Mar 2014)
+
+  19 Mar 2014; Jeroen Roovers <jer@gentoo.org> -libnids-1.18-r1.ebuild,
+  -libnids-1.24-r2.ebuild, +libnids-1.24-r4.ebuild,
+  +files/libnids-1.24-static-libs.patch:
+  Do not build a static library when it is not going to be installed.
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libnids-1.18-r2.ebuild,
   libnids-1.24-r3.ebuild:

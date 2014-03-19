@@ -1,6 +1,11 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.18 2014/02/06 21:35:41 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.19 2014/03/19 15:19:44 tomwij Exp $
+
+  19 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  files/handbrake-9999-remove-faac-dependency.patch, handbrake-9999.ebuild:
+  Update faac and a52 patching in live ebuild; fixes bug #503122, reported by
+  sven.a.jonsson.
 
   06 Feb 2014; Ian Whyman <thev00d00@gentoo.org> handbrake-0.9.9.ebuild,
   handbrake-9999.ebuild:

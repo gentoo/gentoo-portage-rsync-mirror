@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.69 2014/03/19 11:27:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.70 2014/03/19 15:19:51 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Finance-Quote-1.180.0.ebuild:
+  Stable for alpha, wrt bug #501816
 
   19 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> Finance-Quote-1.180.0.ebuild:
   amd64 stable wrt bug #501816

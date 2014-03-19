@@ -1,6 +1,14 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.179 2014/03/05 13:34:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.180 2014/03/19 15:17:39 axs Exp $
+
+*firefox-bin-24.4.0 (19 Mar 2014)
+*firefox-bin-28.0 (19 Mar 2014)
+
+  19 Mar 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-24.4.0.ebuild, +firefox-bin-28.0.ebuild,
+  -firefox-bin-27.0.1.ebuild, -firefox-bin-27.0.ebuild:
+  version bump, security bug 505072
 
 *firefox-bin-27.0.1 (05 Mar 2014)
 

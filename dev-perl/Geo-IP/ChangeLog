@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.82 2014/03/12 09:54:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.83 2014/03/19 15:19:24 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Geo-IP-1.420.0.ebuild:
+  Stable for alpha, wrt bug #492158
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Geo-IP-1.420.0.ebuild:
   Stable for sparc, wrt bug #492158

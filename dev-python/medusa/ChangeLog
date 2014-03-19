@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/medusa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.45 2014/03/12 10:02:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.46 2014/03/19 15:23:15 ago Exp $
+
+  19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> medusa-0.5.4-r1.ebuild:
+  Stable for alpha, wrt bug #495592
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> medusa-0.5.4-r1.ebuild:
   Stable for sparc, wrt bug #495592
