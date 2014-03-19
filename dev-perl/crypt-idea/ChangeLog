@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/crypt-idea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.46 2014/03/19 15:20:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.48 2014/03/19 20:43:11 zlogene Exp $
+
+  19 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -crypt-idea-1.80.0.ebuild,
+  crypt-idea-1.100.0.ebuild:
+  sparc stable wrt bug #502750; Drop old.
+
+  19 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> crypt-idea-1.100.0.ebuild:
+  ppc stable wrt bug #502750
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> crypt-idea-1.100.0.ebuild:
   Stable for alpha, wrt bug #502750

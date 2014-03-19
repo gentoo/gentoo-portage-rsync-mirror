@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/nmon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/ChangeLog,v 1.5 2012/07/31 14:22:27 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/ChangeLog,v 1.6 2014/03/19 20:58:31 polynomial-c Exp $
+
+*nmon-14i (19 Mar 2014)
+
+  19 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> +nmon-14i.ebuild:
+  Version bump.
 
   31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -nmon-14f.ebuild:
   Remove old.
