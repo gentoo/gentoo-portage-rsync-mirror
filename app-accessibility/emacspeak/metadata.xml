@@ -4,7 +4,7 @@
 	<herd>accessibility</herd>
 	<herd>emacs</herd>
 	<maintainer>
-		<email>williamh@gentoo.org</email>
+		<email>teiresias@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">Emacspeak is a speech interface that allows visually impaired 
 	users to interact independently and efficiently with the computer.</longdescription>
