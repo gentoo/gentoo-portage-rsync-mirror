@@ -1,6 +1,11 @@
 # ChangeLog for media-video/aacskeys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.11 2014/03/19 05:39:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.12 2014/03/19 06:05:34 beandog Exp $
+
+*aacskeys-0.4.0e (19 Mar 2014)
+
+  19 Mar 2014; Steve Dibb <beandog@gentoo.org> +aacskeys-0.4.0e.ebuild:
+  Version bump, bug 504976
 
 *aacskeys-0.4.0c-r2 (19 Mar 2014)
 
