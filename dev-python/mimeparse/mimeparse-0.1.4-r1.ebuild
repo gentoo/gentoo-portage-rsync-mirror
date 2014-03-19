@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/mimeparse-0.1.4-r1.ebuild,v 1.11 2013/12/15 01:31:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/mimeparse-0.1.4-r1.ebuild,v 1.12 2014/03/19 21:43:26 bicatali Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )

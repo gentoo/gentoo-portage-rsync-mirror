@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iso8601
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.13 2014/03/19 18:23:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.14 2014/03/19 21:44:22 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> iso8601-0.1.10.ebuild:
+  Keyword amd64-linux and x86-linux
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> iso8601-0.1.8.ebuild:
   Keyword amd64-linux and x86-linux
