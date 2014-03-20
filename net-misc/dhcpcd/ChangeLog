@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.392 2014/03/10 15:51:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.393 2014/03/20 03:52:09 floppym Exp $
+
+  20 Mar 2014; Mike Gilbert <floppym@gentoo.org> dhcpcd-6.3.1-r1.ebuild,
+  dhcpcd-9999.ebuild:
+  Set CC before calling configure.
 
   10 Mar 2014; William Hubbs <williamh@gentoo.org> -dhcpcd-6.0.5-r1.ebuild,
   -dhcpcd-6.1.0.ebuild, -dhcpcd-6.2.1.ebuild, -dhcpcd-6.3.0.ebuild,
