@@ -2,6 +2,8 @@ the last nibble of the openssl version represents the status.  that is,
 whether it is a beta or release.  when it comes to version checks in
 openssh, this component does not matter, so ignore it.
 
+https://bugzilla.mindrot.org/show_bug.cgi?id=2212
+
 --- a/entropy.c
 +++ b/entropy.c
 @@ -216,7 +216,7 @@ seed_rng(void)
