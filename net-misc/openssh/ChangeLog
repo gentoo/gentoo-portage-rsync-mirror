@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.503 2014/03/14 22:15:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.504 2014/03/19 23:40:40 vapier Exp $
+
+*openssh-6.6_p1 (19 Mar 2014)
+
+  19 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.6_p1-x509-glue.patch,
+  +files/openssh-6.6_p1-x509-hpn14v4-glue-p2.patch, +openssh-6.6_p1.ebuild,
+  -files/openssh-6.5_p1-x509-glue.patch,
+  -files/openssh-6.5_p1-x509-hpn14v4-glue-p2.patch, -openssh-6.5_p1-r1.ebuild:
+  Version bump.
 
   14 Mar 2014; Mike Frysinger <vapier@gentoo.org>
   files/openssh-6.5_p1-hpn-cipher-align.patch:

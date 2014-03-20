@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.5_p1-r1.ebuild,v 1.1 2014/03/14 12:12:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.6_p1.ebuild,v 1.1 2014/03/19 23:40:40 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -9,9 +9,9 @@ inherit eutils user flag-o-matic multilib autotools pam systemd versionator
 # and _p? releases.
 PARCH=${P/_}
 
-HPN_PATCH="${PN}-6.5p1-hpnssh14v4.diff.gz"
+HPN_PATCH="${PN}-6.6p1-hpnssh14v4.diff.gz"
 LDAP_PATCH="${PN}-lpk-6.5p1-0.3.14.patch.gz"
-X509_VER="7.8" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
+X509_VER="7.9" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.org/"
@@ -101,8 +101,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then
 		pushd .. >/dev/null
-		epatch "${FILESDIR}"/${PN}-6.5_p1-x509-glue.patch
-		use hpn && epatch "${FILESDIR}"/${PN}-6.5_p1-x509-hpn14v4-glue-p2.patch
+		epatch "${FILESDIR}"/${PN}-6.6_p1-x509-glue.patch
+		use hpn && epatch "${FILESDIR}"/${PN}-6.6_p1-x509-hpn14v4-glue-p2.patch
 		popd >/dev/null
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
 		epatch "${FILESDIR}"/${PN}-6.3_p1-x509-hpn14v2-glue.patch

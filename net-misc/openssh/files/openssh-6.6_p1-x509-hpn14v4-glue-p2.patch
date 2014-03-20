@@ -1,7 +1,7 @@
 make the hpn patch apply when the x509 patch has also been applied
 
---- openssh-6.5p1-hpnssh14v4.diff
-+++ openssh-6.5p1-hpnssh14v4.diff
+--- openssh-6.6p1-hpnssh14v4.diff
++++ openssh-6.6p1-hpnssh14v4.diff
 @@ -1790,18 +1790,14 @@
   	if (options->ip_qos_interactive == -1)
   		options->ip_qos_interactive = IPTOS_LOWDELAY;
