@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.10 2014/02/17 17:19:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.11 2014/03/19 23:14:21 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> pbr-0.5.23-r2.ebuild:
+  Keyword ~amd64-linux ~x86-linux
 
 *pbr-0.5.23-r2 (17 Feb 2014)
 

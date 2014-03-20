@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hacking
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/ChangeLog,v 1.6 2014/03/19 18:25:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/ChangeLog,v 1.7 2014/03/19 23:13:14 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> hacking-0.7.2-r1.ebuild,
+  hacking-0.8.0-r1.ebuild:
+  Keyword ~amd64-linux ~x86-linux
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> hacking-0.8.0-r1.ebuild:
   Keyword amd64-linux and x86-linux

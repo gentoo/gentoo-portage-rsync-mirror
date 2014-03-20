@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-troveclient
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/ChangeLog,v 1.2 2013/10/23 06:17:30 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/ChangeLog,v 1.3 2014/03/19 23:07:08 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  python-troveclient-1.0.1.ebuild:
+  Keyword ~amd64-linux ~x86-linux
 
 *python-troveclient-0.1.4 (23 Oct 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.2.0.ebuild,v 1.6 2013/09/20 19:46:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.0.0_beta3.ebuild,v 1.1 2014/03/19 23:17:49 dilfridge Exp $
 
 EAPI=5
 
@@ -21,38 +21,41 @@ MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Digital photo management application for KDE"
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://kde/stable/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 SLOT="4"
-IUSE="addressbook debug doc gphoto2 mysql themedesigner +thumbnails video"
+IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
-#Keep libf2c blocker until bug 433782 is resolved
 CDEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep kdebase-kioslaves)
-	$(add_kdebase_dep libkdcraw)
-	$(add_kdebase_dep libkexiv2 xmp)
+	kde-base/libkdcraw:4=
+	kde-base/libkexiv2:4=
 	$(add_kdebase_dep libkipi)
-	$(add_kdebase_dep marble plasma)
-	dev-cpp/eigen:3
+	kde-base/marble:4=[plasma]
 	media-libs/jasper
 	media-libs/lcms:2
 	media-libs/lensfun
-	~media-libs/libkface-3.2.0
+	>=media-libs/libkface-3.3.0
 	media-libs/libkgeomap
 	media-libs/liblqr
 	>=media-libs/libpgf-6.12.27
 	media-libs/libpng:0=
 	media-libs/tiff
 	virtual/jpeg
-	dev-qt/qtgui:4[qt3support]
+	dev-qt/qtgui:4
 	|| ( dev-qt/qtsql:4[mysql] dev-qt/qtsql:4[sqlite] )
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2:= )
 	mysql? ( virtual/mysql )
+	semantic-desktop? (
+		dev-libs/shared-desktop-ontologies
+		dev-libs/soprano
+		$(add_kdebase_dep nepomuk-core)
+	)
 "
 RDEPEND="${CDEPEND}
 	$(add_kdebase_dep kreadconfig)
@@ -65,6 +68,7 @@ RDEPEND="${CDEPEND}
 	)
 "
 DEPEND="${CDEPEND}
+	dev-cpp/eigen:3
 	dev-libs/boost
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )
@@ -104,24 +108,22 @@ src_prepare() {
 }
 
 src_configure() {
-	local backend
-
 	# LQR = only allows to choose between bundled/external
 	local mycmakeargs=(
 		-DENABLE_LCMS2=ON
 		-DFORCED_UNBUNDLE=ON
 		-DWITH_LQR=ON
 		-DWITH_LENSFUN=ON
-		-DGWENVIEW_SEMANTICINFO_BACKEND=Nepomuk
 		$(cmake-utils_use_with addressbook KdepimLibs)
 		-DWITH_MarbleWidget=ON
 		$(cmake-utils_use_enable gphoto2 GPHOTO2)
 		$(cmake-utils_use_with gphoto2)
-		-DWITH_Soprano=ON
+		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_enable themedesigner)
 		$(cmake-utils_use_enable thumbnails THUMBS_DB)
 		$(cmake-utils_use_enable mysql INTERNALMYSQL)
 		$(cmake-utils_use_enable debug DEBUG_MESSAGES)
+		$(cmake-utils_use_enable semantic-desktop NEPOMUKSUPPORT)
 	)
 
 	kde4-base_src_configure

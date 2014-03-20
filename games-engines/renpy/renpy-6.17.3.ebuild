@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.17.3.ebuild,v 1.1 2014/03/05 23:35:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.17.3.ebuild,v 1.2 2014/03/19 23:12:08 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -70,7 +70,7 @@ python_install() {
 	python_moduleinto renpy${MYSLOT}
 	python_domodule renpy
 	if use development ; then
-		python_domodule launcher template
+		python_domodule launcher templates
 	fi
 	if use examples ; then
 		python_domodule the_question tutorial
@@ -79,7 +79,7 @@ python_install() {
 
 python_install_all() {
 	if use development; then
-		newicon -s 32 launcher/game/logo32.png ${P}.png
+		newicon -s 32 launcher/game/images/logo32.png ${P}.png
 		make_desktop_entry ${PN}-${SLOT} "Ren'Py ${PV}" ${P}
 	fi
 

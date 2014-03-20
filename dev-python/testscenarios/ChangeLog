@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testscenarios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.7 2014/03/17 03:39:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.8 2014/03/19 23:14:23 bicatali Exp $
+
+  19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  testscenarios-0.4-r4.ebuild:
+  Keyword ~amd64-linux ~x86-linux
 
   17 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
   testscenarios-0.4-r4.ebuild:
