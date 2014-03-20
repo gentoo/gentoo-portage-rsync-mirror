@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/evil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/ChangeLog,v 1.5 2014/03/18 09:36:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/ChangeLog,v 1.6 2014/03/20 08:40:35 nimiux Exp $
+
+  20 Mar 2014; Chema Alonso <nimiux@gentoo.org> evil-1.0.8.ebuild:
+  Stable for amd64 wrt bug #503196
 
   18 Mar 2014; Ulrich Müller <ulm@gentoo.org> evil-1.0.8.ebuild:
   Add RESTRICT="test", bug 504946.

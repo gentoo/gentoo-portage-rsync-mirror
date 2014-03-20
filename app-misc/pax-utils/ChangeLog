@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.154 2014/01/18 03:18:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.155 2014/03/20 08:31:26 vapier Exp $
+
+*pax-utils-0.8 (20 Mar 2014)
+
+  20 Mar 2014; Mike Frysinger <vapier@gentoo.org> +pax-utils-0.8.ebuild:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pax-utils-0.7.ebuild:
   Add arm64 love.

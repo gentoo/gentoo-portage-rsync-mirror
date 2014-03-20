@@ -1,6 +1,45 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.162 2014/03/06 08:31:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.163 2014/03/20 08:51:44 aidecoe Exp $
+
+*dracut-037 (20 Mar 2014)
+
+  20 Mar 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-037.ebuild,
+  +files/037-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/037-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/037-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/037-0004-Install-dracut-install-into-libexec-di.patch:
+  Version bump. New udev and systemd are unblocked.
+
+  dracut-037
+  ==========
+  - dracut: hostonly_cmdline variable and command line switch
+    Toggle hostonly cmdline storing in the initramfs
+      --hostonly-cmdline:
+    Store kernel command line arguments needed in the initramfs
+      --no-hostonly-cmdline:
+    Do not store kernel command line arguments needed in the initramfs
+  - dracut: --mount now understands full fstab lines
+  - dracut now also includes drivers from the /lib/modules/<version>/updates
+    directory
+  - dracut: only set the owner of files to 0:0, if generated as non-root
+  - dracut now directly writes to the initramfs file
+  - dracut: call lz4 with the legacy flag (linux kernel does not support the
+    new format)
+  - systemd: rootfs-generator generates JobTimeout=0 units for the root device
+  - systemd: added the systemd-sysctl service
+  - systemd: add 80-net-setup-link.rules and .link files for persistent
+    interface renaming
+  - systemd: make dracut-shutdown.service failure non-fatal
+  - network: various IPv6 fixes
+  - network: DCHCP for IPv6
+  - network: understand ip=.....:<dns1>:<dns2>
+  - network: parse ibft nameserver settings
+  - shutdown: if kexec fails, just reboot
+  - lvm: handle one LV at a time with lvchange
+  - module-setup.sh: New functions require_binaries() and require_any_binary()
+    to be used in the check() section of module-setup.sh.
+  - a lot of small bugfixes
 
   06 Mar 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-036-r4.ebuild:
   Remove systemd module if systemd USE flag is disabled.
