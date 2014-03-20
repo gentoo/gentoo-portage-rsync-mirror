@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/eventlist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/ChangeLog,v 1.8 2012/07/16 13:14:53 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/ChangeLog,v 1.9 2014/03/20 21:53:37 johu Exp $
+
+*eventlist-0.6-r1 (20 Mar 2014)
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> +eventlist-0.6-r1.ebuild:
+  Revision bump to EAPI 5.
 
   16 Jul 2012; Johannes Huber <johu@gentoo.org> eventlist-0.6.ebuild:
   Stable for x86, wrt bug #426714

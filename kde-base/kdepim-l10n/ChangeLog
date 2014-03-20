@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.135 2014/03/11 13:06:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.136 2014/03/20 21:51:58 dilfridge Exp $
+
+  20 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.11.1-r1.ebuild:
+  Bump EAPI
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.12.2.ebuild:
   Remove KDE SC 4.12.2

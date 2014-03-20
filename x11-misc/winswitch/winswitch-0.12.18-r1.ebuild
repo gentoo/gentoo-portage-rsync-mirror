@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.2 2013/08/03 09:45:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.3 2014/03/20 21:45:26 bicatali Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://winswitch.org/src/${P}.src.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-python/gst-python[${PYTHON_USEDEP}]
@@ -35,7 +35,7 @@ PATCHES=( "${FILESDIR}"/${P}-PIL.patch )
 python_prepare_all() {
 	einfo "Remove bundled Vash"
 	rm -rf skel/share/Vash || die
-
+	export PREFIX="${EPREFIX}"
 	distutils-r1_python_prepare_all
 }
 

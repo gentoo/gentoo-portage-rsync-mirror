@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/winswitch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.8 2013/08/03 09:45:45 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.9 2014/03/20 21:45:26 bicatali Exp $
+
+  20 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  winswitch-0.12.18-r1.ebuild:
+  Keyword amd64-linux ~x86-linux
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> winswitch-0.12.18.ebuild,
   winswitch-0.12.18-r1.ebuild:
