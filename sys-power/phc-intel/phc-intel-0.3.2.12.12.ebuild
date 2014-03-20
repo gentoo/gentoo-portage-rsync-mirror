@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.12.ebuild,v 1.1 2013/12/02 10:21:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.12.ebuild,v 1.2 2014/03/20 22:58:28 xmw Exp $
 
 EAPI=5
 
@@ -41,8 +41,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/phc-intel-pack-rev11-trailing-space.patch
-	epatch "${FILESDIR}"/phc-intel-pack-rev12-trailing-space.patch
+	epatch "${FILESDIR}"/phc-intel-pack-rev12-trailing-space-r1.patch
 
 	sed -e '/^all:/s:prepare::' \
 		-i Makefile || die
