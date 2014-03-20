@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1-r1.ebuild,v 1.1 2014/03/19 22:30:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1-r1.ebuild,v 1.2 2014/03/20 21:28:58 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -149,12 +149,16 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
 	# PAM is the only auth scheme supported
 	# even though configure lists shadow and crypt
 	# they don't have any corresponding code.
 	# --with-at-spi-registryd-directory= needs to be passed explicitly because
 	# of https://bugzilla.gnome.org/show_bug.cgi?id=607643#c4
 	# Xevie is obsolete, bug #482304
+	# --with-initial-vt=7 conflicts with plymouth, bug #453392
+	! use plymouth && myconf="${myconf} --with-initial-vt=7"
+
 	gnome2_src_configure \
 		--with-run-dir=/run/gdm \
 		--localstatedir="${EPREFIX}"/var \
@@ -176,7 +180,8 @@ src_configure() {
 		$(systemd_with_unitdir) \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_with xinerama) \
-		ITSTOOL=$(type -P true)
+		ITSTOOL=$(type -P true) \
+		${myconf}
 }
 
 src_install() {
