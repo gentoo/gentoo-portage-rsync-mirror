@@ -1,8 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.6.ebuild,v 1.4 2013/06/25 12:59:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.6-r1.ebuild,v 1.1 2014/03/20 14:19:00 maksbotan Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF="yes"
 
 inherit  autotools-utils
 
@@ -12,7 +14,7 @@ SRC_URI="http://www.liblognorm.com/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa x86 ~amd64-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux"
 IUSE="debug static-libs"
 
 RDEPEND="
@@ -24,6 +26,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	"
 DOCS=( ChangeLog )
+
+PATCHES=( "${FILESDIR}"/respect_CFLAGS.patch )
 
 src_compile() {
 	autotools-utils_src_compile -j1
