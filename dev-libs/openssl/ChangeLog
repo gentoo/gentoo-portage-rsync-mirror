@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.514 2014/02/21 15:35:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.515 2014/03/20 05:47:31 vapier Exp $
+
+*openssl-1.0.2_beta1 (20 Mar 2014)
+
+  20 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.2-ipv6.patch, +files/openssl-1.0.2-parallel-build.patch,
+  +openssl-1.0.2_beta1.ebuild:
+  Version bump for testing.
 
   21 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -openssl-1.0.1e.ebuild,
   -openssl-1.0.1e-r1.ebuild, -openssl-1.0.1e-r2.ebuild,

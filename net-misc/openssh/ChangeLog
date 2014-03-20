@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.504 2014/03/19 23:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.505 2014/03/20 05:48:23 vapier Exp $
+
+  20 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.6_p1-openssl-ignore-status.patch, openssh-6.6_p1.ebuild:
+  Fix openssl version check to accept dev/beta/release versions.
 
 *openssh-6.6_p1 (19 Mar 2014)
 
