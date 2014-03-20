@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.356 2014/03/19 03:37:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.357 2014/03/20 19:45:36 vapier Exp $
+
+*bash-4.3-r2 (20 Mar 2014)
+
+  20 Mar 2014; Mike Frysinger <vapier@gentoo.org> +bash-4.3-r2.ebuild,
+  +files/bash-4.3-compound-array-empty-value.patch,
+  +files/bash-4.3-extglob-skipname.patch, -bash-4.3-r1.ebuild:
+  Add more fixes from upstream.
 
   19 Mar 2014; Mike Frysinger <vapier@gentoo.org> bash-4.3-r1.ebuild:
   Drop job/readline patches as they appear to be fixed in this release already.

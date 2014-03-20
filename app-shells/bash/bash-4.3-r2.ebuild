@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r1.ebuild,v 1.3 2014/03/19 03:37:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r2.ebuild,v 1.1 2014/03/20 19:45:36 vapier Exp $
 
 EAPI="4"
 
@@ -87,6 +87,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-jobs-exit.patch
 	epatch "${FILESDIR}"/${P}-parse-ansi-expand.patch
 	epatch "${FILESDIR}"/${P}-pcomplete-dequote.patch
+	epatch "${FILESDIR}"/${P}-extglob-skipname.patch
+	epatch "${FILESDIR}"/${P}-compound-array-empty-value.patch
 
 	epatch_user
 }

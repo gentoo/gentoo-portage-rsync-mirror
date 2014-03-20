@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.22 2014/03/20 19:30:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.24 2014/03/20 19:33:13 vapier Exp $
 
 # @ECLASS: ssl-cert.eclass
 # @MAINTAINER:
@@ -104,7 +104,7 @@ get_base() {
 #
 # Access: private
 gen_key() {
-	local base=`get_base $1`
+	local base=$(get_base "$1")
 	ebegin "Generating ${SSL_BITS} bit RSA key${1:+ for CA}"
 	openssl genrsa -rand "${SSL_RANDOM}" \
 		-out "${base}.key" "${SSL_BITS}" &> /dev/null
@@ -121,7 +121,7 @@ gen_key() {
 #
 # Access: private
 gen_csr() {
-	local base=`get_base $1`
+	local base=$(get_base "$1")
 	ebegin "Generating Certificate Signing Request${1:+ for CA}"
 	openssl req -config "${SSL_CONF}" -new \
 		-key "${base}.key" -out "${base}.csr" &>/dev/null
@@ -140,14 +140,14 @@ gen_csr() {
 #
 # Access: private
 gen_crt() {
-	local base=`get_base $1`
+	local base=$(get_base "$1")
 	if [ "${1}" ] ; then
 		ebegin "Generating self-signed X.509 Certificate for CA"
 		openssl x509 -extfile "${SSL_CONF}" \
 			-days ${SSL_DAYS} -req -signkey "${base}.key" \
 			-in "${base}.csr" -out "${base}.crt" &>/dev/null
 	else
-		local ca=`get_base 1`
+		local ca=$(get_base 1)
 		ebegin "Generating authority-signed X.509 Certificate"
 		openssl x509 -extfile "${SSL_CONF}" \
 			-days ${SSL_DAYS} -req -CAserial "${SSL_SERIAL}" \
@@ -167,7 +167,7 @@ gen_crt() {
 #
 # Access: private
 gen_pem() {
-	local base=`get_base $1`
+	local base=$(get_base "$1")
 	ebegin "Generating PEM Certificate"
 	(cat "${base}.key"; echo; cat "${base}.crt") > "${base}.pem"
 	eend $?
@@ -192,9 +192,9 @@ install_cert() {
 	fi
 
 	case ${EBUILD_PHASE} in
-		unpack|compile|test|install)
-			eerror "install_cert cannot be called in ${EBUILD_PHASE}"
-			return 1 ;;
+	unpack|prepare|configure|compile|test|install)
+		die "install_cert cannot be called in ${EBUILD_PHASE}"
+		;;
 	esac
 
 	# Generate a CA environment #164601
