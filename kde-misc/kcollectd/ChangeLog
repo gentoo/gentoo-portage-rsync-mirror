@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcollectd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.13 2012/12/20 16:59:39 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.14 2014/03/20 22:04:05 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> kcollectd-0.9-r1.ebuild:
+  Bump to EAPI 5.
 
   20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -kcollectd-0.9.ebuild:
   Remove old.

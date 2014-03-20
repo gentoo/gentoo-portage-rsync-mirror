@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/kio-ftps-0.2.ebuild,v 1.4 2012/07/20 16:43:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/kio-ftps-0.2.ebuild,v 1.5 2014/03/20 22:13:40 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 
-DESCRIPTION="A ftps KIO slave for KDE"
+DESCRIPTION="KDE ftps KIO slave"
 HOMEPAGE="http://kasablanca.berlios.de/kio-ftps/"
 SRC_URI="mirror://berlios/kasablanca/${P}.tar.gz"
 

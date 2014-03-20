@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kopete-antispam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/ChangeLog,v 1.6 2011/10/29 00:31:50 abcd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/ChangeLog,v 1.7 2014/03/20 22:24:30 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> kopete-antispam-0.5.ebuild:
+  Bump to EAPI 5.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kopete-antispam-0.5.ebuild:
   Bump to EAPI=4
@@ -28,4 +31,3 @@
   01 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
   +kopete-antispam-0.4.ebuild:
   Initial import of kopete-antispam; this fixes bug #225655
-

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/kopete-antispam-0.5.ebuild,v 1.3 2011/10/29 00:31:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/kopete-antispam-0.5.ebuild,v 1.4 2014/03/20 22:24:30 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep kopete)

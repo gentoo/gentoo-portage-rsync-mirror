@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.5.3.ebuild,v 1.2 2012/06/21 08:27:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.5.3.ebuild,v 1.3 2014/03/20 22:14:36 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS="cs de el fr"
 KDE_HANDBOOK="optional"

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgrubeditor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/ChangeLog,v 1.4 2011/10/29 00:37:30 abcd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/ChangeLog,v 1.5 2014/03/20 22:11:08 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> kgrubeditor-0.8.5.ebuild:
+  Bump to EAPI 5.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kgrubeditor-0.8.5.ebuild:
   Bump to EAPI=4
@@ -17,4 +20,3 @@
   10 May 2009; Markos Chandras <hwoarang@gentoo.org>
   +kgrubeditor-0.8.5.ebuild, +metadata.xml:
   Moved from sunrise. Fixes bug 210960
-

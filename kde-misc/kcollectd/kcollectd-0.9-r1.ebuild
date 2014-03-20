@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/kcollectd-0.9-r1.ebuild,v 1.1 2012/10/19 17:25:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/kcollectd-0.9-r1.ebuild,v 1.2 2014/03/20 22:04:05 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.forwiss.uni-passau.de/~berberic/Linux/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND="dev-libs/boost
 	net-analyzer/rrdtool"

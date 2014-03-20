@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio-locate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.39 2012/06/21 08:27:22 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.40 2014/03/20 22:14:36 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> kio-locate-0.5.3.ebuild:
+  Bump to EAPI 5.
 
   21 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   +files/kio-locate-0.5.3-gcc-4.7.patch, -kio-locate-0.5.2.ebuild,
@@ -30,4 +33,3 @@
   02 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   +kio-locate-0.5.0.ebuild:
   Initial commit.
-

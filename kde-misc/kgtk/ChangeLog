@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.33 2014/02/26 17:03:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.34 2014/03/20 22:12:11 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> kgtk-0.11.0.ebuild:
+  Bump to EAPI 5.
 
   26 Feb 2014; Michael Palimaka <kensington@gentoo.org>
   -files/kgtk-0.10.1-glibc-2.10.patch, -kgtk-0.10.1.ebuild:

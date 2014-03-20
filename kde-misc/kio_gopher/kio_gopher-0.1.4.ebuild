@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/kio_gopher-0.1.4.ebuild,v 1.2 2012/11/14 14:50:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/kio_gopher-0.1.4.ebuild,v 1.3 2014/03/20 22:19:22 johu Exp $
 
-EAPI=4
+EAPI=5
+
 KDE_LINGUAS="ar bg br ca ca@valencia cs cy da de el en_GB eo es et fi fr ga gl
 hr hu is it ja ka km lt lv ms nb nds nl nn pa pl pt pt_BR ro ru rw sk sv ta tr
 ug uk zh_CN zh_TW"

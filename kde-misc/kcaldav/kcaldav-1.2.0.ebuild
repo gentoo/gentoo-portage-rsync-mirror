@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcaldav/kcaldav-1.2.0.ebuild,v 1.4 2011/10/29 00:41:00 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcaldav/kcaldav-1.2.0.ebuild,v 1.5 2014/03/20 22:03:00 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 
@@ -13,7 +13,7 @@ SRC_URI="http://kcaldav.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND="dev-libs/libcaldav"
 RDEPEND="${DEPEND}"

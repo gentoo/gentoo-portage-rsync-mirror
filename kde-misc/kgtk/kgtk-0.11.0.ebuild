@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.11.0.ebuild,v 1.3 2014/02/26 17:00:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.11.0.ebuild,v 1.4 2014/03/20 22:12:11 johu Exp $
 
-EAPI=4
+EAPI=5
 KDE_LINGUAS="cs de en_GB es fr it pt_BR ru zh_CN"
 KDE_LINGUAS_DIR="kdialogd4/po"
 inherit kde4-base

@@ -1,13 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmthemegenerator/kdmthemegenerator-0.8.ebuild,v 1.3 2011/10/29 00:38:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmthemegenerator/kdmthemegenerator-0.8.ebuild,v 1.4 2014/03/20 22:09:59 johu Exp $
 
-EAPI=4
+EAPI=5
+
 inherit kde4-base
 
 MY_P=KdmThemeGenerator
 
-DESCRIPTION="A program that will generate kdm theme from your current plasma theme and wallpaper"
+DESCRIPTION="Generates kdm theme from your current plasma theme and wallpaper"
 HOMEPAGE="http://kde-apps.org/content/show.php/Kdm+theme+generator?content=102760"
 SRC_URI="http://kde-apps.org/CONTENT/content-files/102760-${MY_P}.tar.gz"
 

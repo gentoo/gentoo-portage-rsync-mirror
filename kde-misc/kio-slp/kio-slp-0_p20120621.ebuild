@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-slp/kio-slp-0_p20120621.ebuild,v 1.1 2012/06/22 02:16:06 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-slp/kio-slp-0_p20120621.ebuild,v 1.2 2014/03/20 22:15:48 johu Exp $
 
-EAPI=4
+EAPI=5
 
 OPENGL_REQUIRED="optional"
 inherit kde4-base
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~creffett/${P}.tar.xz"
 LICENSE="GPL-1"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE=""
+IUSE="debug"
 
 DEPEND="net-libs/openslp"
 RDEPEND="${DEPEND}"

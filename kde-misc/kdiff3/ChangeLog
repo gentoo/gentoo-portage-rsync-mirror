@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kdiff3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.69 2013/03/02 21:29:51 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.70 2014/03/20 22:08:32 johu Exp $
+
+*kdiff3-0.9.97-r2 (20 Mar 2014)
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> +kdiff3-0.9.97-r2.ebuild:
+  Revision bump to EAPI 5.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kdiff3-0.9.97-r1.ebuild:
   Move Qt dependencies to the new category
