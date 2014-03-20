@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.12-r1.ebuild,v 1.1 2014/02/13 01:17:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.13.ebuild,v 1.1 2014/03/20 15:40:11 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
