@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.3.0.ebuild,v 1.8 2014/03/07 09:17:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-24.3.0.ebuild,v 1.9 2014/03/20 16:07:20 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -59,7 +59,7 @@ RDEPEND="
 	gstreamer? ( media-plugins/gst-plugins-meta:0.10[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
-	system-icu? ( >=dev-libs/icu-0.51.1 )
+	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( >=dev-db/sqlite-3.7.17:3[secure-delete,debug=] )
 	>=media-libs/libvpx-1.0.0

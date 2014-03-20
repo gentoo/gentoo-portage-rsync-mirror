@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.22 2014/03/02 15:07:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.23 2014/03/20 16:18:07 jer Exp $
+
+  20 Mar 2014; Jeroen Roovers <jer@gentoo.org> libbsd-0.6.0.ebuild:
+  Stable for HPPA (bug #480692).
 
   02 Mar 2014; Jeroen Roovers <jer@gentoo.org> libbsd-0.6.0.ebuild:
   Marked ~hppa (bug #503166).

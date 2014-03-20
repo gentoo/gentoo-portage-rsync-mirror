@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.271 2014/03/20 14:57:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.272 2014/03/20 16:04:31 polynomial-c Exp $
+
+  20 Mar 2014; Lars Wendler <polynomial-c@gentoo.org>
+  thunderbird-24.3.0.ebuild, thunderbird-24.4.0.ebuild:
+  Fixed icu dependency.
 
 *thunderbird-24.4.0 (20 Mar 2014)
 

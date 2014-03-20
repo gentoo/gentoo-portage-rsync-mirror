@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.37 2014/02/12 07:22:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.38 2014/03/20 16:16:14 jer Exp $
+
+  20 Mar 2014; Jeroen Roovers <jer@gentoo.org> po-mode-0.18.3.2.ebuild:
+  Stable for HPPA (bug #504558).
 
 *po-mode-0.18.3.2 (12 Feb 2014)
 
