@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.2.ebuild,v 1.9 2014/02/01 04:58:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.4.ebuild,v 1.1 2014/03/20 13:31:07 polynomial-c Exp $
 
-EAPI=3
+EAPI=5
 WANT_AUTOCONF="2.1"
 
 inherit autotools eutils multilib toolchain-funcs versionator
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug"
 
 src_prepare() {
@@ -74,22 +74,22 @@ src_configure() {
 
 src_compile() {
 	cd "${S}"/build
-	emake || die "failed to build"
+	emake
 }
 
 src_install() {
 	# Their build system is royally confusing, as usual
 	MINOR_VERSION=${MIN_PV} # Used for .so version
 	cd "${S}"/build
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	cd "${ED}"/usr/$(get_libdir)
 	einfo "removing static libraries as upstream has requested!"
-	rm -f *.a || die "failed to remove static libraries."
+	rm *.a || die "failed to remove static libraries."
 
 	# install nspr-config
-	dobin "${S}"/build/config/nspr-config || die "failed to install nspr-config"
+	dobin "${S}"/build/config/nspr-config
 
 	# Remove stupid files in /usr/bin
-	rm -f "${ED}"/usr/bin/prerr.properties || die "failed to cleanup unneeded files"
+	rm "${ED}"/usr/bin/prerr.properties || die "failed to cleanup unneeded files"
 }
