@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.19 2014/03/19 18:22:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.22 2014/03/20 04:50:05 radhermit Exp $
+
+  20 Mar 2014; Tim Harder <radhermit@gentoo.org> netaddr-0.7.11.ebuild:
+  Sync prefix keywords.
+
+  20 Mar 2014; Tim Harder <radhermit@gentoo.org> -netaddr-0.7.10.ebuild,
+  -netaddr-0.7.10_p20130801.ebuild:
+  Remove old.
+
+*netaddr-0.7.11 (20 Mar 2014)
+
+  20 Mar 2014; Tim Harder <radhermit@gentoo.org> +netaddr-0.7.11.ebuild:
+  Version bump.
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> netaddr-0.7.10-r1.ebuild:
   Keyword amd64-linux and x86-linux
