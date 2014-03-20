@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Perl-Critic-Deprecated
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Deprecated/ChangeLog,v 1.5 2012/12/22 18:25:32 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Deprecated/ChangeLog,v 1.6 2014/03/20 09:21:56 zlogene Exp $
+
+  20 Mar 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Perl-Critic-Deprecated-1.108.0.ebuild:
+  Bump to EAPI=5; Fix too long description.
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   Perl-Critic-Deprecated-1.108.0.ebuild:

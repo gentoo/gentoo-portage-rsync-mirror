@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/Readonly dev-perl/Perl-Critic virtual/perl-Module-Build || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
-DESCRIPTION=Policies that were formally included with Perl::Critic itself, but which have been superseded by others
-EAPI=4
+DEPEND=dev-perl/Readonly dev-perl/Perl-Critic virtual/perl-Module-Build dev-lang/perl:=[-build(-)]
+DESCRIPTION=Perl::Critic policies which have been superseded by others
+EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Perl-Critic-Deprecated/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=dev-perl/Readonly dev-perl/Perl-Critic || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=dev-perl/Readonly dev-perl/Perl-Critic dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/EL/ELLIOTJS/Perl-Critic-Deprecated-1.108.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=348352973443792a82859da0319c81a9
+_md5_=ec175355feb432ca471037b0fe53ddb0
