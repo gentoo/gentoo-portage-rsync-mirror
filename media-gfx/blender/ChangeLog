@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.259 2014/01/22 01:11:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.260 2014/03/20 16:56:34 hasufell Exp $
+
+*blender-2.70 (20 Mar 2014)
+
+  20 Mar 2014; Julian Ospald <hasufell@gentoo.org> blender-2.69.ebuild,
+  +blender-2.70.ebuild, +files/07-blender-2.70-sse2.patch,
+  +files/04-blender-2.70-unbundle-glog.patch, metadata.xml:
+  version bump wrt #505138, fix redcode USE flag wrt #505178
 
   22 Jan 2014; Julian Ospald <hasufell@gentoo.org> blender-2.69.ebuild:
   fix build with nls enabled

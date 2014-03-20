@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.69.ebuild,v 1.3 2014/03/20 16:56:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70.ebuild,v 1.1 2014/03/20 16:56:34 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -29,7 +29,7 @@ fi
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
-IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openmp +openexr player redcode sdl sndfile sse sse2 tiff"
+IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openimageio +opennl openmp +openexr player redcode sdl sndfile sse sse2 tiff"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	player? ( game-engine )
 	redcode? ( jpeg2k ffmpeg )
@@ -42,6 +42,7 @@ RDEPEND="
 	dev-cpp/gflags
 	dev-cpp/glog[gflags]
 	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 	>=media-libs/freetype-2.0
 	media-libs/glew
 	media-libs/libpng:0
@@ -63,7 +64,7 @@ RDEPEND="
 	)
 	ffmpeg? (
 		|| (
-			media-video/ffmpeg:0[x264,mp3,encode,theora,jpeg2k?]
+			>=media-video/ffmpeg-2.1.4:0[x264,mp3,encode,theora,jpeg2k?]
 			>=media-video/libav-9[x264,mp3,encode,theora,jpeg2k?]
 		)
 	)
@@ -76,6 +77,7 @@ RDEPEND="
 	)
 	nls? ( virtual/libiconv )
 	openal? ( >=media-libs/openal-1.6.372 )
+	openimageio? ( media-libs/openimageio )
 	openexr? ( media-libs/openexr )
 	sdl? ( media-libs/libsdl[audio,joystick] )
 	sndfile? ( media-libs/libsndfile )
@@ -108,10 +110,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/01-${PN}-2.68-doxyfile.patch \
 		"${FILESDIR}"/02-${PN}-2.68-unbundle-colamd.patch \
 		"${FILESDIR}"/03-${PN}-2.68-remove-binreloc.patch \
-		"${FILESDIR}"/04-${PN}-2.68-unbundle-glog.patch \
+		"${FILESDIR}"/04-${PN}-2.70-unbundle-glog.patch \
 		"${FILESDIR}"/05-${PN}-2.68-unbundle-eigen3.patch \
 		"${FILESDIR}"/06-${PN}-2.68-fix-install-rules.patch \
-		"${FILESDIR}"/07-${PN}-2.68-sse2.patch
+		"${FILESDIR}"/07-${PN}-2.70-sse2.patch
 
 	# remove some bundled deps
 	rm -r \
@@ -120,7 +122,7 @@ src_prepare() {
 		extern/glew \
 		extern/colamd \
 		extern/binreloc \
-		extern/libmv/third_party/{ldl,glog,gflags} \
+		extern/libmv/third_party/{glog,gflags} \
 		|| die
 
 	# turn off binreloc (not cached)
@@ -175,9 +177,11 @@ src_configure() {
 		$(cmake-utils_use_with nls INTERNATIONAL)
 		$(cmake-utils_use_with jack JACK)
 		$(cmake-utils_use_with jpeg2k IMAGE_OPENJPEG)
+		$(cmake-utils_use_with openimageio OPENIMAGEIO)
 		$(cmake-utils_use_with openal OPENAL)
 		$(cmake-utils_use_with openexr IMAGE_OPENEXR)
 		$(cmake-utils_use_with openmp OPENMP)
+		$(cmake-utils_use_with opennl OPENNL)
 		$(cmake-utils_use_with player PLAYER)
 		$(cmake-utils_use_with redcode IMAGE_REDCODE)
 		$(cmake-utils_use_with sdl SDL)

@@ -67,6 +67,8 @@
 	</flag>
 	<flag name="ndof">
       Enable NDOF input devices (SpaceNavigator and friends).
-	</flag>
+  </flag>
+  <flag name="openimageio">Enable OpenImageIO Support</flag>
+  <flag name="opennl">Enable use of Open Numerical Library</flag>
   </use>
 </pkgmetadata>
