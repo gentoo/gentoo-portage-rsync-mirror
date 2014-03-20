@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.99 2014/03/20 02:23:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.100 2014/03/20 02:38:21 floppym Exp $
+
+  20 Mar 2014; Mike Gilbert <floppym@gentoo.org>
+  ca-certificates-20140223.3.15.5.ebuild:
+  We only need python if we are not using the precompiled certs.
 
   20 Mar 2014; Mike Gilbert <floppym@gentoo.org>
   ca-certificates-20140223.3.15.5.ebuild:

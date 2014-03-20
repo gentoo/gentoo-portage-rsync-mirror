@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.657 2014/03/19 17:15:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.658 2014/03/20 02:33:18 mrueg Exp $
+
+  20 Mar 2014; Manuel Rüger <mrueg@gentoo.org> package.use.mask:
+  Mask server useflag for rubygems-1.8.x due to ruby1.8 deprecation
 
   19 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.stable.mask:
   Mask USE="opencl" for stable users of media-gfx/imagemagick wrt #472766

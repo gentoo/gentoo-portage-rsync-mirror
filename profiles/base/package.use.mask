@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.550 2014/03/14 17:47:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.551 2014/03/20 02:33:18 mrueg Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -9,6 +9,7 @@
 # Manuel Rüger <mrueg@gentoo.org> (07 Mar 2014)
 # Mask ruby18-only compatible flags
 # Bugs: 483104, 483102
+=dev-ruby/rubygems-1.8* server
 media-libs/libcaca ruby
 =dev-vcs/subversion-1.7* ruby
 media-sound/podcatcher bittorrent

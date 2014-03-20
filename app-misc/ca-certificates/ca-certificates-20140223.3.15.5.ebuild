@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20140223.3.15.5.ebuild,v 1.2 2014/03/20 02:23:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20140223.3.15.5.ebuild,v 1.3 2014/03/20 02:38:21 floppym Exp $
 
 # The Debian ca-certificates package merely takes the CA database as it exists
 # in the nss package and repackages it for use by openssl.
@@ -74,7 +74,10 @@ RDEPEND="${DEPEND}
 	dev-libs/openssl
 	sys-apps/debianutils"
 
-DEPEND+=" ${PYTHON_DEPS}"
+
+if ! ${PRECOMPILED}; then
+	DEPEND+=" ${PYTHON_DEPS}"
+fi
 
 S=${WORKDIR}
 
@@ -83,7 +86,6 @@ pkg_setup() {
 	# we need to tell users about it once manually first.
 	[[ -f "${EPREFIX}"/etc/env.d/98ca-certificates ]] \
 		|| ewarn "You should run update-ca-certificates manually after etc-update"
-	python_setup
 }
 
 src_unpack() {
@@ -121,6 +123,7 @@ src_prepare() {
 src_compile() {
 	cd "image/${EPREFIX}" || die
 	if ! ${PRECOMPILED} ; then
+		python_setup
 		local d="${S}/${PN}/mozilla"
 		# Grab the database from the nss sources.
 		cp "${S}"/nss-${NSS_VER}/nss/lib/ckfw/builtins/{certdata.txt,nssckbi.h} "${d}" || die
