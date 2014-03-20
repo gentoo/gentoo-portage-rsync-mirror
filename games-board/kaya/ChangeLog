@@ -1,6 +1,9 @@
 # ChangeLog for games-board/kaya
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/ChangeLog,v 1.8 2013/08/05 03:12:18 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/ChangeLog,v 1.9 2014/03/20 20:33:11 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> kaya-0.4.ebuild:
+  Bump to EAPI 5.
 
   05 Aug 2013; Patrick Lauer <patrick@gentoo.org> kaya-0.4.ebuild:
   Bump ruby deps for #479584

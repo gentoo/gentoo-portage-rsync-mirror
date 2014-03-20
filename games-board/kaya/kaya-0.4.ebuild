@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.6 2013/08/05 03:12:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.7 2014/03/20 20:33:11 johu Exp $
 
-EAPI=4
+EAPI=5
 USE_RUBY="ruby19"
 CMAKE_IN_SOURCE_BUILD=1
 

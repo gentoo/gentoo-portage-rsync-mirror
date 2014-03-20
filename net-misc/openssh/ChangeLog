@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.508 2014/03/20 18:17:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.510 2014/03/20 20:58:31 vapier Exp $
+
+  20 Mar 2014; Mike Frysinger <vapier@gentoo.org> openssh-6.6_p1-r1.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable #505066.
+
+*openssh-6.6_p1-r1 (20 Mar 2014)
+
+  20 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -openssh-6.6_p1.ebuild,
+  +openssh-6.6_p1-r1.ebuild:
+  Fixed hpn patch to not add a false patch level to ssh's version string
+  (6.6p2). Committed straight to stable where -r0 was stable.
 
   20 Mar 2014; Agostino Sarubbo <ago@gentoo.org> openssh-6.6_p1.ebuild:
   Stable for x86, wrt bug #505066

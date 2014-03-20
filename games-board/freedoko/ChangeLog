@@ -1,6 +1,11 @@
 # ChangeLog for games-board/freedoko
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.24 2013/12/24 12:47:38 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.25 2014/03/20 20:44:29 mr_bones_ Exp $
+
+  20 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/freedoko-0.7.10-gcc47.patch, -files/freedoko-0.7.10-gentoo.patch,
+  -freedoko-0.7.10.ebuild:
+  old
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> freedoko-0.7.11.ebuild:
   Stable for x86, wrt bug #490644
