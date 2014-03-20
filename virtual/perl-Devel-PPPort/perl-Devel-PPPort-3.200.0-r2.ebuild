@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/perl-Devel-PPPort-3.200.0-r2.ebuild,v 1.1 2013/08/14 04:07:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/perl-Devel-PPPort-3.200.0-r2.ebuild,v 1.2 2014/03/20 15:11:40 jer Exp $
 
 DESCRIPTION="Virtual for Devel-PPPort"
 HOMEPAGE=""
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND=""

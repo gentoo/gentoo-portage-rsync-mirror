@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=complex numbers and associated mathematical functions
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Math-Complex/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/Z/ZE/ZEFRAM/Math-Complex-1.59.tar.gz
 _eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b147e54170f99577f07b0c571ae5f021
+_md5_=0f7f3a3072e2bd498d3100a975282a8b

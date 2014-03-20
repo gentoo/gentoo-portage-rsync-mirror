@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Dumpvalue/perl-Dumpvalue-1.170.0-r1.ebuild,v 1.1 2013/08/14 04:10:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Dumpvalue/perl-Dumpvalue-1.170.0-r1.ebuild,v 1.2 2014/03/20 15:12:21 jer Exp $
 
 DESCRIPTION="Virtual for perl-core/Dumpvalue"
 HOMEPAGE=""
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND=""

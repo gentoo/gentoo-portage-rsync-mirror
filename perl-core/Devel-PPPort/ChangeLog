@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Devel-PPPort
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Devel-PPPort/ChangeLog,v 1.2 2014/02/26 11:42:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Devel-PPPort/ChangeLog,v 1.3 2014/03/20 15:11:27 jer Exp $
+
+  20 Mar 2014; Jeroen Roovers <jer@gentoo.org> Devel-PPPort-3.200.0.ebuild:
+  Marked ~hppa (bug #505156).
 
 *Devel-PPPort-3.200.0 (26 Feb 2014)
 

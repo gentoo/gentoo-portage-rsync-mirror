@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-Complex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.1 2014/03/14 21:28:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.2 2014/03/20 15:12:47 jer Exp $
+
+  20 Mar 2014; Jeroen Roovers <jer@gentoo.org> Math-Complex-1.590.0.ebuild:
+  Marked ~hppa (bug #505156).
 
 *Math-Complex-1.590.0 (14 Mar 2014)
 

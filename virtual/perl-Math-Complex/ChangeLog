@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-Complex
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-Complex/ChangeLog,v 1.1 2013/08/14 05:04:02 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-Complex/ChangeLog,v 1.2 2014/03/20 15:13:03 jer Exp $
+
+  20 Mar 2014; Jeroen Roovers <jer@gentoo.org>
+  perl-Math-Complex-1.590.0-r2.ebuild:
+  Marked ~hppa (bug #505156).
 
 *perl-Math-Complex-1.590.0-r2 (14 Aug 2013)
 
