@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.352 2014/03/19 21:05:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.353 2014/03/20 13:32:21 polynomial-c Exp $
+
+*nss-3.16 (20 Mar 2014)
+
+  20 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -nss-3.15.4-r1.ebuild,
+  +nss-3.16.ebuild:
+  Version bump. Removed old.
 
   19 Mar 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Clarify USE=cacert also installs SPI certs.

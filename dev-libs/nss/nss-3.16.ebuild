@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.4-r1.ebuild,v 1.1 2014/02/01 04:57:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16.ebuild,v 1.1 2014/03/20 13:32:21 polynomial-c Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -49,7 +49,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.15-gentoo-fixup-warnings.patch"
 	use cacert && epatch "${DISTDIR}/${PN}-3.14.1-add_spi+cacerts_ca_certs.patch"
 	use nss-pem && epatch "${FILESDIR}/${PN}-3.15.4-enable-pem.patch"
-	epatch "${FILESDIR}/${PN}-3.15-x32.patch"
 	epatch "${FILESDIR}/nss-3.14.2-solaris-gcc.patch"
 	cd coreconf
 	# hack nspr paths
@@ -151,13 +150,12 @@ src_compile() {
 	XCFLAGS="${BUILD_CFLAGS}" \
 	emake -j1 -C coreconf \
 		CC="${BUILD_CC}" \
-		$(nssbits BUILD_) \
-		|| die
+		$(nssbits BUILD_)
 	makeargs+=( NSINSTALL="${PWD}/$(find -type f -name nsinstall)" )
 
 	# Then build the target tools.
 	for d in . lib/dbm ; do
-		emake -j1 "${makeargs[@]}" -C ${d} || die "${d} make failed"
+		emake -j1 "${makeargs[@]}" -C ${d}
 	done
 }
 
