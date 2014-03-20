@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cssselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.22 2014/01/18 15:57:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.23 2014/03/20 11:56:38 idella4 Exp $
+
+*cssselect-0.9.1 (20 Mar 2014)
+
+  20 Mar 2014; Ian Delaney <idella4@gentoo.org> +cssselect-0.9.1.ebuild:
+  bump
 
   18 Jan 2014; Markus Meier <maekke@gentoo.org> cssselect-0.7.1-r1.ebuild:
   arm stable, bug #450174
