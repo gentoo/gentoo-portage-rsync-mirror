@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kuroo4
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo4/ChangeLog,v 1.9 2013/04/10 21:22:15 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo4/ChangeLog,v 1.10 2014/03/20 20:08:01 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> -kuroo4-0.90.3.ebuild:
+  Remove old.
 
 *kuroo4-0.90.4 (10 Apr 2013)
 

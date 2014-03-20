@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.16.2.ebuild,v 1.1 2013/12/16 05:17:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.16.2.ebuild,v 1.2 2014/03/20 20:25:14 johu Exp $
 
-EAPI=4
+EAPI=5
 KDE_REQUIRED="optional"
 KDE_HANDBOOK="optional"
 KDE_LINGUAS="de cs es fr hu it"
@@ -17,11 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sys-libs/readline
-	virtual/libusb:0
+DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qt3support:4"
+	dev-qt/qt3support:4
+	sys-libs/readline
+	virtual/libusb:0
+"
 RDEPEND="${DEPEND}"
 
 DOCS=( Changelog README TODO )

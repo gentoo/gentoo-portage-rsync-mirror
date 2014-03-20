@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/piklab
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/ChangeLog,v 1.9 2013/12/16 05:17:38 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/ChangeLog,v 1.10 2014/03/20 20:25:14 johu Exp $
+
+  20 Mar 2014; Johannes Huber <johu@gentoo.org> -piklab-0.16.1.ebuild,
+  piklab-0.16.2.ebuild:
+  EAPI 5, sort deps. Remove old.
 
 *piklab-0.16.2 (16 Dec 2013)
 
