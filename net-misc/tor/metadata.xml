@@ -6,12 +6,12 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
-		<flag name='bufferevents'>Use Libevent's buffered IO</flag>
+		<flag name='bufferevents'>Use libevent's buffered IO implementation (unstable, buggy)</flag>
 		<flag name='ecc'>Enable Elliptical Curve Cyptography</flag>
 		<flag name='stats'>Enable to keep track of how much of each kind of resource we download</flag>
 		<flag name='nat-pmp'>Enable NAT Port Mapping Protocol</flag>
 		<flag name='tor-hardening'>Compile tor with hardening on vanilla compilers/linkers</flag>
 		<flag name='transparent-proxy'>Enable transparent proxying</flag>
-		<flag name='web'>Enable tor2web support</flag>
+		<flag name='web'>Build a tor2web service instead of a tor client</flag>
 	</use>
 </pkgmetadata>

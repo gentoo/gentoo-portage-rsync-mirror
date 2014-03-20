@@ -22,7 +22,9 @@
                 <name>Ambroz Bizjak</name>
         </maintainer>
         <doc lang="en">https://code.google.com/p/badvpn/w/list</doc>
-        <bugs-to>https://code.google.com/p/badvpn/issues/list</bugs-to>
+		<bugs-to>https://github.com/ambrop72/badvpn/issues</bugs-to>
+		<remote-id type='github'>ambrop72/badvpn</remote-id>
+		<remote-id type="google-code">badvpn</remote-id>
 	</upstream>
 	<use>
 		<flag name="client">Build the badvpn-client program, a daemon that
@@ -44,7 +46,7 @@
 		frames), and can be secured with a multitude of mechanisms.
 
 		The BadVPN package also includes other network-related software,
-		like tun2socks and NCD. 
+		like tun2socks and NCD.
 	</longdescription>
 </pkgmetadata>
 

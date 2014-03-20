@@ -1,20 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.0.ebuild,v 1.2 2014/02/01 19:15:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.80_p5065-r1.ebuild,v 1.1 2014/03/20 19:10:55 armin76 Exp $
 
 EAPI="4"
 
 inherit eutils cmake-utils autotools java-pkg-opt-2 flag-o-matic
 
 PATCHVER="0.1"
-XSERVER_VERSION="1.14.3"
+XSERVER_VERSION="1.14.2"
 OPENGL_DIR="xorg-x11"
-#MY_P="${PN}-1.2.80-20130314svn5065"
-#S="${WORKDIR}/${MY_P}"
+MY_P="${PN}-1.2.80-20130314svn5065"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.tigervnc.org"
-SRC_URI="mirror://sourceforge/tigervnc/${P}.tar.bz2
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/tigervnc/tigervnc-1.2.80-20130314svn5065.tar.bz2/4522c6f107dbe778f197b2294c0eb867/tigervnc-1.2.80-20130314svn5065.tar.bz2
 	mirror://gentoo/${PN}.png
 	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2
 	http://dev.gentoo.org/~armin76/dist/${P}-patches-${PATCHVER}.tar.bz2
@@ -33,7 +33,6 @@ RDEPEND="virtual/jpeg:0
 	java? ( >=virtual/jre-1.5 )
 	pam? ( virtual/pam )
 	server? (
-		dev-lang/perl
 		>=x11-libs/libXi-1.2.99.1
 		>=x11-libs/libXfont-1.4.2
 		>=x11-libs/libxkbfile-1.0.4
@@ -64,7 +63,6 @@ DEPEND="${RDEPEND}
 		>=x11-proto/damageproto-1.1
 		>=x11-proto/fixesproto-5.0
 		>=x11-proto/fontsproto-2.0.2
-		>=x11-proto/glproto-1.4.16
 		>=x11-proto/randrproto-1.4.0
 		>=x11-proto/renderproto-0.11
 		>=x11-proto/resourceproto-1.0.2
@@ -107,6 +105,7 @@ src_prepare() {
 		rm "${WORKDIR}"/patches/*_server_*
 	fi
 
+	epatch "${FILESDIR}"/CVE-2014-0011.patch
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" epatch
 
