@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-3.13.ebuild,v 1.1 2014/01/22 05:11:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-3.13.ebuild,v 1.2 2014/03/21 00:32:14 vapier Exp $
 
 EAPI="4"
 
 ETYPE="headers"
-H_SUPPORTEDARCH="alpha amd64 arm arm64 avr32 bfin cris frv hexagon hppa ia64 m68k metag mips openrisc ppc ppc64 s390 score sh sparc tile x86 xtensa"
+H_SUPPORTEDARCH="alpha amd64 arc arm arm64 avr32 bfin cris frv hexagon hppa ia64 m32r m68k metag microblaze mips mn10300 openrisc ppc ppc64 s390 score sh sparc tile x86 xtensa"
 inherit kernel-2
 detect_version
 

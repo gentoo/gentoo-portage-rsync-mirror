@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.404 2014/01/22 05:11:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.405 2014/03/21 00:32:14 vapier Exp $
+
+  21 Mar 2014; Mike Frysinger <vapier@gentoo.org> linux-headers-3.13.ebuild:
+  Add a few more supported arches.
 
 *linux-headers-3.13 (22 Jan 2014)
 
