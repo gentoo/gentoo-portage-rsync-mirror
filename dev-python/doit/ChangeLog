@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/doit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/ChangeLog,v 1.6 2013/10/06 05:58:37 yngwin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/ChangeLog,v 1.7 2014/03/21 07:00:31 idella4 Exp $
+
+*doit-0.23.0-r1 (21 Mar 2014)
+
+  21 Mar 2014; Ian Delaney <idella4@gentoo.org> +doit-0.23.0-r1.ebuild,
+  -files/doit-0.16.1-setup.py-encoding.patch:
+  revbump; update deps, rm old patch, fix test phase, fixes Bug 503616 by eroen
 
 *doit-0.23.0 (06 Oct 2013)
 
