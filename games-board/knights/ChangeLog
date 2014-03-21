@@ -1,6 +1,11 @@
 # ChangeLog for games-board/knights
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.36 2012/11/24 15:19:15 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.37 2014/03/21 19:34:52 johu Exp $
+
+*knights-2.5.0-r1 (21 Mar 2014)
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> +knights-2.5.0-r1.ebuild:
+  Revision bump to EAPI 5.
 
   24 Nov 2012; Johannes Huber <johu@gentoo.org> -knights-2.4.2.ebuild:
   Remove old.

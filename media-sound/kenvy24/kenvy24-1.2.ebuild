@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24/kenvy24-1.2.ebuild,v 1.3 2011/10/28 23:41:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kenvy24/kenvy24-1.2.ebuild,v 1.4 2014/03/21 19:48:56 johu Exp $
 
-EAPI=4
+EAPI=5
 # po/ directory is disabled in CMakeLists.txt
 # KDE_LINGUAS="es fr pl ro"
 inherit kde4-base

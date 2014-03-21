@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qtmpc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/ChangeLog,v 1.3 2011/11/20 21:28:36 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/ChangeLog,v 1.4 2014/03/21 19:54:57 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> qtmpc-0.6.1.ebuild:
+  Bump to EAPI 5.
 
   20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> qtmpc-0.6.1.ebuild,
   +files/qtmpc-0.6.1-underlinking.patch:
@@ -14,4 +17,3 @@
   12 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +qtmpc-0.6.1.ebuild,
   +metadata.xml:
   Initial commit, looks like decent kde mpd client.
-

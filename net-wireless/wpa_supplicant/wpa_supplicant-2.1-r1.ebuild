@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.1-r1.ebuild,v 1.1 2014/02/25 07:53:52 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.1-r1.ebuild,v 1.2 2014/03/21 19:56:13 gurligebis Exp $
 
 EAPI=4
 
@@ -291,7 +291,6 @@ src_install() {
 		newins dbus-wpa_supplicant.conf wpa_supplicant.conf
 		insinto /usr/share/dbus-1/system-services
 		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service
-		keepdir /var/run/wpa_supplicant
 		popd > /dev/null
 	fi
 

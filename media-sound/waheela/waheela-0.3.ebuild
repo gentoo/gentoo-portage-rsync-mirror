@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waheela/waheela-0.3.ebuild,v 1.2 2011/10/28 23:28:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waheela/waheela-0.3.ebuild,v 1.3 2014/03/21 19:56:06 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 

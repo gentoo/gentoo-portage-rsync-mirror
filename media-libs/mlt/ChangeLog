@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.107 2013/07/12 13:11:34 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.108 2014/03/21 19:33:35 polynomial-c Exp $
+
+  21 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> mlt-0.9.0.ebuild,
+  +files/mlt-0.9.0-freetype251.patch:
+  Fixed compilation with >=freetype-2.5.1 (bug #504332).
 
   12 Jul 2013; Alexis Ballier <aballier@gentoo.org> mlt-0.8.2.ebuild,
   mlt-0.8.8.ebuild, mlt-0.9.0.ebuild:

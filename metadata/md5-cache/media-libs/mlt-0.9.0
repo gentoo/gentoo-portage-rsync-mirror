@@ -10,4 +10,4 @@ RDEPEND=ffmpeg? ( virtual/ffmpeg[vdpau?] ) dv? ( >=media-libs/libdv-0.104 ) xml?
 SLOT=0
 SRC_URI=mirror://sourceforge/mlt/mlt-0.9.0.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=38c05ef18cf7aa58dd8e8eddaca41c1d
+_md5_=28d4ea933b7de620768e45ce47e6413b

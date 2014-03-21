@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/konvertible/konvertible-1.0.1.ebuild,v 1.1 2011/03/27 13:24:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/konvertible/konvertible-1.0.1.ebuild,v 1.2 2014/03/21 19:51:54 johu Exp $
 
-EAPI=4
+EAPI=5
+
 inherit kde4-base
 
 DESCRIPTION="A program to convert audio formats with FFmpeg"

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krosswordpuzzle/krosswordpuzzle-0.15.6.2.1259326.ebuild,v 1.1 2011/10/17 21:17:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krosswordpuzzle/krosswordpuzzle-0.15.6.2.1259326.ebuild,v 1.2 2014/03/21 19:38:50 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 
-DESCRIPTION="Crossword playing game and editor for KDE 4"
+DESCRIPTION="Crossword playing game and editor for KDE"
 HOMEPAGE="http://kde-apps.org/content/show.php/KrossWordPuzzle?content=111726"
 SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz"
 

@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/kmuddy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.38 2012/11/14 12:33:33 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.39 2014/03/21 19:37:36 johu Exp $
+
+*kmuddy-1.0.1-r3 (21 Mar 2014)
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> +kmuddy-1.0.1-r3.ebuild:
+  Revision bump to EAPI 5.
 
   14 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> -kmuddy-1.0.1-r1.ebuild,
   kmuddy-1.0.1-r2.ebuild:

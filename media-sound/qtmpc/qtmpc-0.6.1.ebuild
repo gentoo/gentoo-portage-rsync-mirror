@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/qtmpc-0.6.1.ebuild,v 1.2 2011/11/20 21:28:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/qtmpc-0.6.1.ebuild,v 1.3 2014/03/21 19:54:57 johu Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P="QtMPC-${PV}"
 inherit kde4-base
