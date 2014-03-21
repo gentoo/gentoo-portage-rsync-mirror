@@ -1,10 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smaragd/smaragd-0.0.7.ebuild,v 1.2 2011/08/31 21:03:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smaragd/smaragd-0.0.7.ebuild,v 1.3 2014/03/21 21:57:57 johu Exp $
 
-EAPI=4
+EAPI=5
 
-KDE_MINIMAL="4.6"
 inherit kde4-base
 
 DESCRIPTION="KWin theme engine that uses Emerald themes"
