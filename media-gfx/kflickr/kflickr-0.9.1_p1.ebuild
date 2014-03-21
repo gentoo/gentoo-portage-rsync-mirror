@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kflickr/kflickr-0.9.1_p1.ebuild,v 1.4 2011/10/29 00:01:38 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kflickr/kflickr-0.9.1_p1.ebuild,v 1.5 2014/03/21 20:44:34 johu Exp $
 
-EAPI=4
+EAPI=5
+
 inherit kde4-base
 
-DESCRIPTION="A flickr.com image uploading program for KDE"
+DESCRIPTION="KDE flickr.com image uploading program"
 HOMEPAGE="http://kflickr.sourceforge.net/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kgraphviewer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/ChangeLog,v 1.8 2012/07/10 16:32:16 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/ChangeLog,v 1.9 2014/03/21 20:48:18 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> kgraphviewer-2.1.1.ebuild:
+  Bump to EAPI 5.
 
   10 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   +files/kgraphviewer-2.1.1-boost-1.50.patch, kgraphviewer-2.1.1.ebuild:

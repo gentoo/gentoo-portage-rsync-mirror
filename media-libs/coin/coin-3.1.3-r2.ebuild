@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r2.ebuild,v 1.6 2013/08/09 13:42:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r2.ebuild,v 1.7 2014/03/21 20:53:01 polynomial-c Exp $
 
 EAPI=5
 
@@ -45,6 +45,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.1.0-javascript.patch
 	"${FILESDIR}"/${P}-pkgconfig-partial.patch
 	"${FILESDIR}"/${P}-gcc-4.7.patch
+	"${FILESDIR}"/${P}-freetype251.patch
 )
 
 DOCS=(
