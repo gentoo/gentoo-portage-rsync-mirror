@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygments
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.117 2013/09/05 18:47:03 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.118 2014/03/21 14:58:55 idella4 Exp $
+
+*pygments-1.6-r1 (21 Mar 2014)
+
+  21 Mar 2014; Ian Delaney <idella4@gentoo.org> +pygments-1.6-r1.ebuild:
+  revbump; update to install bundled bash-completion, patch by E. Uggedal, fixes
+  Bug 01972 by E. Uggedal
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pygments-1.5-r1.ebuild,
   pygments-1.6.ebuild:
