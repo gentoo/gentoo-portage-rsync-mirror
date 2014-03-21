@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXpm x11-libs/libXt ) X? ( x11-proto/xproto x11-apps/bdftopcf x11-apps/mkfontdir )
+DEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXpm x11-libs/libXt ) virtual/pkgconfig X? ( x11-proto/xproto x11-apps/bdftopcf x11-apps/mkfontdir )
 DESCRIPTION=The ultimate old-school single player dungeon exploration game
 EAPI=2
 HOMEPAGE=http://www.nethack.org/
@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXpm x11-libs/
 SLOT=0
 SRC_URI=mirror://sourceforge/nethack/nethack-343-src.tgz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=3da753e884eff2c501319d18ef049ea2
+_md5_=237f7981b5bc7d5e0b1e3c9e33da66e0

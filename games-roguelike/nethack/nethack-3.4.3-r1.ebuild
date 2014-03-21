@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.27 2010/03/02 21:10:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.28 2014/03/21 05:11:09 jer Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic games
@@ -22,6 +22,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5
 		x11-libs/libXt
 	)"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	X? (
 		x11-proto/xproto
 		x11-apps/bdftopcf
@@ -65,13 +66,20 @@ src_prepare() {
 			|| die "sed Makefile failed"
 	fi
 
+	# sys-libs/ncurses[tinfo]
+	sed -i \
+		-e '/^WINTTYLIB/s| = .*| = '"$(
+				$(tc-getPKG_CONFIG) --libs ncurses
+			)"'|g' \
+		src/Makefile || die
+
 	if use X ; then
 		epatch "${FILESDIR}/${PV}-X-support.patch"
 	fi
 }
 
 src_compile() {
-	local lflags="-L/usr/X11R6/lib"
+	local lflags="${LDFLAGS}"
 
 	cd "${S}"/src
 	append-flags -I../include
@@ -88,7 +96,11 @@ src_compile() {
 		LFLAGS="${lflags}" \
 		|| die "main build failed"
 	cd "${S}"/util
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" recover || die "util build failed"
+	emake \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LFLAGS="${lflags}" \
+		recover || die "util build failed"
 }
 
 src_install() {
