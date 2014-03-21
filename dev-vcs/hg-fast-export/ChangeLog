@@ -1,0 +1,9 @@
+# ChangeLog for dev-vcs/hg-fast-export
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-fast-export/ChangeLog,v 1.1 2014/03/21 22:34:00 ottxor Exp $
+
+*hg-fast-export-20140316 (21 Mar 2014)
+
+  21 Mar 2014; Christoph Junghans <ottxor@gentoo.org>
+  +hg-fast-export-20140316.ebuild, +metadata.xml:
+  initial commit
