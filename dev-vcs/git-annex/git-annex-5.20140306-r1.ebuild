@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20140306-r1.ebuild,v 1.2 2014/03/18 12:17:20 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20140306-r1.ebuild,v 1.3 2014/03/21 11:30:25 qnikst Exp $
 
 EAPI=5
 
@@ -154,6 +154,6 @@ src_install() {
 	dodoc CHANGELOG README
 	if use webapp ; then
 		doicon "${FILESDIR}"/${PN}.xpm
-		make_desktop_entry "${PN} webapp" "git-annex" ${PN}.xpm "Utils"
+		make_desktop_entry "${PN} webapp" "git-annex" ${PN}.xpm "Utility"
 	fi
 }
