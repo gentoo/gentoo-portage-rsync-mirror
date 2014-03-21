@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.132 2014/03/16 17:14:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.133 2014/03/21 09:38:43 graaff Exp $
+
+*zentest-4.9.5-r1 (21 Mar 2014)
+
+  21 Mar 2014; Hans de Graaff <graaff@gentoo.org> +zentest-4.9.5-r1.ebuild:
+  Revision bump for ruby21. Build documentation directly to work around hoe
+  incompatibilities.
 
   16 Mar 2014; Markus Meier <maekke@gentoo.org> zentest-4.9.5.ebuild:
   arm stable, bug #490180
