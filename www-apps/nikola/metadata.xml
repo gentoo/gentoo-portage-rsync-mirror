@@ -13,6 +13,12 @@
     <flag name='charts'>
       Support chart generation through <pkg>dev-python/pygal</pkg>
     </flag>
+	<flag name='hyphenation'>
+      Add hyphenation support through <pkg>dev-python/pyphen</pkg>
+    </flag>
+	<flag name='ipython'>
+      Add IPython notebook compilation and LESS support
+    </flag>
     <flag name='jinja'>
       Add support for <pkg>dev-python/jinja</pkg> as alternative templating
 	  engine to Mako
