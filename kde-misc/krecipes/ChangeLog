@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krecipes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.46 2012/08/06 11:44:33 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.47 2014/03/21 18:13:19 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> krecipes-2.0_beta2-r1.ebuild:
+  Bump to EAPI 5.
 
 *krecipes-2.0_beta2-r1 (06 Aug 2012)
 
