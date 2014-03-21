@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/apitrace
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.17 2013/07/17 21:55:34 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.18 2014/03/21 22:15:40 vapier Exp $
+
+*apitrace-3.0-r2 (21 Mar 2014)
+
+  21 Mar 2014; Mike Frysinger <vapier@gentoo.org> +apitrace-3.0-r2.ebuild:
+  Convert to python-any-r1 eclass.
 
   17 Jul 2013; Tim Harder <radhermit@gentoo.org> apitrace-3.0-r1.ebuild:
   Use cmake-utils_src_prepare instead of base_src_prepare (bug #477228) and

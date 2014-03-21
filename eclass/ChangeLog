@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1181 2014/03/19 00:55:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1182 2014/03/21 22:03:00 robbat2 Exp $
+
+  21 Mar 2014; Robin H. Johnson <robbat2@gentoo.org> linux-info.eclass:
+  linux-info: Bug #504346: Change one message from error to warning, kernel
+  sources are optional for most uses (checking configs), and knowledge if the
+  lack of kernel sources being missing is fatal should be left to the ebuild.
 
   19 Mar 2014; Julian Ospald <hasufell@gentoo.org> mysql-cmake.eclass:
   respect CFLAGS wrt #497532

@@ -9,5 +9,5 @@ RDEPEND=selinux? ( sec-policy/selinux-mcelog )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/andikleen/mcelog/tarball/b842ecb44965722ecd67bed1ed9d900073e3313f -> mcelog-1.0_pre3_p20130621.tar.gz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b9154006065210ae2c959d5121b8602f
