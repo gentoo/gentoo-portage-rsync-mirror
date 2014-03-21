@@ -1,6 +1,18 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.22 2014/03/04 19:56:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.24 2014/03/21 11:55:07 xarthisius Exp $
+
+  21 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> megacli-8.02.21.ebuild:
+  Add change missed in previous commit
+
+*megacli-8.07.14 (21 Mar 2014)
+
+  21 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> +megacli-8.07.14.ebuild,
+  -megacli-8.07.07.ebuild, megacli-8.07.10.ebuild:
+  Fix SRC_URI wrt #504858. Thanks to Anthony Ryan <anthonyryan1@gmail.com> for
+  providing updated one. Drop old. Version bump wrt #505088. Thanks to Martino
+  Dell'Ambrogio <tillo@tillo.ch> and johnny99 <john@stilen.com> for updated
+  ebuild
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> megacli-8.07.10.ebuild:
   Stable for x86, wrt bug #495942

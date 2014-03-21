@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.10.ebuild,v 1.3 2014/03/04 19:56:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.10.ebuild,v 1.4 2014/03/21 11:53:47 xarthisius Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ MY_P=${PV}_MegaCLI_Linux
 
 DESCRIPTION="LSI Logic MegaRAID Command Line Interface management tool"
 HOMEPAGE="http://www.lsi.com/"
-SRC_URI="http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/${MY_P}.zip"
+SRC_URI="http://www.lsi.com/downloads/Public/RAID%20Controllers/RAID%20Controllers%20Common%20Files/${MY_P}.zip"
 
 LICENSE="LSI"
 SLOT="0"
