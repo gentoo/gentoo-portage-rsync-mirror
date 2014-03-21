@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/smooth-tasks-0_p20120130.ebuild,v 1.2 2012/02/01 16:02:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/smooth-tasks-0_p20120130.ebuild,v 1.3 2014/03/21 19:07:46 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_MINIMAL="4.8"
 KDE_LINGUAS="cs de fr hu pl ru zh_CN"
@@ -24,8 +24,6 @@ RDEPEND="${DEPEND}
 	$(add_kdebase_dep plasma-workspace)
 "
 
-PATCHES=(
-	"${FILESDIR}/${P}-kde48.patch"
-)
+PATCHES=( "${FILESDIR}/${P}-kde48.patch" )
 
 S="${WORKDIR}/${PN}"

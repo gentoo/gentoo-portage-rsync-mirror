@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/kportagetray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.13 2013/03/17 16:04:23 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.14 2014/03/21 19:27:00 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> -kportagetray-0.2.4.ebuild,
+  kportagetray-0.2.4-r1.ebuild:
+  Sync with kde overlay. Bumps EAPI to 5. Migrate to newer python eclass. Remove
+  old.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

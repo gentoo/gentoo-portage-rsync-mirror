@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/smooth-tasks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/ChangeLog,v 1.6 2012/02/01 16:02:36 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/ChangeLog,v 1.7 2014/03/21 19:07:46 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> smooth-tasks-0_p20120130.ebuild:
+  Bump to EAPI 5.
 
   01 Feb 2012; Johannes Huber <johu@gentoo.org> smooth-tasks-0_p20120130.ebuild:
   Set KDE_MINIMAL to 4.8, fixes bug #401759.
@@ -29,4 +32,3 @@
   06 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   +smooth-tasks-20101106.ebuild, +metadata.xml:
   New plasmoid, fixes bug 281943
-

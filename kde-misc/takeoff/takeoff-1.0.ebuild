@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/takeoff/takeoff-1.0.ebuild,v 1.2 2012/05/09 19:17:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/takeoff/takeoff-1.0.ebuild,v 1.3 2014/03/21 19:12:56 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_MINIMAL="4.8"
 KDE_LINGUAS="ca de es el gl it pl ru tr"
@@ -16,7 +16,7 @@ SRC_URI="https://takeoff-launcher.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE=""
+IUSE="debug"
 
 DEPEND="$(add_kdebase_dep plasma-workspace)"
 RDEPEND="${DEPEND}"

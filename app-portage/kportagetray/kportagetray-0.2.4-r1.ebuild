@@ -1,14 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4-r1.ebuild,v 1.1 2012/03/24 19:40:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4-r1.ebuild,v 1.2 2014/03/21 19:27:00 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS="pt_BR"
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-KDE_SCM="git"
-inherit kde4-base python
+inherit kde4-base python-r1
 
 EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git"
 
@@ -22,6 +21,7 @@ SLOT="4"
 IUSE=""
 
 DEPEND="
+	${PYTHON_DEPS}
 	dev-python/PyQt4[svg,dbus]
 	$(add_kdebase_dep pykde4)
 "
@@ -37,18 +37,3 @@ PATCHES=(
 	"${FILESDIR}/${P}-fix_class_name.patch"
 	"${FILESDIR}/${P}-kdesu46.patch"
 )
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-	kde4-base_pkg_setup
-}
-
-src_prepare() {
-	python_convert_shebangs -r 2 .
-	kde4-base_src_prepare
-}
-
-pkg_postinst() {
-	kde4-base_pkg_postinst
-}

@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dbus/ChangeLog,v 1.50 2014/01/12 20:22:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dbus/ChangeLog,v 1.51 2014/03/21 19:13:13 swift Exp $
+
+*selinux-dbus-2.20140311-r1 (21 Mar 2014)
+
+  21 Mar 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-dbus-2.20140311-r1.ebuild:
+  New upstream refpolicy release
 
   12 Jan 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-dbus-2.20130424-r4.ebuild:
