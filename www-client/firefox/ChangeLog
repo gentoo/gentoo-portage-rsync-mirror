@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.312 2014/03/21 03:29:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.313 2014/03/21 13:38:05 polynomial-c Exp $
+
+  21 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> firefox-28.0.ebuild:
+  Fixed dependency on libvpx (bug #505258).
 
 *firefox-28.0 (21 Mar 2014)
 

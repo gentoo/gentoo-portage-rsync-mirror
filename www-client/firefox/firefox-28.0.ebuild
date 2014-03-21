@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-28.0.ebuild,v 1.1 2014/03/21 03:29:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-28.0.ebuild,v 1.2 2014/03/21 13:38:05 polynomial-c Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -63,7 +63,7 @@ RDEPEND="
 	system-icu? ( >=dev-libs/icu-51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( >=dev-db/sqlite-3.8.1.3:3[secure-delete,debug=] )
-	>=media-libs/libvpx-1.0.0
+	>=media-libs/libvpx-1.3.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"
 
