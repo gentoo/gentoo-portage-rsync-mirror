@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.4.ebuild,v 1.1 2013/11/08 04:12:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.4-r1.ebuild,v 1.1 2014/03/21 17:17:07 ulm Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ else
 		mirror://gentoo/${PN}.info-4.6.2.tar.xz"
 fi
 
-LICENSE="gnuplot GPL-2 bitmap? ( free-noncomm )"
+LICENSE="gnuplot GPL-2+ bitmap? ( free-noncomm )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="aqua bitmap cairo doc emacs examples +gd ggi latex lua plotutils qt4 readline svga thin-splines wxwidgets X xemacs"
@@ -141,7 +141,7 @@ src_configure() {
 			# Live ebuild needs an Emacs to build gnuplot.texi
 			if has_version virtual/emacs; then emacs=emacs
 			elif has_version app-xemacs/texinfo; then emacs=xemacs; fi
-			# for emacs != no gnuplot will install lisp files in 
+			# for emacs != no gnuplot will install lisp files in
 			# ${lispdir}/ which will / for emtpy lispdir
 			lispdir="${T}"
 		fi
@@ -191,7 +191,7 @@ src_compile() {
 }
 
 src_install () {
-	emake -j1 DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install install-info
 
 	if use emacs; then
 		# Gentoo Emacs site-lisp configuration
