@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rexical
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.35 2013/12/26 14:59:34 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.36 2014/03/21 12:50:09 graaff Exp $
+
+*rexical-1.0.5-r3 (21 Mar 2014)
+
+  21 Mar 2014; Hans de Graaff <graaff@gentoo.org> +rexical-1.0.5-r3.ebuild:
+  Revision bump to add ruby21 support. Fix tests to work with newer minitest.
+  Drop ruby18.
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> rexical-1.0.5-r1.ebuild:
   arm stable, bug #493780

@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.0.ebuild,v 1.3 2014/01/02 07:16:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.0.ebuild,v 1.4 2014/03/21 12:56:30 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
-RUBY_FAKEGEM_TASK_DOC="docs"
-RUBY_FAKEGEM_DOCDIR="doc"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc CHANGELOG.ja.rdoc README.rdoc README.ja.rdoc ROADMAP.md STANDARD_RESPONSES.md"
 
 inherit ruby-fakegem eutils multilib
@@ -33,10 +32,9 @@ DEPEND="${DEPEND}
 ruby_add_bdepend "
 	dev-ruby/rake-compiler
 	dev-ruby/rexical
-	dev-ruby/hoe
 	dev-ruby/rdoc
 	dev-ruby/racc
-	test? ( dev-ruby/minitest )"
+	test? ( dev-ruby/hoe dev-ruby/minitest )"
 
 all_ruby_prepare() {
 	sed -i \
