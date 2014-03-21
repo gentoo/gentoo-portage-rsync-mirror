@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/plasma-widget-message-indicator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/ChangeLog,v 1.14 2012/07/31 11:28:21 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/ChangeLog,v 1.15 2014/03/21 18:57:18 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org>
+  plasma-widget-message-indicator-0.5.8.ebuild:
+  Bump to EAPI 5.
 
   31 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   +files/plasma-widget-message-indicator-0.5.8-libindicate.patch,

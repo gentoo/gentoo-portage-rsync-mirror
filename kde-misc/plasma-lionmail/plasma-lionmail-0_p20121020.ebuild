@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/plasma-lionmail-0_p20121020.ebuild,v 1.2 2013/03/02 21:30:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/plasma-lionmail-0_p20121020.ebuild,v 1.3 2014/03/21 18:49:30 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base
 
