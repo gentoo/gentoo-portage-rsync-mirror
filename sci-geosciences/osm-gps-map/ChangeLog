@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/osm-gps-map
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/ChangeLog,v 1.7 2013/07/09 14:42:53 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/ChangeLog,v 1.8 2014/03/21 16:31:10 tomwij Exp $
+
+  21 Mar 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Updated Aaron's e-mail address.
 
   09 Jul 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Removed myself from metadata.xml to avoid duplication, as I am part of proxy-
