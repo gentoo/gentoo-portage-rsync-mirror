@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.23 2014/03/20 09:10:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.24 2014/03/21 08:56:02 nimiux Exp $
+
+  21 Mar 2014; Chema Alonso <nimiux@gentoo.org> rapidsvn-0.12.1-r1.ebuild:
+  Stable for amd64 wrt bug #502814
 
   20 Mar 2014; Justin Lecher <jlec@gentoo.org> rapidsvn-0.12.1-r1.ebuild:
   Add missing dep for doc building, #504948
