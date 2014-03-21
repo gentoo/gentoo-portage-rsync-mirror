@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gluon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/ChangeLog,v 1.5 2013/03/02 21:43:04 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/ChangeLog,v 1.6 2014/03/21 21:06:52 johu Exp $
+
+  21 Mar 2014; Johannes Huber <johu@gentoo.org> -gluon-0.70.0.ebuild,
+  gluon-0.71.0.ebuild:
+  Bump to EAPI 5, remove old.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gluon-0.71.0.ebuild:
   Move Qt dependencies to the new category

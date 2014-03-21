@@ -1,14 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-3.2.0.ebuild,v 1.3 2013/06/30 10:14:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-3.5.0-r1.ebuild,v 1.1 2014/03/21 21:24:30 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS=""
 KDE_MINIMAL="4.10"
-
 CMAKE_MIN_VERSION=2.8
-
 inherit kde4-base
 
 MY_PV=${PV/_/-}
@@ -19,8 +17,8 @@ DESCRIPTION="Library for accessing the features of social networking site vkonta
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
+IUSE="debug"
 SLOT=4
 
 DEPEND=">=dev-libs/qjson-0.7.0"

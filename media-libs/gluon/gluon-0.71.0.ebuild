@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/gluon-0.71.0.ebuild,v 1.2 2013/03/02 21:43:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/gluon-0.71.0.ebuild,v 1.3 2014/03/21 21:06:52 johu Exp $
 
-EAPI=4
+EAPI=5
 
 OPENGL_REQUIRED="always"
 inherit kde4-base versionator
 
-DESCRIPTION="Gluon is a Free and Open Source framework for creating and distributing games."
+DESCRIPTION="Free and Open Source framework for creating and distributing games"
 HOMEPAGE="http://gluon.tuxfamily.org/"
 SRC_URI="mirror://kde/unstable/${PN}/$(get_version_component_range 1-2)/src/${P}.tar.gz"
 

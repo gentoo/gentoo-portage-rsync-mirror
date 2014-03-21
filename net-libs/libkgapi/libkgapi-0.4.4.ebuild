@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/libkgapi-0.4.4.ebuild,v 1.8 2013/05/30 11:47:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/libkgapi-0.4.4.ebuild,v 1.9 2014/03/21 21:21:39 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS=""
-
 inherit kde4-base
 
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
