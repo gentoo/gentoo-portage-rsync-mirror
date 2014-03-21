@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.180 2014/03/07 08:51:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.181 2014/03/21 17:00:29 jer Exp $
+
+  21 Mar 2014; Jeroen Roovers <jer@gentoo.org> easytag-2.1.10-r1.ebuild:
+  Marked ~hppa (bug #503608).
 
 *easytag-2.1.10-r1 (07 Mar 2014)
 *easytag-2.1.9-r2 (07 Mar 2014)

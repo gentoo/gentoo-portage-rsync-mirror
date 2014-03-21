@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.30 2014/03/06 12:13:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.32 2014/03/21 16:35:26 ago Exp $
+
+  21 Mar 2014; Agostino Sarubbo <ago@gentoo.org> -trojita-0.4.ebuild:
+  Remove old
+
+*trojita-0.4.1 (21 Mar 2014)
+
+  21 Mar 2014; Agostino Sarubbo <ago@gentoo.org> +trojita-0.4.1.ebuild:
+  Version bump to 0.4.1 to fix CVE-2014-2567, wrt bug #505146
 
 *trojita-0.4 (06 Mar 2014)
 

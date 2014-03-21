@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.74 2014/02/19 14:44:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.75 2014/03/21 16:34:01 tomwij Exp $
+
+  21 Mar 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Updated Aaron's e-mail address.
 
   19 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
   +files/ipv6calc-0.96.0-fix-link-order.patch, ipv6calc-0.96.0.ebuild:

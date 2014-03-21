@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.10-r1.ebuild,v 1.1 2014/03/07 08:51:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.10-r1.ebuild,v 1.2 2014/03/21 17:00:29 jer Exp $
 
 EAPI=5
 inherit eutils autotools gnome.org fdo-mime
@@ -10,7 +10,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/EasyTAG"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="flac mp3 mp4 nls speex vorbis wavpack"
 
 RDEPEND=">=x11-libs/gtk+-2.24:2

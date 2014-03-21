@@ -4,10 +4,10 @@ DESCRIPTION=GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media ta
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Apps/EasyTAG
 IUSE=flac mp3 mp4 nls speex vorbis wavpack
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.24:2 mp3? ( >=media-libs/id3lib-3.8.3-r7 media-libs/libid3tag ) flac? ( media-libs/flac media-libs/libvorbis ) mp4? ( media-libs/taglib[mp4] ) vorbis? ( media-libs/libvorbis ) wavpack? ( media-sound/wavpack ) speex? ( media-libs/speex media-libs/libvorbis )
 SLOT=0
 SRC_URI=mirror://gnome/sources/easytag/2.1/easytag-2.1.10.tar.xz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=2776c5382be193630cea8581a2e2ca18
+_md5_=ca182e174295f695502fcbd282659c00
