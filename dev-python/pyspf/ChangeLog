@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.23 2014/02/24 06:05:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.24 2014/03/21 04:28:39 idella4 Exp $
+
+*pyspf-2.0.8-r1 (21 Mar 2014)
+
+  21 Mar 2014; Ian Delaney <idella4@gentoo.org> +pyspf-2.0.8-r1.ebuild:
+  revbump; Add py3 support, update deps & new PYTHON_REQ_USE setting for tests,
+  thx to mjo for extensive testing, fixes Bugs #503266 #503264 by mjo
 
 *pyspf-2.0.8 (24 Feb 2014)
 
