@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/outerspace
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.21 2013/12/24 12:48:20 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.22 2014/03/21 03:44:45 mr_bones_ Exp $
+
+  21 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -outerspace-0.5.67-r1.ebuild:
+  old
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> outerspace-0.5.68.ebuild:
   Stable for x86, wrt bug #490656
