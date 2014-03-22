@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/kpartsplugin-20120723-r1.ebuild,v 1.1 2014/03/21 21:44:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/kpartsplugin-20120723-r1.ebuild,v 1.2 2014/03/22 10:57:09 johu Exp $
 
-EAPI=4
+EAPI=5
 
 inherit kde4-base nsplugins
 
