@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-sv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sv/ChangeLog,v 1.36 2014/01/05 11:29:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sv/ChangeLog,v 1.37 2014/03/22 18:29:32 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -myspell-sv-2.13.ebuild:
+  Remove old.
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-

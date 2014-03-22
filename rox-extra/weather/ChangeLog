@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/weather
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.21 2014/01/14 15:32:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.22 2014/03/22 18:14:10 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -weather-0.3.1.ebuild:
+  Remove old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> weather-0.3.2.ebuild:
   Stable for ppc, wrt bug #495916

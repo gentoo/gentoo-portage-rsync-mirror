@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wifi-radar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.35 2014/01/14 13:57:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.36 2014/03/22 18:20:41 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -wifi-radar-2.0.8-r1.ebuild:
+  Remove old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> wifi-radar-2.0.8-r2.ebuild:
   Stable for x86, wrt bug #495908

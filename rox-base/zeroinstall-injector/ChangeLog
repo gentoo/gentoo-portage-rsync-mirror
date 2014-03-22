@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.42 2014/01/26 12:17:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.43 2014/03/22 18:19:27 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -zeroinstall-injector-0.49.ebuild:
+  Remove old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   zeroinstall-injector-1.11.ebuild:
