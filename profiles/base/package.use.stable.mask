@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.7 2014/03/22 15:28:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.8 2014/03/22 17:27:41 floppym Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -9,10 +9,6 @@
 # Some open source OpenCL providers cause sandbox violation while accessing /dev/dri/card*
 # from a command like eg. `/usr/bin/mogrify -version`, see bug #472766
 media-gfx/imagemagick opencl
-
-# Mike Gilbert <floppym@gentoo.org> (21 Sep 2013)
-# sys-fs/zfs isn't going stable anytime soon.
-sys-boot/grub libzfs
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 Mar 2013)
 # No stable sci-chemistry/avogadro yet but we want kde-4.10 to go stable
