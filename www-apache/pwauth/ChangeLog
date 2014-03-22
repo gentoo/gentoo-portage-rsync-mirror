@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/pwauth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/pwauth/ChangeLog,v 1.8 2013/01/01 16:26:42 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/pwauth/ChangeLog,v 1.9 2014/03/22 18:00:15 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/pwauth-gentoo.patch, -pwauth-2.3.5.ebuild:
+  Remove old.
 
 *pwauth-2.3.10 (01 Jan 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/publicfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.31 2014/01/14 15:34:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.32 2014/03/22 17:58:07 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -publicfile-0.52-r3.ebuild:
+  Remove old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> publicfile-0.52-r4.ebuild:
   Stable for ppc, wrt bug #495974
