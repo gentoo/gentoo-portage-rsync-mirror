@@ -1,23 +1,23 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.57.ebuild,v 1.4 2012/06/08 11:44:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.59.ebuild,v 1.1 2014/03/22 11:49:03 angelos Exp $
 
 EAPI=4
 inherit base linux-mod toolchain-funcs
 
 DESCRIPTION="Wrapper for using Windows drivers for some wireless cards"
 HOMEPAGE="http://ndiswrapper.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/stable/${PV}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug usb"
 
 DEPEND="sys-apps/pciutils"
 RDEPEND="${DEPEND}
 	net-wireless/wireless-tools"
 
-PATCHES=( "${FILESDIR}"/${PN}-1.56-cflags.patch )
+PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
 MODULE_NAMES="ndiswrapper(misc:${S}/driver)"
 BUILD_TARGETS="all"
 MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")

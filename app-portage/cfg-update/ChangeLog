@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/cfg-update
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.35 2012/03/18 15:13:25 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.36 2014/03/22 11:43:41 rich0 Exp $
+
+*cfg-update-1.8.8 (22 Mar 2014)
+
+  22 Mar 2014; Richard Freeman <rich0@gentoo.org> +cfg-update-1.8.8.ebuild:
+  New release - remove need to modify .bashrc
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> cfg-update-1.8.2-r1.ebuild,
   cfg-update-1.8.7.ebuild:
