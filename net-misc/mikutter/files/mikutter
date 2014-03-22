@@ -2,5 +2,5 @@
 
 EPREFIX=${0%/usr/bin/mikutter}
 
-$EPREFIX/usr/bin/ruby19 $EPREFIX/usr/share/mikutter/mikutter.rb $*
+DISABLE_BUNDLER_SETUP= $EPREFIX/usr/bin/ruby19 $EPREFIX/usr/share/mikutter/mikutter.rb $*
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mikutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.40 2014/01/16 09:03:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.41 2014/03/22 08:29:28 naota Exp $
+
+*mikutter-0.2.2.1537 (22 Mar 2014)
+
+  22 Mar 2014; Naohiro Aota <naota@gentoo.org>
+  +files/mikutter-0.2.2.1537-disable-bundler.patch, +mikutter-0.2.2.1537.ebuild,
+  files/mikutter:
+  version bump
 
 *mikutter-0.2.2.1476 (16 Jan 2014)
 

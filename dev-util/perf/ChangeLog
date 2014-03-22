@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.28 2014/02/26 18:03:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.29 2014/03/22 08:05:34 naota Exp $
+
+*perf-3.13.1-r1 (22 Mar 2014)
+
+  22 Mar 2014; Naohiro Aota <naota@gentoo.org> +perf-3.13.1-r1.ebuild:
+  Move perf from /usr/sbin to /usr/bin #503790
 
   26 Feb 2014; Mike Frysinger <vapier@gentoo.org> perf-3.13.1.ebuild:
   Add USE=gtk to control gtk+ dep; fix by Sonny Rao.
