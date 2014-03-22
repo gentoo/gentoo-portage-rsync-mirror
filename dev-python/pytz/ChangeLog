@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.171 2014/03/19 15:23:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.173 2014/03/22 21:26:47 floppym Exp $
+
+*pytz-2014.1.1 (22 Mar 2014)
+
+  22 Mar 2014; Mike Gilbert <floppym@gentoo.org> +pytz-2014.1.1.ebuild,
+  -files/pytz-2014.1-setup.py.patch, -pytz-2014.1.ebuild:
+  Upstream already fixed the encoding issue by removing the non-ASCII character
+  from README.txt. Bug 504778.
+
+  22 Mar 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/pytz-2014.1-setup.py.patch, pytz-2014.1.ebuild:
+  Specify the correct encoding when opening README.txt in setup.py, bug 504778
+  by Alex Turbov.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pytz-2013d.ebuild:
   Stable for alpha, wrt bug #495636

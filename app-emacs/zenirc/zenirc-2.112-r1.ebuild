@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/zenirc-2.112-r1.ebuild,v 1.1 2014/02/10 17:00:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/zenirc-2.112-r1.ebuild,v 1.2 2014/03/22 21:01:24 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.zenirc.org/pub/zenirc/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 SITEFILE="50${PN}-gentoo.el"
 

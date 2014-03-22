@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15496 2014/03/22 16:57:53 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15497 2014/03/22 21:22:23 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rick Farina <zerochaos@gentoo.org> (22 Mar 2014)
+# Upstream has replaced dev-util/dissy with dev-util/emilpro
+# Please switch to emilpro or report issues in bug #505380
+# removal in 30 days.
+dev-util/dissy
 
 # Hans de Graaff <graaff@gentoo.org> (22 Mar 2014) Dead upstream (no
 # releases since 2008, website no longer available). Can only support

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/sokoban-1.4.ebuild,v 1.1 2014/02/11 07:47:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/sokoban-1.4.ebuild,v 1.2 2014/03/22 21:09:33 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://elpa.gnu.org/packages/${P}.tar"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 ELISP_REMOVE="sokoban-pkg.el"
 SITEFILE="50${PN}-gentoo.el"
