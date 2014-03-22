@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8724 2014/03/21 17:48:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8725 2014/03/22 07:16:24 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2014; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask www-apache/mod_ruby for removal, fixing bug 505236.
 
   21 Mar 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove dev-libs/libevent-2.1 mask.

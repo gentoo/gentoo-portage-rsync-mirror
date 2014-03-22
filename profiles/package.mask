@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15494 2014/03/21 17:48:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15495 2014/03/22 07:16:24 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (22 Mar 2014) Dead upstream (no
+# releases since 2008, website no longer available). Can only support
+# a single ruby version. Has security issues with shared code between
+# processes. Use a rack-based alternative instead.
+# Removal in 30 days.
+www-apache/mod_ruby
 
 # Sergey Popov <pinkbyte@gentoo.org> (20 Mar 2014)
 # Security mask of vulnerable versions, wrt bug #424167
