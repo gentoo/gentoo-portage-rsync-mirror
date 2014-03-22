@@ -1,0 +1,11 @@
+# ChangeLog for dev-vcs/git-flow
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-flow/ChangeLog,v 1.1 2014/03/22 15:49:16 johu Exp $
+
+*git-flow-0.4.1 (22 Mar 2014)
+
+  22 Mar 2014; Johannes Huber <johu@gentoo.org> +git-flow-0.4.1.ebuild,
+  +files/git-flow-0.4.1-unbundle-shflags.patch, +metadata.xml:
+  New package wrt bug #419943. Import from johu overlay. Initial ebuild by
+  Moritz Schlarb <moschlar@metalabs.de>.
+

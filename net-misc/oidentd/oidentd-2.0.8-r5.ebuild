@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r4.ebuild,v 1.9 2014/03/22 15:34:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r5.ebuild,v 1.1 2014/03/22 15:34:45 angelos Exp $
+
+EAPI=5
 
 inherit eutils systemd
 
@@ -10,32 +12,24 @@ SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug ipv6 masquerade"
 
-RDEPEND=""
-DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-masquerading.patch" \
 		"${FILESDIR}/${P}-bind-to-ipv6-too.patch"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable ipv6) \
 		$(use_enable masquerade masq) \
-		$(use_enable masquerade nat) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable masquerade nat)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed!"
+	default
 
 	dodoc AUTHORS ChangeLog README TODO NEWS \
 		"${FILESDIR}"/${PN}_masq.conf "${FILESDIR}"/${PN}.conf
@@ -45,6 +39,7 @@ src_install() {
 
 	systemd_newunit "${FILESDIR}"/${PN}_at.service ${PN}@.service
 	systemd_dounit "${FILESDIR}"/${PN}.socket
+	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
 pkg_postinst() {

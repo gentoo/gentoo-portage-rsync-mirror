@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8.ebuild,v 1.6 2014/03/20 14:14:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8.ebuild,v 1.7 2014/03/22 15:39:09 jer Exp $
 
 EAPI="5"
 
+DISTUTILS_OPTIONAL="true"
 GENTOO_DEPEND_ON_PERL="no"
 PYTHON_COMPAT=( python2_7 )
 inherit eutils distutils-r1 flag-o-matic multilib perl-module autotools

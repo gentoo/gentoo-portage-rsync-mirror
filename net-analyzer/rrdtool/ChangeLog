@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.254 2014/03/20 14:14:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.255 2014/03/22 15:39:09 jer Exp $
+
+  22 Mar 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.8.ebuild:
+  Set DISTUTILS_OPTIONAL by Bruno (bug #505344).
 
   20 Mar 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.8.ebuild:
   Stable for HPPA (bug #471894).

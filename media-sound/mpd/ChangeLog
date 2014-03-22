@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.338 2014/03/09 02:55:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.339 2014/03/22 15:59:44 angelos Exp $
+
+  22 Mar 2014; Christoph Mende <angelos@gentoo.org>
+  -files/mpd-0.17.4-mikmod-crash.patch, -mpd-0.17.4-r2.ebuild,
+  -mpd-0.18.4.ebuild, -mpd-0.18.5.ebuild, -mpd-0.18.7.ebuild,
+  files/mpd.logrotate:
+  Remove old, fix init script when running mpd under a different user (bug
+  #497854)
 
 *mpd-0.18.9 (09 Mar 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/elogviewer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.42 2013/02/17 10:05:36 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.43 2014/03/22 15:33:17 dolsen Exp $
+
+*elogviewer-2.1 (22 Mar 2014)
+
+  22 Mar 2014; Brian Dolbec <dolsen@gentoo.org> +elogviewer-2.1.ebuild:
+  Move 2.1 from the gentoo-guis overlay into the tree.
 
 *elogviewer-0.6.2-r2 (17 Feb 2013)
 

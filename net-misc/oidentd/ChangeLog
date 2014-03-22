@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/oidentd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.61 2013/05/11 17:43:31 angelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.62 2014/03/22 15:34:45 angelos Exp $
+
+*oidentd-2.0.8-r5 (22 Mar 2014)
+
+  22 Mar 2014; Christoph Mende <angelos@gentoo.org> +files/oidentd_at.service,
+  +oidentd-2.0.8-r5.ebuild, files/oidentd.service, oidentd-2.0.8-r4.ebuild:
+  Install oidentd@.service (bug #485140), bump to EAPI5
 
   11 May 2013; Christoph Mende <angelos@gentoo.org> oidentd-2.0.8-r4.ebuild:
   Update HOMEPAGE

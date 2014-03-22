@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta7.ebuild,v 1.1 2014/01/29 10:25:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.4-r1.ebuild,v 1.1 2014/03/22 15:32:07 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.dest-unreach.org/socat/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="
@@ -24,15 +24,15 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7.2.1-long-long.patch #436164
-	sed -i -e "s|/sbin/ifconfig|$(type -P ifconfig)|g" test.sh || die
-	touch doc/${PN}.1 || die
-}
+RESTRICT="test"
+
+DOCS=(
+	BUGREPORTS CHANGES DEVELOPMENT EXAMPLES FAQ FILES PORTING README SECURITY
+)
 
 src_configure() {
+	filter-flags '-Wno-error*' #293324
 	tc-export AR
-	filter-flags -Wall '-Wno-error*' #293324
 	econf \
 		$(use_enable ssl openssl) \
 		$(use_enable readline) \
@@ -40,16 +40,8 @@ src_configure() {
 		$(use_enable tcpd libwrap)
 }
 
-src_test() {
-	TMPDIR="${T}" emake test
-}
-
 src_install() {
 	default
 
-	dodoc BUGREPORTS CHANGES DEVELOPMENT \
-		FAQ FILES PORTING README SECURITY VERSION
-	docinto examples
-	dodoc EXAMPLES *.sh
 	dohtml doc/*.html doc/*.css
 }
