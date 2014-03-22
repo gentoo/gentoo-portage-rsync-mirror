@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-media/mate-media-1.6.1.ebuild,v 1.1 2014/03/22 19:37:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-media/mate-media-1.6.1.ebuild,v 1.2 2014/03/22 20:16:37 tomwij Exp $
 
 EAPI="5"
 
@@ -21,7 +21,8 @@ KEYWORDS="~amd64"
 IUSE="aac flac mp3 pulseaudio speex twolame vorbis"
 
 # FIXME: automagic dev-util/glade:3 support
-COMMON_DEPEND="dev-libs/libxml2:2
+COMMON_DEPEND="app-text/rarian:0
+	dev-libs/libxml2:2
 	>=dev-libs/glib-2.18.2:2
 	>=x11-libs/gtk+-2.18:2
 	>=mate-base/mate-panel-1.6:0

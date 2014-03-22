@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.4.0.ebuild,v 1.1 2014/03/19 15:17:39 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.4.0.ebuild,v 1.3 2014/03/22 20:17:28 ago Exp $
 
 EAPI="5"
 MOZ_ESR="1"
@@ -38,7 +38,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
