@@ -1,0 +1,35 @@
+# ChangeLog for app-emacs/gnuplot-mode
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.10 2014/03/22 16:17:15 ulm Exp $
+
+*gnuplot-mode-0.7.0 (22 Mar 2014)
+
+  22 Mar 2014; Ulrich Müller <ulm@gentoo.org> +gnuplot-mode-0.7.0.ebuild,
+  +files/50gnuplot-mode-gentoo.el, +metadata.xml:
+  Package restored; it was previously removed at 2007-02-05, bug 159726.
+  Version bump.
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> gnuplot-mode-0.6.0.ebuild:
+  Replacing einfo with elog
+
+  30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Manifest fix.
+
+  29 Jan 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  gnuplot-mode-0.6.0.ebuild:
+  Dependency update: media-gfx/gnuplot -> sci-visualization/gnuplot.
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> files/50gnuplot-gentoo.el,
+  gnuplot-mode-0.6.0.ebuild:
+  Removed stale info file. Updated SITELISP.
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> gnuplot-mode-0.6.0.ebuild:
+  Marked as stable.
+
+*gnuplot-mode-0.6.0 (14 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> gnuplot-mode-0.6.0.ebuild,
+  metadata.xml, files/50gnuplot-gentoo.el:
+  Initial import. Thanks to Michal Maruska <mmc@maruska.dyndns.org>
+  for contributing the ebuild. Closing bug #40007
+
