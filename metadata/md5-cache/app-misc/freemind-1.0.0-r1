@@ -10,4 +10,4 @@ RDEPEND=dev-java/javahelp:0 dev-java/jgoodies-forms:0 dev-java/jibx:0 dev-java/j
 SLOT=0
 SRC_URI=mirror://sourceforge/freemind/freemind-src-1.0.0.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=c7c3357a883e96ece906ae1bbb8157ab
+_md5_=b2efcde2ea694ae8a33c0a98ee38d7e5

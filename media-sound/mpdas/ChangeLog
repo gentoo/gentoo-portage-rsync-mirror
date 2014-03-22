@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpdas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.13 2012/05/05 08:39:20 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.14 2014/03/22 16:59:07 angelos Exp $
+
+*mpdas-0.3.0-r1 (22 Mar 2014)
+
+  22 Mar 2014; Christoph Mende <angelos@gentoo.org> +files/mpdas.init,
+  +mpdas-0.3.0-r1.ebuild:
+  Add init script (bug #493772), bump to EAPI5
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> mpdas-0.3.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -59,4 +65,3 @@
   24 Nov 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
   +mpdas-0.2.2.ebuild:
   Initial commit. Ebuild contributed by Sebastian Mair in bug 247216.
-

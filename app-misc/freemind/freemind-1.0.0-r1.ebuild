@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-1.0.0-r1.ebuild,v 1.2 2014/03/22 16:22:55 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-1.0.0-r1.ebuild,v 1.3 2014/03/22 16:42:04 tomwij Exp $
 
 EAPI="5"
 
@@ -82,7 +82,7 @@ src_compile() {
 }
 
 src_install() {
-	cd "${WORKDIR}/bin/dist"
+	cd "${WORKDIR}"/bin/dist || die
 	local dest="/usr/share/${PN}/"
 
 	java-pkg_dojar lib/*.jar

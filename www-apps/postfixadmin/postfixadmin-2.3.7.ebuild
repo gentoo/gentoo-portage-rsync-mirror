@@ -1,18 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.2.ebuild,v 1.5 2012/06/26 12:12:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.7.ebuild,v 1.1 2014/03/22 16:34:14 sdamashek Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils user webapp depend.php confutils
+inherit user webapp
 
 DESCRIPTION="Web Based Management tool for Postfix style virtual domains and users."
 HOMEPAGE="http://postfixadmin.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${P}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
-IUSE="mysql postgres +vacation xmlrpc"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="+mysql postgres +vacation xmlrpc"
+REQUIRED_USE="|| ( mysql postgres )"
 
 DEPEND="vacation? ( dev-perl/DBI
 		virtual/perl-MIME-Base64
@@ -25,21 +26,16 @@ DEPEND="vacation? ( dev-perl/DBI
 		mysql? ( dev-perl/DBD-mysql )
 		postgres? ( dev-perl/DBD-Pg ) )
 	xmlrpc? ( dev-php/ZendFramework[-minimal] )
-	dev-lang/php[session,unicode,imap,postgres?,xmlrpc?]"
+	dev-lang/php[unicode,imap,postgres?,xmlrpc?]"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	virtual/httpd-php
+	mysql? ( || ( dev-lang/php[mysqli] dev-lang/php[mysql] ) )"
 
 need_httpd_cgi
-need_php_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
-
-	confutils_require_any mysql postgres
-
-	if use mysql && ! PHPCHECKNODIE="yes" require_php_with_any_use mysql mysqli; then
-		die "Re-install ${PHP_PKG} with either mysql or mysqli"
-	fi
 
 	if use vacation; then
 		enewgroup vacation

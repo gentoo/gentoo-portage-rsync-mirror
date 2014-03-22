@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.8 2010/01/01 18:11:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/matew/matew-1.9.ebuild,v 1.9 2014/03/22 16:46:32 sdamashek Exp $
 
-DESCRIPTION="Make Album The Easy Way"
-HOMEPAGE="http://matew.sourceforge.net/"
+DESCRIPTION="Make Album The Easy Way (Matew) is an HTML/CSS generator for static image albums."
+HOMEPAGE="http://inquisb.github.io/matew/"
 SRC_URI="mirror://sourceforge/matew/${P}.tar.bz2"
 
 LICENSE="GPL-2"
