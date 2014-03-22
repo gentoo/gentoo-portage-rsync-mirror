@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.21.ebuild,v 1.1 2014/03/22 12:22:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.21.ebuild,v 1.2 2014/03/22 20:39:37 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -35,6 +35,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS=( AUTHORS README )
+
+src_prepare() {
+	sed -i -e "/OnlyShowIn/d" data/misc/xnoise.desktop.* || die
+}
 
 src_configure() {
 	econf \
