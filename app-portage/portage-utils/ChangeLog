@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.155 2014/03/15 06:12:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.156 2014/03/22 05:31:11 vapier Exp $
+
+*portage-utils-0.53 (22 Mar 2014)
+
+  22 Mar 2014; Mike Frysinger <vapier@gentoo.org> +portage-utils-0.53.ebuild:
+  Fix crash in `qdepends -q` #504636 via Chromium OS.
 
 *portage-utils-0.52 (15 Mar 2014)
 

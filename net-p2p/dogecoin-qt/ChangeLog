@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/dogecoin-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/ChangeLog,v 1.5 2014/03/15 16:58:32 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dogecoin-qt/ChangeLog,v 1.6 2014/03/22 05:42:36 sdamashek Exp $
+
+*dogecoin-qt-1.6 (22 Mar 2014)
+
+  22 Mar 2014; Samuel Damashek <sdamashek@gentoo.org> +dogecoin-qt-1.6.ebuild,
+  -dogecoin-qt-1.5.1.ebuild, -dogecoin-qt-1.5.2.ebuild:
+  Remove old now incompatible versions, version bump to 1.6
 
 *dogecoin-qt-1.5.2 (15 Mar 2014)
 
