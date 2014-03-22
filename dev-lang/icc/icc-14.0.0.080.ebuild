@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-14.0.0.080.ebuild,v 1.1 2013/10/02 13:05:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-14.0.0.080.ebuild,v 1.2 2014/03/22 12:28:48 jlec Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND="
 	!dev-lang/ifc[linguas_ja]
 	eclipse? ( dev-util/eclipse-sdk )"
 RDEPEND="${DEPEND}
-	~dev-libs/intel-common-${PV}[compiler]"
+	~dev-libs/intel-common-${PV}[compiler,multilib=]"
 
 INTEL_BIN_RPMS="compilerproc compilerproc-devel"
 INTEL_DAT_RPMS="compilerproc-common"

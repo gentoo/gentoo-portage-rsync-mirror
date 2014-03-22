@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-13.0.0.079-r1.ebuild,v 1.2 2013/02/14 08:14:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-13.0.0.079-r1.ebuild,v 1.3 2014/03/22 12:25:41 jlec Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://software.intel.com/en-us/articles/intel-composer-xe/"
 IUSE=""
 KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="~dev-libs/intel-common-${PV}[compiler]"
+RDEPEND="~dev-libs/intel-common-${PV}[compiler,multilib=]"
 DEPEND="${RDEPEND}"
 
 INTEL_BIN_RPMS="compilerprof compilerprof-devel"

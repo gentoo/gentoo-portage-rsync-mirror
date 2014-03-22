@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ario
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.31 2012/05/27 17:38:58 angelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.32 2014/03/22 12:15:59 angelos Exp $
+
+  22 Mar 2014; Christoph Mende <angelos@gentoo.org>
+  -files/ario-1.5-libnotify-0.7.patch, ario-1.5.1.ebuild:
+  Add missing libgcrypt dependency (bug #472028)
 
   27 May 2012; Christoph Mende <angelos@gentoo.org> ario-1.5.1.ebuild:
   Allow any python-2 version instead of just 2.7
@@ -122,4 +126,3 @@
 
   30 Jun 2008; Christoph Mende <angelos@gentoo.org> +ario-1.1.ebuild:
   Initial import, bug 221073
-

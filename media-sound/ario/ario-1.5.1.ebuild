@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.7 2012/05/27 17:38:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.8 2014/03/22 12:15:59 angelos Exp $
 
-EAPI=4
+EAPI=5
 GNOME2_LA_PUNT=yes
 PYTHON_DEPEND="python? 2"
 
@@ -18,6 +18,7 @@ KEYWORDS="amd64 x86"
 IUSE="audioscrobbler dbus debug +idle libnotify nls python taglib zeroconf"
 
 RDEPEND=">=dev-libs/glib-2.14:2
+	dev-libs/libgcrypt:0=
 	dev-libs/libunique:1
 	dev-libs/libxml2:2
 	media-libs/libmpdclient
