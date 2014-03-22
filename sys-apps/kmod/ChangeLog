@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.137 2014/03/12 19:19:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.138 2014/03/22 18:50:20 vapier Exp $
+
+  22 Mar 2014; Mike Frysinger <vapier@gentoo.org> kmod-16.ebuild,
+  kmod-9999.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   12 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/kmod-13-errno_syscall.patch, -kmod-13-r1.ebuild, -kmod-15-r1.ebuild,

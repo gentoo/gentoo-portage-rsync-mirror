@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/shish
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.8 2012/12/10 12:00:37 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.9 2014/03/22 18:38:41 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -shish-0.7_pre3.ebuild:
+  Remove old.
 
 *shish-0.7_pre3-r1 (10 Dec 2012)
 
@@ -34,4 +37,3 @@
   29 Sep 2005; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
   +shish-0.7_pre3.ebuild:
   initial ebuild, thx to Adrian Fruehwirth
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-16.ebuild,v 1.12 2014/03/12 19:17:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-16.ebuild,v 1.13 2014/03/22 18:50:20 vapier Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999* ]]; then
 	inherit autotools git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 	inherit libtool
 fi
 

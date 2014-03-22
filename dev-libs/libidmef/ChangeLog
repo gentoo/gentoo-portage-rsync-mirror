@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libidmef
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libidmef/ChangeLog,v 1.8 2012/11/01 16:37:24 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libidmef/ChangeLog,v 1.9 2014/03/22 18:52:17 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -libidmef-1.0.2_beta1.ebuild:
+  Remove old.
 
 *libidmef-1.0.3 (01 Nov 2012)
 
@@ -34,4 +38,3 @@
   09 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> libidmef-0.7.2.ebuild:
   initial commit; ebuild based on the one provided by David Maciejak via bug
   37613
-

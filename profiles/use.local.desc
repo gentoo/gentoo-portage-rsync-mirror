@@ -164,6 +164,8 @@ app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/logrotate:acl - Installs acl support
 app-admin/logrotate:selinux - Installs Security Enhanced Linux support
+app-admin/mate-system-tools:caja - Adds support for the Caja file manager
+app-admin/mate-system-tools:nfs - Adds support for NFS shares
 app-admin/matter:entropy - Add Entropy support
 app-admin/mcollective:client - Install client utilities
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
@@ -1755,7 +1757,7 @@ dev-libs/opensc:libtool - Use sys-devel/libtool for dynamically loading librarie
 dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware.
 dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware.
 dev-libs/opensc:secure-messaging - Enable secure messaging.
-dev-libs/openssl:bindist - Disable EC/RC5 algorithms (as they seem to be patented)
+dev-libs/openssl:bindist - Disable EC/RC5 algorithms (as they seem to be patented) -- note: changes the ABI
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/openssl:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
