@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.14-r1.ebuild,v 1.2 2014/03/01 22:44:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.76.ebuild,v 1.1 2014/03/21 23:23:30 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -167,6 +167,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-gn-r1.patch"
 	epatch "${FILESDIR}/${PN}-depot-tools-r0.patch"
 	epatch "${FILESDIR}/${PN}-cups-r0.patch"
+	epatch "${FILESDIR}/${PN}-arm-r0.patch"
 
 	epatch_user
 

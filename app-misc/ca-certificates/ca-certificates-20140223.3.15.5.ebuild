@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20140223.3.15.5.ebuild,v 1.3 2014/03/20 02:38:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20140223.3.15.5.ebuild,v 1.4 2014/03/21 23:09:20 ottxor Exp $
 
 # The Debian ca-certificates package merely takes the CA database as it exists
 # in the nss package and repackages it for use by openssl.
@@ -74,7 +74,6 @@ RDEPEND="${DEPEND}
 	dev-libs/openssl
 	sys-apps/debianutils"
 
-
 if ! ${PRECOMPILED}; then
 	DEPEND+=" ${PYTHON_DEPS}"
 fi
@@ -93,7 +92,7 @@ src_unpack() {
 
 	# Do all the work in the image subdir to avoid conflicting with source
 	# dirs in $WORKDIR.  Need to perform everything in the offset #381937
-	mkdir "image/${EPREFIX}"
+	mkdir -p "image/${EPREFIX}"
 	cd "image/${EPREFIX}" || die
 
 	${PRECOMPILED} && unpacker_src_unpack
