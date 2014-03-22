@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/granule-1.4.0.ebuild,v 1.6 2012/05/03 19:41:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/granule-1.4.0.ebuild,v 1.7 2014/03/22 19:33:59 angelos Exp $
 
 EAPI="2"
+inherit eutils
 
 DESCRIPTION="A flashcard program that implements Leitner cardfile methodology"
 HOMEPAGE="http://granule.sourceforge.net/"
@@ -27,6 +28,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${P}-7"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-template-with-permissive.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die

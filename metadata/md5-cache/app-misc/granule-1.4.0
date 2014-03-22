@@ -1,4 +1,4 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install prepare
 DEPEND=>=dev-cpp/gtkmm-2.4.1:2.4 >=dev-cpp/libassa-3.5.0 x11-libs/gtk+:2 dev-cpp/glibmm:2 >=dev-libs/libsigc++-2.0 x11-libs/pango dev-libs/glib:2 dev-libs/libxml2 sys-devel/gettext dev-util/intltool virtual/pkgconfig
 DESCRIPTION=A flashcard program that implements Leitner cardfile methodology
 EAPI=2
@@ -8,4 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-cpp/gtkmm-2.4.1:2.4 >=dev-cpp/libassa-3.5.0 x11-libs/gtk+:2 dev-cpp/glibmm:2 >=dev-libs/libsigc++-2.0 x11-libs/pango dev-libs/glib:2 dev-libs/libxml2
 SLOT=0
 SRC_URI=mirror://sourceforge/granule/granule-1.4.0-7.tar.gz
-_md5_=4f8c111961f653afe6d32383b2af7696
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=3226612dd0456221c2f733b91736e075
