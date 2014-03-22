@@ -1,6 +1,14 @@
-# ChangeLog for media-sound/audio-entropyd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/audio-entropyd/ChangeLog,v 1.1 2014/03/22 15:00:30 angelos Exp $
+# ChangeLog for sys-apps/audio-entropyd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/audio-entropyd/ChangeLog,v 1.2 2014/03/22 15:11:35 angelos Exp $
+
+*audio-entropyd-2.0.3-r1 (22 Mar 2014)
+
+  22 Mar 2014; Christoph Mende <angelos@gentoo.org>
+  +audio-entropyd-2.0.3-r1.ebuild, +files/audio-entropyd.service,
+  files/audio-entropyd.init-2:
+  Add systemd unit file (bug #504498), make init script provide entropy (bug
+  #495000)
 
   16 Jul 2012; Christoph Mende <angelos@gentoo.org>
   -audio-entropyd-2.0.1-r1.ebuild:

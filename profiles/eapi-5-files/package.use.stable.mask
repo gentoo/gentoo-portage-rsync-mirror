@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.40 2014/03/19 00:00:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.41 2014/03/22 15:25:36 floppym Exp $
 
 # PLEASE DO NOT ADD NEW ENTRIES HERE. 
 # Use profiles/base/package.use.stable.mask or another appropriate file instead
@@ -20,10 +20,6 @@ app-emulation/xen-tools ocaml
 # Sergey Popov <pinkbyte@gentoo.org> (28 Oct 2013)
 # sys-cluster/cman is still in ~arch.
 sys-cluster/pacemaker cman
-
-# Mike Gilbert <floppym@gentoo.org> (21 Sep 2013)
-# sys-fs/zfs isn't going stable anytime soon.
-sys-boot/grub libzfs
 
 # Doug Goldstein <cardoe@gentoo.org> (12 Sep 2013)
 # Waiting on glusterfs maintainers in bug #484016

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8726 2014/03/22 11:04:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8727 2014/03/22 15:07:13 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2014; Christoph Mende <angelos@gentoo.org> updates/1Q-2014:
+  Move media-sound/audio-entropyd to sys-apps (bug #495000)
 
   22 Mar 2014; Ulrich Müller <ulm@gentoo.org> -updates/1Q-2008,
   -updates/2Q-2008, -updates/3Q-2008, -updates/4Q-2008:

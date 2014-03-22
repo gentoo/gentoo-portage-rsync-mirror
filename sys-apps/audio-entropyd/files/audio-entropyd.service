@@ -1,0 +1,10 @@
+[Unit]
+Description=Audio Entropy Daemon
+
+[Service]
+Type=forking
+PIDFile=/run/audio-entropyd.pid
+ExecStart=/usr/sbin/audio-entropyd
+
+[Install]
+WantedBy=multi-user.target
