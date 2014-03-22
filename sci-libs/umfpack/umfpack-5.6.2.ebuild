@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.2.ebuild,v 1.3 2014/03/04 19:58:21 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.2.ebuild,v 1.4 2014/03/22 21:42:49 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
 
 src_configure() {
-	local myeconfargs+=(
+	local myeconfargs=(
 		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 		$(use_with doc)
 		$(use_with cholmod)
