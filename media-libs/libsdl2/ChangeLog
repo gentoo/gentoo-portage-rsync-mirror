@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.9 2014/03/10 15:56:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.10 2014/03/22 22:43:35 hasufell Exp $
+
+  22 Mar 2014; Julian Ospald <hasufell@gentoo.org> libsdl2-2.0.1-r1.ebuild,
+  libsdl2-2.0.2.ebuild:
+  fix dev-libs/DirectFB dependency string wrt #501892
 
 *libsdl2-2.0.2 (10 Mar 2014)
 

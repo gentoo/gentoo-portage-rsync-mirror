@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.2 2014/01/04 22:36:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.3 2014/03/22 22:43:35 hasufell Exp $
 
 EAPI=5
 inherit autotools flag-o-matic toolchain-funcs eutils
@@ -28,7 +28,7 @@ REQUIRED_USE="
 RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
-	directfb? ( >=dev-libs/DirectFB-1.0.0 )
+	directfb? ( >=dev-libs/DirectFB-1.6.3 )
 	fusionsound? ( || ( >=media-libs/FusionSound-1.1.1 >=dev-libs/DirectFB-1.7.1[fusionsound] ) )
 	gles? ( media-libs/mesa[gles2] )
 	nas? ( media-libs/nas )
