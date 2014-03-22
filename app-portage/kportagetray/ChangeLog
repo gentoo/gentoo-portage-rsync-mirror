@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kportagetray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.14 2014/03/21 19:27:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.15 2014/03/22 11:14:05 johu Exp $
+
+  22 Mar 2014; Johannes Huber <johu@gentoo.org> kportagetray-0.2.4-r1.ebuild:
+  Migrate to python-single-r1 eclass and add missing related vars, bug #505314.
 
   21 Mar 2014; Johannes Huber <johu@gentoo.org> -kportagetray-0.2.4.ebuild,
   kportagetray-0.2.4-r1.ebuild:
