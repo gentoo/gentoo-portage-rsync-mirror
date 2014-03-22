@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.3 2013/04/16 07:34:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.4 2014/03/22 19:30:33 zx2c4 Exp $
 
 EAPI=4
 
@@ -35,13 +35,13 @@ src_install() {
 	newbin src/password-store.sh pass
 	doman man/pass.1
 	dodoc README
-	newbashcomp contrib/pass.bash-completion ${PN}
+	newbashcomp src/completion/pass.bash-completion ${PN}
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
-		newins contrib/pass.zsh-completion _pass
+		newins src/completion/pass.zsh-completion _pass
 	fi
 	if use fish-completion ; then
 		insinto /usr/share/fish/completions
-		newins contrib/pass.fish-completion pass.fish
+		newins src/completion/pass.fish-completion pass.fish
 	fi
 }

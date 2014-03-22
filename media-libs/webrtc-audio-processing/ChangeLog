@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/webrtc-audio-processing
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/webrtc-audio-processing/ChangeLog,v 1.10 2014/01/14 13:54:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/webrtc-audio-processing/ChangeLog,v 1.11 2014/03/22 19:19:14 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -webrtc-audio-processing-0.1.ebuild:
+  Remove old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   webrtc-audio-processing-0.1-r1.ebuild:

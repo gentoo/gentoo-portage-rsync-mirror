@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mk-livestatus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.9 2014/02/22 14:29:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.10 2014/03/22 19:25:13 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -mk-livestatus-1.2.0_p2.ebuild:
+  Remove old.
 
   22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Remove myself as maintainer

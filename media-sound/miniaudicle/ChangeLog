@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/miniaudicle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/ChangeLog,v 1.12 2014/01/14 13:54:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/ChangeLog,v 1.13 2014/03/22 19:22:32 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -miniaudicle-0.1.3.8-r1.ebuild:
+  Remove old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> miniaudicle-0.1.3.8-r2.ebuild:
   Stable for x86, wrt bug #495800

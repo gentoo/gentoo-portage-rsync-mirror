@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-dns-keygen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-dns-keygen/ChangeLog,v 1.5 2013/12/25 23:41:29 creffett Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-dns-keygen/ChangeLog,v 1.6 2014/03/22 19:26:14 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  -bind-dns-keygen-9.3.2.39.ebuild:
+  Remove old.
 
   25 Dec 2013; Chris Reffett <creffett@gentoo.org>
   bind-dns-keygen-9.3.2.39-r1.ebuild, bind-dns-keygen-9.3.2.39.ebuild:

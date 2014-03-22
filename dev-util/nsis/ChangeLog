@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.44 2014/01/26 11:02:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.45 2014/03/22 19:03:27 kensington Exp $
+
+  22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -nsis-2.46.ebuild:
+  Remove old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nsis-2.46-r1.ebuild:
   Stable for x86, wrt bug #495676

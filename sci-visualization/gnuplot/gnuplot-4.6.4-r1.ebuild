@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.4-r1.ebuild,v 1.1 2014/03/21 17:17:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.4-r1.ebuild,v 1.2 2014/03/22 19:25:47 ulm Exp $
 
 EAPI=5
 
@@ -191,7 +191,7 @@ src_compile() {
 }
 
 src_install () {
-	emake -j1 DESTDIR="${D}" install install-info
+	emake -j1 DESTDIR="${D}" install
 
 	if use emacs; then
 		# Gentoo Emacs site-lisp configuration
@@ -200,6 +200,7 @@ src_install () {
 		elisp-site-file-install ${E_SITEFILE} || die
 	fi
 
+	doinfo docs/gnuplot.info
 	dodoc BUGS ChangeLog NEWS PGPKEYS PORTING README*
 	newdoc term/PostScript/README README-ps
 	newdoc term/js/README README-js
