@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/homerun-1.1.0.ebuild,v 1.1 2013/07/15 21:33:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/homerun-1.2.1.ebuild,v 1.1 2014/03/22 14:05:43 johu Exp $
 
 EAPI=5
 
 DECLARATIVE_REQUIRED="always"
 VIRTUALX_REQUIRED="test"
 VIRTUALDBUS_TEST="true"
-KDE_LINGUAS="cs da de el es fi lt mr nl pl pt pt_BR ru sk sl sv tr uk"
+KDE_LINGUAS="ca cs da de el es fi fr gl hu it lt nl pl pt pt_BR ro ru sk sl sv tr uk zh_CN"
 KDE_MINIMAL="4.10"
 inherit kde4-base
 
