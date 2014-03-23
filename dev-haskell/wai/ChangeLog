@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wai
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.7 2014/03/09 13:03:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.8 2014/03/23 10:01:18 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> wai-2.0.0.ebuild:
+  Stable for x86, wrt bug #502702
 
 *wai-2.1.0 (09 Mar 2014)
 

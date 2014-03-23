@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.119 2014/03/20 21:00:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.120 2014/03/23 10:13:41 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bzip2-1.0.6-r6.ebuild:
+  Stable for sparc, wrt bug #504004
 
   20 Mar 2014; Mike Frysinger <vapier@gentoo.org> bzip2-1.0.6-r6.ebuild:
   Mark arm64/m68k/s390/sh stable.
