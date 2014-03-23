@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.393 2014/03/20 03:52:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.395 2014/03/23 01:56:05 williamh Exp $
+
+*dhcpcd-6.3.2 (23 Mar 2014)
+
+  23 Mar 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.3.2.ebuild:
+  version bump
+
+  23 Mar 2014; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  convert live ebuild to use fossil for bug #505126, thanks to Mike Gilbert.
 
   20 Mar 2014; Mike Gilbert <floppym@gentoo.org> dhcpcd-6.3.1-r1.ebuild,
   dhcpcd-9999.ebuild:
