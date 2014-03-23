@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/asclock
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.25 2013/10/19 14:50:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.26 2014/03/23 16:58:39 kensington Exp $
+
+  23 Mar 2014; Michael Palimaka <kensington@gentoo.org>
+  asclock-2.0.12-r1.ebuild:
+  Update HOMEPAGE wrt bug #367187.
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop afterstep herd

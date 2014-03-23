@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.10 2012/06/12 13:32:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.11 2014/03/23 16:58:39 kensington Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 IUSE=""
 DESCRIPTION="Clock applet for AfterStep"
 SRC_URI="http://www.tigr.net/afterstep/download/asclock/${P}.tar.gz"
-HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
+HOMEPAGE="http://tigr.net/afterstep/applets/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~mips ppc sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
