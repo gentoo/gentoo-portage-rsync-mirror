@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.4-r5.ebuild,v 1.1 2014/01/27 08:44:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.5.ebuild,v 1.1 2014/03/23 20:32:06 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -70,13 +70,6 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 			   app-emulation/xen-tools )"
 
 PATCHES=(
-	"${FILESDIR}/CVE-2013-4463_4469-grizzly.patch"
-	"${FILESDIR}/CVE-2013-4497-grizzly-1.patch"
-	"${FILESDIR}/CVE-2013-4497-grizzly-2.patch"
-	"${FILESDIR}/CVE-2013-6419_2013.1.4.patch"
-	"${FILESDIR}/CVE-2013-6437-2012.1.4.patch"
-	"${FILESDIR}/CVE-2013-7048-grizzly.patch"
-	"${FILESDIR}/CVE-2013-7130-stable-grizzly.patch"
 )
 
 pkg_setup() {
