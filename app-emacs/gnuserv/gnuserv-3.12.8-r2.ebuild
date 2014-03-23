@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8-r2.ebuild,v 1.6 2014/03/23 10:01:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8-r2.ebuild,v 1.7 2014/03/23 13:02:48 ulm Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 	!!~app-editors/xemacs-21.5.31 !!~app-editors/xemacs-21.5.33
 	!!=app-editors/xemacs-21.5.34 !!=app-editors/xemacs-21.5.34-r1"
 
-SITEFILE="50${PN}-gentoo-${PVR}.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
 	sed -i -e 's/exec gnuclient/&-emacs/' gnudoit || die

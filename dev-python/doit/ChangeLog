@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/doit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/ChangeLog,v 1.7 2014/03/21 07:00:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/ChangeLog,v 1.8 2014/03/23 13:17:29 idella4 Exp $
+
+  23 Mar 2014; Ian Delaney <idella4@gentoo.org> doit-0.23.0-r1.ebuild:
+  Correct deps, set test phase pypy capable and adjust for failures under pypy &
+  py2.6, all wrt to the Bug #503616.  Thx to Chicago for test support in irc.
+  New release due in coming days set to fix most failed tests
 
 *doit-0.23.0-r1 (21 Mar 2014)
 

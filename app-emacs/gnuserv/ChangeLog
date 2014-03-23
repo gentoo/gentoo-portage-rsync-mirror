@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.35 2014/03/23 10:01:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.36 2014/03/23 13:02:48 ulm Exp $
+
+  23 Mar 2014; Ulrich Müller <ulm@gentoo.org> -gnuserv-3.12.8.ebuild,
+  gnuserv-3.12.8-r2.ebuild, -files/gnuserv-3.12.7-path-xemacs.patch,
+  -files/50gnuserv-gentoo-3.12.8-r2.el, files/50gnuserv-gentoo.el:
+  Remove old.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gnuserv-3.12.8-r2.ebuild:
   Stable for x86, wrt bug #503110
