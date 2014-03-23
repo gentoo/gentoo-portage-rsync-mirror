@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/jansson
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.14 2013/10/21 07:42:19 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.16 2014/03/23 11:46:52 hwoarang Exp $
+
+  23 Mar 2014; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Drop myself from metadata
+
+*jansson-2.6 (23 Mar 2014)
+
+  23 Mar 2014; Markos Chandras <hwoarang@gentoo.org> +jansson-2.6.ebuild:
+  Version bump. Thanks to Johan Bergström. Bug #502488
 
 *jansson-2.5 (21 Oct 2013)
 

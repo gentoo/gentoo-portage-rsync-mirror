@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/elscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.29 2014/03/23 10:14:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.30 2014/03/23 11:55:13 ulm Exp $
+
+  23 Mar 2014; Ulrich Müller <ulm@gentoo.org> -elscreen-1.4.6.ebuild:
+  Remove old.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> elscreen-1.4.6-r1.ebuild:
   Stable for sparc, wrt bug #501480
