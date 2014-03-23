@@ -1,26 +1,27 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.0.5-r1.ebuild,v 1.1 2013/02/15 16:59:15 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.1.4.ebuild,v 1.1 2014/03/23 15:24:46 thev00d00 Exp $
 
 EAPI=5
 
-inherit autotools eutils linux-info vcs-snapshot
+inherit autotools eutils linux-info
 
 DESCRIPTION="Library for communicating with the Pulse-Eight USB HDMI-CEC Adaptor"
 HOMEPAGE="http://libcec.pulse-eight.com"
-SRC_URI="http://github.com/Pulse-Eight/${PN}/tarball/${P} -> ${P}.tar.gz"
-
+SRC_URI="http://github.com/Pulse-Eight/${PN}/archive/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug static-libs"
 
-RDEPEND="virtual/udev"
+RDEPEND="virtual/udev
+	dev-libs/lockdev"
 DEPEND="${RDEPEND}
-	dev-libs/lockdev
 	virtual/pkgconfig"
 
 CONFIG_CHECK="~USB_ACM"
+
+S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
 	sed -i '/^CXXFLAGS/s:-fPIC::' configure.ac || die

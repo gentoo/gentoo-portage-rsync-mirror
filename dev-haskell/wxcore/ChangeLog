@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/wxcore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxcore/ChangeLog,v 1.5 2013/01/13 11:57:38 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxcore/ChangeLog,v 1.6 2014/03/23 15:03:49 gienah Exp $
+
+*wxcore-0.90.1.1 (23 Mar 2014)
+
+  23 Mar 2014; Mark Wright <gienah@gentoo.org>
+  +files/wxcore-0.90.1.1-ghc-7.5.patch, +wxcore-0.90.1.1.ebuild,
+  wxcore-0.13.2.3.ebuild:
+  Bump wxcore to 0.90.1.1, loosen array dep in 0.13.2.3
 
 *wxcore-0.13.2.3 (13 Jan 2013)
 

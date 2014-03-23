@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/samtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.16 2014/02/11 20:17:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.17 2014/03/23 15:29:13 jlec Exp $
+
+*samtools-0.1.19-r2 (23 Mar 2014)
+
+  23 Mar 2014; Justin Lecher <jlec@gentoo.org> -samtools-0.1.19-r1.ebuild,
+  +samtools-0.1.19-r2.ebuild:
+  Fix symlink creation, thanks Martin Mokrejs telling me that
 
   11 Feb 2014; Fabian Groffen <grobian@gentoo.org> samtools-0.1.19-r1.ebuild:
   Reference correct library name on Darwin, thanks Linlin Yan in bug #491812
