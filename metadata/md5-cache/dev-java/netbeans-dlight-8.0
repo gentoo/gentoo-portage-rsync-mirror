@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install preinst prepare setup unpack
+DEPEND=>=virtual/jdk-1.7 app-arch/unzip ~dev-java/netbeans-ide-8.0 ~dev-java/netbeans-platform-8.0 dev-java/javahelp:0 >=dev-java/java-config-2.1.9-r1 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+DESCRIPTION=Netbeans D-Light Cluster
+EAPI=4
+HOMEPAGE=http://netbeans.org/
+IUSE=elibc_FreeBSD elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( CDDL GPL-2-with-linking-exception )
+RDEPEND=>=virtual/jdk-1.7 ~dev-java/netbeans-ide-8.0 ~dev-java/netbeans-platform-8.0 >=dev-java/java-config-2.1.9-r1
+SLOT=8.0
+SRC_URI=http://download.netbeans.org/netbeans/8.0/final/zip/netbeans-8.0-201403101706-src.zip http://dev.gentoo.org/~fordfrog/distfiles/netbeans-8.0-build.xml.patch.bz2 http://hg.netbeans.org/binaries/0018CB63E592539ABB6549B00A354DA95B404F61-fs_server-1.0.zip
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=e1472cbbf2ed3251c1691140e9a81995

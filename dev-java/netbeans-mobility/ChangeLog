@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netbeans-mobility
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/ChangeLog,v 1.19 2013/10/16 09:49:56 fordfrog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/ChangeLog,v 1.20 2014/03/23 18:58:12 fordfrog Exp $
+
+*netbeans-mobility-8.0 (23 Mar 2014)
+
+  23 Mar 2014; Miroslav Šulc <fordfrog@gentoo.org>
+  +netbeans-mobility-8.0.ebuild:
+  new ebuild for version 8.0
 
 *netbeans-mobility-7.4 (16 Oct 2013)
 
