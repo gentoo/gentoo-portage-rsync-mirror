@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dumb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.50 2014/03/19 15:14:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.51 2014/03/23 09:59:16 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dumb-0.9.3-r3.ebuild:
+  Stable for x86, wrt bug #495710
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> dumb-0.9.3-r3.ebuild:
   Stable for alpha, wrt bug #495710

@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.27 2014/01/14 15:31:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.28 2014/03/23 09:59:33 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> archive-2.3.ebuild:
+  Stable for x86, wrt bug #495912
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> archive-2.3.ebuild:
   Stable for ppc, wrt bug #495912
