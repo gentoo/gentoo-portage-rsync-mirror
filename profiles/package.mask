@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15497 2014/03/22 21:22:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15498 2014/03/23 13:37:39 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (23 Mar 2014)
+# Reintegrated into app-emacs/gnuserv.
+# See bug 177936, comment #9 and following for details.
+# Masked for removal in 30 days, bug 505432.
+app-emacs/gnuserv-programs
 
 # Rick Farina <zerochaos@gentoo.org> (22 Mar 2014)
 # Upstream has replaced dev-util/dissy with dev-util/emilpro

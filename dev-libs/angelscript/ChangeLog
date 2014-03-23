@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/angelscript
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.15 2014/02/02 00:02:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.16 2014/03/23 13:48:21 hasufell Exp $
+
+*angelscript-2.28.2 (23 Mar 2014)
+
+  23 Mar 2014; Julian Ospald <hasufell@gentoo.org> +angelscript-2.28.2.ebuild,
+  +files/angelscript-2.28.2-execstack.patch:
+  version bump
 
 *angelscript-2.28.1 (02 Feb 2014)
 
