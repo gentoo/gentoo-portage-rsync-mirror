@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.4-r2.ebuild,v 1.2 2014/01/20 06:08:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.5.ebuild,v 1.1 2014/03/23 20:03:24 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -35,7 +35,9 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-python/python-pam
 			dev-python/repoze-lru
 			dev-python/routes
-			dev-python/sphinx
+			dev-python/netaddr
+			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+			<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
 			>=dev-python/sqlalchemy-migrate-0.7
 			dev-python/tempita
 			>=dev-python/webob-1.0.8
@@ -67,10 +69,7 @@ RDEPEND="dev-python/eventlet[${PYTHON_USEDEP}]
 	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 PATCHES=(
-	"${FILESDIR}/2013.1.4-CVE-2013-4477.patch"
 )
-#	"${FILESDIR}/keystone-grizzly-2-CVE-2013-2157.patch"
-#
 python_test() {
 	# https://bugs.launchpad.net/keystone/+bug/1241956
 	nosetests -e 'test_keystoneclient*' || die "testsuite failed under ${EPYTHON}"

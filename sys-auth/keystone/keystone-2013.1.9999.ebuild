@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.10 2014/01/20 06:08:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.11 2014/03/23 20:03:24 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -72,9 +72,8 @@ RDEPEND="${DEPEND}
 #			dev-python/webtest
 #			)
 
-#PATCHES=(
-#	"${FILESDIR}/2013.1.3-CVE-2013-4222.patch"
-#)
+PATCHES=(
+)
 
 python_install() {
 	distutils-r1_python_install

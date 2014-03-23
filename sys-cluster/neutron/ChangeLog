@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.24 2014/02/24 07:12:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.25 2014/03/23 20:27:12 prometheanfire Exp $
+
+*neutron-2013.1.5 (23 Mar 2014)
+
+  23 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-2013.1.5.ebuild, -files/CVE-2013-6419_2013.1.4.patch,
+  -neutron-2013.1.4-r1.ebuild:
+  updating neutron/quantum
 
   24 Feb 2014; Ian Delaney <idella4@gentoo.org> -neutron-2013.2.1.ebuild:
   rm old 2013.2.1 by request of maintainer
