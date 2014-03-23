@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuplot-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.10 2014/03/22 16:17:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.11 2014/03/23 14:40:06 jer Exp $
+
+  23 Mar 2014; Jeroen Roovers <jer@gentoo.org> gnuplot-mode-0.7.0.ebuild:
+  Marked ~hppa (bug #505378).
 
 *gnuplot-mode-0.7.0 (22 Mar 2014)
 

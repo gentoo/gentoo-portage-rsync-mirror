@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.7.0.ebuild,v 1.1 2014/03/22 16:17:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/gnuplot-mode-0.7.0.ebuild,v 1.2 2014/03/23 14:40:06 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/bruceravel/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( virtual/latex-base )"

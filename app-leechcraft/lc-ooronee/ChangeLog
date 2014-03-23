@@ -1,0 +1,9 @@
+# ChangeLog for app-leechcraft/lc-ooronee
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-ooronee/ChangeLog,v 1.1 2014/03/23 14:42:19 maksbotan Exp $
+
+*lc-ooronee-9999 (23 Mar 2014)
+
+  23 Mar 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-ooronee-9999.ebuild,
+  +metadata.xml:
+  Add certmgr, cpuload and ooronee LeechCraft plugins. Thanks to 0xd34df00d.
