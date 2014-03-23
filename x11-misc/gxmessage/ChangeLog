@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/gxmessage
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.38 2012/07/29 23:32:34 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.40 2014/03/23 05:13:14 jer Exp $
+
+  23 Mar 2014; Jeroen Roovers <jer@gentoo.org> -gxmessage-2.20.0.ebuild:
+  Old.
+
+*gxmessage-2.20.1 (23 Mar 2014)
+
+  23 Mar 2014; Jeroen Roovers <jer@gentoo.org> +gxmessage-2.20.1.ebuild:
+  Version bump.
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -gxmessage-2.6.2.ebuild:
   Ancient.
@@ -136,4 +144,3 @@
   29 Jun 2004; Ian Leitch <port001@gentoo.org> +metadata.xml,
   +gxmessage-2.0.11.ebuild:
   Initial commit, thanks to those in #44187
-
