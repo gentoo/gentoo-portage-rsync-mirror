@@ -1,0 +1,23 @@
+diff --git a/xen/Makefile b/xen/Makefile
+index 39839a3..d2603f0 100644
+--- a/xen/Makefile
++++ b/xen/Makefile
+@@ -38,9 +38,15 @@ _install: Z=$(CONFIG_XEN_INSTALL_SUFFIX)
+ _install: $(TARGET)$(CONFIG_XEN_INSTALL_SUFFIX)
+ 	[ -d $(D)/boot ] || $(INSTALL_DIR) $(D)/boot
+ 	$(INSTALL_DATA) $(TARGET)$(Z) $(D)/boot/$(T)-$(XEN_FULLVERSION)$(Z)
+-	ln -f -s $(T)-$(XEN_FULLVERSION)$(Z) $(D)/boot/$(T)-$(XEN_VERSION).$(XEN_SUBVERSION)$(Z)
+-	ln -f -s $(T)-$(XEN_FULLVERSION)$(Z) $(D)/boot/$(T)-$(XEN_VERSION)$(Z)
+-	ln -f -s $(T)-$(XEN_FULLVERSION)$(Z) $(D)/boot/$(T)$(Z)
++	if [ 'x$(EFI_VENDOR)' == 'x' ]; then \
++		ln -f -s $(T)-$(XEN_FULLVERSION)$(Z) $(D)/boot/$(T)-$(XEN_VERSION).$(XEN_SUBVERSION)$(Z); \
++		ln -f -s $(T)-$(XEN_FULLVERSION)$(Z) $(D)/boot/$(T)-$(XEN_VERSION)$(Z);\
++		ln -f -s $(T)-$(XEN_FULLVERSION)$(Z) $(D)/boot/$(T)$(Z); \
++	else \
++		$(INSTALL_DATA) $(TARGET)$(Z) $(D)/boot/$(T)-$(XEN_VERSION).$(XEN_SUBVERSION)$(Z); \
++		$(INSTALL_DATA) $(TARGET)$(Z) $(D)/boot/$(T)-$(XEN_VERSION)$(Z);\
++		$(INSTALL_DATA) $(TARGET)$(Z) $(D)/boot/$(T)$(Z); \
++	fi; \
+ 	$(INSTALL_DATA) $(TARGET)-syms $(D)/boot/$(T)-syms-$(XEN_FULLVERSION)
+ 	if [ -r $(TARGET).efi -a -n '$(EFI_DIR)' ]; then \
+ 		[ -d $(D)$(EFI_DIR) ] || $(INSTALL_DIR) $(D)$(EFI_DIR); \
