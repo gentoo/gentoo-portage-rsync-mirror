@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.2-r3.ebuild,v 1.1 2014/03/08 22:11:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.2-r4.ebuild,v 1.1 2014/03/23 19:19:17 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
@@ -12,7 +12,7 @@ SEPOL_VER="2.2"
 DESCRIPTION="SELinux userland library"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20131030/${P}.tar.gz
-	http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${P}-r1.tar.gz"
+	http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${P}-r4.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -32,7 +32,6 @@ src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/gentoo-patches" \
 	EPATCH_FORCE="yes" \
 	epatch
-	epatch "${FILESDIR}"/${PN}-2.2.2-build.patch #500674
 
 	epatch_user
 

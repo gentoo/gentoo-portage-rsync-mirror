@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.64 2014/02/02 17:05:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.65 2014/03/23 19:29:35 swift Exp $
+
+*libsemanage-2.2-r2 (23 Mar 2014)
+
+  23 Mar 2014; Sven Vermeulen <swift@gentoo.org> +libsemanage-2.2-r2.ebuild:
+  Fix bug #502078 - have SHLIBS use PREFIX, not DESTDIR
 
   02 Feb 2014; Sven Vermeulen <swift@gentoo.org> +libsemanage-2.2-r1.ebuild:
   Support multilib
