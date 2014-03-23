@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.230 2014/03/01 23:06:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.231 2014/03/23 02:37:26 dlan Exp $
+
+*xen-tools-4.4.0 (23 Mar 2014)
+
+  23 Mar 2014; Yixun Lan <dlan@gentoo.org> +xen-tools-4.4.0.ebuild,
+  +files/xen-tools-4.4-api-fix.patch, +files/xen-4.4-nostrip.patch,
+  +files/xen-4.4-qemu-bridge.patch, files/xenstored.initd:
+  bump to 4.4.0
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> xen-tools-4.2.3-r1.ebuild,
   xen-tools-4.2.4.ebuild, xen-tools-4.3.1-r5.ebuild, xen-tools-4.3.1-r6.ebuild,
