@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.50 2013/04/04 22:19:49 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.51 2014/03/23 12:18:17 zlogene Exp $
+
+  23 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -libupnp-1.6.17.ebuild:
+  Drop insecure version
 
   04 Apr 2013; Mike Frysinger <vapier@gentoo.org> libupnp-1.6.18.ebuild:
   Drop automake-1.9 requirement #454750 by Alphat-PC.

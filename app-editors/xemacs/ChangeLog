@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.172 2014/03/12 13:31:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.173 2014/03/23 12:13:33 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xemacs-21.4.22-r3.ebuild:
+  Stable for x86, wrt bug #503112
 
   12 Mar 2014; Ulrich Müller <ulm@gentoo.org> xemacs-21.4.22-r3.ebuild:
   QA: Add missing die command, bug 503112#c2.
