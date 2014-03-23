@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.156 2014/03/23 02:15:34 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.157 2014/03/23 03:23:43 idella4 Exp $
+
+  23 Mar 2014; Ian Delaney <idella4@gentoo.org>
+  Keyworded ~arm, this release provides broad support for the
+  arm arch, update efi patch, py2.6 support dropped (as of 4.3.2),
+  switch to git-2 eclass
 
 *xen-4.4.0 (23 Mar 2014)
 
