@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bogosort
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.23 2014/03/05 15:19:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.24 2014/03/23 17:16:46 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bogosort-0.4.2-r1.ebuild:
+  Stable for sparc, wrt bug #474154
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bogosort-0.4.2-r1.ebuild:
   Stable for ppc, wrt bug #474154
