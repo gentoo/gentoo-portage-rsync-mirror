@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/rubinius
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.11 2013/04/21 08:36:21 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.12 2014/03/23 07:07:45 graaff Exp $
+
+  23 Mar 2014; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild:
+  Update ruby dependency to ruby:1.9 since rubinius bootstraps with this
+  version also, fixing bug 505230.
 
   21 Apr 2013; Hans de Graaff <graaff@gentoo.org>
   rubinius-1.2.4.20110705.ebuild:

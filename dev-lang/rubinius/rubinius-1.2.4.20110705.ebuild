@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.6 2013/04/21 08:36:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.7 2014/03/23 07:07:45 graaff Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator
@@ -23,7 +23,7 @@ RDEPEND="sys-libs/readline
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	sys-devel/bison
-	dev-lang/ruby:1.8
+	dev-lang/ruby:1.9
 	dev-ruby/rake"
 
 pkg_setup() {

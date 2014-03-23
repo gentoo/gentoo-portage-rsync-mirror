@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=sys-libs/readline llvm? ( >=sys-devel/llvm-2.8 <sys-devel/llvm-3 ) dev-libs/openssl sys-libs/zlib sys-devel/bison dev-lang/ruby:1.8 dev-ruby/rake
+DEPEND=sys-libs/readline llvm? ( >=sys-devel/llvm-2.8 <sys-devel/llvm-3 ) dev-libs/openssl sys-libs/zlib sys-devel/bison dev-lang/ruby:1.9 dev-ruby/rake
 DESCRIPTION=A re-implementation of the Ruby VM designed for speed
 EAPI=4
 HOMEPAGE=http://rubini.us
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/readline llvm? ( >=sys-devel/llvm-2.8 <sys-devel/llvm-3 ) dev-l
 SLOT=0
 SRC_URI=http://asset.rubini.us/rubinius-1.2.4-20110705.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ebfeffb82447b60fa7b9c1d8c572de27
+_md5_=10d596253ef2aaac738e9f80aa788bf3
