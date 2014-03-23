@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.146 2014/03/15 22:58:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.147 2014/03/23 18:00:00 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  shorewall-lite-4.5.18-r1.ebuild:
+  Stable for sparc, wrt bug #487690
 
 *shorewall-lite-4.5.21.7 (15 Mar 2014)
 

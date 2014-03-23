@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.50 2014/03/19 13:54:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.52 2014/03/23 17:53:35 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ebuild-mode-1.26.ebuild:
+  Stable for ppc, wrt bug #503386
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ebuild-mode-1.26.ebuild:
+  Stable for sparc, wrt bug #503386
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> ebuild-mode-1.26.ebuild:
   Stable for alpha, wrt bug #503386

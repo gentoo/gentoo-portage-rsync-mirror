@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/asapm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.19 2013/10/19 14:49:51 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.20 2014/03/23 17:32:23 kensington Exp $
+
+*asapm-3.1-r1 (23 Mar 2014)
+
+  23 Mar 2014; Michael Palimaka <kensington@gentoo.org> +asapm-3.1-r1.ebuild,
+  +files/asapm-3.1-ldflags.patch:
+  Revision bump migrating to EAPI 5. Add missing dependency. Remove transitive
+  dependency. Remove jpeg USE flag that did nothing. Update HOMEPAGE wrt bug
+  #367185. Respect LDFLAGS wrt bug #336818. Fully respect CC wrt bug #444944.
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop afterstep herd

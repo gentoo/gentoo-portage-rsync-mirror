@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.177 2014/03/19 13:50:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.180 2014/03/23 17:52:42 ago Exp $
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libburn-1.3.4.ebuild:
+  Stable for sparc, wrt bug #502718
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libburn-1.3.4.ebuild:
+  Stable for ppc64, wrt bug #502718
+
+  23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libburn-1.3.4.ebuild:
+  Stable for ppc, wrt bug #502718
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libburn-1.3.4.ebuild:
   Stable for alpha, wrt bug #502718
