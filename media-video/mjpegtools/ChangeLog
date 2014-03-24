@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.215 2014/03/24 15:12:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.216 2014/03/24 17:15:55 billie Exp $
+
+  24 Mar 2014; Daniel Pielmeier <billie@gentoo.org> -mjpegtools-2.1.0.ebuild,
+  -files/mjpegtools-2.0.0-gcc470.patch,
+  -files/mjpegtools-2.0.0-sdlgfx-automagic.patch,
+  -files/mjpegtools-2.0.0-stream-params-include.patch:
+  Remove old.
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mjpegtools-2.1.0-r1.ebuild:
   Stable for ppc, wrt bug #503752

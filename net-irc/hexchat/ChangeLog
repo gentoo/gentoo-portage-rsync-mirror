@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.89 2014/03/23 19:07:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.90 2014/03/24 17:18:45 jer Exp $
+
+  24 Mar 2014; Jeroen Roovers <jer@gentoo.org> hexchat-2.9.6.1-r2.ebuild:
+  Stable for HPPA (bug #499844).
 
 *hexchat-2.9.6.1-r2 (23 Mar 2014)
 
