@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/ChangeLog,v 1.14 2013/12/24 22:58:37 dastergon Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/ChangeLog,v 1.15 2014/03/24 21:02:53 dastergon Exp $
+
+*mr-1.20140227 (24 Mar 2014)
+
+  24 Mar 2014; Pavlos Ratis <dastergon@gentoo.org> +mr-1.20140227.ebuild:
+  Version bump, bug #483330
 
   24 Dec 2013; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   add myself as maintainer
