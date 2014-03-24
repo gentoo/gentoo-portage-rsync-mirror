@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15503 2014/03/24 07:25:54 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15505 2014/03/24 07:34:43 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -394,16 +394,6 @@ dev-lang/python:3.4
 # Unmaintained, has several problems on modern systems,
 # superseded by net-analyzer/ifstatus (bug #501432)
 net-analyzer/ethstatus
-
-# Dion Moult <moult@gentoo.org> (13 Feb 2014)
-# Masked for removal in 30 days. Unclear license, desklets dead. (bug #446776)
-x11-plugins/desklet-sudoku
-
-# Dion Moult <moult@gentoo.org> (12 Feb 2014)
-# Masked for removal in 30 days. Removed as this was a compatibility hack
-# package, with equivalent functionality already implemented elsewhere (xdg-open
-# and co). (bug #480522)
-www-client/htmlview
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (08 Feb 2014)
 # removal ~08/Mar/2014 , depend on i18n issues

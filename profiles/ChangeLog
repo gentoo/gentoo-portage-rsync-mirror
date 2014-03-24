@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8735 2014/03/24 07:25:53 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8737 2014/03/24 07:34:43 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
+  x11-plugins/desklet-sudoku package mask removed as package removed
+
+  24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
+  www-client/htmlview package mask removed as package removed
 
   24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
   rox-extra/comicthumb package mask removed as package removed
