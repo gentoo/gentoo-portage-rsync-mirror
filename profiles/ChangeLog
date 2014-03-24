@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8731 2014/03/23 15:45:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8735 2014/03/24 07:25:53 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
+  rox-extra/comicthumb package mask removed as package removed
+
+  24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
+  dev-libs/jrtplib package mask removed as package removed
+
+  24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
+  virtual/monodoc package mask removed as package removed
+
+  24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
+  app-misc/flyte-download-manager package mask removed as package removed
 
   23 Mar 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
   Remove app-emacs/{http-emacs,mairix} masks, packages have been removed.

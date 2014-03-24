@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/lifted-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.17 2014/03/23 10:00:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.18 2014/03/24 07:24:40 qnikst Exp $
+
+*lifted-base-0.2.2.1 (24 Mar 2014)
+
+  24 Mar 2014; Alexander Vershilov <qnikst@gentoo.org>
+  +lifted-base-0.2.2.1.ebuild, -lifted-base-0.1.0.3-r1.ebuild,
+  -lifted-base-0.2.0.2.ebuild, -lifted-base-0.2.0.3.ebuild,
+  -lifted-base-0.2.2.0.ebuild:
+  bump up to 0.2.0.3, drop old
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> lifted-base-0.2.1.1.ebuild:
   Stable for x86, wrt bug #502684
