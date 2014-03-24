@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/xrdb-mode
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.13 2014/03/24 14:57:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.14 2014/03/24 19:00:17 ulm Exp $
+
+  24 Mar 2014; Ulrich Müller <ulm@gentoo.org> -xrdb-mode-2.31.ebuild,
+  -files/70xrdb-mode-gentoo.el:
+  Remove old.
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xrdb-mode-3.0.ebuild:
   Stable for x86, wrt bug #505464
