@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.1 2014/03/23 02:37:26 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.2 2014/03/24 05:07:27 idella4 Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ COMMON_DEPEND="
 	dev-libs/glib:2
 	dev-libs/yajl
 	dev-libs/libaio
-	dev-libs/libgcrypt
+	dev-libs/libgcrypt:0
 	sys-libs/zlib
 "
 
@@ -112,7 +112,7 @@ pkg_setup() {
 	python-single-r1_pkg_setup
 	export "CONFIG_LOMOUNT=y"
 
-	if has_version dev-libs/libgcrypt; then
+	if has_version dev-libs/libgcrypt:0; then
 		export "CONFIG_GCRYPT=y"
 	fi
 
@@ -409,10 +409,6 @@ pkg_postinst() {
 		elog "HVM (VT-x and AMD-V) support has been disabled. If you need hvm"
 		elog "support enable the hvm use flag."
 		elog "An x86 or amd64 multilib system is required to build HVM support."
-	fi
-
-	if use xend; then
-		elog"";elog "xend capability has been enabled and installed"
 	fi
 
 	if use qemu; then

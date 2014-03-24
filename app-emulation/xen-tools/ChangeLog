@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.231 2014/03/23 02:37:26 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.232 2014/03/24 05:07:27 idella4 Exp $
+
+  24 Mar 2014; Ian Delaney <idella4@gentoo.org> xen-tools-4.4.0.ebuild:
+  re bump; keyword ~arm, update deps, drop py2.6 support, drop IUSE xend,
+  improvements to configure phase, tidy up and style improvements by dlan. Re-
+  set SLOT for libgcrypt, drop leftover elog msg re xend
 
 *xen-tools-4.4.0 (23 Mar 2014)
 
