@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>xarthisius@gentoo.org</email>
-		<name>Kacper Kowalik</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Polysh is a tool to aggregate several remote shells into one. It is used to

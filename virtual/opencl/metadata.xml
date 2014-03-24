@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>x11</herd>
-<maintainer>
-	<email>xarthisius@gentoo.org</email>
-	<name>Kacper Kowalik</name>
-</maintainer>
 </pkgmetadata>
