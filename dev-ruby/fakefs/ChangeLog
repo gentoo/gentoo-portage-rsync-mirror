@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.45 2014/03/05 22:39:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.46 2014/03/24 06:22:58 graaff Exp $
+
+*fakefs-0.5.2 (24 Mar 2014)
+
+  24 Mar 2014; Hans de Graaff <graaff@gentoo.org> +fakefs-0.5.2.ebuild:
+  Version bump.
 
 *fakefs-0.5.1 (05 Mar 2014)
 
