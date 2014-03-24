@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.03.10.ebuild,v 1.2 2014/03/13 16:06:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.03.24.1.ebuild,v 1.1 2014/03/24 13:56:50 jer Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ src_prepare() {
 			youtube_dl/version.py || die
 		local xxx=(
 			extremetube fourtube mofosex pornhd pornhub pornotube redtube
-			spankwire thisav trutube tube8 xhamster xnxx xtube xvideos youjizz youporn
+			spankwire thisav trutube tube8 xbef xhamster xnxx xtube xvideos youjizz youporn
 		)
 		sed -i -e $( printf '/%s/d;' ${xxx[@]} ) youtube_dl/extractor/__init__.py || die
 		rm $( printf 'youtube_dl/extractor/%s.py ' ${xxx[@]} ) \
