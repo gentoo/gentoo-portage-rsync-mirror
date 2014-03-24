@@ -8,4 +8,4 @@ LICENSE=BSD-2
 RDEPEND=udev? ( virtual/udev )
 SLOT=0
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=12d88daca13b6520d64506630b2d14f5
+_md5_=93ac50418fc8fd4f09764ecca048ea46

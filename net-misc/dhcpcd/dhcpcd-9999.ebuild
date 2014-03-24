@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.13 2014/03/23 01:35:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.14 2014/03/24 04:43:33 williamh Exp $
 
 EAPI=5
 
@@ -62,7 +62,6 @@ src_configure()
 	hooks="--with-hook=ntp.conf"
 	use elibc_glibc && hooks="${hooks} --with-hook=yp.conf"
 	use kernel_linux && rundir="--rundir=${EPREFIX}/run"
-	tc-export CC
 	econf \
 		--prefix="${EPREFIX}" \
 		--libexecdir="${EPREFIX}/lib/dhcpcd" \

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.396 2014/03/23 17:32:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.397 2014/03/24 04:43:33 williamh Exp $
+
+  24 Mar 2014; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  I am removing the tc-export call from the live ebuild per policy. The proper
+  fix should be upstream instead of us exporting a variable. It is being worked
+  now in bug #505508.
 
   23 Mar 2014; William Hubbs <williamh@gentoo.org> -dhcpcd-6.3.1-r1.ebuild,
   -files/dhcpcd-6.0.5-fix-build-without-ipv6.patch,
