@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.539 2014/03/23 14:55:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.540 2014/03/24 14:29:06 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.8.8.5.ebuild:
+  Stable for ppc64, wrt bug #500988
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.8.8.5.ebuild:
   Stable for ppc, wrt bug #500988
