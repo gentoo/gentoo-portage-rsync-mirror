@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.39 2014/03/03 21:45:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.40 2014/03/24 21:32:31 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -47,6 +47,14 @@ fi
 # for development or hosting a local git mirror. However, clones
 # of repositories with large diverged branches may quickly grow large.
 #
+# The 'single+tags' type clones the requested branch and all tags
+# in the repository. All notes are fetched as well. EGIT_COMMIT
+# can safely specify hashes throughout the current branch and all tags.
+# No purging of old references is done (if you often switch branches,
+# you may need to remove stale branches yourself). This mode is intended
+# mostly for use with broken git servers such as Google Code that fail
+# to fetch tags along with the branch in 'single' mode.
+#
 # The 'single' type clones only the requested branch or tag. Tags
 # referencing commits throughout the branch history are fetched as well,
 # and all notes. EGIT_COMMIT can safely specify only hashes
@@ -72,9 +80,10 @@ fi
 # supposed to set EGIT_CLONE_TYPE instead.
 #
 # A common case is to use 'single' whenever the build system requires
-# access to full branch history or the remote (Google Code) does not
-# support shallow clones. Please use sparingly, and to fix fatal errors
-# rather than 'non-pretty versions'.
+# access to full branch history, or 'single+tags' when Google Code
+# or a similar remote is used that does not support shallow clones
+# and fetching tags along with commits. Please use sparingly, and to fix
+# fatal errors rather than 'non-pretty versions'.
 : ${EGIT_MIN_CLONE_TYPE:=shallow}
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
@@ -154,7 +163,7 @@ _git-r3_env_setup() {
 
 	# check the clone type
 	case "${EGIT_CLONE_TYPE}" in
-		mirror|single|shallow)
+		mirror|single+tags|single|shallow)
 			;;
 		*)
 			die "Invalid EGIT_CLONE_TYPE=${EGIT_CLONE_TYPE}"
@@ -166,6 +175,12 @@ _git-r3_env_setup() {
 			if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
 				einfo "git-r3: ebuild needs to be cloned in 'single' mode, adjusting"
 				EGIT_CLONE_TYPE=single
+			fi
+			;;
+		single+tags)
+			if [[ ${EGIT_CLONE_TYPE} == shallow || ${EGIT_CLONE_TYPE} == single ]]; then
+				einfo "git-r3: ebuild needs to be cloned in 'single+tags' mode, adjusting"
+				EGIT_CLONE_TYPE=single+tags
 			fi
 			;;
 		mirror)
@@ -510,6 +525,13 @@ git-r3_fetch() {
 			fetch_command+=(
 				"+${fetch_l}:${fetch_r}"
 			)
+
+			if [[ ${EGIT_CLONE_TYPE} == single+tags ]]; then
+				fetch_command+=(
+					# pull tags explicitly as requested
+					"+refs/tags/*:refs/tags/*"
+				)
+			fi
 		fi
 
 		if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.66 2014/03/05 10:30:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.67 2014/03/24 21:37:01 mgorny Exp $
+
+  24 Mar 2014; Michał Górny <mgorny@gentoo.org> snakeoil-9999.ebuild:
+  Switch to single+tags in order to handle clones more efficiently, bug #503708.
 
   05 Mar 2014; Michał Górny <mgorny@gentoo.org> snakeoil-9999.ebuild:
   Require EGIT_MIN_CLONE_TYPE=single due to server limitations.

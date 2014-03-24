@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.173 2014/03/05 10:36:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.174 2014/03/24 21:34:57 mgorny Exp $
+
+  24 Mar 2014; Michał Górny <mgorny@gentoo.org> pkgcore-9999.ebuild:
+  Switch to single+tags in order to handle clones more efficiently, bug #503708.
 
   05 Mar 2014; Michał Górny <mgorny@gentoo.org> pkgcore-9999.ebuild:
   Require EGIT_MIN_CLONE_TYPE=single due to server limitations.

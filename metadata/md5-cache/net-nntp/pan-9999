@@ -7,5 +7,5 @@ IUSE=dbus gnome-keyring libnotify spell ssl
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.26:2 >=x11-libs/gtk+-2.16:2 dev-libs/gmime:2.6 gnome-keyring? ( >=gnome-base/libgnome-keyring-3.2 ) libnotify? ( >=x11-libs/libnotify-0.4.1 ) spell? ( >=app-text/enchant-1.6 >=app-text/gtkspell-2.0.7:2 ) ssl? ( >=net-libs/gnutls-3 )
 SLOT=0
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	9fcd81e4cb49fd37511fce461544153f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ae8c8e5fb480b2ab664ce9e6692c3e97
