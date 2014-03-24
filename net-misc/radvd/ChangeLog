@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.120 2014/03/12 09:49:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.121 2014/03/24 15:10:18 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> radvd-1.9.8.ebuild:
+  Stable for ppc, wrt bug #502906
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> radvd-1.9.8.ebuild:
   Stable for sparc, wrt bug #502906

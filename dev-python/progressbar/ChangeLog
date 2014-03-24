@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/progressbar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/ChangeLog,v 1.15 2014/03/10 19:50:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/ChangeLog,v 1.16 2014/03/24 15:04:47 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> progressbar-2.3-r1.ebuild:
+  Stable for ppc, wrt bug #493778
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> progressbar-2.3-r1.ebuild:
   x86 stable, bug #493778

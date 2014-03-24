@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.37 2014/03/23 10:00:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.38 2014/03/24 15:07:29 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> chemtool-1.6.13.ebuild:
+  Stable for ppc, wrt bug #501046
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> chemtool-1.6.13.ebuild:
   Stable for x86, wrt bug #501046

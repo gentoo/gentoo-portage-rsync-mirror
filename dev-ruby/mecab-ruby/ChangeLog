@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mecab-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.40 2014/03/10 20:04:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.41 2014/03/24 15:07:44 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mecab-ruby-0.996.ebuild:
+  Stable for ppc, wrt bug #501252
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> mecab-ruby-0.996.ebuild:
   x86 stable, bug #501252

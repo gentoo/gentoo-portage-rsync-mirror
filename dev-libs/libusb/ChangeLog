@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.162 2014/03/19 15:20:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.163 2014/03/24 15:10:48 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libusb-1.0.18.ebuild:
+  Stable for ppc, wrt bug #503404
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libusb-1.0.18.ebuild:
   Stable for alpha, wrt bug #503404

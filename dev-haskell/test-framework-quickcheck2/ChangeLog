@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/test-framework-quickcheck2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.31 2014/03/23 17:18:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.32 2014/03/24 15:06:26 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  test-framework-quickcheck2-0.3.0.2.ebuild:
+  Stable for ppc, wrt bug #495390
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   test-framework-quickcheck2-0.3.0.2.ebuild:

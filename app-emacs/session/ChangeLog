@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/session
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.16 2014/03/24 14:57:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.17 2014/03/24 15:14:27 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> session-2.3a.ebuild:
+  Stable for ppc, wrt bug #505462
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> session-2.3a.ebuild:
   Stable for x86, wrt bug #505462

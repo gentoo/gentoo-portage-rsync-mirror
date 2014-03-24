@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/macchanger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.30 2014/03/12 09:55:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.31 2014/03/24 15:06:59 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> macchanger-1.6.0.ebuild:
+  Stable for ppc, wrt bug #496504
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> macchanger-1.6.0.ebuild:
   Stable for sparc, wrt bug #496504

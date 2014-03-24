@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.10 2013/02/27 01:57:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.11 2014/03/24 15:24:57 tomwij Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Virtual for notification daemon dbus service"
 HOMEPAGE=""
@@ -24,5 +24,6 @@ RDEPEND="
 		>=x11-wm/awesome-3.4.4
 		x11-wm/enlightenment[enlightenment_modules_notification]
 		x11-wm/enlightenment[e_modules_notification]
-		kde-base/knotify ) )"
+		kde-base/knotify
+		x11-misc/mate-notification-daemon ) )"
 DEPEND=""

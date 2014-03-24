@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.47 2014/03/12 05:08:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.48 2014/03/24 15:12:27 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> snmplib-1.1.1.ebuild:
+  Stable for ppc, wrt bug #503686
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> snmplib-1.1.1.ebuild:
   x86 stable wrt bug #503686

@@ -1,13 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.6.2.ebuild,v 1.4 2014/03/10 22:54:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.6.2-r1.ebuild,v 1.1 2014/03/24 15:05:46 tomwij Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 multilib versionator
+PYTHON_COMPAT=( python2_6 python2_7 )
+
+inherit gnome2 multilib python-r1 versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
@@ -21,7 +23,8 @@ KEYWORDS="~amd64"
 
 IUSE="X startup-notification"
 
-RDEPEND=">=dev-libs/glib-2.34:2
+RDEPEND="${PYTHON_DEPS}
+	>=dev-libs/glib-2.34:2
 	>=dev-libs/libunique-1:1
 	x11-libs/cairo:0
 	>=x11-libs/gdk-pixbuf-2.4:2
@@ -55,4 +58,6 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_install() {
 	gnome2_src_install
+
+	python_replicate_script "${ED}"/usr/bin/mate-conf-import
 }

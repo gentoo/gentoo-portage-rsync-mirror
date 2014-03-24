@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.32 2014/03/19 15:18:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.33 2014/03/24 15:03:13 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mytop-1.6-r4.ebuild:
+  Stable for ppc, wrt bug #491978
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mytop-1.6-r4.ebuild:
   Stable for alpha, wrt bug #491978

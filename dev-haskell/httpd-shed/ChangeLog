@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/httpd-shed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.13 2014/03/23 17:17:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.14 2014/03/24 15:06:09 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> httpd-shed-0.4-r1.ebuild:
+  Stable for ppc, wrt bug #495382
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> httpd-shed-0.4-r1.ebuild:
   Stable for sparc, wrt bug #495382
