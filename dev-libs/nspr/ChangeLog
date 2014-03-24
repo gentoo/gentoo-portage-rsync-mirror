@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.261 2014/03/24 14:27:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.262 2014/03/24 14:33:51 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.4.ebuild:
+  Stable for ppc64, wrt bug #505072
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.4.ebuild:
   Stable for alpha, wrt bug #505072

@@ -3034,6 +3034,8 @@ mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix inter
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
 mate-base/mate-file-manager:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
 mate-base/mate-file-manager:unique - Enable single instance support using dev-libs/libunique.
+mate-base/mate-keyring:gpg-agent - Include GPG agent in mate-keyring.
+mate-base/mate-keyring:ssh-agent - Include SSH agent in mate-keyring.
 mate-extra/mate-file-manager-sendto:gajim - Enables support for net-im/gajim
 mate-extra/mate-file-manager-sendto:mail - Enables support for mailto using gnome-extra/evolution-data-server
 mate-extra/mate-file-manager-sendto:pidgin - Enables support for net-im/pidgin

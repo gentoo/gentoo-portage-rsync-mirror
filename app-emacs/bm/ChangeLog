@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/bm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.5 2014/02/20 07:41:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.7 2014/03/24 14:57:11 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bm-1.32_p20140214.ebuild:
+  Stable for x86, wrt bug #505448
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bm-1.32_p20140214.ebuild:
+  Stable for amd64, wrt bug #505448
 
 *bm-1.32_p20140214 (20 Feb 2014)
 
@@ -23,4 +29,3 @@
   +metadata.xml, +bm-1.32.ebuild:
   Initial import. Ebuild contributed by MATSUYAMA Tomohiro
   <matsuyama@ariel-networks.com>, bug #194210.
-

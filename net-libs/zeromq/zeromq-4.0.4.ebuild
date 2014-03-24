@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.3.ebuild,v 1.2 2014/03/16 02:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.4.ebuild,v 1.1 2014/03/24 14:54:34 qnikst Exp $
 
 EAPI=5
 

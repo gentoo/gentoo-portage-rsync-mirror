@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/matlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.24 2014/03/17 00:21:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.26 2014/03/24 14:57:31 ago Exp $
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  matlab-3.3.2_pre20130829.ebuild:
+  Stable for x86, wrt bug #505458
+
+  24 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  matlab-3.3.2_pre20130829.ebuild:
+  Stable for amd64, wrt bug #505458
 
   17 Mar 2014; Ulrich Müller <ulm@gentoo.org>
   -matlab-3.3.1_pre20100121.ebuild, matlab-3.3.2_pre20130829.ebuild:
