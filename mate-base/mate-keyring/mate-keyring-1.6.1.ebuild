@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-keyring/mate-keyring-1.6.1.ebuild,v 1.1 2014/03/24 14:40:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-keyring/mate-keyring-1.6.1.ebuild,v 1.2 2014/03/24 15:44:43 tomwij Exp $
 
 EAPI="5"
 
@@ -70,9 +70,12 @@ src_configure() {
 		$(use_enable ssh-agent) \
 		$(use_with pam pam-dir $(getpam_mod_dir)) \
 		--with-root-certs="${EPREFIX}"/usr/share/ca-certificates/ \
-		--with-gtk=2.0 \
-		--enable-ssh-agent \
-		--enable-gpg-agent
+		--with-gtk=2.0
+}
+
+src_compile() {
+	# Temporary parallel build fix.
+	emake -j1
 }
 
 DOCS="AUTHORS ChangeLog NEWS README"
