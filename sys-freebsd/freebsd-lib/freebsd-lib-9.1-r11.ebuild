@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r11.ebuild,v 1.2 2014/03/04 21:13:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r11.ebuild,v 1.3 2014/03/24 17:49:33 ssuominen Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
 		hesiod? ( net-dns/hesiod )
 		kerberos? ( app-crypt/heimdal )
-		usb? ( !dev-libs/libusb !dev-libs/libusbx )
+		usb? ( !dev-libs/libusb )
 		zfs? ( =sys-freebsd/freebsd-cddl-${RV}* )
 		>=dev-libs/expat-2.0.1
 		!sys-libs/libutempter

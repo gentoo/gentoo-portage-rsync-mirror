@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/mate
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/ChangeLog,v 1.1 2014/03/24 17:58:44 tomwij Exp $
+
+*mate-1.6.0 (24 Mar 2014)
+
+  24 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +mate-1.6.0.ebuild,
+  +metadata.xml:
+  New ebuild for mate-base/mate, meta ebuild for MATE, The traditional desktop
+  environment; imported from the mate-overlay, reviewed and adjusted.

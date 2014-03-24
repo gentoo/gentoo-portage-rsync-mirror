@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib app-arch/bzip2 dev-libs/libxml2 x11-libs/gtk+:2 alsa? ( me
 SLOT=0
 SRC_URI=mirror://sourceforge/aqualung/aqualung-0.9beta11.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=16c7a51771c59a784c99f00d6385e467
+_md5_=ed83aaed5c57a74edf777813e4abf60c

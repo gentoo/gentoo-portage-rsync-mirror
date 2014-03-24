@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/squashmerge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/ChangeLog,v 1.2 2014/02/12 08:01:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/ChangeLog,v 1.4 2014/03/24 17:48:09 mgorny Exp $
+
+  24 Mar 2014; Michał Górny <mgorny@gentoo.org> squashmerge-9999.ebuild:
+  Install file format doc.
+
+  24 Mar 2014; Michał Górny <mgorny@gentoo.org> squashmerge-9999.ebuild:
+  Enable LZO by default since it is going to be used by Gentoo, and require at
+  least one compressor enabled.
 
   12 Feb 2014; Michał Górny <mgorny@gentoo.org> squashmerge-9999.ebuild:
   Fix typo, bug #501036. Thanks to Kalin KOZHUHAROV for noticing.

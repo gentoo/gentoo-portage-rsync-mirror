@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8737 2014/03/24 07:34:43 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8739 2014/03/24 17:58:31 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2014; Tom Wijsman <TomWij@gentoo.org> updates/1Q-2014:
+  SLOT move =mate-base/mate-control-center-1.6.2 from 2 to 0.
+
+  24 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2014:
+  Move dev-libs/libusbx to dev-libs/libusb since the usbx project is now in
+  control of the libusb sf.net project page and they renamed the library from
+  usbx to usb within 1.0.18 release.
 
   24 Mar 2014; Dion Moult <moult@gentoo.org> package.mask:
   x11-plugins/desklet-sudoku package mask removed as package removed

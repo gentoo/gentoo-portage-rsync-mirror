@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r2.ebuild,v 1.6 2014/01/26 10:59:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r2.ebuild,v 1.7 2014/03/24 17:33:45 billie Exp $
 
 EAPI=5
 
@@ -53,7 +53,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ffmpeg.patch \
 		"${FILESDIR}"/${P}-libavformat54.patch \
 		"${FILESDIR}"/${P}-automake-1.13.patch \
-		"${FILESDIR}"/${P}-libav9.patch
+		"${FILESDIR}"/${P}-libav9.patch \
+		"${FILESDIR}"/${P}-avcodec_max_audio_frame_size.patch
 	sed -i \
 		-e 's:$(pkgdatadir)/doc:/usr/share/doc/${PF}:' \
 		doc/Makefile.am || die

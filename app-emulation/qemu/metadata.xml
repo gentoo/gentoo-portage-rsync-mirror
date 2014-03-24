@@ -34,7 +34,7 @@
 		For 1.4 and newer this also enables WebSocket support.</flag>
     <flag name='jpeg'>Enable jpeg image support for the VNC console server</flag>
     <flag name='png'>Enable png image support for the VNC console server</flag>
-	<flag name='usb'>Enable USB passthrough via <pkg>dev-libs/libusbx</pkg></flag>
+	<flag name='usb'>Enable USB passthrough via <pkg>dev-libs/libusb</pkg></flag>
     <flag name="usbredir">Use <pkg>sys-apps/usbredir</pkg> to redirect USB
         devices to another machine over TCP</flag>
     <flag name='uuid'>Enable UUID support in the vdi block driver</flag>

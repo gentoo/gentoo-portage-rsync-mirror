@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/squashdelta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/ChangeLog,v 1.1 2014/02/11 19:30:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/ChangeLog,v 1.2 2014/03/24 17:34:28 mgorny Exp $
+
+  24 Mar 2014; Michał Górny <mgorny@gentoo.org> squashdelta-9999.ebuild:
+  Enable LZO by default since it is going to be used by Gentoo, and require at
+  least one compressor enabled.
 
 *squashdelta-9999 (11 Feb 2014)
 

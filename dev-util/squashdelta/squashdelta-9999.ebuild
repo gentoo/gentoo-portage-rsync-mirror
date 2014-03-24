@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/squashdelta-9999.ebuild,v 1.1 2014/02/11 19:30:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/squashdelta-9999.ebuild,v 1.2 2014/03/24 17:34:28 mgorny Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
 LICENSE="BSD public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lz4 lzo"
+IUSE="lz4 +lzo"
 
 #if LIVE
 KEYWORDS=
@@ -34,6 +34,9 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	dev-util/xdelta:3"
 DEPEND=${COMMON_DEPEND}
+
+# SquashDelta does not make much sense without a compression algo.
+REQUIRED_USE="|| ( lz4 lzo )"
 
 src_configure() {
 	local myeconfargs=(

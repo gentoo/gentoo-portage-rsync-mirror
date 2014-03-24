@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.1.ebuild,v 1.1 2013/10/21 02:13:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.1.ebuild,v 1.2 2014/03/24 17:39:55 ssuominen Exp $
 
 EAPI=5
 
@@ -87,7 +87,7 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	spice? ( >=app-emulation/spice-0.12.0[static-libs(+)] )
 	ssh? ( >=net-libs/libssh2-1.2.8[static-libs(+)] )
 	tls? ( net-libs/gnutls[static-libs(+)] )
-	usb? ( >=dev-libs/libusbx-1.0.13[static-libs(+)] )
+	usb? ( >=dev-libs/libusb-1.0.18[static-libs(+)] )
 	uuid? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
 	vde? ( net-misc/vde[static-libs(+)] )
 	xattr? ( sys-apps/attr[static-libs(+)] )

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare setup unpack
-DEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( app-crypt/heimdal ) usb? ( !dev-libs/libusb !dev-libs/libusbx ) zfs? ( =sys-freebsd/freebsd-cddl-9.2* ) >=dev-libs/expat-2.0.1 !sys-libs/libutempter !dev-libs/libelf !sys-freebsd/freebsd-headers >=sys-devel/flex-2.5.31-r2 =sys-freebsd/freebsd-sources-9.2* userland_GNU? ( sys-apps/mtree ) =sys-freebsd/freebsd-mk-defs-9.2* virtual/pmake virtual/pmake userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( app-crypt/heimdal ) usb? ( !dev-libs/libusb ) zfs? ( =sys-freebsd/freebsd-cddl-9.2* ) >=dev-libs/expat-2.0.1 !sys-libs/libutempter !dev-libs/libelf !sys-freebsd/freebsd-headers >=sys-devel/flex-2.5.31-r2 =sys-freebsd/freebsd-sources-9.2* userland_GNU? ( sys-apps/mtree ) =sys-freebsd/freebsd-mk-defs-9.2* virtual/pmake virtual/pmake userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=FreeBSD's base system libraries
 EAPI=5
 HOMEPAGE=http://www.freebsd.org/
 IUSE=atm bluetooth ssl hesiod ipv6 kerberos usb netware build crosscompile_opts_headers-only zfs userland_GNU userland_BSD profile abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
 KEYWORDS=~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 LICENSE=BSD
-RDEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( app-crypt/heimdal ) usb? ( !dev-libs/libusb !dev-libs/libusbx ) zfs? ( =sys-freebsd/freebsd-cddl-9.2* ) >=dev-libs/expat-2.0.1 !sys-libs/libutempter !dev-libs/libelf !sys-freebsd/freebsd-headers
+RDEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( app-crypt/heimdal ) usb? ( !dev-libs/libusb ) zfs? ( =sys-freebsd/freebsd-cddl-9.2* ) >=dev-libs/expat-2.0.1 !sys-libs/libutempter !dev-libs/libelf !sys-freebsd/freebsd-headers
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-lib-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-contrib-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-crypto-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-libexec-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-etc-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-include-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-usbin-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-gnu-9.2_rc3.tar.bz2 mirror://gentoo/freebsd-secure-9.2_rc3.tar.bz2 build? ( mirror://gentoo/freebsd-sys-9.2_rc3.tar.bz2 ) zfs? ( mirror://gentoo/freebsd-cddl-9.2_rc3.tar.bz2 )
 _eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	freebsd	9df2a927373191607071d802c1058c96	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=1a03dd4d997db311dcfd80c9086281cc
+_md5_=43012e50667df6385c99d9c87dea6579

@@ -1,0 +1,31 @@
+Index: src/decoder/dec_lavc.c
+===================================================================
+--- src/decoder/dec_lavc.c	(revision 1272)
++++ src/decoder/dec_lavc.c	(revision 1273)
+@@ -84,9 +84,9 @@
+         file_decoder_t * fdec = dec->fdec;
+ 
+ 	AVPacket packet;
+-        int16_t samples[AVCODEC_MAX_AUDIO_FRAME_SIZE];
+-        float fsamples[AVCODEC_MAX_AUDIO_FRAME_SIZE];
+-        int n_bytes = AVCODEC_MAX_AUDIO_FRAME_SIZE;
++        int16_t samples[MAX_AUDIO_FRAME_SIZE];
++        float fsamples[MAX_AUDIO_FRAME_SIZE];
++        int n_bytes = MAX_AUDIO_FRAME_SIZE;
+ 
+ 	if (av_read_frame(pd->avFormatCtx, &packet) < 0)
+ 		return 1;
+Index: src/decoder/dec_lavc.h
+===================================================================
+--- src/decoder/dec_lavc.h	(revision 1272)
++++ src/decoder/dec_lavc.h	(revision 1273)
+@@ -29,7 +29,8 @@
+ #include "file_decoder.h"
+ 
+ 
+-#define RB_LAVC_SIZE (3*AVCODEC_MAX_AUDIO_FRAME_SIZE)
++#define MAX_AUDIO_FRAME_SIZE 192000 // 1 second of 48khz 32bit audio
++#define RB_LAVC_SIZE (3*MAX_AUDIO_FRAME_SIZE)
+ 
+ 
+ typedef struct _lavc_pdata_t {
