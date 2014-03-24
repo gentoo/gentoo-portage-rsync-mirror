@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.61 2014/03/24 15:10:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.62 2014/03/24 19:14:59 mabi Exp $
+
+  24 Mar 2014; Matti Bickel <mabi@gentoo.org> -fxscintilla-1.71-r2.ebuild,
+  -fxscintilla-2.28.0.ebuild:
+  remove old versions, bug #496102
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> fxscintilla-3.3.5.ebuild:
   Stable for ppc, wrt bug #503236

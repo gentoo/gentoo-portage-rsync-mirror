@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.164 2014/03/23 17:52:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.165 2014/03/24 19:31:07 billie Exp $
+
+  24 Mar 2014; Daniel Pielmeier <billie@gentoo.org> -libisofs-1.3.2.ebuild:
+  Remove old.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libisofs-1.3.4.ebuild:
   Stable for sparc, wrt bug #502718
