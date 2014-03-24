@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/fisicalab-0.3.3.ebuild,v 1.1 2013/12/16 20:30:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/fisicalab-0.3.4.ebuild,v 1.1 2014/03/24 20:52:17 voyageur Exp $
 
 EAPI=5
 inherit gnustep-2
 
 DESCRIPTION="educational application to solve physics problems"
-HOMEPAGE="http://www.nongnu.org/fisicalab"
-SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
+HOMEPAGE="www.gnu.org/software/fisicalab"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
