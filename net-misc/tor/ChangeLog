@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.407 2014/03/20 19:02:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.408 2014/03/24 13:22:00 blueness Exp $
+
+  24 Mar 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/tor-0.2.4.21-fix-unittest-disable-curve25519.patch,
+  tor-0.2.4.21.ebuild:
+  Fix USE=-ecc unit test, bug #505174
 
   20 Mar 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Fix metadata descriptions, thanks nickm

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.21.ebuild,v 1.1 2014/03/02 15:50:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.21.ebuild,v 1.2 2014/03/24 13:22:00 blueness Exp $
 
 EAPI="5"
 
@@ -35,6 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
+	epatch "${FILESDIR}"/${P}-fix-unittest-disable-curve25519.patch
 }
 
 src_configure() {
