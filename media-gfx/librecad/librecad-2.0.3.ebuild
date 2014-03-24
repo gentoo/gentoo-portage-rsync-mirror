@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/librecad/librecad-2.0.2.ebuild,v 1.1 2014/01/23 10:48:50 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/librecad/librecad-2.0.3.ebuild,v 1.1 2014/03/24 08:35:51 slis Exp $
 
 EAPI=5
 
