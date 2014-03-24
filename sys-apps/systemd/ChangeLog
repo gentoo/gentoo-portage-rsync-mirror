@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.239 2014/03/12 18:40:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.240 2014/03/24 19:33:02 mgorny Exp $
+
+  24 Mar 2014; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Update following upstream changes. GnuTLS support has been added, and tcp-
+  wrappers support has been removed.
 
   12 Mar 2014; Mike Gilbert <floppym@gentoo.org> systemd-211.ebuild:
   Copy ROOTPREFIX logic from the live ebuild.

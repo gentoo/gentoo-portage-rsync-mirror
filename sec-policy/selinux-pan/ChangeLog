@@ -1,4 +1,10 @@
 
+  24 Mar 2014; Sven Vermeulen <swift@gentoo.org>
+  -selinux-pan-2.20120725-r11.ebuild, -selinux-pan-2.20120725-r12.ebuild,
+  -selinux-pan-2.20120725-r5.ebuild, -selinux-pan-2.20120725-r7.ebuild,
+  -selinux-pan-2.20120725-r8.ebuild, -selinux-pan-2.20120725-r9.ebuild:
+  Remove older SELinux policy ebuilds
+
 *selinux-pan-2.20140311-r1 (21 Mar 2014)
 
   21 Mar 2014; Sven Vermeulen <swift@gentoo.org>

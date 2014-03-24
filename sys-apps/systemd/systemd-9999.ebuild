@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.100 2014/03/03 22:19:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.101 2014/03/24 19:33:02 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
-	kdbus +kmod lzma pam policykit python qrcode +seccomp selinux tcpd
+	kdbus +kmod lzma pam policykit python qrcode +seccomp selinux ssl
 	test vanilla xattr"
 
 MINKV="3.0"
@@ -38,7 +38,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0= )
 	gudev? ( dev-libs/glib:2=[${MULTILIB_USEDEP}] )
-	http? ( net-libs/libmicrohttpd:0= )
+	http? ( >=net-libs/libmicrohttpd-0.9.33:0= )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
 	kmod? ( >=sys-apps/kmod-15:0= )
 	lzma? ( app-arch/xz-utils:0=[${MULTILIB_USEDEP}] )
@@ -47,7 +47,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	qrcode? ( media-gfx/qrencode:0= )
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
-	tcpd? ( sys-apps/tcp-wrappers:0= )
+	ssl? ( net-libs/gnutls:0= )
 	xattr? ( sys-apps/attr:0= )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
@@ -200,7 +200,7 @@ multilib_src_configure() {
 		$(use_enable qrcode qrencode)
 		$(use_enable seccomp)
 		$(use_enable selinux)
-		$(use_enable tcpd tcpwrap)
+		$(use_enable ssl gnutls)
 		$(use_enable test tests)
 		$(use_enable xattr)
 
@@ -239,6 +239,7 @@ multilib_src_configure() {
 			--disable-acl
 			--disable-audit
 			--disable-gcrypt
+			--disable-gnutls
 			--disable-gtk-doc
 			--disable-introspection
 			--disable-kmod
@@ -250,7 +251,6 @@ multilib_src_configure() {
 			--disable-qrencode
 			--disable-seccomp
 			--disable-selinux
-			--disable-tcpwrap
 			--disable-tests
 			--disable-xattr
 			--disable-xz

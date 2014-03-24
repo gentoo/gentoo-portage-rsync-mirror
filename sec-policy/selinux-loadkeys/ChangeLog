@@ -1,6 +1,15 @@
 # ChangeLog for sec-policy/selinux-loadkeys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-loadkeys/ChangeLog,v 1.34 2014/03/21 19:13:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-loadkeys/ChangeLog,v 1.35 2014/03/24 19:44:30 swift Exp $
+
+  24 Mar 2014; Sven Vermeulen <swift@gentoo.org>
+  -selinux-loadkeys-2.20120725-r11.ebuild,
+  -selinux-loadkeys-2.20120725-r12.ebuild,
+  -selinux-loadkeys-2.20120725-r5.ebuild,
+  -selinux-loadkeys-2.20120725-r7.ebuild,
+  -selinux-loadkeys-2.20120725-r8.ebuild,
+  -selinux-loadkeys-2.20120725-r9.ebuild:
+  Remove older SELinux policy ebuilds
 
 *selinux-loadkeys-2.20140311-r1 (21 Mar 2014)
 

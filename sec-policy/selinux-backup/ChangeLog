@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-backup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-backup/ChangeLog,v 1.10 2014/03/21 19:13:43 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-backup/ChangeLog,v 1.11 2014/03/24 19:44:09 swift Exp $
+
+  24 Mar 2014; Sven Vermeulen <swift@gentoo.org>
+  -selinux-backup-2.20120725-r12.ebuild:
+  Removing older SELinux policies
 
 *selinux-backup-2.20140311-r1 (21 Mar 2014)
 
