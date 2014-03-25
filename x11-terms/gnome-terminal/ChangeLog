@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.283 2014/03/09 12:05:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.284 2014/03/25 04:08:58 tetromino Exp $
+
+  25 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-3.10.2.ebuild, +files/gnome-terminal-3.10.2-sys-wait.h.patch:
+  Add patch to fix build on non-glibc systems as requested by blueness on irc.
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.10.2.ebuild:
   x86 stable, bug 499954

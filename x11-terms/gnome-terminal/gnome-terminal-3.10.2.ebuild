@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.10.2.ebuild,v 1.5 2014/03/09 12:05:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.10.2.ebuild,v 1.6 2014/03/25 04:08:58 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 readme.gentoo
+inherit eutils gnome2 readme.gentoo
 
 DESCRIPTION="The Gnome Terminal"
 HOMEPAGE="https://help.gnome.org/users/gnome-terminal/"
@@ -41,6 +41,13 @@ DEPEND="${RDEPEND}
 DOC_CONTENTS="To get previous working directory inherited in new opened
 	tab you will need to add the following line to your ~/.bashrc:\n
 	. /etc/profile.d/vte.sh"
+
+src_prepare() {
+	# patch from 3.12, fixes buld on non-glibc systems
+	epatch "${FILESDIR}/${PN}-3.10.2-sys-wait.h.patch"
+
+	gnome2_src_prepare
+}
 
 src_configure() {
 	# FIXME: leave smclient configure unset until it accepts values from the
