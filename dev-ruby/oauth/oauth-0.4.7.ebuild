@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.7.ebuild,v 1.2 2013/11/30 15:58:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.7.ebuild,v 1.3 2014/03/25 10:54:43 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -38,10 +38,6 @@ all_ruby_prepare() {
 each_ruby_prepare() {
 	case ${RUBY} in
 		*ruby18)
-			# Ignore hash ordering test failures
-			sed -i -e '183s:^:#:' -e '224s:^:#:' test/integration/consumer_test.rb || die
-			;;
-		*rubyee18)
 			# Ignore hash ordering test failures
 			sed -i -e '183s:^:#:' -e '224s:^:#:' test/integration/consumer_test.rb || die
 			;;
