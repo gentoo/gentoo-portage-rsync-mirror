@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scala-mode/scala-mode-2.10.3.ebuild,v 1.1 2014/02/10 20:03:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scala-mode/scala-mode-2.10.3.ebuild,v 1.2 2014/03/25 19:17:04 ulm Exp $
 
 EAPI=5
 
@@ -15,7 +15,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="app-arch/unzip"
 RDEPEND="dev-lang/scala"
 
 S="${WORKDIR}/${MY_P}/scala-emacs-mode"

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/scala-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scala-mode/ChangeLog,v 1.5 2014/02/10 20:03:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scala-mode/ChangeLog,v 1.6 2014/03/25 19:17:04 ulm Exp $
+
+  25 Mar 2014; Ulrich Müller <ulm@gentoo.org> -scala-mode-2.9.0.1.ebuild,
+  scala-mode-2.10.3.ebuild:
+  Don't depend on unzip. Remove old.
 
 *scala-mode-2.10.3 (10 Feb 2014)
 
