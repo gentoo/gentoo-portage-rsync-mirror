@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile install postinst postrm unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare unpack
 DEPEND=dev-texlive/texlive-metapost dev-lang/perl virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Combined LaTeX/Metafont package for drawing of Feynman diagrams
+EAPI=5
 HOMEPAGE=http://www.ctan.org/tex-archive/macros/latex/contrib/feynmf/
 IUSE=doc
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
-LICENSE=GPL-2
+LICENSE=GPL-2+
 RDEPEND=dev-texlive/texlive-metapost virtual/latex-base
 SLOT=0
-SRC_URI=mirror://gentoo/feynmf-1.08.tar.gz doc? ( mirror://gentoo/feynmf-cnl.tar.gz )
+SRC_URI=http://dev.gentoo.org/~ulm/distfiles/feynmf-1.08.tar.gz doc? ( http://dev.gentoo.org/~ulm/distfiles/feynmf-cnl.tar.gz )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=50b8f201a1151dd59086e025af6c2760
+_md5_=8cae7352f8ecb2e13e190dce5001fef8

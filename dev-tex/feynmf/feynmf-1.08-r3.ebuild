@@ -1,16 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/feynmf-1.08-r3.ebuild,v 1.17 2012/05/09 17:07:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/feynmf-1.08-r3.ebuild,v 1.18 2014/03/25 13:00:47 ulm Exp $
+
+EAPI=5
 
 inherit eutils latex-package
 
 DESCRIPTION="Combined LaTeX/Metafont package for drawing of Feynman diagrams"
 HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/feynmf/"
 #Taken from: ftp.tug.ctan.org/tex-archive/macros/latex/contrib/${PN}.tar.gz
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	doc? ( mirror://gentoo/${PN}-cnl.tar.gz )"
+SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.tar.gz
+	doc? ( http://dev.gentoo.org/~ulm/distfiles/${PN}-cnl.tar.gz )"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc"
@@ -22,18 +24,15 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}"
 TEXMF="/usr/share/texmf-site"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}/${P}.patch"
 	epatch "${FILESDIR}/${P}-tempfile.patch"
 }
 
 src_compile() {
 	export VARTEXFONTS="${T}"/fonts
-	emake MP=mpost all manual.ps || die "emake failed"
-	if use doc; then
-		emake -f Makefile.cnl ps || die "emake fmfcnl failed"
-	fi
+	emake MP=mpost all manual.ps
+	use doc && emake -f Makefile.cnl ps
 }
 
 src_install() {
