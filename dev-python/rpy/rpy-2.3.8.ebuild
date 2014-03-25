@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.3.8.ebuild,v 1.2 2014/02/12 00:53:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.3.8.ebuild,v 1.3 2014/03/25 05:16:18 idella4 Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1
 

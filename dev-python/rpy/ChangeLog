@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.75 2014/02/12 00:53:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.76 2014/03/25 05:16:18 idella4 Exp $
+
+  25 Mar 2014; Ian Delaney <idella4@gentoo.org> rpy-2.3.8.ebuild,
+  rpy-2.3.9.ebuild:
+  Add PYTHON_REQ_USE, fixes Bug #501558 by M. Johnson, rm old
 
 *rpy-2.3.9 (12 Feb 2014)
 
