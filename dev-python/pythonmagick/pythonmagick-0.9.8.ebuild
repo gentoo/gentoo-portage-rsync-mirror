@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.4 2013/04/23 05:35:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.5 2014/03/25 11:31:54 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
@@ -37,6 +37,7 @@ PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.1-use_active_python_version.patch"
 	epatch "${FILESDIR}/${PN}-0.9.2-fix_detection_of_python_includedir.patch"
+	epatch "${FILESDIR}/${P}-build.patch"
 
 	sed -e "s/AM_PATH_PYTHON(3.1)/AM_PATH_PYTHON(2.6)/" -i configure.ac || die "sed failed"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.43 2013/04/23 05:35:51 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.44 2014/03/25 11:31:54 idella4 Exp $
+
+  25 Mar 2014; Ian Delaney <idella4@gentoo.org>
+  +files/pythonmagick-0.9.8-build.patch, pythonmagick-0.9.8.ebuild:
+  Patched to fix build issue, fixes Byg #500414 by megabaks, patch by M. von
+  Gagern
 
   23 Apr 2013; Patrick Lauer <patrick@gentoo.org> pythonmagick-0.9.8.ebuild:
   Better fix for automake dependency
