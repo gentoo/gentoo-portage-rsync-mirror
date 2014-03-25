@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.24 2014/03/21 08:56:02 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.25 2014/03/25 00:18:46 nerdboy Exp $
+
+  24 Mar 2014; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.12.1-r1.ebuild,
+  rapidsvn-0.12.1.ebuild:
+  Stable on arm wrt bug# 502814 (plus fixed a minor QA issue). Recommend 
+  removing older version.
 
   21 Mar 2014; Chema Alonso <nimiux@gentoo.org> rapidsvn-0.12.1-r1.ebuild:
   Stable for amd64 wrt bug #502814
