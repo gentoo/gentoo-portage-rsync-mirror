@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.115 2014/02/03 12:31:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.116 2014/03/25 07:43:34 polynomial-c Exp $
+
+*help2man-1.45.1 (25 Mar 2014)
+
+  25 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -help2man-1.40.11.ebuild,
+  -help2man-1.40.12.ebuild, -help2man-1.40.13.ebuild, -help2man-1.41.2.ebuild,
+  -help2man-1.42.1.ebuild, -help2man-1.43.2.ebuild, +help2man-1.45.1.ebuild:
+  Version bump. Removed old.
 
 *help2man-1.44.1 (03 Feb 2014)
 
