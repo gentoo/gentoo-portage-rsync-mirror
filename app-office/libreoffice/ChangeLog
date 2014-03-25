@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.545 2014/03/25 09:57:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.547 2014/03/25 10:28:58 scarabeus Exp $
+
+  25 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Raise orcus dependency to 0.7.0
+
+  25 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Raise dep over glew.
 
   25 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Add missing dependency over glm.

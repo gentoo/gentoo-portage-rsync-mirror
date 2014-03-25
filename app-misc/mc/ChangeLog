@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.307 2014/03/19 16:13:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.308 2014/03/25 10:28:44 polynomial-c Exp $
+
+  25 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -mc-4.8.7.ebuild,
+  -mc-4.8.7-r1.ebuild, -mc-4.8.8-r1.ebuild, -mc-4.8.8-r2.ebuild,
+  -mc-4.8.9.ebuild, -mc-4.8.10.ebuild,
+  -files/mc-4.8.8-race_cond_create_tmp_dir.patch,
+  -files/mc-4.8.8-segfault-unowned-temp-dir.patch,
+  -files/mc-4.8.8-wrong_char_in_menu_file.patch,
+  -files/mc-4.8.9-ncurses-include-fix.patch,
+  -files/mc-4.8.9-unknown-opts.patch:
+  Removed old.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mc-4.8.11.ebuild:
   Stable for alpha, wrt bug #500154

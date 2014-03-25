@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/extlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.29 2013/12/11 19:24:33 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.30 2014/03/25 10:19:40 nimiux Exp $
+
+  25 Mar 2014; Chema Alonso <nimiux@gentoo.org> extlib-1.6.1.ebuild:
+  Stable for amd64 wrt bug #502730
 
 *extlib-1.6.1 (11 Dec 2013)
 

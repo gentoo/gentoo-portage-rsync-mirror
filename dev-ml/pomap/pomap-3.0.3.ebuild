@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-3.0.3.ebuild,v 1.1 2014/01/19 13:14:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/pomap-3.0.3.ebuild,v 1.2 2014/03/25 10:30:49 nimiux Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1-with-linking-exception"
 DEPEND=""
 RDEPEND="${DEPEND}"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="examples"
 
 DOCS=( "AUTHORS.txt" "CHANGES.txt" "README.md" )

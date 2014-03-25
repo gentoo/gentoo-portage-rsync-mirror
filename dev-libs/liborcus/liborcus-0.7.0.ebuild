@@ -1,28 +1,31 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.6 2014/03/25 10:24:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.7.0.ebuild,v 1.1 2014/03/25 10:28:37 scarabeus Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://gitorious.org/ixion/ixion.git"
+EGIT_REPO_URI="git://gitorious.org/orcus/orcus.git"
 
 [[ ${PV} == 9999 ]] && GITECLASS="git-2 autotools"
 inherit eutils ${GITECLASS}
 unset GITECLASS
 
-DESCRIPTION="General purpose formula parser & interpreter"
-HOMEPAGE="http://gitorious.org/ixion/pages/Home"
-[[ ${PV} == 9999 ]] || SRC_URI="http://kohei.us/files/ixion/src/${P}.tar.bz2"
+DESCRIPTION="Standalone file import filter library for spreadsheet documents"
+HOMEPAGE="http://gitorious.org/orcus/pages/Home"
+[[ ${PV} == 9999 ]] || SRC_URI="http://kohei.us/files/orcus/src/${P}.tar.bz2"
 
 LICENSE="MIT"
-SLOT="0/0.7"
+SLOT="0/0.5"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static-libs"
 
-RDEPEND="dev-libs/boost:="
+RDEPEND="
+	>=dev-libs/boost-1.51.0:=
+	>=dev-libs/libixion-0.7.0:=
+"
 DEPEND="${RDEPEND}
-	>=dev-util/mdds-0.7.1:=
+	>=dev-util/mdds-0.8.1
 "
 
 src_prepare() {
@@ -31,6 +34,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-werror \
 		$(use_enable static-libs static)
 }
 
