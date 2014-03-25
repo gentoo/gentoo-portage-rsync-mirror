@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.262 2014/03/19 00:17:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.263 2014/03/25 15:25:55 chithanh Exp $
+
+  25 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ppc32/use.stable.mask:
+  stable.mask opencl flag on ppc32
 
   19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi, +ppc32/eapi,
   +ppc32/pegasos/eapi, +ppc64/32ul/eapi, +ppc64/64ul/eapi, +ppc64/eapi:
