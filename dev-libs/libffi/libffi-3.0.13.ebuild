@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.13.ebuild,v 1.3 2013/05/18 11:47:54 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.13.ebuild,v 1.4 2014/03/25 20:04:37 vapier Exp $
 
 EAPI=5
 inherit eutils libtool multilib toolchain-funcs

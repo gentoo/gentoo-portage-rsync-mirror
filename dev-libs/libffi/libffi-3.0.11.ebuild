@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.20 2013/03/28 23:48:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.21 2014/03/25 20:04:37 vapier Exp $
 
 EAPI=4
 

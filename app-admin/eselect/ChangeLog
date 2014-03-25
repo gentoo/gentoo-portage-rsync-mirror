@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.270 2014/03/12 10:12:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.271 2014/03/25 20:03:31 ulm Exp $
+
+  25 Mar 2014; Ulrich Müller <ulm@gentoo.org> -eselect-1.3.1.ebuild:
+  Remove old.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> eselect-1.4.ebuild:
   Stable for sparc, wrt bug #500298

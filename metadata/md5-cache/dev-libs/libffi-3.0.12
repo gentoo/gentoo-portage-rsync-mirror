@@ -9,4 +9,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=ftp://sourceware.org/pub/libffi/libffi-3.0.12.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3a40edafa6a46c2779c1bbc58c8b0ce1
+_md5_=7704d165d402fa20418c14769d673029
