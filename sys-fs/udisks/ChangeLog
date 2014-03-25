@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.162 2014/03/24 14:34:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.163 2014/03/25 09:19:55 ssuominen Exp $
+
+  25 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/udisks-1.0.4-drop-pci-db.patch,
+  -files/udisks-1.0.4-kernel-2.6.36-compat.patch,
+  -files/udisks-2.1.0-ieee1394.patch, -udisks-1.0.4-r5.ebuild,
+  -udisks-2.1.0.ebuild, -udisks-2.1.1.ebuild, -udisks-2.1.2.ebuild:
+  old
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> udisks-1.0.5.ebuild,
   udisks-2.1.3.ebuild:

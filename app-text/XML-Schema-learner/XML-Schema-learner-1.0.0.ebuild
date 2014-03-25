@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/XML-Schema-learner-1.0.0.ebuild,v 1.1 2014/01/09 03:31:56 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/XML-Schema-learner-1.0.0.ebuild,v 1.2 2014/03/25 09:25:53 nimiux Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="test"
 
 # PHP dependency can be inferred from .travis.yml in the repository.

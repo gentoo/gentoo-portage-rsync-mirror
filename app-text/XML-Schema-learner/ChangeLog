@@ -1,6 +1,10 @@
 # ChangeLog for app-text/XML-Schema-learner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/ChangeLog,v 1.1 2014/01/09 03:31:56 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/ChangeLog,v 1.2 2014/03/25 09:25:53 nimiux Exp $
+
+  25 Mar 2014; Chema Alonso <nimiux@gentoo.org>
+  XML-Schema-learner-1.0.0.ebuild:
+  Stable for amd64 wrt bug #503884
 
 *XML-Schema-learner-1.0.0 (09 Jan 2014)
 
