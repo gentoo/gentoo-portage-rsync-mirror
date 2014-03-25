@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-3.1-r1.ebuild,v 1.1 2014/03/23 17:32:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-3.1-r1.ebuild,v 1.2 2014/03/25 13:55:42 jer Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-ldflags.patch"
+	epatch "${FILESDIR}"/${P}-{ldflags,include}.patch
 }
 
 src_install() {

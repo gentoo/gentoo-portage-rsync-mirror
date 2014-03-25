@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-9999.ebuild,v 1.1 2014/03/12 20:45:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-9999.ebuild,v 1.2 2014/03/25 13:57:46 ssuominen Exp $
 
 EAPI=5
 
-inherit cmake-multilib
+inherit cmake-multilib multilib
 
 if [[ ${PV} = 9999* ]]; then
 	inherit mercurial
@@ -28,11 +28,6 @@ DEPEND="${RDEPEND}
 	abi_x86_32? ( ${ASM_DEPEND} )
 	abi_x86_64? ( ${ASM_DEPEND} )"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-libdir.patch"
-	"${FILESDIR}/${PN}-libdir_pkgconfig.patch"
-)
-
 src_unpack() {
 	if [[ ${PV} = 9999* ]]; then
 		mercurial_src_unpack
@@ -49,6 +44,7 @@ multilib_src_configure() {
 		$(cmake-utils_use_enable test TESTS)
 		$(multilib_build_binaries || echo "-DENABLE_CLI=OFF")
 		-DHIGH_BIT_DEPTH=$(usex 10bit "ON" "OFF")
+		-DLIB_INSTALL_DIR="$(get_libdir)"
 	)
 	cmake-utils_src_configure
 }

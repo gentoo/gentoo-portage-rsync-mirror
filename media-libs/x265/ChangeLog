@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.1 2014/03/12 20:45:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.2 2014/03/25 13:57:46 ssuominen Exp $
+
+  25 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> x265-9999.ebuild:
+  Pass -DLIB_INSTALL_DIR and drop now unrequired libdir patches wrt #505584 by
+  "jospezial"
 
 *x265-9999 (12 Mar 2014)
 *x265-0.8 (12 Mar 2014)
@@ -9,4 +13,3 @@
   +x265-9999.ebuild, +files/x265-libdir.patch,
   +files/x265-libdir_pkgconfig.patch, +metadata.xml:
   Initial import, bug #485352. Ebuild by Samuli Suominen, Yixun Lan and myself.
-
