@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/parrot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.78 2014/03/02 21:34:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.79 2014/03/25 19:00:33 zlogene Exp $
+
+  25 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -files/perldoc-5.10.patch,
+  -files/perldoc.patch, -parrot-5.10.0.ebuild, -parrot-5.7.0.ebuild,
+  -parrot-6.0.0.ebuild:
+  Drop old.
 
   02 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> parrot-6.1.0.ebuild:
   Add subslot dependency on dev-libs/icu
