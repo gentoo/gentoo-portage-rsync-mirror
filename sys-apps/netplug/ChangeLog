@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/netplug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.31 2014/03/12 10:10:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.32 2014/03/25 11:03:47 polynomial-c Exp $
+
+  25 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -netplug-1.2.9-r5.ebuild,
+  -netplug-1.2.9.1.ebuild, netplug-1.2.9.2-r1.ebuild,
+  -files/netplug-1.2.9-gcc4.patch, -files/netplug-1.2.9-remove-werror.patch,
+  -files/netplug-1.2.9-warn_unused_result_write_call.patch, -files/netplug:
+  Bumped EAPI to 5. Removed old.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> netplug-1.2.9.2-r1.ebuild:
   Stable for sparc, wrt bug #500978

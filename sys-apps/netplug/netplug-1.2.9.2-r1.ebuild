@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9.2-r1.ebuild,v 1.7 2014/03/12 10:10:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9.2-r1.ebuild,v 1.8 2014/03/25 11:03:47 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -22,11 +22,11 @@ RDEPEND=""
 src_prepare() {
 	# Remove debug flags from CFLAGS
 	if ! use debug; then
-		sed -i -e "s/ -ggdb3//" Makefile || die "sed failed"
+		sed -i -e "s/ -ggdb3//" Makefile || die
 	fi
 
 	# Remove -O3 and -Werror from CFLAGS
-	sed -i -e "s/ -O3//" -e "s/ -Werror//" Makefile || die "sed failed"
+	sed -i -e "s/ -O3//" -e "s/ -Werror//" Makefile || die
 
 	# Remove nested functions, #116140
 	epatch "${FILESDIR}/${PN}-1.2.9-remove-nest.patch"
@@ -37,10 +37,10 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	emake CC="${CC}" || die "emake failed"
+	emake CC="${CC}"
 
 	if use doc; then
-		emake -C docs/ || die "emake failed"
+		emake -C docs/
 	fi
 }
 
@@ -54,11 +54,11 @@ src_install() {
 	newexe "${FILESDIR}/netplug-2" netplug
 
 	dodir /etc/netplug
-	echo "eth*" > "${D}"/etc/netplug/netplugd.conf
+	echo "eth*" > "${D}"/etc/netplug/netplugd.conf || die
 
-	dodoc ChangeLog NEWS README TODO || die "dodoc failed"
+	dodoc ChangeLog NEWS README TODO
 
 	if use doc; then
-		dodoc docs/state-machine.ps || die "dodoc failed"
+		dodoc docs/state-machine.ps
 	fi
 }
