@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.544 2014/03/12 05:02:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.545 2014/03/25 09:57:02 scarabeus Exp $
+
+  25 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Add missing dependency over glm.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libreoffice-4.1.4.2.ebuild:
