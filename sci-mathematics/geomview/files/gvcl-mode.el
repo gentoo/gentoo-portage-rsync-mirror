@@ -66,7 +66,7 @@
 
 (defconst gvcl-font-lock-keywords-1
   (list
-   '("(\\(progn\\|backcolor\\|read\\|camera\\|new-geometry\\|car\\|cdr\\|emodule-\\S-+\\|ui-\\S-+\\|normalization\\)\\>" . font-lock-builtin-face)
+   '("(\\s-*\\(redraw\\|process-events\\|interest\\|time-interests\\|and\\|sleep-\\(for\\|until\\)\\|or\\|hdefine\\|geometry\\|quote\\|eval\\|if\\|while\\|setq\\|echo\\|let\\|exit\\|quit\\|lambda\\|defun\\|progn\\|backcolor\\|read\\|camera\\|new-geometry\\|car\\|cdr\\|cons\\|emodule\\S-*\\|ui-\\S-+\\|normalization\\)\\>" . font-lock-builtin-face)
    '("\\(\"\\w*\"\\)" . font-lock-variable-name-face))
   "Minimal highlighting expressions for GVCL mode.")
 
@@ -74,24 +74,27 @@
   (append gvcl-font-lock-keywords-1
 		  (list
 		   '("\\<\\(\\(location\\|origin\\)\\s-+\\(camera\\|local\\|global\\|ndc\\|screen\\)\\)\\>" . font-lock-constant-face)
-		   '("\\<\\(define\\|geom\\(etry\\)?\\|camera\\|window\\)\\>" . font-lock-keyword-face)))
+		   '("\\<\\(define\\|geom\\(etry\\)?\\|camera\\|window\\|inertia\\|allgeoms\\|focus-change\\)\\>" . font-lock-keyword-face)))
   "Additional Keywords to highlight in GVCL mode.")
 
 (defconst gvcl-font-lock-keywords-3
   (append gvcl-font-lock-keywords-2
 		  (list
-		   '("\\<\\(yes\\|no\\|on\\|off\\|toggle\\|center\\|none\\|focus-change\\|allgeoms\\)\\>" . font-lock-constant-face)
 		   '("\\<\\(INST\\|T?LIST\\|\\(ST\\)?Z?u?v?C?N?U?4?n?\\(OFF\\|MESH\\|SKEL\\|VECT\\|QUAD\\|BEZ\\|BBP\\|BBOX\\|SPHERE\\|GROUP\\|DISCGRP\\|COMMENT\\)\\)\\>" . font-lock-type-face)
+		   ;; more OOGL keywords
+		   '("\\<\\(SINUSOIDAL\\|CYLINDRICAL\\|RECTANGULAR\\|STEREOGRAPHIC\\|ONEFACE\\)\\>" . font-lock-keyword-face)
 		   ;; apperance constants
-		   '("\\<\\(apply\\s-+\\(blend\\|modulate\\|replace\\|decal\\)\\|replacelights\\|face\\|edge\\|vect\\|transparent\\|normal\\|normscale\\|evert\\|texturing\\|mipmap\\|linear\\|mipinterp\\|backcull\\|concave\\|shadelines\\|keepcolor\\|shading\\s-+\\(smooth\\|flat\\|constant\\)\\|replacelights\\|clamp\\s-+\\(s\\|t\\|st\\|none\\)\\)\\>" . font-lock-constant-face)
+		   '("\\<\\(blend\\|modulate\\|replace\\|decal\\|replacelights\\|face\\|edge\\|vect\\|transparent\\|normal\\|normscale\\|evert\\|texturing\\|mipmap\\|linear\\|mipinterp\\|backcull\\|concave\\|shadelines\\|keepcolor\\|smooth\\|flat\\|constant\\|csmooth\\|vcflat\\|replacelights\\|clamp\\s-+\\(s\\|t\\|st\\|none\\)\\)\\>" . font-lock-constant-face)
 		   ;; image constants
 		   '("\\<\\(RGB\\|RGBA\\|ALPHA\\|LUMINANCE\\|LUMINANCE_ALPHA\\)\\>" . font-lock-constant-face)
 		   ;; image keywords
 		   '("\\<\\(inertia\\|width\\|height\\|channels\\|maxval\\|data\\)\\>" . font-lock-keyword-face)
 		   ;; apperance keywords
-		   '("\\<\\(localviewer\\|attenconst\\|attenmult2?\\|normscale\\|shading\\|linewidth\\|patchdice\\|ka\\|ambient\\|kd\\|diffuse\\|ks\\|specular\\|shininess\\|backdiffuse\\|alpha\\|edgecolor\\|normalcolor\\|color\\|position\\|file\\|alphafile\\|background\\)\\>" . font-lock-keyword-face)
+		   '("\\<\\(apply\\|shading\\|localviewer\\|attenconst\\|attenmult2?\\|normscale\\|shading\\|linewidth\\|patchdice\\|ka\\|ambient\\|kd\\|diffuse\\|ks\\|specular\\|shininess\\|backdiffuse\\|alpha\\|edgecolor\\|normalcolor\\|color\\|position\\|file\\|alphafile\\|background\\|texturing\\)\\>" . font-lock-keyword-face)
 		   ;; some more types
-		   '("\\<\\(texture\\|light\\|material\\|lighting\\|light\\|image\\|appearance\\|n?transforms?\\)\\>" . font-lock-type-face)
+		   '("\\<\\(texture\\|light\\|material\\|lighting\\|light\\|image\\|appearance\\|n?transforms?\\|tlist\\)\\>" . font-lock-type-face)
+		   ;; some more constants
+		   '("\\<\\(yes\\|no\\|on\\|off\\|toggle\\|center\\|none\\)\\>" . font-lock-constant-face)
 		   ))
   "Balls-out highlighting in GVCL mode.")
 
