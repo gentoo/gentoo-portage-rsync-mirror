@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.95 2014/03/19 15:23:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.96 2014/03/25 08:23:51 idella4 Exp $
+
+  25 Mar 2014; Ian Delaney <idella4@gentoo.org>
+  +files/pyserial-2.6-list_ports.patch, pyserial-2.6-r1.ebuild:
+  Add patch to fix Bug #500818 by NiTr0
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyserial-2.7.ebuild:
   Stable for alpha, wrt bug #495626

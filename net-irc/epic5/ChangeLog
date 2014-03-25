@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/epic5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.20 2014/03/25 07:05:11 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.21 2014/03/25 08:03:27 binki Exp $
+
+*epic5-1.1.7 (25 Mar 2014)
+
+  25 Mar 2014; Nathan Phillip Brink <binki@gentoo.org> +epic5-1.1.7.ebuild,
+  +files/epic5-1.1.7-ruby-automagic-as-needed.patch, -epic5-1.1.2.ebuild,
+  -files/epic5-1.1.2-ruby-automagic-as-needed.patch:
+  Bump to epic5-1.1.7 which has ruby19 support for bug #505232.
 
   25 Mar 2014; Nathan Phillip Brink <binki@gentoo.org> epic5-1.1.2.ebuild:
   Fix ability to compile with USE=-ruby for bug #497080.

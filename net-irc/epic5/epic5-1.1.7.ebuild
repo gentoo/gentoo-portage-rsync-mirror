@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.1.2.ebuild,v 1.3 2014/03/25 07:05:11 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.1.7.ebuild,v 1.1 2014/03/25 08:03:27 binki Exp $
 
 EAPI=4
 
-USE_RUBY=ruby18
+USE_RUBY="ruby19"
 RUBY_OPTIONAL=yes
 inherit autotools eutils multilib ruby-ng toolchain-funcs
 
@@ -42,10 +42,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libarchive-automagic.patch \
+	epatch "${FILESDIR}"/${PN}-1.1.2-libarchive-automagic.patch \
 		"${FILESDIR}"/${P}-ruby-automagic-as-needed.patch \
-		"${FILESDIR}"/${P}-tcl-automagic-as-needed.patch \
-		"${FILESDIR}"/${P}-perl-automagic-as-needed.patch
+		"${FILESDIR}"/${PN}-1.1.2-tcl-automagic-as-needed.patch \
+		"${FILESDIR}"/${PN}-1.1.2-perl-automagic-as-needed.patch
 	eautoconf
 }
 
