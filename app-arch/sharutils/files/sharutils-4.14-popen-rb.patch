@@ -26,7 +26,7 @@ we know the answer already, so hardcode it to true.
 -}
 -_ACEOF
 -if ac_fn_c_try_run "$LINENO"; then :
-+if true; then
++if false; then
 +if true; then
  
  $as_echo "#define BINARY_MODE_POPEN 1" >>confdefs.h

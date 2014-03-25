@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/paredit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/ChangeLog,v 1.13 2014/02/18 13:13:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/ChangeLog,v 1.14 2014/03/25 20:33:46 ulm Exp $
+
+  25 Mar 2014; Ulrich Müller <ulm@gentoo.org> -paredit-22.ebuild:
+  Remove old.
 
 *paredit-23-r1 (18 Feb 2014)
 

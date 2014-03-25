@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/blogmax-20110305.ebuild,v 1.1 2014/02/16 11:52:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/blogmax-20110305.ebuild,v 1.2 2014/03/25 20:37:48 ulm Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND="app-arch/unzip"
 
 S="${WORKDIR}/${PN}"
-SITEFILE="50${PN}-gentoo-${PV}.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
 	rm *.elc gpl.txt || die
