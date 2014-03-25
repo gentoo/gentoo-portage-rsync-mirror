@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r3.ebuild,v 1.1 2014/03/03 16:50:33 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r3.ebuild,v 1.2 2014/03/25 22:15:48 vapier Exp $
 
 EAPI="5"
 
@@ -97,13 +97,18 @@ IUSE_SANE_BACKENDS="
 IUSE="avahi doc gphoto2 ipv6 threads usb v4l xinetd snmp systemd"
 
 for backend in ${IUSE_SANE_BACKENDS}; do
-	if [ ${backend} = pnm ]; then
-		IUSE="${IUSE} -sane_backends_pnm"
-	elif [ ${backend} = mustek_usb2 -o ${backend} = kvs40xx ]; then
-		IUSE="${IUSE} sane_backends_${backend}"
-	else
-		IUSE="${IUSE} +sane_backends_${backend}"
-	fi
+	case ${backend} in
+	# Disable backends that require parallel ports as no one has those anymore.
+	canon_pp|hpsj5s|mustek_pp|\
+	pnm)
+		IUSE+=" -sane_backends_${backend}"
+		;;
+	mustek_usb2|kvs40xx)
+		IUSE+=" sane_backends_${backend}"
+		;;
+	*)
+		IUSE+=" +sane_backends_${backend}"
+	esac
 done
 
 REQUIRED_USE="
