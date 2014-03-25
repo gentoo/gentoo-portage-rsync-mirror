@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.14.ebuild,v 1.5 2014/03/22 23:09:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.14.ebuild,v 1.6 2014/03/25 07:23:36 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -31,6 +31,11 @@ python_prepare_all() {
 		-e "s/test_set_tlsext_host_name_wrong_args/_&/" \
 		-i OpenSSL/test/test_ssl.py || die "test_ssl sed failed"
 
+	# https://github.com/pyca/pyopenssl/issues/41
+	sed -e "s/test_digest/_&/" -i OpenSSL/test/test_crypto.py
+	# https://github.com/pyca/pyopenssl/issues/67
+	sed -e "s/test_wantWriteError/_&/" -i OpenSSL/test/test_ssl.py
+
 	distutils-r1_python_prepare_all
 }
 
@@ -47,10 +52,6 @@ python_test() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( doc/_build/html/. )
+	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
-
-	if use examples; then
-		dodoc -r examples
-		docompress -x /usr/share/doc/${PF}/examples
-	fi
 }
