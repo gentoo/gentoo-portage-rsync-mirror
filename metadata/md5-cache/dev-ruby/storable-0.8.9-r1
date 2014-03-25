@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( ruby_targets_ruby18? ( dev-ruby/yajl-ruby[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/yajl-ruby[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DEPEND=test? ( ruby_targets_ruby18? ( dev-ruby/yajl-ruby[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/yajl-ruby[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
 DESCRIPTION=Marshal Ruby classes into and out of multiple formats
 EAPI=5
 HOMEPAGE=http://solutious.com/
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=http://github.com/delano/storable/tarball/v0.8.9 -> storable-git-0.8.9.tgz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=1a145f3352c3301de73f2375971b6205
+_md5_=c4d9441c6f895dbf80f3e368e65be002

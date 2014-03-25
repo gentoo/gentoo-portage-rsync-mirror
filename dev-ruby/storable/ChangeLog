@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/storable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.21 2014/03/10 16:15:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.22 2014/03/25 06:35:18 graaff Exp $
+
+  25 Mar 2014; Hans de Graaff <graaff@gentoo.org> storable-0.8.9-r1.ebuild:
+  Fix EAPI=5 usage. Avoid rake for documentation generation since it uses
+  obsolete code.
 
 *storable-0.8.9-r1 (10 Mar 2014)
 
