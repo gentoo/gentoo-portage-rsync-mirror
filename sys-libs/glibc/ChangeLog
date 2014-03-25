@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.987 2014/03/20 13:38:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.988 2014/03/25 00:34:56 vapier Exp $
+
+  25 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit:
+  Update nscd tmpfiles install #505518 by dwfreed.
 
   20 Mar 2014; Agostino Sarubbo <ago@gentoo.org> glibc-2.17.ebuild:
   Stable for sparc, wrt bug #496752
