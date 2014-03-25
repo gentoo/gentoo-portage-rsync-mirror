@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.3.ebuild,v 1.2 2014/03/18 20:26:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.3.ebuild,v 1.3 2014/03/25 17:52:09 bicatali Exp $
 
 EAPI=5
 
@@ -65,7 +65,7 @@ pc_libs() {
 	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
 		sed -e 's/[ ]-l*\(pthread\|m\)\([ ]\|$\)//g' \
 		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//' \
-		tr ',' '\n' | sort | uniq | tr '\n' ','
+		| tr ',' '\n' | sort -u | tr '\n' ','
 }
 
 python_prepare_all() {
