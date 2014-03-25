@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15509 2014/03/24 21:40:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15511 2014/03/25 17:24:32 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,12 +47,6 @@ media-plugins/vdr-ac3mode
 # ~ 24 Apr 2014
 # not converted to xgettext handling, dead on upstream since ~2008
 media-plugins/vdr-bitstreamout
-
-# Ulrich Müller <ulm@gentoo.org> (23 Mar 2014)
-# Reintegrated into app-emacs/gnuserv.
-# See bug 177936, comment #9 and following for details.
-# Masked for removal in 30 days, bug 505432.
-app-emacs/gnuserv-programs
 
 # Rick Farina <zerochaos@gentoo.org> (22 Mar 2014)
 # Upstream has replaced dev-util/dissy with dev-util/emilpro
@@ -212,12 +206,6 @@ lxde-base/lxpolkit
 # According to upstream, a new release is "unlikely".
 # Masked for removal in 60 days, bug 502168.
 app-emacs/delicious
-
-# Ulrich Müller <ulm@gentoo.org> (24 Feb 2014)
-# Does not work any more, AOL has shut off
-# the TOC2 protocol for the AIM service.
-# Masked for removal in 30 days, bug 502322.
-app-emacs/tnt
 
 # Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
 # Support library for app-emacs/prime-el, which is masked

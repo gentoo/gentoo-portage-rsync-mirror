@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1393 2014/03/24 15:08:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1394 2014/03/25 17:24:02 vapier Exp $
+
+  25 Mar 2014; Mike Frysinger <vapier@gentoo.org> portage-2.1.11.62.ebuild,
+  portage-2.1.12.2.ebuild, portage-2.1.6.7_p1.ebuild, portage-2.2.1.ebuild,
+  portage-2.2.6.ebuild, portage-2.2.7.ebuild, portage-2.2.8-r1.ebuild,
+  portage-2.2.8.ebuild, portage-2.2.9-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> portage-2.2.8-r1.ebuild:
   Stable for ppc, wrt bug #502282
