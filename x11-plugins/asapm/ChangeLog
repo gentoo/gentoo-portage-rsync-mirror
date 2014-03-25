@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/asapm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.21 2014/03/25 13:55:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.22 2014/03/25 14:26:30 jer Exp $
+
+  25 Mar 2014; Jeroen Roovers <jer@gentoo.org> asapm-3.1-r1.ebuild,
+  +files/asapm-3.1-autoconf.patch, files/asapm-3.1-ldflags.patch:
+  Fix configure.in error when sourcing config.site.
 
   25 Mar 2014; Jeroen Roovers <jer@gentoo.org> asapm-3.1-r1.ebuild,
   +files/asapm-3.1-include.patch:

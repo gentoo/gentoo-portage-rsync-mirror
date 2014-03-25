@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-3.1-r1.ebuild,v 1.2 2014/03/25 13:55:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-3.1-r1.ebuild,v 1.3 2014/03/25 14:26:30 jer Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="APM monitor for AfterStep"
 HOMEPAGE="http://tigr.net/afterstep/applets/"
@@ -21,12 +21,11 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
-pkg_setup() {
-	tc-export CC
-}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{ldflags,include}.patch
+	epatch "${FILESDIR}"/${P}-{ldflags,include,autoconf}.patch
+	cp autoconf/configure.in . || die
+	AT_M4DIR=autoconf eautoconf
+	tc-export CC
 }
 
 src_install() {

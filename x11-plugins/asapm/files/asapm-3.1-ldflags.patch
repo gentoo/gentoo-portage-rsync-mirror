@@ -1,5 +1,5 @@
---- autoconf/Makefile.common.in
-+++ autoconf/Makefile.common.in
+--- a/autoconf/Makefile.common.in
++++ b/autoconf/Makefile.common.in
 @@ -34,7 +34,7 @@
  		done
  
