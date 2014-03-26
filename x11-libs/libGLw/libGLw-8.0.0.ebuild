@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libGLw/libGLw-8.0.0.ebuild,v 1.6 2014/01/20 08:49:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libGLw/libGLw-8.0.0.ebuild,v 1.7 2014/03/26 12:02:27 zlogene Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/glw/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="+motif static-libs"
 
 RDEPEND="
