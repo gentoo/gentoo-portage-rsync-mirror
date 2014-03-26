@@ -1,7 +1,2 @@
-# Set default paths for nsd_munin_ plugin
 [nsd_munin*]
 user root
-env.statefile /var/lib/munin-node/plugin-state/root/nsd-state
-env.nsd_conf /etc/nsd/nsd.conf
-env.nsd_control /usr/sbin/nsd-control
-env.nsd_checkconf /usr/sbin/nsd-checkconf
