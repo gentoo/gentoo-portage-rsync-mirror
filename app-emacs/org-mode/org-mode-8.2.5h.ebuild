@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.2.5h.ebuild,v 1.2 2014/03/26 11:12:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.2.5h.ebuild,v 1.3 2014/03/26 11:37:51 ulm Exp $
 
 EAPI=5
 NEED_EMACS=23
@@ -36,7 +36,7 @@ src_install() {
 		infodir="${EPREFIX}/usr/share/info" \
 		install
 
-	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}"
+	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}" || die
 
 	if use contrib; then
 		elisp-install ${PN}/contrib contrib/lisp/{org,ob,ox}*.el
