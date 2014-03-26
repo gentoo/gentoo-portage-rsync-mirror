@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.31 2014/03/01 22:10:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.32 2014/03/26 15:15:16 scarabeus Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
-EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
+EGIT_REPO_URI="https://github.com/weechat/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-r3"
 inherit eutils python-single-r1 multilib cmake-utils ${GIT_ECLASS}
 
@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.15 )
 "
 
-DOCS="AUTHORS ChangeLog NEWS README"
+DOCS="AUTHORS.asciidoc ChangeLog.asciidoc ReleaseNotes.asciidoc README.asciidoc"
 
 #REQUIRED_USE=" || ( ncurses gtk )"
 

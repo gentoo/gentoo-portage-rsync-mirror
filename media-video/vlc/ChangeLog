@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.896 2014/03/19 13:57:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.897 2014/03/26 15:29:51 tomwij Exp $
+
+  26 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/vlc-9999-libva-1.2.1-compat.patch, vlc-9999.ebuild:
+  Update libva 1.2.1 compatibility patch for live version; fixes bug #505586,
+  reported by jospezial.
 
   19 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
   Temporarly block non-live FFMPEG versions in live VLC with USE flag vdpau;
