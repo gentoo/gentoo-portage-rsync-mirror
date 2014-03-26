@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portspoof/portspoof-1.1.ebuild,v 1.1 2014/03/22 22:51:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portspoof/portspoof-1.1.ebuild,v 1.2 2014/03/26 14:21:15 zerochaos Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/drk1wi/portspoof/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 src_prepare() {

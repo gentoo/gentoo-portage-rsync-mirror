@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/emilpro/emilpro-3-r1.ebuild,v 1.1 2014/03/19 02:50:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/emilpro/emilpro-3-r1.ebuild,v 1.2 2014/03/26 14:22:00 zerochaos Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI="http://www.emilpro.com/${P}.tar.gz
 		!system-binutils? ( mirror://gnu/binutils/binutils-2.23.2.tar.bz2 )"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-2"

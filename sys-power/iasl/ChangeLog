@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.42 2014/03/26 07:48:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.43 2014/03/26 14:16:40 polynomial-c Exp $
+
+  26 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> iasl-20090123.ebuild,
+  +iasl-20121018.ebuild, iasl-20130117-r1.ebuild:
+  Re-added iasl-20121018 due to bug #505876. Fixed HOMEPAGE and SRC_URI in all
+  remaining ebuilds.
 
 *iasl-20140214 (26 Mar 2014)
 
