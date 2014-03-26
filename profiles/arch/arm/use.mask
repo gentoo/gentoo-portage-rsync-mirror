@@ -98,7 +98,6 @@ scanner
 madwifi
 libupnp
 zvbi
-dvd
 fluidsynth
 gnomecd
 cblas
@@ -117,7 +116,6 @@ ladspa
 ggi
 nut
 xanim
-dvd
 fits
 tokyocabinet
 vaapi

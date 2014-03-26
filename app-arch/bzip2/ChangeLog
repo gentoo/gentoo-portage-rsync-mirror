@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.121 2014/03/24 15:13:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.122 2014/03/26 21:45:39 maekke Exp $
+
+  26 Mar 2014; Markus Meier <maekke@gentoo.org> bzip2-1.0.6-r6.ebuild:
+  arm stable, bug #504004
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> bzip2-1.0.6-r6.ebuild:
   Stable for ppc, wrt bug #504004

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.196 2014/03/05 21:23:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.197 2014/03/26 21:39:50 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (25 Feb 2014)
 # stable reverse deps of media-libs/libquvi, bug #495254
@@ -307,7 +307,7 @@ dev-libs/libmemcached sasl
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
 # Missing keywords on dependencies
-app-cdr/brasero vcd
+app-cdr/brasero vcd dvd
 
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now
@@ -366,7 +366,7 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa
-media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack
+media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack dvd
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm chromaprint opencv
