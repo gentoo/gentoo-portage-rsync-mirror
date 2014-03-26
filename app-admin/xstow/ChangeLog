@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/xstow
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.16 2013/05/10 06:11:33 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.17 2014/03/26 16:01:56 maksbotan Exp $
+
+*xstow-1.0.1 (26 Mar 2014)
+
+  26 Mar 2014; Maxim Koltsov <maksbotan@gentoo.org> +xstow-1.0.1.ebuild,
+  files/99xstow:
+  Add MANPATH to /etc/env.d/99xstow, bug #505322. Thanks to Erik Falor.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> xstow-0.5.1.ebuild,
   xstow-1.0.0-r1.ebuild, xstow-1.0.0.ebuild:

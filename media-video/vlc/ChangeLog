@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.898 2014/03/26 15:50:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.899 2014/03/26 16:04:34 tomwij Exp $
+
+  26 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.8.ebuild,
+  vlc-2.1.4.ebuild, vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Append -fPIC temporarily for bug #502394, reported by Marcin Mirosław.
 
   26 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.5.ebuild,
   vlc-2.0.7.ebuild, vlc-2.0.8.ebuild, vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild,
