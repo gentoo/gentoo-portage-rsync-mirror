@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.128 2014/02/11 13:01:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.129 2014/03/26 13:38:45 chithanh Exp $
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/1.6-fix_negative.patch, -files/1.6-libdir-pc.patch,
+  -xcb-proto-1.6-r1.ebuild, -xcb-proto-1.6-r2.ebuild, -xcb-proto-1.7-r1.ebuild,
+  -xcb-proto-1.7.1.ebuild, -xcb-proto-1.7.ebuild, -xcb-proto-1.8-r1.ebuild,
+  -xcb-proto-1.8-r2.ebuild, -xcb-proto-1.8.ebuild:
+  Remove old versions.
 
   11 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xcb-proto-1.10.ebuild:

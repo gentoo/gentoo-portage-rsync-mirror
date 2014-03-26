@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/libFS
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.68 2013/10/08 05:07:16 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.70 2014/03/26 13:43:28 chithanh Exp $
+
+*libFS-1.0.6 (26 Mar 2014)
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libFS-1.0.6.ebuild:
+  Version bump.
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -libFS-1.0.3.ebuild, -libFS-1.0.4.ebuild:
+  Remove old/vulnerable versions, bug #471098.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libFS-1.0.5.ebuild:
   Stable for x86, wrt bug #475480
