@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.31 2014/01/18 18:50:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.32 2014/03/26 08:54:45 ulm Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Virtual for editor"
 SLOT="0"

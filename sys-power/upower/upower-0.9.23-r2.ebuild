@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.22.ebuild,v 1.1 2013/10/08 16:53:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.23-r2.ebuild,v 1.1 2014/03/26 08:51:04 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -51,6 +51,11 @@ DOCS="AUTHORS HACKING NEWS README"
 
 src_prepare() {
 	sed -i -e '/DISABLE_DEPRECATED/d' configure || die
+
+	epatch \
+		"${FILESDIR}"/${P}-create-dir-runtime.patch \
+		"${FILESDIR}"/${P}-fix-segfault.patch \
+		"${FILESDIR}"/${P}-clamp_percentage_for_overfull_batt.patch
 }
 
 src_configure() {

@@ -1,6 +1,18 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.141 2014/03/19 13:54:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.143 2014/03/26 08:54:03 ssuominen Exp $
+
+  26 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.21.ebuild,
+  -upower-0.9.22.ebuild, -upower-0.9.23-r1.ebuild:
+  old
+
+*upower-0.9.23-r2 (26 Mar 2014)
+
+  26 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/upower-0.9.23-clamp_percentage_for_overfull_batt.patch,
+  +upower-0.9.23-r2.ebuild:
+  Apply upstream patch for clamping percentage for overfull batteries wrt
+  #504574 by Krzysztof Nowicki and Till Schäfer
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> upower-0.9.23.ebuild:
   Stable for alpha, wrt bug #496532
