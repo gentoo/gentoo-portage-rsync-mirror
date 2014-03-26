@@ -81,11 +81,11 @@ ia64            default/linux/ia64/13.0/desktop/kde/systemd     stable
 ia64            default/linux/ia64/13.0/developer               stable
 
 # M68K Profiles
-m68k            default/linux/m68k/13.0                         dev
-m68k            default/linux/m68k/13.0/desktop                 dev
-m68k            default/linux/m68k/13.0/desktop/gnome           dev
-m68k            default/linux/m68k/13.0/desktop/kde             dev
-m68k            default/linux/m68k/13.0/developer               dev
+m68k            default/linux/m68k/13.0                         exp
+m68k            default/linux/m68k/13.0/desktop                 exp
+m68k            default/linux/m68k/13.0/desktop/gnome           exp
+m68k            default/linux/m68k/13.0/desktop/kde             exp
+m68k            default/linux/m68k/13.0/developer               exp
 
 # MIPS Profiles
 mips            default/linux/mips/13.0                         dev
@@ -127,15 +127,15 @@ ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/kde/syst
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/developer               stable
 
 # S390 Profiles
-s390            default/linux/s390/13.0                         dev
-s390            default/linux/s390/13.0/s390x                   dev
+s390            default/linux/s390/13.0                         exp
+s390            default/linux/s390/13.0/s390x                   exp
 
 # SH Profiles
-sh              default/linux/sh/13.0                           dev
-sh              default/linux/sh/13.0/desktop                   dev
-sh              default/linux/sh/13.0/desktop/gnome             dev
-sh              default/linux/sh/13.0/desktop/kde               dev
-sh              default/linux/sh/13.0/developer                 dev
+sh              default/linux/sh/13.0                           exp
+sh              default/linux/sh/13.0/desktop                   exp
+sh              default/linux/sh/13.0/desktop/gnome             exp
+sh              default/linux/sh/13.0/desktop/kde               exp
+sh              default/linux/sh/13.0/developer                 exp
 
 # SPARC Profiles
 sparc           default/linux/sparc/13.0                        stable
