@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.288 2014/03/19 16:23:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.289 2014/03/26 06:13:06 ssuominen Exp $
 
 EAPI=5
 
@@ -163,13 +163,6 @@ src_prepare() {
 		-e '/--enable-static is not supported by systemd/s:as_fn_error:echo:' \
 		configure || die
 
-	# Force ld.bfd for arches with no -Wl,--gc-sections support in ld.gold wrt #504700
-	# Do this here to make use of CC_CHECK_FLAGS_APPEND in configure.ac, as older binutils
-	# version doesn't necessarily support whole -Wl,-fuse-ld= flag
-	if use ia64; then
-		sed -i -e '/fuse-ld/s:gold:bfd:' configure || die
-	fi
-
 	if ! use elibc_glibc; then #443030
 		echo '#define secure_getenv(x) NULL' >> config.h.in
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
@@ -192,7 +185,6 @@ multilib_src_configure() {
 		--disable-dbus
 		--disable-seccomp
 		--disable-xz
-		--disable-tcpwrap
 		--disable-pam
 		--disable-xattr
 		--disable-gcrypt
@@ -200,6 +192,7 @@ multilib_src_configure() {
 		--disable-libcryptsetup
 		--disable-qrencode
 		--disable-microhttpd
+		--disable-gnutls
 		--disable-readahead
 		--disable-quotacheck
 		--disable-logind
