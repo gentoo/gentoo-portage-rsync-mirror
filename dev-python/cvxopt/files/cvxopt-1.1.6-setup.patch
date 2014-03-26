@@ -102,7 +102,7 @@
      library_dirs = [ BLAS_LIB_DIR ],
      define_macros = MACROS,
      extra_link_args = BLAS_EXTRA_LINK_ARGS,
-@@ -105,61 +98,35 @@
+@@ -105,61 +98,36 @@
      extra_link_args = BLAS_EXTRA_LINK_ARGS,
      sources = ['src/C/blas.c'] )
  
@@ -155,9 +155,10 @@
 -        glob('src/C/SuiteSparse/CHOLMOD/Cholesky/c*.c') +
 -        ['src/C/SuiteSparse/CHOLMOD/Check/cholmod_check.c'] +
 -        glob('src/C/SuiteSparse/CHOLMOD/Supernodal/c*.c') )
-+     libraries = ['cholmod'] + BLAS_LIB,
-+     define_macros = MACROS + [('NPARTITION', '1'), ('NTIMER', '1')],
-+     sources = [ 'src/C/cholmod.c' ])
++    library_dirs = [ BLAS_LIB_DIR ],
++    libraries = ['cholmod'] + BLAS_LIB,
++    define_macros = MACROS + [('NPARTITION', '1'), ('NTIMER', '1')],
++    sources = [ 'src/C/cholmod.c' ])
  
  amd = Extension('amd', 
 -    include_dirs = [ 'src/C/SuiteSparse/AMD/Include', 
