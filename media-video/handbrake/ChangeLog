@@ -1,6 +1,13 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.19 2014/03/19 15:19:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.20 2014/03/26 15:39:57 tomwij Exp $
+
+*handbrake-0.9.9-r1 (26 Mar 2014)
+
+  26 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +handbrake-0.9.9-r1.ebuild,
+  handbrake-9999.ebuild:
+  Revision bump, add more gstreamer dependencies to unbreak parts of the
+  application; fixes bug #505396, reported by Abigail.
 
   19 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
   files/handbrake-9999-remove-faac-dependency.patch, handbrake-9999.ebuild:

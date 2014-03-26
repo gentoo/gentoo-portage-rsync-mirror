@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.897 2014/03/26 15:29:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.898 2014/03/26 15:50:36 tomwij Exp $
+
+  26 Mar 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.5.ebuild,
+  vlc-2.0.7.ebuild, vlc-2.0.8.ebuild, vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild,
+  vlc-2.0.9999.ebuild, vlc-2.1.0.ebuild:
+  Restrict freetype version on older versions of vlc; fixes bug #505266,
+  reported by Phil Stracchino (alaric).
 
   26 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
   +files/vlc-9999-libva-1.2.1-compat.patch, vlc-9999.ebuild:

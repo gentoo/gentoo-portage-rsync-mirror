@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.120 2014/03/25 20:50:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.121 2014/03/26 15:54:31 jer Exp $
+
+  26 Mar 2014; Jeroen Roovers <jer@gentoo.org> sharutils-4.14-r1.ebuild:
+  Stable for HPPA (bug #502608).
 
 *sharutils-4.14-r1 (25 Mar 2014)
 

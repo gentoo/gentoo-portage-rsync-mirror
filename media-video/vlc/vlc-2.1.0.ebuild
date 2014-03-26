@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.0.ebuild,v 1.15 2014/03/12 16:15:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.0.ebuild,v 1.16 2014/03/26 15:50:35 tomwij Exp $
 
 EAPI="5"
 
@@ -135,7 +135,7 @@ RDEPEND="
 		taglib? ( >=media-libs/taglib-1.6.1:0 sys-libs/zlib:0 )
 		theora? ( >=media-libs/libtheora-1.0_beta3:0 )
 		tremor? ( media-libs/tremor:0 )
-		truetype? ( media-libs/freetype:2 virtual/ttf-fonts:0
+		truetype? ( <media-libs/freetype-2.5.3:2 virtual/ttf-fonts:0
 			!fontconfig? ( media-fonts/dejavu:0 ) )
 		twolame? ( media-sound/twolame:0 )
 		udev? ( >=virtual/udev-142:0 )
