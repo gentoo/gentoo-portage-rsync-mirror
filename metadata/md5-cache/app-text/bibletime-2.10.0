@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/sword-1.6.0 >=dev-cpp/clucene-2.3.3.4 dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4
 SLOT=0
 SRC_URI=mirror://sourceforge/project/bibletime/BibleTime%202/BibleTime%202%20source%20code/bibletime-2.10.0.tar.xz
-_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b83987525e453f764339766a41e1df54

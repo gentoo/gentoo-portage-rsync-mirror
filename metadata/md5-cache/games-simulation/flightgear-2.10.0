@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-db/sqlite:3 >=dev-games/openscenegraph-3.0.1[png] ~dev-games/simgear-2.10.0[jpeg?,subversion?] sys-libs/zlib virtual/opengl udev? ( virtual/udev ) fgpanel? ( media-libs/freeglut media-libs/libpng ) ~games-simulation/flightgear-data-2.10.0 games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://flightgear/Source/flightgear-2.10.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f69b07c9ce5603975fcb94778eaa9399

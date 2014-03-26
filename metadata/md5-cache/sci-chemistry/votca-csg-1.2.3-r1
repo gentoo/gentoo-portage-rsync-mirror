@@ -11,5 +11,5 @@ RDEPEND=~sci-libs/votca-tools-1.2.3[system-boost=] gromacs? ( sci-chemistry/grom
 RESTRICT=primaryuri
 SLOT=0
 SRC_URI=http://votca.googlecode.com/files/votca-csg-1.2.3.tar.gz doc? ( http://votca.googlecode.com/files/votca-csg-manual-1.2.3.pdf ) examples? ( http://votca.googlecode.com/files/votca-csg-tutorials-1.2.3.tar.gz )
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=929700c3f0f4514006fd7e56aaf860e1

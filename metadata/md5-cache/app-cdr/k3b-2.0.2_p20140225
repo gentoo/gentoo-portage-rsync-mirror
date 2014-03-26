@@ -10,5 +10,5 @@ RDEPEND=>=kde-base/libkcddb-4.4:4[aqua=] media-libs/libsamplerate dvd? ( media-l
 REQUIRED_USE=mp3? ( encode ) sox? ( encode )
 SLOT=4
 SRC_URI=http://dev.gentoo.org/~creffett/distfiles/k3b-2.0.2_p20140225.tar.xz
-_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-base	878b2df7577220756ff2e7e9a0c3476c	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	kde4-base	878b2df7577220756ff2e7e9a0c3476c	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=ad72277c3120f3f7d9e4acbf504972e1

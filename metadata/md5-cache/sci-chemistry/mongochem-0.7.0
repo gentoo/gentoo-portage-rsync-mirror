@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=dev-db/mongodb[sharedclient] dev-libs/boost[threads] sci-libs/avogadrolibs[qt4] sci-libs/chemkit sci-libs/vtk[qt4,rendering] sci-chemistry/molequeue
 SLOT=0
 SRC_URI=https://github.com/OpenChemistry/mongochem/archive/df36ebce92024dd4fd1c70eb37eb84e4c51120ff.tar.gz -> mongochem-0.7.0.tar.gz
-_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=3cb8aa2faef9cb7db52d8275d84db358

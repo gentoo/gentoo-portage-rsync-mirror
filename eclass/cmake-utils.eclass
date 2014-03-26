@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.105 2014/03/09 18:16:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.106 2014/03/26 13:12:39 kensington Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -457,7 +457,7 @@ enable_cmake-utils_src_configure() {
 
 			ELSE ()
 
-			SET(CMAKE_PREFIX_PATH "${EPREFIX}${PREFIX}" CACHE STRING ""FORCE)
+			SET(CMAKE_PREFIX_PATH "${EPREFIX}${PREFIX}" CACHE STRING "" FORCE)
 			SET(CMAKE_SKIP_BUILD_RPATH OFF CACHE BOOL "" FORCE)
 			SET(CMAKE_SKIP_RPATH OFF CACHE BOOL "" FORCE)
 			SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE CACHE BOOL "")

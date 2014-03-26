@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1183 2014/03/24 21:32:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1184 2014/03/26 13:12:39 kensington Exp $
+
+  26 Mar 2014; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Fix typo in prefix block by Christoph Junghans <ottxor@gentoo.org>.
 
   24 Mar 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Add a single+tags mode to handle Google Code more efficiently, bug #503708.

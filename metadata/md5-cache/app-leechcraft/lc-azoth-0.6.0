@@ -10,5 +10,5 @@ RDEPEND=~app-leechcraft/lc-core-0.6.0 dev-libs/qjson dev-qt/qtwebkit:4 autoidler
 REQUIRED_USE=|| ( standardstyles adiumstyles )
 SLOT=0
 SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.6.0.tar.xz http://dist.leechcraft.org/LeechCraft/0.6.0/leechcraft-0.6.0.tar.xz
-_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	leechcraft	4557a8dab7ef51789fcdf55a9a94992d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	leechcraft	4557a8dab7ef51789fcdf55a9a94992d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=2b5dedeee5d8f6b11a6e9e291c03dd18

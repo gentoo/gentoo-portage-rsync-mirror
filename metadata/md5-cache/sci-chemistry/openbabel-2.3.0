@@ -10,5 +10,5 @@ PDEPEND=perl? ( sci-chemistry/openbabel-perl ) python? ( sci-chemistry/openbabel
 RDEPEND=dev-cpp/eigen:2 dev-libs/libxml2:2 !sci-chemistry/babel sci-libs/inchi sys-libs/zlib wxwidgets? ( x11-libs/wxGTK:2.8[X] )
 SLOT=0
 SRC_URI=mirror://sourceforge/openbabel/openbabel-2.3.0.tar.gz
-_eclasses_=cmake-utils	f28d5be602208540bebed26c4d22c61f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
 _md5_=d63adf151aaf2c5790b3e82602f42c88
