@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.66 2014/03/24 19:09:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.67 2014/03/26 08:11:02 patrick Exp $
+
+  26 Mar 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
 
   24 Mar 2014; Anthony G. Basile <blueness@gentoo.org> -cgminer-3.11.0.ebuild,
   -cgminer-3.12.0.ebuild, -cgminer-3.12.1.ebuild, -cgminer-3.4.3.ebuild,

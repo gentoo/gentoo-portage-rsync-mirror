@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.58 2014/03/24 14:54:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.59 2014/03/26 08:15:50 patrick Exp $
+
+  26 Mar 2014; Patrick Lauer <patrick@gentoo.org> zeromq-4.0.1-r1.ebuild:
+  Whitespace
 
 *zeromq-4.0.4 (24 Mar 2014)
 
