@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/sanitize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sanitize/ChangeLog,v 1.1 2013/11/22 02:09:55 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sanitize/ChangeLog,v 1.2 2014/03/26 06:47:19 graaff Exp $
+
+*sanitize-2.0.6-r1 (26 Mar 2014)
+
+  26 Mar 2014; Hans de Graaff <graaff@gentoo.org> -sanitize-2.0.6.ebuild,
+  +sanitize-2.0.6-r1.ebuild:
+  Install a proper gemspec file. Add ruby21.
 
 *sanitize-2.0.6 (22 Nov 2013)
 
