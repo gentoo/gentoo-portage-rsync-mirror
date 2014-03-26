@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.165 2013/10/08 05:08:05 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.166 2014/03/26 12:53:57 chithanh Exp $
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -libXi-1.6.1.ebuild, -libXi-1.6.2-r1.ebuild, -libXi-1.6.2.ebuild,
+  -libXi-1.7.1.ebuild, -libXi-1.7.ebuild:
+  Remove old/vulnerable versions, bug #471098.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libXi-1.7.2.ebuild:
   Stable for x86, wrt bug #475480

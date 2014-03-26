@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfixes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.88 2013/10/08 05:07:56 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.89 2014/03/26 12:52:57 chithanh Exp $
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -libXfixes-5.0-r1.ebuild, -libXfixes-5.0.ebuild:
+  Remove old/vulnerable versions, bug #471098.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libXfixes-5.0.1.ebuild:
   Stable for x86, wrt bug #475480
