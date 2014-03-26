@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/claws-mail-themes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/ChangeLog,v 1.24 2012/12/27 22:37:52 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/ChangeLog,v 1.25 2014/03/26 20:28:42 ulm Exp $
+
+  26 Mar 2014; Ulrich Müller <ulm@gentoo.org>
+  claws-mail-themes-20120129.ebuild:
+  Fix LICENSE, bug 446792.
 
   27 Dec 2012; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-themes-20120129.ebuild:
