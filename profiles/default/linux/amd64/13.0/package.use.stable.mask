@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/13.0/package.use.stable.mask,v 1.10 2014/03/16 22:40:05 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/13.0/package.use.stable.mask,v 1.11 2014/03/26 09:37:06 chithanh Exp $
 
 # Tom Wijsman <TomWij@gentoo.org (16 Mar 2014)
 # Mask unstable USE flags on media-video/vlc, see security bug #499806.
@@ -111,6 +111,8 @@ dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
 dev-libs/re2 abi_x86_32
 dev-libs/udis86 abi_x86_32
+dev-libs/wayland abi_x86_32
+dev-libs/weston abi_x86_32
 dev-libs/yajl abi_x86_32
 dev-qt/qtcore abi_x86_32
 dev-qt/qtdbus abi_x86_32

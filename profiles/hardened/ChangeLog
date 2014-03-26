@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.40 2014/03/16 22:53:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.41 2014/03/26 09:37:07 chithanh Exp $
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  linux/amd64/package.use.stable.mask:
+  Mask multilib for wayland/weston, so they can go stable in bug #500368.
 
   16 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
   linux/amd64/package.use.stable.mask, linux/x86/package.use.stable.mask:

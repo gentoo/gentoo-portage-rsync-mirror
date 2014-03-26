@@ -1,6 +1,10 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.14 2014/03/19 22:09:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.15 2014/03/26 09:37:06 chithanh Exp $
+
+  26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  13.0/package.use.stable.mask:
+  Mask multilib for wayland/weston, so they can go stable in bug #500368.
 
   19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> 13.0/desktop/eapi,
   13.0/desktop/gnome/eapi, +13.0/desktop/gnome/systemd/eapi,
