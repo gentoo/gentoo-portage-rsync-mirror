@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/ball
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.12 2013/09/05 19:03:42 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.13 2014/03/26 11:20:39 jlec Exp $
+
+*ball-1.4.2 (26 Mar 2014)
+
+  26 Mar 2014; Justin Lecher <jlec@gentoo.org> ball-1.4.1-r1.ebuild,
+  +ball-1.4.2.ebuild,
+  +files/ball-1.4.2-Fix-compilation-of-sipModularWidget.patch,
+  +files/ball-1.4.2-PDBFile-Fix-compilation-with-gcc-4.8.patch,
+  +files/ball-1.4.2-QT4_EXTRACT_OPTIONS-CMake-macro-changed-in-CMake-2.8.patch:
+  Version BUmp
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> ball-1.4.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

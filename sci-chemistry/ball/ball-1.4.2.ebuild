@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.7 2014/03/26 11:20:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.2.ebuild,v 1.1 2014/03/26 11:20:39 jlec Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit cmake-utils python-single-r1
 
 DESCRIPTION="Biochemical Algorithms Library"
 HOMEPAGE="http://www.ball-project.org/"
-SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.gz"
+SRC_URI="http://www.ball-project.org/Downloads/v${PV}/BALL-${PV}.tar.xz"
 
 SLOT="0"
 LICENSE="LGPL-2 GPL-3"
@@ -44,20 +44,15 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	virtual/yacc"
 
-S="${WORKDIR}"/BALL
+S="${WORKDIR}"/BALL-${PV}
 
 PATCHES=(
-	"${FILESDIR}"/${P}-multilib.patch
-	"${FILESDIR}"/${P}-libsvm.patch
-	"${FILESDIR}"/${P}-pthread.patch
-	"${FILESDIR}"/${P}-python.patch
-	"${FILESDIR}"/${P}-missing-signed.patch
-	"${FILESDIR}"/${P}-gcc-4.7.patch
-	"${FILESDIR}"/${P}-BondOrder.xml.patch
-	"${FILESDIR}"/${P}-Fixed-the-FPT-version-of-bond-order-assignment-2.patch
-	"${FILESDIR}"/${P}-Added-MAX_PENALTY-option-to-bond-order-assignment.patch
-	"${FILESDIR}"/${P}-Fixed-a-bug-in-the-AssignBondOrderProcessor.patch
-	"${FILESDIR}"/${P}-Fix-compilation-of-Python-bindings-with-new-sip-vers.patch
+	"${FILESDIR}"/${PN}-1.4.1-multilib.patch
+	"${FILESDIR}"/${PN}-1.4.1-missing-signed.patch
+	"${FILESDIR}"/${P}-PDBFile-Fix-compilation-with-gcc-4.8.patch
+	"${FILESDIR}"/${P}-QT4_EXTRACT_OPTIONS-CMake-macro-changed-in-CMake-2.8.patch
+	"${FILESDIR}"/${PN}-1.4.1-BondOrder.xml.patch
+	"${FILESDIR}"/${P}-Fix-compilation-of-sipModularWidget.patch
 	)
 
 pkg_setup() {
