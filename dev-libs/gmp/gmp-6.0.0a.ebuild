@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3-r1.ebuild,v 1.9 2014/03/26 05:37:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-6.0.0a.ebuild,v 1.1 2014/03/26 05:52:05 vapier Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm arm64 ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="doc cxx pgo static-libs"
 
 DEPEND="sys-devel/m4
@@ -27,7 +27,7 @@ RDEPEND="abi_x86_32? (
 	!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 )"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P%a}
 
 DOCS=( AUTHORS ChangeLog NEWS README doc/configuration doc/isa_abi_headache )
 HTML_DOCS=( doc )
@@ -35,7 +35,6 @@ MULTILIB_WRAPPED_HEADERS=( /usr/include/gmp.h )
 
 src_prepare() {
 	[[ -d ${FILESDIR}/${PV} ]] && EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch "${FILESDIR}"/${PV}
-	epatch "${FILESDIR}"/${PN}-4.1.4-noexecstack.patch
 
 	# note: we cannot run autotools here as gcc depends on this package
 	elibtoolize
