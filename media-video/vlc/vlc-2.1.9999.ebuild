@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.20 2014/03/26 16:04:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.21 2014/03/26 18:38:20 tomwij Exp $
 
 EAPI="5"
 
@@ -262,9 +262,6 @@ src_configure() {
 	# Needs libresid-builder from libsidplay:2 which is in another directory...
 	# FIXME!
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
-
-	# Append -fPIC temporarily for bug #502394.
-	append-flags -fPIC
 
 	if use truetype || use projectm ; then
 		local dejavu="/usr/share/fonts/dejavu/"
