@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.24.ebuild,v 1.1 2014/03/14 10:26:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.24.ebuild,v 1.2 2014/03/26 10:12:13 polynomial-c Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python-single-r1 qt4-r2 toolchain-funcs java-pkg-opt-2 udev
+inherit eutils fdo-mime flag-o-matic java-pkg-opt-2 linux-info multilib pax-utils python-single-r1 qt4-r2 toolchain-funcs udev
 
 MY_PV="${PV/beta/BETA}"
 MY_PV="${MY_PV/rc/RC}"

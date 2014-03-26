@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.6.ebuild,v 1.3 2014/02/07 05:39:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.10.ebuild,v 1.1 2014/03/26 10:12:13 polynomial-c Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python-single-r1 qt4-r2 toolchain-funcs java-pkg-opt-2 udev
+inherit eutils fdo-mime flag-o-matic java-pkg-opt-2 linux-info multilib pax-utils python-single-r1 qt4-r2 toolchain-funcs udev
 
 MY_PV="${PV/beta/BETA}"
 MY_PV="${MY_PV/rc/RC}"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java multilib pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
+IUSE="+additions alsa doc extensions headless java pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -176,16 +176,6 @@ src_prepare() {
 	epatch "${WORKDIR}/patches"
 
 	epatch_user
-
-	# fix location of ifconfig binary (bug #455902)
-	local target_file="src/apps/adpctl/VBoxNetAdpCtl.cpp"
-	local define_string="VBOXADPCTL_IFCONFIG_PATH"
-	local vbox_ifcfg="$(grep "^#define ${define_string}" ${target_file} | sed 's@.*"\([[:alpha:]/]\+\)".*@\1@')" #'
-	local sys_ifcfg="$(type -p ifconfig)"
-	if [ -n "${vbox_ifcfg}" ] && [ "${ifcfg}" != "${vbox_ifcfg}" ] ; then
-		sed "/${define_string}/s@${vbox_ifcfg}@${sys_ifcfg}@" \
-			-i "${S}/${target_file}" || die
-	fi
 }
 
 src_configure() {
@@ -203,7 +193,7 @@ src_configure() {
 	else
 		myconf+=" --build-headless --disable-opengl"
 	fi
-	if use amd64 && ! use multilib ; then
+	if use amd64 && ! has_multilib_profile ; then
 		myconf+=" --disable-vmmraw"
 	fi
 	# not an autoconf script
@@ -277,12 +267,12 @@ src_install() {
 	fi
 
 	local gcfiles="*gc"
-	if use amd64 && ! use multilib ; then
+	if use amd64 && ! has_multilib_profile ; then
 		gcfiles=""
 	fi
 
 	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,NetNAT,ExtPackHelperApp} *so *r0 ${gcfiles} ; do
-		doins $each
+		doins ${each}
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/${each}
 		fperms 0750 /usr/$(get_libdir)/${PN}/${each}
 	done
@@ -298,7 +288,7 @@ src_install() {
 
 	if ! use headless ; then
 		for each in VBox{SDL,Headless} ; do
-			doins $each
+			doins ${each}
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/${each}
 			fperms 4750 /usr/$(get_libdir)/${PN}/${each}
 			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/${each}
@@ -316,7 +306,8 @@ src_install() {
 			doins VirtualBox
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/VirtualBox
 			fperms 4750 /usr/$(get_libdir)/${PN}/VirtualBox
-			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VirtualBox
+			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VirtualBox \
+				|| die
 
 			dosym /usr/$(get_libdir)/${PN}/VBox /usr/bin/VirtualBox
 
@@ -333,7 +324,7 @@ src_install() {
 		doins VBoxHeadless
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxHeadless
 		fperms 4750 /usr/$(get_libdir)/${PN}/VBoxHeadless
-		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless
+		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless || die
 	fi
 
 	insinto /usr/$(get_libdir)/${PN}

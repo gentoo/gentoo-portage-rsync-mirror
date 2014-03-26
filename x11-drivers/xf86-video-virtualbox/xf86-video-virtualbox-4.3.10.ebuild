@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.6.ebuild,v 1.3 2014/01/23 18:54:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.10.ebuild,v 1.1 2014/03/26 10:12:49 polynomial-c Exp $
 
 EAPI=5
 
@@ -77,7 +77,7 @@ src_prepare() {
 	rm -rf kBuild/bin tools
 
 	# Disable things unused or splitted into separate ebuilds
-	cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
+	cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk || die
 
 	# Ugly hack to build the opengl part of the video driver
 	epatch "${FILESDIR}/${PN}-2.2.0-enable-opengl.patch"
@@ -91,6 +91,8 @@ src_prepare() {
 	if gcc-specs-now ; then
 		epatch "${FILESDIR}/${PN}-4.3.6-link-lazy.patch"
 	fi
+
+	epatch "${FILESDIR}"/${PN}-4.3.8-vboxvideo_compilefixes.patch
 }
 
 src_configure() {
@@ -109,14 +111,15 @@ src_compile() {
 	for each in /src/VBox/{Runtime,Additions/common/VBoxGuestLib} \
 		/src/VBox/{GuestHost/OpenGL,Additions/x11/x11stubs,Additions/common/crOpenGL} \
 		/src/VBox/Additions/x11/vboxvideo ; do
-			cd "${S}"${each}
-			MAKE="kmk" emake TOOL_YASM_AS=yasm \
+			cd "${S}"${each} || die
+			MAKE="kmk" \
+			emake TOOL_YASM_AS=yasm \
 			VBOX_USE_SYSTEM_XORG_HEADERS=1 \
 			KBUILD_PATH="${S}/kBuild" \
 			KBUILD_VERBOSE=2
 	done
 
-	if use dri; then
+	if use dri ; then
 		# Now creating the kernel modules. We must do this _after_
 		# we compiled the user-space tools as we need two of the
 		# automatically generated header files. (>=3.2.0)
@@ -138,7 +141,8 @@ src_install() {
 	doins -r VBoxOGL*
 
 	if use dri ; then
-		dosym /usr/$(get_libdir)/VBoxOGL.so /usr/$(get_libdir)/dri/vboxvideo_dri.so
+		dosym /usr/$(get_libdir)/VBoxOGL.so \
+			/usr/$(get_libdir)/dri/vboxvideo_dri.so
 	fi
 }
 
