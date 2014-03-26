@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/pyserial dev-libs/libxml2[python] userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Free open-source tool for programming your amateur radio
+EAPI=5
+HOMEPAGE=http://chirp.danplanet.com
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-python/pyserial dev-libs/libxml2[python] dev-python/pygtk python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://chirp.danplanet.com/download/0.4.0/chirp-0.4.0.tar.gz
+_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=8ae92788fa1ff7842b8f5ca03994e9c8
