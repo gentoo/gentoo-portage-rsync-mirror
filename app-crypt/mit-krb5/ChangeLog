@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.397 2014/01/19 21:50:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.398 2014/03/26 10:35:09 eras Exp $
+
+  26 Mar 2014; Eray Aslan <eras@gentoo.org>
+  +files/mit-krb5-1.12_warn_cflags.patch, mit-krb5-1.12.1.ebuild:
+  Do not build with -Werror - bug #498794
 
   19 Jan 2014; Eray Aslan <eras@gentoo.org>
   +files/mit-krb5-config_LDFLAGS.patch:

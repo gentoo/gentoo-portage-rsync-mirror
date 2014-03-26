@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare setup test unpack
-DEPEND=!!app-crypt/heimdal >=sys-libs/e2fsprogs-libs-1.41.0 || ( dev-libs/libverto[libev] dev-libs/libverto[libevent] dev-libs/libverto[tevent] ) keyutils? ( sys-apps/keyutils ) openldap? ( net-nds/openldap ) pkinit? ( dev-libs/openssl ) xinetd? ( sys-apps/xinetd ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) virtual/yacc doc? ( virtual/latex-base ) test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) dev-lang/tcl dev-util/dejagnu )
+DEPEND=!!app-crypt/heimdal >=sys-libs/e2fsprogs-libs-1.41.0 || ( dev-libs/libverto[libev] dev-libs/libverto[libevent] dev-libs/libverto[tevent] ) keyutils? ( sys-apps/keyutils ) openldap? ( net-nds/openldap ) pkinit? ( dev-libs/openssl ) xinetd? ( sys-apps/xinetd ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) virtual/yacc doc? ( virtual/latex-base ) test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) dev-lang/tcl dev-util/dejagnu ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=MIT Kerberos V
 EAPI=5
 HOMEPAGE=http://web.mit.edu/kerberos/www/
@@ -9,5 +9,5 @@ LICENSE=openafs-krb5-a BSD MIT OPENLDAP BSD-2 HPND BSD-4 ISC RSA CC-BY-SA-3.0 ||
 RDEPEND=!!app-crypt/heimdal >=sys-libs/e2fsprogs-libs-1.41.0 || ( dev-libs/libverto[libev] dev-libs/libverto[libevent] dev-libs/libverto[tevent] ) keyutils? ( sys-apps/keyutils ) openldap? ( net-nds/openldap ) pkinit? ( dev-libs/openssl ) xinetd? ( sys-apps/xinetd )
 SLOT=0
 SRC_URI=http://web.mit.edu/kerberos/dist/krb5/1.12/krb5-1.12.1-signed.tar
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=5345c46516e0004530d6e909a85e381b
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=9b70b98baeb07523258607ee39f7806b
