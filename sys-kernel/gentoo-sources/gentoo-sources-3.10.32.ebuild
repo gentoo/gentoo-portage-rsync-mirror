@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.10.32.ebuild,v 1.4 2014/03/06 15:05:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.10.32.ebuild,v 1.5 2014/03/26 17:55:36 armin76 Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -11,7 +11,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches"
 IUSE="deblob experimental"
 

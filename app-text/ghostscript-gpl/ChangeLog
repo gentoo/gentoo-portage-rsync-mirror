@@ -1,6 +1,15 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.172 2014/02/20 14:21:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.173 2014/03/26 17:31:52 tgurr Exp $
+
+*ghostscript-gpl-9.14 (26 Mar 2014)
+
+  26 Mar 2014; Timo Gurr <tgurr@gentoo.org> -ghostscript-gpl-9.04-r4.ebuild,
+  -ghostscript-gpl-9.05-r1.ebuild, -ghostscript-gpl-9.05-r2.ebuild,
+  -ghostscript-gpl-9.06.ebuild, -ghostscript-gpl-9.07.ebuild,
+  -ghostscript-gpl-9.10.ebuild, +ghostscript-gpl-9.14.ebuild:
+  Version bump. Remove old and vulnerable versions. Upstream doesn't mirror new
+  versions on sourceforge anymore.
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ghostscript-gpl-9.10-r2.ebuild:
   Stable for sparc, wrt bug #437654

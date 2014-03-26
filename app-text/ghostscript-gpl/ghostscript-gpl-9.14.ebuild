@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.10.ebuild,v 1.1 2013/09/06 00:53:53 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.14.ebuild,v 1.1 2014/03/26 17:31:52 tgurr Exp $
 
 EAPI=5
 
@@ -13,8 +13,8 @@ MY_P=${P/-gpl}
 GSDJVU_PV=1.6
 PVM=$(get_version_component_range 1-2)
 SRC_URI="
-	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${PN}-9.09-patchset-1.tar.bz2
+	http://downloads.ghostscript.com/public/${MY_P}.tar.bz2
+	mirror://gentoo/${PN}-9.12-patchset-1.tar.bz2
 	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )"
 
 LICENSE="AGPL-3 CPL-1.0"
@@ -76,7 +76,7 @@ src_prepare() {
 	rm -rf "${S}"/expat
 	rm -rf "${S}"/freetype
 	rm -rf "${S}"/jbig2dec
-	rm -rf "${S}"/jpeg
+	rm -rf "${S}"/jpeg{,xr}
 	rm -rf "${S}"/lcms{,2}
 	rm -rf "${S}"/libpng
 	rm -rf "${S}"/tiff
@@ -87,7 +87,7 @@ src_prepare() {
 	rm -rf "${S}"/Resource/CMap
 
 	# apply various patches, many borrowed from Fedora
-	# http://pkgs.fedoraproject.org/gitweb/?p=ghostscript.git
+	# http://pkgs.fedoraproject.org/cgit/ghostscript.git
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes"
 	EPATCH_SOURCE="${WORKDIR}/patches/"
 	epatch
@@ -114,11 +114,12 @@ src_prepare() {
 	fi
 
 	# search path fix
+	# put LDFLAGS after BINDIR, bug #383447
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
 		-e "s:exdir=.*:exdir=/usr/share/doc/${PF}/examples:" \
 		-e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
-		-e 's:-L$(BINDIR):$(LDFLAGS) &:g' \
+		-e 's:-L$(BINDIR):& $(LDFLAGS):g' \
 		"${S}"/Makefile.in "${S}"/base/*.mak || die "sed failed"
 
 	cd "${S}"
@@ -191,8 +192,9 @@ src_install() {
 		dobin gsdjvu
 	fi
 
-	# remove gsc in favor of gambit, bug #253064
-	rm -rf "${D}/usr/bin/gsc"
+	# move gsc to gs, bug #343447
+	# gsc collides with gambit, bug #253064
+	mv -f "${D}/usr/bin/gsc" "${D}/usr/bin/gs" || die
 
 	cd "${S}/ijs"
 	emake DESTDIR="${D}" install
@@ -210,7 +212,7 @@ src_install() {
 		fi
 	done
 
-	# install the CMaps from poppler-data properly, bug 409361
+	# install the CMaps from poppler-data properly, bug #409361
 	dosym /usr/share/poppler/cMaps /usr/share/ghostscript/${PVM}/Resource/CMap
 
 	use static-libs || find "${D}" -name '*.la' -delete
