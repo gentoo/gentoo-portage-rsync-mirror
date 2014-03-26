@@ -1,6 +1,15 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.40 2014/03/18 19:19:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.41 2014/03/26 20:38:20 bicatali Exp $
+
+*root-docs-5.34.18-r1 (26 Mar 2014)
+
+  26 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-docs-5.34.18-html.patch, +root-docs-5.34.18-r1.ebuild,
+  -root-docs-5.32.04.ebuild, -root-docs-5.34.09.ebuild,
+  -root-docs-5.34.10.ebuild, -root-docs-5.34.13.ebuild,
+  -root-docs-5.34.15.ebuild, metadata.xml:
+  Added standard root docs and trigger html api doc with api flag. Clean up.
 
 *root-docs-5.34.18 (18 Mar 2014)
 
