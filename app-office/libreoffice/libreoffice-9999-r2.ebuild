@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.214 2014/03/25 10:28:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.215 2014/03/27 09:50:59 scarabeus Exp $
 
 EAPI=5
 
@@ -435,7 +435,7 @@ src_configure() {
 	# --disable-systray: quickstarter does not actually work at all so do not
 	#   promote it
 	# --enable-extension-integration: enable any extension integration support
-	# --without-{afms,fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
+	# --without-{fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
 	# --disable-report-builder: too much java packages pulled in without pkgs
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
@@ -476,7 +476,6 @@ src_configure() {
 		--with-system-ucpp \
 		--with-vendor="Gentoo Foundation" \
 		--with-x \
-		--without-afms \
 		--without-fonts \
 		--without-myspell-dicts \
 		--without-help \
