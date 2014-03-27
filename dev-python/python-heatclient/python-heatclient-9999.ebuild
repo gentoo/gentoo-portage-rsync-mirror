@@ -1,10 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-9999.ebuild,v 1.2 2013/09/13 19:36:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-9999.ebuild,v 1.3 2014/03/27 22:05:47 prometheanfire Exp $
 
 EAPI=5
-#restricted due to not caring about 9999
-RESTRICT="test"
 PYTHON_COMPAT=( python2_7 )
 
 inherit git-2 distutils-r1
@@ -17,31 +15,41 @@ EGIT_REPO_URI="https://github.com/openstack/python-heatclient.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="test"
+IUSE="doc test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/mox[${PYTHON_USEDEP}]
-			dev-python/nose[${PYTHON_USEDEP}]
-			dev-python/nose-exclude[${PYTHON_USEDEP}]
-			dev-python/nosexcover[${PYTHON_USEDEP}]
-			dev-python/nosehtmloutput[${PYTHON_USEDEP}]
-			dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
-			~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
-			~dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
-			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-			>=dev-python/setuptools-git-0.4[${PYTHON_USEDEP}] )"
-RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
-		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
-		>=dev-python/pbr-0.5.10[${PYTHON_USEDEP}]
-		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
-		dev-python/httplib2[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
+		test? ( >=dev-python/hacking-0.8.0[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.9[${PYTHON_USEDEP}]
+				>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
+				>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
+				>=dev-python/mox3-0.7.0[${PYTHON_USEDEP}]
+				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+				>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
+				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
+				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}] )"
+RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
+		>=dev-python/iso8601-0.1.8[${PYTHON_USEDEP}]
+		>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.2[${PYTHON_USEDEP}]
-		<dev-python/python-keystoneclient-0.3[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]"
+		>=dev-python/python-keystoneclient-0.6.0[${PYTHON_USEDEP}]
+		>=dev-python/pyyaml-3.1.0[${PYTHON_USEDEP}]
+		>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
+		>=dev-python/requests-1.1[${PYTHON_USEDEP}]"
+
+python_compile_all() {
+	use doc && sphinx-build -b html -c doc/source/ doc/source/ doc/source/html
+}
 
 python_test() {
-	${PYTHON} setup.py nosetests || die
+	"${PYTHON}" setup.py testr --coverage
+	"${PYTHON}" setup.py testr --slowest
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/source/html/. )
+	distutils-r1_python_install_all
 }
