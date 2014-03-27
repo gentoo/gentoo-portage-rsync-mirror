@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.158 2014/03/19 00:20:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.159 2014/03/27 15:00:54 floppym Exp $
+
+  27 Mar 2014; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Negate sys-apps/systemd[seccomp] mask.
 
   19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi, +xbox/eapi:
   Increase EAPI to 5

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.62 2014/03/01 22:28:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.63 2014/03/27 14:54:26 floppym Exp $
+
+  27 Mar 2014; Mike Gilbert <floppym@gentoo.org> libmicrohttpd-0.9.33.ebuild,
+  libmicrohttpd-0.9.34.ebuild:
+  Add ~sparc keyword to newer ebuilds.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> libmicrohttpd-0.9.32.ebuild,
   libmicrohttpd-0.9.33.ebuild, libmicrohttpd-0.9.34.ebuild:

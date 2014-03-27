@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.188 2014/03/04 05:51:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.189 2014/03/27 14:45:24 ssuominen Exp $
+
+*emul-linux-x86-baselibs-20131008-r22 (27 Mar 2014)
+
+  27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r22.ebuild,
+  +files/remove-native-20131008-r22:
+  Remove libmagic.so* wrt #505936 by Graham Murray
 
 *emul-linux-x86-baselibs-20131008-r21 (04 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.246 2014/03/22 17:26:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.247 2014/03/27 15:00:53 floppym Exp $
+
+  27 Mar 2014; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Negate sys-apps/systemd[seccomp] mask.
 
   22 Mar 2014; Mike Gilbert <floppym@gentoo.org> +package.use.stable.mask:
   Move the sys-boot/grub[libzfs] stable mask from base to here.

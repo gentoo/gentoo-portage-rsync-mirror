@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.296 2014/03/26 21:39:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.297 2014/03/27 15:00:53 floppym Exp $
+
+  27 Mar 2014; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Negate sys-apps/systemd[seccomp] mask.
 
   26 Mar 2014; Markus Meier <maekke@gentoo.org> package.use.mask, use.mask:
   remove dvd use.mask, package.use.mask app-cdr/brasero[dvd] and
