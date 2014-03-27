@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.14.ebuild,v 1.1 2014/02/06 18:20:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.14.ebuild,v 1.2 2014/03/27 03:38:20 bicatali Exp $
 
 EAPI=5
 
@@ -52,6 +52,10 @@ pkg_setup() {
 		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
 		die "Need an OpenMP capable compiler"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-readline.patch
 }
 
 src_configure() {

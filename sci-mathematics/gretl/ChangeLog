@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.44 2014/02/06 18:20:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.45 2014/03/27 03:38:20 bicatali Exp $
+
+  27 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/gretl-1.9.14-readline.patch, gretl-1.9.14.ebuild, metadata.xml:
+  Fix for readline 6.3, thanks Helmut Jarausch bug #505886
 
 *gretl-1.9.14 (06 Feb 2014)
 

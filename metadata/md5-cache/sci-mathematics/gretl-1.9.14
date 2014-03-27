@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst postrm setup
+DEFINED_PHASES=compile configure install postinst postrm prepare setup
 DEPEND=dev-libs/glib:2 dev-libs/gmp dev-libs/libxml2:2 dev-libs/mpfr sci-libs/fftw:3.0 sci-visualization/gnuplot virtual/lapack virtual/latex-base accessibility? ( app-accessibility/flite ) emacs? ( virtual/emacs ) gtk? ( media-libs/gd[png] sci-visualization/gnuplot[gd] x11-libs/gtk+:3 x11-libs/gtksourceview:3.0 ) odbc? ( dev-db/unixODBC ) R? ( dev-lang/R ) readline? ( sys-libs/readline ) virtual/pkgconfig
 DESCRIPTION=Regression, econometrics and time-series library
 EAPI=5
@@ -11,4 +11,4 @@ REQUIRED_USE=emacs? ( gtk )
 SLOT=0
 SRC_URI=mirror://sourceforge/gretl/gretl-1.9.14.tar.xz
 _eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=e2ddd17d7e2b1c1949587cf8c12338f3
+_md5_=db775c0de3cc39074196f37eccdf1cac

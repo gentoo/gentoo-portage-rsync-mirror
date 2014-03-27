@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.18-r1.ebuild,v 1.1 2014/03/26 21:06:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.18-r1.ebuild,v 1.2 2014/03/27 03:40:44 bicatali Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
 DOC_URI="ftp://root.cern.ch/${PN}/doc"
 
-SLOT="0/$(get_version_component_range 1-2 ${PV})"
+SLOT="0/$(get_version_component_range 1-3 ${PV})"
 LICENSE="LGPL-2.1"
 IUSE="+X afs avahi c++0x doc emacs examples fits fftw graphviz
 	kerberos ldap +math minimal mpi mysql odbc +opengl openmp
