@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r1.ebuild,v 1.6 2012/02/24 23:47:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11-r1.ebuild,v 1.7 2014/03/27 19:18:33 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic perl-module
@@ -47,6 +47,8 @@ pkg_setup() {
 src_prepare() {
 	sed -i -e 's:$(CC):$(CC) $(OTHERLDFLAGS):' src/Makefile || die #333739
 	epatch "${FILESDIR}"/${P}-fix_parallel_make.patch
+	# Fix default device for >=udev-180 wrt #224559
+	sed -i -e 's:/dev/dvd:/dev/cdrom:' lib/Video/DVDRip/Config.pm || die
 }
 
 src_install() {
