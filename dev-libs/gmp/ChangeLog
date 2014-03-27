@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.198 2014/03/26 05:52:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.199 2014/03/27 01:11:49 vapier Exp $
+
+  27 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/6.0.0a/ppc64-build.diff, gmp-6.0.0a.ebuild:
+  Add fix from upstream for building on ppc64.
 
 *gmp-6.0.0a (26 Mar 2014)
 
