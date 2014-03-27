@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.2.ebuild,v 1.6 2014/03/27 00:44:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.3.ebuild,v 1.1 2014/03/27 00:44:32 mrueg Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils eutils pax-utils user versionator
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://quassel-irc.org/"
 [[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux ~sparc-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~sparc-solaris"
 SLOT="0"
 IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslog webkit X"
 
@@ -87,11 +87,6 @@ pkg_setup() {
 		enewgroup "${QUASSEL_USER}"
 		enewuser "${QUASSEL_USER}" -1 -1 "${QUASSEL_DIR}" "${QUASSEL_USER}"
 	fi
-}
-
-src_prepare() {
-	# fix for #492756
-	epatch "${FILESDIR}/missing-bsd-includes.patch" || die
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20140223.3.15.5.ebuild,v 1.4 2014/03/21 23:09:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20140223.3.15.5-r1.ebuild,v 1.1 2014/03/27 00:49:50 zerochaos Exp $
 
 # The Debian ca-certificates package merely takes the CA database as it exists
 # in the nss package and repackages it for use by openssl.
@@ -178,9 +178,7 @@ pkg_postinst() {
 		badcerts=1
 	done
 	if [ $badcerts -eq 1 ]; then
-		ewarn "You MUST remove the above broken symlinks"
-		ewarn "Otherwise any SSL validation that use the directory may fail!"
-		ewarn "To batch-remove them, run:"
-		ewarn "find -L ${EROOT}etc/ssl/certs/ -type l -exec rm {} +"
+		ewarn "Removing the following broken symlinks:"
+		ewarn "$(find -L "${EROOT}"/etc/ssl/certs/ -type l -printf '%p -> %l\n' -delete)"
 	fi
 }

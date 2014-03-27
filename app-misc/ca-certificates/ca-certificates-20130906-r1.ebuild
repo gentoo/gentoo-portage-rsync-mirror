@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20130906.ebuild,v 1.11 2014/03/19 07:46:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20130906-r1.ebuild,v 1.1 2014/03/27 00:49:50 zerochaos Exp $
 
 EAPI="4"
 
@@ -89,9 +89,7 @@ pkg_postinst() {
 		badcerts=1
 	done
 	if [ $badcerts -eq 1 ]; then
-		ewarn "You MUST remove the above broken symlinks"
-		ewarn "Otherwise any SSL validation that use the directory may fail!"
-		ewarn "To batch-remove them, run:"
-		ewarn "find -L ${EROOT}etc/ssl/certs/ -type l -exec rm {} +"
+		ewarn "Removing the following broken symlinks:"
+		ewarn "$(find -L "${EROOT}"/etc/ssl/certs/ -type l -printf '%p -> %l\n' -delete)"
 	fi
 }

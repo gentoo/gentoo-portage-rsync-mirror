@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.68 2013/10/23 23:58:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.69 2014/03/27 00:44:32 mrueg Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils eutils pax-utils user versionator
 
@@ -60,7 +60,8 @@ RDEPEND="
 		X? ( ${GUI_RDEPEND} )
 	)
 	"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	kde? ( dev-util/automoc )"
 
 DOCS="AUTHORS ChangeLog README"
 
@@ -120,12 +121,12 @@ src_install() {
 		fowners "${QUASSEL_USER}":"${QUASSEL_USER}" "${QUASSEL_DIR}"
 
 		# init scripts
-		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
-		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
+		newinitd "${FILESDIR}"/quasselcore.init quasselcore
+		newconfd "${FILESDIR}"/quasselcore.conf quasselcore
 
 		# logrotate
 		insinto /etc/logrotate.d
-		newins "${FILESDIR}/quassel.logrotate" quassel || die "newins failed"
+		newins "${FILESDIR}/quassel.logrotate" quassel
 	fi
 }
 
