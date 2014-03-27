@@ -1,10 +1,26 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8748 2014/03/27 15:00:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8749 2014/03/27 20:03:05 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> releases/13.0/eapi,
+  +uclibc/amd64/eapi, +releases/freebsd-8.2/eapi, +uclibc/arm/2.4/eapi,
+  +releases/freebsd-9.1/eapi, +uclibc/arm/armeb/2.4/eapi,
+  +releases/freebsd-9.2/eapi, +releases/eapi, +targets/desktop/eapi,
+  +targets/desktop/gnome/eapi, +targets/desktop/kde/eapi,
+  +targets/developer/eapi, +targets/systemd/eapi, +uclibc/arm/armeb/eapi,
+  +uclibc/arm/eapi, +uclibc/eapi, +uclibc/mips/eapi,
+  +uclibc/mips/hardened/eapi, +uclibc/mips/mipsel/eapi,
+  +uclibc/mips/mipsel/hardened/eapi, +uclibc/ppc/2.4/eapi, +uclibc/ppc/eapi,
+  +uclibc/ppc/hardened/2.4/eapi, +uclibc/ppc/hardened/eapi,
+  +uclibc/sh/2.4/eapi, +uclibc/sh/eapi, +uclibc/x86/2.4/eapi,
+  +uclibc/x86/2005.1/2.4/eapi, +uclibc/x86/2005.1/eapi, +uclibc/x86/eapi,
+  +uclibc/x86/hardened/2.4/eapi, +uclibc/x86/hardened/eapi,
+  +uclibc/x86/linux24/eapi, +uclibc/x86/linux26/eapi:
+  Increase EAPI to 5
 
   27 Mar 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
   Remove mask on >=sys-apps/systemd-210.
