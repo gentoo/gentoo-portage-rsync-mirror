@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DESCRIPTION=PUEL extensions for VirtualBox
+EAPI=5
+HOMEPAGE=http://www.virtualbox.org/
+KEYWORDS=~amd64 ~x86
+LICENSE=PUEL
+RDEPEND=~app-emulation/virtualbox-4.3.10
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=http://download.virtualbox.org/virtualbox/4.3.10/Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack -> Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=edd1a49d9f5752296e7fd01f0dd51ce3

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.2.1.ebuild,v 1.1 2013/07/27 21:29:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.2.1.ebuild,v 1.2 2014/03/27 12:24:08 ssuominen Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND="
 	dev-libs/glib:2
 	dev-libs/gobject-introspection
-	dev-libs/libgee:0
+	dev-libs/libgee:0[introspection]
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	$(vala_depend)

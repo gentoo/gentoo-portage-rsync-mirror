@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/imageworsener
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.20 2012/11/17 15:00:24 sping Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.21 2014/03/27 12:14:44 ssuominen Exp $
+
+  27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/imageworsener-0.9.5-disable-webp-tests.patch,
+  -files/imageworsener-0.9.5-webp.patch, -files/imageworsener-0.9.8-libm.patch,
+  -imageworsener-0.9.10.ebuild, -imageworsener-0.9.3.ebuild,
+  -imageworsener-0.9.4.ebuild, -imageworsener-0.9.5.ebuild,
+  -imageworsener-0.9.6.ebuild, -imageworsener-0.9.7.ebuild,
+  -imageworsener-0.9.8.ebuild, -imageworsener-0.9.9.ebuild:
+  old
 
 *imageworsener-1.0.0 (17 Nov 2012)
 
@@ -101,4 +110,3 @@
   15 Mar 2011; Kenneth Prugh <ken69267@gentoo.org> +imageworsener-0.9.1.ebuild,
   +metadata.xml:
   New ebuild for imageworsener.
-
