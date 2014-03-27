@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.43 2014/01/25 17:27:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.44 2014/03/27 22:57:43 blueness Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
 IUSE="doc gudev +hwdb kmod introspection +keymap +modutils +openrc +rule-generator selinux static-libs test"
 
-COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
+COMMON_DEPEND="gudev? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
 	kmod? ( sys-apps/kmod )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
@@ -135,6 +135,8 @@ multilib_src_configure()
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
 		--exec-prefix=/
+
+		$(use_enable gudev)
 	)
 
 	# Only build libudev for non-native_abi, and only install it to libdir,
@@ -142,7 +144,6 @@ multilib_src_configure()
 	if multilib_build_binaries; then econf_args+=(
 		--with-rootlibdir=/$(get_libdir)
 		$(use_enable doc gtk-doc)
-		$(use_enable gudev)
 		$(use_enable introspection)
 		$(use_enable keymap)
 		$(use_enable kmod libkmod)
@@ -152,7 +153,7 @@ multilib_src_configure()
 		$(use_enable rule-generator)
 		)
 	else econf_args+=(
-		$(echo --disable-{gtk-doc,gudev,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
+		$(echo --disable-{gtk-doc,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
 		)
 	fi
 	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
@@ -160,18 +161,22 @@ multilib_src_configure()
 
 multilib_src_compile()
 {
-	if ! multilib_build_binaries; then
-		cd src/libudev || die "Could not change directory"
+	if multilib_build_binaries; then
+		emake
+	else
+		emake -C src/libudev
+		emake -C src/gudev
 	fi
-	emake
 }
 
 multilib_src_install()
 {
-	if ! multilib_build_binaries; then
-		cd src/libudev || die "Could not change directory"
+	if multilib_build_binaries; then
+		emake DESTDIR="${D}" install
+	else
+		emake -C src/libudev DESTDIR="${D}" install
+		emake -C src/gudev DESTDIR="${D}" install
 	fi
-	emake DESTDIR="${D}" install
 }
 
 multilib_src_test()

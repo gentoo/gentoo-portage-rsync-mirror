@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.25 2014/03/23 20:27:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.26 2014/03/27 22:34:02 prometheanfire Exp $
+
+*neutron-2013.2.2-r1 (27 Mar 2014)
+
+  27 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/2013.2.2-CVE-2014-0056.patch, +neutron-2013.2.2-r1.ebuild,
+  -neutron-2013.2.2.ebuild:
+  fix for bug 505980 CVE-2014-0056
 
 *neutron-2013.1.5 (23 Mar 2014)
 

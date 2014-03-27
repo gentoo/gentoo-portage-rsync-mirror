@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.94 2014/03/22 23:29:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.95 2014/03/27 22:57:43 blueness Exp $
+
+  27 Mar 2014; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
+  Install multilib libgudev, bug #506002
 
 *eudev-1.5.3 (22 Mar 2014)
 

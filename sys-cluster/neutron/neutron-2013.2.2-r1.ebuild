@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.2.ebuild,v 1.1 2014/02/20 21:10:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.2-r1.ebuild,v 1.1 2014/03/27 22:34:02 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -76,7 +76,8 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 PATCHES=( "${FILESDIR}/sphinx_mapping.patch"
-		"${FILESDIR}/nicira.patch" )
+		"${FILESDIR}/nicira.patch"
+		"${FILESDIR}/2013.2.2-CVE-2014-0056.patch" )
 
 pkg_setup() {
 	enewgroup neutron
