@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20140228.ebuild,v 1.1 2014/03/01 16:24:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20140306.ebuild,v 1.1 2014/03/27 12:40:16 blueness Exp $
 
 EAPI="4"
 

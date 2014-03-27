@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.60.0.ebuild,v 1.4 2013/12/02 12:21:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.60.1-r1.ebuild,v 1.1 2014/03/27 12:53:28 idella4 Exp $
 
 EAPI=5
 
@@ -36,13 +36,15 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	# Make sure setuptools does not create a zip file in python_test;
 	# this is buggy and causes tests to fail.
-	"${FILESDIR}/${PN}-0.59.1-zipsafe.patch"
-
+	"${FILESDIR}"/${PN}-0.59.1-zipsafe.patch
 	# Depends on order of dictionary keys
-	"${FILESDIR}/logilab-common-0.60.0-skip-doctest.patch"
+	"${FILESDIR}"/logilab-common-0.60.0-skip-doctest.patch
+	"${FILESDIR}"/${PN}-sec-CVE-2014-1838-9.patch
 )
 
 python_prepare_all() {
+	# CVE-2014-1838
+	rm -f pdf_ext.py || die
 	sed -e 's:(CURDIR):{S}/${P}:' -i doc/makefile || die
 	distutils-r1_python_prepare_all
 }

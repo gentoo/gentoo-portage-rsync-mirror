@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.10.ebuild,v 1.1 2014/03/26 10:12:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.10.ebuild,v 1.2 2014/03/27 12:31:16 polynomial-c Exp $
 
 EAPI=5
 
@@ -73,7 +73,7 @@ DEPEND="${RDEPEND}
 	vboxwebsrv? ( <net-libs/gsoap-2.8.13 )
 	${PYTHON_DEPS}"
 PDEPEND="additions? ( ~app-emulation/virtualbox-additions-${PV} )
-	extensions? ( ~app-emulation/virtualbox-extpack-oracle-${PV} )"
+	extensions? ( =app-emulation/virtualbox-extpack-oracle-${PV}* )"
 
 QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox/VBoxSDL.so

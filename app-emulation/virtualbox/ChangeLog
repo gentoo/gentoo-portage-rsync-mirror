@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.179 2014/03/26 10:12:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.180 2014/03/27 12:31:16 polynomial-c Exp $
+
+  27 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.3.10.ebuild:
+  Fixed dependency on extensions package.
 
 *virtualbox-4.3.10 (26 Mar 2014)
 
