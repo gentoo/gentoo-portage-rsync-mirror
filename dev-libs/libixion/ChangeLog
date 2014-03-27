@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libixion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.9 2014/03/25 10:24:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.10 2014/03/27 08:58:04 scarabeus Exp $
+
+  27 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> libixion-0.7.0.ebuild,
+  libixion-9999.ebuild:
+  Raise dep over mdds to > 0.10. Fixes bug#505898
 
 *libixion-0.7.0 (25 Mar 2014)
 

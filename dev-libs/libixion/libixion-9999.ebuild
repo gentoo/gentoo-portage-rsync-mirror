@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.6 2014/03/25 10:24:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.7 2014/03/27 08:58:04 scarabeus Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="static-libs"
 
 RDEPEND="dev-libs/boost:="
 DEPEND="${RDEPEND}
-	>=dev-util/mdds-0.7.1:=
+	>=dev-util/mdds-0.10.1:=
 "
 
 src_prepare() {
