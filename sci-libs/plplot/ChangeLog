@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.56 2014/02/21 22:00:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.57 2014/03/27 04:32:36 bicatali Exp $
+
+  27 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.10.0.ebuild:
+  Bump minimum swig version for octave bindings, thanks disperato bug #503418.
+  Adjust library depedencies
 
 *plplot-5.10.0 (21 Feb 2014)
 

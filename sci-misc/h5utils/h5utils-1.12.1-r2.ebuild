@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.5 2012/08/04 16:05:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.6 2014/03/27 04:41:51 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
@@ -18,11 +18,11 @@ KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="hdf octave"
 
 DEPEND="
-	media-libs/libpng
-	sci-libs/hdf5
-	sys-libs/zlib
+	media-libs/libpng:0=
+	sci-libs/hdf5:0=
+	sys-libs/zlib:0=
 	hdf? (
-		sci-libs/hdf
+		sci-libs/hdf:0=
 		virtual/jpeg
 	)"
 RDEPEND="${DEPEND}"
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}"
 PATCHES=(
 	"${FILESDIR}"/${P}-automagic.patch
 	"${FILESDIR}"/${P}-png15.patch
-	)
+)
 
 src_configure() {
 	local myeconfargs=(

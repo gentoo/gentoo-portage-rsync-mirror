@@ -3,9 +3,6 @@
 <pkgmetadata>
   <herd>python</herd>
   <use>
-    <flag name="libyaml">enable support for C implementaion using libyaml</flag>
+    <flag name="libyaml">enable support for C implementation using libyaml</flag>
   </use>
-  <longdescription lang="en">
-		PyYAML is a YAML parser and emitter for the Python programming language.
-	</longdescription>
 </pkgmetadata>

@@ -2011,7 +2011,7 @@ dev-python/pytables:contrib - Install user-contributed files
 dev-python/pyudev:pygobject - Install PyGobject binding
 dev-python/pyudev:pyqt4 - Install PyQt4 binding
 dev-python/pyudev:pyside - Install PySide binding
-dev-python/pyyaml:libyaml - enable support for C implementaion using libyaml
+dev-python/pyyaml:libyaml - enable support for C implementation using libyaml
 dev-python/pyzmq:green - Enable gevent compatibility with zeromq
 dev-python/pyzor:pyzord - enable support for pyzord
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
