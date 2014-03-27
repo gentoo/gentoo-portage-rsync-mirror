@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.9999.ebuild,v 1.9 2014/03/10 08:48:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.9999.ebuild,v 1.10 2014/03/27 09:13:17 scarabeus Exp $
 
 EAPI=5
 
@@ -117,7 +117,7 @@ COMMON_DEPEND="
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
 	>=dev-libs/libatomic_ops-7.2d
-	>=dev-libs/liborcus-0.5.1:=
+	=dev-libs/liborcus-0.5*:=
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
