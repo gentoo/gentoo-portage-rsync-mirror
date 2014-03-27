@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.38 2014/03/19 23:07:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.39 2014/03/27 21:47:34 prometheanfire Exp $
+
+*subunit-0.0.18 (27 Mar 2014)
+
+  27 Mar 2014; Matthew Thode <prometheanfire@gentoo.org> +subunit-0.0.18.ebuild:
+  dev-python/subunit-0.0.18 added for pbr, which will be added for
+  keystoneclient which will be added for heatclient and on
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> subunit-0.0.9.ebuild:
   Keyword ~amd64-linux ~x86-linux

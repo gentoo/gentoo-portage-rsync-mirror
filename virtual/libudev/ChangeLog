@@ -1,0 +1,9 @@
+# ChangeLog for virtual/libudev
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.1 2014/03/27 21:59:15 mgorny Exp $
+
+*libudev-208 (27 Mar 2014)
+
+  27 Mar 2014; Michał Górny <mgorny@gentoo.org> +libudev-208.ebuild,
+  +metadata.xml:
+  Introduce a new virtual for clear := deps on libudev provider.
