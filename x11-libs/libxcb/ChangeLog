@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.131 2014/03/26 13:32:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.132 2014/03/27 11:06:53 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libxcb-1.10.ebuild:
+  Stable for amd64, wrt bug #500368
 
   26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/libxcb-1.7-interix.patch, -files/libxcb-1.8-waitall-hang.patch,

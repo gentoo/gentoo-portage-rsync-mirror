@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.129 2014/03/26 13:38:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.130 2014/03/27 11:07:41 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xcb-proto-1.10.ebuild:
+  Stable for amd64, wrt bug #500368
 
   26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/1.6-fix_negative.patch, -files/1.6-libdir-pc.patch,

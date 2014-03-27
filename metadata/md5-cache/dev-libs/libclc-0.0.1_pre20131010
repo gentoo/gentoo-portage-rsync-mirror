@@ -3,10 +3,10 @@ DEPEND=>=sys-devel/clang-3.2 >=sys-devel/llvm-3.2
 DESCRIPTION=OpenCL C library
 EAPI=5
 HOMEPAGE=http://libclc.llvm.org/
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=|| ( MIT BSD )
 RDEPEND=>=sys-devel/clang-3.2 >=sys-devel/llvm-3.2
 SLOT=0
 SRC_URI=mirror://gentoo/libclc-0.0.1_pre20131010.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=388fcd34f4b339fb733959fb1a36defe
+_md5_=a2b311e7f728e962ff398c6e688ce815

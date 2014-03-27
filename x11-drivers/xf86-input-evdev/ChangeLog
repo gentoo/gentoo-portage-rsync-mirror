@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.214 2014/01/02 03:43:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.215 2014/03/27 11:06:05 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xf86-input-evdev-2.8.2.ebuild:
+  Stable for amd64, wrt bug #500368
 
   02 Jan 2014; Matt Turner <mattst88@gentoo.org> xf86-input-evdev-2.8.2.ebuild:
   Don't make INPUT_EVDEV check fatal.

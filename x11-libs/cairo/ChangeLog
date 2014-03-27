@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.361 2014/03/09 09:19:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.362 2014/03/27 11:06:41 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.16.ebuild:
+  Stable for amd64, wrt bug #500368
 
   09 Mar 2014; Michał Górny <mgorny@gentoo.org> cairo-1.12.16-r1.ebuild:
   Wrap headers that can change due to USE=directfb inter-ABI mismatch.

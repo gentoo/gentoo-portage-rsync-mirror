@@ -1,6 +1,9 @@
 # ChangeLog for virtual/opencl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.15 2014/03/24 16:18:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.16 2014/03/27 11:05:30 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> opencl-0-r4.ebuild:
+  Stable for amd64, wrt bug #500368
 
   24 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop maintainership

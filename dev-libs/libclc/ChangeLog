@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libclc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.8 2014/01/06 16:49:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.9 2014/03/27 11:05:01 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  libclc-0.0.1_pre20131010.ebuild:
+  Stable for amd64, wrt bug #500368
 
 *libclc-0.0.1_pre20131010 (06 Jan 2014)
 *libclc-0.0.1_pre20140101 (06 Jan 2014)

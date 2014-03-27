@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxshmfence
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/ChangeLog,v 1.6 2014/02/11 11:48:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/ChangeLog,v 1.7 2014/03/27 11:06:56 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libxshmfence-1.1.ebuild:
+  Stable for amd64, wrt bug #500368
 
   11 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libxshmfence-1.1.ebuild:

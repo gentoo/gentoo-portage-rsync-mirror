@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.159 2014/01/18 12:03:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.160 2014/03/27 11:07:53 ago Exp $
+
+  27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xproto-7.0.25.ebuild:
+  Stable for amd64, wrt bug #500368
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> xproto-7.0.24.ebuild,
   xproto-7.0.25.ebuild:
