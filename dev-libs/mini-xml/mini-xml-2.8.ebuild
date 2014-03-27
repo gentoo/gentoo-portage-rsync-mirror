@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.8.ebuild,v 1.2 2014/02/01 20:07:50 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.8.ebuild,v 1.3 2014/03/27 11:59:29 nimiux Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.msweet.org/files/project3/${MY_P}.tar.gz"
 
 LICENSE="Mini-XML"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 IUSE="threads static-libs"
 
 DEPEND="virtual/pkgconfig"
