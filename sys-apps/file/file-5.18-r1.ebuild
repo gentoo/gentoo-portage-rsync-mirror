@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-9999.ebuild,v 1.6 2014/03/27 03:30:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.18-r1.ebuild,v 1.1 2014/03/27 03:30:14 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -25,7 +25,7 @@ SLOT="0"
 IUSE="python static-libs zlib"
 
 DEPEND="python? ( ${PYTHON_DEPS} )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 	python? ( !dev-python/python-magic )"
 

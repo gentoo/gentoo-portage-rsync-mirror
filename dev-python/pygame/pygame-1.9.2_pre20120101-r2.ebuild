@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r2.ebuild,v 1.9 2013/09/05 18:46:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r2.ebuild,v 1.10 2014/03/27 03:19:12 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -65,8 +65,8 @@ python_test() {
 python_install() {
 	distutils-r1_python_install
 
-	rm -fr "${D}$(python_get_sitedir)/pygame/examples"
-	rm -fr "${D}$(python_get_sitedir)/pygame/tests"
+	# Bug #497720
+	rm -fr "${D}"$(python_get_sitedir)/pygame/{docs,examples,tests}/ || die
 }
 
 python_install_all() {

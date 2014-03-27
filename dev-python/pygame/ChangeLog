@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygame
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.100 2013/09/05 18:46:31 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.102 2014/03/27 03:21:41 idella4 Exp $
+
+  27 Mar 2014; Ian Delaney <idella4@gentoo.org> -pygame-1.9.2_pre3082.ebuild,
+  -pygame-1.9.2_pre3203.ebuild, pygame-1.9.2_pre20120101-r2.ebuild:
+  update install phase, fix based on patch by C. Mayo wrt to bug #497720 by C.
+  Myao, rm old ebuilds
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org>
   pygame-1.9.2_pre20120101-r2.ebuild:
