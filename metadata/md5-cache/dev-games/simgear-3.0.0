@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/expat >=dev-games/openscenegraph-3.0.1 media-libs/openal sys-libs/zlib virtual/opengl jpeg? ( virtual/jpeg ) >=dev-libs/boost-1.44 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Development library for simulation games
+EAPI=5
+HOMEPAGE=http://www.simgear.org/
+IUSE=debug jpeg subversion test
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/expat >=dev-games/openscenegraph-3.0.1 media-libs/openal sys-libs/zlib virtual/opengl jpeg? ( virtual/jpeg ) subversion? ( dev-vcs/subversion )
+SLOT=0
+SRC_URI=http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/simgear-3.0.0.tar.bz2
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=5d7f2f975204d51f051c4c73a671a2ca

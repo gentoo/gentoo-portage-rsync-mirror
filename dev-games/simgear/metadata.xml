@@ -9,9 +9,8 @@
 <longdescription>
 SimGear is a set of open-source libraries designed to be used as building blocks for 
 quickly assembling 3d simulations, games, and visualization applications.
-
-The purpose of this project is to develop open-source libraries and
-building blocks to assist with rapid construction/prototyping of 3d
-simulation, game, and visualization software.
 </longdescription>
+<use>
+	<flag name="subversion">Enables terrasync scenery downloader</flag>
+</use>
 </pkgmetadata>

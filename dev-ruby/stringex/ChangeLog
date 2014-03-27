@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/stringex
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.17 2013/10/25 09:05:58 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.18 2014/03/27 02:33:32 mrueg Exp $
+
+*stringex-2.4.2 (27 Mar 2014)
+
+  27 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +stringex-2.4.2.ebuild:
+  Version bump.
 
   25 Oct 2013; Hans de Graaff <graaff@gentoo.org> stringex-2.0.8.ebuild:
   Add ruby20, but skip the rails tests and dependencies for now so we can

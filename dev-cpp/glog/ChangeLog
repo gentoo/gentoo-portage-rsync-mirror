@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/glog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.14 2013/10/19 01:59:01 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.15 2014/03/27 02:37:51 vapier Exp $
+
+*glog-0.3.3-r1 (27 Mar 2014)
+
+  27 Mar 2014; Mike Frysinger <vapier@gentoo.org> +glog-0.3.3-r1.ebuild:
+  Add multilib build support.
 
   19 Oct 2013; Mike Frysinger <vapier@gentoo.org> glog-0.3.3.ebuild:
   Add keywords for everyone.
