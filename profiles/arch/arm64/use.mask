@@ -74,6 +74,9 @@ prelude
 mssql
 
 # havent tested yet
+libproxy
+pkcs11
+gnutls
 bazaar
 darcs
 mercurial

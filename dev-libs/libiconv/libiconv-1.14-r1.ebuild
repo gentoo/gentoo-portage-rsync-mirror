@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.14-r1.ebuild,v 1.4 2013/12/24 12:43:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.14-r1.ebuild,v 1.5 2014/03/27 06:30:41 vapier Exp $
 
 EAPI="4"
 
@@ -20,25 +20,23 @@ DEPEND="!sys-libs/glibc
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# Make sure that libtool support is updated to link "the linux way"
-	# on FreeBSD.
+	epatch "${FILESDIR}"/${P}-no-gets.patch
 	elibtoolize
 }
 
 multilib_src_configure() {
 	# Disable NLS support because that creates a circular dependency
 	# between libiconv and gettext
-	ECONF_SOURCE="${S}" econf \
+	ECONF_SOURCE="${S}" \
+	econf \
 		--docdir="\$(datarootdir)/doc/${PF}/html" \
 		--disable-nls \
 		--enable-shared \
 		$(use_enable static-libs static)
 }
 
-multilib_src_install() {
-	default
-
+multilib_src_install_all() {
 	# Install in /lib as utils installed in /lib like gnutar
 	# can depend on this
-	[ "${ABI}" = "${DEFAULT_ABI}" ] && gen_usr_ldscript -a iconv charset
+	gen_usr_ldscript -a iconv charset
 }
