@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.130 2014/03/27 03:40:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.131 2014/03/27 18:51:54 bicatali Exp $
+
+  27 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> root-5.34.18-r1.ebuild:
+  Uncomment inadvertently commented out user and group creation
 
   27 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> root-5.34.18-r1.ebuild:
   Finer sub-slotting necessary, bug #505358

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.18-r1.ebuild,v 1.2 2014/03/27 03:40:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.18-r1.ebuild,v 1.3 2014/03/27 18:51:54 bicatali Exp $
 
 EAPI=5
 
@@ -128,8 +128,8 @@ pkg_setup() {
 	elog "EXTRA_ECONF=\"--enable-srp --with-srp-libdir=${EROOT%/}/usr/$(get_libdir)\""
 	echo
 
-	#enewgroup rootd
-	#enewuser rootd -1 -1 /var/spool/rootd rootd
+	enewgroup rootd
+	enewuser rootd -1 -1 /var/spool/rootd rootd
 
 	use minimal && return
 
