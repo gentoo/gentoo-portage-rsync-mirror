@@ -1,6 +1,16 @@
 # ChangeLog for games-engines/odamex
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/ChangeLog,v 1.14 2013/09/30 17:16:29 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/ChangeLog,v 1.15 2014/03/27 21:20:52 hasufell Exp $
+
+*odamex-0.7.0 (27 Mar 2014)
+
+  27 Mar 2014; Julian Ospald <hasufell@gentoo.org> +odamex-0.7.0.ebuild,
+  +files/2-odamex-0.7.0-cmake-options.patch,
+  +files/1-odamex-0.7.0-install-rules.patch,
+  +files/odamex-0.7.0-miniupnpc.patch,
+  +files/4-odamex-0.7.0-odalauncher-bin-path.patch,
+  +files/3-odamex-0.7.0-wad-search-path.patch:
+  version bump
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> odamex-0.6.4.ebuild:
   Stable for x86, wrt bug #486232

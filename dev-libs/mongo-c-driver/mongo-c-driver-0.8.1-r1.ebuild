@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-0.8.1-r1.ebuild,v 1.1 2014/03/27 17:05:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-0.8.1-r1.ebuild,v 1.2 2014/03/27 21:24:49 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit base multilib python-r1
+inherit base multilib python-any-r1
 
 DESCRIPTION="C Driver for MongoDB"
 HOMEPAGE="http://www.mongodb.org/ https://github.com/mongodb/mongo-c-driver"
@@ -20,8 +20,14 @@ IUSE="doc static-libs"
 RESTRICT="test"
 
 RDEPEND=""
-DEPEND="doc? ( dev-python/sphinx )"
+DEPEND="${PYTHON_DEPS}
+	doc? ( $(python_gen_any_dep 'dev-python/sphinx[${PYTHON_USEDEP}]') )
+"
 PATCHES=( "${FILESDIR}/${PV}-api-version.diff" )
+
+python_check_deps() {
+	use !doc || has_version "dev-python/sphinx[${PYTHON_USEDEP}]"
+}
 
 src_unpack() {
 	unpack ${A}

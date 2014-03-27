@@ -1,9 +1,28 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.8 2014/03/22 17:27:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.9 2014/03/27 21:19:50 dilfridge Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Sergey Popov <pinkbyte@gentoo.org> (28 Oct 2013)
+# sys-cluster/cman is still in ~arch.
+sys-cluster/pacemaker cman
+
+# Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2013)
+# The dependencies for these flags are still in ~arch.
+sys-fs/lvm2 clvm cman
+
+# Doug Goldstein <cardoe@gentoo.org> (12 Sep 2013)
+# Waiting on glusterfs maintainers in bug #484016
+app-emulation/qemu glusterfs
+
+# Ian Delaney <idella4@gentoo.org> (09 Dec 2013)
+# subsequent to the total inaction of the maintainer of
+# ocaml to honour / respond in any way to 
+# Bug #486076, ocaml masked to allow xen to once again
+# become a stabilisable package
+app-emulation/xen-tools ocaml
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Mar 2014)
 # Some open source OpenCL providers cause sandbox violation while accessing /dev/dri/card*
