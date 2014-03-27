@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.4.0_alpha.ebuild,v 1.2 2013/08/27 19:27:02 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.4.0_alpha.ebuild,v 1.3 2014/03/26 23:30:16 ryao Exp $
 
-EAPI=3
+EAPI=4
 
 inherit multilib eutils versionator
 
@@ -36,7 +36,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
-	rm -rf "${ED}"/usr/$(get_libdir)/bmore.help
+	emake DESTDIR="${D}" install || die "make install failed"
+	rm -rf "${D}"/usr/$(get_libdir)/bmore.help
 	dodoc README CHANGES CREDITS bmore.help
 }
