@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/qstlink2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qstlink2/ChangeLog,v 1.1 2014/03/27 06:35:09 qnikst Exp $
+
+*qstlink2-1.0.3 (27 Mar 2014)
+
+  27 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +qstlink2-1.0.3.ebuild:
+  new version, bug #500246

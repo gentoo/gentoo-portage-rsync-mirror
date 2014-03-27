@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.142 2014/02/01 16:18:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.143 2014/03/27 06:57:57 ssuominen Exp $
+
+*pkgconfig-0.28-r1 (27 Mar 2014)
+
+  27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +pkgconfig-0.28-r1.ebuild,
+  pkgconfig-9999.ebuild:
+  Build eg. i686-pc-linux-gnu-pkg-config with ABI_X86="32" to support searching
+  from /usr/lib32 without passing anything to the environment wrt #494748 by
+  "kramlat"
 
   01 Feb 2014; Fabian Groffen <grobian@gentoo.org> pkgconfig-0.28.ebuild,
   pkgconfig-9999.ebuild:

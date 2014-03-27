@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.14-r1.ebuild,v 1.5 2014/03/27 06:30:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.14-r1.ebuild,v 1.6 2014/03/27 06:37:41 vapier Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 arm ~mips ppc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="+static-libs"
 
 DEPEND="!sys-libs/glibc
-	!sys-apps/man-pages"
+	!userland_GNU? ( !sys-apps/man-pages )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -39,4 +39,15 @@ multilib_src_install_all() {
 	# Install in /lib as utils installed in /lib like gnutar
 	# can depend on this
 	gen_usr_ldscript -a iconv charset
+
+	# If we have a GNU userland, we probably have sys-apps/man-pages
+	# installed, which means we want to rename our copies #503162.
+	# The use of USELAND=GNU is kind of a hack though ...
+	if use userland_GNU ; then
+		cd "${ED}"/usr/share/man || die
+		local f
+		for f in man*/*.[0-9] ; do
+			mv "${f}" "${f%/*}/${PN}-${f#*/}" || die
+		done
+	fi
 }
