@@ -1,0 +1,68 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -28,6 +28,7 @@
+ 
+ AC_C_CONST
+ AC_PROG_INSTALL
++AC_PROG_MKDIR_P
+ 
+ dnl Checks for libraries.
+ 
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -36,6 +36,7 @@
+ MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
++MKDIR_P = @MKDIR_P@
+ LDFLAGS = @LDFLAGS@
+ LIBS= @LIBS@
+ VPATH = @srcdir@
+@@ -87,7 +88,7 @@
+ 
+ units_cur: units_cur2 units_cur3
+ 	@if test $(HAVE_PYTHON) = no; then \
+-	  make units_cur_dummy; \
++	  $(MAKE) units_cur_dummy; \
+ 	else \
+ 	  version=`$(PYTHON) --version 2>&1`; \
+ 	  if echo $$version | grep 'Python 2' >/dev/null; then \
+@@ -120,7 +121,7 @@
+              units_cur > units_cur_inst
+ 
+ install-support: definitions.units currency.units units_cur_inst
+-	$(srcdir)/mkinstalldirs $(DESTDIR)@UDAT@ $(DESTDIR)$(bindir) 
++	$(MKDIR_P) $(DESTDIR)@UDAT@ $(DESTDIR)$(bindir) 
+ 	$(INSTALL_DATA) $(srcdir)/definitions.units $(DESTDIR)@UDAT@definitions.units
+ 	$(INSTALL_DATA) $(srcdir)/currency.units $(DESTDIR)@UDAT@currency.units
+ 	$(INSTALL_DATA) $(srcdir)/locale_map.txt $(DESTDIR)@UDAT@locale_map.txt
+@@ -129,17 +130,17 @@
+ 
+ 
+ install: units@EXEEXT@ install-doc install-support
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) 
++	$(MKDIR_P) $(DESTDIR)$(bindir) 
+ 	$(INSTALL_PROGRAM) units@EXEEXT@ $(DESTDIR)$(bindir)/`echo units@EXEEXT@|sed '$(transform)'`
+ 
+ install-strip: units@EXEEXT@ install-doc install-support
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
++	$(MKDIR_P) $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) -s units@EXEEXT@ $(DESTDIR)$(bindir)/`echo units@EXEEXT@|sed '$(transform)'`
+ 
+ install-doc: install-man install-info
+ 
+ install-man: units.1
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
++	$(MKDIR_P) $(DESTDIR)$(mandir)/man1
+ 	$(INSTALL_DATA) units.1 $(DESTDIR)$(mandir)/man1/`echo units|sed '$(transform)'`.1
+ 
+ units.man: units.texinfo texi2man
+@@ -152,7 +153,7 @@
+ 
+ $(DESTDIR)$(infodir)/units.info: units.info
+ 	$(POST_INSTALL)
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(infodir)
++	$(MKDIR_P) $(DESTDIR)$(infodir)
+ # There may be a newer info file in . than in srcdir.
+ 	-if test -f units.info; then d=.; \
+ 	    else d=$(srcdir); fi; \

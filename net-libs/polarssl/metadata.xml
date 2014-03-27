@@ -16,5 +16,6 @@
 			Warning: the HAVEGE random generator is not suitable for
 			virtualized environments
 		</flag>
+		<flag name='programs'>Build PolarSSL programs</flag>
 	</use>
 </pkgmetadata>
