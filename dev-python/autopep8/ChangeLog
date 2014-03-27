@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.42 2014/03/17 06:35:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.43 2014/03/27 00:07:29 sping Exp $
+
+  27 Mar 2014; Sebastian Pipping <sping@gentoo.org> metadata.xml:
+  Remove myself as maintainer, python herd still in
 
   17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Remove myself from metadata.xml

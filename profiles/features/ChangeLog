@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.77 2014/02/02 09:52:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.78 2014/03/27 00:02:49 dilfridge Exp $
+
+  27 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +32bit-native/eapi,
+  +32bit-userland/eapi, +64bit-native/eapi, +eapi, +multilib/eapi,
+  +multilib/lib32/eapi, +prefix/rpath/eapi, +selinux/eapi:
+  Increase EAPI to 5
 
   02 Feb 2014; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Cleanup of SELinux profile
