@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.18.ebuild,v 1.3 2014/03/09 12:06:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.18.ebuild,v 1.4 2014/03/28 02:37:50 jer Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://code.entropywave.com/download/orc/${P}.tar.gz"
 
 LICENSE="BSD BSD-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm hppa x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples static-libs"
 
 RDEPEND=""

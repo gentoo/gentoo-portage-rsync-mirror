@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.35 2014/03/09 12:06:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.36 2014/03/28 02:37:50 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> orc-0.4.18.ebuild:
+  Stable for HPPA (bug #499954).
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> orc-0.4.18.ebuild:
   x86 stable, bug 499954
