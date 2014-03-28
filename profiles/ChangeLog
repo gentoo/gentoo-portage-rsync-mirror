@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8751 2014/03/28 18:59:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8752 2014/03/28 21:37:36 zerochaos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Mar 2014; Rick Farina <zerochaos@gentoo.org> package.mask:
+  Mask virtual/lib[g]udev pending discussion on -dev, bug #506114
 
   28 Mar 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Add a note to update wiki page when unmasking multilib packages.
