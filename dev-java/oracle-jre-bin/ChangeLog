@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.49 2014/01/26 10:41:04 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.50 2014/03/28 14:56:47 tomwij Exp $
+
+*oracle-jre-bin-1.8.0.0 (28 Mar 2014)
+
+  28 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +files/oracle-jre-bin-1.8.env,
+  +oracle-jre-bin-1.8.0.0.ebuild:
+  Version bump to 1.8.0.0; for bug #505040, reported by wevrn5, contribution by
+  Krzysztof Miksa, reviewed and adjusted.
 
   26 Jan 2014; Ralph Sennhauser <sera@gentoo.org>
   -oracle-jre-bin-1.7.0.45.ebuild:
