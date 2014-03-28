@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.209 2014/03/09 11:54:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.210 2014/03/28 02:10:18 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> glibmm-2.38.1.ebuild:
+  Stable for HPPA (bug #499954).
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> glibmm-2.38.1.ebuild:
   x86 stable, bug 499954

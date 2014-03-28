@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3-r2.ebuild,v 1.1 2014/03/13 09:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3-r3.ebuild,v 1.1 2014/03/28 02:10:02 vapier Exp $
 
 EAPI=4
 
@@ -55,8 +55,9 @@ src_prepare() {
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${PN}-6.2-rlfe-tgoto.patch #385091
-	epatch "${FILESDIR}"/${PN}-6.3-vi-last.patch
-	epatch "${FILESDIR}"/${PN}-6.3-dispatch-multikey.patch #504440
+	epatch "${FILESDIR}"/${P}-vi-last.patch
+	epatch "${FILESDIR}"/${P}-dispatch-multikey.patch #504440
+	epatch "${FILESDIR}"/${P}-readline-sigint-cleanup.patch
 
 	# Force ncurses linking. #71420
 	# Use pkg-config to get the right values. #457558

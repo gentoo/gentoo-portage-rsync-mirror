@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.4.ebuild,v 1.5 2014/03/09 11:54:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.4.ebuild,v 1.6 2014/03/28 02:05:54 jer Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="3/0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE="+introspection vala"
 
 RDEPEND="

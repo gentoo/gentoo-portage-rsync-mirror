@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.357 2014/03/20 19:45:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.358 2014/03/28 02:10:54 vapier Exp $
+
+*bash-4.3-r3 (28 Mar 2014)
+
+  28 Mar 2014; Mike Frysinger <vapier@gentoo.org> +bash-4.3-r3.ebuild,
+  +files/bash-4.3-input-line-realloc.patch, -bash-4.3-r2.ebuild:
+  Fix from upstream for crash when exiting the shell.
 
 *bash-4.3-r2 (20 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.251 2014/03/09 11:55:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.252 2014/03/28 02:17:55 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> gmime-2.6.20.ebuild:
+  Stable for HPPA (bug #499954).
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gmime-2.6.20.ebuild:
   x86 stable, bug 499954
