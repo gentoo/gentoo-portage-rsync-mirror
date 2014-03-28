@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.10.ebuild,v 1.1 2014/03/27 20:01:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.10.ebuild,v 1.2 2014/03/28 01:15:00 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -20,11 +20,14 @@ DEPEND="
 	>=sys-libs/readline-4.1-r2
 	units_cur? (
 		dev-lang/python-exec:2
-		dev-python/unidecode[${PYTHON_USEDEP}]
 	)
 "
 RDEPEND="
 	${DEPEND}
+	units_cur? (
+		dev-python/unidecode[${PYTHON_USEDEP}]
+		${PYTHON_DEPS}
+	)
 "
 
 DOCS=( ChangeLog NEWS README )
