@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-34.0.1847.92_beta1.ebuild,v 1.1 2014/03/27 19:49:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-34.0.1847.92_beta1.ebuild,v 1.2 2014/03/27 23:38:26 floppym Exp $
 
 EAPI=4
 
@@ -54,6 +54,10 @@ done
 
 S="${WORKDIR}/opt/google/chrome-${SLOT}"
 QA_PREBUILT="*"
+
+pkg_nofetch() {
+	eerror "Please wait 24 hours and sync your portage tree before reporting fetch failures."
+}
 
 src_install() {
 	local version flapper
