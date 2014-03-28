@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.13 2012/10/19 03:35:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.14 2014/03/28 15:08:16 ulm Exp $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:
@@ -155,7 +155,7 @@ check-reqs_run() {
 # @FUNCTION: check-reqs_get_mebibytes
 # @DESCRIPTION:
 # Internal function that returns number in mebibytes.
-# Converts from 1G=1024 or 1T=1048576
+# Returns 1024 for 1G or 1048576 for 1T.
 check-reqs_get_mebibytes() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -176,8 +176,8 @@ check-reqs_get_mebibytes() {
 
 # @FUNCTION: check-reqs_get_number
 # @DESCRIPTION:
-# Internal function that returns number without the unit.
-# Converts from 1G=1 or 150T=150.
+# Internal function that returns the numerical value without the unit.
+# Returns "1" for "1G" or "150" for "150T".
 check-reqs_get_number() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -190,7 +190,7 @@ check-reqs_get_number() {
 	# Backcompat.
 	if [[ ${size} == ${1} ]]; then
 		ewarn "QA: Package does not specify unit for the size check"
-		ewarn "QA: Assuming megabytes."
+		ewarn "QA: Assuming mebibytes."
 		ewarn "QA: File bug against the package. It should specify the unit."
 	fi
 
@@ -199,8 +199,8 @@ check-reqs_get_number() {
 
 # @FUNCTION: check-reqs_get_unit
 # @DESCRIPTION:
-# Internal function that returns number without the unit.
-# Converts from 1G=1 or 150T=150.
+# Internal function that return the unit without the numerical value.
+# Returns "GiB" for "1G" or "TiB" for "150T".
 check-reqs_get_unit() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -209,9 +209,9 @@ check-reqs_get_unit() {
 	local unit=${1:(-1)}
 
 	case ${unit} in
-		G) echo "gigabytes" ;;
-		[M0-9]) echo "megabytes" ;;
-		T) echo "terabytes" ;;
+		G) echo "GiB" ;;
+		[M0-9]) echo "MiB" ;;
+		T) echo "TiB" ;;
 		*)
 			die "${FUNCNAME}: Unknown unit: ${unit}"
 		;;
