@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.34 2014/02/06 08:30:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.35 2014/03/28 04:33:57 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> porticron-0.7_p20140126.ebuild:
+  Stable for HPPA (bug #505148).
 
 *porticron-0.7_p20140126 (06 Feb 2014)
 
