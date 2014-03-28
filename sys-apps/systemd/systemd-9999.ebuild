@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.101 2014/03/24 19:33:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.102 2014/03/28 18:16:31 mgorny Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	qrcode? ( media-gfx/qrencode:0= )
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
-	ssl? ( net-libs/gnutls:0= )
+	ssl? ( >=net-libs/gnutls-3.1.4:0= )
 	xattr? ( sys-apps/attr:0= )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"

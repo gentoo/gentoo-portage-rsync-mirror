@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.15 2014/01/26 09:10:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.16 2014/03/28 18:28:39 mgorny Exp $
 
 EAPI="5"
 
@@ -56,7 +56,6 @@ RDEPEND="${COMMON_DEPEND}
 
 PDEPEND="hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
 	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
-	>=virtual/udev-206-r2
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 REQUIRED_USE="keymap? ( hwdb )"

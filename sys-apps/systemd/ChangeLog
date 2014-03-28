@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.241 2014/03/27 13:55:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.242 2014/03/28 18:16:31 mgorny Exp $
+
+  28 Mar 2014; Michał Górny <mgorny@gentoo.org> systemd-212.ebuild,
+  systemd-9999.ebuild:
+  Fix gnutls dep wrt bug #506060.
 
 *systemd-212 (27 Mar 2014)
 
