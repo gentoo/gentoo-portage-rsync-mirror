@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.144 2014/03/28 11:24:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.145 2014/03/28 21:23:58 zerochaos Exp $
+
+  28 Mar 2014; Rick Farina <zerochaos@gentoo.org> upower-0.9.23-r2.ebuild,
+  upower-0.99.0.ebuild:
+  reverting deps on lib[g]udev due to bug #506114
 
   28 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.23-r2.ebuild,
   upower-0.99.0.ebuild:
