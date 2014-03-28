@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/jaxodraw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.12 2012/12/16 14:18:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.13 2014/03/28 10:49:32 tomwij Exp $
+
+*jaxodraw-2.0.1-r1 (28 Mar 2014)
+
+  28 Mar 2014; Tom Wijsman <TomWij@gentoo.org> +jaxodraw-2.0.1-r1.ebuild,
+  -jaxodraw-2.0.1.ebuild:
+  Revision bump, adapt to new icon location and install desktop entry instead of
+  menu item; fixes bug #426756, this fix has been contributed by David Zaslavsky
+  (diazona).
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685

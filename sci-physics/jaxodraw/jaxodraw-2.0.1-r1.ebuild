@@ -1,13 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/jaxodraw-2.0.1.ebuild,v 1.1 2010/04/02 18:13:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/jaxodraw-2.0.1-r1.ebuild,v 1.1 2014/03/28 10:49:32 tomwij Exp $
+
+EAPI="5"
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-trax"
 
 inherit java-pkg-2 java-ant-2 versionator eutils
 
-MY_PV=$(replace_version_separator 2 -)
+MY_PV="$(replace_version_separator 2 -)"
 
 DESCRIPTION="Java program for drawing Feynman diagrams"
 HOMEPAGE="http://jaxodraw.sourceforge.net/"
@@ -20,7 +22,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="latex"
 
 DEPEND=">=virtual/jdk-1.4
-	latex? ( dev-texlive/texlive-pstricks )"
+	latex? ( dev-texlive/texlive-pstricks:0 )"
+
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/JaxoDraw-${MY_PV}"
@@ -28,8 +31,8 @@ S="${WORKDIR}/JaxoDraw-${MY_PV}"
 src_install() {
 	java-pkg_newjar build/${PN}-${MY_PV}.jar ${PN}.jar
 
-	doicon etc/OS/Linux/*.png
-	domenu etc/OS/Linux/${PN}.desktop
+	newicon src/site/xdocs/images/favicon.ico jaxodraw.ico
+	make_desktop_entry jaxodraw JaxoDraw jaxodraw.ico
 
 	use source && java-pkg_dosrc src/main/java/net
 
