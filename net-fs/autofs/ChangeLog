@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.173 2014/01/17 07:17:41 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.174 2014/03/28 22:03:48 dlan Exp $
+
+*autofs-5.0.9 (28 Mar 2014)
+
+  28 Mar 2014; Yixun Lan <dlan@gentoo.org> +autofs-5.0.9.ebuild:
+  bump to 5.0.9
 
   17 Jan 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   update maintainer email
