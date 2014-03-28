@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mongo-c-driver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.8 2014/03/27 21:24:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.9 2014/03/28 13:30:16 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> mongo-c-driver-0.8.1-r1.ebuild:
+  Respect CC.
 
   27 Mar 2014; Mike Gilbert <floppym@gentoo.org> mongo-c-driver-0.8.1-r1.ebuild:
   Convert to python-any-r1, bug 505994.

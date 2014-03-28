@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.72 2014/03/04 20:12:35 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.73 2014/03/28 13:22:51 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> Cairo-1.103.0.ebuild:
+  Stable for HPPA (bug #408151).
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> Cairo-1.103.0.ebuild:
   Add ~mips keyword.

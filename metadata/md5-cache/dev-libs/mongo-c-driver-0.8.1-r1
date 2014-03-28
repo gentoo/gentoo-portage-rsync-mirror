@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/mongodb/mongo-c-driver/tarball/v0.8.1 -> mongo-c-driver-0.8.1.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c1d38c25a45cde0ad30112a6cf8238d3
+_md5_=3fa6e50c318a4c60eaf0d95bae3e5326
