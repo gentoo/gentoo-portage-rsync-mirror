@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.96 2014/03/25 08:23:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.97 2014/03/28 05:20:38 idella4 Exp $
+
+*pyserial-2.7-r1 (28 Mar 2014)
+
+  28 Mar 2014; Ian Delaney <idella4@gentoo.org> +files/mapping.patch,
+  +pyserial-2.7-r1.ebuild, -pyserial-2.5-r1.ebuild, -pyserial-2.6.ebuild:
+  revbump; add IUSE doc, examples, dep for doc build and install, fixes Bug
+  #497446 by C. Mayo
 
   25 Mar 2014; Ian Delaney <idella4@gentoo.org>
   +files/pyserial-2.6-list_ports.patch, pyserial-2.6-r1.ebuild:
