@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pythondialog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.17 2011/01/01 19:56:22 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.18 2014/03/28 07:05:15 idella4 Exp $
+
+*pythondialog-3.0.1 (28 Mar 2014)
+*pythondialog-2.7-r1 (28 Mar 2014)
+
+  28 Mar 2014; Ian Delaney <idella4@gentoo.org> +pythondialog-2.7-r1.ebuild,
+  +pythondialog-3.0.1.ebuild:
+  revbump, convert -> distutils-r1, bump, new version supports py3, fixes Bug
+  #496524
 
   01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pythondialog-2.7.ebuild:
@@ -57,4 +65,3 @@
   07 Feb 2003; Mark Guertin <gerk@gentoo.org> pythondialog-1.0.ebuild :
   Initial build entry.  Set as ~ for all arches, should work fine.  Thanks
   to Matt Tucker for the new ebuild, bug # 15238.
-
