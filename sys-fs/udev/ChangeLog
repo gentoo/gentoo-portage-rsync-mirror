@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1015 2014/03/26 06:14:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1017 2014/03/28 04:27:10 ssuominen Exp $
+
+  28 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild,
+  udev-9999.ebuild:
+  Pull in virtual/libudev and virtual/libgudev like we do for virtual/udev in
+  PDEPEND.
+
+*udev-212-r1 (28 Mar 2014)
+
+  28 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> +udev-212-r1.ebuild,
+  udev-9999.ebuild:
+  Support building libgudev-1.0.so with ABI_X86 for the new virtual/libgudev.
 
   26 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-211.ebuild:
   old

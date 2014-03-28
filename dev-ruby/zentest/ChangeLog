@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.134 2014/03/21 10:57:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.135 2014/03/28 04:04:48 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> zentest-4.9.5.ebuild:
+  Stable for HPPA (bug #490180).
 
   21 Mar 2014; Hans de Graaff <graaff@gentoo.org> zentest-4.9.5-r1.ebuild:
   Really add ruby21. Drop ruby18.
