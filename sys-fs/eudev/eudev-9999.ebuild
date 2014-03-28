@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.46 2014/03/28 19:06:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.47 2014/03/28 20:02:03 axs Exp $
 
 EAPI="5"
 
@@ -164,7 +164,7 @@ multilib_src_compile()
 		emake
 	else
 		emake -C src/libudev
-		emake -C src/gudev
+		use gudev && emake -C src/gudev
 	fi
 }
 
@@ -174,7 +174,7 @@ multilib_src_install()
 		emake DESTDIR="${D}" install
 	else
 		emake -C src/libudev DESTDIR="${D}" install
-		emake -C src/gudev DESTDIR="${D}" install
+		use gudev && emake -C src/gudev DESTDIR="${D}" install
 	fi
 }
 

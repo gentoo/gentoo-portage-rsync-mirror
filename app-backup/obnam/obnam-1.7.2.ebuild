@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.7.2.ebuild,v 1.1 2014/03/25 21:37:28 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.7.2.ebuild,v 1.2 2014/03/28 20:24:09 mschiff Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE=""
 DEPEND="${PYTHON_DEPS}
 	dev-python/cliapp
 	dev-python/larch
-	dev-python/paramiko
+	<dev-python/paramiko-1.13
 	dev-python/tracing
 	dev-python/ttystatus
 	"
