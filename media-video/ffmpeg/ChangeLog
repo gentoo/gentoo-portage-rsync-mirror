@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.724 2014/03/16 22:43:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.725 2014/03/28 06:11:56 aballier Exp $
+
+*ffmpeg-2.2 (28 Mar 2014)
+
+  28 Mar 2014; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.2.ebuild:
+  bump to 2.2
 
 *ffmpeg-2.2_rc2 (16 Mar 2014)
 
