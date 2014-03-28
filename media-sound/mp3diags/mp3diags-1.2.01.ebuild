@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.1.21.080.ebuild,v 1.1 2013/03/31 13:36:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.2.01.ebuild,v 1.1 2014/03/28 16:19:36 mrueg Exp $
 
 EAPI=5
 
 inherit eutils qt4-r2
 
-MY_PN=MP3Diags-unstable
+MY_PN=MP3Diags
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Qt-based MP3 diagnosis and repair tool"
