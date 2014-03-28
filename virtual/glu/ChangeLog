@@ -1,6 +1,9 @@
 # ChangeLog for virtual/glu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.35 2014/03/27 11:05:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.36 2014/03/28 01:34:02 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> glu-9.0-r1.ebuild:
+  Stable for HPPA (bug #500368).
 
   27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> glu-9.0-r1.ebuild:
   Stable for amd64, wrt bug #500368

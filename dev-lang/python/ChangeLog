@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.750 2014/03/20 14:13:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.752 2014/03/28 01:45:34 floppym Exp $
+
+*python-3.4.0 (28 Mar 2014)
+
+  28 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-3.4.0.ebuild:
+  Version bump. Permanently drop the 'doc' use flag.
+
+*python-3.3.5 (28 Mar 2014)
+
+  28 Mar 2014; Mike Gilbert <floppym@gentoo.org> +python-3.3.5.ebuild:
+  Version bump.
 
   20 Mar 2014; Jeroen Roovers <jer@gentoo.org> python-2.7.6.ebuild:
   Stable for HPPA (bug #504742).

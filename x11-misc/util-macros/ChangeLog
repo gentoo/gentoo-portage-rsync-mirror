@@ -1,5 +1,8 @@
 # ChangeLog for x11-misc/util-macros
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.132 2014/03/27 11:07:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.133 2014/03/28 01:57:48 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> util-macros-1.18.0.ebuild:
+  Stable for HPPA (bug #500368).
 
   27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> util-macros-1.18.0.ebuild:
   Stable for amd64, wrt bug #500368

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.5.4.1.ebuild,v 1.1 2014/03/13 23:16:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.5.4.1.ebuild,v 1.2 2014/03/28 02:00:44 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib systemd versionator
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
+	epatch "${FILESDIR}/${MY_PV_MM}/${P}-memleak.patch"
 	cp "${FILESDIR}"/*logrotate*.in "${TMPDIR}" || die
 	cd "${TMPDIR}" || die
 

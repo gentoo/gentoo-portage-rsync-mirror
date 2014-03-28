@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-wm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/ChangeLog,v 1.21 2014/03/27 11:07:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/ChangeLog,v 1.22 2014/03/28 01:56:35 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> xcb-util-wm-0.4.1.ebuild:
+  Stable for HPPA (bug #500368).
 
   27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xcb-util-wm-0.4.1.ebuild:
   Stable for amd64, wrt bug #500368
