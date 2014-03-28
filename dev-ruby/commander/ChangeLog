@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/commander
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/commander/ChangeLog,v 1.4 2014/02/12 06:59:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/commander/ChangeLog,v 1.5 2014/03/28 15:34:05 mrueg Exp $
+
+  28 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -commander-4.1.5-r1.ebuild:
+  Cleanup old.
 
 *commander-4.1.6 (12 Feb 2014)
 
