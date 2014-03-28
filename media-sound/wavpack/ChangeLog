@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/ChangeLog,v 1.77 2014/01/26 12:16:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/ChangeLog,v 1.78 2014/03/28 03:54:56 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> wavpack-4.70.0.ebuild:
+  Stable for HPPA (bug #505340).
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> wavpack-4.60.1-r1.ebuild:
   Stable for sparc, wrt bug #495812

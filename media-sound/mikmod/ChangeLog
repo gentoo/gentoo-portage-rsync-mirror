@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.31 2014/02/18 11:07:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.32 2014/03/28 03:51:12 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> mikmod-3.2.5.ebuild:
+  Stable for HPPA (bug #495798).
 
   18 Feb 2014; Jeroen Roovers <jer@gentoo.org> mikmod-3.2.5.ebuild:
   Marked ~hppa (bug #495798).
