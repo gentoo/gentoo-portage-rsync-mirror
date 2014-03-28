@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.47 2014/03/27 15:59:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.48 2014/03/28 03:23:25 jer Exp $
+
+  28 Mar 2014; Jeroen Roovers <jer@gentoo.org> libyaml-0.1.6.ebuild:
+  Stable for HPPA (bug #505948).
 
 *libyaml-0.1.6 (27 Mar 2014)
 

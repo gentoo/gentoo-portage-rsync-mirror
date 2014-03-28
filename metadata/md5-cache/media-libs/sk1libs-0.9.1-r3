@@ -4,11 +4,11 @@ DESCRIPTION=sk1 vector graphics lib
 EAPI=5
 HOMEPAGE=http://sk1project.org
 IUSE=python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=~amd64 ~arm hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris ~x86-solaris
 LICENSE=LGPL-2
 RDEPEND=media-fonts/ttf-bitstream-vera media-libs/freetype:2 virtual/jpeg >=media-libs/lcms-1.15:0[python,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] sys-libs/zlib app-arch/bzip2 app-arch/gzip app-text/ghostscript-gpl media-libs/netpbm python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://uniconvertor.googlecode.com/files/sk1libs-0.9.1.tar.gz https://github.com/python-imaging/Pillow/commit/c6040f618d8f2706a7b46d1cdf37d1a587f9701f.patch -> sk1libs-0.9.1-freetype251.patch
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=348729368b871113a4b8f31768b8bfc5
+_md5_=a877e1caf3e776fac37e8e5f0d0ae18b
