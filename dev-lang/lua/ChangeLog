@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.183 2013/05/26 16:55:34 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.184 2014/03/28 05:38:36 vapier Exp $
+
+*lua-5.1.5-r1 (28 Mar 2014)
+
+  28 Mar 2014; Mike Frysinger <vapier@gentoo.org> +lua-5.1.5-r1.ebuild:
+  Fix libdir setting in luaconf.h #493646 by Aleksey Kunitskiy.
 
   26 May 2013; Matti Bickel <mabi@gentoo.org> lua-5.2.1.ebuild:
   fix incorrect sed usage (bug #463416)
