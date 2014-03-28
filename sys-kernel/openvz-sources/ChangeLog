@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.217 2014/03/15 17:41:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.219 2014/03/28 18:33:10 ago Exp $
+
+  28 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  openvz-sources-2.6.32.85.17.ebuild:
+  Stable for x86, wrt bug #504724
+
+  28 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
+  openvz-sources-2.6.32.85.17.ebuild:
+  Stable for amd64, wrt bug #504724
 
 *openvz-sources-2.6.32.85.17 (15 Mar 2014)
 

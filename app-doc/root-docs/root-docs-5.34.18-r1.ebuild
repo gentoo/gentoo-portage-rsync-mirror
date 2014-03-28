@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.18-r1.ebuild,v 1.1 2014/03/26 20:38:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.18-r1.ebuild,v 1.2 2014/03/28 18:48:01 bicatali Exp $
 
 EAPI=5
 
@@ -101,7 +101,7 @@ src_configure() {
 }
 
 src_compile() {
-	if use html; then
+	if use api; then
 		# video drivers may want to access hardware devices
 		cards=$(echo -n /dev/dri/card* /dev/ati/card* /dev/nvidiactl* | sed 's/ /:/g')
 		[[ -n "${cards}" ]] && addpredict "${cards}"
