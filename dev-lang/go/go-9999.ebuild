@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.15 2014/02/11 17:57:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.16 2014/03/28 14:08:40 grobian Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ src_prepare()
 
 src_compile()
 {
-	export GOROOT_FINAL=/usr/lib/go
+	export GOROOT_FINAL="${EPREFIX}"/usr/lib/go
 	export GOROOT="$(pwd)"
 	export GOBIN="${GOROOT}/bin"
 	if [[ $CTARGET = armv5* ]]
@@ -126,8 +126,8 @@ pkg_postinst()
 	# linker are also checked - so we need to fix them too.
 	ebegin "fixing timestamps to avoid unnecessary rebuilds"
 	tref="usr/lib/go/pkg/*/runtime.a"
-	find "${ROOT}"usr/lib/go -type f \
-		-exec touch -r "${ROOT}"${tref} {} \;
+	find "${EROOT}"usr/lib/go -type f \
+		-exec touch -r "${EROOT}"${tref} {} \;
 	eend $?
 
 	if [[ ${PV} != 9999 && -n ${REPLACING_VERSIONS} &&

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.32 2014/02/11 17:57:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.33 2014/03/28 14:08:40 grobian Exp $
+
+  28 Mar 2014; Fabian Groffen <grobian@gentoo.org> go-1.2.ebuild,
+  go-9999.ebuild:
+  Fix for Prefix, marked ~x64-macos
 
   11 Feb 2014; William Hubbs <williamh@gentoo.org> go-1.2.ebuild,
   go-9999.ebuild:
