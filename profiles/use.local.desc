@@ -5694,6 +5694,7 @@ net-voip/linphone:sqlite - Turn on compilation of message storage
 net-voip/linphone:tools - Compile tools
 net-voip/linphone:video - Enable video support (display/capture)
 net-voip/sflphone:doxygen - Support for building documentation with doxygen
+net-voip/telepathy-gabble:plugins - Enable plugin loader
 net-voip/yate:dahdi - Enable the DAHDI driver for Digium compatible hardware
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin

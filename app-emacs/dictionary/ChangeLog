@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/dictionary
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.14 2014/02/18 23:30:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.15 2014/03/29 18:03:26 nimiux Exp $
+
+  29 Mar 2014; Chema Alonso <nimiux@gentoo.org> dictionary-1.10.ebuild:
+  Stable for amd64 wrt bug #505060
 
 *dictionary-1.10 (18 Feb 2014)
 
