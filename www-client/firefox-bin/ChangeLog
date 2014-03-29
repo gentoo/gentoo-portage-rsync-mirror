@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.182 2014/03/22 20:17:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.183 2014/03/29 03:04:03 anarchy Exp $
+
+*firefox-bin-28.0-r1 (29 Mar 2014)
+
+  29 Mar 2014;  <anarchy@gentoo.org> +files/all-gentoo-1.js,
+  +firefox-bin-28.0-r1.ebuild, -firefox-bin-28.0.ebuild:
+  Allow user to modify a few settings locally, bug #465802
 
   22 Mar 2014; Agostino Sarubbo <ago@gentoo.org> firefox-bin-24.4.0.ebuild:
   Stable for x86, wrt bug #505072

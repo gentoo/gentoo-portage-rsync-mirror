@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.263 2014/03/25 15:25:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.264 2014/03/29 03:02:26 vapier Exp $
+
+  29 Mar 2014; Mike Frysinger <vapier@gentoo.org> +make.defaults,
+  ppc32/make.defaults, ppc32/use.force, ppc64/make.defaults, ppc64/use.force,
+  use.mask:
+  Add ABI_PPC defines.
 
   25 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +ppc32/use.stable.mask:

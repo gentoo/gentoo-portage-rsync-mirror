@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-28.0.ebuild,v 1.1 2014/03/19 15:17:39 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-28.0-r1.ebuild,v 1.1 2014/03/29 03:04:03 anarchy Exp $
 
 EAPI="5"
 
@@ -104,8 +104,8 @@ src_install() {
 	# Fix prefs that make no sense for a system-wide install
 	insinto ${MOZILLA_FIVE_HOME}/defaults/pref/
 	doins "${FILESDIR}"/local-settings.js
-	insinto ${MOZILLA_FIVE_HOME}/
-	doins "${FILESDIR}"/all-gentoo.js
+	# Copy preferences file so we can do a simple rename.
+	cp "${FILESDIR}"/all-gentoo-1.js  "${D}"${MOZILLA_FIVE_HOME}/all-gentoo.js
 
 	# Install language packs
 	mozlinguas_src_install

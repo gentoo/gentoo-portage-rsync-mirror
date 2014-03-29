@@ -1,0 +1,6 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/make.defaults,v 1.1 2014/03/29 03:02:26 vapier Exp $
+
+# Unhide the ABI_PPC USE_EXPAND.
+USE_EXPAND_HIDDEN="-ABI_PPC"
