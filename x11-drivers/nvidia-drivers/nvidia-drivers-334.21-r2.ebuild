@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.21-r1.ebuild,v 1.1 2014/03/20 16:03:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.21-r2.ebuild,v 1.1 2014/03/29 16:49:49 jer Exp $
 
 EAPI=5
 
@@ -255,6 +255,7 @@ src_install() {
 		# pkg_preinst, see bug #491414
 		insinto /etc/modprobe.d
 		newins "${FILESDIR}"/nvidia-169.07 nvidia.conf
+		use uvm && doins "${FILESDIR}"/nvidia-uvm.conf
 
 		# Ensures that our device nodes are created when not using X
 		exeinto "$(udev_get_udevdir)"
