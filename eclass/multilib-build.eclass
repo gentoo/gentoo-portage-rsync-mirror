@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.27 2014/01/16 20:05:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.28 2014/03/29 03:00:44 vapier Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -38,6 +38,8 @@ _MULTILIB_FLAGS=(
 	abi_mips_n32:n32
 	abi_mips_n64:n64
 	abi_mips_o32:o32
+	abi_ppc_32:ppc
+	abi_ppc_64:ppc64
 )
 
 # @ECLASS-VARIABLE: MULTILIB_USEDEP
@@ -351,6 +353,10 @@ _EOF_
 					abi_flag=abi_mips_n64;;
 				o32)
 					abi_flag=abi_mips_o32;;
+				ppc)
+					abi_flag=abi_ppc_32;;
+				ppc64)
+					abi_flag=abi_ppc_64;;
 				*)
 					die "Header wrapping for ${ABI} not supported yet";;
 			esac

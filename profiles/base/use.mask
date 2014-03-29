@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.191 2014/03/16 08:23:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.192 2014/03/29 03:01:13 vapier Exp $
 
 # on the way out
 ruby_targets_ruby18
@@ -337,6 +337,8 @@ abi_x86_x32
 abi_mips_o32
 abi_mips_n32
 abi_mips_n64
+abi_ppc_32
+abi_ppc_64
 
 # Zac Medico <zmedico@gentoo.org> (21 Mar 2013)
 # Python 3.4 pre-releases not available in main tree yet.

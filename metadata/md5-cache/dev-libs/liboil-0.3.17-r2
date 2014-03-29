@@ -3,11 +3,11 @@ DEPEND=examples? ( dev-libs/glib:2 ) abi_x86_32? ( !<=app-emulation/emul-linux-x
 DESCRIPTION=Library of simple functions that are optimized for various CPUs
 EAPI=5
 HOMEPAGE=http://liboil.freedesktop.org/
-IUSE=+examples static-libs test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+IUSE=+examples static-libs test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD-2
 RDEPEND=examples? ( dev-libs/glib:2 ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r9 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 SLOT=0.3
 SRC_URI=http://liboil.freedesktop.org/download/liboil-0.3.17.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	5beadd9860130ff93bfad7eb91d499e9	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	5beadd9860130ff93bfad7eb91d499e9	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	65adae38aced116f7da3abb4d1fee0a7	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c76b4a5d1469ac276622c5edf2d4bd48
