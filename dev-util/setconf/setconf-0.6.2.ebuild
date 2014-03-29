@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/setconf-0.5.3.ebuild,v 1.1 2013/03/16 18:51:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/setconf-0.6.2.ebuild,v 1.1 2014/03/29 09:24:42 ssuominen Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/python"
+RDEPEND="=dev-lang/python-3*"
 
 src_unpack() {
 	unpack ${A}
@@ -21,7 +21,12 @@ src_unpack() {
 	unpack ./${PN}.1.gz
 }
 
+src_prepare() {
+	sed -i -e 's:/usr/bin/python:/usr/bin/python3:' ${PN}.py || die #462326
+}
+
 src_install() {
-	newbin ${PN}.py ${PN}
+	dobin ${PN}.py
+	ln -s ${PN}.py "${ED}"/usr/bin/${PN}
 	doman ${PN}.1
 }
