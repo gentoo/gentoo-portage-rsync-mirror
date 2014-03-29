@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.990 2014/03/29 06:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.991 2014/03/29 17:02:13 vapier Exp $
+
+  29 Mar 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.19.ebuild:
+  Move into unstable.
 
   29 Mar 2014; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit, files/eblits/src_unpack.eblit,

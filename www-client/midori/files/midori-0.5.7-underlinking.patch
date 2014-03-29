@@ -1,3 +1,5 @@
+http://bugs.launchpad.net/midori/+bug/1299515
+
 midori/sokoke.c is using XGetWindowProperty() and XFree(), therefore link against -lX11 to prevent
 underlinking failures like "error: undefined reference to 'XGetWindowProperty'" and
 "error: undefined reference to 'XFree'"
