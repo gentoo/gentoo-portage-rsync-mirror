@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/setconf-0.6.2.ebuild,v 1.1 2014/03/29 09:24:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/setconf-0.6.2.ebuild,v 1.2 2014/03/29 10:33:31 ssuominen Exp $
 
 EAPI=5
+PYTHON_COMPAT=( python3_{2,3,4} )
+inherit python-single-r1
 
 DESCRIPTION="A small python based utility that can be used to change configuration files"
 HOMEPAGE="http://setconf.roboticoverlords.org/"
@@ -13,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="=dev-lang/python-3*"
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
@@ -22,7 +26,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i -e 's:/usr/bin/python:/usr/bin/python3:' ${PN}.py || die #462326
+	python_fix_shebang ${PN}.py #462326
 }
 
 src_install() {
