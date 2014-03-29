@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1-r1.ebuild,v 1.3 2013/10/14 17:47:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1-r1.ebuild,v 1.4 2014/03/29 05:10:33 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
@@ -37,6 +37,7 @@ DOCS=( AUTHORS CHANGES README )
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.0_beta2-flags.patch \
+		"${FILESDIR}"/${P}-underlinking.patch \
 		"${FILESDIR}"/${P}-libpng16.patch #465450
 
 	# bug 467006

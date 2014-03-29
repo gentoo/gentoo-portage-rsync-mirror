@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libtheora
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.114 2013/10/14 17:47:48 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.115 2014/03/29 05:10:33 ssuominen Exp $
+
+  29 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libtheora-1.1.1-underlinking.patch, libtheora-1.1.1-r1.ebuild:
+  Fix underlinking (missing -lm for function rintf()) wrt #504270 by Hector
+  Martin
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> libtheora-1.1.1-r1.ebuild:
   Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
