@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/bedup
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.2 2013/10/13 10:13:28 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.3 2014/03/29 10:30:28 mgorny Exp $
+
+  29 Mar 2014; Michał Górny <mgorny@gentoo.org> bedup-9999.ebuild:
+  Update the dependencies. btrfs-progs w/ headers are in tree already, and old
+  pycparser was removed.
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> bedup-9999.ebuild:
   Also compatible with python3_3

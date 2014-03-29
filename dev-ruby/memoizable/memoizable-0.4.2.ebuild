@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/memoizable-0.4.2.ebuild,v 1.1 2014/03/29 01:00:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/memoizable-0.4.2.ebuild,v 1.2 2014/03/29 10:22:23 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -20,11 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/thread_safe-0.2.0:0"
+ruby_add_rdepend ">=dev-ruby/thread_safe-0.3.1:0"
 
 all_ruby_prepare() {
 	sed -i -e "/simplecov/,/^end$/d" spec/spec_helper.rb || die
-
-	# Fix thread_safe dependency since 0.x versions are compatible.
-	sed -i -e 's/0.2.0/0.2/' ${RUBY_FAKEGEM_GEMSPEC} || die
 }
