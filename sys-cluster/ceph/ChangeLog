@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.47 2014/02/20 10:18:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.48 2014/03/29 22:43:59 dlan Exp $
+
+*ceph-0.78 (29 Mar 2014)
+
+  29 Mar 2014; Yixun Lan <dlan@gentoo.org> +ceph-0.78.ebuild:
+  version bump
 
 *ceph-0.77 (20 Feb 2014)
 *ceph-0.72.2-r3 (20 Feb 2014)

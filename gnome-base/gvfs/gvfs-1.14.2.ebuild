@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.12 2014/03/01 22:33:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.13 2014/03/29 22:32:41 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -58,7 +58,7 @@ RDEPEND=">=dev-libs/glib-2.33.12:2
 		>=app-pda/libimobiledevice-1.1.0:=
 		>=app-pda/libplist-1:= )
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
-	systemd? ( sys-apps/systemd )
+	systemd? ( sys-apps/systemd:0= )
 	udev? (
 		cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 		virtual/udev[gudev] )
