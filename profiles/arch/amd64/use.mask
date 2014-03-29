@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.56 2014/03/29 02:41:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.57 2014/03/29 22:07:07 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -181,7 +181,6 @@ capslib
 # Unmask the multilib flags for this arch.
 -abi_x86_32
 -abi_x86_64
--abi_x86_x32
 
 # Andrey Grozin <grozin@gentoo.org> (1 May 2013)
 # available on amd64

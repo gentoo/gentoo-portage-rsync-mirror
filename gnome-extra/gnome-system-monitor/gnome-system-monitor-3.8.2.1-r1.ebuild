@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.8.2.1-r1.ebuild,v 1.4 2013/12/08 18:51:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.8.2.1-r1.ebuild,v 1.5 2014/03/29 22:05:41 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.0:2
 	>=gnome-base/librsvg-2.35:2
 
-	systemd? ( >=sys-apps/systemd-38 )
+	systemd? ( >=sys-apps/systemd-38:0= )
 "
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.20

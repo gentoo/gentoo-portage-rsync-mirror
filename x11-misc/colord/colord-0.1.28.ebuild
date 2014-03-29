@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.28.ebuild,v 1.9 2013/09/08 19:50:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.28.ebuild,v 1.10 2014/03/29 22:04:07 tetromino Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION="0.18"
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 	>=sys-auth/polkit-0.103
 	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
-	systemd? ( >=sys-apps/systemd-44 )
+	systemd? ( >=sys-apps/systemd-44:0= )
 	udev? ( virtual/udev:=[gudev] )"
 RDEPEND="${COMMON_DEPEND}
 	!media-gfx/shared-color-profiles"
