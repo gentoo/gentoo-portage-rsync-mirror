@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.999 2014/02/16 07:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1000 2014/03/29 06:40:40 rhill Exp $
+
+  29 Mar 2014; Ryan Hill <rhill@gentoo.org> gcc-4.6.4.ebuild:
+  4.6.4 p1.2: Fixes illegal instructions on Haswell (or -mfma) (bug #505960
+  by Christian Schmidt).
 
   16 Feb 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.7.3-r1.ebuild:
   Mark sh stable.
