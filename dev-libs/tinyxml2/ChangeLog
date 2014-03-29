@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tinyxml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/ChangeLog,v 1.9 2014/03/29 00:30:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/ChangeLog,v 1.10 2014/03/29 00:32:47 radhermit Exp $
+
+  29 Mar 2014; Tim Harder <radhermit@gentoo.org>
+  -tinyxml2-1.0.1_p20120531.ebuild, -files/tinyxml2-1.0.1_p20120531-test.patch:
+  Remove old.
 
 *tinyxml2-2.0.2 (29 Mar 2014)
 
