@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.10.0.ebuild,v 1.4 2014/03/01 22:17:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.10.2.ebuild,v 1.1 2014/03/29 21:20:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2
 
 DESCRIPTION="Playlist parsing library"
-HOMEPAGE="http://projects.gnome.org/totem/ http://developer.gnome.org/totem-pl-parser/stable/"
+HOMEPAGE="http://developer.gnome.org/totem-pl-parser/stable/"
 
 LICENSE="LGPL-2+"
 SLOT="0/18"

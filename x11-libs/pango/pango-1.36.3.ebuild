@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.34.1.ebuild,v 1.7 2014/01/20 19:21:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3.ebuild,v 1.1 2014/03/29 21:27:15 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,12 +13,10 @@ HOMEPAGE="http://www.pango.org/"
 
 LICENSE="LGPL-2+ FTL"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 IUSE="X +introspection"
 
-# Bump cairo dep to be safer:
-# https://bugzilla.gnome.org/show_bug.cgi?id=700247#c4
 RDEPEND="
 	>=media-libs/harfbuzz-0.9.9:=[glib(+),truetype(+)]
 	>=dev-libs/glib-2.33.12:2
@@ -32,15 +30,13 @@ RDEPEND="
 		>=x11-libs/libXft-2.0.0 )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/gtk-doc-am-1.13
+	>=dev-util/gtk-doc-am-1.15
 	virtual/pkgconfig
 	X? ( x11-proto/xproto )
 	!<=sys-devel/autoconf-2.63:2.5
 "
 
 src_prepare() {
-	tc-export CXX
-
 	epatch "${FILESDIR}/${PN}-1.32.1-lib64.patch"
 	eautoreconf
 
@@ -48,7 +44,10 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export CXX
+
 	gnome2_src_configure \
+		--with-cairo \
 		$(use_enable introspection) \
 		$(use_with X xft) \
 		"$(usex X --x-includes="${EPREFIX}/usr/include" "")" \

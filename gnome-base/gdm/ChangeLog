@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.397 2014/03/20 21:28:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.398 2014/03/29 21:09:09 tetromino Exp $
+
+  29 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> gdm-3.8.4-r3.ebuild,
+  gdm-3.10.0.1.ebuild, gdm-3.10.0.1-r1.ebuild:
+  systemd now has subslots
 
   20 Mar 2014; Pacho Ramos <pacho@gentoo.org> gdm-3.10.0.1-r1.ebuild:
   --with-initial-vt=7 conflicts with plymouth, bug #453392 by Jan Vesely

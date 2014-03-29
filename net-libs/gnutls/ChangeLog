@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.482 2014/03/24 14:29:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.483 2014/03/29 21:15:05 alonbl Exp $
+
+*gnutls-2.12.23-r5 (29 Mar 2014)
+
+  29 Mar 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnutls-2.12.23-gdoc-perl-5.18.patch, +gnutls-2.12.23-r5.ebuild:
+  Fix perl-5.18 compatibility, bug#504028, thanks to Kerin Millar
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gnutls-2.12.23-r4.ebuild:
   Stable for ppc64, wrt bug #503394

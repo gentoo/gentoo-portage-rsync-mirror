@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.253 2014/02/22 22:18:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.254 2014/03/29 21:03:45 pacho Exp $
+
+*rhythmbox-3.0.2 (29 Mar 2014)
+
+  29 Mar 2014; Pacho Ramos <pacho@gentoo.org> +rhythmbox-3.0.2.ebuild:
+  Version bump
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.0.1.ebuild:
   Fix wrong commit, bug 502160

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1.ebuild,v 1.5 2014/03/09 11:58:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1.ebuild,v 1.6 2014/03/29 21:09:09 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -51,7 +51,7 @@ COMMON_DEPEND="
 	>=x11-misc/xdg-utils-1.0.2-r3
 
 	virtual/pam
-	systemd? ( >=sys-apps/systemd-186[pam] )
+	systemd? ( >=sys-apps/systemd-186:0=[pam] )
 	!systemd? (
 		>=x11-base/xorg-server-1.14.3-r1
 		>=sys-auth/consolekit-0.4.5_p20120320-r2
