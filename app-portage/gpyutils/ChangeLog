@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gpyutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.5 2013/10/14 20:35:11 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.6 2014/03/29 11:44:46 mgorny Exp $
+
+*gpyutils-0.1.2 (29 Mar 2014)
+
+  29 Mar 2014; Michał Górny <mgorny@gentoo.org> +gpyutils-0.1.2.ebuild:
+  Version bump.
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> gpyutils-9999.ebuild:
   Switch to git-r3.

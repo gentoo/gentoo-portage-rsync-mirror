@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.608 2014/03/12 05:27:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.609 2014/03/29 11:56:09 ulm Exp $
+
+  29 Mar 2014; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
+  Drop x32 support in stable ebuild due to broken dependency tree.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> emacs-18.59-r9.ebuild:
   x86 stable wrt bug #502262

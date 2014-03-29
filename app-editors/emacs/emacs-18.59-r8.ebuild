@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.13 2013/12/26 16:14:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.14 2014/03/29 11:56:09 ulm Exp $
 
 EAPI=4
 
@@ -19,12 +19,12 @@ IUSE=""
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
-	amd64? ( !abi_x86_x32? (
+	amd64? (
 		|| (
 			sys-libs/ncurses[abi_x86_32(-)]
 			app-emulation/emul-linux-x86-baselibs[development]
 		)
-	) )"
+	)"
 #	X? ( x11-libs/libX11[-xcb] )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -40,10 +40,7 @@ src_configure() {
 	local arch
 	case ${ARCH} in
 		amd64)
-			if has x32 ${MULTILIB_ABIS}; then
-				arch=x86-x32
-				multilib_toolchain_setup x32
-			elif has x86 ${MULTILIB_ABIS}; then
+			if has x86 ${MULTILIB_ABIS}; then
 				arch=intel386
 				multilib_toolchain_setup x86
 			else
