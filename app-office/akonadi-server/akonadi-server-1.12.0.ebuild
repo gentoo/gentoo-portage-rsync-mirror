@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.3.ebuild,v 1.7 2014/03/29 19:48:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.12.0.ebuild,v 1.1 2014/03/29 19:48:49 johu Exp $
 
 EAPI=5
 
 if [[ $PV = *9999* ]]; then
-	scm_eclass=git-2
-	EGIT_REPO_URI="git://anongit.kde.org/akonadi"
+	scm_eclass=git-r3
+	EGIT_REPO_URI=( "git://anongit.kde.org/akonadi" )
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="mirror://kde/stable/${PN/-server/}/src/${PN/-server/}-${PV}-1.tar.bz2 -> ${P}.tar.bz2"
-	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	SRC_URI="mirror://kde/stable/${PN/-server/}/src/${P/-server/}.tar.bz2"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 	S="${WORKDIR}/${P/-server/}"
 fi
 
@@ -92,7 +92,6 @@ pkg_setup() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DAKONADI_USE_STRIGI_SEARCH=OFF
 		-DINSTALL_QSQLITE_IN_QT_PREFIX=ON
 		$(cmake-utils_use test AKONADI_BUILD_TESTS)
 		$(cmake-utils_use sqlite AKONADI_BUILD_QSQLITE)

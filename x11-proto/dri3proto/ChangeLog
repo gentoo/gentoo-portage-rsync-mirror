@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dri3proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri3proto/ChangeLog,v 1.4 2014/03/28 01:42:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri3proto/ChangeLog,v 1.5 2014/03/29 20:01:02 mattst88 Exp $
+
+  29 Mar 2014; Matt Turner <mattst88@gentoo.org> dri3proto-1.0.ebuild:
+  alpha stable, bug #500368.
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> dri3proto-1.0.ebuild:
   Stable for HPPA (bug #500368).

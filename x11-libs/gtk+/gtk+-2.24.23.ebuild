@@ -1,22 +1,23 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.16.ebuild,v 1.14 2013/09/08 17:42:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23.ebuild,v 1.1 2014/03/29 19:48:14 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 
-inherit eutils flag-o-matic gnome.org virtualx autotools
+inherit eutils flag-o-matic gnome2 multilib virtualx autotools readme.gentoo
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="s390"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="aqua cups debug examples +introspection test vim-syntax xinerama"
 
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
-COMMON_DEPEND="!aqua? (
+COMMON_DEPEND="
+	!aqua? (
 		x11-libs/libXrender
 		x11-libs/libX11
 		x11-libs/libXi
@@ -34,14 +35,15 @@ COMMON_DEPEND="!aqua? (
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( x11-libs/libXinerama )
-	>=dev-libs/glib-2.30:2
+	>=dev-libs/glib-2.34:2
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/atk-1.29.2[introspection?]
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
 	cups? ( net-print/cups:= )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
-	!<gnome-base/gail-1000"
+	!<gnome-base/gail-1000
+"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	!aqua? (
@@ -53,13 +55,25 @@ DEPEND="${COMMON_DEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	>=dev-util/gtk-doc-am-1.11
 	test? (
+		x11-themes/hicolor-icon-theme
 		media-fonts/font-misc-misc
-		media-fonts/font-cursor-misc )"
+		media-fonts/font-cursor-misc )
+"
+
 # gtk+-2.24.8 breaks Alt key handling in <=x11-libs/vte-0.28.2:0
-# Remove blocker after >=vte-0.28.2-r201:0 is stable
+# Add blocker against old gtk-builder-convert to be sure we maintain both
+# in sync.
 RDEPEND="${COMMON_DEPEND}
-	!<x11-libs/vte-0.28.2-r201:0"
+	!<dev-util/gtk-builder-convert-${PV}
+	!<x11-libs/vte-0.28.2-r201:0
+"
 PDEPEND="vim-syntax? ( app-vim/gtk-syntax )"
+
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="To make the gtk2 file chooser use 'current directory' mode by default,
+edit ~/.config/gtk-2.0/gtkfilechooser.ini to contain the following:
+[Filechooser Settings]
+StartupMode=cwd"
 
 strip_builddir() {
 	local rule=$1
@@ -76,15 +90,8 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	# use an arch-specific config directory so that 32bit and 64bit versions
-	# dont clash on multilib systems
-	epatch "${FILESDIR}/${PN}-2.21.3-multilib.patch"
-
-	# Don't break inclusion of gtkclist.h, upstream bug 536767
-	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
-
-	# fix building with gir #372953, upstream bug #642085
-	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
+	# Fix building due to moved definition, upstream bug #704766
+	epatch "${FILESDIR}"/${PN}-2.24.20-darwin-quartz-pasteboard.patch
 
 	# marshalers code was pre-generated with glib-2.31, upstream bug #671763
 	rm -v gdk/gdkmarshalers.c gtk/gtkmarshal.c gtk/gtkmarshalers.c \
@@ -145,17 +152,14 @@ src_prepare() {
 
 	epatch_user
 
-	# http://bugs.gentoo.org/show_bug.cgi?id=371907
-	mkdir -p "${S}/m4" || die
-	mv "${WORKDIR}/introspection.m4" "${S}/m4macros" || die
-	AT_M4DIR=m4macros eautoreconf
-	# Use elibtoolize in place of eautoreconf when it will be dropped
-	#elibtoolize
+	eautoreconf
+
+	gnome2_src_prepare
 }
 
 src_configure() {
 	# Passing --disable-debug is not recommended for production use
-	econf \
+	gnome2_src_configure \
 		$(usex aqua --with-gdktarget=quartz --with-gdktarget=x11) \
 		$(usex aqua "" --with-xinput) \
 		$(usex debug --enable-debug=yes "") \
@@ -167,22 +171,15 @@ src_configure() {
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
-	# Exporting HOME fixes tests using XDG directories spec since all defaults
-	# are based on $HOME. It is also backward compatible with functions not
-	# yet ported to this spec.
-	XDG_DATA_HOME="${T}" HOME="${T}" Xemake check || die "tests failed"
+	Xemake check
 }
 
 src_install() {
-	default
-
-	set_gtk2_confdir
-	dodir ${GTK2_CONFDIR}
-	keepdir ${GTK2_CONFDIR}
+	gnome2_src_install
 
 	# see bug #133241
 	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
-	insinto /etc/gtk-2.0
+	insinto /usr/share/gtk-2.0
 	doins "${T}"/gtkrc
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
@@ -193,22 +190,27 @@ src_install() {
 	done
 
 	# dev-util/gtk-builder-convert split off into a separate package, #402905
-	rm "${ED}"usr/bin/gtk-builder-convert
+	rm "${ED}"usr/bin/gtk-builder-convert || die
 
-	find "${D}" -name '*.la' -exec rm -f {} +
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	set_gtk2_confdir
 
-	# gtk.immodules should be in their CHOST directories respectively.
-	gtk-query-immodules-2.0  > "${EROOT%/}${GTK2_CONFDIR}/gtk.immodules" \
-		|| ewarn "Failed to run gtk-query-immodules-2.0"
+	gtk-query-immodules-2.0 --update-cache || die "Update immodules cache failed"
 
 	if [ -e "${EROOT%/}/etc/gtk-2.0/gtk.immodules" ]; then
 		elog "File /etc/gtk-2.0/gtk.immodules has been moved to \$CHOST"
 		elog "aware location. Removing deprecated file."
 		rm -f ${EROOT%/}/etc/gtk-2.0/gtk.immodules
+	fi
+
+	if [ -e "${EROOT%/}${GTK2_CONFDIR}/gtk.immodules" ]; then
+		elog "File /etc/gtk-2.0/gtk.immodules has been moved to"
+		elog "${EROOT%/}/usr/$(get_libdir)/gtk-2.0/2.10.0/immodules.cache"
+		elog "Removing deprecated file."
+		rm -f ${EROOT%/}${GTK2_CONFDIR}/gtk.immodules
 	fi
 
 	# pixbufs are now handled by x11-libs/gdk-pixbuf
@@ -237,8 +239,5 @@ pkg_postinst() {
 		elog "add it to your gtkrc."
 	fi
 
-	elog "To make the gtk2 file chooser use 'current directory' mode by default,"
-	elog "edit ~/.config/gtk-2.0/gtkfilechooser.ini to contain the following:"
-	elog "[Filechooser Settings]"
-	elog "StartupMode=cwd"
+	readme.gentoo_print_elog
 }
