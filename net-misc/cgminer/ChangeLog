@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.68 2014/03/29 13:35:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.69 2014/03/29 16:17:55 blueness Exp $
+
+*cgminer-3.7.2 (29 Mar 2014)
+
+  29 Mar 2014; Anthony G. Basile <blueness@gentoo.org> +cgminer-3.7.2.ebuild,
+  metadata.xml:
+  Restore 3.7.2 for litecoin, requested by Александр
 
 *cgminer-4.2.2 (29 Mar 2014)
 

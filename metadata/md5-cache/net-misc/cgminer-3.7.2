@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=net-misc/curl dev-libs/jansson adl? ( x11-libs/amd-adl-sdk ) ncurses? ( sys-libs/ncurses ) opencl? ( virtual/opencl ) avalon? ( virtual/libusb:1 ) bflsc? ( virtual/libusb:1 ) bitforce? ( virtual/libusb:1 ) bitfury? ( virtual/libusb:1 ) icarus? ( virtual/libusb:1 ) modminer? ( virtual/libusb:1 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Bitcoin CPU/GPU/FPGA/ASIC miner in C
+EAPI=5
+HOMEPAGE=http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer
+IUSE=doc examples hardened ncurses opencl adl scrypt avalon bflsc bitforce bitfury icarus klondike modminer
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=net-misc/curl dev-libs/jansson adl? ( x11-libs/amd-adl-sdk ) ncurses? ( sys-libs/ncurses ) opencl? ( virtual/opencl ) avalon? ( virtual/libusb:1 ) bflsc? ( virtual/libusb:1 ) bitforce? ( virtual/libusb:1 ) bitfury? ( virtual/libusb:1 ) icarus? ( virtual/libusb:1 ) modminer? ( virtual/libusb:1 )
+REQUIRED_USE=|| ( opencl avalon bflsc bitforce bitfury icarus klondike modminer ) adl? ( opencl ) scrypt? ( opencl )
+SLOT=0
+SRC_URI=http://ck.kolivas.org/apps/cgminer/3.7/cgminer-3.7.2.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=7f02f940bd890370efc614582b228632

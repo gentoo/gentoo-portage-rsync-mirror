@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.1 2014/03/27 21:59:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libudev/ChangeLog,v 1.2 2014/03/29 16:09:38 blueness Exp $
+
+  29 Mar 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Add eudev@g.o as a maintainer
 
 *libudev-208 (27 Mar 2014)
 

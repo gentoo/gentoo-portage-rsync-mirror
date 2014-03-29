@@ -9,5 +9,5 @@ LICENSE=HPND MIT
 RDEPEND=dev-libs/gmp
 SLOT=0/20130715
 SRC_URI=!binary? ( mirror://sourceforge/mlton/mlton-20130715.src.tgz ) binary? ( amd64? ( mirror://sourceforge/mlton/mlton-20130715-1.amd64-linux.tgz ) x86? ( mirror://sourceforge/mlton/mlton-20130715-1.x86-linux.tgz ) )
-_eclasses_=check-reqs	e644f5c5fb4d68cbc6d7d41b3a66f782	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=612da0b42df63662caf8bc6c1ba6fbb3

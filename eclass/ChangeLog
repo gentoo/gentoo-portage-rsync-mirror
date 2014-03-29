@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1185 2014/03/28 15:08:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1186 2014/03/29 16:06:44 ulm Exp $
+
+  29 Mar 2014; Ulrich Müller <ulm@gentoo.org> check-reqs.eclass:
+  Move test for MERGE_TYPE from check-reqs_pkg_setup() to check-reqs_run().
 
   28 Mar 2014; Ulrich Müller <ulm@gentoo.org> check-reqs.eclass:
   Output binary prefixes for units according to IEC 80000-13, as calculations

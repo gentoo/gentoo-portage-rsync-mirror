@@ -4,4 +4,7 @@
 	<maintainer>
 		<email>udev-bugs@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>eudev@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>

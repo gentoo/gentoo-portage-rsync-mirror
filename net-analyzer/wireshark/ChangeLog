@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.600 2014/03/24 14:41:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.601 2014/03/29 16:26:36 jer Exp $
+
+*wireshark-1.11.3_pre2150 (29 Mar 2014)
+
+  29 Mar 2014; Jeroen Roovers <jer@gentoo.org>
+  -wireshark-1.11.3_pre1889.ebuild, +wireshark-1.11.3_pre2150.ebuild:
+  Version bump.
 
   24 Mar 2014; Jeroen Roovers <jer@gentoo.org> -wireshark-1.8.12.ebuild,
   -wireshark-1.10.5.ebuild,

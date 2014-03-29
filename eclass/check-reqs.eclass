@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.14 2014/03/28 15:08:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.15 2014/03/29 16:06:44 ulm Exp $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:
@@ -91,8 +91,6 @@ check_reqs() {
 check-reqs_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	[[ ${MERGE_TYPE} == binary ]] && return
-
 	check-reqs_prepare
 	check-reqs_run
 	check-reqs_output
@@ -132,24 +130,29 @@ check-reqs_run() {
 	# some people are *censored*
 	unset CHECKREQS_FAILED
 
-	[[ -n ${CHECKREQS_MEMORY} ]] && \
-		check-reqs_memory \
-			${CHECKREQS_MEMORY}
+	# use != in test, because MERGE_TYPE only exists in EAPI 4 and later
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ -n ${CHECKREQS_MEMORY} ]] && \
+			check-reqs_memory \
+				${CHECKREQS_MEMORY}
 
-	[[ -n ${CHECKREQS_DISK_BUILD} ]] && \
-		check-reqs_disk \
-			"${T}" \
-			"${CHECKREQS_DISK_BUILD}"
+		[[ -n ${CHECKREQS_DISK_BUILD} ]] && \
+			check-reqs_disk \
+				"${T}" \
+				"${CHECKREQS_DISK_BUILD}"
+	fi
 
-	[[ -n ${CHECKREQS_DISK_USR} ]] && \
-		check-reqs_disk \
-			"${EROOT}/usr" \
-			"${CHECKREQS_DISK_USR}"
+	if [[ ${MERGE_TYPE} != buildonly ]]; then
+		[[ -n ${CHECKREQS_DISK_USR} ]] && \
+			check-reqs_disk \
+				"${EROOT}/usr" \
+				"${CHECKREQS_DISK_USR}"
 
-	[[ -n ${CHECKREQS_DISK_VAR} ]] && \
-		check-reqs_disk \
-			"${EROOT}/var" \
-			"${CHECKREQS_DISK_VAR}"
+		[[ -n ${CHECKREQS_DISK_VAR} ]] && \
+			check-reqs_disk \
+				"${EROOT}/var" \
+				"${CHECKREQS_DISK_VAR}"
+	fi
 }
 
 # @FUNCTION: check-reqs_get_mebibytes
@@ -350,4 +353,3 @@ check-reqs_unsatisfied() {
 	# Internal, do not set yourself.
 	CHECKREQS_FAILED="true"
 }
-
