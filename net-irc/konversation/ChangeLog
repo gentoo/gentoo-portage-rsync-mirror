@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.113 2014/01/15 04:55:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.114 2014/03/29 19:24:18 nimiux Exp $
+
+  29 Mar 2014; Chema Alonso <nimiux@gentoo.org> konversation-1.5.ebuild:
+  Stable for amd64 wrt bug #505202
 
 *konversation-1.5 (15 Jan 2014)
 

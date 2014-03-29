@@ -1,34 +1,34 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.7.ebuild,v 1.4 2013/12/08 19:12:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.10.ebuild,v 1.1 2014/03/29 19:24:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 VALA_MIN_API_VERSION="0.12"
-VALA_MAX_API_VERSION="0.20" # explicitly specified in configure
 VALA_USE_DEPEND="vapigen"
 
 inherit gnome2 python-any-r1 vala
 
 DESCRIPTION="A framework for easy media discovery and browsing"
-HOMEPAGE="https://live.gnome.org/Grilo"
+HOMEPAGE="https://wiki.gnome.org/Projects/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2/1" # subslot is libgrilo-0.2 soname suffix
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="gtk examples +introspection +network test vala"
+IUSE="gtk examples +introspection +network playlist test vala"
 REQUIRED_USE="test? ( introspection )"
 
 RDEPEND="
-	>=dev-libs/glib-2.29.10:2
+	>=dev-libs/glib-2.34:2
 	dev-libs/libxml2:2
 	net-libs/liboauth
 	gtk? ( >=x11-libs/gtk+-3:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9 )
 	network? ( >=net-libs/libsoup-2.41.3:2.4 )
+	playlist? ( >=dev-libs/totem-pl-parser-3.4.1 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.10
@@ -69,6 +69,7 @@ src_configure() {
 		$(use_enable gtk test-ui) \
 		$(use_enable introspection) \
 		$(use_enable network grl-net) \
+		$(use_enable playlist grl-pls) \
 		$(use_enable test tests) \
 		$(use_enable vala)
 }
