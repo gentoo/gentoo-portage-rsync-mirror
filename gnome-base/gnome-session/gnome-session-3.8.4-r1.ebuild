@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.4-r1.ebuild,v 1.3 2013/12/08 18:33:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.4-r1.ebuild,v 1.5 2014/03/29 21:00:14 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -43,6 +43,7 @@ COMMON_DEPEND="
 	x11-apps/xdpyinfo
 
 	gconf? ( >=gnome-base/gconf-2:2 )
+	systemd? ( >=sys-apps/systemd-183:0= )
 "
 # Pure-runtime deps from the session files should *NOT* be added here
 # Otherwise, things like gdm pull in gnome-shell
@@ -53,7 +54,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gsettings-desktop-schemas-0.1.7
 	>=x11-themes/gnome-themes-standard-2.91.92
 	sys-apps/dbus[X]
-	systemd? ( >=sys-apps/systemd-183 )
 	!systemd? ( sys-auth/consolekit )
 "
 DEPEND="${COMMON_DEPEND}

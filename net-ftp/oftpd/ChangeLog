@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/oftpd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.39 2013/01/23 17:26:57 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.40 2014/03/29 20:58:11 vapier Exp $
+
+*oftpd-0.3.7-r9 (29 Mar 2014)
+
+  29 Mar 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/oftpd-0.3.7-delay-root-check.patch, +oftpd-0.3.7-r9.ebuild:
+  Delay root check until after processing the command line.
 
 *oftpd-0.3.7-r8 (23 Jan 2013)
 
