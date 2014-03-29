@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.274 2014/03/25 09:05:03 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.275 2014/03/29 06:10:26 ago Exp $
+
+  29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.12.2.ebuild:
+  Stable for x86, wrt bug #504794
 
   25 Mar 2014; Chema Alonso <nimiux@gentoo.org> cmake-2.8.12.2.ebuild:
   Stable for amd64 wrt bug #504794

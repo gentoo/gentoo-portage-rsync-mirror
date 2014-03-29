@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/tktray-1.1-r1.ebuild,v 1.4 2014/03/09 09:51:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/tktray-1.1-r1.ebuild,v 1.5 2014/03/29 06:09:02 ago Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.sw4me.com/${MY_P}.tar.gz"
 
 LICENSE="tcltk"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE="threads debug"
 
 RESTRICT="test"

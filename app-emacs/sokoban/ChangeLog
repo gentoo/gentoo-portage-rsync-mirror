@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/sokoban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.5 2014/03/22 21:09:33 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.6 2014/03/29 06:09:44 ago Exp $
+
+  29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> sokoban-1.4.ebuild:
+  Stable for x86, wrt bug #504226
 
   22 Mar 2014; Chema Alonso <nimiux@gentoo.org> sokoban-1.4.ebuild:
   Stable for amd64 wrt bug #504226
@@ -22,4 +25,3 @@
   07 Jan 2010; Ulrich Mueller <ulm@gentoo.org> +files/50sokoban-gentoo.el,
   +sokoban-1.04_p20030614.ebuild, +metadata.xml:
   Initial import, from Emacs overlay. Ebuild contributed by me.
-

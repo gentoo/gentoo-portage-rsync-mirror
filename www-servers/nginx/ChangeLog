@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.376 2014/03/28 14:13:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.379 2014/03/29 06:07:29 ago Exp $
+
+  29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> -nginx-1.4.4.ebuild:
+  Remove old
+
+  29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nginx-1.4.7.ebuild:
+  Stable for x86, wrt bug #505018
+
+  29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nginx-1.4.7.ebuild:
+  Stable for amd64, wrt bug #505018
 
 *nginx-1.4.7 (28 Mar 2014)
 

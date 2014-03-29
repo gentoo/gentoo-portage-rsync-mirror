@@ -1,10 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.989 2014/03/29 05:31:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.990 2014/03/29 06:11:19 vapier Exp $
 
   29 Mar 2014; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit, files/eblits/src_unpack.eblit,
-  glibc-2.17.ebuild, glibc-2.18-r1.ebuild, glibc-2.19.ebuild:
+  glibc-2.17.ebuild, glibc-2.18-r1.ebuild, glibc-2.19.ebuild, glibc-9999.ebuild:
   Add support for in-place bootstrapping between ABIs (on x86 for now).
 
   25 Mar 2014; Mike Frysinger <vapier@gentoo.org>

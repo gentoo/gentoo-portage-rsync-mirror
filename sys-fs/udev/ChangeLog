@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1019 2014/03/28 18:51:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1021 2014/03/29 06:22:00 ssuominen Exp $
+
+  29 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-212.ebuild:
+  old
+
+  29 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild:
+  Pull in more recent linux-headers wrt #506110 by Piotr Szymaniak.
+  Do this only for 212 purposely, because git has been reworked.
 
   28 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> udev-212-r1.ebuild:
   Fix building with uClibc and missing (or incompatible) locale_t, thanks to
