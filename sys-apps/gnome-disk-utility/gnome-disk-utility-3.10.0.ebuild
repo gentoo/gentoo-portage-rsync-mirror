@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.10.0.ebuild,v 1.4 2014/03/09 12:04:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.10.0.ebuild,v 1.5 2014/03/29 21:53:43 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	>=app-arch/xz-utils-5.0.5
 	>=app-crypt/libsecret-0.7
 	dev-libs/libpwquality
-	systemd? ( >=sys-apps/systemd-44 )
+	systemd? ( >=sys-apps/systemd-44:0= )
 "
 RDEPEND="${COMMON_DEPEND}
 	>=media-libs/libdvdread-4.2.0

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.6-r1.ebuild,v 1.1 2014/03/03 21:21:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.7.ebuild,v 1.1 2014/03/29 21:36:13 pacho Exp $
 
 EAPI="5"
 
-inherit eutils gnome.org gnome2-utils multilib libtool multilib-minimal
+inherit gnome.org gnome2-utils multilib libtool
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"
@@ -15,13 +15,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="+X debug +introspection jpeg jpeg2k tiff test"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.37.6:2[${MULTILIB_USEDEP}]
-	>=media-libs/libpng-1.4:0=[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.37.6:2
+	>=media-libs/libpng-1.4:0=
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
-	jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
-	jpeg2k? ( media-libs/jasper:=[${MULTILIB_USEDEP}] )
-	tiff? ( >=media-libs/tiff-3.9.2:0=[${MULTILIB_USEDEP}] )
-	X? ( x11-libs/libX11[${MULTILIB_USEDEP}] )
+	jpeg? ( virtual/jpeg:0= )
+	jpeg2k? ( media-libs/jasper:= )
+	tiff? ( >=media-libs/tiff-3.9.2:0= )
+	X? ( x11-libs/libX11 )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.20
@@ -34,15 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/librsvg-2.31.0
 	!<x11-libs/gtk+-2.21.3:2
 	!<x11-libs/gtk+-2.90.4:3
-	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-gtklibs-20131008-r2
-		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-	)
 "
-
-MULTILIB_CHOST_TOOLS=(
-	/usr/bin/gdk-pixbuf-query-loaders
-)
 
 src_prepare() {
 	# This will avoid polluting the pkg-config file with versioned libpng,
@@ -56,53 +48,42 @@ src_prepare() {
 	elibtoolize # for Darwin modules, bug #???
 }
 
-multilib_src_configure() {
+src_configure() {
 	# png always on to display icons
-	ECONF_SOURCE="${S}" \
 	econf \
 		$(usex debug --enable-debug=yes "") \
 		$(use_with jpeg libjpeg) \
 		$(use_with jpeg2k libjasper) \
 		$(use_with tiff libtiff) \
-		$(multilib_build_binaries \
-			&& use_enable introspection \
-			|| echo --disable-introspection) \
+		$(use_enable introspection) \
 		$(use_with X x11) \
 		--with-libpng
 }
 
-multilib_src_install() {
+src_install() {
 	# Parallel install fails when no gdk-pixbuf is already installed, bug #481372
-	emake -j1 DESTDIR="${D}" install
-}
-
-multilib_src_install_all() {
-	einstalldocs
+	MAKEOPTS="${MAKEOPTS} -j1" default
 	prune_libtool_files --modules
 }
 
 pkg_preinst() {
 	gnome2_gdk_pixbuf_savelist
 
-	multilib_pkg_preinst() {
-		# Make sure loaders.cache belongs to gdk-pixbuf alone
-		local cache="usr/$(get_libdir)/${PN}-2.0/2.10.0/loaders.cache"
+	# Make sure loaders.cache belongs to gdk-pixbuf alone
+	local cache="usr/$(get_libdir)/${PN}-2.0/2.10.0/loaders.cache"
 
-		if [[ -e ${EROOT}${cache} ]]; then
-			cp "${EROOT}"${cache} "${ED}"/${cache} || die
-		else
-			touch "${ED}"/${cache} || die
-		fi
-	}
-
-	multilib_foreach_abi multilib_pkg_preinst
+	if [[ -e ${EROOT}${cache} ]]; then
+		cp "${EROOT}"${cache} "${ED}"/${cache} || die
+	else
+		touch "${ED}"/${cache} || die
+	fi
 }
 
 pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
 
-	multilib_foreach_abi gnome2_gdk_pixbuf_update
+	gnome2_gdk_pixbuf_update
 
 	# Migration snippet for when this was handled by gtk+
 	if [ -e "${EROOT}"usr/lib/gtk-2.0/2.*/loaders ]; then
@@ -114,6 +95,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if [[ -z ${REPLACED_BY_VERSIONS} ]]; then
-		rm -f "${EROOT}"usr/lib*/${PN}-2.0/2.10.0/loaders.cache
+		rm -f "${EROOT}"usr/$(get_libdir)/${PN}-2.0/2.10.0/loaders.cache
 	fi
 }

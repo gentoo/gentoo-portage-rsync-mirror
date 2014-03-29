@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.93 2014/03/09 12:04:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.94 2014/03/29 21:53:43 tetromino Exp $
+
+  29 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-disk-utility-3.8.2.ebuild, gnome-disk-utility-3.10.0.ebuild:
+  systemd now has subslots
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-3.10.0.ebuild:
   x86 stable, bug 499954
