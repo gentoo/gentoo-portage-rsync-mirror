@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18-r1.ebuild,v 1.2 2014/01/25 22:06:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18-r1.ebuild,v 1.3 2014/03/29 05:31:59 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -24,6 +24,7 @@ case ${PV} in
 	RELEASE_VER=${PV}
 	;;
 esac
+GCC_BOOTSTRAP_VER="4.7.3"
 PATCH_VER="4"                                  # Gentoo patchset
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
@@ -88,19 +89,19 @@ else
 		!vanilla? ( sys-libs/timezone-data )"
 fi
 
+upstream_uris() {
+	echo mirror://gnu/glibc/$1 ftp://sourceware.org/pub/glibc/{releases,snapshots}/$1 mirror://gentoo/$1
+}
+gentoo_uris() {
+	local devspace="HTTP~vapier/dist/URI HTTP~azarah/glibc/URI"
+	devspace=${devspace//HTTP/http://dev.gentoo.org/}
+	echo mirror://gentoo/$1 ${devspace//URI/$1}
+}
 SRC_URI=$(
-	upstream_uris() {
-		echo mirror://gnu/glibc/$1 ftp://sourceware.org/pub/glibc/{releases,snapshots}/$1 mirror://gentoo/$1
-	}
-	gentoo_uris() {
-		local devspace="HTTP~vapier/dist/URI HTTP~azarah/glibc/URI"
-		devspace=${devspace//HTTP/http://dev.gentoo.org/}
-		echo mirror://gentoo/$1 ${devspace//URI/$1}
-	}
-
 	[[ -z ${EGIT_REPO_URIS} ]] && upstream_uris ${P}.tar.xz
 	[[ -n ${PATCH_VER}      ]] && gentoo_uris ${P}-patches-${PATCH_VER}.tar.bz2
 )
+SRC_URI+=" ${GCC_BOOTSTRAP_VER:+multilib? ( $(gentoo_uris gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2) )}"
 
 # eblit-include [--skip] <function> [version]
 eblit-include() {
@@ -153,6 +154,7 @@ done
 
 eblit-src_unpack-pre() {
 	GLIBC_PATCH_EXCLUDE+=" 00_all_0012-mips-add-clock_-g-s-ettime-symbol-compat-hacks.patch" #456912 #481438
+	[[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib && unpack gcc-4.7.3-multilib-bootstrap.tar.bz2
 }
 
 eblit-src_unpack-post() {
