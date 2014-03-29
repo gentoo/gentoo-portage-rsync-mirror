@@ -1,6 +1,9 @@
 # ChangeLog for games-action/extreme-tuxracer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.14 2014/01/24 22:09:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.15 2014/03/29 17:45:12 nimiux Exp $
+
+  29 Mar 2014; Chema Alonso <nimiux@gentoo.org> extreme-tuxracer-0.6.0.ebuild:
+  Stable for amd64 wrt bug #505030
 
   24 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org>
   extreme-tuxracer-0.6.0.ebuild:
