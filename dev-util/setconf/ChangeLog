@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/setconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.5 2014/03/29 12:04:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.6 2014/03/29 15:08:53 floppym Exp $
+
+  29 Mar 2014; Mike Gilbert <floppym@gentoo.org> setconf-0.6.2.ebuild:
+  Add python2.7.
 
   29 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> setconf-0.6.2.ebuild:
   Set RDEPEND and REQUIRED_USE for technical limitations of the python-
