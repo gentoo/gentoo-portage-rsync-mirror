@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.7_rc1.ebuild,v 1.2 2012/10/06 10:35:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.7_rc1.ebuild,v 1.3 2014/03/29 13:04:30 dlan Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 MY_P="${P/_/-}"
@@ -36,11 +36,14 @@ src_prepare() {
 	echo "src/term_config.c" >> po/POTFILES.in || die
 
 	epatch "${FILESDIR}/${P}-configure.patch"
+	sed -i -e "s/AM_SYS_POSIX_TERMIOS/AC_SYS_POSIX_TERMIOS/" \
+		configure.in || die #bug #483346
+
 	eautoreconf
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	default
 	make_desktop_entry "${PN}"
 
 	if use nls; then

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.664 2014/03/29 03:01:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.665 2014/03/29 13:08:56 ssuominen Exp $
+
+  29 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="webkit2" for www-client/midori wrt #489936 by "A. Person"
 
   29 Mar 2014; Mike Frysinger <vapier@gentoo.org> make.defaults, use.mask:
   Add ABI_PPC defines.

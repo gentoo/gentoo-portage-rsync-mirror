@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtkterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.23 2012/10/06 10:35:00 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.24 2014/03/29 13:04:31 dlan Exp $
+
+  29 Mar 2014; Yixun Lan <dlan@gentoo.org> gtkterm-0.99.7_rc1.ebuild:
+  fix autoconf compile err, bug #483346
 
   06 Oct 2012; Pacho Ramos <pacho@gentoo.org> gtkterm-0.99.7_rc1.ebuild:
   Install desktop entry also, bug #346703 by Miguel R. Caudevilla.

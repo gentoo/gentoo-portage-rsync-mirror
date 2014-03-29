@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/ZMQ-Constants
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-Constants/ChangeLog,v 1.12 2014/03/28 14:56:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-Constants/ChangeLog,v 1.14 2014/03/29 13:06:57 zlogene Exp $
+
+  29 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> ZMQ-Constants-1.30.0.ebuild:
+  ppc64 stable wrt bug #502748
+
+  29 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> ZMQ-Constants-1.30.0.ebuild:
+  ppc stable wrt bug #502748
 
   28 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> ZMQ-Constants-1.30.0.ebuild:
   x86 stable wrt bug #502748

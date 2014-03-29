@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.553 2014/03/27 15:00:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.554 2014/03/29 13:08:56 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -194,11 +194,6 @@ app-leechcraft/leechcraft-meta unstable
 >=dev-db/mariadb-galera-5.5 pbxt
 >=dev-db/percona-server-5.5 pbxt
 >=dev-db/google-mysql-5.5 pbxt
-
-# XFCE <xfce@gentoo.org> (01 Jun 2013)
-# Masked temporarily while waiting for >=net-libs/webkit-gtk-2 unmasking from
-# profiles/package.mask
->=www-client/midori-0.5.2 webkit2
 
 # Kacper Kowalik <xarthisius@gentoo.org> (19 May 2013)
 # Fails to build, haven't had time to debug
