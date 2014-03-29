@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8753 2014/03/28 22:30:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8754 2014/03/29 04:12:29 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unbreak the gentoo-x86 as reverse dependencies such as sys-power/upower have
+  already started using the new virtuals. Not to mention there was no basis for
+  masking them in the first place.
 
   28 Mar 2014; Rick Farina <zerochaos@gentoo.org> package.mask:
   missed virtual/udev-208-r2 in previous mask
