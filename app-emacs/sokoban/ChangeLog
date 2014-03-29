@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/sokoban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.6 2014/03/29 06:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.7 2014/03/29 12:02:26 ulm Exp $
+
+  29 Mar 2014; Ulrich Müller <ulm@gentoo.org> -sokoban-1.04_p20030614.ebuild:
+  Remove old.
 
   29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> sokoban-1.4.ebuild:
   Stable for x86, wrt bug #504226
