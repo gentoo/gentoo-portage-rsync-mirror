@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.14 2014/03/30 04:29:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.15 2014/03/30 06:32:33 idella4 Exp $
 
 *stevedore-0.15 (30 Mar 2014)
 
@@ -42,7 +42,7 @@
   Stable for amd64, wrt bug #450086
 
   16 Jun 2013; Ian Delaney <idella4@gentoo.org> stevedore-0.9.1.ebuild:
-  correct setuotools in deps wrt Bug #473278
+  correct setuptools in deps wrt Bug #473278
 
 *stevedore-0.9.1 (14 Jun 2013)
 
