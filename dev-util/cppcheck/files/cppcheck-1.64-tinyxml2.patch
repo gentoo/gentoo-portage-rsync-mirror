@@ -1,0 +1,30 @@
+--- a/Makefile
++++ b/Makefile
+@@ -81,15 +81,15 @@
+ endif
+ 
+ ifndef INCLUDE_FOR_LIB
+-    INCLUDE_FOR_LIB=-Ilib -Iexternals -Iexternals/tinyxml
++    INCLUDE_FOR_LIB=-Ilib 
+ endif
+ 
+ ifndef INCLUDE_FOR_CLI
+-    INCLUDE_FOR_CLI=-Ilib -Iexternals -Iexternals/tinyxml
++    INCLUDE_FOR_CLI=-Ilib 
+ endif
+ 
+ ifndef INCLUDE_FOR_TEST
+-    INCLUDE_FOR_TEST=-Ilib -Icli -Iexternals -Iexternals/tinyxml
++    INCLUDE_FOR_TEST=-Ilib -Icli 
+ endif
+ 
+ BIN=$(DESTDIR)$(PREFIX)/bin
+@@ -226,7 +226,7 @@
+ 	$(CXX) -std=c++0x -o dmake tools/dmake.cpp cli/filelister.cpp lib/path.cpp -Ilib $(LDFLAGS)
+ 
+ reduce:	tools/reduce.cpp
+-	$(CXX) -std=c++0x -g -o reduce tools/reduce.cpp -Ilib -Iexternals/tinyxml lib/*.cpp externals/tinyxml/tinyxml2.cpp
++	$(CXX) -std=c++0x -g -o reduce tools/reduce.cpp -Ilib lib/*.cpp
+ 
+ clean:
+ 	rm -f build/*.o lib/*.o cli/*.o test/*.o externals/tinyxml/*.o testrunner reduce cppcheck cppcheck.1

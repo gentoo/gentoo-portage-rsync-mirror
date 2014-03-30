@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.48 2014/01/14 13:59:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.49 2014/03/30 16:53:34 jer Exp $
+
+*cppcheck-1.64 (30 Mar 2014)
+
+  30 Mar 2014; Jeroen Roovers <jer@gentoo.org> +cppcheck-1.64.ebuild,
+  +files/cppcheck-1.64-tinyxml2.patch:
+  Version bump by Christian Strahl (bug #503320). Do not use bundled tinyxml2
+  (bug #506248 by Jérôme Borme). Set up src_test().
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cppcheck-1.62.ebuild:
   Stable for x86, wrt bug #497560
