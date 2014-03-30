@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.4.0.ebuild,v 1.1 2014/03/28 01:45:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.4.0.ebuild,v 1.2 2014/03/30 20:23:57 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -311,8 +311,6 @@ pkg_postinst() {
 		ewarn "You have just upgraded from an older version of Python."
 		ewarn
 		ewarn "Please adjust PYTHON_TARGETS (if so desired), and run emerge with the --newuse or --changed-use option to rebuild packages installing python modules."
-		ewarn
-		ewarn "For legacy packages, you should switch active version of Python and run 'python-updater [options]' to rebuild Python modules."
 	fi
 }
 
