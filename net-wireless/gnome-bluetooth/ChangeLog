@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.137 2014/03/09 12:04:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.138 2014/03/30 08:40:14 pacho Exp $
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> -gnome-bluetooth-3.8.2.1.ebuild,
+  gnome-bluetooth-3.10.0.ebuild:
+  app-mobilephone/obexd isn't used, it uses bluez-5 provided one. Drop old.
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gnome-bluetooth-3.10.0.ebuild:
   x86 stable, bug 499954

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.10.0.ebuild,v 1.5 2014/03/09 12:04:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.10.0.ebuild,v 1.6 2014/03/30 08:40:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -23,7 +23,6 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-5
-	app-mobilephone/obexd
 	x11-themes/gnome-icon-theme-symbolic
 "
 DEPEND="${COMMON_DEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.10.ebuild,v 1.1 2014/02/04 16:24:08 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.10.ebuild,v 1.2 2014/03/30 09:00:59 grozin Exp $
 
 EAPI=5
 inherit elisp-common eutils flag-o-matic
@@ -56,7 +56,9 @@ src_prepare() {
 	epatch "${WORKDIR}"/fedora/reloc-type.patch
 	epatch "${WORKDIR}"/fedora/largefile.patch
 
-	epatch "${FILESDIR}"/tcl.patch
+	epatch "${FILESDIR}"/${PN}-tcl-8.6.patch
+	epatch "${FILESDIR}"/${PN}-gmp-6.patch
+	epatch "${FILESDIR}"/${PN}-readline-6.3.patch
 
 	sed -e 's|"-fomit-frame-pointer"|""|' -i configure
 	sed -e 's|@EXT@||g' debian/in.gcl.1 > gcl.1

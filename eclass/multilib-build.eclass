@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.28 2014/03/29 03:00:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.29 2014/03/30 08:41:53 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -246,8 +246,13 @@ multilib_copy_sources() {
 # and the native variant will be symlinked to the generic name.
 #
 # This variable has to be a bash array. Paths shall be relative to
-# installation root (${ED}), and name regular files. Recursive wrapping
-# is not supported.
+# installation root (${ED}), and name regular files or symbolic
+# links to regular files. Recursive wrapping is not supported.
+#
+# If symbolic link is passed, both symlink path and symlink target
+# will be changed. As a result, the symlink target is expected
+# to be wrapped as well (either by listing in MULTILIB_CHOST_TOOLS
+# or externally).
 #
 # Please note that tool wrapping is *discouraged*. It is preferred to
 # install pkg-config files for each ABI, and require reverse
@@ -373,6 +378,18 @@ _EOF_
 
 		local dir=${f%/*}
 		local fn=${f##*/}
+
+		if [[ -L ${root}/${f} ]]; then
+			# rewrite the symlink target
+			local target=$(readlink "${root}/${f}")
+			local target_dir
+			local target_fn=${target##*/}
+
+			[[ ${target} == */* ]] && target_dir=${target%/*}
+
+			ln -f -s "${target_dir+${target_dir}/}${CHOST}-${target_fn}" \
+				"${root}/${f}" || die
+		fi
 
 		mv "${root}/${f}" "${root}/${dir}/${CHOST}-${fn}" || die
 

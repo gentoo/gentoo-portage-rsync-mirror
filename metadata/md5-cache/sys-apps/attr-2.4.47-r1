@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://nongnu/attr/attr-2.4.47.src.tar.gz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	65adae38aced116f7da3abb4d1fee0a7	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	8296d871e2a01cfc8b92c7efa736f6ba	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=f102115ad03b8c1e76fbfef4e83c5acf
