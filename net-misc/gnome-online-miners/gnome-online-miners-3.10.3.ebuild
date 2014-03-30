@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.10.3.ebuild,v 1.6 2014/03/09 12:03:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.10.3.ebuild,v 1.7 2014/03/30 10:30:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86"
 RDEPEND="
 	>=dev-libs/libgdata-0.13.3:0=
 	>=dev-libs/glib-2.35.1:2
-	>=net-libs/gnome-online-accounts-3.2.0
+	>=net-libs/gnome-online-accounts-3.7.3
 	>=media-libs/grilo-0.2.6:0.2
 	>=net-libs/libzapojit-0.0.2
 	>=app-misc/tracker-0.16:0=
@@ -28,7 +28,5 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	gnome2_src_configure \
-		--disable-static \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+	gnome2_src_configure --disable-static
 }

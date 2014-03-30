@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50160001.eblit,v 1.7 2014/03/11 17:01:14 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50160001.eblit,v 1.8 2014/03/30 10:14:33 zlogene Exp $
 
 myconf() {
 	# the myconf array is declared in src_configure
@@ -147,5 +147,6 @@ eblit-perl-src_configure() {
 		-Dinstallusrbinperl='n' \
 		-Ud_csh \
 		-Uusenm \
+		-Dsh="${EPREFIX}"/bin/sh \
 		"${myconf[@]}" || die "Unable to configure"
 }
