@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/vor-0.5.5.ebuild,v 1.4 2013/02/18 20:17:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/vor-0.5.5.ebuild,v 1.5 2014/03/30 05:38:14 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils games
+inherit autotools eutils gnome2-utils games
 
 DESCRIPTION="Variations on Rockdodger: Dodge the rocks until you die"
 HOMEPAGE="http://jasonwoof.org/vor"
@@ -19,10 +19,29 @@ DEPEND="media-libs/libsdl[audio,video]
 	media-libs/sdl-mixer[mod]"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-underlink.patch"
+	eautoreconf
+}
+
 src_install() {
 	dodir "${GAMES_BINDIR}"
 	DOCS="README* todo" default
-	newicon data/icon.png ${PN}.png
+	newicon -s 48 data/icon.png ${PN}.png
 	make_desktop_entry ${PN} VoR
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

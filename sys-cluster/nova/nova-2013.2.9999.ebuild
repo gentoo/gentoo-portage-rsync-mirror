@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.10 2014/01/08 06:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.11 2014/03/30 05:42:20 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ EGIT_BRANCH="stable/havana"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
+IUSE="+api +cert +compute +conductor +consoleauth ipv6 +kvm +network +novncproxy +rabbit +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
 			  || ( kvm xen )"
 
@@ -67,6 +67,8 @@ RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 		net-misc/openvswitch
 		sys-fs/sysfsutils
 		sys-fs/multipath-tools
+		ipv6? ( net-misc/radvd )
+		rabbit? ( net-misc/rabbitmq-server )
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )"

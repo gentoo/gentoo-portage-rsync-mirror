@@ -1,5 +1,5 @@
-DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=media-libs/libsdl[audio,video] media-libs/sdl-image[png] media-libs/sdl-mixer[mod]
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=media-libs/libsdl[audio,video] media-libs/sdl-image[png] media-libs/sdl-mixer[mod] !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 DESCRIPTION=Variations on Rockdodger: Dodge the rocks until you die
 EAPI=5
 HOMEPAGE=http://jasonwoof.org/vor
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libsdl[audio,video] media-libs/sdl-image[png] media-libs/sdl-mixer[mod] games-misc/games-envd
 SLOT=0
 SRC_URI=http://qualdan.com/vor/vor-0.5.5.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7404e8be40384976af29594dc0ac6536
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c3e483283e330aec4782d8ad73bd84fd
