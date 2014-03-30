@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.52 2014/03/26 19:00:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.53 2014/03/30 11:40:32 polynomial-c Exp $
+
+*cronie-1.4.11-r2 (30 Mar 2014)
+
+  30 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> +cronie-1.4.11-r2.ebuild,
+  +files/cronie-1.3-crontab:
+  Attempt to fix installation of anacron as suggested by Matthew Schultz in bug
+  #503666.
 
   26 Mar 2014; Christian Ruppert <idl0r@gentoo.org> cronie-1.4.11-r1.ebuild:
   Enable inotify by default
