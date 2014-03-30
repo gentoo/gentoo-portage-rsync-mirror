@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.9.ebuild,v 1.1 2014/01/03 15:24:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.9.ebuild,v 1.2 2014/03/30 12:51:48 nimiux Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils vcs-snapshot user games
@@ -11,7 +11,7 @@ SRC_URI="http://github.com/minetest/minetest/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+curl dedicated leveldb luajit nls +server +sound +truetype"
 
 RDEPEND="dev-db/sqlite:3
