@@ -1,11 +1,32 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.57 2014/03/29 22:07:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.59 2014/03/30 21:38:38 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# Michał Górny <mgorny@gentoo.org> (30 Mar 2014)
+# PyPy is keyworded on this arch.
+-python_targets_pypy
+-python_single_target_pypy
+-python_targets_pypy2_0
+-python_single_target_pypy2_0
+
+# Michał Górny <mgorny@gentoo.org> (4 May 2013)
+# Unmask systemd since it is keyworded here.
+-systemd
+
+# Andrey Grozin <grozin@gentoo.org> (1 May 2013)
+# available on amd64
+-clozurecl
+-gcl
+
+# Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
+# Unmask the multilib flags for this arch.
+-abi_x86_32
+-abi_x86_64
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (09 Dec 2012)
 # Orc optimisations work fine on amd64 and x86
@@ -176,19 +197,5 @@ capslib
 
 # fdk-aac is already keyworded here
 -fdk
-
-# Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
-# Unmask the multilib flags for this arch.
--abi_x86_32
--abi_x86_64
-
-# Andrey Grozin <grozin@gentoo.org> (1 May 2013)
-# available on amd64
--clozurecl
--gcl
-
-# Michał Górny <mgorny@gentoo.org> (4 May 2013)
-# Unmask systemd since it is keyworded here.
--systemd
 
 # NOT NECESSARY - SECTION

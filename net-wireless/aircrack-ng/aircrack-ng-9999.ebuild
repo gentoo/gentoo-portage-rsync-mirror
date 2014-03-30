@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.6 2013/10/05 02:05:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.7 2014/03/30 21:36:10 zerochaos Exp $
 
 EAPI="5"
 
@@ -25,10 +25,11 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD netlink +sqlite +unstable"
+IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD +netlink +pcre +sqlite +unstable"
 
 DEPEND="dev-libs/openssl
 	netlink? ( dev-libs/libnl:3 )
+	pcre? ( dev-libs/libpcre )
 	sqlite? ( >=dev-db/sqlite-3.4 )"
 RDEPEND="${DEPEND}
 	kernel_linux? (
@@ -47,6 +48,7 @@ src_compile() {
 	LD="$(tc-getLD)" \
 	RANLIB="$(tc-getRANLIB)" \
 	libnl=$(usex netlink true false) \
+	pcre=$(usex pcre true false) \
 	sqlite=$(usex sqlite true false) \
 	unstable=$(usex unstable true false) \
 	REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
@@ -55,6 +57,7 @@ src_compile() {
 src_test() {
 	emake check \
 		libnl=$(usex netlink true false) \
+		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
 		unstable=$(usex unstable true false)
 }
@@ -63,6 +66,7 @@ src_install() {
 	emake \
 		prefix="${ED}/usr" \
 		libnl=$(usex netlink true false) \
+		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
 		unstable=$(usex unstable true false) \
 		REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}" \
