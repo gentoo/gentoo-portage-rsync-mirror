@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.108 2014/03/28 02:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.109 2014/03/30 10:43:14 pacho Exp $
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org>
+  gobject-introspection-1.38.0.ebuild:
+  virtual/pkgconfig needed at runtime too (#505408 by James Le Cuirot)
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org>
   gobject-introspection-1.38.0.ebuild:

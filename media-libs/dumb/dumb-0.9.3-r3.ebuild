@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3-r3.ebuild,v 1.7 2014/03/24 15:06:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/dumb-0.9.3-r3.ebuild,v 1.8 2014/03/30 10:36:11 nimiux Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-build multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dumb/${P}.tar.gz"
 
 LICENSE="DUMB-0.9.2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="debug"
 
 RDEPEND=""
