@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Shell
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Shell/ChangeLog,v 1.1 2014/03/30 21:18:34 hd_brummy Exp $
+
+*Shell-0.72 (30 Mar 2014)
+
+  30 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +Shell-0.72.ebuild,
+  +metadata.xml:
+  initial commit
+
