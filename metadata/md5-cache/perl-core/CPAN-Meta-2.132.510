@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=virtual/perl-CPAN-Meta-Requirements-2.121.0 >=virtual/perl-CPAN-Meta-YAML-0.8.0 >=virtual/perl-JSON-PP-2.272.0 >=virtual/perl-Parse-CPAN-Meta-1.440.300 virtual/perl-Scalar-List-Utils >=virtual/perl-version-0.82 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.132510.tar.gz
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
 _md5_=9ea48bebf8285da8ffb6bedc281b1659

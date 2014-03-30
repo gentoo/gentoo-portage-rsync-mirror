@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.138 2013/12/29 21:37:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.139 2014/03/30 19:25:14 zlogene Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -12,7 +12,7 @@
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
-inherit eutils base multiprocessing
+inherit eutils multiprocessing unpacker
 [[ ${CATEGORY} == "perl-core" ]] && inherit alternatives
 
 PERL_EXPF="src_unpack src_compile src_test src_install"
@@ -87,13 +87,16 @@ perlinfo_done=false
 
 perl-module_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
-	base_src_unpack
+	unpacker_src_unpack
 	has src_prepare ${PERL_EXPF} || perl-module_src_prepare
 }
 
 perl-module_src_prepare() {
 	debug-print-function $FUNCNAME "$@"
-	has src_prepare ${PERL_EXPF} && base_src_prepare
+	has src_prepare ${PERL_EXPF} && \
+	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
+	debug-print "$FUNCNAME: applying user patches"
+	epatch_user
 	perl_fix_osx_extra
 	esvn_clean
 }

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.180 2014/03/02 14:47:05 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.181 2014/03/30 19:14:05 pacho Exp $
+
+*freenet-0.7.5_p1459-r1 (30 Mar 2014)
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> +files/freenet.service,
+  +freenet-0.7.5_p1459-r1.ebuild:
+  Add unit file (#502346 by neko259)
 
   02 Mar 2014; Tom Wijsman <TomWij@gentoo.org> freenet-0.7.5_p1459.ebuild:
   Unbreak dependency on bcprov in latest version by depending on new SLOT 1.49.
