@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.15 2014/03/30 06:32:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.16 2014/03/30 07:27:28 idella4 Exp $
+
+  30 Mar 2014; Ian Delaney <idella4@gentoo.org> -stevedore-0.10.ebuild,
+  -stevedore-0.11.ebuild, -stevedore-0.12.ebuild, stevedore-0.14.1.ebuild,
+  stevedore-0.15.ebuild:
+  Drop pypy2_0 support due to lack of its support in pbr, update deps, drop old
 
 *stevedore-0.15 (30 Mar 2014)
 
