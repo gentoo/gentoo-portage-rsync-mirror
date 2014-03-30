@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2.ebuild,v 1.8 2014/03/30 20:57:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2-r1.ebuild,v 1.1 2014/03/30 20:57:45 mgorny Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ REQUIRED_USE="!jit? ( !shadowstack )
 	x86? ( !sse2? ( !jit !shadowstack ) )"
 
 LICENSE="MIT"
-SLOT=$(get_version_component_range 1-2 ${PV})
+SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +jit shadowstack sqlite sse2 test"
 
@@ -93,7 +93,7 @@ src_compile() {
 
 	use doc && emake -C pypy/doc/ html
 	#needed even without jit :( also needed in both compile and install phases
-	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
+	pax-mark m pypy-c
 }
 
 src_test() {
@@ -105,13 +105,12 @@ src_test() {
 
 src_install() {
 	einfo "Installing PyPy ..."
-	insinto "/usr/$(get_libdir)/pypy${SLOT}"
+	insinto "/usr/$(get_libdir)/pypy"
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSDESTTREE}/pypy-c
 	#needed even without jit :(
 	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
-	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
-	dosym ../$(get_libdir)/pypy${SLOT}/include /usr/include/pypy${SLOT}
+	dosym ../$(get_libdir)/pypy/pypy-c /usr/bin/pypy
 	dodoc README.rst
 
 	if ! use sqlite; then
@@ -124,7 +123,7 @@ src_install() {
 
 	einfo "Generating caches and byte-compiling ..."
 
-	python_export pypy-c${SLOT} EPYTHON PYTHON PYTHON_SITEDIR
+	python_export pypy EPYTHON PYTHON PYTHON_SITEDIR
 	local PYTHON=${ED%/}${INSDESTTREE}/pypy-c
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py

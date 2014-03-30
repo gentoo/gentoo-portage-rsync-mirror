@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.8 2014/02/21 21:25:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.9 2014/03/30 20:57:45 mgorny Exp $
+
+*pypy-bin-2.0.2-r1 (30 Mar 2014)
+
+  30 Mar 2014; Michał Górny <mgorny@gentoo.org> +pypy-bin-2.0.2-r1.ebuild,
+  pypy-bin-2.0.2.ebuild:
+  Backport the :0 slot switch to pypy-2.0.2 since we have binpackages for this
+  version. Update deps.
 
   21 Feb 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.0.2.ebuild:
   Bump openssl dep since the old version was cleaned.
