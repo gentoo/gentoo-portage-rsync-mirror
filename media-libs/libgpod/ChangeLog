@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.100 2014/02/04 08:21:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.101 2014/03/30 17:55:35 zlogene Exp $
+
+  30 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> libgpod-0.8.3.ebuild:
+  amd64 stable wrt bug #500240
 
   04 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> libgpod-0.8.3.ebuild:
   Use mono-env.eclass instead of mono.eclass as per repoman.
