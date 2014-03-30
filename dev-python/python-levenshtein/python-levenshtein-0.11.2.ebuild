@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/python-levenshtein-0.11.2.ebuild,v 1.1 2014/02/08 06:43:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/python-levenshtein-0.11.2.ebuild,v 1.2 2014/03/30 07:54:24 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit distutils-r1
 
@@ -27,8 +27,13 @@ S="${WORKDIR}/${MY_P}"
 
 python_compile_all() {
 	if use doc; then
-		einfo "Generation of documentation"
-		"${PYTHON}" "${FILESDIR}/genextdoc.py" Levenshtein || die "Generation of documentation failed"
+		# Cannot assume user has a system py2 or pypy
+		if python_is_python3; then
+			die "The build of Levenshtein.html is not supported by python3"
+		else
+			einfo "Generation of documentation"
+			"${PYTHON}" "${FILESDIR}/genextdoc.py" Levenshtein || die "Generation of documentation failed"
+		fi
 	fi
 }
 
