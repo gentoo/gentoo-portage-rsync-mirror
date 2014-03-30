@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zathura-meta
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.10 2013/08/14 09:27:31 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.11 2014/03/30 15:52:44 ssuominen Exp $
+
+  30 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> zathura-meta-0.ebuild:
+  Revert back to ~arch because arch stabilization can't be trusted due to the
+  bogus 30 days timeout wrt #502714
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> zathura-meta-9999.ebuild:
   Whitespace

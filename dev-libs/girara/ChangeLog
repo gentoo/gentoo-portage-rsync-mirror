@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/girara
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.28 2014/03/12 05:29:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.29 2014/03/30 15:51:32 ssuominen Exp $
+
+  30 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -girara-0.1.4.ebuild,
+  -girara-0.1.5-r200.ebuild, -girara-0.1.5-r300.ebuild,
+  -girara-0.1.6-r200.ebuild, -girara-0.1.6-r300.ebuild:
+  old
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   girara-0.1.6-r300.ebuild:

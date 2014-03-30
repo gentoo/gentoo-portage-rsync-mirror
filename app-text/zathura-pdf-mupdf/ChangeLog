@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zathura-pdf-mupdf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.9 2013/06/23 12:43:39 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.10 2014/03/30 15:56:25 ssuominen Exp $
+
+  30 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -zathura-pdf-mupdf-0.2.3.ebuild:
+  old
 
   23 Jun 2013; Michael Weber <xmw@gentoo.org>
   +files/zathura-pdf-mupdf-9999-fz_drop_display_list.patch, metadata.xml,

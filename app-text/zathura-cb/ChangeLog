@@ -1,6 +1,13 @@
 # ChangeLog for app-text/zathura-cb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.11 2014/03/03 23:34:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.13 2014/03/30 15:54:05 ssuominen Exp $
+
+  30 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> zathura-cb-0.1.1.ebuild:
+  Revert back to ~arch because arch stabilization can't be trusted due to the
+  bogus 30 days timeout wrt #502714
+
+  30 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -zathura-cb-0.1.0.ebuild:
+  old
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> zathura-cb-0.1.1.ebuild:
   amd64 stable, bug #491958
