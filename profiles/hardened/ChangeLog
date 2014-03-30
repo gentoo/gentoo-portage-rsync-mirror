@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.42 2014/03/27 00:04:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.43 2014/03/30 19:53:30 chithanh Exp $
+
+  30 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  linux/amd64/package.use.stable.mask:
+  Mask abi_x86_32 for libxshmfence, bug #506056.
 
   27 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi,
   +linux/amd64/no-multilib/eapi, +linux/amd64/no-multilib/selinux/eapi,

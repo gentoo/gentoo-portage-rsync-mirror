@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/libxshmfence-1.1.ebuild,v 1.6 2014/03/29 20:24:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/libxshmfence-1.1.ebuild,v 1.7 2014/03/30 19:54:46 chithanh Exp $
 
 EAPI=5
 XORG_MULTILIB=yes
@@ -12,5 +12,5 @@ KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~a
 IUSE=""
 
 RDEPEND=""
-DEPEND="x11-proto/xproto
+DEPEND="x11-proto/xproto[${MULTILIB_USEDEP}]
 	${RDEPEND}"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxshmfence
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/ChangeLog,v 1.9 2014/03/29 20:24:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/ChangeLog,v 1.10 2014/03/30 19:54:46 chithanh Exp $
+
+  30 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libxshmfence-1.1.ebuild:
+  Add multilib use dependencies, bug #506056.
 
   29 Mar 2014; Matt Turner <mattst88@gentoo.org> libxshmfence-1.1.ebuild:
   alpha stable, bug #500368.

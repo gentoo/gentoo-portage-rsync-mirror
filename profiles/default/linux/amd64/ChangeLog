@@ -1,6 +1,10 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.15 2014/03/26 09:37:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.16 2014/03/30 19:53:30 chithanh Exp $
+
+  30 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  13.0/package.use.stable.mask:
+  Mask abi_x86_32 for libxshmfence, bug #506056.
 
   26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   13.0/package.use.stable.mask:
