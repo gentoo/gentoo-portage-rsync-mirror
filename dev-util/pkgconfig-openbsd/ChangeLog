@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconfig-openbsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.15 2014/03/30 11:11:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.16 2014/03/30 13:39:36 mgorny Exp $
+
+  30 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  pkgconfig-openbsd-20130507-r1.ebuild:
+  Re-use perl path getting from perl-module.eclass, thanks to Mikle Kolyada for
+  the suggestion.
 
 *pkgconfig-openbsd-20130507-r1 (30 Mar 2014)
 

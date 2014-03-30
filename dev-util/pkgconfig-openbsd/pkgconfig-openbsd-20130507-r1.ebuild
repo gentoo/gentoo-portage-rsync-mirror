@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20130507-r1.ebuild,v 1.1 2014/03/30 11:11:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20130507-r1.ebuild,v 1.2 2014/03/30 13:39:36 mgorny Exp $
 
 EAPI=5
 
-inherit eutils multilib multilib-minimal
+PERL_EXPORT_PHASE_FUNCTIONS=no
+inherit eutils multilib perl-module multilib-minimal
 
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config
 
@@ -20,9 +21,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+pkg-config"
 
-DEPEND="dev-lang/perl:="
-RDEPEND="${DEPEND}
-	virtual/perl-Getopt-Long
+RDEPEND="virtual/perl-Getopt-Long
 	pkg-config? (
 		!dev-util/pkgconfig
 		!dev-util/pkgconf[pkg-config]
@@ -66,8 +65,7 @@ multilib_src_install_all() {
 		doins "${WORKDIR}"/pkg-config-*/pkg.m4
 	fi
 
-	local perl_version=$(perl -e 'printf "%vd", $^V')
-
-	insinto /usr/$(get_libdir)/perl5/vendor_perl/${perl_version}
+	perl_set_version
+	insinto "${VENDOR_LIB}"
 	doins -r "${S}"/usr.bin/pkg-config/OpenBSD
 }

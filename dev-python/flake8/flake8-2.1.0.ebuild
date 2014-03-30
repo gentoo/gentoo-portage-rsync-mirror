@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.1.0.ebuild,v 1.2 2014/03/19 23:12:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/flake8-2.1.0.ebuild,v 1.3 2014/03/30 13:59:04 idella4 Exp $
 
 EAPI=5
 
@@ -28,5 +28,5 @@ DEPEND="${RDEPEND}
 		dev-python/mock[${PYTHON_USEDEP}] )"
 
 python_test() {
-	esetup.py test || die "tests failed under ${EPYTHON_}"
+	esetup.py test
 }

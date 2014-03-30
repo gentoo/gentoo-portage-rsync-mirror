@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pyicq-t
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/ChangeLog,v 1.27 2013/09/14 23:01:18 hanno Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/ChangeLog,v 1.28 2014/03/30 13:44:13 pacho Exp $
+
+*pyicq-t-0.8.1.5-r4 (30 Mar 2014)
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> +files/pyicq-t.service,
+  +pyicq-t-0.8.1.5-r4.ebuild:
+  Add unit file (#504150 by Michael Hampicke)
 
 *pyicq-t-0.8.1.5-r3 (14 Sep 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/sqlgrey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.15 2012/06/05 00:08:32 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.16 2014/03/30 13:53:04 pacho Exp $
+
+*sqlgrey-1.7.6-r1 (30 Mar 2014)
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> +files/sqlgrey.service,
+  +sqlgrey-1.7.6-r1.ebuild:
+  Add unit file (#504152 by Michael Hampicke)
 
   05 Jun 2012; Zac Medico <zmedico@gentoo.org> sqlgrey-1.7.6.ebuild:
   inherit user for enewgroup and enewuser
@@ -60,4 +66,3 @@
   The ebuild is good quality and already support "emerge --config" so it has
   only cosmetic changes to the submitted one.
   Thanks Lionel :-)
-

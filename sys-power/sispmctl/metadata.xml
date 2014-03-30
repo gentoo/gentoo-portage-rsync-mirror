@@ -6,6 +6,9 @@
 	<name>Wolfram Schlich</name>
 	<description>Primary maintainer</description>
 </maintainer>
+<use>
+	<flag name='gemplug'>Install gemplug (management script)</flag>
+</use>
 <longdescription>
 sispmctl is an application enabling the use of the GEMBIRD
 SilverShield PowerManager (SiS-PM) device under Linux.
