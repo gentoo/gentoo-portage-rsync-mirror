@@ -1,6 +1,14 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.182 2014/03/28 03:17:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.183 2014/03/30 19:00:19 lu_zero Exp $
+
+*libav-10.9999 (30 Mar 2014)
+*libav-10 (30 Mar 2014)
+
+  30 Mar 2014; Luca Barbato <lu_zero@gentoo.org> -libav-10_alpha1-r1.ebuild,
+  -libav-10_beta1.ebuild, +libav-10.ebuild, +libav-10.9999.ebuild:
+  New release version and live ebuild tracking the current release
+  branch.
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> libav-0.8.11.ebuild:
   Stable for HPPA (bug #504584).

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.97 2014/03/30 17:46:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.98 2014/03/30 19:00:10 zlogene Exp $
+
+  30 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> mutagen-1.22.ebuild:
+  x86 stable wrt bug #506256
 
   30 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> mutagen-1.22.ebuild:
   amd64 stable wrt bug #506256

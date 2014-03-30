@@ -1,4 +1,9 @@
-# python-r1	old	status	short-code
+# python-r1	old-eclass	status	short-code
+#
+# python-r1: python-r1 eclass implementation name
+# old-eclass: python.eclass implementation name (null if not supported)
+# status: dead, old, supported, current, experimental, future
+# short-code: short string used in tabular output
 
 python2_4	2.4	dead	2.4
 python2_5	2.5	dead	2.5
@@ -8,15 +13,15 @@ python3_0	3.0	dead	3.0
 python3_1	3.1	dead	3.1
 python3_2	3.2	current	3.2
 python3_3	3.3	supported	3.3
-python3_4	3.4	experimental	3.4
-python3_5	3.5	future	3.5
+python3_4		experimental	3.4
+python3_5		future	3.5
 
 pypy1_8	2.7-pypy-1.8	dead	p1.8
 pypy1_9	2.7-pypy-1.9	dead	p1.9
 pypy2_0	2.7-pypy-2.0	supported	p2.0
-pypy	2.7-pypy-*	experimental	pypy
+pypy		experimental	pypy
 
-pypy3	3.*-pypy-*	future	pypy3
+pypy3		future	pypy3
 
 jython2_5	2.5-jython	dead	j2.5
 jython2_7	2.7-jython	experimental	j2.7
