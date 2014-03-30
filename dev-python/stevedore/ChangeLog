@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.13 2014/03/01 02:13:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.14 2014/03/30 04:29:19 prometheanfire Exp $
+
+*stevedore-0.15 (30 Mar 2014)
+
+  30 Mar 2014; Matthew Thode <prometheanfire@gentoo.org> +stevedore-0.15.ebuild:
+  new bump
 
 *stevedore-0.14.1 (01 Mar 2014)
 
