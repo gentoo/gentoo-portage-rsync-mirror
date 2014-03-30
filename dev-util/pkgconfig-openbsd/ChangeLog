@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pkgconfig-openbsd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.14 2013/05/07 14:01:46 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.15 2014/03/30 11:11:13 mgorny Exp $
+
+*pkgconfig-openbsd-20130507-r1 (30 Mar 2014)
+
+  30 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  +pkgconfig-openbsd-20130507-r1.ebuild:
+  Enable multilib support. Install to proper perl libdir.
 
   07 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -pkgconfig-openbsd-20130225.ebuild:
@@ -70,4 +76,3 @@
   16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   +pkgconfig-openbsd-20120116.ebuild:
   Initial commit.
-

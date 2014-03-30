@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-googletalk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-googletalk/ChangeLog,v 1.14 2014/03/24 19:44:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-googletalk/ChangeLog,v 1.15 2014/03/30 11:04:43 swift Exp $
+
+  30 Mar 2014; Sven Vermeulen <swift@gentoo.org> selinux-googletalk-9999.ebuild:
+  Add USE=alsa support to policy
 
   24 Mar 2014; Sven Vermeulen <swift@gentoo.org>
   -selinux-googletalk-2.20120725-r11.ebuild,
