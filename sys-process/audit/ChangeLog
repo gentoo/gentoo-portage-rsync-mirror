@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/audit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.93 2013/03/03 10:25:39 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.94 2014/03/30 14:06:53 pacho Exp $
+
+*audit-2.2.2-r1 (30 Mar 2014)
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> +audit-2.2.2-r1.ebuild:
+  Install systemd unit files instead of not used rc/sysconfig fedora stuff that
+  was being manually removed at install phase (#503374 by Reuben Martin)
 
   03 Mar 2013; Mike Frysinger <vapier@gentoo.org> audit-2.1.3-r1.ebuild,
   audit-2.2.2.ebuild:

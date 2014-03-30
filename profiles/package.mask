@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15522 2014/03/29 21:36:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15523 2014/03/30 14:22:45 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -321,10 +321,6 @@ media-gfx/kgraphviewer
 # me know such that we can continue to keep it around. Guess nobody even still
 # uses this package either, but that's for another day...
 =dev-java/jikes-1.22-r1
-
-# Mike Gilbert <floppym@gentoo.org> (17 Feb 2014)
-# Masked for testing.
-dev-lang/python:3.4
 
 # Eray Aslan <eras@gentoo.org> (17 Feb 2014)
 # Security mask - bug #492494 until
