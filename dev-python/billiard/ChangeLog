@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.19 2014/01/24 15:07:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.20 2014/03/30 09:16:24 pacho Exp $
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him (#398377)
 
 *billiard-3.3.0.14 (24 Jan 2014)
 

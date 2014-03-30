@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>iksaif@gentoo.org</email>
-		<name>Corentin Chary</name>
-	</maintainer>
 	<longdescription>setuptools_hg is a plugin for setuptools/distribute to enable it to find files under the Mercurial version control system.</longdescription>
 	<upstream>
 		<remote-id type="pypi">setuptools_hg</remote-id>

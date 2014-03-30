@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/form
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.5 2013/11/05 18:49:54 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.6 2014/03/30 09:03:24 grozin Exp $
+
+  30 Mar 2014; Andrey Grozin <grozin@gentoo.org> -form-4.0_p20120529.ebuild:
+  Cleaning old
 
 *form-4.1 (05 Nov 2013)
 

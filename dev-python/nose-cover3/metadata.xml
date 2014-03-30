@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>iksaif@gentoo.org</email>
-		<name>Corentin Chary</name>
-	</maintainer>
 	<upstream>
 		<remote-id type="pypi">nose-cover3</remote-id>
 	</upstream>

@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<maintainer>
-		<email>iksaif@gentoo.org</email>
-		<name>Corentin Chary</name>
-	</maintainer>
-	<maintainer>
 		<email>sping@gentoo.org</email>
 		<name>Sebastian Pipping</name>
 	</maintainer>

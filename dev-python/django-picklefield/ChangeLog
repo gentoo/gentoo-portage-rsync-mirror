@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-picklefield
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-picklefield/ChangeLog,v 1.4 2013/12/06 06:05:36 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-picklefield/ChangeLog,v 1.5 2014/03/30 09:18:17 pacho Exp $
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him (#398377)
 
 *django-picklefield-0.3.1 (06 Dec 2013)
 

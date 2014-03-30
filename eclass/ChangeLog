@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1187 2014/03/30 08:41:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1189 2014/03/30 09:14:56 swift Exp $
+
+  30 Mar 2014; Sven Vermeulen <swift@gentoo.org> selinux-policy-2.eclass:
+  Add support for USE triggered policy decisions
+
+  30 Mar 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
+  Sync with kde overlay. Raise QT_MINIMAL to latest stable and simplify Qt deps
+  by Michael Palimaka <kensington@gentoo.org>. Add kde-workspace 4.11.8
+  SRC_URI.
 
   30 Mar 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Support rewriting symlinks in MULTILIB_CHOST_TOOLS, bug #506062.

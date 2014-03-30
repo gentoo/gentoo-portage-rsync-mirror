@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.249 2014/03/29 22:07:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.250 2014/03/30 09:28:17 grozin Exp $
+
+  30 Mar 2014; Andrey Grozin <grozin@gentoo.org> +use.stable.mask:
+  Masking gcl
 
   29 Mar 2014; Michał Górny <mgorny@gentoo.org> use.mask, +x32/use.mask:
   Restore abi_x86_x32 mask since the relevant ABI is not in MULTILIB_ABIS and

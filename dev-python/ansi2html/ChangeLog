@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ansi2html
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.14 2014/01/08 04:58:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.15 2014/03/30 09:15:50 pacho Exp $
+
+  30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him (#398377)
 
 *ansi2html-1.0.6 (08 Jan 2014)
 

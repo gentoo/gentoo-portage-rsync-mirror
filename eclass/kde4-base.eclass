@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.133 2014/03/05 02:12:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.134 2014/03/30 09:13:52 johu Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -200,7 +200,7 @@ esac
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Determine version of qt we enforce as minimal for the package.
-QT_MINIMAL="${QT_MINIMAL:-4.8.0}"
+QT_MINIMAL="${QT_MINIMAL:-4.8.5}"
 
 # Declarative dependencies
 qtdeclarativedepend="
@@ -288,10 +288,8 @@ kdecommondepend="
 	>=dev-qt/qt3support-${QT_MINIMAL}:4[accessibility]
 	>=dev-qt/qtcore-${QT_MINIMAL}:4[qt3support,ssl]
 	>=dev-qt/qtdbus-${QT_MINIMAL}:4
-	|| (
-		( >=dev-qt/qtgui-4.8.5:4[accessibility,dbus(+)] dev-qt/designer:4[-phonon] )
-		<dev-qt/qtgui-4.8.5:4[accessibility,dbus(+)]
-	)
+	>=dev-qt/designer-${QT_MINIMAL}:4[-phonon]
+	>=dev-qt/qtgui-${QT_MINIMAL}:4[accessibility,dbus(+)]
 	>=dev-qt/qtscript-${QT_MINIMAL}:4
 	>=dev-qt/qtsql-${QT_MINIMAL}:4[qt3support]
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
@@ -444,6 +442,9 @@ _calculate_src_uri() {
 				4.11.7)
 					# Part of 4.12 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/4.12.3/src/${_kmname_pv}.tar.xz" ;;
+				4.11.8)
+					# Part of 4.12 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/4.12.4/src/${_kmname_pv}.tar.xz" ;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.xz" ;;
