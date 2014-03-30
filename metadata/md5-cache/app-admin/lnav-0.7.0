@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure
+DEPEND=app-arch/bzip2 dev-db/sqlite:3 dev-libs/libpcre[cxx] sys-libs/ncurses[unicode?] sys-libs/readline sys-libs/zlib
+DESCRIPTION=A curses-based tool for viewing and analyzing log files
+EAPI=5
+HOMEPAGE=http://lnav.org
+IUSE=unicode
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=app-arch/bzip2 dev-db/sqlite:3 dev-libs/libpcre[cxx] sys-libs/ncurses[unicode?] sys-libs/readline sys-libs/zlib
+SLOT=0
+SRC_URI=https://github.com/tstack/lnav/releases/download/v0.7.0/lnav-0.7.0.tar.gz
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=aac5c3d0e32259ac3b9f1b1430fdeab7
