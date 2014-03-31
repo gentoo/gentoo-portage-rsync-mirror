@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0-r1.ebuild,v 1.5 2013/09/05 19:22:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0-r1.ebuild,v 1.6 2014/03/31 16:48:09 mgorny Exp $
 
 EAPI="4"
 
@@ -26,7 +26,8 @@ COMMON_DEP="
 	latex? ( dev-java/hoteqn:0 )
 	pdf? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 )
 	svg? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 )"
-DEPEND=">=virtual/jdk-1.4
+DEPEND="dev-lang/python
+	>=virtual/jdk-1.4
 	pdf? ( dev-java/avalon-framework:4.2 )
 	svg? ( dev-java/avalon-framework:4.2 )
 	${COMMON_DEP}"
@@ -34,6 +35,33 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${PN}"
+
+# Moved from the eclass to clean it up from python and this ebuild is
+# the last consumer. Additionally, the newer version no longer requires
+# it so it will die along with this one.
+java-ant_remove-taskdefs() {
+	debug-print-function ${FUNCNAME} $*
+	local task_name
+	if [[ "${1}" == --name ]]; then
+		task_name="${2}"
+		shift 2
+	fi
+	local file="${1:-build.xml}"
+	echo "Removing taskdefs from ${file}"
+	python <<EOF
+import sys
+from xml.dom.minidom import parse
+dom = parse("${file}")
+for elem in dom.getElementsByTagName('taskdef'):
+	if (len("${task_name}") == 0 or elem.getAttribute("name") == "${task_name}"):
+		elem.parentNode.removeChild(elem)
+		elem.unlink()
+f = open("${file}", "w")
+dom.writexml(f)
+f.close()
+EOF
+	[[ $? != 0 ]] && die "Removing taskdefs failed"
+}
 
 java_prepare() {
 	# someone got it all wrong (set/unset vs. bool)

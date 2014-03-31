@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare setup
-DEPEND=dev-java/ant-core:0 dev-java/xerces:2 >=virtual/jdk-1.4 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+DEPEND=dev-java/ant-core:0 dev-java/xerces:2 >=virtual/jdk-1.4 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=Ant-tasks to compile various source languages and produce executables, shared and static libraries
 EAPI=4
 HOMEPAGE=http://ant-contrib.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-java/ant-core:0 dev-java/xerces:2 >=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=mirror://sourceforge/ant-contrib/ant-contrib/cpptasks-1.0-beta5/cpptasks-1.0b5.tar.gz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=5169c29685ca85aca980addb6121eb88

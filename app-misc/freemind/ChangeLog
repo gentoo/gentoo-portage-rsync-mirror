@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/freemind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.64 2014/03/22 16:42:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.65 2014/03/31 16:48:09 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> freemind-0.9.0-r1.ebuild:
+  Move the java-ant_remove-taskdefs function from the ebuild since this ebuild
+  is the last consumer of it. This is least-change way of fixing the eclass.
 
   22 Mar 2014; Tom Wijsman <TomWij@gentoo.org> freemind-1.0.0-r1.ebuild:
   Add missing die; for bug #501728, discovered by Chema Alonso (nimiux).

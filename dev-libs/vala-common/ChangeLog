@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vala-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.37 2014/02/22 21:21:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.38 2014/03/31 16:55:17 bicatali Exp $
+
+  31 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> vala-common-0.22.1.ebuild:
+  Keyword amd64-linux
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> vala-common-0.22.1.ebuild:
   Fix wrong commit, bug 502160

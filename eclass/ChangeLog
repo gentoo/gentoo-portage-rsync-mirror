@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1190 2014/03/31 15:32:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1191 2014/03/31 16:48:51 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> java-ant-2.eclass:
+  Ban the java-ant_remove-taskdefs() function and remove Python dependency, bug
+  #479838.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Revert the introduction of ABI_PPC due to a lot of breakage, bug #506298 to
