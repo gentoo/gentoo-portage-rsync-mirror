@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.159 2014/03/30 03:39:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.160 2014/03/31 17:14:12 maksbotan Exp $
+
+*awesome-3.5.3 (31 Mar 2014)
+
+  31 Mar 2014; Maxim Koltsov <maksbotan@gentoo.org> +awesome-3.5.3.ebuild,
+  +files/awesome-xsession.patch:
+  Bump to 3.5.3, update lgi dependency, add patch for desktop file, bug #506212.
+  Thanks to Bombino <teknocratdefunct@riseup.net>.
 
   30 Mar 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix e-mail address.
