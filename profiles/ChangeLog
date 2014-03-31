@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8763 2014/03/31 12:01:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8766 2014/03/31 22:16:39 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Mar 2014; Tom Wijsman <TomWij@gentoo.org> hardened/linux/package.mask:
+  [QA] Remove obsolete hardened gcc-4.4.2 mask.
+
+  31 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  -targets/desktop/kde/package.mask:
+  [QA] Remove obsolete KDE broken NVIDIA drivers sigprocmask mask.
+
+  31 Mar 2014; Tom Wijsman <TomWij@gentoo.org> uclibc/ppc/package.use.mask:
+  [QA] Cleaned up uclibc/ppc/package.use.mask and removed obsolete
+  ibm-jdk-bin-1.5 mask.
 
   31 Mar 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Prevent users from switching JDK / JRE implementation.
