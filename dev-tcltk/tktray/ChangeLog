@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.9 2014/03/29 06:09:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.10 2014/03/31 02:03:06 mrueg Exp $
+
+  31 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -tktray-1.1.ebuild:
+  Cleanup old.
 
   29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> tktray-1.1-r1.ebuild:
   Stable for x86, wrt bug #503942
