@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix-logwatch/postfix-logwatch-1.40.00.ebuild,v 1.1 2013/12/20 00:02:07 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix-logwatch/postfix-logwatch-1.40.00.ebuild,v 1.2 2014/03/31 14:12:58 nimiux Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/logreporters/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 # >sys-apps/logwatch-7.4.0 ships our logwatch scripts and will
 # thus obsolete this use flag.
