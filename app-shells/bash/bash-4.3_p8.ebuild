@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3-r3.ebuild,v 1.1 2014/03/28 02:10:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p8.ebuild,v 1.1 2014/03/31 07:00:51 polynomial-c Exp $
 
 EAPI="4"
 
@@ -83,13 +83,8 @@ src_prepare() {
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
 
-	epatch "${FILESDIR}"/${P}-debug-trap.patch
-	epatch "${FILESDIR}"/${P}-jobs-exit.patch
-	epatch "${FILESDIR}"/${P}-parse-ansi-expand.patch
-	epatch "${FILESDIR}"/${P}-pcomplete-dequote.patch
-	epatch "${FILESDIR}"/${P}-extglob-skipname.patch
-	epatch "${FILESDIR}"/${P}-compound-array-empty-value.patch
-	epatch "${FILESDIR}"/${P}-input-line-realloc.patch
+	epatch "${FILESDIR}"/${PN}-4.3-pcomplete-dequote.patch
+	epatch "${FILESDIR}"/${PN}-4.3-input-line-realloc.patch
 
 	epatch_user
 }

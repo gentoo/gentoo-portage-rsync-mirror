@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.198 2014/03/28 19:04:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.199 2014/03/31 06:59:51 polynomial-c Exp $
+
+*readline-6.3_p3 (31 Mar 2014)
+
+  31 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -readline-6.3-r4.ebuild,
+  +readline-6.3_p3.ebuild, -files/readline-6.3-dispatch-multikey.patch,
+  -files/readline-6.3-vi-last.patch:
+  Bump to latest official patch release.
 
 *readline-6.3-r4 (28 Mar 2014)
 

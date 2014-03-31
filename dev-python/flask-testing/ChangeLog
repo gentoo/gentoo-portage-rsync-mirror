@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-testing
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/ChangeLog,v 1.4 2013/09/12 20:59:29 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/ChangeLog,v 1.5 2014/03/31 06:44:41 patrick Exp $
+
+*flask-testing-0.4.1 (31 Mar 2014)
+
+  31 Mar 2014; Patrick Lauer <patrick@gentoo.org> +flask-testing-0.4.1.ebuild:
+  Bump
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> flask-testing-0.4.ebuild:
   Remove dep on virtual/python-json. JSON is now built-in in all supported

@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.358 2014/03/28 02:10:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.359 2014/03/31 07:00:51 polynomial-c Exp $
+
+*bash-4.3_p8 (31 Mar 2014)
+
+  31 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3-r3.ebuild,
+  +bash-4.3_p8.ebuild, -files/bash-4.3-compound-array-empty-value.patch,
+  -files/bash-4.3-debug-trap.patch, -files/bash-4.3-extglob-skipname.patch,
+  -files/bash-4.3-jobs-exit.patch, -files/bash-4.3-parse-ansi-expand.patch:
+  Bump to latest official patch release.
 
 *bash-4.3-r3 (28 Mar 2014)
 
