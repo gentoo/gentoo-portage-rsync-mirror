@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openpgm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.26 2014/03/30 20:30:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.27 2014/03/31 12:17:43 djc Exp $
+
+  31 Mar 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Hand over maintainership to jlec and qnikst.
 
   30 Mar 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove outdated maintainer information.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15524 2014/03/30 18:53:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15525 2014/03/31 12:01:43 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Tom Wijsman <TomWij@gentoo.org> (31 Mar 2014)
+# Prevent users from switching JDK / JRE implementation.
+#
+# Unmask this if you want to upgrade or switch to Oracle JDK / JRE 1.8.
+>=virtual/jdk-1.8
+>=virtual/jre-1.8
+
 # Luca Barbato <lu_zero@gentoo.org> (30 Mar 2014)
 # Current stable for upstream, pending a tinderbox run.
 ~media-video/libav-10
-
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280

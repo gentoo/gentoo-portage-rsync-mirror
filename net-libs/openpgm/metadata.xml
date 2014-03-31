@@ -2,8 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>djc@gentoo.org</email>
-    <name>Dirkjan Ochtman</name>
+    <email>qnikst@gentoo.org</email>
+    <name>Alexander Vershilov</name>
+  </maintainer>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
   </maintainer>
   <upstream>
     <remote-id type="google-code">openpgm</remote-id>
