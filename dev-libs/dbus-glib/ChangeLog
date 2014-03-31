@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.149 2014/03/20 08:46:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.150 2014/03/31 05:26:13 ssuominen Exp $
+
+  31 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> dbus-glib-0.102.ebuild:
+  Install missing NEWS file wrt http://cgit.freedesktop.org/dbus/dbus-
+  glib/commit/?id=e1f1926c6b67726206c4c199781831e82553aae9
 
   20 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> dbus-glib-0.100.2-r1.ebuild:
   ppc/ppc64/sparc stable wrt bug #496628

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.102.ebuild,v 1.2 2014/02/12 16:48:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.102.ebuild,v 1.3 2014/03/31 05:26:12 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib-minimal
@@ -26,8 +26,7 @@ RDEPEND="${CDEPEND}
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 
-# NEWS file is obsolete
-DOCS=( AUTHORS ChangeLog HACKING README )
+DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
 set_TBD() {
 	# out of sources build dir for make check
