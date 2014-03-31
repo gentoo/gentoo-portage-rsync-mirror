@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libextractor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.87 2013/03/02 21:44:22 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.88 2014/03/31 19:25:04 tomwij Exp $
+
+  31 Mar 2014; Tom Wijsman <TomWij@gentoo.org> libextractor-1.0.1.ebuild:
+  [QA] Make pkcrack blocker less strict as newer revision moves the file away,
+  for bug #247394.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> libextractor-1.0.1.ebuild:
   Move Qt dependencies to the new category

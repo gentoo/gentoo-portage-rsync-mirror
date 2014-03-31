@@ -4,7 +4,6 @@
 <maintainer>
   <email>jer@gentoo.org</email>
 </maintainer>
-<longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
 <use>
 	<flag name='X'>Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries</flag>
 	<flag name='pax_kernel'>PaX patches from the PaX project</flag> 

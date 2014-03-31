@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-1.0.1.ebuild,v 1.6 2013/03/02 21:44:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-1.0.1.ebuild,v 1.7 2014/03/31 19:25:04 tomwij Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -48,7 +48,7 @@ RDEPEND="app-text/iso-codes
 		media-libs/libvorbis
 		)
 	zlib? ( sys-libs/zlib )
-	!app-crypt/pkcrack
+	!<app-crypt/pkcrack-1.2.2-r1
 	!sci-biology/glimmer
 	!sci-chemistry/pdb-extract"
 DEPEND="${RDEPEND}
