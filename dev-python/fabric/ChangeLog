@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.41 2014/01/08 05:21:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.42 2014/03/31 08:31:30 patrick Exp $
+
+*fabric-1.8.2 (31 Mar 2014)
+
+  31 Mar 2014; Patrick Lauer <patrick@gentoo.org> +fabric-1.8.2.ebuild:
+  Bump
 
 *fabric-1.8.1 (08 Jan 2014)
 
