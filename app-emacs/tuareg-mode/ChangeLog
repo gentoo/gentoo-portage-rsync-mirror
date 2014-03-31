@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.42 2014/02/13 21:23:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.43 2014/03/31 11:23:00 nimiux Exp $
+
+  31 Mar 2014; Chema Alonso <nimiux@gentoo.org> tuareg-mode-2.0.7.ebuild:
+  Stable for amd64 wrt bug #504562
 
 *tuareg-mode-2.0.7 (13 Feb 2014)
 
