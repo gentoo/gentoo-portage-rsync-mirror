@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo+/redo+-1.19.ebuild,v 1.1 2014/02/13 20:46:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo+/redo+-1.19.ebuild,v 1.2 2014/03/31 11:33:59 nimiux Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.el.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha amd64 ~x86"
 
 SITEFILE="50${PN}-gentoo.el"
 DOC_CONTENTS="Add \"(require 'redo+)\" to your ~/.emacs file

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/redo+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo+/ChangeLog,v 1.1 2014/02/13 20:46:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo+/ChangeLog,v 1.2 2014/03/31 11:33:59 nimiux Exp $
+
+  31 Mar 2014; Chema Alonso <nimiux@gentoo.org> redo+-1.19.ebuild:
+  Stable for amd64 wrt bug #504564
 
 *redo+-1.19 (13 Feb 2014)
 
