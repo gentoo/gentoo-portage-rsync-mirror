@@ -1,11 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2013.09.ebuild,v 1.1 2013/09/24 07:36:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.03.01.ebuild,v 1.1 2014/03/31 06:17:20 patrick Exp $
 
-EAPI=3
+EAPI=5
 
-PARROT_VERSION="4.4.0"
-NQP_VERSION="${PV}"
+PARROT_VERSION="5.9.0"
+# hack for this specific version, don't copy to future releases
+NQP_VERSION="${PV/01/}"
 
 inherit eutils multilib
 
@@ -16,10 +17,10 @@ SRC_URI="http://rakudo.org/downloads/${PN}/${P}.tar.gz"
 LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc +parrot java"
 
-RDEPEND=">=dev-lang/parrot-${PARROT_VERSION}[unicode]
-	>=dev-lang/nqp-${NQP_VERSION}"
+RDEPEND=">=dev-lang/parrot-${PARROT_VERSION}:=[unicode]
+	>=dev-lang/nqp-${NQP_VERSION}[parrot?,java?]"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
@@ -28,7 +29,9 @@ src_prepare() {
 }
 
 src_configure() {
-	perl Configure.pl || die
+	use parrot && myconf+="parrot,"
+	use java && myconf+="jvm,"
+	perl Configure.pl --backends=${myconf} --prefix=/usr || die
 }
 
 src_test() {
@@ -36,9 +39,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die
+	emake -j1 DESTDIR="${ED}" install || die
 
-	dodoc CREDITS README docs/ChangeLog docs/ROADMAP || die
+	dodoc CREDITS README.md docs/ChangeLog docs/ROADMAP || die
 
 	if use doc; then
 		dohtml -A svg docs/architecture.html docs/architecture.svg || die
