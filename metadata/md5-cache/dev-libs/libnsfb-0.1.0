@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=sdl? ( media-libs/libsdl[static-libs?] amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-sdl[development] ) ) ) vnc? ( net-libs/libvncserver[static-libs?] ) wayland? ( dev-libs/wayland[static-libs?] ) xcb? ( x11-libs/libxcb[static-libs?,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?] x11-libs/xcb-util[static-libs?] x11-libs/xcb-util-image[static-libs?] x11-libs/xcb-util-keysyms[static-libs?] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) virtual/pkgconfig
+DEPEND=sdl? ( media-libs/libsdl[static-libs?] amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-sdl[development] ) ) ) vnc? ( net-libs/libvncserver[static-libs?] ) wayland? ( dev-libs/wayland[static-libs?] ) xcb? ( x11-libs/libxcb[static-libs?,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] x11-libs/xcb-util[static-libs?] x11-libs/xcb-util-image[static-libs?] x11-libs/xcb-util-keysyms[static-libs?] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) virtual/pkgconfig
 DESCRIPTION=framebuffer abstraction library, written in C
 EAPI=5
 HOMEPAGE=http://www.netsurf-browser.org/projects/libnsfb/
-IUSE=sdl test vnc wayland xcb abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 debug static-libs
+IUSE=sdl test vnc wayland xcb abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 debug static-libs
 KEYWORDS=~amd64 ~arm
 LICENSE=MIT
-RDEPEND=sdl? ( media-libs/libsdl[static-libs?] amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-sdl[development] ) ) ) vnc? ( net-libs/libvncserver[static-libs?] ) wayland? ( dev-libs/wayland[static-libs?] ) xcb? ( x11-libs/libxcb[static-libs?,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?] x11-libs/xcb-util[static-libs?] x11-libs/xcb-util-image[static-libs?] x11-libs/xcb-util-keysyms[static-libs?] )
+RDEPEND=sdl? ( media-libs/libsdl[static-libs?] amd64? ( abi_x86_32? ( app-emulation/emul-linux-x86-sdl[development] ) ) ) vnc? ( net-libs/libvncserver[static-libs?] ) wayland? ( dev-libs/wayland[static-libs?] ) xcb? ( x11-libs/libxcb[static-libs?,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] x11-libs/xcb-util[static-libs?] x11-libs/xcb-util-image[static-libs?] x11-libs/xcb-util-keysyms[static-libs?] )
 REQUIRED_USE=amd64? ( abi_x86_32? ( !vnc !wayland !xcb ) )
 SLOT=0
 SRC_URI=http://download.netsurf-browser.org/libs/releases/libnsfb-0.1.0-src.tar.gz http://download.netsurf-browser.org/libs/releases/buildsystem-1.0.tar.gz -> netsurf-buildsystem-1.0.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	8296d871e2a01cfc8b92c7efa736f6ba	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	netsurf	0b3fe194c8a4d60fe4955f30d31a9c1f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	40d23a88af9f6bf89065ccebc80b653e	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	netsurf	0b3fe194c8a4d60fe4955f30d31a9c1f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ae640bea470f8fe46bc72656f883ff22
