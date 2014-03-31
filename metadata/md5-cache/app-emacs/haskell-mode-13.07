@@ -3,10 +3,10 @@ DEPEND=>=virtual/emacs-21
 DESCRIPTION=Mode for editing (and running) Haskell programs in Emacs
 EAPI=5
 HOMEPAGE=http://projects.haskell.org/haskellmode-emacs/ http://www.haskell.org/haskellwiki/Emacs#Haskell-mode
-KEYWORDS=~amd64 ~ppc ~sparc ~x86
+KEYWORDS=amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-3+ FDL-1.2+
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=https://github.com/haskell/haskell-mode/archive/v13.07.tar.gz -> haskell-mode-13.07.tar.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=09cb733ed7b47353f5ba76841c46b070
+_md5_=686e957cd7e85b991dd7f02efface20e

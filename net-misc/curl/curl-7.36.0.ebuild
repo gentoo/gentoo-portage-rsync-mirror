@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.36.0.ebuild,v 1.1 2014/03/27 12:52:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.36.0.ebuild,v 1.2 2014/03/31 13:42:39 blueness Exp $
 
 EAPI="5"
 
-inherit autotools eutils prefix
+PYTHON_COMPAT=( python2_6 python2_7 )
+inherit autotools eutils prefix python-any-r1
 
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/"
@@ -15,9 +16,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="adns idn ipv6 kerberos ldap metalink rtmp ssh ssl static-libs test threads"
 IUSE="${IUSE} curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl"
-
-#lead to lots of false negatives, bug #285669
-RESTRICT="test"
 
 RDEPEND="ldap? ( net-nds/openldap )
 	ssl? (
@@ -58,6 +56,7 @@ RDEPEND="ldap? ( net-nds/openldap )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? (
+		${PYTHON_DEPS}
 		sys-apps/diffutils
 		dev-lang/perl
 	)"
@@ -80,11 +79,18 @@ REQUIRED_USE="
 DOCS=( CHANGES README docs/FEATURES docs/INTERNALS \
 	docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE)
 
+pkg_setup() {
+	if use test ; then
+		python-any-r1_pkg_setup
+	fi
+}
+
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-7.30.0-prefix.patch \
 		"${FILESDIR}"/${PN}-respect-cflags-3.patch \
 		"${FILESDIR}"/${PN}-fix-gnutls-nettle.patch
+
 	sed -i '/LD_LIBRARY_PATH=/d' configure.ac || die #382241
 
 	epatch_user

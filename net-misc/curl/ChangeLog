@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.342 2014/03/27 12:52:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.343 2014/03/31 13:42:39 blueness Exp $
+
+  31 Mar 2014; Anthony G. Basile <blueness@gentoo.org> curl-7.36.0.ebuild:
+  Enable tests, bug #285669
 
 *curl-7.36.0 (27 Mar 2014)
 
