@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mozrunner
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.32 2013/12/17 05:52:25 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.33 2014/03/31 21:16:08 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> mozrunner-5.18-r1.ebuild,
+  mozrunner-5.23.ebuild, mozrunner-5.24.ebuild, mozrunner-5.26.ebuild,
+  mozrunner-5.27.ebuild, mozrunner-5.28.ebuild:
+  Add support for the new PyPy slotting.
 
 *mozrunner-5.28 (17 Dec 2013)
 

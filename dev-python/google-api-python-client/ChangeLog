@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/google-api-python-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-api-python-client/ChangeLog,v 1.4 2014/02/24 22:33:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-api-python-client/ChangeLog,v 1.5 2014/03/31 21:01:18 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  google-api-python-client-1.1.ebuild:
+  Add support for the new PyPy slotting.
 
   24 Feb 2014; Mike Frysinger <vapier@gentoo.org>
   google-api-python-client-1.1.ebuild:

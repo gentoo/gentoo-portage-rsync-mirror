@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.83 2014/03/11 06:41:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.84 2014/03/31 21:23:38 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pypax-0.8.1-r1.ebuild,
+  pypax-0.8.3.ebuild, pypax-0.8.4.ebuild:
+  Add support for the new PyPy slotting.
 
   11 Mar 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml,
   pypax-0.8.4.ebuild:

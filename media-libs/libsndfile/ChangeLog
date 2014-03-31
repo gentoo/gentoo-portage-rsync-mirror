@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.144 2014/03/28 02:56:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.145 2014/03/31 21:10:20 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> libsndfile-1.0.25-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> libsndfile-1.0.25-r1.ebuild:
   Stable for HPPA (bug #499954).

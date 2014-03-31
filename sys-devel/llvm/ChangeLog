@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.182 2014/03/23 11:04:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.183 2014/03/31 21:21:24 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-3.3-r3.ebuild, llvm-3.4.ebuild:
+  Add support for the new PyPy slotting.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> llvm-3.3-r3.ebuild:
   Stable for ppc64, wrt bug #491018

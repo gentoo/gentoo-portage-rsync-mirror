@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.2 2014/03/12 09:14:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.3 2014/03/31 21:24:18 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
 inherit check-reqs eutils multilib multiprocessing pax-utils \
 	python-any-r1 toolchain-funcs versionator
 

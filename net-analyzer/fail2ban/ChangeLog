@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.132 2014/03/20 15:40:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.133 2014/03/31 21:12:09 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> fail2ban-0.9.0-r1.ebuild:
+  Add support for the new PyPy slotting.
 
 *fail2ban-0.8.13 (20 Mar 2014)
 

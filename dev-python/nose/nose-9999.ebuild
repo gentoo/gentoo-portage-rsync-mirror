@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.7 2014/01/18 12:19:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.8 2014/03/31 21:19:17 mgorny Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EGIT_REPO_URI="git://github.com/nose-devs/${PN}.git
 inherit git-2
 #endif
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
 inherit distutils-r1 eutils
 
 DESCRIPTION="A unittest extension offering automatic test suite discovery and easy test authoring"

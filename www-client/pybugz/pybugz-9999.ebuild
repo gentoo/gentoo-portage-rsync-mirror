@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.15 2013/10/09 23:10:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.16 2014/03/31 21:24:33 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
 PYTHON_REQ_USE="readline(+)"
 
 if [ "${PV}" = "9999" ]; then

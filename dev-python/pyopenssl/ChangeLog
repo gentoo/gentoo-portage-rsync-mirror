@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.120 2014/03/25 07:27:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.121 2014/03/31 21:22:01 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyopenssl-0.13.1-r1.ebuild,
+  pyopenssl-0.13.1.ebuild, pyopenssl-0.14.ebuild:
+  Add support for the new PyPy slotting.
 
   25 Mar 2014; Ian Delaney <idella4@gentoo.org> -pyopenssl-0.14-r1.ebuild,
   pyopenssl-0.14.ebuild:

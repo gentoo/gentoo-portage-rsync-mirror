@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.112 2013/10/09 23:10:25 williamh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.113 2014/03/31 21:24:33 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pybugz-9999.ebuild:
+  Add support for the new PyPy slotting.
 
   09 Oct 2013; William Hubbs <williamh@gentoo.org> pybugz-9999.ebuild:
   migrate to git-r3

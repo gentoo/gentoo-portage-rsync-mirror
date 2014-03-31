@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-stdnum
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/ChangeLog,v 1.1 2014/03/31 21:16:47 cedk Exp $
+
+*python-stdnum-0.9 (31 Mar 2014)
+
+  31 Mar 2014; Cédric Krier <cedk@gentoo.org> +python-stdnum-0.9.ebuild,
+  +metadata.xml:
+  New ebuild for python-stdnum
+

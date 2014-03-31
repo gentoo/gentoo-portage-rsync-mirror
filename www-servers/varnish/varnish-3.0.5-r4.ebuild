@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r4.ebuild,v 1.1 2014/03/01 19:53:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r4.ebuild,v 1.2 2014/03/31 21:25:22 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
 
 inherit autotools-utils eutils systemd python-single-r1
 

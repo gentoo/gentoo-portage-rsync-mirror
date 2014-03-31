@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.60 2014/01/20 17:23:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.61 2014/03/31 21:03:55 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyxattr-0.5.2.ebuild,
+  pyxattr-9999.ebuild:
+  Add support for the new PyPy slotting.
 
   20 Jan 2014; Mike Gilbert <floppym@gentoo.org> -pyxattr-0.5.0-r1.ebuild,
   -pyxattr-0.5.0.ebuild, -pyxattr-0.5.1.ebuild:

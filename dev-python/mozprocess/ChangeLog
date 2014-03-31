@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mozprocess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprocess/ChangeLog,v 1.14 2014/01/28 08:44:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprocess/ChangeLog,v 1.15 2014/03/31 21:14:11 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> mozprocess-0.11-r1.ebuild,
+  mozprocess-0.13.ebuild, mozprocess-0.14.ebuild, mozprocess-0.15.ebuild:
+  Add support for the new PyPy slotting.
 
 *mozprocess-0.15 (28 Jan 2014)
 

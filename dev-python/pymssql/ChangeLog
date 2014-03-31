@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymssql
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.46 2013/09/06 14:56:58 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.47 2014/03/31 21:19:31 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pymssql-1.0.2-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pymssql-1.0.2-r1.ebuild:
   Stable for sparc, wrt bug #474198

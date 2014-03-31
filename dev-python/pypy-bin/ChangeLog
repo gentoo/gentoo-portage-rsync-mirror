@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.9 2014/03/30 20:57:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.10 2014/03/31 21:24:39 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.0.2-r1.ebuild,
+  pypy-bin-2.0.2.ebuild:
+  Add support for the new PyPy slotting.
 
 *pypy-bin-2.0.2-r1 (30 Mar 2014)
 

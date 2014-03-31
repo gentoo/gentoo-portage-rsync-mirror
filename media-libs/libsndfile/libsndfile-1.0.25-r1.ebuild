@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.10 2014/03/28 02:56:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.11 2014/03/31 21:10:20 mgorny Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
-PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
 inherit autotools-multilib flag-o-matic python-any-r1
 
 MY_P=${P/_pre/pre}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.17 2014/03/22 23:06:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.18 2014/03/31 21:03:53 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pycparser-2.09.1-r1.ebuild,
+  pycparser-2.10.ebuild:
+  Add support for the new PyPy slotting.
 
   22 Mar 2014; Markos Chandras <hwoarang@gentoo.org> pycparser-2.10.ebuild:
   Add ~mips. Bug #503094

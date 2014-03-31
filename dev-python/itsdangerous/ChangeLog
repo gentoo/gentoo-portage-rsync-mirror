@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/itsdangerous
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.8 2014/03/19 03:08:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.9 2014/03/31 21:22:36 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> itsdangerous-0.21.ebuild,
+  itsdangerous-0.22.ebuild, itsdangerous-0.23.ebuild:
+  Add support for the new PyPy slotting.
 
   19 Mar 2014; Ian Delaney <idella4@gentoo.org> itsdangerous-0.23.ebuild:
   fix test phase; rm un-needed dep nose, IUSE test, fixes Bug #503744 by an

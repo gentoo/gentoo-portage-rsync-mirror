@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.33 2014/03/02 09:40:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.34 2014/03/31 21:14:15 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> icalendar-3.3.ebuild,
+  icalendar-3.4.ebuild, icalendar-3.5.ebuild, icalendar-3.6.1.ebuild:
+  Add support for the new PyPy slotting.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> icalendar-3.5.ebuild:
   amd64 stable, bug #450172

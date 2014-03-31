@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/transmissionrpc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.10 2013/10/28 06:49:19 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.11 2014/03/31 21:14:24 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> transmissionrpc-0.10.ebuild,
+  transmissionrpc-0.11.ebuild, transmissionrpc-0.9.ebuild,
+  transmissionrpc-9999.ebuild:
+  Add support for the new PyPy slotting.
 
 *transmissionrpc-0.11 (28 Oct 2013)
 

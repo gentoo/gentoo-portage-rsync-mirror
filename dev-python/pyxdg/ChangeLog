@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.119 2014/03/26 07:45:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.120 2014/03/31 21:06:17 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyxdg-0.25-r1.ebuild,
+  pyxdg-0.25.ebuild:
+  Add support for the new PyPy slotting.
 
 *pyxdg-0.25-r1 (26 Mar 2014)
 

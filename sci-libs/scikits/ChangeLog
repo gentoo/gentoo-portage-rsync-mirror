@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scikits
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.6 2013/09/05 19:04:44 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.7 2014/03/31 21:19:10 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> scikits-0.1-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> scikits-0.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

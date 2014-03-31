@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.80 2014/02/25 18:27:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.81 2014/03/31 21:06:08 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pycups-1.9.63.ebuild,
+  pycups-1.9.66.ebuild:
+  Add support for the new PyPy slotting.
 
 *pycups-1.9.66 (25 Feb 2014)
 

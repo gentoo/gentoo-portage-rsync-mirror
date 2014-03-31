@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.39 2014/03/27 21:47:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.40 2014/03/31 21:03:29 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> subunit-0.0.10-r1.ebuild,
+  subunit-0.0.15-r1.ebuild, subunit-0.0.15.ebuild, subunit-0.0.16.ebuild,
+  subunit-0.0.18.ebuild:
+  Add support for the new PyPy slotting.
 
 *subunit-0.0.18 (27 Mar 2014)
 

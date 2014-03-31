@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.77 2014/03/30 20:39:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.78 2014/03/31 21:16:47 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> dulwich-0.9.4.ebuild,
+  dulwich-0.9.5.ebuild:
+  Add support for the new PyPy slotting.
 
   30 Mar 2014; Dirkjan Ochtman <djc@gentoo.org>
   -files/dulwich-0.8.0-darwin.patch:

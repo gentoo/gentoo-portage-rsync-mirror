@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare pretend setup test
-DEPEND=>=sys-libs/zlib-1.1.3 virtual/libffi virtual/libintl dev-libs/expat dev-libs/openssl bzip2? ( app-arch/bzip2 ) ncurses? ( sys-libs/ncurses ) sqlite? ( dev-db/sqlite:3 ) doc? ( dev-python/sphinx ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=virtual/pypy-2.0.2:2.0 )
+DEPEND=>=sys-libs/zlib-1.1.3 virtual/libffi virtual/libintl dev-libs/expat dev-libs/openssl bzip2? ( app-arch/bzip2 ) ncurses? ( sys-libs/ncurses ) sqlite? ( dev-db/sqlite:3 ) doc? ( dev-python/sphinx ) || ( >=dev-lang/python-2.7.5-r2:2.7 virtual/pypy:0= >=virtual/pypy-2.0.2:2.0 )
 DESCRIPTION=A fast, compliant alternative implementation of the Python language
 EAPI=5
 HOMEPAGE=http://pypy.org/
@@ -11,4 +11,4 @@ RDEPEND=>=sys-libs/zlib-1.1.3 virtual/libffi virtual/libintl dev-libs/expat dev-
 SLOT=0/2.2
 SRC_URI=mirror://bitbucket/pypy/pypy/downloads/pypy-2.2.1-src.tar.bz2
 _eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pax-utils	2424f959506320f5196de8f79fa05297	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ec4e4716c846259100cea8bc3e5684c1
+_md5_=3a62933d8429a4e117f39e0b41abc93c

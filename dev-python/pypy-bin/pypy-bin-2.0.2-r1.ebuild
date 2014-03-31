@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2-r1.ebuild,v 1.1 2014/03/30 20:57:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2-r1.ebuild,v 1.2 2014/03/31 21:24:39 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
 inherit eutils multilib pax-utils python-any-r1 versionator
 
 BINHOST="http://dev.gentoo.org/~mgorny/dist/${PN}"

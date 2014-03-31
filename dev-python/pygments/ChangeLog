@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.118 2014/03/21 14:58:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.119 2014/03/31 21:13:28 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pygments-1.5-r1.ebuild,
+  pygments-1.6-r1.ebuild, pygments-1.6.ebuild:
+  Add support for the new PyPy slotting.
 
 *pygments-1.6-r1 (21 Mar 2014)
 

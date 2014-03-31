@@ -1,6 +1,10 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.23 2014/03/04 20:15:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.24 2014/03/31 21:23:50 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> python-unittest2-1-r1.ebuild,
+  python-unittest2-1-r2.ebuild, python-unittest2-1.ebuild:
+  Add support for the new PyPy slotting.
 
   04 Mar 2014; Naohiro Aota <naota@gentoo.org> python-unittest2-1-r2.ebuild:
   Add ~x86-fbsd

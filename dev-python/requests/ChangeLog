@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.54 2014/02/06 06:38:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.55 2014/03/31 21:11:38 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> requests-1.2.2.ebuild,
+  requests-1.2.3.ebuild, requests-2.0.0.ebuild, requests-2.0.1.ebuild,
+  requests-2.1.0.ebuild, requests-2.2.0.ebuild, requests-2.2.1.ebuild:
+  Add support for the new PyPy slotting.
 
   06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> requests-2.2.1.ebuild:
   Keyword amd64-linux and x86-linux

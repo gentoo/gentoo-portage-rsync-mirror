@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.19 2014/03/19 14:54:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.20 2014/03/31 21:20:18 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> irc-8.5.1.ebuild,
+  irc-8.5.3.ebuild, irc-8.5.4.ebuild:
+  Add support for the new PyPy slotting.
 
   19 Mar 2014; Ian Delaney <idella4@gentoo.org> irc-8.5.4.ebuild:
   add missing dep sourced from Bug #503350 by W. King

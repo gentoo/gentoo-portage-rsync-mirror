@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.25 2013/09/05 18:47:17 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.26 2014/03/31 21:12:38 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> tlslite-0.4.3-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> tlslite-0.4.3-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

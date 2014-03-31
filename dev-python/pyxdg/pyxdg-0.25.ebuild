@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.25.ebuild,v 1.18 2013/10/12 18:47:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.25.ebuild,v 1.19 2014/03/31 21:06:16 mgorny Exp $
 
 EAPI=5
 
 # py3.3 removed due to nosetests
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
 inherit distutils-r1
 
 DESCRIPTION="A Python module to deal with freedesktop.org specifications"
