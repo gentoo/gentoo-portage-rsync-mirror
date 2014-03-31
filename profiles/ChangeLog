@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8761 2014/03/30 14:22:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8762 2014/03/30 23:04:13 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
+  arch/amd64/package.use.stable.mask, arch/x86/package.use.stable.mask,
+  -default/linux/amd64/13.0/package.use.stable.mask,
+  -default/linux/x86/13.0/package.use.stable.mask:
+  Move p.u.s.m masks from default/linux/{amd64,x86}/13.0/ to arch/{amd64,x86}/.
 
   30 Mar 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
   Drop mask on dev-lang/python:3.4.
