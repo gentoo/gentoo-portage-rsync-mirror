@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.14 2014/03/17 07:03:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.15 2014/03/31 09:49:55 patrick Exp $
+
+*glances-1.7.4 (31 Mar 2014)
+
+  31 Mar 2014; Patrick Lauer <patrick@gentoo.org> +glances-1.7.4.ebuild:
+  Bump
 
   17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
