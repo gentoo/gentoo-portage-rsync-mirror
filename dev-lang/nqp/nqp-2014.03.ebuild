@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.02.ebuild,v 1.3 2014/03/31 05:52:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.03.ebuild,v 1.1 2014/03/31 05:52:40 patrick Exp $
 
 EAPI=5
 
 inherit eutils multilib
 
-GITCRAP=f8a6106
+GITCRAP=94feb63
 PARROT_VERSION="5.9.0"
 
 DESCRIPTION="Not Quite Perl, a Perl 6 bootstrapping compiler"
@@ -20,7 +20,7 @@ IUSE="doc +parrot java moar"
 REQUIRED_USE="|| ( parrot java moar )"
 
 RDEPEND="parrot? ( >=dev-lang/parrot-${PARROT_VERSION}:=[unicode]
-                !=dev-lang/parrot-6.2.0 )
+		!=dev-lang/parrot-6.2.0 )
 	java? ( >=virtual/jre-1.7 )
 	moar? ( =dev-lang/moarvm-${PV} )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/multi_test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_test/ChangeLog,v 1.1 2014/02/13 11:03:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_test/ChangeLog,v 1.2 2014/03/31 05:59:54 graaff Exp $
+
+*multi_test-0.1.1 (31 Mar 2014)
+
+  31 Mar 2014; Hans de Graaff <graaff@gentoo.org> +multi_test-0.1.1.ebuild:
+  Version bump.
 
 *multi_test-0.0.3 (13 Feb 2014)
 
