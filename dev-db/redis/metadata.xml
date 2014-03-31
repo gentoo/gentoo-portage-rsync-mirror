@@ -12,9 +12,6 @@
     <email>lu_zero@gentoo.org</email>
   </maintainer>
   <maintainer>
-    <email>djc@gentoo.org</email>
-  </maintainer>
-  <maintainer>
     <email>bugs@bergstroem.nu</email>
     <name>Johan Bergström</name>
     <description>Proxy-Maintainer, assign bugs</description>
