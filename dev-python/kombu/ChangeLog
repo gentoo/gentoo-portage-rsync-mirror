@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.31 2014/03/30 09:19:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.32 2014/03/31 09:05:43 idella4 Exp $
+
+*kombu-3.0.14 (31 Mar 2014)
+
+  31 Mar 2014; Ian Delaney <idella4@gentoo.org> +kombu-3.0.14.ebuild,
+  -kombu-1.0.4-r1.ebuild, -kombu-1.0.4.ebuild, -kombu-2.4.10.ebuild,
+  metadata.xml:
+  bump; Add local IUSE flags msgpack, also to metadata.xml; sqs update deps, add
+  REQUIRED_USE conditions, update test phase, kind of fixes Bug #493810 by
+  Patrick, rm old
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him (#398377)
