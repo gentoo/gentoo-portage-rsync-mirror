@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.38 2014/03/12 05:03:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.39 2014/03/31 00:49:57 mrueg Exp $
+
+  30 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -ddccontrol-0.4.2-r1.ebuild,
+  -ddccontrol-0.4.2-r2.ebuild, -ddccontrol-0.4.2_p20130703.ebuild,
+  -files/ddccontrol-0.4.2-automake.patch,
+  -files/ddccontrol-0.4.2-no-ddcpci.patch,
+  -files/ddccontrol-0.4.2-pciutils-libz.patch,
+  -files/ddccontrol-0.4.2-support-fglrx.patch:
+  Cleanup old. Drop stable ppc keyword.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ddccontrol-0.4.2_p20140105.ebuild:
