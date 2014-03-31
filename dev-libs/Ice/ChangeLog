@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.33 2014/02/19 12:30:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.34 2014/03/31 20:38:16 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> Ice-3.5.1.ebuild:
+  Add support for the new PyPy slotting.
 
   19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -Ice-3.4.2.ebuild,
   -Ice-3.5.0-r1.ebuild:

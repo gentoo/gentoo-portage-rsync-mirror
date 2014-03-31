@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.173 2014/03/22 21:26:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.174 2014/03/31 20:58:37 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pytz-2012j.ebuild,
+  pytz-2013.9.ebuild, pytz-2013b.ebuild, pytz-2013d.ebuild,
+  pytz-2014.1.1.ebuild:
+  Add support for the new PyPy slotting.
 
 *pytz-2014.1.1 (22 Mar 2014)
 

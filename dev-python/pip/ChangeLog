@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.28 2014/03/03 19:24:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.29 2014/03/31 20:40:09 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pip-1.4.1.ebuild,
+  pip-1.5.2.ebuild, pip-1.5.4.ebuild, pip-1.5.ebuild:
+  Add support for the new PyPy slotting.
 
 *pip-1.5.4 (03 Mar 2014)
 

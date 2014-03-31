@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinxcontrib-issuetracker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/ChangeLog,v 1.21 2014/02/05 17:14:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/ChangeLog,v 1.22 2014/03/31 20:52:24 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  sphinxcontrib-issuetracker-0.11-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   05 Feb 2014; Michael Palimaka <kensington@gentoo.org>
   -sphinxcontrib-issuetracker-0.11.ebuild:

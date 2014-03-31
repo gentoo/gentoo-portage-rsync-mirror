@@ -1,6 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.92 2014/01/18 11:51:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.93 2014/03/31 20:36:42 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> asciidoc-8.6.8-r1.ebuild,
+  asciidoc-9999.ebuild:
+  Add support for the new PyPy slotting.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> asciidoc-8.6.5.ebuild,
   asciidoc-8.6.8-r1.ebuild, asciidoc-9999.ebuild:

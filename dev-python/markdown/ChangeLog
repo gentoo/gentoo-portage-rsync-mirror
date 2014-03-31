@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.49 2014/02/06 06:01:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.50 2014/03/31 20:54:31 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> markdown-2.2.1-r1.ebuild,
+  markdown-2.3.1.ebuild, markdown-2.3.ebuild:
+  Add support for the new PyPy slotting.
 
   06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> markdown-2.3.1.ebuild:
   Keyword amd64-linux and x86-linux

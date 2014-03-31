@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/argh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.15 2014/01/07 07:29:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.16 2014/03/31 20:55:57 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> argh-0.23.0-r1.ebuild,
+  argh-0.23.1.ebuild, argh-0.23.2.ebuild, argh-0.23.3.ebuild,
+  argh-0.24.1.ebuild:
+  Add support for the new PyPy slotting.
 
 *argh-0.24.1 (07 Jan 2014)
 

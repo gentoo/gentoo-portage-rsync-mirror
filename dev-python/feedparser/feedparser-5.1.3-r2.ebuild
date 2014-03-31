@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.1.3-r2.ebuild,v 1.1 2014/02/24 09:05:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.1.3-r2.ebuild,v 1.2 2014/03/31 20:43:44 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_{6,7},3_{2,3}} pypy2_0 )
+PYTHON_COMPAT=( python{2_{6,7},3_{2,3}} pypy pypy2_0 )
 
 inherit distutils-r1 eutils
 

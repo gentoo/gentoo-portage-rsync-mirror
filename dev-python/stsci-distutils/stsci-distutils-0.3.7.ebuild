@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.7.ebuild,v 1.1 2014/01/28 18:00:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.7.ebuild,v 1.2 2014/03/31 21:00:47 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
 MY_PN=${PN/-/.}
 MY_P=${MY_PN}-${PV}
 

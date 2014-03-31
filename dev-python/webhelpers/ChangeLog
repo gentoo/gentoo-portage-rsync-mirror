@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webhelpers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.15 2013/10/22 14:29:54 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.16 2014/03/31 20:39:53 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> webhelpers-1.3-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> webhelpers-1.3-r1.ebuild:
   Marked ~x64-macos, bug #487670

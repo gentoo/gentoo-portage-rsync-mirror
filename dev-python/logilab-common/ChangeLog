@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.135 2014/03/27 12:53:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.136 2014/03/31 20:49:34 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> logilab-common-0.60.1-r1.ebuild,
+  logilab-common-0.61.0.ebuild:
+  Add support for the new PyPy slotting.
 
 *logilab-common-0.60.1-r1 (27 Mar 2014)
 

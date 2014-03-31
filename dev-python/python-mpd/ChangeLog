@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.35 2014/03/22 18:07:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.36 2014/03/31 20:50:55 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> python-mpd-0.5.1.ebuild,
+  python-mpd-0.5.3.ebuild:
+  Add support for the new PyPy slotting.
 
 *python-mpd-0.5.3 (22 Mar 2014)
 

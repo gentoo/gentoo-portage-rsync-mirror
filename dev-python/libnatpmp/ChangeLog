@@ -1,4 +1,8 @@
 
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> libnatpmp-20120821-r1.ebuild,
+  libnatpmp-20130911.ebuild:
+  Add support for the new PyPy slotting.
+
   13 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
   -libnatpmp-20110715.ebuild, -libnatpmp-20120821.ebuild:
   Remove older unstables

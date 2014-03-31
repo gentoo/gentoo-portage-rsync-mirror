@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libcloud
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/ChangeLog,v 1.14 2014/02/26 23:12:17 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/ChangeLog,v 1.15 2014/03/31 20:38:41 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> libcloud-0.12.4-r1.ebuild,
+  libcloud-0.13.2.ebuild, libcloud-0.14.1.ebuild:
+  Add support for the new PyPy slotting.
 
 *libcloud-0.14.1 (26 Feb 2014)
 

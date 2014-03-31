@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.165 2014/03/28 13:49:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.166 2014/03/31 20:52:04 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> py-1.4.12-r1.ebuild,
+  py-1.4.13.ebuild, py-1.4.14.ebuild, py-1.4.15.ebuild, py-1.4.17.ebuild,
+  py-1.4.18.ebuild, py-1.4.20.ebuild:
+  Add support for the new PyPy slotting.
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> py-1.4.20.ebuild:
   Stable for HPPA (bug #506042).

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-gflags
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.17 2014/02/24 22:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.18 2014/03/31 20:42:14 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> python-gflags-2.0.ebuild:
+  Add support for the new PyPy slotting.
 
   24 Feb 2014; Mike Frysinger <vapier@gentoo.org> python-gflags-2.0.ebuild:
   Add arm love for Chromium OS.

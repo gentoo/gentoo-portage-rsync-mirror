@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.50 2014/02/24 09:05:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.51 2014/03/31 20:43:44 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> feedparser-5.1.3-r1.ebuild,
+  feedparser-5.1.3-r2.ebuild:
+  Add support for the new PyPy slotting.
 
 *feedparser-5.1.3-r2 (24 Feb 2014)
 

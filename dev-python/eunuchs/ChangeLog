@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eunuchs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.12 2013/11/24 18:37:49 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.13 2014/03/31 20:32:20 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> eunuchs-20050320.1-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> eunuchs-20050320.1-r1.ebuild:
   Stable for arm, wrt bug #468150

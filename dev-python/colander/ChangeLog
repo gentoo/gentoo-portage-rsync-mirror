@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/colander
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/ChangeLog,v 1.10 2013/08/26 07:59:47 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/ChangeLog,v 1.11 2014/03/31 20:50:55 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> colander-1.0_alpha1-r1.ebuild:
+  Add support for the new PyPy slotting.
 
 *colander-1.0_alpha1-r1 (26 Aug 2013)
 

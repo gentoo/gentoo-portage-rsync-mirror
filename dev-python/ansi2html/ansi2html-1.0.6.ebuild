@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.0.6.ebuild,v 1.1 2014/01/08 04:58:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.0.6.ebuild,v 1.2 2014/03/31 20:48:37 mgorny Exp $
 
 EAPI=5
 
 # ordereddict is need for < 2.7, but it's not packaged (yet)
-PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy pypy2_0 )
 
 inherit distutils-r1
 

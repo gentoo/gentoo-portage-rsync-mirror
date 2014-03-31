@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.87 2014/03/28 07:49:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.88 2014/03/31 20:31:59 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pytest-2.3.4.ebuild,
+  pytest-2.3.5.ebuild, pytest-2.4.2.ebuild, pytest-2.5.2.ebuild:
+  Add support for the new PyPy slotting.
 
   28 Mar 2014; Ian Delaney <idella4@gentoo.org> pytest-2.3.4.ebuild,
   pytest-2.3.5.ebuild, pytest-2.4.2.ebuild, pytest-2.5.2.ebuild:

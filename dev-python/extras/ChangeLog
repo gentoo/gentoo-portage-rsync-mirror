@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.14 2014/03/19 21:45:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.15 2014/03/31 20:36:34 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> extras-0.0.3.ebuild:
+  Add support for the new PyPy slotting.
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> extras-0.0.3.ebuild:
   Keyword amd64-linux and x86-linux

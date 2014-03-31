@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.71 2014/03/20 21:32:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.72 2014/03/31 20:59:47 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyasn1-0.1.6.ebuild,
+  pyasn1-0.1.7.ebuild:
+  Add support for the new PyPy slotting.
 
   20 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> pyasn1-0.1.7.ebuild:
   Keyword ~amd64-linux ~x86-linux

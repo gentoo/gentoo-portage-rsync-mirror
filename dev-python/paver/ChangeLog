@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.37 2014/03/04 20:07:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.38 2014/03/31 20:32:02 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> paver-1.1.1-r1.ebuild,
+  paver-1.2.0.ebuild, paver-1.2.1.ebuild, paver-1.2.2.ebuild:
+  Add support for the new PyPy slotting.
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> paver-1.2.2.ebuild:
   Stable for x86, wrt bug #502788

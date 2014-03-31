@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.20 2014/03/30 09:16:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.21 2014/03/31 20:32:52 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> billiard-2.7.3.20-r1.ebuild,
+  billiard-2.7.3.21.ebuild, billiard-2.7.3.22.ebuild, billiard-2.7.3.23.ebuild,
+  billiard-2.7.3.27.ebuild, billiard-2.7.3.28.ebuild, billiard-2.7.3.31.ebuild,
+  billiard-2.7.3.32.ebuild, billiard-3.3.0.14.ebuild:
+  Add support for the new PyPy slotting.
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him (#398377)

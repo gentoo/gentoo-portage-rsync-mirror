@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/manifestdestiny
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.13 2013/11/26 05:34:35 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.14 2014/03/31 20:50:39 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> manifestdestiny-0.5.6-r1.ebuild,
+  manifestdestiny-0.5.7-r1.ebuild, manifestdestiny-0.6.ebuild:
+  Add support for the new PyPy slotting.
 
 *manifestdestiny-0.6 (26 Nov 2013)
 

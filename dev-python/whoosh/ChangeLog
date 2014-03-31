@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.18 2014/03/26 18:32:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.19 2014/03/31 20:47:43 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> whoosh-2.5.3.ebuild,
+  whoosh-2.5.4.ebuild, whoosh-2.5.7.ebuild:
+  Add support for the new PyPy slotting.
 
 *whoosh-2.5.7 (26 Mar 2014)
 

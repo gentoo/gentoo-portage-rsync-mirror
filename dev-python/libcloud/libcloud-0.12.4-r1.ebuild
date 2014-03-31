@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/libcloud-0.12.4-r1.ebuild,v 1.3 2013/07/22 11:57:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/libcloud-0.12.4-r1.ebuild,v 1.4 2014/03/31 20:38:41 mgorny Exp $
 
 EAPI=5
 
 # py3 dropped due to failing tests once lockfile installed
-PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
 PYTHON_REQ_USE="ssl(+)"
 
 inherit distutils-r1

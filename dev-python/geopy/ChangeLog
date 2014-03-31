@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/geopy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.6 2014/03/30 09:18:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.7 2014/03/31 21:00:15 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> geopy-0.95.1.ebuild,
+  geopy-0.96.2.ebuild, geopy-0.97.ebuild:
+  Add support for the new PyPy slotting.
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him (#398377)

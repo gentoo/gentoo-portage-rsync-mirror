@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.13.ebuild,v 1.1 2013/10/28 07:58:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.13.ebuild,v 1.2 2014/03/31 20:42:27 mgorny Exp $
 
 EAPI=5
 
 # py2.6 requires ordereddict that's not packaged for Gentoo
-PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy pypy2_0 )
 
 inherit distutils-r1
 

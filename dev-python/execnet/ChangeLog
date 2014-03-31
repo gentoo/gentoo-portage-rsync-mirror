@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/execnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.18 2014/01/29 14:05:13 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.19 2014/03/31 20:33:31 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> execnet-1.1-r1.ebuild,
+  execnet-1.2.0.ebuild:
+  Add support for the new PyPy slotting.
 
 *execnet-1.2.0 (29 Jan 2014)
 

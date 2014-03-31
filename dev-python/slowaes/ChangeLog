@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/slowaes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/slowaes/ChangeLog,v 1.3 2013/08/18 13:02:34 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/slowaes/ChangeLog,v 1.4 2014/03/31 20:42:58 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> slowaes-0.1-r1.ebuild,
+  slowaes-0.1.ebuild:
+  Add support for the new PyPy slotting.
 
 *slowaes-0.1-r1 (18 Aug 2013)
 

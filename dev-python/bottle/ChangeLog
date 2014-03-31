@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.21 2014/03/10 08:42:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.22 2014/03/31 20:37:23 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> bottle-0.11.6-r1.ebuild,
+  bottle-0.11.6.ebuild, bottle-0.12.5.ebuild:
+  Add support for the new PyPy slotting.
 
 *bottle-0.12.5 (10 Mar 2014)
 

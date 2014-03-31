@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.7 2014/02/19 12:29:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.8 2014/03/31 20:38:16 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby19"
 

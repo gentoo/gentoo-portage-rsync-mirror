@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ansi2html
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.15 2014/03/30 09:15:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.16 2014/03/31 20:48:37 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> ansi2html-0.10.0.ebuild,
+  ansi2html-0.9.3-r1.ebuild, ansi2html-0.9.4.ebuild, ansi2html-1.0.2.ebuild,
+  ansi2html-1.0.5.ebuild, ansi2html-1.0.6.ebuild:
+  Add support for the new PyPy slotting.
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him (#398377)
