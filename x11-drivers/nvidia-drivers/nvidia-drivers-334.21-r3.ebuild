@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.49-r2.ebuild,v 1.2 2014/03/31 19:03:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.21-r3.ebuild,v 1.1 2014/03/31 20:24:35 jer Exp $
 
 EAPI=5
 
@@ -332,7 +332,7 @@ src_install() {
 		# install nvidia-modprobe setuid and symlink in /usr/bin (bug #505092)
 		doexe ${NV_OBJ}/nvidia-modprobe
 		fowners root:video /opt/bin/nvidia-modprobe
-		fperms 4711 /opt/bin/nvidia-modprobe
+		fperms 4710 /opt/bin/nvidia-modprobe
 		dosym /{opt,usr}/bin/nvidia-modprobe
 
 		doman nvidia-cuda-mps-control.1.gz
@@ -388,8 +388,12 @@ src_install-libs() {
 
 	if use X; then
 		# The GLX libraries
+		donvidia ${libdir}/libEGL.so ${NV_SOVER} ${GL_ROOT}
 		donvidia ${libdir}/libGL.so ${NV_SOVER} ${GL_ROOT}
+		donvidia ${libdir}/libGLESv1_CM.so ${NV_SOVER} ${GL_ROOT}
+		donvidia ${libdir}/libnvidia-eglcore.so ${NV_SOVER}
 		donvidia ${libdir}/libnvidia-glcore.so ${NV_SOVER}
+		donvidia ${libdir}/libnvidia-glsi.so ${NV_SOVER}
 		donvidia ${libdir}/libnvidia-ifr.so ${NV_SOVER}
 		if use kernel_FreeBSD; then
 			donvidia ${libdir}/libnvidia-tls.so ${NV_SOVER}
@@ -399,6 +403,12 @@ src_install-libs() {
 
 		# VDPAU
 		donvidia ${libdir}/libvdpau_nvidia.so ${NV_SOVER}
+
+		# GLES v2 libraries
+		insinto ${GL_ROOT}
+		doexe ${libdir}/libGLESv2.so.${PV}
+		dosym libGLESv2.so.${PV} ${GL_ROOT}/libGLESv2.so.2
+		dosym libGLESv2.so.2 ${GL_ROOT}/libGLESv2.so
 	fi
 
 	# NVIDIA monitoring library

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/empy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.22 2014/03/05 15:36:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.23 2014/03/31 20:28:28 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> empy-3.3-r1.ebuild:
+  Add support for the new PyPy slotting.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> empy-3.3-r1.ebuild:
   Stable for ppc, wrt bug #495584

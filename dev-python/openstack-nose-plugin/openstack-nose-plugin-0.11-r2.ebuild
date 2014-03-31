@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openstack-nose-plugin/openstack-nose-plugin-0.11-r2.ebuild,v 1.1 2013/07/28 17:40:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openstack-nose-plugin/openstack-nose-plugin-0.11-r2.ebuild,v 1.2 2014/03/31 20:26:13 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
 
 inherit distutils-r1
 

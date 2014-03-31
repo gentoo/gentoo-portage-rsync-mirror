@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elementtree
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.53 2013/10/22 11:46:55 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.54 2014/03/31 20:26:16 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> elementtree-1.2.6-r3.ebuild:
+  Add support for the new PyPy slotting.
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> elementtree-1.2.6-r3.ebuild:
   Marked ~x64-macos, bug #487670

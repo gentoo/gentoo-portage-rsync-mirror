@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eclean-kernel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.15 2013/10/15 19:46:56 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.16 2014/03/31 20:28:01 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> eclean-kernel-0.4.1.ebuild,
+  eclean-kernel-0.4.ebuild, eclean-kernel-9999.ebuild:
+  Add support for the new PyPy slotting.
 
 *eclean-kernel-0.4.1 (15 Oct 2013)
 

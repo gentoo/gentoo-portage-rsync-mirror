@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.222 2014/02/22 18:32:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.223 2014/03/31 20:30:56 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> setuptools-0.6.33.ebuild,
+  setuptools-0.6.45-r1.ebuild, setuptools-0.8-r1.ebuild,
+  setuptools-0.9.8-r1.ebuild, setuptools-1.0.ebuild, setuptools-1.1.1.ebuild,
+  setuptools-1.1.3.ebuild, setuptools-1.1.5.ebuild, setuptools-1.1.6.ebuild,
+  setuptools-1.1.ebuild, setuptools-2.2.ebuild, setuptools-9999.ebuild:
+  Add support for the new PyPy slotting.
 
 *setuptools-2.2 (22 Feb 2014)
 

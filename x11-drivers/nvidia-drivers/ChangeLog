@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.542 2014/03/31 19:03:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.543 2014/03/31 20:24:35 jer Exp $
+
+*nvidia-drivers-334.21-r3 (31 Mar 2014)
+*nvidia-drivers-331.49-r3 (31 Mar 2014)
+
+  31 Mar 2014; Jeroen Roovers <jer@gentoo.org>
+  -nvidia-drivers-331.49-r2.ebuild, +nvidia-drivers-331.49-r3.ebuild,
+  -nvidia-drivers-334.21-r2.ebuild, +nvidia-drivers-334.21-r3.ebuild,
+  files/nvidia-uvm.conf:
+  Use remove instead of softdep in nvidia-uvm.conf (bug #506168).
 
   31 Mar 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
   nvidia-drivers-173.14.39.ebuild, nvidia-drivers-304.121.ebuild,

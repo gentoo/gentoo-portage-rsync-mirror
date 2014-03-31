@@ -1,10 +1,14 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.79 2014/03/22 09:00:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.81 2014/03/31 20:15:43 jer Exp $
+
+  31 Mar 2014; Jeroen Roovers <jer@gentoo.org>
+  nvidia-cuda-toolkit-4.2.9-r2.ebuild, nvidia-cuda-toolkit-5.5.22.ebuild:
+  Fix x11-drivers/nvidia-drivers version dependencies (bug #505198).
 
   22 Mar 2014; Justin Lecher <jlec@gentoo.org>
   nvidia-cuda-toolkit-4.2.9-r2.ebuild, nvidia-cuda-toolkit-5.5.22.ebuild:
-  Add uvm UDE-dep to nvidia-drvers, #505198
+  Add uvm USE-dep to nvidia-drivers, #505198
 
   27 Jan 2014; Justin Lecher <jlec@gentoo.org>
   -nvidia-cuda-toolkit-4.2.9-r3.ebuild, -nvidia-cuda-toolkit-5.0.35-r2.ebuild,

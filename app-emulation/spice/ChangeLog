@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.57 2013/11/05 20:37:41 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.58 2014/03/31 20:29:32 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org> spice-0.12.3-r1.ebuild,
+  spice-0.12.4-r1.ebuild:
+  Add support for the new PyPy slotting.
 
 *spice-0.12.4-r1 (05 Nov 2013)
 

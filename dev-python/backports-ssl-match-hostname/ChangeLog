@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/backports-ssl-match-hostname
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-ssl-match-hostname/ChangeLog,v 1.5 2014/03/22 21:39:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-ssl-match-hostname/ChangeLog,v 1.6 2014/03/31 20:26:14 mgorny Exp $
+
+  31 Mar 2014; Michał Górny <mgorny@gentoo.org>
+  backports-ssl-match-hostname-3.4.0.2.ebuild:
+  Add support for the new PyPy slotting.
 
   22 Mar 2014; Markus Meier <maekke@gentoo.org>
   backports-ssl-match-hostname-3.4.0.2.ebuild:
