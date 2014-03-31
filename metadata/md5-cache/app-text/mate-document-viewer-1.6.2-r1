@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=app-text/poppler-0.14:0=[cairo] app-text/rarian:0 >=dev-libs/glib-2.25.11:2 >=dev-libs/libxml2-2.5:2 >=mate-base/mate-desktop-1.6:0 >=x11-libs/gtk+-2.21.5:2[introspection?] >=x11-libs/libSM-1:0 >=x11-libs/cairo-1.9.10:0 >=x11-themes/mate-icon-theme-1.6:0 caja? ( >=mate-base/mate-file-manager-1.6:0[introspection?] ) djvu? ( >=app-text/djvu-3.5.17:0 ) dvi? ( virtual/tex-base:0 t1lib? ( >=media-libs/t1lib-5:5 ) ) gnome-keyring? ( >=app-crypt/libsecret-0.5:0 ) introspection? ( >=dev-libs/gobject-introspection-0.6:0 ) ps? ( >=app-text/libspectre-0.2:0 ) tiff? ( >=media-libs/tiff-3.6:0 ) xps? ( >=app-text/libgxps-0.0.1:0 ) app-text/docbook-xml-dtd:4.1.2 >=app-text/mate-doc-utils-1.6:0 >=app-text/scrollkeeper-dtd-1:1.0 >=dev-util/intltool-0.35:* virtual/pkgconfig:* sys-devel/gettext:* !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Atril document viewer for MATE
+EAPI=5
+HOMEPAGE=http://mate-desktop.org
+IUSE=caja dbus debug djvu dvi +introspection gnome-keyring +ps t1lib tiff xps debug
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=>=app-text/poppler-0.14:0=[cairo] app-text/rarian:0 >=dev-libs/glib-2.25.11:2 >=dev-libs/libxml2-2.5:2 >=mate-base/mate-desktop-1.6:0 >=x11-libs/gtk+-2.21.5:2[introspection?] >=x11-libs/libSM-1:0 >=x11-libs/cairo-1.9.10:0 >=x11-themes/mate-icon-theme-1.6:0 caja? ( >=mate-base/mate-file-manager-1.6:0[introspection?] ) djvu? ( >=app-text/djvu-3.5.17:0 ) dvi? ( virtual/tex-base:0 t1lib? ( >=media-libs/t1lib-5:5 ) ) gnome-keyring? ( >=app-crypt/libsecret-0.5:0 ) introspection? ( >=dev-libs/gobject-introspection-0.6:0 ) ps? ( >=app-text/libspectre-0.2:0 ) tiff? ( >=media-libs/tiff-3.6:0 ) xps? ( >=app-text/libgxps-0.0.1:0 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://pub.mate-desktop.org/releases/1.6/mate-document-viewer-1.6.2.tar.xz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=9776033c5448cac173b1ab184a18939c

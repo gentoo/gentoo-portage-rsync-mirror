@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mate-document-viewer/mate-document-viewer-1.6.2.ebuild,v 1.1 2014/03/12 17:22:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mate-document-viewer/mate-document-viewer-1.6.2-r1.ebuild,v 1.1 2014/03/31 19:50:17 tomwij Exp $
 
 EAPI="5"
 
@@ -26,6 +26,7 @@ RDEPEND=">=app-text/poppler-0.14:0=[cairo]
 	app-text/rarian:0
 	>=dev-libs/glib-2.25.11:2
 	>=dev-libs/libxml2-2.5:2
+	>=mate-base/mate-desktop-1.6:0
 	>=x11-libs/gtk+-2.21.5:2[introspection?]
 	>=x11-libs/libSM-1:0
 	>=x11-libs/cairo-1.9.10:0
