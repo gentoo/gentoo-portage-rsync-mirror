@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8766 2014/03/31 22:16:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8767 2014/04/01 09:59:05 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2014; Michael Palimaka <kensington@gentoo.org> package.mask:
+  Unmask media-gfx/kgraphviewer wrt bug #491760.
 
   31 Mar 2014; Tom Wijsman <TomWij@gentoo.org> hardened/linux/package.mask:
   [QA] Remove obsolete hardened gcc-4.4.2 mask.
