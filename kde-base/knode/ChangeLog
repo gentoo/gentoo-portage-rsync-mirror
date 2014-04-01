@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.304 2014/03/20 21:54:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.305 2014/04/01 18:09:44 johu Exp $
+
+*knode-4.12.4 (01 Apr 2014)
+
+  01 Apr 2014; Johannes Huber <johu@gentoo.org> +knode-4.12.4.ebuild:
+  Version bump KDE SC 4.12.4
 
   20 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> knode-4.4.11.1.ebuild:
   Bump EAPI to 5.

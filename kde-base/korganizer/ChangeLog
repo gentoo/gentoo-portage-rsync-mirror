@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.320 2014/03/11 13:06:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.321 2014/04/01 18:09:12 johu Exp $
+
+*korganizer-4.12.4 (01 Apr 2014)
+
+  01 Apr 2014; Johannes Huber <johu@gentoo.org> +korganizer-4.12.4.ebuild:
+  Version bump KDE SC 4.12.4
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> -korganizer-4.12.2.ebuild:
   Remove KDE SC 4.12.2

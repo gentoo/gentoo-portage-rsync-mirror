@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DESCRIPTION=kdemultimedia - merge this to pull in all kdemultimedia-derived packages
+EAPI=5
+HOMEPAGE=http://www.kde.org/applications/multimedia/ http://multimedia.kde.org/
+IUSE=ffmpeg +mplayer aqua
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=metapackage
+RDEPEND=>=kde-base/dragon-4.12.4:4[aqua=] >=kde-base/juk-4.12.4:4[aqua=] >=kde-base/audiocd-kio-4.12.4:4[aqua=] >=kde-base/kmix-4.12.4:4[aqua=] >=kde-base/kscd-4.12.4:4[aqua=] >=kde-base/libkcddb-4.12.4:4[aqua=] >=kde-base/libkcompactdisc-4.12.4:4[aqua=] mplayer? ( >=kde-base/mplayerthumbs-4.12.4:4[aqua=] ) ffmpeg? ( >=kde-base/ffmpegthumbs-4.12.4:4[aqua=] )
+SLOT=4
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	kde4-meta-pkg	482dcd4208167a7ae152811723be4eed	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=a777b38c8ec04c68dadd625ae648266a

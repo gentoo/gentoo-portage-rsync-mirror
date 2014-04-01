@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kde-base-artwork
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/ChangeLog,v 1.74 2014/03/11 13:06:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/ChangeLog,v 1.75 2014/04/01 18:09:48 johu Exp $
+
+*kde-base-artwork-4.12.4 (01 Apr 2014)
+
+  01 Apr 2014; Johannes Huber <johu@gentoo.org>
+  +kde-base-artwork-4.12.4.ebuild:
+  Version bump KDE SC 4.12.4
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org>
   -kde-base-artwork-4.12.2.ebuild:
