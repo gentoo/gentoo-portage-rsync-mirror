@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/appframework
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.7 2011/10/19 12:52:41 fordfrog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.8 2014/04/01 20:47:02 tomwij Exp $
+
+*appframework-1.03-r3 (01 Apr 2014)
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +appframework-1.03-r3.ebuild:
+  Revision bump. EAPI 5.
 
   19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> -appframework-1.03.ebuild,
   -appframework-1.03-r1.ebuild:
@@ -48,4 +53,3 @@
   08 Jan 2008; <alistair@gentoo.org> +metadata.xml,
   +appframework-1.03.ebuild:
   Adding appframework
-
