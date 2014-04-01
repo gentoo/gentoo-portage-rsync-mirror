@@ -1,0 +1,340 @@
+The code for running tests under py3 is flawed in 2 distinct areas for running tests in the source.
+This patch corrects use of local import syntax in tests under Lib3/, the libs for py3.
+The other appears a typo or an oversight; entry of suite instead of test_suite in 1 test file.
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_associate.py bsddb3-6.0.1/Lib3/bsddb/test/test_associate.py
+--- Lib3/bsddb/test/test_associate.py	2013-12-05 03:52:00.000000000 +0800
++++ Lib3/bsddb/test/test_associate.py	2014-04-01 16:30:39.219546604 +0800
+@@ -42,7 +42,7 @@
+ from pprint import pprint
+ 
+ import unittest
+-from .test_all import db, dbshelve, test_support, verbose, have_threads, \
++from test_all import db, dbshelve, test_support, verbose, have_threads, \
+         get_new_environment_path
+ 
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_basics.py bsddb3-6.0.1/Lib3/bsddb/test/test_basics.py
+--- Lib3/bsddb/test/test_basics.py	2013-12-05 03:51:55.000000000 +0800
++++ Lib3/bsddb/test/test_basics.py	2014-04-01 16:30:39.223546604 +0800
+@@ -46,7 +46,7 @@
+ import time
+ import sys
+ 
+-from .test_all import db, test_support, verbose, get_new_environment_path, \
++from test_all import db, test_support, verbose, get_new_environment_path, \
+         get_new_database_path
+ 
+ DASH = '-'
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_compare.py bsddb3-6.0.1/Lib3/bsddb/test/test_compare.py
+--- Lib3/bsddb/test/test_compare.py	2013-12-05 03:52:05.000000000 +0800
++++ Lib3/bsddb/test/test_compare.py	2014-04-01 16:32:43.704544030 +0800
+@@ -38,12 +38,12 @@
+ """
+ 
+ import sys, os, re
+-from . import test_all
++import test_all
+ from io import StringIO
+ 
+ import unittest
+ 
+-from .test_all import db, dbshelve, test_support, \
++from test_all import db, dbshelve, test_support, \
+         get_new_environment_path, get_new_database_path
+ 
+ 
+@@ -479,4 +479,4 @@
+     return res
+ 
+ if __name__ == '__main__':
+-    unittest.main(defaultTest = 'suite')
++    unittest.main(defaultTest = 'test_suite')
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_compat.py bsddb3-6.0.1/Lib3/bsddb/test/test_compat.py
+--- Lib3/bsddb/test/test_compat.py	2013-12-05 03:51:41.000000000 +0800
++++ Lib3/bsddb/test/test_compat.py	2014-04-01 16:30:39.225546604 +0800
+@@ -41,7 +41,7 @@
+ import os, string
+ import unittest
+ 
+-from .test_all import db, hashopen, btopen, rnopen, verbose, \
++from test_all import db, hashopen, btopen, rnopen, verbose, \
+         get_new_database_path
+ 
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_cursor_pget_bug.py bsddb3-6.0.1/Lib3/bsddb/test/test_cursor_pget_bug.py
+--- Lib3/bsddb/test/test_cursor_pget_bug.py	2013-12-05 03:51:53.000000000 +0800
++++ Lib3/bsddb/test/test_cursor_pget_bug.py	2014-04-01 16:30:39.225546604 +0800
+@@ -36,7 +36,7 @@
+ import unittest
+ import os, glob
+ 
+-from .test_all import db, test_support, get_new_environment_path, \
++from test_all import db, test_support, get_new_environment_path, \
+         get_new_database_path
+ 
+ #----------------------------------------------------------------------
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_dbenv.py bsddb3-6.0.1/Lib3/bsddb/test/test_dbenv.py
+--- Lib3/bsddb/test/test_dbenv.py	2013-12-05 03:52:09.000000000 +0800
++++ Lib3/bsddb/test/test_dbenv.py	2014-04-01 16:30:39.227546604 +0800
+@@ -36,7 +36,7 @@
+ import unittest
+ import os, glob
+ 
+-from .test_all import db, test_support, get_new_environment_path, \
++from test_all import db, test_support, get_new_environment_path, \
+         get_new_database_path
+ 
+ #----------------------------------------------------------------------
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_dbobj.py bsddb3-6.0.1/Lib3/bsddb/test/test_dbobj.py
+--- Lib3/bsddb/test/test_dbobj.py	2013-12-05 03:51:52.000000000 +0800
++++ Lib3/bsddb/test/test_dbobj.py	2014-04-01 16:30:39.227546604 +0800
+@@ -37,7 +37,7 @@
+ import os, string
+ import unittest
+ 
+-from .test_all import db, dbobj, test_support, get_new_environment_path, \
++from test_all import db, dbobj, test_support, get_new_environment_path, \
+         get_new_database_path
+ 
+ #----------------------------------------------------------------------
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_db.py bsddb3-6.0.1/Lib3/bsddb/test/test_db.py
+--- Lib3/bsddb/test/test_db.py	2013-12-05 03:52:12.000000000 +0800
++++ Lib3/bsddb/test/test_db.py	2014-04-01 16:30:39.228546604 +0800
+@@ -36,7 +36,7 @@
+ import unittest
+ import os, glob
+ 
+-from .test_all import db, test_support, get_new_environment_path, \
++from test_all import db, test_support, get_new_environment_path, \
+         get_new_database_path
+ 
+ #----------------------------------------------------------------------
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_dbshelve.py bsddb3-6.0.1/Lib3/bsddb/test/test_dbshelve.py
+--- Lib3/bsddb/test/test_dbshelve.py	2013-12-05 03:52:04.000000000 +0800
++++ Lib3/bsddb/test/test_dbshelve.py	2014-04-01 16:30:39.229546604 +0800
+@@ -42,7 +42,7 @@
+ import unittest
+ 
+ 
+-from .test_all import db, dbshelve, test_support, verbose, \
++from test_all import db, dbshelve, test_support, verbose, \
+         get_new_environment_path, get_new_database_path
+ 
+ 
+@@ -73,14 +73,14 @@
+ 
+     def setUp(self):
+         if sys.version_info[0] >= 3 :
+-            from .test_all import do_proxy_db_py3k
++            from test_all import do_proxy_db_py3k
+             self._flag_proxy_db_py3k = do_proxy_db_py3k(False)
+         self.filename = get_new_database_path()
+         self.do_open()
+ 
+     def tearDown(self):
+         if sys.version_info[0] >= 3 :
+-            from .test_all import do_proxy_db_py3k
++            from test_all import do_proxy_db_py3k
+             do_proxy_db_py3k(self._flag_proxy_db_py3k)
+         self.do_close()
+         test_support.unlink(self.filename)
+@@ -340,7 +340,7 @@
+ 
+     def tearDown(self):
+         if sys.version_info[0] >= 3 :
+-            from .test_all import do_proxy_db_py3k
++            from test_all import do_proxy_db_py3k
+             do_proxy_db_py3k(self._flag_proxy_db_py3k)
+         self.do_close()
+         test_support.rmtree(self.homeDir)
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_dbtables.py bsddb3-6.0.1/Lib3/bsddb/test/test_dbtables.py
+--- Lib3/bsddb/test/test_dbtables.py	2013-12-05 03:51:49.000000000 +0800
++++ Lib3/bsddb/test/test_dbtables.py	2014-04-01 16:30:39.231546604 +0800
+@@ -32,7 +32,7 @@
+     import pickle
+ 
+ import unittest
+-from .test_all import db, dbtables, test_support, verbose, \
++from test_all import db, dbtables, test_support, verbose, \
+         get_new_environment_path, get_new_database_path
+ 
+ #----------------------------------------------------------------------
+@@ -43,7 +43,7 @@
+     def setUp(self):
+         import sys
+         if sys.version_info[0] >= 3 :
+-            from .test_all import do_proxy_db_py3k
++            from test_all import do_proxy_db_py3k
+             self._flag_proxy_db_py3k = do_proxy_db_py3k(False)
+ 
+         self.testHomeDir = get_new_environment_path()
+@@ -54,7 +54,7 @@
+         self.tdb.close()
+         import sys
+         if sys.version_info[0] >= 3 :
+-            from .test_all import do_proxy_db_py3k
++            from test_all import do_proxy_db_py3k
+             do_proxy_db_py3k(self._flag_proxy_db_py3k)
+         test_support.rmtree(self.testHomeDir)
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_distributed_transactions.py bsddb3-6.0.1/Lib3/bsddb/test/test_distributed_transactions.py
+--- Lib3/bsddb/test/test_distributed_transactions.py	2013-12-05 03:51:40.000000000 +0800
++++ Lib3/bsddb/test/test_distributed_transactions.py	2014-04-01 16:30:39.231546604 +0800
+@@ -39,10 +39,10 @@
+ import os
+ import unittest
+ 
+-from .test_all import db, test_support, get_new_environment_path, \
++from test_all import db, test_support, get_new_environment_path, \
+         get_new_database_path
+ 
+-from .test_all import verbose
++from test_all import verbose
+ 
+ #----------------------------------------------------------------------
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_early_close.py bsddb3-6.0.1/Lib3/bsddb/test/test_early_close.py
+--- Lib3/bsddb/test/test_early_close.py	2013-12-05 03:51:47.000000000 +0800
++++ Lib3/bsddb/test/test_early_close.py	2014-04-01 16:30:39.232546604 +0800
+@@ -40,7 +40,7 @@
+ import os, sys
+ import unittest
+ 
+-from .test_all import db, test_support, verbose, get_new_environment_path, get_new_database_path
++from test_all import db, test_support, verbose, get_new_environment_path, get_new_database_path
+ 
+ # We're going to get warnings in this module about trying to close the db when
+ # its env is already closed.  Let's just ignore those.
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_fileid.py bsddb3-6.0.1/Lib3/bsddb/test/test_fileid.py
+--- Lib3/bsddb/test/test_fileid.py	2013-12-05 03:51:44.000000000 +0800
++++ Lib3/bsddb/test/test_fileid.py	2014-04-01 16:30:39.233546604 +0800
+@@ -40,7 +40,7 @@
+ import shutil
+ import unittest
+ 
+-from .test_all import db, test_support, get_new_environment_path, get_new_database_path
++from test_all import db, test_support, get_new_environment_path, get_new_database_path
+ 
+ class FileidResetTestCase(unittest.TestCase):
+     def setUp(self):
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_get_none.py bsddb3-6.0.1/Lib3/bsddb/test/test_get_none.py
+--- Lib3/bsddb/test/test_get_none.py	2013-12-05 03:51:56.000000000 +0800
++++ Lib3/bsddb/test/test_get_none.py	2014-04-01 16:30:39.233546604 +0800
+@@ -40,7 +40,7 @@
+ import os, string
+ import unittest
+ 
+-from .test_all import db, verbose, get_new_database_path
++from test_all import db, verbose, get_new_database_path
+ 
+ 
+ #----------------------------------------------------------------------
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_join.py bsddb3-6.0.1/Lib3/bsddb/test/test_join.py
+--- Lib3/bsddb/test/test_join.py	2013-12-05 03:51:46.000000000 +0800
++++ Lib3/bsddb/test/test_join.py	2014-04-01 16:30:39.234546604 +0800
+@@ -40,7 +40,7 @@
+ 
+ import unittest
+ 
+-from .test_all import db, dbshelve, test_support, verbose, \
++from test_all import db, dbshelve, test_support, verbose, \
+         get_new_environment_path, get_new_database_path
+ 
+ #----------------------------------------------------------------------
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_lock.py bsddb3-6.0.1/Lib3/bsddb/test/test_lock.py
+--- Lib3/bsddb/test/test_lock.py	2013-12-05 03:52:03.000000000 +0800
++++ Lib3/bsddb/test/test_lock.py	2014-04-01 16:30:39.234546604 +0800
+@@ -40,7 +40,7 @@
+ import time
+ 
+ import unittest
+-from .test_all import db, test_support, verbose, have_threads, \
++from test_all import db, test_support, verbose, have_threads, \
+         get_new_environment_path, get_new_database_path
+ 
+ if have_threads :
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_misc.py bsddb3-6.0.1/Lib3/bsddb/test/test_misc.py
+--- Lib3/bsddb/test/test_misc.py	2013-12-05 03:51:48.000000000 +0800
++++ Lib3/bsddb/test/test_misc.py	2014-04-01 16:30:39.235546604 +0800
+@@ -39,7 +39,7 @@
+ import os, sys
+ import unittest
+ 
+-from .test_all import db, dbshelve, hashopen, test_support, get_new_environment_path, get_new_database_path
++from test_all import db, dbshelve, hashopen, test_support, get_new_environment_path, get_new_database_path
+ 
+ #----------------------------------------------------------------------
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_pickle.py bsddb3-6.0.1/Lib3/bsddb/test/test_pickle.py
+--- Lib3/bsddb/test/test_pickle.py	2013-12-05 03:51:41.000000000 +0800
++++ Lib3/bsddb/test/test_pickle.py	2014-04-01 16:30:39.235546604 +0800
+@@ -47,7 +47,7 @@
+ 
+ import unittest
+ 
+-from .test_all import db, test_support, get_new_environment_path, get_new_database_path
++from test_all import db, test_support, get_new_environment_path, get_new_database_path
+ 
+ #----------------------------------------------------------------------
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_queue.py bsddb3-6.0.1/Lib3/bsddb/test/test_queue.py
+--- Lib3/bsddb/test/test_queue.py	2013-12-05 03:51:50.000000000 +0800
++++ Lib3/bsddb/test/test_queue.py	2014-04-01 16:30:39.236546604 +0800
+@@ -41,7 +41,7 @@
+ from pprint import pprint
+ import unittest
+ 
+-from .test_all import db, verbose, get_new_database_path
++from test_all import db, verbose, get_new_database_path
+ 
+ #----------------------------------------------------------------------
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_recno.py bsddb3-6.0.1/Lib3/bsddb/test/test_recno.py
+--- Lib3/bsddb/test/test_recno.py	2013-12-05 03:52:01.000000000 +0800
++++ Lib3/bsddb/test/test_recno.py	2014-04-01 16:30:39.237546604 +0800
+@@ -41,7 +41,7 @@
+ from pprint import pprint
+ import unittest
+ 
+-from .test_all import db, test_support, verbose, get_new_environment_path, get_new_database_path
++from test_all import db, test_support, verbose, get_new_environment_path, get_new_database_path
+ 
+ letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_replication.py bsddb3-6.0.1/Lib3/bsddb/test/test_replication.py
+--- Lib3/bsddb/test/test_replication.py	2013-12-05 03:51:58.000000000 +0800
++++ Lib3/bsddb/test/test_replication.py	2014-04-01 16:30:39.239546604 +0800
+@@ -40,7 +40,7 @@
+ import time
+ import unittest
+ 
+-from .test_all import db, test_support, have_threads, verbose, \
++from test_all import db, test_support, have_threads, verbose, \
+         get_new_environment_path, get_new_database_path
+ 
+ 
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_sequence.py bsddb3-6.0.1/Lib3/bsddb/test/test_sequence.py
+--- Lib3/bsddb/test/test_sequence.py	2013-12-05 03:51:51.000000000 +0800
++++ Lib3/bsddb/test/test_sequence.py	2014-04-01 16:30:39.239546604 +0800
+@@ -36,7 +36,7 @@
+ import unittest
+ import os
+ 
+-from .test_all import db, test_support, get_new_environment_path, get_new_database_path
++from test_all import db, test_support, get_new_environment_path, get_new_database_path
+ 
+ 
+ class DBSequenceTest(unittest.TestCase):
+diff -ur bsddb3-6.0.1.orig/Lib3/bsddb/test/test_thread.py bsddb3-6.0.1/Lib3/bsddb/test/test_thread.py
+--- Lib3/bsddb/test/test_thread.py	2013-12-05 03:51:39.000000000 +0800
++++ Lib3/bsddb/test/test_thread.py	2014-04-01 16:30:39.241546604 +0800
+@@ -51,7 +51,7 @@
+         pass
+ 
+ import unittest
+-from .test_all import db, dbutils, test_support, verbose, have_threads, \
++from test_all import db, dbutils, test_support, verbose, have_threads, \
+         get_new_environment_path, get_new_database_path
+ 
+ if have_threads :
+

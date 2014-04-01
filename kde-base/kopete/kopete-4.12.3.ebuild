@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.12.3.ebuild,v 1.1 2014/03/04 19:13:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.12.3.ebuild,v 1.2 2014/04/01 11:12:42 johu Exp $
 
 EAPI=5
 
@@ -65,6 +65,7 @@ IUSE="${IUSE} ${PLUGINS} ${PROTOCOLS}"
 
 COMMONDEPEND="
 	dev-libs/libpcre
+	$(add_kdebase_dep kdelibs 'zeroconf?')
 	$(add_kdebase_dep kdepimlibs)
 	media-libs/qimageblitz
 	>=dev-qt/qtgui-4.4.0:4[mng]

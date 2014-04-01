@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.0.1.ebuild,v 1.1 2014/01/08 05:47:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.0.1.ebuild,v 1.2 2014/04/01 11:17:49 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -20,10 +20,10 @@ RDEPEND=">=sys-libs/db-4.8.30"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+# PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
-DOCS=( ChangeLog TODO.txt )
 DISTUTILS_IN_SOURCE_BUILD=1
+PATCHES=( "${FILESDIR}"/py3tests.patch )
 
 src_configure() {
 	local DB_VER
@@ -45,31 +45,24 @@ src_compile() {
 }
 
 python_test() {
-	# https://sourceforge.net/p/pybsddb/bugs/72/
+	# py3 tests misfire in the source om running test_all.py
+	local test
 	pushd "${BUILD_DIR}"/../ > /dev/null
 	if [[ "${EPYTHON}" == python2* ]]; then
-		"${PYTHON}" build/lib/bsddb3/tests/test_all.py
-	elif [[ "${EPYTHON}" == python3* ]]; then
-		if [[ "${EPYTHON}" == 'python3.3' ]]; then
-			einfo "py3.3 has an internal problem within this ebuild but is known to pass tests"
-		else
-			"${PYTHON}" setup.py build
-			einfo "all 500 tests are run silently and may take a number of minutes to complete"
-			"${PYTHON}" -v test3.py || die
-		fi
+		einfo "all 500 tests are run silently and may take a number of minutes to complete"
+		"${PYTHON}" build/lib/bsddb3/tests/test_all.py || die  "tests failed under ${EPYTHON}"
+	elif python_is_python3; then
+		mv Lib3/bsddb/test/test_all.py . || die
+		for test in Lib3/bsddb/test/test_*
+		do
+			"${PYTHON}" $test || die "tet $test failed under ${EPYTHON}"
+			einfo "test $test passed OK";einfo ""
+		done
 	fi
-}
-
-python_install() {
-	rm -fr "${ED}$(python_get_sitedir)/bsddb3/tests"
-
-	if use doc; then
-		dohtml -r docs/html/* || die "dohtml failed"
-	fi
-	distutils-r1_python_install
+	popd  > /dev/null
 }
 
 python_install_all() {
-	local HTML_DOCS=( docs/html/. )
+	use doc && local HTML_DOCS=( docs/html/. )
 	distutils-r1_python_install_all
 }
