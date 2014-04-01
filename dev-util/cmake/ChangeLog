@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.275 2014/03/29 06:10:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.276 2014/04/01 18:58:55 maekke Exp $
+
+  01 Apr 2014; Markus Meier <maekke@gentoo.org> cmake-2.8.12.2.ebuild:
+  arm stable, bug #504794
 
   29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.12.2.ebuild:
   Stable for x86, wrt bug #504794

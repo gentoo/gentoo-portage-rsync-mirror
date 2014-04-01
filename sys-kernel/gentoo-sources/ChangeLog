@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1290 2014/04/01 13:09:56 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1291 2014/04/01 18:52:08 mpagano Exp $
+
+  01 Apr 2014; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.14.0.ebuild:
+  Fix for BFQ patchset PATCH_DEPTH
 
   01 Apr 2014; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.14.0.ebuild:
   BFQ patchset v7r2 for 3.14. Kernel patch for gcc optimizations for additional
