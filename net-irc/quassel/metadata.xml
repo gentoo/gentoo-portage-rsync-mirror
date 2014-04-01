@@ -7,6 +7,10 @@
 		<email>patrick@gentoo.org</email>
 	</maintainer>
 	<maintainer>
+		<email>johu@gentoo.org</email>
+		<name>Johannes Huber</name>
+	</maintainer>
+	<maintainer>
 		<email>sputnick@quassel-irc.org</email>
 		<description>Upstream author, please CC on bugs</description>
 	</maintainer>

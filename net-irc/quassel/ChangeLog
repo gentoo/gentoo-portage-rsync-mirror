@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.165 2014/03/27 00:44:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.166 2014/04/01 08:47:01 johu Exp $
+
+  01 Apr 2014; Johannes Huber <johu@gentoo.org> metadata.xml:
+  Add myself as maintainer acked by Patrick.
 
 *quassel-0.9.3 (27 Mar 2014)
 
