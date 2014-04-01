@@ -1,6 +1,12 @@
 # ChangeLog for app-office/unoconv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.13 2013/08/28 11:16:49 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.14 2014/04/01 10:09:15 graaff Exp $
+
+*unoconv-0.6.20131229 (01 Apr 2014)
+
+  01 Apr 2014; Hans de Graaff <graaff@gentoo.org> +unoconv-0.6.20131229.ebuild:
+  Version bump to latest upstream commit to pick up a number of bug fixes and
+  improvements.
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> unoconv-0.6.ebuild:
   Stable for x86, wrt bug #481898

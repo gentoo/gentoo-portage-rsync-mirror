@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND==dev-lang/python-2*
+DESCRIPTION=Convert between document formats supported by Libreoffice
+EAPI=3
+HOMEPAGE=http://dag.wieers.com/home-made/unoconv/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=!app-text/odt2txt virtual/ooo =dev-lang/python-2*
+SLOT=0
+SRC_URI=https://github.com/dagwieers/unoconv/tarball/a2c7b2f06d799453666639382951142e0bcaad43 -> unoconv-0.6.20131229-git.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=134e7765e48e5cbe97731450ee3b6878
