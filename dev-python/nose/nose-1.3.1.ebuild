@@ -1,20 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.9 2014/04/01 01:18:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.1.ebuild,v 1.1 2014/04/01 01:18:40 floppym Exp $
 
 EAPI=5
-
-#if LIVE
-EGIT_REPO_URI="git://github.com/nose-devs/${PN}.git
-	https://github.com/nose-devs/${PN}.git"
-inherit git-2
-#endif
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
 inherit distutils-r1 eutils
 
 DESCRIPTION="A unittest extension offering automatic test suite discovery and easy test authoring"
-HOMEPAGE="http://pypi.python.org/pypi/nose http://readthedocs.org/docs/nose/ https://github.com/nose-devs/nose"
+HOMEPAGE="http://pypi.python.org/pypi/nose http://readthedocs.org/docs/nose/ https://bitbucket.org/jpellerin/nose"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -26,21 +20,19 @@ RDEPEND="dev-python/coverage[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )
-	test? ( dev-python/twisted-core )"
-
-#if LIVE
-SRC_URI=
-KEYWORDS=
-#endif
+	test? ( dev-python/twisted-core
+		dev-python/unittest2 )"
 
 DOCS=( AUTHORS )
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.2.1-skiptest.patch
+	"${FILESDIR}"/${PN}-1.3.1-python3.4.patch
+)
 
 python_prepare_all() {
 	# Tests need to be converted, and they don't respect BUILD_DIR.
 	use test && DISTUTILS_IN_SOURCE_BUILD=1
 
-	# Disable sphinx.ext.intersphinx, requires network
-	epatch "${FILESDIR}/${PN}-0.11.0-disable_intersphinx.patch"
 	# Disable tests requiring network connection.
 	sed \
 		-e "s/test_resolve/_&/g" \
@@ -60,7 +52,7 @@ python_compile() {
 
 	if use test; then
 		add_targets+=( egg_info )
-		[[ ${EPYTHON} == python3* ]] && add_targets+=( build_tests )
+		python_is_python3 && add_targets+=( build_tests )
 	fi
 
 	distutils-r1_python_compile ${add_targets[@]}
