@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.62 2014/03/27 02:00:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.63 2014/04/01 19:30:48 graaff Exp $
+
+*rspec-core-2.14.8-r1 (01 Apr 2014)
+
+  01 Apr 2014; Hans de Graaff <graaff@gentoo.org> +rspec-core-2.14.8-r1.ebuild:
+  Add ruby21. Drop alpha, sparc keywords: bug 465948.
 
   27 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -rspec-core-2.14.3.ebuild,
   -rspec-core-2.14.7.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyrax
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/ChangeLog,v 1.11 2013/11/17 04:20:42 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/ChangeLog,v 1.12 2014/04/01 19:21:48 prometheanfire Exp $
+
+*pyrax-1.7.2 (01 Apr 2014)
+
+  01 Apr 2014; Matthew Thode <prometheanfire@gentoo.org> +pyrax-1.7.2.ebuild:
+  bup!
 
   17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pyrax-1.6.1.ebuild:
   1.6.1 with restricted tests due to upstream bug

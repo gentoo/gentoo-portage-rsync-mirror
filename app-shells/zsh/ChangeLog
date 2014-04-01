@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.233 2014/03/28 13:22:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.234 2014/04/01 19:03:18 maekke Exp $
+
+  01 Apr 2014; Markus Meier <maekke@gentoo.org> zsh-5.0.5.ebuild:
+  arm stable, bug #505590
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> zsh-5.0.5.ebuild:
   Stable for HPPA (bug #505590).

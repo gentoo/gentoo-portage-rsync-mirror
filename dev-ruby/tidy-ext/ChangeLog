@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tidy-ext
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.28 2013/12/26 15:56:22 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.29 2014/04/01 19:27:39 graaff Exp $
+
+*tidy-ext-0.1.14-r2 (01 Apr 2014)
+
+  01 Apr 2014; Hans de Graaff <graaff@gentoo.org> +tidy-ext-0.1.14-r2.ebuild:
+  Add ruby21. Drop alpha, sparc keywords: bug 465948.
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> tidy-ext-0.1.14.ebuild:
   arm stable, bug #493780

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.74 2014/01/02 07:45:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.75 2014/04/01 19:28:38 graaff Exp $
+
+*bluecloth-2.2.0-r2 (01 Apr 2014)
+
+  01 Apr 2014; Hans de Graaff <graaff@gentoo.org> +bluecloth-2.2.0-r2.ebuild:
+  Add ruby21. Drop alpha, sparc keywords: bug 465948.
 
   02 Jan 2014; Hans de Graaff <graaff@gentoo.org> bluecloth-2.2.0.ebuild,
   bluecloth-2.2.0-r1.ebuild:
