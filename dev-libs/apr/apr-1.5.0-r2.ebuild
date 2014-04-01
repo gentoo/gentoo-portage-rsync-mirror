@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r2.ebuild,v 1.5 2014/03/30 19:56:20 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r2.ebuild,v 1.6 2014/04/01 16:24:28 polynomial-c Exp $
 
 EAPI="4"
 
@@ -18,6 +18,7 @@ IUSE="doc elibc_FreeBSD older-kernels-compatibility static-libs +urandom"
 RDEPEND="elibc_glibc? ( >=sys-apps/util-linux-2.16 )
 	elibc_mintlib? ( >=sys-apps/util-linux-2.18 )"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.4.2
 	doc? ( app-doc/doxygen )"
 
 DOCS=(CHANGES NOTICE README)

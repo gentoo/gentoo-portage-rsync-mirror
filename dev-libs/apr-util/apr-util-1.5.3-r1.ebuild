@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3-r1.ebuild,v 1.4 2014/03/30 19:58:09 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3-r1.ebuild,v 1.5 2014/04/01 16:28:57 polynomial-c Exp $
 
 EAPI="4"
 
@@ -33,6 +33,7 @@ RDEPEND="dev-libs/expat
 	postgres? ( dev-db/postgresql-base )
 	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.4.2
 	doc? ( app-doc/doxygen )"
 
 DOCS=(CHANGES NOTICE README)
