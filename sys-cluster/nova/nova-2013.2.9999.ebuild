@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.11 2014/03/30 05:42:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.12 2014/04/01 03:46:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,9 +15,9 @@ EGIT_BRANCH="stable/havana"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +cert +compute +conductor +consoleauth ipv6 +kvm +network +novncproxy +rabbit +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
+IUSE="+compute +kvm +network +novncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
-			  || ( kvm xen )"
+			  compute? ( || ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
@@ -65,10 +65,9 @@ RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 		novncproxy? ( www-apps/novnc )
 		sys-apps/iproute2
 		net-misc/openvswitch
+		net-misc/rabbitmq-server
 		sys-fs/sysfsutils
 		sys-fs/multipath-tools
-		ipv6? ( net-misc/radvd )
-		rabbit? ( net-misc/rabbitmq-server )
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )"
@@ -83,47 +82,36 @@ pkg_setup() {
 
 python_install() {
 	distutils-r1_python_install
-	newconfd "${FILESDIR}/nova-confd" "nova"
-	newinitd "${FILESDIR}/nova-initd" "nova"
-	use api && dosym /etc/init.d/nova /etc/init.d/nova-api
-	use cert && dosym /etc/init.d/nova /etc/init.d/nova-cert
-	use compute && dosym /etc/init.d/nova /etc/init.d/nova-compute
-	use conductor && dosym /etc/init.d/nova /etc/init.d/nova-conductor
-	use consoleauth && dosym /etc/init.d/nova /etc/init.d/nova-consoleauth
-	use network &&  dosym /etc/init.d/nova /etc/init.d/nova-network
-	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-novncproxy
-	use scheduler && dosym /etc/init.d/nova /etc/init.d/nova-scheduler
-	use spicehtml5proxy && dosym /etc/init.d/nova /etc/init.d/nova-spicehtml5proxy
-	use xvpvncproxy && dosym /etc/init.d/nova /etc/init.d/nova-xvpncproxy
 
-	diropts -m 0750
-	dodir /var/run/nova /var/log/nova /var/lock/nova
-	fowners nova:nova /var/log/nova /var/lock/nova /var/run/nova
+	for svc in api cert compute conductor consoleauth network scheduler spicehtml5proxy xvpvncproxy; do
+		newinitd "${FILESDIR}/nova.initd" "nova-${svc}"
+	done
+	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
+	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
-	diropts -m 0755
-	dodir /var/lib/nova/instances
-	fowners nova:nova /var/lib/nova/instances
+	diropts -m 0750 -o nova -g nova
+	dodir /var/log/nova /var/lib/nova/instances
 
-	keepdir /etc/nova
 	insinto /etc/nova
+	insopts -m 0640 -o nova -g nova
 	newins "etc/nova/nova.conf.sample" "nova.conf"
 	doins "etc/nova/api-paste.ini"
 	doins "etc/nova/logging_sample.conf"
 	doins "etc/nova/policy.json"
 	doins "etc/nova/rootwrap.conf"
+	#rootwrap filters
 	insinto /etc/nova/rootwrap.d
 	doins "etc/nova/rootwrap.d/api-metadata.filters"
 	doins "etc/nova/rootwrap.d/compute.filters"
 	doins "etc/nova/rootwrap.d/network.filters"
-
 	#copy migration conf file (not coppied on install via setup.py script)
 	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
 	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
-
 	#copy the CA cert dir (not coppied on install via setup.py script)
 	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "isntalling CA files failed"
 
 	#add sudoers definitions for user nova
 	insinto /etc/sudoers.d/
+	insopts -m 0600 -o root -g root
 	doins "${FILESDIR}/nova-sudoers"
 }
