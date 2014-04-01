@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.66 2014/03/31 20:38:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.67 2014/04/01 05:06:00 floppym Exp $
+
+  01 Apr 2014; Mike Gilbert <floppym@gentoo.org> pexpect-3.1.ebuild:
+  Add python3.4.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pexpect-2.4-r1.ebuild:
   Add support for the new PyPy slotting.
