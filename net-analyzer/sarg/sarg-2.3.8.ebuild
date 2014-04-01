@@ -1,26 +1,34 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.2.ebuild,v 1.4 2012/04/17 15:59:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.8.ebuild,v 1.2 2014/04/01 11:53:09 jer Exp $
 
-EAPI="4"
-inherit eutils
+EAPI=5
+
+inherit autotools eutils
 
 DESCRIPTION="Squid Analysis Report Generator"
-HOMEPAGE="http://sarg.sourceforge.net/sarg.php"
+HOMEPAGE="http://sarg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE=""
+IUSE="+gd ldap pcre"
 
-DEPEND="media-libs/gd[png,truetype]"
+DEPEND="
+	gd? ( media-libs/gd[png,truetype] )
+	ldap? ( net-nds/openldap )
+	pcre? ( dev-libs/libpcre )
+"
 RDEPEND="${DEPEND}"
 
 DOCS=( BETA-TESTERS CONTRIBUTORS DONATIONS README ChangeLog htaccess )
 
 src_prepare() {
-	einfo "Running sed to substitute paths..."
+	epatch "${FILESDIR}"/${P}-long-long-int.patch
+
+	sed -i configure.in -e '/LDFLAGS=/s:LDFLAGS:LIBS:g' || die
+
 	sed \
 		-e 's:/usr/local/squid/var/logs/access.log:/var/log/squid/access.log:' \
 		-e 's:/usr/local/\(squidGuard/squidGuard.conf\):/etc/\1:' \
@@ -45,11 +53,13 @@ src_prepare() {
 		-e 's:/usr/local/\(squidGuard/squidGuard.conf\):/etc/\1:' \
 			-i sarg.1 sarg-php/sarg-squidguard-block.php || die
 
-	# https://sourceforge.net/tracker/?func=detail&aid=3415225&group_id=68910&atid=522793
-	sed 's:\(@mandir@\):\1/man1:' -i Makefile.in || die #379395
+	eautoconf
 }
 
 src_configure() {
-	chmod +x configure
-	econf --sysconfdir=/etc/sarg/
+	econf \
+		$(use_with gd) \
+		$(use_with ldap) \
+		$(use_with pcre) \
+		--sysconfdir="${EPREFIX}/etc/sarg/"
 }
