@@ -65,7 +65,7 @@ test_var EPYTHON pypy pypy
 test_var PYTHON pypy /usr/bin/pypy
 test_var PYTHON_SITEDIR pypy /usr/lib/pypy/site-packages
 test_var PYTHON_INCLUDEDIR pypy /usr/lib/pypy/include
-test_var PYTHON_PKG_DEP pypy '*virtual/pypy*:0'
+test_var PYTHON_PKG_DEP pypy '*virtual/pypy*:0='
 test_var PYTHON_SCRIPTDIR pypy /usr/lib/python-exec/pypy
 
 test_is python_is_python3 python2.7 1

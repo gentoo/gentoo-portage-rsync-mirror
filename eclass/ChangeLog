@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1191 2014/03/31 16:48:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1192 2014/04/01 15:22:40 mgorny Exp $
+
+  01 Apr 2014; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
+  Add slot op to expected PyPy dependency string.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> java-ant-2.eclass:
   Ban the java-ant_remove-taskdefs() function and remove Python dependency, bug
