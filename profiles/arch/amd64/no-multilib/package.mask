@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.131 2014/02/04 12:19:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.132 2014/04/01 15:42:58 tomwij Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -165,7 +165,6 @@ sci-chemistry/cyana
 sci-chemistry/icm
 sci-chemistry/icm-browser
 sci-chemistry/mars
-<sci-geosciences/googleearth-7.1
 sci-libs/ipp
 sys-apps/memtest86
 sys-apps/memtest86+

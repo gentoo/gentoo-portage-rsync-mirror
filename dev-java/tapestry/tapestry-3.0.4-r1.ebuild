@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tapestry/tapestry-3.0.4-r1.ebuild,v 1.1 2014/03/08 17:55:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tapestry/tapestry-3.0.4-r1.ebuild,v 1.2 2014/04/01 15:57:40 tomwij Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Tapestry is an open-source framework for creating dynamic, robust, highly scalable web applications in Java."
+DESCRIPTION="An open-source framework for creating dynamic, robust, highly scalable web applications in Java."
 HOMEPAGE="http://tapestry.apache.org/"
 SRC_URI="mirror://apache/${PN}/Tapestry-${PV}-src.zip"
 

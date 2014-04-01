@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rome
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/ChangeLog,v 1.7 2007/08/03 16:56:53 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/ChangeLog,v 1.8 2014/04/01 15:54:09 tomwij Exp $
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org> rome-0.9.ebuild:
+  Shorten DESCRIPTION, update HOMEPAGE to a legacy URL that at the very least
+  works.
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> rome-0.9.ebuild:
   Use splitted ant for src_test.
@@ -22,4 +26,3 @@
 
   20 Jan 2007; Miroslav Šulc <fordfrog@gentoo.org> ChangeLog:
   Initial ebuild, moved from java overlay, also see bug #159398.
-

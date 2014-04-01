@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.18 2010/01/03 21:32:36 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/ChangeLog,v 1.19 2014/04/01 15:56:25 tomwij Exp $
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org> sax-2.2.1-r2.ebuild:
+  Shorten description, quote unquoted S variable.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> sax-2.2.1-r2.ebuild:
   Transfer Prefix keywords
@@ -65,4 +68,3 @@
   21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +sax-2.2.1.ebuild:
   initial import, ebuild created by me, as a dep
-

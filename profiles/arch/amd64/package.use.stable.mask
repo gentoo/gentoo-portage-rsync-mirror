@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.4 2014/03/30 23:04:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.5 2014/04/01 15:47:03 tomwij Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -97,7 +97,6 @@ dev-libs/libRocket abi_x86_32
 dev-libs/libsigc++ abi_x86_32
 dev-libs/libtasn1 abi_x86_32
 dev-libs/libusb abi_x86_32
-dev-libs/libusbx abi_x86_32
 dev-libs/libusb-compat abi_x86_32
 dev-libs/libwapcaplet abi_x86_32
 dev-libs/libxml2 abi_x86_32

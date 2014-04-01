@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.15.5.ebuild,v 1.1 2014/04/01 08:07:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.15.5.ebuild,v 1.2 2014/04/01 15:43:49 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -44,7 +44,7 @@ RDEPEND="${DEPEND}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
-#	epatch "${FILESDIR}"/${PN}-4.9.3-darwin.patch
+	epatch "${FILESDIR}"/${PN}-4.15.5-darwin.patch
 
 	if [[ ${PV} == *9999* ]]; then
 		python2 build.py prepare || die

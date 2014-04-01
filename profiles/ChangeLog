@@ -1,10 +1,30 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8767 2014/04/01 09:59:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8772 2014/04/01 15:47:02 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  arch/amd64/package.use.stable.mask:
+  [QA] Remove obsolete abi_x86_32 libusbx mask from amd64 p.u.s.m. as libusbx
+  was pkgmoved to libusb.
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  features/64bit-native/package.mask:
+  [QA] Remove obsolete googleearth mask from 64bit-native feature.
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  arch/amd64/no-multilib/package.mask:
+  [QA] Remove obsolete googleearth mask from amd64 no-multilib.
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  [QA] Remove obsolete googleearth mask from hardened amd64 no-multilib.
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  [QA] Remove obsolete grep-2.13 mask.
 
   01 Apr 2014; Michael Palimaka <kensington@gentoo.org> package.mask:
   Unmask media-gfx/kgraphviewer wrt bug #491760.

@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/rome-0.9.ebuild,v 1.6 2007/08/03 16:56:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rome/rome-0.9.ebuild,v 1.7 2014/04/01 15:54:09 tomwij Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="An open source set of Atom/RSS Java utilities that make it easy to work in Java with most syndication formats"
-HOMEPAGE="https://rome.dev.java.net/"
+DESCRIPTION="Open source Atom/RSS Java utilities that make it easy to work in Java with most syndication formats"
+HOMEPAGE="https://java.net/projects/rome"
 SRC_URI="https://rome.dev.java.net/source/browse/*checkout*/rome/www/dist/${P}-src.zip"
 
 LICENSE="Apache-2.0"

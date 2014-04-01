@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.30 2014/03/04 15:38:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.31 2014/04/01 15:41:15 tomwij Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
@@ -188,7 +188,6 @@ sci-chemistry/icm-browser
 sci-chemistry/mars
 sci-chemistry/xdsgui
 sci-chemistry/xdsstat-bin
-<sci-geosciences/googleearth-7.1
 sci-libs/ipp
 sys-apps/memtest86
 sys-apps/memtest86+

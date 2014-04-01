@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15526 2014/04/01 09:59:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15527 2014/04/01 15:38:27 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -764,11 +764,6 @@ dev-ml/ocamlduce
 =sys-libs/db-5.2*
 =sys-libs/db-5.1*
 =sys-libs/db-5.0*
-
-# Richard Yao <ryao@gentoo.org> (06 Oct 2012)
-# sys-apps/grep-2.13 falsely reports some files as binary, causing build
-# failures. Bug #425668
-=sys-apps/grep-2.13
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Unmaintained, multiple vulnarabilities. #351626

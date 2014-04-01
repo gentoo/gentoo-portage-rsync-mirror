@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsom
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/ChangeLog,v 1.8 2008/03/28 18:05:03 nixnut Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsom/ChangeLog,v 1.9 2014/04/01 16:00:59 tomwij Exp $
+
+  01 Apr 2014; Tom Wijsman <TomWij@gentoo.org> xsom-20060901.ebuild:
+  Shorten DESCRIPTION.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> xsom-20060901.ebuild:
   Stable on ppc wrt bug 214778
@@ -29,4 +32,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +xsom-20060901.ebuild:
   Initial commit of xsom.
-
