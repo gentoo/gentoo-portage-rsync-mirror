@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.193 2014/03/30 14:22:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.194 2014/04/01 06:52:19 vapier Exp $
 
 # on the way out
 ruby_targets_ruby18
@@ -339,6 +339,8 @@ abi_mips_n32
 abi_mips_n64
 abi_ppc_32
 abi_ppc_64
+abi_s390_32
+abi_s390_64
 
 # Andrey Grozin <grozin@gentoo.org> (1 May 2013)
 # gcl is masked, cmucl only available on x86, clozurecl on x86 and amd64
