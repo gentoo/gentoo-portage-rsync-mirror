@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1897.2.ebuild,v 1.1 2014/03/19 06:59:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1916.6.ebuild,v 1.1 2014/04/01 17:21:11 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
+IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -157,7 +157,6 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-arm-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 
 	epatch_user
@@ -184,6 +183,7 @@ src_prepare() {
 		'third_party/cacheinvalidation' \
 		'third_party/cld' \
 		'third_party/cros_system_api' \
+		'third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
 		'third_party/flot' \
 		'third_party/hunspell' \
@@ -301,7 +301,6 @@ src_configure() {
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
 	myconf+="
-		$(gyp_use aura)
 		$(gyp_use cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
@@ -330,6 +329,9 @@ src_configure() {
 	myconf+="
 		-Dlinux_use_gold_binary=0
 		-Dlinux_use_gold_flags=0"
+
+	# TODO: enable mojo after fixing compile failures.
+	myconf+=" -Duse_mojo=0"
 
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
