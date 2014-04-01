@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile configure install test unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Common linux commands in a multicall binary
+EAPI=5
+HOMEPAGE=http://landley.net/code/toybox/
+LICENSE=BSD-2
+SLOT=0
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=70c7c0ab025caeee290c945c5de44110
