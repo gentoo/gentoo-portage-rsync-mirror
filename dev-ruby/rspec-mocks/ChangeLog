@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.65 2014/03/27 01:56:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.66 2014/04/01 19:32:04 graaff Exp $
+
+*rspec-mocks-2.14.6-r1 (01 Apr 2014)
+
+  01 Apr 2014; Hans de Graaff <graaff@gentoo.org>
+  +rspec-mocks-2.14.6-r1.ebuild:
+  Add ruby21. Drop alpha, sparc keywords: bug 465948.
 
   27 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -rspec-mocks-2.13.0.ebuild,
   -rspec-mocks-2.14.5.ebuild:
