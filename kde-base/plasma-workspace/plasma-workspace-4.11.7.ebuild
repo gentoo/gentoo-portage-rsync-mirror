@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.7.ebuild,v 1.1 2014/03/04 19:30:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.7.ebuild,v 1.2 2014/04/01 10:36:01 kensington Exp $
 
 EAPI=5
 
@@ -81,8 +81,6 @@ KMEXTRACTONLY="
 	libs/kdm/kgreeterplugin.h
 	ksysguard/
 "
-
-KMLOADLIBS="libkworkspace libplasmaclock libplasmagenericshell libtaskmanager"
 
 PATCHES=( "${FILESDIR}/${PN}-4.10.1-noplasmalock.patch" )
 
