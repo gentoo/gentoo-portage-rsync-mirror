@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.16 2014/03/30 07:27:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.17 2014/04/01 09:11:46 idella4 Exp $
+
+  01 Apr 2014; Ian Delaney <idella4@gentoo.org> stevedore-0.15.ebuild:
+  re-add flake8 for test phase
 
   30 Mar 2014; Ian Delaney <idella4@gentoo.org> -stevedore-0.10.ebuild,
   -stevedore-0.11.ebuild, -stevedore-0.12.ebuild, stevedore-0.14.1.ebuild,
