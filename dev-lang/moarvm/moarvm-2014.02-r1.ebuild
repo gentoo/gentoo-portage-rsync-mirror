@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-2014.02-r1.ebuild,v 1.1 2014/03/17 04:06:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-2014.02-r1.ebuild,v 1.2 2014/04/02 04:50:32 patrick Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-libs/libuv"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-lang/perl"
 
 S="${WORKDIR}/MoarVM-${PV}"
 

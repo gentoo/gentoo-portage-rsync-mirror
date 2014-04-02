@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/moarvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.11 2014/03/31 05:18:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.12 2014/04/02 04:50:32 patrick Exp $
+
+  02 Apr 2014; Patrick Lauer <patrick@gentoo.org> moarvm-2013.10.1.ebuild,
+  moarvm-2013.10.ebuild, moarvm-2014.01.ebuild, moarvm-2014.02-r1.ebuild,
+  moarvm-2014.02.ebuild, moarvm-2014.03.ebuild, moarvm-9999.ebuild:
+  Add perl dep #504708
 
 *moarvm-2014.03 (31 Mar 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-9999.ebuild,v 1.3 2014/01/15 03:09:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-9999.ebuild,v 1.4 2014/04/02 04:50:32 patrick Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ KEYWORDS=""
 IUSE="doc"
 
 RDEPEND=""
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-lang/perl"
 
 src_prepare() {
 	epatch "${FILESDIR}/Configure-9999.patch" || die
