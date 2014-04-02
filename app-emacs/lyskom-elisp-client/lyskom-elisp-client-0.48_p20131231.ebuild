@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/lyskom-elisp-client-0.48_p20131231.ebuild,v 1.2 2014/02/19 23:16:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lyskom-elisp-client/lyskom-elisp-client-0.48_p20131231.ebuild,v 1.3 2014/04/02 19:12:09 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE="linguas_sv"
 
 S="${WORKDIR}/${PN}"

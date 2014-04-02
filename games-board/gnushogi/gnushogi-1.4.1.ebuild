@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.4.1.ebuild,v 1.2 2014/03/28 20:40:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.4.1.ebuild,v 1.3 2014/04/02 19:17:26 nimiux Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses

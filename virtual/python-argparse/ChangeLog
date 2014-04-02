@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-argparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.17 2014/03/31 21:23:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.18 2014/04/02 19:01:44 chutzpah Exp $
+
+  02 Apr 2014; Patrick McLean <chutzpah@gentoo.org> python-argparse-1.ebuild:
+  Add python3.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> python-argparse-1.ebuild:
   Add support for the new PyPy slotting.

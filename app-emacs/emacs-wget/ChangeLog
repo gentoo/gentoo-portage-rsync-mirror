@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wget
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.21 2014/02/19 07:00:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.22 2014/04/02 19:02:39 nimiux Exp $
+
+  02 Apr 2014; Chema Alonso <nimiux@gentoo.org> emacs-wget-0.5.0-r1.ebuild:
+  Stable for amd64 wrt bug #505204
 
 *emacs-wget-0.5.0-r1 (19 Feb 2014)
 
