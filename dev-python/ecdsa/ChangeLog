@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.20 2014/03/24 17:11:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.21 2014/04/02 21:06:31 radhermit Exp $
+
+  02 Apr 2014; Tim Harder <radhermit@gentoo.org> ecdsa-0.11.ebuild:
+  Add python3_4 support.
 
   24 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> ecdsa-0.9.ebuild:
   Keyword amd64-linux and x86-linux
