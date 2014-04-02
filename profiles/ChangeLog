@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8772 2014/04/01 15:47:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8773 2014/04/02 03:24:29 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Apr 2014; Patrick Lauer <patrick@gentoo.org> package.mask,
+  thirdpartymirrors:
+  Mask broken sip release #506452
 
   01 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
   arch/amd64/package.use.stable.mask:
