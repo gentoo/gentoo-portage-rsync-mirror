@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.43 2014/03/18 23:03:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.45 2014/04/02 08:26:10 idella4 Exp $
+
+  02 Apr 2014; Ian Delaney <idella4@gentoo.org> pyzmq-14.0.1.ebuild,
+  pyzmq-14.1.1.ebuild:
+  ditto -14.1.1
+
+  02 Apr 2014; Ian Delaney <idella4@gentoo.org> pyzmq-14.0.1.ebuild:
+  correction to deps, tidy to test phase, update to python_install_all phase
 
 *pyzmq-14.1.1 (18 Mar 2014)
 
