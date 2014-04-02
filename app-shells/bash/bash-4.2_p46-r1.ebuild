@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p46-r1.ebuild,v 1.1 2014/04/02 09:11:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p46-r1.ebuild,v 1.2 2014/04/02 11:38:52 tomwij Exp $
 
-EAPI="5"
+EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 

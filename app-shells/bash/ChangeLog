@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.361 2014/04/02 09:11:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.362 2014/04/02 11:38:52 tomwij Exp $
+
+  02 Apr 2014; Tom Wijsman <TomWij@gentoo.org> bash-4.2_p46-r1.ebuild:
+  Downgrade 4.2_p46-r1 to EAPI 4 per Poly-C's request, as this is an essential
+  base-system package.
 
 *bash-4.2_p46-r1 (02 Apr 2014)
 

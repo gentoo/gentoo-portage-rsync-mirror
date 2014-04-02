@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.29-r1.ebuild,v 1.3 2011/03/27 10:31:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.29-r2.ebuild,v 1.1 2014/04/02 11:55:44 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.amigaemulator.org/pub/uae/sources/develop/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="sdl alsa scsi"
 
 DEPEND="sdl? ( media-libs/libsdl
@@ -27,17 +27,15 @@ DEPEND="sdl? ( media-libs/libsdl
 	scsi? ( app-cdr/cdrtools )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/uae-0.8.25-allow_spaces_in_zip_filenames.diff
-	epatch "${FILESDIR}"/uae-0.8.25-struct_uae_wrong_fields_name.diff
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.8.25-allow_spaces_in_zip_filenames.diff
+	epatch "${FILESDIR}"/${PN}-0.8.25-struct_uae_wrong_fields_name.diff
 	epatch "${FILESDIR}"/${PN}-0.8.26-uae_reset_args.diff
-	cp "${FILESDIR}"/sdlgfx.h "${S}"/src
+
+	cp "${FILESDIR}"/sdlgfx.h "${S}"/src || die
 }
 
-src_compile() {
+src_configure() {
 	# disabling lots of options, cause many code-paths are broken, these should compile,
 	# if you want/need other options, please test if they work with other combinations
 	# before opening a bug
@@ -45,15 +43,17 @@ src_compile() {
 		--without-asciiart --without-sdl-sound --enable-threads \
 		$(use_with sdl) $(use_with sdl sdl-gfx) \
 		$(use_with alsa) \
-		$(use_enable scsi scsi-device) || die "econf failed"
+		$(use_enable scsi scsi-device)
+}
 
-	emake -j1 || die "emake failed"
+src_compile() {
+	emake -j1
 }
 
 src_install() {
-	dobin uae readdisk || die
-	cp docs/unix/README docs/README.unix
-	rm -r docs/{AmigaOS,BeOS,pOS,translated,unix}
+	dobin uae readdisk
+	cp docs/unix/README docs/README.unix || die
+	rm -r docs/{AmigaOS,BeOS,pOS,translated,unix} || die
 	dodoc docs/*
 
 	insinto /usr/share/uae/amiga-tools

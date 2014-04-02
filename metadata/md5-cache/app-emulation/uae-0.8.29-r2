@@ -1,13 +1,13 @@
-DEFINED_PHASES=compile install postinst unpack
+DEFINED_PHASES=compile configure install postinst prepare
 DEPEND=sdl? ( media-libs/libsdl media-libs/sdl-gfx x11-libs/gtk+:2 alsa? ( media-libs/alsa-lib ) ) !sdl? ( x11-libs/libXext x11-libs/gtk+:2 ) alsa? ( media-libs/alsa-lib ) scsi? ( app-cdr/cdrtools )
 DESCRIPTION=The Umiquious Amiga Emulator
-EAPI=1
+EAPI=5
 HOMEPAGE=http://www.amigaemulator.org/
 IUSE=sdl alsa scsi
-KEYWORDS=~x86 ~ppc ~amd64
+KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=sdl? ( media-libs/libsdl media-libs/sdl-gfx x11-libs/gtk+:2 alsa? ( media-libs/alsa-lib ) ) !sdl? ( x11-libs/libXext x11-libs/gtk+:2 ) alsa? ( media-libs/alsa-lib ) scsi? ( app-cdr/cdrtools )
 SLOT=0
 SRC_URI=ftp://ftp.amigaemulator.org/pub/uae/sources/develop/uae-0.8.29.tar.bz2
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=7bb11016ac012a23586fd4e5f4258228
+_md5_=7ab032e7cd2feba8aa2683e5630cba5f
