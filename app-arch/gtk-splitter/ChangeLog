@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/gtk-splitter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.16 2012/05/03 01:58:54 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.17 2014/04/02 09:49:55 tomwij Exp $
+
+*gtk-splitter-2.2.1-r1 (02 Apr 2014)
+
+  02 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/gtk-splitter-2.2.1-r1-desktop-QA-fixes.patch,
+  +gtk-splitter-2.2.1-r1.ebuild:
+  [QA] Revision bump to 2.2.1-r1. EAPI 5 and other QA fixes.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-splitter-2.2.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

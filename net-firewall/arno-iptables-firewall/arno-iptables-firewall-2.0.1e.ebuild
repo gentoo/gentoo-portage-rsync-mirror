@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arno-iptables-firewall/arno-iptables-firewall-2.0.1d-r1.ebuild,v 1.1 2013/05/18 09:09:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arno-iptables-firewall/arno-iptables-firewall-2.0.1e.ebuild,v 1.1 2014/04/02 09:33:56 tomwij Exp $
 
 EAPI=5
-
-inherit readme.gentoo
+inherit readme.gentoo systemd
 
 DESCRIPTION="Arno's iptables firewall script"
 HOMEPAGE="http://rocky.eld.leidenuniv.nl"
@@ -30,24 +29,28 @@ DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="You will need to configure /etc/${PN}/firewall.conf
 before using this package. To start the script, run:
 
-/etc/init.d/${PN} start
+/etc/init.d/${PN} start (for OpenRC)
+systemctl start ${PN} (for systemd)
 
 If you want to start this script at boot, run:
 
-rc-update add ${PN} default"
+rc-update add ${PN} default (for OpenRC)
+systemctl enable ${PN} (for systemd)"
 
 src_prepare() {
 	sed -i -e 's:/usr/local/share/:/usr/libexec/:' \
 		etc/"${PN}"/firewall.conf || die "Sed failed!"
+	sed -i -e 's:/usr/local/sbin/:/usr/sbin/:' \
+		lib/systemd/system/"${PN}.service" || die "Sed failed!"
 }
 
 src_install() {
-
 	insinto /etc/"${PN}"
 	doins etc/"${PN}"/firewall.conf
 	doins etc/"${PN}"/custom-rules
 
 	doinitd "${FILESDIR}/${PN}"
+	systemd_dounit lib/systemd/system/"${PN}.service"
 
 	dobin bin/arno-fwfilter
 	dosbin bin/"${PN}"

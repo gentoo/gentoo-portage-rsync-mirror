@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/arno-iptables-firewall
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arno-iptables-firewall/ChangeLog,v 1.11 2014/01/26 11:03:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arno-iptables-firewall/ChangeLog,v 1.12 2014/04/02 09:33:56 tomwij Exp $
+
+*arno-iptables-firewall-2.0.1e (02 Apr 2014)
+
+  02 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +arno-iptables-firewall-2.0.1e.ebuild, -arno-iptables-firewall-1.9.2a.ebuild,
+  -arno-iptables-firewall-1.9.2d.ebuild,
+  -arno-iptables-firewall-2.0.1d-r1.ebuild:
+  Version bump to 2.0.1e; fixes bug #500114, proxied commit for Ferenc Erki.
+  Removed old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   arno-iptables-firewall-2.0.1d-r2.ebuild:
