@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testscenarios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.9 2014/04/01 14:33:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.10 2014/04/02 12:52:41 jer Exp $
+
+  02 Apr 2014; Jeroen Roovers <jer@gentoo.org> testscenarios-0.4-r4.ebuild:
+  Marked ~hppa (bug #506510).
 
   01 Apr 2014; Ian Delaney <idella4@gentoo.org> testscenarios-0.4-r4.ebuild:
   add pypy support

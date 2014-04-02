@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.7 2014/04/02 00:37:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.8 2014/04/02 12:59:38 jer Exp $
 
 EAPI=5
 inherit eutils user systemd
@@ -18,29 +18,33 @@ KEYWORDS="amd64 ~hppa x86"
 # removing fcgi useflag as the configure script can't avoid it without patching
 IUSE="apache2 curl dig echoping ipv6 ldap radius ssh telnet"
 
-DEPEND="!apache2? ( virtual/httpd-cgi )
-		>=dev-lang/perl-5.8.8-r8
-		>=dev-perl/SNMP_Session-1.13
-		>=net-analyzer/fping-2.4_beta2-r2
-		>=net-analyzer/rrdtool-1.2[perl]
-		apache2? ( >=www-apache/mod_perl-2.0.1
-		www-apache/mod_fcgid )
-		curl? ( >=net-misc/curl-7.21.4 )
-		dev-perl/CGI-Session
-		dev-perl/Config-Grammar
-		dev-perl/Digest-HMAC
-		dev-perl/FCGI
-		dev-perl/IO-Socket-SSL
-		dev-perl/Net-DNS
-		dev-perl/libwww-perl
-		dig? ( net-dns/bind-tools )
-		echoping? ( >=net-analyzer/echoping-6.0.2 )
-		ipv6? ( >=dev-perl/Socket6-0.20 )
-		ldap? ( dev-perl/perl-ldap )
-		radius? ( dev-perl/RadiusPerl )
-		ssh? ( dev-perl/Net-OpenSSH )
-		telnet? ( dev-perl/Net-Telnet )
-		virtual/perl-libnet"
+DEPEND="
+	!apache2? ( virtual/httpd-cgi )
+	apache2? (
+		>=www-apache/mod_perl-2.0.1
+		www-apache/mod_fcgid
+	)
+	curl? ( >=net-misc/curl-7.21.4 )
+	dig? ( net-dns/bind-tools )
+	echoping? ( >=net-analyzer/echoping-6.0.2 )
+	ipv6? ( >=dev-perl/Socket6-0.20 )
+	ldap? ( dev-perl/perl-ldap )
+	radius? ( dev-perl/RadiusPerl )
+	ssh? ( dev-perl/Net-OpenSSH )
+	telnet? ( dev-perl/Net-Telnet )
+	>=dev-lang/perl-5.8.8-r8
+	>=dev-perl/SNMP_Session-1.13
+	>=net-analyzer/fping-2.4_beta2-r2
+	>=net-analyzer/rrdtool-1.2[perl]
+	dev-perl/CGI-Session
+	dev-perl/Config-Grammar
+	dev-perl/Digest-HMAC
+	dev-perl/FCGI
+	dev-perl/IO-Socket-SSL
+	dev-perl/Net-DNS
+	dev-perl/libwww-perl
+	virtual/perl-libnet
+"
 
 RDEPEND="${DEPEND}"
 
@@ -57,8 +61,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-	--sysconfdir=/etc/smokeping \
-	--with-htdocs-dir=/var/www/localhost/smokeping
+		--sysconfdir=/etc/smokeping \
+		--with-htdocs-dir=/var/www/localhost/smokeping
 }
 
 src_compile() {
@@ -78,7 +82,8 @@ src_install() {
 	mv "${D}/etc/smokeping/smokeping_secrets.dist" "${D}/etc/smokeping/smokeping_secrets"
 	mv "${D}/etc/smokeping/tmail.dist" "${D}/etc/smokeping/tmail"
 
-	sed -e '/^imgcache/{s:\(^imgcache[ \t]*=\).*:\1 /var/lib/smokeping/.simg:}' \
+	sed -i \
+		-e '/^imgcache/{s:\(^imgcache[ \t]*=\).*:\1 /var/lib/smokeping/.simg:}' \
 		-e '/^imgurl/{s:\(^imgurl[ \t]*=\).*:\1 ../.simg:}' \
 		-e '/^datadir/{s:\(^datadir[ \t]*=\).*:\1 /var/lib/smokeping:}' \
 		-e '/^piddir/{s:\(^piddir[ \t]*=\).*:\1 /run/smokeping:}' \
@@ -87,17 +92,23 @@ src_install() {
 		-e '/^tmail/{s:\(^tmail[ \t]*=\).*:\1 /etc/smokeping/tmail:}' \
 		-e '/^secrets/{s:\(^secrets[ \t]*=\).*:\1 /etc/smokeping/smokeping_secrets:}' \
 		-e '/^template/{s:\(^template[ \t]*=\).*:\1 /etc/smokeping/basepage.html:}' \
-		-i "${D}/etc/${PN}/config" || die
+		"${D}/etc/${PN}/config" || die
 
-	sed -e '/^<script/{s:cropper/:/cropper/:}' -i "${D}/etc/${PN}/basepage.html"
+	sed -i \
+		-e '/^<script/{s:cropper/:/cropper/:}' \
+		"${D}/etc/${PN}/basepage.html" || die
 
-	sed -e 's/$FindBin::Bin\/..\/etc\/config/\/etc\/smokeping\/config/g' \
-		-i "${D}/usr/bin/smokeping" -i "${D}/usr/bin/smokeping_cgi"
+	sed -i \
+		-e 's/$FindBin::Bin\/..\/etc\/config/\/etc\/smokeping\/config/g' \
+		"${D}/usr/bin/smokeping" "${D}/usr/bin/smokeping_cgi" || die
 
-	sed -e 's:etc/config.dist:/etc/smokeping/config:' -i "${D}/usr/bin/tSmoke"
+	sed -i \
+		-e 's:etc/config.dist:/etc/smokeping/config:' \
+		"${D}/usr/bin/tSmoke" || die
 
-	sed -e 's:/usr/etc/config:/etc/smokeping/config:' -i \
-		"${D}/var/www/localhost/smokeping/smokeping.fcgi.dist"
+	sed -i \
+		-e 's:/usr/etc/config:/etc/smokeping/config:' \
+		"${D}/var/www/localhost/smokeping/smokeping.fcgi.dist" || die
 
 	dodir /var/www/localhost/cgi-bin
 		mv "${D}/var/www/localhost/smokeping/smokeping.fcgi.dist" \
