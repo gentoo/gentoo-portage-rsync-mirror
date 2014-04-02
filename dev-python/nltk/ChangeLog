@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/nltk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.15 2013/03/17 17:59:45 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.16 2014/04/02 15:14:13 tomwij Exp $
+
+*nltk-2.0.4 (02 Apr 2014)
+
+  02 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +nltk-2.0.4.ebuild:
+  Version bump to 2.0.4, migrated to distutils-r1; proxied commit for Corentin
+  LABBE.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
