@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>qt</herd>
-	<herd>python</herd>
 	<use>
 		<flag name="X">Build QtGui and QtTest modules</flag>
 		<flag name="declarative">Build QtDeclarative module</flag>

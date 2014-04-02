@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/Moose-1.06 dev-perl/Sub-Name >=dev-perl/Carp-Clan-6.00 >=dev-perl/Sub-Install-0.924 >=dev-perl/namespace-clean-0.190.0 test? ( dev-perl/Test-Fatal dev-perl/Test-Requires ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=>=dev-perl/Moose-1.06 dev-perl/Sub-Name >=dev-perl/Carp-Clan-6.00 >=dev-perl/Sub-Install-0.924 >=dev-perl/namespace-clean-0.190.0 test? ( dev-perl/Test-Fatal dev-perl/Test-Requires dev-perl/Test-CheckDeps ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Organise your Moose types in libraries
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/MooseX-Types/
@@ -10,4 +10,4 @@ RDEPEND=>=dev-perl/Moose-1.06 dev-perl/Sub-Name >=dev-perl/Carp-Clan-6.00 >=dev-
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/MooseX-Types-0.36.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
-_md5_=b732bc320d5cbc5d00bf6c6411559edf
+_md5_=00eb60dd2d85339f127d69d78680c44e

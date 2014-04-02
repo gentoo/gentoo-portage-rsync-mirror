@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.257 2014/03/27 18:05:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.258 2014/04/02 12:25:41 kensington Exp $
+
+  02 Apr 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Remove python herd as discussed with them.
 
 *PyQt4-4.10.3-r3 (27 Mar 2014)
 

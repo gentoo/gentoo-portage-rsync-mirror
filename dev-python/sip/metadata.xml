@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>qt</herd>
-	<herd>python</herd>
 	<upstream>
 		<maintainer status="active">
 			<email>phil@riverbankcomputing.com</email>
