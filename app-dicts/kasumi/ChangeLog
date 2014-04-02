@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/kasumi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.45 2012/05/03 02:18:37 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.46 2014/04/02 10:52:21 tomwij Exp $
+
+*kasumi-2.5-r1 (02 Apr 2014)
+
+  02 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/kasumi-2.5-r1-fix-desktop-QA.patch, +kasumi-2.5-r1.ebuild:
+  [QA] Revision bump to 2.5-r1. EAPI 5, remove copies of default phases, fix
+  desktop file QA issues.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> kasumi-2.3-r1.ebuild,
   kasumi-2.4.ebuild, kasumi-2.5.ebuild:
@@ -199,4 +206,3 @@
   10 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +kasumi-0.3.ebuild:
   Initial import.
-

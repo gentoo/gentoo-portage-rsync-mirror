@@ -11,8 +11,5 @@
     <flag name="garden">
       Install garden tool to manage user maintained widgets
     </flag>
-    <flag name="gst">
-      Install libraries for audio/video output
-    </flag>
   </use>
 </pkgmetadata>

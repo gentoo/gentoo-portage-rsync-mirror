@@ -1,6 +1,9 @@
 # ChangeLog for games-action/garden
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.10 2014/03/18 21:04:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.11 2014/04/02 10:38:41 nimiux Exp $
+
+  02 Apr 2014; Chema Alonso <nimiux@gentoo.org> garden-1.0.8-r1.ebuild:
+  Stable for amd64 wrt bug #505022
 
   18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org> garden-1.0.8-r1.ebuild:
   better icon handling

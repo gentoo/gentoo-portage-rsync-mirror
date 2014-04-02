@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ophcrack-tables
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack-tables/ChangeLog,v 1.4 2009/10/31 00:38:46 ikelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack-tables/ChangeLog,v 1.5 2014/04/02 10:41:16 tomwij Exp $
+
+*ophcrack-tables-1.0-r2 (02 Apr 2014)
+
+  02 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +ophcrack-tables-1.0-r2.ebuild,
+  -ophcrack-tables-1.0-r1.ebuild, -ophcrack-tables-1.0.ebuild:
+  [QA] Revision bump to 1.0-r2. EAPI 5 and Prefix support, added die to cd and
+  cp call.
 
   31 Oct 2009; Mike Auty <ikelos@gentoo.org> ophcrack-tables-1.0.ebuild,
   ophcrack-tables-1.0-r1.ebuild:
@@ -19,4 +26,3 @@
   21 Jul 2008; Mike Auty <ikelos@gentoo.org> +metadata.xml,
   +ophcrack-tables-1.0.ebuild:
   Initial commit of split-out ophcrack tables.
-
