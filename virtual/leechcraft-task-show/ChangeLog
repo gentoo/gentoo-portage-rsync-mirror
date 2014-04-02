@@ -1,6 +1,10 @@
 # ChangeLog for virtual/leechcraft-task-show
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-task-show/ChangeLog,v 1.30 2014/01/08 09:59:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-task-show/ChangeLog,v 1.31 2014/04/02 18:42:36 zlogene Exp $
+
+  02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org>
+  leechcraft-task-show-0.6.60.ebuild:
+  amd64 stable wrt bug #500914
 
 *leechcraft-task-show-0.6.60 (08 Jan 2014)
 
