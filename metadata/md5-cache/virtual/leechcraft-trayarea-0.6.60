@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for LeechCraft plugins providing a tray area
 EAPI=4
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 RDEPEND=|| ( app-leechcraft/lc-sb2 app-leechcraft/lc-sidebar )
 SLOT=0
-_md5_=07888d413a56114923f355f9352ff97f
+_md5_=7ed439edc9e1f96866d8ffe84987db28
