@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p46.ebuild,v 1.1 2014/04/01 06:47:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p46-r1.ebuild,v 1.1 2014/04/02 09:11:25 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -41,8 +41,8 @@ DEPEND=">=sys-libs/ncurses-5.2-r2
 	readline? ( >=sys-libs/readline-6.2 )
 	nls? ( virtual/libintl )"
 RDEPEND="${DEPEND}
-	!<sys-apps/portage-2.1.6.7_p1
-	!<sys-apps/paludis-0.26.0_alpha5"
+	!!<sys-apps/portage-2.1.6.7_p1
+	!!<sys-apps/paludis-0.26.0_alpha5"
 # we only need yacc when the .y files get patched (bash42-005)
 DEPEND+=" virtual/yacc"
 
@@ -62,8 +62,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	cd "${S}"
+}
 
+src_prepare() {
 	# Include official patches
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 
@@ -87,7 +88,7 @@ src_unpack() {
 	epatch_user
 }
 
-src_compile() {
+src_configure() {
 	local myconf=()
 
 	# For descriptions of these, see config-top.h
@@ -135,18 +136,21 @@ src_compile() {
 		$(use_enable readline history) \
 		$(use_enable readline bang-history) \
 		"${myconf[@]}"
-	emake || die
+}
+
+src_compile() {
+	emake
 
 	if use plugins ; then
-		emake -C examples/loadables all others || die
+		emake -C examples/loadables all others
 	fi
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}"
 
 	dodir /bin
-	mv "${D}"/usr/bin/bash "${D}"/bin/ || die
+	mv "${ED}"/usr/bin/bash "${ED}"/bin/ || die
 	dosym bash /bin/rbash
 
 	insinto /etc/bash
@@ -168,12 +172,12 @@ src_install() {
 	fi
 	sed -i \
 		"${sed_args[@]}" \
-		"${D}"/etc/skel/.bashrc \
-		"${D}"/etc/bash/bashrc || die
+		"${ED}"/etc/skel/.bashrc \
+		"${ED}"/etc/bash/bashrc || die
 
 	if use plugins ; then
 		exeinto /usr/$(get_libdir)/bash
-		doexe $(echo examples/loadables/*.o | sed 's:\.o::g') || die
+		doexe $(echo examples/loadables/*.o | sed 's:\.o::g')
 		insinto /usr/include/bash-plugins
 		doins *.h builtins/*.h examples/loadables/*.h include/*.h \
 			lib/{glob/glob.h,tilde/tilde.h}
@@ -199,24 +203,24 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ -e ${ROOT}/etc/bashrc ]] && [[ ! -d ${ROOT}/etc/bash ]] ; then
-		mkdir -p "${ROOT}"/etc/bash
-		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
+	if [[ -e ${EROOT}/etc/bashrc ]] && [[ ! -d ${EROOT}/etc/bash ]] ; then
+		mkdir -p "${EROOT}"/etc/bash
+		mv -f "${EROOT}"/etc/bashrc "${EROOT}"/etc/bash/
 	fi
 
-	if [[ -L ${ROOT}/bin/sh ]]; then
+	if [[ -L ${EROOT}/bin/sh ]]; then
 		# rewrite the symlink to ensure that its mtime changes. having /bin/sh
 		# missing even temporarily causes a fatal error with paludis.
-		local target=$(readlink "${ROOT}"/bin/sh)
-		local tmp=$(emktemp "${ROOT}"/bin)
+		local target=$(readlink "${EROOT}"/bin/sh)
+		local tmp=$(emktemp "${EROOT}"/bin)
 		ln -sf "${target}" "${tmp}"
-		mv -f "${tmp}" "${ROOT}"/bin/sh
+		mv -f "${tmp}" "${EROOT}"/bin/sh
 	fi
 }
 
 pkg_postinst() {
 	# If /bin/sh does not exist, provide it
-	if [[ ! -e ${ROOT}/bin/sh ]]; then
-		ln -sf bash "${ROOT}"/bin/sh
+	if [[ ! -e ${EROOT}/bin/sh ]]; then
+		ln -sf bash "${EROOT}"/bin/sh
 	fi
 }
