@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.3-r1.ebuild,v 1.3 2013/10/24 16:00:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.3-r1.ebuild,v 1.4 2014/04/02 15:46:27 johu Exp $
 
 EAPI=5
 
@@ -48,6 +48,9 @@ PATCHES=(
 	"${FILESDIR}/${P}-avatar-duplication.patch"
 	"${FILESDIR}/${P}-cmake-2.8.12.patch"
 )
+
+# test hangs, needs further investigation
+RESTRICT="test"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
