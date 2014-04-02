@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.6 2013/07/10 05:18:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.7 2014/04/02 00:37:56 jer Exp $
 
 EAPI=5
 inherit eutils user systemd
@@ -52,6 +52,7 @@ pkg_setup() {
 src_prepare() {
 	rm -r lib/{BER.pm,SNMP_Session.pm,SNMP_util.pm} # dev-perl/SNMP_Session
 
+	epatch "${FILESDIR}"/${P}-pod.patch
 }
 
 src_configure() {

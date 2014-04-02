@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/smokeping
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.53 2013/07/10 11:14:37 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.54 2014/04/02 00:37:56 jer Exp $
+
+  02 Apr 2014; Jeroen Roovers <jer@gentoo.org> smokeping-2.6.9.ebuild,
+  +files/smokeping-2.6.9-pod.patch:
+  Fix syntax error in lib/Smokeping.pm (bug #506358 by mbe).
 
   10 Jul 2013; Jeroen Roovers <jer@gentoo.org> -files/config.dist,
   -files/smokeping.init.2, -files/smokeping_fping-3.3.patch,
