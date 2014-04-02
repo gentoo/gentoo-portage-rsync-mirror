@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.20.1.ebuild,v 1.4 2014/04/02 18:32:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.20.1.ebuild,v 1.5 2014/04/02 22:58:39 floppym Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="doc test"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/numpy[$(python_gen_usedep python{2_6,2_7,3_2,3_3})] )"
+	test? ( dev-python/numpy[$(python_gen_usedep python{2_6,2_7,3_2,3_3,3_4})] )"
 
 S="${WORKDIR}/${MY_PN}-${PV%_*}"
 
