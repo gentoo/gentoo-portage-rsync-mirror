@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/openssl-blacklist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.11 2014/02/12 19:23:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.12 2014/04/02 13:50:46 jer Exp $
+
+  02 Apr 2014; Jeroen Roovers <jer@gentoo.org> openssl-blacklist-0.5.3.ebuild:
+  Stable for HPPA (bug #502614).
 
   12 Feb 2014; Hanno Boeck <hanno@gentoo.org> openssl-blacklist-0.5.3.ebuild:
   Convert to python-single-r1 eclass, fix shebangs.

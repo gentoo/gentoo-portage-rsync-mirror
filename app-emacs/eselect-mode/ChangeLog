@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/eselect-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.25 2014/02/15 00:13:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.26 2014/04/02 13:57:47 jer Exp $
+
+  02 Apr 2014; Jeroen Roovers <jer@gentoo.org> eselect-mode-1.4.1.ebuild:
+  Stable for HPPA (bug #506154).
 
 *eselect-mode-1.4.1 (15 Feb 2014)
 
