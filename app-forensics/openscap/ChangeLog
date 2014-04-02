@@ -1,6 +1,16 @@
 # ChangeLog for app-forensics/openscap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.28 2014/03/01 22:10:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.29 2014/04/02 18:11:50 swift Exp $
+
+  02 Apr 2014; Sven Vermeulen <swift@gentoo.org> -openscap-0.9.8.ebuild,
+  -openscap-0.9.12.ebuild, +openscap-1.0.8.ebuild, openscap-9999.ebuild:
+  Remove old ebuilds
+
+*openscap-1.0.8 (02 Apr 2014)
+
+  02 Apr 2014; Sven Vermeulen <swift@gentoo.org> +openscap-1.0.8.ebuild,
+  openscap-9999.ebuild:
+  Bump to 1.0.8
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> openscap-0.9.12.ebuild,
   openscap-0.9.8.ebuild, openscap-1.0.1.ebuild, openscap-9999.ebuild:

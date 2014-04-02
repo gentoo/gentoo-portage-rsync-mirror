@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-pogooglue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-pogooglue/ChangeLog,v 1.8 2014/01/08 09:53:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-pogooglue/ChangeLog,v 1.9 2014/04/02 18:12:21 zlogene Exp $
+
+  02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-pogooglue-0.6.60.ebuild:
+  amd64 stable wrt bug #500914
 
 *lc-pogooglue-0.6.60 (08 Jan 2014)
 

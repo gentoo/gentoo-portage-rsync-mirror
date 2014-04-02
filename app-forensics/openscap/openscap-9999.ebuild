@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-9999.ebuild,v 1.4 2014/03/01 22:10:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-9999.ebuild,v 1.5 2014/04/02 18:11:50 swift Exp $
 
 EAPI=5
 
@@ -62,7 +62,6 @@ src_unpack() {
 src_prepare() {
 #	uncoment for debugging test
 #	sed -i 's,set -e,&;set -x,'	tests/API/XCCDF/unittests/test_remediate_simple.sh || die
-	sed -i 's,^    bash,    LC_ALL=C bash,'	tests/probes/process/test_probes_process.sh || die
 
 	sed -i 's/uname -p/uname -m/' tests/probes/uname/test_probes_uname.xml.sh || die
 

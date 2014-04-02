@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.9.12.ebuild,v 1.3 2014/03/01 22:10:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-1.0.8.ebuild,v 1.1 2014/04/02 18:11:50 swift Exp $
 
 EAPI=5
 
@@ -16,19 +16,25 @@ SRC_URI="https://fedorahosted.org/releases/o/p/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion doc ldap nss perl python rpm selinux sce sql test"
-RESTRICT="test"
+IUSE="acl bash-completion caps debug doc gconf ldap nss pcre perl python rpm selinux sce sql test xattr"
+#RESTRICT="test"
 
 RDEPEND="!nss? ( dev-libs/libgcrypt:0 )
 	nss? ( dev-libs/nss )
+	acl? ( virtual/acl )
+	caps? ( sys-libs/libcap )
+	gconf? ( gnome-base/gconf )
 	ldap? ( net-nds/openldap )
+	pcre? ( dev-libs/libpcre )
 	rpm? ( >=app-arch/rpm-4.9 )
 	sql? ( dev-db/opendbx )
+	xattr? ( sys-apps/attr )
 	dev-libs/libpcre
 	dev-libs/libxml2
 	dev-libs/libxslt
 	net-misc/curl"
 DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
 	perl? ( dev-lang/swig )
 	python? ( dev-lang/swig )
 	test? (
@@ -40,7 +46,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 #	uncoment for debugging test
 #	sed -i 's,set -e,&;set -x,'	tests/API/XCCDF/unittests/test_remediate_simple.sh || die
-	sed -i 's,^    bash,    LC_ALL=C bash,'	tests/probes/process/test_probes_process.sh || die
+#	sed -i 's,^    bash,    LC_ALL=C bash,'	tests/probes/process/test_probes_process.sh || die
 
 	sed -i 's/uname -p/uname -m/' tests/probes/uname/test_probes_uname.xml.sh || die
 
@@ -88,6 +94,9 @@ src_prepare() {
 src_configure() {
 	python_setup
 	local myconf
+	if use debug ; then
+		myconf+=" --enable-debug"
+	fi
 	if use python ; then
 		myconf+=" --enable-python"
 	else
@@ -107,6 +116,13 @@ src_configure() {
 		myconf+=" --enable-sce=no"
 	fi
 	econf ${myconf}
+}
+
+src_compile() {
+	emake
+	if use doc ; then
+		cd docs && doxygen Doxyfile || die
+	fi
 }
 
 src_install() {
