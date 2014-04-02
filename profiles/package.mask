@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15530 2014/04/02 09:52:56 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15531 2014/04/02 17:20:12 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -229,12 +229,6 @@ lxde-base/lxpolkit
 # According to upstream, a new release is "unlikely".
 # Masked for removal in 60 days, bug 502168.
 app-emacs/delicious
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
-# Support library for app-emacs/prime-el, which is masked
-# for removal itself. No other reverse dependencies.
-# Masked for removal in 30 days, bug 501426.
-app-emacs/mell
 
 # Michał Górny <mgorny@gentoo.org> (28 Feb 2014)
 # New multilib conversions for testing, grouped with corresponding
