@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.89 2014/03/28 18:57:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.90 2014/04/02 20:29:21 ssuominen Exp $
+
+  02 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  udev-init-scripts-26-r1.ebuild, udev-init-scripts-26.ebuild,
+  udev-init-scripts-9999.ebuild:
+  Make virtual/udev also a DEPEND to fix race with emerge order wrt #503174 by
+  Jack Suter. Thanks to Jorge Manuel B. S. Vicetto and Magnus Granberg for
+  tracking this down.
 
   28 Mar 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   udev-init-scripts-26-r1.ebuild, udev-init-scripts-26.ebuild,

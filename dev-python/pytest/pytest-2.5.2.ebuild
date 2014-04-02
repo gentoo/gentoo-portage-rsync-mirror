@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.5.2.ebuild,v 1.3 2014/03/31 20:31:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.5.2.ebuild,v 1.4 2014/04/02 20:25:31 radhermit Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
 inherit distutils-r1 eutils
 
 DESCRIPTION="py.test: simple powerful testing with Python"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 	test? (
-		dev-python/pexpect[$(python_gen_usedep python{2_6,2_7,3_2,3_3})]
+		dev-python/pexpect[$(python_gen_usedep python{2_6,2_7,3_2,3_3,3_4})]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 	)
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"

@@ -1,5 +1,5 @@
 DEFINED_PHASES=postinst prepare unpack
-DEPEND=dev-vcs/git
+DEPEND=>=virtual/udev-180 !<sys-fs/udev-186 dev-vcs/git
 DESCRIPTION=udev startup scripts for openrc
 EAPI=5
 HOMEPAGE=http://www.gentoo.org
@@ -8,4 +8,4 @@ RDEPEND=>=virtual/udev-180 !<sys-fs/udev-186
 RESTRICT=test
 SLOT=0
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3bd63d750d717614040544926ccc1896
+_md5_=4591199eb9c1a09da0b2a042069c817e
