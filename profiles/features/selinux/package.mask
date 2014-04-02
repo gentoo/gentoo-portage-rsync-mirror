@@ -1,4 +1,1 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.51 2014/02/02 09:52:20 swift Exp $
-
-# Critical xattr fixes:
-<sys-boot/grub-0.94
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.52 2014/04/02 06:39:00 zlogene Exp $
