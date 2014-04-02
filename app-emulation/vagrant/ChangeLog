@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vagrant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.36 2014/02/06 06:09:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/ChangeLog,v 1.37 2014/04/02 16:20:56 vikraman Exp $
+
+  02 Apr 2014; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  vagrant-1.4.3-r2.ebuild:
+  Add ~x86 for 1.4.3-r2
 
 *vagrant-1.4.3-r2 (06 Feb 2014)
 
@@ -176,4 +180,3 @@
   21 Mar 2012; Tim Harder <radhermit@gentoo.org> +vagrant-1.0.0.ebuild,
   +metadata.xml:
   Initial import (bug #391367). Ebuild by me.
-

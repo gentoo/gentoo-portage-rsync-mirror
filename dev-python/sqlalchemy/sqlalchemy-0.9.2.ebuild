@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.9.2.ebuild,v 1.4 2014/03/31 20:57:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.9.2.ebuild,v 1.5 2014/04/02 16:18:51 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 		>=dev-python/nose-0.10.4[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"
-
 S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
@@ -51,8 +50,10 @@ python_test() {
 	pushd "${BUILD_DIR}" > /dev/null
 	if [[ "${EPYTHON}" == "python3.2" ]]; then
 		2to3 --no-diffs -w test
+		"${PYTHON}" sqla_nose.py -e test_reflect || die "Testsuite failed under ${EPYTHON}"
+	else
+		"${PYTHON}" sqla_nose.py || die "Testsuite failed under ${EPYTHON}"
 	fi
-	"${PYTHON}" sqla_nose.py || die "Testsuite failed under ${EPYTHON}"
 	popd > /dev/null
 }
 

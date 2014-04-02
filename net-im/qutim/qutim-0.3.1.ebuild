@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.7 2013/07/04 16:49:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.8 2014/04/02 16:09:09 kensington Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="aspell awn ayatana crypt dbus debug doc histman hunspell irc jabber kde kinetic mrim
-	multimedia oscar otr phonon purple qml sdl +ssl telepathy vkontakte webkit +xscreensaver"
+	multimedia oscar otr phonon purple qml sdl +ssl vkontakte webkit +xscreensaver"
 
 REQUIRED_USE="
 	oscar? ( ssl )
@@ -60,7 +60,6 @@ CDEPEND="
 		>=dev-qt/qtopengl-${QT_PV}
 	)
 	sdl? ( media-libs/sdl-mixer )
-	telepathy? ( =net-libs/telepathy-qt-0.8* )
 	vkontakte? ( >=dev-qt/qtwebkit-${QT_PV} )
 	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )
 	xscreensaver? ( x11-libs/libXScrnSaver )
@@ -126,7 +125,6 @@ src_configure() {
 		$(cmake-utils_use mrim)
 		$(cmake-utils_use oscar)
 		$(cmake-utils_use purple QUETZAL)
-		$(cmake-utils_use telepathy ASTRAL)
 		$(cmake-utils_use vkontakte)
 	)
 	cmake-utils_src_configure

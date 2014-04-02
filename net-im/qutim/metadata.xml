@@ -17,7 +17,6 @@
 	<flag name="purple">Enable libpurple-based protocol support</flag>
 	<flag name="qml">Enable QtQuick-based chat plugin</flag>
 	<flag name="sdl">Add sound support via <pkg>media-libs/sdl-mixer</pkg></flag>
-	<flag name="telepathy">Enable telepathy-based protocol support</flag>
 	<flag name="vkontakte">Enable vkontakte protocol support</flag>
 	<flag name="webkit">Enable Adium-like WebView plugin</flag>
 	<flag name="xscreensaver">Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events</flag>

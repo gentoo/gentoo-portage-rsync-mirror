@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.4.3-r2.ebuild,v 1.1 2014/02/06 06:09:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.4.3-r2.ebuild,v 1.2 2014/04/02 16:20:56 vikraman Exp $
 
 EAPI="5"
 USE_RUBY="ruby20"
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/mitchellh/vagrant/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x64-macos"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="test"
 
 # Missing ebuild for contest
