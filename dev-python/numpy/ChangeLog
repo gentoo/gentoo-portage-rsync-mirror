@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.234 2014/03/25 19:26:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.235 2014/04/02 01:38:43 floppym Exp $
+
+  02 Apr 2014; Mike Gilbert <floppym@gentoo.org> numpy-1.8.0-r1.ebuild:
+  Add python3.4. Add -fPIC to FFLAGS unconditionally to allow test suite to
+  work.
 
   25 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.8.0-r1.ebuild:
   More fixes to the site.cfg file generation
