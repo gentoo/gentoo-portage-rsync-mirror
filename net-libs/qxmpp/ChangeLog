@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.38 2014/03/27 14:02:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.39 2014/04/02 16:41:40 zlogene Exp $
+
+  02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> qxmpp-0.7.6-r1.ebuild:
+  amd64 stable wrt bug #500914
 
 *qxmpp-0.8.0 (27 Mar 2014)
 
