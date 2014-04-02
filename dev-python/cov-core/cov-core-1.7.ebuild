@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/cov-core-1.7.ebuild,v 1.4 2013/07/27 10:32:05 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/cov-core-1.7.ebuild,v 1.5 2014/04/02 20:51:56 chutzpah Exp $
 
-EAPI="5"
+EAPI=5
 
-PYTHON_COMPAT=(python2_7 python3_2 python3_3)
+PYTHON_COMPAT=(python{2_7,3_{2,3,4}})
 inherit distutils-r1
 
 DESCRIPTION="plugin core for use by pytest-cov, nose-cov and nose2-cov"

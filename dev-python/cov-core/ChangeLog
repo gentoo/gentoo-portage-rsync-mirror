@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cov-core
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.4 2013/07/27 10:32:05 djc Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.5 2014/04/02 20:51:56 chutzpah Exp $
+
+  02 Apr 2014; Patrick McLean <chutzpah@gentoo.org> cov-core-1.7.ebuild:
+  Add python3_4 support.
 
   27 Jul 2013; Dirkjan Ochtman <djc@gentoo.org> cov-core-1.7.ebuild:
   Remove pytest dependency (bug 452546).

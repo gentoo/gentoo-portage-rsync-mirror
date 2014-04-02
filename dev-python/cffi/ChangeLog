@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.29 2014/03/31 20:41:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.30 2014/04/02 20:58:12 radhermit Exp $
+
+  02 Apr 2014; Tim Harder <radhermit@gentoo.org> cffi-0.8.2.ebuild:
+  Add python3_4 support.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> cffi-0.8.1.ebuild,
   cffi-0.8.2.ebuild:

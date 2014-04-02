@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airpwn/airpwn-1.4-r1.ebuild,v 1.2 2013/05/02 06:29:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airpwn/airpwn-1.4-r2.ebuild,v 1.1 2014/04/02 20:37:01 zerochaos Exp $
 
 EAPI="5"
 
@@ -39,8 +39,10 @@ src_install() {
 	DESTDIR="${D}" emake install
 	dodoc README
 	if use examples; then
-		docinto sample-configs
-		rm -rf conf/CVS
-		dodoc conf/*
+		insinto /usr/share/${PN}
+		rm -rf conf/CVS content/CVS
+		sed -i "s#content/#/usr/share/${PN}/content/#" conf/*
+		doins -r conf/
+		doins -r content/
 	fi
 }
