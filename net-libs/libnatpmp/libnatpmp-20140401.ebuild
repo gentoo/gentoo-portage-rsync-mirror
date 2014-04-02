@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20120821.ebuild,v 1.3 2012/12/16 18:23:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20140401.ebuild,v 1.1 2014/04/02 14:06:00 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="An alternative protocol to UPnP IGD specification"
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="static-libs"
 
 src_prepare() {
-	epatch "${FILESDIR}"/respect-FLAGS-${PV}.patch
-	epatch "${FILESDIR}"/respect-libdir-${PV}.patch
-	use static-libs || epatch "${FILESDIR}"/remove-static-lib-${PV}.patch
+	epatch "${FILESDIR}"/respect-FLAGS-20140401.patch
+	epatch "${FILESDIR}"/respect-libdir-20120821.patch
+	use static-libs || epatch "${FILESDIR}"/remove-static-lib-20130911.patch
 	tc-export CC
 }
 

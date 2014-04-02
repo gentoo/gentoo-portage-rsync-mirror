@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libnatpmp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/ChangeLog,v 1.26 2013/12/24 12:48:37 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/ChangeLog,v 1.28 2014/04/02 14:10:55 blueness Exp $
+
+  02 Apr 2014; Anthony G. Basile <blueness@gentoo.org>
+  -files/remove-static-lib-20120821.patch, -files/respect-FLAGS-20120821.patch,
+  -libnatpmp-20120821.ebuild:
+  Remove older unstable
+
+*libnatpmp-20140401 (02 Apr 2014)
+
+  02 Apr 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/respect-FLAGS-20140401.patch, +libnatpmp-20140401.ebuild:
+  Version bump
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libnatpmp-20130911.ebuild:
   Stable for x86, wrt bug #492708
