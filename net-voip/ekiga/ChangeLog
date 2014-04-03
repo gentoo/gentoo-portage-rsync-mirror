@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/ekiga
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.55 2013/12/15 12:18:36 moult Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.56 2014/04/03 10:10:13 tomwij Exp $
+
+  03 Apr 2014; Tom Wijsman <TomWij@gentoo.org> ekiga-3.2.7.ebuild,
+  ekiga-4.0.0-r1.ebuild:
+  [QA] Drop minor arch stable keyword(s) per 20130917 Council decision, due to
+  minor arch stable keyword drop(s) on {gentoo,linux}-sources.
 
   15 Dec 2013; Dion Moult <moult@gentoo.org> -ekiga-2.0.12.ebuild:
   <=net-libs/ekiga-2.0.12 removal (pending 11 July 2013), see #290062 and

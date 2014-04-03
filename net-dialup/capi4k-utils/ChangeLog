@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.74 2013/07/21 09:03:54 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.75 2014/04/03 10:10:27 tomwij Exp $
+
+  03 Apr 2014; Tom Wijsman <TomWij@gentoo.org> capi4k-utils-20050718-r3.ebuild:
+  [QA] Drop minor arch stable keyword(s) per 20130917 Council decision, due to
+  minor arch stable keyword drop(s) on {gentoo,linux}-sources.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799
