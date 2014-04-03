@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.27 2014/04/03 19:16:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26-r2.ebuild,v 1.1 2014/04/03 19:16:01 ssuominen Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils udev
 
 if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/udev-gentoo-scripts.git"
@@ -27,11 +27,20 @@ RESTRICT="test"
 
 RDEPEND=">=virtual/udev-180
 	!<sys-fs/udev-186"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare()
 {
 	epatch_user
+}
+
+src_install()
+{
+	default
+
+	# These are now part of >=net-misc/netifrc-0.2.1:
+	rm -f "${D}"/$(get_udevdir)/{net.sh,rules.d/90-network.rules}
 }
 
 pkg_postinst()
