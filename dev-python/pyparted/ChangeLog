@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.86 2014/04/02 21:30:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.87 2014/04/03 21:07:16 chutzpah Exp $
+
+  03 Apr 2014; Patrick McLean <chutzpah@gentoo.org> pyparted-3.10.ebuild,
+  pyparted-3.10-r1.ebuild:
+  Add DEPEND on pkgconfig.
 
 *pyparted-3.10-r1 (02 Apr 2014)
 

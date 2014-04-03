@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.10.ebuild,v 1.11 2014/01/18 20:02:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.10.ebuild,v 1.12 2014/04/03 21:07:16 chutzpah Exp $
 
 EAPI=5
 
@@ -16,14 +16,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="test"
 
-RDEPEND="
-	>=sys-block/parted-3.1
+RDEPEND=">=sys-block/parted-3.1
 	dev-python/decorator
-	sys-libs/ncurses
-"
-DEPEND="
-	${RDEPEND}
-"
+	sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 # test? ( dev-python/pychecker )
 
 src_test() {
