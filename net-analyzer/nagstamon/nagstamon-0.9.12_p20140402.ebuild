@@ -1,14 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.12_p20140402.ebuild,v 1.1 2014/04/03 20:48:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.12_p20140402.ebuild,v 1.2 2014/04/03 21:32:53 idl0r Exp $
 
 EAPI="5"
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils python
+inherit eutils python-r1
 
 MY_PN="Nagstamon"
 #MY_P="${MY_PN}-${PV/_/}-20130729"
@@ -28,6 +26,7 @@ RDEPEND="dev-python/pygobject:2
 	dev-python/lxml
 	dev-python/beautifulsoup:python-2
 	gnome-base/librsvg
+	dev-python/keyring
 	gnome? ( dev-python/egg-python )
 	sound? ( media-sound/sox )"
 
@@ -35,8 +34,6 @@ S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
 	epatch "${FILESDIR}/nagstamon-0.9.11_rc1-resources.patch"
-
-	python_convert_shebangs 2 nagstamon.py
 
 	rm Nagstamon/resources/LICENSE
 	rm Nagstamon/BeautifulSoup.py
@@ -46,32 +43,24 @@ src_install() {
 	# setup.py is broken
 	cd Nagstamon/
 
-	doman resources/nagstamon.1 || die
+	doman resources/nagstamon.1
 	rm resources/nagstamon.1
 
-	nagstamon_install() {
-		exeinto $(python_get_sitedir)/${MY_PN}
-		doexe ../nagstamon.py || die
-		dosym $(python_get_sitedir)/${MY_PN}/${PN}.py /usr/bin/${PN} || die
+	newbin ../nagstamon.py nagstamon
 
+	nagstamon_install() {
 		insinto $(python_get_sitedir)/${MY_PN}
-		doins {GUI,Config,Objects,Custom,Actions}.py || die
+		doins {GUI,Config,Objects,Custom,Actions}.py
 		touch "${D}/$(python_get_sitedir)/${MY_PN}/__init__.py" || die
-		doins -r Server/ || die
+		doins -r Server/
 
 		insinto /usr/share/${PN}/resources
-		doins resources/* || die
+		doins resources/*
 
-		domenu "${FILESDIR}"/${PN}.desktop || die
+		domenu "${FILESDIR}"/${PN}.desktop
 	}
 
-	python_execute_function nagstamon_install
-}
+	python_foreach_impl nagstamon_install
 
-pkg_postinst() {
-	python_mod_optimize ${MY_PN}
-}
-
-pkg_postrm() {
-	python_mod_cleanup ${MY_PN}
+	python_replicate_script "${D}/usr/bin/nagstamon"
 }

@@ -1,13 +1,13 @@
-DEFINED_PHASES=install postinst postrm prepare setup
-DEPEND==dev-lang/python-2*
+DEFINED_PHASES=install prepare
+DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Nagstamon is a Nagios status monitor for a systray and displays a realtime status of a Nagios box
 EAPI=5
 HOMEPAGE=http://nagstamon.sourceforge.net
-IUSE=gnome sound
+IUSE=gnome sound python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-python/pygobject:2 dev-python/pygtk dev-python/lxml dev-python/beautifulsoup:python-2 gnome-base/librsvg gnome? ( dev-python/egg-python ) sound? ( media-sound/sox ) =dev-lang/python-2*
+RDEPEND=dev-python/pygobject:2 dev-python/pygtk dev-python/lxml dev-python/beautifulsoup:python-2 gnome-base/librsvg dev-python/keyring gnome? ( dev-python/egg-python ) sound? ( media-sound/sox )
 SLOT=0
 SRC_URI=mirror://sourceforge/nagstamon/nagstamon-0.9.12_p20140402.tar.bz2
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=59e35a19208fbeadd85481bdb08d8890
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=368be72780989831fe30df41bd882de5

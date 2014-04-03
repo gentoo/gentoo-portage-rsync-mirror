@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-multilib.eclass,v 1.4 2013/11/20 19:23:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-multilib.eclass,v 1.5 2014/04/03 22:09:36 mgorny Exp $
 
 # @ECLASS: cmake-multilib.eclass
 # @MAINTAINER:
-# Michał Górny <mgorny@gentoo.org>
+# gx86-multilib team <multilib@gentoo.org>
+# @AUTHOR:
+# Author: Michał Górny <mgorny@gentoo.org>
 # @BLURB: cmake-utils wrapper for multilib builds
 # @DESCRIPTION:
 # The cmake-multilib.eclass is a cmake-utils.eclass(5) wrapper

@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.20 2014/01/15 12:12:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.21 2014/04/03 22:09:36 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
-# Michał Górny <mgorny@gentoo.org>
+# gx86-multilib team <multilib@gentoo.org>
+# @AUTHOR:
+# Author: Michał Górny <mgorny@gentoo.org>
 # @BLURB: autotools-utils wrapper for multilib builds
 # @DESCRIPTION:
 # The autotools-multilib.eclass is an autotools-utils.eclass(5) wrapper

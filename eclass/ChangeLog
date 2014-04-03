@@ -1,6 +1,17 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1192 2014/04/01 15:22:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1195 2014/04/03 22:09:36 mgorny Exp $
+
+  03 Apr 2014; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
+  cmake-multilib.eclass, multilib-build.eclass:
+  Make multilib@g.o the maintainer of multilib eclasses.
+
+  03 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Add a note not to add new ABIs without contacting multilib.
+
+  03 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Revert incomplete and broken s390 support. Please finally contact multilib
+  before playing with this.
 
   01 Apr 2014; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
   Add slot op to expected PyPy dependency string.

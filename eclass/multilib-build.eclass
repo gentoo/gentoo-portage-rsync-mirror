@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.31 2014/04/03 17:00:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.34 2014/04/03 22:09:36 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
-# Michał Górny <mgorny@gentoo.org>
+# gx86-multilib team <multilib@gentoo.org>
+# @AUTHOR:
+# Author: Michał Górny <mgorny@gentoo.org>
 # @BLURB: flags and utility functions for building multilib packages
 # @DESCRIPTION:
 # The multilib-build.eclass exports USE flags and utility functions
@@ -31,6 +33,10 @@ inherit multibuild multilib
 # The list of multilib flags and corresponding ABI values. If the same
 # flag is reused for multiple ABIs (e.g. x86 on Linux&FreeBSD), multiple
 # ABIs may be separated by commas.
+#
+# Please contact multilib before modifying this list. This way we can
+# ensure that every *preliminary* work is done and the multilib can be
+# extended safely.
 _MULTILIB_FLAGS=(
 	abi_x86_32:x86,x86_fbsd
 	abi_x86_64:amd64,amd64_fbsd
@@ -38,8 +44,6 @@ _MULTILIB_FLAGS=(
 	abi_mips_n32:n32
 	abi_mips_n64:n64
 	abi_mips_o32:o32
-	abi_s390_32:s390
-	abi_s390_64:s390x
 )
 
 # @ECLASS-VARIABLE: MULTILIB_USEDEP
