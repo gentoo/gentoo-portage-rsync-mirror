@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.4.ebuild,v 1.3 2014/03/31 21:00:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/stsci-distutils-0.3.4.ebuild,v 1.4 2014/04/03 10:58:56 idella4 Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	app-arch/unzip
 	dev-python/d2to1[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
