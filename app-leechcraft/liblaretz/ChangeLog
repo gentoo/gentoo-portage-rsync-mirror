@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/liblaretz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/liblaretz/ChangeLog,v 1.3 2014/04/02 16:11:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/liblaretz/ChangeLog,v 1.4 2014/04/03 08:00:21 zlogene Exp $
+
+  03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> liblaretz-0.1.0.ebuild:
+  x86 stable wrt bug #500914
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> liblaretz-0.1.0.ebuild:
   amd64 stable wrt bug #500914

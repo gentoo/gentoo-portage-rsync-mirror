@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.15 2014/04/02 16:14:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.16 2014/04/03 07:57:31 zlogene Exp $
+
+  03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-core-0.6.60.ebuild:
+  x86 stable wrt bug #500914
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-core-0.6.60.ebuild:
   amd64 stable wrt bug #500914
