@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.23 2014/03/22 18:09:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.24 2014/04/03 18:54:30 tomwij Exp $
+
+*owfs-2.7_p21-r2 (03 Apr 2014)
+
+  03 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +owfs-2.7_p21-r2.ebuild,
+  -owfs-2.7_p21-r1.ebuild:
+  [QA] Revision bump. EAPI 5. Support user's CFLAGS and LDFLAGS; fixes bug
+  #331795, reported by Diego.
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -owfs-2.7_p21.ebuild:
   Remove old.

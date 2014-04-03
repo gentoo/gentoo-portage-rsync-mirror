@@ -5,10 +5,6 @@
     <email>ikelos@gentoo.org</email>
     <name>Mike Auty</name>
   </maintainer>
-  <maintainer>
-    <email>sping@gentoo.org</email>
-    <name>Sebastian Pipping</name>
-  </maintainer>
   <longdescription lang="en">
 		GTK+ based frontend for GIT
 	</longdescription>

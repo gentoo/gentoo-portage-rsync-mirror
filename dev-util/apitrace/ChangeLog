@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.18 2014/03/21 22:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.19 2014/04/03 18:23:13 vapier Exp $
+
+*apitrace-4.0 (03 Apr 2014)
+
+  03 Apr 2014; Mike Frysinger <vapier@gentoo.org> +apitrace-4.0.ebuild,
+  +files/apitrace-4.0-disable-multiarch.patch,
+  +files/apitrace-4.0-glext-texture-storage.patch,
+  +files/apitrace-4.0-glxcopysubbuffermesa.patch,
+  +files/apitrace-4.0-glxtrace-only.patch, +files/apitrace-4.0-memcpy.patch,
+  +files/apitrace-4.0-multilib.patch, +files/apitrace-4.0-system-libs.patch,
+  metadata.xml:
+  Version bump #468254#14 by David Heidelberger.  Should fix OpenGL compilation
+  #493008 by Michał Górny.  Switches to cmake-multilib #468250 by Patrick Lauer.
 
 *apitrace-3.0-r2 (21 Mar 2014)
 

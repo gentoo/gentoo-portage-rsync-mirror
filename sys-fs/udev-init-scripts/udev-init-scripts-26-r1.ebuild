@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26-r1.ebuild,v 1.3 2014/04/02 20:29:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26-r1.ebuild,v 1.4 2014/04/03 18:37:57 ssuominen Exp $
 
 EAPI=5
 
@@ -25,7 +25,8 @@ fi
 
 RESTRICT="test"
 
-RDEPEND=">=virtual/udev-180
+RDEPEND="sys-apps/openrc
+	>=virtual/udev-180
 	!<sys-fs/udev-186"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

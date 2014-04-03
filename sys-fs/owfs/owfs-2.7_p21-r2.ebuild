@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r1.ebuild,v 1.4 2012/05/25 10:54:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r2.ebuild,v 1.1 2014/04/03 18:54:30 tomwij Exp $
 
-EAPI="2"
+EAPI="5"
+
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
@@ -14,19 +15,23 @@ MY_P=${P/_/}
 DESCRIPTION="Access 1-Wire devices like a filesystem"
 SRC_URI="mirror://sourceforge/owfs/${MY_P}.tar.gz"
 HOMEPAGE="http://www.owfs.org/ http://owfs.sourceforge.net/"
+
+KEYWORDS="~amd64 ~arm ~x86"
+SLOT="0"
 LICENSE="GPL-2"
+
 RDEPEND="fuse? ( sys-fs/fuse )
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
 	tcl? ( dev-lang/tcl )
 	usb? ( virtual/libusb:0 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
+
 DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )
 	php? ( dev-lang/swig )
 	python? ( dev-lang/swig )"
-KEYWORDS="~amd64 ~arm ~x86"
-SLOT="0"
+
 IUSE="debug fuse ftpd httpd parport perl php python server tcl usb zeroconf"
 
 S=${WORKDIR}/${MY_P}
@@ -41,28 +46,31 @@ pkg_setup() {
 	if use php; then
 		require_php_cli
 	fi
+
 	if use python; then
 		python_pkg_setup
 	fi
+
 	enewgroup ${OWGID} 150
 	enewuser  ${OWUID} 150 -1 -1 ${OWGID}
 }
 
-src_unpack() {
-	base_src_unpack
-}
-
 src_prepare() {
-	base_src_prepare
-
-	sed -e 's/ \$(OWNET_SUBDIRPYTHON)//' -i module/ownet/Makefile.{am,in} || die "sed failed"
-	sed -e 's/ \$(SWIG_SUBDIRPYTHON)//' -i module/swig/Makefile.{am,in} || die "sed failed"
+	sed -e 's/ \$(OWNET_SUBDIRPYTHON)//' -i module/ownet/Makefile.{am,in} || die
+	sed -e 's/ \$(SWIG_SUBDIRPYTHON)//' -i module/swig/Makefile.{am,in} || die
 	sed \
 		-e "s/@PYCFLAGS@//" \
 		-e "s/@PYLDFLAGS@//" \
 		-i module/swig/python/setup.py.in || die "sed failed"
 
+	# Support user's CFLAGS and LDFLAGS.
+	sed -i "s/@CPPFLAGS@/@CPPFLAGS@ ${CFLAGS}/" \
+		module/swig/perl5/OW/Makefile.linux.in || die
+	sed -i "s/@LIBS@/@LIBS@ ${LDFLAGS}/" \
+		module/swig/perl5/OW/Makefile.linux.in || die
+
 	epatch "${FILESDIR}/${PN}-vendordir.patch"
+
 	eautoreconf
 }
 
@@ -83,7 +91,7 @@ src_configure() {
 }
 
 src_compile() {
-	base_src_compile
+	default
 
 	if use python; then
 		pushd module/ownet/python > /dev/null
@@ -91,7 +99,7 @@ src_compile() {
 		popd > /dev/null
 
 		pushd module/swig/python > /dev/null
-		emake ow_wrap.c || die "emake ow_wrap.c failed"
+		emake ow_wrap.c
 		distutils_src_compile
 		popd > /dev/null
 	fi
@@ -100,17 +108,19 @@ src_compile() {
 src_test() { :; }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README NEWS ChangeLog AUTHORS || die
+	default
+
 	if use server || use httpd || use ftpd || use fuse; then
 		diropts -m 0750 -o ${OWUID} -g ${OWGID}
 		dodir /var/run/owfs
+
 		for i in server httpd ftpd; do
 			if use ${i}; then
 				newinitd "${FILESDIR}"/ow${i}.initd ow${i}
 				newconfd "${FILESDIR}"/ow${i}.confd ow${i}
 			fi
 		done
+
 		if use fuse; then
 			dodir /var/lib/owfs
 			dodir /var/lib/owfs/mnt

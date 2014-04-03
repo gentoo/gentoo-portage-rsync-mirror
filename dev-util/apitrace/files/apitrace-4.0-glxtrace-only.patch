@@ -1,0 +1,67 @@
+Allow building of just glxtrace library for ebuilds without GUI tools.
+
+Updated from 3.0 version of patch to apply against 4.0.
+
+--- apitrace/CMakeLists.txt
++++ apitrace/CMakeLists.txt
+@@ -30,6 +30,7 @@ set (ENABLE_CLI true CACHE BOOL "Enable command Line interface.")
+ 
+ set (ENABLE_EGL true CACHE BOOL "Enable EGL support.")
+ 
++option (BUILD_LIB_ONLY "Build the glxtrace library only" OFF)
+ 
+ ##############################################################################
+ # Find dependencies
+@@ -227,7 +228,13 @@ set (WRAPPER_INSTALL_DIR ${LIB_ARCH_INSTALL_DIR}/wrappers)
+ find_package (ZLIB REQUIRED)
+ include_directories (${ZLIB_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/zlib)
+ 
+-find_package (SNAPPY REQUIRED)
++if (BUILD_LIB_ONLY)
++       set (SNAPPY_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/snappy)
++       set (SNAPPY_LIBRARIES snappy_bundled)
++       add_subdirectory (thirdparty/snappy EXCLUDE_FROM_ALL)
++else (BUILD_LIB_ONLY)
++       find_package (SNAPPY REQUIRED)
++endif (BUILD_LIB_ONLY)
+ include_directories (${SNAPPY_INCLUDE_DIRS})
+ 
+ find_package (PNG REQUIRED)
+@@ -248,6 +255,8 @@ endif ()
+ # - The packaged versions QJson are very old, and do not support NaN/Infinity.
+ # - To make it easier to build the GUI on Windows and MacOSX, as there are no
+ # binaries at all.
++if (NOT BUILD_LIB_ONLY)
++
+ if (QT4_FOUND)
+     add_definitions (-DQJSON_EXPORT=)
+     add_subdirectory (thirdparty/qjson)
+@@ -257,6 +266,8 @@ if (QT4_FOUND)
+     set (QJSON_FOUND TRUE)
+ endif ()
+ 
++endif (NOT BUILD_LIB_ONLY)
++
+ # We use bundled headers for all Khronos APIs, to guarantee support for both
+ # OpenGL and OpenGL ES at build time, because the OpenGL and OpenGL ES 1 APIs
+ # are so intertwined that conditional compilation extremely difficult. This
+diff --git a/retrace/CMakeLists.txt b/retrace/CMakeLists.txt
+index 913c23e..08b2905 100644
+--- apitrace/retrace/CMakeLists.txt
++++ apitrace/retrace/CMakeLists.txt
+@@ -11,6 +11,8 @@ include_directories (
+ 
+ add_definitions (-DRETRACE)
+ 
++if (NOT BUILD_LIB_ONLY) 
++
+ add_custom_command (
+     OUTPUT glretrace_gl.cpp
+     COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/glretrace.py > ${CMAKE_CURRENT_BINARY_DIR}/glretrace_gl.cpp
+@@ -259,3 +261,6 @@ if (WIN32)
+ 
+     install (TARGETS d3dretrace RUNTIME DESTINATION bin)
+ endif ()
++
++endif (NOT BUILD_LIB_ONLY) 
++

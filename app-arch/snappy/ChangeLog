@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/snappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.15 2014/03/11 20:33:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.16 2014/04/03 18:22:16 vapier Exp $
+
+*snappy-1.1.2-r1 (03 Apr 2014)
+
+  03 Apr 2014; Mike Frysinger <vapier@gentoo.org> +snappy-1.1.2-r1.ebuild:
+  Convert to autotools-multilib #504756 by David Heidelberger.
 
 *snappy-1.1.2 (11 Mar 2014)
 

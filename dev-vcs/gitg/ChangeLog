@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.26 2014/03/15 15:04:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.27 2014/04/03 18:30:10 sping Exp $
+
+  03 Apr 2014; Sebastian Pipping <sping@gentoo.org> metadata.xml:
+  Remove myself as a maintainer
 
   15 Mar 2014; Sebastian Pipping <sping@gentoo.org> gitg-0.3.2.ebuild:
   eautoreconf needs GNOME_COMPILE_WARNINGS from
