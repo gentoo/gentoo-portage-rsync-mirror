@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/jsonpointer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpointer/ChangeLog,v 1.2 2014/03/19 18:19:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpointer/ChangeLog,v 1.3 2014/04/03 06:42:42 radhermit Exp $
+
+*jsonpointer-1.3 (03 Apr 2014)
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> +jsonpointer-1.3.ebuild,
+  metadata.xml:
+  Version bump, run tests, update PYTHON_COMPAT, and add upstream info to
+  metadata.
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> jsonpointer-0.7.ebuild:
   Keyword amd64-linux and x86-linux

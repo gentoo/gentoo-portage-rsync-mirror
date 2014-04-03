@@ -10,5 +10,8 @@
   Python library to apply JSON Patches according to
   http://tools.ietf.org/html/draft-ietf-appsawg-json-patch-08
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">jsonpatch</remote-id>
+  </upstream>
 </pkgmetadata>
 

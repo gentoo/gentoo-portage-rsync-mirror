@@ -10,5 +10,8 @@
   Identify specific nodes in a JSON document (according to draft 08)
   http://tools.ietf.org/html/draft-ietf-appsawg-json-pointer-08
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">jsonpointer</remote-id>
+  </upstream>
 </pkgmetadata>
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/jsonpatch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/ChangeLog,v 1.4 2014/03/19 18:24:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/ChangeLog,v 1.5 2014/04/03 06:48:04 radhermit Exp $
+
+*jsonpatch-1.5 (03 Apr 2014)
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> +jsonpatch-1.5.ebuild,
+  metadata.xml:
+  Version bump, run tests, update PYTHON_COMPAT, and add upstream info to
+  metadata.
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> jsonpatch-0.12.ebuild:
   Keyword amd64-linux and x86-linux
