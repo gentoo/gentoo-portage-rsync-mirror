@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.34-r2.ebuild,v 1.1 2014/02/17 21:37:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.34-r2.ebuild,v 1.2 2014/04/03 22:17:32 matsl Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -178,13 +178,17 @@ src_configure() {
 		|| die "configuration failed"
 }
 
+src_compile() {
+	emake EMACSLOADPATH="${S}"/lisp
+}
+
 src_install() {
 	emake prefix="${D}"/usr \
 		mandir="${D}"/usr/share/man/man1 \
 		infodir="${D}"/usr/share/info \
 		libdir="${D}"/usr/$(get_libdir) \
 		datadir="${D}"/usr/share \
-		install gzip-el || die
+		install || die
 
 	# Rename some applications installed in bin so that it is clear
 	# which application installed them and so that conflicting
