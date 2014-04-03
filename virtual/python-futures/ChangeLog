@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-futures
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.1 2013/09/13 21:30:05 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.2 2014/04/03 02:02:31 radhermit Exp $
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> python-futures-0.ebuild:
+  Add python3_4 support.
 
 *python-futures-0 (13 Sep 2013)
 
