@@ -1,6 +1,10 @@
 # ChangeLog for virtual/leechcraft-browser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.29 2014/04/02 18:38:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.30 2014/04/03 09:00:59 zlogene Exp $
+
+  03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org>
+  leechcraft-browser-0.6.60.ebuild:
+  x86 stable wrt bug #500914
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org>
   leechcraft-browser-0.6.60.ebuild:

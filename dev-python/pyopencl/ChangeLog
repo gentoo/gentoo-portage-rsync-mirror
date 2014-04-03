@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopencl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.22 2013/11/07 06:45:05 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.23 2014/04/03 08:55:51 idella4 Exp $
+
+*pyopencl-2013.2-r1 (03 Apr 2014)
+
+  03 Apr 2014; Ian Delaney <idella4@gentoo.org> +pyopencl-2013.2-r1.ebuild:
+  revbump; convert -> distutils-r1, add py3 support
 
 *pyopencl-2013.2 (07 Nov 2013)
 

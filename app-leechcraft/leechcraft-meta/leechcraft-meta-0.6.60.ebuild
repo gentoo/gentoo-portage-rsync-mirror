@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-0.6.60.ebuild,v 1.3 2014/04/02 18:37:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-0.6.60.ebuild,v 1.4 2014/04/03 09:00:02 zlogene Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Metapackage containing all ready-to-use LeechCraft plugins"
 HOMEPAGE="http://leechcraft.org/"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-3"
 IUSE="de"
 

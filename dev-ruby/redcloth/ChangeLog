@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.83 2014/01/02 14:39:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.84 2014/04/03 08:51:54 mrueg Exp $
+
+*redcloth-4.2.9-r2 (03 Apr 2014)
+
+  03 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +redcloth-4.2.9-r2.ebuild,
+  redcloth-4.2.9-r1.ebuild:
+  Add ruby21. Drop ruby18. Drop alpha, sparc. Rekeywording in bug #465948.
 
   02 Jan 2014; Hans de Graaff <graaff@gentoo.org> redcloth-4.2.9.ebuild,
   redcloth-4.2.9-r1.ebuild:

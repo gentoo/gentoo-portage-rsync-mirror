@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/uuidtools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.31 2013/10/30 05:56:57 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.32 2014/04/03 08:36:10 mrueg Exp $
+
+*uuidtools-2.1.4-r2 (03 Apr 2014)
+
+  03 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +uuidtools-2.1.4-r2.ebuild,
+  uuidtools-2.1.4-r1.ebuild, uuidtools-2.1.4.ebuild:
+  Add ruby21. Drop ruby18.
 
 *uuidtools-2.1.4-r1 (30 Oct 2013)
 

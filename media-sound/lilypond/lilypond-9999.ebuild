@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-9999.ebuild,v 1.6 2014/02/04 07:31:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-9999.ebuild,v 1.7 2014/04/03 08:32:39 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit elisp-common autotools eutils git-2 python-single-r1
+inherit elisp-common autotools eutils git-r3 python-single-r1
 
 EGIT_REPO_URI="git://git.sv.gnu.org/lilypond.git"
 
@@ -43,6 +43,18 @@ DEPEND="${RDEPEND}
 
 # Correct output data for tests isn't bundled with releases
 RESTRICT="test"
+
+pkg_setup() {
+	# make sure >=metapost-1.803 is selected if it's installed, bug 498704
+	if [[ ${MERGE_TYPE} != binary ]] && has_version ">=dev-tex/metapost-1.803" ; then
+		if [[ $(readlink "${EROOT}"/usr/bin/mpost) =~ mpost-texlive-* ]] ; then
+			einfo "Updating metapost symlink"
+			eselect mpost update || die
+		fi
+	fi
+
+	python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	if ! use vim-syntax ; then

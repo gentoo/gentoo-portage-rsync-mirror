@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.177 2014/02/18 03:59:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.178 2014/04/03 08:32:39 radhermit Exp $
+
+*lilypond-2.19.3 (03 Apr 2014)
+*lilypond-2.18.2 (03 Apr 2014)
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> +lilypond-2.18.2.ebuild,
+  +lilypond-2.19.3.ebuild, lilypond-9999.ebuild:
+  Version bumps, update metapost symlink if necessary.
 
 *lilypond-2.18.1 (18 Feb 2014)
 
