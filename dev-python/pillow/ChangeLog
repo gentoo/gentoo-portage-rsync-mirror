@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.20 2014/01/25 19:18:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.21 2014/04/03 06:06:05 radhermit Exp $
+
+*pillow-2.4.0 (03 Apr 2014)
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> +pillow-2.4.0.ebuild:
+  Version bump, add jpeg2k use flag, and add python3_4 support.
 
   25 Jan 2014; Mike Gilbert <floppym@gentoo.org> pillow-2.3.0.ebuild:
   Revert accidental change.

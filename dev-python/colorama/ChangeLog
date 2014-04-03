@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/colorama
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.8 2014/03/31 20:52:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.9 2014/04/03 06:27:28 radhermit Exp $
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> colorama-0.2.7.ebuild:
+  Add python3_4 support.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> colorama-0.2.4-r1.ebuild,
   colorama-0.2.7.ebuild:
