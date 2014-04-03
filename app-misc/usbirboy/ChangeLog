@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/usbirboy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.20 2011/06/06 00:21:38 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.21 2014/04/03 09:48:35 tomwij Exp $
+
+  03 Apr 2014; Tom Wijsman <TomWij@gentoo.org> usbirboy-0.2.1-r1.ebuild:
+  [QA] Drop minor arch stable keyword(s) per 20130917 Council decision, due to
+  minor arch stable keyword drop(s) on {gentoo,linux}-sources.
 
   06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> usbirboy-0.2.1-r1.ebuild,
   usbirboy-0.3.1.ebuild, usbirboy-0.3.1-r1.ebuild:
@@ -87,4 +91,3 @@
   +usbirboy-0.2.1.ebuild:
   Initial import of ebuild, suggested by DEMAINE Benoît-Pierre
   <dhp_gentoo@doublehp.org>, Bug #136642
-
