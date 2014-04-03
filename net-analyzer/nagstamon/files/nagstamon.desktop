@@ -1,6 +1,5 @@
 [Desktop Entry]
 Version=1.0
-Encoding=UTF-8
 Type=Application
 Name=Nagstamon
 GenericName=Nagios status monitor
@@ -8,5 +7,5 @@ Comment=Quick status overview of your Nagios monitoring system
 Exec=nagstamon
 Icon=/usr/share/nagstamon/resources/nagstamon.png
 Terminal=false
-Categories=Application;System;
+Categories=Network;Monitor;
 StartupNotify=true
