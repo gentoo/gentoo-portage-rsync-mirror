@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastedeploy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.16 2014/01/11 22:29:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.17 2014/04/03 00:22:38 radhermit Exp $
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> pastedeploy-1.5.2.ebuild:
+  Add python3_4 support.
 
   11 Jan 2014; Mike Gilbert <floppym@gentoo.org> pastedeploy-1.5.2.ebuild:
   dev-python/paste is an optional runtime dep. Enable python3 support.
