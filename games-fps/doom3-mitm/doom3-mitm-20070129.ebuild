@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20070129.ebuild,v 1.3 2009/10/10 17:16:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20070129.ebuild,v 1.4 2014/04/03 19:56:55 ulm Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.makeittomorning.co.uk/"
 SRC_URI="http://www.doomwadstation.com/doom3/maps/Morning/mitm_4.zip
 	http://www.doomwadstation.com/doom3/maps/Morning/mitm5.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 KEYWORDS="amd64 x86"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-mitm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/ChangeLog,v 1.6 2009/10/10 17:16:06 nyhm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/ChangeLog,v 1.7 2014/04/03 19:56:55 ulm Exp $
+
+  03 Apr 2014; Ulrich Müller <ulm@gentoo.org> doom3-mitm-20070129.ebuild:
+  Fix LICENSE, bug 505634.
 
   10 Oct 2009; Tristan Heaven <nyhm@gentoo.org> doom3-mitm-20070129.ebuild:
   Stable on amd64/x86

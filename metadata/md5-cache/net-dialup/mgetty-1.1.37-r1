@@ -10,4 +10,4 @@ RDEPEND=doc? ( virtual/latex-base virtual/texi2dvi ) >=sys-apps/sed-4 sys-apps/g
 SLOT=0
 SRC_URI=ftp://mgetty.greenie.net/pub/mgetty/source/1.1/mgetty1.1.37-Jun05.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=73fe7588964b5061fb2719c77db40c61
+_md5_=ae7f38b4e509d26bb517ce352d5578b7

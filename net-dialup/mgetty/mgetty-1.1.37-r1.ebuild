@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.37.ebuild,v 1.2 2013/03/02 16:45:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.37-r1.ebuild,v 1.1 2014/04/03 19:39:34 tomwij Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs user
@@ -57,6 +57,10 @@ src_prepare() {
 			-e "s/^all:/all: doc-all/" \
 			doc/Makefile || die 'second sed on doc/Makefile failed'
 	fi
+
+	# Support user's CFLAGS and LDFLAGS.
+	sed -e "s/\$(CFLAGS) -o newslock/${CFLAGS} ${LDFLAGS} -Wall -o newslock/" \
+		-e "s/\$(LDLAGS)/${LDFLAGS}/" -i {,fax/}Makefile || die
 }
 
 src_compile() {
