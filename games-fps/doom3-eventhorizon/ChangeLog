@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-eventhorizon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-eventhorizon/ChangeLog,v 1.4 2009/10/10 17:10:38 nyhm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-eventhorizon/ChangeLog,v 1.5 2014/04/03 13:19:22 hasufell Exp $
+
+  03 Apr 2014; Julian Ospald <hasufell@gentoo.org>
+  doom3-eventhorizon-1.3.ebuild:
+  add fetch restriction and fix LICENSE wrt #465986
 
   10 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
   doom3-eventhorizon-1.3.ebuild:
