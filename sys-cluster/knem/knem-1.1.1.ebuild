@@ -1,18 +1,24 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/knem-1.0.0.ebuild,v 1.2 2012/12/11 18:12:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/knem-1.1.1.ebuild,v 1.1 2014/04/03 05:06:49 alexxy Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools linux-mod linux-info toolchain-funcs udev multilib
 
 DESCRIPTION="High-Performance Intra-Node MPI Communication"
 HOMEPAGE="http://runtime.bordeaux.inria.fr/knem/"
-SRC_URI="http://runtime.bordeaux.inria.fr/knem/download/${P}.tar.gz"
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="https://gforge.inria.fr/git/knem/knem.git"
+	inherit git-2
+	KEYWORDS=""
+else
+	SRC_URI="http://runtime.bordeaux.inria.fr/knem/download/${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="debug modules"
 
 DEPEND="

@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/knem
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/ChangeLog,v 1.6 2012/12/11 18:12:34 axs Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/ChangeLog,v 1.7 2014/04/03 05:06:49 alexxy Exp $
+
+*knem-9999 (03 Apr 2014)
+*knem-1.1.1 (03 Apr 2014)
+
+  03 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> +knem-1.1.1.ebuild,
+  +knem-9999.ebuild, -knem-1.0.0.ebuild:
+  Fix bug #476952
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> knem-1.0.0.ebuild:
   use udev.eclass to install udev rules to support virtual/udev
