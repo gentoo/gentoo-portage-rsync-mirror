@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.21 2014/03/27 12:14:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.22 2014/04/03 14:13:18 ssuominen Exp $
+
+  27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
+  imageworsener-1.0.0.ebuild:
+  USE="static-libs" and let prune_libtool_files to determine if the libtool
+  archive is required.
 
   27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/imageworsener-0.9.5-disable-webp-tests.patch,

@@ -1,6 +1,15 @@
 # ChangeLog for mate-base/mate-file-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.5 2014/03/10 22:55:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-file-manager/ChangeLog,v 1.6 2014/04/03 14:05:41 tomwij Exp $
+
+*mate-file-manager-1.6.3-r1 (03 Apr 2014)
+
+  03 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +files/mate-file-manager-1.6.3-r1
+  -fix-x-caja-desktop-multiple-windows-issue.patch,
+  +mate-file-manager-1.6.3-r1.ebuild:
+  Revision bump. Backported x-caja-desktop issue solution to fix unnecessary
+  multiple windows popping up. Fixes bug #506660, reported by Joakim Tjernlund;
+  backport inspired by infirit.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-file-manager-1.6.3.ebuild:
   Update dependencies per the consensus formed with ssuominen.
