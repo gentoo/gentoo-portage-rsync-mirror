@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-9999.ebuild,v 1.6 2014/04/02 23:46:23 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.26-r2.ebuild,v 1.1 2014/04/02 23:46:23 ottxor Exp $
 
 EAPI="5"
 
-inherit eutils toolchain-funcs git-r3
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A very small C compiler for ix86/amd64"
 HOMEPAGE="http://bellard.org/tcc/"
-EGIT_REPO_URI="http://repo.or.cz/r/tinycc.git"
+SRC_URI="http://download.savannah.gnu.org/releases/tinycc/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 
 DEPEND="dev-lang/perl" # doc generation
 # Both tendra and tinycc install /usr/bin/tcc
