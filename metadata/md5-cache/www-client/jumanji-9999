@@ -8,4 +8,4 @@ LICENSE=ZLIB
 RDEPEND=dev-db/sqlite:3 dev-libs/glib:2 !deprecated? ( dev-libs/girara:3 net-libs/webkit-gtk:3 x11-libs/gtk+:3 ) deprecated? ( dev-libs/girara:2 net-libs/webkit-gtk:2 x11-libs/gtk+:2 ) !www-client/jumanji:0
 SLOT=develop
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=49d6d83c5367a6642af94f12a333955d
+_md5_=e99dcd3fa5d0bac82b7b331bafe6e9c4

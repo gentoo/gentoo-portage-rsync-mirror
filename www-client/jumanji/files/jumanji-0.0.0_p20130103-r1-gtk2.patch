@@ -1,6 +1,6 @@
 --- jumanji-0.0.0_p20130103/config.mk
 +++ jumanji-0.0.0_p20130103/config.mk
-@@ -8,30 +8,30 @@
+@@ -8,14 +8,14 @@
  MANPREFIX ?= ${PREFIX}/share/man
  
  # libs
@@ -19,15 +19,10 @@
 +#GIRARA_INC ?= $(shell pkg-config --cflags girara-gtk3)
 +#GIRARA_LIB ?= $(shell pkg-config --libs girara-gtk3)
  
--SQLITE_INC ?= $(shell pkg-config --cflags sqlite3)
--SQLITE_LIB ?= $(shell pkg-config --libs sqlite3)
-+#SQLITE_INC ?= $(shell pkg-config --cflags sqlite3)
-+#SQLITE_LIB ?= $(shell pkg-config --libs sqlite3)
- 
--GTHREAD_INC ?= $(shell pkg-config --cflags gthread-2.0)
--GTHREAD_LIB ?= $(shell pkg-config --libs gthread-2.0)
-+#GTHREAD_INC ?= $(shell pkg-config --cflags gthread-2.0)
-+#GTHREAD_LIB ?= $(shell pkg-config --libs gthread-2.0)
+ SQLITE_INC ?= $(shell pkg-config --cflags sqlite3)
+ SQLITE_LIB ?= $(shell pkg-config --libs sqlite3)
+@@ -24,14 +24,14 @@
+ GTHREAD_LIB ?= $(shell pkg-config --libs gthread-2.0)
  
  # if you want to use gtk2 uncomment the following lines
 -#GTK_INC ?= $(shell pkg-config --cflags gtk+-2.0)

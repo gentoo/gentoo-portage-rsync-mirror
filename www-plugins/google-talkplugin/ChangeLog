@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.72 2014/04/03 14:39:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.73 2014/04/03 15:12:37 ottxor Exp $
+
+  03 Apr 2014; Christoph Junghans <ottxor@gentoo.org>
+  google-talkplugin-5.2.4.0.ebuild, google-talkplugin-9999.ebuild:
+  drop system-libCg use flag (bug #506574#c2)
 
   03 Apr 2014; Christoph Junghans <ottxor@gentoo.org>
   -google-talkplugin-4.7.0.0.ebuild, -google-talkplugin-4.8.3.0.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.8 2013/06/22 12:20:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.9 2014/04/03 15:26:33 xmw Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	use deprecated && \
-		epatch "${FILESDIR}"/${PN}-0.0.0_p20130103-gtk2.patch
+		epatch "${FILESDIR}"/${PN}-0.0.0_p20130103-r1-gtk2.patch
 
 	restore_config config.h
 }
