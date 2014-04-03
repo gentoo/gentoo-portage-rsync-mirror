@@ -1,0 +1,11 @@
+--- zope.fixers-1.1.2/zope/fixers/tests.py
++++ zope.fixers-1.1.2/zope/fixers/tests.py
+@@ -300,7 +300,7 @@
+             msg += "\nFailed:\n" + refactored[i:]
+             msg += "\nTarget:\n" + target[i:]
+             # Make spaces and tabs visible:
+-            msg = msg.replace(' ', '°')
++            msg = msg.replace(' ', '-')
+             msg = msg.replace('\t', '------->')
+             msg = ("Test failed at character %i" % i) + msg
+             self.fail(msg)

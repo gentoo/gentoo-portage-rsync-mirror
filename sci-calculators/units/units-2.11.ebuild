@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.10.ebuild,v 1.2 2014/03/28 01:15:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.11.ebuild,v 1.1 2014/04/03 00:56:47 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 PYTHON_REQ_USE="xml"
-inherit autotools eutils python-r1
+inherit eutils python-r1
 
 DESCRIPTION="Unit conversion program"
 HOMEPAGE="http://www.gnu.org/software/units/units.html"
@@ -43,8 +43,6 @@ units_cur_prepare() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install.patch
-	eautoreconf
 	use units_cur && python_foreach_impl units_cur_prepare
 }
 
