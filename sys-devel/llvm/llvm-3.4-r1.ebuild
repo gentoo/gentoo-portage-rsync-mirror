@@ -1,25 +1,28 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.81 2014/04/02 23:24:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4-r1.ebuild,v 1.1 2014/04/02 23:24:29 hasufell Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
 
-inherit cmake-utils eutils flag-o-matic git-r3 multilib multilib-minimal \
+inherit cmake-utils eutils flag-o-matic multilib multilib-minimal \
 	python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI=""
-EGIT_REPO_URI="http://llvm.org/git/llvm.git
-	https://github.com/llvm-mirror/llvm.git"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
+	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.gz
+		http://llvm.org/releases/${PV}/clang-${PV}.src.tar.gz
+		http://llvm.org/releases/${PV}/clang-tools-extra-${PV}.src.tar.gz )
+	!doc? ( http://dev.gentoo.org/~mgorny/dist/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
-	+static-analyzer test udis86 xml video_cards_radeon kernel_Darwin"
+	+static-analyzer test udis86 xml video_cards_radeon
+	kernel_Darwin kernel_FreeBSD"
 
 COMMON_DEPEND="
 	sys-libs/zlib:0=
@@ -38,7 +41,6 @@ COMMON_DEPEND="
 	udis86? ( dev-libs/udis86:0=[pic(+),${MULTILIB_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
-	dev-python/sphinx
 	>=sys-devel/make-3.81
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
@@ -47,13 +49,15 @@ DEPEND="${COMMON_DEPEND}
 	)
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	clang? ( xml? ( virtual/pkgconfig ) )
+	doc? ( dev-python/sphinx )
 	libffi? ( virtual/pkgconfig )
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
-	clang? ( !<=sys-devel/clang-9999-r99 )
+	clang? ( !<=sys-devel/clang-3.4-r99
+		!>=sys-devel/clang-9999 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
-PDEPEND="clang? ( =sys-devel/clang-9999-r100 )"
+PDEPEND="clang? ( =sys-devel/clang-3.4-r100 )"
 
 # pypy gives me around 1700 unresolved tests due to open file limit
 # being exceeded. probably GC does not close them fast enough.
@@ -137,31 +141,35 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if use clang; then
-		git-r3_fetch "http://llvm.org/git/compiler-rt.git
-			https://github.com/llvm-mirror/compiler-rt.git"
-		git-r3_fetch "http://llvm.org/git/clang.git
-			https://github.com/llvm-mirror/clang.git"
-		git-r3_fetch "http://llvm.org/git/clang-tools-extra.git
-			https://github.com/llvm-mirror/clang-tools-extra.git"
-	fi
-	git-r3_fetch
+	default
+
+	rm -f "${S}"/tools/clang "${S}"/projects/compiler-rt \
+		|| die "symlinks removal failed"
 
 	if use clang; then
-		git-r3_checkout http://llvm.org/git/compiler-rt.git \
-			"${S}"/projects/compiler-rt
-		git-r3_checkout http://llvm.org/git/clang.git \
-			"${S}"/tools/clang
-		git-r3_checkout http://llvm.org/git/clang-tools-extra.git \
-			"${S}"/tools/clang/tools/extra
+		mv "${WORKDIR}"/clang-${PV} "${S}"/tools/clang \
+			|| die "clang source directory move failed"
+		mv "${WORKDIR}"/compiler-rt-${PV} "${S}"/projects/compiler-rt \
+			|| die "compiler-rt source directory move failed"
+		mv "${WORKDIR}"/clang-tools-extra-${PV} "${S}"/tools/clang/tools/extra \
+			|| die "clang-tools-extra source directory move failed"
 	fi
-	git-r3_checkout
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix_varargs.patch
+
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
-	epatch "${FILESDIR}"/${PN}-3.5-gentoo-install.patch
-	use clang && epatch "${FILESDIR}"/clang-3.5-gentoo-install.patch
+	epatch "${FILESDIR}"/${PN}-3.4-gentoo-install.patch
+	# Hack cmake search path for Gentoo, bug #496480
+	epatch "${FILESDIR}"/${PN}-3.3-cmake-modulepath.patch
+
+	if use clang; then
+		# Automatically select active system GCC's libraries, bugs #406163 and #417913
+		epatch "${FILESDIR}"/clang-3.1-gentoo-runtime-gcc-detection-v3.patch
+
+		epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+	fi
 
 	local sub_files=(
 		Makefile.config.in
@@ -202,6 +210,9 @@ multilib_src_configure() {
 		$(use_enable libffi)
 	)
 
+	if use clang; then
+		conf_flags+=( --with-clang-resource-dir=../lib/clang/${PV} )
+	fi
 	# well, it's used only by clang executable c-index-test
 	if multilib_build_binaries && use clang && use xml; then
 		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )
@@ -322,10 +333,12 @@ multilib_src_compile() {
 		set_makeargs
 		emake -C tools "${MAKEARGS[@]}"
 
-		emake -C "${S}"/docs -f Makefile.sphinx man
-		use clang && emake -C "${S}"/tools/clang/docs/tools \
-			BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man
-		use doc && emake -C "${S}"/docs -f Makefile.sphinx html
+		if use doc; then
+			emake -C "${S}"/docs -f Makefile.sphinx man
+			use clang && emake -C "${S}"/tools/clang/docs/tools \
+				BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man
+			emake -C "${S}"/docs -f Makefile.sphinx html
+		fi
 	fi
 
 	if use debug; then
@@ -365,6 +378,9 @@ src_install() {
 	)
 
 	multilib-minimal_src_install
+
+	# Remove unnecessary headers on FreeBSD, bug #417171
+	use kernel_FreeBSD && use clang && rm "${ED}"usr/lib/clang/${PV}/include/{std,float,iso,limits,tgmath,varargs}*.h
 }
 
 multilib_src_install() {
@@ -391,9 +407,16 @@ multilib_src_install() {
 		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config
 
 		# Install docs.
-		doman "${S}"/docs/_build/man/*.1
-		use clang && doman "${T}"/clang.1
-		use doc && dohtml -r "${S}"/docs/_build/html/
+		if use doc; then
+			doman "${S}"/docs/_build/man/*.1
+			use clang && doman "${T}"/clang.1
+			dohtml -r "${S}"/docs/_build/html/
+		else
+			if ! use clang; then
+				rm "${WORKDIR}"/${P}-manpages/clang.1 || die
+			fi
+			doman "${WORKDIR}"/${P}-manpages/*.1
+		fi
 
 		# Symlink the gold plugin.
 		if use gold; then

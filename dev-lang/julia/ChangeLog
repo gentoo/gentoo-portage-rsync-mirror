@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/julia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.7 2014/03/14 19:53:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.8 2014/04/02 23:03:34 bicatali Exp $
+
+*julia-0.2.1 (02 Apr 2014)
+
+  02 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> +files/63julia-gentoo.el,
+  +files/julia-0.2.1-readline63.patch, +julia-0.2.1.ebuild, metadata.xml:
+  Version bump. Refactored ebuild to use more system dependencies, cleanup, add
+  emacs support, readline-6.3 patch, better prefix support. Add sci as herd and
+  longdescription.
 
   14 Mar 2014; Denis Dupeyron <calchan@gentoo.org> julia-0.2.0-r1.ebuild:
   Fixed confusing comment, bug #502482.
