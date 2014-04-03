@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.117 2014/01/26 12:19:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.118 2014/04/03 17:53:21 robbat2 Exp $
+
+*sg3_utils-1.38 (03 Apr 2014)
+
+  03 Apr 2014; Robin H. Johnson <robbat2@gentoo.org> +sg3_utils-1.38.ebuild:
+  Bump.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> sg3_utils-1.37.ebuild:
   Stable for sparc, wrt bug #495932
