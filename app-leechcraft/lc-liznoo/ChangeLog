@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-liznoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.9 2014/04/02 17:55:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.10 2014/04/03 08:28:47 zlogene Exp $
+
+  03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-liznoo-0.6.60.ebuild:
+  x86 stable wrt bug #500914
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-liznoo-0.6.60.ebuild:
   amd64 stable wrt bug #500914

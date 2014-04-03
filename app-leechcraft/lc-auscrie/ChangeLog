@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-auscrie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-auscrie/ChangeLog,v 1.9 2014/04/02 16:38:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-auscrie/ChangeLog,v 1.10 2014/04/03 08:04:04 zlogene Exp $
+
+  03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-auscrie-0.6.60.ebuild:
+  x86 stable wrt bug #500914
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-auscrie-0.6.60.ebuild:
   amd64 stable wrt bug #500914

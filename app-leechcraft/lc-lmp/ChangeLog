@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-lmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.11 2014/04/02 17:57:24 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.12 2014/04/03 08:29:44 zlogene Exp $
+
+  03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-lmp-0.6.60.ebuild:
+  x86 stable wrt bug #500914
 
   02 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-lmp-0.6.60.ebuild:
   amd64 stable wrt bug #500914

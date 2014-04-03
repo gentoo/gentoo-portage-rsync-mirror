@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-0.6.60.ebuild,v 1.2 2014/04/02 16:54:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-0.6.60.ebuild,v 1.3 2014/04/03 08:06:07 zlogene Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit leechcraft
 DESCRIPTION="Azoth, the modular IM client for LeechCraft"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
 		+juick +keeso +lastseen	+metacontacts media +msn +murm +latex +nativeemoticons
