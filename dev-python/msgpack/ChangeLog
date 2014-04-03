@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/msgpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.17 2014/02/24 04:29:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.18 2014/04/03 01:58:38 radhermit Exp $
+
+*msgpack-0.4.2 (03 Apr 2014)
+
+  03 Apr 2014; Tim Harder <radhermit@gentoo.org> +msgpack-0.4.2.ebuild:
+  Version bump, add python3_4 support.
 
 *msgpack-0.4.1 (24 Feb 2014)
 
