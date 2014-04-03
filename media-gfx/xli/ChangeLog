@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/xli
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.57 2012/12/04 08:27:25 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.58 2014/04/03 20:15:02 tomwij Exp $
+
+*xli-1.17.0-r5 (03 Apr 2014)
+
+  03 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +xli-1.17.0-r5.ebuild:
+  [QA] Revision bump. EAPI 5. src_unpack --> src_prepare. Removed extra die's.
+  Updated HOMEPAGE; fixes bug #427696, reported by Arvydas Sidorenko. Support
+  user's CC and LDFLAGS; fixes bug #332717, reported by Diego. Merged these
+  changes with the contribution by Michael Mair-Keimberger (iamnr3).
 
   04 Dec 2012; Tim Harder <radhermit@gentoo.org> xli-1.17.0-r4.ebuild:
   Fix LICENSE (bug #445860 by ulm).

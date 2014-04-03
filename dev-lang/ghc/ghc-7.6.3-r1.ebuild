@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3-r1.ebuild,v 1.9 2014/02/15 08:52:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3-r1.ebuild,v 1.10 2014/04/03 20:05:01 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -626,6 +626,7 @@ add-c_nonshared-to-ghci-libs() {
 
 	is_crosscompile && return
 	use elibc_glibc || return
+	use prefix && return
 
 	# we expect 'libc.a' bits be self-sufficient
 	if gcc-specs-pie; then
