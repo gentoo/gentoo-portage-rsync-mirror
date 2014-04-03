@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare test
+DEPEND=gzip? ( dev-libs/boost sys-libs/zlib ) hepmc? ( sci-physics/hepmc:0= )
+DESCRIPTION=Lund Monte Carlo high-energy physics event generator
+EAPI=5
+HOMEPAGE=http://pythia8.hepforge.org/
+IUSE=doc examples gzip +hepmc static-libs
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=gzip? ( dev-libs/boost sys-libs/zlib ) hepmc? ( sci-physics/hepmc:0= )
+SLOT=8
+SRC_URI=http://home.thep.lu.se/~torbjorn/pythia8/pythia8185.tgz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=4d6908887ecde4cb4cf128d6e859d7c9

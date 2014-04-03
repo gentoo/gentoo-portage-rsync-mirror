@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-9999.ebuild,v 1.5 2013/12/30 10:07:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-9999.ebuild,v 1.6 2014/04/03 16:56:35 ulm Exp $
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git
 	http://git.overlays.gentoo.org/gitroot/proj/${PN}.git"
