@@ -10,4 +10,4 @@ RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://sourceforge/mdk-ut/umeplus-fonts-20130511.tar.lzma
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=01828fb655f1f65bf78f24cba0e5862e
+_md5_=8a1a83100252b6c9c6e3c9b0c6372bdd

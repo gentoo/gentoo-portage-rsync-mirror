@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/umeplus-fonts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/ChangeLog,v 1.14 2014/01/14 13:53:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/ChangeLog,v 1.15 2014/04/04 10:37:41 hattya Exp $
+
+*umeplus-fonts-20131109 (04 Apr 2014)
+
+  04 Apr 2014; Akinori Hattori <hattya@gentoo.org>
+  +umeplus-fonts-20131109.ebuild, -umeplus-fonts-20120403.ebuild,
+  umeplus-fonts-20130511.ebuild:
+  new upstream release
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> umeplus-fonts-20130511.ebuild:
   Stable for x86, wrt bug #495694

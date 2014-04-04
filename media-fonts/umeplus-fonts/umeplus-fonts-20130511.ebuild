@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/umeplus-fonts-20130511.ebuild,v 1.3 2014/01/14 13:53:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/umeplus-fonts-20130511.ebuild,v 1.4 2014/04/04 10:37:41 hattya Exp $
 
 EAPI="5"
 
@@ -14,11 +14,9 @@ LICENSE="mplus-fonts public-domain"
 SLOT="0"
 KEYWORDS="amd64 x86 ~ppc-macos ~x86-macos"
 IUSE=""
-
-# Only installs fonts
 RESTRICT="binchecks strip"
 
+FONT_SUFFIX="ttf"
 FONT_S="${S}"
 
-FONT_SUFFIX="ttf"
-DOCS="ChangeLog README"
+DOCS=( ChangeLog README )
