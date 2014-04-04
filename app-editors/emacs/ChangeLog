@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.609 2014/03/29 11:56:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.610 2014/04/04 18:08:44 ulm Exp $
+
+*emacs-24.3-r3 (04 Apr 2014)
+*emacs-23.4-r7 (04 Apr 2014)
+*emacs-22.3-r11 (04 Apr 2014)
+*emacs-21.4-r25 (04 Apr 2014)
+*emacs-18.59-r10 (04 Apr 2014)
+
+  04 Apr 2014; Ulrich Müller <ulm@gentoo.org> +emacs-18.59-r10.ebuild,
+  -emacs-21.4-r24.ebuild, +emacs-21.4-r25.ebuild, -emacs-22.3-r10.ebuild,
+  +emacs-22.3-r11.ebuild, +emacs-23.4-r7.ebuild, +emacs-24.3-r3.ebuild:
+  Install emacs man page under the same name as the binary. Remove old
+  compatibility code.
 
   29 Mar 2014; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
   Drop x32 support in stable ebuild due to broken dependency tree.

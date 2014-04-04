@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r9.ebuild,v 1.5 2014/04/04 18:18:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r10.ebuild,v 1.1 2014/04/04 18:08:44 ulm Exp $
 
 EAPI=5
 
@@ -14,20 +14,15 @@ SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-1+ GPL-2+ BSD" #HPND
 SLOT="18"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+abi_x86_32 abi_x86_x32"
 REQUIRED_USE="amd64? ( || ( abi_x86_32 abi_x86_x32 ) )"
 
 RDEPEND="sys-libs/ncurses
-	>=app-admin/eselect-emacs-1.2
+	>=app-admin/eselect-emacs-1.16
 	amd64? (
 		sys-libs/ncurses[abi_x86_x32(-)?]
-		!abi_x86_x32? (
-			|| (
-				sys-libs/ncurses[abi_x86_32(-)?]
-				app-emulation/emul-linux-x86-baselibs[development]
-			)
-		)
+		!abi_x86_x32? ( sys-libs/ncurses[abi_x86_32(-)?] )
 	)"
 #	X? ( x11-libs/libX11[-xcb] )
 DEPEND="${RDEPEND}
@@ -124,7 +119,7 @@ src_install() {
 	done
 
 	# move man page
-	mv "${D}"/usr/share/man/man1/emacs{,-emacs-${SLOT}}.1 || die
+	mv "${D}"/usr/share/man/man1/emacs{,-${SLOT}}.1 || die
 
 	# move Info files
 	dodir /usr/share/info
@@ -147,17 +142,6 @@ pkg_preinst() {
 	# move Info dir file to correct name
 	if [[ -d "${D}"/usr/share/info ]]; then
 		mv "${D}"/usr/share/info/emacs-${SLOT}/dir{.orig,} || die
-	fi
-
-	# remove symlink and directory installed by -r6 and earlier
-	if [[ -L "${ROOT}"/usr/share/info/emacs-${SLOT} ]]; then
-		ewarn "Removing old symlink /usr/share/info/emacs-${SLOT}"
-		rm "${ROOT}"/usr/share/info/emacs-${SLOT} || die
-	fi
-	if [[ -d "${ROOT}"/usr/share/emacs/${PV}/info \
-		&& ! -L "${ROOT}"/usr/share/emacs/${PV}/info ]]; then
-		ewarn "Removing old directory /usr/share/emacs/${PV}/info"
-		rm -r "${ROOT}"/usr/share/emacs/${PV}/info || die
 	fi
 }
 
