@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=wireshark-plugins? ( dev-libs/glib >=net-analyzer/wireshark-1.8.3-r1:= ) wireshark-plugins? ( virtual/pkgconfig ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=A library to decode Bluetooth baseband packets
+EAPI=5
+HOMEPAGE=http://libbtbb.sourceforge.net/
+IUSE=+pcap +wireshark-plugins
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2
+RDEPEND=wireshark-plugins? ( dev-libs/glib >=net-analyzer/wireshark-1.8.3-r1:= )
+SLOT=0/2014.02.2
+SRC_URI=https://github.com/greatscottgadgets/libbtbb/archive/2014-02-R2.tar.gz
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=a437ac78044674cb77363aa30e53c9fe
