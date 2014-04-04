@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ooofbtools-2.26.ebuild,v 1.1 2014/03/27 09:17:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ooofbtools-2.26.ebuild,v 1.2 2014/04/04 07:27:31 pinkbyte Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ SRC_URI="http://ru.fbtools.org/project-updates/${FETCHDIR}/${MY_PN}-${PV}.7z"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+
+DEPEND="app-arch/p7zip"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst prerm unpack
-DEPEND=office_implementation_libreoffice? ( || ( app-office/libreoffice app-office/libreoffice-bin ) ) office_implementation_openoffice? ( || ( app-office/openoffice app-office/openoffice-bin ) ) app-arch/unzip
+DEPEND=app-arch/p7zip office_implementation_libreoffice? ( || ( app-office/libreoffice app-office/libreoffice-bin ) ) office_implementation_openoffice? ( || ( app-office/openoffice app-office/openoffice-bin ) ) app-arch/unzip
 DESCRIPTION=Extension for converting and processing eBooks in FictionBook2 format
 EAPI=5
 HOMEPAGE=https://code.google.com/p/ooofbtools/
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openof
 SLOT=0
 SRC_URI=https://ooofbtools.googlecode.com/files/OOoFBTools-2.12.7z
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b5a79909124ea70b4bd3587f39b9d191
+_md5_=f9de369741889353f339f39ac617bcd1

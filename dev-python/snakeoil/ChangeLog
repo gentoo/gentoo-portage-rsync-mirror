@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.67 2014/03/24 21:37:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.69 2014/04/04 07:27:46 radhermit Exp $
+
+  04 Apr 2014; Tim Harder <radhermit@gentoo.org> snakeoil-9999.ebuild:
+  Use github repo.
+
+  04 Apr 2014; Tim Harder <radhermit@gentoo.org> snakeoil-9999.ebuild:
+  Add python3_4 support.
 
   24 Mar 2014; Michał Górny <mgorny@gentoo.org> snakeoil-9999.ebuild:
   Switch to single+tags in order to handle clones more efficiently, bug #503708.
