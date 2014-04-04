@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r2.ebuild,v 1.1 2014/03/21 20:07:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.2 2014/04/04 11:21:19 johu Exp $
 
 EAPI=5
 
@@ -10,16 +10,17 @@ zh_CN zh_TW"
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
-DESCRIPTION="KMPlayer is a Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend."
+DESCRIPTION="Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend"
 HOMEPAGE="http://kmplayer.kde.org/"
 SRC_URI="http://kmplayer.kde.org/pkgs/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2 LGPL-2.1"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="cairo debug expat handbook npp"
+IUSE="cairo debug expat npp"
 
-DEPEND="media-libs/phonon
+DEPEND="
+	media-libs/phonon
 	x11-libs/libX11
 	expat? ( >=dev-libs/expat-2.0.1 )
 	cairo? (
@@ -28,6 +29,7 @@ DEPEND="media-libs/phonon
 	)
 	npp? (
 		dev-libs/dbus-glib
+		$(add_kdebase_dep kreadconfig)
 		>=x11-libs/gtk+-2.10.14:2
 		www-plugins/adobe-flash
 	)
@@ -35,8 +37,6 @@ DEPEND="media-libs/phonon
 RDEPEND="${DEPEND}
 	media-video/mplayer
 "
-
-DOCS=( AUTHORS ChangeLog README TODO )
 
 src_prepare() {
 	use npp && epatch "${FILESDIR}/${PN}-flash.patch"
@@ -52,16 +52,14 @@ src_configure() {
 		$(cmake-utils_use expat KMPLAYER_BUILT_WITH_EXPAT)
 		$(cmake-utils_use npp KMPLAYER_BUILT_WITH_NPP)
 	)
-
 	kde4-base_src_configure
 }
 
-pkg_postinst() {
+src_install() {
+	kde4-base_src_install
+
 	if use npp; then
-		kwriteconfig --file "${PORTAGE_BUILDDIR}/usr/share/config/kmplayerrc" --group "application/x-shockwave-flash" --key player npp
-		kwriteconfig --file "${PORTAGE_BUILDDIR}/usr/share/config/kmplayerrc" --group "application/x-shockwave-flash" --key plugin /usr/lib/nsbrowser/plugins/libflashplayer.so
-		update-desktop-database
-		ewarn "If users have problems using flash in Konqueror, follow the steps"
-		ewarn "at http://dev.gentoo.org/~lack/konqueror-flash.xml to solve them"
+		kwriteconfig --file "${ED}/usr/share/config/kmplayerrc" --group "application/x-shockwave-flash" --key player npp
+		kwriteconfig --file "${ED}/usr/share/config/kmplayerrc" --group "application/x-shockwave-flash" --key plugin /usr/lib/nsbrowser/plugins/libflashplayer.so
 	fi
 }

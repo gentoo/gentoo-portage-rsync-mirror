@@ -1,6 +1,17 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.161 2014/03/21 20:07:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.162 2014/04/04 11:21:19 johu Exp $
+
+*kmplayer-0.11.3d-r3 (04 Apr 2014)
+
+  04 Apr 2014; Johannes Huber <johu@gentoo.org> +kmplayer-0.11.3d-r3.ebuild,
+  -kmplayer-0.11.3d-r2.ebuild:
+  Revision bump fixes location of config generation for USE npp by Arfrever
+  Frehtes Taifersar Arahesis <arfrever.fta@gmail.com>, bug #505356. Update
+  DESCRIPTION. Remove useflag handbook which is handled by kde4-base eclass.
+  Add missing DEPEND on kde-base/kreadconfig. Remove DOCS array, which defines
+  standard doc files. Remove useless post install message which provides a link
+  to a doc contains the info handled by ebuild itself.
 
 *kmplayer-0.11.3d-r2 (21 Mar 2014)
 

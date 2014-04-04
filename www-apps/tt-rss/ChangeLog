@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.32 2014/03/08 17:31:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.33 2014/04/04 11:22:05 tomka Exp $
+
+*tt-rss-1.12 (04 Apr 2014)
+
+  04 Apr 2014; Thomas Kahle <tomka@gentoo.org> +tt-rss-1.12.ebuild:
+  Bump to 1.12 (bug 506520)
 
   08 Mar 2014; Markos Chandras <hwoarang@gentoo.org> tt-rss-1.11.ebuild:
   Add ~mips
