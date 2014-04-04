@@ -9,9 +9,6 @@
     <email>xmw@gentoo.org</email>
     <name>Michael Weber</name>
   </maintainer>
-  <use>
-    <flag name="deprecated">Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3</flag>
-  </use>
   <upstream>
     <maintainer status="active">
       <email>mlq@pwmt.org</email>

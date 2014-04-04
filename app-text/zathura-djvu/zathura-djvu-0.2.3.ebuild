@@ -1,36 +1,43 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.2.3.ebuild,v 1.5 2014/03/30 15:55:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.2.3.ebuild,v 1.6 2014/04/04 21:08:46 ssuominen Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs
+[[ ${PV} == 9999* ]] && inherit git-2
 
 DESCRIPTION="DjVu plug-in for zathura"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
+if ! [[ ${PV} == 9999* ]]; then
 SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
+fi
+EGIT_REPO_URI="git://git.pwmt.org/${PN}.git"
+EGIT_BRANCH="develop"
 
 LICENSE="ZLIB"
 SLOT="0"
+if ! [[ ${PV} == 9999* ]]; then
 KEYWORDS="~amd64 ~arm ~x86"
+else
+KEYWORDS=""
+fi
 IUSE=""
 
-RDEPEND=">=app-text/djvu-3.5.24-r1
-	>=app-text/zathura-0.2.0
-	dev-libs/glib:2
+RDEPEND=">=app-text/djvu-3.5.24-r1:=
+	>=app-text/zathura-0.2.7
+	dev-libs/glib:2=
 	x11-libs/cairo:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	#rendering failed w/o cairo
 	myzathuraconf=(
-		WITH_CAIRO=1
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1
 		DESTDIR="${D}"
-		)
+	)
 }
 
 src_compile() {

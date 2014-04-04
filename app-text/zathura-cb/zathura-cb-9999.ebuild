@@ -1,23 +1,31 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-9999.ebuild,v 1.1 2013/06/23 12:35:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/zathura-cb-9999.ebuild,v 1.2 2014/04/04 21:03:45 ssuominen Exp $
 
 EAPI=5
 
-inherit eutils git-2 toolchain-funcs
+inherit eutils toolchain-funcs
+[[ ${PV} == 9999* ]] && inherit git-2
 
 DESCRIPTION="Comic book plug-in for zathura with 7zip, rar, tar and zip support"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
+if ! [[ ${PV} == 9999* ]]; then
+SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
+fi
 EGIT_REPO_URI="git://git.pwmt.org/${PN}.git"
 EGIT_BRANCH="develop"
 
 LICENSE="ZLIB"
 SLOT="0"
+if ! [[ ${PV} == 9999* ]]; then
+KEYWORDS="~amd64 ~arm ~x86"
+else
 KEYWORDS=""
-IUSE="+deprecated"
+fi
+IUSE=""
 
-COMMON_DEPEND=">=app-text/zathura-0.2.0[deprecated=]
-	dev-libs/glib:2
+COMMON_DEPEND=">=app-text/zathura-0.2.7
+	dev-libs/glib:2=
 	app-arch/libarchive:=
 	x11-libs/cairo:="
 RDEPEND="${COMMON_DEPEND}
@@ -29,9 +37,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	#does not render w/o cairo
 	myzathuraconf=(
-		WITH_CAIRO=1
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1

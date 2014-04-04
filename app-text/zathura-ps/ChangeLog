@@ -1,6 +1,11 @@
 # ChangeLog for app-text/zathura-ps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.22 2014/03/30 15:58:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.23 2014/04/04 21:17:52 ssuominen Exp $
+
+  04 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml,
+  zathura-ps-0.2.2.ebuild, zathura-ps-9999.ebuild:
+  Synchronize 0.2.2 with 9999 and punt ref.s to USE="deprecated" since zathura
+  >= 0.2.7 removed support for gtk+-2.
 
   30 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> zathura-ps-0.2.2.ebuild:
   Revert back to ~arch because arch stabilization can't be trusted due to the

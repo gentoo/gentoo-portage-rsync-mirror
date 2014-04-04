@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Meta package for app-text/zathura plugins
-EAPI=5
-HOMEPAGE=http://pwmt.org/projects/zathura/
-IUSE=cb +deprecated djvu +pdf postscript
-LICENSE=metapackage
-RDEPEND=>=app-text/zathura-9999[deprecated=] cb? ( >=app-text/zathura-cb-9999[deprecated=] ) djvu? ( >=app-text/zathura-djvu-9999[deprecated=] ) pdf? ( || ( >=app-text/zathura-pdf-poppler-9999[deprecated=] >=app-text/zathura-pdf-mupdf-9999[deprecated=] ) ) postscript? ( >=app-text/zathura-ps-9999[deprecated=] )
-SLOT=0
-_md5_=e353b6318a5f262d87407ea8d2614d09
