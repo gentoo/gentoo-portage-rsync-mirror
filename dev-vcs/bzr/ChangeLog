@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/bzr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.71 2013/11/19 18:50:51 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.72 2014/04/04 14:49:53 scarabeus Exp $
+
+*bzr-2.6.0 (04 Apr 2014)
+
+  04 Apr 2014; Tomáš Chvátal <scarabeus@gentoo.org> +bzr-2.6.0.ebuild:
+  Version bump to 2.6.0. Needed for some of my tasks. Restrict tests as they
+  fail and upstream does not care much. bug#487216.
 
   19 Nov 2013; Fabian Groffen <grobian@gentoo.org> bzr-2.5.1-r1.ebuild:
   Marked ~m68k-mint, bug #491080

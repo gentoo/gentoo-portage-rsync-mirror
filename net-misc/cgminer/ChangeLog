@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.69 2014/03/29 16:17:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.70 2014/04/04 14:56:07 blueness Exp $
+
+*cgminer-4.2.3 (04 Apr 2014)
+
+  04 Apr 2014; Anthony G. Basile <blueness@gentoo.org> +cgminer-4.2.3.ebuild,
+  -cgminer-4.2.1.ebuild, cgminer-4.2.2.ebuild:
+  Vesion bump
 
 *cgminer-3.7.2 (29 Mar 2014)
 
