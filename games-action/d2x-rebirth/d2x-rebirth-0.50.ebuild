@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.50.ebuild,v 1.5 2012/04/25 16:25:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.50.ebuild,v 1.6 2014/04/04 05:57:19 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -24,7 +24,7 @@ SRC_URI="${SRC_STEM}/oss/src/${FILE_START}.tar.gz
 # All 3 licences apply.
 LICENSE="D1X
 	GPL-2
-	as-is"
+	public-domain"
 SLOT="0"
 # Should work on amd64 also
 KEYWORDS="~x86"

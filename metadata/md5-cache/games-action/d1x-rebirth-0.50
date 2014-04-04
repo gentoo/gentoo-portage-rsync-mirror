@@ -4,9 +4,9 @@ DESCRIPTION=Descent Rebirth - enhanced Descent 1 client
 HOMEPAGE=http://www.dxx-rebirth.de/
 IUSE=awe32 debug demo mpu401 opengl mixer
 KEYWORDS=~amd64 x86
-LICENSE=D1X GPL-2 as-is
+LICENSE=D1X GPL-2 public-domain
 RDEPEND=media-libs/alsa-lib >=media-libs/libsdl-1.2.9 >=media-libs/sdl-image-1.2.3-r1 mixer? ( media-libs/sdl-mixer ) >=dev-games/physfs-1.0.1 opengl? ( virtual/glu virtual/opengl ) x11-libs/libX11 demo? ( games-action/descent1-demodata ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://www.dxx-rebirth.de/download/dxx/oss/src/d1x-rebirth_v0.50-src-20061025.tar.gz http://www.dxx-rebirth.de/download/dxx/res/dxx-rebirth_icons.zip http://www.dxx-rebirth.de/download/dxx/res/d1x-rebirth_hires-briefings.zip http://www.dxx-rebirth.de/download/dxx/res/d1x-rebirth_hires-fonts.zip
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=58aaff742e51f76175c243fe036da79c
+_md5_=1b166d422b9e5b393dd6718664181982
