@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Dumpvalue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Dumpvalue/ChangeLog,v 1.5 2014/04/02 18:54:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Dumpvalue/ChangeLog,v 1.6 2014/04/04 01:03:01 mattst88 Exp $
+
+  04 Apr 2014; Matt Turner <mattst88@gentoo.org> Dumpvalue-1.170.0.ebuild:
+  Added ~alpha, bug #505156.
 
   02 Apr 2014; Markus Meier <maekke@gentoo.org> Dumpvalue-1.170.0.ebuild:
   add ~arm, bug #505156

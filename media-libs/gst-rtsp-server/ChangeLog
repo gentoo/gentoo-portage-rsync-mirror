@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-rtsp-server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/ChangeLog,v 1.9 2012/11/07 20:37:33 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/ChangeLog,v 1.10 2014/04/04 01:11:21 mattst88 Exp $
+
+  04 Apr 2014; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-rtsp-server-0.10.8.ebuild:
@@ -36,4 +39,3 @@
   +gst-rtsp-server-0.10.8.ebuild, +metadata.xml:
   Added gst-rtsp-server-0.10.8, bug 280910. Thanks to Ooblick for the ebuild on
   which this one is based.
-

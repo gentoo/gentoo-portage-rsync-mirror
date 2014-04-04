@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CPAN
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/ChangeLog,v 1.6 2014/04/02 18:53:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/ChangeLog,v 1.7 2014/04/04 01:05:32 mattst88 Exp $
+
+  04 Apr 2014; Matt Turner <mattst88@gentoo.org> perl-CPAN-2.0.0.ebuild:
+  Added ~alpha, bug #505156.
 
   02 Apr 2014; Markus Meier <maekke@gentoo.org> perl-CPAN-2.0.0.ebuild:
   add ~arm, bug #505156

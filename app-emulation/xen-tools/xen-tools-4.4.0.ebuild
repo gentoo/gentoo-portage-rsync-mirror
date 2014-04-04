@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.2 2014/03/24 05:07:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.3 2014/04/04 01:06:31 idella4 Exp $
 
 EAPI=5
 
@@ -268,6 +268,7 @@ src_configure() {
 		--disable-xen \
 		--enable-tools \
 		--enable-docs \
+		--with-system-qemu \
 		$(use_enable pam) \
 		$(use_enable api xenapi) \
 		$(use_enable ocaml ocamltools) \
