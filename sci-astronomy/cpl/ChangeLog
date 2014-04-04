@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/cpl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.15 2014/03/03 20:50:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.16 2014/04/04 15:51:03 bicatali Exp $
+
+*cpl-6.4.1 (04 Apr 2014)
+
+  04 Apr 2014; Sebastien Fabbro <fabbros@gentoo.org> +cpl-6.4.1.ebuild:
+  Version bump
 
 *cpl-6.4 (03 Mar 2014)
 

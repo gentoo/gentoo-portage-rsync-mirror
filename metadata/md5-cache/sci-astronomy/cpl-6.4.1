@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install preinst prepare setup test
+DEPEND=sci-astronomy/wcslib:0= >=sci-libs/cfitsio-3.310:0= sci-libs/fftw:3.0= gasgano? ( sci-astronomy/gasgano ) doc? ( app-doc/doxygen ) gasgano? ( >=dev-java/java-config-2.1.9-r1 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=ESO common pipeline library for astronomical data reduction
+EAPI=5
+HOMEPAGE=http://www.eso.org/sci/software/cpl/
+IUSE=doc gasgano static-libs threads elibc_FreeBSD gasgano
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=sci-astronomy/wcslib:0= >=sci-libs/cfitsio-3.310:0= sci-libs/fftw:3.0= gasgano? ( sci-astronomy/gasgano ) gasgano? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0/20
+SRC_URI=ftp://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/cpl-6.4.1.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=bc66c49c6ba173c1dcb7b8ecb2a85101
