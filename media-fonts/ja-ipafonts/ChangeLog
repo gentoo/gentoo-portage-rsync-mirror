@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ja-ipafonts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ChangeLog,v 1.31 2011/06/14 10:55:58 pva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ChangeLog,v 1.32 2014/04/04 10:27:19 hattya Exp $
+
+  04 Apr 2014; Akinori Hattori <hattya@gentoo.org> ja-ipafonts-003.02-r1.ebuild,
+  ja-ipafonts-003.03.ebuild:
+  update to EAPI 5, update HOMEPAGE and SRC_URI
 
   14 Jun 2011; Peter Volkov <pva@gentoo.org> ja-ipafonts-003.03.ebuild:
   Add missing app-arch/unzip dependency, bug 371223 thank Piotr Szymaniak for
@@ -125,4 +129,3 @@
   +ja-ipafonts-0.0.20040715.ebuild:
   Initial import. Ebuild provided by Kenichi Ishibashi
   <bashi@dream.ie.ariake-nct.ac.jp>.
-
