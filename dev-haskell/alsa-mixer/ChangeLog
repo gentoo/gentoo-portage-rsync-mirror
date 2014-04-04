@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/alsa-mixer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-mixer/ChangeLog,v 1.3 2012/12/22 21:04:03 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-mixer/ChangeLog,v 1.5 2014/04/04 19:08:36 slyfox Exp $
+
+  04 Apr 2014; Sergei Trofimovich <slyfox@gentoo.org> -alsa-mixer-0.1.2.ebuild:
+  Drop old.
+
+*alsa-mixer-0.2.0.1 (04 Apr 2014)
+
+  04 Apr 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +alsa-mixer-0.2.0.1.ebuild:
+  Version bump.
 
 *alsa-mixer-0.1.2-r2 (22 Dec 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.10 2013/06/03 04:11:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.11 2014/04/04 19:21:12 zerochaos Exp $
 
 EAPI=5
 
@@ -10,9 +10,8 @@ DESCRIPTION="A library to decode Bluetooth baseband packets"
 HOMEPAGE="http://libbtbb.sourceforge.net/"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="http://git.code.sf.net/p/libbtbb/code"
-	EGIT_PROJECT="libbtbb"
-	inherit git-2
+	EGIT_REPO_URI="https://github.com/greatscottgadgets/libbtbb.git"
+	inherit git-r3
 	KEYWORDS=""
 else
 	MY_P=${P/\./-}
@@ -24,37 +23,98 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-IUSE="+wireshark"
+IUSE="+pcap +wireshark-plugins"
 
 RDEPEND="
-	wireshark? (
+	wireshark-plugins? (
 		dev-libs/glib
 		>=net-analyzer/wireshark-1.8.3-r1:=
 	)
 "
 DEPEND="${RDEPEND}
-	wireshark? ( virtual/pkgconfig )"
+	wireshark-plugins? ( virtual/pkgconfig )"
 
 get_PV() { local pv=$(best_version $1); pv=${pv#$1-}; pv=${pv%-r*}; pv=${pv//_}; echo ${pv}; }
 
-CMAKE_USE_DIR="${S}"/wireshark/plugins/btbb
+src_prepare(){
+	CMAKE_USE_DIR="${S}"
+	BUILD_DIR="${S}"_build
+	cmake-utils_src_prepare
 
-src_prepare() {
-		sed -i \
-			-e '/set(CMAKE_INSTALL_LIBDIR/ d' \
-			-e "s:R} N:R}/wireshark/plugins/$(get_PV net-analyzer/wireshark) N:" \
-			${CMAKE_USE_DIR}/CMakeLists.txt || die
+	if use wireshark-plugins; then
+		for i in btbb btle btsm
+		do
+			CMAKE_USE_DIR="${S}"/wireshark/plugins/${i}
+			BUILD_DIR="${WORKDIR}"/${i}_build
+			cmake-utils_src_prepare
+		done
+	fi
 }
 
-src_compile() {
-	default_src_compile
-	use wireshark && cmake-utils_src_compile
+src_configure() {
+	CMAKE_USE_DIR="${S}"
+	BUILD_DIR="${S}"_build
+	local mycmakeargs=(
+	-DDISABLE_PYTHON=true
+	-DPACKAGE_MANAGER=true
+	$(cmake-utils_use pcap PCAPDUMP)
+	)
+	cmake-utils_src_configure
+
+	if use wireshark-plugins; then
+		for i in btbb btle btsm
+		do
+			CMAKE_USE_DIR="${S}"/wireshark/plugins/${i}
+			BUILD_DIR="${WORKDIR}"/${i}_build
+			local mycmakeargs=(
+			-DCMAKE_INSTALL_LIBDIR="/usr/$(get_libdir)/wireshark/plugins/$(get_PV net-analyzer/wireshark)"
+			)
+			cmake-utils_src_configure
+		done
+	fi
 }
 
-src_install() {
-	dodir /usr/$(get_libdir)
-	dodir /usr/include
-	emake LDCONFIG=true DESTDIR="${D}" INSTALL_DIR="${ED}/usr/$(get_libdir)" INCLUDE_DIR="${ED}/usr/include" install
+src_compile(){
+	CMAKE_USE_DIR="${S}"
+	BUILD_DIR="${S}"_build
+	cmake-utils_src_compile
 
-	use wireshark && cmake-utils_src_install
+	if use wireshark-plugins; then
+		for i in btbb btle btsm
+		do
+			CMAKE_USE_DIR="${S}"/wireshark/plugins/${i}
+			BUILD_DIR="${WORKDIR}"/${i}_build
+			cmake-utils_src_compile
+		done
+	fi
+}
+
+src_test(){
+	CMAKE_USE_DIR="${S}"
+	BUILD_DIR="${S}"_build
+	cmake-utils_src_test
+
+	if use wireshark-plugins; then
+		for i in btbb btle btsm
+		do
+			CMAKE_USE_DIR="${S}"/wireshark/plugins/${i}
+			BUILD_DIR="${WORKDIR}"/${i}_build
+			cmake-utils_src_test
+		done
+	fi
+}
+
+src_install(){
+	CMAKE_USE_DIR="${S}"
+	BUILD_DIR="${S}"_build
+	cmake-utils_src_install
+
+	if use wireshark-plugins; then
+		for i in btbb btle btsm
+		do
+			CMAKE_USE_DIR="${S}"/wireshark/plugins/${i}
+			BUILD_DIR="${WORKDIR}"/${i}_build
+			cmake-utils_src_install
+		done
+	fi
 }

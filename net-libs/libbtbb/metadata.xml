@@ -6,6 +6,8 @@
     <name>Rick Farina</name>
   </maintainer>
   <use>
+    <flag name="pcap">Add support for network packet capture via net-libs/libpcap</flag>
     <flag name="wireshark">Build the wireshark plugin for bluetooth baseband sniffing</flag>
+    <flag name="wireshark-plugins">Build the wireshark plugins for bluetooth baseband sniffing</flag>
   </use>
 </pkgmetadata>
