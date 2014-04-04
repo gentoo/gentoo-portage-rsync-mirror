@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/ser2net
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.33 2013/10/12 07:02:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.35 2014/04/04 13:22:24 tomwij Exp $
+
+*ser2net-2.9.1 (04 Apr 2014)
+
+  04 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +ser2net-2.9.1.ebuild,
+  metadata.xml:
+  Version bump to 2.9.1, contribution by Brendan Horan who will proxy maintain
+  this package; fixes bug #464720, reported by Wolfram Schlich (wschlich).
+  Adapted to EAPI 5, removed and/or replaced redundant code by shorter and
+  easier alternatives.
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #472084
