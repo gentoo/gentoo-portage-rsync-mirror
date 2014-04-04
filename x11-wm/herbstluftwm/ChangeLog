@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/herbstluftwm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.15 2014/03/21 01:51:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.16 2014/04/04 07:57:21 radhermit Exp $
+
+*herbstluftwm-0.6.2 (04 Apr 2014)
+
+  04 Apr 2014; Tim Harder <radhermit@gentoo.org> +herbstluftwm-0.6.2.ebuild:
+  Version bump.
 
 *herbstluftwm-0.6.0 (21 Mar 2014)
 

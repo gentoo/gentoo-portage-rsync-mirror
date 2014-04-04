@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/ranger
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.27 2013/09/05 18:23:05 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.29 2014/04/04 07:40:49 radhermit Exp $
+
+  04 Apr 2014; Tim Harder <radhermit@gentoo.org> -ranger-1.5.5-r1.ebuild,
+  -ranger-1.6.0.ebuild:
+  Remove old.
+
+  04 Apr 2014; Tim Harder <radhermit@gentoo.org> ranger-1.6.1.ebuild,
+  ranger-9999.ebuild:
+  Add python3_4 support.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> ranger-1.5.5-r1.ebuild,
   ranger-1.6.0.ebuild, ranger-1.6.1.ebuild, ranger-9999.ebuild:

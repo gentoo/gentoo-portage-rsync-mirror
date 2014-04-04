@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openof
 SLOT=0
 SRC_URI=http://ru.fbtools.org/project-updates/ooofbtools-226/OOoFBTools-2.26.7z
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=745928073adab2041008298cd8657562
+_md5_=95c948ff71f5b6ca6d816431950738e3

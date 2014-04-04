@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ooofbtools-2.26.ebuild,v 1.2 2014/04/04 07:27:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ooofbtools-2.26-r1.ebuild,v 1.1 2014/04/04 07:34:34 pinkbyte Exp $
 
 EAPI=5
 
@@ -28,6 +28,9 @@ DEPEND="app-arch/p7zip"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
-DOCS=( ChangeLog* )
-
 OFFICE_EXTENSIONS_LOCATION="${S}"
+
+src_install() {
+	office-ext-r1_src_install
+	dodoc ChangeLog*
+}

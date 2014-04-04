@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.8-r1.ebuild,v 1.1 2014/03/19 17:56:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.8-r1.ebuild,v 1.2 2014/04/04 07:47:15 johu Exp $
 
 EAPI=5
 
@@ -40,6 +40,7 @@ S=${WORKDIR}/${MY_P}
 PATCHES=(
 	"${FILESDIR}/${P}-ffmpeg-0.11.patch"
 	"${FILESDIR}/${P}-includepaths.patch"
+	"${FILESDIR}/${P}-ffmpeg-2.1.patch"
 )
 
 pkg_postinst() {
