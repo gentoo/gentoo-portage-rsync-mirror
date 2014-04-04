@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.88 2014/03/20 15:02:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.89 2014/04/04 08:28:36 johu Exp $
+
+  04 Apr 2014; Johannes Huber <johu@gentoo.org> kdenlive-0.9.6.ebuild:
+  DEPEND on sys-devel/gettext by Nikoli <nikoli@gmx.us>, bug #506450.
 
   20 Mar 2014; Michael Palimaka <kensington@gentoo.org> kdenlive-0.9.6.ebuild:
   Restore semantic-desktop USE flag.
