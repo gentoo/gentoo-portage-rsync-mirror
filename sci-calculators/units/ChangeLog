@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.70 2014/04/03 00:56:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.71 2014/04/04 15:28:37 jer Exp $
+
+  04 Apr 2014; Jeroen Roovers <jer@gentoo.org> -files/units-2.10-install.patch:
+  Old.
 
 *units-2.11 (03 Apr 2014)
 
