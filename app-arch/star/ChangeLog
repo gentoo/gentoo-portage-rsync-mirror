@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.104 2014/03/28 04:28:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.105 2014/04/04 11:37:25 nimiux Exp $
+
+  04 Apr 2014; Chema Alonso <nimiux@gentoo.org> star-1.5.2.ebuild:
+  Stable for amd64 wrt bug #505842
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> star-1.5.2.ebuild:
   Stable for HPPA (bug #505842).
