@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/clojure
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.15 2013/05/01 10:35:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.16 2014/04/04 05:10:46 mr_bones_ Exp $
+
+*clojure-1.6.0 (04 Apr 2014)
+
+  04 Apr 2014; Michael Sterrett <mr_bones_@gentoo.org> +clojure-1.6.0.ebuild:
+  version bump
 
   01 May 2013; Agostino Sarubbo <ago@gentoo.org> clojure-1.5.1.ebuild:
   Stable for x86, wrt bug #466304
