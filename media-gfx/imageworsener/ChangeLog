@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.22 2014/04/03 14:13:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.23 2014/04/04 22:00:03 sping Exp $
+
+*imageworsener-1.2.0 (04 Apr 2014)
+
+  04 Apr 2014; Sebastian Pipping <sping@gentoo.org>
+  +imageworsener-1.2.0.ebuild:
+  Bump to 1.2.0, trivial, license changed to MIT-with-advertising
 
   27 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   imageworsener-1.0.0.ebuild:
