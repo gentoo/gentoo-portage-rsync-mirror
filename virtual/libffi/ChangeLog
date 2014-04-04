@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.36 2014/03/29 19:52:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.37 2014/04/04 13:32:20 nimiux Exp $
+
+  04 Apr 2014; Chema Alonso <nimiux@gentoo.org> libffi-3.0.13-r1.ebuild:
+  Stable for amd64 wrt bug #497760
 
   29 Mar 2014; Matt Turner <mattst88@gentoo.org> libffi-3.0.13-r1.ebuild:
   alpha stable, bug #497760.
