@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.3 2013/11/27 10:34:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.4 2014/04/04 20:44:40 ssuominen Exp $
 
 EAPI=5
 
@@ -22,14 +22,14 @@ KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 else
 KEYWORDS=""
 fi
-IUSE="+doc +deprecated magic sqlite test"
+IUSE="+doc +magic sqlite test"
 
-RDEPEND=">=dev-libs/glib-2.28:2
+RDEPEND=">=dev-libs/girara-0.2.0:3=
+	>=dev-libs/glib-2.28:2=
 	x11-libs/cairo:=
-	deprecated? ( >=dev-libs/girara-0.1.8:2 )
-	!deprecated? ( >=dev-libs/girara-0.1.8:3 )
-	magic? ( sys-apps/file )
-	sqlite? ( dev-db/sqlite:3 )"
+	>=x11-libs/gtk+-3.2:3
+	magic? ( sys-apps/file:= )
+	sqlite? ( dev-db/sqlite:3= )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
@@ -38,14 +38,13 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	myzathuraconf=(
-		ZATHURA_GTK_VERSION=$(usex deprecated 2 3)
 		WITH_MAGIC=$(usex magic 1 0)
 		WITH_SQLITE=$(usex sqlite 1 0)
 		PREFIX="${EPREFIX}"/usr
 		LIBDIR='${PREFIX}'/$(get_libdir)
 		RSTTOMAN="$(use doc && type -P rst2man.py)"
 		CC="$(tc-getCC)"
-		SFLAGS=""
+		SFLAGS=''
 		VERBOSE=1
 		DESTDIR="${D}"
 	)

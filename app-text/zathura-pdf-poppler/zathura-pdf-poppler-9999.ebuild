@@ -1,31 +1,37 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/zathura-pdf-poppler-9999.ebuild,v 1.1 2013/06/23 12:53:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/zathura-pdf-poppler-9999.ebuild,v 1.2 2014/04/04 20:57:11 ssuominen Exp $
 
 EAPI=5
 
-inherit eutils git-2 toolchain-funcs
+inherit eutils toolchain-funcs
+[[ ${PV} == 9999* ]] && inherit git-2
 
 DESCRIPTION="PDF plug-in for zathura"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
+if ! [[ ${PV} == 9999* ]]; then
+SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
+fi
 EGIT_REPO_URI="git://git.pwmt.org/${PN}.git"
 EGIT_BRANCH="develop"
 
 LICENSE="ZLIB"
 SLOT="0"
+if ! [[ ${PV} == 9999* ]]; then
+KEYWORDS="~amd64 ~arm ~x86"
+else
 KEYWORDS=""
-IUSE="+deprecated"
+fi
+IUSE=""
 
 RDEPEND="app-text/poppler:=[cairo]
-	>=app-text/zathura-0.2.0[deprecated=]
+	>=app-text/zathura-0.2.7
 	x11-libs/cairo:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	#cairo is non-optional #473378
 	myzathuraconf=(
-		WITH_CAIRO=1
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1

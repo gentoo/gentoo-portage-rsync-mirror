@@ -1,6 +1,12 @@
 # ChangeLog for www-client/jumanji
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/ChangeLog,v 1.10 2014/04/03 15:26:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/ChangeLog,v 1.11 2014/04/04 20:49:27 ssuominen Exp $
+
+  04 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/jumanji-0.0.0_p20130103-r1-gtk2.patch,
+  jumanji-0.0.0_p20130103-r1.ebuild, jumanji-9999.ebuild, metadata.xml:
+  Remove USE="deprecated" because SLOT="2" of dev-libs/girara is going away by
+  upstream decision since version 0.2.0
 
 *jumanji-0.0.0_p20130103-r1 (03 Apr 2014)
 
