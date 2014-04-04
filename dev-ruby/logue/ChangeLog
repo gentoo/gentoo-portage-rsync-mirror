@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/logue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.8 2014/03/20 17:47:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.9 2014/04/04 14:15:21 graaff Exp $
+
+  04 Apr 2014; Hans de Graaff <graaff@gentoo.org> logue-1.0.1.ebuild:
+  Add slot to rainbow dependency in preparation of adding a new slot.
 
   20 Mar 2014; Jeroen Roovers <jer@gentoo.org> logue-1.0.1.ebuild:
   Stable for HPPA (bug #505100).

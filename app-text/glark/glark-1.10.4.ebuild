@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.10.4.ebuild,v 1.6 2013/12/15 17:37:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.10.4.ebuild,v 1.7 2014/04/04 14:14:11 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -25,7 +25,7 @@ IUSE="zip"
 ruby_add_rdepend "
 	>=dev-ruby/logue-1.0.0
 	>=dev-ruby/ragol-1.0.0
-	>=dev-ruby/rainbow-1.1.4
+	>=dev-ruby/rainbow-1.1.4:0
 	>=dev-ruby/riel-1.2.0
 	zip? ( dev-ruby/rubyzip:0 )"
 

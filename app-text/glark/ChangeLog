@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.66 2013/12/15 17:37:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.67 2014/04/04 14:14:11 graaff Exp $
+
+  04 Apr 2014; Hans de Graaff <graaff@gentoo.org> glark-1.10.4.ebuild:
+  Add slot to rainbow dependency in preparation of adding a new slot.
 
   15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> glark-1.10.4.ebuild:
   Add ~x86, wrt bug #493006
