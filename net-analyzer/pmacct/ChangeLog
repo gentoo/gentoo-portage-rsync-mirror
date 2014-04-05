@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.92 2014/02/01 12:07:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.93 2014/04/05 00:21:48 jer Exp $
+
+  05 Apr 2014; Jeroen Roovers <jer@gentoo.org> pmacct-1.5.0_rc2.ebuild:
+  Bump dev-libs/mongo-c-driver dependency (bug #506738).
 
 *pmacct-1.5.0_rc2 (01 Feb 2014)
 
