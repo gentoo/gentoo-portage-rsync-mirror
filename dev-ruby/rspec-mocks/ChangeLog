@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.66 2014/04/01 19:32:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.67 2014/04/05 22:57:59 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rspec-mocks-2.12.1.ebuild,
+  rspec-mocks-2.12.2.ebuild, rspec-mocks-2.13.1.ebuild,
+  rspec-mocks-2.14.6-r1.ebuild, rspec-mocks-2.14.6.ebuild:
+  Remove ree18 and ruby18 target.
 
 *rspec-mocks-2.14.6-r1 (01 Apr 2014)
 

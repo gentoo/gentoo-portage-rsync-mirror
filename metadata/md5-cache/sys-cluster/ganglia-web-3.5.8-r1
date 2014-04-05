@@ -4,10 +4,10 @@ DESCRIPTION=Web frontend for sys-cluster/ganglia
 EAPI=4
 HOMEPAGE=http://ganglia.sourceforge.net
 IUSE=vhosts vhosts
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=BSD
 RDEPEND=net-misc/rsync >=app-admin/webapp-config-1.50.15 >=sys-cluster/ganglia-3.3.7[-minimal] dev-lang/php[gd,xml,ctype,cgi] media-fonts/dejavu >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=mirror://sourceforge/ganglia/ganglia-web/3.5.8/ganglia-web-3.5.8.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=217ed9689a42f6f580cec80b1ce39163
+_md5_=be646cbbba70d5b79713a4bd6a85cc4d

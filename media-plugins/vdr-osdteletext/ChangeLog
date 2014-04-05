@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-osdteletext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.30 2014/03/03 15:07:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.31 2014/04/05 22:57:43 hd_brummy Exp $
+
+  05 Apr 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-osdteletext-0.9.4-r1.ebuild:
+  stable amd64 x86, fixed wrt bug 502846
 
   03 Mar 2014; Joerg Bornkessel <hd_brummy@gentoo.org> files/rc-addon-v3.sh,
   vdr-osdteletext-0.9.4-r1.ebuild:

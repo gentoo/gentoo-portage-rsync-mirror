@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.63 2014/04/01 19:30:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.64 2014/04/05 22:56:33 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rspec-core-2.12.2.ebuild,
+  rspec-core-2.13.1.ebuild, rspec-core-2.14.8-r1.ebuild,
+  rspec-core-2.14.8.ebuild:
+  Remove ree18 and ruby18 target.
 
 *rspec-core-2.14.8-r1 (01 Apr 2014)
 

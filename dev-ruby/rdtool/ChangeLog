@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.60 2013/10/20 06:10:20 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.61 2014/04/05 23:00:31 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rdtool-0.6.38.ebuild:
+  Remove ree18 and ruby18 target.
 
   20 Oct 2013; Hans de Graaff <graaff@gentoo.org> -rdtool-0.6.22-r1.ebuild:
   Cleanup.
