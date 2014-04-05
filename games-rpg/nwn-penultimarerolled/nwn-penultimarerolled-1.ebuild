@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-penultimarerolled/nwn-penultimarerolled-1.ebuild,v 1.2 2010/06/28 22:31:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-penultimarerolled/nwn-penultimarerolled-1.ebuild,v 1.3 2014/04/05 06:26:46 ulm Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="http://c.vnfiles.ign.com/nwvault.ign.com/fms/files/modules/1674/PR0_and
 	http://c.vnfiles.ign.com/nwvault.ign.com/fms/files/modules/1677/PR4_Pastor_of_Muppets.v1.1.zip
 	http://c.vnfiles.ign.com/nwvault.ign.com/fms/files/modules/1678/PR5_The_Saving_Throw.v1.1.zip"
 
-LICENSE="as-is"
+LICENSE="freedist"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
