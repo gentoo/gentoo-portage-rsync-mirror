@@ -1,23 +1,22 @@
 Remove suitesparse (camd,colamd) and zlib bundles
+bicatali - apr 2014
 
---- configure.ac.orig	2014-03-24 10:40:24.406906149 -0700
-+++ configure.ac	2014-03-24 10:41:15.637207696 -0700
-@@ -140,6 +140,13 @@
-    AC_MSG_RESULT([no])
- fi
+--- configure.ac.orig	2014-04-05 14:18:56.045148287 -0700
++++ configure.ac	2014-04-05 14:23:24.878803309 -0700
+@@ -59,6 +59,11 @@
+ dnl Check for math library
+ AC_CHECK_LIB([m], [exp])
  
 +AC_CHECK_LIB([amd], [amd_1])
 +AC_CHECK_LIB([colamd], [colamd])
-+
 +AC_CHECK_HEADER([amd.h])
-+
 +AC_CHECK_LIB([z], [gzopen])
 +
- AC_CONFIG_FILES(
-    [src/Makefile examples/Makefile Makefile])
- AC_OUTPUT
---- src/Makefile.am.orig	2014-03-24 10:40:24.413906191 -0700
-+++ src/Makefile.am	2014-03-24 10:41:15.636207690 -0700
+ dnl Check for <sys/time.h> header
+ AC_CHECK_HEADER([sys/time.h],
+    AC_DEFINE([HAVE_SYS_TIME_H], [1], [N/A]))
+--- src/Makefile.am.orig	2014-04-05 14:19:16.401273769 -0700
++++ src/Makefile.am	2014-04-05 14:21:56.696259485 -0700
 @@ -6,15 +6,12 @@
  
  libglpk_la_CPPFLAGS = \
@@ -34,8 +33,8 @@ Remove suitesparse (camd,colamd) and zlib bundles
 +-I$(srcdir)/proxy
  
  libglpk_la_LDFLAGS = \
- -version-info 37:0:1 \
-@@ -93,18 +90,6 @@
+ -version-info 37:1:1 \
+@@ -92,18 +89,6 @@
  glpssx02.c \
  glptsp.c \
  lux.c \
@@ -51,10 +50,10 @@ Remove suitesparse (camd,colamd) and zlib bundles
 -amd/amd_postorder.c \
 -amd/amd_preprocess.c \
 -amd/amd_valid.c \
+ bflib/btf.c \
+ bflib/btfint.c \
  bflib/fhv.c \
- bflib/fhvint.c \
- bflib/ifu.c \
-@@ -114,7 +99,6 @@
+@@ -117,7 +102,6 @@
  bflib/sva.c \
  cglib/cfg.c \
  cglib/cfg1.c \
@@ -62,7 +61,7 @@ Remove suitesparse (camd,colamd) and zlib bundles
  env/alloc.c \
  env/dlsup.c \
  env/env.c \
-@@ -147,21 +131,6 @@
+@@ -150,21 +134,6 @@
  misc/wclique.c \
  misc/wclique1.c \
  proxy/proxy.c \

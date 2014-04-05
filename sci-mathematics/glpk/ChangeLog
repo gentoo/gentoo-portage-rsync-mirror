@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.68 2014/03/24 17:46:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.69 2014/04/05 21:32:03 bicatali Exp $
+
+*glpk-4.54 (05 Apr 2014)
+
+  05 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/glpk-4.54-debundle-system-libs.patch, +glpk-4.54.ebuild,
+  -files/glpk-4.52.1-debundle-amd.patch, -files/glpk-4.52.1-debundle-zlib.patch,
+  -files/glpk-4.52.1-mariadb-5.5.patch, -glpk-4.52.1-r1.ebuild,
+  files/glpk-4.53-debundle-system-libs.patch, glpk-4.53.ebuild:
+  Version bump
 
 *glpk-4.53 (24 Mar 2014)
 

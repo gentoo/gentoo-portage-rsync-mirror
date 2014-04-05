@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.52.1-r1.ebuild,v 1.2 2014/02/05 21:54:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.54.ebuild,v 1.1 2014/04/05 21:32:03 bicatali Exp $
 
 EAPI=5
 
@@ -18,19 +18,17 @@ IUSE="doc examples gmp odbc mysql static-libs"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 
 RDEPEND="
-	sci-libs/amd
-	sci-libs/colamd
-	sys-libs/zlib:=
-	gmp? ( dev-libs/gmp:= )
+	sci-libs/amd:0=
+	sci-libs/colamd:=
+	sys-libs/zlib:0=
+	gmp? ( dev-libs/gmp:0= )
 	mysql? ( virtual/mysql )
-	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )"
+	odbc? ( || ( dev-db/libiodbc:0= dev-db/unixODBC:0= ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-4.52.1-debundle-amd.patch
-	"${FILESDIR}"/${PN}-4.52.1-debundle-zlib.patch
-	"${FILESDIR}"/${PN}-4.52.1-mariadb-5.5.patch
+	"${FILESDIR}"/${PN}-4.54-debundle-system-libs.patch
 )
 
 src_configure() {
@@ -55,6 +53,7 @@ src_install() {
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 	use doc && dodoc doc/*.pdf doc/notes/*.pdf doc/*.txt
 }

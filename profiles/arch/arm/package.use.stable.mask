@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/arm/13.0/package.use.stable.mask,v 1.1 2014/03/16 22:40:07 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.1 2014/04/05 21:57:22 dilfridge Exp $
 
 # Tom Wijsman <TomWij@gentoo.org (16 Mar 2014)
 # Mask unstable USE flags on media-video/vlc, see security bug #499806.
