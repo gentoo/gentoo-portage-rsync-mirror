@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.14 2014/03/01 22:33:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.15 2014/04/05 08:55:42 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -46,7 +46,7 @@ RDEPEND=">=dev-libs/glib-2.31.0:2
 		>=app-pda/libimobiledevice-1.1.0:=
 		>=app-pda/libplist-1:= )
 	udev? (
-		cdda? ( >=dev-libs/libcdio-0.78.2:=[-minimal] )
+		cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 		virtual/udev:=[gudev] )
 	udisks? ( >=sys-fs/udisks-1.90:2 )
 	http? ( >=net-libs/libsoup-gnome-2.26.0:= )
@@ -81,6 +81,13 @@ src_prepare() {
 		$(use_enable gnome-keyring keyring)
 		$(use_enable samba)
 		$(use_enable udisks udisks2)"
+
+	# Replace me with correct patch, see #452400
+	if has_version dev-libs/libcdio-paranoia; then
+	sed -i \
+		-e '/#include/s:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
+		daemon/gvfsbackendcdda.c || die
+	fi
 
 	# Conditional patching purely to avoid eautoreconf
 	if use gphoto2; then
