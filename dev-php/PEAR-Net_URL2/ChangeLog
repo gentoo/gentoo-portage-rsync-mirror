@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_URL2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL2/ChangeLog,v 1.15 2014/01/04 18:58:08 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL2/ChangeLog,v 1.16 2014/04/05 14:16:13 jer Exp $
+
+  05 Apr 2014; Jeroen Roovers <jer@gentoo.org> PEAR-Net_URL2-2.0.5.ebuild:
+  Stable for HPPA (bug #502760).
 
 *PEAR-Net_URL2-2.0.5 (04 Jan 2014)
 

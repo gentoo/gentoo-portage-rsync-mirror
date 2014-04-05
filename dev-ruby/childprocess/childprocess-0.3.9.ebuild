@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/childprocess-0.3.9.ebuild,v 1.6 2014/02/01 04:00:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/childprocess-0.3.9.ebuild,v 1.7 2014/04/05 14:12:03 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

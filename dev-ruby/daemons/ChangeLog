@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.84 2014/02/01 04:26:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.85 2014/04/05 14:02:38 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> daemons-1.1.8.ebuild,
+  daemons-1.1.9-r1.ebuild:
+  Remove ree18 and ruby18 target.
 
   01 Feb 2014; Akinori Hattori <hattya@gentoo.org> daemons-1.1.8.ebuild:
   ia64 stable wrt bug #493780

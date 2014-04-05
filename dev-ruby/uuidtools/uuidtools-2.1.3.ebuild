@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.3.ebuild,v 1.3 2012/10/17 03:17:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.3.ebuild,v 1.4 2014/04/05 14:09:06 mrueg Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 jruby ree18"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

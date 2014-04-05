@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.3.ebuild,v 1.7 2013/01/15 06:25:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.3.ebuild,v 1.8 2014/04/05 14:30:10 mrueg Exp $
 
 EAPI=2
 
 # jruby fails tests
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md TEMPLATES.md"
@@ -22,7 +22,7 @@ IUSE=""
 
 RUBY_PATCHES=( "${P}-yajl-test.patch" )
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit dev-ruby/nokogiri )"
+ruby_add_bdepend "test? ( dev-ruby/nokogiri )"
 ruby_add_rdepend ">=dev-ruby/builder-2.0.0"
 
 # Tests fail when markaby is not new enough, but it's optional.

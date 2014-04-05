@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.62 2014/04/02 13:47:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.63 2014/04/05 14:26:57 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> narray-0.6.0.1-r2.ebuild,
+  narray-0.6.0.8-r1.ebuild:
+  Remove ree18 and ruby18 target.
 
   02 Apr 2014; Jeroen Roovers <jer@gentoo.org> narray-0.6.0.8-r1.ebuild:
   Stable for HPPA (bug #506290).

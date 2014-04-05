@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.3.ebuild,v 1.2 2012/12/02 12:47:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.3.ebuild,v 1.3 2014/04/05 14:15:15 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -28,7 +28,7 @@ ruby_add_rdepend "dev-ruby/xml-simple
 				dev-ruby/builder
 				dev-ruby/mime-types
 				virtual/ruby-ssl"
-ruby_add_bdepend "test? ( virtual/ruby-test-unit dev-ruby/flexmock )"
+ruby_add_bdepend "test? ( dev-ruby/flexmock )"
 
 RUBY_PATCHES=(
 	${P}+ruby19.patch

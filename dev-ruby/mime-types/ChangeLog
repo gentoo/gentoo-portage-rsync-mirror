@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.44 2014/03/05 18:28:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.46 2014/04/05 14:20:32 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> mime-types-1.19.ebuild:
+  Remove virtual/ruby-test-unit.
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> mime-types-1.19.ebuild,
+  mime-types-1.23.ebuild, mime-types-1.25.1.ebuild:
+  Remove ree18 and ruby18 target.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mime-types-1.23.ebuild:
   Stable for ppc, wrt bug #502272

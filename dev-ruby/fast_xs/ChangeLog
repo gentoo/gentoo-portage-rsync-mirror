@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.27 2014/03/06 16:01:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.28 2014/04/05 14:20:03 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> fast_xs-0.8.0-r1.ebuild,
+  fast_xs-0.8.0.ebuild:
+  Remove ree18 and ruby18 target. Remove virtual/ruby-test-unit.
 
   06 Mar 2014; Manuel Rüger <mrueg@gentoo.org> fast_xs-0.8.0-r1.ebuild,
   fast_xs-0.8.0.ebuild:

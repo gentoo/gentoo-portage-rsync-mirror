@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.42 2014/02/20 11:02:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.43 2014/04/05 14:12:03 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> childprocess-0.3.9-r1.ebuild,
+  childprocess-0.3.9.ebuild, childprocess-0.4.0.ebuild,
+  childprocess-0.4.2.ebuild:
+  Remove ree18 and ruby18 target.
 
 *childprocess-0.5.1 (20 Feb 2014)
 
