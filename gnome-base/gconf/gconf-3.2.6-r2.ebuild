@@ -1,13 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.6.ebuild,v 1.3 2013/04/03 18:43:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.6-r2.ebuild,v 1.1 2014/04/05 07:48:52 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME_ORG_MODULE="GConf"
 GNOME2_LA_PUNT="yes"
+PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_REQ_USE="xml"
 
-inherit eutils gnome2
+inherit eutils gnome2 python-r1
 
 DESCRIPTION="GNOME configuration system and daemon"
 HOMEPAGE="http://projects.gnome.org/gconf/"
@@ -15,22 +17,26 @@ HOMEPAGE="http://projects.gnome.org/gconf/"
 LICENSE="LGPL-2+"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
-IUSE="debug gtk +introspection ldap orbit policykit"
+IUSE="debug +introspection ldap policykit"
 
-RDEPEND=">=dev-libs/glib-2.31:2
+RDEPEND="
+	${PYTHON_DEPS}
+	>=dev-libs/glib-2.31:2
 	>=dev-libs/dbus-glib-0.74:=
 	>=sys-apps/dbus-1:=
 	>=dev-libs/libxml2-2:2
-	gtk? ( >=x11-libs/gtk+-2.90:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5:= )
 	ldap? ( net-nds/openldap:= )
-	orbit? ( >=gnome-base/orbit-2.4:2 )
-	policykit? ( sys-auth/polkit:= )"
+	policykit? ( sys-auth/polkit:= )
+"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 pkg_setup() {
 	kill_gconf
@@ -43,6 +49,16 @@ src_prepare() {
 	# Do not crash in gconf_entry_set_value() when entry pointer is NULL, upstream #631985
 	epatch "${FILESDIR}/${PN}-2.28.0-entry-set-value-sigsegv.patch"
 
+	# From 'master'
+	# mconvert: enable recursive scheme lookup and fix a crasher
+	epatch "${FILESDIR}/${P}-mconvert-crasher.patch"
+
+	# dbus: Don't spew to console when unable to connect to dbus daemon
+	epatch "${FILESDIR}/${P}-spew-console-error.patch"
+
+	# gsettings-data-convert: Warn (and fix) invalid schema paths
+	epatch "${FILESDIR}/${P}-gsettings-data-convert-paths.patch"
+
 	gnome2_src_prepare
 }
 
@@ -50,17 +66,16 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		--enable-gsettings-backend \
-		$(use_enable gtk) \
-		$(usex gtk --with-gtk=3.0 "") \
+		--with-gtk=3.0 \
+		--disable-orbit \
 		$(use_enable introspection) \
 		$(use_with ldap openldap) \
-		$(use_enable orbit) \
-		$(use_enable policykit defaults-service) \
-		ORBIT_IDL=$(type -P orbit-idl-2)
+		$(use_enable policykit defaults-service)
 }
 
 src_install() {
 	gnome2_src_install
+	python_replicate_script "${ED}"/usr/bin/gsettings-schema-convert || die
 
 	keepdir /etc/gconf/gconf.xml.mandatory
 	keepdir /etc/gconf/gconf.xml.defaults
@@ -86,15 +101,6 @@ pkg_postinst() {
 
 	einfo "changing permissions for gconf files"
 	find  "${EPREFIX}"/etc/gconf/ -type f -exec chmod ugo+r "{}" \;
-
-	if ! use orbit; then
-		ewarn "You are using dbus for GConf's IPC. If you are upgrading from"
-		ewarn "<=gconf-3.2.3, or were previously using gconf with USE=orbit,"
-		ewarn "you will need to now restart your desktop session (for example,"
-		ewarn "by logging out and then back in)."
-		ewarn "Otherwise, gconf-based applications may crash with 'Method ..."
-		ewarn "on interface \"org.gnome.GConf.Server\" doesn't exist' errors."
-	fi
 }
 
 kill_gconf() {

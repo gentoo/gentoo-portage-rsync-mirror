@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.38 2014/03/10 15:54:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.39 2014/04/05 07:31:37 graaff Exp $
+
+*arel-4.0.2 (05 Apr 2014)
+
+  05 Apr 2014; Hans de Graaff <graaff@gentoo.org> +arel-4.0.2.ebuild:
+  Version bump.
 
 *arel-3.0.2-r2 (10 Mar 2014)
 

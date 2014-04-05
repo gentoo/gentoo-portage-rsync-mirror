@@ -1,6 +1,18 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.287 2014/02/22 21:37:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.288 2014/04/05 07:48:52 pacho Exp $
+
+*gconf-3.2.6-r2 (05 Apr 2014)
+
+  05 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gconf-3.2.6-gsettings-data-convert-paths.patch,
+  +files/gconf-3.2.6-mconvert-crasher.patch,
+  +files/gconf-3.2.6-spew-console-error.patch, +gconf-3.2.6-r2.ebuild,
+  -gconf-2.32.4.ebuild, -gconf-3.2.6.ebuild:
+  gtk is not really needed (#505444 by Rafal Muzylo), drop orbit as it's dead
+  for ages, nothing needs it in the tree and we really want people to not use
+  that and, instead, use dbus for GConf's IPC. Also apply patches from upstream
+  master branch. Drop old.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gconf-3.2.6-r1.ebuild:
   Fix wrong commit, bug 502160
