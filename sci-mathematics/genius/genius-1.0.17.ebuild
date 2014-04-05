@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.17.ebuild,v 1.1 2013/06/28 15:49:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.17.ebuild,v 1.2 2014/04/05 17:44:25 jlec Exp $
 
 EAPI=5
 
@@ -48,6 +48,8 @@ src_prepare() {
 	GCONF_DEBUG="no"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	USE_DESTDIR="1"
+
+	epatch "${FILESDIR}"/${P}-gcc4.8.patch
 }
 
 src_install() {

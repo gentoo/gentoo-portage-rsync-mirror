@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ruby-romkan-0.4-r4.ebuild,v 1.9 2013/08/03 06:50:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ruby-romkan-0.4-r4.ebuild,v 1.10 2014/04/05 17:57:57 mrueg Exp $
 
 EAPI="4"
 # ruby19 jruby
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby19"
 
 inherit ruby-ng
 

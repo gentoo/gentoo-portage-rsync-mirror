@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/genius
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.8 2013/06/28 15:49:20 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.9 2014/04/05 17:44:25 jlec Exp $
+
+  05 Apr 2014; Justin Lecher <jlec@gentoo.org> genius-1.0.17.ebuild,
+  +files/genius-1.0.17-gcc4.8.patch:
+  Add fix for gcc-4.8
 
 *genius-1.0.17 (28 Jun 2013)
 
