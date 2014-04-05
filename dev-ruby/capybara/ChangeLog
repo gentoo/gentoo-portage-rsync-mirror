@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/capybara
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.17 2013/11/23 09:02:10 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/ChangeLog,v 1.18 2014/04/05 13:51:57 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> capybara-1.1.4.ebuild:
+  Remove ree18 and ruby18 target.
 
 *capybara-2.2.0 (23 Nov 2013)
 
@@ -73,4 +76,3 @@
   19 Jul 2011; Hans de Graaff <graaff@gentoo.org> +capybara-1.0.0.ebuild,
   +metadata.xml:
   Initial import. New dependency of dev-util/cucumber-rails.
-
