@@ -9,5 +9,5 @@ RDEPEND=>=gnome-base/gconf-2 >=dev-libs/glib-2.6:2 media-libs/gstreamer:0.10 >=m
 RESTRICT=test
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-0.10.31.tar.xz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	gst-plugins-good	935f60a941a881f5f51d19b3453d84c3	gst-plugins10	947efdfd64977cceacabacfad1e28eba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	gst-plugins-good	935f60a941a881f5f51d19b3453d84c3	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=fe36a862202d8ab1548a9ec6aac518b4

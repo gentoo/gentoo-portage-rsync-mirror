@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1195 2014/04/03 22:09:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1196 2014/04/05 09:19:19 tetromino Exp $
+
+  05 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins10.eclass:
+  Use LC_ALL=C for tr call; fixes invalid configure options when using Turkish
+  locale (bug #490894, thanks to Emre Eryilmaz and Samuli Suominen).
 
   03 Apr 2014; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
   cmake-multilib.eclass, multilib-build.eclass:
