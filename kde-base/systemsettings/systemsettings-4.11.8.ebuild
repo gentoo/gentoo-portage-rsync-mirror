@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.11.8.ebuild,v 1.1 2014/04/01 18:24:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.11.8.ebuild,v 1.2 2014/04/05 17:31:11 dilfridge Exp $
 
 EAPI=5
 
@@ -61,6 +61,9 @@ KMEXTRACTONLY="
 "
 
 PATCHES=( "${FILESDIR}/${PN}-4.10.1-noplasmalock.patch" )
+
+# fails to connect to a kded instance
+RESTRICT="test"
 
 src_unpack() {
 	if use handbook; then

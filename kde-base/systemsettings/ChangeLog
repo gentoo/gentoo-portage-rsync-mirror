@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.249 2014/04/01 18:24:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.250 2014/04/05 17:31:11 dilfridge Exp $
+
+  05 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  systemsettings-4.11.8.ebuild:
+  restrict tests, they fail to connect to a kded instance
 
 *systemsettings-4.11.8 (01 Apr 2014)
 
