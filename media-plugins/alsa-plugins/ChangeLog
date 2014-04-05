@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.191 2014/04/05 18:36:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.192 2014/04/05 19:20:01 ssuominen Exp $
+
+  05 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -alsa-plugins-1.0.26.ebuild, -alsa-plugins-1.0.27.ebuild,
+  -files/alsa-plugins-1.0.25-avcodec54.patch,
+  -files/alsa-plugins-1.0.26-libav9.patch:
+  old
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> alsa-plugins-1.0.27-r1.ebuild:
   Stable for sparc, wrt bug #498186

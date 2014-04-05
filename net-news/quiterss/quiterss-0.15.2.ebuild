@@ -1,19 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.16 2014/04/05 19:21:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.15.2.ebuild,v 1.1 2014/04/05 19:21:18 tomwij Exp $
 
 EAPI=5
 
 PLOCALES="ar cs de el_GR es fa fi fr gl hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ tr uk vi zh_CN zh_TW"
-EHG_REPO_URI="https://code.google.com/p/quite-rss"
-inherit l10n qt4-r2 mercurial
+inherit l10n qt4-r2
+
+MY_P="QuiteRSS-${PV}-src"
 
 DESCRIPTION="A Qt4-based RSS/Atom feed reader"
 HOMEPAGE="https://quiterss.org"
+SRC_URI="https://quiterss.org/files/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug phonon"
 
 RDEPEND="
@@ -27,6 +29,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
+
+S="${WORKDIR}/${MY_P}"
 
 DOCS=( AUTHORS HISTORY_EN HISTORY_RU README )
 
