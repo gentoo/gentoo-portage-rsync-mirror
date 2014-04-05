@@ -1,11 +1,0 @@
---- a/src/swiftcore/Swiftiply/cache_base_mixin.rb 2013-05-02 20:08:19.737222826 +0200
-+++ b/src/swiftcore/Swiftiply/cache_base_mixin.rb 2013-05-02 20:08:27.217222164 +0200
-@@ -33,7 +33,7 @@
- 				if l == 0
- 					@vw / 2
- 				else
--					wait_time = (@vwtl * count) / (l * rt)
-+					wait_time = (@vw * @tl * count) / (l * rt)
- 					wait_time < rt ? rt * 2.0 : wait_time > @vw ? @vw : wait_time
- 				end
- 			end			
