@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.11.1-r1.ebuild,v 1.9 2014/03/20 21:49:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.11.1-r1.ebuild,v 1.10 2014/04/05 18:18:52 dilfridge Exp $
 
 EAPI=5
 
@@ -23,13 +23,6 @@ DEPEND="
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdepim-runtime)
 "
-
-add_blocker kmailcvt
-add_blocker libksieve
-add_blocker messagecore
-add_blocker messagelist
-add_blocker messageviewer
-add_blocker mimelib
 
 KMEXTRACTONLY="
 	korganizer/org.kde.Korganizer.Calendar.xml

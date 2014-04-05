@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpgp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.159 2013/10/10 05:26:51 creffett Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.160 2014/04/05 18:12:56 dilfridge Exp $
+
+  05 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkpgp-4.4.11.1.ebuild:
+  EAPI bump
 
 *libkpgp-4.4.11.1 (10 Oct 2013)
 

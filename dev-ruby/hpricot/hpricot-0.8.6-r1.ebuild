@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r1.ebuild,v 1.12 2014/02/01 04:37:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r1.ebuild,v 1.13 2014/04/05 18:01:34 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
@@ -20,8 +20,7 @@ KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-lin
 IUSE=""
 
 ruby_add_bdepend "dev-ruby/rake
-	dev-ruby/rake-compiler
-	test? ( virtual/ruby-test-unit )"
+	dev-ruby/rake-compiler"
 
 # dev-ruby/fast_xs does not cover JRuby so still bundle it here for now
 USE_RUBY="${USE_RUBY/jruby/}" \

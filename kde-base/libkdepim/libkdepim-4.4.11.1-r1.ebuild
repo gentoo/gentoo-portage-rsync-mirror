@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.4.11.1-r1.ebuild,v 1.9 2013/10/10 05:26:48 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.4.11.1-r1.ebuild,v 1.10 2014/04/05 18:11:45 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 KMNAME="kdepim"
 inherit kde4-meta
@@ -15,9 +15,6 @@ DEPEND="
 	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
 "
 RDEPEND="${DEPEND}"
-
-# @Since >4.2.65 kode removed from kdepim
-add_blocker kode
 
 KMEXTRACTONLY="
 	korganizer/korgac/org.kde.korganizer.KOrgac.xml

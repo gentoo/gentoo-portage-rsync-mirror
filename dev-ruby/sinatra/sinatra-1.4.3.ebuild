@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.4.3.ebuild,v 1.1 2013/08/17 06:26:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.4.3.ebuild,v 1.2 2014/04/05 18:04:23 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 # no documentation is generable, it needs hanna, which is broken
 RUBY_FAKEGEM_TASK_DOC=""

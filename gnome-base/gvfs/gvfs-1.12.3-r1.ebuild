@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.15 2014/04/05 08:55:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.16 2014/04/05 18:02:15 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -81,6 +81,8 @@ src_prepare() {
 		$(use_enable gnome-keyring keyring)
 		$(use_enable samba)
 		$(use_enable udisks udisks2)"
+
+	epatch "${FILESDIR}/${P}-libcdio-0.84.patch"
 
 	# Replace me with correct patch, see #452400
 	if has_version dev-libs/libcdio-paranoia; then

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kactivities
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.118 2014/04/01 18:09:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.119 2014/04/05 18:24:17 dilfridge Exp $
+
+  05 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  kactivities-4.11.5.ebuild, kactivities-4.12.3.ebuild,
+  kactivities-4.12.4.ebuild:
+  Clean up blockers
 
 *kactivities-4.12.4 (01 Apr 2014)
 

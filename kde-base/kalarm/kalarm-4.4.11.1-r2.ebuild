@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-4.4.11.1-r2.ebuild,v 1.8 2013/10/10 05:26:50 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-4.4.11.1-r2.ebuild,v 1.9 2014/04/05 18:08:59 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 KMNAME="kdepim"
 KDE_HANDBOOK=optional
@@ -17,7 +17,7 @@ RDEPEND="
 	$(add_kdebase_dep libkdepim)
 "
 DEPEND="${RDEPEND}
-	dev-libs/boost
+	dev-libs/boost:=
 	dev-libs/libxslt
 "
 
