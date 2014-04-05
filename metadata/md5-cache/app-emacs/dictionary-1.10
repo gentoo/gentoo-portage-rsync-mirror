@@ -3,10 +3,10 @@ DEPEND=>=virtual/emacs-21
 DESCRIPTION=Emacs package for talking to a dictionary server
 EAPI=5
 HOMEPAGE=http://www.myrkr.in-berlin.de/dictionary/index.html
-KEYWORDS=amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=http://www.myrkr.in-berlin.de/dictionary/dictionary-1.10.tar.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2c73e113fffcbee2cbaaa4917c7becf3
+_md5_=c232a0072e113b687d5e6dc3f6438b78

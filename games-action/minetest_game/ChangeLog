@@ -1,6 +1,9 @@
 # ChangeLog for games-action/minetest_game
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_game/ChangeLog,v 1.10 2014/03/30 12:52:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_game/ChangeLog,v 1.11 2014/04/05 11:11:08 ago Exp $
+
+  05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> minetest_game-0.4.9.ebuild:
+  Stable for x86, wrt bug #504358
 
   30 Mar 2014; Chema Alonso <nimiux@gentoo.org> minetest_game-0.4.9.ebuild:
   Stable for amd64 wrt bug #504358

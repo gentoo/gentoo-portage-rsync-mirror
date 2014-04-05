@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-16.ebuild,v 1.13 2014/03/22 18:50:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-16.ebuild,v 1.14 2014/04/05 11:02:10 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib
@@ -110,20 +110,23 @@ src_install() {
 
 pkg_postinst() {
 	if use openrc; then
-		if [[ -L ${ROOT}etc/runlevels/boot/static-nodes ]]; then
+		if [[ -L ${ROOT%/}/etc/runlevels/boot/static-nodes ]]; then
 			ewarn "Removing old conflicting static-nodes init script from the boot runlevel"
-			rm -f "${ROOT}"etc/runlevels/boot/static-nodes
+			rm -f "${ROOT%/}"/etc/runlevels/boot/static-nodes
 		fi
 
 		# Add kmod to the runlevel automatically if this is the first install of this package.
 		if [[ -z ${REPLACING_VERSIONS} ]]; then
-			if [[ -x ${ROOT}etc/init.d/kmod-static-nodes && -d ${ROOT}etc/runlevels/sysinit ]]; then
-				ln -s /etc/init.d/kmod-static-nodes "${ROOT}"/etc/runlevels/sysinit/kmod-static-nodes
+			if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
+				mkdir -p "${ROOT%/}"/etc/runlevels/sysinit
+			fi
+			if [[ -x ${ROOT%/}/etc/init.d/kmod-static-nodes ]]; then
+				ln -s /etc/init.d/kmod-static-nodes "${ROOT%/}"/etc/runlevels/sysinit/kmod-static-nodes
 			fi
 		fi
 
-		if [[ -e ${ROOT}etc/runlevels/sysinit ]]; then
-			if [[ ! -e ${ROOT}etc/runlevels/sysinit/kmod-static-nodes ]]; then
+		if [[ -e ${ROOT%/}/etc/runlevels/sysinit ]]; then
+			if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/kmod-static-nodes ]]; then
 				ewarn
 				ewarn "You need to add kmod-static-nodes to the sysinit runlevel for"
 				ewarn "kernel modules to have required static nodes!"

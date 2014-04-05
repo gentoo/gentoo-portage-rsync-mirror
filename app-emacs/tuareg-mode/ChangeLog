@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.43 2014/03/31 11:23:00 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.44 2014/04/05 11:07:57 ago Exp $
+
+  05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> tuareg-mode-2.0.7.ebuild:
+  Stable for x86, wrt bug #504562
 
   31 Mar 2014; Chema Alonso <nimiux@gentoo.org> tuareg-mode-2.0.7.ebuild:
   Stable for amd64 wrt bug #504562
@@ -189,4 +192,3 @@
   files/50tuareg-mode.el:
   Initial import. Thanks to Matthieu Sozeau <mattam@altern.org> and
   Pierre-Loi:c Garoche for submitting the ebuild. This closes Bug #30397
-

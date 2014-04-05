@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.108 2014/03/02 09:18:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.112 2014/04/05 11:18:51 ago Exp $
+
+  05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libvpx-1.3.0.ebuild:
+  Stable for alpha, wrt bug #501854
+
+  05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libvpx-1.3.0.ebuild:
+  Stable for ppc64, wrt bug #501854
+
+  05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libvpx-1.3.0.ebuild:
+  Stable for sparc, wrt bug #501854
+
+  05 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/libvpx-1.3.0-sparc-configure.patch, libvpx-1.3.0.ebuild:
+  Fix build on sparc (#501010 by Dustin, thanks to Ago for testing and his
+  acknowledge)
 
   02 Mar 2014; Akinori Hattori <hattya@gentoo.org> libvpx-1.3.0.ebuild:
   ia64 stable wrt bug #501854
