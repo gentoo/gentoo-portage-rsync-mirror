@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20140401.ebuild,v 1.1 2014/04/02 14:06:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20140401-r1.ebuild,v 1.1 2014/04/05 13:13:04 ssuominen Exp $
 
 EAPI="5"
 inherit eutils toolchain-funcs multilib
@@ -22,7 +22,8 @@ src_prepare() {
 }
 
 src_install() {
-	emake PREFIX="${D}" GENTOO_LIBDIR="$(get_libdir)" install
+	# Override HEADERS for missing declspec.h wrt #506832
+	emake HEADERS='declspec.h natpmp.h' PREFIX="${D}" GENTOO_LIBDIR="$(get_libdir)" install
 
 	dodoc Changelog.txt README
 	doman natpmpc.1

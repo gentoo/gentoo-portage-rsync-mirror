@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.7.ebuild,v 1.2 2014/03/29 13:23:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.8.ebuild,v 1.1 2014/04/05 13:08:17 ssuominen Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.midori-browser.org/"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-IUSE="deprecated doc granite +jit +webkit2 zeitgeist"
+IUSE="deprecated doc granite +introspection +jit +webkit2 zeitgeist"
 
 RDEPEND=">=dev-db/sqlite-3.6.19:3
 	>=dev-libs/glib-2.32.3
@@ -45,6 +45,7 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 		!webkit2? ( >=net-libs/webkit-gtk-1.8.1:3[jit=] )
 		)
 	granite? ( >=dev-libs/granite-0.2 )
+	introspection? ( dev-libs/gobject-introspection )
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -54,6 +55,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? ( dev-util/gtk-doc )"
 REQUIRED_USE="webkit2? ( !deprecated )"
+
+S=${WORKDIR}
 
 pkg_setup() {
 	python-any-r1_pkg_setup
@@ -70,7 +73,6 @@ src_unpack() {
 src_prepare() {
 	vala_src_prepare
 	sed -i -e '/install/s:COPYING:HACKING TODO TRANSLATE:' CMakeLists.txt || die
-	epatch "${FILESDIR}"/${P}-underlinking.patch
 }
 
 src_configure() {
@@ -79,6 +81,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_DOCDIR=/usr/share/doc/${PF}
 		$(cmake-utils_use_use doc APIDOCS)
+		$(cmake-utils_use_use introspection GIR)
 		$(cmake-utils_use_use granite)
 		$(cmake-utils_use_use zeitgeist)
 		-DVALA_EXECUTABLE="${VALAC}"
