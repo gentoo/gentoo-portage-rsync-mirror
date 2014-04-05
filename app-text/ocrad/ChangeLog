@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ocrad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.38 2014/02/27 21:25:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.39 2014/04/05 05:11:52 ssuominen Exp $
+
+*ocrad-0.23 (05 Apr 2014)
+
+  05 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> +ocrad-0.23.ebuild:
+  Version bump.
 
 *ocrad-0.22 (27 Feb 2014)
 
