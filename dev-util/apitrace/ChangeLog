@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.19 2014/04/03 18:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.20 2014/04/05 15:19:42 vapier Exp $
+
+  05 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  files/apitrace-4.0-glxtrace-only.patch:
+  Do not re-add snappy subdir for lib-only builds #506714 by Matt Turner.
 
 *apitrace-4.0 (03 Apr 2014)
 

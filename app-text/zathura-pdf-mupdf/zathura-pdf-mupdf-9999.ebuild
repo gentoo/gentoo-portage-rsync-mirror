@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.7 2014/04/05 14:30:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.9 2014/04/05 15:12:52 ssuominen Exp $
 
 EAPI=5
 
@@ -41,6 +41,8 @@ pkg_setup() {
 		VERBOSE=1
 		DESTDIR="${D}"
 		MUPDF_LIB="$($(tc-getPKG_CONFIG) --libs mupdf)"
+		OPENSSL_INC="$($(tc-getPKG_CONFIG) --cflags mupdf)"
+		OPENSSL_LIB=''
 	)
 }
 

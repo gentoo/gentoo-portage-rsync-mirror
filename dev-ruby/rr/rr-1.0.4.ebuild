@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.0.4.ebuild,v 1.15 2013/12/26 15:10:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.0.4.ebuild,v 1.16 2014/04/05 15:01:42 mrueg Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ruby19 jruby ree18"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 
@@ -26,7 +26,6 @@ IUSE=""
 
 ruby_add_bdepend "test? (
 		dev-ruby/rspec:0
-		virtual/ruby-test-unit
 		dev-ruby/minitest
 		dev-ruby/session
 		dev-ruby/diff-lcs )"
