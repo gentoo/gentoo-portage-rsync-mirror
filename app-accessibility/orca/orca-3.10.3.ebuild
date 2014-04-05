@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.8.2.ebuild,v 1.3 2013/12/08 17:33:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.10.3.ebuild,v 1.1 2014/04/05 07:28:08 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,11 +11,11 @@ PYTHON_REQ_USE="threads"
 inherit gnome2 python-r1
 
 DESCRIPTION="Extensible screen reader that provides access to the desktop"
-HOMEPAGE="http://projects.gnome.org/orca/"
+HOMEPAGE="https://wiki.gnome.org/Projects/Orca"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -23,28 +23,27 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # it is used to provide contracted braille support
 # XXX: Check deps for correctness
 COMMON_DEPEND="
-	>=app-accessibility/at-spi2-atk-2.5.91:2
-	>=app-accessibility/at-spi2-core-2.5.91:2
-	>=dev-libs/atk-2.5.91
+	>=app-accessibility/at-spi2-atk-2.10:2
+	>=app-accessibility/at-spi2-core-2.10:2[introspection]
+	>=dev-libs/atk-2.10
 	>=dev-libs/glib-2.28:2
-	>=dev-python/pygobject-3.2.2:3[${PYTHON_USEDEP}]
-	>=x11-libs/gtk+-3.5.16:3[introspection]
+	>=dev-python/pygobject-3.10:3[${PYTHON_USEDEP}]
+	>=x11-libs/gtk+-3.6.2:3[introspection]
 	${PYTHON_DEPS}
 "
 RDEPEND="${COMMON_DEPEND}
 	>=app-accessibility/speech-dispatcher-0.8[python,${PYTHON_USEDEP}]
 	dev-libs/atk[introspection]
 	dev-python/pyatspi[${PYTHON_USEDEP}]
-	dev-python/pycairo[${PYTHON_USEDEP}]
 	dev-python/setproctitle[${PYTHON_USEDEP}]
 	x11-libs/libwnck:3[introspection]
 	x11-libs/pango[introspection]
 "
 DEPEND="${COMMON_DEPEND}
-	app-text/yelp-tools
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.50
 	virtual/pkgconfig
 "
+#	app-text/yelp-tools
 
 src_prepare() {
 	gnome2_src_prepare
@@ -53,7 +52,7 @@ src_prepare() {
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure
+	python_foreach_impl run_in_build_dir gnome2_src_configure ITSTOOL="$(type -P true)"
 }
 
 src_compile() {

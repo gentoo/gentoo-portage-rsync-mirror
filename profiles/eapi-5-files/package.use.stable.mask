@@ -1,30 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.42 2014/03/27 21:20:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.43 2014/04/05 07:02:38 pacho Exp $
 
 # PLEASE DO NOT ADD NEW ENTRIES HERE. 
 # Use profiles/base/package.use.stable.mask or another appropriate file instead
 # PLEASE DO NOT ADD NEW ENTRIES HERE. 
 
-# Pacho Ramos <pacho@gentoo.org> (17 Nov 2013)
-# Still needs gnutls-3
->=net-nntp/pan-0.139 ssl
-
-# Pacho Ramos <pacho@gentoo.org> (07 Sep 2013)
-# It requires newer emul sets to be stabilized (#477182#c5)
-~sci-libs/fftw-3.3.3 abi_x86_32
-
 # Agostino Sarubbo <ago@gentoo.org> (31 Aug 2013)
 # Clang is not stable
 app-portage/eix clang
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2013)
-# Waiting for >=app-cdr/brasero-3 stabilization
-app-pda/gtkpod cdr
-
-# Pacho Ramos <pacho@gentoo.org> (01 Apr 2013)
-# Needed to stabilize anjuta-3.6
-=dev-util/devhelp-3.6.1-r1 gedit
 
 # Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2013)
 # Mask unstable dependencies in leechcraft metapackage

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r4.ebuild,v 1.4 2014/02/24 01:12:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r4.ebuild,v 1.5 2014/04/05 07:05:35 pacho Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7:2.7" # not 2.6 bug #33907, not 3.0 bug #411083
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
