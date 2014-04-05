@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.3 2014/03/22 22:43:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.4 2014/04/05 15:59:09 hasufell Exp $
 
 EAPI=5
 inherit autotools flag-o-matic toolchain-funcs eutils
@@ -14,7 +14,7 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="3dnow alsa altivec +audio custom-cflags dbus directfb fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio sse sse2 static-libs +threads tslib udev +video X xinerama xscreensaver"
+IUSE="3dnow alsa altivec +audio custom-cflags dbus fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio sse sse2 static-libs +threads tslib udev +video X xinerama xscreensaver"
 REQUIRED_USE="
 	alsa? ( audio )
 	fusionsound? ( audio )
@@ -28,7 +28,6 @@ REQUIRED_USE="
 RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
-	directfb? ( >=dev-libs/DirectFB-1.6.3 )
 	fusionsound? ( || ( >=media-libs/FusionSound-1.1.1 >=dev-libs/DirectFB-1.7.1[fusionsound] ) )
 	gles? ( media-libs/mesa[gles2] )
 	nas? ( media-libs/nas )
@@ -64,17 +63,6 @@ src_prepare() {
 
 src_configure() {
 	use custom-cflags || strip-flags
-
-	local directfbconf="--disable-video-directfb"
-	if use directfb ; then
-		# since DirectFB can link against SDL and trigger a
-		# dependency loop, only link against DirectFB if it
-		# isn't broken #61592
-		echo 'int main(){}' > directfb-test.c
-		$(tc-getCC) directfb-test.c -ldirectfb 2>/dev/null \
-			&& directfbconf="--enable-video-directfb" \
-			|| ewarn "Disabling DirectFB since libdirectfb.so is broken"
-	fi
 
 	# sorted by `./configure --help`
 	econf \
@@ -122,8 +110,7 @@ src_configure() {
 		$(use_enable X video-x11-xshape) \
 		$(use_enable X video-x11-vm) \
 		--disable-video-cocoa \
-		${directfbconf} \
-		--disable-directfb-shared \
+		--disable-video-directfb \
 		$(use_enable fusionsound) \
 		--disable-fusionsound-shared \
 		$(use_enable video video-dummy) \
