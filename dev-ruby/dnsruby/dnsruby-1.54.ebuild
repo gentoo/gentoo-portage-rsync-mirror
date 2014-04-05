@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/dnsruby-1.54.ebuild,v 1.1 2013/06/18 23:43:36 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/dnsruby-1.54.ebuild,v 1.2 2014/04/05 14:45:44 mrueg Exp $
 
 EAPI=4
 
 # jruby → fails tests.
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby19"
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_DOCDIR="html"
 RUBY_FAKEGEM_EXTRADOC="DNSSEC EXAMPLES README"

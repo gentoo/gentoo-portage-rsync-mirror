@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/simple-rss
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.14 2013/12/29 10:38:22 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.15 2014/04/05 14:53:41 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> simple-rss-1.2.3-r1.ebuild,
+  simple-rss-1.2.3-r2.ebuild, simple-rss-1.3.1.ebuild:
+  Remove ree18 and ruby18 target.
 
 *simple-rss-1.3.1 (29 Dec 2013)
 

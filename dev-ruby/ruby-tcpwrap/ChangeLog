@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-tcpwrap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.22 2013/10/30 04:21:26 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.23 2014/04/05 14:52:21 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-tcpwrap-0.6-r1.ebuild,
+  ruby-tcpwrap-0.6-r2.ebuild:
+  Remove ree18 and ruby18 target.
 
 *ruby-tcpwrap-0.6-r2 (30 Oct 2013)
 

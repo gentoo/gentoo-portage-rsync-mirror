@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/term-ansicolor-1.3.0.ebuild,v 1.1 2014/02/10 07:06:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/term-ansicolor-1.3.0.ebuild,v 1.2 2014/04/05 14:54:58 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="none"

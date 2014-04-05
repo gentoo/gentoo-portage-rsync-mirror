@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r2.ebuild,v 1.14 2014/01/05 10:52:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r2.ebuild,v 1.15 2014/04/05 14:40:38 mrueg Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -25,7 +25,6 @@ ruby_add_rdepend '>=dev-ruby/json-1.1.7'
 ruby_add_bdepend "
 	doc? ( dev-ruby/hoe )
 	test? (
-		virtual/ruby-test-unit
 		virtual/ruby-ssl
 		dev-ruby/hoe
 	)"

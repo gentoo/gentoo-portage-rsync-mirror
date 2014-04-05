@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.92 2014/03/08 08:04:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.93 2014/04/05 14:31:19 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> haml-3.1.8-r1.ebuild,
+  haml-3.1.8-r2.ebuild:
+  Remove ree18 and ruby18 target.
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> haml-3.1.8-r1.ebuild:
   revert as the list is still incomplete

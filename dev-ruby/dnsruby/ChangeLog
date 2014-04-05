@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dnsruby
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.8 2013/09/05 00:02:03 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.9 2014/04/05 14:45:44 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> dnsruby-1.54.ebuild:
+  Remove ree18 and ruby18 target.
 
   05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -dnsruby-1.53.ebuild:
   Cleanup old.
