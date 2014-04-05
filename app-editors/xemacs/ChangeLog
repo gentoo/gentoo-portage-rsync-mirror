@@ -1,6 +1,23 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.173 2014/03/23 12:13:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.174 2014/04/05 20:16:11 matsl Exp $
+
+  05 Apr 2014; Mats Lidell <matsl@gentoo.org> +ChangeLog, Corrected after
+  problems caused during commit below. 
+	
+  04 Apr 2014; Mats Lidell <matsl@gentoo.org>  +xemacs-21.5.34-r2.ebuild, 
+  -xemacs-21.5.29-r2.ebuild, -xemacs-21.5.30.ebuild,
+  -xemacs-21.5.34.ebuild, -xemacs-21.5.34-r1.ebuild, 
+  -files/xemacs-21.5.29-vcdiff.patch,
+  -files/xemacs-21.5.29-large-images.patch 
+
+  Avoid XEmacs build problems with lisp files in /usr/share/xemacs... by
+
+  - Use src_compile setting EMACSLOADPATH suggested by Ulrich Mueller
+
+  - Don't compress the el-files.
+
+  Cleanup. Remove old ebuilds and patch files.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xemacs-21.4.22-r3.ebuild:
   Stable for x86, wrt bug #503112
