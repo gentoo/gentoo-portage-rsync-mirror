@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.7.ebuild,v 1.5 2014/03/31 14:39:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.7.ebuild,v 1.6 2014/04/05 11:45:32 ago Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 else
 	SRC_URI="http://download.flashrom.org/releases/${P}.tar.bz2"
-	KEYWORDS="amd64 arm ~x86"
+	KEYWORDS="amd64 arm x86"
 fi
 
 DESCRIPTION="Utility for reading, writing, erasing and verifying flash ROM chips"

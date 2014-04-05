@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.44.ebuild,v 1.1 2014/03/30 18:25:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/fslint-2.44-r1.ebuild,v 1.1 2014/04/05 11:33:20 tomwij Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils python-r1
+inherit eutils python-single-r1
 
 DESCRIPTION="A utility to find various forms of lint on a filesystem."
 HOMEPAGE="http://www.pixelbeat.org/fslint/"
@@ -66,9 +66,9 @@ src_install() {
 	fi
 
 	# Fix Python shebangs.
-	python_replicate_script "${ED}"${share}/${PN}/fstool/dupwaste
-	python_replicate_script "${ED}"${share}/${PN}/supprt/md5sum_approx
-	python_replicate_script "${ED}"${share}/${PN}/supprt/rmlint/merge_hardlinks
-	python_replicate_script "${ED}"${share}/${PN}/supprt/rmlint/fixdup
-	python_replicate_script "${ED}"/usr/bin/${PN}-gui
+	python_fix_shebang "${ED}"${share}/${PN}/fstool/dupwaste
+	python_fix_shebang "${ED}"${share}/${PN}/supprt/md5sum_approx
+	python_fix_shebang "${ED}"${share}/${PN}/supprt/rmlint/merge_hardlinks
+	python_fix_shebang "${ED}"${share}/${PN}/supprt/rmlint/fixdup
+	python_fix_shebang "${ED}"/usr/bin/${PN}-gui
 }

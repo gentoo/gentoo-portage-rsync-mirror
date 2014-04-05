@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/voro++/voro++-0.4.6-r1.ebuild,v 1.2 2014/03/31 14:22:36 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/voro++/voro++-0.4.6-r1.ebuild,v 1.3 2014/04/05 11:38:41 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/download/dir/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

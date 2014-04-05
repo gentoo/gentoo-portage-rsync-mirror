@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15532 2014/04/02 23:27:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15533 2014/04/05 11:49:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (05 Apr 2014)
+# natpmp.h has #include "declspec.h", but the ebuild never installs
+# the required header
+# breaks compilation of reverse dependencies, like transmission
+# bug 506832
+=net-libs/libnatpmp-20140401
 
 # Julian Ospald <hasufell@gentoo.org> (03 Apr 2014)
 # Mask to ensure users with mixed arches also get

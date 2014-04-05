@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.177 2014/04/04 13:30:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.178 2014/04/05 11:39:41 ago Exp $
+
+  05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libffi-3.0.13-r1.ebuild:
+  Stable for x86, wrt bug #497760
 
   04 Apr 2014; Chema Alonso <nimiux@gentoo.org> libffi-3.0.13-r1.ebuild:
   Stable for amd64 wrt bug #497760
