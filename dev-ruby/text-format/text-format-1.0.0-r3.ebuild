@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-1.0.0-r3.ebuild,v 1.14 2013/01/09 14:23:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-1.0.0-r3.ebuild,v 1.15 2014/04/05 16:07:21 mrueg Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README Changelog ToDo"

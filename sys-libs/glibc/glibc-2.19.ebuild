@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19.ebuild,v 1.5 2014/03/29 17:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.19.ebuild,v 1.6 2014/04/05 16:05:07 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -24,7 +24,7 @@ case ${PV} in
 	RELEASE_VER=${PV}
 	;;
 esac
-GCC_BOOTSTRAP_VER="4.7.3"
+GCC_BOOTSTRAP_VER="4.7.3-r1"
 PATCH_VER="1"                                  # Gentoo patchset
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
@@ -153,7 +153,7 @@ for x in setup {pre,post}inst ; do
 done
 
 eblit-src_unpack-pre() {
-	[[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib && unpack gcc-4.7.3-multilib-bootstrap.tar.bz2
+	[[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib && unpack gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2
 }
 
 eblit-src_unpack-post() {

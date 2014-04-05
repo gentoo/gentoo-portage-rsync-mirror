@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8781 2014/04/05 12:20:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8782 2014/04/05 16:13:20 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=dev-libs/DirectFB-1.7.1 wrt #499740 and #497124
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Cleanup package.mask.
