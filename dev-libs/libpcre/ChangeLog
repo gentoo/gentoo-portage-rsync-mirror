@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.228 2014/01/18 04:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.229 2014/04/05 22:07:06 radhermit Exp $
+
+*libpcre-8.35 (05 Apr 2014)
+
+  05 Apr 2014; Tim Harder <radhermit@gentoo.org> +libpcre-8.35.ebuild:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libpcre-8.33-r1.ebuild,
   libpcre-8.33.ebuild, libpcre-8.34.ebuild:
