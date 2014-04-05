@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.23.ebuild,v 1.11 2014/02/08 08:55:01 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.27.ebuild,v 1.1 2014/04/05 08:14:55 olemarkus Exp $
 
 EAPI=5
 
-inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
+inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool systemd
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 function php_get_uri ()
 {
@@ -81,11 +81,11 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	oci8-instant-client odbc pcntl pdo +phar +posix postgres qdbm
 	readline recode selinux +session sharedmem
 	+simplexml snmp soap sockets spell sqlite ssl
-	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
+	sybase-ct sysvipc systemd tidy +tokenizer truetype unicode wddx
 	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib"
 
 DEPEND="
-	>=app-admin/eselect-php-0.7.0[apache2?,fpm?]
+	>=app-admin/eselect-php-0.7.1-r3[apache2?,fpm?]
 	>=dev-libs/libpcre-8.32[unicode]
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
@@ -193,7 +193,10 @@ REQUIRED_USE="
 
 RDEPEND="${DEPEND}"
 
-RDEPEND="${RDEPEND} fpm? ( selinux? ( sec-policy/selinux-phpfpm ) )"
+RDEPEND="${RDEPEND}
+	fpm? (
+		selinux? ( sec-policy/selinux-phpfpm )
+		systemd? ( sys-apps/systemd ) )"
 
 DEPEND="${DEPEND}
 	sys-devel/flex
@@ -389,6 +392,7 @@ src_configure() {
 	$(use_enable sysvipc sysvmsg )
 	$(use_enable sysvipc sysvsem )
 	$(use_enable sysvipc sysvshm )
+	$(use_with systemd fpm-systemd)
 	$(use_with tidy tidy "${EPREFIX}"/usr)
 	$(use_enable tokenizer tokenizer )
 	$(use_enable wddx wddx )
@@ -690,6 +694,14 @@ src_install() {
 	# set php-config variable correctly (bug #278439)
 	sed -e "s:^\(php_sapis=\)\".*\"$:\1\"${sapi_list}\":" -i \
 		"${ED}/usr/$(get_libdir)/php${SLOT}/bin/php-config"
+
+	if use fpm ; then
+		if use systemd; then
+			systemd_newunit "${FILESDIR}/php-fpm_at.service" "php-fpm@${SLOT}.service"
+		else
+			systemd_newunit "${FILESDIR}/php-fpm_at-simple.service" "php-fpm@${SLOT}.service"
+		fi
+	fi
 }
 
 src_test() {
