@@ -10,5 +10,5 @@ RDEPEND=dev-python/PyQt4[webkit] dev-python/pyinotify virtual/python-argparse[py
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/ninja-ide/ninja-ide/tarball/v2.1.1 -> ninja-ide-2.1.1.tar.gz
-_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	53a3a670d39942b0879f95cb17ecb4a1	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=a703ce03eb1b734900bd9b9a3b1e55d5

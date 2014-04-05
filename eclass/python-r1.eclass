@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.66 2013/12/29 18:19:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.67 2014/04/05 20:56:03 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -440,6 +440,10 @@ _python_check_USE_PYTHON() {
 							fi
 							py2=${impl/_/.}
 							;;
+						python3_4)
+							debug-print "${FUNCNAME}: python3.4 found, not using eselect"
+							return 1
+							;;
 						python3_*)
 							if [[ ${py3+1} ]]; then
 								debug-print "${FUNCNAME}: -> more than one py3: ${py3} ${impl}"
@@ -504,6 +508,7 @@ _python_check_USE_PYTHON() {
 				fi
 			fi
 
+
 			if [[ ${py3+1} ]]; then
 				local sel_py3=$(eselect python show --python3)
 
@@ -546,6 +551,10 @@ _python_check_USE_PYTHON() {
 
 			local abi
 			case "${impl}" in
+				pypy|python3_4)
+					# unsupported in python.eclass
+					continue
+					;;
 				python*)
 					abi=${impl#python}
 					;;

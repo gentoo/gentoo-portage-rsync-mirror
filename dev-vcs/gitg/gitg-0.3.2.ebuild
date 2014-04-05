@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.3.2.ebuild,v 1.2 2014/03/15 15:04:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.3.2.ebuild,v 1.3 2014/04/05 20:49:13 ikelos Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 # test if unbundling of libgd is possible
 # Currently it seems not to be (unstable API/ABI)
 RDEPEND="
-	dev-libs/libgee:0.8
+	dev-libs/libgee:0.8[introspection]
 	>=dev-libs/json-glib-0.16
 	>=app-text/gtkspell-3.0.3:3
 	>=dev-libs/glib-2.38:2
@@ -34,6 +34,7 @@ RDEPEND="
 	>=net-libs/webkit-gtk-2.2:3[introspection]
 	>=x11-libs/gtk+-3.10.0:3
 	>=x11-libs/gtksourceview-3.10:3.0
+	>=x11-themes/gnome-icon-theme-symbolic-3.10
 	glade? ( >=dev-util/glade-3.2:3.10 )
 	python? (
 		${PYTHON_DEPS}

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.2.6.ebuild,v 1.3 2014/03/15 15:04:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.2.6.ebuild,v 1.4 2014/04/05 20:49:13 ikelos Exp $
 
 EAPI=5
 

@@ -3607,7 +3607,12 @@ media-sound/beets:echonest_tempo - Enable support for writing the BPM of a track
 media-sound/beets:lastgenre - Enable support for importing music genres from last.fm tags
 media-sound/beets:replaygain - Enable support for Replay Gain metadata calculation during import
 media-sound/beets:web - Enable embedded webserver support through dev-python/flask
-media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments.
+media-sound/cantata:devices - Enable suport for external devices
+media-sound/cantata:dynamic - Enable support for dynamic playlists
+media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files
+media-sound/cantata:online-services - Enable support for online services (Jamendo, Magnatune, SoundCloud, and Podcasts)
+media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments
+media-sound/cantata:streams - Enable support for streams tab (to save favourite streams, and search for others)
 media-sound/clementine:box - Enable Box support
 media-sound/clementine:dropbox - Enable Dropbox support
 media-sound/clementine:googledrive - Enable Google Drive support
