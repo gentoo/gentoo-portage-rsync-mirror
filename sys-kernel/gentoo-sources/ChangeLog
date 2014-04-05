@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1295 2014/04/04 00:33:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1296 2014/04/04 23:59:02 mpagano Exp $
+
+*gentoo-sources-3.10.36 (04 Apr 2014)
+
+  04 Apr 2014; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.10.36.ebuild:
+  Update for systemd default config option to select CONFIG_NET_NS. bug
+  #506396. Linux patch 3.10.36
 
 *gentoo-sources-3.4.86 (03 Apr 2014)
 
