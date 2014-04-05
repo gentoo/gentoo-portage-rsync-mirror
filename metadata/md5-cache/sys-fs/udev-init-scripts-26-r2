@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~williamh/dist/udev-init-scripts-26.tar.bz2
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
-_md5_=cfd9a0b8824e3e247c544e78f4fb21a6
+_md5_=7170ebc600fcb5910d3ebc1adfbe077d

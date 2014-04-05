@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26-r2.ebuild,v 1.1 2014/04/03 19:16:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-26-r2.ebuild,v 1.2 2014/04/05 10:58:31 ssuominen Exp $
 
 EAPI=5
 
@@ -30,45 +30,36 @@ RDEPEND=">=virtual/udev-180
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare()
-{
+src_prepare() {
 	epatch_user
 }
 
-src_install()
-{
+src_install() {
 	default
 
 	# These are now part of >=net-misc/netifrc-0.2.1:
 	rm -f "${D}"/$(get_udevdir)/{net.sh,rules.d/90-network.rules}
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	# Add udev and udev-mount to the sysinit runlevel automatically if this is
 	# the first install of this package.
-	if [[ -z ${REPLACING_VERSIONS} ]]
-	then
-		if [[ ! -d "${ROOT}"etc/runlevels/sysinit ]]
-		then
-			mkdir -p "${ROOT}"etc/runlevels/sysinit
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
+			mkdir -p "${ROOT%/}"/etc/runlevels/sysinit
 		fi
-		if [[ -x "${ROOT}"etc/init.d/udev ]]
-		then
-			ln -s /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
+		if [[ -x ${ROOT%/}/etc/init.d/udev ]]; then
+			ln -s /etc/init.d/udev "${ROOT%/}"/etc/runlevels/sysinit/udev
 		fi
-		if [[ -x "${ROOT}"etc/init.d/udev-mount ]]
-		then
+		if [[ -x ${ROOT%/}/etc/init.d/udev-mount ]]; then
 			ln -s /etc/init.d/udev-mount \
-				"${ROOT}"etc/runlevels/sysinit/udev-mount
+				"${ROOT%/}"/etc/runlevels/sysinit/udev-mount
 		fi
 	fi
 
 	# Warn the user about adding the scripts to their sysinit runlevel
-	if [[ -e "${ROOT}"etc/runlevels/sysinit ]]
-	then
-		if [[ ! -e "${ROOT}"etc/runlevels/sysinit/udev ]]
-		then
+	if [[ -e ${ROOT%/}/etc/runlevels/sysinit ]]; then
+		if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/udev ]]; then
 			ewarn
 			ewarn "You need to add udev to the sysinit runlevel."
 			ewarn "If you do not do this,"
@@ -76,8 +67,7 @@ pkg_postinst()
 			ewarn "Run this command:"
 			ewarn "\trc-update add udev sysinit"
 		fi
-		if [[ ! -e "${ROOT}"etc/runlevels/sysinit/udev-mount ]]
-		then
+		if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/udev-mount ]]; then
 			ewarn
 			ewarn "You need to add udev-mount to the sysinit runlevel."
 			ewarn "If you do not do this,"
