@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.23 2014/03/05 17:55:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.24 2014/04/06 06:17:33 pacho Exp $
+
+  06 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -gentoo-systemd-integration-1.ebuild, -gentoo-systemd-integration-3.ebuild,
+  gentoo-systemd-integration-4.ebuild, gentoo-systemd-integration-9999.ebuild:
+  Rekeyword on arches that lost their keywords by error, drop old
 
   05 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   gentoo-systemd-integration-4.ebuild, gentoo-systemd-integration-9999.ebuild:

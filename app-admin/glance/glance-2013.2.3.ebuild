@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.2-r1.ebuild,v 1.1 2014/03/16 19:27:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.3.ebuild,v 1.1 2014/04/06 06:07:42 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -73,7 +73,7 @@ RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.1[${PYTHON_USEDEP}]
 		swift? (
 			>=dev-python/python-swiftclient-1.5[${PYTHON_USEDEP}]
-			<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
+			<dev-python/python-swiftclient-2.0.0[${PYTHON_USEDEP}]
 		)
 		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]

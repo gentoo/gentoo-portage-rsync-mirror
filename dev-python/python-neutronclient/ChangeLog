@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-neutronclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/ChangeLog,v 1.8 2014/03/19 23:10:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/ChangeLog,v 1.9 2014/04/06 06:21:51 prometheanfire Exp $
+
+*python-neutronclient-2.3.4 (06 Apr 2014)
+
+  06 Apr 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +python-neutronclient-2.3.4.ebuild:
+  updated for 2013.2.3
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org>
   python-neutronclient-2.3.1.ebuild:
