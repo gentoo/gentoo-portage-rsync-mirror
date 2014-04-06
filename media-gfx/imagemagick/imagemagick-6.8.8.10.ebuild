@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10.ebuild,v 1.3 2014/04/05 22:01:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10.ebuild,v 1.4 2014/04/06 12:32:14 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -72,6 +72,14 @@ src_prepare() {
 	epatch_user
 
 	elibtoolize # for Darwin modules
+
+	# For testsuite, see http://bugs.gentoo.org/show_bug.cgi?id=500580#c3
+	shopt -s nullglob
+	cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
+	if test -n "${cards}"; then
+		addpredict "${cards}"
+	fi
+	shopt -u nullglob
 }
 
 src_configure() {

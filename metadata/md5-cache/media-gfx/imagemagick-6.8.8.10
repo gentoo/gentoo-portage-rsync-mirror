@@ -12,4 +12,4 @@ RESTRICT=perl? ( userpriv )
 SLOT=0/6.8.8.10
 SRC_URI=mirror://imagemagick/ImageMagick-6.8.8-10.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=feaf4c24d552619c60bf356b8456c24b
+_md5_=372f05d2c193c08be500036c48d0ae7c

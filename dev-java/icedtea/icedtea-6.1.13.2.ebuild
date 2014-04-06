@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.7.ebuild,v 1.3 2014/04/06 12:50:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.13.2.ebuild,v 1.1 2014/04/06 12:50:21 ago Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -12,13 +12,13 @@ EAPI="5"
 inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx
 
 ICEDTEA_PKG=${PN}$(replace_version_separator 1 -)
-ICEDTEA_BRANCH=$(get_version_component_range 2-3)
-OPENJDK_BUILD="27"
-OPENJDK_DATE="26_oct_2012"
-OPENJDK_TARBALL="openjdk-6-src-b${OPENJDK_BUILD}-${OPENJDK_DATE}.tar.gz"
+ICEDTEA_BRANCH=$(get_version_component_range 1-3)
+OPENJDK_BUILD="30"
+OPENJDK_DATE="21_jan_2014"
+OPENJDK_TARBALL="openjdk-6-src-b${OPENJDK_BUILD}-${OPENJDK_DATE}.tar.xz"
 # Download cacao and jamvm regardless for use with EXTRA_ECONF
 CACAO_TARBALL="68fe50ac34ec.tar.gz"
-JAMVM_TARBALL="jamvm-0972452d441544f7dd29c55d64f1ce3a5db90d82.tar.gz"
+JAMVM_TARBALL="jamvm-ec18fb9e49e62dce16c5094ef1527eed619463aa.tar.gz"
 
 CACAO_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-cacao-${CACAO_TARBALL}"
 JAMVM_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-${JAMVM_TARBALL}"
@@ -28,7 +28,7 @@ HOMEPAGE="http://icedtea.classpath.org"
 SRC_PKG="${ICEDTEA_PKG}.tar.xz"
 SRC_URI="
 	http://icedtea.classpath.org/download/source/${SRC_PKG}
-	http://download.java.net/openjdk/jdk6/promoted/b${OPENJDK_BUILD}/${OPENJDK_TARBALL}
+	https://java.net/downloads/openjdk6/${OPENJDK_TARBALL}
 	http://icedtea.classpath.org/download/drops/cacao/${CACAO_TARBALL} -> ${CACAO_GENTOO_TARBALL}
 	http://icedtea.classpath.org/download/drops/jamvm/${JAMVM_TARBALL} -> ${JAMVM_GENTOO_TARBALL}"
 
@@ -36,7 +36,7 @@ LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 M
 SLOT="6"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
 
-IUSE="+X +alsa cacao cjk +cups debug doc examples javascript jbootstrap +nsplugin
+IUSE="+X +alsa cacao cjk +cups debug doc examples javascript +jbootstrap kerberos +nsplugin
 	+nss pax_kernel pulseaudio +source systemtap test +webstart"
 
 # Ideally the following were optional at build time.
@@ -46,8 +46,8 @@ CUPS_COMMON_DEP="
 	>=net-print/cups-1.2.12"
 X_COMMON_DEP="
 	dev-libs/glib
-	>=media-libs/freetype-2.3.5
-	>=x11-libs/gtk+-2.8:2
+	>=media-libs/freetype-2.3.5:2=
+	>=x11-libs/gtk+-2.8:2=
 	>=x11-libs/libX11-1.1.3
 	>=x11-libs/libXext-1.1.1
 	>=x11-libs/libXi-1.1.3
@@ -63,13 +63,15 @@ X_DEPEND="
 	x11-proto/xproto"
 
 COMMON_DEP="
-	>=media-libs/giflib-4.1.6
-	>=media-libs/libpng-1.2
-	>=sys-libs/zlib-1.2.3
-	virtual/jpeg:0
+	>=media-libs/giflib-4.1.6:=
+	>=media-libs/libpng-1.2:=
+	>=sys-libs/zlib-1.2.3:=
+	virtual/jpeg:0=
+	>=media-libs/lcms-2.5
 	javascript? ( dev-java/rhino:1.6 )
+	kerberos? ( virtual/krb5 )
 	nss? ( >=dev-libs/nss-3.12.5-r1 )
-	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
+	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11:= )
 	systemtap? ( >=dev-util/systemtap-1 )"
 
 # media-fonts/lklug needs ppc ppc64 keywords
@@ -104,24 +106,17 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	app-arch/unzip
 	app-arch/zip
 	app-misc/ca-certificates
-	>=dev-java/ant-core-1.8.1
-	dev-java/ant-nodeps
+	>=dev-java/ant-core-1.9.2
 	dev-lang/perl
 	>=dev-libs/libxslt-1.1.26
 	dev-libs/openssl
 	virtual/pkgconfig
 	sys-apps/lsb-release
 	${X_DEPEND}
-	pax_kernel? ( sys-apps/paxctl )"
+	pax_kernel? ( sys-apps/elfix )"
 
-PDEPEND="webstart? ( || (
-			dev-java/icedtea-web:0
-			>=dev-java/icedtea-web-1.3.2:6
-		) )
-		nsplugin? ( || (
-			dev-java/icedtea-web:0[nsplugin]
-			>=dev-java/icedtea-web-1.3.2:6[nsplugin]
-		) )"
+PDEPEND="webstart? ( dev-java/icedtea-web:6 )
+	nsplugin? ( dev-java/icedtea-web:6[nsplugin] )"
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 
@@ -141,6 +136,9 @@ src_unpack() {
 }
 
 java_prepare() {
+	# For bootstrap builds as the sandbox control file might not yet exist.
+	addpredict /proc/self/coredump_filter
+
 	# icedtea doesn't like some locales. #330433 #389717
 	export LANG="C" LC_ALL="C"
 }
@@ -207,22 +205,23 @@ src_configure() {
 		--with-cacao-src-zip="${DISTDIR}/${CACAO_GENTOO_TARBALL}" \
 		--with-jamvm-src-zip="${DISTDIR}/${JAMVM_GENTOO_TARBALL}" \
 		--with-jdk-home="$(java-config -O)" \
-		--with-abs-install-dir=/usr/$(get_libdir)/icedtea${SLOT} \
-		--disable-downloading \
+		--with-abs-install-dir="${EPREFIX}/usr/$(get_libdir)/icedtea${SLOT}" \
+		--disable-downloading --disable-Werror \
 		$(use_enable !debug optimizations) \
 		$(use_enable doc docs) \
+		$(use_enable kerberos system-kerberos) \
 		$(use_enable nss) \
 		$(use_enable pulseaudio pulse-java) \
 		$(use_enable systemtap) \
-		$(use_with pax_kernel pax paxctl)
+		$(use_with pax_kernel pax "${EPREFIX}/usr/sbin/paxmark.sh")
 }
 
 src_compile() {
 	# Would use GENTOO_VM otherwise.
 	export ANT_RESPECT_JAVA_HOME=TRUE
 
-	# Load the least that's needed to avoid possible classpath collisions.
-	export ANT_TASKS="ant-nodeps"
+	# With ant >=1.8.2 all required tasks are part of ant-core
+	export ANT_TASKS="none"
 
 	emake
 }
@@ -303,6 +302,7 @@ src_install() {
 	if ! use X || ! use alsa || ! use cups; then
 		java-vm_revdep-mask "${dest}"
 	fi
+	java-vm_sandbox-predict /proc/self/coredump_filter
 }
 
 pkg_preinst() {

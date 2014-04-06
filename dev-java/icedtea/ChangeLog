@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.116 2014/02/03 08:49:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.117 2014/04/06 12:50:21 ago Exp $
+
+*icedtea-6.1.13.2 (06 Apr 2014)
+
+  06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> +icedtea-6.1.13.2.ebuild,
+  icedtea-6.1.12.7.ebuild, icedtea-6.1.13.1.ebuild, icedtea-7.2.4.5.ebuild:
+  Version bump requested by Andrew, fix bug #500176 readding dev-java/ant-core
+  as DEPEND
 
 *icedtea-7.2.4.5 (03 Feb 2014)
 
