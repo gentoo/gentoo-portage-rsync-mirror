@@ -4,11 +4,11 @@ DESCRIPTION=Style and Grammar Checker for libreoffice
 EAPI=5
 HOMEPAGE=http://www.languagetool.org/
 IUSE=office_implementation_libreoffice office_implementation_openoffice
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=LGPL-2
-RDEPEND=>=virtual/jdk-1.7 office_implementation_libreoffice? ( || ( app-office/libreoffice[java] app-office/libreoffice-bin[java] ) ) office_implementation_openoffice? ( || ( app-office/openoffice[java] app-office/openoffice-bin[java] ) )
+RDEPEND=>=virtual/jdk-1.6 office_implementation_libreoffice? ( || ( app-office/libreoffice[java] app-office/libreoffice-bin[java] ) ) office_implementation_openoffice? ( || ( app-office/openoffice[java] app-office/openoffice-bin[java] ) )
 REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openoffice )
 SLOT=0
 SRC_URI=http://www.languagetool.org/download/LanguageTool-2.4.oxt
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=460db8de14c0fa7e0b1bd987478ff677
+_md5_=156276c86eb8181a5aacfa7224e320e6

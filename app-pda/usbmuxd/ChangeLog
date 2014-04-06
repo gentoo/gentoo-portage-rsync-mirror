@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/usbmuxd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.31 2013/02/02 22:23:47 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.32 2014/04/06 08:34:26 ssuominen Exp $
+
+*usbmuxd-1.0.9 (06 Apr 2014)
+
+  06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> +usbmuxd-1.0.9.ebuild:
+  Version bump; notice that upstream removed the usbmuxd binary in purpose from
+  the package.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> usbmuxd-1.0.8-r1.ebuild:
   Add ~arm, wrt bug #449220
