@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/libplist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.35 2014/04/06 07:50:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.37 2014/04/06 08:19:11 ssuominen Exp $
+
+  06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> libplist-1.11.ebuild:
+  Use subslot 0/2 for SONAME of libplist.so
+
+*libplist-1.11 (06 Apr 2014)
+
+  06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> +libplist-1.11.ebuild:
+  Version bump.
 
   06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -libplist-1.8-r1.ebuild,
   metadata.xml:
