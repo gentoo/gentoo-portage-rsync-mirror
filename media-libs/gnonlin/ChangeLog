@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gnonlin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.21 2012/11/07 21:16:57 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.22 2014/04/06 11:49:52 eva Exp $
+
+*gnonlin-1.2.0 (06 Apr 2014)
+
+  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +gnonlin-1.2.0.ebuild:
+  Version bump, bug #490770. Needed for pitivi-0.91.
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnonlin-0.10.9.ebuild, gnonlin-0.10.17.ebuild:

@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/gstreamer-editing-services
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/ChangeLog,v 1.1 2014/04/06 11:54:10 eva Exp $
+
+*gstreamer-editing-services-1.2.0 (06 Apr 2014)
+
+  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gstreamer-editing-services-1.2.0.ebuild, +metadata.xml:
+  Initial commit, needed for >=pitivi-0.91.
+
