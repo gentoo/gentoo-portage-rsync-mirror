@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.75 2014/03/22 23:05:38 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.76 2014/04/06 20:51:44 ulm Exp $
+
+*mg-20140406 (06 Apr 2014)
+
+  06 Apr 2014; Ulrich Müller <ulm@gentoo.org> +mg-20140406.ebuild:
+  Version bump.
 
   22 Mar 2014; Chema Alonso <nimiux@gentoo.org> mg-20140306.ebuild:
   Stable for amd64 wrt bug #504870
