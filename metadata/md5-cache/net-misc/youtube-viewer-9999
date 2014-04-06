@@ -5,7 +5,7 @@ EAPI=5
 HOMEPAGE=http://trizen.googlecode.com
 IUSE=gtk
 LICENSE=|| ( Artistic GPL-1+ )
-RDEPEND=>=dev-lang/perl-5.16.0 dev-perl/Data-Dump dev-perl/libwww-perl || ( media-video/mplayer[X,network] media-video/mplayer2[X,network] ) virtual/perl-File-Spec virtual/perl-Getopt-Long virtual/perl-Term-ANSIColor virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap gtk? ( dev-perl/File-ShareDir >=dev-perl/gtk2-perl-1.244.0 virtual/freedesktop-icon-theme x11-libs/gdk-pixbuf:2[X,jpeg] ) dev-lang/perl:=[-build(-)]
+RDEPEND=>=dev-lang/perl-5.16.0 dev-perl/Data-Dump dev-perl/libwww-perl || ( media-video/mplayer[X,network] media-video/mplayer2[X,network] media-video/mpv[X] ) virtual/perl-File-Spec virtual/perl-Getopt-Long virtual/perl-Term-ANSIColor virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap gtk? ( dev-perl/File-ShareDir >=dev-perl/gtk2-perl-1.244.0 virtual/freedesktop-icon-theme x11-libs/gdk-pixbuf:2[X,jpeg] ) dev-lang/perl:=[-build(-)]
 SLOT=0
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
-_md5_=5a8aa154cad468d8daa97736f5fd058e
+_md5_=bd09ff5e3a73f80c4c80983c0371a99f

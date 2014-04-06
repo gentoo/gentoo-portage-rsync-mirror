@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.15 2013/12/26 16:39:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.16 2014/04/06 18:21:21 hasufell Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ RDEPEND="
 	dev-perl/Data-Dump
 	dev-perl/libwww-perl
 	|| ( media-video/mplayer[X,network]
-		media-video/mplayer2[X,network] )
+		media-video/mplayer2[X,network]
+		media-video/mpv[X] )
 	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
 	virtual/perl-Term-ANSIColor

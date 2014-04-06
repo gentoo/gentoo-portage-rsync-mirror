@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/FTL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/ChangeLog,v 1.15 2014/04/05 17:57:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/ChangeLog,v 1.16 2014/04/06 18:16:57 hasufell Exp $
+
+  06 Apr 2014; Julian Ospald <hasufell@gentoo.org> FTL-1.5.4.ebuild:
+  relax media-libs/devil required USE flags
 
 *FTL-1.5.4 (05 Apr 2014)
 

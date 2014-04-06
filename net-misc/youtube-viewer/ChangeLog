@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/youtube-viewer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.30 2013/12/26 16:41:43 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.31 2014/04/06 18:21:21 hasufell Exp $
+
+  06 Apr 2014; Julian Ospald <hasufell@gentoo.org>
+  youtube-viewer-3.0.9-r2.ebuild, youtube-viewer-9999.ebuild:
+  add media-video/mpv dep wrt #506872
 
 *youtube-viewer-3.0.9-r2 (26 Dec 2013)
 
