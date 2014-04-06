@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8785 2014/04/05 21:49:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8787 2014/04/06 07:17:26 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Apr 2014; Pacho Ramos <pacho@gentoo.org> ChangeLog:
+  Mask some packages for removal
+
+  06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove now unrequired mask for libopensync-plugin-evolution2 wrt #352506
 
   05 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Removing glpk mask

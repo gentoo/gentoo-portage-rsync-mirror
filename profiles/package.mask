@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15536 2014/04/05 21:49:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15538 2014/04/06 07:16:46 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,86 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Masked since:
+# Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
+# Dead upstream and has issues with newer portages.
+# Still nobody stepped to maintain it and it's now
+# completely broken (bug #172611). Removal in a month.
+app-portage/udept
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Upstream dead since 2004, nothing needs it (#284421)
+# Removal in a month.
+media-libs/libj2k
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# No upstream for a long time, better alternatives would
+# be gbdfed or vim (#286314). Removal in a month.
+media-gfx/cfe
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Masked since:
+# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
+# Unsupported and full of bundled libs. Only left
+# for people who don't have python-3.3 yet.
+# Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
+#
+# As it's the case now, will be removed in a month (#286758)
+=media-gfx/blender-2.64a
+media-gfx/yablex
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Bundles internal copy of berkdb, upstream dead for ages
+# (#319683). Removal in a month.
+app-admin/osiris
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Multiple issues and dead for ages (#327735).
+# You can use cpupower (from sys-power/cpupower or
+# sys-apps/linux-misc-apps). Removal in a month.
+sys-power/cpufreqd
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Not compatible with gnutls-3 (#421405), multiple issues
+# and dead since 2008. Removal in a month.
+net-irc/ctrlproxy
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Crashes at start, no fix (#394063). Removal in a month.
+x11-misc/pogo
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Cannot be compiled for a long time (#405649).
+# Removal in a month.
+sci-geosciences/openstreetmap-icons
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Runtime failures (#305019), cannot be recompiled
+# (#352003, #369539, #425484), nobody is taking care of it.
+# Removal in a month.
+media-gfx/k3d
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# No longer supported by upstream and nothing needs it
+# (#489628). Removal in a month.
+dev-python/telepathy-python
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# No longer works and upstream killed it (#493188).
+# Removal in a month.
+media-tv/huludesktop
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# Dead since 2008 and doesn't work with current kernels
+# (#504168). Removal in a month.
+app-admin/lcap
+
+# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
+# No needed as its functionality was included to apache
+# (#504596). Removal in a month.
+www-apache/mod_chroot
 
 # Julian Ospald <hasufell@gentoo.org> (05 Apr 2014)
 # not compilable without workarounds, see bug #499740
@@ -902,10 +982,9 @@ app-pda/osynctool
 # Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
 # Work in progress
 # http://bugs.gentoo.org/show_bug.cgi?id=354423
-app-pda/libopensync-plugin-evolution2
 app-pda/libopensync-plugin-gnokii
 app-pda/libopensync-plugin-gpe
-app-pda/multisync-gui
+app-pda/ultisync-gui
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
 # testing mask for upcoming exult release
@@ -1017,12 +1096,6 @@ sys-kernel/zen-sources
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases
 >=app-editors/gobby-0.4.91
-
-# Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
-# Dead upstream and has issues with newer portages.
-# Due to popular demand and no suitable replacement, it will stay in the tree
-# in a masked status until it completely breaks or is replaced.
-app-portage/udept
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
 # These packages are not supposed to be merged directly, instead
