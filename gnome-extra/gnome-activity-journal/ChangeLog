@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-activity-journal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/ChangeLog,v 1.12 2013/12/08 18:44:27 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/ChangeLog,v 1.13 2014/04/06 10:41:01 eva Exp $
+
+  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-activity-journal-0.8.0-r2.ebuild,
+  -gnome-activity-journal-0.8.0-r3.ebuild,
+  gnome-activity-journal-0.8.0-r4.ebuild:
+  Pin gst-python to 0.10 slot. Clean up old revisions.
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   gnome-activity-journal-0.8.0-r4.ebuild:

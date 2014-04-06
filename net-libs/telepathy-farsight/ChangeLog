@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-farsight
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.36 2013/10/27 09:46:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.37 2014/04/06 10:47:53 eva Exp $
+
+  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  telepathy-farsight-0.0.19.ebuild:
+  Pin gst-python to 0.10 slot.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434

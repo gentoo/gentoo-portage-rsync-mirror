@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/coherence-0.6.6.2.ebuild,v 1.11 2013/08/03 09:45:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/coherence-0.6.6.2.ebuild,v 1.12 2014/04/06 10:45:13 eva Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.5"
@@ -26,7 +26,7 @@ DEPEND="dev-python/louie
 	dev-python/twisted-core
 	dev-python/twisted-web
 	dev-python/configobj
-	dev-python/gst-python
+	dev-python/gst-python:0.10
 	dev-python/nevow"
 RDEPEND="${DEPEND}
 	dev-python/axiom

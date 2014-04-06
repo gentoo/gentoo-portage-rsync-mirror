@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.4.0.ebuild,v 1.7 2013/10/27 13:26:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.4.0.ebuild,v 1.8 2014/04/06 10:48:30 eva Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.30:2
 	>=net-libs/farstream-0.1.0:0.1
 	python? (
 		>=dev-python/pygobject-2.12.0:2
-		>=dev-python/gst-python-0.10.10 )"
+		>=dev-python/gst-python-0.10.10:0.10 )"
 # python2 is needed at build time in all cases
 DEPEND="${RDEPEND}
 	!python? ( =dev-lang/python-2*[xml] )"

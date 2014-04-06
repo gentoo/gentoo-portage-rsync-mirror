@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-20130808.ebuild,v 1.1 2013/08/08 21:24:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-20130808.ebuild,v 1.2 2014/04/06 10:45:27 eva Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -30,9 +30,9 @@ RDEPEND="dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/notify-python[${PYTHON_USEDEP}]
 	dev-python/pygtk[${PYTHON_USEDEP}]
-	dev-python/gst-python[${PYTHON_USEDEP}]
+	dev-python/gst-python:0.10[${PYTHON_USEDEP}]
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	media-plugins/gst-plugins-meta[aac,http,mp3]
+	media-plugins/gst-plugins-meta:0.10[aac,http,mp3]
 	gnome? ( gnome-base/gnome-settings-daemon )
 	!gnome? ( dev-libs/keybinder[python] )"
 

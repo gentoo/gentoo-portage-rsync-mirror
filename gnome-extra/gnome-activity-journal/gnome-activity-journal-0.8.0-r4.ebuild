@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/gnome-activity-journal-0.8.0-r4.ebuild,v 1.3 2013/12/08 18:44:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/gnome-activity-journal-0.8.0-r4.ebuild,v 1.4 2014/04/06 10:41:01 eva Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	dev-python/dbus-python
 	dev-python/libgnome-python
 	dev-python/gconf-python
-	dev-python/gst-python
+	dev-python/gst-python:0.10
 	dev-python/pycairo
 	dev-python/pygobject:2
 	dev-python/pygtk:2

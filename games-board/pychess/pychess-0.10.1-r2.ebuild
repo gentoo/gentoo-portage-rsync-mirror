@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r2.ebuild,v 1.4 2013/12/24 12:54:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r2.ebuild,v 1.5 2014/04/06 10:39:14 eva Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="dev-python/librsvg-python
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
 	dev-python/pygtksourceview:2[${PYTHON_USEDEP}]
-	gstreamer? ( dev-python/gst-python[${PYTHON_USEDEP}] )
+	gstreamer? ( dev-python/gst-python:0.10[${PYTHON_USEDEP}] )
 	dev-python/gconf-python
 	x11-themes/gnome-icon-theme"
 RDEPEND="${DEPEND}"

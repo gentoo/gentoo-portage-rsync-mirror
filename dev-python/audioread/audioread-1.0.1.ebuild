@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/audioread/audioread-1.0.1.ebuild,v 1.1 2013/06/08 14:45:36 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/audioread/audioread-1.0.1.ebuild,v 1.2 2014/04/06 10:37:33 eva Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( dev-python/gst-python[${PYTHON_USEDEP}] dev-python/pymad media-video/ffmpeg )"
+RDEPEND="|| ( dev-python/gst-python:0.10[${PYTHON_USEDEP}] dev-python/pymad media-video/ffmpeg )"
 
 PATCHES=(
 	"${FILESDIR}/0001-Use-the-print-function-instead-of-the-print-keyword.patch"

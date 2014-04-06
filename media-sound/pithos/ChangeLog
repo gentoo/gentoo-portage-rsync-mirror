@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pithos
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.4 2013/08/09 00:27:32 chutzpah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/ChangeLog,v 1.5 2014/04/06 10:45:27 eva Exp $
+
+  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> pithos-20130710.ebuild,
+  pithos-20130808.ebuild, pithos-99999999.ebuild:
+  Pin gst-python to 0.10 slot.
 
   09 Aug 2013; Patrick McLean <chutz@gentoo.org> pithos-99999999.ebuild:
   Update patch names in 99999999 so it actually works.

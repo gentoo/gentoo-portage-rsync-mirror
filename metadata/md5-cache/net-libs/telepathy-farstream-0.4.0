@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=>=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 >=net-libs/telepathy-glib-0.17.5 >=net-libs/farstream-0.1.0:0.1 python? ( >=dev-python/pygobject-2.12.0:2 >=dev-python/gst-python-0.10.10 ) !python? ( =dev-lang/python-2*[xml] ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) python? ( || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] ) )
+DEPEND=>=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 >=net-libs/telepathy-glib-0.17.5 >=net-libs/farstream-0.1.0:0.1 python? ( >=dev-python/pygobject-2.12.0:2 >=dev-python/gst-python-0.10.10:0.10 ) !python? ( =dev-lang/python-2*[xml] ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) python? ( || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] ) )
 DESCRIPTION=Telepathy client library that uses Farstream to handle Call channels
 EAPI=4
 HOMEPAGE=http://telepathy.freedesktop.org
 IUSE=examples python
 KEYWORDS=amd64 ~arm x86
 LICENSE=LGPL-2.1
-RDEPEND=>=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 >=net-libs/telepathy-glib-0.17.5 >=net-libs/farstream-0.1.0:0.1 python? ( >=dev-python/pygobject-2.12.0:2 >=dev-python/gst-python-0.10.10 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) python? ( || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] ) )
+RDEPEND=>=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.60 >=dev-libs/dbus-glib-0.60 >=net-libs/telepathy-glib-0.17.5 >=net-libs/farstream-0.1.0:0.1 python? ( >=dev-python/pygobject-2.12.0:2 >=dev-python/gst-python-0.10.10:0.10 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) ) python? ( || ( =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] =dev-lang/python-2.5*[xml] ) )
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-0.4.0.tar.gz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=26030ce7a17222ec6cb2769a9ef56a3c
+_md5_=d72ab39d52db19665ce68667f34c73f6

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/telepathy-farsight-0.0.19.ebuild,v 1.6 2012/12/23 18:08:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/telepathy-farsight-0.0.19.ebuild,v 1.7 2014/04/06 10:47:53 eva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.6"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=net-libs/farsight2-0.0.29
 	python? (
 		>=dev-python/pygobject-2.12.0:2
-		>=dev-python/gst-python-0.10.10 )"
+		>=dev-python/gst-python-0.10.10:0.10 )"
 
 DEPEND="${RDEPEND}"
 

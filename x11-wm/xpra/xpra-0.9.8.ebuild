@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.8.ebuild,v 1.2 2013/08/11 23:02:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.9.8.ebuild,v 1.3 2014/04/06 10:51:19 eva Exp $
 
 EAPI=5
 
@@ -30,9 +30,9 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 	x11-libs/libXtst
 	opengl? ( dev-python/pygtkglext )
 	pulseaudio? ( media-sound/pulseaudio )
-	sound? ( media-libs/gstreamer
-		media-libs/gst-plugins-base
-		dev-python/gst-python )
+	sound? ( media-libs/gstreamer:0.10
+		media-libs/gst-plugins-base:0.10
+		dev-python/gst-python:0.10 )
 	vpx? ( media-libs/libvpx
 		virtual/ffmpeg )
 	webp? ( media-libs/libwebp )

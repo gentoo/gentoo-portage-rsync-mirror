@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18.ebuild,v 1.2 2013/08/03 09:45:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18.ebuild,v 1.3 2014/04/06 10:48:58 eva Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/gst-python
+RDEPEND="dev-python/gst-python:0.10
 	dev-python/imaging
 	dev-python/netifaces
 	dev-python/notify-python
