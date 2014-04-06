@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r3.ebuild,v 1.1 2014/04/04 18:08:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r3.ebuild,v 1.2 2014/04/06 22:08:14 ulm Exp $
 
 EAPI=5
 
@@ -293,7 +293,7 @@ src_install () {
 	use X && DOC_CONTENTS+="\\n\\nYou need to install some fonts for Emacs.
 		Installing media-fonts/font-adobe-{75,100}dpi on the X server's
 		machine would satisfy basic Emacs requirements under X11.
-		See also https://wiki.gentoo.org/wiki/Project:Emacs/Xft_support
+		See also https://wiki.gentoo.org/wiki/Xft_support_for_GNU_Emacs
 		for how to enable anti-aliased fonts."
 	use aqua && DOC_CONTENTS+="\\n\\nEmacs${EMACS_SUFFIX#emacs}.app is in
 		\"${EPREFIX}/Applications/Gentoo\". You may want to copy or symlink
