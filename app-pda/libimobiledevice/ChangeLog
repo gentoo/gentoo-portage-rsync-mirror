@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.51 2014/04/06 08:52:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.52 2014/04/06 09:11:48 ssuominen Exp $
+
+  06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  libimobiledevice-1.1.6.ebuild:
+  Install missing /usr/include/libimobiledevice/cython/imobiledevice.pxd by hand
+  since the build system doesn't do it.
 
 *libimobiledevice-1.1.6 (06 Apr 2014)
 

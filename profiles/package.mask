@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15539 2014/04/06 09:01:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15540 2014/04/06 09:20:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1003,7 +1003,7 @@ app-pda/osynctool
 # http://bugs.gentoo.org/show_bug.cgi?id=354423
 app-pda/libopensync-plugin-gnokii
 app-pda/libopensync-plugin-gpe
-app-pda/ultisync-gui
+app-pda/multisync-gui
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
 # testing mask for upcoming exult release

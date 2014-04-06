@@ -1,0 +1,15 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=abi_x86_32 +development
+KEYWORDS=-* ~amd64
+LICENSE=APL-1.0 GPL-2 BSD BSD-2 public-domain LGPL-2 MPL-1.1 LGPL-2.1 !abi_x86_32? ( MPEG-4 )
+PDEPEND=~app-emulation/emul-linux-x86-soundlibs-20140406
+RDEPEND=~app-emulation/emul-linux-x86-baselibs-20140406 ~app-emulation/emul-linux-x86-xlibs-20140406 ~app-emulation/emul-linux-x86-db-20140406 !<=app-emulation/emul-linux-x86-sdl-20081109 !<=app-emulation/emul-linux-x86-soundlibs-20110101 abi_x86_32? ( >=media-libs/libvpx-1.2.0_pre[abi_x86_32(-)] >=media-libs/xvid-1.3.2-r1[abi_x86_32(-)] >=media-sound/lame-3.99.5-r1[abi_x86_32(-)] >=media-libs/faac-1.28-r4[abi_x86_32(-)] >=media-libs/faad2-2.7-r3[abi_x86_32(-)] >=media-libs/libtheora-1.1.1-r1[abi_x86_32(-)] >=media-libs/libcuefile-477-r1[abi_x86_32(-)] >=media-libs/libreplaygain-477-r1[abi_x86_32(-)] >=media-libs/libmad-0.15.1b-r8[abi_x86_32(-)] >=media-libs/libdca-0.0.5-r3[abi_x86_32(-)] >=media-libs/speex-1.2_rc1-r2[abi_x86_32(-)] >=media-libs/libdvdread-4.2.0-r1[abi_x86_32(-)] >=media-libs/libdvdnav-4.2.0-r1[abi_x86_32(-)] >=media-libs/libv4l-0.9.5-r1[abi_x86_32(-)] >=media-libs/libid3tag-0.15.1b-r4[abi_x86_32(-)] >=media-libs/libshout-2.3.1-r1[abi_x86_32(-)] >=media-libs/libsidplay-2.1.1-r3:2[abi_x86_32(-)] >=media-libs/libsidplay-1.36.59-r1:1[abi_x86_32(-)] >=media-libs/x264-0.0.20130731[abi_x86_32(-)] >=media-libs/libiec61883-1.2.0-r1[abi_x86_32(-)] >=media-libs/a52dec-0.7.4-r7[abi_x86_32(-)] >=media-libs/libmimic-1.0.4-r2[abi_x86_32(-)] >=media-libs/libmms-0.6.2-r1[abi_x86_32(-)] >=media-libs/libvisual-0.4.0-r3:0.4[abi_x86_32(-)] >=media-libs/libmpeg2-0.5.1-r2[abi_x86_32(-)] >=dev-libs/liboil-0.3.17-r2[abi_x86_32(-)] >=sys-libs/libieee1284-0.2.11-r3[abi_x86_32(-)] >=dev-libs/fribidi-0.19.5-r2[abi_x86_32(-)] >=dev-libs/libcdio-0.90-r1[abi_x86_32(-)] >=dev-libs/libcdio-paranoia-0.90_p1-r1[abi_x86_32(-)] >=media-video/ffmpeg-0.10.8:0.10[abi_x86_32(-)] >=media-libs/libdv-1.0.0-r3[abi_x86_32(-)] )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-medialibs-20140406.tar.xz
+_eclasses_=emul-linux-x86	849070907fe4e8553daad52137b99265	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=34f30b85630ece80f6919ed550bee6a4

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/emul-linux-x86-compat-20130224.ebuild,v 1.2 2013/03/16 15:18:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/emul-linux-x86-compat-20140406.ebuild,v 1.1 2014/04/06 09:03:49 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86 eutils multilib
@@ -9,15 +9,15 @@ DESCRIPTION="32 bit lib-compat, and also libgcc_s and libstdc++ from gcc 3.3 and
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64"
+KEYWORDS="-* ~amd64"
 IUSE="multilib"
 
 DEPEND=""
-RDEPEND="multilib? ( sys-libs/libstdc++-v3 )"
+RDEPEND="multilib? ( sys-libs/libstdc++-v3[multilib] )"
 
 src_prepare() {
 	emul-linux-x86_src_prepare
-	if has_multilib_profile ; then
+	if use multilib ; then
 		rm -rf "${S}/usr/lib32/libstdc++.so.5.0.7" \
 			"${S}/usr/lib32/libstdc++.so.5" || die
 	fi
