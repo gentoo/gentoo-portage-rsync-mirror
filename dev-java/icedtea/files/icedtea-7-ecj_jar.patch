@@ -1,0 +1,28 @@
+diff -r d2bc83a8ce09 acinclude.m4
+--- a/acinclude.m4	Fri Mar 28 12:27:42 2014 +0000
++++ b/acinclude.m4	Fri Mar 28 15:34:35 2014 +0000
+@@ -134,6 +134,12 @@
+   IT_USING_ECJ
+   IT_WITH_GCJ
+   
++  if test "x${ECJ_JAR}" = "xno"; then
++    if test "x${JAVAC}" = "x"; then
++      AC_MSG_ERROR("No compiler or ecj JAR file was found.")
++    fi
++  fi
++
+   if test x"${GCJ}" != xno ; then
+     JAVAC="${JAVA} -classpath ${ECJ_JAR} org.eclipse.jdt.internal.compiler.batch.Main"
+   fi
+@@ -350,11 +356,6 @@
+       fi
+   fi
+   AC_MSG_RESULT(${ECJ_JAR})
+-  if test "x${ECJ_JAR}" = "xno"; then
+-    if test "x${JAVAC}" = "x"; then
+-      AC_MSG_ERROR("No compiler or ecj JAR file was found.")
+-    fi
+-  fi
+   AC_SUBST(ECJ_JAR)
+ ])
+ 
