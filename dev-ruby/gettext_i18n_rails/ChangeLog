@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gettext_i18n_rails
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/ChangeLog,v 1.24 2013/11/04 06:53:01 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/ChangeLog,v 1.25 2014/04/05 23:35:02 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> gettext_i18n_rails-0.10.0.ebuild,
+  gettext_i18n_rails-0.9.2.ebuild, gettext_i18n_rails-0.9.4.ebuild:
+  Remove ree18 and ruby18 target.
 
   04 Nov 2013; Hans de Graaff <graaff@gentoo.org>
   -gettext_i18n_rails-0.7.1.ebuild, -gettext_i18n_rails-0.8.0.ebuild:
@@ -125,4 +129,3 @@
   11 May 2011; Hans de Graaff <graaff@gentoo.org>
   +gettext_i18n_rails-0.2.19.ebuild, +metadata.xml:
   Initial import. New dependency for ruby-activeldap.
-

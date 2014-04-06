@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.143 2014/01/26 13:06:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.144 2014/04/05 23:40:47 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> json-1.6.8.ebuild,
+  json-1.7.7-r1.ebuild, json-1.7.7.ebuild, json-1.8.0-r1.ebuild,
+  json-1.8.0.ebuild, json-1.8.1.ebuild:
+  Remove ree18 and ruby18 target.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> json-1.8.0.ebuild:
   Stable for alpha, wrt bug #483254

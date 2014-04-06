@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mixlib-shellout
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/ChangeLog,v 1.6 2013/12/13 09:08:01 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/ChangeLog,v 1.7 2014/04/05 23:31:18 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> mixlib-shellout-1.0.0.ebuild,
+  mixlib-shellout-1.1.0.ebuild, mixlib-shellout-1.3.0.ebuild:
+  Remove ree18 and ruby18 target.
 
 *mixlib-shellout-1.3.0 (13 Dec 2013)
 

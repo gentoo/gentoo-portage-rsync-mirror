@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.2-r1.ebuild,v 1.5 2012/09/28 15:42:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.2-r1.ebuild,v 1.6 2014/04/05 23:32:39 mrueg Exp $
 
 EAPI=2
 
 # jruby → cannot work, it's a compiled extension
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_NAME="cairo"
 

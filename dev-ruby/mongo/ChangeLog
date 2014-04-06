@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mongo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/ChangeLog,v 1.6 2012/05/12 06:06:02 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/ChangeLog,v 1.7 2014/04/05 23:45:39 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> mongo-1.6.2.ebuild:
+  Remove ree18 and ruby18 target.
 
   12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> -mongo-1.5.2.ebuild,
   -mongo-1.6.0.ebuild, -mongo-1.6.1.ebuild:
@@ -29,4 +32,3 @@
   28 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +mongo-1.5.2.ebuild:
   Initial import of ebuild for mongo driver.
-

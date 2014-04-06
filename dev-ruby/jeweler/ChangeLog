@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/jeweler
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.23 2013/09/02 08:06:00 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.24 2014/04/05 23:33:27 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> jeweler-1.8.4.ebuild,
+  jeweler-1.8.6.ebuild:
+  Remove ree18 and ruby18 target.
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> jeweler-1.8.4.ebuild:
   Stable for x86, wrt bug #447586
