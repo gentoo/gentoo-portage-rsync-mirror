@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.1 2014/03/15 12:17:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.2 2014/04/06 15:39:36 pacho Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -25,7 +25,7 @@ RDEPEND="ia64? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
 		virtual/pam
 		)
 	selinux? ( sec-policy/selinux-policykit )
-	systemd? ( sys-apps/systemd )"
+	systemd? ( sys-apps/systemd:0= )"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/docbook-xsl-stylesheets

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.93 2014/02/13 11:37:51 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.94 2014/04/06 15:32:44 mgorny Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -8,7 +8,7 @@ PYTHON_COMPAT=(
 	python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
-inherit git-2 eutils multilib
+inherit git-r3 eutils multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -81,7 +81,7 @@ PDEPEND="
 # coreutils-6.4 rdep is for date format in emerge-webrsync #164532
 # NOTE: FEATURES=installsources requires debugedit and rsync
 
-SRC_ARCHIVES="http://dev.gentoo.org/~zmedico/portage/archives"
+SRC_ARCHIVES="http://dev.gentoo.org/~dolsen/releases/portage"
 
 prefix_src_archives() {
 	local x y
@@ -94,7 +94,7 @@ prefix_src_archives() {
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git
 	https://github.com/gentoo/portage.git"
-S="${WORKDIR}"/${PN}
+EGIT_MIN_CLONE_TYPE=single
 
 compatible_python_is_selected() {
 	[[ $("${EPREFIX}/usr/bin/python" -c 'import sys ; sys.stdout.write(sys.hexversion >= 0x2060000 and "good" or "bad")') = good ]]
@@ -209,12 +209,10 @@ src_prepare() {
 	epatch_user
 
 	einfo "Producing ChangeLog from Git history..."
-	pushd "${S}/.git" >/dev/null || die
 	git log ebcf8975b37a8aae9735eb491a9b4cb63549bd5d^.. \
 		> "${S}"/ChangeLog || die
-	popd >/dev/null || die
 
-	local _version=$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
+	local _version=$(git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
 	_version=${_version:1}
 	einfo "Setting portage.VERSION to ${_version} ..."
 	sed -e "s/^VERSION =.*/VERSION = '${_version}'/" -i pym/portage/__init__.py || \

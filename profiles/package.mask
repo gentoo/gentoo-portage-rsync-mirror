@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15540 2014/04/06 09:20:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15542 2014/04/06 15:57:54 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (07 Apr 2014)
+# Mark -rc releases for testing
+=dev-embedded/openocd-0.8.0_rc*
+
+# Gilles Dartiguelongue <eva@gentoo.org> (06 Apr 2014)
+# Old release, never stable, not working anymore
+# See bug #327837, #382667, #492474
+<media-video/pitivi-0.90
 
 # Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
 # They work ok when used without native multilib, still

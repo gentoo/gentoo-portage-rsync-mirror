@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.169 2014/03/15 12:20:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.170 2014/04/06 15:39:36 pacho Exp $
+
+  06 Apr 2014; Pacho Ramos <pacho@gentoo.org> polkit-0.112-r2.ebuild:
+  Needs to be rebuilt with systemd subslot bumps
 
   15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Add proper metadata for freedesktop-bugs@g.o

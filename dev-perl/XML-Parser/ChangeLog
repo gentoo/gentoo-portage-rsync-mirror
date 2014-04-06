@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Parser
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.65 2013/02/21 00:19:51 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.66 2014/04/06 15:44:20 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> XML-Parser-2.410.0-r1.ebuild,
+  XML-Parser-2.410.0.ebuild:
+  Add arm64 love.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> XML-Parser-2.410.0-r1.ebuild:
   Add ~arm-linux keyword.
