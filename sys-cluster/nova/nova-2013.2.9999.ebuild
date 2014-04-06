@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.12 2014/04/01 03:46:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.13 2014/04/06 06:32:19 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -108,7 +108,7 @@ python_install() {
 	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
 	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
 	#copy the CA cert dir (not coppied on install via setup.py script)
-	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "isntalling CA files failed"
+	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "installing CA files failed"
 
 	#add sudoers definitions for user nova
 	insinto /etc/sudoers.d/
