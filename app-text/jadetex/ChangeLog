@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.75 2014/01/20 16:57:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.76 2014/04/06 15:18:27 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> jadetex-3.13-r6.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   20 Jan 2014; Christoph Junghans <ottxor@gentoo.org> -jadetex-3.13-r3.ebuild,
   -jadetex-3.13-r4.ebuild, -jadetex-3.13-r5.ebuild:

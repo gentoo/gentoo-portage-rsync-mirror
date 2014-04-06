@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0.ebuild,v 1.5 2014/03/29 18:56:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0.ebuild,v 1.6 2014/04/06 15:23:16 pacho Exp $
 
 EAPI="5"
 inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -66,7 +66,7 @@ RDEPEND="
 	gdbm? ( sys-libs/gdbm )
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
 	xen? ( app-emulation/xen-tools )
-	systemd? ( sys-apps/systemd[${MULTILIB_USEDEP}] )
+	systemd? ( sys-apps/systemd:0=[${MULTILIB_USEDEP}] )
 	dev-libs/json-c[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20131008-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.14.1.ebuild,v 1.3 2012/10/25 20:53:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.14.1.ebuild,v 1.4 2014/04/06 15:25:54 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 python eutils virtualx multilib
+inherit eutils gnome2 multilib python virtualx
 
 DESCRIPTION="A non-linear video editor using the GStreamer multimedia framework"
 HOMEPAGE="http://www.pitivi.org"
@@ -27,7 +27,8 @@ COMMON_DEPEND="
 
 	>=media-libs/gstreamer-0.10.28:0.10
 	>=dev-python/gst-python-0.10.19:0.10
-	>=media-libs/gnonlin-0.10.16:0.10"
+	>=media-libs/gnonlin-0.10.16:0.10
+"
 RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python
 	>=dev-python/gconf-python-2.12
@@ -42,11 +43,13 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-xvideo-0.10.31:0.10
 	>=media-plugins/gst-plugins-libpng-0.10.24:0.10
 
-	v4l? ( media-plugins/gst-plugins-v4l2:0.10 )"
+	v4l? ( media-plugins/gst-plugins-v4l2:0.10 )
+"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	sys-devel/gettext
-	>=dev-util/intltool-0.35.5"
+	>=dev-util/intltool-0.35.5
+"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS RELEASE"

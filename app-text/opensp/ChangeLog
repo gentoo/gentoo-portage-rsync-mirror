@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.70 2013/10/12 20:51:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.71 2014/04/06 15:16:52 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> opensp-1.5.2-r3.ebuild:
+  Add arm64 love.
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> opensp-1.5.2-r3.ebuild:
   Allow more flags (#209829)

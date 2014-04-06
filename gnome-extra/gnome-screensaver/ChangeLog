@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.169 2014/02/22 21:57:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.170 2014/04/06 15:25:21 pacho Exp $
+
+  06 Apr 2014; Pacho Ramos <pacho@gentoo.org> gnome-screensaver-3.6.1.ebuild:
+  Needs to be rebuilt with systemd subslot bumps
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-screensaver-3.6.1.ebuild:
   Fix wrong commit, bug 502160

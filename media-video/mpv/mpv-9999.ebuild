@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.40 2014/03/10 19:32:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.41 2014/04/06 15:07:37 tomwij Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ RDEPEND+="
 	sys-libs/ncurses
 	sys-libs/zlib
 	X? (
+		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXxf86vm
 		opengl? ( virtual/opengl )

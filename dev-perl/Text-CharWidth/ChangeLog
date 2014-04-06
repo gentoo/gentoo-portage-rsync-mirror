@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CharWidth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CharWidth/ChangeLog,v 1.25 2014/02/15 12:02:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CharWidth/ChangeLog,v 1.26 2014/04/06 15:09:46 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> Text-CharWidth-0.40.0.ebuild:
+  Add arm64 love.
 
   15 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
   Text-CharWidth-0.40.0.ebuild:

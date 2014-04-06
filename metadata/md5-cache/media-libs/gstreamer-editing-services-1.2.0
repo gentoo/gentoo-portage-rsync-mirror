@@ -3,11 +3,11 @@ DEPEND=>=dev-libs/glib-2.34:2 dev-libs/libxml2:2 >=media-libs/gstreamer-1.2:1.0[
 DESCRIPTION=SDK for making video editors and more
 EAPI=5
 HOMEPAGE=http://wiki.pitivi.org/wiki/GES
-IUSE=introspection
+IUSE=+introspection
 KEYWORDS=~amd64
 LICENSE=LGPL-2+
 RDEPEND=>=dev-libs/glib-2.34:2 dev-libs/libxml2:2 >=media-libs/gstreamer-1.2:1.0[introspection?] >=media-libs/gst-plugins-base-1.2:1.0[introspection?] introspection? ( >=dev-libs/gobject-introspection-0.9.6 ) media-libs/gnonlin:1.0
 SLOT=1.0
 SRC_URI=http://gstreamer.freedesktop.org/src/gstreamer-editing-services/gstreamer-editing-services-1.2.0.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f788d99be7789217fa2fecfd4d95b255
+_md5_=56478e9143684e9151d7f3053c38c77f

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r3.ebuild,v 1.2 2014/03/25 22:15:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r3.ebuild,v 1.3 2014/04/06 15:27:05 pacho Exp $
 
 EAPI="5"
 
@@ -141,7 +141,7 @@ RDEPEND="
 	v4l? ( media-libs/libv4l )
 	xinetd? ( sys-apps/xinetd )
 	snmp? ( net-analyzer/net-snmp )
-	systemd? ( sys-apps/systemd )
+	systemd? ( sys-apps/systemd:0= )
 "
 
 DEPEND="${RDEPEND}

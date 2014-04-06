@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.328 2014/03/29 18:56:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.329 2014/04/06 15:23:16 pacho Exp $
+
+  06 Apr 2014; Pacho Ramos <pacho@gentoo.org> -pulseaudio-4.99.4-r1.ebuild,
+  pulseaudio-5.0.ebuild:
+  Needs to be rebuilt with systemd subslot bumps
 
   29 Mar 2014; Michał Górny <mgorny@gentoo.org> pulseaudio-5.0.ebuild:
   Enforce MULTILIB_USEDEP on systemd for libsystemd (past libsystemd-journal),

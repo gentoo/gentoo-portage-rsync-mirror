@@ -1,6 +1,20 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.67 2014/01/18 19:58:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.69 2014/04/06 15:21:34 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  docbook-xml-simple-dtd-1.0-r1.ebuild, docbook-xml-simple-dtd-1.0-r2.ebuild,
+  docbook-xml-simple-dtd-4.1.2.4-r2.ebuild,
+  docbook-xml-simple-dtd-4.1.2.4-r3.ebuild,
+  docbook-xml-simple-dtd-4.1.2.5-r2.ebuild:
+  Mark m68k/s390/sh stable.
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  docbook-xml-simple-dtd-1.0-r1.ebuild, docbook-xml-simple-dtd-1.0-r2.ebuild,
+  docbook-xml-simple-dtd-4.1.2.4-r2.ebuild,
+  docbook-xml-simple-dtd-4.1.2.4-r3.ebuild,
+  docbook-xml-simple-dtd-4.1.2.5-r2.ebuild:
+  Add arm64 love.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   docbook-xml-simple-dtd-4.1.2.5-r2.ebuild:
