@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8788 2014/04/06 09:01:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8789 2014/04/06 11:16:54 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Apr 2014; Julian Ospald <hasufell@gentoo.org> base/package.use.mask:
+  mask <net-misc/openvpn-9999[polarssl] wrt #501582
 
   06 Apr 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask new emul set until their ebuilds are tested/updated for native multilib

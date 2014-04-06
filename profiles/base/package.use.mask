@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.554 2014/03/29 13:08:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.555 2014/04/06 11:16:54 hasufell Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Julian Ospald <hasufell@gentoo.org> (06 Apr 2014)
+# broken wrt #501582
+<net-misc/openvpn-9999 polarssl
 
 # Mike Gilbert <floppym@gentoo.org> (27 Mar 2014)
 # sys-libs/libseccomp is not keyworded on many archs.

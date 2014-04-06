@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.32.1.ebuild,v 1.1 2014/01/11 11:21:18 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.33.0.ebuild,v 1.1 2014/04/06 11:11:41 grozin Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SUPP_RL=(   .    .     y               .    .         y     )
 # . - just --enable-<lisp>, <flag> - --enable-<flag>
 CONF_FLAG=( .    .     .               ecl  ccl       .     )
 # patch file version; . - no patch
-PATCH_V=(   0    0     .               0    0         0     )
+PATCH_V=(   0    0     .               1    0         0     )
 
 IUSE="latex emacs tk nls unicode xemacs X ${LISPS[*]}"
 
@@ -165,18 +165,9 @@ src_install() {
 
 	# if we use ecls, build an ecls library for maxima
 	if use ecls; then
-		cd src
-		ecl \
-			-eval '(require `asdf)' \
-			-eval '(push "./" asdf:*central-registry*)' \
-			-eval "(asdf:initialize-output-translations \
-				'(:output-translations :disable-cache :inherit-configuration))" \
-			-eval '(load "maxima-build.lisp")' \
-			-eval '(asdf:make-build :maxima :type :fasl)' \
-			-eval '(quit)'
 		ECLLIB=`ecl -eval "(princ (SI:GET-LIBRARY-PATHNAME))" -eval "(quit)"`
 		insinto "${ECLLIB#${EPREFIX}}"
-		newins maxima.fasb maxima.fas
+		doins src/binary-ecl/maxima.fas
 	fi
 }
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kcmsystemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/ChangeLog,v 1.2 2014/03/31 19:43:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/ChangeLog,v 1.3 2014/04/06 11:11:46 johu Exp $
+
+*kcmsystemd-0.6.1 (06 Apr 2014)
+
+  06 Apr 2014; Johannes Huber <johu@gentoo.org> +kcmsystemd-0.6.1.ebuild,
+  -kcmsystemd-0.5.0.ebuild, -kcmsystemd-0.6.0.ebuild:
+  Version bump wrt bug #506908. Remove old.
 
 *kcmsystemd-0.6.0 (31 Mar 2014)
 
