@@ -978,7 +978,6 @@ app-pda/gtkpod:webkit - Enable webkit support for finding coverart
 app-pda/libopensync-plugin-irmc:irda - Enable infrared support
 app-pda/libopensync-plugin-syncml:http - Enable http transports
 app-pda/libopensync-plugin-syncml:obex - Enable obex transports
-app-pda/libplist:python - Build swig-based python bindings
 app-pda/libsyncml:http - Enable http transports
 app-pda/libsyncml:obex - Enable obex transports
 app-pda/synce-sync-engine:opensync - Enable OpenSync (app-pda/libopensync) python plug-in
