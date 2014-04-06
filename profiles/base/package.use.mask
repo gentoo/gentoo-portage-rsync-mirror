@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.555 2014/04/06 11:16:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.556 2014/04/06 16:56:41 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -284,8 +284,8 @@ app-misc/tracker eds
 sci-chemistry/gromacs cuda mkl openmm
 
 # Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
-# Mask USE=pypy2_0 for sys-apps/portage, since pypy has limited KEYWORDS.
-sys-apps/portage pypy2_0
+# Mask USE=pypy* for sys-apps/portage, since pypy has limited KEYWORDS.
+sys-apps/portage pypy pypy2_0
 
 # Jory A. Pratt <anarchy@gentoo.org> (15 Dec 2012)
 # PGO is known to be busted with most configurations

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1396 2014/04/06 15:32:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1397 2014/04/06 17:00:03 mgorny Exp $
+
+  06 Apr 2014; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  portage-2.2.10.ebuild, portage-9999.ebuild:
+  Add support for PYTHON_TARGETS=pypy and replace USE=pypy2_0 w/ USE=pypy (since
+  the latter is more generic).
 
   06 Apr 2014; Michał Górny <mgorny@gentoo.org> portage-9999.ebuild:
   Switch to git-r3.

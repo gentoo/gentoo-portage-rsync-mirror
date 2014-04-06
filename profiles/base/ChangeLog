@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.668 2014/04/05 18:49:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.669 2014/04/06 16:56:41 mgorny Exp $
+
+  06 Apr 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask USE=pypy for sys-apps/portage, since pypy has limited KEYWORDS.
 
   05 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   package.use.stable.mask:
