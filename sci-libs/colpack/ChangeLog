@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/colpack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/ChangeLog,v 1.4 2012/09/17 22:03:38 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/ChangeLog,v 1.5 2014/04/05 23:19:57 bicatali Exp $
+
+*colpack-1.0.9 (05 Apr 2014)
+
+  05 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> +colpack-1.0.9.ebuild:
+  Version bump
 
   17 Sep 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/colpack-1.0.8-no-bin.patch, colpack-1.0.8.ebuild:

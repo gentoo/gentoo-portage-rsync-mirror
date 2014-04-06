@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=ruby_targets_ruby18? ( dev-ruby/test-unit:2[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/test-unit:2[ruby_targets_ruby19] ) ruby_targets_ree18? ( dev-ruby/test-unit:2[ruby_targets_ree18] ) test? ( ruby_targets_ruby18? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ruby19] ) ruby_targets_ree18? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ree18] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby19] ) ) ruby_targets_ree18? ( doc? ( dev-ruby/rdoc[ruby_targets_ree18] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ree18? ( test? ( dev-ruby/rake[ruby_targets_ree18] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ree18? ( virtual/rubygems[ruby_targets_ree18] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ree18? ( virtual/rubygems[ruby_targets_ree18] ) )
+DEPEND=ruby_targets_ruby19? ( dev-ruby/test-unit:2[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
 DESCRIPTION=A simple library to assist in enabling tunneled Net::SSH connections
 EAPI=4
 HOMEPAGE=http://net-ssh.rubyforge.org/gateway
-IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 doc test test
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 doc test test
 KEYWORDS=amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
-RDEPEND=ruby_targets_ruby18? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ruby19] ) ruby_targets_ree18? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ree18] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ree18? ( virtual/rubygems[ruby_targets_ree18] )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 )
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/net-ssh-2.0.0[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=2
 SRC_URI=mirror://rubygems/net-ssh-gateway-1.1.0.gem
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=8c16fbe92d121791125c25a842200128
+_md5_=ad0facd60bb2023dafd52f868b7bcf2b

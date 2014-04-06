@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.16.ebuild,v 1.1 2013/09/24 05:38:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.16.ebuild,v 1.2 2014/04/05 23:26:30 mrueg Exp $
 
 EAPI=5
 # jruby: mkmf
 # rbx: require 'ldap' no such file to load
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 inherit multilib ruby-fakegem
 
@@ -39,6 +39,6 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
-	emake V=1 || die
+	emake V=1
 	cp ldap$(get_modname) lib/ || die
 }

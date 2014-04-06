@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.0.0.ebuild,v 1.4 2014/01/14 08:57:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.0.0.ebuild,v 1.5 2014/04/05 23:03:05 mrueg Exp $
 
 EAPI=5
 
 # jruby → adding zip files to the load path fails, badly
-USE_RUBY="ruby18 ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md TODO NEWS"

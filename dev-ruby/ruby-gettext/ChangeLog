@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.128 2014/03/27 02:22:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.129 2014/04/05 23:11:38 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-gettext-2.3.3.ebuild,
+  ruby-gettext-2.3.8.ebuild, ruby-gettext-3.1.1.ebuild:
+  Remove ree18 and ruby18 target.
 
   27 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-gettext-2.2.1.ebuild,
   -ruby-gettext-3.0.3.ebuild, -ruby-gettext-3.0.6.ebuild,

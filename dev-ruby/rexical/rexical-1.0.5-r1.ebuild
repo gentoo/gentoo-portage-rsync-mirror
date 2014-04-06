@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.5-r1.ebuild,v 1.13 2013/12/26 14:59:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.5-r1.ebuild,v 1.14 2014/04/05 23:30:25 mrueg Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc	DOCUMENTATION.en.rdoc  DOCUMENTATION.ja.rdoc  README.ja  README.rdoc"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc DOCUMENTATION.en.rdoc  DOCUMENTATION.ja.rdoc  README.ja  README.rdoc"
 
 inherit ruby-fakegem eutils
 

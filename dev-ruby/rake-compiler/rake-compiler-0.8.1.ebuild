@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.8.1.ebuild,v 1.14 2014/01/02 07:12:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.8.1.ebuild,v 1.15 2014/04/05 23:16:30 mrueg Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 # Tests for now seem only to work when rubygems is fully installed for
 # the implementation and that for now only means Ruby 1.8
@@ -28,10 +28,7 @@ IUSE=""
 # Restrict tests for this version so that we have a version to bootstrap
 # ruby19 stable.
 RESTRICT="test"
-# USE_RUBY="ruby18 ree18" \
-# 	ruby_add_bdepend "test? ( dev-util/cucumber )"
 
-# ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/rubygems )"
 ruby_add_rdepend "dev-ruby/rake"
 
 each_ruby_prepare() {

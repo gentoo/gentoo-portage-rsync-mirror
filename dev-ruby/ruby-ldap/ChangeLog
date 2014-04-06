@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-ldap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.62 2013/11/11 15:27:06 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.63 2014/04/05 23:26:31 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-ldap-0.9.12.ebuild,
+  ruby-ldap-0.9.16.ebuild:
+  Remove ree18 and ruby18 target.
 
   11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -ruby-ldap-0.9.13.ebuild,
   -ruby-ldap-0.9.15.ebuild:

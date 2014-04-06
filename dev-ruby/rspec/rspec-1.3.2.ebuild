@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.2.ebuild,v 1.17 2014/04/05 22:55:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.2.ebuild,v 1.18 2014/04/05 23:24:19 mrueg Exp $
 
 EAPI=2
 USE_RUBY="ruby19 jruby"
@@ -36,7 +36,7 @@ RDEPEND="!<dev-ruby/rspec-rails-${PV}"
 # We should add nokogiri here to make sure that we test as much as
 # possible, but since it's yet unported to 1.9 and the nokogiri-due
 # tests fail for sure, we'll be waiting on it.
-USE_RUBY="ruby18 ree18 ruby19" \
+USE_RUBY="ruby19" \
 	ruby_add_bdepend "test? (
 		>=dev-ruby/hoe-2.0.0
 		dev-ruby/zentest

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-core
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.16 2013/09/04 13:45:33 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.17 2014/04/05 23:28:33 mrueg Exp $
+
+  05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> prawn-core-0.8.4-r2.ebuild:
+  Remove ree18 and ruby18 target.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -prawn-core-0.8.4-r1.ebuild:
   Cleanup old.
