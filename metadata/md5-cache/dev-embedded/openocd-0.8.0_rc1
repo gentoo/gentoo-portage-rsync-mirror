@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=dev-lang/jimtcl-0.73 usb? ( versaloon? ( virtual/libusb:0 ) virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi )
+DESCRIPTION=OpenOCD - Open On-Chip Debugger
+EAPI=5
+HOMEPAGE=http://openocd.sourceforge.net
+IUSE=blaster dummy ftdi minidriver parport presto segger +usb versaloon verbose-io
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/jimtcl-0.73 usb? ( versaloon? ( virtual/libusb:0 ) virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi )
+REQUIRED_USE=blaster? ( ftdi ) presto? ( ftdi ) versaloon? ( usb )
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://sourceforge/project/openocd/openocd/0.8.0-rc1/openocd-0.8.0-rc1.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=4b0303cc89a83ee4c0430be4a57b1f79
