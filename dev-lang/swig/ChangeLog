@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.213 2014/02/11 05:07:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.214 2014/04/06 14:59:01 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> swig-2.0.10.ebuild,
+  swig-2.0.11.ebuild, swig-2.0.12.ebuild, swig-2.0.9.ebuild:
+  Add arm64 love.
 
 *swig-2.0.12 (11 Feb 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.252 2014/02/24 02:06:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.253 2014/04/06 14:43:32 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.5_p1-r2.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> dhcp-4.2.5_p1-r2.ebuild:
   x86 stable wrt bug #499324

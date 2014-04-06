@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1274 2014/04/03 23:36:25 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1275 2014/04/06 14:46:24 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> vanilla-sources-3.14.0.ebuild:
+  Add arm64 love.
 
 *vanilla-sources-3.13.9 (03 Apr 2014)
 *vanilla-sources-3.10.36 (03 Apr 2014)

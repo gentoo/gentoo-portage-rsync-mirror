@@ -4,9 +4,9 @@ DESCRIPTION=Play Neverwinter Nights movies inside the Linux client
 EAPI=2
 HOMEPAGE=http://home.roadrunner.com/~nwmovies/
 KEYWORDS=amd64 x86
-LICENSE=as-is
+LICENSE=nwmovies Artistic
 RDEPEND=>=games-rpg/nwn-data-1.29-r3[videos] >=games-rpg/nwn-1.68-r4 media-video/binkplayer games-misc/games-envd
 SLOT=0
 SRC_URI=http://home.roadrunner.com/~nwmovies//nwmovies/nwmovies-v4-public.20090223.080954.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=958b66b4f123ea6a6c569ac809e7210c
+_md5_=d9a7b7c775699e6903eee05d301b16d6

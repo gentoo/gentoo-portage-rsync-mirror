@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.213 2014/01/12 13:17:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.215 2014/04/06 14:48:42 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
+  Mark s390/sh stable.
 
   12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
   Stable for ia64, wrt bug #496776

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1.4.ebuild,v 1.16 2014/02/21 17:01:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1.4.ebuild,v 1.18 2014/04/06 15:00:11 vapier Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 SRC_URI="http://www.infradead.org/~tgr/libnl/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="1.1"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.110 2014/03/19 18:59:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.111 2014/04/06 14:50:23 vapier Exp $
+
+  06 Apr 2014; Mike Frysinger <vapier@gentoo.org> openntpd-20080406-r7.ebuild:
+  Mark arm64/s390/sh stable.
 
   19 Mar 2014; Christoph Junghans <ottxor@gentoo.org>
   -files/openntpd.conf.d-20080406-r3, -files/openntpd.conf.d-3.9_p1-r4,
