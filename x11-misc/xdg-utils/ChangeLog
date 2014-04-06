@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.130 2014/03/24 15:11:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.131 2014/04/06 10:15:24 ssuominen Exp $
+
+  06 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -xdg-utils-1.1.0_rc1_p20130921.ebuild:
+  old
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xdg-utils-1.1.0_rc2.ebuild:
   Stable for ppc, wrt bug #503488

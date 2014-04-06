@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.784 2014/03/28 01:51:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.785 2014/04/06 10:11:04 ago Exp $
+
+  06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.14.5.ebuild,
+  xorg-server-1.15.0.ebuild:
+  Stable for x86, wrt bug #500368
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> xorg-server-1.14.5.ebuild,
   xorg-server-1.15.0.ebuild:

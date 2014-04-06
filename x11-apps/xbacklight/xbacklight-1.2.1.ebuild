@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/xbacklight-1.2.1.ebuild,v 1.4 2014/03/29 20:32:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/xbacklight-1.2.1.ebuild,v 1.5 2014/04/06 10:11:00 ago Exp $
 
 EAPI=3
 
 inherit xorg-2
 
 DESCRIPTION="Sets backlight level using the RandR 1.2 BACKLIGHT output property"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libxcb

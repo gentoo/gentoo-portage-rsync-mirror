@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.325 2014/04/01 19:00:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.326 2014/04/06 10:20:34 hwoarang Exp $
+
+  06 Apr 2014; Markos Chandras <hwoarang@gentoo.org> -lighttpd-1.4.32-r2.ebuild,
+  -lighttpd-1.4.32.ebuild, -lighttpd-1.4.33.ebuild:
+  Remove old
 
   01 Apr 2014; Markus Meier <maekke@gentoo.org> lighttpd-1.4.35.ebuild:
   arm stable, bug #504330

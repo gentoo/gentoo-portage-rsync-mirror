@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.209 2014/03/27 11:06:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.210 2014/04/06 10:11:18 ago Exp $
+
+  06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xf86-video-ati-7.3.0.ebuild:
+  Stable for x86, wrt bug #500368
 
   27 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xf86-video-ati-7.3.0.ebuild:
   Stable for amd64, wrt bug #500368

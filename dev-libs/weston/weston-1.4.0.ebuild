@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/weston-1.4.0.ebuild,v 1.3 2014/03/27 11:05:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/weston-1.4.0.ebuild,v 1.4 2014/04/06 10:10:43 ago Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ if [[ $PV = 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://wayland.freedesktop.org/releases/${P}.tar.xz"
-	KEYWORDS="amd64 ~arm ~x86 ~arm-linux"
+	KEYWORDS="amd64 ~arm x86 ~arm-linux"
 fi
 
 LICENSE="MIT CC-BY-SA-3.0"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gst-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.129 2013/10/22 07:20:09 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.130 2014/04/06 10:28:39 eva Exp $
+
+*gst-python-1.2.0 (06 Apr 2014)
+
+  06 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +gst-python-1.2.0.ebuild:
+  Version bump. Updated to 1.0 gstreamer slot, but testsuite is missing.
 
   22 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-python-0.10.22-r1.ebuild:
   Stable for sparc, wrt bug #480908
