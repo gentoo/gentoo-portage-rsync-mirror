@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.6 2014/04/02 19:56:04 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.7 2014/04/06 12:14:02 grobian Exp $
+
+  06 Apr 2014; Fabian Groffen <grobian@gentoo.org> gentoo-functions-0.3.ebuild:
+  Added Prefix keywords, part of bug #504284
 
   02 Apr 2014; William Hubbs <williamh@gentoo.org>
   -files/gentoo-functions-0.1.sh, -files/gentoo-functions-0.sh,
