@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.37 2014/01/20 03:46:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.38 2014/04/06 17:23:04 mgorny Exp $
+
+  06 Apr 2014; Michał Górny <mgorny@gentoo.org> metagen-0.6.2-r1.ebuild,
+  metagen-9999.ebuild:
+  Enable PYTHON_TARGETS=pypy.
 
 *metagen-0.6.2-r1 (20 Jan 2014)
 

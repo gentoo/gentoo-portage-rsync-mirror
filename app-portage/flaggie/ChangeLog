@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/flaggie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.57 2013/12/24 18:59:59 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.58 2014/04/06 17:20:00 mgorny Exp $
+
+  06 Apr 2014; Michał Górny <mgorny@gentoo.org> flaggie-0.2.1.ebuild,
+  flaggie-9999.ebuild:
+  Enable PYTHON_TARGETS=pypy.
 
   24 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> flaggie-0.2.1.ebuild:
   Stable on arm, wrt bug #479480

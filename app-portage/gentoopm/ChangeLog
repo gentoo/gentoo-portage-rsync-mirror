@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.50 2014/03/29 03:22:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.51 2014/04/06 17:06:34 mgorny Exp $
+
+  06 Apr 2014; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.9.ebuild,
+  gentoopm-9999.ebuild:
+  Add support for PYTHON_TARGETS=pypy.
 
   29 Mar 2014; Mike Gilbert <floppym@gentoo.org> gentoopm-9999.ebuild:
   Add python3.4.
