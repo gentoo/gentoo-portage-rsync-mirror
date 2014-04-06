@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.20.0.ebuild,v 1.1 2013/12/24 17:34:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.22.0.ebuild,v 1.1 2014/04/06 21:29:02 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="X nls +sqlite tracker test transcode"
 # The deps for tracker? and transcode? are just the earliest available
 # version at the time of writing this ebuild
 RDEPEND="
-	>=dev-libs/glib-2.32:2
+	>=dev-libs/glib-2.34:2
 	>=dev-libs/libgee-0.8:0.8
 	>=dev-libs/libxml2-2.7:2
 	>=media-libs/gupnp-dlna-0.9.4:2.0
@@ -27,8 +27,8 @@ RDEPEND="
 	media-plugins/gst-plugins-soup:1.0
 	>=net-libs/gssdp-0.13
 	>=net-libs/gupnp-0.19
-	>=net-libs/gupnp-av-0.11.4
-	>=net-libs/libsoup-2.34:2.4
+	>=net-libs/gupnp-av-0.12.4
+	>=net-libs/libsoup-2.42:2.4
 	>=sys-apps/util-linux-2.20
 	x11-misc/shared-mime-info
 	sqlite? (
@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 # Maintainer only
-#	>=dev-lang/vala-0.20
+#	>=dev-lang/vala-0.22
 #   dev-libs/libxslt
 
 src_prepare() {
@@ -68,7 +68,6 @@ src_configure() {
 	# and we do not want to regenerate them automagically.
 	gnome2_src_configure \
 		XSLTPROC=$(type -P false) \
-		--disable-valadoc \
 		--enable-gst-launch-plugin \
 		--enable-mediathek-plugin \
 		--with-media-engine=gstreamer \
