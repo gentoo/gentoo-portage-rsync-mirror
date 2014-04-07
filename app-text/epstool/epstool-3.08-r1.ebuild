@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/epstool-3.08-r1.ebuild,v 1.6 2013/09/23 17:36:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/epstool-3.08-r1.ebuild,v 1.7 2014/04/06 23:54:32 jer Exp $
 
 EAPI="5"
 
@@ -18,15 +18,19 @@ DEPEND="app-text/ghostscript-gpl"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/gcc43.patch"
+	epatch "${FILESDIR}"/gcc43.patch
 
 	sed -i \
 		-e '/^CC/s/=/?=/' \
 		-e '/^CLINK/s/gcc/$(CC)/' \
-		src/unixcom.mak || die 'sed on src/unixcom.mak failed'
+		src/unixcom.mak || die
 	tc-export CC
 
 	epatch_user
+
+	# parallel make issue (bug #506978)
+	mkdir bin || die
+	mkdir epsobj || die
 }
 
 src_compile() {

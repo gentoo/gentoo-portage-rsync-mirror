@@ -1,5 +1,5 @@
---- epstool-3.08.orig/src/epstool.c	2005-06-10 04:41:00.000000000 -0500
-+++ epstool-3.08/src/epstool.c	2009-02-16 20:55:43.186140029 -0600
+--- a/src/epstool.c
++++ b/src/epstool.c
 @@ -2824,7 +2824,7 @@
  		code = -1;
  	}

@@ -1,6 +1,5 @@
-diff -up ocrad-0.17/textblock.cc.gcc43 ocrad-0.17/textblock.cc
---- ocrad-0.17/textblock.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/textblock.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/textblock.cc
++++ b/textblock.cc
 @@ -18,6 +18,7 @@
  #include <algorithm>
  #include <cstdio>
@@ -9,9 +8,8 @@ diff -up ocrad-0.17/textblock.cc.gcc43 ocrad-0.17/textblock.cc
  
  #include "common.h"
  #include "rational.h"
-diff -up ocrad-0.17/page_image_layout.cc.gcc43 ocrad-0.17/page_image_layout.cc
---- ocrad-0.17/page_image_layout.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/page_image_layout.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/page_image_layout.cc
++++ b/page_image_layout.cc
 @@ -18,6 +18,8 @@
  #include <algorithm>
  #include <cstdio>
@@ -21,9 +19,8 @@ diff -up ocrad-0.17/page_image_layout.cc.gcc43 ocrad-0.17/page_image_layout.cc
  
  #include "common.h"
  #include "rational.h"
-diff -up ocrad-0.17/track.cc.gcc43 ocrad-0.17/track.cc
---- ocrad-0.17/track.cc.gcc43	2008-02-19 19:37:08.000000000 +0100
-+++ ocrad-0.17/track.cc	2008-02-19 19:37:30.000000000 +0100
+--- a/track.cc
++++ b/track.cc
 @@ -17,6 +17,7 @@
  
  #include <algorithm>
@@ -32,9 +29,8 @@ diff -up ocrad-0.17/track.cc.gcc43 ocrad-0.17/track.cc
  
  #include "common.h"
  #include "rectangle.h"
-diff -up ocrad-0.17/textline.cc.gcc43 ocrad-0.17/textline.cc
---- ocrad-0.17/textline.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/textline.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/textline.cc
++++ b/textline.cc
 @@ -19,6 +19,7 @@
  #include <cctype>
  #include <cstdio>
@@ -43,9 +39,8 @@ diff -up ocrad-0.17/textline.cc.gcc43 ocrad-0.17/textline.cc
  
  #include "common.h"
  #include "rational.h"
-diff -up ocrad-0.17/common.cc.gcc43 ocrad-0.17/common.cc
---- ocrad-0.17/common.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/common.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/common.cc
++++ b/common.cc
 @@ -17,6 +17,7 @@
  
  #include <algorithm>
@@ -54,9 +49,8 @@ diff -up ocrad-0.17/common.cc.gcc43 ocrad-0.17/common.cc
  #include <cstdlib>
  #include "common.h"
  
-diff -up ocrad-0.17/textpage.cc.gcc43 ocrad-0.17/textpage.cc
---- ocrad-0.17/textpage.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/textpage.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/textpage.cc
++++ b/textpage.cc
 @@ -18,6 +18,7 @@
  #include <cstdio>
  #include <string>
@@ -65,9 +59,8 @@ diff -up ocrad-0.17/textpage.cc.gcc43 ocrad-0.17/textpage.cc
  
  #include "common.h"
  #include "rectangle.h"
-diff -up ocrad-0.17/textline_r2.cc.gcc43 ocrad-0.17/textline_r2.cc
---- ocrad-0.17/textline_r2.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/textline_r2.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/textline_r2.cc
++++ b/textline_r2.cc
 @@ -18,6 +18,7 @@
  #include <cctype>
  #include <cstdio>
@@ -76,9 +69,8 @@ diff -up ocrad-0.17/textline_r2.cc.gcc43 ocrad-0.17/textline_r2.cc
  
  #include "common.h"
  #include "rectangle.h"
-diff -up ocrad-0.17/page_image.cc.gcc43 ocrad-0.17/page_image.cc
---- ocrad-0.17/page_image.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/page_image.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/page_image.cc
++++ b/page_image.cc
 @@ -19,6 +19,8 @@
  #include <cctype>
  #include <cstdio>
@@ -88,9 +80,8 @@ diff -up ocrad-0.17/page_image.cc.gcc43 ocrad-0.17/page_image.cc
  
  #include "common.h"
  #include "rational.h"
-diff -up ocrad-0.17/character_r12.cc.gcc43 ocrad-0.17/character_r12.cc
---- ocrad-0.17/character_r12.cc.gcc43	2007-06-29 14:29:13.000000000 +0200
-+++ ocrad-0.17/character_r12.cc	2008-02-19 19:36:25.000000000 +0100
+--- a/character_r12.cc
++++ b/character_r12.cc
 @@ -17,6 +17,7 @@
  
  #include <cstdio>
