@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.0.ebuild,v 1.2 2013/12/04 13:36:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.1-r1.ebuild,v 1.1 2014/04/07 02:10:24 idella4 Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="test examples"
+IUSE="test examples mpi"
 
 RDEPEND="
 	sci-libs/hdf5:=
@@ -23,23 +23,33 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/cython[${PYTHON_USEDEP}]
+	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )
 	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+DISTUTILS_NO_PARALLEL_BUILD=1
+
+# Testsuite is written for a non mpi build
+REQUIRED_USE="test? ( !mpi )"
 
 python_prepare_all() {
 	append-cflags -fno-strict-aliasing
 	distutils-r1_python_prepare_all
 }
 
+python_compile() {
+	if use mpi;then
+		distutils-r1_python_compile --mpi=yes
+	else
+		distutils-r1_python_compile
+	fi
+}
+
 python_test() {
-	cd "${BUILD_DIR}"/lib/ && nosetests ./${PN}/lowtest || die
+	esetup.py test
 }
 
 python_install_all() {
 	DOCS=( README.rst ANN.rst )
-	if use examples; then
-		docompress -x /usr/share/doc/${PF}/examples
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
+	use examples && local EXAMPLES=( examples/. )
+
 	distutils-r1_python_install_all
 }

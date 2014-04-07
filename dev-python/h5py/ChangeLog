@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.22 2013/12/11 12:48:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.23 2014/04/07 02:21:35 idella4 Exp $
+
+*h5py-2.2.1-r1.ebuild (07 Ap=r 2014)
+
+  07 Apr 2014; Ian Delaney <idella4@gentoo.org> +h5py-2.2.1-r1.ebuild,
+  -h5py-2.2.0.ebuild:
+  revbump; Add IUSE mpi, update ebuild and test phase due to effects of 
+  use flag, fixes Bug #491680, rm old
 
 *h5py-2.2.1 (11 Dec 2013)
 
