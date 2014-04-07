@@ -1,7 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=WenQuanYi Bitmap Song CJK font
-HOMEPAGE=http://wqy.sourceforge.net/en/
+HOMEPAGE=http://wenq.org/wqy2/index.cgi?Home
 IUSE=X
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=mirror://sourceforge/wqy/wqy-bitmapsong-pcf-1.0.0-RC1.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f884f5b29de78ca42874397ba828c1ef
+_md5_=539a0c119d3cc87acf864cb7e162454e

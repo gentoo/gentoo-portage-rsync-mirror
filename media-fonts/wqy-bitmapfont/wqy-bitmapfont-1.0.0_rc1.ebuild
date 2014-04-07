@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-1.0.0_rc1.ebuild,v 1.1 2014/02/01 09:43:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-bitmapfont/wqy-bitmapfont-1.0.0_rc1.ebuild,v 1.2 2014/04/07 05:05:26 naota Exp $
 
 inherit font
 
 MY_PN="wqy-bitmapsong"
 DESCRIPTION="WenQuanYi Bitmap Song CJK font"
-HOMEPAGE="http://wqy.sourceforge.net/en/"
+HOMEPAGE="http://wenq.org/wqy2/index.cgi?Home"
 SRC_URI="mirror://sourceforge/wqy/${MY_PN}-pcf-${PV/_rc/-RC}.tar.gz"
 
 LICENSE="GPL-2"
