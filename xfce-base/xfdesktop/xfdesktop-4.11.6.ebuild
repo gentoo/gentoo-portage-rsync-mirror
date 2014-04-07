@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.11.5.ebuild,v 1.2 2014/04/06 12:21:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.11.6.ebuild,v 1.1 2014/04/07 12:17:35 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug libnotify +thunar"
 
+# src/xfdesktop-file-utils.c:#if GLIB_CHECK_VERSION (2, 38, 0)
 RDEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.20
 	>=x11-libs/gtk+-2.24:2
@@ -26,7 +27,10 @@ RDEPEND=">=dev-libs/dbus-glib-0.100
 	>=xfce-base/libxfce4util-4.11
 	>=xfce-base/xfconf-4.10
 	libnotify? ( >=x11-libs/libnotify-0.7 )
-	thunar? ( >=xfce-base/thunar-1.6[dbus] )"
+	thunar? (
+		>=dev-libs/glib-2.38
+		>=xfce-base/thunar-1.6[dbus]
+		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
