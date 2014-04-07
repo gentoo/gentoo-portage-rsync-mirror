@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.42 2014/04/06 18:39:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.43 2014/04/07 18:12:28 ssuominen Exp $
 
 EAPI=5
 
@@ -66,10 +66,8 @@ RDEPEND+="
 	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? (
-		|| (
-			dev-libs/libcdio-paranoia
-			<dev-libs/libcdio-0.90[-minimal]
-		)
+		dev-libs/libcdio
+		dev-libs/libcdio-paranoia
 	)
 	dvb? ( virtual/linuxtv-dvb-headers )
 	dvd? (
@@ -79,7 +77,7 @@ RDEPEND+="
 	enca? ( app-i18n/enca )
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? (
 		>=media-libs/libass-0.9.10:=[enca?,fontconfig]

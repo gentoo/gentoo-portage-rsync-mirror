@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtimer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.28 2012/05/05 05:11:59 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.29 2014/04/07 18:06:45 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmtimer-2.92-r1.ebuild,
+  wmtimer-2.92.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmtimer-2.92.ebuild,
   wmtimer-2.92-r1.ebuild:

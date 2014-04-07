@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.92.ebuild,v 1.5 2012/05/05 05:11:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.92.ebuild,v 1.6 2014/04/07 18:06:45 ssuominen Exp $
 
-EAPI="1"
+EAPI=5
 
 inherit multilib toolchain-funcs
 
@@ -24,9 +24,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -e "s:\$(CFLAGS)::" -i Makefile
 	sed -e "s:-g::g" -i Makefile
 	sed -e "s:-O2:\$(CFLAGS) ${CFLAGS}:" -i Makefile
@@ -34,8 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" \
-		LIBDIR="-L/usr/$(get_libdir)" || die "emake failed."
+	emake CC="$(tc-getCC)" LIBDIR="-L/usr/$(get_libdir)"
 }
 
 src_install() {
