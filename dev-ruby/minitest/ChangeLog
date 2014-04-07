@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.140 2014/03/27 02:12:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.141 2014/04/07 13:24:11 mrueg Exp $
+
+*minitest-5.3.2 (07 Apr 2014)
+
+  07 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +minitest-5.3.2.ebuild,
+  minitest-4.7.4-r1.ebuild, minitest-4.7.4.ebuild, minitest-4.7.5.ebuild,
+  minitest-5.2.3.ebuild:
+  Version bump. Remove ruby18.
 
 *minitest-5.2.3-r1 (27 Mar 2014)
 
