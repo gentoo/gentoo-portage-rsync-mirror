@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/cmdparse-2.0.5-r1.ebuild,v 1.4 2014/01/19 10:32:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/cmdparse-2.0.5-r1.ebuild,v 1.5 2014/04/07 13:32:40 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
