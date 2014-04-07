@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmfishtime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.28 2012/05/05 05:12:00 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.29 2014/04/07 19:41:35 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmfishtime-1.24-r1.ebuild,
+  wmfishtime-1.24-r2.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmfishtime-1.24-r1.ebuild,
   wmfishtime-1.24-r2.ebuild:

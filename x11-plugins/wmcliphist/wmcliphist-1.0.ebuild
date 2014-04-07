@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/wmcliphist-1.0.ebuild,v 1.1 2012/08/27 09:26:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/wmcliphist-1.0.ebuild,v 1.2 2014/04/07 19:37:15 ssuominen Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Dockable clipboard history application for Window Maker"

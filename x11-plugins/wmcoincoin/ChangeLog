@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcoincoin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.26 2012/08/21 08:43:21 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.27 2014/04/07 19:49:26 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmcoincoin-2.5.1f.ebuild,
+  wmcoincoin-2.6.1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
 *wmcoincoin-2.6.1 (21 Aug 2012)
 

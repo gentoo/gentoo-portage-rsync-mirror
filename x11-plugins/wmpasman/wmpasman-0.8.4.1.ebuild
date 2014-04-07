@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.11 2012/05/05 05:12:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.12 2014/04/07 19:38:55 ssuominen Exp $
 
-EAPI="1"
+EAPI=5
 
 DESCRIPTION="Password storage/retrieval in a dockapp"
 HOMEPAGE="http://sourceforge.net/projects/wmpasman/"
@@ -21,19 +21,13 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=x11-libs/libXpm-3.5.5"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Solves compile error about undefined exit - Bug 140857
-	sed -i -e '/#include <stdio.h>/ { p ; s/stdio/stdlib/ }' wmgeneral/wmgeneral-gtk.c
+	sed -i -e '/#include <stdio.h>/ { p ; s/stdio/stdlib/ }' wmgeneral/wmgeneral-gtk.c || die
 }
 
 src_install() {
-	einstall || die "einstall failed."
+	# TODO: einstall is deprecated, convert to emake with args
+	einstall
 	dodoc BUGS ChangeLog README TODO WARNINGS
-}
-
-pkg_postinst() {
-	ewarn "Please read the WARNINGS file."
 }

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.5.3.ebuild,v 1.1 2012/10/02 12:48:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.5.3.ebuild,v 1.2 2014/04/07 19:38:55 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Password storage/retrieval in a dockapp"
 HOMEPAGE="http://sourceforge.net/projects/wmpasman/"
@@ -21,11 +21,4 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=x11-libs/libXpm-3.5.5"
 
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc BUGS ChangeLog README TODO WARNINGS
-}
-
-pkg_postinst() {
-	ewarn "Please read the WARNINGS file."
-}
+DOCS="BUGS ChangeLog README TODO WARNINGS"

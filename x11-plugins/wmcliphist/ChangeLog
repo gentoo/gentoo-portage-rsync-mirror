@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcliphist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.18 2012/08/27 09:26:54 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.19 2014/04/07 19:37:15 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmcliphist-0.6-r1.ebuild,
+  wmcliphist-1.0.ebuild:
+  Use EAPI5 instead of EAPI1.
 
 *wmcliphist-1.0 (27 Aug 2012)
 

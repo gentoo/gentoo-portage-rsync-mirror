@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmclockmon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.34 2012/05/05 05:12:02 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.35 2014/04/07 19:59:53 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmclockmon-0.8.1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmclockmon-0.8.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -135,5 +138,3 @@
   29 Oct 2002; Brad Cowan <bcowan@gentoo.org> wmclockmon-0.1.3.ebuild,
   ChangeLog, files/digest-wmclockmon-0.1.3 :
   Initial import thanks to Autobot.
-
-

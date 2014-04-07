@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.24-r1.ebuild,v 1.8 2012/05/05 05:12:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.24-r1.ebuild,v 1.9 2014/04/07 19:41:35 ssuominen Exp $
 
-EAPI="1"
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A fun clock applet for your desktop featuring swimming fish"
@@ -20,14 +19,12 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gtk.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed."
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {

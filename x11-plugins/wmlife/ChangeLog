@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmlife
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.5 2012/08/27 09:15:47 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.6 2014/04/07 19:40:20 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmlife-1.0.0.ebuild,
+  wmlife-1.0.1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
 *wmlife-1.0.1 (27 Aug 2012)
 
@@ -22,4 +26,3 @@
   12 Jan 2008; Samuli Suominen <drac@gentoo.org>
   +files/wmlife-1.0.0-stringh.patch, +wmlife-1.0.0.ebuild:
   Initial commit.
-

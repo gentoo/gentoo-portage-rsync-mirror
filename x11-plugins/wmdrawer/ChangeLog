@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdrawer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.24 2012/05/05 05:12:01 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.25 2014/04/07 19:53:06 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmdrawer-0.10.5-r2.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmdrawer-0.10.5-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -104,4 +107,3 @@
 
   03 Jun 2003; Brad Cowan <bcowan@gentoo.org> wmdrawer-0.9.15.ebuild:
   Initial import. Thanks to Martin Schipany bug # 16223
-

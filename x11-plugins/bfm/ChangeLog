@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/bfm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.16 2012/05/05 05:12:01 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.17 2014/04/07 19:34:25 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> bfm-0.6.4-r1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> bfm-0.6.4-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

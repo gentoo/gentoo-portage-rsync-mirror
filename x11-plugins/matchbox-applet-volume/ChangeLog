@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/matchbox-applet-volume
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/ChangeLog,v 1.13 2012/06/04 00:36:04 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/ChangeLog,v 1.14 2014/04/07 19:51:26 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  matchbox-applet-volume-0.1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> matchbox-applet-volume-0.1.ebuild:
   ppc stable (bug 309407)
@@ -52,4 +56,3 @@
   +matchbox-applet-volume-0.1.ebuild:
   - Initial import. Original ebuild by Priit Laes, modifications by Björn
   Ruberg and Yuri Vasilevski.
-

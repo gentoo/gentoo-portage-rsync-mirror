@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.35 2012/05/05 05:12:03 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.36 2014/04/07 19:36:13 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmmaiload-2.2.1-r1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmmaiload-2.2.1-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -134,5 +137,3 @@
   ChangeLog, files/digest-wmmaiload-0.6.0 :
   
   Initial import thanks to Autobot.
-
-

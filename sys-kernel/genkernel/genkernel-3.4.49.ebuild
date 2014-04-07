@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.49.ebuild,v 1.2 2014/04/01 03:13:47 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.49.ebuild,v 1.3 2014/04/07 19:43:36 maekke Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -43,7 +43,7 @@ else
 	inherit bash-completion-r1 eutils
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		${COMMON_URI}"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+	KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 fi
 
 DESCRIPTION="Gentoo automatic kernel building scripts"

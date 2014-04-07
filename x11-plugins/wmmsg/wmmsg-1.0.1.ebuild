@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/wmmsg-1.0.1.ebuild,v 1.7 2012/05/05 05:11:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/wmmsg-1.0.1.ebuild,v 1.8 2014/04/07 19:32:30 ssuominen Exp $
 
-EAPI="1"
-
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="a dockapp that informs events, such as incoming chat messages, by displaying icons and times"
@@ -24,14 +23,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-libs/libXt"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-use_gtk2.patch
-	eautoreconf
-}
+DOCS="AUTHORS ChangeLog README wmmsgrc"
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog README wmmsgrc
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-use_gtk2.patch
+
+	eautoreconf
 }

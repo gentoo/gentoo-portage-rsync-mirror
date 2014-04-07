@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.13 2012/07/11 22:06:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.14 2014/04/07 19:45:04 ssuominen Exp $
 
-EAPI=1
-
+EAPI=5
 inherit eutils
 
 MY_PN=FSViewer
@@ -17,15 +16,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="
-	dev-libs/expat
+RDEPEND="dev-libs/expat
 	media-libs/tiff:0
 	media-libs/giflib
 	media-libs/libpng:0
 	media-libs/fontconfig
 	media-libs/freetype
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	x11-libs/libproplist
 	x11-libs/libSM
 	x11-libs/libICE
@@ -41,22 +39,18 @@ DEPEND="
 	x11-proto/xextproto
 	x11-proto/xproto
 	<x11-wm/windowmaker-0.95.0"
-RDEPEND=${DEPEND}
+DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${MY_PN}.app-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS=""
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-windowmaker.patch
 }
 
-src_compile() {
-	econf --with-appspath=/usr/lib/GNUstep \
+src_configure() {
+	econf \
+		--with-appspath=/usr/lib/GNUstep \
 		--with-extralibs=-lXft
-	emake || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
 }

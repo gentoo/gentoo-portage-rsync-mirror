@@ -1,7 +1,7 @@
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare
 DEPEND=x11-libs/gtk+:2 virtual/pkgconfig
 DESCRIPTION=dockapp which provides a drawer (retractable button bar) to launch applications
-EAPI=1
+EAPI=5
 HOMEPAGE=http://people.easter-eggs.org/~valos/wmdrawer/
 KEYWORDS=amd64 ppc ~sparc x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://people.easter-eggs.org/~valos/wmdrawer/wmdrawer-0.10.5.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f0a8aab69e9a20fa61b19f25941036cd
+_md5_=ad6543e0c927ed20b0b6b5f08b90b91b

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmsg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.22 2012/05/05 05:11:59 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.23 2014/04/07 19:32:30 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmmsg-1.0.1-r1.ebuild,
+  wmmsg-1.0.1.ebuild:
+  Use EAPI5 instead of EAPI1.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmmsg-1.0.1.ebuild,
   wmmsg-1.0.1-r1.ebuild:
@@ -77,4 +81,3 @@
 
   15 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest, wmmsg-1.0.ebuild:
   initial ebuild. contributed by Susie Edgeworth <arienadean@yahoo.com>
-
