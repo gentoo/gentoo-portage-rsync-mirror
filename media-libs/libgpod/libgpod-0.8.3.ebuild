@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.3.ebuild,v 1.4 2014/04/01 11:24:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.3.ebuild,v 1.5 2014/04/07 16:05:22 ssuominen Exp $
 
 EAPI=5
 
@@ -42,6 +42,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig"
+
+REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 DOCS="AUTHORS NEWS README* TROUBLESHOOTING"
 
