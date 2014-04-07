@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Dumpvalue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Dumpvalue/ChangeLog,v 1.6 2014/04/04 01:03:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Dumpvalue/ChangeLog,v 1.7 2014/04/07 12:48:01 zlogene Exp $
+
+  07 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Dumpvalue-1.170.0.ebuild:
+  Add ~ia64 keyword wrt bug #505156
 
   04 Apr 2014; Matt Turner <mattst88@gentoo.org> Dumpvalue-1.170.0.ebuild:
   Added ~alpha, bug #505156.

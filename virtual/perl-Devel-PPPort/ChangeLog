@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Devel-PPPort
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.4 2014/04/04 01:01:36 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.5 2014/04/07 12:50:37 zlogene Exp $
+
+  07 Apr 2014; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Devel-PPPort-3.200.0-r2.ebuild:
+  Add ~ia64 keyword wrt bug #505156
 
   04 Apr 2014; Matt Turner <mattst88@gentoo.org>
   perl-Devel-PPPort-3.200.0-r2.ebuild:

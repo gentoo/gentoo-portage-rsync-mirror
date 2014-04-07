@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-Complex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.4 2014/04/04 01:05:18 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.5 2014/04/07 12:48:52 zlogene Exp $
+
+  07 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Math-Complex-1.590.0.ebuild:
+  Add ~ia64 keyword wrt bug #505156
 
   04 Apr 2014; Matt Turner <mattst88@gentoo.org> Math-Complex-1.590.0.ebuild:
   Added ~alpha, bug #505156.
