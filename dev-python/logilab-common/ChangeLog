@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.139 2014/04/05 22:43:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.140 2014/04/07 08:10:53 idella4 Exp $
+
+  07 Apr 2014; Ian Delaney <idella4@gentoo.org>
+  -files/logilab-common-0.59.0-syntax.patch,
+  -files/logilab-common-0.59.0-utf8-test.patch,
+  -files/logilab-common-sec-CVE-2014-1838-9.patch,
+  -logilab-common-0.58.1.ebuild, -logilab-common-0.60.1-r1.ebuild:
+  rm old ebuilds & patches wrt sec bug #499872
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> logilab-common-0.61.0.ebuild:
   Stable for ppc, wrt bug #499872
