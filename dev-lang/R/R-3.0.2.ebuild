@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.2.ebuild,v 1.5 2014/03/02 21:33:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.2.ebuild,v 1.6 2014/04/07 11:58:36 heroxbd Exp $
 
 EAPI=5
 
@@ -139,7 +139,7 @@ src_configure() {
 		--with-system-bzlib \
 		--with-system-pcre \
 		--with-system-xz \
-		--with-blas="$($(tc-getPKG_CONFIG) --variable=libdir blas)" \
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		rdocdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable nls) \
