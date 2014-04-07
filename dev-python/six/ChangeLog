@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.41 2014/04/02 20:49:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.42 2014/04/07 03:53:14 idella4 Exp $
+
+  07 Apr 2014; Ian Delaney <idella4@gentoo.org> six-1.5.2.ebuild:
+  Add py3.4 support, requ'd for configobj
 
   02 Apr 2014; Tim Harder <radhermit@gentoo.org> six-1.6.1.ebuild:
   Add python3_4 support.
