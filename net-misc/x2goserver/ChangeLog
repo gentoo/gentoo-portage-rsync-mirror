@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.41 2014/03/03 16:40:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.42 2014/04/07 15:03:14 voyageur Exp $
+
+*x2goserver-4.0.1.15 (07 Apr 2014)
+
+  07 Apr 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-4.0.1.15.ebuild:
+  Version bump, includes Gentoo-specific fixes for Xsession on new installs,
+  bug #506764. Also fixes /etc/sudoers.d permissions, bug #504906
 
   03 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org>
   -x2goserver-4.0.1.6-r1.ebuild, -x2goserver-4.0.1.8.ebuild:

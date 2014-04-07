@@ -1,0 +1,12 @@
+diff -up x2goclient-4.0.1.3/sshmasterconnection.cpp.timeout x2goclient-4.0.1.3/sshmasterconnection.cpp
+--- x2goclient-4.0.1.3/sshmasterconnection.cpp.timeout	2014-01-22 00:58:25.000000000 -0700
++++ x2goclient-4.0.1.3/sshmasterconnection.cpp	2014-01-22 14:41:07.754428027 -0700
+@@ -1445,7 +1445,7 @@ void SshMasterConnection::channelLoop()
+         struct timeval tv;
+ 
+         tv.tv_sec = 0;
+-        tv.tv_usec = 500;
++        tv.tv_usec = 500000;
+ 
+         int retval;
+         int maxsock=-1;
