@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/boost
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.311 2013/12/27 17:08:26 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.313 2014/04/07 10:17:50 pinkbyte Exp $
+
+  07 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.52.0-r6.ebuild,
+  boost-1.53.0-r1.ebuild, boost-1.54.0-r1.ebuild, boost-1.55.0-r1.ebuild:
+  Add support for user patches via epatch_user
+
+  07 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.55.0-r1.ebuild,
+  +files/boost-1.55.0-tools-c98-compat.patch:
+  Fix building with USE='tools', wrt bug #506064, patch by Ed Catmur <ed AT
+  catmur.co.uk>
 
 *boost-1.55.0-r1 (27 Dec 2013)
 

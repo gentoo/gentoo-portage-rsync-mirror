@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r6.ebuild,v 1.13 2013/12/14 19:45:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r6.ebuild,v 1.14 2014/04/07 10:17:50 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -82,6 +82,8 @@ src_prepare() {
 #endif
 EOF
 	done
+
+	epatch_user
 }
 
 ejam() {
