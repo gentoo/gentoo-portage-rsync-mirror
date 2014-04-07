@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.5.ebuild,v 1.2 2014/03/04 20:22:12 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.5.ebuild,v 1.3 2014/04/07 16:59:24 ssuominen Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.midori-browser.org/"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-IUSE="+deprecated doc +unique webkit2 zeitgeist"
+IUSE="doc +unique zeitgeist"
 
 RDEPEND=">=dev-db/sqlite-3.6.19:3
 	>=dev-libs/glib-2.32.3
@@ -36,18 +36,9 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 	>=net-libs/libsoup-gnome-2.34:2.4
 	>=x11-libs/libnotify-0.7
 	x11-libs/libXScrnSaver
-	deprecated? (
-		>=net-libs/webkit-gtk-1.8.3:2
-		>=x11-libs/gtk+-2.24:2
-		unique? ( dev-libs/libunique:1 )
-		)
-	!deprecated? (
-		>=app-crypt/gcr-3
-		>=net-libs/webkit-gtk-1.10.2:3
-		x11-libs/gtk+:3
-		unique? ( dev-libs/libunique:3 )
-		webkit2? ( >=net-libs/webkit-gtk-2 )
-		)
+	>=net-libs/webkit-gtk-1.8.3:2
+	>=x11-libs/gtk+-2.24:2
+	unique? ( dev-libs/libunique:1 )
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -84,28 +75,21 @@ src_configure() {
 
 	strip-linguas -i po
 
-	local myconf
-	use deprecated || myconf="$(use_enable webkit2)"
-
 	waf-utils_src_configure \
 		--disable-docs \
 		$(use_enable doc apidocs) \
 		$(use_enable unique) \
 		--disable-granite \
-		$(use_enable !deprecated gtk3) \
+		--disable-gtk3 \
 		$(use_enable zeitgeist) \
-		${myconf}
+		--disable-webkit2
 }
 
 src_install() {
 	waf-utils_src_install
 
 	local jit_is_enabled
-	if use deprecated; then
-		has_version 'net-libs/webkit-gtk:2[jit]' && jit_is_enabled=yes
-	else
-		has_version 'net-libs/webkit-gtk:3[jit]' && jit_is_enabled=yes
-	fi
+	has_version 'net-libs/webkit-gtk:2[jit]' && jit_is_enabled=yes
 	[[ ${jit_is_enabled} == yes ]] && pax-mark -m "${ED}"/usr/bin/${PN} #480290
 }
 

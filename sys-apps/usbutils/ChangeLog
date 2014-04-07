@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.178 2014/03/19 13:49:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.181 2014/04/07 16:53:25 ssuominen Exp $
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -files/usbmodules.sh,
+  -files/usbutils.cron, -usbutils-004.ebuild, -usbutils-006-r1.ebuild,
+  -usbutils-006.ebuild, metadata.xml:
+  old
+
+  07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> usbutils-007.ebuild:
+  Use PYTHON_REQUIRED_USE to abort early if required.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> usbutils-007.ebuild:
   Stable for alpha, wrt bug #496534

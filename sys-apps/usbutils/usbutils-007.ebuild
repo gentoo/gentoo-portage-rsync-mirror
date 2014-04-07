@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-007.ebuild,v 1.10 2014/03/19 13:49:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-007.ebuild,v 1.11 2014/04/07 16:50:55 ssuominen Exp $
 
 EAPI=5
 
@@ -26,6 +26,8 @@ RDEPEND="${RDEPEND}
 	sys-apps/hwids
 	python? ( ${PYTHON_DEPS} )"
 PATCHES=( "${FILESDIR}"/${PN}-006-stdint.patch )
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
