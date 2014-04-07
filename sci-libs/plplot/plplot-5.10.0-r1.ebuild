@@ -1,12 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.11-r1.ebuild,v 1.1 2014/01/17 20:17:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.1 2014/04/07 17:07:44 bicatali Exp $
 
 EAPI=5
 
 WX_GTK_VER="2.8"
 FORTRAN_NEEDED=fortran
 PYTHON_COMPAT=( python{2_6,2_7} )
+VIRTUALX_REQUIRED=test
 
 inherit eutils fortran-2 cmake-utils python-single-r1 toolchain-funcs \
 	virtualx wxwidgets java-pkg-opt-2 multilib
@@ -24,21 +25,21 @@ IUSE="ada cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
 
 RDEPEND="
 	ada? ( virtual/gnat )
-	cairo? ( x11-libs/cairo[svg?,X?] )
+	cairo? ( x11-libs/cairo:0=[svg?,X?] )
 	java? ( >=virtual/jre-1.5 )
-	gd? ( media-libs/gd[jpeg?,png?] )
+	gd? ( media-libs/gd:2=[jpeg?,png?] )
 	latex? (
 		app-text/ghostscript-gpl
 		virtual/latex-base
 	)
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:0= )
 	ocaml? (
 		dev-lang/ocaml
 		dev-ml/camlidl
 		cairo? ( dev-ml/cairo-ocaml[gtk] )
 	)
-	octave? ( sci-mathematics/octave )
-	pdf? ( media-libs/libharu )
+	octave? ( sci-mathematics/octave:0= )
+	pdf? ( media-libs/libharu:0= )
 	pdl? (
 		dev-perl/PDL
 		dev-perl/XML-DOM
@@ -49,13 +50,13 @@ RDEPEND="
 	)
 	qhull? ( media-libs/qhull )
 	qt4? (
-		dev-qt/qtgui:4
-		dev-qt/qtsvg:4
+		dev-qt/qtgui:4=
+		dev-qt/qtsvg:4=
 	)
-	shapefile? ( sci-libs/shapelib )
+	shapefile? ( sci-libs/shapelib:0= )
 	tcl? (
-		dev-lang/tcl
-		dev-tcltk/itcl
+		dev-lang/tcl:0=
+		dev-tcltk/itcl:0=
 		tk? (
 			dev-lang/tk
 			dev-tcltk/itk
@@ -63,17 +64,17 @@ RDEPEND="
 	)
 	truetype? (
 		media-fonts/freefont
-		media-libs/lasi
-		gd? ( media-libs/gd[truetype] )
+		media-libs/lasi:0=
+		gd? ( media-libs/gd:2=[truetype] )
 	)
 	wxwidgets? (
-		x11-libs/wxGTK:2.8[X]
-		x11-libs/agg[truetype?]
+		x11-libs/wxGTK:2.8=[X]
+		x11-libs/agg:0=[truetype?]
 	)
 	X? (
-		x11-libs/libX11
-		x11-libs/libXau
-		x11-libs/libXdmcp
+		x11-libs/libX11:0=
+		x11-libs/libXau:0=
+		x11-libs/libXdmcp:0=
 	)"
 
 DEPEND="${RDEPEND}
@@ -83,6 +84,7 @@ DEPEND="${RDEPEND}
 		dev-lang/swig
 	)
 	ocaml? ( dev-ml/findlib )
+	octave? ( >=dev-lang/swig-2.0.12 )
 	python? ( dev-lang/swig )
 	test? (
 		media-fonts/font-misc-misc
@@ -96,8 +98,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-5.9.11-ocaml.patch
 	"${FILESDIR}"/${PN}-5.9.11-octave.patch
 	"${FILESDIR}"/${PN}-5.9.11-multiarch.patch
+	"${FILESDIR}"/${PN}-5.10.0-have-config-h.patch
 )
-#	"${FILESDIR}"/${PN}-5.9.11-config.patch
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -223,9 +225,7 @@ src_configure() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null
-	Xemake test || die "tests failed"
-	popd > /dev/null
+	VIRTUALX_COMMAND=cmake-utils_src_test virtualmake
 }
 
 src_install() {

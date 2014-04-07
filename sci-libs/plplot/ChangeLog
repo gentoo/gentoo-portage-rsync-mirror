@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.57 2014/03/27 04:32:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.58 2014/04/07 17:07:44 bicatali Exp $
+
+*plplot-5.10.0-r1 (07 Apr 2014)
+
+  07 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/plplot-5.10.0-have-config-h.patch, +plplot-5.10.0-r1.ebuild,
+  -files/plplot-5.9.10-haru.patch, -files/plplot-5.9.10-itcltk.patch,
+  -files/plplot-5.9.10-tcl86.patch, -files/plplot-5.9.10-tcltk.patch,
+  -files/plplot-5.9.9-CMakeLists.txt.patch,
+  -files/plplot-5.9.9-no-pdftest.patch, -files/plplot-5.9.9-tk86.patch,
+  -plplot-5.9.10-r1.ebuild, -plplot-5.9.11-r1.ebuild, -plplot-5.9.9-r2.ebuild:
+  Fixed conflicting macro in installed headers, bug #503076
 
   27 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.10.0.ebuild:
   Bump minimum swig version for octave bindings, thanks disperato bug #503418.
