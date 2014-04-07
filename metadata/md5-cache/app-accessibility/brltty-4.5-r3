@@ -11,4 +11,4 @@ REQUIRED_USE=doc? ( api ) java? ( api ) ocaml? ( api ) python? ( api ) tcl? ( ap
 SLOT=0
 SRC_URI=http://mielke.cc/brltty/releases/brltty-4.5.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	findlib	9cf6020ee5481f39f1aa566a323f9868	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=285ec6a1332db4b0385634fbb5a571ea
+_md5_=7ffc06a5e5b56f563aa6e679a2c13570

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.148 2014/02/22 20:04:25 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.149 2014/04/07 18:35:50 vapier Exp $
+
+  07 Apr 2014; Mike Frysinger <vapier@gentoo.org> brltty-4.5-r3.ebuild,
+  brltty-5.0-r2.ebuild:
+  Do not use `pkg-config` all the time.
 
   22 Feb 2014; Christopher Brannon <teiresias@gentoo.org> -brltty-4.2.ebuild,
   -brltty-4.2-r1.ebuild, -files/brltty-4.2-fix-a2.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r3.ebuild,v 1.8 2014/01/19 10:17:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r3.ebuild,v 1.9 2014/04/07 18:35:50 vapier Exp $
 
 EAPI=5
 
@@ -50,6 +50,12 @@ src_prepare() {
 
 	java-pkg-opt-2_src_prepare
 
+	# The code runs `pkg-config` directly instead of locating a suitable
+	# pkg-config wrapper (or respecting $PKG_CONFIG).
+	sed -i \
+		-e 's/\<pkg-config\>/${PKG_CONFIG:-pkg-config}/' \
+		aclocal.m4 configure.ac || die
+
 	# We run eautoconf instead of using eautoreconf because brltty uses
 	# a custom build system that uses autoconf without the rest of the
 	# autotools.
@@ -57,7 +63,7 @@ src_prepare() {
 }
 
 src_configure() {
-	tc-export AR LD
+	tc-export AR LD PKG_CONFIG
 	# override prefix in order to install into /
 	# braille terminal needs to be available as soon in the boot process as
 	# possible
