@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.15.ebuild,v 1.1 2014/04/07 15:03:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.15.ebuild,v 1.2 2014/04/07 22:15:50 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib systemd toolchain-funcs user
@@ -59,7 +59,7 @@ src_install() {
 	fowners root:x2goprint /usr/bin/x2goprint
 	fperms 2755 /usr/bin/x2goprint
 	fperms 0750 /etc/sudoers.d
-	fperms 0440 /etc/sudoers.d/*
+	fperms 0440 /etc/sudoers.d/x2goserver
 	dosym /usr/share/applications /etc/x2go/applications
 
 	newinitd "${FILESDIR}"/${PN}.init x2gocleansessions
