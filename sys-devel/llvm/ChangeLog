@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.185 2014/04/02 23:24:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.186 2014/04/07 20:59:49 mgorny Exp $
+
+  07 Apr 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Update PYTHON_COMPAT in the live ebuild.
 
 *llvm-3.4-r1 (02 Apr 2014)
 
