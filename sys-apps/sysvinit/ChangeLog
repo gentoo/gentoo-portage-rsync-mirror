@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.135 2014/04/07 19:46:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.136 2014/04/07 20:10:29 vapier Exp $
+
+  07 Apr 2014; Mike Frysinger <vapier@gentoo.org> sysvinit-2.88-r7.ebuild:
+  Mark arm64/m68k/s390/sh stable #506592.
 
   07 Apr 2014; Markus Meier <maekke@gentoo.org> sysvinit-2.88-r7.ebuild:
   arm stable, bug #506592

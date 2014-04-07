@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.455 2014/04/07 19:45:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.456 2014/04/07 20:11:10 vapier Exp $
+
+  07 Apr 2014; Mike Frysinger <vapier@gentoo.org> util-linux-2.22.2.ebuild,
+  util-linux-2.23.2-r2.ebuild, util-linux-2.24.1-r1.ebuild,
+  util-linux-2.24.1-r2.ebuild, util-linux-2.24.ebuild, util-linux-9999.ebuild:
+  Mark arm64/m68k/s390/sh stable #506592.
 
   07 Apr 2014; Markus Meier <maekke@gentoo.org> util-linux-2.24.1-r2.ebuild:
   arm stable, bug #506592

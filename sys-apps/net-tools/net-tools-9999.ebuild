@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.5 2014/01/18 03:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-9999.ebuild,v 1.6 2014/04/07 20:11:30 vapier Exp $
 
 EAPI="3"
 
@@ -9,7 +9,6 @@ inherit flag-o-matic toolchain-funcs eutils
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://net-tools.git.sourceforge.net/gitroot/net-tools/net-tools"
 	inherit git-2
-	KEYWORDS=""
 else
 	PATCH_VER="1"
 	SRC_URI="mirror://gentoo/${P}.tar.xz
