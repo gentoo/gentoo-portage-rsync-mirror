@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst prepare
+DESCRIPTION=Protein Secondary Structure Prediction
+EAPI=5
+HOMEPAGE=http://bioinf.cs.ucl.ac.uk/psipred/
+IUSE=test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=psipred
+RDEPEND=app-shells/tcsh sci-biology/ncbi-tools sci-biology/ncbi-tools++
+SLOT=0
+SRC_URI=http://bioinf.cs.ucl.ac.uk/downloads/psipred/psipred3.5.tar.gz test? ( http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/old/data/tdbdata.tar.gz )
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=39462b85223b92595f45c9771bf3abe1

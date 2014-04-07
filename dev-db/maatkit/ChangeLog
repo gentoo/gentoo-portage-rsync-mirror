@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.28 2014/03/03 23:36:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.29 2014/04/07 14:23:38 zlogene Exp $
+
+  07 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -maatkit-7540.ebuild:
+  Drop old
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> maatkit-7540-r1.ebuild:
   amd64 stable, bug #491976

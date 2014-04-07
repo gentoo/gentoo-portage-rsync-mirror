@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-ivtv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.20 2014/03/05 15:30:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.21 2014/04/07 14:15:03 zlogene Exp $
+
+  07 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -Video-ivtv-0.13.ebuild:
+  Drop old
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> Video-ivtv-0.13-r1.ebuild:
   Stable for ppc, wrt bug #495504

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.8.ebuild,v 1.1 2014/04/05 13:08:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.8.ebuild,v 1.2 2014/04/07 14:30:23 ssuominen Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.midori-browser.org/"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-IUSE="deprecated doc granite +introspection +jit +webkit2 zeitgeist"
+IUSE="deprecated doc granite introspection +jit +webkit2 zeitgeist"
 
 RDEPEND=">=dev-db/sqlite-3.6.19:3
 	>=dev-libs/glib-2.32.3
@@ -54,7 +54,8 @@ DEPEND="${RDEPEND}
 	gnome-base/librsvg
 	sys-devel/gettext
 	doc? ( dev-util/gtk-doc )"
-REQUIRED_USE="webkit2? ( !deprecated )"
+REQUIRED_USE="introspection? ( deprecated )
+	webkit2? ( !deprecated )"
 
 S=${WORKDIR}
 
