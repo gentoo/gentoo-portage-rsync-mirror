@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gimmix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.34 2014/03/22 19:19:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.35 2014/04/07 09:15:18 angelos Exp $
+
+*gimmix-0.5.7.2 (07 Apr 2014)
+
+  07 Apr 2014; Christoph Mende <angelos@gentoo.org> +gimmix-0.5.7.2.ebuild:
+  Version bump
 
   22 Mar 2014; Christoph Mende <angelos@gentoo.org>
   +files/gimmix-0.5.7.1-symbol-collision.patch, gimmix-0.5.7.1.ebuild:

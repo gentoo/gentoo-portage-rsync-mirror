@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.347 2014/04/05 22:01:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.348 2014/04/07 09:17:12 pinkbyte Exp $
+
+  07 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> curl-7.36.0.ebuild:
+  Stable on arm, wrt bug #505864
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.36.0.ebuild:
   Stable for amd64, wrt bug #505864
