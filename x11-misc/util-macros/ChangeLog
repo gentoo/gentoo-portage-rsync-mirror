@@ -1,5 +1,8 @@
 # ChangeLog for x11-misc/util-macros
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.135 2014/04/06 10:11:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.136 2014/04/08 20:03:56 ago Exp $
+
+  08 Apr 2014; Agostino Sarubbo <ago@gentoo.org> util-macros-1.18.0.ebuild:
+  Stable for ppc, wrt bug #500368
 
   06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> util-macros-1.18.0.ebuild:
   Stable for x86, wrt bug #500368

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.21 2014/04/06 10:10:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.22 2014/04/08 20:03:04 ago Exp $
+
+  08 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glu-9.0.0-r1.ebuild:
+  Stable for ppc, wrt bug #500368
 
   06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glu-9.0.0-r1.ebuild:
   Stable for x86, wrt bug #500368
