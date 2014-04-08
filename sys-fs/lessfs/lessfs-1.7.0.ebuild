@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.7.0.ebuild,v 1.1 2013/11/23 23:26:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.7.0.ebuild,v 1.2 2014/04/08 21:23:17 hwoarang Exp $
 
 EAPI="5"
 inherit readme.gentoo
@@ -14,16 +14,17 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${MY_P}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="berkdb crypt debug filelog memtrace lzo"
+IUSE="berkdb crypt debug filelog memtrace lzo snappy"
 
 DEPEND="berkdb? ( sys-libs/db )
-		>=dev-db/tokyocabinet-1.4.42
-		app-crypt/mhash
-		>=sys-fs/fuse-2.8.0
-		crypt? ( dev-libs/openssl )
-		lzo? ( dev-libs/lzo )"
+	crypt? ( dev-libs/openssl )
+	lzo? ( dev-libs/lzo )
+	snappy? ( app-arch/snappy )
+	>=dev-db/tokyocabinet-1.4.42
+	app-crypt/mhash
+	>=sys-fs/fuse-2.8.0"
 
-RDEPEND=""
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -36,7 +37,8 @@ src_configure() {
 		$(use_enable debug) $(use_enable debug lckdebug) \
 		$(use_enable filelog) $(use_with crypt crypto) \
 		$(use_with lzo) $(use_enable memtrace) \
-		$(use_with berkdb berkeleydb)
+		$(use_with berkdb berkeleydb) \
+		$(use_with snappy)
 }
 
 src_install () {

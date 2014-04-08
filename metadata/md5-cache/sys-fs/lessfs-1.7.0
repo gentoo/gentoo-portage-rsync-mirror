@@ -1,12 +1,13 @@
 DEFINED_PHASES=configure install postinst
-DEPEND=berkdb? ( sys-libs/db ) >=dev-db/tokyocabinet-1.4.42 app-crypt/mhash >=sys-fs/fuse-2.8.0 crypt? ( dev-libs/openssl ) lzo? ( dev-libs/lzo )
+DEPEND=berkdb? ( sys-libs/db ) crypt? ( dev-libs/openssl ) lzo? ( dev-libs/lzo ) snappy? ( app-arch/snappy ) >=dev-db/tokyocabinet-1.4.42 app-crypt/mhash >=sys-fs/fuse-2.8.0
 DESCRIPTION=A high performance inline data deduplicating filesystem
 EAPI=5
 HOMEPAGE=http://www.lessfs.com
-IUSE=berkdb crypt debug filelog memtrace lzo
+IUSE=berkdb crypt debug filelog memtrace lzo snappy
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
+RDEPEND=berkdb? ( sys-libs/db ) crypt? ( dev-libs/openssl ) lzo? ( dev-libs/lzo ) snappy? ( app-arch/snappy ) >=dev-db/tokyocabinet-1.4.42 app-crypt/mhash >=sys-fs/fuse-2.8.0
 SLOT=0
 SRC_URI=mirror://sourceforge/lessfs/lessfs/lessfs-1.7.0/lessfs-1.7.0.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=cd10d7864efd9f175b697a268837cd69
+_md5_=8b196394ae174d9271926f94a104f7c6

@@ -6618,6 +6618,7 @@ sys-fs/ext4magic:file-attr - Enable the recovery of file attributes (append, imm
 sys-fs/fur:void-chmod - Enable fake hook for "chmod" that will only return 0
 sys-fs/lessfs:filelog - Enable the ability to log to a file instead of syslog
 sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation
+sys-fs/lessfs:snappy - Enable snappy compression using the app-arch/snappy library
 sys-fs/loop-aes:aes-ni - Enable support for Intel's AES instruction set
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources

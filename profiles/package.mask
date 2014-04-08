@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15543 2014/04/08 10:10:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15544 2014/04/08 21:02:17 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (08 Apr 2014)
+# Mask slotted versions of PyPy for removal. Since almost every release
+# of PyPy had its own slot, the slotting caused major maintenance issues
+# for Python package developers and unfriendly upgrade routine for
+# users. It also resulted in PyPy interpreter names incompatible with
+# other distributions (e.g. 'pypy-c2.0').
+#
+# Please switch to non-slotted dev-python/pypy:0 or /pypy-bin:0 instead,
+# and the corresponding PYTHON_TARGETS=pypy flag. You may also want to
+# consider unmasking >=dev-python/pypy-2.2 first (no binary package
+# yet).
+#
+# The ebuilds will be removed in 30 days. In case of any questions
+# or issues, please do not hesitate to write on bug #507090.
+dev-python/pypy:2.0
+dev-python/pypy-bin:2.0
+virtual/pypy:2.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (08 Apr 2014)
 # Security mask of vulnerable versions, wrt bug #505278

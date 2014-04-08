@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.293 2014/04/03 19:34:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.294 2014/04/08 21:01:41 ssuominen Exp $
 
 EAPI=5
 
@@ -481,9 +481,7 @@ pkg_postinst() {
 	local net_rules_path="${ROOT%/}"/etc/udev/rules.d
 	local net_name_slot="${net_rules_path}"/80-net-name-slot.rules
 	local net_setup_link="${net_rules_path}"/80-net-setup-link.rules
-	if [[ -e ${net_setup_link} ]]; then
-		net_move=no
-	else
+	if [[ ! -e ${net_setup_link} ]]; then
 		[[ -f ${net_name_slot} && $(sed -e "/^#/d" -e "/^\W*$/d" ${net_name_slot} | wc -l) == 0 ]] && net_move=yes
 		if [[ -L ${net_name_slot} && $(readlink ${net_name_slot}) == /dev/null ]]; then
 			net_move=yes
