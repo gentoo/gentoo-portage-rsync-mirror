@@ -1,0 +1,25 @@
+http://bugs.gentoo.org/show_bug.cgi?id=503692#c7
+http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&t=25376
+
+--- coders/pdf.c
++++ coders/pdf.c
+@@ -1276,7 +1276,7 @@ RestoreMSCWarning
+         break;
+       }
+ #endif
+-#if !defined(MAGICKCORE_JP2_DELEGATE)
++#if !defined(MAGICKCORE_LIBOPENJP2_DELEGATE)
+       case JPEG2000Compression:
+       {
+         compression=RLECompression;
+--- magick/version.c
++++ magick/version.c
+@@ -141,7 +141,7 @@ MagickExport const char *GetMagickDelega
+ #if defined(MAGICKCORE_JPEG_DELEGATE) && defined(MAGICKCORE_PNG_DELEGATE)
+   "jng "
+ #endif
+-#if defined(MAGICKCORE_JP2_DELEGATE)
++#if defined(MAGICKCORE_LIBOPENJP2_DELEGATE)
+   "jp2 "
+ #endif
+ #if defined(MAGICKCORE_JPEG_DELEGATE)
