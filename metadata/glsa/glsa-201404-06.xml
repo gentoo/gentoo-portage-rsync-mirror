@@ -42,7 +42,7 @@
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=media-libs/mesa-9.1.6"
+      # emerge --ask --oneshot --verbose "&gt;=media-libs/mesa-9.1.4"
     </code>
     
   </resolution>

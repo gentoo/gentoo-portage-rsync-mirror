@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.72 2014/04/08 09:08:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.1 2014/04/08 09:10:44 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib
