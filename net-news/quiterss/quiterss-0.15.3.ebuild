@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.14.1.ebuild,v 1.1 2013/12/03 17:49:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.15.3.ebuild,v 1.1 2014/04/08 19:00:05 maksbotan Exp $
 
 EAPI=5
 
-PLOCALES="ar cs de el_GR es fa fr hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ th tr uk vi zh_CN zh_TW"
+PLOCALES="ar cs de el_GR es fa fi fr gl hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ tr uk vi zh_CN zh_TW"
 inherit l10n qt4-r2
 
 MY_P="QuiteRSS-${PV}-src"
@@ -19,7 +19,6 @@ KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug phonon"
 
 RDEPEND="
-	dev-db/sqlite:3
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsingleapplication
@@ -27,7 +26,9 @@ RDEPEND="
 	dev-qt/qtwebkit:4
 	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+"
 
 S="${WORKDIR}/${MY_P}"
 
