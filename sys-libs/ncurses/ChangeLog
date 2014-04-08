@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.217 2014/01/18 02:22:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.218 2014/04/08 03:13:11 vapier Exp $
+
+  08 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/ncurses-5.9-pkg-config.patch, ncurses-5.9-r3.ebuild:
+  Convert configure flags to an array to make management easier.  Fix pkg-config
+  file install when cross-compiling or installing for the first time.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> ncurses-5.9-r2.ebuild,
   ncurses-5.9-r3.ebuild:

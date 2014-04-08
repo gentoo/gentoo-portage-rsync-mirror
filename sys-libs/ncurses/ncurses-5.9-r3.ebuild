@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r3.ebuild,v 1.4 2014/01/18 02:22:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r3.ebuild,v 1.5 2014/04/08 03:13:11 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs multilib-minimal
@@ -39,6 +39,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.7-nongnu.patch
 	epatch "${FILESDIR}"/${PN}-5.9-rxvt-unicode-9.15.patch #192083 #383871
 	epatch "${FILESDIR}"/${PN}-5.9-fix-clang-build.patch #417763
+	epatch "${FILESDIR}"/${PN}-5.9-pkg-config.patch
 }
 
 src_configure() {
@@ -72,54 +73,59 @@ do_configure() {
 	cd "${BUILD_DIR}"-$1 || die
 	shift
 
-	# ncurses is dumb and doesn't install .pc files unless pkg-config
-	# is also installed.  Force the tests to go our way.  Note that it
-	# doesn't actually use pkg-config ... it just looks for set vars.
-	tc-export PKG_CONFIG
-	export PKG_CONFIG_LIBDIR="/usr/$(get_libdir)/pkgconfig"
+	local conf=(
+		# We need the basic terminfo files in /etc, bug #37026.  We will
+		# add '--with-terminfo-dirs' and then populate /etc/terminfo in
+		# src_install() ...
+		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo"
 
-	# The chtype/mmask-t settings below are to retain ABI compat
-	# with ncurses-5.4 so dont change em !
-	local conf_abi="
-		--with-chtype=long \
-		--with-mmask-t=long \
-		--disable-ext-colors \
-		--disable-ext-mouse \
-		--without-pthread \
-		--without-reentrant \
-	"
-	# We need the basic terminfo files in /etc, bug #37026.  We will
-	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
-	# src_install() ...
-#		$(use_with berkdb hashed-db)
-	econf \
-		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo" \
-		--with-shared \
-		--without-hashed-db \
-		$(use_with ada) \
-		$(use_with cxx) \
-		$(use_with cxx cxx-binding) \
-		$(use_with debug) \
-		$(use_with profile) \
-		$(use_with gpm) \
-		$(multilib_is_native_abi || use_with gpm gpm libgpm.so.1) \
-		--disable-termcap \
-		--enable-symlinks \
-		--with-rcs-ids \
-		--with-manpage-format=normal \
-		--enable-const \
-		--enable-colorfgbg \
-		--enable-echo \
-		--enable-pc-files \
-		$(use_enable !ada warnings) \
-		$(use_with debug assertions) \
-		$(use_enable debug leaks) \
-		$(use_with debug expanded) \
-		$(use_with !debug macros) \
-		$(use_with trace) \
-		$(use_with tinfo termlib) \
-		${conf_abi} \
-		"$@"
+		# Disabled until #245417 is sorted out.
+		#$(use_with berkdb hashed-db)
+
+		# ncurses is dumb and doesn't install .pc files unless pkg-config
+		# is also installed.  Force the tests to go our way.  Note that it
+		# doesn't actually use pkg-config ... it just looks for set vars.
+		--enable-pc-files
+		--with-pkg-config="$(tc-getPKG_CONFIG)"
+		# This path is used to control where the .pc files are installed.
+		PKG_CONFIG_LIBDIR="/usr/$(get_libdir)/pkgconfig"
+
+		# Now the rest of the various standard flags.
+		--with-shared
+		--without-hashed-db
+		$(use_with ada)
+		$(use_with cxx)
+		$(use_with cxx cxx-binding)
+		$(use_with debug)
+		$(use_with profile)
+		$(use_with gpm)
+		$(multilib_is_native_abi || use_with gpm gpm libgpm.so.1)
+		--disable-termcap
+		--enable-symlinks
+		--with-rcs-ids
+		--with-manpage-format=normal
+		--enable-const
+		--enable-colorfgbg
+		--enable-echo
+		$(use_enable !ada warnings)
+		$(use_with debug assertions)
+		$(use_enable debug leaks)
+		$(use_with debug expanded)
+		$(use_with !debug macros)
+		$(use_with trace)
+		$(use_with tinfo termlib)
+
+		# The chtype/mmask-t settings below are to retain ABI compat
+		# with ncurses-5.4 so dont change em !
+		--with-chtype=long
+		--with-mmask-t=long
+		--disable-ext-colors
+		--disable-ext-mouse
+		--without-pthread
+		--without-reentrant
+	)
+
+	econf "${conf[@]}" "$@"
 }
 
 src_compile() {
