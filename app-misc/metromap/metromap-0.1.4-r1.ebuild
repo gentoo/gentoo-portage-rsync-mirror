@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/metromap/metromap-0.1.4-r1.ebuild,v 1.2 2013/05/31 15:06:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/metromap/metromap-0.1.4-r1.ebuild,v 1.3 2014/04/08 17:20:12 maksbotan Exp $
 
 EAPI="5"
 
@@ -20,6 +20,7 @@ IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	>=dev-python/pygtk-2.8:2[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
@@ -34,4 +35,18 @@ src_compile() { :; }
 src_install() {
 	emake DESTDIR="${ED}"/usr install
 	python_optimize "${ED}"/usr/share/metromap/modules/
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
