@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/ddd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.75 2013/02/21 16:12:26 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.76 2014/04/08 00:48:03 reavertm Exp $
+
+*ddd-3.3.12-r4 (08 Apr 2014)
+
+  08 Apr 2014; Maciej Mrozowski <reavertm@gentoo.org> +ddd-3.3.12-r4.ebuild,
+  +files/ddd-3.3.12-tinfo.patch, -ddd-3.3.12-r1.ebuild, -ddd-3.3.12-r2.ebuild:
+  Add tinfo as termcap-compatible library. Patch by Jeroen Roovers. Bug 458186.
+  Remove old.
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ddd-3.3.12-r3.ebuild:
   Stable for sparc, wrt bug #456630

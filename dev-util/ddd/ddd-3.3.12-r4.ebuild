@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r2.ebuild,v 1.9 2012/10/24 19:09:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r4.ebuild,v 1.1 2014/04/08 00:48:03 reavertm Exp $
 
 EAPI="4"
 
@@ -11,9 +11,9 @@ HOMEPAGE="http://www.gnu.org/software/ddd"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
-IUSE="+gnuplot"
+IUSE="+gnuplot readline"
 
 COMMON_DEPEND="
 	sys-devel/gdb
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	>=x11-libs/motif-2.3:0
 	ppc? ( dev-libs/elfutils )
 	ppc64? ( dev-libs/elfutils )
+	readline? ( sys-libs/readline )
 "
 DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto
@@ -39,12 +40,25 @@ RESTRICT="test"
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc44.patch"
+	"${FILESDIR}/${P}-gdb-disassembler-bug.patch"
+	"${FILESDIR}/${PN}-3.3.12-man.patch"
+	"${FILESDIR}/${PN}-3.3.12-tinfo.patch"
 )
 
 DOCS=(
 	AUTHORS CREDITS INSTALL NEWS PROBLEMS README TIPS TODO
 	doc/ddd{-paper.ps,.pdf,-themes.pdf}
 )
+
+AUTOTOOLS_AUTORECONF=1
+
+src_configure() {
+	local myeconfargs=(
+		--disable-static
+		$(use_with readline)
+	)
+	autotools-utils_src_configure
+}
 
 src_install() {
 	# Remove app defaults
