@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/circuit_macros/circuit_macros-7.7.2.ebuild,v 1.1 2014/01/10 18:01:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/circuit_macros/circuit_macros-7.8.4.ebuild,v 1.1 2014/04/08 19:47:55 calchan Exp $
 
 EAPI=5
 
