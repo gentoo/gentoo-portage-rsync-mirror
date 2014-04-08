@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15542 2014/04/06 15:57:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15543 2014/04/08 10:10:17 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (08 Apr 2014)
+# Security mask of vulnerable versions, wrt bug #505278
+<dev-libs/openssl-1.0.0l:0
 
 # Markos Chandras <hwoarang@gentoo.org> (07 Apr 2014)
 # Mark -rc releases for testing
