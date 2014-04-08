@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.68 2014/02/05 09:46:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.70 2014/04/08 08:37:34 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib
@@ -33,10 +33,13 @@ RDEPEND="!sys-apps/module-init-tools
 	openrc? ( !<sys-apps/openrc-0.12 )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
 DEPEND="${RDEPEND}
-	dev-libs/libxslt
 	doc? ( dev-util/gtk-doc )
 	lzma? ( virtual/pkgconfig )
 	zlib? ( virtual/pkgconfig )"
+if [[ ${PV} == 9999* ]]; then
+	DEPEND="${DEPEND}
+		dev-libs/libxslt"
+fi
 
 src_prepare() {
 	if [ ! -e configure ]; then
@@ -110,20 +113,23 @@ src_install() {
 
 pkg_postinst() {
 	if use openrc; then
-		if [[ -L ${ROOT}etc/runlevels/boot/static-nodes ]]; then
+		if [[ -L ${ROOT%/}/etc/runlevels/boot/static-nodes ]]; then
 			ewarn "Removing old conflicting static-nodes init script from the boot runlevel"
-			rm -f "${ROOT}"etc/runlevels/boot/static-nodes
+			rm -f "${ROOT%/}"/etc/runlevels/boot/static-nodes
 		fi
 
 		# Add kmod to the runlevel automatically if this is the first install of this package.
 		if [[ -z ${REPLACING_VERSIONS} ]]; then
-			if [[ -x ${ROOT}etc/init.d/kmod-static-nodes && -d ${ROOT}etc/runlevels/sysinit ]]; then
-				ln -s /etc/init.d/kmod-static-nodes "${ROOT}"/etc/runlevels/sysinit/kmod-static-nodes
+			if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
+				mkdir -p "${ROOT%/}"/etc/runlevels/sysinit
+			fi
+			if [[ -x ${ROOT%/}/etc/init.d/kmod-static-nodes ]]; then
+				ln -s /etc/init.d/kmod-static-nodes "${ROOT%/}"/etc/runlevels/sysinit/kmod-static-nodes
 			fi
 		fi
 
-		if [[ -e ${ROOT}etc/runlevels/sysinit ]]; then
-			if [[ ! -e ${ROOT}etc/runlevels/sysinit/kmod-static-nodes ]]; then
+		if [[ -e ${ROOT%/}/etc/runlevels/sysinit ]]; then
+			if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/kmod-static-nodes ]]; then
 				ewarn
 				ewarn "You need to add kmod-static-nodes to the sysinit runlevel for"
 				ewarn "kernel modules to have required static nodes!"

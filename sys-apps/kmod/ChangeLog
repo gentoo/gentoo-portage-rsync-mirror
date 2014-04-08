@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.139 2014/04/05 11:02:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.141 2014/04/08 08:37:34 ssuominen Exp $
+
+  08 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-9999.ebuild:
+  Move dev-libs/libxslt behind ifdef based on 9999 because it's no longer
+  required for released tarballs as per NEWS.
+
+  08 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-9999.ebuild:
+  Push last change to -16 also to -9999.
 
   05 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-16.ebuild:
   If /etc/runlevels/sysinit is missing when we are installing for the first

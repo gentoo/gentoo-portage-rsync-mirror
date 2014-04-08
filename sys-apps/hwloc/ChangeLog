@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.45 2014/03/17 07:01:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.46 2014/04/08 08:47:02 alexxy Exp $
+
+*hwloc-1.9 (08 Apr 2014)
+
+  08 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.9.ebuild,
+  -hwloc-1.4.2.ebuild, -hwloc-1.5.ebuild:
+  [sys-apps/hwloc] Version bump
 
   17 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
