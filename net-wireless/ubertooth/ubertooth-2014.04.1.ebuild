@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.20 2014/04/08 02:36:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2014.04.1.ebuild,v 1.1 2014/04/08 02:36:20 zerochaos Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ REQUIRED_USE="dfu? ( python )
 		ubertooth1-firmware? ( dfu )
 		python? ( || ( dfu specan ) )"
 DEPEND="bluez? ( net-wireless/bluez )
-	>=net-libs/libbtbb-${PV}:=
+	>=net-libs/libbtbb-2014.02.2:=
 	net-libs/libpcap"
 RDEPEND="${DEPEND}
 	specan? ( virtual/libusb:1
@@ -88,7 +88,7 @@ src_install() {
 	cmake-utils_src_install
 
 	insinto /lib/firmware
-	cd "${WORKDIR}/{PN}-${MY_PV}" || die
+	cd "${WORKDIR}/${PN}-${MY_PV}" || die
 	if [[ ${PV} == "9999" ]] ; then
 		ewarn "Firmware isn't available for git releases, we assume you are already"
 		ewarn "on the latest and/or can build your own."

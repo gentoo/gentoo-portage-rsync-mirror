@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nose-cover3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/ChangeLog,v 1.6 2014/03/31 21:19:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/ChangeLog,v 1.7 2014/04/08 02:50:20 idella4 Exp $
+
+  08 Apr 2014; Ian Delaney <idella4@gentoo.org> -nose-cover3-0.1.0.ebuild,
+  nose-cover3-0.1.0-r1.ebuild:
+  Add py3.4 support, rm old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> nose-cover3-0.1.0-r1.ebuild:
   Add support for the new PyPy slotting.
