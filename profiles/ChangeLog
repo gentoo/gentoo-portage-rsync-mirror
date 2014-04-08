@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8791 2014/04/06 15:57:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8792 2014/04/08 09:43:45 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> arch/amd64/use.mask,
+  arch/x86/use.mask, base/ChangeLog, base/use.mask,
+  desc/openmpi_ofed_features.desc:
+  Add udcm desk
+
+  08 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> arch/amd64/use.mask,
+  arch/x86/use.mask, base/ChangeLog, base/use.mask:
+  CUDA only available on x86 and amd64 so mask it globaly and unmask only on
+  target arches
 
   06 Apr 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask openocd-0.8.0_rc* releases for testing

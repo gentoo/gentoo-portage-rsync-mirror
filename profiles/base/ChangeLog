@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.669 2014/04/06 16:56:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.670 2014/04/08 09:43:46 alexxy Exp $
+
+  08 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> use.mask:
+  Mask cuda globaly
 
   06 Apr 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask USE=pypy for sys-apps/portage, since pypy has limited KEYWORDS.
