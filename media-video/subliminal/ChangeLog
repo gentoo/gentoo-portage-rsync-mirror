@@ -1,6 +1,12 @@
 # ChangeLog for media-video/subliminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subliminal/ChangeLog,v 1.4 2014/03/14 15:02:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subliminal/ChangeLog,v 1.5 2014/04/08 16:54:23 maksbotan Exp $
+
+*subliminal-0.7.4 (08 Apr 2014)
+
+  08 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> +subliminal-0.7.4.ebuild,
+  subliminal-9999.ebuild:
+  Bump to 0.7.4, update live ebuild, bug #505044. Thanks to Nikoli.
 
   14 Mar 2014; Maxim Koltsov <maksbotan@gentoo.org> subliminal-0.7.3.ebuild,
   subliminal-9999.ebuild:
