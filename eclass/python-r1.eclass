@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.67 2014/04/05 20:56:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.68 2014/04/08 16:05:30 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -85,7 +85,7 @@ fi
 #
 # Example:
 # @CODE
-# PYTHON_COMPAT_OVERRIDE='pypy2_0 python3_3' emerge -1v dev-python/foo
+# PYTHON_COMPAT_OVERRIDE='pypy python3_3' emerge -1v dev-python/foo
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_REQ_USE
@@ -560,9 +560,6 @@ _python_check_USE_PYTHON() {
 					;;
 				jython*)
 					abi=${impl#jython}-jython
-					;;
-				pypy*)
-					abi=2.7-pypy-${impl#pypy}
 					;;
 				*)
 					die "Unexpected Python implementation: ${impl}"

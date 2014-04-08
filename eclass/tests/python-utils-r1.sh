@@ -54,13 +54,6 @@ test_var PYTHON_SITEDIR jython2_7 /usr/share/jython-2.7/Lib/site-packages
 test_var PYTHON_PKG_DEP jython2_7 '*dev-java/jython*:2.7'
 test_var PYTHON_SCRIPTDIR jython2_7 /usr/lib/python-exec/jython2.7
 
-test_var EPYTHON pypy2_0 pypy-c2.0
-test_var PYTHON pypy2_0 /usr/bin/pypy-c2.0
-test_var PYTHON_SITEDIR pypy2_0 /usr/lib/pypy2.0/site-packages
-test_var PYTHON_INCLUDEDIR pypy2_0 /usr/lib/pypy2.0/include
-test_var PYTHON_PKG_DEP pypy2_0 '*virtual/pypy*:2.0'
-test_var PYTHON_SCRIPTDIR pypy2_0 /usr/lib/python-exec/pypy-c2.0
-
 test_var EPYTHON pypy pypy
 test_var PYTHON pypy /usr/bin/pypy
 test_var PYTHON_SITEDIR pypy /usr/lib/pypy/site-packages
@@ -71,7 +64,6 @@ test_var PYTHON_SCRIPTDIR pypy /usr/lib/python-exec/pypy
 test_is python_is_python3 python2.7 1
 test_is python_is_python3 python3.2 0
 test_is python_is_python3 jython2.7 1
-test_is python_is_python3 pypy2.0 1
 test_is python_is_python3 pypy 1
 
 texit

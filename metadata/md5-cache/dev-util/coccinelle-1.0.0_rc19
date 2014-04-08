@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/ocaml-3.10:=[ocamlopt?] dev-ml/sexplib:= emacs? ( virtual/ema
 REQUIRED_USE=test? ( ocaml python )
 SLOT=0
 SRC_URI=http://coccinelle.lip6.fr/distrib/coccinelle-1.0.0-rc19.tgz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=9169427327ca3bb5a9f57caabe58b9e1

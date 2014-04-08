@@ -10,5 +10,5 @@ RDEPEND=ldap? ( net-nds/openldap ) ssl? ( curl_ssl_axtls? ( net-libs/axtls app-m
 REQUIRED_USE=threads? ( !adns ) ssl? ( ^^ ( curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_openssl curl_ssl_nss curl_ssl_polarssl ) )
 SLOT=0
 SRC_URI=http://curl.haxx.se/download/curl-7.35.0.tar.bz2 http://dev.gentoo.org/~hasufell/distfiles/curl-7.35.0-polarssl-1.3.x.tar.xz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e978047a1b0872782ed917f0aedc4b1f

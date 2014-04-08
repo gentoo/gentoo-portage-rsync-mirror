@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.52 2014/03/13 08:10:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.53 2014/04/08 16:05:30 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -41,7 +41,7 @@ inherit eutils multilib toolchain-funcs
 # All supported Python implementations, most preferred last.
 _PYTHON_ALL_IMPLS=(
 	jython2_5 jython2_7
-	pypy2_0 pypy
+	pypy
 	python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
@@ -66,10 +66,10 @@ _python_impl_supported() {
 	# keep in sync with _PYTHON_ALL_IMPLS!
 	# (not using that list because inline patterns shall be faster)
 	case "${impl}" in
-		python2_[67]|python3_[234]|pypy2_0|jython2_[57])
+		python2_[67]|python3_[234]|jython2_[57])
 			return 0
 			;;
-		pypy1_[89]|python2_5|python3_1)
+		pypy1_[89]|pypy2_0|python2_5|python3_1)
 			return 1
 			;;
 		pypy)
@@ -239,15 +239,6 @@ python_export() {
 			impl=${1}
 			shift
 			;;
-		pypy-c*)
-			impl=${1}
-			shift
-			;;
-		pypy*)
-			local v=${1#pypy}
-			impl=pypy-c${v/_/.}
-			shift
-			;;
 		*)
 			impl=${EPYTHON}
 			[[ ${impl} ]] || die "python_export: no impl nor EPYTHON"
@@ -268,14 +259,11 @@ python_export() {
 			PYTHON_SITEDIR)
 				local dir
 				case "${impl}" in
-					python*)
+					python*|pypy)
 						dir=/usr/$(get_libdir)/${impl}
 						;;
 					jython*)
 						dir=/usr/share/${impl/n/n-}/Lib
-						;;
-					pypy*)
-						dir=/usr/$(get_libdir)/${impl/-c/}
 						;;
 				esac
 
@@ -288,8 +276,8 @@ python_export() {
 					python*)
 						dir=/usr/include/${impl}
 						;;
-					pypy*)
-						dir=/usr/$(get_libdir)/${impl/-c/}/include
+					pypy)
+						dir=/usr/$(get_libdir)/${impl}/include
 						;;
 					*)
 						die "${impl} lacks header files"
@@ -368,8 +356,6 @@ python_export() {
 						PYTHON_PKG_DEP='>=dev-lang/python-3.3.2-r2:3.3';;
 					python*)
 						PYTHON_PKG_DEP="dev-lang/python:${impl#python}";;
-					pypy-c2.0)
-						PYTHON_PKG_DEP='>=virtual/pypy-2.0.2:2.0';;
 					pypy)
 						PYTHON_PKG_DEP='virtual/pypy:0=';;
 					jython2.5)
@@ -517,7 +503,7 @@ _python_rewrite_shebang() {
 
 	local impl
 	case "${1}" in
-		python*|jython*|pypy-c*)
+		python*|jython*|pypy*)
 			impl=${1}
 			shift
 			;;

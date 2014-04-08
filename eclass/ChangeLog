@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1197 2014/04/05 20:56:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1198 2014/04/08 16:05:30 mgorny Exp $
+
+  08 Apr 2014; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
+  python-r1.eclass, python-utils-r1.eclass, tests/python-utils-r1.sh:
+  Disable pypy2_0 and clean up after it.
 
   05 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Fix improper suggestions to put unsupported implmentations in USE_PYTHON, bug

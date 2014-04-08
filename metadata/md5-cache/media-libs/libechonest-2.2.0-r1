@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/qjson-0.5 dev-qt/qtcore:4 virtual/pkgconfig dev-qt/qttest:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=dev-libs/qjson-0.5 dev-qt/qtcore:4 virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A library for communicating with The Echo Nest
 EAPI=5
 HOMEPAGE=http://projects.kde.org/projects/playground/libs/libechonest
@@ -10,4 +10,4 @@ RESTRICT=test
 SLOT=0/2.2
 SRC_URI=http://files.lfranchi.com/libechonest-2.2.0.tar.bz2
 _eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c376e3864128978e345aa6358f5a37ed
+_md5_=45daa76b78e8800b1abd3a5ce2f60679

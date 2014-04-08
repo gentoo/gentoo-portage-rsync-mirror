@@ -9,5 +9,5 @@ LICENSE=GPL-2 BSD-2
 RDEPEND=>=dev-libs/glib-2.22 !<app-emulation/qemu-1.1.1-r1 !<sys-apps/sysvinit-2.88-r5
 SLOT=0
 SRC_URI=http://wiki.qemu.org/download/qemu-1.5.2.tar.bz2 http://dev.gentoo.org/~cardoe/distfiles/qemu-1.5.2-e26b4ba6.tar.xz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	53a3a670d39942b0879f95cb17ecb4a1	python-utils-r1	18d8279a3382bf4453e7ff35208ce907	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	11bfe965e02dcecf237594d3e1d18891	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
 _md5_=1016b3372929eaada9ba617f2024debb

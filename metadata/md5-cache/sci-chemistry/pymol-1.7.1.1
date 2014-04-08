@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test
+DEPEND=dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pmw[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyopengl[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] media-libs/freetype:2 media-libs/glew media-libs/libpng media-video/mpeg-tools sys-libs/zlib media-libs/freeglut apbs? ( dev-libs/maloc sci-chemistry/apbs sci-chemistry/pdb2pqr sci-chemistry/pymol-apbs-plugin[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) web? ( !dev-python/webpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=A Python-extensible molecular graphics system
+EAPI=5
+HOMEPAGE=http://www.pymol.org/
+IUSE=apbs web python_targets_python2_7
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
+LICENSE=PSF-2.2
+RDEPEND=dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pmw[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyopengl[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] media-libs/freetype:2 media-libs/glew media-libs/libpng media-video/mpeg-tools sys-libs/zlib media-libs/freeglut apbs? ( dev-libs/maloc sci-chemistry/apbs sci-chemistry/pdb2pqr sci-chemistry/pymol-apbs-plugin[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) web? ( !dev-python/webpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~jlec/distfiles/pymol-1.7.0.0.png.xz http://dev.gentoo.org/~jlec/distfiles/pymol-1.7.1.1.tar.xz
+_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	11bfe965e02dcecf237594d3e1d18891	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=3d8aa32631405133ff2724b886c26567
