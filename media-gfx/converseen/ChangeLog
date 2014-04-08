@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/converseen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.11 2013/10/13 10:16:27 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.12 2014/04/08 17:32:26 maksbotan Exp $
+
+*converseen-0.6.8 (08 Apr 2014)
+
+  08 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> +converseen-0.6.8.ebuild,
+  -converseen-0.4.7.ebuild, -converseen-0.4.9.ebuild, -converseen-0.5.1.ebuild,
+  -converseen-0.5.3.ebuild, -converseen-0.5.ebuild, -converseen-0.6.1.ebuild:
+  Bump to 0.6.8, add dependency on dev-qt/qtcore:4, clean old versions, bug
+  #507084. Thanks to Nikoli.
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.
