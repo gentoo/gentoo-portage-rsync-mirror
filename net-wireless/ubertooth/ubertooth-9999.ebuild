@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.22 2014/04/08 03:35:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.23 2014/04/08 13:45:05 zerochaos Exp $
 
 EAPI="5"
 
@@ -14,14 +14,14 @@ HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+bluez +dfu +specan +python +ubertooth1-firmware +udev"
+IUSE="+bluez +dfu +specan +pcap +python +ubertooth1-firmware +udev"
 REQUIRED_USE="dfu? ( python )
 		specan? ( python )
 		ubertooth1-firmware? ( dfu )
 		python? ( || ( dfu specan ) )"
 DEPEND="bluez? ( net-wireless/bluez:= )
 	>=net-libs/libbtbb-${PV}:=
-	net-libs/libpcap:="
+	pcap? ( net-libs/libpcap:= )"
 RDEPEND="${DEPEND}
 	specan? ( virtual/libusb:1
 		 >=dev-qt/qtgui-4.7.2:4
@@ -32,14 +32,14 @@ RDEPEND="${DEPEND}
 		>=dev-python/pyusb-1.0.0_alpha1 )
 	udev? ( virtual/udev )"
 
+MY_PV=${PV/\./-}
+MY_PV=${MY_PV/./-R}
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/greatscottgadgets/ubertooth.git"
 	inherit git-r3
 	KEYWORDS=""
 	S="${WORKDIR}/${P}/host"
 else
-	MY_PV=${PV/\./-}
-	MY_PV=${MY_PV/./-R}
 	S="${WORKDIR}/${PN}-${MY_PV}/host"
 	SRC_URI="https://github.com/greatscottgadgets/${PN}/releases/download/${MY_PV}/${PN}-${MY_PV}.tar.xz"
 	#re-add arm keyword after making a lib-only target
@@ -73,6 +73,7 @@ src_prepare() {
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_enable bluez USE_BLUEZ)
+		$(cmake-utils_use_enable pcap USE_PCAP)
 		-DDISABLE_PYTHON=true
 	)
 	cmake-utils_src_configure
@@ -88,7 +89,7 @@ src_install() {
 	cmake-utils_src_install
 
 	insinto /lib/firmware
-	cd "${WORKDIR}/{PN}-${MY_PV}" || die
+	cd "${WORKDIR}/${PN}-${MY_PV}" || die
 	if [[ ${PV} == "9999" ]] ; then
 		ewarn "Firmware isn't available for git releases, we assume you are already"
 		ewarn "on the latest and/or can build your own."

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.23 2014/04/08 03:35:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.24 2014/04/08 13:45:05 zerochaos Exp $
+
+  08 Apr 2014; Rick Farina <zerochaos@gentoo.org> metadata.xml,
+  ubertooth-9999.ebuild:
+  make pcap optional and fix a few issues with live ebuild
 
   08 Apr 2014; Rick Farina <zerochaos@gentoo.org> ubertooth-2014.04.1.ebuild,
   ubertooth-9999.ebuild:
