@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.196 2014/03/30 08:21:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.197 2014/04/09 14:04:14 scarabeus Exp $
+
+  09 Apr 2014; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/0001-work-around-Logitech-diNovo-Edge-keyboard-firmware-i.patch:
+  Fix more bluetooth devices matching. bnc#681049 and bnc#850478. Also fxes my
+  mx5500.
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org> +files/rfcomm-init.d-r1:
   Fix rfcomm init.d script (#505786 by Christophe PEREZ and Bombino)

@@ -17,10 +17,10 @@ index db6bb03..7db4572 100644
  
  # Logitech devices
 -KERNEL=="hiddev*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c70[345abce]|c71[34bc]", \
-+KERNEL=="hiddev*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c70[345abce]|c71[3bc]", \
++KERNEL=="hiddev*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c70[5e]", \
 +  RUN+="hid2hci --method=logitech-hid --devpath=%p"
-+# Logitech, Inc. diNovo Edge Keyboard
-+KERNEL=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c714", \
++# Logitech, Inc. RAW communicating devices
++KERNEL=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c70[34abc]|c71[34bc]", \
    RUN+="hid2hci --method=logitech-hid --devpath=%p"
  
  ENV{DEVTYPE}!="usb_device", GOTO="hid2hci_end"

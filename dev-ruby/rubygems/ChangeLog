@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.223 2014/01/26 13:06:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.224 2014/04/09 14:14:41 mrueg Exp $
+
+  09 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -rubygems-1.8.24.ebuild,
+  -rubygems-1.8.25.ebuild:
+  Cleanup old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rubygems-2.0.3.ebuild:
   Stable for alpha, wrt bug #483254
