@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/siefs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.15 2012/02/16 19:21:45 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.16 2014/04/09 10:00:44 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> siefs-0.5-r2.ebuild:
   x86 stable wrt bug #397233
@@ -61,4 +65,3 @@
   +siefs-0.4.ebuild:
   Initial version thanks to Pawel Maczewski <dziubiak@civ.pl> and Robert
   Führicht <the_master_of_disaster@gmx.at>, closes bug 38276
-

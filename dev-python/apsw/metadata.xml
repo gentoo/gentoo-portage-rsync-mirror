@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>mobile-phone</herd>
 	<herd>python</herd>
 	<longdescription>APSW provides an SQLite 3 wrapper that provides the thinnest layer over SQLite 3 possible.
 Everything you can do from the C API to SQLite 3, you can do from Python. 
