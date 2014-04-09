@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8795 2014/04/08 21:59:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8796 2014/04/09 06:29:24 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Apr 2014; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Mask rdiff-backup: Dead upstream, has known dataloss bugs.
 
   08 Apr 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask new lightdm-1.10
