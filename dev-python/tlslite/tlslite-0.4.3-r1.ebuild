@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.4.3-r1.ebuild,v 1.5 2014/03/31 21:12:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/tlslite-0.4.3-r1.ebuild,v 1.6 2014/04/09 00:22:24 floppym Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7} pypy )
 
 inherit distutils-r1
 
@@ -19,12 +19,12 @@ KEYWORDS="amd64 x86"
 IUSE="doc gmp"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/cryptlib-3.3.3[python,$(python_gen_usedep python{2_6,2_7}),$(python_gen_usedep pypy{1_9,2_0})]
+DEPEND=">=dev-libs/cryptlib-3.3.3[python,${PYTHON_USEDEP}]
 	|| (
-		dev-python/m2crypto[$(python_gen_usedep python{2_6,2_7})]
-		dev-python/pycrypto[$(python_gen_usedep python{2_6,2_7})]
+		dev-python/m2crypto[${PYTHON_USEDEP}]
+		dev-python/pycrypto[${PYTHON_USEDEP}]
 	)
-	gmp? ( dev-python/gmpy )"
+	gmp? ( dev-python/gmpy[${PYTHON_USEDEP}] )"
 RDEPEND="${DEPEND}"
 
 # Tests still hang
