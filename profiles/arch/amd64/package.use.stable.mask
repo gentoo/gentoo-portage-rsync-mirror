@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.5 2014/04/01 15:47:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.6 2014/04/08 23:40:34 floppym Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -433,10 +433,6 @@ dev-lang/python-exec -python_targets_pypy
 dev-lang/python-exec -python_single_target_pypy
 dev-python/python-exec -python_targets_pypy
 dev-python/python-exec -python_single_target_pypy
-dev-lang/python-exec -python_targets_pypy2_0
-dev-lang/python-exec -python_single_target_pypy2_0
-dev-python/python-exec -python_targets_pypy2_0
-dev-python/python-exec -python_single_target_pypy2_0
 
 # Mike Gilbert <floppym@gentoo.org> (22 Mar 2014)
 # sys-fs/zfs is not stable.
