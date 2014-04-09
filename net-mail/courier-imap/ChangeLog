@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.204 2013/09/26 17:30:39 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.205 2014/04/09 20:37:13 pacho Exp $
+
+  09 Apr 2014; Pacho Ramos <pacho@gentoo.org> -courier-imap-4.0.6-r3.ebuild,
+  -courier-imap-4.5.0.ebuild, -courier-imap-4.6.0.ebuild,
+  -courier-imap-4.8.0.ebuild, metadata.xml:
+  Now orphan, drop old
 
   26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> courier-imap-4.8.0-r1.ebuild:
   Stable for arm, wrt bug #480082
