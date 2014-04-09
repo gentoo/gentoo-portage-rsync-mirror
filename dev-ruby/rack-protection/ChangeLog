@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rack-protection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-protection/ChangeLog,v 1.19 2014/01/16 07:27:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-protection/ChangeLog,v 1.20 2014/04/09 05:59:02 graaff Exp $
+
+*rack-protection-1.5.3 (09 Apr 2014)
+
+  09 Apr 2014; Hans de Graaff <graaff@gentoo.org>
+  +rack-protection-1.5.3.ebuild:
+  Version bump.
 
 *rack-protection-1.5.2 (16 Jan 2014)
 

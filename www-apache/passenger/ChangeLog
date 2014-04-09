@@ -1,6 +1,16 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.87 2014/03/22 08:20:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.89 2014/04/09 05:54:20 graaff Exp $
+
+  09 Apr 2014; Hans de Graaff <graaff@gentoo.org> -passenger-4.0.37.ebuild,
+  -passenger-4.0.40.ebuild:
+  Remove versions with vulnerable passenger standalone version. Note that the
+  apache module is not affected by this.
+
+*passenger-4.0.41 (09 Apr 2014)
+
+  09 Apr 2014; Hans de Graaff <graaff@gentoo.org> +passenger-4.0.41.ebuild:
+  Version bump. Fix for heartbleed in passenger standalone version.
 
 *passenger-4.0.40 (22 Mar 2014)
 
