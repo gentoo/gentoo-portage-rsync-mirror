@@ -1,0 +1,40 @@
+--- a/nx-session-launcher/Makefile.orig	2008-12-19 16:34:02.000000000 +0100
++++ b/nx-session-launcher/Makefile	2008-12-19 16:34:55.000000000 +0100
+@@ -1,7 +1,6 @@
+ .PHONY: all install
+ 
+-CC=gcc
+-CFLAGS=-g -O2 -Wall -fPIC
++CFLAGS+=-fPIC
+ 
+ SOURCES = nx-session-launcher-suid.c
+ PROGRAMS = nx-session-launcher-suid
+--- a/nxredir/Makefile
++++ b/nxredir/Makefile
+@@ -1,12 +1,11 @@
+ all: libnxredir.so
+ 
+-CC=gcc
+-CFLAGS=-g -O2 -Wall -fPIC
++CFLAGS+=-fPIC
+ LIBNAME=libnxredir.so
+ VERSION=0
+ 
+-libnxredir.so: nxredir.o
+-	$(CC) -fPIC $(CFLAGS) -nostdlib -shared -Wl,-soname,$(LIBNAME).$(VERSION) -o $(LIBNAME).$(VERSION) nxredir.o -ldl -lc
++libnxredir.so: nxredir.c
++	$(CC) -fPIC $(CFLAGS) $(LDFLAGS) -nostdlib -shared -Wl,-soname,$(LIBNAME).$(VERSION) -o $(LIBNAME).$(VERSION) nxredir.c -ldl -lc
+ 
+ clean:
+ 	rm -f $(LIBNAME)
+@@ -14,8 +13,8 @@
+ 	rm -f *.o
+ 
+ ifneq ($(NX_VERSION),)
+-install: all
+-	install -m755 $(LIBNAME) $(DESTDIR)/$$PATH_LIB/
++install:
++	install -m755 $(LIBNAME).$(VERSION) $(DESTDIR)/$$PATH_LIB/
+ 	install -m755 nxredir $(DESTDIR)/$$PATH_BIN/
+ 	install -m755 nxsmb $(DESTDIR)/$$CUPS_BACKEND/
+ 	perl -pi -e "s,PATH_LIB=.*,PATH_LIB=\"$$PATH_LIB\",g" $(DESTDIR)/$$PATH_BIN/nxredir

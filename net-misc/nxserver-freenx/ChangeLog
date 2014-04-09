@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.82 2013/03/02 22:55:17 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.83 2014/04/09 12:44:37 tomwij Exp $
+
+*nxserver-freenx-0.7.3_p104-r7 (09 Apr 2014)
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/nxserver-freenx-0.7.3_p104-r7-QA-fixes.patch,
+  +nxserver-freenx-0.7.3_p104-r7.ebuild:
+  [QA] Revision bump. EAPI 5. Prefix support. Respect user's CC, CFLAGS and
+  LDFLAGS and other QA issues with a newer patch. Sorted some dependencies.
+  Fixes bug #246819, filed by Peter Volkov (pva).
 
   02 Mar 2013; Christoph Junghans <ottxor@gentoo.org>
   nxserver-freenx-0.7.3_p104-r6.ebuild:
