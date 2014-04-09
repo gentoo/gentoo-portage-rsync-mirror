@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pengupop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.21 2014/04/09 06:30:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.22 2014/04/09 06:33:42 mr_bones_ Exp $
+
+  09 Apr 2014; Michael Sterrett <mr_bones_@gentoo.org> pengupop-2.2.5.ebuild:
+  EAPI=5; better icon handling
 
   09 Apr 2014; Tupone Alfredo <tupone@gentoo.org>
   files/pengupop-2.2.5-underlink.patch:
@@ -96,4 +99,3 @@
   15 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +pengupop-2.0.1.ebuild:
   initial commit - ebuild submitted by Paul Bredbury via bug #136724
-
