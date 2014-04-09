@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/librime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.14 2014/01/12 12:48:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.15 2014/04/08 23:27:37 dlan Exp $
+
+*librime-1.1-r1 (08 Apr 2014)
+
+  08 Apr 2014; Yixun Lan <dlan@gentoo.org> +librime-1.1-r1.ebuild,
+  +files/librime-1.1-BOOST_NO_SCOPED_ENUMS.patch,
+  +files/librime-1.1-gcc53613.patch:
+  backport patchhes for <gcc-4.8, thanks @YeLee
 
   12 Jan 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   update metadata.xml, correct email address
