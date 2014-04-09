@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1198 2014/04/08 16:05:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1200 2014/04/09 21:20:47 mgorny Exp $
+
+  09 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Comment out the python_gen_usedep empty argument check until all
+  python_gen_cond_dep uses are fixed.
+
+  09 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Throw explicit error if python_gen_usedep does not match any implementation
+  rather than outputting an empty (invalid) USE-dep.
 
   08 Apr 2014; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
   python-r1.eclass, python-utils-r1.eclass, tests/python-utils-r1.sh:

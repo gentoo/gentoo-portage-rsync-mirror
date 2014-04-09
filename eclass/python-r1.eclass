@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.68 2014/04/08 16:05:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.70 2014/04/09 21:20:47 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -289,6 +289,8 @@ python_gen_usedep() {
 			fi
 		done
 	done
+
+#	[[ ${matches[@]} ]] || die "No supported implementations match python_gen_usedep patterns: ${@}"
 
 	local out=${matches[@]}
 	echo ${out// /,}
