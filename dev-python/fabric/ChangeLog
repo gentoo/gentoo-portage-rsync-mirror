@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.42 2014/03/31 08:31:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.43 2014/04/09 15:18:02 idella4 Exp $
+
+*fabric-1.8.3 (09 Apr 2014)
+
+  09 Apr 2014; Ian Delaney <idella4@gentoo.org> +fabric-1.8.3.ebuild,
+  +files/doc-extensions.patch:
+  bump; patch to fox doc build
 
 *fabric-1.8.2 (31 Mar 2014)
 
