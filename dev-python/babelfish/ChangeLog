@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/babelfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/babelfish/ChangeLog,v 1.3 2014/04/07 21:56:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/babelfish/ChangeLog,v 1.4 2014/04/09 10:03:36 mgorny Exp $
+
+  09 Apr 2014; Michał Górny <mgorny@gentoo.org> babelfish-0.5.1.ebuild,
+  babelfish-9999.ebuild:
+  Update pypy2_0 -> pypy.
 
   07 Apr 2014; Julian Ospald <hasufell@gentoo.org> babelfish-0.5.1.ebuild,
   babelfish-9999.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/sobexsrv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.23 2012/06/02 05:04:06 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.24 2014/04/09 10:02:24 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   02 Jun 2012; Zac Medico <zmedico@gentoo.org> sobexsrv-1.0.1.ebuild:
   inherit user for enewgroup and enewuser
@@ -85,4 +89,3 @@
   +files/conf.d_sobexsrv, +files/init.d_sobexsrv, +metadata.xml,
   +sobexsrv-1.0.0_pre4.ebuild:
   Initial import
-

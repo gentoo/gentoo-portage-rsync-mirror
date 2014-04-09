@@ -1,6 +1,16 @@
 # ChangeLog for app-pda/p3nfs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.20 2009/12/12 10:09:02 mrness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.22 2014/04/09 10:25:00 pinkbyte Exp $
+
+*p3nfs-5.19-r3 (09 Apr 2014)
+
+  09 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> +p3nfs-5.19-r3.ebuild:
+  Revision bump: EAPI 5, epatch_user, some cleanups
+
+  09 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> p3nfs-5.19-r2.ebuild,
+  +files/p3nfs-5.19-set-default-tty.patch:
+  Fix building on systems without serial interfaces, wrt bug #314971, fix minor
+  QA issues
 
 *p3nfs-5.19-r2 (12 Dec 2009)
 
