@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.4 2013/09/05 18:46:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.5 2014/04/09 21:32:50 mgorny Exp $
 
 EAPI=5
 
@@ -51,14 +51,6 @@ python_prepare_all() {
 		-i setup.cfg || die "error setting up libs in setup.cfg"
 
 	distutils-r1_python_prepare_all
-}
-
-python_prepare() {
-	# Syntax "except ImportError as a" works on python2.6 and newer
-	if [ "${MULTIBUILD_VARIANT}" == "python2_5" ] ; then
-		sed -e '/except/s: as :,:' \
-			-i $(find . -name "*.py") || die
-	fi
 }
 
 python_compile_all() {

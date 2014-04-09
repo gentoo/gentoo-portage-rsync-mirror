@@ -8,5 +8,5 @@ LICENSE=Exolab
 RDEPEND=>=virtual/jre-1.4 dev-java/cdegroot-db dev-java/commons-logging =dev-java/jakarta-oro-2.0* >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://gentoo/exolabcore-20050205.tar.bz2
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b0fe5e567bb41f854af849ea5948c062

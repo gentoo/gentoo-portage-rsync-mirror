@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1200 2014/04/09 21:20:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1202 2014/04/09 21:55:12 radhermit Exp $
+
+  09 Apr 2014; Tim Harder <radhermit@gentoo.org> java-utils-2.eclass:
+  Only refer to DESTTREE within the src_install phase.
+
+  09 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Re-enable the python_gen_usedep empty argument check.
 
   09 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Comment out the python_gen_usedep empty argument check until all
