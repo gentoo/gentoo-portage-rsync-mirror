@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.455 2014/04/09 07:19:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.456 2014/04/09 09:21:45 eras Exp $
+
+  09 Apr 2014; Eray Aslan <eras@gentoo.org> squid-3.4.4.ebuild:
+  Add epatch_user call
 
   09 Apr 2014; Eray Aslan <eras@gentoo.org> squid-3.4.4.ebuild:
   Do not inject automagic -march=native - bug #507178.  Thanks to Jeroen Roovers

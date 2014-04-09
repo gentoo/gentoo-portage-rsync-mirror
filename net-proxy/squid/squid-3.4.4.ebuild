@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.3 2014/04/09 07:19:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.4 2014/04/09 09:21:45 eras Exp $
 
 EAPI=5
 
@@ -102,6 +102,8 @@ src_prepare() {
 	# /var/run/squid to /run/squid
 	sed -i -e 's:$(localstatedir)::' \
 		src/ipc/Makefile.am
+
+	epatch_user
 
 	# Bug #419685 - eautoreconf in src_prepare() fails in libltdl/
 	#               aclocal-1.11: `configure.ac' or `configure.in' is required

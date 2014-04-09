@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15546 2014/04/09 06:29:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15547 2014/04/09 09:19:57 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Dead upstream, has known dataloss bugs. 
 # Please use something more sane: rsnapshot, backuppc, obnam, ...
 app-backup/rdiff-backup
+sys-fs/rdiff-backup-fs
 
 # Markos Chandras <hwoarang@gentoo.org> (08 Apr 2014)
 # Masked for futher testing with various pam setups
