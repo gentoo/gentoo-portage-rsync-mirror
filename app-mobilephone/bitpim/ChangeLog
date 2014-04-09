@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/bitpim
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.35 2012/09/05 07:16:37 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.36 2014/04/09 07:14:02 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> bitpim-1.0.6-r1.ebuild:
   Use domenu instead insinto + doins to install .desktop files

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/wammu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.52 2012/11/25 15:36:23 sping Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.53 2014/04/09 07:17:07 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
 *wammu-0.36 (25 Nov 2012)
 
@@ -237,4 +241,3 @@
   +wammu-0.8.ebuild, +files/wammu.desktop, +files/wammu.png:
   Initial import. Thanks goes to Przemyslaw Maciag <p_maciag@wp.pl>
   and tove <bugs@veller.net>. Closing #61982.
-

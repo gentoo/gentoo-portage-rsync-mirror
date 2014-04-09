@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>mobile-phone</herd>
+	<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
 	<longdescription>A small console program to send SMS messages to Spanish cellular phones.</longdescription>
 </pkgmetadata>

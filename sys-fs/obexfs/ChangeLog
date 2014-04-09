@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/obexfs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.11 2009/07/23 08:54:09 mrness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/ChangeLog,v 1.12 2014/04/09 07:08:24 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
 *obexfs-0.12 (23 Jul 2009)
 
@@ -74,4 +78,3 @@
   03 Jan 2006; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   +obexfs-0.6.ebuild:
   Initial import from bug #111997.
-

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/ringtonetools
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ringtonetools/ChangeLog,v 1.11 2008/11/02 18:47:26 mrness Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ringtonetools/ChangeLog,v 1.12 2014/04/09 07:12:46 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   02 Nov 2008; Alin Năstac <mrness@gentoo.org> ringtonetools-2.26.ebuild:
   Respect CC and LDFLAGS env settings (#243686).
@@ -76,4 +80,3 @@
   - This closes bug #15162. thanks to Rigo Ketelings <rigo@home.nl> for sending
   and ebuild for it, it had a couple of lines better handled than my first
   version.
-

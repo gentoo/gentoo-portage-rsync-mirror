@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/ganyremote
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.26 2013/07/25 00:57:50 creffett Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.27 2014/04/09 07:17:24 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
 *ganyremote-6.2 (25 Jul 2013)
 

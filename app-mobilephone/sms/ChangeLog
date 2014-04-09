@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/sms
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sms/ChangeLog,v 1.5 2007/01/08 18:40:10 mrness Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sms/ChangeLog,v 1.6 2014/04/09 07:20:53 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
 *sms-2.1.0 (08 Jan 2007)
 
@@ -78,4 +82,3 @@
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> sms-1.9.2i.ebuild:
   initial commit - thanks to Adam Piatyszek <ediap@et.put.poznan.pl> for the
   ebuild in bug #48398
-

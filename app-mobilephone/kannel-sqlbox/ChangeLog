@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/kannel-sqlbox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel-sqlbox/ChangeLog,v 1.4 2013/07/25 01:53:56 creffett Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel-sqlbox/ChangeLog,v 1.5 2014/04/09 07:19:50 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   25 Jul 2013; Chris Reffett <creffett@gentoo.org> kannel-sqlbox-0.7.2.ebuild:
   Fix LICENSE wrt bug 425914.

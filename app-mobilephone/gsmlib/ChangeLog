@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gsmlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.12 2010/06/01 08:26:20 bangert Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.13 2014/04/09 07:13:41 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   01 Jun 2010; Thilo Bangert <bangert@gentoo.org>
   gsmlib-1.11_pre041028.ebuild:

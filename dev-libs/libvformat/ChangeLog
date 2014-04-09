@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libvformat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.17 2013/01/18 16:51:01 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.18 2014/04/09 07:09:18 tomwij Exp $
+
+  09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
+  and nobody joined it after multiple recruitment mails.
 
   18 Jan 2013; Jeroen Roovers <jer@gentoo.org> libvformat-1.13-r2.ebuild:
   Configure to build static libs or not.
@@ -66,4 +70,3 @@
   22 Apr 2006; Alin Nastac <mrness@gentoo.org>
   +files/libvformat-nodoc.patch, +metadata.xml, +libvformat-1.13.ebuild:
   Initial import from bug #102224.
-

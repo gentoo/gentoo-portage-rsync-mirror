@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.2 2014/03/11 21:01:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.4.ebuild,v 1.3 2014/04/09 07:19:37 eras Exp $
 
 EAPI=5
 
@@ -182,6 +182,7 @@ src_configure() {
 		--enable-follow-x-forwarded-for \
 		--with-large-files \
 		--disable-strict-error-checking \
+		--disable-arch-native \
 		$(use_with caps libcap) \
 		$(use_enable ipv6) \
 		$(use_enable snmp) \
