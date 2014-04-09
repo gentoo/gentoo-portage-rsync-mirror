@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.49-r3.ebuild,v 1.2 2014/04/07 13:27:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.49-r3.ebuild,v 1.3 2014/04/09 16:05:24 jer Exp $
 
 EAPI=5
 
@@ -332,7 +332,7 @@ src_install() {
 		# install nvidia-modprobe setuid and symlink in /usr/bin (bug #505092)
 		doexe ${NV_OBJ}/nvidia-modprobe
 		fowners root:video /opt/bin/nvidia-modprobe
-		fperms 4711 /opt/bin/nvidia-modprobe
+		fperms 4710 /opt/bin/nvidia-modprobe
 		dosym /{opt,usr}/bin/nvidia-modprobe
 
 		doman nvidia-cuda-mps-control.1.gz
