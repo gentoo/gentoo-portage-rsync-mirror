@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.643 2014/03/06 06:33:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.644 2014/04/09 08:57:36 graaff Exp $
+
+  09 Apr 2014; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p484.ebuild,
+  ruby-1.9.3_p545.ebuild, ruby-2.0.0_p353.ebuild, ruby-2.0.0_p353-r1.ebuild,
+  ruby-2.0.0_p353-r2.ebuild, ruby-2.0.0_p451.ebuild, ruby-2.1.0.ebuild,
+  ruby-2.1.1.ebuild:
+  Update eselect examples to not include ruby18. Thanks to ulm for noticing.
 
 *ruby-2.1.1 (06 Mar 2014)
 

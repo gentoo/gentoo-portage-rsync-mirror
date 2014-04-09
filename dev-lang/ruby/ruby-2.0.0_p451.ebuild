@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p451.ebuild,v 1.1 2014/03/05 07:37:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p451.ebuild,v 1.2 2014/04/09 08:57:37 graaff Exp $
 
 EAPI=5
 
@@ -222,7 +222,7 @@ pkg_postinst() {
 
 	elog
 	elog "To switch between available Ruby profiles, execute as root:"
-	elog "\teselect ruby set ruby(18|19|...)"
+	elog "\teselect ruby set ruby(19|20|...)"
 	elog
 }
 
