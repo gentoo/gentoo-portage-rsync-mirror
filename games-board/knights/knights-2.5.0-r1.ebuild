@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.5.0-r1.ebuild,v 1.2 2014/04/09 07:03:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.5.0-r1.ebuild,v 1.3 2014/04/09 10:59:15 johu Exp $
 
 EAPI=5
 
@@ -19,8 +19,12 @@ KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="debug"
 
-DEPEND="$(add_kdebase_dep libkdegames)"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	$(add_kdebase_dep libkdegames)
+"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+"
 
 pkg_postinst() {
 	kde4-base_pkg_postinst

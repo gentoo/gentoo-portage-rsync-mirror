@@ -1931,6 +1931,7 @@ dev-python/amqplib:extras - Install extra tools to generate initial Python mod f
 dev-python/anyvc:bazaar - Add support for Bazaar
 dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/bpython:urwid - Backend based on dev-python/urwid
+dev-python/celery:redis - Enables redis support
 dev-python/celery:sql - Adds SQL support
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp

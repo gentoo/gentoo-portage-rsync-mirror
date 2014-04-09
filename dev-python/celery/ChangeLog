@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.29 2014/03/30 09:16:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.30 2014/04/09 10:52:50 idella4 Exp $
+
+*celery-3.1.10 (09 Apr 2014)
+
+  09 Apr 2014; Ian Delaney <idella4@gentoo.org> +celery-3.1.10.ebuild,
+  +files/celery.confd-r1, +files/celery.initd-r1, metadata.xml:
+  bump; add IUSE redis, optional flag for tests, py3 support, update test phase,
+  new initd and confd files submitted by S. Talpalru in Bug #505492, initially
+  masked for further testing
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him (#398377)
