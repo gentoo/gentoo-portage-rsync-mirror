@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-xproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-xproxy/ChangeLog,v 1.10 2014/04/03 08:59:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-xproxy/ChangeLog,v 1.11 2014/04/10 18:05:18 maksbotan Exp $
+
+*lc-xproxy-0.6.65 (10 Apr 2014)
+
+  10 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-xproxy-0.6.65.ebuild:
+  Bump LeechCraft to 0.5.65, thanks to 0xd34df00d.
 
   03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-xproxy-0.6.60.ebuild:
   x86 stable wrt bug #500914

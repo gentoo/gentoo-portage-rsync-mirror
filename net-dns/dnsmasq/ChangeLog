@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.248 2013/12/10 19:55:03 chutzpah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.249 2014/04/10 18:05:22 chutzpah Exp $
+
+*dnsmasq-2.69 (10 Apr 2014)
+
+  10 Apr 2014; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.69.ebuild,
+  metadata.xml:
+  Version bump, added support for DNSSEC (Bug #504154). Initial ebuild changes
+  contributed by Alex Xu.
 
   10 Dec 2013; Patrick McLean <chutzpah@gentoo.org> +files/dnsmasq.service-r1,
   dnsmasq-2.68.ebuild, files/dnsmasq.service:

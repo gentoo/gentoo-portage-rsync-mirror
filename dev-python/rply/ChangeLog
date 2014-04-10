@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rply
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rply/ChangeLog,v 1.3 2014/03/28 07:15:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rply/ChangeLog,v 1.4 2014/04/10 18:02:09 mgorny Exp $
+
+*rply-0.7.2-r1 (10 Apr 2014)
+
+  10 Apr 2014; Michał Górny <mgorny@gentoo.org> +rply-0.7.2-r1.ebuild:
+  Convert to distutils-r1. Enable tests.
 
   28 Mar 2014; Ian Delaney <idella4@gentoo.org> -rply-0.5.1.ebuild:
   rm old rply-0.5.1 wrt to sec. Bug #498538

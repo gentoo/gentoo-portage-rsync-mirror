@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-9999.ebuild,v 1.2 2014/03/25 13:57:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-9999.ebuild,v 1.3 2014/04/10 18:22:39 aballier Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://x265.org/"
 
 LICENSE="GPL-2"
 # subslot = libx265 soname
-SLOT="0/9"
+SLOT="0/15"
 IUSE="+10bit test"
 
 ASM_DEPEND=">=dev-lang/yasm-1.2.0"

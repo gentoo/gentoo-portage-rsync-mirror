@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.6.ebuild,v 1.1 2014/03/06 19:11:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.6.ebuild,v 1.2 2014/04/10 18:12:55 aballier Exp $
 
 EAPI="4"
 
@@ -132,6 +132,7 @@ src_prepare() {
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
 
+	epatch "${FILESDIR}/dirac_arith_hardened.patch"
 	epatch_user
 }
 

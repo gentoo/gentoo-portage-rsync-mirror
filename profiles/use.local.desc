@@ -4517,10 +4517,11 @@ net-dns/ddclient:hardened - Use iproute2 instead of ifconfig to grab an IP addre
 net-dns/ddclient:ssl - Connect to the server utilizing SSL
 net-dns/dnsmasq:auth-dns - Add support for acting as an authorative DNS server.
 net-dns/dnsmasq:conntrack - Add support for Linux conntrack connection marking.
-net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
-net-dns/dnsmasq:dhcp-tools - Install extra command line tools for manually managing DHCP leases
-net-dns/dnsmasq:script - Enable support for calling scripts when leases change
-net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
+net-dns/dnsmasq:dhcp - Enable support for acting as a DHCP server.
+net-dns/dnsmasq:dhcp-tools - Install extra command line tools for manually managing DHCP leases.
+net-dns/dnsmasq:dnssec - Enable support DNSSEC validation and caching.
+net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
+net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
 net-dns/knot:fastparser - Enables fast DNS zone parser.
 net-dns/ldns-utils:ecdsa - Enable ECDSA support
 net-dns/ldns-utils:gost - Enable GOST support

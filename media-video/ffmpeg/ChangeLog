@@ -1,6 +1,19 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.725 2014/03/28 06:11:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.728 2014/04/10 18:21:30 aballier Exp $
+
+  10 Apr 2014; Alexis Ballier <aballier@gentoo.org> -ffmpeg-2.1.4.ebuild,
+  -ffmpeg-2.2_rc2.ebuild, -ffmpeg-2.2.ebuild:
+  remove old
+
+*ffmpeg-2.2.1 (10 Apr 2014)
+
+  10 Apr 2014; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.2.1.ebuild:
+  version bump
+
+  10 Apr 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-1.2.6.ebuild,
+  +files/dirac_arith_hardened.patch:
+  fix build on hardened/x86; by Anthoine Bourgeois, bug #506206
 
 *ffmpeg-2.2 (28 Mar 2014)
 
