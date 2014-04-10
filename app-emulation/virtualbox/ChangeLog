@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.181 2014/04/03 12:06:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.182 2014/04/10 20:49:55 polynomial-c Exp $
+
+*virtualbox-4.3.10-r2 (10 Apr 2014)
+
+  10 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-4.3.10.ebuild, -virtualbox-4.3.10-r1.ebuild,
+  +virtualbox-4.3.10-r2.ebuild:
+  Revbump because upstream changed release tarball again without increasing the
+  version number. Thanks to Piotr Szymaniak for reporting this in bug #507338.
 
 *virtualbox-4.3.10-r1 (03 Apr 2014)
 
