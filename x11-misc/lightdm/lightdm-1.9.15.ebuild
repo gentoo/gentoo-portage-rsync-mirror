@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.15.ebuild,v 1.2 2014/04/09 16:49:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.15.ebuild,v 1.3 2014/04/10 17:10:56 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd
@@ -84,6 +84,7 @@ src_configure() {
 		--disable-tests \
 		$(use_enable introspection) \
 		$(use_enable qt4 liblightdm-qt) \
+		--disable-liblightdm-qt5 \
 		--with-user-session=${_session} \
 		--with-greeter-session=${_greeter} \
 		--with-greeter-user=${_user} \

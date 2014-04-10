@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.186 2014/04/07 20:59:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.187 2014/04/10 17:03:23 mgorny Exp $
+
+  10 Apr 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Re-apply the install phase fixes for multilib-portage (bug #506398) and /tmp
+  ownership (bug #506472). For now, just the live ebuild.
 
   07 Apr 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Update PYTHON_COMPAT in the live ebuild.

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.82 2014/04/07 20:59:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.83 2014/04/10 17:03:23 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
 
-inherit cmake-utils eutils flag-o-matic git-r3 multilib multilib-minimal \
-	python-r1 toolchain-funcs pax-utils check-reqs
+inherit cmake-utils eutils flag-o-matic git-r3 multibuild multilib \
+	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -64,6 +64,10 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 # we need to run install per-directory, and ninja can't do that...
 # so why did it call itself ninja in the first place?
 CMAKE_MAKEFILE_GENERATOR=emake
+
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/llvm-config
+)
 
 pkg_pretend() {
 	# in megs
@@ -371,25 +375,15 @@ multilib_src_install() {
 	local MAKEARGS
 	set_makeargs
 
-	emake "${MAKEARGS[@]}" DESTDIR="${D}" install
+	local root=${D}/_${ABI}
 
-	# Preserve ABI-variant of llvm-config.
-	dodir /tmp
-	mv "${ED}"/usr/bin/llvm-config "${ED}"/tmp/"${CHOST}"-llvm-config || die
+	emake "${MAKEARGS[@]}" DESTDIR="${root}" install
+	multibuild_merge_root "${root}" "${D}"
 
 	if ! multilib_build_binaries; then
-		# Drop all the executables since LLVM doesn't like to
-		# clobber when installing.
-		rm -r "${ED}"/usr/bin || die
-
 		# Backwards compat, will be happily removed someday.
-		dosym "${CHOST}"-llvm-config /tmp/llvm-config.${ABI}
+		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config.${ABI}
 	else
-		# Move files back.
-		mv "${ED}"/tmp/*llvm-config* "${ED}"/usr/bin || die
-		# Create a symlink for host's llvm-config.
-		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config
-
 		# Install docs.
 		doman "${S}"/docs/_build/man/*.1
 		use clang && doman "${T}"/clang.1

@@ -6,9 +6,11 @@ After=local-fs.target network.target
 Type=forking
 User=buildbot
 WorkingDirectory=/var/lib/buildmaster
-ExecStartPre=/usr/bin/buildbot checkconfig /var/lib/buildmaster
-ExecStart=/usr/bin/buildbot start /var/lib/buildmaster
-ExecStop=/usr/bin/buildbot stop /var/lib/buildmaster
+# The following assume there is a 'master' directory
+# in $WorkingDirectory with the master configuration files
+ExecStartPre=/usr/bin/buildbot checkconfig master
+ExecStart=/usr/bin/buildbot start master
+ExecStop=/usr/bin/buildbot stop master
 
 [Install]
 WantedBy=multi-user.target

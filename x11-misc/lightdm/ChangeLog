@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.84 2014/04/09 16:49:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.86 2014/04/10 17:12:37 hwoarang Exp $
+
+  10 Apr 2014; Markos Chandras <hwoarang@gentoo.org> -lightdm-1.0.11.ebuild,
+  -lightdm-1.2.2-r3.ebuild, -lightdm-1.4.0-r2.ebuild, -lightdm-1.4.0.ebuild,
+  -lightdm-1.4.3.ebuild, -lightdm-1.6.2.ebuild:
+  Remove old ebuilds
+
+  10 Apr 2014; Markos Chandras <hwoarang@gentoo.org> lightdm-1.10.0.ebuild,
+  lightdm-1.8.5-r1.ebuild, lightdm-1.9.15.ebuild:
+  Disable Qt5. Bug #479046
 
   09 Apr 2014; Markos Chandras <hwoarang@gentoo.org> lightdm-1.9.15.ebuild:
   Do not build tests for 1.9* as well. Bug #507204
