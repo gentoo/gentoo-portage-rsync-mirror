@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/unclutter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.32 2011/03/16 18:33:46 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.33 2014/04/10 12:59:14 jer Exp $
+
+*unclutter-8-r3 (10 Apr 2014)
+
+  10 Apr 2014; Jeroen Roovers <jer@gentoo.org> -unclutter-8-r1.ebuild,
+  +unclutter-8-r3.ebuild, +files/unclutter-8-FocusOut.patch,
+  +files/unclutter-8-include.patch:
+  Fix flickering mouse pointer, bug #507312 by teika.
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> unclutter-8-r2.ebuild:
   ppc64 stable wrt #348733
