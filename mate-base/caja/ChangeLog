@@ -1,0 +1,10 @@
+# ChangeLog for mate-base/caja
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/ChangeLog,v 1.1 2014/04/10 12:23:00 tomwij Exp $
+
+*caja-1.8.0 (10 Apr 2014)
+
+  10 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +caja-1.8.0.ebuild,
+  +metadata.xml:
+  New package for mate-base/caja, continuation of mate-base/mate-file-manager;
+  version bump to 1.8.0.

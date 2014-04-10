@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.3.ebuild,v 1.3 2014/03/14 13:46:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.3.ebuild,v 1.4 2014/04/10 12:13:04 johu Exp $
 
 EAPI=5
 
@@ -28,7 +28,10 @@ DEPEND="
 	>=net-libs/libnm-qt-0.9.8.1[modemmanager?]
 	>=net-misc/networkmanager-0.9.8.0
 	modemmanager? ( >=net-libs/libmm-qt-1.0.0 )
-	openconnect? ( net-misc/openconnect )
+	openconnect? (
+		net-misc/networkmanager-openconnect
+		net-misc/openconnect
+	)
 "
 RDEPEND="${DEPEND}
 	!kde-misc/networkmanagement

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/requests-oauthlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/ChangeLog,v 1.2 2013/10/13 09:26:34 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/ChangeLog,v 1.3 2014/04/10 12:04:26 idella4 Exp $
+
+*requests-oauthlib-0.4.0 (10 Apr 2014)
+
+  10 Apr 2014; Ian Delaney <idella4@gentoo.org>
+  +files/requests-oauthlib-0.4.0-expires_at.patch,
+  +requests-oauthlib-0.4.0.ebuild:
+  bump; test phase updated with related patch sourced from upstream
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> requests-oauthlib-0.3.3.ebuild:
   Also compatible with python3_3
