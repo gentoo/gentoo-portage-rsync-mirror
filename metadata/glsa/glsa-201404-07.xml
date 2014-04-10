@@ -9,13 +9,14 @@
   </synopsis>
   <product type="ebuild">openssl</product>
   <announced>April 08, 2014</announced>
-  <revised>April 08, 2014: 1</revised>
+  <revised>April 10, 2014: 2</revised>
   <bug>505278</bug>
   <bug>507074</bug>
   <access>remote</access>
   <affected>
     <package name="dev-libs/openssl" auto="yes" arch="*">
       <unaffected range="ge">1.0.1g</unaffected>
+      <unaffected range="rge">0.9.8y</unaffected>
       <vulnerable range="lt">1.0.1g</vulnerable>
     </package>
   </affected>
@@ -73,5 +74,5 @@
     <uri link="http://heartbleed.com/">Heartbleed bug website</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 08 Apr 2014 09:37:45 +0000">a3li</metadata>
-  <metadata tag="submitter" timestamp="Tue, 08 Apr 2014 10:14:16 +0000">a3li</metadata>
+  <metadata tag="submitter" timestamp="Thu, 10 Apr 2014 07:22:25 +0000">a3li</metadata>
 </glsa>
