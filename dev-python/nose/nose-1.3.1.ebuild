@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.1.ebuild,v 1.1 2014/04/01 01:18:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.3.1.ebuild,v 1.2 2014/04/10 09:06:07 idella4 Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DOCS=( AUTHORS )
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.2.1-skiptest.patch
 	"${FILESDIR}"/${PN}-1.3.1-python3.4.patch
-)
+	"${FILESDIR}"/${P}-doctest.patch )
 
 python_prepare_all() {
 	# Tests need to be converted, and they don't respect BUILD_DIR.
