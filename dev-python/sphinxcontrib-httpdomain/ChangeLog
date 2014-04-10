@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinxcontrib-httpdomain
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-httpdomain/ChangeLog,v 1.5 2014/03/31 20:51:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-httpdomain/ChangeLog,v 1.6 2014/04/10 11:56:46 kensington Exp $
+
+  10 Apr 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Remove KDE herd.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org>
   sphinxcontrib-httpdomain-1.1.8.ebuild, sphinxcontrib-httpdomain-1.1.9.ebuild,

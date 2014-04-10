@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<herd>kde</herd>
 	<upstream>
 		<remote-id type="pypi">sphinxcontrib-httpdomain</remote-id>
 	</upstream>
