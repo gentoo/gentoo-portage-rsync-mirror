@@ -6,4 +6,7 @@
 		<remote-id type="google-code">geopy</remote-id>
 		<remote-id type="pypi">geopy</remote-id>
 	</upstream>
+  <use>
+	<flag name="yahoo">Enables use of YahooPlaceFinder</flag>
+  </use>
 </pkgmetadata>

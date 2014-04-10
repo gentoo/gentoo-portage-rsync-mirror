@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=>=net-libs/libssh-0.6.0_rc1 net-print/cups dev-qt/qtcore:4[ssl] dev-qt/qtgui:4 dev-qt/qtsvg:4 ldap? ( net-nds/openldap ) app-arch/unzip
+DESCRIPTION=The X2Go Qt client
+EAPI=5
+HOMEPAGE=http://www.x2go.org
+IUSE=ldap nsplugin
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=net-libs/libssh-0.6.0_rc1 net-print/cups dev-qt/qtcore:4[ssl] dev-qt/qtgui:4 dev-qt/qtsvg:4 ldap? ( net-nds/openldap ) net-misc/nx
+SLOT=0
+SRC_URI=http://code.x2go.org/releases/source/x2goclient/x2goclient-4.0.2.0.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	fac675dcccf94392371a6abee62d909f	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=20601678c6bf25efea71baf1419d8879
