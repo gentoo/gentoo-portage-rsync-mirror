@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.22 2014/04/09 10:25:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.23 2014/04/10 02:43:09 patrick Exp $
+
+  10 Apr 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fix metadata.xml after mobile-phone herd dissolution
 
 *p3nfs-5.19-r3 (09 Apr 2014)
 
@@ -93,4 +96,3 @@
 
   15 Apr 2005; <brix@gentoo.org> +metadata.xml, +p3nfs-5.16.ebuild:
   Initial import. Fixes bug #37010.
-
