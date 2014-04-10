@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.67 2014/01/27 04:48:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.68 2014/04/10 03:12:25 ryao Exp $
+
+*spl-0.6.2-r4 (10 Apr 2014)
+
+  10 Apr 2014; Richard Yao <ryao@gentoo.org> +spl-0.6.2-r4.ebuild:
+  Module versioning support and Linux 3.14 support bump
 
 *spl-0.6.2-r3 (27 Jan 2014)
 

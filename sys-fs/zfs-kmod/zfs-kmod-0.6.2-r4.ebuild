@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.2-r3.ebuild,v 1.3 2014/04/10 03:13:36 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.2-r4.ebuild,v 1.1 2014/04/10 03:13:36 ryao Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p2.tar.xz"
+		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p3.tar.xz"
 	S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
@@ -60,7 +60,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 12 || die "Linux 3.12 is the latest supported version."; }
+		{ kernel_is le 3 14 || die "Linux 3.14 is the latest supported version."; }
 
 	check_extra_config
 }

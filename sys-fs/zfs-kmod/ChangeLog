@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.41 2014/01/27 04:47:49 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.42 2014/04/10 03:13:36 ryao Exp $
+
+*zfs-kmod-0.6.2-r4 (10 Apr 2014)
+
+  10 Apr 2014; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r4.ebuild,
+  zfs-kmod-0.6.2-r3.ebuild:
+  Proper Linux 3.13 support, Linux 3.14 support, numerous races/deadlocks fixed,
+  many compatibility fixes
 
   27 Jan 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.2-r3.ebuild:
   Linux 3.13 support: This requires no changes to the ZFS C code, so we just
