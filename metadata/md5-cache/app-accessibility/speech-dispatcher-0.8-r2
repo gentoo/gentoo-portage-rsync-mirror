@@ -10,5 +10,5 @@ RDEPEND=python? ( python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) p
 REQUIRED_USE=python? ( || ( python_targets_python3_2 python_targets_python3_3 ) )
 SLOT=0
 SRC_URI=http://www.freebsoft.org/pub/projects/speechd/speech-dispatcher-0.8.tar.gz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	f6a00e248ffeb4404b67a7a7645446c5	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	d9bb4e337eb315ccbb479aa61972892f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	f6a00e248ffeb4404b67a7a7645446c5	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c1d63a32fd3eb255eb074b30b1367129

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.14 2013/09/18 08:49:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.15 2014/04/10 16:43:25 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -265,23 +265,21 @@ multibuild_merge_root() {
 	done
 	rm "${lockfile_l}" || die
 
-	if use userland_BSD; then
-		# 'cp -a -n' is broken:
-		# http://www.freebsd.org/cgi/query-pr.cgi?pr=174489
-		# using tar instead which is universal but terribly slow.
+	local cp_args=()
 
-		tar -C "${src}" -f - -c . \
-			| tar -x -f - -C "${dest}"
-		[[ ${PIPESTATUS[*]} == '0 0' ]]
-		ret=${?}
-	elif use userland_GNU; then
-		# cp works with '-a -n'.
-
-		cp -a -l -n "${src}"/. "${dest}"/
-		ret=${?}
+	if cp -a --version &>/dev/null; then
+		cp_args+=( -a )
 	else
-		die "Unsupported userland (${USERLAND}), please report."
+		cp_args+=( -P -R -p )
 	fi
+
+	if cp --reflink=auto --version &>/dev/null; then
+		# enable reflinking if possible to make this faster
+		cp_args+=( --reflink=auto )
+	fi
+
+	cp "${cp_args[@]}" "${src}"/. "${dest}"/
+	ret=${?}
 
 	# Remove the lock.
 	rm "${lockfile}" || die

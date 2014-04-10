@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1202 2014/04/09 21:55:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1203 2014/04/10 16:43:25 mgorny Exp $
+
+  10 Apr 2014; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Use a more portable and clobbering "cp" call for multibuild_merge_root().
 
   09 Apr 2014; Tim Harder <radhermit@gentoo.org> java-utils-2.eclass:
   Only refer to DESTTREE within the src_install phase.
