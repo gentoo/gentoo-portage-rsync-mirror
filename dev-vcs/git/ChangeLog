@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.256 2014/03/19 00:16:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.257 2014/04/09 23:59:31 robbat2 Exp $
+
+*git-1.9.2 (10 Apr 2014)
+*git-1.8.4.4 (10 Apr 2014)
+
+  10 Apr 2014; Robin H. Johnson <robbat2@gentoo.org> +git-1.8.4.4.ebuild,
+  +git-1.9.2.ebuild:
+  Bump.
 
 *git-1.9.1 (19 Mar 2014)
 
