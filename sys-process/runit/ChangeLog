@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/runit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.47 2014/04/09 16:00:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.48 2014/04/10 19:18:50 williamh Exp $
+
+  10 Apr 2014; William Hubbs <williamh@gentoo.org> -files/3-1.4, files/3,
+  runit-2.1.1-r1.ebuild:
+  Merge the changes from 3-1.4 into 3 since pre 1.4 runit has been removed from
+  the tree for several years.
 
   09 Apr 2014; William Hubbs <williamh@gentoo.org> -runit-1.7.0.ebuild:
   remove old version

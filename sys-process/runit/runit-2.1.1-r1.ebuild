@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-2.1.1-r1.ebuild,v 1.12 2014/03/19 13:47:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-2.1.1-r1.ebuild,v 1.13 2014/04/10 19:18:50 williamh Exp $
 
 EAPI="3"
 
@@ -46,8 +46,7 @@ src_install() {
 	doman man/*.[18]
 
 	exeinto /etc/runit
-	doexe "${FILESDIR}"/{1,2,ctrlaltdel} || die
-	newexe "${FILESDIR}"/3-1.4 3 || die
+	doexe "${FILESDIR}"/{1,2,3,ctrlaltdel} || die
 	for tty in tty1 tty2 tty3 tty4 tty5 tty6; do
 		exeinto /etc/runit/runsvdir/all/getty-$tty/
 		for script in run finish; do
