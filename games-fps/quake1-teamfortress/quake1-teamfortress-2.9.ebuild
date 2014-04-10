@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-teamfortress/quake1-teamfortress-2.9.ebuild,v 1.3 2005/11/05 22:42:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-teamfortress/quake1-teamfortress-2.9.ebuild,v 1.4 2014/04/10 08:05:05 ulm Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.planetfortress.com/teamfortress/"
 SRC_URI="mirror://gentoo/tf28.zip
 	mirror://gentoo/tf29qw.zip"
 
-LICENSE="as-is"
+LICENSE="quake1-teamfortress"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
