@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.23 2014/03/07 17:38:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.24 2014/04/10 16:18:16 jer Exp $
+
+  10 Apr 2014; Jeroen Roovers <jer@gentoo.org> netifrc-0.2.2.ebuild:
+  Stable for HPPA (bug #507070).
 
 *netifrc-0.2.2 (07 Mar 2014)
 

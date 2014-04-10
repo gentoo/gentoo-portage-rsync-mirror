@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.15 2013/08/19 16:33:28 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.16 2014/04/10 16:09:18 maksbotan Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="https://code.google.com/p/qxmpp"
+EGIT_REPO_URI="https://github.com/qxmpp-project/qxmpp"
 
 inherit qt4-r2 multilib git-2
 

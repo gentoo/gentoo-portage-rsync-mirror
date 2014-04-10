@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/bacula
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.164 2014/04/05 06:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.165 2014/04/10 16:13:10 tomjbe Exp $
+
+*bacula-7.0.2 (10 Apr 2014)
+
+  10 Apr 2014; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.0.2.ebuild,
+  +files/7.0.2/bacula-7.0.2-depend.patch,
+  +files/7.0.2/bacula-7.0.2-fix-static.patch:
+  Major version bump
 
   05 Apr 2014; Pacho Ramos <pacho@gentoo.org> bacula-5.2.13-r2.ebuild:
   Alias value is not really needed here, bug #504370 by Fabian Koster
