@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.4.ebuild,v 1.1 2014/04/04 08:19:10 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.4.ebuild,v 1.2 2014/04/10 14:55:13 haubi Exp $
 
 EAPI="4"
 
@@ -88,7 +88,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	# need to patch for the final ABI only
+	local ABI
+	for ABI in $(multilib_get_enabled_abis)
+	do : # need to patch for the final ABI only
+	done
 	set_my_abivars || die "${ABI} ABI not supported!"
 	cd "${S}" || die
 	epatch "${FILESDIR}"/11.2.0.3-makefile.patch
