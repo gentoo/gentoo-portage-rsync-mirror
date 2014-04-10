@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-aggregator/lc-aggregator-9999.ebuild,v 1.1 2013/03/08 21:54:30 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-aggregator/lc-aggregator-9999.ebuild,v 1.2 2014/04/10 17:50:01 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Full-featured RSS/Atom feed reader for LeechCraft"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug mysql +sqlite postgres"
+IUSE="debug mysql +sqlite postgres webaccess"
 
 DEPEND="~app-leechcraft/lc-core-${PV}[postgres?,sqlite?]
 	dev-qt/qtwebkit:4"
@@ -18,6 +18,13 @@ RDEPEND="${DEPEND}
 		virtual/leechcraft-downloader-http"
 
 REQUIRED_USE="|| ( mysql sqlite postgres )"
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_enale webaccess AGGREGATOR_WEBACCESS)
+	)
+	cmake-utils_src_configure
+}
 
 pkg_setup(){
 	if use mysql; then

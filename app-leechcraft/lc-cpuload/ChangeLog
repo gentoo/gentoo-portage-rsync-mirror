@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-cpuload
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-cpuload/ChangeLog,v 1.1 2014/03/23 14:42:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-cpuload/ChangeLog,v 1.2 2014/04/10 17:52:04 maksbotan Exp $
+
+*lc-cpuload-0.6.65 (10 Apr 2014)
+
+  10 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-cpuload-0.6.65.ebuild:
+  Bump LeechCraft to 0.5.65, thanks to 0xd34df00d.
 
 *lc-cpuload-9999 (23 Mar 2014)
 

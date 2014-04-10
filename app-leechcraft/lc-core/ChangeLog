@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.16 2014/04/03 07:57:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.17 2014/04/10 17:51:51 maksbotan Exp $
+
+*lc-core-0.6.65 (10 Apr 2014)
+
+  10 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-core-0.6.65.ebuild:
+  Bump LeechCraft to 0.5.65, thanks to 0xd34df00d.
 
   03 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> lc-core-0.6.60.ebuild:
   x86 stable wrt bug #500914
