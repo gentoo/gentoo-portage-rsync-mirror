@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15550 2014/04/10 07:05:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15551 2014/04/10 10:44:48 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Johannes Huber <johu@gentoo.org> (10 Apr 2014)
+# Masked for removal in 30 days. Doesn't build since KDE 4.9,
+# bumping to "newest" release from 2011 same result. Dead upstream.
+# bug #429604
+games-puzzle/krosswordpuzzle
+
 # Ian Delaney <idella4@gentoo.org> (09 Apr 2014)
 # new dep on masked celery-3.1.10
 =dev-python/django-celery-3.1.9
