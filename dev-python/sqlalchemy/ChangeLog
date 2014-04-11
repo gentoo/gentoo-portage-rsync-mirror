@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.121 2014/04/07 19:44:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.122 2014/04/11 00:46:08 sdamashek Exp $
+
+*sqlalchemy-0.9.4 (11 Apr 2014)
+
+  11 Apr 2014; Samuel Damashek <sdamashek@gentoo.org> +sqlalchemy-0.9.4.ebuild:
+  Version bump to sqlalchemy 0.9.4 and add python 3.4 to PYTHON_COMPAT
 
   07 Apr 2014; Markus Meier <maekke@gentoo.org> sqlalchemy-0.9.2.ebuild:
   arm stable, bug #505840
