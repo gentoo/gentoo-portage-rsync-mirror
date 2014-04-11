@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sclapp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.5 2010/06/16 02:41:09 sping Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.6 2014/04/11 22:16:34 mgorny Exp $
+
+*sclapp-0.5.3-r1 (11 Apr 2014)
+
+  11 Apr 2014; Michał Górny <mgorny@gentoo.org> +sclapp-0.5.3-r1.ebuild:
+  Convert to distutils-r1.
 
   16 Jun 2010; Sebastian Pipping <sping@gentoo.org> sclapp-0.5.3.ebuild:
   Add missing dependency dev-python/pexpect for bug #318489
@@ -20,4 +25,3 @@
   20 Dec 2009; Sebastian Pipping <sping@gentoo.org> +sclapp-0.5.3.ebuild,
   +metadata.xml:
   Initial ebuild, review by Arfrever (bug 220081)
-

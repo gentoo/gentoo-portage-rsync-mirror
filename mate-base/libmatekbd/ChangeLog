@@ -1,6 +1,11 @@
 # ChangeLog for mate-base/libmatekbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/ChangeLog,v 1.4 2014/03/10 22:53:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/ChangeLog,v 1.5 2014/04/11 22:29:15 tomwij Exp $
+
+*libmatekbd-1.8.0 (11 Apr 2014)
+
+  11 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +libmatekbd-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> libmatekbd-1.6.2.ebuild:
   Update dependencies per the consensus formed with ssuominen.

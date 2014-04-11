@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fuse-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.17 2013/03/17 15:58:24 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.18 2014/04/11 22:28:44 mgorny Exp $
+
+*fuse-python-0.2.1-r1 (11 Apr 2014)
+
+  11 Apr 2014; Michał Górny <mgorny@gentoo.org> +fuse-python-0.2.1-r1.ebuild:
+  Convert to distutils-r1.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
