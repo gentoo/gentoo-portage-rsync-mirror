@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/gevent-zeromq-0.2.5-r1.ebuild,v 1.1 2013/12/24 11:19:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/gevent-zeromq-0.2.5-r1.ebuild,v 1.2 2014/04/11 08:20:13 idella4 Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/pyzmq[${PYTHON_USEDEP}]"
+RDEPEND="~dev-python/pyzmq-2.2.0.1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/gevent[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.15 2014/04/10 16:43:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.16 2014/04/11 08:30:44 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -213,9 +213,16 @@ multibuild_copy_sources() {
 
 	einfo "Will copy sources from ${_MULTIBUILD_INITIAL_BUILD_DIR}"
 
+	local cp_args=()
+	if cp --reflink=auto --version &>/dev/null; then
+		# enable reflinking if possible to make this faster
+		cp_args+=( --reflink=auto )
+	fi
+
 	_multibuild_create_source_copy() {
 		einfo "${MULTIBUILD_VARIANT}: copying to ${BUILD_DIR}"
-		cp -pr "${_MULTIBUILD_INITIAL_BUILD_DIR}" "${BUILD_DIR}" || die
+		cp -pr "${cp_args[@]}" \
+			"${_MULTIBUILD_INITIAL_BUILD_DIR}" "${BUILD_DIR}" || die
 	}
 
 	multibuild_foreach_variant _multibuild_create_source_copy
