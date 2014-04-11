@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libkgapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.31 2014/03/21 21:21:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.32 2014/04/11 22:38:28 johu Exp $
+
+*libkgapi-2.1.1 (11 Apr 2014)
+
+  11 Apr 2014; Johannes Huber <johu@gentoo.org> +libkgapi-2.1.1.ebuild:
+  Version bump.
 
   21 Mar 2014; Johannes Huber <johu@gentoo.org> libkgapi-0.4.4.ebuild:
   Bump to EAPI 5.

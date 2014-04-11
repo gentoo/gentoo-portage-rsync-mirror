@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Common files for development of MATE packages
+EAPI=5
+HOMEPAGE=http://mate-desktop.org
+KEYWORDS=~amd64
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=http://pub.mate-desktop.org/releases/1.8/mate-common-1.8.0.tar.xz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=01087de87f38daa8a54d8dc9b98e1a13
