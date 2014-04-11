@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/actionpack-3.0[ruby_targets_ruby19] >=dev-ruby/activesupport-3.0[ruby_targets_ruby19] >=dev-ruby/sprockets-2.8:2[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( test? ( >=dev-ruby/actionpack-4[ruby_targets_ruby19] >=dev-ruby/railties-4[ruby_targets_ruby19] dev-ruby/test-unit:2[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline.
+EAPI=5
+HOMEPAGE=https://github.com/rails/sprockets-rails
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/actionpack-3.0[ruby_targets_ruby19] >=dev-ruby/activesupport-3.0[ruby_targets_ruby19] >=dev-ruby/sprockets-2.8:2[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+SLOT=2.1
+SRC_URI=https://github.com/rails/sprockets-rails/archive/v2.1.1.tar.gz -> sprockets-rails-2.1.1.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=0d56cde06c3849f64b024186e33a5021
