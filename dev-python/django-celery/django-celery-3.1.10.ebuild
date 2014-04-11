@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.0.21.ebuild,v 1.1 2013/08/10 12:50:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.1.10.ebuild,v 1.1 2014/04/11 06:29:13 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3} )
 
 inherit distutils-r1
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-python/celery-3.0.17[${PYTHON_USEDEP}]
+PY2_USEDEP=$(python_gen_usedep python2_7)
+RDEPEND=">=dev-python/celery-3.1.10[${PYTHON_USEDEP}]
 	>=dev-python/django-1.3[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
@@ -24,21 +25,29 @@ DEPEND="${RDEPEND}
 	test? (
 		virtual/python-unittest2[${PYTHON_USEDEP}]
 		dev-python/django-nose[${PYTHON_USEDEP}]
-		dev-python/coverage[${PYTHON_USEDEP}]
+		>=dev-python/coverage-3.0[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
-		dev-python/python-memcached )
+		dev-python/python-memcached[${PY2_USEDEP}] )
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/sphinxcontrib-issuetracker[${PYTHON_USEDEP}]
-		dev-python/python-memcached
+		dev-python/sphinxcontrib-issuetracker[${PY2_USEDEP}]
+		dev-python/python-memcached[${PY2_USEDEP}]
 	)"
+
+PY27_REQUSE="$(python_gen_useflags 'python2.7')"
+REQUIRED_USE="
+	doc? ( ${PY27_REQUSE} )"
 
 python_compile_all() {
 	use doc && emake -C docs html
 }
 
 python_test() {
-	python tests/manage.py test
+	# py3 has masses of errors
+	# https://github.com/celery/django-celery/issues/321
+	if ! python_is_python3; then
+		"${PYTHON}" tests/manage.py test
+	fi
 }
 
 python_install_all() {
