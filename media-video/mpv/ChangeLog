@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.66 2014/04/07 18:12:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.67 2014/04/11 17:07:41 swift Exp $
+
+  11 Apr 2014; Sven Vermeulen <swift@gentoo.org> mpv-0.3.5.ebuild,
+  mpv-0.3.6.ebuild, mpv-0.3.7.ebuild, mpv-9999.ebuild:
+  Add dependency to selinux-mplayer if USE=selinux is set, see bug #498578
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> mpv-0.3.7.ebuild,
   mpv-9999.ebuild:
