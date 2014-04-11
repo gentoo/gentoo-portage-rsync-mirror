@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2013.2.3.ebuild,v 1.1 2014/04/06 06:34:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2013.2.3-r1.ebuild,v 1.1 2014/04/11 15:24:04 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -58,6 +58,7 @@ RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
 		>=dev-python/lockfile-0.8[${PYTHON_USEDEP}]"
 
 PATCHES=(
+		"${FILESDIR}/CVE-2014-0157-2013.2.3.patch"
 )
 
 src_test() {

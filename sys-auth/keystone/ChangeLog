@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.64 2014/04/06 06:01:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.65 2014/04/11 15:28:59 prometheanfire Exp $
+
+*keystone-2013.2.3-r1 (11 Apr 2014)
+
+  11 Apr 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/CVE-2014-2828-2013.2.3.patch, +keystone-2013.2.3-r1.ebuild,
+  -keystone-2013.2.3.ebuild:
+  fix for CVE-2014-2828
 
 *keystone-2013.2.3 (06 Apr 2014)
 

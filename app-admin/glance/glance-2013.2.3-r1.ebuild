@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.3.ebuild,v 1.1 2014/04/06 06:07:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.3-r1.ebuild,v 1.1 2014/04/11 15:19:16 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -85,7 +85,8 @@ RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		dev-python/pyopenssl[${PYTHON_USEDEP}]
 		>=dev-python/six-1.4.1[${PYTHON_USEDEP}]"
 
-PATCHES=( "${FILESDIR}/${PN}-2013.2-sphinx_mapping.patch" )
+PATCHES=( "${FILESDIR}/${PN}-2013.2-sphinx_mapping.patch"
+		"${FILESDIR}/CVE-2014-0162-2013.2.3.patch" )
 
 pkg_setup() {
 	enewgroup glance
