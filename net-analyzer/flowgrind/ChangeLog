@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flowgrind
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/ChangeLog,v 1.8 2013/07/10 16:37:49 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/ChangeLog,v 1.9 2014/04/11 02:19:27 radhermit Exp $
+
+*flowgrind-0.7 (11 Apr 2014)
+
+  11 Apr 2014; Tim Harder <radhermit@gentoo.org> +flowgrind-0.7.ebuild:
+  Version bump.
 
   10 Jul 2013; Jeroen Roovers <jer@gentoo.org> -flowgrind-0.5.8.ebuild,
   -flowgrind-0.6.0.ebuild:

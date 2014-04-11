@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) fontforge? ( media-gfx/fontforge dev-python/fonttools ) X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=A Helvetica/Times/Courier replacement TrueType font set, courtesy of Red Hat
+EAPI=4
+HOMEPAGE=https://fedorahosted.org/liberation-fonts
+IUSE=fontforge X X
+KEYWORDS=~amd64 ~arm ~arm64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=!fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-ttf-2.00.1.tar.gz ) fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-2.00.1.tar.gz )
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=357758f8c405bd72916a42037940a727

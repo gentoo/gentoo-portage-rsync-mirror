@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.86 2014/04/10 17:12:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.87 2014/04/11 02:25:03 patrick Exp $
+
+  11 Apr 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
 
   10 Apr 2014; Markos Chandras <hwoarang@gentoo.org> -lightdm-1.0.11.ebuild,
   -lightdm-1.2.2-r3.ebuild, -lightdm-1.4.0-r2.ebuild, -lightdm-1.4.0.ebuild,

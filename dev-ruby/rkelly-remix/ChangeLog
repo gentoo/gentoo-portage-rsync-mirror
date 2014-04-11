@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rkelly-remix
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rkelly-remix/ChangeLog,v 1.1 2014/04/11 02:31:21 zerochaos Exp $
+
+*rkelly-remix-0.0.6 (11 Apr 2014)
+
+  11 Apr 2014; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +rkelly-remix-0.0.6.ebuild:
+  most likely this is missing a dep or two for tests, but they work here and I
+  can't figure out what it needs
