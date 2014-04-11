@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/rex-client
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/rex-client/ChangeLog,v 1.1 2014/04/11 05:16:54 mduft Exp $
+
+*rex-client-9999 (07 Apr 2014)
+
+  07 Apr 2014; Markus Duft <mduft@gentoo.org> +rex-client-9999.ebuild,
+  +metadata.xml:
+  initial addition of live ebuild
+
