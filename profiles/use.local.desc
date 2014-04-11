@@ -3478,6 +3478,7 @@ media-libs/xine-lib:vaapi - Enables VAAPI (Video Acceleration API) for hardware 
 media-libs/xine-lib:vdr - Build the VDR plugin
 media-libs/xine-lib:vidix - Enable support for vidix video output.
 media-libs/xine-lib:vis - Adds support for SIMD optimizations for UltraSPARC processors.
+media-libs/xine-lib:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-libs/xine-lib:xvmc - Enable support for XVideo Motion Compensation (accelerated mpeg playback).
 media-libs/xvid:pic - disable optimized assembly code that is not PIC friendly
 media-plugins/audacious-plugins:adplug - Build with AdPlug (Adlib sound card emulation) support

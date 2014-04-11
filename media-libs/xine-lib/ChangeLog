@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.701 2013/12/24 16:56:00 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.702 2014/04/11 19:38:05 polynomial-c Exp $
+
+*xine-lib-1.2.5 (11 Apr 2014)
+
+  11 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +xine-lib-1.2.5.ebuild,
+  metadata.xml:
+  Version bump.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xine-lib-1.2.3.ebuild:
   Stable for ppc64, wrt bug #451350
