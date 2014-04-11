@@ -1,6 +1,14 @@
 # ChangeLog for xfce-extra/xfce4-mailwatch-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/ChangeLog,v 1.20 2014/03/01 22:28:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/ChangeLog,v 1.21 2014/04/11 15:56:06 ssuominen Exp $
+
+  11 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xfce4-mailwatch-plugin-1.1.0-gnutls-3.patch,
+  -files/xfce4-mailwatch-plugin-1.1.0-libxfce4ui.patch,
+  -files/xfce4-mailwatch-plugin-1.1.0-link_to_libgcrypt.patch,
+  -files/xfce4-mailwatch-plugin-1.1.0-no-ssl.patch,
+  -xfce4-mailwatch-plugin-1.1.0-r1.ebuild:
+  old
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org>
   xfce4-mailwatch-plugin-1.1.0-r1.ebuild, xfce4-mailwatch-plugin-1.2.0.ebuild:
