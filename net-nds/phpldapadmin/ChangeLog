@@ -1,6 +1,23 @@
 # ChangeLog for net-nds/phpldapadmin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.57 2012/11/12 12:04:32 jmbsvicetto Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.60 2014/04/11 01:41:31 jmbsvicetto Exp $
+
+  11 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  phpldapadmin-1.2.3.ebuild:
+  Bump EAPI on 1.2.3 release.
+
+  11 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -phpldapadmin-1.2.0.4-r1.ebuild, -phpldapadmin-1.2.0.5.ebuild,
+  -phpldapadmin-1.2.1.1-r1.ebuild, -phpldapadmin-1.2.1.1.ebuild,
+  -phpldapadmin-1.2.2-r1.ebuild, -phpldapadmin-1.2.2.ebuild:
+  Remove old versions.
+
+*phpldapadmin-1.2.3-r1 (11 Apr 2014)
+
+  11 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/phpldapadmin-fix-php5.5-support.patch, +phpldapadmin-1.2.3-r1.ebuild:
+  Add a patch to allow phpldapadmin to build against php-5.5. Bump to EAPI 5.
+  Fixes bug 482340 - thanks to Alexander Stein.
 
 *phpldapadmin-1.2.3 (12 Nov 2012)
 

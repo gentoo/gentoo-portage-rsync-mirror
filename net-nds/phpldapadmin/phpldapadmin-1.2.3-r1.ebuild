@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.2.1.1-r1.ebuild,v 1.1 2011/10/25 18:18:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.2.3-r1.ebuild,v 1.1 2014/04/11 01:36:30 jmbsvicetto Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit webapp depend.php
 
@@ -22,14 +22,12 @@ need_php_httpd
 
 src_prepare() {
 	mv config/config.php.example config/config.php
-	epatch "${FILESDIR}/${P}-fix-magic-quotes.patch"
+	epatch "${FILESDIR}/${PN}-1.2.1.1-fix-magic-quotes.patch"
+	# http://phpldapadmin.git.sourceforge.net/git/gitweb.cgi?p=phpldapadmin/phpldapadmin;a=commit;h=7dc8d57d6952fe681cb9e8818df7f103220457bd
 
-	# Security patches for secunia advisory 46551
-	# https://secunia.com/advisories/46551/
-	# CVE-2011-4075
-	epatch "${FILESDIR}/${P}-fix-functions-exploit.patch"
-	# CVE-2011-4074
-	epatch "${FILESDIR}/${P}-fix-cmd-exploit.patch"
+	epatch "${FILESDIR}/${PN}-fix-php5.5-support.patch"
+	# http://sourceforge.net/u/nihilisticz/phpldapadmin/ci/7e53dab990748c546b79f0610c3a7a58431e9ebc/
+	# This patch has been requested to be merged, but there's no recent activity by upstream
 }
 
 src_install() {

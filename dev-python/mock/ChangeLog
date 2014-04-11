@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.74 2014/04/11 00:41:54 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.75 2014/04/11 02:00:05 sdamashek Exp $
+
+*mock-1.0.1-r2 (11 Apr 2014)
+
+  11 Apr 2014; Samuel Damashek <sdamashek@gentoo.org> +mock-1.0.1-r2.ebuild,
+  mock-1.0.1-r1.ebuild:
+  Roll back stable mock-1.0.1-r1 to original state, create new keyworded
+  mock-1.0.1-r2 with python3.4 fixes
 
   11 Apr 2014; Samuel Damashek <sdamashek@gentoo.org>
   +files/mock-1.0.1-fix-python3.4.patch, mock-1.0.1-r1.ebuild:
