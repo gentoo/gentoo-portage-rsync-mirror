@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.485 2014/04/02 18:10:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.486 2014/04/11 06:44:03 polynomial-c Exp $
+
+  11 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.24.ebuild,
+  seamonkey-2.25.ebuild:
+  Use official firefox patchset from Anarchy. Removed old.
 
   02 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> seamonkey-2.24.ebuild,
   seamonkey-2.25.ebuild:

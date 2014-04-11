@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.25.ebuild,v 1.4 2014/04/02 18:10:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.25.ebuild,v 1.5 2014/04/11 06:44:03 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -28,7 +28,7 @@ fi
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
-PATCHFF="firefox-28.0_pre-patches-1"
+PATCHFF="firefox-28.0-patches-0.1"
 PATCH="${PN}-2.23-patches-01"
 EMVER="1.6.1_pre20140112"
 
@@ -51,7 +51,7 @@ IUSE="+chatzilla +crypt gstreamer +ipc +jit minimal pulseaudio +roaming selinux 
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
 	crypt? ( http://dev.gentoo.org/~polynomial-c/mozilla/enigmail-${EMVER}.tar.xz )"
 	#crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )
