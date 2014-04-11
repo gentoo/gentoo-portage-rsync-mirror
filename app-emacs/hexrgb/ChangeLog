@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/hexrgb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/hexrgb/ChangeLog,v 1.1 2014/02/23 08:33:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/hexrgb/ChangeLog,v 1.2 2014/04/11 11:28:51 nimiux Exp $
+
+  11 Apr 2014; Chema Alonso <nimiux@gentoo.org> hexrgb-0_p957.ebuild:
+  Stable for amd64 wrt bug #505526
 
 *hexrgb-0_p957 (22 Feb 2014)
 
