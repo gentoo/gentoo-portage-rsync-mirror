@@ -5,5 +5,6 @@
   <use>
     <flag name='glyr'>Enable music metadata searchengine support using <pkg>media-libs/glyr</pkg></flag>
     <flag name='lastfm'>Enable last.fm support using <pkg>media-libs/libclastfm</pkg></flag>
+    <flag name='keybinder'>Enable shortcut support using <pkg>dev-libs/keybinder</pkg></flag>
   </use>
 </pkgmetadata>
