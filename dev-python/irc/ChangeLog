@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.20 2014/03/31 21:20:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.21 2014/04/11 03:01:40 sdamashek Exp $
+
+  11 Apr 2014; Samuel Damashek <sdamashek@gentoo.org> irc-8.5.4.ebuild:
+  Add python3_4 to PYTHON_COMPAT for 8.5.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> irc-8.5.1.ebuild,
   irc-8.5.3.ebuild, irc-8.5.4.ebuild:
