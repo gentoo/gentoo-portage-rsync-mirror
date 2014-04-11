@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.66 2014/04/11 09:30:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.67 2014/04/11 10:33:43 ssuominen Exp $
+
+*jbigkit-2.1 (11 Apr 2014)
+
+  11 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/jbigkit-2.1-build.patch, +jbigkit-2.1.ebuild:
+  Version bump wrt security #507254 by Agostino Sarubbo
 
   11 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -jbigkit-2.0-r1.ebuild:
   old
