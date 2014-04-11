@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.91 2014/03/28 03:44:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.92 2014/04/11 16:32:25 polynomial-c Exp $
+
+*libdvdread-4.9.9 (11 Apr 2014)
+
+  11 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> libdvdread-4.2.1.ebuild,
+  +libdvdread-4.9.9.ebuild:
+  Version bump by Uwe L. Korn (bug #507422). Minor fix in 4.2.1 version.
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> libdvdread-4.2.1.ebuild:
   Stable for HPPA (bug #502838).

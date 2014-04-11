@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.153 2014/04/10 20:28:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.154 2014/04/11 16:39:04 jer Exp $
+
+  11 Apr 2014; Jeroen Roovers <jer@gentoo.org> bogofilter-1.2.4-r1.ebuild:
+  Stable for HPPA too.
 
 *bogofilter-1.2.4-r1 (10 Apr 2014)
 

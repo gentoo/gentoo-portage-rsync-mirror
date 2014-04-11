@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-4.2.1.ebuild,v 1.4 2014/04/11 16:32:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-4.9.9.ebuild,v 1.1 2014/04/11 16:32:25 polynomial-c Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 else
 	KEYWORDS=""
 fi
@@ -40,7 +40,7 @@ RDEPEND="!<media-libs/libdvdnav-4.2.1
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
-DOCS=( AUTHORS ChangeLog DEVELOPMENT-POLICY.txt NEWS TODO README )
+DOCS=( AUTHORS ChangeLog NEWS TODO README )
 
 src_prepare() {
 	[ "${PV#9999}" != "${PV}" ] && subversion_src_prepare
