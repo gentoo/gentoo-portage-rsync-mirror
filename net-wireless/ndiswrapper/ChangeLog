@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.131 2014/03/22 11:49:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.132 2014/04/11 18:17:47 angelos Exp $
+
+  11 Apr 2014; Christoph Mende <angelos@gentoo.org>
+  +files/ndiswrapper-1.59-3.14.patch, ndiswrapper-1.59.ebuild:
+  Fix compilation against linux 3.14 (bug #507348)
 
 *ndiswrapper-1.59 (22 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.141 2014/04/05 20:36:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.142 2014/04/11 18:21:31 nimiux Exp $
+
+  11 Apr 2014; Chema Alonso <nimiux@gentoo.org> dosfstools-3.0.26.ebuild:
+  Stable for amd64 wrt bug #506066
 
   05 Apr 2014; Jeroen Roovers <jer@gentoo.org> dosfstools-3.0.26.ebuild:
   Stable for HPPA (bug #506066).

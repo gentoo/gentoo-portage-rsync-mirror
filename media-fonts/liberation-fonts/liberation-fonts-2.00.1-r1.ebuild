@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.1-r1.ebuild,v 1.1 2014/04/11 02:21:42 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.1-r1.ebuild,v 1.2 2014/04/11 18:21:45 je_fro Exp $
 
 EAPI=4
 
@@ -22,8 +22,8 @@ FONT_SUFFIX="ttf"
 
 FONT_CONF=( "${FILESDIR}/60-liberation.conf" )
 
-DEPEND="${PYTHON_DEPS}
-		fontforge? (
+DEPEND="fontforge? (
+		${PYTHON_DEPS}
 		media-gfx/fontforge
 		dev-python/fonttools
 	)"
@@ -32,10 +32,10 @@ RDEPEND=""
 pkg_setup() {
 	if use fontforge; then
 		FONT_S="${S}/${PN}-ttf-${PV}"
+		python-any-r1_pkg_setup
 	else
 		FONT_S="${WORKDIR}/${PN}-ttf-${PV}"
 		S="${FONT_S}"
 	fi
-	python-any-r1_pkg_setup
 	font_pkg_setup
 }

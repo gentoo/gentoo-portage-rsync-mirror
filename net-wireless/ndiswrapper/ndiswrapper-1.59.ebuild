@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.59.ebuild,v 1.1 2014/03/22 11:49:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.59.ebuild,v 1.2 2014/04/11 18:17:47 angelos Exp $
 
 EAPI=4
 inherit base linux-mod toolchain-funcs
@@ -17,7 +17,8 @@ DEPEND="sys-apps/pciutils"
 RDEPEND="${DEPEND}
 	net-wireless/wireless-tools"
 
-PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
+PATCHES=( "${FILESDIR}"/${P}-cflags.patch
+	"${FILESDIR}"/${P}-3.14.patch )
 MODULE_NAMES="ndiswrapper(misc:${S}/driver)"
 BUILD_TARGETS="all"
 MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")
