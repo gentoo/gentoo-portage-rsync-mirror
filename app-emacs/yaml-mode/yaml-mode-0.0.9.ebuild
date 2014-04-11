@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yaml-mode/yaml-mode-0.0.9.ebuild,v 1.1 2013/10/03 14:02:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yaml-mode/yaml-mode-0.0.9.ebuild,v 1.2 2014/04/11 17:32:49 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/yoshiki/${PN}/archive/release-${PV}.tar.gz -> ${P}.t
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 S="${WORKDIR}/${PN}-release-${PV}"
 DOCS="README Changes"

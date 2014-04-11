@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/multiload-nandhp/multiload-nandhp-0.2.ebuild,v 1.2 2014/04/11 15:27:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/multiload-nandhp/multiload-nandhp-0.2.ebuild,v 1.3 2014/04/11 17:55:31 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -27,7 +27,8 @@ RDEPEND=">=x11-libs/gtk+-2.14:2
 		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 REQUIRED_USE="|| ( xfce_plugins_multiload-nandhp lxpanel )"
 
