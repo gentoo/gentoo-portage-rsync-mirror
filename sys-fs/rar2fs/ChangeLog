@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/rar2fs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/ChangeLog,v 1.13 2014/03/27 04:07:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/ChangeLog,v 1.14 2014/04/11 21:58:34 ssuominen Exp $
+
+  11 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -rar2fs-1.17.2.ebuild,
+  -rar2fs-1.19.5.ebuild, -rar2fs-1.19.8.ebuild:
+  old
 
 *rar2fs-1.20.0 (27 Mar 2014)
 
