@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.40 2014/03/23 05:13:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.41 2014/04/11 12:23:09 nimiux Exp $
+
+  11 Apr 2014; Chema Alonso <nimiux@gentoo.org> gxmessage-2.20.1.ebuild:
+  Stable for amd64 wrt bug #505398
 
   23 Mar 2014; Jeroen Roovers <jer@gentoo.org> -gxmessage-2.20.0.ebuild:
   Old.

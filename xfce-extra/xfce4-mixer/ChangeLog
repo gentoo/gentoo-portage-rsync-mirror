@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-mixer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.151 2012/11/28 12:20:23 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.152 2014/04/11 12:30:31 ssuominen Exp $
+
+*xfce4-mixer-4.11.0 (11 Apr 2014)
+
+  11 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-mixer-4.11.0.ebuild, metadata.xml:
+  Prerelease version bump; optionalize dev-libs/keybinder by USE="keybinder"
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-mixer-4.10.0.ebuild:

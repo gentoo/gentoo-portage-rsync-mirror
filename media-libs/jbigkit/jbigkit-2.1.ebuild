@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.1.ebuild,v 1.1 2014/04/11 10:33:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.1.ebuild,v 1.2 2014/04/11 12:02:40 ssuominen Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ multilib_src_test() {
 }
 
 multilib_src_install() {
-	if multilib_is_native_abi ; then
+	if multilib_build_binaries; then
 		dobin pbmtools/jbgtopbm{,85} pbmtools/pbmtojbg{,85}
 		doman pbmtools/jbgtopbm.1 pbmtools/pbmtojbg.1
 	fi
