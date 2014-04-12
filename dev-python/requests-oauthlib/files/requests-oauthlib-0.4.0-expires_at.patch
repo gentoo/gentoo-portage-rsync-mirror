@@ -1,13 +1,22 @@
 https://github.com/requests/requests-oauthlib/commit/7057cbee773c1dff1856730ca661cc71abb2506e.diff
+https://github.com/requests/requests-oauthlib/commit/8c2c96c4bb45803df2779cfde90868445977ab96.diff
 diff --git a/tests/test_oauth2_session.py b/tests/test_oauth2_session.py
 index 305241a..cf095a5 100644
 --- a/tests/test_oauth2_session.py
 +++ b/tests/test_oauth2_session.py
+@@ -1,6 +1,7 @@
+ from __future__ import unicode_literals
+ import json
+ import mock
++import time
+ import unittest
+ 
+ from oauthlib.common import urlencode
 @@ -11,6 +11,9 @@
  from requests_oauthlib import OAuth2Session, TokenUpdated
  
  
-+fake_time = 1396184331.016881
++fake_time = time.time()
 +
 +
  class OAuth2SessionTest(unittest.TestCase):
@@ -50,4 +59,3 @@ index 305241a..cf095a5 100644
      def test_fetch_token(self):
          def fake_token(token):
              def fake_send(r, **kwargs):
-

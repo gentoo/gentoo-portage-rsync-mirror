@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/requests-oauthlib-0.4.0.ebuild,v 1.1 2014/04/10 12:04:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/requests-oauthlib-0.4.0.ebuild,v 1.2 2014/04/12 12:28:38 idella4 Exp $
 
 EAPI=5
 
@@ -25,7 +25,5 @@ RDEPEND="
 PATCHES=( "${FILESDIR}"/${P}-expires_at.patch )
 
 python_test() {
-	# https://github.com/requests/requests-oauthlib/issues/112
-	sed -e 's:test_add_token:_&:' -i tests/test_oauth2_session.py || die
 	esetup.py test
 }
