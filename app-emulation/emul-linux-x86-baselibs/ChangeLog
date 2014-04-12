@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.193 2014/04/12 08:35:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.194 2014/04/12 11:57:27 pacho Exp $
+
+  12 Apr 2014; Pacho Ramos <pacho@gentoo.org> +files/remove-native-20140406-r1:
+  Update remove-native file (#506900#c5 by nE0sIghT)
 
   12 Apr 2014; Pacho Ramos <pacho@gentoo.org> files/remove-native-20140406:
   Updated remove-native file (#507292 by eroen)
