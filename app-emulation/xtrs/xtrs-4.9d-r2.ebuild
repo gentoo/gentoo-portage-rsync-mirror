@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r2.ebuild,v 1.2 2014/04/12 12:51:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r2.ebuild,v 1.3 2014/04/12 21:21:26 ulm Exp $
 
 EAPI=5
 
@@ -16,10 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="ls-dos"
 
-DEPEND="sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	sys-libs/readline
 	>=x11-libs/libX11-1.0.0"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	ls-dos? ( app-arch/unzip )"
 
 src_prepare() {
 	sed -i -e 's/$(CC) -o/$(CC) $(LDFLAGS) -o/' Makefile || die
