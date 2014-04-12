@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+DESCRIPTION=vim plugin: a comprehensive plugin for editing LaTeX files
+EAPI=5
+HOMEPAGE=http://atp-vim.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=|| ( app-editors/vim[python] app-editors/gvim[python] ) !app-vim/vim-latex app-vim/align app-text/wdiff >=dev-lang/python-2.7 dev-python/psutil dev-tex/latexmk dev-tex/detex virtual/tex-base || ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+SLOT=0
+SRC_URI=mirror://sourceforge/atp-vim/releases/AutomaticTexPlugin_12.5.tar.gz
+_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
+_md5_=099246aef058fd122cef4c66b3208e1d
