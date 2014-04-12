@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.3 2014/04/04 01:06:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.4 2014/04/12 08:38:00 idella4 Exp $
 
 EAPI=5
 
@@ -73,7 +73,7 @@ DEPEND="${COMMON_DEPEND}
 		sys-power/iasl )
 	dev-lang/perl
 	app-misc/pax-utils
-	dev-python/markdown
+	dev-python/markdown[${PYTHON_USEDEP}]
 	doc? (
 		app-doc/doxygen
 		dev-tex/latex2html[png,gif]
