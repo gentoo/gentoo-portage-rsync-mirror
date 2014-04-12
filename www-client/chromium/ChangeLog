@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1054 2014/04/12 09:33:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1055 2014/04/12 20:40:19 floppym Exp $
+
+*chromium-35.0.1916.27 (12 Apr 2014)
+
+  12 Apr 2014; Mike Gilbert <floppym@gentoo.org> +chromium-35.0.1916.27.ebuild:
+  Beta channel bump.
 
   12 Apr 2014; Agostino Sarubbo <ago@gentoo.org> chromium-34.0.1847.116.ebuild:
   Stable for x86, wrt bug #507212
