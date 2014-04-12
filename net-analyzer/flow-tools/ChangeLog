@@ -1,9 +1,14 @@
 # ChangeLog for net-analyzer/flow-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.66 2013/02/26 15:41:31 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.67 2014/04/12 20:03:43 jer Exp $
+
+  12 Apr 2014; Jeroen Roovers <jer@gentoo.org> files/flowcapture.confd,
+  files/flowcapture.initd:
+  Use checkpath instead of keepdir, hard-code PIDFILE as it is not a useful
+  configuration option (bug #483590 by Reuben Farrelly).
 
   26 Feb 2013; Jeroen Roovers <jer@gentoo.org> flow-tools-0.68.5.1-r2.ebuild:
-  Fix default pidfile path. Replace chown withth fowners and chmod with fperms,
+  Fix default pidfile path. Replace chown with fowners and chmod with fperms,
   replace /var/run with /run (bug #458944 by Reuben Farrelly).
 
   26 Feb 2013; Jeroen Roovers <jer@gentoo.org> -flow-tools-0.68.5.1-r1.ebuild,

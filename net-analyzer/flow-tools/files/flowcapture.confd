@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Config file for /etc/init.d/flowcap
 
@@ -10,9 +10,6 @@ LOCALIP=0
 
 # You probably don't want to change this, but in case you do - nest level
 NEST=0
-
-# pid file location
-PIDFILE=/var/run/flowcapture.pid
 
 # port to listen on
 PORT=2055
@@ -43,6 +40,6 @@ WORKDIR=/var/lib/flows/ft
 USER=flows
 
 # This pulls in the options above
-FLOW_OPTS="-p $PIDFILE -w $WORKDIR $LOCALIP/$REMOTEIP/$PORT -V $FLOW_VER -E $SIZE -n $ROTATIONS -N $NEST -R $ROTATE_PROG"
+FLOW_OPTS="-p /run/flows/flowcapture.pid -w $WORKDIR $LOCALIP/$REMOTEIP/$PORT -V $FLOW_VER -E $SIZE -n $ROTATIONS -N $NEST -R $ROTATE_PROG"
 # Use below only if you have sorted out the STAT_INT problem
-#FLOW_OPTS="-p $PIDFILE -w $WORKDIR $LOCALIP/$REMOTEIP/$PORT -S $STAT_INT -V $FLOW_VER -E $SIZE -n $ROTATIONS -N $NEST -R $ROTATE_PROG"
+#FLOW_OPTS="-p /run/flows/flowcapture.pid -w $WORKDIR $LOCALIP/$REMOTEIP/$PORT -S $STAT_INT -V $FLOW_VER -E $SIZE -n $ROTATIONS -N $NEST -R $ROTATE_PROG"

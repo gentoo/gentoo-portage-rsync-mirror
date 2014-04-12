@@ -7,5 +7,7 @@
 	</longdescription>
 	<use>
     	<flag name="pax_kernel">Apply patch needed for pax enabled kernels</flag>
+    	<flag name="vmci">Build the Virtual Machine Communication Interface module; disable this if you want to use the module from the mainline kernel</flag>
+    	<flag name="vsock">Build the VMware VMCI transport for Virtual Sockets; disable this if you want to use the module from the mainline kernel</flag>
 	</use>
 </pkgmetadata>
