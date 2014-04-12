@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15560 2014/04/12 06:14:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15561 2014/04/12 15:22:03 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (12 Apr 2014)
+# No license, SRC_URI dead, unresponsive upstream.
+# Last release in 2002. No reverse dependencies.
+# Masked for removal in 30 days, bug 446162.
+dev-java/randomguid
 
 # Michał Górny <mgorny@gentoo.org> (10 Apr 2014)
 # The new version with refurbished install phase. Fixes multilib-
