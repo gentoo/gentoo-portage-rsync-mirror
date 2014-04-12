@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-5.0.2.1031769.ebuild,v 1.2 2013/06/22 22:37:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-5.0.3.1410761.ebuild,v 1.1 2014/04/12 18:49:05 dilfridge Exp $
 
 EAPI="4"
 

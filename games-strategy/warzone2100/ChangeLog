@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.84 2014/03/18 00:52:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.85 2014/04/12 18:43:46 mr_bones_ Exp $
+
+  12 Apr 2014; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  add upsteam longdescription (bug #507442)
 
   18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org> warzone2100-3.1.1.ebuild:
   add elog for working around bug #504924

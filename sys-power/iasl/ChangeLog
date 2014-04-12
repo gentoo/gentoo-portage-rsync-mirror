@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.43 2014/03/26 14:16:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.44 2014/04/12 18:43:43 polynomial-c Exp $
+
+*iasl-20140325 (12 Apr 2014)
+
+  12 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +iasl-20140325.ebuild:
+  Version bump.
 
   26 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> iasl-20090123.ebuild,
   +iasl-20121018.ebuild, iasl-20130117-r1.ebuild:

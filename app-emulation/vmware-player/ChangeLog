@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.120 2014/04/12 18:06:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.121 2014/04/12 18:49:05 dilfridge Exp $
+
+*vmware-player-5.0.3.1410761 (12 Apr 2014)
+
+  12 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +vmware-player-5.0.3.1410761.ebuild, -vmware-player-5.0.2.1031769.ebuild:
+  Version bump, bug 497816; remove old
 
   12 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -vmware-player-4.0.5.893925.ebuild:

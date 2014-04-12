@@ -1,9 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.1 2014/04/08 09:10:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.2 2014/04/12 18:52:06 ssuominen Exp $
 
 EAPI=5
-inherit bash-completion-r1 eutils multilib
+
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+
+inherit bash-completion-r1 eutils multilib python-r1
 
 if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
@@ -19,7 +22,7 @@ HOMEPAGE="http://git.kernel.org/?p=utils/kernel/kmod/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="debug doc lzma +openrc static-libs +tools zlib"
+IUSE="debug doc lzma +openrc python static-libs +tools zlib"
 
 # Upstream does not support running the test suite with custom configure flags.
 # I was also told that the test suite is intended for kmod developers.
@@ -31,15 +34,22 @@ RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
 	openrc? ( !<sys-apps/openrc-0.12 )
+	python? ( ${PYTHON_DEPS} )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	lzma? ( virtual/pkgconfig )
+	python? (
+		dev-python/cython[${PYTHON_USEDEP}]
+		virtual/pkgconfig
+		)
 	zlib? ( virtual/pkgconfig )"
 if [[ ${PV} == 9999* ]]; then
 	DEPEND="${DEPEND}
 		dev-libs/libxslt"
 fi
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 src_prepare() {
 	if [ ! -e configure ]; then
@@ -61,34 +71,54 @@ src_prepare() {
 }
 
 src_configure() {
-	# TODO: --disable-python is only because the ebuild hasn't been ported over to
-	# python-r1.eclass yet
-	econf \
-		--bindir=/bin \
-		--with-rootlibdir="/$(get_libdir)" \
-		--enable-shared \
-		$(use_enable static-libs static) \
-		$(use_enable tools) \
-		$(use_enable debug) \
-		--disable-python \
-		$(use_enable doc gtk-doc) \
-		$(use_with lzma xz) \
-		$(use_with zlib) \
+	local myeconfargs=(
+		--bindir=/bin
+		--with-rootlibdir="/$(get_libdir)"
+		--enable-shared
+		$(use_enable static-libs static)
+		$(use_enable tools)
+		$(use_enable debug)
+		$(use_enable doc gtk-doc)
+		$(use_with lzma xz)
+		$(use_with zlib)
 		--with-bashcompletiondir="$(get_bashcompdir)"
+	)
+
+	local ECONF_SOURCE="${S}"
+
+	kmod_configure() {
+		mkdir -p "${BUILD_DIR}" || die
+		run_in_build_dir econf "${myeconfargs[@]}" "$@"
+	}
+
+	if use python; then
+		python_parallel_foreach_impl kmod_configure --enable-python
+	else
+		BUILD_DIR="${WORKDIR}/build"
+		kmod_configure --disable-python
+	fi
 }
 
 src_compile() {
-	if [[ ${PV} == 9999* ]]; then
-		default
-	else
+	if [[ ${PV} != 9999* ]]; then
 		# Force -j1 because of -15-dynamic-kmod.patch, likely caused by lack of eautoreconf
 		# wrt #494806
-		emake -j1
+		local MAKEOPTS="${MAKEOPTS} -j1"
+	fi
+	if use python; then
+		python_foreach_impl run_in_build_dir emake
+	else
+		run_in_build_dir emake
 	fi
 }
 
 src_install() {
-	default
+	if use python; then
+		python_foreach_impl run_in_build_dir emake DESTDIR="${D}" install
+	else
+		run_in_build_dir emake DESTDIR="${D}" install
+	fi
+
 	prune_libtool_files
 
 	if use tools; then

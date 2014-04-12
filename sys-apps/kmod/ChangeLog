@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.144 2014/04/08 09:10:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.145 2014/04/12 18:52:06 ssuominen Exp $
+
+  12 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-17.ebuild,
+  kmod-9999.ebuild:
+  Enable python-kmod support using ebuild patch from Mike Gilbert
 
 *kmod-17 (08 Apr 2014)
 

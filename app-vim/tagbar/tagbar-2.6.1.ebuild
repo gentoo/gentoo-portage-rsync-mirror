@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/tagbar-2.6.1.ebuild,v 1.1 2014/01/25 06:34:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/tagbar-2.6.1.ebuild,v 1.2 2014/04/12 18:54:49 nimiux Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://majutsushi.github.com/tagbar/
 	http://www.vim.org/scripts/script.php?script_id=3465"
 SRC_URI="https://github.com/majutsushi/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="vim"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND=">=dev-util/ctags-5.5"
 
