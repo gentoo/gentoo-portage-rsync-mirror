@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-264.5.ebuild,v 1.5 2013/12/27 16:34:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-271.3.ebuild,v 1.1 2014/04/12 18:28:49 dilfridge Exp $
 
 EAPI="4"
 
@@ -21,8 +21,8 @@ IUSE="pax_kernel"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	|| ( =app-emulation/vmware-player-4.0.${PV_MINOR}*
-	=app-emulation/vmware-workstation-8.0.${PV_MINOR}* )"
+	|| ( =app-emulation/vmware-player-5.0.${PV_MINOR}*
+	=app-emulation/vmware-workstation-9.0.${PV_MINOR}* )"
 
 S=${WORKDIR}
 
@@ -59,15 +59,12 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV_MAJOR}-newline.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-makefile-kernel-dir.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-makefile-include.patch"
-	epatch "${FILESDIR}/${PV_MAJOR}-jobserver.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-netdevice.patch"
 	use pax_kernel && epatch "${FILESDIR}/hardened.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-apic.patch"
 	kernel_is ge 3 7 0 && epatch "${FILESDIR}/${PV_MAJOR}-putname.patch"
-	kernel_is ge 3 8 0 && epatch "${FILESDIR}/${PV_MAJOR}-3.8.0.patch"
 	kernel_is ge 3 10 0 && epatch "${FILESDIR}/${PV_MAJOR}-3.10.0.patch"
 
 	# Allow user patches so they can support RC kernels and whatever else
