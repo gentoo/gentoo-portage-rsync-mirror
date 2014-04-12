@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.556 2014/04/06 16:56:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.557 2014/04/12 09:30:58 polynomial-c Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Lars Wendler <polynomial-c@gentoo.org> (12 Apr 2014)
+# Required ffmpeg version still is masked (#507474)
+>=media-libs/xine-lib-1.2.5 avformat
 
 # Julian Ospald <hasufell@gentoo.org> (06 Apr 2014)
 # broken wrt #501582
