@@ -1,6 +1,11 @@
 # ChangeLog for mate-base/mate-menus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/ChangeLog,v 1.5 2014/03/10 23:11:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/ChangeLog,v 1.6 2014/04/12 00:14:09 tomwij Exp $
+
+*mate-menus-1.8.0 (12 Apr 2014)
+
+  12 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +mate-menus-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-menus-1.6.0.ebuild:
   Update dependencies per the consensus formed with ssuominen.
