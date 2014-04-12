@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p8.ebuild,v 1.1 2014/03/31 07:00:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p11.ebuild,v 1.1 2014/04/12 15:36:27 polynomial-c Exp $
 
 EAPI="4"
 
@@ -82,9 +82,6 @@ src_prepare() {
 	# Avoid regenerating docs after patches #407985
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
-
-	epatch "${FILESDIR}"/${PN}-4.3-pcomplete-dequote.patch
-	epatch "${FILESDIR}"/${PN}-4.3-input-line-realloc.patch
 
 	epatch_user
 }
