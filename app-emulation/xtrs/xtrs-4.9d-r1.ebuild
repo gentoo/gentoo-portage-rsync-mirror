@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r1.ebuild,v 1.4 2012/11/20 20:44:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r1.ebuild,v 1.5 2014/04/12 12:51:59 ulm Exp $
 
 EAPI=4
 
@@ -9,12 +9,12 @@ inherit flag-o-matic toolchain-funcs
 DESCRIPTION="Radio Shack TRS-80 emulator"
 HOMEPAGE="http://www.tim-mann.org/xtrs.html"
 SRC_URI="http://www.tim-mann.org/trs80/${P}.tar.gz
-	ldos? ( http://www.tim-mann.org/trs80/ld4-631.zip )"
+	ls-dos? ( http://www.tim-mann.org/trs80/ld4-631.zip )"
 
-LICENSE="xtrs ldos? ( freedist )"
+LICENSE="xtrs ls-dos? ( freedist )"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-IUSE="ldos"
+IUSE="ls-dos"
 
 DEPEND="sys-libs/ncurses
 	sys-libs/readline
@@ -42,7 +42,7 @@ src_install() {
 	insinto /usr/share/xtrs/disks
 	doins cpmutil.dsk utility.dsk
 
-	if use ldos; then
+	if use ls-dos; then
 		doins "${WORKDIR}"/ld4-631.dsk
 		dosym disks/ld4-631.dsk /usr/share/xtrs/disk4p-0
 		dosym disks/utility.dsk /usr/share/xtrs/disk4p-1

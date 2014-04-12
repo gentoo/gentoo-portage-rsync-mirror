@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/vdr-xine-0.9.4-r1.ebuild,v 1.1 2013/01/27 16:57:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/vdr-xine-0.9.4-r1.ebuild,v 1.2 2014/04/12 12:47:44 billie Exp $
 
 EAPI="5"
 
@@ -19,9 +19,8 @@ COMMON_DEP=">=media-video/vdr-1.5.7
 	>=media-libs/xine-lib-1.1.8[vdr]"
 DEPEND="${COMMON_DEP}"
 RDEPEND="${COMMON_DEP}
-	media-video/mjpegtools
-	media-libs/netpbm
-	media-video/y4mscaler"
+	>=media-video/mjpegtools-2.1.0
+	media-libs/netpbm"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.diff"

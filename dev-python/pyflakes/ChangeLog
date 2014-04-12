@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyflakes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.39 2013/12/15 15:09:01 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.40 2014/04/12 12:49:30 idella4 Exp $
+
+*pyflakes-0.8.1 (12 Apr 2014)
+
+  12 Apr 2014; Ian Delaney <idella4@gentoo.org> +pyflakes-0.8.1.ebuild,
+  pyflakes-0.7.3.ebuild:
+  bump, closes Bug #507450
 
   15 Dec 2013; Michał Górny <mgorny@gentoo.org> pyflakes-0.7.2.ebuild:
   Add missing unittest2 dep (only in older version), bug #494012.
