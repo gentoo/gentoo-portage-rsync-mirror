@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.153 2014/04/06 22:13:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.154 2014/04/12 07:18:41 ulm Exp $
+
+  12 Apr 2014; Ulrich Müller <ulm@gentoo.org>
+  -emacs-vcs-24.3.50_pre20140131.ebuild, -emacs-vcs-24.3.50_pre20140228.ebuild,
+  emacs-vcs-24.3.50_pre20140331.ebuild, emacs-vcs-24.3.9999-r1.ebuild,
+  emacs-vcs-24.4.9999.ebuild:
+  Add missing dependency on sys-apps/attr. Remove old snapshots.
 
   06 Apr 2014; Ulrich Müller <ulm@gentoo.org>
   emacs-vcs-24.3.50_pre20140331.ebuild, emacs-vcs-24.3.9999-r1.ebuild,

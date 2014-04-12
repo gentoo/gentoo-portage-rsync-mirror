@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1-r5.ebuild,v 1.1 2014/01/18 01:09:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1-r6.ebuild,v 1.1 2014/04/12 07:01:49 naota Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -37,6 +37,7 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-9.1-cve-2013-5209.patch"
 	"${FILESDIR}/${PN}-9.1-cve-2013-5691.patch"
 	"${FILESDIR}/${PN}-9.1-cve-2013-5710.patch"
+	"${FILESDIR}/${PN}-9.1-cve-2014-1453.patch"
 	"${FILESDIR}/${PN}-9.1-random.patch"
 	"${FILESDIR}/${PN}-9.1-mmap-2014.patch" )
 

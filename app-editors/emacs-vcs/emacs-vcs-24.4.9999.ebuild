@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999.ebuild,v 1.3 2014/04/06 22:13:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.9999.ebuild,v 1.4 2014/04/12 07:18:41 ulm Exp $
 
 EAPI=5
 
@@ -92,7 +92,10 @@ DEPEND="${RDEPEND}
 	libxml2? ( virtual/pkgconfig )
 	X? ( virtual/pkgconfig )
 	gzip-el? ( app-arch/gzip )
-	pax_kernel? ( sys-apps/paxctl )"
+	pax_kernel? (
+		sys-apps/attr
+		sys-apps/paxctl
+	)"
 
 if [[ ${PV##*.} = 9999 ]]; then
 	DEPEND="${DEPEND}
