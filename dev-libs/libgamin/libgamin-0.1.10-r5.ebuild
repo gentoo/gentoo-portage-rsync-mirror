@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r5.ebuild,v 1.1 2014/04/12 08:31:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r5.ebuild,v 1.2 2014/04/12 17:21:27 ssuominen Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.gnome.org/~veillard/gamin/"
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gamin-0.1.9-freebsd.patch.bz2
 	http://dev.gentoo.org/~grobian/patches/libgamin-0.1.10-opensolaris.patch.bz2
-	http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz" # pkg.m4 for eautoreconf
+	http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -29,7 +29,7 @@ RDEPEND="!app-admin/fam
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	mv -vf "${WORKDIR}"/pkg-config-*/pkg.m4 "${WORKDIR}"/ || die
+	mv "${WORKDIR}"/pkg-config-*/pkg.m4 "${WORKDIR}"/ || die
 
 	# Fix QA warnings, bug #257281, upstream #466791
 	epatch "${FILESDIR}"/${PN}-0.1.10-compilewarnings.patch

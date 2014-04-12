@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.672 2014/04/12 09:30:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.673 2014/04/12 17:29:59 dilfridge Exp $
+
+  12 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Mask marble python bindings in future releases
 
   12 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
   Masked avformat USE flag for >=media-libs/xine-lib-1.2.5 until required

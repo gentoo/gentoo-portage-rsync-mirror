@@ -7,4 +7,9 @@
 	<maintainer>
 		<email>prometheanfire@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name="aio">Enable AIO ioengine</flag>
+		<flag name="gnuplot">Install tools for generating gnuplots</flag>
+		<flag name="numa">Enable numa support</flag>
+	</use>
 </pkgmetadata>
