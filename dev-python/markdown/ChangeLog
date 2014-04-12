@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.51 2014/04/07 22:40:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.52 2014/04/12 04:16:19 idella4 Exp $
+
+*markdown-2.4 (12 Apr 2014)
+
+  12 Apr 2014; Ian Delaney <idella4@gentoo.org> +markdown-2.4.ebuild:
+  bump; add py3.4 support, drop py2.6 py3.2 subsequent to testsuite failures
 
   07 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> markdown-2.3.ebuild:
   Keyword ~amd64-linux ~x86-linux
