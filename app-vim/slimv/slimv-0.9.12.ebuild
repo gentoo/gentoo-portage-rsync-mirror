@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/slimv-0.9.12.ebuild,v 1.1 2013/12/30 08:05:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/slimv-0.9.12.ebuild,v 1.2 2014/04/12 19:48:51 nimiux Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="vim plugin: aid Lisp development by providing a SLIME-like Lisp and
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2531"
 SRC_URI="https://bitbucket.org/kovisoft/${PN}/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
 LICENSE="public-domain"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="|| ( app-editors/vim[python] app-editors/gvim[python] )
 	>=dev-lang/python-2.4

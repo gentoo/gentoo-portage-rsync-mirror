@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/slimv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.26 2013/12/30 08:06:24 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.27 2014/04/12 19:48:51 nimiux Exp $
+
+  12 Apr 2014; Chema Alonso <nimiux@gentoo.org> slimv-0.9.12.ebuild:
+  Stable for amd64 wrt bug #502640
 
   30 Dec 2013; Tim Harder <radhermit@gentoo.org> -slimv-0.9.7.ebuild,
   -slimv-0.9.8.ebuild, -slimv-0.9.9.ebuild, -slimv-0.9.10.ebuild:
