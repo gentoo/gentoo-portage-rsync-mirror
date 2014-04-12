@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ktp-common-internals-0.8.0.ebuild,v 1.1 2014/03/12 10:49:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-common-internals/ktp-common-internals-0.8.0.ebuild,v 1.2 2014/04/12 13:18:39 johu Exp $
 
 EAPI=5
 
@@ -20,15 +20,26 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="4"
-IUSE="debug"
+IUSE="debug semantic-desktop"
 
 DEPEND="
-	$(add_kdebase_dep kdepimlibs)
-	>=net-libs/libkpeople-0.2.1
 	>=net-libs/telepathy-qt-0.9.3
 	>=net-libs/telepathy-logger-qt-0.5.80
+	semantic-desktop? (
+		$(add_kdebase_dep kdepimlibs)
+		>=net-libs/libkpeople-0.2.1
+	)
 "
 RDEPEND="${DEPEND}
 	!!<net-im/ktp-contact-list-0.4.0
 	!<net-im/ktp-text-ui-0.5.80
 "
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_find_package semantic-desktop KPeople)
+		$(cmake-utils_use_find_package semantic-desktop KdepimLibs)
+	)
+
+	kde4-base_src_configure
+}
