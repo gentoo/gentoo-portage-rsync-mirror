@@ -1,0 +1,200 @@
+From 021bee4df3822667ab909e5256ce18518610bdb8 Mon Sep 17 00:00:00 2001
+From: Mike Gilbert <floppym@gentoo.org>
+Date: Sat, 12 Apr 2014 16:07:45 -0400
+Subject: [PATCH 2/2] fsck: Search for fsck.type in PATH
+To: systemd-devel@lists.freedesktop.org
+
+Modifies find_binary() to accept NULL in the second argument.
+
+fsck.type lookup logic moved to new fsck_exists() function, with a test.
+---
+ src/fsck/fsck.c           | 10 +++++-----
+ src/shared/generator.c    | 12 +++++-------
+ src/shared/path-util.c    | 39 ++++++++++++++++++++++++---------------
+ src/shared/path-util.h    |  2 ++
+ src/test/test-path-util.c | 11 +++++++++++
+ 5 files changed, 47 insertions(+), 27 deletions(-)
+
+diff --git a/src/fsck/fsck.c b/src/fsck/fsck.c
+index 18f2aca..5ed837d 100644
+--- a/src/fsck/fsck.c
++++ b/src/fsck/fsck.c
+@@ -37,6 +37,7 @@
+ #include "bus-errors.h"
+ #include "fileio.h"
+ #include "udev-util.h"
++#include "path-util.h"
+ 
+ static bool arg_skip = false;
+ static bool arg_force = false;
+@@ -285,14 +286,13 @@ int main(int argc, char *argv[]) {
+ 
+         type = udev_device_get_property_value(udev_device, "ID_FS_TYPE");
+         if (type) {
+-                const char *checker = strappenda("/sbin/fsck.", type);
+-                r = access(checker, X_OK);
++                r = fsck_exists(type);
+                 if (r < 0) {
+-                        if (errno == ENOENT) {
+-                                log_info("%s doesn't exist, not checking file system.", checker);
++                        if (r == -ENOENT) {
++                                log_info("fsck.%s doesn't exist, not checking file system.", type);
+                                 return EXIT_SUCCESS;
+                         } else
+-                                log_warning("%s cannot be used: %m", checker);
++                                log_warning("fsck.%s cannot be used: %s", type, strerror(-r));
+                 }
+         }
+ 
+diff --git a/src/shared/generator.c b/src/shared/generator.c
+index 6110303..5ac7b5f 100644
+--- a/src/shared/generator.c
++++ b/src/shared/generator.c
+@@ -19,6 +19,7 @@
+   along with systemd; If not, see <http://www.gnu.org/licenses/>.
+ ***/
+ 
++#include <string.h>
+ #include <unistd.h>
+ 
+ #include "util.h"
+@@ -26,6 +27,7 @@
+ #include "mkdir.h"
+ #include "unit-name.h"
+ #include "generator.h"
++#include "path-util.h"
+ 
+ int generator_write_fsck_deps(
+                 FILE *f,
+@@ -45,16 +47,12 @@ int generator_write_fsck_deps(
+         }
+ 
+         if (!isempty(fstype) && !streq(fstype, "auto")) {
+-                const char *checker;
+                 int r;
+-
+-                checker = strappenda("/sbin/fsck.", fstype);
+-                r = access(checker, X_OK);
++                r = fsck_exists(fstype);
+                 if (r < 0) {
+-                        log_warning("Checking was requested for %s, but %s cannot be used: %m", what, checker);
+-
++                        log_warning("Checking was requested for %s, but fsck.%s cannot be used: %s", what, fstype, strerror(-r));
+                         /* treat missing check as essentially OK */
+-                        return errno == ENOENT ? 0 : -errno;
++                        return r == -ENOENT ? 0 : r;
+                 }
+         }
+ 
+diff --git a/src/shared/path-util.c b/src/shared/path-util.c
+index bdc54a9..1ad1084 100644
+--- a/src/shared/path-util.c
++++ b/src/shared/path-util.c
+@@ -425,19 +425,20 @@ int path_is_os_tree(const char *path) {
+ 
+ int find_binary(const char *name, char **filename) {
+         assert(name);
+-        assert(filename);
+ 
+         if (strchr(name, '/')) {
+-                char *p;
++                if (filename) {
++                        char *p;
+ 
+-                if (path_is_absolute(name))
+-                        p = strdup(name);
+-                else
+-                        p = path_make_absolute_cwd(name);
+-                if (!p)
+-                        return -ENOMEM;
++                        if (path_is_absolute(name))
++                                p = strdup(name);
++                        else
++                                p = path_make_absolute_cwd(name);
++                        if (!p)
++                                return -ENOMEM;
++                        *filename = p;
++                }
+ 
+-                *filename = p;
+                 return 0;
+         } else {
+                 const char *path;
+@@ -453,18 +454,19 @@ int find_binary(const char *name, char **filename) {
+                         path = DEFAULT_PATH;
+ 
+                 FOREACH_WORD_SEPARATOR(w, l, path, ":", state) {
+-                        char *p;
++                        _cleanup_free_ char *p = NULL;
+ 
+                         if (asprintf(&p, "%.*s/%s", (int) l, w, name) < 0)
+                                 return -ENOMEM;
+ 
+-                        if (access(p, X_OK) < 0) {
+-                                free(p);
++                        if (access(p, X_OK) < 0)
+                                 continue;
+-                        }
+ 
+-                        path_kill_slashes(p);
+-                        *filename = p;
++                        if (filename) {
++                                path_kill_slashes(p);
++                                *filename = p;
++                                p = NULL;
++                        }
+ 
+                         return 0;
+                 }
+@@ -507,3 +509,10 @@ bool paths_check_timestamp(const char* const* paths, usec_t *timestamp, bool upd
+ 
+         return changed;
+ }
++
++int fsck_exists(const char *fstype) {
++        const char *checker;
++
++        checker = strappenda("fsck.", fstype);
++        return find_binary(checker, NULL);
++}
+diff --git a/src/shared/path-util.h b/src/shared/path-util.h
+index 2b8ea02..fdf1f6b 100644
+--- a/src/shared/path-util.h
++++ b/src/shared/path-util.h
+@@ -57,6 +57,8 @@ int find_binary(const char *name, char **filename);
+ 
+ bool paths_check_timestamp(const char* const* paths, usec_t *paths_ts_usec, bool update);
+ 
++int fsck_exists(const char *fstype);
++
+ /* Iterates through the path prefixes of the specified path, going up
+  * the tree, to root. Also returns "" (and not "/"!) for the root
+  * directory. Excludes the specified directory itself */
+diff --git a/src/test/test-path-util.c b/src/test/test-path-util.c
+index bec2a83..a2cf0af 100644
+--- a/src/test/test-path-util.c
++++ b/src/test/test-path-util.c
+@@ -158,9 +158,20 @@ static void test_prefixes(void) {
+         }
+ }
+ 
++static void test_fsck_exists(void) {
++        /* Ensure we use a sane default for PATH. */
++        unsetenv("PATH");
++
++        /* fsck.minix is provided by util-linux and will probably exist. */
++        assert_se(fsck_exists("minix") == 0);
++
++        assert_se(fsck_exists("AbCdE") == -ENOENT);
++}
++
+ int main(void) {
+         test_path();
+         test_find_binary();
+         test_prefixes();
++        test_fsck_exists();
+         return 0;
+ }
+-- 
+1.9.2
+
