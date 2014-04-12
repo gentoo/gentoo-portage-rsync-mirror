@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.14 2014/04/05 22:40:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.15 2014/04/12 09:35:28 ago Exp $
+
+  12 Apr 2014; Agostino Sarubbo <ago@gentoo.org> ganglia-web-3.5.8-r1.ebuild:
+  Stable for x86, wrt bug #462500
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> ganglia-web-3.5.8-r1.ebuild:
   Stable for amd64, wrt bug #462500

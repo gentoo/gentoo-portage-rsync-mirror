@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.188 2014/04/10 19:35:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.189 2014/04/12 09:44:01 mgorny Exp $
+
+  12 Apr 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Remove the cmake hack since upstream started installing cmake files from
+  Makefiles.
 
 *llvm-3.4-r2 (10 Apr 2014)
 

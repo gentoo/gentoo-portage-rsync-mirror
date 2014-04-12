@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.69 2014/04/11 16:24:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.71 2014/04/12 09:33:39 ago Exp $
+
+  12 Apr 2014; Agostino Sarubbo <ago@gentoo.org> jbigkit-2.1.ebuild:
+  Stable for x86, wrt bug #507254
+
+  12 Apr 2014; Agostino Sarubbo <ago@gentoo.org> jbigkit-2.1.ebuild:
+  Stable for amd64, wrt bug #507254
 
   11 Apr 2014; Jeroen Roovers <jer@gentoo.org> jbigkit-2.1.ebuild:
   Stable for HPPA (bug #507254).

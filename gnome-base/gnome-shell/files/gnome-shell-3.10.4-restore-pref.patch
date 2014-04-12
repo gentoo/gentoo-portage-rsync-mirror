@@ -1,0 +1,44 @@
+From 45041b421561ffac0bdfc92680a7a948d3623e65 Mon Sep 17 00:00:00 2001
+From: Adel Gadllah <adel.gadllah@gmail.com>
+Date: Fri, 21 Feb 2014 12:30:40 +0100
+Subject: perf: Restore shell after runs
+
+Currently running the perf tool results into no wm running
+afterwards making it hard for the user to get the results from a terminal
+and generally does not make it easy for users to run it to gather numbers.
+
+So restore the shell after the test has completed.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=724870
+
+diff --git a/src/gnome-shell-perf-tool.in b/src/gnome-shell-perf-tool.in
+index 1ad67b8..4494a92 100644
+--- a/src/gnome-shell-perf-tool.in
++++ b/src/gnome-shell-perf-tool.in
+@@ -99,6 +99,15 @@ def run_shell(perf_output=None):
+     shell.wait()
+     return shell.returncode == 0
+ 
++def restore_shell():
++    pid = os.fork()
++    if (pid == 0):
++        if "MUTTER_WM_CLASS_FILTER" in os.environ:
++            del os.environ["MUTTER_WM_CLASS_FILTER"]
++        os.execlp("gnome-shell", "gnome-shell", "--replace")
++    else:
++        sys.exit(0)
++
+ def upload_performance_report(report_text):
+     try:
+         config_home = os.environ['XDG_CONFIG_HOME']
+@@ -320,6 +329,6 @@ if args:
+ 
+ normal_exit = run_performance_test()
+ if normal_exit:
+-    sys.exit(0)
++    restore_shell()
+ else:
+     sys.exit(1)
+-- 
+cgit v0.10.1
+

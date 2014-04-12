@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.83 2014/04/10 17:03:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.84 2014/04/12 09:44:01 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
 
-inherit cmake-utils eutils flag-o-matic git-r3 multibuild multilib \
+inherit eutils flag-o-matic git-r3 multibuild multilib \
 	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
@@ -248,25 +248,6 @@ multilib_src_configure() {
 
 	ECONF_SOURCE=${S} \
 	econf "${conf_flags[@]}"
-
-	multilib_build_binaries && cmake_configure
-}
-
-cmake_configure() {
-	# sadly, cmake doesn't seem to have host autodetection
-	# but it's fairly easy to steal this from configured autotools
-	local targets=$(sed -n -e 's/^TARGETS_TO_BUILD=//p' Makefile.config || die)
-	local libdir=$(get_libdir)
-	local mycmakeargs=(
-		# just the stuff needed to get correct cmake modules
-		$(cmake-utils_use ncurses LLVM_ENABLE_TERMINFO)
-
-		-DLLVM_TARGETS_TO_BUILD="${targets// /;}"
-		-DLLVM_LIBDIR_SUFFIX=${libdir#lib}
-	)
-
-	BUILD_DIR=${S%/}_cmake \
-	cmake-utils_src_configure
 }
 
 set_makeargs() {
@@ -395,9 +376,6 @@ multilib_src_install() {
 			dosym ../../../../$(get_libdir)/LLVMgold.so \
 				/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
 		fi
-
-		# install cmake modules
-		emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install
 	fi
 
 	# Fix install_names on Darwin.  The build system is too complicated

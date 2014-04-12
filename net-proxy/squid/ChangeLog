@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.456 2014/04/09 09:21:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.457 2014/04/12 09:35:23 ago Exp $
+
+  12 Apr 2014; Agostino Sarubbo <ago@gentoo.org> squid-3.3.12.ebuild:
+  Stable for x86, wrt bug #504176
 
   09 Apr 2014; Eray Aslan <eras@gentoo.org> squid-3.4.4.ebuild:
   Add epatch_user call

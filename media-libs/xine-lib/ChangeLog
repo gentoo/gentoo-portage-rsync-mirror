@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.702 2014/04/11 19:38:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.703 2014/04/12 09:39:09 polynomial-c Exp $
+
+  12 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> xine-lib-1.2.5.ebuild,
+  metadata.xml:
+  avformat requires >=ffmpeg-2.2 (bug #507474).
 
 *xine-lib-1.2.5 (11 Apr 2014)
 

@@ -1,6 +1,30 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.71 2014/03/16 10:55:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.72 2014/04/12 09:35:41 pacho Exp $
+
+*gnome-shell-3.10.4-r2 (12 Apr 2014)
+
+  12 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-shell-3.10.4-activate-workspace.patch,
+  +files/gnome-shell-3.10.4-broken-crosshairs.patch,
+  +files/gnome-shell-3.10.4-restore-pref.patch,
+  +files/gnome-shell-3.10.4-scale-factor.patch,
+  +files/gnome-shell-3.10.4-wired-network.patch, +gnome-shell-3.10.4-r2.ebuild,
+  -files/gnome-shell-3.6.0-networkmanager-flag.patch,
+  -files/gnome-shell-3.7.90-bluetooth-flag.patch,
+  -files/gnome-shell-3.8.0-networkmanager-flag-r1.patch,
+  -files/gnome-shell-3.8.3-networkmanager-flag.patch,
+  -files/gnome-shell-3.8.3-relock-screen.patch,
+  -files/gnome-shell-3.8.4-allocate-scrollbars.patch,
+  -files/gnome-shell-3.8.4-close-rundialog.patch,
+  -files/gnome-shell-3.8.4-events-lock.patch,
+  -files/gnome-shell-3.8.4-nodisplay.patch,
+  -files/gnome-shell-3.8.4-reset-opacity.patch,
+  -files/gnome-shell-3.8.4-revert-async.patch, -gnome-shell-3.10.3.ebuild,
+  -gnome-shell-3.10.4.ebuild, -gnome-shell-3.8.4-r2.ebuild:
+  Apply multiple upstream fixes from 3.10 and master branches (this includes the
+  re-addition of wired connection indicator, bug #507400 by Alexi Yelistratov).
+  Drop old.
 
   16 Mar 2014; Pacho Ramos <pacho@gentoo.org> gnome-shell-3.10.4-r1.ebuild:
   amd64 stable, bug #503952

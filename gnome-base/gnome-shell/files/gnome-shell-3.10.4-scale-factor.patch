@@ -1,0 +1,28 @@
+From a3d9946803326a5d1fc76c617733df82c7057434 Mon Sep 17 00:00:00 2001
+From: "Jasper St. Pierre" <jstpierre@mecheye.net>
+Date: Sat, 22 Feb 2014 18:00:57 -0500
+Subject: shell-global: Only set the scale factor if get_setting succeeded
+
+If gdk_screen_get_setting fails, like if it's running without XSettings,
+then the GValue will have a value of 0. A lot of code tries to divide by
+the scale factor. This produces NaN, and combined with the fact that NaN
+is "leaky", we very quickly end up spinning out of control.
+
+diff --git a/src/shell-global.c b/src/shell-global.c
+index 852d14f..7a9f6c7 100644
+--- a/src/shell-global.c
++++ b/src/shell-global.c
+@@ -749,8 +749,8 @@ update_scale_factor (GdkScreen *screen, gpointer data)
+   GValue value = G_VALUE_INIT;
+ 
+   g_value_init (&value, G_TYPE_INT);
+-  gdk_screen_get_setting (global->gdk_screen, "gdk-window-scaling-factor", &value);
+-  g_object_set (context, "scale-factor", g_value_get_int (&value), NULL);
++  if (gdk_screen_get_setting (global->gdk_screen, "gdk-window-scaling-factor", &value))
++    g_object_set (context, "scale-factor", g_value_get_int (&value), NULL);
+ }
+ 
+ /* This is an IBus workaround. The flow of events with IBus is that every time
+-- 
+cgit v0.10.1
+

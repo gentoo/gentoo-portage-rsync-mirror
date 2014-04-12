@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.5.ebuild,v 1.1 2014/04/11 19:38:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.5.ebuild,v 1.2 2014/04/12 09:39:09 polynomial-c Exp $
 
 EAPI=5
 
@@ -25,13 +25,16 @@ HOMEPAGE="http://xine.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="1"
-IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack jpeg libcaca mad +mmap mng modplug musepack opengl oss pulseaudio samba sdl speex theora truetype v4l vaapi vcd vdpau vdr vidix +vis vorbis vpx wavpack +X +xcb xinerama +xv xvmc ${NLS_IUSE}"
+IUSE="a52 aac aalib +alsa altivec avformat bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack jpeg libcaca mad +mmap mng modplug musepack opengl oss pulseaudio samba sdl speex theora truetype v4l vaapi vcd vdpau vdr vidix +vis vorbis vpx wavpack +X +xcb xinerama +xv xvmc ${NLS_IUSE}"
 
+# At the time of this version bump only >=ffmpeg-2.2 provides the required 
+# .so library version for avformat support (>=55.19.0) (bug #507474).
 RDEPEND="${NLS_RDEPEND}
 	dev-libs/libxdg-basedir
 	media-libs/libdvdnav
 	sys-libs/zlib
-	|| ( media-video/ffmpeg:0 media-libs/libpostproc media-video/libav )
+	avformat? ( >=media-video/ffmpeg-2.2:0 )
+	!avformat? ( || ( media-video/ffmpeg:0 media-libs/libpostproc media-video/libav ) )
 	virtual/ffmpeg
 	virtual/libiconv
 	a52? ( media-libs/a52dec )
@@ -143,7 +146,6 @@ src_configure() {
 	[[ ${PV} == *9999* ]] || myconf="$(use_enable nls)"
 
 	econf \
-		--enable-avformat \
 		$(use_enable ipv6) \
 		$(use_enable altivec) \
 		$(use_enable vis) \
@@ -178,6 +180,7 @@ src_configure() {
 		$(use_enable mng) \
 		--disable-real-codecs \
 		--disable-w32dll \
+		$(use_enable avformat) \
 		$(use_enable vpx) \
 		$(use_with truetype freetype) $(use_with truetype fontconfig) \
 		$(use_with X x) \

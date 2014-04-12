@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4.ebuild,v 1.5 2014/03/09 11:58:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r2.ebuild,v 1.1 2014/04/12 09:35:41 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +i18n +networkmanager -openrc-force"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # libXfixes-5.0 needed for pointer barriers
 # FIXME:
@@ -126,6 +126,28 @@ src_prepare() {
 
 	# Make networkmanager optional, bug #398593
 	epatch "${FILESDIR}/${PN}-3.10-networkmanager-flag.patch"
+
+	# Fix silent bluetooth linking failure with ld.gold, bug #503952
+	# https://bugzilla.gnome.org/show_bug.cgi?id=726435
+	epatch "${FILESDIR}/${PN}-3.10.4-bluetooth-gold.patch"
+
+	# Fix background glitches with multiple monitors, from 3.11, bug #504530
+	epatch "${FILESDIR}/${PN}-3.10.4-fix-background-manager.patch"
+
+	# network: Add a Wired device (from 'master')
+	epatch "${FILESDIR}/${PN}-3.10.4-wired-network.patch"
+
+	# windowManager: Activate new workspace before removing the current one (from '3.10')
+	epatch "${FILESDIR}/${P}-activate-workspace.patch"
+
+	# perf: Restore shell after runs (from '3.10')
+	epatch "${FILESDIR}/${P}-restore-pref.patch"
+
+	# shell-global: Only set the scale factor if get_setting succeeded (from '3.10')
+	epatch "${FILESDIR}/${P}-scale-factor.patch"
+
+	# Magnifier: Restore crosshairs (from 'master')
+	epatch "${FILESDIR}/${PN}-3.10.4-broken-crosshairs.patch"
 
 	epatch_user
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.16 2013/12/13 18:58:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.17 2014/04/12 09:44:53 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -20,16 +20,17 @@ SLOT="0.1"
 # Tests need shmsink from gst-plugins-bad, which isn't packaged
 RESTRICT="test"
 
-COMMONDEPEND=">=media-libs/gstreamer-0.10.33:0.10
+COMMONDEPEND="
+	>=media-libs/gstreamer-0.10.33:0.10
 	>=media-libs/gst-plugins-base-0.10.33:0.10
 	>=dev-libs/glib-2.30:2
 	>=net-libs/libnice-0.1.0
 	introspection? ( >=dev-libs/gobject-introspection-0.10.11 )
 	python? (
 		>=dev-python/pygobject-2.16:2
-		>=dev-python/gst-python-0.10.10 )
-	upnp? ( net-libs/gupnp-igd )"
-
+		>=dev-python/gst-python-0.10.10:0.10 )
+	upnp? ( net-libs/gupnp-igd )
+"
 RDEPEND="${COMMONDEPEND}
 	>=media-libs/gst-plugins-good-0.10.17:0.10
 	>=media-libs/gst-plugins-bad-0.10.17:0.10
@@ -37,7 +38,8 @@ RDEPEND="${COMMONDEPEND}
 		>=media-plugins/gst-plugins-libnice-0.1.0:0.10
 		<=net-libs/libnice-0.1.3[gstreamer] )
 	msn? ( >=media-plugins/gst-plugins-mimic-0.10.17:0.10 )
-	!net-libs/farsight2"
+	!net-libs/farsight2
+"
 # This package is just a rename from farsight2
 
 DEPEND="${COMMONDEPEND}
