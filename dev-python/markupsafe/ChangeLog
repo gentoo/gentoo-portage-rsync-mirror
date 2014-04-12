@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.60 2014/04/01 04:53:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.61 2014/04/12 06:20:35 idella4 Exp $
+
+*markupsafe-0.19 (12 Apr 2014)
+
+  12 Apr 2014; Ian Delaney <idella4@gentoo.org> +markupsafe-0.19.ebuild:
+  bump
 
   01 Apr 2014; Mike Gilbert <floppym@gentoo.org> markupsafe-0.18.ebuild:
   Add python3.4.
