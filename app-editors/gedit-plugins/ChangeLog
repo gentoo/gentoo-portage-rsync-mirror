@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.44 2014/03/09 11:53:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.45 2014/04/12 10:29:58 pacho Exp $
+
+  12 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gedit-plugins-3.8.3-terminal-background.patch,
+  -gedit-plugins-2.32.0.ebuild, -gedit-plugins-3.8.3-r1.ebuild,
+  gedit-plugins-3.10.1.ebuild, metadata.xml:
+  Fix itstool dependency (#504910 by Chris Reffett), drop old.
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gedit-plugins-3.10.1.ebuild:
   x86 stable, bug 499954

@@ -2,7 +2,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
 DEPEND=>=app-editors/gedit-3.9[python?] >=dev-libs/glib-2.32:2 >=dev-libs/libpeas-1.7.0[gtk,python?] >=x11-libs/gtk+-3.9:3 >=x11-libs/gtksourceview-3.9.2:3.0 python? ( python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2[xml] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[xml] ) dev-lang/python-exec:=[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=app-editors/gedit-3[introspection,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] dev-libs/libpeas[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] dev-python/dbus-python[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] dev-python/pycairo dev-python/pygobject:3[cairo,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=x11-libs/gtk+-3.9:3[introspection] >=x11-libs/gtksourceview-3.9.2:3.0[introspection] x11-libs/pango[introspection] x11-libs/gdk-pixbuf:2[introspection] ) charmap? ( >=gnome-extra/gucharmap-3:2.90[introspection] ) git? ( >=dev-libs/libgit2-glib-0.0.6 ) terminal? ( x11-libs/vte:2.90[introspection] ) >=dev-util/intltool-0.40.0 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4 userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Official plugins for gedit
 EAPI=5
-HOMEPAGE=http://live.gnome.org/GeditPlugins
+HOMEPAGE=https://wiki.gnome.org/Apps/Gedit/ShippedPlugins
 IUSE=+python charmap git terminal python_targets_python3_2 python_targets_python3_3
 KEYWORDS=amd64 x86
 LICENSE=GPL-2+
@@ -11,4 +11,4 @@ REQUIRED_USE=charmap? ( python ) git? ( python ) terminal? ( python ) python? ( 
 SLOT=0
 SRC_URI=mirror://gnome/sources/gedit-plugins/3.10/gedit-plugins-3.10.1.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	ec1d542b096f7a5d69ece35586c0bed5	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	f6a00e248ffeb4404b67a7a7645446c5	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=9d91562c989dda4c751ae039c578386f
+_md5_=8b8a76cb78fdb236d75790da993a61e6

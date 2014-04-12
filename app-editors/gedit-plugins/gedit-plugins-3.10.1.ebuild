@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.10.1.ebuild,v 1.5 2014/03/09 11:53:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.10.1.ebuild,v 1.6 2014/04/12 10:29:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ PYTHON_REQ_USE="xml"
 inherit eutils gnome2 multilib python-r1
 
 DESCRIPTION="Official plugins for gedit"
-HOMEPAGE="http://live.gnome.org/GeditPlugins"
+HOMEPAGE="https://wiki.gnome.org/Apps/Gedit/ShippedPlugins"
 
 LICENSE="GPL-2+"
 KEYWORDS="amd64 x86"
@@ -68,5 +68,6 @@ src_configure() {
 
 	gnome2_src_configure \
 		--with-plugins=${myplugins} \
-		$(use_enable python)
+		$(use_enable python) \
+		ITSTOOL=$(type -P true)
 }

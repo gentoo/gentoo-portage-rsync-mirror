@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.140 2013/08/18 11:26:16 yngwin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.141 2014/04/12 10:12:58 polynomial-c Exp $
+
+*smplayer-14.3.0 (12 Apr 2014)
+
+  12 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +smplayer-14.3.0.ebuild:
+  Version bump (bug #506578).
 
 *smplayer-0.8.6 (18 Aug 2013)
 
