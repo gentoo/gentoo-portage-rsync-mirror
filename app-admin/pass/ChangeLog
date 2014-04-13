@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/pass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.8 2014/03/22 19:38:36 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.9 2014/04/13 15:44:38 zx2c4 Exp $
+
+*pass-1.5 (13 Apr 2014)
+
+  13 Apr 2014; Jason A. Donenfeld <zx2c4@gentoo.org> +pass-1.5.ebuild:
+  Bump version.
 
   22 Mar 2014; Jason A. Donenfeld <zx2c4@gentoo.org> pass-9999.ebuild:
   Support darwin on livebuild.
