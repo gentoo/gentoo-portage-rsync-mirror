@@ -1,6 +1,12 @@
 # ChangeLog for games-board/knights
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.39 2014/04/09 10:59:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.41 2014/04/13 14:01:01 johu Exp $
+
+  13 Apr 2014; Johannes Huber <johu@gentoo.org> -knights-2.5.0.ebuild:
+  Remove old.
+
+  13 Apr 2014; Johannes Huber <johu@gentoo.org> knights-2.5.0-r1.ebuild:
+  x86 stable, bug #505292
 
   09 Apr 2014; Johannes Huber <johu@gentoo.org> knights-2.5.0-r1.ebuild:
   Add DEPEND on sys-devel/gettext by Nikoli <nikoli@gmx.us>, bug #507222.
