@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.230 2014/01/18 11:02:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.231 2014/04/13 09:34:58 radhermit Exp $
+
+*iproute2-3.14.0 (13 Apr 2014)
+
+  13 Apr 2014; Tim Harder <radhermit@gentoo.org> +iproute2-3.14.0.ebuild:
+  Version bump, add selinux use flag.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> iproute2-3.10.0.ebuild,
   iproute2-3.11.0.ebuild, iproute2-3.12.0.ebuild, iproute2-3.8.0.ebuild,

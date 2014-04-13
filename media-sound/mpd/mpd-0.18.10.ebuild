@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.8.ebuild,v 1.1 2014/02/07 03:32:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.10.ebuild,v 1.1 2014/04/13 09:45:18 angelos Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
