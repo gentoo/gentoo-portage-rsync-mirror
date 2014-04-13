@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.2.0.ebuild,v 1.1 2014/04/13 07:49:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.2.0.ebuild,v 1.3 2014/04/13 08:12:09 ssuominen Exp $
 
 EAPI=5
 inherit gnome.org gnome2-utils fdo-mime
@@ -8,10 +8,10 @@ inherit gnome.org gnome2-utils fdo-mime
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="https://wiki.gnome.org/Apps/EasyTAG"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 GPL-2+ LGPL-2 LGPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="flac mp3 nls opus speex test wavpack"
+IUSE="flac mp3 opus speex test wavpack"
 
 RDEPEND=">=dev-libs/glib-2
 	media-libs/libogg
@@ -35,8 +35,8 @@ DEPEND="${RDEPEND}
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-util/intltool
+	sys-devel/gettext
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )
 	test? (
 		dev-util/appdata-tools
 		dev-util/desktop-file-utils
@@ -58,7 +58,6 @@ src_configure() {
 	# FIXME: src/gio_wrapper.h -> taglib #include without #ifdef -> --enable-mp4
 	# FIXME: src/vcedit.h -> ogg and vorbis #include without #ifdef -> --enable-ogg
 	econf \
-		$(use_enable nls) \
 		$(use_enable test appdata-validate) \
 		$(use_enable test tests) \
 		$(use_enable mp3) \

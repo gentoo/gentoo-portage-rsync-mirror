@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure postinst postrm preinst prepare
-DEPEND=>=dev-libs/glib-2 media-libs/libogg media-libs/libvorbis media-libs/taglib[mp4] >=x11-libs/gtk+-3.4:3 flac? ( media-libs/flac ) mp3? ( >=media-libs/id3lib-3.8.3-r8 >=media-libs/libid3tag-0.15.1b-r4 ) opus? ( media-libs/opus media-libs/opusfile ) speex? ( media-libs/speex ) wavpack? ( media-sound/wavpack ) app-text/docbook-xml-dtd:4.4 app-text/yelp-tools dev-libs/libxml2 dev-libs/libxslt dev-util/intltool virtual/pkgconfig nls? ( sys-devel/gettext ) test? ( dev-util/appdata-tools dev-util/desktop-file-utils ) app-arch/xz-utils >=sys-apps/sed-4
+DEPEND=>=dev-libs/glib-2 media-libs/libogg media-libs/libvorbis media-libs/taglib[mp4] >=x11-libs/gtk+-3.4:3 flac? ( media-libs/flac ) mp3? ( >=media-libs/id3lib-3.8.3-r8 >=media-libs/libid3tag-0.15.1b-r4 ) opus? ( media-libs/opus media-libs/opusfile ) speex? ( media-libs/speex ) wavpack? ( media-sound/wavpack ) app-text/docbook-xml-dtd:4.4 app-text/yelp-tools dev-libs/libxml2 dev-libs/libxslt dev-util/intltool sys-devel/gettext virtual/pkgconfig test? ( dev-util/appdata-tools dev-util/desktop-file-utils ) app-arch/xz-utils >=sys-apps/sed-4
 DESCRIPTION=GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Apps/EasyTAG
-IUSE=flac mp3 nls opus speex test wavpack
+IUSE=flac mp3 opus speex test wavpack
 KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
+LICENSE=GPL-2 GPL-2+ LGPL-2 LGPL-2+ LGPL-2.1+
 RDEPEND=>=dev-libs/glib-2 media-libs/libogg media-libs/libvorbis media-libs/taglib[mp4] >=x11-libs/gtk+-3.4:3 flac? ( media-libs/flac ) mp3? ( >=media-libs/id3lib-3.8.3-r8 >=media-libs/libid3tag-0.15.1b-r4 ) opus? ( media-libs/opus media-libs/opusfile ) speex? ( media-libs/speex ) wavpack? ( media-sound/wavpack )
 SLOT=0
 SRC_URI=mirror://gnome/sources/easytag/2.2/easytag-2.2.0.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=25830e001167533f490014a21ceacc9e
+_md5_=b371f6c6ba5d5c74111a468fabb5e067

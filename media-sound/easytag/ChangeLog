@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.182 2014/04/13 07:49:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.184 2014/04/13 08:12:09 ssuominen Exp $
+
+  13 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> easytag-2.2.0.ebuild:
+  Missing LGPL-2 and LGPL-2.1 from LICENSE (with and without "any later version"
+  in the package headers)
+
+  13 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> easytag-2.2.0.ebuild:
+  Punt useless USE="nls" since it doesn't save any dependencies and LINGUAS
+  environment variable is usable for determining which files will be emerged
+  into the filesystem.
 
 *easytag-2.2.0 (13 Apr 2014)
 
