@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.2.ebuild,v 1.1 2014/02/24 04:55:05 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.2-r1.ebuild,v 1.1 2014/04/13 11:55:26 pacho Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS="~amd64 ~x86"
-IUSE="agent java curl frontend ipv6 jabber ldap libxml2 mysql openipmi oracle postgres proxy server ssh snmp sqlite odbc static systemd"
+IUSE="agent java curl frontend ipv6 jabber ldap libxml2 mysql openipmi oracle postgres proxy server ssh snmp sqlite odbc static"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
@@ -255,10 +255,8 @@ src_install() {
 		dosbin src/zabbix_server/zabbix_server
 		fowners zabbix:zabbix /etc/zabbix/zabbix_server.conf
 		fperms 0640 /etc/zabbix/zabbix_server.conf
-		if use systemd; then
-			systemd_dounit "${FILESDIR}/zabbix-server.service"
-			systemd_newtmpfilesd "${FILESDIR}/zabbix-server.tmpfiles" zabbix-server.conf
-		fi
+		systemd_dounit "${FILESDIR}/zabbix-server.service"
+		systemd_newtmpfilesd "${FILESDIR}/zabbix-server.tmpfiles" zabbix-server.conf
 	fi
 
 	if use proxy; then
@@ -269,10 +267,8 @@ src_install() {
 		insinto /etc/zabbix
 		doins \
 			"${FILESDIR}/2.2"/zabbix_proxy.conf
-		if use systemd; then
-			systemd_dounit "${FILESDIR}/zabbix-proxy.service"
-			systemd_newtmpfilesd "${FILESDIR}/zabbix-proxy.tmpfiles" zabbix-proxy.conf
-		fi
+		systemd_dounit "${FILESDIR}/zabbix-proxy.service"
+		systemd_newtmpfilesd "${FILESDIR}/zabbix-proxy.tmpfiles" zabbix-proxy.conf
 	fi
 
 	if use agent; then
@@ -293,10 +289,8 @@ src_install() {
 		fperms 0640 \
 			/etc/zabbix/zabbix_agent.conf \
 			/etc/zabbix/zabbix_agentd.conf
-		if use systemd; then
-			systemd_dounit "${FILESDIR}/zabbix-agentd.service"
-			systemd_newtmpfilesd "${FILESDIR}/zabbix-agentd.tmpfiles" zabbix-agentd.conf
-		fi
+		systemd_dounit "${FILESDIR}/zabbix-agentd.service"
+		systemd_newtmpfilesd "${FILESDIR}/zabbix-agentd.tmpfiles" zabbix-agentd.conf
 	fi
 
 	fowners zabbix:zabbix \
