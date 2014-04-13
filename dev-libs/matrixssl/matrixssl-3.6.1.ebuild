@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-3.4.2.ebuild,v 1.1 2013/12/09 05:07:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/matrixssl/matrixssl-3.6.1.ebuild,v 1.1 2014/04/13 11:02:29 ssuominen Exp $
 
-EAPI="4"
+EAPI=5
 inherit toolchain-funcs
 
 MY_P=${P//./-}-open
@@ -21,12 +21,12 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	local myconf=(
 		CC="$(tc-getCC)"
-		STRIP="true"
+		STRIP=true
 		AR="$(tc-getAR)"
-		DFLAGS="${CFLAGS}"
+		DFLAGS="${CFLAGS} -Wall"
 	)
 
-	if use static-libs ; then
+	if use static-libs; then
 		emake "${myconf[@]}"
 	else
 		emake lib${PN}.so "${myconf[@]}"
@@ -48,7 +48,7 @@ src_install() {
 	done
 
 	local h2
-	for h2 in digest keyformat math prng pubkey symmetric; do
+	for h2 in digest hardware keyformat math prng pubkey symmetric; do
 		insinto /usr/include/matrixssl/crypto/${h2}
 		doins crypto/${h2}/*.h
 	done

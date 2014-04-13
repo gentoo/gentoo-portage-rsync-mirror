@@ -4,11 +4,11 @@ DESCRIPTION=Lightweight high-performance web server
 EAPI=4
 HOMEPAGE=http://www.lighttpd.net/
 IUSE=bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal mmap memcache mysql pcre php rrdtool selinux ssl test uploadprogress webdav xattr zlib
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd
 LICENSE=BSD GPL-2
 RDEPEND=bzip2? ( app-arch/bzip2 ) fam? ( virtual/fam ) gdbm? ( sys-libs/gdbm ) ldap? ( >=net-nds/openldap-2.1.26 ) libev? ( >=dev-libs/libev-4.01 ) lua? ( >=dev-lang/lua-5.1 ) memcache? ( dev-libs/libmemcache ) mysql? ( >=virtual/mysql-4.0 ) pcre? ( >=dev-libs/libpcre-3.1 ) php? ( dev-lang/php[cgi] ) rrdtool? ( net-analyzer/rrdtool ) selinux? ( sec-policy/selinux-apache ) ssl? ( >=dev-libs/openssl-0.9.7[kerberos?] ) webdav? ( dev-libs/libxml2 >=dev-db/sqlite-3 sys-fs/e2fsprogs ) xattr? ( kernel_linux? ( sys-apps/attr ) ) zlib? ( >=sys-libs/zlib-1.1 )
 REQUIRED_USE=kerberos? ( ssl )
 SLOT=0
 SRC_URI=http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.35.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	depend.php	df169a364e191b840b695604097e3c21	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	phpconfutils	e108303831029e5b8a9d24b991b1d62a	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=490612b534ff2680871036f54a4c81e3
+_md5_=0782ca3a87e8d00da55f427142a50da8
