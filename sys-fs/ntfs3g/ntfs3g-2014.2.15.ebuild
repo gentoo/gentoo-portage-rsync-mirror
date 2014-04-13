@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2014.2.15.ebuild,v 1.2 2014/03/01 22:11:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2014.2.15.ebuild,v 1.3 2014/04/13 15:02:30 vapier Exp $
 
 EAPI=5
 inherit eutils linux-info udev
@@ -22,7 +22,7 @@ RDEPEND="!<sys-apps/util-linux-2.20.1-r2
 	ntfsdecrypt? (
 		>=dev-libs/libgcrypt-1.2.2:0
 		>=net-libs/gnutls-1.4.4
-		)
+	)
 	external-fuse? ( >=sys-fs/fuse-2.8.0 )"
 DEPEND="${RDEPEND}
 	sys-apps/attr
@@ -47,6 +47,7 @@ src_prepare() {
 	# add missing $(sbindir) references
 	sed -e 's:sbin\($\|/\):$(sbindir)\1:g' \
 		-i ntfsprogs/Makefile.in src/Makefile.in || die
+	epatch "${FILESDIR}"/${PN}-2014.2.15-no-split-usr.patch
 }
 
 src_configure() {
