@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.392 2014/03/29 21:27:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.393 2014/04/13 18:25:57 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> pango-1.36.3.ebuild:
+  Stable for amd64, wrt bug #507568
 
 *pango-1.36.3 (29 Mar 2014)
 *pango-1.36.3-r1 (29 Mar 2014)

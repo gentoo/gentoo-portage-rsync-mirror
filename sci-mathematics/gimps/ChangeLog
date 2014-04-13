@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.66 2014/04/07 18:21:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.67 2014/04/13 18:05:36 pacho Exp $
+
+  13 Apr 2014; Pacho Ramos <pacho@gentoo.org> gimps-27.9-r2.ebuild:
+  amd64 stable, bug #506792
 
 *gimps-27.9-r2 (07 Apr 2014)
 

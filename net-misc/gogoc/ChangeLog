@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.25 2014/04/07 04:18:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.26 2014/04/13 18:07:51 pacho Exp $
+
+  13 Apr 2014; Pacho Ramos <pacho@gentoo.org> gogoc-1.2-r3.ebuild:
+  amd64/sparc/x86 stable, bug #506800
 
   07 Apr 2014; Jeroen Roovers <jer@gentoo.org> gogoc-1.2-r3.ebuild:
   Stable for HPPA (bug #506800).

@@ -4,10 +4,10 @@ DESCRIPTION=Client to connect to a tunnel broker using the TSP protocol (freenet
 EAPI=4
 HOMEPAGE=http://gogonet.gogo6.com/page/download-1
 IUSE=debug
-KEYWORDS=~amd64 hppa ~sparc ~x86
+KEYWORDS=amd64 hppa sparc x86
 LICENSE=MIT GPL-2
 RDEPEND=dev-libs/openssl sys-apps/iproute2 >=sys-apps/net-tools-1.60_p20120127084908
 SLOT=0
 SRC_URI=http://gogo6.com/downloads/gogoc-1_2-RELEASE.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=e636d31cbcd581ce9daaaf2a919dea3b
+_md5_=fbad1fe36e1e70183ce2b11d5d7b8331
