@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsxd/zsxd-1.7.1.ebuild,v 1.1 2014/01/29 20:20:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsxd/zsxd-1.7.1.ebuild,v 1.2 2014/04/13 19:28:20 hasufell Exp $
 
 EAPI=5
 
@@ -14,6 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror"
 
 RDEPEND="games-engines/solarus"
 DEPEND="app-arch/zip"

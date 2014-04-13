@@ -1,10 +1,12 @@
 # ChangeLog for games-rpg/zsdx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/ChangeLog,v 1.1 2014/01/29 20:18:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/ChangeLog,v 1.2 2014/04/13 19:27:54 hasufell Exp $
+
+  13 Apr 2014; Julian Ospald <hasufell@gentoo.org> zsdx-1.7.1.ebuild:
+  set RESTRICT=mirror wrt #507412
 
 *zsdx-1.7.1 (29 Jan 2014)
 
   29 Jan 2014; Julian Ospald <hasufell@gentoo.org> +zsdx-1.7.1.ebuild,
   +files/zsdx-1.7.1-paths.patch, +metadata.xml:
   initial import
-
