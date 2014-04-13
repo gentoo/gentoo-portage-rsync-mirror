@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.528 2014/04/08 09:44:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.529 2014/04/13 17:07:17 vapier Exp $
+
+  13 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.2-free-list-fix.patch, openssl-1.0.2_beta1.ebuild:
+  Enable OPENSSL_NO_BUF_FREELISTS in our builds.
 
   08 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -openssl-1.0.1f.ebuild:
   old
