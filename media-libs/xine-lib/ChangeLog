@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.703 2014/04/12 09:39:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.704 2014/04/13 09:14:38 polynomial-c Exp $
+
+  13 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> xine-lib-1.2.5.ebuild:
+  Fixed dependency for packages that provide libpostproc (bug #507474).
 
   12 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> xine-lib-1.2.5.ebuild,
   metadata.xml:

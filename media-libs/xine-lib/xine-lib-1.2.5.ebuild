@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.5.ebuild,v 1.2 2014/04/12 09:39:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.5.ebuild,v 1.3 2014/04/13 09:14:38 polynomial-c Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND="${NLS_RDEPEND}
 	media-libs/libdvdnav
 	sys-libs/zlib
 	avformat? ( >=media-video/ffmpeg-2.2:0 )
-	!avformat? ( || ( media-video/ffmpeg:0 media-libs/libpostproc media-video/libav ) )
+	!avformat? ( || ( media-video/ffmpeg:0 media-libs/libpostproc ) )
 	virtual/ffmpeg
 	virtual/libiconv
 	a52? ( media-libs/a52dec )

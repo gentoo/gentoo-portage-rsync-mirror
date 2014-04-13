@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r3.ebuild,v 1.1 2014/04/13 07:26:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r3.ebuild,v 1.2 2014/04/13 09:29:10 ulm Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ LICENSE="xtrs ls-dos? ( freedist )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="ls-dos"
+RESTRICT="ls-dos? ( bindist )"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/readline
