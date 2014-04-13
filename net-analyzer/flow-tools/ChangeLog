@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.67 2014/04/12 20:03:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.68 2014/04/12 23:19:55 jer Exp $
+
+  12 Apr 2014; Jeroen Roovers <jer@gentoo.org> files/flowcapture.initd:
+  Replace PIDFILE here too.
 
   12 Apr 2014; Jeroen Roovers <jer@gentoo.org> files/flowcapture.confd,
   files/flowcapture.initd:
