@@ -4,10 +4,10 @@ DESCRIPTION=CCID free software driver
 EAPI=5
 HOMEPAGE=http://pcsclite.alioth.debian.org/ccid.html
 IUSE=twinserial +usb
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/pcsc-lite-1.8.3 usb? ( virtual/libusb:1 )
 SLOT=0
 SRC_URI=http://alioth.debian.org/frs/download.php/file/3989/ccid-1.4.15.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
-_md5_=f1553681989ce9cc08e3e236c33725ed
+_md5_=2fc6dde0cf571d25a61e31cdd04feda2

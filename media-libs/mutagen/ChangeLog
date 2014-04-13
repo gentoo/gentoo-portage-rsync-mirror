@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.99 2014/04/05 15:26:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.100 2014/04/13 16:33:46 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> mutagen-1.22.ebuild:
+  Stable for ppc, wrt bug #506256
 
   05 Apr 2014; Jeroen Roovers <jer@gentoo.org> mutagen-1.22.ebuild:
   Stable for HPPA (bug #506256).
