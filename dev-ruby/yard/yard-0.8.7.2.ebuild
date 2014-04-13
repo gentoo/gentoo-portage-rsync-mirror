@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.8.7.2.ebuild,v 1.10 2014/01/18 19:54:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.8.7.2.ebuild,v 1.11 2014/04/12 23:37:53 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC="yard"
