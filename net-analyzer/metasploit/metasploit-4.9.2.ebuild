@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2.ebuild,v 1.1 2014/04/11 17:38:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2.ebuild,v 1.2 2014/04/13 04:23:44 zerochaos Exp $
 
 EAPI="5"
 
@@ -31,6 +31,7 @@ IUSE="development +java lorcon oracle +pcap test"
 RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
+	dev-ruby/bcrypt-ruby
 	dev-ruby/activesupport:3.2
 	dev-ruby/activerecord:3.2
 	dev-ruby/json

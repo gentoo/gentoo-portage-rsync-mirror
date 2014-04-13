@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.17 2014/04/11 03:32:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.18 2014/04/13 04:23:44 zerochaos Exp $
 
 EAPI="5"
 
@@ -32,6 +32,7 @@ RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	=dev-ruby/rkelly-remix-0.0.6
+	dev-ruby/bcrypt-ruby
 	dev-ruby/activesupport:3.2
 	dev-ruby/activerecord:3.2
 	dev-ruby/json
