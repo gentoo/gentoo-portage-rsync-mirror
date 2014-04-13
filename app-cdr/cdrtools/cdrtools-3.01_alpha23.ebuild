@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha23.ebuild,v 1.2 2014/04/05 10:53:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha23.ebuild,v 1.3 2014/04/13 00:37:26 naota Exp $
 
 EAPI=5
 
@@ -93,7 +93,7 @@ src_prepare() {
 		-e "s|^\(RUNPATH=\).*|\1|" \
 		-e "s|^\(INS_BASE=\).*|\1\t${ED}/usr|" \
 		-e "s|^\(INS_RBASE=\).*|\1\t${ED}|" \
-		-e "s|^\(DEFINSGRP=\).*|\1\troot|" \
+		-e "s|^\(DEFINSGRP=\).*|\1\t0|" \
 		Defaults.${os} || die "sed Schily make setup"
 }
 

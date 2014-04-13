@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.338 2014/04/05 10:53:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.339 2014/04/13 00:37:26 naota Exp $
+
+  13 Apr 2014; Naohiro Aota <naota@gentoo.org> cdrtools-3.01_alpha23.ebuild:
+  Use 0 instead of root for group name. #507466
 
   05 Apr 2014; Raúl Porcel <armin76@gentoo.org> cdrtools-3.01_alpha23.ebuild:
   Add support for arm64
