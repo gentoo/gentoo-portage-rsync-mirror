@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.77 2014/01/14 21:26:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.78 2014/04/13 21:03:34 polynomial-c Exp $
+
+*geany-1.24 (13 Apr 2014)
+
+  13 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -geany-1.22-r1.ebuild,
+  -geany-1.23.ebuild, +geany-1.24.ebuild:
+  Version bump. Removed old.
 
   14 Jan 2014; Pacho Ramos <pacho@gentoo.org> geany-1.23.1.ebuild:
   ia64 stable, bug #488810 (thanks to Emeric Maschino for testing)

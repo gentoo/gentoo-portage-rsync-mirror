@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-1.22-r1.ebuild,v 1.5 2013/07/31 04:57:43 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-1.24.ebuild,v 1.1 2014/04/13 21:05:21 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools-utils vala versionator
 
@@ -12,12 +12,13 @@ SRC_URI="http://plugins.geany.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="debugger devhelp enchant gpg gtkspell lua multiterm nls soup webkit"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="+commander debugger devhelp enchant gpg gtkspell lua markdown multiterm nls scope soup webkit"
 
 LINGUAS="be ca da de es fr gl ja pt pt_BR ru tr zh_CN"
 
-RDEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
+COMMON_DEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
+	commander? ( x11-libs/gtk+:2 )
 	dev-libs/libxml2:2
 	dev-libs/glib:2
 	debugger? ( x11-libs/vte:0 )
@@ -31,38 +32,47 @@ RDEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
 	enchant? ( app-text/enchant )
 	gpg? ( app-crypt/gpgme )
 	gtkspell? ( app-text/gtkspell:2 )
-	lua? (
-		dev-lang/lua
-		=dev-util/geany-$(get_version_component_range 1-2)*
+	lua? ( dev-lang/lua )
+	markdown? (
+		app-text/discount
+		net-libs/webkit-gtk:2
+		x11-libs/gtk+:2
 		)
 	multiterm? (
 		$(vala_depend)
 		x11-libs/gtk+:2
 		>=x11-libs/vte-0.28:0
 		)
+	scope? ( x11-libs/vte:0 )
 	soup? ( net-libs/libsoup )
 	webkit? (
 		net-libs/webkit-gtk:2
 		x11-libs/gtk+:2
 		x11-libs/gdk-pixbuf:2
 		)"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	scope? ( sys-devel/gdb )"
+DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig"
 
 src_prepare() {
+	# bundled lib buster
+	rm markdown/peg-markdown/markdown_lib.c || die
+
 	autotools-utils_src_prepare
 	use multiterm && vala_src_prepare
 }
 
 src_configure() {
-	# GeanyGenDoc requires ctpl which isn't yet in portage
+	# GeanyGenDoc requires ctpl which isn’t yet in portage
 	local myeconfargs=(
 		--docdir=/usr/share/doc/${PF}
 		--disable-cppcheck
 		--disable-extra-c-warnings
 		--disable-geanygendoc
-		--enable-geanygdb
+		# peg-markdown is bundled, use app-text/discount instead
+		--disable-peg-markdown
 		--enable-geanymacro
 		--enable-geanynumberedbookmarks
 		--enable-gproject
@@ -70,15 +80,18 @@ src_configure() {
 		--enable-tableconvert
 		--enable-treebrowser
 		--enable-xmlsnippets
+		$(use_enable commander)
 		$(use_enable debugger)
 		$(use_enable devhelp)
 		$(use_enable enchant spellcheck)
 		$(use_enable gpg geanypg)
 		$(use_enable gtkspell)
+		$(use_enable markdown)
 		$(use_enable multiterm)
 		$(use_enable lua geanylua)
 		$(use_enable nls)
-		# Having updatechecker... when you're using a package manager?
+		$(use_enable scope)
+		# Having updatechecker… when you’re using a package manager?
 		$(use_enable soup updatechecker)
 		$(use_enable soup geniuspaste)
 		$(use_enable webkit webhelper)

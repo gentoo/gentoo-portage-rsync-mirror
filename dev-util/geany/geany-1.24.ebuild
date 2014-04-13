@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.22-r1.ebuild,v 1.7 2013/02/21 21:46:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.24.ebuild,v 1.1 2014/04/13 21:03:34 polynomial-c Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils
 
-LANGS="ar ast be bg ca cs de el en_GB es fi fr gl hu id it ja kk ko lb lt mn nl nn pl pt pt_BR ro ru sk sl sv tr uk vi zh_CN ZH_TW"
+LANGS="ar ast be bg ca cs de el en_GB es et eu fa fi fr gl he hi hu id it ja kk ko lb lt mn nl nn pl pt pt_BR ro ru sk sl sr sv tr uk vi zh_CN ZH_TW"
 NOSHORTLANGS="en_GB zh_CN zh_TW"
 
 DESCRIPTION="GTK+ based fast and lightweight IDE"
@@ -14,7 +14,7 @@ SRC_URI="http://download.geany.org/${P}.tar.bz2"
 
 LICENSE="GPL-2+ HPND"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.16:2
@@ -39,11 +39,12 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--docdir="/usr/share/doc/${PF}" \
+		--disable-gtk3 \
 		$(use_enable vte)
 }
 
 src_install() {
-	emake DESTDIR="${D}" DOCDIR="${ED}/usr/share/doc/${PF}" install || die
+	emake DESTDIR="${D}" DOCDIR="${ED}/usr/share/doc/${PF}" install
 	rm -f "${ED}"/usr/share/doc/${PF}/{COPYING,GPL-2,ScintillaLicense.txt}
 	prune_libtool_files --all
 }

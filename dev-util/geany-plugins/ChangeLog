@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.37 2014/01/19 20:05:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.38 2014/04/13 21:05:21 polynomial-c Exp $
+
+*geany-plugins-1.24 (13 Apr 2014)
+
+  13 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -geany-plugins-1.22-r1.ebuild, +geany-plugins-1.24.ebuild:
+  Version bump. Removed old.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> geany-plugins-1.23.ebuild:
   ia64 stable, bug #488810 (thanks to Emeric Maschino for testing)
