@@ -3,10 +3,10 @@ DEPEND=app-emacs/hexrgb >=virtual/emacs-22
 DESCRIPTION=A Jabber client for Emacs
 EAPI=5
 HOMEPAGE=http://emacs-jabber.sourceforge.net/ http://emacswiki.org/cgi-bin/wiki/JabberEl
-KEYWORDS=amd64 x86
+KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2+
 RDEPEND=app-emacs/hexrgb >=virtual/emacs-22
 SLOT=0
 SRC_URI=mirror://sourceforge/emacs-jabber/emacs-jabber-0.8.92.tar.xz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2b512830caeb8b3b8f75f38333fc309e
+_md5_=e845019f5a3a4fb7f7081a4a00adfecd

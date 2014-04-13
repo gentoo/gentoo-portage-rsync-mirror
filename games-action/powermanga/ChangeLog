@@ -1,6 +1,9 @@
 # ChangeLog for games-action/powermanga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.28 2014/04/05 11:10:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.29 2014/04/13 16:26:44 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> powermanga-0.91.ebuild:
+  Stable for ppc, wrt bug #505016
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> powermanga-0.91.ebuild:
   Stable for x86, wrt bug #505016

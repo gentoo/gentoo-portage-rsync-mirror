@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/dictionary-1.10.ebuild,v 1.3 2014/04/05 11:09:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/dictionary-1.10.ebuild,v 1.4 2014/04/13 16:27:29 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.myrkr.in-berlin.de/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 ELISP_REMOVE="install-package.el lpath.el"
 SITEFILE="50${PN}-gentoo-${PV}.el"

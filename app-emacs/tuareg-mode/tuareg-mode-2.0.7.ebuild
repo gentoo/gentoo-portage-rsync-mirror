@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/tuareg-mode-2.0.7.ebuild,v 1.3 2014/04/05 11:07:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/tuareg-mode-2.0.7.ebuild,v 1.4 2014/04/13 16:24:50 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://forge.ocamlcore.org/frs/download.php/1304/tuareg-${PV}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 S="${WORKDIR}/tuareg-${PV}"
 ELISP_REMOVE="tuareg-pkg.el tuareg-site-file.el"

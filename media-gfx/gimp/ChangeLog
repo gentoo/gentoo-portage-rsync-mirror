@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.428 2014/04/05 11:40:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.429 2014/04/13 16:22:11 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gimp-2.8.10-r1.ebuild:
+  Stable for ppc, wrt bug #504212
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gimp-2.8.10-r1.ebuild:
   Stable for x86, wrt bug #504212

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wget
 # Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.23 2014/04/05 11:09:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.24 2014/04/13 16:28:37 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> emacs-wget-0.5.0-r1.ebuild:
+  Stable for ppc, wrt bug #505204
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> emacs-wget-0.5.0-r1.ebuild:
   Stable for x86, wrt bug #505204

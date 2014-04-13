@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.204 2014/04/05 11:13:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.205 2014/04/13 16:23:19 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> apr-util-1.5.3-r1.ebuild:
+  Stable for ppc, wrt bug #504300
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> apr-util-1.5.3-r1.ebuild:
   Stable for x86, wrt bug #504300

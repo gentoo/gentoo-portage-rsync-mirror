@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/res
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.27 2014/04/05 11:12:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.28 2014/04/13 16:21:19 ago Exp $
+
+  13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> res-4.0.4.ebuild:
+  Stable for ppc, wrt bug #502736
 
   05 Apr 2014; Agostino Sarubbo <ago@gentoo.org> res-4.0.4.ebuild:
   Stable for x86, wrt bug #502736
