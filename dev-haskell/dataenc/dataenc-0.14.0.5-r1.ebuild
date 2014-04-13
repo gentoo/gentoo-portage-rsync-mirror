@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.5-r1.ebuild,v 1.3 2013/10/26 09:19:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.5-r1.ebuild,v 1.4 2014/04/13 13:10:55 slyfox Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# allow ghc-7.7.2013+
 	cabal_chdeps \
+		'array >= 0.1.0 && < 0.5' 'array >= 0.1.0 && < 0.6' \
 		'base >= 3.0.0 && < 4.7' 'base >= 3' \
 		'QuickCheck ==2.5.*' 'QuickCheck >=2.5 && <2.7'
 }

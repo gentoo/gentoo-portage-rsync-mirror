@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/dataenc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.38 2013/10/26 09:19:25 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.39 2014/04/13 13:10:55 slyfox Exp $
+
+  13 Apr 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  dataenc-0.14.0.5-r1.ebuild:
+  Allow array from ghc-7.8.
 
   26 Oct 2013; Mark Wright <gienah@gentoo.org> dataenc-0.14.0.5-r1.ebuild:
   The test dependencies package.use.mask'd on those platforms where template-

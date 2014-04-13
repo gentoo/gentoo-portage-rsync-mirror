@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/ghc-6.10.4:=
 SLOT=0/0.14.0.5
 SRC_URI=mirror://hackage/packages/archive/dataenc/0.14.0.5/dataenc-0.14.0.5.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=e47cd4e602eb99114a4b39d70556e377
+_md5_=0c57c11eedd707a132752b72986e8bbd

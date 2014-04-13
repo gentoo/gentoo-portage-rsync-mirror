@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare prerm setup test
+DEPEND=>=dev-haskell/cabal-1.18.0 <dev-haskell/cabal-1.19 >=dev-haskell/http-4000.0.8 <dev-haskell/http-4001 >=dev-haskell/mtl-2.0 <dev-haskell/mtl-3 >=dev-haskell/network-1 <dev-haskell/network-3 >=dev-haskell/random-1 <dev-haskell/random-1.1 >=dev-haskell/stm-2.0 <dev-haskell/stm-3 >=dev-haskell/zlib-0.5.3 <dev-haskell/zlib-0.6 >=dev-lang/ghc-6.12.1 test? ( dev-haskell/hunit >=dev-haskell/quickcheck-2.5 dev-haskell/test-framework dev-haskell/test-framework-hunit >=dev-haskell/test-framework-quickcheck2-0.3 ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=The command-line interface for Cabal and Hackage.
+EAPI=5
+HOMEPAGE=http://www.haskell.org/cabal/
+IUSE=+noprefs test
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=mirror://hackage/packages/archive/cabal-install/1.18.0.3/cabal-install-1.18.0.3.tar.gz
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	af81d52c25ec93fbdff71e0efb0de7b7	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=845e35764bf04a06688fefdabf78df8d
