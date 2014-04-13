@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-1.0.1-r3.ebuild,v 1.2 2014/04/09 07:10:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-1.0.1-r3.ebuild,v 1.3 2014/04/13 14:06:37 johu Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.kmuddy.com/releases/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 
 DOC=( AUTHORS README CHANGELOG Scripting-HOWTO TODO DESIGN )

@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kmuddy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.40 2014/04/09 07:10:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.41 2014/04/13 14:06:37 johu Exp $
+
+  13 Apr 2014; Johannes Huber <johu@gentoo.org> kmuddy-1.0.1-r3.ebuild:
+  x86 stable, bug #505294
 
   09 Apr 2014; Chema Alonso <nimiux@gentoo.org> kmuddy-1.0.1-r3.ebuild:
   Stable for amd64 wrt bug #505294
