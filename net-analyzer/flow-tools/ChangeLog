@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.68 2014/04/12 23:19:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.69 2014/04/13 14:34:03 jer Exp $
+
+  13 Apr 2014; Jeroen Roovers <jer@gentoo.org> flow-tools-0.68.5.1-r2.ebuild:
+  Set keepdir /var/lib/flows/ft (bug #483590). Use prune_libtool_files. Set up
+  user/group in pkg_preinst() too.
 
   12 Apr 2014; Jeroen Roovers <jer@gentoo.org> files/flowcapture.initd:
   Replace PIDFILE here too.

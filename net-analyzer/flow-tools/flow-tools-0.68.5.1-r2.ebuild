@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r2.ebuild,v 1.5 2013/02/26 15:41:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r2.ebuild,v 1.6 2014/04/13 14:34:03 jer Exp $
 
 EAPI=4
-inherit user
+inherit eutils user
 
 DESCRIPTION="library and programs to collect, send, process, and generate reports from NetFlow data"
 HOMEPAGE="http://code.google.com/p/flow-tools/"
@@ -54,23 +54,25 @@ src_configure() {
 src_install() {
 	default
 
+	prune_libtool_files
+
 	exeinto /var/lib/flows/bin
-	keepdir /run/flows
-	keepdir /var/lib/flows
-	keepdir /var/lib/flows/bin
 	doexe "${FILESDIR}"/linkme
+
+	keepdir /var/lib/flows/ft
 
 	newinitd "${FILESDIR}/flowcapture.initd" flowcapture
 	newconfd "${FILESDIR}/flowcapture.confd" flowcapture
 
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/libft.la || die
-	fi
-
-	fowners flows:flows /run/flows
 	fowners flows:flows /var/lib/flows
 	fowners flows:flows /var/lib/flows/bin
-	fperms 0755 /run/flows
+	fowners flows:flows /var/lib/flows/ft
+
 	fperms 0755 /var/lib/flows
 	fperms 0755 /var/lib/flows/bin
+}
+
+pkg_preinst() {
+	enewgroup flows
+	enewuser flows -1 -1 /var/lib/flows flows
 }

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8815 2014/04/13 13:37:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8816 2014/04/13 14:52:12 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Apr 2014; Sebastian Pipping <sping@gentoo.org> package.mask:
+  Mask upcoming ~x11-misc/redshift-1.9
 
   13 Apr 2014; Pacho Ramos <pacho@gentoo.org> +arch/alpha/use.stable.mask,
   +arch/arm/use.stable.mask, +arch/ia64/use.stable.mask,

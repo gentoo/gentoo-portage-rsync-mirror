@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install prepare setup
+DEFINED_PHASES=configure install preinst prepare setup
 DEPEND=sys-apps/tcp-wrappers sys-libs/zlib mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) ssl? ( dev-libs/openssl ) sys-devel/flex sys-devel/bison
 DESCRIPTION=library and programs to collect, send, process, and generate reports from NetFlow data
 EAPI=4
@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=sys-apps/tcp-wrappers sys-libs/zlib mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://flow-tools.googlecode.com/files/flow-tools-0.68.5.1.tar.bz2
-_eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=13d4b981cb8c695e6e74ed2870f122a5
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=96c522c0c63cf409d76cd77c15982649
