@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.644 2014/04/09 08:57:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.645 2014/04/14 18:51:55 graaff Exp $
+
+*ruby-2.1.1-r1 (14 Apr 2014)
+
+  14 Apr 2014; Hans de Graaff <graaff@gentoo.org> +ruby-2.1.1-r1.ebuild:
+  Revision bump to fix bug 503804 (forced SSE2 during compilation on x86).
+  Thanks to Andrew Savchenko for providing a patch.
 
   09 Apr 2014; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p484.ebuild,
   ruby-1.9.3_p545.ebuild, ruby-2.0.0_p353.ebuild, ruby-2.0.0_p353-r1.ebuild,

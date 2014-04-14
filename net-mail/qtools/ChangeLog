@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qtools
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.11 2007/02/22 01:52:25 peper Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qtools/ChangeLog,v 1.12 2014/04/14 18:47:43 ulm Exp $
+
+  14 Apr 2014; Ulrich Müller <ulm@gentoo.org> qtools-0.56.ebuild:
+  Fix LICENSE, bug 446484.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
