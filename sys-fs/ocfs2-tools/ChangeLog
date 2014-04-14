@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ocfs2-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.13 2012/05/29 12:52:50 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.14 2014/04/14 07:07:33 alexxy Exp $
+
+  14 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
+  Set maintainer to maintainer-needed
 
   29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> ocfs2-tools-1.6.4.ebuild,
   ocfs2-tools-1.8.2.ebuild:
@@ -40,4 +43,3 @@
   31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> +files/ocfs2.confd,
   +ocfs2-tools-1.6.4.ebuild, +files/ocfs2.initd, +metadata.xml:
   reimport to tree
-

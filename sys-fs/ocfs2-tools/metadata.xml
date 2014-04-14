@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>cluster</herd>
 <maintainer>
-	<email>alexxy@gentoo.org</email>
-	<name>Alexey Shvetsov</name>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='external'>Enable external locking</flag>

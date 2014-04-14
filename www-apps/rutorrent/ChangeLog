@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rutorrent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/ChangeLog,v 1.5 2012/06/11 10:21:46 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/ChangeLog,v 1.6 2014/04/14 07:08:30 alexxy Exp $
+
+  14 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
+  Set maintainer to maintainer-needed
 
 *rutorrent-3.4-r1 (11 Jun 2012)
 
@@ -26,4 +29,3 @@
   08 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +rutorrent-3.2.ebuild,
   +metadata.xml:
   Initial import
-

@@ -3,8 +3,7 @@
 <pkgmetadata>
 	<herd>web-apps</herd>
 	<maintainer>
-		<email>alexxy@gentoo.org</email>
-		<name>Alexey Shvetsov</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<upstream>
 		<remote-id type="google-code">rutorrent</remote-id>
