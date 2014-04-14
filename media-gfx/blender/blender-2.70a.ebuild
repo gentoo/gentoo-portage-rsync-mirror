@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a.ebuild,v 1.1 2014/04/14 17:26:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a.ebuild,v 1.2 2014/04/14 17:40:03 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
 #   multiple python abi?
 
 EAPI=5
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_3 python3_4 )
 #PATCHSET="1"
 
 inherit multilib fdo-mime gnome2-utils cmake-utils eutils python-single-r1 versionator flag-o-matic toolchain-funcs pax-utils check-reqs
