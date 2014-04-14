@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.13.5.ebuild,v 1.2 2014/04/06 15:05:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.13.9.ebuild,v 1.1 2014/04/14 14:39:00 mpagano Exp $
 
-EAPI=3
+EAPI=5
 inherit toolchain-funcs
 
 MY_P=linux-${PV}
