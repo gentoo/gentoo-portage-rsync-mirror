@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/blosc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blosc/ChangeLog,v 1.2 2014/02/17 22:28:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blosc/ChangeLog,v 1.3 2014/04/14 17:01:46 bicatali Exp $
+
+*blosc-1.2.3 (14 Apr 2014)
+
+  14 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> +blosc-1.2.3.ebuild:
+  Version bump
 
 *blosc-1.2.1 (17 Feb 2014)
 

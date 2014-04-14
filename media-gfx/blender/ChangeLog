@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.260 2014/03/20 16:56:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.261 2014/04/14 17:26:27 hasufell Exp $
+
+*blender-2.70a (14 Apr 2014)
+
+  14 Apr 2014; Julian Ospald <hasufell@gentoo.org> +blender-2.70a.ebuild:
+  version bump wrt #507618
 
 *blender-2.70 (20 Mar 2014)
 

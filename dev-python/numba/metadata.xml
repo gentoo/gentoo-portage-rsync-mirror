@@ -10,4 +10,7 @@
   translated to Python C-API calls effectively removing the
   "interpreter" but not removing the dynamic indirection.
 </longdescription>
+<upstream>
+  <remote-id type="pypi">numba</remote-id>
+</upstream>
 </pkgmetadata>
