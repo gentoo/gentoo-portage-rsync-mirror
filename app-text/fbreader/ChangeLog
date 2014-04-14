@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.38 2014/04/14 07:01:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.39 2014/04/14 09:03:36 grozin Exp $
+
+  14 Apr 2014; Andrey Grozin <grozin@gentoo.org> metadata.xml:
+  Set maintainer to grozin
 
   14 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
   Set maintainer to maintainer-needed
