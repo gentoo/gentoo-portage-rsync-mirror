@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.786 2014/04/08 20:03:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.787 2014/04/14 16:19:24 chithanh Exp $
+
+*xorg-server-1.14.6 (14 Apr 2014)
+*xorg-server-1.15.1 (14 Apr 2014)
+
+  14 Apr 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xdm.initd-11, +xorg-server-1.14.6.ebuild, +xorg-server-1.15.1.ebuild:
+  Version bumps. Add sddm support to init script, bug #498972.
 
   08 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.14.5.ebuild,
   xorg-server-1.15.0.ebuild:
