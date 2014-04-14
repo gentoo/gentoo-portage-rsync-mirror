@@ -5,4 +5,8 @@
 		<email>grobian@gentoo.org</email>
 		<name>Fabian Groffen</name>
 	</maintainer>
+	<maintainer>
+		<email>alexxy@gentoo.org</email>
+		<name>Alexey Shvetosov</name>
+	</maintainer>
 </pkgmetadata>

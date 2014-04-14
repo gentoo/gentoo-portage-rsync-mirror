@@ -1,0 +1,10 @@
+DEFINED_PHASES=install test unpack
+DEPEND=test? ( =dev-lang/python-2* ) >=dev-vcs/git-1.8.2.1
+DESCRIPTION=C/C++/C#/D/Java/Pawn code indenter and beautifier
+EAPI=5
+HOMEPAGE=http://uncrustify.sourceforge.net/
+IUSE=test
+LICENSE=GPL-2
+SLOT=0
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=2a07e19aba297d152b487ba7687d9165
