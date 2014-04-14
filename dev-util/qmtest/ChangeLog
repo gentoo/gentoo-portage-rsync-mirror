@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qmtest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.12 2011/05/12 00:22:39 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.13 2014/04/14 00:40:48 tomwij Exp $
+
+  14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] No maintainer was listed, thus checked metadata.xml patchsets and added
+  maintainer-needed.
 
   12 May 2011; Michael Weber <xmw@gentoo.org> qmtest-2.4.1.ebuild:
   fixing /usr/share/doc/, bug 241282
@@ -45,4 +49,3 @@
 
   27 Dec 2005; Joel Martin <kanaka@gentoo.org> +qmtest-2.3.ebuild:
   New ebuild for qmtest 2.3
-

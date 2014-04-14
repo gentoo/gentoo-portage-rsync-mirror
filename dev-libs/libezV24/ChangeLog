@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libezV24
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.9 2008/01/15 09:01:17 drac Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libezV24/ChangeLog,v 1.10 2014/04/14 00:48:36 tomwij Exp $
+
+  14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] No maintainer was listed, thus checked metadata.xml patchsets and added
+  maintainer-needed.
 
   15 Jan 2008; Samuli Suominen <drac@gentoo.org>
   files/libezV24-0.1.1-build.patch, libezV24-0.1.1.ebuild:
@@ -35,4 +39,3 @@
   metadata.xml, files/libezV24-0.1.1-Makefile.diff,
   files/libezV24-0.1.1-test-v24.c.diff:
   Initial import, resolves bug #26028.
-

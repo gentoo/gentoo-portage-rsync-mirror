@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/iulib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.11 2012/06/03 02:42:24 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.12 2014/04/14 00:46:27 tomwij Exp $
+
+  14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  [QA] No maintainer was listed, thus checked metadata.xml patchsets and added
+  maintainer-needed.
 
   03 Jun 2012; Mike Frysinger <vapier@gentoo.org> iulib-0.4.ebuild:
   Update to EAPI=4, and fix multilib paths.
@@ -40,4 +44,3 @@
   02 Nov 2008; Mike Frysinger <vapier@gentoo.org>
   +files/iulib-0.3-install.patch, +iulib-0.3.ebuild:
   Initial ebuild by me for newer ocropus.
-
