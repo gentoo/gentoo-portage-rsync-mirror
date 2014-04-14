@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.73 2014/04/14 05:25:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.74 2014/04/14 15:17:42 johu Exp $
+
+*libical-1.0-r1 (14 Apr 2014)
+*libical-0.48-r2 (14 Apr 2014)
+
+  14 Apr 2014; Johannes Huber <johu@gentoo.org> +libical-0.48-r2.ebuild,
+  +libical-1.0-r1.ebuild, -libical-0.48-r1.ebuild, -libical-1.0.ebuild:
+  Revision bump introduces subslot.
 
   14 Apr 2014; Patrick Lauer <patrick@gentoo.org> libical-1.0.ebuild:
   Whitespace
