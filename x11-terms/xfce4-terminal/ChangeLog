@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xfce4-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xfce4-terminal/ChangeLog,v 1.12 2014/04/11 18:17:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xfce4-terminal/ChangeLog,v 1.13 2014/04/14 20:37:15 ago Exp $
+
+  14 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-terminal-0.6.3.ebuild:
+  Stable for ppc, wrt bug #507432
 
   11 Apr 2014; Jeroen Roovers <jer@gentoo.org> xfce4-terminal-0.6.3.ebuild:
   Stable for HPPA (bug #507432).

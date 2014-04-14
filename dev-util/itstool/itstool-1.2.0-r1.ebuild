@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/itstool-1.2.0-r1.ebuild,v 1.7 2014/03/28 02:23:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/itstool-1.2.0-r1.ebuild,v 1.8 2014/04/14 20:33:36 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://files.itstool.org/itstool/${P}.tar.bz2"
 # files in /usr/share/itstool/its are HPND/as-is || GPL-3
 LICENSE="GPL-3+ || ( HPND GPL-3+ )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~arm-linux ~x86-linux"
 IUSE=""
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

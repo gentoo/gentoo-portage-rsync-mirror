@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.190 2014/03/11 13:14:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.191 2014/04/14 20:37:23 ago Exp $
+
+  14 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libxfce4util-4.10.1.ebuild:
+  Stable for ppc, wrt bug #507432
 
 *libxfce4util-4.11.0 (11 Mar 2014)
 

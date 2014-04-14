@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mpeg2dec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.172 2014/03/28 02:51:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.173 2014/04/14 20:35:28 ago Exp $
+
+  14 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-mpeg2dec-1.2.3.ebuild:
+  Stable for ppc, wrt bug #507568
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-mpeg2dec-1.2.3.ebuild:
