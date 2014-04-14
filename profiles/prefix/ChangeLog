@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.415 2014/03/27 19:59:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.416 2014/04/14 08:50:39 haubi Exp $
+
+  14 Apr 2014; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
+  GNU make-4.0 on AIX endless loops with gcc-4.2.4, p.masked for now.
 
   27 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +aix/5.2.0.0/eapi,
   +aix/5.2.0.0/ppc/eapi, +aix/5.3.0.0/eapi, +aix/5.3.0.0/ppc/eapi,
