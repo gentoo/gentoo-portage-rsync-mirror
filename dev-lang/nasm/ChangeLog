@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.113 2014/01/30 21:47:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.114 2014/04/14 21:10:15 mr_bones_ Exp $
+
+*nasm-2.11.02 (14 Apr 2014)
+
+  14 Apr 2014; Michael Sterrett <mr_bones_@gentoo.org> +nasm-2.11.02.ebuild:
+  version bump
 
   30 Jan 2014; Mike Frysinger <vapier@gentoo.org> nasm-2.11.ebuild:
   Drop -* as this package can run on any target (it is all C code).  It only

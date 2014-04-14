@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4-r2.ebuild,v 1.1 2014/04/10 19:35:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4-r2.ebuild,v 1.2 2014/04/14 21:01:56 ottxor Exp $
 
 EAPI=5
 
@@ -173,6 +173,11 @@ src_prepare() {
 		epatch "${FILESDIR}"/clang-3.1-gentoo-runtime-gcc-detection-v3.patch
 
 		epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+	fi
+
+	if use prefix && use clang; then
+		sed -e "/^CFLAGS /s@-Werror@-I${EPREFIX}/usr/include@" \
+				-i 'projects/compiler-rt/make/platform/clang_linux.mk' || die
 	fi
 
 	local sub_files=(
