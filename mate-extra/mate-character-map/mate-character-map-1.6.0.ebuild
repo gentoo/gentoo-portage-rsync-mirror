@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/mate-character-map-1.6.0.ebuild,v 1.3 2014/03/10 21:56:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/mate-character-map-1.6.0.ebuild,v 1.4 2014/04/14 02:43:49 tomwij Exp $
 
 EAPI="5"
 
@@ -35,6 +35,7 @@ RDEPEND="app-text/rarian:0
 DEPEND="${RDEPEND}
 	>=app-text/mate-doc-utils-1.6:0
 	>=app-text/scrollkeeper-dtd-1:1.0
+	dev-util/gtk-doc:0
 	>=dev-util/intltool-0.40:*
 	sys-devel/gettext:*
 	virtual/pkgconfig:*
