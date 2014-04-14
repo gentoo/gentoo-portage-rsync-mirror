@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.43 2014/04/06 15:05:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.44 2014/04/14 13:40:22 mpagano Exp $
+
+  14 Apr 2014;  <mike2@gentoo.org> linux-docs-3.4.82.ebuild:
+  Update eapi
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> linux-docs-3.13.5.ebuild:
   Add arm64 love.

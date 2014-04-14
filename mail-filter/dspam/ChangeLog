@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.154 2012/09/25 11:42:59 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.155 2014/04/14 13:35:23 eras Exp $
+
+  14 Apr 2014; Eray Aslan <eras@gentoo.org> dspam-3.10.2-r1.ebuild:
+  Add mailbase to DEPEND - bug #507594
 
   25 Sep 2012; Eray Aslan <eras@gentoo.org> -dspam-3.10.1-r1.ebuild,
   -dspam-3.10.2.ebuild:

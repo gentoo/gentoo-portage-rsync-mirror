@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.246 2014/04/06 15:27:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.247 2014/04/14 13:41:01 jer Exp $
+
+  14 Apr 2014; Jeroen Roovers <jer@gentoo.org> sane-backends-1.0.24-r3.ebuild:
+  Stable for HPPA (bug #506928).
 
   06 Apr 2014; Pacho Ramos <pacho@gentoo.org> sane-backends-1.0.24-r3.ebuild:
   Needs to be rebuilt with systemd subslot bumps

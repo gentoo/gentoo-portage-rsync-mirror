@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.2-r1.ebuild,v 1.3 2012/09/23 08:15:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.2-r1.ebuild,v 1.4 2014/04/14 13:35:22 eras Exp $
 
 EAPI=4
 
@@ -17,6 +17,7 @@ SCALES_IUSE="small-scale +domain-scale large-scale"
 IUSE="clamav daemon debug ldap static-libs syslog virtual-users user-homedirs ${DRIVERS_IUSE} ${SCALES_IUSE}"
 
 DEPEND="
+	net-mail/mailbase
 	ldap? ( net-nds/openldap )
 	mysql? ( >=virtual/mysql-5.0 )
 	postgres? ( dev-db/postgresql-base )
