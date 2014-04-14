@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/ChangeLog,v 1.1 2014/03/24 17:58:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/ChangeLog,v 1.2 2014/04/14 00:19:32 tomwij Exp $
+
+  14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Add maintainer information and wonder why we don't have a check for that.
 
 *mate-1.6.0 (24 Mar 2014)
 

@@ -1,0 +1,43 @@
+--- phc-intel-pack-rev14/inc/3.13/linux-phc-0.4.0.patch.orig	2014-04-14 02:18:58.464488475 +0200
++++ phc-intel-pack-rev14/inc/3.13/linux-phc-0.4.0.patch	2014-04-14 02:21:12.018581946 +0200
+@@ -225,7 +225,7 @@
+  static void __init acpi_cpufreq_boost_init(void)
+  {
+  	if (boot_cpu_has(X86_FEATURE_CPB) || boot_cpu_has(X86_FEATURE_IDA)) {
+-@@ -956,6 +1064,587 @@
++@@ -956,6 +1064,591 @@
+  	}
+  }
+  
+@@ -355,6 +355,7 @@
+ +		//add seperating space
+ +		if(freq_table[i+1].frequency != CPUFREQ_TABLE_END) count += sprintf(&buf[count], " ");
+ +	}
+++	if (count) count--;
+ +	count += sprintf(&buf[count], "\n");	//add line break
+ +	return count;
+ +
+@@ -382,6 +383,7 @@
+ +		if(freq_table[i+1].frequency != CPUFREQ_TABLE_END) count += sprintf(&buf[count], " ");
+ +	}
+ +
+++	if (count) count--;
+ +	count += sprintf(&buf[count], "\n");	//add NewLine
+ +	return count;
+ +}		
+@@ -631,6 +633,7 @@
+ +		//add seperating space
+ +		if(freq_table[i+1].frequency != CPUFREQ_TABLE_END) count += sprintf(&buf[count], " "); 
+ +	}
+++	if (count) count--;
+ +	count += sprintf(&buf[count], "\n");
+ +
+ +	return count;
+@@ -660,6 +663,7 @@
+ +		count += sprintf(&buf[count], "%u", vid);
+ +		if(freq_table[i+1].frequency != CPUFREQ_TABLE_END) count += sprintf(&buf[count], " "); 
+ +	}
+++	if (count) count--;
+ +	count += sprintf(&buf[count], "\n");
+ +
+ +	return count;

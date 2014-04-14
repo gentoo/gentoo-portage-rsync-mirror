@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<use>
-	<flag name="extras">Install additional MATE applications</flag>
-</use>
+	<maintainer>
+		<email>TomWij@gentoo.org</email>
+		<name>Tom Wijsman</name>
+	</maintainer>
+	<use>
+		<flag name="extras">Install additional MATE applications</flag>
+	</use>
 </pkgmetadata>
