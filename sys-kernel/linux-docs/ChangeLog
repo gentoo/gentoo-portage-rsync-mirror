@@ -1,8 +1,20 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.44 2014/04/14 13:40:22 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.47 2014/04/14 14:29:15 mpagano Exp $
 
-  14 Apr 2014;  <mike2@gentoo.org> linux-docs-3.4.82.ebuild:
+*linux-docs-3.12.16 (14 Apr 2014)
+
+  14 Apr 2014; Mike Pagano <mpagano@gentoo.org> -linux-docs-3.12.13.ebuild,
+  +linux-docs-3.12.16.ebuild:
+  Version and eapi bump
+
+  14 Apr 2014; Mike Pagano <mpagano@gentoo.org> linux-docs-3.10.32.ebuild:
+  Version bump
+
+  14 Apr 2014; Mike Pagano <mpagano@gentoo.org> linux-docs-3.2.55.ebuild:
+  Update eapi
+
+  14 Apr 2014;  <mpagano@gentoo.org> linux-docs-3.4.82.ebuild:
   Update eapi
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> linux-docs-3.13.5.ebuild:
