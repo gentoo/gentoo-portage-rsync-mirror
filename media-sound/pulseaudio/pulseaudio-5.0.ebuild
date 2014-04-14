@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0.ebuild,v 1.6 2014/04/06 15:23:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0.ebuild,v 1.7 2014/04/14 13:04:40 leio Exp $
 
 EAPI="5"
 inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -287,7 +287,7 @@ multilib_src_install_all() {
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${ED}/etc/pulse/default.pa"
 
-	dodoc README todo
+	dodoc NEWS README todo
 
 	if use doc; then
 		pushd doxygen/html

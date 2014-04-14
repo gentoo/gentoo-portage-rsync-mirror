@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.329 2014/04/06 15:23:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.330 2014/04/14 13:04:40 leio Exp $
+
+  14 Apr 2014; <leio@gentoo.org> pulseaudio-5.0.ebuild:
+  dodoc NEWS file, which is actually useful since v4.0
 
   06 Apr 2014; Pacho Ramos <pacho@gentoo.org> -pulseaudio-4.99.4-r1.ebuild,
   pulseaudio-5.0.ebuild:
