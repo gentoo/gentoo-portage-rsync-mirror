@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-1.24.ebuild,v 1.1 2014/04/13 21:05:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-1.24-r1.ebuild,v 1.1 2014/04/14 06:11:35 binki Exp $
 
 EAPI=5
 
-inherit autotools-utils vala versionator
+PYTHON_COMPAT=( python2_{6,7} )
+
+inherit autotools-utils python-single-r1 vala versionator
 
 DESCRIPTION="A collection of different plugins for Geany"
 HOMEPAGE="http://plugins.geany.org/geany-plugins"
@@ -13,12 +15,14 @@ SRC_URI="http://plugins.geany.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+commander debugger devhelp enchant gpg gtkspell lua markdown multiterm nls scope soup webkit"
+IUSE="+autoclose +commander debugger +defineformat devhelp enchant gpg gtkspell lua markdown multiterm nls python scope soup webkit"
 
 LINGUAS="be ca da de es fr gl ja pt pt_BR ru tr zh_CN"
 
 COMMON_DEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
+	autoclose? ( x11-libs/gtk+:2 )
 	commander? ( x11-libs/gtk+:2 )
+	defineformat? ( x11-libs/gtk+:2 )
 	dev-libs/libxml2:2
 	dev-libs/glib:2
 	debugger? ( x11-libs/vte:0 )
@@ -43,6 +47,10 @@ COMMON_DEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
 		x11-libs/gtk+:2
 		>=x11-libs/vte-0.28:0
 		)
+	python? (
+		dev-python/pygtk[${PYTHON_USEDEP}]
+		${PYTHON_DEPS}
+		)
 	scope? ( x11-libs/vte:0 )
 	soup? ( net-libs/libsoup )
 	webkit? (
@@ -55,6 +63,12 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	# bundled lib buster
@@ -80,8 +94,10 @@ src_configure() {
 		--enable-tableconvert
 		--enable-treebrowser
 		--enable-xmlsnippets
+		$(use_enable autoclose)
 		$(use_enable commander)
 		$(use_enable debugger)
+		$(use_enable defineformat)
 		$(use_enable devhelp)
 		$(use_enable enchant spellcheck)
 		$(use_enable gpg geanypg)
@@ -90,6 +106,7 @@ src_configure() {
 		$(use_enable multiterm)
 		$(use_enable lua geanylua)
 		$(use_enable nls)
+		$(use_enable python geanypy)
 		$(use_enable scope)
 		# Having updatechecker… when you’re using a package manager?
 		$(use_enable soup updatechecker)

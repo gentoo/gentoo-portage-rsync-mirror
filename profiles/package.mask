@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15564 2014/04/13 17:55:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15565 2014/04/14 06:04:48 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -308,11 +308,6 @@ dev-ruby/sary-ruby
 dev-ruby/system_timer
 <app-text/migemo-0.40_p2
 =dev-ruby/mecab-ruby-0.98-r1
-
-# Ulrich Müller <ulm@gentoo.org> (15 Mar 2014)
-# No license, unknown copyright holder. No Gentoo maintainer.
-# Masked for removal in 30 days, bug 465784.
-net-ftp/pftpfxp
 
 # Lars Wendler <polynomial-c@gentoo.org> (14 Mar 2014)
 # Masked for security reasons.

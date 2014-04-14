@@ -2241,8 +2241,10 @@ dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
 dev-util/fatrace:powertop - Add powetop integration
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
+dev-util/geany-plugins:autoclose - Enable the autoclose plugin.
 dev-util/geany-plugins:commander - Enable the commander plugin which provides a command panel for rapid access to any action.
 dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with sys-devel/gdb
+dev-util/geany-plugins:defineformat - Enable the defineformat plugin.
 dev-util/geany-plugins:devhelp - Enable the devhelp plugin which integrates dev-util/devhelp
 dev-util/geany-plugins:enchant - Enable spell checking using enchant
 dev-util/geany-plugins:gpg - Enable geanypg plugin which integrates GPG using app-crypt/gpgme

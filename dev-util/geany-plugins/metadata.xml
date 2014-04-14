@@ -6,8 +6,10 @@
     <name>Nathan Phillip Brink</name>
   </maintainer>
   <use>
+    <flag name='autoclose'>Enable the autoclose plugin.</flag>
     <flag name='commander'>Enable the commander plugin which provides a command panel for rapid access to any action.</flag>
     <flag name='debugger'>Enable the debugger plugin which interfaces with <pkg>sys-devel/gdb</pkg></flag>
+    <flag name='defineformat'>Enable the defineformat plugin.</flag>
     <flag name='devhelp'>Enable the devhelp plugin which integrates <pkg>dev-util/devhelp</pkg></flag>
     <flag name='enchant'>Enable spell checking using enchant</flag>
     <flag name='gpg'>Enable geanypg plugin which integrates GPG using <pkg>app-crypt/gpgme</pkg></flag>
