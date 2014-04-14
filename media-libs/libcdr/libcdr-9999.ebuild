@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.10 2013/04/22 14:09:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.11 2014/04/14 10:50:12 scarabeus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Library parsing the Corel cdr documents"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/libcdr"
 [[ ${PV} == 9999 ]] || SRC_URI="http://dev-www.libreoffice.org/src/${P}.tar.xz"
 
-LICENSE="LGPL-2.1"
+LICENSE="MPL-2.0"
 SLOT="0"
 [[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="doc static-libs"

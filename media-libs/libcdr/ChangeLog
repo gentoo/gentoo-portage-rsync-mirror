@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.31 2014/04/08 08:26:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.32 2014/04/14 10:50:12 scarabeus Exp $
+
+*libcdr-0.0.16 (14 Apr 2014)
+
+  14 Apr 2014; Tomáš Chvátal <scarabeus@gentoo.org> +libcdr-0.0.16.ebuild,
+  -libcdr-0.0.15.ebuild, libcdr-9999.ebuild:
+  Bump to hotfix release. Update license to match reality.
 
 *libcdr-0.0.15 (08 Apr 2014)
 
