@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=hdf5? ( sci-libs/hdf5 ) lz4? ( app-arch/lz4 ) snappy? ( app-arch/snappy ) zlib? ( sys-libs/zlib ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Blocking, shuffling and lossless compression library
+EAPI=5
+HOMEPAGE=http://www.blosc.org/
+IUSE=hdf5 +lz4 +snappy static-libs test zlib
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=MIT
+RDEPEND=hdf5? ( sci-libs/hdf5 ) lz4? ( app-arch/lz4 ) snappy? ( app-arch/snappy ) zlib? ( sys-libs/zlib )
+SLOT=0
+SRC_URI=https://github.com/Blosc/c-blosc/archive/v1.3.5.tar.gz -> c-blosc-1.3.5.tar.gz
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=1e94dbd5e7d74a08b904a054e33c9213

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8819 2014/04/14 12:21:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8820 2014/04/14 16:49:56 mpagano Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2014; Mike Pagano <mpagano@gentoo.org> package.mask:
+  Masking git-sources-3.15_rc1 due to broken patch
 
   14 Apr 2014; Johannes Huber <johu@gentoo.org> package.mask:
   Masked kde-misc/networkmanagement for removal.

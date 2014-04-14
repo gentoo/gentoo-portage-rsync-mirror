@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.363 2014/04/12 15:36:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.364 2014/04/14 16:50:02 polynomial-c Exp $
+
+*bash-4.2_p47 (14 Apr 2014)
+
+  14 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +bash-4.2_p47.ebuild,
+  bash-4.3_p11.ebuild:
+  Version bump. Added prefix support to bash-4.3
 
 *bash-4.3_p11 (12 Apr 2014)
 
