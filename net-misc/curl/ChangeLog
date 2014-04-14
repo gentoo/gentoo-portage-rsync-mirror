@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.352 2014/04/13 11:06:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.353 2014/04/14 12:16:46 blueness Exp $
+
+  14 Apr 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Fix rtmp flag description, bug #501894
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.36.0.ebuild:
   Stable for ppc, wrt bug #505864

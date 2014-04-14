@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ncp/ncp-1.2.4.ebuild,v 1.4 2012/05/29 05:24:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ncp/ncp-1.2.4.ebuild,v 1.5 2014/04/14 12:17:33 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="utility for copying files in a LAN (npoll, npush)"
 HOMEPAGE="http://www.fefe.de/ncp/"
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="public-domain" # mail from author, bug 446540
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="diet"

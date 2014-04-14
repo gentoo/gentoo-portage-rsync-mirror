@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1379 2014/04/06 15:04:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1380 2014/04/14 12:03:37 mpagano Exp $
+
+*git-sources-3.15_rc1 (14 Apr 2014)
+
+  14 Apr 2014; Mike Pagano <mpagano@gentoo.org> -git-sources-3.14_rc1.ebuild,
+  -git-sources-3.14_rc2.ebuild, -git-sources-3.14_rc3.ebuild,
+  -git-sources-3.14_rc4.ebuild, -git-sources-3.14_rc5.ebuild,
+  -git-sources-3.14_rc6.ebuild, -git-sources-3.14_rc7.ebuild,
+  -git-sources-3.14_rc8.ebuild, +git-sources-3.15_rc1.ebuild:
+  Version bump. Remove old
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> git-sources-3.14_rc8.ebuild:
   Add arm64/s390 love.
