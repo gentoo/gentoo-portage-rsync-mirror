@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-core/mupen64plus-core-2.0.ebuild,v 1.3 2013/12/19 16:55:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-core/mupen64plus-core-2.0.ebuild,v 1.4 2014/04/14 15:37:58 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="lirc new-dynarec +osd sse"
 
 RDEPEND="media-libs/libpng:0=
-	media-libs/libsdl:0=[joystick,video]
+	media-libs/libsdl:0=[joystick,opengl,video]
 	sys-libs/zlib:0=[minizip]
 	lirc? ( app-misc/lirc:0 )
 	osd? (

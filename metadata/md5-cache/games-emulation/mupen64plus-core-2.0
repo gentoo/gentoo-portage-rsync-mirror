@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=media-libs/libpng:0= media-libs/libsdl:0=[joystick,video] sys-libs/zlib:0=[minizip] lirc? ( app-misc/lirc:0 ) osd? ( media-fonts/ttf-bitstream-vera media-libs/freetype:2= virtual/opengl:0= virtual/glu:0= ) !<games-emulation/mupen64plus-2.0 virtual/pkgconfig
+DEPEND=media-libs/libpng:0= media-libs/libsdl:0=[joystick,opengl,video] sys-libs/zlib:0=[minizip] lirc? ( app-misc/lirc:0 ) osd? ( media-fonts/ttf-bitstream-vera media-libs/freetype:2= virtual/opengl:0= virtual/glu:0= ) !<games-emulation/mupen64plus-2.0 virtual/pkgconfig
 DESCRIPTION=A fork of Mupen64 Nintendo 64 emulator, core library
 EAPI=5
 HOMEPAGE=http://code.google.com/p/mupen64plus/
 IUSE=lirc new-dynarec +osd sse
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 LGPL-2.1
-RDEPEND=media-libs/libpng:0= media-libs/libsdl:0=[joystick,video] sys-libs/zlib:0=[minizip] lirc? ( app-misc/lirc:0 ) osd? ( media-fonts/ttf-bitstream-vera media-libs/freetype:2= virtual/opengl:0= virtual/glu:0= ) !<games-emulation/mupen64plus-2.0 games-misc/games-envd
+RDEPEND=media-libs/libpng:0= media-libs/libsdl:0=[joystick,opengl,video] sys-libs/zlib:0=[minizip] lirc? ( app-misc/lirc:0 ) osd? ( media-fonts/ttf-bitstream-vera media-libs/freetype:2= virtual/opengl:0= virtual/glu:0= ) !<games-emulation/mupen64plus-2.0 games-misc/games-envd
 SLOT=0/2
 SRC_URI=https://github.com/mupen64plus/mupen64plus-core/releases/download/2.0/mupen64plus-core-src-2.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4033f5e43a3f6b380ba9bf654f08892d
+_md5_=efb8297c70f1d929f51628953a04fe83

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.12 2013/09/24 15:39:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.13 2014/04/14 15:45:16 maksbotan Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -78,6 +78,15 @@ leechcraft_pkg_pretend() {
 			[[ $(gcc-major-version) -lt 4 ]] || \
 					( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ]] ) \
 				&& die "Sorry, but gcc 4.6 or higher is required."
+		fi
+	fi
+	if version_is_at_least 0.6.66 || ( [[ ${PN} == lc-monocle ]] && version_is_at_least 0.6.65 ); then
+		echo "lalalalala"
+		# 0.6.65 monocle and all later plugins require at least gcc 4.8
+		if [[ ${MERGE_TYPE} != binary ]]; then
+			[[ $(gcc-major-version) -lt 4 ]] || \
+					( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 8 ]] ) \
+				&& die "Sorry, but gcc 4.8 or higher is required."
 		fi
 	fi
 }

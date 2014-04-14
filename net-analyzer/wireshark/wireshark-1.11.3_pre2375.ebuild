@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre2150.ebuild,v 1.1 2014/03/29 16:26:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre2375.ebuild,v 1.1 2014/04/14 15:37:43 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user versionator
@@ -8,7 +8,7 @@ inherit autotools eutils fcaps qt4-r2 user versionator
 WS_PV="$(get_version_component_range 1-3)"
 WS_REV="$(get_version_component_range 4)"
 WS_REV="${WS_REV/pre/}"
-WS_GIT="g302632f"
+WS_GIT="g9a9ca0a"
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
