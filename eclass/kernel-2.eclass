@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.294 2014/01/18 14:53:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.295 2014/04/14 20:21:42 tomwij Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1037,6 +1037,33 @@ unipatch() {
 			#[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
 
 			if [ -z "${PATCH_DEPTH}" ]; then PATCH_DEPTH=0; fi
+
+			####################################################################
+			# IMPORTANT: This is temporary code to support Linux git 3.15_rc1! #
+			#                                                                  #
+			# The patch contains a removal of a symlink, followed by addition  #
+			# of a file with the same name as the symlink in the same          #
+			# location; this causes the dry-run to fail, filed bug #507656.    #
+			#                                                                  #
+			# https://bugs.gentoo.org/show_bug.cgi?id=507656                   #
+			####################################################################
+			if [[ ${PN} == "git-sources" ]] ; then
+				if [[ ${i} == *"/patch-3.15-rc1.patch" ]] ; then
+					ebegin "Applying ${i/*\//} (-p1)"
+					if [ $(patch -p1 --no-backup-if-mismatch -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]; then
+						eend 0
+						rm ${STDERR_T}
+						break
+					else
+						eend 1
+						eerror "Failed to apply patch ${i/*\//}"
+						eerror "Please attach ${STDERR_T} to any bug you may post."
+						eshopts_pop
+						die "Failed to apply ${i/*\//} on patch depth 1."
+					fi
+				fi
+			fi
+			####################################################################
 
 			while [ ${PATCH_DEPTH} -lt 5 ]; do
 				echo "Attempting Dry-run:" >> ${STDERR_T}

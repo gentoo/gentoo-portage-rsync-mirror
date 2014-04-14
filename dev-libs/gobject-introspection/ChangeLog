@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.109 2014/03/30 10:43:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.110 2014/04/14 20:30:35 ago Exp $
+
+  14 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
+  gobject-introspection-1.38.0.ebuild:
+  Stable for ppc, wrt bug #507568
 
   30 Mar 2014; Pacho Ramos <pacho@gentoo.org>
   gobject-introspection-1.38.0.ebuild:

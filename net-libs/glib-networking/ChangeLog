@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.73 2014/03/28 02:31:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.74 2014/04/14 20:30:49 ago Exp $
+
+  14 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.38.2.ebuild:
+  Stable for ppc, wrt bug #507568
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> glib-networking-2.38.2.ebuild:
   Stable for HPPA (bug #499954).
