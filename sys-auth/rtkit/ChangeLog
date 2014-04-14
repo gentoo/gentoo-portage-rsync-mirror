@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/rtkit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.28 2013/12/23 16:12:58 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.29 2014/04/14 01:46:13 mrueg Exp $
+
+*rtkit-0.11 (14 Apr 2014)
+
+  14 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +files/rtkit-0.11-gettime.patch,
+  +files/rtkit-0.11-polkit.patch, +rtkit-0.11.ebuild:
+  Version bump.
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> -rtkit-0.6.ebuild,
   -rtkit-0.7.ebuild, -rtkit-0.9-r1.ebuild, metadata.xml:
