@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0.ebuild,v 1.1 2014/04/14 02:34:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0.ebuild,v 1.2 2014/04/14 05:25:58 patrick Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x8
 IUSE="doc examples introspection static-libs"
 
 RDEPEND="introspection? ( dev-libs/gobject-introspection )"
-DEPEND="${RDEPEND} 
+DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_configure() {
