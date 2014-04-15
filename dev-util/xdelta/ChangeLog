@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.100 2014/01/28 19:59:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.101 2014/04/15 02:51:48 naota Exp $
+
+  15 Apr 2014; Naohiro Aota <naota@gentoo.org> xdelta-3.0.8.ebuild:
+  Add ~x86-fbsd. #507562
 
 *xdelta-3.0.8 (28 Jan 2014)
 
