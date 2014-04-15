@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.2.ebuild,v 1.6 2013/05/17 10:07:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.2.ebuild,v 1.7 2014/04/15 14:03:19 blueness Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit webapp eutils depend.php confutils
 
@@ -20,9 +20,7 @@ RDEPEND="raw? ( media-gfx/dcraw )
 	netpbm? ( media-libs/netpbm media-gfx/jhead )
 	unzip? ( app-arch/unzip )
 	zip? ( app-arch/zip )
-	sqlite? ( dev-lang/php[pdo]
-			|| ( dev-lang/php:5.3[sqlite] dev-lang/php[sqlite3] )
-			)
+	sqlite? ( dev-lang/php[pdo] dev-lang/php[sqlite] )
 	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
 	dev-lang/php[session,postgres?,gd?]"
 

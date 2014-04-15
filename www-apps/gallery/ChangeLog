@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.211 2013/10/23 17:40:55 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.212 2014/04/15 14:03:19 blueness Exp $
+
+  15 Apr 2014; Anthony G. Basile <blueness@gentoo.org> gallery-2.3.2.ebuild,
+  gallery-3.0.9.ebuild:
+  Fix php[sqlite] dependency, bug #503906
 
   23 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gallery-3.0.9.ebuild:
   Stable for ppc64, wrt bug #472282
