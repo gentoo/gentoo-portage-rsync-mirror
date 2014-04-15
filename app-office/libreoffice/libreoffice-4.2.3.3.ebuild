@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.3.3.ebuild,v 1.1 2014/04/13 10:23:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.3.3.ebuild,v 1.2 2014/04/15 08:41:21 scarabeus Exp $
 
 EAPI=5
 
@@ -240,6 +240,9 @@ PATCHES=(
 
 	# staged for git master
 	"${FILESDIR}/${PN}-4.2.0.4-curl-config.patch"
+
+	# kde mutexes
+	"${FILESDIR}/${P}-kde4-timer-mutex.patch"
 )
 
 REQUIRED_USE="
