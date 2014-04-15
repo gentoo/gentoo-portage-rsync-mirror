@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.13 2014/04/14 15:45:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.14 2014/04/15 16:06:56 maksbotan Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -81,7 +81,6 @@ leechcraft_pkg_pretend() {
 		fi
 	fi
 	if version_is_at_least 0.6.66 || ( [[ ${PN} == lc-monocle ]] && version_is_at_least 0.6.65 ); then
-		echo "lalalalala"
 		# 0.6.65 monocle and all later plugins require at least gcc 4.8
 		if [[ ${MERGE_TYPE} != binary ]]; then
 			[[ $(gcc-major-version) -lt 4 ]] || \
