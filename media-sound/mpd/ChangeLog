@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.341 2014/04/13 09:45:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.342 2014/04/15 16:35:25 angelos Exp $
+
+*mpd-0.18.10-r1 (15 Apr 2014)
+
+  15 Apr 2014; Christoph Mende <angelos@gentoo.org> +files/mpd-0.18.conf.patch,
+  +files/mpd2.init, +mpd-0.18.10-r1.ebuild:
+  Change init script to use mpd's own forking mechanism (bug #507734)
 
 *mpd-0.18.10 (13 Apr 2014)
 
