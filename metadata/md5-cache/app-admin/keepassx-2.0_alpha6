@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-libs/libgcrypt:0= dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qttest:4 sys-libs/zlib x11-libs/libX11 x11-libs/libXtst sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Qt password manager compatible with its Win32 and Pocket PC versions
+EAPI=5
+HOMEPAGE=http://www.keepassx.org/
+IUSE=test
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=|| ( GPL-2 GPL-3 ) BSD GPL-2 LGPL-2.1 LGPL-3+ CC0-1.0 public-domain || ( LGPL-2.1 GPL-3 )
+RDEPEND=dev-libs/libgcrypt:0= dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qttest:4 sys-libs/zlib x11-libs/libX11 x11-libs/libXtst
+SLOT=0
+SRC_URI=https://github.com/keepassx/keepassx/archive/2.0-alpha6.tar.gz -> keepassx-2.0_alpha6.tar.gz
+_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=3e69b9c3006c6a7af0ece3dd1b88608d
