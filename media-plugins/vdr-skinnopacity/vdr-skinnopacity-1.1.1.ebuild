@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/vdr-skinnopacity-0.1.4.ebuild,v 1.2 2013/10/20 20:55:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/vdr-skinnopacity-1.1.1.ebuild,v 1.1 2014/04/15 17:39:21 idl0r Exp $
 
 EAPI=5
 
 MY_P="${P/vdr-}"
-VERSION="1445"
+VERSION="1671"
 
 inherit vdr-plugin-2
 
@@ -27,6 +27,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	vdr-plugin-2_src_prepare
+
+	if has_version media-gfx/graphicsmagick; then
+		sed -i -e 's:^IMAGELIB =.*:IMAGELIB = graphicsmagick:' Makefile
+	fi
+}
 
 pkg_postinst() {
 	vdr-plugin-2_pkg_postinst

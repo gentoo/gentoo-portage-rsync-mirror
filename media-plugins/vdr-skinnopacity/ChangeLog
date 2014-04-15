@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-skinnopacity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/ChangeLog,v 1.8 2014/02/01 19:30:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/ChangeLog,v 1.9 2014/04/15 17:39:21 idl0r Exp $
+
+*vdr-skinnopacity-1.1.1 (15 Apr 2014)
+
+  15 Apr 2014; Christian Ruppert <idl0r@gentoo.org>
+  -vdr-skinnopacity-0.1.4.ebuild, +vdr-skinnopacity-1.1.1.ebuild:
+  Version bump.
 
 *vdr-skinnopacity-1.0.4 (01 Feb 2014)
 
