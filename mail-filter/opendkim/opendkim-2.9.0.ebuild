@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.0.ebuild,v 1.1 2013/12/10 12:26:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.0.ebuild,v 1.2 2014/04/15 06:40:04 eras Exp $
 
 EAPI=5
 inherit autotools db-use eutils user
@@ -119,7 +119,7 @@ src_install() {
 		grep ^[^#] "${S}"/opendkim/opendkim.conf.simple \
 			> "${D}"/etc/opendkim/opendkim.conf
 		if use unbound; then
-			echo TrustedAnchorFile /etc/dnssec/root-anchors.txt >> "${D}"/etc/opendkim/opendkim.conf
+			echo TrustAnchorFile /etc/dnssec/root-anchors.txt >> "${D}"/etc/opendkim/opendkim.conf
 		fi
 		echo UserID milter >> "${D}"/etc/opendkim/opendkim.conf
 		if use berkdb; then

@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.3.ebuild,v 1.4 2013/09/19 13:32:17 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.9.2.ebuild,v 1.1 2014/04/15 06:41:38 eras Exp $
 
 EAPI=5
-WANT_AUTOMAKE="1.12"
-inherit eutils db-use autotools user
+inherit autotools db-use eutils user
 
 # for betas
 #MY_P=${P/_b/.B}
@@ -17,8 +16,8 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+berkdb gnutls ldap lua memcached opendbx poll sasl selinux +ssl static-libs unbound"
+KEYWORDS="~amd64 ~x86"
+IUSE="+berkdb gnutls ldap lmdb lua memcached opendbx poll sasl selinux +ssl static-libs unbound"
 
 DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 	dev-libs/libbsd
@@ -27,6 +26,7 @@ DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 	opendbx? ( >=dev-db/opendbx-1.4.0 )
 	lua? ( dev-lang/lua )
 	ldap? ( net-nds/openldap )
+	lmdb? ( dev-db/lmdb )
 	memcached? ( dev-libs/libmemcached )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sec-policy/selinux-dkim )
@@ -54,12 +54,14 @@ src_prepare() {
 	       -e 's:mailnull:milter:g' \
 	       -e 's:^#[[:space:]]*PidFile.*:PidFile /var/run/opendkim/opendkim.pid:' \
 		   opendkim/opendkim.conf.sample opendkim/opendkim.conf.simple.in \
-		   stats/opendkim-reportstats || die
+		   stats/opendkim-reportstats{,.in} || die
 
 	sed -i -e 's:dist_doc_DATA:dist_html_DATA:' libopendkim/docs/Makefile.am \
 		|| die
 
-	epatch "${FILESDIR}/${PN}-2.8.0-unbreak_upgrade.patch"
+	#sed -i -e '/sock.*mt.getcwd/s:mt.getcwd():"/tmp":' opendkim/tests/*.lua
+	sed -i -e '/sock.*mt.getcwd/s:mt.getcwd():"/proc/self/cwd":' opendkim/tests/*.lua
+
 	eautoreconf
 }
 
@@ -86,6 +88,7 @@ src_configure() {
 		$(use_with lua) \
 		$(use_enable lua rbl) \
 		$(use_with ldap openldap) \
+		$(use_with lmdb) \
 		$(use_enable poll) \
 		$(use_enable static-libs static) \
 		$(use_with gnutls) \
@@ -96,19 +99,16 @@ src_configure() {
 		--enable-filter \
 		--enable-adsp_lists \
 		--enable-atps \
-		--enable-dkim_reputation \
 		--enable-identity_header \
 		--enable-rate_limit \
-		--enable-redirect \
 		--enable-resign \
 		--enable-replace_rules \
 		--enable-default_sender \
 		--enable-sender_macro \
 		--enable-vbr \
-		--disable-rpath \
-		--disable-live-testing \
-		--with-libxml2 \
-		--with-test-socket=/tmp/opendkim-$(echo ${RANDOM})-S
+		--disable-live-testing
+		#--disable-rpath \
+		#--with-test-socket=/tmp/opendkim-$(echo ${RANDOM})-S
 }
 
 src_install() {
@@ -124,7 +124,7 @@ src_install() {
 		grep ^[^#] "${S}"/opendkim/opendkim.conf.simple \
 			> "${D}"/etc/opendkim/opendkim.conf
 		if use unbound; then
-			echo TrustedAnchorFile /etc/dnssec/root-anchors.txt >> "${D}"/etc/opendkim/opendkim.conf
+			echo TrustAnchorFile /etc/dnssec/root-anchors.txt >> "${D}"/etc/opendkim/opendkim.conf
 		fi
 		echo UserID milter >> "${D}"/etc/opendkim/opendkim.conf
 		if use berkdb; then
