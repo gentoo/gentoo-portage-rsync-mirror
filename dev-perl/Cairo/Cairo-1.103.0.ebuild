@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.103.0.ebuild,v 1.6 2014/04/13 16:14:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.103.0.ebuild,v 1.8 2014/04/15 18:38:43 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl interface to the cairo library"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="test"
 
 RDEPEND="

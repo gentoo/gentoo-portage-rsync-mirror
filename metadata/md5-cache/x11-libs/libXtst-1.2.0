@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=x11-libs/libX11 >=x11-libs/libXext-1.0.99.4 x11-libs/libXi x11-proto/inputproto >=x11-proto/recordproto-1.13.99.1 >=x11-proto/xextproto-7.0.99.3 doc? ( app-text/xmlto ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool x86-interix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) ppc-aix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) x86-winnt? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) virtual/pkgconfig
-DESCRIPTION=X.Org Xtst library
+DESCRIPTION=X.Org Xlib-based client API for the XTEST & RECORD extensions library
 EAPI=3
 HOMEPAGE=http://xorg.freedesktop.org/
 IUSE=doc static-libs
@@ -10,4 +10,4 @@ RDEPEND=x11-libs/libX11 >=x11-libs/libXext-1.0.99.4 x11-libs/libXi x11-proto/inp
 SLOT=0
 SRC_URI=http://xorg.freedesktop.org/releases/individual/lib/libXtst-1.2.0.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xorg-2	69479ff7a35a30e863a475568d29b9be
-_md5_=a600198db5ffc168fe971448945e6d98
+_md5_=a58b3b95661e316240880345572a74a1

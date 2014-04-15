@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.1-r1.ebuild,v 1.3 2014/03/19 16:38:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.1.0.ebuild,v 1.1 2014/04/15 19:00:08 bicatali Exp $
 
 EAPI=5
 
-inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs java-pkg-opt-2
+inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs
 
 BCP=${PN}-20130129.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
@@ -20,32 +20,33 @@ IUSE="bash-completion cairo doc icu java jpeg lapack minimal nls openmp perl png
 REQUIRED_USE="png? ( || ( cairo X ) ) jpeg? ( || ( cairo X ) ) tiff? ( || ( cairo X ) )"
 
 CDEPEND="
-	app-arch/bzip2
+	app-arch/bzip2:0=
+	app-arch/xz-utils:0=
 	app-text/ghostscript-gpl
-	dev-libs/libpcre
-	virtual/blas
-	cairo? ( x11-libs/cairo[X] x11-libs/pango )
-	icu? ( dev-libs/icu )
+	dev-libs/libpcre:3=
+	virtual/blas:0
+	|| ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath )
+	cairo? ( x11-libs/cairo:0=[X] x11-libs/pango:0= )
+	icu? ( dev-libs/icu:= )
 	jpeg? ( virtual/jpeg:0 )
-	lapack? ( virtual/lapack )
+	lapack? ( virtual/lapack:0 )
 	perl? ( dev-lang/perl )
-	png? ( media-libs/libpng )
-	readline? ( sys-libs/readline )
-	tk? ( dev-lang/tk )
-	X? ( x11-libs/libXmu x11-misc/xdg-utils )"
+	png? ( media-libs/libpng:0= )
+	readline? ( sys-libs/readline:0= )
+	tiff? ( media-libs/tiff:0= )
+	tk? ( dev-lang/tk:0= )
+	X? ( x11-libs/libXmu:0= x11-misc/xdg-utils )"
 
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc? (
-			virtual/latex-base
-			dev-texlive/texlive-fontsrecommended
-		 )
-	java? ( >=virtual/jdk-1.5 )"
+		virtual/latex-base
+		dev-texlive/texlive-fontsrecommended
+	)"
 
 RDEPEND="${CDEPEND}
-	( || ( <sys-libs/zlib-1.2.5.1-r1 >=sys-libs/zlib-1.2.5.1-r2[minizip] ) )
-	app-arch/xz-utils
-	java? ( >=virtual/jdk-1.5 )"
+	( || ( <sys-libs/zlib-1.2.5.1-r1:0= >=sys-libs/zlib-1.2.5.1-r2:0=[minizip] ) )
+	java? ( >=virtual/jre-1.5 )"
 
 RESTRICT="minimal? ( test )"
 
@@ -53,16 +54,13 @@ R_DIR="${EROOT%/}/usr/$(get_libdir)/${PN}"
 
 pkg_setup() {
 	if use openmp; then
+		if [[ $(tc-getCC) == *gcc ]] && ! tc-has-openmp; then
+			ewarn "OpenMP is not available in your current selected gcc"
+			die "need openmp capable gcc"
+		fi
 		FORTRAN_NEED_OPENMP=1
-		tc-has-openmp || die "Please enable openmp support in your compiler"
 	fi
 	fortran-2_pkg_setup
-
-	# Selects the build VM according to DEPEND and user preferences.
-	# Also sets VM specific addpredict and environment variables.
-	# Does nothing if java is disabled.
-	java-pkg-opt-2_pkg_setup
-
 	filter-ldflags -Wl,-Bdirect -Bdirect
 	# avoid using existing R installation
 	unset R_HOME
@@ -73,20 +71,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# gentoo bug #322965 (not applied upstream)
-	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14505
-	epatch "${FILESDIR}"/${PN}-2.11.1-parallel.patch
-
-	# respect ldflags (not applied upstream)
-	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14506
-	epatch "${FILESDIR}"/${PN}-2.12.1-ldflags.patch
-
-	# gentoo bug #383431
-	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14951
-	epatch "${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch
-
-	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14953
-	epatch "${FILESDIR}"/${PN}-3.0.0-rmath-shared.patch
+	epatch \
+		"${FILESDIR}"/${PN}-2.11.1-parallel.patch \
+		"${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch \
+		"${FILESDIR}"/${PN}-3.0.0-rmath-shared.patch
 
 	# fix packages.html for doc (gentoo bug #205103)
 	sed -i \
@@ -113,8 +101,6 @@ src_prepare() {
 	use perl && \
 		export PERL5LIB="${S}/share/perl:${PERL5LIB:+:}${PERL5LIB}"
 
-	java-pkg-opt-2_src_prepare
-
 	# don't search /usr/local
 	sed -i -e '/FLAGS=.*\/local\//c\: # removed by ebuild' configure.ac || die
 	# Fix for Darwin (OS X)
@@ -139,11 +125,8 @@ src_prepare() {
 }
 
 src_configure() {
-	# configure shouldn't run checks for java if disabled.
-	# Requires properly setup JVM or a addpredict hack for
-	# /proc/self/coredump_filter and possibly others.
-	# $(use_enable java)
-
+	#	--with-system-tre \
+	# tre is patched from upstream
 	econf \
 		--enable-byte-compiled-packages \
 		--enable-R-shlib \
@@ -170,13 +153,16 @@ src_configure() {
 		$(use_with readline) \
 		$(use_with tiff libtiff) \
 		$(use_with tk tcltk) \
+		$(use_with tk tk-config "${EPREFIX}"/usr/lib/tkConfig.sh) \
+		$(use_with tk tcl-config "${EPREFIX}"/usr/lib/tclConfig.sh) \
 		$(use_with X x)
 }
 
 src_compile() {
 	export VARTEXFONTS="${T}/fonts"
 	emake AR="$(tc-getAR)"
-	emake -C src/nmath/standalone shared $(use static-libs && echo static) AR="$(tc-getAR)"
+	emake -C src/nmath/standalone \
+		shared $(use static-libs && echo static) AR="$(tc-getAR)"
 	use doc && emake info pdf
 }
 
