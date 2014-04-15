@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.14 2014/03/15 03:31:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.15 2014/04/15 22:47:35 floppym Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 fi
 
 if [[ -n ${GRUB_AUTOGEN} ]]; then
-	PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+	PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 	inherit python-any-r1
 fi
 

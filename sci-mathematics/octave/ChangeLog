@@ -1,6 +1,17 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.162 2014/03/08 14:12:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.163 2014/04/15 22:42:34 bicatali Exp $
+
+*octave-3.8.1-r1 (15 Apr 2014)
+
+  15 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/octave-3.8.1-pkgbuilddir.patch, +octave-3.8.1-r1.ebuild,
+  -files/octave-3.4.3-help.patch, -files/octave-3.8.0-JIT-64-bit-indexing.patch,
+  -files/octave-3.8.0-avoid-gui-sigsegv-if-curl-is-not-available.patch,
+  -files/octave-3.8.0-imagemagick.patch, -octave-3.8.0.ebuild,
+  -octave-3.8.1_rc4-r1.ebuild, -octave-3.8.1_rc4.ebuild, metadata.xml:
+  Fixed bug #504470, thanks jer, fixed for gui prefix, add sub-slotted
+  dependencies, general cleanup
 
 *octave-3.8.1 (08 Mar 2014)
 
