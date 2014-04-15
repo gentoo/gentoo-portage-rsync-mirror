@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maitnainers</herd>
+	<maintainer>
+		<email>ondrej.sury@nic.cz</email>
+		<name>Ondřej Surý</name>
+	</maintainer>
 	<maintainer>
 		<email>scarabeus@gentoo.org</email>
 	</maintainer>
