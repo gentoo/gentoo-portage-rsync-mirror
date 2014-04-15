@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.25 2014/01/14 14:41:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.28 2014/04/15 10:48:42 chainsaw Exp $
+
+*bird-1.4.3 (15 Apr 2014)
+
+  15 Apr 2014; Tony Vroon <chainsaw@gentoo.org> -bird-1.2.4.ebuild,
+  -bird-1.3.0.ebuild, -bird-1.3.1.ebuild, -bird-1.3.2.ebuild,
+  -bird-1.3.6.ebuild, -bird-1.3.8-r2.ebuild, -bird-1.3.10.ebuild, 
+  -bird-1.3.11.ebuild, -bird-1.4.0.ebuild, +bird-1.4.3.ebuild:
+  Stability fixes for BFD support, BGP add-path support and BGP graceful
+  restart (RFC 4724). This is a new stable candidate. Thanks to Ondřej Surý.
+  Removing older versions.
 
 *bird-1.4.0 (14 Jan 2014)
 

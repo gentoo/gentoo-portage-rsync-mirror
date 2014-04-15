@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.4.0.ebuild,v 1.1 2014/01/14 14:41:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.4.3.ebuild,v 1.1 2014/04/15 10:45:18 chainsaw Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="A routing daemon implementing OSPF, RIPv2 & BGP for IPv4 or IPv6"
 HOMEPAGE="http://bird.network.cz"
