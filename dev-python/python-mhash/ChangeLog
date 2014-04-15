@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mhash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.18 2013/11/22 08:53:35 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.19 2014/04/15 20:51:52 redlizard Exp $
+
+  15 Apr 2014; redlizard <redlizard@gentoo.org> python-mhash-1.4-r1.ebuild:
+  Keyworded ~{x64,x86}-freebsd.
 
   22 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
   python-mhash-1.4-r1.ebuild:

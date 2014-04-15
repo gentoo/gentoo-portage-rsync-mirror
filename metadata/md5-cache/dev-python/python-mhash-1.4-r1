@@ -4,11 +4,11 @@ DESCRIPTION=Python interface to libmhash
 EAPI=5
 HOMEPAGE=http://mhash.sourceforge.net/
 IUSE=python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~amd64 ~ia64 x86 ~ppc-aix ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~amd64 ~ia64 x86 ~ppc-aix ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=app-crypt/mhash python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/mhash/python-mhash-1.4.tar.gz
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	f6a00e248ffeb4404b67a7a7645446c5	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b27fb0555348d031ce41ddc540b21bf5
+_md5_=43e3bfd95dc9cc65a4a9fec09e0ec3a8
