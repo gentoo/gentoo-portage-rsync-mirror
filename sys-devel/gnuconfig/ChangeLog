@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.79 2014/02/16 19:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.80 2014/04/15 19:58:08 redlizard Exp $
+
+  15 Apr 2014; redlizard <redlizard@gentoo.org> gnuconfig-20130516.ebuild,
+  gnuconfig-20131128.ebuild, gnuconfig-20140212.ebuild,
+  gnuconfig-99999999.ebuild:
+  Keyworded ~x64-freebsd.
 
 *gnuconfig-20140212 (16 Feb 2014)
 

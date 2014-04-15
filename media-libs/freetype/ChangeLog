@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.393 2014/03/28 03:19:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.394 2014/04/15 19:56:19 vapier Exp $
+
+  15 Apr 2014; Mike Frysinger <vapier@gentoo.org> freetype-2.5.3-r1.ebuild:
+  Move X deps behind USE=utils as only they use the X libs.
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> freetype-2.5.3-r1.ebuild:
   Stable for HPPA (bug #504088).
