@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.5.10.ebuild,v 1.1 2014/02/10 03:12:24 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.7-r1.ebuild,v 1.1 2014/04/15 06:11:59 dev-zero Exp $
 
 EAPI="5"
 
@@ -16,6 +16,13 @@ EAPI="5"
 
 # prevent perl-module from adding automagic perl DEPENDs
 GENTOO_DEPEND_ON_PERL="no"
+
+# syslog
+SYSLOG_MODULE_PV="165affd9741f0e30c4c8225da5e487d33832aca3"
+SYSLOG_MODULE_NGINX_PV="1.4.0"
+SYSLOG_MODULE_P="ngx_syslog-${SYSLOG_MODULE_PV}"
+SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/archive/${SYSLOG_MODULE_PV}.tar.gz"
+SYSLOG_MODULE_WD="${WORKDIR}/nginx_syslog_patch-${SYSLOG_MODULE_PV}"
 
 # devel_kit (https://github.com/simpl/ngx_devel_kit, BSD license)
 DEVEL_KIT_MODULE_PV="0.2.19"
@@ -34,6 +41,12 @@ HTTP_HEADERS_MORE_MODULE_PV="0.25"
 HTTP_HEADERS_MORE_MODULE_P="ngx_http_headers_more-${HTTP_HEADERS_MORE_MODULE_PV}-r1"
 HTTP_HEADERS_MORE_MODULE_URI="https://github.com/agentzh/headers-more-nginx-module/archive/v${HTTP_HEADERS_MORE_MODULE_PV}.tar.gz"
 HTTP_HEADERS_MORE_MODULE_WD="${WORKDIR}/headers-more-nginx-module-${HTTP_HEADERS_MORE_MODULE_PV}"
+
+# http_push (http://pushmodule.slact.net/, MIT license)
+HTTP_PUSH_MODULE_PV="0.712"
+HTTP_PUSH_MODULE_P="ngx_http_push-${HTTP_PUSH_MODULE_PV}"
+HTTP_PUSH_MODULE_URI="https://github.com/slact/nginx_http_push_module/archive/v${HTTP_PUSH_MODULE_PV}.tar.gz"
+HTTP_PUSH_MODULE_WD="${WORKDIR}/nginx_http_push_module-${HTTP_PUSH_MODULE_PV}"
 
 # http_cache_purge (http://labs.frickle.com/nginx_ngx_cache_purge/, BSD-2 license)
 HTTP_CACHE_PURGE_MODULE_PV="2.1"
@@ -54,7 +67,7 @@ HTTP_FANCYINDEX_MODULE_URI="https://github.com/aperezdc/ngx-fancyindex/archive/v
 HTTP_FANCYINDEX_MODULE_WD="${WORKDIR}/ngx-fancyindex-${HTTP_FANCYINDEX_MODULE_PV}"
 
 # http_lua (https://github.com/chaoslawful/lua-nginx-module, BSD license)
-HTTP_LUA_MODULE_PV="0.9.5rc2"
+HTTP_LUA_MODULE_PV="0.9.6"
 HTTP_LUA_MODULE_P="ngx_http_lua-${HTTP_LUA_MODULE_PV}"
 HTTP_LUA_MODULE_URI="https://github.com/chaoslawful/lua-nginx-module/archive/v${HTTP_LUA_MODULE_PV}.tar.gz"
 HTTP_LUA_MODULE_WD="${WORKDIR}/lua-nginx-module-${HTTP_LUA_MODULE_PV}"
@@ -78,13 +91,13 @@ HTTP_METRICS_MODULE_URI="https://github.com/madvertise/ngx_metrics/archive/v${HT
 HTTP_METRICS_MODULE_WD="${WORKDIR}/ngx_metrics-${HTTP_METRICS_MODULE_PV}"
 
 # naxsi-core (https://github.com/nbs-system/naxsi, GPLv2+)
-HTTP_NAXSI_MODULE_PV="0.53-1"
+HTTP_NAXSI_MODULE_PV="0.53-2"
 HTTP_NAXSI_MODULE_P="ngx_http_naxsi-${HTTP_NAXSI_MODULE_PV}"
 HTTP_NAXSI_MODULE_URI="https://github.com/nbs-system/naxsi/archive/${HTTP_NAXSI_MODULE_PV}.tar.gz"
 HTTP_NAXSI_MODULE_WD="${WORKDIR}/naxsi-${HTTP_NAXSI_MODULE_PV}/naxsi_src"
 
 # nginx-rtmp-module (http://github.com/arut/nginx-rtmp-module, BSD license)
-RTMP_MODULE_PV="1.1.2"
+RTMP_MODULE_PV="1.1.3"
 RTMP_MODULE_P="ngx_rtmp-${RTMP_MODULE_PV}"
 RTMP_MODULE_URI="http://github.com/arut/nginx-rtmp-module/archive/v${RTMP_MODULE_PV}.tar.gz"
 RTMP_MODULE_WD="${WORKDIR}/nginx-rtmp-module-${RTMP_MODULE_PV}"
@@ -96,7 +109,7 @@ HTTP_DAV_EXT_MODULE_URI="http://github.com/arut/nginx-dav-ext-module/archive/v${
 HTTP_DAV_EXT_MODULE_WD="${WORKDIR}/nginx-dav-ext-module-${HTTP_DAV_EXT_MODULE_PV}"
 
 # echo-nginx-module (https://github.com/agentzh/echo-nginx-module, BSD license)
-HTTP_ECHO_MODULE_PV="0.51"
+HTTP_ECHO_MODULE_PV="0.52"
 HTTP_ECHO_MODULE_P="ngx_http_echo-${HTTP_ECHO_MODULE_PV}"
 HTTP_ECHO_MODULE_URI="https://github.com/agentzh/echo-nginx-module/archive/v${HTTP_ECHO_MODULE_PV}.tar.gz"
 HTTP_ECHO_MODULE_WD="${WORKDIR}/echo-nginx-module-${HTTP_ECHO_MODULE_PV}"
@@ -119,9 +132,11 @@ inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user systemd ve
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.org"
 SRC_URI="http://nginx.org/download/${P}.tar.gz
+	syslog? ( ${SYSLOG_MODULE_URI} -> ${SYSLOG_MODULE_P}.tar.gz )
 	${DEVEL_KIT_MODULE_URI} -> ${DEVEL_KIT_MODULE_P}.tar.gz
 	nginx_modules_http_upload_progress? ( ${HTTP_UPLOAD_PROGRESS_MODULE_URI} -> ${HTTP_UPLOAD_PROGRESS_MODULE_P}.tar.gz )
 	nginx_modules_http_headers_more? ( ${HTTP_HEADERS_MORE_MODULE_URI} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
+	nginx_modules_http_push? ( ${HTTP_PUSH_MODULE_URI} -> ${HTTP_PUSH_MODULE_P}.tar.gz )
 	nginx_modules_http_cache_purge? ( ${HTTP_CACHE_PURGE_MODULE_URI} -> ${HTTP_CACHE_PURGE_MODULE_P}.tar.gz )
 	nginx_modules_http_slowfs_cache? ( ${HTTP_SLOWFS_CACHE_MODULE_URI} -> ${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz )
 	nginx_modules_http_fancyindex? ( ${HTTP_FANCYINDEX_MODULE_URI} -> ${HTTP_FANCYINDEX_MODULE_P}.tar.gz )
@@ -146,12 +161,13 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_conn map memcached proxy referer rewrite scgi ssi
 split_clients upstream_ip_hash userid uwsgi"
-NGINX_MODULES_OPT="addition auth_request dav degradation flv geoip gunzip gzip_static
-image_filter mp4 perl random_index realip secure_link spdy stub_status sub xslt"
+NGINX_MODULES_OPT="addition dav degradation flv geoip gunzip gzip_static image_filter
+mp4 perl random_index realip secure_link spdy stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="
 	http_upload_progress
 	http_headers_more
+	http_push
 	http_cache_purge
 	http_slowfs_cache
 	http_fancyindex
@@ -166,7 +182,7 @@ NGINX_MODULES_3RD="
 	http_push_stream"
 
 IUSE="aio debug +http +http-cache ipv6 libatomic +pcre pcre-jit rtmp selinux ssl
-userland_GNU vim-syntax"
+syslog userland_GNU vim-syntax"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -250,14 +266,16 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.1-fix-perl-install-path.patch"
 
-	if use nginx_modules_http_upstream_check; then
-		epatch "${FILESDIR}"/upstream-check-1.5.8.patch
+	if use syslog; then
+		epatch "${SYSLOG_MODULE_WD}"/syslog_${SYSLOG_MODULE_NGINX_PV}.patch
 	fi
 
-	if use nginx_modules_http_security; then
-		cd "${HTTP_SECURITY_MODULE_WD}/nginx/modsecurity"
-		epatch "${FILESDIR}/modsecurity-${HTTP_SECURITY_MODULE_PV}-include-paths.patch"
-		cd -
+	if use nginx_modules_http_upstream_check; then
+		epatch "${HTTP_UPSTREAM_CHECK_MODULE_WD}"/check_1.2.6+.patch
+	fi
+
+	if use nginx_modules_http_lua; then
+		sed -i -e 's/-llua5.1/-llua/' "${HTTP_LUA_MODULE_WD}/config"
 	fi
 
 	find auto/ -type f -print0 | xargs -0 sed -i 's:\&\& make:\&\& \\$(MAKE):' || die
@@ -278,6 +296,17 @@ src_prepare() {
 }
 
 src_configure() {
+	# mod_security needs to generate nginx/modsecurity/config before including it
+	if use nginx_modules_http_security; then
+		cd "${HTTP_SECURITY_MODULE_WD}"
+		./configure \
+			--enable-standalone-module \
+			$(use_enable pcre-jit) \
+			$(use_with nginx_modules_http_lua lua) || die "configure failed for mod_security"
+	fi
+
+	cd "${S}"
+
 	local myconf= http_enabled= mail_enabled=
 
 	use aio       && myconf+=" --with-file-aio --with-aio_module"
@@ -286,6 +315,11 @@ src_configure() {
 	use libatomic && myconf+=" --with-libatomic"
 	use pcre      && myconf+=" --with-pcre"
 	use pcre-jit  && myconf+=" --with-pcre-jit"
+
+	# syslog support
+	if use syslog; then
+		myconf+=" --add-module=${SYSLOG_MODULE_WD}"
+	fi
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
@@ -316,6 +350,11 @@ src_configure() {
 	if use nginx_modules_http_headers_more; then
 		http_enabled=1
 		myconf+=" --add-module=${HTTP_HEADERS_MORE_MODULE_WD}"
+	fi
+
+	if use nginx_modules_http_push; then
+		http_enabled=1
+		myconf+=" --add-module=${HTTP_PUSH_MODULE_WD}"
 	fi
 
 	if use nginx_modules_http_cache_purge; then
@@ -437,14 +476,6 @@ src_configure() {
 		--http-scgi-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/scgi \
 		--http-uwsgi-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/uwsgi \
 		${myconf} || die "configure failed"
-
-	if use nginx_modules_http_security; then
-		cd "${HTTP_SECURITY_MODULE_WD}"
-		./configure \
-			--enable-standalone-module \
-			$(use_enable pcre-jit) \
-			$(use_with nginx_modules_http_lua lua) || die "configure failed for mod_security"
-	fi
 }
 
 src_compile() {
@@ -496,6 +527,16 @@ src_install() {
 		cd "${S}"/objs/src/http/modules/perl/
 		einstall DESTDIR="${D}" INSTALLDIRS=vendor
 		fixlocalpod
+	fi
+
+	if use syslog; then
+		docinto ${SYSLOG_MODULE_P}
+		dodoc "${SYSLOG_MODULE_WD}"/README
+	fi
+
+	if use nginx_modules_http_push; then
+		docinto ${HTTP_PUSH_MODULE_P}
+		dodoc "${HTTP_PUSH_MODULE_WD}"/{changelog.txt,protocol.txt,README}
 	fi
 
 	if use nginx_modules_http_cache_purge; then
