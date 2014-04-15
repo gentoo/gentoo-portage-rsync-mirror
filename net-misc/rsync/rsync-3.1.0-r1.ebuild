@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.1.0.ebuild,v 1.2 2014/01/18 05:09:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.1.0-r1.ebuild,v 1.1 2014/04/15 11:48:56 polynomial-c Exp $
 
 EAPI="5"
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_/}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3.1.1_pre1-avoid_infinite_wait_reading_secrets_file.patch
 	epatch_user
 }
 

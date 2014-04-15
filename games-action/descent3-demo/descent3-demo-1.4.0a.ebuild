@@ -1,6 +1,7 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.12 2012/12/23 09:17:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.13 2014/04/15 11:41:41 ulm Exp $
+
 EAPI=4
 
 inherit eutils unpacker games
@@ -9,11 +10,11 @@ DESCRIPTION="Indoor/outdoor 3D combat with evil robotic mining spacecraft"
 HOMEPAGE="http://www.lokigames.com/products/descent3/"
 SRC_URI="mirror://lokigames/loki_demos/${PN}.run"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="sys-libs/glibc
