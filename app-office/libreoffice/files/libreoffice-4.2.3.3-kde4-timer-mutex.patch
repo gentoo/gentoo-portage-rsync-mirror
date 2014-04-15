@@ -1,46 +1,19 @@
-From 7dba6e0a71d090f06a6a1a39e87572674593b48a Mon Sep 17 00:00:00 2001
-From: Jan-Marek Glogowski <glogow@fbihome.de>
-Date: Mon, 10 Mar 2014 14:44:05 +0000
-Subject: fdo#73115: Always run timeouts as events
-
-Right-click popup menus run click events throught the LO main loop.
-In case of KDE4 the LO main loop is run by a timer in the main thread,
-with Qt::DirectConnection execution.
-
-If the timeout actually starts a nested event loop for a new dialog,
-the timer is blocked, the nested mainloop detects it was started
-from the timeout and drops the blocked timout from polling, which
-blocks any further LibreOffice event loop processing.
-
-This changes the timers to Qt::QueuedConnection, so they always
-generate an event and are processed by the Qt event loop.
-
-Change-Id: Ie626b22be3d8f9b8934bcc5e9e0e67a365549cfc
-(cherry picked from commit aeda478a02523cec146f6af69710f0391061db56)
-Reviewed-on: https://gerrit.libreoffice.org/8514
-Reviewed-by: Caolán McNamara <caolanm@redhat.com>
-Tested-by: Caolán McNamara <caolanm@redhat.com>
----
-diff --git a/vcl/unx/kde4/KDEXLib.cxx b/vcl/unx/kde4/KDEXLib.cxx
-index b4be6d6..4a9b70b 100644
---- a/vcl/unx/kde4/KDEXLib.cxx
-+++ b/vcl/unx/kde4/KDEXLib.cxx
-@@ -67,9 +67,13 @@ KDEXLib::KDEXLib() :
+--- a/vcl/unx/kde4/KDEXLib.cxx	2014-04-08 13:46:25.000000000 +0200
++++ b/vcl/unx/kde4/KDEXLib.cxx	2014-04-14 07:17:30.000000000 +0200
+@@ -67,13 +67,9 @@
      eventLoopType( LibreOfficeEventLoop ),
      m_bYieldFrozen( false )
  {
--    // the timers created here means they belong to the main thread
--    connect( &timeoutTimer, SIGNAL( timeout()), this, SLOT( timeoutActivated()));
--    connect( &userEventTimer, SIGNAL( timeout()), this, SLOT( userEventActivated()));
-+    // the timers created here means they belong to the main thread.
-+    // As the timeoutTimer runs the LO event queue, which may block on a dialog,
-+    // the timer has to use a Qt::QueuedConnection, otherwise the nested event
-+    // loop will detect the blocking timer and drop it from the polling
-+    // freezing LO X11 processing.
-+    connect( &timeoutTimer, SIGNAL( timeout()), this, SLOT( timeoutActivated()), Qt::QueuedConnection );
-+    connect( &userEventTimer, SIGNAL( timeout()), this, SLOT( userEventActivated()), Qt::QueuedConnection );
+-    // the timers created here means they belong to the main thread.
+-    // As the timeoutTimer runs the LO event queue, which may block on a dialog,
+-    // the timer has to use a Qt::QueuedConnection, otherwise the nested event
+-    // loop will detect the blocking timer and drop it from the polling
+-    // freezing LO X11 processing.
+-    connect( &timeoutTimer, SIGNAL( timeout()), this, SLOT( timeoutActivated()), Qt::QueuedConnection );
+-    connect( &userEventTimer, SIGNAL( timeout()), this, SLOT( userEventActivated()), Qt::QueuedConnection );
++    // the timers created here means they belong to the main thread
++    connect( &timeoutTimer, SIGNAL( timeout()), this, SLOT( timeoutActivated()));
++    connect( &userEventTimer, SIGNAL( timeout()), this, SLOT( userEventActivated()));
  
      // QTimer::start() can be called only in its (here main) thread, so this will
      // forward between threads if needed
---
-cgit v0.9.0.2-2-gbebe
