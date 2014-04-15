@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6i.ebuild,v 1.1 2013/08/10 21:45:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.1 2014/04/15 20:23:34 alonbl Exp $
 
-EAPI="3"
+EAPI="5"
 
 inherit linux-mod
 
@@ -54,9 +54,9 @@ src_prepare() {
 src_install() {
 	linux-mod_src_install
 
-	dodoc README || die "dodoc failed"
-	dobin loop-aes-keygen || die "dobin failed"
-	doman loop-aes-keygen.1 || die "doman failed"
+	dodoc README
+	dobin loop-aes-keygen
+	doman loop-aes-keygen.1
 }
 
 pkg_postinst() {

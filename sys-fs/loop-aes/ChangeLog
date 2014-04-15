@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.100 2014/01/14 13:58:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.102 2014/04/15 20:23:34 alonbl Exp $
+
+*loop-aes-3.7b (15 Apr 2014)
+
+  15 Apr 2014; Alon Bar-Lev <alonbl@gentoo.org> +loop-aes-3.7b.ebuild:
+  Version bump, bug#507654
+
+  15 Apr 2014; Alon Bar-Lev <alonbl@gentoo.org> -loop-aes-3.6g.ebuild,
+  -loop-aes-3.6h.ebuild, -loop-aes-3.6i.ebuild:
+  Clean old ebuilds
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> loop-aes-3.7a.ebuild:
   Stable for x86, wrt bug #495954
