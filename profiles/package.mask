@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15569 2014/04/15 08:33:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15570 2014/04/15 15:49:30 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -593,11 +593,6 @@ www-client/google-chrome:unstable
 # Tom Wijsman <TomWij@gentoo.org> (31 Dec 2013)
 # [QA] Mask LIVEVCS.unmasked versions of docker, newer versions are available.
 <=app-emulation/docker-0.7.0
-
-# Sergey Popov <pinkbyte@gentoo.org> (31 Dec 2013)
-# Security mask of vulnerable versions, wrt bug #455464
-<dev-libs/boost-1.52.0-r6
-<dev-util/boost-build-1.52.0
 
 # Julian Ospald <hasufell@gentoo.org> (30 Dec 2013)
 # breaks every consumer

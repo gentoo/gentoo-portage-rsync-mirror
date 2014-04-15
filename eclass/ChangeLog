@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1206 2014/04/14 20:21:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1207 2014/04/15 15:54:12 mgorny Exp $
+
+  15 Apr 2014; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  multibuild_merge_root: re-introduce userland_BSD tar fallback, bug #507626.
 
   14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
   Temporarily fix up >=sys-kernel/git-sources-3.15_rc1.ebuild, bug #507656.

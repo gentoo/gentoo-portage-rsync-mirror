@@ -9,5 +9,5 @@ LICENSE=qwt
 RDEPEND=dev-qt/designer:4 dev-qt/qtgui:4 doc? ( !<media-libs/coin-3.1.3[doc] ) svg? ( dev-qt/qtsvg:4 )
 SLOT=5
 SRC_URI=mirror://sourceforge/qwt/qwt-5.2.3.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	ec1d542b096f7a5d69ece35586c0bed5	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3bb64d35a83ff4870da11645ade1b5e7

@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.314 2014/04/07 10:57:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.316 2014/04/15 15:56:31 pinkbyte Exp $
+
+  15 Apr 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -files/boost-1.48.0-respect_python-buildid.patch,
+  -files/boost-1.48.0-support_dots_in_python-buildid.patch:
+  Drop obsolete patches
+
+  15 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> -boost-1.49.0-r2.ebuild:
+  Drop old vulnerable version
 
   07 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.53.0-r1.ebuild,
   boost-1.54.0-r1.ebuild, boost-1.55.0-r1.ebuild:
