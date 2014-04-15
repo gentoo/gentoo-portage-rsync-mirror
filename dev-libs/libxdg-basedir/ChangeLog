@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxdg-basedir
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.35 2014/01/25 03:55:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.36 2014/04/15 19:20:07 idl0r Exp $
+
+*libxdg-basedir-1.2.0 (15 Apr 2014)
+
+  15 Apr 2014; Christian Ruppert <idl0r@gentoo.org>
+  +libxdg-basedir-1.2.0.ebuild:
+  Version bump, bug 471576
 
   25 Jan 2014; Chris Reffett <creffett@gentoo.org> libxdg-basedir-1.1.1.ebuild:
   EAPI bump, remove unneeded || die

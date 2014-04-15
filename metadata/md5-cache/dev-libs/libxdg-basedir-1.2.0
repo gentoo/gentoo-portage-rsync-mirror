@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Small library to access XDG Base Directories Specification paths
+EAPI=5
+HOMEPAGE=http://repo.or.cz/w/libxdg-basedir.git
+IUSE=doc static-libs
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-solaris
+LICENSE=MIT
+SLOT=0
+SRC_URI=http://repo.or.cz/w/libxdg-basedir.git/snapshot/9642bf6c996ea1a4b20537db592e96d1c65affe5.tar.gz -> libxdg-basedir-1.2.0.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=c455c0d46c45ac49a04ed27552d72ce2
