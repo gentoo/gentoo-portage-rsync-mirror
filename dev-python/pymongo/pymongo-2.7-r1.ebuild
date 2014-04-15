@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.7.ebuild,v 1.1 2014/04/08 14:57:23 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.7-r1.ebuild,v 1.1 2014/04/15 15:18:18 ultrabug Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc kerberos mod_wsgi test"
+IUSE="doc kerberos test"
 
 RDEPEND="dev-db/mongodb"
 DEPEND="${RDEPEND}
@@ -113,14 +113,6 @@ python_test() {
 	[[ ${failed} ]] && die "Tests fail with ${EPYTHON}"
 
 	rm -rf "${dbpath}"
-}
-
-python_install() {
-	# Maintainer note:
-	# In order to work with mod_wsgi, we need to disable the C extension.
-	# See [1] for more information.
-	# [1] http://api.mongodb.org/python/current/faq.html#does-pymongo-work-with-mod-wsgi
-	distutils-r1_python_install $(use mod_wsgi && echo --no_ext)
 }
 
 python_install_all() {

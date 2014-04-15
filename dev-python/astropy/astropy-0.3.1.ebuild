@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.3.1.ebuild,v 1.1 2014/03/10 17:39:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.3.1.ebuild,v 1.2 2014/04/15 15:22:42 bicatali Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
 	sci-astronomy/erfa:0=
 	sci-astronomy/wcslib:0=
-	sci-libs/cfitsio:0=
+	>=sci-libs/cfitsio-3.35:0=
 	sys-libs/zlib:0="
 DEPEND="${RDEPEND}
 	dev-python/cython[${PYTHON_USEDEP}]
