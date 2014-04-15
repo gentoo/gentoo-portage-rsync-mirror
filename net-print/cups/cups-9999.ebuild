@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.52 2014/03/01 22:33:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.54 2014/04/15 21:26:13 dilfridge Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ HOMEPAGE="http://www.cups.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="acl dbus debug gnutls java kerberos lprng-compat pam
-	python selinux +ssl static-libs +threads usb X xinetd zeroconf"
+	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr it ja ru"
 for X in ${LANGS} ; do
@@ -93,7 +93,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
-	"${FILESDIR}/${PN}-1.5.0-systemd-socket-2.patch"	# systemd support
 )
 
 pkg_setup() {
@@ -142,6 +141,8 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
+	use systemd && epatch "${FILESDIR}/${PN}-1.7.2-systemd-socket-2.patch"
+
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
 }
@@ -171,6 +172,12 @@ src_configure() {
 		"
 	fi
 
+	if use systemd; then
+		myconf+="
+			--with-systemdsystemunitdir="$(systemd_get_unitdir)"
+		"
+	fi
+
 	econf \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--localstatedir="${EPREFIX}"/var \
@@ -197,7 +204,6 @@ src_configure() {
 		$(use_with python python "${PYTHON}") \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
-		--with-systemdsystemunitdir="$(systemd_get_unitdir)" \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that

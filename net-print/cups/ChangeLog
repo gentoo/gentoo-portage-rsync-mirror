@@ -1,6 +1,19 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.599 2014/04/15 11:34:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.601 2014/04/15 21:26:13 dilfridge Exp $
+
+*cups-1.7.1-r1 (15 Apr 2014)
+
+  15 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org> +cups-1.7.1-r1.ebuild,
+  cups-1.7.2.ebuild, cups-9999.ebuild, +files/cups-1.7.1-str4356.patch:
+  Backport for bug 507696
+
+  15 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.7.2.ebuild,
+  cups-9999.ebuild:
+  systemd support was added to net-print/cups with the understanding that the
+  systemd team takes care of relevant bugs as long as the patches are not
+  upstreamed. Unfortunately noone of them cares, which is why we will only
+  conditionally apply the patch now. See bug 450282, bug 494582, bug 500300.
 
 *cups-1.7.2 (15 Apr 2014)
 
