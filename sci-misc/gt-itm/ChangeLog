@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/gt-itm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/ChangeLog,v 1.6 2010/10/12 15:32:45 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/ChangeLog,v 1.7 2014/04/16 22:19:34 ulm Exp $
+
+  16 Apr 2014; Ulrich Müller <ulm@gentoo.org> gt-itm-19961004-r1.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 465698.
 
 *gt-itm-19961004-r1 (12 Oct 2010)
 

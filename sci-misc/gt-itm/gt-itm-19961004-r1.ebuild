@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/gt-itm-19961004-r1.ebuild,v 1.1 2010/10/12 15:32:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/gt-itm-19961004-r1.ebuild,v 1.2 2014/04/16 22:19:34 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://www.cc.gatech.edu/fac/Ellen.Zegura/graphs.html
 SRC_URI="http://www.cc.gatech.edu/fac/Ellen.Zegura/gt-itm/gt-itm.tar.gz
 		 http://www.isi.edu/nsnam/dist/sgb2ns.tar.gz"
 
-LICENSE="as-is BSD"
+LICENSE="all-rights-reserved sgb2ns"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+RESTRICT="mirror bindist"
 
 DEPEND="dev-util/sgb"
 RDEPEND="${DEPEND}"
