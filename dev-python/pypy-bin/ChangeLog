@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.13 2014/04/11 08:19:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.14 2014/04/16 19:58:34 mgorny Exp $
+
+  16 Apr 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.2.1.ebuild:
+  Dep on ncurses[tinfo] since pypy-bin was built this way.
 
   11 Apr 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.0.2-r1.ebuild,
   pypy-bin-2.2.1.ebuild:
