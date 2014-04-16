@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/multimon-ng/multimon-ng-9999.ebuild,v 1.5 2014/03/10 14:55:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/multimon-ng/multimon-ng-9999.ebuild,v 1.6 2014/04/16 15:01:06 zerochaos Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	if use !pulseaudio; then
-		sed -i -e 's/-lpulse-simple//' -e 's/PULSE/DUMMY/' ${PN}.pro || die
+		sed -i -e 's/-lpulse-simple//' -e 's/-lpulse//' -e 's/PULSE/DUMMY/' ${PN}.pro || die
 	fi
 	qt4-r2_src_prepare
 }

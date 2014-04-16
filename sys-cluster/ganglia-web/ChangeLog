@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ganglia-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.16 2014/04/13 11:05:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.17 2014/04/16 14:54:27 jsbronder Exp $
+
+  16 Apr 2014; Justin Bronder <jsbronder@gentoo.org> -ganglia-web-3.5.6.ebuild,
+  -ganglia-web-3.5.6-r1.ebuild:
+  cleanup old
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> ganglia-web-3.5.8-r1.ebuild:
   Stable for ppc, wrt bug #462500
