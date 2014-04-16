@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nagios-syntax/nagios-syntax-20050105.ebuild,v 1.12 2012/09/05 21:54:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nagios-syntax/nagios-syntax-20050105.ebuild,v 1.13 2014/04/16 06:57:10 ulm Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Nagios configuration files syntax"
-HOMEPAGE="http://dev.gentoo.org/~ramereth/vim/syntax/nagios.vim"
-LICENSE="as-is"
+HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2261"
+LICENSE="vim.org"
 KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 

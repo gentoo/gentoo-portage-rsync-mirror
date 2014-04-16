@@ -1,6 +1,13 @@
 # ChangeLog for net-news/rawdog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.51 2014/03/19 15:24:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.52 2014/04/16 06:59:02 idella4 Exp $
+
+* rawdog-2.19.ebuild (16 Apr 2014)
+
+  16 Apr 2014: Ian Delaney <idella4@gentoo.org> rawdog-2.19.ebuild:
+  -rawdog-2.13.ebuild, -rawdog-2.14.ebuild,
+  -rawdog-2.16.ebuild, -rawdog-2.17.ebuild:
+  Bump; rm old
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> rawdog-2.18.ebuild:
   Stable for alpha, wrt bug #495892
