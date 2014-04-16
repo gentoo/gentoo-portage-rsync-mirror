@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1-r1.ebuild,v 1.1 2014/04/15 22:42:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1-r1.ebuild,v 1.2 2014/04/16 15:51:09 bicatali Exp $
 
 EAPI=5
 
@@ -90,7 +90,6 @@ pkg_pretend() {
 		use sparse && libs+=(
 			"${libdir}"/libarpack.so
 			"${libdir}"/libcholmod.so
-			"${libdir}"/libspqr.so
 			"${libdir}"/libumfpack.so
 		)
 		for lib in ${libs[@]}; do
