@@ -1,0 +1,12 @@
+diff -ur mirall-1.5.3/doc/CMakeLists.txt mirall-1.5.3-new/doc/CMakeLists.txt
+--- mirall-1.5.3/doc/CMakeLists.txt	2014-03-10 11:22:06.000000000 +0000
++++ mirall-1.5.3-new/doc/CMakeLists.txt	2014-04-07 19:17:56.000000000 +0100
+@@ -4,7 +4,7 @@
+     set(SPHINX_CACHE_DIR "${CMAKE_CURRENT_BINARY_DIR}/_doctrees")
+     # HTML output directory
+     set(SPHINX_HTML_DIR     "${CMAKE_CURRENT_BINARY_DIR}/html")
+-    set(SPHINX_MAN_DIR      "${CMAKE_CURRENT_BINARY_DIR}/man")
++    set(SPHINX_MAN_DIR      "${CMAKE_CURRENT_BINARY_DIR}/man1")
+     set(SPHINX_PDF_DIR      "${CMAKE_CURRENT_BINARY_DIR}/latex")
+     set(SPHINX_QCH_DIR      "${CMAKE_CURRENT_BINARY_DIR}/qthelp")
+     set(SPHINX_HTMLHELP_DIR "${CMAKE_CURRENT_BINARY_DIR}/htmlhelp")

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/owncloud-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.7 2014/03/17 11:01:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/ChangeLog,v 1.8 2014/04/16 11:33:49 voyageur Exp $
+
+*owncloud-client-1.5.3-r1 (16 Apr 2014)
+
+  16 Apr 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +owncloud-client-1.5.3-r1.ebuild,
+  +files/owncloud-client-1.5.3-man-page-location-fix.patch:
+  Fix man pages installation path, thanks Ian Abbott <ian@abbott.org> in bug
+  #507058. Also drop asciidoc dependency, sphinx is the only generator now
 
   17 Mar 2014; Bernard Cafarelli <voyageur@gentoo.org>
   owncloud-client-1.5.1.ebuild, owncloud-client-1.5.2.ebuild,
