@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p45-r1.ebuild,v 1.2 2014/01/18 02:25:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p11-r1.ebuild,v 1.1 2014/04/16 09:39:12 polynomial-c Exp $
 
-EAPI="1"
+EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-4.2-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-4.3-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
 MY_PV=${MY_PV/_/-}
@@ -28,17 +28,21 @@ patches() {
 	fi
 }
 
+# The version of readline this bash normally ships with.
+READLINE_VER="6.3"
+
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://tiswww.case.edu/php/chet/bash/bashtop.html"
 SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
+[[ ${PV} == *_rc* ]] && SRC_URI+=" ftp://ftp.cwru.edu/pub/bash/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="afs bashlogger examples mem-scramble +net nls plugins +readline vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-	readline? ( >=sys-libs/readline-6.2 )
+	readline? ( >=sys-libs/readline-${READLINE_VER} )
 	nls? ( virtual/libintl )"
 RDEPEND="${DEPEND}
 	!<sys-apps/portage-2.1.6.7_p1
@@ -62,32 +66,29 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	cd "${S}"
+}
 
+src_prepare() {
 	# Include official patches
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 
-	# Clean out local libs so we know we use system ones
-	rm -rf lib/{readline,termcap}/*
-	touch lib/{readline,termcap}/Makefile.in # for config.status
-	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
+	# Clean out local libs so we know we use system ones w/releases.
+	if [[ ${PV} != *_rc* ]] ; then
+		rm -rf lib/{readline,termcap}/*
+		touch lib/{readline,termcap}/Makefile.in # for config.status
+		sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
+	fi
 
 	# Avoid regenerating docs after patches #407985
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
 
-	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
-	epatch "${FILESDIR}"/${PN}-4.2-parallel-build.patch
-	epatch "${FILESDIR}"/${PN}-4.2-no-readline.patch
-	epatch "${FILESDIR}"/${PN}-4.2-read-retry.patch #447810
-	if ! use vanilla ; then
-		epatch "${FILESDIR}"/${PN}-4.2-speed-up-read-N.patch
-	fi
+	epatch "${FILESDIR}"/${PN}-4.3-jobs-run-sigchld-trap.patch
 
 	epatch_user
 }
 
-src_compile() {
+src_configure() {
 	local myconf=()
 
 	# For descriptions of these, see config-top.h
@@ -114,17 +115,23 @@ src_compile() {
 	# be safe.
 	# Exact cached version here doesn't really matter as long as it
 	# is at least what's in the DEPEND up above.
-	export ac_cv_rl_version=6.2
+	export ac_cv_rl_version=${READLINE_VER}
 
 	# Force linking with system curses ... the bundled termcap lib
 	# sucks bad compared to ncurses.  For the most part, ncurses
 	# is here because readline needs it.  But bash itself calls
 	# ncurses in one or two small places :(.
 
+	if [[ ${PV} != *_rc* ]] ; then
+		# Use system readline only with released versions.
+		myconf+=( --with-installed-readline=. )
+	fi
+
 	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
 	tc-export AR #444070
 	econf \
-		--with-installed-readline=. \
+		--docdir='$(datarootdir)'/doc/${PF} \
+		--htmldir='$(docdir)/html' \
 		--with-curses \
 		$(use_with afs) \
 		$(use_enable net net-redirections) \
@@ -135,18 +142,23 @@ src_compile() {
 		$(use_enable readline history) \
 		$(use_enable readline bang-history) \
 		"${myconf[@]}"
-	emake || die
+}
+
+src_compile() {
+	emake
 
 	if use plugins ; then
-		emake -C examples/loadables all others || die
+		emake -C examples/loadables all others
 	fi
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	local d f
+
+	default
 
 	dodir /bin
-	mv "${D}"/usr/bin/bash "${D}"/bin/ || die
+	mv "${ED}"/usr/bin/bash "${ED}"/bin/ || die
 	dosym bash /bin/rbash
 
 	insinto /etc/bash
@@ -168,12 +180,12 @@ src_install() {
 	fi
 	sed -i \
 		"${sed_args[@]}" \
-		"${D}"/etc/skel/.bashrc \
-		"${D}"/etc/bash/bashrc || die
+		"${ED}"/etc/skel/.bashrc \
+		"${ED}"/etc/bash/bashrc || die
 
 	if use plugins ; then
 		exeinto /usr/$(get_libdir)/bash
-		doexe $(echo examples/loadables/*.o | sed 's:\.o::g') || die
+		doexe $(echo examples/loadables/*.o | sed 's:\.o::g')
 		insinto /usr/include/bash-plugins
 		doins *.h builtins/*.h examples/loadables/*.h include/*.h \
 			lib/{glob/glob.h,tilde/tilde.h}
@@ -194,29 +206,29 @@ src_install() {
 	fi
 
 	doman doc/*.1
-	dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
+	newdoc CWRU/changelog ChangeLog
 	dosym bash.info /usr/share/info/bashref.info
 }
 
 pkg_preinst() {
-	if [[ -e ${ROOT}/etc/bashrc ]] && [[ ! -d ${ROOT}/etc/bash ]] ; then
-		mkdir -p "${ROOT}"/etc/bash
-		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
+	if [[ -e ${EROOT}/etc/bashrc ]] && [[ ! -d ${EROOT}/etc/bash ]] ; then
+		mkdir -p "${EROOT}"/etc/bash
+		mv -f "${EROOT}"/etc/bashrc "${EROOT}"/etc/bash/
 	fi
 
-	if [[ -L ${ROOT}/bin/sh ]]; then
+	if [[ -L ${EROOT}/bin/sh ]] ; then
 		# rewrite the symlink to ensure that its mtime changes. having /bin/sh
 		# missing even temporarily causes a fatal error with paludis.
-		local target=$(readlink "${ROOT}"/bin/sh)
-		local tmp=$(emktemp "${ROOT}"/bin)
+		local target=$(readlink "${EROOT}"/bin/sh)
+		local tmp=$(emktemp "${EROOT}"/bin)
 		ln -sf "${target}" "${tmp}"
-		mv -f "${tmp}" "${ROOT}"/bin/sh
+		mv -f "${tmp}" "${EROOT}"/bin/sh
 	fi
 }
 
 pkg_postinst() {
 	# If /bin/sh does not exist, provide it
-	if [[ ! -e ${ROOT}/bin/sh ]]; then
-		ln -sf bash "${ROOT}"/bin/sh
+	if [[ ! -e ${EROOT}/bin/sh ]] ; then
+		ln -sf bash "${EROOT}"/bin/sh
 	fi
 }
