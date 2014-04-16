@@ -6680,6 +6680,7 @@ sys-infiniband/ofed:ibacm - Add support for userspace pre-connection services
 sys-infiniband/ofed:mstflint - Tools to burn Mellanox firmware
 sys-infiniband/ofed:opensm - Add OpenSM - Subnet manager for infiniband
 sys-infiniband/ofed:perftest - Add perftest utils
+sys-infiniband/ofed:qperf - Add rdma tests
 sys-infiniband/ofed:rds - Tools to manage rds sockets
 sys-infiniband/ofed:sdp - Add SDP tools
 sys-infiniband/ofed:srp - Suport for userspace part for srp initiator

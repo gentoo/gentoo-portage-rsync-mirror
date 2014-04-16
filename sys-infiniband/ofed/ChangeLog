@@ -1,6 +1,12 @@
 # ChangeLog for sys-infiniband/ofed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ChangeLog,v 1.9 2012/12/11 21:36:58 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ChangeLog,v 1.10 2014/04/16 08:22:24 alexxy Exp $
+
+*ofed-3.12_rc1 (16 Apr 2014)
+
+  16 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> +ofed-3.12_rc1.ebuild,
+  -ofed-1.5.4.1-r1.ebuild, metadata.xml:
+  Update ofed stack to 3.12-rc1
 
   11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> -ofed-1.5.4.1.ebuild:
   old

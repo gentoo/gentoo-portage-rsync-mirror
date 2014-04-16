@@ -1,6 +1,12 @@
 # ChangeLog for sys-infiniband/libehca
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libehca/ChangeLog,v 1.6 2012/10/13 06:48:20 alexxy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libehca/ChangeLog,v 1.7 2014/04/16 08:22:28 alexxy Exp $
+
+*libehca-1.2.2-r3 (16 Apr 2014)
+
+  16 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> +libehca-1.2.2-r3.ebuild,
+  -libehca-1.2.2-r1.ebuild, libehca-1.2.2-r2.ebuild:
+  Update ofed stack to 3.12-rc1
 
   13 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> libehca-1.2.2-r2.ebuild:
   [sys-infiniband] Update OFED
