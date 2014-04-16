@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-1.3.ebuild,v 1.1 2013/03/12 23:19:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-1.3.ebuild,v 1.2 2014/04/16 06:11:17 polynomial-c Exp $
 
 EAPI=5
 inherit cmake-utils eutils font
@@ -42,7 +42,8 @@ src_prepare() {
 	# don't build redundant qtscriptgenerator libs
 	sed -i '/^set(BUILD_SCRIPTGEN/s/TRUE/FALSE/' CMakeLists.txt || die
 
-	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch \
+		"${FILESDIR}"/${P}-freetype251.patch
 }
 
 src_compile() {

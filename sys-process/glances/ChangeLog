@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.15 2014/03/31 09:49:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.16 2014/04/16 06:23:32 idella4 Exp $
+
+  16 Apr 2014; Ian Delaney <idella4@gentoo.org> glances-1.7.4.ebuild:
+  add pypy support
 
 *glances-1.7.4 (31 Mar 2014)
 
