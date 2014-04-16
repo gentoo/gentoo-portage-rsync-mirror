@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.298 2014/04/01 18:09:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.299 2014/04/16 18:26:26 johu Exp $
+
+*kppp-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> +kppp-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *kppp-4.12.4 (01 Apr 2014)
 

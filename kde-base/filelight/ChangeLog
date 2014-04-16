@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.138 2014/04/01 18:09:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.139 2014/04/16 18:26:03 johu Exp $
+
+*filelight-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> +filelight-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *filelight-4.12.4 (01 Apr 2014)
 

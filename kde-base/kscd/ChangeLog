@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kscd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.306 2014/04/01 18:10:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.307 2014/04/16 18:26:08 johu Exp $
+
+*kscd-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> +kscd-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *kscd-4.12.4 (01 Apr 2014)
 

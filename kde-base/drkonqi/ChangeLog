@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.318 2014/04/01 18:09:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.319 2014/04/16 18:26:04 johu Exp $
+
+*drkonqi-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> +drkonqi-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *drkonqi-4.12.4 (01 Apr 2014)
 

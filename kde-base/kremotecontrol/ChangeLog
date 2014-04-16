@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kremotecontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.139 2014/04/01 18:09:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.140 2014/04/16 18:26:01 johu Exp $
+
+*kremotecontrol-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> +kremotecontrol-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *kremotecontrol-4.12.4 (01 Apr 2014)
 

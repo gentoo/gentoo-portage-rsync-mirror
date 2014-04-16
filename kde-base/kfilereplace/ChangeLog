@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kfilereplace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfilereplace/ChangeLog,v 1.292 2014/04/01 18:09:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfilereplace/ChangeLog,v 1.293 2014/04/16 18:26:23 johu Exp $
+
+*kfilereplace-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> +kfilereplace-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *kfilereplace-4.12.4 (01 Apr 2014)
 

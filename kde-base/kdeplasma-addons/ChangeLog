@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.243 2014/04/01 18:09:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.244 2014/04/16 18:26:21 johu Exp $
+
+*kdeplasma-addons-4.13.0 (16 Apr 2014)
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org>
+  +kdeplasma-addons-4.13.0.ebuild:
+  Version bump KDE SC 4.13.0
 
 *kdeplasma-addons-4.12.4 (01 Apr 2014)
 
