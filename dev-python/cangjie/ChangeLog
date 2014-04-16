@@ -1,0 +1,5 @@
+*cangjie-1.1 (16 Apr 2014)
+
+  16 Apr 2014; Naohiro Aota <naota@gentoo.org> +cangjie-1.1.ebuild,
+  +metadata.xml:
+  Add dev-python/cangjie written by Brendan Horan. #506722
