@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8825 2014/04/15 18:57:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8826 2014/04/16 07:34:41 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> desc/ofed_drivers.desc:
+  Add new ib drivers description
 
   15 Apr 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add no-source-code license notice to BINARY-REDISTRIBUTABLE group.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.601 2014/04/14 20:30:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.602 2014/04/16 07:47:02 ago Exp $
+
+  16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glib-2.38.2-r1.ebuild:
+  Stable for ppc64, wrt bug #507568
 
   14 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glib-2.38.2-r1.ebuild:
   Stable for ppc, wrt bug #507568

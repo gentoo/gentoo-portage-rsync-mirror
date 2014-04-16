@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dri3proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri3proto/ChangeLog,v 1.7 2014/04/08 20:04:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri3proto/ChangeLog,v 1.8 2014/04/16 07:44:44 ago Exp $
+
+  16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> dri3proto-1.0.ebuild:
+  Stable for ppc64, wrt bug #500368
 
   08 Apr 2014; Agostino Sarubbo <ago@gentoo.org> dri3proto-1.0.ebuild:
   Stable for ppc, wrt bug #500368
