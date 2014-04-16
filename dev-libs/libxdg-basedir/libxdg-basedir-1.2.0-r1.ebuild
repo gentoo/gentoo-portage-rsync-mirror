@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.2.0.ebuild,v 1.2 2014/04/16 07:06:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.2.0-r1.ebuild,v 1.1 2014/04/16 20:56:57 idl0r Exp $
 
 EAPI=5
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Small library to access XDG Base Directories Specification paths"
 HOMEPAGE="http://repo.or.cz/w/libxdg-basedir.git"
@@ -20,6 +20,8 @@ DEPEND="doc? ( app-doc/doxygen )"
 S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-buffer-overflow.patch"
+
 	eautoreconf
 }
 
