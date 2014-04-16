@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.14 2014/02/16 02:12:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.15 2014/04/16 07:22:16 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/libunwind/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="7"
-KEYWORDS="amd64 arm hppa ~ia64 ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm hppa ~ia64 ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug debug-frame libatomic lzma static-libs"
 
 RESTRICT="test" #461958 -- re-enable tests with >1.1 again for retesting, this is here for #461394

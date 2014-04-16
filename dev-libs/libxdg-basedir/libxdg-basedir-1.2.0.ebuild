@@ -1,15 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.2.0.ebuild,v 1.1 2014/04/15 19:20:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.2.0.ebuild,v 1.2 2014/04/16 07:06:27 polynomial-c Exp $
 
 EAPI=5
 inherit autotools
 
-TREE="9642bf6c996ea1a4b20537db592e96d1c65affe5"
-
 DESCRIPTION="Small library to access XDG Base Directories Specification paths"
 HOMEPAGE="http://repo.or.cz/w/libxdg-basedir.git"
-SRC_URI="http://repo.or.cz/w/libxdg-basedir.git/snapshot/${TREE}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/devnev/${PN}/archive/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,7 +17,7 @@ IUSE="doc static-libs"
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
 	eautoreconf
