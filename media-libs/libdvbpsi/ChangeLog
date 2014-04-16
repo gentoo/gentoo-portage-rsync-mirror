@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.64 2014/03/09 12:48:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.65 2014/04/16 17:54:05 aballier Exp $
+
+*libdvbpsi-1.2.0 (16 Apr 2014)
+
+  16 Apr 2014; Alexis Ballier <aballier@gentoo.org> +libdvbpsi-1.2.0.ebuild:
+  version bump
 
 *libdvbpsi-1.1.2 (09 Mar 2014)
 
