@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.76 2014/04/02 05:53:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.77 2014/04/16 05:56:39 graaff Exp $
+
+  16 Apr 2014; Hans de Graaff <graaff@gentoo.org> sphinx-0.9.9.ebuild:
+  Specify a working version of automake, fixing bug 506652.
 
 *sphinx-2.1.7 (02 Apr 2014)
 

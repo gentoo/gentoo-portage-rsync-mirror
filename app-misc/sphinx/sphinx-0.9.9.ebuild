@@ -1,9 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.9.ebuild,v 1.5 2010/07/11 12:01:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.9.ebuild,v 1.6 2014/04/16 05:56:39 graaff Exp $
 
 EAPI=2
 inherit eutils autotools
+
+WANT_AUTOMAKE="1.11"
 
 MY_P=${P/_/-}
 
