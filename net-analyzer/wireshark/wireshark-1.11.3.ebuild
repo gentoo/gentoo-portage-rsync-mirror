@@ -1,28 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre2375.ebuild,v 1.1 2014/04/14 15:37:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3.ebuild,v 1.1 2014/04/16 15:13:14 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps qt4-r2 user versionator
-
-WS_PV="$(get_version_component_range 1-3)"
-WS_REV="$(get_version_component_range 4)"
-WS_REV="${WS_REV/pre/}"
-WS_GIT="g9a9ca0a"
+inherit autotools eutils fcaps qt4-r2 user
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-SRC_URI="http://www.wireshark.org/download/automated/src/${PN}-${WS_PV}-${WS_REV}-${WS_GIT}.tar.bz2"
+SRC_URI="${HOMEPAGE}download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="
-	adns +caps crypt doc doc-pdf geoip gtk2 +gtk3 ipv6 kerberos libadns lua
+	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos libadns lua
 	+netlink +pcap portaudio +qt4 selinux smi ssl zlib
 "
 REQUIRED_USE="
-	?? ( gtk2 gtk3 )
 	ssl? ( crypt )
 "
 
@@ -38,10 +32,6 @@ RDEPEND="
 	crypt? ( dev-libs/libgcrypt:0 )
 	caps? ( sys-libs/libcap )
 	geoip? ( dev-libs/geoip )
-	gtk2? (
-		${GTK_COMMON_DEPEND}
-		>=x11-libs/gtk+-2.4.0:2
-	)
 	gtk3? (
 		${GTK_COMMON_DEPEND}
 		x11-libs/gtk+:3
@@ -79,8 +69,6 @@ DEPEND="
 	virtual/perl-Time-Local
 	virtual/pkgconfig
 "
-
-S=${WORKDIR}/${PN}-${WS_PV}-${WS_REV}-${WS_GIT}
 
 pkg_setup() {
 	enewgroup wireshark
@@ -132,7 +120,7 @@ src_configure() {
 	fi
 
 	# Enable wireshark binary with any supported GUI toolkit (bug #473188)
-	if use gtk2 || use gtk3 || use qt4 ; then
+	if use gtk3 || use qt4 ; then
 		myconf+=( "--enable-wireshark" )
 	else
 		myconf+=( "--disable-wireshark" )
@@ -149,7 +137,6 @@ src_configure() {
 		$(use_with caps libcap) \
 		$(use_with crypt gcrypt) \
 		$(use_with geoip) \
-		$(use_with gtk2) \
 		$(use_with gtk3) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
@@ -198,7 +185,7 @@ src_install() {
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 
-	if use gtk2 || use gtk3 || use qt4; then
+	if use gtk3 || use qt4; then
 		local c d
 		for c in hi lo; do
 			for d in 16 32 48; do
@@ -208,7 +195,7 @@ src_install() {
 		done
 	fi
 
-	if use gtk2 || use gtk3; then
+	if use gtk3; then
 		domenu wireshark.desktop
 	fi
 
