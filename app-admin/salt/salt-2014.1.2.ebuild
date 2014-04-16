@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.0.ebuild,v 1.2 2014/03/04 19:22:43 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.1.2.ebuild,v 1.1 2014/04/16 00:15:57 chutzpah Exp $
 
 EAPI=5
 
@@ -55,7 +55,10 @@ DEPEND="test? (
 			${RDEPEND}
 		)"
 
-PATCHES=("${FILESDIR}/${PN}-0.17.1-tests-nonroot.patch")
+PATCHES=(
+	"${FILESDIR}/${PN}-0.17.1-tests-nonroot.patch"
+	"${FILESDIR}/${P}-tests-nonroot.patch"
+)
 DOCS=(README.rst AUTHORS)
 
 python_prepare() {
