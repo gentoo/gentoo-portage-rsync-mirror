@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=test? ( dev-python/testtools[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy(-)] virtual/python-unittest2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy(-)]
+DESCRIPTION=Library for parsing the fastimport VCS serialization format
+EAPI=5
+HOMEPAGE=https://launchpad.net/python-fastimport
+IUSE=test python_targets_python2_6 python_targets_python2_7 python_targets_pypy
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_pypy )
+SLOT=0
+SRC_URI=http://launchpad.net/python-fastimport/trunk/0.9.2/+download/python-fastimport-0.9.2.tar.gz
+_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	f6a00e248ffeb4404b67a7a7645446c5	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=9dbc31c8f3552cb83b2b19dd136450e9

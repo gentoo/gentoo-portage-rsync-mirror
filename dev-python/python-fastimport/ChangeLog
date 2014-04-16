@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-fastimport
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastimport/ChangeLog,v 1.6 2012/08/11 09:29:36 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastimport/ChangeLog,v 1.7 2014/04/16 08:52:23 mgorny Exp $
+
+*python-fastimport-0.9.2-r1 (16 Apr 2014)
+
+  16 Apr 2014; Michał Górny <mgorny@gentoo.org>
+  +python-fastimport-0.9.2-r1.ebuild:
+  Convert to distutils-r1. Enable tests.
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   python-fastimport-0.9.2.ebuild:
@@ -30,4 +36,3 @@
   13 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   +python-fastimport-0.9.0.ebuild, +metadata.xml:
   New ebuild for a fastimport format parser library, needed for bzr-fastimport.
-

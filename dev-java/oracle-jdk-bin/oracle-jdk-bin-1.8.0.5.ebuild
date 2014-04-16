@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.0.ebuild,v 1.1 2014/03/28 14:55:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.5.ebuild,v 1.1 2014/04/16 08:57:26 tomwij Exp $
 
 EAPI="5"
 
@@ -12,11 +12,11 @@ JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2
 
 # This is a list of archs supported by this update.
 # Currently arm comes and goes.
-AT_AVAILABLE=( amd64 arm x86 x64-solaris sparc64-solaris x86-macos x64-macos )
+AT_AVAILABLE=( amd64 x86 x64-solaris sparc64-solaris x86-macos x64-macos )
 
 # Sometimes some or all of the demos are missing, this is to not have to rewrite half
 # the ebuild when it happens.
-DEMOS_AVAILABLE=( amd64 arm x86 x64-solaris sparc64-solaris x86-macos x64-macos )
+DEMOS_AVAILABLE=( amd64 x86 x64-solaris sparc64-solaris x86-macos x64-macos )
 
 if [[ "$(get_version_component_range 4)" == 0 ]] ; then
 	S_PV="$(get_version_component_range 1-3)"
@@ -88,7 +88,7 @@ DEPEND="
 DEPEND="${DEPEND}
 	pax_kernel? ( sys-apps/paxctl:0 )"
 
-S="${WORKDIR}/jdk${S_PV}"
+S="${WORKDIR}/jdk"
 
 check_tarballs_available() {
 	local uri=$1; shift
@@ -149,6 +149,11 @@ src_unpack() {
 	else
 		default
 	fi
+
+	# Upstream is changing their versioning scheme every release around 1.8.0.*;
+	# to stop having to change it over and over again, just wildcard match and
+	# live a happy life instead of trying to get this new jdk1.8.0_05 to work.
+	mv "${WORKDIR}"/jdk* "${S}" || die
 }
 
 src_prepare() {
