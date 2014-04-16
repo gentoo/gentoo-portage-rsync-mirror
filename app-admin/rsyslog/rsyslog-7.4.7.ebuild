@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.7.ebuild,v 1.4 2014/03/01 22:11:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.7.ebuild,v 1.5 2014/04/16 16:14:41 maksbotan Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -48,6 +48,10 @@ RESTRICT="test"
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
+
+src_prepare() {
+	epatch "$FILESDIR"/${BRANCH}/${PN}-7.x-mmjsonparse.patch
+}
 
 src_configure() {
 	# Maintainer notes:

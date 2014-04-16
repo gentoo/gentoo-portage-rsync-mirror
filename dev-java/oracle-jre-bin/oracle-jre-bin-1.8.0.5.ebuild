@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.8.0.0.ebuild,v 1.1 2014/03/28 14:56:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.8.0.5.ebuild,v 1.1 2014/04/16 16:28:47 tomwij Exp $
 
 EAPI="5"
 
@@ -57,7 +57,7 @@ DEPEND="
 	jce? ( app-arch/unzip )
 	pax_kernel? ( sys-apps/paxctl )"
 
-S="${WORKDIR}/jre${S_PV}"
+S="${WORKDIR}/jre"
 
 pkg_nofetch() {
 	if use x86; then
@@ -75,6 +75,15 @@ pkg_nofetch() {
 		einfo "'${JCE_URI}'"
 		einfo "and move it to '${DISTDIR}'"
 	fi
+}
+
+src_unpack() {
+	default
+
+	# Upstream is changing their versioning scheme every release around 1.8.0.*;
+	# to stop having to change it over and over again, just wildcard match and
+	# live a happy life instead of trying to get this new jre1.8.0_05 to work.
+	mv "${WORKDIR}"/jre* "${S}" || die
 }
 
 src_prepare() {

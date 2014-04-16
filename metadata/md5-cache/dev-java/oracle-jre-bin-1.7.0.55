@@ -8,7 +8,7 @@ KEYWORDS=~amd64 ~x86
 LICENSE=Oracle-BCLA-JavaSE
 RDEPEND=X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
-SLOT=1.8
-SRC_URI=x86? ( jre-8-linux-i586.tar.gz ) amd64? ( jre-8-linux-x64.tar.gz ) jce? ( jce_policy-8.zip )
+SLOT=1.7
+SRC_URI=x86? ( jre-7u55-linux-i586.tar.gz ) amd64? ( jre-7u55-linux-x64.tar.gz ) jce? ( UnlimitedJCEPolicyJDK7.zip )
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=6834c6ee7b24ab0a02c118f9eaa6f08b
+_md5_=5069dd176d0d2e9a1c3bb471c1407247

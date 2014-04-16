@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.1.0.ebuild,v 1.1 2014/04/15 19:00:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.1.0.ebuild,v 1.2 2014/04/16 16:01:44 bicatali Exp $
 
 EAPI=5
 
@@ -181,7 +181,7 @@ src_install() {
 	EOF
 	doenvd 99R
 	use bash-completion && newbashcomp "${WORKDIR}"/${BCP} ${PN}
-	# The buildsystem has a different understanding of install_names than what
+	# The buildsystem has a different understanding of install_names than
 	# we require.  Since it builds modules like shared objects (wrong), many
 	# objects (all modules) get an incorrect install_name.  Fixing the build
 	# system here is not really trivial.
@@ -195,6 +195,7 @@ src_install() {
 		done
 		popd > /dev/null
 	fi
+	docompress -x /usr/share/doc/${PF}/NEWS.rds
 }
 
 pkg_postinst() {

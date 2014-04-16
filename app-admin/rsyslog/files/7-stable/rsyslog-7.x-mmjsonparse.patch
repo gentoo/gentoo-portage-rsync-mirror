@@ -1,0 +1,26 @@
+From d6f5d5aae579455badb2d546f8ef292956720824 Mon Sep 17 00:00:00 2001
+From: Thomas D <whissi@whissi.de>
+Date: Tue, 15 Apr 2014 17:56:05 +0200
+Subject: [PATCH] Fix for https://github.com/rsyslog/rsyslog/issues/61
+
+Based on Maxim Koltsov proposed patch from https://bugs.gentoo.org/show_bug.cgi?id=507730
+---
+ plugins/mmjsonparse/mmjsonparse.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plugins/mmjsonparse/mmjsonparse.c b/plugins/mmjsonparse/mmjsonparse.c
+index b16aef0..a5bfaa2 100644
+--- a/plugins/mmjsonparse/mmjsonparse.c
++++ b/plugins/mmjsonparse/mmjsonparse.c
+@@ -146,7 +146,7 @@ processJSON(instanceData *pData, msg_t *pMsg, char *buf, size_t lenBuf)
+ 
+ 			err = pData->tokener->err;
+ 			if(err != json_tokener_continue)
+-				errMsg = json_tokener_errors[err];
++				errMsg = json_tokener_error_desc(err);
+ 			else
+ 				errMsg = "Unterminated input";
+ 		} else if((size_t)pData->tokener->char_offset < lenBuf)
+-- 
+1.9.1
+

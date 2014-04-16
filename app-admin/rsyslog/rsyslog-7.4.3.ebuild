@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.3.ebuild,v 1.7 2014/03/01 22:11:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.3.ebuild,v 1.8 2014/04/16 16:14:41 maksbotan Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -50,6 +50,7 @@ DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 PATCHES=(
 	"${FILESDIR}"/${BRANCH}/${PN}-7.4.3-json-c-pkgconfig.patch
 	"${FILESDIR}"/${BRANCH}/${PN}-7.4.3-fix-runtime.patch
+	"$FILESDIR"/${BRANCH}/${PN}-7.x-mmjsonparse.patch
 )
 
 src_configure() {

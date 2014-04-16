@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pyringe
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyringe/ChangeLog,v 1.1 2014/04/16 16:30:50 dastergon Exp $
+
+*pyringe-1.0 (16 Apr 2014)
+
+  16 Apr 2014; Pavlos Ratis <dastergon@gentoo.org> +metadata.xml,
+  +pyringe-1.0.ebuild:
+  New package, initial import
