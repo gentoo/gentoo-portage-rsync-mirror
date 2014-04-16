@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.1.ebuild,v 1.1 2014/02/12 10:30:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.1-r1.ebuild,v 1.1 2014/04/16 09:10:54 gurligebis Exp $
 
 EAPI="4"
 
@@ -67,6 +67,7 @@ src_configure() {
 	echo "CONFIG_EAP_SAKE=y" >> ${CONFIG}
 	echo "CONFIG_EAP_GPSK=y" >> ${CONFIG}
 	echo "CONFIG_EAP_GPSK_SHA256=y" >> ${CONFIG}
+	echo "CONFIG_EAP_PWD=y" >> ${CONFIG}
 
 	einfo "Enabling drivers: "
 
