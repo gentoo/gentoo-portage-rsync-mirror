@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1.ebuild,v 1.4 2012/02/05 06:22:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1.ebuild,v 1.5 2014/04/16 17:11:40 ulm Exp $
 
 inherit eutils unpacker cdrom versionator games
 
@@ -11,11 +11,11 @@ DESCRIPTION="Third-person sneaker like Splinter Cell"
 HOMEPAGE="http://linuxgamepublishing.com/info.php?id=coldwar"
 SRC_URI="http://updatefiles.linuxgamepublishing.com/${PN}/${MY_P}-x86.run"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="linguas_de linguas_fr linguas_ru"
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="virtual/opengl
 	x86? (

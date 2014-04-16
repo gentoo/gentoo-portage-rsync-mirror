@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.01.ebuild,v 1.3 2012/03/01 06:55:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sacred-gold/sacred-gold-1.0.01.ebuild,v 1.4 2014/04/16 17:08:02 ulm Exp $
 
 inherit versionator eutils cdrom unpacker games
 
@@ -11,11 +11,11 @@ DESCRIPTION="Action role-playing game"
 HOMEPAGE="http://linuxgamepublishing.com/info.php?id=sacred"
 SRC_URI="http://updatefiles.linuxgamepublishing.com/sacred/${MY_P}-x86.run"
 
-LICENSE="as-is GPL-2 LGPL-2"
+LICENSE="all-rights-reserved GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="virtual/opengl
 	x86? ( x11-libs/libX11

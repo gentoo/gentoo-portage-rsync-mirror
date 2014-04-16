@@ -1,18 +1,20 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/coe2-2007-r1.ebuild,v 1.1 2013/01/05 20:37:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/coe2-2007-r1.ebuild,v 1.2 2014/04/16 17:02:40 ulm Exp $
 
 EAPI=5
+
 inherit eutils games
 
 DESCRIPTION="Precursor to the Dominions series"
 HOMEPAGE="http://www.shrapnelgames.com/Illwinter/CoE2/"
 SRC_URI="http://download.shrapnelgames.com/downloads/${PN}_${PV}.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 RDEPEND="media-libs/libsdl"
 DEPEND="${RDEPEND}

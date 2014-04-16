@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/revenge-of-the-titans
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/ChangeLog,v 1.3 2012/05/21 20:07:44 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/ChangeLog,v 1.4 2014/04/16 17:22:48 ulm Exp $
+
+  16 Apr 2014; Ulrich Müller <ulm@gentoo.org>
+  revenge-of-the-titans-1.80.12.ebuild:
+  Fix LICENSE, add bindist restriction, bug 505776.
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   revenge-of-the-titans-1.80.12.ebuild:
