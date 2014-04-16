@@ -1,14 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-3.12_rc1.ebuild,v 1.1 2014/04/16 08:22:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-3.12_rc1.ebuild,v 1.2 2014/04/16 10:11:04 alexxy Exp $
 
 EAPI="5"
 
 OFED_VER="3.12"
 OFED_RC="1"
 OFED_RC_VER="1"
-OFED_SUFFIX="1.gd250ad6"
-OFED_SNAPSHOT="1"
+OFED_SUFFIX="1.g8336567"
 
 IUSE_OFED_DRIVERS="
 		ofed_drivers_cxgb3
@@ -25,7 +24,6 @@ IUSE_OFED_DRIVERS="
 inherit openib udev toolchain-funcs
 
 DESCRIPTION="OpenIB system files"
-SCRIPTDIR="${S}/ofed_scripts"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="dapl +diags ibacm mstflint +opensm perftest qperf rds srp ${IUSE_OFED_DRIVERS}"
 
@@ -58,6 +56,10 @@ RDEPEND="!sys-infiniband/openib
 DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		"
+block_other_ofed_versions
+
+S="${WORKDIR}/${MY_PN}-${OFED_VER}"
+SCRIPTDIR="${S}/ofed_scripts"
 
 src_configure() { :; }
 src_compile() { :; }
@@ -130,20 +132,10 @@ src_install() {
 		echo "#SRPHA_ENABLE=no" >> ${IB_CONF_DIR}/openib.conf
 
 	fi
-	if use iser; then
-		echo >> ${IB_CONF_DIR}/openib.conf
-		echo "# Load ISER module" >> ${IB_CONF_DIR}/openib.conf
-		echo "#ISER_LOAD=no" >> ${IB_CONF_DIR}/openib.conf
-	fi
 	if use rds; then
 		echo >> ${IB_CONF_DIR}/openib.conf
 		echo "# Load RDS module" >> ${IB_CONF_DIR}/openib.conf
 		echo "#RDS_LOAD=no" >> ${IB_CONF_DIR}/openib.conf
-	fi
-	if use vnic; then
-		echo >> ${IB_CONF_DIR}/openib.conf
-		echo "# Load VNIC module" >> ${IB_CONF_DIR}/openib.conf
-		echo "#VNIC_LOAD=yes" >> ${IB_CONF_DIR}/openib.conf
 	fi
 
 	doins "${T}/openib.conf"

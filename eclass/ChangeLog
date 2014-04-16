@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1208 2014/04/16 07:31:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1209 2014/04/16 10:09:29 alexxy Exp $
+
+  16 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> openib.eclass:
+  Update openib eclass
 
   16 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> openib.eclass:
   Update openib eclass

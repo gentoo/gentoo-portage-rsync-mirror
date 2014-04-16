@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.10 2014/04/16 07:31:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.11 2014/04/16 10:09:29 alexxy Exp $
 
 # @ECLASS: openib.eclass
 # @AUTHOR:
@@ -115,13 +115,41 @@ fi
 openib_src_unpack() {
 	unpack ${A}
 	if [ -z ${OFED_RC} ]; then
-		rpm_unpack "./OFED-${OFED_VER}/SRPMS/${MY_PN}-${MY_PV}-${OFED_SUFFIX}.src.rpm"
+		case ${PN} in
+			ofed)
+				rpm_unpack "./OFED-${OFED_VER}/SRPMS/${MY_PN}-${OFED_VER}-${OFED_SUFFIX}.src.rpm"
+				;;
+			*)
+				rpm_unpack "./OFED-${OFED_VER}/SRPMS/${MY_PN}-${MY_PV}-${OFED_SUFFIX}.src.rpm"
+				;;
+		esac
 	else
-		rpm_unpack "./OFED-${OFED_VER}-rc${OFED_RC_VER}/SRPMS/${MY_PN}-${MY_PV}-${OFED_SUFFIX}.src.rpm"
+		case ${PN} in
+			ofed)
+				rpm_unpack "./OFED-${OFED_VER}-rc${OFED_RC_VER}/SRPMS/${MY_PN}-${OFED_VER}-${OFED_SUFFIX}.src.rpm"
+				;;
+			*)
+				rpm_unpack "./OFED-${OFED_VER}-rc${OFED_RC_VER}/SRPMS/${MY_PN}-${MY_PV}-${OFED_SUFFIX}.src.rpm"
+				;;
+		esac
 	fi
 	if [ -z ${OFED_SNAPSHOT} ]; then
-		unpack ./${MY_PN}-${MY_PV}.${EXT}
+		case ${PN} in
+			ofed)
+				unpack ./${MY_PN}-${OFED_VER}.${EXT}
+				;;
+			*)
+				unpack ./${MY_PN}-${MY_PV}.${EXT}
+				;;
+		esac
 	else
-		unpack ./${MY_PN}-${MY_PV}-${OFED_SUFFIX}.${EXT}
+		case ${PN} in
+			ofed)
+				unpack ./${MY_PN}-${OFED_VER}-${OFED_SUFFIX}.${EXT}
+				;;
+			*)
+				unpack ./${MY_PN}-${MY_PV}-${OFED_SUFFIX}.${EXT}
+				;;
+		esac
 	fi
 }
