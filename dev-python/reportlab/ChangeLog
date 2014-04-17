@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.102 2014/01/30 15:13:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.103 2014/04/17 05:37:36 idella4 Exp $
+
+*reportlab-3.0 (17 Apr 2014)
+
+  17 Apr 2014; Ian Delaney <idella4@gentoo.org> +reportlab-3.0.ebuild:
+  bump; update and tidy up, fixes Bug #507636
 
   30 Jan 2014; Justin Lecher <jlec@gentoo.org> reportlab-2.7.ebuild:
   Drop Python 3 support
