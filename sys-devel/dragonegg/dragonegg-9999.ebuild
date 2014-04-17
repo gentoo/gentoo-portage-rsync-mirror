@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.5 2013/06/10 21:56:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.6 2014/04/17 19:55:39 ottxor Exp $
 
 EAPI=5
-inherit subversion multilib toolchain-funcs
+inherit git-r3 multilib toolchain-funcs
 
 DESCRIPTION="GCC plugin that uses LLVM for optimization and code generation"
 HOMEPAGE="http://dragonegg.llvm.org/"
 SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/dragonegg/trunk"
+EGIT_REPO_URI="http://llvm.org/git/dragonegg.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,9 +23,9 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	if has test $FEATURES
 	then
-		ESVN_PROJECT=llvm S="${WORKDIR}"/llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
+		EGIT_REPO_URI="http://llvm.org/git/llvm.git" EGIT_CHECKOUT_DIR="${WORKDIR}/llvm" git-r3_src_unpack
 	fi
-	subversion_fetch
+	git-r3_src_unpack
 }
 
 src_compile() {

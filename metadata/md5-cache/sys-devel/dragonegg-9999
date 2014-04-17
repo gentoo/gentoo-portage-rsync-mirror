@@ -1,10 +1,10 @@
-DEFINED_PHASES=compile install postinst preinst prepare test unpack
-DEPEND=|| ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-9999 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEFINED_PHASES=compile install postinst test unpack
+DEPEND=|| ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-9999 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=GCC plugin that uses LLVM for optimization and code generation
 EAPI=5
 HOMEPAGE=http://dragonegg.llvm.org/
 LICENSE=GPL-2
 RDEPEND=|| ( sys-devel/gcc:4.5[lto] >=sys-devel/gcc-4.6 ) ~sys-devel/llvm-9999
 SLOT=0
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=99da6ea6a15d7d081e0b89e7318fc654
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=b8746051840195728dae2007b415e1de

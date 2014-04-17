@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/dragonegg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.16 2014/01/06 23:24:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.17 2014/04/17 19:55:39 ottxor Exp $
+
+  17 Apr 2014; Christoph Junghans <ottxor@gentoo.org> dragonegg-9999.ebuild:
+  switch to git (bug #506692)
 
 *dragonegg-3.4 (06 Jan 2014)
 
@@ -83,4 +86,3 @@
   10 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org>
   +dragonegg-3.0_rc3.ebuild, +metadata.xml:
   Initial commit
-
