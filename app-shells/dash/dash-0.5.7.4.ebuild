@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.7.4.ebuild,v 1.1 2014/02/18 12:03:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.7.4.ebuild,v 1.2 2014/04/17 20:59:40 ottxor Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI="http://gondor.apana.org.au/~herbert/dash/files/${PN}-${DEB_PV}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="libedit static"
 
 RDEPEND="!static? ( libedit? ( dev-libs/libedit ) )"
@@ -47,7 +47,7 @@ src_configure() {
 	use static && append-ldflags -static
 	# Do not pass --enable-glob due to #443552.
 	econf \
-		--bindir=/bin \
+		--bindir="${EPREFIX}"/bin \
 		--enable-fnmatch \
 		$(use_with libedit)
 }

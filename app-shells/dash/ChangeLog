@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.114 2014/02/18 12:03:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.115 2014/04/17 20:59:40 ottxor Exp $
+
+  17 Apr 2014; Christoph Junghans <ottxor@gentoo.org> dash-0.5.7.4.ebuild:
+  added prefix support (no solaris)
 
 *dash-0.5.7.4 (18 Feb 2014)
 
