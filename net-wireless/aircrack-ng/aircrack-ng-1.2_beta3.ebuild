@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta2.ebuild,v 1.1 2014/02/04 03:34:12 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_beta3.ebuild,v 1.1 2014/04/17 19:14:33 zerochaos Exp $
 
 EAPI="5"
 
@@ -13,21 +13,23 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 	ESVN_REPO_URI="http://svn.aircrack-ng.org/trunk"
 	KEYWORDS=""
+	S="${WORKDIR}/${PN}"
 else
-	MY_PV="$(replace_version_separator 2 '-')"
 	MY_P=${P/\_/-}
+	MY_PV="$(replace_version_separator 2 '-')"
 	SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-	ESVN_WC_REVISION=0
+	S="${WORKDIR}/${MY_P}"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD netlink +sqlite +unstable"
+IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD +netlink +pcre +sqlite +unstable"
 
 DEPEND="dev-libs/openssl
 	netlink? ( dev-libs/libnl:3 )
+	pcre? ( dev-libs/libpcre )
 	sqlite? ( >=dev-db/sqlite-3.4 )"
 RDEPEND="${DEPEND}
 	kernel_linux? (
@@ -39,31 +41,48 @@ RDEPEND="${DEPEND}
 	sys-apps/hwids
 	airdrop-ng? ( net-wireless/lorcon[python] )"
 
-S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/aircrack-ng-9999-fix-labels.patch
-}
-
 src_compile() {
+	if [[ ${PV} == "9999" ]] ; then
+		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	fi
+
 	emake \
 	CC="$(tc-getCC)" \
 	AR="$(tc-getAR)" \
 	LD="$(tc-getLD)" \
 	RANLIB="$(tc-getRANLIB)" \
 	libnl=$(usex netlink true false) \
+	pcre=$(usex pcre true false) \
 	sqlite=$(usex sqlite true false) \
 	unstable=$(usex unstable true false) \
-	REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	${liveflags}
+}
+
+src_test() {
+	if [[ ${PV} == "9999" ]] ; then
+		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	fi
+
+	emake check \
+		libnl=$(usex netlink true false) \
+		pcre=$(usex pcre true false) \
+		sqlite=$(usex sqlite true false) \
+		unstable=$(usex unstable true false) \
+		${liveflags}
 }
 
 src_install() {
+	if [[ ${PV} == "9999" ]] ; then
+		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	fi
+
 	emake \
 		prefix="${ED}/usr" \
 		libnl=$(usex netlink true false) \
+		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
 		unstable=$(usex unstable true false) \
-		REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}" \
+		${liveflags} \
 		install
 
 	dodoc AUTHORS ChangeLog INSTALLING README

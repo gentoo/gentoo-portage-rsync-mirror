@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.7 2014/03/30 21:36:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.8 2014/04/17 19:14:33 zerochaos Exp $
 
 EAPI="5"
 
@@ -42,6 +42,10 @@ RDEPEND="${DEPEND}
 	airdrop-ng? ( net-wireless/lorcon[python] )"
 
 src_compile() {
+	if [[ ${PV} == "9999" ]] ; then
+		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	fi
+
 	emake \
 	CC="$(tc-getCC)" \
 	AR="$(tc-getAR)" \
@@ -51,25 +55,34 @@ src_compile() {
 	pcre=$(usex pcre true false) \
 	sqlite=$(usex sqlite true false) \
 	unstable=$(usex unstable true false) \
-	REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	${liveflags}
 }
 
 src_test() {
+	if [[ ${PV} == "9999" ]] ; then
+		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	fi
+
 	emake check \
 		libnl=$(usex netlink true false) \
 		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
-		unstable=$(usex unstable true false)
+		unstable=$(usex unstable true false) \
+		${liveflags}
 }
 
 src_install() {
+	if [[ ${PV} == "9999" ]] ; then
+		liveflags=REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+	fi
+
 	emake \
 		prefix="${ED}/usr" \
 		libnl=$(usex netlink true false) \
 		pcre=$(usex pcre true false) \
 		sqlite=$(usex sqlite true false) \
 		unstable=$(usex unstable true false) \
-		REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}" \
+		${liveflags} \
 		install
 
 	dodoc AUTHORS ChangeLog INSTALLING README
