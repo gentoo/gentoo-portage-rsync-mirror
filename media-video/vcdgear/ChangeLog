@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdgear
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.22 2012/09/24 00:46:08 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.24 2014/04/17 15:47:59 ulm Exp $
+
+  17 Apr 2014; Ulrich Müller <ulm@gentoo.org> vcdgear-1.76-r2.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 446220.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> vcdgear-1.76-r2.ebuild:
   QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).

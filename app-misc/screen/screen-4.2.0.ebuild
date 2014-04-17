@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.0.ebuild,v 1.1 2014/04/17 12:06:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.0.ebuild,v 1.2 2014/04/17 15:43:29 jer Exp $
 
 EAPI=5
 
@@ -35,8 +35,6 @@ src_prepare() {
 	# Fix building against sys-libs/ncurses[tinfo]
 	epatch "${FILESDIR}"/4.2.0-tinfo.patch
 
-	cp "${FILESDIR}"/${PV}-config.h.in "${S}"/config.h.in || die
-
 	# sched.h is a system header and causes problems with some C libraries
 	mv sched.h _sched.h || die
 	sed -i '/include/ s:sched.h:_sched.h:' screen.h || die
@@ -52,7 +50,7 @@ src_prepare() {
 		|| die "sed doc/screen.1 failed"
 
 	# reconfigure
-	eautoconf
+	eautoreconf
 }
 
 src_configure() {
