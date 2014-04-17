@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/codecrypt/codecrypt-1.3.1.ebuild,v 1.2 2013/09/16 02:13:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/codecrypt/codecrypt-1.6.ebuild,v 1.1 2014/04/16 23:11:46 yac Exp $
 
 EAPI=5
 
@@ -10,9 +10,14 @@ SRC_URI="http://e-x-a.org/codecrypt/files/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
+IUSE="+cryptopp"
 
 DEPEND="dev-libs/gmp
-	dev-libs/crypto++"
+	cryptopp? ( dev-libs/crypto++ )"
 RDEPEND="${DEPEND}"
+
+src_configure() {
+	econf \
+		$(use_with cryptopp)
+}
