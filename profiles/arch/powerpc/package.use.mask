@@ -1,6 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.193 2014/04/12 10:18:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.194 2014/04/16 23:41:48 johu Exp $
+
+# Johannes Huber <johu@gentoo.org> (16 Apr 2014)
+# unkeyworded deps
+kde-base/gwenview semantic-desktop
+kde-base/okular dpi
+kde-base/nepomuk-core migrator
 
 # Pacho Ramos <pacho@gentoo.org> (12 Apr 2014)
 # Missing keywords, bug #507490
