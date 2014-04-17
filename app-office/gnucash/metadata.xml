@@ -8,7 +8,5 @@
 	<flag name='hbci'>Enable HBCI support, for connecting to some internet
 		banks</flag>
 	<flag name='quotes'>Enable Online Stock Quote retrieval</flag>
-	<flag name='webkit'>Use <pkg>net-libs/webkit-gtk</pkg> for rendering rather
-		than <pkg>gnome-extra/gtkhtml</pkg></flag>
 </use>
 </pkgmetadata>
