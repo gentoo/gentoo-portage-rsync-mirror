@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.86 2014/04/13 04:23:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.88 2014/04/17 18:14:15 zerochaos Exp $
+
+  17 Apr 2014; Rick Farina <zerochaos@gentoo.org> metasploit-4.9.2-r1.ebuild,
+  metasploit-9999.ebuild:
+  add elog command to warn user to update their env before running, bug #496720
+
+*metasploit-4.9.2-r1 (17 Apr 2014)
+
+  17 Apr 2014; Rick Farina <zerochaos@gentoo.org> +metasploit-4.9.2-r1.ebuild,
+  -metasploit-4.4.0-r1.ebuild, -metasploit-4.8.2-r1.ebuild,
+  -metasploit-4.9.2.ebuild, metadata.xml, metasploit-9999.ebuild:
+  cleanup old, fix bug #507816 by pinning deps properly in Gemfile
 
   13 Apr 2014; Rick Farina <zerochaos@gentoo.org> metasploit-4.9.2.ebuild,
   metasploit-9999.ebuild:

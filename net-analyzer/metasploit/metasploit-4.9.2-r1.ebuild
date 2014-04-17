@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.8.2-r1.ebuild,v 1.1 2014/02/10 16:03:00 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2-r1.ebuild,v 1.2 2014/04/17 18:14:15 zerochaos Exp $
 
 EAPI="5"
 
@@ -13,37 +13,40 @@ else
 	#https://github.com/rapid7/metasploit-framework/wiki/Downloads-by-Version
 	SRC_URI="http://downloads.metasploit.com/data/releases/archive/framework-${PV}.tar.bz2"
 	KEYWORDS="~amd64 ~arm ~x86"
+	S="${WORKDIR}"/msf3
 fi
 
-#ruby18 is well beyond EoL
 #ruby20 doesn't have wide enough support in gentoo yet (but is semi-supported upstream)
 USE_RUBY="ruby19"
 inherit eutils ruby-ng
 
 DESCRIPTION="Advanced open-source framework for developing, testing, and using vulnerability exploit code"
 HOMEPAGE="http://www.metasploit.org/"
-SLOT="4.8"
+SLOT="4.9"
 LICENSE="BSD"
-IUSE="development +java lorcon +pcap test"
+IUSE="development +java lorcon oracle +pcap test"
 
 #multiple known bugs with tests reported upstream and ignored
 #http://dev.metasploit.com/redmine/issues/8418 - worked around (fix user creation when possible)
 RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
+	dev-ruby/bcrypt-ruby
 	dev-ruby/activesupport:3.2
 	dev-ruby/activerecord:3.2
 	dev-ruby/json
-	>=dev-ruby/metasploit_data_models-0.16.9
+	>=dev-ruby/metasploit_data_models-0.17.0
 	dev-ruby/msgpack
 	dev-ruby/nokogiri
 	dev-ruby/builder:3
 	>=dev-ruby/pg-0.11
 	=dev-ruby/packetfu-1.1.9
+	dev-ruby/rb-readline
 	dev-ruby/robots
 	dev-ruby/kissfft
 	java? ( dev-ruby/rjb )
 	lorcon? ( net-wireless/lorcon[ruby] )
+	oracle? ( dev-ruby/ruby-oci8 )
 	pcap? ( dev-ruby/pcaprub
 		dev-ruby/network_interface )
 	dev-ruby/bundler
@@ -118,7 +121,8 @@ all_ruby_unpack() {
 
 all_ruby_prepare() {
 	# add psexec patch from pull request 2657 to allow custom exe templates from any files, bypassing most AVs
-	epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	#epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	epatch_user
 
 	#unbundle johntheripper, at least it now defaults to running the system version
 	rm -r data/john/run.*
@@ -134,6 +138,14 @@ all_ruby_prepare() {
 	#we regen this file in each_ruby_prepare
 	rm Gemfile.lock
 	#The Gemfile contains real known deps
+	#add our dep on upstream rb-readline instead of bundled one
+	sed -i "/gem 'packetfu'/a #use upstream readline instead of bundled\ngem 'rb-readline'" Gemfile || die
+	#remove the bundled readline
+	#https://github.com/rapid7/metasploit-framework/pull/3105
+	rm lib/rbreadline.rb
+	#fix for bug #507816 while waiting on upstream to actually set their own deps right
+	sed -i "s#gem 'activesupport', '>= 3.0.0'#gem 'activesupport', '~> 3.2'#" Gemfile || die
+	sed -i "s#gem 'activerecord'#gem 'activerecord', '~> 3.2'#" Gemfile || die
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then
@@ -228,6 +240,9 @@ all_ruby_install() {
 }
 
 pkg_postinst() {
+	elog "Before use you should run 'env-update' and '. /etc/profile'"
+	elog "otherwise you may be missing important environmental variables."
+
 	elog "You need to prepare the database by running:"
 	elog "emerge --config postgresql-server"
 	elog "/etc/init.d/postgresql-<version> start"

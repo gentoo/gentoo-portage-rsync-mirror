@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1210 2014/04/16 11:33:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1211 2014/04/17 18:16:54 kensington Exp $
+
+  17 Apr 2014; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
+  Sync with overlay. Remove unused inherit. Switch to git-r3 eclass. Fix file
+  collisions wrt bug #499032 and bug #507860. Add more dep reduction. Cosmetic
+  improvements.
 
   16 Apr 2014; Julian Ospald <hasufell@gentoo.org> waf-utils.eclass:
   respect CFLAGS in linking command wrt #506956
