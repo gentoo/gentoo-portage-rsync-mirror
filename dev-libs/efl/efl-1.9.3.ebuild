@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.0.ebuild,v 1.3 2014/03/06 01:04:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.3.ebuild,v 1.1 2014/04/17 14:55:34 tommy Exp $
 
 EAPI="5"
 
@@ -25,18 +25,17 @@ DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 KEYWORDS="~amd64 ~arm ~x86"
 
-IUSE="audio +bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k +jpeg oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl systemd tga tiff tslib v4l2 wayland webp X xcb xim xine xpm"
+IUSE="audio +bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k +jpeg oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
 
 REQUIRED_USE="
-	X?		( !xcb )
 	pulseaudio?	( audio )
-	opengl?		( || ( X xcb sdl wayland ) )
-	gles?		( || ( X xcb sdl wayland ) )
+	opengl?		( || ( X sdl wayland ) )
+	gles?		( || ( X wayland ) )
+	gles?		( !sdl )
 	gles?		( egl )
-	xcb?		( pixman )
-	sdl?		( || ( opengl gles ) )
+	sdl?		( opengl )
 	wayland?	( egl !opengl gles )
-	xim?		( || ( X xcb ) )
+	xim?		( X )
 "
 
 RDEPEND="
@@ -101,23 +100,6 @@ RDEPEND="
 			x11-libs/libX11
 			x11-libs/libXrender
 			virtual/opengl
-		)
-	)
-	xcb? (
-		x11-libs/libxcb
-
-		opengl? (
-			x11-libs/libX11
-			x11-libs/libXrender
-			virtual/opengl
-			x11-libs/xcb-util-renderutil
-		)
-
-		gles? (
-			x11-libs/libX11
-			x11-libs/libXrender
-			virtual/opengl
-			x11-libs/xcb-util-renderutil
 		)
 	)
 	xine? ( >=media-libs/xine-lib-1.1.1 )
@@ -194,10 +176,9 @@ src_configure() {
 	local enable_graphics=""
 
 	use X && x11="xlib"
-	use xcb && x11="xcb"
 
 	local MY_ECONF
-	( use X || use xcb ) && MY_ECONF+=" --with-x"
+	 use X && MY_ECONF+=" --with-x"
 
 	local opengl="none"
 

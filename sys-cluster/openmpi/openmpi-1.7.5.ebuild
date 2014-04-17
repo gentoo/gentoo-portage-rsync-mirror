@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.7.5.ebuild,v 1.1 2014/04/08 09:45:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.7.5.ebuild,v 1.2 2014/04/17 14:59:46 jsbronder Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ RDEPEND="
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec
 	dev-libs/libevent
-	>=sys-apps/hwloc-1.6
+	>=sys-apps/hwloc-1.7.2
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 	openmpi_fabrics_ofed? ( sys-infiniband/ofed )

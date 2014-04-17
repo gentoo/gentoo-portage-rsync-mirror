@@ -1,6 +1,14 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.57 2014/03/07 21:43:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.59 2014/04/17 14:40:41 xmw Exp $
+
+  17 Apr 2014; Michael Weber <xmw@gentoo.org> llpp-18.ebuild:
+  Resign manifest
+
+*llpp-18 (17 Apr 2014)
+
+  17 Apr 2014; Michael Weber <xmw@gentoo.org> +llpp-18.ebuild:
+  Version bump
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> llpp-17_p20140112.ebuild:
   amd64 stable, bug 472532
