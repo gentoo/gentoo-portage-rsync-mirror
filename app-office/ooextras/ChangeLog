@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ooextras
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.12 2011/03/16 19:09:05 suka Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.13 2014/04/17 03:18:21 patrick Exp $
+
+  17 Apr 2014; Patrick Lauer <patrick@gentoo.org> ooextras-20060909.ebuild:
+  Removing ppc stable keyword as no stable libreoffice version exists #506314
 
   16 Mar 2011; Andreas Proschofsky <suka@gentoo.org> -ooextras-20050216.ebuild:
   Remove outdated release
@@ -53,4 +56,3 @@
   +ooextras-20031206.ebuild:
   Initial commit. Ebuild done by Stefan Briesenick <sbriesen@gmx.de> in bug
   #44488
-

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ooo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.5 2012/06/01 07:53:37 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.6 2014/04/17 03:15:35 patrick Exp $
+
+  17 Apr 2014; Patrick Lauer <patrick@gentoo.org> ooo-0.ebuild:
+  Removing ppc stable keyword as no stable libreoffice version exists #506314
 
   01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> ooo-0.ebuild:
   Add there openoffice-bin as we have that in main tree.
@@ -19,4 +22,3 @@
   16 Mar 2011; Andreas Proschofsky <suka@gentoo.org> +ooo-0.ebuild,
   +metadata.xml:
   Initial commit, see bug #358895
-
