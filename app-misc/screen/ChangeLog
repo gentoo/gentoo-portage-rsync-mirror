@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.186 2014/03/10 21:21:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.188 2014/04/17 12:13:01 jer Exp $
+
+  17 Apr 2014; Jeroen Roovers <jer@gentoo.org> files/4.2.0-config.h.in:
+  Remove CVS header.
+
+*screen-4.2.0 (17 Apr 2014)
+
+  17 Apr 2014; Jeroen Roovers <jer@gentoo.org> +screen-4.2.0.ebuild,
+  +files/4.2.0-config.h.in, +files/4.2.0-tinfo.patch:
+  Version bump (bug #419483).
 
   10 Mar 2014; Sven Wegener <swegener@gentoo.org> screen-4.0.3-r6.ebuild,
   screen-4.0.3-r7.ebuild, screen-4.0.3-r8.ebuild, screen-9999.ebuild:

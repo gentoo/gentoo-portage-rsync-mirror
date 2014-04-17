@@ -1,0 +1,20 @@
+--- a/configure.in
++++ b/configure.in
+@@ -674,10 +674,16 @@
+ LIBS="-lncursesw $olibs"
+ AC_CHECKING(libncursesw)
+ AC_TRY_LINK(,tgetent((char *)0, (char *)0);,,
++LIBS="-ltinfow $olibs"
++AC_CHECKING(libtinfow)
++AC_TRY_LINK(,tgetent((char *)0, (char *)0);,,
+ LIBS="-lncurses $olibs"
+ AC_CHECKING(libncurses)
+ AC_TRY_LINK(,tgetent((char *)0, (char *)0);,,
+-AC_MSG_ERROR(!!! no tgetent - no screen)))))))
++LIBS="-ltinfo $olibs"
++AC_CHECKING(libtinfo)
++AC_TRY_LINK(,tgetent((char *)0, (char *)0);,,
++AC_MSG_ERROR(!!! no tgetent - no screen)))))))))
+ 
+ AC_TRY_RUN([
+ main()
