@@ -1,6 +1,12 @@
 # ChangeLog for mate-base/mate-session-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.5 2014/03/10 22:58:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.6 2014/04/17 15:11:08 tomwij Exp $
+
+*mate-session-manager-1.8.1 (17 Apr 2014)
+
+  17 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-session-manager-1.8.1.ebuild, metadata.xml:
+  Version bump to 1.8.1.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org>
   mate-session-manager-1.6.1-r1.ebuild:
