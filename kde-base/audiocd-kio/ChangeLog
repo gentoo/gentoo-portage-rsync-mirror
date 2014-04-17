@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/audiocd-kio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/ChangeLog,v 1.80 2014/04/16 18:26:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/ChangeLog,v 1.81 2014/04/17 00:43:33 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> audiocd-kio-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *audiocd-kio-4.13.0 (16 Apr 2014)
 

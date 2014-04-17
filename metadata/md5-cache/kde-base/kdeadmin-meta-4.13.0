@@ -3,9 +3,9 @@ DESCRIPTION=KDE administration tools - merge this to pull in all kdeadmin-derive
 EAPI=5
 HOMEPAGE=http://www.kde.org/
 IUSE=aqua
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=metapackage
 RDEPEND=>=kde-base/kcron-4.13.0:4[aqua=] >=kde-base/ksystemlog-4.13.0:4[aqua=] >=kde-base/kuser-4.13.0:4[aqua=]
 SLOT=4
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	kde4-meta-pkg	482dcd4208167a7ae152811723be4eed	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=65372f400cd13c518c3e8be0e87f75e5
+_md5_=43f0bff6d0bc7ef7c5f98b5775c1a0cc

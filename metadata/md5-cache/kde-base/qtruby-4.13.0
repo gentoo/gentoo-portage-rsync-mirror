@@ -4,11 +4,11 @@ DESCRIPTION=Qt Ruby bindings
 EAPI=5
 HOMEPAGE=http://techbase.kde.org/Development/Languages/Ruby
 IUSE=debug phonon qscintilla qwt webkit declarative aqua elibc_FreeBSD ruby_targets_ruby19
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=kde-base/smokeqt-4.13.0:4[aqua=,declarative?,opengl,phonon?,qscintilla?,qwt?,webkit?] declarative? ( >=dev-qt/qtdeclarative-4.8.5:4 ) >=dev-qt/qtopengl-4.8.5:4 ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=4/4.13
 SRC_URI=mirror://kde/stable/4.13.0/src/qtruby-4.13.0.tar.xz
 _eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	kde4-base	7bb17d423f1c69e530a27ac752260711	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	fac675dcccf94392371a6abee62d909f	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=546db6bcf220f1856457569c84393923
+_md5_=88dd97b510aaa14baed8676731f11d63

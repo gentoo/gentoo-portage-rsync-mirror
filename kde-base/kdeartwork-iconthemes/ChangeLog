@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-iconthemes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.296 2014/04/16 18:26:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.297 2014/04/17 00:43:05 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org>
+  kdeartwork-iconthemes-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *kdeartwork-iconthemes-4.13.0 (16 Apr 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.13.0.ebuild,v 1.1 2014/04/16 18:26:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.13.0.ebuild,v 1.2 2014/04/17 00:43:35 johu Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="
 	http://www.kde.org/applications/graphics/gwenview/
 	http://gwenview.sourceforge.net/
 "
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug kipi semantic-desktop"
 
 # tests fail, last checked 4.11.0

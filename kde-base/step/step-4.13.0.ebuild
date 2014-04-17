@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/step-4.13.0.ebuild,v 1.1 2014/04/16 18:26:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/step-4.13.0.ebuild,v 1.2 2014/04/17 00:43:13 johu Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-base
 
 DESCRIPTION="The KDE physics simulator"
 HOMEPAGE="http://edu.kde.org/step"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +gsl +qalculate"
 
 DEPEND="

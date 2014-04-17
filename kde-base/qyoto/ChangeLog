@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qyoto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.112 2014/04/16 18:26:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.113 2014/04/17 00:43:26 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> qyoto-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *qyoto-4.13.0 (16 Apr 2014)
 

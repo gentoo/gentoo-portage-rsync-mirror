@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-mobipocket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.103 2014/04/16 18:26:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.104 2014/04/17 00:43:35 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org>
+  kdegraphics-mobipocket-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *kdegraphics-mobipocket-4.13.0 (16 Apr 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/poxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.32 2014/04/16 18:25:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.33 2014/04/17 00:43:38 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> poxml-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *poxml-4.13.0 (16 Apr 2014)
 

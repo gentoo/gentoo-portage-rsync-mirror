@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-strigi-analyzer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.181 2014/04/16 18:26:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.182 2014/04/17 00:43:12 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org>
+  kdesdk-strigi-analyzer-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *kdesdk-strigi-analyzer-4.13.0 (16 Apr 2014)
 

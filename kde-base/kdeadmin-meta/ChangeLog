@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.306 2014/04/16 18:25:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.307 2014/04/17 00:43:31 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> kdeadmin-meta-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *kdeadmin-meta-4.13.0 (16 Apr 2014)
 

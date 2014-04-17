@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.299 2014/04/16 18:26:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.300 2014/04/17 00:43:15 johu Exp $
+
+  16 Apr 2014; Johannes Huber <johu@gentoo.org> kppp-4.13.0.ebuild:
+  Restore KEYWORDS for KDE SC 4.13.0
 
 *kppp-4.13.0 (16 Apr 2014)
 
