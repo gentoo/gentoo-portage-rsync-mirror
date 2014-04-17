@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1211 2014/04/17 18:16:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1212 2014/04/17 20:28:37 mgorny Exp $
+
+  17 Apr 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Automatically switch to EGIT_CLONE_TYPE=single+tags for Google Code.
 
   17 Apr 2014; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
   Sync with overlay. Remove unused inherit. Switch to git-r3 eclass. Fix file

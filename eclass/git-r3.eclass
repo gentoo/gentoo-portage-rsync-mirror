@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.40 2014/03/24 21:32:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.41 2014/04/17 20:28:37 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -468,8 +468,25 @@ git-r3_fetch() {
 		einfo "Fetching ${r} ..."
 
 		local fetch_command=( git fetch "${r}" )
+		local clone_type=${EGIT_CLONE_TYPE}
 
-		if [[ ${EGIT_CLONE_TYPE} == mirror ]]; then
+		if [[ ${r} == https://code.google.com/* ]]; then
+			# Google Code has special magic on top of git that:
+			# 1) can't handle shallow clones at all,
+			# 2) fetches duplicately when tags are pulled in with branch
+			# so automatically switch to single+tags mode.
+			if [[ ${clone_type} == shallow ]]; then
+				einfo "  Google Code does not support shallow clones"
+				einfo "  using EGIT_CLONE_TYPE=single+tags"
+				clone_type=single+tags
+			elif [[ ${clone_type} == single ]]; then
+				einfo "  git-r3: Google Code does not send tags properly in 'single' mode"
+				einfo "  using EGIT_CLONE_TYPE=single+tags"
+				clone_type=single+tags
+			fi
+		fi
+
+		if [[ ${clone_type} == mirror ]]; then
 			fetch_command+=(
 				--prune
 				# mirror the remote branches as local branches
@@ -510,8 +527,8 @@ git-r3_fetch() {
 					fi
 
 					# fetching by commit in shallow mode? can't do.
-					if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
-						local EGIT_CLONE_TYPE=single
+					if [[ ${clone_type} == shallow ]]; then
+						clone_type=single
 					fi
 				fi
 			fi
@@ -526,7 +543,7 @@ git-r3_fetch() {
 				"+${fetch_l}:${fetch_r}"
 			)
 
-			if [[ ${EGIT_CLONE_TYPE} == single+tags ]]; then
+			if [[ ${clone_type} == single+tags ]]; then
 				fetch_command+=(
 					# pull tags explicitly as requested
 					"+refs/tags/*:refs/tags/*"
@@ -534,11 +551,11 @@ git-r3_fetch() {
 			fi
 		fi
 
-		if [[ ${EGIT_CLONE_TYPE} == shallow ]]; then
+		if [[ ${clone_type} == shallow ]]; then
 			if _git-r3_is_local_repo; then
 				# '--depth 1' causes sandbox violations with local repos
 				# bug #491260
-				local EGIT_CLONE_TYPE=single
+				clone_type=single
 			elif [[ ! $(git rev-parse --quiet --verify "${fetch_r}") ]]
 			then
 				# use '--depth 1' when fetching a new branch
@@ -553,7 +570,7 @@ git-r3_fetch() {
 		set -- "${fetch_command[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
-			if [[ ${EGIT_CLONE_TYPE} == mirror ]]; then
+			if [[ ${clone_type} == mirror ]]; then
 				# find remote HEAD and update our HEAD properly
 				git symbolic-ref HEAD \
 					"$(_git-r3_find_head refs/git-r3/HEAD \

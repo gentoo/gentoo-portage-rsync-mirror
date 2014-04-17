@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qtkeychain
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qtkeychain/ChangeLog,v 1.2 2014/03/13 14:22:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qtkeychain/ChangeLog,v 1.3 2014/04/17 20:07:32 johu Exp $
+
+  17 Apr 2014; Johannes Huber <johu@gentoo.org>
+  -files/qtkeychain-0.1.0-qt5.patch, -qtkeychain-0.1.0.ebuild,
+  qtkeychain-0.3.0.ebuild:
+  Qt multibuild by Uwe L. Korn <uwelk@xhochy.com>. Remove old.
 
 *qtkeychain-0.3.0 (13 Mar 2014)
 

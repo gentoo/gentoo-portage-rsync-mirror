@@ -7,5 +7,5 @@ IUSE=+doc +magic sqlite test test
 LICENSE=ZLIB
 RDEPEND=>=dev-libs/girara-0.2.0:3= >=dev-libs/glib-2.28:2= x11-libs/cairo:= >=x11-libs/gtk+-3.2:3 magic? ( sys-apps/file:= ) sqlite? ( dev-db/sqlite:3= )
 SLOT=0
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	e83b3dde426430f34178059a8de5299d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=baa58d56c328698a0b374de336926797

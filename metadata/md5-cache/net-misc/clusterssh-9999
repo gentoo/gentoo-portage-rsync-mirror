@@ -7,5 +7,5 @@ IUSE=test
 LICENSE=GPL-2
 RDEPEND=dev-perl/Exception-Class dev-perl/Readonly dev-perl/Test-Pod dev-perl/Test-Pod-Coverage dev-perl/Test-Trap dev-perl/Test-DistManifest dev-perl/Try-Tiny dev-perl/perl-tk dev-perl/Config-Simple dev-perl/X11-Protocol dev-perl/XML-Simple x11-apps/xlsfonts x11-terms/xterm || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	6b256c6cd82cd5989bcb82e80a0fbac9	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	git-2	2027b81a576527fa16bece425941e094	git-r3	e83b3dde426430f34178059a8de5299d	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
 _md5_=a7085b9dbf7e0aaad1b4e2fb21f509e8
