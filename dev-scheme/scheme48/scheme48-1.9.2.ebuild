@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.9.1.ebuild,v 1.1 2014/03/18 03:18:02 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.9.2.ebuild,v 1.1 2014/04/17 22:00:29 teiresias Exp $
 
 EAPI=5
 inherit elisp-common multilib eutils flag-o-matic
@@ -17,11 +17,6 @@ IUSE="doc emacs"
 DEPEND="emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 SITEFILE=50scheme48-gentoo.el
-
-src_prepare() {
-	# Patch available upstream.  It can go away next version.
-	epatch "${FILESDIR}/${P}-implicit-decl.patch"
-}
 
 src_configure() {
 	append-cflags -fno-strict-aliasing

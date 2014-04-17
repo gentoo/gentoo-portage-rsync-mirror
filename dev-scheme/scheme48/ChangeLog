@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/scheme48
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.17 2014/03/18 03:18:02 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/ChangeLog,v 1.18 2014/04/17 22:00:29 teiresias Exp $
+
+*scheme48-1.9.2 (17 Apr 2014)
+
+  17 Apr 2014; Christopher Brannon <teiresias@gentoo.org>
+  -scheme48-1.9.1.ebuild, +scheme48-1.9.2.ebuild,
+  -files/scheme48-1.9.1-implicit-decl.patch:
+  New upstream version.
 
 *scheme48-1.9.1 (17 Mar 2014)
 
