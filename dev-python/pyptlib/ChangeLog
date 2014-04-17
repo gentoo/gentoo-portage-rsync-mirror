@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/pyptlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyptlib/ChangeLog,v 1.1 2013/10/06 16:41:31 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyptlib/ChangeLog,v 1.2 2014/04/17 11:56:01 blueness Exp $
+
+*pyptlib-0.0.6 (17 Apr 2014)
+
+  17 Apr 2014; Anthony G. Basile <blueness@gentoo.org> +pyptlib-0.0.6.ebuild:
+  Version bump
 
 *pyptlib-0.0.5 (06 Oct 2013)
 
   06 Oct 2013; Anthony G. Basile <blueness@gentoo.org> +pyptlib-0.0.5.ebuild,
   +metadata.xml:
   Initial commit
-
