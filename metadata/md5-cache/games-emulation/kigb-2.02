@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DESCRIPTION=A Gameboy (GB, SGB, GBA) Emulator for Linux
-HOMEPAGE=http://kigb.emuunlim.com
+HOMEPAGE=http://kigb.emuunlim.com/
 KEYWORDS=-* x86
-LICENSE=as-is
+LICENSE=all-rights-reserved
 RDEPEND=x11-libs/libXext sys-libs/zlib dev-games/hawknl =virtual/libstdc++-3* games-misc/games-envd
-RESTRICT=strip
+RESTRICT=mirror bindist strip
 SLOT=0
-SRC_URI=mirror://gentoo/kigb-2.02.tar.gz
+SRC_URI=http://kigb.emuunlim.com/kigb_lin.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=42ac13c1518678f1e075a8eb77ec398a
+_md5_=225974ceb58150ce01e829ee1ec798fd

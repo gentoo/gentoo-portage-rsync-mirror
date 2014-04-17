@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1-r1.ebuild,v 1.2 2014/04/16 15:51:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.1-r1.ebuild,v 1.3 2014/04/17 16:02:52 bicatali Exp $
 
 EAPI=5
 
@@ -77,38 +77,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.8.1-imagemagick.patch
 	"${FILESDIR}"/${PN}-3.8.1-pkgbuilddir.patch
 )
-
-pkg_pretend() {
-	# do we really need this test? it looks a deficiency of our framework
-	if use qrupdate || use sparse; then
-		local blaslib=$($(tc-getPKG_CONFIG) --libs-only-l blas \
-			| sed -e 's@-l\([^ \t]*\)@lib\1@' | cut -d' ' -f 1)
-		einfo "Checking linear algebra dependencies for ${blaslib}"
-		local libdir="${EROOT%/}/usr/$(get_libdir)"
-		local lib failed_libs libs=( )
-		use qrupdate && libs+=( "${libdir}"/libqrupdate.so )
-		use sparse && libs+=(
-			"${libdir}"/libarpack.so
-			"${libdir}"/libcholmod.so
-			"${libdir}"/libumfpack.so
-		)
-		for lib in ${libs[@]}; do
-			# linked with the current blas?
-			if ! scanelf -n ${lib} | grep -q "${blaslib}"; then
-				# linked with some blas or lapack library?
-				if ! scanelf -n ${lib} | egrep -q "blas|lapack"; then
-					failed_libs="${failed_libs} ${lib}"
-				fi
-			fi
-		done
-		if [[ -n ${failed_libs} ]]; then
-			eerror "${failed_libs} must be rebuilt with ${blaslib}"
-			eerror "Try re-installing ${failed_libs}"
-			die "check of blas/lapack consistency failed"
-		fi
-	fi
-
-}
 
 src_prepare() {
 	# nasty prefix hacks for fltk:1 and qt4 linking
