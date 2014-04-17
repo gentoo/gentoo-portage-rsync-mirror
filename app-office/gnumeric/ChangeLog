@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.267 2014/03/29 19:20:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.268 2014/04/17 13:02:06 pacho Exp $
+
+*gnumeric-1.12.14 (17 Apr 2014)
+
+  17 Apr 2014; Pacho Ramos <pacho@gentoo.org> +gnumeric-1.12.14.ebuild,
+  -gnumeric-1.12.0-r1.ebuild:
+  Version bump, drop old
 
 *gnumeric-1.12.13 (29 Mar 2014)
 

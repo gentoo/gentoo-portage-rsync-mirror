@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.665 2014/04/15 11:37:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.667 2014/04/17 13:08:07 polynomial-c Exp $
+
+  17 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> samba-4.1.7.ebuild:
+  Dropped hppa keyword due to new package dependency.
+
+*samba-4.1.7 (17 Apr 2014)
+
+  17 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +samba-4.1.7.ebuild:
+  Version bump. Finally link against system heimdal (bug #504694). Use
+  sys-libs/ntdb instead of bundled copy.
 
 *samba-4.0.17 (15 Apr 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r3.ebuild,v 1.4 2014/04/17 07:48:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r3.ebuild,v 1.5 2014/04/17 13:23:52 anarchy Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -45,6 +45,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-${SLOT}-js-config-shebang.patch
 	epatch "${FILESDIR}"/${PN}-${SLOT}-ia64-mmap.patch
 	epatch "${FILESDIR}"/${PN}-17.0.0-fix-file-permissions.patch
+	# Remove obsolete jsuword bug #506160
+	sed -i -e '/jsuword/d' "${BUILDDIR}"/jsval.h ||die "sed failed"
 	epatch_user
 
 	if [[ ${CHOST} == *-freebsd* ]]; then
