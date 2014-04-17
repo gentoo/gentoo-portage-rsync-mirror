@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libapparmor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libapparmor/ChangeLog,v 1.2 2013/12/03 17:45:57 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libapparmor/ChangeLog,v 1.3 2014/04/17 17:38:32 kensington Exp $
+
+*libapparmor-2.8.3 (17 Apr 2014)
+
+  17 Apr 2014; Michael Palimaka <kensington@gentoo.org>
+  +libapparmor-2.8.3.ebuild:
+  Version bump.
 
   03 Dec 2013; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Add hardened herd.
