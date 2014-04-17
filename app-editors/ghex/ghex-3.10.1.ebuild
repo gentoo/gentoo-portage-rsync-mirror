@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.8.1.ebuild,v 1.4 2014/01/30 08:22:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.10.1.ebuild,v 1.1 2014/04/17 08:25:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,14 +8,15 @@ GCONF_DEBUG="no"
 inherit gnome2
 
 DESCRIPTION="GNOME hexadecimal editor"
-HOMEPAGE="https://live.gnome.org/Ghex"
+HOMEPAGE="https://wiki.gnome.org/Apps/Ghex"
 
 LICENSE="GPL-2+ FDL-1.1+"
 SLOT="2"
-KEYWORDS="amd64 ~arm ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=dev-libs/atk-1
+RDEPEND="
+	>=dev-libs/atk-1
 	>=dev-libs/glib-2.31.10:2
 	>=x11-libs/gtk+-3.3.8:3
 "
