@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.5.ebuild,v 1.8 2013/09/22 11:30:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/dia2code-0.8.5.ebuild,v 1.9 2014/04/17 07:44:55 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc sparc x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2"

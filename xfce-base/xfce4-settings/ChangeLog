@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.115 2014/04/16 07:50:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.116 2014/04/17 07:50:36 ago Exp $
+
+  17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-settings-4.10.1.ebuild:
+  Stable for ia64, wrt bug #507432
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-settings-4.10.1.ebuild:
   Stable for ppc64, wrt bug #507432

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.39 2014/04/16 07:43:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.40 2014/04/17 07:51:24 ago Exp $
+
+  17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> wayland-1.4.0.ebuild:
+  Stable for ia64, wrt bug #500368
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> wayland-1.4.0.ebuild:
   Stable for ppc64, wrt bug #500368

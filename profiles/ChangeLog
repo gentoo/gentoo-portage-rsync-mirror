@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8829 2014/04/17 03:27:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8830 2014/04/17 07:47:59 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Apr 2014; Pacho Ramos <pacho@gentoo.org> arch/alpha/use.stable.mask,
+  arch/ia64/use.stable.mask, arch/powerpc/use.stable.mask,
+  arch/sparc/use.stable.mask:
+  Drop stable keywords after the discussion caused by Gnome 3.8/3.10
+  stabilization on this arches
 
   17 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> base/package.use.mask:
   Use mask ppc driver

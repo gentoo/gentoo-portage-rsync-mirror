@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.163 2014/03/11 11:22:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.164 2014/04/17 07:49:39 pacho Exp $
+
+*dia-0.97.3_pre20140417 (17 Apr 2014)
+
+  17 Apr 2014; Pacho Ramos <pacho@gentoo.org> +dia-0.97.3_pre20140417.ebuild,
+  -dia-0.97.2-r1.ebuild:
+  Bump to a newer snapshot fixing bug #505928 (by Sergey S. Starikoff) and many
+  other problems. Drop old.
 
   11 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> dia-0.97.2-r1.ebuild,
   dia-0.97.2-r2.ebuild, +files/dia-0.97.2-freetype251.patch:

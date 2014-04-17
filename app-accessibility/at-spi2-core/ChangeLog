@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.57 2014/04/16 07:46:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.58 2014/04/17 07:47:52 ago Exp $
+
+  17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> at-spi2-core-2.10.2.ebuild:
+  Stable for ia64, wrt bug #507568
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> at-spi2-core-2.10.2.ebuild:
   Stable for ppc64, wrt bug #507568

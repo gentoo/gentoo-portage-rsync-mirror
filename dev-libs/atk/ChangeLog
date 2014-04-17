@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.279 2014/04/16 07:46:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.280 2014/04/17 07:48:14 ago Exp $
+
+  17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> atk-2.10.0.ebuild:
+  Stable for ia64, wrt bug #507568
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> atk-2.10.0.ebuild:
   Stable for ppc64, wrt bug #507568

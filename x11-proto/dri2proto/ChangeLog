@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dri2proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.64 2014/04/16 07:44:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.65 2014/04/17 07:52:20 ago Exp $
+
+  17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> dri2proto-2.8-r1.ebuild:
+  Stable for ia64, wrt bug #500368
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> dri2proto-2.8-r1.ebuild:
   Stable for ppc64, wrt bug #500368
