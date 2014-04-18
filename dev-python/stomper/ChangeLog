@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/stomper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.21 2014/03/03 23:48:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.22 2014/04/18 07:36:11 idella4 Exp $
+
+*stomper-0.2.8 (18 Apr 2014)
+
+  18 Apr 2014; Ian Delaney <idella4@gentoo.org> +stomper-0.2.8.ebuild,
+  -stomper-0.2.4.ebuild, -stomper-0.2.5.ebuild, -stomper-0.2.6.ebuild:
+  bump, rm old
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> stomper-0.2.7.ebuild:
   amd64 stable, bug #495642
