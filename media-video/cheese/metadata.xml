@@ -6,9 +6,5 @@
 		Cheese uses your webcam to take photos and videos, applies fancy special
 		effects, and lets you share the fun with others.
 	</longdescription>
-	<use>
-		<flag name="sendto">Build the <pkg>gnome-extra/nautilus-sendto</pkg>
-			plugin</flag>
-	</use>
 </pkgmetadata>
 

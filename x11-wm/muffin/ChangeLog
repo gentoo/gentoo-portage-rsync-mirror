@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/muffin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.15 2013/12/08 19:55:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.16 2014/04/18 11:18:43 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -muffin-1.1.2.ebuild:
+  drop old
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> muffin-1.8.2-r1.ebuild:
   x86 stable, bug #478252

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.173 2014/03/29 19:29:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.174 2014/04/18 11:01:28 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gthumb-2.14.4.ebuild:
+  Drop old
 
 *gthumb-3.2.7 (29 Mar 2014)
 

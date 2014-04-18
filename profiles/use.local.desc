@@ -3951,7 +3951,6 @@ media-video/avidemux:vaapi - Enable VAAPI (Video Acceleration API) for hardware 
 media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
-media-video/cheese:sendto - Build the gnome-extra/nautilus-sendto plugin
 media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?
 media-video/clive:password - Support password controlled sites
