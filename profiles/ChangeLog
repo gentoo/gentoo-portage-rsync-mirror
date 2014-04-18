@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8836 2014/04/18 15:51:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8837 2014/04/18 16:21:07 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=media-libs/libsdl-1.2.15-r5 for multilib migration wrt #489122
 
   18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask >=media-libs/libcaca-0.99_beta18-r2 for multilib conversion wrt #497776

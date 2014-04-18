@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.212 2014/01/15 09:20:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.213 2014/04/18 16:22:53 hasufell Exp $
+
+*libsdl-1.2.15-r5 (18 Apr 2014)
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> +libsdl-1.2.15-r5.ebuild:
+  add multilib support wrt #489122
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libsdl-1.2.15-r4.ebuild:
   Stable for ia64, wrt bug #485316
