@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/znc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.69 2013/11/14 11:35:35 wired Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.70 2014/04/18 07:25:40 wired Exp $
+
+*znc-1.2-r1 (18 Apr 2014)
+
+  18 Apr 2014; Alex Alexander <wired@gentoo.org> +znc-1.2-r1.ebuild,
+  +files/znc-1.2-webadmin-correctly-handle-channel-names.patch:
+  security fix: webadmin/add channel: correctly handle channel names. bug
+  #507794
 
 *znc-1.2 (14 Nov 2013)
 
