@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/imlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.78 2011/10/11 20:21:46 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/ChangeLog,v 1.80 2014/04/18 14:58:35 hasufell Exp $
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> imlib-1.9.15-r4.ebuild:
+  add app-emulation/emul-linux-x86-gtklibs blocker
+
+*imlib-1.9.15-r4 (18 Apr 2014)
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> +imlib-1.9.15-r4.ebuild:
+  add multilib support wrt #499268
 
   11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -imlib-1.9.15-r2.ebuild:
   old

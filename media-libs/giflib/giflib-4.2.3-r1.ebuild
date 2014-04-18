@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.2.3-r1.ebuild,v 1.1 2014/04/18 13:37:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.2.3-r1.ebuild,v 1.2 2014/04/18 14:32:11 hasufell Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="static-libs X"
 
 RDEPEND="X? ( x11-libs/libX11[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-baselibs-20131008-r19
+		!<=app-emulation/emul-linux-x86-baselibs-20140406-r1
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32]
 	)"
 DEPEND="${RDEPEND}"
