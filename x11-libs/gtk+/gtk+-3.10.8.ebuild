@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.8.ebuild,v 1.6 2014/04/17 11:18:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.8.ebuild,v 1.7 2014/04/18 08:43:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -66,6 +66,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	dev-util/gdbus-codegen
 	>=dev-util/gtk-doc-am-1.11
+	sys-devel/gettext
 	virtual/pkgconfig
 	X? (
 		x11-proto/xextproto

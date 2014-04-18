@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23.ebuild,v 1.6 2014/04/17 11:18:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23.ebuild,v 1.7 2014/04/18 08:43:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -45,6 +45,7 @@ COMMON_DEPEND="
 	!<gnome-base/gail-1000
 "
 DEPEND="${COMMON_DEPEND}
+	sys-devel/gettext
 	virtual/pkgconfig
 	!aqua? (
 		x11-proto/xextproto

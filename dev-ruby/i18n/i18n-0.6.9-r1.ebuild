@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.2 2014/03/11 20:22:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.3 2014/04/18 08:54:03 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 jruby ruby19 ruby20"
+USE_RUBY="jruby ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="test"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
@@ -21,8 +21,9 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/activesupport
-	dev-ruby/mocha:0.12
-	dev-ruby/test_declarative )"
+	dev-ruby/mocha:0.13
+	dev-ruby/test_declarative
+	dev-ruby/test-unit:2 )"
 
 each_ruby_test() {
 	${RUBY} -w -Ilib -Itest test/all.rb || die
@@ -30,7 +31,9 @@ each_ruby_test() {
 
 all_ruby_prepare() {
 	#Bundler isn't really necessary here, and it doesn't work with jruby
-	#Tests fail for ruby18 with >=mocha-0.13
+	#Tests fail for jruby with >=mocha-0.13 unless we also include the
+	#test-unit gem.
 	sed -i -e "15s/require 'bundler\/setup'//"\
-		-e "/require 'mocha'/i gem 'mocha', '~>0.12.0'" test/test_helper.rb || die
+		-e "/require 'mocha'/i gem 'mocha', '~>0.13.0'" \
+		-e "/require 'test\\/unit'/i gem 'test-unit'" test/test_helper.rb || die
 }

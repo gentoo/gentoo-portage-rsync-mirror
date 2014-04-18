@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.61 2014/03/11 20:22:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.62 2014/04/18 08:54:03 graaff Exp $
+
+  18 Apr 2014; Hans de Graaff <graaff@gentoo.org> i18n-0.6.9-r1.ebuild:
+  Add ruby21. Update test dependencies to make this work with all ruby targets.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> i18n-0.6.9-r1.ebuild:
   ~x86 added, bug #487206

@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.106 2014/02/22 22:34:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.107 2014/04/18 08:35:47 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -files/pan-0.135-glib-2.31.patch,
+  -pan-0.135.ebuild, -pan-9999.ebuild, metadata.xml:
+  Drop old, drop 9999 ebuild as none of us is really maintaining it, take the
+  package as we are the people are taking care of this for a long time.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> pan-0.139.ebuild:
   Fix wrong commit, bug 502160
