@@ -7,8 +7,6 @@
 		<flag name="clutter">Build with clutter support for animation effects</flag>
 		<flag name="crypt">Enable GPG encryption support using
 			<pkg>app-crypt/gnupg</pkg> and <pkg>app-crypt/pinentry</pkg></flag>
-		<flag name="gnome-online-accounts">Enable using
-			<pkg>net-libs/gnome-online-accounts</pkg> for authorization</flag>
 		<flag name="highlight">Enable text highlighting
 			plugin</flag>
 		<flag name="ldap">Enable support for fetching contacts from an LDAP or
