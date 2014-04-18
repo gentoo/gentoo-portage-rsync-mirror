@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.263 2014/04/16 14:31:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.264 2014/04/18 22:00:34 hasufell Exp $
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> blender-2.70a-r1.ebuild,
+  +files/blender-2.70a-openmp.patch:
+  fix building with -openmp wrt #507738
 
 *blender-2.70a-r1 (16 Apr 2014)
 *blender-2.70-r1 (16 Apr 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140406.ebuild,v 1.2 2014/04/18 21:41:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140406-r1.ebuild,v 1.1 2014/04/18 21:53:45 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -25,6 +25,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
 		>=x11-libs/pango-1.36.2-r1[abi_x86_32(-)]
 		>=x11-libs/pangox-compat-0.0.2-r1[abi_x86_32(-)]
+		>=media-libs/imlib-1.9.15-r4[abi_x86_32(-)]
 	)"
 # RDEPEND on opengl stuff needed due cairo, bug #410213
 

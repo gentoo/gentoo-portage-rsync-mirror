@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a-r1.ebuild,v 1.1 2014/04/16 14:31:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a-r1.ebuild,v 1.2 2014/04/18 22:00:34 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -114,7 +114,8 @@ src_prepare() {
 		"${FILESDIR}"/04-${PN}-2.70-unbundle-glog.patch \
 		"${FILESDIR}"/05-${PN}-2.68-unbundle-eigen3.patch \
 		"${FILESDIR}"/06-${PN}-2.68-fix-install-rules.patch \
-		"${FILESDIR}"/07-${PN}-2.70-sse2.patch
+		"${FILESDIR}"/07-${PN}-2.70-sse2.patch \
+		"${FILESDIR}"/${PN}-2.70a-openmp.patch
 
 	# remove some bundled deps
 	rm -r \

@@ -96,3 +96,7 @@ usr/lib32/libharfbuzz.so.0
 usr/lib32/libharfbuzz.so.0.923.0
 usr/lib32/pkgconfig/harfbuzz-gobject.pc
 usr/lib32/pkgconfig/harfbuzz.pc
+usr/lib32/libImlib.so
+usr/lib32/libImlib.so.1
+usr/lib32/libImlib.so.1.9.15
+usr/lib32/pkgconfig/imlib.pc

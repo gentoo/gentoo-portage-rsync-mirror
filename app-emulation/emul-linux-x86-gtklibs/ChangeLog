@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.120 2014/04/15 21:18:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.122 2014/04/18 21:53:45 mgorny Exp $
+
+*emul-linux-x86-gtklibs-20140406-r1 (18 Apr 2014)
+
+  18 Apr 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-gtklibs-20140406-r1.ebuild, +files/remove-native-20140406-r1:
+  Add support for gx86-multilib media-libs/imlib.
+
+  18 Apr 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-gtklibs-20140406.ebuild, files/remove-native-20140406:
+  Fix remove-native and dependencies for new emul-linux set.
 
   15 Apr 2014; Pacho Ramos <pacho@gentoo.org> +files/remove-native-20140406:
   Update remove-native file, bug #507292#c12 by Sven Eden

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15590 2014/04/18 21:18:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15591 2014/04/18 21:53:42 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -435,6 +435,7 @@ dev-libs/libgcrypt:11
 >=app-emulation/emul-linux-x86-baselibs-20140406-r2
 >=media-libs/aalib-1.4_rc5-r6
 >=media-libs/imlib-1.9.15-r4
+>=app-emulation/emul-linux-x86-gtklibs-20140406-r1
 =media-libs/imlib2-1.4.6-r2
 >=media-libs/imlib2-9999-r1
 >=media-libs/libcaca-0.99_beta18-r2
