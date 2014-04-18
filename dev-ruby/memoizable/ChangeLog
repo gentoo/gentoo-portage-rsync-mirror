@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/memoizable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.10 2014/03/29 10:22:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.11 2014/04/18 17:16:15 mrueg Exp $
+
+  18 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -memoizable-0.4.1-r1.ebuild,
+  -memoizable-0.4.1.ebuild:
+  Cleanup old.
 
   29 Mar 2014; Hans de Graaff <graaff@gentoo.org> memoizable-0.4.2.ebuild:
   Fix broken dependency on thread_safe.

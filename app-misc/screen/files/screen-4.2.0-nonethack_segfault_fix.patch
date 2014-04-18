@@ -1,0 +1,43 @@
+From 5b2ba5b3d48cb62894841f85a8c18db691491c8a Mon Sep 17 00:00:00 2001
+From: Amadeusz Sławiński <amade@asmblr.net>
+Date: Fri, 18 Apr 2014 16:44:52 +0000
+Subject: Fix bug when building without nethack commands
+
+When building with -DNONETHACK all commands were off by 1 because of
+missing nethack command in table.
+
+Provide dummy command with info message.
+
+Signed-off-by: Amadeusz Sławiński <amade@asmblr.net>
+---
+diff --git a/src/comm.c b/src/comm.c
+index 5f4af8a..daad0a6 100644
+--- a/src/comm.c
++++ b/src/comm.c
+@@ -241,9 +241,7 @@ struct comm comms[RC_LAST + 1] =
+ #ifdef MULTIUSER
+   { "multiuser",	ARGS_1 },
+ #endif
+-#ifdef NETHACK
+   { "nethack",		ARGS_1 },
+-#endif
+   { "next",		ARGS_0 },
+ #ifdef MULTI
+   { "nonblock",		NEED_DISPLAY|ARGS_01 },
+diff --git a/src/process.c b/src/process.c
+index 30497a3..d9dfc17 100644
+--- a/src/process.c
++++ b/src/process.c
+@@ -3185,6 +3185,10 @@ int key;
+     case RC_NETHACK:
+       (void)ParseOnOff(act, &nethackflag);
+       break;
++#else
++    case RC_NETHACK:
++      Msg(0, "nethack disabled at build time");
++      break;
+ #endif
+     case RC_HARDCOPY_APPEND:
+       (void)ParseOnOff(act, &hardcopy_append);
+--
+cgit v0.9.0.2

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.86 2014/03/12 13:19:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.87 2014/04/18 17:22:50 maksbotan Exp $
+
+  18 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/clementine-1.2.2-gcc49.patch, clementine-1.2.2.ebuild:
+  Add patch for building with >=gcc-4.9, bug #507484. Thanks to Ryan Hill
+  <rhill@gentoo.org>.
 
 *clementine-1.2.2 (12 Mar 2014)
 

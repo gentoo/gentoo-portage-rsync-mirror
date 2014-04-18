@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.0.ebuild,v 1.2 2014/04/17 15:43:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.0.ebuild,v 1.3 2014/04/18 17:19:45 polynomial-c Exp $
 
 EAPI=5
 
@@ -34,6 +34,9 @@ src_prepare() {
 
 	# Fix building against sys-libs/ncurses[tinfo]
 	epatch "${FILESDIR}"/4.2.0-tinfo.patch
+
+	# Fix segfault when being built without nethack support (bug #507916)
+	epatch "${FILESDIR}"/${P}-nonethack_segfault_fix.patch
 
 	# sched.h is a system header and causes problems with some C libraries
 	mv sched.h _sched.h || die

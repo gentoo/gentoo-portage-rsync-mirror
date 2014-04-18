@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mecab-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.41 2014/03/24 15:07:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.42 2014/04/18 17:17:24 mrueg Exp $
+
+  18 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -mecab-ruby-0.98-r1.ebuild:
+  Cleanup pmasked ruby18-only version. See bug #434064
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> mecab-ruby-0.996.ebuild:
   Stable for ppc, wrt bug #501252

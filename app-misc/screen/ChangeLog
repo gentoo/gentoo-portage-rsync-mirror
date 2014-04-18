@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.189 2014/04/17 15:43:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.190 2014/04/18 17:19:45 polynomial-c Exp $
+
+  18 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> screen-4.2.0.ebuild,
+  +files/screen-4.2.0-nonethack_segfault_fix.patch:
+  Fix segfault when being built without nethack support (bug #507916).
 
   17 Apr 2014; Jeroen Roovers <jer@gentoo.org> screen-4.2.0.ebuild,
   -files/4.2.0-config.h.in:

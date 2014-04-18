@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-phantasm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/ChangeLog,v 1.3 2009/10/07 14:48:09 nyhm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/ChangeLog,v 1.4 2014/04/18 17:06:21 ulm Exp $
+
+  18 Apr 2014; Ulrich Müller <ulm@gentoo.org> doom3-phantasm-1.2.ebuild:
+  LICENSE changed to all-rights-reserved, bug 465986.
 
   07 Oct 2009; Tristan Heaven <nyhm@gentoo.org> doom3-phantasm-1.2.ebuild:
   EAPI=2

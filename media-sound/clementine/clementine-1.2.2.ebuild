@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.2.ebuild,v 1.1 2014/03/12 13:19:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.2.ebuild,v 1.2 2014/04/18 17:22:50 maksbotan Exp $
 
 EAPI=5
 
@@ -93,6 +93,7 @@ S="${WORKDIR}/${P^}"
 PATCHES=(
 	"${FILESDIR}"/${P}-fix-build.patch
 	"${FILESDIR}"/${P}-fix-build2.patch
+	"${FILESDIR}"/${P}-gcc49.patch
 )
 
 src_prepare() {

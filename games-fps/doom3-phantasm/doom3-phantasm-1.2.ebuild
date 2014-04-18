@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/doom3-phantasm-1.2.ebuild,v 1.4 2009/10/07 14:48:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/doom3-phantasm-1.2.ebuild,v 1.5 2014/04/18 17:06:21 ulm Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.freewebs.com/bladeghost_j/
 SRC_URI="mirror://filefront/Doom_III/Mods/Addons/phantasm_d3_${PV}.zip
 	ftp://files.mhgaming.com/doom3/mods/phantasm_d3_${PV}.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 
