@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.39 2014/03/29 22:01:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.40 2014/04/18 19:51:08 swift Exp $
+
+  18 Apr 2014; Sven Vermeulen <swift@gentoo.org>
+  accountsservice-0.6.29-r1.ebuild, accountsservice-0.6.34.ebuild,
+  accountsservice-0.6.35.ebuild:
+  Depend on selinux-accountsd if USE=selinux
 
   29 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   accountsservice-0.6.34.ebuild, accountsservice-0.6.35.ebuild:

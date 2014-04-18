@@ -1,0 +1,18 @@
+# ChangeLog for sec-policy/selinux-accountsd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-accountsd/ChangeLog,v 1.2 2014/04/18 19:48:06 swift Exp $
+
+  18 Apr 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-accountsd-2.20130424-r4.ebuild:
+  Stabilize 2.20130424-r4 version
+
+*selinux-accountsd-9999 (18 Apr 2014)
+*selinux-accountsd-2.20140311-r1 (18 Apr 2014)
+*selinux-accountsd-2.20130424-r4 (18 Apr 2014)
+
+  18 Apr 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-accountsd-2.20130424-r4.ebuild,
+  +selinux-accountsd-2.20140311-r1.ebuild, +selinux-accountsd-9999.ebuild,
+  +metadata.xml:
+  Initial policy package for accountsd
+

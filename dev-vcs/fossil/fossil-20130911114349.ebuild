@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20130911114349.ebuild,v 1.1 2013/12/13 14:19:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20130911114349.ebuild,v 1.2 2014/04/18 19:52:36 nimiux Exp $
 
 EAPI=5
 MY_P=${PN}-src-${PV}
@@ -13,7 +13,7 @@ SRC_URI="http://www.fossil-scm.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="json +lineedit sqlite +ssl tcl"
 
 DEPEND="sys-libs/zlib
