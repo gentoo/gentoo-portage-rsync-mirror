@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-shadowlordsdreamcatcherdemon/nwn-shadowlordsdreamcatcherdemon-1.ebuild,v 1.1 2011/05/19 05:38:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-shadowlordsdreamcatcherdemon/nwn-shadowlordsdreamcatcherdemon-1.ebuild,v 1.2 2014/04/18 22:36:15 ulm Exp $
 
 inherit games
 
@@ -8,10 +8,11 @@ DESCRIPTION="The bundled Shadowlords, Dreamcatcher, and Demon campaigns by Hall-
 HOMEPAGE="http://www.adamandjamie.com/mod/nwn_campaign.aspx"
 SRC_URI="http://vnfiles.ign.com/nwvault.ign.com/fms/files/modules/4273/ShadowlordsDreamcatcherDemon.exe"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 DEPEND="app-arch/p7zip"
 RDEPEND="games-rpg/nwn"
