@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/tslib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.25 2013/01/21 01:33:17 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.26 2014/04/18 15:35:57 hasufell Exp $
+
+*tslib-1.0-r3 (18 Apr 2014)
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> +tslib-1.0-r3.ebuild:
+  add multilib support wrt #484254, patch by Michael Rowell
 
   21 Jan 2013; Mike Frysinger <vapier@gentoo.org> tslib-1.0-r2.ebuild:
   Mark s390 stable #453114 by Sergey Popov.
