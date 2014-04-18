@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.136 2014/01/08 18:40:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.137 2014/04/18 09:54:09 polynomial-c Exp $
+
+*dos2unix-6.0.5 (18 Apr 2014)
+
+  18 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +dos2unix-6.0.5.ebuild:
+  Version bump.
 
   08 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> dos2unix-6.0.4.ebuild,
   +files/dos2unix-6.0.4-pod-encoding.patch:

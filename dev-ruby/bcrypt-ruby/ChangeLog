@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bcrypt-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.20 2014/03/19 14:01:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.21 2014/04/18 09:53:56 graaff Exp $
+
+  18 Apr 2014; Hans de Graaff <graaff@gentoo.org> bcrypt-ruby-3.1.7.ebuild:
+  Add ruby21.
 
   19 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -bcrypt-ruby-3.1.2-r1.ebuild,
   -files/bcrypt-ruby-3.0.1-undefined-symbols.patch:
