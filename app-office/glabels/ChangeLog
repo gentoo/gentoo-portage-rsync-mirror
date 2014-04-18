@@ -1,6 +1,10 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.75 2014/02/22 21:02:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.76 2014/04/18 08:24:35 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -glabels-3.0.1-r1.ebuild,
+  -glabels-3.0.1.ebuild:
+  Drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> glabels-3.2.0.ebuild:
   Fix wrong commit, bug 502160

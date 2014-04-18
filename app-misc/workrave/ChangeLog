@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.93 2014/02/22 21:00:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.94 2014/04/18 08:26:49 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/workrave-1.9.1-gtkmm_api.patch,
+  -files/workrave-1.9.1-nogst-crash.patch, -workrave-1.9.4-r1.ebuild:
+  Drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> workrave-1.10.ebuild:
   Fix wrong commit, bug 502160

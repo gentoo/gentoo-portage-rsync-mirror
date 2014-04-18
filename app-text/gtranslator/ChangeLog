@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.62 2014/02/22 21:05:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.63 2014/04/18 08:30:19 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gtranslator-1.9.13-desktop-database.patch, -gtranslator-1.9.13.ebuild,
+  metadata.xml:
+  Drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtranslator-2.91.6.ebuild:
   Fix wrong commit, bug 502160

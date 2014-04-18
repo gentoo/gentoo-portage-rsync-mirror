@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.77 2014/02/22 21:03:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.78 2014/04/18 08:29:20 pacho Exp $
+
+  18 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/planner-0.14.6-find-python.patch, -planner-0.14.6.ebuild:
+  Drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> planner-0.14.6_p20130520.ebuild:
   Fix wrong commit, bug 502160
