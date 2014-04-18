@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1059 2014/04/17 22:41:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1060 2014/04/18 13:11:19 floppym Exp $
+
+  18 Apr 2014; Mike Gilbert <floppym@gentoo.org> chromium-35.0.1916.47.ebuild:
+  Disable fatal linker warnings, bug 506268 by Vasco Gervasi.
 
   17 Apr 2014; Mike Gilbert <floppym@gentoo.org> chromium-36.0.1941.0.ebuild:
   Disable fatal linker warnings, bug 506268 by Vasco Gervasi.

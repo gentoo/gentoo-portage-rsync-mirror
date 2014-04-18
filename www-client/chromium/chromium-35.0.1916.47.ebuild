@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1916.47.ebuild,v 1.1 2014/04/17 00:45:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1916.47.ebuild,v 1.2 2014/04/18 13:11:19 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -392,6 +392,9 @@ src_configure() {
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
+
+	# Disable fatal linker warnings, bug 506268.
+	myconf+=" -Ddisable_fatal_linker_warnings=1"
 
 	# Avoid CFLAGS problems, bug #352457, bug #390147.
 	if ! use custom-cflags; then
