@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ntdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.3 2014/04/17 22:09:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.4 2014/04/18 21:04:15 polynomial-c Exp $
+
+  18 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> ntdb-1.0.ebuild:
+  Hard block older samba versions again.
 
   17 Apr 2014; Jeroen Roovers <jer@gentoo.org> ntdb-1.0.ebuild:
   Marked ~hppa too.

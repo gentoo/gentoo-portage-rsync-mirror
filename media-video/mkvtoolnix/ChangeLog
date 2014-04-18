@@ -1,6 +1,17 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.197 2014/03/27 11:34:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.199 2014/04/18 21:06:54 radhermit Exp $
+
+  18 Apr 2014; Tim Harder <radhermit@gentoo.org> -mkvtoolnix-6.1.0-r1.ebuild,
+  -mkvtoolnix-6.2.0.ebuild, -mkvtoolnix-6.3.0.ebuild, -mkvtoolnix-6.4.1.ebuild,
+  -mkvtoolnix-6.5.0.ebuild:
+  Remove old.
+
+*mkvtoolnix-6.9.0 (18 Apr 2014)
+
+  18 Apr 2014; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-6.9.0.ebuild:
+  Version bump, use ruby-ng eclass to depend and run a specific ruby version
+  for running drake.
 
   27 Mar 2014; Chema Alonso <nimiux@gentoo.org> mkvtoolnix-6.6.0.ebuild:
   Stable for amd64 wrt bug #496536

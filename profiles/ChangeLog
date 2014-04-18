@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8846 2014/04/18 20:42:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8849 2014/04/18 21:18:56 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask updated emul-linux-x86-baselibs.
+
+  18 Apr 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask >=media-video/mkvtoolnix-6.9.0 waiting for qt5.
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=media-libs/sdl-gfx-2.0.24-r1 for multilib conversion
 
   18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask >=media-libs/sdl-sound-1.0.3-r1 for multilib conversion

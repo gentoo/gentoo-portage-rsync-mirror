@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=!<net-fs/samba-4.1.7 python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) app-text/docbook-xml-dtd:4.2 dev-lang/python !dev-lang/python[-threads]
+DEPEND=!!<net-fs/samba-4.1.7 python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) app-text/docbook-xml-dtd:4.2 dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=A not-so trivial keyword/data database system
 EAPI=5
 HOMEPAGE=http://tdb.samba.org/
@@ -11,4 +11,4 @@ REQUIRED_USE=python? ( python_single_target_python2_6? ( python_targets_python2_
 SLOT=0
 SRC_URI=http://samba.org/ftp/tdb/ntdb-1.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
-_md5_=09a193f62cbe28b30599691394414f1c
+_md5_=432d41c31b88998bd6fe022f948925a8

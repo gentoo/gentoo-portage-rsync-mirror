@@ -1,9 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.4.1.ebuild,v 1.2 2013/09/17 21:40:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.9.0.ebuild,v 1.1 2014/04/18 21:04:39 radhermit Exp $
 
 EAPI=5
-inherit eutils multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
+WX_GTK_VER="3.0"
+USE_RUBY="ruby19 ruby20 ruby21"
+# don't add ruby to RDEPEND
+RUBY_OPTIONAL=yes
+inherit eutils ruby-ng multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -29,12 +33,15 @@ RDEPEND="
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
 	)
-	wxwidgets? ( x11-libs/wxGTK:2.8[X] )
+	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 "
 DEPEND="${RDEPEND}
-	dev-lang/ruby
+	|| ( $(ruby_implementations_depend) )
 	virtual/pkgconfig
 "
+
+# workaround to override ruby-ng
+S=${WORKDIR}/${P}
 
 pkg_pretend() {
 	# http://bugs.gentoo.org/419257
@@ -46,7 +53,16 @@ pkg_pretend() {
 	fi
 }
 
+src_unpack() {
+	# workaround to override ruby-ng
+	default
+}
+
 src_prepare() {
+	# hack from ruby-ng eclass to determine ruby version to build with
+	local ruby_implementations=$(ruby_get_use_implementations)
+	export RUBY="$(ruby_implementation_command ${ruby_implementations[0]})"
+
 	epatch "${FILESDIR}"/${PN}-5.8.0-system-pugixml.patch \
 		"${FILESDIR}"/${PN}-5.8.0-boost-configure.patch
 	eautoreconf
@@ -56,7 +72,6 @@ src_configure() {
 	local myconf
 
 	if use wxwidgets ; then
-		WX_GTK_VER="2.8"
 		need-wxwidgets unicode
 		myconf="--with-wx-config=${WX_CONFIG}"
 	fi
@@ -75,11 +90,11 @@ src_configure() {
 }
 
 src_compile() {
-	./drake V=1 -j$(makeopts_jobs) || die
+	"${RUBY}" ./drake V=1 -j$(makeopts_jobs) || die
 }
 
 src_install() {
-	DESTDIR="${D}" ./drake -j$(makeopts_jobs) install || die
+	DESTDIR="${D}" "${RUBY}" ./drake -j$(makeopts_jobs) install || die
 
 	dodoc AUTHORS ChangeLog README TODO
 	doman doc/man/*.1
