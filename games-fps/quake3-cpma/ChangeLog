@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-cpma
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.24 2012/02/01 16:38:22 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.25 2014/04/18 06:54:09 ulm Exp $
+
+  18 Apr 2014; Ulrich Müller <ulm@gentoo.org> quake3-cpma-1.48.ebuild:
+  Fix LICENSE, bug 506950.
 
   01 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> quake3-cpma-1.48.ebuild:
   update SRC_URI

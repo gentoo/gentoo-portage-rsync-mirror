@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-etpro/enemy-territory-etpro-3.2.6-r1.ebuild,v 1.5 2013/01/01 17:11:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-etpro/enemy-territory-etpro-3.2.6-r1.ebuild,v 1.6 2014/04/18 06:46:08 ulm Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ inherit games games-mods
 HOMEPAGE="http://bani.anime.net/etpro/"
 SRC_URI="http://etpro.anime.net/etpro-${PV//./_}.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 
