@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.161 2014/04/03 19:16:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.162 2014/04/18 17:41:39 maksbotan Exp $
+
+*awesome-3.5.5 (18 Apr 2014)
+
+  18 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> +awesome-3.5.5.ebuild,
+  +files/awesome-3.5.5-util.lua-xdg-icons-fix.patch:
+  Bump to 3.5.5, bug #507604. Add upstream patch to fix xdg icons search.
 
 *awesome-3.5.4 (03 Apr 2014)
 
