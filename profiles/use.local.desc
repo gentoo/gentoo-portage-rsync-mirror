@@ -5494,6 +5494,7 @@ net-misc/stargazer:stargazer - Enable build of Stargazer billing system.
 net-misc/stargazer:static-libs - Install static libraries.
 net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
+net-misc/strongswan:constraints - Enable advanced X.509 constraint checking plugin.
 net-misc/strongswan:dhcp - Enable server support for querying virtual IP addresses for clients from a DHCP server. (IKEv2 only)
 net-misc/strongswan:eap - Enable support for the different EAP modules that is supported.
 net-misc/strongswan:farp - Enable faking of ARP responses for virtual IP addresses assigned to clients. (IKEv2 only)

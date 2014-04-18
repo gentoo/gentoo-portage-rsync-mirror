@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( dev-ruby/activerecord:3.2[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/combustion[ruby_targets_ruby19] dev-ruby/rspec-rails[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=An awesome nested set implementation for Active Record
+EAPI=5
+HOMEPAGE=https://github.com/collectiveidea/awesome_nested_set
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby19? ( dev-ruby/activerecord:3.2[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+SLOT=0
+SRC_URI=https://github.com/collectiveidea/awesome_nested_set/archive/v2.1.6.tar.gz -> awesome_nested_set-2.1.6.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=e1c61c4cb99e6668ca08ee17aa74f663

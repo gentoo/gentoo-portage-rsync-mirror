@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.110 2014/03/19 16:08:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.111 2014/04/18 18:19:51 mgorny Exp $
+
+*pmount-0.9.99_alpha-r4 (18 Apr 2014)
+
+  18 Apr 2014; Michał Górny <mgorny@gentoo.org> +files/pmount.bash-completion,
+  +pmount-0.9.99_alpha-r4.ebuild:
+  Add a bash-completion file, bug #507836. Thanks to Andrew Petelin for the
+  patch.
 
   19 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   -pmount-0.9.99_alpha-r1.ebuild, -pmount-0.9.99_alpha-r2.ebuild:

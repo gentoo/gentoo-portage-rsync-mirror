@@ -18,6 +18,9 @@
     Smartcards and virtual IP address pools.
   </longdescription>
   <use>
+	<flag name="constraints">
+	  Enable advanced X.509 constraint checking plugin.
+	</flag>
     <flag name="dhcp">
       Enable server support for querying virtual IP addresses for clients
       from a DHCP server. (IKEv2 only)
