@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8844 2014/04/18 20:28:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8846 2014/04/18 20:42:59 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=media-libs/sdl-sound-1.0.3-r1 for multilib conversion
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask >=media-libs/freealut-1.1.0-r3 for multilib conversion
 
   18 Apr 2014; Julian Ospald <hasufell@gentoo.org> package.mask:
   mask >=media-libs/sdl-ttf-2.0.11-r1 for multilib conversion
