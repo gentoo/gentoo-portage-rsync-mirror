@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.117 2014/04/11 16:32:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.118 2014/04/18 05:43:55 maekke Exp $
+
+  18 Apr 2014; Markus Meier <maekke@gentoo.org> eselect-emacs-1.16.ebuild:
+  arm stable, bug #507272
 
   11 Apr 2014; Jeroen Roovers <jer@gentoo.org> eselect-emacs-1.16.ebuild:
   Stable for HPPA (bug #507272).

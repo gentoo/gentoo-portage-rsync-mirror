@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-taskmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.71 2014/04/17 07:50:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.72 2014/04/18 05:46:20 maekke Exp $
+
+  18 Apr 2014; Markus Meier <maekke@gentoo.org> xfce4-taskmanager-1.0.1.ebuild:
+  arm stable, bug #507432
 
   17 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   xfce4-taskmanager-1.0.0-r1.ebuild, xfce4-taskmanager-1.0.1.ebuild:
