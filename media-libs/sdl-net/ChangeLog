@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/sdl-net
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.46 2012/07/16 15:43:45 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/ChangeLog,v 1.48 2014/04/18 20:25:38 hasufell Exp $
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> sdl-net-1.2.8-r1.ebuild:
+  add emul-blocker
+
+*sdl-net-1.2.8-r1 (18 Apr 2014)
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> +sdl-net-1.2.8-r1.ebuild:
+  add multilib support
 
   16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> -sdl-net-1.2.7.ebuild:
   old
