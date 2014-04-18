@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0-r1.ebuild,v 1.3 2013/11/23 19:31:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0-r1.ebuild,v 1.4 2014/04/18 12:27:12 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="gog"
 REQUIRED_USE="^^ ( cdinstall gog )"
-RESTRICT="gog? ( fetch )"
+RESTRICT="mirror bindist gog? ( fetch )"
 
 DEPEND="gog? ( app-arch/innoextract )"
 RDEPEND="|| ( games-fps/eduke32 games-fps/duke3d )"
