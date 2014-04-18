@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4-r1.ebuild,v 1.1 2014/04/18 13:21:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4-r1.ebuild,v 1.2 2014/04/18 14:31:03 hasufell Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -23,7 +23,7 @@ RDEPEND="sys-libs/ncurses
 	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-		!<=app-emulation/emul-linux-x86-baselibs-20131008-r19
+		!<=app-emulation/emul-linux-x86-baselibs-20140406-r1
 	)"
 DEPEND="${RDEPEND}"
 
