@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.3.0.ebuild,v 1.2 2014/04/13 17:56:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.3.0.ebuild,v 1.3 2014/04/18 13:40:26 polynomial-c Exp $
 
 EAPI=5
 PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl he_IL hr hu it ja
@@ -21,11 +21,11 @@ IUSE="debug"
 
 DEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4"
-MPLAYER_USE="[bidi(+),libass,png,X]"
+COMMON_USE="libass,png,X"
 RDEPEND="${DEPEND}
 	|| (
-		media-video/mplayer${MPLAYER_USE}
-		media-video/mplayer2${MPLAYER_USE}
+		media-video/mplayer[bidi,${COMMON_USE}]
+		media-video/mplayer2[${COMMON_USE}]
 	)"
 
 src_prepare() {

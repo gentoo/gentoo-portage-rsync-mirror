@@ -4,10 +4,10 @@ DESCRIPTION=GTK+2 bindings for Python
 EAPI=5
 HOMEPAGE=http://www.pygtk.org/
 IUSE=doc examples test python_targets_python2_6 python_targets_python2_7 test
-KEYWORDS=~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.8:2 >=x11-libs/pango-1.16 >=dev-libs/atk-1.12 >=x11-libs/gtk+-2.24:2 >=dev-python/pycairo-1.0.2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=dev-python/pygobject-2.26.8-r53:2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=gnome-base/libglade-2.5:2.0
 SLOT=2
 SRC_URI=mirror://gnome/sources/pygtk/2.24/pygtk-2.24.0.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	f6a00e248ffeb4404b67a7a7645446c5	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=509c0fdca75d6d457c723817c57cc723
+_md5_=d5086b3c6bdc9e818ba5ad720eb8921d

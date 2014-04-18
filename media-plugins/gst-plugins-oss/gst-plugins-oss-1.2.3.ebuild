@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/gst-plugins-oss-1.2.3.ebuild,v 1.7 2014/04/17 07:49:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/gst-plugins-oss-1.2.3.ebuild,v 1.8 2014/04/18 13:57:23 ago Exp $
 
 EAPI="5"
 
 inherit gst-plugins-good
 
 DESCRIPTION="GStreamer plugin for OSS (Open Sound System) support"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd"
 IUSE=""
 
 RDEPEND=""

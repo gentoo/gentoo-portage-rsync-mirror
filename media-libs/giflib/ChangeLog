@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/giflib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.72 2013/11/10 04:14:36 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.73 2014/04/18 13:37:22 hasufell Exp $
+
+*giflib-5.0.5-r1 (18 Apr 2014)
+*giflib-4.2.3-r1 (18 Apr 2014)
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> +giflib-4.2.3-r1.ebuild,
+  +giflib-5.0.5-r1.ebuild:
+  add multilib support wrt #496548, patch by Michael Mair-Keimberger
 
 *giflib-5.0.5 (10 Nov 2013)
 

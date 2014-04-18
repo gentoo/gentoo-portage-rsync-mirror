@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.61 2014/03/09 00:41:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.62 2014/04/18 13:55:29 ago Exp $
+
+  18 Apr 2014; Agostino Sarubbo <ago@gentoo.org> p11-kit-0.20.2.ebuild:
+  Stable for alpha, wrt bug #507568
 
   09 Mar 2014; Alon Bar-Lev <alonbl@gentoo.org> p11-kit-0.20.2-r1.ebuild:
   Disable unsafe tests, bug#502088

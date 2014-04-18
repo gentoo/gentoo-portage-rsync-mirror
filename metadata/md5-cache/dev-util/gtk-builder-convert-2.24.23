@@ -4,11 +4,11 @@ DESCRIPTION=Converts Glade files to GtkBuilder XML format
 EAPI=5
 HOMEPAGE=http://www.gtk.org/
 IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
-KEYWORDS=~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2+
 RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !<=x11-libs/gtk+-2.24.10:2
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gtk+/2.24/gtk+-2.24.23.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=92b39778f9cf264ed734c2dac6301478
+_md5_=c1ea55998f95393bc3ea0593dd9477a9

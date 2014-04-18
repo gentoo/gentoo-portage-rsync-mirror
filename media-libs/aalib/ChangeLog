@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/aalib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.49 2013/05/08 09:49:06 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.50 2014/04/18 13:46:37 hasufell Exp $
+
+*aalib-1.4_rc5-r6 (18 Apr 2014)
+
+  18 Apr 2014; Julian Ospald <hasufell@gentoo.org> +aalib-1.4_rc5-r6.ebuild:
+  add multilib support wrt #497774, patch by Michael Mair-Keimberger
 
   08 May 2013; Anthony G. Basile <blueness@gentoo.org> aalib-1.4_rc5.ebuild:
   Fix missing eautoreconf, bug #467988, comment #4

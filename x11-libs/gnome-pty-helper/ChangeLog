@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.52 2014/04/17 07:49:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.53 2014/04/18 13:58:01 ago Exp $
+
+  18 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gnome-pty-helper-0.34.9.ebuild:
+  Stable for alpha, wrt bug #507568
 
   17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gnome-pty-helper-0.34.9.ebuild:
   Stable for ia64, wrt bug #507568
