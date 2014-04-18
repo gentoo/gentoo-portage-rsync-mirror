@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.151 2014/04/03 08:59:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.152 2014/04/18 06:11:27 graaff Exp $
+
+*rake-10.2.2 (18 Apr 2014)
+
+  18 Apr 2014; Hans de Graaff <graaff@gentoo.org> +rake-10.2.2.ebuild:
+  Version bump, fixing bug 445802. Ebuild from the ruby overlay thanks to
+  Michel Boaventura and mrueg.
 
   03 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -rake-0.8.7-r6.ebuild,
   -rake-0.8.7-r7.ebuild, -rake-0.9.2.2.ebuild, rake-0.9.6-r1.ebuild:
