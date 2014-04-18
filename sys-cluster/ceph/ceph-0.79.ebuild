@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.78.ebuild,v 1.1 2014/03/29 22:43:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.79.ebuild,v 1.1 2014/04/17 23:51:20 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,7 +24,7 @@ HOMEPAGE="http://ceph.com/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="cryptopp debug fuse gtk libatomic +libaio +nss radosgw static-libs tcmalloc"
+IUSE="cryptopp debug fuse gtk libatomic +libaio libxfs libzfs +nss radosgw static-libs tcmalloc"
 
 CDEPEND="
 	app-arch/snappy
@@ -40,6 +40,8 @@ CDEPEND="
 	dev-libs/libxml2
 	fuse? ( sys-fs/fuse )
 	libatomic? ( dev-libs/libatomic_ops )
+	libxfs? ( sys-fs/xfsprogs )
+	libzfs? ( sys-fs/zfs )
 	gtk? (
 		x11-libs/gtk+:2
 		dev-cpp/gtkmm:2.4
@@ -70,16 +72,18 @@ REQUIRED_USE="
 
 STRIP_MASK="/usr/lib*/rados-classes/*"
 
-PATCHES=( "${FILESDIR}"/${PN}-fix-gnustack.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-fix-gnustack.patch
+	"${FILESDIR}"/${P}-libzfs.patch
+)
 
 pkg_setup() {
 	python-any-r1_pkg_setup
 }
 
 src_prepare() {
-	if [ ! -z ${PATCHES[@]} ]; then
-		epatch ${PATCHES[@]}
-	fi
+	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
+
 	sed -e "/bin=/ s:lib:$(get_libdir):" "${FILESDIR}"/${PN}.initd \
 		> "${T}"/${PN}.initd || die
 
@@ -101,7 +105,9 @@ src_configure() {
 		$(use_with radosgw) \
 		$(use_with gtk gtk2) \
 		$(use_enable static-libs static) \
-		$(use_with tcmalloc)
+		$(use_with tcmalloc) \
+		$(use_with libxfs) \
+		$(use_with libzfs)
 }
 
 src_install() {

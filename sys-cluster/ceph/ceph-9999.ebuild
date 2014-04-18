@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-9999.ebuild,v 1.8 2014/01/26 08:40:49 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-9999.ebuild,v 1.9 2014/04/17 23:51:20 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,7 +24,7 @@ HOMEPAGE="http://ceph.com/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="cryptopp debug fuse gtk libatomic +libaio +nss radosgw static-libs tcmalloc"
+IUSE="cryptopp debug fuse gtk libatomic +libaio libxfs libzfs +nss radosgw static-libs tcmalloc"
 
 CDEPEND="
 	app-arch/snappy
@@ -40,6 +40,8 @@ CDEPEND="
 	dev-libs/libxml2
 	fuse? ( sys-fs/fuse )
 	libatomic? ( dev-libs/libatomic_ops )
+	libxfs? ( sys-fs/xfsprogs )
+	libzfs? ( sys-fs/zfs )
 	gtk? (
 		x11-libs/gtk+:2
 		dev-cpp/gtkmm:2.4
@@ -60,9 +62,6 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	sys-apps/hdparm
-	sys-block/parted
-	sys-fs/cryptsetup
-	sys-fs/btrfs-progs
 	$(python_gen_any_dep '
 	dev-python/flask[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
@@ -78,9 +77,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if [ ! -z ${PATCHES[@]} ]; then
-		epatch ${PATCHES[@]}
-	fi
+	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
+
 	sed -e "/bin=/ s:lib:$(get_libdir):" "${FILESDIR}"/${PN}.initd \
 		> "${T}"/${PN}.initd || die
 
@@ -102,7 +100,9 @@ src_configure() {
 		$(use_with radosgw) \
 		$(use_with gtk gtk2) \
 		$(use_enable static-libs static) \
-		$(use_with tcmalloc)
+		$(use_with tcmalloc) \
+		$(use_with libxfs) \
+		$(use_with libzfs)
 }
 
 src_install() {
@@ -132,4 +132,11 @@ src_install() {
 	#install udev rules
 	udev_dorules udev/50-rbd.rules
 	udev_dorules udev/95-ceph-osd.rules
+}
+
+pkg_postinst() {
+	elog "We suggest to install following packages"
+	elog " sys-block/parted		to manage disk partions"
+	elog " sys-fs/btrfs-progs	to use btrfs filesytem"
+	elog " sys-fs/cryptsetup	to use encrypted devices with dm-crypt"
 }
