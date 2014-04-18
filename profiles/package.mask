@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15574 2014/04/18 14:49:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15576 2014/04/18 15:21:53 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -432,6 +432,8 @@ dev-libs/libgcrypt:11
 >=media-libs/giflib-4.2.3-r1
 >=media-libs/aalib-1.4_rc5-r6
 >=media-libs/imlib-1.9.15-r4
+=media-libs/imlib2-1.4.6-r2
+>=media-libs/imlib2-9999-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE Desktop Environment >=1.7 introduction mask:
