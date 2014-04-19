@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/ChangeLog,v 1.17 2013/11/06 23:14:49 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/ChangeLog,v 1.18 2014/04/19 16:26:21 dilfridge Exp $
+
+*vmware-tools-9.6.2.1744117 (19 Apr 2014)
+
+  19 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -vmware-tools-8.4.9.744570.ebuild, -vmware-tools-8.8.4.744019.ebuild,
+  -vmware-tools-8.8.5.893925.ebuild, -vmware-tools-9.6.0.1295980.ebuild,
+  +vmware-tools-9.6.2.1744117.ebuild, metadata.xml:
+  Version bump; remove old; remove Matt from metadata
 
 *vmware-tools-9.6.1.1379776 (06 Nov 2013)
 
