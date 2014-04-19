@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.11.1.ebuild,v 1.4 2014/04/19 19:05:57 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.12.0.ebuild,v 1.1 2014/04/19 19:05:57 vikraman Exp $
 
 EAPI="5"
 
