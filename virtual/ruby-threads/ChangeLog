@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.32 2014/01/29 15:55:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.33 2014/04/19 03:02:17 mrueg Exp $
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-threads-0.ebuild:
+  Remove ruby18 ruby-threads virtual. See bug #434064.
 
   29 Jan 2014; Akinori Hattori <hattya@gentoo.org> ruby-threads-0.ebuild,
   ruby-threads-1.ebuild:

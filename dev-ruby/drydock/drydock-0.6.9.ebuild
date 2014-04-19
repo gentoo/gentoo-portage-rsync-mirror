@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/drydock/drydock-0.6.9.ebuild,v 1.1 2010/02/13 15:10:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/drydock/drydock-0.6.9.ebuild,v 1.2 2014/04/19 02:54:39 mrueg Exp $
 
-EAPI=2
+EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RESTRICT=test
