@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=sys-libs/libcap app-text/docbook-sgml-utils >=sys-kernel/linux-headers-3.2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=LinuX Containers userspace utilities
+EAPI=5
+HOMEPAGE=http://lxc.sourceforge.net/
+IUSE=examples
+KEYWORDS=~amd64 ~arm ~ppc64 ~x86
+LICENSE=LGPL-3
+RDEPEND=sys-libs/libcap sys-apps/util-linux app-misc/pax-utils >=sys-apps/openrc-0.9.9.1 virtual/awk
+SLOT=0
+SRC_URI=http://lxc.sourceforge.net/download/lxc/lxc-0.8.0.tar.gz http://dev.gentoo.org/~flameeyes/lxc/lxc-0.8.0-backports-1.tar.xz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=723c665fbb07f7811f275207ac59efd8

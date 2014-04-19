@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.1.ebuild,v 1.3 2014/04/19 15:10:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.1.ebuild,v 1.4 2014/04/19 17:12:38 vapier Exp $
 
 EAPI=5
 
@@ -239,7 +239,7 @@ src_prepare() {
 			epatch
 
 	# Fix ld and objcopy being called directly
-	tc-export LD OBJCOPY
+	tc-export AR LD OBJCOPY
 
 	# Verbose builds
 	MAKEOPTS+=" V=1"

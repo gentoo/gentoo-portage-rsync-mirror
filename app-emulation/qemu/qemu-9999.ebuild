@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.63 2014/04/19 15:10:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.64 2014/04/19 17:12:38 vapier Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PYTHON_REQ_USE="ncurses,readline"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python-r1 \
 	user udev fcaps readme.gentoo
 
-#BACKPORTS=49bdd50f
+BACKPORTS=
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
@@ -240,7 +240,7 @@ src_prepare() {
 			epatch
 
 	# Fix ld and objcopy being called directly
-	tc-export LD OBJCOPY
+	tc-export AR LD OBJCOPY
 
 	# Verbose builds
 	MAKEOPTS+=" V=1"
