@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-10.0.1.1379776.ebuild,v 1.3 2013/12/02 17:22:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-10.0.2.1744117.ebuild,v 1.1 2014/04/19 10:13:35 dilfridge Exp $
 
 EAPI="4"
 
@@ -40,6 +40,7 @@ RDEPEND="dev-cpp/cairomm
 	dev-libs/icu
 	dev-libs/expat
 	dev-libs/libaio
+	dev-libs/libgcrypt:0
 	dev-libs/libsigc++
 	dev-libs/libxml2
 	=dev-libs/openssl-0.9.8*
@@ -80,6 +81,7 @@ RDEPEND="dev-cpp/cairomm
 	x11-libs/libXrender
 	x11-libs/libXtst
 	x11-libs/pango
+	x11-libs/pangox-compat
 	x11-libs/startup-notification
 	x11-themes/hicolor-icon-theme
 	!app-emulation/vmware-player"

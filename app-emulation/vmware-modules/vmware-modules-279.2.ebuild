@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-279.1.ebuild,v 1.2 2013/11/23 14:05:03 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-279.2.ebuild,v 1.1 2014/04/19 10:10:25 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pax_kernel"
+IUSE="pax_kernel +vmci +vsock"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -31,6 +31,16 @@ pkg_setup() {
 	if kernel_is ge 2 6 37 && kernel_is lt 2 6 39; then
 		CONFIG_CHECK="${CONFIG_CHECK} BKL"
 	fi
+	if use vmci ; then
+		CONFIG_CHECK="${CONFIG_CHECK} !VMWARE_VMCI"
+	else
+		CONFIG_CHECK="${CONFIG_CHECK} VMWARE_VMCI"
+	fi
+	if use vsock ; then
+		CONFIG_CHECK="${CONFIG_CHECK} !VMWARE_VMCI_VSOCKETS"
+	else
+		CONFIG_CHECK="${CONFIG_CHECK} VMWARE_VMCI_VSOCKETS"
+	fi
 
 	linux-info_pkg_setup
 
@@ -38,7 +48,11 @@ pkg_setup() {
 
 	VMWARE_GROUP=${VMWARE_GROUP:-vmware}
 
-	VMWARE_MODULE_LIST="vmblock vmci vmmon vmnet vsock"
+	VMWARE_MODULE_LIST_ALL="vmblock vmmon vmnet vmci vsock"
+	VMWARE_MODULE_LIST="vmblock vmmon vmnet"
+	use vmci && VMWARE_MODULE_LIST="${VMWARE_MODULE_LIST} vmci"
+	use vsock && VMWARE_MODULE_LIST="${VMWARE_MODULE_LIST} vsock"
+
 	VMWARE_MOD_DIR="${PN}-${PVR}"
 
 	BUILD_TARGETS="auto-build KERNEL_DIR=${KERNEL_DIR} KBUILD_OUTPUT=${KV_OUT_DIR}"
@@ -53,7 +67,7 @@ pkg_setup() {
 
 src_unpack() {
 	cd "${S}"
-	for mod in ${VMWARE_MODULE_LIST}; do
+	for mod in ${VMWARE_MODULE_LIST_ALL}; do
 		tar -xf /opt/vmware/lib/vmware/modules/source/${mod}.tar
 	done
 }
@@ -76,6 +90,7 @@ src_install() {
 	local udevrules="${T}/60-vmware.rules"
 	cat > "${udevrules}" <<-EOF
 		KERNEL=="vmci",  GROUP="vmware", MODE=660
+		KERNEL=="vmw_vmci",  GROUP="vmware", MODE=660
 		KERNEL=="vmmon", GROUP="vmware", MODE=660
 		KERNEL=="vsock", GROUP="vmware", MODE=660
 	EOF

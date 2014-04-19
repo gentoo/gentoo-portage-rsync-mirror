@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.2-r1.ebuild,v 1.1 2014/04/18 07:25:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.2-r1.ebuild,v 1.3 2014/04/19 10:07:28 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://znc.in/releases/${PN}-${MY_PV}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm x86"
 fi
 
 HOMEPAGE="http://znc.in"

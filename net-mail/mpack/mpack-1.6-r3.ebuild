@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6-r3.ebuild,v 1.4 2012/12/21 13:33:49 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.6-r3.ebuild,v 1.5 2014/04/19 10:10:29 eras Exp $
 
 EAPI="3"
 
@@ -26,6 +26,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-compile.patch
 	epatch "${FILESDIR}"/${P}-paths.patch
 	epatch "${FILESDIR}"/${P}-cve-2011-4919.patch
+
+	epatch "${FILESDIR}"/${P}-clang.patch
 
 	eautoreconf
 }

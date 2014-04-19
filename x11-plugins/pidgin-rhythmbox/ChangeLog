@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-rhythmbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.9 2011/01/05 15:23:25 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.10 2014/04/19 10:20:11 pacho Exp $
+
+  19 Apr 2014; Pacho Ramos <pacho@gentoo.org> pidgin-rhythmbox-2.0.ebuild:
+  Move to testing for sparc (#508064)
 
   05 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
   pidgin-rhythmbox-2.0.ebuild:
@@ -30,4 +33,3 @@
 
   01 May 2007; Olivier Crête <tester@gentoo.org> ChangeLog:
   Add continuation of x11-plugins/gaim-rhythmbox
-

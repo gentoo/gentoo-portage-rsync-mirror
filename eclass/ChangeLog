@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1212 2014/04/17 20:28:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1213 2014/04/19 10:29:06 mgorny Exp $
+
+  19 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Support substituting ${PYTHON_USEDEP} in python_gen_cond_dep().
 
   17 Apr 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Automatically switch to EGIT_CLONE_TYPE=single+tags for Google Code.

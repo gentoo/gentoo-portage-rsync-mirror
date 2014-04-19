@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.138 2014/04/18 18:32:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.140 2014/04/19 10:07:24 ago Exp $
+
+  19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> strongswan-5.1.3.ebuild:
+  Stable for x86, wrt bug #507722
+
+  19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> strongswan-5.1.3.ebuild:
+  Stable for amd64, wrt bug #507722
 
   18 Apr 2014; Patrick McLean <chutzpah@gentoo.org> strongswan-5.1.3.ebuild:
   Enable "constraints" USE flag by default.

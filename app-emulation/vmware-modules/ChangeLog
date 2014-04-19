@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.116 2014/04/12 20:13:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.117 2014/04/19 10:10:25 dilfridge Exp $
+
+*vmware-modules-279.2 (19 Apr 2014)
+
+  19 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -vmware-modules-279.0.ebuild, -vmware-modules-279.1.ebuild,
+  +vmware-modules-279.2.ebuild:
+  Version bump; remove old
 
 *vmware-modules-279.1-r1 (12 Apr 2014)
 
