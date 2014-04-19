@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.14 2013/12/30 12:55:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.15 2014/04/19 18:54:21 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -23,7 +23,7 @@ IUSE="dbus +X geoip"
 CDEPEND="dev-libs/boost
 	dev-qt/qtcore:4
 	net-libs/rb_libtorrent
-	>=dev-qt/qtsingleapplication-2.6.1_p20130904
+	>=dev-qt/qtsingleapplication-2.6.1_p20130904[X?]
 	X? ( dev-qt/qtgui:4 )
 
 	dbus? ( dev-qt/qtdbus:4 )"
