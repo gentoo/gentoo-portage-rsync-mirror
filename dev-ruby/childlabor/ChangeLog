@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/childlabor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.7 2014/03/11 20:10:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.8 2014/04/19 07:57:13 graaff Exp $
+
+  19 Apr 2014; Hans de Graaff <graaff@gentoo.org> childlabor-0.0.3-r1.ebuild:
+  Add ruby21. Avoid spec failing with portage.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> childlabor-0.0.3-r1.ebuild:
   ~x86 added, bug #487206

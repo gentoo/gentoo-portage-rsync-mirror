@@ -3,9 +3,10 @@ DESCRIPTION=High quality custom content addon for Neverwinter Nights
 EAPI=2
 HOMEPAGE=http://nwvault.ign.com/cep/
 KEYWORDS=-* amd64 x86
-LICENSE=as-is
+LICENSE=all-rights-reserved
 RDEPEND=>=games-rpg/nwn-1.68 games-misc/games-envd
+RESTRICT=mirror bindist
 SLOT=2
 SRC_URI=http://vnfiles.ign.com/nwvault.ign.com/fms/files/hakpaks/7000/CEPv2_full.rar
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=285ded162704e42a327e9b43b42f4c95
+_md5_=ebda3efde8560aeda0edfacfe8c454ea

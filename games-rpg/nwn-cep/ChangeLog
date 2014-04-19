@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn-cep
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.15 2012/10/07 11:26:09 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.16 2014/04/19 07:32:58 ulm Exp $
+
+  19 Apr 2014; Ulrich Müller <ulm@gentoo.org> nwn-cep-1.68-r1.ebuild,
+  nwn-cep-2.0.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 505734.
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> nwn-cep-1.68-r1.ebuild,
   nwn-cep-2.0.ebuild:

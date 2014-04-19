@@ -6,15 +6,6 @@
     <flag name="rubytests">
       Install ruby tests that can only be run after ruby is installed
     </flag>
-    <flag name="libedit">
-      Use the <pkg>dev-libs/libedit</pkg> library to provide the
-      readline extension, used for instance by the irb tool. This flag
-      will take precedence over the readline USE flag.
-
-      If neither libedit nor readline USE flags are enabled, the
-      readline extension will not be built (and irb will lose line
-      editing functionality).
-    </flag>
     <flag name="readline">
       Use the <pkg>sys-libs/readline</pkg> library to provide the
       readline extension, used for instance by the irb tool. This flag

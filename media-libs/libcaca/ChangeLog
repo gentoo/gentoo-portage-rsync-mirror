@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.112 2014/04/18 15:52:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.113 2014/04/19 07:32:39 patrick Exp $
+
+  19 Apr 2014; Patrick Lauer <patrick@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
+  Whitespace
 
 *libcaca-0.99_beta18-r2 (18 Apr 2014)
 
@@ -469,4 +472,3 @@
   14 Jan 2004; Martin Holzer <mholzer@gentoo.org> libcaca-0.2.ebuild:
   Initial Version submitted by Derk-Jan Hartman <thedj@users.sourceforge.net> 
   in 34965
-

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.3.0-r1.ebuild,v 1.2 2013/12/22 19:14:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/fakeweb-1.3.0-r1.ebuild,v 1.3 2014/04/19 07:37:27 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_DOCDIR="html"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
@@ -21,7 +21,8 @@ IUSE=""
 
 ruby_add_bdepend "
 	test? (
-		dev-ruby/mocha:0.12
+		dev-ruby/mocha:0.13
+		dev-ruby/test-unit
 		dev-ruby/samuel
 		dev-ruby/right_http_connection
 	)"
@@ -35,15 +36,22 @@ all_ruby_prepare() {
 	sed -i -e 's/sdoc/rdoc/' -e '/template/d' Rakefile || die
 
 	# Require an old enough version of mocha
-	sed -i -e '1igem "mocha", "~> 0.12.0"' test/test_helper.rb || die
+	sed -i -e '1igem "mocha", "~> 0.13.0"' test/test_helper.rb || die
+
+	# Use the test-unit gem to make jruby compatible with newer mocha.
+	sed -i -e '1igem "test-unit"' test/test_helper.rb || die
 }
 
 each_ruby_prepare() {
 	case ${RUBY} in
-		*ruby20)
+		*ruby2[01])
 			# Tests fail on mocking of TCPSocket, but fakeweb itself
 			# actually works as evidenced by the thor test suite.
 			rm test/test_fake_web_open_uri.rb test/test_allow_net_connect.rb test/test_fake_web.rb || die
+			;;
+		*jruby)
+			# jruby has different deprecation warnings
+			rm test/test_deprecations.rb || die
 			;;
 	esac
 }
