@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8851 2014/04/18 22:17:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8852 2014/04/19 14:40:51 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2014; Julian Ospald <hasufell@gentoo.org> targets/desktop/package.use:
+  prepare for media-video/mpv[sdl] wrt #506982
 
   18 Apr 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask updated emul-linux-x86-sdl.

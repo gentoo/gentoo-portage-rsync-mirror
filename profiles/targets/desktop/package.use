@@ -1,6 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.32 2014/03/27 22:18:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.33 2014/04/19 14:40:51 hasufell Exp $
+
+# Julian Ospald <hasufell@gentoo.org> (19 Apr 2014)
+# Overwrite default +sdl from desktop profile, since
+# this codepath is untested and should not be exposed
+# to regular desktop users wrt #506982
+media-video/mpv -sdl
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
 # Replaced by USE="udisks" in make.defaults for -r1 and higher
