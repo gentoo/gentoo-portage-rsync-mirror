@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r3.ebuild,v 1.11 2014/04/19 01:43:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r4.ebuild,v 1.1 2014/04/19 01:43:08 kumba Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/${P}.tar.gz"
 
 LICENSE="xc-radley"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses"
@@ -23,6 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-implicit-decl.patch
 	epatch "${FILESDIR}"/${P}-add-115200.patch
+	epatch "${FILESDIR}"/${P}-fix-set_bps-overflow.patch
 
 	sed -i \
 		-e "/^libdir/s:/lib/:/$(get_libdir)/:" \
