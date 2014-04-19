@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.39 2014/03/04 20:20:00 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.40 2014/04/19 13:23:40 polynomial-c Exp $
+
+  19 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
+  inotify-tools-3.14.ebuild:
+  Added ~sparc keyword.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   inotify-tools-3.14.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/inotify-tools-3.14.ebuild,v 1.8 2014/03/04 20:20:00 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/inotify-tools-3.14.ebuild,v 1.9 2014/04/19 13:23:40 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://github.com/downloads/rvoicilas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~mips x86"
+KEYWORDS="amd64 arm hppa ~mips ~sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
