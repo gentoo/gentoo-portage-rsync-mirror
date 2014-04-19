@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.27 2014/04/05 14:19:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.28 2014/04/19 09:08:07 graaff Exp $
+
+*erubis-2.7.0-r2 (19 Apr 2014)
+
+  19 Apr 2014; Hans de Graaff <graaff@gentoo.org> +erubis-2.7.0-r2.ebuild:
+  Add ruby21.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> erubis-2.7.0-r1.ebuild,
   erubis-2.7.0.ebuild:
