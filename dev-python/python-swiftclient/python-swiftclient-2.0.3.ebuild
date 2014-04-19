@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/python-swiftclient-2.0.2.ebuild,v 1.2 2014/03/19 23:05:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/python-swiftclient-2.0.3.ebuild,v 1.1 2014/04/19 04:12:03 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+		dev-python/pbr[${PYTHON_USEDEP}]
 	test? ( >=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 		>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.4.2[${PYTHON_USEDEP}]
@@ -28,8 +29,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( >=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			<dev-python/sphinx-1.2[${PYTHON_USEDEP}] ) )"
 RDEPEND=">=dev-python/simplejson-2.0.9[${PYTHON_USEDEP}]
-	>=dev-python/pbr-0.5[${PYTHON_USEDEP}]
-	<dev-python/pbr-0.6[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.1[${PYTHON_USEDEP}]"
 
 #PATCHES=( "${FILESDIR}/CVE-2013-6396.patch" )
