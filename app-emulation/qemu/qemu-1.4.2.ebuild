@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.2.ebuild,v 1.8 2014/03/24 17:39:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.2.ebuild,v 1.9 2014/04/19 15:10:50 vapier Exp $
 
 EAPI=5
 
@@ -203,8 +203,6 @@ pkg_pretend() {
 
 pkg_setup() {
 	enewgroup kvm 78
-
-	python_export_best
 }
 
 src_prepare() {
@@ -344,6 +342,8 @@ qemu_src_configure() {
 }
 
 src_configure() {
+	python_export_best
+
 	softmmu_targets=
 	user_targets=
 
