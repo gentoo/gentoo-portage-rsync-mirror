@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.28 2014/01/26 14:00:26 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.29 2014/04/19 03:03:03 mrueg Exp $
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-ssl-0.ebuild:
+  Remove ruby18 ruby-ssl virtual. See bug #434064.
 
   26 Jan 2014; Akinori Hattori <hattya@gentoo.org> ruby-ssl-3.ebuild:
   ia64 stable wrt bug #487004

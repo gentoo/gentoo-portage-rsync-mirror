@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ttfunk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.9 2014/02/25 09:14:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.10 2014/04/19 03:12:29 mrueg Exp $
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -ttfunk-1.1.0.ebuild,
+  ttfunk-1.0.3-r1.ebuild, ttfunk-1.1.1.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *ttfunk-1.1.1 (25 Feb 2014)
 

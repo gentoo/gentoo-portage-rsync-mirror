@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/slop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.25 2014/03/27 12:14:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.26 2014/04/19 03:17:57 mrueg Exp $
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -slop-3.4.6-r1.ebuild,
+  -slop-3.4.7.ebuild, slop-2.4.4-r1.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *slop-3.5.0 (27 Mar 2014)
 

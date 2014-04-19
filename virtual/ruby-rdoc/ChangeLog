@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-rdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.29 2014/01/26 13:06:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.30 2014/04/19 03:03:46 mrueg Exp $
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-rdoc-0.ebuild:
+  Remove ruby18 ruby-rdoc virtual. See bug #434064.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ruby-rdoc-3.ebuild:
   Stable for alpha, wrt bug #483254
