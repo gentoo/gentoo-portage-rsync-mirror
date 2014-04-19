@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.2.2.ebuild,v 1.2 2014/04/04 14:56:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.3.0.ebuild,v 1.1 2014/04/19 11:47:14 blueness Exp $
 
 EAPI=5
 
@@ -8,14 +8,14 @@ inherit autotools flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-SRC_URI="http://ck.kolivas.org/apps/cgminer/4.2/${P}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/4.2/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 
-HARDWARE="ants1 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer"
+HARDWARE="ants1 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer spondoolies"
 IUSE="doc examples udev hardened ncurses ${HARDWARE}"
 
 REQUIRED_USE="|| ( ${HARDWARE} )"
@@ -32,7 +32,8 @@ RDEPEND="net-misc/curl
 	hashfast? ( virtual/libusb:1 )
 	icarus? ( virtual/libusb:1 )
 	klondike? ( virtual/libusb:1 )
-	modminer? ( virtual/libusb:1 )"
+	modminer? ( virtual/libusb:1 )
+	spondoolies? ( virtual/libusb:1 )"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
@@ -59,7 +60,8 @@ src_configure() {
 		$(use_enable klondike) \
 		$(use_enable knc) \
 		$(use_enable minion) \
-		$(use_enable modminer)
+		$(use_enable modminer) \
+		$(use_enable spondoolies)
 	# sanitize directories (is this still needed?)
 	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/cgminer"'"~' config.h
 }

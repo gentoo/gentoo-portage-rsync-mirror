@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.3.0.ebuild,v 1.4 2012/07/29 16:42:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.3.0.ebuild,v 1.5 2014/04/19 11:50:37 idl0r Exp $
 
 EAPI="4"
 
 DESCRIPTION="Security and system auditing tool"
-HOMEPAGE="http://www.rootkit.nl/projects/lynis.html"
-SRC_URI="http://www.rootkit.nl/files/${P}.tar.gz"
+HOMEPAGE="http://cisofy.com/lynis/"
+SRC_URI="http://cisofy.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/lynis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.46 2014/04/11 18:38:30 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.47 2014/04/19 11:50:37 idl0r Exp $
+
+  19 Apr 2014; Christian Ruppert <idl0r@gentoo.org> lynis-1.3.0.ebuild,
+  lynis-1.5.0-r1.ebuild:
+  Fix HOMEPAGE and SRC_URI to pont to http://cisofy.com/lynis/
 
 *lynis-1.5.0-r1 (11 Apr 2014)
 

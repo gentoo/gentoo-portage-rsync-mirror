@@ -30,5 +30,6 @@
 		<flag name="modminer">Enable support for mining with ModMiner FPGAs</flag>
 		<flag name='opencl'>Enable support for mining with OpenCL-capable devices (GPUs)</flag>
 		<flag name='scrypt'>Enable support for scrypt mining algorithm</flag>
+		<flag name='spondoolies'>Enable support for Spondoolies</flag>
 	</use>
 </pkgmetadata>
