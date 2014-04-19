@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.5 2014/04/05 22:43:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.6 2014/04/19 18:11:20 mgorny Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 # Python2 only.
 DEPEND="${RDEPEND}
 	test? (
-		$(python_gen_cond_dep dev-python/egenix-mx-base[$(python_gen_usedep 'python2*')] 'python2*')
+		$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' 'python2*')
 		!dev-python/psycopg[-mxdatetime]
 	)
 	doc? ( dev-python/epydoc )"

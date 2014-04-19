@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.8-r1.ebuild,v 1.5 2014/03/31 20:30:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.8-r1.ebuild,v 1.6 2014/04/19 18:11:22 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -18,7 +18,7 @@ IUSE="test"
 
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep \
-		"dev-python/backports-ssl-match-hostname[$(python_gen_usedep 'python2*' pypy pypy2_0)]" \
+		'dev-python/backports-ssl-match-hostname[${PYTHON_USEDEP}]' \
 		python2* pypy pypy2_0)"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (

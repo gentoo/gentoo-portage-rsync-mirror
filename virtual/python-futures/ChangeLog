@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-futures
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.2 2014/04/03 02:02:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.3 2014/04/19 18:02:54 mgorny Exp $
+
+  19 Apr 2014; Michał Górny <mgorny@gentoo.org> python-futures-0.ebuild:
+  Use ${PYTHON_USEDEP} substitution support added to python_gen_cond_dep().
 
   03 Apr 2014; Tim Harder <radhermit@gentoo.org> python-futures-0.ebuild:
   Add python3_4 support.

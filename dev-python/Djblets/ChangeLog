@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Djblets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.22 2014/04/13 03:15:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.23 2014/04/19 18:18:50 kensington Exp $
+
+  19 Apr 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/exclude-tests.patch, -files/sample.rss:
+  Remove unused files.
 
 *Djblets-0.7.28 (13 Apr 2014)
 

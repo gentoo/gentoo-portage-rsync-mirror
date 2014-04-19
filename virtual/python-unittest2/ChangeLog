@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.25 2014/04/02 21:00:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.26 2014/04/19 18:02:56 mgorny Exp $
+
+  19 Apr 2014; Michał Górny <mgorny@gentoo.org> python-unittest2-1-r2.ebuild:
+  Use ${PYTHON_USEDEP} substitution support added to python_gen_cond_dep().
 
   02 Apr 2014; Patrick McLean <chutzpah@gentoo.org>
   python-unittest2-1-r2.ebuild:

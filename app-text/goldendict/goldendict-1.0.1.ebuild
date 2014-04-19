@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.9 2013/03/02 19:42:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.10 2014/04/19 18:17:22 maksbotan Exp $
 
-EAPI=4
+EAPI=5
 PLOCALES="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
 
 inherit l10n qt4-r2
@@ -21,6 +21,7 @@ RDEPEND="
 	media-libs/libogg
 	media-libs/libvorbis
 	sys-libs/zlib
+	x11-libs/libX11
 	x11-libs/libXtst
 	>=dev-qt/qtcore-4.5:4[exceptions,qt3support]
 	>=dev-qt/qtgui-4.5:4[exceptions,qt3support]
@@ -46,6 +47,9 @@ src_prepare() {
 
 	# do not install duplicates
 	sed -e '/[icon,desktop]s2/d' -i ${PN}.pro || die
+
+	# fix desktop file
+	sed -e '/^Categories=/s/;Applications$/;/' -i redist/${PN}.desktop || die
 }
 
 src_configure() {

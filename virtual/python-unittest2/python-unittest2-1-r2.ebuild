@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-1-r2.ebuild,v 1.7 2014/04/02 21:00:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-1-r2.ebuild,v 1.8 2014/04/19 18:02:56 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_{2,3,4}} pypy pypy2_0 )
@@ -18,6 +18,4 @@ IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	$(python_gen_cond_dep \
-		"dev-python/unittest2[$(python_gen_usedep python2_6)]" \
-		python2_6)"
+	$(python_gen_cond_dep 'dev-python/unittest2[${PYTHON_USEDEP}]' python2_6)"
