@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r2.ebuild,v 1.1 2014/04/12 22:03:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r2.ebuild,v 1.2 2014/04/19 01:04:09 floppym Exp $
 
 EAPI=5
 
@@ -32,7 +32,10 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0= )
 	gudev? ( dev-libs/glib:2=[${MULTILIB_USEDEP}] )
-	http? ( >=net-libs/libmicrohttpd-0.9.33:0= )
+	http? (
+		>=net-libs/libmicrohttpd-0.9.33:0=
+		ssl? ( >=net-libs/gnutls-3.1.4:0= )
+	)
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
 	kmod? ( >=sys-apps/kmod-15:0= )
 	lzma? ( app-arch/xz-utils:0=[${MULTILIB_USEDEP}] )
@@ -41,7 +44,6 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	qrcode? ( media-gfx/qrencode:0= )
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
-	ssl? ( >=net-libs/gnutls-3.1.4:0= )
 	xattr? ( sys-apps/attr:0= )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
@@ -167,6 +169,7 @@ multilib_src_configure() {
 		$(use_enable gcrypt)
 		$(use_enable gudev)
 		$(use_enable http microhttpd)
+		$(usex http $(use_enable ssl gnutls) --disable-gnutls)
 		$(use_enable introspection)
 		$(use_enable kdbus)
 		$(use_enable kmod)
@@ -178,7 +181,6 @@ multilib_src_configure() {
 		$(use_enable qrcode qrencode)
 		$(use_enable seccomp)
 		$(use_enable selinux)
-		$(use_enable ssl gnutls)
 		$(use_enable test tests)
 		$(use_enable xattr)
 

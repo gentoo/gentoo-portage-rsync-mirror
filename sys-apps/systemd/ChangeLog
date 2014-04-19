@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.247 2014/04/12 22:03:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.248 2014/04/19 01:04:09 floppym Exp $
+
+  19 Apr 2014; Mike Gilbert <floppym@gentoo.org> -systemd-212-r1.ebuild,
+  -systemd-212.ebuild, systemd-212-r2.ebuild, systemd-9999.ebuild:
+  Nest gnutls within http use flag, bug 508022 by Alexander Tsoy.
 
 *systemd-212-r2 (12 Apr 2014)
 
