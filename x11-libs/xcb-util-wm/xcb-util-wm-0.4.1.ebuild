@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/xcb-util-wm-0.4.1.ebuild,v 1.8 2014/04/17 07:52:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-wm/xcb-util-wm-0.4.1.ebuild,v 1.9 2014/04/19 17:47:44 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ EGIT_HAS_SUBMODULES=yes
 DESCRIPTION="X C-language Bindings sample implementations"
 HOMEPAGE="http://xcb.freedesktop.org/"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE="test"
 
 RDEPEND=">=x11-libs/xcb-util-0.3.9

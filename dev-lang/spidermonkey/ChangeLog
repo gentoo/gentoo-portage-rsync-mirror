@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.147 2014/04/18 13:55:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.148 2014/04/19 17:43:30 ago Exp $
+
+  19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> spidermonkey-17.0.0-r3.ebuild:
+  Stable for sparc, wrt bug #507568
 
   18 Apr 2014; Agostino Sarubbo <ago@gentoo.org> spidermonkey-17.0.0-r3.ebuild:
   Stable for alpha, wrt bug #507568

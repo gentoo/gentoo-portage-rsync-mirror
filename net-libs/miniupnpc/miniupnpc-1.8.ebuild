@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.8.ebuild,v 1.8 2014/01/07 13:45:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.8.ebuild,v 1.9 2014/04/19 18:00:10 hasufell Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_prepare() {
 # so we'll just stay with the Makefile for now.
 
 src_compile() {
-	tc-export CC
+	tc-export CC AR
 	emake upnpc-shared $(use static-libs && echo upnpc-static)
 }
 

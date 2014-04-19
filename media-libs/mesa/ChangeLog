@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.552 2014/04/18 13:58:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.553 2014/04/19 17:47:04 ago Exp $
+
+  19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> mesa-10.0.4.ebuild:
+  Stable for sparc, wrt bug #500368
 
   18 Apr 2014; Agostino Sarubbo <ago@gentoo.org> mesa-10.0.4.ebuild:
   Stable for alpha, wrt bug #500368
