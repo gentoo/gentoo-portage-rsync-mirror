@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.176 2014/03/28 03:52:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.177 2014/04/19 14:24:16 nimiux Exp $
+
+  19 Apr 2014; Chema Alonso <nimiux@gentoo.org> openal-1.15.1-r2.ebuild:
+  Stable for amd64 wrt bug #501496
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> openal-1.15.1-r2.ebuild:
   Stable for HPPA (bug #501496).
