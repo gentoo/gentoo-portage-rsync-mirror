@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/swaks
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.24 2013/04/03 07:25:08 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.25 2014/04/19 09:34:36 eras Exp $
+
+*swaks-20130209.0-r1 (19 Apr 2014)
+
+  19 Apr 2014; Eray Aslan <eras@gentoo.org> +swaks-20130209.0-r1.ebuild:
+  Fix pod syntax for perl-5.18 - bug #506598. Thanks to Denis Sokolovsky.  EAPI
+  bump.
 
   03 Apr 2013; Eray Aslan <eras@gentoo.org> -swaks-20120320.0.ebuild:
   Remove old

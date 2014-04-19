@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile config install postinst postrm prepare setup unpack
+DEPEND=>=media-video/vdr-1.6.0 media-libs/taglib virtual/ffmpeg[encode,mp3] >=dev-libs/tinyxml-2.6.1[stl] >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linuxtv-dvb-headers
+DESCRIPTION=VDR plugin: automatically record radio-channels and split it into tracks according to RadioText-Info
+EAPI=5
+HOMEPAGE=http://www.a-land.de/audiorecorder/
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2
+RDEPEND=>=media-video/vdr-1.6.0 media-libs/taglib virtual/ffmpeg[encode,mp3] >=dev-libs/tinyxml-2.6.1[stl] >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
+SLOT=0
+SRC_URI=http://www.zulu-entertainment.de/files/vdr-audiorecorder/vdr-audiorecorder-0.1.0-pre14.tgz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
+_md5_=7c47b907bf2148bbd7279a08b509ddd7
