@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.353 2014/04/14 12:16:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.355 2014/04/19 15:47:23 blueness Exp $
+
+  19 Apr 2014; Anthony G. Basile <blueness@gentoo.org> -curl-7.35.0-r1.ebuild:
+  Remove 7.35.0-r1 which was just used to test tests for bug #285669
+
+  19 Apr 2014; Anthony G. Basile <blueness@gentoo.org> curl-7.35.0-r1.ebuild,
+  curl-7.35.0.ebuild, curl-7.36.0.ebuild:
+  Depend on polarssl's subslots, bug #508106
 
   14 Apr 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Fix rtmp flag description, bug #501894
