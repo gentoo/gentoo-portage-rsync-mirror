@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/thor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.20 2014/04/05 14:35:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.21 2014/04/19 08:41:03 graaff Exp $
+
+*thor-0.19.1 (19 Apr 2014)
+
+  19 Apr 2014; Hans de Graaff <graaff@gentoo.org> +thor-0.19.1.ebuild:
+  Version bump. Add ruby21.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> thor-0.14.6.ebuild,
   thor-0.15.2.ebuild, thor-0.18.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r3.ebuild,v 1.13 2013/04/13 20:59:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r3.ebuild,v 1.14 2014/04/19 08:57:35 eras Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib user
@@ -17,10 +17,9 @@ IUSE="berkdb crypt debug gdbm ldap mysql pam postgres sqlite static-libs vpopmai
 RESTRICT="userpriv
 	!berkdb? ( test )"
 
-RDEPEND="gdbm? ( sys-libs/gdbm )
-		!gdbm? ( sys-libs/db )"
-
-DEPEND="${RDEPEND}
+DEPEND="net-mail/mailbase
+		gdbm? ( sys-libs/gdbm )
+		!gdbm? ( sys-libs/db )
 		>=dev-libs/openssl-0.9.6
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
@@ -28,12 +27,12 @@ DEPEND="${RDEPEND}
 		postgres? ( >=dev-db/postgresql-base-8.4 )
 		sqlite? ( dev-db/sqlite:3 )"
 
+RDEPEND="${DEPEND}"
+
 # vpopmail support removed upstream
 REQUIRED_USE="( !vpopmail )"
 
 pkg_setup() {
-	enewuser mail -1 -1 /var/spool/mail
-
 	if ! has_version 'dev-tcltk/expect' ; then
 		ewarn 'The dev-tcltk/expect package is not installed.'
 		ewarn 'Without it, you will not be able to change system login passwords.'

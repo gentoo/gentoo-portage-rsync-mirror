@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.9.0.ebuild,v 1.1 2014/04/18 21:04:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.9.0.ebuild,v 1.2 2014/04/19 08:44:23 polynomial-c Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -16,7 +16,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="debug pch qt4 wxwidgets"
+IUSE="debug pch qt5 wxwidgets"
 
 RDEPEND="
 	>=dev-libs/libebml-1.3.0:=
@@ -29,9 +29,9 @@ RDEPEND="
 	sys-apps/file
 	>=sys-devel/gcc-4.6
 	sys-libs/zlib
-	qt4? (
-		dev-qt/qtcore:4
-		dev-qt/qtgui:4
+	qt5? (
+		dev-qt/qtcore:5
+		dev-qt/qtgui:5
 	)
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 "
@@ -78,7 +78,7 @@ src_configure() {
 
 	econf \
 		$(use_enable debug) \
-		$(use_enable qt4 qt) \
+		$(use_enable qt5 qt) \
 		$(use_enable wxwidgets) \
 		$(usex pch "" --disable-precompiled-headers) \
 		${myconf} \
