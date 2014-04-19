@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/mastergear-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/ChangeLog,v 1.6 2007/02/21 23:23:43 peper Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/ChangeLog,v 1.7 2014/04/19 11:10:22 ulm Exp $
+
+  19 Apr 2014; Ulrich Müller <ulm@gentoo.org> mastergear-bin-2.0.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 505626.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.148 2014/04/12 20:51:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.149 2014/04/19 11:28:07 pacho Exp $
+
+  19 Apr 2014; Pacho Ramos <pacho@gentoo.org> telepathy-glib-0.24.0.ebuild:
+  We need to pull in net-im/telepathy-mission-control (#504744 by Johannes
+  Buchner)
 
 *telepathy-glib-0.24.0 (12 Apr 2014)
 

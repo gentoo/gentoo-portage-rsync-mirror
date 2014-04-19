@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/mastergear-bin-2.0.ebuild,v 1.4 2006/12/01 21:28:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/mastergear-bin-2.0.ebuild,v 1.5 2014/04/19 11:10:22 ulm Exp $
 
 inherit games
 
@@ -8,11 +8,11 @@ DESCRIPTION="SEGA Master System / Game Gear emulator"
 HOMEPAGE="http://fms.komkon.org/MG/"
 SRC_URI="http://fms.komkon.org/MG/MG${PV/\./}-Linux-80x86-bin.tar.Z"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="x11-libs/libXext
 	sys-libs/zlib"

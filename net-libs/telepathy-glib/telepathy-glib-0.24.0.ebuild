@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.24.0.ebuild,v 1.1 2014/04/12 20:51:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.24.0.ebuild,v 1.2 2014/04/19 11:28:07 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -38,6 +38,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
 	${PYTHON_DEPS}
+"
+# See bug 504744 for reference
+PDEPEND="
+	net-im/telepathy-mission-control
 "
 
 src_configure() {
