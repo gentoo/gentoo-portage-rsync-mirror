@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/libvirt-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.6 2014/01/25 18:17:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.7 2014/04/20 22:32:24 cardoe Exp $
+
+*libvirt-python-1.2.3 (20 Apr 2014)
+
+  20 Apr 2014; Doug Goldstein <cardoe@gentoo.org> +libvirt-python-1.2.3.ebuild:
+  Version bump
 
   25 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libvirt-python-1.2.1.ebuild:
   Stable for amd64, wrt bug #498534

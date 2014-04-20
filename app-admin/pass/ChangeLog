@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.9 2014/04/13 15:44:38 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.10 2014/04/20 22:36:41 zx2c4 Exp $
+
+  20 Apr 2014; Jason A. Donenfeld <zx2c4@gentoo.org> pass-9999.ebuild:
+  Use upstream makefile.
 
 *pass-1.5 (13 Apr 2014)
 

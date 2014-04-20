@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.5 2014/03/22 19:38:36 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.6 2014/04/20 22:36:41 zx2c4 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="http://git.zx2c4.com/password-store"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS=""
-IUSE="+git X zsh-completion fish-completion elibc_Darwin"
+IUSE="+git X +bash-completion zsh-completion fish-completion elibc_Darwin"
 
 RDEPEND="
 	app-crypt/gnupg
@@ -22,6 +22,7 @@ RDEPEND="
 	git? ( dev-vcs/git )
 	X? ( x11-misc/xclip )
 	elibc_Darwin? ( app-misc/getopt )
+	bash-completion? ( app-shells/bash-completion )
 	zsh-completion? ( app-shells/zsh )
 	fish-completion? ( app-shells/fish )
 "
@@ -43,21 +44,9 @@ src_compile() {
 }
 
 src_install() {
-	newbin src/password-store.sh pass
-	doman man/pass.1
-	dodoc README
-	newbashcomp src/completion/pass.bash-completion ${PN}
-	if use zsh-completion ; then
-		insinto /usr/share/zsh/site-functions
-		newins src/completion/pass.zsh-completion _pass
-	fi
-	if use fish-completion ; then
-		insinto /usr/share/fish/completions
-		newins src/completion/pass.fish-completion pass.fish
-	fi
-	if use elibc_Darwin ; then
-		insinto /usr/share/pass
-		newins src/platform/darwin.sh platform.sh
-	fi
-
+	local COMPS=( )
+	use bash-completion && COMPS+=( "FORCE_BASHCOMP=1" )
+	use zsh-completion && COMPS+=( "FORCE_ZSHCOMP=1" )
+	use fish-completion && COMPS+=( "FORCE_FISHCOMP=1" )
+	emake DESTDIR="${D}" "${COMPS[@]}" install
 }
