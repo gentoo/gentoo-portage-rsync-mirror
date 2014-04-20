@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.30 2014/04/05 22:01:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.31 2014/04/20 06:06:55 graaff Exp $
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> rack-test-0.6.2-r1.ebuild:
+  Add ruby21.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -rack-test-0.6.2.ebuild,
   rack-test-0.6.2-r1.ebuild:

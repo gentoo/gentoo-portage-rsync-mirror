@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.28 2014/04/05 14:20:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.29 2014/04/20 06:24:29 graaff Exp $
+
+*fast_xs-0.8.0-r2 (20 Apr 2014)
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> +fast_xs-0.8.0-r2.ebuild:
+  Add ruby21. Avoid hoe for document building.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> fast_xs-0.8.0-r1.ebuild,
   fast_xs-0.8.0.ebuild:
