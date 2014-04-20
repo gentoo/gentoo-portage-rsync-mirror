@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/nagios-check_openvpn-simple
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_openvpn-simple/ChangeLog,v 1.1 2014/04/20 01:19:03 mjo Exp $
+
+*nagios-check_openvpn-simple-0.0.1 (20 Apr 2014)
+
+  20 Apr 2014; Michael Orlitzky <mjo@gentoo.org> +metadata.xml,
+  +nagios-check_openvpn-simple-0.0.1.ebuild:
+  New package: net-analyzer/nagios-check_openvpn-simple, a nagios plugin to
+  check if OpenVPN is running. Fixes bug #484058.
