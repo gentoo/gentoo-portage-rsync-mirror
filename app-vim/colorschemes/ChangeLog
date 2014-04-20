@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/colorschemes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.80 2013/10/21 11:53:12 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.81 2014/04/20 10:22:30 ulm Exp $
+
+  20 Apr 2014; Ulrich Müller <ulm@gentoo.org> colorschemes-20130124.ebuild:
+  Add vim.org to LICENSE, bug 448324.
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> colorschemes-20130124.ebuild:
   Marked ~x64-macos, bug #486818

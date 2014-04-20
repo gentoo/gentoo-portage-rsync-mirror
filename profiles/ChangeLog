@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8852 2014/04/19 14:40:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8853 2014/04/20 10:20:13 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Apr 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Required lightdm-1.4.X versions have been restored. Bug #507358
 
   19 Apr 2014; Julian Ospald <hasufell@gentoo.org> targets/desktop/package.use:
   prepare for media-video/mpv[sdl] wrt #506982

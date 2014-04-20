@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.11.0.ebuild,v 1.1 2014/02/25 06:47:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.11.0.ebuild,v 1.2 2014/04/20 10:20:53 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
@@ -33,7 +33,7 @@ ruby_add_bdepend "test? (
 		dev-ruby/json
 		dev-ruby/rack-test
 		=dev-ruby/coffee-script-2*
-		=dev-ruby/execjs-1*
+		=dev-ruby/execjs-2*
 		=dev-ruby/sass-3* >=dev-ruby/sass-3.1
 	)"
 
@@ -49,4 +49,21 @@ all_ruby_prepare() {
 	# Avoid test breaking on specific javascript error being thrown,
 	# most likely due to using node instead of v8.
 	sed -i -e '/bundled asset cached if theres an error/,/^  end/ s:^:#:' test/test_environment.rb || die
+
+	# Require a newer version of execjs since we do not have this slotted.
+	sed -i -e '/execjs/ s/1.0/2.0/' ${RUBY_FAKEGEM_GEMSPEC} || die
+}
+
+each_ruby_prepare() {
+	sed -i -e "s:ruby:${RUBY}:" test/test_sprocketize.rb || die
+}
+
+each_ruby_test() {
+	# Make sure we have completely separate copies. Hardlinks won't work
+	# for this test suite.
+	cp -R test test-new || die
+	rm -rf test || die
+	mv test-new test || die
+
+	each_fakegem_test
 }
