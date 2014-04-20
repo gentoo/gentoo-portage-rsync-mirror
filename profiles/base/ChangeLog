@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.674 2014/04/19 23:45:50 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.676 2014/04/20 12:23:46 hwoarang Exp $
+
+  20 Apr 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Mask media-video/rtmpdump[polarssl] because it fails to build with recent
+  polarssl (>=1.3). Bug #503604
 
   19 Apr 2014; Richard Freeman <rich0@gentoo.org> package.use.stable.mask:
   Stable mask media-plugins/mythplugins[mythweather] - 508198/471536.

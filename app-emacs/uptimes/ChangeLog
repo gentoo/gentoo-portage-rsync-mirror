@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/uptimes
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/ChangeLog,v 1.24 2014/04/20 11:19:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/ChangeLog,v 1.25 2014/04/20 12:28:29 ulm Exp $
+
+  20 Apr 2014; Ulrich Müller <ulm@gentoo.org> -uptimes-2.3-r1.ebuild,
+  -files/51uptimes-gentoo.el:
+  Remove old.
 
   20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> uptimes-2.3-r2.ebuild:
   Stable for ppc64, wrt bug #504838

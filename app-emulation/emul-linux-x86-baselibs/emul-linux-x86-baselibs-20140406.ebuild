@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406.ebuild,v 1.1 2014/04/06 09:02:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406.ebuild,v 1.2 2014/04/20 12:19:03 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -15,6 +15,9 @@ IUSE="abi_x86_32"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
+	!abi_x86_32? (
+		!>=app-arch/xz-utils-5.0.5-r1[abi_x86_32(-)]
+	)
 	abi_x86_32? (
 		>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
 		>=app-arch/bzip2-1.0.6-r4[abi_x86_32(-)]
@@ -64,6 +67,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=dev-libs/lzo-2.06-r1[abi_x86_32(-)]
 		>=dev-libs/libxslt-1.1.28-r2[abi_x86_32(-)]
 		>=sys-apps/file-5.18-r1[abi_x86_32(-)]
+		>=app-arch/xz-utils-5.0.5-r1[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 
