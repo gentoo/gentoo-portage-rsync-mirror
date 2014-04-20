@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.48 2014/04/20 11:49:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.49 2014/04/20 17:03:07 mrueg Exp $
+
+  20 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/mime-types-1.18-linux-tests.patch, -mime-types-1.19.ebuild:
+  Cleanup old.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org> mime-types-1.25.1.ebuild:
   Add ruby21.
