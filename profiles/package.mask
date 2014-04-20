@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15593 2014/04/20 10:20:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15594 2014/04/20 15:44:06 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -527,22 +527,9 @@ net-analyzer/ethstatus
 # Masked for testing
 =media-sound/lilypond-2.19*
 
-# Mike Gilbert <floppym@gentoo.org> (29 Jan 2014)
-# I suspect this package is not used. If you are using it, please contact me.
-# Otherwise, it will be removed in 30 days.
-dev-python/mozrunner
-dev-python/mozinfo
-dev-python/mozprofile
-dev-python/mozprocess
-dev-python/mozfile
-
 # Ole Markus With <olemarkus@gentoo.org> (28 Jan 2014)
 # PHP 5.6 still in early development
 >=dev-lang/php-5.6
-
-# Mike Gilbert <floppym@gentoo.org> (26 Jan 2014)
-# Python library that has no reverse deps. Removal in 30 days.
-dev-python/certifi
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Jan 2014)
 # Roll ~arch version back from .so.9 to .so.8 due to too many unresolved issues.

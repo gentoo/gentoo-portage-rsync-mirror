@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.676 2014/04/20 12:23:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.677 2014/04/20 15:44:05 rich0 Exp $
+
+  20 Apr 2014; Richard Freeman <rich0@gentoo.org> package.use.stable.mask:
+  Removing mythplugins stable mask - DateTime is now stable on relevant archs.
 
   20 Apr 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Mask media-video/rtmpdump[polarssl] because it fails to build with recent
