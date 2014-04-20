@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.24 2014/03/15 18:42:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.25 2014/04/20 19:45:26 tetromino Exp $
 
 # For eautoreconf in =app-crypt/seahorse-3.10.2-r1
 app-crypt/gcr vala
@@ -63,6 +63,9 @@ net-misc/spice-gtk gtk3
 # In >=curl-7.25.0-r1, need CURL_SSL="-gnutls nss -openssl"
 net-misc/curl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl -gnutls nss
 dev-python/pycurl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl
+
+# for gnome-extra/gnome-user-share
+www-servers/apache apache2_modules_dav apache2_modules_dav_fs apache2_modules_authn_file apache2_modules_auth_digest apache2_modules_authz_groupfile
 
 # Required by app-admin/sabayon
 x11-base/xorg-server kdrive
