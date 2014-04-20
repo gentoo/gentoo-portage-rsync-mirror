@@ -1,6 +1,12 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.41 2014/04/10 18:48:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.42 2014/04/20 09:47:40 yngwin Exp $
+
+*qupzilla-1.6.5 (20 Apr 2014)
+
+  20 Apr 2014; Ben de Groot <yngwin@gentoo.org>
+  +files/qupzilla-1.6.5-plugins-version-check-fix.patch, +qupzilla-1.6.5.ebuild:
+  Version bump (bug #508000)
 
 *qupzilla-1.6.3-r1 (10 Apr 2014)
 
