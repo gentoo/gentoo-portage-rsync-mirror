@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.673 2014/04/12 17:29:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.674 2014/04/19 23:45:50 rich0 Exp $
+
+  19 Apr 2014; Richard Freeman <rich0@gentoo.org> package.use.stable.mask:
+  Stable mask media-plugins/mythplugins[mythweather] - 508198/471536.
 
   12 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   Mask marble python bindings in future releases

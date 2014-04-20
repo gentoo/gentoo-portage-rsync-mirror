@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.11 2014/04/05 18:49:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.12 2014/04/19 23:45:50 rich0 Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Richard Freeman <rich0@gentoo.org> (19 Apr 2014)
+# >dev-perl/DateTime-1 is not stable - bug 508198
+media-plugins/mythplugins mythweather
 
 # Agostino Sarubbo <ago@gentoo.org> (31 Aug 2013)
 # Clang is not stable
