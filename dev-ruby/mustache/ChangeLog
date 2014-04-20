@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.30 2014/04/05 13:55:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.31 2014/04/20 07:03:25 graaff Exp $
+
+*mustache-0.99.5-r1 (20 Apr 2014)
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> +mustache-0.99.5-r1.ebuild:
+  Add ruby21.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> mustache-0.99.4-r1.ebuild,
   mustache-0.99.4-r2.ebuild, mustache-0.99.5.ebuild:

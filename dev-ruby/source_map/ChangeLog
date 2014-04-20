@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/source_map
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/source_map/ChangeLog,v 1.4 2013/10/27 10:23:06 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/source_map/ChangeLog,v 1.5 2014/04/20 07:20:47 graaff Exp $
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> source_map-3.0.1.ebuild:
+  Add ruby21.
 
   27 Oct 2013; Hans de Graaff <graaff@gentoo.org> source_map-3.0.1.ebuild:
   Add ruby20.

@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/source_map/source_map-3.0.1.ebuild,v 1.4 2013/10/27 10:23:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/source_map/source_map-3.0.1.ebuild,v 1.5 2014/04/20 07:20:47 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
