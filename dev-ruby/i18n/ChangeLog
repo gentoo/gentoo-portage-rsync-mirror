@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.62 2014/04/18 08:54:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.63 2014/04/20 18:19:51 graaff Exp $
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> i18n-0.6.9-r1.ebuild:
+  Add back keywords to ruby20, ruby21 revision now that activesupport:3.2 is
+  also marked for these targets.
 
   18 Apr 2014; Hans de Graaff <graaff@gentoo.org> i18n-0.6.9-r1.ebuild:
   Add ruby21. Update test dependencies to make this work with all ruby targets.

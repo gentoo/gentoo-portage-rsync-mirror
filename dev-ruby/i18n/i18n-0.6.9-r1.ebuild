@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.3 2014/04/18 08:54:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9-r1.ebuild,v 1.4 2014/04/20 18:19:51 graaff Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://rails-i18n.org/"
 
 LICENSE="MIT"
 SLOT="0.6"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/activesupport

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.95 2014/04/18 09:41:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.96 2014/04/20 18:06:18 graaff Exp $
+
+*builder-3.0.4-r1 (20 Apr 2014)
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> +builder-3.0.4-r1.ebuild:
+  Add ruby20, ruby21.
 
   18 Apr 2014; Hans de Graaff <graaff@gentoo.org> builder-3.1.4.ebuild:
   Add ruby21.
