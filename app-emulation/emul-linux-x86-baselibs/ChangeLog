@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.196 2014/04/20 12:19:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.197 2014/04/20 16:46:26 mgorny Exp $
+
+  20 Apr 2014; Michał Górny <mgorny@gentoo.org> files/remove-native-20140406,
+  files/remove-native-20140406-r1, files/remove-native-20140406-r2:
+  Restore libmng.so.1 as required by emul-linux-x86-qtlibs. Thanks to tetromino
+  for reporting.
 
   20 Apr 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-baselibs-20140406-r1.ebuild,
