@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.26.ebuild,v 1.4 2014/02/19 08:51:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.27-r1.ebuild,v 1.1 2014/04/20 21:28:25 polynomial-c Exp $
 
 EAPI=5
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20121012"
-GENTOO_DEVELOPER="patrick"
-GENTOO_PATCHNAME="gentoo-apache-2.2.23"
+GENTOO_PATCHSTAMP="20140420"
+GENTOO_DEVELOPER="polynomial-c"
+GENTOO_PATCHNAME="gentoo-apache-2.2.27-r1"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="itk peruser prefork"
@@ -101,15 +101,6 @@ RDEPEND="${RDEPEND}
 	>=dev-libs/apr-1.4.5
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_mime? ( app-misc/mime-types )"
-
-# init script fixup - should be rolled into next tarball #389965
-src_prepare() {
-	apache-2_src_prepare
-	pushd "${GENTOO_PATCHDIR}" &>/dev/null || die
-	epatch "${FILESDIR}"/gentoo-apache-2.2.23-initd_fixups.patch
-	popd &>/dev/null || die
-	cp "${FILESDIR}"/2.2.22-envvars-std.in "${S}"/support/envvars-std.in || die "Failed to apply LD_PRELOAD fix"
-}
 
 src_configure() {
 	# Brain dead check.

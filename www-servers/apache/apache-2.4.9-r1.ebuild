@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.9.ebuild,v 1.1 2014/03/18 18:50:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.9-r1.ebuild,v 1.1 2014/04/20 21:28:25 polynomial-c Exp $
 
 EAPI=5
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20130801"
-GENTOO_DEVELOPER="kensington"
-GENTOO_PATCHNAME="gentoo-apache-2.4.4"
+GENTOO_PATCHSTAMP="20140420"
+GENTOO_DEVELOPER="polynomial-c"
+GENTOO_PATCHNAME="gentoo-apache-2.4.9-r1"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="itk peruser prefork"
@@ -138,21 +138,6 @@ pkg_setup() {
 	use ssl && MODULE_CRITICAL+=" socache_shmcb"
 	use doc && MODULE_CRITICAL+=" alias negotiation setenvif"
 	apache-2_pkg_setup
-}
-
-# init script fixup - should be rolled into next tarball #389965
-src_prepare() {
-	# the following patch can be removed once it is included in
-	# GENTOO_PATCHNAME="gentoo-apache-2.4.1" ...
-	if [ -f "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch" ]; then
-		cd "${GENTOO_PATCHDIR}" || die "Failed to cd to ${GENTOO_PATCHDIR}"
-		epatch "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch"
-		cd "${S}" || die "Failed to cd to ${S}"
-	fi
-	apache-2_src_prepare
-	pushd "${GENTOO_PATCHDIR}" &>/dev/null || die
-	epatch "${FILESDIR}"/gentoo-apache-2.2.23-initd_fixups.patch
-	popd &>/dev/null || die
 }
 
 src_configure() {

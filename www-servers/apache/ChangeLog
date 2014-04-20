@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.262 2014/04/20 09:51:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.263 2014/04/20 21:28:24 polynomial-c Exp $
+
+*apache-2.4.9-r1 (20 Apr 2014)
+*apache-2.2.27-r1 (20 Apr 2014)
+
+  20 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.2.26.ebuild,
+  +apache-2.2.27-r1.ebuild, -apache-2.4.9.ebuild, +apache-2.4.9-r1.ebuild:
+  Revbump fixing bug #506924 and bug #507324. Removed old.
 
   20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> apache-2.2.27.ebuild:
   Stable for amd64, wrt bug #507866

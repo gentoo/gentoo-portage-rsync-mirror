@@ -9,6 +9,6 @@ LICENSE=Apache-2.0 Apache-1.1
 PDEPEND=~app-admin/apache-tools-2.4.9
 RDEPEND=>=dev-libs/apr-1.5.0 >=dev-libs/openssl-0.9.8m apache2_modules_mime? ( app-misc/mime-types ) dev-lang/perl =dev-libs/apr-1* =dev-libs/apr-util-1*[ldap?] dev-libs/libpcre ldap? ( =net-nds/openldap-2* ) selinux? ( sec-policy/selinux-apache ) ssl? ( >=dev-libs/openssl-0.9.8f ) !=www-servers/apache-1*
 SLOT=2
-SRC_URI=mirror://apache/httpd/httpd-2.4.9.tar.bz2 http://dev.gentoo.org/~kensington/dist/apache/gentoo-apache-2.4.4-20130801.tar.bz2
+SRC_URI=mirror://apache/httpd/httpd-2.4.9.tar.bz2 http://dev.gentoo.org/~polynomial-c/dist/apache/gentoo-apache-2.4.9-r1-20140420.tar.bz2
 _eclasses_=apache-2	903dd3cd41cb0ad872a8320a6d55a216	autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	ssl-cert	b53367370fde96e19beca78050a47c61	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5353d1079d5b2f0ef656616206740f0a
+_md5_=7e1da5fbdd6e5fa83caf08bc53c16e0a
