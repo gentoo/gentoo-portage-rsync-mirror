@@ -4,10 +4,10 @@ DESCRIPTION=a compatibility layer for running WindowMaker dockapps on Xfce4.
 EAPI=5
 HOMEPAGE=http://goodies.xfce.org/projects/panel-plugins/xfce4-wmdock-plugin
 IUSE=debug
-KEYWORDS=~amd64 ~x86 ~x86-fbsd
+KEYWORDS=amd64 x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 >=x11-libs/libwnck-2.8.1:1 x11-libs/libX11
 SLOT=0
 SRC_URI=mirror://xfce/src/panel-plugins/xfce4-wmdock-plugin/0.6/xfce4-wmdock-plugin-0.6.0.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	20671cc91311ca7e3446047c1175cf16
-_md5_=5ebdf1d82a27127bfbc2bc451b3a6523
+_md5_=f8185ade6d52f3f35afb5e2cc6b0aab8

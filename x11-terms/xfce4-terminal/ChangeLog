@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xfce4-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xfce4-terminal/ChangeLog,v 1.18 2014/04/19 17:45:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xfce4-terminal/ChangeLog,v 1.20 2014/04/20 08:50:16 ago Exp $
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-terminal-0.6.3.ebuild:
+  Stable for x86, wrt bug #507432
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-terminal-0.6.3.ebuild:
+  Stable for amd64, wrt bug #507432
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-terminal-0.6.3.ebuild:
   Stable for sparc, wrt bug #507432

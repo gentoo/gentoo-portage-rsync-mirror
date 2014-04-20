@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/gigolo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.16 2014/01/31 16:01:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.18 2014/04/20 08:50:14 ago Exp $
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gigolo-0.4.2.ebuild:
+  Stable for x86, wrt bug #507432
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gigolo-0.4.2.ebuild:
+  Stable for amd64, wrt bug #507432
 
 *gigolo-0.4.2 (31 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.113 2014/04/19 17:45:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.114 2014/04/20 08:49:49 ago Exp $
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gdk-pixbuf-2.30.7.ebuild:
+  Stable for x86, wrt bug #507568
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gdk-pixbuf-2.30.7.ebuild:
   Stable for sparc, wrt bug #507568

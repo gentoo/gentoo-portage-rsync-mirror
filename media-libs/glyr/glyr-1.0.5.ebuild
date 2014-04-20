@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/glyr-1.0.5.ebuild,v 1.1 2014/03/02 19:02:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/glyr-1.0.5.ebuild,v 1.3 2014/04/20 08:50:10 ago Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/sahib/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-db/sqlite:3

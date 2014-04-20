@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.227 2014/04/19 18:54:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.228 2014/04/20 08:59:31 yngwin Exp $
+
+  20 Apr 2014; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Stepping down as maintainer since I no longer use this package
 
   19 Apr 2014; Markos Chandras <hwoarang@gentoo.org> qbittorrent-3.1.9.ebuild,
   qbittorrent-9999.ebuild:
