@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8855 2014/04/20 15:44:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8856 2014/04/20 18:32:05 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Apr 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Unmask the first set of gx86-multilib conversions.
 
   20 Apr 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
   Drop certifi and moz* masks after package removal.

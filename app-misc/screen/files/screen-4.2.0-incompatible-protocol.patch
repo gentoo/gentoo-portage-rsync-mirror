@@ -1,0 +1,23 @@
+From 14f23ca838b3d6daafbc23d14fa6aec13c382601 Mon Sep 17 00:00:00 2001
+From: Jürgen Weigert <jnweiger@gmail.com>
+Date: Fri, 18 Apr 2014 13:45:21 +0000
+Subject: incompatible protocol
+
+---
+diff --git a/src/screen.h b/src/screen.h
+index 5c93f32..e74d711 100644
+--- a/src/screen.h
++++ b/src/screen.h
+@@ -182,8 +182,9 @@ struct mode
+  * 					 A few revisions after 8147d08 incorrectly
+  * 					 carried version 1, but should have carried 2.
+  * 2:	screen version 4.1.0devel	(revisions 8b46d8a upto YYYYYYY)
++ * 3:	screen version 4.2.0		(was incorrectly originally. Patched here)
+  */
+-#define MSG_VERSION	2
++#define MSG_VERSION	3
+ 
+ #define MSG_REVISION	(('m'<<24) | ('s'<<16) | ('g'<<8) | MSG_VERSION)
+ struct msg
+--
+cgit v0.9.0.2

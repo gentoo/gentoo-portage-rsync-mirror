@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.190 2014/04/18 17:19:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.192 2014/04/20 18:37:01 polynomial-c Exp $
+
+  20 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -files/4.2.0-tinfo.patch:
+  Removed unused patch.
+
+*screen-4.2.0-r1 (20 Apr 2014)
+
+  20 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -screen-4.2.0.ebuild,
+  +screen-4.2.0-r1.ebuild, +files/screen-4.2.0-check_for_altscreen.patch,
+  +files/screen-4.2.0-incompatible-protocol.patch,
+  +files/screen-4.2.0-long_terminal_names.patch,
+  +files/screen-4.2.0-tgetent.patch:
+  Revbump adding latest upstream fixes. Removed old.
 
   18 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> screen-4.2.0.ebuild,
   +files/screen-4.2.0-nonethack_segfault_fix.patch:

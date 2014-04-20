@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15594 2014/04/20 15:44:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15595 2014/04/20 18:32:06 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -400,32 +400,10 @@ app-emacs/delicious
 # emul-linux bumps.
 #
 # Notes:
-# - yngwin explicitly requested 30 days + 1 version bump for cairo,
-# other packages are fine to unmask already
 # - always unmask in order, with emul-linux of choice and *all* packages
 # preceding it
 # - please update https://wiki.gentoo.org/wiki/Multilib_porting_status
 # (mark the packages as {{Yes|DONE}})
->=dev-libs/libgcrypt-1.6.1-r1
-dev-libs/libgcrypt:11
->=media-libs/libaacs-0.7.0-r1
->=media-libs/libbluray-0.5.0-r1
->=dev-libs/lzo-2.06-r1
->=app-emulation/emul-linux-x86-baselibs-20131008-r20
->=dev-libs/libxslt-1.1.28-r2
->=app-emulation/emul-linux-x86-baselibs-20131008-r21
->=x11-libs/cairo-1.12.16-r1
->=app-emulation/emul-linux-x86-gtklibs-20131008-r2
->=x11-libs/gdk-pixbuf-2.30.7-r1
->=app-emulation/emul-linux-x86-gtklibs-20131008-r3
->=media-gfx/graphite2-1.2.4-r1
->=media-libs/harfbuzz-0.9.26-r1
->=media-libs/libass-0.11
->=x11-libs/pango-1.36.3-r1
->=x11-libs/pangox-compat-0.0.2-r1
->=app-emulation/emul-linux-x86-gtklibs-20131008-r4
->=sys-apps/file-5.18-r1
->=app-emulation/emul-linux-x86-baselibs-20131008-r22
 >=sys-libs/slang-2.2.4-r1
 >=media-libs/giflib-4.2.3-r1
 >=app-emulation/emul-linux-x86-baselibs-20140406-r2

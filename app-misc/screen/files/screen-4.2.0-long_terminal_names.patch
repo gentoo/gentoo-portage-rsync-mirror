@@ -1,0 +1,69 @@
+From 44020241d033555e8e90fad3c88617dce1aed0bb Mon Sep 17 00:00:00 2001
+From: Amadeusz Sławiński <amade@asmblr.net>
+Date: Fri, 18 Apr 2014 14:01:21 +0000
+Subject: fix screen to run on terminals with long $TERM
+
+According to tic man page:
+Terminal names exceeding the maximum alias length
+(32 characters on systems with long filenames, 14 characters otherwise)
+will  be  truncated  to  the maximum alias length and a warning message
+will be printed.
+
+Signed-off-by: Amadeusz Sławiński <amade@asmblr.net>
+---
+diff --git a/src/display.h b/src/display.h
+index e8b3b80..a433e6d 100644
+--- a/src/display.h
++++ b/src/display.h
+@@ -73,7 +73,7 @@ struct display
+   struct win *d_other;		/* pointer to other window */
+   int   d_nonblock;		/* -1 don't block if obufmax reached */
+ 				/* >0: block after nonblock secs */
+-  char  d_termname[20 + 1];	/* $TERM */
++  char  d_termname[MAXTERMLEN + 1];	/* $TERM */
+   char	*d_tentry;		/* buffer for tgetstr */
+   char	d_tcinited;		/* termcap inited flag */
+   int	d_width, d_height;	/* width/height of the screen */
+diff --git a/src/os.h b/src/os.h
+index 5c17c83..f1d849c 100644
+--- a/src/os.h
++++ b/src/os.h
+@@ -45,6 +45,14 @@
+ #define NAME_MAX 14
+ #endif
+ 
++#if !defined(MAXTERMLEN)
++# if !defined(HAVE_LONG_FILE_NAMES)
++#  define MAXTERMLEN 14
++# else
++#  define MAXTERMLEN 32
++# endif
++#endif
++
+ #ifdef ISC
+ # ifdef ENAMETOOLONG
+ #  undef ENAMETOOLONG
+diff --git a/src/screen.h b/src/screen.h
+index e74d711..01d678a 100644
+--- a/src/screen.h
++++ b/src/screen.h
+@@ -203,7 +203,7 @@ struct msg
+ 	  int nargs;
+ 	  char line[MAXPATHLEN];
+ 	  char dir[MAXPATHLEN];
+-	  char screenterm[20];	/* is screen really "screen" ? */
++	  char screenterm[MAXTERMLEN];	/* is screen really "screen" ? */
+ 	}
+       create;
+       struct
+@@ -215,7 +215,7 @@ struct msg
+ 	  char preselect[20];
+ 	  int esc;		/* his new escape character unless -1 */
+ 	  int meta_esc;		/* his new meta esc character unless -1 */
+-	  char envterm[20 + 1];	/* terminal type */
++	  char envterm[MAXTERMLEN + 1];	/* terminal type */
+ 	  int encoding;		/* encoding of display */
+ 	  int detachfirst;      /* whether to detach remote sessions first */
+ 	}
+--
+cgit v0.9.0.2

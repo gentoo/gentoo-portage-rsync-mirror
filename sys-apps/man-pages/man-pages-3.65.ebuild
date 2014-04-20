@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.57.ebuild,v 1.2 2014/02/16 01:27:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.65.ebuild,v 1.1 2014/04/20 18:54:51 polynomial-c Exp $
 
-EAPI=3
+EAPI=4
 
 GENTOO_PATCH=2
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://kernel/linux/docs/man-pages/Archive/${P}.tar.xz
 
 LICENSE="man-pages GPL-2+ BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 IUSE_LINGUAS=" da de fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"
@@ -42,11 +42,11 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	emake install prefix="${EPREFIX}/usr" DESTDIR="${D}" || die
+	emake install prefix="${EPREFIX}/usr" DESTDIR="${D}"
 	dodoc man-pages-*.Announce README Changes*
 
 	# Override with Gentoo specific or additional Gentoo pages
 	cd "${WORKDIR}"/man-pages-gentoo
-	doman */* || die
+	doman */*
 	dodoc README.Gentoo
 }
