@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.46 2014/04/05 14:20:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.47 2014/04/20 11:24:00 ago Exp $
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> mime-types-1.23.ebuild:
+  Stable for ppc64, wrt bug #502272
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> mime-types-1.19.ebuild:
   Remove virtual/ruby-test-unit.

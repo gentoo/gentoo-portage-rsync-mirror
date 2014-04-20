@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.84 2014/04/13 16:24:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.85 2014/04/20 11:19:25 ago Exp $
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> pv-1.5.2.ebuild:
+  Stable for ppc64, wrt bug #504508
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> pv-1.5.2.ebuild:
   Stable for ppc, wrt bug #504508

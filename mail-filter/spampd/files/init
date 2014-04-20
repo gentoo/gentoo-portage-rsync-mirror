@@ -1,12 +1,12 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spampd/files/init,v 1.2 2004/07/14 22:29:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spampd/files/init,v 1.3 2014/04/20 11:11:35 eras Exp $
 
 # Note: spampd configuration file is /etc/conf.d/spampd
 
 depend() {
-	need net
+	use net
 }
 
 start() {

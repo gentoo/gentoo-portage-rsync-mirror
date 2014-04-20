@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.108 2014/04/19 11:59:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.109 2014/04/20 11:21:07 ago Exp $
+
+  20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> star-1.5.2.ebuild:
+  Stable for ppc64, wrt bug #505842
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> star-1.5.2.ebuild:
   Stable for alpha, wrt bug #505842
