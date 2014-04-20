@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.4.0.ebuild,v 1.4 2014/04/13 16:15:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.4.0.ebuild,v 1.5 2014/04/20 11:35:15 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/commons/validator/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/commons-digester-1.6:0

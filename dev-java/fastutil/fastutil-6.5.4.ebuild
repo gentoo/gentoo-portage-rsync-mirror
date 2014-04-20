@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-6.5.4.ebuild,v 1.5 2014/04/13 16:16:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-6.5.4.ebuild,v 1.6 2014/04/20 11:35:29 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://fastutil.dsi.unimi.it"
 
 LICENSE="Apache-2.0"
 SLOT="6.5"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
