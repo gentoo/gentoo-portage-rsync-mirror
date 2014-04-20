@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.71 2014/04/18 13:04:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.72 2014/04/20 12:38:29 hasufell Exp $
+
+  20 Apr 2014; Julian Ospald <hasufell@gentoo.org> mpv-0.3.8.ebuild,
+  mpv-9999.ebuild, metadata.xml:
+  add sdl USE flag wrt #506982
 
 *mpv-0.3.8 (18 Apr 2014)
 

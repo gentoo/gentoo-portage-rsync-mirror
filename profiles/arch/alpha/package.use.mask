@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.149 2014/04/12 10:18:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.150 2014/04/20 12:37:42 hasufell Exp $
+
+# Julian Ospald <hasufell@gentoo.org> (20 Apr 2014)
+# Missing keywords, bug #508226
+media-video/mpv sdl
 
 # Pacho Ramos <pacho@gentoo.org> (12 Apr 2014)
 # Missing keywords, bug #507490
@@ -22,7 +26,7 @@ sys-kernel/dracut -dracut_modules_systemd
 gnome-base/gdm systemd
 sys-auth/pambase systemd
 
-# Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)        
+# Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)
 # Missing keywords, bug #493156
 media-libs/libgphoto2 serial
 

@@ -8,20 +8,34 @@
 <herd>proxy-maintainers</herd>
 <use>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
-	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
-	<flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
+	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone
+		filter</flag>
+	<flag name="cdio">Use libcdio for CD support
+		(instead of cdparanoia)</flag>
 	<flag name='doc-pdf'>Build documentation in pdf format</flag>
-	<flag name='dvdnav'>Enable support for DVD navigation using <pkg>media-libs/libdvdnav</pkg></flag>
-	<flag name="enca">Enables support for charset discovery and conversion using <pkg>app-i18n/enca</pkg></flag>
-	<flag name="libguess">Enables support for charset discovery and conversion using <pkg>app-i18n/libguess</pkg></flag>
-	<flag name="luajit">Use <pkg>dev-lang/luajit</pkg> instead of <pkg>dev-lang/lua</pkg></flag>
-	<flag name="mpg123">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
-	<flag name="postproc">Enable image post-processing via libpostproc</flag>
+	<flag name='dvdnav'>Enable support for DVD navigation using
+		<pkg>media-libs/libdvdnav</pkg></flag>
+	<flag name="enca">Enables support for charset discovery and conversion
+		using <pkg>app-i18n/enca</pkg></flag>
+	<flag name="libguess">Enables support for charset discovery and
+		conversion using <pkg>app-i18n/libguess</pkg></flag>
+	<flag name="luajit">Use <pkg>dev-lang/luajit</pkg> instead of
+		<pkg>dev-lang/lua</pkg></flag>
+	<flag name="mpg123">Enable support for mp3 decoding over
+		<pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg
+		support.</flag>
+	<flag name="postproc">Enable image post-processing via
+		libpostproc</flag>
 	<flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
-	<flag name="quvi">Enable support for streaming sites using <pkg>media-libs/libquvi</pkg></flag>
+	<flag name="quvi">Enable support for streaming sites using
+		<pkg>media-libs/libquvi</pkg></flag>
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
+	<flag name="sdl">Enable video and audio support via
+		<pkg>media-libs/libsdl2</pkg></flag>
 	<flag name="shm">Enable support for shm</flag>
-	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding</flag>
-	<flag name="vf-dlopen">Install additional video filters for using with -vf dlopen</flag>
+	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for
+		hardware decoding</flag>
+	<flag name="vf-dlopen">Install additional video filters for using
+		with -vf dlopen</flag>
 </use>
 </pkgmetadata>

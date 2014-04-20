@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.8.ebuild,v 1.1 2014/04/18 13:04:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.8.ebuild,v 1.2 2014/04/20 12:38:29 hasufell Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd dvdnav +enca encode +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl
-oss portaudio +postproc pulseaudio pvr +quvi -radio samba selinux +shm v4l vaapi vcd vdpau
+oss portaudio +postproc pulseaudio pvr +quvi -radio samba sdl selinux +shm v4l vaapi vcd vdpau
 vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -108,6 +108,7 @@ RDEPEND+="
 		)
 	)
 	samba? ( net-fs/samba )
+	sdl? ( media-libs/libsdl2[threads] )
 	selinux? ( sec-policy/selinux-mplayer )
 	v4l? ( media-libs/libv4l )
 	wayland? (
@@ -174,7 +175,7 @@ src_configure() {
 		--disable-build-date \
 		--disable-debug-build \
 		--disable-sdl \
-		--disable-sdl2 \
+		$(use_enable sdl sdl2) \
 		--disable-rsound \
 		$(use_enable encode encoding) \
 		$(use_enable joystick) \
