@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.186 2014/04/17 07:19:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.187 2014/04/20 08:17:07 yngwin Exp $
+
+*easytag-2.2.0-r1 (20 Apr 2014)
+
+  20 Apr 2014; Ben de Groot <yngwin@gentoo.org> +easytag-2.2.0-r1.ebuild,
+  metadata.xml:
+  Restore gtk2 option for users who want to avoid gtk3 (the new default for this
+  package). Since upstream still offers this option, we should not take this
+  option away from our users.
 
   17 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> easytag-2.2.0.ebuild:
   Pull in latest dependencies because upstream.ac is not up to date wrt #507570

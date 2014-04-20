@@ -1,6 +1,11 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.30 2014/03/15 23:52:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.31 2014/04/20 08:05:32 graaff Exp $
+
+*ruby-ffi-3 (20 Apr 2014)
+
+  20 Apr 2014; Hans de Graaff <graaff@gentoo.org> +ruby-ffi-3.ebuild:
+  EAPI=5. Add ruby21.
 
   15 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-ffi-0.ebuild:
   Remove ruby18-only virtual.
