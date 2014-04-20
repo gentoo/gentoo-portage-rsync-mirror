@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pretend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.8 2014/04/02 19:26:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.9 2014/04/20 06:36:01 idella4 Exp $
+
+  20 Apr 2014; Ian Delaney <idella4@gentoo.org> pretend-1.0.8.ebuild:
+  remove unused IUSE test
 
 *pretend-1.0.8 (02 Apr 2014)
 
