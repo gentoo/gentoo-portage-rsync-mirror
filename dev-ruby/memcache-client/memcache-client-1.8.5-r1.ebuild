@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/memcache-client-1.8.5-r1.ebuild,v 1.2 2014/04/05 23:23:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/memcache-client-1.8.5-r1.ebuild,v 1.3 2014/04/20 17:57:58 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 
@@ -27,7 +27,10 @@ all_ruby_prepare() {
 
 	# Fix silly JRuby test issue:
 	# https://github.com/mperham/memcache-client/issues/issue/14
-	sed -i -e '558s/e.message/e.message.downcase/' test/test_mem_cache.rb || die "Could not fix JRuby issue."
+	sed -i -e '558s/e.message/e.message.downcase/' test/test_mem_cache.rb || die die "Could not fix JRuby issue."
+
+	# Fix rake deprecation.
+	sed -i -e 's:rake/rdoctask:rdoc/task:' Rakefile || die
 }
 
 each_ruby_test() {

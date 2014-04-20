@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.370 2014/04/20 08:31:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.372 2014/04/20 18:00:01 tetromino Exp $
+
+  20 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Move myself to primary maintainer in light of Ben's email
+
+*cairo-1.12.16-r2 (20 Apr 2014)
+
+  20 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cairo-1.12.16-r1.ebuild, +cairo-1.12.16-r2.ebuild, cairo-9999.ebuild,
+  metadata.xml:
+  After talking with yngwin, make x11 team primary maintainer, add myself as
+  maintainer for multilib problems. Punt useless doc flag. Add 1.12.16-r2 for
+  wrapped header.
 
   20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.16.ebuild:
   Stable for amd64, wrt bug #500368
