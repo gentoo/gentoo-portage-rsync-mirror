@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.4.1.ebuild,v 1.4 2014/04/05 14:30:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.4.1.ebuild,v 1.5 2014/04/20 05:57:18 graaff Exp $
 
 EAPI=5
 
 # jruby fails tests
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md TEMPLATES.md"
@@ -27,8 +27,13 @@ ruby_add_bdepend "test? (
 	dev-ruby/nokogiri
 	dev-ruby/radius )"
 
-# Most dependencies are optional: skip haml for ruby20 because haml
-# depends on rails.
+# Most dependencies are optional: skip haml for ruby20 and ruby21
+# because haml depends on rails.
 USE_RUBY="ruby19" ruby_add_bdepend "test? ( dev-ruby/haml )"
 
 ruby_add_rdepend ">=dev-ruby/builder-2.0.0"
+
+all_ruby_prepare() {
+	# Recent kramdown versions handle quoting differently.
+	rm test/tilt_kramdown_test.rb || die
+}
