@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/baloo-4.13.0.ebuild,v 1.3 2014/04/17 22:31:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/baloo-4.13.0.ebuild,v 1.4 2014/04/19 23:22:00 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ DEPEND="
 	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep kfilemetadata)
 	dev-libs/qjson
-	=dev-libs/xapian-1.2*
+	=dev-libs/xapian-1.2*[chert]
 	sys-apps/attr
 	!<kde-base/nepomuk-4.12.50
 "
