@@ -1,16 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6-r2.ebuild,v 1.6 2010/06/07 10:44:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6-r2.ebuild,v 1.7 2014/04/21 13:29:34 ulm Exp $
 
-EAPI=3
+EAPI=5
 
 inherit elisp eutils
 
 DESCRIPTION="A library to provide MIME feature for GNU Emacs"
-HOMEPAGE="http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/SEMI/"
-SRC_URI="http://kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/semi/semi-1.14-for-flim-1.14/${P}.tar.gz"
+HOMEPAGE="http://git.chise.org/elisp/semi/"
+SRC_URI="http://git.chise.org/elisp/dist/${PN}/${P%.*}-for-flim-1.14/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="linguas_ja"
@@ -25,7 +25,7 @@ SITEFILE="65${PN}-gentoo.el"
 src_compile() {
 	emake PREFIX="${ED}"/usr \
 		LISPDIR="${ED}/${SITELISP}" \
-		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}" || die "emake failed"
+		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}"
 
 	${EMACS} ${EMACSFLAGS} --visit mime-ui-en.texi -f texi2info \
 		|| die "texi2info failed"
@@ -40,15 +40,14 @@ src_compile() {
 src_install() {
 	emake PREFIX="${ED}/usr" \
 		LISPDIR="${ED}/${SITELISP}" \
-		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}" install \
-		|| die "emake install failed"
+		VERSION_SPECIFIC_LISPDIR="${ED}/${SITELISP}" install
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
-	doinfo mime-ui-en.info || die "doinfo failed"
+	doinfo mime-ui-en.info
 	dodoc README.en ChangeLog VERSION NEWS
 	if use linguas_ja; then
-		doinfo mime-ui-ja.info || die "doinfo failed"
+		doinfo mime-ui-ja.info
 		dodoc README.ja
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/flim
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.50 2011/05/10 10:25:02 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.51 2014/04/21 13:21:01 ulm Exp $
+
+  21 Apr 2014; Ulrich Müller <ulm@gentoo.org> flim-1.14.9-r2.ebuild:
+  Update HOMEPAGE and SRC_URI. Specify license more precisely. Update EAPI.
 
   10 May 2011; Naohiro Aota <naota@gentoo.org> flim-1.14.9-r2.ebuild:
   Add ~x86-fbsd keyword
