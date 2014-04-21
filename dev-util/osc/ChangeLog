@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/osc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.30 2014/03/05 13:50:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.31 2014/04/21 07:29:13 scarabeus Exp $
+
+  21 Apr 2014; Tomáš Chvátal <scarabeus@gentoo.org> -osc-0.143.0.ebuild,
+  osc-0.144.1.ebuild:
+  Stabilise on amd64 and x86. Drop older.
 
 *osc-0.144.1 (05 Mar 2014)
 

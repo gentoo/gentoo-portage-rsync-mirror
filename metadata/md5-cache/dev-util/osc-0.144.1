@@ -4,7 +4,7 @@ DESCRIPTION=Command line tool for Open Build Service
 EAPI=5
 HOMEPAGE=http://en.opensuse.org/openSUSE:OSC
 IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 PDEPEND=dev-python/urlgrabber[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-arch/rpm[python,python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/m2crypto[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-admin/sudo dev-util/obs-service-meta
 RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
@@ -12,4 +12,4 @@ REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python
 SLOT=0
 SRC_URI=https://api.opensuse.org/public/source/openSUSE:Tools/osc/osc-0.144.1.tar.gz
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	obs-download	8b22473fde39f5051ce00b61062dd086	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=be481ac49124394ffcd24a6a7e440437
+_md5_=fd16a60b8b5b7074721efd2987ae7bf0
