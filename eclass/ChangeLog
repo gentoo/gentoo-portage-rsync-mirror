@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1213 2014/04/19 10:29:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1214 2014/04/21 00:08:15 mpagano Exp $
+
+  21 Apr 2014; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Update 3.15-rcX temporary fix. See bug #507656.
 
   19 Apr 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Support substituting ${PYTHON_USEDEP} in python_gen_cond_dep().

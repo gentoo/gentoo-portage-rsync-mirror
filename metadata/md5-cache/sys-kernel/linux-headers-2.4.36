@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://kernel/linux/kernel/v2.4/linux-2.4.36.tar.xz mirror://gentoo/gentoo-headers-2.4.36-1.tar.lzma
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	kernel-2	1666dd43404e7334aaa8b222ef695ad9	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=55810c0e42717305b282cb2ce51f85d9

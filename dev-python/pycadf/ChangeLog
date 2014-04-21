@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pycadf
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycadf/ChangeLog,v 1.1 2014/04/21 00:13:03 prometheanfire Exp $
+
+*pycadf-0.5 (21 Apr 2014)
+
+  21 Apr 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +pycadf-0.5.ebuild:
+  first commit of pycadf

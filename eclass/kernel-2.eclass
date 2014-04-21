@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.295 2014/04/14 20:21:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.296 2014/04/21 00:08:15 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -1048,7 +1048,7 @@ unipatch() {
 			# https://bugs.gentoo.org/show_bug.cgi?id=507656                   #
 			####################################################################
 			if [[ ${PN} == "git-sources" ]] ; then
-				if [[ ${i} == *"/patch-3.15-rc1.patch" ]] ; then
+				if [[ ${KV_MAJOR}${KV_PATCH} -ge 315 && ${RELEASETYPE} == -rc ]] ; then
 					ebegin "Applying ${i/*\//} (-p1)"
 					if [ $(patch -p1 --no-backup-if-mismatch -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]; then
 						eend 0
