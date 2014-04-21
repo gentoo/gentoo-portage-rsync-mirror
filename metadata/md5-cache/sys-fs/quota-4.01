@@ -10,4 +10,4 @@ RDEPEND=ldap? ( >=net-nds/openldap-2.3.35 ) netlink? ( sys-apps/dbus dev-libs/li
 SLOT=0
 SRC_URI=mirror://sourceforge/linuxquota/quota-4.01.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=7035d2c2728eddf09b0acf76e53b9bb9
+_md5_=9e72607a2d74e8e90c2cfacf4143eaa9

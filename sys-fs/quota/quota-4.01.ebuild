@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.01.ebuild,v 1.2 2013/04/15 22:38:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.01.ebuild,v 1.3 2014/04/21 10:53:25 hasufell Exp $
 
 EAPI="4"
 
@@ -39,7 +39,8 @@ src_prepare() {
 		)
 	fi
 	sed -i "${args[@]}" Makefile.in || die
-	epatch "${FILESDIR}"/${PN}-4.01-mnt.patch
+	epatch "${FILESDIR}"/${PN}-4.01-mnt.patch \
+		"${FILESDIR}"/${PN}-4.01-cflags.patch
 }
 
 src_configure() {

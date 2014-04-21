@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.355 2014/04/19 15:47:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.356 2014/04/21 10:50:05 ago Exp $
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.36.0.ebuild:
+  Stable for alpha, wrt bug #505864
 
   19 Apr 2014; Anthony G. Basile <blueness@gentoo.org> -curl-7.35.0-r1.ebuild:
   Remove 7.35.0-r1 which was just used to test tests for bug #285669
