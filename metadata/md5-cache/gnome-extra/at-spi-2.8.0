@@ -2,8 +2,8 @@ DEFINED_PHASES=-
 DESCRIPTION=The Gnome Accessibility Toolkit
 EAPI=5
 HOMEPAGE=http://projects.gnome.org/accessibility/
-KEYWORDS=amd64 ~arm ~hppa x86
+KEYWORDS=amd64 arm ~hppa x86
 LICENSE=metapackage
 RDEPEND=>=app-accessibility/at-spi2-atk-2.8.0:2 >=app-accessibility/at-spi2-core-2.8.0:2 >=dev-python/pyatspi-2.8.0 !<gnome-extra/at-spi-1.32.0-r1
 SLOT=2
-_md5_=f8a1ac9e7ff880e68de91b48353e5e83
+_md5_=57ac274d673105e569b7214e85d38d2e

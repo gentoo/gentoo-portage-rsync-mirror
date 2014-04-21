@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.78 2014/04/19 17:45:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.79 2014/04/21 10:30:14 ago Exp $
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.38.2.ebuild:
+  Stable for arm, wrt bug #507568
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.38.2.ebuild:
   Stable for sparc, wrt bug #507568

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-dvb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.84 2014/04/18 13:56:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.85 2014/04/21 10:29:42 ago Exp $
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-dvb-1.2.3.ebuild:
+  Stable for arm, wrt bug #507568
 
   18 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-dvb-1.2.3.ebuild:
   Stable for alpha, wrt bug #507568

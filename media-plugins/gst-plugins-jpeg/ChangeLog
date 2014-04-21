@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.154 2014/04/19 17:44:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.155 2014/04/21 10:29:52 ago Exp $
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-jpeg-1.2.3.ebuild:
+  Stable for arm, wrt bug #507568
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-jpeg-1.2.3.ebuild:
   Stable for sparc, wrt bug #507568

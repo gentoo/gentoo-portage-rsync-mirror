@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.248 2014/04/20 18:19:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.250 2014/04/21 10:30:49 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> activesupport-3.2.17.ebuild:
+  And add back ruby21 because this breaks ppc dependencies due to keyword lag
+  and that is less easily fixed.
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> activesupport-3.2.17.ebuild:
+  Remove ruby21 since it is not compatible as indicated by failing tests.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org> activesupport-3.2.17.ebuild:
   Add ruby20, ruby21.

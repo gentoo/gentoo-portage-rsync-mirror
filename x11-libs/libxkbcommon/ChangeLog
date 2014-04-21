@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbcommon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.6 2013/12/07 13:02:30 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.7 2014/04/21 10:30:31 ago Exp $
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libxkbcommon-0.3.1.ebuild:
+  Stable for arm, wrt bug #507568
 
   07 Dec 2013; Johannes Huber <johu@gentoo.org> libxkbcommon-0.3.1.ebuild:
   x86 stable, bug #480340

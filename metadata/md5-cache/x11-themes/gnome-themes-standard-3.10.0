@@ -4,10 +4,10 @@ DESCRIPTION=Standard Themes for GNOME Applications
 EAPI=5
 HOMEPAGE=https://git.gnome.org/browse/gnome-themes-standard/
 IUSE=+gtk
-KEYWORDS=alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2.1+
 RDEPEND=gnome-base/librsvg:2 x11-libs/cairo >=x11-themes/gtk-engines-2.15.3:2 gtk? ( >=x11-libs/gtk+-2.24.15:2 >=x11-libs/gtk+-3.9.12:3 ) >=gnome-base/gsettings-desktop-schemas-3.4 !<x11-themes/gnome-themes-2.32.1-r1
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-themes-standard/3.10/gnome-themes-standard-3.10.0.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=e8d914952c4a62512a356be8cd5460df
+_md5_=bc60066035a5e7847006fd1c30bb6b4c

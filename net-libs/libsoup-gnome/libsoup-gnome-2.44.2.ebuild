@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.44.2.ebuild,v 1.10 2014/04/19 17:45:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.44.2.ebuild,v 1.11 2014/04/21 10:30:18 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ SRC_URI="${SRC_URI//-gnome}"
 LICENSE="LGPL-2+"
 SLOT="2.4"
 IUSE="debug +introspection"
-KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x86-solaris"
 
 RDEPEND="
 	~net-libs/libsoup-${PV}[introspection?]
