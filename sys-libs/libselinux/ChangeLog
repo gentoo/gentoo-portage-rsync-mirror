@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.115 2014/03/23 19:21:17 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.116 2014/04/21 18:37:25 swift Exp $
+
+  21 Apr 2014; Sven Vermeulen <swift@gentoo.org> libselinux-2.2.2-r4.ebuild:
+  Stabilize 2.2.2-r4
 
   23 Mar 2014; Sven Vermeulen <swift@gentoo.org> -libselinux-2.2.2-r3.ebuild,
   -files/libselinux-2.2.2-build.patch:

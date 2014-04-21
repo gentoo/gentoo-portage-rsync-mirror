@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.20 2014/04/17 18:14:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.21 2014/04/21 18:57:45 zerochaos Exp $
 
 EAPI="5"
 
@@ -51,17 +51,19 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	pcap? ( dev-ruby/pcaprub
 		dev-ruby/network_interface )
 	dev-ruby/bundler
-	development? ( dev-ruby/redcarpet
+	development? ( dev-ruby/fivemat
+			dev-ruby/redcarpet
 			dev-ruby/yard
-			dev-ruby/rake
+			>=dev-ruby/rake-10.0.0
 			>=dev-ruby/factory_girl-4.1.0 )"
 ruby_add_bdepend "${RUBY_COMMON_DEPEND}
 		test? ( >=dev-ruby/factory_girl-4.1.0
-		dev-ruby/database_cleaner
-		>=dev-ruby/rspec-2.12
-		dev-ruby/shoulda-matchers
-		dev-ruby/timecop )"
-		#>=dev-ruby/rake-10.0.0[ruby_targets_ruby19] re-add when in gentoo. I'm not allowed to add it :-(
+			dev-ruby/fivemat
+			dev-ruby/database_cleaner
+			>=dev-ruby/rspec-2.12
+			dev-ruby/shoulda-matchers
+			dev-ruby/timecop
+			>=dev-ruby/rake-10.0.0 )"
 ruby_add_rdepend "${RUBY_COMMON_DEPEND}"
 
 COMMON_DEPEND="dev-db/postgresql-server
@@ -204,7 +206,12 @@ each_ruby_prepare() {
 each_ruby_test() {
 	#rake --trace spec || die
 	# https://dev.metasploit.com/redmine/issues/8425
+	${RUBY} -S rake db:create || die
 	${RUBY} -S rake db:migrate || die
+
+	#we bogart msfupdate so no point in trying to test it
+	rm spec/msfupdate_spec.rb || die
+
 	RAILS_ENV=test MSF_DATABASE_CONFIG=config/database.yml ${RUBY} -S rake spec || die
 	su postgres -c "dropuser msf_test_user" || die "failed to cleanup msf_test-user"
 }
