@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2-r1.ebuild,v 1.2 2014/04/17 18:14:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2-r2.ebuild,v 1.1 2014/04/21 19:20:05 zerochaos Exp $
 
 EAPI="5"
 
@@ -146,6 +146,8 @@ all_ruby_prepare() {
 	#fix for bug #507816 while waiting on upstream to actually set their own deps right
 	sed -i "s#gem 'activesupport', '>= 3.0.0'#gem 'activesupport', '~> 3.2'#" Gemfile || die
 	sed -i "s#gem 'activerecord'#gem 'activerecord', '~> 3.2'#" Gemfile || die
+	#backport of upstream fix for bcrypt gem changing name, bug #508014
+	sed -i "s#bcrypt-ruby#bcrypt#" Gemfile || die
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then

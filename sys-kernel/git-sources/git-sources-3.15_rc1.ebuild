@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-3.15_rc1.ebuild,v 1.1 2014/04/14 12:03:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-3.15_rc1.ebuild,v 1.2 2014/04/21 19:14:19 mpagano Exp $
 
 EAPI="5"
 UNIPATCH_STRICTORDER="yes"
@@ -29,6 +29,10 @@ experimental nature. If you have any issues, try a matching vanilla-sources
 ebuild -- if the problem is not there, please contact the upstream kernel
 developers at http://bugzilla.kernel.org and on the linux-kernel mailing list to
 report the problem so it can be fixed in time for the next kernel release."
+
+RDEPEND=""
+DEPEND="${RDEPEND}
+	>=sys-devel/patch-2.7.1-r3"
 
 pkg_postinst() {
 	postinst_sources

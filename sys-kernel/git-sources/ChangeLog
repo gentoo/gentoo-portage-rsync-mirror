@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1381 2014/04/21 00:11:19 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1382 2014/04/21 19:14:19 mpagano Exp $
+
+  21 Apr 2014; Mike Pagano <mpagano@gentoo.org> git-sources-3.15_rc1.ebuild,
+  git-sources-3.15_rc2.ebuild:
+  Add patch DEPEND due to bug #507656
 
 *git-sources-3.15_rc2 (21 Apr 2014)
 

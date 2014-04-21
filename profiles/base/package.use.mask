@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.560 2014/04/20 12:22:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.561 2014/04/21 19:10:37 zerochaos Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -82,10 +82,6 @@ dev-libs/boost context
 # Since this is new and unused yet, keep it masked for now and check
 # with upstream if there is something that can be done to fix the issue.
 media-libs/cogl gstreamer
-
-# Rick Farina <zerochaos@gentoo.org> (20 Dec 2013)
-# masked pending rake 10 availability
-net-analyzer/metasploit development test
 
 # Johannes Huber <johu@gentoo.org> (18 Dec 2013)
 # net-libs/libotr-4.0.0 is masked. Please remove the use mask if package mask
