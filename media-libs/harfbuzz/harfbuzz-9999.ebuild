@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.23 2014/03/01 14:04:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.24 2014/04/21 17:15:50 tommy Exp $
 
 EAPI=5
 
@@ -72,14 +72,14 @@ multilib_src_configure() {
 		--without-coretext \
 		--without-uniscribe \
 		$(use_enable static-libs static) \
-		$(multilib_is_native_abi \
+		$(multilib_build_binaries \
 			&& use_with cairo \
 			|| echo --without-cairo) \
 		$(use_with glib) \
 		$(use_with glib gobject) \
 		$(use_with graphite graphite2) \
 		$(use_with icu) \
-		$(multilib_is_native_abi \
+		$(multilib_build_binaries \
 			&& use_enable introspection \
 			|| echo --disable-introspection) \
 		$(use_with truetype freetype)
