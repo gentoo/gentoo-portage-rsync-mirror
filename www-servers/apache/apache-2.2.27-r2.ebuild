@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.27-r1.ebuild,v 1.1 2014/04/20 21:28:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.27-r2.ebuild,v 1.1 2014/04/21 09:45:27 polynomial-c Exp $
 
 EAPI=5
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20140420"
+GENTOO_PATCHSTAMP="20140421"
 GENTOO_DEVELOPER="polynomial-c"
-GENTOO_PATCHNAME="gentoo-apache-2.2.27-r1"
+GENTOO_PATCHNAME="gentoo-apache-2.2.27-r2"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="itk peruser prefork"
