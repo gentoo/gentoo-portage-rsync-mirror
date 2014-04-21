@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.30 2014/01/02 07:37:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.31 2014/04/21 16:16:42 nimiux Exp $
+
+  21 Apr 2014; Chema Alonso <nimiux@gentoo.org> bin86-0.16.20-r2.ebuild:
+  Stable for amd64 wrt bug #502928
 
 *bin86-0.16.20-r2 (02 Jan 2014)
 

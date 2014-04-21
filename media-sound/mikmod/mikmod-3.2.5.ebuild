@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/mikmod-3.2.5.ebuild,v 1.4 2014/03/28 03:51:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/mikmod-3.2.5.ebuild,v 1.5 2014/04/21 16:08:34 nimiux Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mikmod/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libmikmod-3.2.0
