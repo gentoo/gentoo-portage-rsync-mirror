@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/ChangeLog,v 1.7 2011/08/06 16:22:08 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/ChangeLog,v 1.8 2014/04/21 12:46:21 ulm Exp $
+
+  21 Apr 2014; Ulrich Müller <ulm@gentoo.org> pygui-2.2-r1.ebuild,
+  pygui-2.5.3.ebuild:
+  Fix LICENSE, bug 452356.
 
   06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pygui-2.5.3.ebuild:
   Restrict 2.4 and 2.5 Python ABIs. Don't inherit eutils.eclass. Patch by

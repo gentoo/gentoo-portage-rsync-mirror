@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.250 2014/04/05 15:39:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.251 2014/04/21 12:35:11 djc Exp $
+
+*erlang-17.0 (21 Apr 2014)
+
+  21 Apr 2014; Dirkjan Ochtman <djc@gentoo.org> +erlang-17.0.ebuild:
+  Version bump erlang to 17.0 (bug 507362).
 
   05 Apr 2014; Dirkjan Ochtman <djc@gentoo.org> erlang-16.3.1.ebuild:
   Port erlang-16.3.1 ebuild to EAPI=4.

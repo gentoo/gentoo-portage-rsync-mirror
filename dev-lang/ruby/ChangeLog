@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.647 2014/04/19 07:33:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.650 2014/04/21 12:56:34 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> -ruby-2.0.0_p353-r1.ebuild,
+  -ruby-2.0.0_p353-r2.ebuild:
+  Cleanup.
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> ruby-2.0.0_p451.ebuild,
+  ruby-2.1.1-r1.ebuild:
+  Remove useless libruby symlinks, bug 503584.
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> -ruby-2.1.0.ebuild,
+  -ruby-2.1.1.ebuild:
+  Cleanup.
 
   19 Apr 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag descriptions from metadata.xml

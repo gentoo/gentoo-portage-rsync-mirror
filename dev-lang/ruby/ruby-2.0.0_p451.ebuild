@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p451.ebuild,v 1.2 2014/04/09 08:57:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p451.ebuild,v 1.3 2014/04/21 12:55:35 graaff Exp $
 
 EAPI=5
 
@@ -199,11 +199,6 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r sample
 	fi
-
-	dosym "libruby${MY_SUFFIX}$(get_libname ${PV%_*})" \
-		"/usr/$(get_libdir)/libruby$(get_libname ${PV%.*})"
-	dosym "libruby${MY_SUFFIX}$(get_libname ${PV%_*})" \
-		"/usr/$(get_libdir)/libruby$(get_libname ${PV%_*})"
 
 	dodoc ChangeLog NEWS doc/NEWS* README* || die
 

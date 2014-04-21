@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.272 2014/04/21 12:23:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.273 2014/04/21 13:00:28 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> -actionpack-3.2.16.ebuild,
+  -actionpack-4.0.2.ebuild:
+  Remove vulnerable versions for bug 501750.
 
   21 Apr 2014; Hans de Graaff <graaff@gentoo.org> actionpack-3.2.17.ebuild:
   Remove nokogiri from Gemfile as it is not needed for the tests.

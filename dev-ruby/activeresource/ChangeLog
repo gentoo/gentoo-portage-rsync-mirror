@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.168 2014/02/19 07:18:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.169 2014/04/21 13:00:50 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org>
+  -activeresource-3.2.16.ebuild:
+  Remove vulnerable versions for bug 501750.
 
 *activeresource-3.2.17 (19 Feb 2014)
 
