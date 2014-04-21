@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15595 2014/04/20 18:32:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15596 2014/04/21 14:16:32 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -109,25 +109,6 @@ virtual/pypy:2.0
 # Old release, never stable, not working anymore
 # See bug #327837, #382667, #492474
 <media-video/pitivi-0.90
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# They work ok when used without native multilib, still
-# need to be tested on setups using that.
->=app-emulation/emul-linux-x86-baselibs-20140406
->=app-emulation/emul-linux-x86-compat-20140406
->=app-emulation/emul-linux-x86-cpplibs-20140406
->=app-emulation/emul-linux-x86-db-20140406
->=app-emulation/emul-linux-x86-gstplugins-20140406
->=app-emulation/emul-linux-x86-gtklibs-20140406
->=app-emulation/emul-linux-x86-gtkmmlibs-20140406
->=app-emulation/emul-linux-x86-jna-20140406
->=app-emulation/emul-linux-x86-opengl-20140406
->=app-emulation/emul-linux-x86-medialibs-20140406
->=app-emulation/emul-linux-x86-motif-20140406
->=app-emulation/emul-linux-x86-qtlibs-20140406
->=app-emulation/emul-linux-x86-sdl-20140406
->=app-emulation/emul-linux-x86-soundlibs-20140406
->=app-emulation/emul-linux-x86-xlibs-20140406
 
 # Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
 # Masked since:
