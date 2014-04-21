@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.147 2014/04/20 15:04:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.148 2014/04/21 06:40:54 zlogene Exp $
+
+  21 Apr 2014;  <zlogene@gentoo.org> DateTime-1.030.0.ebuild:
+  arm stable wrt bug #508198
 
   20 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> DateTime-1.030.0.ebuild:
   x86 stable wrt bug #508198

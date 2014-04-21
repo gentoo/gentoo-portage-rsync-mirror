@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.3.1.ebuild,v 1.1 2014/04/18 14:21:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.3.1.ebuild,v 1.2 2014/04/21 06:56:39 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -22,10 +22,7 @@ IUSE="doc"
 
 DEPEND+=" app-arch/gzip"
 
-ruby_add_bdepend "doc? ( dev-ruby/rdoc )
-	test? ( >=dev-ruby/hoe-3.7
-		virtual/ruby-minitest
-		)"
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-4:0	)"
 
 all_ruby_prepare() {
 	# Decompress the file. The compressed version has errors, ignore them.
@@ -44,12 +41,12 @@ each_ruby_prepare() {
 
 all_ruby_compile() {
 	if use doc; then
-		ruby -Ilib bin/rake docs || die "doc generation failed"
+		rdoc --title "Rake - Ruby Make" --main README.rdoc --out html lib *.rdoc doc/*/*.rdoc || die
 	fi
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib bin/rake || die
+	${RUBY} -Ilib:test:. -e 'gem "minitest", "~>4.0"; require "minitest/autorun"; Dir["test/test_*.rb"].each{|f| require f}' || die
 }
 
 all_ruby_install() {
