@@ -4,11 +4,11 @@ DESCRIPTION=A suite of utilities for transcoding video and audio codecs in diffe
 EAPI=5
 HOMEPAGE=http://tcforge.berlios.de/
 IUSE=3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid
-KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=>=virtual/ffmpeg-0.10 a52? ( media-libs/a52dec ) aac? ( media-libs/faac ) alsa? ( media-libs/alsa-lib ) dv? ( media-libs/libdv ) dvd? ( media-libs/libdvdread ) iconv? ( virtual/libiconv ) imagemagick? ( media-gfx/imagemagick ) jpeg? ( virtual/jpeg ) lzo? ( >=dev-libs/lzo-2 ) mjpeg? ( media-video/mjpegtools ) mp3? ( media-sound/lame ) mpeg? ( media-libs/libmpeg2 ) ogg? ( media-libs/libogg ) postproc? ( >=virtual/ffmpeg-0.10 ) quicktime? ( >=media-libs/libquicktime-1 ) sdl? ( >=media-libs/libsdl-1.2.5[X?] ) theora? ( media-libs/libtheora ) truetype? ( >=media-libs/freetype-2 ) v4l? ( media-libs/libv4l ) vorbis? ( media-libs/libvorbis ) X? ( x11-libs/libXpm x11-libs/libXaw x11-libs/libXv ) x264? ( media-libs/x264 ) xml? ( dev-libs/libxml2 ) xvid? ( media-libs/xvid )
 REQUIRED_USE=sse? ( mmx ) sse2? ( mmx sse ) 3dnow? ( mmx ) nuv? ( lzo )
 SLOT=0
 SRC_URI=mirror://bitbucket/france/transcode-tcforge/downloads/transcode-1.1.7.tar.bz2
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=ecba6e8692ee7e449121daffc8232b2e
+_md5_=3fddd180a017598733c462164f664082

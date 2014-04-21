@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1219 2014/04/21 08:23:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1220 2014/04/21 21:55:31 ottxor Exp $
+
+  21 Apr 2014; Christoph Junghans <ottxor@gentoo.org> wxwidgets.eclass:
+  added prefix support (bug #401661)
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Add a QA warning to multilib_is_native_abi.
