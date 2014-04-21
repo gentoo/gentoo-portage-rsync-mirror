@@ -11,4 +11,4 @@ RDEPEND=gpm? ( sys-libs/gpm ) !<x11-terms/rxvt-unicode-9.06-r3 abi_x86_32? ( !<=
 SLOT=5
 SRC_URI=mirror://gnu/ncurses/ncurses-5.9.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	9cb17afdb3e9bf8da0e682a348fe5bd8	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=31e99567a8a4a255bd340e5e2900f4bb
+_md5_=f24ee787ce94dacbe52296eac4ecd050
