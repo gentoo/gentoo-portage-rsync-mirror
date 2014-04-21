@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.258 2014/04/05 07:40:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.259 2014/04/21 06:17:08 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> activerecord-4.0.4.ebuild:
+  Add ruby20, ruby21.
 
 *activerecord-4.0.4 (05 Apr 2014)
 

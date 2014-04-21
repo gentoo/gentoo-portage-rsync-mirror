@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.270 2014/04/05 07:39:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.271 2014/04/21 06:16:15 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> actionpack-4.0.4.ebuild:
+  Add ruby20, ruby21.
 
 *actionpack-4.0.4 (05 Apr 2014)
 

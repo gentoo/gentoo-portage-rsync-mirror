@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sass-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.14 2014/03/11 20:09:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.15 2014/04/21 06:22:05 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> sass-rails-4.0.1.ebuild:
+  Add ruby20, ruby21.
 
   11 Mar 2014; Johannes Huber <johu@gentoo.org> sass-rails-4.0.0.ebuild,
   sass-rails-4.0.1.ebuild:

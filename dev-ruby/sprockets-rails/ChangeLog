@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sprockets-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/ChangeLog,v 1.4 2014/04/11 05:52:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/ChangeLog,v 1.5 2014/04/21 06:16:47 graaff Exp $
+
+  21 Apr 2014; Hans de Graaff <graaff@gentoo.org> sprockets-rails-2.0.0.ebuild:
+  Add ruby20, ruby21.
 
 *sprockets-rails-2.1.1 (11 Apr 2014)
 
