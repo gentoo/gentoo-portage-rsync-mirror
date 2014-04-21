@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.11.5.ebuild,v 1.6 2014/02/23 09:07:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.11.5.ebuild,v 1.7 2014/04/21 13:39:56 johu Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 	$(add_kdebase_dep nepomuk-core)
 	$(add_kdebase_dep kdelibs 'semantic-desktop')
 	>=app-crypt/gpgme-1.1.6
-	>=app-office/akonadi-server-1.10.1
+	>=app-office/akonadi-server-1.10.1[soprano(+)]
 	>=dev-libs/boost-1.35.0-r5:=
 	dev-libs/libgpg-error
 	>=dev-libs/libical-0.43

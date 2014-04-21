@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.12.1.ebuild,v 1.1 2014/04/08 14:16:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.12.1.ebuild,v 1.2 2014/04/21 13:45:37 johu Exp $
 
 EAPI=5
 
@@ -22,13 +22,12 @@ HOMEPAGE="http://pim.kde.org/akonadi"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+mysql postgres +qt4 qt5 sqlite test"
+IUSE="+mysql postgres +qt4 qt5 soprano sqlite test"
 
 REQUIRED_USE="^^ ( qt4 qt5 ) || ( sqlite mysql postgres )"
 
 CDEPEND="
 	dev-libs/boost:=
-	>=dev-libs/soprano-2.6.51
 	x11-misc/shared-mime-info
 	qt4? (
 		>=dev-qt/qtcore-4.8.5:4
@@ -38,7 +37,6 @@ CDEPEND="
 		>=dev-qt/qttest-4.8.5:4
 	)
 	qt5? (
-		>=dev-libs/soprano-2.6.51[-qt4,qt5]
 		dev-qt/qtcore:5
 		dev-qt/qtdbus:5
 		dev-qt/qtgui:5
@@ -47,7 +45,9 @@ CDEPEND="
 		dev-qt/qttest:5
 		dev-qt/qtwidgets:5
 		dev-qt/qtxml:5
+		soprano? ( dev-libs/soprano[-qt4,qt5] )
 	)
+	soprano? ( dev-libs/soprano )
 	sqlite? ( dev-db/sqlite:3 )
 "
 DEPEND="${CDEPEND}
@@ -94,6 +94,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DINSTALL_QSQLITE_IN_QT_PREFIX=ON
 		$(cmake-utils_use test AKONADI_BUILD_TESTS)
+		$(cmake-utils_use_with soprano)
 		$(cmake-utils_use sqlite AKONADI_BUILD_QSQLITE)
 		$(cmake-utils_use qt5 QT5_BUILD)
 	)

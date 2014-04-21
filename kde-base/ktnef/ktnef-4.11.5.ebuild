@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ktnef-4.11.5.ebuild,v 1.6 2014/02/23 09:07:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ktnef-4.11.5.ebuild,v 1.7 2014/04/21 13:42:37 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 IUSE="debug"
 
 DEPEND="
-	>=app-office/akonadi-server-1.9.51
+	>=app-office/akonadi-server-1.9.51[soprano(+)]
 	$(add_kdebase_dep kdepimlibs)
 "
 # boost is not linked to, but headers which include it are installed

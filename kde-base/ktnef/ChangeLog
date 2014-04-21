@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.139 2014/04/17 00:43:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.140 2014/04/21 13:42:37 johu Exp $
+
+  21 Apr 2014; Johannes Huber <johu@gentoo.org> ktnef-4.11.5.ebuild,
+  ktnef-4.12.3.ebuild, ktnef-4.12.4.ebuild, ktnef-4.13.0.ebuild:
+  Add use dep on app-office/akonadi-server[soprano].
 
   16 Apr 2014; Johannes Huber <johu@gentoo.org> ktnef-4.13.0.ebuild:
   Restore KEYWORDS for KDE SC 4.13.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.12.4.ebuild,v 1.1 2014/04/01 18:09:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.12.4.ebuild,v 1.2 2014/04/21 13:37:12 johu Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ RESTRICT="test"
 
 DEPEND="
 	app-misc/strigi
-	>=app-office/akonadi-server-1.10.43
+	>=app-office/akonadi-server-1.10.43[soprano(+)]
 	dev-libs/boost:=
 	dev-libs/libxml2:2
 	dev-libs/libxslt

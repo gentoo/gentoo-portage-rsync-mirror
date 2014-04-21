@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.13.0.ebuild,v 1.2 2014/04/17 00:43:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.13.0.ebuild,v 1.3 2014/04/21 13:39:56 johu Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RESTRICT="test"
 DEPEND="
 	!kde-misc/akonadi-social-utils
 	>=app-crypt/gpgme-1.1.6
-	>=app-office/akonadi-server-1.12.1
+	>=app-office/akonadi-server-1.12.1[soprano(-)]
 	>=dev-libs/boost-1.35.0-r5:=
 	dev-libs/libgpg-error
 	>=dev-libs/libical-0.48-r2:=
