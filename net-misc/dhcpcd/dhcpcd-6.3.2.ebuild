@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.3.2.ebuild,v 1.1 2014/03/23 01:56:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.3.2.ebuild,v 1.2 2014/04/20 23:21:06 williamh Exp $
 
 EAPI=5
 
@@ -52,6 +52,9 @@ fi
 
 src_prepare()
 {
+	epatch "${FILESDIR}"/${P}-gettime-dlopen.patch
+	epatch "${FILESDIR}"/${P}-fix-cc-setting.patch
+	epatch "${FILESDIR}"/${P}-fix-host.patch
 	epatch_user
 }
 
@@ -62,7 +65,6 @@ src_configure()
 	hooks="--with-hook=ntp.conf"
 	use elibc_glibc && hooks="${hooks} --with-hook=yp.conf"
 	use kernel_linux && rundir="--rundir=${EPREFIX}/run"
-	tc-export CC
 	econf \
 		--prefix="${EPREFIX}" \
 		--libexecdir="${EPREFIX}/lib/dhcpcd" \

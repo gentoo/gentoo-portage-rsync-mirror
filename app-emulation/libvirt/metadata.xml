@@ -36,8 +36,7 @@
       Support management of User Mode Linux virtualisation
     </flag>
     <flag name="qemu">
-      Support management of QEmu virtualisation (one of <pkg>app-emulation/qemu</pkg>,
-      <pkg>app-emulation/qemu-kvm</pkg> or <pkg>app-emulation/qemu-spice</pkg>)
+      Support management of QEMU virtualisation (<pkg>app-emulation/qemu</pkg>)
     </flag>
     <flag name="xen">
       Support management of Xen virtualisation (<pkg>app-emulation/xen</pkg>)
