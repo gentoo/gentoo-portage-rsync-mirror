@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-1.0.1-r2.ebuild,v 1.1 2014/04/11 02:00:05 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-1.0.1-r2.ebuild,v 1.2 2014/04/21 11:27:38 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
@@ -18,8 +18,10 @@ IUSE="doc test"
 
 # dev-python/unittest2 is not required with Python >=3.2.
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/nose[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}] )"
+	test? (
+		dev-python/nose[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/unittest2[${PYTHON_USEDEP}]' python2*)
+	)"
 RDEPEND=""
 
 src_prepare() {

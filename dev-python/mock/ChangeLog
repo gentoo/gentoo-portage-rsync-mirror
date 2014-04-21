@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.75 2014/04/11 02:00:05 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.76 2014/04/21 11:27:38 mgorny Exp $
+
+  21 Apr 2014; Michał Górny <mgorny@gentoo.org> mock-1.0.1-r2.ebuild:
+  Require unittest2 for Python 2.7 as well, bug #482488.
 
 *mock-1.0.1-r2 (11 Apr 2014)
 
