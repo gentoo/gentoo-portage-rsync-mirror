@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.60 2014/03/28 06:46:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.61 2014/04/21 07:49:31 mgorny Exp $
+
+  21 Apr 2014; Michał Górny <mgorny@gentoo.org> zvbi-0.2.35-r1.ebuild:
+  Use multilib_build_binaries consistently, and the new multilib_native_use*
+  functions.
 
   28 Mar 2014; Alexis Ballier <aballier@gentoo.org> -zvbi-0.2.33.ebuild,
   -zvbi-0.2.34.ebuild, -files/zvbi-0.2.33-glibc212.patch,

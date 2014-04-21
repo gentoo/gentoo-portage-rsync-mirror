@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.2-r1.ebuild,v 1.2 2014/04/18 17:08:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.2-r1.ebuild,v 1.3 2014/04/21 07:56:51 mgorny Exp $
 
 # TODO: convert FusionSound #484250
 
@@ -116,7 +116,7 @@ multilib_src_configure() {
 		$(use_enable X video-x11-vm) \
 		--disable-video-cocoa \
 		--disable-video-directfb \
-		$(multilib_is_native_abi && use_enable fusionsound || echo "--disable-fusionsound") \
+		$(multilib_native_use_enable fusionsound) \
 		--disable-fusionsound-shared \
 		$(use_enable video video-dummy) \
 		$(use_enable opengl video-opengl) \

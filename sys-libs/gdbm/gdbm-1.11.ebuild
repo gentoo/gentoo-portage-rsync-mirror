@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.11.ebuild,v 1.2 2014/01/18 03:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.11.ebuild,v 1.3 2014/04/21 07:42:26 mgorny Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ multilib_src_configure() {
 		--with-gdbm183-libdir="${EX_S}/.libs" \
 		--with-gdbm183-includedir="${EX_S}" \
 		$(use_enable berkdb libgdbm-compat) \
-		$(multilib_build_binaries && use_enable exporter gdbm-export) \
+		$(multilib_native_use_enable exporter gdbm-export) \
 		$(use_enable nls) \
 		$(use_enable static-libs static)
 }

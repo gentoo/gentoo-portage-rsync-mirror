@@ -10,5 +10,5 @@ RDEPEND=ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-la
 REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_jruby )
 SLOT=0
 SRC_URI=mirror://rubygems/net-http-digest_auth-1.4.gem
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=3f94fb06cc4d1e6495dcbd50d5a74f66

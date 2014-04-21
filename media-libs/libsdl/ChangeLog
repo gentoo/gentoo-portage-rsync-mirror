@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.213 2014/04/18 16:22:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.214 2014/04/21 07:52:48 mgorny Exp $
+
+  21 Apr 2014; Michał Górny <mgorny@gentoo.org> libsdl-1.2.15-r5.ebuild:
+  Use the new multilib_native_use* functions.
 
 *libsdl-1.2.15-r5 (18 Apr 2014)
 

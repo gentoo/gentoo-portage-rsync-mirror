@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.357 2014/04/20 23:13:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.359 2014/04/21 08:00:15 ago Exp $
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libvirt-1.1.3.4.ebuild,
+  libvirt-1.2.3.ebuild:
+  Stable for x86, wrt bug #502232
+
+  21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libvirt-1.1.3.4.ebuild,
+  libvirt-1.2.3.ebuild:
+  Stable for amd64, wrt bug #502232
 
   20 Apr 2014; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Fix up description of USE=qemu

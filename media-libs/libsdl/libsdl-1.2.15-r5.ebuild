@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r5.ebuild,v 1.1 2014/04/18 16:22:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r5.ebuild,v 1.2 2014/04/21 07:52:48 mgorny Exp $
 
 # TODO: convert media-libs/libggi to multilib
 
@@ -131,12 +131,12 @@ multilib_src_configure() {
 		$(use_enable X video-x11-xrandr) \
 		$(use_enable dga video-dga) \
 		$(use_enable fbcon video-fbcon) \
-		$(multilib_is_native_abi && use_enable ggi video-ggi || echo "--disable-video-ggi") \
-		$(multilib_is_native_abi && use_enable svga video-svga || echo "--disable-video-svga") \
+		$(multilib__native_use_enable ggi video-ggi) \
+		$(multilib__native_use_enable svga video-svga) \
 		$(use_enable aalib video-aalib) \
 		$(use_enable libcaca video-caca) \
 		$(use_enable opengl video-opengl) \
-		$(multilib_is_native_abi && use_enable ps3 video-ps3 || echo "--disable-video-ps3") \
+		$(multilib_native_use_enable ps3 video-ps3) \
 		$(use_enable tslib input-tslib) \
 		$(use_with X x) \
 		$(use_enable static-libs static) \

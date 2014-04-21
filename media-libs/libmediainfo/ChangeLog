@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.75 2014/03/29 00:22:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.76 2014/04/21 07:49:02 radhermit Exp $
+
+*libmediainfo-0.7.68 (21 Apr 2014)
+
+  21 Apr 2014; Tim Harder <radhermit@gentoo.org> +libmediainfo-0.7.68.ebuild:
+  Version bump.
 
   29 Mar 2014; Tim Harder <radhermit@gentoo.org> libmediainfo-0.7.67.ebuild:
   Add slot rebuild for tinyxml2.

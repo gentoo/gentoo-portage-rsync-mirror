@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.37 2014/04/21 07:27:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.38 2014/04/21 07:58:10 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -438,6 +438,9 @@ multilib_install_wrappers() {
 # multilib_build_binaries instead.
 multilib_is_native_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	eqawarn "QA warning: multilib_is_native_abi() is deprecated,"
+	eqawarn "please use multilib_build_binaries instead."
 
 	multilib_build_binaries "${@}"
 }

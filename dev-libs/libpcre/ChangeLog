@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.229 2014/04/05 22:07:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.230 2014/04/21 07:32:16 mgorny Exp $
+
+  21 Apr 2014; Michał Górny <mgorny@gentoo.org> libpcre-8.35.ebuild:
+  Use multilib_build_binaries consistently, and the new multilib_native_use*
+  functions.
 
 *libpcre-8.35 (05 Apr 2014)
 
