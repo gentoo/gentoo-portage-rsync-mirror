@@ -1,15 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.2.0.ebuild,v 1.10 2014/01/21 00:27:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.3.1-r1.ebuild,v 1.1 2014/04/22 17:32:22 floppym Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.5"
-PYTHON_USE_WITH="threads(+)"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
-PYTHON_MODNAME="SCons"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads(+)"
 
-inherit distutils eutils
+inherit distutils-r1
 
 DESCRIPTION="Extensible Python-based build utility"
 HOMEPAGE="http://www.scons.org/"
@@ -19,27 +16,40 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc"
 
-DOCS="CHANGES.txt RELEASE.txt"
-
-src_prepare() {
-	distutils_src_prepare
-	epatch "${FILESDIR}/scons-1.2.0-popen.patch"
-	epatch "${FILESDIR}/${PN}-2.1.0-jython.patch"
+python_prepare_all() {
+	local PATCHES=(
+		"${FILESDIR}/${PN}-2.1.0-jython.patch"
+	)
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=361061
 	sed -i -e "s|/usr/local/bin:/opt/bin:/bin:/usr/bin|${EPREFIX}/usr/local/bin:${EPREFIX}/opt/bin:${EPREFIX}/bin:${EPREFIX}/usr/bin:/usr/local/bin:/opt/bin:/bin:/usr/bin|g" engine/SCons/Platform/posix.py || die
 	# and make sure the build system doesn't "force" /usr/local/ :(
 	sed -i -e "s/'darwin'/'NOWAYdarwinWAYNO'/" setup.py || die
+
+	distutils-r1_python_prepare_all
 }
 
-src_install () {
-	distutils_src_install \
+python_install() {
+	distutils-r1_python_install \
 		--standard-lib \
 		--no-version-script \
 		--install-data "${EPREFIX}"/usr/share
+}
+
+python_install_all() {
+	local DOCS=( {CHANGES,README,RELEASE}.txt )
+	distutils-r1_python_install_all
 
 	use doc && dodoc "${DISTDIR}"/${P}-user.{pdf,html}
+}
+
+src_install() {
+	distutils-r1_src_install
+
+	# Build system does not use build_scripts properly.
+	# http://scons.tigris.org/issues/show_bug.cgi?id=2891
+	python_replicate_script "${ED}"usr/bin/scons{,ign,-time}
 }

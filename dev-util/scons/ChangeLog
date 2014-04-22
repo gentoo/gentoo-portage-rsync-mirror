@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.147 2014/03/19 13:46:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.149 2014/04/22 17:35:40 floppym Exp $
+
+  22 Apr 2014; Mike Gilbert <floppym@gentoo.org> -scons-2.2.0.ebuild,
+  scons-2.3.0.ebuild:
+  Move arm64 keyword forward and drop old version.
+
+*scons-2.3.1-r1 (22 Apr 2014)
+
+  22 Apr 2014; Mike Gilbert <floppym@gentoo.org> +scons-2.3.1-r1.ebuild:
+  Drop scons-1.2.0-popen.patch, bug 507850 by Álvaro.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> scons-2.3.0.ebuild:
   Stable for alpha, wrt bug #498868
