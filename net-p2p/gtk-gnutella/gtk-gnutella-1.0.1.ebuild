@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-1.0.1.ebuild,v 1.1 2014/01/01 08:05:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-1.0.1.ebuild,v 1.2 2014/04/22 18:36:56 graaff Exp $
 
 EAPI=5
 
@@ -73,6 +73,11 @@ src_configure() {
 		--prefix="/usr" \
 		--cc=$(tc-getCC) \
 		${myconf}
+}
+
+src_compile() {
+	# Build system is not parallel-safe, bug 500760
+	emake -j1
 }
 
 src_install() {
