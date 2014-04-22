@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.62 2014/01/12 20:31:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.63 2014/04/22 00:00:28 tomwij Exp $
+
+*icu4j-53.1 (21 Apr 2014)
+
+  21 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +icu4j-53.1.ebuild:
+  Version bump to 53.1; fixes bug #507660, reported by Arfrever Frehtes
+  Taifersar Arahesis (arfrever.fta).
 
 *icu4j-52.1 (12 Jan 2014)
 
