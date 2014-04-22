@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.38 2014/01/18 13:29:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.39 2014/04/22 03:26:21 mrueg Exp $
+
+  22 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-test-unit-0-r4.ebuild:
+  Remove ruby18 and ree18 target.
 
   18 Jan 2014; Hans de Graaff <graaff@gentoo.org> -ruby-test-unit-0.ebuild,
   -ruby-test-unit-0-r1.ebuild, -ruby-test-unit-0-r2.ebuild,
@@ -155,4 +158,3 @@
   +metadata.xml:
   Initial import from ruby-ng-testbed. Required for forthcoming
   ruby-fakegem.eclass.
-

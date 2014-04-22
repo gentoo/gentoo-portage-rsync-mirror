@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-saharaclient
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-saharaclient/ChangeLog,v 1.1 2014/04/22 03:25:05 prometheanfire Exp $
+
+*python-saharaclient-0.7.0 (22 Apr 2014)
+
+  22 Apr 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +python-saharaclient-0.7.0.ebuild:
+  adding saharaclient for openstack

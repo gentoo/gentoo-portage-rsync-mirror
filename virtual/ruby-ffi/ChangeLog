@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.31 2014/04/20 08:05:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.33 2014/04/22 03:25:20 mrueg Exp $
+
+  22 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-ffi-2.ebuild:
+  Remove ruby18 target.
+
+  22 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-ffi-1.ebuild:
+  Remove ruby18 and ree18 target.
 
 *ruby-ffi-3 (20 Apr 2014)
 
