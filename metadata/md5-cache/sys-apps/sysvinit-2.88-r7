@@ -10,4 +10,4 @@ RDEPEND=selinux? ( >=sys-libs/libselinux-1.28 )
 SLOT=0
 SRC_URI=mirror://nongnu/sysvinit/sysvinit-2.88dsf.tar.bz2
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=82aa5f2ae46e36779290e3a8d9105821
+_md5_=57882c9effddf66c0d9312be5c5347ba

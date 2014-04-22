@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r7.ebuild,v 1.4 2014/04/07 20:10:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r7.ebuild,v 1.5 2014/04/22 14:21:38 polynomial-c Exp $
 
 EAPI="4"
 
@@ -108,5 +108,5 @@ pkg_postinst() {
 	fi
 
 	elog "The last/lastb/mesg/mountpoint/sulogin/utmpdump/wall tools have been moved to"
-	elog "sys-apps/util-linux. The pidof tool has been moved to sys-apps/procps."
+	elog "sys-apps/util-linux. The pidof tool has been moved to sys-process/procps."
 }
