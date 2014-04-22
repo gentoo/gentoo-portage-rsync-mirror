@@ -1,6 +1,11 @@
 # ChangeLog for mate-extra/mate-calc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-calc/ChangeLog,v 1.5 2014/03/10 22:49:19 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-calc/ChangeLog,v 1.6 2014/04/22 19:29:16 tomwij Exp $
+
+*mate-calc-1.8.0 (22 Apr 2014)
+
+  22 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +mate-calc-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-calc-1.6.1.ebuild:
   Update dependencies per the consensus formed with ssuominen.
