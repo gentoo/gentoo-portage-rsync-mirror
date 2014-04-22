@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.13.0.ebuild,v 1.3 2014/04/21 13:37:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.13.0.ebuild,v 1.4 2014/04/22 22:23:34 johu Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ RESTRICT="test"
 # Would need test programs _testrunner and akonaditest from kdepimlibs, see bug 313233
 
 DEPEND="
-	>=app-office/akonadi-server-1.12.1[soprano(-)]
+	>=app-office/akonadi-server-1.12.1
 	dev-libs/boost:=
 	dev-libs/libxml2:2
 	dev-libs/libxslt

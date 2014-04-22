@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ktnef-4.13.0.ebuild,v 1.3 2014/04/21 13:42:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ktnef-4.13.0.ebuild,v 1.4 2014/04/22 22:25:00 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 IUSE="debug"
 
 DEPEND="
-	app-office/akonadi-server[soprano(-)]
+	app-office/akonadi-server
 	$(add_kdebase_dep kdepimlibs)
 "
 RDEPEND="${DEPEND}"

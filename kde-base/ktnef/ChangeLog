@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.140 2014/04/21 13:42:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.141 2014/04/22 22:25:00 johu Exp $
+
+  22 Apr 2014; Johannes Huber <johu@gentoo.org> ktnef-4.13.0.ebuild:
+  Drop app-office/akonadi-server[soprano(-)], bug #508356.
 
   21 Apr 2014; Johannes Huber <johu@gentoo.org> ktnef-4.11.5.ebuild,
   ktnef-4.12.3.ebuild, ktnef-4.12.4.ebuild, ktnef-4.13.0.ebuild:
