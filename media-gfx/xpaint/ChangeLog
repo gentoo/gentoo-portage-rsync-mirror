@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/xpaint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.21 2014/03/04 03:10:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.23 2014/04/22 13:14:39 hasufell Exp $
+
+  22 Apr 2014; Julian Ospald <hasufell@gentoo.org> xpaint-2.9.10.2.ebuild:
+  fix deps
+
+*xpaint-2.9.10.2 (22 Apr 2014)
+
+  22 Apr 2014; Julian Ospald <hasufell@gentoo.org> +xpaint-2.9.10.2.ebuild,
+  +files/xpaint-2.9.10.2-QA2.patch:
+  version bump
 
 *xpaint-2.9.10 (04 Mar 2014)
 
