@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.184 2014/03/28 05:38:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.185 2014/04/22 21:30:44 mabi Exp $
+
+*lua-5.2.3 (22 Apr 2014)
+*lua-5.1.5-r2 (22 Apr 2014)
+
+  22 Apr 2014; Matti Bickel <mabi@gentoo.org> +files/lua-5.1-make-r2.patch,
+  +files/lua-5.2-make-r1.patch, +lua-5.1.5-r2.ebuild, +lua-5.2.3.ebuild:
+  Introduce slotted versions of lua. Use with eselect to define the "main"
+  version.
 
 *lua-5.1.5-r1 (28 Mar 2014)
 
