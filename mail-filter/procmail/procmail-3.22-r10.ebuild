@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r10.ebuild,v 1.12 2011/06/08 13:04:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r10.ebuild,v 1.13 2014/04/22 05:48:46 grobian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -55,7 +55,8 @@ src_unpack() {
 src_compile() {
 	# -finline-functions (implied by -O3) leaves strstr() in an infinite loop.
 	# To work around this, we append -fno-inline-functions to CFLAGS
-	append-flags -fno-inline-functions
+	# Since GCC 4.7 we also need -fno-ipa-cp-clone (bug #466552)
+	append-flags -fno-inline-functions -fno-ipa-cp-clone
 
 	sed -e "s:CFLAGS0 = -O:CFLAGS0 = ${CFLAGS}:" \
 		-e "s:LDFLAGS0= -s:LDFLAGS0 = ${LDFLAGS}:" \

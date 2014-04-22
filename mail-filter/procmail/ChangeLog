@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.48 2011/06/08 13:04:39 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.49 2014/04/22 05:48:46 grobian Exp $
+
+  22 Apr 2014; Fabian Groffen <grobian@gentoo.org> procmail-3.22-r10.ebuild:
+  Fix build using GCC 4.7, thanks Denis Kaganovich in bug #466552
 
   08 Jun 2011; Eray Aslan <eras@gentoo.org> procmail-3.22-r10.ebuild:
   Fix lockfile permissions - bug #351656
