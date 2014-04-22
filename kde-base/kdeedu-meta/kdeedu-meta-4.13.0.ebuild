@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/kdeedu-meta-4.13.0.ebuild,v 1.3 2014/04/22 13:55:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/kdeedu-meta-4.13.0.ebuild,v 1.4 2014/04/22 15:52:05 kensington Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
@@ -12,6 +12,7 @@ IUSE=""
 
 RDEPEND="
 	$(add_kdebase_dep analitza)
+	$(add_kdebase_dep artikulate)
 	$(add_kdebase_dep blinken)
 	$(add_kdebase_dep cantor)
 	$(add_kdebase_dep kalgebra)
