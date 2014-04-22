@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.9.0b.ebuild,v 1.2 2013/12/26 21:15:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.9.0b.ebuild,v 1.3 2014/04/22 17:27:16 bicatali Exp $
 
 EAPI=5
 
@@ -17,8 +17,10 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="blas doc examples fortran lapack mpi"
 
+REQUIRED_USE="mpi? ( fortran lapack )"
+
 RDEPEND="
-	sci-libs/superlu
+	sci-libs/superlu:0=
 	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )"
@@ -43,6 +45,7 @@ src_prepare() {
 		-e '/^BLASFILES/d' \
 		-e '/^LAPACKFILES/d' \
 		lib/Makefile || die
+	use mpi && export CC=mpicc CXX=mpicxx FC=mpif77
 	tc-export CC CXX
 }
 
