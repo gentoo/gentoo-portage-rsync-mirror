@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8859 2014/04/22 15:48:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8860 2014/04/22 21:32:59 mabi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Apr 2014; Matti Bickel <mabi@gentoo.org> package.mask:
+  Add masks for slotted lua.
 
   22 Apr 2014; Michael Palimaka <kensington@gentoo.org> targets/desktop/kde/package.use:
   Enable USE="multimedia" for dev-qt/qt-mobility by default as it is required
