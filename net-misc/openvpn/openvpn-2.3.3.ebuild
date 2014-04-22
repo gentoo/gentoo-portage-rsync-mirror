@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.0.ebuild,v 1.15 2013/05/20 17:44:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.3.ebuild,v 1.1 2014/04/22 07:45:57 djc Exp $
 
 EAPI=4
 
@@ -12,10 +12,11 @@ HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins selinux +ssl +lzo static userland_BSD"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
+IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins polarssl selinux +ssl +lzo static userland_BSD"
 
 REQUIRED_USE="static? ( !plugins !pkcs11 )
+			polarssl? ( ssl )
 			!plugins? ( !pam !down-root )"
 
 DEPEND="
@@ -24,7 +25,9 @@ DEPEND="
 	)
 	pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-openvpn )
-	ssl? ( >=dev-libs/openssl-0.9.7 )
+	ssl? (
+		!polarssl? ( >=dev-libs/openssl-0.9.7 ) polarssl? ( >=net-libs/polarssl-1.2.10 )
+	)
 	lzo? ( >=dev-libs/lzo-1.07 )
 	pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )"
 RDEPEND="${DEPEND}"
@@ -35,7 +38,10 @@ src_prepare() {
 
 src_configure() {
 	use static && LDFLAGS="${LDFLAGS} -Xcompiler -static"
+	local myconf
+	use polarssl && myconf="--with-crypto-library=polarssl"
 	econf \
+		${myconf} \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-plugindir="${ROOT}/usr/$(get_libdir)/$PN" \
 		$(use_enable passwordsave password-save) \
@@ -72,8 +78,8 @@ src_install() {
 		doins -r sample contrib
 	fi
 
-	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfile ${PN}.conf || die
-	systemd_newunit "${FILESDIR}"/${PN}.service 'openvpn@.service' || die
+	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfile ${PN}.conf
+	systemd_newunit "${FILESDIR}"/${PN}.service 'openvpn@.service'
 }
 
 pkg_postinst() {
@@ -116,6 +122,6 @@ pkg_postinst() {
 	fi
 
 	einfo ""
-	einfo "OpenVPN 2.3.0 no longer includes the easy-rsa suite of utilities."
+	einfo "OpenVPN 2.3.x no longer includes the easy-rsa suite of utilities."
 	einfo "They can now be emerged via app-crypt/easy-rsa."
 }
