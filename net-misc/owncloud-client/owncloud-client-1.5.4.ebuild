@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.3.ebuild,v 1.2 2014/03/17 11:01:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.4.ebuild,v 1.1 2014/04/22 12:07:19 voyageur Exp $
 
 EAPI=5
 
@@ -32,7 +32,6 @@ RDEPEND=">=dev-db/sqlite-3.4:3
 	sftp? ( >=net-libs/libssh-0.5 )
 	!net-misc/ocsync"
 DEPEND="${RDEPEND}
-	app-text/asciidoc
 	doc? (
 		dev-python/sphinx
 		dev-texlive/texlive-latexextra
@@ -41,6 +40,8 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/cmocka )"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=( "${FILESDIR}"/${PN}-1.5.3-man-page-location-fix.patch )
 
 src_configure() {
 	local mycmakeargs=(
