@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.3.8.ebuild,v 1.3 2014/03/25 05:16:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.3.10.ebuild,v 1.1 2014/04/22 16:48:41 bicatali Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3} )
 PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1
@@ -24,13 +24,13 @@ IUSE="test"
 
 RDEPEND="
 	>=dev-lang/R-3
-	dev-python/numpy[${PYTHON_USEDEP}]
-	!<=dev-python/rpy-1.0.2-r2"
+	dev-python/numpy[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( <dev-python/pandas-0.13 )"
+	test? ( >=dev-python/pandas-0.13[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 
 python_test() {
+	cd "${BUILD_DIR}"/lib || die
 	${PYTHON} -m 'rpy2.tests' -v || die
 }
