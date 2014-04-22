@@ -1,0 +1,35 @@
+*** ../bash-4.3-patched/lib/readline/display.c	2014-04-08 18:19:36.000000000 -0400
+--- lib/readline/display.c	2014-04-20 18:32:52.000000000 -0400
+***************
+*** 1638,1642 ****
+       the spot of first difference is before the end of the invisible chars,
+       lendiff needs to be adjusted. */
+!   if (current_line == 0 && !_rl_horizontal_scroll_mode &&
+        current_invis_chars != visible_wrap_offset)
+      {
+--- 1638,1642 ----
+       the spot of first difference is before the end of the invisible chars,
+       lendiff needs to be adjusted. */
+!   if (current_line == 0 && /* !_rl_horizontal_scroll_mode && */
+        current_invis_chars != visible_wrap_offset)
+      {
+***************
+*** 1826,1831 ****
+  		_rl_last_c_pos += bytes_to_insert;
+  
+  	      if (_rl_horizontal_scroll_mode && ((oe-old) > (ne-new)))
+! 		goto clear_rest_of_line;
+  	    }
+  	}
+--- 1826,1836 ----
+  		_rl_last_c_pos += bytes_to_insert;
+  
++ 	      /* XXX - we only want to do this if we are at the end of the line
++ 		 so we move there with _rl_move_cursor_relative */
+  	      if (_rl_horizontal_scroll_mode && ((oe-old) > (ne-new)))
+! 		{
+! 		  _rl_move_cursor_relative (ne-new, new);
+! 		  goto clear_rest_of_line;
+! 		}
+  	    }
+  	}
