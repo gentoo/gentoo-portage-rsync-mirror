@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.254 2014/04/20 02:04:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.255 2014/04/22 00:22:43 vapier Exp $
+
+  22 Apr 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0.ebuild,
+  qemu-9999.ebuild:
+  Add aarch64 targets.
 
   20 Apr 2014; Mike Frysinger <vapier@gentoo.org> qemu-1.7.0.ebuild,
   qemu-1.7.1.ebuild, qemu-2.0.0.ebuild, qemu-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.2 2014/04/20 02:04:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.3 2014/04/22 00:22:43 vapier Exp $
 
 EAPI=5
 
@@ -36,8 +36,9 @@ rbd sasl +seccomp sdl selinux smartcard spice ssh static static-softmmu \
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
 
-COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips
-mipsel mips64 mips64el or32 ppc ppc64 sh4 sh4eb sparc sparc64 s390x unicore32"
+COMMON_TARGETS="aarch64 alpha arm cris i386 m68k microblaze microblazeel mips
+mips64 mips64el mipsel or32 ppc ppc64 s390x sh4 sh4eb sparc sparc64 unicore32
+x86_64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 moxie ppcemb xtensa xtensaeb"
 IUSE_USER_TARGETS="${COMMON_TARGETS} armeb mipsn32 mipsn32el ppc64abi32 sparc32plus"
 
