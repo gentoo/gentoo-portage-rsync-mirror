@@ -1,6 +1,15 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.201 2014/04/20 08:50:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.204 2014/04/22 13:41:26 ssuominen Exp $
+
+  22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove unused USE="consolekit" and USE="gnome-keyring" from metadata.xml
+
+  22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-session-4.10.0-r1.ebuild, -xfce4-session-4.10.1.ebuild,
+  -files/xfce4-session-4.10.0-multiple-interactive-session-save.patch,
+  metadata.xml:
+  old
 
   20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-session-4.10.1-r1.ebuild:
   Stable for x86, wrt bug #507432

@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xfce4-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xfce4-terminal/ChangeLog,v 1.20 2014/04/20 08:50:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xfce4-terminal/ChangeLog,v 1.21 2014/04/22 13:54:37 ssuominen Exp $
+
+  22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xfce4-terminal-0.6.2-fix-up-the-encoding-menu-creation.patch,
+  -xfce4-terminal-0.4.8.ebuild, -xfce4-terminal-0.6.2-r1.ebuild,
+  -xfce4-terminal-0.6.2.ebuild:
+  old
 
   20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-terminal-0.6.3.ebuild:
   Stable for x86, wrt bug #507432

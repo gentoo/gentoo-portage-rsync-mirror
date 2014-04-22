@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.236 2014/04/17 00:43:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.237 2014/04/22 13:35:47 johu Exp $
+
+  22 Apr 2014; Johannes Huber <johu@gentoo.org> dolphin-4.13.0.ebuild:
+  Drop DEPEND on kde-base/kdelibs[semantic-desktop], bug #508350.
 
   16 Apr 2014; Johannes Huber <johu@gentoo.org> dolphin-4.13.0.ebuild:
   Restore KEYWORDS for KDE SC 4.13.0

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.81 2014/04/16 07:49:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.82 2014/04/22 13:48:24 ssuominen Exp $
+
+  22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -orage-4.8.4.ebuild:
+  old
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org> orage-4.10.0.ebuild:
   Stable for ppc64, wrt bug #507432

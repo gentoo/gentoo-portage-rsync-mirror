@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cpufreq-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/ChangeLog,v 1.14 2014/04/16 07:50:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/ChangeLog,v 1.15 2014/04/22 14:01:40 ssuominen Exp $
+
+  22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-cpufreq-plugin-1.0.0.ebuild:
+  old
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   xfce4-cpufreq-plugin-1.1.0.ebuild:
