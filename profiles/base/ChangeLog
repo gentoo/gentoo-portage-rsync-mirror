@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.678 2014/04/21 19:10:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.679 2014/04/22 01:22:06 vapier Exp $
+
+  22 Apr 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Build pkgconfig with USE=internal-glib in stage2 #507930.
 
   21 Apr 2014; Rick Farina <zerochaos@gentoo.org> package.use.mask:
   remove masks on metasploit[test,development] now that we have rake 10
