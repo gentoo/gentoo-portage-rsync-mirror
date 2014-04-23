@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ncdc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.47 2014/02/11 20:39:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.48 2014/04/23 13:48:47 xmw Exp $
+
+*ncdc-1.19.1 (23 Apr 2014)
+
+  23 Apr 2014; Michael Weber <xmw@gentoo.org> +ncdc-1.19.1.ebuild:
+  Version bump.
 
 *ncdc-1.19 (11 Feb 2014)
 
