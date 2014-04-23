@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/restkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.15 2014/03/31 21:13:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.16 2014/04/23 08:27:32 idella4 Exp $
+
+*restkit-4.2.2 (23 Apr 2014)
+
+  23 Apr 2014; Ian Delaney <idella4@gentoo.org> +restkit-4.2.2.ebuild,
+  -restkit-2.1.4.ebuild, -restkit-2.2.3.ebuild, -restkit-2.3.3.ebuild,
+  -restkit-3.0.2.ebuild, restkit-4.2.1-r1.ebuild:
+  bump; pypy2_0 dropped, keywords ppc ppc64 dropped (to appease ipython),
+  general upgrade
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> restkit-4.2.1-r1.ebuild:
   Add support for the new PyPy slotting.

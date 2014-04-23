@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=~dev-qt/qtcore-5.2.1[debug=,glib=] media-libs/fontconfig media-libs/freetype:2 sys-libs/zlib gif? ( media-libs/giflib ) gles2? ( || ( media-libs/mesa[egl,gles2] media-libs/mesa[egl,gles] ) ) glib? ( dev-libs/glib:2 ) harfbuzz? ( >=media-libs/harfbuzz-0.9.12:0= ) ibus? ( ~dev-qt/qtdbus-5.2.1[debug=] ) jpeg? ( virtual/jpeg:0 ) kms? ( media-libs/mesa[gbm] virtual/udev x11-libs/libdrm ) opengl? ( virtual/opengl ) png? ( media-libs/libpng:0= ) udev? ( virtual/udev ) xcb? ( x11-libs/libICE x11-libs/libSM >=x11-libs/libX11-1.5 >=x11-libs/libXi-1.6 x11-libs/libXrender >=x11-libs/libxcb-1.10[xkb] >=x11-libs/libxkbcommon-0.2.0 x11-libs/xcb-util-image x11-libs/xcb-util-keysyms x11-libs/xcb-util-renderutil x11-libs/xcb-util-wm accessibility? ( ~dev-qt/qtdbus-5.2.1[debug=] ) ) evdev? ( sys-kernel/linux-headers ) test? ( ~dev-qt/qtnetwork-5.2.1[debug=] ) >=dev-lang/perl-5.14 virtual/pkgconfig test? ( ~dev-qt/qttest-5.2.1[debug=] )
+DESCRIPTION=The Qt toolkit is a comprehensive C++ application development framework
+EAPI=5
+HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
+IUSE=accessibility eglfs evdev gif gles2 +glib harfbuzz ibus jpeg kms opengl +png udev +xcb debug test
+KEYWORDS=~amd64
+LICENSE=|| ( LGPL-2.1 GPL-3 )
+PDEPEND=ibus? ( app-i18n/ibus )
+RDEPEND=~dev-qt/qtcore-5.2.1[debug=,glib=] media-libs/fontconfig media-libs/freetype:2 sys-libs/zlib gif? ( media-libs/giflib ) gles2? ( || ( media-libs/mesa[egl,gles2] media-libs/mesa[egl,gles] ) ) glib? ( dev-libs/glib:2 ) harfbuzz? ( >=media-libs/harfbuzz-0.9.12:0= ) ibus? ( ~dev-qt/qtdbus-5.2.1[debug=] ) jpeg? ( virtual/jpeg:0 ) kms? ( media-libs/mesa[gbm] virtual/udev x11-libs/libdrm ) opengl? ( virtual/opengl ) png? ( media-libs/libpng:0= ) udev? ( virtual/udev ) xcb? ( x11-libs/libICE x11-libs/libSM >=x11-libs/libX11-1.5 >=x11-libs/libXi-1.6 x11-libs/libXrender >=x11-libs/libxcb-1.10[xkb] >=x11-libs/libxkbcommon-0.2.0 x11-libs/xcb-util-image x11-libs/xcb-util-keysyms x11-libs/xcb-util-renderutil x11-libs/xcb-util-wm accessibility? ( ~dev-qt/qtdbus-5.2.1[debug=] ) )
+REQUIRED_USE=eglfs? ( evdev gles2 ) gles2? ( opengl ) kms? ( evdev gles2 )
+SLOT=5
+SRC_URI=http://download.qt-project.org/official_releases/qt/5.2/5.2.1/submodules/qtbase-opensource-src-5.2.1.tar.xz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	qt5-build	e0b5e723efb457110f74540900ce0652	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=99f24a1a0542a7ee456db557c05cdfec

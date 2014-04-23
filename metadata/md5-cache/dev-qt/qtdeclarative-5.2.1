@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=>=dev-qt/qtcore-5.2.1:5[debug=] >=dev-qt/qtgui-5.2.1:5[debug=,opengl] >=dev-qt/qtnetwork-5.2.1:5[debug=] >=dev-qt/qttest-5.2.1:5[debug=] localstorage? ( >=dev-qt/qtsql-5.2.1:5[debug=] ) widgets? ( >=dev-qt/qtwidgets-5.2.1:5[debug=] ) xml? ( >=dev-qt/qtxmlpatterns-5.2.1:5[debug=] ) >=dev-lang/perl-5.14 virtual/pkgconfig test? ( >=dev-qt/qttest-5.2.1:5[debug=] )
+DESCRIPTION=The Qt toolkit is a comprehensive C++ application development framework
+EAPI=5
+HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
+IUSE=+localstorage +widgets +xml debug test
+KEYWORDS=~amd64
+LICENSE=|| ( LGPL-2.1 GPL-3 )
+RDEPEND=>=dev-qt/qtcore-5.2.1:5[debug=] >=dev-qt/qtgui-5.2.1:5[debug=,opengl] >=dev-qt/qtnetwork-5.2.1:5[debug=] >=dev-qt/qttest-5.2.1:5[debug=] localstorage? ( >=dev-qt/qtsql-5.2.1:5[debug=] ) widgets? ( >=dev-qt/qtwidgets-5.2.1:5[debug=] ) xml? ( >=dev-qt/qtxmlpatterns-5.2.1:5[debug=] )
+SLOT=5
+SRC_URI=http://download.qt-project.org/official_releases/qt/5.2/5.2.1/submodules/qtdeclarative-opensource-src-5.2.1.tar.xz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	qt5-build	e0b5e723efb457110f74540900ce0652	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=b374644f785a6e01422b9dcb3a731950

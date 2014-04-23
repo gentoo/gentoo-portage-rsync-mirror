@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.1-r1.ebuild,v 1.6 2014/03/31 21:13:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.1-r1.ebuild,v 1.7 2014/04/23 08:27:32 idella4 Exp $
 
 EAPI=5
 
@@ -51,4 +51,5 @@ python_install_all() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
+	distutils-r1_python_install_all
 }
