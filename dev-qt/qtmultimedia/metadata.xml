@@ -5,7 +5,6 @@
 	<use>
 		<flag name="exceptions">Add support for exceptions - like catching them
 			inside the event loop (recommended by upstream)</flag>
-		<flag name="qml">Build QML/QtQuick bindings</flag>
 	</use>
 	<upstream>
 		<bugs-to>https://bugreports.qt-project.org/</bugs-to>
