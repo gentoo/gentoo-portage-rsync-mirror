@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.2.201404151432_p1.ebuild,v 1.1 2014/04/16 22:14:28 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.2.201404151432_p1.ebuild,v 1.2 2014/04/23 12:35:53 zx2c4 Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_P="${P}"
 if [ $(get_last_version_component_index) -eq 4 ]; then
 	MY_P="${PN}-$(get_version_component_range 4-)"
 fi
-SRC_URI="http://www.opensmtpd.org/archives/${MY_P/_}.tar.gz"
+SRC_URI="https://www.opensmtpd.org/archives/${MY_P/_}.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
