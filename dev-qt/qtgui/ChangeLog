@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.20 2014/04/23 07:07:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.21 2014/04/23 10:31:00 zlogene Exp $
+
+  23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -qtgui-5.2.1.ebuild:
+  Drop qt5 ebuild.
 
 *qtgui-5.2.1 (23 Apr 2014)
 
