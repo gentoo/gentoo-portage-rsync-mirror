@@ -1,0 +1,13 @@
+--- a/man/Makefile.in
++++ b/man/Makefile.in
+@@ -82,9 +82,9 @@
+ all: $(TARGETS) standardall manaliases
+ 
+ $(MANALIASES): manaliases
++.PHONY: manaliases
+ 
+ manaliases: Makefile
+-	touch manaliases
+ 	@for i in $(MAN3_API) ; do				  \
+             for j in `sed -n '/^.SH NAME/,/^.SH SYNOPSIS/p' $$i  | sed -e 's/.- .*//' | sed 's/,.*//'  | @EGREP@ -v '^.SH ' `; do \
+ 		echo "making man page alias $$j -> $$i APIs" ;    \
