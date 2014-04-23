@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r3.ebuild,v 1.2 2014/04/23 22:49:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r4.ebuild,v 1.1 2014/04/23 22:49:07 xmw Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ RDEPEND="dev-cpp/eigen:3
 	dev-libs/xerces-c[icu]
 	dev-python/PyQt4[svg]
 	dev-python/pivy
+	dev-qt/designer:4
 	dev-qt/qtgui:4
 	dev-qt/qtopengl:4
 	dev-qt/qtsvg:4
@@ -64,12 +65,14 @@ src_prepare() {
 		"${FILESDIR}"/${P}-qt3support.patch \
 		"${FILESDIR}"/${P}-boost148.patch \
 		"${FILESDIR}"/${P}-nopivy.patch \
-		"${FILESDIR}"/${P}-no-permissive.patch
+		"${FILESDIR}"/${P}-no-permissive.patch \
+		"${FILESDIR}"/${P}-cmake-2.8.12.patch
 
 	local my_cas_version=$(eselect opencascade show 2>/dev/null || echo 6.5)
-	if [ "${my_cas_version}" > "6.5.0" ] ; then
+	if [ "${my_cas_version}" \> "6.5.0" ] ; then
 		epatch  "${FILESDIR}"/${P}-occ-6.5.5.patch
 		epatch  "${FILESDIR}"/${P}-salomesmesh-occ-6.5.5.patch
+		epatch  "${FILESDIR}"/${P}-occ-6.6.patch
 	fi
 
 	local my_coin_version=$(best_version media-libs/coin)

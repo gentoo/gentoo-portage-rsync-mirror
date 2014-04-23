@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/kfilebox-0.4.9.ebuild,v 1.1 2012/05/03 07:37:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/kfilebox-0.4.9.ebuild,v 1.2 2014/04/23 22:41:43 creffett Exp $
 
-EAPI=4
+EAPI=5
 
 LANGS="ar br cs de el es fr gl it lt nl pl pt ru si tr zh"
 inherit qt4-r2

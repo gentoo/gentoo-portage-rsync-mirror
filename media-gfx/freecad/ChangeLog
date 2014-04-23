@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/freecad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.16 2013/05/09 08:36:38 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.17 2014/04/23 22:49:07 xmw Exp $
+
+*freecad-0.12.5284-r4 (23 Apr 2014)
+
+  23 Apr 2014; Michael Weber <xmw@gentoo.org>
+  +files/freecad-0.12.5284-cmake-2.8.12.patch,
+  +files/freecad-0.12.5284-occ-6.6.patch, +freecad-0.12.5284-r4.ebuild,
+  freecad-0.12.5284-r3.ebuild:
+  Revbump to address cmake update (bug 493666), opencascade-6.6 changes (bug
+  474794) and fix eselect module invocation (bug 468696). Thanks to Fabio Rossi,
+  Juergen Rose, Bob Johnson and others.
 
   09 May 2013; Michael Weber <xmw@gentoo.org> freecad-0.13.1830.ebuild:
   Fix S (thanks Alessio De Marchi, bug 469064)
