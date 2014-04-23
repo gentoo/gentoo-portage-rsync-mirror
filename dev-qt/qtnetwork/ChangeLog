@@ -1,9 +1,0 @@
-# ChangeLog for dev-qt/qtnetwork
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.1 2014/04/23 07:09:15 patrick Exp $
-
-*qtnetwork-5.2.1 (23 Apr 2014)
-
-  23 Apr 2014; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
-  +qtnetwork-5.2.1.ebuild:
-  Import qt5 from qt overlay

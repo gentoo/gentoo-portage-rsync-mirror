@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtopengl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.13 2014/04/23 07:10:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.14 2014/04/23 11:15:50 zlogene Exp $
+
+  23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -qtopengl-5.2.1.ebuild:
+  Drop qt5 ebuild.
 
 *qtopengl-5.2.1 (23 Apr 2014)
 
