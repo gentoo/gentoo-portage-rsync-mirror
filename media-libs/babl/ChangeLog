@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.61 2014/03/04 20:02:39 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.62 2014/04/23 21:13:40 pacho Exp $
+
+  23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -babl-0.1.10.ebuild,
+  -babl-0.1.4-r2.ebuild, -babl-0.1.4.ebuild, -babl-0.1.6.ebuild,
+  -babl-0.1.8.ebuild, -files/babl-0.1.0-build-fixes.patch,
+  -files/babl-0.1.4-introspection.patch, -files/babl-0.1.6-introspection.patch:
+  Drop old
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> babl-0.1.10-r1.ebuild:
   Add ~mips keyword.
