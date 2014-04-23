@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15599 2014/04/23 11:56:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15602 2014/04/23 12:17:44 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -202,13 +202,6 @@ www-apache/mod_chroot
 # hopefully 1.8 will improve the situation
 >=dev-libs/DirectFB-1.7.1
 
-# Samuli Suominen <ssuominen@gentoo.org> (05 Apr 2014)
-# natpmp.h has #include "declspec.h", but the ebuild never installs
-# the required header
-# breaks compilation of reverse dependencies, like transmission
-# bug 506832
-=net-libs/libnatpmp-20140401
-
 # Julian Ospald <hasufell@gentoo.org> (03 Apr 2014)
 # Mask to ensure users with mixed arches also get
 # the update. Remove later.
@@ -272,12 +265,6 @@ www-apache/mod_ruby
 # Security mask of vulnerable versions, wrt bug #424167
 <net-nds/openldap-2.4.35
 
-# Mikle Kolyada <zlogene@gentoo.org> (19 Mar 2014)
-# Dead upstream (no releases since 2006),
-# GUI no longer supported (bug #250971).
-# Removal in 30 days.
-app-misc/bins
-
 # Samuli Suominen <ssuominnen@gentoo.org> (19 Mar 2014)
 # The ebuild is appending CFLAGS -O0 to prevent segfaulting
 # on 64bit, a workaround that doesn't always work.
@@ -299,17 +286,6 @@ virtual/rubygems:ruby18
 virtual/ruby-rdoc:ruby18
 virtual/ruby-ssl:ruby18
 virtual/ruby-threads:ruby18
-app-misc/alexandria
-dev-ruby/fastercsv
-dev-ruby/oniguruma
-dev-ruby/rand
-dev-ruby/revolution
-dev-ruby/ruby-taglib
-dev-ruby/rubytorrent
-dev-ruby/sary-ruby
-dev-ruby/system_timer
-<app-text/migemo-0.40_p2
-=dev-ruby/mecab-ruby-0.98-r1
 
 # Lars Wendler <polynomial-c@gentoo.org> (14 Mar 2014)
 # Masked for security reasons.
@@ -569,12 +545,6 @@ www-client/google-chrome:unstable
 # Julian Ospald <hasufell@gentoo.org> (30 Dec 2013)
 # breaks every consumer
 =dev-games/ogre-1.9.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
-# The required icons from faenza-xfce-icon-theme are now part of
-# the faenza-icon-theme itself for a long time now.
-# Removal in 30 days.
-x11-themes/faenza-xfce-icon-theme
 
 # Luca Barbato <lu_zero@gentoo.org> (18 Dec 2013)
 # Alpha ebuild, unmask to test the tree.

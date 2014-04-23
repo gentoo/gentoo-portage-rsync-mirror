@@ -1,10 +1,23 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8862 2014/04/23 11:56:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8864 2014/04/23 12:17:44 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Apr 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  [QA] Remove obselete entries that were last rited, 30 days have passed and
+  for which their ebuilds / packages have been removed by the maintainer(s).
+
+  23 Apr 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  [QA] Removed obsolete =net-libs/libnatpmp-20140401 mask, the version with
+  missing declspec.h has been punted by ssuominen.
+
+  23 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Punt now unrequired entry for removed faenza-xfce-icon-theme package.
+  Everything from the themepack was included directly in the original
+  faenza-icon-theme.
 
   23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Drop qt5 and co. from the tree

@@ -1,6 +1,11 @@
 # ChangeLog for mate-extra/mate-polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-polkit/ChangeLog,v 1.3 2014/03/10 22:03:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-polkit/ChangeLog,v 1.4 2014/04/23 12:19:42 tomwij Exp $
+
+*mate-polkit-1.8.0 (23 Apr 2014)
+
+  23 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +mate-polkit-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
   10 Mar 2014; Tom Wijsman <TomWij@gentoo.org> mate-polkit-1.6.1.ebuild:
   Further review of dependencies.
