@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.10.ebuild,v 1.3 2013/12/09 05:49:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.10.ebuild,v 1.4 2014/04/23 21:40:14 mrueg Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="debug openconnect"
 DEPEND="
 	net-misc/mobile-broadband-provider-info
 	>=net-misc/networkmanager-0.9.6
-	openconnect? ( net-misc/openconnect )
+	openconnect? ( <net-misc/openconnect-5.99 )
 "
 RDEPEND="${DEPEND}
 	!kde-base/solid

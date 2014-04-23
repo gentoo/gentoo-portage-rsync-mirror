@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lab-Measurement
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.18 2014/03/12 14:03:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.19 2014/04/23 21:39:10 dilfridge Exp $
+
+  23 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Lab-Measurement-3.200.0.ebuild:
+  Remove old
 
   12 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   Lab-Measurement-9999.ebuild:

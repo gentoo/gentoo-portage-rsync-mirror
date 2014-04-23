@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.107 2014/01/18 05:27:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.108 2014/04/23 21:55:27 zx2c4 Exp $
+
+*tree-1.7.0 (23 Apr 2014)
+
+  23 Apr 2014; Jason A. Donenfeld <zx2c4@gentoo.org> +tree-1.7.0.ebuild:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> tree-1.6.0-r1.ebuild:
   Add arm64 love.
