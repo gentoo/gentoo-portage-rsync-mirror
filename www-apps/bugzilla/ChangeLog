@@ -1,6 +1,21 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.221 2014/03/03 23:53:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.223 2014/04/23 04:45:36 creffett Exp $
+
+  23 Apr 2014; Chris Reffett <creffett@gentoo.org>
+  -files/3.6/bugzilla.cron.daily, -files/3.6/bugzilla.cron.tab,
+  -files/3.6/postinstall-en.txt, -files/3.6/reconfig:
+  Remove unused from
+
+*bugzilla-4.0.13 (23 Apr 2014)
+*bugzilla-4.4.4 (23 Apr 2014)
+*bugzilla-4.2.9 (23 Apr 2014)
+
+  23 Apr 2014; Chris Reffett <creffett@gentoo.org> +bugzilla-4.0.13.ebuild,
+  +bugzilla-4.2.9.ebuild, +bugzilla-4.4.4.ebuild, -bugzilla-4.0.11.ebuild,
+  bugzilla-4.4.1.ebuild:
+  Proxy commit on behalf of Andrew Hamilton <andrew@ahamilto.net>. Version bumps
+  wrt bug 507976. Remove affected 4.0.11.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> bugzilla-4.4.1.ebuild:
   amd64 stable, bug #498854
