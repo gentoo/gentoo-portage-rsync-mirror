@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/designer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.13 2014/01/26 16:26:54 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.14 2014/04/23 06:58:36 patrick Exp $
+
+*designer-5.2.1 (23 Apr 2014)
+
+  23 Apr 2014; Patrick Lauer <patrick@gentoo.org> +designer-5.2.1.ebuild:
+  Import qt5 from qt overlay
 
   26 Jan 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Don't mention Nokia anymore.
