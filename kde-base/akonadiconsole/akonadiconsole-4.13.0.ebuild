@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/akonadiconsole-4.13.0.ebuild,v 1.4 2014/04/22 22:19:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/akonadiconsole-4.13.0.ebuild,v 1.5 2014/04/22 23:34:14 reavertm Exp $
 
 EAPI=5
 
@@ -12,11 +12,9 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep baloo)
-	$(add_kdebase_dep baloo-widgets)
+	>=app-office/akonadi-server-1.12.1
 	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep kdepim-common-libs)
-	app-office/akonadi-server
 "
 RDEPEND="${DEPEND}"
 
