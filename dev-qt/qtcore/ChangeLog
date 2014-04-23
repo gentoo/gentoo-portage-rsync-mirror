@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.42 2014/01/26 17:47:41 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.43 2014/04/23 07:04:28 patrick Exp $
+
+*qtcore-5.2.1 (23 Apr 2014)
+
+  23 Apr 2014; Patrick Lauer <patrick@gentoo.org> +qtcore-5.2.1.ebuild:
+  Import qt5 from qt overlay
 
   26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -files/CVE-2013-0254.patch,
   -files/blacklist-mis-issued-Turktrust-certs.patch,

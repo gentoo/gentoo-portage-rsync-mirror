@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qttest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.13 2014/01/26 18:10:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.14 2014/04/23 07:16:52 patrick Exp $
+
+*qttest-5.2.1 (23 Apr 2014)
+
+  23 Apr 2014; Patrick Lauer <patrick@gentoo.org> +qttest-5.2.1.ebuild:
+  Import qt5 from qt overlay
 
   26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -qttest-4.8.4.ebuild,
   metadata.xml:

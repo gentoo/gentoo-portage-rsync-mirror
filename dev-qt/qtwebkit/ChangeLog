@@ -1,6 +1,13 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.11 2014/01/26 18:11:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.12 2014/04/23 07:18:25 patrick Exp $
+
+*qtwebkit-5.2.1 (23 Apr 2014)
+
+  23 Apr 2014; Patrick Lauer <patrick@gentoo.org>
+  +files/qtwebkit-5.2.1-disable-gstreamer.patch, +qtwebkit-5.2.1.ebuild,
+  metadata.xml:
+  Import qt5 from qt overlay
 
   26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -qtwebkit-4.8.4.ebuild,
   metadata.xml:

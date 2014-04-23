@@ -2103,10 +2103,12 @@ dev-qt/qtbearer:exceptions - Add support for exceptions - like catching them ins
 dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtcore:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
 dev-qt/qtdeclarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
 dev-qt/qtdeclarative:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtdeclarative:webkit - Build the WebView QML component
+dev-qt/qtdeclarative:widgets - Enable QtWidgets support
 dev-qt/qtdemo:dbus - Build QtDBus examples and demos
 dev-qt/qtdemo:declarative - Build QtDeclarative examples and demos
 dev-qt/qtdemo:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
@@ -2118,14 +2120,23 @@ dev-qt/qtdemo:qt3support - Build Qt3Support examples and demos
 dev-qt/qtdemo:webkit - Build QtWebKit examples and demos
 dev-qt/qtdemo:xmlpatterns - Build QtXmlPatterns examples and demos
 dev-qt/qtgui:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
+dev-qt/qtgui:eglfs - Compile EGL Full Screen/Single Surface support
+dev-qt/qtgui:evdev - Enable evdev input support
 dev-qt/qtgui:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtgui:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
 dev-qt/qtgui:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtgui:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
+dev-qt/qtgui:harfbuzz - Use media-libs/harfbuzz for text shaping (EXPERIMENTAL). If enabled, it can still be disabled at runtime by setting QT_HARFBUZZ environment variable to "old".
+dev-qt/qtgui:ibus - Build the IBus input method plugin
+dev-qt/qtgui:kms - Build the KMS platform plugin
 dev-qt/qtgui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtgui:trace - Build the 'trace' graphicssystem engine which allows to record all drawing operations into a trace buffer. Later it can be replayed with the qttracereplay utility
 dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings
+dev-qt/qtnetwork:connman - Enable ConnMan-based bearer plugin
+dev-qt/qtnetwork:networkmanager - Enable NetworkManager-based bearer plugin
 dev-qt/qtopengl:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
 dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
@@ -2133,13 +2144,22 @@ dev-qt/qtopenvg:exceptions - Build with support for exceptions
 dev-qt/qtopenvg:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtphonon:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtphonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+dev-qt/qtquick1:webkit - Build the WebView import for QtQuick1 (requires QtWebKit)
+dev-qt/qtquick1:xml - Build the XmlListModel import for QtQuick1 (requires QtXmlPatterns)
 dev-qt/qtscript:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
 dev-qt/qtsql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtsql:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qttest:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer
+dev-qt/qtwebkit:libxml2 - Use dev-libs/libxml2 for XML parsing
+dev-qt/qtwebkit:multimedia - Enable HTML5 audio/video support via dev-qt/qtmultimedia
+dev-qt/qtwebkit:qml - Build QML/QtQuick bindings
+dev-qt/qtwebkit:webp - Add support for WebP image format
+dev-qt/qtwebkit:widgets - Build various things that depend on dev-qt/qtwidgets, e.g. the WebKitWidgets library
+dev-qt/qtwebkit:xslt - Enable XSLT support
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
 dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_png.
 dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.
