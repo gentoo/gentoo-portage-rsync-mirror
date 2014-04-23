@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.74 2014/03/28 03:44:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.75 2014/04/23 09:38:06 nimiux Exp $
+
+  23 Apr 2014; Chema Alonso <nimiux@gentoo.org> libdvdnav-4.2.1.ebuild:
+  Stable for amd64 wrt bug #502838
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> libdvdnav-4.2.1.ebuild:
   Stable for HPPA (bug #502838).

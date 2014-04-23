@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile configure install test
+DESCRIPTION=NetBSD's portable make
+EAPI=3
+HOMEPAGE=http://www.crufty.net/help/sjg/bmake.html
+KEYWORDS=~amd64 ~ppc ~x86 ~x64-freebsd
+LICENSE=BSD
+SLOT=0
+SRC_URI=http://void.crufty.net/ftp/pub/sjg/bmake-20140214.tar.gz http://void.crufty.net/ftp/pub/sjg/mk-20121010.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=53e1d3f452e8b2f4ec676dc310c73833

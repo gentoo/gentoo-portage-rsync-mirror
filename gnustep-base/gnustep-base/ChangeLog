@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.121 2014/01/29 15:11:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.122 2014/04/23 09:50:20 voyageur Exp $
+
+*gnustep-base-1.24.6-r1 (23 Apr 2014)
+
+  23 Apr 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-base-1.24.6-r1.ebuild, +files/gnustep-base-1.24.6-gdomap_dos.patch:
+  Upstream backport to fix gdomap denial of service, security bug #508370
 
 *gnustep-base-1.24.6 (29 Jan 2014)
 
