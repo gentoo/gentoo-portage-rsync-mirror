@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.612 2014/04/23 08:47:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.613 2014/04/23 11:38:37 ulm Exp $
+
+  23 Apr 2014; Ulrich Müller <ulm@gentoo.org> -emacs-18.59-r8.ebuild:
+  Remove old.
 
   23 Apr 2014; Chema Alonso <nimiux@gentoo.org> emacs-18.59-r9.ebuild:
   Stable for amd64 wrt bug #502262
