@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.16_p1860-r1.ebuild,v 1.2 2013/08/10 14:43:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.16_p1860-r1.ebuild,v 1.3 2014/04/23 14:11:59 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-12 LGPL-2 LGPL-3"
-KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer multilib"
 
 O_V="$(get_version_component_range 1-2)" # Version, i.e. 11.00
