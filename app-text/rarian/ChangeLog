@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.67 2013/04/13 20:56:41 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.68 2014/04/23 20:58:28 pacho Exp $
+
+  23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -rarian-0.8.1-r1.ebuild:
+  Drop old
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> rarian-0.8.1-r2.ebuild:
   Stable for s390, wrt bug #458984

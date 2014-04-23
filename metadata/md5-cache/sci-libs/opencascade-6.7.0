@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst preinst prepare pretend setup
+DEPEND=app-admin/eselect-opencascade dev-lang/tcl dev-lang/tk dev-tcltk/itcl dev-tcltk/itk dev-tcltk/tix media-libs/ftgl virtual/glu virtual/opengl x11-libs/libXmu freeimage? ( media-libs/freeimage ) gl2ps? ( x11-libs/gl2ps ) java? ( >=virtual/jdk-0 ) tbb? ( dev-cpp/tbb ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=Software development platform for CAD/CAE, 3D surface/solid modeling and data exchange
+EAPI=5
+HOMEPAGE=http://www.opencascade.org/
+IUSE=debug doc examples freeimage gl2ps java qt4 +tbb elibc_FreeBSD java
+KEYWORDS=~amd64 ~x86
+LICENSE=Open-CASCADE-LGPL-2.1-Exception-1.0 LGPL-2.1
+RDEPEND=app-admin/eselect-opencascade dev-lang/tcl dev-lang/tk dev-tcltk/itcl dev-tcltk/itk dev-tcltk/tix media-libs/ftgl virtual/glu virtual/opengl x11-libs/libXmu freeimage? ( media-libs/freeimage ) gl2ps? ( x11-libs/gl2ps ) java? ( >=virtual/jdk-0 ) tbb? ( dev-cpp/tbb ) java? ( >=dev-java/java-config-2.1.9-r1 )
+RESTRICT=bindist mirror
+SLOT=6.7.0
+SRC_URI=http://files.opencascade.com/OCCT/OCC_6.7.0_release/opencascade-6.7.0.tgz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=065a01c9b3353b1fb723f0b966ee0125

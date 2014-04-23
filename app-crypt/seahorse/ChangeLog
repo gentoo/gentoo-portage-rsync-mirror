@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.179 2014/03/16 00:01:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.180 2014/04/23 20:44:41 pacho Exp $
+
+  23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -seahorse-3.10.2.ebuild,
+  -seahorse-3.8.2.ebuild:
+  Drop old
 
   16 Mar 2014; Pacho Ramos <pacho@gentoo.org> seahorse-3.10.2-r1.ebuild:
   amd64 stable, bug #504582

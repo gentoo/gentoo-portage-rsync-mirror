@@ -1,12 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.6.1.ebuild,v 1.1 2013/08/20 00:31:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.7.3.0.ebuild,v 1.1 2014/04/23 20:48:11 hasufell Exp $
 
 EAPI=5
 
+CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils eutils games
 
-MY_P=CGenius-${PV}-Release-Source
+MY_P=CGenius-${PV}-Release-src
 DESCRIPTION="Open Source Commander Keen clone (needs original game files)"
 HOMEPAGE="http://clonekeenplus.sourceforge.net"
 SRC_URI="mirror://sourceforge/clonekeenplus/CGenius/V${PV:0:3}/${MY_P}.tar.gz"
@@ -16,18 +17,29 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="opengl tremor"
 
-RDEPEND="media-libs/libsdl[X,audio,opengl?,video]
-	media-libs/sdl-image
+RDEPEND="media-libs/libsdl2[X,audio,opengl?,video]
+	media-libs/sdl2-image
 	opengl? ( virtual/opengl )
 	tremor? ( media-libs/tremor )
 	!tremor? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/CGenius-${PV}-Release-Source
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	cat <<-EOF > version.h
+	#ifndef __CG__VERSION_H__
+	#define __CG__VERSION_H__
+
+	#define CGVERSION	"1.7.3.0-Release"
+
+	#endif
+	EOF
+
+	sed -i \
+		-e '/INCLUDE(package.cmake)/d' \
+		CMakeLists.txt || die
 }
 
 src_configure() {
@@ -40,6 +52,7 @@ src_configure() {
 		$(cmake-utils_use opengl OPENGL)
 		$(cmake-utils_use tremor TREMOR)
 		$(cmake-utils_use !tremor OGG)
+		-DUSE_SDL2=1
 	)
 
 	cmake-utils_src_configure
