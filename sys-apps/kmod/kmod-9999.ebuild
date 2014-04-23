@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.73 2014/04/12 18:52:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.74 2014/04/23 18:38:11 williamh Exp $
 
 EAPI=5
 
@@ -91,11 +91,11 @@ src_configure() {
 		run_in_build_dir econf "${myeconfargs[@]}" "$@"
 	}
 
+	BUILD_DIR="${WORKDIR}/build"
+	kmod_configure --disable-python
+
 	if use python; then
 		python_parallel_foreach_impl kmod_configure --enable-python
-	else
-		BUILD_DIR="${WORKDIR}/build"
-		kmod_configure --disable-python
 	fi
 }
 
@@ -105,18 +105,38 @@ src_compile() {
 		# wrt #494806
 		local MAKEOPTS="${MAKEOPTS} -j1"
 	fi
+
+	emake -C "${BUILD_DIR}"
+
 	if use python; then
-		python_foreach_impl run_in_build_dir emake
-	else
-		run_in_build_dir emake
+		local native_builddir=${BUILD_DIR}
+
+		python_compile() {
+			echo 'python: $(pkgpyexec_LTLIBRARIES)' |
+			emake -C "${BUILD_DIR}" -f Makefile -f - python \
+				VPATH="${native_builddir}:${S}" \
+				native_builddir="${native_builddir}" \
+				libkmod_python_kmod_{kmod,list,module,_util}_la_LIBADD='$(PYTHON_LIBS) $(native_builddir)/libkmod/libkmod.la'
+		}
+
+		python_foreach_impl python_compile
 	fi
 }
 
 src_install() {
+	emake -C "${BUILD_DIR}" DESTDIR="${D}" install
+
 	if use python; then
-		python_foreach_impl run_in_build_dir emake DESTDIR="${D}" install
-	else
-		run_in_build_dir emake DESTDIR="${D}" install
+		local native_builddir=${BUILD_DIR}
+
+		python_install() {
+			emake -C "${BUILD_DIR}" DESTDIR="${D}" \
+				VPATH="${native_builddir}:${S}" \
+				install-pkgpyexecLTLIBRARIES \
+				install-dist_pkgpyexecPYTHON
+		}
+
+		python_foreach_impl python_install
 	fi
 
 	prune_libtool_files

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.145 2014/04/12 18:52:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.146 2014/04/23 18:38:11 williamh Exp $
+
+  23 Apr 2014; William Hubbs <williamh@gentoo.org> kmod-17.ebuild,
+  kmod-9999.ebuild:
+  Allow python modules to be built for multiple versions of python, thanks to
+  Michal Gorny.
 
   12 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-17.ebuild,
   kmod-9999.ebuild:
