@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.133 2014/03/30 14:49:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.134 2014/04/23 09:19:23 polynomial-c Exp $
 
 # This file requires >=portage-2.1.1
+
+# Lars Wendler <polynomial-c@gentoo.org (23 Apr 2014)
+# Works on 32bit x86
+media-sound/lmms -vst
 
 # Mike Gilbert <floppym@gentoo.org> (27 Mar 2014)
 # sys-libs/libseccomp is not keyworded on many archs.

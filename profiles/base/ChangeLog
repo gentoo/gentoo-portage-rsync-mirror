@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.679 2014/04/22 01:22:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.680 2014/04/23 09:19:23 polynomial-c Exp $
+
+  23 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
+  medias-ound/lmms[vst] not working on 64bit systems.
 
   22 Apr 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
   Build pkgconfig with USE=internal-glib in stage2 #507930.
