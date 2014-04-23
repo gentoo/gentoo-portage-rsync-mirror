@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.149 2014/04/22 17:35:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.150 2014/04/23 00:48:02 floppym Exp $
+
+  23 Apr 2014; Mike Gilbert <floppym@gentoo.org> scons-2.3.0.ebuild:
+  Revert arm64 stable keyword.
 
   22 Apr 2014; Mike Gilbert <floppym@gentoo.org> -scons-2.2.0.ebuild,
   scons-2.3.0.ebuild:
