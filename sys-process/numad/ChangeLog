@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/numad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.6 2014/01/20 07:50:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.7 2014/04/23 19:49:02 vapier Exp $
+
+*numad-0.5-r2 (23 Apr 2014)
+
+  23 Apr 2014; Mike Frysinger <vapier@gentoo.org> +files/numad-0.5-ldlibs.patch,
+  +numad-0.5-r2.ebuild, numad-9999.ebuild:
+  Fix building with SYMLINK_LIB=no #505760 by Georgi Georgiev. Sync the non-9999
+  and 9999 ebuild versions.
 
 *numad-0.5-r1 (20 Jan 2014)
 

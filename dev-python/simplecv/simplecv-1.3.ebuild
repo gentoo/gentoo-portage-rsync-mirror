@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplecv/simplecv-1.3.ebuild,v 1.3 2014/01/24 21:32:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplecv/simplecv-1.3.ebuild,v 1.4 2014/04/23 19:51:01 mgorny Exp $
 
 EAPI=5
+
+DISTUTILS_SINGLE_IMPL=1
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 vcs-snapshot
@@ -22,7 +24,7 @@ DEPEND="
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 RDEPEND="
-	|| ( <media-libs/opencv-2.4.8 >=media-libs/opencv-2.4.8[python,${PYTHON_USEDEP}] )
+	>=media-libs/opencv-2.4.8[python,${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]

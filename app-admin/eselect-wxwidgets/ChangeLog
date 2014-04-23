@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.68 2014/03/24 15:08:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.69 2014/04/23 19:55:09 ottxor Exp $
+
+*eselect-wxwidgets-20140423 (23 Apr 2014)
+
+  23 Apr 2014; Christoph Junghans <ottxor@gentoo.org>
+  +eselect-wxwidgets-20140423.ebuild, +files/wx-config-1.4, +files/wxrc-1.4:
+  add prefix support (bug #508438)
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   eselect-wxwidgets-20131230.ebuild:
