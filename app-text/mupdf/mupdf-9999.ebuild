@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.43 2014/01/22 07:14:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.44 2014/04/23 16:52:40 xmw Exp $
 
 EAPI=5
 
@@ -39,7 +39,6 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${PN}-1.3-CFLAGS.patch \
-		"${FILESDIR}"/${PN}-1.3-openjpeg2.patch \
 		"${FILESDIR}"/${PN}-1.3-pkg-config.patch \
 		"${FILESDIR}"/${PN}-1.3-sys_curl.patch
 

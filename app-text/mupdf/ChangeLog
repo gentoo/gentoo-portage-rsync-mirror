@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.102 2014/04/15 13:45:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.103 2014/04/23 16:52:40 xmw Exp $
+
+  23 Apr 2014; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  LiveVCS no longer needs openjpeg2.patch
 
 *mupdf-1.4 (15 Apr 2014)
 

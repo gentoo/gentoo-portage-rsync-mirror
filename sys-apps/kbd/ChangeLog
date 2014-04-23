@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.127 2014/01/26 12:19:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.129 2014/04/23 16:53:31 polynomial-c Exp $
+
+  23 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +files/kbd-2.0.1-big_endian.patch:
+  Forgot to add patch file in previous commit.
+
+*kbd-9999 (23 Apr 2014)
+*kbd-2.0.1-r1 (23 Apr 2014)
+
+  23 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -kbd-1.15.3.ebuild,
+  +kbd-2.0.1-r1.ebuild, +kbd-9999.ebuild:
+  Fixed loadkeys not working on big_endian machines (bug #508436). Added live
+  ebuild. Removed old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kbd-1.15.5-r1.ebuild:
   Stable for sparc, wrt bug #496434
