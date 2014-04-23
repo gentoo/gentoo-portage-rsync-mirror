@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.8 2014/04/23 17:09:08 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.9 2014/04/23 22:04:39 zx2c4 Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="+git X +bash-completion zsh-completion fish-completion elibc_Darwin"
 RDEPEND="
 	app-crypt/gnupg
 	app-admin/pwgen
-	app-text/tree
+	>=app-text/tree-1.7.0
 	git? ( dev-vcs/git )
 	X? ( x11-misc/xclip )
 	elibc_Darwin? ( app-misc/getopt )
