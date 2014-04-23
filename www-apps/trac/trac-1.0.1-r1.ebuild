@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.1-r1.ebuild,v 1.1 2014/04/22 18:35:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.1-r1.ebuild,v 1.2 2014/04/23 19:24:26 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="cgi fastcgi i18n mysql postgres +sqlite subversion test"
+IUSE="cgi fastcgi i18n mysql postgres +sqlite subversion"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 RDEPEND="
@@ -55,8 +55,6 @@ python_prepare_all() {
 	local PATCHES=(
 		"${FILESDIR}/${PV}-git-identity.patch"
 	)
-
-#	use test && python_copy_sources
 
 	distutils-r1_python_prepare_all
 }
