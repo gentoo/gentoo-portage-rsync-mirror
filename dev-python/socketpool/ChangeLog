@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/socketpool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.11 2014/03/31 20:45:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.12 2014/04/23 07:48:55 idella4 Exp $
+
+*socketpool-0.5.3 (23 Apr 2014)
+
+  23 Apr 2014; Ian Delaney <idella4@gentoo.org> +socketpool-0.5.3.ebuild,
+  metadata.xml:
+  bump; drop pypy2_0, py3.2, add py3.4; add IUSE gevent, test; set REQUIRED_USE,
+  upgrade deps, test phase
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> socketpool-0.5.2-r1.ebuild,
   socketpool-0.5.2.ebuild:
