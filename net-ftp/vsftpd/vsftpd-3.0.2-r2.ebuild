@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.2-r2.ebuild,v 1.1 2013/09/03 20:11:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.2-r2.ebuild,v 1.2 2014/04/23 20:21:20 hwoarang Exp $
 
 EAPI="4"
 
@@ -56,12 +56,21 @@ src_prepare() {
 
 	#Bug #450536
 	epatch "${FILESDIR}"/${P}-remove-legacy-cap.patch
+
+	epatch_user
 }
 
 src_compile() {
+	# Override LIBS variable. Bug #508192
+	LIBS=
+	use caps && LIBS+=" -lcap"
+	use pam && LIBS+=" -lpam"
+	use tcpd && LIBS+=" -lwrap"
+	use ssl && LIBS+=" -lssl -lcrypto"
+
 	CFLAGS="${CFLAGS}" \
 	CC="$(tc-getCC)" \
-	emake
+	emake LIBS="${LIBS}"
 }
 
 src_install() {

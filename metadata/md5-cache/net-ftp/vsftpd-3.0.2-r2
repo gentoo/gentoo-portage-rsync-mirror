@@ -10,4 +10,4 @@ RDEPEND=caps? ( >=sys-libs/libcap-2 ) pam? ( virtual/pam ) tcpd? ( >=sys-apps/tc
 SLOT=0
 SRC_URI=http://security.appspot.com/downloads/vsftpd-3.0.2.tar.gz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=cdf59407cd7c68abe5231d424d688dca
+_md5_=8bfa31f8cba90b455f877c1ae6a432aa

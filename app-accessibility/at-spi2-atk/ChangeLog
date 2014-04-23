@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.46 2014/04/21 10:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.47 2014/04/23 20:27:06 pacho Exp $
+
+  23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -at-spi2-atk-2.6.2-r1.ebuild,
+  -at-spi2-atk-2.8.1.ebuild,
+  -files/at-spi2-atk-2.0.2-disable-teamspaces-test.patch:
+  Drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> at-spi2-atk-2.10.2.ebuild:
   Stable for arm, wrt bug #507568
