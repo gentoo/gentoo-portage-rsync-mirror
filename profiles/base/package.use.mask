@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.562 2014/04/23 09:19:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.563 2014/04/24 10:38:58 jmbsvicetto Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Apr 2014)
+# It's only supported on amd64
+dev-db/mariadb tokudb
 
 # Lars Wendler <polynomial-c@gentoo.org> (23 Apr 2014)
 # Not working on 64bit systems

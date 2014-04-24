@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8866 2014/04/23 21:48:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8867 2014/04/24 10:38:57 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  arch/amd64/package.use.mask, base/package.use.mask:
+  Mask tokudb use flag for dev-db/mariadb in all arches except amd64.
 
   23 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove networkmanagement mask on request by mrueg
