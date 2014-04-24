@@ -1,11 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.19.ebuild,v 1.2 2014/04/24 03:02:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/rawdog-2.18-r1.ebuild,v 1.1 2014/04/24 03:02:17 idella4 Exp $
 
-EAPI=5
-PYTHON_COMPAT=( python2_7 pypy )
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils-r1
+inherit distutils
 
 DESCRIPTION="Rawdog - RSS Aggregator Without Delusions Of Grandeur"
 HOMEPAGE="http://offog.org/code/rawdog.html http://pypi.python.org/pypi/rawdog"
@@ -16,5 +18,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND="dev-python/feedparser[${PYTHON_USEDEP}]"
-RDEPEND=""
+RDEPEND="dev-python/feedparser"
+DEPEND=""
+
+DOCS="NEWS PLUGINS config style.css"
+PYTHON_MODNAME="rawdoglib"
