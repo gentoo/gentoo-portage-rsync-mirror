@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-shout
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.22 2013/10/30 04:37:56 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.23 2014/04/24 16:54:01 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-shout-2.2.1-r1.ebuild,
+  ruby-shout-2.2.1.ebuild:
+  Remove ruby18 support.
 
 *ruby-shout-2.2.1-r1 (30 Oct 2013)
 

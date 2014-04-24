@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_gntp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_gntp/ChangeLog,v 1.1 2013/11/26 03:20:26 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_gntp/ChangeLog,v 1.2 2014/04/24 16:52:22 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby_gntp-0.3.4.ebuild:
+  Remove ruby18 support.
 
 *ruby_gntp-0.3.4 (26 Nov 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubytter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytter/ChangeLog,v 1.8 2013/11/17 21:00:46 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytter/ChangeLog,v 1.9 2014/04/24 16:44:23 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rubytter-1.5.1.ebuild:
+  Remove ruby18 support.
 
   17 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -rubytter-1.4.2.ebuild:
   Cleanup old.

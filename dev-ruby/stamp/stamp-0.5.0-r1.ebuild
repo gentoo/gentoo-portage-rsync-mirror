@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stamp/stamp-0.5.0-r1.ebuild,v 1.2 2013/11/22 05:23:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stamp/stamp-0.5.0-r1.ebuild,v 1.3 2014/04/24 16:43:23 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="cucumber"
 RUBY_FAKEGEM_TASK_DOC=""

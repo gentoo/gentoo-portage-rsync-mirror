@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.9.ebuild,v 1.13 2014/04/05 22:00:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.9.ebuild,v 1.14 2014/04/24 16:39:32 mrueg Exp $
 
 EAPI=4
 
@@ -38,11 +38,6 @@ all_ruby_prepare() {
 each_ruby_prepare() {
 	case ${RUBY} in
 		*jruby)
-			;;
-		*ruby18)
-			sed -i -e '/test_norule_y/,/end/ s:^:#:' \
-				-e '/test_unterm_y/,/end/ s:^:#:' test/test_racc_command.rb || die
-			${RUBY} -Cext/racc extconf.rb || die
 			;;
 		*)
 			${RUBY} -Cext/racc extconf.rb || die

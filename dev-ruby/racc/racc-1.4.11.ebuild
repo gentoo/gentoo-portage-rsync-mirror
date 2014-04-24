@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.11.ebuild,v 1.2 2014/04/05 22:00:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.11.ebuild,v 1.3 2014/04/24 16:39:32 mrueg Exp $
 
 EAPI=5
 
@@ -46,10 +46,6 @@ each_ruby_prepare() {
 			# Some tests are broken on jruby, avoid them. We used to
 			# avoid all tests so this is not a regression for us.
 			rm test/test_racc_command.rb || die
-			;;
-		*ruby18)
-			sed -i -e '/test_norule_y/,/end/ s:^:#:' \
-				-e '/test_unterm_y/,/end/ s:^:#:' test/test_racc_command.rb || die
 			;;
 		*)
 			${RUBY} -Cext/racc extconf.rb || die

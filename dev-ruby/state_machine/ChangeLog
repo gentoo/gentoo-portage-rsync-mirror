@@ -1,10 +1,12 @@
 # ChangeLog for dev-ruby/state_machine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/state_machine/ChangeLog,v 1.1 2013/06/13 05:28:46 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/state_machine/ChangeLog,v 1.2 2014/04/24 16:42:17 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> state_machine-1.2.0.ebuild:
+  Remove ruby18 support. EAPI bump.
 
 *state_machine-1.2.0 (13 Jun 2013)
 
   13 Jun 2013; Hans de Graaff <graaff@gentoo.org> +state_machine-1.2.0.ebuild,
   +metadata.xml:
   Initial import. New dependency for dev-ruby/adhearsion.
-

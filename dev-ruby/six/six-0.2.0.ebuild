@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/six/six-0.2.0.ebuild,v 1.1 2013/11/22 01:59:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/six/six-0.2.0.ebuild,v 1.2 2014/04/24 16:49:42 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_RECIPE_DOC=""

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tryouts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.14 2013/02/10 09:54:53 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.15 2014/04/24 16:31:29 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> tryouts-0.8.8.ebuild,
+  tryouts-2.1.1.ebuild:
+  Remove ruby18 support. EAPI bump.
 
   10 Feb 2013; Hans de Graaff <graaff@gentoo.org> tryouts-2.1.1.ebuild:
   Add missing dependency on sysinfo. Drop jruby support because of this. Fixes
@@ -70,4 +74,3 @@
   14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +tryouts-0.8.5.ebuild, +files/tryouts-0.8.5-fixes.patch, +metadata.xml:
   Initial import of tryouts, needed for attic (and other packages') tests.
-

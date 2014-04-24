@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/database_cleaner
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/database_cleaner/ChangeLog,v 1.4 2013/10/11 05:41:44 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/database_cleaner/ChangeLog,v 1.5 2014/04/24 16:57:50 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
+  -database_cleaner-1.1.1-r1.ebuild, -database_cleaner-1.1.1.ebuild,
+  database_cleaner-1.1.1-r2.ebuild, database_cleaner-1.2.0.ebuild:
+  Remove ruby18 support. Cleanup old.
 
 *database_cleaner-1.2.0 (11 Oct 2013)
 

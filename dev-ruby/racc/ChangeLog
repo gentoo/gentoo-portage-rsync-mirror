@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.109 2014/04/05 22:00:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.110 2014/04/24 16:39:32 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> racc-1.4.11.ebuild,
+  racc-1.4.9.ebuild:
+  Remove ruby18 bits.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/racc-1.4.6-test-unit.patch, -racc-1.4.10.ebuild, -racc-1.4.8.ebuild,
