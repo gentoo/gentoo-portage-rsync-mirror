@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.205 2014/04/09 20:37:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.206 2014/04/23 23:04:08 mrueg Exp $
+
+*courier-imap-4.15 (23 Apr 2014)
+
+  23 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +courier-imap-4.15.ebuild,
+  +files/courier-imap-4.15-aclocal-fix.patch,
+  +files/courier-imap-4.15-db4-bdbobj_configure.ac.patch,
+  +files/courier-imap-4.15-db4-configure.ac.patch,
+  +files/courier-imap-4.15-disable-fam-configure.ac.patch, metadata.xml:
+  Version bump. Updated patches by Per Pomsel. Add David Heidelberger as proxied
+  maintainer. Fixes bug #389511.
 
   09 Apr 2014; Pacho Ramos <pacho@gentoo.org> -courier-imap-4.0.6-r3.ebuild,
   -courier-imap-4.5.0.ebuild, -courier-imap-4.6.0.ebuild,

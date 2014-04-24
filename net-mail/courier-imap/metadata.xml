@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
-	<use>
+<herd>proxy-maintainers</herd>
+<maintainer>
+	<email>david.heidelberger@ixit.cz</email>
+	<name>David Heidelberger</name>
+	<description>Assign bugs to him.</description>
+</maintainer>
+<maintainer>
+	<email>mrueg@gentoo.org</email>
+	<name>Manuel Rüger</name>
+	<description>CC him on bugs.</description>
+</maintainer>	<use>
 		<flag name="trashquota">include deleted messages, and the Trash folder, in the estimated quota usage for maildirs</flag>
 	</use>
 </pkgmetadata>
