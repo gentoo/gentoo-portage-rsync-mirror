@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/eventlist-0.6-r1.ebuild,v 1.1 2014/03/20 21:53:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/eventlist-0.6-r1.ebuild,v 1.2 2014/04/24 14:10:28 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://kde-look.org/CONTENT/content-files/107779-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="

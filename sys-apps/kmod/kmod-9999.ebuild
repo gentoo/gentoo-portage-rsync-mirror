@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.74 2014/04/23 18:38:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.75 2014/04/24 14:27:03 williamh Exp $
 
 EAPI=5
 
@@ -112,11 +112,11 @@ src_compile() {
 		local native_builddir=${BUILD_DIR}
 
 		python_compile() {
-			echo 'python: $(pkgpyexec_LTLIBRARIES)' |
 			emake -C "${BUILD_DIR}" -f Makefile -f - python \
 				VPATH="${native_builddir}:${S}" \
 				native_builddir="${native_builddir}" \
-				libkmod_python_kmod_{kmod,list,module,_util}_la_LIBADD='$(PYTHON_LIBS) $(native_builddir)/libkmod/libkmod.la'
+				libkmod_python_kmod_{kmod,list,module,_util}_la_LIBADD='$(PYTHON_LIBS) $(native_builddir)/libkmod/libkmod.la' \
+				<<< 'python: $(pkgpyexec_LTLIBRARIES)'
 		}
 
 		python_foreach_impl python_compile

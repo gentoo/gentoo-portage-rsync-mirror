@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.146 2014/04/23 18:38:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.147 2014/04/24 14:27:03 williamh Exp $
+
+  24 Apr 2014; William Hubbs <williamh@gentoo.org> kmod-17.ebuild,
+  kmod-9999.ebuild:
+  Clean up python_compile function by switching to using here-string instead of
+  echo, thanks to arfrever
 
   23 Apr 2014; William Hubbs <williamh@gentoo.org> kmod-17.ebuild,
   kmod-9999.ebuild:

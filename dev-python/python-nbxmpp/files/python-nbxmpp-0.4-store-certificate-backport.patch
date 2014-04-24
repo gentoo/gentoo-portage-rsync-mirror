@@ -1,0 +1,25 @@
+
+# HG changeset patch
+# User Yann Leboulanger <asterix@lagaule.org>
+# Date 1396114108 -3600
+# Node ID cb67945d04385d86f0dff21e89c994b12cf07dc4
+# Parent  46e9c8c80bacac8260245d5d9752ba0c5bddcf89
+always store certificate of server, even if there is no error
+
+diff -r 46e9c8c80bac -r cb67945d0438 nbxmpp/tls_nb.py
+--- a/nbxmpp/tls_nb.py	Sat Mar 15 20:39:59 2014 +0100
++++ b/nbxmpp/tls_nb.py	Sat Mar 29 18:28:28 2014 +0100
+@@ -476,9 +476,10 @@
+     def _ssl_verify_callback(self, sslconn, cert, errnum, depth, ok):
+         # Exceptions can't propagate up through this callback, so print them here.
+         try:
+-            if not ok and depth == 0:
++            if depth == 0:
+                 self._owner.ssl_certificate = cert
+-                self._owner.ssl_errnum = errnum
++                if not ok:
++                    self._owner.ssl_errnum = errnum
+             return True
+         except:
+             log.error("Exception caught in _ssl_info_callback:", exc_info=True)
+
