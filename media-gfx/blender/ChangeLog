@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.264 2014/04/18 22:00:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.265 2014/04/24 11:34:21 hasufell Exp $
+
+*blender-2.70a-r2 (24 Apr 2014)
+
+  24 Apr 2014; Julian Ospald <hasufell@gentoo.org> -blender-2.70a.ebuild,
+  -blender-2.70a-r1.ebuild, +blender-2.70a-r2.ebuild:
+  fix nls USE flag wrt #508550
 
   18 Apr 2014; Julian Ospald <hasufell@gentoo.org> blender-2.70a-r1.ebuild,
   +files/blender-2.70a-openmp.patch:

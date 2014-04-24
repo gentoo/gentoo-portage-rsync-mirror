@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/profphd/profphd-1.0.39.ebuild,v 1.4 2014/04/24 11:38:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/profphd/profphd-1.0.40.ebuild,v 1.1 2014/04/24 11:38:57 jlec Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ src_prepare() {
 	sed \
 		-e '/ln -s/s:prof$:profphd:g' \
 		-i src/prof/Makefile || die
-	epatch "${FILESDIR}"/${P}-perl.patch
+	epatch "${FILESDIR}"/${PN}-1.0.39-perl.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-17.0.ebuild,v 1.1 2014/04/21 12:35:11 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-17.0.ebuild,v 1.2 2014/04/24 11:34:28 djc Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -151,12 +151,6 @@ src_install() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	elog
-	elog "If you need a symlink to one of Erlang's binaries,"
-	elog "please open a bug on http://bugs.gentoo.org/"
-	elog
-	elog "Gentoo's versioning scheme differs from the author's, so please refer to this version as ${MY_PV}"
-	elog
 }
 
 pkg_postrm() {

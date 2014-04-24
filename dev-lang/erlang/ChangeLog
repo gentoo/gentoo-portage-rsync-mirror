@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.251 2014/04/21 12:35:11 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.252 2014/04/24 11:34:28 djc Exp $
+
+  24 Apr 2014; Dirkjan Ochtman <djc@gentoo.org> erlang-17.0.ebuild:
+  Remove now-useless elogs for 17.0.
 
 *erlang-17.0 (21 Apr 2014)
 

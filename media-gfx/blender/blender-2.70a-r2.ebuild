@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a-r1.ebuild,v 1.2 2014/04/18 22:00:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a-r2.ebuild,v 1.1 2014/04/24 11:34:21 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -142,7 +142,7 @@ src_prepare() {
 		rm -r "${S}"/release/datafiles/locale || die
 	else
 		if [[ -n "${LINGUAS+x}" ]] ; then
-			for i in "${S}"/release/datafiles/locale/* ; do
+			for i in "${S}"/release/datafiles/locale/po/* ; do
 				mylang=${i##*/}
 				has ${mylang} ${LINGUAS} || { rm -r ${i} || die ; }
 			done
