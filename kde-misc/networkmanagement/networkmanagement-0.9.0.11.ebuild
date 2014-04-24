@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.11.ebuild,v 1.1 2014/04/23 21:40:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.11.ebuild,v 1.2 2014/04/24 07:26:30 patrick Exp $
 
 EAPI=5
 
-KDE_LINGUAS="ar bs ca ca@valencia cs da de el es et fa fi fr ga gl hu ia it 
-ja kk km ko lt mr nb nds nl nn pl pt pt_BR ro ru se sk sl sr sr@ijekavian 
+KDE_LINGUAS="ar bs ca ca@valencia cs da de el es et fa fi fr ga gl hu ia it
+ja kk km ko lt mr nb nds nl nn pl pt pt_BR ro ru se sk sl sr sr@ijekavian
 sr@ijekavianlatin sr@Latn sv tr uk zh_CN zh_TW"
 KDE_SCM="git"
 KDE_MINIMAL="4.11"
