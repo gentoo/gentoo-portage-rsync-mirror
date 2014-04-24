@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.16 2014/01/18 11:09:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.17 2014/04/24 20:15:50 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-dict-0.9.4-r3.ebuild:
+  Remove ruby18 support.
 
   18 Jan 2014; Hans de Graaff <graaff@gentoo.org> -ruby-dict-0.9.4-r1.ebuild:
   Cleanup.

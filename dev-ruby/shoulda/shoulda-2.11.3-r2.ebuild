@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-2.11.3-r2.ebuild,v 1.1 2014/01/10 11:42:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-2.11.3-r2.ebuild,v 1.2 2014/04/24 20:22:26 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 # Use rdoc recipe to avoid obsolete Rakefile
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"

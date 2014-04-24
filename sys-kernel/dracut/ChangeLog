@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.164 2014/03/20 10:12:28 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.165 2014/04/24 20:09:28 aidecoe Exp $
+
+  24 Apr 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-036-r4.ebuild,
+  dracut-037.ebuild:
+  Suggest newer version of plymouth, rels bug #504846.
 
   20 Mar 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-036-r3.ebuild:
   Removed old revision of 036.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/columnize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.31 2014/04/24 06:23:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.32 2014/04/24 20:13:17 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> columnize-0.3.6-r1.ebuild:
+  Remove ruby18 support.
 
 *columnize-0.8.9 (24 Apr 2014)
 

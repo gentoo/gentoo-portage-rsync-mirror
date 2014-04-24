@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ox/ChangeLog,v 1.6 2014/02/13 21:29:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ox/ChangeLog,v 1.7 2014/04/24 20:23:25 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -ox-2.0.12.ebuild,
+  -ox-2.1.0.ebuild, ox-2.1.1.ebuild:
+  Remove ruby18 support. Cleanup old.
 
 *ox-2.1.1 (13 Feb 2014)
 
