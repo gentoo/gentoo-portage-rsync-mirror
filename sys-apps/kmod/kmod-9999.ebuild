@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.75 2014/04/24 14:27:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.76 2014/04/24 19:52:33 floppym Exp $
 
 EAPI=5
 
@@ -139,7 +139,7 @@ src_install() {
 		python_foreach_impl python_install
 	fi
 
-	prune_libtool_files
+	prune_libtool_files --modules
 
 	if use tools; then
 		local bincmd sbincmd

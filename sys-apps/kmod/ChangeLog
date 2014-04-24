@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.147 2014/04/24 14:27:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.148 2014/04/24 19:52:33 floppym Exp $
+
+  24 Apr 2014; Mike Gilbert <floppym@gentoo.org> kmod-17.ebuild,
+  kmod-9999.ebuild:
+  Remove .la files for python modules, reported by Arfrever.
 
   24 Apr 2014; William Hubbs <williamh@gentoo.org> kmod-17.ebuild,
   kmod-9999.ebuild:
