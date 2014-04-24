@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdesudo/kdesudo-3.4.2.4-r1.ebuild,v 1.1 2014/03/20 22:06:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdesudo/kdesudo-3.4.2.4-r1.ebuild,v 1.2 2014/04/24 14:33:22 johu Exp $
 
 EAPI=5
 # FIXME. What is linguas_jv, different Japanese translation?
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/${PN}/3.x/${PV}/+download/${P}.tar.gz"
 
 LICENSE="FDL-1.2 GPL-2 LGPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="
