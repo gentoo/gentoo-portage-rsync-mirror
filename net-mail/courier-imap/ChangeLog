@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.206 2014/04/23 23:04:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.207 2014/04/24 14:01:10 mrueg Exp $
+
+*courier-imap-4.15-r1 (24 Apr 2014)
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +courier-imap-4.15-r1.ebuild,
+  +files/courier-authdaemond-r1.service, +files/courier-imapd-r1.service,
+  +files/courier-imapd-ssl-r1.service, -courier-imap-4.15.ebuild:
+  Fix systemd service files. Patch by Salah Coronya. See bug #495068. Cleanup
+  old.
 
 *courier-imap-4.15 (23 Apr 2014)
 

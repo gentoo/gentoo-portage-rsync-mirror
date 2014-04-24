@@ -4,10 +4,11 @@ DESCRIPTION=QT based Computer Aided Design application
 EAPI=5
 HOMEPAGE=http://www.freecadweb.org/
 IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-cpp/eigen:3 dev-games/ode dev-libs/boost dev-libs/libf2c dev-libs/libspnav[X] dev-libs/xerces-c[icu] dev-python/matplotlib dev-qt/qtgui:4 dev-qt/qtopengl:4 dev-qt/qtsvg:4 dev-qt/qtwebkit:4 dev-qt/qtxmlpatterns:4 media-libs/SoQt media-libs/coin[doc] sci-libs/gts sci-libs/opencascade sys-libs/zlib virtual/glu python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-qt/assistant:4 dev-python/pycollada dev-python/pivy dev-python/PyQt4[svg] dev-python/pyopencl dev-python/numpy virtual/fortran
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/free-cad/freecad-0.13.1830.tar.gz
 _eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c533f397e7cdba546ab10cde1c2c3c0a
+_md5_=06ab5c972ecfaefa8e1def7fc9d9719f

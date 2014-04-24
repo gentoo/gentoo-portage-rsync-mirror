@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile config configure install postinst postrm preinst prepare setup test unpack
+DEPEND=|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 ) >=sys-devel/libtool-2.2.10 sys-devel/gnuconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool ssl? ( >=dev-libs/openssl-0.9.6d ) kernel_linux? ( sys-process/procps ) >=sys-apps/sed-4 >=sys-apps/texinfo-4.7-r1 >=sys-libs/zlib-1.2.3 >=sys-libs/readline-4.1 !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster virtual/yacc static? ( sys-libs/ncurses[static-libs] ) >=dev-util/cmake-2.4.3
+DESCRIPTION=A fast, multi-threaded, multi-user SQL database server.
+EAPI=4
+HOMEPAGE=http://www.mysql.com/
+IUSE=big-tables debug embedded minimal +perl selinux ssl static test latin1 extraengine cluster max-idx-128 +community profiling pbxt xtradb
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-solaris
+LICENSE=GPL-2
+PDEPEND=perl? ( >=dev-perl/DBD-mysql-2.9004 ) ~virtual/mysql-5.1
+RDEPEND=ssl? ( >=dev-libs/openssl-0.9.6d ) kernel_linux? ( sys-process/procps ) >=sys-apps/sed-4 >=sys-apps/texinfo-4.7-r1 >=sys-libs/zlib-1.2.3 >=sys-libs/readline-4.1 !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster !minimal? ( !prefix? ( dev-db/mysql-init-scripts ) ) selinux? ( sec-policy/selinux-mysql )
+REQUIRED_USE=minimal? ( !cluster !extraengine !embedded ) static? ( !ssl ) pbxt? ( !embedded ) xtradb? ( !embedded )
+SLOT=0
+SRC_URI=http://downloads.mysql.com/archives/mysql-5.1/mysql-5.1.73.tar.gz mirror://mysql/Downloads/MySQL-5.1/mysql-5.1.73.tar.gz mirror://gentoo/mysql-extras-20140424-1043Z.tar.bz2 http://g3nt8.org/patches/mysql-extras-20140424-1043Z.tar.bz2 http://dev.gentoo.org/~robbat2/distfiles/mysql-extras-20140424-1043Z.tar.bz2 http://dev.gentoo.org/~jmbsvicetto/distfiles/mysql-extras-20140424-1043Z.tar.bz2 pbxt? ( http://www.primebase.org/download/pbxt-1.0.11-6-pre-ga.tar.gz mirror://sourceforge/pbxt/pbxt-1.0.11-6-pre-ga.tar.gz ) xtradb? ( http://www.percona.com//percona-builds//Percona-Server/Percona-Server-5.1.45-10/source/percona-xtradb-1.0.6-10.tar.gz http://www.percona.com//percona-builds//xtradb/5.1.45-10/source/percona-xtradb-1.0.6-10.tar.gz http://www.percona.com//mysql/xtradb/5.1.45-10/source/percona-xtradb-1.0.6-10.tar.gz )
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	mysql-autotools	a8fb1b6cc04b4818cad19ef1777e7c5a	mysql-v2	c13c6248e9c40715e51beba83d73537f	mysql_fx	f783e104c8bbd017eefc5359f327975b	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=761c28df4f4e15c7e2257a01b9e399ba

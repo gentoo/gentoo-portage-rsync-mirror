@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15.ebuild,v 1.1 2014/04/23 23:04:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.1 2014/04/24 14:01:10 mrueg Exp $
 
 EAPI=5
 inherit autotools eutils multilib libtool systemd
@@ -184,9 +184,9 @@ src_install() {
 		doinitd "${initd}"
 	done
 
-	systemd_dounit "${FILESDIR}"/courier-authdaemond.service
-	systemd_dounit "${FILESDIR}"/courier-imapd-ssl.service
-	systemd_dounit "${FILESDIR}"/courier-imapd.service
+	systemd_newunit "${FILESDIR}"/courier-authdaemond-r1.service courier-authdaemond.service
+	systemd_newunit "${FILESDIR}"/courier-imapd-ssl-r1.service courier-imapd-ssl.service
+	systemd_newunit "${FILESDIR}"/courier-imapd-r1.service courier-imapd.service
 
 	exeinto /usr/$(get_libdir)/${PN}
 	for exe in gentoo-{imapd,pop3d}{,-ssl}.rc courier-{imapd,pop3d}.indirect ; do
