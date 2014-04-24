@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ruby-poppler-1.2.6.ebuild,v 1.2 2014/03/11 01:18:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ruby-poppler-1.2.6.ebuild,v 1.3 2014/04/24 21:08:34 mrueg Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19"
+EAPI=5
+USE_RUBY="ruby19"
 
 inherit ruby-ng-gnome2
 

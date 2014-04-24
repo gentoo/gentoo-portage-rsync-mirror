@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails_autolink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails_autolink/ChangeLog,v 1.3 2014/04/06 07:32:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails_autolink/ChangeLog,v 1.4 2014/04/24 21:06:42 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -rails_autolink-1.0.9.ebuild:
+  Cleanup old.
 
 *rails_autolink-1.1.5 (06 Apr 2014)
 

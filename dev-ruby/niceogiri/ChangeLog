@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/niceogiri
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.1 2013/11/20 15:00:43 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.2 2014/04/24 21:05:31 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> niceogiri-1.1.2.ebuild:
+  Remove ruby18 support.
 
 *niceogiri-1.1.2 (20 Nov 2013)
 

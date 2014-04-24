@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-2.2.1-r1.ebuild,v 1.11 2014/04/24 21:25:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-2.3.0.ebuild,v 1.1 2014/04/24 21:25:24 voyageur Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="dockapp that monitors one or more mailboxes."
 HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"
-SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.gz"
+SRC_URI="http://tnemeth.free.fr/projets/programmes/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
@@ -21,8 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-gtk.patch \
-		"${FILESDIR}"/${P}-checkthread.patch
+		"${FILESDIR}"/${PN}-2.2.1-checkthread.patch
 	sed -i -e "s/-lssl/\0 -lcrypto/" wmmaiload/Init.make || die "sed failed"
 }
 
