@@ -149,6 +149,8 @@ usr/lib32/libiso9660.so.8.0.0
 usr/lib32/pkgconfig/libiso9660++.pc
 usr/lib32/pkgconfig/libiso9660.pc
 usr/lib32/libcdio.so
+usr/lib32/libcdio.so.14.0.0
+usr/lib32/libcdio.so.14
 usr/lib32/pkgconfig/libcdio.pc
 usr/lib32/libcdio++.so
 usr/lib32/libcdio++.so.0
