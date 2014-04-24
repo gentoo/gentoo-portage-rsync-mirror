@@ -7,16 +7,19 @@
   </maintainer>
   <longdescription>
 		Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git.
-	</longdescription>
+  </longdescription>
   <use>
     <flag name="X">
 			Use <pkg>x11-misc/xclip</pkg> to copy passwords to the clipboard.
-		</flag>
+	</flag>
     <flag name="git">
 			Use <pkg>dev-vcs/git</pkg> for password revisions.
-		</flag>
+	</flag>
     <flag name="fish-completion">
 			Enable fish completion support.
-		</flag>
+	</flag>
+	<flag name="dmenu">
+		Add support for x11-misc/dmenu with the 'passmenu' program.
+	</flag>
   </use>
 </pkgmetadata>
