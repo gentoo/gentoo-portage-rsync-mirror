@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.8.9-r1.ebuild,v 1.2 2014/03/25 06:35:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.8.9-r1.ebuild,v 1.3 2014/04/24 17:40:57 mrueg Exp $
 
 EAPI=5
 
 # jruby → yajl-ruby won't work, as it's compiled extension
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_TEST=""
 

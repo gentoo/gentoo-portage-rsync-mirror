@@ -1,6 +1,15 @@
 # ChangeLog for perl-core/Math-Complex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.6 2014/04/24 17:26:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-Complex/ChangeLog,v 1.9 2014/04/24 17:46:06 zlogene Exp $
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Math-Complex-1.590.0.ebuild:
+  Add ~sparc keyword wrt bug #505156
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Math-Complex-1.590.0.ebuild:
+  Add ~ppc keyword wrt bug #505156
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Math-Complex-1.590.0.ebuild:
+  Add ~ppc64 keyword wrt bug #505156
 
   24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Math-Complex-1.590.0.ebuild:
   Add ~mips keyword wrt bug #505156

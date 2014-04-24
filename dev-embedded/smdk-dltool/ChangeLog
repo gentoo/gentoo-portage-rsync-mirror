@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/smdk-dltool
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.7 2013/08/05 18:00:31 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.8 2014/04/24 17:40:50 ulm Exp $
+
+  24 Apr 2014; Ulrich Müller <ulm@gentoo.org> smdk-dltool-0.20-r3.ebuild,
+  smdk-dltool-0.20-r4.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 446160.
 
 *smdk-dltool-0.20-r4 (05 Aug 2013)
 

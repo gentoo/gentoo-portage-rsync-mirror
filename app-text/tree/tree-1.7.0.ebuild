@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.7.0.ebuild,v 1.1 2014/04/23 21:55:27 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.7.0.ebuild,v 1.2 2014/04/24 18:01:01 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit toolchain-funcs flag-o-matic bash-completion-r1
 
 DESCRIPTION="Lists directories recursively, and produces an indented listing of files."
@@ -18,9 +18,7 @@ RDEPEND="!=sci-biology/meme-4.8.1"
 DEPEND=""
 
 src_prepare() {
-	sed -i \
-		-e 's:LINUX:__linux__:' tree.c \
-		|| die "sed failed"
+	sed -i -e 's:LINUX:__linux__:' tree.c || die
 	mv doc/tree.1.fr doc/tree.fr.1
 	if use !elibc_glibc ; then
 		# 433972, also previously done only for elibc_uclibc

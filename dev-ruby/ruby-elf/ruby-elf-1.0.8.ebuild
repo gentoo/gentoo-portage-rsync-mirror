@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ruby-elf-1.0.8.ebuild,v 1.2 2013/06/23 11:47:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ruby-elf-1.0.8.ebuild,v 1.3 2014/04/24 17:42:32 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 GITHUB_URI="https://github.com/Flameeyes/${PN}"
 

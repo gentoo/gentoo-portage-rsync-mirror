@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( ruby_targets_ruby18? ( >=dev-ruby/attic-0.4.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/attic-0.4.0[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/attic-0.4.0[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/tryouts:2[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
 DESCRIPTION=Git-like hashes for Ruby objects
 EAPI=5
 HOMEPAGE=http://solutious.com/
-IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 doc test
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 doc test
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=ruby_targets_ruby18? ( >=dev-ruby/attic-0.4.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/attic-0.4.0[ruby_targets_ruby19] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/attic-0.4.0[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=https://github.com/delano/gibbler/archive/v0.9.0.tar.gz -> gibbler-git-0.9.0.tgz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=6aa640c8a3c68cb403e7f1f5c7a3d3b2
+_md5_=555b505813bc33dee6f4254d03f258d1

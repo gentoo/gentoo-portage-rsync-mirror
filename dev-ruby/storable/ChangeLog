@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/storable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.22 2014/03/25 06:35:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.23 2014/04/24 17:40:57 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> storable-0.8.9-r1.ebuild:
+  Remove ruby18 support.
 
   25 Mar 2014; Hans de Graaff <graaff@gentoo.org> storable-0.8.9-r1.ebuild:
   Fix EAPI=5 usage. Avoid rake for documentation generation since it uses

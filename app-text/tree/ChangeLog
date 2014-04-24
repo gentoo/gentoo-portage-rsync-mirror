@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.108 2014/04/23 21:55:27 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.109 2014/04/24 18:01:01 mr_bones_ Exp $
+
+  24 Apr 2014; Michael Sterrett <mr_bones_@gentoo.org> tree-1.7.0.ebuild:
+  EAPI=5
 
 *tree-1.7.0 (23 Apr 2014)
 

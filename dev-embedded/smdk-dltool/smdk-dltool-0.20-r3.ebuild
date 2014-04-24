@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/smdk-dltool-0.20-r3.ebuild,v 1.1 2012/05/22 02:23:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/smdk-dltool-0.20-r3.ebuild,v 1.2 2014/04/24 17:40:50 ulm Exp $
 
 EAPI="4"
 
@@ -11,10 +11,11 @@ HOMEPAGE="http://www.fluff.org/ben/smdk/tools/"
 SRC_URI="http://www.fluff.org/ben/smdk/tools/downloads/smdk-tools-v${PV}.tar.gz"
 
 # Email sent to author on 2012-01-18 querying about license
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}"

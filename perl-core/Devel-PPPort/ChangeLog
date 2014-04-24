@@ -1,6 +1,15 @@
 # ChangeLog for perl-core/Devel-PPPort
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Devel-PPPort/ChangeLog,v 1.7 2014/04/24 17:24:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Devel-PPPort/ChangeLog,v 1.10 2014/04/24 17:45:04 zlogene Exp $
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-PPPort-3.200.0.ebuild:
+  Add ~sparc keyword wrt bug #505156
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-PPPort-3.200.0.ebuild:
+  Add ~ppc keyword wrt bug #505156
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-PPPort-3.200.0.ebuild:
+  Add ~ppc64 keyword wrt bug #505156
 
   24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> Devel-PPPort-3.200.0.ebuild:
   Add ~mips keyword wrt bug #505156
