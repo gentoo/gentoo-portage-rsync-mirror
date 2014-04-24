@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/steamcompanion-0.5.4-r1.ebuild,v 1.1 2014/03/21 19:09:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/steamcompanion-0.5.4-r1.ebuild,v 1.2 2014/04/24 15:32:24 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://kde-look.org/CONTENT/content-files/141713-${PN}.tar.gz -> ${P}.t
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 S=${WORKDIR}/${PN}

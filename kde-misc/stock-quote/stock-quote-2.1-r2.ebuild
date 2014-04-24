@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/stock-quote-2.1-r2.ebuild,v 1.1 2014/03/21 19:12:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/stock-quote-2.1-r2.ebuild,v 1.2 2014/04/24 15:58:27 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kde-look.org/CONTENT/content-files/90695-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="

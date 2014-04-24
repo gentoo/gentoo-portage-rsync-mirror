@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.89 2014/04/09 05:54:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.90 2014/04/24 15:36:26 mrueg Exp $
+
+  24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> passenger-3.0.21-r1.ebuild:
+  Remove ruby18 support.
 
   09 Apr 2014; Hans de Graaff <graaff@gentoo.org> -passenger-4.0.37.ebuild,
   -passenger-4.0.40.ebuild:

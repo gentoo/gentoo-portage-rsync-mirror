@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.21-r1.ebuild,v 1.3 2013/10/06 07:51:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.21-r1.ebuild,v 1.4 2014/04/24 15:36:26 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit apache-module flag-o-matic ruby-ng toolchain-funcs
 
@@ -22,8 +22,6 @@ ruby_add_rdepend "
 	>=dev-ruby/daemon_controller-1.0.0
 	>=dev-ruby/rack-1.0.0"
 
-USE_RUBY="ruby18" ruby_add_rdepend ">=dev-ruby/fastthread-1.0.1"
-
 CDEPEND=">=dev-libs/libev-3.90 net-misc/curl[ssl]"
 
 RDEPEND="${RDEPEND} ${CDEPEND}"
@@ -32,9 +30,6 @@ DEPEND="${DEPEND} ${CDEPEND}
 
 APACHE2_MOD_CONF="30_mod_${PN}-2.0.1 30_mod_${PN}"
 APACHE2_MOD_DEFINE="PASSENGER"
-
-REQUIRED_USE+=" ruby_targets_ruby18? ( !ruby_targets_ruby19 )
-	ruby_targets_ruby19? ( !ruby_targets_ruby18 )"
 
 need_apache2
 

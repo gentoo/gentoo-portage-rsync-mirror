@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test unpack
-DEPEND=ruby_targets_ruby18? ( dev-ruby/rake[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/rake[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( >=dev-ruby/daemon_controller-1.0.0[ruby_targets_ruby18] >=dev-ruby/rack-1.0.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/daemon_controller-1.0.0[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ) test? ( ruby_targets_ruby18? ( >=dev-ruby/fastthread-1.0.1[ruby_targets_ruby18] ) ) >=dev-libs/libev-3.90 net-misc/curl[ssl] doc? ( >=app-text/asciidoc-8.6.5[highlight] ) =www-servers/apache-2* ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+DEPEND=ruby_targets_ruby19? ( dev-ruby/rake[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( >=dev-ruby/daemon_controller-1.0.0[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ) >=dev-libs/libev-3.90 net-misc/curl[ssl] doc? ( >=app-text/asciidoc-8.6.5[highlight] ) =www-servers/apache-2* ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
 DESCRIPTION=Passenger (a.k.a. mod_rails) makes deployment of Ruby on Rails applications a breeze
 EAPI=5
 HOMEPAGE=http://modrails.com/
-IUSE=debug doc test test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19
+IUSE=debug doc test elibc_FreeBSD ruby_targets_ruby19
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=ruby_targets_ruby18? ( >=dev-ruby/daemon_controller-1.0.0[ruby_targets_ruby18] >=dev-ruby/rack-1.0.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/daemon_controller-1.0.0[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ruby_targets_ruby18? ( >=dev-ruby/fastthread-1.0.1[ruby_targets_ruby18] ) >=dev-libs/libev-3.90 net-misc/curl[ssl] =www-servers/apache-2* ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
-REQUIRED_USE=ruby_targets_ruby18? ( !ruby_targets_ruby19 ) ruby_targets_ruby19? ( !ruby_targets_ruby18 ) || ( ruby_targets_ruby18 ruby_targets_ruby19 )
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/daemon_controller-1.0.0[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) >=dev-libs/libev-3.90 net-misc/curl[ssl] =www-servers/apache-2* ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=mirror://rubyforge/passenger/passenger-3.0.21.tar.gz
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=3a1f3b0317ee8d1fd267f9d66112b690
+_md5_=cf8dc0984f4912df2c0ef570cc8b19e0
