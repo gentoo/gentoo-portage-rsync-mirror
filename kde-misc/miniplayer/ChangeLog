@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/miniplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.12 2014/03/21 18:44:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.13 2014/04/24 15:08:32 johu Exp $
+
+  24 Apr 2014; Johannes Huber <johu@gentoo.org> -miniplayer-2.5.ebuild,
+  miniplayer-2.5-r1.ebuild:
+  amd64/x86 stable, remove old.
 
 *miniplayer-2.5-r1 (21 Mar 2014)
 

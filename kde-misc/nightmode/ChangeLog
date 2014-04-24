@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/nightmode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/nightmode/ChangeLog,v 1.8 2014/03/21 18:45:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nightmode/ChangeLog,v 1.9 2014/04/24 15:13:55 johu Exp $
+
+  24 Apr 2014; Johannes Huber <johu@gentoo.org> -nightmode-0.3.ebuild,
+  nightmode-0.3-r1.ebuild:
+  amd64/x86 stable, remove old.
 
 *nightmode-0.3-r1 (21 Mar 2014)
 
