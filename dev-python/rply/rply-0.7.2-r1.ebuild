@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rply/rply-0.7.2-r1.ebuild,v 1.1 2014/04/10 18:02:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rply/rply-0.7.2-r1.ebuild,v 1.2 2014/04/24 06:52:17 idella4 Exp $
 
 EAPI=5
 
@@ -21,6 +21,15 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/py[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}] )"
+
+python_prepare() {
+	# https://github.com/alex/rply/issues/26; fail under py[3-4]
+	if python_is_python3; then
+		sed -e s':test_simple:_&:' -e s':test_empty_production:_&:' \
+			-i tests/test_parsergenerator.py
+	fi
+	distutils-r1_python_prepare
+}
 
 python_test() {
 	py.test || die "Tests fail with ${EPYTHON}"
