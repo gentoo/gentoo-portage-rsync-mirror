@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r2.ebuild,v 1.2 2014/04/19 07:32:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r2.ebuild,v 1.3 2014/04/24 18:52:35 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
-inherit autotools-multilib eutils flag-o-matic mono multilib java-pkg-opt-2 python-single-r1
+inherit autotools eutils flag-o-matic mono multilib java-pkg-opt-2 python-single-r1 multilib-minimal
 
 MY_P=${P/_/.}
 DESCRIPTION="A library that creates colored ASCII-art graphics"
@@ -84,17 +84,6 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	local myeconfargs=(
-		$(use_enable static-libs static)
-		$(use_enable slang)
-		$(use_enable ncurses)
-		$(use_enable X x11) $(use_with X x) --x-libraries=/usr/$(get_libdir)
-		$(use_enable opengl gl)
-		$(use_enable cxx)
-		$(use_enable imlib imlib2)
-		$(use_enable test cppunit)
-	)
-
 	if multilib_build_binaries; then
 		if use java; then
 			export JAVACFLAGS="$(java-pkg_javac-args)"
@@ -103,45 +92,45 @@ multilib_src_configure() {
 
 		use mono && export CSC="$(type -P gmcs)" #329651
 		export VARTEXFONTS="${T}/fonts" #44128
-
-		myeconfargs+=(
-			$(use_enable java)
-			$(use_enable ruby)
-			$(use_enable python)
-			$(use_enable mono csharp)
-			$(use_enable doc)
-		)
-	else
-		myeconfargs+=(
-			--disable-java
-			--disable-ruby
-			--disable-python
-			--disable-csharp
-			--disable-doc
-		)
 	fi
 
-	autotools-utils_src_configure
+	ECONF_SOURCE="${S}" \
+		econf \
+			$(use_enable static-libs static) \
+			$(use_enable slang) \
+			$(use_enable ncurses) \
+			$(use_enable X x11) $(use_with X x) --x-libraries=/usr/$(get_libdir) \
+			$(use_enable opengl gl) \
+			$(use_enable cxx) \
+			$(use_enable imlib imlib2) \
+			$(use_enable test cppunit) \
+			$(multilib_native_use_enable java) \
+			$(multilib_native_use_enable ruby) \
+			$(multilib_native_use_enable python) \
+			$(multilib_native_use_enable mono csharp) \
+			$(multilib_native_use_enable doc)
 }
 
-src_compile() {
+multilib_src_compile() {
 	local _java_makeopts
 	use java && _java_makeopts="-j1" #480864
-	autotools-multilib_src_compile ${_java_makeopts}
+	emake ${_java_makeopts}
 }
 
 multilib_src_test() {
 	emake -j1 check
 }
 
-src_install() {
-	autotools-multilib_src_install
+multilib_src_install() {
+	emake DESTDIR="${D}" install
 
-	if use java; then
+	if multilib_build_binaries && use java; then
 		java-pkg_newjar java/libjava.jar
 	fi
+}
 
+multilib_src_install_all() {
+	einstalldocs
 	rm -rf "${D}"/usr/share/java
-
 	prune_libtool_files --modules
 }
