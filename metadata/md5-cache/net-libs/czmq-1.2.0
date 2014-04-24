@@ -1,10 +1,11 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=configure install
 DEPEND=doc? ( app-text/asciidoc app-text/xmlto ) >=net-libs/zeromq-2.1 <net-libs/zeromq-4
-DESCRIPTION=CZMQ - High-level C Binding for ZeroMQ
+DESCRIPTION=High-level C Binding for ZeroMQ
+EAPI=2
 HOMEPAGE=http://czmq.zeromq.org
 IUSE=doc static-libs
 KEYWORDS=amd64 ~arm x86
 LICENSE=LGPL-3
 SLOT=0
 SRC_URI=http://download.zeromq.org/czmq-1.2.0.tar.gz
-_md5_=387d225051f0ba2143b5bb345b8f658f
+_md5_=efa8ccdbd64ee2b2d1bdae6c1bb2b432

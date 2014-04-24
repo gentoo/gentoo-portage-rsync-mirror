@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-1.4.1.ebuild,v 1.1 2013/12/24 10:50:09 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-1.4.1.ebuild,v 1.2 2014/04/24 12:58:26 jlec Exp $
 
 EAPI=5
 inherit autotools
 
-DESCRIPTION="CZMQ - High-level C Binding for ZeroMQ"
+DESCRIPTION=" High-level C Binding for ZeroMQ"
 HOMEPAGE="http://czmq.zeromq.org"
 SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 

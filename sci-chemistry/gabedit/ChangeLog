@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gabedit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.25 2013/09/18 11:37:59 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.26 2014/04/24 12:46:46 jlec Exp $
+
+*gabedit-2.4.8 (24 Apr 2014)
+
+  24 Apr 2014; Justin Lecher <jlec@gentoo.org> +gabedit-2.4.8.ebuild:
+  Version BUmp, #508388
 
   18 Sep 2013; Justin Lecher <jlec@gentoo.org> -gabedit-2.3.6.ebuild,
   -gabedit-2.4.0.ebuild, -gabedit-2.4.2.ebuild, -gabedit-2.4.3.ebuild,
