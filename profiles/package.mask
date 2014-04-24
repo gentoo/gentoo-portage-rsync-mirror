@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15605 2014/04/23 21:48:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15606 2014/04/24 22:58:40 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -766,10 +766,6 @@ app-text/cuneiform
 # Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
 =media-gfx/blender-2.64a
 media-gfx/yablex
-
-# Tim Harder <radhermit@gentoo.org> (07 Mar 2013)
-# Masked for testing
-=dev-java/jython-2.7*
 
 # Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
 # Depends on blender, which is masked.

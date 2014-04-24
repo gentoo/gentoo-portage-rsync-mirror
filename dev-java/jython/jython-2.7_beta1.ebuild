@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7_beta1.ebuild,v 1.2 2013/03/26 03:51:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7_beta1.ebuild,v 1.3 2014/04/24 22:55:35 chutzpah Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc examples source"
@@ -96,12 +96,14 @@ src_test() {
 }
 
 src_install() {
+	local instdir=/usr/share/${PN}-${SLOT}
+
 	java-pkg_newjar dist/${PN}-dev.jar
 
 	java-pkg_register-optional-dependency jdbc-mysql
 	java-pkg_register-optional-dependency jdbc-postgresql
 
-	insinto /usr/share/${PN}-${SLOT}
+	insinto ${instdir}
 	doins -r dist/{Lib,registry}
 
 	dodoc ACKNOWLEDGMENTS NEWS README.txt
@@ -130,8 +132,9 @@ src_install() {
 	# we need a wrapper to help python_optimize
 	cat <<-EOF > "${T}"/jython
 		exec java -cp "$(java-pkg_getjars "${EANT_GENTOO_CLASSPATH}"):${EANT_GENTOO_CLASSPATH_EXTRA}:dist/${PN}-dev.jar" \
-			-Dpython.home="${ED}"/usr/share/${PN}-${SLOT} \
+			-Dpython.home="${ED}${instdir}" \
 			-Dpython.cachedir="${T}/.jythoncachedir" \
+			-Duser.home="${T}" \
 			org.python.util.jython "\${@}"
 	EOF
 	chmod +x "${T}"/jython || die
@@ -142,7 +145,7 @@ src_install() {
 	# compile tests (everything else is compiled already)
 	# we're keeping it quiet since jython reports errors verbosely
 	# and some of the tests are supposed to trigger compile errors
-	python_optimize "${ED}"/usr/share/jython-${SLOT}/Lib/test &>/dev/null
+	python_optimize "${ED}${instdir}"/Lib/test &>/dev/null
 
 	# for python-exec
 	echo "EPYTHON='${EPYTHON}'" > epython.py
@@ -150,7 +153,7 @@ src_install() {
 
 	# some of the class files end up with newer timestamps than the files they
 	# were generated from, make sure this doesn't happen
-	find "${ED}"/usr/share/jython-${SLOT}/Lib/ -name '*.class' | xargs touch
+	find "${ED}${instdir}"/Lib/ -name '*.class' | xargs touch
 }
 
 pkg_postinst() {

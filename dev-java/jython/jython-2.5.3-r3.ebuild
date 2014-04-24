@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.3-r3.ebuild,v 1.1 2013/09/21 13:58:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.3-r3.ebuild,v 1.2 2014/04/24 22:55:35 chutzpah Exp $
 
 EAPI="4"
 
@@ -130,6 +130,7 @@ src_install() {
 exec java -cp "$(java-pkg_getjars "${EANT_GENTOO_CLASSPATH}"):${EANT_GENTOO_CLASSPATH_EXTRA}:dist/${PN}-dev.jar" \
 	-Dpython.home="${ED}"/usr/share/${PN}-${SLOT} \
 	-Dpython.cachedir="${T}/.jythoncachedir" \
+	-Duser.home="${T}" \
 	org.python.util.jython "\${@}"
 _EOF_
 	chmod +x "${T}"/jython || die
