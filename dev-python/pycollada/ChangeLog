@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pycollada
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycollada/ChangeLog,v 1.1 2014/04/23 23:59:11 xmw Exp $
+
+*pycollada-0.4 (23 Apr 2014)
+*pycollada-9999 (23 Apr 2014)
+
+  23 Apr 2014; Michael Weber <xmw@gentoo.org> +metadata.xml,
+  +pycollada-0.4.ebuild, +pycollada-9999.ebuild:
+  Initial import. Ebuild contributed by Fabio Rossi (bug 498592).

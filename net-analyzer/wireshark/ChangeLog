@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.604 2014/04/23 14:23:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.605 2014/04/23 23:51:51 jer Exp $
+
+  23 Apr 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for HPPA (bug #508506).
 
 *wireshark-1.10.7 (23 Apr 2014)
 *wireshark-1.8.14 (23 Apr 2014)
