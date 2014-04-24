@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.47 2014/04/19 09:51:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.48 2014/04/24 20:46:17 xarthisius Exp $
+
+*i3-4.7.2-r1 (24 Apr 2014)
+
+  24 Apr 2014; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/i3-4.7.2-cflags.patch, +files/i3-4.7.2-parallel_make.patch,
+  +i3-4.7.2-r1.ebuild:
+  Respect CFLAGS during linking phase, make build parallel safe. Fixes #508304
+  by Ferenc Erki <erkiferenc@gmail.com> and #508426 by Julian Ospald
+  <hasufell@gentoo.org>. Thanks to hasufell for the patches
 
   19 Apr 2014; Chema Alonso <nimiux@gentoo.org> i3-4.7.2.ebuild:
   Stable for amd64 wrt bug #499098
