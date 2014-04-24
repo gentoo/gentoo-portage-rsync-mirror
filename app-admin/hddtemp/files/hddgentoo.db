@@ -194,7 +194,11 @@
 "WDC WD1003FBYX-01Y7B1"						194 C "Western Digital RE4 1TB SATA2 7200RPM 64MB"
 "WDC WD3003FZEX-00Z4SA0"					194 C "Western Digital Caviar Black 3TB SATA3 7200RPM 64MB"
 "TOSHIBA DT01ACA050"						194 C "Toshiba 500GB SATA3 7200RPM 32MB"
-
+"WDC WD40EFRX"			 				194 C "Western Digital Red 4TB SATA3 IntelliPower 64MB"
+"WDC WD40EZRX"                   				194 C "Western Digital Green 4TB SATA3 IntelliPower 64MB"
+"WDC WD20EARS"                   				194 C "Western Digital Green 2TB SATA2 IntelliPower 64MB"
+"WDC WD5000BEVT"                 				194 C "Western Digital Scorpio Blue 500GB SATA2 5400RPM 8MB"
+"SanDisk SD6SB1M256G1022I"       				194 C "Sandisk SSD X110 256GB"
 "Hitachi HTS542512K9SA00"					194 C "Hitachi Travelstar 5K250 120GB SATA2 5400RPM 8MB"
 "Hitachi HTS542516K9SA00"					194 C "Hitachi Travelstar 5K250 160GB SATA2 5400RPM 8MB"
 "Hitachi HDS721680PLA380"					194 C "Hitachi Deskstar 7K160 80GB SATA2 7200RPM 8MB"
@@ -206,15 +210,12 @@
 "ST9500325AS"							194 C "Seagate Momentus 5400.6 500GB SATA2 5400RPM 8MB"
 "WDC WD30EFRX-68AX9N0"						194 C "Western Digital Red 3TB SATA3 64MB"
 "Toshiba DT01ACA300"						194 C "Toshiba DT01ACA300 3TB SATA3 7200RPM 64MB"
-
 "Samsung SSD 840 Series"					190 C "Samsung SSD 840 Series"
 "Samsung SSD 840 PRO Serise"					190 C "Samsung SSD 840 Pro Series"
 "SAMSUNG HD203WI"						194 C "Samsung SpinPoint F3 EcoGreen 2TB SATA2 5400RPM 32MB"
 "SAMSUNG SSD 830 Series"					190 C "Samsung SSD 830 Series"
 "SanDisk SDSSDH2128G"						194 C "Sandisk SSD Ultra Plus 128GB"
 "OCZ-VERTEX3"                                                   194 C "OCZ Vertex 3 120GB SATA3"
-
 "Crucial_CT240M500SSD3"						194 C "Crucial M500 240GB SATA3 256MB"
-
 "WDC WD5003ABYX-01WERA2"					194 C "Western Digital RE4 500GB"
 "WDC WD5002ABYS-02B1B0"						194 C "Western Digital RE3 500GB"

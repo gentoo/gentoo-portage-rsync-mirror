@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.87 2014/03/15 22:54:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.88 2014/04/24 19:16:39 graaff Exp $
+
+  24 Apr 2014; Hans de Graaff <graaff@gentoo.org> ruby-pango-2.0.2.ebuild,
+  ruby-pango-2.1.0.ebuild, ruby-pango-2.2.0.ebuild:
+  Update dev-ruby/rcairo dependency to a version that ruby-pango needs, fixing
+  bug 508538.
 
 *ruby-pango-2.2.0 (15 Mar 2014)
 
