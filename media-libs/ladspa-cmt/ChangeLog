@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.53 2014/04/18 22:18:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.54 2014/04/24 13:30:26 hasufell Exp $
+
+  24 Apr 2014; Julian Ospald <hasufell@gentoo.org> ladspa-cmt-1.16-r3.ebuild:
+  fix deps
 
 *ladspa-cmt-1.16-r3 (18 Apr 2014)
 
