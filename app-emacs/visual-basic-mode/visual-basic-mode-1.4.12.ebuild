@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/visual-basic-mode/visual-basic-mode-1.4.12.ebuild,v 1.1 2013/12/07 11:17:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/visual-basic-mode/visual-basic-mode-1.4.12.ebuild,v 1.2 2014/04/24 09:32:37 nimiux Exp $
 
 EAPI=5
 
@@ -13,6 +13,6 @@ SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.el.xz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 SITEFILE="50${PN}-gentoo.el"
