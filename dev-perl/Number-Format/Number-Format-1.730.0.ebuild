@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/Number-Format-1.730.0.ebuild,v 1.2 2011/09/03 21:04:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/Number-Format-1.730.0.ebuild,v 1.3 2014/04/24 17:20:01 zlogene Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Package for formatting numbers for display"
 
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc x86"
+KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 
 SRC_TEST="do"

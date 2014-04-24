@@ -1,6 +1,26 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.519 2014/03/23 09:55:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.520 2014/04/24 17:02:01 polynomial-c Exp $
+
+  24 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -files/openssh-5.2p1-ldap-stdargs.diff, -files/openssh-5.4_p1-openssl.patch,
+  -files/openssh-5.6_p1-hpn-progressmeter.patch,
+  -files/openssh-5.8_p1-x509-hpn-glue.patch,
+  -files/openssh-5.9_p1-drop-openssl-check.patch,
+  -files/openssh-5.9_p1-x509-glue.patch,
+  -files/openssh-6.0_p1-fix-freebsd-compilation.patch,
+  -files/openssh-6.0_p1-hpn-progressmeter.patch,
+  -files/openssh-6.0_p1-test.patch, -files/openssh-6.0_p1-x509-glue.patch,
+  -files/openssh-6.0_p1-x509-hpn-glue.patch,
+  -files/openssh-6.1_p1-x509-glue.patch,
+  -files/openssh-6.1_p1-x509-hpn-glue.patch,
+  -files/openssh-6.2_p2-x509-glue.patch,
+  -files/openssh-6.2_p2-x509-hpn-glue.patch,
+  -files/openssh-6.2_p2-x509-hpn14v1-glue.patch,
+  -files/openssh-6.3_p1-aes-gcm.patch, -files/openssh-6.4_p1-x509-glue.patch,
+  -files/sshd.pam, -files/sshd.rc6, -files/sshd.rc6.1, -files/sshd.rc6.2,
+  -files/sshd.rc6.3:
+  Removed old files from FILESDIR.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> -openssh-5.9_p1-r4.ebuild,
   -openssh-6.0_p1-r1.ebuild, -openssh-6.1_p1-r1.ebuild,

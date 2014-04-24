@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-Complex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-Complex/ChangeLog,v 1.5 2014/04/07 12:52:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-Complex/ChangeLog,v 1.6 2014/04/24 17:29:33 zlogene Exp $
+
+  24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Math-Complex-1.590.0-r2.ebuild:
+  Add ~mips keyword wrt bug #505156
 
   07 Apr 2014; Mikle Kolyada <zlogene@gentoo.org>
   perl-Math-Complex-1.590.0-r2.ebuild:
