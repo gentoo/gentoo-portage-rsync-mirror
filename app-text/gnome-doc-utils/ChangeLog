@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.218 2014/04/23 20:55:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.219 2014/04/24 01:23:57 leio Exp $
+
+  24 Apr 2014; Mart Raudsepp <leio@gentoo.org> +gnome-doc-utils-0.20.10.ebuild:
+  Restore 0.20.10; it was still the latest stable on all arches besides
+  amd64/hppa/x86.
 
   23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gnome-doc-utils-0.20.10.ebuild:
   Drop old
