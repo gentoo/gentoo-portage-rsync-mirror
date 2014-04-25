@@ -23,6 +23,7 @@
 		<flag name="des3">Enable triple DES support</flag>
 		<flag name="ecc">Enable Elliptic Curve support</flag>
 		<flag name="hc128">Enable HC-128 support</flag>
+		<flag name="hkdf">Enable HKDF (HMAC-KDF) support</flag>
 		<flag name="md2">Enable MD2 support</flag>
 		<flag name="md4">Enable MD4 support</flag>
 		<flag name="md5">Enable MD5 support</flag>
@@ -34,9 +35,11 @@
 		<flag name="rsa">Enable RSA cihper support</flag>
 		<flag name="sha">Enable SHA cipher support</flag>
 		<flag name="sha512">Enable SHA-160 support</flag>
+		<flag name="supportedcurves">Enable Supported Elliptic Curves</flag>
 		<flag name="ocsp">Enable Online Certificate Status Protocol</flag>
 		<flag name="crl">Enable Certificate Revocation List</flag>
 		<flag name="crl-monitor">Enable Certificate Revocation List Directory Monitoring</flag>
+		<flag name="scep">Enable wolfSCEP</flag>
 		<flag name="savesession">Support session saving</flag>
 		<flag name="savecert">Support certificate saving</flag>
 		<flag name="sessioncerts">Store session certificates</flag>
@@ -47,6 +50,7 @@
 		<flag name="maxfragment">Enable Maximum Fragment Length</flag>
 		<flag name="truncatedhmac">Enable Truncated HMAC</flag>
 		<flag name="tlsx">Enable all TLS Extensions</flag>
+		<flag name="pkcs7">Enable PKCS7 standard</flag>
 		<flag name="errorstrings">Enable error strings table</flag>
 		<flag name="memory">Enable memory callbacks</flag>
 		<flag name="dtls">Enable datagram TLS (must be disabled for tests)</flag>

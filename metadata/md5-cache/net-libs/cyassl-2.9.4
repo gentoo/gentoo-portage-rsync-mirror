@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install test
+DEPEND=app-arch/unzip zlib? ( sys-libs/zlib )
+DESCRIPTION=Lightweight SSL/TLS library targeted at embedded and RTOS environments
+EAPI=5
+HOMEPAGE=http://www.yassl.com/yaSSL/Home.html
+IUSE=-dtls examples extra fortress ipv6 httpd mcapi pwdbased sni static-libs threads zlib small big huge aes-gcm aes-ccm aes-ni blake2 camellia dsa ecc hc128 hkdf md2 md4 nullcipher psk leanpsk pkcs7 rabbit ripemd scep sha512 supportedcurves ocsp crl crl-monitor savesession savecert sessioncerts testcert atomicuser pkcallbacks sep maxfragment truncatedhmac tlsx debug errorstrings memory test
+KEYWORDS=~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~x86
+LICENSE=GPL-2
+RDEPEND=app-arch/unzip zlib? ( sys-libs/zlib )
+REQUIRED_USE=leanpsk? ( psk ) fortress? ( extra sha512 ) pwdbased? ( extra ) test? ( !dtls )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~blueness/cyassl/cyassl-2.9.4.zip
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=1c001c8271dbdb0220f4001dd8994689

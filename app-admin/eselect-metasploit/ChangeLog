@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/ChangeLog,v 1.3 2014/04/25 05:24:38 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/ChangeLog,v 1.4 2014/04/25 16:28:42 zerochaos Exp $
+
+*eselect-metasploit-0.13 (25 Apr 2014)
+
+  25 Apr 2014; Rick Farina <zerochaos@gentoo.org>
+  +eselect-metasploit-0.13.ebuild, +files/metasploit.eselect-0.13,
+  +files/msfloader-0.13:
+  improvements to the new method of handling Gemfile.lock
 
   25 Apr 2014; Rick Farina <zerochaos@gentoo.org> files/metasploit.eselect-0.12:
   missed a debug line, removing
