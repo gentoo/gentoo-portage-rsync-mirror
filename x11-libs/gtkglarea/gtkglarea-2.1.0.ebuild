@@ -1,11 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-2.0.1.ebuild,v 1.12 2013/01/21 19:28:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-2.1.0.ebuild,v 1.1 2014/04/25 22:23:56 eva Exp $
 
 EAPI="5"
-
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
@@ -14,18 +12,21 @@ HOMEPAGE="http://www.mono-project.com/GtkGLArea"
 
 LICENSE="LGPL-2+ GPL-2+" # examples are GPL-2+, library is LGPL-2+
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="examples"
 
-RDEPEND=">=x11-libs/gtk+-2.0.3:2
-	virtual/glu
-	virtual/opengl"
+RDEPEND="
+	>=x11-libs/gtk+-2.22:2
+	virtual/opengl
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	# Do not build examples
-	sed "s:\(SUBDIRS.*\)examples:\1:" -i Makefile.am Makefile.in || die "sed 1 failed"
+	sed -e "s:\(SUBDIRS.*\)examples:\1:" \
+		-i Makefile.am Makefile.in || die "sed 1 failed"
 
 	gnome2_src_prepare
 }
