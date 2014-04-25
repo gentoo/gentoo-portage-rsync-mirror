@@ -24,5 +24,6 @@ dev-db/mariadb
   <flag name="systemtap">Build support for profiling and tracing using <pkg>dev-util/systemtap</pkg></flag>
   <flag name='sphinx'>Add suport for the sphinx full-text search engine</flag>
   <flag name='test'>Install upstream testsuites for end use.</flag>
+  <flag name='tokudb'>Add support for TokuDB storage engine</flag>
 </use>
 </pkgmetadata>

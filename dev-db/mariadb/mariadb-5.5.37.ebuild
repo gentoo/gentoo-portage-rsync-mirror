@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.32.ebuild,v 1.1 2013/09/04 20:38:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.37.ebuild,v 1.1 2014/04/24 23:55:04 jmbsvicetto Exp $
 
 EAPI="4"
-MY_EXTRAS_VER="20130120-0100Z"
+MY_EXTRAS_VER="20140424-1043Z"
 
 # Build system
 BUILD="cmake"
@@ -26,7 +26,7 @@ RDEPEND="${RDEPEND}"
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 # Official test instructions:
-# USE='berkdb -cluster embedded extraengine perl ssl community' \
+# USE='-cluster embedded extraengine perl ssl static-libs community' \
 # FEATURES='test userpriv -usersandbox' \
 # ebuild mariadb-X.X.XX.ebuild \
 # digest clean package
@@ -61,6 +61,9 @@ src_test() {
 		# create directories because mysqladmin might right out of order
 		mkdir -p "${S}"/mysql-test/var-tests{,/log}
 
+		# create symlink for the tests to find mysql_tzinfo_to_sql
+		ln -s "${CMAKE_BUILD_DIR}/sql/mysql_tzinfo_to_sql" "${S}/sql/"
+
 		# These are failing in MySQL 5.5 for now and are believed to be
 		# false positives:
 		#
@@ -72,28 +75,10 @@ src_test() {
 		# main.mysql_client_test, main.mysql_client_test_nonblock:
 		# segfaults at random under Portage only, suspect resource limits.
 		#
-		# sys_vars.plugin_dir_basic
-		# fails because PLUGIN_DIR is set to MYSQL_LIBDIR64/plugin
-		# instead of MYSQL_LIBDIR/plugin
-		#
-		# main.flush_read_lock_kill
-		# fails because of unknown system variable 'DEBUG_SYNC'
-		#
-		# main.openssl_1
-		# error message changing
-		# -mysqltest: Could not open connection 'default': 2026 SSL connection
-		#  error: ASN: bad other signature confirmation
-		# +mysqltest: Could not open connection 'default': 2026 SSL connection
-		#  error: error:00000001:lib(0):func(0):reason(1)
-		#
-		# plugins.unix_socket
-		# fails because portage strips out the USER enviornment variable
-		#
 
 		for t in main.mysql_client_test main.mysql_client_test_nonblock \
 			binlog.binlog_statement_insert_delayed main.information_schema \
-			main.mysqld--help main.flush_read_lock_kill \
-			sys_vars.plugin_dir_basic main.openssl_1 plugins.unix_socket \
+			main.mysqld--help \
 			funcs_1.is_triggers funcs_1.is_tables_mysql funcs_1.is_columns_mysql ; do
 				mysql-v2_disable_test  "$t" "False positives in Gentoo"
 		done

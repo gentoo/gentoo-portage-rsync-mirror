@@ -1,5 +1,5 @@
 # @GENTOO_PORTAGE_EPREFIX@/etc/mysql/my.cnf: The global mysql configuration file.
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/files/my.cnf-5.5,v 1.2 2013/01/20 02:39:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/files/my.cnf-5.5,v 1.3 2014/04/24 23:55:04 jmbsvicetto Exp $
 
 # The following options will be passed to all MySQL clients
 [client]
@@ -52,7 +52,7 @@ log-error 					= @GENTOO_PORTAGE_EPREFIX@/var/log/mysql/mysqld.err
 basedir 					= @GENTOO_PORTAGE_EPREFIX@/usr
 datadir 					= @DATADIR@
 skip-external-locking
-key_buffer 					= 16M
+key_buffer_size				= 16M
 max_allowed_packet 			= 1M
 table_open_cache 			= 64
 sort_buffer_size 			= 512K
@@ -85,10 +85,6 @@ tmpdir 						= @GENTOO_PORTAGE_EPREFIX@/tmp/
 #gdb
 #debug						= d:t:i:o,/tmp/mysqld.trace
 #one-thread
-
-# uncomment the following directives if you are using BDB tables
-#bdb_cache_size				= 4M
-#bdb_max_lock				= 10000
 
 # the following is the InnoDB configuration
 # if you wish to disable innodb instead
@@ -137,17 +133,18 @@ max_allowed_packet 			= 16M
 #safe-updates
 
 [isamchk]
-key_buffer 					= 20M
+key_buffer_size				= 20M
 sort_buffer_size 			= 20M
 read_buffer 				= 2M
 write_buffer 				= 2M
 
 [myisamchk]
-key_buffer 					= 20M
+key_buffer_size				= 20M
 sort_buffer_size 			= 20M
-read_buffer 				= 2M
-write_buffer 				= 2M
+read_buffer_size			= 2M
+write_buffer_size			= 2M
 
 [mysqlhotcopy]
 interactive-timeout
 
+[mariadb]
