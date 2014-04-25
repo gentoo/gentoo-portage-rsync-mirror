@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.520 2014/04/24 17:02:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.521 2014/04/25 07:11:59 polynomial-c Exp $
+
+*openssh-6.6.1_p1 (25 Apr 2014)
+
+  25 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +openssh-6.6.1_p1.ebuild,
+  +files/openssh-6.6.1_p1-x509-hpn14v4-glue-p2.patch,
+  +files/openssh-6.6.1_p1.patch:
+  Version bump by James Cloos (bug #508604). This is an unusual one as upstream
+  only provides a patch (not a release tarball).
 
   24 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
   -files/openssh-5.2p1-ldap-stdargs.diff, -files/openssh-5.4_p1-openssl.patch,
