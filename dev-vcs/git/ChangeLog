@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.257 2014/04/09 23:59:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.258 2014/04/25 10:47:14 polynomial-c Exp $
+
+  25 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> git-9999-r3.ebuild,
+  +files/git-2.0.0_rc0-optional-cvs.patch:
+  Added new nocvs patch to fix bug #508600.
 
 *git-1.9.2 (10 Apr 2014)
 *git-1.8.4.4 (10 Apr 2014)

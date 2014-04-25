@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999-r3.ebuild,v 1.1 2014/02/22 02:07:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999-r3.ebuild,v 1.2 2014/04/25 10:47:14 polynomial-c Exp $
 
 EAPI=5
 
@@ -225,7 +225,7 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.9.0_rc3-optional-cvs.patch
+	epatch "${FILESDIR}"/git-2.0.0_rc0-optional-cvs.patch
 
 	# install mediawiki perl modules also in vendor_dir
 	# hack, needs better upstream solution
