@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libkvkontakte
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.42 2014/03/21 21:24:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.43 2014/04/25 20:57:37 johu Exp $
+
+  25 Apr 2014; Johannes Huber <johu@gentoo.org> -libkvkontakte-3.5.0.ebuild,
+  libkvkontakte-3.5.0-r1.ebuild:
+  amd64/x86 stable, remove old.
 
 *libkvkontakte-3.5.0-r1 (21 Mar 2014)
 

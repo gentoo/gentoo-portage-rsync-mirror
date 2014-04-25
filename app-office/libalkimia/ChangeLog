@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libalkimia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libalkimia/ChangeLog,v 1.13 2014/03/19 18:27:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libalkimia/ChangeLog,v 1.14 2014/04/25 20:31:19 johu Exp $
+
+  25 Apr 2014; Johannes Huber <johu@gentoo.org> -libalkimia-4.3.2.ebuild,
+  libalkimia-4.3.2-r1.ebuild:
+  amd64/x86 stable, remove old.
 
 *libalkimia-4.3.2-r1 (19 Mar 2014)
 
