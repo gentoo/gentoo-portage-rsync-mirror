@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.21 2014/04/21 18:57:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.22 2014/04/25 16:48:54 zerochaos Exp $
 
 EAPI="5"
 
@@ -71,7 +71,7 @@ COMMON_DEPEND="dev-db/postgresql-server
 	net-analyzer/nmap"
 DEPEND+=" ${COMMON_DEPEND}"
 RDEPEND+=" ${COMMON_DEPEND}
-	>=app-admin/eselect-metasploit-0.10"
+	>=app-admin/eselect-metasploit-0.13"
 
 RESTRICT="strip"
 
@@ -125,6 +125,7 @@ all_ruby_unpack() {
 all_ruby_prepare() {
 	# add psexec patch from pull request 2657 to allow custom exe templates from any files, bypassing most AVs
 	#epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
+	epatch "${FILESDIR}/bug-8792.patch"
 	epatch_user
 
 	#unbundle johntheripper, at least it now defaults to running the system version
@@ -143,12 +144,11 @@ all_ruby_prepare() {
 	#The Gemfile contains real known deps
 	#add our dep on upstream rb-readline instead of bundled one
 	sed -i "/gem 'packetfu'/a #use upstream readline instead of bundled\ngem 'rb-readline'" Gemfile || die
+	sed -i "/gem 'fivemat'/s/, '1.2.1'//" Gemfile || die
 	#remove the bundled readline
 	#https://github.com/rapid7/metasploit-framework/pull/3105
+	#this PR was closed due to numerous changes to their local fork, almost entirely for non-linux
 	rm lib/rbreadline.rb
-	#fix for bug #507816 while waiting on upstream to actually set their own deps right
-	sed -i "s#gem 'activesupport', '>= 3.0.0'#gem 'activesupport', '~> 3.2'#" Gemfile || die
-	sed -i "s#gem 'activerecord'#gem 'activerecord', '~> 3.2'#" Gemfile || die
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then
@@ -204,13 +204,16 @@ each_ruby_prepare() {
 }
 
 each_ruby_test() {
-	#rake --trace spec || die
+	#review dev-python/pymongo for ways to make the test compatible with FEATURES=network-sandbox
+
 	# https://dev.metasploit.com/redmine/issues/8425
 	${RUBY} -S rake db:create || die
 	${RUBY} -S rake db:migrate || die
 
 	#we bogart msfupdate so no point in trying to test it
 	rm spec/msfupdate_spec.rb || die
+	#we don't really want to be uploading to virustotal during the tests
+	rm spec/tools/virustotal_spec.rb
 
 	RAILS_ENV=test MSF_DATABASE_CONFIG=config/database.yml ${RUBY} -S rake spec || die
 	su postgres -c "dropuser msf_test_user" || die "failed to cleanup msf_test-user"
@@ -218,8 +221,9 @@ each_ruby_test() {
 
 each_ruby_install() {
 	#Tests have already been run, we don't need this stuff
-	rm -rf spec
-	rm -rf test
+	rm -r spec
+	rm -r test
+	rm Gemfile.lock
 
 	#I'm 99% sure that this will only work for as long as we only support one ruby version.  Creativity will be needed if we wish to support multiple.
 	# should be as simple as copying everything into the target...

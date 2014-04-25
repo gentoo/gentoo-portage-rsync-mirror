@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.90 2014/04/21 19:20:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.91 2014/04/25 16:48:54 zerochaos Exp $
+
+  25 Apr 2014; Rick Farina <zerochaos@gentoo.org> +files/bug-8792.patch,
+  metasploit-9999.ebuild:
+  updates for 9999, partial fixes for tests, fix for bug 508490
 
 *metasploit-4.9.2-r2 (21 Apr 2014)
 

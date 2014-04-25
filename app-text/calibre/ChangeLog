@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.314 2014/04/20 09:57:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.315 2014/04/25 16:55:32 axs Exp $
+
+  25 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> metadata.xml:
+  added self to maintainers list
 
 *calibre-1.33 (20 Apr 2014)
 

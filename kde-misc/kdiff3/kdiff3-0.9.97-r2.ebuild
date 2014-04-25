@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.97-r2.ebuild,v 1.2 2014/04/24 14:38:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.97-r2.ebuild,v 1.3 2014/04/25 16:58:23 johu Exp $
 
 EAPI=5
 
@@ -26,12 +26,15 @@ LICENSE="GPL-2"
 SLOT="4"
 IUSE="debug kde"
 
-DEPEND="
+CDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	kde? ( $(add_kdebase_dep kdelibs) )
 "
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	sys-devel/gettext
+"
+RDEPEND="${CDEPEND}
 	sys-apps/diffutils
 "
 

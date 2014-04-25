@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.71 2014/04/24 14:38:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.72 2014/04/25 16:58:23 johu Exp $
+
+  25 Apr 2014; Johannes Huber <johu@gentoo.org> kdiff3-0.9.97-r2.ebuild:
+  DEPEND on sys-devel/gettext by Nikoli <nikoli@gmx.us>, bug #508702.
 
   24 Apr 2014; Johannes Huber <johu@gentoo.org> -kdiff3-0.9.97-r1.ebuild,
   kdiff3-0.9.97-r2.ebuild:
