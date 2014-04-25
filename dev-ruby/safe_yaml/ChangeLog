@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/safe_yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.10 2014/04/07 13:47:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.11 2014/04/25 00:05:58 mrueg Exp $
+
+*safe_yaml-1.0.3 (25 Apr 2014)
+
+  25 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +safe_yaml-1.0.3.ebuild:
+  Version bump.
 
 *safe_yaml-1.0.2 (07 Apr 2014)
 
