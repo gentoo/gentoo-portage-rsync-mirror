@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.57 2014/04/22 19:36:49 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.58 2014/04/25 20:03:08 axs Exp $
+
+  25 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> freewrl-2.3.3.ebuild:
+  fixed distfile on new version
 
   22 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> metadata.xml:
   added long description to metadata

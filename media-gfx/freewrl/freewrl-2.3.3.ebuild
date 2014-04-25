@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-2.3.3.ebuild,v 1.1 2014/04/22 19:22:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-2.3.3.ebuild,v 1.2 2014/04/25 20:03:08 axs Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]]; then
 	SRC_URI=
 	KEYWORDS=
 else
-	SRC_URI="mirror://sourceforge/freewrl/${P}.tar.gz"
+	SRC_URI="mirror://sourceforge/freewrl/${P}.1.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
