@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/PHP_CodeCoverage-1.2.13.ebuild,v 1.3 2014/04/05 14:19:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/PHP_CodeCoverage-1.2.13.ebuild,v 1.4 2014/04/25 11:05:37 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="pear.phpunit.de"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~x86"
+KEYWORDS="amd64 hppa ~x86"
 IUSE=""
 
 DEPEND=">=dev-php/pear-1.9.4"

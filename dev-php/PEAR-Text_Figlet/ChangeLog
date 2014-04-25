@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Text_Figlet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Figlet/ChangeLog,v 1.7 2012/12/14 11:24:55 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Figlet/ChangeLog,v 1.8 2014/04/25 11:17:53 nimiux Exp $
+
+  25 Apr 2014; Chema Alonso <nimiux@gentoo.org> PEAR-Text_Figlet-1.0.2.ebuild:
+  Stable for amd64 wrt bug #504260
 
   14 Dec 2012; Ulrich Müller <ulm@gentoo.org> PEAR-Text_Figlet-1.0.2.ebuild:
   Fix LICENSE, bug 445238.
