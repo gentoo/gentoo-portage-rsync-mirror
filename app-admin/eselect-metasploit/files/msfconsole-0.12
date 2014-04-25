@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#todo:
+#add in optional auto starting/stopping of postgres
+
+#normally msf makes this dir, however, this script runs first
+if [ ! -d ~/.msf4 ]; then
+	mkdir ~/.msf4
+fi
+
+#we cannot control if msfconsole exits normally so always start with cleanup
+if [ -f ~/.msf4/Gemfile ]; then
+	rm ~/.msf4/Gemfile
+fi
+if [ -f ~/.msf4/Gemfile.lock ]; then
+	rm ~/.msf4/Gemfile.lock
+fi
+
+#fetch the latest Gemfile from the selected version of msf
+cp /usr/lib/metasploit/Gemfile ~/.msf4
+#load metasploit with the copied Gemfile
+BUNDLE_GEMFILE=~/.msf4/Gemfile exec /usr/lib/metasploit/msfconsole "$@"
+#profit
