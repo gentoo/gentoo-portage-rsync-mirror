@@ -1,6 +1,12 @@
 # ChangeLog for mate-extra/mate-system-monitor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-system-monitor/ChangeLog,v 1.1 2014/03/10 23:53:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-system-monitor/ChangeLog,v 1.2 2014/04/25 15:13:42 tomwij Exp $
+
+*mate-system-monitor-1.8.0 (25 Apr 2014)
+
+  25 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +mate-system-monitor-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
 *mate-system-monitor-1.6.1 (10 Mar 2014)
 

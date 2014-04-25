@@ -1,6 +1,11 @@
 # ChangeLog for mate-extra/mate-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-utils/ChangeLog,v 1.1 2014/03/11 00:41:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-utils/ChangeLog,v 1.2 2014/04/25 15:25:33 tomwij Exp $
+
+*mate-utils-1.8.0 (25 Apr 2014)
+
+  25 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +mate-utils-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
 *mate-utils-1.6.1 (11 Mar 2014)
 
