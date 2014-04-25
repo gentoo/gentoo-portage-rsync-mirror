@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.477 2014/03/11 15:07:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.479 2014/04/25 18:55:27 chainsaw Exp $
+
+*asterisk-1.8.27.0 (25 Apr 2014)
+
+  25 Apr 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.27.0.ebuild:
+  Select bug fixes as cherry picked from the 11 branch. TLS chaining support
+  finally upstream. Move up to 11 if you still use this.
+
+*asterisk-11.9.0 (25 Apr 2014)
+
+  25 Apr 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.9.0.ebuild:
+  Bug fix release, fixes include but are not limited to dial plan functions
+  coping with a NULL channel (AMI global function), correct NULL handling in
+  ODBC, advertising MESSAGE support in SIP headers, SpanDSP API adherence and
+  protection against non-G711 data in fax detection routines. TLS chaining
+  support finally upstream.
 
   11 Mar 2014; Agostino Sarubbo <ago@gentoo.org> -asterisk-1.8.25.0.ebuild,
   -asterisk-11.7.0.ebuild:
