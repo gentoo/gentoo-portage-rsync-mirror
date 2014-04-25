@@ -1,21 +1,19 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-9.120.0.ebuild,v 1.6 2013/07/28 09:27:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-9.58.ebuild,v 1.1 2014/04/25 05:47:18 radhermit Exp $
 
 EAPI=5
 
 MY_PN=Image-ExifTool
-MODULE_AUTHOR=EXIFTOOL
-MODULE_VERSION=9.12
+MY_P=${MY_PN}-${PV}
 inherit perl-module
 
 DESCRIPTION="Read and write meta information in image, audio and video files"
 HOMEPAGE="http://www.sno.phy.queensu.ca/~phil/exiftool/ ${HOMEPAGE}"
-SRC_URI+=" http://www.sno.phy.queensu.ca/~phil/exiftool/${MY_P}.tar.gz"
+SRC_URI="http://www.sno.phy.queensu.ca/~phil/exiftool/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x64-macos"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x64-macos"
 
 SRC_TEST="do"
 
