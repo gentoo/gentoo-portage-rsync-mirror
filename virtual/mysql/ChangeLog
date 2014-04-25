@@ -1,6 +1,11 @@
 # ChangeLog for virtual/mysql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.31 2012/12/05 11:24:27 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.32 2014/04/25 01:32:39 jmbsvicetto Exp $
+
+  25 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mysql-5.5.ebuild:
+  Make mariadb the default provider for mysql - fixes bug 474802. Sync changes
+  from the overlay.
 
   05 Dec 2012; Fabian Groffen <grobian@gentoo.org> mysql-5.5.ebuild:
   Marked ~x86-linux, bug #444950
