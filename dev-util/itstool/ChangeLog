@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/itstool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.45 2014/04/21 10:29:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.46 2014/04/25 22:32:38 eva Exp $
+
+*itstool-2.0.2 (25 Apr 2014)
+
+  25 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> -itstool-1.2.0.ebuild,
+  +itstool-2.0.2.ebuild:
+  Version bump. Clean up old revision.
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> itstool-1.2.0-r1.ebuild:
   Stable for arm, wrt bug #507568

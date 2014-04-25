@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.68 2014/04/25 22:16:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.69 2014/04/25 22:56:26 vapier Exp $
 
 EAPI=5
 
@@ -61,9 +61,9 @@ REQUIRED_USE="|| ( ${use_targets} )
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
-LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
-	sys-apps/pciutils[static-libs(+)]
-	sys-libs/zlib[static-libs(+)]
+COMMON_LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
+	sys-libs/zlib[static-libs(+)]"
+SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	>=x11-libs/pixman-0.28.0[static-libs(+)]
 	aio? ( dev-libs/libaio[static-libs(+)] )
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
@@ -85,8 +85,9 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	vde? ( net-misc/vde[static-libs(+)] )
 	xattr? ( sys-apps/attr[static-libs(+)] )
 	xfs? ( sys-fs/xfsprogs[static-libs(+)] )"
-RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
-	static-user? ( >=dev-libs/glib-2.0[static-libs(+)] )
+USER_LIB_DEPEND="${COMMON_LIB_DEPEND}"
+RDEPEND="!static-softmmu? ( ${SOFTMMU_LIB_DEPEND//\[static-libs(+)]} )
+	!static-user? ( ${USER_LIB_DEPEND//\[static-libs(+)]} )
 	qemu_softmmu_targets_i386? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
 		sys-firmware/seabios
@@ -118,14 +119,14 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	usbredir? ( >=sys-apps/usbredir-0.6 )
 	virtfs? ( sys-libs/libcap )
 	xen? ( app-emulation/xen-tools )"
-
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	=dev-lang/python-2*
 	sys-apps/texinfo
 	virtual/pkgconfig
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
-	static-softmmu? ( ${LIB_DEPEND} )
+	static-softmmu? ( ${SOFTMMU_LIB_DEPEND} )
+	static-user? ( ${USER_LIB_DEPEND} )
 	test? (
 		dev-libs/glib[utils]
 		sys-devel/bc
@@ -289,7 +290,7 @@ qemu_src_configure() {
 			--disable-kvm
 			--disable-libiscsi
 			--disable-glusterfs
-			$(use_enable seccomp)
+			--disable-seccomp
 			--disable-sdl
 			--disable-smartcard-nss
 			--disable-tools
