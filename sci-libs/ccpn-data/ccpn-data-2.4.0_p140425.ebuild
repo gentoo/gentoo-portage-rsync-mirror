@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.3.1_p130822.ebuild,v 1.2 2013/09/05 19:04:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.4.0_p140425.ebuild,v 1.1 2014/04/25 13:49:22 jlec Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit eutils portability python-r1 versionator
 
 PATCHSET="${PV##*_p}"
 MY_PN="${PN/-data}mr"
-MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})r2"
+MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR - Data"
@@ -37,6 +37,7 @@ S="${WORKDIR}"/ccpnmr/ccpnmr2.3
 src_prepare() {
 	[[ -n ${PATCHSET} ]] && \
 		epatch "${WORKDIR}"/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch
+	cp "${FILESDIR}"/312+ccpn_rhf22_2013-10-02-16-17-30-923_00001.xml data/ccp/nmr/NmrExpPrototype/ || die
 }
 
 src_install() {
