@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.115 2014/04/21 10:28:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.116 2014/04/25 19:32:43 pacho Exp $
+
+  25 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gobject-introspection-1.34.2-better-traceback.patch,
+  -files/gobject-introspection-1.36.0-detect-clang.patch,
+  -gobject-introspection-1.32.1.ebuild, -gobject-introspection-1.34.2-r1.ebuild,
+  -gobject-introspection-1.36.0-r1.ebuild:
+  drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   gobject-introspection-1.38.0.ebuild:

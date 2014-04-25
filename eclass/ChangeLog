@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1224 2014/04/23 11:53:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1225 2014/04/25 19:39:42 johu Exp $
+
+  25 Apr 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
+  Sync with kde overlay. Remove custom branch calculation for kde workspace.
+  Add kde-workspace 4.11.9 SRC_URI.
 
   23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -qt5-build.eclass:
   Drop qt5-build eclass
