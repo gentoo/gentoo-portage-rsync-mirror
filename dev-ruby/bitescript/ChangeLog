@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bitescript
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bitescript/ChangeLog,v 1.8 2012/01/14 07:39:18 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bitescript/ChangeLog,v 1.9 2014/04/25 00:59:20 mrueg Exp $
+
+  25 Apr 2014; Manuel Rüger <mrueg@gentoo.org> bitescript-0.0.9.ebuild:
+  EAPI bump.
 
   14 Jan 2012; Hans de Graaff <graaff@gentoo.org> -bitescript-0.0.8.ebuild:
   Remove old version.
@@ -39,4 +42,3 @@
   Initial import of bitescript ebuild for JRuby. Far from perfect, as we
   still try to use the script with Ruby 1.8, but it's working if you're
   using 'jruby -S'.
-

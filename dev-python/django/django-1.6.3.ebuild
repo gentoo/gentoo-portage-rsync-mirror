@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.6.1.ebuild,v 1.2 2014/04/25 00:47:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.6.3.ebuild,v 1.1 2014/04/25 00:47:28 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 PYTHON_REQ_USE='sqlite?'
 WEBAPP_NO_AUTO_INSTALL="yes"
 

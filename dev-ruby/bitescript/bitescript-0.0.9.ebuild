@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bitescript/bitescript-0.0.9.ebuild,v 1.1 2011/07/11 18:08:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bitescript/bitescript-0.0.9.ebuild,v 1.2 2014/04/25 00:59:20 mrueg Exp $
 
-EAPI=2
+EAPI=5
 
 USE_RUBY="jruby"
 
@@ -23,5 +23,5 @@ all_ruby_install() {
 	all_fakegem_install
 
 	docinto examples
-	dodoc examples/* || die
+	dodoc examples/*
 }

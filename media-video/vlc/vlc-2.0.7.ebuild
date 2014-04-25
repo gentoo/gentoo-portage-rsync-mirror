@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.7.ebuild,v 1.12 2014/03/26 15:50:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.7.ebuild,v 1.13 2014/04/25 00:35:39 tomwij Exp $
 
 EAPI="5"
 
@@ -194,7 +194,8 @@ src_prepare() {
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 
-	epatch "${WORKDIR}/patches/010_all_freetype-font.patch"
+	epatch "${WORKDIR}"/patches/010_all_freetype-font.patch
+	epatch "${FILESDIR}"/${P}-include-flac-1.3.x-support.patch
 
 	eautoreconf
 }

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.901 2014/04/23 13:52:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.902 2014/04/25 00:35:39 tomwij Exp $
+
+  25 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/vlc-2.0.7-include-flac-1.3.x-support.patch, vlc-2.0.5.ebuild,
+  vlc-2.0.7.ebuild:
+  Backport FLAC 1.3.x support patch to 2.0.5 and 2.0.7, pointed out by monkeh;
+  fixes bug #471936, reported by Alphat-PC, tested by Zero_Chaos.
 
   23 Apr 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
   Reviewed dependencies of 9999 ebuild according to configure.ac; fixes bug
