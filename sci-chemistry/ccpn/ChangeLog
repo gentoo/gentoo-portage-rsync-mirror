@@ -1,6 +1,18 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.136 2014/04/01 10:18:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.137 2014/04/25 14:31:13 jlec Exp $
+
+*ccpn-2.4.0_p140425 (25 Apr 2014)
+*ccpn-2.3.1_p140425 (25 Apr 2014)
+
+  25 Apr 2014; Justin Lecher <jlec@gentoo.org> -ccpn-2.1.3.1_p100806.ebuild,
+  -ccpn-2.3.1.ebuild, -ccpn-2.3.1_p131119.ebuild, -ccpn-2.3.1_p131125.ebuild,
+  -ccpn-2.3.1_p131127.ebuild, -ccpn-2.3.1_p140120.ebuild,
+  -ccpn-2.3.1_p140131-r1.ebuild, -ccpn-2.3.1_p140205.ebuild,
+  -ccpn-2.3.1_p140310.ebuild, -ccpn-2.3.1_p140325.ebuild,
+  -ccpn-2.3.1_p140401.ebuild, +ccpn-2.3.1_p140425.ebuild,
+  +ccpn-2.4.0_p140425.ebuild:
+  Version BUmp; drop old
 
 *ccpn-2.3.1_p140401 (01 Apr 2014)
 

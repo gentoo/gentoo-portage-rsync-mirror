@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pep8
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.24 2013/11/24 13:48:57 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.25 2014/04/25 14:23:48 jer Exp $
+
+  25 Apr 2014; Jeroen Roovers <jer@gentoo.org> pep8-1.4.6.ebuild:
+  Marked ~hppa (bug #508282).
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> pep8-1.4.6.ebuild:
   Stable for x86, wrt bug #481850

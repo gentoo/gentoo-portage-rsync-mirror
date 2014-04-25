@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.14 2014/04/19 06:43:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.15 2014/04/25 14:26:51 jer Exp $
+
+  25 Apr 2014; Jeroen Roovers <jer@gentoo.org> pbr-0.8.0.ebuild:
+  Marked ~hppa (bug #508282).
 
 *pbr-0.8.0 (19 Apr 2014)
 

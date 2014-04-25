@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.3.1_p140131-r1.ebuild,v 1.1 2014/01/31 10:02:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.3.1_p140425.ebuild,v 1.1 2014/04/25 14:31:14 jlec Exp $
 
 EAPI=5
 
@@ -47,9 +47,9 @@ S="${WORKDIR}"/${MY_PN}/${MY_PN}$(get_version_component_range 1-2)
 
 src_prepare() {
 	[[ -n ${PATCHSET} ]] && \
-		epatch "${WORKDIR}"/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch
+		EPATCH_OPTS="-p2" epatch "${WORKDIR}"/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch
 
-	epatch "${FILESDIR}"/${MY_PV}-parallel.patch "${FILESDIR}"/talosn.patch
+	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
 
 	append-lfs-flags
 

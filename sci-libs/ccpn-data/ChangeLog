@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccpn-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.23 2014/04/25 13:49:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.24 2014/04/25 14:01:46 jlec Exp $
+
+  25 Apr 2014; Justin Lecher <jlec@gentoo.org> ccpn-data-2.4.0_p140425.ebuild:
+  Fix new location of S
 
 *ccpn-data-2.4.0_p140425 (25 Apr 2014)
 *ccpn-data-2.3.1_p140425 (25 Apr 2014)
