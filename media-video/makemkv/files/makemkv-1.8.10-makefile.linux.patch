@@ -1,5 +1,5 @@
---- makemkv-oss-1.8.6/Makefile.in.orig	2013-11-20 19:48:33.000000000 -0800
-+++ makemkv-oss-1.8.6/Makefile.in	2013-11-21 19:05:22.319663127 -0800
+--- makemkv-oss-1.8.10/Makefile.in.orig	2014-04-25 09:25:24.558767575 -0600
++++ makemkv-oss-1.8.10/Makefile.in	2014-04-25 09:25:44.930534931 -0600
 @@ -50,7 +50,7 @@
  endif
  

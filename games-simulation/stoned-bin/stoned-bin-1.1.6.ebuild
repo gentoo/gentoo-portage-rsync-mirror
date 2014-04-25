@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.6 2010/09/16 17:00:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.7 2014/04/25 15:51:44 ulm Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="3D curling simulation"
 HOMEPAGE="http://stoned.cute-ninjas.com/"
 SRC_URI="http://stoned.cute-ninjas.com/download/${P/-bin}-i386-linux.tar.gz"
 
-LICENSE="as-is"
+LICENSE="public-domain no-source-code"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""

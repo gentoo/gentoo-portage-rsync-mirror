@@ -1,6 +1,26 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.38 2014/04/25 15:17:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.40 2014/04/25 15:42:28 beandog Exp $
+
+  25 Apr 2014; Steve Dibb <beandog@gentoo.org>
+  -files/makemkv-1.6.16-makefile.linux.patch,
+  -files/makemkv-1.7.4-makefile.linux.patch,
+  -files/makemkv-1.7.6-makefile.linux.patch,
+  -files/makemkv-1.7.7-makefile.linux.patch,
+  -files/makemkv-1.7.8-makefile.linux.patch,
+  -files/makemkv-1.8.0-makefile.linux.patch,
+  -files/makemkv-1.8.1-makefile.linux.patch,
+  -files/makemkv-1.8.3-makefile.linux.patch,
+  -files/makemkv-1.8.4-makefile.linux.patch,
+  -files/makemkv-1.8.5-makefile.linux.patch,
+  -files/makemkv-1.8.6-makefile.linux.patch:
+  Remove patches for old versions
+
+*makemkv-1.8.10 (25 Apr 2014)
+
+  25 Apr 2014; Steve Dibb <beandog@gentoo.org> +makemkv-1.8.10.ebuild,
+  +files/makemkv-1.8.10-makefile.linux.patch:
+  Version bump, bug 508292; Use EAPI 5
 
   25 Apr 2014; Steve Dibb <beandog@gentoo.org> makemkv-1.8.7.ebuild,
   makemkv-1.8.8.ebuild, makemkv-1.8.9.ebuild:
