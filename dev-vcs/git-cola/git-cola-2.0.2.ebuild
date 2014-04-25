@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.2.ebuild,v 1.1 2014/04/24 12:15:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.2.ebuild,v 1.2 2014/04/25 07:56:59 jlec Exp $
 
 EAPI=5
 
@@ -69,6 +69,7 @@ python_compile_all() {
 	else
 		sed \
 			-e '/^install:/s:install-html::g' \
+			-e '/^install:/s:install-man::g' \
 			-i Makefile || die
 	fi
 }

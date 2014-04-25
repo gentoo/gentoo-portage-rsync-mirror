@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.26 2014/04/24 12:15:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.27 2014/04/25 07:56:59 jlec Exp $
+
+  25 Apr 2014; Justin Lecher <jlec@gentoo.org> git-cola-2.0.2.ebuild:
+  Fix buildtime dependency on sphinx, #508656
 
 *git-cola-2.0.2 (24 Apr 2014)
 
