@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.6.ebuild,v 1.1 2014/04/25 00:47:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.5.6.ebuild,v 1.2 2014/04/25 04:38:22 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -47,11 +47,8 @@ python_test() {
 	# Tests have non-standard assumptions about PYTHONPATH,
 	# and don't work with ${BUILD_DIR}/lib.
 	# https://code.djangoproject.com/ticket/20514
-	# suite doesn't run under py3.2
-	if [[ "${EPYTHON}" != python3.2 ]]; then
-		PYTHONPATH=. "${PYTHON}" tests/runtests.py --settings=test_sqlite -v1 \
+	PYTHONPATH=. "${PYTHON}" tests/runtests.py --settings=test_sqlite -v1 \
 		|| die "Tests fail with ${EPYTHON}"
-	fi
 }
 
 src_test() {

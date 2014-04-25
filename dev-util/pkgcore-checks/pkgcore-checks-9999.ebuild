@@ -1,46 +1,55 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.2 2011/08/06 21:31:34 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.3 2014/04/25 04:51:21 radhermit Exp $
 
-EAPI="3"
-DISTUTILS_SRC_TEST="setup.py"
+EAPI=4
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+inherit distutils-r1
 
-EGIT_REPO_URI="https://code.google.com/p/pkgcore-checks/"
-inherit distutils git-2
+if [[ ${PV} == *9999 ]] ; then
+	EGIT_REPO_URI="git://github.com/pkgcore/pkgcore-checks.git"
+	inherit git-r3
+else
+	KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+	SRC_URI="http://pkgcore-checks.googlecode.com/files/${P}.tar.bz2"
+fi
 
 DESCRIPTION="pkgcore developmental repoman replacement"
 HOMEPAGE="http://www.pkgcore.org/"
-SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
-RDEPEND=">=sys-apps/pkgcore-0.5.9
-	>=dev-python/snakeoil-0.3.6"
+RDEPEND="=sys-apps/pkgcore-9999
+	=dev-python/snakeoil-9999"
 DEPEND="${RDEPEND}"
-
-DOCS="AUTHORS NEWS"
-PYTHON_MODNAME="pkgcore_checks"
 
 pkg_setup() {
 	# disable snakeoil 2to3 caching...
 	unset PY2TO3_CACHEDIR
-	python_pkg_setup
+}
+
+python_test() {
+	esetup.py test
+}
+
+python_install_all() {
+	local DOCS=( AUTHORS NEWS )
+	distutils-r1_python_install_all
 }
 
 pkg_postinst() {
 	einfo "updating pkgcore plugin cache"
-	pplugincache pkgcore_checks.plugins pkgcore.plugins
-	distutils_pkg_postinst
+	python_foreach_impl pplugincache pkgcore_checks.plugins pkgcore.plugins
 }
 
 pkg_postrm() {
 	# Careful not to remove this on up/downgrades.
-	local sitep="${ROOT}$(python_get_sitedir)"
-	if [[ -e "${sitep}/pkgcore_checks/plugins/plugincache2" && ! -e "${sitep}/pkgcore_checks/base.py" ]]; then
-		rm "${sitep}/pkgcore_checks/plugins/plugincache2"
-	fi
-	distutils_pkg_postrm
+	plugincache_update() {
+		local sitep="${ROOT}$(python_get_sitedir)"
+		if [[ -e "${sitep}/pkgcore_checks/plugins/plugincache2" && ! -e "${sitep}/pkgcore_checks/base.py" ]]; then
+			rm "${sitep}/pkgcore_checks/plugins/plugincache2"
+		fi
+	}
+	python_foreach_impl plugincache_update
 }
