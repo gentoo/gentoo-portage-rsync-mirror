@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.486 2014/04/22 17:36:58 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.487 2014/04/25 19:05:35 alonbl Exp $
+
+  25 Apr 2014; Alon Bar-Lev <alonbl@gentoo.org> +files/gnutls-3.3.1-guile.patch,
+  gnutls-3.3.1.ebuild:
+  Fix guile build, bug#508454, thanks to  Ed Catmur
 
 *gnutls-3.3.1 (22 Apr 2014)
 

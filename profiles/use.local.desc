@@ -2943,9 +2943,6 @@ mail-client/evolution:map - Enable support for displaying contacts on a map insi
 mail-client/evolution:networkmanager - Allows Evolution to automagically toggle online/offline mode by talking to net-misc/networkmanager and getting the current network state
 mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
-mail-client/mail-notification:gmail - Enable Gmail mailbox checking
-mail-client/mail-notification:mh - Enable MH mailbox checking
-mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
 mail-client/mutt:gpg - Enable support for app-crypt/gpgme
 mail-client/mutt:pop - Enable support for pop

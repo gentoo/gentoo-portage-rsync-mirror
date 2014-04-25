@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.479 2014/04/25 18:55:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.480 2014/04/25 19:07:10 chainsaw Exp $
+
+*asterisk-12.2.0 (25 Apr 2014)
+
+  25 Apr 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-12.2.0.ebuild:
+  Adds HEPv3 protocol support and PJSIP gains DNS client abilities that unlock
+  SRV records & weighting. This branch remains experimental and is not
+  recommended for production use at this time.
 
 *asterisk-1.8.27.0 (25 Apr 2014)
 

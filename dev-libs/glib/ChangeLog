@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.606 2014/04/21 10:28:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.607 2014/04/25 19:12:17 pacho Exp $
+
+  25 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/glib-2.31.x-external-gdbus-codegen.patch,
+  -files/glib-2.32.4-CVE-2012-3524.patch, -files/glib-2.32.4-bashcomp.patch,
+  -files/glib-2.34.0-testsuite-skip-gdbus-auth-tests.patch,
+  -files/glib-2.34.3-automake-1.13.patch,
+  -files/glib-2.34.3-testsuite-skip-gdbus-auth-tests.patch,
+  -files/glib-2.35.x-external-gdbus-codegen.patch, -glib-2.32.4-r1.ebuild,
+  -glib-2.34.3-r1.ebuild, -glib-2.36.4-r1.ebuild:
+  drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> glib-2.38.2-r1.ebuild:
   Stable for arm, wrt bug #507568

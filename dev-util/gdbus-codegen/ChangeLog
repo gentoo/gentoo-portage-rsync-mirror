@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.84 2014/04/21 10:29:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.85 2014/04/25 19:12:25 pacho Exp $
+
+  25 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gdbus-codegen-2.32.4-sitedir.patch,
+  -files/gdbus-codegen-2.36.4-input-encoding.patch,
+  -gdbus-codegen-2.32.4-r1.ebuild, -gdbus-codegen-2.32.4-r2.ebuild,
+  -gdbus-codegen-2.34.3-r1.ebuild, -gdbus-codegen-2.36.4-r1.ebuild:
+  Drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gdbus-codegen-2.38.2.ebuild:
   Stable for arm, wrt bug #507568

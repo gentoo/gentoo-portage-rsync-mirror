@@ -11,9 +11,6 @@ Maildir, IMAP, Sylpheed, POP3, Gmail and Evolution.  Authenticates via
 apop, ssl, sasl.
 </longdescription>
 <use>
-	<flag name='gmail'>Enable Gmail mailbox checking</flag>
-	<flag name='mh'>Enable MH mailbox checking</flag>
-	<flag name='pop'>Enable support for pop</flag>
 	<flag name='sylpheed'>Enable support for MH mailboxes used by
 		<pkg>mail-client/sylpheed</pkg></flag>
 </use>
