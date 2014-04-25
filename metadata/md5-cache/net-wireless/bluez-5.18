@@ -4,11 +4,11 @@ DESCRIPTION=Bluetooth Tools and System Daemons for Linux
 EAPI=5
 HOMEPAGE=http://www.bluez.org
 IUSE=cups debug +obex +readline selinux systemd test +udev
-KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 ~arm hppa ~ppc ~ppc64 ~x86
 LICENSE=GPL-2+ LGPL-2.1+
 RDEPEND=>=dev-libs/glib-2.28:2 >=sys-apps/dbus-1.6:= >=sys-apps/hwids-20121202.2 cups? ( net-print/cups:= ) obex? ( dev-libs/libical ) readline? ( sys-libs/readline:= ) selinux? ( sec-policy/selinux-bluetooth ) systemd? ( sys-apps/systemd ) udev? ( >=virtual/udev-171 )
 REQUIRED_USE=test? ( )
 SLOT=0/3
 SRC_URI=mirror://kernel/linux/bluetooth/bluez-5.18.tar.xz
 _eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d5ad72d9a14e73d6c287625c6e6e45de
+_md5_=1fad05dfb72b9bf1ad6bacccaae990b8

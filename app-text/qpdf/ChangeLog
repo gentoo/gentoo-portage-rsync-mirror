@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.41 2014/01/17 04:29:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.42 2014/04/25 13:06:44 jer Exp $
+
+  25 Apr 2014; Jeroen Roovers <jer@gentoo.org> qpdf-5.1.1.ebuild:
+  Stable for HPPA (bug #508134).
 
 *qpdf-5.1.1 (17 Jan 2014)
 

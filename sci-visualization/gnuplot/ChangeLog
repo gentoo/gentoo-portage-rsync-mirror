@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.240 2014/04/20 17:46:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.241 2014/04/25 13:16:04 jer Exp $
+
+  25 Apr 2014; Jeroen Roovers <jer@gentoo.org> gnuplot-4.6.4-r2.ebuild:
+  Stable for HPPA (bug #508218).
 
   20 Apr 2014; Ulrich Müller <ulm@gentoo.org> gnuplot-4.6.4-r2.ebuild:
   Restore keywords for remaining architectures.
