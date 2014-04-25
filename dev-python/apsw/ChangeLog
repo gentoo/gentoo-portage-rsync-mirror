@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.68 2014/04/09 10:01:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.69 2014/04/25 08:10:42 radhermit Exp $
+
+*apsw-3.8.4.3_p1 (25 Apr 2014)
+
+  25 Apr 2014; Tim Harder <radhermit@gentoo.org> +apsw-3.8.4.3_p1.ebuild:
+  Version bump.
 
   09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty

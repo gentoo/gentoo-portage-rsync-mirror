@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2_beta1-r1.ebuild,v 1.1 2014/04/19 10:17:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2_beta1-r2.ebuild,v 1.1 2014/04/25 08:19:03 polynomial-c Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ MY_P=${P/_/-}
 DESCRIPTION="full-strength general purpose cryptography library (including SSL and TLS)"
 HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${MY_P}.tar.gz
-	http://dev.gentoo.org/~polynomial-c/${P}-patches-01.tar.xz
+	http://dev.gentoo.org/~polynomial-c/${P}-patches-02.tar.xz
 	http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/${PN}/${PN}-c_rehash.sh?rev=${REV} -> ${PN}-c_rehash.sh.${REV}"
 
 LICENSE="openssl"
@@ -60,8 +60,9 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-1.0.2_beta1-perl-5.18.patch #497286
 		epatch "${FILESDIR}"/${PN}-1.0.1e-s_client-verify.patch #472584
 		epatch "${FILESDIR}"/${PN}-1.0.1f-revert-alpha-perl-generation.patch #499086
-		epatch "${FILESDIR}"/${PN}-1.0.2-free-list-fix.patch
 
+		# upstream fixes taken from 1.0.2_stable branch at openssl.git
+		# repository.
 		EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
 		epatch "${WORKDIR}/patches"
 

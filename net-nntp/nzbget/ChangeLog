@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.84 2014/03/05 22:13:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.85 2014/04/25 08:06:02 radhermit Exp $
+
+*nzbget-13.0_pre979 (25 Apr 2014)
+
+  25 Apr 2014; Tim Harder <radhermit@gentoo.org> +nzbget-13.0_pre979.ebuild:
+  Version bump.
 
 *nzbget-12.0-r1 (05 Mar 2014)
 
