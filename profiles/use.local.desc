@@ -6994,6 +6994,9 @@ www-misc/monitorix:lm_sensors - Additional hardware mnitoring sensors with sys-a
 www-misc/monitorix:postfix - Analyze postfix logs with net-mail/pflogsumm.
 www-misc/vdradmin-am:vdr - Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine.
 www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
+www-misc/zoneminder:gcrypt - ...
+www-misc/zoneminder:openssl - ...
+www-misc/zoneminder:vlc - ...
 www-plugins/adobe-flash:kde - Enables a KCM plugin for configuring flash player preferences
 www-plugins/chrome-binary-plugins:flash - Install Chrome's native Pepper Flash.
 www-plugins/chrome-binary-plugins:pdf - Install Chrome's native PDF reader plugin.

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=dev-lang/perl:= dev-libs/libpcre dev-perl/DateManip dev-perl/DBD-mysql dev-perl/DBI dev-perl/libwww-perl sys-libs/zlib virtual/ffmpeg virtual/jpeg virtual/mysql virtual/perl-ExtUtils-MakeMaker virtual/perl-Getopt-Long virtual/perl-Sys-Syslog virtual/perl-Time-HiRes gcrypt? ( dev-libs/libgcrypt ) gnutls? ( net-libs/gnutls ) mmap? ( dev-perl/Sys-Mmap ) openssl? ( dev-libs/openssl ) vlc? ( media-video/vlc ) =www-servers/apache-2* virtual/httpd-php dev-lang/perl:=[-build(-)] sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=ZoneMinder allows you to capture, analyse, record and monitor any cameras attached to your system
+EAPI=5
+HOMEPAGE=http://www.zoneminder.com/
+IUSE=gcrypt gnutls mmap +openssl vlc
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl:= dev-libs/libpcre dev-perl/DateManip dev-perl/DBD-mysql dev-perl/DBI dev-perl/libwww-perl sys-libs/zlib virtual/ffmpeg virtual/jpeg virtual/mysql virtual/perl-ExtUtils-MakeMaker virtual/perl-Getopt-Long virtual/perl-Sys-Syslog virtual/perl-Time-HiRes gcrypt? ( dev-libs/libgcrypt ) gnutls? ( net-libs/gnutls ) mmap? ( dev-perl/Sys-Mmap ) openssl? ( dev-libs/openssl ) vlc? ( media-video/vlc ) =www-servers/apache-2* virtual/httpd-php dev-lang/perl:=[-build(-)]
+REQUIRED_USE=|| ( openssl gnutls )
+SLOT=0
+SRC_URI=https://github.com/ZoneMinder/ZoneMinder/archive/v1.27.0.tar.gz -> zoneminder-1.27.0.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	7798d4361fbdd043014e635a1753e076	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	depend.php	df169a364e191b840b695604097e3c21	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	phpconfutils	e108303831029e5b8a9d24b991b1d62a	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
+_md5_=ff825b408bf2523e150491ad4bb77b9e

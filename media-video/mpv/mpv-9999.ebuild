@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.47 2014/04/20 12:38:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.48 2014/04/25 14:42:44 maksbotan Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd dvdnav +enca encode +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl
-oss portaudio +postproc pulseaudio pvr +quvi samba sdl selinux +shm v4l vaapi vcd vdpau
+oss portaudio postproc pulseaudio pvr +quvi samba sdl selinux +shm v4l vaapi vcd vdpau
 vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -92,12 +92,7 @@ RDEPEND+="
 	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
-	postproc? (
-		|| (
-			media-libs/libpostproc
-			>=media-video/ffmpeg-1.2:0[encode?,threads,vaapi?,vdpau?]
-		)
-	)
+	postproc? ( >=media-video/ffmpeg-2.1.4:0 )
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? (
 		>=media-libs/libquvi-0.4.1:=
@@ -116,7 +111,6 @@ RDEPEND+="
 		>=x11-libs/libxkbcommon-0.3.0
 	)
 "
-ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-lang/perl-5.8
@@ -128,9 +122,6 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
 	)
-	amd64? ( ${ASM_DEP} )
-	x86? ( ${ASM_DEP} )
-	x86-fbsd? ( ${ASM_DEP} )
 "
 DOCS=( Copyright README.md etc/example.conf etc/input.conf )
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.8.ebuild,v 1.2 2014/04/20 12:38:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.8.ebuild,v 1.3 2014/04/25 14:42:44 maksbotan Exp $
 
 EAPI=5
 
@@ -117,7 +117,6 @@ RDEPEND+="
 		>=x11-libs/libxkbcommon-0.3.0
 	)
 "
-ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-lang/perl-5.8
@@ -134,9 +133,6 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
 	)
-	amd64? ( ${ASM_DEP} )
-	x86? ( ${ASM_DEP} )
-	x86-fbsd? ( ${ASM_DEP} )
 "
 DOCS=( Copyright README.md etc/example.conf etc/input.conf )
 
