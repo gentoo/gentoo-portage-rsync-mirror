@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.97 2014/03/08 20:26:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.98 2014/04/26 19:44:58 jer Exp $
+
+*ratpoison-1.4.7 (26 Apr 2014)
+
+  26 Apr 2014; Jeroen Roovers <jer@gentoo.org> +ratpoison-1.4.7.ebuild:
+  Version bump.
 
   08 Mar 2014; Jeroen Roovers <jer@gentoo.org> ratpoison-1.4.6-r1.ebuild:
   Fix IUSE sort order.
