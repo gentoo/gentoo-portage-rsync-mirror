@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tagbar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.9 2014/04/12 18:54:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.10 2014/04/26 18:53:13 ago Exp $
+
+  26 Apr 2014; Agostino Sarubbo <ago@gentoo.org> tagbar-2.6.1.ebuild:
+  Stable for x86, wrt bug #502642
 
   12 Apr 2014; Chema Alonso <nimiux@gentoo.org> tagbar-2.6.1.ebuild:
   Stable for amd64 wrt bug #502642
@@ -41,4 +44,3 @@
   04 Dec 2011; Tim Harder <radhermit@gentoo.org> +tagbar-2.2.ebuild,
   +metadata.xml:
   Initial import.
-

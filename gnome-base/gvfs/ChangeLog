@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.246 2014/04/21 10:29:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.248 2014/04/26 18:42:03 pacho Exp $
+
+*gvfs-1.18.3-r1 (26 Apr 2014)
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> +gvfs-1.18.3-r1.ebuild:
+  Disable obsolete gdu support
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gvfs-1.12.3-r1.ebuild,
+  -gvfs-1.14.2.ebuild, -gvfs-1.16.4.ebuild:
+  drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gvfs-1.18.3.ebuild:
   Stable for arm, wrt bug #507568

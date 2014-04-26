@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-DNS
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.169 2013/06/07 12:45:56 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.170 2014/04/26 18:36:58 wschlich Exp $
+
+*Net-DNS-0.740.0 (26 Apr 2014)
+
+  26 Apr 2014; Wolfram Schlich <wschlich@gentoo.org> +Net-DNS-0.740.0.ebuild:
+  version bump
 
   07 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> -Net-DNS-0.680.0.ebuild,
   -Net-DNS-0.700.0.ebuild, -Net-DNS-0.710.0.ebuild, Net-DNS-0.660.0.ebuild,

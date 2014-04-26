@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/PEAR-VersionControl_SVN-0.5.1.ebuild,v 1.3 2014/04/25 10:48:09 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/PEAR-VersionControl_SVN-0.5.1.ebuild,v 1.4 2014/04/26 18:54:57 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit php-pear-r1
 DESCRIPTION="Simple OO wrapper interface for the Subversion command-line client."
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 RDEPEND=""
 
