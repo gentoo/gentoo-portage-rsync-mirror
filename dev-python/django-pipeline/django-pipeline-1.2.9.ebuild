@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.2.9.ebuild,v 1.6 2013/01/21 05:46:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.2.9.ebuild,v 1.7 2014/04/26 13:16:03 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
