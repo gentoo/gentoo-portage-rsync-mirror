@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.69 2014/03/28 02:33:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.70 2014/04/26 06:36:52 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gssdp-0.12.2.1.ebuild,
+  -gssdp-0.14.6.ebuild:
+  drop old
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> gssdp-0.14.7.ebuild:
   Stable for HPPA (bug #499954).

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.55 2014/02/08 18:48:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.56 2014/04/26 06:35:33 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> gupnp-igd-0.2.2-r1.ebuild:
+  Move to testing in some arches due other gupnp dependencies
 
   08 Feb 2014; Agostino Sarubbo <ago@gentoo.org>
   +files/gupnp-igd-0.2.2-underlinking.patch:

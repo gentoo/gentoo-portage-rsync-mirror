@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.94 2013/04/13 20:55:58 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.95 2014/04/26 06:40:12 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libcroco-0.6.5.ebuild:
+  drop old
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> libcroco-0.6.8.ebuild:
   Stable for s390, wrt bug #458984

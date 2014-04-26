@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.74 2014/03/28 02:20:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.75 2014/04/26 06:59:31 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -link-grammar-4.7.8.ebuild,
+  -link-grammar-4.8.0.ebuild:
+  drop old
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> link-grammar-4.8.6.ebuild:
   Stable for HPPA (bug #499954).

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/proot-3.2.2-r1.ebuild,v 1.1 2014/03/11 08:13:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/proot-3.2.2-r1.ebuild,v 1.2 2014/04/26 06:59:16 pinkbyte Exp $
 
 EAPI=5
 MY_PN="PRoot"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/cedric-vincent/${MY_PN}/archive/v${PV}.tar.gz -> ${P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="care test"
 
 RDEPEND="care? ( app-arch/libarchive:0= )

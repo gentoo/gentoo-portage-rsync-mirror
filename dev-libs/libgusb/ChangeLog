@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.39 2014/02/22 21:17:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.40 2014/04/26 06:52:02 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libgusb-0.1.4.ebuild:
+  drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgusb-0.1.6.ebuild:
   Fix wrong commit, bug 502160

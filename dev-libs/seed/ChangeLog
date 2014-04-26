@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/seed
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.19 2013/12/08 18:07:10 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.20 2014/04/26 07:00:17 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -seed-3.2.0-r1.ebuild:
+  drop old
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> seed-3.8.1.ebuild:
   x86 stable, bug #478252
