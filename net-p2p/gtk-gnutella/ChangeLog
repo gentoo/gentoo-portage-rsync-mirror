@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.155 2014/04/22 18:36:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.156 2014/04/26 10:58:01 nimiux Exp $
+
+  26 Apr 2014; Chema Alonso <nimiux@gentoo.org> gtk-gnutella-1.0.1.ebuild:
+  Stable for amd64 wrt bug #500760
 
   22 Apr 2014; Hans de Graaff <graaff@gentoo.org> gtk-gnutella-1.0.1.ebuild:
   Work around parallel build bug reported in bug 500760.
