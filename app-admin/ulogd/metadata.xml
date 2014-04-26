@@ -6,6 +6,7 @@
 		<email>itumaykin@gmail.com</email>
 	</maintainer>
 	<use>
+		<flag name='json'>Build JSON output plugin to save packets in JSON file format.</flag>
 		<flag name='pcap'>Build PCAP output plugin to save packets in libpcap file format.</flag>
 		<flag name='mysql'>Build MySQL output plugin to save packets in a mysql database.</flag>
 		<flag name='postgres'>Build PGSQL output plugin to save packets in a postgres database.</flag>

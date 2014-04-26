@@ -215,6 +215,7 @@ app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/tripwire:ssl - Adds support for Secure Socket Layer connections
 app-admin/tripwire:static - Builds the package statically
 app-admin/tripwire:tools - Installs app-admin/mktwpol, providing scripts for the installation/setup of tripwire, including generating the tripwire policy file and maintenance of the tripwire database
+app-admin/ulogd:json - Build JSON output plugin to save packets in JSON file format.
 app-admin/ulogd:mysql - Build MySQL output plugin to save packets in a mysql database.
 app-admin/ulogd:nfacct - Build NFACCT input plugin to support traffic accounting via nfnetlink_acct.
 app-admin/ulogd:nfct - Build NFCT input plugin to support stateful flow-based via nf_conntrack_netlink.

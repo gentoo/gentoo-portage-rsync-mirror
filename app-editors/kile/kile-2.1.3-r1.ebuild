@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3-r1.ebuild,v 1.1 2014/03/19 18:21:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3-r1.ebuild,v 1.2 2014/04/26 11:42:42 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://kile.sourceforge.net/"
 [[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="FDL-1.2 GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="4"
 IUSE="debug +pdf +png"
 

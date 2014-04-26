@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.83 2014/04/11 03:41:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.84 2014/04/26 11:34:06 hwoarang Exp $
+
+  26 Apr 2014; Markos Chandras <hwoarang@gentoo.org>
+  -files/ulogd-2.0.2-automagic.patch, -files/ulogd-2.init, -ulogd-2.0.2.ebuild,
+  metadata.xml, ulogd-2.0.4.ebuild:
+  Improved ebuild to add optional json support. Remove old. Bug #507428 by
+  Coacher <itumaykin@gmail.com>
 
 *ulogd-2.0.4 (11 Apr 2014)
 

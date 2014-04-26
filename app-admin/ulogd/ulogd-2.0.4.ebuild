@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.1 2014/04/11 03:41:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.2 2014/04/26 11:34:06 hwoarang Exp $
 
 EAPI="5"
 
@@ -15,11 +15,12 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
-IUSE="dbi doc mysql nfacct +nfct +nflog pcap postgres sqlite"
+IUSE="dbi doc json mysql nfacct +nfct +nflog pcap postgres sqlite"
 
 RDEPEND="net-firewall/iptables
 	>=net-libs/libnfnetlink-1.0.1
 	dbi? ( dev-db/libdbi )
+	json? ( dev-libs/jansson )
 	nfacct? (
 		>=net-libs/libmnl-1.0.3
 		>=net-libs/libnetfilter_acct-1.0.1
@@ -78,6 +79,7 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		$(use_with dbi)
+		$(use_with json jansson)
 		$(use_enable nfacct)
 		$(use_enable nfct)
 		$(use_enable nflog)
