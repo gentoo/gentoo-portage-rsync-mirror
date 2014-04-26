@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/shorewall-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.54 2014/03/23 18:01:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.55 2014/04/26 09:33:11 hwoarang Exp $
+
+*shorewall-core-4.5.21.9 (26 Apr 2014)
+
+  26 Apr 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/4.5.21.9/shorewallrc, +shorewall-core-4.5.21.9.ebuild,
+  -files/4.5.19/shorewallrc, -files/4.5.21.2/shorewallrc,
+  -files/4.5.21.4/shorewallrc, -files/shorewallrc_new,
+  -shorewall-core-4.5.18.ebuild, -shorewall-core-4.5.19.ebuild,
+  -shorewall-core-4.5.21.2.ebuild, -shorewall-core-4.5.21.4.ebuild:
+  Version bump. Remove old. Bug #508396 thanks to Thomas D. <whissi@whissi.de>
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   shorewall-core-4.5.18-r1.ebuild:

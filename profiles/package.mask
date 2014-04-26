@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15608 2014/04/26 05:03:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15609 2014/04/26 09:44:58 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,10 +44,6 @@ dev-python/manifestdestiny
 app-admin/eselect-lua
 =dev-lang/lua-5.1.5-r2
 =dev-lang/lua-5.2.3
-
-# Tim Harder <radhermit@gentoo.org> (18 Apr 2014)
-# Masked waiting for qt5
->=media-video/mkvtoolnix-6.9.0
 
 # Mike Gilbert <floppym@gentoo.org> (16 Apr 2014)
 # Dev channel releases are only for people who are developers or want more

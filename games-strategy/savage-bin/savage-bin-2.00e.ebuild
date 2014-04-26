@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.15 2013/08/01 20:55:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.16 2014/04/26 09:48:06 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,11 +16,11 @@ SRC_URI="http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalon
 	http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=2 -> lin-client-auth-patch.zip
 	http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=3 -> lin-client-auth-patch.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RESTRICT="mirror strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="virtual/opengl
 	x86? ( media-libs/libsdl

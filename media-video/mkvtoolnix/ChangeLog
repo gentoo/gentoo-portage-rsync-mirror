@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.200 2014/04/19 08:44:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.201 2014/04/26 09:46:20 radhermit Exp $
+
+*mkvtoolnix-6.9.1 (26 Apr 2014)
+
+  26 Apr 2014; Tim Harder <radhermit@gentoo.org> -mkvtoolnix-6.9.0.ebuild,
+  +mkvtoolnix-6.9.1.ebuild:
+  Version bump and remove old.
 
   19 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> mkvtoolnix-6.9.0.ebuild:
   >=mkvtoolnix-6.8.0 has no qt4 support. Moved to qt5 USE flag.

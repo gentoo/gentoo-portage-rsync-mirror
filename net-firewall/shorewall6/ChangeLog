@@ -1,6 +1,23 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.96 2014/03/23 18:01:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.97 2014/04/26 09:34:36 hwoarang Exp $
+
+*shorewall6-4.5.21.9 (26 Apr 2014)
+
+  26 Apr 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/4.5.21.9/shorewall6.confd, +files/4.5.21.9/shorewall6.initd,
+  +files/4.5.21.9/shorewall6.systemd, +files/4.5.21.9/shorewallrc,
+  +shorewall6-4.5.21.9.ebuild, -files/4.5.19/shorewall6.conf-SUBSYSLOCK.patch,
+  -files/4.5.19/shorewall6.confd, -files/4.5.19/shorewall6.initd,
+  -files/4.5.19/shorewall6.systemd, -files/4.5.19/shorewallrc,
+  -files/4.5.21.2/shorewall6.confd, -files/4.5.21.2/shorewall6.initd,
+  -files/4.5.21.2/shorewall6.systemd, -files/4.5.21.2/shorewallrc,
+  -files/4.5.21.4/shorewall6.confd, -files/4.5.21.4/shorewall6.initd,
+  -files/4.5.21.4/shorewall6.systemd, -files/4.5.21.4/shorewallrc,
+  -files/shorewall6.initd, -files/shorewall6.systemd, -files/shorewallrc_new,
+  -shorewall6-4.5.18.ebuild, -shorewall6-4.5.19.ebuild,
+  -shorewall6-4.5.21.2.ebuild, -shorewall6-4.5.21.4.ebuild:
+  Version bump. Remove old. Bug #508396 thanks to Thomas D. <whissi@whissi.de>
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> shorewall6-4.5.18-r1.ebuild:
   Stable for alpha, wrt bug #487690

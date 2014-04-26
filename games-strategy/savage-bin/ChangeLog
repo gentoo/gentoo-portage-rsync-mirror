@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/savage-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.16 2013/08/01 20:55:44 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.17 2014/04/26 09:48:06 ulm Exp $
+
+  26 Apr 2014; Ulrich Müller <ulm@gentoo.org> savage-bin-2.00e.ebuild:
+  Fix LICENSE, add bindist restriction, bug 505778.
 
   01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> savage-bin-2.00e.ebuild:
   Fix libjpeg.so.62 dependency.
