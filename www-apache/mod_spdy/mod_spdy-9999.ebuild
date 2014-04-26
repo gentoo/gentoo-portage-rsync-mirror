@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.5 2014/01/30 18:26:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.6 2014/04/26 22:09:44 vapier Exp $
 
 EAPI=5
 
@@ -67,6 +67,7 @@ src_configure() {
 	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
 
 	local myconf=(
+		-Dlinux_fpic=1
 		-Duse_system_zlib=1
 		-Duse_system_ssl=1
 		-Dwerror=

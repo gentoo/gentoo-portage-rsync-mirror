@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.3 2014/01/08 06:37:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.4 2014/04/26 22:24:21 tomwij Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ REQUIRED_USE="stargazer? ( ^^ ( module_store_files module_store_firebird module_
 RDEPEND="module_config_rpcconfig? ( dev-libs/xmlrpc-c[abyss] sys-libs/zlib )
 	module_config_sgconfig? ( dev-libs/expat )
 	module_store_firebird? ( >=dev-db/firebird-2.0.3.12981.0-r6 )
-	module_store_mysql? ( dev-db/mysql )
+	module_store_mysql? ( virtual/mysql )
 	module_store_postgres? ( dev-db/postgresql-base dev-libs/openssl sys-libs/zlib )
 	sgconf? ( dev-libs/expat )
 	sgconf_xml? ( dev-libs/expat )"
@@ -153,6 +153,8 @@ src_prepare() {
 
 	# Check for IPQ subsystem availability
 	( use module_capture_ipq && kernel_is ge 3 5 ) && die "IPQ subsystem is gone since Linux kernel 3.5. You can't compile module_capture_ipq with your current kernel."
+
+	epatch_user
 }
 
 src_configure() {
@@ -376,7 +378,9 @@ src_install() {
 	( use sgconv || use rscriptd || use sgauth || use stargazer ) && fowners -R stg:stg /etc/stargazer
 
 	# Put the files in the right folder to support multilib
-	mv "${ED}"/usr/lib "${ED}"/usr/$(get_libdir) || die "Failed to move library directory for multilib support"
+	if [ ! -e "${ED}"/usr/$(get_libdir) ] ; then
+		mv "${ED}"/usr/lib/ "${ED}"/usr/$(get_libdir) || die "Failed to move library directory for multilib support"
+	fi
 }
 
 pkg_setup() {
