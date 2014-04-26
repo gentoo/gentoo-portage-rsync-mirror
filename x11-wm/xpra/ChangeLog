@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.100 2014/04/22 08:33:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.101 2014/04/26 08:32:58 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> xpra-0.10.12-r1.ebuild,
+  xpra-0.11.6.ebuild, xpra-0.12.1.ebuild, xpra-0.12.2.ebuild,
+  xpra-0.12.3.ebuild, xpra-0.9.8.ebuild:
+  Adapt to latest pygobject don't providing python2.6 support
 
 *xpra-0.12.3 (22 Apr 2014)
 
