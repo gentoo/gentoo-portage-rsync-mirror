@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/re2c
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.68 2013/06/11 18:40:58 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.70 2014/04/25 23:38:16 radhermit Exp $
+
+  25 Apr 2014; Tim Harder <radhermit@gentoo.org> -re2c-0.12.0.ebuild,
+  -re2c-0.13.2.ebuild, -re2c-0.13.5.ebuild, -files/re2c-0.9.11-gcc41.patch:
+  Remove old.
+
+*re2c-0.13.6 (25 Apr 2014)
+
+  25 Apr 2014; Tim Harder <radhermit@gentoo.org> +re2c-0.13.6.ebuild:
+  Version bump.
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org> re2c-0.13.5-r1.ebuild:
   arm stable, bug #269129
