@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kde-telepathy-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kde-telepathy-meta/ChangeLog,v 1.26 2014/04/26 01:17:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kde-telepathy-meta/ChangeLog,v 1.27 2014/04/26 11:05:33 johu Exp $
+
+  26 Apr 2014; Johannes Huber <johu@gentoo.org>
+  -kde-telepathy-meta-0.7.1.ebuild:
+  Remove KDE Telepathy 0.7.1.
 
 *kde-telepathy-meta-0.8.1 (26 Apr 2014)
 

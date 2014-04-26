@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.681 2014/04/26 09:43:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.682 2014/04/26 11:03:58 mgorny Exp $
+
+  26 Apr 2014; Michał Górny <mgorny@gentoo.org> package.use.mask, use.mask:
+  Mask USE flags for Python 2.6 to prepare for the removal.
 
   26 Apr 2014; Tim Harder <radhermit@gentoo.org> package.use.mask:
   Mask qt5 use flag on >=media-video/mkvtoolnix-6.9.0 until qt5 pkgs are added

@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r4.ebuild,v 1.7 2013/08/06 21:29:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r4.ebuild,v 1.8 2014/04/26 11:29:46 johu Exp $
 
-EAPI=4
+EAPI=5
 
 MULTIMEDIA_REQUIRED="always"
 WEBKIT_REQUIRED="always"

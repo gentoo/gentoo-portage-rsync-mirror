@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.195 2014/04/08 09:43:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.196 2014/04/26 11:03:58 mgorny Exp $
 
 # cuda only works on amd64/x86
 cuda
@@ -368,3 +368,11 @@ qt5
 # Enabling this you will get a fully unsupported Gnome setup that
 # could suffer unexpected problem, don't expect support for it then.
 openrc-force
+
+# Michał Górny <mgorny@gentoo.org> (26 Apr 2014)
+# (on behalf of Python team)
+# Python 2.6 is no longer supported upstream and security issue fixes
+# are not provided anymore. Python 2.7 is almost drop-in replacement.
+# The support for implementations will be disabled in 30 days.
+python_targets_python2_6
+python_single_target_python2_6

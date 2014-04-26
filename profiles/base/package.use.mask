@@ -1,10 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.565 2014/04/26 09:43:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.566 2014/04/26 11:03:58 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Michał Górny <mgorny@gentoo.org> (26 Apr 2014)
+# (on behalf of Python team)
+# Keep 2.6 enabled to ease the migration.
+dev-lang/python-exec -python_targets_python2_6 -python_single_target_python2_6
+dev-python/python-exec -python_targets_python2_6 -python_single_target_python2_6
 
 # Tim Harder <radhermit@gentoo.org> (26 Apr 2014)
 # Masked until qt5 is in the tree

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.32 2014/04/06 16:02:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.33 2014/04/26 11:26:17 hwoarang Exp $
 
 EAPI="5"
 
@@ -24,22 +24,21 @@ HOMEPAGE="http://openocd.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="blaster dummy ftdi minidriver parport presto segger +usb versaloon verbose-io"
+IUSE="blaster dummy ftdi minidriver parport presto segger +usb verbose-io"
 RESTRICT="strip" # includes non-native binaries
 
-# versaloon needs libusb:0 but the rest of the devices need libusb:1
-# Therefore, treat versaloon as a special case and always pull libusb:1
-# so most of the devices are supported by default.
+# Pull both libusb:0 and libusb:1 because some device need the former
+# others need the later etc.
 DEPEND=">=dev-lang/jimtcl-0.73
 	usb? (
-		versaloon? ( virtual/libusb:0 )
+		virtual/libusb:0
 		virtual/libusb:1
 	)
 	ftdi? ( dev-embedded/libftdi )"
 
 RDEPEND="${DEPEND}"
 
-REQUIRED_USE="blaster? ( ftdi ) presto? ( ftdi ) versaloon? ( usb )"
+REQUIRED_USE="blaster? ( ftdi ) presto? ( ftdi )"
 
 src_prepare() {
 	epatch_user
@@ -129,7 +128,6 @@ src_configure() {
 		$(use_enable parport parport_giveio) \
 		$(use_enable presto presto_libftdi) \
 		$(use_enable segger jlink) \
-		$(use_enable versaloon vsllink) \
 		$(use_enable verbose-io verbose-jtag-io) \
 		"${myconf[@]}"
 }

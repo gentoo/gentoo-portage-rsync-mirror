@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.46 2014/04/06 16:02:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.47 2014/04/26 11:26:17 hwoarang Exp $
+
+*openocd-0.8.0_rc2 (26 Apr 2014)
+
+  26 Apr 2014; Markos Chandras <hwoarang@gentoo.org> +openocd-0.8.0_rc2.ebuild,
+  -openocd-0.8.0_rc1.ebuild, openocd-9999.ebuild:
+  Version bump. Drop versaloon use flag and merge it to the usb one. Update live
+  ebuild
 
 *openocd-0.8.0_rc1 (06 Apr 2014)
 
