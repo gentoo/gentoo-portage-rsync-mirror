@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/astrolog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.20 2013/04/05 18:15:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.21 2014/04/26 16:02:23 jer Exp $
+
+  26 Apr 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Herd is not required. <description> should describe the maintainer, not other
+  information.
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> astrolog-5.40-r2.ebuild:
   Stable for ppc64, wrt bug #463524

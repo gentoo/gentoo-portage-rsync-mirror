@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.18 2013/11/21 15:47:44 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.19 2014/04/26 16:20:19 ryao Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://zfsonlinux.org/"
 LICENSE="CDDL debug? ( GPL-2+ )"
 SLOT="0"
 IUSE="custom-cflags debug +rootfs"
-RESTRICT="test"
+RESTRICT="debug? ( strip ) test"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
@@ -52,6 +52,9 @@ pkg_setup() {
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
+
+	use debug && CONFIG_CHECK="FRAME_POINTER
+	${CONFIG_FRAME_POINTER}"
 
 	use rootfs && \
 		CONFIG_CHECK="${CONFIG_CHECK} BLK_DEV_INITRD
