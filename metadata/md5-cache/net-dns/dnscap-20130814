@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare
+DEPEND=net-libs/libpcap
+DESCRIPTION=dnscap is a network capture utility designed specifically for DNS traffic
+EAPI=5
+HOMEPAGE=http://dnscap.dns-oarc.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC
+RDEPEND=net-libs/libpcap
+SLOT=0
+SRC_URI=https://github.com/verisign/dnscap/tarball/727ed7d5e46625abc2c8d988689a300589e948b6 -> dnscap-20130814.tar.gz
+_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=c41991386d4a48b3fa3b9cc1834283e4

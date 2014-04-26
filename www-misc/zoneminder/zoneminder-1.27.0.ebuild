@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.27.0.ebuild,v 1.1 2014/04/25 14:43:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.27.0.ebuild,v 1.2 2014/04/26 20:02:12 dilfridge Exp $
 
 # TO DO:
 # * ffmpeg support can be disabled in CMakeLists.txt but it does not build then 
@@ -29,7 +29,7 @@ SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-IUSE="gcrypt gnutls mmap +openssl vlc"
+IUSE="curl gcrypt gnutls +mmap +openssl vlc"
 SLOT="0"
 
 REQUIRED_USE="
@@ -51,6 +51,7 @@ DEPEND="
 	virtual/perl-Getopt-Long
 	virtual/perl-Sys-Syslog
 	virtual/perl-Time-HiRes
+	curl? ( net-misc/curl )
 	gcrypt? ( dev-libs/libgcrypt )
 	gnutls? ( net-libs/gnutls )
 	mmap? ( dev-perl/Sys-Mmap )
@@ -89,7 +90,8 @@ src_configure() {
 		$(cmake-utils_useno mmap ZM_NO_MMAP)
 		-DZM_NO_X10=OFF
 		-DZM_NO_FFMPEG=OFF
-		$(cmake-utils_useno vlc ZM_NO_VLC)
+		$(cmake-utils_useno curl ZM_NO_CURL)
+		$(cmake-utils_useno vlc ZM_NO_LIBVLC)
 		$(cmake-utils_useno openssl CMAKE_DISABLE_FIND_PACKAGE_OpenSSL)
 		$(cmake-utils_use_has gnutls)
 		$(cmake-utils_use_has gcrypt)

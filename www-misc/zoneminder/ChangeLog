@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.43 2014/04/25 14:43:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.44 2014/04/26 20:02:12 dilfridge Exp $
+
+  26 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  zoneminder-1.27.0.ebuild, metadata.xml:
+  Add useflag for curl, fix useflag for vlc, enable mmap by default
 
 *zoneminder-1.27.0 (25 Apr 2014)
 
