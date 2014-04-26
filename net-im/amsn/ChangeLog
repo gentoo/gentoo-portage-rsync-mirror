@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.122 2014/03/09 01:35:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.123 2014/04/26 06:31:09 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> amsn-0.98.9.ebuild:
+  Move to ~ppc due gupnp stuff
 
   09 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -amsn-0.98.4-r1.ebuild:
   Cleanup old.

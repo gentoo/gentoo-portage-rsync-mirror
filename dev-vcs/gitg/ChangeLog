@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.28 2014/04/05 20:49:13 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.29 2014/04/26 06:02:40 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gitg-0.2.6.ebuild:
+  drop old
 
   05 Apr 2014; Mike Auty <ikelos@gentoo.org> -gitg-0.0.6.ebuild,
   -gitg-0.1.2.ebuild, gitg-0.2.6.ebuild, gitg-0.2.7.ebuild, gitg-0.3.2.ebuild:
