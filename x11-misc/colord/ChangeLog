@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.72 2014/03/29 22:04:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.73 2014/04/25 23:21:35 eva Exp $
+
+*colord-1.2.0 (25 Apr 2014)
+
+  25 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +colord-1.2.0.ebuild:
+  Version bump.
 
   29 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   colord-0.1.28.ebuild, colord-1.0.3.ebuild:

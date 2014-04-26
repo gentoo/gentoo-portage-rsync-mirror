@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8868 2014/04/24 22:58:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8869 2014/04/25 23:22:22 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Apr 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask =dev-libs/protobuf-c-1.0.0* for testing.
 
   24 Apr 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask =dev-java/jython-2.7*.

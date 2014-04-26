@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15606 2014/04/24 22:58:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15607 2014/04/25 23:22:22 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (25 Apr 2014)
+# Masked for testing
+=dev-libs/protobuf-c-1.0.0*
 
 # Mike Gilbert <floppym@gentoo.org> (23 Apr 2014)
 # Unused python library. Should have been removed with the moz* packages.
