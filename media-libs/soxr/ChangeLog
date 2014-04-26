@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/soxr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.10 2013/07/11 19:24:39 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.11 2014/04/26 17:25:12 jer Exp $
+
+  26 Apr 2014; Jeroen Roovers <jer@gentoo.org> soxr-0.1.1.ebuild:
+  Stable for HPPA (bug #508372).
 
   11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> soxr-0.1.1.ebuild:
   ppc, ppc64 keywords added, bug 457140

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.2.ebuild,v 1.2 2014/04/18 17:22:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.2.ebuild,v 1.3 2014/04/26 17:26:44 maksbotan Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ EGIT_REPO_URI="https://github.com/clementine-player/Clementine.git"
 
 LANGS=" af ar be bg bn br bs ca cs cy da de el en_CA en_GB eo es es_AR et eu fa fi fr ga gl he hi hr hu hy ia id is it ja ka kk ko lt lv mr ms nb nl oc pa pl pt pt_BR ro ru sk sl sr sr@latin sv te tr uk uz vi zh_CN zh_TW"
 
-inherit cmake-utils flag-o-matic gnome2-utils virtualx
+inherit cmake-utils flag-o-matic fdo-mime gnome2-utils virtualx
 [[ ${PV} == *9999* ]] && inherit git-2
 
 DESCRIPTION="A modern music player and library organizer based on Amarok 1.4 and Qt4"
@@ -151,6 +151,16 @@ src_test() {
 	Xemake test
 }
 
-pkg_preinst() { gnome2_icon_savelist; }
-pkg_postinst() { gnome2_icon_cache_update; }
-pkg_postrm() { gnome2_icon_cache_update; }
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}

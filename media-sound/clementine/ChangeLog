@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.87 2014/04/18 17:22:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.88 2014/04/26 17:26:44 maksbotan Exp $
+
+  26 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> clementine-1.2.2.ebuild:
+  Update mime database, bug #508110.
 
   18 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org>
   +files/clementine-1.2.2-gcc49.patch, clementine-1.2.2.ebuild:
