@@ -1,6 +1,9 @@
 # ChangeLog for games-board/tali
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/tali/ChangeLog,v 1.12 2014/03/09 11:57:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/tali/ChangeLog,v 1.13 2014/04/26 07:51:06 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -tali-3.8.2.ebuild:
+  drop old
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> tali-3.10.2.ebuild:
   x86 stable, bug 499954

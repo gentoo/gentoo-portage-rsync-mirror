@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/cfg-update
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.36 2014/03/22 11:43:41 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.37 2014/04/26 07:31:45 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -cfg-update-1.8.2-r1.ebuild:
+  drop old
 
 *cfg-update-1.8.8 (22 Mar 2014)
 
@@ -157,4 +160,3 @@
 
   29 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> :
   initial version, modified ebuild from <xentric@zeelandnet.nl>
-
