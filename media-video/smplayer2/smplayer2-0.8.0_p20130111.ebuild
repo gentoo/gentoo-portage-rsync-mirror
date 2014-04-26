@@ -1,16 +1,16 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/smplayer2-0.8.0_p20130111.ebuild,v 1.7 2013/07/29 08:29:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/smplayer2-0.8.0_p20130111.ebuild,v 1.8 2014/04/26 17:36:59 maksbotan Exp $
 
-EAPI="4"
+EAPI="5"
 LANGS="bg ca cs da de en_US es et eu fi fr gl hu it ja ka ko ku lt mk nl pl pt pt_BR sk sr sv tr zh_CN zh_TW"
 LANGSLONG="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA vi_VN"
 
-inherit cmake-utils
+inherit cmake-utils fdo-mime gnome2-utils
 
 DESCRIPTION="Qt4 GUI front-end for mplayer2"
 HOMEPAGE="https://github.com/lachs0r/SMPlayer2"
-SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
+SRC_URI="https://rion-overlay.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +24,7 @@ for x in ${LANGSLONG}; do
 done
 
 DEPEND="
+	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dbus? ( dev-qt/qtdbus:4 )
 	download-subs? ( dev-libs/quazip )
@@ -49,4 +50,18 @@ src_configure() {
 		"$(cmake-utils_use download-subs ENABLE_DOWNLOAD_SUBS)"
 	)
 	cmake-utils_src_configure
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }

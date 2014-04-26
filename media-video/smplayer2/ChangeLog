@@ -1,6 +1,13 @@
 # ChangeLog for media-video/smplayer2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.16 2013/10/13 10:16:48 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.17 2014/04/26 17:36:59 maksbotan Exp $
+
+  26 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  -smplayer2-0.7.0_pre20111120.ebuild, -smplayer2-0.7.1_p20120301.ebuild,
+  -smplayer2-0.7.3_p20120524.ebuild, -smplayer2-0.8.0_p20121214.ebuild,
+  smplayer2-0.8.0_p20130111.ebuild:
+  Update mime database and icon cache, add missing dependency on dev-qt/qtcore,
+  clean old, bug #508130. Thanks to Nikoli.
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.
