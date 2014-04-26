@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.330 2014/04/14 13:04:40 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.331 2014/04/26 19:05:31 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-5.0.ebuild:
+  gnome-audio isn't needed, lots of distributions don't even ship it and it's
+  also explained at https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=530811
 
   14 Apr 2014; <leio@gentoo.org> pulseaudio-5.0.ebuild:
   dodoc NEWS file, which is actually useful since v4.0

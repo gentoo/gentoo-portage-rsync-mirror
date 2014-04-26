@@ -1,23 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.38 2014/01/30 11:11:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.39 2014/04/26 19:19:07 maksbotan Exp $
 
 EAPI="5"
 
-LANGS="be bg cs de el en es fr hu it pl pt_BR ru sk sr@latin uk"
+PLOCALES="be bg cs de el en es fr hu it pl pt_BR ru sk sr@latin sv_SE uk vi zh_CN"
 
-[[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
-inherit cmake-utils ${VCS_ECLASS}
+inherit cmake-utils eutils l10n fdo-mime gnome2-utils
+[[ ${PV} = *9999* ]] && inherit git-r3
 
-DESCRIPTION="Qt4 based client for DirectConnect and ADC protocols, based on DC++ library"
-HOMEPAGE="http://eiskaltdc.googlecode.com/"
+DESCRIPTION="Qt based client for DirectConnect and ADC protocols, based on DC++ library"
+HOMEPAGE="https://code.google.com/p/eiskaltdc/"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 IUSE="cli daemon dbus +dht +emoticons examples -gtk idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp -xmlrpc"
-for x in ${LANGS}; do
-	IUSE="${IUSE} linguas_${x}"
-done
 
 REQUIRED_USE="
 	cli? ( ^^ ( json xmlrpc ) )
@@ -33,10 +30,10 @@ REQUIRED_USE="
 "
 
 if [[ ${PV} != *9999* ]]; then
-	SRC_URI="http://${PN/pp/}.googlecode.com/files/${P}.tar.xz"
+	SRC_URI="https://eiskaltdc.googlecode.com/files/${P}.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 else
-	EGIT_REPO_URI="git://github.com/${PN}/${PN}.git"
+	EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 	KEYWORDS=""
 fi
 
@@ -70,6 +67,7 @@ RDEPEND="
 		libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	)
 	qt4? (
+		>=dev-qt/qtcore-4.6.0:4
 		>=dev-qt/qtgui-4.6.0:4
 		dbus? ( >=dev-qt/qtdbus-4.6.0:4 )
 		javascript? (
@@ -94,16 +92,16 @@ pkg_pretend() {
 	fi
 }
 
-src_configure() {
-	# linguas
-	local langs x
-	for x in ${LANGS}; do
-		use linguas_${x} && langs+=" ${x}"
-	done
+src_prepare() {
+	l10n_find_plocales_changes 'eiskaltdcpp-qt/translations' '' '.ts'
 
+	epatch_user
+}
+
+src_configure() {
 	local mycmakeargs=(
 		-DLIB_INSTALL_DIR="$(get_libdir)"
-		-Dlinguas="${langs}"
+		-Dlinguas="$(l10n_get_locales)"
 		-DLOCAL_MINIUPNP=OFF
 		-DUSE_GTK=OFF
 		-DUSE_LIBGNOME2=OFF
@@ -132,4 +130,18 @@ src_configure() {
 		"$(cmake-utils_use upnp USE_MINIUPNP)"
 	)
 	cmake-utils_src_configure
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0.ebuild,v 1.7 2014/04/14 13:04:40 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0.ebuild,v 1.8 2014/04/26 19:05:31 pacho Exp $
 
 EAPI="5"
 inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -96,7 +96,6 @@ PDEPEND="alsa? ( >=media-plugins/alsa-plugins-1.0.27-r1[pulseaudio] )"
 # PyQt4 dep is for the qpaeq script
 RDEPEND="${RDEPEND}
 	equalizer? ( qt4? ( dev-python/PyQt4[dbus] ) )
-	X? ( gnome-extra/gnome-audio )
 	system-wide? (
 		alsa? ( media-sound/alsa-utils )
 		bluetooth? ( >=net-wireless/bluez-5 )

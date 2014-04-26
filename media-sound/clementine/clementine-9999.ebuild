@@ -1,20 +1,20 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-9999.ebuild,v 1.1 2013/10/29 20:12:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-9999.ebuild,v 1.2 2014/04/26 19:15:05 maksbotan Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="https://code.google.com/p/clementine-player/"
+EGIT_REPO_URI="https://github.com/clementine-player/Clementine.git"
 
 LANGS=" af ar be bg bn br bs ca cs cy da de el en_CA en_GB eo es es_AR et eu fa fi fr ga gl he hi hr hu hy ia id is it ja ka kk ko lt lv mr ms nb nl oc pa pl pt pt_BR ro ru sk sl sr sr@latin sv te tr uk uz vi zh_CN zh_TW"
 
-inherit cmake-utils flag-o-matic gnome2-utils virtualx
+inherit cmake-utils flag-o-matic fdo-mime gnome2-utils virtualx
 [[ ${PV} == *9999* ]] && inherit git-2
 
 DESCRIPTION="A modern music player and library organizer based on Amarok 1.4 and Qt4"
-HOMEPAGE="http://www.clementine-player.org/ https://code.google.com/p/clementine-player/"
+HOMEPAGE="http://www.clementine-player.org https://github.com/clementine-player/Clementine"
 [[ ${PV} == *9999* ]] || \
-SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
+SRC_URI="https://github.com/clementine-player/Clementine/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -28,7 +28,9 @@ REQUIRED_USE="
 	wiimote? ( dbus )
 "
 
+# qca dep is temporary for bug #489850
 COMMON_DEPEND="
+	app-crypt/qca:2
 	>=dev-qt/qtgui-4.5:4
 	dbus? ( >=dev-qt/qtdbus-4.5:4 )
 	>=dev-qt/qtopengl-4.5:4
@@ -55,7 +57,7 @@ COMMON_DEPEND="
 	projectm? ( media-libs/glew )
 "
 # now only presets are used, libprojectm is internal
-# http://code.google.com/p/clementine-player/source/browse/#svn/trunk/3rdparty/libprojectm/patches
+# https://github.com/clementine-player/Clementine/tree/master/3rdparty/libprojectm/patches
 # r1966 "Compile with a static sqlite by default, since Qt 4.7 doesn't seem to expose the symbols we need to use FTS"
 RDEPEND="${COMMON_DEPEND}
 	dbus? ( udev? ( sys-fs/udisks:0 ) )
@@ -82,7 +84,15 @@ DEPEND="${COMMON_DEPEND}
 "
 DOCS="Changelog"
 
+# https://github.com/clementine-player/Clementine/issues/3935
+RESTRICT="test"
+
+[[ ${PV} == *9999* ]] || \
+S="${WORKDIR}/${P^}"
+
 src_prepare() {
+	cmake-utils_src_prepare
+
 	# some tests fail or hang
 	sed -i \
 		-e '/add_test_file(translations_test.cpp/d' \
@@ -135,6 +145,16 @@ src_test() {
 	Xemake test
 }
 
-pkg_preinst() { gnome2_icon_savelist; }
-pkg_postinst() { gnome2_icon_cache_update; }
-pkg_postrm() { gnome2_icon_cache_update; }
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}

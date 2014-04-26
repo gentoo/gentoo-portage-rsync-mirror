@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.62 2014/01/30 11:11:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.63 2014/04/26 19:19:07 maksbotan Exp $
+
+  26 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> eiskaltdcpp-2.2.9.ebuild,
+  eiskaltdcpp-9999.ebuild:
+  Update mime database and icon cache, add missing dependency on dev-qt/qtcore,
+  use l10n.eclass, bug #508162. Thanks to Nikoli.
 
   30 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> eiskaltdcpp-2.2.9.ebuild,
   eiskaltdcpp-9999.ebuild:
