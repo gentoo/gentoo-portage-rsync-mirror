@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.83 2014/03/09 11:53:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.84 2014/04/26 08:13:29 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -system-config-printer-gnome-1.4.2.ebuild,
+  -system-config-printer-gnome-1.4.3.ebuild,
+  system-config-printer-gnome-1.4.3-r1.ebuild:
+  drop old and adapt to latest pygobject don't providing python2.6 support
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org>
   system-config-printer-gnome-1.4.3-r1.ebuild:

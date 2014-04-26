@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.4.3-r1.ebuild,v 1.5 2014/03/09 11:53:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.4.3-r1.ebuild,v 1.6 2014/04/26 08:13:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
 inherit autotools gnome2 eutils python-single-r1 versionator

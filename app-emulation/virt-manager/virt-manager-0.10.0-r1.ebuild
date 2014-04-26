@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0-r1.ebuild,v 1.7 2014/01/26 11:43:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0-r1.ebuild,v 1.8 2014/04/26 08:15:47 pacho Exp $
 
 EAPI=5
 
 BACKPORTS=1cd29748
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
 inherit gnome2 distutils-r1

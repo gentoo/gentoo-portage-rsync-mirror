@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.5 2013/10/11 12:31:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.6 2014/04/26 08:26:53 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="ncurses?,xml"
 
 inherit eutils distutils-r1 linux-info readme.gentoo systemd

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r1.ebuild,v 1.3 2014/03/16 10:55:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r1.ebuild,v 1.4 2014/04/26 08:22:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 

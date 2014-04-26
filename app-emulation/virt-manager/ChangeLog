@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.101 2014/01/26 11:43:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.102 2014/04/26 08:15:47 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> virt-manager-0.10.0-r1.ebuild,
+  virt-manager-0.10.0-r2.ebuild, virt-manager-0.10.0.ebuild,
+  virt-manager-9999.ebuild:
+  Adapt to latest pygobject don't providing python2.6 support
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> virt-manager-0.10.0-r1.ebuild:
   Stable for x86, wrt bug #493788

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r2.ebuild,v 1.4 2014/03/03 23:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r2.ebuild,v 1.5 2014/04/26 08:24:41 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Online radio streaming player"

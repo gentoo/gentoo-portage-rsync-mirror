@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.2.ebuild,v 1.5 2014/02/22 22:43:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.2.ebuild,v 1.6 2014/04/26 08:28:51 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 python-r1
 

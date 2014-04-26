@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.1.ebuild,v 1.5 2014/01/19 10:33:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.1.ebuild,v 1.6 2014/04/26 08:27:50 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads,xml"
 
 inherit eutils fdo-mime linux-info python-single-r1 udev autotools toolchain-funcs

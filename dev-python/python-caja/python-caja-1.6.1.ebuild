@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-caja/python-caja-1.6.1.ebuild,v 1.1 2014/03/12 19:26:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-caja/python-caja-1.6.1.ebuild,v 1.2 2014/04/26 08:21:22 pacho Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 python-single-r1 versionator
 

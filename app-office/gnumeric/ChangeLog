@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.269 2014/04/23 20:53:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.270 2014/04/26 08:16:35 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> gnumeric-1.12.12.ebuild,
+  gnumeric-1.12.14.ebuild:
+  Adapt to latest pygobject don't providing python2.6 support
 
   23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gnumeric-1.12.13.ebuild:
   Drop old

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.4 2014/04/06 10:48:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.18-r1.ebuild,v 1.5 2014/04/26 08:31:26 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 

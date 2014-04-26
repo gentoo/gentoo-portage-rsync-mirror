@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.126 2014/03/09 12:05:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.127 2014/04/26 08:29:43 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -alacarte-3.7.90.ebuild,
+  alacarte-3.10.0.ebuild:
+  drop old and adapt to latest pygobject don't providing python2.6 support
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> alacarte-3.10.0.ebuild:
   x86 stable, bug 499954

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/rgain-1.2.1.ebuild,v 1.1 2013/10/19 14:25:25 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/rgain-1.2.1.ebuild,v 1.2 2014/04/26 08:25:01 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-2.1.1.ebuild,v 1.3 2014/01/26 11:38:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-2.1.1.ebuild,v 1.4 2014/04/26 08:14:02 pacho Exp $
 
 EAPI="5"
 
 CMAKE_MIN_VERSION="2.8.5"
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PLOCALES="de fr no pl sl zh_CN"
 
 # cmake-utils after gnome2, to make sure cmake-utils is used for building

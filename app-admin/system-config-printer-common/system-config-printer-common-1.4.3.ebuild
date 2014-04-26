@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.4.3.ebuild,v 1.5 2014/02/22 20:53:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.4.3.ebuild,v 1.6 2014/04/26 08:11:39 pacho Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
 inherit autotools eutils python-single-r1 systemd

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.10.1.ebuild,v 1.5 2014/03/11 20:24:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.10.1.ebuild,v 1.6 2014/04/26 08:26:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes" # plugins are dlopened
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads"
 
 inherit autotools eutils gnome2 multilib python-single-r1

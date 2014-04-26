@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.2.0.ebuild,v 1.13 2014/01/05 19:47:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-1.2.0.ebuild,v 1.14 2014/04/26 08:17:52 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit eutils python-r1
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~m68k-mint"
 IUSE="doc examples test"
 # API docs generated with epydoc, which is python2-only
-REQUIRED_USE="doc? ( || ( python_targets_python2_6 python_targets_python2_7 ) )"
+REQUIRED_USE="doc? ( python_targets_python2_7 )"
 
 RDEPEND=">=dev-libs/dbus-glib-0.100:=
 	>=sys-apps/dbus-1.6:=
@@ -25,8 +25,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.100:=
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
-		dev-python/docutils[python_targets_python2_6?,python_targets_python2_7?]
-		=dev-python/epydoc-3*[python_targets_python2_6?,python_targets_python2_7?] )
+		dev-python/docutils[python_targets_python2_7?]
+		=dev-python/epydoc-3*[python_targets_python2_7?] )
 	test? ( dev-python/pygobject:3[${PYTHON_USEDEP}] )"
 
 src_prepare() {

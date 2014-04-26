@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.33 2014/03/03 23:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.34 2014/04/26 08:24:41 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -radiotray-0.7.2.ebuild,
+  radiotray-0.7.3-r2.ebuild:
+  drop old and adapt to latest pygobject don't providing python2.6 support
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> radiotray-0.7.3-r2.ebuild:
   amd64 stable, bug #495790

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/arista
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.17 2013/02/11 21:13:36 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.18 2014/04/26 08:25:40 pacho Exp $
+
+  26 Apr 2014; Pacho Ramos <pacho@gentoo.org> arista-0.9.7.ebuild:
+  Adapt to latest pygobject don't providing python2.6 support
 
 *arista-0.9.7 (11 Feb 2013)
 
