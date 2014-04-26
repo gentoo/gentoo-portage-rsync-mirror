@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.289 2014/01/26 12:09:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.290 2014/04/26 18:23:35 hwoarang Exp $
+
+  26 Apr 2014; Markos Chandras <hwoarang@gentoo.org>
+  -files/openbox-gnome-session-3.4.9.patch, -openbox-3.5.0_p20130215.ebuild:
+  remove old
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openbox-3.5.2-r1.ebuild:
   Stable for sparc, wrt bug #494226

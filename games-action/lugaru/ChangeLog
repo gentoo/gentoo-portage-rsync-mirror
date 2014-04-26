@@ -1,6 +1,9 @@
 # ChangeLog for games-action/lugaru
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/ChangeLog,v 1.2 2013/03/29 15:30:29 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/ChangeLog,v 1.3 2014/04/26 18:04:46 ulm Exp $
+
+  26 Apr 2014; Ulrich Müller <ulm@gentoo.org> lugaru-1.0c.ebuild:
+  Fix LICENSE, bug 505608.
 
   29 Mar 2013; Julian Ospald <hasufell@gentoo.org> lugaru-1.0c.ebuild:
   use unpack_zip from unpacker.eclass instead of unzip

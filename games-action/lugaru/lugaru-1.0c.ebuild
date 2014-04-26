@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c.ebuild,v 1.3 2013/03/29 15:30:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c.ebuild,v 1.4 2014/04/26 18:04:46 ulm Exp $
 
 inherit eutils unpacker games
 
@@ -8,7 +8,7 @@ DESCRIPTION="3D arcade with unique fighting system and anthropomorphic character
 HOMEPAGE="http://www.wolfire.com/lugaru"
 SRC_URI="${PN}-full-linux-x86-${PV}.bin"
 
-LICENSE="as-is"
+LICENSE="GPL-2 free-noncomm"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
