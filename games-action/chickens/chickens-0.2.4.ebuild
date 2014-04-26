@@ -1,21 +1,23 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.17 2011/08/07 17:07:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.18 2014/04/26 09:10:30 ulm Exp $
 
 EAPI=2
 inherit eutils games
 
 MY_P="ChickensForLinux-Linux-${PV}"
 DESCRIPTION="Target chickens with rockets and shotguns. Funny"
-HOMEPAGE="http://www.chickensforlinux.com"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+HOMEPAGE="http://www.chickensforlinux.com/"
+SRC_URI="http://www.chickensforlinux.com/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 DEPEND="<media-libs/allegro-5"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 

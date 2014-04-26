@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-init/shorewall-init-4.5.21.4.ebuild,v 1.1 2013/12/02 19:58:43 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-init/shorewall-init-4.5.21.9.ebuild,v 1.1 2014/04/26 09:30:50 hwoarang Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="sys-apps/coreutils"
+DEPEND=">=sys-apps/coreutils-8.20"
 RDEPEND="
 	${DEPEND}
 	|| ( =net-firewall/shorewall-${PVR} =net-firewall/shorewall6-${PVR} =net-firewall/shorewall-lite-${PVR} =net-firewall/shorewall6-lite-${PVR} )
@@ -81,7 +81,7 @@ src_install() {
 		rm -rf "${D}"/usr/share/shorewall-init/ifupdown
 	fi
 
-	dodoc "${FILESDIR}"/${PVR}/README.Gentoo.txt
+	dodoc changelog.txt releasenotes.txt "${FILESDIR}"/${PVR}/README.Gentoo.txt
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.10.ebuild,v 1.1 2014/04/09 10:52:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.10.ebuild,v 1.2 2014/04/26 09:15:26 idella4 Exp $
 
 EAPI=5
 
@@ -45,7 +45,8 @@ DEPEND="${RDEPEND}
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/sqlalchemy[${PYTHON_USEDEP}] )"
 
-PATCHES=( "${FILESDIR}"/celery-docs.patch )
+PATCHES=( "${FILESDIR}"/celery-docs.patch 
+		"${FILESDIR}"/${P}-test.patch)
 
 python_compile_all() {
 	if use doc; then
@@ -56,12 +57,7 @@ python_compile_all() {
 
 python_test() {
 	# https://github.com/celery/celery/issues/1964
-	if python_is_python3; then
-		nosetests -e test_get_task_meta_for -e test_cleanup -e test_restore_group \
-			|| die "Tests failed with ${EPYTHON}"
-	else
-		nosetests  -e test_cleanup || die "Tests failed with ${EPYTHON}"
-	fi
+	nosetests -e test_cleanup || die "Tests failed with ${EPYTHON}"
 }
 
 python_install_all() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.606 2014/04/25 12:47:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.607 2014/04/26 09:08:59 ago Exp $
+
+  26 Apr 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for amd64, wrt bug #508506
 
   25 Apr 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.7.ebuild:
   Switch to USE=gtk3 as default.

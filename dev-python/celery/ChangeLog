@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.30 2014/04/09 10:52:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.31 2014/04/26 09:15:26 idella4 Exp $
+
+  26 Apr 2014; Ian Delaney <idella4@gentoo.org> +files/celery-3.1.10-test.patch,
+  celery-3.1.10.ebuild:
+  patch to fix tests for py3
 
 *celery-3.1.10 (09 Apr 2014)
 

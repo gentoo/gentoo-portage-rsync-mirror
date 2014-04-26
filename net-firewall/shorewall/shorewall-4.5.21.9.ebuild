@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.5.19.ebuild,v 1.1 2013/08/28 16:45:58 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.5.21.9.ebuild,v 1.1 2014/04/26 09:29:56 hwoarang Exp $
 
 EAPI="5"
 
@@ -19,14 +19,15 @@ MY_PV=${MY_PV/_beta/-Beta}
 MY_P=${PN}-${MY_PV}
 MY_P_DOCS=shorewall-docs-html-${MY_PV}
 
-MY_MAJORMINOR=$(get_version_component_range 1-2)
+MY_MAJOR_RELEASE_NUMBER=$(get_version_component_range 1-2)
+MY_MAJORMINOR_RELEASE_NUMBER=$(get_version_component_range 1-3)
 
 DESCRIPTION='The Shoreline Firewall, commonly known as Shorewall, is'
 DESCRIPTION+=' a high-level tool for configuring Netfilter.'
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="
-	http://www.shorewall.net/pub/shorewall/${MY_URL_PREFIX}${MY_MAJORMINOR}/shorewall-${MY_PV}/${MY_P}.tar.bz2
-	doc? ( http://www.shorewall.net/pub/shorewall/${MY_URL_PREFIX}${MY_MAJORMINOR}/shorewall-${MY_PV}/${MY_P_DOCS}.tar.bz2 )
+	http://www1.shorewall.net/pub/shorewall/${MY_URL_PREFIX}${MY_MAJOR_RELEASE_NUMBER}/shorewall-${MY_MAJORMINOR_RELEASE_NUMBER}/${MY_P}.tar.bz2
+	doc? ( http://www1.shorewall.net/pub/shorewall/${MY_URL_PREFIX}${MY_MAJOR_RELEASE_NUMBER}/shorewall-${MY_MAJORMINOR_RELEASE_NUMBER}/${MY_P_DOCS}.tar.bz2 )
 "
 
 LICENSE="GPL-2"
@@ -37,13 +38,13 @@ IUSE="doc"
 DEPEND="
 	>=dev-lang/perl-5.10
 	virtual/perl-Digest-SHA
-	=net-firewall/shorewall-core-${PV}
+	=net-firewall/shorewall-core-${PVR}
 "
 RDEPEND="
 	${DEPEND}
 	>=net-firewall/iptables-1.4.20
-	sys-apps/iproute2[-minimal]
-	sys-devel/bc
+	>=sys-apps/iproute2-3.8.0[-minimal]
+	>=sys-devel/bc-1.06.95
 "
 
 S=${WORKDIR}/${MY_P}
@@ -61,13 +62,13 @@ pkg_pretend() {
 }
 
 src_prepare() {
-	cp "${FILESDIR}"/${PV}/shorewallrc "${S}"/shorewallrc.gentoo || die "Copying shorewallrc_new failed"
+	cp "${FILESDIR}"/${PVR}/shorewallrc "${S}"/shorewallrc.gentoo || die "Copying shorewallrc failed"
 	eprefixify "${S}"/shorewallrc.gentoo
 
-	cp "${FILESDIR}"/${PV}/${PN}.confd "${S}"/default.gentoo || die "Copying shorewall.confd failed"
-	cp "${FILESDIR}"/${PV}/${PN}.initd "${S}"/init.gentoo.sh || die "Copying shorewall.initd failed"
+	cp "${FILESDIR}"/${PVR}/${PN}.confd "${S}"/default.gentoo || die "Copying ${PN}.confd failed"
+	cp "${FILESDIR}"/${PVR}/${PN}.initd "${S}"/init.gentoo.sh || die "Copying ${PN}.initd failed"
+	cp "${FILESDIR}"/${PVR}/${PN}.systemd "${S}"/gentoo.service || die "Copying ${PN}.systemd failed"
 
-	epatch "${FILESDIR}"/${PV}/shorewall.conf-SUBSYSLOCK.patch
 	epatch_user
 }
 
@@ -83,11 +84,6 @@ src_install() {
 	keepdir /var/lib/${PN}
 
 	DESTDIR="${D}" ./install.sh shorewallrc.gentoo || die "install.sh failed"
-	systemd_newunit "${FILESDIR}"/${PV}/${PN}.systemd ${PN}.service
-
-	# Currently, install.sh from upstream is broken and will always
-	# default.debian so have to do it on our own:
-	newconfd "${FILESDIR}"/${PV}/${PN}.confd ${PN}
 
 	dodoc changelog.txt releasenotes.txt
 	if use doc; then
@@ -107,5 +103,14 @@ pkg_postinst() {
 		elog "To activate ${PN} on system start, please add ${PN} to your default runlevel:"
 		elog ""
 		elog "  # rc-update add ${PN} default"
+	fi
+
+	if ! has_version ${CATEGORY}/shorewall-init; then
+		elog ""
+		elog "Starting with shorewall-4.5.21.2, Gentoo also offers ${CATEGORY}/shorewall-init,"
+		elog "which we recommend to install, to protect your firewall at system boot."
+		elog ""
+		elog "To read more about shorewall-init, please visit"
+		elog "  http://www.shorewall.net/Shorewall-init.html"
 	fi
 }

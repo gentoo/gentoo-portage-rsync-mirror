@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.563 2014/04/24 10:38:58 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.564 2014/04/26 09:07:10 pacho Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Pacho Ramos <pacho@gentoo.org> (26 Apr 2014)
+# Depends on long time obsolete goi, bug #508742
+=x11-misc/lightdm-1.4* introspection
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Apr 2014)
 # It's only supported on amd64
