@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.23 2014/01/06 15:27:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.24 2014/04/26 15:39:43 jlec Exp $
+
+  26 Apr 2014; Justin Lecher <jlec@gentoo.org> -aria-2.3.2-r3.ebuild:
+  Drop old, #508740
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> aria-2.3.2-r3.ebuild:
   Punt base.eclass
