@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/files/vmware-9.0.rc,v 1.1 2012/12/09 14:30:38 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/files/vmware-9.0.rc,v 1.2 2014/04/26 20:36:17 dilfridge Exp $
 
 depend() {
 	need localmount
@@ -14,7 +14,9 @@ start() {
 	@@BINDIR@@/vmware-usbarbitrator 
 	eend $?
 	ebegin Starting VMware services
-	modprobe -a vmmon vmci vsock vmblock vmnet 
+	modprobe -v vmci || modprobe -v vmw_vmci
+	eend $?
+	modprobe -av vmmon vmci vsock vmblock vmnet 
 	eend $?
 	@@BINDIR@@/vmware-networks --start
 	eend $?
@@ -28,6 +30,8 @@ stop() {
 	@@BINDIR@@/vmware-networks --stop 
 	eend $?
 	ebegin Stopping VMware services
-	modprobe -r vsock vmci vmmon vmblock vmnet
+	modprobe -rv vsock vmmon vmblock vmnet
+	eend $?
+	modprobe -rv vmci || modprobe -rv vmw_vmci
 	eend $?
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2.ebuild,v 1.6 2014/04/15 22:47:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2.ebuild,v 1.7 2014/04/26 21:00:24 floppym Exp $
 
 EAPI=5
 
@@ -230,6 +230,9 @@ grub_configure() {
 }
 
 src_configure() {
+	# Bug 508758.
+	replace-flags -O3 -O2
+
 	# We don't want to leak flags onto boot code.
 	export HOST_CCASFLAGS=${CCASFLAGS}
 	export HOST_CFLAGS=${CFLAGS}

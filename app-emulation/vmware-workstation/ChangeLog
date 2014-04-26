@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.258 2014/04/19 10:13:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.260 2014/04/26 20:37:00 dilfridge Exp $
+
+  26 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/vmware-server-8.0.rc:
+  Clean up
+
+  26 Apr 2014; Andreas K. Huettel <dilfridge@gentoo.org> files/vmware-9.0.rc,
+  files/vmware-10.0.rc:
+  Update init script to try to use kernel vmw_vmci module if vmci is
+  unavailable
 
 *vmware-workstation-10.0.2.1744117 (19 Apr 2014)
 
