@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/actionview
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionview/ChangeLog,v 1.1 2014/04/26 15:09:30 graaff Exp $
+
+*actionview-4.1.0 (26 Apr 2014)
+
+  26 Apr 2014; Hans de Graaff <graaff@gentoo.org> +actionview-4.1.0.ebuild,
+  +metadata.xml:
+  Version bump for Rails 4.1. Drop x86, bug 508780.
+

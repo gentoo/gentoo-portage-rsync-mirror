@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.72 2014/04/21 12:59:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.73 2014/04/26 15:10:15 graaff Exp $
+
+*railties-4.1.0 (26 Apr 2014)
+
+  26 Apr 2014; Hans de Graaff <graaff@gentoo.org> +railties-4.1.0.ebuild:
+  Version bump for Rails 4.1. Drop x86, bug 508780.
 
   21 Apr 2014; Hans de Graaff <graaff@gentoo.org> -railties-3.2.16.ebuild,
   -railties-4.0.2.ebuild:

@@ -5129,6 +5129,7 @@ net-libs/rest:gnome - Extract proxy information using net-libs/libsoup-gnome
 net-libs/telepathy-glib:vala - Enable bindings for dev-lang/vala
 net-libs/telepathy-qt:farsight - Enable support for farsight connection manager
 net-libs/telepathy-qt:farstream - Enable support for audio/video calls via farstream
+net-libs/udns:tools - Build and install dnsget, ex-rdns and rblcheck tools
 net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:egl - Enable EGL support.
 net-libs/webkit-gtk:geoloc - Enable geolocation support through app-misc/geoclue

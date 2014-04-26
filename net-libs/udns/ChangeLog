@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/udns
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.28 2013/12/28 20:44:21 dastergon Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.29 2014/04/26 15:19:58 wschlich Exp $
+
+*udns-0.4 (26 Apr 2014)
+
+  26 Apr 2014; Wolfram Schlich <wschlich@gentoo.org> +udns-0.4.ebuild,
+  metadata.xml:
+  version bump, fixes bugs #498662, #399217, #400905 and #484874
 
   28 Dec 2013; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   add myself as maintainer

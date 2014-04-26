@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.286 2014/04/21 12:59:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.287 2014/04/26 15:10:25 graaff Exp $
+
+*rails-4.1.0 (26 Apr 2014)
+
+  26 Apr 2014; Hans de Graaff <graaff@gentoo.org> +rails-4.1.0.ebuild:
+  Version bump for Rails 4.1. Drop x86, bug 508780.
 
   21 Apr 2014; Hans de Graaff <graaff@gentoo.org> -rails-3.2.16.ebuild,
   -rails-4.0.2.ebuild:
