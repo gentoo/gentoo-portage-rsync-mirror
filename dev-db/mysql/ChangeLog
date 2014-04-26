@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.667 2014/04/25 00:43:46 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.668 2014/04/26 05:36:06 jmbsvicetto Exp $
+
+*mysql-5.5.37-r1 (26 Apr 2014)
+
+  26 Apr 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mysql-5.5.37-r1.ebuild, -mysql-5.5.37.ebuild:
+  Bump 5.5.37 to fix mysql_config report of the embedded lib location - fixes
+  bug 508694.
 
 *mysql-5.5.37 (25 Apr 2014)
 
