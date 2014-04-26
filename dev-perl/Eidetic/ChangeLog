@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Eidetic
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.16 2013/08/25 14:54:05 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.17 2014/04/26 10:28:40 zlogene Exp $
+
+  26 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -Eidetic-2.003003.ebuild,
+  Eidetic-2.003003-r1.ebuild:
+  amd64/x86 stable; Drop old.
 
 *Eidetic-2.003003-r1 (25 Aug 2013)
 
