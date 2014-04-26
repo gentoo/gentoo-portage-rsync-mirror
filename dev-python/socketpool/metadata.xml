@@ -6,7 +6,4 @@
 		<email>idella4@gentoo.org</email>
 		<name>Ian Delaney</name>
 	</maintainer>
-	<use>
-                <flag name='gevent'>Enable gevent as a backend</flag>
-	</use>
 </pkgmetadata>
