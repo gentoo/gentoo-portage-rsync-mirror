@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15607 2014/04/25 23:22:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15608 2014/04/26 05:03:38 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -232,24 +232,6 @@ www-apache/mod_chroot
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280
 <media-libs/mesa-9.1.4
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (24 Mar 2014)
-# mask for removal, depending on wrt bug #502278
-# ~ 24 Apr 2014
-# not converted to xgettext handling, dead on upstream since ~2007
-media-plugins/vdr-eggtimer
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (24 Mar 2014)
-# mask for removal, depending on wrt bug #502274
-# ~ 24 Apr 2014
-# not converted to xgettext handling, dead on upstream since ~2007
-media-plugins/vdr-ac3mode
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (24 Mar 2014)
-# mask for removal, depending on wrt bug #502276
-# ~ 24 Apr 2014
-# not converted to xgettext handling, dead on upstream since ~2008
-media-plugins/vdr-bitstreamout
 
 # Rick Farina <zerochaos@gentoo.org> (11 Apr 2014)
 # Upstream has replaced dev-util/dissy with dev-util/emilpro

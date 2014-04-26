@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1225 2014/04/25 19:39:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1226 2014/04/26 05:13:24 hd_brummy Exp $
+
+  26 Apr 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-plugin.eclass:
+  vdr-plugin.eclass removed, see #497058, #489116
 
   25 Apr 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
   Sync with kde overlay. Remove custom branch calculation for kde workspace.
