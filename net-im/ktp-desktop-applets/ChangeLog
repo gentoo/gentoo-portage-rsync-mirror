@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ktp-desktop-applets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-desktop-applets/ChangeLog,v 1.12 2014/03/12 11:21:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-desktop-applets/ChangeLog,v 1.13 2014/04/26 01:17:17 johu Exp $
+
+*ktp-desktop-applets-0.8.1 (26 Apr 2014)
+
+  26 Apr 2014; Johannes Huber <johu@gentoo.org>
+  +ktp-desktop-applets-0.8.1.ebuild:
+  Version bump KDE Telepathy 0.8.1.
 
   12 Mar 2014; Johannes Huber <johu@gentoo.org>
   -ktp-desktop-applets-0.6.3.ebuild:
