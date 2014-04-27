@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.10.1.ebuild,v 1.5 2014/03/09 12:00:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.10.1.ebuild,v 1.6 2014/04/27 15:01:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -30,6 +30,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 DEPEND="${RDEPEND}
 	app-text/yelp-tools
+	dev-util/desktop-file-utils
 	>=dev-util/gtk-doc-am-1
 	>=dev-util/intltool-0.40
 	sys-devel/gettext

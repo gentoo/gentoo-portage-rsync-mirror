@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.34 2014/04/23 20:40:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.35 2014/04/27 15:25:24 eva Exp $
+
+*gcr-3.12.0 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +gcr-3.12.0.ebuild:
+  Version bump for Gnome 3.12. Now requires python while building.
 
   23 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -files/gcr-3.4.1-invalid-whitespace.patch, -gcr-3.4.1-r2.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-icon-theme-symbolic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.50 2014/04/27 09:58:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.51 2014/04/27 15:08:16 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  gnome-icon-theme-symbolic-3.10.1.ebuild:
+  gnome-base/librsvg will be needed by apps using this icons, bug #508210 by
+  Sebastian
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -gnome-icon-theme-symbolic-3.6.2.ebuild,
