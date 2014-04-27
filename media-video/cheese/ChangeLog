@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.81 2014/04/18 11:07:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.82 2014/04/27 17:37:39 eva Exp $
+
+*cheese-3.12.1 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +cheese-3.12.1.ebuild:
+  Version bump for Gnome 3.12.
 
   18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -cheese-3.8.3.ebuild,
   metadata.xml:

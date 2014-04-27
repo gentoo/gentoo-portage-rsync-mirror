@@ -1,6 +1,13 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.96 2014/02/22 22:23:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.97 2014/04/27 17:44:35 eva Exp $
+
+*telepathy-mission-control-5.16.1 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +telepathy-mission-control-5.16.1.ebuild:
+  Version bump for Gnome>=3.10. Add uper limit to upower dependency since it
+  will fail to build with 0.99 but this version is required in Gnome 3.12.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org>
   telepathy-mission-control-5.14.1.ebuild:
