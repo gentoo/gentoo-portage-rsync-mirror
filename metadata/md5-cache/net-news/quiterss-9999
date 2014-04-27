@@ -7,5 +7,5 @@ IUSE=debug phonon linguas_ar linguas_cs linguas_de linguas_el_GR linguas_es ling
 LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	b7fcca5a7b575419dbd3b10c89c2588c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	l10n	33bde4fb0cfd3a21a277b66bfd837e19	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	l10n	33bde4fb0cfd3a21a277b66bfd837e19	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e75443420f70062754b1beceebaefbf6

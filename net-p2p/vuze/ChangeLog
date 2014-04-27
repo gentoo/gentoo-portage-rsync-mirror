@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.60 2014/03/17 03:39:43 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.61 2014/04/27 19:43:27 nimiux Exp $
+
+  27 Apr 2014; Chema Alonso <nimiux@gentoo.org> vuze-4.8.1.2-r1.ebuild:
+  Stable for amd64 wrt bug #432146
 
   17 Mar 2014; Ryan Hill <rhill@gentoo.org> vuze-4.8.1.2-r1.ebuild:
   Update swt dep to pull in fix for bug #424151.

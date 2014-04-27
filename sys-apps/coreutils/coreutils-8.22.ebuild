@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.22.ebuild,v 1.3 2014/01/17 04:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.22.ebuild,v 1.4 2014/04/27 19:08:29 vapier Exp $
 
 EAPI="3"
 
@@ -12,8 +12,8 @@ HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.xz
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz
 	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.xz
-	mirror://gentoo/${P}-man.tar.xz
-	http://dev.gentoo.org/~vapier/dist/${P}-man.tar.xz"
+	mirror://gentoo/${P}-man-r1.tar.xz
+	http://dev.gentoo.org/~vapier/dist/${P}-man-r1.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"

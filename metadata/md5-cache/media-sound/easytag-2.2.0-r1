@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.32:2 >=media-libs/libogg-1.3.1 >=media-libs/libvorbis-
 REQUIRED_USE=|| ( gtk2 gtk3 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/easytag/2.2/easytag-2.2.0.tar.xz
-_eclasses_=eutils	b7fcca5a7b575419dbd3b10c89c2588c	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=24e1ed3468c15be0ad037e24f0adbe58

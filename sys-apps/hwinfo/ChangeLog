@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.35 2014/01/14 15:09:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.36 2014/04/27 19:31:03 vapier Exp $
+
+  27 Apr 2014; Mike Frysinger <vapier@gentoo.org> hwinfo-20.0.ebuild:
+  Include linux/pci.h directly #506876 by René Rhéaume.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwinfo-20.0.ebuild:
   Stable for ppc, wrt bug #492258
