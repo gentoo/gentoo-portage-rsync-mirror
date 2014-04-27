@@ -7,7 +7,6 @@
     <flag name="glade">Build glade plugin for anjuta</flag>
     <flag name="packagekit">Use packagekit to search for missing tools</flag>
     <flag name="terminal">Enable terminal plugin based on <pkg>x11-libs/vte</pkg></flag>
-    <flag name="vala">Enable support for the Vala programming
-    	language</flag>
+    <flag name="vala">Enable support for the Vala programming language</flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.10.ebuild,v 1.1 2014/04/27 15:51:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.10.ebuild,v 1.2 2014/04/27 16:14:55 floppym Exp $
 
 EAPI="5"
 AUTOTOOLS_AUTORECONF=1
@@ -22,11 +22,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/boost-1.48[python,${PYTHON_USEDEP}]
-	>=media-gfx/imagemagick-6.4"
+RDEPEND="${PYTHON_DEPS}
+	>=dev-libs/boost-1.48[python,${PYTHON_USEDEP}]
+	>=media-gfx/imagemagick-6.4
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	"
+"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S="${WORKDIR}/${MY_P}"
 

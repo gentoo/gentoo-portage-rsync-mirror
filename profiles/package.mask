@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15616 2014/04/27 14:41:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15617 2014/04/27 16:10:44 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -547,7 +547,7 @@ app-emacs/delicious
 # placed in advance to allow to bump to it as soon as it hits.
 >=app-admin/mate-system-tools-1.7
 >=app-arch/engrampa-1.7
->=app-editors/mate-text-editor-1.7
+>=app-editors/pluma-1.7
 >=app-text/mate-doc-utils-1.7
 >=app-text/mate-document-viewer-1.7
 >=dev-libs/libmateweather-1.7
