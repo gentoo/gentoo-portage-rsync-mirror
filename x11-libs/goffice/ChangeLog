@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.142 2014/04/17 12:53:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.143 2014/04/27 09:13:47 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -goffice-0.10.13.ebuild:
+  drop old
 
 *goffice-0.10.14 (17 Apr 2014)
 

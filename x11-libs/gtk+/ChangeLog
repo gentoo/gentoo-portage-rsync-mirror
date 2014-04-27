@@ -1,6 +1,21 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.711 2014/04/21 10:30:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.712 2014/04/27 09:26:49 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/gtk+-2.14.3-limit-gtksignal-includes.patch,
+  -files/gtk+-2.21.3-multilib.patch,
+  -files/gtk+-2.24.7-darwin-quartz-introspection.patch,
+  -files/gtk+-3.10.7-clang.patch, -files/gtk+-3.3.18-fallback-theme.patch,
+  -files/gtk+-3.3.20-wayland-xkbcommon-headers.patch,
+  -files/gtk+-3.4.4-isnan.patch, -files/gtk+-3.6.3-darwin-gtksettings.patch,
+  -files/gtk+-3.6.3-librsvg-2.39.patch,
+  -files/gtk+-3.6.3-revert-recompute-font.patch,
+  -files/gtk+-3.6.3-stylecontext-font-crash.patch,
+  -files/gtk+-3.8.6-skip-filechooser-test.patch, -gtk+-2.24.17.ebuild,
+  -gtk+-2.24.22.ebuild, -gtk+-3.10.7.ebuild, -gtk+-3.4.4.ebuild,
+  -gtk+-3.6.3-r3.ebuild, metadata.xml:
+  drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.23.ebuild,
   gtk+-3.10.8.ebuild:

@@ -1,36 +1,37 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.13-r1.ebuild,v 1.2 2013/03/02 21:57:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-1.0.0.ebuild,v 1.1 2014/04/27 09:26:37 polynomial-c Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils cmake-utils
 
 DESCRIPTION="Free alternative to popular programs such as Fruityloops, Cubase and Logic"
 HOMEPAGE="http://lmms.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa debug fftw fluidsynth jack ogg portaudio pulseaudio sdl stk vst"
+IUSE="alsa debug fluidsynth jack ogg portaudio pulseaudio sdl stk vst"
 
 RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4[accessibility]
+	>=media-libs/libsamplerate-0.1.8
 	>=media-libs/libsndfile-1.0.11
-	>=media-libs/libsamplerate-0.1.7
-	x11-libs/libXinerama
+	sci-libs/fftw:3.0
+	sys-libs/zlib
+	>=x11-libs/fltk-1.3.0_rc3:1
 	alsa? ( media-libs/alsa-lib )
-	fftw? ( sci-libs/fftw:3.0 >=x11-libs/fltk-1.3.0_rc3:1 )
+	fluidsynth? ( media-sound/fluidsynth )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0 )
 	ogg? ( media-libs/libvorbis
-			media-libs/libogg )
-	fluidsynth? ( media-sound/fluidsynth )
+		media-libs/libogg )
 	portaudio? ( >=media-libs/portaudio-19_pre )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl? ( media-libs/libsdl
-			>=media-libs/sdl-sound-1.0.1 )
+		>=media-libs/sdl-sound-1.0.1 )
 	stk? ( media-libs/stk )
 	vst? ( app-emulation/wine )"
 DEPEND="${RDEPEND}
@@ -43,8 +44,6 @@ RDEPEND="${RDEPEND}
 
 DOCS="README AUTHORS TODO"
 
-PATCHES=( "${FILESDIR}/${PN}-0.4.10-unembedfltk.patch" )
-
 src_configure() {
 	mycmakeargs="${mycmakeargs}
 		-DWANT_SYSTEM_SR=TRUE
@@ -55,7 +54,6 @@ src_configure() {
 		-DWANT_CALF=TRUE
 		-DCMAKE_INSTALL_LIBDIR=$(get_libdir)
 		$(cmake-utils_use_want alsa ALSA)
-		$(cmake-utils_use_want fftw FFTW3F)
 		$(cmake-utils_use_want jack JACK)
 		$(cmake-utils_use_want ogg OGGVORBIS)
 		$(cmake-utils_use_want portaudio PORTAUDIO)
