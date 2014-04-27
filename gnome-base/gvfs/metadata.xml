@@ -10,20 +10,15 @@ using the APIs of libgio. There is also fuse support that allows
 applications not using gio to access the gvfs filesystems.
 </longdescription>
 <use>
-	<flag name='afp'>Enables support for accessing AFP (Apple Filing Protocol)
-		network shares</flag>
-	<flag name='archive'>Enables support for accessing files in archives
-		transparently via <pkg>app-arch/libarchive</pkg></flag>
+	<flag name='afp'>Enables support for accessing AFP (Apple Filing Protocol) network shares</flag>
+	<flag name='archive'>Enables support for accessing files in archives transparently via <pkg>app-arch/libarchive</pkg></flag>
 	<flag name='bluray'>Enable playback of Blu-ray filesystems using <pkg>media-libs/libbluray</pkg></flag>
-	<flag name='fuse'>Enables fuse mount points in $HOME/.gvfs for legacy
-		application access</flag>
+	<flag name='fuse'>Enables fuse mount points in $HOME/.gvfs for legacy application access</flag>
 	<flag name="gdu">Enable <pkg>sys-apps/gnome-disk-utility</pkg> integration</flag>
 	<flag name="gnome-online-accounts">Enable configuration panel for <pkg>net-libs/gnome-online-accounts</pkg> accounts</flag>
 	<flag name="http">Enable the HTTP/DAV backend using <pkg>net-libs/libsoup-gnome</pkg></flag>
-	<flag name="libsecret">Enable <pkg>app-crypt/libsecret</pkg> support
-		to store login credentials.</flag>
+	<flag name="libsecret">Enable <pkg>app-crypt/libsecret</pkg> support to store login credentials.</flag>
 	<flag name="udev">Enable udev base replacement code for cdda feature</flag>
 	<flag name="udisks">Enable volume monitoring using <pkg>sys-fs/udisks</pkg></flag>
 </use>
 </pkgmetadata>
-

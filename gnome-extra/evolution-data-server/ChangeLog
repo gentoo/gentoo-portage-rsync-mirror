@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.391 2014/04/26 18:55:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.392 2014/04/27 17:08:27 eva Exp $
+
+*evolution-data-server-3.12.1 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-data-server-3.12.1.ebuild:
+  Version bump for Gnome 3.12. Move flags manipulation to configure where it
+  belongs. Get rid of la-relink tool, it seems eltconf handles that properly.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -evolution-data-server-3.10.3.ebuild, -evolution-data-server-3.8.5.ebuild:
