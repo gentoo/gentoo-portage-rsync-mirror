@@ -1,0 +1,99 @@
+diff --git a/doc/fwknopd.man.asciidoc b/doc/fwknopd.man.asciidoc
+index 082b6fb..cad4d2b 100644
+--- a/doc/fwknopd.man.asciidoc
++++ b/doc/fwknopd.man.asciidoc
+@@ -68,7 +68,7 @@ COMMAND-LINE OPTIONS
+ *-d, --digest-file*='<digest-file>'::
+     Specify the location of the 'digest.cache' file.  If this option is
+     not given, 'fwknopd' will use the compile-time default location (typically
+-    '@localstatedir@/run/fwknop/digest.cache').
++    '@localstatedir@/fwknop/digest.cache').
+ 
+ *-D, --dump-config*::
+     Dump the configuration values that *fwknopd* derives from the
+@@ -98,7 +98,7 @@ COMMAND-LINE OPTIONS
+ *-p, --pid-file*='<pid-file>'::
+     Specify the location of the 'fwknopd.pid' file.  If this option is
+     not given, 'fwknopd' will use the compile-time default location (typically
+-    '@localstatedir@/run/fwknop/fwknopd.pid).
++    '@localstatedir@/fwknop/fwknopd.pid).
+ 
+ *-P, --pcap-filter*='<filter>'::
+     Specify a Berkeley packet filter statement on the *fwknopd* command
+@@ -132,7 +132,7 @@ COMMAND-LINE OPTIONS
+ *--rotate-digest-cache*::
+     Rotate the digest cache file by renaming it to ``<name>-old'', and
+     starting a new one.  The digest cache file is typically found in
+-    '@localstatedir@/run/fwknop/digest.cache'.
++    '@localstatedir@/fwknop/digest.cache'.
+ 
+ *-S, --status*::
+     Display the status of any *fwknopd* processes that may or not be
+diff --git a/extras/apparmor/usr.sbin.fwknopd b/extras/apparmor/usr.sbin.fwknopd
+index e967a56..cacf767 100644
+--- a/extras/apparmor/usr.sbin.fwknopd
++++ b/extras/apparmor/usr.sbin.fwknopd
+@@ -1,6 +1,4 @@
+ # Last Modified: Sun Aug 18 22:54:57 2013
+-# Assumes fwknopd was built with:
+-#    './configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var'
+ #include <tunables/global>
+ 
+ /usr/sbin/fwknopd {
+diff --git a/server/fwknopd.8.in b/server/fwknopd.8.in
+index bb41b6f..6235790 100644
+--- a/server/fwknopd.8.in
++++ b/server/fwknopd.8.in
+@@ -94,7 +94,7 @@ Specify the location of the
+ file\&. If this option is not given,
+ \fIfwknopd\fR
+ will use the compile\-time default location (typically
+-\fI@localstatedir@/run/fwknop/digest\&.cache\fR)\&.
++\fI@localstatedir@/fwknop/digest\&.cache\fR)\&.
+ .RE
+ .PP
+ \fB\-D, \-\-dump\-config\fR
+@@ -148,7 +148,7 @@ Specify the location of the
+ \fIfwknopd\&.pid\fR
+ file\&. If this option is not given,
+ \fIfwknopd\fR
+-will use the compile\-time default location (typically \*(Aq@localstatedir@/run/fwknop/fwknopd\&.pid)\&.
++will use the compile\-time default location (typically \*(Aq@localstatedir@/fwknop/fwknopd\&.pid)\&.
+ .RE
+ .PP
+ \fB\-P, \-\-pcap\-filter\fR=\fI<filter>\fR
+@@ -195,7 +195,7 @@ files\&. This will also force a flush of the current \(lqFWKNOP\(rq iptables cha
+ \fB\-\-rotate\-digest\-cache\fR
+ .RS 4
+ Rotate the digest cache file by renaming it to \(lq<name>\-old\(rq, and starting a new one\&. The digest cache file is typically found in
+-\fI@localstatedir@/run/fwknop/digest\&.cache\fR\&.
++\fI@localstatedir@/fwknop/digest\&.cache\fR\&.
+ .RE
+ .PP
+ \fB\-S, \-\-status\fR
+diff --git a/server/fwknopd.conf.inst b/server/fwknopd.conf.inst
+index acf7a77..db653ee 100644
+--- a/server/fwknopd.conf.inst
++++ b/server/fwknopd.conf.inst
+@@ -370,7 +370,7 @@
+ 
+ # Directories - These can override compile-time defaults.
+ #
+-#FWKNOP_RUN_DIR              /var/run/fwknop;
++#FWKNOP_RUN_DIR              /run/fwknop;
+ #FWKNOP_CONF_DIR             /etc/fwknop;
+ 
+ # Files
+diff --git a/server/fwknopd_common.h b/server/fwknopd_common.h
+index 2e632ed..b416f91 100644
+--- a/server/fwknopd_common.h
++++ b/server/fwknopd_common.h
+@@ -70,7 +70,7 @@
+   /* Our default run directory is based on LOCALSTATEDIR as set by the
+    * configure script. This is where we put the PID and digest cache files.
+   */
+-  #define DEF_RUN_DIR       SYSRUNDIR"/run/"PACKAGE_NAME
++  #define DEF_RUN_DIR       SYSRUNDIR"/"PACKAGE_NAME
+ #endif
+ 
+ /* More Conf defaults

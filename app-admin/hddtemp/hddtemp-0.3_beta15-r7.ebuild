@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r7.ebuild,v 1.8 2013/12/21 17:16:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r7.ebuild,v 1.9 2014/04/27 11:00:47 aidecoe Exp $
 
 inherit eutils autotools systemd
 

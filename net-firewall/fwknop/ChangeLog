@@ -1,0 +1,13 @@
+# ChangeLog for net-firewall/fwknop
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/ChangeLog,v 1.1 2014/04/27 10:50:49 tomwij Exp $
+
+*fwknop-2.6.1 (27 Apr 2014)
+
+  27 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/fwknop-2.6.0-remove-extra-run-from-paths.patch, +files/fwknopd.confd,
+  +files/fwknopd.init, +files/fwknopd.tmpfiles.conf, +fwknop-2.6.1.ebuild,
+  +metadata.xml:
+  New ebuild for net-firewall/fwknop, a Single Packet Authorization and Port
+  Knocking application; fixes bug #178546, proxied commit for Coacher
+  (itumaykin) who will maintain this package.
