@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.31 2014/03/09 11:53:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.32 2014/04/27 15:42:09 eva Exp $
+
+*geoclue-2.1.8 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +geoclue-2.1.8.ebuild,
+  metadata.xml:
+  Version bump for Gnome 3.12.
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> geoclue-2.0.0.ebuild:
   x86 stable, bug 499954

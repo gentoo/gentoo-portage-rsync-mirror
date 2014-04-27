@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.1.0.ebuild,v 1.1 2014/04/24 12:58:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.1.0.ebuild,v 1.2 2014/04/27 15:56:46 jlec Exp $
 
 EAPI=5
 
@@ -31,6 +31,8 @@ DOCS=( NEWS AUTHORS )
 
 src_prepare() {
 	sed -i -e 's|-Werror||g' configure.ac || die
+	cp "${FILESDIR}"/version.sh "${S}" || die
+	chmod 775 "${S}"/version.sh || die
 	autotools-utils_src_prepare
 }
 

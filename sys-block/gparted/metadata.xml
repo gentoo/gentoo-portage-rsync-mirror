@@ -21,7 +21,6 @@
 	</flag>
 	<flag name='fat'>Include FAT16/FAT32 support (<pkg>sys-fs/dosfstools</pkg>)
 	</flag>
-	<flag name='gtk'>Enable .desktop support for gtk+ based desktops.</flag>
 	<flag name='hfs'>Include HFS support (<pkg>sys-fs/hfsutils</pkg>)</flag>
 	<flag name='jfs'>Include JFS support (<pkg>sys-fs/jfsutils</pkg>)</flag>
 	<flag name="mdadm">Support for Linux software RAID.</flag>

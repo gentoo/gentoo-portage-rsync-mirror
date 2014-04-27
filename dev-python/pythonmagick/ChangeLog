@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.44 2014/03/25 11:31:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.45 2014/04/27 15:51:02 floppym Exp $
+
+*pythonmagick-0.9.10 (27 Apr 2014)
+
+  27 Apr 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/pythonmagick-0.9.10-Makefile.am.patch,
+  +files/pythonmagick-0.9.10-ax_boost_python.patch, +pythonmagick-0.9.10.ebuild,
+  pythonmagick-0.9.7-r1.ebuild, pythonmagick-0.9.8.ebuild:
+  Version bump. Convert to python-r1, bug 508860 by Martin von Gagern. Use
+  mirror://imagemagick in SRC_URI.
 
   25 Mar 2014; Ian Delaney <idella4@gentoo.org>
   +files/pythonmagick-0.9.8-build.patch, pythonmagick-0.9.8.ebuild:

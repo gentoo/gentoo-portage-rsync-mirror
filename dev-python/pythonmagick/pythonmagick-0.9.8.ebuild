@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.5 2014/03/25 11:31:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.6 2014/04/27 15:51:02 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
@@ -17,7 +17,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Python bindings for ImageMagick"
 HOMEPAGE="http://www.imagemagick.org/script/api.php"
-SRC_URI="http://www.imagemagick.org/download/python/${MY_P}.tar.xz"
+SRC_URI="mirror://imagemagick/python/${MY_P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
