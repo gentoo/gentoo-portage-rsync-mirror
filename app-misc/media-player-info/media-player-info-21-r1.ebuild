@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21-r1.ebuild,v 1.6 2014/02/02 16:23:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21-r1.ebuild,v 1.7 2014/04/27 20:06:48 floppym Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_2,3_3,3_4} )
 
 inherit eutils python-any-r1
 

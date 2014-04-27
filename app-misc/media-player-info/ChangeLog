@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.38 2014/02/02 16:23:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.39 2014/04/27 20:06:48 floppym Exp $
+
+  27 Apr 2014; Mike Gilbert <floppym@gentoo.org> media-player-info-21-r1.ebuild:
+  Add python3.4.
 
   02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
   media-player-info-21-r1.ebuild:
