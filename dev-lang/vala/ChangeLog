@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.168 2014/04/25 18:52:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.169 2014/04/27 11:19:59 eva Exp $
+
+*vala-0.24.0 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +vala-0.24.0.ebuild:
+  Version bump.
 
   25 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -files/vala-0.14.2-cogl-pango-1.0.patch, -vala-0.10.4-r2.ebuild,

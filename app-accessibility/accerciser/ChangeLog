@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/accerciser
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.37 2013/12/08 17:30:59 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.38 2014/04/27 11:25:19 eva Exp $
+
+*accerciser-3.12.0 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +accerciser-3.12.0.ebuild, metadata.xml:
+  Version bump for Gnome 3.12.
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> accerciser-3.8.2.ebuild:
   x86 stable, bug #478252
