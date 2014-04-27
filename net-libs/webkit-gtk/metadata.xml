@@ -9,6 +9,5 @@
 	<flag name='gles2'>Enable GLESv2 support.</flag>
 	<flag name="libsecret">Enable libsecret support to store login credentials</flag>
 	<flag name="webgl">Build support for the WebGL HTML API using <pkg>virtual/opengl</pkg></flag>
-	<flag name="webkit2">Enable WebKit2 API that splits web content rendering and application UI into separate processes</flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.51 2014/04/17 08:32:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.52 2014/04/27 09:00:10 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -rygel-0.22.0.ebuild:
+  drop old
 
 *rygel-0.22.1 (17 Apr 2014)
 
