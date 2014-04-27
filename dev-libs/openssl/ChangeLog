@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.531 2014/04/25 08:19:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.532 2014/04/27 14:33:30 vapier Exp $
+
+  27 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  files/openssl-0.9.8h-ldflags.patch, files/openssl-1.0.0a-ldflags.patch,
+  files/openssl-1.0.0d-windres.patch, files/openssl-1.0.0h-pkg-config.patch,
+  files/openssl-1.0.1f-revert-alpha-perl-generation.patch,
+  files/openssl-1.0.2-ipv6.patch, files/openssl-1.0.2-parallel-build.patch:
+  Add more links to upstream bug tracker.
 
 *openssl-1.0.2_beta1-r2 (25 Apr 2014)
 

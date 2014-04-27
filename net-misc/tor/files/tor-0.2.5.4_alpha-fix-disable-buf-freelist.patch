@@ -1,0 +1,42 @@
+From a7401d1fb67027cab223d894a6af160ffa7e54c7 Mon Sep 17 00:00:00 2001
+From: "Anthony G. Basile" <blueness@gentoo.org>
+Date: Sun, 27 Apr 2014 10:34:15 -0400
+Subject: [PATCH] src/or/buffers.c: fix build when --disable-buf-freelists
+
+When tor is configured with --disable-buf-freelists, and RUNNING_DOXYGEN
+is not defined, buffers.c fails to compile because total_bytes_allocated_in_chunks
+is defined in src/or/buffers.c within an #if ... #else block and yet used
+in both the #if ... #else and #else .. #endif block.  By moving its declaration
+before the #if ... #else ... #endif, we expand its visibility to both blocks
+where it is used.
+---
+ src/or/buffers.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/or/buffers.c b/src/or/buffers.c
+index fb18608..eec94ff 100644
+--- a/src/or/buffers.c
++++ b/src/or/buffers.c
+@@ -117,6 +117,9 @@ chunk_repack(chunk_t *chunk)
+   chunk->data = &chunk->mem[0];
+ }
+ 
++/** DOCDOC */
++static size_t total_bytes_allocated_in_chunks = 0;
++
+ #if defined(ENABLE_BUF_FREELISTS) || defined(RUNNING_DOXYGEN)
+ /** A freelist of chunks. */
+ typedef struct chunk_freelist_t {
+@@ -148,9 +151,6 @@ static chunk_freelist_t freelists[] = {
+  * could help with? */
+ static uint64_t n_freelist_miss = 0;
+ 
+-/** DOCDOC */
+-static size_t total_bytes_allocated_in_chunks = 0;
+-
+ static void assert_freelist_ok(chunk_freelist_t *fl);
+ 
+ /** Return the freelist to hold chunks of size <b>alloc</b>, or NULL if
+-- 
+1.8.3.2
+

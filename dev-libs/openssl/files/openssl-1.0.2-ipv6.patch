@@ -1,5 +1,4 @@
-http://rt.openssl.org/Ticket/Display.html?id=2051
-user/pass: guest/guest
+http://rt.openssl.org/Ticket/Display.html?id=2051&user=guest&pass=guest
 
 Index: apps/s_apps.h
 ===================================================================
