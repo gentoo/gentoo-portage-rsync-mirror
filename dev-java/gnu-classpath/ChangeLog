@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/gnu-classpath
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.119 2013/03/02 19:55:16 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.120 2014/04/27 14:18:30 tomwij Exp $
+
+  27 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/gnu-classpath-0.98-r3-freetype-2.5.3-support.patch,
+  gnu-classpath-0.98-r3.ebuild, metadata.xml:
+  Make gnu-classpath support freetype 2.5.3; fixes bug #504944, reported and
+  patch contributed by darkbasic.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   gnu-classpath-0.98-r3.ebuild:

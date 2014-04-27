@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.9 2013/03/02 19:55:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.10 2014/04/27 14:18:30 tomwij Exp $
 
 EAPI=4
 
@@ -62,6 +62,10 @@ RDEPEND=">=virtual/jre-1.5
 	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+java_prepare() {
+	epatch "${FILESDIR}"/${PF}-freetype-2.5.3-support.patch
+}
 
 src_configure() {
 	# We require ecj anyway, so force it to avoid problems with bad versions of javac
