@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8877 2014/04/26 11:04:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8878 2014/04/27 01:57:06 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Apr 2014; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Mask gnome-extra/evolution-kolab as gnome3.8 was removed
 
   26 Apr 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask Python 2.6-only packages and prepare for masking Python 2.6 itself.
