@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libcryptui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/ChangeLog,v 1.15 2014/03/09 12:04:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/ChangeLog,v 1.16 2014/04/27 09:37:23 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libcryptui-3.8.0.ebuild:
+  drop old
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> libcryptui-3.10.1.ebuild:
   x86 stable, bug 499954

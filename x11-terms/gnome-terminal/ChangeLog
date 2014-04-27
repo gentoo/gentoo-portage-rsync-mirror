@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.284 2014/03/25 04:08:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.285 2014/04/27 09:49:05 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gnome-terminal-3.8.4.ebuild:
+  drop old
 
   25 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-terminal-3.10.2.ebuild, +files/gnome-terminal-3.10.2-sys-wait.h.patch:
