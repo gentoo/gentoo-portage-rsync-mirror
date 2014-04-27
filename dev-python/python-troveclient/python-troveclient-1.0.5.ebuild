@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/python-troveclient-1.0.1.ebuild,v 1.2 2014/03/19 23:07:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/python-troveclient-1.0.5.ebuild,v 1.1 2014/04/27 06:24:52 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,14 +19,16 @@ IUSE="test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
-		test? ( >=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
-				<dev-python/hacking-0.7[${PYTHON_USEDEP}]
+		test? ( >=dev-python/hacking-0.8.0[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.9[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
-				>=dev-python/mock-1.0[${PYTHON_USEDEP}] )"
+				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
+				dev-python/httplib2[${PYTHON_USEDEP}] )"
 RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]
+		>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 		>=dev-python/requests-1.1[${PYTHON_USEDEP}]
 		>=dev-python/simplejson-2.0.9[${PYTHON_USEDEP}]
@@ -34,5 +36,6 @@ RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/six-1.4.1[${PYTHON_USEDEP}]"
 
 python_test() {
-	${PYTHON} -m subunit.run discover -t ./ ./troveclient/tests || die
+	testr init
+	testr run --parallel || die "testsuite failed under python2.7"
 }

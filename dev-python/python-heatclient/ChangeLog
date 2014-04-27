@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-heatclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/ChangeLog,v 1.10 2014/03/27 22:05:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/ChangeLog,v 1.11 2014/04/27 06:17:45 prometheanfire Exp $
+
+*python-heatclient-0.2.9 (27 Apr 2014)
+
+  27 Apr 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +python-heatclient-0.2.9.ebuild, -python-heatclient-0.2.4-r1.ebuild,
+  -python-heatclient-0.2.5.ebuild, -python-heatclient-0.2.6.ebuild,
+  -python-heatclient-0.2.8.ebuild, python-heatclient-9999.ebuild:
+  updating clients
 
   27 Mar 2014; Matthew Thode <prometheanfire@gentoo.org>
   python-heatclient-9999.ebuild:
