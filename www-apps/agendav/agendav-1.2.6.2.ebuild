@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/agendav/agendav-1.2.6.2.ebuild,v 1.1 2013/03/25 19:13:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/agendav/agendav-1.2.6.2.ebuild,v 1.2 2014/04/27 07:32:53 grobian Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64"
 
 RDEPEND=">=dev-lang/php-5.3[curl,unicode]
 	virtual/httpd-php
-	|| ( >dev-db/mysql-5.1 >=dev-db/postgresql-8.1 )"
+	|| ( >=virtual/mysql-5.1 >=dev-db/postgresql-8.1 )"
 
 need_php5
 need_httpd

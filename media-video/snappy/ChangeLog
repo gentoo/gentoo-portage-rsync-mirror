@@ -1,6 +1,11 @@
 # ChangeLog for media-video/snappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.7 2014/03/29 21:14:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.8 2014/04/27 07:37:12 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -snappy-0.2.ebuild,
+  -snappy-9999.ebuild:
+  Drop old and live ebuild as nobody is really maintaining it (was completely
+  outdated for current master)
 
 *snappy-1.0 (29 Mar 2014)
 

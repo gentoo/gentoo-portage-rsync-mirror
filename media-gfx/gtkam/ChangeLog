@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.89 2014/02/22 22:11:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.90 2014/04/27 07:32:12 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gtkam-0.1.18.ebuild:
+  drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtkam-0.2.0.ebuild:
   Fix wrong commit, bug 502160
