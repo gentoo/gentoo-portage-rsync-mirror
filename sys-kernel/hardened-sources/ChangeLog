@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1032 2014/04/21 18:34:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1033 2014/04/27 16:35:22 blueness Exp $
+
+*hardened-sources-3.2.57-r2 (27 Apr 2014)
+
+  27 Apr 2014; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.57-r2.ebuild, -hardened-sources-3.2.57-r1.ebuild:
+  Fix hardened patchset for 3.2.57-r1 -> 3.2.57-r2
 
 *hardened-sources-3.14.1 (21 Apr 2014)
 

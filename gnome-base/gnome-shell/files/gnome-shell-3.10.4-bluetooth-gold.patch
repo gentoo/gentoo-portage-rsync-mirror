@@ -1,7 +1,7 @@
-From 92ad0e5a9dca44249639d71a089bfd7159ee6f65 Mon Sep 17 00:00:00 2001
+From 9f056842fad21dc69a51fd9f01543cd85a6d4047 Mon Sep 17 00:00:00 2001
 From: Alexandre Rostovtsev <tetromino@gentoo.org>
 Date: Sat, 15 Mar 2014 17:48:41 -0400
-Subject: [PATCH] build: Add BLUETOOTH_LIBS to libgnome-shell's libadd for
+Subject: [PATCH 3/3] build: Add BLUETOOTH_LIBS to libgnome-shell's libadd for
  ld.gold
 
 For ld.gold, adding BLUETOOTH_LIBS to gnome_shell_LDADD has no effect:
@@ -14,10 +14,10 @@ https://bugzilla.gnome.org/show_bug.cgi?id=726435
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/Makefile.am b/src/Makefile.am
-index 8041052..a4aefde 100644
+index f489a56..79838a3 100644
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
-@@ -301,7 +301,7 @@ libgnome_shell_base_la_LIBADD = $(libgnome_shell_libadd)
+@@ -320,7 +320,7 @@ libgnome_shell_base_la_LIBADD = $(libgnome_shell_libadd)
  libgnome_shell_base_la_CPPFLAGS = $(gnome_shell_cflags)
  
  libgnome_shell_la_LDFLAGS = $(libgnome_shell_ldflags)

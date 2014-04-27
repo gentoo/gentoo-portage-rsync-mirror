@@ -1,0 +1,9 @@
+# ChangeLog for app-editors/pluma
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/ChangeLog,v 1.1 2014/04/27 16:31:57 tomwij Exp $
+
+*pluma-1.8.0 (27 Apr 2014)
+
+  27 Apr 2014; Tom Wijsman <TomWij@gentoo.org> +metadata.xml,
+  +pluma-1.8.0.ebuild:
+  Version bump to 1.8.0. Continuation of app-editors/mate-text-editor.

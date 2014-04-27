@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.168 2014/04/26 07:22:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.169 2014/04/27 16:31:50 eva Exp $
+
+*devhelp-3.12.1 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +devhelp-3.12.1.ebuild:
+  Version bump for Gnome 3.12.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -devhelp-3.6.1-r1.ebuild,
   -devhelp-3.8.2.ebuild:

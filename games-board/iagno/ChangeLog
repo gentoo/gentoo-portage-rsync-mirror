@@ -1,6 +1,11 @@
 # ChangeLog for games-board/iagno
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.13 2014/04/26 07:50:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.14 2014/04/27 16:38:38 eva Exp $
+
+*iagno-3.12.1 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +iagno-3.12.1.ebuild:
+  Version bump for Gnome 3.12.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -iagno-3.8.3.ebuild:
   drop old
