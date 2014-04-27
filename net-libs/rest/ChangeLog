@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.21 2014/04/27 08:26:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.22 2014/04/27 18:32:02 eva Exp $
+
+*rest-0.7.91 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +rest-0.7.91.ebuild:
+  Version bump for Gnome 3.12.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -rest-0.7.12.ebuild:
   drop old

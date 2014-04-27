@@ -8,5 +8,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fb
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/ojnk/oidentd-2.0.8.tar.gz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	b7fcca5a7b575419dbd3b10c89c2588c	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=1cf8c56e03d3c05373d9777af7c108a0
