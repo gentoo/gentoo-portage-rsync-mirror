@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.73 2014/04/26 18:03:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.74 2014/04/27 12:57:35 jer Exp $
+
+  27 Apr 2014; Jeroen Roovers <jer@gentoo.org> rake-compiler-0.9.1.ebuild:
+  Marked ~hppa (bug #508826).
 
   26 Apr 2014; Jeroen Roovers <jer@gentoo.org> rake-compiler-0.9.1.ebuild:
   Stable for HPPA (bug #508416).

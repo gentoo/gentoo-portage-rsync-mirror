@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.68 2014/04/26 17:52:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.69 2014/04/27 12:56:47 jer Exp $
+
+  27 Apr 2014; Jeroen Roovers <jer@gentoo.org> rspec-mocks-2.14.6.ebuild:
+  Marked ~hppa (bug #508828).
 
   26 Apr 2014; Jeroen Roovers <jer@gentoo.org> rspec-mocks-2.14.6.ebuild:
   Stable for HPPA (bug #508416).

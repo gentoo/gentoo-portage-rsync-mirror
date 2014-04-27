@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1-r3.ebuild,v 1.1 2014/03/30 10:18:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1-r3.ebuild,v 1.2 2014/04/27 12:49:06 dilfridge Exp $
 
 inherit eutils autotools systemd
 
@@ -8,7 +8,7 @@ DESCRIPTION="An open-source implementation of Service Location Protocol"
 HOMEPAGE="http://www.openslp.org/"
 SRC_URI="mirror://sourceforge/openslp/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
