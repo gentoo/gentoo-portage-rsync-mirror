@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.0.ebuild,v 1.4 2013/12/08 19:04:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.0.ebuild,v 1.5 2014/04/27 21:42:17 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/libcanberra[gtk3]
 	net-libs/libsoup:2.4
 	x11-libs/gtk+:3
-	>=x11-misc/colord-0.1.31
+	>=x11-misc/colord-0.1.31:0=
 	>=x11-libs/colord-gtk-0.1.24
 "
 DEPEND="${RDEPEND}

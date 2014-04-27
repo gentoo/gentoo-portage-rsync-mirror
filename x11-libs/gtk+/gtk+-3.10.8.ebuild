@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.8.ebuild,v 1.11 2014/04/21 10:30:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.10.8.ebuild,v 1.12 2014/04/27 21:57:29 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 	>=x11-libs/pango-1.32.4[introspection?]
 	x11-misc/shared-mime-info
 
-	colord? ( >=x11-misc/colord-0.1.9 )
+	colord? ( >=x11-misc/colord-0.1.9:0= )
 	cups? ( >=net-print/cups-1.2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.32 )
 	wayland? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.10.1.ebuild,v 1.5 2014/03/09 11:59:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.10.1.ebuild,v 1.6 2014/04/27 21:45:29 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ COMMON_DEPEND="
 	x11-libs/libXrandr
 	>=x11-libs/gtk+-3.3.8:3
 	>=x11-libs/vte-0.25.1:2.90
-	>=x11-misc/colord-0.1.34
+	>=x11-misc/colord-0.1.34:0=
 	>=x11-libs/colord-gtk-0.1.20
 
 	clutter? (
