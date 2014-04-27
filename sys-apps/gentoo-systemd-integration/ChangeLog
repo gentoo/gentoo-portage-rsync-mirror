@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.24 2014/04/06 06:17:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.25 2014/04/27 11:49:04 maekke Exp $
+
+  27 Apr 2014; Markus Meier <maekke@gentoo.org>
+  gentoo-systemd-integration-4.ebuild:
+  arm stable, bug #506824
 
   06 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -gentoo-systemd-integration-1.ebuild, -gentoo-systemd-integration-3.ebuild,
