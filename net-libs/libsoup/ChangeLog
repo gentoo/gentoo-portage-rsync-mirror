@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.329 2014/04/21 10:30:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.330 2014/04/27 08:25:59 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/libsoup-2.42.1-ipv6-tests.patch, -libsoup-2.38.1.ebuild,
+  -libsoup-2.40.3.ebuild, -libsoup-2.42.3.1.ebuild:
+  drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libsoup-2.44.2.ebuild:
   Stable for arm, wrt bug #507568

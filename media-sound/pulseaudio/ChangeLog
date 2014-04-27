@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.331 2014/04/26 19:05:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.332 2014/04/27 08:03:30 pacho Exp $
+
+*pulseaudio-5.0-r1 (27 Apr 2014)
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org> +pulseaudio-5.0-r1.ebuild:
+  Support bluez-4 too (#505474, #506744, 506024)
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-5.0.ebuild:
   gnome-audio isn't needed, lots of distributions don't even ship it and it's

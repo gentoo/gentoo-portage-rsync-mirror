@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.105 2014/04/21 10:30:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.106 2014/04/27 08:25:17 pacho Exp $
+
+  27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/libsoup-gnome-2.38.0-system-lib.patch,
+  -files/libsoup-gnome-2.40.2-system-lib.patch,
+  -files/libsoup-gnome-2.42.2-system-lib.patch, -libsoup-gnome-2.38.1.ebuild,
+  -libsoup-gnome-2.40.3.ebuild, -libsoup-gnome-2.42.3.1.ebuild:
+  drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libsoup-gnome-2.44.2.ebuild:
   Stable for arm, wrt bug #507568
