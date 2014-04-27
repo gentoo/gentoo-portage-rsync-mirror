@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.53 2014/03/14 15:59:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.54 2014/04/27 21:06:59 floppym Exp $
 
 EAPI="4"
 
-PYTHON_COMPAT=( python2_7 python3_{2,3} )
+PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
 
 inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1 python-single-r1
 

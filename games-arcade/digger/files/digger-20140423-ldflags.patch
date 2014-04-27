@@ -15,7 +15,7 @@ diff -ru digger-digger.orig/Makefile digger-digger/Makefile
  
  digger$(ESUFFIX): $(OBJS)
 -	$(CC) -o digger$(ESUFFIX) $(OBJS) $(LIBS)
-+	$(CC) $(LDFLAGS) -o digger$(ESUFFIX) $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o digger$(ESUFFIX) $(OBJS) $(LIBS)
  
  $(OBJS): %.o: %.c
  	$(CC) -c $(RCFLAGS) $(CFLAGS) $< -o $@

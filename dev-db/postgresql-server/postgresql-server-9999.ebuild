@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.12 2013/09/15 21:20:56 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.13 2014/04/27 21:03:33 floppym Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_{6,7},3_{2,3}} )
+PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
 WANT_AUTOMAKE="none"
 
 inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user versionator base git-2

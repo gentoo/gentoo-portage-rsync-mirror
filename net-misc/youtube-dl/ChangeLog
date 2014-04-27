@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.333 2014/04/22 15:24:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.334 2014/04/27 21:05:34 floppym Exp $
+
+  27 Apr 2014; Mike Gilbert <floppym@gentoo.org> youtube-dl-2014.04.21.6.ebuild:
+  Add python3.4.
 
 *youtube-dl-2014.04.21.6 (22 Apr 2014)
 

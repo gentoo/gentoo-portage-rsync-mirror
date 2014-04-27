@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.36 2014/03/31 15:03:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.37 2014/04/27 21:20:47 hd_brummy Exp $
+
+  27 Apr 2014; Joerg Bornkessel <hd_brummy@gentoo.org> w_scan-20121111.ebuild,
+  w_scan-20130331.ebuild, w_scan-20140118.ebuild:
+  stable amd64 x86, wrt bug 465158
 
 *w_scan-20140118 (31 Mar 2014)
 

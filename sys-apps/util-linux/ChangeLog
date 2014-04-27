@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.456 2014/04/07 20:11:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.457 2014/04/27 21:07:00 floppym Exp $
+
+  27 Apr 2014; Mike Gilbert <floppym@gentoo.org> util-linux-2.24.1-r2.ebuild,
+  util-linux-9999.ebuild:
+  Add python3.4.
 
   07 Apr 2014; Mike Frysinger <vapier@gentoo.org> util-linux-2.22.2.ebuild,
   util-linux-2.23.2-r2.ebuild, util-linux-2.24.1-r1.ebuild,

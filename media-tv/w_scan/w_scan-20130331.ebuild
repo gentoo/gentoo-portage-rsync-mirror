@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20130331.ebuild,v 1.1 2013/06/15 17:30:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20130331.ebuild,v 1.2 2014/04/27 21:20:47 hd_brummy Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ SRC_URI="http://wirbel.htpc-forum.de/w_scan/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 DEPEND=">=virtual/linuxtv-dvb-headers-5.3"
