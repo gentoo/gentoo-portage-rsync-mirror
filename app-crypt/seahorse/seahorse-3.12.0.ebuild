@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.12.0.ebuild,v 1.1 2014/04/27 15:27:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.12.0.ebuild,v 1.2 2014/04/27 22:15:32 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -48,12 +48,13 @@ src_prepare() {
 		-e '/CFLAGS="$CFLAGS -O0/d' \
 		-i configure.ac configure || die "sed 1 failed"
 
-	vala_src_prepare
 	gnome2_src_prepare
 }
 
 src_configure() {
+	# bindir is needed due to bad macro expansion in desktop file, bug #508610
 	gnome2_src_configure \
+		--bindir=/usr/bin \
 		--enable-pgp \
 		--enable-ssh \
 		--enable-pkcs11 \

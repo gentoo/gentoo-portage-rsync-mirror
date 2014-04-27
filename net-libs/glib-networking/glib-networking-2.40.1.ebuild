@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.40.1.ebuild,v 1.1 2014/04/27 17:41:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.40.1.ebuild,v 1.2 2014/04/27 22:18:05 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -40,7 +40,6 @@ src_prepare() {
 	eautoreconf
 	gnome2_src_prepare
 }
-
 
 src_configure() {
 	gnome2_src_configure \

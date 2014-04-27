@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.81 2014/04/27 17:41:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.82 2014/04/27 22:18:05 eva Exp $
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  glib-networking-2.40.1.ebuild:
+  Drop useless blank line.
 
 *glib-networking-2.40.1 (27 Apr 2014)
 
