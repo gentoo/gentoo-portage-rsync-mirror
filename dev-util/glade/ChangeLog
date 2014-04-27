@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.212 2014/04/26 07:24:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.213 2014/04/27 18:30:49 eva Exp $
+
+*glade-3.18.2 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +glade-3.18.2.ebuild:
+  Version bump for Gnome 3.12.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -glade-3.12.2.ebuild,
   -glade-3.14.2.ebuild, -glade-3.8.3.ebuild:

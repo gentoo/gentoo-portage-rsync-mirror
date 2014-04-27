@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.194 2014/03/29 21:57:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.195 2014/04/27 18:04:11 eva Exp $
+
+*networkmanager-0.9.8.10 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +networkmanager-0.9.8.10.ebuild:
+  Version bump for Gnome 3.12.
 
   29 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   networkmanager-0.9.8.8.ebuild:

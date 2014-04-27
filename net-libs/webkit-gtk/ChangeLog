@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.264 2014/04/27 08:45:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.265 2014/04/27 18:26:53 eva Exp $
+
+*webkit-gtk-2.4.1-r200 (27 Apr 2014)
+*webkit-gtk-2.4.1 (27 Apr 2014)
+
+  27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> +webkit-gtk-2.4.1.ebuild,
+  +webkit-gtk-2.4.1-r200.ebuild, +files/webkit-gtk-2.4.1-ia64-malloc.patch:
+  Version bump for Gnome 3.12. Move some things from src_prepare to a more
+  relevant phase. Upstream changed the way gdk-backends are enabled to match
+  gtk+ and clutter which allows us to support multiple backends at the same
+  time. Make sure we at least get one. Prevent alteration of user CFLAGS.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -files/webkit-gtk-1.10.1-disable-backtrace-uclibc.patch,
