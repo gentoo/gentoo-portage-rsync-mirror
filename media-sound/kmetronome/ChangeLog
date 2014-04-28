@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kmetronome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmetronome/ChangeLog,v 1.10 2014/03/21 19:50:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmetronome/ChangeLog,v 1.11 2014/04/27 23:27:49 johu Exp $
+
+  27 Apr 2014; Johannes Huber <johu@gentoo.org> -kmetronome-0.10.1.ebuild,
+  kmetronome-0.10.1-r1.ebuild:
+  amd64/x86 stable, remove old.
 
 *kmetronome-0.10.1-r1 (21 Mar 2014)
 
