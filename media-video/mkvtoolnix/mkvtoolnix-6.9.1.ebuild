@@ -1,13 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.9.1.ebuild,v 1.1 2014/04/26 09:46:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.9.1.ebuild,v 1.2 2014/04/28 19:48:01 radhermit Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
-USE_RUBY="ruby19 ruby20 ruby21"
-# don't add ruby to RDEPEND
-RUBY_OPTIONAL=yes
-inherit eutils ruby-ng multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
+inherit eutils multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -17,6 +14,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug pch qt5 wxwidgets"
+
+ruby_atom() {
+	local ruby_slot=${1/ruby/}
+	ruby_slot="${ruby_slot:0:1}.${ruby_slot:1:2}"
+	echo "dev-lang/ruby:${ruby_slot}"
+}
+
+# hacks to avoid using the ruby eclasses since this requires something similar
+# to the python-any-r1 eclass for ruby which currently doesn't exist
+RUBY_IMPLS=( ruby19 ruby20 ruby21 )
+RUBY_BDEPS="$(for ruby_impl in "${RUBY_IMPLS[@]}"; do echo $(ruby_atom ${ruby_impl}); done)"
 
 RDEPEND="
 	>=dev-libs/libebml-1.3.0:=
@@ -36,12 +44,10 @@ RDEPEND="
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 "
 DEPEND="${RDEPEND}
-	|| ( $(ruby_implementations_depend) )
+	|| ( ${RUBY_BDEPS} )
+	sys-devel/gettext
 	virtual/pkgconfig
 "
-
-# workaround to override ruby-ng
-S=${WORKDIR}/${P}
 
 pkg_pretend() {
 	# http://bugs.gentoo.org/419257
@@ -53,15 +59,16 @@ pkg_pretend() {
 	fi
 }
 
-src_unpack() {
-	# workaround to override ruby-ng
-	default
-}
-
 src_prepare() {
-	# hack from ruby-ng eclass to determine ruby version to build with
-	local ruby_implementations=$(ruby_get_use_implementations)
-	export RUBY="$(ruby_implementation_command ${ruby_implementations[0]})"
+	local ruby_impl
+	for ruby_impl in "${RUBY_IMPLS[@]}"; do
+		if has_version "$(ruby_atom ${ruby_impl})"; then
+			export RUBY=${ruby_impl}
+			break
+		fi
+	done
+
+	[[ -z ${RUBY} ]] && die "No available ruby implementations to build with"
 
 	epatch "${FILESDIR}"/${PN}-5.8.0-system-pugixml.patch \
 		"${FILESDIR}"/${PN}-5.8.0-boost-configure.patch

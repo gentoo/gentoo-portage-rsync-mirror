@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/tatt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.6 2013/06/10 14:01:05 tomka Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.7 2014/04/28 19:48:47 bicatali Exp $
+
+  28 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> tatt-0.1.ebuild:
+  Keyword ~amd64-linux ~x86-linux
 
   10 Jun 2013; Thomas Kahle <tomka@gentoo.org> tatt-9999.ebuild:
   add non https git url, install manpage

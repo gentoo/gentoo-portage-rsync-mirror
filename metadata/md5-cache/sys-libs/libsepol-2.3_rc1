@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DESCRIPTION=SELinux binary policy representation library
+EAPI=4
+HOMEPAGE=http://userspace.selinuxproject.org
+IUSE=abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RESTRICT=test
+SLOT=0
+SRC_URI=http://userspace.selinuxproject.org/releases/2.3-rc1/libsepol-2.3-rc1.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	091674130f5299eaa171dc2dd1bb272d	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=93c846b39ef63e54b30e78392d690cf4

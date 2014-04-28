@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.132 2014/04/19 18:40:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.133 2014/04/28 19:44:09 swift Exp $
+
+*policycoreutils-2.3_rc1 (28 Apr 2014)
+
+  28 Apr 2014; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.3_rc1.ebuild:
+  2.3-rc1 release
 
 *policycoreutils-2.2.5-r3 (19 Apr 2014)
 

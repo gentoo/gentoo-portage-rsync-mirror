@@ -5,7 +5,7 @@
 <use>
  <flag name='netgroups'>
   Support matching NIS (host) netgroup names via the @netgroup syntax
-  (if you don't know what this means, you most likely need want it)
+  (if you don't know what this means, you most likely do not need it)
  </flag>
 </use>
 </pkgmetadata>
