@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1.ebuild,v 1.1 2014/04/28 06:04:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1.ebuild,v 1.2 2014/04/28 20:43:11 jer Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools eutils flag-o-matic pam toolchain-funcs user
 
 DESCRIPTION="Full-screen window manager that multiplexes physical terminals between several processes"
 HOMEPAGE="http://www.gnu.org/software/screen/"
-SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

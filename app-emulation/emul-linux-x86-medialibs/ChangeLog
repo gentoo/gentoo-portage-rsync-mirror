@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.89 2014/04/24 21:34:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.90 2014/04/28 20:39:06 pacho Exp $
+
+  28 Apr 2014; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-medialibs-20140406.ebuild:
+  Update libcdio dep too (#508936 by Sven Eden)
 
   24 Apr 2014; Pacho Ramos <pacho@gentoo.org> files/remove-native:
   Update remove-native (#508378 by Sven and Paolo Pedroni)
