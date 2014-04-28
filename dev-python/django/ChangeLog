@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.126 2014/04/27 09:09:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.127 2014/04/28 04:38:42 idella4 Exp $
+
+  28 Apr 2014; Ian Delaney <idella4@gentoo.org> -django-1.4.8.ebuild:
+  remove -1.4.8 wrt bug #508514
 
   27 Apr 2014; Agostino Sarubbo <ago@gentoo.org> django-1.4.11.ebuild:
   Stable for x86, wrt bug #508514
