@@ -12,7 +12,6 @@ start_stop_daemon_args="--quiet --user ${NOVA_USER:-nova}"
 
 depend() {
     need net 
-    need rabbitmq
 }
 
 start_pre() {
