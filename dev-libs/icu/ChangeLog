@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.262 2014/01/01 21:03:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.263 2014/04/28 17:29:48 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> icu-51.2-r2.ebuild,
+  icu-52.1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
 *icu-52.1 (01 Jan 2014)
 

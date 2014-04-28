@@ -1,7 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for plugins that can show IDownloads and IJobHolders
-EAPI=4
-KEYWORDS=~amd64 ~x86
-RDEPEND=app-leechcraft/lc-summary
-SLOT=0
-_md5_=2f19adc46914f7b7b55f96d898e3fb9a

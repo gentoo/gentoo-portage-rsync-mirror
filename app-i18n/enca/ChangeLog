@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.96 2014/03/16 09:41:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.97 2014/04/28 17:20:45 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> enca-1.14-r1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
   16 Mar 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> enca-1.14-r1.ebuild:
   Update multilib_is_native_abi to multilib_build_binaries

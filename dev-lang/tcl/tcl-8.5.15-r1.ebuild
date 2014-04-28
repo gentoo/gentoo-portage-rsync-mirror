@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.15-r1.ebuild,v 1.5 2014/01/20 07:34:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.15-r1.ebuild,v 1.6 2014/04/28 17:23:17 mgorny Exp $
 
 EAPI=5
 
@@ -92,7 +92,7 @@ multilib_src_install() {
 	dosym libtcl${v1}$(get_libname) /usr/${mylibdir}/libtcl$(get_libname)
 	dosym libtclstub${v1}.a /usr/${mylibdir}/libtclstub.a
 
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		dosym tclsh${v1} /usr/bin/tclsh
 		dodoc "${SPARENT}"/{ChangeLog*,README,changes}
 	fi

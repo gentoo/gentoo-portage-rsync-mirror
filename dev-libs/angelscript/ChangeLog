@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/angelscript
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.16 2014/03/23 13:48:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.17 2014/04/28 17:23:53 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> angelscript-2.26.3.ebuild,
+  angelscript-2.27.0.ebuild, angelscript-2.27.1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
 *angelscript-2.28.2 (23 Mar 2014)
 

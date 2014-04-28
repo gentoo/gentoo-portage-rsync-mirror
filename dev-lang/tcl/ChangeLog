@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.189 2014/01/20 07:34:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.190 2014/04/28 17:23:17 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> tcl-8.5.15-r1.ebuild,
+  tcl-8.6.1-r1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
   20 Jan 2014; Justin Lecher <jlec@gentoo.org> tcl-8.5.13-r1.ebuild,
   -tcl-8.5.14.ebuild, -tcl-8.5.15.ebuild, tcl-8.5.15-r1.ebuild,

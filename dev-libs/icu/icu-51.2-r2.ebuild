@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.2-r2.ebuild,v 1.1 2013/12/26 11:12:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.2-r2.ebuild,v 1.2 2014/04/28 17:29:48 mgorny Exp $
 
 EAPI=5
 
@@ -91,7 +91,7 @@ multilib_src_configure() {
 		$(use_enable static-libs static)
 	)
 
-	multilib_build_binaries && myeconfargs+=(
+	multilib_is_native_abi && myeconfargs+=(
 		$(use_enable examples samples)
 	)
 	tc-is-cross-compiler && myeconfargs+=(
@@ -108,7 +108,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	default
 
-	if multilib_build_binaries && use doc; then
+	if multilib_is_native_abi && use doc; then
 		doxygen -u Doxyfile || die
 		doxygen Doxyfile || die
 	fi
@@ -131,7 +131,7 @@ multilib_src_test() {
 multilib_src_install() {
 	default
 
-	if multilib_build_binaries && use doc; then
+	if multilib_is_native_abi && use doc; then
 		dohtml -p api -r doc/html/
 	fi
 }

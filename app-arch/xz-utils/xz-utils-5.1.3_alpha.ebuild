@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.1.3_alpha.ebuild,v 1.3 2014/01/18 01:43:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.1.3_alpha.ebuild,v 1.4 2014/04/28 17:19:43 mgorny Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -50,7 +50,7 @@ multilib_src_configure() {
 		$(use_enable nls) \
 		$(use_enable threads) \
 		$(use_enable static-libs static) \
-		$(multilib_build_binaries || echo --disable-{xz,xzdec,lzmadec,lzmainfo,lzma-links,scripts})
+		$(multilib_is_native_abi || echo --disable-{xz,xzdec,lzmadec,lzmainfo,lzma-links,scripts})
 }
 
 multilib_src_install() {
