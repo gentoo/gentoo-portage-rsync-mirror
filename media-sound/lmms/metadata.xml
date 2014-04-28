@@ -10,6 +10,7 @@
 <maintainer>
   <email>polynomial-c@gentoo.org</email>
   <name>Lars Wendler</name>
+  <description>proxy-maintainer, please CC on bugs</description>
 </maintainer>
 <maintainer>
   <email>gimpel@sonnenkinder.org</email>
@@ -18,6 +19,7 @@
 <maintainer>
   <email>jaquilina@eagleeyet.net</email>
   <name>Jonathan Aquilina</name>
+  <description>Please assign bugs</description>
 </maintainer>
   <use>
     <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis plugin.</flag>
