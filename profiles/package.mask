@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15622 2014/04/28 07:07:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15624 2014/04/28 14:30:26 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -603,11 +603,6 @@ app-emacs/delicious
 =net-mail/dovecot-2.1*
 <mail-filter/dovecot_deleted_to_trash-0.5-r1
 
-# Jeroen Roovers <jer@gentoo.org> (16 Feb 2014)
-# Unmaintained, has several problems on modern systems,
-# superseded by net-analyzer/ifstatus (bug #501432)
-net-analyzer/ethstatus
-
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Masked for testing
 =media-sound/lilypond-2.19*
@@ -793,6 +788,7 @@ dev-java/itext:5
 # Jeroen Roovers <jer@gentoo.org> (31 Jul 2013)
 # Needs >=dev-lang/lua-5.2
 ~net-analyzer/nmap-6.40
+~net-analyzer/nmap-6.46
 
 # Tim Harder <radhermit@gentoo.org> (26 Jul 2013)
 # Masked for testing
