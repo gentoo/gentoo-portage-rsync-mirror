@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/stumpwm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.7 2012/11/17 16:58:54 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.8 2014/04/28 11:20:48 nimiux Exp $
+
+  28 Apr 2014; Chema Alonso <nimiux@gentoo.org> metadata.xml:
+  Take maintainership of package
 
   17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> stumpwm-0.9.7.ebuild:
   fix doinfo, wrt bug #442922
