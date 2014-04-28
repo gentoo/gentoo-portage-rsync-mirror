@@ -17,4 +17,5 @@ depend() {
 
 start_pre() {
 	checkpath --directory --owner ${NOVA_USER:-nova}:${NOVA_GROUP:-nova} --mode 0664 ${NOVA_RUN:-/var/run/nova}
+	checkpath --directory --owner ${NOVA_USER:-nova}:${NOVA_GROUP:-nova} --mode 0664 ${NOVA_RUN:-/var/lock/nova}
 }

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.14.ebuild,v 1.2 2014/01/11 11:09:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.17.ebuild,v 1.1 2014/04/28 03:15:51 grozin Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
 
 #same order as http://www.sbcl.org/platform-table.html
 BV_X86=1.0.58
-BV_AMD64=1.1.14
+BV_AMD64=1.1.17
 BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
