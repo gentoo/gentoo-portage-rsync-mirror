@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.5.ebuild,v 1.1 2014/04/16 08:57:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.5.ebuild,v 1.2 2014/04/28 20:01:19 grobian Exp $
 
 EAPI="5"
 
@@ -141,10 +141,12 @@ src_unpack() {
 		mkdir dmgmount
 		hdiutil attach "${DISTDIR}"/jdk-${MY_PV}-macosx-x64.dmg \
 			-mountpoint "${T}"/dmgmount
-		xar -xf dmgmount/JDK\ $(get_version_component_range 2)\ Update\ $(get_version_component_range 4).pkg
+		local update=$(get_version_component_range 4)
+		[[ ${#update} == 1 ]] && update="0${update}"
+		xar -xf dmgmount/JDK\ $(get_version_component_range 2)\ Update\ ${update}.pkg
 		hdiutil detach "${T}"/dmgmount
-		zcat jdk1${MY_PV/u/0}.pkg/Payload | cpio -idv
-		mv Contents/Home "${S}"
+		zcat jdk1${MY_PV%u*}0${update}.pkg/Payload | cpio -idv
+		mv Contents/Home "${WORKDIR}"/jdk${MY_PV}
 		popd > /dev/null
 	else
 		default
@@ -277,10 +279,10 @@ src_install() {
 		pushd "${ddest}"/jre/lib > /dev/null || die
 		local lib needed nlib npath
 		for lib in \
-				libJObjC libdecora-sse libglass libjavafx-{font,iio} \
-				libjfxmedia libjfxwebkit libprism-es2 ;
-		do
-			lib=${lib}.dylib
+			decora_sse glass jfx{media,webkit} \
+			javafx_{font,font_t2k,iio} prism_{common,es2,sw} \
+		; do
+			lib=lib${lib}.dylib
 			einfo "Fixing self-reference of ${lib}"
 			install_name_tool \
 				-id "${EPREFIX}${dest}/jre/lib/${lib}" \
