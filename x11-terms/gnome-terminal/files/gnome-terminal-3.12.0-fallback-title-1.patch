@@ -1,0 +1,29 @@
+From fe7230e2113510596be5e773f9c1074ed650e858 Mon Sep 17 00:00:00 2001
+From: Christian Persch <chpe@gnome.org>
+Date: Sun, 20 Apr 2014 20:21:04 +0200
+Subject: [PATCH 56/61] window: Use fallback tab title for empty terminal title
+
+https://bugzilla.gnome.org/show_bug.cgi?id=706816
+---
+ src/terminal-tab-label.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/terminal-tab-label.c b/src/terminal-tab-label.c
+index 90bab28..a83d94f 100644
+--- a/src/terminal-tab-label.c
++++ b/src/terminal-tab-label.c
+@@ -75,8 +75,9 @@ sync_tab_label (TerminalScreen *screen,
+   title = terminal_screen_get_title (screen);
+   hbox = gtk_widget_get_parent (label);
+ 
+-  gtk_label_set_text (GTK_LABEL (label), title);
+-  
++  gtk_label_set_text (GTK_LABEL (label),
++                      title && title[0] ? title : _("Terminal"));
++
+   gtk_widget_set_tooltip_text (hbox, title);
+ }
+ 
+-- 
+1.9.0
+

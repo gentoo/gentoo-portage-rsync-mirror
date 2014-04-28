@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8886 2014/04/27 22:54:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8887 2014/04/28 06:56:18 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Clean up overlay ebuilds from Gnome 3.12 mask. Fix gnome-terminal mask line.
 
   27 Apr 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Mask dev-python/python-gnutls. See bug #446016.

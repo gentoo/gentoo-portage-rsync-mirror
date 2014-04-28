@@ -1,6 +1,19 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.285 2014/04/27 09:49:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.286 2014/04/28 06:57:43 eva Exp $
+
+*gnome-terminal-3.12.0 (28 Apr 2014)
+
+  28 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-terminal-3.12.0.ebuild,
+  +files/gnome-terminal-3.12.0-appmenu-parameter.patch,
+  +files/gnome-terminal-3.12.0-fallback-title-1.patch,
+  +files/gnome-terminal-3.12.0-fallback-title-2.patch,
+  +files/gnome-terminal-3.12.0-remove-set-title-feature-0.patch,
+  +files/gnome-terminal-3.12.0-remove-set-title-feature-1.patch,
+  +files/gnome-terminal-3.12.0-remove-set-title-feature-2.patch,
+  +files/gnome-terminal-3.12.0-remove-set-title-feature-3.patch, metadata.xml:
+  Version bump for Gnome 3.12. Add gnome-shell USE flag local description.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gnome-terminal-3.8.4.ebuild:
   drop old

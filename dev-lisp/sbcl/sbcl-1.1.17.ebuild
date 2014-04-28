@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.17.ebuild,v 1.1 2014/04/28 03:15:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.17.ebuild,v 1.2 2014/04/28 06:35:54 gienah Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -88,7 +88,7 @@ src_prepare() {
 	# To make the hardened compiler NOT compile with -fPIE -pie
 	if gcc-specs-pie ; then
 		einfo "Disabling PIE..."
-		epatch "${FILESDIR}"/gentoo-fix_nopie_for_hardened_toolchain.patch
+		epatch "${FILESDIR}"/${PN}-1.1.17-gentoo-fix_nopie_for_hardened_toolchain.patch
 	fi
 
 	cp /usr/share/common-lisp/source/asdf/build/asdf.lisp contrib/asdf/ || die

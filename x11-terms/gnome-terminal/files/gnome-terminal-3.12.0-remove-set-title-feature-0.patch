@@ -1,0 +1,131 @@
+From de0dc7c2649c42e2aa02a66e4be27d262b34452d Mon Sep 17 00:00:00 2001
+From: Debarshi Ray <debarshir@gnome.org>
+Date: Fri, 11 Apr 2014 15:52:23 +0200
+Subject: [PATCH 45/61] Remove unused code to create terminals with custom
+ titles
+
+Irrespective of how you create a new terminal (over D-Bus using
+$bindir/gnome-terminal, ctrl+shift n, or the application menu), the
+code to set a custom title during construction was unused. Possibly
+as a result of f27bf0135a2d18ba22158d28bf1f8c5f6ec066c8
+
+https://bugzilla.gnome.org/show_bug.cgi?id=724110
+---
+ src/terminal-app.c    | 3 +--
+ src/terminal-app.h    | 1 -
+ src/terminal-gdbus.c  | 6 ++----
+ src/terminal-screen.c | 4 ----
+ src/terminal-screen.h | 1 -
+ src/terminal-window.c | 2 +-
+ 6 files changed, 4 insertions(+), 13 deletions(-)
+
+diff --git a/src/terminal-app.c b/src/terminal-app.c
+index 9ded6fc..57a6f15 100644
+--- a/src/terminal-app.c
++++ b/src/terminal-app.c
+@@ -527,7 +527,6 @@ terminal_app_new_terminal (TerminalApp     *app,
+                            TerminalWindow  *window,
+                            GSettings       *profile,
+                            char           **override_command,
+-                           const char      *title,
+                            const char      *working_dir,
+                            char           **child_env,
+                            double           zoom)
+@@ -537,7 +536,7 @@ terminal_app_new_terminal (TerminalApp     *app,
+   g_return_val_if_fail (TERMINAL_IS_APP (app), NULL);
+   g_return_val_if_fail (TERMINAL_IS_WINDOW (window), NULL);
+ 
+-  screen = terminal_screen_new (profile, override_command, title,
++  screen = terminal_screen_new (profile, override_command,
+                                 working_dir, child_env, zoom);
+ 
+   terminal_window_add_screen (window, screen, -1);
+diff --git a/src/terminal-app.h b/src/terminal-app.h
+index 6da6036..9502845 100644
+--- a/src/terminal-app.h
++++ b/src/terminal-app.h
+@@ -75,7 +75,6 @@ TerminalScreen *terminal_app_new_terminal (TerminalApp     *app,
+                                            TerminalWindow  *window,
+                                            GSettings       *profile,
+                                            char           **override_command,
+-                                           const char      *title,
+                                            const char      *working_dir,
+                                            char           **child_env,
+                                            double           zoom);
+diff --git a/src/terminal-gdbus.c b/src/terminal-gdbus.c
+index b801b9e..7b68a85 100644
+--- a/src/terminal-gdbus.c
++++ b/src/terminal-gdbus.c
+@@ -368,7 +368,7 @@ terminal_factory_impl_create_instance (TerminalFactory *factory,
+   TerminalObjectSkeleton *skeleton;
+   char *object_path;
+   GSettings *profile = NULL;
+-  const char *profile_uuid, *title;
++  const char *profile_uuid;
+   gboolean zoom_set = FALSE;
+   gdouble zoom = 1.0;
+   guint window_id;
+@@ -456,12 +456,10 @@ terminal_factory_impl_create_instance (TerminalFactory *factory,
+ 
+   g_assert (window != NULL);
+ 
+-  if (!g_variant_lookup (options, "title", "&s", &title))
+-    title = NULL;
+   if (g_variant_lookup (options, "zoom", "d", &zoom))
+     zoom_set = TRUE;
+ 
+-  screen = terminal_screen_new (profile, NULL, title, NULL, NULL, 
++  screen = terminal_screen_new (profile, NULL, NULL, NULL,
+                                 zoom_set ? zoom : 1.0);
+   terminal_window_add_screen (window, screen, -1);
+   terminal_window_switch_screen (window, screen);
+diff --git a/src/terminal-screen.c b/src/terminal-screen.c
+index c504881..bb05924 100644
+--- a/src/terminal-screen.c
++++ b/src/terminal-screen.c
+@@ -622,7 +622,6 @@ terminal_screen_finalize (GObject *object)
+ TerminalScreen *
+ terminal_screen_new (GSettings       *profile,
+                      char           **override_command,
+-                     const char      *title,
+                      const char      *working_dir,
+                      char           **child_env,
+                      double           zoom)
+@@ -643,9 +642,6 @@ terminal_screen_new (GSettings       *profile,
+ 			   g_settings_get_int (profile, TERMINAL_PROFILE_DEFAULT_SIZE_ROWS_KEY));
+   }
+ 
+-  if (title)
+-    terminal_screen_set_user_title (screen, title);
+-
+   priv->initial_working_directory = g_strdup (working_dir);
+ 
+   if (override_command)
+diff --git a/src/terminal-screen.h b/src/terminal-screen.h
+index d0341c8..2a0d391 100644
+--- a/src/terminal-screen.h
++++ b/src/terminal-screen.h
+@@ -76,7 +76,6 @@ const char *terminal_screen_get_uuid (TerminalScreen *screen);
+ 
+ TerminalScreen *terminal_screen_new (GSettings       *profile,
+                                      char           **override_command,
+-                                     const char      *title,
+                                      const char      *working_dir,
+                                      char           **child_env,
+                                      double           zoom);
+diff --git a/src/terminal-window.c b/src/terminal-window.c
+index 0a611a7..9c209f7 100644
+--- a/src/terminal-window.c
++++ b/src/terminal-window.c
+@@ -400,7 +400,7 @@ action_new_terminal_cb (GSimpleAction *action,
+ 
+   new_working_directory = terminal_screen_get_current_dir (priv->active_screen);
+   terminal_app_new_terminal (app, window, profile,
+-                             NULL, NULL,
++                             NULL,
+                              new_working_directory,
+                              terminal_screen_get_initial_environment (priv->active_screen),
+                              1.0);
+-- 
+1.9.0
+

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.202 2014/04/28 03:15:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.203 2014/04/28 06:35:54 gienah Exp $
+
+  28 Apr 2014; Mark Wright <gienah@gentoo.org>
+  +files/sbcl-1.1.17-gentoo-fix_nopie_for_hardened_toolchain.patch,
+  sbcl-1.1.17.ebuild:
+  Bump patch to sbcl-1.1.17-gentoo-fix_nopie_for_hardened_toolchain.patch to
+  change _ to - in the filename sbcl-1.1.17/src/runtime/Config.x86-64-linux
 
 *sbcl-1.1.17 (28 Apr 2014)
 
