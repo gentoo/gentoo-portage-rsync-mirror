@@ -1,0 +1,72 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.3 2014/04/28 02:40:27 zx2c4 Exp $
+
+EAPI=5
+
+inherit subversion autotools
+
+DESCRIPTION="The Yate AV Suite"
+HOMEPAGE="http://yate.null.ro/"
+ESVN_REPO_URI="http://voip.null.ro/svn/yate/trunk"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS=""
+IUSE="sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc-webrtc +isac-float isac-fixed postgres mysql +gsm +speex h323 spandsp +ssl qt4 +zlib amrnb"
+
+RDEPEND="
+	postgres? ( dev-db/postgresql-base )
+	mysql? ( virtual/mysql )
+	gsm? ( media-sound/gsm )
+	speex? ( media-libs/speex )
+	ssl? ( dev-libs/openssl )
+	h323? ( net-libs/h323plus )
+	zlib? ( sys-libs/zlib )
+	qt4? ( dev-qt/qtgui:4 dev-qt/designer:4 )
+	ilbc? ( dev-libs/ilbc-rfc3951 )
+	spandsp? ( >=media-libs/spandsp-0.0.3 )
+	dahdi? ( net-misc/dahdi )
+"
+DEPEND="app-doc/doxygen virtual/pkgconfig ${RDEPEND}"
+
+src_prepare() {
+	eautoreconf
+	./yate-config.sh || die
+}
+
+#fdsize, inline, rtti: keep default values
+#internalregex: use system
+#coredumper: not in the tree, bug 118716
+#wanpipe, wphwec: not in the tree, bug 188939
+#amrnb: not in tree!
+#zaptel: ??
+src_configure() {
+	econf \
+		--with-archlib=$(get_libdir) \
+		$(use_enable sse2) \
+		$(use_enable sctp) \
+		$(use_enable dahdi) \
+		$(use_enable zaptel) \
+		$(use_enable wpcard) \
+		$(use_enable tdmcard) \
+		$(use_enable wanpipe) \
+		$(use_enable ilbc) \
+		$(use_enable ilbc-webrtc) \
+		$(use_enable isac-float) \
+		$(use_enable isac-fixed) \
+		$(use_with postgres libpq) \
+		$(use_with mysql) \
+		$(use_with gsm libgsm) \
+		$(use_with speex libspeex) \
+		$(use_with amrnb) \
+		$(use_with spandsp) \
+		$(use_with h323 openh323 /usr) \
+		$(use_with h323 pwlib /usr) \
+		$(use_with ssl openssl) \
+		$(use_with qt4 libqt4)
+}
+
+src_compile() {
+	emake -j1
+}

@@ -5750,11 +5750,24 @@ net-voip/linphone:tools - Compile tools
 net-voip/linphone:video - Enable video support (display/capture)
 net-voip/sflphone:doxygen - Support for building documentation with doxygen
 net-voip/telepathy-gabble:plugins - Enable plugin loader
-net-voip/yate:dahdi - Enable the DAHDI driver for Digium compatible hardware
-net-voip/yate:h323 - Build H.323 Channel plugin
-net-voip/yate:ilbc - Build ILBC codec plugin
-net-voip/yate:sctp - Support for Stream Control Transmission Protocol
-net-voip/yate:spandsp - Enable support for the spandsp codec
+net-voip/yate:amrnb - use AMR-NB
+net-voip/yate:coredumper - use Google coredumper
+net-voip/yate:dahdi - Enable Dahdi driver
+net-voip/yate:gsm - use GSM codec
+net-voip/yate:h323 - use OpenH323
+net-voip/yate:ilbc - Enable iLBC codec
+net-voip/yate:ilbc-webrtc - Enable iLBC webrtc codec
+net-voip/yate:isac-fixed - Enable iSAC fixed codec
+net-voip/yate:isac-float - Enable iSAC float codec
+net-voip/yate:mysql - use MySQL client library
+net-voip/yate:postgres - use Postgress SQL
+net-voip/yate:sctp - Enable SCTP sockets
+net-voip/yate:spandsp - use spandsp library
+net-voip/yate:speex - use Speex codec
+net-voip/yate:tdmcard - Enable TDMV API card driver
+net-voip/yate:wanpipe - Enable Wanpipe support
+net-voip/yate:wpcard - Enable Wanpipe card driver
+net-voip/yate:zaptel - Enable Zaptel driver
 net-wireless/aircrack-ng:airdrop-ng - Build airdrop-ng
 net-wireless/aircrack-ng:airgraph-ng - Build airgraph-ng
 net-wireless/aircrack-ng:netlink - Use netlink for channel control instead of WEXT
@@ -5821,6 +5834,10 @@ net-wireless/wpa_supplicant:ps3 - Add support for ps3 hypervisor driven gelic wi
 net-wireless/wpa_supplicant:smartcard - Add support for smartcards
 net-wireless/wpa_supplicant:wimax - Add support for Wimax EAP-PEER authentication algorithm
 net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
+net-wireless/yatebts:bladerf - Build bladeRF transceiver
+net-wireless/yatebts:rad1 - Build RAD1 transceiver
+net-wireless/yatebts:uhd - Build UHD transceiver
+net-wireless/yatebts:usrp1 - Build USRP1 transceiver
 razorqt-base/razorqt-meta:lightdm - Install x11-misc/lightdm display manager and Razor-qt's LightDM greeter
 razorqt-base/razorqt-panel:clock - Add clock panel applet
 razorqt-base/razorqt-panel:colorpicker - Add colorpicker panel applet

@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.28 2014/04/06 06:22:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.29 2014/04/28 02:59:13 prometheanfire Exp $
+
+*neutron-2014.1.9999 (28 Apr 2014)
+*neutron-2014.1 (28 Apr 2014)
+
+  28 Apr 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +neutron-2014.1.9999.ebuild, +neutron-2014.1.ebuild:
+  more and more
 
 *neutron-2013.2.3 (06 Apr 2014)
 

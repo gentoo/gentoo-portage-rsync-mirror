@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure preinst prepare unpack
+DEPEND=virtual/pkgconfig net-voip/yate[gsm] uhd? ( net-wireless/uhd ) virtual/libusb:1 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=The Yate GSM base station
+EAPI=5
+HOMEPAGE=http://www.yatebts.com/
+IUSE=rad1 usrp1 uhd bladerf sse3 sse4_1
+LICENSE=GPL-2
+RDEPEND=net-voip/yate[gsm] uhd? ( net-wireless/uhd ) virtual/libusb:1
+SLOT=0
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=96b90794e56a89cbaeaddba481f2503f
