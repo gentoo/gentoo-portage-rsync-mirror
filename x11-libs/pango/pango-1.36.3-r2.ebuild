@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.1 2014/04/20 22:36:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.2 2014/04/28 18:01:04 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -58,9 +58,7 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	gnome2_src_configure \
 		--with-cairo \
-		$(multilib_build_binaries \
-			&& use_enable introspection \
-			|| echo --disable-introspection) \
+		$(multilib_native_use_enable introspection) \
 		$(use_with X xft) \
 		"$(usex X --x-includes="${EPREFIX}/usr/include" "")" \
 		"$(usex X --x-libraries="${EPREFIX}/usr/$(get_libdir)" "")"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.103 2014/02/06 08:34:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.104 2014/04/28 17:35:16 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> libgpg-error-1.12-r1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
   06 Feb 2014; Michał Górny <mgorny@gentoo.org> libgpg-error-1.12-r1.ebuild:
   Use MULTILIB_CHOST_TOOLS instead of inlining it.

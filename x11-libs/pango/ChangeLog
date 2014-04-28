@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.404 2014/04/27 15:43:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.405 2014/04/28 18:01:04 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> pango-1.36.3-r2.ebuild:
+  Use multilib_native_use*.
 
 *pango-1.30.1 (27 Apr 2014)
 

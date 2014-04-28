@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r3.ebuild,v 1.8 2014/04/21 08:04:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r3.ebuild,v 1.9 2014/04/28 17:44:40 mgorny Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs multilib-minimal
@@ -99,7 +99,7 @@ do_configure() {
 		$(use_with debug)
 		$(use_with profile)
 		$(use_with gpm)
-		$(multilib_build_binaries || use_with gpm gpm libgpm.so.1)
+		$(multilib_is_native_abi || use_with gpm gpm libgpm.so.1)
 		--disable-termcap
 		--enable-symlinks
 		--with-rcs-ids
@@ -142,7 +142,7 @@ src_compile() {
 
 multilib_src_compile() {
 	make_flags=""
-	multilib_build_binaries || make_flags="PROGS= "
+	multilib_is_native_abi || make_flags="PROGS= "
 	do_compile narrowc
 	use unicode && do_compile widec
 }
@@ -178,7 +178,7 @@ multilib_src_install() {
 	fi
 
 	# Move libncurses{,w} into /lib
-	multilib_build_binaries && gen_usr_ldscript -a \
+	multilib_is_native_abi && gen_usr_ldscript -a \
 		ncurses \
 		$(usex unicode 'ncursesw' '') \
 		$(use tinfo && usex unicode 'tinfow' '') \

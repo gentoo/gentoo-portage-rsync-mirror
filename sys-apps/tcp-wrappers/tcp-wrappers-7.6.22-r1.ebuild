@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6.22-r1.ebuild,v 1.11 2014/04/20 11:24:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6.22-r1.ebuild,v 1.12 2014/04/28 17:46:44 mgorny Exp $
 
 EAPI="4"
 
@@ -75,7 +75,7 @@ multilib_src_install() {
 	insinto /usr/include
 	doins tcpd.h
 
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		gen_usr_ldscript -a wrap
 		dosbin tcpd tcpdchk tcpdmatch safe_finger try-from
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-0.8.ebuild,v 1.1 2014/03/12 20:45:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-0.8.ebuild,v 1.2 2014/04/28 17:50:08 mgorny Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ src_unpack() {
 multilib_src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_enable test TESTS)
-		$(multilib_build_binaries || echo "-DENABLE_CLI=OFF")
+		$(multilib_is_native_abi || echo "-DENABLE_CLI=OFF")
 		-DHIGH_BIT_DEPTH=$(usex 10bit "ON" "OFF")
 	)
 	cmake-utils_src_configure

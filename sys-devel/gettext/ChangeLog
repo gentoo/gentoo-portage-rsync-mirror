@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.240 2014/03/19 13:50:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.241 2014/04/28 17:49:06 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> gettext-0.18.3.2.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> gettext-0.18.3.2.ebuild:
   Stable for alpha, wrt bug #500872

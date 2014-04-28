@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.102 2014/04/15 23:15:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.103 2014/04/28 17:53:15 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> eudev-1.3.ebuild,
+  eudev-1.4-r1.ebuild, eudev-1.5.3-r1.ebuild, eudev-1.5.3.ebuild,
+  eudev-1.6.ebuild, eudev-9999.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   15 Apr 2014; Anthony G. Basile <blueness@gentoo.org> eudev-1.6.ebuild,
   eudev-9999.ebuild:

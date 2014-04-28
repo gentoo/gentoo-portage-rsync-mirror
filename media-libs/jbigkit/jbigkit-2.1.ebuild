@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.1.ebuild,v 1.8 2014/04/22 12:28:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-2.1.ebuild,v 1.9 2014/04/28 17:53:31 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ multilib_src_compile() {
 	tc-export AR CC RANLIB
 	emake \
 		LIBDIR="${EPREFIX}/usr/$(get_libdir)" \
-		$(multilib_build_binaries || echo lib)
+		$(multilib_is_native_abi || echo lib)
 
 	if use static-libs; then
 		cd libjbig && emake static
@@ -38,7 +38,7 @@ multilib_src_test() {
 }
 
 multilib_src_install() {
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		dobin pbmtools/jbgtopbm{,85} pbmtools/pbmtojbg{,85}
 		doman pbmtools/jbgtopbm.1 pbmtools/pbmtojbg.1
 	fi

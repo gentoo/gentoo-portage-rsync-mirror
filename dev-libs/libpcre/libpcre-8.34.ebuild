@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.34.ebuild,v 1.3 2014/01/18 04:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.34.ebuild,v 1.4 2014/04/28 17:36:49 mgorny Exp $
 
 EAPI="4"
 
@@ -57,8 +57,8 @@ multilib_src_configure() {
 		$(use_enable jit) $(use_enable jit pcregrep-jit) \
 		$(use_enable pcre16) \
 		$(use_enable pcre32) \
-		$(multilib_build_binaries && use_enable libedit pcretest-libedit) \
-		$(multilib_build_binaries && use_enable readline pcretest-libreadline) \
+		$(multilib_is_native_abi && use_enable libedit pcretest-libedit) \
+		$(multilib_is_native_abi && use_enable readline pcretest-libreadline) \
 		$(use_enable static-libs static) \
 		$(use_enable unicode utf) $(use_enable unicode unicode-properties) \
 		$(multilib_is_native_abi && use_enable zlib pcregrep-libz) \
@@ -75,7 +75,7 @@ multilib_src_compile() {
 multilib_src_install() {
 	emake \
 		DESTDIR="${D}" \
-		$(multilib_build_binaries || echo "bin_PROGRAMS=") \
+		$(multilib_is_native_abi || echo "bin_PROGRAMS=") \
 		$(multilib_is_native_abi || echo "dist_html_DATA=") \
 		install
 	multilib_is_native_abi && gen_usr_ldscript -a pcre

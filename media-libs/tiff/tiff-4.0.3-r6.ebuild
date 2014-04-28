@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r6.ebuild,v 1.10 2014/02/16 07:34:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r6.ebuild,v 1.11 2014/04/28 17:49:34 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -54,7 +54,7 @@ multilib_src_configure() {
 		--with-docdir="${EPREFIX}"/usr/share/doc/${PF}
 
 	# remove useless subdirs
-	if ! multilib_build_binaries ; then
+	if ! multilib_is_native_abi ; then
 		sed -i \
 			-e 's/ tools//' \
 			-e 's/ contrib//' \
@@ -65,7 +65,7 @@ multilib_src_configure() {
 }
 
 multilib_src_test() {
-	if ! multilib_build_binaries ; then
+	if ! multilib_is_native_abi ; then
 		cd tools
 		emake
 		cd "${BUILD_DIR}"

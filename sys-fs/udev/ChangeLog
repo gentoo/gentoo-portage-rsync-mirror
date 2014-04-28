@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1024 2014/04/08 21:01:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1025 2014/04/28 17:54:55 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> udev-208.ebuild,
+  udev-212-r1.ebuild, udev-9999.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   08 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Finetune the 80-net-name-slot.rules migration code a bit and remove

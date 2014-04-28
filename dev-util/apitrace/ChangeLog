@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.20 2014/04/05 15:19:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.21 2014/04/28 17:44:26 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> apitrace-4.0.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
   05 Apr 2014; Mike Frysinger <vapier@gentoo.org>
   files/apitrace-4.0-glxtrace-only.patch:

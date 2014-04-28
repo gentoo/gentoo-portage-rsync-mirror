@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22-r2.ebuild,v 1.6 2014/04/18 05:41:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22-r2.ebuild,v 1.7 2014/04/28 17:42:44 mgorny Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	if multilib_build_binaries && use pam; then
+	if multilib_is_native_abi && use pam; then
 		pam=yes
 	else
 		pam=no
@@ -55,10 +55,10 @@ multilib_src_install() {
 	# no configure, needs explicit install line #444724#c3
 	emake install DESTDIR="${ED}"
 
-	multilib_build_binaries && gen_usr_ldscript -a cap
+	multilib_is_native_abi && gen_usr_ldscript -a cap
 
 	rm -rf "${ED}"/usr/$(get_libdir)/security
-	if multilib_build_binaries && use pam; then
+	if multilib_is_native_abi && use pam; then
 		dopammod pam_cap/pam_cap.so
 		dopamsecurity '' pam_cap/capability.conf
 	fi

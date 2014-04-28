@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.69 2014/04/21 07:42:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.70 2014/04/28 17:55:59 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> gdbm-1.10-r1.ebuild,
+  gdbm-1.11.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> gdbm-1.11.ebuild:
   Use the new multilib_native_use* functions.

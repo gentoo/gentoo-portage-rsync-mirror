@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.3-r1.ebuild,v 1.4 2014/04/15 19:56:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.3-r1.ebuild,v 1.5 2014/04/28 17:49:21 mgorny Exp $
 
 EAPI=5
 
@@ -118,7 +118,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	default
 
-	if multilib_build_binaries && use utils; then
+	if multilib_is_native_abi && use utils; then
 		einfo "Building utils"
 		# fix for Prefix, bug #339334
 		emake \
@@ -130,7 +130,7 @@ multilib_src_compile() {
 multilib_src_install() {
 	default
 
-	if multilib_build_binaries && use utils; then
+	if multilib_is_native_abi && use utils; then
 		einfo "Installing utils"
 		rm "${WORKDIR}"/ft2demos-${PV}/bin/README || die
 		local ft2demo

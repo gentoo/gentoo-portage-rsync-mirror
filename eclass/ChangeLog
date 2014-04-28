@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1226 2014/04/26 05:13:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1227 2014/04/28 17:38:21 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Deprecate multilib_build_binaries, and switch the code to use
+  multilib_is_native_abi.
 
   26 Apr 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-plugin.eclass:
   vdr-plugin.eclass removed, see #497058, #489116

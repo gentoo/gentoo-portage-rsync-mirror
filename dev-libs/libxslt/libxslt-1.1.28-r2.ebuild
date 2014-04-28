@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r2.ebuild,v 1.1 2014/03/04 05:50:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r2.ebuild,v 1.2 2014/04/28 17:40:54 mgorny Exp $
 
 EAPI=5
 
@@ -60,14 +60,14 @@ multilib_src_configure() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF} \
 		--with-html-subdir=html \
 		$(use_with crypt crypto) \
-		$(multilib_build_binaries && use_with python || echo --without-python) \
+		$(multilib_is_native_abi && use_with python || echo --without-python) \
 		$(use_with debug) \
 		$(use_with debug mem-debug)
 }
 
 multilib_src_compile() {
 	default
-	if use python && multilib_build_binaries; then
+	if use python && multilib_is_native_abi; then
 		python_copy_sources
 		python_foreach_impl libxslt_py_emake
 	fi
@@ -75,14 +75,14 @@ multilib_src_compile() {
 
 multilib_src_test() {
 	default
-	use python && multilib_build_binaries && python_foreach_impl libxslt_py_emake test
+	use python && multilib_is_native_abi && python_foreach_impl libxslt_py_emake test
 }
 
 multilib_src_install() {
 	# "default" does not work here - docs are installed by multilib_src_install_all
 	emake DESTDIR="${D}" install
 
-	if use python && multilib_build_binaries; then
+	if use python && multilib_is_native_abi; then
 		python_foreach_impl libxslt_py_emake DESTDIR="${D}" install
 		python_foreach_impl python_optimize
 		mv "${ED}"/usr/share/doc/${PN}-python-${PV} "${ED}"/usr/share/doc/${PF}/python

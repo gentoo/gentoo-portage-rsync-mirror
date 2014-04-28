@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.128 2014/04/18 05:41:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.129 2014/04/28 17:42:44 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> libcap-2.22-r2.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   18 Apr 2014; Markus Meier <maekke@gentoo.org> libcap-2.22-r2.ebuild:
   arm stable, bug #507144

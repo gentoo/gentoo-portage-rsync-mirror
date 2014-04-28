@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.7 2014/01/31 14:56:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.8 2014/04/28 17:47:22 mgorny Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -43,7 +43,7 @@ src_configure() {
 			$(cmake-utils_use sse)
 		)
 
-		if multilib_build_binaries; then
+		if multilib_is_native_abi; then
 			mycmakeargs+=( $(cmake-utils_use alstream EXAMPLES) )
 		else
 			mycmakeargs+=( "-DEXAMPLES=OFF" )

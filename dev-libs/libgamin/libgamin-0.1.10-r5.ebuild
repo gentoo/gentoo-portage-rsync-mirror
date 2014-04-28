@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r5.ebuild,v 1.2 2014/04/12 17:21:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r5.ebuild,v 1.3 2014/04/28 17:33:17 mgorny Exp $
 
 EAPI="5"
 
@@ -88,7 +88,7 @@ multilib_src_configure() {
 	local ECONF_SOURCE=${S}
 
 	econf "${myconf[@]}"
-	if multilib_build_binaries && use python; then
+	if multilib_is_native_abi && use python; then
 		python_configure() {
 			mkdir -p "${BUILD_DIR}" || die
 			cd "${BUILD_DIR}" || die
@@ -102,7 +102,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	default
 
-	if multilib_build_binaries && use python; then
+	if multilib_is_native_abi && use python; then
 		local native_builddir=${BUILD_DIR}
 
 		python_compile() {
@@ -118,7 +118,7 @@ multilib_src_compile() {
 multilib_src_install() {
 	emake DESTDIR="${D}" install
 
-	if multilib_build_binaries && use python; then
+	if multilib_is_native_abi && use python; then
 		local native_builddir=${BUILD_DIR}
 
 		python_install() {

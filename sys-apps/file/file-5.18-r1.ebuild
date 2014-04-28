@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.18-r1.ebuild,v 1.2 2014/03/27 14:46:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.18-r1.ebuild,v 1.3 2014/04/28 17:45:05 mgorny Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -72,7 +72,7 @@ src_configure() {
 }
 
 multilib_src_compile() {
-	if multilib_build_binaries ; then
+	if multilib_is_native_abi ; then
 		emake
 	else
 		emake -C src libmagic.la
@@ -90,7 +90,7 @@ src_compile() {
 }
 
 multilib_src_install() {
-	if multilib_build_binaries ; then
+	if multilib_is_native_abi ; then
 		default
 	else
 		emake -C src install-{includeHEADERS,libLTLIBRARIES} DESTDIR="${D}"

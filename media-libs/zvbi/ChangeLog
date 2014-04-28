@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.61 2014/04/21 07:49:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.62 2014/04/28 17:53:44 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> zvbi-0.2.35-r1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> zvbi-0.2.35-r1.ebuild:
   Use multilib_build_binaries consistently, and the new multilib_native_use*

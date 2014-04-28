@@ -10,5 +10,5 @@ RDEPEND=!media-video/ffmpeg alsa? ( media-libs/alsa-lib[abi_x86_32(-)?,abi_x86_6
 REQUIRED_USE=bindist? ( !faac !openssl ) rtmp? ( network ) amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl ) test? ( encode )
 SLOT=0/0.8
 SRC_URI=http://libav.org/releases/libav-0.8.9.tar.xz test? ( http://dev.gentoo.org/~lu_zero/libav/fate-0.8.2.tar.xz )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	7634926e988215ce3539862586497cab	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	091674130f5299eaa171dc2dd1bb272d	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=96f6f89d080d449f3fca4dff34a4b836

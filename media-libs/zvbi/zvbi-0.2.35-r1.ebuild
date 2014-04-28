@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.35-r1.ebuild,v 1.2 2014/04/21 07:49:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.35-r1.ebuild,v 1.3 2014/04/28 17:53:44 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -41,7 +41,7 @@ multilib_src_configure() {
 multilib_src_install() {
 	emake DESTDIR="${D}" install
 
-	multilib_build_binaries && use doc && dohtml -a png,gif,html,css doc/html/*
+	multilib_is_native_abi && use doc && dohtml -a png,gif,html,css doc/html/*
 }
 
 multilib_src_install_all() {

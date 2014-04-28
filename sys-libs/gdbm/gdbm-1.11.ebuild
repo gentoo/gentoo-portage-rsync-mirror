@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.11.ebuild,v 1.3 2014/04/21 07:42:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.11.ebuild,v 1.4 2014/04/28 17:55:59 mgorny Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ multilib_src_configure() {
 	# gdbm doesn't appear to use either of these libraries
 	export ac_cv_lib_dbm_main=no ac_cv_lib_ndbm_main=no
 
-	if multilib_build_binaries && use exporter ; then
+	if multilib_is_native_abi && use exporter ; then
 		pushd "${EX_S}" >/dev/null
 		append-lfs-flags
 		econf --disable-shared

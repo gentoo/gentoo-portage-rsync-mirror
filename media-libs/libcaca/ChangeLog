@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.114 2014/04/24 18:52:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.115 2014/04/28 17:43:33 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   24 Apr 2014; Julian Ospald <hasufell@gentoo.org>
   libcaca-0.99_beta18-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.4.0.ebuild,v 1.10 2014/04/20 08:31:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.4.0.ebuild,v 1.11 2014/04/28 17:43:33 mgorny Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ src_configure() {
 	if tc-is-cross-compiler ; then
 		myeconfargs+=( --disable-scanner )
 	fi
-	if ! multilib_build_binaries; then
+	if ! multilib_is_native_abi; then
 		myeconfargs+=( --disable-documentation )
 	fi
 

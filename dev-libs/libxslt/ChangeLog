@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.277 2014/03/04 05:53:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.278 2014/04/28 17:40:54 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> libxslt-1.1.28-r2.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
   04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   files/libxslt-1.1.28-libgcrypt-config.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.1.4.ebuild,v 1.1 2014/04/15 19:11:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.1.4.ebuild,v 1.2 2014/04/28 17:40:13 graaff Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -86,4 +86,9 @@ src_configure() {
 		-DPYTHON_LIBRARY="$(python_get_library_path)"
 	)
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	# Work around parallel build issues, bug 507838
+	cmake-utils_src_compile -j1
 }

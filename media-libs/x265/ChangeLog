@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.3 2014/04/10 18:22:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.4 2014/04/28 17:50:08 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> x265-0.8.ebuild,
+  x265-9999.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi, in order to put
+  an end to the confusion introduced by having two functions, the proper one
+  suggesting it is just for binaries.
 
   10 Apr 2014; Alexis Ballier <aballier@gentoo.org> x265-9999.ebuild:
   bump subslot reflecting soname change

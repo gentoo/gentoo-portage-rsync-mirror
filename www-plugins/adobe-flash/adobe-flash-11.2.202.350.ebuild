@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.350.ebuild,v 1.2 2014/04/10 13:34:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.350.ebuild,v 1.3 2014/04/28 17:47:24 mgorny Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
@@ -168,7 +168,7 @@ multilib_src_install() {
 		doexe flashplugin-lahf-fix.so
 	fi
 
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		if use kde; then
 			local pkglibdir=lib
 			[[ -d usr/lib64 ]] && pkglibdir=lib64

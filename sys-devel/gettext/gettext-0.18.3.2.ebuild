@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.2.ebuild,v 1.12 2014/03/19 13:50:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.2.ebuild,v 1.13 2014/04/28 17:49:06 mgorny Exp $
 
 EAPI="4"
 
@@ -72,7 +72,7 @@ multilib_src_configure() {
 	tc-is-cross-compiler && export gl_cv_func_working_acl_get_file=yes
 
 	local ECONF_SOURCE=${S}
-	if ! multilib_build_binaries ; then
+	if ! multilib_is_native_abi ; then
 		# for non-native ABIs, we build runtime only
 		ECONF_SOURCE+=/gettext-runtime
 	else
@@ -103,7 +103,7 @@ multilib_src_configure() {
 multilib_src_install() {
 	default
 
-	if multilib_build_binaries ; then
+	if multilib_is_native_abi ; then
 		dosym msgfmt /usr/bin/gmsgfmt #43435
 		dobin gettext-tools/misc/gettextize
 

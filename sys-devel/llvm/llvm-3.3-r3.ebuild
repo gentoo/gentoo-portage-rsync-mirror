@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r3.ebuild,v 1.8 2014/03/31 21:21:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r3.ebuild,v 1.9 2014/04/28 17:51:17 mgorny Exp $
 
 EAPI=5
 
@@ -213,7 +213,7 @@ multilib_src_configure() {
 		conf_flags+=( --with-clang-resource-dir=../lib/clang/${PV} )
 	fi
 	# well, it's used only by clang executable c-index-test
-	if multilib_build_binaries && use clang && use xml; then
+	if multilib_is_native_abi && use clang && use xml; then
 		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )
 	else
 		conf_flags+=( ac_cv_prog_XML2CONFIG="" )
@@ -231,7 +231,7 @@ multilib_src_configure() {
 		conf_flags+=( --enable-experimental-targets=R600 )
 	fi
 
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		use gold && conf_flags+=( --with-binutils-include="${EPREFIX}"/usr/include/ )
 		# extra commas don't hurt
 		use ocaml && bindings+=',ocaml'
@@ -258,7 +258,7 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	econf "${conf_flags[@]}"
 
-	multilib_build_binaries && cmake_configure
+	multilib_is_native_abi && cmake_configure
 }
 
 cmake_configure() {
@@ -292,7 +292,7 @@ set_makeargs() {
 		local tools=( llvm-config )
 		use clang && tools+=( clang )
 
-		if multilib_build_binaries; then
+		if multilib_is_native_abi; then
 			tools+=(
 				opt llvm-as llvm-dis llc llvm-ar llvm-nm llvm-link lli
 				llvm-extract llvm-mc llvm-bcanalyzer llvm-diff macho-dump
@@ -323,7 +323,7 @@ multilib_src_compile() {
 	set_makeargs -1
 	emake "${MAKEARGS[@]}"
 
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		set_makeargs
 		emake -C tools "${MAKEARGS[@]}"
 
@@ -385,7 +385,7 @@ multilib_src_install() {
 	dodir /tmp
 	mv "${ED}"/usr/bin/llvm-config "${ED}"/tmp/"${CHOST}"-llvm-config || die
 
-	if ! multilib_build_binaries; then
+	if ! multilib_is_native_abi; then
 		# Drop all the executables since LLVM doesn't like to
 		# clobber when installing.
 		rm -r "${ED}"/usr/bin || die

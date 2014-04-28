@@ -1,6 +1,11 @@
 # ChangeLog for virtual/leechcraft-trayarea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.26 2014/04/10 18:07:34 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.27 2014/04/28 17:36:13 pinkbyte Exp $
+
+  28 Apr 2014; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-trayarea-0.6.60.ebuild, leechcraft-trayarea-0.6.65.ebuild,
+  leechcraft-trayarea-9999.ebuild:
+  Drop obsoleted app-leechcraft/lc-sidebar from dependencies
 
 *leechcraft-trayarea-0.6.65 (10 Apr 2014)
 

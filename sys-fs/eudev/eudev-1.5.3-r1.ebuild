@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.5.3-r1.ebuild,v 1.5 2014/04/05 20:28:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.5.3-r1.ebuild,v 1.6 2014/04/28 17:53:15 mgorny Exp $
 
 EAPI="5"
 
@@ -140,7 +140,7 @@ multilib_src_configure()
 
 	# Only build libudev for non-native_abi, and only install it to libdir,
 	# that means all options only apply to native_abi
-	if multilib_build_binaries; then econf_args+=(
+	if multilib_is_native_abi; then econf_args+=(
 		--with-rootlibdir=/$(get_libdir)
 		$(use_enable doc gtk-doc)
 		$(use_enable introspection)
@@ -160,7 +160,7 @@ multilib_src_configure()
 
 multilib_src_compile()
 {
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		emake
 	else
 		emake -C src/libudev
@@ -170,7 +170,7 @@ multilib_src_compile()
 
 multilib_src_install()
 {
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		emake DESTDIR="${D}" install
 	else
 		emake -C src/libudev DESTDIR="${D}" install
@@ -185,7 +185,7 @@ multilib_src_test()
 	# but sandbox seems to evaluate the paths of the test i/o instead of the
 	# paths of the actual i/o that results.
 	# also only test for native abi
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		addread /sys
 		addwrite /dev
 		addwrite /run

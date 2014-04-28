@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8891 2014/04/28 16:40:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8892 2014/04/28 17:40:47 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Drop temporary LeechCraft masks
 
   28 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Temporary mask old Leechcraft packages due to massive cleanup

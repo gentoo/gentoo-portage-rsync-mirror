@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.74 2014/04/22 12:28:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.75 2014/04/28 17:53:31 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> jbigkit-2.1.ebuild:
+  Replace multilib_build_binaries with multilib_is_native_abi. The two are
+  equivalent now, and the team has decided to use the old name as being less
+  confusing.
 
   22 Apr 2014; Agostino Sarubbo <ago@gentoo.org> jbigkit-2.1.ebuild:
   Stable for arm, wrt bug #507254

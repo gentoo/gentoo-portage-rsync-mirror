@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p5.ebuild,v 1.1 2014/04/16 09:15:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p5.ebuild,v 1.2 2014/04/28 17:46:30 mgorny Exp $
 
 EAPI=4
 
@@ -108,7 +108,7 @@ multilib_src_configure() {
 		--with-curses \
 		$(use_enable static-libs static)
 
-	if multilib_build_binaries && ! tc-is-cross-compiler ; then
+	if multilib_is_native_abi && ! tc-is-cross-compiler ; then
 		# code is full of AC_TRY_RUN()
 		mkdir -p examples/rlfe || die
 		cd examples/rlfe || die
@@ -120,7 +120,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	emake
 
-	if multilib_build_binaries && ! tc-is-cross-compiler ; then
+	if multilib_is_native_abi && ! tc-is-cross-compiler ; then
 		# code is full of AC_TRY_RUN()
 		cd examples/rlfe || die
 		local l
@@ -135,7 +135,7 @@ multilib_src_compile() {
 multilib_src_install() {
 	default
 
-	if multilib_build_binaries ; then
+	if multilib_is_native_abi ; then
 		gen_usr_ldscript -a readline history #4411
 
 		if ! tc-is-cross-compiler; then
