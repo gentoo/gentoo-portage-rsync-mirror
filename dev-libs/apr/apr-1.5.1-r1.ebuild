@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.1.ebuild,v 1.1 2014/04/28 07:10:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.1-r1.ebuild,v 1.1 2014/04/28 13:26:43 polynomial-c Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools eutils libtool multilib toolchain-funcs
 
@@ -28,6 +28,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.0-libtool.patch
 	epatch "${FILESDIR}"/${PN}-1.5.0-cross-types.patch
 	epatch "${FILESDIR}"/${PN}-1.5.0-sysroot.patch #385775
+	epatch "${FILESDIR}"/${PN}-1.5.1-parallel_make_install.patch
 
 	epatch_user #449048
 
@@ -101,6 +102,7 @@ src_configure() {
 	econf \
 		--enable-layout=gentoo \
 		--enable-nonportable-atomics \
+		--enable-posix-shm \
 		--enable-threads \
 		$(use_enable static-libs static) \
 		"${myconf[@]}"
@@ -125,7 +127,10 @@ src_compile() {
 src_install() {
 	default
 
-	find "${ED}" -name "*.la" -delete
+	# Prallel install breaks since apr-1.5.1
+	#make -j1 DESTDIR="${D}" install || die
+
+	prune_libtool_files --all
 
 	if use doc; then
 		dohtml -r docs/dox/html/*

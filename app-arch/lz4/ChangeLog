@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.14 2014/03/02 15:23:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.15 2014/04/28 13:07:30 pinkbyte Exp $
+
+  28 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> lz4-0_p106-r1.ebuild:
+  Add ~mips keyword, wrt bug #499468
 
   02 Mar 2014; Michał Górny <mgorny@gentoo.org> lz4-9999.ebuild:
   Update the live ebuild to conform with changes upstream. Fix the src_install()

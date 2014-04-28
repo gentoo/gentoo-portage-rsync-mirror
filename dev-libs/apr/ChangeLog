@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.221 2014/04/28 07:10:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.222 2014/04/28 13:26:43 polynomial-c Exp $
+
+*apr-1.5.1-r1 (28 Apr 2014)
+
+  28 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -apr-1.5.1.ebuild,
+  +apr-1.5.1-r1.ebuild, +files/apr-1.5.1-parallel_make_install.patch:
+  Revbump to fix a parallel install bug. Enable posix-shm support. EAPI bumped
+  to 5.
 
 *apr-1.5.1 (28 Apr 2014)
 
