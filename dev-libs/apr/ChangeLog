@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.220 2014/04/20 11:18:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.221 2014/04/28 07:10:01 polynomial-c Exp $
+
+*apr-1.5.1 (28 Apr 2014)
+
+  28 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +apr-1.5.1.ebuild:
+  Version bump.
 
   20 Apr 2014; Agostino Sarubbo <ago@gentoo.org> apr-1.5.0-r2.ebuild:
   Stable for ppc64, wrt bug #504300

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15621 2014/04/28 06:56:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15622 2014/04/28 07:07:46 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -104,6 +104,7 @@ dev-python/python-gnutls
 >=gnome-base/gnome-desktop-3.12.1
 >=gnome-base/gnome-extra-apps-3.12.0
 >=gnome-base/gnome-keyring-3.12.0
+>=gnome-base/gnome-light-3.12.0
 >=gnome-base/gnome-session-3.12.1
 >=gnome-base/gnome-settings-daemon-3.12.1
 >=gnome-base/gnome-shell-3.12.1

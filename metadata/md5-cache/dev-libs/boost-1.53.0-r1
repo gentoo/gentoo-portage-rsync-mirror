@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install preinst prepare test
+DEFINED_PHASES=compile configure install preinst prepare setup test
 DEPEND=icu? ( >=dev-libs/icu-3.6:= ) !icu? ( virtual/libiconv ) mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) ) python? ( python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] ) app-arch/bzip2 sys-libs/zlib !app-admin/eselect-boost =dev-util/boost-build-1.53* userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Boost Libraries for C++
 EAPI=5
@@ -11,4 +11,4 @@ REQUIRED_USE=python? ( || ( python_targets_python2_6 python_targets_python2_7 py
 SLOT=0/1.53
 SRC_URI=mirror://sourceforge/boost/boost_1_53_0.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ac883839664718638525b5acfd7aa47a
+_md5_=dcf028560a73db238306ca991f0a391e
