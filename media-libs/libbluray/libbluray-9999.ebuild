@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.15 2014/04/11 05:37:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.16 2014/04/28 18:04:46 mgorny Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ multilib_src_configure() {
 
 	ECONF_SOURCE="${S}" econf \
 		--disable-optimizations \
-		$(multilib_build_binaries && use_enable utils examples || echo "--disable-examples") \
+		$(multilib_native_use_enable utils examples) \
 		$(use_with truetype freetype) \
 		$(use_enable static-libs static) \
 		$(use_with xml libxml2) \
@@ -69,7 +69,7 @@ multilib_src_configure() {
 multilib_src_install() {
 	emake DESTDIR="${D}" install
 
-	if multilib_build_binaries && use utils; then
+	if multilib_is_native_abi && use utils; then
 		cd src
 		dobin index_dump mobj_dump mpls_dump
 		cd .libs/

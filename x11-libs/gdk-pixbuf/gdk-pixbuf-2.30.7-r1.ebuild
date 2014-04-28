@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.7-r1.ebuild,v 1.1 2014/03/29 21:36:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.7-r1.ebuild,v 1.2 2014/04/28 18:02:55 mgorny Exp $
 
 EAPI="5"
 
@@ -64,9 +64,7 @@ multilib_src_configure() {
 		$(use_with jpeg libjpeg) \
 		$(use_with jpeg2k libjasper) \
 		$(use_with tiff libtiff) \
-		$(multilib_build_binaries \
-			&& use_enable introspection \
-			|| echo --disable-introspection) \
+		$(multilib_native_use_enable introspection) \
 		$(use_with X x11) \
 		--with-libpng
 }

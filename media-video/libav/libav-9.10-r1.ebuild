@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.10-r1.ebuild,v 1.2 2014/03/18 15:27:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.10-r1.ebuild,v 1.3 2014/04/28 18:10:02 mgorny Exp $
 
 EAPI=5
 
@@ -295,7 +295,7 @@ multilib_src_compile() {
 
 	emake
 
-	if use tools && multilib_build_binaries; then
+	if use tools && multilib_is_native_abi; then
 		tc-export CC
 
 		for i in ${TOOLS}; do
@@ -308,7 +308,7 @@ multilib_src_install() {
 	local i
 
 	emake DESTDIR="${D}" install-libs install-headers
-	if multilib_build_binaries; then
+	if multilib_is_native_abi; then
 		emake DESTDIR="${D}" install install-man
 		cd "${S}"
 		dodoc Changelog README INSTALL

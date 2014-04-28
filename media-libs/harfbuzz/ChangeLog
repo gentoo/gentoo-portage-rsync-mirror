@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.73 2014/04/21 10:29:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.74 2014/04/28 18:10:00 mgorny Exp $
+
+  28 Apr 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-0.9.26-r1.ebuild,
+  harfbuzz-9999.ebuild:
+  Use multilib_native_use*.
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.23.ebuild:
   Stable for arm, wrt bug #507568
