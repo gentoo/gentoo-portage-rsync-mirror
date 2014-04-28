@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.0-r1.ebuild,v 1.1 2014/04/20 18:32:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.2.1.ebuild,v 1.1 2014/04/28 06:04:54 polynomial-c Exp $
 
 EAPI=5
 
@@ -31,15 +31,6 @@ pkg_setup() {
 src_prepare() {
 	# Don't use utempter even if it is found on the system
 	epatch "${FILESDIR}"/4.0.2-no-utempter.patch
-
-	epatch "${FILESDIR}"/${P}-incompatible-protocol.patch \
-		"${FILESDIR}"/${P}-long_terminal_names.patch \
-		"${FILESDIR}"/${P}-tgetent.patch
-
-	# Fix segfault when being built without nethack support (bug #507916)
-	epatch "${FILESDIR}"/${P}-nonethack_segfault_fix.patch
-
-	epatch "${FILESDIR}"/${P}-check_for_altscreen.patch
 
 	# sched.h is a system header and causes problems with some C libraries
 	mv sched.h _sched.h || die
