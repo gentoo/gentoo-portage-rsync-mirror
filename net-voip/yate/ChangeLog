@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.27 2014/04/28 02:40:27 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.28 2014/04/28 05:21:17 patrick Exp $
+
+  28 Apr 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   28 Apr 2014; Jason A. Donenfeld <zx2c4@gentoo.org> yate-9999.ebuild:
   We dont need libusb.

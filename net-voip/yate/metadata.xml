@@ -20,7 +20,6 @@
 		<flag name="amrnb">use AMR-NB</flag>
 		<flag name="spandsp">use spandsp library</flag>
 		<flag name="h323">use OpenH323</flag>
-		<flag name="coredumper">use Google coredumper</flag>
 	</use>
 </pkgmetadata>
 
