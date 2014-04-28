@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15626 2014/04/28 17:40:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15627 2014/04/28 18:51:43 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Frysinger <vapier@gentoo.org> (28 Apr 2014)
+# Use app-emulation/qemu instead.  It has USE=static-user to support building
+# static user helpers.  See #508098 for more info.
+app-emulation/qemu-user
 
 # Manuel Rüger <mrueg@gentoo.org> (28 Apr 2014)
 # Fails to build with gnutls-3, on behalf of python herd
