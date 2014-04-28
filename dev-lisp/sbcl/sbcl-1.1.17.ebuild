@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.17.ebuild,v 1.2 2014/04/28 06:35:54 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.17.ebuild,v 1.3 2014/04/28 07:44:03 ulm Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -51,11 +51,11 @@ sbcl_feature() {
 }
 
 sbcl_apply_features() {
-	cat > "${CONFIG}" <<'EOF'
-(lambda (list)
-  (flet ((enable  (x) (pushnew x list))
-		 (disable (x) (setf list (remove x list))))
-EOF
+	sed 's/^X//' > "${CONFIG}" <<-'EOF'
+	(lambda (list)
+	X  (flet ((enable  (x) (pushnew x list))
+	X         (disable (x) (setf list (remove x list))))
+	EOF
 	if use x86 || use amd64; then
 		sbcl_feature "$(usep threads)" ":sb-thread"
 	fi
@@ -64,10 +64,10 @@ EOF
 	sbcl_feature "$(usep unicode)" ":sb-unicode"
 	sbcl_feature "$(usep zlib)" ":sb-core-compression"
 	sbcl_feature "$(usep debug)" ":sb-xref-for-internals"
-	cat >> "${CONFIG}" <<'EOF'
-	)
-  list)
-EOF
+	sed 's/^X//' >> "${CONFIG}" <<-'EOF'
+	X    )
+	X  list)
+	EOF
 	cat "${CONFIG}"
 }
 
@@ -162,17 +162,17 @@ src_test() {
 src_install() {
 	# install system-wide initfile
 	dodir /etc/
-	cat > "${D}"/etc/sbclrc <<EOF
-;;; The following is required if you want source location functions to
-;;; work in SLIME, for example.
-
-(setf (logical-pathname-translations "SYS")
-	'(("SYS:SRC;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/src/**/*.*")
-	  ("SYS:CONTRIB;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/**/*.*")))
-
-;;; Setup ASDF2
-(load "/etc/common-lisp/gentoo-init.lisp")
-EOF
+	sed 's/^X//' > "${D}"/etc/sbclrc <<-EOF
+	;;; The following is required if you want source location functions to
+	;;; work in SLIME, for example.
+	X
+	(setf (logical-pathname-translations "SYS")
+	X      '(("SYS:SRC;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/src/**/*.*")
+	X        ("SYS:CONTRIB;**;*.*.*" #p"/usr/$(get_libdir)/sbcl/**/*.*")))
+	X
+	;;; Setup ASDF2
+	(load "/etc/common-lisp/gentoo-init.lisp")
+	EOF
 
 	# Install documentation
 	unset SBCL_HOME
