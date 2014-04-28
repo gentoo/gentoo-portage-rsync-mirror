@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.137 2014/04/25 14:31:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.138 2014/04/28 16:39:07 jlec Exp $
+
+*ccpn-2.4.0_p140425-r1 (28 Apr 2014)
+
+  28 Apr 2014; Justin Lecher <jlec@gentoo.org> +ccpn-2.4.0_p140425-r1.ebuild,
+  +files/ccpn-2.4.0_p140425-lxml.patch:
+  Add patch to allow lxml as xml provider
 
 *ccpn-2.4.0_p140425 (25 Apr 2014)
 *ccpn-2.3.1_p140425 (25 Apr 2014)

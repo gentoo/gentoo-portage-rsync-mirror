@@ -1,0 +1,78 @@
+ ccpnmr2.4/python/ccpnmr/format/general/Conversion.py |  2 +-
+ ccpnmr2.4/python/memops/metamodel/XmlModelIo.py      |  3 +++
+ ccpnmr2.4/python/memops/universal/ElementTree.py     | 16 +++++++++++-----
+ ccpnmr2.4/python/pdbe/xml/Util.py                    |  5 +----
+ 4 files changed, 16 insertions(+), 10 deletions(-)
+
+diff --git a/ccpnmr2.4/python/ccpnmr/format/general/Conversion.py b/ccpnmr2.4/python/ccpnmr/format/general/Conversion.py
+index 4e9a13c..66f72d3 100644
+--- a/ccpnmr2.4/python/ccpnmr/format/general/Conversion.py
++++ b/ccpnmr2.4/python/ccpnmr/format/general/Conversion.py
+@@ -1969,7 +1969,7 @@ class FormatConversion(object):
+ 
+   def runFromXml(self,xmlFileName,allowedFormats=None):
+   
+-    import xml.etree.ElementTree as ET
++    from memops.universal.ElementTree import ElementTree as ET
+    
+     root = ET.ElementTree(file=xmlFileName)
+     
+diff --git a/ccpnmr2.4/python/memops/metamodel/XmlModelIo.py b/ccpnmr2.4/python/memops/metamodel/XmlModelIo.py
+index e09a873..05a77a1 100644
+--- a/ccpnmr2.4/python/memops/metamodel/XmlModelIo.py
++++ b/ccpnmr2.4/python/memops/metamodel/XmlModelIo.py
+@@ -329,6 +329,9 @@ class XmlModelRead(TextWriter_py_2_1.TextWriter_py_2_1):
+       # handle contained elements
+       for elem in modelElem:
+         tag = elem.tag
++        # lxml also provides comments in addition to normal content
++        if tag is ElementTree.Comment:
++          continue
+         if classNameMapping.get(tag) is None:
+           # Element content - handle directly
+         
+diff --git a/ccpnmr2.4/python/memops/universal/ElementTree.py b/ccpnmr2.4/python/memops/universal/ElementTree.py
+index 2452217..c53afde 100644
+--- a/ccpnmr2.4/python/memops/universal/ElementTree.py
++++ b/ccpnmr2.4/python/memops/universal/ElementTree.py
+@@ -3,14 +3,20 @@ dependent on Python version
+ """
+ 
+ try:
+-  import xml.etree.cElementTree as ElementTree # in python >=2.5
++  from lxml import etree as ElementTree
+ except ImportError:
+   try:
+-    from  xml.etree import ElementTree # in python >=2.5
++    import xml.etree.cElementTree as ElementTree # in python >=2.5
+   except ImportError:
+-    from elementtree import ElementTree # effbot's pure Python module
++    try:
++      from  xml.etree import ElementTree # in python >=2.5
++    except ImportError:
++      from elementtree import ElementTree # effbot's pure Python module
+ 
+ try:
+-  from  xml.etree import ElementInclude # in python >=2.5
++  from lxml import ElementInclude
+ except ImportError:
+-  from elementtree import ElementInclude # effbot's pure Python module
++  try:
++    from  xml.etree import ElementInclude # in python >=2.5
++  except ImportError:
++    from elementtree import ElementInclude # effbot's pure Python module
+diff --git a/ccpnmr2.4/python/pdbe/xml/Util.py b/ccpnmr2.4/python/pdbe/xml/Util.py
+index eb36031..bc82b01 100644
+--- a/ccpnmr2.4/python/pdbe/xml/Util.py
++++ b/ccpnmr2.4/python/pdbe/xml/Util.py
+@@ -1,9 +1,6 @@
+ import sys, codecs
+ 
+-from xml.etree.ElementTree import ElementTree
+-#from xml.etree import ElementTree # Use this on flynn
+-#import xml.etree.ElementTree as ET
+-#import elementtree.ElementTree as ET
++from memops.universal.ElementTree import ElementTree
+ 
+ #
+ # Generic class to loop through elements/values of an XML ElementTree
