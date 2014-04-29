@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.15.7.ebuild,v 1.4 2013/10/30 19:23:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.15.7.ebuild,v 1.5 2014/04/28 23:09:15 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -42,7 +42,8 @@ pkg_setup() {
 
 python_prepare_all() {
 	# wooosh! this should fix multiple abi
-	epatch "${FILESDIR}"/${P}-multiple-abi.patch
+	epatch "${FILESDIR}"/${P}-multiple-abi.patch \
+		"${FILESDIR}"/${P}-freetype.patch
 
 	einfo "Deleting precompiled python files"
 	find . -name '*.py[co]' -print -delete || die
