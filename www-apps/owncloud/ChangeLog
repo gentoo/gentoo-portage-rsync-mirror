@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.55 2014/04/14 07:08:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.56 2014/04/29 11:37:57 voyageur Exp $
+
+*owncloud-6.0.3 (29 Apr 2014)
+*owncloud-5.0.16 (29 Apr 2014)
+
+  29 Apr 2014; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-5.0.15.ebuild,
+  +owncloud-5.0.16.ebuild, -owncloud-6.0.2.ebuild, +owncloud-6.0.3.ebuild:
+  Version bumps, remove vulnerable versions, bug #508978
 
   14 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
   Drop me from maintainers

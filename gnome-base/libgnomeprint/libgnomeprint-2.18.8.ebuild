@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.8.ebuild,v 1.13 2014/03/17 23:44:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.8.ebuild,v 1.14 2014/04/29 11:47:52 polynomial-c Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -44,8 +44,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-stdio-include.patch
-	epatch "${FILESDIR}"/${P}-freetype-2.5.1.patch
+	epatch "${FILESDIR}"/${P}-stdio-include.patch \
+		"${FILESDIR}"/${P}-freetype-2.5.1.patch \
+		"${FILESDIR}"/${P}-bison3.patch
 	eautoreconf
 	gnome2_src_prepare
 

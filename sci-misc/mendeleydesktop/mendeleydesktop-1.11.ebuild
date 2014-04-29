@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.10.1.ebuild,v 1.1 2013/10/09 18:36:43 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.11.ebuild,v 1.1 2014/04/29 11:46:28 vikraman Exp $
 
 EAPI="4"
 
@@ -82,7 +82,6 @@ src_install() {
 	doins share/icons/hicolor/48x48/apps/${PN}.png
 
 	# install documentation, but no license file
-	dodoc share/doc/${PN}/FAQ.pdf
 	dodoc share/doc/${PN}/Readme.txt
 
 	# install binary

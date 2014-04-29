@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop-pg-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/ChangeLog,v 1.12 2014/04/25 20:35:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/ChangeLog,v 1.13 2014/04/29 11:32:54 johu Exp $
+
+*kdevelop-pg-qt-1.0.0-r2 (29 Apr 2014)
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org>
+  +files/kdevelop-pg-qt-1.0.0-bison3.patch, +kdevelop-pg-qt-1.0.0-r2.ebuild:
+  Revision bump adds upstream patch which fixes build with bison3 spotted by
+  Lars Wendler <polynomial-c@gentoo.org>, bug #486416.
 
   25 Apr 2014; Johannes Huber <johu@gentoo.org> -kdevelop-pg-qt-1.0.0.ebuild,
   kdevelop-pg-qt-1.0.0-r1.ebuild:

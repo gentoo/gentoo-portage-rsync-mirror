@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/mendeleydesktop
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.15 2013/10/09 18:36:43 miknix Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.16 2014/04/29 11:46:28 vikraman Exp $
+
+*mendeleydesktop-1.11 (29 Apr 2014)
+
+  29 Apr 2014; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  +mendeleydesktop-1.11.ebuild, -mendeleydesktop-1.10.1.ebuild:
+  Bump to version 1.11, bug #504578.
 
 *mendeleydesktop-1.10.1 (09 Oct 2013)
 
