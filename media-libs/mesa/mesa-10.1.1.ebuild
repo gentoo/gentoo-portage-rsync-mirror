@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.1.ebuild,v 1.1 2014/04/28 22:10:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.1.1.ebuild,v 1.2 2014/04/29 17:31:38 mgorny Exp $
 
 EAPI=5
 
@@ -162,7 +162,12 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xextproto-7.0.99.1[${MULTILIB_USEDEP}]
 	x11-proto/xf86driproto[${MULTILIB_USEDEP}]
 	x11-proto/xf86vidmodeproto[${MULTILIB_USEDEP}]
+	$(python_gen_any_dep 'dev-libs/libxml2[python,${PYTHON_USEDEP}]')
 "
+
+python_check_deps() {
+	has_version --host-root "dev-libs/libxml2[python,${PYTHON_USEDEP}]"
+}
 
 S="${WORKDIR}/${MY_P}"
 EGIT_CHECKOUT_DIR=${S}

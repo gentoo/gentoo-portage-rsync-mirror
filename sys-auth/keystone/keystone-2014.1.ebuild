@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.ebuild,v 1.1 2014/04/27 07:42:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.ebuild,v 1.2 2014/04/29 17:33:21 prometheanfire Exp $
 
 EAPI=5
 
@@ -86,6 +86,8 @@ pkg_setup() {
 }
 
 python_prepare_all() {
+	# it's in git, but not in the tarball.....
+	mkdir -p ${PN}/tests/tmp/ || die
 	cp etc/keystone-paste.ini ${PN}/tests/tmp/ || die
 	distutils-r1_python_prepare_all
 }
