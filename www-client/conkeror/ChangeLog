@@ -1,6 +1,10 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.39 2014/02/13 22:03:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.40 2014/04/29 09:00:35 nimiux Exp $
+
+  29 Apr 2014; Chema Alonso <nimiux@gentoo.org>
+  conkeror-1.0_pre20140212.ebuild:
+  Stable for amd64 wrt bug #506700
 
 *conkeror-1.0_pre20140212 (13 Feb 2014)
 
