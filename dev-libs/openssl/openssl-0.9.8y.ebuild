@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8y.ebuild,v 1.8 2013/10/13 11:18:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8y.ebuild,v 1.9 2014/04/29 21:24:21 vapier Exp $
 
 # this ebuild is only for the libcrypto.so.0.9.8 and libssl.so.0.9.8 SONAME for ABI compat
 
@@ -25,14 +25,6 @@ DEPEND="${RDEPEND}
 	sys-apps/diffutils
 	>=dev-lang/perl-5
 	test? ( sys-devel/bc )"
-
-pkg_setup() {
-	# avoid collisions with openssl-1 (preserve lib)
-	if ! has_version dev-libs/openssl:${SLOT} ; then
-		ewarn "Removing lib{crypto,ssl}.so.0.9.8 to avoid collision with openssl-1"
-		rm -f "${ROOT}"/usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.8
-	fi
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
