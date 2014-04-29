@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ocrad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.40 2014/04/06 23:53:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.41 2014/04/29 09:12:03 nimiux Exp $
+
+  29 Apr 2014; Chema Alonso <nimiux@gentoo.org> ocrad-0.22.ebuild:
+  Stable for amd64 wrt bug #506786
 
   06 Apr 2014; Jeroen Roovers <jer@gentoo.org> files/ocrad-0.17-gcc43.patch:
   Clean up patch

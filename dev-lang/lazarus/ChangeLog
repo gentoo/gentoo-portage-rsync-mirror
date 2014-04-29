@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lazarus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.42 2013/12/24 12:42:10 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.43 2014/04/29 09:16:12 radhermit Exp $
+
+*lazarus-1.2.2 (29 Apr 2014)
+
+  29 Apr 2014; Tim Harder <radhermit@gentoo.org> +lazarus-1.2.2.ebuild:
+  Version bump (bug #508950).
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lazarus-1.0.12.ebuild:
   Stable for x86, wrt bug #491544
