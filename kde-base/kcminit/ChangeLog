@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.286 2014/04/01 18:24:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.287 2014/04/29 18:53:07 johu Exp $
+
+*kcminit-4.11.9 (29 Apr 2014)
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> +kcminit-4.11.9.ebuild:
+  Version bump KDE Workspace 4.11.9
 
 *kcminit-4.11.8 (01 Apr 2014)
 

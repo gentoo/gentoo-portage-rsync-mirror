@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.237 2014/04/22 13:35:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.238 2014/04/29 18:34:49 johu Exp $
+
+*dolphin-4.12.5 (29 Apr 2014)
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> +dolphin-4.12.5.ebuild:
+  Version bump KDE SC 4.12.5
 
   22 Apr 2014; Johannes Huber <johu@gentoo.org> dolphin-4.13.0.ebuild:
   Drop DEPEND on kde-base/kdelibs[semantic-desktop], bug #508350.

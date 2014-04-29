@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.298 2014/04/17 00:43:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.299 2014/04/29 18:35:01 johu Exp $
+
+*kdesdk-kioslaves-4.12.5 (29 Apr 2014)
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org>
+  +kdesdk-kioslaves-4.12.5.ebuild:
+  Version bump KDE SC 4.12.5
 
   16 Apr 2014; Johannes Huber <johu@gentoo.org> kdesdk-kioslaves-4.13.0.ebuild:
   Restore KEYWORDS for KDE SC 4.13.0

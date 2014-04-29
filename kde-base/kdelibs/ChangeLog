@@ -1,6 +1,20 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.991 2014/04/17 00:43:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.993 2014/04/29 18:53:10 johu Exp $
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org>
+  files/kdelibs-4.10.0-udisks.patch,
+  files/kdelibs-4.3.80-kdeui_util_kkeyserver_mac.patch,
+  files/kdelibs-4.4.90-xslt.patch, files/kdelibs-4.6.2-armlinking.patch,
+  files/kdelibs-4.6.3-no_suid_kdeinit.patch,
+  files/kdelibs-4.7.96-mimetypes.patch, files/kdelibs-4.8.1-norpath.patch,
+  files/kdelibs-4.9.3-werror.patch:
+  Version bump KDE Workspace 4.11.9
+
+*kdelibs-4.12.5 (29 Apr 2014)
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> +kdelibs-4.12.5.ebuild:
+  Version bump KDE SC 4.12.5
 
   16 Apr 2014; Johannes Huber <johu@gentoo.org> kdelibs-4.13.0.ebuild:
   Restore KEYWORDS for KDE SC 4.13.0
