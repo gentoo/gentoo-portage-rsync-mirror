@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.8.ebuild,v 1.1 2013/02/08 19:00:04 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.8.ebuild,v 1.2 2014/04/29 19:47:34 vapier Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ HOMEPAGE="http://miniupnp.free.fr/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND=">=net-firewall/iptables-1.4.6
