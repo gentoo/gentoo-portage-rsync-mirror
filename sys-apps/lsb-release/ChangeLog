@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lsb-release
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.18 2012/12/16 18:08:54 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.19 2014/04/29 20:52:44 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> lsb-release-1.4.ebuild:
+  Add arm64/m68k love.
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> lsb-release-1.4.ebuild:
   alpha/sparc stable
@@ -52,5 +55,3 @@
   20 Oct 2006; Mike Kelly <pioto@gentoo.org> +metadata.xml,
   +lsb-release-1.4.ebuild:
   Initial ebuild for the lsb_release command. It's needed by net-misc/ltsp.
-
-

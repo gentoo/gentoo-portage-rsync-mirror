@@ -1,6 +1,25 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1227 2014/04/28 17:38:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1232 2014/04/29 20:59:41 mgorny Exp $
+
+  29 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Disable header wrapping on unsupported ABIs.
+
+  29 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Reorder the operations in multilib_prepare_wrappers for easier reading.
+
+  29 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Create ${CHOST}-prefixed tool symlinks for multilib portage, to gain better
+  compatibility with plain multilib.
+
+  29 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Disable wrappers for multilib portage only. Enable them in non-multilib
+  profiles for consistency.
+
+  29 Apr 2014; Michał Górny <mgorny@gentoo.org> cmake-multilib.eclass,
+  multilib-build.eclass, multilib-minimal.eclass:
+  Move conditionals for enabling wrappers into multilib_prepare_wrappers() and
+  multilib_install_wrappers().
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Deprecate multilib_build_binaries, and switch the code to use
