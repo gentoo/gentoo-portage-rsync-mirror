@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.225 2014/04/28 18:24:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.226 2014/04/29 13:11:01 jer Exp $
+
+  29 Apr 2014; Jeroen Roovers <jer@gentoo.org> rubygems-2.0.14.ebuild:
+  Stable for HPPA (bug #508996).
 
 *rubygems-2.0.14-r1 (28 Apr 2014)
 
