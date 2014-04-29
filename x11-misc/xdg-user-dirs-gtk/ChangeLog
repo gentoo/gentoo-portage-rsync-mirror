@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.30 2014/04/27 11:48:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.31 2014/04/29 10:03:44 nimiux Exp $
+
+  29 Apr 2014; Chema Alonso <nimiux@gentoo.org> xdg-user-dirs-gtk-0.10.ebuild:
+  Stable for amd64 wrt bug #506826
 
   27 Apr 2014; Markus Meier <maekke@gentoo.org> xdg-user-dirs-gtk-0.10.ebuild:
   arm stable, bug #506826
