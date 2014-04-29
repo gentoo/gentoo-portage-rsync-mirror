@@ -7,6 +7,7 @@
   <name>Ian Whyman</name>
  </maintainer>
  <use>
+  <flag name="curl">Support YouTube and external media sources (e.g. internet radio)</flag>
   <flag name="id3tag">Use <pkg>media-libs/libid3tag</pkg> for reading files' metadata rather than taglib</flag>
   <flag name="inotify">Enable inotify filesystem monitoring support</flag>
   <flag name="lastfm">Enable last.fm support</flag>
