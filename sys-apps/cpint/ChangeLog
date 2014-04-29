@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpint
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/ChangeLog,v 1.7 2008/01/11 07:16:12 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpint/ChangeLog,v 1.8 2014/04/29 21:51:15 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> cpint-2.5.3.ebuild:
+  Update to EAPI=4.
 
   11 Jan 2008; Mike Frysinger <vapier@gentoo.org>
   +files/cpint-2.5.3-build.patch, +files/cpint-2.5.3-kernel.patch,
@@ -22,4 +25,3 @@
 
   20 Apr 2004; Michael McCabe <randy@gentoo.org> :
   Initial Commit. Submitted by Jochen Eisinger jochen.eisinger@gmx.de
-
