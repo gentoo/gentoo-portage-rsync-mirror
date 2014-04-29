@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.125 2014/01/18 05:37:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.126 2014/04/29 19:22:34 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r1.ebuild,
+  iputils-99999999.ebuild:
+  Put USE=gnutls behind USE=ssl since only one of openssl/gnutls can be used at
+  a time #509100 by David Heidelberger.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r1.ebuild,
   iputils-20121221.ebuild, iputils-99999999.ebuild:

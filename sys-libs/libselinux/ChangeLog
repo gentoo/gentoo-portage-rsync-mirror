@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.117 2014/04/28 19:39:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.118 2014/04/29 19:13:15 swift Exp $
+
+*libselinux-2.2.2-r5 (29 Apr 2014)
+*libselinux-2.3_rc1-r1 (29 Apr 2014)
+
+  29 Apr 2014; Sven Vermeulen <swift@gentoo.org> +libselinux-2.2.2-r5.ebuild,
+  +libselinux-2.3_rc1-r1.ebuild:
+  Add USE=ruby support, now without ruby-ng eclass calls, fixes bug #509004
 
 *libselinux-2.3_rc1 (28 Apr 2014)
 

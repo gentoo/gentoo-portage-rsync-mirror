@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/poxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.34 2014/04/29 18:35:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.35 2014/04/29 19:17:52 johu Exp $
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> -poxml-4.12.4.ebuild:
+  Remove KDE SC 4.12.4
 
 *poxml-4.12.5 (29 Apr 2014)
 

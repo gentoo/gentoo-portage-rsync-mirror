@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.188 2014/04/06 17:22:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.189 2014/04/29 19:13:58 jer Exp $
+
+  29 Apr 2014; Jeroen Roovers <jer@gentoo.org> layman-2.0.0-r3.ebuild:
+  Stable for HPPA (bug #508882).
 
   06 Apr 2014; Michał Górny <mgorny@gentoo.org> layman-2.0.0-r3.ebuild,
   layman-9999.ebuild:

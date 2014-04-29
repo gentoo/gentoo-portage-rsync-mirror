@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.35.ebuild,v 1.3 2014/04/28 17:36:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.35.ebuild,v 1.4 2014/04/29 19:28:59 vapier Exp $
 
 EAPI="4"
 
@@ -49,7 +49,6 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	[[ ${CHOST} == *-mint* ]] && append-cppflags -D_GNU_SOURCE
 	ECONF_SOURCE="${S}" econf \
 		--with-match-limit-recursion=$(usex recursion-limit 8192 MATCH_LIMIT) \
 		$(multilib_native_use_enable bzip2 pcregrep-libbz2) \

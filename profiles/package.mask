@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15629 2014/04/29 07:11:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15630 2014/04/29 19:26:16 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -794,10 +794,6 @@ dev-java/itext:5
 # Needs >=dev-lang/lua-5.2
 ~net-analyzer/nmap-6.40
 ~net-analyzer/nmap-6.46
-
-# Tim Harder <radhermit@gentoo.org> (26 Jul 2013)
-# Masked for testing
-=sys-devel/bison-3*
 
 # Julian Ospald <hasufell@gentoo.org> (21 Jul 2013)
 # Mask all unfetchable versions and those with tons of random

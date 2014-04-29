@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkexiv2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.210 2014/04/29 18:35:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.211 2014/04/29 19:18:23 johu Exp $
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> -libkexiv2-4.12.4.ebuild:
+  Remove KDE SC 4.12.4
 
 *libkexiv2-4.12.5 (29 Apr 2014)
 

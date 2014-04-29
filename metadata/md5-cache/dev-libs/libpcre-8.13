@@ -10,4 +10,4 @@ RDEPEND=bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib )
 SLOT=3
 SRC_URI=mirror://sourceforge/pcre/pcre-8.13.tar.bz2 ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.13.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=35c8e65fac7c7fc906b1d78ce908ba5a
+_md5_=0e3934ccdd252af2299872b31c6f6e0c

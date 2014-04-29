@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.12 2014/01/18 05:37:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.13 2014/04/29 19:22:34 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -28,10 +28,10 @@ IUSE="caps doc gnutls idn ipv6 SECURITY_HAZARD ssl static"
 
 LIB_DEPEND="caps? ( sys-libs/libcap[static-libs(+)] )
 	idn? ( net-dns/libidn[static-libs(+)] )
-	ipv6? (
+	ipv6? ( ssl? (
 		gnutls? ( net-libs/gnutls[static-libs(+)] )
-		ssl? ( dev-libs/openssl:0[static-libs(+)] )
-	)"
+		!gnutls? ( dev-libs/openssl:0[static-libs(+)] )
+	) )"
 RDEPEND="!net-misc/rarpd
 	!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}

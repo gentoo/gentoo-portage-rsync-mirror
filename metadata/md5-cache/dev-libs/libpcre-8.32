@@ -11,4 +11,4 @@ REQUIRED_USE=readline? ( !libedit ) libedit? ( !readline )
 SLOT=3
 SRC_URI=mirror://sourceforge/pcre/pcre-8.32.tar.bz2 ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.32.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=6eeb38bde0c1cddaa8b7a5c9a16bd983
+_md5_=8d4040b4039bd9982df6303738a0421c

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-menu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.190 2014/04/29 18:35:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.191 2014/04/29 19:18:32 johu Exp $
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> -kdebase-menu-4.12.4.ebuild:
+  Remove KDE SC 4.12.4
 
 *kdebase-menu-4.12.5 (29 Apr 2014)
 

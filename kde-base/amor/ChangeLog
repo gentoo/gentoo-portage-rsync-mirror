@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.304 2014/04/29 18:34:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.305 2014/04/29 19:18:05 johu Exp $
+
+  29 Apr 2014; Johannes Huber <johu@gentoo.org> -amor-4.12.4.ebuild:
+  Remove KDE SC 4.12.4
 
 *amor-4.12.5 (29 Apr 2014)
 
