@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36.ebuild,v 1.15 2013/02/24 17:54:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36.ebuild,v 1.16 2014/04/29 07:02:03 polynomial-c Exp $
 
 EAPI=4
 
@@ -33,6 +33,9 @@ RDEPEND="${RDEPEND}
 src_prepare() {
 	# Disable silly test that's not guaranteed to pass on an arbitrary machine
 	epatch "${FILESDIR}/${PN}-0.10.36-disable-test_fail_abstract_new.patch"
+
+	# Fix compilation with >=sys-devel/bison-3.0 (#478676)
+	epatch "${FILESDIR}/${PN}-make-grammar.y-work-with-bison-3.patch"
 
 	# Disable windows-portability tests that are relevant only on x86 and amd64
 	# and can fail on other arches (bug #455038)
