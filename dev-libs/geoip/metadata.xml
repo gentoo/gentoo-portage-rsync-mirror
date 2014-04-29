@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <use>
-	<flag name="perl-geoipupdate">Install pure perl version of geoipupdate, with
-	Proxy Server support via the "http_proxy" environment variable and easy to
-	customize.</flag>
 	<flag name='city'>Install the city based IP address database</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.209 2014/04/07 00:04:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.210 2014/04/29 14:39:07 jer Exp $
+
+  29 Apr 2014; Jeroen Roovers <jer@gentoo.org> -geoip-1.4.8-r3.ebuild,
+  -geoip-1.5.0.ebuild, -geoip-1.5.1.ebuild, -geoip-1.5.2.ebuild,
+  -files/geoip-1.5.0-pkgconfig.patch:
+  Old.
 
   07 Apr 2014; Jeroen Roovers <jer@gentoo.org> -files/geoipupdate-r1.sh:
   Old.
