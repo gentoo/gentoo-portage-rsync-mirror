@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/timidity++
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.157 2013/05/03 12:03:50 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.159 2014/04/29 01:40:40 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/timidity++-2.14.0-ar.patch, timidity++-2.14.0-r1.ebuild:
+  Fix AR handling #468176 by Agostino Sarubbo.
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org> timidity++-2.14.0-r1.ebuild:
+  Tweak style to make it easier to maintain.
 
   03 May 2013; Ulrich Müller <ulm@gentoo.org> timidity++-2.13.2-r13.ebuild,
   timidity++-2.13.2-r14.ebuild, timidity++-2.14.0.ebuild,
