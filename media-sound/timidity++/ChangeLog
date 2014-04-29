@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.160 2014/04/29 02:45:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.161 2014/04/29 03:09:40 vapier Exp $
+
+*timidity++-2.14.0-r2 (29 Apr 2014)
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/timidity++-2.14.0-pkg-config.patch, +timidity++-2.14.0-r2.ebuild:
+  Move non-binary files from /usr/lib/timidity to /usr/share/timidity #377245 by
+  Michał Górny.  Fix pkg-config handling and use it to get ncurses info #497362
+  by Dave Kemper.
 
   29 Apr 2014; Mike Frysinger <vapier@gentoo.org>
   +files/timidity++-2.14.0-configure-flags.patch, timidity++-2.14.0-r1.ebuild:
