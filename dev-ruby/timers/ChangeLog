@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/timers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timers/ChangeLog,v 1.8 2014/04/28 05:35:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timers/ChangeLog,v 1.9 2014/04/29 05:32:42 graaff Exp $
+
+*timers-2.0.0 (29 Apr 2014)
+
+  29 Apr 2014; Hans de Graaff <graaff@gentoo.org> +timers-2.0.0.ebuild:
+  Version bump. Ebuild by Peter Wilmott in the ruby overlay.
 
   28 Apr 2014; Hans de Graaff <graaff@gentoo.org> timers-1.1.0-r1.ebuild:
   Add ruby21.
