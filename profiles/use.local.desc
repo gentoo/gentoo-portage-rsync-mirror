@@ -2973,6 +2973,7 @@ mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu Use system
 mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 mail-client/thunderbird-bin:crashreporter - Enable crash reporter for bugs
+mail-client/trojita:crypt - Store passwords securely via dev-libs/qtkeychain
 mail-filter/MailScanner:exim - Set mail-mta to used MTA
 mail-filter/MailScanner:postfix - Set mail-mta/postfix to used MTA
 mail-filter/MailScanner:spamassassin - Enable usage of mail-filter/spamassassin for spam protection

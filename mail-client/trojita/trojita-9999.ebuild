@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.22 2014/03/06 12:13:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.23 2014/04/29 12:02:48 johu Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-IUSE="debug test +zlib"
+IUSE="+crypt debug test +zlib"
 for MY_LANG in ${MY_LANGS} ; do
 	IUSE="${IUSE} linguas_${MY_LANG}"
 done
@@ -35,6 +35,7 @@ RDEPEND="
 	>=dev-qt/qtwebkit-${QT_REQUIRED}:4
 "
 DEPEND="${RDEPEND}
+	crypt? ( dev-libs/qtkeychain[qt4] )
 	test? ( >=dev-qt/qttest-${QT_REQUIRED}:4 )
 	zlib? (
 		virtual/pkgconfig
@@ -46,6 +47,7 @@ DOCS="README LICENSE"
 
 src_configure() {
 	local mycmakeargs=(
+		$(cmake-utils_use_with crypt QTKEYCHAIN_PLUGIN)
 		$(cmake-utils_use_with test TESTS)
 		$(cmake-utils_use_with zlib ZLIB)
 	)
