@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/ptlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.50 2013/10/27 09:45:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.51 2014/04/29 07:58:15 polynomial-c Exp $
+
+*ptlib-2.12.9 (29 Apr 2014)
+*ptlib-2.10.11 (29 Apr 2014)
+
+  29 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +ptlib-2.10.11.ebuild,
+  +ptlib-2.12.9.ebuild, +files/ptlib-2.10.10-mga-bison-parameter.patch:
+  Version bumps to fix build with >=sys-devel/bison-3.0 (bug #485842).
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434
