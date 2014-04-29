@@ -8,6 +8,6 @@
 		<name>Jan Kundrát</name>
 	</maintainer>
 	<use>
-		<flag name="crypt">Store passwords securely via <pkg>dev-libs/qtkeychain</pkg></flag>
+		<flag name="password">Store passwords securely via <pkg>dev-libs/qtkeychain</pkg></flag>
 	</use>
 </pkgmetadata>
