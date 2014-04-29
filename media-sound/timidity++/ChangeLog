@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.159 2014/04/29 01:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.160 2014/04/29 02:45:19 vapier Exp $
+
+  29 Apr 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/timidity++-2.14.0-configure-flags.patch, timidity++-2.14.0-r1.ebuild:
+  Drop bad/unnecessary -I/-L flags that default to /usr/lib for most people.
 
   29 Apr 2014; Mike Frysinger <vapier@gentoo.org>
   +files/timidity++-2.14.0-ar.patch, timidity++-2.14.0-r1.ebuild:
