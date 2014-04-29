@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15627 2014/04/28 18:51:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15628 2014/04/28 23:34:06 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -587,7 +587,7 @@ app-emacs/delicious
 >=x11-themes/mate-icon-theme-1.7
 >=x11-themes/mate-icon-theme-faenza-1.7
 >=x11-themes/mate-themes-1.7
->=x11-wm/mate-window-manager-1.7
+>=x11-wm/marco-1.7
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.
