@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/sgabios-0.1_pre8.ebuild,v 1.4 2013/06/30 02:36:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/sgabios-0.1_pre8.ebuild,v 1.5 2014/04/30 21:07:36 vapier Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch_user
 }
 
 src_compile() {

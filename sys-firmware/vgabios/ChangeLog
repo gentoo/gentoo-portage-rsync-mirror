@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/vgabios
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/vgabios/ChangeLog,v 1.4 2013/11/26 20:21:18 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/vgabios/ChangeLog,v 1.5 2014/04/30 21:06:47 vapier Exp $
+
+  30 Apr 2014; Mike Frysinger <vapier@gentoo.org> vgabios-0.7a.ebuild:
+  Add epatch_user support #487100 by Hristo Venev.
 
   26 Nov 2013; Markos Chandras <hwoarang@gentoo.org> vgabios-0.6c-r1.ebuild:
   amd64-fbsd has no stable keywords

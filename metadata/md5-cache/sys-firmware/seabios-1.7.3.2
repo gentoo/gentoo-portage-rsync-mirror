@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare pretend setup
-DEPEND=!binary? ( >=sys-power/iasl-20060912 ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 )
+DEPEND=!binary? ( >=sys-power/iasl-20060912 || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
 DESCRIPTION=Open Source implementation of a 16-bit x86 BIOS
 EAPI=5
 HOMEPAGE=http://www.seabios.org
@@ -10,4 +10,4 @@ REQUIRED_USE=ppc? ( binary ) ppc64? ( binary )
 SLOT=0
 SRC_URI=http://code.coreboot.org/p/seabios/downloads/get/seabios-1.7.3.2.tar.gz http://code.coreboot.org/p/seabios/downloads/get/bios.bin-1.7.3.2.gz http://dev.gentoo.org/~cardoe/distfiles/seabios-1.7.3.2.tar.gz http://dev.gentoo.org/~cardoe/distfiles/bios.bin-1.7.3.2.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	30d5d7986d3f80d0f2c2726366426859	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=28ea3a5c9176eb50364e7464c9ed04e3
+_md5_=52ed9de32dda28a6be7e884da013811b

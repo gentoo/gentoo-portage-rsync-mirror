@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/vgabios/vgabios-0.7a.ebuild,v 1.3 2012/12/04 11:14:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/vgabios/vgabios-0.7a.ebuild,v 1.4 2014/04/30 21:06:47 vapier Exp $
 
 EAPI=4
 
@@ -28,6 +28,8 @@ src_prepare() {
 	[[ -n ${FIXES} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
+
+	epatch_user
 }
 
 src_compile() {
