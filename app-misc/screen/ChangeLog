@@ -1,6 +1,21 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.194 2014/04/28 20:43:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.196 2014/04/30 15:21:13 polynomial-c Exp $
+
+*screen-4.2.1-r2 (30 Apr 2014)
+
+  30 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -screen-4.2.1-r1.ebuild,
+  +screen-4.2.1-r2.ebuild:
+  Another revbump to move screen's rundir to /tmp as /var/run doesn't get wiped
+  on reboot.
+
+*screen-4.2.1-r1 (30 Apr 2014)
+
+  30 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> -screen-4.2.1.ebuild,
+  +screen-4.2.1-r1.ebuild:
+  Move rundir back to /var/run as screen also works on non-linux systems where
+  /run doesn't exist. Create that directory immediately after the merge to
+  catch the gap between merge and reboot (bug #508634).
 
   28 Apr 2014; Jeroen Roovers <jer@gentoo.org> screen-4.2.1.ebuild:
   Use mirror://gnu.

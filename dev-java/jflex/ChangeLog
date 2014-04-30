@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jflex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.14 2014/04/17 22:20:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.15 2014/04/30 15:27:11 tomwij Exp $
+
+  30 Apr 2014; Tom Wijsman <TomWij@gentoo.org> jflex-1.5.1.ebuild:
+  Fix up dodoc line; reported in bug #498874 by James Cloos, patch provided by
+  Martin Walch.
 
 *jflex-1.5.1 (17 Apr 2014)
 
