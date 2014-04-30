@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.74 2014/04/05 15:27:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.75 2014/04/30 10:38:47 nimiux Exp $
+
+  30 Apr 2014; Chema Alonso <nimiux@gentoo.org> libsoundtouch-1.8.0.ebuild:
+  Stable for amd64 wrt bug #502842
 
   05 Apr 2014; Jeroen Roovers <jer@gentoo.org> libsoundtouch-1.8.0.ebuild:
   Stable for HPPA (bug #502842).

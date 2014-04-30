@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/gtk-recordmydesktop-0.3.8-r3.ebuild,v 1.1 2013/12/06 05:25:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/gtk-recordmydesktop-0.3.8-r3.ebuild,v 1.2 2014/04/30 09:55:41 nimiux Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/recordmydesktop/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 # Test is buggy : bug #186752
 # Tries to run intl-toolupdate without it being substituted from
@@ -35,6 +35,6 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" install
 	python_fix_shebang "${D}/usr/bin/gtk-recordMyDesktop"
-	sed -i 's#gtk-recordmydesktop.png#gtk-recordmydesktop#' "${D}/usr/share/applications/gtk-recordmydesktop.desktop"
+	sed -i 's#gtk-recordmydesktop.png#gtk-recordmydesktop#' "${D}/usr/share/applications/gtk-recordmydesktop.desktop" || die
 	dodoc NEWS README AUTHORS ChangeLog
 }

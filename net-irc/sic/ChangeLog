@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/sic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.11 2014/01/04 05:50:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.12 2014/04/30 11:03:37 nimiux Exp $
+
+  30 Apr 2014; Chema Alonso <nimiux@gentoo.org> sic-1.2.ebuild:
+  Stable for amd64 wrt bug #502884
 
   04 Jan 2014; Tim Harder <radhermit@gentoo.org> -sic-1.0.ebuild:
   Remove old.

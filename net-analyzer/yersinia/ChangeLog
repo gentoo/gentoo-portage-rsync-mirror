@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/yersinia
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.10 2013/12/28 16:18:22 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.11 2014/04/30 10:20:36 nimiux Exp $
+
+  30 Apr 2014; Chema Alonso <nimiux@gentoo.org> yersinia-0.7.3.ebuild:
+  Stable for amd64 wrt bug #502866
 
   28 Dec 2013; Jeroen Roovers <jer@gentoo.org> yersinia-0.7.3.ebuild:
   Add virtual/pkgconfig dependency.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15631 2014/04/30 06:15:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15632 2014/04/30 09:37:41 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (03 Apr 2014)
+# Wrong license 465690
+# Fails to build and no fixes after years, #147574
+# removal in 30 days
+sci-geosciences/gempak
 
 # Mike Frysinger <vapier@gentoo.org> (28 Apr 2014)
 # Use app-emulation/qemu instead.  It has USE=static-user to support building

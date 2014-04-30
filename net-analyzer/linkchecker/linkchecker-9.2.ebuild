@@ -1,36 +1,34 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.4-r1.ebuild,v 1.2 2013/12/16 10:54:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-9.2.ebuild,v 1.1 2014/04/30 10:08:23 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite?"
 
 inherit bash-completion-r1 distutils-r1 eutils multilib
 
-MY_P="${P/linkchecker/LinkChecker}"
+MY_PN="${PN/linkchecker/LinkChecker}"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Check websites for broken links"
 HOMEPAGE="http://wummel.github.com/linkchecker/ http://pypi.python.org/pypi/linkchecker/"
-SRC_URI="mirror://github/wummel/${PN}/${MY_P}.tar.xz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-solaris"
-IUSE="bash-completion clamav geoip gnome login nagios sqlite syntax-check X"
+IUSE="bash-completion clamav geoip gnome login sqlite X"
 
 RDEPEND="
 	dev-python/dnspython[${PYTHON_USEDEP}]
-	bash-completion? ( dev-python/optcomplete[${PYTHON_USEDEP}] )
+	dev-python/requests[${PYTHON_USEDEP}]
+	bash-completion? ( dev-python/argcomplete[${PYTHON_USEDEP}] )
 	clamav? ( app-antivirus/clamav )
 	geoip? ( dev-python/geoip-python[${PYTHON_USEDEP}] )
 	gnome? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
 	login? ( dev-python/twill[${PYTHON_USEDEP}] )
-	syntax-check? (
-		dev-python/cssutils[${PYTHON_USEDEP}]
-		dev-python/utidylib[${PYTHON_USEDEP}]
-		)
 	X? (
 		dev-python/PyQt4[X,help,${PYTHON_USEDEP}]
 		dev-python/qscintilla-python[${PYTHON_USEDEP}]
@@ -47,9 +45,7 @@ S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
 	local PATCHES=(
-		"${FILESDIR}"/${PN}-8.3-unbundle.patch
-		"${FILESDIR}"/${PN}-8.0-desktop.patch
-		"${FILESDIR}"/${P}-help.patch
+		"${FILESDIR}"/${P}-unbundle.patch
 		)
 
 	emake -C doc/html
@@ -58,6 +54,12 @@ python_prepare_all() {
 }
 
 python_install_all() {
+	DOCS=(
+		doc/upgrading.txt
+		doc/python3.txt
+		doc/changelog.txt
+		doc/development.txt
+	)
 	distutils-r1_python_install_all
 	if ! use X; then
 		delete_gui() {
@@ -69,10 +71,4 @@ python_install_all() {
 	fi
 	dohtml doc/html/*
 	use bash-completion && dobashcomp config/linkchecker-completion
-	if use nagios; then
-		insinto /usr/$(get_libdir)/nagios/plugins
-		doins linkchecker-nagios
-	else
-		rm -f "${ED}"/usr/bin/linkchecker-nagios* || die
-	fi
 }
