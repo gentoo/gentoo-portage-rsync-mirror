@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.68 2014/03/09 11:29:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.69 2014/04/30 04:54:02 radhermit Exp $
+
+*libass-0.11.2 (30 Apr 2014)
+
+  30 Apr 2014; Tim Harder <radhermit@gentoo.org> +libass-0.11.2.ebuild:
+  Version bump.
 
 *libass-0.11.1 (09 Mar 2014)
 
