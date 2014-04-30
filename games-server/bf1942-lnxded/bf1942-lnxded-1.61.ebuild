@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.8 2012/02/05 06:18:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.9 2014/04/30 19:25:04 ulm Exp $
 
 inherit eutils unpacker games
 
@@ -9,13 +9,11 @@ HOMEPAGE="http://www.eagames.com/official/battlefield/1942/us/editorial/serverad
 SRC_URI="http://bf1942.lightcubed.com/dist/${PN/-/_}-1.6-rc2.run
 	ftp://largedownloads.ea.com/pub/misc/bf1942-update-${PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="bf1942-lnxded"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="mirror strip"
-
-RDEPEND="sys-libs/glibc"
+RESTRICT="mirror bindist strip"
 
 S=${WORKDIR}
 

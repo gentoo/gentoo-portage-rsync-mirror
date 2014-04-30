@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/bf1942-desertcombat-0.7_beta1.ebuild,v 1.6 2012/02/08 21:30:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-desertcombat/bf1942-desertcombat-0.7_beta1.ebuild,v 1.7 2014/04/30 19:31:12 ulm Exp $
 
 inherit unpacker games
 
@@ -8,11 +8,11 @@ DESCRIPTION="modern day military modification for BattleField 1942"
 HOMEPAGE="http://www.desertcombat.com/"
 SRC_URI="desertcombat_0.7n-beta_full_install.run"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="fetch"
+RESTRICT="fetch bindist"
 
 DEPEND=">=games-server/bf1942-lnxded-1.6_rc"
 

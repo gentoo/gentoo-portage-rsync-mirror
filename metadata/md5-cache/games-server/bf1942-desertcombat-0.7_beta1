@@ -3,10 +3,10 @@ DEPEND=>=games-server/bf1942-lnxded-1.6_rc
 DESCRIPTION=modern day military modification for BattleField 1942
 HOMEPAGE=http://www.desertcombat.com/
 KEYWORDS=x86
-LICENSE=as-is
+LICENSE=all-rights-reserved
 RDEPEND=>=games-server/bf1942-lnxded-1.6_rc games-misc/games-envd
-RESTRICT=fetch
+RESTRICT=fetch bindist
 SLOT=0
 SRC_URI=desertcombat_0.7n-beta_full_install.run
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=8aa42fadf3b438147bffb8cbf67e1c60
+_md5_=3c12abb03c13a299514381cb8bb036b3
