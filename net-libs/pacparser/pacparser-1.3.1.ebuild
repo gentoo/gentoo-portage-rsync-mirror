@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pacparser/pacparser-1.3.1.ebuild,v 1.1 2013/11/26 05:29:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pacparser/pacparser-1.3.1.ebuild,v 1.2 2014/04/30 15:48:03 bicatali Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc python"
 
 DEPEND="python? ( ${PYTHON_DEPS} )"
@@ -41,11 +41,13 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIB_PREFIX="${D}/usr/$(get_libdir)" -C src install
+	emake DESTDIR="${ED}" LIB_PREFIX="${ED}/usr/$(get_libdir)" -C src install
 	dodoc README
 	use python && python_foreach_impl \
 		emake DESTDIR="${D}" \
 		LIB_PREFIX="${D}/usr/$(get_libdir)" -C src install-pymod
-	use doc && emake DESTDIR="${D}" \
-		DOC_PREFIX="${D}/usr/share/doc/${PF}" -C src install-docs
+	use doc && emake DESTDIR="${ED}" \
+		DOC_PREFIX="${ED}/usr/share/doc/${PF}" -C src install-docs
+	# conflicts (bug #509168), and useless
+	rm "${ED}"/usr/share/man/man3/deprecated.3 || die
 }
