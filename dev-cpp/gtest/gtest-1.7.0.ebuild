@@ -1,9 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.7.0.ebuild,v 1.1 2013/11/06 09:57:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.7.0.ebuild,v 1.2 2014/04/30 14:36:24 mgorny Exp $
 
 EAPI="5"
 
+AUTOTOOLS_AUTORECONF=1
+AUTOTOOLS_IN_SOURCE_BUILD=1
 # Python is required for tests and some build tasks.
 PYTHON_COMPAT=( python{2_6,2_7} )
 
@@ -26,37 +28,25 @@ PATCHES=(
 	"${FILESDIR}/configure-fix-pthread-linking.patch" #371647
 )
 
-AUTOTOOLS_AUTORECONF="1"
-
 src_prepare() {
 	sed -i -e "s|/tmp|${T}|g" test/gtest-filepath_test.cc || die
 	sed -i -r \
 		-e '/^install-(data|exec)-local:/s|^.*$|&\ndisabled-&|' \
 		Makefile.am || die
 	autotools-multilib_src_prepare
-
-	multilib_copy_sources
 }
 
-src_configure() {
-	multilib_parallel_foreach_abi gtest_src_configure
+multilib_src_install() {
+	default
+	multilib_is_native_abi && dobin scripts/gtest-config
 }
 
-src_install() {
-	autotools-multilib_src_install
-	multilib_for_best_abi gtest-config_install
+multilib_src_install_all() {
+	prune_libtool_files --all
+	einstalldocs
 
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/examples
 		doins samples/*.{cc,h}
 	fi
-}
-
-gtest_src_configure() {
-	ECONF_SOURCE="${BUILD_DIR}"
-	autotools-utils_src_configure
-}
-
-gtest-config_install() {
-	dobin "${BUILD_DIR}/scripts/gtest-config"
 }

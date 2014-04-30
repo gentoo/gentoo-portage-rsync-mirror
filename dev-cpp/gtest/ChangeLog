@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.35 2013/11/06 09:57:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.36 2014/04/30 14:36:24 mgorny Exp $
+
+  30 Apr 2014; Michał Górny <mgorny@gentoo.org> gtest-1.7.0.ebuild:
+  Simplify multilib code. Set proper flags for autotools-multilib.
 
 *gtest-1.7.0 (06 Nov 2013)
 
