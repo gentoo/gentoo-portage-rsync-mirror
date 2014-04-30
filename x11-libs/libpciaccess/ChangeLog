@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.98 2013/10/08 05:07:22 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.99 2014/04/30 18:30:13 mgorny Exp $
+
+  30 Apr 2014; Michał Górny <mgorny@gentoo.org> libpciaccess-0.13.2.ebuild:
+  Use multilib_src_install().
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libpciaccess-0.13.2.ebuild:
   Stable for x86, wrt bug #475480

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.21 2014/04/03 22:09:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.22 2014/04/30 18:17:19 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -9,21 +9,15 @@
 # Author: Michał Górny <mgorny@gentoo.org>
 # @BLURB: autotools-utils wrapper for multilib builds
 # @DESCRIPTION:
-# The autotools-multilib.eclass is an autotools-utils.eclass(5) wrapper
-# introducing support for building for more than one ABI (multilib).
+# The autotools-multilib.eclass provides a glue between
+# autotools-utils.eclass(5) and multilib-minimal.eclass(5), aiming
+# to provide a convenient way to build packages using autotools
+# for multiple ABIs.
 #
-# Inheriting this eclass sets the USE flags and exports autotools-utils
-# phase function wrappers which build the package for each supported ABI
-# when the relevant flag is enabled. Other than that, it works like
-# regular autotools-utils.
-#
-# The multilib phase functions can be overriden via defining multilib_*
-# phase functions as in multilib-minimal.eclass. In some cases you may
-# need to call the underlying autotools-utils_* phase though.
-#
-# Note that the multilib support requires out-of-source builds to be
-# enabled. Thus, it is impossible to use AUTOTOOLS_IN_SOURCE_BUILD with
-# it.
+# Inheriting this eclass sets IUSE and exports default multilib_src_*()
+# sub-phases that call autotools-utils phase functions for each ABI
+# enabled. The multilib_src_*() functions can be defined in ebuild just
+# like in multilib-minimal.
 
 # EAPI=4 is required for meaningful MULTILIB_USEDEP.
 case ${EAPI:-0} in

@@ -1,21 +1,30 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r2.ebuild,v 1.3 2007/07/12 05:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/adjtime-0.4-r2.ebuild,v 1.4 2014/04/30 18:28:05 ulm Exp $
 
-DESCRIPTION="A perl script to adjust the clock tick of the hardware clock on the system board (should work on most platforms)."
+EAPI=5
+
+DESCRIPTION="A perl script to adjust the clock tick of the hardware clock on the system board"
 HOMEPAGE="http://groups.yahoo.com/group/LinkStation_General/"
+SRC_URI="http://www.gentoogeek.org/files/${PN}.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"	#441922
 SLOT="0"
 KEYWORDS="ppc"
-IUSE=""
+RESTRICT="mirror bindist"
 
+DEPEND="app-arch/unzip"
 RDEPEND="dev-lang/perl
 	>=net-misc/ntp-4.2"
 
+S="${WORKDIR}"
+
+src_prepare() {
+	sed -i -e 's:/usr/sbin/tickadj:/usr/bin/tickadj:' adjtime.pl || die
+}
+
 src_install() {
-	dodir /usr/sbin
-	dosbin ${FILESDIR}/adjtime.pl || die
+	dosbin adjtime.pl
 }
 
 pkg_postinst() {
