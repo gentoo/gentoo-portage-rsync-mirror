@@ -10,6 +10,6 @@ RDEPEND=>=sys-libs/ncurses-5.7-r6 kernel_Darwin? ( dev-perl/Mac-Pasteboard ) med
 REQUIRED_USE=vanilla? ( !alt-font-width !buffer-on-clear focused-urgency !secondary-wheel !wcwidth )
 RESTRICT=test
 SLOT=0
-SRC_URI=http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.19.tar.bz2
+SRC_URI=http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.20.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=32b55b81c23dd1ff482d817ed0c160b5
+_md5_=4e336e4743fe7400d3ca9f0ccfc5ad99

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.19.ebuild,v 1.4 2014/03/04 20:29:55 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.20.ebuild,v 1.1 2014/04/30 13:28:08 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -42,8 +42,7 @@ src_prepare() {
 	# fix for prefix not installing properly
 	epatch \
 		"${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch \
-		"${FILESDIR}"/${PN}-9.15-xsubpp.patch \
-		"${FILESDIR}"/${PN}-9.19-fading.patch
+		"${FILESDIR}"/${PN}-9.15-xsubpp.patch
 
 	if ! use vanilla; then
 		ewarn "You are going to include unsupported third-party bug fixes/features."

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.6.2.ebuild,v 1.10 2013/10/08 05:07:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.6.2.ebuild,v 1.11 2014/04/30 13:58:02 mgorny Exp $
 
 EAPI=5
 
@@ -43,18 +43,18 @@ src_configure() {
 	xorg-2_src_configure
 }
 
-src_compile() {
+multilib_src_compile() {
 	# [Cross-Compile Love] Disable {C,LD}FLAGS and redefine CC= for 'makekeys'
 	if tc-is-cross-compiler; then
 		(
 			filter-flags -m*
-			multilib_for_best_abi run_in_build_dir \
-				emake -C src/util \
-				CC=$(tc-getBUILD_CC) \
-				CFLAGS="${CFLAGS}" \
-				LDFLAGS="" \
-				clean all || die
+			emake -C src/util \
+			CC=$(tc-getBUILD_CC) \
+			CFLAGS="${CFLAGS}" \
+			LDFLAGS="" \
+			clean all || die
 		)
 	fi
-	xorg-2_src_compile
+
+	default
 }
