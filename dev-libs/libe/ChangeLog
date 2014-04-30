@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.10 2014/02/21 02:34:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.11 2014/04/30 09:12:16 patrick Exp $
+
+*libe-0.6.0 (30 Apr 2014)
+
+  30 Apr 2014; Patrick Lauer <patrick@gentoo.org> +libe-0.6.0.ebuild:
+  Bump
 
 *libe-0.5.0 (21 Feb 2014)
 
