@@ -1,20 +1,27 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-28.0-r1.ebuild,v 1.1 2014/03/29 03:04:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.5.0.ebuild,v 1.1 2014/04/30 17:00:27 axs Exp $
 
 EAPI="5"
+MOZ_ESR="1"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
-MOZ_LANGS=(af ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
+MOZ_LANGS=(af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
 en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gd gl
-gu-IN he hi-IN hr hu hy-AM id is it ja kk kn ko ku lt lv mai mk ml mr nb-NO
-nl nn-NO or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta
-te tr uk vi zh-CN zh-TW zu)
+gu-IN he hi-IN hr hu hy-AM id is it ja kk kn ko ku lg lt lv mai mk ml mr nb-NO
+nl nn-NO nso or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta ta-LK
+te th tr uk vi zh-CN zh-TW zu)
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_beta/b}" # Handle beta for SRC_URI
 MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 MOZ_PN="${PN/-bin}"
+MOZ_P="${MOZ_PN}-${MOZ_PV}"
+
+if [[ ${MOZ_ESR} == 1 ]]; then
+	# ESR releases have slightly version numbers
+	MOZ_PV="${MOZ_PV}esr"
+fi
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
 # Upstream ftp release URI that's used by mozlinguas.eclass
@@ -104,8 +111,8 @@ src_install() {
 	# Fix prefs that make no sense for a system-wide install
 	insinto ${MOZILLA_FIVE_HOME}/defaults/pref/
 	doins "${FILESDIR}"/local-settings.js
-	# Copy preferences file so we can do a simple rename.
-	cp "${FILESDIR}"/all-gentoo-1.js  "${D}"${MOZILLA_FIVE_HOME}/all-gentoo.js
+	insinto ${MOZILLA_FIVE_HOME}/
+	doins "${FILESDIR}"/all-gentoo.js
 
 	# Install language packs
 	mozlinguas_src_install

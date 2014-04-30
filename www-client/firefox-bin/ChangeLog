@@ -1,6 +1,14 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.184 2014/03/29 13:37:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.185 2014/04/30 17:00:27 axs Exp $
+
+*firefox-bin-24.5.0 (30 Apr 2014)
+*firefox-bin-29.0 (30 Apr 2014)
+
+  30 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-bin-24.5.0.ebuild, +firefox-bin-29.0.ebuild,
+  -firefox-bin-24.3.0.ebuild, -firefox-bin-28.0-r1.ebuild:
+  version bump, security bug 509050
 
   29 Mar 2014;  <anarchy@gentoo.org> files/all-gentoo-1.js:
   Fix typo in updated preference file, bug #506144
