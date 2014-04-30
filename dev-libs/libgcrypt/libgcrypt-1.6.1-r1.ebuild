@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.6.1-r1.ebuild,v 1.2 2014/03/01 12:01:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.6.1-r1.ebuild,v 1.3 2014/04/30 08:20:06 grobian Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -37,7 +37,7 @@ MULTILIB_CHOST_TOOLS=(
 )
 
 multilib_src_configure() {
-	if [[ ${CHOST} == *-solaris* ]] ; then
+	if [[ ${CHOST} == *86*-solaris* ]] ; then
 		# ASM code uses GNU ELF syntax, divide in particular, we need to
 		# allow this via ASFLAGS, since we don't have a flag-o-matic
 		# function for that, we'll have to abuse cflags for this
