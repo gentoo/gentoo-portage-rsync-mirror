@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.120 2014/04/27 14:18:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.121 2014/04/30 21:38:15 tomwij Exp $
+
+  30 Apr 2014; Tom Wijsman <TomWij@gentoo.org> gnu-classpath-0.98-r3.ebuild:
+  Someone thought putting the not used base eclass behind java-pkg-2 was a good
+  idea. :)
 
   27 Apr 2014; Tom Wijsman <TomWij@gentoo.org>
   +files/gnu-classpath-0.98-r3-freetype-2.5.3-support.patch,
