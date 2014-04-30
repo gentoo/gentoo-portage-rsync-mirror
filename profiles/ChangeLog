@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8901 2014/04/30 14:29:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8902 2014/04/30 17:38:44 axs Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  default/bsd/fbsd/package.use.mask:
+  expanded wifi use mask on fbsd to cover all mozilla packages instead of just
+  firefox
 
   30 Apr 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask exiv2 after fixing.

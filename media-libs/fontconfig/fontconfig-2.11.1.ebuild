@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.1.ebuild,v 1.1 2014/03/29 20:42:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.1.ebuild,v 1.2 2014/04/30 17:33:47 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
 
-inherit autotools-multilib readme.gentoo
+inherit eutils readme.gentoo autotools-multilib
 
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://fontconfig.org/"
@@ -76,19 +76,22 @@ src_configure() {
 	autotools-multilib_src_configure
 }
 
-src_install() {
-	autotools-multilib_src_install
+multilib_src_install() {
+	default
 
 	# XXX: avoid calling this multiple times, bug #459210
-	install_others() {
+	if multilib_is_native_abi; then
 		# stuff installed from build-dir
-		autotools-utils_src_compile \
-			DESTDIR="${D}" -C doc install-man
+		emake -C doc DESTDIR="${D}" install-man
 
 		insinto /etc/fonts
-		doins "${BUILD_DIR}"/fonts.conf
-	}
-	multilib_foreach_abi install_others
+		doins fonts.conf
+	fi
+}
+
+multilib_src_install_all() {
+	einstalldocs
+	prune_libtool_files --all
 
 	#fc-lang directory contains language coverage datafiles
 	#which are needed to test the coverage of fonts.
@@ -98,7 +101,7 @@ src_install() {
 	dodoc doc/fontconfig-user.{txt,pdf}
 
 	if [[ -e ${ED}usr/share/doc/fontconfig/ ]];  then
-		mv "${ED}"usr/share/doc/fontconfig/* "${ED}"/usr/share/doc/${P}
+		mv "${ED}"usr/share/doc/fontconfig/* "${ED}"/usr/share/doc/${P} || die
 		rm -rf "${ED}"usr/share/doc/fontconfig
 	fi
 

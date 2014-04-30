@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.37 2014/03/08 02:47:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.38 2014/04/30 17:38:45 axs Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -75,8 +75,13 @@ net-dns/bind gssapi
 dev-java/proguard j2me
 
 # Naohiro Aota <naota@gentoo.org> (20 Feb 2012)
-# Upstream does not support FreeBSD wifi nor crashreporter
+# Ian Stakenvicius <axs@gentoo.org> (30 Apr 2014)
+# Upstream does not support FreeBSD wifi nor crashreporter;
+# net-wireless/wireless-tools useless on fbsd, keep mozilla stuff
+# from bringing it in via mozconfig-3.eclass
+mail-client/thunderbird wifi
 www-client/firefox wifi
+www-client/seamonkey wifi
 
 # Naohiro Aota <naota@gentoo.org> (03 Oct 2012)
 # Mask gbm, udev is not supported on FreeBSD.
