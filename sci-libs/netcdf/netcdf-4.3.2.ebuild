@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.2.ebuild,v 1.1 2014/04/28 22:46:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.2.ebuild,v 1.2 2014/04/29 23:29:13 bicatali Exp $
 
 EAPI=5
 
@@ -13,28 +13,34 @@ SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.gz"
 LICENSE="UCAR-Unidata"
 SLOT="0/7"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+dap doc examples hdf +hdf5 mpi static-libs szip test tools"
+IUSE="+dap examples hdf +hdf5 mpi static-libs szip test tools"
 
 RDEPEND="
-	dap? ( net-misc/curl )
-	hdf? ( sci-libs/hdf >=sci-libs/hdf5-1.8.8 )
-	hdf5? ( >=sci-libs/hdf5-1.8.9[mpi=,szip=,zlib] )"
+	dap? ( net-misc/curl:0= )
+	hdf? ( sci-libs/hdf:0= sci-libs/hdf5:0= )
+	hdf5? ( sci-libs/hdf5:0=[mpi=,szip=,zlib] )"
+DEPEND="${RDEPEND}"
+# doc generation is missing many doxygen files in tar ball
+#	doc? ( app-doc/doxygen[dot] )"
 
-DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
-
-REQUIRED_USE="test? ( tools )"
+REQUIRED_USE="test? ( tools ) szip? ( hdf5 ) mpi? ( hdf5 )"
 
 src_configure() {
+	#	--docdir="${EPREFIX}"/usr/share/doc/${PF}
+	#	$(use_enable doc doxygen)
 	local myeconfargs=(
-		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		--disable-examples
+		--disable-dap-remote-tests
 		$(use_enable dap)
-		$(use_enable doc doxygen)
 		$(use_enable hdf hdf4)
 		$(use_enable hdf5 netcdf-4)
 		$(use_enable tools utilities)
 	)
+	if use mpi; then
+		export CC=mpicc
+		myeconfargs+=( --enable-parallel )
+		use test && myeconfargs+=( --enable-parallel-tests )
+	fi
 	autotools-utils_src_configure
 }
 

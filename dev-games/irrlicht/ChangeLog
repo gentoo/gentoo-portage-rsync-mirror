@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/irrlicht
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.69 2013/11/21 21:44:14 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.70 2014/04/29 23:20:15 hasufell Exp $
+
+  29 Apr 2014; Julian Ospald <hasufell@gentoo.org> irrlicht-1.8-r2.ebuild,
+  irrlicht-1.8.1.ebuild, +files/irrlicht-1.8-mesa-10.x.patch,
+  +files/irrlicht-1.8.1-mesa-10.x.patch:
+  fix build with mesa-10.x wrt #496356
 
 *irrlicht-1.8.1 (21 Nov 2013)
 
