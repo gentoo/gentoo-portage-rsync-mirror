@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.11 2013/11/26 11:02:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.12 2014/04/30 14:14:51 jer Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ncmpcpp.rybczak.net/"
 SRC_URI="http://ncmpcpp.rybczak.net/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-IUSE="bash-completion clock curl fftw iconv outputs taglib unicode visualizer"
+IUSE="clock curl fftw iconv outputs taglib unicode visualizer"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc sparc x86"
 
@@ -57,9 +57,7 @@ src_install() {
 	rm -rf "${D}"/usr/share/doc/${PN}
 	dodoc AUTHORS NEWS doc/config doc/keys
 
-	if use bash-completion; then
-		newbashcomp doc/${PN}-completion.bash ${PN}
-	fi
+	newbashcomp doc/${PN}-completion.bash ${PN}
 }
 
 pkg_postinst() {

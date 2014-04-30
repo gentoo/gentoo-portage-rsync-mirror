@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.141 2014/04/27 10:29:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.142 2014/04/30 14:19:46 tetromino Exp $
+
+  30 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libglade-2.6.4-r1.ebuild:
+  Add PYTHON_REQUIRED_USE to REQUIRED_USE, bug #509172, thanks to Kent Fredric.
 
 *libglade-2.6.4-r1 (27 Apr 2014)
 

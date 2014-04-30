@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-9999.ebuild,v 1.3 2013/12/30 12:32:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-9999.ebuild,v 1.4 2014/04/30 14:14:51 jer Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="bash-completion clock curl outputs taglib unicode visualizer"
+IUSE="clock curl outputs taglib unicode visualizer"
 
 RDEPEND="
 	>=dev-libs/boost-1.50[nls]
@@ -48,7 +48,7 @@ src_configure() {
 
 src_install() {
 	default
-	use bash-completion && newbashcomp doc/${PN}-completion.bash ${PN}
+	newbashcomp doc/${PN}-completion.bash ${PN}
 }
 
 pkg_postinst() {
