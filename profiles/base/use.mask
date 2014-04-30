@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.196 2014/04/26 11:03:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.197 2014/04/30 22:07:28 blueness Exp $
 
 # cuda only works on amd64/x86
 cuda
@@ -165,6 +165,7 @@ psyco
 userland_BSD
 
 elibc_AIX
+elibc_Cygwin
 elibc_Darwin
 elibc_DragonFly
 elibc_FreeBSD
@@ -176,6 +177,7 @@ elibc_NetBSD
 elibc_OpenBSD
 elibc_SunOS
 elibc_uclibc
+elibc_Winnt
 
 kernel_AIX
 kernel_Darwin

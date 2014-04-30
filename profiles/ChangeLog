@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8904 2014/04/30 21:16:25 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8905 2014/04/30 22:07:28 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2014; Anthony G. Basile <blueness@gentoo.org> base/use.mask,
+  +prefix/windows/cygwin/use.mask:
+  Mask elibc_Cygwin and elibc_Winnt in base, unmask in prefix/windows, bug
+  #509204
 
   30 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> package.mask:
   removed mask on new thunderbird; no issues with lightning distfiles

@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.416 2014/04/14 08:50:39 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.417 2014/04/30 22:30:20 redlizard Exp $
+
+  30 Apr 2014; redlizard <redlizard@gentoo.org> +windows/cygwin/use.force,
+  windows/interix/use.force, windows/interix/use.mask, +windows/use.force,
+  +windows/use.mask, +windows/winnt/use.force, windows/winnt/use.mask:
+  Fixed windows kernel_ and elibc_ USE flags.
 
   14 Apr 2014; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
   GNU make-4.0 on AIX endless loops with gcc-4.2.4, p.masked for now.
