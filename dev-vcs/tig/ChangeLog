@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.27 2014/01/25 20:43:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.28 2014/04/30 16:28:34 radhermit Exp $
+
+*tig-2.0.1 (30 Apr 2014)
+
+  30 Apr 2014; Tim Harder <radhermit@gentoo.org> +tig-2.0.1.ebuild:
+  Version bump.
 
   25 Jan 2014; Tim Harder <radhermit@gentoo.org> -tig-1.0.ebuild,
   -tig-1.1.ebuild, -tig-1.2.ebuild:
