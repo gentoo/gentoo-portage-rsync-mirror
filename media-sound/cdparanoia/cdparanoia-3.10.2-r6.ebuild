@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r6.ebuild,v 1.12 2014/01/28 14:01:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r6.ebuild,v 1.13 2014/05/01 12:47:22 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils libtool toolchain-funcs versionator multilib-minimal
@@ -44,7 +44,7 @@ multilib_src_configure() {
 
 multilib_src_compile() {
 	emake OPT="${CFLAGS} -I${S}/interface"
-	use static-libs && emake lib OPT="${CFLAGS}"
+	use static-libs && emake lib OPT="${CFLAGS} -I${S}/interface"
 }
 
 multilib_src_install_all() {

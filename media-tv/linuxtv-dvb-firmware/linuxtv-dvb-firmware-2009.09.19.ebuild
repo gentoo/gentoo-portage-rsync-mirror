@@ -1,19 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.09.19.ebuild,v 1.3 2012/01/23 22:17:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.09.19.ebuild,v 1.4 2014/05/01 12:45:50 ulm Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
 
-LICENSE="as-is"
+LICENSE="freedist ISC all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 DEPEND="app-arch/unrar"
 RDEPEND=""
-
-RESTRICT="mirror"
 
 S="${WORKDIR}"
 
