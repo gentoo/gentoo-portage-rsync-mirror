@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mate-backgrounds
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mate-backgrounds/ChangeLog,v 1.1 2014/03/11 01:39:53 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mate-backgrounds/ChangeLog,v 1.2 2014/05/01 15:56:34 tomwij Exp $
+
+*mate-backgrounds-1.8.0 (01 May 2014)
+
+  01 May 2014; Tom Wijsman <TomWij@gentoo.org> +mate-backgrounds-1.8.0.ebuild:
+  Version bump to 1.8.0.
 
 *mate-backgrounds-1.6.1 (11 Mar 2014)
 
