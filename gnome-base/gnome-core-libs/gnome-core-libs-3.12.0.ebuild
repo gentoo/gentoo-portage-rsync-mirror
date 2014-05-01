@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.12.0.ebuild,v 1.1 2014/04/28 07:01:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.12.0.ebuild,v 1.2 2014/05/01 02:42:44 tetromino Exp $
 
 EAPI="5"
 
@@ -26,7 +26,6 @@ RDEPEND="
 	>=x11-libs/libwnck-3.4.7:3
 	>=gnome-base/librsvg-2.40.2
 	>=gnome-base/gnome-desktop-${PV}:3
-	>=gnome-base/libgnomekbd-3.6
 	>=x11-libs/startup-notification-0.12
 
 	>=gnome-base/gvfs-1.20.0

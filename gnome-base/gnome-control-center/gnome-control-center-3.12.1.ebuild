@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.12.1.ebuild,v 1.2 2014/04/27 21:50:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.12.1.ebuild,v 1.3 2014/05/01 02:40:14 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -34,7 +34,6 @@ COMMON_DEPEND="
 	>=gnome-base/gsettings-desktop-schemas-3.9.91
 	>=gnome-base/gnome-desktop-3.11.3:3=
 	>=gnome-base/gnome-settings-daemon-3.8.3[colord?,policykit]
-	>=gnome-base/libgnomekbd-2.91.91
 
 	>=dev-libs/libpwquality-1.2.2
 	dev-libs/libxml2:2
@@ -81,6 +80,7 @@ COMMON_DEPEND="
 		>=x11-libs/libXi-1.2 )
 "
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
+# libgnomekbd needed only for gkbd-keyboard-display tool
 RDEPEND="${COMMON_DEPEND}
 	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
 	>=sys-apps/accountsservice-0.6.30
@@ -90,6 +90,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=app-admin/system-config-printer-gnome-1.3.5
 		net-print/cups-pk-helper )
 	input_devices_wacom? ( gnome-base/gnome-settings-daemon[input_devices_wacom] )
+	i18n? ( >=gnome-base/libgnomekbd-3 )
 
 	!<gnome-base/gdm-2.91.94
 	!<gnome-extra/gnome-color-manager-3.1.2

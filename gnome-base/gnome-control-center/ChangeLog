@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.150 2014/04/27 21:50:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.151 2014/05/01 02:40:14 tetromino Exp $
+
+  01 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-control-center-3.10.3.ebuild, gnome-control-center-3.12.1.ebuild:
+  libgnomekbd is needed only at runtime for keyboard display utility (bug
+  #509130, thanks to Jura).
 
   27 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-control-center-3.10.3.ebuild, gnome-control-center-3.12.1.ebuild:
