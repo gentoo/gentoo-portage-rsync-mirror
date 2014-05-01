@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre3.ebuild,v 1.4 2014/04/30 14:28:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.3_pre3.ebuild,v 1.5 2014/04/30 23:14:06 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -35,7 +35,10 @@ COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	elf? ( dev-libs/elfutils )
-	python? ( dev-python/setuptools ${PYTHON_DEPS} )
+	python? (
+		dev-python/setuptools[${PYTHON_USEDEP}]
+		${PYTHON_DEPS}
+	)
 	pci? ( sys-apps/pciutils )
 	lm_sensors? ( sys-apps/lm_sensors )
 	netlink? ( dev-libs/libnl:1.1 )
@@ -54,7 +57,10 @@ DEPEND="${COMMON}
 	>=sys-apps/sed-4
 	doc? ( app-doc/doxygen )"
 
-REQUIRED_USE="rpm? ( bzip2 zlib )"
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+	rpm? ( bzip2 zlib )
+"
 
 RESTRICT=test
 

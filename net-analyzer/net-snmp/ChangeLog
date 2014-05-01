@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.279 2014/04/30 14:28:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.280 2014/04/30 23:14:06 jer Exp $
+
+  30 Apr 2014; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.3_pre3.ebuild:
+  USE=python: set DEPEND on dev-python/setuptools[${PYTHON_USEDEP}],
+  REQUIRED_USE to $PYTHON_REQUIRED_USE (bug #496782).
 
   30 Apr 2014; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.3_pre3.ebuild:
   Stable for HPPA (bug #509110).
