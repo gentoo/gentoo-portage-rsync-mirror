@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=media-libs/libsdl-1.2.7-r2 >=media-libs/sdl-image-1.2.3-r1 >=media-libs/sdl-ttf-2.0.9 dev-util/scons
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare
+DEPEND=>=media-libs/libsdl-1.2.7-r2[X,video] >=media-libs/sdl-image-1.2.3-r1 >=media-libs/sdl-ttf-2.0.9 dev-util/scons >=sys-apps/sed-4
 DESCRIPTION=Displays test patterns to spot dead/hot pixels on LCD screens
 EAPI=5
 HOMEPAGE=http://www.brouhaha.com/~eric/software/lcdtest/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=>=media-libs/libsdl-1.2.7-r2 >=media-libs/sdl-image-1.2.3-r1 >=media-libs/sdl-ttf-2.0.9 media-fonts/liberation-fonts
+RDEPEND=>=media-libs/libsdl-1.2.7-r2[X,video] >=media-libs/sdl-image-1.2.3-r1 >=media-libs/sdl-ttf-2.0.9 media-fonts/liberation-fonts
 SLOT=0
 SRC_URI=http://www.brouhaha.com/~eric/software/lcdtest/download/lcdtest-1.18.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f94dd2e90a4ca0b58a55dac54da15510
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=2b13feb63d27aa0226d87a741a7e95b2

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libguestfs-appliance
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.1 2013/03/25 12:06:45 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.2 2014/05/01 19:57:02 maksbotan Exp $
+
+*libguestfs-appliance-1.24.8 (01 May 2014)
+*libguestfs-appliance-1.26.0 (01 May 2014)
+
+  01 May 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +libguestfs-appliance-1.24.8.ebuild, +libguestfs-appliance-1.26.0.ebuild:
+  Bump to 1.24.8 and 1.26.0
 
 *libguestfs-appliance-1.20.0 (25 Mar 2013)
 

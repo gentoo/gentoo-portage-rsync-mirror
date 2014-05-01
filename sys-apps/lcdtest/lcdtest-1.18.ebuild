@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.18.ebuild,v 1.2 2013/08/24 15:40:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.18.ebuild,v 1.3 2014/05/01 19:54:44 maksbotan Exp $
 
 EAPI=5
 
-inherit scons-utils toolchain-funcs base
+inherit scons-utils eutils toolchain-funcs gnome2-utils
 
 DESCRIPTION="Displays test patterns to spot dead/hot pixels on LCD screens"
 HOMEPAGE="http://www.brouhaha.com/~eric/software/lcdtest/"
@@ -16,17 +16,17 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=media-libs/libsdl-1.2.7-r2
+	>=media-libs/libsdl-1.2.7-r2[X,video]
 	>=media-libs/sdl-image-1.2.3-r1
 	>=media-libs/sdl-ttf-2.0.9
 "
 RDEPEND="${DEPEND}
 	media-fonts/liberation-fonts
 "
-PATCHES=( "${FILESDIR}/${PV}-build-system.patch" )
 
 src_prepare() {
-	base_src_prepare
+	epatch "${FILESDIR}/${PV}-build-system.patch"
+	epatch_user
 	sed -i -e \
 		"s|/usr/share/fonts/liberation/|/usr/share/fonts/liberation-fonts/|" \
 		src/lcdtest.c || die
@@ -46,4 +46,16 @@ src_compile() {
 src_install() {
 	escons --buildroot="${D}" install
 	dodoc README
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
