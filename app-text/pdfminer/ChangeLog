@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdfminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/ChangeLog,v 1.3 2014/04/07 14:35:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/ChangeLog,v 1.4 2014/05/01 10:43:05 idella4 Exp $
+
+*pdfminer-20140328 (01 May 2014)
+
+  01 May 2014; Ian Delaney <idella4@gentoo.org> +pdfminer-20140328.ebuild,
+  -pdfminer-20110515.ebuild:
+  bump, add pypy support, drop old
 
 *pdfminer-20131113 (07 Apr 2014)
 
