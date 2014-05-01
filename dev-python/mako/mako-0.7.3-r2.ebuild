@@ -1,10 +1,10 @@
-# Copyright 1998-2013 Gentoo Foundation
+# Copyright 1998-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.9 2013/12/27 13:30:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.10 2014/05/01 03:26:00 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
 inherit readme.gentoo versionator distutils-r1
 
