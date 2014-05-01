@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.415 2014/04/28 17:43:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.416 2014/05/01 17:32:14 ssuominen Exp $
+
+*dbus-1.8.2 (01 May 2014)
+
+  01 May 2014; Samuli Suominen <ssuominen@gentoo.org> +dbus-1.8.2.ebuild:
+  Version bump. Delete /var/run from the image and let the init script create it
+  when required.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> dbus-1.6.18-r1.ebuild,
   dbus-1.8.0.ebuild:
