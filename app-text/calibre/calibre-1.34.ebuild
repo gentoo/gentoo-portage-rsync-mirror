@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.33.ebuild,v 1.1 2014/04/20 09:57:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.34.ebuild,v 1.1 2014/05/01 02:22:00 yngwin Exp $
 
 EAPI=5
 
@@ -38,11 +38,11 @@ IUSE="+udisks"
 
 COMMON_DEPEND="
 	>=app-text/podofo-0.8.2:=
-	>=app-text/poppler-0.12.3-r3:=[qt4,xpdf-headers(+)]
+	>=app-text/poppler-0.20.2:=[qt4,xpdf-headers(+)]
 	>=dev-lang/python-2.7.1:2.7[sqlite,ssl]
 	>=dev-libs/chmlib-0.40:=
 	>=dev-libs/icu-4.4:=
-	dev-python/apsw
+	>=dev-python/apsw-3.7.17
 	>=dev-python/beautifulsoup-3.0.5:python-2
 	dev-python/netifaces
 	dev-python/python-dateutil
@@ -50,17 +50,17 @@ COMMON_DEPEND="
 	>=dev-python/cssselect-0.7.1
 	>=dev-python/cssutils-0.9.9
 	>=dev-python/dbus-python-0.82.2
-	>=dev-python/lxml-2.2.1
+	>=dev-python/lxml-3.2.1
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
-	>=dev-python/PyQt4-4.9.1[X,svg,webkit]
+	>=dev-python/PyQt4-4.9.6[X,svg,webkit]
 	dev-qt/qtdbus:4=
 	dev-qt/qtsvg:4=
 	media-fonts/liberation-fonts
 	>=media-gfx/imagemagick-6.5.9[jpeg,png]
 	>=media-libs/freetype-2:=
 	>=media-libs/libwmf-0.2.8
-	>=media-libs/libmtp-1.1.4:=
+	>=media-libs/libmtp-1.1.5:=
 	virtual/libusb:1=
 	virtual/python-imaging
 	>=x11-misc/xdg-utils-1.0.2-r2"

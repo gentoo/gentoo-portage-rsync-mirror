@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.74 2014/04/27 16:59:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.75 2014/05/01 02:31:19 tetromino Exp $
+
+  01 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.10.4-r1.ebuild, gnome-shell-3.10.4-r2.ebuild,
+  gnome-shell-3.12.1.ebuild:
+  Don't depend on libgnomekbd, it hasn't been needed since 3.6 (bug #509130,
+  thanks to Jura).
 
 *gnome-shell-3.12.1 (27 Apr 2014)
 

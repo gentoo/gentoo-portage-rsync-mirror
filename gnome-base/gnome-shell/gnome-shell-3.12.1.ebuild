@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.12.1.ebuild,v 1.1 2014/04/27 16:59:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.12.1.ebuild,v 1.2 2014/05/01 02:31:19 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -85,7 +85,6 @@ RDEPEND="${COMMON_DEPEND}
 
 	>=app-accessibility/caribou-0.4.8
 	>=gnome-base/gdm-3.5[introspection]
-	>=gnome-base/libgnomekbd-2.91.4[introspection]
 	media-libs/cogl[introspection]
 	>=sys-apps/accountsservice-0.6.14[introspection]
 	sys-power/upower[introspection]
