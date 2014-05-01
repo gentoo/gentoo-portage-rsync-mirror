@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>radio</herd>
+	<use>
+		<flag name="gprs">Support GPRS via OpenGGSN</flag>
+	</use>
 </pkgmetadata>
 
