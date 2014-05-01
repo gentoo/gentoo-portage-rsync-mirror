@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=sys-libs/readline mpi? ( virtual/mpi ) doc? ( media-gfx/graphviz app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Minimal Abstraction Layer for Object-oriented C/C++ programs
+EAPI=5
+HOMEPAGE=http://www.fetk.org/codes/maloc/index.html
+IUSE=doc mpi static-libs
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=sys-libs/readline mpi? ( virtual/mpi )
+SLOT=0
+SRC_URI=http://www.fetk.org/codes/download/maloc-1.5.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=64abac0b5ceea461215e0b0f8d1a971a
