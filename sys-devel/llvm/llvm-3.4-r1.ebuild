@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4-r1.ebuild,v 1.2 2014/04/28 17:51:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4-r1.ebuild,v 1.3 2014/05/01 15:09:30 mgorny Exp $
 
 EAPI=5
 
@@ -194,6 +194,8 @@ src_prepare() {
 
 	# User patches
 	epatch_user
+
+	python_setup
 }
 
 multilib_src_configure() {
@@ -246,9 +248,6 @@ multilib_src_configure() {
 		local CPPFLAGS=${CPPFLAGS}
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
-
-	# build with a suitable Python version
-	python_export_best
 
 	# llvm prefers clang over gcc, so we may need to force that
 	tc-export CC CXX

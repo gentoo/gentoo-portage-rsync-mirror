@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.191 2014/04/28 17:51:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.192 2014/05/01 15:09:30 mgorny Exp $
+
+  01 May 2014; Michał Górny <mgorny@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-3.3-r3.ebuild, llvm-3.4-r1.ebuild, llvm-3.4-r2.ebuild, llvm-3.4.ebuild,
+  llvm-9999.ebuild:
+  Use python_setup to obtain the Python interpreter, and do that in
+  src_prepare() rather than in multilib_src_configure() (to avoid calling
+  twice).
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> llvm-3.3-r3.ebuild,
   llvm-3.4-r1.ebuild, llvm-3.4-r2.ebuild, llvm-3.4.ebuild, llvm-9999.ebuild:
