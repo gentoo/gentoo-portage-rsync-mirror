@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install unpack
-DEPEND=|| ( app-arch/pdlzip app-arch/lzip )
+DEPEND=|| ( app-arch/plzip app-arch/pdlzip app-arch/lzip )
 DESCRIPTION=GNU Ocrad is an OCR (Optical Character Recognition) program
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/ocrad/ocrad.html
@@ -7,5 +7,5 @@ KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://nongnu/ocrad/ocrad-0.23.tar.lz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
 _md5_=ef067b69b6763fda271eb07a0beaa7dc

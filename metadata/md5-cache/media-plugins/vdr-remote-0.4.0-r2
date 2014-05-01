@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-1.2.6 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=http://www.escape-edv.de/endriss/vdr/vdr-remote-0.4.0.tgz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=3ebbdae1dc5bb5a8a4b6ac95b1f39e16

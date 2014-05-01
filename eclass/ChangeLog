@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1235 2014/05/01 13:34:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1236 2014/05/01 19:27:14 ottxor Exp $
+
+  01 May 2014; Christoph Junghans <ottxor@gentoo.org> unpacker.eclass:
+  add app-arch/plzip support (bug #509264)
 
   01 May 2014; Justin Lecher <jlec@gentoo.org> python-utils-r1.eclass:
   Add missing @DESCRIPTION

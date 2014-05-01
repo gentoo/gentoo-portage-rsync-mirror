@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.16 2014/02/27 00:20:57 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.17 2014/05/01 19:27:14 ottxor Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -29,7 +29,7 @@ ___ECLASS_ONCE_UNPACKER="recur -_+^+_- spank"
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Utility to use to decompress lzip files.  Will dynamically pick between
-# `pdlzip` and `lzip`.  Make sure your choice accepts the "-dc" options.
+# `plzip`, `pdlzip` and `lzip`.  Make sure your choice accepts the "-dc" options.
 # Note: this is meant for users to set, not ebuilds.
 
 # for internal use only (unpack_pdv and unpack_makeself)
@@ -352,7 +352,7 @@ _unpacker() {
 	*.lzma|*.xz|*.txz)
 		comp="xz -dc" ;;
 	*.lz)
-		: ${UNPACKER_LZIP:=$(type -P pdlzip || type -P lzip)}
+		: ${UNPACKER_LZIP:=$(type -P plzip || type -P pdlzip || type -P lzip)}
 		comp="${UNPACKER_LZIP} -dc" ;;
 	*)	comp="" ;;
 	esac
@@ -449,7 +449,7 @@ unpacker_src_uri_depends() {
 		*.zip)
 			d="app-arch/unzip" ;;
 		*.lz)
-			d="|| ( app-arch/pdlzip app-arch/lzip )" ;;
+			d="|| ( app-arch/plzip app-arch/pdlzip app-arch/lzip )" ;;
 		esac
 		deps+=" ${d}"
 	done

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-2.0.0 x11-themes/vdr-channel-logos >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/files/vdr-skinsoppalusikka-2.0.0.tgz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
 _md5_=88bbfa473bd7282919bb70ef9fc39cf0

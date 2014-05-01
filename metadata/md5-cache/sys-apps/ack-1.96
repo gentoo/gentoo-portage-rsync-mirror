@@ -8,5 +8,5 @@ LICENSE=Artistic-2
 RDEPEND=>=dev-perl/File-Next-1.02 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PE/PETDANCE/ack-1.96.tar.gz http://dev.gentoo.org/~tove/distfiles/sys-apps/ack/ack-gentoo-r1.patch.bz2
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	60422068bae2b3406a8a40db45ab5b95
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
 _md5_=a6d9b1c32ce40d9345d7936712f2d861
