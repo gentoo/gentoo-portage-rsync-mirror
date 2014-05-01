@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.56 2014/01/28 06:06:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.57 2014/05/01 05:28:43 naota Exp $
+
+*arphicfonts-0.2.20080216.1-r2 (01 May 2014)
+
+  01 May 2014; Naohiro Aota <naota@gentoo.org>
+  +arphicfonts-0.2.20080216.1-r2.ebuild, +files/arphicfonts-0.2.20080216.1.pe:
+  Patch fonts to render 0uFE4F properly
 
 *arphicfonts-0.2.20080216.1-r1 (28 Jan 2014)
 
