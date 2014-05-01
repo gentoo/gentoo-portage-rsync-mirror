@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament-goty
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.15 2012/02/05 06:12:08 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.16 2014/05/01 13:58:53 ulm Exp $
+
+  01 May 2014; Ulrich Müller <ulm@gentoo.org>
+  unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 505722.
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
   unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:

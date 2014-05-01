@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.53 2014/04/08 16:05:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.54 2014/05/01 13:34:02 jlec Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -699,6 +699,7 @@ python_doexe() {
 
 # @FUNCTION: python_newexe
 # @USAGE: <path> <new-name>
+# @DESCRIPTION:
 # Install the given executable into current python_scriptroot,
 # for the current Python implementation (${EPYTHON}).
 #

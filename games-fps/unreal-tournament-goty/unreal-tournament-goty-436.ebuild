@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.15 2012/02/05 06:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.16 2014/05/01 13:58:53 ulm Exp $
 
 inherit eutils unpacker cdrom games
 
@@ -9,10 +9,11 @@ HOMEPAGE="http://www.unrealtournament.com/"
 SRC_URI="ftp://ftp.lokigames.com/pub/beta/ut/ut-install-${PV}-GOTY.run
 	ftp://ftp.lokigames.com/pub/patches/ut/IpDrv-${PV}-Linux-08-20-02.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="3dfx S3TC nls opengl"
+RESTRICT="mirror bindist"
 
 DEPEND="!games-fps/unreal-tournament
 	app-arch/unzip"
