@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.18 2012/02/05 06:11:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.19 2014/05/01 14:48:42 ulm Exp $
 
 inherit eutils unpacker cdrom games
 
@@ -10,10 +10,11 @@ SRC_URI="http://www.icculus.org/%7Echunky/ut/unreal/unreali-install.run
 	ftp://ftp.lokigames.com/pub/patches/ut/ut-install-436.run
 	ftp://ftp.lokigames.com/pub/patches/ut/IpDrv-436-Linux-08-20-02.zip"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE="X opengl"
+RESTRICT="mirror bindist"
 
 DEPEND="sys-libs/lib-compat
 	app-arch/unzip"

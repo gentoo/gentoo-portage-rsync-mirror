@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libhackrf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/ChangeLog,v 1.5 2013/07/27 04:52:57 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhackrf/ChangeLog,v 1.6 2014/05/01 14:41:41 zerochaos Exp $
+
+*libhackrf-2014.04.1 (01 May 2014)
+
+  01 May 2014; Rick Farina <zerochaos@gentoo.org> +libhackrf-2014.04.1.ebuild:
+  version bump
 
 *libhackrf-2013.07.1 (27 Jul 2013)
 
