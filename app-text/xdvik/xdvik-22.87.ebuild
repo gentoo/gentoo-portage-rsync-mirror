@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.87.ebuild,v 1.1 2014/04/23 09:19:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.87.ebuild,v 1.2 2014/05/01 04:13:10 naota Exp $
 
 EAPI=5
 inherit eutils flag-o-matic elisp-common toolchain-funcs multilib
@@ -37,6 +37,7 @@ S=${WORKDIR}/${P}/texk/xdvik
 
 src_prepare() {
 	local i
+	epatch "${FILESDIR}"/${P}-xaw3d.patch
 	# Make sure system kpathsea headers are used
 	cd "${WORKDIR}/${P}/texk/kpathsea"
 	for i in *.h ; do echo "#include_next \"$i\"" > $i; done
