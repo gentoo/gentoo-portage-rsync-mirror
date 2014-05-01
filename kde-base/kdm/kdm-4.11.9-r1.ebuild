@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.9.ebuild,v 1.1 2014/04/29 18:53:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.9-r1.ebuild,v 1.1 2014/05/01 22:07:19 dilfridge Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ KMEXTRA="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4-gentoo-xinitrc.d.patch"
+	"${FILESDIR}/${PN}-4.11.9-desktopnamescrash.patch"
 )
 
 pkg_setup() {
