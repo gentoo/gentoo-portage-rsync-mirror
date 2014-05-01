@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.65 2014/01/29 22:58:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.66 2014/05/01 20:17:09 maksbotan Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
 
-inherit toolchain-funcs flag-o-matic multilib base python-any-r1
+inherit toolchain-funcs flag-o-matic multilib eutils python-any-r1
 [[ ${PV} == *9999* ]] && inherit git-2
 
 NAMESUF="${PN/mplayer/}"
@@ -109,7 +109,6 @@ RDEPEND+="
 	>=virtual/ffmpeg-9[threads?,vdpau?]
 	symlink? ( !media-video/mplayer )
 "
-ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	${PYTHON_DEPS}
@@ -120,20 +119,13 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 		xscreensaver? ( x11-proto/scrnsaverproto )
 	)
-	amd64? ( ${ASM_DEP} )
 	doc? (
 		dev-libs/libxslt
 		app-text/docbook-xml-dtd
 		app-text/docbook-xsl-stylesheets
 	)
-	x86? ( ${ASM_DEP} )
-	x86-fbsd? ( ${ASM_DEP} )
 "
 DOCS=( AUTHORS Copyright README etc/example.conf etc/input.conf etc/codecs.conf )
-
-PATCHES=(
-	"${FILESDIR}/${PN}-py2compat.patch"
-)
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
@@ -168,6 +160,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-py2compat.patch"
+	epatch_user
+
 	# fix path to bash executable in configure scripts
 	sed -i -e "1c\#!${EPREFIX}/bin/bash" \
 		configure version.sh || die
@@ -182,8 +177,6 @@ src_prepare() {
 		sed -e "s/mplayer/${PN}/" \
 			-i TOOLS/midentify.sh || die
 	fi
-
-	base_src_prepare
 }
 
 src_configure() {
@@ -355,12 +348,12 @@ src_configure() {
 }
 
 src_compile() {
-	base_src_compile
+	default
 	use doc && emake -C DOCS/xml html-chunked
 }
 
 src_install() {
-	base_src_install
+	default
 
 	if use doc; then
 		rm -r TOOLS/osxbundle* DOCS/tech/{Doxyfile,realcodecs} || die

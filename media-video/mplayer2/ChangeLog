@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.118 2014/03/04 20:46:56 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.119 2014/05/01 20:17:09 maksbotan Exp $
+
+  01 May 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  mplayer2-2.0_p20130428-r1.ebuild, mplayer2-9999.ebuild:
+  Drop usage of base.eclass, bug #508128. Thanks to Nikoli.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   mplayer2-2.0_p20130428-r1.ebuild:
