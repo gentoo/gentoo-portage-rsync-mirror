@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.9.2.ebuild,v 1.1 2014/05/01 07:11:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.9.2-r1.ebuild,v 1.1 2014/05/01 08:08:40 slyfox Exp $
 
 inherit eutils java-pkg-2 java-ant-2 systemd
 
@@ -66,6 +66,7 @@ src_install() {
 	dodir /opt/openfire/conf
 	insinto /opt/openfire/conf
 	newins target/openfire/conf/openfire.xml openfire.xml.sample
+	newins target/openfire/conf/security.xml security.xml.sample
 
 	dodir /opt/openfire/logs
 	keepdir /opt/openfire/logs
@@ -93,11 +94,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown -R jabber:jabber /opt/openfire
+	local src
+	local dst
 
-	ewarn If this is a new install, please edit /opt/openfire/conf/openfire.xml.sample
-	ewarn and save it as /opt/openfire/conf/openfire.xml
-	ewarn
-	ewarn The following must be be owned or writable by the jabber user.
-	ewarn /opt/openfire/conf/openfire.xml
+	# http://community.igniterealtime.org/thread/52289
+	for dst in "${ROOT}"/opt/openfire/conf/{openfire,security}.xml
+	do
+		src="${dst}".sample
+		if [[ -f "${dst}" ]]; then
+			einfo "Leaving old '${dst}'"
+		else
+			einfo "Created default '${dst}'. Please edit."
+			cp -v "${src}" "${dst}" || ewarn "cp '${dst}' failed"
+			chmod -v 0600 "${dst}" || ewarn "chmod '${dst}' failed"
+		fi
+	done
+	chown -R jabber:jabber "${ROOT}"/opt/openfire
 }
