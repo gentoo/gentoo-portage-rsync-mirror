@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-2.3.3.ebuild,v 1.2 2014/04/25 20:03:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-2.3.3.ebuild,v 1.3 2014/05/01 14:16:11 axs Exp $
 
 EAPI=5
 
-inherit nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
+inherit autotools nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
 
 if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
@@ -51,6 +51,12 @@ RDEPEND="${COMMONDEPEND}
 	app-arch/unzip
 	java? ( >=virtual/jre-1.4 )
 	sox? ( media-sound/sox )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-ld.gold.patch
+	epatch_user
+	eautoreconf
+}
 
 src_configure() {
 	# list of js libs without .pc support, to disable ./configure auto-checking

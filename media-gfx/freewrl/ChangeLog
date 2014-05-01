@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.58 2014/04/25 20:03:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.59 2014/05/01 14:16:11 axs Exp $
+
+  01 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/freewrl-2.3.3-ld.gold.patch, freewrl-1.22.13-r3.ebuild,
+  freewrl-2.3.3.ebuild:
+  fix library underlinking issue that caused link breakage with ld.gold
 
   25 Apr 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> freewrl-2.3.3.ebuild:
   fixed distfile on new version

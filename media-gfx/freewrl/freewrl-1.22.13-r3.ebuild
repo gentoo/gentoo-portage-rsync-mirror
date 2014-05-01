@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.3 2014/03/14 13:45:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r3.ebuild,v 1.4 2014/05/01 14:16:11 axs Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ src_prepare() {
 	fi
 	epatch "${FILESDIR}"/${P}-desktop.patch
 	epatch "${FILESDIR}"/${P}-java-fix.patch
+	epatch "${FILESDIR}"/${PN}-2.3.3-ld.gold.patch
 	eautoreconf
 }
 
