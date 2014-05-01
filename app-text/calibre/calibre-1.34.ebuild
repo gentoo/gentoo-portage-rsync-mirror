@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.34.ebuild,v 1.1 2014/05/01 02:22:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.34.ebuild,v 1.2 2014/05/01 16:14:31 axs Exp $
 
 EAPI=5
 
@@ -104,9 +104,11 @@ src_prepare() {
 
 	# no_updates: do not annoy user with "new version is availible all the time
 	# disable_plugins: walking sec-hole, wait for upstream to use GHNS interface
+	# C locale: if LC_ALL=C do not raise an exception when locale cannot be canonicalized
 	epatch \
-		"${FILESDIR}/${PN}-1.20-no_updates_dialog.patch" \
-		"${FILESDIR}/${PN}-disable_plugins.patch"
+		"${FILESDIR}/${P}-no_updates_dialog.patch" \
+		"${FILESDIR}/${PN}-disable_plugins.patch" \
+		"${FILESDIR}/${P}-C-locale.patch"
 }
 
 src_install() {

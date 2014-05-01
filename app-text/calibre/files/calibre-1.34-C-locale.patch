@@ -1,0 +1,11 @@
+--- a/src/calibre/spell/dictionary.py	2014-05-01 11:38:04.051290252 -0400
++++ b/src/calibre/spell/dictionary.py	2014-05-01 11:37:55.061290088 -0400
+@@ -52,7 +52,7 @@
+     raw = raw or ''
+     parts = raw.replace('_', '-').split('-')
+     lc = canonicalize_lang(parts[0])
+-    if lc is None:
++    if lc is None and raw != 'C':
+         raise ValueError('Invalid language code: %r' % raw)
+     cc = None
+     if len(parts) > 1:
