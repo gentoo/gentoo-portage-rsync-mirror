@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r2 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ssuominen/libreplaygain-477.tar.xz
-_eclasses_=cmake-multilib	08126500411a2fc0fb106455d60e0c60	cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	f6aa8af57487c8bb24051bb04669a17f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-multilib	08126500411a2fc0fb106455d60e0c60	cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	88d8e0f119606a6f9fec4e723531edbf	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=57879aba0812a14401a35be0ea9dac92

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.555 2014/04/29 17:31:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.556 2014/05/01 09:41:26 mgorny Exp $
+
+  01 May 2014; Michał Górny <mgorny@gentoo.org> mesa-10.1.1.ebuild:
+  Remove --enable-llvm-shared-libs since the switch is broken in this version
+  and causes shared linking to be disabled. In fact, the default is for shared
+  linking to be enabled, so removing the switch leaves it that way.
 
   29 Apr 2014; Michał Górny <mgorny@gentoo.org> mesa-10.1.1.ebuild:
   Restore libxml2 dep that was removed prematurely, bug #509066.
