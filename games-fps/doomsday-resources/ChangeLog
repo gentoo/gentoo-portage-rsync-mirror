@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday-resources
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.8 2013/01/31 08:46:06 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.9 2014/05/01 18:36:45 ulm Exp $
+
+  01 May 2014; Ulrich Müller <ulm@gentoo.org>
+  doomsday-resources-1.01-r1.ebuild:
+  Change LICENSE to free-noncomm, bug 505636.
 
   31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -doomsday-resources-1.01.ebuild:

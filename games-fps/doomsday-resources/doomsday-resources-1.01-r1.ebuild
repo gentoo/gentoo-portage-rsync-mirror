@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01-r1.ebuild,v 1.3 2012/07/06 09:52:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01-r1.ebuild,v 1.4 2014/05/01 18:36:45 ulm Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.doomsdayhq.com/"
 SRC_URI="mirror://sourceforge/deng/jdoom-resource-pack-${PV}.zip
 	mirror://sourceforge/deng/jdoom-details.zip"
 
-LICENSE="as-is"
+LICENSE="free-noncomm"		#505636
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
