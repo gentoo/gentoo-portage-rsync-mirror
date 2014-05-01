@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.9-r1.ebuild,v 1.1 2014/04/23 08:42:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.9-r1.ebuild,v 1.2 2014/05/01 08:00:52 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,8 @@ inherit cmake-utils python-single-r1 vcs-snapshot
 DESCRIPTION="A color management framework for visual effects and animation"
 HOMEPAGE="http://opencolorio.org/"
 SRC_URI="https://github.com/imageworks/OpenColorIO/archive/v${PV}.tar.gz \
-		-> ${P}.tar.gz"
+		-> ${P}.tar.gz
+	http://dev.gentoo.org/~pinkbyte/distfiles/patches/${P}-yaml-0.5-compat.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -46,7 +47,7 @@ RESTRICT="test"
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.8-documentation-gen.patch"
 	"${FILESDIR}/${P}-remove-external-doc-utilities.patch"
-	"${FILESDIR}/${P}-yaml-0.5-compat.patch.bz2"
+	"${WORKDIR}/${P}-yaml-0.5-compat.patch"
 )
 
 pkg_setup() {
