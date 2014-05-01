@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r2.ebuild,v 1.1 2014/04/30 18:11:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r2.ebuild,v 1.2 2014/05/01 09:25:25 ulm Exp $
 
 EAPI=5
 
@@ -83,7 +83,8 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	# wmluiltok is linked with libfl.a, so always build it for the host ABI
+	# The wmluiltok build tool is linked with libfl.a, therefore compile
+	# it for the build platform's ABI
 	emake -C tools/wml CC="$(tc-getBUILD_CC)" LIBS="-lfl" wmluiltok
 	emake
 }

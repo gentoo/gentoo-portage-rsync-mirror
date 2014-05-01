@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.455 2014/04/27 21:34:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.457 2014/05/01 09:06:06 radhermit Exp $
+
+  01 May 2014; Tim Harder <radhermit@gentoo.org> vim-7.4.273.ebuild:
+  Sync PYTHON_COMPAT.
+
+*vim-7.4.273 (01 May 2014)
+
+  01 May 2014; Tim Harder <radhermit@gentoo.org> +vim-7.4.273.ebuild:
+  Version bump.
 
   27 Apr 2014; Mike Gilbert <floppym@gentoo.org> vim-7.4.193.ebuild,
   vim-9999.ebuild:
