@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.1-r1.ebuild,v 1.1 2014/04/16 09:10:54 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.1-r1.ebuild,v 1.3 2014/05/01 01:22:44 vapier Exp $
 
 EAPI="4"
 
@@ -28,6 +28,7 @@ RDEPEND="${DEPEND}"
 S="${S}/${PN}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-Fix-nt_password_hash-build.patch
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf" || die
 }
@@ -92,7 +93,6 @@ src_configure() {
 
 	einfo "  nl80211 driver enabled"
 	echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
-	echo "LIBS += -L/usr/lib" >> ${CONFIG}
 
 	# misc
 	echo "CONFIG_PKCS12=y" >> ${CONFIG}
