@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.42 2014/04/19 18:00:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.43 2014/05/02 12:53:17 jer Exp $
+
+  02 May 2014; Jeroen Roovers <jer@gentoo.org> miniupnpc-1.8.ebuild:
+  Stable for HPPA (bug #506794).
 
   19 Apr 2014; Julian Ospald <hasufell@gentoo.org> miniupnpc-1.8.ebuild:
   respect AR wrt #475144
