@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.7.0.ebuild,v 1.2 2014/05/02 06:46:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.7.1.ebuild,v 1.1 2014/05/02 06:46:33 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
 inherit twisted-r1
@@ -17,11 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
-RDEPEND=">=dev-python/epsilon-0.6.0-r2[${PYTHON_USEDEP}]
-	dev-python/twisted-core[${PYTHON_USEDEP}]
-	>=dev-python/pyopenssl-0.13[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/epsilon-0.7.0[${PYTHON_USEDEP}]
+	>=dev-python/twisted-core-13.2.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
+	test? ( dev-python/pytest[${PYTHON_USEDEP}]
+		>=dev-python/pyopenssl-0.13[${PYTHON_USEDEP}] )"
 
 PATCHES=( "${FILESDIR}/${PN}-0.5.30-sqlite3_3.6.4.patch" )
 
