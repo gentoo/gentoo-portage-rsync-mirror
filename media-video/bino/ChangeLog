@@ -1,6 +1,11 @@
 # ChangeLog for media-video/bino
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bino/ChangeLog,v 1.4 2013/05/12 17:25:00 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/bino/ChangeLog,v 1.5 2014/05/02 20:13:59 swift Exp $
+
+*bino-1.4.4 (02 May 2014)
+
+  02 May 2014; Sven Vermeulen <swift@gentoo.org> +bino-1.4.4.ebuild:
+  Bump bino to 1.4.4 thanks to PhobosK, see bug #501374, #499772 and #482938
 
 *bino-1.4.2-r1 (12 May 2013)
 
