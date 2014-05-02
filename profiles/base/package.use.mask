@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.567 2014/05/02 12:17:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.568 2014/05/02 18:27:14 tomwij Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -15,6 +15,7 @@
 # https://bugs.gentoo.org/show_bug.cgi?id=508086
 # https://github.com/mate-desktop/mate-bluetooth/issues/22
 # http://mate-desktop.org/blog/2014-03-11-mate-desktop-singing-the-bluez
+mate-base/mate bluetooth
 mate-extra/mate-user-share bluetooth
 
 # Michał Górny <mgorny@gentoo.org> (26 Apr 2014)
