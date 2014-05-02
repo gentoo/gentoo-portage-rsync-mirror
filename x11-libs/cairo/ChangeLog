@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.373 2014/04/28 17:50:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.375 2014/05/02 09:51:49 tommy Exp $
+
+  02 May 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  cairo-1.10.2-r3.ebuild, cairo-1.12.14-r4.ebuild, cairo-1.12.16-r2.ebuild,
+  cairo-1.12.16.ebuild, cairo-9999.ebuild:
+  Revert previous commit, multilib_is_native_abi now includes
+  multilib_build_binaries functionality
+
+  02 May 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  cairo-1.10.2-r3.ebuild, cairo-1.12.14-r4.ebuild, cairo-1.12.16-r2.ebuild,
+  cairo-1.12.16.ebuild, cairo-9999.ebuild:
+  Replace multilib_is_native_abi with multilib_build_binaries
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> cairo-1.12.16-r2.ebuild,
   cairo-9999.ebuild:
