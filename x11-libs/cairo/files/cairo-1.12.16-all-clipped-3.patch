@@ -1,0 +1,28 @@
+From 180fead4390089e56c28dba0fcfaa99d127722c1 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Thu May 1 23:39:01 PDT 2014
+Subject: [PATCH] segfault in cairo-xcb-surface-render.c
+
+http://lists.cairographics.org/archives/cairo/2014-May/025197.html
+https://bugs.freedesktop.org/show_bug.cgi?id=77931
+---
+ src/cairo-xcb-surface-render.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/cairo-xcb-surface-render.c b/src/cairo-xcb-surface-render.c
+index 9625953..54307d5 100644
+--- a/src/cairo-xcb-surface-render.c
++++ b/src/cairo-xcb-surface-render.c
+@@ -3121,6 +3121,9 @@ _clip_and_composite_boxes (cairo_xcb_surface_t *dst,
+ 
+ 	clip = _cairo_clip_copy (extents->clip);
+ 	clip = _cairo_clip_intersect_boxes (clip, boxes);
++	if (_cairo_clip_is_all_clipped (clip))
++	    return CAIRO_INT_STATUS_NOTHING_TO_DO;
++
+ 	status = _cairo_clip_get_polygon (clip, &polygon,
+ 					  &fill_rule, &antialias);
+ 	_cairo_clip_path_destroy (clip->path);
+-- 
+1.9.2
+

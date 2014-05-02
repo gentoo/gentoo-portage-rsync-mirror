@@ -1,0 +1,28 @@
+From ed175b2a2bebb6def85133257bc11a875d13b0dd Mon Sep 17 00:00:00 2001
+From: Uli Schlachter <psychon@znc.in>
+Date: Thu, 06 Mar 2014 08:45:08 +0000
+Subject: clip: Fix handling of special all-clipped cairo_clip_t
+
+_cairo_clip_intersect_box() wasn't checking if it was called with the special,
+read-only all-clipped clip and thus could have ended up writing to read-only
+memory.
+
+References: https://bugs.freedesktop.org/show_bug.cgi?id=75819
+Signed-off-by: Uli Schlachter <psychon@znc.in>
+---
+diff --git a/src/cairo-clip-boxes.c b/src/cairo-clip-boxes.c
+index 352654f..7bcbeb1 100644
+--- a/src/cairo-clip-boxes.c
++++ b/src/cairo-clip-boxes.c
+@@ -258,6 +258,9 @@ _cairo_clip_intersect_box (cairo_clip_t *clip,
+ {
+     cairo_rectangle_int_t r;
+ 
++    if (_cairo_clip_is_all_clipped (clip))
++	return clip;
++
+     _cairo_box_round_to_rectangle (box, &r);
+     if (r.width == 0 || r.height == 0)
+ 	return _cairo_clip_set_all_clipped (clip);
+--
+cgit v0.9.0.2-2-gbebe

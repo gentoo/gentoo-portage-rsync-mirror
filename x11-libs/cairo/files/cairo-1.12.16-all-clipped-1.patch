@@ -1,0 +1,38 @@
+From 3b261bea7d8e8094ff3899aefab6bbc8628a3585 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Thu, 06 Mar 2014 08:34:10 +0000
+Subject: clip: Do not modify the special all-clipped cairo_clip_t
+
+Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
+Bugzilla: https://bugs.freedesktop.org/show_bug.cgi?id=75819
+---
+diff --git a/src/cairo-clip-boxes.c b/src/cairo-clip-boxes.c
+index bbb4197..352654f 100644
+--- a/src/cairo-clip-boxes.c
++++ b/src/cairo-clip-boxes.c
+@@ -173,7 +173,7 @@ _cairo_clip_intersect_rectangle_box (cairo_clip_t *clip,
+ 	    clip->extents = *r;
+ 	} else {
+ 	    if (! _cairo_rectangle_intersect (&clip->extents, r))
+-		clip = _cairo_clip_set_all_clipped (clip);
++		return _cairo_clip_set_all_clipped (clip);
+ 	}
+ 	if (clip->path == NULL)
+ 	    clip->is_region = _cairo_box_is_pixel_aligned (box);
+@@ -312,10 +312,12 @@ _cairo_clip_intersect_boxes (cairo_clip_t *clip,
+     _cairo_boxes_extents (boxes, &limits);
+ 
+     _cairo_box_round_to_rectangle (&limits, &extents);
+-    if (clip->path == NULL)
++    if (clip->path == NULL) {
+ 	clip->extents = extents;
+-    else if (! _cairo_rectangle_intersect (&clip->extents, &extents))
++    } else if (! _cairo_rectangle_intersect (&clip->extents, &extents)) {
+ 	clip = _cairo_clip_set_all_clipped (clip);
++	goto out;
++    }
+ 
+     if (clip->region) {
+ 	cairo_region_destroy (clip->region);
+--
+cgit v0.9.0.2-2-gbebe
