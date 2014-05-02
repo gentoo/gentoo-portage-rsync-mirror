@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/homerun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/ChangeLog,v 1.6 2014/04/12 21:19:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/ChangeLog,v 1.7 2014/05/02 22:20:37 johu Exp $
+
+*homerun-1.2.4 (02 May 2014)
+
+  02 May 2014; Johannes Huber <johu@gentoo.org> +homerun-1.2.4.ebuild,
+  -homerun-1.2.2.ebuild:
+  Version bump, remove old.
 
 *homerun-1.2.3 (12 Apr 2014)
 
