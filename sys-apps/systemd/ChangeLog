@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.248 2014/04/19 01:04:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.249 2014/05/02 01:26:44 floppym Exp $
+
+  02 May 2014; Mike Gilbert <floppym@gentoo.org> systemd-212-r2.ebuild,
+  systemd-9999.ebuild:
+  Manually specify dbus paths to avoid using dbus-1.pc, bug 500282 by Benedikt
+  Böhm.
 
   19 Apr 2014; Mike Gilbert <floppym@gentoo.org> -systemd-212-r1.ebuild,
   -systemd-212.ebuild, systemd-212-r2.ebuild, systemd-9999.ebuild:

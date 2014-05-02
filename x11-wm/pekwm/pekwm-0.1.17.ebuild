@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.17.ebuild,v 1.1 2014/03/10 01:22:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.17.ebuild,v 1.2 2014/05/02 01:18:30 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -76,7 +76,7 @@ src_install() {
 
 pkg_postinst() {
 	if use contrib ; then
-		elog " User contributed scripts had been installed into:"
+		elog " User contributed scripts have been installed into:"
 		elog " /usr/share/doc/${PF}/contrib"
 	fi
 }
