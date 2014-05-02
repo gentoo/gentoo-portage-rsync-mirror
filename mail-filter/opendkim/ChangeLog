@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.77 2014/04/15 06:41:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.78 2014/05/02 10:46:14 pacho Exp $
+
+*opendkim-2.9.2-r1 (02 May 2014)
+
+  02 May 2014; Pacho Ramos <pacho@gentoo.org> +files/opendkim.service,
+  +opendkim-2.9.2-r1.ebuild:
+  Add unit file (#502054 by Andrius Stikonas)
 
 *opendkim-2.9.2 (15 Apr 2014)
 

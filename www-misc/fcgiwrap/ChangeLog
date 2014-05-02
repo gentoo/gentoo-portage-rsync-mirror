@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/fcgiwrap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.15 2013/10/13 10:19:57 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.16 2014/05/02 10:40:49 pacho Exp $
+
+*fcgiwrap-1.1.0-r1 (02 May 2014)
+
+  02 May 2014; Pacho Ramos <pacho@gentoo.org> +fcgiwrap-1.1.0-r1.ebuild:
+  Fix unit file and automagic installation of them (#508914 by Alex Xu)
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.
