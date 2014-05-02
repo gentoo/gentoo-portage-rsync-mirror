@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23.ebuild,v 1.11 2014/04/21 10:30:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23.ebuild,v 1.12 2014/05/02 09:11:41 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -54,7 +54,7 @@ DEPEND="${COMMON_DEPEND}
 		x11-proto/damageproto
 	)
 	xinerama? ( x11-proto/xineramaproto )
-	>=dev-util/gtk-doc-am-1.11
+	>=dev-util/gtk-doc-am-1.20
 	test? (
 		x11-themes/hicolor-icon-theme
 		media-fonts/font-misc-misc

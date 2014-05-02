@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r2.ebuild,v 1.3 2014/05/02 01:26:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r3.ebuild,v 1.1 2014/05/02 09:10:16 mgorny Exp $
 
 EAPI=5
 
@@ -192,7 +192,7 @@ multilib_src_configure() {
 		QUOTACHECK=/usr/sbin/quotacheck
 
 		# dbus paths
-		--with-dbuspolicydir="${EPREFIX}/etc/dbus-1/systemd.d"
+		--with-dbuspolicydir="${EPREFIX}/etc/dbus-1/system.d"
 		--with-dbussessionservicedir="${EPREFIX}/usr/share/dbus-1/services"
 		--with-dbussystemservicedir="${EPREFIX}/usr/share/dbus-1/system-services"
 		--with-dbusinterfacedir="${EPREFIX}/usr/share/dbus-1/interfaces"
