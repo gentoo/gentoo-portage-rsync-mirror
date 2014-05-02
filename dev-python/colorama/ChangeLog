@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/colorama
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.9 2014/04/03 06:27:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.11 2014/05/02 12:00:55 idella4 Exp $
+
+*colorama-0.3.1 (02 May 2014)
+
+  02 May 2014; Ian Delaney <idella4@gentoo.org> +colorama-0.3.1.ebuild:
+  bump; drop py2.6 pypy2_0 support, add IUSE examples
 
   03 Apr 2014; Tim Harder <radhermit@gentoo.org> colorama-0.2.7.ebuild:
   Add python3_4 support.
