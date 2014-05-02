@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.119 2014/05/01 20:17:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.120 2014/05/02 19:28:40 maksbotan Exp $
+
+*mplayer2-2.0_p20131009 (02 May 2014)
+
+  02 May 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +mplayer2-2.0_p20131009.ebuild:
+  Bump to new snapshot, change SRC_URI to dev.gentoo.org as googlecode no longer
+  accepts downloads.
 
   01 May 2014; Maxim Koltsov <maksbotan@gentoo.org>
   mplayer2-2.0_p20130428-r1.ebuild, mplayer2-9999.ebuild:
