@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-control-center/mate-control-center-1.8.1.ebuild,v 1.1 2014/04/28 23:35:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-control-center/mate-control-center-1.8.1.ebuild,v 1.2 2014/05/02 13:07:15 tomwij Exp $
 
 EAPI="5"
 
@@ -21,7 +21,6 @@ KEYWORDS="~amd64"
 
 RDEPEND="app-text/rarian:0
 	dev-libs/atk:0
-	dev-libs/libappindicator:3
 	>=dev-libs/dbus-glib-0.73:0
 	>=dev-libs/glib-2.28:2
 	>=dev-libs/libunique-1:1
