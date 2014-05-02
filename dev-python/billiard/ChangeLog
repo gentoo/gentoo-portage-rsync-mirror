@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.22 2014/04/08 07:17:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.23 2014/05/02 07:01:53 idella4 Exp $
+
+*billiard-3.3.0.17 (02 May 2014)
+
+  02 May 2014; Ian Delaney <idella4@gentoo.org> +billiard-3.3.0.17.ebuild:
+  bump; drop py2.6 py3.2 pypy2_0 add py3.4 support
 
 *billiard-3.3.0.16 (08 Apr 2014)
 
