@@ -1,20 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.3.8.ebuild,v 1.5 2014/03/09 11:56:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.3.8.ebuild,v 1.6 2014/05/02 08:41:56 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 PYTHON_COMPAT=( python2_7 )
 
-inherit autotools gnome2 python-single-r1
+inherit gnome2 python-single-r1
 
 DESCRIPTION="D-Feet is a powerful D-Bus debugger"
-HOMEPAGE="http://live.gnome.org/DFeet"
+HOMEPAGE="https://wiki.gnome.org/Apps/DFeet"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	>=dev-libs/glib-2.34:2
