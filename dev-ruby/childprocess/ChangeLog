@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.44 2014/04/10 05:45:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.45 2014/05/02 14:58:05 graaff Exp $
+
+*childprocess-0.5.3 (02 May 2014)
+
+  02 May 2014; Hans de Graaff <graaff@gentoo.org> +childprocess-0.5.3.ebuild:
+  Version bump. Add ruby21.
 
   10 Apr 2014; Hans de Graaff <graaff@gentoo.org>
   -childprocess-0.3.9-r1.ebuild, -childprocess-0.4.0.ebuild:

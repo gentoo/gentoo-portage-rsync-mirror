@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/activemodel-4.0.0:4.0[ruby_targets_ruby19] dev-ruby/locale[ruby_targets_ruby19] dev-ruby/ruby-gettext[ruby_targets_ruby19] dev-ruby/gettext_i18n_rails[ruby_targets_ruby19] || ( >=dev-ruby/ruby-ldap-0.8.2[ruby_targets_ruby19] dev-ruby/ruby-net-ldap[ruby_targets_ruby19] ) ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=Ruby/ActiveLDAP provides an activerecord inspired object oriented interface to LDAP
+EAPI=5
+HOMEPAGE=https://github.com/activeldap/activeldap
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/activemodel-4.0.0:4.0[ruby_targets_ruby19] dev-ruby/locale[ruby_targets_ruby19] dev-ruby/ruby-gettext[ruby_targets_ruby19] dev-ruby/gettext_i18n_rails[ruby_targets_ruby19] || ( >=dev-ruby/ruby-ldap-0.8.2[ruby_targets_ruby19] dev-ruby/ruby-net-ldap[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+RESTRICT=test
+SLOT=4
+SRC_URI=mirror://rubygems/activeldap-4.0.2.gem
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=8032fe33ece77dcb73dab8821e844394

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.63 2014/04/05 23:26:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.64 2014/05/02 14:47:21 graaff Exp $
+
+  02 May 2014; Hans de Graaff <graaff@gentoo.org> ruby-ldap-0.9.16.ebuild:
+  Add ruby21.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-ldap-0.9.12.ebuild,
   ruby-ldap-0.9.16.ebuild:
