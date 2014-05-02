@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.154 2014/04/27 11:11:29 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.155 2014/05/02 17:42:01 pacho Exp $
+
+  02 May 2014; Pacho Ramos <pacho@gentoo.org> hddtemp-0.3_beta15-r25.ebuild,
+  hddtemp-0.3_beta15-r7.ebuild:
+  Use readme.gentoo.eclass (#509382)
 
 *hddtemp-0.3_beta15-r25 (27 Apr 2014)
 

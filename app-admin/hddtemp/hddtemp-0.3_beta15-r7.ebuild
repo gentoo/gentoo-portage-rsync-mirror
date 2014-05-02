@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r7.ebuild,v 1.9 2014/04/27 11:00:47 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r7.ebuild,v 1.10 2014/05/02 17:42:01 pacho Exp $
 
-inherit eutils autotools systemd
+EAPI=5
+inherit eutils autotools readme.gentoo systemd
 
 MY_P=${P/_beta/-beta}
 DBV=20080531
@@ -21,9 +22,19 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="In order to update your hddtemp database, run:
+emerge --config =${CATEGORY}/${PF}
+
+If your hard drive is not recognized by hddtemp, please consider
+submitting your HDD info for inclusion into the Gentoo hddtemp
+database by filing a bug at https://bugs.gentoo.org/
+
+If hddtemp complains but finds your HDD temperature sensor, use the
+--quiet option to suppress the warning.
+"
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-satacmds.patch
 	epatch "${FILESDIR}"/${P}-byteswap.patch
 	epatch "${FILESDIR}"/${P}-execinfo.patch
@@ -33,18 +44,17 @@ src_unpack() {
 	AT_M4DIR="m4" eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	myconf="--with-db-path=/usr/share/hddtemp/hddtemp.db"
 	# disabling nls breaks compiling
 	use nls || myconf="--disable-nls ${myconf}"
-	econf ${myconf} || die
-	emake || die
+	econf ${myconf}
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	default
 	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
@@ -56,18 +66,8 @@ src_install() {
 	newinitd "${FILESDIR}"/hddtemp-init hddtemp
 	systemd_newunit "${FILESDIR}"/hddtemp.service-r1 "${PN}.service"
 	systemd_install_serviced "${FILESDIR}"/hddtemp.service.conf
-}
 
-pkg_postinst() {
-	elog "In order to update your hddtemp database, run:"
-	elog "  emerge --config =${CATEGORY}/${PF}"
-	elog ""
-	elog "If your hard drive is not recognized by hddtemp, please consider"
-	elog "submitting your HDD info for inclusion into the Gentoo hddtemp"
-	elog "database by filing a bug at https://bugs.gentoo.org/"
-	echo
-	ewarn "If hddtemp complains but finds your HDD temperature sensor, use the"
-	ewarn "--quiet option to suppress the warning."
+	readme.gentoo_create_doc
 }
 
 update_db() {
