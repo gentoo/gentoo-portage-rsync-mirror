@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.84 2014/03/14 10:15:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.85 2014/05/02 15:32:49 chainsaw Exp $
+
+*connman-1.23 (02 May 2014)
+*connman-1.22 (02 May 2014)
+
+  02 May 2014; Tony Vroon <chainsaw@gentoo.org> -connman-1.19.ebuild,
+  -connman-1.20.ebuild, +connman-1.22.ebuild, +connman-1.23.ebuild:
+  Version 1.22 uses newer wpa_supplicant "wrong passphrase" handling and drops
+  on-board code to deal with this. Version 1.23 fixes issues around DHCP & VPN
+  route removal. As requested by José Romildo Malaquias in bug #509250.
 
   14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> connman-1.21.ebuild:
   Stable for ppc64, wrt bug #502894

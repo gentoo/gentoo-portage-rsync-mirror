@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.20.ebuild,v 1.1 2014/01/21 08:40:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.23.ebuild,v 1.1 2014/05/02 15:32:49 chainsaw Exp $
 
 EAPI="5"
 inherit base systemd
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	policykit? ( sys-auth/polkit )
 	openvpn? ( net-misc/openvpn )
 	vpnc? ( net-misc/vpnc )
-	wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )"
+	wifi? ( >=net-wireless/wpa_supplicant-2.0[dbus] )"
 
 DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.39"
