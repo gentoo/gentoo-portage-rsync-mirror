@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.124 2014/05/02 10:17:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.125 2014/05/02 16:14:34 mgorny Exp $
+
+  02 May 2014; Michał Górny <mgorny@gentoo.org> acl-2.2.52-r1.ebuild:
+  Move misplaced blocker to RDEPEND.
 
 *acl-2.2.52-r1 (02 May 2014)
 

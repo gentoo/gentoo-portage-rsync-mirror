@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.52-r1.ebuild,v 1.1 2014/05/02 10:17:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.52-r1.ebuild,v 1.2 2014/05/02 16:14:34 mgorny Exp $
 
 EAPI="4"
 
@@ -15,13 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 IUSE="nls static-libs"
 
-RDEPEND=">=sys-apps/attr-2.4[${MULTILIB_USEDEP}]"
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
+RDEPEND=">=sys-apps/attr-2.4[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140406-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	sed -i \

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.22 2014/04/30 18:17:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.23 2014/05/02 16:16:37 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -28,14 +28,6 @@ esac
 inherit autotools-utils eutils multilib-build multilib-minimal
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
-
-# bug #485046
-_autotools-multilib_fix_multilib_minimal() {
-	src_conf=$(declare -f multilib-minimal_src_configure)
-	src_conf=${src_conf/multilib_foreach_abi/multilib_parallel_foreach_abi}
-	eval "${src_conf}"
-}
-_autotools-multilib_fix_multilib_minimal
 
 # Note: _at_args[@] passing is a backwards compatibility measure.
 # Don't use it in new packages.

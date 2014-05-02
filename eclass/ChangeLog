@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1236 2014/05/01 19:27:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1237 2014/05/02 16:16:37 mgorny Exp $
+
+  02 May 2014; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
+  multilib-minimal.eclass:
+  Run multilib_src_configure() in parallel. Bug #485046.
 
   01 May 2014; Christoph Junghans <ottxor@gentoo.org> unpacker.eclass:
   add app-arch/plzip support (bug #509264)
