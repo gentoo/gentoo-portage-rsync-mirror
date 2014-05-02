@@ -1,6 +1,11 @@
 # ChangeLog for virtual/acl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.7 2014/01/18 01:42:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.8 2014/05/02 10:24:50 mgorny Exp $
+
+*acl-0-r2 (02 May 2014)
+
+  02 May 2014; Michał Górny <mgorny@gentoo.org> +acl-0-r2.ebuild:
+  Update for multilib sys-apps/acl.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> acl-0-r1.ebuild:
   Add arm64 love.

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.123 2014/01/17 04:23:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.124 2014/05/02 10:17:58 mgorny Exp $
+
+*acl-2.2.52-r1 (02 May 2014)
+
+  02 May 2014; Michał Górny <mgorny@gentoo.org> +acl-2.2.52-r1.ebuild:
+  Introduce multilib support, bug #496964.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> acl-2.2.51.ebuild,
   acl-2.2.52.ebuild:
