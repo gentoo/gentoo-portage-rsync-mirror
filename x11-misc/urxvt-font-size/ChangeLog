@@ -1,0 +1,17 @@
+# ChangeLog for x11-misc/urxvt-font-size
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/ChangeLog,v 1.2 2014/05/02 05:00:30 radhermit Exp $
+
+*urxvt-font-size-99999999 (02 May 2014)
+
+  02 May 2014; Tim Harder <radhermit@gentoo.org> -urxvt-font-size-9999.ebuild,
+  +urxvt-font-size-99999999.ebuild:
+  Use proper version number for live ebuild.
+
+*urxvt-font-size-20140501 (02 May 2014)
+*urxvt-font-size-9999 (02 May 2014)
+
+  02 May 2014; Tim Harder <radhermit@gentoo.org> +urxvt-font-size-9999.ebuild,
+  +urxvt-font-size-20140501.ebuild, +metadata.xml:
+  Initial import (bug #509248 by José Romildo Malaquias).
+
