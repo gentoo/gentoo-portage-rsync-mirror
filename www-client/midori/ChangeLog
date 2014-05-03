@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.126 2014/04/07 16:59:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.127 2014/05/03 14:11:51 maekke Exp $
+
+  03 May 2014; Markus Meier <maekke@gentoo.org> midori-0.5.8.ebuild:
+  add ~arm, bug #506150
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> midori-0.5.5.ebuild:
   Remove GTK+-3.x and WebKit2 support from 0.5.5 since it doesn't build with

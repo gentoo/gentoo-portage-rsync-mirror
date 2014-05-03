@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.315 2014/04/29 19:18:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.316 2014/05/03 14:25:27 maekke Exp $
+
+  03 May 2014; Markus Meier <maekke@gentoo.org> kalarm-4.13.0.ebuild:
+  add ~arm, bug #507896
 
   29 Apr 2014; Johannes Huber <johu@gentoo.org> -kalarm-4.12.4.ebuild:
   Remove KDE SC 4.12.4

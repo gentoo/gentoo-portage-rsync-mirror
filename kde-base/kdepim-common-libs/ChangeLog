@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.150 2014/04/30 06:47:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.151 2014/05/03 14:17:38 maekke Exp $
+
+  03 May 2014; Markus Meier <maekke@gentoo.org>
+  kdepim-common-libs-4.13.0.ebuild:
+  add ~arm, bug #507896
 
   30 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Fixed manifest.

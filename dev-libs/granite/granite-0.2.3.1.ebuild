@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.2.3.1.ebuild,v 1.1 2014/04/07 15:31:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.2.3.1.ebuild,v 1.2 2014/05/03 14:11:22 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/$(get_version_component_range 1-2)/${PV}/+do
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.32

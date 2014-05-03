@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.23 2014/02/17 00:44:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.24 2014/05/03 14:10:14 maekke Exp $
+
+  03 May 2014; Markus Meier <maekke@gentoo.org> nethogs-0.8.0-r3.ebuild:
+  add ~arm, bug #505974
 
 *nethogs-0.8.0-r3 (17 Feb 2014)
 
