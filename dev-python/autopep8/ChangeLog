@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.43 2014/03/27 00:07:29 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.44 2014/05/03 08:38:26 patrick Exp $
+
+*autopep8-1.0.1 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org> +autopep8-1.0.1.ebuild:
+  Bump
 
   27 Mar 2014; Sebastian Pipping <sping@gentoo.org> metadata.xml:
   Remove myself as maintainer, python herd still in

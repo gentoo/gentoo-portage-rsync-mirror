@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygeocoder
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygeocoder/ChangeLog,v 1.4 2013/10/21 07:45:14 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygeocoder/ChangeLog,v 1.5 2014/05/03 08:57:27 patrick Exp $
+
+*pygeocoder-1.2.4 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org> +pygeocoder-1.2.4.ebuild:
+  Bump
 
 *pygeocoder-1.2.1 (21 Oct 2013)
 
