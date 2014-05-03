@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.15 2012/12/21 07:53:22 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.16 2014/05/03 18:31:53 ulm Exp $
+
+  03 May 2014; Ulrich Müller <ulm@gentoo.org> xe-2.16.2.ebuild:
+  Change LICENSE to all-rights-reserved, add mirror and bindist restrictions,
+  bug 505630.
 
   21 Dec 2012; Tupone Alfredo <tupone@gentoo.org> xe-2.16.2.ebuild,
   +files/xe-2.16.2-gentoo.patch:

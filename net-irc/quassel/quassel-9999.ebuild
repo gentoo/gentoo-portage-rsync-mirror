@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.70 2014/04/01 23:08:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.71 2014/05/03 18:39:28 johu Exp $
 
 EAPI=5
 
-inherit cmake-utils eutils pax-utils user versionator
+inherit cmake-utils eutils pax-utils systemd user versionator
 
 EGIT_REPO_URI="git://git.quassel-irc.org/quassel"
 [[ "${PV}" == "9999" ]] && inherit git-r3
@@ -116,9 +116,10 @@ src_install() {
 		keepdir "${QUASSEL_DIR}"
 		fowners "${QUASSEL_USER}":"${QUASSEL_USER}" "${QUASSEL_DIR}"
 
-		# init scripts
+		# init scripts & systemd unit
 		newinitd "${FILESDIR}"/quasselcore.init quasselcore
 		newconfd "${FILESDIR}"/quasselcore.conf quasselcore
+		systemd_dounit "${FILESDIR}"/quasselcore.service
 
 		# logrotate
 		insinto /etc/logrotate.d

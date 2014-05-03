@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.265 2014/04/16 23:41:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.266 2014/05/03 18:42:51 hwoarang Exp $
+
+  03 May 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Mask app-emulation/lxc[seccomp] because it's not supported on powerpc
 
   16 Apr 2014; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask kde-base/gwenview[semantic-desktop], kde-base/okular[dpi] and

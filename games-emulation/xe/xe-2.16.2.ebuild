@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.5 2012/12/21 07:53:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.6 2014/05/03 18:31:53 ulm Exp $
 
 EAPI=4
 inherit games
@@ -10,11 +10,11 @@ HOMEPAGE="http://www.xe-emulator.com/"
 SRC_URI="amd64? ( http://www.xe-emulator.com/files/${PN}-x86-64-bin.${PV}.tar.bz2 )
 	x86? ( http://www.xe-emulator.com/files/${PN}-x86-32-bin.${PV}.tar.bz2 )"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="x11-libs/libXv
 	x11-libs/libXinerama
