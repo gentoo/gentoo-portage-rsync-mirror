@@ -1,6 +1,9 @@
 # ChangeLog for games-action/phobiaii
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.13 2012/09/24 00:22:57 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.14 2014/05/03 07:57:19 ulm Exp $
+
+  03 May 2014; Ulrich Müller <ulm@gentoo.org> phobiaii-1.1.ebuild:
+  Change LICENSE to freedist, bug 505612.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> phobiaii-1.1.ebuild:
   QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness)

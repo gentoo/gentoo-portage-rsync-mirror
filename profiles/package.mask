@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15641 2014/05/02 12:17:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15642 2014/05/03 07:33:08 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -549,6 +549,7 @@ lxde-base/lxpolkit
 >=sys-devel/libtool-2.4.2-r1
 >=virtual/acl-0-r2
 >=app-emulation/emul-linux-x86-baselibs-20140406-r3
+>=x11-libs/libSM-1.2.2-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE Desktop Environment >=1.7 introduction mask:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.16 2012/09/24 00:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.17 2014/05/03 07:57:19 ulm Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ DESCRIPTION="Just a moment ago, you were safe inside your ship, behind five inch
 HOMEPAGE="http://www.lynxlabs.com/games/linuxphobia/index.html"
 SRC_URI="http://www.lynxlabs.com/games/linuxphobia/${MY_P}-i386.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="freedist"		#505612
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

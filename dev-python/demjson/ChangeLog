@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/demjson
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.16 2011/06/23 14:46:54 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.17 2014/05/03 07:48:21 idella4 Exp $
+
+*demjson-2.0 (03 May 2014)
+
+  03 May 2014; Ian Delaney <idella4@gentoo.org> +demjson-2.0.ebuild:
+  bump; add py3 pypy support
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -demjson-1.5.ebuild:
   Remove old ebuilds. Requested by Arfrever

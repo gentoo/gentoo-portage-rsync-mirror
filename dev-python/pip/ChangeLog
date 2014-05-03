@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.32 2014/04/25 14:20:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.33 2014/05/03 07:51:54 radhermit Exp $
+
+*pip-1.5.5 (03 May 2014)
+
+  03 May 2014; Tim Harder <radhermit@gentoo.org> +pip-1.5.5.ebuild:
+  Version bump, add python3_4 support.
 
   25 Apr 2014; Jeroen Roovers <jer@gentoo.org> pip-1.5.4-r1.ebuild:
   Marked ~hppa (bug #508282).

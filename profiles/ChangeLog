@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8911 2014/05/02 18:27:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8912 2014/05/03 07:33:07 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask new libSM with proper dependency on multilib util-linux.
 
   02 May 2014; Tom Wijsman <TomWij@gentoo.org> base/package.use.mask:
   Update MATE bluetooth mask to include mate-base/mate[bluetooth].
