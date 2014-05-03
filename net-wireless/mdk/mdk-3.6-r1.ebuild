@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/mdk/mdk-3.6.ebuild,v 1.1 2011/02/22 18:48:52 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/mdk/mdk-3.6-r1.ebuild,v 1.1 2014/05/03 17:18:41 zerochaos Exp $
 
-EAPI="3"
+EAPI="5"
 inherit eutils toolchain-funcs
 
 MY_P="${PN}${PV/./-v}"
@@ -12,26 +12,26 @@ SRC_URI="${HOMEPAGE}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND="net-wireless/aircrack-ng"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-makefile.patch
+	epatch "${FILESDIR}"/fix_wids_mdk3_v5.patch
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake CC=$(tc-getCC)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed."
+	emake DESTDIR="${ED}" install
 
 	insinto /usr/share/${PN}
-	doins -r useful_files || die
+	doins -r useful_files
 
-	dohtml docs/* || die
-	dodoc AUTHORS CHANGELOG TODO || die
+	dohtml docs/*
+	dodoc AUTHORS CHANGELOG TODO
 }
