@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.14 2014/04/15 16:06:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.15 2014/05/03 21:25:46 pinkbyte Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -42,11 +42,7 @@ else
 fi
 
 HOMEPAGE="http://leechcraft.org/"
-if version_is_at_least 0.5.95; then
-	LICENSE="Boost-1.0"
-else
-	LICENSE="GPL-3"
-fi
+LICENSE="Boost-1.0"
 
 # @ECLASS-VARIABLE: LEECHCRAFT_PLUGIN_CATEGORY
 # @DEFAULT_UNSET
@@ -72,13 +68,11 @@ EXPORT_FUNCTIONS "pkg_pretend"
 leechcraft_pkg_pretend() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if version_is_at_least 0.5.85; then
-		# 0.5.85 and later requires at least gcc 4.6
-		if [[ ${MERGE_TYPE} != binary ]]; then
-			[[ $(gcc-major-version) -lt 4 ]] || \
-					( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ]] ) \
-				&& die "Sorry, but gcc 4.6 or higher is required."
-		fi
+	# 0.5.85 and later requires at least gcc 4.6
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ $(gcc-major-version) -lt 4 ]] || \
+				( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ]] ) \
+			&& die "Sorry, but gcc 4.6 or higher is required."
 	fi
 	if version_is_at_least 0.6.66 || ( [[ ${PN} == lc-monocle ]] && version_is_at_least 0.6.65 ); then
 		# 0.6.65 monocle and all later plugins require at least gcc 4.8

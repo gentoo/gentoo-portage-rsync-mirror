@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.14.ebuild,v 1.3 2014/05/03 21:30:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.16.ebuild,v 1.1 2014/05/03 21:30:16 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -33,7 +33,6 @@ src_prepare() {
 		doc/nbTutorial/nbTutorial.texi || die
 
 	epatch "${FILESDIR}"/${PN}-0.8.14-include.patch
-	epatch "${FILESDIR}"/${PN}-0.8.14-configure.patch
 
 	eautoreconf
 }

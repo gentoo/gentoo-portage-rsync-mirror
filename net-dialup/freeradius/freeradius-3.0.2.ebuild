@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.2.ebuild,v 1.2 2014/05/03 15:56:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.2.ebuild,v 1.3 2014/05/03 21:30:30 jer Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="
 "
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS=""
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -26,6 +26,8 @@ IUSE="
 	bindist debug firebird iodbc kerberos ldap mysql odbc oracle pam pcap
 	postgres python readline sqlite ssl
 "
+
+REQUIRED_USE="bindist? ( !firebird )"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
@@ -48,9 +50,9 @@ RDEPEND="!net-dialup/cistronradius
 	oracle? ( dev-db/oracle-instantclient-basic )"
 DEPEND="${RDEPEND}"
 
-REQUIRED_USE="bindist? ( !firebird )"
-
 S="${WORKDIR}/${MY_P}"
+
+RESTRICT="test"
 
 pkg_setup() {
 	enewgroup radius
@@ -82,7 +84,7 @@ src_prepare() {
 	rm -r src/modules/rlm_eap/types/rlm_eap_ikev2 # requires libeap-ikev2
 	rm -r src/modules/rlm_opendirectory # requires some membership.h
 	rm -r src/modules/rlm_redis{,who} # requires redis
-	rm -r src/modules/rlm_sql/drivers/rlm_sql_{db2,freetds,sybase}
+	rm -r src/modules/rlm_sql/drivers/rlm_sql_{db2,freetds}
 
 	# sql drivers that are not part of experimental are loaded from a
 	# file, so we have to remove them from the file itself when we
@@ -97,6 +99,10 @@ src_prepare() {
 		fi
 	}
 
+	sed -i \
+		-e 's:/var/run/radiusd:/run/radiusd:' \
+		raddb/radiusd.conf || die
+
 	usesqldriver mysql
 	usesqldriver postgres postgresql
 	usesqldriver firebird
@@ -104,9 +110,6 @@ src_prepare() {
 	usesqldriver odbc unixodbc
 	usesqldriver oracle
 	usesqldriver sqlite
-
-	# remove bundled ltdl to avoid conflicts
-	rm -r libltdl
 
 	epatch_user
 
@@ -126,7 +129,8 @@ src_configure() {
 	# massacre of libtool best practices so you also have to make sure
 	# to --enable-shared explicitly.
 	econf \
-		--enable-shared --disable-static \
+		--enable-shared \
+		--disable-static \
 		--disable-ltdl-install \
 		--with-system-libtool \
 		--with-system-libltdl \
@@ -143,6 +147,13 @@ src_configure() {
 		${myconf}
 }
 
+src_compile() {
+	# verbose, do not generate certificates
+	emake \
+		Q='' ECHO=true \
+		LOCAL_CERT_PRODUCTS=''
+}
+
 src_install() {
 	dodir /etc
 	diropts -m0750 -o root -g radius
@@ -152,13 +163,10 @@ src_install() {
 	keepdir /var/log/radius/radacct
 	diropts
 
-	emake R="${D}" install
+	# verbose, do not install certificates
+	emake -j1 Q='' LOCAL_CERT_PRODUCTS='' R="${D}" install
 
 	fowners -R root:radius /etc/raddb
-
-	sed -i \
-		-e 's:/var/run/radiusd:/run/radiusd:' \
-		"${D}"/etc/raddb/radiusd.conf || die
 
 	pamd_mimic_system radiusd auth account password session
 
@@ -168,6 +176,8 @@ src_install() {
 
 	newinitd "${FILESDIR}/radius.init-r3" radiusd
 	newconfd "${FILESDIR}/radius.conf-r3" radiusd
+
+	prune_libtool_files
 }
 
 pkg_config() {

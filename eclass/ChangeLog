@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1237 2014/05/02 16:16:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1238 2014/05/03 21:25:46 pinkbyte Exp $
+
+  03 May 2014; Sergey Popov <pinkbyte@gentoo.org> leechcraft.eclass:
+  Omit some obsolete version checks
 
   02 May 2014; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
   multilib-minimal.eclass:

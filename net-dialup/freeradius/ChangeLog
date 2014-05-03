@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.119 2014/05/03 15:56:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.120 2014/05/03 21:30:30 jer Exp $
+
+  03 May 2014; Jeroen Roovers <jer@gentoo.org> freeradius-3.0.2.ebuild:
+  Do not generate and install certificates. Disable parallel make install (bug
+  #509498). Drop KEYWORDS for now.
 
   03 May 2014; Jeroen Roovers <jer@gentoo.org> freeradius-2.2.5.ebuild,
   freeradius-3.0.2.ebuild:

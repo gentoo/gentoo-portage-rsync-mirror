@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.40 2014/04/29 07:08:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.41 2014/05/03 21:02:40 pinkbyte Exp $
+
+  03 May 2014; Sergey Popov <pinkbyte@gentoo.org> -ansible-1.4.3.ebuild,
+  -ansible-1.4.5.ebuild, -ansible-1.5.0.ebuild, -ansible-1.5.3.ebuild,
+  ansible-1.5.5.ebuild:
+  Stable on amd64 and x86, wrt bug #509046. Drop old versions
 
 *ansible-1.5.5 (29 Apr 2014)
 
