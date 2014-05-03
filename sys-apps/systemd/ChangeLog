@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.252 2014/05/03 15:58:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.253 2014/05/03 16:13:34 mgorny Exp $
+
+*systemd-212-r4 (03 May 2014)
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> +systemd-212-r4.ebuild,
+  -files/204-0001-polkit-Avoid-race-condition-in-scraping-proc.patch,
+  -files/204-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch,
+  -files/204-0003-Allow-tabs-in-environment-files.patch,
+  -files/204-0004-Actually-allow-tabs-in-environment-files.patch,
+  -files/207-0001-swap-fix-reverse-dependencies.patch,
+  -files/207-0002-swap-create-.wants-symlink-to-auto-swap-devices.patch,
+  -files/208-0001-Work-around-link-libsystemd-label-to-libsystemd-logi.patch,
+  -files/208-0002-Update-Makefile.in.patch, -files/gentoo-run.conf,
+  -files/var-lock.mount, -files/var-run.mount, -systemd-208-r2.ebuild,
+  -systemd-208.277.ebuild, -systemd-208.9999.ebuild, -systemd-212-r3.ebuild,
+  systemd-208-r3.ebuild:
+  Revbump for the MY_UDEVDIR fix. Also revbump the stable, reuse 208-r3 for that
+  since it differs by Python versions only. Clean old files up.
 
   03 May 2014; Michał Górny <mgorny@gentoo.org> systemd-208-r2.ebuild,
   systemd-208-r3.ebuild, systemd-208.277.ebuild, systemd-208.9999.ebuild,

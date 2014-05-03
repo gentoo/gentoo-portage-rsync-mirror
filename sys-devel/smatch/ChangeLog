@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/smatch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/ChangeLog,v 1.4 2013/01/03 20:50:43 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/ChangeLog,v 1.5 2014/05/03 16:30:04 vapier Exp $
+
+*smatch-1.59 (03 May 2014)
+
+  03 May 2014; Mike Frysinger <vapier@gentoo.org> +smatch-1.59.ebuild,
+  smatch-9999.ebuild:
+  Version bump #509290 by MJJoker.
 
 *smatch-1.57-r1 (03 Jan 2013)
 
