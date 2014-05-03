@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.95 2014/03/03 23:39:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.96 2014/05/03 21:31:48 tomwij Exp $
+
+*jruby-1.7.12 (03 May 2014)
+
+  03 May 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/jruby-1.7.12-bash-launcher.patch, +jruby-1.7.12.ebuild,
+  jruby-1.6.5.1.ebuild:
+  Version bump to 1.7.12, masked as it is pending review by the Java and Ruby
+  herds; for bug #442230, reported by Gian and in cooperation with mrueg and
+  others.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> jruby-1.6.8-r1.ebuild:
   amd64 stable, bug #495016
