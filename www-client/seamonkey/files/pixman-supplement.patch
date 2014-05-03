@@ -1,0 +1,32 @@
+
+# HG changeset patch
+# User Jan Beich <jbeich@tormail.org>
+# Date 1397136910 14400
+# Node ID c27f7537bc1b10e9127d8f7252657b7b2bf00db3
+# Parent  80a530af380d1a54004c4d6492052bf6a241d578
+Bug 993467 - Follow-up to bug 941595 to unbreak --with-system-pixman after bug 845874. r=Standard8
+CLOSED TREE
+
+diff --git a/config/config.mk b/config/config.mk
+--- a/config/config.mk
++++ b/config/config.mk
+@@ -402,17 +402,17 @@ TAR_CREATE_FLAGS = -chf
+ MY_CONFIG	:= $(DEPTH)/config/myconfig.mk
+ MY_RULES	:= $(DEPTH)/config/myrules.mk
+ 
+ #
+ # Default command macros; can be overridden in <arch>.mk.
+ #
+ CCC		= $(CXX)
+ 
+-OS_INCLUDES += $(NSPR_CFLAGS) $(NSS_CFLAGS) $(MOZ_JPEG_CFLAGS) $(MOZ_PNG_CFLAGS) $(MOZ_ZLIB_CFLAGS)
++OS_INCLUDES += $(NSPR_CFLAGS) $(NSS_CFLAGS) $(MOZ_JPEG_CFLAGS) $(MOZ_PNG_CFLAGS) $(MOZ_ZLIB_CFLAGS) $(MOZ_PIXMAN_CFLAGS)
+ 
+ INCLUDES = \
+   $(LOCAL_INCLUDES) \
+   -I$(srcdir) \
+   -I. \
+   -I$(DIST)/include -I$(DIST)/include/nsprpub \
+   $(if $(LIBXUL_SDK),-I$(LIBXUL_SDK)/include -I$(LIBXUL_SDK)/include/nsprpub) \
+   $(OS_INCLUDES) \
+
