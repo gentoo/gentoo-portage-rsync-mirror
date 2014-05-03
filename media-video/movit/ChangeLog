@@ -1,6 +1,11 @@
 # ChangeLog for media-video/movit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/movit/ChangeLog,v 1.1 2014/04/15 03:59:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/movit/ChangeLog,v 1.2 2014/05/03 04:41:51 patrick Exp $
+
+*movit-1.1.1 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org> +movit-1.1.1.ebuild:
+  Bump
 
 *movit-1.1 (15 Apr 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.24 2014/03/31 21:08:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.25 2014/05/03 04:37:10 idella4 Exp $
+
+  03 May 2014; Ian Delaney <idella4@gentoo.org> pydns-3.0.2-r1.ebuild:
+  add py3.4 support
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pydns-2.3.6-r1.ebuild:
   Add support for the new PyPy slotting.
