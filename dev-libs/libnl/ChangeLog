@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.207 2014/04/06 15:00:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.208 2014/05/03 21:00:23 floppym Exp $
+
+  03 May 2014; Mike Gilbert <floppym@gentoo.org> libnl-3.2.24.ebuild,
+  libnl-3.2.9999.ebuild:
+  Add python3.4.
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> libnl-1.1.4.ebuild,
   libnl-3.2.23.ebuild:

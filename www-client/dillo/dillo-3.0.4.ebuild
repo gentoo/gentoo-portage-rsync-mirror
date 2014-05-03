@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.4.9999.ebuild,v 1.1 2014/02/02 19:52:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.4.ebuild,v 1.1 2014/05/03 20:55:26 jer Exp $
 
 EAPI=5
-inherit autotools eutils flag-o-matic mercurial multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Lean FLTK based web browser"
 HOMEPAGE="http://www.dillo.org/"
-EHG_REPO_URI="http://hg.dillo.org/dillo"
-SRC_URI="mirror://gentoo/${PN}.png"
+SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc +gif ipv6 +jpeg +png ssl"
 
 RDEPEND="sys-libs/zlib
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}2-inbuf.patch
-	eautoreconf
 }
 
 src_configure() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jcodings
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.13 2012/05/09 17:08:50 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.14 2014/05/03 20:39:55 tomwij Exp $
+
+*jcodings-1.0.11 (03 May 2014)
+
+  03 May 2014; Tom Wijsman <TomWij@gentoo.org> +jcodings-1.0.11.ebuild:
+  Version bump to 1.0.11.
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jcodings-1.0.5.ebuild:
   x86 stable wrt bug #396305
@@ -52,4 +57,3 @@
   22 May 2009; Vlastimil Babka <caster@gentoo.org> +jcodings-1.0.2.ebuild,
   +metadata.xml:
   New package, jruby dependency. Ebuild provided by chewi in java-overlay.
-
