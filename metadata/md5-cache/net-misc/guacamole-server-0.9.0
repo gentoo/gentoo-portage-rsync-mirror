@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install
+DEPEND=x11-libs/cairo ssh? ( x11-libs/pango net-libs/libssh ) rdesktop? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) vnc? ( net-libs/libvncserver pulseaudio? ( media-sound/pulseaudio ) ) vorbis? ( media-libs/libvorbis )
+DESCRIPTION=This is the proxy-daemon used by www-apps/guacamole.
+EAPI=5
+HOMEPAGE=http://guacamole.sourceforge.net/
+IUSE=rdesktop vnc ssh pulseaudio vorbis
+KEYWORDS=~x86
+LICENSE=AGPL-3
+RDEPEND=x11-libs/cairo ssh? ( x11-libs/pango net-libs/libssh ) rdesktop? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) vnc? ( net-libs/libvncserver pulseaudio? ( media-sound/pulseaudio ) ) vorbis? ( media-libs/libvorbis )
+SLOT=0
+SRC_URI=mirror://sourceforge/guacamole/guacamole-server-0.9.0.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=28946128e69dd5bb921f50552e9db0aa
