@@ -1,15 +1,14 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=dev-lang/jimtcl-0.73 usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi )
+DEPEND=virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=OpenOCD - Open On-Chip Debugger
 EAPI=5
 HOMEPAGE=http://openocd.sourceforge.net
-IUSE=blaster dummy ftdi minidriver parport presto segger +usb verbose-io
+IUSE=cmsis-dap dummy ftdi parport +usb verbose-io
 KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
-RDEPEND=>=dev-lang/jimtcl-0.73 usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi )
-REQUIRED_USE=blaster? ( ftdi ) presto? ( ftdi )
+LICENSE=GPL-2+
+RDEPEND=>=dev-lang/jimtcl-0.73 cmsis-dap? ( dev-libs/hidapi ) usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi )
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://sourceforge/project/openocd/openocd/0.8.0-rc2/openocd-0.8.0-rc2.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f9740d3db2011c8df6c96e11b49834dc
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_md5_=d0fd5dfaf7756b9839ddff7601722324

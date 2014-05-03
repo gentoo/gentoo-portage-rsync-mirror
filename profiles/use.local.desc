@@ -1224,6 +1224,7 @@ dev-embedded/msp430-gcc:objc-gc - Build support for the Objective C code languag
 dev-embedded/msp430-gdb:multitarget - Support all known targets in one gdb binary
 dev-embedded/msp430-gdb:python - Enable support for the new internal scripting language, as well as extended pretty printers
 dev-embedded/openocd:blaster - Enable support for Altera USE-Blaster
+dev-embedded/openocd:cmsis-dap - Support for CMSIS-DAP compliant adapters
 dev-embedded/openocd:dummy - Build the dummy port driver
 dev-embedded/openocd:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/openocd:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
@@ -2701,6 +2702,11 @@ gnome-extra/gdesklets-core:dbus - Enable gDesklets Controls to use DBus
 gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 gnome-extra/gnome-color-manager:clutter - Use media-libs/clutter to render color gamut representations
 gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
+gnome-extra/gnome-commander:chm - Enable metadata support for Microsoft Compiled HTML Help files
+gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
+gnome-extra/gnome-commander:pdf - Add metadata support for PDF
+gnome-extra/gnome-commander:python - Add support for python plugins"
+gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC and APE
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-dvb-daemon:vala - Add support for dev-lang/vala

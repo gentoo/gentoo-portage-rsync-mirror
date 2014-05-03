@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/gnome-commander
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/ChangeLog,v 1.1 2014/05/03 22:29:26 hwoarang Exp $
+
+*gnome-commander-1.4.1 (03 May 2014)
+
+  03 May 2014; Markos Chandras <hwoarang@gentoo.org>
+  +gnome-commander-1.4.1.ebuild, +metadata.xml:
+  Initial commit thanks to Uwe Scholz <u.scholz83@gmx.de> on bug #231885. He
+  will also act as proxy-maintainer
