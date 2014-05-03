@@ -1,6 +1,20 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.117 2014/01/03 12:06:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.119 2014/05/03 15:56:28 jer Exp $
+
+  03 May 2014; Jeroen Roovers <jer@gentoo.org> freeradius-2.2.5.ebuild,
+  freeradius-3.0.2.ebuild:
+  Remove configuration hints (bug #455690), move emerge --config suggestion to
+  preinst, ewarn to elog.
+
+*freeradius-3.0.2 (03 May 2014)
+*freeradius-2.2.5 (03 May 2014)
+
+  03 May 2014; Jeroen Roovers <jer@gentoo.org> +freeradius-2.2.5.ebuild,
+  +freeradius-3.0.2.ebuild, +files/freeradius-2.2.5-gentoo.patch,
+  files/radius.init-r3:
+  Version bump (bug #489958). Use /run not /var/run. Migrate away from
+  python.eclass.
 
   03 Jan 2014; Naohiro Aota <naota@gentoo.org> freeradius-2.2.0.ebuild:
   Add ~x86-fbsd. #354151

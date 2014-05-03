@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.251 2014/05/02 09:23:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.252 2014/05/03 15:58:48 mgorny Exp $
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> systemd-208-r2.ebuild,
+  systemd-208-r3.ebuild, systemd-208.277.ebuild, systemd-208.9999.ebuild,
+  systemd-212-r3.ebuild, systemd-9999.ebuild:
+  Fix not respecting MY_UDEVDIR, bug #509454.
 
   02 May 2014; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Fix the same typo in the live ebuild as well.

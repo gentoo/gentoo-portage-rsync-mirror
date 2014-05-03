@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r3.ebuild,v 1.1 2014/05/02 09:10:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-212-r3.ebuild,v 1.2 2014/05/03 15:58:48 mgorny Exp $
 
 EAPI=5
 
@@ -142,6 +142,15 @@ pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
+src_configure() {
+	# Keep using the one where the rules were installed.
+	MY_UDEVDIR=$(get_udevdir)
+	# Fix systems broken by bug #509454.
+	[[ ${MY_UDEVDIR} ]] || MY_UDEVDIR=/lib
+
+	multilib-minimal_src_configure
+}
+
 multilib_src_configure() {
 	local myeconfargs=(
 		# disable -flto since it is an optimization flag
@@ -197,9 +206,6 @@ multilib_src_configure() {
 		--with-dbussystemservicedir="${EPREFIX}/usr/share/dbus-1/system-services"
 		--with-dbusinterfacedir="${EPREFIX}/usr/share/dbus-1/interfaces"
 	)
-
-	# Keep using the one where the rules were installed.
-	MY_UDEVDIR=$(get_udevdir)
 
 	if use firmware-loader; then
 		myeconfargs+=(

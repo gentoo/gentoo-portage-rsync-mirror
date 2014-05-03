@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.6.ebuild,v 1.3 2013/07/27 14:58:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.6.ebuild,v 1.4 2014/05/03 15:44:12 tomka Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ pkg_setup () {
 		append-cppflags "-I/usr/include/frobby"
 		# gtest needs python:2. Setting it with python_export preserves
 		# the exported variables in other phases too.
-		python_export python2_7
+		python_export python2_7 PYTHON EPYTHON
 }
 
 src_prepare() {
