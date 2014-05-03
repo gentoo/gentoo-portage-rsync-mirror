@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.39 2013/02/25 08:04:11 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.40 2014/05/03 08:27:56 mgorny Exp $
+
+*lash-0.5.4-r2 (03 May 2014)
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> +lash-0.5.4-r2.ebuild:
+  Convert to python-single-r1 & multilib.
 
   25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> lash-0.5.4-r1.ebuild,
   +files/lash-0.5.4-gcc47.patch:
@@ -140,4 +145,3 @@
   and connects different kinds of virtual audio ports together (currently JACK
   and ALSA sequencer ports). It can also be used to move entire sessions
   between computers, or post sessions on the Internet for download.
-

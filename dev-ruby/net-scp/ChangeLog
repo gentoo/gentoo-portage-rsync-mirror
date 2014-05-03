@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.43 2014/04/05 14:22:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.44 2014/05/03 08:23:10 graaff Exp $
+
+*net-scp-1.2.1 (03 May 2014)
+
+  03 May 2014; Hans de Graaff <graaff@gentoo.org> +net-scp-1.2.1.ebuild:
+  Version bump.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> net-scp-1.0.4-r1.ebuild:
   Remove ree18 and ruby18 target. Remove virtual/ruby-test-unit.

@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.120 2014/01/18 01:43:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.121 2014/05/03 08:20:16 radhermit Exp $
+
+*pbzip2-1.1.9 (03 May 2014)
+
+  03 May 2014; Tim Harder <radhermit@gentoo.org> +pbzip2-1.1.9.ebuild,
+  +files/pbzip2-1.1.9-makefile.patch:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pbzip2-1.1.8.ebuild:
   Add arm64 love.
