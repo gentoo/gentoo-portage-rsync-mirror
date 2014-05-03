@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16-r4.ebuild,v 1.1 2014/05/03 09:27:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16-r4.ebuild,v 1.2 2014/05/03 10:11:41 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils multilib toolchain-funcs multilib-minimal
 S="${WORKDIR}/cmt/src"
 MY_P="cmt_src_${PV}"
 
-DESCRIPTION="CMT (computer music toolkit) Lasdpa library plugins"
+DESCRIPTION="CMT (computer music toolkit) LADSPA library plugins"
 HOMEPAGE="http://www.ladspa.org/"
 SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 

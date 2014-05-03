@@ -3,10 +3,10 @@ DEPEND=games-util/loki_patch
 DESCRIPTION=turn-based 2D medieval combat
 HOMEPAGE=http://www.lokigames.com/products/heroes3/
 KEYWORDS=~amd64 x86
-LICENSE=as-is
+LICENSE=all-rights-reserved
 RDEPEND=>=sys-libs/lib-compat-loki-0.2 x86? ( x11-libs/libX11 ) ppc? ( x11-libs/libX11 ) amd64? ( app-emulation/emul-linux-x86-xlibs app-emulation/emul-linux-x86-compat ) games-misc/games-envd
-RESTRICT=strip
+RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=mirror://lokigames/loki_demos/heroes3-demo.run
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fc9f64e429364f17fdbb28f5272299f1
+_md5_=3010c9cad1e8634ed6fe9493601220f1

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.5 2013/01/17 07:13:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.6 2014/05/03 10:03:13 ulm Exp $
 
 inherit eutils unpacker games
 
@@ -10,13 +10,12 @@ DESCRIPTION="turn-based 2D medieval combat"
 HOMEPAGE="http://www.lokigames.com/products/heroes3/"
 SRC_URI="mirror://lokigames/loki_demos/${PN}.run"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
-
 # Should also work on ppc
 KEYWORDS="~amd64 x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 DEPEND="games-util/loki_patch"
 RDEPEND=">=sys-libs/lib-compat-loki-0.2
