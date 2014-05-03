@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.169 2014/05/03 07:30:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.170 2014/05/03 17:45:16 floppym Exp $
+
+  03 May 2014; Mike Gilbert <floppym@gentoo.org> lcms-1.19-r1.ebuild:
+  Add python3.4.
 
 *lcms-2.6 (03 May 2014)
 

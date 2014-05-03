@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.15 2014/04/21 11:18:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.16 2014/05/03 18:00:20 mgorny Exp $
+
+*pypy-bin-2.2.1-r1 (03 May 2014)
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> +pypy-bin-2.2.1-r1.ebuild,
+  -pypy-bin-2.2.1.ebuild:
+  Use new packages built against ncurses[-tinfo].
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.2.1.ebuild:
   Fix wrong BINHOST, reported by ulm.

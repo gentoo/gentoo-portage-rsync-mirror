@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8919 2014/05/03 16:14:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8920 2014/05/03 17:44:44 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 May 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  JRuby 1.7.12 needs to be further tested and revised by both Java and Ruby
+  herds.
 
   03 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Remove obsolete systemd mask.

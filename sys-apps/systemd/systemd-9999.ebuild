@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.107 2014/05/03 15:58:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.108 2014/05/03 17:35:41 mgorny Exp $
 
 EAPI=5
 
@@ -168,7 +168,7 @@ src_configure() {
 	# Keep using the one where the rules were installed.
 	MY_UDEVDIR=$(get_udevdir)
 	# Fix systems broken by bug #509454.
-	[[ ${MY_UDEVDIR} ]] || MY_UDEVDIR=/lib
+	[[ ${MY_UDEVDIR} ]] || MY_UDEVDIR=/lib/udev
 
 	multilib-minimal_src_configure
 }

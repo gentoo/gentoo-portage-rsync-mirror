@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.2.1.ebuild,v 1.4 2014/04/21 11:18:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.2.1-r1.ebuild,v 1.1 2014/05/03 18:00:20 mgorny Exp $
 
 EAPI=5
 
@@ -15,29 +15,36 @@ SRC_URI="mirror://bitbucket/pypy/pypy/downloads/pypy-${PV}-src.tar.bz2
 	amd64? (
 		jit? ( shadowstack? (
 			${BINHOST}/${P}-amd64+bzip2+jit+ncurses+shadowstack.tar.xz
+				-> ${P}-r1-amd64+bzip2+jit+ncurses+shadowstack.tar.xz
 		) )
 		jit? ( !shadowstack? (
 			${BINHOST}/${P}-amd64+bzip2+jit+ncurses.tar.xz
+				-> ${P}-r1-amd64+bzip2+jit+ncurses.tar.xz
 		) )
 		!jit? ( !shadowstack? (
 			${BINHOST}/${P}-amd64+bzip2+ncurses.tar.xz
+				-> ${P}-r1-amd64+bzip2+ncurses.tar.xz
 		) )
 	)
 	x86? (
 		sse2? (
 			jit? ( shadowstack? (
 				${BINHOST}/${P}-x86+bzip2+jit+ncurses+shadowstack+sse2.tar.xz
+					-> ${P}-r1-x86+bzip2+jit+ncurses+shadowstack+sse2.tar.xz
 			) )
 			jit? ( !shadowstack? (
 				${BINHOST}/${P}-x86+bzip2+jit+ncurses+sse2.tar.xz
+					-> ${P}-r1-x86+bzip2+jit+ncurses+sse2.tar.xz
 			) )
 			!jit? ( !shadowstack? (
 				${BINHOST}/${P}-x86+bzip2+ncurses+sse2.tar.xz
+					-> ${P}-r1-x86+bzip2+ncurses+sse2.tar.xz
 			) )
 		)
 		!sse2? (
 			!jit? ( !shadowstack? (
 				${BINHOST}/${P}-x86+bzip2+ncurses.tar.xz
+					-> ${P}-r1-x86+bzip2+ncurses.tar.xz
 			) )
 		)
 	)"
@@ -61,7 +68,7 @@ RDEPEND="
 		>=dev-libs/openssl-1.0.1c:0 )
 	( <sys-libs/glibc-2.20:2.2
 		>=sys-libs/glibc-2.15:2.2 )
-	~sys-libs/ncurses-5.9:5[tinfo]
+	~sys-libs/ncurses-5.9:5
 	( <sys-libs/zlib-1.2.9:0
 		>=sys-libs/zlib-1.2.7:0 )
 	sqlite? ( dev-db/sqlite:3 )
