@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.52 2014/04/29 04:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.53 2014/05/03 19:51:35 vapier Exp $
+
+*mediatomb-0.12.1-r8 (03 May 2014)
+
+  03 May 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/mediatomb-0.12.1-thumbnail-locking.patch, +mediatomb-0.12.1-r8.ebuild,
+  files/mediatomb-0.12.1-thumb-cache.patch:
+  Fix random crashes in thumbnail generation code.
 
   29 Apr 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Document USE=curl a bit better #505546 by BT.

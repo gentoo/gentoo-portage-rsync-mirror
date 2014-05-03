@@ -21,7 +21,7 @@ index d1998b3..358f4d1 100644
      #define DEFAULT_FFMPEGTHUMBNAILER_FILMSTRIP_OVERLAY YES
      #define DEFAULT_FFMPEGTHUMBNAILER_WORKAROUND_BUGS   NO
      #define DEFAULT_FFMPEGTHUMBNAILER_IMAGE_QUALITY     8
-+    #define DEFAULT_FFMPEGTHUMBNAILER_CACHE_DIR_ENABLED YES           
++    #define DEFAULT_FFMPEGTHUMBNAILER_CACHE_DIR_ENABLED YES
 +    #define DEFAULT_FFMPEGTHUMBNAILER_CACHE_DIR         ""
  #endif
  
@@ -88,7 +88,7 @@ index a637d9c..8e7ef23 100644
  
 +#ifdef HAVE_FFMPEGTHUMBNAILER
 +
-+static bool _mkdir(const char *path)
++static int _mkdir(const char *path)
 +{
 +    int ret = mkdir(path, 0777);
 +

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.34.ebuild,v 1.2 2014/05/01 16:14:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.35.ebuild,v 1.1 2014/05/03 19:42:58 axs Exp $
 
 EAPI=5
 
@@ -42,18 +42,18 @@ COMMON_DEPEND="
 	>=dev-lang/python-2.7.1:2.7[sqlite,ssl]
 	>=dev-libs/chmlib-0.40:=
 	>=dev-libs/icu-4.4:=
-	>=dev-python/apsw-3.7.17
-	>=dev-python/beautifulsoup-3.0.5:python-2
-	dev-python/netifaces
-	dev-python/python-dateutil
-	>=dev-python/dnspython-1.6.0
-	>=dev-python/cssselect-0.7.1
-	>=dev-python/cssutils-0.9.9
-	>=dev-python/dbus-python-0.82.2
-	>=dev-python/lxml-3.2.1
-	>=dev-python/mechanize-0.1.11
-	>=dev-python/python-dateutil-1.4.1
-	>=dev-python/PyQt4-4.9.6[X,svg,webkit]
+	>=dev-python/apsw-3.7.17[python_targets_python2_7(-)]
+	>=dev-python/beautifulsoup-3.0.5:python-2[python_targets_python2_7(-)]
+	dev-python/netifaces[python_targets_python2_7(-)]
+	dev-python/python-dateutil[python_targets_python2_7(-)]
+	>=dev-python/dnspython-1.6.0[python_targets_python2_7(-)]
+	>=dev-python/cssselect-0.7.1[python_targets_python2_7(-)]
+	>=dev-python/cssutils-0.9.9[python_targets_python2_7(-)]
+	>=dev-python/dbus-python-0.82.2[python_targets_python2_7(-)]
+	>=dev-python/lxml-3.2.1[python_targets_python2_7(-)]
+	>=dev-python/mechanize-0.1.11[python_targets_python2_7(-)]
+	>=dev-python/python-dateutil-1.4.1[python_targets_python2_7(-)]
+	>=dev-python/PyQt4-4.9.6[X,svg,webkit,python_targets_python2_7(-)]
 	dev-qt/qtdbus:4=
 	dev-qt/qtsvg:4=
 	media-fonts/liberation-fonts
@@ -62,7 +62,7 @@ COMMON_DEPEND="
 	>=media-libs/libwmf-0.2.8
 	>=media-libs/libmtp-1.1.5:=
 	virtual/libusb:1=
-	virtual/python-imaging
+	virtual/python-imaging[python_targets_python2_7(-)]
 	>=x11-misc/xdg-utils-1.0.2-r2"
 
 RDEPEND="${COMMON_DEPEND}
@@ -102,13 +102,18 @@ src_prepare() {
 '-i', 'Makefile'])" \
 		-i setup/extensions.py || die "sed failed to patch extensions.py"
 
+	# use system beautifulsoup, instead of bundled
+	rm -f "${S}"/src/calibre/ebooks/BeautifulSoup.py || die "could not remove bundled beautifulsoup"
+	find "${S}" -type f -name \*.py -exec \
+		sed -e 's/calibre.ebooks.BeautifulSoup/BeautifulSoup/' -i {} + \
+		|| die "could not sed bundled beautifulsoup out of the source tree"
+
 	# no_updates: do not annoy user with "new version is availible all the time
 	# disable_plugins: walking sec-hole, wait for upstream to use GHNS interface
 	# C locale: if LC_ALL=C do not raise an exception when locale cannot be canonicalized
 	epatch \
-		"${FILESDIR}/${P}-no_updates_dialog.patch" \
-		"${FILESDIR}/${PN}-disable_plugins.patch" \
-		"${FILESDIR}/${P}-C-locale.patch"
+		"${FILESDIR}/${PN}-1.34-no_updates_dialog.patch" \
+		"${FILESDIR}/${PN}-disable_plugins.patch"
 }
 
 src_install() {

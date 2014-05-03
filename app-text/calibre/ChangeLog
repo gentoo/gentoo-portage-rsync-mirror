@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.317 2014/05/01 16:14:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.318 2014/05/03 19:42:58 axs Exp $
+
+*calibre-1.35 (03 May 2014)
+
+  03 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +calibre-1.35.ebuild,
+  -calibre-1.34.ebuild, -files/calibre-1.34-C-locale.patch:
+  version bump ; removed bundled beautifulsoup to ensure usage of system-
+  installed dependency
 
   01 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/calibre-1.34-C-locale.patch,

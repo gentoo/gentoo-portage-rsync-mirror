@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a-r1.ebuild,v 1.1 2014/04/05 08:23:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a-r1.ebuild,v 1.2 2014/05/03 19:43:26 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://members.home.nl/p.a.rombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~s390 ~sparc x86"
 IUSE="debug ipv6 isdn +urandom test"
 
 RDEPEND="sys-apps/openrc"
