@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyplusplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/ChangeLog,v 1.6 2014/02/25 01:56:52 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/ChangeLog,v 1.7 2014/05/03 02:02:06 heroxbd Exp $
+
+  03 May 2014; Benda Xu <heroxbd@gentoo.org>
+  files/pyplusplus-1.0.0_p20131206-numpy.patch:
+  refine the boost numpy patch to only handle arithmatic typed arrays
 
   25 Feb 2014; Benda Xu <heroxbd@gentoo.org>
   files/pyplusplus-1.0.0_p20131206-numpy.patch,

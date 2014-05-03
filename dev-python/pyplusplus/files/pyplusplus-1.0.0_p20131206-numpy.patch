@@ -168,7 +168,7 @@ Index: pyplusplus/creators_factory/bpcreator.py
              elif declarations.is_array( self.curr_decl.type ):
 -                wrapper = code_creators.array_mv_wrapper_t( variable=self.curr_decl )
 -                maker = code_creators.array_mv_t( variable=self.curr_decl, wrapper=wrapper )
-+                if declarations.is_fundamental(declarations.array_item_type( self.curr_decl.type )):
++                if declarations.is_arithmetic(declarations.array_item_type( self.curr_decl.type )):
 +                    wrapper = code_creators.array_numpy_wrapper_t( variable=self.curr_decl )
 +                    maker = code_creators.array_numpy_t( variable=self.curr_decl, wrapper=wrapper )
 +                else:
