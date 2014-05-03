@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.140 2014/02/03 16:43:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.141 2014/05/02 23:05:38 idl0r Exp $
+
+*htop-1.0.3 (02 May 2014)
+
+  02 May 2014; Christian Ruppert <idl0r@gentoo.org> -htop-1.0.1.ebuild,
+  -htop-1.0.1-r1.ebuild, -htop-1.0.2-r1.ebuild, +htop-1.0.3.ebuild,
+  metadata.xml:
+  Version bump, bug 508954. Cleanup
 
   03 Feb 2014; Justin Lecher <jlec@gentoo.org> htop-1.0.1.ebuild,
   htop-1.0.1-r1.ebuild, htop-1.0.2.ebuild, htop-1.0.2-r1.ebuild,

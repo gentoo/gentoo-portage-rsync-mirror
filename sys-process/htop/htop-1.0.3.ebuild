@@ -1,24 +1,33 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.2-r1.ebuild,v 1.2 2014/02/03 16:43:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.3.ebuild,v 1.1 2014/05/02 23:05:38 idl0r Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils linux-info python-any-r1
 
 DESCRIPTION="interactive process viewer"
-HOMEPAGE="http://htop.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+HOMEPAGE="http://hisham.hm/htop/"
+SRC_URI="http://hisham.hm/htop/releases/${PV}/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="kernel_FreeBSD kernel_linux openvz unicode vserver"
+IUSE="kernel_FreeBSD kernel_linux oom openvz unicode vserver"
 
 RDEPEND="sys-libs/ncurses[unicode?]"
 DEPEND="${RDEPEND}"
 
 DOCS=( ChangeLog README )
+
+CONFIG_CHECK="~TASKSTATS ~TASK_XACCT ~TASK_IO_ACCOUNTING ~CGROUPS"
+
+# config.h problems
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	if use kernel_FreeBSD && ! [[ -f ${ROOT}/compat/linux/proc/stat && -f ${ROOT}/compat/linux/proc/meminfo ]]; then
@@ -36,28 +45,35 @@ pkg_setup() {
 		ewarn "To use lsof features in htop(what processes are accessing"
 		ewarn "what files), you must have sys-process/lsof installed."
 	fi
+
+	python-any-r1_pkg_setup
+	linux-info_pkg_setup
 }
 
 src_prepare() {
 	rm missing || die
-	sed -i -e '1c\#!'"${EPREFIX}"'/usr/bin/python' \
-		scripts/MakeHeader.py || die
-	epatch "${FILESDIR}"/${P}-tinfo.patch
-	eautoreconf
+
+	sed \
+		-e '1c\#!'"${EPREFIX}"'/usr/bin/python' \
+		-i scripts/MakeHeader.py || die
+
+	autotools-utils_src_prepare
 }
 
 src_configure() {
 	[[ $CBUILD != $CHOST ]] && export ac_cv_file__proc_{meminfo,stat}=yes #328971
 
-	local myconf=''
+	local myeconfargs=()
 
-	use kernel_FreeBSD && myconf="${myconf} --with-proc=/compat/linux/proc"
+	use kernel_FreeBSD && myeconfargs+=( --with-proc=/compat/linux/proc )
 
-	econf \
-		$(use_enable openvz) \
-		$(use_enable kernel_linux cgroup) \
-		$(use_enable vserver) \
-		$(use_enable unicode) \
-		--enable-taskstats \
-		${myconf}
+	myeconfargs+=(
+		$(use_enable openvz)
+		$(use_enable kernel_linux cgroup)
+		$(use_enable vserver)
+		$(use_enable unicode)
+		$(use_enable oom)
+		--enable-taskstats
+		)
+	autotools-utils_src_configure
 }
