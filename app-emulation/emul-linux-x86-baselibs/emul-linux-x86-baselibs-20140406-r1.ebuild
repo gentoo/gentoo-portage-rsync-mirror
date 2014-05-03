@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r1.ebuild,v 1.3 2014/04/20 12:19:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r1.ebuild,v 1.4 2014/05/03 13:04:10 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -71,7 +71,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/file-5.18-r1[abi_x86_32(-)]
 		>=app-arch/xz-utils-5.0.5-r1[abi_x86_32(-)]
 	)
-	>=sys-libs/glibc-2.15" # bug 340613
+	>=sys-libs/glibc-2.16" # bug 340613
 
 PYTHON_UPDATER_IGNORE="1"
 

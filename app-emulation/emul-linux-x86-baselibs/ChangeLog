@@ -1,6 +1,33 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.198 2014/05/02 16:15:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.200 2014/05/03 13:04:10 pacho Exp $
+
+  03 May 2014; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-baselibs-20140406-r1.ebuild,
+  emul-linux-x86-baselibs-20140406-r3.ebuild:
+  We need newer glibc (#509434 by Mikael Magnusson)
+
+  03 May 2014; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-baselibs-20131008-r11.ebuild,
+  -emul-linux-x86-baselibs-20131008-r12.ebuild,
+  -emul-linux-x86-baselibs-20131008-r13.ebuild,
+  -emul-linux-x86-baselibs-20131008-r14.ebuild,
+  -emul-linux-x86-baselibs-20131008-r15.ebuild,
+  -emul-linux-x86-baselibs-20131008-r16.ebuild,
+  -emul-linux-x86-baselibs-20131008-r17.ebuild,
+  -emul-linux-x86-baselibs-20131008-r18.ebuild,
+  -emul-linux-x86-baselibs-20131008-r19.ebuild,
+  -emul-linux-x86-baselibs-20131008-r20.ebuild,
+  -emul-linux-x86-baselibs-20131008-r21.ebuild,
+  -emul-linux-x86-baselibs-20131008-r22.ebuild,
+  -emul-linux-x86-baselibs-20140406-r2.ebuild,
+  -emul-linux-x86-baselibs-20140406.ebuild, -files/remove-native-20131008-r12,
+  -files/remove-native-20131008-r13, -files/remove-native-20131008-r14,
+  -files/remove-native-20131008-r15, -files/remove-native-20131008-r16,
+  -files/remove-native-20131008-r17, -files/remove-native-20131008-r18,
+  -files/remove-native-20131008-r19, -files/remove-native-20131008-r20,
+  -files/remove-native-20131008-r21, -files/remove-native-20131008-r22:
+  Drop old
 
 *emul-linux-x86-baselibs-20140406-r3 (02 May 2014)
 
