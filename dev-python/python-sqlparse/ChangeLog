@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-sqlparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.23 2014/04/27 20:57:01 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.24 2014/05/03 06:43:54 patrick Exp $
+
+*python-sqlparse-0.1.11 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org>
+  +python-sqlparse-0.1.11.ebuild:
+  Bump
 
   27 Apr 2014; Chema Alonso <nimiux@gentoo.org> python-sqlparse-0.1.10.ebuild:
   Stable for amd64 wrt bug #502796
