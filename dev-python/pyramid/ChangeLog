@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyramid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.1 2014/03/14 08:19:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.2 2014/05/03 09:47:32 patrick Exp $
+
+*pyramid-1.5 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org> +pyramid-1.5.ebuild:
+  Bump
 
 *pyramid-1.4.3 (14 Mar 2014)
 

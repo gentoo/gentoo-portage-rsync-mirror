@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/fluidsynth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.77 2012/12/27 08:17:26 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.78 2014/05/03 09:44:11 mgorny Exp $
+
+*fluidsynth-1.1.6-r1 (03 May 2014)
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> +fluidsynth-1.1.6-r1.ebuild:
+  Enable multilib support.
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> fluidsynth-1.1.6.ebuild:
   alpha/sparc stable wrt #444388

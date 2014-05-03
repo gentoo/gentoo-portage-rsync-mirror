@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15645 2014/05/03 09:27:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15646 2014/05/03 09:44:09 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -527,6 +527,7 @@ lxde-base/lxpolkit
 >=media-libs/ladspa-cmt-1.16-r4
 >=media-sound/lash-0.5.4-r2
 >=x11-libs/libSM-1.2.2-r1
+>=media-sound/fluidsynth-1.1.6-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (21 Feb 2014)
 # MATE Desktop Environment >=1.7 introduction mask:
