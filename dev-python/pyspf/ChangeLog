@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.25 2014/04/19 18:11:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.26 2014/05/03 05:58:57 idella4 Exp $
+
+*pyspf-2.0.9 (03 May 2014)
+
+  03 May 2014; Ian Delaney <idella4@gentoo.org> +pyspf-2.0.9.ebuild:
+  bump; add IUSE ipv6 for new testsuite, drop py2.6 py3.2, update deps, initial
+  patch by mjo
 
   19 Apr 2014; Michał Górny <mgorny@gentoo.org> pyspf-2.0.8-r1.ebuild:
   Use ${PYTHON_USEDEP} substitution support added to python_gen_cond_dep().
