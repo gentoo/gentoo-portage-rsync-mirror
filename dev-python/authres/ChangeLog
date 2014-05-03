@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/authres
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.18 2014/03/31 21:02:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.19 2014/05/03 04:28:46 idella4 Exp $
+
+  03 May 2014; Ian Delaney <idella4@gentoo.org> authres-0.602.ebuild:
+  drop py2.6 pypy2_0 add py3.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> authres-0.501.ebuild,
   authres-0.600.ebuild, authres-0.601.ebuild, authres-0.602.ebuild:

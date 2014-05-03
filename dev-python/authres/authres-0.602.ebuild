@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/authres-0.602.ebuild,v 1.5 2014/03/31 21:02:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/authres-0.602.ebuild,v 1.6 2014/05/03 04:28:46 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
