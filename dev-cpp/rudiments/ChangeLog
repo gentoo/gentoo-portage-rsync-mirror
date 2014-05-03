@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/rudiments
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.16 2013/02/07 10:16:06 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.17 2014/05/03 22:40:26 pinkbyte Exp $
+
+*rudiments-0.46 (03 May 2014)
+
+  03 May 2014; Sergey Popov <pinkbyte@gentoo.org> -rudiments-0.31.ebuild,
+  -rudiments-0.32.ebuild, +rudiments-0.46.ebuild,
+  +files/rudiments-0.46-buildsystem.patch:
+  Version bump, wrt bug #488108. Update buildsystem patch - respect CFLAGS,
+  migrate to autotools-utils eclass. Drop old versions
 
   07 Feb 2013; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Add upstream remote-id info.
