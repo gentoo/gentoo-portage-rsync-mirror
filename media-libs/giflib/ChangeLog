@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.74 2014/04/18 14:32:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.75 2014/05/03 09:02:53 radhermit Exp $
+
+*giflib-5.0.6 (03 May 2014)
+
+  03 May 2014; Tim Harder <radhermit@gentoo.org> +giflib-5.0.6.ebuild:
+  Version bump, add subslot.
 
   18 Apr 2014; Julian Ospald <hasufell@gentoo.org> giflib-4.2.3-r1.ebuild,
   giflib-5.0.5-r1.ebuild:

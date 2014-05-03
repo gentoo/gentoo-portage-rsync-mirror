@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.54 2014/04/24 13:30:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.55 2014/05/03 09:27:38 mgorny Exp $
+
+*ladspa-cmt-1.16-r4 (03 May 2014)
+
+  03 May 2014; Michał Górny <mgorny@gentoo.org> +ladspa-cmt-1.16-r4.ebuild:
+  Enable multilib support. Replace invalid userland_Darwin with elibc_Darwin.
 
   24 Apr 2014; Julian Ospald <hasufell@gentoo.org> ladspa-cmt-1.16-r3.ebuild:
   fix deps

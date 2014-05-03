@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-bibtex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.27 2012/05/04 15:12:16 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.28 2014/05/03 09:15:14 patrick Exp $
+
+*python-bibtex-1.2.7 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org> +python-bibtex-1.2.7.ebuild:
+  Bump
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> python-bibtex-1.2.4.ebuild,
   python-bibtex-1.2.5.ebuild:
@@ -111,4 +116,3 @@
   Initial import. Thanks to John Steele Scott <toojays@toojays.net>,
   Jean-Luc Jox <jljox@yahoo.com> and Ronny Haryanto <rh-gentoo@terasi.net>.
   This closes bug #20027.
-

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pSQL
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pSQL/ChangeLog,v 1.2 2013/09/20 17:53:21 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pSQL/ChangeLog,v 1.3 2014/05/03 09:22:02 patrick Exp $
+
+*pSQL-1.2.1 (03 May 2014)
+
+  03 May 2014; Patrick Lauer <patrick@gentoo.org> +pSQL-1.2.1.ebuild:
+  Bump
 
   20 Sep 2013; Justin Lecher <jlec@gentoo.org> pSQL-1.2.0.ebuild, metadata.xml:
   Add missing REQUIRED_USE

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15644 2014/05/03 08:49:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15645 2014/05/03 09:27:45 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -524,6 +524,7 @@ lxde-base/lxpolkit
 >=sys-devel/libtool-2.4.2-r1
 >=virtual/acl-0-r2
 >=app-emulation/emul-linux-x86-baselibs-20140406-r3
+>=media-libs/ladspa-cmt-1.16-r4
 >=media-sound/lash-0.5.4-r2
 >=x11-libs/libSM-1.2.2-r1
 

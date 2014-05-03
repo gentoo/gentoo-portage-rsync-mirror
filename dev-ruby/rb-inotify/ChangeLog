@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rb-inotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.28 2014/04/20 08:11:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.29 2014/05/03 09:28:11 graaff Exp $
+
+*rb-inotify-0.9.4 (03 May 2014)
+
+  03 May 2014; Hans de Graaff <graaff@gentoo.org> +rb-inotify-0.9.4.ebuild:
+  Version bump.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org> rb-inotify-0.9.3.ebuild:
   Add ruby21.
