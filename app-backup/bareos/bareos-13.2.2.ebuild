@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.2.ebuild,v 1.3 2014/03/07 22:27:07 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.2.ebuild,v 1.4 2014/05/04 16:49:53 mschiff Exp $
 
 EAPI="5"
 
@@ -169,7 +169,7 @@ src_configure() {
 		--libdir=/usr/$(get_libdir) \
 		--docdir=/usr/share/doc/${PF} \
 		--htmldir=/usr/share/doc/${PF}/html \
-		--with-pid-dir=/run \
+		--with-pid-dir=/run/bareos \
 		--sysconfdir=/etc/bareos \
 		--with-subsys-dir=/run/lock/subsys \
 		--with-working-dir=/var/lib/bareos \

@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/bareos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.6 2014/03/07 22:27:07 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.7 2014/05/04 16:49:53 mschiff Exp $
+
+  04 May 2014; Marc Schiffbauer <mschiff@gentoo.org> bareos-13.2.2.ebuild,
+  files/bareos-dir.initd, files/bareos-fd.initd, files/bareos-sd.initd:
+  Change location of pidfiles from /run to /run/bareos for better non-root
+  support
 
   07 Mar 2014; Marc Schiffbauer <mschiff@gentoo.org> bareos-13.2.2.ebuild:
   Remove examples USE flag.
