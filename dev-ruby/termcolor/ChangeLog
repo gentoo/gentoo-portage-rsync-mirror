@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/termcolor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/ChangeLog,v 1.7 2014/04/24 16:49:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/ChangeLog,v 1.8 2014/05/04 06:55:26 graaff Exp $
+
+*termcolor-1.2.2 (04 May 2014)
+
+  04 May 2014; Hans de Graaff <graaff@gentoo.org> +termcolor-1.2.2.ebuild:
+  Version bump.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> termcolor-1.2.1-r1.ebuild:
   Remove ruby18 support.
