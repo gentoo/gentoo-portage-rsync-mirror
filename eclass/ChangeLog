@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1238 2014/05/03 21:25:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1239 2014/05/04 06:13:55 tetromino Exp $
+
+  04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
+  Update VALA_MAX_API_VERSION (bug #509222, thanks to Arfrever) and modernize
+  VALA_MIN_API_VERSION too.
 
   03 May 2014; Sergey Popov <pinkbyte@gentoo.org> leechcraft.eclass:
   Omit some obsolete version checks

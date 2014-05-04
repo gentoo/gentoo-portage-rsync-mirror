@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm preinst prepare
-DEPEND=>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 >=lxde-base/menu-cache-0.3.2:= vala? ( || ( dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 dev-lang/vala:0.14 dev-lang/vala:0.12 dev-lang/vala:0.10 ) ) doc? ( dev-util/gtk-doc ) app-arch/xz-utils >=dev-util/intltool-0.40 virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 >=lxde-base/menu-cache-0.3.2:= vala? ( || ( dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 ) ) doc? ( dev-util/gtk-doc ) app-arch/xz-utils >=dev-util/intltool-0.40 virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A library for file management
 EAPI=5
 HOMEPAGE=http://pcmanfm.sourceforge.net/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.16:2 >=lxde-base/menu-cache-0.3
 REQUIRED_USE=udisks? ( automount )
 SLOT=0/4.0.0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/libfm-1.2.0.tar.xz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	d8f392783fdc2395fc64af046f2ca961
 _md5_=ac875668e9c66e85be9ce64b59219532

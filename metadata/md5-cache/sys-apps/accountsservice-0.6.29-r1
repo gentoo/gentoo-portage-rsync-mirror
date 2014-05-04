@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=>=dev-libs/glib-2.30:2 sys-auth/polkit introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) selinux? ( sec-policy/selinux-accountsd ) systemd? ( >=sys-apps/systemd-186 ) !systemd? ( sys-auth/consolekit ) dev-libs/libxslt dev-util/gdbus-codegen >=dev-util/gtk-doc-am-1.15 >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig doc? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) vala? ( >=dev-lang/vala-0.16.1-r1 || ( dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] dev-lang/vala:0.16[vapigen] ) ) app-arch/xz-utils >=sys-apps/sed-4 virtual/pkgconfig
+DEPEND=>=dev-libs/glib-2.30:2 sys-auth/polkit introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) selinux? ( sec-policy/selinux-accountsd ) systemd? ( >=sys-apps/systemd-186 ) !systemd? ( sys-auth/consolekit ) dev-libs/libxslt dev-util/gdbus-codegen >=dev-util/gtk-doc-am-1.15 >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig doc? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) vala? ( >=dev-lang/vala-0.16.1-r1 || ( dev-lang/vala:0.24[vapigen] dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] dev-lang/vala:0.16[vapigen] ) ) app-arch/xz-utils >=sys-apps/sed-4 virtual/pkgconfig
 DESCRIPTION=D-Bus interfaces for querying and manipulating user account information
 EAPI=4
 HOMEPAGE=http://www.fedoraproject.org/wiki/Features/UserAccountDialog
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.30:2 sys-auth/polkit introspection? ( >=dev-libs/gobje
 REQUIRED_USE=vala? ( introspection )
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.29.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	d8f392783fdc2395fc64af046f2ca961	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6a0f36150ed3e31b69cf01bfc1650def
