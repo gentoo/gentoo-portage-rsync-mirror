@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/sqlalchemy-migrate-0.9.ebuild,v 1.2 2014/04/25 14:27:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/sqlalchemy-migrate-0.9.ebuild,v 1.3 2014/05/04 16:17:11 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]

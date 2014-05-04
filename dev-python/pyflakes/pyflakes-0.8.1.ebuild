@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.8.1.ebuild,v 1.2 2014/04/25 14:22:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.8.1.ebuild,v 1.3 2014/05/04 16:14:59 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python{2_6,2_7,3_{2,3}} )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

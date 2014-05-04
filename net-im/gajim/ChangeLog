@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.201 2014/05/01 11:33:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.202 2014/05/04 16:14:04 maekke Exp $
+
+  04 May 2014; Markus Meier <maekke@gentoo.org> gajim-0.16_rc1.ebuild:
+  add ~arm, bug #503596
 
   01 May 2014; Mikle Kolyada <zlogene@gentoo.org> gajim-0.15.4.ebuild:
   ppc64 stable wrt bug #507032

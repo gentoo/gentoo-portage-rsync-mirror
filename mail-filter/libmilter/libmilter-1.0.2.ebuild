@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.2.ebuild,v 1.7 2013/12/30 07:55:20 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.2.ebuild,v 1.8 2014/05/04 16:04:35 maekke Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/sendmail/sendmail.${SENDMAIL_VER}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="ipv6 poll"
 
 DEPEND="!mail-mta/sendmail

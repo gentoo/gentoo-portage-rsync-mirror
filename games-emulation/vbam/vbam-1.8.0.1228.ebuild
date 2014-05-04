@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1228.ebuild,v 1.1 2014/02/05 09:57:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1228.ebuild,v 1.2 2014/05/04 16:28:45 radhermit Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-ffmpeg2.patch
 	epatch "${FILESDIR}"/${P}-header.patch
 
 	# fix issue with zlib-1.2.5.1 macros (bug #383179)

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.33 2014/05/03 07:51:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.35 2014/05/04 16:17:56 maekke Exp $
+
+  04 May 2014; Markus Meier <maekke@gentoo.org> pip-1.5.5.ebuild:
+  add ~arm to latest version too...
+
+  04 May 2014; Markus Meier <maekke@gentoo.org> pip-1.5.4-r1.ebuild:
+  add ~arm, bug #508282
 
 *pip-1.5.5 (03 May 2014)
 

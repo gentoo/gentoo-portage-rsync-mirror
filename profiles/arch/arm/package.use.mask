@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.204 2014/05/04 12:14:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.205 2014/05/04 16:11:01 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (04 May 2014)
+# Unkeyworded deps, bug #509082
+mail-filter/opendkim opendbx
 
 # Markus Meier <maekke@gentoo.org> (04 May 2014)
 # Unkeyworded deps, bug #507896

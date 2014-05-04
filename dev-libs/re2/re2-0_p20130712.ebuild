@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20130712.ebuild,v 1.2 2013/09/22 23:39:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20130712.ebuild,v 1.3 2014/05/04 16:05:10 floppym Exp $
 
 EAPI=5
 
-inherit eutils multilib multilib-build toolchain-funcs
+inherit eutils multilib multilib-minimal toolchain-funcs
 
 DESCRIPTION="An efficent, principled regular expression library"
 HOMEPAGE="http://code.google.com/p/re2/"
@@ -24,7 +24,6 @@ src_prepare() {
 }
 
 mymake() {
-	cd "${BUILD_DIR}" || die
 	local makeopts=(
 		AR="$(tc-getAR)"
 		CXX="$(tc-getCXX)"
@@ -35,21 +34,19 @@ mymake() {
 	emake "${makeopts[@]}" "$@"
 }
 
-src_compile() {
-	multilib_foreach_abi mymake
+multilib_src_compile() {
+	mymake
 }
 
-src_test() {
-	multilib_foreach_abi mymake static-test
+multilib_src_test() {
+	mymake static-test
 }
 
-src_install() {
-	myinstall() {
-		cd "${BUILD_DIR}" || die
-		emake DESTDIR="${ED}" prefix=usr libdir=usr/$(get_libdir) install
-		multilib_check_headers
-	}
-	multilib_foreach_abi myinstall
+multilib_src_install() {
+	emake DESTDIR="${ED}" prefix=usr libdir=usr/$(get_libdir) install
+}
+
+multilib_src_install_all() {
 	dodoc AUTHORS CONTRIBUTORS README doc/syntax.txt
 	dohtml doc/syntax.html
 }
