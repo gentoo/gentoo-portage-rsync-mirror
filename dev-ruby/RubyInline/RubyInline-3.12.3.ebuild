@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.12.2-r1.ebuild,v 1.1 2013/10/09 01:57:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.12.3.ebuild,v 1.1 2014/05/04 13:36:27 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"

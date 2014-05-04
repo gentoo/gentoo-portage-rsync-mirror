@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/eduke32
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/ChangeLog,v 1.9 2013/11/22 19:44:23 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/ChangeLog,v 1.10 2014/05/04 13:38:39 hasufell Exp $
+
+  04 May 2014; Julian Ospald <hasufell@gentoo.org>
+  eduke32-20131119.4169.ebuild:
+  fix build with clang
 
 *eduke32-20131119.4169 (22 Nov 2013)
 

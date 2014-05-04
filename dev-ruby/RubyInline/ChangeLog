@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/RubyInline
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.18 2013/10/09 01:57:12 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.19 2014/05/04 13:36:27 mrueg Exp $
+
+*RubyInline-3.12.3 (04 May 2014)
+
+  04 May 2014; Manuel Rüger <mrueg@gentoo.org> +RubyInline-3.12.3.ebuild,
+  -RubyInline-3.12.2-r1.ebuild, RubyInline-3.12.2.ebuild:
+  Version bump. Cleanup old.
 
 *RubyInline-3.12.2-r1 (09 Oct 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.78 2014/03/31 09:25:04 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.79 2014/05/04 13:43:30 ultrabug Exp $
+
+*redis-2.8.9 (04 May 2014)
+
+  04 May 2014; Ultrabug <ultrabug@gentoo.org> +redis-2.8.9.ebuild:
+  version bump, fix #508456
 
 *redis-2.8.8 (31 Mar 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rabbitmq-c
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.1 2013/03/14 18:50:36 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.2 2014/05/04 13:55:55 ultrabug Exp $
+
+*rabbitmq-c-0.5.0 (04 May 2014)
+
+  04 May 2014; Ultrabug <ultrabug@gentoo.org> +rabbitmq-c-0.5.0.ebuild:
+  version bump fix #480962 thx to Matt Whitlock
 
 *rabbitmq-c-0.3.0 (14 Mar 2013)
 

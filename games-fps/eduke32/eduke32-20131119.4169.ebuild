@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20131119.4169.ebuild,v 1.1 2013/11/22 19:44:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20131119.4169.ebuild,v 1.2 2014/05/04 13:38:39 hasufell Exp $
 
 # TODO/FIXME:
 # lunatic broken
@@ -114,6 +114,7 @@ src_compile() {
 		LINKED_GTK=1
 		CPLUSPLUS=0
 		SDL_TARGET=1
+		F_JUMP_TABLES=""
 		$(usex gtk "WITHOUT_GTK=0" "WITHOUT_GTK=1")
 		$(usex debug "DEBUGANYWAY=1" "DEBUGANYWAY=0")
 		$(usex x86 "NOASM=0" "NOASM=1")

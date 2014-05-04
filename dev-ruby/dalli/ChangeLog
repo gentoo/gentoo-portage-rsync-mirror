@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dalli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.8 2014/04/18 09:01:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.9 2014/05/04 13:49:11 jer Exp $
+
+  04 May 2014; Jeroen Roovers <jer@gentoo.org> dalli-2.6.4.ebuild:
+  Marked ~hppa (bug #487206).
 
   18 Apr 2014; Hans de Graaff <graaff@gentoo.org> dalli-2.6.4.ebuild:
   Add ruby21.
