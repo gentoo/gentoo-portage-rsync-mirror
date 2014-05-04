@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.151 2014/05/04 08:54:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.152 2014/05/04 12:11:56 pacho Exp $
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> telepathy-glib-0.24.0.ebuild:
+  x86 stable, bug 508862
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> telepathy-glib-0.24.0.ebuild:
   amd64 stable, bug 508862

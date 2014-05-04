@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/emul-linux-x86-motif-20140406.ebuild,v 1.1 2014/04/06 09:09:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/emul-linux-x86-motif-20140406.ebuild,v 1.2 2014/05/04 12:23:08 pacho Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit emul-linux-x86
 
 SRC_URI="!abi_x86_32? ( ${SRC_URI} )"
 LICENSE="!abi_x86_32? ( LGPL-2+ MIT MOTIF ) abi_x86_32? ( metapackage )"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="abi_x86_32"
 
 RDEPEND="!<app-emulation/emul-linux-x86-xlibs-20110129

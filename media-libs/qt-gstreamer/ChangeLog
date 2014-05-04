@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.11 2014/03/10 13:27:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.12 2014/05/04 12:10:30 maekke Exp $
+
+  04 May 2014; Markus Meier <maekke@gentoo.org> qt-gstreamer-0.10.3.ebuild:
+  add ~arm, bug #507896
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> -qt-gstreamer-0.10.2.ebuild:
   Remove old.

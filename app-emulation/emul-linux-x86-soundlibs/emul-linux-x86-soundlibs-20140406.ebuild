@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20140406.ebuild,v 1.2 2014/04/12 08:38:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20140406.ebuild,v 1.3 2014/05/04 12:23:28 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
 
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1 LGPL-2 MIT gsm public-domain"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="abi_x86_32 alsa +pulseaudio"
 
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}[abi_x86_32=]

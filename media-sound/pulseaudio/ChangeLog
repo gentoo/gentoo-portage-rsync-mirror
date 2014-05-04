@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.335 2014/05/04 08:54:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.336 2014/05/04 12:11:20 pacho Exp $
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-5.0-r1.ebuild:
+  x86 stable, bug 508862
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-5.0-r1.ebuild:
   amd64 stable, bug 508862

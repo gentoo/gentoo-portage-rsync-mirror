@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r1.ebuild,v 1.4 2014/05/03 13:04:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r1.ebuild,v 1.5 2014/05/04 12:22:23 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -10,7 +10,7 @@ LICENSE="Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT
 	Sleepycat UoI-NCSA ZLIB openafs-krb5-a HPND ISC RSA IJG libmng libtiff
 	openssl tcp_wrappers_license"
 
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="abi_x86_32"
 
 SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/emul/openssl-1.0.1g.tbz2"

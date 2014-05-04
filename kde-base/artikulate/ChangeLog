@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/artikulate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/ChangeLog,v 1.1 2014/04/22 15:50:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artikulate/ChangeLog,v 1.2 2014/05/04 12:15:16 maekke Exp $
+
+  04 May 2014; Markus Meier <maekke@gentoo.org> artikulate-4.13.0.ebuild:
+  add ~arm, bug #507896
 
 *artikulate-4.13.0 (22 Apr 2014)
 
