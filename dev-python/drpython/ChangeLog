@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/drpython
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.19 2012/02/24 08:16:19 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.20 2014/05/04 11:41:05 idella4 Exp $
+
+*drpython-3.11.4 (04 May 2014)
+
+  04 May 2014; Ian Delaney <idella4@gentoo.org> +drpython-3.11.4.ebuild,
+  files/drpython-165-wxversion.patch:
+  bump
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> drpython-3.11.3.ebuild:
   Restricting python
@@ -99,4 +105,3 @@
   14 Nov 2004; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
   +files/drpython.py-3.6.10.patch, +drpython-3.6.10.ebuild:
   Initial import. Closing #55370. Thanks for help to Rob Cakebread.
-

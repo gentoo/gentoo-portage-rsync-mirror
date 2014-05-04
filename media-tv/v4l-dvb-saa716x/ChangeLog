@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/v4l-dvb-saa716x
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/ChangeLog,v 1.3 2013/10/03 14:06:50 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/ChangeLog,v 1.4 2014/05/04 11:43:07 hd_brummy Exp $
+
+*v4l-dvb-saa716x-0.0.1_p20140322 (04 May 2014)
+
+  04 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +v4l-dvb-saa716x-0.0.1_p20140322.ebuild:
+  bump, thx to M.Dummer for providing and testing
 
 *v4l-dvb-saa716x-0.0.1_p20130802 (03 Oct 2013)
 
