@@ -2779,6 +2779,7 @@ gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objectiv
 gnustep-base/libobjc2:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc). Not recommended by upstream
 gpe-base/gpe:games - Builds and installs GPE games.
 kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
+kde-base/baloo:alternatekcm - Use the alternate Systemsettings module by Lindsay Mathieson for better configurability
 kde-base/cantor:R - Enable dev-lang/R backend support
 kde-base/cantor:analitza - Enable kde-base/analitza backend support
 kde-base/cantor:qalculate - Enable sci-libs/libqalculate backend support

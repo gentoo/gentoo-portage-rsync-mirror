@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/baloo-4.13.0.ebuild,v 1.5 2014/05/03 14:17:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/baloo-4.13.0.ebuild,v 1.6 2014/05/04 01:17:05 dilfridge Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit kde4-base
 
 DESCRIPTION="Next generation of the Nepomuk project"
 KEYWORDS=" ~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug"
+IUSE="debug +alternatekcm"
 
 DEPEND="
 	$(add_kdebase_dep kdepimlibs)
@@ -18,6 +18,14 @@ DEPEND="
 	sys-apps/attr
 	!<kde-base/nepomuk-4.12.50
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	alternatekcm? ( kde-misc/baloo-kcmadv )
+"
 
 RESTRICT="test"
+
+src_prepare() {
+	kde4-base_src_prepare
+	use alternatekcm && epatch "${FILESDIR}/${P}-nokcm.patch"
+}

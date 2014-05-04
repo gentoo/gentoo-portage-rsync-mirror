@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/baloo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.5 2014/05/03 14:17:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.6 2014/05/04 01:17:05 dilfridge Exp $
+
+  04 May 2014; Andreas K. Huettel <dilfridge@gentoo.org> baloo-4.13.0.ebuild,
+  +files/baloo-4.13.0-nokcm.patch, metadata.xml:
+  Use alternate configuration module by default
 
   03 May 2014; Markus Meier <maekke@gentoo.org> baloo-4.13.0.ebuild:
   add ~arm, bug #507896
