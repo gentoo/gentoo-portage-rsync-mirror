@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.10 2013/06/06 04:29:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.11 2014/05/04 18:40:15 ulm Exp $
 
 inherit eutils cdrom games
 
@@ -16,14 +16,13 @@ SRC_URI="x86? (
 		http://www.shrapnelgames.com/downloads/manual_addenda.pdf )
 	mirror://gentoo/${PN}.png"
 
+# I am not sure what license applies to Dominions II and I couldn't find
+# further information on their homepage or on the game CD :(
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
-RESTRICT="strip"
-
-# I am not sure what license applies to Dominions II and I couldn't find
-# further information on their homepage or on the game CD :(
-LICENSE="as-is"
+RESTRICT="bindist strip"
 
 DEPEND="virtual/opengl
 	virtual/glu
@@ -31,6 +30,7 @@ DEPEND="virtual/opengl
 	ppc? ( media-libs/libsdl )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-sdl )"
+RDEPEND="${DEPEND}"
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
