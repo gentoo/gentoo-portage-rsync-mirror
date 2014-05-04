@@ -1,24 +1,28 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.45.ebuild,v 1.1 2013/10/19 05:29:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.8.0.5.ebuild,v 1.1 2014/05/04 20:32:07 tomwij Exp $
 
-EAPI=5
+EAPI="5"
 
 inherit versionator
 
-DOWNLOAD_URL="http://www.oracle.com/technetwork/java/javase/documentation/java-se-7-doc-download-435117.html"
-ORIG_NAME="jdk-7u$(get_version_component_range 4)-apidocs.zip"
+DOWNLOAD_URL="http://www.oracle.com/technetwork/java/javase/documentation/jdk8-doc-downloads-2133158.html"
+
+[[ "$(get_version_component_range 4)" == 0 ]] \
+	|| MY_PV_EXT="u$(get_version_component_range 4)"
+
+MY_PV="$(get_version_component_range 2)${MY_PV_EXT}"
+ORIG_NAME="jdk-${MY_PV}-apidocs.zip"
 
 DESCRIPTION="Oracle's documentation bundle (including API) for Java SE"
-HOMEPAGE="http://download.oracle.com/javase/7/docs/"
+HOMEPAGE="http://download.oracle.com/javase/8/docs/"
 SRC_URI="${ORIG_NAME}"
 
-LICENSE="oracle-java-documentation-7"
-SLOT="1.7"
+LICENSE="oracle-java-documentation-8"
+SLOT="1.8"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip:0"
 
 RESTRICT="fetch"
 

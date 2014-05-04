@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15651 2014/05/03 18:21:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15652 2014/05/04 20:42:21 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -549,6 +549,7 @@ lxde-base/lxpolkit
 >=dev-libs/libmateweather-1.7
 >=dev-python/python-caja-1.7
 >=mate-base/caja-1.7
+>=mate-base/caja-extensions-1.7
 >=mate-base/libmatekbd-1.7
 >=mate-base/libmatekeyring-1.7
 >=mate-base/mate-1.7
@@ -577,11 +578,11 @@ lxde-base/lxpolkit
 >=mate-extra/mate-system-monitor-1.7
 >=mate-extra/mate-user-share-1.7
 >=mate-extra/mate-utils-1.7
->=media-gfx/mate-image-viewer-1.7
+>=media-gfx/eom-1.7
 >=net-analyzer/mate-netspeed-1.7
 >=net-wireless/mate-bluetooth-1.7
 >=x11-libs/libmatewnck-1.7
->=x11-misc/mate-menu-editor-1.7
+>=x11-misc/mozo-1.7
 >=x11-misc/mate-notification-daemon-1.7
 >=x11-terms/mate-terminal-1.7
 >=x11-themes/mate-backgrounds-1.7
