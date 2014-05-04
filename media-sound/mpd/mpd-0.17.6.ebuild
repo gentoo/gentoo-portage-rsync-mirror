@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.6.ebuild,v 1.8 2013/12/25 09:38:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.6.ebuild,v 1.9 2014/05/04 21:27:54 hasufell Exp $
 
 EAPI=4
-inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
+inherit autotools eutils flag-o-matic linux-info multilib readme.gentoo systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -93,13 +93,16 @@ src_prepare() {
 
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
 	epatch "${FILESDIR}"/${PN}-0.16.conf.patch \
-		"${FILESDIR}"/${PN}-0.17.4-ffmpeg2.patch
+		"${FILESDIR}"/${PN}-0.17.4-ffmpeg2.patch \
+		"${FILESDIR}"/${PN}-0.17.6-opus-linking.patch
 
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i \
 			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
 			src/input/cdio_paranoia_input_plugin.c || die
 	fi
+
+	eautoreconf
 }
 
 src_configure() {

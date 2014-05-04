@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.342 2014/04/15 16:35:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.343 2014/05/04 21:27:54 hasufell Exp $
+
+  04 May 2014; Julian Ospald <hasufell@gentoo.org> mpd-0.17.6.ebuild,
+  +files/mpd-0.17.6-opus-linking.patch:
+  fix build wrt #508888
 
 *mpd-0.18.10-r1 (15 Apr 2014)
 
