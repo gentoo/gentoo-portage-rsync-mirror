@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8923 2014/05/04 20:42:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8924 2014/05/04 21:35:08 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 May 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  caja-extensions was in wrong category, also removed the packages that it
+  replaces from the mask.
 
   04 May 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Added mate-base/caja-extensions to MATE 1.8 mask. media-gfx/mate-image-viewer

@@ -1,0 +1,10 @@
+# ChangeLog for mate-extra/caja-extensions
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/caja-extensions/ChangeLog,v 1.1 2014/05/04 21:43:26 tomwij Exp $
+
+*caja-extensions-1.8.0 (04 May 2014)
+
+  04 May 2014; Tom Wijsman <TomWij@gentoo.org> +caja-extensions-1.8.0.ebuild,
+  +files/caja-extensions-1.8.0-sendto-options.patch, +metadata.xml:
+  New ebuild for mate-extra/caja-extensions for MATE 1.8, several Caja
+  extensions; imported from the mate-overlay, reviewed and adjusted.

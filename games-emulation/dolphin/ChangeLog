@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.19 2014/03/19 03:06:38 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.20 2014/05/04 21:47:04 twitch153 Exp $
+
+*dolphin-4.0.2 (04 May 2014)
+
+  04 May 2014; Devan Franchini <twitch153@gentoo.org> +dolphin-4.0.2.ebuild:
+  Version bump to 4.0.2
 
   19 Mar 2014; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
   Adds gtest to saved External directories.
