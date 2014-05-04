@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/mate-panel-1.6.1.ebuild,v 1.8 2014/05/04 14:54:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/mate-panel-1.6.1.ebuild,v 1.9 2014/05/04 22:20:23 tomwij Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-libs/libxml2:2
 	>=gnome-base/dconf-0.10:0
 	gnome-base/librsvg:2
-	>=mate-base/mate-desktop-1.6:0
+	>=mate-base/mate-desktop-1.6:0 <mate-base/mate-desktop-1.7:0
 	>=mate-base/mate-menus-1.6:0
 	>=media-libs/libcanberra-0.23:0[gtk]
 	>=sys-apps/dbus-1.1.2:0
