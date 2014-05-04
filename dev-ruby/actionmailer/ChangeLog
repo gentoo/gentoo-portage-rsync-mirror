@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.256 2014/04/26 15:09:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.257 2014/05/04 18:04:14 mrueg Exp $
+
+  04 May 2014; Manuel Rüger <mrueg@gentoo.org> actionmailer-3.2.17.ebuild:
+  Add ruby20 support.
 
 *actionmailer-4.1.0 (26 Apr 2014)
 

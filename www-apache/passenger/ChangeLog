@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.90 2014/04/24 15:36:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.91 2014/05/04 18:30:08 flameeyes Exp $
+
+  04 May 2014; Diego E. Pettenò <flameeyes@gentoo.org>
+  passenger-3.0.21-r1.ebuild, passenger-4.0.41.ebuild:
+  Add a dependency on mod_unixd for Apache 2.4.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> passenger-3.0.21-r1.ebuild:
   Remove ruby18 support.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.21-r1.ebuild,v 1.4 2014/04/24 15:36:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.21-r1.ebuild,v 1.5 2014/05/04 18:30:08 flameeyes Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -22,7 +22,8 @@ ruby_add_rdepend "
 	>=dev-ruby/daemon_controller-1.0.0
 	>=dev-ruby/rack-1.0.0"
 
-CDEPEND=">=dev-libs/libev-3.90 net-misc/curl[ssl]"
+CDEPEND=">=dev-libs/libev-3.90 net-misc/curl[ssl]
+	www-servers/apache[apache2_modules_unixd(+)]"
 
 RDEPEND="${RDEPEND} ${CDEPEND}"
 DEPEND="${DEPEND} ${CDEPEND}

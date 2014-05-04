@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.2.17.ebuild,v 1.2 2014/04/21 12:14:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.2.17.ebuild,v 1.3 2014/05/04 18:04:20 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19 ruby20"
 
 # this is not null so that the dependencies will actually be filled
 RUBY_FAKEGEM_TASK_TEST="test"
@@ -48,7 +48,7 @@ all_ruby_prepare() {
 	sed -i -e "/\(uglifier\|system_timer\|sdoc\|w3c_validators\|pg\|jquery-rails\|'mysql'\|journey\|ruby-prof\|benchmark-ips\|nokogiri\)/d" ../Gemfile || die
 	sed -i -e '/rack-ssl/d' -e 's/~> 3.4/>= 3.4/' ../railties/railties.gemspec || die
 	sed -i -e '/mail/d' ../actionmailer/actionmailer.gemspec || die
-
+	sed -i -e '/[Bb]undler/d' ../load_paths.rb || die
 	sed -i -e '/bcrypt/ s/3.0.0/3.0/' ../Gemfile || die
 
 	# Avoid tests depending on hash ordering
@@ -68,7 +68,7 @@ each_ruby_test() {
 			;;
 		*)
 			if use sqlite3; then
-				${RUBY} -S rake test_sqlite3 || die "sqlite3 tests failed"
+				${RUBY} -I. -S rake  test_sqlite3 || die "sqlite3 tests failed"
 			fi
 			;;
 	esac
