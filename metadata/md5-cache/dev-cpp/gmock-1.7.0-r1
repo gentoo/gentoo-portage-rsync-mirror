@@ -1,5 +1,5 @@
-DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND==dev-cpp/gtest-1.7.0*[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] app-arch/unzip userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND==dev-cpp/gtest-1.7.0*[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) app-arch/unzip userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Google's C++ mocking framework
 EAPI=4
 HOMEPAGE=http://code.google.com/p/googlemock/
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND==dev-cpp/gtest-1.7.0*[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?]
 SLOT=0
 SRC_URI=http://googlemock.googlecode.com/files/gmock-1.7.0.zip
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	88d8e0f119606a6f9fec4e723531edbf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=322636f7d80d797ebfdb5b623ebb8b31
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	88d8e0f119606a6f9fec4e723531edbf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=7b0175ee26af58d7276bdf59bd3047e2
