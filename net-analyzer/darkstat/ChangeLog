@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.58 2014/01/20 15:53:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.59 2014/05/04 14:10:50 jer Exp $
+
+*darkstat-3.0.718 (04 May 2014)
+
+  04 May 2014; Jeroen Roovers <jer@gentoo.org> +darkstat-3.0.718.ebuild:
+  Version bump.
 
   20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> darkstat-3.0.717.ebuild:
   Stable for ppc, wrt bug #495830

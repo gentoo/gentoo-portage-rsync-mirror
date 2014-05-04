@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/librelp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.25 2013/12/13 10:24:16 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.26 2014/05/04 14:17:14 ultrabug Exp $
+
+*librelp-1.2.7 (04 May 2014)
+
+  04 May 2014; Ultrabug <ultrabug@gentoo.org> +librelp-1.2.7.ebuild:
+  version bump fix #509506 thx to Thomas D.
 
   13 Dec 2013; Ultrabug <ultrabug@gentoo.org> librelp-1.1.5.ebuild,
   librelp-1.2.0.ebuild:
