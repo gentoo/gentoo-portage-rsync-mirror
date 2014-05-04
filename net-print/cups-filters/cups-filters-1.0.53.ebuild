@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.53.ebuild,v 1.5 2014/05/03 14:16:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.53.ebuild,v 1.6 2014/05/04 19:41:04 dilfridge Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ src_configure() {
 }
 
 src_compile() {
-	default
+	MAKEOPTS=-j1 default
 
 	if use perl; then
 		pushd "${S}/scripting/perl" > /dev/null
