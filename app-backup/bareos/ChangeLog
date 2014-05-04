@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/bareos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.7 2014/05/04 16:49:53 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.8 2014/05/04 17:03:59 mschiff Exp $
+
+  04 May 2014; Marc Schiffbauer <mschiff@gentoo.org> files/bareos-dir.initd,
+  files/bareos-fd.initd, files/bareos-sd.initd:
+  Fix pid path in init scripts
 
   04 May 2014; Marc Schiffbauer <mschiff@gentoo.org> bareos-13.2.2.ebuild,
   files/bareos-dir.initd, files/bareos-fd.initd, files/bareos-sd.initd:

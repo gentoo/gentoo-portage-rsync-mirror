@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.121 2014/05/04 08:20:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.122 2014/05/04 17:24:29 jer Exp $
+
+*freeradius-3.0.2-r1 (04 May 2014)
+
+  04 May 2014; Jeroen Roovers <jer@gentoo.org> +freeradius-3.0.2-r1.ebuild:
+  Do not build or install static libraries.
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> freeradius-2.2.5.ebuild:
   Stable for amd64, wrt bug #501754

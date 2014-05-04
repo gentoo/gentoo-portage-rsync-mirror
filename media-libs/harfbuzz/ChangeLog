@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.75 2014/04/30 04:53:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.76 2014/05/04 17:09:27 tetromino Exp $
+
+*harfbuzz-0.9.28 (04 May 2014)
+
+  04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  harfbuzz-0.9.26-r1.ebuild, +harfbuzz-0.9.28.ebuild, harfbuzz-9999.ebuild:
+  Version bump with small fixes for Indic and Hebrew shaping (bug #509456,
+  thanks to DrSlony). And use multilib_native_use_enable for introspection, not
+  _use_with.
 
   30 Apr 2014; Tim Harder <radhermit@gentoo.org> harfbuzz-0.9.26-r1.ebuild:
   Sync mips keywords.
