@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-caja
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-caja/ChangeLog,v 1.3 2014/04/26 08:21:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-caja/ChangeLog,v 1.4 2014/05/04 14:53:19 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> python-caja-1.6.1.ebuild:
+  Stable for amd64, wrt bug #509268
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> python-caja-1.6.1.ebuild,
   python-caja-1.8.0.ebuild:

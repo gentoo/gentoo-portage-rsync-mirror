@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-common/mate-common-1.6.2.ebuild,v 1.1 2014/02/26 21:52:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-common/mate-common-1.6.2.ebuild,v 1.2 2014/05/04 14:53:38 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 src_install() {
 	mv doc-build/README README.doc-build \

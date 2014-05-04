@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.6.2-r1.ebuild,v 1.1 2014/03/24 15:05:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.6.2-r1.ebuild,v 1.2 2014/05/04 14:53:47 ago Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 IUSE="X startup-notification"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-media/mate-media-1.6.1.ebuild,v 1.2 2014/03/22 20:16:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-media/mate-media-1.6.1.ebuild,v 1.3 2014/05/04 14:54:47 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="LGPL-2 GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 IUSE="aac flac mp3 pulseaudio speex twolame vorbis"
 

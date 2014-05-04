@@ -1,6 +1,10 @@
 # ChangeLog for mate-extra/mate-power-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/ChangeLog,v 1.5 2014/04/23 12:26:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/ChangeLog,v 1.6 2014/05/04 14:54:55 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  mate-power-manager-1.6.3.ebuild:
+  Stable for amd64, wrt bug #509268
 
   23 Apr 2014; Tom Wijsman <TomWij@gentoo.org> mate-power-manager-1.8.0.ebuild:
   Removed autotools inherit to make repoman happy.

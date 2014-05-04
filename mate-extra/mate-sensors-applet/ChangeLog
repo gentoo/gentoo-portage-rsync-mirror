@@ -1,6 +1,10 @@
 # ChangeLog for mate-extra/mate-sensors-applet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/ChangeLog,v 1.5 2014/04/23 12:49:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-sensors-applet/ChangeLog,v 1.6 2014/05/04 14:55:03 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  mate-sensors-applet-1.6.1.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *mate-sensors-applet-1.8.0 (23 Apr 2014)
 

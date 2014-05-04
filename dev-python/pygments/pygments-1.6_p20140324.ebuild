@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.6_p20140324.ebuild,v 1.4 2014/04/25 04:01:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.6_p20140324.ebuild,v 1.5 2014/05/04 14:39:11 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 python_compile() {
 	distutils-r1_python_compile
 	if [[ ${EPYTHON} == python3.2 ]]; then
+		# python3.2 does not like u"" literals
 		2to3 --no-diffs -n -w -f unicode "${BUILD_DIR}/lib" || die
 	fi
 }

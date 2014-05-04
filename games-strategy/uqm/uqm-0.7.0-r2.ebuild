@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.7.0-r2.ebuild,v 1.4 2012/11/22 10:08:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.7.0-r2.ebuild,v 1.5 2014/05/04 14:53:50 hasufell Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs games
@@ -65,7 +65,7 @@ src_prepare() {
 
 	# respect CC
 	sed -i \
-		-e 's/PROG_gcc_FILE="gcc"/PROG_gcc_FILE="'$(tc-getCC)'"/' \
+		-e "s/PROG_gcc_FILE=\"gcc\"/PROG_gcc_FILE=\"$(tc-getCC)\"/" \
 		build/unix/config_proginfo_build \
 		|| die "sed config_proginfo_build failed"
 }

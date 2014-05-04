@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/libmatekbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/ChangeLog,v 1.5 2014/04/11 22:29:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/libmatekbd/ChangeLog,v 1.6 2014/05/04 14:53:23 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> libmatekbd-1.6.2.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *libmatekbd-1.8.0 (11 Apr 2014)
 

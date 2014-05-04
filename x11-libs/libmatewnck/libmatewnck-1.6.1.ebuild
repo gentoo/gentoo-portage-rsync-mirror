@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatewnck/libmatewnck-1.6.1.ebuild,v 1.3 2014/03/10 22:39:45 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatewnck/libmatewnck-1.6.1.ebuild,v 1.4 2014/05/04 14:55:27 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.mate-desktop.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 IUSE="X +introspection startup-notification"
 

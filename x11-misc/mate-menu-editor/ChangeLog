@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mate-menu-editor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-menu-editor/ChangeLog,v 1.1 2014/03/19 16:34:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-menu-editor/ChangeLog,v 1.2 2014/05/04 14:55:31 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> mate-menu-editor-1.6.0.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *mate-menu-editor-1.6.0 (19 Mar 2014)
 

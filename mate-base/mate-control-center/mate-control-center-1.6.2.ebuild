@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-control-center/mate-control-center-1.6.2.ebuild,v 1.4 2014/05/02 13:07:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-control-center/mate-control-center-1.6.2.ebuild,v 1.5 2014/05/04 14:53:43 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 RDEPEND="app-text/rarian:0
 	dev-libs/atk:0

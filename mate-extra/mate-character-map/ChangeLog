@@ -1,6 +1,10 @@
 # ChangeLog for mate-extra/mate-character-map
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.4 2014/04/14 02:43:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.5 2014/05/04 14:54:23 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  mate-character-map-1.6.0.ebuild:
+  Stable for amd64, wrt bug #509268
 
   14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> mate-character-map-1.6.0.ebuild:
   Added missing gtk-doc build dependency; discovered by kenmux, forum topic

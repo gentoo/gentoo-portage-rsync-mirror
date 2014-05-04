@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/mate-file-archiver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mate-file-archiver/ChangeLog,v 1.1 2014/03/12 16:32:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mate-file-archiver/ChangeLog,v 1.2 2014/05/04 14:52:59 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  mate-file-archiver-1.6.1.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *mate-file-archiver-1.6.1 (12 Mar 2014)
 

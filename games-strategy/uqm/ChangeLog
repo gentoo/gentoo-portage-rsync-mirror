@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.43 2013/01/22 18:07:55 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.44 2014/05/04 14:53:50 hasufell Exp $
+
+  04 May 2014; Julian Ospald <hasufell@gentoo.org> uqm-0.7.0-r2.ebuild:
+  fix build if CC has whitespace
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -uqm-0.7.0-r1.ebuild:
   old

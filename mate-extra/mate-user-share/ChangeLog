@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/mate-user-share
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-user-share/ChangeLog,v 1.1 2014/03/23 16:26:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-user-share/ChangeLog,v 1.2 2014/05/04 14:55:11 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> mate-user-share-1.6.1.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *mate-user-share-1.6.1 (23 Mar 2014)
 

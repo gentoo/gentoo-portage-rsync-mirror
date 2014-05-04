@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mate-netspeed/mate-netspeed-1.6.1.ebuild,v 1.1 2014/03/19 16:41:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mate-netspeed/mate-netspeed-1.6.1.ebuild,v 1.2 2014/05/04 14:55:23 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://mate-desktop.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 # FIXME: wireless-tools >= 28pre9 is automagic
 RDEPEND="dev-libs/glib:2

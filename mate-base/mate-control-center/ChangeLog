@@ -1,6 +1,10 @@
 # ChangeLog for mate-base/mate-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-control-center/ChangeLog,v 1.5 2014/05/02 13:07:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-control-center/ChangeLog,v 1.6 2014/05/04 14:53:43 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  mate-control-center-1.6.2.ebuild:
+  Stable for amd64, wrt bug #509268
 
   02 May 2014; Tom Wijsman <TomWij@gentoo.org> mate-control-center-1.6.2.ebuild,
   mate-control-center-1.8.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-file-manager-sendto/mate-file-manager-sendto-1.6.0.ebuild,v 1.1 2014/03/17 22:39:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-file-manager-sendto/mate-file-manager-sendto-1.6.0.ebuild,v 1.2 2014/05/04 14:54:39 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 IUSE="cdr gajim +mail pidgin upnp"
 

@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/mate-calc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-calc/ChangeLog,v 1.6 2014/04/22 19:29:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-calc/ChangeLog,v 1.7 2014/05/04 14:54:19 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> mate-calc-1.6.1.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *mate-calc-1.8.0 (22 Apr 2014)
 

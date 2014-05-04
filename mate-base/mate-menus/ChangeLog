@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-menus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/ChangeLog,v 1.6 2014/04/12 00:14:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/ChangeLog,v 1.7 2014/05/04 14:53:59 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> mate-menus-1.6.0.ebuild:
+  Stable for amd64, wrt bug #509268
 
 *mate-menus-1.8.0 (12 Apr 2014)
 

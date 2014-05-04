@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mate-image-viewer/mate-image-viewer-1.6.2.ebuild,v 1.1 2014/03/19 16:24:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mate-image-viewer/mate-image-viewer-1.6.2.ebuild,v 1.2 2014/05/04 14:55:19 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 IUSE="X dbus exif jpeg lcms python svg tiff xmp"
 
