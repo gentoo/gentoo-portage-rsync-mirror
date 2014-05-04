@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-gsl/rb-gsl-1.16.0.ebuild,v 1.1 2014/03/31 01:55:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-gsl/rb-gsl-1.16.0.1.ebuild,v 1.1 2014/05/03 23:28:01 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -22,17 +22,19 @@ RDEPEND+=" sci-libs/gsl"
 
 RUBY_S="${PN}-${P}"
 
+ruby_add_rdepend "dev-ruby/narray"
+
 each_ruby_prepare() {
-	sed -i -e '/$CPPFLAGS =/a \$LDFLAGS = " -L#{narray_config} -l:narray.so "+$LDFLAGS' -e 's/src/lib/' ext/extconf.rb || die
+	sed -i -e '/$CPPFLAGS =/a \$LDFLAGS = " -L#{narray_config} -l:narray.so "+$LDFLAGS' -e 's/src/lib/' ext/gsl/extconf.rb || die
 }
 
 each_ruby_configure() {
-	${RUBY} -Cext extconf.rb || die
+	${RUBY} -Cext/gsl extconf.rb || die
 }
 
 each_ruby_compile() {
-	emake -Cext V=1
-	cp ext/*$(get_modname) lib/ || die
+	emake -Cext/gsl V=1
+	cp ext/gsl/*$(get_modname) lib/gsl || die
 }
 
 each_ruby_test() {

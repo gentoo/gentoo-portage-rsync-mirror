@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rb-gsl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-gsl/ChangeLog,v 1.4 2014/03/31 01:55:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-gsl/ChangeLog,v 1.5 2014/05/03 23:28:01 mrueg Exp $
+
+*rb-gsl-1.16.0.1 (03 May 2014)
+
+  03 May 2014; Manuel Rüger <mrueg@gentoo.org> +rb-gsl-1.16.0.1.ebuild,
+  -rb-gsl-1.16.0.ebuild:
+  Version bump. Cleanup old.
 
 *rb-gsl-1.16.0 (31 Mar 2014)
 

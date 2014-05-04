@@ -1,0 +1,12 @@
+DEFINED_PHASES=install nofetch
+DEPEND=app-arch/unzip
+DESCRIPTION=Oracle's documentation bundle (including API) for Java SE
+EAPI=5
+HOMEPAGE=http://download.oracle.com/javase/7/docs/
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=oracle-java-documentation-7
+RESTRICT=fetch
+SLOT=1.7
+SRC_URI=jdk-7u55-apidocs.zip
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=7651441f6b61f58fcbb26657e65ff48d
