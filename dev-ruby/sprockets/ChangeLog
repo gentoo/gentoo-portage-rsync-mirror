@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.22 2014/04/20 10:20:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.23 2014/05/04 13:18:51 mrueg Exp $
+
+  04 May 2014; Manuel Rüger <mrueg@gentoo.org> sprockets-2.2.2-r1.ebuild:
+  Add ruby20 target.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org> sprockets-2.11.0.ebuild:
   Add ruby21. Update execjs dependency. Fix tests broken by our use of ln to

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/journey-1.0.4.ebuild,v 1.4 2014/04/05 23:28:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/journey-1.0.4-r1.ebuild,v 1.1 2014/05/04 13:07:01 mrueg Exp $
 
-EAPI=4
-USE_RUBY="ruby19"
+EAPI=5
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -21,4 +21,8 @@ KEYWORDS="~amd64 ~arm ~x86 ~x64-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/hoe )"
-ruby_add_bdepend "test? ( dev-ruby/hoe dev-ruby/json dev-ruby/minitest )"
+ruby_add_bdepend "test? ( dev-ruby/hoe
+	dev-ruby/json
+	dev-ruby/minitest )"
+
+RUBY_PATCHES=( "${FILESDIR}"/${P}-fix-tests.patch )
