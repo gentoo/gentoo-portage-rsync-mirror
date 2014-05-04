@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.376 2014/05/02 21:51:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.377 2014/05/04 17:51:45 tetromino Exp $
+
+  04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  cairo-1.12.16-r3.ebuild, cairo-9999.ebuild:
+  Do not enable LTO by default everywhere (bug #509552); it will be enabled by
+  default in profiles where needed.
 
 *cairo-1.12.16-r3 (02 May 2014)
 

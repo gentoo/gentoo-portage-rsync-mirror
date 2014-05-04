@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r3.ebuild,v 1.1 2014/05/02 21:51:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r3.ebuild,v 1.2 2014/05/04 17:51:45 tetromino Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-IUSE="X aqua debug directfb drm gallium gles2 +glib legacy-drivers +lto opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
+IUSE="X aqua debug directfb drm gallium gles2 +glib legacy-drivers lto opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
 # gtk-doc regeneration doesn't seem to work with out-of-source builds
 #[[ ${PV} == *9999* ]] && IUSE="${IUSE} doc" # API docs are provided in tarball, no need to regenerate
 

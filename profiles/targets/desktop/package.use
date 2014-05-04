@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.33 2014/04/19 14:40:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.34 2014/05/04 17:49:33 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (04 May 2014)
+# Enable cairo LTO by default only for desktop profiles, where cairo's
+# performance really matters, bug #509552
+x11-libs/cario lto
 
 # Julian Ospald <hasufell@gentoo.org> (19 Apr 2014)
 # Overwrite default +sdl from desktop profile, since

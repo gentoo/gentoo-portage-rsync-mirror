@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-ctf/quake1-ctf-4.0.ebuild,v 1.3 2005/11/05 22:37:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-ctf/quake1-ctf-4.0.ebuild,v 1.4 2014/05/04 17:50:53 ulm Exp $
 
 inherit eutils games
 
@@ -14,10 +14,11 @@ SRC_URI="http://www.threewave.com/quake1/files/3wctf301.zip
 #	dedicated? ( http://www.threewave.com/quake1/files/alst110s.zip )
 #	dedicated? ( http://www.threewave.com/quake1/files/3wave421d.zip )
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+RESTRICT="mirror bindist"
 
 RDEPEND=""
 DEPEND="app-arch/unzip"
