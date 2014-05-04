@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.96 2014/04/20 18:06:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.97 2014/05/04 12:35:18 mrueg Exp $
+
+*builder-2.1.2-r4 (04 May 2014)
+
+  04 May 2014; Manuel Rüger <mrueg@gentoo.org> +builder-2.1.2-r4.ebuild,
+  builder-3.0.4-r1.ebuild:
+  Add ruby20, ruby21 support for slot 0.
 
 *builder-3.0.4-r1 (20 Apr 2014)
 
