@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmbim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmbim/ChangeLog,v 1.1 2014/01/20 05:06:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmbim/ChangeLog,v 1.2 2014/05/04 08:55:39 pacho Exp $
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> libmbim-1.6.0.ebuild:
+  amd64 stable, bug 508862
 
 *libmbim-9999 (20 Jan 2014)
 *libmbim-1.6.0 (20 Jan 2014)

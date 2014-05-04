@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-user-share
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.34 2014/05/02 08:15:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.35 2014/05/04 08:53:31 pacho Exp $
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> gnome-user-share-3.10.2.ebuild:
+  amd64 stable, bug 508862
 
   02 May 2014; Pacho Ramos <pacho@gentoo.org> gnome-user-share-3.10.2.ebuild:
   Rely on bluez5 instead of obsolete obex-data-server that is bluez4 only

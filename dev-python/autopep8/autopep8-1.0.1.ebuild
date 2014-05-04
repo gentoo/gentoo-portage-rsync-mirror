@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-1.0.1.ebuild,v 1.1 2014/05/03 08:38:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-1.0.1.ebuild,v 1.2 2014/05/04 08:47:35 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1 vcs-snapshot
 
@@ -18,10 +18,10 @@ IUSE=""
 
 DEPEND=">=dev-python/pep8-1.5.6[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-python/pep8-1.5.6[${PYTHON_USEDEP}]"
 
 python_test() {
-	"${PYTHON}" setup.py test || die
+	esetup.py test
 }
 
 pkg_postinst() {

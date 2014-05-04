@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.165 2014/05/02 13:03:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.166 2014/05/04 08:52:23 pacho Exp $
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org> dia-0.97.3_pre20140417.ebuild:
+  amd64 stable, bug 508862
 
   02 May 2014; Jeroen Roovers <jer@gentoo.org> dia-0.97.3_pre20140417.ebuild:
   Stable for HPPA (bug #508862).

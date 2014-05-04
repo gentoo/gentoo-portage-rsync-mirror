@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.10.2.ebuild,v 1.1 2014/03/16 15:03:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.10.2.ebuild,v 1.2 2014/05/04 08:53:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Documents"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 # Need gdk-pixbuf-2.25 for gdk_pixbuf_get_pixels_with_length
 COMMON_DEPEND="
