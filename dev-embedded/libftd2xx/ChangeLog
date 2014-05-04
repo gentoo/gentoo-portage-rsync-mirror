@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/libftd2xx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.10 2013/04/12 22:53:34 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.11 2014/05/04 11:20:55 hwoarang Exp $
+
+*libftd2xx-1.1.12 (04 May 2014)
+
+  04 May 2014; Markos Chandras <hwoarang@gentoo.org> +libftd2xx-1.1.12.ebuild,
+  metadata.xml:
+  Version bump. Bug #498560 thanks to Brendan Horan <brendan@horan.hk> who will
+  proxy-maintain the package
 
   12 Apr 2013; Ulrich Müller <ulm@gentoo.org> libftd2xx-0.4.16-r1.ebuild:
   Fix LICENSE, bug 463996.
