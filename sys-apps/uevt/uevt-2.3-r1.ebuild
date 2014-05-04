@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.5 2013/10/20 08:22:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.6 2014/05/04 05:54:15 tetromino Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
+VALA_MAX_API_VERSION="0.22"
 inherit eutils vala
 
 DESCRIPTION="UPower/UDisks Event, a lightweight desktop-independent power and disk manager"

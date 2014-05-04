@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd-ui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.7 2014/01/07 09:58:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.8 2014/05/04 05:33:56 tetromino Exp $
+
+  04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> systemd-ui-2.ebuild:
+  Add VALA_MAX_API_VERSION, fails to build with valac-0.24
 
   07 Jan 2014; Pacho Ramos <pacho@gentoo.org> systemd-ui-2.ebuild,
   systemd-ui-9999.ebuild:
