@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.8.0_rc2.ebuild,v 1.2 2014/05/03 22:18:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.8.0_rc2.ebuild,v 1.3 2014/05/04 10:42:51 hwoarang Exp $
 
 EAPI="5"
 
@@ -35,14 +35,13 @@ RDEPEND=">=dev-lang/jimtcl-0.73
 	)
 	ftdi? ( dev-embedded/libftdi )"
 
-DEPEND="${REPEND}
+DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
 	epatch_user
 
 	if [[ ${PV} == "9999" ]] ; then
-		sed -i -e "/@include version.texi/d" doc/${PN}.texi || die
 		AT_NO_RECURSIVE=yes eautoreconf
 	fi
 }
