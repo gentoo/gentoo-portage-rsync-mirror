@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.32 2014/04/26 15:21:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.33 2014/05/04 10:18:35 idella4 Exp $
+
+*celery-3.1.11 (04 May 2014)
+
+  04 May 2014; Ian Delaney <idella4@gentoo.org> +celery-3.1.11.ebuild,
+  +files/celery-3.1.11-test.patch, -celery-3.0.12.ebuild, -celery-3.0.13.ebuild,
+  -celery-3.0.15.ebuild, -celery-3.0.16.ebuild, -celery-3.0.17.ebuild,
+  -celery-3.0.19.ebuild:
+  bump, rm olds
 
   26 Apr 2014; Ian Delaney <idella4@gentoo.org> celery-3.1.10.ebuild:
   take out white space
