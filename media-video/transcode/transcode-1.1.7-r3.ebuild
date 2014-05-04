@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r3.ebuild,v 1.3 2014/04/21 21:54:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r3.ebuild,v 1.4 2014/05/04 08:29:30 ago Exp $
 
 EAPI=5
 inherit eutils libtool multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://bitbucket/france/${PN}-tcforge/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid"
 
 RDEPEND="

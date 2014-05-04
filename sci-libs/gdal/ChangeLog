@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.144 2014/04/26 15:41:22 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.145 2014/05/04 08:23:26 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> gdal-1.10.1.ebuild:
+  Stable for x86, wrt bug #490064
 
   26 Apr 2014; Chema Alonso <nimiux@gentoo.org> gdal-1.10.1.ebuild:
   Stable for amd64 wrt bug #490064

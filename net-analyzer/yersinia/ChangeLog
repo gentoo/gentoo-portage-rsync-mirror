@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/yersinia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.11 2014/04/30 10:20:36 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.12 2014/05/04 08:26:43 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> yersinia-0.7.3.ebuild:
+  Stable for x86, wrt bug #502866
 
   30 Apr 2014; Chema Alonso <nimiux@gentoo.org> yersinia-0.7.3.ebuild:
   Stable for amd64 wrt bug #502866
@@ -50,4 +53,3 @@
   at irmplc dot com>, Jacob Lindberg <jni at laps dot dk>, Stefan Schlott
   <stefan.schlott at informatik.uni-ulm.de>, Taku Murakami <murakami.taku at
   gmail dot com> and others.
-

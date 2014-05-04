@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-3.ebuild,v 1.1 2014/05/04 07:16:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-3.ebuild,v 1.2 2014/05/04 08:07:01 pacho Exp $
 
-EAPI=4
+EAPI=5
 
 # Needed per https://bugs.freedesktop.org/show_bug.cgi?id=69643#c5
 VALA_MIN_API_VERSION=0.22
-VALA_MAX_API_VERSION=0.22 # fails with vala-0.24; should be fixed in >=systemd-ui-4
 
 inherit autotools-utils systemd vala
 
@@ -34,6 +33,8 @@ DEPEND="${RDEPEND}
 
 # Due to vala being broken.
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}/${P}-vala-0.24.patch" )
 
 src_prepare() {
 	# Force the rebuild of .vala sources

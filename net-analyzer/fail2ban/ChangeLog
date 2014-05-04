@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.135 2014/04/25 11:30:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.136 2014/05/04 08:28:12 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> fail2ban-0.8.13.ebuild:
+  Stable for x86, wrt bug #503306
 
   25 Apr 2014; Chema Alonso <nimiux@gentoo.org> fail2ban-0.8.13.ebuild:
   Stable for amd64 wrt bug #503306

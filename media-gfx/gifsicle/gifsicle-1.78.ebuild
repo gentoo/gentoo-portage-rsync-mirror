@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/gifsicle-1.78.ebuild,v 1.2 2014/04/28 08:04:04 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/gifsicle-1.78.ebuild,v 1.3 2014/05/04 08:25:18 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lcdf.org/~eddietwo/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="X"
 
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libXt )"

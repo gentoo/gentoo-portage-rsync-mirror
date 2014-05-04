@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/loqui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.48 2014/04/30 10:52:50 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.49 2014/05/04 08:27:14 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> loqui-0.5.4.ebuild:
+  Stable for x86, wrt bug #502882
 
   30 Apr 2014; Chema Alonso <nimiux@gentoo.org> loqui-0.5.4.ebuild:
   Stable for amd64 wrt bug #502882

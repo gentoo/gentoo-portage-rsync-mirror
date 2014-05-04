@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.2.1.ebuild,v 1.4 2014/04/23 09:38:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.2.1.ebuild,v 1.5 2014/05/04 08:25:43 ago Exp $
 
 EAPI=5
 
@@ -26,9 +26,9 @@ HOMEPAGE="http://dvdnav.mplayerhq.hu/"
 LICENSE="GPL-2"
 SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 else
-	KEYWORDS="amd64 hppa"
+	KEYWORDS="amd64 hppa x86"
 fi
 IUSE=""
 RDEPEND=">=media-libs/libdvdread-4.2[${MULTILIB_USEDEP}]

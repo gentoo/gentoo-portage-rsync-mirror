@@ -1,6 +1,9 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.58 2014/05/01 08:08:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.59 2014/05/04 08:20:33 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> openfire-3.9.2-r1.ebuild:
+  Stable for amd64, wrt bug #507242
 
 *openfire-3.9.2-r1 (01 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/e_dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.20 2014/04/21 08:13:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.21 2014/05/04 08:30:03 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> e_dbus-1.7.10.ebuild:
+  Stable for x86, wrt bug #505412
 
   21 Apr 2014;  <zlogene@gentoo.org> e_dbus-1.7.10.ebuild:
   amd64 stable wrt bug #505412

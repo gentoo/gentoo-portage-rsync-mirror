@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.316 2014/04/21 21:54:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.317 2014/05/04 08:29:30 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> transcode-1.1.7-r3.ebuild:
+  Stable for x86, wrt bug #504790
 
   21 Apr 2014; Chema Alonso <nimiux@gentoo.org> transcode-1.1.7-r3.ebuild:
   Stable for amd64 wrt bug #504790

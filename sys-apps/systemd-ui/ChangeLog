@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd-ui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.9 2014/05/04 07:16:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/ChangeLog,v 1.10 2014/05/04 08:07:01 pacho Exp $
+
+  04 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/systemd-ui-3-vala-0.24.patch, systemd-ui-3.ebuild:
+  Apply upstream fix to make it compatible with vala-0.24
 
 *systemd-ui-3 (04 May 2014)
 

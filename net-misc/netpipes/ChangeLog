@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netpipes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.12 2014/04/30 11:08:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.13 2014/05/04 08:27:42 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> netpipes-4.2-r2.ebuild:
+  Stable for x86, wrt bug #502898
 
   30 Apr 2014; Chema Alonso <nimiux@gentoo.org> netpipes-4.2-r2.ebuild:
   Stable for amd64 wrt bug #502898
@@ -47,4 +50,3 @@
   metadata.xml:
   Initial import as per bug #72959. Thanks to the author thoth@purplefrog.com
   for the program and ebuild
-

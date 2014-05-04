@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.31 2014/04/21 16:16:42 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.32 2014/05/04 08:27:57 ago Exp $
+
+  04 May 2014; Agostino Sarubbo <ago@gentoo.org> bin86-0.16.20-r2.ebuild:
+  Stable for x86, wrt bug #502928
 
   21 Apr 2014; Chema Alonso <nimiux@gentoo.org> bin86-0.16.20-r2.ebuild:
   Stable for amd64 wrt bug #502928
