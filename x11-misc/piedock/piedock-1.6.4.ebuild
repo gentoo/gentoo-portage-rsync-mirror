@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.6.2.ebuild,v 1.2 2013/06/06 15:47:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.6.4.ebuild,v 1.1 2014/05/05 00:46:21 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 DESCRIPTION="A little bit like the famous OS X dock but in shape of a pie menu"
@@ -38,7 +38,6 @@ DOCS=( res/${PN}rc.sample AUTHORS ChangeLog NEWS )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.6.1-signals.patch
-	epatch "${FILESDIR}"/${PN}-1.6.2-mem.patch
 }
 
 src_configure() {
