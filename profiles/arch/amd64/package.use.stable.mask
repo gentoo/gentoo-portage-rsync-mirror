@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.6 2014/04/08 23:40:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.7 2014/05/05 02:39:04 tetromino Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -74,6 +74,7 @@ dev-libs/expat abi_x86_32
 dev-libs/fribidi abi_x86_32
 dev-libs/glib abi_x86_32
 dev-libs/gmp abi_x86_32
+dev-libs/icu abi_x86_32
 dev-libs/json-c abi_x86_32
 dev-libs/libcdio abi_x86_32
 dev-libs/libcdio-paranoia abi_x86_32
@@ -125,6 +126,7 @@ gnome-base/gconf abi_x86_32
 gnome-base/gnome-vfs abi_x86_32
 gnome-base/libglade abi_x86_32
 gnome-base/orbit abi_x86_32
+media-gfx/graphite2 abi_x86_32
 media-gfx/sane-backends abi_x86_32
 media-libs/a52dec abi_x86_32
 media-libs/allegro abi_x86_32
@@ -151,6 +153,7 @@ media-libs/gst-plugins-base abi_x86_32
 media-libs/gst-plugins-good abi_x86_32
 media-libs/gst-plugins-ugly abi_x86_32
 media-libs/gstreamer abi_x86_32
+media-libs/harfbuzz abi_x86_32
 media-libs/ilmbase abi_x86_32
 media-libs/imlib abi_x86_32
 media-libs/jbigkit abi_x86_32
