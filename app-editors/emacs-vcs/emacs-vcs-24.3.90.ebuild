@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.90.ebuild,v 1.1 2014/04/12 20:33:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.90.ebuild,v 1.2 2014/05/05 07:05:54 ulm Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.16
-	>=app-emacs/emacs-common-gentoo-1.3-r3[games?,X?]
+	>=app-emacs/emacs-common-gentoo-1.4-r1[games?,X?]
 	net-libs/liblockfile
 	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )
@@ -212,6 +212,7 @@ src_configure() {
 	econf \
 		--program-suffix="-${EMACS_SUFFIX}" \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
+		--localstatedir="${EPREFIX}"/var \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
 		--without-compress-install \

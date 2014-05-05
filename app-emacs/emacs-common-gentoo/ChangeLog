@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.97 2014/01/18 20:13:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.98 2014/05/05 07:03:22 ulm Exp $
+
+*emacs-common-gentoo-1.4-r1 (05 May 2014)
+
+  05 May 2014; Ulrich Müller <ulm@gentoo.org>
+  +emacs-common-gentoo-1.4-r1.ebuild:
+  Install shared game score files in /var/games/emacs, compliant with the FHS.
 
   18 Jan 2014; Ulrich Müller <ulm@gentoo.org>
   -emacs-common-gentoo-1.3-r3.ebuild, -emacs-common-gentoo-1.3-r4.ebuild:

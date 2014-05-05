@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/magit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.9 2013/01/31 18:22:21 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.11 2014/05/05 07:21:06 graaff Exp $
+
+  05 May 2014; Hans de Graaff <graaff@gentoo.org> magit-1.2.0.ebuild:
+  Fix HOMEPAGE. Restrict tests since the tests are not included in the archive.
+
+  05 May 2014; Hans de Graaff <graaff@gentoo.org> -magit-1.0.0.ebuild,
+  -magit-1.1.1.ebuild:
+  Cleanup.
 
   31 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> magit-1.2.0.ebuild:
   Keyworded amd64-linux and x86-linux

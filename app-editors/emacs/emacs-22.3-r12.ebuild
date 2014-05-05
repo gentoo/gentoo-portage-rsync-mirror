@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r11.ebuild,v 1.1 2014/04/04 18:08:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r12.ebuild,v 1.1 2014/05/05 07:06:01 ulm Exp $
 
 EAPI=5
 WANT_AUTOMAKE="none"
@@ -19,7 +19,7 @@ IUSE="alsa games gif gtk gzip-el hesiod jpeg kerberos motif png sound source tif
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.16
-	>=app-emacs/emacs-common-gentoo-1.3-r3[games?,X?]
+	>=app-emacs/emacs-common-gentoo-1.4-r1[games?,X?]
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
@@ -136,6 +136,7 @@ src_configure() {
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
+		--localstatedir=/var \
 		--enable-locallisppath="/etc/emacs:${SITELISP}" \
 		--without-carbon \
 		--with-gameuser="${GAMES_USER_DED:-games}" \

@@ -1,47 +1,43 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r3.ebuild,v 1.2 2014/04/06 22:08:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r8.ebuild,v 1.1 2014/05/05 07:06:01 ulm Exp $
 
 EAPI=5
+WANT_AUTOMAKE="none"
 
 inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gnu/emacs/${P}.tar.xz
-	http://dev.gentoo.org/~ulm/emacs/${P}-patches-5.tar.xz"
+SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
+	http://dev.gentoo.org/~ulm/emacs/${P}-patches-10.tar.xz"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
-SLOT="24"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="alsa aqua athena dbus games gconf gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
+SLOT="23"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="alsa aqua athena dbus games gconf gif gpm gtk gzip-el hesiod jpeg kerberos livecd m17n-lib motif pax_kernel png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.16
-	>=app-emacs/emacs-common-gentoo-1.3-r3[games?,X?]
+	>=app-emacs/emacs-common-gentoo-1.4-r1[games?,X?]
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
 	alsa? ( media-libs/alsa-lib )
 	gpm? ( sys-libs/gpm )
 	dbus? ( sys-apps/dbus )
-	gnutls? ( net-libs/gnutls )
-	libxml2? ( >=dev-libs/libxml2-2.2.0 )
-	selinux? ( sys-libs/libselinux )
 	X? (
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
 		gconf? ( >=gnome-base/gconf-2.26.2 )
-		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg:0= )
 		png? ( >=media-libs/libpng-1.4:0= )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
 		xpm? ( x11-libs/libXpm )
-		imagemagick? ( >=media-gfx/imagemagick-6.6.2 )
 		xft? (
 			media-libs/fontconfig
 			media-libs/freetype
@@ -51,10 +47,7 @@ RDEPEND="sys-libs/ncurses
 				>=dev-libs/m17n-lib-1.5.1
 			)
 		)
-		gtk? (
-			gtk3? ( x11-libs/gtk+:3 )
-			!gtk3? ( x11-libs/gtk+:2 )
-		)
+		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
 			motif? ( >=x11-libs/motif-2.3:0 )
 			!motif? (
@@ -65,11 +58,8 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
 	alsa? ( virtual/pkgconfig )
 	dbus? ( virtual/pkgconfig )
-	gnutls? ( virtual/pkgconfig )
-	libxml2? ( virtual/pkgconfig )
 	X? ( virtual/pkgconfig )
 	gzip-el? ( app-arch/gzip )
 	pax_kernel? (
@@ -98,22 +88,24 @@ src_prepare() {
 	if ! use alsa; then
 		# ALSA is detected even if not requested by its USE flag.
 		# Suppress it by supplying pkg-config with a wrong library name.
-		sed -i -e "/ALSA_MODULES=/s/alsa/DiSaBlEaLsA/" configure.ac \
-			|| die "unable to sed configure.ac"
+		sed -i -e "/ALSA_MODULES=/s/alsa/DiSaBlEaLsA/" configure.in \
+			|| die "unable to sed configure.in"
 	fi
 	if ! use gzip-el; then
 		# Emacs' build system automatically detects the gzip binary and
 		# compresses el files. We don't want that so confuse it with a
 		# wrong binary name
-		sed -i -e "/AC_PATH_PROG/s/gzip/PrEvEnTcOmPrEsSiOn/" configure.ac \
-			|| die "unable to sed configure.ac"
+		sed -i -e "s/ gzip/ PrEvEnTcOmPrEsSiOn/" configure.in \
+			|| die "unable to sed configure.in"
 	fi
 
-	AT_M4DIR=m4 eautoreconf
+	eautoreconf
 }
 
 src_configure() {
 	strip-flags
+	filter-flags -fstrict-aliasing
+	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then
 		replace-flags "-O[1-9]" -O0		#262359
@@ -136,7 +128,6 @@ src_configure() {
 	if use X; then
 		myconf+=" --with-x --without-ns"
 		myconf+=" $(use_with gconf)"
-		myconf+=" $(use_with gsettings)"
 		myconf+=" $(use_with toolkit-scroll-bars)"
 		myconf+=" $(use_with gif)"
 		myconf+=" $(use_with jpeg)"
@@ -144,7 +135,6 @@ src_configure() {
 		myconf+=" $(use_with svg rsvg)"
 		myconf+=" $(use_with tiff)"
 		myconf+=" $(use_with xpm)"
-		myconf+=" $(use_with imagemagick)"
 
 		if use xft; then
 			myconf+=" --with-xft"
@@ -157,10 +147,13 @@ src_configure() {
 				"USE flag \"m17n-lib\" has no effect if \"xft\" is not set."
 		fi
 
+		# GTK+ is the default toolkit if USE=gtk is chosen with other
+		# possibilities. Emacs upstream thinks this should be standard
+		# policy on all distributions
 		local f
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
-			myconf+=" --with-x-toolkit=$(usex gtk3 gtk3 gtk2)"
+			myconf+=" --with-x-toolkit=gtk"
 			for f in motif Xaw3d athena; do
 				use ${f} && ewarn \
 					"USE flag \"${f}\" has no effect if \"gtk\" is set."
@@ -201,33 +194,40 @@ src_configure() {
 	econf \
 		--program-suffix="-${EMACS_SUFFIX}" \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
+		--localstatedir="${EPREFIX}"/var \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
-		--without-compress-info \
 		$(use_with hesiod) \
 		$(use_with kerberos) $(use_with kerberos kerberos5) \
 		$(use_with gpm) \
 		$(use_with dbus) \
-		$(use_with gnutls) \
-		$(use_with libxml2 xml2) \
-		$(use_with selinux) \
-		$(use_with wide-int) \
 		${myconf}
 }
 
 src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
-	emake
+	emake CC="$(tc-getCC)" \
+		AR="$(tc-getAR) cq" \
+		RANLIB="$(tc-getRANLIB)"
 }
 
 src_install () {
-	emake DESTDIR="${D}" NO_BIN_LINK=t install
+	emake DESTDIR="${D}" install
 
-	mv "${ED}"/usr/bin/{emacs-${FULL_VERSION}-,}${EMACS_SUFFIX} \
+	rm "${ED}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
+		|| die "removing duplicate emacs executable failed"
+	mv "${ED}"/usr/bin/emacs-${EMACS_SUFFIX} "${ED}"/usr/bin/${EMACS_SUFFIX} \
 		|| die "moving emacs executable failed"
-	mv "${ED}"/usr/share/man/man1/{emacs-,}${EMACS_SUFFIX}.1 \
+
+	# move man pages to the correct place
+	local m
+	mv "${ED}"/usr/share/man/man1/{emacs,${EMACS_SUFFIX}}.1 \
 		|| die "moving emacs man page failed"
+	for m in b2m ctags ebrowse emacsclient etags grep-changelog rcs-checkin; do
+		mv "${ED}"/usr/share/man/man1/${m}{,-${EMACS_SUFFIX}}.1 \
+			|| die "moving ${m} man page failed"
+	done
 
 	# move info dir to avoid collisions with the dir file generated by portage
 	mv "${ED}"/usr/share/info/${EMACS_SUFFIX}/dir{,.orig} \
@@ -250,6 +250,9 @@ src_install () {
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.{c,h,m}
+		doins -r src/{m,s}
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/Makefile.c
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/{m,s}/README
 	elif has installsources ${FEATURES}; then
 		cdir="/usr/src/debug/${CATEGORY}/${PF}/${S#"${WORKDIR}/"}/src"
 	fi
@@ -287,9 +290,10 @@ src_install () {
 		through the Emacs eselect module, which also redirects man and info
 		pages. Therefore, several Emacs versions can be installed at the
 		same time. \"man emacs.eselect\" for details.
-		\\n\\nIf you upgrade from Emacs version 24.2 or earlier, then it is
-		strongly recommended that you use app-admin/emacs-updater to rebuild
-		all byte-compiled elisp files of the installed Emacs packages."
+		\\n\\nIf you upgrade from a previous major version of Emacs, then
+		it is strongly recommended that you use app-admin/emacs-updater
+		to rebuild all byte-compiled elisp files of the installed Emacs
+		packages."
 	use X && DOC_CONTENTS+="\\n\\nYou need to install some fonts for Emacs.
 		Installing media-fonts/font-adobe-{75,100}dpi on the X server's
 		machine would satisfy basic Emacs requirements under X11.
@@ -321,11 +325,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elisp-site-regen
-
-	local pvr
-	for pvr in ${REPLACING_VERSIONS}; do
-		[[ ${pvr%%[-_]*} = 24.[12] ]] && FORCE_PRINT_ELOG=1
-	done
 	readme.gentoo_print_elog
 
 	if use livecd; then

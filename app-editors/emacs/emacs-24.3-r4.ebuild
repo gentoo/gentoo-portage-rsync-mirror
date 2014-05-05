@@ -1,56 +1,34 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.50_pre20140331.ebuild,v 1.3 2014/04/12 07:18:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r4.ebuild,v 1.1 2014/05/05 07:06:01 ulm Exp $
 
 EAPI=5
 
 inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
-if [[ ${PV##*.} = 9999 ]]; then
-	EBZR_PROJECT="emacs"
-	EBZR_BRANCH="emacs-24"
-	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
-	# "Nosmart" is much faster for initial branching.
-	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
-	EBZR_UNPACK_DIR="${WORKDIR}/emacs"
-	EBZR_WORKDIR_CHECKOUT="t"	#434746
-	inherit bzr
-	S="${EBZR_UNPACK_DIR}"
-else
-	SRC_URI="http://dev.gentoo.org/~ulm/distfiles/emacs-${PV}.tar.xz
-		mirror://gnu-alpha/emacs/pretest/emacs-${PV}.tar.xz"
-	# FULL_VERSION keeps the full version number, which is needed in
-	# order to determine some path information correctly for copy/move
-	# operations later on
-	FULL_VERSION="${PV%%_*}"
-	#S="${WORKDIR}/emacs-${FULL_VERSION}"
-	S="${WORKDIR}/emacs"
-fi
-
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
+SRC_URI="mirror://gnu/emacs/${P}.tar.xz
+	http://dev.gentoo.org/~ulm/emacs/${P}-patches-5.tar.xz"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="24"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="acl alsa aqua athena dbus games gconf gfile gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick +inotify jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE="alsa aqua athena dbus games gconf gif gnutls gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
 REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.16
-	>=app-emacs/emacs-common-gentoo-1.3-r3[games?,X?]
+	>=app-emacs/emacs-common-gentoo-1.4-r1[games?,X?]
 	net-libs/liblockfile
-	acl? ( virtual/acl )
-	alsa? ( media-libs/alsa-lib )
-	dbus? ( sys-apps/dbus )
-	gfile? ( >=dev-libs/glib-2.28.6 )
-	gnutls? ( net-libs/gnutls )
-	gpm? ( sys-libs/gpm )
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
+	alsa? ( media-libs/alsa-lib )
+	gpm? ( sys-libs/gpm )
+	dbus? ( sys-apps/dbus )
+	gnutls? ( net-libs/gnutls )
 	libxml2? ( >=dev-libs/libxml2-2.2.0 )
 	selinux? ( sys-libs/libselinux )
-	zlib? ( sys-libs/zlib )
 	X? (
 		x11-libs/libXmu
 		x11-libs/libXt
@@ -87,9 +65,9 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	alsa? ( virtual/pkgconfig )
 	dbus? ( virtual/pkgconfig )
-	gfile? ( virtual/pkgconfig )
 	gnutls? ( virtual/pkgconfig )
 	libxml2? ( virtual/pkgconfig )
 	X? ( virtual/pkgconfig )
@@ -99,31 +77,37 @@ DEPEND="${RDEPEND}
 		sys-apps/paxctl
 	)"
 
-if [[ ${PV##*.} = 9999 ]]; then
-	DEPEND="${DEPEND}
-	sys-apps/texinfo"
-fi
+RDEPEND="${RDEPEND}
+	!<app-editors/emacs-vcs-${PV}"
 
 EMACS_SUFFIX="${PN/emacs/emacs-${SLOT}}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
+# FULL_VERSION keeps the full version number, which is needed in
+# order to determine some path information correctly for copy/move
+# operations later on
+FULL_VERSION="${PV%%_*}"
+S="${WORKDIR}/emacs-${FULL_VERSION}"
 
 src_prepare() {
-	if [[ ${PV##*.} = 9999 ]]; then
-		FULL_VERSION=$(sed -n 's/^AC_INIT(emacs,[ \t]*\([^ \t,)]*\).*/\1/p' \
-			configure.ac)
-		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
-		einfo "Emacs branch: ${EBZR_BRANCH}"
-		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
-		einfo "Emacs version number: ${FULL_VERSION}"
-		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
-			|| die "Upstream version number changed to ${FULL_VERSION}"
-	fi
-
+	EPATCH_SUFFIX=patch epatch
 	epatch_user
 
-	# Fix filename reference in redirected man page
 	sed -i -e "/^\\.so/s/etags/&-${EMACS_SUFFIX}/" doc/man/ctags.1 \
 		|| die "unable to sed ctags.1"
+
+	if ! use alsa; then
+		# ALSA is detected even if not requested by its USE flag.
+		# Suppress it by supplying pkg-config with a wrong library name.
+		sed -i -e "/ALSA_MODULES=/s/alsa/DiSaBlEaLsA/" configure.ac \
+			|| die "unable to sed configure.ac"
+	fi
+	if ! use gzip-el; then
+		# Emacs' build system automatically detects the gzip binary and
+		# compresses el files. We don't want that so confuse it with a
+		# wrong binary name
+		sed -i -e "/AC_PATH_PROG/s/gzip/PrEvEnTcOmPrEsSiOn/" configure.ac \
+			|| die "unable to sed configure.ac"
+	fi
 
 	AT_M4DIR=m4 eautoreconf
 }
@@ -141,12 +125,12 @@ src_configure() {
 
 	local myconf
 
-	if use alsa; then
-		use sound || ewarn \
-			"USE flag \"alsa\" overrides \"-sound\"; enabling sound support."
-		myconf+=" --with-sound=alsa"
+	if use alsa && ! use sound; then
+		einfo "Although sound USE flag is disabled you chose to have alsa,"
+		einfo "so sound is switched on anyway."
+		myconf+=" --with-sound"
 	else
-		myconf+=" --with-sound=$(usex sound oss)"
+		myconf+=" $(use_with sound)"
 	fi
 
 	if use X; then
@@ -206,27 +190,30 @@ src_configure() {
 	# Save version information in the Emacs binary. It will be available
 	# in variable "system-configuration-options".
 	myconf+=" GENTOO_PACKAGE=${CATEGORY}/${PF}"
-	if [[ ${PV##*.} = 9999 ]]; then
-		myconf+=" EBZR_BRANCH=${EBZR_BRANCH} EBZR_REVNO=${EBZR_REVNO}"
-	fi
+
+	# According to configure, this option is only used for GNU/Linux
+	# (x86_64 and s390). For Gentoo Prefix we have to explicitly spell
+	# out the location because $(get_libdir) does not necessarily return
+	# something that matches the host OS's libdir naming (e.g. RHEL).
+	local crtdir=$($(tc-getCC) -print-file-name=crt1.o)
+	crtdir=${crtdir%/*}
 
 	econf \
 		--program-suffix="-${EMACS_SUFFIX}" \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
+		--localstatedir="${EPREFIX}"/var \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
+		--with-crt-dir="${crtdir}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
-		--without-compress-install \
-		--with-file-notification=$(usev gfile || usev inotify || echo no) \
-		$(use_enable acl) \
-		$(use_with dbus) \
-		$(use_with gnutls) \
-		$(use_with gpm) \
+		--without-compress-info \
 		$(use_with hesiod) \
 		$(use_with kerberos) $(use_with kerberos kerberos5) \
+		$(use_with gpm) \
+		$(use_with dbus) \
+		$(use_with gnutls) \
 		$(use_with libxml2 xml2) \
 		$(use_with selinux) \
 		$(use_with wide-int) \
-		$(use_with zlib) \
 		${myconf}
 }
 
@@ -256,13 +243,6 @@ src_install () {
 
 	# remove unused <version>/site-lisp dir
 	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
-
-	if use gzip-el; then
-		# compress .el files when a corresponding .elc exists
-		find "${ED}"/usr/share/emacs/${FULL_VERSION}/lisp -type f \
-			-name "*.elc" -print | sed 's/\.elc$/.el/' | xargs gzip -9n
-		assert "gzip .el failed"
-	fi
 
 	local cdir
 	if use source; then
