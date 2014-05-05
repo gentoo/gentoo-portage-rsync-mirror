@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/quickaccess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.11 2014/03/21 19:02:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.12 2014/05/05 22:50:24 johu Exp $
+
+  05 May 2014; Johannes Huber <johu@gentoo.org> -quickaccess-0.8.2.ebuild,
+  quickaccess-0.8.2-r1.ebuild:
+  amd64/x86 stable, remove old.
 
 *quickaccess-0.8.2-r1 (21 Mar 2014)
 
