@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/encore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/ChangeLog,v 1.7 2014/05/03 08:30:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/ChangeLog,v 1.9 2014/05/05 15:17:43 idella4 Exp $
+
+  05 May 2014; Ian Delaney <idella4@gentoo.org> encore-0.5.1.ebuild:
+  whitespace
+
+  05 May 2014; Ian Delaney <idella4@gentoo.org>
+  +files/encore-0.5.1-pypy-tests.patch, encore-0.5.1.ebuild:
+  drop py2.6 add pypy support, cull IUSE flags according to content absent from
+  the tarball, patch for some tests to pass under pypy, upgrade test phase to
+  accommadate pypy
 
 *encore-0.5.1 (03 May 2014)
 
