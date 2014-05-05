@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.62 2014/04/27 22:02:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.63 2014/05/05 02:11:13 tetromino Exp $
+
+  05 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.10.0.ebuild, gnome-themes-standard-3.12.0.ebuild:
+  gtk-engines hasn't been needed since 3.5.90 (bug #509560, thanks to Jura).
 
 *gnome-themes-standard-3.12.0 (27 Apr 2014)
 

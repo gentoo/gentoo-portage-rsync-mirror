@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.12.0.ebuild,v 1.1 2014/04/27 22:02:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.12.0.ebuild,v 1.2 2014/05/05 02:11:13 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd
 COMMON_DEPEND="
 	gnome-base/librsvg:2
 	x11-libs/cairo
-	>=x11-themes/gtk-engines-2.15.3:2
 	gtk? (
 		>=x11-libs/gtk+-2.24.15:2
 		>=x11-libs/gtk+-3.12:3 )
