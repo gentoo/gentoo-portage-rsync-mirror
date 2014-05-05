@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.132 2014/05/03 20:59:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.133 2014/05/05 04:32:29 dolsen Exp $
+
+*mirrorselect-2.2.1 (05 May 2014)
+
+  05 May 2014; Brian Dolbec <dolsen@gentoo.org> +mirrorselect-2.2.1.ebuild,
+  mirrorselect-9999.ebuild, -files/0001-Fix-rsync-mirror-selection.patch,
+  -files/0002-Check-for-a-valid-mirrorselect-test-file.patch,
+  -files/2.2.0-Fix-setup.py-PVR.patch,
+  -files/2.2.0-Ignore-inaccessible-fsmirrors.patch:
+  Version bump. Remove old versions. Update homepage link.
 
   03 May 2014; Mike Gilbert <floppym@gentoo.org> mirrorselect-2.2.0.1.ebuild,
   mirrorselect-9999.ebuild:
