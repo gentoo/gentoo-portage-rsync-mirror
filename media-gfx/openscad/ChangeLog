@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/openscad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/ChangeLog,v 1.8 2013/09/16 09:44:38 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/ChangeLog,v 1.9 2014/05/05 18:38:19 mattm Exp $
+
+*openscad-2014.03 (05 May 2014)
+
+  05 May 2014; Matthew Marlowe <mattm@gentoo.org> +openscad-2014.03.ebuild,
+  -openscad-2011.12.ebuild, -openscad-2013.01.ebuild:
+  Bump for version 2014.3, Remove older ebuilds using legacy EAPI's.
 
   16 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> openscad-2013.06.ebuild:
   Bump to eapi5 and put subslot dep over boost.
