@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paxctl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.52 2012/08/27 17:43:30 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.53 2014/05/05 12:20:33 blueness Exp $
+
+*paxctl-0.8 (05 May 2014)
+
+  05 May 2014; Anthony G. Basile <blueness@gentoo.org> +paxctl-0.8.ebuild,
+  -paxctl-0.4.ebuild, -paxctl-0.5.ebuild, -paxctl-0.7-r1.ebuild:
+  Version bump, remove older
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> paxctl-0.7-r2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #429202
@@ -189,4 +195,3 @@
   and the newer ET_DYN kind (older PaX releases referred to the latter
   as ET_DYN executables, these days they are called Position Independent
   Executables or PIEs for short).
-
