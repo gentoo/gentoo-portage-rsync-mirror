@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.2-r1.ebuild,v 1.1 2014/05/04 17:24:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.2-r1.ebuild,v 1.2 2014/05/04 23:53:03 jer Exp $
 
 EAPI=5
 
@@ -99,7 +99,10 @@ src_prepare() {
 		fi
 	}
 
-	sed -i -e 's:/var/run/radiusd:/run/radiusd:' raddb/radiusd.conf.in || die
+	sed -i \
+		-e 's:/var/run/radiusd:/run/radiusd:g' \
+		-e '/^run_dir/s:${localstatedir}::g' \
+		raddb/radiusd.conf.in || die
 
 	# verbosity
 	# build shared libraries using jlibtool --shared

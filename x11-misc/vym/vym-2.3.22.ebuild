@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.20.ebuild,v 1.1 2013/10/20 23:35:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.22.ebuild,v 1.1 2014/05/04 23:51:48 jer Exp $
 
 EAPI=5
 inherit eutils cmake-utils
@@ -30,12 +30,12 @@ RDEPEND="
 DOCS=( README.txt doc/vym.pdf )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-arrowobj.patch
+
 	local lingua
 	for lingua in ${VYM_LINGUAS[@]}; do
 		if ! use linguas_${lingua}; then
-			sed -i \
-				"/lang\/vym_${lingua}.ts/d" \
-				CMakeLists.txt || die
+			sed -i -e "/lang\/vym_${lingua}.ts/d" CMakeLists.txt || die
 			rm -r lang/vym_${lingua}.ts || die
 		fi
 	done
