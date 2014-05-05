@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.115 2014/03/25 19:42:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.116 2014/05/05 20:21:53 bicatali Exp $
+
+*scipy-0.14.0 (05 May 2014)
+
+  05 May 2014; Sébastien Fabbro <bicatali@gentoo.org> +scipy-0.14.0.ebuild,
+  -files/scipy-0.9.0-qhull.patch, -files/scipy-0.9.0-superlu.patch,
+  -scipy-0.13.0.ebuild, -scipy-0.13.1-r2.ebuild, -scipy-0.13.2-r1.ebuild:
+  Version bump. Reintroduced ppc and ppc64 because mpmath is not mandatory
+  anymore for testing
 
   25 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> scipy-0.13.3.ebuild:
   More fixes to the site.cfg file generation

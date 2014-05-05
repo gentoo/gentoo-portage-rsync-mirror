@@ -1,41 +1,41 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.2-r1.ebuild,v 1.1 2013/12/26 20:52:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.14.0.ebuild,v 1.1 2014/05/05 20:21:53 bicatali Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
+DOC_PV=0.13.0
 inherit eutils fortran-2 distutils-r1 flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Scientific algorithms library for Python"
 HOMEPAGE="http://www.scipy.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? (
-		http://docs.scipy.org/doc/${PN}-0.13.0/${PN}-html.zip -> ${PN}-0.13.0-html.zip
-		http://docs.scipy.org/doc/${PN}-0.13.0/${PN}-ref.pdf -> ${PN}-0.13.0-ref.pdf
+		http://docs.scipy.org/doc/${PN}-${DOC_PV}/${PN}-html.zip -> ${PN}-${DOC_PV}-html.zip
+		http://docs.scipy.org/doc/${PN}-${DOC_PV}/${PN}-ref.pdf -> ${PN}-${DOC_PV}-ref.pdf
 	)"
 
 LICENSE="BSD LGPL-2"
 SLOT="0"
 IUSE="doc sparse test"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="
 	dev-python/numpy[lapack,${PYTHON_USEDEP}]
-	sci-libs/arpack
+	sci-libs/arpack:0=
 	virtual/cblas
 	virtual/lapack
-	sparse? ( sci-libs/umfpack )"
+	sparse? ( sci-libs/umfpack:0= )"
 DEPEND="${CDEPEND}
 	dev-lang/swig
 	>=dev-python/cython-0.19.1[${PYTHON_USEDEP}]
 	virtual/pkgconfig
 	doc? ( app-arch/unzip )
 	test? (
-		dev-python/mpmath[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
-		)"
+	)"
 
 RDEPEND="${CDEPEND}
 	virtual/python-imaging[${PYTHON_USEDEP}]"
@@ -47,25 +47,25 @@ DISTUTILS_IN_SOURCE_BUILD=1
 src_unpack() {
 	unpack ${P}.tar.gz
 	if use doc; then
-		unzip -qo "${DISTDIR}"/${PN}-0.13.0-html.zip -d html || die
+		unzip -qo "${DISTDIR}"/${PN}-${DOC_PV}-html.zip -d html || die
 	fi
 }
 
 pc_incdir() {
 	$(tc-getPKG_CONFIG) --cflags-only-I $@ | \
-		sed -e 's/^-I//' -e 's/[ ]*-I/:/g' -e 's/[ ]*$//'
+		sed -e 's/^-I//' -e 's/[ ]*-I/:/g' -e 's/[ ]*$//' -e 's|^:||'
 }
 
 pc_libdir() {
 	$(tc-getPKG_CONFIG) --libs-only-L $@ | \
-		sed -e 's/^-L//' -e 's/[ ]*-L/:/g' -e 's/[ ]*$//'
+		sed -e 's/^-L//' -e 's/[ ]*-L/:/g' -e 's/[ ]*$//' -e 's|^:||'
 }
 
 pc_libs() {
 	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
 		sed -e 's/[ ]-l*\(pthread\|m\)\([ ]\|$\)//g' \
 		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//' \
-		| sort | uniq | tr '\n' ','
+		| tr ',' '\n' | sort -u | tr '\n' ',' | sed -e 's|,$||'
 }
 
 python_prepare_all() {
