@@ -11,5 +11,6 @@ definitions and credentials.</longdescription>
 <use>
 	<flag name="systemd">Rely on systemd's logind (instead of using
 		<pkg>sys-power/upower</pkg>) to detect suspend and resume</flag>
+	<flag name="upower">Use <pkg>sys-power/upower</pkg> to detect suspend and resume</flag>
 </use>
 </pkgmetadata>
