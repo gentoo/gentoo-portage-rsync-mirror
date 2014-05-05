@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.21-r3.ebuild,v 1.4 2014/04/09 16:05:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.21-r3.ebuild,v 1.5 2014/05/05 18:16:01 jer Exp $
 
 EAPI=5
 
@@ -115,11 +115,8 @@ pkg_setup() {
 	export CCACHE_DISABLE=1
 
 	if use kernel_linux; then
-		# Because of awkward limitations of linux-mod.eclass, the order in
-		# which the modules are listed somehow affects module dependencies,
-		# so we list nvidia-uvm first and then nvidia.
-		use uvm && MODULE_NAMES="nvidia-uvm(video:${S}/kernel/uvm)"
-		MODULE_NAMES+=" nvidia(video:${S}/kernel)"
+		MODULE_NAMES="nvidia(video:${S}/kernel)"
+		use uvm && MODULE_NAMES+=" nvidia-uvm(video:${S}/kernel/uvm)"
 
 		# This needs to run after MODULE_NAMES (so that the eclass checks
 		# whether the kernel supports loadable modules) but before BUILD_PARAMS
@@ -191,6 +188,7 @@ src_compile() {
 		MAKE="$(get_bmake)" CFLAGS="-Wno-sign-compare" emake CC="$(tc-getCC)" \
 			LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
 	elif use kernel_linux; then
+		use uvm && MAKEOPTS=-j1
 		linux-mod_src_compile
 	fi
 }

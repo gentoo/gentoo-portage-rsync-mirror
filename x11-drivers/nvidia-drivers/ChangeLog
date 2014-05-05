@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.549 2014/05/02 12:38:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.550 2014/05/05 18:16:01 jer Exp $
+
+*nvidia-drivers-337.19 (05 May 2014)
+
+  05 May 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-331.67.ebuild,
+  nvidia-drivers-334.21-r3.ebuild, nvidia-drivers-337.12.ebuild,
+  +nvidia-drivers-337.19.ebuild:
+  Version bump. Work around parallel make failure on Module.symvers with
+  USE=uvm.
 
   02 May 2014; Jeroen Roovers <jer@gentoo.org>
   -nvidia-drivers-331.49-r3.ebuild, nvidia-drivers-331.67.ebuild:
