@@ -1,6 +1,13 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.98 2014/05/05 13:50:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.99 2014/05/05 14:12:34 tetromino Exp $
+
+  05 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  telepathy-mission-control-5.14.0-r1.ebuild,
+  telepathy-mission-control-5.14.1.ebuild,
+  telepathy-mission-control-5.16.1.ebuild, metadata.xml:
+  Rename USE=upower to USE=-systemd in light of upower-0.99 API changes and
+  upstream comments (bug #509508, thanks to Mark R. Pariente and Pacho Ramos).
 
   05 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   telepathy-mission-control-5.14.0-r1.ebuild,

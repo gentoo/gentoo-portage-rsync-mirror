@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.16.1.ebuild,v 1.1 2014/04/27 17:44:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.16.1.ebuild,v 1.2 2014/05/05 14:12:34 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,10 +14,10 @@ DESCRIPTION="An account manager and channel dispatcher for the Telepathy framewo
 HOMEPAGE="http://cgit.freedesktop.org/telepathy/telepathy-mission-control/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="debug networkmanager +upower" # test
+IUSE="debug networkmanager systemd" # test
 
 RDEPEND="
 	>=dev-libs/dbus-glib-0.82
@@ -25,7 +25,7 @@ RDEPEND="
 	>=sys-apps/dbus-0.95
 	>=net-libs/telepathy-glib-0.20
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	upower? (
+	!systemd? (
 		>=sys-power/upower-0.9.11
 		<sys-power/upower-0.99 )
 "
@@ -47,5 +47,5 @@ src_configure() {
 		 --disable-static \
 		$(use_enable debug) \
 		$(use_with networkmanager connectivity nm) \
-		$(use_enable upower)
+		$(usex systemd --disable-upower --enable-upower)
 }

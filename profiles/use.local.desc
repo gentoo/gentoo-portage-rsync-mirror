@@ -4817,7 +4817,7 @@ net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calli
 net-im/telepathy-connection-managers:sipe - Enable Sip Exchange Protocol.
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
-net-im/telepathy-mission-control:upower - Use sys-power/upower to detect suspend and resume
+net-im/telepathy-mission-control:systemd - Rely on systemd's logind (instead of using sys-power/upower) to detect suspend and resume
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/vacuum:adiummessagestyle - Use UI styles created for Adium
 net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
