@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.10.ebuild,v 1.1 2014/04/27 17:22:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.8-r2.ebuild,v 1.1 2014/05/05 10:02:27 zerochaos Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="bluetooth gconf +introspection modemmanager"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 RDEPEND="
 	app-crypt/libsecret
@@ -37,6 +37,7 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	virtual/freedesktop-icon-theme
+	virtual/notification-daemon
 	virtual/udev[gudev]
 "
 DEPEND="${RDEPEND}
@@ -54,4 +55,12 @@ src_configure() {
 		$(use_enable gconf migration) \
 		$(use_enable introspection) \
 		$(use_with modemmanager modem-manager-1)
+}
+
+src_prepare() {
+	# Revert "libnm-gtk: default to system CA certificates for validation for new connections"
+	# bug #497296 (from 'master')
+	epatch "${FILESDIR}/${PN}-0.9.8.8-revert-ca-certificates.patch"
+
+	gnome2_src_prepare
 }

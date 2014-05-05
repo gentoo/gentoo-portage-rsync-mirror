@@ -1,8 +1,8 @@
-Index: asymptote-2.22/configure.ac
+Index: asymptote-2.27/configure.ac
 ===================================================================
---- asymptote-2.22.orig/configure.ac
-+++ asymptote-2.22/configure.ac
-@@ -154,7 +154,7 @@ if test "x$ac_cv_use_gc" != "xno" ; then
+--- asymptote-2.27.orig/configure.ac
++++ asymptote-2.27/configure.ac
+@@ -155,7 +155,7 @@ if test "x$ac_cv_use_gc" != "xno" ; then
        fi
        CPPFLAGS_SAVE=$CPPFLAGS
        CPPFLAGS=$CPPFLAGS" $INCL"
@@ -11,9 +11,9 @@ Index: asymptote-2.22/configure.ac
  	AC_CHECK_LIB([gc],[GC_malloc],[
  	  LIBS=$LIBS"-lgc "
  	  AC_MSG_NOTICE([enabling system $GCNAME])],[
-@@ -227,7 +227,17 @@ AC_MSG_ERROR([*** Please install libm on
+@@ -229,7 +229,17 @@ AC_MSG_ERROR([*** Please install libm on
  AC_CHECK_LIB([z], [deflate],,
- AC_MSG_ERROR([*** Please install libz on your system ***]))
+ AC_MSG_ERROR([*** Please install libz or zlib-devel on your system ***]))
  AX_PTHREAD
 -AC_CHECK_LIB([sigsegv], [stackoverflow_install_handler])
 +

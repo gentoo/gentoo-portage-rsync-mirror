@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.23.ebuild,v 1.2 2013/06/09 18:28:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.27.ebuild,v 1.1 2014/05/05 10:28:41 grozin Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS=1
@@ -28,7 +28,7 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	gsl? ( sci-libs/gsl )
 	X? ( x11-misc/xdg-utils dev-lang/python virtual/python-imaging[tk] )
-	latex? ( virtual/latex-base dev-texlive/texlive-latexextra )
+	latex? ( virtual/latex-base >=dev-texlive/texlive-latexextra-2013 )
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.117 2014/04/27 17:22:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.118 2014/05/05 10:02:27 zerochaos Exp $
+
+*nm-applet-0.9.8.8-r2 (05 May 2014)
+*nm-applet-0.9.8.10-r1 (05 May 2014)
+
+  05 May 2014; Rick Farina <zerochaos@gentoo.org> +nm-applet-0.9.8.10-r1.ebuild,
+  +nm-applet-0.9.8.8-r2.ebuild, -nm-applet-0.9.8.10.ebuild,
+  -nm-applet-0.9.8.8-r1.ebuild:
+  adding missing dep which would cause runtime failure, permission from Eva
 
 *nm-applet-0.9.8.10 (27 Apr 2014)
 
