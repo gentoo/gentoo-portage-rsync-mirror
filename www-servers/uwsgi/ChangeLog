@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.54 2014/03/17 11:50:36 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.55 2014/05/05 16:47:50 ultrabug Exp $
+
+*uwsgi-2.0.4 (05 May 2014)
+
+  05 May 2014; Ultrabug <ultrabug@gentoo.org> -uwsgi-1.4.4.ebuild,
+  -uwsgi-1.4.5-r1.ebuild, -uwsgi-1.4.6.ebuild, -uwsgi-1.4.6-r1.ebuild,
+  +uwsgi-2.0.4.ebuild, metadata.xml:
+  version bump, add asyncio plugin for python3_4, drop old
 
 *uwsgi-2.0.3 (17 Mar 2014)
 

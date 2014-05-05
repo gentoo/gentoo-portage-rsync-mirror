@@ -15,6 +15,7 @@
 		<flag name='json'>Support json as a configuration file format.</flag>
 		<flag name='nagios'>Add nagios-friendly logging output (see http://projects.unbit.it/uwsgi/wiki/Nagios).</flag>
 		<flag name='probepg'>Add the PostgreSQL probe plugin (see http://projects.unbit.it/uwsgi/wiki/DjangoDBHA).</flag>
+		<flag name='python_asyncio'>Use the EXPERIMENTAL asyncio (tulip) for python3.4 async request dispatching and as LoopEngine (see http://uwsgi-docs.readthedocs.org/en/latest/asyncio.html).</flag>
 		<flag name='python_gevent'>Use <pkg>dev-python/gevent</pkg> for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).</flag>
 		<flag name='routing'>Enable routing support</flag>
 		<flag name='rrdtool'>Enable support for writing requests data in RRD files.</flag>
