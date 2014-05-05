@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/hashcat-bin-0.44.ebuild,v 1.1 2013/04/22 15:31:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/hashcat-bin-0.47.ebuild,v 1.1 2014/05/05 15:42:54 alonbl Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P="hashcat-${PV}"
 
