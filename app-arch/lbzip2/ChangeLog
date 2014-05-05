@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.68 2014/01/27 07:14:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.69 2014/05/05 19:13:37 jlec Exp $
+
+*lbzip2-2.5 (05 May 2014)
+
+  05 May 2014; Justin Lecher <jlec@gentoo.org> +lbzip2-2.5.ebuild:
+  Version Bump, #509436
 
   27 Jan 2014; Justin Lecher <jlec@gentoo.org> -lbzip2-2.2-r1.ebuild,
   -lbzip2-2.3.ebuild, -files/lbzip2-2.2-assertion.patch,
