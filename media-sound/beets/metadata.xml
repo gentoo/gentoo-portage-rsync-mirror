@@ -19,7 +19,7 @@ Because beets is designed as a library, it can do almost anything you can imagin
 If beets doesn’t do what you want yet, writing your own plugin is shockingly simple if you know a little Python.
 	</longdescription>
 	<use>
-		<flag name="beatport">Enable support for beetport.com API</flag>
+		<flag name="beatport">Enable support for beatport.com API</flag>
 		<flag name="bpd">Enable support for <pkg>media-sound/mpd</pkg> server emulation</flag>
 		<flag name="chroma">Enable support for acoustic fingerprinting plugin using
 			(<pkg>media-libs/chromaprint</pkg>)</flag>
