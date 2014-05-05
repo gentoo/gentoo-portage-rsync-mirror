@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=virtual/libusb:1 dev-libs/nss || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] x11-libs/gdk-pixbuf ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=library to add support for consumer fingerprint readers
+EAPI=5
+HOMEPAGE=http://cgit.freedesktop.org/libfprint/libfprint/
+IUSE=debug static-libs
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=virtual/libusb:1 dev-libs/nss || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] x11-libs/gdk-pixbuf )
+SLOT=0
+SRC_URI=http://cgit.freedesktop.org/libfprint/libfprint/snapshot/v_0_5_1.tar.bz2 -> libfprint-0.5.1.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=fe8d1da576b3a8cfb81ba2c72fdcc9b1

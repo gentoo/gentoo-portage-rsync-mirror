@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.32 2014/04/20 16:07:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.33 2014/05/05 06:10:53 alexxy Exp $
+
+*libfprint-0.5.1-r1 (05 May 2014)
+
+  05 May 2014; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/libfprint-0.5.1-add-vfs5011-driver.patch, +libfprint-0.5.1-r1.ebuild,
+  libfprint-0.5.1.ebuild:
+  Add driver for vfs5011 fprintreaders, so thinkpad [x2,t4]40 will work
 
   20 Apr 2014; Michael Weber <xmw@gentoo.org> libfprint-0.5.1.ebuild:
   Resign manifest
