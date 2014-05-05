@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/sks-1.1.4-r1.ebuild,v 1.2 2013/12/13 09:29:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/sks-1.1.5.ebuild,v 1.1 2014/05/05 22:02:47 mrueg Exp $
 
 EAPI=5
 
-inherit eutils multilib user readme.gentoo systemd
+inherit multilib user readme.gentoo systemd
 
 DESCRIPTION="An OpenPGP keyserver which is decentralized and provides highly reliable synchronization"
 HOMEPAGE="https://bitbucket.org/skskeyserver/sks-keyserver"
@@ -42,9 +42,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-ECC_OID_fix_x86.patch"\
-		"${FILESDIR}/${P}-man_url.patch"
-
 	cp Makefile.local.unused Makefile.local || die
 	sed -i \
 		-e "s:^BDBLIB=.*$:BDBLIB=-L/usr/$(get_libdir):g" \
@@ -89,8 +86,8 @@ src_install() {
 	newinitd "${FILESDIR}/sks-db.initd" sks-db
 	newinitd "${FILESDIR}/sks-recon.initd" sks-recon
 	newconfd "${FILESDIR}/sks.confd" sks
-	systemd_dounit "${FILESDIR}/sks-db.service"
-	systemd_dounit "${FILESDIR}/sks-recon.service"
+	systemd_dounit "${FILESDIR}"/sks-db.service
+	systemd_dounit "${FILESDIR}"/sks-recon.service
 
 	dodir "/var/lib/sks/web.typical"
 	insinto /var/lib/sks
@@ -107,7 +104,7 @@ pkg_postinst() {
 	readme.gentoo_print_elog
 
 	if [[ -n ${REPLACING_VERSIONS} ]]; then
-		einfo "Note when upgrading from earlier versions of SKS"
+		einfo "Note when upgrading from versions of SKS earlier than 1.1.4"
 		einfo "The default values for pagesize settings have changed. To continue"
 		einfo "using an existing DB without rebuilding, explicit settings have to be"
 		einfo "added to the sksconf file."

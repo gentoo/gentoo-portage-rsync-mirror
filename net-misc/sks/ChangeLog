@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/sks
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.9 2013/12/13 09:29:03 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.10 2014/05/05 22:02:47 mrueg Exp $
+
+*sks-1.1.5 (05 May 2014)
+
+  05 May 2014; Manuel Rüger <mrueg@gentoo.org> +sks-1.1.5.ebuild,
+  -files/bdb_stubs-gentoo.patch, -files/sks-1.1.4-ECC_OID_fix_x86.patch,
+  -files/sks-1.1.4-man_url.patch, -sks-1.1.2.ebuild, -sks-1.1.4-r1.ebuild,
+  -sks-1.1.4.ebuild:
+  Version bump. Cleanup old. Proxy commit for Kristian Fiskerstrand. Fixes bug
+  #509352 (CVE-2014-3207).
 
   13 Dec 2013; Patrick Lauer <patrick@gentoo.org> sks-1.1.4-r1.ebuild:
   Whitespace
