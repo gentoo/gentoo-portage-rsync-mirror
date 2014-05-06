@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.17_p2055.ebuild,v 1.1 2014/05/06 02:32:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.17_p2055.ebuild,v 1.2 2014/05/06 15:20:33 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
@@ -48,9 +48,14 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.4.17_p2055-cryptopp.patch"
 	"${FILESDIR}/${PN}-1.4.17_p2055-test.patch"
 	"${FILESDIR}/${PN}-1.4.17_p2055-gentoo.patch"
+	"${FILESDIR}/${PN}-1.4.17_p2055-CSocketMultiplexer.patch"
 )
 
 S=${WORKDIR}/${P/_p*/}-Source
+
+src_prepare() {
+	cmake-utils_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=$(cmake-utils_use_with test GENTOO_TEST)

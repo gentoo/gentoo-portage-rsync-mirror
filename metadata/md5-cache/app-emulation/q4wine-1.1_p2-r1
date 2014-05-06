@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication[X(+)] dev-qt/qtsql:4[sqlite] dbus? ( dev-qt/qtdbus:4 ) app-admin/sudo app-emulation/wine >=sys-apps/which-2.19 sys-fs/fuseiso icoutils? ( >=media-gfx/icoutils-0.26.0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/q4wine/q4wine/q4wine%201.1-r2/q4wine-1.1-r2.tar.bz2
-_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=9371a95b60db3371e11424e2c10de1ec

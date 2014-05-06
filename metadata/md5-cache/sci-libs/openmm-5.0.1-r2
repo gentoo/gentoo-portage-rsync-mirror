@@ -9,5 +9,5 @@ LICENSE=MIT LGPL-2.1+ BSD RU-BSD
 RDEPEND=cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) opencl? ( virtual/opencl )
 SLOT=0
 SRC_URI=mirror://gentoo/OpenMM5.0.1-Source.zip
-_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=942f08a5c9d0e965c91faf1f29420d84

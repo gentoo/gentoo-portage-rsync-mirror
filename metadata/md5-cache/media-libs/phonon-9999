@@ -9,5 +9,5 @@ PDEPEND=aqua? ( media-libs/phonon-qt7 ) gstreamer? ( >=media-libs/phonon-gstream
 RDEPEND=!!dev-qt/qtphonon:4 qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 designer? ( dev-qt/designer:4 ) ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 designer? ( dev-qt/designer:5 ) ) pulseaudio? ( dev-libs/glib:2 >=media-sound/pulseaudio-0.9.21[glib] ) zeitgeist? ( dev-libs/libqzeitgeist )
 REQUIRED_USE=|| ( aqua gstreamer vlc ) || ( qt4 qt5 ) zeitgeist? ( qt4 )
 SLOT=0
-_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	e83b3dde426430f34178059a8de5299d	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	e83b3dde426430f34178059a8de5299d	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=9bfc66b605fd606853ab3bb2f22b0061

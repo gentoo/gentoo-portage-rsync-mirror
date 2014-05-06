@@ -7,5 +7,5 @@ IUSE=debug dedicated +ipv6 nls opengl physfs +sound
 LICENSE=GPL-2
 RDEPEND=!dedicated? ( >=media-libs/fontconfig-2.7.0 media-libs/libsdl[X,opengl?] media-libs/sdl-ttf[X] >=media-libs/sdl-image-1.2.10[png] sound? ( >=media-libs/sdl-mixer-1.2.11[vorbis] ) ) physfs? ( dev-games/physfs[zip] ) !physfs? ( >=dev-libs/libzip-0.9 ) games-misc/games-envd
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	git-2	2027b81a576527fa16bece425941e094	git-r3	e83b3dde426430f34178059a8de5299d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	git-2	2027b81a576527fa16bece425941e094	git-r3	e83b3dde426430f34178059a8de5299d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cf942f2796c6f2aed6d7a192abff622a

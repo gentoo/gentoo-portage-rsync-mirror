@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=pm-utils? ( sys-power/pm-utils ) qt4? ( dev-python/PyQt4 ) dev-lang/python
 SLOT=0
 SRC_URI=http://bues.ch/razercfg/razercfg-0.20.tar.bz2
-_eclasses_=cmake-utils	7798d4361fbdd043014e635a1753e076	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
 _md5_=5fe84bd3b014bac6e14aa066fe44f669

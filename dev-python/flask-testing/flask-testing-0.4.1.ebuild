@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/flask-testing-0.4.1.ebuild,v 1.1 2014/03/31 06:44:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/flask-testing-0.4.1.ebuild,v 1.2 2014/05/06 15:20:26 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 	)"
 
 S="${WORKDIR}/${MY_P}"
+DISTUTILS_NO_PARALLEL_BUILD=1
 
 python_test() {
 	nosetests || die "Testing failed with ${EPYTHON}"
