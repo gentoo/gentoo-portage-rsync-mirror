@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0-r1.ebuild,v 1.1 2014/04/14 15:17:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0-r2.ebuild,v 1.1 2014/05/06 12:55:41 mrueg Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -19,8 +19,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_configure() {
-	local mycmakeargs=" $( cmake-utils_use static-libs STATIC_LIBRARY ) \
-		$( cmake-utils_use introspection GOBJECT_INTROSPECTION )"
+	local mycmakeargs=" $( cmake-utils_use introspection GOBJECT_INTROSPECTION )"
 	cmake-utils_src_configure
 }
 
@@ -31,6 +30,9 @@ DOCS=(
 
 src_install() {
 	cmake-utils_src_install
+
+	# Remove static libs, cmake-flag is a trap.
+	use static-libs || find "${ED}" -name '*.a' -delete
 
 	if use examples; then
 		rm examples/Makefile* examples/CMakeLists.txt

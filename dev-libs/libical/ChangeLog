@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.74 2014/04/14 15:17:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.75 2014/05/06 12:55:41 mrueg Exp $
+
+*libical-1.0-r2 (06 May 2014)
+
+  06 May 2014; Manuel Rüger <mrueg@gentoo.org> +libical-1.0-r2.ebuild,
+  -libical-1.0-r1.ebuild:
+  Remove static libraries when needed. Fixes bug #508726.
 
 *libical-1.0-r1 (14 Apr 2014)
 *libical-0.48-r2 (14 Apr 2014)
