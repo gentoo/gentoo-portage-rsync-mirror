@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.268 2013/10/12 15:08:54 chithanh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.269 2014/05/05 23:01:46 chithanh Exp $
+
+*openoffice-bin-4.1.0 (05 May 2014)
+
+  05 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +openoffice-bin-4.1.0.ebuild:
+  Version bump, make wrapper script work with relative paths, bug #505868.
 
   12 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -openoffice-bin-3.4.1.ebuild, -openoffice-bin-4.0.0-r1.ebuild:
