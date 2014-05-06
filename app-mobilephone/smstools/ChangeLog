@@ -1,6 +1,15 @@
 # ChangeLog for app-mobilephone/smstools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.20 2013/12/22 09:39:34 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.21 2014/05/06 12:18:49 chainsaw Exp $
+
+*smstools-3.1.15-r2 (06 May 2014)
+
+  06 May 2014; Tony Vroon <chainsaw@gentoo.org> -smstools-3.1.14.ebuild,
+  -smstools-3.1.14-r1.ebuild, -smstools-3.1.14-r2.ebuild,
+  -smstools-3.1.15.ebuild, +smstools-3.1.15-r2.ebuild,
+  +files/3.1.15-makefile-whitespace.patch:
+  Fixes by Mike Benson to cope with the less forgiving behaviour of GNU Make
+  4.0; closes bug #408676.
 
 *smstools-3.1.15-r1 (22 Dec 2013)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-3.1.15.ebuild,v 1.1 2012/12/20 10:41:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-3.1.15-r2.ebuild,v 1.1 2014/05/06 12:18:49 chainsaw Exp $
 
-EAPI=4
+EAPI=5
 
-inherit toolchain-funcs user
+inherit systemd toolchain-funcs user eutils
 
 DESCRIPTION="Send and receive short messages through GSM modems"
 HOMEPAGE="http://smstools3.kekekasvi.com/"
@@ -27,6 +27,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-makefile-whitespace.patch"
 	if use stats; then
 		sed -i -e "s:CFLAGS += -D NOSTATS:#CFLAGS += -D NOSTATS:" \
 			"${S}/src/Makefile" || die
@@ -62,6 +63,9 @@ src_install() {
 	insinto /etc
 	newins examples/smsd.conf.easy smsd.conf
 	dohtml -r doc
+
+	systemd_dounit "${FILESDIR}"/smsd.service
+	systemd_newtmpfilesd "${FILESDIR}"/smsd.tmpfiles smsd.conf
 }
 
 pkg_postinst() {
