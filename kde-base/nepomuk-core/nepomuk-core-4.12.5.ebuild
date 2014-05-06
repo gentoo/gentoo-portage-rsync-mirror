@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/nepomuk-core-4.12.5.ebuild,v 1.1 2014/04/29 18:35:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/nepomuk-core-4.12.5.ebuild,v 1.2 2014/05/06 20:08:34 zlogene Exp $
 
 EAPI=5
 
 inherit kde4-base
 
 DESCRIPTION="Nepomuk core libraries"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug epub exif ffmpeg pdf taglib"
 
 DEPEND="

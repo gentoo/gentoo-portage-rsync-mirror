@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/libkcddb-4.12.5.ebuild,v 1.1 2014/04/29 18:34:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/libkcddb-4.12.5.ebuild,v 1.2 2014/05/06 20:26:03 zlogene Exp $
 
 EAPI=5
 
 inherit kde4-base
 
 DESCRIPTION="KDE library for CDDB"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug musicbrainz"
 
 # tests require network access and compare static data with online data
