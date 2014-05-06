@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.277 2014/05/06 12:21:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.278 2014/05/06 21:12:34 johu Exp $
+
+  06 May 2014; Johannes Huber <johu@gentoo.org>
+  +files/cmake-2.8.12.2-FindCurses.patch, cmake-2.8.12.2-r1.ebuild:
+  Add patch to fix build with sys-libs/ncurses[tinfo] by Mark Wright
+  <gienah@gentoo.org>, bug #468622.
 
 *cmake-2.8.12.2-r1 (06 May 2014)
 

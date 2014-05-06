@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.316 2014/05/03 14:25:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.317 2014/05/06 21:12:13 zlogene Exp $
+
+  06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kalarm-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   03 May 2014; Markus Meier <maekke@gentoo.org> kalarm-4.13.0.ebuild:
   add ~arm, bug #507896

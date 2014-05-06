@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.76 2014/05/06 20:01:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.77 2014/05/06 21:20:17 mrueg Exp $
+
+  06 May 2014; Manuel Rüger <mrueg@gentoo.org> railties-3.2.17.ebuild,
+  railties-3.2.18.ebuild:
+  Add ruby20 to slot 3.2
 
 *railties-4.1.1 (06 May 2014)
 

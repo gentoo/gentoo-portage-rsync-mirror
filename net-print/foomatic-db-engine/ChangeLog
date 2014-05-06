@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.80 2014/01/29 01:08:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.81 2014/05/06 21:31:00 mrueg Exp $
+
+*foomatic-db-engine-4.0.11 (06 May 2014)
+
+  06 May 2014; Manuel Rüger <mrueg@gentoo.org>
+  +foomatic-db-engine-4.0.11.ebuild:
+  Version bump.
 
   29 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -foomatic-db-engine-4.0.8.ebuild:
   Cleanup old.

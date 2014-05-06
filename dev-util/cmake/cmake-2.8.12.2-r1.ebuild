@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.2-r1.ebuild,v 1.1 2014/05/06 12:21:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.2-r1.ebuild,v 1.2 2014/05/06 21:12:34 johu Exp $
 
 EAPI=5
 
@@ -65,6 +65,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.12.1-FindFreetype.patch
 	"${FILESDIR}"/${PN}-2.8.12.2-hppa-bootstrap.patch
 	"${FILESDIR}"/${PN}-2.8.12.2-FindBoost-python.patch
+	"${FILESDIR}"/${PN}-2.8.12.2-FindCurses.patch
 )
 
 cmake_src_bootstrap() {
