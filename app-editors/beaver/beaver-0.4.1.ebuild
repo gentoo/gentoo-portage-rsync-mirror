@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/beaver-0.4.1.ebuild,v 1.2 2012/05/03 18:33:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/beaver-0.4.1.ebuild,v 1.3 2014/05/06 02:47:10 jer Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils gnome2-utils
 
 DESCRIPTION="Beaver is an Early AdVanced EditoR"
@@ -28,15 +28,15 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable doc doxygen-doc) \
 		$(use_enable debug)
 }
 
+DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
+
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	default
+	prune_libtool_files
 }
 
 pkg_preinst() {

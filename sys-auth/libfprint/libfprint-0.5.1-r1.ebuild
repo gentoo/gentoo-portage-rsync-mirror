@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.1-r1.ebuild,v 1.1 2014/05/05 06:10:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.1-r1.ebuild,v 1.2 2014/05/06 02:42:34 patrick Exp $
 
 EAPI=5
 
@@ -9,7 +9,8 @@ inherit autotools eutils udev vcs-snapshot
 MY_PV="v_${PV//./_}"
 DESCRIPTION="library to add support for consumer fingerprint readers"
 HOMEPAGE="http://cgit.freedesktop.org/libfprint/libfprint/"
-SRC_URI="http://cgit.freedesktop.org/${PN}/${PN}/snapshot/${MY_PV}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://cgit.freedesktop.org/${PN}/${PN}/snapshot/${MY_PV}.tar.bz2 -> ${P}.tar.bz2
+	http://dev.gentoo.org/~patrick/libfprint-0.5.1-add-vfs5011-driver.patch"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,7 +24,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-add-vfs5011-driver.patch"
+	epatch "${DISTDIR}/${P}-add-vfs5011-driver.patch" || die
 	eautoreconf
 }
 

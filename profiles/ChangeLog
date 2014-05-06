@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8925 2014/05/04 22:08:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8926 2014/05/06 02:48:11 grknight Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2014; Brian Evans <grknight@gentoo.org> package.mask:
+  Mask slot 3 of dev-db/mysql++ for removal. Slot 0 and 3 collide as
+  the slotting was not done properly.
 
   04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   targets/desktop/package.use:

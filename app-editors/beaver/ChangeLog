@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/beaver
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.19 2012/05/03 18:33:03 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/ChangeLog,v 1.20 2014/05/06 02:47:10 jer Exp $
+
+  06 May 2014; Jeroen Roovers <jer@gentoo.org> beaver-0.4.1.ebuild:
+  EAPI + defaults.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> beaver-0.4.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
