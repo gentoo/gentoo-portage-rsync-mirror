@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/xblockout-1.1.6.ebuild,v 1.1 2013/02/17 04:00:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/xblockout-1.1.6.ebuild,v 1.2 2014/05/06 00:47:04 mr_bones_ Exp $
 
 EAPI=5
-inherit flag-o-matic eutils games
+inherit autotools flag-o-matic eutils games
 
 DESCRIPTION="X Window block dropping game in 3 Dimension"
-HOMEPAGE="http://www710.univ-lyon1.fr/ftp/xbl/xbl.html"
-SRC_URI="http://www710.univ-lyon1.fr/~exco/XBL/xbl-${PV}.tar.gz"
+HOMEPAGE="http://perso.univ-lyon1.fr/thierry.excoffier/XBL/"
+SRC_URI="http://perso.univ-lyon1.fr/thierry.excoffier/XBL/xbl-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
@@ -27,9 +27,10 @@ src_prepare() {
 		-e 's:-lm:-lm -lX11:' \
 		-e '/DGROUP_GID/d' \
 		-e "s:-g$:${CFLAGS}:" \
-		Makefile.in || die "sed failed"
+		Makefile.in || die
 	# Don't know about other archs. --slarti
 	use amd64 && filter-flags "-fweb"
+	eautoreconf
 }
 
 src_compile() {
