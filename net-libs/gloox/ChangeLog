@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.20 2014/03/02 22:28:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.21 2014/05/06 21:46:42 mrueg Exp $
+
+*gloox-1.0.10 (06 May 2014)
+
+  06 May 2014; Manuel Rüger <mrueg@gentoo.org> +gloox-1.0.10.ebuild,
+  -gloox-1.0.6.ebuild:
+  Version bump. Cleanup old.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> gloox-1.0.9.ebuild:
   amd64 stable, bug #495850

@@ -1,16 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.2.ebuild,v 1.2 2013/04/08 21:48:13 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.3.ebuild,v 1.1 2014/05/06 21:40:37 mrueg Exp $
 
-EAPI="5"
-
-MY_P="${P/_/-}"
+EAPI=5
 
 inherit autotools-utils
 
 DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
 HOMEPAGE="http://toxygen.net/libgadu/"
-SRC_URI="http://toxygen.net/libgadu/files/${MY_P}.tar.gz"
+SRC_URI="https://github.com/wojtekka/${PN}/archive/${PV}.tar.gz"
 
 # Bug 373215, last checked 2012.01.28
 RESTRICT="test"
@@ -38,11 +36,13 @@ RDEPEND="${COMMON_DEPEND}
 	!=net-im/kadu-0.6.0.1
 "
 
-S="${WORKDIR}/${MY_P}"
-
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog NEWS README)
+
+src_prepare() {
+	eautoreconf
+}
 
 src_configure() {
 	local myeconfargs=(

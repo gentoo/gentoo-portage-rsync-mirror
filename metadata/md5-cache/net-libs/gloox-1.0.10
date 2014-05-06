@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-3
 RDEPEND=idn? ( net-dns/libidn ) gnutls? ( net-libs/gnutls ) ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib )
 SLOT=0
-SRC_URI=http://camaya.net/download/gloox-1.0.6.tar.bz2
-_md5_=60e9551d03df6c788e679037a75526bc
+SRC_URI=http://camaya.net/download/gloox-1.0.10.tar.bz2
+_md5_=b2d141c0c637644f66a6adb4938109d8
