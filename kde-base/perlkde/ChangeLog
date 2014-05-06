@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlkde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.131 2014/04/30 07:24:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.132 2014/05/06 23:00:50 zlogene Exp $
+
+  06 May 2014; Mikle Kolyada <zlogene@gentoo.org> perlkde-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   30 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Fixed manifest.
