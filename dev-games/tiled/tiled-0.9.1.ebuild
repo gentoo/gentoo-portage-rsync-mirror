@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.8.1.ebuild,v 1.2 2013/03/02 19:52:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.9.1.ebuild,v 1.1 2014/05/06 13:22:51 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 PLOCALES="cs de en es fr he it ja lv nl pt pt_BR ru zh"
 MY_P="${PN}-qt-${PV}"
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="examples"
 
-DEPEND="sys-libs/zlib
-	>=dev-qt/qtcore-4.6:4
+DEPEND=">=dev-qt/qtcore-4.6:4
 	>=dev-qt/qtgui-4.6:4
-	>=dev-qt/qtopengl-4.6:4"
+	>=dev-qt/qtopengl-4.6:4
+	sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -42,7 +42,7 @@ src_install() {
 	qt4-r2_src_install
 
 	if use examples ; then
-		insinto /usr/share/${PN}
-		doins -r examples
+		docompress -x /usr/share/doc/${PF}/examples
+		dodoc -r examples
 	fi
 }

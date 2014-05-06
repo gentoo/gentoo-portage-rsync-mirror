@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile postinst prepare
+DEPEND=selinux? ( sec-policy/selinux-dmidecode )
+DESCRIPTION=DMI (Desktop Management Interface) table related utilities
+EAPI=4
+HOMEPAGE=http://www.nongnu.org/dmidecode/
+IUSE=selinux
+KEYWORDS=-* ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=selinux? ( sec-policy/selinux-dmidecode )
+SLOT=0
+SRC_URI=http://savannah.nongnu.org/download/dmidecode/dmidecode-2.12.tar.bz2
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=eae07be44c7008a460b85230d33062f2
