@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.2.ebuild,v 1.5 2014/03/03 20:27:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.2.2.ebuild,v 1.1 2014/05/06 15:56:56 bicatali Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="doc test"
 RDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
 	!<dev-python/astropy-0.3
-	sci-libs/cfitsio"
+	sci-libs/cfitsio:0="
 DEPEND="${RDEPEND}
 	>=dev-python/d2to1-0.2.5[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 		 )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
-PATCHES=( "${FILESDIR}"/${P}-unbundle-cfitsio.patch )
+PATCHES=( "${FILESDIR}"/${PN}-3.2.1-unbundle-cfitsio.patch )
 
 python_prepare_all() {
 	sed -i \

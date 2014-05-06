@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.19.ebuild,v 1.1 2013/11/22 19:48:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.22.ebuild,v 1.1 2014/05/06 15:55:36 bicatali Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc fortran fits pgplot static-libs"
 
 RDEPEND="
-	fits? ( sci-libs/cfitsio )
-	pgplot? ( sci-libs/pgplot )"
+	fits? ( sci-libs/cfitsio:0= )
+	pgplot? ( sci-libs/pgplot:0= )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/pkgconfig"
@@ -29,33 +29,33 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=()
+	local myconf=(
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		$(use_enable static-libs static)
+		$(use_enable fortran)
+	)
 	# hacks because cfitsio and pgplot directories are hard-coded
 	if use fits; then
 		myconf+=(
-			--with-cfitsioinc="${EROOT}/usr/include"
-			--with-cfitsiolib="${EROOT}/usr/$(get_libdir)"
+			--with-cfitsioinc="${EPREFIX}/usr/include"
+			--with-cfitsiolib="${EPREFIX}/usr/$(get_libdir)"
 		)
 	else
 		myconf+=( --without-cfitsio )
 	fi
 	if use pgplot; then
 		myconf+=(
-			--with-pgplotinc="${EROOT}/usr/include"
-			--with-pgplotlib="${EROOT}/usr/$(get_libdir)"
+			--with-pgplotinc="${EPREFIX}/usr/include"
+			--with-pgplotlib="${EPREFIX}/usr/$(get_libdir)"
 		)
 	else
 		myconf+=( --without-pgplot )
 	fi
-	econf \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		$(use_enable static-libs static) \
-		$(use_enable fortran) \
-		${myconf[@]}
+	econf ${myconf[@]}
 }
 
 src_compile() {
-	# nasty makefile, debugging means full rewrite
+	# nasty makefile, debugging means probably full rewrite
 	emake -j1
 }
 
@@ -68,6 +68,7 @@ src_install () {
 	# static libs are same as shared (compiled with PIC)
 	# so they are not compiled twice
 	use static-libs || rm "${ED}"/usr/$(get_libdir)/lib*.a
-	use doc || rm -r "${ED}"/usr/share/doc/${PF}/html \
+	use doc || rm -r \
+		"${ED}"/usr/share/doc/${PF}/html \
 		"${ED}"/usr/share/doc/${PF}/*.pdf
 }
