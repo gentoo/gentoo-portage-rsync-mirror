@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/barman/barman-1.2.2.ebuild,v 1.1 2013/10/21 05:02:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/barman/barman-1.3.1.ebuild,v 1.1 2014/05/06 07:10:18 patrick Exp $
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7})
