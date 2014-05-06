@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/baloo-kcmadv/baloo-kcmadv-2014.04.27.ebuild,v 1.1 2014/05/02 15:35:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/baloo-kcmadv/baloo-kcmadv-2014.04.27.ebuild,v 1.2 2014/05/06 04:01:21 jmbsvicetto Exp $
 
 EAPI=5
 KDE_MINIMAL=4.13.0
@@ -18,6 +18,7 @@ SLOT="4"
 IUSE=""
 
 DEPEND="
+	$(add_kdebase_dep baloo)
 	$(add_kdebase_dep kfilemetadata)
 	dev-libs/qjson
 	dev-libs/xapian

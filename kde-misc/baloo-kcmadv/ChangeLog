@@ -1,10 +1,13 @@
 # ChangeLog for kde-misc/baloo-kcmadv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/baloo-kcmadv/ChangeLog,v 1.1 2014/05/02 15:35:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/baloo-kcmadv/ChangeLog,v 1.2 2014/05/06 04:01:21 jmbsvicetto Exp $
+
+  06 May 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  baloo-kcmadv-2014.04.27.ebuild:
+  Add missing kde-base/baloo dep.
 
 *baloo-kcmadv-2014.04.27 (02 May 2014)
 
   02 May 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   +baloo-kcmadv-2014.04.27.ebuild, +metadata.xml:
   New package
-
