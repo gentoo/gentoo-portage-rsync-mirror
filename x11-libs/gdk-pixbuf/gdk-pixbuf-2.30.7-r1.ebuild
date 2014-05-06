@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.7-r1.ebuild,v 1.5 2014/05/04 12:12:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.7-r1.ebuild,v 1.6 2014/05/06 19:10:24 grobian Exp $
 
 EAPI="5"
 
-inherit eutils gnome.org gnome2-utils multilib libtool multilib-minimal
+inherit eutils flag-o-matic gnome.org gnome2-utils multilib libtool multilib-minimal
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"
@@ -54,6 +54,7 @@ src_prepare() {
 	sed -e 's:l in libpng16:l in libpng libpng16:' -i configure || die
 	default
 	elibtoolize # for Darwin modules, bug #???
+	[[ ${CHOST} == *-solaris* ]] && append-libs intl
 }
 
 multilib_src_configure() {
