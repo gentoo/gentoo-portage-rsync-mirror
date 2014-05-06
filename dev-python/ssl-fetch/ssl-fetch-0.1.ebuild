@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ssl-fetch-0.1.ebuild,v 1.2 2014/05/05 15:51:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ssl-fetch-0.1.ebuild,v 1.3 2014/05/06 02:21:06 dolsen Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=(python{2_7,3_2,3_3})
+PYTHON_COMPAT=(python{2_7,3_3,3_4})
 
-inherit distutils-r1 python-r1
+inherit python-r1
 
 DESCRIPTION="A small convinience library for fetching files securely"
 HOMEPAGE="https://github.com/dol-sen/ssl-fetch"
@@ -20,20 +20,14 @@ KEYWORDS="~amd64 ~hppa ~x86"
 
 DEPEND=""
 
-# requests dropped py-3.2 support in >=2.2.0
 RDEPEND="${DEPEND}
-	>=dev-python/requests-1.2.1
-	python_targets_python3_2? ( <=dev-python/requests-2.1.0 )
+	>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]
 	python_targets_python2_7? (
 		dev-python/ndg-httpsclient[python_targets_python2_7]
 		dev-python/pyasn1[python_targets_python2_7]
 		>=dev-python/pyopenssl-0.13[python_targets_python2_7]
 		)
 	"
-
-python_install_all() {
-	distutils-r1_python_install_all
-}
 
 pkg_postinst() {
 	einfo
