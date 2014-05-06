@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-2.11.ebuild,v 1.2 2014/01/30 21:47:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-2.11.03.ebuild,v 1.1 2014/05/06 20:48:51 mr_bones_ Exp $
 
 EAPI=5
 inherit flag-o-matic

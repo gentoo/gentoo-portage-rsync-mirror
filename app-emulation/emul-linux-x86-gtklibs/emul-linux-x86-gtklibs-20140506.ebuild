@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20131008-r3.ebuild,v 1.1 2014/03/01 10:20:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140506.ebuild,v 1.1 2014/05/06 20:52:20 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -13,10 +13,19 @@ DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-xlibs-${PV}
 	~app-emulation/emul-linux-x86-opengl-${PV}
+	!abi_x86_32? (
+		!>=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)]
+		!>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
+	)
 	abi_x86_32? (
 		>=x11-libs/pixman-0.30.2-r1[abi_x86_32(-)]
 		>=x11-libs/cairo-1.12.16-r1[abi_x86_32(-)]
 		>=x11-libs/gdk-pixbuf-2.30.5-r1[abi_x86_32(-)]
+		>=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)]
+		>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
+		>=x11-libs/pango-1.36.2-r1[abi_x86_32(-)]
+		>=x11-libs/pangox-compat-0.0.2-r1[abi_x86_32(-)]
+		>=media-libs/imlib-1.9.15-r4[abi_x86_32(-)]
 	)"
 # RDEPEND on opengl stuff needed due cairo, bug #410213
 
@@ -100,9 +109,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	my_pango_querymodules
 	my_gtk_query_immodules
 	if ! use abi_x86_32; then
+		my_pango_querymodules
 		my_gdk_pixbuf_query_loaders
 	fi
 

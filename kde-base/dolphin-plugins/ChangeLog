@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.149 2014/05/05 15:43:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.150 2014/05/06 20:56:31 zlogene Exp $
+
+  06 May 2014; Mikle Kolyada <zlogene@gentoo.org> dolphin-plugins-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   05 May 2014; Mikle Kolyada <zlogene@gentoo.org> dolphin-plugins-4.12.5.ebuild:
   Add ~ppc64 keyword wrt bug #498424

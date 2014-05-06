@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.324 2014/05/03 14:21:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.325 2014/05/06 20:41:04 zlogene Exp $
+
+  06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kaddressbook-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   03 May 2014; Markus Meier <maekke@gentoo.org> kaddressbook-4.13.0.ebuild:
   add ~arm, bug #507896

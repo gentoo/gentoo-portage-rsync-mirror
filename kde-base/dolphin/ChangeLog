@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.240 2014/05/03 14:25:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.241 2014/05/06 20:53:04 zlogene Exp $
+
+  06 May 2014; Mikle Kolyada <zlogene@gentoo.org> dolphin-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   03 May 2014; Markus Meier <maekke@gentoo.org> dolphin-4.13.0.ebuild:
   add ~arm, bug #507896

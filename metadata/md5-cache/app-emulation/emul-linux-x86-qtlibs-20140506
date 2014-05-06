@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=gtkstyle +development
+KEYWORDS=-* ~amd64
+LICENSE=LGPL-2.1 GPL-3
+RDEPEND=~app-emulation/emul-linux-x86-baselibs-20140506 ~app-emulation/emul-linux-x86-medialibs-20140506 ~app-emulation/emul-linux-x86-opengl-20140506 gtkstyle? ( ~app-emulation/emul-linux-x86-gtklibs-20140506 )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-qtlibs-20140506.tar.xz
+_eclasses_=emul-linux-x86	576e505ebf6007403af959726481de8d	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=18619f5f204400688589684fd5edad75

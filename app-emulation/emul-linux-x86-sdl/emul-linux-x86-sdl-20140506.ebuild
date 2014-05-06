@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-20140406-r1.ebuild,v 1.1 2014/04/18 22:18:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-20140506.ebuild,v 1.1 2014/05/06 20:57:29 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -20,6 +20,7 @@ RDEPEND="~app-emulation/emul-linux-x86-xlibs-${PV}
 		>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
 		>=media-libs/sdl-gfx-2.0.24-r1[abi_x86_32(-)]
 		>=media-libs/sdl-image-1.2.12-r1[abi_x86_32(-)]
+		>=media-libs/sdl-mixer-1.2.12-r4[abi_x86_32(-)]
 		>=media-libs/sdl-net-1.2.8-r1[abi_x86_32(-)]
 		>=media-libs/sdl-sound-1.0.3-r1[abi_x86_32(-)]
 		>=media-libs/sdl-ttf-2.0.11-r1[abi_x86_32(-)]
@@ -27,8 +28,9 @@ RDEPEND="~app-emulation/emul-linux-x86-xlibs-${PV}
 	)"
 
 src_prepare() {
-	emul-linux-x86_src_prepare
+	use abi_x86_32 || emul-linux-x86_src_prepare
+}
 
-	# Remove migrated stuff.
-	use abi_x86_32 && rm -f $(sed "${FILESDIR}/remove-native-${PVR}" -e '/^#/d')
+src_install() {
+	use abi_x86_32 || emul-linux-x86_src_install
 }
