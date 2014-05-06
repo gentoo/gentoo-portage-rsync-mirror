@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.6 2012/02/08 21:33:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.7 2014/05/06 16:06:44 ulm Exp $
 
 inherit eutils unpacker games
 
@@ -9,11 +9,11 @@ DESCRIPTION="Control a robot as it races across Europa"
 HOMEPAGE="http://www.linuxgamepublishing.com/info.php?id=9"
 SRC_URI=" http://demos.linuxgamepublishing.com/mindrover/${MY_P}"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved GPL-2+"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="virtual/opengl"
 

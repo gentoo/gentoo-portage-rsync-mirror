@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.0.4.ebuild,v 1.2 2013/11/06 05:28:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.1.0.ebuild,v 1.1 2014/05/06 16:19:56 bicatali Exp $
 
 EAPI=5
 
@@ -24,8 +24,7 @@ IUSE="doc examples python static-libs"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	dev-libs/boost
-	dev-cpp/yaml-cpp
+	dev-libs/boost:0=
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[latex] )"
@@ -63,6 +62,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To install data files, download them into ${EROOT%/}/usr/share/LHAPDF:"
-	elog "http://www.hepforge.org/archive/${PN}/pdfsets/${PV}"
+	elog "Download data files from:"
+	elog "http://www.hepforge.org/archive/${PN}/pdfsets/$(get_version_component_range 1-2 ${PV})"
+	elog "and untar them into ${EROOT%/}/usr/share/LHAPDF"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for mate-base/mate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/ChangeLog,v 1.4 2014/05/04 23:02:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/ChangeLog,v 1.5 2014/05/06 16:22:47 tomwij Exp $
+
+  06 May 2014; Tom Wijsman <TomWij@gentoo.org> mate-1.8.0.ebuild, metadata.xml:
+  Introduce more USE flags in the meta package to allow users to micro manage
+  MATE a bit more; as a result, a minimal MATE desktop with a ~10 packages total
+  could be installed up to a full MATE desktop with over 50 packages.
 
 *mate-1.8.0 (04 May 2014)
 

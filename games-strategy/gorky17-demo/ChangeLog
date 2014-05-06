@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/gorky17-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/ChangeLog,v 1.7 2012/02/05 06:23:13 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/ChangeLog,v 1.8 2014/05/06 16:03:49 ulm Exp $
+
+  06 May 2014; Ulrich Müller <ulm@gentoo.org> gorky17-demo-1.0.1.0.1.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 505766.
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
   gorky17-demo-1.0.1.0.1.ebuild:

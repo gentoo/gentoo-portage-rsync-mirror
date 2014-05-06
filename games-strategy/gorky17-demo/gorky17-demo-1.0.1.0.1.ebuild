@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.5 2012/02/05 06:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1.ebuild,v 1.6 2014/05/06 16:03:49 ulm Exp $
 
 inherit eutils unpacker versionator games
 
@@ -12,11 +12,11 @@ HOMEPAGE="http://www.linuxgamepublishing.com/info.php?id=gorky17"
 SRC_URI="http://demofiles.linuxgamepublishing.com/${MY_PN}/${MY_PN}_demo.run
 	http://updatefiles.linuxgamepublishing.com/gorky17-demo/${PN}-${MY_PV}-x86.run"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 RDEPEND="media-libs/alsa-lib
 	x86? (

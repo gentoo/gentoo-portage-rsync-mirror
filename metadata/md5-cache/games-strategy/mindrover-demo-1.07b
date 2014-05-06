@@ -2,10 +2,10 @@ DEFINED_PHASES=compile install postinst preinst setup unpack
 DESCRIPTION=Control a robot as it races across Europa
 HOMEPAGE=http://www.linuxgamepublishing.com/info.php?id=9
 KEYWORDS=x86
-LICENSE=as-is
+LICENSE=all-rights-reserved GPL-2+
 RDEPEND=virtual/opengl games-misc/games-envd
-RESTRICT=strip
+RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=http://demos.linuxgamepublishing.com/mindrover/mindrover_demo.run
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=089249cf381907e95765d85bb9030483
+_md5_=290521c49a820ae490df9c3249ddc83b

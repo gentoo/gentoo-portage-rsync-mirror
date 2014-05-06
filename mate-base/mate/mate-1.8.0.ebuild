@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/mate-1.8.0.ebuild,v 1.1 2014/05/04 23:02:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate/mate-1.8.0.ebuild,v 1.2 2014/05/06 16:22:47 tomwij Exp $
 
 EAPI="5"
 
@@ -14,28 +14,31 @@ LICENSE="metapackage"
 
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="-bluetooth +extras"
+IUSE="+base -bluetooth +themes +extras"
 
 S="${WORKDIR}"
 
 RDEPEND="
-	gnome-extra/yelp:0
-	>=mate-base/caja-1.8:0
-	>=mate-base/mate-applets-1.8:0
-	>=mate-base/mate-control-center-1.8:0
 	>=mate-base/mate-desktop-1.8:0
 	>=mate-base/mate-menus-1.8:0
 	>=mate-base/mate-panel-1.8:0
 	>=mate-base/mate-session-manager-1.8:0
 	>=mate-base/mate-settings-daemon-1.8:0
-	>=mate-extra/mate-media-1.8:0
-	>=x11-misc/mozo-1.8:0
-	>=x11-terms/mate-terminal-1.8:0
-	>=x11-themes/mate-backgrounds-1.8:0
-	>=x11-themes/mate-icon-theme-1.8:0
-	>=x11-themes/mate-themes-1.8:0
 	>=x11-wm/marco-1.8:0
+	base? (
+		>=mate-base/caja-1.8:0
+		>=mate-base/mate-applets-1.8:0
+		>=mate-base/mate-control-center-1.8:0
+		>=mate-extra/mate-media-1.8:0
+		>=x11-misc/mozo-1.8:0
+		>=x11-terms/mate-terminal-1.8:0
+	)
 	bluetooth? ( net-wireless/blueman:0 )
+	themes? (
+		>=x11-themes/mate-backgrounds-1.8:0
+		>=x11-themes/mate-icon-theme-1.8:0
+		>=x11-themes/mate-themes-1.8:0
+	)
 	extras? (
 		>=app-arch/engrampa-1.8:0
 		>=app-editors/pluma-1.8:0
