@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.12.0.ebuild,v 1.2 2014/05/06 10:13:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.12.1.ebuild,v 1.1 2014/05/06 10:13:21 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 pypy )
 
+PYTHON_REQ_USE="sqlite"
 inherit distutils-r1
 
 DESCRIPTION="Flask extension for easy ReSTful API generation"
@@ -30,15 +31,14 @@ DEPEND="${RDEPEND}
 		>=dev-python/sphinxcontrib-issuetracker-0.11[${PYTHON_USEDEP}]
 		dev-python/flask-themes[${PYTHON_USEDEP}] )"
 
-PATCHES=( "${FILESDIR}"/docbuild.patch )
+PATCHES=( "${FILESDIR}"/mapping.patch )
 
 python_compile_all() {
 	if use doc; then
 		if ! "${PYTHON}" -c "import flask_restless"; then
 			eerror "flask-restless is not installed. Building of the docs"
-			eerror "requires flask-restless to already be installed."
-			eerror "Firstly emerge without USE=doc, then re-emerge with USE=doc"
-			eerror ""
+			eerror "requires flask-restless to be installed."
+			eerror "emerge with USE=-doc followed bu USE=doc"
 			die
 		fi
 		# Changes connect to read issues @ github
@@ -50,7 +50,7 @@ python_compile_all() {
 }
 
 python_test() {
-	nosetests tests/test_*.py || die "Tests failed under ${EPYTHON}"
+	nosetests -w tests || die "Tests failed under ${EPYTHON}"
 }
 
 python_install_all() {
