@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.5.ebuild,v 1.5 2014/03/09 12:05:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.5.ebuild,v 1.6 2014/05/06 18:03:12 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -9,7 +9,7 @@ VALA_USE_DEPEND="vapigen"
 # Vapigen is needed for the vala binding
 # Valac is needed when building from git for the engine
 
-inherit bash-completion-r1 eutils gnome2-utils multilib python-single-r1 vala virtualx
+inherit bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.gentoo vala virtualx
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -72,6 +72,24 @@ RESTRICT="test"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="To use ibus, you should:
+1. Get input engines from sunrise overlay.
+Run \"emerge -s ibus-\" in your favorite terminal
+for a list of packages we already have.
+
+2. Setup ibus:
+$ ibus-setup
+
+3. Set the following in your user startup scripts
+such as .xinitrc, .xsession or .xprofile:
+
+export XMODIFIERS=\"@im=ibus\"
+export GTK_IM_MODULE=\"ibus\"
+export QT_IM_MODULE=\"xim\"
+ibus-daemon -d -x
+"
+
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
@@ -129,6 +147,8 @@ src_install() {
 
 	use deprecated && python_optimize
 	use python && use gtk3 && python_optimize
+
+	readme.gentoo_create_doc
 }
 
 pkg_preinst() {
@@ -143,23 +163,7 @@ pkg_postinst() {
 	use gtk3 && gnome2_query_immodules_gtk3
 	gnome2_schemas_update
 	gnome2_icon_cache_update
-
-	elog "To use ibus, you should:"
-	elog "1. Get input engines from sunrise overlay."
-	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
-	elog "   for a list of packages we already have."
-	elog
-	elog "2. Setup ibus:"
-	elog
-	elog "   $ ibus-setup"
-	elog
-	elog "3. Set the following in your user startup scripts"
-	elog "   such as .xinitrc, .xsession or .xprofile:"
-	elog
-	elog "   export XMODIFIERS=\"@im=ibus\""
-	elog "   export GTK_IM_MODULE=\"ibus\""
-	elog "   export QT_IM_MODULE=\"xim\""
-	elog "   ibus-daemon -d -x"
+	readme.gentoo_print_elog
 }
 
 pkg_postrm() {

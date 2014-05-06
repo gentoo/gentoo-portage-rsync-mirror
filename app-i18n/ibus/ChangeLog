@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.143 2014/03/09 12:05:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.144 2014/05/06 18:03:12 pacho Exp $
+
+  06 May 2014; Pacho Ramos <pacho@gentoo.org> ibus-1.5.5.ebuild:
+  Use readme.gentoo.eclass (#509386)
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> ibus-1.5.5.ebuild:
   x86 stable, bug 499954
