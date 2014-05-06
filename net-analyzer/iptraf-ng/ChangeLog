@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.77 2014/05/03 20:46:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.78 2014/05/06 16:37:23 jer Exp $
+
+  06 May 2014; Jeroen Roovers <jer@gentoo.org> -iptraf-ng-1.1.3.1-r2.ebuild,
+  -files/iptraf-ng-1.1.3.1-kernel-v3.5-kill-off-token-ring-support.patch:
+  Old.
 
   03 May 2014; Mikle Kolyada <zlogene@gentoo.org> iptraf-ng-1.1.4-r1.ebuild:
   alpha stable wrt bug #498566

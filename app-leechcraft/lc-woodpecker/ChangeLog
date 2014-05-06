@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-woodpecker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-woodpecker/ChangeLog,v 1.5 2014/04/10 18:05:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-woodpecker/ChangeLog,v 1.6 2014/05/06 16:43:43 maksbotan Exp $
+
+  06 May 2014; Maxim Koltsov <maksbotan@gentoo.org> -lc-woodpecker-9999.ebuild:
+  Drop 9999 version as this plugin is now merged into app-leechcraft/lc-azoth.
 
 *lc-woodpecker-0.6.65 (10 Apr 2014)
 
