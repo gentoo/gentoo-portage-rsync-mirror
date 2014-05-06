@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.123 2014/05/04 23:53:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.124 2014/05/06 04:12:34 jer Exp $
+
+  06 May 2014; Jeroen Roovers <jer@gentoo.org> freeradius-2.2.5.ebuild:
+  Force LIBTOOL=libtool so that make does not try to run it with /bin/sh (bug
+  #509472).
 
   04 May 2014; Jeroen Roovers <jer@gentoo.org> freeradius-3.0.2-r1.ebuild:
   Fix run_dir sed script.
