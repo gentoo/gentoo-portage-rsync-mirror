@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.75 2014/05/04 11:30:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.76 2014/05/06 18:51:15 graaff Exp $
+
+*activemodel-3.2.18 (06 May 2014)
+
+  06 May 2014; Hans de Graaff <graaff@gentoo.org> +activemodel-3.2.18.ebuild:
+  Version bump for Rails 3.2.18, security bug 509706.
 
   04 May 2014; Manuel Rüger <mrueg@gentoo.org> activemodel-3.2.17.ebuild:
   Add ruby20 support to slot 3.2.
