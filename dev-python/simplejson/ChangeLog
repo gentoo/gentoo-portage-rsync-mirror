@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.126 2014/04/15 11:41:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.127 2014/05/06 04:54:54 radhermit Exp $
+
+*simplejson-3.4.1 (06 May 2014)
+
+  06 May 2014; Tim Harder <radhermit@gentoo.org> +simplejson-3.4.1.ebuild:
+  Version bump.
 
   15 Apr 2014; Ian Delaney <idella4@gentoo.org> simplejson-3.4.0.ebuild:
   correction to placement of DEPEND

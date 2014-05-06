@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.19 2014/04/19 18:11:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.21 2014/05/06 04:44:23 radhermit Exp $
+
+  06 May 2014; Tim Harder <radhermit@gentoo.org> urllib3-1.8-r1.ebuild,
+  urllib3-1.8.2.ebuild:
+  Rewrap long conditional dep line and quote python2 glob.
+
+*urllib3-1.8.2 (06 May 2014)
+
+  06 May 2014; Tim Harder <radhermit@gentoo.org> +urllib3-1.8.2.ebuild:
+  Version bump, add python3_4 support.
 
   19 Apr 2014; Michał Górny <mgorny@gentoo.org> urllib3-1.8-r1.ebuild:
   Use ${PYTHON_USEDEP} substitution support added to python_gen_cond_dep().
