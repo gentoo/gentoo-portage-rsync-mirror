@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/picmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.71 2014/05/06 23:23:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.72 2014/05/07 17:15:35 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> picmi-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> picmi-4.12.5.ebuild:
   amd64 stable wrt bug #504210

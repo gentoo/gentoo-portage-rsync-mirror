@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.315 2014/05/06 21:23:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.316 2014/05/07 17:15:14 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kcheckpass-4.11.9.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kcheckpass-4.11.9.ebuild:
   amd64 stable wrt bug #504210

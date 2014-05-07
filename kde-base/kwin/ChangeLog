@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.381 2014/05/06 22:40:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.382 2014/05/07 17:15:09 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kwin-4.11.9.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kwin-4.11.9.ebuild:
   amd64 stable wrt bug #504210

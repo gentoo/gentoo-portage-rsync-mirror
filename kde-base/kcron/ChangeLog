@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.298 2014/05/06 21:28:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.299 2014/05/07 17:14:44 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kcron-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kcron-4.12.5.ebuild:
   amd64 stable wrt bug #504210

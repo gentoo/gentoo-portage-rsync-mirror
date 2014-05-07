@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.169 2014/05/06 20:32:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.170 2014/05/07 17:14:53 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> blogilo-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> blogilo-4.12.5.ebuild:
   amd64 stable wrt bug #504210

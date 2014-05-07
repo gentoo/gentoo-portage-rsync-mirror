@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolourpaint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.305 2014/05/07 00:04:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.306 2014/05/07 17:15:07 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kolourpaint-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kolourpaint-4.12.5.ebuild:
   amd64 stable wrt bug #504210

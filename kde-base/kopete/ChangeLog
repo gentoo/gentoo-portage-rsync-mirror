@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.429 2014/05/06 23:48:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.430 2014/05/07 17:14:54 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kopete-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kopete-4.12.5.ebuild:
   amd64 stable wrt bug #504210

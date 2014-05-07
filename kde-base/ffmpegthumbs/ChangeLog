@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.154 2014/05/06 20:47:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.155 2014/05/07 17:14:58 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> ffmpegthumbs-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> ffmpegthumbs-4.12.5.ebuild:
   amd64 stable wrt bug #504210

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadiconsole
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.130 2014/05/06 20:17:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.131 2014/05/07 17:14:52 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> akonadiconsole-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> akonadiconsole-4.12.5.ebuild:
   amd64 stable wrt bug #504210

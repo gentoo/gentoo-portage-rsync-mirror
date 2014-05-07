@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.311 2014/05/07 00:08:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.312 2014/05/07 17:15:16 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org>
+  kdegraphics-meta-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org>
   kdegraphics-meta-4.12.5.ebuild:

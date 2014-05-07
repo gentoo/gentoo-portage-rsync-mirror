@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.305 2014/05/07 08:56:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.306 2014/05/07 17:15:05 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> klipper-4.11.9.ebuild:
+  x86 stable wrt bug #504210
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> klipper-4.11.9.ebuild:
   amd64 stable wrt bug #504210

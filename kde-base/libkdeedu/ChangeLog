@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.305 2014/05/06 20:29:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.306 2014/05/07 17:15:20 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> libkdeedu-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> libkdeedu-4.12.5.ebuild:
   amd64 stable wrt bug #504210

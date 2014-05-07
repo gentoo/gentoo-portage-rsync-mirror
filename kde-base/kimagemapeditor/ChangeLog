@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.294 2014/05/07 00:18:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.295 2014/05/07 17:14:48 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kimagemapeditor-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kimagemapeditor-4.12.5.ebuild:
   amd64 stable wrt bug #504210

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkipi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.205 2014/05/06 21:00:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.206 2014/05/07 17:15:14 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> libkipi-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> libkipi-4.12.5.ebuild:
   amd64 stable wrt bug #504210

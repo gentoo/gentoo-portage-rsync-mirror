@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.333 2014/05/06 22:11:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.334 2014/05/07 17:15:04 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> nsplugins-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> nsplugins-4.12.5.ebuild:
   amd64 stable wrt bug #504210

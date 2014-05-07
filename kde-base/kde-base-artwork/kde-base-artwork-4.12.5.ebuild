@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/kde-base-artwork-4.12.5.ebuild,v 1.2 2014/05/06 21:29:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/kde-base-artwork-4.12.5.ebuild,v 1.3 2014/05/07 17:15:14 zlogene Exp $
 
 EAPI=5
 
@@ -9,4 +9,4 @@ inherit kde4-base
 
 DESCRIPTION="KDE base artwork"
 IUSE=""
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.304 2014/05/07 00:05:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.305 2014/05/07 17:14:46 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> ksnapshot-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> ksnapshot-4.12.5.ebuild:
   amd64 stable wrt bug #504210

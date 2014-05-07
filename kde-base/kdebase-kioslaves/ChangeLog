@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.358 2014/05/06 21:51:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.359 2014/05/07 17:15:18 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org>
+  kdebase-kioslaves-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org>
   kdebase-kioslaves-4.12.5.ebuild:

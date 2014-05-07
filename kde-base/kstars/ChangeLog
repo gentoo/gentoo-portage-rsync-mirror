@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.325 2014/05/06 23:12:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.326 2014/05/07 17:14:49 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kstars-4.12.5.ebuild:
+  x86 stable wrt bug #504210
 
   06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kstars-4.12.5.ebuild:
   amd64 stable wrt bug #504210
