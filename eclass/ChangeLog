@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1242 2014/05/07 17:33:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1243 2014/05/07 20:41:18 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> gems.eclass, ruby.eclass:
+  ruby.eclass and gems.eclass have been deprecated by ruby-ng.eclass and
+  ruby-fakegem.eclass. Removal in 30 days. See bug #479812.
 
   07 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Use amd64 headers for i686 when USE=-abi_x86_32 to maintain compatibility
