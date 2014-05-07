@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.99 2014/05/07 17:59:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.100 2014/05/07 19:42:36 ago Exp $
+
+  07 May 2014; Agostino Sarubbo <ago@gentoo.org> nepomuk-core-4.12.5.ebuild:
+  Stable for ppc, wrt bug #504210
 
   07 May 2014; Johannes Huber <johu@gentoo.org> -nepomuk-core-4.12.3.ebuild:
   Remove KDE SC 4.12.3

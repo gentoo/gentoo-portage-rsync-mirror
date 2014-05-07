@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-actions-kcm/solid-actions-kcm-4.11.9.ebuild,v 1.3 2014/05/07 17:15:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-actions-kcm/solid-actions-kcm-4.11.9.ebuild,v 1.4 2014/05/07 19:42:45 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE control module for Solid actions"
 HOMEPAGE="http://solid.kde.org"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="

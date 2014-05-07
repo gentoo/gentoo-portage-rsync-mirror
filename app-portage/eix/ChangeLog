@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.473 2014/01/30 23:19:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.474 2014/05/07 19:34:53 axs Exp $
+
+*eix-0.30.2 (07 May 2014)
+
+  07 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +eix-0.30.2.ebuild:
+  version bump; fixes bug 506596
 
 *eix-0.30.1 (30 Jan 2014)
 

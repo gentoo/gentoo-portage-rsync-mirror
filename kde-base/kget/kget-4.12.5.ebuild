@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.12.5.ebuild,v 1.3 2014/05/07 17:15:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.12.5.ebuild,v 1.4 2014/05/07 19:43:01 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-base
 
 DESCRIPTION="An advanced download manager for KDE"
 HOMEPAGE="http://www.kde.org/applications/internet/kget/"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug bittorrent mms semantic-desktop sqlite webkit"
 
 RDEPEND="

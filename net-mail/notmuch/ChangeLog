@@ -1,6 +1,51 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.90 2014/03/12 09:29:00 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.91 2014/05/07 19:37:19 aidecoe Exp $
+
+*notmuch-0.18 (07 May 2014)
+
+  07 May 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.18.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  General
+  -------
+
+  The `folder:` search prefix now requires an exact match
+  There is a new `path:` search prefix.
+  Notmuch database upgrade due to `folder:` and `path:` changes
+
+  Library changes
+  ---------------
+
+  Support for indexing mbox files has been dropped
+  Message header parsing changes (from internal GMime)
+
+  Command-Line Interface
+  ----------------------
+
+  `notmuch dump` now defaults to `batch-tag` format
+  `notmuch new` has a --quiet option
+  `notmuch insert` respects maildir.synchronize_flags config option
+  The commands set consistent exit status codes on failures
+  Bug fix for checking configured new.tags for invalid tags
+
+  Emacs Interface
+  ---------------
+
+  Init file pointed by new variable `notmuch-init-file`
+  Changed format for saved searches
+  The keys of `notmuch-tag-formats` are now regexps
+  Changed tags are now shown in the buffer
+  Ido-completing-read initialization in Emacs 23
+  Bug fix for saved searches with newlines in them
+  Bug fixes for sender identities
+  Replies to encrypted messages will be encrypted by default
+  Reply pushes mark before signature
+  Message piping uses the originating buffer's working directory
 
   12 Mar 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -notmuch-0.15.2.ebuild, metadata.xml:

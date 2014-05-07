@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/kdeartwork-wallpapers-4.12.5.ebuild,v 1.3 2014/05/07 17:15:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/kdeartwork-wallpapers-4.12.5.ebuild,v 1.4 2014/05/07 19:42:12 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ KDE_SCM="svn"
 inherit kde4-meta
 
 DESCRIPTION="Wallpapers from kde"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 KMEXTRA="
