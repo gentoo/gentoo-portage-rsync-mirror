@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08-r1.ebuild,v 1.4 2013/06/06 04:35:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08-r1.ebuild,v 1.5 2014/05/07 16:20:17 ulm Exp $
 
 EAPI=4
 
@@ -11,11 +11,11 @@ HOMEPAGE="http://www.illwinter.com/dom2/index.html"
 SRC_URI="!ppc? ( http://www.shrapnelgames.com/downloads/dom2demo_linux_x86.tgz )
 	ppc? ( http://www.shrapnelgames.com/downloads/dom2demo_linux_ppc.tgz )"
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="mirror bindist strip"
 
 DEPEND="!amd64? (
 		virtual/glu

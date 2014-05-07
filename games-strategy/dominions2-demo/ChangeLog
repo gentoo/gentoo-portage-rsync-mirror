@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/dominions2-demo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/ChangeLog,v 1.9 2013/06/06 04:35:19 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/ChangeLog,v 1.10 2014/05/07 16:20:17 ulm Exp $
+
+  07 May 2014; Ulrich Müller <ulm@gentoo.org> dominions2-demo-2.08.ebuild,
+  dominions2-demo-2.08-r1.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, bug 505756.
 
   06 Jun 2013; Alfredo Tupone <tupone@gentoo.org>
   dominions2-demo-2.08-r1.ebuild:
