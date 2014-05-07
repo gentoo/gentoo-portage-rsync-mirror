@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r2.ebuild,v 1.8 2013/03/14 03:08:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r2.ebuild,v 1.9 2014/05/07 05:31:09 tomka Exp $
 
 EAPI=3
 
@@ -29,13 +29,13 @@ DEPEND="nls? ( dev-python/Babel )"
 # first if none are installed.
 RDEPEND="
 	dev-python/dbus-python
-	X? ( gtk? ( dev-python/pygtk
+	X? (
+		gtk? ( dev-python/pygtk )
 		|| (
 			x11-misc/ktsuss
 			x11-libs/gksu
 			kde-base/kdesu
 			)
-		)
 	)
 	|| (
 		net-misc/dhcpcd

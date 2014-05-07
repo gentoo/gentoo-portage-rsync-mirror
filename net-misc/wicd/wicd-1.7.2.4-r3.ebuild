@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.6 2014/04/26 08:26:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.7 2014/05/07 05:31:09 tomka Exp $
 
 EAPI=5
 
@@ -23,13 +23,13 @@ IUSE="doc X ambiance +gtk ioctl libnotify mac4lin ncurses nls +pm-utils"
 DEPEND="nls? ( dev-python/Babel )"
 RDEPEND="${PYTHON_DEPS}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	X? ( gtk? ( dev-python/pygtk
+	X? (
+		gtk? ( dev-python/pygtk )
 		|| (
 			x11-misc/ktsuss
 			x11-libs/gksu
 			kde-base/kdesu
 			)
-		)
 	)
 	|| (
 		net-misc/dhcpcd
