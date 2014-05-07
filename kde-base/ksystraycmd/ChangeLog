@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.286 2014/05/07 17:14:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.287 2014/05/07 18:25:00 johu Exp $
+
+  07 May 2014; Johannes Huber <johu@gentoo.org> -ksystraycmd-4.11.7.ebuild:
+  Remove KDE Workspace 4.11.7
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> ksystraycmd-4.11.9.ebuild:
   x86 stable wrt bug #504210

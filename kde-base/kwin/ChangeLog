@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.382 2014/05/07 17:15:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.383 2014/05/07 18:25:04 johu Exp $
+
+  07 May 2014; Johannes Huber <johu@gentoo.org> -kwin-4.11.7.ebuild:
+  Remove KDE Workspace 4.11.7
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kwin-4.11.9.ebuild:
   x86 stable wrt bug #504210

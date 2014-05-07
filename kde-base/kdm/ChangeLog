@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.397 2014/05/07 17:15:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.398 2014/05/07 18:24:59 johu Exp $
+
+  07 May 2014; Johannes Huber <johu@gentoo.org> -kdm-4.11.7.ebuild:
+  Remove KDE Workspace 4.11.7
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kdm-4.11.9-r1.ebuild:
   x86 stable wrt bug #504210

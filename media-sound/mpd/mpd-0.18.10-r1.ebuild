@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.10-r1.ebuild,v 1.2 2014/05/05 14:14:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.10-r1.ebuild,v 1.3 2014/05/07 18:04:41 maekke Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -11,7 +11,7 @@ SRC_URI="http://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ppc ~sh ~x86 ~x86-fbsd ~x64-macos"
+KEYWORDS="~amd64 arm hppa ~ppc ~sh ~x86 ~x86-fbsd ~x64-macos"
 IUSE="adplug +alsa ao audiofile bzip2 cdio +curl debug faad +fifo +ffmpeg flac
 	fluidsynth gme +id3tag inotify ipv6 jack lame mms libmpdclient
 	libsamplerate +mad mikmod modplug mpg123 musepack +network ogg openal opus

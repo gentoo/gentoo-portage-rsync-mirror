@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.146 2014/05/07 17:14:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.147 2014/05/07 18:25:04 johu Exp $
+
+  07 May 2014; Johannes Huber <johu@gentoo.org> -liboxygenstyle-4.11.7.ebuild:
+  Remove KDE Workspace 4.11.7
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> liboxygenstyle-4.11.9.ebuild:
   x86 stable wrt bug #504210

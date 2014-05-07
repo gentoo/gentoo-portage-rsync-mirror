@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.187 2014/05/07 15:25:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.188 2014/05/07 18:11:46 polynomial-c Exp $
+
+  07 May 2014; Lars Wendler <polynomial-c@gentoo.org> firefox-bin-29.0.ebuild:
+  Revert firefox-29 back to unstable.
 
   07 May 2014; Agostino Sarubbo <ago@gentoo.org> firefox-bin-29.0.ebuild:
   Stable for x86, wrt bug #509050
