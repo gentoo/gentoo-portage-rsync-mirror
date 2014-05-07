@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/flask-babel-0.9.ebuild,v 1.1 2013/08/10 10:13:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/flask-babel-0.9.ebuild,v 1.2 2014/05/07 04:07:01 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE=""
 
 RDEPEND="dev-python/flask[${PYTHON_USEDEP}]
 	dev-python/Babel[${PYTHON_USEDEP}]
@@ -25,20 +25,10 @@ RDEPEND="dev-python/flask[${PYTHON_USEDEP}]
 	>=dev-python/speaklater-1.2[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.5[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
 
-python_compile_all() {
-	use doc && emake -C docs html
-}
-
 python_test() {
 	nosetests || die "Tests failed under ${EPYTHON}"
-}
-
-python_install_all() {
-	use doc && local HTML_DOCS=( docs/_build/html/. )
-	distutils-r1_python_install_all
 }

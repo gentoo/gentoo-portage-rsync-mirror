@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask-babel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.8 2014/01/21 04:20:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.9 2014/05/07 04:07:01 idella4 Exp $
+
+  07 May 2014; Ian Delaney <idella4@gentoo.org> flask-babel-0.9.ebuild:
+  drop py2.6 add pypy support drop IUSE doc since half the source files are
+  missing
 
   21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -flask-babel-0.7.ebuild,
   -flask-babel-0.8.ebuild:
