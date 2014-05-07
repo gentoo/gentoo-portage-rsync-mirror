@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0-r2.ebuild,v 1.1 2014/05/06 12:55:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-1.0-r2.ebuild,v 1.2 2014/05/07 02:41:12 patrick Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -27,6 +27,10 @@ DOCS=(
 	AUTHORS ChangeLog NEWS README TEST THANKS TODO
 	doc/{AddingOrModifyingComponents,UsingLibical}.txt
 )
+
+src_compile() {
+	cmake-utils_src_compile -j1
+}
 
 src_install() {
 	cmake-utils_src_install
