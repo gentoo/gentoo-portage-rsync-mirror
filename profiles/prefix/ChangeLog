@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.417 2014/04/30 22:30:20 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.418 2014/05/07 21:29:15 redlizard Exp $
+
+  07 May 2014; redlizard <redlizard@gentoo.org> -bsd/freebsd/9.1/package.mask,
+  -bsd/freebsd/package.mask:
+  Removed obsolete freebsd toolchain masks.
 
   30 Apr 2014; redlizard <redlizard@gentoo.org> +windows/cygwin/use.force,
   windows/interix/use.force, windows/interix/use.mask, +windows/use.force,

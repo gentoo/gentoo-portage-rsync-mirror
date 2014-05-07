@@ -10,5 +10,5 @@ RDEPEND=>=app-emulation/emul-linux-x86-xlibs-20100611 !<app-emulation/emul-linux
 RESTRICT=strip
 SLOT=0
 SRC_URI=!abi_x86_32? ( http://dev.gentoo.org/~pacho/emul/emul-linux-x86-opengl-20140506.tar.xz )
-_eclasses_=emul-linux-x86	576e505ebf6007403af959726481de8d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=emul-linux-x86	88309d5605c702df8ef9321c0ee97acb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=7ff58c61deca23a7a23c79eb4650ccae

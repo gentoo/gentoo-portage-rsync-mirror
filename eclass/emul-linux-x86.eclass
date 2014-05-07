@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.20 2014/05/06 20:43:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.21 2014/05/07 21:04:48 pacho Exp $
 
 #
 # Original Author: Mike Doty <kingtaco@gentoo.org>
@@ -85,7 +85,6 @@ emul-linux-x86_src_install() {
 
 	# Move headers to a separate directory, bug #509556
 	if [[ -d "${D}"/usr/include ]] ; then
-		rm -rf "${D}"/usr/include/i686-pc-linux-gnu/
 		mkdir -p "${D}"/usr/include/i686-pc-linux-gnu/
 		mv "${D}"/usr/include/* "${D}"/usr/include/i686-pc-linux-gnu/.
 	fi

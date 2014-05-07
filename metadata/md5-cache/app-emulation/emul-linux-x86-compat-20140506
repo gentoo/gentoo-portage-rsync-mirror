@@ -10,5 +10,5 @@ RDEPEND=multilib? ( sys-libs/libstdc++-v3[multilib] )
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-compat-20140506.tar.xz
-_eclasses_=emul-linux-x86	576e505ebf6007403af959726481de8d	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=emul-linux-x86	88309d5605c702df8ef9321c0ee97acb	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=06fb7a54717df065ead35f25ab45dc60
