@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Tag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.53 2012/06/24 12:59:59 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.54 2014/05/07 08:03:49 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> MP3-Tag-1.130.0.ebuild:
+  Add missing dependency on dev-perl/MP3-Info (bug #509408)
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

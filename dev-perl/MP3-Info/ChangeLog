@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MP3-Info
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.72 2012/06/24 12:58:35 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.73 2014/05/07 08:02:03 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> MP3-Info-1.240.0.ebuild:
+  Add ~arm keyword
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
