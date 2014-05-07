@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/tagainijisho
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/ChangeLog,v 1.1 2014/05/06 17:37:49 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/ChangeLog,v 1.2 2014/05/07 14:24:23 calchan Exp $
+
+  07 May 2014; Denis Dupeyron <calchan@gentoo.org> tagainijisho-1.0.2.ebuild:
+  Tagaini Jinsho depends on sqlite3 but I can't seem to be able to completely
+  unbundle it either.
 
 *tagainijisho-1.0.2 (06 May 2014)
 

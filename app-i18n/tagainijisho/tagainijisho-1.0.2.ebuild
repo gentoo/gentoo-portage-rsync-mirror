@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/tagainijisho-1.0.2.ebuild,v 1.1 2014/05/06 17:37:49 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/tagainijisho-1.0.2.ebuild,v 1.2 2014/05/07 14:24:23 calchan Exp $
 
 EAPI=5
 
@@ -15,10 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 DEPEND="dev-qt/qtcore:4
-	dev-qt/qtgui:4"
+	dev-qt/qtgui:4
+	dev-db/sqlite:3"
 RDEPEND="${DEPEND}"
-
-# TODO: unbundle sqlite
 
 pkg_preinst() {
 	gnome2_icon_savelist
