@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/booh
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.32 2013/11/26 01:29:40 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.33 2014/05/07 19:05:40 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> booh-0.9.4.ebuild:
+  Remove ruby18 target.
 
 *booh-0.9.4 (26 Nov 2013)
 

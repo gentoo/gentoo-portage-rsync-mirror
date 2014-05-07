@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/logging
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logging/ChangeLog,v 1.3 2014/01/30 07:43:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logging/ChangeLog,v 1.4 2014/05/07 19:15:51 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> -logging-1.8.1-r1.ebuild,
+  -logging-1.8.1.ebuild, logging-1.8.2.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *logging-1.8.2 (30 Jan 2014)
 

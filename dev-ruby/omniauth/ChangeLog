@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/omniauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/ChangeLog,v 1.4 2014/01/17 07:07:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/ChangeLog,v 1.5 2014/05/07 19:10:24 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> -omniauth-1.1.4-r1.ebuild,
+  omniauth-1.2.1.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *omniauth-1.2.1 (17 Jan 2014)
 

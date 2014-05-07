@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=media-gfx/exiv2 gtk? ( >=x11-libs/gtk+-2.8:2 ) test? ( ruby_targets_ruby18? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby18] dev-ruby/ruby-glib2[ruby_targets_ruby18] gtk? ( >=dev-ruby/ruby-gtk2-0.12[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby19] dev-ruby/ruby-glib2[ruby_targets_ruby19] gtk? ( >=dev-ruby/ruby-gtk2-0.12[ruby_targets_ruby19] ) ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+DEPEND=media-gfx/exiv2 gtk? ( >=x11-libs/gtk+-2.8:2 ) test? ( ruby_targets_ruby19? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby19] dev-ruby/ruby-glib2[ruby_targets_ruby19] gtk? ( >=dev-ruby/ruby-gtk2-0.12[ruby_targets_ruby19] ) ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
 DESCRIPTION=Static HTML photo album generator
 EAPI=5
 HOMEPAGE=http://booh.org/index.html
-IUSE=gtk encode exif test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19
+IUSE=gtk encode exif test elibc_FreeBSD ruby_targets_ruby19
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=media-gfx/exiv2 gtk? ( >=x11-libs/gtk+-2.8:2 ) || ( media-gfx/imagemagick[jpeg,png] media-gfx/graphicsmagick[jpeg,png] ) exif? ( media-gfx/exif ) encode? ( media-video/mplayer ) ruby_targets_ruby18? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby18] dev-ruby/ruby-glib2[ruby_targets_ruby18] gtk? ( >=dev-ruby/ruby-gtk2-0.12[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby19] dev-ruby/ruby-glib2[ruby_targets_ruby19] gtk? ( >=dev-ruby/ruby-gtk2-0.12[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+RDEPEND=media-gfx/exiv2 gtk? ( >=x11-libs/gtk+-2.8:2 ) || ( media-gfx/imagemagick[jpeg,png] media-gfx/graphicsmagick[jpeg,png] ) exif? ( media-gfx/exif ) encode? ( media-video/mplayer ) ruby_targets_ruby19? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby19] dev-ruby/ruby-glib2[ruby_targets_ruby19] gtk? ( >=dev-ruby/ruby-gtk2-0.12[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=http://booh.org/packages/booh-0.9.4.tar.bz2
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=7ae9322152f8a0e187d7e668f15251d3
+_md5_=49728dac5f96d07f1640f3969af5a528

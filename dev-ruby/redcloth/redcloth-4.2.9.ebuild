@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.9.ebuild,v 1.14 2014/01/02 14:39:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.9.ebuild,v 1.15 2014/05/07 19:14:15 mrueg Exp $
 
 EAPI=4
 
 # jruby → tests still fail with UTF-8 characters
 # http://jgarber.lighthouseapp.com/projects/13054/tickets/149-redcloth-4-doesnt-support-multi-bytes-content
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_NAME="RedCloth"
 

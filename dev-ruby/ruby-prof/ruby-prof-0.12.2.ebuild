@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.12.2.ebuild,v 1.1 2013/04/17 06:14:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.12.2.ebuild,v 1.2 2014/05/07 19:09:28 mrueg Exp $
 
 EAPI=5
 
 # jruby → not compatible, since it uses an extension, but there is a bug
 # open for it: https://github.com/rdp/ruby-prof/issues/36
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="README.rdoc CHANGES"
 RUBY_FAKEGEM_DOCDIR="doc"

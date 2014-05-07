@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nagios
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios/ChangeLog,v 1.6 2013/10/19 06:17:21 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios/ChangeLog,v 1.7 2014/05/07 19:16:54 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> -nagios-0.0.4.ebuild,
+  nagios-0.0.4-r1.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *nagios-0.0.4-r1 (19 Oct 2013)
 

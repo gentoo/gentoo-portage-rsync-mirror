@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.84 2014/04/03 08:51:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.85 2014/05/07 19:14:15 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> redcloth-4.2.9.ebuild:
+  Remove ruby18 target.
 
 *redcloth-4.2.9-r2 (03 Apr 2014)
 

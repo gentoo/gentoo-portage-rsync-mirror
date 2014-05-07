@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/nanoc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.11 2013/10/29 06:55:04 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.12 2014/05/07 19:07:52 mrueg Exp $
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org> nanoc-3.6.4.ebuild,
+  nanoc-3.6.5.ebuild:
+  Remove ruby18 target.
 
 *nanoc-3.6.5 (29 Oct 2013)
 
@@ -47,4 +51,3 @@
   28 Feb 2012; Alex Legler <a3li@gentoo.org> +nanoc-3.3.1.ebuild,
   +metadata.xml:
   Initial import, ebuild based on graaff's version from his overlay
-

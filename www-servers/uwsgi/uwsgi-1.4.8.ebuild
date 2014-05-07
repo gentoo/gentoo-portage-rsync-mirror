@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.8.ebuild,v 1.1 2013/03/04 11:14:32 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.8.ebuild,v 1.2 2014/05/07 19:03:10 mrueg Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
 PYTHON_MODNAME="uwsgidecorators"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby19"
 RUBY_OPTIONAL="yes"
 PHP_EXT_NAME="dummy"
 PHP_EXT_INI="no"

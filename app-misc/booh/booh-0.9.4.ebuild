@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.9.4.ebuild,v 1.1 2013/11/26 01:29:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.9.4.ebuild,v 1.2 2014/05/07 19:05:40 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit eutils bash-completion-r1 ruby-ng
 

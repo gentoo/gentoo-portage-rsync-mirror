@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-4.0.3.ebuild,v 1.2 2014/03/11 20:24:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-4.0.3.ebuild,v 1.3 2014/05/07 19:21:58 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -72,10 +72,6 @@ all_ruby_prepare() {
 each_ruby_test() {
 	case ${RUBY} in
 		*jruby)
-			;;
-		*rubyee18)
-			# Turn on travis support to avoid tripping bugs in ree18.
-			TRAVIS=true ${RUBY} -S rake test_sqlite3
 			;;
 		*)
 			if use sqlite3; then
