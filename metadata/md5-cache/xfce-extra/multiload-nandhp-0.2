@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=>=x11-libs/gtk+-2.14:2 x11-libs/cairo >=gnome-base/libgtop-2.11.92 lxpanel? ( lxde-base/lxpanel ) xfce_plugins_multiload-nandhp? ( >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfce4-panel-4.10 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
-DESCRIPTION=multiload-nandhp is a port of the GNOME multiload applet to the Xfce4 and LXDE panels.
+DESCRIPTION=A port of the GNOME multiload applet for the Xfce and LXDE panels
 EAPI=5
 HOMEPAGE=http://github.com/nandhp/multiload-nandhp
 IUSE=lxpanel +xfce_plugins_multiload-nandhp
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( xfce_plugins_multiload-nandhp lxpanel )
 SLOT=0
 SRC_URI=http://github.com/nandhp/multiload-nandhp/archive/version-0-2.tar.gz -> multiload-nandhp-0.2.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f7baec08d4ec174e441667e4e1286e46
+_md5_=7ab307e26e949ce63763fbaece557a02

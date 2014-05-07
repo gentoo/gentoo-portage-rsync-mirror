@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.4 2014/04/04 20:44:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-9999.ebuild,v 1.5 2014/05/07 15:00:07 ssuominen Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ KEYWORDS=""
 fi
 IUSE="+doc +magic sqlite test"
 
-RDEPEND=">=dev-libs/girara-0.2.0:3=
+RDEPEND=">=dev-libs/girara-0.2.1:3=
 	>=dev-libs/glib-2.28:2=
 	x11-libs/cairo:=
 	>=x11-libs/gtk+-3.2:3
