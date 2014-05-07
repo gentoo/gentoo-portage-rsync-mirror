@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.3_pre20140417.ebuild,v 1.4 2014/05/04 12:09:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.3_pre20140417.ebuild,v 1.5 2014/05/07 05:42:23 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG=yes
@@ -53,7 +53,7 @@ pkg_setup() {
 src_prepare() {
 	DOCS="AUTHORS ChangeLog KNOWN_BUGS MAINTAINERS NEWS README RELEASE-PROCESS THANKS TODO"
 
-	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159831 , upstream #????
+	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159381 , upstream #470812 #558690
 	epatch "${FILESDIR}"/${PN}-0.97.2-underlinking.patch #420685
 
 	if use python; then

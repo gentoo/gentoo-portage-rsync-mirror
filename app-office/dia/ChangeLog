@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.167 2014/05/04 12:09:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.168 2014/05/07 05:42:23 pacho Exp $
+
+  07 May 2014; Pacho Ramos <pacho@gentoo.org> dia-0.97.3_pre20140417.ebuild:
+  Add bug references (thanks to Gilles for finding them)
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> dia-0.97.3_pre20140417.ebuild:
   x86 stable, bug 508862
