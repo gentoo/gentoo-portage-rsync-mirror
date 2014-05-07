@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/rex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rex/ChangeLog,v 1.17 2014/04/24 02:42:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rex/ChangeLog,v 1.18 2014/05/07 03:05:16 patrick Exp $
+
+*rex-0.46 (07 May 2014)
+
+  07 May 2014; Patrick Lauer <patrick@gentoo.org> +rex-0.46.ebuild,
+  -rex-0.41.2.ebuild, -rex-0.41.3.ebuild, -rex-0.42.4.ebuild,
+  -rex-0.43.7.ebuild, -rex-0.44.1.ebuild, -rex-0.44.6.ebuild:
+  Bump, clean out old
 
 *rex-0.45.1 (24 Apr 2014)
 
