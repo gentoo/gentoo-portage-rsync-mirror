@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.24 2014/04/06 17:38:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.25 2014/05/07 17:36:48 johu Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DEPEND="
 	dev-libs/qjson
 	dev-libs/quazip
 	dev-libs/qtkeychain
-	>=media-libs/libechonest-2.1.0
+	>=media-libs/libechonest-2.2.0:=
 	>=media-libs/liblastfm-1.0.1
 	>=media-libs/phonon-4.5.0
 	>=media-libs/taglib-1.6.0
@@ -66,6 +66,7 @@ DOCS=( AUTHORS ChangeLog README.md )
 
 src_configure() {
 	local mycmakeargs=(
+		-DWITH_CRASHREPORTER=OFF
 		$(cmake-utils_use_with jabber Jreen)
 		$(cmake-utils_use_with kde KDE4)
 		$(cmake-utils_use_build !qt5 WITH_QT4)

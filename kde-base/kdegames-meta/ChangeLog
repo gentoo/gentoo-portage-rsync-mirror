@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.311 2014/05/07 17:14:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.312 2014/05/07 17:59:14 johu Exp $
+
+  07 May 2014; Johannes Huber <johu@gentoo.org> -kdegames-meta-4.12.3.ebuild:
+  Remove KDE SC 4.12.3
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kdegames-meta-4.12.5.ebuild:
   x86 stable wrt bug #504210
