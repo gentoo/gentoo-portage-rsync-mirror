@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.300 2014/04/29 19:18:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.301 2014/05/07 00:09:43 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> kteatime-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   29 Apr 2014; Johannes Huber <johu@gentoo.org> -kteatime-4.12.4.ebuild:
   Remove KDE SC 4.12.4
