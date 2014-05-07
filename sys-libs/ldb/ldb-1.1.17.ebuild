@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.15-r1.ebuild,v 1.1 2013/06/07 12:52:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.17.ebuild,v 1.1 2014/05/07 06:52:06 polynomial-c Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2"
+EAPI=5
+PYTHON_COMPAT=( python2_{6,7} )
 
-inherit python waf-utils multilib
+inherit python-single-r1 waf-utils multilib
 
 DESCRIPTION="An LDAP-like embedded database"
 HOMEPAGE="http://ldb.samba.org"
@@ -13,16 +13,17 @@ SRC_URI="http://www.samba.org/ftp/pub/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.8[python]
 	>=sys-libs/tevent-0.9.17
-	>=sys-libs/tdb-1.2.11[python]
+	>=sys-libs/tdb-1.2.12[python]
 	net-nds/openldap
 	!!<net-fs/samba-3.6.0[ldb]
 	!!>=net-fs/samba-4.0.0[ldb]
+	${PYTHON_DEPS}
 	"
 
 DEPEND="dev-libs/libxslt
@@ -30,12 +31,12 @@ DEPEND="dev-libs/libxslt
 	virtual/pkgconfig
 	${RDEPEND}"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 WAF_BINARY="${S}/buildtools/bin/waf"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-	python_need_rebuild
+	python-single-r1_pkg_setup
 }
 
 src_configure() {
@@ -67,7 +68,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_need_rebuild
 	if has_version sys-auth/sssd; then
 		ewarn "You have sssd installed. It is known to break after ldb upgrades,"
 		ewarn "so please try to rebuild it before reporting bugs."

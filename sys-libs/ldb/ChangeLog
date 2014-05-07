@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ldb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.60 2013/11/02 10:59:23 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.61 2014/05/07 06:52:06 polynomial-c Exp $
+
+*ldb-1.1.17 (07 May 2014)
+
+  07 May 2014; Lars Wendler <polynomial-c@gentoo.org> -ldb-1.1.15-r1.ebuild,
+  +ldb-1.1.17.ebuild:
+  Version bump. Removed old.
 
   02 Nov 2013; Markos Chandras <hwoarang@gentoo.org> ldb-1.1.16.ebuild:
   Add ~mips per #444688
