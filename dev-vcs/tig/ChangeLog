@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.28 2014/04/30 16:28:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.30 2014/05/07 06:03:12 radhermit Exp $
+
+  07 May 2014; Tim Harder <radhermit@gentoo.org> -tig-2.0.1.ebuild:
+  Remove old.
+
+*tig-2.0.1-r1 (07 May 2014)
+
+  07 May 2014; Tim Harder <radhermit@gentoo.org> +tig-2.0.1-r1.ebuild,
+  metadata.xml:
+  Add unicode use flag (fixes bug #509744).
 
 *tig-2.0.1 (30 Apr 2014)
 
