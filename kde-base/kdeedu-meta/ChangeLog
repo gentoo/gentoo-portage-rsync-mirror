@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.311 2014/05/04 12:17:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.312 2014/05/06 23:17:52 zlogene Exp $
+
+  06 May 2014; Mikle Kolyada <zlogene@gentoo.org> kdeedu-meta-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   04 May 2014; Markus Meier <maekke@gentoo.org> kdeedu-meta-4.13.0.ebuild:
   add ~arm, bug #507896

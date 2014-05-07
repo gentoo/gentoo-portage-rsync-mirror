@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgoldrunner/kgoldrunner-4.12.5.ebuild,v 1.1 2014/04/29 18:35:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgoldrunner/kgoldrunner-4.12.5.ebuild,v 1.2 2014/05/06 23:26:33 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="
 	http://www.kde.org/applications/games/kgoldrunner/
 	http://games.kde.org/game.php?game=kgoldrunner
 "
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
