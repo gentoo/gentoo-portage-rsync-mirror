@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-2.2.2.ebuild,v 1.1 2014/05/06 03:10:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-2.2.2.ebuild,v 1.2 2014/05/07 02:16:52 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ COMMON_DEPEND="
 	x11-libs/gdk-pixbuf:2[introspection?]
 	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
 	>=dev-libs/glib-2.25.10:2
-	>=gnome-extra/cinnamon-desktop-1.0:0=
+	>=gnome-extra/cinnamon-desktop-1.0:0=[introspection?]
 	>=media-libs/clutter-1.9.10:1.0=[introspection?]
 	>=media-libs/cogl-1.9.6:1.0=[introspection?]
 	>=media-libs/libcanberra-0.26[gtk3]
