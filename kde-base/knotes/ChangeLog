@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.301 2014/05/03 14:28:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.302 2014/05/07 09:07:33 zlogene Exp $
+
+  07 May 2014; Mikle Kolyada <zlogene@gentoo.org> knotes-4.12.5.ebuild:
+  amd64 stable wrt bug #504210
 
   03 May 2014; Markus Meier <maekke@gentoo.org> knotes-4.13.0.ebuild:
   add ~arm, bug #507896
