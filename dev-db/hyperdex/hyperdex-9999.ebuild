@@ -1,21 +1,21 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.0.1.ebuild,v 1.1 2013/12/11 03:53:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-9999.ebuild,v 1.1 2014/05/07 03:59:38 patrick Exp $
 EAPI=5
 
-# compile failure in tests, waiting for patch from upstream
-RESTRICT="test"
-
-PYTHON_DEPEND="2:2.6"
-inherit eutils python
+PYTHON_COMPAT=( python2_7)
+inherit eutils python-r1 autotools git-r3
 
 DESCRIPTION="A searchable distributed Key-Value Store"
 
 HOMEPAGE="http://hyperdex.org"
-SRC_URI="http://hyperdex.org/src/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
+
+EGIT_REPO_URI="https://github.com/rescrv/HyperDex.git"
+
+SRC_URI="http://dev.gentooexperimental.org/~patrick/autotools-java.tar"
 
 IUSE="+python"
 # need to add ruby and java useflags too
@@ -27,13 +27,16 @@ DEPEND="dev-cpp/glog
 	dev-libs/libe
 	dev-libs/busybee
 	dev-libs/popt
-	dev-libs/replicant"
+	dev-libs/replicant
+	dev-libs/json-c"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	python_set_active_version 2
+src_prepare() {
+	cd m4; tar xf "${DISTDIR}/autotools-java.tar"
+	cd ..
+	sed -i -e 's~json/json.h~json-c/json.h~' configure.ac common/datatype_document.cc daemon/index_document.cc || die "Blergh!"
+	eautoreconf
 }
-
 src_configure() {
 	econf --disable-static \
 		$(use_enable python python-bindings)

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15657 2014/05/06 20:42:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15658 2014/05/07 03:43:34 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -50,9 +50,12 @@
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (06 May 2014)
 # Mask individual pieces of Cinnamon 2.2 until it's complete
+gnome-extra/cjs
 gnome-extra/cinnamon-desktop
+gnome-extra/cinnamon-menus
 gnome-extra/cinnamon-session
 gnome-extra/cinnamon-settings-daemon
+gnome-extra/cinnamon-control-center
 net-wireless/cinnamon-bluetooth
 >=x11-wm/muffin-2.2
 >=gnome-extra/nemo-2.2

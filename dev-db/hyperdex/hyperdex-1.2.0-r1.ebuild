@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.2.0.ebuild,v 1.1 2014/05/06 07:55:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.2.0-r1.ebuild,v 1.1 2014/05/07 03:38:14 patrick Exp $
 EAPI=5
 
 RESTRICT="test"
-PYTHON_DEPEND="2:2.6"
-inherit eutils python autotools
+PYTHON_COMPAT=( python2_7)
+inherit eutils python-r1 autotools
 
 DESCRIPTION="A searchable distributed Key-Value Store"
 
@@ -29,10 +29,6 @@ DEPEND="dev-cpp/glog
 	dev-libs/replicant
 	dev-libs/json-c"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	python_set_active_version 2
-}
 
 src_prepare() {
 	cp "${WORKDIR}/"*.m4 m4/
