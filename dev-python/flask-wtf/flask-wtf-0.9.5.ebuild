@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/flask-wtf-0.9.5.ebuild,v 1.1 2014/05/03 08:38:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/flask-wtf-0.9.5.ebuild,v 1.2 2014/05/07 07:02:17 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
@@ -17,10 +17,11 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"
+IUSE="doc test"
 
 RDEPEND="dev-python/flask[${PYTHON_USEDEP}]
-	>=dev-python/wtforms-1.0[${PYTHON_USEDEP}]"
+	>=dev-python/wtforms-1.0.5[${PYTHON_USEDEP}]
+	<dev-python/wtforms-2.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
@@ -28,11 +29,22 @@ DEPEND="${RDEPEND}
 		dev-python/flask-testing[${PYTHON_USEDEP}]
 		dev-python/flask-uploads[${PYTHON_USEDEP}]
 		dev-python/speaklater[${PYTHON_USEDEP}]
-		dev-python/flask-babel[${PYTHON_USEDEP}]
+		dev-python/flask-babel[${PYTHON_USEDEP}] )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/werkzeug[${PYTHON_USEDEP}]' python2_7 )
 	)"
 
 S="${WORKDIR}/${MY_P}"
 
+python_compile_all() {
+	use doc && emake -C docs html
+}
+
 python_test() {
-	nosetests || die "Testing failed with ${EPYTHON}"
+	nosetests || die "Tests failed under ${EPYTHON}"
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }
