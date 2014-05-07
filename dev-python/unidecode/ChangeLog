@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.12 2014/03/31 20:24:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.13 2014/05/07 15:12:52 jer Exp $
+
+  07 May 2014; Jeroen Roovers <jer@gentoo.org> unidecode-0.04.14.ebuild,
+  metadata.xml:
+  Add python 3.4 support.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> unidecode-0.04.14.ebuild,
   unidecode-0.04.9-r1.ebuild:

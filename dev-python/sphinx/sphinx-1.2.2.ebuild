@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.2.2.ebuild,v 1.4 2014/04/01 05:02:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.2.2.ebuild,v 1.5 2014/05/07 15:20:40 floppym Exp $
 
 EAPI=5
+
+# MAKE SURE YOU UPDATE THE python_gen_usedep CALLS BELOW!
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
 
 inherit distutils-r1 eutils versionator
@@ -23,7 +25,7 @@ IUSE="doc latex test"
 RDEPEND="
 	>=dev-python/docutils-0.7[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.3[$(python_gen_usedep python3_2)]
-	>=dev-python/jinja-2.3[$(python_gen_usedep python{2_6,2_7,3_3} 'pypy*')]
+	>=dev-python/jinja-2.3[$(python_gen_usedep python{2_6,2_7,3_3,3_4} 'pypy*')]
 	>=dev-python/pygments-1.2[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	latex? (

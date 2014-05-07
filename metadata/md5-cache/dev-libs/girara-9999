@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare setup unpack
+DEPEND=>=dev-libs/glib-2.28 >=x11-libs/gtk+-3.2:3 !<dev-libs/girara-0.1.6 sys-devel/gettext virtual/pkgconfig dev-vcs/git
+DESCRIPTION=A library that implements a user interface that focuses on simplicity and minimalism
+EAPI=5
+HOMEPAGE=http://pwmt.org/projects/girara/
+IUSE=static-libs
+LICENSE=ZLIB
+RDEPEND=>=dev-libs/glib-2.28 >=x11-libs/gtk+-3.2:3 !<dev-libs/girara-0.1.6
+SLOT=3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	git-2	2027b81a576527fa16bece425941e094	git-r3	e83b3dde426430f34178059a8de5299d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=6b2ebdac681a7869d948fe923690e63f
