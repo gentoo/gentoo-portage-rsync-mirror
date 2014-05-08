@@ -11,4 +11,4 @@ RESTRICT=binchecks
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ssuominen/pambase-20140313.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=fec7c5bb6d8ea94d54d61f966b1197b3
+_md5_=25aa92f3f91dc7ce085bcd0bbc8fe477

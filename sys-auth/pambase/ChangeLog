@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.138 2014/03/13 14:31:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.139 2014/05/08 22:37:12 vapier Exp $
+
+  08 May 2014; Mike Frysinger <vapier@gentoo.org> pambase-20140313.ebuild:
+  Drop old elog message as it applies to versions more than 5 years old #440582
+  by poletti.marco.
 
   13 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   -pambase-20120417-r1.ebuild, -pambase-20120417-r2.ebuild,

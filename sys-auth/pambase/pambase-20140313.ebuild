@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20140313.ebuild,v 1.1 2014/03/13 14:29:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20140313.ebuild,v 1.2 2014/05/08 22:37:12 vapier Exp $
 
 EAPI=5
 inherit eutils
@@ -86,18 +86,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use sha512; then
-		elog "Starting from version 20080801, pambase optionally enables"
-		elog "SHA512-hashed passwords. For this to work, you need sys-libs/pam-1.0.1"
-		elog "built against sys-libs/glibc-2.7 or later."
-		elog "If you don't have support for this, it will automatically fallback"
-		elog "to MD5-hashed passwords, just like before."
-		elog
-		elog "Please note that the change only affects the newly-changed passwords"
-		elog "and that SHA512-hashed passwords will not work on earlier versions"
-		elog "of glibc or Linux-PAM."
-	fi
-
 	if use systemd && use consolekit; then
 		ewarn "You are enabling 2 session trackers, ConsoleKit and systemd-logind"
 		ewarn "at the same time. This is not recommended setup to have, please"

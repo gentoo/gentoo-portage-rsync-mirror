@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.2_alpha.ebuild,v 1.1 2014/02/13 21:53:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.4_alpha-r1.ebuild,v 1.1 2014/05/08 22:33:03 blueness Exp $
 
 EAPI="5"
 
@@ -35,6 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
+	epatch "${FILESDIR}"/${PN}-0.2.5.4_alpha-fix-disable-buf-freelist.patch
 }
 
 src_configure() {
@@ -70,6 +71,7 @@ src_install() {
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r6 tor
 	systemd_dounit "${FILESDIR}/${PN}.service"
+	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
 
 	emake DESTDIR="${D}" install
 
