@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.513 2014/03/19 16:04:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.514 2014/05/08 01:14:00 jer Exp $
 
 # Keep them sorted
 
@@ -209,7 +209,7 @@ minimal - Install a very minimal build (disables, for example, plugins, fonts, m
 mmap - Add mmap (memory map) support
 mms - Support for Microsoft Media Server (MMS) streams
 mmx - Use the MMX instruction set
-mmxext - se the Extended MMX instruction set (intersection of Enhanced 3DNow! and SSE instruction sets) (3dnowext or sse in cpuinfo)
+mmxext - Use the Extended MMX instruction set (intersection of Enhanced 3DNow! and SSE instruction sets) (3dnowext or sse in cpuinfo)
 mng - Add support for libmng (MNG images)
 modplug - Add libmodplug support for playing SoundTracker-style music files
 modules - Build the kernel modules

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r1.ebuild,v 1.5 2014/05/01 02:31:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r1.ebuild,v 1.6 2014/05/08 01:11:26 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -84,7 +84,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=sys-auth/polkit-0.101[introspection]
 
 	>=app-accessibility/caribou-0.4.8
-	>=gnome-base/gdm-3.5[introspection]
 	media-libs/cogl[introspection]
 	>=sys-apps/accountsservice-0.6.14[introspection]
 	sys-power/upower[introspection]
@@ -104,6 +103,9 @@ RDEPEND="${COMMON_DEPEND}
 	networkmanager? (
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
+"
+# avoid circular dependency
+PDEPEND=">=gnome-base/gdm-3.5[introspection]
 "
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
