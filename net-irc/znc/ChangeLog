@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.73 2014/05/07 03:36:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.74 2014/05/08 03:28:36 wired Exp $
+
+  08 May 2014; Alex Alexander <wired@gentoo.org> znc-1.2-r1.ebuild,
+  znc-9999.ebuild:
+  added REQUIRED_USE for python, bug #509640
 
   07 May 2014; Alex Alexander <wired@gentoo.org> -znc-1.0-r1.ebuild,
   -znc-1.0-r2.ebuild, -znc-1.2.ebuild,

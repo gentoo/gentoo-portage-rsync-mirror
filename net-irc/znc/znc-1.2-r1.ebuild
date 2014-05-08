@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.2-r1.ebuild,v 1.3 2014/04/19 10:07:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.2-r1.ebuild,v 1.4 2014/05/08 03:28:36 wired Exp $
 
 EAPI=5
 
@@ -24,6 +24,8 @@ HOMEPAGE="http://znc.in"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="daemon debug ipv6 perl python ssl sasl tcl"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	perl? ( >=dev-lang/perl-5.10 )

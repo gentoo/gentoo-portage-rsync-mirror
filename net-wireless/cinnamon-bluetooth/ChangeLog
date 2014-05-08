@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/cinnamon-bluetooth
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cinnamon-bluetooth/ChangeLog,v 1.1 2014/05/08 03:08:23 tetromino Exp $
+
+*cinnamon-bluetooth-3.8.4 (08 May 2014)
+
+  08 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-bluetooth-3.8.4.ebuild, +metadata.xml:
+  Add Cinnamon-2.x wrapper around gnome-bluetooth
+

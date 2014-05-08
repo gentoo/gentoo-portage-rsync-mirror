@@ -1,6 +1,14 @@
 # ChangeLog for www-client/uget
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.41 2013/11/05 21:04:22 wired Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.42 2014/05/08 03:05:13 wired Exp $
+
+*uget-1.10.4 (08 May 2014)
+
+  08 May 2014; Alex Alexander <wired@gentoo.org> +uget-1.10.4.ebuild,
+  uget-9999.ebuild, +files/uget-1.10.4-gnutls-backport-fix.patch,
+  +files/uget-1.10.4-linguas-fix.patch:
+  version bump (bug #500816). backported gnutls fix. proper LINGUAS support
+  (bug #509760). live ebuild update.
 
   05 Nov 2013; Alex Alexander <wired@gentoo.org> uget-1.8.0.ebuild,
   uget-1.10.3.ebuild, uget-1.10.3-r1.ebuild:
