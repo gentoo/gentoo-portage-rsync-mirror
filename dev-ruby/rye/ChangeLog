@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rye
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.24 2014/04/24 16:48:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.25 2014/05/08 06:02:08 graaff Exp $
+
+*rye-0.9.12 (08 May 2014)
+
+  08 May 2014; Hans de Graaff <graaff@gentoo.org> +rye-0.9.12.ebuild:
+  Version bump. Drop x86 keyword due to new dev-ruby/docile dependency, bug
+  509826.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> rye-0.9.7.ebuild:
   Remove ruby18 support. EAPI bump.

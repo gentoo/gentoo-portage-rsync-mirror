@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/net-scp-1.0.2[ruby_targets_ruby19] >=dev-ruby/net-ssh-2.0.13[ruby_targets_ruby19] >=dev-ruby/highline-1.5.1[ruby_targets_ruby19] >=dev-ruby/sysinfo-0.8.1[ruby_targets_ruby19] dev-ruby/annoy[ruby_targets_ruby19] >=dev-ruby/docile-1.0.1[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=Safely run SSH commands on a bunch of machines at the same time
+EAPI=5
+HOMEPAGE=http://solutious.com/
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 doc test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/net-scp-1.0.2[ruby_targets_ruby19] >=dev-ruby/net-ssh-2.0.13[ruby_targets_ruby19] >=dev-ruby/highline-1.5.1[ruby_targets_ruby19] >=dev-ruby/sysinfo-0.8.1[ruby_targets_ruby19] dev-ruby/annoy[ruby_targets_ruby19] >=dev-ruby/docile-1.0.1[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://rubygems/rye-0.9.12.gem
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=90e5c1251a918832f2dc12b8acee1677
