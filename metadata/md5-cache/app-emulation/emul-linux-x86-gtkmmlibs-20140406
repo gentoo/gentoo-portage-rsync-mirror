@@ -10,5 +10,5 @@ RDEPEND=~app-emulation/emul-linux-x86-baselibs-20140406 ~app-emulation/emul-linu
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-gtkmmlibs-20140406.tar.xz
-_eclasses_=emul-linux-x86	88309d5605c702df8ef9321c0ee97acb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=emul-linux-x86	6165820f814d92f6f169a096fb56e9bf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=78f5e207225527996c30c1af141d2d19

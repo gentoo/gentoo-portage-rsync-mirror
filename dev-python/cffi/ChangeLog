@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.31 2014/04/09 02:33:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.32 2014/05/08 21:46:43 mgorny Exp $
+
+  08 May 2014; Michał Górny <mgorny@gentoo.org> cffi-0.8.1.ebuild,
+  cffi-0.8.2.ebuild:
+  Add a subslot since upstream requires rebuilding all reverse dependencies
+  (well, regenerating the module cache but in our case it is done during the
+  build) on cffi updates. Bug #506552.
 
   09 Apr 2014; Mike Gilbert <floppym@gentoo.org> cffi-0.8.1.ebuild,
   cffi-0.8.2.ebuild:

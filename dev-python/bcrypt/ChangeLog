@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/bcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.3 2014/03/31 20:27:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.4 2014/05/08 21:56:21 mgorny Exp $
+
+*bcrypt-1.0.2-r1 (08 May 2014)
+
+  08 May 2014; Michał Górny <mgorny@gentoo.org> +bcrypt-1.0.2-r1.ebuild,
+  -bcrypt-1.0.2.ebuild:
+  Add a slot operator on dev-python/cffi dep (bug #506552), and make it
+  conditional to CPython implementations (PyPy has built-in cffi).
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> bcrypt-1.0.2.ebuild:
   Add support for the new PyPy slotting.
