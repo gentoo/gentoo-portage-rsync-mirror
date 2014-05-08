@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.3-r1.ebuild,v 1.10 2014/02/19 01:12:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.3-r1.ebuild,v 1.11 2014/05/08 11:49:43 johu Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ RDEPEND="${COMMON_DEPEND}
 		)
 	idle? ( x11-libs/libXScrnSaver )
 	jingle? ( net-libs/farstream:0.1[python] )
-	kde? ( kde-base/kwallet )
+	kde? ( kde-base/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]
 			net-misc/networkmanager

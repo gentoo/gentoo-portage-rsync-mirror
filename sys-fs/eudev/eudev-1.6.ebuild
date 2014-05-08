@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.6.ebuild,v 1.3 2014/04/28 17:53:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.6.ebuild,v 1.4 2014/05/08 11:47:16 blueness Exp $
 
 EAPI="5"
 
-KV_min=2.6.31
+KV_min=2.6.39
 
 inherit autotools eutils multilib linux-info multilib-minimal
 

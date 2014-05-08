@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.202 2014/05/04 16:14:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.203 2014/05/08 11:49:43 johu Exp $
+
+  08 May 2014; Johannes Huber <johu@gentoo.org> gajim-0.15.3-r1.ebuild,
+  gajim-0.15.4.ebuild, gajim-0.16_beta1.ebuild, gajim-0.16_beta2-r1.ebuild,
+  gajim-0.16_beta2.ebuild, gajim-0.16_rc1.ebuild:
+  Fix dependencies, because Agostino Sarubbo <ago@gentoo.org> is not able to
+  check reverse dependencies.
 
   04 May 2014; Markus Meier <maekke@gentoo.org> gajim-0.16_rc1.ebuild:
   add ~arm, bug #503596

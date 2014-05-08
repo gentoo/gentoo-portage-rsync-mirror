@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15660 2014/05/07 23:06:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15661 2014/05/08 11:54:26 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (08 May 2014)
+# SLOTs 21 and 22 of app-editors/emacs, corresponding to
+# GNU Emacs versions 21.4 and 22.3. These versions were
+# released in February 2005 and September 2008, respectively.
+# Please upgrade to >=app-editors/emacs-23 and update your
+# Emacs Lisp packages with emacs-updater.
+# Multiple security issues with temporary files, bug 509830.
+# Masked since 13 Dec 2011, removal at 07 Jun 2014. Bug 394589.
+=app-editors/emacs-21*
+=app-editors/emacs-22*
+~virtual/emacs-21
+~virtual/emacs-22
 
 # Manuel Rüger <mrueg@gentoo.org> (07 May 2014)
 # Useful for removed ruby18, no-op in ruby19 and later.
@@ -1023,19 +1035,6 @@ kde-misc/kgtk
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
-
-# Ulrich Müller <ulm@gentoo.org> (13 Dec 2011)
-# SLOTs 21 and 22 of app-editors/emacs, corresponding to
-# GNU Emacs versions 21.4 and 22.3. These versions were
-# released in February 2005 and September 2008, respectively.
-# Please upgrade to >=app-editors/emacs-23 and update your
-# Emacs Lisp packages with emacs-updater.
-# Keeping these versions in the tree masked indefinitely,
-# by popular request. Bug 394589.
-=app-editors/emacs-21*
-=app-editors/emacs-22*
-~virtual/emacs-21
-~virtual/emacs-22
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Oct 2011)
 # Working on more reliable versioning, consider experimental for now.

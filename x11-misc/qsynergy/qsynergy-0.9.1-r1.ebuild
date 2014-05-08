@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qsynergy/qsynergy-0.9.1-r1.ebuild,v 1.3 2013/03/02 23:51:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qsynergy/qsynergy-0.9.1-r1.ebuild,v 1.4 2014/05/08 11:42:00 jer Exp $
 
-EAPI=3
+EAPI=5
 
 inherit qt4-r2
 
@@ -19,8 +19,4 @@ DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 	x11-misc/synergy"
 
-src_install () {
-	qt4-r2_src_install
-
-	dodoc README || die "README installation failed"
-}
+DOCS=( README )
