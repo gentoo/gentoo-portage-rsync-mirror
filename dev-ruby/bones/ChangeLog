@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.22 2014/01/08 05:00:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.23 2014/05/08 19:13:29 p8952 Exp $
+
+*bones-3.8.1-r1 (08 May 2014)
+
+  08 May 2014; Peter Wilmott <p8952@gentoo.org> +bones-3.8.1-r1.ebuild:
+  Drop ruby18 target, add ruby21 target.
 
   08 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -bones-3.8.0.ebuild:
   Cleanup old.
