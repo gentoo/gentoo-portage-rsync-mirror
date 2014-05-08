@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vifm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.31 2014/01/18 00:40:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.32 2014/05/08 03:59:46 wired Exp $
+
+  08 May 2014; Alex Alexander <wired@gentoo.org> metadata.xml:
+  maintainer-needed
 
 *vifm-0.7.6 (18 Jan 2014)
 

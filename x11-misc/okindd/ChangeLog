@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/okindd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/ChangeLog,v 1.9 2013/03/02 23:50:34 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/ChangeLog,v 1.10 2014/05/08 04:01:38 wired Exp $
+
+  08 May 2014; Alex Alexander <wired@gentoo.org> metadata.xml:
+  removed myself from maintainers list
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> okindd-0.6.0.ebuild,
   okindd-0.6.1.ebuild:
