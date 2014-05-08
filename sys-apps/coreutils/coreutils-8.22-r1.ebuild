@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.22-r1.ebuild,v 1.1 2014/04/27 19:09:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.22-r1.ebuild,v 1.2 2014/05/08 19:42:07 vapier Exp $
 
 EAPI="3"
 
@@ -156,14 +156,6 @@ pkg_postinst() {
 	ewarn "Make sure you run 'hash -r' in your active shells."
 	ewarn "You should also re-source your shell settings for LS_COLORS"
 	ewarn "  changes, such as: source /etc/profile"
-
-	# /bin/dircolors sometimes sticks around #224823
-	if [ -e "${EROOT}/usr/bin/dircolors" ] && [ -e "${EROOT}/bin/dircolors" ] ; then
-		if strings "${EROOT}/bin/dircolors" | grep -qs "GNU coreutils" ; then
-			einfo "Deleting orphaned GNU /bin/dircolors for you"
-			rm -f "${EROOT}/bin/dircolors"
-		fi
-	fi
 
 	# Help out users using experimental filesystems
 	if grep -qs btrfs "${EROOT}"/etc/fstab /proc/mounts ; then

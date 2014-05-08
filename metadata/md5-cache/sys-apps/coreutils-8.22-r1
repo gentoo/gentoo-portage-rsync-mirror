@@ -10,4 +10,4 @@ RDEPEND=!static? ( acl? ( sys-apps/acl ) caps? ( sys-libs/libcap ) gmp? ( dev-li
 SLOT=0
 SRC_URI=mirror://gnu/coreutils/coreutils-8.22.tar.xz mirror://gentoo/coreutils-8.22-patches-1.1.tar.xz http://dev.gentoo.org/~vapier/dist/coreutils-8.22-patches-1.1.tar.xz mirror://gentoo/coreutils-8.22-man-r1.tar.xz http://dev.gentoo.org/~vapier/dist/coreutils-8.22-man-r1.tar.xz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=61d4b00283561949a010d76b22cd2d94
+_md5_=3a97afac13e3f91c61f1e749c04d9228
