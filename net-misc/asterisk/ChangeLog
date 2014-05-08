@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.480 2014/04/25 19:07:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.481 2014/05/08 09:41:39 chainsaw Exp $
+
+  08 May 2014; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.26.1.ebuild,
+  asterisk-1.8.27.0.ebuild, asterisk-11.8.1.ebuild, asterisk-11.9.0.ebuild,
+  asterisk-12.1.1.ebuild, asterisk-12.2.0.ebuild:
+  Update ebuild dependencies to ensure only the 2.6 slot of gmime is selected.
+  Inverting the search order in the configure script was only a partial fix. As
+  pointed out by Pacho Ramos in bug #439846.
 
 *asterisk-12.2.0 (25 Apr 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.102 2014/04/28 13:17:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.103 2014/05/08 09:51:54 xmw Exp $
+
+*xpra-0.12.5 (08 May 2014)
+
+  08 May 2014; Michael Weber <xmw@gentoo.org> +xpra-0.12.5.ebuild:
+  Version bump
 
 *xpra-0.12.4 (28 Apr 2014)
 

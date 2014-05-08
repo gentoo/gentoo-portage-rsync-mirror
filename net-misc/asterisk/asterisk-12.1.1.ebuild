@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.1.1.ebuild,v 1.1 2014/03/11 09:05:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.1.1.ebuild,v 1.2 2014/05/08 09:41:39 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -50,7 +50,7 @@ RDEPEND="dev-db/sqlite:3
 		net-misc/dahdi-tools )
 	freetds? ( dev-db/freetds )
 	gtalk? ( dev-libs/iksemel )
-	http? ( dev-libs/gmime:2.4 )
+	http? ( dev-libs/gmime:2.6 )
 	iconv? ( virtual/libiconv )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
 	jabber? ( dev-libs/iksemel )
