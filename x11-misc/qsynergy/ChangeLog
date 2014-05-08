@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qsynergy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qsynergy/ChangeLog,v 1.4 2013/03/02 23:51:55 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qsynergy/ChangeLog,v 1.5 2014/05/08 04:03:59 wired Exp $
+
+  08 May 2014; Alex Alexander <wired@gentoo.org> metadata.xml:
+  removed myself from maintainers list
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qsynergy-0.9.1-r1.ebuild:
   Move Qt dependencies to the new category
