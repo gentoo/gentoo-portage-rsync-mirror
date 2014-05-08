@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-9999.ebuild,v 1.1 2014/02/26 18:50:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-9999.ebuild,v 1.2 2014/05/08 12:11:25 jer Exp $
 
 EAPI=5
 
@@ -45,6 +45,9 @@ src_prepare() {
 		#!/bin/sh
 		exec /usr/bin/i3
 	EOF
+
+	epatch "${FILESDIR}"/${PN}-4.7.2-cflags.patch \
+		"${FILESDIR}"/${PN}-4.7.2-parallel_make.patch
 
 	epatch_user #471716
 }
