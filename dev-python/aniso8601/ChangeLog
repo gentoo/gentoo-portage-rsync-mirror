@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/aniso8601
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aniso8601/ChangeLog,v 1.1 2014/05/08 18:08:21 radhermit Exp $
+
+*aniso8601-0.82 (08 May 2014)
+
+  08 May 2014; Tim Harder <radhermit@gentoo.org> +aniso8601-0.82.ebuild,
+  +metadata.xml:
+  Initial import.
+
