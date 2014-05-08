@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwordquiz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.310 2014/05/07 19:43:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.311 2014/05/08 07:32:10 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> kwordquiz-4.12.5.ebuild:
+  Stable for ppc64, wrt bug #504210
 
   07 May 2014; Agostino Sarubbo <ago@gentoo.org> kwordquiz-4.12.5.ebuild:
   Stable for ppc, wrt bug #504210

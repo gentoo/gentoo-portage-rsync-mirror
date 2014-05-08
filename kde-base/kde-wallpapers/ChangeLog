@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.156 2014/05/07 19:42:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.157 2014/05/08 07:32:57 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> kde-wallpapers-4.12.5.ebuild:
+  Stable for ppc64, wrt bug #504210
 
   07 May 2014; Agostino Sarubbo <ago@gentoo.org> kde-wallpapers-4.12.5.ebuild:
   Stable for ppc, wrt bug #504210

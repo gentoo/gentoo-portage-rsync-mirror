@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.209 2014/05/07 19:42:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.210 2014/05/08 07:32:31 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> powerdevil-4.11.9.ebuild:
+  Stable for ppc64, wrt bug #504210
 
   07 May 2014; Agostino Sarubbo <ago@gentoo.org> powerdevil-4.11.9.ebuild:
   Stable for ppc, wrt bug #504210

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.7.2.ebuild,v 1.1 2014/05/07 08:15:58 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.7.2.ebuild,v 1.2 2014/05/08 07:55:12 civil Exp $
 
 EAPI="5"
 
@@ -78,16 +78,16 @@ pkg_postinst() {
 	ewarn "/usr/share/vzctl/scripts/vpsreboot from crontab and use"
 	ewarn "/etc/init.d/vzeventd."
 
-	if !has_version sys-process/criu; then
+	if ! has_version sys-process/criu; then
 		einfo "If you want checkpoint suspend/restore feature in vanilla kernel"
 		einfo "please install sys-process/criu."
 		einfo "This is experimental and not stable (in Gentoo) at the moment."
 	fi
 
-	if !has_version app-arch/xz-utils; then
+	if ! has_version app-arch/xz-utils; then
 		einfo "If you work with xz compressed templates, please install app-arch/xz-utils"
 	fi
-	if !has_version app-crypt/gnupg; then
+	if ! has_version app-crypt/gnupg; then
 		einfo "If you want to check signature of donwloaded template, install app-crypt/gnupg"
 	fi
 }

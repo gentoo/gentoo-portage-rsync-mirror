@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.325 2014/05/07 19:42:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.326 2014/05/08 07:32:24 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> libkonq-4.12.5.ebuild:
+  Stable for ppc64, wrt bug #504210
 
   07 May 2014; Agostino Sarubbo <ago@gentoo.org> libkonq-4.12.5.ebuild:
   Stable for ppc, wrt bug #504210
