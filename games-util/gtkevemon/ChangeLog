@@ -1,6 +1,9 @@
 # ChangeLog for games-util/gtkevemon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/ChangeLog,v 1.5 2012/11/19 11:03:56 wired Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/ChangeLog,v 1.6 2014/05/08 00:45:31 wired Exp $
+
+  08 May 2014; Alex Alexander <wired@gentoo.org> gtkevemon-9999.ebuild:
+  icon format changed to svg, bug #509782
 
   19 Nov 2012; Alex Alexander <wired@gentoo.org> gtkevemon-9999.ebuild:
   fixed bug #437128
