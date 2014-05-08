@@ -2692,6 +2692,8 @@ gnome-base/orbit:pic - Force libname-server-2 to be built as PIC; needed on hard
 gnome-extra/avant-window-navigator:gconf - Enable GConf as configuration backend
 gnome-extra/avant-window-navigator:vala - Enable installation of dev-lang/vala binding
 gnome-extra/avant-window-navigator-extras:gconf - Enable GConf as configuration backend
+gnome-extra/cinnamon-control-center:colord - Support color management using x11-misc/colord
+gnome-extra/cinnamon-control-center:socialweb - Add support for desktop background images from Flickr using net-libs/libsocialweb
 gnome-extra/cinnamon-session:gconf - Support old autostart conditions which use gnome-base/gconf
 gnome-extra/cinnamon-settings-daemon:colord - Support color management using x11-misc/colord
 gnome-extra/evolution-data-server:api-doc-extras - Build documentation for private APIs

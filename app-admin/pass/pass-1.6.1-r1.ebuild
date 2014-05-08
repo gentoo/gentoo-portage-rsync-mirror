@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.1.ebuild,v 1.1 2014/04/24 20:51:25 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.1-r1.ebuild,v 1.1 2014/05/08 02:43:12 zx2c4 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://git.zx2c4.com/password-store/snapshot/password-store-${PV}.tar.x
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~x86-macos"
-IUSE="+git X +bash-completion zsh-completion fish-completion dmenu elibc_Darwin"
+IUSE="+git X zsh-completion fish-completion dmenu elibc_Darwin"
 
 RDEPEND="
 	app-crypt/gnupg
@@ -22,7 +22,6 @@ RDEPEND="
 	git? ( dev-vcs/git )
 	X? ( x11-misc/xclip )
 	elibc_Darwin? ( app-misc/getopt )
-	bash-completion? ( app-shells/bash-completion )
 	zsh-completion? ( app-shells/zsh )
 	fish-completion? ( app-shells/fish )
 	dmenu? ( x11-misc/dmenu )
@@ -45,9 +44,9 @@ src_compile() {
 }
 
 src_install() {
-	use bash-completion && export FORCE_BASHCOMP=1
 	use zsh-completion && export FORCE_ZSHCOMP=1
 	use fish-completion && export FORCE_FISHCOMP=1
 	default
 	use dmenu && dobin contrib/dmenu/passmenu
+	newbashcomp src/completion/pass.bash-completion pass
 }
