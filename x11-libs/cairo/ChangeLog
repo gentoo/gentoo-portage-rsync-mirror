@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.377 2014/05/04 17:51:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.378 2014/05/08 02:31:31 tetromino Exp $
+
+  08 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> cairo-9999.ebuild,
+  files/cairo-1.12.16-all-clipped-3.patch:
+  Patch applied upstream, thanks to Yannick Schaeffer (bug #509770).
 
   04 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   cairo-1.12.16-r3.ebuild, cairo-9999.ebuild:
