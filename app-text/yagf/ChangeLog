@@ -1,6 +1,12 @@
 # ChangeLog for app-text/yagf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.20 2013/03/24 15:39:45 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.21 2014/05/08 10:01:37 pinkbyte Exp $
+
+*yagf-0.9.3.2 (08 May 2014)
+
+  08 May 2014; Sergey Popov <pinkbyte@gentoo.org> +yagf-0.9.3.2.ebuild:
+  Version bump, wrt bug #508786. Thanks to Nikoli <nikoli AT gmx.us> for
+  discovering this issue
 
   24 Mar 2013; Markos Chandras <hwoarang@gentoo.org> yagf-0.9.2.ebuild:
   Default to tesseract implementation
