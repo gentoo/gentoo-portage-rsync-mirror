@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.230 2014/05/08 07:33:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.231 2014/05/08 10:32:56 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> -libkworkspace-4.11.5.ebuild:
+  Remove old
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> libkworkspace-4.11.9.ebuild:
   Stable for ppc64, wrt bug #504210

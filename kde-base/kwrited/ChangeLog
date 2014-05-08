@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.197 2014/05/08 08:36:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.198 2014/05/08 10:32:53 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> -kwrited-4.11.5.ebuild:
+  Remove old
 
   08 May 2014; Mikle Kolyada <zlogene@gentoo.org> kwrited-4.11.9.ebuild:
   amd64 stable wrt bug #504210

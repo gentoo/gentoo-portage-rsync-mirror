@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.190 2014/05/08 07:32:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.191 2014/05/08 10:32:58 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> -mplayerthumbs-4.11.5.ebuild:
+  Remove old
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> mplayerthumbs-4.12.5.ebuild:
   Stable for ppc64, wrt bug #504210

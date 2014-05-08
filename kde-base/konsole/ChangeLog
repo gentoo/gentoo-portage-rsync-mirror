@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.334 2014/05/08 07:32:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.335 2014/05/08 10:32:39 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> -konsole-4.11.5.ebuild:
+  Remove old
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> konsole-4.12.5.ebuild:
   Stable for ppc64, wrt bug #504210

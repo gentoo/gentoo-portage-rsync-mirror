@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.327 2014/05/08 07:32:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.328 2014/05/08 10:32:17 ago Exp $
+
+  08 May 2014; Agostino Sarubbo <ago@gentoo.org> -kdebase-meta-4.11.5.ebuild:
+  Remove old
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> kdebase-meta-4.12.5.ebuild:
   Stable for ppc64, wrt bug #504210
