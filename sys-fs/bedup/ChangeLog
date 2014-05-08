@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/bedup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.4 2014/03/29 10:33:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.5 2014/05/08 22:23:31 mgorny Exp $
+
+  08 May 2014; Michał Górny <mgorny@gentoo.org> bedup-9999.ebuild:
+  Add a slot operator on dev-python/cffi dep (bug #506552).
 
   29 Mar 2014; Michał Górny <mgorny@gentoo.org> bedup-9999.ebuild:
   Use git-r3.

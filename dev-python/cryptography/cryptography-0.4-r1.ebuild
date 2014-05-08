@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.4.ebuild,v 1.1 2014/05/07 05:56:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.4-r1.ebuild,v 1.1 2014/05/08 22:02:34 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -18,7 +18,7 @@ IUSE="test"
 
 RDEPEND="dev-libs/openssl:0
 	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
-	>=dev-python/cffi-0.8[${PYTHON_USEDEP}]"
+	$(python_gen_cond_dep '>=dev-python/cffi-0.8:=[${PYTHON_USEDEP}]' python*)"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (

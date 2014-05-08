@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.12 2014/05/07 05:56:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.13 2014/05/08 22:02:34 mgorny Exp $
+
+*cryptography-0.4-r1 (08 May 2014)
+
+  08 May 2014; Michał Górny <mgorny@gentoo.org> +cryptography-0.4-r1.ebuild,
+  -cryptography-0.2.1.ebuild, -cryptography-0.2.2.ebuild,
+  -cryptography-0.3.ebuild, -cryptography-0.4.ebuild:
+  Add a slot operator on dev-python/cffi dep (bug #506552), and make it
+  conditional to CPython implementations (PyPy has built-in cffi). Drop old.
 
 *cryptography-0.4 (07 May 2014)
 

@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/weasyprint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/ChangeLog,v 1.6 2014/01/14 02:59:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/ChangeLog,v 1.7 2014/05/08 22:20:28 mgorny Exp $
+
+*weasyprint-0.21-r1 (08 May 2014)
+
+  08 May 2014; Michał Górny <mgorny@gentoo.org> +weasyprint-0.21-r1.ebuild,
+  -weasyprint-0.19.2.ebuild, -weasyprint-0.20.2.ebuild, -weasyprint-0.20.ebuild,
+  -weasyprint-0.21.ebuild:
+  Add a slot operator on dev-python/cffi dep (bug #506552), and subslot dep on
+  pango (due to inlined headers). Cairo seems to be used via cairocffi only.
+  Drop old.
 
 *weasyprint-0.21 (14 Jan 2014)
 
