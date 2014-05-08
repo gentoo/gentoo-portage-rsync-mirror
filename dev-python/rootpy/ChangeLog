@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rootpy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rootpy/ChangeLog,v 1.1 2013/08/12 17:32:01 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rootpy/ChangeLog,v 1.2 2014/05/08 07:08:35 heroxbd Exp $
+
+  08 May 2014; Benda Xu <heroxbd@gentoo.org> rootpy-0.7.1.ebuild:
+  declare DISTUTILS_SINGLE_IMPL=1 because sci-lib/root inherits python-single-r1
 
 *rootpy-0.7.1 (12 Aug 2013)
 

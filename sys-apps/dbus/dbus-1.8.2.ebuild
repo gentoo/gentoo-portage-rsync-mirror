@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.2.ebuild,v 1.1 2014/05/01 17:32:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.2.ebuild,v 1.2 2014/05/08 07:18:05 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -220,5 +220,5 @@ pkg_postinst() {
 	# for DBUS_MACHINE_UUID_FILE (see tools/dbus-launch.c) and reverse
 	# dependencies with hardcoded paths (although the known ones got fixed already)
 	dbus-uuidgen --ensure="${EROOT%/}"/etc/machine-id
-	ln -sf "${EROOT}"/etc/machine-id "${EROOT%/}"/var/lib/dbus/machine-id
+	ln -sf "${EROOT%/}"/etc/machine-id "${EROOT%/}"/var/lib/dbus/machine-id
 }
