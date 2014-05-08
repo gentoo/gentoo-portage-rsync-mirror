@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/fricas
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/ChangeLog,v 1.21 2013/10/14 11:07:21 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/ChangeLog,v 1.22 2014/05/08 09:19:16 grozin Exp $
+
+*fricas-1.2.3 (08 May 2014)
+
+  08 May 2014; Andrey Grozin <grozin@gentoo.org> -fricas-1.2.1.ebuild,
+  +fricas-1.2.3.ebuild, -files/fricas-1.2.0-noinit.patch:
+  Version bump
 
 *fricas-1.2.2 (14 Oct 2013)
 
