@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.152 2013/12/31 00:30:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.155 2014/05/08 20:25:24 vapier Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ case ${PV} in
 	#SRC_URI="!java? ( mirror://gentoo/${P}-20130413-generated-addons.tar.xz )"
 	;;
 *_alpha*|*_beta*|*_rc*)
-	MY_PV="Frodo_${PV#*_}"
+	MY_PV="Helix_${PV#*_}"
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="https://github.com/xbmc/xbmc/archive/${MY_PV}.tar.gz -> ${P}.tar.gz
 		!java? ( mirror://gentoo/${P}-generated-addons.tar.xz )"
@@ -36,7 +36,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql neon nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl sse sse2 sftp udev upnp +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl sse sse2 sftp udev upnp +usb vaapi vdpau webserver +X +xrandr"
 REQUIRED_USE="
 	pvr? ( mysql )
 	rsxs? ( X )
@@ -232,7 +232,6 @@ src_configure() {
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
 		$(use_enable mysql) \
-		$(use_enable neon) \
 		$(use_enable nfs) \
 		$(use_enable opengl gl) \
 		$(use_enable profile profiling) \
@@ -258,7 +257,7 @@ src_install() {
 	rm "${ED}"/usr/share/doc/*/{LICENSE.GPL,copying.txt}*
 
 	domenu tools/Linux/xbmc.desktop
-	newicon tools/Linux/xbmc-48x48.png xbmc.png
+	newicon media/icon48x48.png xbmc.png
 
 	# Remove optional addons (platform specific and disabled by USE flag).
 	local disabled_addons=(

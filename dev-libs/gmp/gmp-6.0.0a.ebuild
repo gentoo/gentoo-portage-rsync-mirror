@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-6.0.0a.ebuild,v 1.1 2014/03/26 05:52:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-6.0.0a.ebuild,v 1.2 2014/05/08 20:01:45 vapier Exp $
 
 EAPI="4"
 
@@ -80,7 +80,7 @@ multilib_src_compile() {
 		ebegin "Trying to generate tuned data"
 		./tune/tuneup | tee gmp.mparam.h.new
 		if eend $(( 0 + ${PIPESTATUS[*]/#/+} )) ; then
-			mv gmp-mparam.h.new gmp-mparam.h
+			mv gmp.mparam.h.new gmp-mparam.h || die
 			emake clean
 			emake
 		fi
