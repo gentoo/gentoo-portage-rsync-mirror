@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.141 2014/04/19 18:11:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.142 2014/05/08 05:41:50 idella4 Exp $
+
+  08 May 2014; Ian Delaney <idella4@gentoo.org> logilab-common-0.61.0.ebuild:
+  drop py2.6 pypy2_0 add py3.4 support, minor tidy, upgrade test phase
 
   19 Apr 2014; Michał Górny <mgorny@gentoo.org> logilab-common-0.61.0.ebuild:
   Use ${PYTHON_USEDEP} substitution support added to python_gen_cond_dep().
