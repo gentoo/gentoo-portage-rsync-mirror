@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.103 2014/04/12 07:01:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.104 2014/05/08 05:24:56 naota Exp $
+
+*freebsd-sources-9.1-r7 (08 May 2014)
+
+  08 May 2014; Naohiro Aota <naota@gentoo.org>
+  +files/freebsd-sources-9.1-tcp.patch, +freebsd-sources-9.1-r7.ebuild,
+  -freebsd-sources-9.1-r6.ebuild:
+  Add a patch for CVE-2014-3000. #509170
 
 *freebsd-sources-9.1-r6 (12 Apr 2014)
 
