@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.226 2014/05/08 10:32:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.227 2014/05/08 21:21:47 johu Exp $
+
+  08 May 2014; Johannes Huber <johu@gentoo.org>
+  -files/libkdcraw-4.10.90-extlibraw.patch:
+  Remove unused patch.
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> -libkdcraw-4.11.5.ebuild:
   Remove old
