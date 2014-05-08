@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.7 2014/05/05 02:39:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.8 2014/05/08 12:51:24 chithanh Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -391,6 +391,7 @@ x11-libs/libXfixes abi_x86_32
 x11-libs/libXft abi_x86_32
 x11-libs/libXi abi_x86_32
 x11-libs/libXinerama abi_x86_32
+x11-libs/libxkbcommon abi_x86_32
 x11-libs/libXmu abi_x86_32
 x11-libs/libXp abi_x86_32
 x11-libs/libXpm abi_x86_32
