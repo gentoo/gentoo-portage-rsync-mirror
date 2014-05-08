@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ksystraycmd-4.11.9.ebuild,v 1.4 2014/05/08 07:32:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ksystraycmd-4.11.9.ebuild,v 1.5 2014/05/08 08:38:14 zlogene Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KMNAME="kde-workspace"
 inherit kde4-meta
 
 DESCRIPTION="Ksystraycmd embeds applications given as argument into the system tray."
-KEYWORDS="~amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="x11-libs/libX11"
