@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.35 2014/05/04 10:42:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.36 2014/05/09 20:46:43 hwoarang Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ SLOT="0"
 IUSE="cmsis-dap dummy ftdi parport +usb verbose-io"
 RESTRICT="strip" # includes non-native binaries
 
-RDEPEND=">=dev-lang/jimtcl-0.73
+RDEPEND=">=dev-lang/jimtcl-0.75
 	cmsis-dap? ( dev-libs/hidapi )
 	usb? (
 		virtual/libusb:0

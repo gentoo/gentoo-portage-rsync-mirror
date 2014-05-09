@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.20 2014/04/05 13:50:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.21 2014/05/09 20:45:27 p8952 Exp $
+
+*bcat-0.6.2-r2 (09 May 2014)
+
+  09 May 2014; Peter Wilmott <p8952@gentoo.org> +bcat-0.6.2-r2.ebuild:
+  Add ruby21 target.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> bcat-0.6.2-r1.ebuild,
   bcat-0.6.2.ebuild:

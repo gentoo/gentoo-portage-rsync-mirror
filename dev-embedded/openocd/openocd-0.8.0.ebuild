@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.8.0_rc2.ebuild,v 1.3 2014/05/04 10:42:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.8.0.ebuild,v 1.1 2014/05/09 20:46:43 hwoarang Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ SLOT="0"
 IUSE="cmsis-dap dummy ftdi parport +usb verbose-io"
 RESTRICT="strip" # includes non-native binaries
 
-RDEPEND=">=dev-lang/jimtcl-0.73
+RDEPEND=">=dev-lang/jimtcl-0.75
 	cmsis-dap? ( dev-libs/hidapi )
 	usb? (
 		virtual/libusb:0
@@ -40,6 +40,10 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch_user
+
+	# jimtcl-0.75 compatibility. Remove it on the
+	# next version bump
+	epatch "${FILESDIR}"/${P}-jimtcl-0.75.patch
 
 	if [[ ${PV} == "9999" ]] ; then
 		AT_NO_RECURSIVE=yes eautoreconf
