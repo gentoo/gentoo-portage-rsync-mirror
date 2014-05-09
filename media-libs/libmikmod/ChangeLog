@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.118 2014/04/21 16:06:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.120 2014/05/09 16:04:27 ssuominen Exp $
+
+  09 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -libmikmod-3.2.0-r1.ebuild, -libmikmod-3.3.2.ebuild, -libmikmod-3.3.3.ebuild,
+  -libmikmod-3.3.4.ebuild:
+  old
+
+  09 May 2014; Samuli Suominen <ssuominen@gentoo.org> libmikmod-3.3.6.ebuild:
+  Update REQUIRED_USE to match current IUSE wrt #508956 by "Thomas"
 
   21 Apr 2014; Chema Alonso <nimiux@gentoo.org> libmikmod-3.3.5.ebuild:
   Stable for amd64 wrt bug #495798
