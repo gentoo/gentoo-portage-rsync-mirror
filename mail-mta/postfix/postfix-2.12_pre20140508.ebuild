@@ -1,15 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10.0.ebuild,v 1.14 2013/04/14 11:42:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.12_pre20140508.ebuild,v 1.1 2014/05/09 12:12:13 eras Exp $
 
 EAPI=5
-inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
+inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
 
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_PV="2.9.5"
-VDA_P="${PN}-vda-v11-${VDA_PV}"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
+VDA_PV="2.10.0"
+VDA_P="${PN}-vda-v13-${VDA_PV}"
 RC_VER="2.7"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
@@ -19,8 +19,8 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
+IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind lmdb memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
@@ -28,6 +28,7 @@ DEPEND=">=dev-libs/libpcre-3.4
 	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
 	ldap? ( net-nds/openldap )
 	ldap-bind? ( net-nds/openldap[sasl] )
+	lmdb? ( >=dev-db/lmdb-0.9.11 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
@@ -108,6 +109,11 @@ src_configure() {
 		mylibs="${mylibs} -lssl -lcrypto"
 	fi
 
+	if use lmdb; then
+		mycc="${mycc} -DHAS_LMDB"
+		mylibs="${mylibs} -llmdb"
+	fi
+
 	# broken. and "in other words, not supported" by upstream.
 	# Use inet_protocols setting in main.cf
 	#if ! use ipv6; then
@@ -129,15 +135,14 @@ src_configure() {
 	fi
 
 	if ! use nis; then
-		sed -i -e "s|#define HAS_NIS|//#define HAS_NIS|g" \
-			src/util/sys_defs.h || die "sed failed"
+		mycc="${mycc} -DNO_NIS"
 	fi
 
 	if ! use berkdb; then
 		mycc="${mycc} -DNO_DB"
 		if use cdb; then
 			# change default hash format from Berkeley DB to cdb
-			sed -i -e "s/hash/cdb/" src/util/sys_defs.h || die
+			mycc="${mycc} -DDEF_DB_TYPE=\\\"cdb\\\""
 		fi
 	fi
 
@@ -203,9 +208,11 @@ src_install () {
 	# Provide another link for legacy FSH
 	dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
 
-	# Install qshape tool
+	# Install qshape tool and posttls-finger
 	dobin auxiliary/qshape/qshape.pl
 	doman man/man1/qshape.1
+	dobin bin/posttls-finger
+	doman man/man1/posttls-finger.1
 
 	# Performance tuning tools and their manuals
 	dosbin bin/smtp-{source,sink} bin/qmqp-{source,sink}
@@ -255,6 +262,8 @@ src_install () {
 	# Remove unnecessary files
 	rm -f "${D}"/etc/postfix/{*LICENSE,access,aliases,canonical,generic}
 	rm -f "${D}"/etc/postfix/{header_checks,relocated,transport,virtual}
+
+	systemd_dounit "${FILESDIR}/${PN}.service"
 }
 
 pkg_preinst() {
@@ -273,22 +282,6 @@ pkg_preinst() {
 			# delete inet_protocols setting. there is already one in /etc/postfix
 			sed -i -e /inet_protocols/d "${D}"/etc/postfix/main.cf || die
 		fi
-	fi
-	}
-
-	# Postfix 2.10.
-	# Safety net for incompatible changes due to the introduction
-	# of the smtpd_relay_restrictions feature to separate the
-	# mail relay policy from the spam blocking policy.
-	[[ -d ${ROOT}/etc/postfix ]] && has_version '<=mail-mta/postfix-2.9.99' && {
-	if [[ -z "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -n smtpd_relay_restrictions)" ]];
-	then
-		local myconf="smtpd_relay_restrictions=permit_mynetworks,permit_sasl_authenticated,defer_unauth_destination"
-		ewarn "\nCOMPATIBILITY: adding smtpd_relay_restrictions to main.cf"
-		ewarn "to prevent inbound mail from unexpectedly bouncing."
-		ewarn "Specify an empty smtpd_relay_restrictions value to keep using"
-		ewarn "smtpd_recipient_restrictions as before.\n"
-		"${D}"/usr/sbin/postconf -c "${D}"/etc/postfix -e ${myconf} || die
 	fi
 	}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.14 2014/05/09 11:48:09 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.15 2014/05/09 12:10:53 zx2c4 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="http://git.zx2c4.com/password-store"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS=""
-IUSE="+git X zsh-completion fish-completion emacs dmenu elibc_Darwin"
+IUSE="+git X zsh-completion fish-completion emacs dmenu importers elibc_Darwin"
 
 RDEPEND="
 	app-crypt/gnupg
@@ -54,10 +54,19 @@ src_install() {
 		elisp-install ${PN} contrib/emacs/*.el || die
 		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" || die
 	fi
+	if use importers; then
+		exeinto /usr/share/${PN}/importers
+		doexe contrib/importers/*
+	fi
 }
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
+	if use importers; then
+		einfo "To import passwords from other password managers, you may use the"
+		einfo "various importer scripts found in:"
+		einfo "    ${ROOT}usr/share/${PN}/importers/"
+	fi
 }
 
 pkg_postrm() {
