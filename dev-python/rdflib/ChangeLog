@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.41 2014/04/22 09:23:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.42 2014/05/09 05:09:56 patrick Exp $
+
+*rdflib-4.1.2 (09 May 2014)
+
+  09 May 2014; Patrick Lauer <patrick@gentoo.org> +rdflib-4.1.2.ebuild:
+  Bump
 
 *rdflib-4.1.1 (22 Apr 2014)
 

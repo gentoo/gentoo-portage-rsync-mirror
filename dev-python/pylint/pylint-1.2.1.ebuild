@@ -1,7 +1,6 @@
-
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.2.1.ebuild,v 1.1 2014/05/09 02:51:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.2.1.ebuild,v 1.2 2014/05/09 05:21:12 patrick Exp $
 
 EAPI=5
 
@@ -36,7 +35,6 @@ python_prepare_all () {
 	use doc && emake -C doc singlehtml
 	distutils-r1_python_prepare_all
 }
-
 
 python_test() {
 	# Test suite appears not to work under Python 3.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.9 2014/05/09 05:17:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.4.ebuild,v 1.1 2014/05/09 05:17:38 wired Exp $
 
 EAPI=5
 
