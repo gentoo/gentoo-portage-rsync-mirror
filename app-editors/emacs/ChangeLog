@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.615 2014/05/08 18:21:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.616 2014/05/09 06:17:32 ulm Exp $
+
+*emacs-24.3-r6 (09 May 2014)
+*emacs-23.4-r10 (09 May 2014)
+
+  09 May 2014; Ulrich Müller <ulm@gentoo.org> -emacs-23.4-r9.ebuild,
+  +emacs-23.4-r10.ebuild, -emacs-24.3-r5.ebuild, +emacs-24.3-r6.ebuild:
+  Use upstream patch for browse-url, CVE-2014-3423, bug 509830.
 
 *emacs-24.3-r5 (08 May 2014)
 *emacs-23.4-r9 (08 May 2014)

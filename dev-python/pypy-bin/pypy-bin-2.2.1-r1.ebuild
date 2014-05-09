@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.2.1-r1.ebuild,v 1.1 2014/05/03 18:00:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.2.1-r1.ebuild,v 1.2 2014/05/09 06:10:04 mgorny Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ REQUIRED_USE="!jit? ( !shadowstack )
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +jit shadowstack sqlite sse2 test"
+IUSE="doc +jit shadowstack sqlite sse2 test tk"
 
 # yep, world would be easier if people started filling subslots...
 RDEPEND="
@@ -72,6 +72,7 @@ RDEPEND="
 	( <sys-libs/zlib-1.2.9:0
 		>=sys-libs/zlib-1.2.7:0 )
 	sqlite? ( dev-db/sqlite:3 )
+	tk? ( dev-lang/tk:0 )
 	!dev-python/pypy:0"
 DEPEND="app-arch/xz-utils
 	doc? ( dev-python/sphinx )
@@ -121,8 +122,14 @@ src_install() {
 	dodoc README.rst
 
 	if ! use sqlite; then
-		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/sqlite3 || die
-		rm "${ED%/}${INSDESTTREE}"/lib_pypy/_sqlite3.py || die
+		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/sqlite3 \
+			"${ED%/}${INSDESTTREE}"/lib_pypy/_sqlite3.py \
+			"${ED%/}${INSDESTTREE}"/lib-python/*2.7/test/test_sqlite.py || die
+	fi
+	if ! use tk; then
+		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/{idlelib,lib-tk} \
+			"${ED%/}${INSDESTTREE}"/lib_pypy/_tkinter \
+			"${ED%/}${INSDESTTREE}"/lib-python/*2.7/test/test_{tcl,tk,ttk*}.py || die
 	fi
 
 	# Install docs
@@ -146,9 +153,13 @@ src_install() {
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
 
 	# Generate cffi cache
-	"${PYTHON}" -c "import _curses" || die "Failed to import _curses"
+	"${PYTHON}" -c "import _curses" || die "Failed to import _curses (cffi)"
+	"${PYTHON}" -c "import syslog" || die "Failed to import syslog (cffi)"
 	if use sqlite; then
-		"${PYTHON}" -c "import _sqlite3" || die "Failed to import _sqlite3"
+		"${PYTHON}" -c "import _sqlite3" || die "Failed to import _sqlite3 (cffi)"
+	fi
+	if use tk; then
+		"${PYTHON}" -c "import _tkinter" || die "Failed to import _tkinter (cffi)"
 	fi
 
 	# compile the installed modules

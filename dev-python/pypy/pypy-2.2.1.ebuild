@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.4 2014/04/11 08:20:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.5 2014/05/09 06:12:21 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://bitbucket/pypy/pypy/downloads/${P}-src.tar.bz2"
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 doc +jit ncurses sandbox shadowstack sqlite sse2"
+IUSE="bzip2 doc +jit ncurses sandbox shadowstack sqlite sse2 tk"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
 	virtual/libffi
@@ -25,6 +25,7 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	bzip2? ( app-arch/bzip2 )
 	ncurses? ( sys-libs/ncurses )
 	sqlite? ( dev-db/sqlite:3 )
+	tk? ( dev-lang/tk:0 )
 	!dev-python/pypy-bin:0"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
@@ -127,8 +128,14 @@ src_install() {
 	dodoc README.rst
 
 	if ! use sqlite; then
-		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/sqlite3 || die
-		rm "${ED%/}${INSDESTTREE}"/lib_pypy/_sqlite3.py || die
+		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/sqlite3 \
+			"${ED%/}${INSDESTTREE}"/lib_pypy/_sqlite3.py \
+			"${ED%/}${INSDESTTREE}"/lib-python/*2.7/test/test_sqlite.py || die
+	fi
+	if ! use tk; then
+		rm -r "${ED%/}${INSDESTTREE}"/lib-python/*2.7/{idlelib,lib-tk} \
+			"${ED%/}${INSDESTTREE}"/lib_pypy/_tkinter \
+			"${ED%/}${INSDESTTREE}"/lib-python/*2.7/test/test_{tcl,tk,ttk*}.py || die
 	fi
 
 	# Install docs
@@ -152,9 +159,13 @@ src_install() {
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
 
 	# Generate cffi cache
-	"${PYTHON}" -c "import _curses" || die "Failed to import _curses"
+	"${PYTHON}" -c "import _curses" || die "Failed to import _curses (cffi)"
+	"${PYTHON}" -c "import syslog" || die "Failed to import syslog (cffi)"
 	if use sqlite; then
-		"${PYTHON}" -c "import _sqlite3" || die "Failed to import _sqlite3"
+		"${PYTHON}" -c "import _sqlite3" || die "Failed to import _sqlite3 (cffi)"
+	fi
+	if use tk; then
+		"${PYTHON}" -c "import _tkinter" || die "Failed to import _tkinter (cffi)"
 	fi
 
 	# compile the installed modules

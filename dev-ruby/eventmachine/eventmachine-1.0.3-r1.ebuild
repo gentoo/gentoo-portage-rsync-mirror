@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-1.0.3-r1.ebuild,v 1.3 2014/04/05 14:48:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-1.0.3-r1.ebuild,v 1.4 2014/05/09 06:26:56 graaff Exp $
 
 EAPI=5
 # jruby → has shims for Java handling but tests fail badly, remaining
 # stuck; avoid that for now.
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC="yard"
 RUBY_FAKEGEM_DOCDIR="rdoc"
