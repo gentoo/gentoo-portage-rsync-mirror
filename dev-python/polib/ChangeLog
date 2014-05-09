@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/polib
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polib/ChangeLog,v 1.1 2014/05/09 03:41:48 tetromino Exp $
+
+*polib-1.0.4 (09 May 2014)
+
+  09 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +polib-1.0.4.ebuild,
+  +metadata.xml:
+  New package, required for gnome-extra/nemo; thanks to pavel sanda for
+  submitted ebuild (bug #456994).
+
