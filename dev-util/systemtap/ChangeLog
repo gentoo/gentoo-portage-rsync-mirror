@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.115 2014/03/10 21:45:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.116 2014/05/09 19:10:23 swegener Exp $
+
+  09 May 2014; Sven Wegener <swegener@gentoo.org> systemtap-2.4-r1.ebuild:
+  Use PYTHON_REQUIRED_USE, bug #506540.
 
   10 Mar 2014; Sven Wegener <swegener@gentoo.org> systemtap-2.4.ebuild,
   systemtap-2.4-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.79 2014/05/08 21:48:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.80 2014/05/09 19:08:55 ulm Exp $
+
+  09 May 2014; Ulrich Müller <ulm@gentoo.org>
+  emul-linux-x86-sdl-20140406-r2.ebuild, emul-linux-x86-sdl-20140508.ebuild:
+  Fix LICENSE, this is a metapackage with USE=abi_x86_32.
 
 *emul-linux-x86-sdl-20140508 (08 May 2014)
 
