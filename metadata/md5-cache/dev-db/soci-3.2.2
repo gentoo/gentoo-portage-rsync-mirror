@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=boost? ( dev-libs/boost ) firebird? ( dev-db/firebird ) mysql? ( virtual/mysql ) odbc? ( dev-db/unixODBC ) oracle? ( dev-db/oracle-instantclient-basic ) postgres? ( dev-db/postgresql-base ) sqlite? ( dev-db/sqlite:3 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=A db access library for C++ that makes the illusion of embedding SQL queries in the regular C++ code
+EAPI=5
+HOMEPAGE=http://soci.sourceforge.net/
+IUSE=boost doc +empty firebird mysql odbc oracle postgres sqlite
+KEYWORDS=~amd64 ~x86
+LICENSE=Boost-1.0
+RDEPEND=boost? ( dev-libs/boost ) firebird? ( dev-db/firebird ) mysql? ( virtual/mysql ) odbc? ( dev-db/unixODBC ) oracle? ( dev-db/oracle-instantclient-basic ) postgres? ( dev-db/postgresql-base ) sqlite? ( dev-db/sqlite:3 )
+SLOT=0
+SRC_URI=mirror://sourceforge/soci/soci-3.2.2.zip
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=48d337f6bb1faa0da1a006c34c3a9f72

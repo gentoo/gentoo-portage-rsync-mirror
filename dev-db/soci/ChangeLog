@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/soci
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/soci/ChangeLog,v 1.1 2014/05/09 22:06:24 jauhien Exp $
+
+*soci-3.2.2 (09 May 2014)
+
+  09 May 2014; Jauhien Piatlicki <jauhien@gentoo.org> +metadata.xml,
+  +soci-3.2.2.ebuild:
+  Import from sunrise, closing bug #156506
