@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.13 2014/05/08 03:03:15 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.14 2014/05/09 11:48:09 zx2c4 Exp $
 
 EAPI=4
 
-inherit bash-completion-r1 git-2
+inherit bash-completion-r1 git-2 elisp-common
 
 DESCRIPTION="Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git"
 HOMEPAGE="http://zx2c4.com/projects/password-store/"
@@ -13,7 +13,7 @@ EGIT_REPO_URI="http://git.zx2c4.com/password-store"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS=""
-IUSE="+git X zsh-completion fish-completion dmenu elibc_Darwin"
+IUSE="+git X zsh-completion fish-completion emacs dmenu elibc_Darwin"
 
 RDEPEND="
 	app-crypt/gnupg
@@ -25,6 +25,7 @@ RDEPEND="
 	zsh-completion? ( app-shells/zsh-completion )
 	fish-completion? ( app-shells/fish )
 	dmenu? ( x11-misc/dmenu )
+	emacs? ( virtual/emacs )
 "
 
 S="${WORKDIR}/password-store-${PV}"
@@ -49,4 +50,16 @@ src_install() {
 	default
 	use dmenu && dobin contrib/dmenu/passmenu
 	newbashcomp src/completion/pass.bash-completion pass
+	if use emacs; then
+		elisp-install ${PN} contrib/emacs/*.el || die
+		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" || die
+	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
