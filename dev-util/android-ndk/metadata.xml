@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>cardoe@gentoo.org</email>
 		<name>Doug Goldstein</name>
@@ -11,7 +10,6 @@
 	<maintainer>
 		<email>piatlicki@gmail.com</email>
 		<name>Jauhien Piatlicki</name>
-		<description>Proxy maintainer</description>
 	</maintainer>
 
 	<use>

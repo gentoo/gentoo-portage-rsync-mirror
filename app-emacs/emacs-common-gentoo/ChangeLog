@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.98 2014/05/05 07:03:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.99 2014/05/09 15:54:28 jer Exp $
+
+  09 May 2014; Jeroen Roovers <jer@gentoo.org>
+  emacs-common-gentoo-1.4-r1.ebuild:
+  Stable for HPPA (bug #509830).
 
 *emacs-common-gentoo-1.4-r1 (05 May 2014)
 
