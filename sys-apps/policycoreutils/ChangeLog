@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.133 2014/04/28 19:44:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.134 2014/05/09 18:39:16 swift Exp $
+
+*policycoreutils-2.3_rc1-r1 (09 May 2014)
+
+  09 May 2014; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.2.5-r4.ebuild, +policycoreutils-2.3_rc1-r1.ebuild:
+  Do not build seunshare/sesandbox, cfr bug #509896
 
 *policycoreutils-2.3_rc1 (28 Apr 2014)
 
