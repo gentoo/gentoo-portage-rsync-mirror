@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.8.3.ebuild,v 1.1 2013/12/30 22:19:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.8.3.ebuild,v 1.2 2014/05/09 20:12:09 hasufell Exp $
 
 EAPI=5
 
@@ -55,6 +55,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	opengl? ( media-libs/glm )"
+
+PATCHES=( "${FILESDIR}"/${P}-freetype.patch )
 
 src_configure() {
 	# http://www.cegui.org.uk/mantis/view.php?id=991

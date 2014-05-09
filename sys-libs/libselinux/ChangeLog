@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.119 2014/04/30 17:11:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.120 2014/05/09 20:29:15 swift Exp $
+
+*libselinux-2.3 (09 May 2014)
+
+  09 May 2014; Sven Vermeulen <swift@gentoo.org> +libselinux-2.3.ebuild:
+  Bump to 2.3
 
   30 Apr 2014; Sven Vermeulen <swift@gentoo.org> libselinux-2.2.2-r5.ebuild:
   Fix bug #509004 by stabilizing r5 (enable ruby bindings)

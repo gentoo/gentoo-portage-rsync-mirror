@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/tagainijisho-1.0.2.ebuild,v 1.4 2014/05/08 00:23:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/tagainijisho-1.0.2.ebuild,v 1.5 2014/05/09 20:21:29 calchan Exp $
 
 EAPI=5
 
@@ -38,10 +38,10 @@ src_configure() {
 	local cmake_linguas
 	for lingua in $(sed -e 's/;/ /g' -ne '/set(DICT_LANG ".*")/s/.*"\(.*\)".*/\1/p' CMakeLists.txt); do
 		if use linguas_${lingua}; then
-			cmake_linguas+="${lingua};"
+			cmake_linguas+=";${lingua}"
 		fi
 	done
-	mycmakeargs=( -DDICT_LANG=${cmake_linguas} )
+	mycmakeargs=( -DDICT_LANG="${cmake_linguas};" )
 
 	cmake-utils_src_configure
 }

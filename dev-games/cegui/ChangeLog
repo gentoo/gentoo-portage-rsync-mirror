@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/cegui
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.63 2013/12/30 22:19:19 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.64 2014/05/09 20:12:09 hasufell Exp $
+
+  09 May 2014; Julian Ospald <hasufell@gentoo.org> cegui-0.8.3.ebuild,
+  +files/cegui-0.8.3-freetype.patch:
+  fix build with >=freetype-2.5.1 wrt #509180
 
 *cegui-0.8.3 (30 Dec 2013)
 
