@@ -5,5 +5,8 @@
 		<email>rafaelmartins@gentoo.org</email>
 		<name>Rafael G. Martins</name>
 	</maintainer>
+        	<maintainer>
+		<email>jauhien@gentoo.org</email>
+		<name>Jauhien Piatlicki</name>
+	</maintainer>
 </pkgmetadata>
-
