@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-0.9.0_p20140413.ebuild,v 1.1 2014/05/08 22:37:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-0.9.0_p20140413.ebuild,v 1.2 2014/05/09 01:25:24 jer Exp $
 
 EAPI=5
 
@@ -27,4 +27,3 @@ RDEPEND="${DEPEND}
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/sqlalchemy[sqlite,${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]"
-
