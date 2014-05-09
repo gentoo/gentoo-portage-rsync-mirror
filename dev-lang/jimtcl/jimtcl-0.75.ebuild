@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.75.ebuild,v 1.1 2014/05/09 20:45:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.75.ebuild,v 1.2 2014/05/09 21:18:34 hwoarang Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/msteveb/jimtcl/zipball/${PV} -> ${P}.zip"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~x86"
 IUSE="doc static-libs"
 DEPEND="doc? ( app-text/asciidoc )
 	app-arch/unzip"

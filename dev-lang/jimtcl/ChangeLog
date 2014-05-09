@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/jimtcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.12 2014/05/09 20:45:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.13 2014/05/09 21:18:34 hwoarang Exp $
+
+  09 May 2014; Markos Chandras <hwoarang@gentoo.org> jimtcl-0.75.ebuild:
+  Add ~mips
 
 *jimtcl-0.75 (09 May 2014)
 
