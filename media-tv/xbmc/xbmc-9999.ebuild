@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.155 2014/05/08 20:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.156 2014/05/09 22:40:33 vapier Exp $
 
 EAPI="5"
 
@@ -172,6 +172,8 @@ src_prepare() {
 	done
 	multijob_finish
 	elibtoolize
+
+	[[ ${PV} == "9999" ]] && emake -f codegenerator.mk
 
 	# Disable internal func checks as our USE/DEPEND
 	# stuff handles this just fine already #408395

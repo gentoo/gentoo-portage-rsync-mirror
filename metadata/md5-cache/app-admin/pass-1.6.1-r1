@@ -9,4 +9,4 @@ RDEPEND=app-crypt/gnupg app-admin/pwgen >=app-text/tree-1.7.0 git? ( dev-vcs/git
 SLOT=0
 SRC_URI=http://git.zx2c4.com/password-store/snapshot/password-store-1.6.1.tar.xz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1c4ad31835a272d2602414fe8ca2e5c2
+_md5_=198f430afcf82f649720a269fc723064

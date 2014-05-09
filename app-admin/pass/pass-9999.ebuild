@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.15 2014/05/09 12:10:53 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.16 2014/05/09 22:52:55 zx2c4 Exp $
 
 EAPI=4
 
@@ -51,8 +51,8 @@ src_install() {
 	use dmenu && dobin contrib/dmenu/passmenu
 	newbashcomp src/completion/pass.bash-completion pass
 	if use emacs; then
-		elisp-install ${PN} contrib/emacs/*.el || die
-		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" || die
+		elisp-install ${PN} contrib/emacs/*.el
+		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el"
 	fi
 	if use importers; then
 		exeinto /usr/share/${PN}/importers
