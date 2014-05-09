@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508.ebuild,v 1.1 2014/05/08 21:46:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508.ebuild,v 1.2 2014/05/09 07:52:56 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -58,5 +58,5 @@ src_prepare() {
 	emul-linux-x86_src_prepare
 
 	# Remove migrated stuff.
-	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native")
+	use abi_x86_32 && rm -f $(sed "${FILESDIR}/remove-native-${PVR}" -e '/^#/d')
 }

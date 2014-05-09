@@ -34,10 +34,10 @@ usr/lib32/alsa-lib/smixer/smixer-hda.so
 usr/lib32/alsa-lib/smixer/smixer-sbase.so
 usr/lib32/libFLAC++.so
 usr/lib32/libFLAC++.so.6
-usr/lib32/libFLAC++.so.6.2.0
+usr/lib32/libFLAC++.so.6.3.0
 usr/lib32/libFLAC.so
 usr/lib32/libFLAC.so.8
-usr/lib32/libFLAC.so.8.2.0
+usr/lib32/libFLAC.so.8.3.0
 usr/lib32/pkgconfig/flac++.pc
 usr/lib32/pkgconfig/flac.pc
 usr/lib32/libaudiofile.so
@@ -172,7 +172,7 @@ usr/lib32/libcdda_paranoia.so.0
 usr/lib32/libcdda_paranoia.so.0.10.2
 usr/lib32/libwavpack.so
 usr/lib32/libwavpack.so.1
-usr/lib32/libwavpack.so.1.1.4
+usr/lib32/libwavpack.so.1.1.5
 usr/lib32/pkgconfig/wavpack.pc
 usr/lib32/libmpcdec.so
 usr/lib32/libmpcdec.so.7
