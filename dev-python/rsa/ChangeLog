@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rsa
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.7 2013/09/17 03:32:47 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.8 2014/05/09 05:55:20 patrick Exp $
+
+*rsa-3.1.4 (09 May 2014)
+
+  09 May 2014; Patrick Lauer <patrick@gentoo.org> +rsa-3.1.4.ebuild:
+  Bump
 
 *rsa-3.1.2 (17 Sep 2013)
 
