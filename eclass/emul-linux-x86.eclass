@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.22 2014/05/08 21:39:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.23 2014/05/09 06:51:21 mgorny Exp $
 
 #
 # Original Author: Mike Doty <kingtaco@gentoo.org>
@@ -81,5 +81,12 @@ emul-linux-x86_src_install() {
 		done < <(find -xtype l)
 
 		popd >/dev/null
+	fi
+
+	# Since header wrapping is added as part of gx86-multilib support,
+	# all packages involved install their own copies of i686* headers
+	# when built with abi_x86_32.
+	if [[ -d "${D}"/usr/include ]] && use abi_x86_32; then
+		rm -r "${D}"/usr/include || die
 	fi
 }

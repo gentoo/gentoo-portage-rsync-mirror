@@ -13,7 +13,7 @@ usr/lib32/libbz2.so
 usr/lib32/libpng.so
 usr/lib32/libpng16.so
 usr/lib32/libpng16.so.16
-usr/lib32/libpng16.so.16.8.0
+usr/lib32/libpng16.so.16.10.0
 usr/lib32/pkgconfig/libpng.pc
 usr/lib32/pkgconfig/libpng16.pc
 usr/lib32/libudis86.so
