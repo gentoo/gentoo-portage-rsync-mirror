@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.46 2014/05/09 01:44:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.47 2014/05/09 04:49:11 radhermit Exp $
+
+*pyzmq-14.3.0 (09 May 2014)
+
+  09 May 2014; Tim Harder <radhermit@gentoo.org> +pyzmq-14.3.0.ebuild:
+  Version bump.
 
   09 May 2014; Mike Gilbert <floppym@gentoo.org> pyzmq-14.1.1.ebuild:
   Dropy unnecessary test dependencies.
