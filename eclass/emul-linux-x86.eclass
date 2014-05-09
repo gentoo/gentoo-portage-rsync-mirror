@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.23 2014/05/09 06:51:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.24 2014/05/09 07:13:47 mgorny Exp $
 
 #
 # Original Author: Mike Doty <kingtaco@gentoo.org>
@@ -8,7 +8,7 @@
 # Purpose: Providing a template for the app-emulation/emul-linux-* packages
 #
 
-inherit multilib
+inherit eutils multilib
 
 case "${EAPI:-0}" in
 	3|4|5)
@@ -88,5 +88,9 @@ emul-linux-x86_src_install() {
 	# when built with abi_x86_32.
 	if [[ -d "${D}"/usr/include ]] && use abi_x86_32; then
 		rm -r "${D}"/usr/include || die
+	fi
+	# The same goes for ${CHOST}- multilib tool prefixing.
+	if path_exists "${D}"/usr/bin/i686-pc-linux-gnu-* && use abi_x86_32; then
+		rm "${D}"/usr/bin/i686-pc-linux-gnu-* || die
 	fi
 }

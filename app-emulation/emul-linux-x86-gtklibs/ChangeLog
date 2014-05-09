@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.125 2014/05/08 21:44:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.126 2014/05/09 07:11:25 mgorny Exp $
+
+  09 May 2014; Michał Górny <mgorny@gentoo.org> files/remove-native-20140508:
+  Update remove-native wrt library name changes.
 
 *emul-linux-x86-gtklibs-20140508 (08 May 2014)
 

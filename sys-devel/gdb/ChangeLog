@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.268 2014/05/08 19:58:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.269 2014/05/09 07:02:46 grobian Exp $
+
+  09 May 2014; Fabian Groffen <grobian@gentoo.org> gdb-7.7.1.ebuild:
+  Reapply python-config fix for Darwin
 
 *gdb-7.7.1 (08 May 2014)
 
