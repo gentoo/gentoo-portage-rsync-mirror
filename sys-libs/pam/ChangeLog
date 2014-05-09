@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.334 2014/01/18 05:16:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.335 2014/05/08 23:07:19 vapier Exp $
+
+*pam-1.1.8-r1 (08 May 2014)
+
+  08 May 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/pam-1.1.8-doc-install.patch, +pam-1.1.8-r1.ebuild:
+  Fix docs install #473650 by Martin von Gagern.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pam-1.1.6-r2.ebuild,
   pam-1.1.8.ebuild:
