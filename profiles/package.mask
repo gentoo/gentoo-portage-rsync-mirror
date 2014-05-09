@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15661 2014/05/08 11:54:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15662 2014/05/09 13:59:33 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -592,6 +592,9 @@ lxde-base/lxpolkit
 >=media-libs/sdl-mixer-1.2.12-r4
 >=media-libs/sdl2-mixer-2.0.0-r1
 >=app-emulation/emul-linux-x86-sdl-20140406-r2
+=net-wireless/bluez-4.101-r9
+>=net-wireless/bluez-5.18-r1
+>=app-emulation/emul-linux-x86-soundlibs-20140406-r1
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.

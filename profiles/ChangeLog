@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8934 2014/05/08 12:54:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8935 2014/05/09 13:59:33 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask multilib bluez.
 
   08 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   targets/desktop/package.use:
