@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.13 2014/05/08 22:02:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.14 2014/05/10 07:34:15 idella4 Exp $
+
+  10 May 2014; Ian Delaney <idella4@gentoo.org> cryptography-0.4-r1.ebuild:
+  add new dep, drop py2.6 upport
 
 *cryptography-0.4-r1 (08 May 2014)
 
