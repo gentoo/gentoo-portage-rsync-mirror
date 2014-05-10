@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.37 2014/05/07 19:09:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.38 2014/05/10 06:38:42 graaff Exp $
+
+*ruby-prof-0.15.1 (10 May 2014)
+
+  10 May 2014; Hans de Graaff <graaff@gentoo.org> +ruby-prof-0.15.1.ebuild:
+  Version bump. Add ruby20, ruby21.
 
   07 May 2014; Manuel Rüger <mrueg@gentoo.org> ruby-prof-0.12.2.ebuild:
   Remove ruby18 target.
