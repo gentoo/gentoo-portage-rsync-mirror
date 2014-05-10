@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1.ebuild,v 1.1 2014/05/09 21:09:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1.ebuild,v 1.2 2014/05/10 02:04:00 floppym Exp $
 
 EAPI=5
 
@@ -60,7 +60,7 @@ RDEPEND="${COMMON_DEPEND}
 		!>=sys-devel/clang-9999 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
-PDEPEND="clang? ( =sys-devel/clang-3.4-r100 )"
+PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
 
 # pypy gives me around 1700 unresolved tests due to open file limit
 # being exceeded. probably GC does not close them fast enough.

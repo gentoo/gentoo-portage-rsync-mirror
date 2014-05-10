@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.328 2014/05/10 01:39:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.329 2014/05/10 02:18:15 anarchy Exp $
+
+  10 May 2014;  <anarchy@gentoo.org> firefox-29.0.1.ebuild:
+  use  instead of hardcoding firefox
 
 *firefox-29.0.1 (10 May 2014)
 

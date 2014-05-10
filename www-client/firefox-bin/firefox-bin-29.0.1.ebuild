@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-29.0.ebuild,v 1.4 2014/05/07 18:11:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-29.0.1.ebuild,v 1.1 2014/05/10 02:16:17 anarchy Exp $
 
 EAPI="5"
 
@@ -131,7 +131,8 @@ src_install() {
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
-	doins "${FILESDIR}"/10${PN} || die
+	echo "SEARCH_DIRS_MASK=${MOZILLA_FIVE_HOME}" >> ${T}/10${PN}
+	doins "${T}"/10${PN} || die
 
 	# Plugins dir
 	share_plugins_dir
