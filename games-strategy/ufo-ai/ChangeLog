@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo-ai
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.41 2012/11/04 06:02:12 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.42 2014/05/10 05:40:33 ssuominen Exp $
+
+  10 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/ufo-ai-2.4-mathlib.patch, ufo-ai-2.4.ebuild:
+  Link against mathlib for cos(), sin() and more wrt #509928 by Stefan Kalis
 
   04 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> ufo-ai-2.4.ebuild:
   don't try to use the system mini-xml (bug #440026)

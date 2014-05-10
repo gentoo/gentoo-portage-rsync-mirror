@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.4 2012/11/04 06:02:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.5 2014/05/10 05:40:33 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic games
@@ -54,7 +54,9 @@ src_prepare() {
 	# don't try to use the system mini-xml
 	sed -i -e '/mxml/d' configure || die
 
-	epatch "${FILESDIR}"/${P}-locale.patch
+	epatch \
+		"${FILESDIR}"/${P}-mathlib.patch \
+		"${FILESDIR}"/${P}-locale.patch
 
 	cp "${DISTDIR}"/1maps.pk3 "${WORKDIR}"/base/ || die
 	mv "${WORKDIR}"/base/ "${S}"/ || die
