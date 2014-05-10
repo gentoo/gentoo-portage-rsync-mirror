@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-29.0.ebuild,v 1.4 2014/05/07 18:10:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-29.0.1.ebuild,v 1.1 2014/05/10 01:39:21 anarchy Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -373,6 +373,11 @@ src_install() {
 	use sparc && { sed -e 's/Firefox/FirefoxGentoo/g' \
 					 -i "${ED}/${MOZILLA_FIVE_HOME}/application.ini" \
 					|| die "sparc sed failed"; }
+
+	# revdep-rebuild entry
+	insinto /etc/revdep-rebuild
+	echo "SEARCH_DIRS_MASK=${MOZILLA_FIVE_HOME}" >> ${T}/10firefox
+	doins "${T}"/10${PN} || die
 }
 
 pkg_preinst() {

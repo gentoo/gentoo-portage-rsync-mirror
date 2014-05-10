@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.5 2014/05/09 06:12:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.2.1.ebuild,v 1.6 2014/05/10 01:50:09 floppym Exp $
 
 EAPI=5
 
@@ -25,7 +25,10 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	bzip2? ( app-arch/bzip2 )
 	ncurses? ( sys-libs/ncurses )
 	sqlite? ( dev-db/sqlite:3 )
-	tk? ( dev-lang/tk:0 )
+	tk? (
+		dev-lang/tk:0
+		dev-tcltk/tix
+	)
 	!dev-python/pypy-bin:0"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
