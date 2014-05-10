@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1.ebuild,v 1.3 2014/05/10 10:06:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1-r1.ebuild,v 1.1 2014/05/10 22:32:59 mgorny Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
 	!doc? ( http://dev.gentoo.org/~mgorny/dist/${PN}-3.4-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
-SLOT="0/3.4.1"
+SLOT="0/3.4"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
 	+static-analyzer test udis86 xml video_cards_radeon
@@ -402,6 +402,10 @@ multilib_src_install() {
 
 	emake "${MAKEARGS[@]}" DESTDIR="${root}" install
 	multibuild_merge_root "${root}" "${D}"
+
+	# Fix broken alias.
+	ln -sf libLLVM-${PV}$(get_libname) \
+		"${ED%/}"/usr/$(get_libdir)/libLLVM-3.4$(get_libname) || die
 
 	if ! multilib_is_native_abi; then
 		# Backwards compat, will be happily removed someday.

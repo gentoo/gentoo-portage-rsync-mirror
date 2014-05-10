@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.195 2014/05/10 10:06:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.196 2014/05/10 22:32:59 mgorny Exp $
+
+*llvm-3.4.1-r1 (10 May 2014)
+
+  10 May 2014; Michał Górny <mgorny@gentoo.org> +llvm-3.4.1-r1.ebuild,
+  -llvm-3.4.1.ebuild:
+  Fix creating libLLVM-3.4.so compatibility alias.
 
   10 May 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.1.ebuild:
   Bump subslot since library name changes anyway. Unnecessarily.

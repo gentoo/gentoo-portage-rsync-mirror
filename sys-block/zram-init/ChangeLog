@@ -1,0 +1,9 @@
+# ChangeLog for sys-block/zram-init
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/zram-init/ChangeLog,v 1.1 2014/05/10 22:45:39 jauhien Exp $
+
+*zram-init-2.7-r1 (10 May 2014)
+
+  10 May 2014; Jauhien Piatlicki <jauhien@gentoo.org> +metadata.xml,
+  +zram-init-2.7-r1.ebuild:
+  Imported from mv overlay, thanks to Martin Vaeth
