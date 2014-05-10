@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.58 2014/04/27 16:41:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.59 2014/05/10 13:40:10 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> dconf-0.18.0.ebuild:
+  Stable for ppc, wrt bug #508862
 
 *dconf-0.20.0 (27 Apr 2014)
 

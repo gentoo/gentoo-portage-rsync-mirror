@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-el
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.31 2014/04/26 18:53:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.32 2014/05/10 13:43:30 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> commons-el-1.0-r3.ebuild:
+  Stable for ppc, wrt bug #502708
 
   26 Apr 2014; Agostino Sarubbo <ago@gentoo.org> commons-el-1.0-r3.ebuild:
   Stable for x86, wrt bug #502708

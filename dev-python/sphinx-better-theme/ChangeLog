@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx-better-theme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx-better-theme/ChangeLog,v 1.7 2014/04/22 12:28:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx-better-theme/ChangeLog,v 1.8 2014/05/10 14:01:13 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  sphinx-better-theme-0.1.5.ebuild:
+  Stable for ppc, wrt bug #507982
 
   22 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   sphinx-better-theme-0.1.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.203 2014/05/09 13:59:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.204 2014/05/10 13:40:44 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> bluez-5.18.ebuild:
+  Stable for ppc, wrt bug #508862
 
 *bluez-5.18-r1 (09 May 2014)
 *bluez-4.101-r9 (09 May 2014)

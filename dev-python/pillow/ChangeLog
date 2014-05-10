@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.27 2014/04/22 12:28:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.28 2014/05/10 14:01:09 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.4.0.ebuild:
+  Stable for ppc, wrt bug #507982
 
   22 Apr 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.4.0.ebuild:
   Stable for arm, wrt bug #507982

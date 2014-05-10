@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libbluedevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/ChangeLog,v 1.36 2014/03/09 12:05:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/ChangeLog,v 1.37 2014/05/10 13:40:48 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> libbluedevil-2.0_rc1.ebuild:
+  Stable for ppc, wrt bug #508862
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> libbluedevil-2.0_rc1.ebuild:
   x86 stable, bug 499954

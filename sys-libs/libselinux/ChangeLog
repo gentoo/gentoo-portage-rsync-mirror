@@ -1,6 +1,19 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.120 2014/05/09 20:29:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.122 2014/05/10 13:59:49 swift Exp $
+
+  10 May 2014; Sven Vermeulen <swift@gentoo.org>
+  -files/libselinux-2.1.9-mountsys.patch,
+  -files/libselinux-2.1.9-support_ruby19.patch,
+  -files/libselinux-2.1.12-mountsys.patch:
+  Removing unused patches in files dir
+
+  10 May 2014; Sven Vermeulen <swift@gentoo.org> -libselinux-2.1.13-r1.ebuild,
+  -libselinux-2.1.13-r2.ebuild, -libselinux-2.1.13-r3.ebuild,
+  -libselinux-2.1.13-r4.ebuild, -libselinux-2.2-r1.ebuild,
+  -libselinux-2.2.1-r1.ebuild, -libselinux-2.2.2-r1.ebuild,
+  -libselinux-2.2.2-r2.ebuild:
+  Spring cleanup
 
 *libselinux-2.3 (09 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.170 2014/04/06 15:39:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.171 2014/05/10 13:40:54 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> polkit-0.112-r1.ebuild:
+  Stable for ppc, wrt bug #508862
 
   06 Apr 2014; Pacho Ramos <pacho@gentoo.org> polkit-0.112-r2.ebuild:
   Needs to be rebuilt with systemd subslot bumps

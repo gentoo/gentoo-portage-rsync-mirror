@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.3.0.ebuild,v 1.9 2014/05/04 08:33:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.3.0.ebuild,v 1.10 2014/05/10 13:48:00 ago Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -14,7 +14,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.xz"
 
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="3dnow altivec +cxx debug ogg sse static-libs"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.1.3[${MULTILIB_USEDEP}] )

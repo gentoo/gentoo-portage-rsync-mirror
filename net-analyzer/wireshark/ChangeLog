@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.609 2014/04/29 22:11:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.610 2014/05/10 14:00:41 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for ppc, wrt bug #508506
 
   29 Apr 2014; Mike Frysinger <vapier@gentoo.org> wireshark-1.8.14.ebuild:
   Drop random perl deps in favor of blockers #455122.

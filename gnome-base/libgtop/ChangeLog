@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.263 2014/02/22 21:48:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.264 2014/05/10 13:40:20 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> libgtop-2.28.5.ebuild:
+  Stable for ppc, wrt bug #508862
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgtop-2.28.5.ebuild:
   Fix wrong commit, bug 502160

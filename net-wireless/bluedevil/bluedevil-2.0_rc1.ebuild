@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-2.0_rc1.ebuild,v 1.3 2014/03/09 12:05:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-2.0_rc1.ebuild,v 1.4 2014/05/10 13:40:46 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.kde.org/projects/extragear/base/bluedevil"
 SRC_URI="mirror://kde/unstable/${PN}/${PV/_/-}/src/${MY_P}.tar.xz"
 
 LICENSE="GPL-2+"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
 SLOT="4"
 IUSE="debug"
 

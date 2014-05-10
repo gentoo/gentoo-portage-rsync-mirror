@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.94 2014/05/04 08:25:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.95 2014/05/10 13:45:53 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> libdvdread-4.2.1.ebuild:
+  Stable for ppc, wrt bug #502838
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> libdvdread-4.2.1.ebuild:
   Stable for x86, wrt bug #502838

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.101 2014/03/28 02:22:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.102 2014/05/10 13:40:08 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> gob-2.0.20.ebuild:
+  Stable for ppc, wrt bug #508862
 
   28 Mar 2014; Jeroen Roovers <jer@gentoo.org> gob-2.0.20.ebuild:
   Stable for HPPA (bug #499954).

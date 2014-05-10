@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.121 2014/05/06 19:10:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.122 2014/05/10 13:40:38 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> gdk-pixbuf-2.30.7-r1.ebuild:
+  Stable for ppc, wrt bug #508862
 
   06 May 2014; Fabian Groffen <grobian@gentoo.org> gdk-pixbuf-2.30.7-r1.ebuild:
   Fix linking on Solaris

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.5.4.ebuild,v 1.3 2014/05/04 08:27:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.5.4.ebuild,v 1.4 2014/05/10 13:46:27 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="https://launchpad.net/loqui/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.22:2
