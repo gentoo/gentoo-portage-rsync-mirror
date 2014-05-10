@@ -40,8 +40,6 @@
 		<pkg>app-misc/lcdproc</pkg> configured on your machine and it should
 		output information such as current time, show name, episode name, etc to
 		that LCD.</flag>
-	<flag name="libass">SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle
-		support</flag>
 	<flag name="lirc">Adds LIRC support directly to MythTV allowing for built in
 		control via a LIRC device.</flag>
 	<flag name="perl">Builds the perl bindings for MythTV. Allows you to write
