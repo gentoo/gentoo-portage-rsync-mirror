@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.17.3.ebuild,v 1.1 2013/12/17 21:49:56 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.18.1.ebuild,v 1.1 2014/05/10 09:11:26 thev00d00 Exp $
 
 EAPI=5
 
@@ -13,21 +13,23 @@ SRC_URI="mirror://sourceforge/sipe/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug kerberos ocs2005-message-hack telepathy voice"
+
+IUSE="debug kerberos ocs2005-message-hack openssl telepathy voice"
 
 RDEPEND=">=dev-libs/gmime-2.4.16
 	dev-libs/libxml2
-	dev-libs/nss
+	openssl? ( dev-libs/openssl )
+	!openssl? ( dev-libs/nss )
 	kerberos? ( virtual/krb5 )
 	voice? (
 		>=dev-libs/glib-2.28.0
 		>=net-libs/libnice-0.1.0
 		media-libs/gstreamer:0.10
-		>=net-im/pidgin-2.8.0[gnutls]
+		>=net-im/pidgin-2.8.0
 	)
 	!voice? (
 		>=dev-libs/glib-2.12.0:2
-		net-im/pidgin[gnutls]
+		net-im/pidgin
 	)
 	telepathy? (
 		>=sys-apps/dbus-1.1.0
@@ -43,7 +45,6 @@ DEPEND="dev-util/intltool
 "
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.13.2-fix-sandbox-r1.patch"
 	eautoreconf
 }
 
@@ -55,7 +56,9 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable ocs2005-message-hack) \
 		$(use_with kerberos krb5) \
-		$(use_with voice vv)
+		$(use_with voice vv) \
+		$(use_enable !openssl nss) \
+		$(use_enable openssl)
 }
 
 src_install() {
