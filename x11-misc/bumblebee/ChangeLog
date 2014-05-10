@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bumblebee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.16 2014/01/26 11:41:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.17 2014/05/10 17:46:23 pacho Exp $
+
+  10 May 2014; Pacho Ramos <pacho@gentoo.org> -bumblebee-3.1.ebuild,
+  bumblebee-3.2.1.ebuild:
+  libbsd is also a RDEPEND (#509870 by cyberbat), drop old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bumblebee-3.2.1.ebuild:
   Stable for x86, wrt bug #480128

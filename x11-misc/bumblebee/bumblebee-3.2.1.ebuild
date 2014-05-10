@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.2.1.ebuild,v 1.3 2014/01/26 11:41:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.2.1.ebuild,v 1.4 2014/05/10 17:46:23 pacho Exp $
 
 EAPI=5
 inherit eutils multilib readme.gentoo systemd user
@@ -16,6 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE="+bbswitch video_cards_nouveau video_cards_nvidia"
 
 RDEPEND="
+	dev-libs/libbsd
 	virtual/opengl
 	x11-base/xorg-drivers[video_cards_nvidia?,video_cards_nouveau?]
 	x11-misc/virtualgl:=
@@ -23,7 +24,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-libs/glib:2
-	dev-libs/libbsd
 	sys-apps/help2man
 	virtual/pkgconfig
 	x11-libs/libX11

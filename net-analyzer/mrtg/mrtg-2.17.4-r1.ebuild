@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.1 2014/05/10 17:22:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.2 2014/05/10 17:32:56 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 DEPEND="dev-lang/perl
 	dev-perl/SNMP_Session
 	>=dev-perl/Socket6-0.20
-	>=media-libs/gd-1.8.4"
+	media-libs/gd[png]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
