@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.14 2014/04/21 07:56:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.15 2014/05/10 16:46:06 hasufell Exp $
+
+  10 May 2014; Julian Ospald <hasufell@gentoo.org> libsdl2-2.0.2-r1.ebuild:
+  add wayland support wrt #504136
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> libsdl2-2.0.2-r1.ebuild:
   Use the new multilib_native_use* functions.
