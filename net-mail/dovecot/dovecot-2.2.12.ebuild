@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.12.ebuild,v 1.1 2014/02/17 16:55:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.12.ebuild,v 1.2 2014/05/10 19:23:06 eras Exp $
 
 EAPI=5
 inherit eutils multilib ssl-cert systemd user versionator
@@ -8,7 +8,12 @@ inherit eutils multilib ssl-cert systemd user versionator
 MY_P="${P/_/.}"
 major_minor="$(get_version_component_range 1-2)"
 sieve_version="0.4.2"
-SRC_URI="http://dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
+if [[ ${PV} == *_rc* ]] ; then
+	rc_dir="rc/"
+else
+	rc_dir=""
+fi
+SRC_URI="http://dovecot.org/releases/${major_minor}/${rc_dir}${MY_P}.tar.gz
 	sieve? (
 	http://www.rename-it.nl/dovecot/${major_minor}/${PN}-${major_minor}-pigeonhole-${sieve_version}.tar.gz
 	)

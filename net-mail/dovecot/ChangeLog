@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.475 2014/02/17 17:07:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.476 2014/05/10 19:23:06 eras Exp $
+
+  10 May 2014; Eray Aslan <eras@gentoo.org> dovecot-2.2.12.ebuild:
+  Adjust SRC_URI for rc releases - bug #509940
 
   17 Feb 2014; Eray Aslan <eras@gentoo.org> -dovecot-2.1.9.ebuild,
   -dovecot-2.2.5.ebuild, -dovecot-2.2.6.ebuild, -dovecot-2.2.7.ebuild,
