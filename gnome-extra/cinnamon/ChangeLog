@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.36 2014/04/26 08:23:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.37 2014/05/10 20:24:37 tetromino Exp $
+
+*cinnamon-2.2.6 (10 May 2014)
+
+  10 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-2.2.6.ebuild,
+  +files/cinnamon-2.2.6-automagic-gnome-bluetooth.patch,
+  +files/cinnamon-2.2.6-optional-networkmanager.patch:
+  Version bump (bug #487678). Lots of changes, lots of new dependencies, see
+  http://segfault.linuxmint.com/2014/04/cinnamon-2-2/ for the announcement.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> cinnamon-1.8.8.1-r2.ebuild:
   Adapt to latest pygobject don't providing python2.6 support

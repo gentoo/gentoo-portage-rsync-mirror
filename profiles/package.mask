@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15669 2014/05/10 18:08:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15670 2014/05/10 20:25:39 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -75,20 +75,6 @@ dev-ruby/fastthread
 >=app-emulation/emul-linux-x86-sdl-20140506
 >=app-emulation/emul-linux-x86-soundlibs-20140506
 >=app-emulation/emul-linux-x86-xlibs-20140506
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (06 May 2014)
-# Mask individual pieces of Cinnamon 2.2 until it's complete
-gnome-extra/cjs
-gnome-extra/cinnamon-desktop
-gnome-extra/cinnamon-menus
-gnome-extra/cinnamon-session
-gnome-extra/cinnamon-settings-daemon
-gnome-extra/cinnamon-control-center
-gnome-extra/cinnamon-screensaver
-net-wireless/cinnamon-bluetooth
->=x11-wm/muffin-2.2
->=gnome-extra/nemo-2.2
->=gnome-extra/cinnamon-2.2
 
 # Brian Evans <grknight@gentoo.org> (05 May 2014)
 # Mask erroenous slot for removal in 30 days
