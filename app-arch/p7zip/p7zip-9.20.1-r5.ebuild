@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r5.ebuild,v 1.3 2013/11/16 07:49:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r5.ebuild,v 1.4 2014/05/10 17:09:55 jlec Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 LICENSE="LGPL-2.1 rar? ( unRAR )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
-IUSE="doc kde rar +pch static wxwidgets"
+IUSE="doc kde rar +pch static wxwidgets abi_x86_x32"
 
 REQUIRED_USE="kde? ( wxwidgets )"
 
@@ -24,6 +24,7 @@ RDEPEND="
 	wxwidgets? ( x11-libs/wxGTK:2.8[X,-odbc] )"
 DEPEND="${RDEPEND}
 	amd64? ( dev-lang/yasm )
+	abi_x86_x32? ( >=dev-lang/yasm-1.2.0-r1 )
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/${PN}_${PV}
@@ -62,7 +63,10 @@ src_prepare() {
 		-e '/ALLFLAGS/s:-s ::' \
 		makefile* || die "changing makefiles"
 
-	if use amd64; then
+	if use abi_x86_x32; then
+		sed -i -e "/^ASM=/s:amd64:x32:" makefile*
+		cp -f makefile.linux_amd64_asm makefile.machine || die
+	elif use amd64; then
 		cp -f makefile.linux_amd64_asm makefile.machine || die
 	elif use x86; then
 		cp -f makefile.linux_x86_asm_gcc_4.X makefile.machine || die

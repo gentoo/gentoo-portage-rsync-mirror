@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.12 2014/05/09 00:03:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.13 2014/05/10 17:20:59 jlec Exp $
+
+  10 May 2014; Justin Lecher <jlec@gentoo.org> gentoo-functions-0.4.ebuild,
+  gentoo-functions-0.5.ebuild, gentoo-functions-9999.ebuild, metadata.xml:
+  Respect CC
 
   09 May 2014; William Hubbs <williamh@gentoo.org> gentoo-functions-9999.ebuild:
   sync live ebuild
