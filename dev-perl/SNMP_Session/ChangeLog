@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.33 2014/01/11 16:20:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.34 2014/05/10 18:39:14 jer Exp $
+
+*SNMP_Session-1.13-r2 (10 May 2014)
+
+  10 May 2014; Jeroen Roovers <jer@gentoo.org> +SNMP_Session-1.13-r2.ebuild,
+  +files/SNMP_Session-1.13-Socket6.patch:
+  Add fix for SNMP_Session::pack_sockaddr_in6 redefinition (bug #509986).
 
   11 Jan 2014;  <zlogene@gentoo.org> -SNMP_Session-1.13.ebuild,
   SNMP_Session-1.13-r1.ebuild:
