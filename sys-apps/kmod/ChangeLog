@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.148 2014/04/24 19:52:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.149 2014/05/10 16:29:28 jer Exp $
+
+  10 May 2014; Jeroen Roovers <jer@gentoo.org> kmod-17.ebuild:
+  Stable for HPPA (bug #509924).
 
   24 Apr 2014; Mike Gilbert <floppym@gentoo.org> kmod-17.ebuild,
   kmod-9999.ebuild:

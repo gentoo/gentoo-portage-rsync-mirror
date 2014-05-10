@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.2-r2.ebuild,v 1.2 2014/04/28 17:29:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.2-r2.ebuild,v 1.3 2014/05/10 16:24:50 jer Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0/51.2"
 # other irregularities occured until the consumers were rebuilt. So let's rather err on the side
 # of caution and more rebuilds here. See also bug 464876. dilfridge
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc examples static-libs"
 
 DEPEND="
