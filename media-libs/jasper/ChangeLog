@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.79 2013/11/09 12:15:19 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.80 2014/05/10 11:30:31 slyfox Exp $
+
+  10 May 2014; Sergei Trofimovich <slyfox@gentoo.org> jasper-1.900.1-r6.ebuild:
+  Fix picking wrong libdir for X11 libs in USE=opengl ABI_X86='32 64' case.
 
   09 Nov 2013; Justin Lecher <jlec@gentoo.org> jasper-1.900.1-r6.ebuild:
   Fix multilib support, #458380
