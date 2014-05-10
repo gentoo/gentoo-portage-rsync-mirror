@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1248 2014/05/09 10:48:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1249 2014/05/10 21:36:49 mgorny Exp $
+
+  10 May 2014; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Remove the coreutils dependency since the old copying code has been replaced
+  by a more portable function. Bug #509984.
 
   09 May 2014; Michał Górny <mgorny@gentoo.org> cmake-multilib.eclass:
   Use multilib-minimal for phase functions.

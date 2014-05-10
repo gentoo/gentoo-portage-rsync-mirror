@@ -1,5 +1,4 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Statistics generator for git
 EAPI=5
 HOMEPAGE=http://gitstats.sourceforge.net/
@@ -9,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=sci-visualization/gnuplot[gd] dev-vcs/git
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/gitstats-0_pre131024.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=840cf52d73b55b1ef812e1206ccd4bfa

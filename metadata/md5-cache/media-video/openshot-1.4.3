@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare test
-DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+DEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 DESCRIPTION=Free, open-source, non-linear video editor to create and edit videos and movies
 EAPI=5
 HOMEPAGE=http://www.openshotvideo.com
@@ -10,5 +10,5 @@ RDEPEND=dev-python/pygoocanvas[python_targets_python2_6(-)?,python_targets_pytho
 REQUIRED_USE=|| ( python ffmpeg ) || ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://launchpad.net/openshot/1.4/1.4.3/+download/openshot-1.4.3.tar.gz
-_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=97a86cc747335bbe9f6193642e765a5e

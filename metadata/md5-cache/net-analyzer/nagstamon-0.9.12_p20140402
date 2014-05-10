@@ -1,5 +1,4 @@
 DEFINED_PHASES=install prepare
-DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Nagstamon is a Nagios status monitor for a systray and displays a realtime status of a Nagios box
 EAPI=5
 HOMEPAGE=http://nagstamon.sourceforge.net
@@ -9,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/pygobject:2 dev-python/pygtk dev-python/lxml dev-python/beautifulsoup:python-2 gnome-base/librsvg dev-python/keyring gnome? ( dev-python/egg-python ) sound? ( media-sound/sox )
 SLOT=0
 SRC_URI=mirror://sourceforge/nagstamon/nagstamon-0.9.12_p20140402.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=368be72780989831fe30df41bd882de5

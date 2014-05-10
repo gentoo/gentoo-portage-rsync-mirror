@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 ) qt5? ( dev-qt/linguist-tools:5 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEPEND=qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 ) qt5? ( dev-qt/linguist-tools:5 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Qt API for storing passwords securely
 EAPI=5
 HOMEPAGE=https://github.com/frankosterfeld/qtkeychain
@@ -10,5 +10,5 @@ RDEPEND=qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 ) qt4? ( dev-qt/qtcore:4 dev-qt/q
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=https://github.com/frankosterfeld/qtkeychain/archive/v0.3.0.tar.gz -> qtkeychain-0.3.0.tar.gz
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2504fc38d00eb06b8f7501ea582de5e1

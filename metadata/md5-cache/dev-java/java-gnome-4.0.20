@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare setup
-DEPEND=>=dev-libs/glib-2.22 >=x11-libs/gtk+-2.22.0:2 >=gnome-base/libglade-2.6.4 >=gnome-base/libgnome-2.22.0 >=gnome-base/gnome-desktop-2.22.0:2 >=x11-libs/cairo-1.10.0[svg] >=x11-libs/gtksourceview-2.6.2:2.0 >=app-text/gtkspell-2.0.15-r1:2 >=x11-libs/libnotify-0.4.5 >=dev-libs/libunique-1.0.8:1 >=gnome-base/librsvg-2.32.1 dev-libs/atk >=virtual/jre-1.5 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-java/junit:0 dev-lang/perl virtual/pkgconfig >=virtual/jdk-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEPEND=>=dev-libs/glib-2.22 >=x11-libs/gtk+-2.22.0:2 >=gnome-base/libglade-2.6.4 >=gnome-base/libgnome-2.22.0 >=gnome-base/gnome-desktop-2.22.0:2 >=x11-libs/cairo-1.10.0[svg] >=x11-libs/gtksourceview-2.6.2:2.0 >=app-text/gtkspell-2.0.15-r1:2 >=x11-libs/libnotify-0.4.5 >=dev-libs/libunique-1.0.8:1 >=gnome-base/librsvg-2.32.1 dev-libs/atk >=virtual/jre-1.5 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-java/junit:0 dev-lang/perl virtual/pkgconfig >=virtual/jdk-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 DESCRIPTION=Java bindings for GTK and GNOME
 EAPI=5
 HOMEPAGE=http://java-gnome.sourceforge.net/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.22 >=x11-libs/gtk+-2.22.0:2 >=gnome-base/libglade-2.6.
 RESTRICT=test
 SLOT=4.0
 SRC_URI=mirror://gnome/sources/java-gnome/4.0/java-gnome-4.0.20.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=bee332b5f6d20c5188450ec04c956829

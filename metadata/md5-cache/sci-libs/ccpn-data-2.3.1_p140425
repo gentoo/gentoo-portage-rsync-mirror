@@ -1,5 +1,4 @@
 DEFINED_PHASES=install prepare
-DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=The Collaborative Computing Project for NMR - Data
 EAPI=5
 HOMEPAGE=http://www.ccpn.ac.uk/ccpn
@@ -11,5 +10,5 @@ REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://www2.ccpn.ac.uk/download/ccpnmr/analysis2.3.1r2.tar.gz http://dev.gentoo.org/~jlec/distfiles/ccpn-update-2.3.1-140425.patch.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	portability	536c5e70c5fb252ed3b769e04aa3f05b	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	portability	536c5e70c5fb252ed3b769e04aa3f05b	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=8358ca9729e98f0deb955d0291413a19

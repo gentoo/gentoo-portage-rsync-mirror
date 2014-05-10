@@ -1,5 +1,4 @@
 DEFINED_PHASES=compile install prepare test
-DEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=An efficent, principled regular expression library
 EAPI=5
 HOMEPAGE=http://code.google.com/p/re2/
@@ -8,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://re2.googlecode.com/files/re2-20130115.tgz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	cb8cdc345fe371dc70e0ba7d16ada970	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	cb8cdc345fe371dc70e0ba7d16ada970	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2ffc29c208e8d6ab6cba07f5a48aee6c

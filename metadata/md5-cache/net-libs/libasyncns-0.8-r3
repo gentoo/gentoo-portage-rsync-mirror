@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=doc? ( app-doc/doxygen ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DEPEND=doc? ( app-doc/doxygen )
 DESCRIPTION=C library for executing name service queries asynchronously.
 EAPI=5
 HOMEPAGE=http://0pointer.de/lennart/projects/libasyncns/
@@ -8,5 +8,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-lin
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://0pointer.de/lennart/projects/libasyncns/libasyncns-0.8.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	576bde67ccb00fe7175a23755deb2e66	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	cb8cdc345fe371dc70e0ba7d16ada970	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	cb8cdc345fe371dc70e0ba7d16ada970	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ab2cd76c8a9652c3a7deda3878ac1a45
