@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/peg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/peg/ChangeLog,v 1.3 2014/05/09 21:47:14 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/peg/ChangeLog,v 1.4 2014/05/10 10:52:39 jauhien Exp $
+
+  10 May 2014;  <jauhien@gentoo.org> peg-0.1.15.ebuild:
+  fixes in ebuild: thanks to jlec
 
 *peg-0.1.15 (09 May 2014)
 
