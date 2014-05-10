@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hinotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hinotify/ChangeLog,v 1.8 2014/02/21 20:02:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hinotify/ChangeLog,v 1.9 2014/05/10 14:22:14 slyfox Exp $
+
+*hinotify-0.3.7 (10 May 2014)
+
+  10 May 2014; Sergei Trofimovich <slyfox@gentoo.org> +hinotify-0.3.7.ebuild,
+  -hinotify-0.3.2.ebuild, -hinotify-0.3.5.ebuild:
+  Version bump.
 
 *hinotify-0.3.6 (21 Feb 2014)
 

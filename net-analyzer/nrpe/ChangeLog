@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nrpe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/ChangeLog,v 1.27 2014/04/21 10:44:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/ChangeLog,v 1.28 2014/05/10 14:01:57 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> nrpe-2.15.ebuild:
+  Stable for ppc, wrt bug #508122
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> nrpe-2.15.ebuild:
   Stable for x86, wrt bug #508122

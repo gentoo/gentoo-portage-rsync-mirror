@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.330 2014/05/10 05:26:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.331 2014/05/10 14:05:52 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.5.0.ebuild:
+  Stable for ppc, wrt bug #509050
 
   10 May 2014;  <anarchy@gentoo.org> firefox-29.0.1.ebuild:
   use ${PN} instead of hardcoding firefox

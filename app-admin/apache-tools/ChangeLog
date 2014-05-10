@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.184 2014/04/24 09:36:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.185 2014/05/10 14:02:10 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.27.ebuild:
+  Stable for ppc, wrt bug #507866
 
   24 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Cleaned up maintainer list.

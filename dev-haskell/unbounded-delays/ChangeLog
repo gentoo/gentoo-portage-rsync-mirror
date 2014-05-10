@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/unbounded-delays
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unbounded-delays/ChangeLog,v 1.1 2013/06/20 05:13:42 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unbounded-delays/ChangeLog,v 1.2 2014/05/10 14:20:54 slyfox Exp $
+
+*unbounded-delays-0.1.0.7 (10 May 2014)
+
+  10 May 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +unbounded-delays-0.1.0.7.ebuild:
+  Version bump.
 
 *unbounded-delays-0.1.0.5-r1 (20 Jun 2013)
 

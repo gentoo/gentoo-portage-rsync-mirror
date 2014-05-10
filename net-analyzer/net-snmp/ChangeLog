@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.282 2014/05/05 15:56:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.283 2014/05/10 14:01:51 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> net-snmp-5.7.3_pre3.ebuild:
+  Stable for ppc, wrt bug #509110
 
   05 May 2014; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.3_pre3.ebuild:
   Fix USE=-python by Jonathan Callen (bug #509600).

@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.136 2014/05/10 12:54:21 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.137 2014/05/10 14:04:59 swift Exp $
+
+  10 May 2014; Sven Vermeulen <swift@gentoo.org>
+  -policycoreutils-2.1.14-r1.ebuild, -policycoreutils-2.1.14-r2.ebuild,
+  -policycoreutils-2.1.14-r3.ebuild, -policycoreutils-2.1.14-r4.ebuild,
+  -policycoreutils-2.1.14-r5.ebuild, -policycoreutils-2.2.1-r1.ebuild,
+  -policycoreutils-2.2.5-r1.ebuild, -policycoreutils-2.2.5-r3.ebuild,
+  -policycoreutils-2.3_rc1.ebuild, -policycoreutils-2.3_rc1-r1.ebuild,
+  -files/policycoreutils-extra-1.21-fix-python3.patch:
+  Spring cleanup
 
   10 May 2014; Sven Vermeulen <swift@gentoo.org>
   policycoreutils-2.2.5-r4.ebuild:

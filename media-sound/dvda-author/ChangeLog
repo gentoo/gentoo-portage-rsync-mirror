@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/dvda-author
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/ChangeLog,v 1.7 2010/08/30 23:27:06 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/ChangeLog,v 1.9 2014/05/10 14:04:54 tomwij Exp $
+
+*dvda-author-10.06-r1 (10 May 2014)
+
+  10 May 2014; Tom Wijsman <TomWij@gentoo.org> +dvda-author-10.06-r1.ebuild:
+  [QA] Revision bump. EAPI 5. Support --as-needed specification by reordering
+  the linker command; fixes bug #336597, filed by Diego (flameeyes), with help
+  from Samuli (ssuominen).
 
 *dvda-author-10.06 (30 Aug 2010)
 
@@ -33,4 +40,3 @@
   +files/dvda-author-20050703-flac113.diff, +metadata.xml,
   +dvda-author-20050703.ebuild:
   initial commit, using own patch to use system flac-libs >= 1.1.3
-

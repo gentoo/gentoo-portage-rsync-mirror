@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.263 2014/05/04 08:20:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.264 2014/05/10 14:01:34 ago Exp $
+
+  10 May 2014; Agostino Sarubbo <ago@gentoo.org> dpkg-1.17.9.ebuild:
+  Stable for ppc, wrt bug #509018
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> dpkg-1.17.9.ebuild:
   Stable for amd64, wrt bug #509018
