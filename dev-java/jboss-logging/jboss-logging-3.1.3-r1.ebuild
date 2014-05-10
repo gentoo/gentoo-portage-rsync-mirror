@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-logging/jboss-logging-3.1.3-r1.ebuild,v 1.1 2014/05/08 14:15:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-logging/jboss-logging-3.1.3-r1.ebuild,v 1.2 2014/05/10 08:49:16 tomwij Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="dev-java/jboss-logmanager:0
-	dev-java/slf4j-api:0
+	<dev-java/slf4j-api-1.7.7:0
 	dev-java/log4j:0"
 
 RDEPEND=">=virtual/jre-1.5
