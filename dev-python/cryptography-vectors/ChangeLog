@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cryptography-vectors
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography-vectors/ChangeLog,v 1.3 2014/05/07 05:55:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography-vectors/ChangeLog,v 1.4 2014/05/10 05:23:29 idella4 Exp $
+
+  10 May 2014; Ian Delaney <idella4@gentoo.org> cryptography-vectors-0.3.ebuild,
+  cryptography-vectors-0.4.ebuild:
+  drop py2.6 pypy2_0 support
 
 *cryptography-vectors-0.4 (07 May 2014)
 
