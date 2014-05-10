@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8938 2014/05/09 23:11:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8939 2014/05/10 00:21:50 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 May 2014; Johannes Huber <johu@gentoo.org> package.mask:
+  Remove obsolete mask on games-puzzle/krosswordpuzzle.
 
   09 May 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask mistakenly masked non-multilib alsa-plugins to fix depgraph.

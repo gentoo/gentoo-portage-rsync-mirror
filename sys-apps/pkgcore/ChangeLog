@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.176 2014/04/10 21:38:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.177 2014/05/10 00:05:05 radhermit Exp $
+
+  10 May 2014; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Drop python3 support until it's tested and confirmed working.
 
   10 Apr 2014; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
   Generate plugin cache for every enabled python implementation.

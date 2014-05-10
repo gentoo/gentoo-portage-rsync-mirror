@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0.ebuild,v 1.4 2014/04/12 08:38:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r2.ebuild,v 1.1 2014/05/10 00:04:50 dlan Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=
+	UPSTREAM_VER=1
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -42,11 +42,12 @@ SLOT="0"
 # Inclusion of IUSE ocaml on stabalizing requires maintainer of ocaml to (get off his hands and) make
 # >=dev-lang/ocaml-4 stable
 # Masked in profiles/eapi-5-files instead
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs system-qemu"
 
-REQUIRED_USE="hvm? ( qemu )
+REQUIRED_USE="hvm? ( || ( qemu system-qemu ) )
 	${PYTHON_REQUIRED_USE}
-	pygrub? ( python )"
+	pygrub? ( python )
+	qemu? ( !system-qemu )"
 
 COMMON_DEPEND="
 	dev-libs/lzo:2
@@ -73,7 +74,7 @@ DEPEND="${COMMON_DEPEND}
 		sys-power/iasl )
 	dev-lang/perl
 	app-misc/pax-utils
-	dev-python/markdown[${PYTHON_USEDEP}]
+	dev-python/markdown
 	doc? (
 		app-doc/doxygen
 		dev-tex/latex2html[png,gif]
@@ -90,6 +91,7 @@ DEPEND="${COMMON_DEPEND}
 	hvm? ( x11-proto/xproto
 		!net-libs/libiscsi )
 	qemu? ( x11-libs/pixman )
+	system-qemu? ( app-emulation/qemu[xen] )
 	ocaml? ( dev-ml/findlib
 		>=dev-lang/ocaml-4 )"
 
@@ -114,12 +116,6 @@ pkg_setup() {
 
 	if has_version dev-libs/libgcrypt:0; then
 		export "CONFIG_GCRYPT=y"
-	fi
-
-	if use qemu; then
-		export "CONFIG_IOEMU=y"
-	else
-		export "CONFIG_IOEMU=n"
 	fi
 
 	if ! use x86 && ! has x86 $(get_all_abis) && use hvm; then
@@ -193,6 +189,9 @@ src_prepare() {
 	mv tools/qemu-xen/qemu-bridge-helper.c tools/qemu-xen/xen-bridge-helper.c || die
 
 	epatch "${FILESDIR}"/${PN}-4.4-api-fix.patch
+
+	# Fix po file collision with app-emulation/qemu, while USE=qemu is enabled, Bug 508302
+	epatch "${FILESDIR}"/${PN}-4-qemu-fix-po-collision.patch
 
 	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' \
@@ -268,11 +267,13 @@ src_configure() {
 		--disable-xen \
 		--enable-tools \
 		--enable-docs \
-		--with-system-qemu \
+		--disable-qemu-traditional \
+		$(use_with system-qemu) \
 		$(use_enable pam) \
 		$(use_enable api xenapi) \
 		$(use_enable ocaml ocamltools) \
 		"
+	use qemu || myconf+=" --with-system-qemu"
 	econf ${myconf}
 }
 

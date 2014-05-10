@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15666 2014/05/09 23:11:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15667 2014/05/10 00:21:50 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -320,12 +320,6 @@ dev-java/randomguid
 # -portage compatibility (bug #506398) and /tmp ownership issue
 # (bug #506472). Masked for testing.
 =sys-devel/llvm-3.4-r2
-
-# Johannes Huber <johu@gentoo.org> (10 Apr 2014)
-# Masked for removal in 30 days. Doesn't build since KDE 4.9,
-# bumping to "newest" release from 2011 same result. Dead upstream.
-# bug #429604
-games-puzzle/krosswordpuzzle
 
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
 # Dead upstream, has known dataloss bugs. 

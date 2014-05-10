@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.235 2014/04/12 08:38:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.236 2014/05/10 00:04:50 dlan Exp $
+
+*xen-tools-4.4.0-r2 (09 May 2014)
+*xen-tools-4.3.2-r2 (09 May 2014)
+*xen-tools-4.2.4-r2 (09 May 2014)
+
+  09 May 2014; Yixun Lan <dlan@gentoo.org> +xen-tools-4.2.4-r2.ebuild,
+  +xen-tools-4.3.2-r2.ebuild, +xen-tools-4.4.0-r2.ebuild,
+  +files/xen-tools-4-qemu-fix-po-collision.patch:
+  1) bump security patches, bug 508510, 508424, 509054, 509176 2) fix file
+  collision with app-emulation/qemu, bug 508302 3) drop old
 
   12 Apr 2014; Ian Delaney <idella4@gentoo.org> xen-tools-4.3.1-r5.ebuild,
   xen-tools-4.3.1-r6.ebuild, xen-tools-4.3.2.ebuild, xen-tools-4.4.0.ebuild:
