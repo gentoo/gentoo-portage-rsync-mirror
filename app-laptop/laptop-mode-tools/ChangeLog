@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/laptop-mode-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.83 2013/09/12 05:43:52 alonbl Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.85 2014/05/10 11:54:06 ssuominen Exp $
+
+  10 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  laptop-mode-tools-1.64.ebuild:
+  sys-apps/which is required for finding udevadm, as per Documentation/revision-
+  history.txt 'Replace hardcoded path to udevadm with "which udevadm"'
 
   12 Sep 2013; Alon Bar-Lev <alonbl@gentoo.org> laptop-mode-tools-1.64.ebuild:
   Fix README issue, bug#484616, thanks to Manuel Rüger

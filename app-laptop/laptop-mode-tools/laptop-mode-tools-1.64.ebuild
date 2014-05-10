@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64.ebuild,v 1.2 2013/09/12 05:43:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64.ebuild,v 1.3 2014/05/10 11:41:37 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib systemd udev
@@ -19,6 +19,7 @@ IUSE="+acpi apm bluetooth scsi"
 RDEPEND="net-wireless/wireless-tools
 	sys-apps/ethtool
 	sys-apps/hdparm
+	sys-apps/which
 	acpi? ( sys-power/acpid )
 	apm? ( sys-apps/apmd )
 	bluetooth? ( net-wireless/bluez:= )

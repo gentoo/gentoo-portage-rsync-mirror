@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.20.1.ebuild,v 1.1 2014/04/04 19:11:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.20.1.ebuild,v 1.2 2014/05/10 11:57:28 slyfox Exp $
 
 EAPI=5
 
@@ -42,7 +42,6 @@ DEPEND="${RDEPEND}
 			>=dev-haskell/timezone-series-0.1 <dev-haskell/timezone-series-0.2 )
 	xft? ( >=dev-haskell/x11-xft-0.2 <dev-haskell/x11-xft-0.4 )
 "
-RDEPEND+="mpd? ( media-sound/mpd )"
 
 src_configure() {
 	haskell-cabal_src_configure \

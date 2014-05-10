@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.8.1.ebuild,v 1.1 2014/05/09 11:51:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-desktop/mate-desktop-1.8.1-r1.ebuild,v 1.1 2014/05/10 11:36:46 tomwij Exp $
 
 EAPI="5"
 
@@ -46,7 +46,9 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	gnome2_src_configure \
+		--enable-mate-about \
 		--enable-mate-conf-import \
+		--disable-desktop-docs \
 		--with-gtk=2.0 \
 		$(use_with X x) \
 		$(use_enable startup-notification)

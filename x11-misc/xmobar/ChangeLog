@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmobar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.26 2014/04/04 19:11:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.27 2014/05/10 11:57:28 slyfox Exp $
+
+  10 May 2014; Sergei Trofimovich <slyfox@gentoo.org> xmobar-0.20.1.ebuild:
+  Drop needless mpd depend.
 
 *xmobar-0.20.1 (04 Apr 2014)
 
