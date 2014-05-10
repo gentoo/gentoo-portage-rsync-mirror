@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.617 2014/05/09 15:55:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.618 2014/05/10 13:23:15 ulm Exp $
+
+*emacs-23.4-r11 (10 May 2014)
+
+  10 May 2014; Ulrich Müller <ulm@gentoo.org> +emacs-23.4-r11.ebuild:
+  Backport xz support to Emacs 23.4.
 
   09 May 2014; Jeroen Roovers <jer@gentoo.org> emacs-23.4-r10.ebuild,
   emacs-24.3-r6.ebuild:
