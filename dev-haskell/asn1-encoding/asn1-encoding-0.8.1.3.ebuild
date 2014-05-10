@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-encoding/asn1-encoding-0.8.1.3.ebuild,v 1.1 2014/03/09 10:55:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-encoding/asn1-encoding-0.8.1.3.ebuild,v 1.2 2014/05/10 12:17:26 slyfox Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-haskell/asn1-types-0.2.1:=[profile?] <dev-haskell/asn1-types-0.3:
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8.0.2
 	test? ( dev-haskell/hunit:=[profile?]
-		>=dev-haskell/quickcheck-2:=[profile?]
+		>=dev-haskell/quickcheck-2:2=[profile?]
 		>=dev-haskell/test-framework-0.3:=[profile?]
 		>=dev-haskell/test-framework-quickcheck2-0.2:=[profile?] )
 "

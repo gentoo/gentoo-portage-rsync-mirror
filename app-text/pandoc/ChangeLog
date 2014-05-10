@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.30 2014/04/13 13:04:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.31 2014/05/10 12:12:57 slyfox Exp $
+
+*pandoc-1.12.4 (10 May 2014)
+
+  10 May 2014; Sergei Trofimovich <slyfox@gentoo.org> +pandoc-1.12.4.ebuild,
+  -pandoc-1.11.1-r1.ebuild:
+  Version bump.
 
   13 Apr 2014; Sergei Trofimovich <slyfox@gentoo.org> pandoc-1.12.3.3.ebuild:
   Allow QC-2.7 in tests.

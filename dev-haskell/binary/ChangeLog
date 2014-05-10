@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.41 2014/04/13 13:07:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.42 2014/05/10 12:22:43 slyfox Exp $
+
+  10 May 2014; Sergei Trofimovich <slyfox@gentoo.org> -binary-0.5.0.2.ebuild,
+  -binary-0.5.1.0.ebuild, -files/binary-0.5.0.2-ghc-7.patch:
+  Drop old.
 
   13 Apr 2014; Sergei Trofimovich <slyfox@gentoo.org> binary-0.7.1.0.ebuild:
   Mark as ghc-7.8 core lib.
