@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.21 2014/03/25 17:35:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.22 2014/05/10 20:01:09 dlan Exp $
+
+*stgit-0.17.1-r1 (10 May 2014)
+
+  10 May 2014; Yixun Lan <dlan@gentoo.org> -stgit-0.17.1.ebuild,
+  +stgit-0.17.1-r1.ebuild:
+  pull in a few upstream patches
 
 *stgit-0.17.1 (25 Mar 2014)
 

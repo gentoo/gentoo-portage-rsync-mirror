@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.403 2014/05/04 12:10:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.404 2014/05/10 19:37:26 pacho Exp $
+
+  10 May 2014; Pacho Ramos <pacho@gentoo.org> -gdm-3.10.0.1.ebuild,
+  gdm-3.10.0.1-r1.ebuild:
+  Really fix the vt issue with plymouth (#453392#c10), drop old
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> gdm-3.10.0.1-r1.ebuild:
   x86 stable, bug 508862

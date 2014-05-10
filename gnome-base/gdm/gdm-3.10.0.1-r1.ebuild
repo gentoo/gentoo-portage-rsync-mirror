@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1-r1.ebuild,v 1.6 2014/05/04 12:10:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1-r1.ebuild,v 1.7 2014/05/10 19:37:26 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -168,7 +168,6 @@ src_configure() {
 		--with-default-pam-config=exherbo \
 		--with-at-spi-registryd-directory="${EPREFIX}"/usr/libexec \
 		--with-consolekit-directory="${EPREFIX}"/usr/lib/ConsoleKit \
-		--with-initial-vt=7 \
 		--without-xevie \
 		$(use_with audit libaudit) \
 		$(use_enable ipv6) \

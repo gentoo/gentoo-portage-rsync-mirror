@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.17.1.ebuild,v 1.1 2014/03/25 17:35:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.17.1-r1.ebuild,v 1.1 2014/05/10 20:01:09 dlan Exp $
 
 EAPI="5"
 
@@ -10,7 +10,12 @@ inherit bash-completion-r1 distutils-r1
 
 DESCRIPTION="Manage a stack of patches using GIT as a backend"
 HOMEPAGE="http://www.procode.org/stgit/"
-SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
+UPSTREAM_VER=0
+[[ -n ${UPSTREAM_VER} ]] && \
+	UPSTREAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P}-upstream-patches-${UPSTREAM_VER}.tar.xz"
+
+SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz
+	${UPSTREAM_PATCHSET_URI}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -42,6 +47,13 @@ pkg_setup() {
 }
 
 python_prepare_all() {
+	# Upstream's patchset
+	if [[ -n ${UPSTREAM_VER} ]]; then
+		EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" \
+			epatch "${WORKDIR}"/patches-upstream
+	fi
+
 	# this will be a noop, as we are working with a tarball,
 	# but throws git errors --> just get rid of it
 	sed -i -e 's/version\.write_builtin_version()//' setup.py || die
