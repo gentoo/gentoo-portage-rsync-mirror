@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.9-r1.ebuild,v 1.1 2014/04/19 18:08:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.9-r2.ebuild,v 1.1 2014/05/11 18:36:00 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils ssl-cert systemd user
 
@@ -53,15 +53,31 @@ pkg_setup() {
 	enewuser ${VDRADMIN_USER} -1 /bin/bash ${CACHE_DIR} ${VDRADMIN_GROUP}
 }
 
+src_unpack() {
+	unpack ${A}
+	cp "${FILESDIR}"/vdradmind.service "${WORKDIR}"/vdradmind.service
+}
+
 src_prepare() {
 	sed -i vdradmind.pl \
 		-e "s-FILES_IN_SYSTEM    = 0;-FILES_IN_SYSTEM    = 1;-g" || die
+
+	if use ipv6; then
+		sed -e "s:/usr/bin/vdradmind:/usr/bin/vdradmind --ipv6:" \
+			-i "${WORKDIR}"/vdradmind.service
+	fi
+
+	if use ssl; then
+		sed -e "s:/usr/bin/vdradmind:/usr/bin/vdradmind --ssl:" \
+			-i "${WORKDIR}"/vdradmind.service
+	fi
 }
 
 src_install() {
 	newinitd "${FILESDIR}"/vdradmin-3.6.7.init vdradmin
 	newconfd "${FILESDIR}"/vdradmin-3.6.6.conf vdradmin
-	systemd_dounit "${FILESDIR}"/vdradmind.service
+
+	systemd_dounit "${WORKDIR}"/vdradmind.service
 	systemd_dotmpfilesd "${FILESDIR}"/vdradmind.conf
 
 	insinto /etc/logrotate.d
