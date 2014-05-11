@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/anyremote-6.3.ebuild,v 1.1 2013/05/18 10:15:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/anyremote-6.4.ebuild,v 1.1 2014/05/11 13:24:28 mrueg Exp $
 
-EAPI="5"
+EAPI=5
 
 DESCRIPTION="Anyremote provides wireless bluetooth, infrared or cable remote control service"
 HOMEPAGE="http://anyremote.sourceforge.net/"
