@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xmonad-contrib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.26 2014/02/21 19:29:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.27 2014/05/11 07:03:45 slyfox Exp $
+
+  11 May 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  -xmonad-contrib-0.10.ebuild, -xmonad-contrib-0.11.1.ebuild,
+  -xmonad-contrib-0.11.ebuild:
+  Drop old (found by Patrick Lauer in bug #510012).
 
   21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org>
   +files/xmonad-contrib-0.11.2-ghc-7.8.patch, xmonad-contrib-0.11.2.ebuild:
