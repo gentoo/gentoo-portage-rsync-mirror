@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.1.ebuild,v 1.1 2014/04/28 01:54:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.1-r1.ebuild,v 1.1 2014/05/11 11:51:25 vadimk Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -45,12 +45,11 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 #>=dev-python/wsgiref-0.1.2[${PYTHON_USEDEP}]
 
 RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
-		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <=dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <=dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
+		>=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
+	    <=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
+		postgres? ( >=dev-python/psycopg-2[${PYTHON_USEDEP}] )
+		sqlite? ( dev-db/sqlite )
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
@@ -76,7 +75,8 @@ RDEPEND=">=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
 		>=dev-python/pyopenssl-0.11[${PYTHON_USEDEP}]
 		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
-		>=dev-python/oslo-messaging-1.3.0[${PYTHON_USEDEP}]"
+		>=dev-python/oslo-messaging-1.3.0[${PYTHON_USEDEP}]
+		dev-python/oslo-vmware[${PYTHON_USEDEP}] "
 
 PATCHES=( "${FILESDIR}"/${PN}-2013.2-sphinx_mapping.patch )
 

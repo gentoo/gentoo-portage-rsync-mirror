@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/oslo-vmware
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-vmware/ChangeLog,v 1.1 2014/05/11 11:36:58 vadimk Exp $
+
+*oslo-vmware-0.3 (11 May 2014)
+
+  11 May 2014; Vadim Kuznetsov vadimk@gentoo.org +metadata.xml,
+  +oslo-vmware-0.3.ebuild:
+  Bug 509192
