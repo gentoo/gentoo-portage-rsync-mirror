@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/django-recaptcha-1.0.ebuild,v 1.1 2014/05/10 08:58:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/django-recaptcha-1.0.ebuild,v 1.2 2014/05/10 23:43:59 patrick Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} ) #  pypy ) needs django to be pypy'ed too
 inherit distutils-r1
 
 DESCRIPTION="Django recaptcha form field/widget app"
