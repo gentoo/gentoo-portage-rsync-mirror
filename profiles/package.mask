@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15670 2014/05/10 20:25:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15671 2014/05/10 23:06:35 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,12 +29,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Michał Górny <mgorny@gentoo.org> (10 May 2014)
-# Broken compatibility symlink in this version. A fix is on its way
-# but it will take me a while to test it.
-=sys-devel/clang-3.4.1-r100
-=sys-devel/llvm-3.4.1
 
 # Ulrich Müller <ulm@gentoo.org> (08 May 2014)
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
