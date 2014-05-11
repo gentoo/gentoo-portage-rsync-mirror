@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15673 2014/05/11 08:31:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15674 2014/05/11 11:16:32 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -307,12 +307,6 @@ dev-cpp/libsexymm
 # Masked for removal in 30 days, bug 446162.
 dev-java/randomguid
 
-# Michał Górny <mgorny@gentoo.org> (10 Apr 2014)
-# The new version with refurbished install phase. Fixes multilib-
-# -portage compatibility (bug #506398) and /tmp ownership issue
-# (bug #506472). Masked for testing.
-=sys-devel/llvm-3.4-r2
-
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
 # Dead upstream, has known dataloss bugs. 
 # Please use something more sane: rsnapshot, backuppc, obnam, ...
@@ -360,11 +354,6 @@ virtual/pypy:2.0
 # and #497124
 # hopefully 1.8 will improve the situation
 >=dev-libs/DirectFB-1.7.1
-
-# Julian Ospald <hasufell@gentoo.org> (03 Apr 2014)
-# Mask to ensure users with mixed arches also get
-# the update. Remove later.
-=sys-devel/llvm-3.4
 
 # Alexander Vershilov <qnikst@gentoo.org> (02 Apr 2014)
 # Multiple vulnerabilities, see #504724, #505860

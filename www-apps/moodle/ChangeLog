@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/moodle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.56 2014/03/08 20:27:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.57 2014/05/11 11:14:11 blueness Exp $
+
+*moodle-2.6.3 (11 May 2014)
+*moodle-2.5.6 (11 May 2014)
+*moodle-2.4.10 (11 May 2014)
+
+  11 May 2014; Anthony G. Basile <blueness@gentoo.org> +moodle-2.4.10.ebuild,
+  +moodle-2.5.6.ebuild, +moodle-2.6.3.ebuild, -moodle-2.4.8.ebuild,
+  -moodle-2.5.4.ebuild, -moodle-2.6.1.ebuild:
+  Version bumps
 
 *moodle-2.4.9 (08 Mar 2014)
 *moodle-2.6.2 (08 Mar 2014)
