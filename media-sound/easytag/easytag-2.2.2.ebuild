@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.2.2.ebuild,v 1.4 2014/05/11 10:05:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.2.2.ebuild,v 1.5 2014/05/11 12:36:52 yngwin Exp $
 
 EAPI=5
 inherit fdo-mime gnome.org gnome2-utils
@@ -12,7 +12,9 @@ LICENSE="GPL-2 GPL-2+ LGPL-2 LGPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="flac gtk2 +gtk3 mp3 mp4 opus speex test vorbis wavpack"
-REQUIRED_USE="|| ( gtk2 gtk3 )"
+REQUIRED_USE="|| ( gtk2 gtk3 )
+	opus? ( vorbis )
+	speex? ( vorbis )"
 
 RDEPEND=">=dev-libs/glib-2.32:2
 	flac? ( >=media-libs/flac-1.3 )
@@ -46,9 +48,6 @@ DEPEND="${RDEPEND}
 		>=dev-util/appdata-tools-0.1.7
 		>=dev-util/desktop-file-utils-0.22
 		)"
-
-REQUIRED_USE="opus? ( vorbis )
-	speex? ( vorbis )"
 
 DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
 
