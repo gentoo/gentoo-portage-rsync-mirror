@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-208-r2.ebuild,v 1.1 2014/03/28 11:16:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-208-r2.ebuild,v 1.2 2014/05/11 16:41:17 ssuominen Exp $
 
 EAPI=5
 inherit multilib-build
 
-DESCRIPTION="Virtual to select between sys-fs/udev and sys-fs/eudev"
+DESCRIPTION="Virtual to select between different udev daemon providers"
 HOMEPAGE=""
 SRC_URI=""
 

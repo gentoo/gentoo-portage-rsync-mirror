@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.77 2014/03/29 16:07:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.78 2014/05/11 16:41:17 ssuominen Exp $
+
+  11 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-208-r2.ebuild:
+  Update DESCRIPTION to not exclude sys-apps/systemd.
 
   29 Mar 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Add eudev@g.o as a maintainer
