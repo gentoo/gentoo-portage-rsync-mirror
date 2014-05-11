@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r2.ebuild,v 1.1 2014/05/10 00:04:50 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r2.ebuild,v 1.2 2014/05/11 22:25:22 dlan Exp $
 
 EAPI=5
 
@@ -106,7 +106,8 @@ RDEPEND="${COMMON_DEPEND}
 
 # hvmloader is used to bootstrap a fully virtualized kernel
 # Approved by QA team in bug #144032
-QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
+QA_WX_LOAD="usr/lib/xen/boot/hvmloader
+	usr/share/qemu-xen/qemu/s390-ccw.img"
 
 RESTRICT="test"
 

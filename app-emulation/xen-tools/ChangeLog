@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.236 2014/05/10 00:04:50 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.237 2014/05/11 22:25:22 dlan Exp $
+
+  11 May 2014; Yixun Lan <dlan@gentoo.org> xen-tools-4.4.0-r2.ebuild:
+  silent QA warning, bug #510072, thanks iamnr3
 
 *xen-tools-4.4.0-r2 (09 May 2014)
 *xen-tools-4.3.2-r2 (09 May 2014)
