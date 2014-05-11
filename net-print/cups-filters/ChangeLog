@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.121 2014/05/10 14:01:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.122 2014/05/11 08:02:39 ago Exp $
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.53.ebuild:
+  Stable for ppc64, wrt bug #508844
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.53.ebuild:
   Stable for ppc, wrt bug #508844

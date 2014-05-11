@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.113 2014/04/02 21:11:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.114 2014/05/11 08:05:03 ago Exp $
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
+  Stable for ppc64, wrt bug #509134
 
   02 Apr 2014; Patrick McLean <chutzpah@gentoo.org> beautifulsoup-4.3.2.ebuild:
   Add python3_4 support.

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.220 2014/05/10 13:39:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.221 2014/05/11 08:25:33 ago Exp $
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-doc-utils-0.20.10-r1.ebuild:
+  Stable for ppc64, wrt bug #508862
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-doc-utils-0.20.10-r1.ebuild:

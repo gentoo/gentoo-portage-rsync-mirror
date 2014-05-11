@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.253 2014/05/10 13:40:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.254 2014/05/11 08:25:41 ago Exp $
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org> gmime-2.4.33.ebuild,
+  gmime-2.6.20.ebuild:
+  Stable for ppc64, wrt bug #508862
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> gmime-2.4.33.ebuild,
   gmime-2.6.20.ebuild:

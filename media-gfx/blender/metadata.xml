@@ -19,10 +19,6 @@
   </longdescription>
 
   <use>
-    <flag name='3dmouse'>
-      Adds support for space navigator devices through package
-      <pkg>dev-libs/libspnav</pkg>.
-    </flag>
     <flag name='game-engine' restrict='&gt;=media-gfx/blender-2.50'>
       Adds Game Engine support to Blender.
     </flag>
@@ -45,12 +41,6 @@
     </flag>
     <flag name="doc">
       Build C and Python API documentation directly from the source code.
-    </flag>
-    <flag name="tweak-mode">
-      This flag allows you to model without confirming each translation,
-      in particular it lets you grab with left mouse button (LMB) and not
-      having to confirm by another click. Blender 'Tweak Mode' is similar
-      to the 'Tweak Mode' of the Wings modeller (<pkg>media-gfx/wings</pkg>).
     </flag>
     <flag name="redcode">
       This flag add support for RED CODE camera digital format (5K HD

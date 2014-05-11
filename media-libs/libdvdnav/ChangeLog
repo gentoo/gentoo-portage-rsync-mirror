@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.77 2014/05/10 13:45:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.78 2014/05/11 08:12:13 ago Exp $
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org> libdvdnav-4.2.1.ebuild:
+  Stable for ppc64, wrt bug #502838
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> libdvdnav-4.2.1.ebuild:
   Stable for ppc, wrt bug #502838

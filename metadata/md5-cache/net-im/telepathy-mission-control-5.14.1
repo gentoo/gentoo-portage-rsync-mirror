@@ -4,7 +4,7 @@ DESCRIPTION=An account manager and channel dispatcher for the Telepathy framewor
 EAPI=5
 HOMEPAGE=http://cgit.freedesktop.org/telepathy/telepathy-mission-control/
 IUSE=connman debug gnome-keyring networkmanager +upower
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ppc64 ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux
 LICENSE=LGPL-2.1+
 RDEPEND=>=dev-libs/dbus-glib-0.82 >=dev-libs/glib-2.30:2 >=sys-apps/dbus-0.95 >=net-libs/telepathy-glib-0.19 connman? ( net-misc/connman ) gnome-keyring? ( gnome-base/libgnome-keyring ) networkmanager? ( >=net-misc/networkmanager-0.7 ) upower? ( >=sys-power/upower-0.9.11 <sys-power/upower-0.99 )
 REQUIRED_USE=?? ( connman networkmanager )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.14.1.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=e0fe2f28aa5a6a493c1eeb90d455c419
+_md5_=0c254adae9ece3b6443ac9fa07ffe40c

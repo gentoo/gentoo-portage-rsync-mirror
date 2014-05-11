@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.266 2014/05/09 20:26:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.267 2014/05/11 08:03:32 pacho Exp $
+
+  11 May 2014; Pacho Ramos <pacho@gentoo.org> -blender-2.64a.ebuild,
+  metadata.xml:
+  Remove masked package (#286758)
 
 *blender-2.70a-r3 (09 May 2014)
 

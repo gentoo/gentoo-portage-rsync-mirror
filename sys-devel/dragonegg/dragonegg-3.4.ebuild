@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.4.ebuild,v 1.1 2014/01/06 23:24:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.4.ebuild,v 1.2 2014/05/11 08:17:58 voyageur Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="test"
 
 DEPEND="|| ( sys-devel/gcc:4.5[lto]
 		>=sys-devel/gcc-4.6 )
-	~sys-devel/llvm-${PV}"
+	=sys-devel/llvm-${PV}*"
 RDEPEND="${DEPEND}"
 
 src_compile() {

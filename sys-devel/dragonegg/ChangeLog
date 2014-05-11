@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/dragonegg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.17 2014/04/17 19:55:39 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.18 2014/05/11 08:17:58 voyageur Exp $
+
+  11 May 2014; Bernard Cafarelli <voyageur@gentoo.org> dragonegg-3.4.ebuild:
+  Relax dependency on llvm for 3.4.1
 
   17 Apr 2014; Christoph Junghans <ottxor@gentoo.org> dragonegg-9999.ebuild:
   switch to git (bug #506692)

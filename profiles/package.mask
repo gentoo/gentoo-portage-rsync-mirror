@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15671 2014/05/10 23:06:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15672 2014/05/11 08:20:42 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -350,86 +350,6 @@ virtual/pypy:2.0
 # See bug #327837, #382667, #492474
 <media-video/pitivi-0.90
 
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Masked since:
-# Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
-# Dead upstream and has issues with newer portages.
-# Still nobody stepped to maintain it and it's now
-# completely broken (bug #172611). Removal in a month.
-app-portage/udept
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Upstream dead since 2004, nothing needs it (#284421)
-# Removal in a month.
-media-libs/libj2k
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# No upstream for a long time, better alternatives would
-# be gbdfed or vim (#286314). Removal in a month.
-media-gfx/cfe
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Masked since:
-# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
-# Unsupported and full of bundled libs. Only left
-# for people who don't have python-3.3 yet.
-# Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
-#
-# As it's the case now, will be removed in a month (#286758)
-=media-gfx/blender-2.64a
-media-gfx/yablex
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Bundles internal copy of berkdb, upstream dead for ages
-# (#319683). Removal in a month.
-app-admin/osiris
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Multiple issues and dead for ages (#327735).
-# You can use cpupower (from sys-power/cpupower or
-# sys-apps/linux-misc-apps). Removal in a month.
-sys-power/cpufreqd
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Not compatible with gnutls-3 (#421405), multiple issues
-# and dead since 2008. Removal in a month.
-net-irc/ctrlproxy
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Crashes at start, no fix (#394063). Removal in a month.
-x11-misc/pogo
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Cannot be compiled for a long time (#405649).
-# Removal in a month.
-sci-geosciences/openstreetmap-icons
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Runtime failures (#305019), cannot be recompiled
-# (#352003, #369539, #425484), nobody is taking care of it.
-# Removal in a month.
-media-gfx/k3d
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# No longer supported by upstream and nothing needs it
-# (#489628). Removal in a month.
-dev-python/telepathy-python
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# No longer works and upstream killed it (#493188).
-# Removal in a month.
-media-tv/huludesktop
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# Dead since 2008 and doesn't work with current kernels
-# (#504168). Removal in a month.
-app-admin/lcap
-
-# Pacho Ramos <pacho@gentoo.org> (06 Apr 2014)
-# No needed as its functionality was included to apache
-# (#504596). Removal in a month.
-www-apache/mod_chroot
-
 # Julian Ospald <hasufell@gentoo.org> (05 Apr 2014)
 # not compilable without workarounds, see bug #499740
 # and #497124
@@ -463,12 +383,6 @@ www-apache/mod_chroot
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280
 <media-libs/mesa-9.1.4
-
-# Rick Farina <zerochaos@gentoo.org> (11 Apr 2014)
-# Upstream has replaced dev-util/dissy with dev-util/emilpro
-# Please switch to emilpro or report issues in bug #505380
-# removal in 30 days.
-dev-util/dissy
 
 # Sergey Popov <pinkbyte@gentoo.org> (20 Mar 2014)
 # Security mask of vulnerable versions, wrt bug #424167

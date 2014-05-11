@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.269 2014/05/10 14:02:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.270 2014/05/11 08:02:08 ago Exp $
+
+  11 May 2014; Agostino Sarubbo <ago@gentoo.org> apache-2.2.27.ebuild:
+  Stable for ppc64, wrt bug #507866
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> apache-2.2.27.ebuild:
   Stable for ppc, wrt bug #507866
