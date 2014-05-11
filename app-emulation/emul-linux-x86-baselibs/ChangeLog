@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.204 2014/05/09 06:57:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.205 2014/05/11 09:22:16 mgorny Exp $
+
+  11 May 2014; Michał Górny <mgorny@gentoo.org> files/remove-native-20140508:
+  Update remove-native for gmp, bug #509990.
 
   09 May 2014; Michał Górny <mgorny@gentoo.org> files/remove-native-20140508:
   Update remove-native wrt libpng version change.
