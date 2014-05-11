@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15672 2014/05/11 08:20:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15673 2014/05/11 08:31:45 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (11 May 2014)
+# Dead for ages, now in mjpegtools, bug #492886
+# Removal in a month.
+media-video/y4mscaler
 
 # Ulrich Müller <ulm@gentoo.org> (08 May 2014)
 # SLOTs 21 and 22 of app-editors/emacs, corresponding to
