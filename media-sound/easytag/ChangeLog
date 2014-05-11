@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.192 2014/05/09 19:21:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.193 2014/05/11 10:05:20 yngwin Exp $
+
+  11 May 2014; Ben de Groot <yngwin@gentoo.org> easytag-2.2.2.ebuild,
+  metadata.xml:
+  Restore gtk2 useflag which was dropped for no good reason
 
   09 May 2014; Samuli Suominen <ssuominen@gentoo.org> easytag-2.2.2.ebuild:
   Reposition DOCS in the ebuild.

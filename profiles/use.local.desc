@@ -3707,6 +3707,8 @@ media-sound/denemo:fluidsynth - Enable Fluidsynth MIDI software synthesis
 media-sound/denemo:portmidi - Enable support for the portmidi backend
 media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
+media-sound/easytag:gtk2 - Enable GTK+:2 support and disable default GTK+:3 support
+media-sound/easytag:gtk3 - Enable GTK+:3 support (default) and disable GTK+:2 support
 media-sound/easytag:opus - Enable support for media-libs/opus and media-libs/opusfile (opus audio codec)
 media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
@@ -7345,11 +7347,14 @@ x11-wm/compiz-fusion:emerald - Install the x11-wm/emerald package.
 x11-wm/compiz-fusion:unsupported - Install the x11-plugins/compiz-fusion-plugins-unsupported package.
 x11-wm/echinus:xrandr - Enable support for multihead configuration
 x11-wm/enlightenment:enlightenment_modules_access - Accessibility module designed to improve ease of use for the vision impaired and the blind
+x11-wm/enlightenment:enlightenment_modules_appmenu - Gadget that hold the toolbar of the foreground application
 x11-wm/enlightenment:enlightenment_modules_backlight - Backlight control slider gadget
 x11-wm/enlightenment:enlightenment_modules_battery - A gadget to visualize your battery status
+x11-wm/enlightenment:enlightenment_modules_bluez4 - Configure Bluetooth devices
 x11-wm/enlightenment:enlightenment_modules_clock - Nice clock gadget to show current time
 x11-wm/enlightenment:enlightenment_modules_comp - Enlightenment Composite Manager
 x11-wm/enlightenment:enlightenment_modules_conf-applications - Allows configuration of Ibar, Restart, and Startup applications
+x11-wm/enlightenment:enlightenment_modules_conf-comp - Configure default dialog properties
 x11-wm/enlightenment:enlightenment_modules_conf-dialogs - Configure default dialog properties
 x11-wm/enlightenment:enlightenment_modules_conf-display - Used to configure your screen
 x11-wm/enlightenment:enlightenment_modules_conf-edgebindings - Configure your edge bindings here
@@ -7362,9 +7367,11 @@ x11-wm/enlightenment:enlightenment_modules_conf-performance - Used to configure 
 x11-wm/enlightenment:enlightenment_modules_conf-randr - Used to configure your screen's resolution
 x11-wm/enlightenment:enlightenment_modules_conf-shelves - Shelf configuration dialog
 x11-wm/enlightenment:enlightenment_modules_conf-theme - Used to configure your theme preferences
+x11-wm/enlightenment:enlightenment_modules_conf-wallpaper2 - Used to configure your theme preferences
 x11-wm/enlightenment:enlightenment_modules_conf-window-manipulation - Configures window raise, resistance, and maximize policies
 x11-wm/enlightenment:enlightenment_modules_conf-window-remembers - Delete existing window remembers
 x11-wm/enlightenment:enlightenment_modules_connman - Control Wifi and wired networks as a user
+x11-wm/enlightenment:enlightenment_modules_contact - Enable the contact module
 x11-wm/enlightenment:enlightenment_modules_cpufreq - Gadget to monitor and change the CPU frequency
 x11-wm/enlightenment:enlightenment_modules_dropshadow - Module to add a dropshadow to windows
 x11-wm/enlightenment:enlightenment_modules_everything - The run command module provides an application launcher dialog
@@ -7376,6 +7383,7 @@ x11-wm/enlightenment:enlightenment_modules_ibox - A home for your iconified appl
 x11-wm/enlightenment:enlightenment_modules_illume2 - Illume2 - next generation of illume - special WM mode for embedded devices and set of plugins with same purpose
 x11-wm/enlightenment:enlightenment_modules_mixer - A module to provide a mixer for changing volume
 x11-wm/enlightenment:enlightenment_modules_msgbus - DBus Extension
+x11-wm/enlightenment:enlightenment_modules_music-control - Control your music in your shelf
 x11-wm/enlightenment:enlightenment_modules_notification - notification-daemon alternative. Popup if an event occur
 x11-wm/enlightenment:enlightenment_modules_pager - Gadget to allow you to visualize your virtual desktops and the windows they contain
 x11-wm/enlightenment:enlightenment_modules_quickaccess - Enlightenment Quickaccess Launcher
@@ -7384,10 +7392,13 @@ x11-wm/enlightenment:enlightenment_modules_start - Enlightenment's "Start" butto
 x11-wm/enlightenment:enlightenment_modules_syscon - This module provides a unified popup dialog for all the system actions in Enlightenment
 x11-wm/enlightenment:enlightenment_modules_systray - system tray that hold applications icons like Skype, Pidgin, Kopete and others
 x11-wm/enlightenment:enlightenment_modules_tasks - Gadget to allow you to switch tasks
+x11-wm/enlightenment:enlightenment_modules_teamwork - Enable teamwork module
 x11-wm/enlightenment:enlightenment_modules_temperature - Temperature monitor
 x11-wm/enlightenment:enlightenment_modules_tiling - Positions/resizes your windows tilingly
 x11-wm/enlightenment:enlightenment_modules_winlist - A module to show the list of client applications presently running
 x11-wm/enlightenment:enlightenment_modules_wizard - First Run Wizard
+x11-wm/enlightenment:enlightenment_modules_wl-desktop-shell - Enlightenment Wayland Desktop Shell
+x11-wm/enlightenment:enlightenment_modules_wl-screenshot - Enlightenment Wayland Screenshot module
 x11-wm/enlightenment:enlightenment_modules_xkbswitch - Keyboard layout configuration and switcher
 x11-wm/enlightenment:pango - Enable pango font rendering
 x11-wm/enlightenment:udev - Use sys-fs/udev to determine available devices
