@@ -1,0 +1,13 @@
+# ChangeLog for sci-chemistry/propka
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/propka/ChangeLog,v 1.2 2014/05/11 10:48:00 jlec Exp $
+
+  11 May 2014; Justin Lecher <jlec@gentoo.org> propka-3.1_p140511.ebuild:
+  Install unversioned symlink
+
+*propka-3.1_p140511 (11 May 2014)
+
+  11 May 2014; Justin Lecher <jlec@gentoo.org> +propka-3.1_p140511.ebuild,
+  +metadata.xml:
+  New package written by me
+
