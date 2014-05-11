@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdaemon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.73 2012/05/13 19:47:31 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.74 2014/05/11 21:09:46 mgorny Exp $
+
+*libdaemon-0.14-r2 (11 May 2014)
+
+  11 May 2014; Michał Górny <mgorny@gentoo.org> +libdaemon-0.14-r2.ebuild:
+  Add multilib support, bug #509536.
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> libdaemon-0.14-r1.ebuild:
   keyword ~amd64-fbsd

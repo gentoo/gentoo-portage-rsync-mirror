@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/android-studio
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.1 2014/05/11 21:14:32 jauhien Exp $
+
+*android-studio-0.5.8.135.1155795 (11 May 2014)
+
+  11 May 2014;  <jauhien@gentoo.org> +android-studio-0.5.8.135.1155795.ebuild,
+  +metadata.xml:
+  Initial import, closing bug #510030, thanks to Jason Zaman and Manuel Rueger
