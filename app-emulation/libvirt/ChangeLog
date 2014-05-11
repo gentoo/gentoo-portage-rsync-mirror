@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.359 2014/04/21 08:00:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.360 2014/05/11 15:21:49 cardoe Exp $
+
+  11 May 2014; Doug Goldstein <cardoe@gentoo.org> libvirt-1.2.3.ebuild:
+  Add checks for kernel support for the guest bandwidth limiting feature.
+  Research into this and the work done by Dan Moulding
+  <dan.moulding@rackwareinc.com>
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libvirt-1.1.3.4.ebuild,
   libvirt-1.2.3.ebuild:
