@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.ebuild,v 1.1 2014/04/28 02:50:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1-r1.ebuild,v 1.1 2014/05/11 12:22:00 vadimk Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/icehouse/${PV}/+download/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+api +scheduler +volume mysql postgres sqlite test"
+IUSE="+api +scheduler +volume iscsi lvm mysql postgres sqlite test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #sudo is a build dep because I want the sudoers.d directory to exist, lazy.
@@ -39,7 +39,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				dev-python/oslo-sphinx[${PYTHON_USEDEP}] )"
 
-RDEPEND="=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
@@ -65,19 +65,19 @@ RDEPEND="=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		<dev-python/taskflow-0.2[${PYTHON_USEDEP}]
 		>=dev-python/rtslib-fb-2.1.39[${PYTHON_USEDEP}]
 		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-			<dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
-		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-			<dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-			<dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
+		>=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
+		<dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
+		postgres? ( >=dev-python/psycopg-2[${PYTHON_USEDEP}] )
+		sqlite? ( dev-db/sqlite )
 		>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		>=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
-		>=sys-block/iscsitarget-1.4.20.2_p20130821
-		sys-fs/lvm2
-		sys-block/open-iscsi
+		iscsi? (
+			>=sys-block/iscsitarget-1.4.20.2_p20130821
+			sys-block/open-iscsi )
+		lvm? ( sys-fs/lvm2 )
 		sys-fs/sysfsutils"
 
 PATCHES=( )
@@ -100,11 +100,10 @@ python_install() {
 	distutils-r1_python_install
 	keepdir /etc/cinder
 	dodir /etc/cinder/rootwrap.d
-	newinitd "${FILESDIR}/cinder-init" "cinder"
-	newconfd "${FILESDIR}/cinder-confd" "cinder"
-	use api && dosym /etc/init.d/cinder /etc/init.d/cinder-api
-	use scheduler && dosym /etc/init.d/cinder /etc/init.d/cinder-scheduler
-	use volume && dosym /etc/init.d/cinder /etc/init.d/cinder-volume
+
+	for svc in api scheduler volume; do
+		newinitd "${FILESDIR}/cinder.initd" cinder-${svc}
+	done
 
 	insinto /etc/cinder
 	newins "${S}/etc/cinder/cinder.conf.sample" "cinder.conf"
@@ -115,9 +114,11 @@ python_install() {
 	insinto /etc/cinder/rootwrap.d
 	newins "${S}/etc/cinder/rootwrap.d/volume.filters" "volume.filters"
 
-	#add sudoers definitions for user nova
-	insinto /etc/sudoers.d/
-	doins "${FILESDIR}/cinder-sudoers"
 	dodir /var/log/cinder
 	fowners cinder:cinder /var/log/cinder
+
+	#add sudoers definitions for user nova
+	insinto /etc/sudoers.d/
+	insopts -m 0440 -o root -g root
+	newins "${FILESDIR}/cinder.sudoersd" cinder
 }
