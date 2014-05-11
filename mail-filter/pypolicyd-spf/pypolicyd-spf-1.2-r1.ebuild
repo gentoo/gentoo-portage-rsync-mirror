@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-1.2-r1.ebuild,v 1.1 2014/05/10 03:28:18 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-1.2-r1.ebuild,v 1.2 2014/05/11 01:54:46 mjo Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ RDEPEND="${DEPEND}
 
 DOCS=( CHANGES policyd-spf.conf.commented README README.per_user_whitelisting )
 
-src_prepare() {
+python_prepare_all() {
 	# The "real" config file mentions the commented one, so we point
 	# users in the right direction.
 	local oldconf="policyd-spf.conf.commented"
@@ -52,5 +52,5 @@ src_prepare() {
 	sed -i "1 s~ ${oldconf}~,\n#  ${newconf}~" policyd-spf.conf \
 		|| die 'failed to update commented config file path'
 
-	distutils-r1_src_prepare
+	distutils-r1_python_prepare_all
 }
