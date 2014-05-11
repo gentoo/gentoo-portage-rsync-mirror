@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1249 2014/05/10 21:36:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1250 2014/05/11 07:58:35 mgorny Exp $
+
+  11 May 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Fail when package installs "share" subdirectory to PyPy prefix. This should
+  stop people from adding PyPy support to packages that do not work due to the
+  bug in PyPy.
 
   10 May 2014; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
   Remove the coreutils dependency since the old copying code has been replaced
