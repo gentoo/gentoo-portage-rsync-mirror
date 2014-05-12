@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15676 2014/05/12 04:49:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15677 2014/05/12 16:27:33 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -84,13 +84,13 @@ dev-db/mysql++:3
 >=app-emulation/lxc-1.0.0
 
 # Tom Wijsman <TomWij@gentoo.org> (03 May 2014)
-# Needs to be further tested and revised by both Java and Ruby herds. 
+# Needs to be further tested and revised by both Java and Ruby herds.
 >=dev-java/jruby-1.7.12
 
 # Tom Wijsman <TomWij@gentoo.org> (02 May 2014)
 # Bluetooth support in MATE has incompatibilities with recent BlueZ versions.
-# If you want to try to get this working, unmask net-wireless/mate-bluetooth as 
-# well as the bluetooth USE flag on mate-extra/mate-user-share; I can't support 
+# If you want to try to get this working, unmask net-wireless/mate-bluetooth as
+# well as the bluetooth USE flag on mate-extra/mate-user-share; I can't support
 # this until the relevant upstreams have moved forward with their compatibility.
 #
 # https://bugs.gentoo.org/show_bug.cgi?id=508086
@@ -302,7 +302,7 @@ app-admin/eselect-lua
 dev-cpp/libsexymm
 
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
-# Dead upstream, has known dataloss bugs. 
+# Dead upstream, has known dataloss bugs.
 # Please use something more sane: rsnapshot, backuppc, obnam, ...
 app-backup/rdiff-backup
 app-backup/pybackpack
@@ -366,7 +366,7 @@ virtual/pypy:2.0
 
 # Luca Barbato <lu_zero@gentoo.org> (30 Mar 2014)
 # Current stable for upstream, pending a tinderbox run.
-~media-video/libav-10
+=media-video/libav-10*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280

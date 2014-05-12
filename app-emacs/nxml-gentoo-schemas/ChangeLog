@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.22 2012/09/26 06:25:08 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.23 2014/05/12 16:13:35 ulm Exp $
+
+  12 May 2014; Ulrich Müller <ulm@gentoo.org>
+  nxml-gentoo-schemas-20111129.ebuild:
+  Change HOMEPAGE to be a plain string without variables, bug 408917.
 
   26 Sep 2012; Ulrich Müller <ulm@gentoo.org>
   nxml-gentoo-schemas-20111129.ebuild:
