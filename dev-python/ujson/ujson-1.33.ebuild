@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ujson-1.33.ebuild,v 1.3 2014/02/24 08:43:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ujson-1.33.ebuild,v 1.4 2014/05/12 09:02:03 idella4 Exp $
 
 EAPI="5"
 
 # One test; FAIL: test_encodeToUTF8 (__main__.UltraJSONTests) under py2.5.
 # Fix and repair and re-insert if it's REALLY needed
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit distutils-r1
 

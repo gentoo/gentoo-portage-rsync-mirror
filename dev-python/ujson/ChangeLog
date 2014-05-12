@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ujson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.5 2014/02/24 08:43:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.6 2014/05/12 09:02:03 idella4 Exp $
+
+  12 May 2014; Ian Delaney <idella4@gentoo.org> ujson-1.33.ebuild:
+  drop py2.6 add py3.4 support
 
   24 Feb 2014; Justin Lecher <jlec@gentoo.org> ujson-1.33.ebuild,
   +files/ujson-1.33-test-py3.patch, metadata.xml:
