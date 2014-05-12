@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.1 2014/05/05 08:22:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.2 2014/05/12 14:22:17 zerochaos Exp $
 
 EAPI="5"
 
@@ -14,7 +14,6 @@ HOMEPAGE="http://blueman-project.org/"
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/${PN}-project/${PN}.git"
-	EGIT_BRANCH="bluez5"
 	KEYWORDS=""
 else
 	SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"

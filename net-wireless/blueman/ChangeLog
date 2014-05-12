@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.18 2014/05/05 08:22:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.19 2014/05/12 14:22:17 zerochaos Exp $
+
+  12 May 2014; Rick Farina <zerochaos@gentoo.org> blueman-9999.ebuild:
+  upstream merged the bluez5 branch into master
 
 *blueman-9999 (05 May 2014)
 
