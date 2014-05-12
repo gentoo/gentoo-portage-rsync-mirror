@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.4 2014/05/08 21:56:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.5 2014/05/12 14:56:43 idella4 Exp $
+
+  12 May 2014; Ian Delaney <idella4@gentoo.org> bcrypt-1.0.2-r1.ebuild:
+  drop py2.6 add py3.4 support
 
 *bcrypt-1.0.2-r1 (08 May 2014)
 
