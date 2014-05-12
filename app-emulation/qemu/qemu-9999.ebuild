@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.69 2014/04/25 22:56:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.70 2014/05/12 18:55:14 vapier Exp $
 
 EAPI=5
 
@@ -229,7 +229,6 @@ src_prepare() {
 		Makefile Makefile.target || die
 
 	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
-	epatch "${FILESDIR}"/qemu-9999-virtfs-proxy-helper-accept.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
