@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.159 2014/05/08 10:31:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.160 2014/05/12 01:54:06 reavertm Exp $
+
+  12 May 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  ffmpegthumbs-4.12.5.ebuild, ffmpegthumbs-4.13.0.ebuild:
+  Thumbnailers require kdebase-kioslaves, bug 509634
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> -ffmpegthumbs-4.11.5.ebuild:
   Remove old

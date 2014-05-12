@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ffmpegthumbs-4.13.0.ebuild,v 1.2 2014/04/17 00:43:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ffmpegthumbs-4.13.0.ebuild,v 1.3 2014/05/12 01:54:06 reavertm Exp $
 
 EAPI=5
 
@@ -13,4 +13,6 @@ IUSE="debug"
 DEPEND="
 	virtual/ffmpeg
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep kdebase-kioslaves)
+"

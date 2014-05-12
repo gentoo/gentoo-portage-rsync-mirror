@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/kffmpegthumbnailer-1.1.0-r3.ebuild,v 1.2 2014/04/28 22:39:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/kffmpegthumbnailer-1.1.0-r3.ebuild,v 1.3 2014/05/12 01:48:28 reavertm Exp $
 
 EAPI=5
 
@@ -18,7 +18,9 @@ IUSE="debug"
 DEPEND="
 	>=media-video/ffmpegthumbnailer-2
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep kdebase-kioslaves)
+"
 
 DOCS=( Changelog README )
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/thumbnailers-4.13.0.ebuild,v 1.2 2014/04/17 00:43:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/thumbnailers-4.13.0.ebuild,v 1.3 2014/05/12 01:53:00 reavertm Exp $
 
 EAPI=5
 
@@ -15,7 +15,9 @@ DEPEND="
 	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep kdebase-kioslaves)
+"
 
 if [[ ${KDE_BUILD_TYPE} != live ]]; then
 	S="${WORKDIR}/${KMNAME}-${PV}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/mplayerthumbs-4.13.0.ebuild,v 1.2 2014/04/17 00:43:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/mplayerthumbs-4.13.0.ebuild,v 1.3 2014/05/12 01:55:53 reavertm Exp $
 
 EAPI=5
 
@@ -11,14 +11,11 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="
-	|| (
-		$(add_kdebase_dep dolphin)
-		$(add_kdebase_dep konqueror)
-	)
+	$(add_kdebase_dep kdebase-kioslaves)
 "
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		-DENABLE_PHONON_SUPPORT=ON
 	)
 

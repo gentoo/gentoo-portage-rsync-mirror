@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.13.0.ebuild,v 1.4 2014/05/03 14:25:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.13.0.ebuild,v 1.5 2014/05/12 01:51:33 reavertm Exp $
 
 EAPI=5
 
@@ -25,8 +25,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kfind)
-"
-PDEPEND="
 	thumbnail? (
 		$(add_kdebase_dep thumbnailers)
 		|| (

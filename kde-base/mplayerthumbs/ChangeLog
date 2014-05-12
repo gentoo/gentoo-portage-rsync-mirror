@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.191 2014/05/08 10:32:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.192 2014/05/12 01:55:53 reavertm Exp $
+
+  12 May 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  mplayerthumbs-4.12.5.ebuild, mplayerthumbs-4.13.0.ebuild:
+  Thumbnailers require kdebase-kioslaves. Remome RDEPEND on dolphin/konqueror.
+  Bug 509634
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> -mplayerthumbs-4.11.5.ebuild:
   Remove old
