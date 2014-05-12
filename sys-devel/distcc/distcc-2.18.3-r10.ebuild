@@ -1,11 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.15 2012/09/15 22:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.16 2014/05/12 11:36:29 ssuominen Exp $
 
-# If you change this in any way please email lisa@gentoo.org and make an
-# entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
-
-EAPI=1
+EAPI=5
 inherit eutils flag-o-matic toolchain-funcs user
 
 PATCHLEVEL="2.18"
@@ -38,10 +35,7 @@ RDEPEND="
 	)
 	selinux? ( sec-policy/selinux-distcc )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# -Wl,--as-needed to close bug #128605
 	epatch "${FILESDIR}/distcc-as-needed.patch"
 
@@ -53,7 +47,7 @@ src_unpack() {
 	use hardened && epatch "${FILESDIR}/distcc-hardened.patch"
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--with-included-popt "
 	#Here we use the built in parse-options package. saves a dependancy
 
@@ -72,14 +66,12 @@ src_compile() {
 		ewarn "either via a module or compiled code"
 		ewarn "You can recompile without ipv6 with: USE='-ipv6' emerge distcc"
 		myconf=" ${myconf} --enable-rfc2553 "
-		epause 5
 	fi
-	econf ${myconf} || die "econf ${myconf} failed"
-	emake || die "emake failed"
+	econf ${myconf}
 }
 
 src_install() {
-	make DESTDIR="${D%/}" install
+	emake -j1 DESTDIR="${D%/}" install
 
 	insinto /usr/share/doc/${PN}
 	doins "${S}/survey.txt"
@@ -125,7 +117,6 @@ pkg_postinst() {
 	  ewarn "You do not have useradd (bootstrap) from shadow so I didn't"
 	  ewarn "install the distcc user.  Note that attempting to start the daemon"
 	  ewarn "will fail. Please install shadow and re-emerge distcc."
-	  ebeep 2
 	fi
 
 	# By now everyone should be using the right envfile
