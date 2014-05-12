@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.4.50_pre20140430.ebuild,v 1.2 2014/05/05 07:05:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.91.ebuild,v 1.1 2014/05/12 17:01:28 ulm Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 if [[ ${PV##*.} = 9999 ]]; then
 	EBZR_PROJECT="emacs"
-	EBZR_BRANCH="trunk"
+	EBZR_BRANCH="emacs-24"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
 	# "Nosmart" is much faster for initial branching.
 	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
@@ -23,8 +23,7 @@ else
 	# order to determine some path information correctly for copy/move
 	# operations later on
 	FULL_VERSION="${PV%%_*}"
-	#S="${WORKDIR}/emacs-${FULL_VERSION}"
-	S="${WORKDIR}/emacs"
+	S="${WORKDIR}/emacs-${FULL_VERSION}"
 fi
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
@@ -109,7 +108,7 @@ SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
-		FULL_VERSION=$(sed -n 's/^AC_INIT([^,]*,[ \t]*\([^ \t,)]*\).*/\1/p' \
+		FULL_VERSION=$(sed -n 's/^AC_INIT(emacs,[ \t]*\([^ \t,)]*\).*/\1/p' \
 			configure.ac)
 		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
 		einfo "Emacs branch: ${EBZR_BRANCH}"

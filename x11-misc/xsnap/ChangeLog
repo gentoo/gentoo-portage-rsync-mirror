@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xsnap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.48 2013/06/04 01:37:39 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.49 2014/05/12 17:21:09 jer Exp $
+
+*xsnap-1.5.15 (12 May 2014)
+
+  12 May 2014; Jeroen Roovers <jer@gentoo.org> xsnap-1.5.11.ebuild,
+  +xsnap-1.5.15.ebuild, +files/xsnap-1.5.15-root_name.patch:
+  Version bump.
 
 *xsnap-1.5.11 (04 Jun 2013)
 

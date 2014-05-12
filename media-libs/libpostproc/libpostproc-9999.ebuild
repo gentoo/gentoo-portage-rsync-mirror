@@ -1,19 +1,19 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.8 2013/08/11 21:46:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.9 2014/05/12 17:03:20 lu_zero Exp $
 
 EAPI="4"
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SCM="git-2"
-	EGIT_REPO_URI="git://github.com/dwbuiten/postproc.git"
+	EGIT_REPO_URI="git://github.com/lu-zero/postproc.git"
 fi
 
 inherit eutils flag-o-matic multilib toolchain-funcs ${SCM}
 
 DESCRIPTION="Video post processing library"
-HOMEPAGE="https://github.com/dwbuiten/postproc"
+HOMEPAGE="https://github.com/lu-zero/postproc"
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SRC_URI=""
 elif [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
