@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/libkscreen-1.0.3.ebuild,v 1.1 2014/05/06 21:02:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/libkscreen-1.0.4.ebuild,v 1.1 2014/05/12 00:19:07 johu Exp $
 
 EAPI=5
 
@@ -27,4 +27,4 @@ DEPEND="
 	test? ( dev-qt/qttest:4 )
 "
 
-RESTRICT="test"
+# RESTRICT="test"

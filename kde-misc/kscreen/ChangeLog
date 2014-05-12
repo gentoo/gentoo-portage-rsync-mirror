@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.8 2014/03/10 13:05:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.9 2014/05/12 00:27:11 johu Exp $
+
+*kscreen-1.0.71 (12 May 2014)
+
+  12 May 2014; Johannes Huber <johu@gentoo.org> +kscreen-1.0.71.ebuild:
+  Version bump.
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> kscreen-1.0.2.1.ebuild:
   amd64/x86 stable, bug #502500
