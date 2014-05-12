@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/YAML-1.0.6.ebuild,v 1.4 2013/06/23 13:52:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/YAML-1.0.6.ebuild,v 1.5 2014/05/12 13:14:51 kensington Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ PHP_PEAR_PKG_NAME="YAML"
 inherit php-pear-r1
 
 DESCRIPTION="The Symfony YAML Component."
-HOMEPAGE="pear.symfony-project.com"
+HOMEPAGE="http://pear.symfony-project.com"
 SRC_URI="http://pear.symfony-project.com//get/YAML-1.0.6.tgz"
 
 LICENSE="MIT"
