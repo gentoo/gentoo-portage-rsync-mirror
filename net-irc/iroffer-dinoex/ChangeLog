@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/iroffer-dinoex
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/ChangeLog,v 1.8 2013/06/15 21:51:46 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/ChangeLog,v 1.9 2014/05/12 18:12:31 zlogene Exp $
+
+  12 May 2014; Mikle Kolyada <zlogene@gentoo.org>
+  files/iroffer-dinoex.logrotate:
+  Fix incorrect user/group name wrt bug #510026
 
   15 Jun 2013; Mikle Kolyada <zlogene@gentoo.org> iroffer-dinoex-3.29.ebuild:
   x86 stable wrt bug #473266

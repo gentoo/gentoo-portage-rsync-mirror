@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.348 2014/03/09 07:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.349 2014/05/12 18:14:13 ssuominen Exp $
+
+*lvm2-2.02.106 (12 May 2014)
+
+  12 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/lvm2-2.02.106-pthread-pkgconfig.patch,
+  +files/lvm2-2.02.106-static-pkgconfig-libs.patch, +lvm2-2.02.106.ebuild,
+  metadata.xml:
+  Version bump wrt #507812 by Alexander Tsoy; introduce USE="cache" and refresh
+  2 patches so that they apply again (no real changes in them)
 
   09 Mar 2014; Mike Frysinger <vapier@gentoo.org>
   +files/lvm2-2.02.105-readline-6.3.patch, lvm2-2.02.105-r2.ebuild:
