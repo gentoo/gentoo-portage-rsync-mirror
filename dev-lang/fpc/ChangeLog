@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.68 2014/04/26 10:35:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.69 2014/05/12 02:56:55 radhermit Exp $
+
+  12 May 2014; Tim Harder <radhermit@gentoo.org> fpc-2.6.4.ebuild:
+  Update amd64 and arm initial bootstrapping compilers.
 
   26 Apr 2014; Tim Harder <radhermit@gentoo.org> -fpc-2.2.0.ebuild,
   -fpc-2.2.0-r1.ebuild, -fpc-2.2.2-r1.ebuild, -fpc-2.2.4-r2.ebuild,

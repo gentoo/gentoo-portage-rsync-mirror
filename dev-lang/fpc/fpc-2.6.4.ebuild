@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.4.ebuild,v 1.1 2014/04/26 10:25:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.4.ebuild,v 1.2 2014/05/12 02:56:55 radhermit Exp $
 
 EAPI=5
 
@@ -10,8 +10,8 @@ HOMEPAGE="http://www.freepascal.org/"
 DESCRIPTION="Free Pascal Compiler"
 SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
 	mirror://sourceforge/freepascal/fpc-${PV}.source.tar.gz
-	amd64? ( mirror://sourceforge/freepascal/${PN}-2.6.2.x86_64-linux.tar )
-	arm? ( mirror://sourceforge/freepascal/${PN}-2.6.2.arm-linux.tar )
+	amd64? ( mirror://sourceforge/freepascal/${P}.x86_64-linux.tar )
+	arm? ( mirror://sourceforge/freepascal/${P}.arm-linux.tar )
 	ppc? ( mirror://sourceforge/freepascal/${P}.powerpc-linux.tar )
 	ppc64? ( mirror://sourceforge/freepascal/${P}.powerpc64-linux.tar )
 	sparc? ( mirror://sourceforge/freepascal/${PN}-2.6.2.sparc-linux.tar )
@@ -43,8 +43,8 @@ pkg_pretend() {
 
 src_unpack() {
 	case ${ARCH} in
-		amd64)	FPC_ARCH="x86_64"    PV_BIN=2.6.2 ;;
-		arm)	FPC_ARCH="arm"       PV_BIN=2.6.2 ;;
+		amd64)	FPC_ARCH="x86_64"    PV_BIN=${PV} ;;
+		arm)	FPC_ARCH="arm"       PV_BIN=${PV} ;;
 		ppc)	FPC_ARCH="powerpc"   PV_BIN=${PV} ;;
 		ppc64)	FPC_ARCH="powerpc64" PV_BIN=${PV} ;;
 		sparc)	FPC_ARCH="sparc"     PV_BIN=2.6.2 ;;

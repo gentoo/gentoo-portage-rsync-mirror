@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-2.2.13.ebuild,v 1.1 2013/08/26 18:58:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-2.6.33.ebuild,v 1.1 2014/05/12 02:47:34 naota Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils pax-utils
+inherit eutils gnome2-utils pax-utils systemd
 
 DESCRIPTION="Dropbox daemon (pretends to be GUI-less)"
 HOMEPAGE="http://dropbox.com/"
@@ -66,7 +66,9 @@ src_prepare() {
 	else
 		rm -vf librsync.so.1 || die
 	fi
+	mv cffi-0.7.2-py2.7-*.egg dropbox_sqlite_ext-0.0-py2.7.egg distribute-0.6.26-py2.7.egg "${T}" || die
 	rm -rf *.egg library.zip || die
+	mv "${T}"/cffi-0.7.2-py2.7-*.egg "${T}"/dropbox_sqlite_ext-0.0-py2.7.egg "${T}"/distribute-0.6.26-py2.7.egg "${S}" || die
 	ln -s dropbox library.zip || die
 	pax-mark cm dropbox
 	mv README ACKNOWLEDGEMENTS "${T}" || die
@@ -84,6 +86,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/dropbox.initd dropbox
 	newconfd "${FILESDIR}"/dropbox.conf dropbox
+	systemd_newunit "${FILESDIR}"/dropbox_at.service "dropbox@.service"
 
 	dodoc "${T}"/{README,ACKNOWLEDGEMENTS}
 }

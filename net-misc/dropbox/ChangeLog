@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.51 2014/03/22 07:31:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.53 2014/05/12 02:51:28 naota Exp $
+
+  12 May 2014; Naohiro Aota <naota@gentoo.org> -dropbox-1.6.16.ebuild,
+  -dropbox-2.0.8.ebuild, -dropbox-2.2.13.ebuild, -dropbox-2.2.8.ebuild,
+  -dropbox-2.4.1.ebuild, -dropbox-2.4.7.ebuild, -dropbox-2.4.8-r1.ebuild,
+  -dropbox-2.4.8.ebuild:
+  Clean up old ebuild
+
+*dropbox-2.6.33 (12 May 2014)
+
+  12 May 2014; Naohiro Aota <naota@gentoo.org> +dropbox-2.6.33.ebuild:
+  version bump wrt #509882
 
   22 Mar 2014; Naohiro Aota <naota@gentoo.org> files/dropbox.initd:
   Update init script to use each user local pid file. #503300
