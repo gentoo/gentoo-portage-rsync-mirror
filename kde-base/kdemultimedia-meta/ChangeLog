@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.313 2014/05/08 10:32:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.314 2014/05/12 02:04:20 reavertm Exp $
+
+  12 May 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  kdemultimedia-meta-4.12.5.ebuild, kdemultimedia-meta-4.13.0.ebuild:
+  Favour ffmpeg over mplayer to be consistent with defaults in dolphin, bug
+  509634
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org>
   -kdemultimedia-meta-4.11.5.ebuild:
