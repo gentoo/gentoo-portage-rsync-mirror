@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15675 2014/05/11 21:04:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15676 2014/05/12 04:49:47 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -301,12 +301,6 @@ app-admin/eselect-lua
 # Removal in 30 days wrt bug #380193
 dev-cpp/libsexymm
 
-# Ulrich Müller <ulm@gentoo.org> (12 Apr 2014)
-# No license, SRC_URI dead, unresponsive upstream.
-# Last release in 2002. No reverse dependencies.
-# Masked for removal in 30 days, bug 446162.
-dev-java/randomguid
-
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
 # Dead upstream, has known dataloss bugs. 
 # Please use something more sane: rsnapshot, backuppc, obnam, ...
@@ -387,11 +381,6 @@ virtual/pypy:2.0
 # Do NOT remove this mask or the affected packages without speaking to
 # bonsaikitten first! You have been warned!
 <net-fs/samba-3.6
-
-# Ulrich Müller <ulm@gentoo.org> (13 Mar 2014)
-# No reverse dependencies. Use dev-libs/libbsd instead.
-# Masked for removal in 60 days, bug 504456.
-dev-libs/clens
 
 # Michał Górny <mgorny@gentoo.org> (12 Mar 2014)
 # Masked for testing.
