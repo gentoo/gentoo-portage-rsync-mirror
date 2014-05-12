@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.71.ebuild,v 1.1 2014/05/12 00:27:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.71.ebuild,v 1.2 2014/05/12 00:36:24 johu Exp $
 
 EAPI=5
 
@@ -24,8 +24,6 @@ DEPEND="
 	>=dev-libs/qjson-0.8
 "
 RDEPEND="${DEPEND}"
-
-# RESTRICT="test"
 
 DISTPLAY_MESSAGE=false
 pkg_preinst() {
