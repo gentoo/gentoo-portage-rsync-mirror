@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.2.1-r1.ebuild,v 1.2 2014/05/09 06:10:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.2.1-r1.ebuild,v 1.3 2014/05/12 20:49:04 mgorny Exp $
 
 EAPI=5
 
@@ -60,17 +60,13 @@ IUSE="doc +jit shadowstack sqlite sse2 test tk"
 
 # yep, world would be easier if people started filling subslots...
 RDEPEND="
-	~app-arch/bzip2-1.0.6:0
-	~dev-libs/expat-2.1.0:0
-	( <dev-libs/libffi-3.0.14:0
-		>=dev-libs/libffi-3.0.11:0 )
-	( <dev-libs/openssl-1.0.1h:0
-		>=dev-libs/openssl-1.0.1c:0 )
-	( <sys-libs/glibc-2.20:2.2
-		>=sys-libs/glibc-2.15:2.2 )
-	~sys-libs/ncurses-5.9:5
-	( <sys-libs/zlib-1.2.9:0
-		>=sys-libs/zlib-1.2.7:0 )
+	app-arch/bzip2:0
+	dev-libs/expat:0
+	dev-libs/libffi:0
+	dev-libs/openssl:0
+	sys-libs/glibc:2.2
+	sys-libs/ncurses:5
+	sys-libs/zlib:0
 	sqlite? ( dev-db/sqlite:3 )
 	tk? ( dev-lang/tk:0 )
 	!dev-python/pypy:0"
