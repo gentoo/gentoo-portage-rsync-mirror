@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/thin-provisioning-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.41 2014/03/10 18:28:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.42 2014/05/12 12:16:09 ssuominen Exp $
+
+*thin-provisioning-tools-0.3.2 (12 May 2014)
+
+  12 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +thin-provisioning-tools-0.3.2.ebuild:
+  Version bump; remove use of obsolete base.eclass in favour of calling
+  epatch_user directly.
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org>
   thin-provisioning-tools-0.2.8-r1.ebuild:
