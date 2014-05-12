@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1251 2014/05/12 11:53:28 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1252 2014/05/12 21:56:17 mgorny Exp $
+
+  12 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Do not install wrapper headers when no ABI provides a particular header.
 
   12 May 2014; Michael Palimaka <kensington@gentoo.org> -boost-utils.eclass, -office-ext.eclass:
   Remove last-rited eclasses.
