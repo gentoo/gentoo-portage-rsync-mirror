@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/os-virtual-interfacesv2-python-novaclient-ext
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/os-virtual-interfacesv2-python-novaclient-ext/ChangeLog,v 1.1 2014/05/12 03:12:50 prometheanfire Exp $
+
+*os-virtual-interfacesv2-python-novaclient-ext-0.15 (12 May 2014)
+
+  12 May 2014; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +os-virtual-interfacesv2-python-novaclient-ext-0.15.ebuild:
+  needed for rackspace-novaclient
