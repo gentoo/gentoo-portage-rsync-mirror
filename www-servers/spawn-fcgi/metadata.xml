@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>mrueg@gentoo.org</email>
-		<name>Manuel Rüger</name>
-	</maintainer>
-	<longdescription lang="en">spawn-fcgi is used to spawn FastCGI applications
+  <maintainer>
+    <email>mrueg@gentoo.org</email>
+    <name>Manuel Rüger</name>
+  </maintainer>
+  <longdescription lang="en">spawn-fcgi is used to spawn FastCGI applications
 
   Features
   --------
@@ -15,4 +15,3 @@
   - supports daemontools supervise
 	</longdescription>
 </pkgmetadata>
-
