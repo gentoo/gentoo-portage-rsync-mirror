@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.118 2014/05/10 18:39:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.119 2014/05/12 15:13:07 jer Exp $
+
+  12 May 2014; Jeroen Roovers <jer@gentoo.org> mrtg-2.17.4-r1.ebuild:
+  Stable for HPPA (bug #509992).
 
   10 May 2014; Jeroen Roovers <jer@gentoo.org> mrtg-2.17.4-r1.ebuild:
   Raise dev-perl/Socket6 dependency (bug #321701). Raise dev-perl/SNMP_Session
