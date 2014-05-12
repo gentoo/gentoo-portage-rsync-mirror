@@ -11,7 +11,6 @@
 		<description>Upstream Maintainer (please CC on bugs)</description>
 	</maintainer>
 	<use>
-		<flag name='cache'>Enable support for cache[pool] segment types</flag>
 		<flag name='clvm'>Allow users to build clustered lvm2</flag>
 		<flag name='cman'>Cman support for clustered lvm</flag>
 		<flag name='lvm1'>Allow users to build lvm2 with lvm1 support</flag>

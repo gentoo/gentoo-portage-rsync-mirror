@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.349 2014/05/12 18:14:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.350 2014/05/12 19:08:29 ssuominen Exp $
+
+  12 May 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.106.ebuild,
+  metadata.xml:
+  Remove USE="cache" and always enable it, either "shared" or "internal" because
+  it doesn't introduce any dependencies.
 
 *lvm2-2.02.106 (12 May 2014)
 

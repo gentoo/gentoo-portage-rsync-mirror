@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.77 2014/05/06 21:20:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.78 2014/05/12 19:01:35 graaff Exp $
+
+  12 May 2014; Hans de Graaff <graaff@gentoo.org> -railties-3.2.17.ebuild,
+  -railties-4.0.3.ebuild, -railties-4.0.4.ebuild, -railties-4.1.0.ebuild:
+  Cleanup.
 
   06 May 2014; Manuel Rüger <mrueg@gentoo.org> railties-3.2.17.ebuild,
   railties-3.2.18.ebuild:

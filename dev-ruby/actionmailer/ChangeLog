@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.260 2014/05/06 20:00:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.261 2014/05/12 19:02:04 graaff Exp $
+
+  12 May 2014; Hans de Graaff <graaff@gentoo.org> -actionmailer-3.2.17.ebuild,
+  -actionmailer-4.0.3.ebuild, -actionmailer-4.0.4.ebuild,
+  -actionmailer-4.1.0.ebuild:
+  Cleanup.
 
 *actionmailer-4.1.1 (06 May 2014)
 
