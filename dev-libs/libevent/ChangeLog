@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.266 2014/03/21 17:46:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.267 2014/05/13 19:15:50 mgorny Exp $
+
+*libevent-2.1.4-r1 (13 May 2014)
+*libevent-2.0.21-r1 (13 May 2014)
+
+  13 May 2014; Michał Górny <mgorny@gentoo.org> +libevent-2.0.21-r1.ebuild,
+  +libevent-2.1.4-r1.ebuild:
+  Enable multilib support, bug #499382.
 
 *libevent-2.1.4 (21 Mar 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.11.23.ebuild,v 1.4 2014/01/30 15:25:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.11.23.ebuild,v 1.5 2014/05/13 19:26:46 jer Exp $
 
 EAPI=3
 
@@ -61,5 +61,5 @@ src_install() {
 }
 
 src_test() {
-	einfo "FEATURES=\"maketest\" has been disabled for dev-vcs/cvs"
+	einfo "FEATURES=\"test\" has been disabled for dev-vcs/cvs"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.15 2014/01/30 15:25:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.16 2014/05/13 19:26:46 jer Exp $
+
+  13 May 2014; Jeroen Roovers <jer@gentoo.org> cvs-1.11.23.ebuild,
+  cvs-1.12.12-r6.ebuild, cvs-1.12.12-r7.ebuild, cvs-1.12.12-r8.ebuild,
+  cvs-1.12.12-r9.ebuild, cvs-1.12.12-r10.ebuild:
+  There is no such thing as FEATURES=maketest.
 
   30 Jan 2014; Fabian Groffen <grobian@gentoo.org> cvs-1.11.23.ebuild,
   cvs-1.12.13.1-r2.ebuild:

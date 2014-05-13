@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/zlib-1.1.4 kerberos? ( virtual/krb5 ) pam? ( virtual/pam )
 SLOT=0
 SRC_URI=mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cvs-1.12.12.tar.bz2 doc? ( mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cederqvist-1.12.12.html.tar.bz2 mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cederqvist-1.12.12.pdf mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cederqvist-1.12.12.ps )
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2417e888b0315a6b788c1f7e6e6ef50d
+_md5_=8275ff7c47e348a9c893ef665ed08dcb

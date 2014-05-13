@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/zlib-1.1.4
 SLOT=0
 SRC_URI=mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cvs-1.11.23.tar.bz2 doc? ( mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cederqvist-1.11.23.html.bz2 mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cederqvist-1.11.23.pdf mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cederqvist-1.11.23.ps )
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=06d75a498c6c73fa47ac9176615f7251
+_md5_=87f68fd3b549db600667e8ef4e45f786
