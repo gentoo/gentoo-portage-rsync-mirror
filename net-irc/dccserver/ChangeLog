@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/dccserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.13 2014/01/14 06:42:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dccserver/ChangeLog,v 1.14 2014/05/13 09:20:44 nimiux Exp $
+
+  13 May 2014; Chema Alonso <nimiux@gentoo.org> dccserver-0.5.ebuild:
+  Stable for amd64 wrt bug #502878
 
 *dccserver-0.5 (14 Jan 2014)
 

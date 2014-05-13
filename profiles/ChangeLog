@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8951 2014/05/12 21:24:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8952 2014/05/13 09:22:22 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2014; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Temp-mask ldns until multilib deps are fixed #510210
 
   12 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask multilib openssl before committing.
