@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.0.ebuild,v 1.1 2014/05/06 03:09:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.0.ebuild,v 1.2 2014/05/13 00:51:10 tetromino Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc gconf ipv6 systemd"
 
-RDEPEND="
+COMMON_DEPEND="
 	>=dev-libs/dbus-glib-0.76
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/json-glib-0.10
@@ -42,7 +42,7 @@ RDEPEND="
 RDEPEND="${COMMON_DEPEND}
 	!systemd? ( sys-auth/consolekit )
 "
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.40.6
 	virtual/pkgconfig
