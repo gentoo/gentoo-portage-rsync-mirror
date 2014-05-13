@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/iax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.13 2014/05/13 11:55:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.14 2014/05/13 12:31:24 chainsaw Exp $
+
+*iax-0.2.2-r3 (13 May 2014)
+
+  13 May 2014; Tony Vroon <chainsaw@gentoo.org> -iax-0.2.2-r2.ebuild,
+  +iax-0.2.2-r3.ebuild, +files/0.2.2-debug.patch, +files/0.2.2-memset.patch:
+  Squelch debugging in a slightly cleaner way. Fix MD5 memset as per GCC
+  warning.
 
 *iax-0.2.2-r2 (13 May 2014)
 
