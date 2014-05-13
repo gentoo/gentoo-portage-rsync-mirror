@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cellwriter/cellwriter-1.3.5.ebuild,v 1.3 2014/05/13 09:29:53 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cellwriter/cellwriter-1.3.5.ebuild,v 1.4 2014/05/13 10:37:00 ssuominen Exp $
 
 EAPI=5
 inherit gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://pub.risujin.org/cellwriter/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r4.ebuild,v 1.1 2014/03/11 09:33:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r4.ebuild,v 1.2 2014/05/13 10:31:20 nimiux Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.ibiblio.org/pub/linux/apps/editors/tty/teco.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc"
 
 RDEPEND="sys-libs/ncurses"
