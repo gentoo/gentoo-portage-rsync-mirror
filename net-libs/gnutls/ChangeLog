@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.487 2014/04/25 19:05:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.488 2014/05/13 21:59:32 mgorny Exp $
+
+*gnutls-3.3.1-r1 (13 May 2014)
+
+  13 May 2014; Michał Górny <mgorny@gentoo.org> +gnutls-3.3.1-r1.ebuild:
+  Enable multilib support, bug #493166.
 
   25 Apr 2014; Alon Bar-Lev <alonbl@gentoo.org> +files/gnutls-3.3.1-guile.patch,
   gnutls-3.3.1.ebuild:
