@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.5 2013/08/18 19:46:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4.ebuild,v 1.6 2014/05/13 18:04:45 johu Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS="ar be bg bs ca ca@valencia cs da de el en_GB eo es et eu fi fr ga gl
 hi hne hr hu is it ja km lt mai nb nds nl nn pa pl pt pt_BR ro ru se sk sv tr ug uk

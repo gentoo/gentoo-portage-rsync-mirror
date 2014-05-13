@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1g-r1.ebuild,v 1.1 2014/05/13 17:48:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1g-r1.ebuild,v 1.2 2014/05/13 18:07:06 mgorny Exp $
 
 EAPI="4"
 
@@ -46,14 +46,7 @@ src_unpack() {
 }
 
 MULTILIB_WRAPPED_HEADERS=(
-#	usr/include/openssl/kssl.h
-#	usr/include/openssl/modes.h
 	usr/include/openssl/opensslconf.h
-#	usr/include/openssl/ossl_typ.h
-#	usr/include/openssl/rand.h
-#	usr/include/openssl/seed.h
-#	usr/include/openssl/sha.h
-#	usr/include/openssl/srtp.h
 )
 
 src_prepare() {

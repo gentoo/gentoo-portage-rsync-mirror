@@ -1,6 +1,12 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.85 2014/03/04 20:47:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.86 2014/05/13 18:22:13 johu Exp $
+
+*rekonq-2.4.2-r1 (13 May 2014)
+
+  13 May 2014; Johannes Huber <johu@gentoo.org> +rekonq-2.4.2-r1.ebuild,
+  metadata.xml:
+  Revision bump introduces USE flag nepomuk, bug #508350.
 
   04 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -rekonq-2.4.0.ebuild:
   Cleanup old.

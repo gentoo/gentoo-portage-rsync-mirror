@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4-r1.ebuild,v 1.1 2014/03/21 20:55:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.4-r1.ebuild,v 1.2 2014/05/13 18:04:45 johu Exp $
 
 EAPI=5
 
@@ -16,10 +16,10 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2 FDL-1.2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="debug +exif +geolocation +kipi +raw +semantic-desktop"
+IUSE="debug +exif +geolocation +kipi nepomuk +raw"
 
 DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'nepomuk?')
 	>=dev-qt/qtsql-4.4:4[sqlite]
 	virtual/jpeg
 	exif? ( >=media-gfx/exiv2-0.17 )
@@ -28,7 +28,7 @@ DEPEND="
 	raw? ( $(add_kdebase_dep libkdcraw '' 4.9.58) )
 "
 RDEPEND="${DEPEND}
-	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
+	nepomuk? ( $(add_kdebase_dep nepomuk) )
 	|| ( media-video/mplayer2 media-video/mplayer )
 "
 
@@ -40,8 +40,8 @@ src_configure() {
 		$(cmake-utils_use_with geolocation Marble)
 		$(cmake-utils_use_with kipi)
 		$(cmake-utils_use_with raw Kdcraw)
-		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with semantic-desktop Soprano)
+		$(cmake-utils_use_with nepomuk)
+		$(cmake-utils_use_with nepomuk Soprano)
 	)
 
 	kde4-base_src_configure

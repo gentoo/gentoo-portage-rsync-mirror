@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508.ebuild,v 1.1 2014/05/08 21:41:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508.ebuild,v 1.2 2014/05/13 18:03:30 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -74,6 +74,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/util-linux-2.24.1-r3[abi_x86_32(-)]
 		>=sys-devel/libtool-2.4.2-r1[abi_x86_32(-)]
 		>=virtual/acl-0-r2[abi_x86_32(-)]
+		>=dev-libs/openssl-1.0.1g-r1[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.16" # bug 340613
 
