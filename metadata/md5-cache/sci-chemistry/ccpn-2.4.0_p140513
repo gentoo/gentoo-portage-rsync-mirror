@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[ssl,tk] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl,tk] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/tk[threads] dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-tcltk/tix =sci-libs/ccpn-data-2.4.0*[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] sci-biology/psipred x11-libs/libXext x11-libs/libX11 opengl? ( media-libs/freeglut dev-python/pyglet[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] )
+DESCRIPTION=The Collaborative Computing Project for NMR
+EAPI=5
+HOMEPAGE=http://www.ccpn.ac.uk/ccpn
+IUSE=+opengl python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=|| ( CCPN LGPL-2.1 )
+RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[ssl,tk] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl,tk] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/tk[threads] dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-tcltk/tix =sci-libs/ccpn-data-2.4.0*[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] sci-biology/psipred x11-libs/libXext x11-libs/libX11 opengl? ( media-libs/freeglut dev-python/pyglet[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] )
+REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://www-old.ccpn.ac.uk/download/ccpnmr/analysis2.4.0.tar.gz http://dev.gentoo.org/~jlec/distfiles/ccpn-update-2.4.0-140513.patch.xz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	portability	536c5e70c5fb252ed3b769e04aa3f05b	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=222a57f9ac361bad4d3cc7669566aa3e
