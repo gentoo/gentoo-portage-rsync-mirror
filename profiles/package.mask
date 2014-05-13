@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15680 2014/05/13 09:22:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15681 2014/05/13 16:08:05 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,10 +29,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Patrick Lauer <patrick@gentoo.org> (13 May 2014)
-# Temp mask until multilib madness is straightened out #510210
-=net-libs/ldns-1.6.16-r1
 
 # Pacho Ramos <pacho@gentoo.org> (11 May 2014)
 # Dead for ages, now in mjpegtools, bug #492886
@@ -483,6 +479,7 @@ lxde-base/lxpolkit
 >=net-dns/avahi-0.6.31-r5
 >=dev-libs/openssl-1.0.2_beta1-r3
 >=app-emulation/emul-linux-x86-baselibs-20140508-r1
+>=net-libs/ldns-1.6.16-r1
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.
