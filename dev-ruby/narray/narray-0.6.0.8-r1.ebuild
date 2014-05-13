@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.6.0.8-r1.ebuild,v 1.3 2014/04/05 14:26:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.6.0.8-r1.ebuild,v 1.4 2014/05/13 10:09:11 nimiux Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="https://github.com/masa16/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 ~x86"
 
 IUSE=""
 

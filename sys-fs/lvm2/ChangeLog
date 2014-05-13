@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.350 2014/05/12 19:08:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.351 2014/05/13 10:07:21 ssuominen Exp $
+
+  13 May 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.106.ebuild:
+  Fix install with USE="-thin" wrt #510202 by Patrick Lauer
 
   12 May 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.106.ebuild,
   metadata.xml:

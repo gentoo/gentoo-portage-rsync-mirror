@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.106.ebuild,v 1.2 2014/05/12 19:08:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.106.ebuild,v 1.3 2014/05/13 10:07:21 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -87,6 +87,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.92-dynamic-static-ldflags.patch #332905
 	epatch "${FILESDIR}"/${PN}-2.02.106-static-pkgconfig-libs.patch #370217, #439414 + blkid
 	epatch "${FILESDIR}"/${PN}-2.02.106-pthread-pkgconfig.patch #492450
+	# Upstream never tested with USE="-thin" wrt #510202
+	sed -i -e 's|_man7: $(MAN8)|_man7: $(MAN7)|' man/Makefile.in || die
+	use thin || { sed -i -e '/^install_lvm2/s:install_man7::' man/Makefile.in || die; }
 
 	eautoreconf
 }
