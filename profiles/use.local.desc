@@ -912,9 +912,11 @@ app-office/calligra:eigen - Enable dev-cpp/eigen mathematical templates support
 app-office/calligra:glew - Enable media-libs/glew opengl extension library support
 app-office/calligra:glib - Enable support for C library routines from dev-libs/glib
 app-office/calligra:gsf - Enable support for ODT structures extraction via gnome-extra/libgsf
+app-office/calligra:import-filter - Enable support for various import filter file formats like WordPerfect, Visio and Apple Keynote
 app-office/calligra:kdcraw - Enable support for KDE image manipulating interface via kde-base/libkdcraw
 app-office/calligra:kdepim - Enable support for KDEPIM resources integration
 app-office/calligra:marble - Enable displaying of maps using Marble
+app-office/calligra:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 app-office/calligra:okular - Enable bindings for kde-base/okular
 app-office/calligra:opengtl - Enable support for transformation algorithms via media-libs/opengtl
 app-office/calligra:spacenav - Enable support for the 3Dconnexion spacenav input device via dev-libs/libspnav
