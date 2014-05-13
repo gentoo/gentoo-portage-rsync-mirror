@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.28-r3.ebuild,v 1.8 2014/04/20 11:28:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.28-r3.ebuild,v 1.9 2014/05/13 14:40:19 ago Exp $
 
 EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool systemd
 
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd"
 
 function php_get_uri ()
 {

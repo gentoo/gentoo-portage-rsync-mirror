@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.160 2014/05/10 13:47:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.161 2014/05/13 14:46:31 ago Exp $
+
+  13 May 2014; Agostino Sarubbo <ago@gentoo.org> libcdio-0.92.ebuild:
+  Stable for ia64, wrt bug #506816
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> libcdio-0.92.ebuild:
   Stable for ppc, wrt bug #506816

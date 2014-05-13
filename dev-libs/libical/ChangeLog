@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.82 2014/05/07 11:00:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.83 2014/05/13 14:50:46 ago Exp $
+
+  13 May 2014; Agostino Sarubbo <ago@gentoo.org> libical-0.48-r2.ebuild:
+  Stable for ia64, wrt bug #509684
 
   07 May 2014; Mikle Kolyada <zlogene@gentoo.org> libical-0.48-r2.ebuild:
   arm stable wrt bug #509684

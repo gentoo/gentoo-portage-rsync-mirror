@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.2.ebuild,v 1.1 2014/05/06 03:08:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.2-r1.ebuild,v 1.1 2014/05/13 14:49:46 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"

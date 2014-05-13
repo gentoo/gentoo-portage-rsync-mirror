@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.60 2014/04/28 19:40:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.61 2014/05/13 14:41:08 ago Exp $
+
+  13 May 2014; Agostino Sarubbo <ago@gentoo.org> tcp-wrappers-7.6.22-r1.ebuild:
+  Stable for ia64, wrt bug #502920
 
   28 Apr 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Fix typo in USE=netgroups description #508928 by 8573dd.
