@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/boycott-advance-sdl-0.2.8.ebuild,v 1.5 2013/11/14 21:54:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/boycott-advance-sdl-0.2.8.ebuild,v 1.6 2014/05/13 06:29:34 ulm Exp $
 
 inherit games
 
@@ -9,11 +9,11 @@ DESCRIPTION="A Gameboy Advance (GBA) emulator for Linux"
 HOMEPAGE="http://sdlemu.ngemu.com/basdl.php"
 SRC_URI="http://sdlemu.ngemu.com/releases/BoyCottAdvance-SDL-${PV}${MY_RLS}.i386.linux.tar.gz"
 
-KEYWORDS="-* x86"
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
-RESTRICT="strip"
+KEYWORDS="-* x86"
 IUSE=""
+RESTRICT="mirror bindist strip"
 
 RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2
