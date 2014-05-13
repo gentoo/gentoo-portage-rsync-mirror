@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/iax
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.12 2013/10/27 09:38:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.13 2014/05/13 11:55:30 chainsaw Exp $
+
+*iax-0.2.2-r2 (13 May 2014)
+
+  13 May 2014; Tony Vroon <chainsaw@gentoo.org> +iax-0.2.2-r2.ebuild,
+  +files/0.2.2-sandbox.patch:
+  Stop trying to tiptoe around the autotools eclass and just use it correctly.
+  This instills LDFLAGS respect, which was flagged up by Diego Elio "Flameeyes"
+  Pettenò in bug #337357.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:
