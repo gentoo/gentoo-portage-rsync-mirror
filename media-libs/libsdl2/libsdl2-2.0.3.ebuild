@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.3.ebuild,v 1.1 2014/05/12 15:56:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.3.ebuild,v 1.2 2014/05/13 23:00:18 hasufell Exp $
 
 # TODO: convert FusionSound #484250
 
@@ -67,7 +67,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# https://bugzilla.libsdl.org/show_bug.cgi?id=1431
-	epatch "${FILESDIR}"/${P}-static-libs.patch
+	epatch "${FILESDIR}"/${P}-static-libs.patch \
+		"${FILESDIR}"/${P}-gles-wayland.patch
 	AT_M4DIR="/usr/share/aclocal acinclude" eautoreconf
 }
 

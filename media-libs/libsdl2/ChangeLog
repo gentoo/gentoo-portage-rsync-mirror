@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.16 2014/05/12 15:56:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.17 2014/05/13 23:00:18 hasufell Exp $
+
+  13 May 2014; Julian Ospald <hasufell@gentoo.org> libsdl2-2.0.2-r1.ebuild,
+  libsdl2-2.0.3.ebuild, +files/libsdl2-2.0.2-gles-wayland.patch,
+  +files/libsdl2-2.0.3-gles-wayland.patch:
+  fix build with +wayland -gles wrt #510090
 
 *libsdl2-2.0.3 (12 May 2014)
 
