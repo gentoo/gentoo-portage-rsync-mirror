@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/c++robots
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/c++robots/ChangeLog,v 1.9 2014/04/17 19:17:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/c++robots/ChangeLog,v 1.10 2014/05/13 06:37:18 tupone Exp $
+
+  13 May 2014; Tupone Alfredo <tupone@gentoo.org> c++robots-0.ebuild,
+  files/proper-coding.patch:
+  Fix patch file as per Bug #507932 by Ulrich Muller
+  Migrate to EAPI=4
 
   17 Apr 2014; Ulrich Müller <ulm@gentoo.org> c++robots-0.ebuild:
   Update LICENSE, BSD according to LICENSE file, bug 505858.

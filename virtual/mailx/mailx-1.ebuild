@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mailx/mailx-1.ebuild,v 1.1 2014/04/26 11:15:03 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mailx/mailx-1.ebuild,v 1.2 2014/05/13 06:37:03 naota Exp $
 
 EAPI=5
 
@@ -16,4 +16,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| (	net-mail/mailutils
 				mail-client/mailx
-				mail-client/nail )"
+				mail-client/nail
+				sys-freebsd/freebsd-ubin )"
