@@ -4,7 +4,7 @@ DESCRIPTION=Virtual filesystem implementation for gio
 EAPI=5
 HOMEPAGE=https://git.gnome.org/browse/gvfs
 IUSE=afp archive avahi bluetooth bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=LGPL-2+
 RDEPEND=>=dev-libs/glib-2.37:2 sys-apps/dbus dev-libs/libxml2:2 net-misc/openssh afp? ( >=dev-libs/libgcrypt-1.2.2:0= ) archive? ( app-arch/libarchive:= ) avahi? ( >=net-dns/avahi-0.6 ) bluetooth? ( >=app-mobilephone/obex-data-server-0.4.5 dev-libs/dbus-glib net-wireless/bluez dev-libs/expat ) bluray? ( media-libs/libbluray ) fuse? ( >=sys-fs/fuse-2.8.0 ) gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 ) gphoto2? ( >=media-libs/libgphoto2-2.4.7:= ) gtk? ( >=x11-libs/gtk+-3.0:3 ) http? ( >=net-libs/libsoup-gnome-2.34:2.4 ) ios? ( >=app-pda/libimobiledevice-1.1.5:= >=app-pda/libplist-1:= ) libsecret? ( app-crypt/libsecret ) mtp? ( >=media-libs/libmtp-1.1.6 ) samba? ( || ( >=net-fs/samba-3.4.6[smbclient] >=net-fs/samba-4[client] ) ) systemd? ( sys-apps/systemd:0= ) udev? ( cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) ) virtual/udev[gudev] ) udisks? ( >=sys-fs/udisks-1.97:2 )
 REQUIRED_USE=cdda? ( udev ) udisks? ( udev ) systemd? ( udisks )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnome/sources/gvfs/1.18/gvfs-1.18.3.tar.xz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=a589e5cf2e9af6db8e1351dcb2edaf8e
+_md5_=a1a55f29c9017d4dd61a6ae12fff7b7d

@@ -4,11 +4,11 @@ DESCRIPTION=A Pythonic binding for the libxml2 and libxslt libraries
 EAPI=5
 HOMEPAGE=http://lxml.de/ http://pypi.python.org/pypi/lxml/
 IUSE=beautifulsoup3 doc examples +threads python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD ElementTree GPL-2 PSF-2
 RDEPEND=>=dev-libs/libxml2-2.7.2 >=dev-libs/libxslt-1.1.15 beautifulsoup3? ( python_targets_python2_7? ( dev-python/beautifulsoup:python-2[python_targets_python2_7] ) python_targets_python3_2? ( dev-python/beautifulsoup:python-3[python_targets_python3_2] ) python_targets_python3_3? ( dev-python/beautifulsoup:python-3[python_targets_python3_3] ) ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=mirror://pypi/l/lxml/lxml-3.3.5.tar.gz
 _eclasses_=distutils-r1	d61b71d755b28b460ed7f8a20d3cf8b6	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=5d5c10a6218fb7d651365dcd15b47a01
+_md5_=7c308d6dcac1996a1adab5e111efa690
