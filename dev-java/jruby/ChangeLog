@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.96 2014/05/03 21:31:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.98 2014/05/13 04:54:54 graaff Exp $
+
+  13 May 2014; Hans de Graaff <graaff@gentoo.org> jruby-1.6.8-r1.ebuild:
+  jruby 1.6 is not compatible with jre 1.8, bug 510128.
+
+  13 May 2014; Hans de Graaff <graaff@gentoo.org> -jruby-1.6.5.1.ebuild,
+  -files/jruby-1.4.0-bindir.patch, -files/jruby-1.4.0-system-jars-r2.patch,
+  -files/jruby-1.5.0-system-jars.patch,
+  -files/jruby-1.5.6-rubygems-1.8.x.patch:
+  Cleanup.
 
 *jruby-1.7.12 (03 May 2014)
 

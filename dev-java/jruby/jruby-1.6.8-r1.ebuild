@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8-r1.ebuild,v 1.3 2014/03/03 23:39:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8-r1.ebuild,v 1.4 2014/05/13 04:54:54 graaff Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -40,14 +40,14 @@ CDEPEND=">=dev-java/bytelist-1.0.8:0
 	dev-java/jzlib:1.1"
 
 RDEPEND="${CDEPEND}
-	>=virtual/jre-1.6"
+	>=virtual/jre-1.6 <virtual/jre-1.8"
 
 # Is jna-posix still needed? Or has that been renamed to jnr-posix?
 #  jna-posix is the original project name which was abononed years ago.
 #  jnr-posix < 1.1.8 are from the original fork
 #  later jnr-posix are from the jnr umbrella project.
 DEPEND="${CDEPEND}
-	>=virtual/jdk-1.6
+	>=virtual/jdk-1.6 <virtual/jdk-1.8
 	test? (
 		dev-java/ant-junit4:0
 		dev-java/ant-trax:0
