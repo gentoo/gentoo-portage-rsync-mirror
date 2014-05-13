@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p11-r2.ebuild,v 1.1 2014/04/26 20:14:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p11-r5.ebuild,v 1.1 2014/05/13 08:48:24 polynomial-c Exp $
 
 EAPI="4"
 
@@ -84,7 +84,10 @@ src_prepare() {
 	touch -r . doc/*
 
 	epatch "${FILESDIR}"/${PN}-4.3-jobs-run-sigchld-trap.patch \
-		"${FILESDIR}"/${PN}-4.3-complete-dequoting.patch
+		"${FILESDIR}"/${PN}-4.3-complete-dequoting.patch \
+		"${FILESDIR}"/${PN}-4.3-extglob-directory.patch \
+		"${FILESDIR}"/${PN}-4.3-localvar-invisible.patch \
+		"${FILESDIR}"/${PN}-4.3-bind-compund-arry.patch
 
 	epatch_user
 }

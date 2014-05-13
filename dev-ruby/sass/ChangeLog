@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/sass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.51 2014/05/13 05:13:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.52 2014/05/13 08:35:07 graaff Exp $
+
+*sass-3.2.19-r1 (13 May 2014)
+
+  13 May 2014; Hans de Graaff <graaff@gentoo.org> +sass-3.2.19-r1.ebuild,
+  sass-3.3.7.ebuild:
+  Don't install binaries in the 3.2 slot to avoid file collisions between
+  slots.
 
 *sass-3.2.19 (13 May 2014)
 
