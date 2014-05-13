@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.72 2014/05/11 06:58:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.73 2014/05/13 20:35:04 mrueg Exp $
+
+  13 May 2014; Manuel Rüger <mrueg@gentoo.org> cucumber-1.3.10.ebuild,
+  cucumber-1.3.14.ebuild, cucumber-1.3.2.ebuild:
+  Remove ruby18 specific case.
 
 *cucumber-1.3.14 (11 May 2014)
 

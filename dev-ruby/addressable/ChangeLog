@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.40 2014/05/05 05:47:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.41 2014/05/13 20:45:29 mrueg Exp $
+
+  13 May 2014; Manuel Rüger <mrueg@gentoo.org> -addressable-2.3.5-r1.ebuild,
+  addressable-2.3.5.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *addressable-2.3.6 (05 May 2014)
 

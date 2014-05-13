@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.14.ebuild,v 1.1 2014/05/11 06:58:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.14.ebuild,v 1.2 2014/05/13 20:35:04 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -58,16 +58,6 @@ all_ruby_prepare() {
 
 	# Avoid dependency on git
 	sed -i -e '/git ls-files/d' cucumber.gemspec || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*ruby18)
-			# Avoid feature with encoding issues and failing feature in
-			# HTML formatter.
-			rm features/{nested_steps_i18n,html_formatter}.feature || die
-			;;
-	esac
 }
 
 each_ruby_test() {

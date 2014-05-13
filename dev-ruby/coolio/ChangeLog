@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/coolio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/ChangeLog,v 1.8 2014/02/23 16:05:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/ChangeLog,v 1.9 2014/05/13 20:36:19 mrueg Exp $
+
+  13 May 2014; Manuel Rüger <mrueg@gentoo.org> -coolio-1.2.0-r1.ebuild,
+  coolio-1.2.1.ebuild:
+  Remove ruby18 target. Cleanup old.
 
 *coolio-1.2.1 (23 Feb 2014)
 
