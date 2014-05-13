@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15681 2014/05/13 16:08:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15682 2014/05/13 16:54:15 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -440,36 +440,6 @@ lxde-base/lxpolkit
 # preceding it
 # - please update https://wiki.gentoo.org/wiki/Multilib_porting_status
 # (mark the packages as {{Yes|DONE}})
->=sys-libs/slang-2.2.4-r1
->=media-libs/giflib-4.2.3-r1
->=app-emulation/emul-linux-x86-baselibs-20140406-r2
->=media-libs/aalib-1.4_rc5-r6
->=media-libs/imlib-1.9.15-r4
->=app-emulation/emul-linux-x86-gtklibs-20140406-r1
-=media-libs/imlib2-1.4.6-r2
->=media-libs/imlib2-9999-r1
->=media-libs/libcaca-0.99_beta18-r2
->=media-libs/libsdl-1.2.15-r5
->=media-libs/sdl-image-1.2.12-r1
->=media-libs/smpeg-0.4.4-r10
->=media-libs/sdl-net-1.2.8-r1
->=media-libs/sdl-ttf-2.0.11-r1
->=media-libs/freealut-1.1.0-r3
->=media-libs/sdl-sound-1.0.3-r1
->=media-libs/sdl-gfx-2.0.24-r1
->=app-emulation/emul-linux-x86-sdl-20140406-r1
->=sys-apps/acl-2.2.52-r1
->=sys-apps/util-linux-2.24.1-r3
->=sys-devel/libtool-2.4.2-r1
->=virtual/acl-0-r2
->=app-emulation/emul-linux-x86-baselibs-20140406-r3
->=media-libs/ladspa-cmt-1.16-r4
->=media-sound/lash-0.5.4-r2
->=x11-libs/libSM-1.2.2-r1
->=media-sound/fluidsynth-1.1.6-r1
->=media-libs/sdl-mixer-1.2.12-r4
->=media-libs/sdl2-mixer-2.0.0-r1
->=app-emulation/emul-linux-x86-sdl-20140406-r2
 >=media-libs/alsa-oss-1.0.25-r1
 >=media-plugins/alsa-plugins-1.0.27-r2
 =net-wireless/bluez-4.101-r9

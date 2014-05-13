@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8953 2014/05/13 16:08:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8954 2014/05/13 16:54:15 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Unmask the previous batch of multilib conversions.
 
   13 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Move ldns mask to proper block.
