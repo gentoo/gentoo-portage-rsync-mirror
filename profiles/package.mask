@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15682 2014/05/13 16:54:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15683 2014/05/13 17:46:15 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -440,6 +440,8 @@ lxde-base/lxpolkit
 # preceding it
 # - please update https://wiki.gentoo.org/wiki/Multilib_porting_status
 # (mark the packages as {{Yes|DONE}})
+>=dev-libs/openssl-1.0.1g-r1
+>=app-emulation/emul-linux-x86-baselibs-20140406-r4
 >=media-libs/alsa-oss-1.0.25-r1
 >=media-plugins/alsa-plugins-1.0.27-r2
 =net-wireless/bluez-4.101-r9
@@ -447,8 +449,6 @@ lxde-base/lxpolkit
 >=app-emulation/emul-linux-x86-soundlibs-20140406-r1
 >=dev-libs/libdaemon-0.14-r2
 >=net-dns/avahi-0.6.31-r5
->=dev-libs/openssl-1.0.2_beta1-r3
->=app-emulation/emul-linux-x86-baselibs-20140508-r1
 >=net-libs/ldns-1.6.16-r1
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)

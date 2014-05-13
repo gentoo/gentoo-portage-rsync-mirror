@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.413 2014/05/08 21:13:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.414 2014/05/13 17:43:19 johu Exp $
+
+*kmail-4.13.1 (13 May 2014)
+
+  13 May 2014; Johannes Huber <johu@gentoo.org> +kmail-4.13.1.ebuild:
+  Version bump KDE SC 4.13.1
 
   08 May 2014; Johannes Huber <johu@gentoo.org>
   -files/kmail-4.11.2-gnupgattach.patch:

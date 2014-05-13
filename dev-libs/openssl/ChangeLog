@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.535 2014/05/12 21:25:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.536 2014/05/13 17:48:38 mgorny Exp $
+
+*openssl-1.0.1g-r1 (13 May 2014)
+
+  13 May 2014; Michał Górny <mgorny@gentoo.org> +openssl-1.0.1g-r1.ebuild:
+  Backport multilib support to keyworded 1.0.1g.
 
 *openssl-1.0.2_beta1-r3 (12 May 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.158 2014/05/08 10:32:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.159 2014/05/13 17:43:22 johu Exp $
+
+*kde-wallpapers-4.13.1 (13 May 2014)
+
+  13 May 2014; Johannes Huber <johu@gentoo.org> +kde-wallpapers-4.13.1.ebuild:
+  Version bump KDE SC 4.13.1
 
   08 May 2014; Agostino Sarubbo <ago@gentoo.org> -kde-wallpapers-4.11.5.ebuild:
   Remove old

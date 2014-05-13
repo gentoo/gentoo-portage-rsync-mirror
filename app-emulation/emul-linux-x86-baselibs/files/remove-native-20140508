@@ -325,3 +325,10 @@ usr/lib32/libuuid.so
 usr/lib32/pkgconfig/blkid.pc
 usr/lib32/pkgconfig/mount.pc
 usr/lib32/pkgconfig/uuid.pc
+usr/lib32/libcrypto.so
+usr/lib32/libcrypto.so.1.0.0
+usr/lib32/libssl.so
+usr/lib32/libssl.so.1.0.0
+usr/lib32/pkgconfig/libcrypto.pc
+usr/lib32/pkgconfig/libssl.pc
+usr/lib32/pkgconfig/openssl.pc

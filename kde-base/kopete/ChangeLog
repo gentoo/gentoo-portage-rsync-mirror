@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.435 2014/05/08 21:17:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.436 2014/05/13 17:42:58 johu Exp $
+
+*kopete-4.13.1 (13 May 2014)
+
+  13 May 2014; Johannes Huber <johu@gentoo.org> +kopete-4.13.1.ebuild:
+  Version bump KDE SC 4.13.1
 
   08 May 2014; Johannes Huber <johu@gentoo.org>
   -files/kopete-4.11.2-jabber-connect.patch,

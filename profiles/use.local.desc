@@ -2799,16 +2799,21 @@ kde-base/dolphin-plugins:bazaar - Enable support for the bazaar VCS
 kde-base/dolphin-plugins:mercurial - Enable support for the mercurial VCS
 kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
 kde-base/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
+kde-base/kactivities:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-base/kalzium:solver - Enable the equation solver
+kde-base/kde-meta:kdepim - Pull in KDE PIM
 kde-base/kde-meta:sdk - Pull in developer-specific meta-packages
 kde-base/kdeartwork-kscreensaver:eigen - Enable various arithmetic screensavers which use Eigen2 for computations.
 kde-base/kdeartwork-kscreensaver:kexiv2 - Enable image rotation based on exif tags with libkexiv2.
 kde-base/kdebase-data:wallpapers - Install the KDE wallpapers
 kde-base/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-base/kdebase-meta:wallpapers - Install the KDE wallpapers
+kde-base/kdebase-runtime-meta:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
+kde-base/kdebase-runtime-meta:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
+kde-base/kdelibs:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdelibs:udisks - Use udisks for block device access (e.g., automounting)
 kde-base/kdelibs:upower - Use upower for power management
@@ -2821,19 +2826,25 @@ kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kd
 kde-base/kdeplasma-addons:fcitx - Use fcitx input method via app-i18n/fcitx
 kde-base/kdeplasma-addons:ibus - Use ibus input method via app-i18n/ibus
 kde-base/kdeplasma-addons:json - Enable JSON support via dev-libs/qjson
+kde-base/kdeplasma-addons:kdepim - KDE PIM integration via kde-base/kdepimlibs
+kde-base/kdeplasma-addons:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdeplasma-addons:oauth - Enable OAuth support via dev-libs/qoauth
 kde-base/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/libqalculate
-kde-base/kdeplasma-addons:qwt - Enable applets that use x11-libs/qwt:5.
-kde-base/kdeplasma-addons:scim - Enable applets that use app-i18n/scim.
+kde-base/kdeplasma-addons:qwt - Enable applets that use x11-libs/qwt:5
+kde-base/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
 kde-base/kdeutils-meta:floppy - Install kde-base/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
 kde-base/kfilemetadata:mobi - Adds support for reading MOBI ebook metadata
 kde-base/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
+kde-base/kget:gpg - Support for signature verificatopm by QGpgME via kde-base/kdepimlibs
+kde-base/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
+kde-base/kget:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
 kde-base/kig:scripting - Support Python scripting
-kde-base/kimono:akonadi - Compile bindings for Akonadi.
-kde-base/kimono:plasma - Compile bindings for KDE's Plasma.
+kde-base/kimono:akonadi - Compile bindings for Akonadi
+kde-base/kimono:nepomuk - Compile bindings for Nepomuk
+kde-base/kimono:plasma - Compile bindings for KDE's Plasma
 kde-base/klipper:prison - Enable support for barcodes/QRcodes
 kde-base/kmix:canberra - Enable sound event support using media-libs/libcanberra
 kde-base/konqueror:bookmarks - Add dependency on bookmark package.
@@ -2862,9 +2873,10 @@ kde-base/kopete:webpresence - Show your status and some more information on web.
 kde-base/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
 kde-base/kopete:yahoo - Enable yahoo protocol support.
 kde-base/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
-kde-base/korundum:akonadi - Compile bindings for Akonadi.
-kde-base/korundum:kate - Compile bindings for KDE Advanced Text Editor.
-kde-base/korundum:okular - Compile bindings for kde-base/okular.
+kde-base/korundum:akonadi - Compile bindings for Akonadi
+kde-base/korundum:kate - Compile bindings for KDE Advanced Text Editor
+kde-base/korundum:nepomuk - Compile bindings for Nepomuk
+kde-base/korundum:okular - Compile bindings for kde-base/okular
 kde-base/krdc:rdesktop - Enable runtime dependency for net-misc/rdesktop
 kde-base/krdc:telepathy - Enable desktop sharing through a telepathy client
 kde-base/krfb:telepathy - Enable desktop sharing through a telepathy client
@@ -2873,6 +2885,8 @@ kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:indi - Enable support for Astronomical control library using libindi
 kde-base/kwalletd:gpg - Support wallets with GnuPG encryption additionally to default blowfish-encrypted file
 kde-base/kwin:gles - Enable support for GLES.
+kde-base/libplasmaclock:kdepim - KDE PIM integration via kde-base/kdepimlibs
+kde-base/lokalize:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/marble:shapefile - Enable support for ESRI shapefiles
 kde-base/marble:zip - Enable support for reading and displaying .kmz files
@@ -2883,10 +2897,11 @@ kde-base/okular:dpi - DPI detection support for PDF rendering via x11-libs/libks
 kde-base/okular:ebook - Add E-Book support
 kde-base/okular:mobi - Add mobipocket support
 kde-base/oxygen-icons:bindist - Additionally install the svg sources of the bitmap icons (needed for redistribution)
-kde-base/perlkde:akonadi - Compile bindings for Akonadi.
-kde-base/perlkde:attica - Compile bindings for dev-libs/libattica.
-kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor.
-kde-base/perlkde:okular - Compile bindings for kde-base/okular.
+kde-base/perlkde:akonadi - Compile bindings for Akonadi
+kde-base/perlkde:attica - Compile bindings for dev-libs/libattica
+kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor
+kde-base/perlkde:nepomuk - Compile bindings for Nepomuk
+kde-base/perlkde:okular - Compile bindings for kde-base/okular
 kde-base/perlqt:declarative - Compile bindings for dev-qt/qtdeclarative.
 kde-base/perlqt:multimedia - Compile bindings for dev-qt/qtmultimedia.
 kde-base/perlqt:phonon - Compile bindings for Phonon.
@@ -2896,9 +2911,13 @@ kde-base/perlqt:qthelp - Compile bindings for QtHelp from dev-qt/qthelp.
 kde-base/perlqt:qwt - Compile bindings for x11-libs/qwt.
 kde-base/perlqt:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/plasma-workspace:json - Enable JSON support via dev-libs/qjson
+kde-base/plasma-workspace:kdepim - KDE PIM integration via kde-base/kdepimlibs
+kde-base/plasma-workspace:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/poxml:extras - Build po2xml and swappo tools
+kde-base/pykde4:akonadi - Compile bindings for Akonadi
+kde-base/pykde4:nepomuk - Compile bindings for Nepomuk
 kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/qtruby:declarative - Compile bindings for dev-qt/qtdeclarative.
 kde-base/qtruby:phonon - Compile bindings for Phonon.
@@ -2908,9 +2927,11 @@ kde-base/qtruby:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/qyoto:phonon - Compile bindings for Phonon.
 kde-base/qyoto:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/qyoto:webkit - Compile bindings for dev-qt/qtwebkit.
-kde-base/smokekde:attica - Compile bindings for dev-libs/libattica.
-kde-base/smokekde:kate - Compile bindings for KDE Advanced Text Editor.
-kde-base/smokekde:okular - Compile bindings for kde-base/okular.
+kde-base/smokekde:akonadi - Compile bindings for Akonadi
+kde-base/smokekde:attica - Compile bindings for dev-libs/libattica
+kde-base/smokekde:kate - Compile bindings for KDE Advanced Text Editor
+kde-base/smokekde:nepomuk - Compile bindings for Nepomuk
+kde-base/smokekde:okular - Compile bindings for kde-base/okular
 kde-base/smokeqt:declarative - Compile bindings for dev-qt/qtdeclarative.
 kde-base/smokeqt:multimedia - Compile bindings for dev-qt/qtmultimedia.
 kde-base/smokeqt:phonon - Compile bindings for Phonon.
@@ -2920,6 +2941,7 @@ kde-base/smokeqt:qthelp - Compile bindings for QtHelp from dev-qt/qthelp.
 kde-base/smokeqt:qwt - Compile bindings for x11-libs/qwt.
 kde-base/smokeqt:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
+kde-base/systemsettings:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-misc/kcm-grub2:hwinfo - Used to work out supported framebuffer resolutions
 kde-misc/kcm-grub2:imagemagick - Create splash images compatible with GRUB2
 kde-misc/kcm-grub2:packagekit - Add support for packagekit integration

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/baloo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.7 2014/05/06 04:03:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/baloo/ChangeLog,v 1.8 2014/05/13 17:43:02 johu Exp $
+
+*baloo-4.13.1 (13 May 2014)
+
+  13 May 2014; Johannes Huber <johu@gentoo.org> +baloo-4.13.1.ebuild:
+  Version bump KDE SC 4.13.1
 
   06 May 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   baloo-4.13.0.ebuild:
