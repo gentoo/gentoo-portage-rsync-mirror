@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.38 2014/04/26 16:20:23 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.39 2014/05/14 17:38:06 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -49,7 +49,7 @@ pkg_setup() {
 		ZLIB_INFLATE
 	"
 	use debug && CONFIG_CHECK="FRAME_POINTER
-	${CONFIG_FRAME_POINTER}"
+	DEBUG_INFO"
 
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 

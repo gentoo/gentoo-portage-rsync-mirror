@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.70 2014/04/26 16:20:23 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.71 2014/05/14 17:38:06 ryao Exp $
+
+  14 May 2014; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
+  Require CONFIG_DEBUG_INFO for USE=debug on =sys-kernel/spl-9999
 
   26 Apr 2014; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
   Improve USE=debug on 9999 ebuild: changes will be propagated to the next
