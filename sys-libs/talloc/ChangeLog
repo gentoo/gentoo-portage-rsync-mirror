@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.64 2014/03/11 03:44:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.65 2014/05/14 22:58:08 mgorny Exp $
+
+*talloc-2.1.0-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +talloc-2.1.0-r1.ebuild:
+  Enable multilib support, bug #491222. Clean up Python deps.
 
   11 Mar 2014; Patrick Lauer <patrick@gentoo.org> talloc-2.1.0.ebuild:
   Add gettext dep #503820

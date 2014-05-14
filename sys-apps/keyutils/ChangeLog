@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.40 2014/03/01 04:44:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.41 2014/05/14 23:01:12 mgorny Exp $
+
+*keyutils-1.5.9-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +keyutils-1.5.9-r1.ebuild:
+  Enable multilib support, bug #505006.
 
 *keyutils-1.5.9 (01 Mar 2014)
 
