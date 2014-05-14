@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.731 2014/05/07 17:59:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.733 2014/05/14 20:23:09 aballier Exp $
+
+  14 May 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.2.ebuild:
+  drop keywords on 2.2.2 for arches that have missing deps, bug #510340
+
+  14 May 2014; Alexis Ballier <aballier@gentoo.org> -ffmpeg-2.2.1.ebuild:
+  remove old
 
   07 May 2014; Markus Meier <maekke@gentoo.org> ffmpeg-1.2.6.ebuild:
   arm stable, bug #508372

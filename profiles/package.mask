@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15688 2014/05/14 16:30:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15689 2014/05/14 20:26:28 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -672,11 +672,6 @@ dev-java/itext:5
 # bugs and segfaults (all). Don't ask for a version bump unless
 # there is a working release.
 sci-geosciences/googleearth
-
-# Alexis Ballier <aballier@gentoo.org> (20 Jul 2013)
-# New major release and lots of packages fail to build.
-# Tracker bug is: https://bugs.gentoo.org/show_bug.cgi?id=476490
->=media-video/ffmpeg-2.0
 
 # Chris Reffett <creffett@gentoo.org> (20 Jul 2013)
 # Uses vulnerable versions of bzip2, but these versions are

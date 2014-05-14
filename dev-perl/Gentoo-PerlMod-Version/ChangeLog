@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gentoo-PerlMod-Version
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gentoo-PerlMod-Version/ChangeLog,v 1.14 2013/01/06 20:34:13 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gentoo-PerlMod-Version/ChangeLog,v 1.15 2014/05/14 20:26:06 zlogene Exp $
+
+  14 May 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Gentoo-PerlMod-Version-0.6.0.ebuild:
+  Add ~arm and ~mips keywords
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org>
   -Gentoo-PerlMod-Version-0.4.0.ebuild, -Gentoo-PerlMod-Version-0.5.0.ebuild:
