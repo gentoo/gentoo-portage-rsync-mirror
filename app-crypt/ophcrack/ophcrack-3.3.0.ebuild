@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-3.3.0.ebuild,v 1.4 2013/03/02 19:14:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-3.3.0.ebuild,v 1.5 2014/05/14 14:41:26 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 inherit eutils
 
 DESCRIPTION="A time-memory-trade-off-cracker"
@@ -16,27 +16,20 @@ IUSE="qt4 debug"
 
 CDEPEND="dev-libs/openssl
 		 net-libs/netwib
-		 qt4? ( dev-qt/qtgui:4 )"
+		 qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )"
 DEPEND="app-arch/unzip
 		virtual/pkgconfig
 		${CDEPEND}"
 RDEPEND="app-crypt/ophcrack-tables
 		 ${CDEPEND}"
 
-src_compile() {
-	local myconf
-
-	myconf="$(use_enable qt4 gui)"
-	myconf="${myconf} $(use_enable debug)"
-
-	econf ${myconf} || die "Failed to compile"
-	emake || die "Failed to make"
+src_configure() {
+	econf $(use_enable qt4 gui) $(use_enable debug)
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Installation failed."
+	default
 
-	cd "${S}"
-	newicon src/gui/pixmaps/os.xpm ophcrack.xpm
-	make_desktop_entry "${PN}" OphCrack ophcrack
+	newicon src/gui/pixmaps/os.xpm ${PN}.xpm
+	make_desktop_entry "${PN}" OphCrack ${PN}
 }

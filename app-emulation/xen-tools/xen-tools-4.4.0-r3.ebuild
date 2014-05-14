@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r2.ebuild,v 1.2 2014/05/11 22:25:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r3.ebuild,v 1.1 2014/05/14 15:00:27 dlan Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=1
+	UPSTREAM_VER=2
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \

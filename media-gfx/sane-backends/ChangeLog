@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.250 2014/05/13 14:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.251 2014/05/14 14:41:02 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> sane-backends-1.0.24-r3.ebuild:
+  Stable for sparc, wrt bug #506928
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> sane-backends-1.0.24-r3.ebuild:
   Stable for ia64, wrt bug #506928

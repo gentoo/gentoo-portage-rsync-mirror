@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gwaei
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.29 2013/06/05 00:54:48 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.30 2014/05/14 14:56:11 tomwij Exp $
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> gwaei-1.0.ebuild,
+  gwaei-1.1.ebuild:
+  [QA] EAPI 1 -> 5. Filed bug #510318.
 
 *gwaei-3.6.2 (05 Jun 2013)
 

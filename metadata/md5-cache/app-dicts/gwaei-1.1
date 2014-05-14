@@ -1,7 +1,7 @@
-DEFINED_PHASES=compile install postinst preinst
+DEFINED_PHASES=configure install postinst preinst
 DEPEND=>=net-misc/curl-7.18 >=dev-libs/glib-2.8:2 gtk? ( >=gnome-base/gconf-2:2 >=x11-libs/gtk+-2.14:2 >=x11-libs/libsexy-0.1.11 ) nls? ( virtual/libintl ) >=app-text/gnome-doc-utils-0.3.2 gnome? ( app-text/scrollkeeper ) nls? ( >=sys-devel/gettext-0.17 ) virtual/pkgconfig >=sys-apps/sed-4
 DESCRIPTION=Japanese-English Dictionary for GNOME
-EAPI=1
+EAPI=5
 HOMEPAGE=http://gwaei.sourceforge.net/
 IUSE=gtk gnome nls
 KEYWORDS=~amd64 ~x86
@@ -10,4 +10,4 @@ RDEPEND=>=net-misc/curl-7.18 >=dev-libs/glib-2.8:2 gtk? ( >=gnome-base/gconf-2:2
 SLOT=0
 SRC_URI=mirror://sourceforge/gwaei/gwaei-1.1.tar.gz
 _eclasses_=gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=294eb78e0c46f70f28514ca3c6387871
+_md5_=2ef7ca514ffd55b0692d207e6ed95194

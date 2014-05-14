@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.1.ebuild,v 1.3 2012/05/03 02:18:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.1.ebuild,v 1.4 2014/05/14 14:56:11 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit gnome2-utils
 
@@ -31,17 +31,16 @@ DEPEND="${RDEPEND}
 #RDEPEND="${RDEPEND}
 #	media-fonts/kanjistrokeorders"
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with gtk gnome) \
 		$(use_enable nls) \
 		$(use_enable gnome scrollkeeper) \
-		--disable-schemas-install || die
-	emake || die
+		--disable-schemas-install
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	rm -rf "${D}/usr/share/doc/${P}"
 	dodoc AUTHORS ChangeLog NEWS README
