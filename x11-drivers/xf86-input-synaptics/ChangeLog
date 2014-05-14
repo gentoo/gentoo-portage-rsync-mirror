@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.103 2014/04/16 07:44:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.104 2014/05/14 16:42:20 chithanh Exp $
+
+*xf86-input-synaptics-1.7.6 (14 May 2014)
+*xf86-input-synaptics-1.8.0 (14 May 2014)
+
+  14 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-synaptics-1.7.6.ebuild, +xf86-input-synaptics-1.8.0.ebuild,
+  -files/xf86-input-synaptics-1.6.2-reset-num_active_touches.patch,
+  -xf86-input-synaptics-1.6.2-r1.ebuild, -xf86-input-synaptics-1.7.2.ebuild,
+  -xf86-input-synaptics-1.7.3.ebuild:
+  Version bumps. Drop some old versions.
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   xf86-input-synaptics-1.7.4.ebuild:

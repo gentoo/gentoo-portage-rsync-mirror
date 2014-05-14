@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.159 2014/03/26 15:26:03 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.160 2014/05/14 16:41:08 axs Exp $
+
+*xf86-video-intel-2.99.911-r1 (14 May 2014)
+
+  14 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/xf86-video-intel-2.99.911-sna-pixmap-migration.patch,
+  +xf86-video-intel-2.99.911-r1.ebuild, -xf86-video-intel-2.99.911.ebuild:
+  fixed sna acceleration issue affecting gstreamer-0.10, upstream bug
+  https://bugs.freedesktop.org/show_bug.cgi?id=77063 , fixes bug 506542
 
 *xf86-video-intel-2.99.911 (26 Mar 2014)
 

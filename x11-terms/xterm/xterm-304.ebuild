@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-285.ebuild,v 1.12 2013/02/14 13:42:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-304.ebuild,v 1.1 2014/05/14 16:56:14 chithanh Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic multilib
 
@@ -12,8 +12,8 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="toolbar truetype unicode Xaw3d"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="+openpty toolbar truetype unicode Xaw3d"
 
 COMMON_DEPEND="kernel_linux? ( sys-libs/libutempter )
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-lib-9.0 sys-libs/libutempter ) )
@@ -35,15 +35,13 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/kbproto
 	x11-proto/xproto"
 
+DOCS=( README{,.i18n} ctlseqs.txt )
+
 pkg_setup() {
 	DEFAULTS_DIR="${EPREFIX}"/usr/share/X11/app-defaults
 }
 
 src_configure() {
-	# looking for reason why crosscompile failed? try restoring this:
-	# --x-libraries="${ROOT}usr/$(get_libdir)"
-	# -ssuominen, 2011
-
 	# 454736
 	# Workaround for ncurses[tinfo] until upstream fixes their buildsystem using
 	# something sane like pkg-config or ncurses5-config and stops guessing libs
@@ -53,7 +51,7 @@ src_configure() {
 	econf \
 		--libdir="${EPREFIX}"/etc \
 		--disable-full-tgetent \
-		--with-app-defaults=${DEFAULTS_DIR} \
+		--with-app-defaults="${DEFAULTS_DIR}" \
 		--disable-setuid \
 		--disable-setgid \
 		--with-utempter \
@@ -68,6 +66,7 @@ src_configure() {
 		--enable-i18n \
 		--enable-load-vt-fonts \
 		--enable-logging \
+		$(use_enable openpty) \
 		$(use_enable toolbar) \
 		$(use_enable unicode mini-luit) \
 		$(use_enable unicode luit) \
@@ -77,8 +76,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README{,.i18n} ctlseqs.txt
+	default
+
 	dohtml xterm.log.html
 	domenu *.desktop
 
@@ -89,5 +88,5 @@ src_install() {
 	fperms 0755 /usr/bin/xterm
 
 	# restore the navy blue
-	sed -i -e "s:blue2$:blue:" "${ED}"${DEFAULTS_DIR}/XTerm-color
+	sed -i -e "s:blue2$:blue:" "${D}${DEFAULTS_DIR}"/XTerm-color || die
 }

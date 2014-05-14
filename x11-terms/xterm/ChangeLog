@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.395 2013/11/15 15:08:22 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.396 2014/05/14 16:56:14 chithanh Exp $
+
+*xterm-304 (14 May 2014)
+
+  14 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xterm-304.ebuild, -xterm-285.ebuild, -xterm-288.ebuild, -xterm-292.ebuild,
+  -xterm-293.ebuild:
+  Version bump. Drop some old versions.
 
   15 Nov 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix e-mail address.

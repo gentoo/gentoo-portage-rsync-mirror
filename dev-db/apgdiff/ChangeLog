@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/apgdiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.14 2012/09/21 17:43:00 fordfrog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.15 2014/05/14 16:46:47 tomwij Exp $
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> apgdiff-1.4.ebuild,
+  apgdiff-2.2.1.ebuild, apgdiff-2.2.2.ebuild, apgdiff-2.3.ebuild,
+  apgdiff-2.4.ebuild:
+  EAPI 1 -> 5. Make use of java_prepare.
 
 *apgdiff-2.4 (21 Sep 2012)
 
@@ -77,4 +82,3 @@
   22 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org> +metadata.xml,
   +apgdiff-1.3.ebuild:
   New ebuild (moved from java-overlay)
-

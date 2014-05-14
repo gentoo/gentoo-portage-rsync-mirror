@@ -1,14 +1,14 @@
-DEFINED_PHASES=install postinst postrm unpack
-DEPEND=>=x11-libs/gtk+-2.6:2 virtual/pkgconfig
+DEFINED_PHASES=compile install postinst postrm prepare
+DEPEND=sys-libs/zlib:0 >=x11-libs/gtk+-2.6:2 x11-libs/libX11:0 virtual/pkgconfig:*
 DESCRIPTION=Hierarchical note manager written using GTK+ and C++
-EAPI=1
+EAPI=5
 HOMEPAGE=http://notecase.sourceforge.net/
 IUSE=gnome nls
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=BSD
-RDEPEND=>=x11-libs/gtk+-2.6:2
+RDEPEND=sys-libs/zlib:0 >=x11-libs/gtk+-2.6:2 x11-libs/libX11:0
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/notecase/notecase-1.9.8_src.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f4655add1e116abb67c1ce073dc85c03
+_md5_=e31402b7aa3ffbd368ec21ff1cfa60be

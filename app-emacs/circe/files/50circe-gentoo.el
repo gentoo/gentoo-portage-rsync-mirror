@@ -1,5 +1,2 @@
-
-;;; circe site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
-(require 'circe-auto)
+(autoload 'circe "circe" "Connect to IRC." t)

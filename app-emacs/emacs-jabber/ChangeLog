@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.30 2014/05/14 14:21:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.31 2014/05/14 16:57:59 ulm Exp $
+
+  14 May 2014; Ulrich Müller <ulm@gentoo.org> -emacs-jabber-0.8.0.ebuild,
+  -files/70emacs-jabber-gentoo.el:
+  Remove old.
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> emacs-jabber-0.8.92.ebuild:
   Stable for sparc, wrt bug #505526

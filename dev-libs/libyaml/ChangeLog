@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.56 2014/05/14 16:11:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.57 2014/05/14 16:50:26 radhermit Exp $
+
+  14 May 2014; Tim Harder <radhermit@gentoo.org> -libyaml-0.1.5.ebuild:
+  Remove old.
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> libyaml-0.1.6.ebuild:
   Stable for sparc, wrt bug #505948

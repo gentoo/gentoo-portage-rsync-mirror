@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.99.911.ebuild,v 1.1 2014/03/26 15:26:03 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.99.911-r1.ebuild,v 1.1 2014/05/14 16:41:08 axs Exp $
 
 EAPI=5
 
@@ -39,6 +39,10 @@ RDEPEND="x11-libs/libXext
 DEPEND="${RDEPEND}
 	>=x11-proto/dri2proto-2.6
 	x11-proto/resourceproto"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-sna-pixmap-migration.patch
+)
 
 src_configure() {
 	XORG_CONFIGURE_OPTIONS=(
