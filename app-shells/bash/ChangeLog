@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.369 2014/05/13 08:48:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.370 2014/05/14 07:08:53 polynomial-c Exp $
+
+  14 May 2014; Lars Wendler <polynomial-c@gentoo.org> bash-4.3_p11-r5.ebuild,
+  +files/bash-4.3-bind-compound-arry.patch,
+  -files/bash-4.3-bind-compund-arry.patch:
+  Fixed patchname.
 
 *bash-4.3_p11-r5 (13 May 2014)
 

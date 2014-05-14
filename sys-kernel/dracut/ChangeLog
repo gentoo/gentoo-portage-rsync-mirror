@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.165 2014/04/24 20:09:28 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.166 2014/05/14 07:09:46 aidecoe Exp $
+
+*dracut-037-r1 (13 May 2014)
+
+  13 May 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-037-r1.ebuild,
+  +files/037-0005-modsign-do-not-hardcode-path-to-keyctl.patch:
+  Fixes bug #506094 and rels bug #508652 in behalf of Alexander Tsoy.
 
   24 Apr 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-036-r4.ebuild,
   dracut-037.ebuild:
