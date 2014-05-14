@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.99.10.ebuild,v 1.3 2013/03/10 06:29:11 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.99.10.ebuild,v 1.4 2014/05/14 15:31:03 tomwij Exp $
 
 EAPI=3
 
@@ -13,8 +13,14 @@ SLOT="0"
 IUSE="debug nls"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=x11-libs/gtk+-2.4:2
-	>=app-i18n/libhangul-0.1.0
+RDEPEND=">=app-i18n/libhangul-0.1.0
+	dev-libs/glib:2
+	x11-libs/gdk-pixbuf:2
+	>=x11-libs/gtk+-2.4:2
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/pango
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

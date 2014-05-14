@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r6.ebuild,v 1.4 2013/04/21 09:54:17 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r6.ebuild,v 1.5 2014/05/14 15:17:50 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit cdrom eutils gnome2-utils multilib
 
@@ -145,19 +145,19 @@ src_install() {
 		local lib64="$(get_libdir)"
 		if [ "${lib32}" != "${lib64}" ] ; then
 			for f in /usr/"${lib32}"/iiim/*iiim* ; do
-				dosym "${f}" /usr/"${lib64}"/iiim/ || die
+				dosym "${f}" /usr/"${lib64}"/iiim/
 			done
 			for f in /usr/"${lib32}"/iiim/le/atokx3/atokx3*.so ; do
-				dosym "${f}" /usr/"${lib64}"/iiim/le/atokx3/ || die
+				dosym "${f}" /usr/"${lib64}"/iiim/le/atokx3/
 			done
-			dosym /usr/"${lib64}"/iiim/le/atokx3/64 /usr/"${lib32}"/iiim/le/atokx3/amd64 || die
-			dosym /usr/"${lib32}"/libiiimcf.la /usr/"${lib64}"/libiiimcf.la || die
-			dosym /usr/"${lib32}"/libiiimp.la /usr/"${lib64}"/libiiimp.la || die
+			dosym /usr/"${lib64}"/iiim/le/atokx3/64 /usr/"${lib32}"/iiim/le/atokx3/amd64
+			dosym /usr/"${lib32}"/libiiimcf.la /usr/"${lib64}"/libiiimcf.la
+			dosym /usr/"${lib32}"/libiiimp.la /usr/"${lib64}"/libiiimp.la
 		fi
 	fi
 
-	dodoc "${CDROM_ROOT}"/doc/atok.pdf || die
-	dohtml "${CDROM_ROOT}"/readme.html || die
+	dodoc "${CDROM_ROOT}"/doc/atok.pdf
+	dohtml "${CDROM_ROOT}"/readme.html
 }
 
 pkg_postinst() {

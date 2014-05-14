@@ -1,7 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup unpack
 DEPEND=>=sys-apps/sed-4
 DESCRIPTION=ATOK X3 for Linux - The most famous Japanese Input Method Engine
-EAPI=1
+EAPI=5
 HOMEPAGE=http://www.justsystems.com/jp/products/atok_linux/
 KEYWORDS=~amd64 ~x86
 LICENSE=ATOK MIT
@@ -11,4 +11,4 @@ RESTRICT=strip mirror binchecks
 SLOT=0
 SRC_URI=http://www3.justsystem.co.jp/download/atok/up/lin/atokx3up2.tar.gz http://www3.justsystem.co.jp/download/atok/up/lin/atokx3gtk216.tar.gz http://www3.justsystem.co.jp/download/zipcode/up/lin/a20y1006lx.tgz
 _eclasses_=cdrom	415b847346ef9001a89e5c7da6711215	eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c7a1001a67e43c200195ff220cad86b5
+_md5_=e8715e1f474f1ff70323928dce188dbe

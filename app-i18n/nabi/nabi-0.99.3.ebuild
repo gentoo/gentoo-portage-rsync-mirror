@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.99.3.ebuild,v 1.4 2013/03/10 06:29:11 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.99.3.ebuild,v 1.5 2014/05/14 15:31:03 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit eutils autotools
 
@@ -15,21 +15,24 @@ SLOT="0"
 IUSE="debug"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=x11-libs/gtk+-2.4:2
-	>=app-i18n/libhangul-0.0.8"
+RDEPEND=">=app-i18n/libhangul-0.0.8
+	dev-libs/glib:2
+	x11-libs/gdk-pixbuf:2
+	>=x11-libs/gtk+-2.4:2
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/pango"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf=
 
 	# Broken configure: --disable-debug also enables debug
@@ -37,13 +40,6 @@ src_compile() {
 		myconf="${myconf} --enable-debug"
 
 	econf ${myconf}
-	emake || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_postinst() {
