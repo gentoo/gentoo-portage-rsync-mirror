@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.88 2014/04/26 16:08:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.89 2014/05/14 17:07:30 tomwij Exp $
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> postgis-1.3.6-r2.ebuild:
+  [QA] EAPI 1 -> 5.
 
   26 Apr 2014; Chema Alonso <nimiux@gentoo.org> postgis-2.1.1.ebuild:
   Stable for amd64 wrt bug #498156

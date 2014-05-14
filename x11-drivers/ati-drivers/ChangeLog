@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.355 2014/04/06 10:11:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.356 2014/05/14 17:12:16 chithanh Exp $
+
+*ati-drivers-14.4 (14 May 2014)
+
+  14 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-14.4.ebuild:
+  Version bump. Import of Emil Karlson's ebuild from the x11 overlay
 
   06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> ati-drivers-13.12.ebuild:
   Stable for x86, wrt bug #500368

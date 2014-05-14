@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.78 2014/05/14 16:10:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.79 2014/05/14 17:23:34 ssuominen Exp $
+
+  14 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/jbigkit-2.0-r1-build.patch, -files/jbigkit-2.0-static-libs.patch,
+  -jbigkit-2.0-r2.ebuild:
+  old
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> jbigkit-2.1.ebuild:
   Stable for sparc, wrt bug #507254

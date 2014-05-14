@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/prefuse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/ChangeLog,v 1.17 2008/10/22 01:48:11 fordfrog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/ChangeLog,v 1.18 2014/05/14 17:26:07 tomwij Exp $
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> prefuse-20071021_beta.ebuild:
+  EAPI 1 -> 5. Make use of java_prepare.
 
 *prefuse-20071021_beta (22 Oct 2008)
 
@@ -74,4 +77,3 @@
   21 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +prefuse-20050114_alpha.ebuild:
   Initial import. Fixes bug #71407
-

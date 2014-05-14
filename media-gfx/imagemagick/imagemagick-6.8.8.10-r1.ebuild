@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.1 2014/04/08 11:49:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.3 2014/05/14 17:13:30 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -13,7 +13,7 @@ SRC_URI="mirror://${PN}/${MY_P}.tar.xz"
 
 LICENSE="imagemagick"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp pango perl png postscript q32 q64 q8 raw static-libs svg test tiff truetype webp wmf X xml zlib"
 
 RESTRICT="perl? ( userpriv )"
@@ -27,10 +27,10 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	fontconfig? ( media-libs/fontconfig )
 	fpx? ( >=media-libs/libfpx-1.3.0-r1 )
 	graphviz? ( media-gfx/graphviz )
-	jbig? ( media-libs/jbigkit )
+	jbig? ( >=media-libs/jbigkit-2:= )
 	jpeg? ( virtual/jpeg:0 )
-	jpeg2k? ( media-libs/openjpeg:2 )
-	lcms? ( media-libs/lcms:2 )
+	jpeg2k? ( >=media-libs/openjpeg-2.0.0:2 )
+	lcms? ( media-libs/lcms:2= )
 	lqr? ( media-libs/liblqr )
 	opencl? ( virtual/opencl )
 	openexr? ( media-libs/openexr:0= )
@@ -40,7 +40,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	postscript? ( app-text/ghostscript-gpl )
 	raw? ( media-gfx/ufraw )
 	svg? ( gnome-base/librsvg )
-	tiff? ( media-libs/tiff:0 )
+	tiff? ( media-libs/tiff:0= )
 	truetype? (
 		media-fonts/urw-fonts
 		>=media-libs/freetype-2
@@ -53,9 +53,9 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 		x11-libs/libXext
 		x11-libs/libXt
 		)
-	xml? ( dev-libs/libxml2 )
+	xml? ( dev-libs/libxml2:= )
 	lzma? ( app-arch/xz-utils )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib:= )"
 DEPEND="${RDEPEND}
 	!media-gfx/graphicsmagick[imagemagick]
 	virtual/pkgconfig
@@ -67,10 +67,11 @@ REQUIRED_USE="corefonts? ( truetype )
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	# These both have been accepted by upstream, remove once 6.9.0-0 is out:
-	epatch \
-		"${FILESDIR}"/${PN}-6.8.8.8-openjpeg-2.0.0-has-no-opj_stream_destroy_v3.patch \
-		"${FILESDIR}"/${P}-LIBOPENJP2_DELEGATE_not_JP2_DELEGATE.patch
+	# These both have been accepted by upstream:
+	if use jpeg2k && has_version '<media-libs/openjpeg-2.1.0'; then
+		epatch "${FILESDIR}"/${PN}-6.8.8.8-openjpeg-2.0.0-has-no-opj_stream_destroy_v3.patch
+	fi
+	epatch "${FILESDIR}"/${P}-LIBOPENJP2_DELEGATE_not_JP2_DELEGATE.patch
 
 	epatch_user
 

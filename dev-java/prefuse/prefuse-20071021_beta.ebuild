@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20071021_beta.ebuild,v 1.1 2008/10/22 01:48:11 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20071021_beta.ebuild,v 1.2 2014/05/14 17:26:07 tomwij Exp $
 
-EAPI=1
+EAPI=5
+
 JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
@@ -15,7 +16,6 @@ HOMEPAGE="http://prefuse.org"
 LICENSE="BSD"
 SLOT="2006"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE=""
 
 COMMON_DEP="dev-java/lucene:1"
 
@@ -27,10 +27,7 @@ RDEPEND=">=virtual/jre-1.4
 
 S=${WORKDIR}/${PN}-beta
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	find lib/ -name "*.jar" | xargs rm -v
 }
 

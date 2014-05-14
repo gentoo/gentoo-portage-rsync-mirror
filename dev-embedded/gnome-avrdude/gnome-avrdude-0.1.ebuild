@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/gnome-avrdude-0.1.ebuild,v 1.5 2012/10/29 08:53:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/gnome-avrdude-0.1.ebuild,v 1.6 2014/05/14 17:09:30 tomwij Exp $
 
-EAPI=1
+EAPI=5
 
 inherit gnome2 autotools
 
@@ -31,8 +31,7 @@ RDEPEND="${RDEPEND}
 
 DOCS="AUTHORS NEWS README"
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
 	sed -i \
 		-e :a -e '/\\$/N; s/\\\n//; ta' \
 		-e 's/^gnome_avrdude/#gnome_avrdude/' \
@@ -43,5 +42,9 @@ src_unpack() {
 		-e 's/^[\t ]*-g//' \
 		"${S}"/src/Makefile.am \
 		|| die "sed failed"
+
+	# Remove Application category from .desktop file.
+	sed -i 's/;Application;/;/' gnome-avrdude.desktop
+
 	eautoreconf
 }

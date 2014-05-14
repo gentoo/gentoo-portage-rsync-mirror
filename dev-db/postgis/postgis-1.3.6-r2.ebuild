@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.3.6-r2.ebuild,v 1.1 2013/01/30 14:46:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.3.6-r2.ebuild,v 1.2 2014/05/14 17:07:30 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit eutils multilib versionator
 
@@ -55,7 +55,7 @@ pkg_setup(){
 	fi
 }
 
-src_compile(){
+src_configure(){
 	local myconf
 	if use geos; then
 		myconf="--with-geos"
@@ -71,25 +71,26 @@ src_compile(){
 		--libdir=/usr/$(get_libdir)/postgresql/ \
 		--with-docdir=/usr/share/doc/${PF}/html/ \
 		${myconf} \
-		$(use_with proj) ||\
-			die "Error: econf failed"
+		$(use_with proj)
+}
 
-	emake || die "Error: emake failed"
+src_compile(){
+	emake
 
 	cd topology/
-	emake || die "Unable to build topology sql file"
+	emake
 
 	if use doc ; then
 		cd "${S}"
-		emake docs || die "Unable to build documentation"
+		emake docs
 	fi
 }
 
 src_install(){
 	dodir /usr/$(get_libdir)/postgresql /usr/share/postgresql/contrib/
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	cd "${S}/topology/"
-	emake DESTDIR="${D}" install || die "emake install topology failed"
+	default
 
 	cd "${S}"
 	dodoc CREDITS TODO loader/README.* doc/*txt

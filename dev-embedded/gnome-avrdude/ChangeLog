@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gnome-avrdude
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/ChangeLog,v 1.5 2012/10/29 08:53:34 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/ChangeLog,v 1.6 2014/05/14 17:09:30 tomwij Exp $
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> gnome-avrdude-0.1.ebuild:
+  [QA] EAPI 1 -> 5. Remove Application category from .desktop file.
 
   29 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gnome-avrdude-0.1.ebuild:
   Add ~amd64, wrt bug #440056
