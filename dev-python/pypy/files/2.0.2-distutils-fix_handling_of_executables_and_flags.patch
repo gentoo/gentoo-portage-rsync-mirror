@@ -1,7 +1,7 @@
 http://bugs.python.org/issue1222585
 
---- lib-python/2.7/distutils/cygwinccompiler.py
-+++ lib-python/2.7/distutils/cygwinccompiler.py
+--- a/lib-python/2.7/distutils/cygwinccompiler.py
++++ b/lib-python/2.7/distutils/cygwinccompiler.py
 @@ -132,9 +132,13 @@
          self.set_executables(compiler='gcc -mcygwin -O -Wall',
                               compiler_so='gcc -mcygwin -mdll -O -Wall',
@@ -49,8 +49,8 @@ http://bugs.python.org/issue1222585
          # Maybe we should also append -mthreads, but then the finished
          # dlls need another dll (mingwm10.dll see Mingw32 docs)
          # (-mthreads: Support thread-safe exception handling on `Mingw32')
---- lib-python/2.7/distutils/emxccompiler.py
-+++ lib-python/2.7/distutils/emxccompiler.py
+--- a/lib-python/2.7/distutils/emxccompiler.py
++++ b/lib-python/2.7/distutils/emxccompiler.py
 @@ -65,8 +65,12 @@
          # XXX optimization, warnings etc. should be customizable.
          self.set_executables(compiler='gcc -Zomf -Zmt -O3 -fomit-frame-pointer -mprobe -Wall',
@@ -80,8 +80,8 @@ http://bugs.python.org/issue1222585
              except DistutilsExecError, msg:
                  raise CompileError, msg
  
---- lib-python/2.7/distutils/sysconfig_cpython.py
-+++ lib-python/2.7/distutils/sysconfig_cpython.py
+--- a/lib-python/2.7/distutils/sysconfig_cpython.py
++++ b/lib-python/2.7/distutils/sysconfig_cpython.py
 @@ -150,10 +150,12 @@
      varies across Unices and is stored in Python's Makefile.
      """
@@ -174,8 +174,8 @@ http://bugs.python.org/issue1222585
  
                              flags = _config_vars[key]
                              flags = re.sub('-isysroot\s+\S+(\s|$)', ' ', flags)
---- lib-python/2.7/distutils/sysconfig_pypy.py
-+++ lib-python/2.7/distutils/sysconfig_pypy.py
+--- a/lib-python/2.7/distutils/sysconfig_pypy.py
++++ b/lib-python/2.7/distutils/sysconfig_pypy.py
 @@ -114,13 +114,56 @@
      optional C speedup components.
      """
@@ -239,8 +239,8 @@ http://bugs.python.org/issue1222585
  
  
  from sysconfig_cpython import (
---- lib-python/2.7/distutils/unixccompiler.py
-+++ lib-python/2.7/distutils/unixccompiler.py
+--- a/lib-python/2.7/distutils/unixccompiler.py
++++ b/lib-python/2.7/distutils/unixccompiler.py
 @@ -114,14 +114,17 @@
      # are pretty generic; they will probably have to be set by an outsider
      # (eg. using information discovered by the sysconfig about building

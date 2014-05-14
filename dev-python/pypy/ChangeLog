@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.62 2014/05/10 01:50:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.63 2014/05/14 02:04:25 floppym Exp $
+
+  14 May 2014; Mike Gilbert <floppym@gentoo.org> files/1.9-distutils.unixccompil
+  er.UnixCCompiler.runtime_library_dir_option.patch,
+  files/1.9-scripts-location.patch,
+  files/2.0.2-distutils-fix_handling_of_executables_and_flags.patch,
+  files/2.1-distutils-fix_handling_of_executables_and_flags.patch:
+  Normalize paths.
 
   10 May 2014; Mike Gilbert <floppym@gentoo.org> pypy-2.2.1.ebuild:
   Add optional dependency on dev-tcltk/tix, bug 413393.
