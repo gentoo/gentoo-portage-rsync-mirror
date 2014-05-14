@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/rosetta-fragments-3.1-r1.ebuild,v 1.1 2013/04/25 08:37:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/rosetta-fragments-3.1-r1.ebuild,v 1.2 2014/05/14 12:09:55 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="
 	sci-biology/ncbi-tools
-	sci-biology/ncbi-tools++
+	|| ( sci-biology/update-blastdb sci-biology/ncbi-tools++ )
 	sci-biology/psipred"
 
 RESTRICT="fetch"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.3.ebuild,v 1.2 2012/07/11 02:33:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.3.ebuild,v 1.3 2014/05/14 12:07:39 jlec Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ IUSE="test"
 
 RDEPEND="
 	sci-biology/ncbi-tools
-	sci-biology/ncbi-tools++"
+	|| ( sci-biology/update-blastdb sci-biology/ncbi-tools++ )"
 DEPEND=""
 
 S="${WORKDIR}"/${PN}

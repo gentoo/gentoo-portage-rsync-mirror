@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools++
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.28 2013/03/11 16:16:48 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.29 2014/05/14 12:06:42 jlec Exp $
+
+  14 May 2014; Justin Lecher <jlec@gentoo.org>
+  ncbi-tools++-0.2010.06.15-r1.ebuild:
+  Block sci-biology/update-blastdb
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly

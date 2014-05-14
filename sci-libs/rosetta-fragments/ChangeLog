@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/rosetta-fragments
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/ChangeLog,v 1.5 2013/04/25 08:37:45 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/ChangeLog,v 1.6 2014/05/14 12:09:55 jlec Exp $
+
+  14 May 2014; Justin Lecher <jlec@gentoo.org> rosetta-fragments-3.1.ebuild,
+  rosetta-fragments-3.1-r1.ebuild:
+  Add additional dep on sci-biology/update-blast
 
 *rosetta-fragments-3.1-r1 (25 Apr 2013)
 

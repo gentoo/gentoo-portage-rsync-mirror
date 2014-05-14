@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-0.2010.06.15-r1.ebuild,v 1.3 2012/11/05 11:22:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-0.2010.06.15-r1.ebuild,v 1.4 2014/05/14 12:06:42 jlec Exp $
 
 EAPI="3"
 
@@ -22,6 +22,7 @@ IUSE="sqlite mysql"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
+	!sci-biology/update-blastdb
 	sqlite? ( dev-db/sqlite:3 )
 	mysql? ( virtual/mysql )"
 RDEPEND="${DEPEND}"
