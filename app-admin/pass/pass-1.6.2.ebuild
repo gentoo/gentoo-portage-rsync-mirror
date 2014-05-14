@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.1-r1.ebuild,v 1.5 2014/05/09 22:52:55 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.2.ebuild,v 1.1 2014/05/14 07:49:03 zx2c4 Exp $
 
 EAPI=4
 
