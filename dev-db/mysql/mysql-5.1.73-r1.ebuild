@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.73.ebuild,v 1.1 2014/04/24 13:31:00 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.73-r1.ebuild,v 1.1 2014/05/14 01:47:05 grknight Exp $
 
 EAPI="4"
 
-MY_EXTRAS_VER="20140424-1043Z"
+MY_EXTRAS_VER="20140514-0124Z"
 # PBXT
 PBXT_VERSION='1.0.11-6-pre-ga'
 # XtraDB
