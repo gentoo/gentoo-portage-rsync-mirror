@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.5 2014/05/13 19:26:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.6 2014/05/14 00:17:49 robbat2 Exp $
 
 inherit eutils pam toolchain-funcs
 
@@ -17,6 +17,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 
 IUSE="crypt doc kerberos nls pam server"
+RESTRICT='test'
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	kerberos? ( virtual/krb5 )
@@ -78,8 +79,4 @@ src_install() {
 	fi
 
 	newpamd "${FILESDIR}"/cvs.pam-include-1.12.12 cvs
-}
-
-src_test() {
-	einfo "FEATURES=\"test\" has been disabled for dev-vcs/cvs"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.13.1-r2.ebuild,v 1.4 2014/01/30 15:25:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.13.1-r2.ebuild,v 1.5 2014/05/14 00:17:49 robbat2 Exp $
 
 EAPI=3
 
@@ -65,7 +65,7 @@ src_prepare() {
 src_configure() {
 	local myconf
 	# the tests need the server and proxy
-	if has test $FEATURES; then
+	if use test; then
 		use server || \
 		ewarn "The server and proxy code are enabled as they are required for tests."
 		myconf="--enable-server --enable-proxy"
