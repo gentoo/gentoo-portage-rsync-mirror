@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.6 2014/05/10 16:29:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-17.ebuild,v 1.8 2014/05/14 21:30:38 ssuominen Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ ${PV} == 9999* ]]; then
 	inherit autotools git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 	inherit libtool
 fi
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://git.kernel.org/?p=utils/kernel/kmod/kmod.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="debug doc lzma +openrc python static-libs +tools zlib"
+IUSE="debug doc lzma python static-libs +tools zlib"
 
 # Upstream does not support running the test suite with custom configure flags.
 # I was also told that the test suite is intended for kmod developers.
@@ -32,8 +32,8 @@ RESTRICT="test"
 
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
+	!<sys-apps/openrc-0.12
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
-	openrc? ( !<sys-apps/openrc-0.12 )
 	python? ( ${PYTHON_DEPS} )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
 DEPEND="${RDEPEND}
@@ -161,34 +161,32 @@ src_install() {
 	insinto /lib/modprobe.d
 	doins "${T}"/usb-load-ehci-first.conf #260139
 
-	use openrc && doinitd "${FILESDIR}"/kmod-static-nodes
+	doinitd "${FILESDIR}"/kmod-static-nodes
 }
 
 pkg_postinst() {
-	if use openrc; then
-		if [[ -L ${ROOT%/}/etc/runlevels/boot/static-nodes ]]; then
-			ewarn "Removing old conflicting static-nodes init script from the boot runlevel"
-			rm -f "${ROOT%/}"/etc/runlevels/boot/static-nodes
-		fi
+	if [[ -L ${ROOT%/}/etc/runlevels/boot/static-nodes ]]; then
+		ewarn "Removing old conflicting static-nodes init script from the boot runlevel"
+		rm -f "${ROOT%/}"/etc/runlevels/boot/static-nodes
+	fi
 
-		# Add kmod to the runlevel automatically if this is the first install of this package.
-		if [[ -z ${REPLACING_VERSIONS} ]]; then
-			if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
-				mkdir -p "${ROOT%/}"/etc/runlevels/sysinit
-			fi
-			if [[ -x ${ROOT%/}/etc/init.d/kmod-static-nodes ]]; then
-				ln -s /etc/init.d/kmod-static-nodes "${ROOT%/}"/etc/runlevels/sysinit/kmod-static-nodes
-			fi
+	# Add kmod to the runlevel automatically if this is the first install of this package.
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		if [[ ! -d ${ROOT%/}/etc/runlevels/sysinit ]]; then
+			mkdir -p "${ROOT%/}"/etc/runlevels/sysinit
 		fi
+		if [[ -x ${ROOT%/}/etc/init.d/kmod-static-nodes ]]; then
+			ln -s /etc/init.d/kmod-static-nodes "${ROOT%/}"/etc/runlevels/sysinit/kmod-static-nodes
+		fi
+	fi
 
-		if [[ -e ${ROOT%/}/etc/runlevels/sysinit ]]; then
-			if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/kmod-static-nodes ]]; then
-				ewarn
-				ewarn "You need to add kmod-static-nodes to the sysinit runlevel for"
-				ewarn "kernel modules to have required static nodes!"
-				ewarn "Run this command:"
-				ewarn "\trc-update add kmod-static-nodes sysinit"
-			fi
+	if [[ -e ${ROOT%/}/etc/runlevels/sysinit ]]; then
+		if [[ ! -e ${ROOT%/}/etc/runlevels/sysinit/kmod-static-nodes ]]; then
+			ewarn
+			ewarn "You need to add kmod-static-nodes to the sysinit runlevel for"
+			ewarn "kernel modules to have required static nodes!"
+			ewarn "Run this command:"
+			ewarn "\trc-update add kmod-static-nodes sysinit"
 		fi
 	fi
 }
