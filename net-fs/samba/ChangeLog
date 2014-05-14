@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.668 2014/04/17 22:10:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.669 2014/05/14 16:14:28 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> samba-3.6.23.ebuild:
+  Stable for sparc, wrt bug #504494
 
   17 Apr 2014; Jeroen Roovers <jer@gentoo.org> samba-4.1.7.ebuild:
   Marked ~hppa too.

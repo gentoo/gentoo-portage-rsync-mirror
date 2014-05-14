@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.172 2014/05/13 15:15:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.173 2014/05/14 16:15:48 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> vala-0.20.1.ebuild:
+  Stable for sparc, wrt bug #508862
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> vala-0.20.1.ebuild:
   Stable for ia64, wrt bug #508862

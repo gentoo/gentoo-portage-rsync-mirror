@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.260 2014/04/19 17:47:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.261 2014/05/14 16:17:13 chithanh Exp $
+
+*libdrm-2.4.54 (14 May 2014)
+
+  14 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.54.ebuild, -files/libdrm-2.4.40-bsd-etime.patch,
+  -files/libdrm-2.4.49-radeonsi-crash.patch, -libdrm-2.4.40.ebuild,
+  -libdrm-2.4.42.ebuild, -libdrm-2.4.43.ebuild, -libdrm-2.4.44.ebuild,
+  -libdrm-2.4.45.ebuild, -libdrm-2.4.46-r1.ebuild, -libdrm-2.4.47.ebuild,
+  -libdrm-2.4.48.ebuild, -libdrm-2.4.49-r1.ebuild, -libdrm-2.4.49.ebuild,
+  -libdrm-2.4.50.ebuild, -libdrm-2.4.51.ebuild:
+  Version bump. Drop some old versions.
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.52.ebuild:
   Stable for sparc, wrt bug #500368

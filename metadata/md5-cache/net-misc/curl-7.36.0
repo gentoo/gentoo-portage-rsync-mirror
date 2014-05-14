@@ -4,7 +4,7 @@ DESCRIPTION=A Client that groks URLs
 EAPI=5
 HOMEPAGE=http://curl.haxx.se/
 IUSE=adns idn ipv6 kerberos ldap metalink rtmp ssh ssl static-libs test threads curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl
-KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=MIT
 RDEPEND=ldap? ( net-nds/openldap ) ssl? ( curl_ssl_axtls? ( net-libs/axtls app-misc/ca-certificates ) curl_ssl_cyassl? ( net-libs/cyassl app-misc/ca-certificates ) curl_ssl_gnutls? ( || ( ( >=net-libs/gnutls-3[static-libs?] dev-libs/nettle ) ( =net-libs/gnutls-2.12*[nettle,static-libs?] dev-libs/nettle ) ( =net-libs/gnutls-2.12*[-nettle,static-libs?] dev-libs/libgcrypt[static-libs?] ) ) app-misc/ca-certificates ) curl_ssl_openssl? ( dev-libs/openssl[static-libs?] ) curl_ssl_nss? ( dev-libs/nss app-misc/ca-certificates ) curl_ssl_polarssl? ( net-libs/polarssl:= app-misc/ca-certificates ) ) idn? ( net-dns/libidn[static-libs?] ) adns? ( net-dns/c-ares ) kerberos? ( virtual/krb5 ) metalink? ( >=media-libs/libmetalink-0.1.0 ) rtmp? ( media-video/rtmpdump ) ssh? ( net-libs/libssh2[static-libs?] ) sys-libs/zlib
 REQUIRED_USE=threads? ( !adns ) ssl? ( ^^ ( curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_openssl curl_ssl_nss curl_ssl_polarssl ) )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://curl.haxx.se/download/curl-7.36.0.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2655e22c384e00f537bd0465a92f270e
+_md5_=0c2536504443d389ec4f00d6210a2063

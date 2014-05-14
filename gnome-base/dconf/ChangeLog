@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.61 2014/05/13 15:15:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.62 2014/05/14 16:15:58 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> dconf-0.18.0.ebuild:
+  Stable for sparc, wrt bug #508862
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> dconf-0.18.0.ebuild:
   Stable for ia64, wrt bug #508862

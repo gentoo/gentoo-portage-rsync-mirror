@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/hourglass-0.7.1.ebuild,v 1.2 2012/04/13 17:52:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/hourglass-0.7.1.ebuild,v 1.3 2014/05/14 16:06:54 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
@@ -28,10 +28,7 @@ RDEPEND=">=virtual/jre-1.5
 
 S="${WORKDIR}/${P}-src"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	#Remove in next release, already upstream.
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 

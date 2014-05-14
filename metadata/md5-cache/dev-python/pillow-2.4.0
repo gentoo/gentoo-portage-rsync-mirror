@@ -4,11 +4,11 @@ DESCRIPTION=Python Imaging Library (fork)
 EAPI=5
 HOMEPAGE=https://github.com/python-imaging/Pillow https://pypi.python.org/pypi/Pillow
 IUSE=doc examples jpeg jpeg2k lcms scanner test tiff tk truetype webp zlib python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 python_targets_pypy
-KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
+KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
 LICENSE=HPND
 RDEPEND=truetype? ( media-libs/freetype:2= ) jpeg? ( virtual/jpeg:0 ) jpeg2k? ( media-libs/openjpeg:2= ) lcms? ( media-libs/lcms:0= ) scanner? ( media-gfx/sane-backends:0= ) tiff? ( media-libs/tiff:0= ) webp? ( media-libs/libwebp:0= ) zlib? ( sys-libs/zlib:0= ) !dev-python/imaging python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk?] ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2[tk?] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[tk?] ) python_targets_python3_4? ( dev-lang/python:3.4[tk?] ) python_targets_pypy? ( virtual/pypy:0=[tk?] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
 REQUIRED_USE=test? ( jpeg ) || ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 python_targets_pypy )
 SLOT=0
 SRC_URI=mirror://pypi/P/Pillow/Pillow-2.4.0.zip
 _eclasses_=distutils-r1	d61b71d755b28b460ed7f8a20d3cf8b6	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=efbc80249fa9633dc6d00d1b4bb7369d
+_md5_=a875c06654ae1f035c95435177ad9623

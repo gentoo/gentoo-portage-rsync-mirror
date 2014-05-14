@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.16.2.ebuild,v 1.8 2014/05/13 15:15:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.16.2.ebuild,v 1.9 2014/05/14 16:15:52 ago Exp $
 
 EAPI=5
 GCONF_DEBUG=yes
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/JsonGlib"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="+introspection"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp-xsl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.52 2014/05/13 15:16:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.53 2014/05/14 16:16:16 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.10.1.ebuild:
+  Stable for sparc, wrt bug #508862
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.10.1.ebuild:
   Stable for ia64, wrt bug #508862

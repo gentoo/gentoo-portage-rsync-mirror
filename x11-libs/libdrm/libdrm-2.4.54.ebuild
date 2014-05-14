@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.46-r1.ebuild,v 1.1 2013/09/21 17:09:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.54.ebuild,v 1.1 2014/05/14 16:17:13 chithanh Exp $
 
 EAPI=5
 

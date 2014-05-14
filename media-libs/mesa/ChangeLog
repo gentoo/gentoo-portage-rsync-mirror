@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.556 2014/05/01 09:41:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.557 2014/05/14 16:02:36 chithanh Exp $
+
+*mesa-10.1.3 (14 May 2014)
+
+  14 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-10.1.3.ebuild:
+  Version bump, bug #510086. Add gettext dependency, bug #502418. Add pax
+  marking to llvmpipe tests, bug #506412.
 
   01 May 2014; Michał Górny <mgorny@gentoo.org> mesa-10.1.1.ebuild:
   Remove --enable-llvm-shared-libs since the switch is broken in this version

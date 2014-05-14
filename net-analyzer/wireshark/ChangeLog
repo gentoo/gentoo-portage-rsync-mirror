@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.612 2014/05/13 15:21:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.613 2014/05/14 16:11:23 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
+  Stable for sparc, wrt bug #508506
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> wireshark-1.10.7.ebuild:
   Stable for ia64, wrt bug #508506

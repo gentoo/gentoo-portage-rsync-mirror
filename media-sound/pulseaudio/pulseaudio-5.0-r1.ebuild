@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r1.ebuild,v 1.8 2014/05/13 15:16:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r1.ebuild,v 1.9 2014/05/14 16:16:24 ago Exp $
 
 EAPI="5"
 inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -16,7 +16,7 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-linux"
 
 IUSE="+alsa +asyncns avahi bluetooth +caps dbus doc equalizer +gdbm +glib gnome
 gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
