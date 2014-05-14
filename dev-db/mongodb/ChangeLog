@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.90 2014/04/09 15:42:11 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.91 2014/05/14 09:16:49 ultrabug Exp $
+
+*mongodb-2.6.1 (14 May 2014)
+
+  14 May 2014; Ultrabug <ultrabug@gentoo.org> +mongodb-2.6.1.ebuild,
+  +files/mongodb-2.6.1-fix-scons.patch, +files/mms-agent.initd-r2,
+  +files/mongodb.conf-r2, +files/mongodb.confd-r2, +files/mongodb.initd-r2,
+  +files/mongos.conf-r2, +files/mongos.confd-r2, +files/mongos.initd-r2:
+  version 2.6.x bump fix #508190 thx to Mike Limansky, Johan Bergstrom and
+  Jason A. Donenfeld
 
   09 Apr 2014; Ultrabug <ultrabug@gentoo.org> mongodb-2.4.10-r1.ebuild:
   quick typo on elog
