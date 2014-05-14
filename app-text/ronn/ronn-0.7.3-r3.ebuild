@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ronn-0.7.3-r2.ebuild,v 1.5 2014/05/14 18:08:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ronn-0.7.3-r3.ebuild,v 1.1 2014/05/14 18:08:48 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="AUTHORS CHANGES README.md"

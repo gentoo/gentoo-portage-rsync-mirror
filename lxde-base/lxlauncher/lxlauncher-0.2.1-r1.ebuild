@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxlauncher/lxlauncher-0.2.1-r1.ebuild,v 1.3 2012/05/04 05:50:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxlauncher/lxlauncher-0.2.1-r1.ebuild,v 1.4 2014/05/14 18:16:24 tomwij Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit autotools eutils
 
@@ -16,8 +16,11 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
-	x11-libs/gtk+:2
 	gnome-base/gnome-menus
+	x11-libs/cairo
+	x11-libs/libX11
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:2
 	x11-libs/startup-notification"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -26,19 +29,16 @@ DEPEND="${RDEPEND}
 	lxde-base/menu-cache
 	!lxde-base/lxlauncher-gmenu"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-intltool.patch
 	epatch "${FILESDIR}"/${P}-fix-segfault.patch
 
 	# Rerun autotools
 	einfo "Regenerating autotools files..."
 	eautoreconf
-}
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
+	# Support as-needed and add missing libraries.
+	sed -e 's/^\(LINK = .*\) -o $@$/\1/' \
+		-e 's/$(lxlauncher_OBJECTS) $(lxlauncher_LDADD) $(LIBS)/\0 -lX11 -o $@/' \
+		-i src/Makefile.in || die
 }

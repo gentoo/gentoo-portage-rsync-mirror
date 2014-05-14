@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.295 2014/04/28 17:54:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.296 2014/05/14 18:25:40 ssuominen Exp $
 
 EAPI=5
 
@@ -9,6 +9,7 @@ inherit autotools bash-completion-r1 eutils linux-info multilib toolchain-funcs 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
 	inherit git-2
+	patchset=
 else
 	patchset=
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
@@ -42,13 +43,14 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
+# Force new make >= -r4 to skip some parallel build issues
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	sys-libs/libcap
 	virtual/os-headers
 	virtual/pkgconfig
-	!<sys-devel/make-3.82-r4
-	!<sys-kernel/linux-headers-2.6.32
+	>=sys-devel/make-3.82-r4
+	>=sys-kernel/linux-headers-2.6.32
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 # Try with `emerge -C docbook-xml-dtd` to see the build failure without DTDs
 if [[ ${PV} = 9999* ]]; then

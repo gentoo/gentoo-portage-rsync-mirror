@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r2.ebuild,v 1.7 2014/04/27 21:06:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r2.ebuild,v 1.8 2014/05/14 18:13:29 ssuominen Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-2 autotools
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 else
-	KEYWORDS="~alpha ~amd64 arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz"
 fi
 
