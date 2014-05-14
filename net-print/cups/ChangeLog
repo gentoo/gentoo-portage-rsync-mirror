@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.609 2014/05/13 15:20:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.610 2014/05/14 08:47:24 mgorny Exp $
+
+*cups-1.7.2-r1 (14 May 2014)
+*cups-1.7.1-r2 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +cups-1.7.1-r2.ebuild,
+  +cups-1.7.2-r1.ebuild, cups-9999.ebuild:
+  Enable multilib support, bug #493172.
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1-r1.ebuild:
   Stable for ia64, wrt bug #507696

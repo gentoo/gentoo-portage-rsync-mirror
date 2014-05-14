@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.208 2014/05/13 18:03:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.209 2014/05/14 08:47:49 mgorny Exp $
+
+*emul-linux-x86-baselibs-20140508-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-baselibs-20140508-r1.ebuild, +files/remove-native-20140508-r1:
+  Update for multilib gnutls & cups.
 
   13 May 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-baselibs-20140406-r4.ebuild,

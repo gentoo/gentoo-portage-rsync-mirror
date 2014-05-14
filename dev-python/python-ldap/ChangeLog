@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.131 2014/04/09 21:32:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.132 2014/05/14 08:31:55 idella4 Exp $
+
+*python-ldap-2.4.15 (14 May 2014)
+
+  14 May 2014; Ian Delaney <idella4@gentoo.org> +python-ldap-2.4.15.ebuild,
+  python-ldap-2.4.14.ebuild:
+  bump; drop py2.6 support, drop IUSE doc, update deps
 
   09 Apr 2014; Michał Górny <mgorny@gentoo.org> python-ldap-9999.ebuild:
   Remove python2.5 leftover.
