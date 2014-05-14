@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.187 2013/02/25 21:09:20 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.188 2014/05/14 13:38:23 mgorny Exp $
+
+*gtk-engines-2.20.2-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +gtk-engines-2.20.2-r1.ebuild:
+  Enable multilib support.
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> gtk-engines-2.20.2.ebuild:
   Add ~arm-linux keyword.

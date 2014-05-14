@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.285 2014/04/27 16:00:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.286 2014/05/14 13:36:31 mgorny Exp $
+
+*atk-2.12.0-r1 (14 May 2014)
+*atk-2.10.0-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org> +atk-2.10.0-r1.ebuild,
+  +atk-2.12.0-r1.ebuild:
+  Enable multilib support, bug #488608.
 
 *atk-2.12.0 (27 Apr 2014)
 

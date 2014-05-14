@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.126 2014/05/09 07:11:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.127 2014/05/14 13:37:33 mgorny Exp $
+
+*emul-linux-x86-gtklibs-20140508-r1 (14 May 2014)
+
+  14 May 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-gtklibs-20140508-r1.ebuild, +files/remove-native-20140508-r1:
+  Add multilib atk & gtk+. Also remove files for gtk-engines but do not pull
+  them implicitly.
 
   09 May 2014; Michał Górny <mgorny@gentoo.org> files/remove-native-20140508:
   Update remove-native wrt library name changes.
