@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.384 2014/05/13 14:43:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.385 2014/05/14 14:25:25 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> syslog-ng-3.4.7.ebuild:
+  Stable for sparc, wrt bug #504348
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> syslog-ng-3.4.7.ebuild:
   Stable for ia64, wrt bug #504348

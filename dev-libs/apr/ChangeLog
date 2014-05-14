@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.223 2014/05/13 14:45:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.224 2014/05/14 14:27:46 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> apr-1.5.0-r2.ebuild:
+  Stable for sparc, wrt bug #504300
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> apr-1.5.0-r2.ebuild:
   Stable for ia64, wrt bug #504300

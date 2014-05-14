@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/develock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.23 2014/03/24 15:14:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.24 2014/05/14 14:20:57 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> develock-0.45.ebuild:
+  Stable for sparc, wrt bug #505460
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> develock-0.45.ebuild:
   Stable for ppc, wrt bug #505460

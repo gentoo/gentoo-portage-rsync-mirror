@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.147 2014/05/13 14:39:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.148 2014/05/14 14:17:31 ago Exp $
+
+  14 May 2014; Agostino Sarubbo <ago@gentoo.org> dosfstools-3.0.26.ebuild:
+  Stable for sparc, wrt bug #506066
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> dosfstools-3.0.26.ebuild:
   Stable for ia64, wrt bug #506066

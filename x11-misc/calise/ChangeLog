@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/calise
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/calise/ChangeLog,v 1.1 2014/05/14 14:17:10 tomwij Exp $
+
+*calise-0.4.2 (14 May 2014)
+
+  14 May 2014; Tom Wijsman <TomWij@gentoo.org> +calise-0.4.2.ebuild,
+  +metadata.xml:
+  New ebuild for x11-misc/calise, computes ambient brightness and sets screen's
+  correct backlight using a webcam; fixes bug #501088, contributed by Hello71
+  who will proxy maintain this package.
