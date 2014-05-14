@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.117 2014/02/03 06:24:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.118 2014/05/14 15:42:12 jer Exp $
+
+  14 May 2014; Jeroen Roovers <jer@gentoo.org> procps-3.3.9.ebuild:
+  Stable for HPPA (bug #510316).
 
   03 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> procps-3.3.9-r1.ebuild:
   Moved selinux dependency to RDEPEND.
