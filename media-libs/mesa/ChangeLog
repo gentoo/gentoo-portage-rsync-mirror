@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.557 2014/05/14 16:02:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.558 2014/05/15 07:39:40 chithanh Exp $
+
+  15 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-10.1.3.ebuild:
+  Add forgotten pax-utils inherit, bug #506412.
 
 *mesa-10.1.3 (14 May 2014)
 

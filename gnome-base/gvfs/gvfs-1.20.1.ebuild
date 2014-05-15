@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.20.1.ebuild,v 1.1 2014/04/27 17:02:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.20.1.ebuild,v 1.2 2014/05/15 07:59:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://git.gnome.org/browse/gvfs"
 LICENSE="LGPL-2+"
 SLOT="0"
 
-IUSE="afp archive avahi bluetooth bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks"
+IUSE="afp archive avahi bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks"
 REQUIRED_USE="
 	cdda? ( udev )
 	udisks? ( udev )
@@ -31,11 +31,6 @@ RDEPEND="
 	afp? ( >=dev-libs/libgcrypt-1.2.2:0= )
 	archive? ( app-arch/libarchive:= )
 	avahi? ( >=net-dns/avahi-0.6 )
-	bluetooth? (
-		>=app-mobilephone/obex-data-server-0.4.5
-		dev-libs/dbus-glib
-		net-wireless/bluez
-		dev-libs/expat )
 	bluray? ( media-libs/libbluray )
 	fuse? ( >=sys-fs/fuse-2.8.0 )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
@@ -90,16 +85,17 @@ src_prepare() {
 
 src_configure() {
 	# --enable-documentation installs man pages
+	# --disable-obexftp, upstream bug #729945
 	gnome2_src_configure \
 		--disable-bash-completion \
 		--disable-gdu \
 		--disable-hal \
+		--disable-obexftp \
 		--with-dbus-service-dir="${EPREFIX}"/usr/share/dbus-1/services \
 		--enable-documentation \
 		$(use_enable afp) \
 		$(use_enable archive) \
 		$(use_enable avahi) \
-		$(use_enable bluetooth obexftp) \
 		$(use_enable bluray) \
 		$(use_enable cdda) \
 		$(use_enable fuse) \
