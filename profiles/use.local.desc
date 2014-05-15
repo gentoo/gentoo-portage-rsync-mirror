@@ -5080,7 +5080,7 @@ net-libs/gtk-vnc:introspection - Use dev-libs/gobject-introspection for introspe
 net-libs/gtk-vnc:vala - Enable bindings for dev-lang/vala
 net-libs/gupnp-igd:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/h323plus:aec - Enable acoustic echo cancellation
-net-libs/h323plus:audio - Enable audio codecs
+net-libs/h323plus:sound - Enable audio codecs
 net-libs/h323plus:video - Enable video codecs
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
 net-libs/ldns:ecdsa - Enable ECDSA support

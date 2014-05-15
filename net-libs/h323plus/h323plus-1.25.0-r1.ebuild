@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/h323plus-1.25.0-r1.ebuild,v 1.1 2013/03/06 17:42:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/h323plus-1.25.0-r1.ebuild,v 1.2 2014/05/15 11:18:53 ulm Exp $
 
 EAPI=5
 
@@ -12,14 +12,14 @@ DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protoc
 HOMEPAGE="http://www.h323plus.org/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-v${PV//./_}.tar.gz"
 
-IUSE="aec +audio debug +video"
+IUSE="aec debug +sound +video"
 SLOT="0/${PV}"
 LICENSE="MPL-1.1"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=net-libs/ptlib-2.6.4:=[wav]
 	aec? ( >=media-libs/speex-1.2_rc1 )
-	audio? (
+	sound? (
 		media-sound/gsm
 		dev-libs/ilbc-rfc3951
 	)
@@ -44,7 +44,7 @@ src_configure() {
 	econf \
 		PTLIB_CONFIG="${EPREFIX}/usr/bin/ptlib-config" \
 		$(use_enable video) \
-		$(use_enable audio) \
+		$(use_enable sound audio) \
 		$(use_enable aec) \
 		$(use_enable debug asntracing)
 	# revision.h does not exist in ptlib(?)
