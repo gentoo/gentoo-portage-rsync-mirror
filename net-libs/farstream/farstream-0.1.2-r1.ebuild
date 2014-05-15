@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.17 2014/04/12 09:44:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.18 2014/05/15 08:06:01 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -41,6 +41,8 @@ RDEPEND="${COMMONDEPEND}
 	!net-libs/farsight2
 "
 # This package is just a rename from farsight2
+
+MAKEOPTS="${MAKEOPTS} -j1" # Parallel is completely broken on this slot, bug #434618
 
 DEPEND="${COMMONDEPEND}
 	dev-util/gtk-doc-am
