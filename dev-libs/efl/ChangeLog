@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.13 2014/05/04 08:30:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.14 2014/05/15 18:06:01 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> efl-1.8.5.ebuild,
+  efl-1.8.6.ebuild, efl-1.9.2.ebuild, efl-1.9.3.ebuild, metadata.xml:
+  QA: Rename "audio" USE flag to "sound", bug 357661.
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> efl-1.8.5.ebuild:
   Stable for x86, wrt bug #505412

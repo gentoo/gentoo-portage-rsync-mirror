@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/hashery
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashery/ChangeLog,v 1.1 2014/05/15 18:15:45 p8952 Exp $
+
+*hashery-2.1.1 (15 May 2014)
+
+  15 May 2014; Peter Wilmott <p8952@gentoo.org> +hashery-2.1.1.ebuild,
+  +metadata.xml:
+  New ebuild for hashery.

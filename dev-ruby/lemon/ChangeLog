@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/lemon
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/lemon/ChangeLog,v 1.1 2014/05/15 18:07:33 p8952 Exp $
+
+*lemon-0.9.1 (15 May 2014)
+
+  15 May 2014; Peter Wilmott <p8952@gentoo.org> +lemon-0.9.1.ebuild,
+  +metadata.xml:
+  New ebuild for lemon. Dependency for hashery. Forcing commit due to circular
+  deps

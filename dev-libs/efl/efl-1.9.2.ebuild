@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.2.ebuild,v 1.1 2014/03/28 16:32:40 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.2.ebuild,v 1.2 2014/05/15 18:06:01 ulm Exp $
 
 EAPI="5"
 
@@ -25,10 +25,10 @@ DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 KEYWORDS="~amd64 ~arm ~x86"
 
-IUSE="audio +bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k +jpeg oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
+IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k +jpeg oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
 
 REQUIRED_USE="
-	pulseaudio?	( audio )
+	pulseaudio?	( sound )
 	opengl?		( || ( X sdl wayland ) )
 	gles?		( || ( X wayland ) )
 	gles?		( !sdl )
@@ -39,7 +39,6 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	audio? ( media-libs/libsndfile )
 	debug? ( dev-util/valgrind )
 	fontconfig? ( media-libs/fontconfig )
 	fribidi? ( dev-libs/fribidi )
@@ -67,6 +66,7 @@ RDEPEND="
 		media-libs/libsdl
 		virtual/opengl
 	)
+	sound? ( media-libs/libsndfile )
 	systemd? ( sys-apps/systemd )
 	tiff? ( media-libs/tiff )
 	tslib? ( x11-libs/tslib )
@@ -197,7 +197,6 @@ src_configure() {
 	--with-glib=${glib}
 	--enable-i-really-know-what-i-am-doing-and-that-this-will-probably-break-things-and-i-will-fix-them-myself-and-send-patches-aaa
 
-	$(use_enable audio)
 	$(use_enable bmp image-loader-bmp)
 	$(use_enable bmp image-loader-wbmp)
 	$(use_enable drm)
@@ -230,6 +229,7 @@ src_configure() {
 	$(use_enable pulseaudio)
 	$(use_enable scim)
 	$(use_enable sdl)
+	$(use_enable sound audio)
 	$(use_enable systemd)
 	$(use_enable tga image-loader-tga)
 	$(use_enable tiff image-loader-tiff)

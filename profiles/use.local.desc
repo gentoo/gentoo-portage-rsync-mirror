@@ -1639,7 +1639,6 @@ dev-libs/ecore:tslib - Build with tslib support for touchscreen devices.
 dev-libs/ecore:wayland - Add support for dev-libs/wayland
 dev-libs/ecore:xprint - Enable X11 Xprint support
 dev-libs/eeze:utilities - Install some test utilities for mount/umount support in eeze
-dev-libs/efl:audio - Enable audio support.
 dev-libs/efl:bmp - Enable WBMP image loader.
 dev-libs/efl:drm - Enable DRM engine.
 dev-libs/efl:eet - Enable Eet image loader.

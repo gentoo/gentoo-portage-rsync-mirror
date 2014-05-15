@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>enlightenment</herd>
 <use>
-	<flag name="audio">Enable audio support.</flag>
 	<flag name="bmp">Enable WBMP image loader.</flag>
 	<flag name="drm">Enable DRM engine.</flag>
 	<flag name="eet">Enable Eet image loader.</flag>
