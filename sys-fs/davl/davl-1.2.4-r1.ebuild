@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/davl/davl-1.2.4-r1.ebuild,v 1.1 2014/05/12 09:50:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/davl/davl-1.2.4-r1.ebuild,v 1.2 2014/05/15 08:56:05 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6:2"
 DEPEND="${RDEPEND}
-	>=sys-fs/e2fsprogs-1.38
+	>=sys-fs/e2fsprogs-1.41.7-r1
 	virtual/pkgconfig"
 
 src_prepare() {

@@ -1,6 +1,5 @@
-diff -ur a/src/cdavl/Makefile b/src/cdavl/Makefile
---- a/src/cdavl/Makefile	2005-08-03 23:25:17.000000000 -0500
-+++ b/src/cdavl/Makefile	2009-02-12 23:30:25.000000000 -0600
+--- src/cdavl/Makefile
++++ src/cdavl/Makefile
 @@ -4,10 +4,6 @@
  include $(PATH_LIST)
  
@@ -12,9 +11,8 @@ diff -ur a/src/cdavl/Makefile b/src/cdavl/Makefile
  HEADERS = cdavl.h ../common/util.h ../drv/liveinfo_app.h
  OBJS = ../common/util.o
  CDAVL = cdavl
-diff -ur a/src/gdavl/Makefile b/src/gdavl/Makefile
---- a/src/gdavl/Makefile	2005-08-03 23:25:17.000000000 -0500
-+++ b/src/gdavl/Makefile	2009-02-12 23:31:31.000000000 -0600
+--- src/gdavl/Makefile
++++ src/gdavl/Makefile
 @@ -4,22 +4,14 @@
  include $(PATH_LIST)
  
