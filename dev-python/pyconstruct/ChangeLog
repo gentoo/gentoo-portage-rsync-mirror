@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyconstruct
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyconstruct/ChangeLog,v 1.8 2013/05/22 07:28:51 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyconstruct/ChangeLog,v 1.9 2014/05/15 04:29:20 idella4 Exp $
+
+*pyconstruct-2.5.2 (15 May 2014)
+
+  15 May 2014; Ian Delaney <idella4@gentoo.org> +pyconstruct-2.5.2.ebuild,
+  -pyconstruct-2.0.0.ebuild, -pyconstruct-2.04.ebuild, -pyconstruct-2.06.ebuild,
+  -pyconstruct-2.5.0-r1.ebuild, -pyconstruct-2.5.0.ebuild:
+  bump; drop py2.6 add py3 pypy support, rm old
 
 *pyconstruct-2.5.1 (22 May 2013)
 
