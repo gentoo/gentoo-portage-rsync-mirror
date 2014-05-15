@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.19 2014/04/22 02:00:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.20 2014/05/15 03:18:47 grknight Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -8,6 +8,7 @@
 #	- MySQL Team <mysql-bugs@gentoo.org>
 #	- Robin H. Johnson <robbat2@gentoo.org>
 #	- Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+#	- Brian Evans <grknight@gentoo.org>
 # @BLURB: This eclass provides the support for cmake based mysql releases
 # @DESCRIPTION:
 # The mysql-cmake.eclass provides the support to build the mysql
@@ -146,7 +147,6 @@ configure_cmake_standard() {
 		$(cmake-utils_use_with embedded EMBEDDED_SERVER)
 		$(cmake-utils_use_with profiling)
 		$(cmake-utils_use_enable systemtap DTRACE)
-		$(cmake-utils_use_enable static-libs STATIC_LIBS)
 	)
 
 	if use static; then
@@ -189,7 +189,6 @@ configure_cmake_standard() {
 
 		if mysql_version_is_at_least 10.0.5 ; then
 			# CassandraSE needs Apache Thrift which is not in portage
-			# TODO: Add use and deps for Connect SE external deps
 			mycmakeargs+=(
 				-DWITHOUT_CASSANDRA=1 -DWITH_CASSANDRA=0
 				$(mysql-cmake_use_plugin extraengine SEQUENCE)
@@ -307,31 +306,22 @@ mysql-cmake_src_configure() {
 		-DWITH_ZLIB=system
 		-DWITHOUT_LIBWRAP=1
 		-DENABLED_LOCAL_INFILE=1
+		$(cmake-utils_use_enable static-libs STATIC_LIBS)
+		-DWITH_SSL=$(usex ssl system bundled)
 	)
 
 	if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && mysql_version_is_at_least "5.6.12" ; then
 		mycmakeargs+=( -DWITH_EDITLINE=system )
 	fi
 
-	if use ssl; then
-		mycmakeargs+=( -DWITH_SSL=system )
-	else
-		mycmakeargs+=( -DWITH_SSL=bundled )
-	fi
-
 	# Bug 412851
-	# MariaDB requires this flag to compile with GPLv3 readline linked
+	# MariaDB requires NOT_FOR_DISTRIBUTION set to compile with GPLv3 readline linked
 	# Adds a warning about redistribution to configure
 	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
-		mycmakeargs+=( -DNOT_FOR_DISTRIBUTION=1 )
-	fi
-
-	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
-		if use jemalloc ; then
-			mycmakeargs+=( -DWITH_JEMALLOC="system" )
-		else
-			mycmakeargs+=( -DWITH_JEMALLOC=no )
-		fi
+		mycmakeargs+=(
+			-DNOT_FOR_DISTRIBUTION=1
+			-DWITH_JEMALLOC=$(usex jemalloc system)
+		)
 		mysql_version_is_at_least "10.0.9" && mycmakeargs+=( -DWITH_PCRE=system )
 	fi
 
@@ -415,7 +405,7 @@ mysql-cmake_src_install() {
 	esac
 	einfo "Building default my.cnf (${mysql_mycnf_version})"
 	insinto "${MY_SYSCONFDIR#${EPREFIX}}"
-	doins scripts/mysqlaccess.conf
+	doins "${S}"/scripts/mysqlaccess.conf
 	mycnf_src="my.cnf-${mysql_mycnf_version}"
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
 		"${FILESDIR}/${mycnf_src}" \

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1252 2014/05/12 21:56:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1253 2014/05/15 03:18:47 grknight Exp $
+
+  14 May 2014; Brian Evans <grknight@gentoo.org>
+  mysql-cmake.eclass, mysql-v2.eclass:
+  Sync mysql-v2 and mysql-cmake eclasses from the mysql overlay.
 
   12 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Do not install wrapper headers when no ABI provides a particular header.

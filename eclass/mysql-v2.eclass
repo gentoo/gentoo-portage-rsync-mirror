@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.28 2014/04/24 03:01:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.29 2014/05/15 03:18:47 grknight Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -8,6 +8,7 @@
 #	- MySQL Team <mysql-bugs@gentoo.org>
 #	- Robin H. Johnson <robbat2@gentoo.org>
 #	- Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+#	- Brian Evans <grknight@gentoo.org>
 # @BLURB: This eclass provides most of the functions for mysql ebuilds
 # @DESCRIPTION:
 # The mysql-v2.eclass is the base eclass to build the mysql and
@@ -175,10 +176,11 @@ if [[ ${MY_EXTRAS_VER} != "live" && ${MY_EXTRAS_VER} != "none" ]]; then
 		mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://dev.gentoo.org/~robbat2/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
-		http://dev.gentoo.org/~jmbsvicetto/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
+		http://dev.gentoo.org/~jmbsvicetto/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
+		http://dev.gentoo.org/~grknight/distfiles/mysql-extras-${MY_EXTRAS_VER}.tar.bz2"
 fi
 
-DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
+DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 if [[ ${PN} == "mariadb" ]]; then
 	HOMEPAGE="http://mariadb.org/"
@@ -190,7 +192,7 @@ if [[ ${PN} == "mariadb-galera" ]]; then
 fi
 if [[ ${PN} == "percona-server" ]]; then
 	HOMEPAGE="http://www.percona.com/software/percona-server"
-	DESCRIPTION="An enhanced, drop-in replacement fro MySQL from the Percona team"
+	DESCRIPTION="An enhanced, drop-in replacement for MySQL from the Percona team"
 fi
 LICENSE="GPL-2"
 SLOT="0"
@@ -274,8 +276,7 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	fi
 	mysql_version_is_at_least "10.0.7" && DEPEND="${DEPEND} oqgraph? ( dev-libs/judy )"
 	if mysql_version_is_at_least "10.0.9" ; then
-		use embedded && DEPEND="${DEPEND} >=dev-libs/libpcre-8.35[static-libs]" || \
-			DEPEND="${DEPEND} >=dev-libs/libpcre-8.35"
+		DEPEND="${DEPEND} >=dev-libs/libpcre-8.35"
 	fi
 fi
 
@@ -765,7 +766,7 @@ mysql-v2_pkg_config() {
 	helpfile="${TMPDIR}/mysqld-help"
 	${EROOT}/usr/sbin/mysqld --verbose --help >"${helpfile}" 2>/dev/null
 	for opt in grant-tables host-cache name-resolve networking slave-start \
-		federated innodb ssl log-bin relay-log slow-query-log external-locking \
+		federated ssl log-bin relay-log slow-query-log external-locking \
 		ndbcluster log-slave-updates \
 		; do
 		optexp="--(skip-)?${opt}" optfull="--loose-skip-${opt}"
@@ -781,11 +782,27 @@ mysql-v2_pkg_config() {
 	use prefix && [[ -f "${MY_SYSCONFDIR}/my.cnf" ]] \
 		&& options="${options} '--defaults-file=${MY_SYSCONFDIR}/my.cnf'"
 
+	# MySQL 5.6+ needs InnoDB
+	if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] ; then
+		mysql_version_is_at_least "5.6" || options="${options} --loose-skip-innodb"
+	fi
+
+	einfo "Creating the mysql database and setting proper"
+	einfo "permissions on it ..."
+
+	# Now that /var/run is a tmpfs mount point, we need to ensure it exists before using it
+	PID_DIR="${EROOT}/var/run/mysqld"
+	if [[ ! -d "${PID_DIR}" ]]; then
+		mkdir -p "${PID_DIR}" || die "Could not create pid directory"
+		chown mysql:mysql "${PID_DIR}" || die "Could not set ownership on pid directory"
+		chmod 755 "${PID_DIR}" || die "Could not set permissions on pid directory"
+	fi
+
 	pushd "${TMPDIR}" &>/dev/null
 	#cmd="'${EROOT}/usr/share/mysql/scripts/mysql_install_db' '--basedir=${EPREFIX}/usr' ${options}"
 	cmd=${EROOT}usr/share/mysql/scripts/mysql_install_db
 	[[ -f ${cmd} ]] || cmd=${EROOT}usr/bin/mysql_install_db
-	cmd="'$cmd' '--basedir=${EPREFIX}/usr' ${options}"
+	cmd="'$cmd' '--basedir=${EPREFIX}/usr' ${options} '--datadir=${EROOT}/${MY_DATADIR}'"
 	einfo "Command: $cmd"
 	eval $cmd \
 		>"${TMPDIR}"/mysql_install_db.log 2>&1
@@ -805,17 +822,6 @@ mysql-v2_pkg_config() {
 
 	if [[ -r "${help_tables}" ]] ; then
 		cat "${help_tables}" >> "${sqltmp}"
-	fi
-
-	einfo "Creating the mysql database and setting proper"
-	einfo "permissions on it ..."
-
-	# Now that /var/run is a tmpfs mount point, we need to ensure it exists before using it
-	PID_DIR="${EROOT}/var/run/mysqld"
-	if [[ ! -d "${PID_DIR}" ]]; then
-		mkdir "${PID_DIR}"
-		chown mysql:mysql "${PID_DIR}"
-		chmod 755 "${PID_DIR}"
 	fi
 
 	local socket="${EROOT}/var/run/mysqld/mysqld${RANDOM}.sock"

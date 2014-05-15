@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.669 2014/05/14 01:47:05 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.670 2014/05/15 03:28:08 grknight Exp $
+
+  15 May 2014; Brian Evans <grknight@gentoo.org> -mysql-5.5.32.ebuild:
+  Remove old
 
 *mysql-5.1.73-r1 (14 May 2014)
 
