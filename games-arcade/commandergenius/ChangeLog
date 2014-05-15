@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/commandergenius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/ChangeLog,v 1.8 2014/04/23 20:49:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/ChangeLog,v 1.9 2014/05/15 12:35:12 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> commandergenius-1.7.2.0.ebuild,
+  commandergenius-1.7.3.0.ebuild:
+  QA: Fix USE dependency on media-libs/libsdl2, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   23 Apr 2014; Julian Ospald <hasufell@gentoo.org>
   -commandergenius-1.4.2.ebuild, -commandergenius-1.6.1.ebuild,

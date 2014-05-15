@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/to-the-moon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/ChangeLog,v 1.2 2014/03/12 04:36:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/ChangeLog,v 1.3 2014/05/15 12:35:34 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> to-the-moon-0.ebuild:
+  QA: Fix USE dependency on media-libs/libsdl2, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   12 Mar 2014; Patrick Lauer <patrick@gentoo.org> to-the-moon-0.ebuild:
   Shorten description for improved repoman happy

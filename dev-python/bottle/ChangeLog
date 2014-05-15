@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.22 2014/03/31 20:37:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.23 2014/05/15 12:58:36 idella4 Exp $
+
+  15 May 2014; Ian Delaney <idella4@gentoo.org> bottle-0.12.5.ebuild:
+  drop py2.6 pypy2_0 add py3.4 support
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> bottle-0.11.6-r1.ebuild,
   bottle-0.11.6.ebuild, bottle-0.12.5.ebuild:

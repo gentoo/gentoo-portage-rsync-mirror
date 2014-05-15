@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.7.3.0.ebuild,v 1.1 2014/04/23 20:48:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.7.3.0.ebuild,v 1.2 2014/05/15 12:35:12 ulm Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="opengl tremor"
 
-RDEPEND="media-libs/libsdl2[X,audio,opengl?,video]
+RDEPEND="media-libs/libsdl2[X,opengl?,sound,video]
 	media-libs/sdl2-image
 	opengl? ( virtual/opengl )
 	tremor? ( media-libs/tremor )

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.17 2014/05/13 23:00:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.18 2014/05/15 12:34:42 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> libsdl2-2.0.1-r1.ebuild,
+  libsdl2-2.0.2.ebuild, libsdl2-2.0.2-r1.ebuild, libsdl2-2.0.3.ebuild:
+  QA: Rename "audio" USE flag to "sound", bug 357661.
 
   13 May 2014; Julian Ospald <hasufell@gentoo.org> libsdl2-2.0.2-r1.ebuild,
   libsdl2-2.0.3.ebuild, +files/libsdl2-2.0.2-gles-wayland.patch,
