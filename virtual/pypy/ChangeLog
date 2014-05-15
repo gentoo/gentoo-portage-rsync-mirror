@@ -1,6 +1,11 @@
 # ChangeLog for virtual/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/ChangeLog,v 1.8 2014/05/09 06:14:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/ChangeLog,v 1.9 2014/05/15 01:00:18 floppym Exp $
+
+*pypy-2.3 (15 May 2014)
+
+  15 May 2014; Mike Gilbert <floppym@gentoo.org> +pypy-2.3.ebuild:
+  Version bump.
 
   09 May 2014; Michał Górny <mgorny@gentoo.org> pypy-2.2.1.ebuild:
   Add USE=tk for tkinter modules. Bug #509794.

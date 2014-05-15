@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.29 2014/01/14 14:22:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.30 2014/05/15 01:00:56 mrueg Exp $
+
+  15 May 2014; Manuel Rüger <mrueg@gentoo.org> patron-0.4.18-r1.ebuild:
+  Remove ruby18.
 
   14 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -patron-0.4.18.ebuild:
   Cleanup old.

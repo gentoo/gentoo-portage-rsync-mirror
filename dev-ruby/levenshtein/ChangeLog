@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/levenshtein
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/levenshtein/ChangeLog,v 1.9 2014/01/29 14:54:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/levenshtein/ChangeLog,v 1.10 2014/05/15 00:57:38 mrueg Exp $
+
+*levenshtein-0.2.2-r2 (15 May 2014)
+
+  15 May 2014; Manuel Rüger <mrueg@gentoo.org> +levenshtein-0.2.2-r2.ebuild,
+  levenshtein-0.2.2-r1.ebuild:
+  Add ruby21 target. Remove ruby18.
 
   29 Jan 2014; Akinori Hattori <hattya@gentoo.org> levenshtein-0.2.2-r1.ebuild:
   keyword ~ia64 wrt bug #465948
