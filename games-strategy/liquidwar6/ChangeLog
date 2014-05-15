@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/liquidwar6
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.4 2014/03/27 22:11:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.5 2014/05/15 17:05:28 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> liquidwar6-0.0.13_beta.ebuild,
+  liquidwar6-0.2.3551.ebuild, liquidwar6-0.4.3681.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *liquidwar6-0.4.3681 (27 Mar 2014)
 

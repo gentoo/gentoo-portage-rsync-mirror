@@ -31,7 +31,7 @@ RDEPEND="
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtsvg:4
 	media-gfx/exiv2
-	media-libs/libsdl[audio]
+	media-libs/libsdl[sound]
 	media-libs/taglib
 	!<media-video/ffmpeg-1.2:0
 	virtual/ffmpeg[encode]"

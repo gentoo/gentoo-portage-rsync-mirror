@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a-r3.ebuild,v 1.1 2014/05/09 20:26:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.70a-r3.ebuild,v 1.2 2014/05/15 17:08:04 ulm Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -79,7 +79,7 @@ RDEPEND="
 	openal? ( >=media-libs/openal-1.6.372 )
 	openimageio? ( media-libs/openimageio )
 	openexr? ( media-libs/openexr )
-	sdl? ( media-libs/libsdl[audio,joystick] )
+	sdl? ( media-libs/libsdl[sound,joystick] )
 	sndfile? ( media-libs/libsndfile )
 	tiff? ( media-libs/tiff:0 )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/uqm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.44 2014/05/04 14:53:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.45 2014/05/15 17:07:33 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> uqm-0.7.0-r2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   04 May 2014; Julian Ospald <hasufell@gentoo.org> uqm-0.7.0-r2.ebuild:
   fix build if CC has whitespace

@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/boswars
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.26 2013/12/24 12:50:34 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.27 2014/05/15 17:02:24 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> boswars-2.6.1.ebuild,
+  boswars-2.7-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> boswars-2.7-r1.ebuild:
   Stable for x86, wrt bug #490710

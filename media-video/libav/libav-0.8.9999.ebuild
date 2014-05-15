@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.26 2014/03/18 15:27:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.27 2014/05/15 17:12:08 ulm Exp $
 
 EAPI=5
 
@@ -75,7 +75,7 @@ RDEPEND="
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	ssl? ( openssl? ( dev-libs/openssl )
 		   !openssl? ( net-libs/gnutls ) )
-	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
+	sdl? ( >=media-libs/libsdl-1.2.13-r1[sound,video] )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	vaapi? ( x11-libs/libva )

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.6.ebuild,v 1.3 2010/07/29 22:44:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.6.ebuild,v 1.4 2014/05/15 17:09:25 ulm Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/libxml2
 	media-libs/alsa-lib
 	media-libs/freetype:2
 	media-libs/libvorbis
-	media-libs/libsdl[audio,video,joystick]
+	media-libs/libsdl[sound,video,joystick]
 	media-libs/libsndfile
 	media-libs/sdl-gfx
 	media-libs/sdl-ttf

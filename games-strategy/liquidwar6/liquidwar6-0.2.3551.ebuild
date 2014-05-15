@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.2.3551.ebuild,v 1.1 2014/01/08 16:53:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.2.3551.ebuild,v 1.2 2014/05/15 17:05:28 ulm Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ RDEPEND="dev-db/sqlite:3
 	nls? ( virtual/libintl
 		virtual/libiconv )
 	ogg? (
-		media-libs/libsdl[X,audio,opengl,video]
+		media-libs/libsdl[X,sound,opengl,video]
 		media-libs/sdl-mixer[vorbis]
 	)
 	readline? ( sys-libs/ncurses

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.112.3.ebuild,v 1.1 2013/05/28 23:20:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.112.3.ebuild,v 1.2 2014/05/15 17:01:35 ulm Exp $
 
 EAPI=5
 inherit flag-o-matic eutils games
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[audio,video]
+RDEPEND="media-libs/libsdl[sound,video]
 	sys-libs/zlib
 	app-arch/bzip2
 	media-libs/libpng:0

@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/lgeneral
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.43 2012/09/03 10:05:13 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.44 2014/05/15 17:05:05 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> lgeneral-1.2.3.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   03 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lgeneral-1.2.3.ebuild:
   Fix install, bug #413901 by Volker Hemmann, patch by ssuominen.

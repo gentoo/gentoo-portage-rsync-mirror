@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=>=dev-libs/openssl-1.0 media-libs/alsa-lib media-libs/libsdl[X,audio,video,alsa] media-libs/portaudio[alsa] media-libs/sdl-mixer media-libs/sdl-sound media-libs/x264:* net-libs/sofia-sip virtual/ffmpeg:0[X] || ( <media-video/ffmpeg-2 media-video/libav ) dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtwebkit:4
+DEPEND=>=dev-libs/openssl-1.0 media-libs/alsa-lib media-libs/libsdl[X,sound,video,alsa] media-libs/portaudio[alsa] media-libs/sdl-mixer media-libs/sdl-sound media-libs/x264:* net-libs/sofia-sip virtual/ffmpeg:0[X] || ( <media-video/ffmpeg-2 media-video/libav ) dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtwebkit:4
 DESCRIPTION=Homer Conferencing (short: Homer) is a free SIP softphone with advanced audio and video support.
 EAPI=5
 HOMEPAGE=http://www.homer-conferencing.com
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/openssl-1.0 media-libs/alsa-lib media-libs/libsdl[X,audio,video,alsa] media-libs/portaudio[alsa] media-libs/sdl-mixer media-libs/sdl-sound media-libs/x264:* net-libs/sofia-sip virtual/ffmpeg:0[X] || ( <media-video/ffmpeg-2 media-video/libav ) dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtwebkit:4
+RDEPEND=>=dev-libs/openssl-1.0 media-libs/alsa-lib media-libs/libsdl[X,sound,video,alsa] media-libs/portaudio[alsa] media-libs/sdl-mixer media-libs/sdl-sound media-libs/x264:* net-libs/sofia-sip virtual/ffmpeg:0[X] || ( <media-video/ffmpeg-2 media-video/libav ) dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtwebkit:4
 SLOT=0
 SRC_URI=https://github.com/Homer-Conferencing/Homer-Conferencing/archive/V0.24.1.tar.gz -> homer-0.24.1.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=49edef94b71086925d14105a4608d556
+_md5_=fdbbb735da5349039a72b65c1b6b490e

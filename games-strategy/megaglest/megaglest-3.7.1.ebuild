@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.7.1.ebuild,v 1.6 2013/10/12 03:27:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.7.1.ebuild,v 1.7 2014/05/15 17:05:54 ulm Exp $
 
 EAPI=4
 VIRTUALX_REQUIRED="manual"
@@ -20,7 +20,7 @@ RDEPEND="
 	dev-libs/libxml2
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/libsdl[X,audio,joystick,opengl,video]
+	media-libs/libsdl[X,sound,joystick,opengl,video]
 	media-libs/libvorbis
 	media-libs/openal
 	net-libs/gnutls

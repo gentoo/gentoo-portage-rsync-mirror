@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/s25rttr-0.8.ebuild,v 1.4 2013/11/05 15:41:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/s25rttr-0.8.ebuild,v 1.5 2014/05/15 17:06:38 ulm Exp $
 
 EAPI=4
 inherit eutils cmake-utils gnome2-utils games
@@ -18,7 +18,7 @@ IUSE="debug glfw"
 
 RDEPEND="app-arch/bzip2
 	media-libs/libsamplerate
-	media-libs/libsdl[X,audio,opengl,video]
+	media-libs/libsdl[X,sound,opengl,video]
 	media-libs/libsndfile
 	media-libs/sdl-mixer[vorbis]
 	net-libs/miniupnpc

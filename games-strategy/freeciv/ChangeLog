@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freeciv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.147 2013/06/18 05:43:24 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.148 2014/05/15 17:03:17 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> freeciv-2.3.4.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   18 Jun 2013; Michael Sterrett <mr_bones_@gentoo.org> -freeciv-2.3.3.ebuild:
   old

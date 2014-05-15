@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-1.5.ebuild,v 1.4 2013/03/02 22:30:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-1.5.ebuild,v 1.5 2014/05/15 17:10:15 ulm Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="media-gfx/exiv2
-	media-libs/libsdl[audio]
+	media-libs/libsdl[sound]
 	media-libs/qimageblitz
 	media-libs/taglib
 	virtual/ffmpeg[encode]

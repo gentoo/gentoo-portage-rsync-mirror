@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.733 2014/05/14 20:23:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.734 2014/05/15 17:11:09 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> ffmpeg-0.10.12.ebuild,
+  ffmpeg-1.0.8.ebuild, ffmpeg-1.0.9.ebuild, ffmpeg-1.2.6.ebuild,
+  ffmpeg-2.2.2.ebuild, ffmpeg-9999.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   14 May 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.2.ebuild:
   drop keywords on 2.2.2 for arches that have missing deps, bug #510340

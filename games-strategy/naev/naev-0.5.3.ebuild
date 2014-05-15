@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.7 2013/07/02 00:40:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.8 2014/05/15 17:06:17 ulm Exp $
 
 EAPI=2
 inherit gnome2-utils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug +mixer +openal"
 
-RDEPEND="media-libs/libsdl[X,audio,video]
+RDEPEND="media-libs/libsdl[X,sound,video]
 	dev-libs/libxml2
 	>=media-libs/freetype-2
 	>=media-libs/libvorbis-1.2.1

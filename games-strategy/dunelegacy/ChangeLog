@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/dunelegacy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/ChangeLog,v 1.12 2013/07/07 10:21:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/ChangeLog,v 1.13 2014/05/15 17:02:46 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> dunelegacy-0.96.2.ebuild,
+  dunelegacy-0.96.3.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   07 Jul 2013; Agostino Sarubbo <ago@gentoo.org> dunelegacy-0.96.3.ebuild:
   Stable for x86, wrt bug #469744

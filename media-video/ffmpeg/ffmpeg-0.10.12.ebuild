@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.12.ebuild,v 1.1 2014/03/10 20:01:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.10.12.ebuild,v 1.2 2014/05/15 17:11:09 ulm Exp $
 
 EAPI="5"
 
@@ -78,7 +78,7 @@ RDEPEND="
 	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
 	rtmp? ( >=media-video/rtmpdump-2.2f[${MULTILIB_USEDEP}] )
 	schroedinger? ( media-libs/schroedinger[${MULTILIB_USEDEP}] )
-	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video,${MULTILIB_USEDEP}] )
+	sdl? ( >=media-libs/libsdl-1.2.13-r1[sound,video,${MULTILIB_USEDEP}] )
 	speex? ( >=media-libs/speex-1.2_beta3[${MULTILIB_USEDEP}] )
 	truetype? ( media-libs/freetype:2[${MULTILIB_USEDEP}] )
 	vaapi? ( >=x11-libs/libva-0.32[${MULTILIB_USEDEP}] )

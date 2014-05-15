@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.33 2014/02/02 08:08:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.34 2014/05/15 17:01:35 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> simutrans-0.102.2.2.ebuild,
+  simutrans-0.112.3.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   02 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/simutrans-0.112.1-Makefile.patch,

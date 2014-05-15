@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.2.ebuild,v 1.5 2012/10/17 03:24:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.2.ebuild,v 1.6 2014/05/15 17:02:46 ulm Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE="+alsa pulseaudio"
 
-RDEPEND="media-libs/libsdl[X,alsa?,audio,pulseaudio?,video]
+RDEPEND="media-libs/libsdl[X,alsa?,sound,pulseaudio?,video]
 	media-libs/sdl-mixer[midi,mp3,vorbis]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

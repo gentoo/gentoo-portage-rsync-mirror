@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.18 2014/01/27 00:57:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.19 2014/05/15 17:05:54 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> megaglest-3.6.0.3.ebuild,
+  megaglest-3.7.0.ebuild, megaglest-3.7.1.ebuild, megaglest-3.9.0.4.ebuild,
+  megaglest-3.9.1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *megaglest-3.9.1 (27 Jan 2014)
 

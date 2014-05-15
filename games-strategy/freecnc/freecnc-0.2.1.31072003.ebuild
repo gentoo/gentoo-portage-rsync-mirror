@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.17 2011/06/22 21:17:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.18 2014/05/15 17:03:39 ulm Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="nocd"
 
-RDEPEND="media-libs/libsdl[audio,video]
+RDEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-net"
 DEPEND="${RDEPEND}
 	app-arch/unzip"

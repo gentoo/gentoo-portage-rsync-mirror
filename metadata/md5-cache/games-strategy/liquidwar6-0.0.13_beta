@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=dev-db/sqlite:3 dev-libs/expat dev-scheme/guile media-libs/freetype:2 media-libs/libpng:0 media-libs/libsdl[X,opengl,video] media-libs/sdl-image[jpeg,png] media-libs/sdl-ttf net-misc/curl sys-libs/zlib virtual/glu virtual/jpeg virtual/opengl gtk? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl virtual/libiconv ) ogg? ( media-libs/libsdl[X,audio,opengl,video] media-libs/sdl-mixer[vorbis] ) readline? ( sys-libs/ncurses sys-libs/readline ) dev-lang/perl nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-db/sqlite:3 dev-libs/expat dev-scheme/guile media-libs/freetype:2 media-libs/libpng:0 media-libs/libsdl[X,opengl,video] media-libs/sdl-image[jpeg,png] media-libs/sdl-ttf net-misc/curl sys-libs/zlib virtual/glu virtual/jpeg virtual/opengl gtk? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl virtual/libiconv ) ogg? ( media-libs/libsdl[X,sound,opengl,video] media-libs/sdl-mixer[vorbis] ) readline? ( sys-libs/ncurses sys-libs/readline ) dev-lang/perl nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Unique multiplayer wargame between liquids
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/liquidwar6/
 IUSE=doc gtk +maps nls +ogg openmp readline
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+
-RDEPEND=dev-db/sqlite:3 dev-libs/expat dev-scheme/guile media-libs/freetype:2 media-libs/libpng:0 media-libs/libsdl[X,opengl,video] media-libs/sdl-image[jpeg,png] media-libs/sdl-ttf net-misc/curl sys-libs/zlib virtual/glu virtual/jpeg virtual/opengl gtk? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl virtual/libiconv ) ogg? ( media-libs/libsdl[X,audio,opengl,video] media-libs/sdl-mixer[vorbis] ) readline? ( sys-libs/ncurses sys-libs/readline ) games-misc/games-envd
+RDEPEND=dev-db/sqlite:3 dev-libs/expat dev-scheme/guile media-libs/freetype:2 media-libs/libpng:0 media-libs/libsdl[X,opengl,video] media-libs/sdl-image[jpeg,png] media-libs/sdl-ttf net-misc/curl sys-libs/zlib virtual/glu virtual/jpeg virtual/opengl gtk? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl virtual/libiconv ) ogg? ( media-libs/libsdl[X,sound,opengl,video] media-libs/sdl-mixer[vorbis] ) readline? ( sys-libs/ncurses sys-libs/readline ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://www.ufoot.org/download/liquidwar/v6/0.0.13beta/liquidwar6-0.0.13beta.tar.gz maps? ( http://www.ufoot.org/download/liquidwar/v6/0.0.13beta/liquidwar6-extra-maps-0.0.13beta.tar.gz )
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=21388fdb631f01aa9915b1f98f53981e
+_md5_=64734700dc622b0f6cc35971df5ad518

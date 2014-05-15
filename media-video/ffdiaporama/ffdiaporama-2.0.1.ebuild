@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.0.1.ebuild,v 1.2 2013/12/11 21:39:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.0.1.ebuild,v 1.3 2014/05/15 17:10:15 ulm Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtsvg:4
 	media-gfx/exiv2
-	media-libs/libsdl[audio]
+	media-libs/libsdl[sound]
 	media-libs/taglib
 	!<media-video/ffmpeg-1.2:0
 	virtual/ffmpeg[encode]"

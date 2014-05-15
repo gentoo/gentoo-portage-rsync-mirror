@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.23 2013/01/31 20:04:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.24 2014/05/15 17:07:05 ulm Exp $
 
 EAPI=2
 inherit eutils unpacker cdrom games
@@ -24,7 +24,7 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	!ppc? ( sys-libs/lib-compat-loki )
-	media-libs/libsdl[audio,video]
+	media-libs/libsdl[sound,video]
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer
 	media-libs/smpeg

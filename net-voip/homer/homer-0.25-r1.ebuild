@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.4 2014/01/14 13:57:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.5 2014/05/15 17:12:35 ulm Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ IUSE="pulseaudio"
 
 DEPEND=">=dev-libs/openssl-1.0
 	media-libs/alsa-lib
-	media-libs/libsdl[X,audio,video,alsa]
+	media-libs/libsdl[X,sound,video,alsa]
 	media-libs/portaudio[alsa]
 	media-libs/sdl-mixer
 	media-libs/sdl-sound

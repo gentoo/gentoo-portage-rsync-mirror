@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.4.ebuild,v 1.2 2013/01/06 20:54:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.4.ebuild,v 1.3 2014/05/15 17:08:56 ulm Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ RDEPEND="app-arch/unzip
 	mtp? ( media-libs/libmtp )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
-	sdl? ( media-libs/libsdl[audio] )
+	sdl? ( media-libs/libsdl[sound] )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
 	sndfile? ( >=media-libs/libsndfile-1.0.17-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.2.0

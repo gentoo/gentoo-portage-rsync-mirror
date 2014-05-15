@@ -1,6 +1,14 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.185 2014/05/12 16:28:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.186 2014/05/15 17:12:09 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> libav-0.8.7.ebuild,
+  libav-0.8.9-r1.ebuild, libav-0.8.11.ebuild, libav-0.8.9999.ebuild,
+  libav-9.10-r1.ebuild, libav-9.12.ebuild, libav-9.13.ebuild,
+  libav-9.9999.ebuild, libav-10.ebuild, libav-10.1.ebuild,
+  libav-10.9999.ebuild, libav-9999.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *libav-10.1 (12 May 2014)
 *libav-9.13 (12 May 2014)

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2.3.ebuild,v 1.4 2012/09/03 10:05:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2.3.ebuild,v 1.5 2014/05/15 17:05:05 ulm Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls"
 
-RDEPEND="media-libs/libsdl[audio,video]
+RDEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}

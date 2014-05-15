@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.5 2012/11/21 10:13:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.6 2014/05/15 17:04:45 ulm Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="cdinstall editor zlib"
 
-RDEPEND="media-libs/libsdl[X,audio,video]
+RDEPEND="media-libs/libsdl[X,sound,video]
 	cdinstall? ( games-strategy/ja2-stracciatella-data )
 	zlib? ( sys-libs/zlib )"
 

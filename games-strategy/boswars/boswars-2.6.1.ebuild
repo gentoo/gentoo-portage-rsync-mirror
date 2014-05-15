@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.1.ebuild,v 1.6 2012/10/12 02:29:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.1.ebuild,v 1.7 2014/05/15 17:02:24 ulm Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/lua
-	media-libs/libsdl[audio,video]
+	media-libs/libsdl[sound,video]
 	media-libs/libpng:0
 	media-libs/libvorbis
 	media-libs/libtheora
