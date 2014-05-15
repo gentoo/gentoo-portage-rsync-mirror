@@ -1,14 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r1.ebuild,v 1.3 2014/05/15 12:34:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r2.ebuild,v 1.1 2014/05/15 22:29:12 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Image viewers for the framebuffer console (fbi) and X11 (ida)."
 HOMEPAGE="http://www.kraxel.org/blog/linux/fbida/"
-SRC_URI="http://www.kraxel.org/releases/${PN}/${P}.tar.gz
-	mirror://gentoo/ida.png.bz2" #370901
+SRC_URI="
+	http://www.kraxel.org/releases/${PN}/${P}.tar.gz
+	http://dev.gentoo.org/~jer/${P}-jpeg-9a.patch.bz2
+	mirror://gentoo/ida.png.bz2
+"
 LICENSE="GPL-2 IJG"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
@@ -57,6 +60,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.09-make.patch
 	epatch "${FILESDIR}"/${P}-giflib-4.2.patch
 
+	pushd jpeg/ >/dev/null
+	epatch -p2 "${WORKDIR}"/${P}-jpeg-9a.patch
+	popd >/dev/null
+
 	tc-export CC CPP
 }
 
@@ -73,7 +80,7 @@ src_configure() {
 		use ${useflag} && option="yes"
 
 		sed -i \
-			-e "s|${config}.*|${config} := HAVE_${option}|" \
+			-e "s|HAVE_${config}.*|HAVE_${config} := ${option}|" \
 			"${S}/Make.config" || die
 	}
 
