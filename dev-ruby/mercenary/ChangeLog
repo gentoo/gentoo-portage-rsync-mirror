@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mercenary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mercenary/ChangeLog,v 1.5 2014/05/07 02:00:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mercenary/ChangeLog,v 1.6 2014/05/14 23:29:26 mrueg Exp $
+
+*mercenary-0.3.3 (14 May 2014)
+
+  14 May 2014; Manuel Rüger <mrueg@gentoo.org> +mercenary-0.3.3.ebuild:
+  Version bump.
 
   07 May 2014; Manuel Rüger <mrueg@gentoo.org> -mercenary-0.2.0.ebuild,
   -mercenary-0.2.1.ebuild, -mercenary-0.3.1.ebuild:
