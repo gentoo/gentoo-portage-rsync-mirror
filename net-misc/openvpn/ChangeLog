@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.287 2014/04/22 07:54:18 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.288 2014/05/15 07:12:52 djc Exp $
+
+*openvpn-2.3.4 (15 May 2014)
+
+  15 May 2014; Dirkjan Ochtman <djc@gentoo.org> +openvpn-2.3.4.ebuild,
+  openvpn-2.3.3.ebuild:
+  Version bump openvpn to 2.3.4 (bug 510372)
 
   22 Apr 2014; Dirkjan Ochtman <djc@gentoo.org>
   -files/openvpn-2.2.2-pkcs11.patch, -files/openvpn-9999-pkcs11.patch,
