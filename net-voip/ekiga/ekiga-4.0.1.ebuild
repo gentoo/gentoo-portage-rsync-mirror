@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-4.0.1.ebuild,v 1.1 2013/08/26 11:51:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-4.0.1.ebuild,v 1.2 2014/05/15 12:05:52 ulm Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ libnotify mmx nls pulseaudio +shm static v4l xcap xv"
 RDEPEND=">=dev-libs/glib-2.24.0:2
 	>=dev-libs/boost-1.49
 	dev-libs/libxml2:2
-	>=net-libs/opal-3.10.9[audio,sip,video,debug=,h323?,xml]
+	>=net-libs/opal-3.10.9[sip,sound,video,debug=,h323?,xml]
 	>=net-libs/ptlib-2.10.9[ldap?,stun,v4l?,video,wav,debug=,dtmf,pulseaudio?,xml]
 	>=x11-libs/gtk+-2.20.0:2
 	>=x11-themes/gnome-icon-theme-3.0.0

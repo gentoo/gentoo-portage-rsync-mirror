@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.11.ebuild,v 1.1 2014/04/29 07:58:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.11.ebuild,v 1.2 2014/05/15 12:04:06 ulm Exp $
 
 EAPI="5"
 
@@ -15,19 +15,19 @@ LICENSE="MPL-1.0"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # default enabled are features from 'minsize', the most used according to ptlib
-IUSE="alsa +asn +audio debug doc +dtmf examples ffmpeg ftp +http ipv6
+IUSE="alsa +asn debug doc +dtmf examples ffmpeg ftp +http ipv6
 jabber ldap lua mail odbc oss pch pulseaudio qos remote sasl sdl serial
-shmvideo snmp soap socks ssl static-libs +stun telnet tts v4l +video
+shmvideo snmp soap socks +sound ssl static-libs +stun telnet tts v4l +video
 vxml wav xml xmlrpc"
 
 CDEPEND="
-	audio? ( alsa? ( media-libs/alsa-lib ) )
 	ldap? ( net-nds/openldap )
 	lua? ( dev-lang/lua )
 	odbc? ( dev-db/unixODBC )
 	pulseaudio? ( media-sound/pulseaudio )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	sdl? ( media-libs/libsdl )
+	sound? ( alsa? ( media-libs/alsa-lib ) )
 	ssl? ( dev-libs/openssl )
 	video? ( v4l? ( media-libs/libv4l ) )
 	xml? ( dev-libs/expat )
@@ -83,8 +83,8 @@ src_prepare() {
 src_configure() {
 	local myconf=""
 
-	# plugins are disabled only if ! audio and ! video
-	if ! use audio && ! use video; then
+	# plugins are disabled only if ! sound and ! video
+	if ! use sound && ! use video; then
 		myconf="${myconf} --disable-plugins"
 	else
 		myconf="${myconf} --enable-plugins"
@@ -115,7 +115,6 @@ src_configure() {
 		--enable-pipechan \
 		--enable-resolver \
 		--enable-url \
-		$(use_enable audio) \
 		$(use_enable alsa) \
 		$(use_enable asn) \
 		$(use_enable debug exceptions) \
@@ -147,6 +146,7 @@ src_configure() {
 		$(use_enable snmp) \
 		$(use_enable soap) \
 		$(use_enable socks) \
+		$(use_enable sound audio) \
 		$(use_enable ssl openssl) \
 		$(use_enable stun) \
 		$(use_enable telnet) \
@@ -188,7 +188,7 @@ src_install() {
 
 	dodoc History.txt ReadMe.txt ReadMe_QOS.txt || die "dodoc failed"
 
-	if use audio || use video; then
+	if use sound || use video; then
 		newdoc plugins/ReadMe.txt ReadMe-Plugins.txt || die "newdoc failed"
 	fi
 
@@ -216,8 +216,8 @@ pkg_postinst() {
 		ewarn "To test examples, you have to run PTLIBDIR=/usr/share/ptlib make"
 	fi
 
-	if ! use audio || ! use video; then
-		ewarn "You have disabled audio or video USE flags."
+	if ! use sound || ! use video; then
+		ewarn "You have disabled sound or video USE flags."
 		ewarn "Most audio/video have been disabled silently even if enabled via USE flags."
 		ewarn "Having a feature enabled via use flag but disabled can lead to issues."
 	fi

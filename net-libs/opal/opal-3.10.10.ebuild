@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.10.ebuild,v 1.9 2014/04/03 10:10:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.10.ebuild,v 1.10 2014/05/15 12:05:02 ulm Exp $
 
 EAPI=5
 
@@ -14,15 +14,15 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 ia64 ppc ppc64 ~sparc x86"
-IUSE="+audio capi celt debug doc +dtmf examples fax ffmpeg h224 h281 h323 iax
-ilbc ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl static-libs
+IUSE="capi celt debug doc +dtmf examples fax ffmpeg h224 h281 h323 iax ilbc
+ipv6 ivr ixj java ldap lid +plugins sbc sip sipim +sound srtp ssl static-libs
 stats swig theora +video vpb vxml wav x264 x264-static xml"
 
 REQUIRED_USE="x264-static? ( x264 )
 	h281? ( h224 )
 	sip? ( sipim )"
 
-RDEPEND=">=net-libs/ptlib-2.10.10:=[stun,debug=,audio?,dtmf,http,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.10.10:=[stun,debug=,dtmf,http,ipv6?,ldap?,sound?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 
 # NOTES:
 # ffmpeg[encode] is for h263 and mpeg4
-# ssl, xml, vxml, ipv6, ldap, audio, wav, and video are use flags
+# ssl, xml, vxml, ipv6, ldap, sound, wav, and video are use flags
 #   herited from ptlib: feature is enabled if ptlib has enabled it
 #   however, disabling it if ptlib has it looks hard (coz of buildopts.h)
 #   forcing ptlib to disable it for opal is not a solution too
@@ -243,8 +243,8 @@ pkg_postinst() {
 		ewarn "it will depend of the enabled USE flags in ptlib and opal"
 	fi
 
-	if ! use plugins || ! use audio || ! use video; then
-		ewarn "You have disabled audio, video or plugins USE flags."
+	if ! use plugins || ! use sound || ! use video; then
+		ewarn "You have disabled sound, video or plugins USE flags."
 		ewarn "Most audio/video features or plugins have been disabled silently"
 		ewarn "even if enabled via USE flags."
 		ewarn "Having a feature enabled via USE flag but disabled can lead to issues."

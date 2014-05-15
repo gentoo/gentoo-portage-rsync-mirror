@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.15 2012/09/30 18:15:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.16 2014/05/15 12:04:06 ulm Exp $
 
 EAPI="2"
 
@@ -16,16 +16,16 @@ LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 # default enabled are features from 'minsize', the most used according to ptlib
-IUSE="alsa +asn +audio debug doc dtmf examples ffmpeg ftp http ipv6
+IUSE="alsa +asn debug doc dtmf examples ffmpeg ftp http ipv6
 jabber ldap mail odbc oss pch qos remote sasl sdl serial shmvideo snmp soap
-socks ssl static-libs +stun telnet tts v4l +video vxml wav xml xmlrpc"
+socks +sound ssl static-libs +stun telnet tts v4l +video vxml wav xml xmlrpc"
 
 CDEPEND="
-	audio? ( alsa? ( media-libs/alsa-lib ) )
 	ldap? ( net-nds/openldap )
 	odbc? ( dev-db/unixODBC )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	sdl? ( media-libs/libsdl )
+	sound? ( alsa? ( media-libs/alsa-lib ) )
 	ssl? ( dev-libs/openssl )
 	video? ( v4l? ( media-libs/libv4l ) )
 	xml? ( dev-libs/expat )
@@ -129,8 +129,8 @@ src_prepare() {
 src_configure() {
 	local myconf=""
 
-	# plugins are disabled only if ! audio and ! video
-	if ! use audio && ! use video; then
+	# plugins are disabled only if ! sound and ! video
+	if ! use sound && ! use video; then
 		myconf="${myconf} --disable-plugins"
 	else
 		myconf="${myconf} --enable-plugins"
@@ -161,7 +161,6 @@ src_configure() {
 		--enable-pipechan \
 		--enable-resolver \
 		--enable-url \
-		$(use_enable audio) \
 		$(use_enable alsa) \
 		$(use_enable asn) \
 		$(use_enable debug exceptions) \
@@ -191,6 +190,7 @@ src_configure() {
 		$(use_enable snmp) \
 		$(use_enable soap) \
 		$(use_enable socks) \
+		$(use_enable sound audio) \
 		$(use_enable ssl openssl) \
 		$(use_enable stun) \
 		$(use_enable telnet) \
@@ -235,7 +235,7 @@ src_install() {
 	# This version (2.6.7) doesn't have a ChangeLog file.
 	#dodoc ChangeLog-${PN}-v${PV//./_}.txt || die "dodoc failed"
 
-	if use audio || use video; then
+	if use sound || use video; then
 		newdoc plugins/ReadMe.txt ReadMe-Plugins.txt || die "newdoc failed"
 	fi
 
@@ -263,8 +263,8 @@ pkg_postinst() {
 		ewarn "To test examples, you have to run PTLIBDIR=/usr/share/ptlib make"
 	fi
 
-	if ! use audio || ! use video; then
-		ewarn "You have disabled audio or video USE flags."
+	if ! use sound || ! use video; then
+		ewarn "You have disabled sound or video USE flags."
 		ewarn "Most audio/video have been disabled silently even if enabled via USE flags."
 		ewarn "Having a feature enabled via use flag but disabled can lead to issues."
 	fi
