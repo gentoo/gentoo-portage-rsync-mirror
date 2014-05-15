@@ -1,6 +1,22 @@
 # ChangeLog for dev-db/kyotocabinet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.22 2014/05/15 13:27:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.24 2014/05/15 21:56:36 jer Exp $
+
+  15 May 2014; Jeroen Roovers <jer@gentoo.org>
+  files/fix_configure-1.2.62.patch, files/kyotocabinet-1.2.76-flags.patch:
+  Roll two chunks into one.
+
+*kyotocabinet-1.2.76-r1 (15 May 2014)
+
+  15 May 2014; Jeroen Roovers <jer@gentoo.org> -kyotocabinet-1.2.74.ebuild,
+  -kyotocabinet-1.2.75.ebuild, +kyotocabinet-1.2.76-r1.ebuild,
+  -files/remove_ldconfig-1.0.4.patch, -files/fix_rpath-1.2.4.patch,
+  -files/remove_ldconfig-1.2.4.patch, -files/remove_docinst-1.2.29.patch,
+  +files/kyotocabinet-1.2.76-configure-8-byte-atomics.patch,
+  +files/kyotocabinet-1.2.76-flags.patch, -files/fix_rpath.patch,
+  -files/remove_docinst.patch, -files/remove_ldconfig.patch:
+  Respect AR, CFLAGS (bug #482188). Fix building on HPPA. Remove obsolete
+  files.
 
   15 May 2014; Jeroen Roovers <jer@gentoo.org> kyotocabinet-1.2.74.ebuild,
   kyotocabinet-1.2.75.ebuild, kyotocabinet-1.2.76.ebuild:

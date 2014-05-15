@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/obnam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.21 2014/05/02 16:49:19 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.22 2014/05/15 21:44:35 mschiff Exp $
+
+*obnam-1.8 (15 May 2014)
+
+  15 May 2014; Marc Schiffbauer <mschiff@gentoo.org> -obnam-1.6.1-r1.ebuild,
+  +obnam-1.8.ebuild, -files/obnam-gnupg-ownertrust.patch:
+  Bump version. Drop old version.
 
   02 May 2014; Marc Schiffbauer <mschiff@gentoo.org> obnam-1.7.4.ebuild:
   Added missing dependency. Fixes bug #507746. Thanks to 'Small_Penguin'

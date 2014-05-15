@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.6.1-r1.ebuild,v 1.1 2013/12/04 14:34:52 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.8.ebuild,v 1.1 2014/05/15 21:44:35 mschiff Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_P="${PN}_${PV}.orig"
 inherit eutils distutils-r1
 
 DESCRIPTION="A backup program that supports encryption and deduplication"
-HOMEPAGE="http://liw.fi/obnam/"
+HOMEPAGE="http://obnam.org/"
 SRC_URI="http://code.liw.fi/debian/pool/main/o/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
@@ -22,14 +22,15 @@ IUSE=""
 
 DEPEND="${PYTHON_DEPS}
 	dev-python/cliapp
+	dev-python/fuse-python
 	dev-python/larch
-	dev-python/paramiko
+	!=dev-python/paramiko-1.13.0
 	dev-python/tracing
 	dev-python/ttystatus
 	"
 RDEPEND="${DEPEND}"
 
-PATCHES=( ${FILESDIR}/${PN}-gnupg-ownertrust.patch )
+PATCHES=( )
 
 src_compile() {
 	addwrite /proc/self/comm
@@ -38,8 +39,7 @@ src_compile() {
 
 src_install() {
 	distutils-r1_src_install
-	rm "${D}"/usr/bin/obnam-{benchmark,viewprof}*
-	rm "${D}"/usr/share/man/man1/obnam-{benchmark,viewprof}*
+	find "${D}" -name "obnam-viewprof*" -delete
 	insinto /etc
 	doins "${FILESDIR}"/obnam.conf
 	keepdir /var/log/obnam
