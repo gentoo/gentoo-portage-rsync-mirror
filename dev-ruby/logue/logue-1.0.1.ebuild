@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/logue-1.0.1.ebuild,v 1.5 2014/04/04 14:15:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/logue-1.0.1.ebuild,v 1.6 2014/05/15 10:25:49 nimiux Exp $
 
 EAPI=5
 USE_RUBY="ruby19 jruby"
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/jpace/logue/archive/v${PV}.tar.gz -> ${PN}-git-${PV}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rainbow-1.1.4:0"
