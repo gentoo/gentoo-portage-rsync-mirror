@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/concentration/concentration-1.2-r1.ebuild,v 1.4 2010/08/13 13:18:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/concentration/concentration-1.2-r1.ebuild,v 1.5 2014/05/15 16:50:04 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,video]
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf"

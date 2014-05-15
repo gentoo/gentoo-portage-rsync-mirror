@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.018.ebuild,v 1.3 2014/03/04 19:55:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.018.ebuild,v 1.4 2014/05/15 16:46:58 ulm Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="
 		virtual/opengl
 		curl? ( net-misc/curl )
 		openal? ( media-libs/openal )
-		sdl? ( media-libs/libsdl[X,audio,joystick,opengl,video] )
+		sdl? ( media-libs/libsdl[X,sound,joystick,opengl,video] )
 		!sdl? ( x11-libs/libX11
 			x11-libs/libXext
 			x11-libs/libXxf86dga

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.7 2013/10/30 19:24:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.8 2014/05/15 16:44:21 ulm Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
@@ -30,7 +30,7 @@ DEPEND="
 	net-misc/curl
 	sys-libs/zlib
 	!dedicated? (
-		media-libs/libsdl[joystick,audio]
+		media-libs/libsdl[joystick,sound]
 		media-libs/sdl-mixer
 		media-libs/libpng:0
 		virtual/opengl

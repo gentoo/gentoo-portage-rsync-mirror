@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/rezerwar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/ChangeLog,v 1.6 2010/06/21 20:14:25 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/ChangeLog,v 1.7 2014/05/15 16:53:14 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> rezerwar-0.4.2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   21 Jun 2010; Markus Meier <maekke@gentoo.org> rezerwar-0.4.2.ebuild:
   amd64/x86 stable, bug #323467

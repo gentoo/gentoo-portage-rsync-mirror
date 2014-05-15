@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.6 2013/02/07 22:10:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.7 2014/05/15 16:55:29 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,7 +16,7 @@ IUSE="nls"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl[X,audio,video]
+	media-libs/libsdl[X,sound,video]
 	media-libs/sdl-image[jpeg,png]
 	media-libs/libvorbis
 	media-libs/libtheora

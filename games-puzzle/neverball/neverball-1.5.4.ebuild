@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.8 2013/10/11 18:55:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.9 2014/05/15 16:52:55 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 RESTRICT="test"
 
-RDEPEND="media-libs/libsdl[audio,joystick,opengl,video]
+RDEPEND="media-libs/libsdl[sound,joystick,opengl,video]
 	media-libs/sdl-ttf
 	media-libs/libpng:0
 	virtual/jpeg

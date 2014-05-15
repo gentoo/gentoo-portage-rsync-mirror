@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.7 2013/02/25 12:16:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.8 2014/05/15 16:58:40 ulm Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 		media-libs/freealut
 		media-libs/freetype
 		media-libs/libogg
-		media-libs/libsdl[X,audio,video,opengl]
+		media-libs/libsdl[X,sound,video,opengl]
 		media-libs/libvorbis
 		media-libs/sdl-image[gif,jpeg,png]
 		media-libs/sdl-ttf

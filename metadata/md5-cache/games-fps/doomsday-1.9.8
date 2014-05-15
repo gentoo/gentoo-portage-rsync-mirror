@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=virtual/opengl virtual/glu media-libs/libsdl[joystick,audio] media-libs/sdl-mixer media-libs/libpng dev-qt/qtopengl:4 dev-qt/qtgui:4 net-misc/curl openal? ( media-libs/openal ) snowberry? ( =dev-lang/python-2* )
+DEPEND=virtual/opengl virtual/glu media-libs/libsdl[joystick,sound] media-libs/sdl-mixer media-libs/libpng dev-qt/qtopengl:4 dev-qt/qtgui:4 net-misc/curl openal? ( media-libs/openal ) snowberry? ( =dev-lang/python-2* )
 DESCRIPTION=A modern gaming engine for Doom, Heretic, and Hexen
 EAPI=4
 HOMEPAGE=http://www.dengine.net/
@@ -7,9 +7,9 @@ IUSE=openal snowberry +doom demo freedoom heretic hexen resources
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 PDEPEND=demo? ( games-fps/doom-data ) freedoom? ( games-fps/freedoom ) resources? ( games-fps/doomsday-resources )
-RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[joystick,audio] media-libs/sdl-mixer media-libs/libpng dev-qt/qtopengl:4 dev-qt/qtgui:4 net-misc/curl openal? ( media-libs/openal ) snowberry? ( dev-python/wxpython ) snowberry? ( =dev-lang/python-2* ) games-misc/games-envd
+RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[joystick,sound] media-libs/sdl-mixer media-libs/libpng dev-qt/qtopengl:4 dev-qt/qtgui:4 net-misc/curl openal? ( media-libs/openal ) snowberry? ( dev-python/wxpython ) snowberry? ( =dev-lang/python-2* ) games-misc/games-envd
 REQUIRED_USE=demo? ( doom ) freedoom? ( doom ) resources? ( doom )
 SLOT=0
 SRC_URI=mirror://sourceforge/deng/doomsday-1.9.8.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=c618877e99b35e3db765b000e9223d9d
+_md5_=96db15bde637cfe5beccb1a709bc478c

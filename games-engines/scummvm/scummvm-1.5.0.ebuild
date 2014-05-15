@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.11 2013/01/28 01:48:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.12 2014/05/15 16:43:34 ulm Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs games
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="aac alsa debug flac fluidsynth mp3 opengl truetype vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
-RDEPEND=">=media-libs/libsdl-1.2.2[audio,joystick,video]
+RDEPEND=">=media-libs/libsdl-1.2.2[sound,joystick,video]
 	sys-libs/zlib
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	aac? ( media-libs/faad2 )

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.6 2013/07/20 23:41:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.7 2014/05/15 16:41:18 ulm Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic toolchain-funcs multilib pax-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="ao custom-cflags +debug opengl pax_kernel png"
 
-RDEPEND="media-libs/libsdl[audio,video]
+RDEPEND="media-libs/libsdl[sound,video]
 	>=sys-libs/zlib-1.2.3-r1
 	amd64? ( >=app-emulation/emul-linux-x86-sdl-10.1 )
 	ao? ( media-libs/libao )

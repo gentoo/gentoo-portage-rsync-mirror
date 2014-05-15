@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/gl117
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.24 2012/09/01 05:19:39 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.25 2014/05/15 17:00:16 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> gl117-1.3.2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   01 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> gl117-1.3.2.ebuild:
   any mod support will do

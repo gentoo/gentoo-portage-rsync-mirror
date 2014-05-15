@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/rockdodger
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.13 2011/06/20 19:28:44 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.14 2014/05/15 16:32:09 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> rockdodger-0.6.0a-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   20 Jun 2011; Tupone Alfredo <tupone@gentoo.org> rockdodger-0.6.0a-r1.ebuild,
   +files/rockdodger-0.6.0a-underlink.patch:

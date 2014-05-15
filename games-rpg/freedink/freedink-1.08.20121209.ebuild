@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/freedink-1.08.20121209.ebuild,v 1.4 2013/08/28 11:14:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/freedink-1.08.20121209.ebuild,v 1.5 2014/05/15 16:58:17 ulm Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="nls"
 
 DEPEND="
 	>=media-libs/fontconfig-2.4
-	>=media-libs/libsdl-1.2:0[X,audio,joystick,video]
+	>=media-libs/libsdl-1.2:0[X,sound,joystick,video]
 	>=media-libs/sdl-gfx-2.0
 	>=media-libs/sdl-image-1.2
 	>=media-libs/sdl-mixer-1.2[midi,vorbis,wav]

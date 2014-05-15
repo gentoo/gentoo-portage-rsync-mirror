@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.2.ebuild,v 1.12 2012/09/01 05:19:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.2.ebuild,v 1.13 2014/05/15 17:00:16 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,joystick,opengl,video]
+DEPEND="media-libs/libsdl[sound,joystick,opengl,video]
 	media-libs/sdl-mixer[mod]
 	virtual/opengl
 	virtual/glu

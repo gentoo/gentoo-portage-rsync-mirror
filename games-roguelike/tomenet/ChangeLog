@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/tomenet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.18 2013/11/16 09:59:12 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.19 2014/05/15 16:56:38 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> tomenet-4.5.3a.ebuild,
+  tomenet-4.5.3b.ebuild, tomenet-4.5.4.ebuild, tomenet-4.5.5.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *tomenet-4.5.5 (16 Nov 2013)
 

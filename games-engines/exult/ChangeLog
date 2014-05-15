@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/exult
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.30 2011/10/19 16:51:53 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.31 2014/05/15 16:41:45 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> exult-1.2.ebuild,
+  exult-1.4.9_rc1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   19 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> exult-1.4.9_rc1.ebuild:
   autotools eclass isn't used

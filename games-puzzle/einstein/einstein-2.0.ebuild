@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.10 2013/02/19 03:44:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.11 2014/05/15 16:50:50 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,video]
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf"
 

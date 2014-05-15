@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/memonix
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix/ChangeLog,v 1.5 2013/07/04 06:01:50 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix/ChangeLog,v 1.6 2014/05/15 16:47:57 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> memonix-1.6.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   04 Jul 2013; Michael Sterrett <mr_bones_@gentoo.org> memonix-1.6.ebuild:
   add slot to libsdl dep

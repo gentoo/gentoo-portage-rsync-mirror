@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.4.ebuild,v 1.4 2013/02/07 22:09:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.4.ebuild,v 1.5 2014/05/15 16:52:29 ulm Exp $
 
 EAPI=3
 inherit cmake-utils gnome2-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl"
 
-DEPEND="media-libs/libsdl[audio,video]
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-gfx
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer[vorbis]

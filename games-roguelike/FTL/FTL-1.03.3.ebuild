@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.3.ebuild,v 1.4 2013/11/22 15:19:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.03.3.ebuild,v 1.5 2014/05/15 16:56:17 ulm Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	!bundled-libs? (
 		media-libs/devil[png,opengl]
 		media-libs/freetype:2
-		media-libs/libsdl[X,audio,joystick,opengl,video]
+		media-libs/libsdl[X,sound,joystick,opengl,video]
 		sys-libs/zlib
 	)"
 

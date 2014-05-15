@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-audio-sdl/mupen64plus-audio-sdl-2.0.ebuild,v 1.3 2013/12/19 16:55:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-audio-sdl/mupen64plus-audio-sdl-2.0.ebuild,v 1.4 2014/05/15 16:38:17 ulm Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="libsamplerate oss speex"
 
 RDEPEND="games-emulation/mupen64plus-core:0=
-	media-libs/libsdl:0=[audio]
+	media-libs/libsdl:0=[sound]
 	libsamplerate? ( media-libs/libsamplerate:0= )
 	speex? ( media-libs/speex:0= )"
 DEPEND="${RDEPEND}

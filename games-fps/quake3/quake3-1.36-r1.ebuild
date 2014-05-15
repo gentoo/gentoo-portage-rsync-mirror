@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36-r1.ebuild,v 1.4 2013/01/13 11:30:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36-r1.ebuild,v 1.5 2014/05/15 16:45:14 ulm Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -27,7 +27,7 @@ KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="dedicated opengl teamarena +openal curl vorbis voice mumble"
 
 UIDEPEND="virtual/opengl
-	media-libs/libsdl[audio,video,joystick,X,opengl]
+	media-libs/libsdl[sound,video,joystick,X,opengl]
 	openal? ( media-libs/openal )
 	vorbis? (
 		media-libs/libogg

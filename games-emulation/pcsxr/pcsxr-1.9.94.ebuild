@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsxr/pcsxr-1.9.94.ebuild,v 1.2 2013/12/11 19:07:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsxr/pcsxr-1.9.94.ebuild,v 1.3 2014/05/15 16:39:28 ulm Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ RDEPEND="dev-libs/glib:2=
 	opengl? ( virtual/opengl:0=
 		x11-libs/libXxf86vm:0= )
 	pulseaudio? ( media-sound/pulseaudio:0= )
-	sdl? ( media-libs/libsdl:0=[audio] )"
+	sdl? ( media-libs/libsdl:0=[sound] )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-util/intltool

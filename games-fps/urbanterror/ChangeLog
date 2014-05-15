@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/urbanterror
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.45 2014/03/12 19:38:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.46 2014/05/15 16:46:58 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> urbanterror-4.2.018.ebuild,
+  urbanterror-4.2.018-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *urbanterror-4.2.018-r1 (12 Mar 2014)
 

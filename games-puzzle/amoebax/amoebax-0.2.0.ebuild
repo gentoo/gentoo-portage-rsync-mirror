@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.8 2010/10/18 16:37:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/amoebax-0.2.0.ebuild,v 1.9 2014/05/15 16:48:41 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,joystick,video]
+DEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]"
 

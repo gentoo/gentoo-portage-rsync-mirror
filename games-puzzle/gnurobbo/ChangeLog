@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gnurobbo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.23 2011/06/20 19:23:48 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.24 2014/05/15 16:51:43 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> gnurobbo-0.66.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   20 Jun 2011; Tupone Alfredo <tupone@gentoo.org> gnurobbo-0.66.ebuild,
   +files/gnurobbo-0.66-underlink.patch:

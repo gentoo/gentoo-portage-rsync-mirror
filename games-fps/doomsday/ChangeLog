@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doomsday
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.59 2013/10/30 19:24:05 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.60 2014/05/15 16:44:21 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> doomsday-1.9.8.ebuild,
+  doomsday-1.9.8-r1.ebuild, doomsday-1.10.2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   30 Oct 2013; Michał Górny <mgorny@gentoo.org> doomsday-1.10.2.ebuild:
   Update the dep to use dev-lang/python-exec.

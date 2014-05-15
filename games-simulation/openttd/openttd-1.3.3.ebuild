@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.3.3.ebuild,v 1.4 2014/01/05 10:46:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.3.3.ebuild,v 1.5 2014/05/15 17:01:14 ulm Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -16,7 +16,7 @@ IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetyp
 RESTRICT="test" # needs a graphics set in order to test
 
 DEPEND="!dedicated? (
-		media-libs/libsdl[audio,X,video]
+		media-libs/libsdl[sound,X,video]
 		icu? ( dev-libs/icu:= )
 		truetype? (
 			media-libs/fontconfig

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/rott-1.1.2.ebuild,v 1.1 2013/02/17 22:29:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/rott-1.1.2.ebuild,v 1.2 2014/05/15 16:45:39 ulm Exp $
 
 EAPI=5
 inherit eutils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="demo"
 
-RDEPEND="media-libs/libsdl[audio,joystick,video]
+RDEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	app-arch/unzip"

@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/einstein
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.11 2013/08/14 20:08:18 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.12 2014/05/15 16:50:50 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> einstein-2.0.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   14 Aug 2013; Michael Sterrett <mr_bones_@gentoo.org>
   files/einstein-2.0-64bit.patch, files/einstein-2.0-as-needed.patch,

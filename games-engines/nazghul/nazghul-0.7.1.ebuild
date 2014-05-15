@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/nazghul-0.7.1.ebuild,v 1.3 2012/05/21 10:15:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/nazghul-0.7.1.ebuild,v 1.4 2014/05/15 16:42:05 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libpng
-	>=media-libs/libsdl-1.2.3[X,audio,video]
+	>=media-libs/libsdl-1.2.3[X,sound,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[midi,vorbis,wav]"
 

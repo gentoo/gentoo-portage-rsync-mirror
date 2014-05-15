@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.5 2013/11/22 15:47:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.6 2014/05/15 16:57:29 ulm Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="
 		!bundled-libs? (
 			dev-lang/mono
 			media-libs/fmod:1
-			media-libs/libsdl[X,audio,video,opengl,joystick]
+			media-libs/libsdl[X,sound,video,opengl,joystick]
 		)"
 
 CHECKREQS_DISK_BUILD="2400M"

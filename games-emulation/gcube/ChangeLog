@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gcube
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.12 2012/10/23 12:22:50 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.13 2014/05/15 16:36:02 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> gcube-0.4-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   23 Oct 2012; Tupone Alfredo <tupone@gentoo.org> gcube-0.4-r1.ebuild,
   +files/gcube-0.4-gcc47.patch:

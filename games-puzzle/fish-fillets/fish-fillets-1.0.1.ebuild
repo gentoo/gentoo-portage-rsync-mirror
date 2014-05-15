@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-1.0.1.ebuild,v 1.5 2012/05/04 04:45:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-1.0.1.ebuild,v 1.6 2014/05/15 16:51:17 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libsdl-1.2[audio,video]
+RDEPEND=">=media-libs/libsdl-1.2[sound,video]
 	>=media-libs/sdl-mixer-1.2.5[vorbis]
 	>=media-libs/sdl-image-1.2.2[png]
 	media-libs/smpeg

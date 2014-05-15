@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.6 2013/03/02 21:19:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.7 2014/05/15 16:52:09 ulm Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -19,7 +19,7 @@ RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtopengl:4
 	x11-libs/libXrandr
-	media-libs/libsdl[audio,video]
+	media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	app-arch/unzip"

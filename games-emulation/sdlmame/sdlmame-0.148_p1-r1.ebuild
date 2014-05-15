@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1-r1.ebuild,v 1.4 2013/11/22 22:18:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1-r1.ebuild,v 1.5 2014/05/15 16:40:11 ulm Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -32,7 +32,7 @@ REQUIRED_USE="debug? ( X )"
 RDEPEND="dev-libs/expat
 	media-libs/fontconfig
 	media-libs/flac
-	>=media-libs/libsdl-1.2.10[X,audio,joystick,opengl?,video]
+	>=media-libs/libsdl-1.2.10[X,sound,joystick,opengl?,video]
 	media-libs/sdl-ttf
 	sys-libs/zlib
 	virtual/jpeg

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/crrcsim-0.9.12.ebuild,v 1.3 2012/12/21 03:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/crrcsim-0.9.12.ebuild,v 1.4 2014/05/15 16:59:51 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="1.10"
@@ -17,7 +17,7 @@ IUSE="portaudio"
 
 RDEPEND="sci-mathematics/cgal
 	media-libs/plib
-	media-libs/libsdl[X,audio,joystick,opengl,video]
+	media-libs/libsdl[X,sound,joystick,opengl,video]
 	portaudio? ( media-libs/portaudio )"
 DEPEND="${RDEPEND}"
 

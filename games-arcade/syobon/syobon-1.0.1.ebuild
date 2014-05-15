@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/syobon-1.0.1.ebuild,v 1.5 2012/05/04 04:22:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/syobon-1.0.1.ebuild,v 1.6 2014/05/15 16:33:13 ulm Exp $
 
 EAPI=2
 inherit games
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[audio,video,joystick]
+RDEPEND="media-libs/libsdl[sound,video,joystick]
 	media-libs/sdl-gfx
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.6 2010/10/12 03:49:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.7 2014/05/15 16:32:33 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/sdl-mixer
-	media-libs/libsdl[audio,joystick,video]
+	media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/serious-sam-tfe/serious-sam-tfe-1_beta3.ebuild,v 1.1 2012/09/22 01:59:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/serious-sam-tfe/serious-sam-tfe-1_beta3.ebuild,v 1.2 2014/05/15 16:45:59 ulm Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RDEPEND="amd64? (
 	x86? (
 		alsa? (
 			media-libs/libogg
-			media-libs/libsdl[alsa,audio]
+			media-libs/libsdl[alsa,sound]
 			media-libs/libvorbis
 		)
 		media-libs/libsdl[X,joystick,opengl,video]

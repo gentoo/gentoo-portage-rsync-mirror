@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/odamex-0.7.0.ebuild,v 1.1 2014/03/27 21:20:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/odamex-0.7.0.ebuild,v 1.2 2014/05/15 16:42:25 ulm Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -20,7 +20,7 @@ RDEPEND="
 	dedicated? ( >=net-libs/miniupnpc-1.8 )
 	!dedicated? (
 		media-libs/libpng:0
-		>=media-libs/libsdl-1.2.9[X,audio,joystick,video]
+		>=media-libs/libsdl-1.2.9[X,sound,joystick,video]
 		>=media-libs/sdl-mixer-1.2.6
 		odalaunch? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 		portmidi? ( media-libs/portmidi )

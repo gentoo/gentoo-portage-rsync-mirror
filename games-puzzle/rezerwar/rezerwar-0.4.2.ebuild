@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/rezerwar-0.4.2.ebuild,v 1.2 2010/06/21 20:14:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/rezerwar-0.4.2.ebuild,v 1.3 2014/05/15 16:53:14 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,joystick,video]
+DEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-mixer[vorbis]"
 
 src_prepare() {

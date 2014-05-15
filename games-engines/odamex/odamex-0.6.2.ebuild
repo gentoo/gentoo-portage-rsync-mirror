@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/odamex-0.6.2.ebuild,v 1.4 2013/02/23 20:23:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/odamex-0.6.2.ebuild,v 1.5 2014/05/15 16:42:25 ulm Exp $
 
 EAPI=5
 WX_GTK_VER="2.8"
@@ -18,7 +18,7 @@ IUSE="dedicated +odalaunch master portmidi server"
 
 RDEPEND="
 	!dedicated? (
-		>=media-libs/libsdl-1.2.9[X,audio,joystick,video]
+		>=media-libs/libsdl-1.2.9[X,sound,joystick,video]
 		>=media-libs/sdl-mixer-1.2.6
 		odalaunch? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 		portmidi? ( media-libs/portmidi )

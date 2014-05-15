@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.1 2012/10/19 08:17:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.2 2014/05/15 16:43:54 ulm Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="dev-db/sqlite:3
 	media-libs/libpng:0
 	virtual/opengl
 	x11-libs/libX11
-	media-libs/libsdl[audio,opengl,video]
+	media-libs/libsdl[sound,opengl,video]
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
 	mikmod? ( media-libs/libmikmod )

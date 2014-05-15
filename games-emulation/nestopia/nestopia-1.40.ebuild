@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.8 2011/09/07 03:47:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.9 2014/05/15 16:38:41 ulm Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4:2
 	media-libs/alsa-lib
-	>=media-libs/libsdl-1.2.12[audio,joystick,video]
+	>=media-libs/libsdl-1.2.12[sound,joystick,video]
 	sys-libs/zlib
 	virtual/opengl
 	virtual/glu"

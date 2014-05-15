@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.7 2011/09/17 16:50:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.8 2014/05/15 16:43:55 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libX11
 	virtual/opengl
 	>=dev-lang/lua-5
 	media-libs/libpng
-	media-libs/libsdl[audio,opengl,video]
+	media-libs/libsdl[sound,opengl,video]
 	bzip2? ( app-arch/bzip2 )
 	mikmod? ( media-libs/libmikmod )
 	mng? ( media-libs/libmng )

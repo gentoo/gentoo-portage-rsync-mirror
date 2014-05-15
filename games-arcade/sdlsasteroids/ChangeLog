@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdlsasteroids
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.10 2010/10/12 03:49:33 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/ChangeLog,v 1.11 2014/05/15 16:32:33 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> sdlsasteroids-3.0.1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   12 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   sdlsasteroids-3.0.1.ebuild:

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=dev-libs/expat media-libs/fontconfig media-libs/flac >=media-libs/libsdl-1.2.10[audio,joystick,opengl?,video] media-libs/sdl-ttf sys-libs/zlib virtual/jpeg alsa? ( media-libs/alsa-lib ) X? ( gnome-base/gconf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXinerama ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) app-arch/unzip virtual/pkgconfig X? ( x11-proto/xineramaproto )
+DEPEND=dev-libs/expat media-libs/fontconfig media-libs/flac >=media-libs/libsdl-1.2.10[sound,joystick,opengl?,video] media-libs/sdl-ttf sys-libs/zlib virtual/jpeg alsa? ( media-libs/alsa-lib ) X? ( gnome-base/gconf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXinerama ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) app-arch/unzip virtual/pkgconfig X? ( x11-proto/xineramaproto )
 DESCRIPTION=Multi Emulator Super System (SDL)
 EAPI=5
 HOMEPAGE=http://mamedev.org/
 IUSE=X alsa debug opengl
 KEYWORDS=amd64 ~ppc x86
 LICENSE=XMAME
-RDEPEND=dev-libs/expat media-libs/fontconfig media-libs/flac >=media-libs/libsdl-1.2.10[audio,joystick,opengl?,video] media-libs/sdl-ttf sys-libs/zlib virtual/jpeg alsa? ( media-libs/alsa-lib ) X? ( gnome-base/gconf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXinerama ) games-misc/games-envd
+RDEPEND=dev-libs/expat media-libs/fontconfig media-libs/flac >=media-libs/libsdl-1.2.10[sound,joystick,opengl?,video] media-libs/sdl-ttf sys-libs/zlib virtual/jpeg alsa? ( media-libs/alsa-lib ) X? ( gnome-base/gconf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXinerama ) games-misc/games-envd
 REQUIRED_USE=debug? ( X )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/sdlmame0148u1_diff.zip http://dev.gentoo.org/~hasufell/distfiles/mame0148s.zip
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5cc4d1a3ad8067f5424bf6b148963c22
+_md5_=00e9dadf32cd1a6288b409cf9ad6ff2d

@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/world-of-goo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/ChangeLog,v 1.9 2014/01/10 05:33:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/ChangeLog,v 1.10 2014/05/15 16:54:49 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> world-of-goo-1.41-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   10 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org>
   world-of-goo-1.41-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.19 2013/06/29 16:39:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.20 2014/05/15 16:35:18 ulm Exp $
 
 EAPI=5
 inherit eutils games
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gnome"
 
 RDEPEND="x11-libs/gtk+:2
-	media-libs/libsdl:0[audio]
+	media-libs/libsdl:0[sound]
 	media-libs/sdl-mixer[vorbis]
 	gnome? ( gnome-base/libgnomeui )"
 DEPEND="${RDEPEND}

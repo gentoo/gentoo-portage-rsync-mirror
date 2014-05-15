@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.1.ebuild,v 1.6 2012/08/08 19:46:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.1.ebuild,v 1.7 2014/05/15 16:37:13 ulm Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs cmake-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[X,audio,video]
+RDEPEND="media-libs/libsdl[X,sound,video]
 	sys-libs/readline
 	media-libs/libpng
 	sys-libs/zlib"

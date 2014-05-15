@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.12 2013/01/15 22:36:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.13 2014/05/15 16:59:05 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="dev-libs/libxml2
 	media-libs/sdl-mixer[timidity]
-	media-libs/libsdl[audio,video]"
+	media-libs/libsdl[sound,video]"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

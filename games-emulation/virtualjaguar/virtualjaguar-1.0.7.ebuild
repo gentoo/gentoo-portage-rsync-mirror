@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.7 2010/10/13 17:55:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.8 2014/05/15 16:40:58 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
-	media-libs/libsdl[audio,joystick,opengl,video]"
+	media-libs/libsdl[sound,joystick,opengl,video]"
 
 S=${WORKDIR}/${P}-src
 

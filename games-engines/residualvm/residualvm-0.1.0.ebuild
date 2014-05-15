@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/residualvm-0.1.0.ebuild,v 1.2 2013/01/31 15:30:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/residualvm-0.1.0.ebuild,v 1.3 2014/05/15 16:43:06 ulm Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs gnome2-utils games
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="
 	media-libs/alsa-lib
 	media-libs/freetype:2
-	media-libs/libsdl[X,audio,alsa,joystick,opengl,video]
+	media-libs/libsdl[X,sound,alsa,joystick,opengl,video]
 	sys-libs/zlib
 	virtual/glu
 	virtual/opengl"

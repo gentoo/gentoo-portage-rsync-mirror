@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/lxdream
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/lxdream/ChangeLog,v 1.5 2012/09/11 19:41:33 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/lxdream/ChangeLog,v 1.6 2014/05/15 16:37:33 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> lxdream-0.9.1-r2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   11 Sep 2012; Pacho Ramos <pacho@gentoo.org>
   +files/lxdream-0.9.1-glib-single-include.patch, lxdream-0.9.1-r2.ebuild:

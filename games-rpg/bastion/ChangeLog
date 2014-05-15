@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/bastion
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/ChangeLog,v 1.6 2013/11/22 15:47:19 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/ChangeLog,v 1.7 2014/05/15 16:57:29 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> bastion-20120620-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   22 Nov 2013; Julian Ospald <hasufell@gentoo.org> bastion-20120620-r1.ebuild:
   stable wrt #486242

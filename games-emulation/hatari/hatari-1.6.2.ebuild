@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.2.ebuild,v 1.4 2013/12/24 12:51:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.2.ebuild,v 1.5 2014/05/15 16:37:13 ulm Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	media-libs/libsdl[X,audio,video]
+	media-libs/libsdl[X,sound,video]
 	sys-libs/readline
 	media-libs/libpng
 	sys-libs/zlib"

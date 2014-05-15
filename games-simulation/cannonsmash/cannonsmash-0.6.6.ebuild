@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.18 2012/09/03 19:30:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.19 2014/05/15 16:59:30 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ IUSE="vorbis nls"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl[audio,video]
+	media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer[vorbis?]
 	media-libs/sdl-image[jpeg,png]
 	x11-libs/gtk+:2

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.61.ebuild,v 1.4 2011/01/15 15:12:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.61.ebuild,v 1.5 2014/05/15 16:49:00 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,opengl,video]
+DEPEND="media-libs/libsdl[sound,opengl,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	media-libs/sdl-image[png]

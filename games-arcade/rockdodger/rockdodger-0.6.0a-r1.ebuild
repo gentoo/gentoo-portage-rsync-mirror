@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.10 2011/06/20 19:28:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/rockdodger-0.6.0a-r1.ebuild,v 1.11 2014/05/15 16:32:09 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,video]
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
 

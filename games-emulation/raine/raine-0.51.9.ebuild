@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.9.ebuild,v 1.5 2011/10/23 19:33:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.9.ebuild,v 1.6 2014/05/15 16:39:45 ulm Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="dev-cpp/muParser
-	media-libs/libsdl[audio,joystick,video]
+	media-libs/libsdl[sound,joystick,video]
 	sys-libs/zlib
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf"

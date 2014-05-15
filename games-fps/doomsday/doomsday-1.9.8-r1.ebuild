@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8-r1.ebuild,v 1.3 2013/09/05 19:44:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8-r1.ebuild,v 1.4 2014/05/15 16:44:21 ulm Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="openal snowberry +doom demo freedoom heretic hexen resources"
 DEPEND="
 	virtual/opengl
 	virtual/glu
-	media-libs/libsdl[joystick,audio]
+	media-libs/libsdl[joystick,sound]
 	media-libs/sdl-mixer
 	media-libs/libpng:0
 	dev-qt/qtopengl:4

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/vor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.13 2014/03/30 05:38:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.14 2014/05/15 16:34:07 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> vor-0.5.5.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   30 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
   +files/vor-0.5.5-underlink.patch, vor-0.5.5.ebuild:

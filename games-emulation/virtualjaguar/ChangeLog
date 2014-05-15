@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/virtualjaguar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.14 2010/10/13 17:55:20 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.15 2014/05/15 16:40:58 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> virtualjaguar-1.0.7.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   13 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   virtualjaguar-1.0.7.ebuild, +files/virtualjaguar-1.0.7-array.patch,

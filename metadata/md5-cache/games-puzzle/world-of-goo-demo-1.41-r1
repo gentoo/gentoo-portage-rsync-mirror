@@ -4,9 +4,9 @@ EAPI=2
 HOMEPAGE=http://2dboy.com/
 KEYWORDS=amd64 x86
 LICENSE=2dboy-EULA
-RDEPEND=media-libs/libsdl[audio,opengl,video] media-libs/sdl-mixer[vorbis] sys-libs/glibc virtual/opengl virtual/glu >=sys-devel/gcc-3.4 games-misc/games-envd
+RDEPEND=media-libs/libsdl[sound,opengl,video] media-libs/sdl-mixer[vorbis] sys-libs/glibc virtual/opengl virtual/glu >=sys-devel/gcc-3.4 games-misc/games-envd
 RESTRICT=fetch strip
 SLOT=0
 SRC_URI=WorldOfGooDemo.1.41.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=eab45cf02d1b121d09659d66640c598d
+_md5_=6d2b7cbb0aa874dde82b8dd7a6e5b92f

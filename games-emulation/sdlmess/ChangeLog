@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/sdlmess
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/ChangeLog,v 1.4 2013/06/26 13:16:12 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/ChangeLog,v 1.5 2014/05/15 16:40:37 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> sdlmess-0.148_p1.ebuild,
+  sdlmess-0.149.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *sdlmess-0.149 (26 Jun 2013)
 

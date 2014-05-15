@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.46 2012/04/06 19:23:15 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.47 2014/05/15 16:44:49 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> quake2-icculus-0.16.1-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   06 Apr 2012; Tupone Alfredo <tupone@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild,

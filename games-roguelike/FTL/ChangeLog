@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/FTL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/ChangeLog,v 1.16 2014/04/06 18:16:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/ChangeLog,v 1.17 2014/05/15 16:56:17 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> FTL-1.03.3.ebuild,
+  FTL-1.5.4.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   06 Apr 2014; Julian Ospald <hasufell@gentoo.org> FTL-1.5.4.ebuild:
   relax media-libs/devil required USE flags

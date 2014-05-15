@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.7 2012/04/13 19:22:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.8 2014/05/15 16:57:07 ulm Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ IUSE="doc nls"
 
 RDEPEND="media-libs/sdl-ttf
 	media-libs/sdl-mixer[vorbis]
-	media-libs/libsdl[X,video,audio]
+	media-libs/libsdl[X,video,sound]
 	sys-libs/zlib
 	media-libs/freetype
 	media-libs/libogg

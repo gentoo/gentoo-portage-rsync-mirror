@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.9.3.ebuild,v 1.4 2013/06/29 17:19:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.9.3.ebuild,v 1.5 2014/05/15 16:34:53 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl:0[X,video,audio]
+DEPEND="media-libs/libsdl:0[X,video,sound]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
 

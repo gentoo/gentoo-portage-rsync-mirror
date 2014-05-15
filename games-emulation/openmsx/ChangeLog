@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/openmsx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.48 2013/01/24 18:01:44 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.49 2014/05/15 16:39:09 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> openmsx-0.9.1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/openmsx-0.8.1-libpng15.patch, -openmsx-0.8.1.ebuild:

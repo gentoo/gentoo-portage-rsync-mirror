@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-4.5.5.ebuild,v 1.1 2013/11/16 09:59:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-4.5.5.ebuild,v 1.2 2014/05/15 16:56:38 ulm Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -20,7 +20,7 @@ DEPEND="sys-libs/ncurses
 			x11-libs/libX11
 		)
 		sound? (
-			media-libs/libsdl[audio]
+			media-libs/libsdl[sound]
 			media-libs/sdl-mixer[vorbis,smpeg,mp3]
 		)
 	)"

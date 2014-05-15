@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/meandmyshadow
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/ChangeLog,v 1.10 2013/02/07 22:09:33 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/ChangeLog,v 1.11 2014/05/15 16:52:29 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> meandmyshadow-0.4.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> meandmyshadow-0.4.ebuild:
   Move Creative Commons licenses to shorter names.

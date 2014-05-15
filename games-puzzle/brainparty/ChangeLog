@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/brainparty
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.8 2011/01/15 15:12:35 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.9 2014/05/15 16:49:00 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> brainparty-0.61.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   15 Jan 2011; Markus Meier <maekke@gentoo.org> brainparty-0.61.ebuild:
   x86 stable, bug #350778

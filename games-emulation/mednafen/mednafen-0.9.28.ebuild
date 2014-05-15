@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.9.28.ebuild,v 1.7 2013/07/04 12:24:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.9.28.ebuild,v 1.8 2014/05/15 16:37:57 ulm Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -17,7 +17,7 @@ IUSE="alsa altivec cjk debugger jack nls"
 RDEPEND="virtual/opengl
 	media-libs/libsndfile
 	dev-libs/libcdio
-	media-libs/libsdl[audio,joystick,opengl,video]
+	media-libs/libsdl[sound,joystick,opengl,video]
 	media-libs/sdl-net
 	sys-libs/zlib[minizip]
 	alsa? ( media-libs/alsa-lib )

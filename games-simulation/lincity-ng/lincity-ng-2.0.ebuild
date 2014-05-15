@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.9 2012/07/30 08:23:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.10 2014/05/15 17:00:45 ulm Exp $
 
 EAPI=2
 inherit eutils multiprocessing games
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="virtual/opengl
 	sys-libs/zlib
 	dev-libs/libxml2
-	media-libs/libsdl[audio,joystick,opengl,video]
+	media-libs/libsdl[sound,joystick,opengl,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf

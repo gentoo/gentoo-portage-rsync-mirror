@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/stratagus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.27 2012/11/17 18:05:47 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.28 2014/05/15 16:43:54 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> stratagus-2.2.5.5.ebuild,
+  stratagus-2.2.7.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   17 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/stratagus-2.2.6-build.patch, -files/stratagus-2.2.6-debug.patch,

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=aalib? ( media-libs/aalib ) alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl ) svga? ( media-libs/svgalib ) sdl? ( media-libs/libsdl[audio,joystick?,video] ) X? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) X? ( x11-proto/xf86dgaproto ) rogue? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) ) xatrix? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )
+DEPEND=aalib? ( media-libs/aalib ) alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl ) svga? ( media-libs/svgalib ) sdl? ( media-libs/libsdl[sound,joystick?,video] ) X? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) X? ( x11-proto/xf86dgaproto ) rogue? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) ) xatrix? ( || ( sys-freebsd/freebsd-ubin app-arch/sharutils ) )
 DESCRIPTION=The icculus.org Linux port of iD's Quake 2 engine
 EAPI=2
 HOMEPAGE=http://icculus.org/quake2/
 IUSE=aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix
 KEYWORDS=~amd64 ppc sparc x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=aalib? ( media-libs/aalib ) alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl ) svga? ( media-libs/svgalib ) sdl? ( media-libs/libsdl[audio,joystick?,video] ) X? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) cdinstall? ( games-fps/quake2-data ) demo? ( games-fps/quake2-demodata ) games-misc/games-envd
+RDEPEND=aalib? ( media-libs/aalib ) alsa? ( media-libs/alsa-lib ) opengl? ( virtual/opengl ) svga? ( media-libs/svgalib ) sdl? ( media-libs/libsdl[sound,joystick?,video] ) X? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) cdinstall? ( games-fps/quake2-data ) demo? ( games-fps/quake2-demodata ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://icculus.org/quake2/files/quake2-r0.16.1.tar.gz qmax? ( http://icculus.org/quake2/files/maxpak.pak ) rogue? ( mirror://idsoftware/quake2/source/roguesrc320.shar.Z ) xatrix? ( mirror://idsoftware/quake2/source/xatrixsrc320.shar.Z )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=339e5d4f5763cdbe5c2079eced02f63f
+_md5_=50c5f9715eab05ea2621bcc43235d6e9

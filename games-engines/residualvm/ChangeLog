@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/residualvm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/ChangeLog,v 1.4 2013/02/14 00:21:31 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/ChangeLog,v 1.5 2014/05/15 16:43:06 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> residualvm-0.1.0.ebuild,
+  residualvm-0.1.1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *residualvm-0.1.1 (14 Feb 2013)
 

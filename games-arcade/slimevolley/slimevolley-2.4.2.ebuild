@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.2.ebuild,v 1.4 2011/06/20 18:45:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.2.ebuild,v 1.5 2014/05/15 16:32:53 ulm Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="net"
 
-RDEPEND="media-libs/libsdl[X,audio,video]
+RDEPEND="media-libs/libsdl[X,sound,video]
 	media-libs/sdl-ttf
 	media-libs/sdl-image[png]
 	net? ( media-libs/sdl-net )

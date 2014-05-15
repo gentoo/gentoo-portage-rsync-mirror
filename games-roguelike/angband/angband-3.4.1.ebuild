@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.4.1.ebuild,v 1.6 2013/12/13 20:34:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.4.1.ebuild,v 1.7 2014/05/15 16:55:56 ulm Exp $
 
 EAPI=4
 inherit eutils versionator games
@@ -24,7 +24,7 @@ RDEPEND="X? ( x11-libs/libX11 )
 		media-libs/sdl-ttf
 		media-libs/sdl-image
 		sound? ( media-libs/sdl-mixer
-			media-libs/libsdl[audio] ) )"
+			media-libs/libsdl[sound] ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

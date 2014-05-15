@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=!dedicated? ( >=media-libs/libsdl-1.2.9[X,audio,joystick,video] >=media-libs/sdl-mixer-1.2.6 odalaunch? ( x11-libs/wxGTK:2.8[X] ) portmidi? ( media-libs/portmidi ) ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
+DEPEND=!dedicated? ( >=media-libs/libsdl-1.2.9[X,sound,joystick,video] >=media-libs/sdl-mixer-1.2.6 odalaunch? ( x11-libs/wxGTK:2.8[X] ) portmidi? ( media-libs/portmidi ) ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
 DESCRIPTION=An online multiplayer, free software engine for Doom and Doom II
 EAPI=5
 HOMEPAGE=http://odamex.net/
 IUSE=dedicated +odalaunch master portmidi server
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=!dedicated? ( >=media-libs/libsdl-1.2.9[X,audio,joystick,video] >=media-libs/sdl-mixer-1.2.6 odalaunch? ( x11-libs/wxGTK:2.8[X] ) portmidi? ( media-libs/portmidi ) ) games-misc/games-envd
+RDEPEND=!dedicated? ( >=media-libs/libsdl-1.2.9[X,sound,joystick,video] >=media-libs/sdl-mixer-1.2.6 odalaunch? ( x11-libs/wxGTK:2.8[X] ) portmidi? ( media-libs/portmidi ) ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/odamex/Odamex/0.6.2/odamex-src-0.6.2.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=84f6b383fe6d9984b192e8808a3481a0
+_md5_=9a536afa036d56b3e235763698a63e70
