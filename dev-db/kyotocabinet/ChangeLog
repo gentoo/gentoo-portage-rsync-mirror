@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/kyotocabinet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.21 2013/08/23 09:11:26 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.22 2014/05/15 13:27:56 jer Exp $
+
+  15 May 2014; Jeroen Roovers <jer@gentoo.org> kyotocabinet-1.2.74.ebuild,
+  kyotocabinet-1.2.75.ebuild, kyotocabinet-1.2.76.ebuild:
+  Drop untested HPPA keywording.
 
   23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> kyotocabinet-1.2.76.ebuild:
   Stable for x86, wrt bug #478214
