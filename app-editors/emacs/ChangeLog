@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.618 2014/05/10 13:23:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.620 2014/05/15 20:01:46 maekke Exp $
+
+  15 May 2014; Markus Meier <maekke@gentoo.org> emacs-24.3-r6.ebuild:
+  arm stable, bug #509830
+
+  15 May 2014; Markus Meier <maekke@gentoo.org> emacs-23.4-r10.ebuild:
+  arm stable, bug #509830
 
 *emacs-23.4-r11 (10 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.135 2014/05/06 02:55:53 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.136 2014/05/15 20:03:09 maekke Exp $
+
+  15 May 2014; Markus Meier <maekke@gentoo.org> mirrorselect-2.2.1.ebuild:
+  add ~arm, bug #509628
 
   06 May 2014; Brian Dolbec <dolsen@gentoo.org> -mirrorselect-2.1.0-r3.ebuild,
   -mirrorselect-2.2.0-r1.ebuild, mirrorselect-2.2.1.ebuild,
