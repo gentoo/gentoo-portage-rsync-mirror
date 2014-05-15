@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19_rc1.ebuild,v 1.1 2014/05/12 11:13:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19_rc2.ebuild,v 1.1 2014/05/15 09:11:08 polynomial-c Exp $
 
 EAPI="4"
 
@@ -9,15 +9,17 @@ inherit flag-o-matic eutils multilib toolchain-funcs mono-env libtool java-pkg-o
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
-if [[ ${PV} =~ _rc ]] ; then
-	SRC_URI="mirror://gnu-alpha/${PN}/${P/_/-}.tar.gz"
-	S="${WORKDIR}/${P/_/-}"
-fi
 
 LICENSE="GPL-3 LGPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="acl -cvs doc emacs git java nls +cxx ncurses openmp static-libs elibc_glibc"
+
+if [[ ${PV} =~ _rc ]] ; then
+	SRC_URI="mirror://gnu-alpha/${PN}/${P/_/-}.tar.gz"
+	KEYWORDS=""
+	S="${WORKDIR}/${P/_/-}"
+fi
 
 # only runtime goes multilib
 DEPEND="virtual/libiconv[${MULTILIB_USEDEP}]
