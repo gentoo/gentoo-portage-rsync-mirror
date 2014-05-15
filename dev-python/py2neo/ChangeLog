@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py2neo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/ChangeLog,v 1.4 2014/04/12 13:22:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/ChangeLog,v 1.5 2014/05/15 01:52:54 idella4 Exp $
+
+*py2neo-1.6.4 (15 May 2014)
+
+  15 May 2014; Ian Delaney <idella4@gentoo.org> +py2neo-1.6.4.ebuild:
+  bump; drop py2.6 add py3.4 pypy support
 
 *py2neo-1.6.3 (12 Apr 2014)
 
