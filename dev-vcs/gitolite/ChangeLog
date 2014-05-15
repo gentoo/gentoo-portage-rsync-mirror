@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.39 2014/01/19 16:48:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.40 2014/05/15 00:04:52 radhermit Exp $
+
+*gitolite-3.6 (15 May 2014)
+
+  15 May 2014; Tim Harder <radhermit@gentoo.org> +gitolite-3.6.ebuild:
+  Version bump (bug #510338).
 
   19 Jan 2014; Christian Ruppert <idl0r@gentoo.org> gitolite-3.5.3.1.ebuild:
   Typo
