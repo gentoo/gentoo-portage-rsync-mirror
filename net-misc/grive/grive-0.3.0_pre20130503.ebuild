@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.3.0_pre20130503.ebuild,v 1.1 2014/04/29 16:58:43 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.3.0_pre20130503.ebuild,v 1.2 2014/05/15 15:28:31 kensington Exp $
 
 EAPI=5
 
@@ -29,8 +29,8 @@ RDEPEND="
 	dev-libs/json-c:=
 	dev-libs/libgcrypt:0=
 	dev-libs/yajl
-	dev-qt/qtcore
-	dev-qt/qtgui
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	net-misc/curl
 	sys-devel/binutils
 	sys-libs/glibc
