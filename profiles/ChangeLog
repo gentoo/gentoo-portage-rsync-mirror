@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8963 2014/05/14 22:49:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8964 2014/05/15 06:15:35 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2014; Alexis Ballier <aballier@gentoo.org> base/package.use.mask:
+  unmask ffmpeg:0.10 flags that have their multilib deps satisfied now
 
   14 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask the mit-krb5 multilib conversion block.
