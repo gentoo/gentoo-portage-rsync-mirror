@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.25 2014/05/03 04:37:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.26 2014/05/15 15:55:50 mjo Exp $
+
+*pydns-3.1.0 (15 May 2014)
+
+  15 May 2014; Michael Orlitzky <mjo@gentoo.org> +pydns-3.1.0.ebuild:
+  Version bump with permission from floppym, bug #510008.
 
   03 May 2014; Ian Delaney <idella4@gentoo.org> pydns-3.0.2-r1.ebuild:
   add py3.4 support
