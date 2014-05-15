@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.8 2010/10/18 16:21:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.9 2014/05/15 16:28:54 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,video]
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-net
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf

@@ -1,6 +1,11 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.24 2014/04/13 16:26:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.25 2014/05/15 16:23:38 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> maelstrom-3.0.6-r1.ebuild,
+  maelstrom-3.0.6-r2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> maelstrom-3.0.6-r2.ebuild:
   Stable for ppc, wrt bug #505002

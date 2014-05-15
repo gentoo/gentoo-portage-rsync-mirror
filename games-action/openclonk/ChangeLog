@@ -1,6 +1,11 @@
 # ChangeLog for games-action/openclonk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.14 2014/03/18 18:49:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.15 2014/05/15 16:23:59 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> openclonk-5.3.3.ebuild,
+  openclonk-5.3.3-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   18 Mar 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/openclonk-5.2.2-zlib-1.2.6.patch, -openclonk-5.2.2.ebuild:

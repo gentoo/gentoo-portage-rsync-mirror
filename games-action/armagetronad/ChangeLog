@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetronad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.23 2013/11/07 18:48:05 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.24 2014/05/15 16:19:41 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> armagetronad-0.2.8.3.2.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
 *armagetronad-0.2.8.3.2 (07 Nov 2013)
 

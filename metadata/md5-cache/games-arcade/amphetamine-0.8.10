@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=media-libs/libsdl[audio,video] x11-libs/libXpm
+DEPEND=media-libs/libsdl[sound,video] x11-libs/libXpm
 DESCRIPTION=a cool Jump'n Run game offering some unique visual effects
 EAPI=2
 HOMEPAGE=http://homepage.hispeed.ch/loehrer/amph/amph.html
 KEYWORDS=amd64 ppc x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=media-libs/libsdl[audio,video] x11-libs/libXpm games-misc/games-envd
+RDEPEND=media-libs/libsdl[sound,video] x11-libs/libXpm games-misc/games-envd
 SLOT=0
 SRC_URI=http://homepage.hispeed.ch/loehrer/amph/files/amphetamine-0.8.10.tar.bz2 http://homepage.hispeed.ch/loehrer/amph/files/amphetamine-data-0.8.6.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7741c6fcf106d9f450d22d5f95ef5732
+_md5_=cfa3078fd5f95778151ec01c8806155f

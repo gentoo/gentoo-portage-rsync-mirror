@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.2.ebuild,v 1.6 2012/11/22 10:07:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.2.ebuild,v 1.7 2014/05/15 16:20:29 ulm Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic games
@@ -16,7 +16,7 @@ IUSE="dedicated sdl upnp"
 
 UIDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl[audio,joystick,video]
+	media-libs/libsdl[sound,joystick,video]
 	media-libs/glew
 	x11-libs/libICE
 	x11-libs/libSM

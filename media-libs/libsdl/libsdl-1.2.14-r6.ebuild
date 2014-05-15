@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.14-r6.ebuild,v 1.6 2011/05/22 23:59:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.14-r6.ebuild,v 1.7 2014/05/15 16:15:03 ulm Exp $
 
 EAPI=2
 inherit flag-o-matic multilib toolchain-funcs eutils libtool
@@ -13,12 +13,12 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 # WARNING:
-# if you disable the audio, video, joystick use flags or turn on the custom-cflags use flag
+# if you disable the sound, video, joystick use flags or turn on the custom-cflags use flag
 # in USE and something breaks, you pick up the pieces.  Be prepared for
 # bug reports to be marked INVALID.
-IUSE="oss alsa nas X dga xv xinerama fbcon directfb ggi svga tslib aalib opengl libcaca +audio +video +joystick custom-cflags pulseaudio ps3 static-libs"
+IUSE="oss alsa nas X dga xv xinerama fbcon directfb ggi svga tslib aalib opengl libcaca +sound +video +joystick custom-cflags pulseaudio ps3 static-libs"
 
-RDEPEND="audio? ( >=media-libs/audiofile-0.1.9 )
+RDEPEND="sound? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	nas? (
 		media-libs/nas
@@ -55,10 +55,10 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/SDL-${PV}
 
 pkg_setup() {
-	if use !audio || use !video || use !joystick ; then
+	if use !sound || use !video || use !joystick ; then
 		ewarn "Since you've chosen to turn off some of libsdl's functionality,"
 		ewarn "don't bother filing libsdl-related bugs until trying to remerge"
-		ewarn "libsdl with the audio, video, and joystick flags in USE."
+		ewarn "libsdl with the sound, video, and joystick flags in USE."
 		ewarn "You need to know what you're doing to selectively turn off parts of libsdl."
 		epause 30
 	fi
@@ -88,7 +88,7 @@ src_configure() {
 		myconf="${myconf} --enable-nasm"
 	fi
 	use custom-cflags || strip-flags
-	use audio || myconf="${myconf} --disable-audio"
+	use sound || myconf="${myconf} --disable-audio"
 	use video \
 		&& myconf="${myconf} --enable-video-dummy" \
 		|| myconf="${myconf} --disable-video"

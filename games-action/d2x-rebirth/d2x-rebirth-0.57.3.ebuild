@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.57.3.ebuild,v 1.2 2013/02/06 21:52:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.57.3.ebuild,v 1.3 2014/05/15 16:22:00 ulm Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ REQUIRED_USE="?? ( opl3-musicpack sc55-musicpack )
 	sc55-musicpack? ( music )"
 
 RDEPEND="dev-games/physfs[hog,mvl,zip]
-	media-libs/libsdl[X,audio,joystick,opengl?,video]
+	media-libs/libsdl[X,sound,joystick,opengl?,video]
 	music? (
 		media-libs/sdl-mixer[timidity,vorbis]
 	)

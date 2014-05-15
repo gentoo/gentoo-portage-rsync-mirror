@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.2-r1.ebuild,v 1.1 2013/09/08 12:32:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.2-r1.ebuild,v 1.2 2014/05/15 16:25:24 ulm Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ IUSE="debug dedicated"
 
 RDEPEND="
 	!dedicated? ( media-libs/pnglite
-		media-libs/libsdl[X,audio,opengl,video]
+		media-libs/libsdl[X,sound,opengl,video]
 		media-sound/wavpack
 		virtual/opengl
 		app-arch/bzip2

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.6 2012/11/15 11:43:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.7 2014/05/15 16:20:54 ulm Exp $
 
 EAPI=2
 inherit autotools base eutils flag-o-matic games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[audio,joystick,video]
+RDEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf

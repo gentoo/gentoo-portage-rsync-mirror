@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
-DEPEND=dev-libs/libxml2 !dedicated? ( media-libs/libpng:0 media-libs/sdl-image[jpeg,png] virtual/glu virtual/opengl sound? ( media-libs/libsdl[X,audio,opengl,video] media-libs/sdl-mixer ) !sound? ( media-libs/libsdl[X,opengl,video] ) ) >=sys-apps/sed-4
+DEPEND=dev-libs/libxml2 !dedicated? ( media-libs/libpng:0 media-libs/sdl-image[jpeg,png] virtual/glu virtual/opengl sound? ( media-libs/libsdl[X,sound,opengl,video] media-libs/sdl-mixer ) !sound? ( media-libs/libsdl[X,opengl,video] ) ) >=sys-apps/sed-4
 DESCRIPTION=Fast-paced 3D lightcycle game based on Tron
 EAPI=5
 HOMEPAGE=http://armagetronad.org/
 IUSE=dedicated sound
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-libs/libxml2 !dedicated? ( media-libs/libpng:0 media-libs/sdl-image[jpeg,png] virtual/glu virtual/opengl sound? ( media-libs/libsdl[X,audio,opengl,video] media-libs/sdl-mixer ) !sound? ( media-libs/libsdl[X,opengl,video] ) ) games-misc/games-envd
+RDEPEND=dev-libs/libxml2 !dedicated? ( media-libs/libpng:0 media-libs/sdl-image[jpeg,png] virtual/glu virtual/opengl sound? ( media-libs/libsdl[X,sound,opengl,video] media-libs/sdl-mixer ) !sound? ( media-libs/libsdl[X,opengl,video] ) ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://launchpad.net/armagetronad/0.2.8/0.2.8.3.2/+download/armagetronad-0.2.8.3.2.src.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=3e90526364836f944084c0b6b0ab8d5e
+_md5_=09ef1ef3eff628fae12eb073ad442774

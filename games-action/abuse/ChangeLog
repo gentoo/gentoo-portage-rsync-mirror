@@ -1,6 +1,10 @@
 # ChangeLog for games-action/abuse
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.18 2013/02/01 00:17:12 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.19 2014/05/15 16:19:21 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> abuse-0.8.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   01 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   metadata cleanup

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.11 2010/03/31 20:51:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.12 2014/05/15 16:23:38 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="media-libs/libsdl[audio,joystick,video]
+DEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-net"
 
 S=${WORKDIR}/${MY_P}

@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=media-libs/libsdl[audio,joystick,video] media-libs/sdl-mixer[mod] media-libs/sdl-image[jpeg,png]
+DEPEND=media-libs/libsdl[sound,joystick,video] media-libs/sdl-mixer[mod] media-libs/sdl-image[jpeg,png]
 DESCRIPTION=A clone of the classic Missile Command game
 EAPI=2
 HOMEPAGE=http://www.linux-games.com/penguin-command/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2
-RDEPEND=media-libs/libsdl[audio,joystick,video] media-libs/sdl-mixer[mod] media-libs/sdl-image[jpeg,png] games-misc/games-envd
+RDEPEND=media-libs/libsdl[sound,joystick,video] media-libs/sdl-mixer[mod] media-libs/sdl-image[jpeg,png] games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/penguin-command/penguin-command-1.6.11.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2757f0e16d93ae00563fe255d3fa1921
+_md5_=f3e8d9a315ada5c66a7b4b564a0295f1

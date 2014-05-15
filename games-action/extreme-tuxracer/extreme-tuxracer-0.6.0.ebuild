@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.6.0.ebuild,v 1.4 2014/04/05 11:10:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.6.0.ebuild,v 1.5 2014/05/15 16:22:21 ulm Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl[X,audio,video]
+	media-libs/libsdl[X,sound,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[png]
 	media-libs/freetype:2"

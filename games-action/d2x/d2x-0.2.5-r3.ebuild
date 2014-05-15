@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.11 2012/09/01 18:42:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.12 2014/05/15 16:21:40 ulm Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="cdinstall debug opengl ggi svga"
 
-COMMON="media-libs/libsdl[audio,joystick,video]
+COMMON="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-image
 	opengl? ( virtual/opengl )
 	ggi? ( media-libs/libggi )

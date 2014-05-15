@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pengupop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.22 2014/04/09 06:33:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.23 2014/05/15 16:30:38 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> pengupop-2.2.5.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   09 Apr 2014; Michael Sterrett <mr_bones_@gentoo.org> pengupop-2.2.5.ebuild:
   EAPI=5; better icon handling

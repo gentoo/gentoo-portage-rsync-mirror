@@ -1,6 +1,10 @@
 # ChangeLog for games-action/gltron
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.15 2010/08/24 03:49:06 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.16 2014/05/15 16:22:46 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> gltron-0.70-r1.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   24 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
   gltron-0.70-r1.ebuild:

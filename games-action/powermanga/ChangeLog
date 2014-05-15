@@ -1,6 +1,11 @@
 # ChangeLog for games-action/powermanga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.29 2014/04/13 16:26:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.30 2014/05/15 16:24:24 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> powermanga-0.90.ebuild,
+  powermanga-0.91.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> powermanga-0.91.ebuild:
   Stable for ppc, wrt bug #505016

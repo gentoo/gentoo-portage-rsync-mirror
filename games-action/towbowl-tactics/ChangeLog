@@ -1,6 +1,10 @@
 # ChangeLog for games-action/towbowl-tactics
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/ChangeLog,v 1.8 2011/01/10 17:43:55 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/ChangeLog,v 1.9 2014/05/15 16:25:48 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> towbowl-tactics-0.5.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   10 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
   towbowl-tactics-0.5.ebuild, +files/towbowl-tactics-0.5-gentoo.patch:

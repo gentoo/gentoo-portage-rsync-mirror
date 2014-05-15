@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.7 2010/08/24 03:49:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.8 2014/05/15 16:22:46 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/libpng
-	media-libs/libsdl[audio,video]
+	media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-sound[vorbis,mikmod]
 	media-libs/smpeg

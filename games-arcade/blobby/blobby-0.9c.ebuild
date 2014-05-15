@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.6 2012/06/21 07:47:03 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.7 2014/05/15 16:27:24 ulm Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-games/physfs-2[zip]
-	media-libs/libsdl[audio,joystick,opengl,video,X]
+	media-libs/libsdl[sound,joystick,opengl,video,X]
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-libs/boost

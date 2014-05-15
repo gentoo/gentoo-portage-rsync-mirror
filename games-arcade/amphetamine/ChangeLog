@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/amphetamine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.9 2012/07/08 00:20:49 tristan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.10 2014/05/15 16:26:37 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> amphetamine-0.8.10.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   08 Jul 2012; Tristan Heaven <tristan@gentoo.org> amphetamine-0.8.10.ebuild,
   +files/amphetamine-0.8.10-build.patch:

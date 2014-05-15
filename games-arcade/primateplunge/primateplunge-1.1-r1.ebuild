@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/primateplunge-1.1-r1.ebuild,v 1.7 2013/04/21 10:31:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/primateplunge-1.1-r1.ebuild,v 1.8 2014/05/15 16:31:02 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 RESTRICT="mirror bindist" #465850
 
-DEPEND="media-libs/libsdl[audio,video]
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer"
 
 src_install() {

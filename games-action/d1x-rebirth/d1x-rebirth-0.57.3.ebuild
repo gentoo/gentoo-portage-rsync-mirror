@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.57.3.ebuild,v 1.1 2013/02/06 23:27:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.57.3.ebuild,v 1.2 2014/05/15 16:21:15 ulm Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ REQUIRED_USE="?? ( cdinstall demo )
 	sc55-musicpack? ( music )"
 
 RDEPEND="dev-games/physfs[hog,zip]
-	media-libs/libsdl[X,audio,joystick,opengl?,video]
+	media-libs/libsdl[X,sound,joystick,opengl?,video]
 	cdinstall? ( !games-action/descent1-demodata )
 	music? (
 		media-libs/sdl-mixer[timidity]

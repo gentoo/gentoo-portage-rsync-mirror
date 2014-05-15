@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d2x
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.27 2012/09/01 18:42:36 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.28 2014/05/15 16:21:40 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> d2x-0.2.5-r3.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   01 Sep 2012; Alfredo Tupone <tupone@gentoo.org> d2x-0.2.5-r3.ebuild,
   +files/d2x-0.2.5-ovflw.patch:

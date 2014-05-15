@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r5.ebuild,v 1.3 2014/04/30 13:43:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r5.ebuild,v 1.4 2014/05/15 16:15:03 ulm Exp $
 
 # TODO: convert media-libs/libggi to multilib
 
@@ -17,14 +17,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 # WARNING:
 # If you turn on the custom-cflags use flag in USE and something breaks,
 # you pick up the pieces.  Be prepared for bug reports to be marked INVALID.
-IUSE="oss alsa nas X dga xv xinerama fbcon ggi svga tslib aalib opengl libcaca +audio +video +joystick custom-cflags pulseaudio ps3 static-libs"
+IUSE="oss alsa nas X dga xv xinerama fbcon ggi svga tslib aalib opengl libcaca +sound +video +joystick custom-cflags pulseaudio ps3 static-libs"
 
 RDEPEND="
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-sdl-20140406
 	)
-	audio? ( >=media-libs/audiofile-0.1.9[${MULTILIB_USEDEP}] )
+	sound? ( >=media-libs/audiofile-0.1.9[${MULTILIB_USEDEP}] )
 	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 	nas? (
 		media-libs/nas[${MULTILIB_USEDEP}]
@@ -98,7 +98,7 @@ multilib_src_configure() {
 		myconf="${myconf} --enable-nasm"
 	fi
 	use custom-cflags || strip-flags
-	use audio || myconf="${myconf} --disable-audio"
+	use sound || myconf="${myconf} --disable-audio"
 	use video \
 		&& myconf="${myconf} --enable-video-dummy" \
 		|| myconf="${myconf} --disable-video"

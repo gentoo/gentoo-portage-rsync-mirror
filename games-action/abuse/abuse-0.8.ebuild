@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.8.ebuild,v 1.5 2011/10/04 22:27:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.8.ebuild,v 1.6 2014/05/15 16:19:21 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.1.6[audio,opengl,video]
+DEPEND=">=media-libs/libsdl-1.1.6[sound,opengl,video]
 	media-libs/sdl-mixer
 	virtual/opengl"
 

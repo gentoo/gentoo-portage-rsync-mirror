@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d2x-rebirth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.6 2014/04/04 05:57:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.7 2014/05/15 16:22:00 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> d2x-rebirth-0.57.3.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   04 Apr 2014; Ulrich Müller <ulm@gentoo.org> d2x-rebirth-0.50.ebuild:
   Fix LICENSE in previous ebuild too.

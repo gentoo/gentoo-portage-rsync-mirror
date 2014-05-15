@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.3.3.ebuild,v 1.5 2013/09/05 19:44:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.3.3.ebuild,v 1.6 2014/05/15 16:23:59 ulm Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="
 		x11-libs/libXrandr
 		x11-libs/libX11
 		sound? (
-			media-libs/libsdl[audio]
+			media-libs/libsdl[sound]
 			media-libs/sdl-mixer[mp3?,vorbis,wav]
 		)
 	)

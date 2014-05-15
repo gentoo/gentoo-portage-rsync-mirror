@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r4.ebuild,v 1.11 2014/01/15 09:20:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r4.ebuild,v 1.12 2014/05/15 16:15:03 ulm Exp $
 
 EAPI=5
 inherit autotools flag-o-matic multilib toolchain-funcs eutils
@@ -15,9 +15,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x
 # WARNING:
 # If you turn on the custom-cflags use flag in USE and something breaks,
 # you pick up the pieces.  Be prepared for bug reports to be marked INVALID.
-IUSE="oss alsa nas X dga xv xinerama fbcon directfb ggi svga tslib aalib opengl libcaca +audio +video +joystick custom-cflags pulseaudio ps3 static-libs"
+IUSE="oss alsa nas X dga xv xinerama fbcon directfb ggi svga tslib aalib opengl libcaca +sound +video +joystick custom-cflags pulseaudio ps3 static-libs"
 
-RDEPEND="audio? ( >=media-libs/audiofile-0.1.9 )
+RDEPEND="sound? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	nas? (
 		media-libs/nas
@@ -79,7 +79,7 @@ src_configure() {
 		myconf="${myconf} --enable-nasm"
 	fi
 	use custom-cflags || strip-flags
-	use audio || myconf="${myconf} --disable-audio"
+	use sound || myconf="${myconf} --disable-audio"
 	use video \
 		&& myconf="${myconf} --enable-video-dummy" \
 		|| myconf="${myconf} --disable-video"

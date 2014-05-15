@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.56.ebuild,v 1.5 2014/04/04 05:56:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.56.ebuild,v 1.6 2014/05/15 16:21:15 ulm Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ IUSE="ipv6 linguas_de opengl timidity"
 
 RDEPEND="opengl? ( virtual/opengl virtual/glu )
 	dev-games/physfs[hog,zip]
-	media-libs/libsdl[audio,opengl?,video]
+	media-libs/libsdl[sound,opengl?,video]
 	media-libs/sdl-mixer[timidity?]
 	cdinstall? ( !games-action/descent1-demodata )"
 DEPEND="${RDEPEND}

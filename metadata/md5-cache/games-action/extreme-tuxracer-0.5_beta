@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,audio,video] media-libs/sdl-mixer[mod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl nls? ( sys-devel/gettext ) virtual/pkgconfig
+DEPEND=virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,sound,video] media-libs/sdl-mixer[mod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl nls? ( sys-devel/gettext ) virtual/pkgconfig
 DESCRIPTION=High speed arctic racing game based on Tux Racer
 EAPI=2
 HOMEPAGE=http://www.extremetuxracer.com/
 IUSE=nls
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,audio,video] media-libs/sdl-mixer[mod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl games-misc/games-envd
+RDEPEND=virtual/opengl virtual/glu dev-lang/tcl media-libs/libsdl[X,sound,video] media-libs/sdl-mixer[mod,vorbis] media-libs/freetype:2 media-libs/libpng x11-libs/libXmu x11-libs/libXi virtual/libintl games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/extremetuxracer/extremetuxracer-0.5beta.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ea3bb825774e2acb2d99e0d63ca0ad7c
+_md5_=bd3906f8a1bc8ce7a293fc30a7c3d2c0

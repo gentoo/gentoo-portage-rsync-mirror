@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/fishsupper-0.1.6.ebuild,v 1.5 2013/02/07 22:04:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/fishsupper-0.1.6.ebuild,v 1.6 2014/05/15 16:28:04 ulm Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[audio,video,opengl,X]
+RDEPEND="media-libs/libsdl[sound,video,opengl,X]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[wav]
 	virtual/opengl"

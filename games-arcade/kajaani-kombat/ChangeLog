@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kajaani-kombat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/ChangeLog,v 1.14 2010/10/15 13:53:28 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/ChangeLog,v 1.15 2014/05/15 16:28:54 ulm Exp $
+
+  15 May 2014; Ulrich Müller <ulm@gentoo.org> kajaani-kombat-0.7.ebuild:
+  Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
+  "sound", bug 357661.
 
   15 Oct 2010; Tupone Alfredo <tupone@gentoo.org> kajaani-kombat-0.7.ebuild,
   +files/kajaani-kombat-0.7-ldflags.patch:
