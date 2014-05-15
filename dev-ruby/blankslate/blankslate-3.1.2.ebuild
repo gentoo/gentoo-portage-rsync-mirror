@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.2.ebuild,v 1.7 2014/02/25 20:47:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.2.ebuild,v 1.8 2014/05/15 01:26:06 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 

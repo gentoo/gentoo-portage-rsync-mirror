@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.101 2014/01/26 11:01:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.102 2014/05/15 01:07:07 mrueg Exp $
+
+  15 May 2014; Manuel Rüger <mrueg@gentoo.org> -capistrano-2.14.2.ebuild,
+  capistrano-2.15.5.ebuild:
+  Remove ruby18. Cleanup old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> capistrano-2.15.5.ebuild:
   Stable for x86, wrt bug #495294

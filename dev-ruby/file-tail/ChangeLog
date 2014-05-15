@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/file-tail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.12 2013/11/09 19:44:07 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.13 2014/05/15 01:11:34 mrueg Exp $
+
+*file-tail-1.0.12-r2 (15 May 2014)
+
+  15 May 2014; Manuel Rüger <mrueg@gentoo.org> +file-tail-1.0.12-r2.ebuild,
+  file-tail-1.0.12-r1.ebuild:
+  Remove ruby18. Add ruby21.
 
   09 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -file-tail-1.0.12.ebuild:
   Cleanup old.

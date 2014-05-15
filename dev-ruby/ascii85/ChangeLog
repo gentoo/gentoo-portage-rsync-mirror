@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ascii85
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.21 2014/05/08 20:58:59 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.22 2014/05/15 01:23:37 mrueg Exp $
+
+  15 May 2014; Manuel Rüger <mrueg@gentoo.org> ascii85-1.0.2-r1.ebuild:
+  Remove ruby18.
 
 *ascii85-1.0.2-r2 (08 May 2014)
 
