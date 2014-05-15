@@ -8,7 +8,6 @@
   <herd>net-proxy</herd>
   <longdescription>A full-featured web proxy cache</longdescription>
   <use>
-    <flag name="epoll">Enables Linux epoll() support</flag>
     <flag name="ecap">Adds support for loadable content adaptation modules
 		(http://www.e-cap.org)</flag>
     <flag name="esi">Enable ESI for accelerators, will cause squid reverse proxies
@@ -30,7 +29,5 @@
 		TPROXY</flag>
 	<flag name="wccp">Enable Web Cache Coordination Protocol</flag>
 	<flag name="wccpv2">Enable Web Cache Coordination V2 Protocol</flag>
-    <flag name="zero-penalty-hit">Add Zero Penalty Hit patch
-		(http://zph.bratcheda.org)</flag>
   </use>
 </pkgmetadata>
