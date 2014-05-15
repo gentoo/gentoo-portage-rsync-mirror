@@ -1,0 +1,11 @@
+--- src/dynamicsworld.cpp.old	2014-05-15 13:23:06.584092773 +0200
++++ src/dynamicsworld.cpp	2014-05-15 13:23:13.748948512 +0200
+@@ -101,7 +101,7 @@
+ 	int patch_id = -1;
+ 	const BEZIER * b = 0;
+ 	const TRACKSURFACE * s = TRACKSURFACE::None();
+-	btCollisionObject * c = 0;
++	const btCollisionObject * c = 0;
+ 
+ 	MyRayResultCallback ray(origin, p, caster);
+ 	rayTest(origin, p, ray);

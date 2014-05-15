@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.104 2014/05/14 16:42:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.105 2014/05/15 11:42:40 jer Exp $
+
+  15 May 2014; Jeroen Roovers <jer@gentoo.org>
+  xf86-input-synaptics-1.7.4.ebuild, xf86-input-synaptics-1.7.6.ebuild:
+  Remove accidental HPPA keywording.
 
 *xf86-input-synaptics-1.7.6 (14 May 2014)
 *xf86-input-synaptics-1.8.0 (14 May 2014)

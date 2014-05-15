@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.12.ebuild,v 1.5 2013/06/17 19:53:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.12.ebuild,v 1.6 2014/05/15 11:37:37 jer Exp $
 
 EAPI=5
 
@@ -12,13 +12,9 @@ SRC_URI="http://people.redhat.com/~rjones/virt-what/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="amd64 ~hppa x86"
+IUSE="dmi"
 
 DEPEND="dev-lang/perl"
 RDEPEND="app-shells/bash
-		sys-apps/dmidecode"
-
-src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-}
+		dmi? ( sys-apps/dmidecode )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20111022.ebuild,v 1.5 2012/07/24 16:52:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20111022.ebuild,v 1.6 2014/05/15 11:46:29 tupone Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -33,7 +33,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-bullet282.patch
 }
 
 src_compile() {
