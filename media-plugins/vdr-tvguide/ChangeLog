@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-tvguide
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvguide/ChangeLog,v 1.3 2014/02/09 21:47:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvguide/ChangeLog,v 1.4 2014/05/15 18:49:44 idl0r Exp $
+
+*vdr-tvguide-1.2.2 (15 May 2014)
+
+  15 May 2014; Christian Ruppert <idl0r@gentoo.org> +vdr-tvguide-1.2.2.ebuild:
+  Version bump
 
 *vdr-tvguide-1.2.1 (09 Feb 2014)
 

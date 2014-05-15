@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.210 2014/05/15 07:49:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.211 2014/05/15 18:37:09 mgorny Exp $
+
+*emul-linux-x86-baselibs-20140508-r3 (15 May 2014)
+
+  15 May 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-baselibs-20140508-r3.ebuild, +files/remove-native-20140508-r3:
+  Add multilib sys-libs/db, and use virtual/krb5 to support both Kerberos
+  implementations.
 
 *emul-linux-x86-baselibs-20140508-r2 (15 May 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.216 2013/10/11 14:28:36 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.217 2014/05/15 18:37:00 mgorny Exp $
+
+*heimdal-1.5.3-r2 (15 May 2014)
+
+  15 May 2014; Michał Górny <mgorny@gentoo.org> +heimdal-1.5.3-r2.ebuild:
+  Enable multilib support as alternate provider for virtual/krb5.
 
   11 Oct 2013; Eray Aslan <eras@gentoo.org> heimdal-1.5.3-r1.ebuild:
   Fix build time python deps - bug #487562
