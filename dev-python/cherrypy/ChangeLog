@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.62 2014/05/03 16:55:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.63 2014/05/16 04:25:19 idella4 Exp $
+
+  16 May 2014; Ian Delaney <idella4@gentoo.org> cherrypy-3.3.0.ebuild:
+  update test phase
 
   03 May 2014; Mike Gilbert <floppym@gentoo.org>
   files/cherrypy-3.3.0-test_config.patch:

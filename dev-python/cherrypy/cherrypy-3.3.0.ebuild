@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.3.0.ebuild,v 1.1 2014/05/03 16:51:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.3.0.ebuild,v 1.2 2014/05/16 04:25:19 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -46,7 +46,10 @@ python_test() {
 	)
 
 	# This really doesn't sit well with multiprocessing
-	nosetests "${exclude[@]}" < /dev/tty || die "Testing failed with ${EPYTHON}"
+	# https://github.com/nose-devs/nose/issues/808
+	if ! [[ "${EPYTHON}" == pypy ]]; then
+		nosetests "${exclude[@]}" < /dev/tty || die "Testing failed with ${EPYTHON}"
+	fi
 }
 
 src_test() {
