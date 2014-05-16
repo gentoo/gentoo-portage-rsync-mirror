@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.620 2014/05/15 20:01:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.621 2014/05/16 06:47:20 ulm Exp $
+
+  16 May 2014; Ulrich Müller <ulm@gentoo.org> -emacs-18.59-r9.ebuild,
+  emacs-18.59-r10.ebuild:
+  Allow emul-linux-* as alternative dependency, since this is still stage I of
+  the gx86-multilib roadmap. Stable on amd64 and x86, bug 510456. Remove old.
 
   15 May 2014; Markus Meier <maekke@gentoo.org> emacs-24.3-r6.ebuild:
   arm stable, bug #509830
