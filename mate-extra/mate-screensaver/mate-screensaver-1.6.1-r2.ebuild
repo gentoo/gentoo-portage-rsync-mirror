@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/mate-screensaver-1.6.1-r2.ebuild,v 1.2 2014/05/04 14:54:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/mate-screensaver-1.6.1-r2.ebuild,v 1.3 2014/05/16 14:53:34 tomwij Exp $
 
 EAPI="5"
 
@@ -77,6 +77,7 @@ src_prepare() {
 	# We use gnome-keyring now, update pam file.
 	sed -e 's:mate_keyring:gnome_keyring:g' -i data/mate-screensaver || die
 
+	eautoreconf
 	gnome2_src_prepare
 }
 
