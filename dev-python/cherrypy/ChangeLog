@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.63 2014/05/16 04:25:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.64 2014/05/16 15:01:25 idella4 Exp $
+
+  16 May 2014; Ian Delaney <idella4@gentoo.org> cherrypy-3.3.0.ebuild:
+  test phase again updated subject to a bump of nose with the result that pypy
+  is no longer skipped
 
   16 May 2014; Ian Delaney <idella4@gentoo.org> cherrypy-3.3.0.ebuild:
   update test phase

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.6.2.ebuild,v 1.3 2014/05/04 14:53:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.6.2-r1.ebuild,v 1.1 2014/05/16 15:14:24 tomwij Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="no"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit gnome2 python-single-r1 versionator
+inherit eutils gnome2 python-single-r1 versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
@@ -35,7 +35,7 @@ RDEPEND="${PYTHON_DEPS}
 	>=mate-base/mate-settings-daemon-1.6:0
 	>=mate-extra/mate-character-map-1.6:0
 	>=sys-apps/dbus-1.1.2:0
-	sys-power/cpufrequtils:0
+	sys-power/cpupower:0
 	>=sys-power/upower-0.9.4:0
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.20:2
@@ -58,6 +58,10 @@ DEPEND="${RDEPEND}
 	>=mate-base/mate-common-1.6:0
 	sys-devel/gettext:*
 	virtual/pkgconfig:*"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PF}-replace-cpufreq-by-cpupower.patch
+}
 
 src_configure() {
 	gnome2_src_configure \
