@@ -41,6 +41,7 @@ server.</longdescription>
 	<flag name='linguas_it_IT'>Language support for it_IT</flag>
 	<flag name='linguas_ja_JP'>Language support for ja_JP</flag>
 	<flag name='linguas_ru_RU'>Language support for ru_RU</flag>
+	<flag name='log_forensic'>Enable support for the mod_log_forensic module, log only suspicious actions.</flag>
 	<flag name='memcache'>Enable support for the mod_memcache module, for using memcached servers</flag>
 	<flag name='msg'>Enable support for the mod_msg module, allows system users to send messages to connected clients via the ftpdctl program.</flag>
 	<flag name='openssl'>Enable <pkg>dev-libs/openssl</pkg> support</flag>
@@ -53,6 +54,7 @@ server.</longdescription>
 	<flag name='sitemisc'>Enable support for the sitemisc module</flag>
 	<flag name='softquota'>Enable support for the quotatab module</flag>
 	<flag name='trace'>Build with trace support. Should not be enabled on production servers</flag>
+	<flag name='unique_id'>Enable support for the mod_unique_id module, every connection gets unique ID.</flag>
 	<flag name='vroot'>Enable support for the virtual root module</flag>
 </use>
 </pkgmetadata>
