@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r6.ebuild,v 1.3 2012/09/15 22:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r6.ebuild,v 1.4 2014/05/16 19:53:04 jer Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -144,7 +144,7 @@ pkg_postinst() {
 
 	if use ipv6; then
 		elog
-		elog "IPv6 has not supported yet by ${P}."
+		elog "IPv6 is not supported yet by ${P}."
 	fi
 	elog
 	elog "Tips on using distcc with Gentoo can be found at"

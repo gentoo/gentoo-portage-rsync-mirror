@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r4.ebuild,v 1.16 2014/05/12 11:36:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r4.ebuild,v 1.17 2014/05/16 19:53:04 jer Exp $
 
 EAPI=5
 inherit eutils fdo-mime flag-o-matic multilib toolchain-funcs user
@@ -136,7 +136,7 @@ pkg_postinst() {
 
 	if use ipv6; then
 		elog
-		elog "IPv6 has not supported yet by ${P}."
+		elog "IPv6 is not supported yet by ${P}."
 	fi
 	elog
 	elog "Tips on using distcc with Gentoo can be found at"

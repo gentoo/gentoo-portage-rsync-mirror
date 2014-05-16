@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://distcc.googlecode.com/files/distcc-3.0.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6d3cdbe8cca8fbd51b1d0cddbdc0b2cf
+_md5_=860e8cfca18cf1ff35063e61dc4a937b

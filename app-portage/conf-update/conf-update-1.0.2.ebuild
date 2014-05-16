@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.7 2012/09/30 18:01:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.8 2014/05/16 19:57:52 nimiux Exp $
 
 EAPI="4"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="${PN} is a ncurses-based config management utility"
-HOMEPAGE="http://conf-update.berlios.de"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://dev.gentoo.org/~nimiux/app-portage/${PN}"
+SRC_URI="http://dev.gentoo.org/~nimiux/app-portage/${PN}/distfiles/${PF}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

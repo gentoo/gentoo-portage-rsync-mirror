@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.234 2014/05/12 11:36:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.235 2014/05/16 19:53:04 jer Exp $
+
+  16 May 2014; Jeroen Roovers <jer@gentoo.org> distcc-3.0-r4.ebuild,
+  distcc-3.1-r5.ebuild, distcc-3.1-r6.ebuild, distcc-3.1-r7.ebuild,
+  distcc-3.1-r9.ebuild:
+  Grammar.
 
   12 May 2014; Samuli Suominen <ssuominen@gentoo.org> distcc-2.18.3-r10.ebuild,
   distcc-3.0-r4.ebuild:

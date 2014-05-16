@@ -3,14 +3,15 @@
 <pkgmetadata>
 <maintainer>
   <email>nimiux@gentoo.org</email>
-  <name>José María Alonso</name>
+  <name>Chema Alonso</name>
 </maintainer>
 <longdescription lang="en">
-  conf-update is a ncurses-based config managment tool
+conf-update is a curses based tool for the Gentoo Linux portage
+system
 </longdescription>
 <longdescription lang="es">
-  conf-update es una herramienta de gestión de la configuración
-  basada en ncurses
+conf-update es una herramienta basada en curses para el sistema
+portage de Gentoo Linux
 </longdescription>
 <use>
   <flag name='colordiff'>Use colors when displaying diffs
