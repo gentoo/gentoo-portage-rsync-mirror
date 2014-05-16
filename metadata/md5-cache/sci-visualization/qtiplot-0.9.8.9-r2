@@ -10,5 +10,5 @@ RDEPEND=media-libs/libemf dev-qt/qthelp:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 dev-q
 REQUIRED_USE=python? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~dilfridge/distfiles/qtiplot-0.9.8.9.tar.bz2 http://dev.gentoo.org/~dilfridge/distfiles/qtiplot-0.9.8.9-origin.patch.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	e544c60078c7fa0939091b4c33e27450	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=07dfe435e73e1b01d63c02e7283896c1

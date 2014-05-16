@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 >=media-libs/celt-0.5.1.1:0.5.1 dev-libs/openssl virtual/jpeg sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) smartcard? ( >=app-emulation/libcacard-0.1.2 ) client? ( media-libs/alsa-lib >=x11-libs/libXrandr-1.2 x11-libs/libX11 x11-libs/libXext >=x11-libs/libXinerama-1.0 x11-libs/libXfixes x11-libs/libXrender )
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-0.12.4.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	e544c60078c7fa0939091b4c33e27450	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a2c7a809cd5c96de3fc21315c25be5ae

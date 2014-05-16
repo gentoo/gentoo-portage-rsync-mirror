@@ -7,5 +7,5 @@ IUSE=python_targets_python2_7 python_single_target_python2_7
 LICENSE=BSD
 RDEPEND==net-wireless/gr-osmosdr-9999 =net-wireless/gnuradio-9999:=[utils,python_targets_python2_7(-)?,python_single_target_python2_7(+)?] =net-wireless/rtl-sdr-9999
 SLOT=0
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	e544c60078c7fa0939091b4c33e27450	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=41858df621bdb43ab9265104eb24beb2

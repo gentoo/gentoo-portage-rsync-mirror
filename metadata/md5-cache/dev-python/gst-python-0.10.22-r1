@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=dev-libs/libxml2 >=dev-python/pygobject-2.28:2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=media-libs/gstreamer-0.10.32:0.10 >=media-libs/gst-plugins-base-0.10.32:0.10
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-python/gst-python-0.10.22.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	e544c60078c7fa0939091b4c33e27450	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=a63fd6c7dab35dadf78e6f6720555371

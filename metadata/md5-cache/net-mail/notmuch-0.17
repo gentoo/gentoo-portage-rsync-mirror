@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.22 >=dev-libs/gmime-2.6.7 !=dev-libs/gmime-2.6.19 <dev
 REQUIRED_USE=python? ( || ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 ) ) test? ( crypt emacs python )
 SLOT=0
 SRC_URI=http://notmuchmail.org/releases/notmuch-0.17.tar.gz
-_eclasses_=distutils-r1	d61b71d755b28b460ed7f8a20d3cf8b6	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pax-utils	2424f959506320f5196de8f79fa05297	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	52284f64cfc64a6d70bc00a9f5a01c6f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=distutils-r1	d61b71d755b28b460ed7f8a20d3cf8b6	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pax-utils	2424f959506320f5196de8f79fa05297	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	e544c60078c7fa0939091b4c33e27450	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=cb908943c8a79ee28b1b0176c6c67479

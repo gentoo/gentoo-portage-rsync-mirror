@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.54 2014/05/01 13:34:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.55 2014/05/16 07:54:40 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -522,7 +522,10 @@ _python_rewrite_shebang() {
 		debug-print "${FUNCNAME}: path = ${f}"
 		debug-print "${FUNCNAME}: shebang = ${shebang}"
 
-		if [[ "${shebang} " == *'python '* ]]; then
+		if [[ "${shebang} " == *"${impl} "* ]]; then
+			# skip files with correct impl
+			continue
+		elif [[ "${shebang} " == *'python '* ]]; then
 			from=python
 		elif [[ "${shebang} " == *'python2 '* ]]; then
 			from=python2
