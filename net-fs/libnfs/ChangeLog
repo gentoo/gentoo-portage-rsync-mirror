@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/libnfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.8 2014/01/08 15:00:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.9 2014/05/16 03:35:16 mrueg Exp $
+
+  16 May 2014; Manuel Rüger <mrueg@gentoo.org> libnfs-1.8.0.ebuild,
+  libnfs-9999.ebuild:
+  Add ~arm keyword. Sync keywords with live ebuild.
 
   08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> libnfs-9999.ebuild:
   Update live ebuild now that upstream has merged out-of-source patch

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.25 2014/04/11 05:14:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.26 2014/05/16 03:50:07 mrueg Exp $
+
+  16 May 2014; Manuel Rüger <mrueg@gentoo.org> libaacs-0.7.0-r1.ebuild:
+  Add ~arm keyword.
 
 *libaacs-0.7.0-r1 (11 Apr 2014)
 
