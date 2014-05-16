@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.2.1.ebuild,v 1.1 2014/05/09 03:57:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.2.1.ebuild,v 1.2 2014/05/16 01:45:00 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/linuxmint/nemo/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="exif +introspection packagekit tracker xmp"
+IUSE="exif +introspection +l10n packagekit tracker xmp"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.34:2
@@ -39,6 +39,7 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
+	l10n? ( >=gnome-extra/cinnamon-translations-2.2 )
 "
 DEPEND="${COMMON_DEPEND}
 	${PYTHON_DEPS}

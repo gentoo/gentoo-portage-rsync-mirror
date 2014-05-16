@@ -2746,6 +2746,7 @@ gnome-extra/nautilus-sendto:gajim - Enables support for net-im/gajim
 gnome-extra/nautilus-sendto:mail - Enables support for mailto using gnome-extra/evolution-data-server
 gnome-extra/nautilus-sendto:pidgin - Enables support for net-im/pidgin
 gnome-extra/nemo:introspection - Use dev-libs/gobject-introspection for introspection
+gnome-extra/nemo:l10n - Pull in gnome-extra/cinnamon-translations for localization support
 gnome-extra/nemo:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-extra/nemo:tracker - Add support for app-misc/tracker search
 gnome-extra/nm-applet:gconf - Build tool for migrating gconf settings from nm-applet-0.8.x

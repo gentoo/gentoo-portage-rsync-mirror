@@ -1,6 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1-r3.ebuild,v 1.13 2013/05/20 17:59:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/mysql-init-scripts-2.0_pre1-r7.ebuild,v 1.1 2014/05/16 01:49:43 grknight Exp $
+
+EAPI=5
+
+inherit systemd
 
 DESCRIPTION="Gentoo MySQL init scripts."
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,18 +12,26 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
 # This _will_ break with MySQL 5.0, 4.x, 3.x
 # It also NEEDS openrc for the save_options/get_options builtins.
-RDEPEND="!<dev-db/mysql-5.1
-		 sys-apps/openrc"
+RDEPEND="!<dev-db/mysql-5.1"
+# Need to set S due to PMS saying we need it existing, but no SRC_URI
+S=${WORKDIR}
 
 src_install() {
 	newconfd "${FILESDIR}/mysql-5.1.53-conf.d" "mysql"
-	newinitd "${FILESDIR}/mysql-5.1.67-init.d" "mysql"
+	newinitd "${FILESDIR}/mysql-5.1.67-init.d-r1" "mysql"
+
+	# systemd unit installation
+	exeinto /usr/libexec
+	doexe "${FILESDIR}"/mysqld-wait-ready
+	systemd_dounit "${FILESDIR}/mysqld.service"
+	systemd_newunit "${FILESDIR}/mysqld_at.service" "mysqld@.service"
+	systemd_dotmpfilesd "${FILESDIR}/mysql.conf"
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/logrotate.mysql" "mysql"
