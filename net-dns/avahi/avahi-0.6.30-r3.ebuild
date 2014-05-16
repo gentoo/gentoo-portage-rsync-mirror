@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.19 2014/01/19 21:27:11 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.20 2014/05/16 18:53:22 swift Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-linux"
 IUSE="autoipd bookmarks dbus doc gdbm gtk gtk3 howl-compat +introspection ipv6
-kernel_linux mdnsresponder-compat mono python qt4 test utils"
+kernel_linux mdnsresponder-compat mono python qt4 selinux test utils"
 
 DBUS_DEPEND=">=sys-apps/dbus-0.30"
 COMMON_DEPEND=">=dev-libs/libdaemon-0.14
@@ -44,6 +44,7 @@ COMMON_DEPEND=">=dev-libs/libdaemon-0.14
 	python? (
 		gtk? ( >=dev-python/pygtk-2 )
 	)
+	selinux? ( sec-policy/selinux-avahi )
 	bookmarks? (
 		dev-python/twisted-core
 		dev-python/twisted-web

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tnef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.65 2014/02/04 05:49:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.66 2014/05/16 18:56:59 eras Exp $
+
+  16 May 2014; Eray Aslan <eras@gentoo.org> tnef-1.4.10.ebuild:
+  Don't run tests in parallel
 
 *tnef-1.4.10 (04 Feb 2014)
 

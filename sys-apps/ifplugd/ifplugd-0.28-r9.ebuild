@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.8 2012/05/04 09:17:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.9 2014/05/16 19:00:58 swift Exp $
 
 EAPI=4
 
@@ -13,13 +13,15 @@ SRC_URI="http://0pointer.de/lennart/projects/ifplugd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm amd64 hppa ppc x86"
-IUSE="doc"
+IUSE="doc selinux"
 
 DEPEND="virtual/pkgconfig
 	doc? ( www-client/lynx )
+	selinux? ( sec-policy/selinux-ifplugd )
 	>=dev-libs/libdaemon-0.5"
 RDEPEND=">=dev-libs/libdaemon-0.5
-	>=sys-apps/baselayout-1.12"
+	>=sys-apps/baselayout-1.12
+	selinux? ( sec-policy/selinux-ifplugd )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-nlapi.diff"

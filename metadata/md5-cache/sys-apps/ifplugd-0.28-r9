@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=virtual/pkgconfig doc? ( www-client/lynx ) >=dev-libs/libdaemon-0.5
+DEPEND=virtual/pkgconfig doc? ( www-client/lynx ) selinux? ( sec-policy/selinux-ifplugd ) >=dev-libs/libdaemon-0.5
 DESCRIPTION=Brings up/down ethernet ports automatically with cable detection
 EAPI=4
 HOMEPAGE=http://0pointer.de/lennart/projects/ifplugd/
-IUSE=doc
+IUSE=doc selinux
 KEYWORDS=~arm amd64 hppa ppc x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/libdaemon-0.5 >=sys-apps/baselayout-1.12
+RDEPEND=>=dev-libs/libdaemon-0.5 >=sys-apps/baselayout-1.12 selinux? ( sec-policy/selinux-ifplugd )
 SLOT=0
 SRC_URI=http://0pointer.de/lennart/projects/ifplugd/ifplugd-0.28.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=add28358b0e09021bb11d1fe584603e1
+_md5_=220b169508c5da0e35cb956d306ace7b

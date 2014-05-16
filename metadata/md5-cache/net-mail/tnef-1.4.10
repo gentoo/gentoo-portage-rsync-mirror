@@ -1,4 +1,4 @@
-DEFINED_PHASES=-
+DEFINED_PHASES=test
 DESCRIPTION=Decodes MS-TNEF MIME attachments
 EAPI=5
 HOMEPAGE=http://world.std.com/~damned/software.html http://tnef.sourceforge.net/
@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/tnef/tnef-1.4.10.tar.gz
-_md5_=1f609baac2a8e254da1703d0dc73fee1
+_md5_=9a3a009d747f66cb175f65b5c4017a7a

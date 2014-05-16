@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.262 2014/05/12 18:08:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.263 2014/05/16 18:53:22 swift Exp $
+
+  16 May 2014; Sven Vermeulen <swift@gentoo.org> avahi-0.6.30-r3.ebuild,
+  avahi-0.6.31-r2.ebuild, avahi-0.6.31-r3.ebuild, avahi-0.6.31-r4.ebuild,
+  avahi-0.6.31-r5.ebuild:
+  Fix bug #509740 - Add USE=selinux dependency to selinux-avahi
 
 *avahi-0.6.31-r5 (12 May 2014)
 
