@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.3 2014/05/14 17:13:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.4 2014/05/16 10:31:08 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -68,7 +68,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# These both have been accepted by upstream:
-	if use jpeg2k && has_version '<media-libs/openjpeg-2.1.0'; then
+	if use jpeg2k && has_version '<media-libs/openjpeg-2.1.0:2'; then
 		epatch "${FILESDIR}"/${PN}-6.8.8.8-openjpeg-2.0.0-has-no-opj_stream_destroy_v3.patch
 	fi
 	epatch "${FILESDIR}"/${P}-LIBOPENJP2_DELEGATE_not_JP2_DELEGATE.patch
