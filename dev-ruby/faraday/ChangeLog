@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.20 2014/03/16 00:24:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.21 2014/05/16 08:15:40 graaff Exp $
+
+  16 May 2014; Hans de Graaff <graaff@gentoo.org> faraday-0.9.0.ebuild:
+  Add ruby20.
 
   16 Mar 2014; Manuel Rüger <mrueg@gentoo.org> faraday-0.8.8.ebuild,
   faraday-0.9.0.ebuild:

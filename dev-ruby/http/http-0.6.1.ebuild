@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/http-0.6.1.ebuild,v 1.1 2014/05/14 23:39:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/http-0.6.1.ebuild,v 1.2 2014/05/16 08:18:00 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -16,7 +16,7 @@ DESCRIPTION="An easy-to-use client library for making requests from Ruby"
 HOMEPAGE="https://github.com/tarcieri/http"
 
 LICENSE="MIT"
-SLOT="5"
+SLOT="0.6"
 KEYWORDS="~amd64"
 IUSE=""
 
