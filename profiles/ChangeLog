@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8965 2014/05/15 18:03:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8966 2014/05/16 01:28:46 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> desc/linguas.desc:
+  Add some more LINGUAS for gnome-extra/cinnamon-translations
 
   15 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask new multilib packages.

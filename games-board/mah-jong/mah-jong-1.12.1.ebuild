@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.12.1.ebuild,v 1.4 2012/10/17 02:58:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/mah-jong-1.12.1.ebuild,v 1.5 2014/05/16 01:06:38 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 MY_P="mj-${PV}-src"
@@ -22,9 +22,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -i \
-		-e '/^.TH/ s/1/6/' xmj.man \
-		|| die "sed failed"
+	sed -i -e '/^.TH/ s/1/6/' xmj.man || die
 	sed -i \
 		-e "/^DESTDIR =/ s:=.*:= ${D}:" \
 		-e "/^BINDIR =/ s:=.*:= ${GAMES_BINDIR}:" \
@@ -32,17 +30,16 @@ src_prepare() {
 		-e '/^MANSUFFIX =/ s:1:6:' \
 		-e "/^CC =/ s:gcc:$(tc-getCC):" \
 		-e "/^CFLAGS =/ s:=:= ${CFLAGS}:" \
-		-e "/^LDLIBS =/ s:$:${LDFLAGS}:" \
+		-e "/^LDLIBS =/ s:$:${LDFLAGS} -lm:" \
 		-e '/^INSTPGMFLAGS =/ s:-s::' \
 		-e '/^CDEBUGFLAGS =/d' \
-		-e "/^TILESETPATH=/ s:NULL:\"${GAMES_DATADIR}/${PN}/\":" Makefile \
-		|| die "sed failed"
+		-e "/^TILESETPATH=/ s:NULL:\"${GAMES_DATADIR}/${PN}/\":" Makefile || die
 }
 
 src_install() {
-	emake install install.man || die "emake install failed"
+	emake install install.man
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r fallbacktiles/ tiles-numbered/ tiles-small/ || die "doins failed"
+	doins -r fallbacktiles/ tiles-numbered/ tiles-small/
 	newicon tiles-v1/tongE.xpm ${PN}.xpm
 	make_desktop_entry xmj Mah-Jong ${PN}
 	dodoc CHANGES ChangeLog *.txt

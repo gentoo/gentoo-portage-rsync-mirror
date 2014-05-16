@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.77 2014/01/20 17:20:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.78 2014/05/16 01:28:47 tetromino Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -10,6 +10,7 @@ af - Afrikaans locale
 af_ZA - Afrikaans locale for South Africa
 ak - Akan locale
 am - Amharic locale
+an - Aragonese locale
 ar - Arabic locale
 ar_SA - Arabic locale for Saudi-Arabia
 ar_SY - Arabic locale for Syria
@@ -19,10 +20,11 @@ ast - Asturian locale
 az - Azeri locale
 be - Belarusian locale
 be_BY - Belarusian locale
+be@latin - Belarusian (latin) locale
 bg - Bulgarian locale
 bg_BG - Bulgarian locale
 bn - Bengali locale
-bn_BD - Bengalie locale for Bangladesh
+bn_BD - Bengali locale for Bangladesh
 bn_IN - Bengali locale for India
 bo - Tibetan locale
 bo_CN - Tibetan locale for China
@@ -54,6 +56,7 @@ en_CA - English locale for Canada
 en_GB - English locale for Britain
 en_US - English locale
 en_ZA - English locale for South Africa
+en@shaw - Shavian locale
 eo - Esperanto locale
 eo_UY - Esperanto locale for Uruguay
 es - Spanish locale
@@ -118,12 +121,14 @@ ko - Korean locale
 ko_KR - Korean locale
 kok - Konkani locale
 ks - Kashmiri locale
+ksw - S'gaw Karen locale
 ku - Kurdish (latin) locale
 ky - Kyrgyz (Kirghiz) locale
 ky_KG -  Kyrgyz (Kirghiz) locale for Kyrgyzstan
 la - Latin2 locale
 lb - Luxembourgish locale
 lg - Ganda locale
+li - Limburgian locale
 lo - Lao locale
 lt - Lithuanian locale
 lt_LT - Lithuanian locale
@@ -131,6 +136,7 @@ lv - Latvian locale
 lv_LV - Latvian locale for Latvia
 mai - Maithili locale
 me - Montenegrin (Crnogorski) locale
+mg - Malagasy locale
 mk - Macedonian locale
 ml - Malayalam locale
 ml_IN - Malayalam locale for India
@@ -176,6 +182,7 @@ ro - Romanian locale
 ro_RO - Romanian locale for Romania
 ru - Russian locale
 ru_RU - Russian locale for Russia
+rue - Rusyn locale
 rw - Kinyarwanda locale
 sa_IN - Sanskrit locale
 sat - Santali locale
@@ -184,6 +191,8 @@ sd - Sindhi locale
 se - Northern Saami locale
 sh - Serbo-Croatian locale
 sh_YU - Serbo-Croatian locale
+shn - Shan locale
+so - Somali locale
 son - Songhai locale
 si - Sinhala locale
 si_LK - Sinhala locale
@@ -222,7 +231,9 @@ ti - Tigrinya locale
 ti_ER - Tigrinya locale for Eritrea
 tk - Turkmen locale
 tl - Tagalog locale
+tlh - Klingon locale
 tn - Tswana locale
+tpi - Tok Pisin locale
 tr - Turkish locale
 ts - Tsonga locale
 tt - Tatar locale
