@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.125 2014/04/15 15:52:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.126 2014/05/16 09:40:05 pinkbyte Exp $
+
+  16 May 2014; Sergey Popov <pinkbyte@gentoo.org> boost-build-1.53.0.ebuild,
+  boost-build-1.54.0.ebuild, boost-build-1.55.0.ebuild:
+  Respect multilib during building Python-related stuff, bug #496446
 
   15 Apr 2014; Sergey Popov <pinkbyte@gentoo.org> -boost-build-1.49.0.ebuild,
   -files/boost-build-1.42-env-whitespace.patch:

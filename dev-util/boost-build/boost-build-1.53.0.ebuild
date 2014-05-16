@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0.ebuild,v 1.1 2013/02/12 15:39:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0.ebuild,v 1.2 2014/05/16 09:40:05 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
 
-inherit eutils flag-o-matic python toolchain-funcs versionator
+inherit eutils flag-o-matic multilib python toolchain-funcs versionator
 
 MY_PV=$(replace_all_version_separators _)
 
@@ -48,8 +48,11 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.52.0-darwin-no-python-framework.patch"
 
 	# Remove stripping option
+	# Fix python components build on multilib systems, bug #496446
 	cd "${S}/engine"
-	sed -i -e 's|-s\b||' \
+	sed -i \
+		-e 's|-s\b||' \
+		-e "/libpython/s/lib ]/$(get_libdir) ]/" \
 		build.jam || die "sed failed"
 
 	# Force regeneration
