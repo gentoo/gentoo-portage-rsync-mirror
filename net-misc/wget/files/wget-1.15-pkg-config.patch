@@ -1,6 +1,6 @@
-From 0f3c2a0720dd6dd86837d72f032644058e56cacd Mon Sep 17 00:00:00 2001
+From 5730efa0804468d342cb82d1ac9d5fc794ff572d Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
-Date: Wed, 22 Jan 2014 14:01:24 +0100
+Date: Fri, 16 May 2014 11:29:53 +0200
 Subject: [PATCH] detect openssl/pcre/libuuid/zlib via pkg-config if it's
  available
 
@@ -12,11 +12,11 @@ Forward-ported to 1.15 release from b97942cd6b496501b396ea3bc2710010f4591542
 
 Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
 ---
- configure.ac | 102 +++++++++++++++++++++++++++++++++++++++++------------------
- 1 file changed, 72 insertions(+), 30 deletions(-)
+ configure.ac | 107 ++++++++++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 77 insertions(+), 30 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index b24588f..088ef22 100644
+index c5437bf..e0e2b25 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -68,6 +68,9 @@ AC_ARG_WITH(ssl,
@@ -29,7 +29,7 @@ index b24588f..088ef22 100644
  AC_ARG_ENABLE(opie,
  [  --disable-opie          disable support for opie or s/key FTP login],
  ENABLE_OPIE=$enableval, ENABLE_OPIE=yes)
-@@ -237,12 +240,26 @@ dnl
+@@ -237,12 +240,28 @@ dnl
  dnl Checks for libraries.
  dnl
  
@@ -41,6 +41,7 @@ index b24588f..088ef22 100644
 +  PKG_CHECK_MODULES([ZLIB], zlib, [
 +    LIBS="$ZLIB_LIBS $LIBS"
 +    CFLAGS="$ZLIB_CFLAGS $CFLAGS"
++    AC_DEFINE([HAVE_LIBZ], [1], [Define if using zlib.])
 +  ], [
 +    AC_CHECK_LIB(z, compress)
 +  ])
@@ -53,11 +54,12 @@ index b24588f..088ef22 100644
 +    LIBS="$OPENSSL_LIBS $LIBS"
 +    CFLAGS="$OPENSSL_CFLAGS -DHAVE_LIBSSL $CFLAGS"
 +    LIBSSL=" " # ntlm check below wants this
++    AC_DEFINE([HAVE_LIBSSL], [1], [Define if using openssl.])
 +  ], [
    dnl As of this writing (OpenSSL 0.9.6), the libcrypto shared library
    dnl doesn't record its dependency on libdl, so we need to make sure
    dnl -ldl ends up in LIBS on systems that have it.  Most OSes use
-@@ -276,9 +293,9 @@ AS_IF([test x"$with_ssl" = xopenssl], [
+@@ -276,9 +295,9 @@ AS_IF([test x"$with_ssl" = xopenssl], [
      ;;
    esac
  
@@ -70,7 +72,7 @@ index b24588f..088ef22 100644
  #include <openssl/ssl.h>
  #include <openssl/x509.h>
  #include <openssl/err.h>
-@@ -286,17 +303,18 @@ AS_IF([test x"$with_ssl" = xopenssl], [
+@@ -286,17 +305,18 @@ AS_IF([test x"$with_ssl" = xopenssl], [
  #include <openssl/des.h>
  #include <openssl/md4.h>
  #include <openssl/md5.h>
@@ -100,7 +102,7 @@ index b24588f..088ef22 100644
    ])
  
  ], [
-@@ -305,6 +323,13 @@ AS_IF([test x"$with_ssl" = xopenssl], [
+@@ -305,6 +325,14 @@ AS_IF([test x"$with_ssl" = xopenssl], [
      dnl default is -lgnutls
      with_ssl=gnutls
  
@@ -109,12 +111,13 @@ index b24588f..088ef22 100644
 +    AC_LIBOBJ([gnutls])
 +    LIBS="$GNUTLS_LIBS $LIBS"
 +    CFLAGS="$GNUTLS_CFLAGS -DHAVE_LIBGNUTLS $CFLAGS"
++    AC_DEFINE([HAVE_LIBGNUTLS], [1], [Define if using gnutls.])
 +  ], [
 +
      dnl Now actually check for -lgnutls
      AC_LIB_HAVE_LINKFLAGS([gnutls], [], [
  #include <gnutls/gnutls.h>
-@@ -319,6 +344,8 @@ AS_IF([test x"$with_ssl" = xopenssl], [
+@@ -319,6 +347,8 @@ AS_IF([test x"$with_ssl" = xopenssl], [
        AC_MSG_ERROR([--with-ssl=gnutls was given, but GNUTLS is not available.])
      fi
  
@@ -123,7 +126,7 @@ index b24588f..088ef22 100644
      AC_CHECK_FUNCS(gnutls_priority_set_direct)
    ]) # endif: --with-ssl != no?
  ]) # endif: --with-ssl == openssl?
-@@ -535,26 +562,41 @@ dnl
+@@ -535,26 +565,43 @@ dnl
  dnl Check for UUID
  dnl
  
@@ -140,6 +143,7 @@ index b24588f..088ef22 100644
 +  PKG_CHECK_MODULES([UUID], uuid, [
 +    LIBS="$UUID_LIBS $LIBS"
 +    CFLAGS="$UUID_CFLAGS $CFLAGS"
++    AC_DEFINE([HAVE_LIBUUID], [1], [Define if using libuuid.])
 +  ], [
 +    AC_CHECK_HEADER(uuid/uuid.h,
 +		    AC_CHECK_LIB(uuid, uuid_generate,
@@ -167,6 +171,7 @@ index b24588f..088ef22 100644
 +  PKG_CHECK_MODULES([PCRE], libpcre, [
 +    LIBS="$PCRE_LIBS $LIBS"
 +    CFLAGS="$PCRE_CFLAGS $CFLAGS"
++    AC_DEFINE([HAVE_LIBPCRE], [1], [Define if using libpcre.])
 +  ], [
 +    AC_CHECK_HEADER(pcre.h,
 +		    AC_CHECK_LIB(pcre, pcre_compile,
@@ -181,5 +186,5 @@ index b24588f..088ef22 100644
  dnl Needed by src/Makefile.am
  AM_CONDITIONAL([IRI_IS_ENABLED], [test "X$iri" != "Xno"])
 -- 
-1.8.5.3
+1.9.3
 

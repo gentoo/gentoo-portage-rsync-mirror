@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.182 2014/01/23 07:41:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.183 2014/05/16 10:59:20 polynomial-c Exp $
+
+*wget-1.15-r1 (16 May 2014)
+
+  16 May 2014; Lars Wendler <polynomial-c@gentoo.org> -wget-1.15.ebuild,
+  +wget-1.15-r1.ebuild, files/wget-1.15-pkg-config.patch:
+  Fixed compilation with zlib, uuid, pcre and/or openssl (bug #510414). Removed
+  old.
 
 *wget-1.15 (23 Jan 2014)
 

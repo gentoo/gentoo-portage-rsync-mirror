@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.15.ebuild,v 1.1 2014/01/23 07:41:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.15-r1.ebuild,v 1.1 2014/05/16 10:59:20 polynomial-c Exp $
 
 EAPI="4"
 
