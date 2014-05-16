@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.7.ebuild,v 1.1 2013/01/31 22:42:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.7.ebuild,v 1.2 2014/05/16 17:20:04 kensington Exp $
 
 EAPI=5
 
@@ -41,6 +41,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=( "${FILESDIR}/${P}-include.patch" )
 
 src_prepare() {
 	local lang
