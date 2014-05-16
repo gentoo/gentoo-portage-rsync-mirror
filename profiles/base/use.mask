@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.197 2014/04/30 22:07:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.198 2014/05/16 11:10:18 grozin Exp $
 
 # cuda only works on amd64/x86
 cuda
@@ -348,7 +348,7 @@ abi_s390_32
 abi_s390_64
 
 # Andrey Grozin <grozin@gentoo.org> (1 May 2013)
-# gcl is masked, cmucl only available on x86, clozurecl on x86 and amd64
+# gcl, cmucl, clozurecl are available only on some arches
 gcl
 cmucl
 clozurecl

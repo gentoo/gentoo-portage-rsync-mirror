@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8967 2014/05/16 08:19:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8968 2014/05/16 11:10:17 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 May 2014; Andrey Grozin <grozin@gentoo.org> package.mask:
+  The masked version of gcl has been removed, removing the line in package.mask.
 
   16 May 2014; Hans de Graaff <graaff@gentoo.org> updates/2Q-2014:
   Add slotmove for dev-ruby/http-0.6.x packages.

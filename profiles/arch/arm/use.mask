@@ -7,6 +7,10 @@
 # doomsday ebuild is not available on this architecture
 doomsday
 
+# Andrey Grozin <grozin@gentoo.org> (16 May 2014)
+# gcl keyworded ~arm, bug #509842
+-gcl
+
 # Markus Meier <maekke@gentoo.org> (22 Aug 2010)
 # unmask synaptics input driver
 -input_devices_synaptics
