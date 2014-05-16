@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.6.ebuild,v 1.2 2014/05/16 02:15:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.9.ebuild,v 1.1 2014/05/16 02:15:08 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
