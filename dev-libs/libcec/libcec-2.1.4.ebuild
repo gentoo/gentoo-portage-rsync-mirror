@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.1.4.ebuild,v 1.1 2014/03/23 15:24:46 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.1.4.ebuild,v 1.2 2014/05/16 03:30:48 mrueg Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://libcec.pulse-eight.com"
 SRC_URI="http://github.com/Pulse-Eight/${PN}/archive/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~arm ~amd64 ~x86"
 IUSE="debug static-libs"
 
 RDEPEND="virtual/udev

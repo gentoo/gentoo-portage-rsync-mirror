@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.28 2014/03/23 15:24:46 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.29 2014/05/16 03:30:48 mrueg Exp $
+
+  16 May 2014; Manuel Rüger <mrueg@gentoo.org> libcec-2.1.4.ebuild:
+  Add ~arm keyword.
 
 *libcec-2.1.4 (23 Mar 2014)
 
