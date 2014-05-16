@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.29 2014/04/30 21:17:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.30 2014/05/16 21:30:15 dlan Exp $
+
+*seabios-1.7.4 (16 May 2014)
+
+  16 May 2014; Yixun Lan <dlan@gentoo.org> +seabios-1.7.4.ebuild:
+  version bump, fix bug 510052, 510492
 
   30 Apr 2014; Mike Frysinger <vapier@gentoo.org> seabios-1.7.3.ebuild,
   seabios-1.7.3.2.ebuild:
