@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python-exec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/ChangeLog,v 1.17 2014/03/06 08:00:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/ChangeLog,v 1.18 2014/05/16 21:52:41 mgorny Exp $
+
+  16 May 2014; Michał Górny <mgorny@gentoo.org> -python-exec-0.3.1.ebuild,
+  -python-exec-2.0.1.ebuild, -python-exec-2.0.ebuild:
+  Drop old.
 
 *python-exec-2.0.1-r1 (06 Mar 2014)
 *python-exec-0.3.1-r1 (06 Mar 2014)

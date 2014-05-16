@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.238 2014/05/14 15:00:27 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.239 2014/05/16 21:39:26 dlan Exp $
+
+*xen-tools-4.4.0-r4 (16 May 2014)
+
+  16 May 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.4.0-r3.ebuild,
+  +xen-tools-4.4.0-r4.ebuild:
+  force depend on >=seabios-1.7.4, fix bug #510492, thanks Tomas Mozes
 
 *xen-tools-4.4.0-r3 (14 May 2014)
 

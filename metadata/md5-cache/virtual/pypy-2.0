@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=A virtual for PyPy Python implementation
-EAPI=5
-IUSE=bzip2 ncurses sqlite
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
-RDEPEND=|| ( dev-python/pypy:2.0[bzip2?,ncurses?,sqlite?,ssl(+)] dev-python/pypy-bin:2.0[sqlite?] )
-SLOT=2.0
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=4be1d75f0e3682f9563eef6e9e196dc5

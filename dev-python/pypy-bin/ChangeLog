@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.18 2014/05/12 20:49:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.19 2014/05/16 21:50:11 mgorny Exp $
+
+  16 May 2014; Michał Górny <mgorny@gentoo.org> -pypy-bin-2.0.2.ebuild:
+  Remove old (slotted) version.
 
   12 May 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.2.1-r1.ebuild:
   Remove the versioned deps, they are too painful to maintain for a minor tool

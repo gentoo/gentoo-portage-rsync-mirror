@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r3.ebuild,v 1.1 2014/05/14 15:00:27 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r4.ebuild,v 1.1 2014/05/16 21:39:26 dlan Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ DEPEND="${COMMON_DEPEND}
 	arm? ( >=sys-apps/dtc-1.4.0 )
 	!arm? ( sys-devel/bin86
 		sys-firmware/ipxe
-		sys-firmware/seabios
+		>=sys-firmware/seabios-1.7.4
 		sys-devel/dev86
 		sys-power/iasl )
 	dev-lang/perl
