@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8970 2014/05/16 19:28:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8971 2014/05/16 20:05:58 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 May 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Remove masks for broken gentoo-sources revisions that were removed, as a new
+  revision has been added which uses a working stable queue patch.
 
   16 May 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Mask gentoo-sources revisions that have a broken security mask.
