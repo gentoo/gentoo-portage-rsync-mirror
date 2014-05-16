@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/primateplunge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.12 2014/05/15 16:31:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/primateplunge/ChangeLog,v 1.13 2014/05/16 19:21:26 mr_bones_ Exp $
+
+  16 May 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/primateplunge-1.1-AC_SUBST.patch, primateplunge-1.1-r1.ebuild:
+  EAPI=5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> primateplunge-1.1-r1.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
@@ -48,4 +52,3 @@
   25 Mar 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +primateplunge-1.1.ebuild:
   New ebuild by myself
-

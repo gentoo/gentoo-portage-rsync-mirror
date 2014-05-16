@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.9_p1.ebuild,v 1.4 2011/03/26 14:12:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.9_p1.ebuild,v 1.5 2014/05/16 19:09:24 swift Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -62,7 +62,7 @@ SRC_URI="x86? ( ${X86_JRE_DIST} )
 LICENSE="IBM-J1.6"
 KEYWORDS="-* amd64 ppc ppc64 x86"
 RESTRICT="fetch"
-IUSE="X alsa nsplugin odbc"
+IUSE="X alsa nsplugin odbc selinux"
 
 RDEPEND="
 		X? (
@@ -75,8 +75,9 @@ RDEPEND="
 			x11-libs/libXt
 		)
 		alsa? ( media-libs/alsa-lib )
-		odbc? ( dev-db/unixODBC )"
-DEPEND=""
+		odbc? ( dev-db/unixODBC )
+		selinux? ( sec-policy/selinux-java )"
+DEPEND="selinux? ( sec-policy/selinux-java )"
 
 QA_TEXTRELS_x86="opt/${P}/lib/i386/libj9jvmti24.so
 opt/${P}/lib/i386/libj9vm24.so

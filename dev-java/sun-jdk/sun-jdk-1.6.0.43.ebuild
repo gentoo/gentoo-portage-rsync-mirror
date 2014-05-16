@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.43.ebuild,v 1.3 2013/03/07 18:45:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.43.ebuild,v 1.4 2014/05/16 19:03:59 swift Exp $
 
 EAPI="5"
 
@@ -51,7 +51,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.6"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="+X alsa derby doc examples jce kernel_SunOS nsplugin pax_kernel source"
+IUSE="+X alsa derby doc examples jce kernel_SunOS nsplugin pax_kernel selinux source"
 
 RESTRICT="fetch strip"
 QA_PREBUILT="*"
@@ -66,13 +66,15 @@ RDEPEND="
 	)
 	alsa? ( media-libs/alsa-lib )
 	doc? ( dev-java/java-sdk-docs:1.6.0 )
+	selinux? ( sec-policy/selinux-java )
 	!prefix? ( sys-libs/glibc )"
 # scanelf won't create a PaX header, so depend on paxctl to avoid fallback
 # marking. #427642
 DEPEND="
 	jce? ( app-arch/unzip )
 	kernel_SunOS? ( app-arch/unzip )
-	pax_kernel? ( sys-apps/paxctl )"
+	pax_kernel? ( sys-apps/paxctl )
+	selinux? ( sec-policy/selinux-java )"
 
 S="${WORKDIR}"/jdk${S_PV}
 

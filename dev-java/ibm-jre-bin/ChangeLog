@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.174 2014/01/29 19:06:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.175 2014/05/16 19:09:24 swift Exp $
+
+  16 May 2014; Sven Vermeulen <swift@gentoo.org> ibm-jre-bin-1.6.0.9_p1.ebuild,
+  ibm-jre-bin-1.6.0.9_p2-r1.ebuild, ibm-jre-bin-1.6.0.9_p2.ebuild:
+  Fix bug #509740 - Enable USE=selinux dependency to sec-policy/selinux-java
 
   29 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/ibm-jre-bin-1.5.env, -ibm-jre-bin-1.5.0.12_p4.ebuild,

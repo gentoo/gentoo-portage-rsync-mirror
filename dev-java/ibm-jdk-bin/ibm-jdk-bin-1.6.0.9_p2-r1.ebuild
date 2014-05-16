@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.9_p2-r1.ebuild,v 1.3 2012/10/05 15:17:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.9_p2-r1.ebuild,v 1.4 2014/05/16 19:18:46 swift Exp $
 
 EAPI="4"
 
@@ -67,7 +67,7 @@ LICENSE="IBM-J1.6"
 SLOT="1.6"
 KEYWORDS="-* ~amd64 ppc ~ppc64 ~x86"
 RESTRICT="fetch"
-IUSE="X alsa doc examples javacomm nsplugin odbc"
+IUSE="X alsa doc examples javacomm nsplugin odbc selinux"
 
 RDEPEND="
 	ppc? ( =virtual/libstdc++-3.3 )
@@ -83,7 +83,10 @@ RDEPEND="
 	)
 	alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.6.0* )
-	odbc? ( dev-db/unixODBC )"
+	odbc? ( dev-db/unixODBC )
+	selinux? ( sec-policy/selinux-java )"
+
+DEPEND="selinux? ( sec-policy/selinux-java )"
 
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/libj9jvmti24.so
 opt/${P}/jre/lib/i386/libj9vm24.so
