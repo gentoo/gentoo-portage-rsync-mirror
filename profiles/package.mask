@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15699 2014/05/16 23:05:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15700 2014/05/17 09:02:18 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (17 May 2014)
+# SRC_URI dead and no license permitting redistribution.
+# HOMEPAGE gone, attempts to contact main upstream author failed.
+# Second upstream author does not have access to sources any more.
+# Masked for removal in 30 days, bug 505620.
+games-emulation/boycott-advance-sdl
+
+# Ulrich Müller <ulm@gentoo.org> (17 May 2014)
+# SRC_URI dead and no license permitting redistribution.
+# HOMEPAGE gone, attempts to contact upstream authors failed.
+# Masked for removal in 30 days, bug 505628.
+games-emulation/neopocott
 
 # Tom Wijsman <TomWij@gentoo.org> (16 May 2014)
 # Mask gentoo-sources ebuilds that are affected with security bug CVE-2014-0196.

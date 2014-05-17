@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.8.0.ebuild,v 1.1 2014/05/09 20:46:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.8.0.ebuild,v 1.2 2014/05/17 09:07:40 hwoarang Exp $
 
 EAPI="5"
 
@@ -105,7 +105,7 @@ src_configure() {
 
 	if use ftdi; then
 		myconf+=(
-			--enable_usb_blaster_libftdi
+			--enable-usb_blaster_libftd
 			--enable-openjtag_ftdi
 			--enable-presto_libftdi
 		)
