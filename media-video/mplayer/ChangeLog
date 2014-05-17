@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.912 2014/02/06 12:26:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.913 2014/05/17 14:52:06 swift Exp $
+
+  17 May 2014; Sven Vermeulen <swift@gentoo.org> mplayer-1.1.1-r1.ebuild,
+  mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:
+  Fix bug #509740 - Add USE=selinux dependency to sec-policy/selinux-mplayer
 
   06 Feb 2014; Michael Palimaka <kensington@gentoo.org> mplayer-1.1.1-r1.ebuild,
   mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:

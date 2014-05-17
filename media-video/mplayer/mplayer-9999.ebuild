@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.155 2014/02/06 12:26:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.156 2014/05/17 14:52:06 swift Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ directfb doc dts dv dvb +dvd +dvdnav dxr3 +enca +encode faac faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc live lzo mad md5sum +mmx mmxext mng mp3 nas
 +network nut openal opengl +osdmenu oss png pnm pulseaudio pvr
-radio rar rtc rtmp samba +shm sdl speex sse sse2 ssse3
+radio rar rtc rtmp samba selinux +shm sdl speex sse sse2 ssse3
 tga theora tremor +truetype toolame twolame +unicode v4l vdpau vidix
 vorbis +X x264 xanim xinerama +xscreensaver +xv xvid xvmc zoran"
 
@@ -118,6 +118,7 @@ RDEPEND+="
 	)
 	rtmp? ( media-video/rtmpdump )
 	samba? ( net-fs/samba )
+	selinux? ( sec-policy/selinux-mplayer )
 	sdl? ( media-libs/libsdl )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora[encode?] )

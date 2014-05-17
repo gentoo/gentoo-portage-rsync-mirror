@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.1 2014/05/17 03:32:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.2 2014/05/17 14:47:05 idella4 Exp $
 
 EAPI=5
 
@@ -30,8 +30,8 @@ DEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
 		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 )
 	)"
 RDEPEND="${DEPEND}"
-# Usual; requ'd fore test phase
-DISTUTILS_IN_SOURCE_BUILD=1
+# Tests have new deps that can never be keyworded, for now
+RESTRICT="test"
 
 python_prepare_all() {
 	sed -e "/data_files=/d" -i setup.py || die

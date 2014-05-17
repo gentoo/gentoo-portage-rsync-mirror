@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.92 2014/05/17 03:32:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.93 2014/05/17 14:47:05 idella4 Exp $
+
+  17 May 2014; Ian Delaney <idella4@gentoo.org> pycurl-7.19.3.1.ebuild:
+  restrict test due to extensive keyword deficits in new test deps
 
 *pycurl-7.19.3.1 (17 May 2014)
 
