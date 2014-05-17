@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare unpack
+DEPEND=media-libs/aubio media-libs/liblo sci-libs/fftw:3.0 media-libs/freetype:2 >=dev-libs/glib-2.10.1:2 dev-cpp/glibmm:2 >=x11-libs/gtk+-2.8.1:2 >=dev-libs/libxml2-2.6:2 >=media-libs/libsndfile-1.0.18 >=media-libs/libsamplerate-0.1 >=media-libs/rubberband-1.6.0 >=media-libs/libsoundtouch-1.6.0 media-libs/flac media-libs/raptor:2 >=media-libs/liblrdf-0.4.0-r20 >=media-sound/jack-audio-connection-kit-0.120 >=gnome-base/libgnomecanvas-2 media-libs/vamp-plugin-sdk dev-libs/libxslt dev-libs/libsigc++:2 >=dev-cpp/gtkmm-2.16:2.4 >=dev-cpp/libgnomecanvasmm-2.26:2.6 media-libs/alsa-lib x11-libs/pango x11-libs/cairo media-libs/libart_lgpl virtual/libusb:0 dev-libs/boost >=media-libs/taglib-1.7 net-misc/curl lv2? ( >=media-libs/slv2-0.6.1 media-libs/lilv media-libs/sratom dev-libs/sord >=media-libs/suil-0.6.10 >=media-libs/lv2-1.4.0 ) virtual/pkgconfig nls? ( sys-devel/gettext ) doc? ( app-doc/doxygen[dot] ) dev-lang/python !dev-lang/python[-threads]
+DESCRIPTION=Digital Audio Workstation
+EAPI=4
+HOMEPAGE=http://ardour.org/
+IUSE=altivec debug doc nls lv2 sse
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/aubio media-libs/liblo sci-libs/fftw:3.0 media-libs/freetype:2 >=dev-libs/glib-2.10.1:2 dev-cpp/glibmm:2 >=x11-libs/gtk+-2.8.1:2 >=dev-libs/libxml2-2.6:2 >=media-libs/libsndfile-1.0.18 >=media-libs/libsamplerate-0.1 >=media-libs/rubberband-1.6.0 >=media-libs/libsoundtouch-1.6.0 media-libs/flac media-libs/raptor:2 >=media-libs/liblrdf-0.4.0-r20 >=media-sound/jack-audio-connection-kit-0.120 >=gnome-base/libgnomecanvas-2 media-libs/vamp-plugin-sdk dev-libs/libxslt dev-libs/libsigc++:2 >=dev-cpp/gtkmm-2.16:2.4 >=dev-cpp/libgnomecanvasmm-2.26:2.6 media-libs/alsa-lib x11-libs/pango x11-libs/cairo media-libs/libart_lgpl virtual/libusb:0 dev-libs/boost >=media-libs/taglib-1.7 net-misc/curl lv2? ( >=media-libs/slv2-0.6.1 media-libs/lilv media-libs/sratom dev-libs/sord >=media-libs/suil-0.6.10 >=media-libs/lv2-1.4.0 )
+SLOT=3
+SRC_URI=https://github.com/Ardour/ardour/archive/3.5.380.tar.gz -> ardour-3.5.380.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_md5_=4ef42134e2ac03f13ffb8a00eef2506b
