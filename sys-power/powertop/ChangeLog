@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.100 2014/03/12 10:18:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.101 2014/05/17 02:23:35 zerochaos Exp $
+
+*powertop-2.6 (17 May 2014)
+
+  17 May 2014; Rick Farina <zerochaos@gentoo.org> +powertop-2.6.ebuild,
+  powertop-9999.ebuild:
+  version bump. tunables went nuts on me once and messed up the display but
+  things are roughly working
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> powertop-2.5.ebuild:
   Stable for sparc, wrt bug #500036

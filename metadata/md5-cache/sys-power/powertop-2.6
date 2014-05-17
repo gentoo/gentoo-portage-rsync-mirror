@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure prepare setup
+DEPEND=dev-libs/libnl:3 sys-apps/pciutils sys-libs/ncurses[unicode?] virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=tool that helps you find what software is using the most power
+EAPI=5
+HOMEPAGE=https://01.org/powertop/
+IUSE=unicode X
+KEYWORDS=~amd64 ~arm ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=dev-libs/libnl:3 sys-apps/pciutils sys-libs/ncurses[unicode?] X? ( x11-apps/xset ) virtual/libintl
+SLOT=0
+SRC_URI=https://01.org/sites/default/files/downloads/powertop/powertop-2.6.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=6a5fa0e120275fbc67e5f637f5132142
