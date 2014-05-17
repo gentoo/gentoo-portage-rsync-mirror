@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.241 2014/05/17 13:34:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.242 2014/05/17 14:02:26 dlan Exp $
+
+  17 May 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.2.3-r1.ebuild,
+  -xen-tools-4.2.4-r1.ebuild, -xen-tools-4.3.1-r5.ebuild,
+  -xen-tools-4.3.1-r6.ebuild, -xen-tools-4.3.2-r1.ebuild,
+  -files/xen-4-CVE-2012-6075-XSA-41.patch,
+  -files/xen-tools-4-CVE-2014-1950-XSA-88.patch,
+  -files/xen-4.2.0-anti-download.patch, -files/xen-4-CVE-XSA-86.patch,
+  -files/xen-4.3-anti-download.patch:
+  clean old ebuilds
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.2.4-r2.ebuild:
   Stable for x86, wrt bug #509054

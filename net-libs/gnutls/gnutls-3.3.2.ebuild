@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.2.ebuild,v 1.1 2014/05/17 09:46:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.2.ebuild,v 1.2 2014/05/17 14:16:42 mgorny Exp $
 
 EAPI=5
 
@@ -103,7 +103,7 @@ multilib_src_compile() {
 
 		# symlink certtool for use in other ABIs
 		if use test; then
-			ln -s "${BUILD_DIR}"/src/certtool "${T}"/certtool || die
+			ln -s "${BUILD_DIR}"/src "${T}"/native-tools || die
 		fi
 	else
 		emake -C gl
@@ -118,8 +118,9 @@ multilib_src_test() {
 		# parallel testing often fails
 		emake -j1 check
 	else
-		# use native ABI certtool
-		ln -s "${T}"/certtool "${BUILD_DIR}"/src/certtool || die
+		# use native ABI tools
+		ln -s "${T}"/native-tools/{certtool,gnutls-{serv,cli}} \
+			"${BUILD_DIR}"/src/ || die
 
 		emake -C gl -j1 check
 		emake -C tests -j1 check

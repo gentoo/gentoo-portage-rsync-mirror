@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.36 2014/05/13 14:48:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.37 2014/05/17 14:05:52 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> libfprint-0.5.0-r1.ebuild:
+  Stable for alpha, wrt bug #502924
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> libfprint-0.5.0-r1.ebuild:
   Stable for ia64, wrt bug #502924

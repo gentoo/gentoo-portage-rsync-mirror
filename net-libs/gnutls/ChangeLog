@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.491 2014/05/17 09:46:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.492 2014/05/17 14:16:42 mgorny Exp $
+
+  17 May 2014; Michał Górny <mgorny@gentoo.org> gnutls-3.3.2.ebuild:
+  Symlink remaining tools necessary for tests for non-native ABIs.
 
 *gnutls-3.3.2 (17 May 2014)
 *gnutls-3.2.14 (17 May 2014)

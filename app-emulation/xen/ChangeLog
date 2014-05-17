@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.162 2014/05/17 13:34:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.163 2014/05/17 14:08:19 dlan Exp $
+
+  17 May 2014; Yixun Lan <dlan@gentoo.org> -xen-4.2.3.ebuild,
+  -xen-4.2.4-r1.ebuild, -xen-4.3.1-r5.ebuild, -xen-4.3.2-r1.ebuild,
+  -files/xen-4-XSA-83.patch, -files/xen-4.3-CVE-2013-4553-XSA-74.patch,
+  -files/xen-4.3-CVE-2013-6375-XSA-75.patch,
+  -files/xen-4.3-CVE-2014-263-XSA-84-85.patch, -files/xen-4.3-XSA-87.patch,
+  -files/xen-CVE-2013-4375-XSA-71.patch, -files/xen-CVE-2013-4494-XSA-73.patch,
+  -files/xen-CVE-2013-4554-XSA-76.patch, -files/xen-CVE-2013-6375-XSA-78.patch,
+  -files/xen-CVE-2013-6400-XSA-80.patch, -files/xen-CVE-2013-6885-XSA-82.patch:
+  tree clean old ebuilds
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> xen-4.2.4-r2.ebuild:
   Stable for x86, wrt bug #509054

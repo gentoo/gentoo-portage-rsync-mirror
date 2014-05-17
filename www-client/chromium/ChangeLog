@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1075 2014/05/17 10:49:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1076 2014/05/17 14:31:13 zlogene Exp $
+
+  17 May 2014; Mikle Kolyada <zlogene@gentoo.org> chromium-34.0.1847.137.ebuild:
+  x86 stable wrt bug #510288
 
 *chromium-36.0.1985.8 (12 May 2014)
 *chromium-35.0.1916.114-r1 (12 May 2014)

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.411 2014/05/08 22:34:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.412 2014/05/17 14:06:42 blueness Exp $
+
+*tor-0.2.4.22 (17 May 2014)
+
+  17 May 2014; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.4.22.ebuild:
+  Version bump
 
   08 May 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signing

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.146 2014/03/23 10:14:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.147 2014/05/17 14:06:09 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> windowmaker-0.95.5-r1.ebuild:
+  Stable for alpha, wrt bug #496082
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> windowmaker-0.95.5-r1.ebuild:
   Stable for sparc, wrt bug #496082

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.40 2014/05/14 14:27:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.41 2014/05/17 14:03:27 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-VersionControl_SVN-0.5.1.ebuild:
+  Stable for alpha, wrt bug #502766
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org>
   PEAR-VersionControl_SVN-0.5.1.ebuild:

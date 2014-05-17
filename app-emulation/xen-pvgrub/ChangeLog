@@ -1,6 +1,25 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.53 2014/05/17 13:34:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.54 2014/05/17 14:17:16 dlan Exp $
+
+  17 May 2014; Yixun Lan <dlan@gentoo.org> -xen-pvgrub-4.2.2-r1.ebuild,
+  -xen-pvgrub-4.2.3.ebuild, -xen-pvgrub-4.3.1.ebuild,
+  -files/xen-4-CVE-2012-6075-XSA-41.patch,
+  -files/xen-4.2-CVE-2013-12to13-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-18to19-XSA-55.patch,
+  -files/xen-4-CVE-2013-1922-XSA-48.patch,
+  -files/xen-4.2-CVE-2013-14-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-2-XSA-55.patch,
+  -files/xen-4-CVE-2013-1952-XSA-49.patch,
+  -files/xen-4.2-CVE-2013-1-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-16-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-17-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-20to23-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-3-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-4-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-5to7-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-9to10-XSA-55.patch:
+  tree clean old ebuilds
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> xen-pvgrub-4.2.4.ebuild:
   Stable for x86, wrt bug #509054
