@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15698 2014/05/16 22:01:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15699 2014/05/16 23:05:16 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -336,7 +336,7 @@ sys-fs/rdiff-backup-fs
 
 # Markos Chandras <hwoarang@gentoo.org> (08 Apr 2014)
 # Masked for futher testing with various pam setups
-=x11-misc/lightdm-1.10*
+=x11-misc/lightdm-1.11*
 
 # Sergey Popov <pinkbyte@gentoo.org> (08 Apr 2014)
 # Security mask of vulnerable versions, wrt bug #505278

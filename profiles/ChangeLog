@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8974 2014/05/16 22:01:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8975 2014/05/16 23:05:16 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 May 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmask lightdm-1.10. Mask 1.11
 
   16 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Slide the PyPy mask to 2.3, unleashing 2.2 on our unexpecting users.

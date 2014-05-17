@@ -1,0 +1,16 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=>=dev-libs/glib-2.32.3:2 dev-libs/libxml2 sys-apps/accountsservice virtual/pam x11-libs/libX11 >=x11-libs/libxklavier-5 introspection? ( >=dev-libs/gobject-introspection-1 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ) dev-util/gtk-doc-am dev-util/intltool gnome-base/gnome-common sys-devel/gettext virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=A lightweight display manager
+EAPI=5
+HOMEPAGE=http://www.freedesktop.org/wiki/Software/LightDM
+IUSE=+gtk +introspection kde qt4 razor
+KEYWORDS=~amd64 ~arm ~ppc ~x86
+LICENSE=GPL-3 LGPL-3
+PDEPEND=gtk? ( x11-misc/lightdm-gtk-greeter ) kde? ( x11-misc/lightdm-kde ) razor? ( razorqt-base/razorqt-lightdm-greeter )
+RDEPEND=>=dev-libs/glib-2.32.3:2 dev-libs/libxml2 sys-apps/accountsservice virtual/pam x11-libs/libX11 >=x11-libs/libxklavier-5 introspection? ( >=dev-libs/gobject-introspection-1 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ) >=sys-auth/pambase-20101024-r2
+REQUIRED_USE=|| ( gtk kde razor )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://launchpad.net/lightdm/1.11/1.11.2/+download/lightdm-1.11.2.tar.xz mirror://gentoo/introspection-20110205.m4.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=fa8f1fccf1cbca0c31015bfb53bc0184
