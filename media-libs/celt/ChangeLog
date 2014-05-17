@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/celt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.33 2014/01/15 12:50:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.34 2014/05/17 16:45:59 jer Exp $
+
+  17 May 2014; Jeroen Roovers <jer@gentoo.org> celt-0.11.1-r1.ebuild:
+  Marked ~hppa (bug #510340).
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> celt-0.5.1.3.ebuild:
   Stable for alpha, wrt bug #488924
