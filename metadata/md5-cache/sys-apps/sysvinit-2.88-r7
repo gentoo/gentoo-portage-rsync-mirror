@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=selinux? ( >=sys-libs/libselinux-1.28 ) virtual/os-headers
+DEPEND=selinux? ( >=sys-libs/libselinux-1.28 sec-policy/selinux-shutdown ) virtual/os-headers
 DESCRIPTION=/sbin/init - parent of all processes
 EAPI=4
 HOMEPAGE=http://savannah.nongnu.org/projects/sysvinit
 IUSE=selinux ibm static kernel_FreeBSD
 KEYWORDS=~alpha amd64 arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86
 LICENSE=GPL-2
-RDEPEND=selinux? ( >=sys-libs/libselinux-1.28 )
+RDEPEND=selinux? ( >=sys-libs/libselinux-1.28 sec-policy/selinux-shutdown )
 SLOT=0
 SRC_URI=mirror://nongnu/sysvinit/sysvinit-2.88dsf.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=ebf7d8c3b9a0ff0bb1ea5658c6e5d03f
+_md5_=d532b2139ea1c6368a12bff74ab0884b

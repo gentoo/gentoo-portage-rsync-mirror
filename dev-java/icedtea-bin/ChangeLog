@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.57 2013/12/10 18:38:20 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.58 2014/05/17 15:19:09 swift Exp $
+
+  17 May 2014; Sven Vermeulen <swift@gentoo.org> icedtea-bin-6.1.12.7.ebuild,
+  icedtea-bin-7.2.4.3.ebuild:
+  Add USE=selinux dependency to sec-policy/selinux-java
 
   10 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -icedtea-bin-6.1.12.5.ebuild,
   -icedtea-bin-6.1.12.6-r1.ebuild, -icedtea-bin-6.1.12.6.ebuild,

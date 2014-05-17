@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.120 2014/04/17 08:43:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.121 2014/05/17 15:22:54 swift Exp $
+
+  17 May 2014; Sven Vermeulen <swift@gentoo.org> icedtea-6.1.12.7.ebuild,
+  icedtea-6.1.13.1.ebuild, icedtea-6.1.13.2.ebuild, icedtea-6.1.13.3.ebuild,
+  icedtea-7.2.4.3.ebuild, icedtea-7.2.4.5.ebuild, icedtea-7.2.4.6.ebuild,
+  icedtea-7.2.4.7.ebuild:
+  Add USE=selinux dependency to sec-policy/selinux-java
 
   17 Apr 2014; Agostino Sarubbo <ago@gentoo.org> icedtea-6.1.13.3.ebuild:
   readd dev-java/ant-core as DEPEND

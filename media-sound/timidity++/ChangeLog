@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.161 2014/04/29 03:09:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.162 2014/05/17 15:13:39 swift Exp $
+
+  17 May 2014; Sven Vermeulen <swift@gentoo.org> timidity++-2.13.2-r13.ebuild,
+  timidity++-2.13.2-r14.ebuild, timidity++-2.14.0-r1.ebuild,
+  timidity++-2.14.0-r2.ebuild, timidity++-2.14.0.ebuild:
+  Fix bug #509740 - Add USE=selinux dependency to sec-policy/selinux-timidity
 
 *timidity++-2.14.0-r2 (29 Apr 2014)
 

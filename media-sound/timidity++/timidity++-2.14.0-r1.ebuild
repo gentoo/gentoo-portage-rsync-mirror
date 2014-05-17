@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0-r1.ebuild,v 1.5 2014/04/29 02:45:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0-r1.ebuild,v 1.6 2014/05/17 15:13:39 swift Exp $
 
 EAPI=5
 inherit autotools eutils elisp-common user systemd toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="motif oss nas X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
+IUSE="motif oss nas X gtk vorbis tk slang alsa jack emacs ao selinux speex flac ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	emacs? ( virtual/emacs )
@@ -28,6 +28,7 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	vorbis? ( media-libs/libvorbis )
 	flac? ( media-libs/flac )
+	selinux? ( sec-policy/selinux-timidity )
 	speex? ( media-libs/speex )
 	ao? ( >=media-libs/libao-0.8.5 )
 	motif? ( >=x11-libs/motif-2.3:0 )

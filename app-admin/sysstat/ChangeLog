@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.260 2014/05/02 12:58:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.261 2014/05/17 15:08:44 swift Exp $
+
+  17 May 2014; Sven Vermeulen <swift@gentoo.org> sysstat-10.2.0.ebuild,
+  sysstat-10.2.1-r1.ebuild, sysstat-10.3.1.ebuild:
+  Fix bug #509740 - Add USE=selinux dependency to sec-policy/selinux-sysstat
 
   02 May 2014; Jeroen Roovers <jer@gentoo.org> sysstat-10.2.1-r1.ebuild:
   Stable for HPPA (bug #509340).

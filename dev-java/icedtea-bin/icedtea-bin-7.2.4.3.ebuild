@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.4.3.ebuild,v 1.1 2013/11/11 07:08:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.4.3.ebuild,v 1.2 2014/05/17 15:19:09 swift Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ LICENSE="GPL-2-with-linking-exception"
 SLOT="7"
 KEYWORDS="-* ~amd64 ~x86"
 
-IUSE="+X +alsa cjk +cups doc examples nsplugin source"
+IUSE="+X +alsa cjk +cups doc examples nsplugin selinux source"
 REQUIRED_USE="nsplugin? ( X )"
 RESTRICT="strip"
 
@@ -61,7 +61,8 @@ COMMON_DEP="
 	>=sys-devel/gcc-4.5.4
 	>=sys-libs/glibc-2.15
 	>=sys-libs/zlib-1.2.3-r1
-	|| ( virtual/jpeg:62 media-libs/jpeg:62 )"
+	|| ( virtual/jpeg:62 media-libs/jpeg:62 )
+	selinux? ( sec-policy/selinux-java )"
 
 # cups is needed for X. #390945 #390975
 RDEPEND="${COMMON_DEP}

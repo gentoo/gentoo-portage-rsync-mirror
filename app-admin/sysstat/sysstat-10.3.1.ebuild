@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.3.1.ebuild,v 1.1 2014/03/21 15:48:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.3.1.ebuild,v 1.2 2014/05/17 15:08:44 swift Exp $
 
 EAPI=5
 inherit eutils multilib systemd toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="cron debug +doc isag nls lm_sensors"
+IUSE="cron debug +doc isag nls lm_sensors selinux"
 
 RDEPEND="
 	cron? ( sys-process/cronbase )
@@ -23,6 +23,7 @@ RDEPEND="
 	)
 	nls? ( virtual/libintl )
 	lm_sensors? ( sys-apps/lm_sensors )
+	selinux? ( sec-policy/selinux-sysstat )
 "
 DEPEND="
 	${RDEPEND}

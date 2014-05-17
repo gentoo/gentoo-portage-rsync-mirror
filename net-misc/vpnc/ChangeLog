@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.127 2014/03/01 22:26:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.128 2014/05/17 15:15:31 swift Exp $
+
+  17 May 2014; Sven Vermeulen <swift@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
+  Fix bug #509740 - Add USE=selinux dependency to sec-policy/selinux-vpn
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
   Update libgcrypt dep to use slot :0.

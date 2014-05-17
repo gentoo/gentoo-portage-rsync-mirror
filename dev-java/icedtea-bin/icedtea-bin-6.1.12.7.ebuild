@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.12.7.ebuild,v 1.3 2013/12/10 13:23:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.12.7.ebuild,v 1.4 2014/05/17 15:19:09 swift Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ LICENSE="GPL-2-with-linking-exception"
 SLOT="6"
 KEYWORDS="-* amd64 x86"
 
-IUSE="+X +alsa cjk +cups doc examples nsplugin source"
+IUSE="+X +alsa cjk +cups doc examples nsplugin selinux source"
 REQUIRED_USE="nsplugin? ( X )"
 RESTRICT="strip"
 
@@ -65,7 +65,8 @@ COMMON_DEP="
 		>=x11-libs/cairo-1.8.8
 		>=x11-libs/pango-1.24.5
 
-	)"
+	)
+	selinux? ( sec-policy/selinux-java )"
 
 RDEPEND="${COMMON_DEP}
 	X? (
