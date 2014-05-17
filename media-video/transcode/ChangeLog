@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.319 2014/05/14 14:25:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.320 2014/05/17 13:57:29 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> transcode-1.1.7-r3.ebuild:
+  Stable for alpha, wrt bug #504790
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> transcode-1.1.7-r3.ebuild:
   Stable for sparc, wrt bug #504790

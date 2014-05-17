@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.55 2014/05/14 14:28:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.56 2014/05/17 13:58:39 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> augeas-1.1.0.ebuild:
+  Stable for alpha, wrt bug #506464
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> augeas-1.1.0.ebuild:
   Stable for sparc, wrt bug #506464

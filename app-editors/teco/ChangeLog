@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/teco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.28 2014/05/13 10:31:20 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/ChangeLog,v 1.29 2014/05/17 13:59:46 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> teco-1.00-r4.ebuild:
+  Stable for alpha, wrt bug #507202
 
   13 May 2014; Chema Alonso <nimiux@gentoo.org> teco-1.00-r4.ebuild:
   Stable for amd64 wrt bug #507202
@@ -97,4 +100,3 @@
 
   28 Apr 2003; Tavis Ormandy <taviso@gentoo.org> teco-1.00.ebuild:
   Initial import. marking ~x86 ~alpha
-

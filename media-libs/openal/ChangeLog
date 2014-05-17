@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.182 2014/05/14 14:39:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.183 2014/05/17 13:57:16 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> openal-1.15.1-r2.ebuild:
+  Stable for alpha, wrt bug #501496
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> openal-1.15.1-r2.ebuild:
   Stable for sparc, wrt bug #501496

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.189 2014/05/13 14:41:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.190 2014/05/17 13:58:26 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> cracklib-2.9.1.ebuild:
+  Stable for alpha, wrt bug #503648
 
   13 May 2014; Agostino Sarubbo <ago@gentoo.org> cracklib-2.9.1.ebuild:
   Stable for ia64, wrt bug #503648

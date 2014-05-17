@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.272 2014/05/14 16:07:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.273 2014/05/17 13:50:49 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> apache-2.2.27.ebuild:
+  Stable for alpha, wrt bug #507866
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> apache-2.2.27.ebuild:
   Stable for sparc, wrt bug #507866

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.71 2014/05/10 11:44:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.72 2014/05/17 13:58:54 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> haskell-updater-1.2.1.ebuild:
+  Stable for alpha, wrt bug #502602
 
   10 May 2014; Sergei Trofimovich <slyfox@gentoo.org>
   haskell-updater-1.2.1.ebuild:

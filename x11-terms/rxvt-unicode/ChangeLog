@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.261 2014/05/14 16:10:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.262 2014/05/17 13:50:07 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> rxvt-unicode-9.20.ebuild:
+  Stable for alpha, wrt bug #509174
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> rxvt-unicode-9.20.ebuild:
   Stable for sparc, wrt bug #509174
