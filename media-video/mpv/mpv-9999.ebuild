@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.48 2014/04/25 14:42:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.49 2014/05/17 20:58:32 lu_zero Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd dvdnav +enca encode +iconv jack -joystick
+IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd dvdnav +enca encode examples +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl
 oss portaudio postproc pulseaudio pvr +quvi samba sdl selinux +shm v4l vaapi vcd vdpau
 vf-dlopen wayland +X xinerama +xscreensaver +xv"
@@ -29,6 +29,7 @@ vf-dlopen wayland +X xinerama +xscreensaver +xv"
 REQUIRED_USE="
 	dvdnav? ( dvd )
 	enca? ( iconv )
+	examples? ( lua )
 	lcms? ( opengl )
 	libguess? ( iconv )
 	luajit? ( lua )
@@ -92,7 +93,12 @@ RDEPEND+="
 	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
-	postproc? ( >=media-video/ffmpeg-2.1.4:0 )
+	postproc? (
+		|| (
+			>=media-libs/libpostproc-10.20140517
+			>=media-video/ffmpeg-2.1.4:0
+		)
+	)
 	pulseaudio? ( media-sound/pulseaudio )
 	quvi? (
 		>=media-libs/libquvi-0.4.1:=
@@ -164,6 +170,8 @@ src_configure() {
 		$(use_enable sdl sdl2) \
 		--disable-rsound \
 		--disable-vapoursynth \
+		$(use_enable examples libmpv-shared) \
+		$(use_enable examples client-api-examples) \
 		$(use_enable encode encoding) \
 		$(use_enable joystick) \
 		$(use_enable bluray libbluray) \
