@@ -1,6 +1,10 @@
 # ChangeLog for games-action/extreme-tuxracer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.17 2014/05/15 16:22:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.18 2014/05/17 19:20:35 hasufell Exp $
+
+  17 May 2014; Julian Ospald <hasufell@gentoo.org>
+  extreme-tuxracer-0.6.0.ebuild, +files/extreme-tuxracer-0.6.0-libsdl.patch:
+  fix build failure wrt #510474
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org>
   extreme-tuxracer-0.5_beta.ebuild, extreme-tuxracer-0.6.0.ebuild:
