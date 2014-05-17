@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-distutils-extra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.28 2014/03/31 20:40:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.29 2014/05/17 08:18:33 idella4 Exp $
+
+*python-distutils-extra-2.38 (17 May 2014)
+
+  17 May 2014; Ian Delaney <idella4@gentoo.org>
+  +python-distutils-extra-2.38.ebuild:
+  bump; drop py2.6 pypy2_0 add py3.4 pypy support, tidy
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org>
   python-distutils-extra-2.33-r1.ebuild, python-distutils-extra-2.37-r1.ebuild:
