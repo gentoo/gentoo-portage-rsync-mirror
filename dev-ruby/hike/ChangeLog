@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hike
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hike/ChangeLog,v 1.12 2013/12/27 03:26:54 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hike/ChangeLog,v 1.13 2014/05/17 06:20:33 graaff Exp $
+
+*hike-2.1.2 (17 May 2014)
+
+  17 May 2014; Hans de Graaff <graaff@gentoo.org> +hike-2.1.2.ebuild:
+  Version bump.
 
 *hike-1.2.3-r1 (27 Dec 2013)
 
