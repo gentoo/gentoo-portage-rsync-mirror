@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.49 2014/04/20 17:03:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.50 2014/05/17 11:35:01 graaff Exp $
+
+*mime-types-2.2 (17 May 2014)
+
+  17 May 2014; Hans de Graaff <graaff@gentoo.org> +mime-types-2.2.ebuild:
+  Version bump. Drop jruby since the code is no longer compatible with ruby 1.8
+  syntax.
 
   20 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/mime-types-1.18-linux-tests.patch, -mime-types-1.19.ebuild:
