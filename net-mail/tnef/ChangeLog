@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tnef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.66 2014/05/16 18:56:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.67 2014/05/17 17:14:12 jer Exp $
+
+  17 May 2014; Jeroen Roovers <jer@gentoo.org> tnef-1.4.10.ebuild:
+  Stable for HPPA (bug #510502).
 
   16 May 2014; Eray Aslan <eras@gentoo.org> tnef-1.4.10.ebuild:
   Don't run tests in parallel
