@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.146 2014/04/13 09:03:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.147 2014/05/17 09:35:38 polynomial-c Exp $
+
+*virtualbox-guest-additions-4.3.12 (17 May 2014)
+
+  17 May 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-guest-additions-4.3.8.ebuild,
+  +virtualbox-guest-additions-4.3.12.ebuild:
+  Version bump. Removed old.
 
   13 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Upstream changed release tarball again without increasing the version number

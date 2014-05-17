@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.490 2014/05/15 21:43:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.491 2014/05/17 09:46:25 alonbl Exp $
+
+*gnutls-3.3.2 (17 May 2014)
+*gnutls-3.2.14 (17 May 2014)
+
+  17 May 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnutls-3.3.2-build-out-of-tree.patch, +gnutls-3.2.14.ebuild,
+  +gnutls-3.3.2.ebuild:
+  Version bumps, fix bug#510282, fix build issues bug#510418 thanks to Michał
+  Górny
 
   15 May 2014; Michał Górny <mgorny@gentoo.org> gnutls-3.3.1-r1.ebuild:
   Symlink native certtool for reuse in tests, bug #510420.
