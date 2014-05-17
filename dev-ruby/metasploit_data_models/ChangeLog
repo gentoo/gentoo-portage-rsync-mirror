@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/metasploit_data_models
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/ChangeLog,v 1.22 2014/03/24 22:02:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/ChangeLog,v 1.23 2014/05/17 11:24:51 graaff Exp $
+
+*metasploit_data_models-0.17.1 (17 May 2014)
+
+  17 May 2014; Hans de Graaff <graaff@gentoo.org>
+  +metasploit_data_models-0.17.1.ebuild:
+  Version bump. Update dependencies. Add ruby20.
 
 *metasploit_data_models-0.17.0 (24 Mar 2014)
 
