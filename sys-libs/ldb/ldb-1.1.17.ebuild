@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.17.ebuild,v 1.1 2014/05/07 06:52:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.17.ebuild,v 1.2 2014/05/17 08:59:08 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -17,8 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~amd64
 IUSE="doc"
 
 RDEPEND="dev-libs/popt
-	>=sys-libs/talloc-2.0.8[python]
-	>=sys-libs/tevent-0.9.17
+	>=sys-libs/talloc-2.1.0[python]
+	>=sys-libs/tevent-0.9.21
 	>=sys-libs/tdb-1.2.12[python]
 	net-nds/openldap
 	!!<net-fs/samba-3.6.0[ldb]
