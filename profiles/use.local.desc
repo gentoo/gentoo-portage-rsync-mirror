@@ -606,6 +606,7 @@ app-emulation/wine:netapi - Use libnetapi from net-fs/samba to support Windows n
 app-emulation/wine:opencl - Enable OpenCL support
 app-emulation/wine:osmesa - Add support for OpenGL in bitmaps using libOSMesa
 app-emulation/wine:perl - Install helpers written in perl (winedump/winemaker)
+app-emulation/wine:pipelight - Apply unofficial Compholio patches for Pipelight/Silverlight support; use at your own peril
 app-emulation/wine:prelink - Run prelink on DLLs during build -- do not disable if you do not know what this means as it can break things at runtime
 app-emulation/wine:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
 app-emulation/wine:run-exes - Use Wine to open and run .EXE and .MSI files
@@ -828,7 +829,6 @@ app-misc/muttprint:doc - Builds documentation
 app-misc/note:general - Add support for ascii flatfile backend
 app-misc/note:text - Add support for text backend
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
-app-misc/recoll:audio - Index audio files
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
 app-misc/recoll:chm - Index chm files
 app-misc/recoll:dvi - Index dvi files
@@ -842,6 +842,7 @@ app-misc/recoll:msxls - Index Microsoft Excel documents
 app-misc/recoll:pdf - Index PDF documents
 app-misc/recoll:rtf - Index Microsoft RTF documents
 app-misc/recoll:session - Stop monitoring file alterations when X11 session terminates
+app-misc/recoll:sound - Index audio files
 app-misc/recoll:tex - Index TeX files
 app-misc/recoll:wordperfect - Index WordPerfect documents
 app-misc/recoll:xml - Index several XML-based formats (Abiword, FictionBook, Kword, Office OpenXML, OpenDocument, SVG)

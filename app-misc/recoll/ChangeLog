@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/recoll
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.22 2013/12/28 20:53:27 dastergon Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.23 2014/05/17 07:32:01 ulm Exp $
+
+  17 May 2014; Ulrich Müller <ulm@gentoo.org> recoll-1.16.2.ebuild,
+  recoll-1.17.3.ebuild, recoll-1.17.3-r1.ebuild, recoll-1.18.1.ebuild,
+  recoll-1.18.2.ebuild, recoll-1.19.5.ebuild, metadata.xml:
+  QA: Rename "audio" USE flag to "sound", bug 357661. Delete duplicate
+  "wordperfect" flag in metadata.
 
   28 Dec 2013; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   add myself as maintainer

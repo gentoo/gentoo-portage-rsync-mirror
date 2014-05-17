@@ -3,12 +3,12 @@ DEPEND=virtual/libiconv >=dev-libs/xapian-1.0.12 sys-libs/zlib spell? ( app-text
 DESCRIPTION=A personal full text search package
 EAPI=4
 HOMEPAGE=http://www.lesbonscomptes.com/recoll/
-IUSE=+spell inotify +qt4 +session camelcase xattr webkit fam audio chm djvu dvi exif postscript ics info lyx msdoc msppt msxls pdf rtf tex wordperfect xml
+IUSE=+spell inotify +qt4 +session camelcase xattr webkit fam chm djvu dvi exif postscript ics info lyx msdoc msppt msxls pdf rtf sound tex wordperfect xml
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=virtual/libiconv >=dev-libs/xapian-1.0.12 sys-libs/zlib spell? ( app-text/aspell ) !inotify? ( fam? ( virtual/fam ) ) qt4? ( dev-qt/qtcore:4[qt3support] ) webkit? ( dev-qt/qtwebkit:4 ) session? ( inotify? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) !inotify? ( fam? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) ) ) app-arch/unzip sys-apps/sed virtual/awk pdf? ( app-text/poppler ) postscript? ( app-text/pstotext ) msdoc? ( app-text/antiword ) msxls? ( app-text/catdoc ) msppt? ( app-text/catdoc ) wordperfect? ( app-text/libwpd:0.9 ) rtf? ( app-text/unrtf ) tex? ( dev-tex/detex ) dvi? ( virtual/tex-base ) djvu? ( >=app-text/djvu-3.5.15 ) exif? ( media-libs/exiftool ) chm? ( dev-python/pychm ) ics? ( dev-python/icalendar ) lyx? ( app-office/lyx ) audio? ( media-libs/mutagen ) xml? ( dev-libs/libxslt ) info? ( sys-apps/texinfo ) =dev-lang/python-2*
+RDEPEND=virtual/libiconv >=dev-libs/xapian-1.0.12 sys-libs/zlib spell? ( app-text/aspell ) !inotify? ( fam? ( virtual/fam ) ) qt4? ( dev-qt/qtcore:4[qt3support] ) webkit? ( dev-qt/qtwebkit:4 ) session? ( inotify? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) !inotify? ( fam? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) ) ) app-arch/unzip sys-apps/sed virtual/awk pdf? ( app-text/poppler ) postscript? ( app-text/pstotext ) msdoc? ( app-text/antiword ) msxls? ( app-text/catdoc ) msppt? ( app-text/catdoc ) wordperfect? ( app-text/libwpd:0.9 ) rtf? ( app-text/unrtf ) tex? ( dev-tex/detex ) dvi? ( virtual/tex-base ) djvu? ( >=app-text/djvu-3.5.15 ) exif? ( media-libs/exiftool ) chm? ( dev-python/pychm ) ics? ( dev-python/icalendar ) lyx? ( app-office/lyx ) sound? ( media-libs/mutagen ) xml? ( dev-libs/libxslt ) info? ( sys-apps/texinfo ) =dev-lang/python-2*
 REQUIRED_USE=session? ( || ( fam inotify ) )
 SLOT=0
 SRC_URI=http://www.lesbonscomptes.com/recoll/recoll-1.18.1.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=e18a332a30a6f9322ccf37234b199195
+_md5_=1bc7a2cdd9c3214693049ce6f348b646

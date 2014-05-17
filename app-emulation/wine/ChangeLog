@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.506 2014/05/04 01:23:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.507 2014/05/17 07:32:41 tetromino Exp $
+
+*wine-1.7.19 (17 May 2014)
+
+  17 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.19.ebuild,
+  wine-9999.ebuild, metadata.xml:
+  Version bump, see http://www.winehq.org/announce/1.7.19 for the announcement.
+  Optionally apply the unofficial and unsupported Compholio patch set required
+  for Pipelight support (bug #507950, thanks to Patrick McMunn).
 
 *wine-1.7.18 (04 May 2014)
 

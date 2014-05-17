@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.1 2014/04/18 15:24:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.2 2014/05/17 07:46:07 mgorny Exp $
 
 # NOTE!!!: to avoid masking of -9999 the
 # package.mask entry for multilib version
@@ -36,10 +36,10 @@ RDEPEND="=media-libs/freetype-2*[${MULTILIB_USEDEP}]
 	)
 	mp3? ( media-libs/libid3tag[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	png? ( virtual/pkgconfig )
+	png? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
 	X? (
-		x11-proto/xextproto
-		x11-proto/xproto
+		x11-proto/xextproto[${MULTILIB_USEDEP}]
+		x11-proto/xproto[${MULTILIB_USEDEP}]
 	)"
 
 src_prepare() {

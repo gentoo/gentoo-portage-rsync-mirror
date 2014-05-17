@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.2.ebuild,v 1.1 2013/05/18 09:39:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.2.ebuild,v 1.2 2014/05/17 07:32:01 ulm Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-INDEX_HELPERS="audio chm djvu dvi exif postscript ics info lyx msdoc msppt msxls pdf rtf tex wordperfect xml"
+INDEX_HELPERS="chm djvu dvi exif postscript ics info lyx msdoc msppt msxls pdf rtf sound tex wordperfect xml"
 IUSE="+spell inotify +qt4 +session camelcase xattr webkit fam ${INDEX_HELPERS}"
 
 DEPEND="
@@ -50,7 +50,7 @@ RDEPEND="
 	chm? ( dev-python/pychm )
 	ics? ( dev-python/icalendar )
 	lyx? ( app-office/lyx )
-	audio? ( media-libs/mutagen )
+	sound? ( media-libs/mutagen )
 	xml? ( dev-libs/libxslt )
 	info? ( sys-apps/texinfo )
 	"
