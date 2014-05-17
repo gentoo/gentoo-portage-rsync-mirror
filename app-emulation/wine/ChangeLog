@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.507 2014/05/17 07:32:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.508 2014/05/17 15:31:17 tetromino Exp $
+
+*wine-1.7.19-r1 (17 May 2014)
+
+  17 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> -wine-1.7.19.ebuild,
+  +wine-1.7.19-r1.ebuild, wine-9999.ebuild:
+  Pipelight needs xattrs to be enabled (bug #507950, thanks to Michael
+  Müller).
 
 *wine-1.7.19 (17 May 2014)
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15700 2014/05/17 09:02:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15701 2014/05/17 15:34:43 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (17 May 2014)
+# Last upstream release in 1997, does not work reliably with
+# Emacs 22 and later. Use app-emacs/redo+ as replacement.
+# Masked for removal in 30 days, bug 510568.
+app-emacs/redo
 
 # Ulrich Müller <ulm@gentoo.org> (17 May 2014)
 # SRC_URI dead and no license permitting redistribution.

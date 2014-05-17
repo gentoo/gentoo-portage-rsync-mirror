@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.243 2014/05/14 16:16:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.244 2014/05/17 15:31:31 ago Exp $
+
+  17 May 2014; Agostino Sarubbo <ago@gentoo.org> libgsf-1.14.30.ebuild:
+  Stable for alpha, wrt bug #508862
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> libgsf-1.14.30.ebuild:
   Stable for sparc, wrt bug #508862

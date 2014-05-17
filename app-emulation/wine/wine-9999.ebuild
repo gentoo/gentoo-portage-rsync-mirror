@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.165 2014/05/17 07:32:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.166 2014/05/17 15:31:17 tetromino Exp $
 
 EAPI="5"
 
@@ -86,6 +86,7 @@ NATIVE_DEPEND="
 	nls? ( sys-devel/gettext )
 	odbc? ( dev-db/unixODBC:= )
 	osmesa? ( media-libs/mesa[osmesa] )
+	pipelight? ( sys-apps/attr )
 	pulseaudio? ( media-sound/pulseaudio )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends:= )
@@ -178,6 +179,10 @@ COMMON_DEPEND="
 			osmesa? ( || (
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
 				media-libs/mesa[osmesa,abi_x86_32]
+			) )
+			pipelight? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				sys-apps/attr[abi_x86_32]
 			) )
 			pulseaudio? ( || (
 				app-emulation/emul-linux-x86-soundlibs[development]
@@ -299,7 +304,7 @@ src_prepare() {
 			"../${COMPHOLIO_PATCHES}/patches/patch-list.patch"
 		)
 		# epatch doesn't support binary patches
-		ebegin "Applying Compholio font patches..."
+		ebegin "Applying Compholio font patches"
 		for f in "${T}/10-Missing_Fonts"/*.patch; do
 			"../${COMPHOLIO_PATCHES}/debian/tools/gitapply.sh" < "${f}" || die "Failed to apply Compholio font patches"
 		done
@@ -386,6 +391,7 @@ src_configure() {
 	)
 
 	use pulseaudio && myeconfargs+=( --with-pulse )
+	use pipelight && myeconfargs+=( --with-xattr )
 
 	if use amd64 && use abi_x86_32; then
 		# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038

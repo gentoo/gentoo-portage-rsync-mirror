@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0.1_beta2.ebuild,v 1.1 2013/12/14 11:38:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0.1_beta2.ebuild,v 1.2 2014/05/17 15:36:50 hasufell Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_2 python3_3 )
+PYTHON_COMPAT=( python3_2 python3_3 python3_4 )
 inherit toolchain-funcs python-r1
 
 DESCRIPTION="A compositor for X, and a fork of xcompmgr-dana"

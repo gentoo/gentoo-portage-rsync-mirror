@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.3.1.ebuild,v 1.8 2014/05/14 16:16:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.3.1.ebuild,v 1.9 2014/05/17 15:31:39 ago Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0/6" # libgphoto2.so soname version
 
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc examples exif gd jpeg nls serial zeroconf"
 
 # By default, drivers for all supported cameras will be compiled.
