@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.263 2014/05/18 10:16:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.264 2014/05/18 16:07:36 jer Exp $
+
+  18 May 2014; Jeroen Roovers <jer@gentoo.org> -rxvt-unicode-9.18.ebuild,
+  -files/rxvt-unicode-9.14-secondary-wheel.patch,
+  -files/rxvt-unicode-9.19-fading.patch, -files/macosx-clipboard:
+  Old.
 
   18 May 2014; Agostino Sarubbo <ago@gentoo.org> rxvt-unicode-9.20.ebuild:
   Stable for x86, wrt bug #509174
