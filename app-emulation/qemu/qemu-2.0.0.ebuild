@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.5 2014/04/25 22:56:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.6 2014/05/18 18:01:59 vapier Exp $
 
 EAPI=5
 
@@ -271,6 +271,7 @@ qemu_src_configure() {
 		--disable-werror
 		--python="${PYTHON}"
 		--cc="$(tc-getCC)"
+		--cxx="$(tc-getCXX)"
 		--host-cc="$(tc-getBUILD_CC)"
 		$(use_enable debug debug-info)
 		$(use_enable debug debug-tcg)

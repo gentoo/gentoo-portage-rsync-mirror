@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.42 2014/02/22 08:04:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.43 2014/05/18 18:18:03 pacho Exp $
+
+*verbiste-0.1.38-r1 (18 May 2014)
+
+  18 May 2014; Pacho Ramos <pacho@gentoo.org> +verbiste-0.1.38-r1.ebuild,
+  -verbiste-0.1.35.ebuild:
+  Drop support for old gnome-panel (#508854)
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> verbiste-0.1.38.ebuild:
   Stable for x86, wrt bug #491908

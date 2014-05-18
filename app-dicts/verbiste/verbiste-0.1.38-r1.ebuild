@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.35.ebuild,v 1.4 2013/05/20 08:33:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.38-r1.ebuild,v 1.1 2014/05/18 18:18:03 pacho Exp $
 
 EAPI="5"
 
@@ -12,27 +12,25 @@ SRC_URI="http://sarrazip.com/dev/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="gnome gtk"
+IUSE="gtk"
 
 RDEPEND="
 	>=dev-libs/libxml2-2.4.0:2
 	gtk? ( >=x11-libs/gtk+-2.6:2 )
-	gnome? (
-		gnome-base/gnome-panel[bonobo]
-		>=gnome-base/libgnomeui-2.0 )"
-
+"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_configure() {
 	econf \
 		--with-console-app \
-		$(use_with gtk gtk-app) \
-		$(use_with gnome gnome-app) \
-		$(use_with gnome gnome-applet)
+		--without-gnome-app \
+		--without-gnome-applet \
+		$(use_with gtk gtk-app)
 }
 
 src_install() {
@@ -40,7 +38,7 @@ src_install() {
 	prune_libtool_files
 	dodoc HACKING LISEZMOI
 	# file is only installed with USE=gnome
-	if use gtk && ! use gnome ; then
+	if use gtk; then
 		sed -e 's/Exec=.*/Exec=verbiste-gtk/' \
 			-i src/gnome/verbiste.desktop || die
 		insinto usr/share/applications
@@ -49,13 +47,13 @@ src_install() {
 }
 
 pkg_preinst() {
-	if use gtk || use gnome ; then
+	if use gtk; then
 		gnome2_icon_savelist
 	fi
 }
 
 pkg_postinst() {
-	if use gtk || use gnome ; then
+	if use gtk; then
 		fdo-mime_desktop_database_update
 		fdo-mime_mime_database_update
 		gnome2_icon_cache_update
@@ -63,7 +61,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if use gtk || use gnome ; then
+	if use gtk; then
 		fdo-mime_desktop_database_update
 		fdo-mime_mime_database_update
 		gnome2_icon_cache_update

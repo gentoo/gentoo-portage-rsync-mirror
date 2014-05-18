@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.258 2014/05/12 18:55:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.259 2014/05/18 18:01:59 vapier Exp $
+
+  18 May 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0.ebuild:
+  Set --cxx unconditionally.
 
   12 May 2014; Mike Frysinger <vapier@gentoo.org> qemu-9999.ebuild:
   Drop patch now that it is merged upstream #510068 by Hristo Venev.

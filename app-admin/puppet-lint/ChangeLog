@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet-lint
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-lint/ChangeLog,v 1.6 2013/09/08 07:10:12 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-lint/ChangeLog,v 1.7 2014/05/18 18:15:12 graaff Exp $
+
+  18 May 2014; Hans de Graaff <graaff@gentoo.org> puppet-lint-0.3.2.ebuild:
+  Add ruby20, ruby21.
 
   08 Sep 2013; Hans de Graaff <graaff@gentoo.org> -puppet-lint-0.2.1.ebuild,
   -puppet-lint-0.2.1-r1.ebuild:
