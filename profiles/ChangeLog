@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8977 2014/05/17 15:34:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8978 2014/05/18 05:08:25 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 May 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Drop net-nntp/tin development mask.
 
   17 May 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
   Mask app-emacs/redo for removal.
