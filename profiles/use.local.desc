@@ -6187,6 +6187,8 @@ sci-mathematics/coq:camlp5 - Build using camlp5. This is required for some plugi
 sci-mathematics/cvc3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see zchaff license).
 sci-mathematics/e:isabelle - Add integration support for the Isabelle/HOL theorem prover.
+sci-mathematics/flint:gc - Enable garbage collection support via dev-libs/boehm-gc
+sci-mathematics/flint:ntl - Build NTL interface
 sci-mathematics/form:devref - Build and install developers reference
 sci-mathematics/form:doxygen - Build and install API documentation
 sci-mathematics/freemat:volpack - Add volume rendering via media-libs/volpack
@@ -6687,6 +6689,7 @@ sys-firmware/ipxe:undi - Build a Universal Network Device Interface driver chain
 sys-firmware/ipxe:usb - Build a bootable USB image for using PXE
 sys-firmware/ipxe:vmware - Build the PXE ROM images that VMWare uses
 sys-firmware/seabios:binary - Use official upstream pre-built binaries
+sys-firmware/vgabios:binary - Use official upstream pre-built binaries (only default and cirrus images)
 sys-freebsd/boot0:tftp - Enable PXE/TFTP boot support.
 sys-freebsd/boot0:zfs - Enable booting on ZFS filesystems.
 sys-freebsd/freebsd-lib:hesiod - Enable support for net-dns/hesiod

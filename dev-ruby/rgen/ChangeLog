@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rgen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.2 2014/02/18 03:42:08 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.3 2014/05/18 17:55:22 graaff Exp $
+
+*rgen-0.6.6-r1 (18 May 2014)
+
+  18 May 2014; Hans de Graaff <graaff@gentoo.org> +rgen-0.6.6-r1.ebuild:
+  Add a revision with ruby21.
 
   18 Feb 2014; Matthew Thode <prometheanfire@gentoo.org> rgen-0.6.6.ebuild:
   adding keywords
