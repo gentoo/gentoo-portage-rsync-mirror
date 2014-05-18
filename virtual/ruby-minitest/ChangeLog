@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.48 2014/04/22 03:24:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.49 2014/05/18 06:26:58 graaff Exp $
+
+  18 May 2014; Hans de Graaff <graaff@gentoo.org> ruby-minitest-0-r4.ebuild:
+  Add missing mips keyword.
 
   22 Apr 2014; Manuel Rüger <mrueg@gentoo.org> ruby-minitest-0-r3.ebuild,
   ruby-minitest-0-r4.ebuild:
