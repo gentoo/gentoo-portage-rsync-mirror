@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.175 2014/04/02 19:03:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.176 2014/05/18 02:35:46 idella4 Exp $
+
+*pytz-2014.3 (18 May 2014)
+
+  18 May 2014; Ian Delaney <idella4@gentoo.org> +pytz-2014.3.ebuild:
+  bump; drop py2.6 pypy2_0 support, minor tidy
 
 *pytz-2014.2 (02 Apr 2014)
 
