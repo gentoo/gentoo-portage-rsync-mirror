@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/treeline
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.57 2013/09/05 19:44:50 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.58 2014/05/18 04:32:24 jer Exp $
+
+*treeline-1.9.4 (18 May 2014)
+
+  18 May 2014; Jeroen Roovers <jer@gentoo.org> +treeline-1.9.4.ebuild:
+  Version bump.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> treeline-1.4.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

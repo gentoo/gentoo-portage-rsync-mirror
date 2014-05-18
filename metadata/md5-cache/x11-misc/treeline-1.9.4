@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[xml] ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_single_target_python3_3(+)?]
+DESCRIPTION=TreeLine is a structured information storage program.
+EAPI=5
+HOMEPAGE=http://treeline.bellz.org/
+IUSE=python_targets_python3_3 python_single_target_python3_3
+LICENSE=GPL-2
+RDEPEND=python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[xml] ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_single_target_python3_3(+)?] dev-python/PyQt4[X,python_targets_python3_3(-)?,python_single_target_python3_3(+)?]
+REQUIRED_USE=python_single_target_python3_3? ( python_targets_python3_3 ) ^^ ( python_single_target_python3_3 )
+SLOT=0
+SRC_URI=mirror://sourceforge/project/treeline/1.9.4/treeline-1.9.4.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	e544c60078c7fa0939091b4c33e27450	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=b68f16858321d533fc210fa98b66fd39
