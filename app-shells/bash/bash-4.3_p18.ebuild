@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p11-r5.ebuild,v 1.2 2014/05/14 07:08:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p18.ebuild,v 1.1 2014/05/18 10:06:59 polynomial-c Exp $
 
 EAPI="4"
 
@@ -82,12 +82,6 @@ src_prepare() {
 	# Avoid regenerating docs after patches #407985
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
-
-	epatch "${FILESDIR}"/${PN}-4.3-jobs-run-sigchld-trap.patch \
-		"${FILESDIR}"/${PN}-4.3-complete-dequoting.patch \
-		"${FILESDIR}"/${PN}-4.3-extglob-directory.patch \
-		"${FILESDIR}"/${PN}-4.3-localvar-invisible.patch \
-		"${FILESDIR}"/${PN}-4.3-bind-compound-arry.patch
 
 	epatch_user
 }

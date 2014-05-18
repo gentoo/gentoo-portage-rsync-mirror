@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr2jpeg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.29 2013/06/22 18:18:02 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.30 2014/05/18 10:17:24 hd_brummy Exp $
+
+*vdr2jpeg-0.1.9-r1 (18 May 2014)
+
+  18 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr2jpeg-0.1.9-r1.ebuild:
+  ffmpeg-2 compile fix
 
   22 Jun 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/vdr2jpeg-0.1.9-libav9.patch, vdr2jpeg-0.1.9.ebuild:
