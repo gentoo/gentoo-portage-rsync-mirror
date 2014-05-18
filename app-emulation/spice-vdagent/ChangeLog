@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice-vdagent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.10 2012/10/04 17:08:40 cardoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.11 2014/05/18 09:19:24 swift Exp $
+
+  18 May 2014; Sven Vermeulen <swift@gentoo.org> spice-vdagent-0.10.1.ebuild,
+  spice-vdagent-0.12.0.ebuild, spice-vdagent-0.8.1-r1.ebuild:
+  Fix bug #441908 - Add USE=selinux dependency to selinux-vdagent
 
 *spice-vdagent-0.12.0 (04 Oct 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.12.0.ebuild,v 1.1 2012/10/04 17:08:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.12.0.ebuild,v 1.2 2014/05/18 09:19:24 swift Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+consolekit"
+IUSE="+consolekit selinux"
 
 RDEPEND="x11-libs/libXfixes
 	x11-libs/libXrandr
@@ -21,7 +21,8 @@ RDEPEND="x11-libs/libXfixes
 	x11-libs/libXinerama
 	>=x11-libs/libpciaccess-0.10
 	>=app-emulation/spice-protocol-0.10.1
-	consolekit? ( sys-auth/consolekit sys-apps/dbus )"
+	consolekit? ( sys-auth/consolekit sys-apps/dbus )
+	selinux? ( sec-policy/selinux-vdagent )"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
