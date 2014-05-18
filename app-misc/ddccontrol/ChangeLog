@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.39 2014/03/31 00:49:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.40 2014/05/18 18:51:27 pacho Exp $
+
+*ddccontrol-0.4.2_p20140105-r1 (18 May 2014)
+
+  18 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +ddccontrol-0.4.2_p20140105-r1.ebuild:
+  Drop support for old gnome-panel (#508854)
 
   30 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -ddccontrol-0.4.2-r1.ebuild,
   -ddccontrol-0.4.2-r2.ebuild, -ddccontrol-0.4.2_p20130703.ebuild,

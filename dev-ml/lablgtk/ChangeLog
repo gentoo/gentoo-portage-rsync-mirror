@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.108 2014/01/16 00:02:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.109 2014/05/18 18:55:57 pacho Exp $
+
+*lablgtk-2.18.0-r1 (18 May 2014)
+
+  18 May 2014; Pacho Ramos <pacho@gentoo.org> +lablgtk-2.18.0-r1.ebuild:
+  Drop support for old gnome-panel (#508854)
 
   16 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> lablgtk-2.18.0.ebuild:
   Keyworded amd64-linux, x86-linux

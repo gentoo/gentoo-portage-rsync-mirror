@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cucumber-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.27 2014/05/13 20:33:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.28 2014/05/18 18:59:30 graaff Exp $
+
+*cucumber-rails-1.4.1 (18 May 2014)
+
+  18 May 2014; Hans de Graaff <graaff@gentoo.org> +cucumber-rails-1.4.1.ebuild:
+  Version bump.
 
   13 May 2014; Manuel Rüger <mrueg@gentoo.org> -cucumber-rails-1.3.1.ebuild,
   -files/cucumber-rails-0.2.3-fix-broken-logic.patch,
