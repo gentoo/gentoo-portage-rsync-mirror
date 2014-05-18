@@ -1,0 +1,15 @@
+# ChangeLog for net-libs/balde
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/balde/ChangeLog,v 1.2 2014/05/18 21:52:47 rafaelmartins Exp $
+
+*balde-0.1.1 (18 May 2014)
+
+  18 May 2014; Rafael G. Martins <rafaelmartins@gentoo.org> +balde-0.1.1.ebuild,
+  -balde-0.1.ebuild:
+  Version bump.
+
+*balde-0.1 (18 May 2014)
+
+  18 May 2014; Rafael G. Martins <rafaelmartins@gentoo.org> +balde-0.1.ebuild,
+  +metadata.xml:
+  Initial commit
