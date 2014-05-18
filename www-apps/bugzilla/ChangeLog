@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.225 2014/05/18 10:16:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.226 2014/05/18 12:53:13 creffett Exp $
+
+  18 May 2014; Chris Reffett <creffett@gentoo.org> -bugzilla-4.2.7.ebuild,
+  -bugzilla-4.4.1.ebuild:
+  Cleanup wrt bug 507976
 
   18 May 2014; Agostino Sarubbo <ago@gentoo.org> bugzilla-4.2.9.ebuild,
   bugzilla-4.4.4.ebuild:
