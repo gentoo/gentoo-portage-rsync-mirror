@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare
+DEPEND=net-libs/libpcap sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) >=sys-devel/bison-1.28 >=sys-devel/flex-2.4.6 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=network Audit Record Generation and Utilization System
+EAPI=5
+HOMEPAGE=http://www.qosient.com/argus/
+IUSE=debug sasl tcpd
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+LICENSE=GPL-3
+RDEPEND=net-libs/libpcap sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+SLOT=0
+SRC_URI=http://qosient.com/argus/dev/argus-3.0.7.6.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4993581db4da430a2858094aba250140
