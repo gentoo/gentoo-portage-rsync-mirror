@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1255 2014/05/16 07:54:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1256 2014/05/18 19:08:34 grknight Exp $
+
+  18 May 2014; Brian Evans <grknight@gentoo.org> mysql_fx.eclass:
+  Fix a bug that prevented emerge --config to notice a changed datadir.
 
   16 May 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Accept files with already-rewritten shebangs in _python_rewrite_shebang.

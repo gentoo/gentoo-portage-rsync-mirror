@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtlockedfile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.6 2013/12/28 15:17:00 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.8 2014/05/18 19:27:15 pesa Exp $
+
+  18 May 2014; Davide Pesavento <pesa@gentoo.org>
+  -files/qtlockedfile-2.4.1-depend.patch,
+  -files/qtlockedfile-2.4.1-examples.patch, -qtlockedfile-2.4.1.ebuild:
+  Remove old.
 
   28 Dec 2013; Davide Pesavento <pesa@gentoo.org>
   qtlockedfile-2.4.1_p20130904.ebuild:
