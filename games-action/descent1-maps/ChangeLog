@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent1-maps
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-maps/ChangeLog,v 1.4 2007/01/10 17:40:29 wolf31o2 Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-maps/ChangeLog,v 1.5 2014/05/18 20:43:00 ulm Exp $
+
+  18 May 2014; Ulrich Müller <ulm@gentoo.org> descent1-maps-1.0.ebuild:
+  Fix LICENSE, add mirror and bindist restrictions, update HOMEPAGE and
+  SRC_URI, bug 505606.
 
   10 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   descent1-maps-1.0.ebuild:
