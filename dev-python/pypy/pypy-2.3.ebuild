@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.ebuild,v 1.1 2014/05/15 01:00:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.ebuild,v 1.2 2014/05/18 14:24:02 floppym Exp $
 
 EAPI=5
 
@@ -168,6 +168,10 @@ src_install() {
 	if use tk; then
 		"${PYTHON}" -c "import _tkinter" || die "Failed to import _tkinter (cffi)"
 	fi
+
+	# Cleanup temporary objects
+	find "${ED%/}${INSDESTTREE}" -name "_cffi_*.[co]" -delete || die
+	find "${ED%/}${INSDESTTREE}" -type d -empty -delete || die
 
 	# compile the installed modules
 	python_optimize "${ED%/}${INSDESTTREE}"
