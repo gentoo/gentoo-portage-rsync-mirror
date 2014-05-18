@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.183 2014/01/16 17:33:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.184 2014/05/18 19:58:08 swift Exp $
+
+  18 May 2014; Sven Vermeulen <swift@gentoo.org> rtorrent-0.8.6-r1.ebuild,
+  rtorrent-0.8.6-r4.ebuild, rtorrent-0.8.7-r4.ebuild, rtorrent-0.8.9.ebuild,
+  rtorrent-0.9.1.ebuild, rtorrent-0.9.2.ebuild, rtorrent-0.9.3.ebuild:
+  Add USE=selinux dependency to sec-policy/selinux-rtorrent
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/rtorrent.1:
   Spelling.

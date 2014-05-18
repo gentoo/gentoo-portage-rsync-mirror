@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.61 2014/04/05 12:14:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.62 2014/05/18 20:00:37 graaff Exp $
+
+*ruby2ruby-2.1.0 (18 May 2014)
+
+  18 May 2014; Hans de Graaff <graaff@gentoo.org> +ruby2ruby-2.1.0.ebuild:
+  Version bump.
 
   05 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -ruby2ruby-1.3.1-r1.ebuild,
   ruby2ruby-2.0.6.ebuild, ruby2ruby-2.0.7.ebuild:
