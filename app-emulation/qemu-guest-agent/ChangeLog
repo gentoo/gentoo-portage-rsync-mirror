@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu-guest-agent
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.15 2013/09/12 16:18:31 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.17 2014/05/18 17:15:42 vapier Exp $
+
+*qemu-guest-agent-2.0.0 (18 May 2014)
+
+  18 May 2014; Mike Frysinger <vapier@gentoo.org>
+  +qemu-guest-agent-2.0.0.ebuild:
+  Version bump #488968 by Thomas Stein.
+
+  18 May 2014; Mike Frysinger <vapier@gentoo.org> files/qemu-ga-systemd.udev:
+  Fix typo in udev rule #510558 by Alexander Tsoy.
 
 *qemu-guest-agent-1.5.2-r2 (12 Sep 2013)
 *qemu-guest-agent-1.6.0-r1 (12 Sep 2013)

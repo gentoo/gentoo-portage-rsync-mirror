@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.32 2014/05/04 08:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.33 2014/05/18 17:26:17 vapier Exp $
+
+  18 May 2014; Mike Frysinger <vapier@gentoo.org> bin86-0.16.20-r2.ebuild:
+  Add ppc/ppc64 keywords as this project can build on any arch (it will still
+  generate x86 output, but that is what projects usually want).
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> bin86-0.16.20-r2.ebuild:
   Stable for x86, wrt bug #502928
