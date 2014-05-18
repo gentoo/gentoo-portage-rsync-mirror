@@ -1,10 +1,6 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.112 2013/12/23 00:24:27 tomwij Exp $
-
-  23 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
-  -files/speech-tools-1.2.96_beta-gcc43-include.patch:
-  [QA] Remove unused files.
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.113 2014/05/18 01:11:09 jer Exp $
 
   20 Dec 2013; Jeroen Roovers <jer@gentoo.org>
   -files/speech-tools-1.2.96_beta-gcc43-include.patch:
