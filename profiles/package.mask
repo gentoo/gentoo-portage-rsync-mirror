@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15702 2014/05/18 05:08:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15703 2014/05/18 07:39:57 rhill Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ryan Hill <rhill@gentoo.org> (18 May 2014)
+# Masked for testing.
+# Tracker: https://bugs.gentoo.org/495124
+>=sys-devel/gcc-4.9.0
 
 # Ulrich Müller <ulm@gentoo.org> (17 May 2014)
 # Last upstream release in 1997, does not work reliably with
