@@ -1,6 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.77 2013/11/10 22:53:56 chithanh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.78 2014/05/19 20:22:38 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (19 May 2014)
+# media-libs/x265 has not been ported to HPPA (bug #510340)
+x265
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Nov 2013)
 # sys-devel/llvm is not keyworded, bug #320221
