@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8981 2014/05/19 13:45:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8982 2014/05/19 15:13:00 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Temporarily mask timezone-data-2014c because dev-libs/glib can't parse the
+  new timezone format, leading to wrong timestamps everywhere.
 
   19 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask new emul-linux sets and multilib conversions preceding them.
