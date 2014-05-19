@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8.ebuild,v 1.12 2014/05/18 23:59:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8.ebuild,v 1.13 2014/05/19 00:35:42 jer Exp $
 
 EAPI="5"
 
@@ -55,7 +55,6 @@ python_install() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.7-configure.ac.patch
 
-	# bug 281694
 	# bug 456810
 	# no time to sleep
 	sed -i \

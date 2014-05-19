@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.261 2014/05/18 23:59:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.262 2014/05/19 00:35:42 jer Exp $
+
+  19 May 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.8.ebuild:
+  Remove obsolete comment, too.
 
   18 May 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.8.ebuild:
   DEPEND on sys-apps/groff by Bertrand Jacquin (bug #497726). Remove obsolete

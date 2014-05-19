@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.101 2014/04/01 11:23:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.102 2014/05/19 00:43:33 floppym Exp $
+
+  19 May 2014; Mike Gilbert <floppym@gentoo.org> bsddb3-6.0.1.ebuild:
+  Fixup distutils-r1 conversion, and fix build with newer multilib-enabled sys-
+  apps/db.
 
   01 Apr 2014; Ian Delaney <idella4@gentoo.org>+files/py3tests.patch,
   bsddb3-6.0.0.ebuild:
