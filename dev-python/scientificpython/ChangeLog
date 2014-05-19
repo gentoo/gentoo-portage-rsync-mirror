@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.45 2014/03/13 14:58:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.46 2014/05/19 18:04:59 mgorny Exp $
+
+  19 May 2014; Michał Górny <mgorny@gentoo.org> -scientificpython-2.9.2.ebuild:
+  Drop the middle version that required python-exec:0.
 
 *scientificpython-2.9.3 (13 Mar 2014)
 
