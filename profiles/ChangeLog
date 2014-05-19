@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8979 2014/05/18 07:39:57 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8980 2014/05/19 13:20:18 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Unmask multilib OpenSSL.
 
   18 May 2014; Ryan Hill <rhill@gentoo.org> package.mask:
   Mask GCC 4.9 for testing.
