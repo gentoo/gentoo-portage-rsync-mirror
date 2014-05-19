@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/netty-common
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/ChangeLog,v 1.1 2014/05/19 12:35:12 tomwij Exp $
+
+*netty-common-4.0.19 (19 May 2014)
+
+  19 May 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/netty-common-4.0.19-build.xml, +metadata.xml,
+  +netty-common-4.0.19.ebuild:
+  New ebuild for dev-java/netty-common, async event-driven framework for rapid
+  development of high performance network applications; requested by Arfrever,
+  needed for new Jython versions.
