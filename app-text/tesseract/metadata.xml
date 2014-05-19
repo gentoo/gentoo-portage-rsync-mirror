@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proxy-maintainers</herd>
-  <maintainer>
-    <email>themgt@uncensored.citadel.org</email>
-    <description>Maintainer, assign bugs</description>
-  </maintainer>
   <maintainer>
     <email>tomka@gentoo.org</email>
     <name>Thomas Kahle</name>
-    <description>Proxy Maintainer, CC on bugs</description>
   </maintainer>
   <maintainer>
     <email>chutzpah@gentoo.org</email>

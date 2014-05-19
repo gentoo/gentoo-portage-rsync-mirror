@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.48 2014/05/13 14:26:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.49 2014/05/19 08:41:09 tomka Exp $
+
+  19 May 2014; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Take maintainership (proxy user seems inactive)
 
 *tesseract-3.03_rc1 (13 May 2014)
 
