@@ -1,6 +1,15 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.113 2014/03/31 21:24:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.115 2014/05/19 14:35:32 jlec Exp $
+
+  19 May 2014; Justin Lecher <jlec@gentoo.org> -pybugz-0.9.3.ebuild:
+  Drop old
+
+*pybugz-0.10.1-r1 (19 May 2014)
+
+  19 May 2014; Justin Lecher <jlec@gentoo.org> +pybugz-0.10.1-r1.ebuild,
+  pybugz-9999.ebuild, +files/pybugz-0.10.1-bugzilla-4.4.1.patch:
+  Add compatibility patch for bugzilla 4.4.1 made by Akinori Hattori, #488688
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pybugz-9999.ebuild:
   Add support for the new PyPy slotting.
