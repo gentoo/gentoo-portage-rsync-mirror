@@ -1,0 +1,36 @@
+--- cppcheck-1.65/Makefile
++++ cppcheck-1.65/Makefile
+@@ -94,15 +94,15 @@
+ endif
+ 
+ ifndef INCLUDE_FOR_LIB
+-    INCLUDE_FOR_LIB=-Ilib -Iexternals/tinyxml
++    INCLUDE_FOR_LIB=-Ilib
+ endif
+ 
+ ifndef INCLUDE_FOR_CLI
+-    INCLUDE_FOR_CLI=-Ilib -Iexternals/tinyxml
++    INCLUDE_FOR_CLI=-Ilib
+ endif
+ 
+ ifndef INCLUDE_FOR_TEST
+-    INCLUDE_FOR_TEST=-Ilib -Icli -Iexternals/tinyxml
++    INCLUDE_FOR_TEST=-Ilib -Icli
+ endif
+ 
+ BIN=$(DESTDIR)$(PREFIX)/bin
+@@ -242,11 +242,11 @@
+ 	$(CXX) $(CXXFLAGS) -std=c++0x -o dmake tools/dmake.o cli/filelister.o lib/path.o -Ilib $(LDFLAGS)
+ 	./dmake
+ 
+-reduce:	tools/reduce.o externals/tinyxml/tinyxml2.o $(LIBOBJ)
+-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -std=c++0x -g -o reduce tools/reduce.o -Ilib -Iexternals/tinyxml $(LIBOBJ) $(LIBS) externals/tinyxml/tinyxml2.o $(LDFLAGS) $(RDYNAMIC)
++reduce:	tools/reduce.o $(LIBOBJ)
++	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -std=c++0x -g -o reduce tools/reduce.o -Ilib $(LIBOBJ) $(LIBS) $(LDFLAGS) $(RDYNAMIC)
+ 
+ clean:
+-	rm -f build/*.o lib/*.o cli/*.o test/*.o externals/tinyxml/*.o testrunner reduce dmake cppcheck cppcheck.1
++	rm -f build/*.o lib/*.o cli/*.o test/*.o testrunner reduce dmake cppcheck cppcheck.1
+ 
+ man:	man/cppcheck.1
+ 

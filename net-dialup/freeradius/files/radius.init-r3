@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/files/radius.init-r3,v 1.4 2014/05/03 15:47:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/files/radius.init-r3,v 1.5 2014/05/19 15:59:36 jer Exp $
 
 command=/usr/sbin/radiusd
 command_args="${RADIUSD_OPTS}"
@@ -22,7 +22,7 @@ start_pre() {
 	checkpath -m0750 -o "${RADIUSD_USER:-root}:${RADIUSD_GROUP:-root}" -d \
 		$(dirname ${pidfile}) /var/log/radius
 	checkpath -m0750 -o "${RADIUSD_USER:-root}:${RADIUSD_GROUP:-root}" -d \
-		$(dirname ${pidfile}) /run/radius
+		$(dirname ${pidfile}) /run/radiusd
 }
 
 reload() {
