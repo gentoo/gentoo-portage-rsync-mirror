@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.145 2014/05/02 06:58:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.146 2014/05/18 23:21:57 jer Exp $
+
+  18 May 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Sync e-mail address with bugs.g.o.
 
   02 May 2014; Dirkjan Ochtman <djc@gentoo.org> -mercurial-2.7.2.ebuild,
   -mercurial-2.9.1.ebuild:
