@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.104 2014/05/08 05:24:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.105 2014/05/19 02:22:37 naota Exp $
+
+*freebsd-sources-9.1-r8 (19 May 2014)
+
+  19 May 2014; Naohiro Aota <naota@gentoo.org>
+  +files/freebsd-sources-9.1-ciss.patch, +freebsd-sources-9.1-r8.ebuild,
+  -freebsd-sources-9.1-r7.ebuild:
+  Add Eratta patch #510532
 
 *freebsd-sources-9.1-r7 (08 May 2014)
 
