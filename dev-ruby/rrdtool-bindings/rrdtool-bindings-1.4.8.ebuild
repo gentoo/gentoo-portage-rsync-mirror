@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.8.ebuild,v 1.1 2014/05/19 18:05:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.8.ebuild,v 1.2 2014/05/19 18:33:20 graaff Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ IUSE=""
 
 # Block on older versions of rrdtool that installl the bindings
 # themselves.
-RDEPEND="${RDEPEND} net-analyzer/rrdtool !!<net-analyzer/rrdtool-4.8.1-r1"
+RDEPEND="${RDEPEND} net-analyzer/rrdtool !!<net-analyzer/rrdtool-1.4.8-r1"
 DEPEND="${DEPEND} net-analyzer/rrdtool"
 
 each_ruby_configure() {
