@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.97 2013/11/09 09:18:35 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.98 2014/05/19 01:36:38 naota Exp $
+
+*freebsd-usbin-9.1-r1 (19 May 2014)
+
+  19 May 2014; Naohiro Aota <naota@gentoo.org>
+  +files/freebsd-usbin-9.1-kldxref.patch, +freebsd-usbin-9.1-r1.ebuild,
+  -freebsd-usbin-9.1.ebuild:
+  Add Eratta patch #510534
 
 *freebsd-usbin-9.2 (09 Nov 2013)
 

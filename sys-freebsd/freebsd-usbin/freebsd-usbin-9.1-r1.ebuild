@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.1.ebuild,v 1.4 2013/08/09 15:39:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.1-r1.ebuild,v 1.1 2014/05/19 01:36:38 naota Exp $
 
 EAPI=2
 
@@ -72,6 +72,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-adduser.patch"
 	"${FILESDIR}/${PN}-9.0-newsyslog.patch"
 	"${FILESDIR}/${PN}-9.1-bsdxml2expat.patch"
+	"${FILESDIR}/${PN}-9.1-kldxref.patch"
 	)
 
 REMOVE_SUBDIRS="
