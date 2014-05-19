@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15704 2014/05/19 13:20:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15705 2014/05/19 13:45:22 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -106,24 +106,6 @@ dev-ruby/fastthread
 # Justin Lecher <jlec@gentoo.org> (07 May 2014)
 # Still doesn't work as expected
 =sci-chemistry/ccpn-2.4.0_p140425-r1
-
-# Pacho Ramos <pacho@gentoo.org> (06 May 2014)
-# Mask for testing
->=app-emulation/emul-linux-x86-baselibs-20140506
->=app-emulation/emul-linux-x86-compat-20140506
->=app-emulation/emul-linux-x86-cpplibs-20140506
->=app-emulation/emul-linux-x86-db-20140506
->=app-emulation/emul-linux-x86-gstplugins-20140506
->=app-emulation/emul-linux-x86-gtklibs-20140506
->=app-emulation/emul-linux-x86-gtkmmlibs-20140506
->=app-emulation/emul-linux-x86-jna-20140506
->=app-emulation/emul-linux-x86-medialibs-20140506
->=app-emulation/emul-linux-x86-motif-20140506
->=app-emulation/emul-linux-x86-opengl-20140506
->=app-emulation/emul-linux-x86-qtlibs-20140506
->=app-emulation/emul-linux-x86-sdl-20140506
->=app-emulation/emul-linux-x86-soundlibs-20140506
->=app-emulation/emul-linux-x86-xlibs-20140506
 
 # Brian Evans <grknight@gentoo.org> (05 May 2014)
 # Mask erroenous slot for removal in 30 days
@@ -467,11 +449,6 @@ lxde-base/lxpolkit
 # preceding it
 # - please update https://wiki.gentoo.org/wiki/Multilib_porting_status
 # (mark the packages as {{Yes|DONE}})
->=media-libs/alsa-oss-1.0.25-r1
->=media-plugins/alsa-plugins-1.0.27-r2
-=net-wireless/bluez-4.101-r9
->=net-wireless/bluez-5.18-r1
->=app-emulation/emul-linux-x86-soundlibs-20140406-r1
 >=dev-libs/libdaemon-0.14-r2
 >=net-dns/avahi-0.6.31-r5
 >=net-libs/ldns-1.6.16-r1
