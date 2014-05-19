@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>jauhien@gentoo.org</email>
+    <name>Jauhien Piatlicki</name>
+  </maintainer>
+  <use>
+    <flag name="clang">Use sys-devel/clang for building</flag>
+    <flag name="binary-bootstrap">Download precompiled rust for compilator bootstrap</flag>
+  </use>
+</pkgmetadata>

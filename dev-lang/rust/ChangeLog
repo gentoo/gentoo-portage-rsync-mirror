@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/rust
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.1 2014/05/18 23:46:09 jauhien Exp $
+
+*rust-0.10 (18 May 2014)
+
+  18 May 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/50rust-mode-gentoo.el, +metadata.xml, +rust-0.10.ebuild:
+  Initial import, based on the rust overlay work, thanks to Heather
