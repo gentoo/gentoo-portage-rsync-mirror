@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/plink
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.14 2013/03/11 16:47:09 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.15 2014/05/19 14:13:36 jlec Exp $
+
+*plink-1.90_pre140514 (19 May 2014)
+
+  19 May 2014; Justin Lecher <jlec@gentoo.org> -plink-1.07.ebuild,
+  +plink-1.90_pre140514.ebuild:
+  Version BUmp, #510716
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
