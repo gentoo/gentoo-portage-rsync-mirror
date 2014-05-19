@@ -10,4 +10,4 @@ RDEPEND=media-libs/aubio media-libs/liblo sci-libs/fftw:3.0 media-libs/freetype:
 SLOT=3
 SRC_URI=https://github.com/Ardour/ardour/archive/3.5.380.tar.gz -> ardour-3.5.380.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
-_md5_=4ef42134e2ac03f13ffb8a00eef2506b
+_md5_=7f4d28896e1e34094042c39709d1aff0

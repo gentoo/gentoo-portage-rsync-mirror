@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.380.ebuild,v 1.1 2014/05/17 18:21:28 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.380.ebuild,v 1.2 2014/05/19 09:58:30 nativemad Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs flag-o-matic waf-utils
@@ -88,6 +88,7 @@ src_prepare(){
 	sed 's/python/python2/' -i waf
 #	sed 's/'FLAGS\'\,\ optimization_flags'/'FLAGS\'\,\ \'\''/g' -i "${S}"/wscript
 	sed 's/'FLAGS\'\,\ compiler_flags'/'FLAGS\'\,\ \'\''/g' -i "${S}"/wscript
+	append-flags "-lboost_system"
 }
 
 src_configure() {

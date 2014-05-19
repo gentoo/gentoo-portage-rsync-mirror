@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuplot-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.15 2014/05/15 20:02:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.16 2014/05/19 10:00:53 nimiux Exp $
+
+  19 May 2014; Chema Alonso <nimiux@gentoo.org> gnuplot-mode-0.7.0.ebuild:
+  Stable for amd64 wrt bug #508216
 
   15 May 2014; Markus Meier <maekke@gentoo.org> gnuplot-mode-0.7.0.ebuild:
   arm stable, bug #508216
