@@ -15,7 +15,7 @@
   <affected>
     <package name="net-misc/x2goserver" auto="yes" arch="*">
       <unaffected range="ge">4.0.1.12</unaffected>
-      <vulnerable range="ge">4.0.1.12</vulnerable>
+      <vulnerable range="lt">4.0.1.12</vulnerable>
     </package>
   </affected>
   <background>
