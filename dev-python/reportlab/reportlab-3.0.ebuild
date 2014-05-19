@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-3.0.ebuild,v 1.1 2014/04/17 05:37:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-3.0.ebuild,v 1.2 2014/05/19 10:11:21 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 # Tests crash with pypy
 
 inherit distutils-r1 flag-o-matic prefix
@@ -49,9 +49,11 @@ python_compile_all() {
 	use doc && emake -C docs html
 }
 
-src_compile() {
-	append-cflags -fno-strict-aliasing
-	distutils-r1_src_compile
+python_compile() {
+	if ! python_is_python3; then
+		local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	fi
+	distutils-r1_python_compile
 }
 
 python_test() {
