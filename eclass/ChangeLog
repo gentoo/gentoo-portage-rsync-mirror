@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1256 2014/05/18 19:08:34 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1257 2014/05/19 05:00:34 floppym Exp $
+
+  19 May 2014; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
+  Work around bash-4.3 bug by setting PYTHONDONTWRITEBYTECODE to an empty
+  string.
 
   18 May 2014; Brian Evans <grknight@gentoo.org> mysql_fx.eclass:
   Fix a bug that prevented emerge --config to notice a changed datadir.
