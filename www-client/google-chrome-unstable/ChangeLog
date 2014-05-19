@@ -1,6 +1,10 @@
 # ChangeLog for www-client/google-chrome-unstable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/ChangeLog,v 1.28 2014/05/16 01:53:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/ChangeLog,v 1.29 2014/05/19 19:48:54 floppym Exp $
+
+  19 May 2014; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-unstable-36.0.1985.8_p1.ebuild:
+  Update pkg_nofetch.
 
 *google-chrome-unstable-36.0.1985.8_p1 (16 May 2014)
 

@@ -1,0 +1,22 @@
+--- src/locale_dialog.cpp.old	2014-05-19 21:33:44.077819074 +0200
++++ src/locale_dialog.cpp	2014-05-19 21:33:52.893650196 +0200
+@@ -85,7 +85,7 @@
+ 	if (paths.isEmpty()) {
+ 		QString appdir = QCoreApplication::applicationDirPath();
+ 		paths.append(appdir);
+-		paths.append(appdir + "/../share/" + QCoreApplication::applicationName().toLower());
++		paths.append("@GENTOO_DATADIR@");
+ 		paths.append(appdir + "/../Resources");
+ 	}
+ 	foreach (const QString& path, paths) {
+--- src/main.cpp.old	2014-05-19 21:41:15.550293079 +0200
++++ src/main.cpp	2014-05-19 21:42:15.560162477 +0200
+@@ -46,7 +46,7 @@
+ 	QString path = app.applicationDirPath();
+ 	QStringList paths;
+ 	paths.append(path + "/data/");
+-	paths.append(path + "/../share/tanglet/data/");
++	paths.append("@GENTOO_DATADIR@/data/");
+ 	paths.append(path + "/../Resources/data/");
+ 	QDir::setSearchPaths("tanglet", paths);
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-36.0.1985.8_p1.ebuild,v 1.1 2014/05/16 01:53:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-36.0.1985.8_p1.ebuild,v 1.2 2014/05/19 19:48:54 floppym Exp $
 
 EAPI="5"
 
@@ -102,7 +102,7 @@ You can (de)activate all flash plugins via chrome://plugins
 "
 
 pkg_nofetch() {
-	eerror "Please wait 24 hours before reporting a bug for google-chrome fetch failures."
+	eerror "Please wait 24 hours and sync your tree before reporting a bug for google-chrome fetch failures."
 }
 
 pkg_setup() {
