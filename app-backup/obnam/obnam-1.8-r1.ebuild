@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.8.ebuild,v 1.1 2014/05/15 21:44:35 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.8-r1.ebuild,v 1.1 2014/05/19 17:59:28 mschiff Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ DEPEND="${PYTHON_DEPS}
 	dev-python/fuse-python
 	dev-python/larch
 	!=dev-python/paramiko-1.13.0
+	|| ( <dev-python/paramiko-1.13.0 >dev-python/paramiko-1.13.0 )
 	dev-python/tracing
 	dev-python/ttystatus
 	"
