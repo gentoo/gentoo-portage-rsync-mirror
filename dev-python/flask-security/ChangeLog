@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-security
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-security/ChangeLog,v 1.3 2014/01/28 06:42:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-security/ChangeLog,v 1.4 2014/05/20 07:43:31 patrick Exp $
+
+*flask-security-1.7.2 (20 May 2014)
+
+  20 May 2014; Patrick Lauer <patrick@gentoo.org> +flask-security-1.7.2.ebuild:
+  Bump
 
 *flask-security-1.7.1 (28 Jan 2014)
 
