@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-0.8.ebuild,v 1.2 2014/04/28 17:50:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-0.8.ebuild,v 1.3 2014/05/20 17:55:26 aballier Exp $
 
 EAPI=5
 
-inherit cmake-multilib
+inherit cmake-multilib flag-o-matic
 
 if [[ ${PV} = 9999* ]]; then
 	inherit mercurial
@@ -45,6 +45,8 @@ src_unpack() {
 }
 
 multilib_src_configure() {
+	append-cflags -fPIC
+	append-cxxflags -fPIC
 	local mycmakeargs=(
 		$(cmake-utils_use_enable test TESTS)
 		$(multilib_is_native_abi || echo "-DENABLE_CLI=OFF")

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.4 2014/04/28 17:50:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.6 2014/05/20 17:59:04 aballier Exp $
+
+  20 May 2014; Alexis Ballier <aballier@gentoo.org> x265-9999.ebuild:
+  bump subslot according to soname change
+
+  20 May 2014; Alexis Ballier <aballier@gentoo.org> x265-0.8.ebuild,
+  x265-9999.ebuild:
+  build as PIC (that is what is done for amd64 in CMakeLists.txt anyway); patch
+  by Jeroen Roovers, bug #510444.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> x265-0.8.ebuild,
   x265-9999.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-9999.ebuild,v 1.4 2014/04/28 17:50:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-9999.ebuild,v 1.6 2014/05/20 17:59:04 aballier Exp $
 
 EAPI=5
 
-inherit cmake-multilib multilib
+inherit cmake-multilib multilib flag-o-matic
 
 if [[ ${PV} = 9999* ]]; then
 	inherit mercurial
@@ -19,7 +19,7 @@ HOMEPAGE="http://x265.org/"
 
 LICENSE="GPL-2"
 # subslot = libx265 soname
-SLOT="0/15"
+SLOT="0/18"
 IUSE="+10bit test"
 
 ASM_DEPEND=">=dev-lang/yasm-1.2.0"
@@ -40,6 +40,8 @@ src_unpack() {
 }
 
 multilib_src_configure() {
+	append-cflags -fPIC
+	append-cxxflags -fPIC
 	local mycmakeargs=(
 		$(cmake-utils_use_enable test TESTS)
 		$(multilib_is_native_abi || echo "-DENABLE_CLI=OFF")
