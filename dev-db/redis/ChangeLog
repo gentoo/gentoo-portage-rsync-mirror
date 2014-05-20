@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.79 2014/05/04 13:43:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.80 2014/05/20 10:53:58 jer Exp $
+
+  20 May 2014; Jeroen Roovers <jer@gentoo.org> redis-2.8.9.ebuild:
+  Marked ~hppa (bug #510626).
 
 *redis-2.8.9 (04 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.627 2014/05/20 07:39:28 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.628 2014/05/20 10:41:23 rhill Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1340,7 +1340,8 @@ gcc_do_filter_flags() {
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m31 -m32 -m64
 
-	filter-flags '-frecord-gcc-switches' # 490738
+	filter-flags -frecord-gcc-switches # 490738
+	filter-flags -mno-rtm -mno-htm # 506202
 
 	if tc_version_is_between 3.2 3.4 ; then
 		# XXX: this is so outdated it's barely useful, but it don't hurt...

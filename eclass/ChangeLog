@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1258 2014/05/20 07:39:28 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1259 2014/05/20 10:41:23 rhill Exp $
+
+  20 May 2014; Ryan Hill <rhill@gentoo.org> toolchain.eclass:
+  Strip -mno-rtm and -mno-htm as libitm requires these for x86/x86_64 and
+  ppc/s390 respectively if supported by the assembler (bug #506202).
 
   20 May 2014; Ryan Hill <rhill@gentoo.org> toolchain.eclass:
   Depend on virtual/libintl rather than sys-devel/gettext (bug #499774).
