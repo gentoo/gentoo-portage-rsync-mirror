@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.92 2014/05/14 13:12:03 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.93 2014/05/20 13:03:35 aidecoe Exp $
+
+  20 May 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.18.ebuild:
+  Removed old revision of 0.18.
 
 *notmuch-0.18-r1 (14 May 2014)
 
