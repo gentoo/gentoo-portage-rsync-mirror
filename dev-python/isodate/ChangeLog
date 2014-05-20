@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/isodate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.25 2014/05/03 08:18:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.26 2014/05/20 05:38:08 idella4 Exp $
+
+  20 May 2014; Ian Delaney <idella4@gentoo.org> isodate-0.5.0.ebuild:
+  drop py2.6 pypy2_0 add py3.4 support
 
 *isodate-0.5.0 (03 May 2014)
 
