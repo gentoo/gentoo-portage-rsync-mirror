@@ -1,6 +1,10 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.115 2014/05/19 14:35:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.116 2014/05/20 09:42:31 jlec Exp $
+
+  20 May 2014; Justin Lecher <jlec@gentoo.org> pybugz-9999.ebuild,
+  +files/pybugz-9999-bugzilla-4.4.1.patch:
+  Fix patch for live version
 
   19 May 2014; Justin Lecher <jlec@gentoo.org> -pybugz-0.9.3.ebuild:
   Drop old

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.67 2014/03/19 13:56:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.68 2014/05/20 09:39:50 idella4 Exp $
+
+*pyzor-0.7.0 (20 May 2014)
+
+  20 May 2014; Ian Delaney <idella4@gentoo.org> +pyzor-0.7.0.ebuild,
+  metadata.xml:
+  bump; virtual re-write, keywords (reluctantly) dropped subsequent to new deps
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pyzor-0.5.0-r2.ebuild:
   Stable for alpha, wrt bug #498050

@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.78 2014/05/19 20:22:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.79 2014/05/20 09:55:13 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (20 May 2014)
+# USE=tcmalloc needs dev-util/google-perftools
+tcmalloc
 
 # Jeroen Roovers <jer@gentoo.org> (19 May 2014)
 # media-libs/x265 has not been ported to HPPA (bug #510340)

@@ -4,5 +4,7 @@
 <herd>python</herd>
 <use>
 	<flag name='pyzord'>enable support for pyzord</flag>
+	<flag name='mysql'>Enables mysql support</flag>
+	<flag name='redis'>Enables redis support</flag>
 </use>
 </pkgmetadata>
