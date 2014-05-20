@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.initd,v 1.5 2014/02/03 00:05:16 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.initd,v 1.6 2014/05/20 21:06:29 mschiff Exp $
 
 description="An open-source turn-key solution for DNSSEC"
 
@@ -74,8 +74,7 @@ stop_signer() {
 
 start() {
 	checkconfig || return $?
-	test -d /run/opendnssec || mkdir -p /run/opendnssec
-	chown opendnssec:opendnssec /run/opendnssec
+	checkpath -d -m 0755 -o opendnssec:opendnssec /run/opendnssec
 	start_enforcer || return $?
 	start_signer || return $?
 }

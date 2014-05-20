@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/opendnssec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.37 2014/02/03 00:05:16 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.38 2014/05/20 21:06:29 mschiff Exp $
+
+*opendnssec-1.3.17 (20 May 2014)
+
+  20 May 2014; Marc Schiffbauer <mschiff@gentoo.org> +opendnssec-1.3.17.ebuild,
+  files/opendnssec.initd, files/opendnssec-fix-run-dir.patch:
+  Add version 1.3.17. Disabled auditor because it depends on ruby 1.8. Fixed QA
+  warning. Improved init script.
 
 *opendnssec-1.3.16 (03 Feb 2014)
 *opendnssec-1.4.3 (03 Feb 2014)

@@ -19,8 +19,8 @@ diff -ur opendnssec-1.3.12.orig/Makefile.am opendnssec-1.3.12/Makefile.am
  	$(INSTALL) -d $(DESTDIR)$(localstatedir)/lib/opendnssec/signed
 -	$(INSTALL) -d $(DESTDIR)$(localstatedir)/run
 -	$(INSTALL) -d $(DESTDIR)$(localstatedir)/run/opendnssec
-+	$(INSTALL) -d $(DESTDIR)/run
-+	$(INSTALL) -d $(DESTDIR)/run/opendnssec
++
++
  
  docs:
  	(cd libhsm; $(MAKE) doxygen)
