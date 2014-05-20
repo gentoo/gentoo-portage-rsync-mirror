@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=dev-libs/lzo sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
+DESCRIPTION=Btrfs filesystem utilities
+EAPI=5
+HOMEPAGE=https://btrfs.wiki.kernel.org
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/lzo sys-libs/zlib sys-apps/acl sys-fs/e2fsprogs
+SLOT=0/0
+SRC_URI=https://www.kernel.org/pub/linux/kernel/people/mason/btrfs-progs/btrfs-progs-v3.14.1.tar.xz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=653562e6eff08b927735b0ab2ee43c2b

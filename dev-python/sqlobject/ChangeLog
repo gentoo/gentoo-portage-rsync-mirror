@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sqlobject
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.57 2013/12/17 06:19:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.58 2014/05/20 14:48:56 idella4 Exp $
+
+*sqlobject-1.6.0 (20 May 2014)
+
+  20 May 2014; Ian Delaney <idella4@gentoo.org> +sqlobject-1.6.0.ebuild:
+  bump; drop py2.6 support
 
 *sqlobject-1.5.1 (17 Dec 2013)
 
