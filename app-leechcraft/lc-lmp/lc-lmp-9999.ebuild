@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/lc-lmp-9999.ebuild,v 1.3 2013/09/24 16:54:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/lc-lmp-9999.ebuild,v 1.4 2014/05/20 17:01:15 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="LeechCraft Media Player, Phonon-based audio/video player."
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +graffiti +guess +mpris +mp3tunes"
+IUSE="debug +fradj +graffiti +guess +mpris +mp3tunes"
 
 # depend on gstreamer:0.10 to match current Qt deps
 DEPEND="~app-leechcraft/lc-core-${PV}
@@ -24,6 +24,7 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs="
+		$(cmake-utils_use_enable fradj LMP_FRADJ)
 		$(cmake-utils_use_enable graffiti LMP_GRAFFITI)
 		$(cmake-utils_use_enable guess LMP_LIBGUESS)
 		$(cmake-utils_use_enable mpris LMP_MPRIS)

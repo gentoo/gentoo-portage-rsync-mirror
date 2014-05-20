@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>leechcraft</herd>
 <use>
+	<flag name="fradj">Build FrAdj, the equalizer effect module</flag>
 	<flag name="graffiti">Build media tags editor plugin</flag>
 	<flag name="guess">Enable tags encoding guessing via the libguess library</flag>
 	<flag name="mpris">Enable MPRIS support</flag>
