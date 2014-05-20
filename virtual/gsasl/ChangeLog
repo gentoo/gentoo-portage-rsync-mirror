@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gsasl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.16 2012/12/21 12:53:51 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.17 2014/05/20 10:03:50 jer Exp $
+
+  20 May 2014; Jeroen Roovers <jer@gentoo.org> gsasl-2.ebuild:
+  Stable for HPPA too.
 
   21 Dec 2012; Eray Aslan <eras@gentoo.org> -gsasl-1.6.1.ebuild:
   Remove old

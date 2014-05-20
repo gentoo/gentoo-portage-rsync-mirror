@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.138 2014/05/20 09:55:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.140 2014/05/20 10:23:30 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -43,11 +43,6 @@ dev-python/pyquery test
 # Mask non-keyworded sci-libs/hdf5 for sci-mathematics/octave
 sci-mathematics/octave hdf5 qhull
 
-# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
-# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
->=dev-db/mysql-5.5 systemtap
->=dev-db/mariadb-5.5 systemtap
-
 # Jeroen Roovers <jer@gentoo.org> (10 Jul 2012)
 # USE=clang needs sys-devel/llvm which has not been ported
 app-portage/eix clang
@@ -86,10 +81,6 @@ xfce-extra/xfce4-systemload-plugin udev
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2011)
 # Depends upon an as yet unsupported version of dev-libs/dietlibc
 dev-libs/libowfat diet
-
-# Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
-# Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737
-dev-libs/libmemcached sasl
 
 # Jeroen Roovers <jer@gentoo.org> (5 Jun 2011)
 # app-office/gnumeric is not keyworded (bug #367513)
