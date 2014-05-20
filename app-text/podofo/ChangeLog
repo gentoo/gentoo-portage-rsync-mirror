@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.44 2014/03/11 10:06:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.45 2014/05/20 22:02:31 mrueg Exp $
+
+  20 May 2014; Manuel Rüger <mrueg@gentoo.org> podofo-0.9.2.ebuild:
+  Add ~arm keyword.
 
   11 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> podofo-0.9.2.ebuild:
   Fixed compilation with >=freetype-2.5.1 (bug #493584).

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.69 2014/04/25 08:10:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.70 2014/05/20 22:18:49 mrueg Exp $
+
+  20 May 2014; Manuel Rüger <mrueg@gentoo.org> apsw-3.8.4.3_p1.ebuild:
+  Add ~arm keyword.
 
 *apsw-3.8.4.3_p1 (25 Apr 2014)
 
