@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.6 2014/05/20 17:59:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.7 2014/05/20 19:03:16 aballier Exp $
+
+*x265-1.0 (20 May 2014)
+
+  20 May 2014; Alexis Ballier <aballier@gentoo.org> +x265-1.0.ebuild:
+  version bump, bug #509432
 
   20 May 2014; Alexis Ballier <aballier@gentoo.org> x265-9999.ebuild:
   bump subslot according to soname change

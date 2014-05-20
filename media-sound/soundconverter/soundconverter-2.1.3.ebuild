@@ -1,13 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.0.1.ebuild,v 1.3 2012/05/05 08:50:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.1.3.ebuild,v 1.1 2014/05/20 19:29:33 pacho Exp $
 
-EAPI=4
+# TODO: convert
+#	dev-python/gconf-python
+#	dev-python/gnome-vfs-python
+#	dev-python/libgnome-python
+# See bug #477814
+
+EAPI=5
 
 GCONF_DEBUG=no
-PYTHON_DEPEND="2:2.7"
-
-inherit gnome2 multilib python
+PYTHON_COMPAT=( python2_7 )
+inherit gnome2 multilib python-single-r1
 
 DESCRIPTION="A simple audiofile converter application for the GNOME environment"
 HOMEPAGE="http://soundconverter.org/"
@@ -16,13 +21,15 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aac flac mp3 vorbis"
+IUSE="aac flac mp3 opus vorbis"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="dev-python/gconf-python
+RDEPEND="${PYTHON_DEPS}
+	dev-python/gconf-python
 	dev-python/gnome-vfs-python
-	=dev-python/gst-python-0.10*
-	dev-python/pygobject:2
-	>=dev-python/pygtk-2.12
+	=dev-python/gst-python-0.10*[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	>=dev-python/pygtk-2.12[${PYTHON_USEDEP}]
 	dev-python/libgnome-python
 	gnome-base/libglade
 	aac? (
@@ -38,31 +45,24 @@ RDEPEND="dev-python/gconf-python
 	vorbis? (
 		=media-plugins/gst-plugins-ogg-0.10*
 		=media-plugins/gst-plugins-vorbis-0.10*
-		)"
+		)
+	opus? (
+		=media-plugins/gst-plugins-opus-0.10*
+		)
+"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/intltool
 	virtual/pkgconfig
-	sys-devel/gettext"
-
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	python_set_active_version 2
-	python_pkg_setup
-}
+	sys-devel/gettext
+"
 
 src_prepare() {
-	>py-compile
-	python_convert_shebangs -r 2 .
+	python_fix_shebang .
 	gnome2_src_prepare
 }
 
-pkg_postinst() {
-	python_mod_optimize /usr/$(get_libdir)/${PN}
-	gnome2_pkg_postinst
-}
-
-pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/${PN}
-	gnome2_pkg_postrm
+src_install() {
+	gnome2_src_install
+	python_optimize "${ED%/}"/usr/$(get_libdir)/soundconverter/python
 }
