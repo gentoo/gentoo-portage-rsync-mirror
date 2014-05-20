@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1321 2014/05/17 04:16:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1322 2014/05/20 00:31:34 mpagano Exp $
+
+*gentoo-sources-3.4.91 (20 May 2014)
+
+  20 May 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.4.91.ebuild:
+  Linux patch 3.4.91. Removal of redundant patchset for CVE-2014-0196 as it's
+  now in 3.4.91. Patch renumbering
 
   17 May 2014; Jeroen Roovers <jer@gentoo.org> gentoo-sources-3.12.20.ebuild:
   Stable for HPPA (bug #509840).
