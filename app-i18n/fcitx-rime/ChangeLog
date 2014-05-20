@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx-rime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/ChangeLog,v 1.11 2014/03/08 12:04:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/ChangeLog,v 1.12 2014/05/20 12:58:14 dlan Exp $
+
+*fcitx-rime-0.3.1 (20 May 2014)
+
+  20 May 2014; Yixun Lan <dlan@gentoo.org> +fcitx-rime-0.3.1.ebuild:
+  version bump to 0.3.1
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> fcitx-rime-0.2.2.ebuild:
   amd64 stable, bug 498688
