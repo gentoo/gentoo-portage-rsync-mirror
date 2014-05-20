@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-14.0.0.ebuild,v 1.1 2014/05/20 06:56:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-14.0.0.ebuild,v 1.2 2014/05/20 08:30:57 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -12,15 +12,14 @@ inherit eutils flag-o-matic twisted-r1
 
 DESCRIPTION="An asynchronous networking framework written in Python"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="crypt gtk serial test"
 
 DEPEND=">=net-zope/zope-interface-3.6.0[${PYTHON_USEDEP}]
 	crypt? ( >=dev-python/pyopenssl-0.10[${PYTHON_USEDEP}] )
 	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
-	serial? ( dev-python/pyserial[${PYTHON_USEDEP}] )"
-# Wait for keywording on ~arm/~hppa/~amd64-fbsd:
-#	test? ( dev-python/twisted-lore[${PYTHON_USEDEP}] )"
+	serial? ( dev-python/pyserial[${PYTHON_USEDEP}] )
+	test? ( dev-python/twisted-lore[${PYTHON_USEDEP}] )"
 RDEPEND="${DEPEND}"
 
 PATCHES=(
