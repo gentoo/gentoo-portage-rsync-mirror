@@ -1,12 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-14.0.0.ebuild,v 1.2 2014/05/20 08:30:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-14.0.0.ebuild,v 1.4 2014/05/20 08:51:01 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
-
-# bug 510830
-RESTRICT="test"
 
 inherit eutils flag-o-matic twisted-r1
 
