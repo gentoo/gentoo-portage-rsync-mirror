@@ -1,6 +1,11 @@
 # ChangeLog for games-board/mah-jong
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.23 2014/05/16 01:06:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mah-jong/ChangeLog,v 1.24 2014/05/20 00:52:42 mr_bones_ Exp $
+
+*mah-jong-1.14 (20 May 2014)
+
+  20 May 2014; Michael Sterrett <mr_bones_@gentoo.org> +mah-jong-1.14.ebuild:
+  version bump (bug #496956)
 
   16 May 2014; Michael Sterrett <mr_bones_@gentoo.org> mah-jong-1.12.1.ebuild:
   EAPI=5; tidy; dirty -lm fix
