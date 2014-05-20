@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.166 2014/05/14 07:09:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.167 2014/05/20 18:23:07 aidecoe Exp $
+
+*dracut-037-r2 (20 May 2014)
+
+  20 May 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-037-r2.ebuild,
+  +files/037-0006-98systemd-fixup-rootfs-generator-insta.patch:
+  Fixes bug #510848 on behalf of Alexander Tsoy.
 
 *dracut-037-r1 (13 May 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.735 2014/05/19 20:23:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.737 2014/05/20 18:30:09 aballier Exp $
+
+  20 May 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.2.ebuild:
+  leverage x265 deps now that it works
+
+  20 May 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.2.ebuild,
+  +files/ladspadl.patch:
+  fix build with USE=ladspa -frei0r, bug #510516
 
   19 May 2014; Jeroen Roovers <jer@gentoo.org> ffmpeg-2.2.2.ebuild:
   Marked ~hppa (bug #510340).

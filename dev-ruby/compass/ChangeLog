@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/compass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/ChangeLog,v 1.1 2014/05/11 22:23:10 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/ChangeLog,v 1.2 2014/05/20 18:13:13 graaff Exp $
+
+*compass-0.12.6-r1 (20 May 2014)
+
+  20 May 2014; Hans de Graaff <graaff@gentoo.org> -compass-0.12.6.ebuild,
+  +compass-0.12.6-r1.ebuild:
+  Revision bump to ensure correct dependencies. Fix tests by using mocha:0.13.
+  Add missing cucumber dependency. Fix cucumber scenario and avoid another.
 
 *compass-0.12.6 (11 May 2014)
 
