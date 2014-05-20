@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.45 2014/05/20 08:18:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.46 2014/05/20 11:27:28 jer Exp $
+
+  20 May 2014; Jeroen Roovers <jer@gentoo.org> redis-py-2.9.1.ebuild:
+  Marked ~hppa (bug #510626).
 
   20 May 2014; Ian Delaney <idella4@gentoo.org> redis-py-2.9.1.ebuild:
   drop py2.6 pypy2_0 add py3.4 support

@@ -4,11 +4,11 @@ DESCRIPTION=A distributed, collaborative spam detection and filtering network
 EAPI=5
 HOMEPAGE=http://pyzor.sourceforge.net/
 IUSE=mysql pyzord redis test python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=mysql? ( python_targets_python2_7? ( >=dev-python/mysql-python-1.2.5[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) ) redis? ( ~dev-python/redis-py-2.9.1[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=test? ( mysql redis ) || ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=mirror://sourceforge/pyzor/pyzor-0.7.0.tar.bz2
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	1356c4bb8f56765cff4b74c0128d2a4f	python-utils-r1	e544c60078c7fa0939091b4c33e27450	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=9c0c04e3a50d7bd49317c848c722c629
+_md5_=e44c8a8edaaa929552f3962c208d7561

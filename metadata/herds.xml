@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1099 2014/05/18 21:28:06 jauhien Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1100 2014/05/20 11:15:59 zlogene Exp $
 
 -->
 <herds>
@@ -1427,6 +1427,10 @@
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
+  <maintainer>
+        <email>zlogene@gentoo.org</email>
+        <name>Mikle Kolyada</name>
+  </maintainer>
 </herd>
 <herd>
   <name>desktop-effects</name>
@@ -1552,6 +1556,10 @@
   <maintainer>
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
+  </maintainer>
+  <maintainer>
+	<email>zlogene@gentoo.org</email>
+     	<name>Mikle Kolyada</name>
   </maintainer>
   <!-- Do not enable it until the file does not give 500 errors anymore
   <maintainingproject>/proj/en/base/embedded/index.xml</maintainingproject>
