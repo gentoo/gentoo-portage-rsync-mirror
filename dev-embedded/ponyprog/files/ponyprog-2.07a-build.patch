@@ -1,15 +1,20 @@
 Respect LDFLAGS, CC, CXX
 
-http://bugs.gentoo.org/show_bug.cgi?id=317767
+http://bugs.gentoo.org/317767
+
+Fix parallel make
+
+https://bugs.gentoo.org/show_bug.cgi?id=282244
 
 --- Makefile
 +++ Makefile
 @@ -331,7 +331,7 @@
  prps:	$(PRPS)
  
- $(PROG):	$(OBJS)
+-$(PROG):	$(OBJS)
++$(PROG):	$(OBJS) vlib
 -	$(CXX) -o $@ $(OBJS) $(LDFLAGS)
-+	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBDIR) $(LIBS)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBDIR) $(LIBS)
  
  %.o: %.cpp
  	$(CXX) $(CFLAGS) -c $< -o $@
@@ -17,10 +22,10 @@ http://bugs.gentoo.org/show_bug.cgi?id=317767
 +++ v/Config.mk
 @@ -35,8 +35,6 @@
  #---------------------------------------------------------------------
- # Tools used in the makefile execution
- #---------------------------------------------------------------------
--CC	=	gcc
--CXX	=	g++
+ #CC	=	gcc
+ #CXX	=	g++
+-CC	=	gcc-3.4
+-CXX	=	g++-3.4
  
  #---------------------------------------------------------------------
  # VPATH for dependencies on header files

@@ -2,12 +2,17 @@ Respect LDFLAGS, CC, CXX
 
 http://bugs.gentoo.org/317767
 
+Fix parallel make
+
+https://bugs.gentoo.org/show_bug.cgi?id=282244
+
 --- Makefile
 +++ Makefile
 @@ -331,7 +331,7 @@
  prps:	$(PRPS)
  
- $(PROG):	$(OBJS)
+-$(PROG):	$(OBJS)
++$(PROG):	$(OBJS) vlib
 -	$(CXX) -o $@ $(OBJS) $(LDFLAGS)
 +	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBDIR) $(LIBS)
  
@@ -40,3 +45,4 @@ http://bugs.gentoo.org/317767
  
  
  #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
