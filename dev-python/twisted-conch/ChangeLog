@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.99 2014/01/21 04:50:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.100 2014/05/20 07:02:07 patrick Exp $
+
+*twisted-conch-14.0.0 (20 May 2014)
+
+  20 May 2014; Patrick Lauer <patrick@gentoo.org> +twisted-conch-14.0.0.ebuild:
+  Bump
 
   21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -twisted-conch-10.2.0.ebuild,
   -twisted-conch-11.0.0.ebuild, -twisted-conch-11.1.0.ebuild,
