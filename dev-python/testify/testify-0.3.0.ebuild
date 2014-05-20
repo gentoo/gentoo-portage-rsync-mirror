@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.3.0.ebuild,v 1.1 2014/05/03 08:12:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.3.0.ebuild,v 1.2 2014/05/20 15:16:08 idella4 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="test"
 RESTRICT="test"
 
 RDEPEND="dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/sqlalchemy
+	dev-python/sqlalchemy[${PYTHON_USEDEP}]
 	www-servers/tornado[${PYTHON_USEDEP}]
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
