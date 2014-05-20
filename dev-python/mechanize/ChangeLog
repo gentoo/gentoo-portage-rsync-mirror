@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.46 2014/03/31 21:00:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.47 2014/05/20 20:56:18 mrueg Exp $
+
+  20 May 2014; Manuel Rüger <mrueg@gentoo.org> mechanize-0.2.5-r1.ebuild:
+  Add ~arm keyword.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> mechanize-0.2.5-r1.ebuild:
   Add support for the new PyPy slotting.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.10-r1.ebuild,v 1.3 2014/03/31 21:01:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.10-r1.ebuild,v 1.4 2014/05/20 21:00:31 mrueg Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -17,7 +17,7 @@ SRC_URI="https://bitbucket.org/cthedot/cssutils/get/${HG_COMMIT}.tar.gz -> ${P}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="examples test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

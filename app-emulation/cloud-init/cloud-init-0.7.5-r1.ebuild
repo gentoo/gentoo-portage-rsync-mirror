@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/cloud-init-0.7.5.ebuild,v 1.2 2014/05/02 01:57:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/cloud-init-0.7.5-r1.ebuild,v 1.1 2014/05/20 20:55:30 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -31,23 +31,23 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 PATCHES=( "${FILESDIR}"/${P}-tests-exclude.patch )
 
-python_prepare_all() {
+#python_prepare_all() {
+#	distutils-r_python_prepare_all
+#}
+
+python_test() {
 	# These tests are not broken but expect to locate an installed exe file
 	# other than where a gentoo system installs it;  (/bin/ip sought in /sbin)
 	# See cloudinit/sources/DataSourceOpenNebula.py for possible patching
 	sed -e 's:test_hostname:_&:' \
 		-e 's:test_network_interfaces:_&:' \
 		-i tests/unittests/test_datasource/test_opennebula.py
-	distutils-r_python_prepare_all
-}
-
-python_test() {
 	emake test
 }
 
 python_install() {
 	distutils-r1_python_install
 	for svc in config final init init-local; do
-		newinitd "${FILESDIR}/cloud-${svc}.init" "cloud-${svc}"
+		newinitd "${WORKDIR}/${P}/sysvinit/gentoo/cloud-${svc}" "cloud-${svc}"
 	done
 }

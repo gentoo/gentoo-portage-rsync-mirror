@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/chmlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.24 2014/03/09 03:40:20 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.25 2014/05/20 20:47:42 mrueg Exp $
+
+  20 May 2014; Manuel Rüger <mrueg@gentoo.org> chmlib-0.40-r1.ebuild:
+  Add ~arm keyword.
 
   09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
   Change my email.
@@ -182,4 +185,3 @@
   10 Sep 2003; Sergey Kuleshov <svyatogor@gentoo.org> chmlib-0.31.ebuild:
   Initial commit of chmlib. Closing the bug #21342. Thanks to Andrew Kirilenko
   <icedank@gmx.net> for the contributed ebuild.
-

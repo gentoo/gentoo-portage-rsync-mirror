@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.31 2014/03/31 21:01:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.32 2014/05/20 21:00:31 mrueg Exp $
+
+  20 May 2014; Manuel Rüger <mrueg@gentoo.org> cssutils-0.9.10-r1.ebuild:
+  Add ~arm keyword.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> cssutils-0.9.10-r1.ebuild,
   cssutils-0.9.10_beta1-r1.ebuild:
