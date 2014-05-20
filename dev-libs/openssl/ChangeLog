@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.537 2014/05/13 18:07:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.538 2014/05/20 06:41:24 mgorny Exp $
+
+  20 May 2014; Michał Górny <mgorny@gentoo.org> openssl-1.0.1g-r1.ebuild,
+  openssl-1.0.2_beta1-r3.ebuild:
+  Add missing multilib_native_use_ssl function, bug #510828.
 
   13 May 2014; Michał Górny <mgorny@gentoo.org> openssl-1.0.1g-r1.ebuild,
   openssl-1.0.2_beta1-r3.ebuild:

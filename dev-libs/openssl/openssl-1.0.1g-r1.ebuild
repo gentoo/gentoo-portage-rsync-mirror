@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1g-r1.ebuild,v 1.2 2014/05/13 18:07:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1g-r1.ebuild,v 1.3 2014/05/20 06:41:24 mgorny Exp $
 
 EAPI="4"
 
@@ -112,6 +112,7 @@ multilib_src_configure() {
 	# RC5:      5,724,428 03/03/2015    http://en.wikipedia.org/wiki/RC5
 
 	use_ssl() { usex $1 "enable-${2:-$1}" "no-${2:-$1}" " ${*:3}" ; }
+	multilib_native_use_ssl() { multilib_native_usex $1 "enable-${2:-$1}" "no-${2:-$1}" " ${*:3}" ; }
 	echoit() { echo "$@" ; "$@" ; }
 
 	local krb5=$(has_version app-crypt/mit-krb5 && echo "MIT" || echo "Heimdal")
