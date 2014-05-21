@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.5.ebuild,v 1.1 2014/03/13 21:42:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.5.1.ebuild,v 1.1 2014/05/21 11:52:31 johu Exp $
 
 EAPI=5
 
@@ -12,8 +12,7 @@ if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://download.gna.org/${PN}/$(get_version_component_range 1-2)/${P/_/-}.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 else
-	ESVN_REPO_URI="svn://svn.gna.org/svn/${PN}/trunk"
-	ESVN_PROJECT="${PN}"
+	EGIT_BRANCH="${PN}/$(get_version_component_range 1-2)"
 	KEYWORDS=""
 fi
 
@@ -29,7 +28,5 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	dev-tex/bibtex2html"
-
-PATCHES=( "${FILESDIR}/${P}-build-fix.patch" )
 
 S=${WORKDIR}/${P/_/-}
