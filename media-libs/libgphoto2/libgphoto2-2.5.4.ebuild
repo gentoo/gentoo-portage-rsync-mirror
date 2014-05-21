@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.2-r1.ebuild,v 1.5 2014/02/06 12:22:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4.ebuild,v 1.1 2014/05/21 18:28:44 pacho Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -17,8 +17,8 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0/6" # libgphoto2.so soname version
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="doc examples exif gd jpeg nls zeroconf"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux"
+IUSE="doc examples exif gd jpeg nls serial zeroconf"
 
 # By default, drivers for all supported cameras will be compiled.
 # If you want to only compile for specific camera(s), set CAMERAS
@@ -52,25 +52,23 @@ done
 RDEPEND="
 	dev-libs/libxml2:2
 	sys-devel/libtool
-	virtual/libusb:0
+	virtual/libusb:1
 	cameras_ax203? ( media-libs/gd:= )
 	cameras_st2205? ( media-libs/gd:= )
 	exif? ( >=media-libs/libexif-0.5.9:= )
 	gd? ( media-libs/gd[jpeg=] )
 	jpeg? ( virtual/jpeg:0 )
+	serial? ( dev-libs/lockdev )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
+	!<sys-fs/udev-175
 "
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	sys-devel/flex
 	>=sys-devel/gettext-0.14.1
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "
-# FIXME: gtk-doc is broken
-#		>=dev-util/gtk-doc-1.10 )"
-
-RDEPEND="${RDEPEND}
-	!<sys-fs/udev-175"
 
 pkg_pretend() {
 	if ! echo "${USE}" | grep "cameras_" > /dev/null 2>&1; then
@@ -88,21 +86,16 @@ src_prepare() {
 		|| die "examples sed failed"
 
 	# Fix pkgconfig file when USE="-exif"
+	# https://sourceforge.net/p/gphoto/bugs/980/
 	if ! use exif; then
 		sed -i "s/, @REQUIREMENTS_FOR_LIBEXIF@//" libgphoto2.pc.in || die " libgphoto2.pc sed failed"
 	fi
 
-	# Leave GCC debug builds under user control
-	sed -r '/(C|LD)FLAGS/ s/ -g( |")/\1/' \
-		-i configure.ac libgphoto2_port/configure.ac || die
-
 	sed -e 's/sleep 2//' -i m4m/gp-camlibs.m4 || die
 
 	# Fix USE=zeroconf, bug #283332
+	# https://sourceforge.net/p/gphoto/bugs/981/
 	epatch "${FILESDIR}/${PN}-2.4.7-respect-bonjour.patch"
-
-	# Fix libxml2 detection, bug #491782
-	epatch "${FILESDIR}"/${PN}-2.5.2-libxml2-detection{,2}.patch
 
 	eautoreconf
 }
@@ -131,8 +124,16 @@ src_configure() {
 	local myconf
 	use doc || myconf="ac_cv_path_DOXYGEN=false"
 
+	# gd detection is broken: https://sourceforge.net/p/gphoto/bugs/982/
+	if use gd; then
+		export LIBGD_CFLAGS=" "
+		export LIBGD_LIBS="-lgd"
+	fi
+
 	# Upstream doesn't default to --enable-option-checking due having another
 	# configure in libgphoto2_port/ that also needs to be checked on every bump
+	#
+	# Serial port uses either lockdev or ttylock, but we don't have ttylock
 	econf \
 		--disable-docs \
 		--disable-gp2ddb \
@@ -141,6 +142,11 @@ src_configure() {
 		$(use_with exif libexif auto) \
 		$(use_with gd) \
 		$(use_with jpeg) \
+		$(use_enable serial) \
+		$(use_enable serial lockdev) \
+		--with-libusb=no \
+		--with-libusb-1.0=auto \
+		--disable-ttylock \
 		--with-camlibs=${cameras} \
 		--with-doc-dir="${EPREFIX}"/usr/share/doc/${PF} \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
@@ -148,9 +154,6 @@ src_configure() {
 		--with-rpmbuild=$(type -P true) \
 		udevscriptdir="$(udev_get_udevdir)" \
 		${myconf}
-
-# FIXME: gtk-doc is currently broken
-#		$(use_enable doc docs)
 }
 
 src_compile() {
@@ -166,6 +169,10 @@ src_install() {
 
 	# Empty dependency_libs in .la files, bug #386665
 	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
+
+	# Remove recursive symlink
+	# https://sourceforge.net/p/gphoto/bugs/983/
+	rm "${ED}/usr/include/gphoto2/gphoto2" || die
 
 	# Clean up unwanted files
 	rm "${ED}/usr/share/doc/${PF}/"{ABOUT-NLS,COPYING} || die "rm failed"

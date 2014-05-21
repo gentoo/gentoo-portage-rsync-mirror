@@ -2622,6 +2622,7 @@ games-simulation/openttd:openmedia - Enables the free open media sets: OpenGFX, 
 games-simulation/singularity:music - Install music files
 games-sports/speed-dreams:xrandr - Enable support for the X xrandr extension
 games-sports/xmoto:editor - Depend on inkscape, scripts to convert svg to level (svg2lvl)
+games-strategy/0ad:editor - Include Atlas scenario editor projects
 games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:auth - Add authentication capability

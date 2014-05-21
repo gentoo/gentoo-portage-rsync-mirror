@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.256 2014/05/17 15:31:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.257 2014/05/21 18:28:44 pacho Exp $
+
+*libgphoto2-2.5.4 (21 May 2014)
+
+  21 May 2014; Pacho Ramos <pacho@gentoo.org> +libgphoto2-2.5.4.ebuild,
+  -files/libgphoto2-2.4.7-no-test-build.patch,
+  -files/libgphoto2-2.4.8-increase_max_entries.patch,
+  -files/libgphoto2-2.4.9-dnl.patch, -files/libgphoto2-2.5.2-canon-s100.patch,
+  -files/libgphoto2-2.5.2-libxml2-detection.patch,
+  -files/libgphoto2-2.5.2-libxml2-detection2.patch,
+  -libgphoto2-2.4.14-r1.ebuild, -libgphoto2-2.5.2-r1.ebuild,
+  -libgphoto2-2.5.2-r3.ebuild:
+  Version bump, fix gd detection (#510934 by mgorny), drop old
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> libgphoto2-2.5.3.1.ebuild:
   Stable for alpha, wrt bug #508862

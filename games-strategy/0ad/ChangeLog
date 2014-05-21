@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/0ad
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/ChangeLog,v 1.1 2014/05/21 18:09:13 hasufell Exp $
+
+*0ad-0.0.16_alpha (21 May 2014)
+
+  21 May 2014; Julian Ospald <hasufell@gentoo.org> +0ad-0.0.16_alpha.ebuild,
+  +files/0ad-0.0.16_alpha-gentoo.patch, +metadata.xml:
+  initial import wrt #278541
+
