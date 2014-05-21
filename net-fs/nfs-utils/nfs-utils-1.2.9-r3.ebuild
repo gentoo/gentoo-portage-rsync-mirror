@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.9-r3.ebuild,v 1.2 2014/02/03 14:30:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.9-r3.ebuild,v 1.3 2014/05/21 15:58:19 jlec Exp $
 
 EAPI="4"
 
@@ -55,6 +55,11 @@ DEPEND="${DEPEND_COMMON}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.4-mtab-sym.patch
 	epatch "${FILESDIR}"/${PN}-1.2.8-cross-build.patch
+
+	sed \
+		-e "/^sbindir/s:= := \"${EPREFIX}\":g" \
+		-i utils/*/Makefile.am || die
+
 	eautoreconf
 }
 
@@ -62,8 +67,9 @@ src_configure() {
 	export libsqlite3_cv_is_recent=yes # Our DEPEND forces this.
 	export ac_cv_header_keyutils_h=$(usex nfsidmap)
 	econf \
-		--with-statedir=/var/lib/nfs \
+		--with-statedir="${EPREFIX}"/var/lib/nfs \
 		--enable-tirpc \
+		--with-tirpcinclude="${EPREFIX}"/usr/include/tirpc/ \
 		$(use_enable libmount libmount-mount) \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_enable nfsdcld nfsdcltrack) \
@@ -136,10 +142,10 @@ pkg_postinst() {
 	# src_install we put them in /usr/lib/nfs for safe-keeping, but
 	# the daemons actually use the files in /var/lib/nfs.  #30486
 	local f
-	mkdir -p "${ROOT}"/var/lib/nfs #368505
-	for f in "${ROOT}"/usr/$(get_libdir)/nfs/*; do
-		[[ -e ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
-		einfo "Copying default ${f##*/} from /usr/$(get_libdir)/nfs to /var/lib/nfs"
-		cp -pPR "${f}" "${ROOT}"/var/lib/nfs/
+	mkdir -p "${EROOT}"/var/lib/nfs #368505
+	for f in "${EROOT}"/usr/$(get_libdir)/nfs/*; do
+		[[ -e ${EROOT}/var/lib/nfs/${f##*/} ]] && continue
+		einfo "Copying default ${f##*/} from ${EPREFIX}/usr/$(get_libdir)/nfs to ${EPREFIX}/var/lib/nfs"
+		cp -pPR "${f}" "${EROOT}"/var/lib/nfs/
 	done
 }

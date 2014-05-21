@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/weston
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.9 2014/04/06 10:10:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.10 2014/05/21 15:52:14 chithanh Exp $
+
+*weston-1.5.0 (21 May 2014)
+
+  21 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +weston-1.5.0.ebuild, metadata.xml:
+  Version bump.
 
   06 Apr 2014; Agostino Sarubbo <ago@gentoo.org> weston-1.4.0.ebuild:
   Stable for x86, wrt bug #500368

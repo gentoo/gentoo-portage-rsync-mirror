@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.243 2014/02/03 14:30:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.244 2014/05/21 15:58:19 jlec Exp $
+
+  21 May 2014; Justin Lecher <jlec@gentoo.org> nfs-utils-1.2.9-r3.ebuild,
+  metadata.xml:
+  Some prefix love
 
   03 Feb 2014; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.9-r3.ebuild:
   Drop librpcsecgss dep as it is not used when libtirpc is utilized (which we

@@ -1817,6 +1817,7 @@ dev-libs/weston:launch - Install weston-launch utility
 dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support
 dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi
 dev-libs/weston:rpi - Raspberry Pi GPU support
+dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
 dev-libs/weston:simple-clients - Enable simple-clients
 dev-libs/weston:tablet - Enable interface for tablets
 dev-libs/weston:unwind - Enable libunwind usage for backtraces

@@ -15,6 +15,7 @@
 	<flag name='rdp'>Enable Remote Desktop Protocol compositor support</flag>
 	<flag name='resize-optimization'>Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi</flag>
 	<flag name='rpi'>Raspberry Pi GPU support</flag>
+	<flag name='screen-sharing'>Enable screen-sharing through RDP</flag>
 	<flag name='simple-clients'>Enable simple-clients</flag>
 	<flag name='tablet'>Enable interface for tablets</flag>
 	<flag name='unwind'>Enable libunwind usage for backtraces</flag>
