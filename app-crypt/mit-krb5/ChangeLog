@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.400 2014/05/17 14:37:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.401 2014/05/21 12:17:26 mgorny Exp $
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> mit-krb5-1.12.1-r1.ebuild:
+  Add krb5-config to MULTILIB_CHOST_TOOLS.
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> mit-krb5-1.11.4.ebuild,
   mit-krb5-1.12.1-r1.ebuild, mit-krb5-1.12.1.ebuild:

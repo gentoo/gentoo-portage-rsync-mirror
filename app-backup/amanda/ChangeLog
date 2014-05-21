@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/amanda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.110 2014/01/11 19:24:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.111 2014/05/21 12:07:27 pinkbyte Exp $
+
+  21 May 2014; Sergey Popov <pinkbyte@gentoo.org> amanda-3.3.3.ebuild,
+  amanda-3.3.3-r1.ebuild:
+  Get rid of base_* functions, replace them by default ones, wrt bug #507224.
+  Add dependency on dev-perl/XML-Simple for non-minimal builds, wrt bug #506372
 
   11 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> amanda-3.3.3-r1.ebuild,
   amanda-3.3.3.ebuild:

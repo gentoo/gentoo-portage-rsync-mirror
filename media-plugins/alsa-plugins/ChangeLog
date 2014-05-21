@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.193 2014/05/09 14:28:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.195 2014/05/21 12:03:50 mgorny Exp $
+
+*alsa-plugins-1.0.27-r3 (21 May 2014)
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> +alsa-plugins-1.0.27-r3.ebuild,
+  -alsa-plugins-1.0.27-r2.ebuild:
+  ...and bump revision to make sure people do not end up with a broken systems.
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> alsa-plugins-1.0.27-r2.ebuild:
+  Fix multilib_src_install_all() phase name, bug #510928.
 
 *alsa-plugins-1.0.27-r2 (09 May 2014)
 

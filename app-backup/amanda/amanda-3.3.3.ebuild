@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.9 2014/01/11 18:57:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.10 2014/05/21 12:07:27 pinkbyte Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -27,6 +27,7 @@ RDEPEND="sys-libs/readline
 	readline? ( sys-libs/readline )
 	!systemd? ( virtual/inetd )
 	!minimal? (
+		dev-perl/XML-Simple
 		virtual/mailx
 		app-arch/mt-st
 		sys-block/mtx
@@ -131,7 +132,7 @@ pkg_setup() {
 
 src_unpack() {
 	# we do not want the perl src_unpack
-	base_src_unpack
+	default_src_unpack
 }
 
 src_prepare() {
@@ -291,7 +292,7 @@ src_configure() {
 
 src_compile() {
 	# Again, do not want the perl-module src_compile
-	base_src_compile
+	default_src_compile
 }
 
 src_install() {
