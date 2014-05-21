@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.10.1-r1.ebuild,v 1.1 2014/05/19 14:34:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.10.1-r2.ebuild,v 1.1 2014/05/21 09:16:31 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy pypy2_0 )

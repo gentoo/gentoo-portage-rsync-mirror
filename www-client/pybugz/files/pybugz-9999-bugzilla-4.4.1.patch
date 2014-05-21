@@ -32,7 +32,7 @@ index 5c8261b..ae57a10 100644
  
 +	def set_token(self, *args):
 +		if args and self.token:
-+			args[0]['token'] = self.token
++			args[0]['Bugzilla_token'] = self.token
 +		return args
 +
  	def bzcall(self, method, *args):
