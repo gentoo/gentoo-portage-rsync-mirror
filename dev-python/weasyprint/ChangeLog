@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/weasyprint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/ChangeLog,v 1.7 2014/05/08 22:20:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/ChangeLog,v 1.8 2014/05/21 03:33:12 patrick Exp $
+
+*weasyprint-0.22 (21 May 2014)
+
+  21 May 2014; Patrick Lauer <patrick@gentoo.org> +weasyprint-0.22.ebuild:
+  Bump
 
 *weasyprint-0.21-r1 (08 May 2014)
 
