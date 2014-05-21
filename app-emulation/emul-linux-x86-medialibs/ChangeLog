@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.94 2014/05/09 07:52:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.95 2014/05/21 19:11:58 mgorny Exp $
+
+*emul-linux-x86-medialibs-20140508-r1 (21 May 2014)
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-medialibs-20140508-r1.ebuild,
+  +files/remove-native-20140508-r1:
+  Add multilib libgphoto2 & sane-backends.
 
   09 May 2014; Michał Górny <mgorny@gentoo.org> +files/remove-native-20140508,
   emul-linux-x86-medialibs-20140508.ebuild:

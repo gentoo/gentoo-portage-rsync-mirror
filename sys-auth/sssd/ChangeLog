@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.50 2014/04/10 17:08:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.51 2014/05/21 19:06:24 hwoarang Exp $
+
+  21 May 2014; Markos Chandras <hwoarang@gentoo.org> -sssd-1.9.4-r3.ebuild,
+  -sssd-1.9.5-r1.ebuild, -sssd-1.9.6-r1.ebuild:
+  Clean up old ebuilds per #462496
 
 *sssd-1.9.6-r2 (10 Apr 2014)
 
