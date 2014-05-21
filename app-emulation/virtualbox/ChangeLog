@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.183 2014/05/17 09:34:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.184 2014/05/21 05:58:17 polynomial-c Exp $
+
+  21 May 2014; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.3.12.ebuild:
+  Fixed compilation with gcc-4.9 (bug #510894).
 
 *virtualbox-4.3.12 (17 May 2014)
 

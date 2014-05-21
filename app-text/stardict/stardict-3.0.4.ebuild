@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.4.ebuild,v 1.1 2014/05/09 14:17:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.4.ebuild,v 1.2 2014/05/21 05:50:12 ssuominen Exp $
 
 EAPI=5
 
@@ -57,9 +57,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	# These 2 fixes have been upstreamized for upcoming 3.0.5 differently, so drop 'em:
 	epatch "${FILESDIR}"/${PN}-3.0.3-zlib-1.2.5.2.patch
-
-	# error: undefined reference to 'g_module_symbol' wrt #451730#c6
 	sed -i -e '/DEP_MODULES/s:glib-2.0:gmodule-2.0 &:' dict/configure || die
 
 	gnome2_src_prepare

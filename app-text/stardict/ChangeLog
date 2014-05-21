@@ -1,6 +1,10 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.34 2014/05/09 14:17:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.35 2014/05/21 05:50:12 ssuominen Exp $
+
+  21 May 2014; Samuli Suominen <ssuominen@gentoo.org> stardict-3.0.4.ebuild:
+  Leave a note about fixes committed to upstream repository for next person
+  touching the ebuild.
 
 *stardict-3.0.4 (09 May 2014)
 
