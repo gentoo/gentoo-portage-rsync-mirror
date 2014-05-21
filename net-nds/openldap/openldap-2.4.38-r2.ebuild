@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r2.ebuild,v 1.1 2014/05/21 11:04:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r2.ebuild,v 1.2 2014/05/21 22:33:32 mgorny Exp $
 
 EAPI="5"
 
@@ -454,7 +454,7 @@ multilib_src_configure() {
 		myconf+=( --enable-${basicflag} )
 	done
 
-	tc-export AR
+	tc-export AR CC CXX
 	ECONF_SOURCE=${S} \
 	STRIP=/bin/true \
 	econf \
@@ -485,7 +485,7 @@ src_configure_cxx() {
 }
 
 multilib_src_compile() {
-	tc-export AR
+	tc-export AR CC CXX
 	emake CC="${CC}" AR="${AR}" SHELL="${EPREFIX}"/bin/bash
 	local lt="${BUILD_DIR}/libtool"
 	export echo="echo"
