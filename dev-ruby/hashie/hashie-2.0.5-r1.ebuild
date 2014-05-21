@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/hashie-2.0.5-r1.ebuild,v 1.1 2013/10/06 16:58:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/hashie-2.0.5-r1.ebuild,v 1.2 2014/05/21 02:15:36 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/loquacious
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.21 2014/05/06 21:19:35 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.22 2014/05/21 02:04:20 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> loquacious-1.9.1-r1.ebuild:
+  Remove ruby18 target.
 
 *loquacious-1.9.1-r2 (06 May 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.23 2014/03/25 10:54:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.24 2014/05/21 02:24:22 mrueg Exp $
+
+*oauth-0.4.7-r1 (21 May 2014)
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> +oauth-0.4.7-r1.ebuild,
+  -files/oauth-0.4.1-optional-tests.patch,
+  -files/oauth-0.4.3-optional-tests.patch, -oauth-0.4.7.ebuild:
+  Remove ruby18 target. Cleanup old patches.
 
   25 Mar 2014; Hans de Graaff <graaff@gentoo.org> oauth-0.4.7.ebuild:
   Drop deprecated ree18.
@@ -103,4 +110,3 @@
   16 May 2009; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +oauth-0.3.2.ebuild:
   Initial import. Dependency for dev-ruby/twitter.
-

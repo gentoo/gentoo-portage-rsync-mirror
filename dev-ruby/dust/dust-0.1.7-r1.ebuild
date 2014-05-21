@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/dust-0.1.7-r1.ebuild,v 1.3 2014/03/12 04:58:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/dust-0.1.7-r1.ebuild,v 1.4 2014/05/21 02:17:47 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_EXTRADOC="README"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Descriptive block syntax definition for Test::Unit."
+DESCRIPTION="Descriptive block syntax definition for Test::Unit"
 HOMEPAGE="http://dust.rubyforge.org/"
 LICENSE="MIT"
 SRC_URI="mirror://rubyforge/dust/${P}.gem"

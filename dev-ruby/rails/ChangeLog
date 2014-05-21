@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.291 2014/05/12 19:01:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.292 2014/05/21 02:26:39 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> rails-3.2.18.ebuild:
+  Remove ruby18 target.
 
   12 May 2014; Hans de Graaff <graaff@gentoo.org> -rails-3.2.17.ebuild,
   -rails-4.0.3.ebuild, -rails-4.0.4.ebuild, -rails-4.1.0.ebuild:

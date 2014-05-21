@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/htmlentities
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.35 2014/03/12 10:59:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.36 2014/05/21 02:28:24 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> htmlentities-4.3.1-r1.ebuild:
+  Remove ruby18 target.
 
   12 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -htmlentities-4.3.1.ebuild:
   Cleanup old.

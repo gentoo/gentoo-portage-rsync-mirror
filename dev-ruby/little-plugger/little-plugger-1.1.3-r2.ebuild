@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/little-plugger-1.1.3-r2.ebuild,v 1.1 2014/05/06 21:31:23 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/little-plugger-1.1.3-r2.ebuild,v 1.2 2014/05/21 02:07:41 mrueg Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt README.rdoc"
 inherit ruby-fakegem eutils
 
 DESCRIPTION="Module that provides Gem based plugin management"
-HOMEPAGE="http://github.com/TwP/${PN}"
+HOMEPAGE="http://github.com/TwP/little-plugger"
 
 IUSE="test"
 LICENSE="MIT"

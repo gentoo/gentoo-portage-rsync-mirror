@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/kirbybase-2.6.1-r1.ebuild,v 1.3 2013/12/24 12:43:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/kirbybase-2.6.1-r1.ebuild,v 1.4 2014/05/21 02:03:35 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_NAME="KirbyBase"
 
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="changes.txt kirbybaserubymanual.html README"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A simple Ruby DBMS that stores data in plaintext files."
+DESCRIPTION="A simple Ruby DBMS that stores data in plaintext files"
 HOMEPAGE="http://www.netpromi.com/kirbybase_ruby.html"
 
 LICENSE="Ruby"

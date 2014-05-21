@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hashie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.21 2013/11/02 20:05:23 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.22 2014/05/21 02:15:36 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> hashie-2.0.5-r1.ebuild:
+  Remove ruby18 target.
 
   02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -hashie-2.0.4.ebuild,
   -hashie-2.0.5.ebuild:

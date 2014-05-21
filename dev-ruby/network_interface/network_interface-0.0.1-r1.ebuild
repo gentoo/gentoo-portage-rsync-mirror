@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/network_interface/network_interface-0.0.1-r1.ebuild,v 1.1 2013/08/20 15:36:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/network_interface/network_interface-0.0.1-r1.ebuild,v 1.2 2014/05/21 02:20:21 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -25,6 +25,6 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
-	emake -C ext/network_interface_ext
+	emake -C ext/network_interface_ext V=1
 	cp ext/network_interface_ext/network_interface_ext.so lib/ || die
 }

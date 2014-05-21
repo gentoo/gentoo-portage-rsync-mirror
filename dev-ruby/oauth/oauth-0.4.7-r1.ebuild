@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.7.ebuild,v 1.3 2014/03/25 10:54:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.4.7-r1.ebuild,v 1.1 2014/05/21 02:24:22 mrueg Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 jruby"
+EAPI=5
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -33,18 +33,4 @@ all_ruby_prepare() {
 
 	# Remove tests that require Rails 2.3 since that is ruby18-only.
 	rm test/test_action_controller_request_proxy.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*ruby18)
-			# Ignore hash ordering test failures
-			sed -i -e '183s:^:#:' -e '224s:^:#:' test/integration/consumer_test.rb || die
-			;;
-		*ruby19)
-			# Remove tests depending on rails.
-			;;
-		*)
-			;;
-	esac
 }

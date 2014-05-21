@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/little-plugger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/ChangeLog,v 1.13 2014/05/06 21:31:23 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/ChangeLog,v 1.14 2014/05/21 02:07:41 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> little-plugger-1.1.3-r1.ebuild,
+  little-plugger-1.1.3-r2.ebuild:
+  Remove ruby18 target.
 
 *little-plugger-1.1.3-r2 (06 May 2014)
 
