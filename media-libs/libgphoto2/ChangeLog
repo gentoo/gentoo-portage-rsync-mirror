@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.257 2014/05/21 18:28:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.258 2014/05/21 18:59:58 mgorny Exp $
+
+*libgphoto2-2.5.4-r1 (21 May 2014)
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> +libgphoto2-2.5.4-r1.ebuild:
+  Enable multilib support, bug #493170.
 
 *libgphoto2-2.5.4 (21 May 2014)
 

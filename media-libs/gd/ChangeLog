@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.88 2013/08/27 15:48:38 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.89 2014/05/21 18:39:27 mgorny Exp $
+
+*gd-2.0.35-r4 (21 May 2014)
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> +gd-2.0.35-r4.ebuild:
+  Enable multilib support, as a dependency of libgphoto2.
 
   27 Aug 2013; Michael Palimaka <kensington@gentoo.org> gd-2.0.35-r3.ebuild:
   Pin virtual/jpeg SLOT to 0.

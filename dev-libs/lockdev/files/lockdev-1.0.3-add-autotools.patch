@@ -26,7 +26,7 @@ Updated by Jonathan Callen <abcd@gentoo.org> 2009-09-11
 +
 +install-data-hook:
 +	for page in $(manpage_links); do \
-+		$(LN_S) lockdev.3 $(DESTDIR)$(man3dir)/$${page} ; \
++		$(LN_S) -f lockdev.3 $(DESTDIR)$(man3dir)/$${page} ; \
 +	done
 --- configure.ac
 +++ configure.ac

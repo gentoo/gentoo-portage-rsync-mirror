@@ -1,32 +1,41 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.14.ebuild,v 1.8 2012/10/28 16:02:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.5.4.ebuild,v 1.1 2014/05/21 18:33:47 pacho Exp $
 
-EAPI="4"
+EAPI="5"
+inherit autotools
 
-DESCRIPTION="free, redistributable digital camera software application"
+DESCRIPTION="Free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
 SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib exif ncurses nls readline"
 
 # aalib -> needs libjpeg
-# raise libgphoto to get a proper .pc
-RDEPEND="virtual/libusb:0
+RDEPEND="
 	dev-libs/popt
-	>=media-libs/libgphoto2-2.4.14[exif?]
-	ncurses? ( dev-libs/cdk )
+	>=media-libs/libgphoto2-2.5.4[exif?]
 	aalib? (
 		media-libs/aalib
 		virtual/jpeg:0 )
 	exif? (	media-libs/libexif )
-	readline? ( sys-libs/readline )"
+	ncurses? ( dev-libs/cdk )
+	readline? ( sys-libs/readline )
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	nls? ( >=sys-devel/gettext-0.18.1 )"
+	nls? ( >=sys-devel/gettext-0.14.1 )
+"
+
+src_prepare() {
+	# Leave GCC debug builds under user control
+	sed -r '/(C|LD)FLAGS/ s/ -g( |")/\1/' \
+		-i configure{.ac,} || die
+	eautoreconf
+}
 
 src_configure() {
 	CPPFLAGS="-I/usr/include/cdk" econf \
