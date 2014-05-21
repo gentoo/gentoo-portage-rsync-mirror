@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r9.ebuild,v 1.9 2014/05/16 19:53:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r9.ebuild,v 1.10 2014/05/21 06:38:17 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils fdo-mime flag-o-matic multilib python-single-r1 toolchain-funcs user systemd
+inherit eutils fdo-mime flag-o-matic multilib python-single-r1 systemd toolchain-funcs user
 
 DESCRIPTION="Distribute compilation of C code across several machines on a network"
 HOMEPAGE="http://distcc.org/"
@@ -82,7 +82,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}/distccd.service"
 	systemd_install_serviced "${FILESDIR}/distccd.service.conf"
 
-	cp "${FILESDIR}/3.1/conf" "${T}/distccd"
+	cp "${FILESDIR}/3.1/conf" "${T}/distccd" || die
 	if use avahi; then
 		cat >> "${T}/distccd" <<-EOF
 
@@ -118,7 +118,7 @@ src_install() {
 	if use gtk; then
 		einfo "Renaming /usr/bin/distccmon-gnome to /usr/bin/distccmon-gui"
 		einfo "This is to have a little sensability in naming schemes between distccmon programs"
-		mv "${D}/usr/bin/distccmon-gnome" "${D}/usr/bin/distccmon-gui" || die
+		mv "${ED}/usr/bin/distccmon-gnome" "${ED}/usr/bin/distccmon-gui" || die
 		dosym distccmon-gui /usr/bin/distccmon-gnome
 	fi
 

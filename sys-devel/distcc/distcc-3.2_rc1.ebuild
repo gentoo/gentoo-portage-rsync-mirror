@@ -1,14 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1.ebuild,v 1.7 2014/01/19 01:53:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1.ebuild,v 1.8 2014/05/21 06:38:17 jlec Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2:2.5"
+EAPI=5
 
-inherit autotools eutils fdo-mime flag-o-matic multilib python systemd toolchain-funcs user
+PYTHON_COMPAT=( python2_7 )
+
+inherit autotools eutils fdo-mime flag-o-matic multilib python-single-r1 systemd toolchain-funcs user
 
 MY_P="${P/_}"
-DESCRIPTION="a program to distribute compilation of C code across several machines on a network"
+DESCRIPTION="Distribute compilation of C code across several machines on a network"
 HOMEPAGE="http://distcc.org/"
 SRC_URI="http://distcc.googlecode.com/files/${MY_P}.tar.bz2"
 
@@ -19,7 +20,8 @@ IUSE="avahi crossdev gnome gssapi gtk hardened ipv6 selinux xinetd"
 
 RESTRICT="test"
 
-RDEPEND="dev-libs/popt
+RDEPEND="
+	dev-libs/popt
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	gnome? (
 		>=gnome-base/libgnome-2
@@ -40,11 +42,11 @@ RDEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DCCC_PATH="/usr/$(get_libdir)/distcc/bin"
+DISTCC_VERBOSE="0"
 
 pkg_setup() {
 	enewuser distcc 240 -1 -1 daemon
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -61,10 +63,9 @@ src_prepare() {
 	# Bugs #120001, #167844 and probably more. See patch for description.
 	use hardened && epatch "${FILESDIR}/distcc-hardened.patch"
 
-	python_convert_shebangs -r $(python_get_version) .
 	sed -i \
 		-e "/PATH/s:\$distcc_location:${EPREFIX}${DCCC_PATH}:" \
-		-e "s:@PYTHON@:${EPREFIX}$(PYTHON -a):" \
+		-e "s:@PYTHON@:${EPYTHON}:" \
 		pump.in || die "sed failed"
 
 	sed \
@@ -77,7 +78,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--disable-Werror"
+	local myconf="--disable-Werror --with-docdir=/usr/share/doc/${PF}"
 	# More legacy stuff?
 	[ "$(gcc-major-version)" = "2" ] && filter-lfs-flags
 
@@ -89,16 +90,15 @@ src_configure() {
 		$(use_with gtk) \
 		$(use_with gnome) \
 		$(use_with gssapi auth) \
-		--with-docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		${myconf} || die "econf failed"
+		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
-	dobin "${FILESDIR}/3.0/distcc-config" || die
+	dobin "${FILESDIR}/3.0/distcc-config"
 
-	newinitd "${FILESDIR}/3.1/init" distccd || die
+	newinitd "${FILESDIR}/3.1/init" distccd
 	systemd_dounit "${FILESDIR}/distccd.service"
 	systemd_install_serviced "${FILESDIR}/distccd.service.conf"
 
