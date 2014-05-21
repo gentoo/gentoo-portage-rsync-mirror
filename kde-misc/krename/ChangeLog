@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.79 2014/05/06 11:39:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.80 2014/05/21 12:42:50 johu Exp $
+
+*krename-4.0.9-r3 (21 May 2014)
+
+  21 May 2014; Johannes Huber <johu@gentoo.org> +krename-4.0.9-r3.ebuild,
+  -krename-4.0.9-r2.ebuild, files/krename-4.0.9-desktop-file.patch,
+  krename-4.0.9.ebuild:
+  Revision bump with updated desktop file patch, fixes bug #510886.
 
 *krename-4.0.9-r2 (06 May 2014)
 

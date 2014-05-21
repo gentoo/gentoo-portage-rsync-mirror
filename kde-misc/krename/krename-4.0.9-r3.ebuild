@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-4.0.9-r2.ebuild,v 1.1 2014/05/06 11:39:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-4.0.9-r3.ebuild,v 1.1 2014/05/21 12:42:50 johu Exp $
 
 EAPI=5
 

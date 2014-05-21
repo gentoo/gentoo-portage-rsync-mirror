@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/opensmtpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.58 2014/05/15 07:42:50 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/ChangeLog,v 1.59 2014/05/21 12:59:20 zx2c4 Exp $
+
+*opensmtpd-5.4.2.201405202105_p1 (21 May 2014)
+
+  21 May 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +opensmtpd-5.4.2.201405202105_p1.ebuild,
+  -opensmtpd-5.4.2.201405142325_p1.ebuild:
+  Version bump.
 
 *opensmtpd-5.4.2.201405142325_p1 (15 May 2014)
 
