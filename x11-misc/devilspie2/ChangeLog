@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/devilspie2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.15 2014/04/22 12:41:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.16 2014/05/21 13:51:01 jer Exp $
+
+*devilspie2-0.36 (21 May 2014)
+
+  21 May 2014; Jeroen Roovers <jer@gentoo.org> +devilspie2-0.36.ebuild:
+  Version bump.
 
 *devilspie2-0.33 (22 Apr 2014)
 
