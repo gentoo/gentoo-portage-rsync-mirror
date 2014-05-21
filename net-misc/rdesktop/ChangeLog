@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.155 2014/01/31 23:32:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.156 2014/05/21 08:30:11 voyageur Exp $
+
+*rdesktop-1.8.2 (21 May 2014)
+
+  21 May 2014; Bernard Cafarelli <voyageur@gentoo.org> +rdesktop-1.8.2.ebuild:
+  Version bump, includes fix for #499858
 
   31 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> -rdesktop-1.8.0.ebuild,
   rdesktop-1.8.1.ebuild:
