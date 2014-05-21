@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1260 2014/05/21 20:39:20 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1261 2014/05/21 21:30:26 rhill Exp $
+
+  21 May 2014; Ryan Hill <rhill@gentoo.org> toolchain.eclass:
+  Bug #499774, take 2.
 
   21 May 2014; Ryan Hill <rhill@gentoo.org> toolchain.eclass:
   Revert libintl change. It turns out we need to depend on gettext anyways, so

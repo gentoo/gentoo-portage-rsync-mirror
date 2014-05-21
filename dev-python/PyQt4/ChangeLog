@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.259 2014/05/19 18:07:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.260 2014/05/21 21:29:32 pesa Exp $
+
+  21 May 2014; Davide Pesavento <pesa@gentoo.org> PyQt4-4.10.3-r2.ebuild,
+  PyQt4-4.10.3-r3.ebuild, metadata.xml:
+  Update pypi identifier in HOMEPAGE and <upstream> metadata tag. Thanks to
+  Martin Walch in bug 510812.
 
   19 May 2014; Michał Górny <mgorny@gentoo.org> -PyQt4-4.10.2.ebuild,
   -PyQt4-4.10.3.ebuild:

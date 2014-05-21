@@ -24,6 +24,6 @@
 			<name>Phil Thompson</name>
 		</maintainer>
 		<bugs-to>mailto:pyqt@riverbankcomputing.com</bugs-to>
-		<remote-id type="pypi">PyQt</remote-id>
+		<remote-id type="pypi">PyQt4</remote-id>
 	</upstream>
 </pkgmetadata>
