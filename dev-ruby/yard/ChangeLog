@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.74 2014/04/12 23:37:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.75 2014/05/21 06:23:23 graaff Exp $
+
+*yard-0.8.7.4 (21 May 2014)
+
+  21 May 2014; Hans de Graaff <graaff@gentoo.org> +yard-0.8.7.4.ebuild:
+  Version bump.
 
   12 Apr 2014; Manuel Rüger <mrueg@gentoo.org> yard-0.8.7.2.ebuild,
   yard-0.8.7.3.ebuild:
