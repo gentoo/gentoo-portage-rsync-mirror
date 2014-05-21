@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.10.1.ebuild,v 1.1 2014/02/27 23:47:41 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.10.1.ebuild,v 1.2 2014/05/21 11:24:46 pinkbyte Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ IUSE="doc +highlight +lua +jit"
 RDEPEND="
 	dev-vcs/git
 	sys-libs/zlib
-	dev-libs/openssl
+	dev-libs/openssl:0
 	virtual/httpd-cgi
 	highlight? ( || ( dev-python/pygments app-text/highlight ) )
 	lua? ( jit? ( dev-lang/luajit ) !jit? ( dev-lang/lua ) )

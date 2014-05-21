@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.24 2014/05/08 02:47:27 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.25 2014/05/21 11:24:46 pinkbyte Exp $
+
+  21 May 2014; Sergey Popov <pinkbyte@gentoo.org> cgit-0.10.1.ebuild,
+  cgit-9999.ebuild:
+  QA: add slot to openssl dependency, wrt bug #508174. Thanks to Julian Ospald
+  for discovering this issue
 
   08 May 2014; Jason A. Donenfeld <zx2c4@gentoo.org> -cgit-0.10.ebuild:
   Remove old version.

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/bedup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.7 2014/05/09 01:25:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.8 2014/05/21 11:31:18 mgorny Exp $
+
+  21 May 2014; Michał Górny <mgorny@gentoo.org> bedup-0.9.0_p20140413.ebuild,
+  bedup-9999.ebuild:
+  Require sqlalchemy >= 0.8.2, bug #510910.
 
   09 May 2014; Jeroen Roovers <jer@gentoo.org> bedup-0.9.0_p20140413.ebuild:
   Whitespace.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-9999.ebuild,v 1.5 2014/05/08 22:23:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-9999.ebuild,v 1.6 2014/05/21 11:31:18 mgorny Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 	dev-python/alembic[${PYTHON_USEDEP}]
 	dev-python/contextlib2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
-	dev-python/sqlalchemy[sqlite,${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-0.8.2[sqlite,${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]"
 
 #if LIVE
