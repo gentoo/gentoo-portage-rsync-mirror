@@ -1,8 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.134 2014/04/23 09:19:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.135 2014/05/21 07:39:33 dlan Exp $
 
 # This file requires >=portage-2.1.1
+
+# Yixun Lan <dlan@gentoo.org> (21 May 2014)
+# sys-fs/zfs not keyworded on x86
+sys-cluster/ceph zfs
 
 # Lars Wendler <polynomial-c@gentoo.org (23 Apr 2014)
 # Works on 32bit x86

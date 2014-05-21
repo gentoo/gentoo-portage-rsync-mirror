@@ -1,0 +1,22 @@
+/var/log/ceph/admin.log
+/var/log/ceph/ceph.log
+/var/log/ceph/ceph-mon.*
+/var/log/ceph/ceph-mds.*
+/var/log/ceph/ceph-osd.*
+{
+    rotate 7
+    daily
+    compress
+    sharedscripts
+    prerotate
+	for dmn in $(cd /run/ceph && ls *.asok); do
+		ceph --admin-daemon /run/ceph/${dmn} log flush 2>/dev/null >&1
+	done
+    endscript
+    postrotate
+	for dmn in $(cd /run/ceph && ls *.asok); do
+		ceph --admin-daemon /run/ceph/${dmn} log reopen 2>/dev/null >&1
+        done
+    endscript
+    missingok
+}
