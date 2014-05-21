@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycairo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.144 2013/09/05 18:46:22 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.145 2014/05/21 14:34:31 idella4 Exp $
+
+  21 May 2014; Ian Delaney <idella4@gentoo.org>
+  +files/pycairo-1.10.0-waf-py3_4.patch, +files/pycairo-1.10.0-waf-unpack.patch,
+  pycairo-1.10.0-r4.ebuild:
+  drop py2.6 add py3.4, patches to fix configure failure under py3.4, patch
+  courtesy of Hristo Venev via Bug #504342 (early March)
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pycairo-1.10.0-r4.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

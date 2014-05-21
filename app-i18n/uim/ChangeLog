@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.266 2014/05/18 19:03:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.267 2014/05/21 14:35:14 jer Exp $
+
+  21 May 2014; Jeroen Roovers <jer@gentoo.org> uim-1.8.6-r1.ebuild:
+  Stable for HPPA (bug #510672).
 
 *uim-1.8.6-r1 (18 May 2014)
 

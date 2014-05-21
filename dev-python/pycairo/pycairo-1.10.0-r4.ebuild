@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.18 2013/09/05 18:46:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.19 2014/05/21 14:34:31 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_{6,7} python3_{2,3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit eutils python-r1 waf-utils
 
@@ -27,8 +27,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # Note: xpyb is used as the C header, not Python modules
 RDEPEND="${PYTHON_DEPS}
 	>=x11-libs/cairo-1.10.0[svg?,xcb?]
-	xcb? ( x11-libs/xpyb )
-"
+	xcb? ( x11-libs/xpyb )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
@@ -40,6 +39,7 @@ src_prepare() {
 	rm -f src/config.h || die
 	epatch "${FILESDIR}/${PN}-1.10.0-svg_check.patch"
 	epatch "${FILESDIR}/${PN}-1.10.0-xpyb.patch"
+	epatch "${FILESDIR}/${PN}-1.10.0-waf-unpack.patch"
 	epatch "${FILESDIR}"/py2cairo-1.10.0-ppc-darwin.patch
 	popd > /dev/null
 
@@ -51,8 +51,14 @@ src_prepare() {
 	popd > /dev/null
 
 	preparation() {
-		if [[ ${EPYTHON} == python3.* ]]; then
+		if python_is_python3; then
 			cp -r -l "${WORKDIR}/pycairo-${PYCAIRO_PYTHON3_VERSION}" "${BUILD_DIR}" || die
+			pushd "${BUILD_DIR}" > /dev/null
+			wafdir="$(./waf unpack)"
+			pushd "${wafdir}" > /dev/null
+			epatch "${FILESDIR}/${PN}-1.10.0-waf-py3_4.patch"
+			popd > /dev/null
+			popd > /dev/null
 		else
 			cp -r -l "${WORKDIR}/py2cairo-${PYCAIRO_PYTHON2_VERSION}" "${BUILD_DIR}" || die
 		fi
