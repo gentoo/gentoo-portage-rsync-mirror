@@ -1,43 +1,5 @@
-This is using gcc-4.8.x with GNU gold linker from binutils-2.24 with LDFLAGS="-Wl,--as-needed":
-
-LINK  avant-window-navigator
-awn-main.o:awn-main.c:function main: error: undefined reference to 'g_option_context_new'
-[ .. cut .. ]
-awn-app.o:awn-app.c:function dbus_glib_marshal_awn_app_BOOLEAN__POINTER_POINTER: error: undefined reference to 'g_value_peek_pointer'
-[ .. cut .. ]
-awn-applet-manager.o:awn-applet-manager.c:function awn_applet_manager_class_intern_init: error: undefined reference to 'g_type_class_peek_parent'
-[ .. cut .. ]
-awn-applet-proxy.o:awn-applet-proxy.c:function awn_applet_proxy_class_intern_init: error: undefined reference to 'g_type_class_peek_parent'
-[ .. cut .. ]
-awn-background.o:awn-background.c:function awn_background_class_intern_init: error: undefined reference to 'g_type_class_peek_parent'
-[ .. cut .. ]
-awn-background-flat.o:awn-background-flat.c:function awn_background_flat_get_shape_mask: error: undefined reference to 'cairo_save'
-[ .. cut .. ]
-awn-background-3d.o:awn-background-3d.c:function draw_rect_path: error: undefined reference to 'cairo_move_to'
-[ .. cut .. ]
-awn-background-curves.o:awn-background-curves.c:function draw_rect_path.isra.1: error: undefined reference to 'cairo_scale'
-[ .. cut .. ]
-awn-background-edgy.o:awn-background-edgy.c:function awn_background_edgy_align_changed: error: undefined reference to 'gtk_widget_hide'
-[ .. cut .. ]
-awn-background-floaty.o:awn-background-floaty.c:function awn_background_floaty_draw: error: undefined reference to 'gtk_widget_is_composited'
-[ .. cut .. ]
-awn-marshal.o:awn-marshal.c:function awn_marshal_BOOLEAN__VOID: error: undefined reference to 'g_value_set_boolean'
-[ .. cut .. ]
-awn-monitor.o:awn-monitor.c:function awn_monitor_class_intern_init: error: undefined reference to 'desktop_agnostic_config_client_get_type'
-[ .. cut .. ]
-awn-panel.o:awn-panel.c:function alpha_blend_start: error: undefined reference to 'g_timeout_add'
-[ .. cut .. ]
-awn-separator.o:awn-separator.c:function awn_separator_class_intern_init: error: undefined reference to 'desktop_agnostic_color_get_type'
-[ .. cut .. ]
-awn-throbber.o:awn-throbber.c:function awn_throbber_class_intern_init: error: undefined reference to 'desktop_agnostic_color_get_type'
-[ .. cut .. ]
-awn-ua-alignment.o:awn-ua-alignment.c:function awn_ua_alignment_class_intern_init: error: undefined reference to 'g_param_spec_string'
-[ .. cut .. ]
-xutils.o:xutils.c:function xutils_set_strut: error: undefined reference to 'gdk_window_object_get_type'
-collect2: error: ld returned 1 exit status
-  
---- src/Makefile.am
-+++ src/Makefile.am
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -16,6 +16,7 @@
  bin_PROGRAMS = avant-window-navigator
  
