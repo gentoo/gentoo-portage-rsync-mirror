@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/multipart-post
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.14 2014/01/23 07:36:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.15 2014/05/21 01:51:18 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> multipart-post-1.2.0.ebuild,
+  multipart-post-2.0.0.ebuild:
+  Remove ruby18 target.
 
   23 Jan 2014; Hans de Graaff <graaff@gentoo.org> -multipart-post-1.1.5.ebuild:
   Cleanup.
@@ -63,4 +67,3 @@
   13 Mar 2011; Hans de Graaff <graaff@gentoo.org>
   +multipart-post-1.1.0.ebuild, +metadata.xml:
   Initial import. New dependency for dev-ruby/faraday.
-

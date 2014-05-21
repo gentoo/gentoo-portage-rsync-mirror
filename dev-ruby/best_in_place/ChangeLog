@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/best_in_place
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.13 2014/03/08 02:06:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.14 2014/05/21 01:52:07 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> best_in_place-2.1.0.ebuild:
+  Remove ruby18 target. EAPI bump.
 
   08 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -best_in_place-1.1.3.ebuild:
   Cleanup old.

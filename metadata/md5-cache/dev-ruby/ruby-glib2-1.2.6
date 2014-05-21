@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=>=dev-libs/glib-2 ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ) virtual/pkgconfig ruby_targets_ruby18? ( dev-ruby/pkg-config[ruby_targets_ruby18] ) ruby_targets_ruby19? ( dev-ruby/pkg-config[ruby_targets_ruby19] )
+DEPEND=>=dev-libs/glib-2 ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ) virtual/pkgconfig ruby_targets_ruby19? ( dev-ruby/pkg-config[ruby_targets_ruby19] )
 DESCRIPTION=Ruby Glib2 bindings
 EAPI=4
 HOMEPAGE=http://ruby-gnome2.sourceforge.jp/
-IUSE=elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 test
+IUSE=elibc_FreeBSD ruby_targets_ruby19 test
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=Ruby
-RDEPEND=>=dev-libs/glib-2 ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+RDEPEND=>=dev-libs/glib-2 ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-1.2.6.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	ruby-ng-gnome2	e4cff284a3481220aed757f422ae56c7	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=2acc1e4f8dc8867af7ff6e4d85350a1c
+_md5_=07e72c9b20c52c128e3c776986b55000

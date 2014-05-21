@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/method_source-0.8.2-r2.ebuild,v 1.1 2013/11/17 09:55:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/method_source-0.8.2-r2.ebuild,v 1.2 2014/05/21 02:00:28 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC=""
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="README.markdown"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Retrieve the source code for a method."
+DESCRIPTION="Retrieve the source code for a method"
 HOMEPAGE="http://github.com/banister/method_source"
 IUSE=""
 SLOT="0"

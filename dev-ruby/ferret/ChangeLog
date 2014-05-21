@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ferret
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ChangeLog,v 1.8 2014/01/29 00:58:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ChangeLog,v 1.9 2014/05/21 01:57:04 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> ferret-0.11.8.5-r2.ebuild:
+  Remove ruby18 target.
 
 *ferret-0.11.8.5-r2 (29 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gnome2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.86 2014/03/18 23:52:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.87 2014/05/21 01:33:15 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> ruby-gnome2-1.1.8.ebuild:
+  Remove ruby18 target.
 
 *ruby-gnome2-2.2.0 (18 Mar 2014)
 

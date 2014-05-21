@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-2.0.1-r2.ebuild,v 1.6 2012/07/22 16:05:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-2.0.1-r2.ebuild,v 1.7 2014/05/21 01:34:32 mrueg Exp $
 
 EAPI="2"
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""

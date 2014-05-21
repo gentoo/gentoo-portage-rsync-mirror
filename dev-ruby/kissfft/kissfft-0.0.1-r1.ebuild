@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kissfft/kissfft-0.0.1-r1.ebuild,v 1.1 2013/11/02 20:36:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kissfft/kissfft-0.0.1-r1.ebuild,v 1.2 2014/05/21 01:57:54 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""

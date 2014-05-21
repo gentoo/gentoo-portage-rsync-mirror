@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( ruby_targets_ruby18? ( >=dev-ruby/rack-1.0.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ruby_targets_jruby? ( >=dev-ruby/rack-1.0.0[ruby_targets_jruby] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby18? ( test? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_jruby? ( test? ( dev-ruby/rake[ruby_targets_jruby] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) )
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ruby_targets_jruby? ( >=dev-ruby/rack-1.0.0[ruby_targets_jruby] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_jruby? ( test? ( dev-ruby/rake[ruby_targets_jruby] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) )
 DESCRIPTION=A stackable dynamic tree based Rack router.
 EAPI=5
 HOMEPAGE=https://github.com/josh/rack-mount
-IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_jruby test test
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_jruby test test
 KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=MIT
-RDEPEND=ruby_targets_ruby18? ( >=dev-ruby/rack-1.0.0[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ruby_targets_jruby? ( >=dev-ruby/rack-1.0.0[ruby_targets_jruby] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_jruby )
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] ) ruby_targets_jruby? ( >=dev-ruby/rack-1.0.0[ruby_targets_jruby] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_jruby )
 SLOT=0.8
 SRC_URI=https://github.com/josh/rack-mount/tarball/v0.8.3 -> rack-mount-0.8.3.tgz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=f2115568b1a05ea027e9e832a364015f
+_md5_=6459ac02ab72b11f515335891e271eb3

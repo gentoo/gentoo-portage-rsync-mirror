@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.5-r2.ebuild,v 1.1 2014/01/29 00:58:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.5-r2.ebuild,v 1.2 2014/05/21 01:57:04 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_NAME="ferret"
 

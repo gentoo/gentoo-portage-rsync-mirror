@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ruby-goocanvas-1.1.8.ebuild,v 1.5 2014/03/10 16:06:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ruby-goocanvas-1.1.8.ebuild,v 1.6 2014/05/21 01:35:18 mrueg Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 inherit ruby-ng-gnome2
 
