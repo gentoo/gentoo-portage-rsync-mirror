@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15711 2014/05/21 14:10:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15712 2014/05/21 16:13:14 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,14 +31,15 @@
 #--- END OF EXAMPLES ---
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (21 May 2014)
-# Incompatible with <x11-libs/libXfont-1.5
->=x11-proto/fontsproto-2.1.3
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (21 May 2014)
 # Mask until the necessary keywording for Xwayland is done, bug #510940
+# fontsproto has new function prototypes that make it incompatible
+# with older libXfont. All these packages should probably be unmasked
+# together.
 >=dev-libs/wayland-1.5.0
 >=dev-libs/weston-1.5.0
 >=x11-base/xorg-server-1.15.99
+>=x11-proto/fontsproto-2.1.3
+>=x11-libs/libXfont-1.4.8-r1
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (19 May 2014)
 # Masked until dev-libs/glib supports the new timezone format, bug #510422

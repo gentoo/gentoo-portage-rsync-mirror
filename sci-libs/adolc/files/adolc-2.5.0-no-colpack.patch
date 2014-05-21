@@ -1,0 +1,21 @@
+--- autoconf/colpack.m4.orig	2014-05-21 09:01:30.749673830 -0700
++++ autoconf/colpack.m4	2014-05-21 09:01:30.749673830 -0700
+@@ -21,7 +21,7 @@
+ COLPACK_LIBS="-lColPack"
+ D[[0]]=""
+ ])
+-
++if test x$colpack != xno; then
+ AC_LANG_PUSH([C++])
+ save_CXXFLAGS="$CXXFLAGS"
+ save_CPPFLAGS="$CPPFLAGS"
+@@ -56,6 +56,9 @@
+ fi
+ done
+ AC_LANG_POP([C++])
++else
++    have_colpack=no
++fi
+ 
+ AM_CONDITIONAL(HAVE_LIBCOLPACK,[test x$have_colpack = xyes])
+ if test x$have_colpack = xyes; then 

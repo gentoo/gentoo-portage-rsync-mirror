@@ -1,0 +1,35 @@
+From 5a398a55ccdd92d0ff05793692ef8e57f3a50198 Mon Sep 17 00:00:00 2001
+From: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date: Mon, 21 Apr 2014 01:10:07 +0000
+Subject: Require fontsproto 2.1.3 for matching function prototypes
+
+Building current libXfont git against fontsproto 2.1.2 causes clang
+complaints of:
+
+patcache.c:130:1: error: conflicting types for 'CacheFontPattern'
+CacheFontPattern (FontPatternCachePtr cache,
+^
+patcache.c:176:1: error: conflicting types for 'FindCachedFontPattern'
+FindCachedFontPattern (FontPatternCachePtr cache,
+^
+
+due to the constification of arguments not matching.
+
+Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+Reviewed-by: Thomas Klausner <wiz@NetBSD.org>
+---
+diff --git a/configure.ac b/configure.ac
+index cbb540a..e78e56a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -180,7 +180,7 @@ fi
+ AC_CHECK_LIB(m, hypot, [MATH_LIBS=-lm
+ AC_SUBST(MATH_LIBS)], AC_MSG_ERROR([*** libm is required]))
+ 
+-PKG_CHECK_MODULES(XFONT, [xproto xtrans fontsproto < 2.1.3 fontenc])
++PKG_CHECK_MODULES(XFONT, [xproto xtrans fontsproto >= 2.1.3 fontenc])
+ 
+ # Transport selection macro from xtrans.m4
+ XTRANS_CONNECTION_FLAGS
+--
+cgit v0.9.0.2-2-gbebe

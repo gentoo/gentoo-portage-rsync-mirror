@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/adolc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.5 2014/01/15 19:44:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.6 2014/05/21 16:16:16 bicatali Exp $
+
+*adolc-2.5.0 (21 May 2014)
+
+  21 May 2014; Sébastien Fabbro <bicatali@gentoo.org> +adolc-2.5.0.ebuild,
+  +files/adolc-2.5.0-no-colpack.patch,
+  +files/adolc-2.5.0-pkgconfig-no-ldflags.patch:
+  Version bump
 
   15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> -adolc-2.4.0.ebuild,
   adolc-2.4.1.ebuild:
