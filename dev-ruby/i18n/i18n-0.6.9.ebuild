@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9.ebuild,v 1.1 2013/12/04 07:19:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.9.ebuild,v 1.2 2014/05/21 02:32:10 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 jruby ruby19"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="test"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"

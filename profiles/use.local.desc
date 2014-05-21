@@ -279,6 +279,10 @@ app-backup/dar:gcrypt - Enables strong encryption support
 app-backup/deja-dup:nautilus - Build gnome-base/nautilus extension
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
+app-backup/snapper:btrfs - Include Btrfs support sys-fs/btrfs-progs
+app-backup/snapper:ext4 - Include Ext4 support sys-fs/e2fsprogs
+app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
+app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
 app-backup/spideroak-bin:headless - Build without graphic frontend
 app-backup/tsm:hsm - Installs Tivoli Storage Manager for Space Management
 app-backup/tsm:tsm_cit - IBM Tivoli Common Inventory Technology

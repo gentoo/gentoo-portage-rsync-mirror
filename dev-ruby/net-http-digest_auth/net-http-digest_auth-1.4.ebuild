@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/net-http-digest_auth-1.4.ebuild,v 1.3 2013/09/15 09:30:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/net-http-digest_auth-1.4.ebuild,v 1.4 2014/05/21 02:42:09 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt README.txt"
 
 inherit ruby-fakegem
 
-DESCRIPTION="An implementation of RFC 2617 - Digest Access Authentication."
+DESCRIPTION="An implementation of RFC 2617 - Digest Access Authentication"
 HOMEPAGE="http://github.com/drbrain/net-http-digest_auth"
 
 LICENSE="MIT"

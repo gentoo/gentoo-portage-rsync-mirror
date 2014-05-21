@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.63 2014/04/20 18:19:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.64 2014/05/21 02:32:10 mrueg Exp $
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> i18n-0.6.9.ebuild:
+  Remove ruby18 target.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org> i18n-0.6.9-r1.ebuild:
   Add back keywords to ruby20, ruby21 revision now that activesupport:3.2 is

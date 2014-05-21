@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/urlgrabber
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.43 2013/09/05 18:47:09 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.44 2014/05/21 02:46:06 idella4 Exp $
+
+*urlgrabber-3.10.1 (21 May 2014)
+
+  21 May 2014; Ian Delaney <idella4@gentoo.org> +urlgrabber-3.10.1.ebuild:
+  bump; drop py2.6
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> urlgrabber-3.9.1-r2.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
