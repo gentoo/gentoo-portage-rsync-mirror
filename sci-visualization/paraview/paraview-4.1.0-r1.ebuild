@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.2 2014/02/27 14:08:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.3 2014/05/22 20:05:57 hasufell Exp $
 
 EAPI=5
 
@@ -66,6 +66,7 @@ RDEPEND="
 		qt4? ( dev-python/PyQt4[opengl,webkit,${PYTHON_USEDEP}] )
 	)
 	qt4? (
+		dev-qt/designer:4
 		dev-qt/qtgui:4
 		dev-qt/qtopengl:4
 		dev-qt/qthelp:4[compat]

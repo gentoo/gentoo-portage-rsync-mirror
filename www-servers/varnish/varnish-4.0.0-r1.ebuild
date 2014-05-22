@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-4.0.0.ebuild,v 1.1 2014/04/12 22:45:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-4.0.0-r1.ebuild,v 1.1 2014/05/22 20:23:48 idl0r Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
 
-inherit autotools-utils eutils systemd python-single-r1
+inherit user autotools-utils eutils systemd python-r1
 
 DESCRIPTION="Varnish is a state-of-the-art, high-performance HTTP accelerator"
 HOMEPAGE="http://www.varnish-cache.org/"
@@ -20,7 +20,8 @@ IUSE="jemalloc jit static-libs"
 CDEPEND="
 	|| ( dev-libs/libedit sys-libs/readline )
 	dev-libs/libpcre[jit?]
-	jemalloc? ( dev-libs/jemalloc )"
+	jemalloc? ( dev-libs/jemalloc )
+	sys-libs/ncurses"
 
 #varnish compiles stuff at run time
 RDEPEND="
@@ -46,7 +47,10 @@ PATCHES=(
 AUTOTOOLS_AUTORECONF="yes"
 
 pkg_setup() {
-	python-single-r1_pkg_setup
+	ebegin "Creating varnish user and group"
+	enewgroup varnish 40
+	enewuser varnish 40 -1 /var/lib/varnish varnish
+	eend $?
 }
 
 src_prepare() {
@@ -69,18 +73,32 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 
-	newinitd "${FILESDIR}"/varnishd.initd-r2 varnishd
-	newconfd "${FILESDIR}"/varnishd.confd-r2 varnishd
+	python_replicate_script "${D}/usr/share/varnish/vmodtool.py"
 
-	insinto /etc/logrotate.d
-	newins "${FILESDIR}/varnishd.logrotate" varnishd
+	newinitd "${FILESDIR}"/varnishlog.initd varnishlog
+	newconfd "${FILESDIR}"/varnishlog.confd varnishlog
 
-	dodir /var/log/varnish
+	newinitd "${FILESDIR}"/varnishncsa.initd varnishncsa
+	newconfd "${FILESDIR}"/varnishncsa.confd varnishncsa
+
+	newinitd "${FILESDIR}"/varnishd.initd-r3 varnishd
+	newconfd "${FILESDIR}"/varnishd.confd-r3 varnishd
+
+	insinto /etc/logrotate.d/
+	newins "${FILESDIR}/varnishd.logrotate-r2" varnishd
+
+	diropts -m750
+
+	dodir /var/log/varnish/
 
 	systemd_dounit "${FILESDIR}/${PN}d.service"
 
-	insinto /etc/varnish
+	insinto /etc/varnish/
 	doins  lib/libvmod_std/vmod.vcc
+
+	fowners root:varnish /etc/varnish/
+	fowners varnish:varnish /var/lib/varnish/
+	fperms 0750 /var/lib/varnish/ /etc/varnish/
 }
 
 pkg_postinst () {
