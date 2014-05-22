@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.571 2014/05/19 20:04:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.572 2014/05/22 16:18:03 zerochaos Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Rick Farina <zerochaos@gentoo.org> (22 May 2014)
+# mask test use flag for metasploit since tests do not pass
+net-analyzer/metasploit test
 
 # Tom Wijsman <TomWij@gentoo.org> (14 May 2014)
 # Documentation generation needs APIviz which is not in the Portage tree yet.
