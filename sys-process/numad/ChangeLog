@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.7 2014/04/23 19:49:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.8 2014/05/22 10:44:11 nimiux Exp $
+
+  22 May 2014; Chema Alonso <nimiux@gentoo.org> numad-0.5-r1.ebuild:
+  Stable for amd64 wrt bug #502940
 
 *numad-0.5-r2 (23 Apr 2014)
 

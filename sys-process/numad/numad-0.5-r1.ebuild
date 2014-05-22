@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-0.5-r1.ebuild,v 1.1 2014/01/20 07:50:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-0.5-r1.ebuild,v 1.2 2014/05/22 10:44:11 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS="~amd64 -arm -s390 ~x86"
 else
 	SRC_URI="http://git.fedorahosted.org/git/?p=numad.git;a=snapshot;h=334278ff3d774d105939743436d7378a189e8693;sf=tbz2 -> numad-0.5-334278f.tar.bz2"
-	KEYWORDS="~amd64 -arm -s390 ~x86"
+	KEYWORDS="amd64 -arm -s390 ~x86"
 	S="${WORKDIR}/${PN}-334278f"
 fi
 
