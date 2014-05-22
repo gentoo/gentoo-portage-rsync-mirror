@@ -1,8 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.5.1.ebuild,v 1.1 2014/04/24 19:48:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.5.3.ebuild,v 1.1 2014/05/22 21:14:11 idl0r Exp $
 
 EAPI="5"
+
+inherit eutils
 
 DESCRIPTION="Security and system auditing tool"
 HOMEPAGE="http://cisofy.com/lynis/"
@@ -15,6 +17,11 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="app-shells/bash"
+
+src_prepare() {
+	# Bug 507438
+	epatch_user
+}
 
 src_install() {
 	# stricter default perms - bug 507436

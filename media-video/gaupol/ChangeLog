@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gaupol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.17 2012/04/23 04:31:10 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.18 2014/05/22 21:16:49 mgorny Exp $
+
+*gaupol-0.19.2-r1 (22 May 2014)
+
+  22 May 2014; Michał Górny <mgorny@gentoo.org> +gaupol-0.19.2-r1.ebuild:
+  Convert to distutils-r1.
 
 *gaupol-0.19.2 (23 Apr 2012)
 
@@ -72,4 +77,3 @@
 
   01 Dec 2006; Steve Dibb <beandog@gentoo.org> ChangeLog:
   Initial import, bug 118703, thanks to Ben de Groot for ebuild
-
