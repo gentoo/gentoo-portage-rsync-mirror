@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.20 2014/05/20 22:40:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.21 2014/05/22 17:33:22 bicatali Exp $
+
+  22 May 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  -ekopath-4.0.12.1_pre20121102.ebuild, -ekopath-5.0.0_pre20130113.ebuild,
+  ekopath-5.0.1_pre20131115.ebuild:
+  Removed old versions with non-existing upstream tar balls. Add horrible hacks
+  for sandbox violations, bug #511016
 
 *ekopath-5.0.1_pre20131115 (20 May 2014)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-5.0.1_pre20131115.ebuild,v 1.1 2014/05/20 22:40:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-5.0.1_pre20131115.ebuild,v 1.2 2014/05/22 17:33:22 bicatali Exp $
 
 EAPI=5
 
-inherit versionator
+inherit versionator multilib
 
 MY_PV=$(get_version_component_range 1-3)
 DATE=$(get_version_component_range 4)
@@ -43,7 +43,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	cat > "99${PN}" <<-EOF
+	cat > 99${PN} <<-EOF
 		PATH=${EROOT%/}/opt/${PN}/bin
 		ROOTPATH=${EROOT%/}/opt/${PN}/bin
 		LDPATH=${EROOT%/}/opt/${PN}/lib:${EROOT%/}/opt/${PN}/lib/${MY_PV}/x8664/64
@@ -52,15 +52,25 @@ src_prepare() {
 }
 
 src_install() {
-	local opts
+	# sad stuff bug #511016
+	addpredict /$(get_libdir)/libpthread.so.0
+	addpredict /$(get_libdir)/libc.so.6
+	addpredict /$(get_libdir)/ld-linux-x86-64.so.2
+	addpredict /usr/$(get_libdir)/libpthread_nonshared.a
+	addpredict /usr/$(get_libdir)/libc_nonshared.a
+	addpredict /usr/$(get_libdir)/libdl.so
+	addpredict /usr/$(get_libdir)/libm.so
+	addpredict /usr/$(get_libdir)/crti.o
+	addpredict /usr/$(get_libdir)/crt1.o
+	addpredict /usr/$(get_libdir)/crtn.o
+
 	# You must paxmark -m EI_PAX (not PT_PAX) to run the installer
 	# on a pax enabled kernel.  Adding PT_PAX breaks the binary.
 	scanelf -Xxz m ${P}.run >> /dev/null
 
 	./${P}.run \
-		--prefix "${ED}/opt/${PN}" \
-		--mode unattended \
-		${opts} || die
+		--prefix "${ED%/}/opt/${PN}" \
+		--mode unattended || die
 
 	# This is a temporary/partial fix to remove a RWX GNU STACK header
 	# from libstl.so.  It still leaves libstl.a in bad shape.
@@ -70,5 +80,5 @@ src_install() {
 	scanelf -Xe "${ED}/opt/ekopath/lib/${MY_PV}/x8664/64/libstl.so"
 
 	rm -r "${ED}"/opt/${PN}/uninstall || die
-	doenvd "99${PN}"
+	doenvd 99${PN}
 }
