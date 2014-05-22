@@ -1,0 +1,25 @@
+From 14f3b45151864aa4170de515f406a69ad2931eba Mon Sep 17 00:00:00 2001
+From: Rainer Gerhards <rgerhards@adiscon.com>
+Date: Thu, 31 Oct 2013 18:21:47 +0100
+Subject: [PATCH] module omruleset is no longer enabled by default.
+
+Note that it has been deprecated in v7 and been replaced by the "call"
+statement. Also, it can still be build without problems, the option must
+just explicitely be given.
+---
+diff --git a/configure.ac b/configure.ac
+index 3abd559..de4c3ea 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1353,7 +1353,7 @@ AC_ARG_ENABLE(omruleset,
+           no) enable_omruleset="no" ;;
+            *) AC_MSG_ERROR(bad value ${enableval} for --enable-omruleset) ;;
+          esac],
+-        [enable_omruleset=yes]
++        [enable_omruleset=no]
+ )
+ AM_CONDITIONAL(ENABLE_OMRULESET, test x$enable_omruleset = xyes)
+ 
+-- 
+1.9.1
+
