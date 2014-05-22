@@ -1,29 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-9999.ebuild,v 1.1 2014/05/21 02:52:36 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-9999.ebuild,v 1.2 2014/05/22 09:56:05 dlan Exp $
 
 EAPI=5
 
-inherit base
-
-if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://github.com/openSUSE/snapper.git"
-	AUTOTOOLS_AUTORECONF=1
-	AUTOTOOLS_IN_SOURCE_BUILD=1
-	inherit autotools-utils git-2
-	SRC_URI=""
-	KEYWORDS=""
-else
-	SRC_URI="ftp://ftp.suse.com/pub/projects/snapper/${P}.tar.bz2"
-	DOCS="AUTHORS README package/snapper.changes"
-	KEYWORDS="~amd64 ~x86"
-fi
+EGIT_REPO_URI="git://github.com/openSUSE/snapper.git"
+AUTOTOOLS_AUTORECONF=1
+AUTOTOOLS_IN_SOURCE_BUILD=1
+inherit eutils autotools-utils git-2
 
 DESCRIPTION="Command-line program for btrfs and ext4 snapshot management"
 HOMEPAGE="http://snapper.io/"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS=""
 IUSE="+btrfs ext4 lvm pam xattr"
 
 RDEPEND="dev-libs/boost[threads]
@@ -44,16 +36,17 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
-DOCS="AUTHORS README"
+DOCS=( AUTHORS README package/snapper.changes )
 
-PATCHES=(
-	"${FILESDIR}"/cron-confd.patch
-	)
+src_prepare() {
+	epatch "${FILESDIR}"/cron-confd.patch
+	autotools-utils_src_prepare
+}
 
 src_configure() {
 	econf  \
 	--with-conf="/etc/conf.d" \
-	--docdir="/usr/share/doc/${P}" \
+	--docdir="/usr/share/doc/${PF}" \
 	$(use_enable btrfs) \
 	$(use_enable ext4) \
 	$(use_enable lvm) \
@@ -66,6 +59,7 @@ src_install() {
 	default
 	# Existing configuration file required to function
 	newconfd data/sysconfig.snapper snapper
+	prune_libtool_files
 }
 
 pkg_postinst() {
