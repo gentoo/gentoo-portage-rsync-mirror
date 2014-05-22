@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>blueness@gentoo.org</email>
-	<name>Anthony G. Basile</name>
-</maintainer>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+	</maintainer>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+		<description>Secondary maintainer</description>
+	</maintainer>
 	<use>
 		<flag name="tools">Build additional tools: varnishhist, varnishstat, varnishtop, varnishsizes</flag>
 		<flag name="jemalloc">Use dev-libs/jemalloc for allocations</flag>

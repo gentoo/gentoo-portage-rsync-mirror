@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.77 2014/05/22 20:23:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.78 2014/05/22 20:51:19 idl0r Exp $
+
+  22 May 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Add myself as secondary maintainer
 
 *varnish-4.0.0-r1 (22 May 2014)
 
