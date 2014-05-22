@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.43 2014/02/11 19:00:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.44 2014/05/22 16:35:11 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -180,10 +180,11 @@ cabal-bootstrap() {
 
 	make_setup() {
 		set -- -package "${cabalpackage}" --make "${setupmodule}" \
+			${HCFLAGS} \
 			${GHC_BOOTSTRAP_FLAGS} \
 			"$@" \
 			-o setup
-		echo $(ghc-getghc) ${HCFLAGS} "$@"
+		echo $(ghc-getghc) "$@"
 		$(ghc-getghc) "$@"
 	}
 	if $(ghc-supports-shared-libraries); then
@@ -209,18 +210,14 @@ cabal-bootstrap() {
 }
 
 cabal-mksetup() {
-	local setupdir
+	local setupdir=${1:-${S}}
+	local setup_src=${setupdir}/Setup.hs
 
-	if [[ -n $1 ]]; then
-		setupdir=$1
-	else
-		setupdir=${S}
-	fi
-
-	rm -f "${setupdir}"/Setup.{lhs,hs}
+	rm -vf "${setupdir}"/Setup.{lhs,hs}
+	elog "Creating 'Setup.hs' for 'Simple' build type."
 
 	echo 'import Distribution.Simple; main = defaultMainWithHooks defaultUserHooks' \
-		> $setupdir/Setup.hs || die "failed to create default Setup.hs"
+		> "${setup_src}" || die "failed to create default Setup.hs"
 }
 
 cabal-hscolour() {
@@ -252,10 +249,12 @@ cabal-die-if-nonempty() {
 }
 
 cabal-show-brokens() {
+	elog "ghc-pkg check: 'checking for other broken packages:'"
 	# pretty-printer
 	$(ghc-getghcpkg) check 2>&1 \
 		| egrep -v '^Warning: haddock-(html|interfaces): ' \
-		| egrep -v '^Warning: include-dirs: '
+		| egrep -v '^Warning: include-dirs: ' \
+		| head -n 20
 
 	cabal-die-if-nonempty 'broken' \
 		$($(ghc-getghcpkg) check --simple-output)
@@ -311,8 +310,10 @@ cabal-configure() {
 	if ghc-supports-parallel-make; then
 		local max_jobs=$(makeopts_jobs)
 
-		# limit to sort-of-sane value (same as Cabal)
-		[[ ${max_jobs} -gt 64 ]] && max_jobs=64
+		# limit to very small value, as parallelism
+		# helps slightly, but makes things severely worse
+		# when amount of threads is Very Large.
+		[[ ${max_jobs} -gt 4 ]] && max_jobs=4
 
 		cabalconf+=(--ghc-option=-j"$max_jobs")
 	fi
@@ -619,7 +620,8 @@ cabal_flag() {
 #}
 #
 cabal_chdeps() {
-	local cf=${CABAL_FILE:-${S}/${PN}.cabal}
+	local cabal_fn=${MY_PN:-${PN}}.cabal
+	local cf=${CABAL_FILE:-${S}/${cabal_fn}}
 	local from_ss # ss - substring
 	local to_ss
 	local orig_c # c - contents

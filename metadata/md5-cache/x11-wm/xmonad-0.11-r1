@@ -10,5 +10,5 @@ PDEPEND=default-term? ( x11-terms/xterm ) x11-apps/xmessage
 RDEPEND=dev-haskell/extensible-exceptions:=[profile?] dev-haskell/mtl:=[profile?] =dev-haskell/utf8-string-0.3*:=[profile?] >=dev-haskell/x11-1.5:=[profile?] <dev-haskell/x11-1.7:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/0.11
 SRC_URI=mirror://hackage/packages/archive/xmonad/0.11/xmonad-0.11.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	6bfba0bf2b2988c44c7613fb7a0714b4	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=65b063ffb25275a5e4b2fd2d63004b16

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r4.ebuild,v 1.1 2014/05/03 10:34:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r4.ebuild,v 1.2 2014/05/22 16:33:19 hasufell Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -92,7 +92,7 @@ multilib_src_install() {
 multilib_src_install_all() {
 	dodoc CHANGES README
 	if ! use static-libs ; then
-		remove_libtool_files --all
+		prune_libtool_files --all
 	fi
 }
 
