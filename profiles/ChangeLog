@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8989 2014/05/21 18:37:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8990 2014/05/22 03:06:45 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 May 2014; Ian Delaney <idella4@gentoo.org> (22 May 2014):
+  Masking of weasyprint-0.22 subject to update of py3.4 support to key dep
 
   21 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask multilib libgphoto2, sane-backends & deps before committing.
