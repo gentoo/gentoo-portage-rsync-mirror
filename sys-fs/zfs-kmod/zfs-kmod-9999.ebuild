@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.20 2014/05/14 17:36:55 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.21 2014/05/22 21:39:35 ryao Exp $
 
 EAPI="4"
 
@@ -54,7 +54,7 @@ pkg_setup() {
 	"
 
 	use debug && CONFIG_CHECK="FRAME_POINTER
-	CONFIG_DEBUG_INFO"
+	DEBUG_INFO"
 
 	use rootfs && \
 		CONFIG_CHECK="${CONFIG_CHECK} BLK_DEV_INITRD

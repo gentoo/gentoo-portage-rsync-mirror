@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.45 2014/05/14 17:36:55 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.46 2014/05/22 21:39:35 ryao Exp $
+
+  22 May 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  CONFIG_DEBUG_INFO should be DEBUG_INFO
 
   14 May 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
   Require CONFIG_DEBUG_INFO for USE=debug on =sys-fs/zfs-kmod-9999
