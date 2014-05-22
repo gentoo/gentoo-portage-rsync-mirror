@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/isl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.17 2013/11/04 02:27:01 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.18 2014/05/22 12:51:08 rhill Exp $
+
+*isl-0.13 (22 May 2014)
+*isl-0.12.2 (22 May 2014)
+
+  22 May 2014; Ryan Hill <rhill@gentoo.org> -isl-0.09.ebuild, -isl-0.10.ebuild,
+  +isl-0.12.2.ebuild, +isl-0.13.ebuild:
+  Version bump (bug #467192). Use EAPI 5 and add subslots. Add multilib
+  support. Update HOMEPAGE and SRC_URI. Add missing pkgconfig dep. Remove
+  old.
 
   04 Nov 2013; Matt Turner <mattst88@gentoo.org> isl-0.11.1.ebuild:
   Added ~alpha, bug 487266.

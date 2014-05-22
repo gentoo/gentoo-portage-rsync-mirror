@@ -1,24 +1,25 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.0.ebuild,v 1.9 2014/05/22 12:57:15 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.1.ebuild,v 1.1 2014/05/22 12:57:15 rhill Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils
+inherit eutils multilib-minimal
 
 DESCRIPTION="A loop generator for scanning polyhedra"
 HOMEPAGE="http://www.bastoul.net/cloog/index.php"
 SRC_URI="http://www.bastoul.net/cloog/pages/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="static-libs"
 
-DEPEND="dev-libs/gmp
-	<dev-libs/isl-0.13
+RDEPEND=">=dev-libs/gmp-5.0.2[${MULTILIB_USEDEP}]
+	dev-libs/isl:0/10[${MULTILIB_USEDEP}]
 	!<dev-libs/cloog-ppl-0.15.10"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 DOCS=( README )
 
@@ -28,14 +29,14 @@ src_prepare() {
 	sed -i -e '/Libs:/s:@LDFLAGS@ ::' configure || die
 }
 
-src_configure() {
-	econf \
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" econf \
+		--with-gmp=system \
 		--with-isl=system \
-		--with-polylib=no \
 		$(use_enable static-libs static)
 }
 
-src_install() {
-	default
+multilib_src_install_all() {
+	einstalldocs
 	prune_libtool_files
 }
