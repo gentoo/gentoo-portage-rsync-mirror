@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.9-r2.ebuild,v 1.1 2014/04/21 09:45:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.9-r3.ebuild,v 1.1 2014/05/22 14:02:43 polynomial-c Exp $
 
 EAPI=5
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20140421"
+GENTOO_PATCHSTAMP="20140522"
 GENTOO_DEVELOPER="polynomial-c"
-GENTOO_PATCHNAME="gentoo-apache-2.4.9-r2"
+GENTOO_PATCHNAME="gentoo-apache-2.4.9-r3"
 
 # IUSE/USE_EXPAND magic
-IUSE_MPMS_FORK="itk peruser prefork"
+IUSE_MPMS_FORK="peruser prefork"
 IUSE_MPMS_THREAD="event worker"
 
 # << obsolete modules:
@@ -31,16 +31,17 @@ IUSE_MPMS_THREAD="event worker"
 # slotmem_shm: Slot-based shared memory provider (for lbmethod_byrequests).
 # socache_shmcb: shared object cache provider. Default config with ssl needs it
 # unixd: fixes startup error: Invalid command 'User'
-IUSE_MODULES="access_compat actions alias asis auth_basic auth_digest authn_alias authn_anon
-authn_core authn_dbd authn_dbm authn_file authz_core authz_dbm
-authz_groupfile authz_host authz_owner authz_user autoindex cache cache_disk cern_meta
-charset_lite cgi cgid dav dav_fs dav_lock dbd deflate dir dumpio
-env expires ext_filter file_cache filter headers ident imagemap include info
-lbmethod_byrequests lbmethod_bytraffic lbmethod_bybusyness lbmethod_heartbeat
-log_config log_forensic logio mime mime_magic negotiation proxy
-proxy_ajp proxy_balancer proxy_connect proxy_ftp proxy_http proxy_scgi proxy_fcgi
-rewrite ratelimit remoteip reqtimeout setenvif slotmem_shm speling socache_shmcb status substitute
-unique_id userdir usertrack unixd version vhost_alias"
+IUSE_MODULES="access_compat actions alias asis auth_basic auth_digest
+authn_alias authn_anon authn_core authn_dbd authn_dbm authn_file authz_core
+authz_dbd authz_dbm authz_groupfile authz_host authz_owner authz_user autoindex
+cache cache_disk cern_meta charset_lite cgi cgid dav dav_fs dav_lock dbd deflate
+dir dumpio env expires ext_filter file_cache filter headers ident imagemap
+include info lbmethod_byrequests lbmethod_bytraffic lbmethod_bybusyness
+lbmethod_heartbeat log_config log_forensic logio mime mime_magic negotiation
+proxy proxy_ajp proxy_balancer proxy_connect proxy_ftp proxy_http proxy_scgi
+proxy_fcgi  proxy_wstunnel rewrite ratelimit remoteip reqtimeout setenvif
+slotmem_shm speling socache_shmcb status substitute unique_id userdir usertrack
+unixd version vhost_alias"
 # The following are also in the source as of this version, but are not available
 # for user selection:
 # bucketeer case_filter case_filter_in echo http isapi optional_fn_export
@@ -72,6 +73,7 @@ MODULE_DEPENDS="
 	proxy_http:proxy
 	proxy_scgi:proxy
 	proxy_fcgi:proxy
+	proxy_wstunnel:proxy
 	substitute:filter
 "
 
@@ -95,6 +97,7 @@ MODULE_DEFINES="
 	proxy_http:PROXY
 	proxy_fcgi:PROXY
 	proxy_scgi:PROXY
+	proxy_wstunnel:PROXY
 	socache_shmcb:SSL
 	ssl:SSL
 	status:STATUS
@@ -121,16 +124,6 @@ LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE=""
-
-DEPEND="${DEPEND}
-	>=dev-libs/openssl-0.9.8m
-	apache2_modules_deflate? ( sys-libs/zlib )"
-
-# dependency on >=dev-libs/apr-1.5.0 for bug #492578
-RDEPEND="${RDEPEND}
-	>=dev-libs/apr-1.5.0
-	>=dev-libs/openssl-0.9.8m
-	apache2_modules_mime? ( app-misc/mime-types )"
 
 pkg_setup() {
 	# dependend critical modules which are not allowed in global scope due
@@ -176,9 +169,13 @@ src_install() {
 		rm "${D}/"$i || die "Failed to prune apache-tools bits"
 	done
 
-	# well, actually installing things makes them more installed, I guess?
-	cp "${S}"/support/apxs "${D}"/usr/sbin/apxs || die "Failed to install apxs"
-	chmod 0755 "${D}"/usr/sbin/apxs
+	# install apxs in /usr/bin (bug #502384) and put a symlink into the 
+	# old location until all ebuilds and eclasses have been modified to
+	# use the new location.
+	local apxs="/usr/bin/apxs"
+	cp "${S}"/support/apxs "${D}"${apxs} || die "Failed to install apxs"
+	ln -s ../bin/apxs "${D}"/usr/sbin/apxs || die
+	chmod 0755 "${D}"${apxs} || die
 
 	# Note: wait for mod_systemd to be included in the next release,
 	# then apache2.4.service can be used and systemd support controlled

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.190 2014/05/21 06:26:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.191 2014/05/22 14:01:25 polynomial-c Exp $
+
+*apache-tools-2.4.9-r1 (22 May 2014)
+*apache-tools-2.2.27-r1 (22 May 2014)
+
+  22 May 2014; Lars Wendler <polynomial-c@gentoo.org>
+  apache-tools-2.2.27.ebuild, +apache-tools-2.2.27-r1.ebuild,
+  -apache-tools-2.4.9.ebuild, +apache-tools-2.4.9-r1.ebuild:
+  Do not link to openssl when ssl USE flag is disabled.
 
   21 May 2014; Lars Wendler <polynomial-c@gentoo.org>
   -apache-tools-2.2.24.ebuild, -apache-tools-2.2.25.ebuild,

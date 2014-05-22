@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.27-r2.ebuild,v 1.1 2014/04/21 09:45:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.27-r3.ebuild,v 1.1 2014/05/22 14:02:43 polynomial-c Exp $
 
 EAPI=5
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20140421"
+GENTOO_PATCHSTAMP="20140522"
 GENTOO_DEVELOPER="polynomial-c"
-GENTOO_PATCHNAME="gentoo-apache-2.2.27-r2"
+GENTOO_PATCHNAME="gentoo-apache-2.2.27-r3"
 
 # IUSE/USE_EXPAND magic
 IUSE_MPMS_FORK="itk peruser prefork"
@@ -92,16 +92,6 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
-DEPEND="${DEPEND}
-	>=dev-libs/openssl-0.9.8m
-	apache2_modules_deflate? ( sys-libs/zlib )"
-
-# dependency on >=dev-libs/apr-1.4.5 for bug #368651
-RDEPEND="${RDEPEND}
-	>=dev-libs/apr-1.4.5
-	>=dev-libs/openssl-0.9.8m
-	apache2_modules_mime? ( app-misc/mime-types )"
-
 src_configure() {
 	# Brain dead check.
 	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
@@ -111,6 +101,14 @@ src_configure() {
 
 src_install() {
 	apache-2_src_install
+
+	# install apxs in /usr/bin (bug #502384) and put a symlink into the
+	# old location until all ebuilds and eclasses have been modified to
+	# use the new location.
+	local apxs_dir="/usr/bin"
+	dodir ${apxs_dir}
+	mv "${D}"/usr/sbin/apxs "${D}"${apxs_dir} || die
+	ln -s ../bin/apxs "${D}"/usr/sbin/apxs || die
 
 	systemd_newunit "${FILESDIR}/apache2.2.service" "apache2.service"
 	systemd_dotmpfilesd "${FILESDIR}/apache.conf"

@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.274 2014/05/21 06:22:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.275 2014/05/22 14:02:43 polynomial-c Exp $
+
+*apache-2.4.9-r3 (22 May 2014)
+*apache-2.2.27-r3 (22 May 2014)
+
+  22 May 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.2.27-r2.ebuild,
+  +apache-2.2.27-r3.ebuild, -apache-2.4.9-r2.ebuild, +apache-2.4.9-r3.ebuild:
+  Revbumps. Cleaned up ebuilds a bit. Moved apxs to /usr/bin (bug #502384).
+  Fixed bugs #489236, #493020, #493360, #503986 and #509772.
 
   21 May 2014; Lars Wendler <polynomial-c@gentoo.org> -apache-2.2.24.ebuild,
   -apache-2.2.25.ebuild:

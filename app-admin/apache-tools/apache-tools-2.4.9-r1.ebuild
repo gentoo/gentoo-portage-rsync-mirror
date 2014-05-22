@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.9.ebuild,v 1.1 2014/03/18 18:48:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.9-r1.ebuild,v 1.1 2014/05/22 14:01:25 polynomial-c Exp $
 
 EAPI=5
 inherit flag-o-matic eutils multilib toolchain-funcs
@@ -38,8 +38,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=()
-
 	# Brain dead check.
 	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
 
@@ -48,10 +46,7 @@ src_configure() {
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	append-ldflags $(no-as-needed)
 
-	use ssl && myconf+=( --with-ssl="${EPREFIX}"/usr --enable-ssl )
-
-	# econf overwrites the stuff from config.layout, so we have to put them into
-	# our myconf line too
+	# econf overwrites the stuff from config.layout.
 	ac_cv_path_PKGCONFIG=${PKG_CONFIG} \
 	econf \
 		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/apache2/modules \
@@ -62,7 +57,8 @@ src_configure() {
 		--with-apr="${SYSROOT}${EPREFIX}"/usr \
 		--with-apr-util="${SYSROOT}${EPREFIX}"/usr \
 		--with-pcre="${T}"/pcre-config \
-		"${myconf[@]}"
+		$(use_enable ssl) \
+		$(usex ssl '--with-ssl="${EPREFIX}"/usr' '')
 	sed -i \
 		-e '/^LTFLAGS/s:--silent::' \
 		build/rules.mk build/config_vars.mk || die
@@ -80,12 +76,12 @@ src_install() {
 
 	# Providing compatiblity symlinks for #177697 (which we'll stop to install
 	# at some point).
-	pushd "${ED}"/usr/sbin >/dev/null
+	pushd "${ED}"/usr/sbin >/dev/null || die
 	local i
 	for i in *; do
 		dosym ${i} /usr/sbin/${i}2
 	done
-	popd >/dev/null
+	popd >/dev/null || die
 
 	# Provide a symlink for ab-ssl
 	if use ssl; then
