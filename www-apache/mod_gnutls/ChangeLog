@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.35 2014/05/06 15:55:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.36 2014/05/22 08:03:41 polynomial-c Exp $
+
+*mod_gnutls-0.6 (22 May 2014)
+
+  22 May 2014; Lars Wendler <polynomial-c@gentoo.org> +mod_gnutls-0.6.ebuild,
+  metadata.xml:
+  Version bump. Took over maintenance.
 
   06 May 2014; Jeroen Roovers <jer@gentoo.org> files/47_mod_gnutls.conf:
   optionaly => optionally
