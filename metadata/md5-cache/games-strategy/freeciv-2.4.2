@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=app-arch/bzip2 app-arch/xz-utils dev-lang/lua net-misc/curl sys-libs/zlib auth? ( mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( dev-db/sqlite:3 ) !mysql? ( !postgres? ( !sqlite? ( virtual/mysql ) ) ) ) readline? ( sys-libs/readline ) dedicated? ( aimodules? ( sys-devel/libtool:2 ) ) !dedicated? ( media-libs/libpng:0 ggz? ( games-board/ggz-gtk-client ) gtk? ( x11-libs/gtk+:2 ) mapimg? ( media-gfx/imagemagick ) modpack? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) sdl? ( media-libs/libsdl[video] media-libs/sdl-image[png] media-libs/freetype:2 ) server? ( aimodules? ( sys-devel/libtool:2 ) ) sound? ( media-libs/libsdl[sound] media-libs/sdl-mixer[vorbis] ) !sdl? ( !gtk? ( !qt4? ( x11-libs/gtk+:2 ) ) ) ) virtual/pkgconfig !dedicated? ( x11-proto/xextproto nls? ( sys-devel/gettext ) ) >=sys-apps/sed-4
+DESCRIPTION=multiplayer strategy game (Civilization Clone)
+EAPI=5
+HOMEPAGE=http://www.freeciv.org/
+IUSE=auth aimodules dedicated ggz +gtk ipv6 mapimg modpack mysql nls postgres qt4 readline sdl +server +sound sqlite
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-arch/bzip2 app-arch/xz-utils dev-lang/lua net-misc/curl sys-libs/zlib auth? ( mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( dev-db/sqlite:3 ) !mysql? ( !postgres? ( !sqlite? ( virtual/mysql ) ) ) ) readline? ( sys-libs/readline ) dedicated? ( aimodules? ( sys-devel/libtool:2 ) ) !dedicated? ( media-libs/libpng:0 ggz? ( games-board/ggz-gtk-client ) gtk? ( x11-libs/gtk+:2 ) mapimg? ( media-gfx/imagemagick ) modpack? ( x11-libs/gtk+:2 ) nls? ( virtual/libintl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) sdl? ( media-libs/libsdl[video] media-libs/sdl-image[png] media-libs/freetype:2 ) server? ( aimodules? ( sys-devel/libtool:2 ) ) sound? ( media-libs/libsdl[sound] media-libs/sdl-mixer[vorbis] ) !sdl? ( !gtk? ( !qt4? ( x11-libs/gtk+:2 ) ) ) ) games-misc/games-envd
+SLOT=0
+SRC_URI=mirror://sourceforge/freeciv/freeciv-2.4.2.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	games-ggz	7957d0a0b68d2703b8bb71ec7ddd87a8	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=df6cfc0bb42e30ee1ef3439192f6212c

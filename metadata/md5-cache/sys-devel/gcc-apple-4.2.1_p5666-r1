@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=>=sys-libs/zlib-1.1.4 >=sys-libs/ncurses-5.2-r2 nls? ( sys-devel/gettext ) >=sys-devel/gcc-config-1.3.12-r4 fortran? ( >=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.2.0_p10 ) >=sys-apps/texinfo-4.2-r4 >=sys-devel/bison-1.875 sys-devel/binutils-apple >=dev-libs/mpfr-2.2.0_p10 >=sys-apps/sed-4 sys-devel/gnuconfig sys-libs/zlib nls? ( virtual/libintl ) virtual/libiconv >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4 nls? ( sys-devel/gettext ) regression-test? ( >=dev-util/dejagnu-1.4.4 >=sys-devel/autogen-5.5.4 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=sys-libs/zlib-1.1.4 >=sys-libs/ncurses-5.2-r2 nls? ( sys-devel/gettext ) >=sys-devel/gcc-config-1.3.12-r4 sys-libs/csu fortran? ( >=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.2.0_p10 ) >=sys-apps/texinfo-4.2-r4 >=sys-devel/bison-1.875 sys-devel/binutils-apple >=dev-libs/mpfr-2.2.0_p10 >=sys-apps/sed-4 sys-devel/gnuconfig sys-libs/zlib nls? ( virtual/libintl ) virtual/libiconv >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4 nls? ( sys-devel/gettext ) regression-test? ( >=dev-util/dejagnu-1.4.4 >=sys-devel/autogen-5.5.4 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Apple branch of the GNU Compiler Collection, Developer Tools 4.0
 EAPI=3
 HOMEPAGE=http://gcc.gnu.org
@@ -7,9 +7,9 @@ IUSE=fortran nls +openmp objc objc++ +cxx multislot regression-test vanilla +nls
 KEYWORDS=~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2 GPL-3
 PDEPEND=>=sys-devel/gcc-config-1.7
-RDEPEND=>=sys-libs/zlib-1.1.4 >=sys-libs/ncurses-5.2-r2 nls? ( sys-devel/gettext ) >=sys-devel/gcc-config-1.3.12-r4 fortran? ( >=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.2.0_p10 ) sys-libs/zlib nls? ( virtual/libintl ) virtual/libiconv
+RDEPEND=>=sys-libs/zlib-1.1.4 >=sys-libs/ncurses-5.2-r2 nls? ( sys-devel/gettext ) >=sys-devel/gcc-config-1.3.12-r4 sys-libs/csu fortran? ( >=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.2.0_p10 ) sys-libs/zlib nls? ( virtual/libintl ) virtual/libiconv
 RESTRICT=strip
 SLOT=42
 SRC_URI=http://www.opensource.apple.com/darwinsource/tarballs/other/gcc-5666.3.tar.gz http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-16.tar.gz http://www.opensource.apple.com/darwinsource/tarballs/other/libstdcxx-39.tar.gz fortran? ( mirror://gnu/gcc/gcc-4.2.4/gcc-fortran-4.2.4.tar.bz2 )
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain	fa82bc354dcd080fd9fff6323275da6a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=9e8557ef7c0cbe6bdcda7d23ddcc27e0
+_md5_=6ea9a6944c1437d176edc995f0226683

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.2 2014/02/28 19:35:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.3 2014/05/22 18:59:30 grobian Exp $
 
 EAPI="3"
 
@@ -41,6 +41,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )
 	>=sys-devel/gcc-config-1.3.12-r4
+	sys-libs/csu
 	fortran? (
 		>=dev-libs/gmp-4.2.1
 		>=dev-libs/mpfr-2.2.0_p10
