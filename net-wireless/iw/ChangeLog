@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.73 2014/02/04 05:19:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.74 2014/05/22 12:22:56 jer Exp $
+
+  22 May 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Network monitoring does not equal network configuration.
 
 *iw-3.14 (04 Feb 2014)
 

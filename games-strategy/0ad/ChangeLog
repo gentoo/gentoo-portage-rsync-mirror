@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/0ad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/ChangeLog,v 1.1 2014/05/21 18:09:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/ChangeLog,v 1.2 2014/05/22 12:06:23 hasufell Exp $
+
+*0ad-0.0.16_alpha-r1 (22 May 2014)
+
+  22 May 2014; Julian Ospald <hasufell@gentoo.org> -0ad-0.0.16_alpha.ebuild,
+  +0ad-0.0.16_alpha-r1.ebuild, metadata.xml:
+  restrict broken tests wrt #511006, add lobby USE flag, rm obsolete fam USE
+  flag, install ActorEditor binary for +editor
 
 *0ad-0.0.16_alpha (21 May 2014)
 

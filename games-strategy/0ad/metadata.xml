@@ -8,5 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name="editor">Include Atlas scenario editor projects</flag>
+		<flag name="lobby">Enable the use of <pkg>net-libs/gloox</pkg>
+			and the multiplayer lobby</flag>
 	</use>
 </pkgmetadata>

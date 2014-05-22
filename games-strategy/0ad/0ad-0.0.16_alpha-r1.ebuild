@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/0ad-0.0.16_alpha.ebuild,v 1.1 2014/05/21 18:09:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/0ad-0.0.16_alpha-r1.ebuild,v 1.1 2014/05/22 12:06:23 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ SRC_URI="http://releases.wildfiregames.com/${MY_P}-unix-build.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT CC-BY-SA-3.0 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="editor fam pch sound test"
+IUSE="editor +lobby pch sound test"
+RESTRICT="test"
 
 RDEPEND="
 	dev-lang/spidermonkey:24
@@ -29,7 +30,6 @@ RDEPEND="
 	media-libs/libsdl[X,opengl,video]
 	net-libs/enet:1.3
 	net-libs/miniupnpc
-	net-libs/gloox
 	net-misc/curl
 	sys-libs/zlib
 	virtual/jpeg
@@ -37,6 +37,7 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXcursor
 	editor? ( x11-libs/wxGTK:${WX_GTK_VER}[X,opengl] )
+	lobby? ( net-libs/gloox )
 	sound? ( media-libs/libogg
 		media-libs/libvorbis
 		media-libs/openal )"
@@ -61,6 +62,7 @@ src_configure() {
 		$(usex test "" "--without-tests")
 		$(usex sound "" "--without-audio")
 		$(usex editor "--atlas" "")
+		$(usex lobby "" "--without-lobby")
 		--collada
 		--bindir="${GAMES_BINDIR}"
 		--libdir="$(games_get_libdir)"/${PN}
@@ -104,6 +106,7 @@ src_test() {
 
 src_install() {
 	dogamesbin binaries/system/pyrogenesis
+	use editor && dogamesbin binaries/system/ActorEditor
 
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r binaries/data/l10n
@@ -115,6 +118,8 @@ src_install() {
 	dodoc binaries/system/readme.txt
 	doicon -s 128 build/resources/${PN}.png
 	games_make_wrapper ${PN} "${GAMES_BINDIR}/pyrogenesis"
+	use editor &&
+		games_make_wrapper ${PN}-ActorEditor "${GAMES_BINDIR}/ActorEditor"
 	make_desktop_entry ${PN}
 
 	prepgamesdirs
