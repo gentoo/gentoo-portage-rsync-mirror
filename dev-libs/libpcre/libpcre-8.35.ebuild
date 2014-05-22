@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.35.ebuild,v 1.4 2014/04/29 19:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.35.ebuild,v 1.5 2014/05/22 07:15:18 mgorny Exp $
 
 EAPI="4"
 
@@ -38,6 +38,10 @@ RDEPEND="${RDEPEND}
 	)"
 
 S=${WORKDIR}/${MY_P}
+
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/pcre-config
+)
 
 src_prepare() {
 	local pc
