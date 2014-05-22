@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
+DEPEND=dev-games/physfs media-libs/libmodplug >=media-libs/libsdl2-2.0.1[X,joystick,video] media-libs/libvorbis media-libs/openal media-libs/sdl2-image[png] >=media-libs/sdl2-ttf-2.0.12 luajit? ( dev-lang/luajit:2 ) !luajit? ( dev-lang/lua ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=An open-source Zelda-like 2D game engine
+EAPI=5
+HOMEPAGE=http://www.solarus-games.org/
+IUSE=luajit
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-games/physfs media-libs/libmodplug >=media-libs/libsdl2-2.0.1[X,joystick,video] media-libs/libvorbis media-libs/openal media-libs/sdl2-image[png] >=media-libs/sdl2-ttf-2.0.12 luajit? ( dev-lang/luajit:2 ) !luajit? ( dev-lang/lua ) games-misc/games-envd
+SLOT=0
+SRC_URI=http://www.zelda-solarus.com/downloads/solarus/solarus-1.2.0-src.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f7abba4b4a2b0965d55da7fedf2f25b7

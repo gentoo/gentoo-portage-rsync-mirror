@@ -1,10 +1,15 @@
 # ChangeLog for games-engines/solarus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/solarus/ChangeLog,v 1.1 2014/01/29 20:15:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/solarus/ChangeLog,v 1.2 2014/05/22 17:10:02 hasufell Exp $
+
+*solarus-1.2.0 (22 May 2014)
+
+  22 May 2014; Julian Ospald <hasufell@gentoo.org>
+  +files/solarus-1.2.0-paths.patch, +solarus-1.2.0.ebuild, metadata.xml:
+  version bump
 
 *solarus-1.1.1 (29 Jan 2014)
 
   29 Jan 2014; Julian Ospald <hasufell@gentoo.org> +solarus-1.1.1.ebuild,
   +files/solarus-1.1.1-paths.patch, +metadata.xml:
   initial import
-
