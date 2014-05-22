@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.6.ebuild,v 1.2 2014/05/09 16:02:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.6.ebuild,v 1.3 2014/05/22 13:59:06 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -25,6 +25,10 @@ RDEPEND="alsa? ( media-libs/alsa-lib:=[${MULTILIB_USEDEP}] )
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	oss? ( virtual/os-headers )"
+
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/libmikmod-config
+)
 
 multilib_src_configure() {
 	local mysimd="--disable-simd"

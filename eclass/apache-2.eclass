@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.35 2014/02/12 00:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.36 2014/05/22 13:58:46 polynomial-c Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -10,7 +10,28 @@
 # This eclass handles apache-2.x ebuild functions such as LoadModule generation
 # and inter-module dependency checking.
 
-inherit autotools eutils flag-o-matic multilib ssl-cert user toolchain-funcs
+inherit autotools eutils flag-o-matic multilib ssl-cert user toolchain-funcs versionator
+
+[[ ${CATEGORY}/${PN} != www-servers/apache ]] \
+	&& die "Do not use this eclass with anything else than www-servers/apache ebuilds!"
+
+case ${EAPI:-0} in
+	0|1|2|3)
+		die "This eclass requires >=EAPI-4"
+	;;
+esac
+
+# settings which are version specific go in here:
+case $(get_version_component_range 1-2) in
+	2.4)
+		DEFAULT_MPM_THREADED="event" #509922
+		RDEPEND=">=dev-libs/apr-1.5.1" #492578
+	;;
+	*)
+		DEFAULT_MPM_THREADED="worker"
+		RDEPEND=">=dev-libs/apr-1.4.5" #368651
+	;;
+esac
 
 # ==============================================================================
 # INTERNAL VARIABLES
@@ -81,11 +102,13 @@ DEPEND="dev-lang/perl
 	=dev-libs/apr-1*
 	=dev-libs/apr-util-1*[ldap?]
 	dev-libs/libpcre
+	apache2_modules_deflate? ( sys-libs/zlib )
+	apache2_modules_mime? ( app-misc/mime-types )
 	ldap? ( =net-nds/openldap-2* )
 	selinux? ( sec-policy/selinux-apache )
-	ssl? ( >=dev-libs/openssl-0.9.8f )
+	ssl? ( >=dev-libs/openssl-0.9.8m )
 	!=www-servers/apache-1*"
-RDEPEND="${DEPEND}"
+RDEPEND+=" ${DEPEND}"
 PDEPEND="~app-admin/apache-tools-${PV}"
 
 S="${WORKDIR}/httpd-${PV}"
@@ -121,7 +144,7 @@ setup_mpm() {
 
 	if [[ -z "${MY_MPM}" ]] ; then
 		if use threads ; then
-			MY_MPM=worker
+			MY_MPM=${DEFAULT_MPM_THREADED}
 			elog
 			elog "Selected default threaded MPM: ${MY_MPM}"
 			elog
@@ -229,17 +252,17 @@ setup_modules() {
 	MY_CONF="--enable-so=static"
 
 	if use ldap ; then
-		MY_CONF="${MY_CONF} --enable-authnz_ldap=${mod_type} --enable-ldap=${mod_type}"
-		MY_MODS="${MY_MODS} ldap authnz_ldap"
+		MY_CONF+=" --enable-authnz_ldap=${mod_type} --enable-ldap=${mod_type}"
+		MY_MODS+=" ldap authnz_ldap"
 	else
-		MY_CONF="${MY_CONF} --disable-authnz_ldap --disable-ldap"
+		MY_CONF+=" --disable-authnz_ldap --disable-ldap"
 	fi
 
 	if use ssl ; then
-		MY_CONF="${MY_CONF} --with-ssl=/usr --enable-ssl=${mod_type}"
-		MY_MODS="${MY_MODS} ssl"
+		MY_CONF+=" --with-ssl=/usr --enable-ssl=${mod_type}"
+		MY_MODS+=" ssl"
 	else
-		MY_CONF="${MY_CONF} --without-ssl --disable-ssl"
+		MY_CONF+=" --without-ssl --disable-ssl"
 	fi
 
 	if use suexec ; then
@@ -256,27 +279,27 @@ setup_modules() {
 		elog "    SUEXEC_UMASK: Umask for the suexec process (default: 077)"
 		elog
 
-		MY_CONF="${MY_CONF} --with-suexec-safepath=${SUEXEC_SAFEPATH:-/usr/local/bin:/usr/bin:/bin}"
-		MY_CONF="${MY_CONF} --with-suexec-logfile=${SUEXEC_LOGFILE:-/var/log/apache2/suexec_log}"
-		MY_CONF="${MY_CONF} --with-suexec-bin=/usr/sbin/suexec"
-		MY_CONF="${MY_CONF} --with-suexec-userdir=${SUEXEC_USERDIR:-public_html}"
-		MY_CONF="${MY_CONF} --with-suexec-caller=${SUEXEC_CALLER:-apache}"
-		MY_CONF="${MY_CONF} --with-suexec-docroot=${SUEXEC_DOCROOT:-/var/www}"
-		MY_CONF="${MY_CONF} --with-suexec-uidmin=${SUEXEC_MINUID:-1000}"
-		MY_CONF="${MY_CONF} --with-suexec-gidmin=${SUEXEC_MINGID:-100}"
-		MY_CONF="${MY_CONF} --with-suexec-umask=${SUEXEC_UMASK:-077}"
-		MY_CONF="${MY_CONF} --enable-suexec=${mod_type}"
-		MY_MODS="${MY_MODS} suexec"
+		MY_CONF+=" --with-suexec-safepath=${SUEXEC_SAFEPATH:-/usr/local/bin:/usr/bin:/bin}"
+		MY_CONF+=" --with-suexec-logfile=${SUEXEC_LOGFILE:-/var/log/apache2/suexec_log}"
+		MY_CONF+=" --with-suexec-bin=/usr/sbin/suexec"
+		MY_CONF+=" --with-suexec-userdir=${SUEXEC_USERDIR:-public_html}"
+		MY_CONF+=" --with-suexec-caller=${SUEXEC_CALLER:-apache}"
+		MY_CONF+=" --with-suexec-docroot=${SUEXEC_DOCROOT:-/var/www}"
+		MY_CONF+=" --with-suexec-uidmin=${SUEXEC_MINUID:-1000}"
+		MY_CONF+=" --with-suexec-gidmin=${SUEXEC_MINGID:-100}"
+		MY_CONF+=" --with-suexec-umask=${SUEXEC_UMASK:-077}"
+		MY_CONF+=" --enable-suexec=${mod_type}"
+		MY_MODS+=" suexec"
 	else
-		MY_CONF="${MY_CONF} --disable-suexec"
+		MY_CONF+=" --disable-suexec"
 	fi
 
 	for x in ${IUSE_MODULES} ; do
 		if use apache2_modules_${x} ; then
-			MY_CONF="${MY_CONF} --enable-${x}=${mod_type}"
-			MY_MODS="${MY_MODS} ${x}"
+			MY_CONF+=" --enable-${x}=${mod_type}"
+			MY_MODS+=" ${x}"
 		else
-			MY_CONF="${MY_CONF} --disable-${x}"
+			MY_CONF+=" --disable-${x}"
 		fi
 	done
 
@@ -368,7 +391,7 @@ apache-2_pkg_setup() {
 	setup_modules
 
 	if use debug; then
-		MY_CONF="${MY_CONF} --enable-maintainer-mode --enable-exception-hook"
+		MY_CONF+=" --enable-maintainer-mode --enable-exception-hook"
 	fi
 
 	elog "Please note that you need SysV IPC support in your kernel."
@@ -522,7 +545,7 @@ apache-2_src_install() {
 	fi
 
 	# provide legacy symlink for apxs, bug 177697
-	dosym /usr/sbin/apxs /usr/sbin/apxs2
+	dosym apxs /usr/sbin/apxs2
 
 	# install some documentation
 	dodoc ABOUT_APACHE CHANGES LAYOUT README README.platforms VERSIONING
@@ -531,6 +554,7 @@ apache-2_src_install() {
 	# drop in a convenient link to the manual
 	if use doc ; then
 		sed -i -e "s:VERSION:${PVR}:" "${D}/etc/apache2/modules.d/00_apache_manual.conf"
+		docompress -x /usr/share/doc/${PF}/manual # 503640
 	else
 		rm -f "${D}/etc/apache2/modules.d/00_apache_manual.conf"
 		rm -Rf "${D}/usr/share/doc/${PF}/manual"
