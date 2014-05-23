@@ -4,10 +4,10 @@ DESCRIPTION=An IMAP and POP3 server written with security primarily in mind
 EAPI=5
 HOMEPAGE=http://www.dovecot.org/
 IUSE=kerberos ldap mysql pam postgres sqlite vpopmail cydir imapc +maildir mbox mdbox pop3c sdbox bzip2 lzma lz4 zlib caps doc ipv6 lucene managesieve selinux sieve solr +ssl static-libs suid tcpd ssl
-KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86
+KEYWORDS=~amd64 ~arm hppa ~ia64 ~x86
 LICENSE=LGPL-2.1 MIT
 RDEPEND=bzip2? ( app-arch/bzip2 ) caps? ( sys-libs/libcap ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) lucene? ( >=dev-cpp/clucene-2.3 ) lzma? ( app-arch/xz-utils ) lz4? ( app-arch/lz4 ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base !dev-db/postgresql-base[ldap,threads] ) selinux? ( sec-policy/selinux-dovecot ) solr? ( net-misc/curl dev-libs/expat ) sqlite? ( dev-db/sqlite ) ssl? ( dev-libs/openssl ) tcpd? ( sys-apps/tcp-wrappers ) vpopmail? ( net-mail/vpopmail ) zlib? ( sys-libs/zlib ) virtual/libiconv net-mail/mailbase
 SLOT=0
 SRC_URI=http://dovecot.org/releases/2.2/dovecot-2.2.13.tar.gz sieve? ( http://pigeonhole.dovecot.org/releases/2.2/dovecot-2.2-pigeonhole-0.4.3.tar.gz ) managesieve? ( http://pigeonhole.dovecot.org/releases/2.2/dovecot-2.2-pigeonhole-0.4.3.tar.gz )
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	ssl-cert	b53367370fde96e19beca78050a47c61	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=2ac3e368b9f736ee6665736a530cd5ab
+_md5_=e1ab2505dc428d54ff9932fe0c9524f6
