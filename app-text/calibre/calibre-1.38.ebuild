@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.37.ebuild,v 1.1 2014/05/20 14:25:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.38.ebuild,v 1.1 2014/05/23 17:06:22 axs Exp $
 
 EAPI=5
 

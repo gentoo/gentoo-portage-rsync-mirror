@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.53 2014/05/23 07:53:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.54 2014/05/23 17:11:10 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -130,7 +130,7 @@ multilib_get_enabled_abis() {
 
 # @FUNCTION: multilib_get_enabled_abi_pairs
 # @DESCRIPTION:
-# Return the ordered list of enabled <use-flag>:<ABI> pairs
+# Return the ordered list of enabled <use-flag>.<ABI> pairs
 # if multilib builds are enabled. The best (most preferred)
 # ABI will come last.
 #
@@ -152,7 +152,7 @@ multilib_get_enabled_abi_pairs() {
 			# for the split is more complex than cheating like this
 			for m_abi in ${m_abis//,/ }; do
 				if [[ ${m_abi} == ${abi} ]] && use "${m_flag}"; then
-					echo "${m_flag}:${abi}"
+					echo "${m_flag}.${abi}"
 					found=1
 					break 2
 				fi
@@ -167,7 +167,7 @@ multilib_get_enabled_abi_pairs() {
 
 		debug-print "${FUNCNAME}: no ABIs enabled, fallback to ${abi}"
 		debug-print "${FUNCNAME}: ABI=${ABI}, DEFAULT_ABI=${DEFAULT_ABI}"
-		echo ":${abi}"
+		echo ".${abi}"
 	fi
 }
 
@@ -179,8 +179,8 @@ multilib_get_enabled_abi_pairs() {
 _multilib_multibuild_wrapper() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local ABI=${MULTIBUILD_VARIANT#*:}
-	local MULTILIB_ABI_FLAG=${MULTIBUILD_VARIANT%:*}
+	local ABI=${MULTIBUILD_VARIANT#*.}
+	local MULTILIB_ABI_FLAG=${MULTIBUILD_VARIANT%.*}
 
 	multilib_toolchain_setup "${ABI}"
 	"${@}"

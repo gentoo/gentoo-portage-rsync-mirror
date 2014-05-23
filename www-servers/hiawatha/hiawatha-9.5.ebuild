@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.5.ebuild,v 1.2 2014/05/22 13:19:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.5.ebuild,v 1.3 2014/05/23 17:17:42 hasufell Exp $
 
 EAPI=5
 
@@ -35,6 +35,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-9.5-cflags.patch
+
 	rm -r polarssl || die
 
 	grep '#ServerId =' config/hiawatha.conf.in 1>/dev/null || die

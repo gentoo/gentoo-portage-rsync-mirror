@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3-r1.ebuild,v 1.2 2013/03/03 23:00:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.4.0.ebuild,v 1.1 2014/05/23 17:14:14 polynomial-c Exp $
 
-EAPI=4
-inherit eutils autotools user
+EAPI=5
+inherit eutils autotools systemd user
 
 DESCRIPTION="An opensource alternative to shoutcast that supports mp3, ogg (vorbis/theora) and aac streaming"
 HOMEPAGE="http://www.icecast.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/icecast/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="kate logrotate +speex +ssl +theora +yp"
 
 #Although there is a --with-ogg and --with-orbis configure option, they're
@@ -34,15 +34,16 @@ pkg_setup() {
 
 src_prepare() {
 	# bug #368539
-	epatch "${FILESDIR}"/${P}-libkate.patch
+	epatch "${FILESDIR}"/${PN}-2.3.3-libkate.patch
 	# bug #430434
-	epatch "${FILESDIR}"/${P}-fix-xiph_openssl.patch
+	epatch "${FILESDIR}"/${PN}-2.3.3-fix-xiph_openssl.patch
 	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
+		--docdir=/usr/share/doc/${PF} \
 		--sysconfdir=/etc/icecast2 \
 		$(use_enable kate) \
 		$(use_with theora) \
@@ -56,9 +57,9 @@ src_install() {
 	emake DESTDIR="${D}" install
 	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist
 	dohtml -A chm,hhc,hhp doc/*
-	doman debian/icecast2.1
 
-	newinitd "${FILESDIR}"/init.d.icecast icecast
+	newinitd "${FILESDIR}"/init.d.icecast-2 icecast
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	insinto /etc/icecast2
 	doins "${FILESDIR}"/icecast.xml
