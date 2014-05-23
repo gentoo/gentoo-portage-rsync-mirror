@@ -1,5 +1,11 @@
 # ChangeLog for x11-misc/util-macros
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.139 2014/04/19 17:47:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.140 2014/05/23 16:55:02 chithanh Exp $
+
+*util-macros-1.19.0 (23 May 2014)
+
+  23 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +util-macros-1.19.0.ebuild:
+  Version bump.
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> util-macros-1.18.0.ebuild:
   Stable for sparc, wrt bug #500368
