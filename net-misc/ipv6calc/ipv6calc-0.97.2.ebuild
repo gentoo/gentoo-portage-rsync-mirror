@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.97.1.ebuild,v 1.1 2014/05/21 06:44:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.97.2.ebuild,v 1.1 2014/05/23 21:39:49 blueness Exp $
 
 EAPI="5"
 inherit eutils

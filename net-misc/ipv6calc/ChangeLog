@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.77 2014/05/21 06:44:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.78 2014/05/23 21:39:49 blueness Exp $
+
+*ipv6calc-0.97.2 (23 May 2014)
+
+  23 May 2014; Anthony G. Basile <blueness@gentoo.org> +ipv6calc-0.97.2.ebuild,
+  -ipv6calc-0.97.1.ebuild:
+  Version bump
 
 *ipv6calc-0.97.1 (21 May 2014)
 
