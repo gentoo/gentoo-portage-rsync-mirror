@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/parallel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.61 2014/04/24 18:15:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.62 2014/05/23 16:21:26 radhermit Exp $
+
+*parallel-20140522 (23 May 2014)
+
+  23 May 2014; Tim Harder <radhermit@gentoo.org> +parallel-20140522.ebuild:
+  Version bump.
 
 *parallel-20140422 (24 Apr 2014)
 
