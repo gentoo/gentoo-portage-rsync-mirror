@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8991 2014/05/23 00:55:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8992 2014/05/23 13:58:13 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask specific versions of dev-libs/libevent.
 
   23 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Fix libgphoto2 multilib mask (2.5.4 should not have been masked, 2.5.3.1-r1
