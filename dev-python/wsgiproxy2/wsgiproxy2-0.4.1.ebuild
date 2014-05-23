@@ -1,13 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/wsgiproxy2-0.4.1.ebuild,v 1.1 2014/01/08 02:43:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/wsgiproxy2-0.4.1.ebuild,v 1.2 2014/05/23 07:33:25 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
-
-# this looks quite unpossible to run
-RESTRICT="test"
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit distutils-r1
 
@@ -20,19 +17,33 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.zip"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"
+IUSE="doc test"
 
-RDEPEND="dev-python/urllib3
-	dev-python/socketpool[${PYTHON_USEDEP}]
+RDEPEND="dev-python/urllib3[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/restkit
 	dev-python/webob[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}
-	test? ( dev-python/webtest[${PYTHON_USEDEP}] )"
+DEPEND="test? ( ${RDEPEND}
+		dev-python/webtest[${PYTHON_USEDEP}]
+		dev-python/socketpool[${PYTHON_USEDEP}]
+		dev-python/restkit[$(python_gen_usedep python2_7)] )"
+# Tests needing restkit are skipped under py3
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+python_compile_all() {
+	if use doc; then
+		cd docs || die
+		sphinx-build -b html -d _build/doctrees   . _build/html
+	fi
+}
+
+# this was always possible
 python_test() {
 	nosetests || die "Tests fail with ${EPYTHON}"
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }

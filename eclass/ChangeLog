@@ -1,6 +1,19 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1266 2014/05/23 07:11:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1270 2014/05/23 07:53:22 mgorny Exp $
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Add remaining potential multilib arches to header wrapping template.
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Use MULTILIB_ABI_FLAG for header wrapping. Also, use explicit error when ABI
+  is omitted in wrapper template.
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Deprecate multilib_for_best_abi() to decrease confusion.
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Export MULTILIB_ABI_FLAG for ebuild/eclass use. Bug #509478.
 
   23 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Introduce multilib_get_enabled_abi_pairs() to obtain list containing both ABI

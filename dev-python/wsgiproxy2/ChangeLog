@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wsgiproxy2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.6 2014/01/08 02:43:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.7 2014/05/23 07:33:25 idella4 Exp $
+
+  23 May 2014; Ian Delaney <idella4@gentoo.org> wsgiproxy2-0.4.1.ebuild:
+  drop py2.6, add IUSE doc, doc build, fix everything
 
 *wsgiproxy2-0.4.1 (08 Jan 2014)
 
