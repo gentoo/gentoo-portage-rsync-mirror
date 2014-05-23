@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8992 2014/05/23 13:58:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8993 2014/05/23 15:52:26 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2014; Andrey Grozin <grozin@gentoo.org> package.mask:
+  Mask app-text/qgoogletranslator, dev-lisp/openmcl, dev-lisp/openmcl-build-tools
+  for removal in 30 days
 
   23 May 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask specific versions of dev-libs/libevent.

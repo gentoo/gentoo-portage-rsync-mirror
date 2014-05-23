@@ -1,6 +1,16 @@
 # ChangeLog for www-misc/monitorix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.5 2014/01/08 06:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.6 2014/05/23 15:58:03 tomwij Exp $
+
+*monitorix-3.5.1 (23 May 2014)
+
+  23 May 2014; Tom Wijsman <TomWij@gentoo.org> +files/monitorix-3.5.1.init,
+  +monitorix-3.5.1.ebuild, -files/monitorix-3.0.0.init,
+  -monitorix-3.0.0-r1.ebuild, -monitorix-3.1.0.ebuild, -monitorix-3.2.1.ebuild,
+  metadata.xml:
+  Version bump to 3.5.1, removed old, added systemd unit support. Fixed security
+  bug #493434 (CVE-2013-7071); reported by Ago, based on a contribution by
+  Wojciech Myrda (vojcek).
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> monitorix-3.0.0-r1.ebuild,
   monitorix-3.1.0.ebuild, monitorix-3.2.1.ebuild:

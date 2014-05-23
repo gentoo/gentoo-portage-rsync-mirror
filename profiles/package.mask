@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15717 2014/05/23 13:58:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15718 2014/05/23 15:52:27 grozin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andrey Grozin <grozin@gentoo.org> (23 May 2014)
+# Google closed free usage of the translate api
+# Masked for removal in 30 days
+app-text/qgoogletranslator
+# openmcl has been renamed to clozurecl
+# Masked for removal in 30 days
+dev-lisp/openmcl
+dev-lisp/openmcl-build-tools
 
 # Ryan Hill <rhill@gentoo.org> (22 May 2014)
 # Big API break.  Masked until something needs it.

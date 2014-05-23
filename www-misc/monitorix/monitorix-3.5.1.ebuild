@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.1.0.ebuild,v 1.2 2014/01/08 06:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.5.1.ebuild,v 1.1 2014/05/23 15:58:03 tomwij Exp $
 
 EAPI="5"
 
-inherit eutils user
+inherit eutils systemd user
 
 DESCRIPTION="A lightweight system monitoring tool"
 HOMEPAGE="http://www.${PN}.org/"
@@ -13,20 +13,24 @@ SRC_URI="http://www.${PN}.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="evms hddtemp httpd lm_sensors postfix"
+IUSE="apcupsd evms hddtemp httpd lm_sensors postfix"
 
 DEPEND="sys-apps/sed"
-RDEPEND="net-analyzer/rrdtool[perl]
+RDEPEND="dev-perl/config-general
 	dev-perl/DBI
-	dev-perl/libwww-perl
-	dev-perl/XML-Simple
-	dev-perl/config-general
 	dev-perl/HTTP-Server-Simple
+	dev-perl/IO-Socket-SSL
+	dev-perl/libwww-perl
+	dev-perl/MIME-Lite
+	dev-perl/XML-Simple
+	net-analyzer/rrdtool[perl]
+	virtual/perl-CGI
+	apcupsd? ( sys-power/apcupsd )
 	evms? ( sys-fs/evms )
 	hddtemp? ( app-admin/hddtemp )
 	httpd? ( virtual/httpd-cgi )
 	lm_sensors? ( sys-apps/lm_sensors )
-	postfix? ( net-mail/pflogsumm )"
+	postfix? ( net-mail/pflogsumm dev-perl/MailTools )"
 
 pkg_setup() {
 	enewgroup ${PN}
@@ -43,10 +47,12 @@ src_prepare() {
 src_install() {
 	dosbin ${PN}
 
-	newinitd "${FILESDIR}"/${PN}-3.0.0.init ${PN}
+	newinitd "${FILESDIR}"/${P}.init ${PN}
 
-	insinto /etc
+	insinto /etc/monitorix
 	doins ${PN}.conf
+
+	dodir /etc/${PN}/conf.d
 
 	insinto /etc/logrotate.d
 	newins docs/${PN}.logrotate ${PN}
@@ -55,13 +61,13 @@ src_install() {
 	doman man/man5/${PN}.conf.5
 	doman man/man8/${PN}.8
 
-	insinto /usr/share/${PN}/htdocs
+	insinto /var/lib/${PN}/www
 	doins logo_bot.png logo_top.png ${PN}ico.png
 
 	dodir /var/lib/${PN}/imgs
-	dosym /var/lib/${PN}/imgs /usr/share/${PN}/htdocs/imgs
+	dosym /var/lib/${PN}/imgs /var/lib/${PN}/www/imgs
 
-	exeinto /usr/share/${PN}/htdocs/cgi
+	exeinto /var/lib/${PN}/www/cgi
 	doexe ${PN}.cgi
 
 	dodir /usr/lib/${PN}
@@ -71,18 +77,21 @@ src_install() {
 	dodir /var/lib/${PN}/usage
 	insinto /var/lib/${PN}/reports
 	doins -r reports/*
+
+	systemd_dounit docs/${PN}.service
 }
 
 pkg_postinst() {
 	chown monitorix:monitorix /var/lib/${PN}/imgs
 
-	elog "WARNING: ${PN} includes a brand new config format since version"
-	elog "3.0.0, that may be incompatible with your existing config"
-	elog "file. Please take care if upgrading from an old version."
+	elog "WARNING: ${PN} has changed its config format twice, in versions"
+	elog "3.0.0 and 3.4.0; this format may be incompatible with your existing"
+	elog "config file. Please take care if upgrading from an old version."
 	elog ""
+
 	elog "${PN} includes its own web server as of version 3.0.0."
 	elog "For this reason, the dependency on the webapp framework"
 	elog "has been removed. If you wish to use your own web server,"
 	elog "the ${PN} web data can be found at:"
-	elog "/usr/share/${PN}/htdocs/"
+	elog "/var/lib/${PN}/www/"
 }
