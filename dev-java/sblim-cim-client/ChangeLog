@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sblim-cim-client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/ChangeLog,v 1.4 2013/03/17 15:24:08 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/ChangeLog,v 1.5 2014/05/23 15:20:07 tomwij Exp $
+
+  23 May 2014; Tom Wijsman <TomWij@gentoo.org> -sblim-cim-client-1.3.5.ebuild,
+  -sblim-cim-client-2.0.5.ebuild:
+  Remove old, for security bug #501194 (CVE-2012-2328).
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
