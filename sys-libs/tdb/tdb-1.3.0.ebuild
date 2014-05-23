@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.12-r1.ebuild,v 1.1 2013/06/30 16:33:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.0.ebuild,v 1.1 2014/05/23 12:28:39 polynomial-c Exp $
 
 EAPI=5
 

@@ -1,0 +1,22 @@
+--- subversion-1.8.9/subversion/po/zh_CN.po
++++ subversion-1.8.9/subversion/po/zh_CN.po
+@@ -62,7 +62,7 @@
+ "PO-Revision-Date: 2013-07-03 16:57+0800\n"
+ "Last-Translator: Subversion Developers <dev@subversion.apache.org>\n"
+ "Language-Team: Simplified Chinese <dev@subversion.apache.org>\n"
+-"Language: \n"
++"Language: zh_CN\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+--- subversion-1.8.9/subversion/po/zh_TW.po
++++ subversion-1.8.9/subversion/po/zh_TW.po
+@@ -28,7 +28,7 @@
+ "PO-Revision-Date: 2004-09-12 22:05+0800\n"
+ "Last-Translator: Subversion Developers <dev@subversion.tigris.org>\n"
+ "Language-Team: Traditional Chinese <dev@subversion.tigris.org>\n"
+-"Language: \n"
++"Language: zh_TW\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"

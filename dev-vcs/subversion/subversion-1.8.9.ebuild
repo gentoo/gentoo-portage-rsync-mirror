@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.6 2014/01/28 07:32:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.9.ebuild,v 1.1 2014/05/23 12:19:19 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -63,13 +63,13 @@ REQUIRED_USE="
 want_apache
 
 pkg_setup() {
-	if use berkdb; then
+	if use berkdb ; then
 		local apu_bdb_version="$(${EPREFIX}/usr/bin/apu-1-config --includes \
 			| grep -Eoe '-I${EPREFIX}/usr/include/db[[:digit:]]\.[[:digit:]]' \
 			| sed 's:.*b::')"
 		einfo
-		if [[ -z "${SVN_BDB_VERSION}" ]]; then
-			if [[ -n "${apu_bdb_version}" ]]; then
+		if [[ -z "${SVN_BDB_VERSION}" ]] ; then
+			if [[ -n "${apu_bdb_version}" ]] ; then
 				SVN_BDB_VERSION="${apu_bdb_version}"
 				einfo "Matching db version to apr-util"
 			else
@@ -100,7 +100,7 @@ pkg_setup() {
 		echo -ne "\a"
 	fi
 
-	if use debug; then
+	if use debug ; then
 		append-cppflags -DSVN_DEBUG -DAP_DEBUG
 	fi
 
@@ -116,7 +116,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.5.6-aix-dso.patch \
 		"${FILESDIR}"/${PN}-1.8.0-hpux-dso.patch \
 		"${FILESDIR}"/${PN}-fix-parallel-build-support-for-perl-bindings.patch \
-		"${FILESDIR}"/${PN}-1.8.1-revert_bdb6check.patch
+		"${FILESDIR}"/${PN}-1.8.1-revert_bdb6check.patch \
+		"${FILESDIR}"/${P}-po_fixes.patch
 	epatch_user
 
 	fperms +x build/transform_libtool_scripts.sh
@@ -135,12 +136,12 @@ src_prepare() {
 	sed -e 's/\(libsvn_swig_py\)-\(1\.la\)/\1-$(EPYTHON)-\2/g' \
 		-i build-outputs.mk || die "sed failed"
 
-	if use python; then
+	if use python ; then
 		if [[ ${CHOST} == *-darwin* ]] ; then
 			# http://mail-archives.apache.org/mod_mbox/subversion-dev/201306.mbox/%3C20130614113003.GA19257@tarsus.local2%3E
 			# in short, we don't have gnome-keyring stuff here, patch
 			# borrowed from MacPorts
-			epatch "${FILESDIR}"/${P}-swig-python-no-gnome-keyring.patch
+			epatch "${FILESDIR}"/${PN}-1.8.5-swig-python-no-gnome-keyring.patch
 		fi
 
 		# XXX: make python_copy_sources accept path
@@ -158,7 +159,7 @@ src_configure() {
 		myconf+=" --without-swig"
 	fi
 
-	if use java; then
+	if use java ; then
 		myconf+=" --without-junit"
 	fi
 
@@ -186,9 +187,6 @@ src_configure() {
 		;;
 	esac
 
-	#workaround for bug 387057
-	has_version =dev-vcs/subversion-1.6* && myconf+=" --disable-disallowing-of-undefined-references"
-
 	#version 1.7.7 again tries to link against the older installed version and fails, when trying to
 	#compile for x86 on amd64, so workaround this issue again
 	#check newer versions, if this is still/again needed
@@ -205,8 +203,8 @@ src_configure() {
 		export ac_cv_python_compile="$(tc-getCC)"
 	fi
 
-	#force ruby-1.8 for bug 399105
-	#allow overriding Python include directory
+	# force ruby-1.9
+	# allow overriding Python include directory
 	ac_cv_path_RUBY="${EPREFIX}"/usr/bin/ruby19 ac_cv_path_RDOC="${EPREFIX}"/usr/bin/rdoc19 \
 	ac_cv_python_includes='-I$(PYTHON_INCLUDEDIR)' \
 	econf --libdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -234,7 +232,7 @@ src_configure() {
 src_compile() {
 	emake local-all
 
-	if use ctypes-python; then
+	if use ctypes-python ; then
 		# pre-generate .py files
 		use ctypes-python && emake ctypes-python
 
@@ -243,7 +241,7 @@ src_compile() {
 		popd >/dev/null || die
 	fi
 
-	if use python; then
+	if use python ; then
 		swig_py_compile() {
 			local p=subversion/bindings/swig/python
 			rm -f ${p} || die
@@ -260,23 +258,23 @@ src_compile() {
 		python_foreach_impl swig_py_compile
 	fi
 
-	if use perl; then
+	if use perl ; then
 		emake swig-pl
 	fi
 
-	if use ruby; then
+	if use ruby ; then
 		emake swig-rb
 	fi
 
-	if use java; then
+	if use java ; then
 		emake -j1 JAVAC_FLAGS="$(java-pkg_javac-args) -encoding iso8859-1" javahl
 	fi
 
-	if use extras; then
+	if use extras ; then
 		emake tools
 	fi
 
-	if use doc; then
+	if use doc ; then
 		doxygen doc/doxygen.conf || die "Building of Subversion HTML documentation failed"
 
 		if use java; then
@@ -286,9 +284,14 @@ src_compile() {
 }
 
 src_test() {
+	if ! has_version ~${CATEGORY}/${P} ; then
+		ewarn "The test suite shows errors when there is an older version of"
+		ewarn "${CATEGORY}/${PN} installed."
+	fi
+
 	default
 
-	if use ctypes-python; then
+	if use ctypes-python ; then
 		python_test() {
 			"${PYTHON}" subversion/bindings/ctypes-python/test/run_all.py \
 				|| die "ctypes-python tests fail with ${EPYTHON}"
@@ -297,7 +300,7 @@ src_test() {
 		distutils-r1_src_test
 	fi
 
-	if use python; then
+	if use python ; then
 		swig_py_test() {
 			pushd "${BUILD_DIR}" >/dev/null || die
 			"${PYTHON}" tests/run_all.py || die "swig-py tests fail with ${EPYTHON}"
@@ -312,13 +315,13 @@ src_test() {
 src_install() {
 	emake -j1 DESTDIR="${D}" local-install
 
-	if use ctypes-python; then
+	if use ctypes-python ; then
 		pushd subversion/bindings/ctypes-python >/dev/null || die
 		distutils-r1_src_install
 		popd >/dev/null || die
 	fi
 
-	if use python; then
+	if use python ; then
 		swig_py_install() {
 			local p=subversion/bindings/swig/python
 			rm -f ${p} || die
@@ -335,17 +338,17 @@ src_install() {
 		python_foreach_impl swig_py_install
 	fi
 
-	if use perl; then
+	if use perl ; then
 		emake DESTDIR="${D}" INSTALLDIRS="vendor" install-swig-pl
 		fixlocalpod
 		find "${ED}" "(" -name .packlist -o -name "*.bs" ")" -delete
 	fi
 
-	if use ruby; then
+	if use ruby ; then
 		emake DESTDIR="${D}" install-swig-rb
 	fi
 
-	if use java; then
+	if use java ; then
 		emake DESTDIR="${D}" install-javahl
 		java-pkg_regso "${ED}"usr/$(get_libdir)/libsvnjavahl*$(get_libname)
 		java-pkg_dojar "${ED}"usr/$(get_libdir)/svn-javahl/svn-javahl.jar
@@ -353,7 +356,7 @@ src_install() {
 	fi
 
 	# Install Apache module configuration.
-	if use apache2; then
+	if use apache2 ; then
 		keepdir "${APACHE_MODULES_CONFDIR}"
 		insinto "${APACHE_MODULES_CONFDIR}"
 		doins "${FILESDIR}/47_mod_dav_svn.conf"
@@ -387,14 +390,14 @@ src_install() {
 	rm -fr tools/xslt
 
 	# Install extra files.
-	if use extras; then
+	if use extras ; then
 		cat << EOF > 80subversion-extras
 PATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
 ROOTPATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
 EOF
 		doenvd 80subversion-extras
 
-		emake DESTDIR="${D}" toolsdir="/usr/$(get_libdir)/subversion/bin" install-tools || die "Installation of tools failed"
+		emake DESTDIR="${D}" toolsdir="/usr/$(get_libdir)/subversion/bin" install-tools
 
 		find tools "(" -name "*.bat" -o -name "*.in" -o -name ".libs" ")" -print0 | xargs -0 rm -fr
 		rm -fr tools/client-side/svnmucc
@@ -406,15 +409,15 @@ EOF
 		doins -r tools
 	fi
 
-	if use doc; then
+	if use doc ; then
 		dohtml -r doc/doxygen/html/*
 
-		if use java; then
+		if use java ; then
 			java-pkg_dojavadoc doc/javadoc
 		fi
 	fi
 
-	find "${ED}" '(' -name '*.la' ')' -print0 | xargs -0 rm -f
+	prune_libtool_files --all
 
 	cd "${ED}"usr/share/locale
 	for i in * ; do
@@ -424,10 +427,10 @@ EOF
 
 pkg_preinst() {
 	# Compare versions of Berkeley DB, bug 122877.
-	if use berkdb && [[ -f "${EROOT}usr/bin/svn" ]]; then
+	if use berkdb && [[ -f "${EROOT}usr/bin/svn" ]] ; then
 		OLD_BDB_VERSION="$(scanelf -nq "${EROOT}usr/$(get_libdir)/libsvn_subr-1$(get_libname 0)" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
 		NEW_BDB_VERSION="$(scanelf -nq "${ED}usr/$(get_libdir)/libsvn_subr-1$(get_libname 0)" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
-		if [[ "${OLD_BDB_VERSION}" != "${NEW_BDB_VERSION}" ]]; then
+		if [[ "${OLD_BDB_VERSION}" != "${NEW_BDB_VERSION}" ]] ; then
 			CHANGED_BDB_VERSION="1"
 		fi
 	fi
@@ -436,7 +439,7 @@ pkg_preinst() {
 pkg_postinst() {
 	use perl && perl-module_pkg_postinst
 
-	if [[ -n "${CHANGED_BDB_VERSION}" ]]; then
+	if [[ -n "${CHANGED_BDB_VERSION}" ]] ; then
 		ewarn "You upgraded from an older version of Berkeley DB and may experience"
 		ewarn "problems with your repository. Run the following commands as root to fix it:"
 		ewarn "    db4_recover -h ${SVN_REPOS_LOC}/repos"
@@ -454,7 +457,7 @@ pkg_config() {
 	# Remember: Don't use ${EROOT}${SVN_REPOS_LOC} since ${SVN_REPOS_LOC}
 	# already has EPREFIX in it
 	einfo "Initializing the database in ${SVN_REPOS_LOC}..."
-	if [[ -e "${SVN_REPOS_LOC}/repos" ]]; then
+	if [[ -e "${SVN_REPOS_LOC}/repos" ]] ; then
 		echo "A Subversion repository already exists and I will not overwrite it."
 		echo "Delete \"${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
 	else
@@ -467,7 +470,7 @@ pkg_config() {
 		einfo "Setting repository permissions..."
 		SVNSERVE_USER="$(. "${EROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_USER}")"
 		SVNSERVE_GROUP="$(. "${EROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_GROUP}")"
-		if use apache2; then
+		if use apache2 ; then
 			[[ -z "${SVNSERVE_USER}" ]] && SVNSERVE_USER="apache"
 			[[ -z "${SVNSERVE_GROUP}" ]] && SVNSERVE_GROUP="apache"
 		else
