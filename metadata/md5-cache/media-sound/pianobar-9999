@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=media-libs/libao net-libs/gnutls dev-libs/libgcrypt:0 dev-libs/json-c aac? ( media-libs/faad2 ) mp3? ( media-libs/libmad )
 REQUIRED_USE=|| ( aac mp3 )
 SLOT=0
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	e83b3dde426430f34178059a8de5299d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	0247fa26cde95080f65c2528bd1d4132	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=228ac2a6d74920a9e2ad5bfbf536bc91
