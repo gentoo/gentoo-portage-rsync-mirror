@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-0.11.25.ebuild,v 1.1 2014/05/10 22:26:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-0.11.25-r1.ebuild,v 1.1 2014/05/23 17:47:51 hasufell Exp $
 
 EAPI=5
 
@@ -20,6 +20,8 @@ DEPEND="virtual/pkgconfig"
 src_prepare() {
 	echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
 		> m4/libuv-extra-automake-flags.m4 || die
+
+	epatch "${FILESDIR}"/0{1,2}-${P}-tests.patch
 
 	eautoreconf
 }

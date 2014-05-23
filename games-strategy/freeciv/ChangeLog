@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.149 2014/05/22 19:00:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.150 2014/05/23 17:59:37 hasufell Exp $
+
+  23 May 2014; Julian Ospald <hasufell@gentoo.org> freeciv-2.4.2.ebuild:
+  set readline slot
 
 *freeciv-2.4.2 (22 May 2014)
 

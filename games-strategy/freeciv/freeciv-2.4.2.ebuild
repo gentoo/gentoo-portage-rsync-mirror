@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.2.ebuild,v 1.1 2014/05/22 19:00:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.2.ebuild,v 1.2 2014/05/23 17:59:37 hasufell Exp $
 
 # FIXME: gtk3 support breaks ggz support
 
@@ -27,7 +27,7 @@ RDEPEND="app-arch/bzip2
 		sqlite? ( dev-db/sqlite:3 )
 		!mysql? ( !postgres? ( !sqlite? ( virtual/mysql ) ) )
 	)
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:0 )
 	dedicated? ( aimodules? ( sys-devel/libtool:2 ) )
 	!dedicated? (
 		media-libs/libpng:0
