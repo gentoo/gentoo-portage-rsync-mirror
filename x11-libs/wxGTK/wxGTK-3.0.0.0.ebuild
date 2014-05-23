@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.0.0.ebuild,v 1.3 2014/01/27 17:35:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.0.0.ebuild,v 1.4 2014/05/23 08:21:26 rhill Exp $
 
 EAPI="5"
 
@@ -65,6 +65,11 @@ S="${WORKDIR}/wxPython-src-${PV}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-collision.patch
+
+	# https://bugs.gentoo.org/421851
+	# https://bugs.gentoo.org/499984
+	sed -i -e "/wx_cv_std_libpath=/s:=.*:=$(get_libdir):" configure || die
+
 	epatch_user
 }
 
