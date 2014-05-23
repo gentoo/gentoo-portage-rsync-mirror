@@ -650,6 +650,7 @@ app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:qemu - Enable IOEMU support via the use of qemu-dm
 app-emulation/xen-tools:screen - Enable support for running domain U console in an app-misc/screen session
 app-emulation/xen-tools:system-qemu - Using app-emulation/qemu instead of the bundled one
+app-emulation/xen-tools:system-seabios - Using sys-firmware/seabios instead of the bundled one
 app-emulation/xen-tools:xend - Enable support the xend and xm to manage xen
 app-emulation/xtrs:ls-dos - Install LS-DOS disk images for Model 4P
 app-forensics/afflib:fuse - Enable extra fuse thingies

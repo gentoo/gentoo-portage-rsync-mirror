@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r4.ebuild,v 1.1 2014/05/16 21:39:26 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r5.ebuild,v 1.1 2014/05/23 11:00:30 dlan Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ else
 	KEYWORDS="~amd64 ~arm -x86"
 	UPSTREAM_VER=2
 	GENTOO_VER=
+	SEABIOS_VER=1.7.3.1
 
 	[[ -n ${UPSTREAM_VER} ]] && \
 		UPSTRAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
@@ -26,6 +27,8 @@ else
 		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-gentoo-patches-${GENTOO_VER}.tar.xz"
 
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV}/xen-${MY_PV}.tar.gz
+	http://code.coreboot.org/p/seabios/downloads/get/seabios-${SEABIOS_VER}.tar.gz
+	http://dev.gentoo.org/~dlan/distfiles/seabios-${SEABIOS_VER}.tar.gz
 	${UPSTRAM_PATCHSET_URI}
 	${GENTOO_PATCHSET_URI}"
 	S="${WORKDIR}/xen-${MY_PV}"
@@ -42,7 +45,7 @@ SLOT="0"
 # Inclusion of IUSE ocaml on stabalizing requires maintainer of ocaml to (get off his hands and) make
 # >=dev-lang/ocaml-4 stable
 # Masked in profiles/eapi-5-files instead
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs system-qemu"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs system-qemu system-seabios"
 
 REQUIRED_USE="hvm? ( || ( qemu system-qemu ) )
 	${PYTHON_REQUIRED_USE}
@@ -68,8 +71,8 @@ DEPEND="${COMMON_DEPEND}
 	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )
 	arm? ( >=sys-apps/dtc-1.4.0 )
 	!arm? ( sys-devel/bin86
+		system-seabios? ( sys-firmware/seabios )
 		sys-firmware/ipxe
-		>=sys-firmware/seabios-1.7.4
 		sys-devel/dev86
 		sys-power/iasl )
 	dev-lang/perl
@@ -194,6 +197,13 @@ src_prepare() {
 	# Fix po file collision with app-emulation/qemu, while USE=qemu is enabled, Bug 508302
 	epatch "${FILESDIR}"/${PN}-4-qemu-fix-po-collision.patch
 
+	# bundled seabios
+	epatch "${FILESDIR}"/${PN}-4-anti-seabios-download.patch
+	mv ../seabios-${SEABIOS_VER} tools/firmware/seabios-dir-remote || die
+	pushd tools/firmware/ > /dev/null
+	ln -s seabios-dir-remote seabios-dir || die
+	popd > /dev/null
+
 	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' \
 		 -i tools/firmware/Makefile || die
@@ -264,7 +274,6 @@ src_configure() {
 	local myconf="--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--disable-werror \
-		--with-system-seabios=/usr/share/seabios/bios.bin \
 		--disable-xen \
 		--enable-tools \
 		--enable-docs \
@@ -274,6 +283,7 @@ src_configure() {
 		$(use_enable api xenapi) \
 		$(use_enable ocaml ocamltools) \
 		"
+	use system-seabios && myconf+=" --with-system-seabios=/usr/share/seabios/bios.bin"
 	use qemu || myconf+=" --with-system-qemu"
 	econf ${myconf}
 }

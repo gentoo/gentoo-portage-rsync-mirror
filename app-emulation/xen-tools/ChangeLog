@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.243 2014/05/22 06:14:50 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.244 2014/05/23 11:00:30 dlan Exp $
+
+*xen-tools-4.4.0-r5 (23 May 2014)
+*xen-tools-4.3.2-r3 (23 May 2014)
+*xen-tools-4.2.4-r4 (23 May 2014)
+
+  23 May 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.2.4-r3.ebuild,
+  +xen-tools-4.2.4-r4.ebuild, +xen-tools-4.3.2-r3.ebuild,
+  -xen-tools-4.4.0-r4.ebuild, +xen-tools-4.4.0-r5.ebuild,
+  +files/xen-tools-4-anti-seabios-download.patch:
+  re-introduce bundled seabios with USE=system-seabios flag, bug #510052,
+  #510492, #510680
 
 *xen-tools-4.2.4-r3 (22 May 2014)
 
