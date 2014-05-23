@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-5.3.1.0.ebuild,v 1.2 2014/05/16 18:58:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-5.3.1.0.ebuild,v 1.3 2014/05/23 02:36:47 floppym Exp $
 
 EAPI=5
 
-inherit eutils nsplugins unpacker
+inherit eutils multilib nsplugins unpacker
 
 if [ "${PV}" != "9999" ]; then
 	DEB_PATCH="1"
@@ -94,7 +94,7 @@ src_unpack() {
 src_install() {
 	local plugindir i l
 	local ppapi_plugindirs=( /opt/google/chrome{,-beta,-unstable}/pepper
-		/usr/lib/chromium-browser/pepper )
+		/usr/$(get_libdir)/chromium-browser/pepper )
 
 	unpacker usr/share/doc/google-talkplugin/changelog.Debian.gz
 	dodoc changelog.Debian
