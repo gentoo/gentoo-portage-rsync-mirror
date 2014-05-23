@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.149 2014/05/05 20:28:23 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.150 2014/05/23 21:13:46 axs Exp $
+
+*spidermonkey-24.2.0-r2 (23 May 2014)
+
+  23 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +spidermonkey-24.2.0-r2.ebuild:
+  changed the flags that USE=jit controls on spidermonkey24 ; addresses bug
+  510982
 
   05 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/spidermonkey-24-upward-growing-stack.patch,
