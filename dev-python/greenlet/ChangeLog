@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.27 2014/03/19 03:38:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.28 2014/05/23 13:04:03 idella4 Exp $
+
+  23 May 2014; Ian Delaney <idella4@gentoo.org> greenlet-0.4.2.ebuild:
+  drop py2.6 add py3.4
 
   19 Mar 2014; Ian Delaney <idella4@gentoo.org> greenlet-0.4.2.ebuild:
   set to 'in source build' to fix tests run to fix Bug #503660 by maekke

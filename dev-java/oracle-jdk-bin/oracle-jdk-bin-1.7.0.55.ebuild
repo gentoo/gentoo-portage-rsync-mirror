@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.55.ebuild,v 1.3 2014/04/17 08:14:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.55.ebuild,v 1.4 2014/05/23 13:26:51 mrueg Exp $
 
 EAPI="5"
 
@@ -60,7 +60,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.7"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"
@@ -237,7 +237,7 @@ src_install() {
 		cp src.zip "${ddest}" || die
 	fi
 
-	if use !x86-macos && use !x64-macos ; then
+	if use !arm && use !x86-macos && use !x64-macos ; then
 		# Install desktop file for the Java Control Panel.
 		# Using ${PN}-${SLOT} to prevent file collision with jre and or
 		# other slots.  make_desktop_entry can't be used as ${P} would

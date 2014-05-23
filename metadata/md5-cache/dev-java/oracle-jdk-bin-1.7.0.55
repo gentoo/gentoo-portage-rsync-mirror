@@ -4,11 +4,11 @@ DESCRIPTION=Oracle's Java SE Development Kit
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source
-KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=amd64 ~arm x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=Oracle-BCLA-JavaSE examples? ( BSD )
 RDEPEND=X? ( !aqua? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst ) ) alsa? ( media-libs/alsa-lib ) doc? ( dev-java/java-sdk-docs:1.7 ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.7
 SRC_URI=amd64? ( jdk-7u55-linux-x64.tar.gz examples? ( javafx_samples-2_2_55-linux.zip jdk-7u55-linux-x64-demos.tar.gz ) ) arm? ( jdk-7u55-linux-arm-vfp-sflt.tar.gz jdk-7u55-linux-arm-vfp-hflt.tar.gz examples? ( javafx_samples-2_2_55-linux.zip jdk-7u55-linux-arm-vfp-sflt-demos.tar.gz jdk-7u55-linux-arm-vfp-hflt-demos.tar.gz ) ) x86? ( jdk-7u55-linux-i586.tar.gz examples? ( javafx_samples-2_2_55-linux.zip jdk-7u55-linux-i586-demos.tar.gz ) ) x64-solaris? ( jdk-7u55-solaris-i586.tar.gz jdk-7u55-solaris-x64.tar.gz examples? ( jdk-7u55-solaris-i586-demos.tar.gz jdk-7u55-solaris-x64-demos.tar.gz ) ) x86-solaris? ( jdk-7u55-solaris-i586.tar.gz examples? ( jdk-7u55-solaris-i586-demos.tar.gz ) ) sparc-solaris? ( jdk-7u55-solaris-sparc.tar.gz examples? ( jdk-7u55-solaris-sparc-demos.tar.gz ) ) sparc64-solaris? ( jdk-7u55-solaris-sparc.tar.gz jdk-7u55-solaris-sparcv9.tar.gz examples? ( jdk-7u55-solaris-sparc-demos.tar.gz jdk-7u55-solaris-sparcv9-demos.tar.gz ) ) x86-macos? ( jdk-7u55-macosx-x64.dmg examples? ( jdk-7u55-macosx-x86_64-demos.tar.gz ) ) x64-macos? ( jdk-7u55-macosx-x64.dmg examples? ( jdk-7u55-macosx-x86_64-demos.tar.gz ) ) jce? ( UnlimitedJCEPolicyJDK7.zip )
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=2b3c12fb2a82ca51016f559c6ef75076
+_md5_=30ae5762b7fa68fd15278e3a972a5cc5

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.4.2.ebuild,v 1.7 2014/03/19 03:38:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.4.2.ebuild,v 1.8 2014/05/23 13:04:03 idella4 Exp $
 
 EAPI=5
 
 # Note: greenlet is built-in in pypy
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit distutils-r1 flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="app-arch/unzip
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_compile() {
-	if [[ ${EPYTHON} == python2* ]]; then
+	if [[ ${EPYTHON} == python2.7 ]]; then
 		local CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
 		append-flags -fno-strict-aliasing
 	fi
