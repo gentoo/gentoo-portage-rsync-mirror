@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.509 2014/05/21 19:37:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.510 2014/05/23 22:43:05 mgorny Exp $
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> wine-9999.ebuild:
+  Forward-port the emul-linux dependency changes to the live ebuild.
 
   21 May 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild:
   Support new multilib-enabled packages as dependencies. Partially bug #510646.

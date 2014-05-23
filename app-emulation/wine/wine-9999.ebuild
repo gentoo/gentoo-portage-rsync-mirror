@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.166 2014/05/17 15:31:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.167 2014/05/23 22:43:05 mgorny Exp $
 
 EAPI="5"
 
@@ -116,9 +116,10 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-xlibs[development]
 				media-libs/fontconfig[abi_x86_32]
 			) )
-			gphoto2? (
+			gphoto2? ( || (
 				app-emulation/emul-linux-x86-medialibs[development]
-			)
+				media-libs/libgphoto2[abi_x86_32]
+			) )
 			openal? ( || (
 				app-emulation/emul-linux-x86-sdl[development]
 				media-libs/openal[abi_x86_32]
@@ -145,7 +146,10 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-soundlibs[alsa,development]
 				media-libs/alsa-lib[abi_x86_32]
 			) )
-			cups? ( app-emulation/emul-linux-x86-baselibs )
+			cups? ( || (
+				app-emulation/emul-linux-x86-baselibs
+				net-print/cups[abi_x86_32]
+			) )
 			opencl? ( virtual/opencl[abi_x86_32] )
 			opengl? ( || (
 				app-emulation/emul-linux-x86-opengl[development]
@@ -162,7 +166,10 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-baselibs[development]
 				virtual/jpeg:0[abi_x86_32]
 			) )
-			ldap? ( app-emulation/emul-linux-x86-baselibs[development] )
+			ldap? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				net-nds/openldap:=[abi_x86_32]
+			) )
 			lcms? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
 				media-libs/lcms:2[abi_x86_32]
@@ -195,8 +202,14 @@ COMMON_DEPEND="
 					dev-libs/libxslt[abi_x86_32]
 				)
 			) )
-			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
-			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
+			scanner? ( || (
+				app-emulation/emul-linux-x86-medialibs[development]
+				media-gfx/sane-backends:=[abi_x86_32]
+			) )
+			ssl? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				net-libs/gnutls:=[abi_x86_32]
+			) )
 			png? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
 				media-libs/libpng:0[abi_x86_32]

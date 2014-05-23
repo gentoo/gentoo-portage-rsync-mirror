@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.9-r1.ebuild,v 1.1 2013/11/12 02:38:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.9-r1.ebuild,v 1.2 2014/05/23 22:43:17 mgorny Exp $
 
 EAPI=5
 
@@ -34,20 +34,30 @@ src_prepare() {
 src_configure() {
 	python_export_best
 	xorg-2_src_configure
-	#Note: multilib is not supported with python, therefore use only one ABI
-	python_foreach_impl autotools-utils_src_configure
 }
 
-src_compile() {
-	xorg-2_src_compile
+multilib_src_configure() {
+	autotools-utils_src_configure
 
-	python_foreach_impl autotools-utils_src_compile -C xcbgen \
-		top_builddir="${WORKDIR}/${P}-${ABI:-${DEFAULT_ABI}}"
+	if multilib_is_native_abi; then
+		python_parallel_foreach_impl autotools-utils_src_configure
+	fi
 }
 
-src_install() {
-	xorg-2_src_install
+multilib_src_compile() {
+	default
 
-	python_foreach_impl autotools-utils_src_install -C xcbgen \
-		top_builddir="${WORKDIR}/${P}-${ABI:-${DEFAULT_ABI}}"
+	if multilib_is_native_abi; then
+		python_foreach_impl autotools-utils_src_compile -C xcbgen \
+			top_builddir="${BUILD_DIR}"
+	fi
+}
+
+multilib_src_install() {
+	default
+
+	if multilib_is_native_abi; then
+		python_foreach_impl autotools-utils_src_install -C xcbgen \
+			top_builddir="${BUILD_DIR}"
+	fi
 }

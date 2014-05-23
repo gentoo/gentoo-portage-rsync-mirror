@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.10.ebuild,v 1.10 2014/04/19 17:48:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.10.ebuild,v 1.11 2014/05/23 22:43:17 mgorny Exp $
 
 EAPI=5
 
@@ -27,24 +27,38 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 src_configure() {
 	python_export_best
 	xorg-2_src_configure
-	#Note: multilib is not supported with python, therefore use only one ABI
-	python_parallel_foreach_impl autotools-utils_src_configure
 }
 
-src_compile() {
-	xorg-2_src_compile
+multilib_src_configure() {
+	autotools-utils_src_configure
 
-	python_foreach_impl autotools-utils_src_compile -C xcbgen \
-		top_builddir="${WORKDIR}/${P}-${ABI:-${DEFAULT_ABI}}"
+	if multilib_is_native_abi; then
+		python_parallel_foreach_impl autotools-utils_src_configure
+	fi
+}
+
+multilib_src_compile() {
+	default
+
+	if multilib_is_native_abi; then
+		python_foreach_impl autotools-utils_src_compile -C xcbgen \
+			top_builddir="${BUILD_DIR}"
+	fi
 }
 
 src_install() {
 	xorg-2_src_install
 
-	python_foreach_impl autotools-utils_src_install -C xcbgen \
-		top_builddir="${WORKDIR}/${P}-${ABI:-${DEFAULT_ABI}}"
-
 	# pkg-config file hardcodes python sitedir, bug 486512
 	sed -i -e '/pythondir/s:=.*$:=/dev/null:' \
 		"${ED}"/usr/lib*/pkgconfig/xcb-proto.pc || die
+}
+
+multilib_src_install() {
+	default
+
+	if multilib_is_native_abi; then
+		python_foreach_impl autotools-utils_src_install -C xcbgen \
+			top_builddir="${BUILD_DIR}"
+	fi
 }

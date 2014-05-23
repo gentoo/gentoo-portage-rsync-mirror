@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.137 2014/04/19 17:48:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.138 2014/05/23 22:43:17 mgorny Exp $
+
+  23 May 2014; Michał Górny <mgorny@gentoo.org> xcb-proto-1.10.ebuild,
+  xcb-proto-1.8-r3.ebuild, xcb-proto-1.9-r1.ebuild:
+  Fix inlining multilib BUILD_DIR logic, use sub-phase functions instead. Fixes
+  bug #511142.
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xcb-proto-1.10.ebuild:
   Stable for sparc, wrt bug #500368
