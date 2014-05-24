@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.462 2014/05/21 22:33:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.463 2014/05/24 05:03:28 jmbsvicetto Exp $
+
+  24 May 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  openldap-2.4.38-r1.ebuild, openldap-2.4.38-r2.ebuild:
+  Update rfc2307bis schema - fixes bug 484244.
 
   21 May 2014; Michał Górny <mgorny@gentoo.org> openldap-2.4.38-r2.ebuild:
   Restore CC & CXX exports as they are necessary for the native ABI, bug
