@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.212 2014/05/21 11:04:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.213 2014/05/23 23:15:12 jcallen Exp $
+
+*emul-linux-x86-baselibs-20140508-r5 (23 May 2014)
+
+  23 May 2014; Jonathan Callen <jcallen@gentoo.org>
+  +emul-linux-x86-baselibs-20140508-r5.ebuild, +files/remove-native-20140508-r5:
+  Add multilib dev-libs/openssl:0.9.8 (bug 511078)
 
 *emul-linux-x86-baselibs-20140508-r4 (21 May 2014)
 

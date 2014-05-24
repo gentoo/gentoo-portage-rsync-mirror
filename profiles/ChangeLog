@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8994 2014/05/23 17:34:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8995 2014/05/23 23:07:37 jcallen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2014; Jonathan Callen <jcallen@gentoo.org> package.mask:
+  Mask multilib dev-libs/openssl:0.9.8 before committing
 
   23 May 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Mask sci-biology/ncbi-tools++ - removal in 30days

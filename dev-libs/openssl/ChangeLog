@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.538 2014/05/20 06:41:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.539 2014/05/23 23:13:54 jcallen Exp $
+
+*openssl-0.9.8y-r1 (23 May 2014)
+
+  23 May 2014; Jonathan Callen <jcallen@gentoo.org> +openssl-0.9.8y-r1.ebuild:
+  Backport multilib support to SLOT=0.9.8 (bug 511078)
 
   20 May 2014; Michał Górny <mgorny@gentoo.org> openssl-1.0.1g-r1.ebuild,
   openssl-1.0.2_beta1-r3.ebuild:
