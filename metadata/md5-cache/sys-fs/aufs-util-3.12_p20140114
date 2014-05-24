@@ -3,10 +3,10 @@ DEPEND=!sys-fs/aufs2 !<sys-fs/aufs3-3_p20130318 >=sys-fs/aufs-headers-3.10_p2013
 DESCRIPTION=Utilities are always necessary for aufs
 EAPI=5
 HOMEPAGE=http://aufs.sourceforge.net/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=!sys-fs/aufs2 !<sys-fs/aufs3-3_p20130318
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/aufs-util-3.12_p20140114.tar.xz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=b41fb499aea453dae24e146f2c0f7081
+_md5_=084b41a1670feec3fc0912cd20a7128f

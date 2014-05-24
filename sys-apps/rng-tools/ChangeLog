@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/rng-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.48 2013/12/16 14:44:30 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.49 2014/05/24 10:01:14 pacho Exp $
+
+*rng-tools-4-r7 (24 May 2014)
+
+  24 May 2014; Pacho Ramos <pacho@gentoo.org> +files/rngd.service,
+  +rng-tools-4-r7.ebuild:
+  Add unit file (#510826 by Salah Coronya)
 
   16 Dec 2013; Sven Vermeulen <swift@gentoo.org> rng-tools-4-r5.ebuild,
   rng-tools-4-r6.ebuild:

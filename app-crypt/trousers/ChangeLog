@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/trousers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.44 2013/06/09 22:55:23 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.45 2014/05/24 09:55:21 pacho Exp $
+
+*trousers-0.3.10-r1 (24 May 2014)
+
+  24 May 2014; Pacho Ramos <pacho@gentoo.org> +files/tcsd.service,
+  +trousers-0.3.10-r1.ebuild:
+  Add unit file (#510822 by Salah Coronya), fix license (#425894 by Ian
+  Stakenvicius), use readme.gentoo.eclass.
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

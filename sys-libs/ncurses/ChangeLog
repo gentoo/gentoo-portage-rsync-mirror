@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.222 2014/04/28 17:44:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.223 2014/05/24 10:00:43 hwoarang Exp $
+
+  24 May 2014; Markos Chandras <hwoarang@gentoo.org> ncurses-5.9-r3.ebuild:
+  Stable on amd64 wrt bug #507154
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> ncurses-5.9-r3.ebuild:
   Replace multilib_build_binaries with multilib_is_native_abi, in order to put
