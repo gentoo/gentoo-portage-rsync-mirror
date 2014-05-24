@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.45 2014/05/06 04:34:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.46 2014/05/24 02:22:01 idella4 Exp $
+
+  24 May 2014; Ian Delaney <idella4@gentoo.org> tornado-3.2.ebuild:
+  re-keyword ~arm to -3.2, tested on armv7, cubieboard2, qa correction to deps.
+  Also arm fine on testing for -3.2.1
 
 *tornado-3.2.1 (06 May 2014)
 
