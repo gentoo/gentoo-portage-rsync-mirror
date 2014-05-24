@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.47 2014/03/28 15:08:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.48 2014/05/23 23:50:21 mrueg Exp $
+
+  23 May 2014; Manuel Rüger <mrueg@gentoo.org> jre-1.7.0.ebuild:
+  Add ~arm keyword.
 
 *jre-1.8.0 (28 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.321 2014/05/23 17:06:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.322 2014/05/23 23:46:04 mrueg Exp $
+
+  23 May 2014; Manuel Rüger <mrueg@gentoo.org> calibre-1.38.ebuild:
+  Add ~arm keyword.
 
 *calibre-1.38 (23 May 2014)
 
