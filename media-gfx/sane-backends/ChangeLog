@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.253 2014/05/21 19:00:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.254 2014/05/24 10:11:57 ago Exp $
+
+  24 May 2014; Agostino Sarubbo <ago@gentoo.org> sane-backends-1.0.24-r3.ebuild:
+  Stable for x86, wrt bug #506928
 
 *sane-backends-1.0.24-r4 (21 May 2014)
 

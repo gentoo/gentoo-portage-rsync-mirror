@@ -1,6 +1,5 @@
-diff -Nru radius-1.6.1.orig/radscripts/Makefile.in radius-1.6.1/radscripts/Makefile.in
---- radius-1.6.1.orig/radscripts/Makefile.in	2009-03-01 11:02:16.000000000 +0000
-+++ radius-1.6.1/radscripts/Makefile.in	2009-03-01 11:12:52.000000000 +0000
+--- a/radscripts/Makefile.in
++++ b/radscripts/Makefile.in
 @@ -854,19 +854,19 @@
  
  

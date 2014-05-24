@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.12.1.ebuild,v 1.1 2014/04/27 16:39:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.12.1.ebuild,v 1.2 2014/05/24 10:19:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,6 +15,9 @@ LICENSE="LGPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
+# Let people emerge this by default, bug #472932
+IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
+
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}

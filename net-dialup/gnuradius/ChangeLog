@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/gnuradius
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.22 2013/05/12 03:58:40 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.23 2014/05/24 10:25:05 jer Exp $
+
+*gnuradius-1.6.1-r1 (24 May 2014)
+
+  24 May 2014; Jeroen Roovers <jer@gentoo.org> +gnuradius-1.6.1-r1.ebuild,
+  files/gnuradius-1.6.1-qa-false-positives.patch:
+  Use proper libdir. Disable USE=pam as the build system will use PAM when it
+  pleases. Prune .la file (bug #451766). Clean up patch.
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> gnuradius-1.6.1.ebuild:
   Move epatch to src_prepare phase

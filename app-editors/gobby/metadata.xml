@@ -5,9 +5,5 @@
     <email>dev-zero@gentoo.org</email>
     <name>Tiziano Müller</name>
   </maintainer>
-  <maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
-  </maintainer>
   <longdescription>Multiuser text editor.</longdescription>
 </pkgmetadata>
