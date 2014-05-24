@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1100 2014/05/20 11:15:59 zlogene Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1101 2014/05/24 07:26:47 pacho Exp $
 
 -->
 <herds>
@@ -219,10 +219,6 @@
   <email>gnome@gentoo.org</email>
   <description>GNOME Desktop and related packages</description>
   <maintainer>
-    <email>dang@gentoo.org</email>
-    <name>Daniel Gryniewicz</name>
-  </maintainer>
-  <maintainer>
     <email>leio@gentoo.org</email>
     <name>Mart Raudsepp</name>
   </maintainer>
@@ -248,10 +244,6 @@
   <email>gnome-accessibility@gentoo.org</email>
   <description>GNOME accessibility packages</description>
   <maintainer>
-    <email>dang@gentoo.org</email>
-    <name>Daniel Gryniewicz</name>
-  </maintainer>
-  <maintainer>
     <email>leio@gentoo.org</email>
     <name>Mart Raudsepp</name>
   </maintainer>
@@ -273,10 +265,6 @@
     <name>Mart Raudsepp</name>
   </maintainer>
   <maintainer>
-    <email>dang@gentoo.org</email>
-    <name>Daniel Gryniewicz</name>
-  </maintainer>
-  <maintainer>
     <email>pacho@gentoo.org</email>
     <name>Pacho Ramos</name>
   </maintainer>
@@ -289,10 +277,6 @@
   <name>gnome-office</name>
   <email>gnome-office@gentoo.org</email>
   <description>GNOME Office packages</description>
-  <maintainer>
-    <email>dang@gentoo.org</email>
-    <name>Daniel Gryniewicz</name>
-  </maintainer>
   <maintainer>
     <email>eva@gentoo.org</email>
     <name>Gilles Dartiguelongue</name>
