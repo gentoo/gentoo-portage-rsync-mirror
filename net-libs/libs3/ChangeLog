@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libs3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libs3/ChangeLog,v 1.3 2012/11/10 11:21:40 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libs3/ChangeLog,v 1.4 2014/05/24 07:43:03 pacho Exp $
+
+  24 May 2014; Pacho Ramos <pacho@gentoo.org> -libs3-2.0.ebuild, metadata.xml:
+  Cleanup due #199047
 
 *libs3-2.0-r1 (10 Nov 2012)
 
@@ -17,4 +20,3 @@
   31 Oct 2011; Andrey Kislyuk <weaver@gentoo.org> +libs3-2.0.ebuild,
   +metadata.xml:
   New package, ebuild written by me
-

@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>cluster</herd>
   <herd>perl</herd>
-  <maintainer>
-    <email>weaver@gentoo.org</email>
-    <name>Andrey Kislyuk</name>
-  </maintainer>
   <upstream>
     <remote-id type="cpan">PBS-Client</remote-id>
     <remote-id type="cpan-module">PBS::Client</remote-id>

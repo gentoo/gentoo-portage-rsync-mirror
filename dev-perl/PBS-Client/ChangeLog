@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PBS-Client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PBS-Client/ChangeLog,v 1.10 2013/01/06 15:43:40 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PBS-Client/ChangeLog,v 1.11 2014/05/24 07:40:09 pacho Exp $
+
+  24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #199047
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -PBS-Client-0.90.0.ebuild:
   Cleanup

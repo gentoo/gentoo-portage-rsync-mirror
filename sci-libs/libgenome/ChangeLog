@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgenome
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgenome/ChangeLog,v 1.2 2009/12/06 00:54:27 weaver Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgenome/ChangeLog,v 1.3 2014/05/24 07:43:24 pacho Exp $
+
+  24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #199047
 
 *libgenome-1.3-r1 (05 Dec 2009)
 
@@ -10,4 +13,3 @@
 
   03 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
   New package sci-libs/libgenome, ebuild written by me
-
