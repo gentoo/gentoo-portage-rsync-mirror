@@ -1,6 +1,18 @@
 # ChangeLog for dev-qt/qtsingleapplication
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.5 2013/12/28 22:51:55 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.6 2014/05/24 21:33:01 pesa Exp $
+
+*qtsingleapplication-2.6.1_p20130904-r1 (24 May 2014)
+
+  24 May 2014; Davide Pesavento <pesa@gentoo.org>
+  +qtsingleapplication-2.6.1_p20130904-r1.ebuild,
+  -files/qtsingleapplication-2.6.1-examples.patch,
+  -files/qtsingleapplication-2.6.1-gcc47.patch,
+  -files/qtsingleapplication-2.6.1-unbundle.patch,
+  -qtsingleapplication-2.6.1.ebuild,
+  -qtsingleapplication-2.6.1_p20130904.ebuild:
+  Install also qtsinglecoreapplication.prf, as required by some packages (e.g.
+  qbittorrent in bug 507998). Remove old.
 
 *qtsingleapplication-2.6.1_p20130904 (28 Dec 2013)
 

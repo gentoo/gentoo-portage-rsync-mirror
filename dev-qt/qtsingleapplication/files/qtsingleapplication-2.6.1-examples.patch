@@ -1,9 +1,0 @@
-Do not build examples.
-
---- qtsingleapplication.pro
-+++ qtsingleapplication.pro
-@@ -2,4 +2,3 @@
- CONFIG += ordered
- include(common.pri)
- qtsingleapplication-uselib:SUBDIRS=buildlib
--SUBDIRS+=examples

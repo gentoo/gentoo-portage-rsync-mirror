@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904.ebuild,v 1.1 2013/12/28 22:51:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r1.ebuild,v 1.1 2014/05/24 21:33:01 pesa Exp $
 
 EAPI=5
 
@@ -54,6 +54,7 @@ src_install() {
 
 	insinto /usr/share/qt4/mkspecs/features/
 	doins "${FILESDIR}"/${PN}.prf
+	dosym ${PN}.prf /usr/share/qt4/mkspecs/features/qtsinglecoreapplication.prf
 
 	use doc && dohtml -r doc/html
 }
