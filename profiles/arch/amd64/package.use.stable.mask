@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.9 2014/05/24 09:21:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.10 2014/05/24 12:05:30 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -310,6 +310,7 @@ net-libs/libsoup abi_x86_32
 net-libs/libtirpc abi_x86_32
 net-libs/nacl abi_x86_32
 net-libs/neon abi_x86_32
+net-libs/polarssl abi_x86_32
 net-misc/curl abi_x86_32
 net-nds/openldap abi_x86_32
 net-print/cups abi_x86_32
