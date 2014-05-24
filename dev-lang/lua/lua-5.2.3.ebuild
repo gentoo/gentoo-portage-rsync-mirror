@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.3.ebuild,v 1.1 2014/04/22 21:30:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.2.3.ebuild,v 1.2 2014/05/24 22:03:11 mabi Exp $
 
 EAPI=5
 
@@ -112,3 +112,7 @@ src_install() {
 	insinto "/usr/$(get_libdir)/pkgconfig"
 	newins "${WORKDIR}/lua.pc" "lua${SLOT}.pc"
 }
+
+# Makefile contains a dummy target that doesn't do tests
+# but causes issues with slotted lua (bug #510360)
+src_test() { :; }

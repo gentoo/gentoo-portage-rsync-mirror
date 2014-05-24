@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.156 2014/04/22 19:42:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.157 2014/05/24 22:14:53 mgorny Exp $
+
+  24 May 2014; Michał Górny <mgorny@gentoo.org> fftw-3.3.3-r3.ebuild,
+  fftw-3.3.4.ebuild:
+  Fix the variant-obtaining hack after changes to build dir naming in multilib-
+  build. Bug #511198.
 
 *fftw-3.3.4 (22 Apr 2014)
 

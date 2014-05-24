@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.185 2014/04/22 21:30:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.186 2014/05/24 22:03:11 mabi Exp $
+
+  24 May 2014; Matti Bickel <mabi@gentoo.org> lua-5.2.3.ebuild:
+  omit broken tests, bug #510360
 
 *lua-5.2.3 (22 Apr 2014)
 *lua-5.1.5-r2 (22 Apr 2014)
