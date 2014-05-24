@@ -3,9 +3,9 @@ DEPEND=sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutil
 DESCRIPTION=Extremely Fast Compression algorithm
 EAPI=5
 HOMEPAGE=https://code.google.com/p/lz4/
-KEYWORDS=~amd64 ~arm hppa ~ia64 ~mips ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~arm hppa ~ia64 ~mips ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD-2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ryao/dist/lz4-0_p106.tar.xz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=58b229a989ad3b75a62518488ebfd508
+_md5_=901412bd74a4090c4a52ed5e5e73f65a

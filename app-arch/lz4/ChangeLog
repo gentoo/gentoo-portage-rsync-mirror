@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.16 2014/05/23 01:03:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.17 2014/05/24 09:04:31 ago Exp $
+
+  24 May 2014; Agostino Sarubbo <ago@gentoo.org> lz4-0_p106-r1.ebuild:
+  Stable for amd64, wrt bug #509954
 
   23 May 2014; Jeroen Roovers <jer@gentoo.org> lz4-0_p106-r1.ebuild:
   Stable for HPPA (bug #509954).

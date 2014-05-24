@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.8 2014/05/08 12:51:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.9 2014/05/24 09:21:30 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -348,6 +348,7 @@ sys-libs/gdbm abi_x86_32
 sys-libs/gpm abi_x86_32
 sys-libs/libavc1394 abi_x86_32
 sys-libs/lib-compat abi_x86_32
+sys-libs/libcap abi_x86_32
 sys-libs/libcxx abi_x86_32
 sys-libs/libcxxrt abi_x86_32
 sys-libs/libieee1284 abi_x86_32
