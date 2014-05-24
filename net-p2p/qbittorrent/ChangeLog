@@ -1,6 +1,17 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.229 2014/05/07 19:38:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.230 2014/05/24 22:53:34 pesa Exp $
+
+*qbittorrent-3.1.9.2-r1 (24 May 2014)
+
+  24 May 2014; Davide Pesavento <pesa@gentoo.org>
+  +qbittorrent-3.1.9.2-r1.ebuild, -qbittorrent-2.9.7.ebuild,
+  -qbittorrent-3.0.11-r1.ebuild, -qbittorrent-3.1.3.ebuild,
+  -qbittorrent-3.1.4.ebuild, -qbittorrent-3.1.5.ebuild,
+  -qbittorrent-3.1.8.ebuild, -qbittorrent-3.1.9.2.ebuild,
+  -qbittorrent-3.1.9.ebuild, metadata.xml, qbittorrent-9999.ebuild:
+  Depend on latest qtsingleapplication in order to fix bug 507998. Several
+  ebuild enhancements. Remove old versions.
 
 *qbittorrent-3.1.9.2 (07 May 2014)
 
