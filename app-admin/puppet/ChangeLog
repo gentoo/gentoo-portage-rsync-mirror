@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.197 2014/05/18 19:47:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.198 2014/05/24 06:26:06 prometheanfire Exp $
+
+*puppet-3.6.1 (24 May 2014)
+
+  24 May 2014; Matthew Thode <prometheanfire@gentoo.org> +puppet-3.6.1.ebuild:
+  bup
 
 *puppet-3.6.0 (18 May 2014)
 
