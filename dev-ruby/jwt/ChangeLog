@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/jwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jwt/ChangeLog,v 1.10 2014/05/15 00:29:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jwt/ChangeLog,v 1.11 2014/05/24 05:40:44 graaff Exp $
+
+*jwt-1.0.0 (24 May 2014)
+
+  24 May 2014; Hans de Graaff <graaff@gentoo.org> +jwt-1.0.0.ebuild:
+  Version bump.
 
 *jwt-0.1.13 (15 May 2014)
 

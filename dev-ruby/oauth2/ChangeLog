@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.19 2014/01/22 06:59:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.20 2014/05/24 05:44:34 graaff Exp $
+
+*oauth2-0.9.4 (24 May 2014)
+
+  24 May 2014; Hans de Graaff <graaff@gentoo.org> +oauth2-0.9.4.ebuild:
+  Version bump. Add ruby20.
 
 *oauth2-0.9.3 (22 Jan 2014)
 
