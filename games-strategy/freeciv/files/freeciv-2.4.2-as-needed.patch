@@ -1,0 +1,11 @@
+--- server/Makefile.am.old	2014-05-24 02:44:17.956898224 +0300
++++ server/Makefile.am	2014-05-24 02:44:51.666659234 +0300
+@@ -133,7 +133,7 @@
+  $(top_builddir)/server/scripting/libscripting_server.la
+ 
+ libfreeciv_srv_la_LIBADD = \
+- $(srvlibs)
++ $(srvlibs) $(SERVER_LIBS)
+ 
+ freeciv_server_LDFLAGS = $(GGZDMOD_LDFLAGS)
+ 

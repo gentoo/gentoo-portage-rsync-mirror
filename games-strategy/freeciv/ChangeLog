@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.150 2014/05/23 17:59:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.151 2014/05/24 15:16:41 hasufell Exp $
+
+  24 May 2014; Julian Ospald <hasufell@gentoo.org> freeciv-2.4.2.ebuild,
+  +files/freeciv-2.4.2-as-needed.patch:
+  fix linking issues wrt #511128, patch by Andrei Slavoiu
 
   23 May 2014; Julian Ospald <hasufell@gentoo.org> freeciv-2.4.2.ebuild:
   set readline slot
