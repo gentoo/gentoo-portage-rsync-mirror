@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/teamviewer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.7 2013/09/21 19:52:20 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.8 2014/05/24 16:00:53 hasufell Exp $
+
+*teamviewer-9.0.27891 (24 May 2014)
+
+  24 May 2014; Julian Ospald <hasufell@gentoo.org>
+  +teamviewer-9.0.27891.ebuild, +files/teamviewer-9.0.27891-gentoo.patch:
+  version bump wrt #491770
 
 *teamviewer-8.0.20931 (21 Sep 2013)
 
