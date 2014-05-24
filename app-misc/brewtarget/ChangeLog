@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/brewtarget
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.5 2013/11/17 20:16:18 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.6 2014/05/24 20:48:08 pesa Exp $
+
+*brewtarget-2.0.2 (24 May 2014)
+
+  24 May 2014; Davide Pesavento <pesa@gentoo.org> +brewtarget-2.0.2.ebuild,
+  -brewtarget-1.2.4.ebuild, -brewtarget-2.0.1.ebuild,
+  -files/1.2.4-find-phonon.patch:
+  Version bump, which also fixes bug 464256. Remove old.
 
 *brewtarget-2.0.1 (17 Nov 2013)
 
