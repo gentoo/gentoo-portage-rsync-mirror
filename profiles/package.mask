@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15723 2014/05/24 18:17:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15724 2014/05/24 20:06:56 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -192,10 +192,6 @@ app-emulation/qemu-user
 # Fails to build with gnutls-3, on behalf of python herd
 # See bug #446016
 dev-python/python-gnutls
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (27 Apr 2014)
-# Mask for testing
-=app-text/poppler-0.26*
 
 # Gilles Dartiguelongue <eva@gentoo.org> (27 Apr 2014)
 # Gnome 3.12 mask. Also requires:
