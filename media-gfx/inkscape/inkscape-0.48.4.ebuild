@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4.ebuild,v 1.8 2013/09/22 10:30:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4.ebuild,v 1.9 2014/05/24 00:07:15 dilfridge Exp $
 
 EAPI=5
 
@@ -79,7 +79,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.48.2-libwpg.patch \
 		"${FILESDIR}"/${PN}-0.48.3.1-desktop.patch \
 		"${FILESDIR}"/${P}-python2.patch \
-		"${FILESDIR}"/${PN}-0.48.4-fix-member-decl.patch
+		"${FILESDIR}"/${PN}-0.48.4-fix-member-decl.patch \
+		"${FILESDIR}"/${P}-poppler26.patch
 
 	eautoreconf
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.10 2014/03/05 11:26:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.11 2014/05/24 00:07:15 dilfridge Exp $
 
 EAPI=5
 
@@ -86,7 +86,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.48.4-automake-1.13.patch \
 		"${FILESDIR}"/${P}-gc74-configure.patch \
 		"${FILESDIR}"/${P}-gc74.patch \
-		"${DISTDIR}"/${P}-freetype251.patch
+		"${DISTDIR}"/${P}-freetype251.patch \
+		"${FILESDIR}"/${P}-poppler26.patch
 
 	sed -i \
 		-e "s#@EPYTHON@#${EPYTHON}#" \

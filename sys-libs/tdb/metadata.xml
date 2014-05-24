@@ -6,8 +6,4 @@
     <email>patrick@gentoo.org</email>
     <name>Patrick Lauer</name>
   </maintainer>
-  <use>
-    <flag name="tools">Install extra tools</flag>
-    <flag name="tdbtest">Install tdbtest app</flag>
-  </use>
 </pkgmetadata>

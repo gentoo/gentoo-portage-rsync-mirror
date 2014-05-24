@@ -1,0 +1,139 @@
+diff -ruN inkscape-0.48.4.orig/src/extension/internal/pdfinput/pdf-parser.cpp inkscape-0.48.4/src/extension/internal/pdfinput/pdf-parser.cpp
+--- inkscape-0.48.4.orig/src/extension/internal/pdfinput/pdf-parser.cpp	2012-12-13 18:00:46.726633000 +0100
++++ inkscape-0.48.4/src/extension/internal/pdfinput/pdf-parser.cpp	2014-05-07 22:50:03.891488716 +0200
+@@ -56,6 +56,11 @@
+ #define M_PI 3.14159265358979323846
+ #endif
+ 
++#include "poppler-features.h"
++#if POPPLER_CHECK_VERSION(0, 26, 0)
++#define POPPLER_26
++#endif
++
+ //------------------------------------------------------------------------
+ // constants
+ //------------------------------------------------------------------------
+@@ -861,8 +866,12 @@
+ 	  isolated = knockout = gFalse;
+ 	  if (!obj4.dictLookup(const_cast<char*>("CS"), &obj5)->isNull()) {
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
++#ifndef POPPLER_26
+ 	    blendingColorSpace = GfxColorSpace::parse(&obj5, NULL);
+ #else
++	    blendingColorSpace = GfxColorSpace::parse(&obj5, NULL, NULL);
++#endif
++#else
+ 	    blendingColorSpace = GfxColorSpace::parse(&obj5);
+ #endif
+ 	  }
+@@ -1085,9 +1094,17 @@
+   res->lookupColorSpace(args[0].getName(), &obj);
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
+   if (obj.isNull()) {
++#ifndef POPPLER_26
+     colorSpace = GfxColorSpace::parse(&args[0], NULL);
++#else
++    colorSpace = GfxColorSpace::parse(&args[0], NULL, NULL);
++#endif
+   } else {
++#ifndef POPPLER_26
+     colorSpace = GfxColorSpace::parse(&obj, NULL);
++#else
++    colorSpace = GfxColorSpace::parse(&obj, NULL, NULL);
++#endif
+   }
+ #else
+   if (obj.isNull()) {
+@@ -1120,9 +1137,17 @@
+   res->lookupColorSpace(args[0].getName(), &obj);
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
+   if (obj.isNull()) {
++#ifndef POPPLER_26
+     colorSpace = GfxColorSpace::parse(&args[0], NULL);
++#else
++    colorSpace = GfxColorSpace::parse(&args[0], NULL, NULL);
++#endif
+   } else {
++#ifndef POPPLER_26
+     colorSpace = GfxColorSpace::parse(&obj, NULL);
++#else
++    colorSpace = GfxColorSpace::parse(&obj, NULL, NULL);
++#endif
+   }
+ #else
+   if (obj.isNull()) {
+@@ -1213,7 +1238,11 @@
+     }
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
+     if (args[numArgs-1].isName() &&
++#ifndef POPPLER_26
+ 	(pattern = res->lookupPattern(args[numArgs-1].getName(), NULL))) {
++#else
++	(pattern = res->lookupPattern(args[numArgs-1].getName(), NULL, NULL))) {
++#endif
+       state->setFillPattern(pattern);
+       builder->updateStyle(state);
+     }
+@@ -1273,7 +1302,11 @@
+     }
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
+     if (args[numArgs-1].isName() &&
++#ifndef POPPLER_26
+ 	(pattern = res->lookupPattern(args[numArgs-1].getName(), NULL))) {
++#else
++	(pattern = res->lookupPattern(args[numArgs-1].getName(), NULL, NULL))) {
++#endif
+       state->setStrokePattern(pattern);
+       builder->updateStyle(state);
+     }
+@@ -1711,7 +1744,11 @@
+   GBool savedState = gFalse;
+ 
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
++#ifndef POPPLER_26
+   if (!(shading = res->lookupShading(args[0].getName(), NULL))) {
++#else
++  if (!(shading = res->lookupShading(args[0].getName(), NULL, NULL))) {
++#endif
+     return;
+   }
+ #else
+@@ -2727,8 +2764,12 @@
+     }
+     if (!obj1.isNull()) {
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
++#ifndef POPPLER_26
+       colorSpace = GfxColorSpace::parse(&obj1, NULL);
+ #else
++      colorSpace = GfxColorSpace::parse(&obj1, NULL, NULL);
++#endif
++#else
+       colorSpace = GfxColorSpace::parse(&obj1);
+ #endif
+     } else if (csMode == streamCSDeviceGray) {
+@@ -2816,8 +2857,12 @@
+ 	}
+       }
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
++#ifndef POPPLER_26
+       maskColorSpace = GfxColorSpace::parse(&obj1, NULL);
+ #else
++      maskColorSpace = GfxColorSpace::parse(&obj1, NULL, NULL);
++#endif
++#else
+       maskColorSpace = GfxColorSpace::parse(&obj1);
+ #endif
+       obj1.free();
+@@ -3007,8 +3052,12 @@
+       transpGroup = gTrue;
+       if (!obj1.dictLookup(const_cast<char*>("CS"), &obj3)->isNull()) {
+ #if defined(POPPLER_NEW_COLOR_SPACE_API) || defined(POPPLER_NEW_ERRORAPI)
++#ifndef POPPLER_26
+ 	blendingColorSpace = GfxColorSpace::parse(&obj3, NULL);
+ #else
++	blendingColorSpace = GfxColorSpace::parse(&obj3, NULL, NULL);
++#endif
++#else
+ 	blendingColorSpace = GfxColorSpace::parse(&obj3);
+ #endif
+       }
