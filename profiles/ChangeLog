@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8995 2014/05/23 23:07:37 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8996 2014/05/24 08:51:42 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 May 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Roll dev channel mask for chromium-37.
 
   23 May 2014; Jonathan Callen <jcallen@gentoo.org> package.mask:
   Mask multilib dev-libs/openssl:0.9.8 before committing

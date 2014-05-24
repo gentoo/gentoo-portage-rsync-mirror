@@ -8,5 +8,5 @@ LICENSE=GPL-2+ GPL-3+ Texinfo-manual
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=http://ess.r-project.org/downloads/ess/ess-12.09.tgz
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ce8b1fb1bd06b4266e7bb5af3c7f0f91

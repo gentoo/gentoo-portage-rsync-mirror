@@ -11,5 +11,5 @@ REQUIRED_USE=gtk? ( X ) qt4? ( X )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://uim.googlecode.com/files/uim-1.7.3.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b5cb7738cf8ad088bd498cda28524577

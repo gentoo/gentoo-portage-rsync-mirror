@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.170 2014/05/03 18:39:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.171 2014/05/24 08:48:49 hwoarang Exp $
+
+  24 May 2014; Markos Chandras <hwoarang@gentoo.org> quassel-0.9.3.ebuild:
+  Stable on amd64 wrt bug #509496
 
   03 May 2014; Johannes Huber <johu@gentoo.org> -quassel-0.10.0.ebuild,
   quassel-9999.ebuild:

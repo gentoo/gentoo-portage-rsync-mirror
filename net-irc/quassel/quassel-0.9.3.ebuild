@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.3.ebuild,v 1.1 2014/03/27 00:44:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.3.ebuild,v 1.2 2014/05/24 08:48:49 hwoarang Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://quassel-irc.org/"
 [[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~sparc-solaris"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~amd64-linux ~sparc-solaris"
 SLOT="0"
 IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslog webkit X"
 

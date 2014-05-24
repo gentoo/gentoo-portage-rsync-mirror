@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.1-r1.ebuild,v 1.2 2014/03/28 03:25:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.1-r1.ebuild,v 1.3 2014/05/24 08:56:39 hwoarang Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/tigervnc/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="gnutls java nptl +opengl pam server +xorgmodule"
 
 RDEPEND="virtual/jpeg:0

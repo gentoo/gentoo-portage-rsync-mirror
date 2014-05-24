@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15720 2014/05/23 23:07:37 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15721 2014/05/24 08:51:42 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-37
 
 # Manuel Rüger <mrueg@gentoo.org> (23 May 2014)
 # Fails to build with gnutls-3.
@@ -364,11 +369,6 @@ dev-python/manifestdestiny
 app-admin/eselect-lua
 =dev-lang/lua-5.1.5-r2
 =dev-lang/lua-5.2.3
-
-# Mike Gilbert <floppym@gentoo.org> (16 Apr 2014)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-36
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2014)
 # Dead upstream, unused in gentoo-x86.

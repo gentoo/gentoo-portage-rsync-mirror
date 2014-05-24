@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-perl/File-MMagic-1.20 emacs? ( virtual/emacs ) linguas_ja? ( app-i18n/nkf || ( dev-perl/Text-Kakasi app-i18n/kakasi app-text/chasen app-text/mecab ) ) nls? ( virtual/libintl ) tk? ( dev-lang/tk www-client/lynx )
 SLOT=0
 SRC_URI=http://www.namazu.org/test/namazu-2.0.22pre1.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4d7861e1e0a68095cde7965304403f21

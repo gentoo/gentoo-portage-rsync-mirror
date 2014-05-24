@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libxml2:2 sci-libs/gsl sys-libs/readline sys-devel/gettext sys-libs/zlib virtual/libiconv emacs? ( virtual/emacs ) gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 ) ncurses? ( sys-libs/ncurses ) plotutils? ( media-libs/plotutils ) postgres? ( dev-db/postgresql-server )
 SLOT=0
 SRC_URI=mirror://gnu/pspp/pspp-0.6.2.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e99bb1c9dde84273fd5469c79e1292cb
