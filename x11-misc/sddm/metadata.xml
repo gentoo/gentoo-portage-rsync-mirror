@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>jauhien@gentoo.org</email>
+    <name>Jauhien Piatlicki</name>
+  </maintainer>
+  <use>
+    <flag name="upower">Use <pkg>sys-power/upower</pkg> for power management</flag>
+  </use>
+  <longdescription lang="en">
+    SDDM is a modern display manager for X11 aiming to be fast, simple
+    and beatiful. It uses modern technologies like QtQuick, which in
+    turn gives the designer the ability to create smooth, animated
+    user interfaces.
+  </longdescription>
+</pkgmetadata>

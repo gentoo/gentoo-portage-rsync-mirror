@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.137 2014/04/30 23:46:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.138 2014/05/24 19:57:43 dilfridge Exp $
+
+  24 May 2014; Andreas K. Huettel <dilfridge@gentoo.org> luatex-0.76.0.ebuild,
+  -luatex-0.76.0-r1.ebuild:
+  Remove special revision and just conditionally apply the poppler-0.26 patch
 
 *luatex-0.76.0-r1 (30 Apr 2014)
 

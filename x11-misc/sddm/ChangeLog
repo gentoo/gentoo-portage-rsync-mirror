@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/sddm
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.1 2014/05/24 19:38:53 jauhien Exp $
+
+*sddm-0.1.0 (24 May 2014)
+
+  24 May 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/sddm-0.1.0-clang.patch, +files/sddm-0.1.0-cmake.patch, +metadata.xml,
+  +sddm-0.1.0.ebuild:
+  Initial import from the qt overlay, thanks to Harvey Mittens and Davide
+  Pesavento, closing bug #462824

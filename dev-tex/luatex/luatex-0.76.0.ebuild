@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.76.0.ebuild,v 1.2 2013/07/01 13:22:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.76.0.ebuild,v 1.3 2014/05/24 19:57:43 dilfridge Exp $
 
 EAPI=5
 
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}/source"
 
 src_prepare() {
+	has_version '>=app-text/poppler-0.26.0:0' && epatch "${FILESDIR}/poppler026.patch"
 	epatch "${FILESDIR}/remove-zlib-version-check.patch" \
 		"${FILESDIR}/includes.patch"
 	S="${S}/build-aux" elibtoolize --shallow
