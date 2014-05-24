@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/kajongg-4.13.0.ebuild,v 1.2 2014/04/17 00:43:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/kajongg-4.13.0-r1.ebuild,v 1.1 2014/05/24 11:24:17 johu Exp $
 
 EAPI=5
 
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}
 	$(add_kdebase_dep libkmahjongg)
 	>=dev-python/twisted-core-8.2.0
 "
+
+PATCHES=( "${FILESDIR}/${P}-cmake.patch" )
 
 pkg_setup() {
 	python-single-r1_pkg_setup

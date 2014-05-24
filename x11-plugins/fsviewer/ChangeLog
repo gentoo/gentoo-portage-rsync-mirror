@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/fsviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.22 2014/04/07 19:45:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.23 2014/05/24 11:11:33 hwoarang Exp $
+
+  24 May 2014; Markos Chandras <hwoarang@gentoo.org> fsviewer-0.2.6.ebuild:
+  Stable on amd64 wrt bug #507088
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> fsviewer-0.2.5.ebuild,
   fsviewer-0.2.6.ebuild:

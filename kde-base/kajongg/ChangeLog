@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.155 2014/05/13 17:43:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.156 2014/05/24 11:24:17 johu Exp $
+
+*kajongg-4.13.0-r1 (24 May 2014)
+*kajongg-4.13.1-r1 (24 May 2014)
+
+  24 May 2014; Johannes Huber <johu@gentoo.org>
+  +files/kajongg-4.13.0-cmake.patch, +kajongg-4.13.0-r1.ebuild,
+  +kajongg-4.13.1-r1.ebuild, -kajongg-4.13.0.ebuild, -kajongg-4.13.1.ebuild:
+  Revision bump adds upstream patch to fix runtime error by Martin Walch
+  <walch.martin@web.de>, bug #511174.
 
 *kajongg-4.13.1 (13 May 2014)
 
