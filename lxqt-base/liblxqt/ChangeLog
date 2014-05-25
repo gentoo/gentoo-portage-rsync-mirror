@@ -1,0 +1,14 @@
+# ChangeLog for lxqt-base/liblxqt
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt/ChangeLog,v 1.2 2014/05/25 10:38:58 jauhien Exp $
+
+  25 May 2014; Jauhien Piatlicki <jauhien@gentoo.org> -liblxqt-9999.ebuild:
+  remove live ebuild added by error
+
+*liblxqt-0.7.0 (25 May 2014)
+*liblxqt-9999 (25 May 2014)
+
+  25 May 2014; Jauhien Piatlicki <jauhien@gentoo.org> +liblxqt-0.7.0.ebuild,
+  +liblxqt-9999.ebuild, +metadata.xml:
+  Initial import from the qt overlay, thanks to Harvey Mittens and Davide
+  Pesavento, see bug #509946
