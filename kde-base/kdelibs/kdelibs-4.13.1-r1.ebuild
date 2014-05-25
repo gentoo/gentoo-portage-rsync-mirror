@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.13.1.ebuild,v 1.1 2014/05/13 17:43:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.13.1-r1.ebuild,v 1.1 2014/05/25 20:07:06 johu Exp $
 
 EAPI=5
 
@@ -134,6 +134,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.1-norpath.patch"
 	"${FILESDIR}/${PN}-4.9.3-werror.patch"
 	"${FILESDIR}/${PN}-4.10.0-udisks.patch"
+	"${FILESDIR}/${P}-kio-diskfree.patch"
 )
 
 pkg_pretend() {
