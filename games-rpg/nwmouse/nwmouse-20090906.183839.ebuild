@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.4 2013/01/13 16:19:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.5 2014/05/25 11:21:56 ulm Exp $
 
 inherit games
 
@@ -9,11 +9,11 @@ HOMEPAGE="http://home.roadrunner.com/~nwmovies/"
 SRC_URI="http://dev.gentoo.org/~calchan/distfiles/${P}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="nwmovies Artistic"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-RESTRICT="strip mirror"
+RESTRICT="strip"
 
 RDEPEND="sys-libs/glibc
 	dev-libs/elfutils

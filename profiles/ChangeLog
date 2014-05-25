@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9001 2014/05/24 21:48:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9002 2014/05/25 11:05:33 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 May 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask multilib libidn & libnl.
 
   24 May 2014; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Remove mirror://opensuse (bug #494868).

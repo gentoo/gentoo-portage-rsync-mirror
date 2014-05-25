@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.203 2014/04/06 15:11:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.204 2014/05/25 11:08:28 mgorny Exp $
+
+*libidn-1.28-r1 (25 May 2014)
+
+  25 May 2014; Michał Górny <mgorny@gentoo.org> +libidn-1.28-r1.ebuild:
+  Enable multilib support.
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> libidn-1.28.ebuild:
   Mark arm64/m68k/s390/sh stable.

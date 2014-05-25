@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.213 2014/05/23 23:15:12 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.214 2014/05/25 11:29:38 mgorny Exp $
+
+*emul-linux-x86-baselibs-20140508-r6 (25 May 2014)
+
+  25 May 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-baselibs-20140508-r6.ebuild, +files/remove-native-20140508-r6:
+  Add multilib libidn & libnl.
 
 *emul-linux-x86-baselibs-20140508-r5 (23 May 2014)
 
