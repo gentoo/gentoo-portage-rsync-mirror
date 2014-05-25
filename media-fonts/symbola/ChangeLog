@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/symbola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/symbola/ChangeLog,v 1.10 2014/03/05 15:47:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/symbola/ChangeLog,v 1.11 2014/05/25 21:45:04 chithanh Exp $
+
+  25 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -symbola-7.01.ebuild, -symbola-7.08.ebuild, -symbola-7.11.ebuild:
+  Remove old.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> symbola-7.12.ebuild:
   Stable for ppc, wrt bug #495692
