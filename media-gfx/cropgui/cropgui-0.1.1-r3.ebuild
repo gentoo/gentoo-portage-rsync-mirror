@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/cropgui-0.1.1-r3.ebuild,v 1.2 2014/05/24 11:04:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/cropgui-0.1.1-r3.ebuild,v 1.3 2014/05/25 12:22:07 zlogene Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://media.unpythonic.net/emergent-files/01248401946/${PN}_${PV}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}"

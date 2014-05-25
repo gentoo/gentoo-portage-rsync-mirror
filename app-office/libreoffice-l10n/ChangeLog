@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.104 2014/05/08 11:18:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.105 2014/05/25 12:11:54 zlogene Exp $
+
+  25 May 2014; Mikle Kolyada <zlogene@gentoo.org>
+  libreoffice-l10n-4.2.3.3.ebuild:
+  amd64 stable wrt bug #511144
 
 *libreoffice-l10n-4.2.4.2 (08 May 2014)
 
