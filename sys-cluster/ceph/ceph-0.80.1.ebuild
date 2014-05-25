@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.80.1.ebuild,v 1.1 2014/05/21 07:43:23 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.80.1.ebuild,v 1.2 2014/05/25 15:19:38 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -146,7 +146,7 @@ pkg_postinst() {
 	elog ""
 	elog "cd /etc/init.d"
 	elog "for dmn in mds.a mon.a osd.0 osd.1 osd.2; do"
-	elog "  ln -s ceph ceph-${dmn};"
-	elog "  rc-update add ceph-${dmn} default;"
+	elog "  ln -s ceph ceph-\${dmn};"
+	elog "  rc-update add ceph-\${dmn} default;"
 	elog "done"
 }
