@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/monkeysphere-0.36-r1.ebuild,v 1.1 2013/12/16 11:26:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/monkeysphere-0.36-r1.ebuild,v 1.2 2014/05/25 15:34:19 mrueg Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils user
 
@@ -12,7 +12,7 @@ SRC_URI="http://archive.${PN}.info/debian/pool/${PN}/${PN::1}/${PN}/${PN}_${PV}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="test"
 
 # Tests do weird things with network and fail OOTB.
@@ -36,9 +36,9 @@ pkg_setup()
 
 src_prepare()
 {
-	epatch "${FILESDIR}/${P}_default_shell.patch"
-	epatch "${FILESDIR}/${P}_non_default_port.patch"
-	epatch "${FILESDIR}/${P}_userid_empty_line.patch"
+	epatch "${FILESDIR}/${P}_default_shell.patch" \
+		"${FILESDIR}/${P}_non_default_port.patch" \
+		"${FILESDIR}/${P}_userid_empty_line.patch"
 
 	sed -i "s#share/doc/${PN}#share/doc/${PF}#" Makefile || die
 }
