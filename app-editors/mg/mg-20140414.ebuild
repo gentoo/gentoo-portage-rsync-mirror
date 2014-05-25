@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20140414.ebuild,v 1.2 2014/05/16 14:10:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20140414.ebuild,v 1.3 2014/05/25 18:47:04 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://homepage.boetes.org/software/mg/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~amd64 arm hppa ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="livecd"
 
 RDEPEND="sys-libs/ncurses
