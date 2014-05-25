@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.3.2.ebuild,v 1.1 2013/12/31 18:30:45 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.3.2.ebuild,v 1.2 2014/05/25 02:58:07 neurogeek Exp $
 
 EAPI=5
-inherit libtool
+inherit libtool autotools-multilib eutils
 
 DESCRIPTION="A complete ODBC driver manager"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -14,33 +14,33 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+minimal odbcmanual static-libs unicode"
 
-RDEPEND=">=sys-devel/libtool-2.2.6b
-	>=sys-libs/readline-6.1
-	>=sys-libs/ncurses-5.7-r7
-	virtual/libiconv"
+RDEPEND=">=sys-devel/libtool-2.2.6b[${MULTILIB_USEDEP}]
+	>=sys-libs/readline-6.1[${MULTILIB_USEDEP}]
+	>=sys-libs/ncurses-5.7-r7[${MULTILIB_USEDEP}]
+	virtual/libiconv[${MULTILIB_USEDEP}]
+	abi_x86_32? ( !app-emulation/emul-linux-x86-db[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
-src_prepare() {
-	elibtoolize
-}
+MULTILIB_WRAPPED_HEADERS=( /usr/include/unixodbc_conf.h )
 
 src_configure() {
 	# --enable-driver-conf is --enable-driverc as per configure.in
-	econf \
-		--sysconfdir="${EPREFIX}"/etc/${PN} \
-		--enable-iconv \
-		$(use_enable static-libs static) \
-		$(use_enable !minimal drivers) \
-		$(use_enable !minimal driverc) \
-		$(use_with unicode iconv-char-enc UTF8) \
+	myeconfargs=(
+		--sysconfdir="${EPREFIX}"/etc/${PN}
+		--enable-iconv
+		$(use_enable static-libs static)
+		$(use_enable !minimal drivers)
+		$(use_enable !minimal driverc)
+		$(use_with unicode iconv-char-enc UTF8)
 		$(use_with unicode iconv-ucode-enc UTF16LE)
+	)
+	autotools-multilib_src_configure
 }
 
-src_install() {
-	default
+multilib_src_install_all() {
+	einstalldocs
 
 	use prefix && dodoc README*
 	use odbcmanual && dohtml -a css,gif,html,sql,vsd -r doc/*
