@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.32 2014/04/27 15:42:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.33 2014/05/25 14:17:55 pacho Exp $
+
+  25 May 2014; Pacho Ramos <pacho@gentoo.org> geoclue-0.12.99.ebuild:
+  gtk-doc is not needed (#444564 by Laszlo Szalma)
 
 *geoclue-2.1.8 (27 Apr 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-9.0.27891.ebuild,v 1.1 2014/05/24 16:00:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-9.0.27891.ebuild,v 1.2 2014/05/25 14:51:18 hasufell Exp $
 
 EAPI=5
 
@@ -112,7 +112,7 @@ src_install () {
 	dosym /etc/${MY_PN} /opt/${MY_PN}/config
 
 	doinitd "${T}"/${PN}d${MV}
-	systemd_dounit script/${PN}d.service
+	systemd_newunit script/${PN}d.service ${PN}d${MV}.service
 
 	newicon -s 48 desktop/${PN}.png ${MY_PN}.png
 	dodoc ../doc/linux_FAQ_{EN,DE}.txt

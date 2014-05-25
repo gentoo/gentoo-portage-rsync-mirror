@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.13 2014/01/14 12:12:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.14 2014/05/25 14:17:55 pacho Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -25,7 +25,6 @@ RDEPEND=">=dev-libs/dbus-glib-0.100
 	networkmanager? ( net-misc/networkmanager )
 	skyhook? ( net-libs/libsoup )"
 DEPEND="${RDEPEND}
-	dev-util/gtk-doc
 	dev-util/gtk-doc-am
 	virtual/pkgconfig"
 

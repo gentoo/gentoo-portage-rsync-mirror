@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/teamviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.8 2014/05/24 16:00:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.9 2014/05/25 14:51:18 hasufell Exp $
+
+  25 May 2014; Julian Ospald <hasufell@gentoo.org> teamviewer-9.0.27891.ebuild:
+  fix file collision with systemd
 
 *teamviewer-9.0.27891 (24 May 2014)
 
