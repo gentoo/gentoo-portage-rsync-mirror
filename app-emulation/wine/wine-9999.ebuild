@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.167 2014/05/23 22:43:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.168 2014/05/25 16:47:55 mgorny Exp $
 
 EAPI="5"
 
@@ -182,7 +182,10 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-baselibs[development]
 				sys-devel/gettext[abi_x86_32]
 			) )
-			odbc? ( app-emulation/emul-linux-x86-db[development] )
+			odbc? ( || (
+				app-emulation/emul-linux-x86-db[development]
+				dev-db/unixODBC:=[abi_x86_32]
+			) )
 			osmesa? ( || (
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
 				media-libs/mesa[osmesa,abi_x86_32]
