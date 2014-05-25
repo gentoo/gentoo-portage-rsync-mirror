@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install
+DESCRIPTION=A portable fork of NaCl, a higher-level cryptographic library
+EAPI=5
+HOMEPAGE=https://github.com/jedisct1/libsodium
+IUSE=+asm static-libs +urandom
+KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=ISC
+SLOT=0
+SRC_URI=http://download.libsodium.org/libsodium/releases/libsodium-0.5.0.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=1cbb67e31d33d951abbddb9256fb6c1f

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libsodium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.8 2014/03/16 02:25:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.9 2014/05/25 16:27:24 mrueg Exp $
+
+*libsodium-0.5.0 (25 May 2014)
+
+  25 May 2014; Manuel Rüger <mrueg@gentoo.org> +libsodium-0.5.0.ebuild:
+  Version bump.
 
   16 Mar 2014; Mike Frysinger <vapier@gentoo.org> libsodium-0.4.5.ebuild:
   Add ia64 love.
