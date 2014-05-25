@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod-auth-mysql/mod-auth-mysql-4.3.9.ebuild,v 1.2 2013/11/06 02:28:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod-auth-mysql/mod-auth-mysql-4.3.9-r1.ebuild,v 1.1 2014/05/25 01:43:05 grknight Exp $
 
-EAPI=3
+EAPI=5
 
 inherit apache-module eutils
 
@@ -41,18 +41,18 @@ src_prepare() {
 	for i in $(<"${S}"/debian/patches/00list) ; do
 		epatch "${S}"/debian/patches/${i}*
 	done
+	epatch_user
 }
 
 src_configure() {
 	econf \
 		--enable-apache2 \
 		--disable-apache13 \
-		--with-apxs2=/usr/sbin/apxs2 \
-		|| die "Failed econf"
+		--with-apxs2=/usr/sbin/apxs2
 }
 
 src_compile() {
-	emake || die "Failed to compile"
+	default
 }
 
 src_install() {
