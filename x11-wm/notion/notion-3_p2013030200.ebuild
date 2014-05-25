@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-3_p2013030200.ebuild,v 1.3 2013/05/29 06:32:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-3_p2013030200.ebuild,v 1.4 2014/05/25 13:01:33 jer Exp $
 
-EAPI="4"
+EAPI=5
 
-inherit eutils toolchain-funcs multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Notion is a tiling, tabbed window manager for the X window system"
 HOMEPAGE="http://notion.sourceforge.net"
@@ -45,6 +45,10 @@ src_prepare() {
 		-i ioncore/Makefile || die
 	export STRIPPROG=true
 
+	tc-export CC
+}
+
+src_configure() {
 	use nls || export DEFINES=" -DCF_NO_LOCALE -DCF_NO_GETTEXT"
 
 	if ! use xinerama ; then
@@ -54,8 +58,6 @@ src_prepare() {
 	if ! use xrandr ; then
 		sed -e 's/mod_xrandr//g' -i modulelist.mk || die
 	fi
-
-	tc-export CC
 }
 
 src_compile() {
@@ -64,7 +66,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/notion
@@ -75,5 +77,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "If you want notion to have an ability to view a file based on its"
-	elog "guessed MIME type you need 'run-mailcap' program in your system."
+	elog "guessed MIME type you should emerge app-misc/run-mailcap."
 }
