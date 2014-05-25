@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20130513023548.ebuild,v 1.7 2014/04/29 08:53:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20130513023548.ebuild,v 1.8 2014/05/25 17:24:59 vapier Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ else
 	PATCH_VER="1"
 	SRC_URI="mirror://gentoo/${P}.tar.xz
 		mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz"
-	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 fi
 
 DESCRIPTION="Standard Linux networking tools"
