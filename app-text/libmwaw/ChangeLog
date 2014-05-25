@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libmwaw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.10 2014/01/15 07:54:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.11 2014/05/25 11:59:11 zlogene Exp $
+
+  25 May 2014; Mikle Kolyada <zlogene@gentoo.org> libmwaw-0.2.0.ebuild:
+  amd64 stable wrt bug #511144
 
   15 Jan 2014; Tim Harder <radhermit@gentoo.org> libmwaw-0.2.0.ebuild:
   Explicitly specify required libwpg version (bug #498130).

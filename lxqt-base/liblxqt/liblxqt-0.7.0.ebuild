@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt/liblxqt-0.7.0.ebuild,v 1.1 2014/05/25 10:36:58 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt/liblxqt-0.7.0.ebuild,v 1.2 2014/05/25 11:47:10 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
 
-DESCRIPTION="Common base library for the LXDE-Qt desktop environment"
+DESCRIPTION="Common base library for the LXQt desktop environment"
 HOMEPAGE="http://www.lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then

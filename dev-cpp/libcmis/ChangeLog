@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libcmis
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.27 2013/08/09 08:51:25 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.28 2014/05/25 11:52:30 zlogene Exp $
+
+  25 May 2014; Mikle Kolyada <zlogene@gentoo.org> libcmis-0.4.1.ebuild:
+  amd64 stable wrt bug #511144
 
 *libcmis-0.4.1 (09 Aug 2013)
 

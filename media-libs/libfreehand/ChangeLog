@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfreehand
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfreehand/ChangeLog,v 1.2 2013/11/01 09:01:47 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfreehand/ChangeLog,v 1.3 2014/05/25 11:53:31 zlogene Exp $
+
+  25 May 2014; Mikle Kolyada <zlogene@gentoo.org> libfreehand-0.0.0.ebuild:
+  amd64 stable wrt bug #511144
 
   01 Nov 2013; Tomáš Chvátal <scarabeus@gentoo.org> libfreehand-0.0.0.ebuild,
   libfreehand-9999.ebuild:

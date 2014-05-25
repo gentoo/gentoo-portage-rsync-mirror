@@ -4,10 +4,10 @@ DESCRIPTION=Library parsing many pre-OSX MAC text formats
 EAPI=5
 HOMEPAGE=http://sourceforge.net/p/libmwaw/wiki/Home/
 IUSE=doc static-libs
-KEYWORDS=~amd64 ~arm ~ppc ~x86
+KEYWORDS=amd64 ~arm ~ppc ~x86
 LICENSE=LGPL-2.1
 RDEPEND=app-text/libwpd:0.9 >=app-text/libwpg-0.2.2:0.2 dev-libs/libxml2 sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/libmwaw/libmwaw-0.2.0.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=554e21a49f2d9108d29a5233d3464fe1
+_md5_=934c5de8ef462122052c4b512f784d2f
