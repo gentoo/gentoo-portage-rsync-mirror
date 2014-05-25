@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/git/git-1.2.6.ebuild,v 1.1 2013/08/27 18:15:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/git/git-1.2.6.ebuild,v 1.2 2014/05/25 07:30:37 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_EXTRADOC="History.txt README.md TODO"
 
@@ -17,7 +17,7 @@ RUBY_S="ruby-git-${PV}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="test"
 
 DEPEND+="test? ( >=dev-vcs/git-1.6.0.0 app-arch/tar )"
 RDEPEND+=">=dev-vcs/git-1.6.0.0"
