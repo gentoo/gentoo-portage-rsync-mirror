@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pppconfig
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.29 2007/11/12 15:19:10 mrness Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.30 2014/05/26 13:33:22 jer Exp $
+
+*pppconfig-2.3.21 (26 May 2014)
+
+  26 May 2014; Jeroen Roovers <jer@gentoo.org> pppconfig-2.3.17-r1.ebuild,
+  +pppconfig-2.3.21.ebuild:
+  Version bump. Use mirror:// (bug #413341). Rewrite LINGUAS support using
+  strip-linguas (maybe bug #403633).
 
   12 Nov 2007; Alin Năstac <mrness@gentoo.org> -pppconfig-2.3.15.ebuild:
   Remove old version.
