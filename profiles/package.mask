@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15725 2014/05/25 11:05:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15726 2014/05/26 06:17:32 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -351,11 +351,6 @@ net-mail/fetchyahoo
 #dev-lang/python:2.6
 dev-python/argparse
 dev-python/ordereddict
-
-# Tim Harder <radhermit@gentoo.org> (26 Apr 2014)
-# Deprecated by the ide use flag on recent versions of dev-lang/fpc.
-# Removal in 30 days.
-dev-lang/fpc-ide
 
 # Tim Harder <radhermit@gentoo.org> (25 Apr 2014)
 # Masked for testing
