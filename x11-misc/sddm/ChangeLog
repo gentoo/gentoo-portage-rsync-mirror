@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.4 2014/05/26 21:58:35 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.5 2014/05/26 22:37:38 jauhien Exp $
+
+  26 May 2014;  <jauhien@gentoo.org> -sddm-0.1.0.ebuild,
+  files/sddm-0.1.0-consolekit.patch, sddm-0.1.0-r1.ebuild:
+  revert changing pam file. add warning for user, see bug #511484
 
 *sddm-0.1.0-r1 (26 May 2014)
 

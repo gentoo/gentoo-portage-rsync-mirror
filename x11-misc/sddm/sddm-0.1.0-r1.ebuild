@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.1 2014/05/26 21:58:34 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.2 2014/05/26 22:37:38 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils toolchain-funcs
@@ -19,6 +19,7 @@ RDEPEND="sys-libs/pam
 	x11-libs/libxcb[xkb(-)]
 	dev-qt/qtdeclarative:4
 	dev-qt/qtdbus:4
+	consolekit? ( sys-auth/consolekit )
 	systemd? ( sys-apps/systemd:= )
 	upower? ( sys-power/upower:= )"
 DEPEND="${RDEPEND}
@@ -45,4 +46,13 @@ src_configure() {
 		$(cmake-utils_use_use upower)
 	)
 	cmake-utils_src_configure
+}
+
+pkg_postinst() {
+	if use consolekit; then
+		ewarn "This display manager doesn't have native built-in ConsoleKit support."
+		ewarn "In order to use ConsoleKit pam module with this display manager,"
+		ewarn "you should remove the \"nox11\" parameter from pm_ck_connector.so"
+		ewarn "line in /etc/pam.d/system-login"
+	fi
 }
