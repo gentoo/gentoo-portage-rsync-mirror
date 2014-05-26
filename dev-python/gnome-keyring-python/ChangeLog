@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gnome-keyring-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-keyring-python/ChangeLog,v 1.50 2011/03/23 20:22:29 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-keyring-python/ChangeLog,v 1.51 2014/05/26 18:01:37 mgorny Exp $
+
+*gnome-keyring-python-2.32.0-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +gnome-keyring-python-2.32.0-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-keyring-python-2.30.2.ebuild:
@@ -216,4 +222,3 @@
   +gnome-keyring-python-2.22.0.ebuild:
   Initial import of split gnome-python-desktop. This package installs
   bindings for interfacing with the GNOME keyring.
-

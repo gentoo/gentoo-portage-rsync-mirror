@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gnome-media-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.51 2011/04/14 10:51:59 nirbheek Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.52 2014/05/26 18:05:05 mgorny Exp $
+
+*gnome-media-python-2.32.0-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +gnome-media-python-2.32.0-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   14 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-media-python-2.32.0.ebuild:
@@ -221,4 +227,3 @@
   +gnome-media-python-2.22.0.ebuild:
   Initial import of split gnome-python-desktop. This package installs
   bindings for GNOME media profiles.
-

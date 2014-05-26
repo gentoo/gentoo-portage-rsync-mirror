@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bug-buddy-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.52 2012/02/24 09:05:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.53 2014/05/26 18:21:10 mgorny Exp $
+
+*bug-buddy-python-2.32.0-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +bug-buddy-python-2.32.0-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   bug-buddy-python-2.32.0.ebuild:
@@ -223,4 +229,3 @@
   Initial import of split gnome-python-desktop. This package installs the
   Bug buddy python bindings.
   Dropping arm and sh - bug-buddy is not available
-

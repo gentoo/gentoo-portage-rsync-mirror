@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gnome-desktop-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-desktop-python/ChangeLog,v 1.51 2011/03/23 20:21:50 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-desktop-python/ChangeLog,v 1.52 2014/05/26 18:05:04 mgorny Exp $
+
+*gnome-desktop-python-2.32.0-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +gnome-desktop-python-2.32.0-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-desktop-python-2.30.2.ebuild:
@@ -221,4 +227,3 @@
   +gnome-desktop-python-2.22.0.ebuild:
   Initial import of split gnome-python-desktop. This package installs
   bindings for GNOME desktop libraries that are not part of the UI.
-

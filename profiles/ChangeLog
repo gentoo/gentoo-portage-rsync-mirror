@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9004 2014/05/26 11:32:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9005 2014/05/26 18:11:33 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 May 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask new sssd revbump for testing in real systems
 
   26 May 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Added mask for >=sys-libs/ldb-1.1.17-r1 until sys-auth/sssd got subslot

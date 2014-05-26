@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.52 2014/05/26 11:21:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.53 2014/05/26 18:15:55 hwoarang Exp $
+
+*sssd-1.9.6-r3 (26 May 2014)
+
+  26 May 2014; Markos Chandras <hwoarang@gentoo.org> +sssd-1.9.6-r3.ebuild:
+  Revbump for multiple fixes. See bug #511530, #499584 and 511528
 
   26 May 2014; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Take over maintainership
