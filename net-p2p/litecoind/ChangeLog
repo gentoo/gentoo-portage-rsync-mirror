@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/litecoind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoind/ChangeLog,v 1.4 2014/02/25 18:11:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoind/ChangeLog,v 1.5 2014/05/26 21:28:48 blueness Exp $
+
+*litecoind-0.8.7.1 (26 May 2014)
+
+  26 May 2014; Anthony G. Basile <blueness@gentoo.org>
+  +litecoind-0.8.7.1.ebuild:
+  Version bump, bug #508934
 
 *litecoind-0.8.6.1-r1 (25 Feb 2014)
 
