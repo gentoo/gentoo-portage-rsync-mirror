@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.43 2014/05/20 13:05:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.44 2014/05/26 04:53:25 idella4 Exp $
+
+  26 May 2014; Ian Delaney <idella4@gentoo.org> rdflib-4.1.2.ebuild:
+  take out py3.4 to fix bug #510996
 
   20 May 2014; Ian Delaney <idella4@gentoo.org> rdflib-4.1.2.ebuild:
   drop py2.6 add py3.4 support, update test phase
