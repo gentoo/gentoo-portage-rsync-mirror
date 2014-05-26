@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.6.1-r1.ebuild,v 1.1 2014/05/26 08:03:45 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.6.1-r1.ebuild,v 1.2 2014/05/26 11:08:23 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="1.2.0"
@@ -68,6 +68,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.6.1-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-2.4-fix-v8-pythonpath.patch"
 
 	# fix yaml-cpp detection
 	sed -i -e "s/\[\"yaml\"\]/\[\"yaml-cpp\"\]/" SConstruct || die

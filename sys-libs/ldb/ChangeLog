@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.62 2014/05/17 08:59:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.63 2014/05/26 11:19:23 hwoarang Exp $
+
+  26 May 2014; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Drop inactive maintainers
 
   17 May 2014; Lars Wendler <polynomial-c@gentoo.org> ldb-1.1.17.ebuild:
   Fixed dependencies as reported by Jaakko Perttilä in bug #510080.

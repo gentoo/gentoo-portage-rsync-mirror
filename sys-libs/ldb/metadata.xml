@@ -2,12 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>samba</herd>
-<herd>proxy-maintainers</herd>
-<maintainer>
-	<email>andreis.vinogradovs@gmail.com</email>
-</maintainer>
-<maintainer>
-	<email>maksbotan@gentoo.org</email>
-	<description>Proxy maintainer</description>
-</maintainer>
 </pkgmetadata>
