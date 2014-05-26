@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1273 2014/05/24 08:48:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1274 2014/05/26 16:13:35 mgorny Exp $
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
+  python-single-r1.eclass, python-utils-r1.eclass:
+  Move python_fix_shebang into python-utils-r1, therefore making it a part of
+  public API for all eclasses.
 
   24 May 2014; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
   elisp-site-regen: Look for site-init files only in site-gentoo.d

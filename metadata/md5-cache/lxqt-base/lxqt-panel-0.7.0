@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=lxde-base/menu-cache-0.3.3 lxqt-base/liblxqt lxqt-base/liblxqt-mount lxqt-base/libsysstat lxqt-base/lxqt-globalkeys razorqt-base/libqtxdg x11-libs/libX11 cpuload? ( sys-libs/libstatgrab ) networkmonitor? ( sys-libs/libstatgrab ) sensors? ( sys-apps/lm_sensors ) sysstat? ( lxqt-base/libsysstat ) volume? ( alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) worldclock? ( dev-libs/icu:= ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=LXQt desktop panel and plugins
+EAPI=5
+HOMEPAGE=http://www.lxqt.org/
+IUSE=+alsa +clock colorpicker cpuload +desktopswitch dom +kbindicator +mainmenu +mount networkmonitor pulseaudio +quicklaunch screensaver sensors +showdesktop sysstat +taskbar teatime +tray +volume worldclock
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1+
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=lxde-base/menu-cache-0.3.3 lxqt-base/liblxqt lxqt-base/liblxqt-mount lxqt-base/libsysstat lxqt-base/lxqt-globalkeys razorqt-base/libqtxdg x11-libs/libX11 cpuload? ( sys-libs/libstatgrab ) networkmonitor? ( sys-libs/libstatgrab ) sensors? ( sys-apps/lm_sensors ) sysstat? ( lxqt-base/libsysstat ) volume? ( alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) worldclock? ( dev-libs/icu:= ) lxde-base/lxmenu-data
+REQUIRED_USE=volume? ( || ( alsa pulseaudio ) )
+SLOT=0
+SRC_URI=http://lxqt.org/downloads/lxqt/0.7.0/lxqt-panel-0.7.0.tar.xz
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=3a1aac3e0b7f378e60ae2cc47a0cefb1

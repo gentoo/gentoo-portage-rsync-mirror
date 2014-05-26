@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.72 2014/04/19 10:29:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.73 2014/05/26 16:13:35 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -783,6 +783,8 @@ python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	_python_replicate_script() {
+		local _PYTHON_FIX_SHEBANG_QUIET=1
+
 		if _python_want_python_exec2; then
 			local PYTHON_SCRIPTDIR
 			python_export PYTHON_SCRIPTDIR
@@ -792,7 +794,7 @@ python_replicate_script() {
 				doexe "${files[@]}"
 			)
 
-			_python_rewrite_shebang "${EPYTHON}" \
+			python_fix_shebang \
 				"${files[@]/*\//${D%/}/${PYTHON_SCRIPTDIR}/}"
 		else
 			local f
@@ -800,7 +802,7 @@ python_replicate_script() {
 				cp -p "${f}" "${f}-${EPYTHON}" || die
 			done
 
-			_python_rewrite_shebang "${EPYTHON}" \
+			python_fix_shebang \
 				"${files[@]/%/-${EPYTHON}}"
 		fi
 	}

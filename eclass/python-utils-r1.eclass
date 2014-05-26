@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.55 2014/05/16 07:54:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.56 2014/05/26 16:13:35 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -478,79 +478,6 @@ python_get_scriptdir() {
 	echo "${PYTHON_SCRIPTDIR}"
 }
 
-# @FUNCTION: _python_rewrite_shebang
-# @USAGE: [<EPYTHON>] <path>...
-# @INTERNAL
-# @DESCRIPTION:
-# Replaces 'python' executable in the shebang with the executable name
-# of the specified interpreter. If no EPYTHON value (implementation) is
-# used, the current ${EPYTHON} will be used.
-#
-# All specified files must start with a 'python' shebang. A file not
-# having a matching shebang will be refused. The exact shebang style
-# will be preserved in order not to break anything.
-#
-# Example conversions:
-# @CODE
-# From: #!/usr/bin/python -R
-# To: #!/usr/bin/python2.7 -R
-#
-# From: #!/usr/bin/env FOO=bar python
-# To: #!/usr/bin/env FOO=bar python2.7
-# @CODE
-_python_rewrite_shebang() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	local impl
-	case "${1}" in
-		python*|jython*|pypy*)
-			impl=${1}
-			shift
-			;;
-		*)
-			impl=${EPYTHON}
-			[[ ${impl} ]] || die "${FUNCNAME}: no impl nor EPYTHON"
-			;;
-	esac
-	debug-print "${FUNCNAME}: implementation: ${impl}"
-
-	local f
-	for f; do
-		local from shebang
-		read -r shebang < "${f}"
-		shebang=${shebang%$'\r'}
-		debug-print "${FUNCNAME}: path = ${f}"
-		debug-print "${FUNCNAME}: shebang = ${shebang}"
-
-		if [[ "${shebang} " == *"${impl} "* ]]; then
-			# skip files with correct impl
-			continue
-		elif [[ "${shebang} " == *'python '* ]]; then
-			from=python
-		elif [[ "${shebang} " == *'python2 '* ]]; then
-			from=python2
-		elif [[ "${shebang} " == *'python3 '* ]]; then
-			from=python3
-		else
-			eerror "A file does not seem to have a supported shebang:"
-			eerror "  file: ${f}"
-			eerror "  shebang: ${shebang}"
-			die "${FUNCNAME}: ${f} does not seem to have a valid shebang"
-		fi
-
-		if { [[ ${from} == python2 ]] && python_is_python3 "${impl}"; } \
-				|| { [[ ${from} == python3 ]] && ! python_is_python3 "${impl}"; } then
-			eerror "A file does have shebang not supporting requested impl:"
-			eerror "  file: ${f}"
-			eerror "  shebang: ${shebang}"
-			eerror "  impl: ${impl}"
-			die "${FUNCNAME}: ${f} does have shebang not supporting ${EPYTHON}"
-		fi
-
-		sed -i -e "1s:${from}:${impl}:" "${f}" || die
-	done
-}
-
 # @FUNCTION: _python_ln_rel
 # @USAGE: <from> <to>
 # @INTERNAL
@@ -743,7 +670,8 @@ python_newexe() {
 
 	# don't use this at home, just call python_doscript() instead
 	if [[ ${_PYTHON_REWRITE_SHEBANG} ]]; then
-		_python_rewrite_shebang "${ED%/}/${d}/${newfn}"
+		local _PYTHON_FIX_SHEBANG_QUIET=1
+		python_fix_shebang "${ED%/}/${d}/${newfn}"
 	fi
 }
 
@@ -1004,6 +932,100 @@ python_is_python3() {
 	[[ ${impl} ]] || die "python_is_python3: no impl nor EPYTHON"
 
 	[[ ${impl} == python3* ]]
+}
+
+# @FUNCTION: python_fix_shebang
+# @USAGE: <path>...
+# @DESCRIPTION:
+# Replace the shebang in Python scripts with the current Python
+# implementation (EPYTHON). If a directory is passed, works recursively
+# on all Python scripts.
+#
+# Only files having a 'python*' shebang will be modified. Files with
+# other shebang will either be skipped when working recursively
+# on a directory or treated as error when specified explicitly.
+#
+# Shebangs matching explicitly current Python version will be left
+# unmodified. Shebangs requesting another Python version will be treated
+# as fatal error.
+python_fix_shebang() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${1} ]] || die "${FUNCNAME}: no paths given"
+	[[ ${EPYTHON} ]] || die "${FUNCNAME}: EPYTHON unset (pkg_setup not called?)"
+
+	local path f
+	for path; do
+		local any_correct any_fixed is_recursive
+
+		[[ -d ${path} ]] && is_recursive=1
+
+		while IFS= read -r -d '' f; do
+			local shebang=$(head -n 1 "${f}")
+			local error
+
+			case "${shebang} " in
+				'#!'*"${EPYTHON} "*)
+					debug-print "${FUNCNAME}: in file ${f#${D}}"
+					debug-print "${FUNCNAME}: shebang matches EPYTHON: ${shebang}"
+
+					# Nothing to do, move along.
+					any_correct=1
+					;;
+				'#!'*python" "*|'#!'*python[23]" "*)
+					debug-print "${FUNCNAME}: in file ${f#${D}}"
+					debug-print "${FUNCNAME}: rewriting shebang: ${shebang}"
+
+					# Note: for internal use.
+					if [[ ! ${_PYTHON_FIX_SHEBANG_QUIET} ]]; then
+						einfo "Fixing shebang in ${f#${D}}."
+					fi
+
+					local from
+					if [[ "${shebang} " == *'python2 '* ]]; then
+						from=python2
+						python_is_python3 "${EPYTHON}" && error=1
+					elif [[ "${shebang} " == *'python3 '* ]]; then
+						from=python3
+						python_is_python3 "${EPYTHON}" || error=1
+					else
+						from=python
+					fi
+
+					if [[ ! ${error} ]]; then
+						sed -i -e "1s:${from}:${EPYTHON}:" "${f}" || die
+						any_fixed=1
+					fi
+					;;
+				'#!'*python[23].[0123456789]" "*|'#!'*pypy" "*|'#!'*jython[23].[0123456789]" "*)
+					# Explicit mismatch.
+					error=1
+					;;
+				*)
+					# Non-Python shebang. Allowed in recursive mode,
+					# disallowed when specifying file explicitly.
+					[[ ${is_recursive} ]] || error=1
+					;;
+			esac
+
+			if [[ ${error} ]]; then
+				eerror "The file has incompatible shebang:"
+				eerror "  file: ${f#${D}}"
+				eerror "  current shebang: ${shebang}"
+				eerror "  requested impl: ${EPYTHON}"
+				die "${FUNCNAME}: conversion of incompatible shebang requested"
+			fi
+		done < <(find "${path}" -type f -print0)
+
+		if [[ ! ${any_fixed} ]]; then
+			eqawarn "QA warning: ${FUNCNAME}, ${path#${D}} did not match any fixable files."
+			if [[ ${any_correct} ]]; then
+				eqawarn "All files have ${EPYTHON} shebang already."
+			else
+				eqawarn "There are no Python files in specified directory."
+			fi
+		fi
+	done
 }
 
 # @FUNCTION: _python_want_python_exec2

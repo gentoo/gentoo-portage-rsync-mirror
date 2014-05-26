@@ -10,5 +10,5 @@ RDEPEND=python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2
 REQUIRED_USE=python? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/evemu/evemu-1.2.0.tar.xz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	e544c60078c7fa0939091b4c33e27450	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=5893d987fc3d3856866f811295eb76f5
