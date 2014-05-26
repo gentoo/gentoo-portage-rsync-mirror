@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.16 2014/04/16 06:23:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.17 2014/05/26 03:49:24 idella4 Exp $
+
+*glances-1.7.7 (26 May 2014)
+
+  26 May 2014; Ian Delaney <idella4@gentoo.org> +glances-1.7.7.ebuild:
+  bump; drop py2.6 pypy due to the 'share' in PyPy prefix issue, add py3.4
+  support, add IUSE doc & reset / fix doc install
 
   16 Apr 2014; Ian Delaney <idella4@gentoo.org> glances-1.7.4.ebuild:
   add pypy support
