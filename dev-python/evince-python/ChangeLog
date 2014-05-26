@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/evince-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/evince-python/ChangeLog,v 1.28 2012/03/14 03:14:49 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evince-python/ChangeLog,v 1.29 2014/05/26 18:47:31 mgorny Exp $
+
+*evince-python-2.32.0-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org> +evince-python-2.32.0-r1.ebuild:
+  Convert to gnome-python-common-r1. Fix dependencies.
 
   14 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evince-python-2.32.0.ebuild:
@@ -110,4 +115,3 @@
   10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
   +evince-python-2.26.0.ebuild, +metadata.xml:
   New gnome python binding.
-
