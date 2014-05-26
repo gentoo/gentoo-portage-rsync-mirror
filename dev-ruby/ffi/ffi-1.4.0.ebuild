@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.4.0.ebuild,v 1.11 2014/02/01 03:57:56 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.4.0.ebuild,v 1.12 2014/05/26 05:37:33 mrueg Exp $
 
 EAPI=5
 
 # jruby → unneeded, this is part of the standard JRuby distribution, and
 # would just install a dummy.
-USE_RUBY="ruby19 ruby18"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="specs"
 

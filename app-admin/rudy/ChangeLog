@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rudy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.23 2013/12/22 12:52:10 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.24 2014/05/26 05:49:52 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> rudy-0.9.8.016-r1.ebuild:
+  Remove ruby18 target.
 
   22 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -rudy-0.9.8.016.ebuild:
   Cleanup old.

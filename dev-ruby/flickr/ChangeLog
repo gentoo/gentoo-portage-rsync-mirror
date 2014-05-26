@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flickr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.16 2013/09/05 13:57:41 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.17 2014/05/26 05:36:34 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> flickr-1.0.2-r5.ebuild:
+  Remove ruby18 target.
 
   05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -flickr-1.0.2-r3.ebuild:
   Cleanup old.

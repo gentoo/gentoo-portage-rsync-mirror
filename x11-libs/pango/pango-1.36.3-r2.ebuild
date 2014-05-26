@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.2 2014/04/28 18:01:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.3 2014/05/26 05:57:01 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -80,15 +80,9 @@ pkg_postinst() {
 		local PANGO_CONFDIR="${EROOT}/etc/pango/${CHOST}"
 		local pango_conf="${PANGO_CONFDIR}/pango.modules"
 		local tmp_file=$(mktemp -t tmp_pango_ebuild.XXXXXXXXXX)
-		local querymodules
-		if [[ ${#MULTIBUILD_VARIANTS[@]} -gt 1 ]]; then
-			querymodules="${CHOST}-pango-querymodules"
-		else
-			querymodules="pango-querymodules"
-		fi
 
 		# be atomic!
-		if "${querymodules}" --system \
+		if "${CHOST}-pango-querymodules" --system \
 			"${EROOT}"usr/$(get_libdir)/pango/1.8.0/modules/*$(get_modname) \
 				> "${tmp_file}"; then
 			cat "${tmp_file}" > "${pango_conf}" || {

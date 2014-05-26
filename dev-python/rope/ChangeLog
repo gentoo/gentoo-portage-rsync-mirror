@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rope
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.19 2013/11/24 13:49:10 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.20 2014/05/26 05:53:43 patrick Exp $
+
+*rope-0.10.2 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +rope-0.10.2.ebuild:
+  Bump
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> rope-0.9.4-r1.ebuild:
   Stable for x86, wrt bug #481850

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.405 2014/04/28 18:01:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.406 2014/05/26 05:57:01 mgorny Exp $
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org> pango-1.36.3-r2.ebuild:
+  Unconditionally use ${CHOST}-pango-querymodules since prefixing is now
+  unconditional.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> pango-1.36.3-r2.ebuild:
   Use multilib_native_use*.

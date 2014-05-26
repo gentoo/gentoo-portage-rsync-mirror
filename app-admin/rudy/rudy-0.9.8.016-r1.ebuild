@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.016-r1.ebuild,v 1.1 2013/11/30 08:16:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.016-r1.ebuild,v 1.2 2014/05/26 05:49:52 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RESTRICT=test
 RUBY_FAKEGEM_TASK_TEST=""

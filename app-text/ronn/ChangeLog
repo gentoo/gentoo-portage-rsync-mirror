@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ronn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.25 2014/05/14 18:08:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.26 2014/05/26 05:49:09 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> ronn-0.7.3-r1.ebuild:
+  Remove ruby18 target.
 
 *ronn-0.7.3-r3 (14 May 2014)
 

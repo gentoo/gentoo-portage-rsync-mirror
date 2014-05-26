@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mini_shoulda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_shoulda/ChangeLog,v 1.4 2014/03/10 17:00:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_shoulda/ChangeLog,v 1.5 2014/05/26 05:47:47 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> mini_shoulda-0.5.0-r1.ebuild:
+  Remove ruby18 target.
 
 *mini_shoulda-0.5.0-r1 (10 Mar 2014)
 

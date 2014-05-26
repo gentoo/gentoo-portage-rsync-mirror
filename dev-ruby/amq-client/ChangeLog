@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amq-client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-client/ChangeLog,v 1.10 2013/12/24 15:56:06 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-client/ChangeLog,v 1.11 2014/05/26 05:35:31 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> amq-client-1.0.4.ebuild:
+  Remove ruby18 target.
 
   24 Dec 2013; Hans de Graaff <graaff@gentoo.org> -amq-client-0.9.10.ebuild,
   -amq-client-0.9.12.ebuild, -amq-client-1.0.2.ebuild:
