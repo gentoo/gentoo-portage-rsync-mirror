@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.42 2014/04/27 21:08:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.43 2014/05/26 08:15:16 djc Exp $
+
+*mod_wsgi-3.5 (26 May 2014)
+
+  26 May 2014; Dirkjan Ochtman <djc@gentoo.org> +mod_wsgi-3.5.ebuild:
+  Version bump mod_wsgi to 3.5 (bug 510938)
 
   27 Apr 2014; Mike Gilbert <floppym@gentoo.org> mod_wsgi-3.4-r1.ebuild:
   Add python3.4.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.24 2014/05/02 09:49:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.25 2014/05/26 08:22:17 patrick Exp $
+
+*chameleon-2.16 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +chameleon-2.16.ebuild:
+  Bump
 
 *chameleon-2.15 (02 May 2014)
 
