@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.99.0.ebuild,v 1.3 2014/03/28 21:23:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.99.0.ebuild,v 1.4 2014/05/26 19:22:34 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -11,12 +11,12 @@ SRC_URI="http://${PN}.freedesktop.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0/2" # based on SONAME of libupower-glib.so
-#There has been major API change, so temporarily leave without KEYWORDS and
-#possibly wait for 0.100 -like release?
+#Only GNOME 3.12 and Xfce's xfce4-power-manager git are compatible with this release!
+#Do not keyword or you will break every reverse dependency in tree!
 #KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc +introspection ios kernel_FreeBSD kernel_linux systemd"
+IUSE="doc +introspection ios kernel_FreeBSD kernel_linux"
 
-COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
+RDEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.30
 	sys-apps/dbus:=
 	>=sys-auth/polkit-0.110
@@ -29,15 +29,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 			>=app-pda/libplist-1:=
 			)
 		)"
-RDEPEND="${COMMON_DEPEND}
-	kernel_linux? (
-		!systemd? ( >=sys-power/pm-utils-1.4.1 )
-		systemd? (
-			app-shells/bash
-			>=sys-apps/systemd-200
-			)
-		)"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	dev-util/intltool
@@ -60,7 +52,6 @@ src_configure() {
 
 	if use kernel_linux; then
 		backend=linux
-		myconf="$(use_enable !systemd deprecated)"
 	elif use kernel_FreeBSD; then
 		backend=freebsd
 	else

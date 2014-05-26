@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.54 2014/04/18 11:20:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.55 2014/05/26 19:02:24 pacho Exp $
+
+  26 May 2014; Pacho Ramos <pacho@gentoo.org> libchamplain-0.12.7.ebuild:
+  Needs to be rebuild with cogl soname bumps
 
   18 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libchamplain-0.12.5.ebuild:
   Drop old
