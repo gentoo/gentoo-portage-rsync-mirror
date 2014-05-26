@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wtf-peewee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtf-peewee/ChangeLog,v 1.6 2014/05/25 03:28:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtf-peewee/ChangeLog,v 1.7 2014/05/26 07:48:43 patrick Exp $
+
+*wtf-peewee-0.2.2 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +wtf-peewee-0.2.2.ebuild:
+  Bump
 
   25 May 2014; Ian Delaney <idella4@gentoo.org> wtf-peewee-0.2.1.ebuild:
   unrestrict & upgrade test phase, add IUSE examples

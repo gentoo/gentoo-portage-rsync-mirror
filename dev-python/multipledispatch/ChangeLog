@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/multipledispatch
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/multipledispatch/ChangeLog,v 1.1 2014/05/26 07:42:23 patrick Exp $
+
+*multipledispatch-0.4.3 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +multipledispatch-0.4.3.ebuild:
+  Initial import, dependency of dev-python/datashape
