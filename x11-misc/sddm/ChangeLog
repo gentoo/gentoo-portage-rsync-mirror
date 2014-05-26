@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.3 2014/05/25 10:53:42 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.4 2014/05/26 21:58:35 jauhien Exp $
+
+*sddm-0.1.0-r1 (26 May 2014)
+
+  26 May 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/sddm-0.1.0-consolekit.patch, +sddm-0.1.0-r1.ebuild, metadata.xml:
+  temporary fix for bug #511484, thanks to Samuli Suominen
 
   25 May 2014; Jauhien Piatlicki <jauhien@gentoo.org> sddm-0.1.0.ebuild:
   fix dependencies as qt-5 is not in tree still

@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.249 2014/05/13 17:43:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.250 2014/05/26 21:44:29 reavertm Exp $
+
+*okular-4.12.5-r1 (26 May 2014)
+*okular-4.13.0-r1 (26 May 2014)
+*okular-4.13.1-r1 (26 May 2014)
+
+  26 May 2014; Maciej Mrozowski <reavertm@gentoo.org> +okular-4.12.5-r1.ebuild,
+  +okular-4.13.0-r1.ebuild, +okular-4.13.1-r1.ebuild, -okular-4.12.5.ebuild,
+  -okular-4.13.0.ebuild, -okular-4.13.1.ebuild:
+  Handle kimgio generator under jpeg USE flag. Fixes bug 511416
 
 *okular-4.13.1 (13 May 2014)
 

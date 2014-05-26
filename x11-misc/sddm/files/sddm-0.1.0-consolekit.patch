@@ -1,0 +1,36 @@
+diff -r -u sddm-0.1.0/data/scripts/Xsession sddm-0.1.0.patched/data/scripts/Xsession
+--- sddm-0.1.0/data/scripts/Xsession	2013-03-19 21:23:36.000000000 +0100
++++ sddm-0.1.0.patched/data/scripts/Xsession	2014-05-26 23:40:09.654374811 +0200
+@@ -74,13 +74,13 @@
+     exec xterm -geometry 80x24-0-0
+     ;;
+   custom)
+-    exec $HOME/.xsession
++    exec ck-launch-session $HOME/.xsession
+     ;;
+   default)
+-    exec /usr/bin/startkde
++    exec ck-launch-session /usr/bin/startkde
+     ;;
+   *)
+-    eval exec "$session"
++    eval ck-launch-session "$session"
+     ;;
+ esac
+ exec xmessage -center -buttons OK:0 -default OK "Sorry, cannot execute $session. Check $DESKTOP_SESSION.desktop."
+diff -r -u sddm-0.1.0/services/sddm.pam sddm-0.1.0.patched/services/sddm.pam
+--- sddm-0.1.0/services/sddm.pam	2013-03-19 21:23:36.000000000 +0100
++++ sddm-0.1.0.patched/services/sddm.pam	2014-05-26 23:39:52.484616252 +0200
+@@ -3,4 +3,11 @@
+ auth		include		system-login
+ account		include		system-login
+ password	include		system-login
+-session		include		system-login
++
++session         optional        pam_loginuid.so
++session         required        pam_env.so
++session         optional        pam_lastlog.so silent
++session         include         system-auth
++-session        optional        pam_ck_connector.so
++session         optional        pam_motd.so motd=/etc/motd
++session         optional        pam_mail.so

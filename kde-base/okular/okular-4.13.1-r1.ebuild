@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.13.0.ebuild,v 1.2 2014/04/17 00:43:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.13.1-r1.ebuild,v 1.1 2014/05/26 21:44:29 reavertm Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ inherit kde4-base
 
 DESCRIPTION="Okular is a universal document viewer based on KPDF for KDE 4."
 HOMEPAGE="http://okular.kde.org http://www.kde.org/applications/graphics/okular"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="chm crypt debug djvu dpi ebook +jpeg mobi +postscript +pdf +tiff"
 
 DEPEND="
@@ -26,7 +26,10 @@ DEPEND="
 	djvu? ( app-text/djvu )
 	dpi? ( x11-libs/libkscreen )
 	ebook? ( app-text/ebook-tools )
-	jpeg? ( virtual/jpeg:0 )
+	jpeg? (
+		$(add_kdebase_dep libkexiv2)
+		virtual/jpeg:0
+	)
 	mobi? ( $(add_kdebase_dep kdegraphics-mobipocket) )
 	pdf? ( >=app-text/poppler-0.20[qt4,-exceptions(-)] )
 	postscript? ( app-text/libspectre )
@@ -42,6 +45,7 @@ src_configure() {
 		$(cmake-utils_use_with dpi LibKScreen)
 		$(cmake-utils_use_with ebook EPub)
 		$(cmake-utils_use_with jpeg)
+		$(cmake-utils_use_with jpeg Kexiv2)
 		$(cmake-utils_use_with mobi QMobiPocket)
 		$(cmake-utils_use_with postscript LibSpectre)
 		$(cmake-utils_use_with pdf PopplerQt4)
