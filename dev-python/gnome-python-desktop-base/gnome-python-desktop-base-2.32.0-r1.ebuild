@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.32.0-r1.ebuild,v 1.1 2014/05/26 16:28:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.32.0-r1.ebuild,v 1.2 2014/05/26 16:46:38 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,13 +32,13 @@ DEPEND="${RDEPEND}
 
 RESTRICT="test"
 
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-	G2CONF="${G2CONF} --disable-allbindings"
-	python-any-r1_pkg_setup
-}
-
 src_prepare() {
 	gnome2_src_prepare
 	python_fix_shebang .
+}
+
+src_configure() {
+	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+	gnome2_src_configure \
+		--disable-allbindings
 }

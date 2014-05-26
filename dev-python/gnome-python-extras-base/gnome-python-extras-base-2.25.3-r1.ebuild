@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3-r1.ebuild,v 1.1 2014/05/26 16:29:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3-r1.ebuild,v 1.2 2014/05/26 16:47:04 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -35,14 +35,14 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
 
-pkg_setup() {
-	G2CONF="${G2CONF} --disable-allbindings"
-	python-any-r1_pkg_setup
-}
-
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python-libs.patch" #344231
 	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-allbindings
 }

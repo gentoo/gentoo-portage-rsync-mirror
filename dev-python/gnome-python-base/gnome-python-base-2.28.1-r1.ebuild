@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1-r1.ebuild,v 1.1 2014/05/26 16:18:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1-r1.ebuild,v 1.2 2014/05/26 16:41:11 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,7 +36,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
-pkg_setup() {
-	G2CONF="${G2CONF} --disable-allbindings"
-	python-any-r1_pkg_setup
+src_configure() {
+	gnome2_src_configure \
+		--disable-allbindings
 }
