@@ -1,7 +1,8 @@
-diff -r -u collectd-4.10.1.orig/configure.in collectd-4.10.1/configure.in
---- collectd-4.10.1.orig/configure.in	2010-07-09 12:01:59.000000000 +0200
-+++ collectd-4.10.1/configure.in	2010-09-24 20:15:22.666434555 +0200
-@@ -2607,11 +2607,13 @@
+diff --git configure.ac configure.ac
+index ce8a9bc..eaa464e 100644
+--- configure.ac
++++ configure.ac
+@@ -3109,11 +3109,13 @@ if test "x$with_libperl" = "xyes" \
  then
    SAVE_CFLAGS="$CFLAGS"
    SAVE_LDFLAGS="$LDFLAGS"
@@ -11,19 +12,18 @@ diff -r -u collectd-4.10.1.orig/configure.in collectd-4.10.1/configure.in
    PERL_LDFLAGS=`ARCHFLAGS="" $perl_interpreter -MExtUtils::Embed -e ldopts`
    CFLAGS="$CFLAGS $PERL_CFLAGS"
    LDFLAGS="$LDFLAGS $PERL_LDFLAGS"
-+  LIBS="$LIBS -lperl"
- 
++  LIBS="$LIBS -lperl -lpthread"
+
    AC_CACHE_CHECK([for libperl],
      [c_cv_have_libperl],
-@@ -2630,7 +2632,10 @@
- 			 Nullsv);
-       ]]),
+@@ -3132,7 +3134,10 @@ dnl ARCHFLAGS="" -> disable multi -arch on OSX (see Config_heavy.pl:fetch_string
+ ]]]
+       )],
        [c_cv_have_libperl="yes"],
 -      [c_cv_have_libperl="no"]
-+      [ 
-+        c_cv_have_libperl="no" 
++      [
++        c_cv_have_libperl="no"
 +        LIBS="$SAVE_LIBS"
 +      ]
      )
    )
- 

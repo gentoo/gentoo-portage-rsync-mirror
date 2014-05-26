@@ -1,6 +1,20 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.58 2014/03/01 22:08:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.59 2014/05/26 01:22:40 mrueg Exp $
+
+*collectd-5.4.1 (26 May 2014)
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> +collectd-5.4.1.ebuild,
+  +files/collectd-5.4.1-libocci.patch, +files/collectd-5.4.1-libperl.patch,
+  +files/collectd-5.4.1-lt.patch, +files/collectd-5.4.1-nohal.patch,
+  -collectd-5.1.0-r1.ebuild, -collectd-5.1.0-r2.ebuild,
+  -collectd-5.1.1-r1.ebuild, -collectd-5.1.1.ebuild, -collectd-5.2.0-r1.ebuild,
+  -collectd-5.2.0.ebuild, -collectd-5.2.1.ebuild,
+  -files/collectd-4.10.1-libperl.patch, -files/collectd-4.10.3-lt.patch,
+  -files/collectd-5.1.0-mongoc06.patch, -files/collectd-5.1.0-netlink.patch,
+  -files/collectd-5.1.1-perl-prefix.patch:
+  Version bump. Cleanup old. Proxy commit for Johan Bergström. Fixes bug
+  #501644.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> collectd-5.1.0-r1.ebuild,
   collectd-5.1.0-r2.ebuild, collectd-5.1.1-r1.ebuild, collectd-5.1.1.ebuild,
