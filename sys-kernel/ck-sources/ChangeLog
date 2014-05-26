@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.234 2014/05/09 20:17:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.235 2014/05/26 09:02:45 hwoarang Exp $
+
+*ck-sources-3.14.4 (26 May 2014)
+
+  26 May 2014; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.14.4.ebuild:
+  Version bump. Bug #510800
 
 *ck-sources-3.4.89 (09 May 2014)
 *ck-sources-3.10.39 (09 May 2014)
