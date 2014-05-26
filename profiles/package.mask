@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15726 2014/05/26 06:17:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15727 2014/05/26 11:32:20 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Lars Wendler <polynomial-c@gentoo.org> (26 May 2014)
+# Masked until sys-auth/sssd got subslot support (bug #511528 and bug #511530).
+>=sys-libs/ldb-1.1.17-r1
 
 # Joerg Bornkessel <hd_brummy@gentoo.org (24 May 2014)
 # masked for removal old, plz. upgrade to vdr-2
