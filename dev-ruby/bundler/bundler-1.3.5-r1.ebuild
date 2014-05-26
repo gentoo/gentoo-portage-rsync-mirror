@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.3.5-r1.ebuild,v 1.3 2014/02/01 00:45:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.3.5-r1.ebuild,v 1.4 2014/05/26 05:27:48 mrueg Exp $
 
 EAPI=5
 
 # jruby → Many tests fail and test suite hangs.
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

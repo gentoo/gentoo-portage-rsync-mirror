@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=test? ( sys-apps/net-tools sys-apps/lsb-release dmi? ( sys-apps/dmidecode ) pciutils? ( sys-apps/pciutils ) ) ruby_targets_ruby18? ( test? ( >=dev-ruby/mocha-0.10.5:0.10[ruby_targets_ruby18] <dev-ruby/rspec-2.14:2[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( >=dev-ruby/mocha-0.10.5:0.10[ruby_targets_ruby19] <dev-ruby/rspec-2.14:2[ruby_targets_ruby19] ) ) ruby_targets_jruby? ( test? ( >=dev-ruby/mocha-0.10.5:0.10[ruby_targets_jruby] <dev-ruby/rspec-2.14:2[ruby_targets_jruby] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby18? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_jruby? ( test? ( dev-ruby/rspec:2[ruby_targets_jruby] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) )
+DEPEND=test? ( sys-apps/net-tools sys-apps/lsb-release dmi? ( sys-apps/dmidecode ) pciutils? ( sys-apps/pciutils ) ) ruby_targets_ruby19? ( test? ( >=dev-ruby/mocha-0.10.5:0.10[ruby_targets_ruby19] <dev-ruby/rspec-2.14:2[ruby_targets_ruby19] ) ) ruby_targets_jruby? ( test? ( >=dev-ruby/mocha-0.10.5:0.10[ruby_targets_jruby] <dev-ruby/rspec-2.14:2[ruby_targets_jruby] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_jruby? ( test? ( dev-ruby/rspec:2[ruby_targets_jruby] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) )
 DESCRIPTION=A cross-platform Ruby library for retrieving facts from operating systems
 EAPI=5
 HOMEPAGE=http://www.puppetlabs.com/puppet/related-projects/facter/
-IUSE=+dmi +pciutils elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_jruby test test
+IUSE=+dmi +pciutils elibc_FreeBSD ruby_targets_ruby19 ruby_targets_jruby test test
 KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=Apache-2.0
-RDEPEND=sys-apps/net-tools sys-apps/lsb-release dmi? ( sys-apps/dmidecode ) pciutils? ( sys-apps/pciutils ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_jruby )
+RDEPEND=sys-apps/net-tools sys-apps/lsb-release dmi? ( sys-apps/dmidecode ) pciutils? ( sys-apps/pciutils ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_jruby )
 SLOT=0
 SRC_URI=mirror://rubygems/facter-1.7.3.gem
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=79fd71d8e00c0880e47c8a401bd059ea
+_md5_=f0ded3e2a0320582258f3507d4069fc2

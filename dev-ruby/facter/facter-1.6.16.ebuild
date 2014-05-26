@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.16.ebuild,v 1.8 2014/03/11 01:36:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.16.ebuild,v 1.9 2014/05/26 05:20:27 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_EXTRADOC="README.md"

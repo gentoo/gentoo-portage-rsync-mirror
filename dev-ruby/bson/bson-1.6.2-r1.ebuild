@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-1.6.2-r1.ebuild,v 1.1 2013/11/17 20:53:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-1.6.2-r1.ebuild,v 1.2 2014/05/26 05:21:43 mrueg Exp $
 
 EAPI=5
 # jruby → support needs to be written properly
-USE_RUBY="ruby18 ruby19 ruby20"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC="moot" # we do it manually, but still declare it
 RUBY_FAKEGEM_DOCDIR="html"
@@ -43,7 +43,7 @@ all_ruby_prepare() {
 
 each_ruby_configure() {
 	case ${RUBY} in
-		*/ruby18|*/ruby19|*/ruby20)
+		*/ruby19|*/ruby20)
 			${RUBY} -C ext/cbson extconf.rb || die "extconf.rb failed"
 			;;
 		*/jruby)
@@ -54,7 +54,7 @@ each_ruby_configure() {
 
 each_ruby_compile() {
 	case ${RUBY} in
-		*/ruby18|*/ruby19|*/ruby20)
+		*/ruby19|*/ruby20)
 			emake -C ext/cbson V=1 CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}"
 			mkdir -p lib/bson_ext
 			cp ext/cbson/*$(get_modname) lib/bson_ext || die
@@ -75,7 +75,7 @@ all_ruby_compile() {
 
 each_ruby_test() {
 	case ${RUBY} in
-		*/ruby18|*/ruby19|*/ruby20)
+		*/ruby19|*/ruby20)
 			C_EXT=true ${RUBY} -S rake test:bson || die "tests failed"
 			;;
 	esac

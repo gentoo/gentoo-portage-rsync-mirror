@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.93 2014/03/11 01:36:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.94 2014/05/26 05:20:27 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.6.16.ebuild,
+  facter-1.6.18.ebuild, facter-1.7.1-r1.ebuild, facter-1.7.3.ebuild:
+  Remove ruby18 target.
 
   11 Mar 2014; Manuel Rüger <mrueg@gentoo.org> facter-1.6.16.ebuild,
   facter-1.6.18.ebuild:

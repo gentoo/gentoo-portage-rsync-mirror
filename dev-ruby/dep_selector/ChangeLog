@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dep_selector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/ChangeLog,v 1.7 2014/03/26 20:15:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/ChangeLog,v 1.8 2014/05/26 05:25:41 mrueg Exp $
+
+  26 May 2014; Manuel Rüger <mrueg@gentoo.org> dep_selector-0.0.8-r1.ebuild:
+  Remove ruby18 target.
 
 *dep_selector-0.1.1 (26 Mar 2014)
 
