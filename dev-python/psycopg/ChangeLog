@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.173 2014/04/11 19:51:10 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.174 2014/05/26 08:43:54 patrick Exp $
+
+*psycopg-2.5.3 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +psycopg-2.5.3.ebuild:
+  Bump
 
   11 Apr 2014; Samuel Damashek <sdamashek@gentoo.org> psycopg-2.5.2.ebuild:
   Add python3_4 to 2.5.2 PYTHON_COMPAT

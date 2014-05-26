@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.30 2014/01/18 12:16:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.31 2014/05/26 08:51:17 patrick Exp $
+
+*fonttools-2.4 (26 May 2014)
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> +fonttools-2.4.ebuild:
+  Bump
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> fonttools-2.3-r1.ebuild,
   fonttools-2.3.ebuild:

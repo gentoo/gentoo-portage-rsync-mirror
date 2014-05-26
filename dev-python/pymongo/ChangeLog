@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.38 2014/04/15 15:18:18 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.39 2014/05/26 08:38:11 ultrabug Exp $
+
+*pymongo-2.7.1 (26 May 2014)
+
+  26 May 2014; Ultrabug <ultrabug@gentoo.org> +pymongo-2.7.1.ebuild:
+  version bump
 
 *pymongo-2.7-r1 (15 Apr 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.137 2014/05/10 14:04:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.138 2014/05/26 09:00:46 swift Exp $
+
+*policycoreutils-2.3-r1 (26 May 2014)
+
+  26 May 2014; Sven Vermeulen <swift@gentoo.org> +policycoreutils-2.3-r1.ebuild:
+  Fix selocal to support dontaudit as well. Also verify types, attributes and
+  roles before adding them.
 
   10 May 2014; Sven Vermeulen <swift@gentoo.org>
   -policycoreutils-2.1.14-r1.ebuild, -policycoreutils-2.1.14-r2.ebuild,
