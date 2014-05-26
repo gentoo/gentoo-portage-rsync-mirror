@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15727 2014/05/26 11:32:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15728 2014/05/26 14:53:41 jauhien Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -795,10 +795,6 @@ dev-java/sun-jce-bin
 # Patrick Lauer <patrick@gentoo.org> (21 May 2013)
 # broken dependencies -> uninstallable #470712
 app-portage/g-ctan
-
-# Markos Chandras <hwoarang@gentoo.org> (28 Apr 2013)
-# Early release of pcmanfm Qt4 port
-x11-misc/pcmanfm-qt
 
 # Michael Weber <xmw@gentoo.org> (18 Apr 2013)
 # Masked due test failures

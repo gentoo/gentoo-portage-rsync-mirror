@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.6.5.ebuild,v 1.1 2014/05/26 09:02:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.6.5.ebuild,v 1.2 2014/05/26 14:35:41 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -56,8 +56,6 @@ python_test() {
 	# and don't work with ${BUILD_DIR}/lib.
 	# https://code.djangoproject.com/ticket/20514
 	# https://code.djangoproject.com/ticket/21093
-	# export PYTHONWARNINGS="d,i::ImportWarning"
-	sed -e 's:test_dont_base64_encode:_&:' -i tests/mail/tests.py || die
 	PYTHONPATH=. \
 		"${PYTHON}" tests/runtests.py --settings=test_sqlite -v1 \
 		|| die "Tests fail with ${EPYTHON}"
