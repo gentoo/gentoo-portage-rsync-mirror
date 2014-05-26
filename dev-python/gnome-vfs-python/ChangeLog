@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gnome-vfs-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-vfs-python/ChangeLog,v 1.38 2012/02/24 08:43:24 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-vfs-python/ChangeLog,v 1.39 2014/05/26 17:26:48 mgorny Exp $
+
+*gnome-vfs-python-2.28.1-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +gnome-vfs-python-2.28.1-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   gnome-vfs-python-2.28.1.ebuild:
@@ -163,4 +169,3 @@
   +gnome-vfs-python-2.22.1.ebuild:
   Initial import of gnome-python split ebuilds. This package installs
   bindings for the GnomeVFS library.
-

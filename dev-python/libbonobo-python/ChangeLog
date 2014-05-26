@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/libbonobo-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libbonobo-python/ChangeLog,v 1.37 2011/12/17 18:48:24 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libbonobo-python/ChangeLog,v 1.38 2014/05/26 17:24:28 mgorny Exp $
+
+*libbonobo-python-2.28.1-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +libbonobo-python-2.28.1-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   libbonobo-python-2.28.1.ebuild:
@@ -160,4 +166,3 @@
   +libbonobo-python-2.22.1.ebuild:
   Initial import of gnome-python split ebuilds. This package installs
   bindings for the Bonobo framework.
-
