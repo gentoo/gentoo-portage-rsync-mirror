@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.92 2014/05/20 07:14:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.93 2014/05/26 02:05:44 patrick Exp $
+
+  26 May 2014; Patrick Lauer <patrick@gentoo.org> twisted-words-14.0.0.ebuild:
+  Temporarily drop arm and hppa keywords until twisted-core catches up again
 
 *twisted-words-14.0.0 (20 May 2014)
 
