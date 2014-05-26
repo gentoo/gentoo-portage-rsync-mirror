@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/RubyInline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.19 2014/05/04 13:36:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.20 2014/05/26 13:22:03 p8952 Exp $
+
+*RubyInline-3.12.3-r1 (26 May 2014)
+
+  26 May 2014; Peter Wilmott <p8952@gentoo.org> +RubyInline-3.12.3-r1.ebuild:
+  Fix tests and add ruby21 target
 
 *RubyInline-3.12.3 (04 May 2014)
 
