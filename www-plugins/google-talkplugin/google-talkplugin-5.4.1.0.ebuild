@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-5.1.5.0.ebuild,v 1.3 2014/05/16 18:58:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-5.4.1.0.ebuild,v 1.1 2014/05/25 23:04:06 ottxor Exp $
 
 EAPI=5
 
-inherit eutils nsplugins unpacker
+inherit eutils multilib nsplugins unpacker
 
 if [ "${PV}" != "9999" ]; then
 	DEB_PATCH="1"
@@ -23,21 +23,18 @@ fi
 DESCRIPTION="Video chat browser plug-in for Google Talk"
 
 HOMEPAGE="http://www.google.com/chat/video"
-IUSE="libnotify selinux system-libCg video_cards_fglrx video_cards_radeon"
+IUSE="libnotify selinux"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
 #GoogleTalkPlugin binary contains openssl and celt
-LICENSE="Google-TOS openssl BSD system-libCg? ( NVIDIA-r1 )"
+LICENSE="Google-TOS openssl BSD"
 
-OBSOLETE="yes"
+OBSOLETE="no"
 [[ $OBSOLETE = yes ]] && RESTRICT="fetch strip" || RESTRICT="strip mirror"
 
 RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	dev-libs/glib:2
-	system-libCg? ( media-gfx/nvidia-cg-toolkit )
-	media-libs/fontconfig
-	media-libs/freetype:2
 	sys-libs/glibc
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
@@ -47,10 +44,8 @@ RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	x11-libs/libXt
 	x11-libs/pango
 	sys-apps/lsb-release
-	virtual/opengl
 	selinux? ( sec-policy/selinux-googletalk )
 	libnotify? ( x11-libs/libnotify )"
 
@@ -97,6 +92,10 @@ src_unpack() {
 }
 
 src_install() {
+	local plugindir i l
+	local ppapi_plugindirs=( /opt/google/chrome{,-beta,-unstable}/pepper
+		/usr/$(get_libdir)/chromium-browser/pepper )
+
 	unpacker usr/share/doc/google-talkplugin/changelog.Debian.gz
 	dodoc changelog.Debian
 
@@ -105,6 +104,11 @@ src_install() {
 	for i in "${INSTALL_BASE}"/lib*.so; do
 		doexe "${i}"
 		[[ ${i##*/} = libnp* ]] && inst_plugin "/${i}"
+		if [[ ${i##*/} = libpp* ]] ; then
+			for plugindir in "${ppapi_plugindirs[@]}"; do
+				dosym "/${i}" "${plugindir}/${i##*/}"
+			done
+		fi
 	done
 
 	#install screen-sharing stuff - bug #397463
@@ -118,21 +122,4 @@ src_install() {
 		insinto "/${INSTALL_BASE}"/locale/$l/LC_MESSAGES/
 		doins "${INSTALL_BASE}"/locale/$l/LC_MESSAGES/windowpicker.mo
 	done
-
-	#install bundled libCg
-	if use video_cards_radeon || use video_cards_fglrx; then
-		#hack from #402401
-		exeinto "/${INSTALL_BASE}"/lib
-		doexe "${INSTALL_BASE}"/lib/libCg*.so
-		if use system-libCg; then
-			ewarn "There seems to be a problem with ati cards and USE='-system-libCG,"
-			ewarn "so we install the bundled version of libCG anyway. (bug #402401)"
-		fi
-		echo "O3D_OVERRIDE_RENDER_MODE=2D" > "${ED}/opt/google/talkplugin/envvars"
-		ewarn "We have set O3D_OVERRIDE_RENDER_MODE=2D in ${EROOT}opt/google/talkplugin/envvars"
-		ewarn "please report your experience, good or bad, with this workaround on bug #402401"
-	elif ! use system-libCg; then
-		exeinto "/${INSTALL_BASE}"/lib
-		doexe "${INSTALL_BASE}"/lib/libCg*.so
-	fi
 }
