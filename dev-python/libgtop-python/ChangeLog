@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/libgtop-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.50 2011/03/23 20:23:51 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.51 2014/05/26 17:41:30 mgorny Exp $
+
+*libgtop-python-2.32.0-r1 (26 May 2014)
+
+  26 May 2014; Michał Górny <mgorny@gentoo.org>
+  +libgtop-python-2.32.0-r1.ebuild:
+  Convert to gnome-python-common-r1.
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -libgtop-python-2.30.2.ebuild:
@@ -202,4 +208,3 @@
   +libgtop-python-2.22.0.ebuild:
   Initial import of split gnome-python-desktop. This package installs
   bindings for the libgtop library.
-
