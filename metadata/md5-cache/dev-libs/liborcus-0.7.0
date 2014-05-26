@@ -4,10 +4,9 @@ DESCRIPTION=Standalone file import filter library for spreadsheet documents
 EAPI=5
 HOMEPAGE=http://gitorious.org/orcus/pages/Home
 IUSE=static-libs
-KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=MIT
 RDEPEND=>=dev-libs/boost-1.51.0:= >=dev-libs/libixion-0.7.0:=
 SLOT=0/0.5
 SRC_URI=http://kohei.us/files/orcus/src/liborcus-0.7.0.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=eefad56279c590e38790b22cc30c20af
+_md5_=804723437bd317da9a3e05cc978e4e5f

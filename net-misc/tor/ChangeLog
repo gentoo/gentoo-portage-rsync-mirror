@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.413 2014/05/25 18:56:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.414 2014/05/26 10:39:03 blueness Exp $
+
+  26 May 2014; Anthony G. Basile <blueness@gentoo.org> files/tor.conf:
+  Fix tmpfiles.d, bug #511454
 
   25 May 2014; Markus Meier <maekke@gentoo.org> tor-0.2.4.22.ebuild:
   arm stable, bug #510564

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.28 2014/03/27 09:15:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.29 2014/05/26 10:33:33 dilfridge Exp $
+
+  26 May 2014; Andreas K. Huettel <dilfridge@gentoo.org> liborcus-0.7.0.ebuild:
+  Drop keywords of 0.7.0 temporarily since it is only needed by libreoffice live
+  ebuild
 
   27 Mar 2014; Tomáš Chvátal <scarabeus@gentoo.org> -liborcus-0.3.0.ebuild,
   liborcus-0.5.1.ebuild:

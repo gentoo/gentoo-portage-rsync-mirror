@@ -4,10 +4,9 @@ DESCRIPTION=General purpose formula parser & interpreter
 EAPI=5
 HOMEPAGE=http://gitorious.org/ixion/pages/Home
 IUSE=static-libs
-KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=MIT
 RDEPEND=dev-libs/boost:=
 SLOT=0/0.7
 SRC_URI=http://kohei.us/files/ixion/src/libixion-0.7.0.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a651bd36a25ba4359e67b9b8d34035aa
+_md5_=b6c4c79d2b4f69df16645e34a1d77e72
