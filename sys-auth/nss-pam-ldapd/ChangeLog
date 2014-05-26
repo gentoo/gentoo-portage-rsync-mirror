@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.14 2014/03/16 18:57:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.15 2014/05/26 12:36:51 jlec Exp $
+
+*nss-pam-ldapd-0.9.3-r1 (26 May 2014)
+*nss-pam-ldapd-0.8.14-r1 (26 May 2014)
+
+  26 May 2014; Justin Lecher <jlec@gentoo.org> +nss-pam-ldapd-0.8.14-r1.ebuild,
+  +nss-pam-ldapd-0.9.3-r1.ebuild, +files/nslcd-init-r1, metadata.xml:
+  Move rundir to /run; minor style enhancements
 
   16 Mar 2014; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   update metadata

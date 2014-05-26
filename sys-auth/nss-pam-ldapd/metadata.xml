@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>prometheanfire@gentoo.org</email>
-		<name>Matthew Thode</name>
-	</maintainer>
-	<longdescription lang="en">
+  <maintainer>
+    <email>prometheanfire@gentoo.org</email>
+    <name>Matthew Thode</name>
+  </maintainer>
+  <longdescription lang="en">
 	    Provides a Name Service Switch (NSS) module that allows your LDAP
 		server to provide user account, group, host name, alias, netgroup, and
 		basically any other information that you would normally get from /etc
@@ -17,4 +17,3 @@
 		connections, authentication, attribute translation, etc.
 	</longdescription>
 </pkgmetadata>
-
