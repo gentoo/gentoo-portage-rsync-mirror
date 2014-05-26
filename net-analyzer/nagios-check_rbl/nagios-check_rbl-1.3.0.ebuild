@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_rbl/nagios-check_rbl-1.3.0.ebuild,v 1.4 2014/03/03 23:29:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_rbl/nagios-check_rbl-1.3.0.ebuild,v 1.5 2014/05/26 12:04:36 jer Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="https://svn.id.ethz.ch/projects/nagios_plugins/downloads/${MY_P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 # The Makefile.PL looks for Nagios::Plugin::Getopt and

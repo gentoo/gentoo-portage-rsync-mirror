@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.189 2014/02/05 13:29:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.190 2014/05/26 12:02:07 jer Exp $
+
+  26 May 2014; Jeroen Roovers <jer@gentoo.org> nagios-core-3.3.1.ebuild:
+  Stable for HPPA too.
 
   05 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> files/nagios3:
   QA: minor grammar fix, thanks to Dennis Jenkins <dennis.jenkins.75 AT

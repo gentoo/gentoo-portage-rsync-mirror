@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Calendar-Simple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.28 2012/09/01 11:14:53 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.29 2014/05/26 12:06:08 jer Exp $
+
+  26 May 2014; Jeroen Roovers <jer@gentoo.org> Calendar-Simple-1.210.0.ebuild:
+  Stable for HPPA too.
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Calendar-Simple-1.210.0.ebuild:

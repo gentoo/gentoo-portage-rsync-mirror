@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.111 2014/01/26 02:26:20 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.112 2014/05/26 12:03:02 jer Exp $
+
+  26 May 2014; Jeroen Roovers <jer@gentoo.org> nagios-3.3.1.ebuild:
+  Stable for HPPA too.
 
   26 Jan 2014; Chris Reffett <creffett@gentoo.org> metadata.xml:
   Update maintainers (add ahamilto as maintainer, me as proxy, proxy-maint herd

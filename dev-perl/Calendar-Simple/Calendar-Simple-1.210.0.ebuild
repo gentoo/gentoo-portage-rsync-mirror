@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/Calendar-Simple-1.210.0.ebuild,v 1.6 2012/09/01 11:14:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/Calendar-Simple-1.210.0.ebuild,v 1.7 2014/05/26 12:06:08 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension to create simple calendars"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc x86 ~ppc-aix"
+KEYWORDS="amd64 hppa ~ppc x86 ~ppc-aix"
 IUSE="test"
 
 RDEPEND=""
