@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.6 2014/05/04 05:54:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.3-r1.ebuild,v 1.7 2014/05/26 19:54:34 ssuominen Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -16,12 +16,15 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
+#TODO FIXME: Does this release work with >=sys-power/upower-0.99 API?
+#If not, adjust dependencies to:
+#|| ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
 COMMON_DEPEND=">=dev-libs/glib-2.28
 	x11-libs/gtk+:2
 	>=x11-libs/libnotify-0.7"
 RDEPEND="${COMMON_DEPEND}
 	>=sys-fs/udisks-1.0.4-r5:0
-	>=sys-power/upower-0.9.21"
+	|| ( >=sys-power/upower-0.9.21 sys-power/upower-pm-utils )"
 DEPEND="${COMMON_DEPEND}
 	$(vala_depend)
 	dev-util/intltool

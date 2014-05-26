@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0-r2.ebuild,v 1.7 2014/05/11 17:06:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0-r2.ebuild,v 1.8 2014/05/26 19:40:50 ssuominen Exp $
 
 EAPI=5
 inherit flag-o-matic linux-info xfconf
@@ -16,7 +16,7 @@ IUSE="debug kernel_linux networkmanager policykit +udisks +xfce_plugins_brightne
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.24
-	<sys-power/upower-0.99
+	|| ( <sys-power/upower-0.99 sys-power/upower-pm-utils )
 	>=x11-libs/gtk+-2.20:2
 	>=x11-libs/libnotify-0.7
 	x11-libs/libX11

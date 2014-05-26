@@ -1,6 +1,18 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.204 2014/04/22 13:41:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.206 2014/05/26 19:48:41 ssuominen Exp $
+
+  26 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-session-4.10.1-r1.ebuild:
+  If using sys-power/upower instead of sys-power/upower-pm-utils, force old
+  version of it, because xfce4-session from Xfce 4.10 doesn't include built-in
+  sys-power/upower support like Xfce 4.11 git master does. Leave the dependency
+  untouched for 4.11.x because with 4.11.1 version bump, the support will be
+  there, and 4.11.0 is p.masked anyway.
+
+  26 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-session-4.10.1-r1.ebuild, xfce4-session-4.11.0.ebuild:
+  Fix dependencies to allow sys-power/upower-pm-utils.
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove unused USE="consolekit" and USE="gnome-keyring" from metadata.xml

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/xfce4-systemload-plugin-1.1.1.ebuild,v 1.5 2012/11/28 12:19:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/xfce4-systemload-plugin-1.1.1.ebuild,v 1.6 2014/05/26 19:50:06 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	>=xfce-base/libxfce4ui-4.8
 	>=xfce-base/libxfce4util-4.8
 	>=xfce-base/xfce4-panel-4.8
-	udev? ( >=sys-power/upower-0.9.16 )"
+	udev? ( || ( >=sys-power/upower-0.9.16 sys-power/upower-pm-utils ) )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"

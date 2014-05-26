@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.26 2014/02/12 08:54:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.27 2014/05/26 19:57:06 ssuominen Exp $
+
+  26 May 2014; Samuli Suominen <ssuominen@gentoo.org> wmbattery-2.42.ebuild:
+  Fix dependencies to allow sys-power/upower-pm-utils.
 
   12 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org> wmbattery-2.42.ebuild:
   Depend on virtual/pkgconfig too

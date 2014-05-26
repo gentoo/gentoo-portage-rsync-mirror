@@ -1,0 +1,17 @@
+# ChangeLog for sys-power/upower-pm-utils
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/ChangeLog,v 1.1 2014/05/26 19:37:42 ssuominen Exp $
+
+*upower-pm-utils-0.9.23 (26 May 2014)
+
+  26 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +upower-pm-utils-0.9.23.ebuild,
+  +files/upower-pm-utils-0.9.23-clamp_percentage_for_overfull_batt.patch,
+  +files/upower-pm-utils-0.9.23-create-dir-runtime.patch,
+  +files/upower-pm-utils-0.9.23-fix-segfault.patch:
+  Initial commit of upower 0.9 git branch for use with sys-power/pm-utils
+  because upower master git branch removed support for it.
+  Right now this is a copy of =sys-power/upower-0.9.23-r2 without
+  USE="systemd" because sys-apps/systemd users will be moving to
+  >=sys-power/upower-0.99.
+

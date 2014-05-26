@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/ChangeLog,v 1.32 2012/11/28 12:19:32 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/ChangeLog,v 1.33 2014/05/26 19:50:06 ssuominen Exp $
+
+  26 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-systemload-plugin-1.1.1.ebuild:
+  Fix dependencies to allow sys-power/upower-pm-utils.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-systemload-plugin-1.1.1.ebuild:
@@ -140,4 +144,3 @@
   +xfce4-systemload-plugin-0.4.2.ebuild,
   +files/xfce4-systemload-plugin-0.4.2-libtool.patch:
   Rename xfce4-systemload to xfce4-systemload-plugin.
-

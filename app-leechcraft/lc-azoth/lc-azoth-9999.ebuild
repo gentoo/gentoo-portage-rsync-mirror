@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.9 2014/01/29 15:18:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.10 2014/05/26 19:51:21 maksbotan Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		autoidler? ( x11-libs/libXScrnSaver )
 		astrality? ( net-libs/telepathy-qt )
 		otroid? ( net-libs/libotr )
-		media? ( dev-qt/qtmultimedia:4 )
+		media? ( dev-qt/qt-mobility[multimedia] )
 		msn? ( net-libs/libmsn )
 		woodpecker? ( dev-libs/kqoauth )
 		xmpp? (
