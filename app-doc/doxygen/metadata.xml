@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-tools</herd>
-<maintainer>
-    <email>xarthisius@gentoo.org</email>
-    <name>Kacper Kowalik</name>
-</maintainer>
 <longdescription>Doxygen is a tool for analyzing, documenting, and reverse-engineering 
     source code of various languages using a variety of output formats 
     (try it and see).  Doxygen supports C++, C, Java, Objective-C, Python, 

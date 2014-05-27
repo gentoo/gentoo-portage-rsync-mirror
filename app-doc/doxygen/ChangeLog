@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.259 2014/01/21 06:41:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.260 2014/05/27 07:28:07 xarthisius Exp $
+
+  27 May 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Drop maintainership (http://article.gmane.org/gmane.linux.gentoo.devel/90674)
 
   21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -doxygen-1.4.7.ebuild,
   -doxygen-1.5.4.ebuild:
