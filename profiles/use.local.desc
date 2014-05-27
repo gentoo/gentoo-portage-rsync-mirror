@@ -2997,6 +2997,8 @@ kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxde-base/lxsession:upower - Pull in sys-power/upower for hibernate/suspend support
+lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openbox window manager
+lxqt-base/lxqt-meta:powermanagement - Pull in lxqt-base/lxqt-powermanagement package
 lxqt-base/lxqt-panel:clock - Build clock plugin
 lxqt-base/lxqt-panel:colorpicker - Build colorpicker plugin
 lxqt-base/lxqt-panel:cpuload - Build cpuload plugin

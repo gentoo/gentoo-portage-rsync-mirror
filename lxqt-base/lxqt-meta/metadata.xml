@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>lxqt</herd>
+  <maintainer>
+    <email>jauhien@gentoo.org</email>
+    <name>Jauhien Piatlicki</name>
+  </maintainer>
+  <use>
+    <flag name="minimal">Do not install <pkg>x11-wm/openbox</pkg>
+    window manager</flag>
+    <flag name="powermanagement">Pull in
+    <pkg>lxqt-base/lxqt-powermanagement</pkg> package</flag>
+  </use>
+</pkgmetadata>
