@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.307 2014/05/25 18:49:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.308 2014/05/27 14:20:41 ssuominen Exp $
+
+*mpg123-1.20.0 (27 May 2014)
+
+  27 May 2014; Samuli Suominen <ssuominen@gentoo.org> +mpg123-1.20.0.ebuild:
+  Version bump; notice how upstream introduced new out123 executable, see NEWS
+  file for more information.
 
   25 May 2014; Markus Meier <maekke@gentoo.org> mpg123-1.18.1.ebuild:
   arm stable, bug #500262
