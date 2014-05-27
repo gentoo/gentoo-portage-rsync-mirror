@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15730 2014/05/26 18:11:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15731 2014/05/27 02:26:42 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,6 +45,10 @@ lxqt-base/lxqt-panel
 # lazyness to update does not count ;)
 # removal ~ 15 Jun 2014
 =media-video/vdr-1.6*
+media-plugins/vdr-atscepg
+media-plugins/vdr-channelblocker
+=media-plugins/vdr-iptv-0.3.2
+media-plugins/vdr-noepgmenu
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
 # Dev channel releases are only for people who are developers or want more

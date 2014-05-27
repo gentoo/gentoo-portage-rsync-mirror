@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.7.27.ebuild,v 1.1 2014/05/18 03:21:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.7.29.ebuild,v 1.1 2014/05/27 02:05:52 jer Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -40,7 +40,6 @@ DEPEND="
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-3.0.4.1-disable-tcp-wrappers-automagic.patch \
-		"${FILESDIR}"/${PN}-3.0.7.18-sasl.patch \
 		"${FILESDIR}"/${PN}-3.0.7.21-curses-readline.patch
 
 	sed -i -e 's| ar | $(AR) |g' common/Makefile.in || die
