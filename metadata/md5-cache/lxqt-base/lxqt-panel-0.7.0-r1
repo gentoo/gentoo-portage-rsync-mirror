@@ -11,4 +11,4 @@ REQUIRED_USE=volume? ( || ( alsa pulseaudio ) )
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/lxqt/0.7.0/lxqt-panel-0.7.0.tar.xz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a31b5225eca266ac6f802610b7cfece7
+_md5_=7f65fea7a45f58134b4c1dca13a2ecdf

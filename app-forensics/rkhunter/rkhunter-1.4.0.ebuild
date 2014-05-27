@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.4.0.ebuild,v 1.6 2013/04/11 06:20:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.4.0.ebuild,v 1.7 2014/05/27 16:08:08 zerochaos Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="
 S="${WORKDIR}/${P}/files"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}.conf.patch"
+	epatch "${FILESDIR}/${P}.conf.patch"
 }
 
 src_install() {

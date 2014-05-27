@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config/lxqt-config-0.7.0.ebuild,v 1.1 2014/05/27 14:54:04 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-policykit/lxqt-policykit-0.7.0-r1.ebuild,v 1.1 2014/05/27 16:15:27 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
 
-DESCRIPTION="LXQt system configuration control center"
+DESCRIPTION="LXQt PolKit authentication agent"
 HOMEPAGE="http://www.lxqt.org/"
 
 if [[ ${PV} = *9999* ]]; then
@@ -20,11 +20,17 @@ fi
 LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0"
 
-DEPEND="dev-qt/qtcore:4
+RDEPEND="dev-qt/qtcore:4
+	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	lxqt-base/liblxqt
 	razorqt-base/libqtxdg
-	sys-libs/zlib
-	x11-libs/libXcursor
-	x11-libs/libXfixes"
-RDEPEND="${DEPEND}"
+	sys-auth/polkit-qt
+	x11-libs/libX11"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
+
+src_install(){
+	cmake-utils_src_install
+	doman man/*.1
+}

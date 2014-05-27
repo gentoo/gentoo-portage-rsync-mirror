@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.7.0.ebuild,v 1.1 2014/05/26 14:03:42 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.7.0-r1.ebuild,v 1.1 2014/05/27 16:21:51 jauhien Exp $
 
 EAPI=5
 
@@ -34,3 +34,8 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	lxqt-base/lxqt-common"
+
+src_install(){
+	cmake-utils_src_install
+	doman lxqt-config-session/man/*.1 lxqt-session/man/*.1
+}
