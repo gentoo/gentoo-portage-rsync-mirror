@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<maintainer>
-		<email>luke-jr+gentoobugs@utopios.org</email>
+		<email>luke_gentoo_bitcoin@dashjr.org</email>
 		<name>Luke Dashjr</name>
 	</maintainer>
 	<use>
@@ -17,10 +16,13 @@
 		<flag name='bifury'>Enable support for mining with Bi*fury USB sticks</flag>
 		<flag name='bitforce'>Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs</flag>
 		<flag name='bfsb'>Enable support for mining on BFSB host Raspberry Pi</flag>
+		<flag name='bfx'>Enable support for mining with BFx2 USB sticks</flag>
 		<flag name='bigpic'>Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)</flag>
 		<flag name='bitfury'>Enable support for mining with 55nm Bitfury-based devices</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
 		<flag name='drillbit'>Enable support for mining with Drillbit boards</flag>
+		<flag name='dualminer'>Enable support for mining with DualMiner USB sticks</flag>
+		<flag name='gridseed'>Enable support for mining with 5-chip GridSeed orbs</flag>
 		<flag name='hashbuster'>Enable support for mining with HashBuster nano boards</flag>
 		<flag name='hashbuster2'>Enable support for mining with HashBuster micro boards</flag>
 		<flag name='hashfast'>Enable support for mining with HashFast devices</flag>

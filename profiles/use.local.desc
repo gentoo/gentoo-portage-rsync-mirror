@@ -5384,12 +5384,15 @@ net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on 
 net-misc/bfgminer:antminer - Enable support for mining with AntMiner U1 sticks
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
+net-misc/bfgminer:bfx - Enable support for mining with BFx2 USB sticks
 net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
 net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
 net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
 net-misc/bfgminer:drillbit - Enable support for mining with Drillbit boards
+net-misc/bfgminer:dualminer - Enable support for mining with DualMiner USB sticks
+net-misc/bfgminer:gridseed - Enable support for mining with 5-chip GridSeed orbs
 net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
 net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
 net-misc/bfgminer:hashfast - Enable support for mining with HashFast devices
