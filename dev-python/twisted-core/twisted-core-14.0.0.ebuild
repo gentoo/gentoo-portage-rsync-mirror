@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-14.0.0.ebuild,v 1.4 2014/05/20 08:51:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-14.0.0.ebuild,v 1.5 2014/05/27 13:52:44 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -12,12 +12,11 @@ DESCRIPTION="An asynchronous networking framework written in Python"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="crypt gtk serial test"
 
-DEPEND=">=net-zope/zope-interface-3.6.0[${PYTHON_USEDEP}]
+RDEPEND=">=net-zope/zope-interface-3.6.0[${PYTHON_USEDEP}]
 	crypt? ( >=dev-python/pyopenssl-0.10[${PYTHON_USEDEP}] )
 	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
-	serial? ( dev-python/pyserial[${PYTHON_USEDEP}] )
-	test? ( dev-python/twisted-lore[${PYTHON_USEDEP}] )"
-RDEPEND="${DEPEND}"
+	serial? ( dev-python/pyserial[${PYTHON_USEDEP}] )"
+DEPEND="test? ( ${RDEPEND} )"
 
 PATCHES=(
 	# Give a load-sensitive test a better chance of succeeding.
@@ -46,10 +45,9 @@ python_prepare_all() {
 python_compile() {
 	local CFLAGS CXXFLAGS
 
-	if [[ ${EPYTHON} != python3* ]]; then
+	if ! python_is_python3; then
 		# Needed to make the sendmsg extension work
 		# (see http://twistedmatrix.com/trac/ticket/5701 )
-
 		append-flags -fno-strict-aliasing
 	fi
 
@@ -57,8 +55,7 @@ python_compile() {
 }
 
 python_test() {
-	# NOTE: on pypy a couple of failures (refcounting, version-checking) is
-	# expected
+	# NOTE: on pypy a couple of failures (refcounting, version-checking) is expected
 
 	distutils_install_for_testing
 
@@ -70,10 +67,6 @@ python_test() {
 	sed -e "/class ZshIntegrationTestCase/,/^$/d" -i twisted/scripts/test/test_scripts.py \
 		|| die "sed failed"
 
-	# tap2rpm is already skipped if rpm is not installed, but fails for me on a Gentoo box with it present.
-	# I currently lack the cycles to track this failure down.
-	rm twisted/scripts/test/test_tap2rpm.py
-
 	# Prevent it from pulling in plugins from already installed twisted packages.
 	rm -f twisted/plugins/__init__.py
 
@@ -84,11 +77,23 @@ python_test() {
 	sed -e 's:test_basicOperation:_&:' -i twisted/scripts/test/test_tap2deb.py || die
 	sed -e 's:test_inspectCertificate:_&:' -i twisted/test/test_sslverify.py || die
 
-	# Requires twisted-web creating a cric. dep
+	# Requires twisted-web, twisted-lore and twisted-names, creating a circ. dep and fail even if installed.
+	# test_loreDeprecation and test_exist failures appeared in version 14.0.0.
 	rm -f twisted/python/test/test_release.py || die
+	sed -e 's:test_loreDeprecation:_&:' -i twisted/test/test_twisted.py || die
+	sed -e 's:test_exist:_&:' -i twisted/python/test/test_dist3.py || die
 
 	# Requires connection to the network
 	sed -e 's:test_multiListen:_&:' -i twisted/test/test_udp.py || die
+
+	# Appeared in version 14.0.0; https://twistedmatrix.com/trac/ticket/7422
+	sed -e 's:test_dataReceivedThrows:_&:' \
+		-e 's:test_resumeProducingThrows:_&:' \
+		-e 's:test_resumeProducingAbortLater:_&:' \
+		-e 's:test_resumeProducingAbort:_&:' \
+		-e 's:test_fullWriteBufferAfterByteExchange:_&:' \
+		-i twisted/internet/test/test_tcp.py || die
+	sed -e 's:test_logPrefix:_&:' -i twisted/internet/test/connectionmixins.py || die
 
 	if ! "${TEST_DIR}"/scripts/trial twisted; then
 		die "Tests failed with ${EPYTHON}"

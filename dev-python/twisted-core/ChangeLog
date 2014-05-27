@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.23 2014/05/20 08:51:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.24 2014/05/27 13:52:44 idella4 Exp $
+
+  27 May 2014; Ian Delaney <idella4@gentoo.org> twisted-core-14.0.0.ebuild:
+  Correct USE test set in RDEPEND, minor tidy, update test phase, ticket filed
+  upstream for multi test failures, holding back on py3 support
 
   20 May 2014; Jeroen Roovers <jer@gentoo.org> twisted-core-14.0.0.ebuild:
   Add dep, drop keywords.

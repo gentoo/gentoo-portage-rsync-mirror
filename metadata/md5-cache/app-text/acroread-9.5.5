@@ -6,9 +6,9 @@ HOMEPAGE=http://www.adobe.com/products/reader/
 IUSE=cups html ldap nsplugin linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko
 KEYWORDS=-* amd64 x86 ~amd64-linux ~x86-linux
 LICENSE=Adobe
-RDEPEND=media-libs/fontconfig x86? ( =dev-libs/openssl-0.9.8* ) cups? ( net-print/cups ) x86? ( x11-libs/gtk+:2 x11-libs/pango[X] net-dns/libidn || ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] ) ldap? ( net-nds/openldap ) html? ( || ( www-client/firefox www-client/firefox-bin www-client/seamonkey ) ) ) amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-baselibs ) linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] ) linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] ) linguas_zh_TW? ( media-fonts/acroread-asianfonts[linguas_zh_TW] ) linguas_ko? ( media-fonts/acroread-asianfonts[linguas_ko] )
+RDEPEND=media-libs/fontconfig cups? ( net-print/cups ) x86? ( =dev-libs/openssl-0.9.8* x11-libs/gtk+:2 net-dns/libidn || ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] ) ldap? ( net-nds/openldap ) html? ( || ( www-client/firefox www-client/firefox-bin www-client/seamonkey ) ) ) amd64? ( || ( app-emulation/emul-linux-x86-gtklibs ( x11-libs/gtk+:2[abi_x86_32(-)] || ( x11-libs/pangox-compat[abi_x86_32(-)] <x11-libs/pango-1.31[X,abi_x86_32(-)] ) ) ) || ( app-emulation/emul-linux-x86-baselibs ( =dev-libs/openssl-0.9.8*[abi_x86_32(-)] net-dns/libidn[abi_x86_32(-)] ldap? ( net-nds/openldap[abi_x86_32(-)] ) ) ) ) linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] ) linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] ) linguas_zh_TW? ( media-fonts/acroread-asianfonts[linguas_zh_TW] ) linguas_ko? ( media-fonts/acroread-asianfonts[linguas_ko] )
 RESTRICT=strip mirror
 SLOT=0
 SRC_URI=http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i486linux_enu.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	fac675dcccf94392371a6abee62d909f	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=4e93753d8f8b30a11772f20ab95d7263
+_md5_=5a11a5e35f5fb84aaaf2961730e574f3

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5.ebuild,v 1.4 2013/07/13 19:07:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5.ebuild,v 1.5 2014/05/27 13:36:01 mgorny Exp $
 
 EAPI=5
 
@@ -21,11 +21,10 @@ RESTRICT="strip mirror"
 
 DEPEND="dev-util/bsdiff"
 RDEPEND="media-libs/fontconfig
-	x86? ( =dev-libs/openssl-0.9.8* )
 	cups? ( net-print/cups )
 	x86? (
+		=dev-libs/openssl-0.9.8*
 		x11-libs/gtk+:2
-		x11-libs/pango[X]
 		net-dns/libidn
 		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
 		ldap? ( net-nds/openldap )
@@ -38,8 +37,21 @@ RDEPEND="media-libs/fontconfig
 		)
 	)
 	amd64? (
-		app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-baselibs
+		|| (
+			app-emulation/emul-linux-x86-gtklibs
+			(
+				x11-libs/gtk+:2[abi_x86_32(-)]
+				|| ( x11-libs/pangox-compat[abi_x86_32(-)] <x11-libs/pango-1.31[X,abi_x86_32(-)] )
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-baselibs
+			(
+				=dev-libs/openssl-0.9.8*[abi_x86_32(-)]
+				net-dns/libidn[abi_x86_32(-)]
+				ldap? ( net-nds/openldap[abi_x86_32(-)] )
+			)
+		)
 	)
 	linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] )
 	linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] )
