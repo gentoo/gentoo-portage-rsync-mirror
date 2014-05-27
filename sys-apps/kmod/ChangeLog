@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.154 2014/05/15 20:06:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.155 2014/05/27 17:27:59 ssuominen Exp $
+
+  27 May 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-17.ebuild:
+  Fix documentation install after botched conversion to multiple python install
+  wrt #511434
 
   15 May 2014; Markus Meier <maekke@gentoo.org> kmod-17.ebuild:
   arm stable, bug #509924
