@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.560 2014/05/27 15:07:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.561 2014/05/27 22:54:49 chithanh Exp $
+
+  27 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/mesa-10.2-dont-require-llvm-for-r300.patch:
+  Add forgotten patch.
 
 *mesa-10.2.0_rc4 (27 May 2014)
 
