@@ -1,6 +1,13 @@
 # ChangeLog for net-im/dianara
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/ChangeLog,v 1.7 2014/04/22 13:18:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/ChangeLog,v 1.8 2014/05/27 17:59:01 hasufell Exp $
+
+*dianara-1.2.1 (27 May 2014)
+
+  27 May 2014; Julian Ospald <hasufell@gentoo.org> -dianara-0.8.ebuild,
+  -dianara-0.9.ebuild, -dianara-1.0.ebuild, -dianara-1.1.ebuild,
+  +dianara-1.2.1.ebuild:
+  version bump, rm old
 
 *dianara-1.2.0 (22 Apr 2014)
 
