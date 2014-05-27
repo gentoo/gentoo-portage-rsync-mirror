@@ -4,7 +4,7 @@ DESCRIPTION=Toolkit for building high-level compound widgets in Python using the
 EAPI=5
 HOMEPAGE=http://pmw.sourceforge.net/
 IUSE=doc examples test python_targets_python3_2 python_targets_python3_3
-KEYWORDS=~alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
 LICENSE=BSD
 RDEPEND=!dev-python/pmw:0 python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2[tk] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[tk] ) dev-lang/python-exec:=[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python3_2 python_targets_python3_3 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=py3
 SRC_URI=mirror://sourceforge/pmw/Pmw.2.0.0.tar.gz
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=6b55035943afcbc53272077f2ebb26d3
+_md5_=14bcf4f1c291ff4119ceb1ecc03c8d03
