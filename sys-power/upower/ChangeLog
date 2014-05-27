@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.146 2014/05/26 19:22:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.148 2014/05/27 11:22:28 ssuominen Exp $
+
+  27 May 2014; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.23.ebuild:
+  old
+
+  27 May 2014; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.23-r2.ebuild:
+  Stabilize for everyone (only non-arch specific minor bugfixes when comparing
+  to current stable, which is -r0)
 
   26 May 2014; Samuli Suominen <ssuominen@gentoo.org> upower-0.99.0.ebuild:
   This release is mainly for use with sys-apps/systemd because upstream removed

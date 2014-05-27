@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.21 2014/03/13 10:52:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.22 2014/05/27 11:21:03 johu Exp $
 
 EAPI=5
 
@@ -81,6 +81,7 @@ src_configure() {
 			$(cmake-utils_use designer PHONON_BUILD_DESIGNER_PLUGIN)
 			$(cmake-utils_use_with pulseaudio GLIB2)
 			$(cmake-utils_use_with pulseaudio PulseAudio)
+			$(cmake-utils_use_with zeitgeist QZeitgeist)
 		)
 		if [[ ${MULTIBUILD_VARIANT} = qt4 ]]; then
 			mycmakeargs+=(-DPHONON_BUILD_PHONON4QT5=OFF)
