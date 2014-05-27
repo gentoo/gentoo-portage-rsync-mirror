@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.59 2014/05/16 18:14:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.61 2014/05/27 06:13:43 graaff Exp $
+
+*locale-2.1.0-r2 (27 May 2014)
+
+  27 May 2014; Hans de Graaff <graaff@gentoo.org> locale-2.1.0-r1.ebuild,
+  +locale-2.1.0-r2.ebuild:
+  Add revision bump to create a stable candidate.
+
+*locale-2.0.5-r4 (27 May 2014)
+
+  27 May 2014; Hans de Graaff <graaff@gentoo.org> +locale-2.0.5-r4.ebuild:
+  Add revision bump compatible with rake 10 and ruby20.
 
   16 May 2014; Hans de Graaff <graaff@gentoo.org> locale-2.1.0-r1.ebuild:
   Add ruby21.

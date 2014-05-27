@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.7 2014/04/24 17:41:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.8 2014/05/27 06:22:24 graaff Exp $
+
+*text-1.2.3-r2 (27 May 2014)
+
+  27 May 2014; Hans de Graaff <graaff@gentoo.org> text-1.2.3-r1.ebuild,
+  +text-1.2.3-r2.ebuild:
+  Drop ruby21 to create a stable candidate.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -text-1.2.3.ebuild,
   text-1.2.3-r1.ebuild:
