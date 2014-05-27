@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64-r1.ebuild,v 1.1 2014/05/27 16:41:38 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64-r1.ebuild,v 1.2 2014/05/27 18:48:57 alonbl Exp $
 
 EAPI=5
 inherit eutils multilib systemd udev
@@ -44,7 +44,7 @@ src_install() {
 		INIT_D="none" \
 		MAN_D="/usr/share/man" \
 		LIB_D="/usr/$(get_libdir)" \
-		UDEV_D="$(udev_get_udevdir)" \
+		UDEV_D="$(get_udevdir)" \
 		SYSTEMD_UNIT_D="$(systemd_get_unitdir)" \
 		TMPFILES_D="/usr/$(get_libdir)/tmpfiles.d" \
 		ACPI="$(use acpi && echo force || echo disabled)" \

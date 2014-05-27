@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.87 2014/05/27 16:41:38 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.88 2014/05/27 18:48:57 alonbl Exp $
+
+  27 May 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  laptop-mode-tools-1.63-r2.ebuild, laptop-mode-tools-1.63-r3.ebuild,
+  laptop-mode-tools-1.64-r1.ebuild, laptop-mode-tools-1.64.ebuild:
+  s/udev_get_udevdir/get_udevdir/g' to support newer naming for udev eclass
 
 *laptop-mode-tools-1.64-r1 (27 May 2014)
 
