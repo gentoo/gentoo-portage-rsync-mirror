@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.9 2014/05/27 12:36:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426-r1.ebuild,v 1.1 2014/05/27 12:36:00 ssuominen Exp $
 
 EAPI=5
 
@@ -14,16 +14,17 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-qt/qtgui:4
-	!>=sys-devel/bison-3"
+RDEPEND="dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
 	virtual/yacc"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc47.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc47.patch \
+		"${FILESDIR}"/${P}-bison3.patch
 
 	pushd src >/dev/null
 	sed -i -e '/qPixmapFromMimeSource/d' *.ui || die #365019

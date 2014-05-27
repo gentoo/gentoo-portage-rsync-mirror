@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-s3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.58 2012/12/30 14:49:59 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.59 2014/05/27 12:41:15 chithanh Exp $
+
+*xf86-video-s3-0.6.5-r1 (27 May 2014)
+
+  27 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-s3-0.6.5-mibstore_h.patch, +xf86-video-s3-0.6.5-r1.ebuild,
+  -xf86-video-s3-0.6.3.ebuild, -xf86-video-s3-0.6.4.ebuild,
+  xf86-video-s3-0.6.5.ebuild:
+  Fix build with newer xorg-server. Remove old.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-s3-0.6.5.ebuild:
   Stable for alpha, wrt bug #440872
