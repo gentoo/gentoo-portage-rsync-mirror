@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.28 2014/05/18 18:59:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.29 2014/05/27 08:21:57 graaff Exp $
+
+  27 May 2014; Hans de Graaff <graaff@gentoo.org> cucumber-rails-1.4.1.ebuild:
+  Add ruby20.
 
 *cucumber-rails-1.4.1 (18 May 2014)
 
