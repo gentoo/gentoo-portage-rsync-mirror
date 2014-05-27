@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.6-r3.ebuild,v 1.1 2014/05/26 18:15:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.6-r3.ebuild,v 1.2 2014/05/27 06:32:32 mgorny Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="python? 2:2.6"
+PYTHON_COMPAT=( python2_7 )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 
-inherit python multilib pam linux-info autotools-utils systemd
+inherit python-single-r1 multilib pam linux-info autotools-utils systemd
 
 DESCRIPTION="System Security Services Daemon provides access to identity and authentication"
 HOMEPAGE="http://fedorahosted.org/sssd/"
@@ -67,11 +67,7 @@ PATCHES=(
 )
 
 pkg_setup(){
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-		python_need_rebuild
-	fi
+	use python && python-single-r1_pkg_setup
 	linux-info_pkg_setup
 }
 
@@ -110,6 +106,7 @@ src_configure(){
 
 src_install(){
 	autotools-utils_src_install
+	use python && python_optimize
 
 	insinto /etc/sssd
 	insopts -m600
@@ -118,8 +115,6 @@ src_install(){
 	insinto /etc/logrotate.d
 	insopts -m644
 	newins "${S}"/src/examples/logrotate sssd
-
-	use python && python_clean_installation_image
 
 	newconfd "${FILESDIR}"/sssd.conf sssd
 
@@ -135,12 +130,4 @@ pkg_postinst(){
 	elog "You must set up sssd.conf (default installed into /etc/sssd)"
 	elog "and (optionally) configuration in /etc/pam.d in order to use SSSD"
 	elog "features. Please see howto in	http://fedorahosted.org/sssd/wiki/HOWTO_Configure_1_0_2"
-
-	use python && \
-		python_mod_optimize SSSDConfig/{ipachangeconf,sssd_upgrade_config}.py
-}
-
-pkg_postrm() {
-	use python && \
-		python_mod_cleanup SSSDConfig/{ipachangeconf,sssd_upgrade_config}.py
 }

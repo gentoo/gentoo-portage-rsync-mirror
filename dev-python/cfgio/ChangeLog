@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/cfgio
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cfgio/ChangeLog,v 1.1 2014/05/27 06:31:20 ercpe Exp $
+
+*cfgio-0.1.2 (27 May 2014)
+
+  27 May 2014; Johann Schmitz <ercpe@gentoo.org> +cfgio-0.1.2.ebuild,
+  +metadata.xml:
+  Added ebuild for cfgio
