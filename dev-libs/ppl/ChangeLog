@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ppl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.66 2013/07/23 01:23:04 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.67 2014/05/27 04:57:28 rhill Exp $
+
+  27 May 2014; Ryan Hill <rhill@gentoo.org> -ppl-0.10.2-r1.ebuild,
+  -ppl-0.11.2-r1.ebuild, -ppl-0.12.ebuild, -ppl-0.12.1.ebuild, metadata.xml:
+  Remove old.
 
   23 Jul 2013; Jeroen Roovers <jer@gentoo.org> ppl-0.10.2-r1.ebuild,
   ppl-0.11.2-r1.ebuild:

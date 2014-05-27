@@ -4,6 +4,5 @@
 <herd>toolchain</herd>
 <use>
   <flag name='lpsol'>Build the ppl_lpsol linear programming problem solver</flag>
-  <flag name='watchdog'>Build the PPL Watchdog library - a C++ library for multiple, concurrent watchdog timers</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.05.ebuild,v 1.1 2014/05/26 03:36:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2014.05-r1.ebuild,v 1.1 2014/05/27 04:51:32 patrick Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc +parrot java moar"
 
 RDEPEND=">=dev-lang/parrot-${PARROT_VERSION}:=[unicode]
-	>=dev-lang/nqp-${NQP_VERSION}[parrot?,java?]"
+	>=dev-lang/nqp-${NQP_VERSION}[parrot?,java?,moar?]"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
