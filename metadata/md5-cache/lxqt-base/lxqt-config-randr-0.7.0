@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/glib:2 dev-qt/qtcore:4 dev-qt/qtgui:4 x11-libs/libX11 x11-libs/libXrandr virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=LXQt monitor configuration
+EAPI=5
+HOMEPAGE=http://www.lxqt.org/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1+
+RDEPEND=dev-libs/glib:2 dev-qt/qtcore:4 dev-qt/qtgui:4 x11-libs/libX11 x11-libs/libXrandr x11-apps/xrandr
+SLOT=0
+SRC_URI=http://lxqt.org/downloads/0.7.0/lxqt-config-randr-0.7.0.tar.xz
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=22edd5db78f140b47c2f204f0c378584

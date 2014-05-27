@@ -16,6 +16,7 @@
 	<flag name='llvm'>Enable LLVM backend for Gallium3D.</flag>
 	<flag name='llvm-shared-libs'>Dynamically link Gallium3D drivers against LLVM.</flag>
 	<flag name='opencl'>Enable the Clover Gallium OpenCL state tracker.</flag>
+	<flag name='openmax'>Enable OpenMAX video decode/encode acceleration for Gallium3D.</flag>
 	<flag name='openvg'>Enable the OpenVG 2D acceleration API for Gallium3D.</flag>
 	<flag name='osmesa'>Build the Mesa library for off-screen rendering.</flag>
 	<flag name='pax_kernel'>Enable if the user plans to run the package under a pax enabled hardened kernel</flag>

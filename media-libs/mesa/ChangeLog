@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.559 2014/05/21 14:15:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.560 2014/05/27 15:07:48 chithanh Exp $
+
+*mesa-10.2.0_rc4 (27 May 2014)
+
+  27 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-10.2.0_rc4.ebuild, metadata.xml:
+  Bump to latest prerelease. Drop llvm radeon backend requirement for opencl,
+  bug #506108.
 
 *mesa-10.1.4 (21 May 2014)
 

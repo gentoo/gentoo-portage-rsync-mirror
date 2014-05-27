@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/hidapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.6 2014/01/26 13:51:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.7 2014/05/27 15:26:59 blueness Exp $
+
+  27 May 2014; Anthony G. Basile <blueness@gentoo.org>
+  hidapi-0.8.0_pre20130121-r1.ebuild:
+  Keyword ~arm
 
 *hidapi-0.8.0_pre20130121-r1 (26 Jan 2014)
 
