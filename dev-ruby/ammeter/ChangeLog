@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ammeter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.13 2014/05/26 05:32:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.14 2014/05/27 07:42:17 graaff Exp $
+
+*ammeter-0.2.9-r1 (27 May 2014)
+
+  27 May 2014; Hans de Graaff <graaff@gentoo.org> +ammeter-0.2.9-r1.ebuild:
+  Add ruby20. Do not test with Rails 4.1 since that fails. Run specs through
+  bundler to get all the dependencies right. Drop x86 keyword due to bug
+  510614.
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> ammeter-0.2.9.ebuild:
   Remove ruby18 target.
