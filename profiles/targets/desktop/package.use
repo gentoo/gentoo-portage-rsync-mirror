@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.36 2014/05/08 12:54:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.37 2014/05/27 19:08:06 mgorny Exp $
+
+# Michał Górny <mgorny@gentoo.org> (27 May 2014)
+# Disable mng support by default since it is seldom used, and it
+# requires old libmng-1.
+app-emulation/emul-linux-x86-qtlibs -mng
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (08 May 2014)
 # Enable x11-libs/libxcb[xkb] as it is needed by x11-libs/libxkbcommon[X]

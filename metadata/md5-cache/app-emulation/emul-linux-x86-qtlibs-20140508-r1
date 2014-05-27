@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=mng +development
+KEYWORDS=-* ~amd64
+LICENSE=LGPL-2.1 GPL-3
+RDEPEND=|| ( ~app-emulation/emul-linux-x86-baselibs-20140508 ( dev-db/sqlite:3[abi_x86_32(-)] dev-libs/glib[abi_x86_32(-)] dev-libs/openssl[abi_x86_32(-)] mng? ( <media-libs/libmng-2[abi_x86_32(-)] ) media-libs/libpng:0/16[abi_x86_32(-)] media-libs/tiff[abi_x86_32(-)] sys-apps/dbus[abi_x86_32(-)] sys-libs/zlib[abi_x86_32(-)] virtual/jpeg:62[abi_x86_32(-)] ) ) || ( ~app-emulation/emul-linux-x86-medialibs-20140508 ( media-libs/gstreamer:0.10[abi_x86_32(-)] media-libs/gst-plugins-base:0.10[abi_x86_32(-)] ) ) || ( ~app-emulation/emul-linux-x86-opengl-20140508 virtual/opengl[abi_x86_32(-)] ) || ( ~app-emulation/emul-linux-x86-xlibs-20140508 ( media-libs/fontconfig[abi_x86_32(-)] media-libs/freetype[abi_x86_32(-)] x11-libs/libICE[abi_x86_32(-)] x11-libs/libSM[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXcursor[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] x11-libs/libXfixes[abi_x86_32(-)] x11-libs/libXinerama[abi_x86_32(-)] x11-libs/libXi[abi_x86_32(-)] x11-libs/libXrandr[abi_x86_32(-)] x11-libs/libXrender[abi_x86_32(-)] ) )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-qtlibs-20140508.tar.xz
+_eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=930ae8d4178991b20300ce9aa257e354
