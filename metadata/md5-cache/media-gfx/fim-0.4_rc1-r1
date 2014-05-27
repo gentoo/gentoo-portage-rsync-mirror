@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=media-fonts/terminus-font aalib? ( media-libs/aalib[slang] ) dia? ( app-office/dia ) djvu? ( app-text/djvu ) exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) graphicsmagick? ( media-gfx/graphicsmagick ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) jpeg? ( virtual/jpeg ) pdf? ( app-text/poppler ) png? ( media-libs/libpng ) postscript? ( app-text/libspectre ) readline? ( sys-libs/readline ) sdl? ( media-libs/libsdl ) svg? ( media-gfx/inkscape ) tiff? ( media-libs/tiff ) xfig? ( media-gfx/xfig ) sys-devel/bison sys-devel/flex !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Fbi-IMproved is a framebuffer image viewer based on Fbi and inspired from Vim
+EAPI=5
+HOMEPAGE=http://savannah.nongnu.org/projects/fbi-improved
+IUSE=aalib dia djvu exif fbcon gif graphicsmagick imagemagick jpeg pdf png postscript readline sdl static svg tiff xfig
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2
+RDEPEND=media-fonts/terminus-font aalib? ( media-libs/aalib[slang] ) dia? ( app-office/dia ) djvu? ( app-text/djvu ) exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) graphicsmagick? ( media-gfx/graphicsmagick ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) jpeg? ( virtual/jpeg ) pdf? ( app-text/poppler ) png? ( media-libs/libpng ) postscript? ( app-text/libspectre ) readline? ( sys-libs/readline ) sdl? ( media-libs/libsdl ) svg? ( media-gfx/inkscape ) tiff? ( media-libs/tiff ) xfig? ( media-gfx/xfig )
+SLOT=0
+SRC_URI=http://download.savannah.gnu.org/releases/fbi-improved/fim-0.4-rc1.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=22aabca1a6ebf0335a6b8c89be25688c

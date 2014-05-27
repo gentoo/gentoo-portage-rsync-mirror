@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/fim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/ChangeLog,v 1.4 2014/01/11 02:06:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/ChangeLog,v 1.5 2014/05/27 11:51:16 xmw Exp $
+
+*fim-0.4_rc1-r1 (27 May 2014)
+*fim-0.4_rc1_p1 (27 May 2014)
+
+  27 May 2014; Michael Weber <xmw@gentoo.org>
+  +files/fim-0.4_rc1-giflib-4.2.patch, +fim-0.4_rc1-r1.ebuild,
+  +fim-0.4_rc1_p1.ebuild:
+  Fix compilation against giflib-4.2 (bug 504772)
 
 *fim-0.4_rc1 (11 Jan 2014)
 
