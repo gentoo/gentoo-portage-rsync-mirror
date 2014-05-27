@@ -1,0 +1,10 @@
+# ChangeLog for lxqt-base/lxqt-notificationd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.1 2014/05/27 14:41:31 jauhien Exp $
+
+*lxqt-notificationd-0.7.0 (27 May 2014)
+
+  27 May 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +lxqt-notificationd-0.7.0.ebuild, +metadata.xml:
+  Initial import from the qt overlay, thanks to Harvey Mittens and Davide
+  Pesavento, see bug #509946
