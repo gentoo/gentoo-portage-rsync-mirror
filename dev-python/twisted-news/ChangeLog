@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.73 2014/05/20 07:08:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.74 2014/05/28 09:00:39 idella4 Exp $
+
+  28 May 2014; Ian Delaney <idella4@gentoo.org> twisted-news-14.0.0.ebuild:
+  re-keyword ~arm, tested on armv7, cubieboard2
 
 *twisted-news-14.0.0 (20 May 2014)
 
