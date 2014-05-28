@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libcloud
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/ChangeLog,v 1.15 2014/03/31 20:38:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/ChangeLog,v 1.16 2014/05/28 07:28:11 djc Exp $
+
+  28 May 2014; Dirkjan Ochtman <djc@gentoo.org> -libcloud-0.12.4-r1.ebuild,
+  -libcloud-0.13.2.ebuild:
+  Remove vulnerable versions (bug 496774)
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> libcloud-0.12.4-r1.ebuild,
   libcloud-0.13.2.ebuild, libcloud-0.14.1.ebuild:

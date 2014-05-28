@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.100 2014/05/20 10:47:53 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.101 2014/05/28 07:17:29 idella4 Exp $
+
+  28 May 2014; Ian Delaney <idella4@gentoo.org> twisted-web-14.0.0.ebuild:
+  re-keyword ~arm, tested on armv7, cubieboard2
 
 *twisted-web-14.0.0 (20 May 2014)
 
