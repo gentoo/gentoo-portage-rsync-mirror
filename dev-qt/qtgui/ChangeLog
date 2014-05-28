@@ -1,6 +1,13 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.22 2014/04/23 11:38:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.23 2014/05/28 01:12:25 pesa Exp $
+
+*qtgui-4.8.5-r2 (28 May 2014)
+
+  28 May 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtgui-4.8.5-dont-crash-on-broken-GIF-images.patch,
+  +qtgui-4.8.5-r2.ebuild:
+  Apply patch for security bug #508984. Add missing deps.
 
   23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> metadata.xml:
   Revert metadata.

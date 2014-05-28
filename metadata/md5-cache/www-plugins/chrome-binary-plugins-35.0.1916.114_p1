@@ -5,9 +5,9 @@ HOMEPAGE=http://www.google.com/chrome
 IUSE=+flash +pdf
 KEYWORDS=~amd64 ~x86
 LICENSE=google-chrome
-RDEPEND=www-client/chromium !www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:beta !www-plugins/chrome-binary-plugins:unstable
+RDEPEND==www-client/chromium-35* !www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:beta !www-plugins/chrome-binary-plugins:unstable
 RESTRICT=bindist mirror strip
 SLOT=stable
 SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_35.0.1916.114-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_35.0.1916.114-1_i386.deb )
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=544ae350329a3e771b52b6cc6f6f9de7
+_md5_=75da486f535c53c8f92982186b262a9b
