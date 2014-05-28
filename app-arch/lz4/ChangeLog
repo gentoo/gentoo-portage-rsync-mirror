@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.18 2014/05/28 12:28:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.19 2014/05/28 12:58:22 pinkbyte Exp $
+
+  28 May 2014; Sergey Popov <pinkbyte@gentoo.org> lz4-0_p106-r1.ebuild,
+  lz4-9999.ebuild:
+  Add ~s390, copy keywords to unified live ebuild
 
   28 May 2014; Sergey Popov <pinkbyte@gentoo.org> lz4-0_p106-r1.ebuild:
   Stable on x86, wrt bug #509954
