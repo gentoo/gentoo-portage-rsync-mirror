@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.1.2.ebuild,v 1.1 2014/05/05 22:33:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.1.2.ebuild,v 1.2 2014/05/28 12:09:54 johu Exp $
 
 EAPI=5
 
@@ -20,5 +20,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
 RDEPEND=">=net-fs/samba-3.4.2[cups]"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+"
 
 DOCS=( AUTHORS BUGS ChangeLog README )

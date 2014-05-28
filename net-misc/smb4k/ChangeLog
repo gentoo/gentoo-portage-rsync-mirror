@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.132 2014/05/05 22:33:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.133 2014/05/28 12:09:54 johu Exp $
+
+  28 May 2014; Johannes Huber <johu@gentoo.org> smb4k-1.1.2.ebuild:
+  Add missing DEPEND on sys-devel/gettext by Nikoli <nikoli@gmx.us>.
 
 *smb4k-1.1.2 (05 May 2014)
 

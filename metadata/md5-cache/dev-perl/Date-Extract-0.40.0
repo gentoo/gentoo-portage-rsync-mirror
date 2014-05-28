@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=test? ( >=virtual/perl-Test-Simple-0.96 ) dev-lang/perl:=[-build(-)]
-DESCRIPTION=Finds name and type of a global variable
+DEPEND=dev-perl/Class-Data-Inheritable >=dev-perl/DateTime-Format-Natural-0.60 test? ( virtual/perl-Test-Simple dev-perl/Test-MockTime ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Extract probable dates from strings
 EAPI=5
-HOMEPAGE=http://search.cpan.org/dist/Symbol-Global-Name/
+HOMEPAGE=http://search.cpan.org/dist/Date-Extract/
 IUSE=test
 KEYWORDS=~amd64
 LICENSE=Artistic-2
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
-SRC_URI=mirror://cpan/authors/id/A/AL/ALEXMV/Symbol-Global-Name-0.05.tar.gz
+SRC_URI=mirror://cpan/authors/id/S/SA/SARTAK/Date-Extract-0.04.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=9819a1fc15a697f915f10a5af0cd8739
+_md5_=93c72089d24af62d93cc55a414393ff6

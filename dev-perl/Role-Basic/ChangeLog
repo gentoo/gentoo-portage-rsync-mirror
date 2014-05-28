@@ -1,10 +1,15 @@
 # ChangeLog for dev-perl/Role-Basic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Basic/ChangeLog,v 1.1 2014/05/28 10:16:39 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Basic/ChangeLog,v 1.2 2014/05/28 12:18:52 zlogene Exp $
+
+*Role-Basic-0.130.0 (28 May 2014)
+
+  28 May 2014; Mikle Kolyada <zlogene@gentoo.org> +Role-Basic-0.130.0.ebuild,
+  -Role-Basic-0.13.ebuild:
+  Drop old
 
 *Role-Basic-0.13 (28 May 2014)
 
   28 May 2014; Aaron W. Swenson <titanofold@gentoo.org>
   +Role-Basic-0.13.ebuild, +metadata.xml:
   Initial commit. Ebuild written by me. Satisfies dependency for www-apps/rt.
-

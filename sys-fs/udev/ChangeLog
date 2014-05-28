@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1033 2014/05/28 11:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1034 2014/05/28 12:22:27 ssuominen Exp $
+
+  28 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Remove --disable-xattr because git is now using libc's xattr support instead
+  of libattr wrt http://cgit.freedesktop.org/systemd/systemd/commit/?id=d2edfae0
+  f9bdbecf6a8518e2a5bcf06f470e0d9e
 
 *udev-213 (28 May 2014)
 
