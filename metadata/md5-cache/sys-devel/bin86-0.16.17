@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install unpack
-DESCRIPTION=Assembler and loader used to create kernel bootsector
-HOMEPAGE=http://www.debath.co.uk/
-KEYWORDS=-* amd64 x86
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=http://www.debath.co.uk/dev86/bin86-0.16.17.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c693c2260c0fdc67e74fe1dc399e442e

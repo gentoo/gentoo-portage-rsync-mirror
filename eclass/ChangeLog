@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1275 2014/05/26 17:20:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1276 2014/05/28 09:48:01 jlec Exp $
+
+  28 May 2014; Justin Lecher <jlec@gentoo.org> portability.eclass:
+  Add documentation for man page; add missing die
 
   26 May 2014; Michał Górny <mgorny@gentoo.org>
   +gnome-python-common-r1.eclass:

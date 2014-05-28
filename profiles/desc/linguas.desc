@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.78 2014/05/16 01:28:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.79 2014/05/28 09:44:33 pinkbyte Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -245,6 +245,7 @@ ur_IN - Urdu locale for India
 ur_PK - Urdu language locale for Pakistan
 uz - Uzbek locale
 uz@cyrillic - Uzbek (cyrillic) locale
+uz@Latn - Uzbek (latin) locale
 ve - Venda locale
 vi - Vietnamese locale
 vi_VN - Vietnamese locale

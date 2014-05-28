@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.44 2014/01/28 07:04:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.45 2014/05/28 09:50:33 jlec Exp $
+
+*nvidia-cuda-sdk-6.0.37 (28 May 2014)
+
+  28 May 2014; Justin Lecher <jlec@gentoo.org> +nvidia-cuda-sdk-6.0.37.ebuild,
+  +files/nvidia-cuda-sdk-6.0.37-asneeded.patch,
+  +files/nvidia-cuda-sdk-6.0.37-simpleMPI.patch:
+  Version Bump, #507804
 
   28 Jan 2014; Patrick Lauer <patrick@gentoo.org>
   -nvidia-cuda-sdk-5.0.35-r1.ebuild:

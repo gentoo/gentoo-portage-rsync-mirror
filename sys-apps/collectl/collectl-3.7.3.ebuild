@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.6.5.ebuild,v 1.1 2013/01/06 18:18:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.7.3.ebuild,v 1.1 2014/05/28 09:45:44 polynomial-c Exp $
 
 EAPI="4"
 
@@ -27,9 +27,9 @@ src_install() {
 	DESTDIR="${D}" bash -ex ./INSTALL || die
 
 	rm "${D}"/etc/init.d/* || die
-	newinitd "${FILESDIR}"/collectl.initd collectl
+	newinitd "${FILESDIR}"/collectl.initd-2 collectl
 
 	cd "${D}"/usr/share/doc/${PF} || die
 	dohtml *
-	rm -f ARTISTIC GPL COPYING *.html *.jpg *.css || die
+	rm ARTISTIC GPL COPYING *.html *.jpg *.css || die
 }

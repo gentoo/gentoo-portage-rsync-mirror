@@ -1,0 +1,11 @@
+--- a/cuda-samples/0_Simple/simpleMPI/Makefile
++++ b/cuda-samples/0_Simple/simpleMPI/Makefile
+@@ -172,7 +172,7 @@
+       MPICXX=mpicxx
+       EXEC=@echo "[@]"
+ else
+-      MPI_GCC := $(shell $(MPICXX) -v 2>&1 | grep x86_64-pc-linux-gnu-gcc | wc -l | tr -d ' ')
++      MPI_GCC := $(shell $(MPICXX) -v 2>&1 | grep gcc | wc -l | tr -d ' ')
+ ifeq ($(MPI_GCC),0)
+       MPI_CCFLAGS += -stdlib=libstdc++
+       MPI_LDFLAGS += -stdlib=libstdc++
