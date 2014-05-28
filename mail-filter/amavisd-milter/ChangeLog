@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-milter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-milter/ChangeLog,v 1.7 2014/05/16 19:14:26 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-milter/ChangeLog,v 1.8 2014/05/28 19:17:33 nimiux Exp $
+
+  28 May 2014; Chema Alonso <nimiux@gentoo.org> amavisd-milter-1.5.0-r1.ebuild:
+  Stable for amd64 wrt bug #502824
 
 *amavisd-milter-1.6.0 (16 May 2014)
 

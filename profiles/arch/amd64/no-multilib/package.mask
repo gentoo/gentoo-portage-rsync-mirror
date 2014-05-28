@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.132 2014/04/01 15:42:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.133 2014/05/28 19:02:32 swift Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -149,7 +149,6 @@ media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/skype-call-recorder
 media-sound/ventrilo-server-bin
-media-tv/huludesktop
 media-video/binkplayer
 media-video/tsmuxer
 net-im/skype

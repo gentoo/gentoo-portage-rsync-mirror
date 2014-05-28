@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.60 2014/05/23 13:26:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.61 2014/05/28 19:07:20 tomwij Exp $
+
+*oracle-jdk-bin-1.7.0.60 (28 May 2014)
+
+  28 May 2014; Tom Wijsman <TomWij@gentoo.org> +oracle-jdk-bin-1.7.0.60.ebuild:
+  Version bump to 1.7.0.60; fixes bug #511714, reported by Robert Forsman.
 
   23 May 2014; Manuel Rüger <mrueg@gentoo.org> oracle-jdk-bin-1.7.0.55.ebuild:
   Add ~arm keyword. Fix bug #467168. Acked by ercpe.

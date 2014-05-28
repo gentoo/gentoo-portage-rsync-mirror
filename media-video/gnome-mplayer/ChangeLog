@@ -1,6 +1,16 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.87 2014/03/12 05:23:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.89 2014/05/28 19:18:26 ssuominen Exp $
+
+  28 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -gnome-mplayer-1.0.7.ebuild:
+  old
+
+*gnome-mplayer-1.0.9 (28 May 2014)
+
+  28 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +gnome-mplayer-1.0.9.ebuild:
+  Version bump wrt #510060 by Manuel Rüger
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnome-mplayer-1.0.8.ebuild:

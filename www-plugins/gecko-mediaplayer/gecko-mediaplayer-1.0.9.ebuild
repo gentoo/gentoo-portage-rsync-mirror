@@ -1,17 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.7.ebuild,v 1.3 2013/01/21 11:22:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.9.ebuild,v 1.1 2014/05/28 19:15:55 ssuominen Exp $
 
 EAPI=5
 inherit multilib nsplugins
 
 DESCRIPTION="A browser plugin that uses GNOME MPlayer"
 HOMEPAGE="http://code.google.com/p/gecko-mediaplayer/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/svn/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+curl"
 
 RDEPEND=">=dev-libs/dbus-glib-0.100
@@ -22,9 +22,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.100
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	virtual/pkgconfig
 	>=net-misc/npapi-sdk-0.27
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 DOCS="ChangeLog DOCS/tech/*.txt"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.31 2014/04/01 15:41:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.32 2014/05/28 19:02:33 swift Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
@@ -170,7 +170,6 @@ media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/skype-call-recorder
 media-sound/ventrilo-server-bin
-media-tv/huludesktop
 media-video/binkplayer
 media-video/tsmuxer
 net-im/skype
