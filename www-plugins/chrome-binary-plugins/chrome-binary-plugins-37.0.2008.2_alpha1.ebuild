@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-37.0.2008.2_alpha1.ebuild,v 1.2 2014/05/28 01:12:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-37.0.2008.2_alpha1.ebuild,v 1.3 2014/05/28 02:12:04 floppym Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ SRC_URI="
 
 LICENSE="google-chrome"
 KEYWORDS="~amd64 ~x86"
-IUSE="+flash +pdf"
+IUSE="+flash"
 RESTRICT="bindist mirror strip"
 
 RDEPEND="=www-client/chromium-${PV%%.*}*"
@@ -63,8 +63,6 @@ src_install() {
 	local version flapper
 
 	insinto /usr/$(get_libdir)/chromium-browser/
-
-	use pdf && doins libpdf.so
 
 	if use flash; then
 		doins -r PepperFlash

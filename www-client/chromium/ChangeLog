@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1083 2014/05/24 08:47:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1084 2014/05/28 02:20:44 floppym Exp $
+
+  28 May 2014; Mike Gilbert <floppym@gentoo.org> chromium-37.0.2008.2.ebuild:
+  Add blocker to on <chrome-binary-plugins-37 so that portage upgrades
+  correctly.
 
 *chromium-37.0.2008.2 (24 May 2014)
 
