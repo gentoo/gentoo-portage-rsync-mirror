@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.2 2014/05/17 14:47:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.3 2014/05/28 15:20:44 floppym Exp $
 
 EAPI=5
 
@@ -36,6 +36,11 @@ RESTRICT="test"
 python_prepare_all() {
 	sed -e "/data_files=/d" -i setup.py || die
 	distutils-r1_python_prepare_all
+}
+
+src_configure() {
+	# Override faulty detection in setup.py, bug 510974.
+	export PYCURL_SSL_LIBRARY=${CURL_SSL}
 }
 
 python_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.76 2014/05/20 07:11:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.77 2014/05/28 15:08:29 idella4 Exp $
+
+  28 May 2014; Ian Delaney <idella4@gentoo.org> twisted-runner-14.0.0.ebuild:
+  re-keyword ~arm, tested on armv7, cubieboard2 wrt Bug #510832
 
 *twisted-runner-14.0.0 (20 May 2014)
 

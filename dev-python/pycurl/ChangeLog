@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.93 2014/05/17 14:47:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.94 2014/05/28 15:20:44 floppym Exp $
+
+  28 May 2014; Mike Gilbert <floppym@gentoo.org> pycurl-7.19.0-r3.ebuild,
+  pycurl-7.19.3.1.ebuild:
+  Override faulty curl ssl detection in setup.py, bug 510974 by Hanspeter
+  Spalinger.
 
   17 May 2014; Ian Delaney <idella4@gentoo.org> pycurl-7.19.3.1.ebuild:
   restrict test due to extensive keyword deficits in new test deps

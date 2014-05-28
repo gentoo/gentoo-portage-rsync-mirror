@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.301 2014/05/15 07:07:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.302 2014/05/28 15:13:39 djc Exp $
+
+*timezone-data-2014d (28 May 2014)
+
+  28 May 2014; Dirkjan Ochtman <djc@gentoo.org> +timezone-data-2014d.ebuild:
+  Version bump timezone-data to 2014d (fixes bug 510422)
 
   15 May 2014; Dirkjan Ochtman <djc@gentoo.org> timezone-data-2014a.ebuild:
   Stabilize timezone-data-2014a for everyone
