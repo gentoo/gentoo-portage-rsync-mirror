@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.186 2014/05/27 17:14:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.187 2014/05/28 13:29:34 ssuominen Exp $
+
+*libffi-3.1-r1 (28 May 2014)
+
+  28 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libffi-3.1-execstack.patch, +libffi-3.1-r1.ebuild:
+  Fix execstack in libffi.so.6 wrt #511634 by Anthony Basile and Magnus Granberg
 
   27 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/libffi-3.0.11-x86-pic-check.patch, -libffi-3.0.11.ebuild,

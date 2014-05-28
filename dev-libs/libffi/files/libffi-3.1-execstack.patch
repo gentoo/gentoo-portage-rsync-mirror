@@ -1,0 +1,11 @@
+http://bugs.gentoo.org/511634
+
+--- src/x86/win32.S
++++ src/x86/win32.S
+@@ -1304,3 +1304,6 @@
+ 
+ #endif /* !_MSC_VER */
+ 
++#if defined __ELF__ && defined __linux__
++	.section        .note.GNU-stack,"",@progbits
++#endif
