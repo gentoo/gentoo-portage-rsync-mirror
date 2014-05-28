@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install preinst prepare setup
+DEPEND=>=sys-libs/libsepol-2.1.4 >=sys-libs/libselinux-2.3 sys-devel/bison sys-devel/flex >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 virtual/pkgconfig java? ( dev-lang/swig:1 >=virtual/jdk-1.4 ) python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-lang/swig:1 ) X? ( >=dev-lang/tk-8.4.9 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=SELinux policy tools
+EAPI=5
+HOMEPAGE=http://www.tresys.com/selinux/selinux_policy_tools.shtml
+IUSE=X debug java python elibc_FreeBSD java python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/libsepol-2.1.4 >=sys-libs/libselinux-2.3 >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 java? ( >=virtual/jre-1.4 ) X? ( >=dev-lang/tk-8.4.9 >=dev-tcltk/bwidget-1.8 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://oss.tresys.com/projects/setools/chrome/site/dists/setools-3.3.8/setools-3.3.8.tar.bz2 http://dev.gentoo.org/~swift/patches/setools/setools-3.3.8-01-fedora-patches.tar.gz http://dev.gentoo.org/~swift/patches/setools/setools-3.3.8-03-gentoo-patches.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=646079890d9be732a6cfb09442c1f609
