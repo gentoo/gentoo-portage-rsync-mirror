@@ -1,20 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-19.1.ebuild,v 1.6 2014/05/28 10:19:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-21.4.ebuild,v 1.1 2014/05/28 10:19:55 jlec Exp $
 
-EAPI=4
+EAPI=5
+
 inherit multilib rpm toolchain-funcs
 
 DESCRIPTION="hardware detection tool used in SuSE Linux"
 HOMEPAGE="http://www.opensuse.org/"
-SRC_URI="http://download.opensuse.org/source/factory/repo/oss/suse/src/${P}-1.2.src.rpm"
+SRC_URI="http://download.opensuse.org/source/factory/repo/oss/suse/src/${P}-1.1.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="amd64? ( dev-libs/libx86emu )
+RDEPEND="
+	amd64? ( dev-libs/libx86emu )
 	x86? ( dev-libs/libx86emu )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -34,6 +36,11 @@ src_prepare() {
 	sed -i -e 's:$(CC) -shared:& $(LDFLAGS):' src/Makefile || die
 	sed -i -e 's:$(CC) $(CFLAGS):$(CC) $(LDFLAGS) $(CFLAGS):' src/ids/Makefile || die
 
+	# Use linux/pci.h directly. #506876
+	sed -i \
+		-e '/#include.*sys\/pci.h/s:sys/pci.h:linux/pci.h:' \
+		src/hd/*.c || die
+
 	# Respect MAKE variable. Skip forced -pipe and -g. Respect LDFLAGS.
 	sed -i \
 		-e 's:make:$(MAKE):' \
@@ -51,7 +58,7 @@ src_install() {
 	emake DESTDIR="${ED}" LIBDIR="/usr/$(get_libdir)" install
 
 	dodoc changelog README
-	doman doc/hwinfo.8
+	doman doc/*.{1,8}
 	insinto /usr/share/doc/${PF}/examples
 	doins doc/example*.c
 }

@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Email-Address-List
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address-List/ChangeLog,v 1.1 2014/05/28 10:17:08 titanofold Exp $
+
+*Email-Address-List-0.05 (28 May 2014)
+
+  28 May 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  +Email-Address-List-0.05.ebuild, +metadata.xml:
+  Initial commit. Ebuild written by me. Satisfies dependency for www-apps/rt.
+

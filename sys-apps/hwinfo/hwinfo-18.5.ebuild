@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.5.ebuild,v 1.5 2011/12/13 23:12:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.5.ebuild,v 1.6 2014/05/28 10:19:55 jlec Exp $
 
 EAPI=4
 inherit multilib rpm toolchain-funcs
 
-DESCRIPTION="hwinfo is the hardware detection tool used in SuSE Linux."
+DESCRIPTION="hardware detection tool used in SuSE Linux"
 HOMEPAGE="http://www.opensuse.org/"
 SRC_URI="http://download.opensuse.org/source/factory/repo/oss/suse/src/${P}-2.1.src.rpm"
 
