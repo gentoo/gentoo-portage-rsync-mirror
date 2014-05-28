@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dd-rescue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.34 2014/01/07 09:56:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.35 2014/05/28 13:53:21 polynomial-c Exp $
+
+*dd-rescue-1.44 (28 May 2014)
+
+  28 May 2014; Lars Wendler <polynomial-c@gentoo.org> +dd-rescue-1.44.ebuild:
+  Version bump.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -dd-rescue-1.10.ebuild,
   -dd-rescue-1.24.ebuild, -dd-rescue-1.25.ebuild:
