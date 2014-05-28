@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.540-r1.ebuild,v 1.2 2014/01/08 06:45:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.600.ebuild,v 1.1 2014/05/28 00:35:35 tomwij Exp $
 
 EAPI="5"
 
 inherit eutils pam user
 
-DESCRIPTION="A web-based user administration interface."
+DESCRIPTION="A web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
 SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
 
@@ -42,10 +42,6 @@ src_prepare() {
 	# Change /usr/local/bin/perl references
 	find . -type f | xargs sed -i -e 's:^#!.*/usr/local/bin/perl:#!/usr/bin/perl:'
 
-	# Fixup the config files to use their real locations
-	sed -i -e "s:^pidfile=.*$:pidfile=/var/run/${PN}.pid:" etc/${PN}/miniserv.conf
-	find etc/${PN} -type f | xargs sed -i -e "s:${D}:/:g"
-
 	epatch "${FILESDIR}"/${PN}-1.080-safestop.patch
 	epatch "${FILESDIR}"/${PN}-1.150-setup-nocheck.patch
 }
@@ -54,7 +50,7 @@ src_install() {
 	dodir /usr/libexec/${PN}
 	cp -pR * "${D}"/usr/libexec/${PN}
 
-	newinitd "${FILESDIR}"/${PF}.init ${PN}
+	newinitd "${FILESDIR}"/${PN}-1.540-r1.init ${PN}
 	newpamd "${FILESDIR}"/${PN}.pam-include.1 ${PN}
 
 	dodir /etc/${PN}
