@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.3.ebuild,v 1.2 2014/02/05 23:50:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.3.2.ebuild,v 1.1 2014/05/28 16:02:07 bicatali Exp $
 
 EAPI=5
 
@@ -18,24 +18,28 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="
-	dev-libs/expat
+	dev-libs/expat:0=
 	dev-python/numpy[${PYTHON_USEDEP}]
-	sci-astronomy/erfa
-	sci-astronomy/wcslib
-	sci-libs/cfitsio
-	sys-libs/zlib"
+	sci-astronomy/erfa:0=
+	sci-astronomy/wcslib:0=
+	>=sci-libs/cfitsio-3.350:0=
+	sys-libs/zlib:0="
 DEPEND="${RDEPEND}
 	dev-python/cython[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/pkgconfig
-	doc? ( dev-python/matplotlib
-		   dev-python/sphinx
-		   media-gfx/graphviz )
-	test? (	dev-libs/libxml2
-			dev-python/h5py[${PYTHON_USEDEP}]
-			dev-python/matplotlib[${PYTHON_USEDEP}]
-			dev-python/pytest[${PYTHON_USEDEP}]
-			sci-libs/scipy[${PYTHON_USEDEP}] )"
+	doc? (
+		dev-python/matplotlib
+		dev-python/sphinx
+		media-gfx/graphviz
+	)
+	test? (
+		dev-libs/libxml2
+		dev-python/h5py[${PYTHON_USEDEP}]
+		dev-python/matplotlib[${PYTHON_USEDEP}]
+		dev-python/pytest[${PYTHON_USEDEP}]
+		sci-libs/scipy[${PYTHON_USEDEP}]
+	)"
 
 python_compile() {
 	distutils-r1_python_compile --use-system-libraries
@@ -56,6 +60,6 @@ python_test() {
 }
 
 python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
 	distutils-r1_python_install_all
-	use doc && dohtml -r docs/_build/html
 }

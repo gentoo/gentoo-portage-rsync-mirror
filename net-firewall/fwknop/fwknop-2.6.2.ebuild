@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/fwknop-2.6.1.ebuild,v 1.1 2014/04/27 10:50:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/fwknop-2.6.2.ebuild,v 1.1 2014/05/28 16:17:58 swift Exp $
 
 EAPI=5
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/astropy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.19 2014/04/16 11:39:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.20 2014/05/28 16:02:07 bicatali Exp $
+
+*astropy-0.3.2 (28 May 2014)
+
+  28 May 2014; Sébastien Fabbro <bicatali@gentoo.org> +astropy-0.3.2.ebuild,
+  -astropy-0.3.ebuild:
+  Version bump
 
   16 Apr 2014; Kacper Kowalik <xarthisius@gentoo.org> astropy-0.3.1.ebuild:
   Fix PV in cfitsio dependency wrt #507364. Thanks to Mikko Laine
