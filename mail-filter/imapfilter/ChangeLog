@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/imapfilter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.59 2014/01/25 09:31:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.60 2014/05/28 18:57:29 nimiux Exp $
+
+  28 May 2014; Chema Alonso <nimiux@gentoo.org> imapfilter-2.5.6.ebuild:
+  Stable for amd64 wrt bug #502828
 
   25 Jan 2014; Tim Harder <radhermit@gentoo.org> -imapfilter-2.5.2.ebuild,
   -imapfilter-2.5.3.ebuild:

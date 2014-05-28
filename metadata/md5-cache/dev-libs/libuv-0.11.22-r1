@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD BSD-2 ISC MIT
 SLOT=0/11
 SRC_URI=https://github.com/joyent/libuv/archive/v0.11.22.tar.gz -> libuv-0.11.22.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	cfb9eef4b752cd4e4fbae4213ec6d2e5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	db7559a2635f4e50d9529a09ab5e01bf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=249c28367deccaec17879d5163a92457

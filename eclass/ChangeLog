@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1276 2014/05/28 09:48:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1277 2014/05/28 18:53:20 mgorny Exp $
+
+  28 May 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Fix ABI flag stripping in multilib_get_enabled_abis(), bug #511682.
 
   28 May 2014; Justin Lecher <jlec@gentoo.org> portability.eclass:
   Add documentation for man page; add missing die

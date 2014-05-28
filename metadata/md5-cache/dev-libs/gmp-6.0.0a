@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20131008-r1 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://gnu/gmp/gmp-6.0.0a.tar.xz ftp://ftp.gmplib.org/pub/gmp-6.0.0a/gmp-6.0.0a.tar.xz doc? ( http://gmplib.org/gmp-man-6.0.0a.pdf )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	cfb9eef4b752cd4e4fbae4213ec6d2e5	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	db7559a2635f4e50d9529a09ab5e01bf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=45bf79bbe421faf490656df548832bd3

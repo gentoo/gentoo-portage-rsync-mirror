@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.54 2014/05/23 17:11:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.55 2014/05/28 18:53:20 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -125,7 +125,7 @@ multilib_get_enabled_abis() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	local pairs=( $(multilib_get_enabled_abi_pairs) )
-	echo "${pairs[@]#*:}"
+	echo "${pairs[@]#*.}"
 }
 
 # @FUNCTION: multilib_get_enabled_abi_pairs
