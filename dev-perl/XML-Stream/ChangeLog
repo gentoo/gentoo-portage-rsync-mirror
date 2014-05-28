@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Stream
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.26 2012/09/06 01:32:36 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.27 2014/05/28 20:15:20 zlogene Exp $
+
+  28 May 2014; Mikle Kolyada <zlogene@gentoo.org> XML-Stream-1.230.0.ebuild:
+  Bump to EAPI=5
 
   06 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   XML-Stream-1.230.0.ebuild:
