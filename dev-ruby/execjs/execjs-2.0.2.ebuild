@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-2.0.2.ebuild,v 1.4 2014/04/22 19:22:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-2.0.2.ebuild,v 1.5 2014/05/28 05:50:08 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -21,8 +21,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 
 IUSE="test"
-
-ruby_add_rdepend ">=dev-ruby/multi_json-1.0"
 
 # execjs supports various javascript runtimes. They are listed in order
 # as per the documentation. For now only include the ones already in the

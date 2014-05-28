@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.24 2014/05/27 13:52:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.25 2014/05/28 05:58:30 idella4 Exp $
+
+  28 May 2014; Ian Delaney <idella4@gentoo.org> twisted-core-14.0.0.ebuild:
+  re-keyword ~arm, tested on armv7, cubieboard2
 
   27 May 2014; Ian Delaney <idella4@gentoo.org> twisted-core-14.0.0.ebuild:
   Correct USE test set in RDEPEND, minor tidy, update test phase, ticket filed
