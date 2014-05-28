@@ -8,6 +8,6 @@ LICENSE=google-chrome
 RDEPEND==www-client/chromium-37* !www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:beta !www-plugins/chrome-binary-plugins:stable
 RESTRICT=bindist mirror strip
 SLOT=unstable
-SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_37.0.2008.2-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_37.0.2008.2-1_i386.deb )
+SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_37.0.2017.2-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_37.0.2017.2-1_i386.deb )
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=ed6a1afe5ba324c8ebc6f46b13ce625d
+_md5_=22de1d4290d6993aa3c4ced0af891f9f
