@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/osm2pgsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.12 2014/01/29 00:06:26 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.13 2014/05/28 14:19:16 titanofold Exp $
+
+  28 May 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  -osm2pgsql-20100413.ebuild:
+  Remove outdated version. Fixes bug 510676.
 
 *osm2pgsql-0.84.0 (29 Jan 2014)
 

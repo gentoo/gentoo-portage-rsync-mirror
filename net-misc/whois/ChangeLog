@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.200 2014/05/03 08:33:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.201 2014/05/28 14:12:05 polynomial-c Exp $
+
+*whois-5.1.3 (28 May 2014)
+
+  28 May 2014; Lars Wendler <polynomial-c@gentoo.org> -whois-5.0.11.ebuild,
+  -whois-5.0.15.ebuild, -whois-5.0.16.ebuild, -whois-5.0.17.ebuild,
+  -whois-5.0.18.ebuild, -whois-5.0.19.ebuild, -whois-5.0.20.ebuild,
+  -whois-5.0.22.ebuild, -whois-5.0.23.ebuild, -whois-5.0.24.ebuild,
+  -whois-5.1.0.ebuild, -whois-5.1.1.ebuild, +whois-5.1.3.ebuild,
+  +files/whois-5.1.3-po_fixes.patch:
+  Version bump. Removed old.
 
 *whois-5.1.2 (03 May 2014)
 
