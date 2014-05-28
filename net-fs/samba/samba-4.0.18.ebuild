@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.16.ebuild,v 1.1 2014/03/14 09:30:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.18.ebuild,v 1.1 2014/05/28 07:31:51 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -74,7 +74,6 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.1.0-remove-dmapi-automagic.patch"
 	"${FILESDIR}/named.conf.dlz.patch"
-	"${FILESDIR}/${PN}-4.x-readline63_typedef_fix.patch"
 )
 
 WAF_BINARY="${S}/buildtools/bin/waf"
