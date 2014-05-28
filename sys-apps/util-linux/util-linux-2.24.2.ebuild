@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.1 2014/05/28 09:32:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.2.ebuild,v 1.2 2014/05/28 18:01:28 hwoarang Exp $
 
 EAPI="4"
 
@@ -65,6 +65,7 @@ src_prepare() {
 		po/update-potfiles
 		eautoreconf
 	fi
+	epatch "${FILESDIR}"/${PN}-2.24-last-tests.patch #501408
 	find tests/ -name bigyear -delete #489794
 	elibtoolize
 }

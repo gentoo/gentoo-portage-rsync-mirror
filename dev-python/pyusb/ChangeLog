@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyusb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/ChangeLog,v 1.14 2013/01/06 17:17:58 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/ChangeLog,v 1.15 2014/05/28 17:53:50 vapier Exp $
+
+*pyusb-1.0.0_beta1 (28 May 2014)
+
+  28 May 2014; Mike Frysinger <vapier@gentoo.org> +pyusb-1.0.0_beta1.ebuild:
+  Version bump #511660 by Ben Chan.
 
   06 Jan 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add upstream node.

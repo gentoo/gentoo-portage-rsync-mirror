@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/qmmp-plugin-pack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.19 2014/04/18 13:33:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.20 2014/05/28 17:49:13 hwoarang Exp $
+
+*qmmp-plugin-pack-0.7.7 (28 May 2014)
+
+  28 May 2014; Markos Chandras <hwoarang@gentoo.org>
+  +qmmp-plugin-pack-0.7.7.ebuild:
+  Version bump
 
 *qmmp-plugin-pack-0.7.6 (18 Apr 2014)
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15735 2014/05/27 13:41:48 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15736 2014/05/28 17:42:56 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,11 +33,6 @@
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
 =dev-lang/perl-5.20*
-
-# Lars Wendler <polynomial-c@gentoo.org> (26 May 2014)
-# Masked until sys-auth/sssd got subslot support (bug #511528 and bug #511530).
->=sys-libs/ldb-1.1.17-r1
->=sys-auth/sssd-1.9.6-r3
 
 # Joerg Bornkessel <hd_brummy@gentoo.org (24 May 2014)
 # masked for removal old, plz. upgrade to vdr-2
