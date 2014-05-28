@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.113 2014/01/18 02:37:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.114 2014/05/28 10:37:22 polynomial-c Exp $
+
+*e2fsprogs-libs-1.42.10 (28 May 2014)
+
+  28 May 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -e2fsprogs-libs-1.42.8.ebuild, +e2fsprogs-libs-1.42.10.ebuild:
+  Version bump. Removed old.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.7.ebuild,
   e2fsprogs-libs-1.42.8.ebuild, e2fsprogs-libs-1.42.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.8.ebuild,v 1.2 2014/01/18 02:37:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.10.ebuild,v 1.1 2014/05/28 10:37:22 polynomial-c Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/e2fsprogs/${PN}-${UP_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~m68k-mint ~x86-solaris"
 IUSE="nls static-libs"
 
 RDEPEND="!sys-libs/com_err
@@ -34,27 +34,19 @@ S=${WORKDIR}/${P%_pre*}
 
 src_prepare() {
 	printf 'all:\n%%:;@:\n' > doc/Makefile.in # don't bother with docs #305613
+	epatch "${FILESDIR}"/${PN}-1.42.9-no-quota.patch
 }
 
 multilib_src_configure() {
-	# We want to use the "bsd" libraries while building on Darwin, but while
-	# building on other Gentoo/*BSD we prefer elf-naming scheme.
-	local libtype
-	case ${CHOST} in
-		*-darwin*) libtype=bsd;;
-		*)         libtype=elf;;
-	esac
-
 	# we use blkid/uuid from util-linux now
 	ac_cv_lib_uuid_uuid_generate=yes \
 	ac_cv_lib_blkid_blkid_get_cache=yes \
 	ac_cv_path_LDCONFIG=: \
-	QUOTA_CMT='#' \
 	ECONF_SOURCE="${S}" \
 	econf \
 		--disable-lib{blkid,uuid} \
 		--disable-quota \
-		--enable-${libtype}-shlibs \
+		$(tc-is-static-only || echo --enable-elf-shlibs) \
 		$(tc-has-tls || echo --disable-tls) \
 		$(use_enable nls)
 }

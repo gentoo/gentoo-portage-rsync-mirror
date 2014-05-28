@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.8.ebuild,v 1.2 2014/01/18 05:15:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.1 2014/05/28 10:40:20 polynomial-c Exp $
 
-EAPI=3
+EAPI=4
 
 case ${PV} in
 *_pre*) UP_PV="${PV%_pre*}-WIP-${PV#*_pre}" ;;
@@ -99,12 +99,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake COMPILE_ET=compile_et MK_CMDS=mk_cmds || die
+	emake COMPILE_ET=compile_et MK_CMDS=mk_cmds
 
 	# Build the FreeBSD helper
 	if use elibc_FreeBSD ; then
 		cp "${FILESDIR}"/fsck_ext2fs.c .
-		emake fsck_ext2fs || die
+		emake fsck_ext2fs
 	fi
 }
 
@@ -123,11 +123,11 @@ src_install() {
 		STRIP=: \
 		root_libdir="${EPREFIX}/usr/$(get_libdir)" \
 		DESTDIR="${D}" \
-		install install-libs || die
+		install install-libs
 	dodoc README RELEASE-NOTES
 
 	insinto /etc
-	doins "${FILESDIR}"/e2fsck.conf || die
+	doins "${FILESDIR}"/e2fsck.conf
 
 	# Move shared libraries to /lib/, install static libraries to
 	# /usr/lib/, and install linker scripts to /usr/lib/.
@@ -138,8 +138,8 @@ src_install() {
 	if use elibc_FreeBSD ; then
 		# Install helpers for us
 		into /
-		dosbin "${S}"/fsck_ext2fs || die
-		doman "${FILESDIR}"/fsck_ext2fs.8 || die
+		dosbin "${S}"/fsck_ext2fs
+		doman "${FILESDIR}"/fsck_ext2fs.8
 
 		# filefrag is linux only
 		rm \

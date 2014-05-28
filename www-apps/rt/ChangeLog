@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.80 2014/01/08 06:12:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.82 2014/05/28 10:47:14 titanofold Exp $
+
+  28 May 2014; Aaron W. Swenson <titanofold@gentoo.org> -rt-3.8.11.ebuild,
+  -rt-3.8.15.ebuild, -rt-4.0.5.ebuild, -rt-4.0.8.ebuild, -rt-4.0.8-r1.ebuild,
+  metadata.xml:
+  Remove old, insecure versions.
+
+*rt-4.2.4 (28 May 2014)
+
+  28 May 2014; Aaron W. Swenson <titanofold@gentoo.org> +rt-4.2.4.ebuild,
+  files/config.layout-gentoo:
+  Version bump fixes bug 422801 and bug 469416.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> rt-3.8.11.ebuild,
   rt-3.8.15.ebuild, rt-4.0.5.ebuild, rt-4.0.8-r1.ebuild, rt-4.0.8.ebuild:

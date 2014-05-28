@@ -12,6 +12,7 @@
   fontdir:		${datadir}/fonts
   lexdir:		${datadir}/po
   manualdir:		${datadir}/doc
+  staticdir:		${datadir}/static
   localstatedir:	${prefix}/var
   logfiledir:		${localstatedir}/log
   masonstatedir:	${localstatedir}/mason_data
@@ -20,5 +21,6 @@
   custometcdir:		${customdir}/etc
   customhtmldir:	${customdir}/html
   customlexdir:		${customdir}/po
+  customstaticdir:	${customdir}/static
   customlibdir:		${customdir}/lib
 </Layout>

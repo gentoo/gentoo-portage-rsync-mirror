@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.0.5.ebuild,v 1.3 2014/01/08 06:12:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.4.ebuild,v 1.1 2014/05/28 10:32:06 titanofold Exp $
 
-EAPI=4
+EAPI=5
 
 inherit webapp eutils depend.apache user
 
@@ -10,32 +10,63 @@ DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
 SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 LICENSE="GPL-2"
-IUSE="mysql postgres fastcgi lighttpd"
-REQUIRED_USE="|| ( mysql postgres )"
+IUSE="mysql +postgres fastcgi lighttpd"
+REQUIRED_USE="^^ ( mysql postgres )"
 
 RESTRICT="test"
 
 DEPEND="
-	>=dev-lang/perl-5.8.3
+	>=dev-lang/perl-5.10.1
 
 	>=dev-perl/Apache-Session-1.53
-	dev-perl/Cache-Simple-TimedExpiry
-	dev-perl/Calendar-Simple
+	>=dev-perl/CSS-Squish-0.06
+	>=dev-perl/Class-Accessor-0.34
+	>=dev-perl/DBI-1.37
+	>=dev-perl/Date-Extract-0.02
+	>=dev-perl/DateTime-Format-Natural-0.67
+	>=dev-perl/Devel-StackTrace-1.19
+	>=dev-perl/HTML-FormatText-WithLinks-0.14
+	>=dev-perl/HTML-Mason-1.43
+	>=dev-perl/HTML-Scrubber-0.08
+	>=dev-perl/HTTP-Server-Simple-0.34
+	>=dev-perl/HTTP-Server-Simple-Mason-0.14
+	>=dev-perl/MIME-tools-5.425
+	>=dev-perl/MailTools-1.60
+	>=dev-perl/Module-Versions-Report-1.05
+	>=dev-perl/Role-Basic-0.12
+	>=dev-perl/Symbol-Global-Name-0.04
+	>=dev-perl/Text-Quoted-2.80.0
+	>=dev-perl/Text-WikiFormat-0.76
+	>=dev-perl/Tree-Simple-1.04
+	>=dev-perl/XML-RSS-1.05
+	>=dev-perl/class-returnvalue-0.40
+	>=dev-perl/dbix-searchbuilder-1.59
+	>=dev-perl/locale-maketext-lexicon-0.32
+	>=dev-perl/log-dispatch-2.2.3
+	>=dev-perl/log-dispatch-2.23
+	>=virtual/perl-CGI-3.38
+	>=virtual/perl-Digest-MD5-2.27
+	>=virtual/perl-File-Spec-0.8
+	>=virtual/perl-Getopt-Long-2.24
+	>=virtual/perl-Storable-2.08
+	>=virtual/perl-locale-maketext-1.06
 	dev-perl/CGI-Emulate-PSGI
 	dev-perl/CGI-PSGI
-	>=dev-perl/Class-Accessor-0.34
-	>=dev-perl/class-returnvalue-0.40
+	dev-perl/Cache-Simple-TimedExpiry
+	dev-perl/Calendar-Simple
 	dev-perl/Convert-Color
-	>=dev-perl/CSS-Squish-0.06
-	dev-perl/Data-ICal
+	dev-perl/Crypt-Eksblowfish
+	dev-perl/Crypt-SSLeay
+	dev-perl/Crypt-X509
 	dev-perl/DBD-SQLite
-	>=dev-perl/DBI-1.37
-	>=dev-perl/dbix-searchbuilder-1.59
+	dev-perl/Data-GUID
+	dev-perl/Data-ICal
+	dev-perl/DateManip
 	dev-perl/Devel-GlobalDestruction
-	>=dev-perl/Devel-StackTrace-1.19
 	dev-perl/Email-Address
+	dev-perl/Email-Address-List
 	dev-perl/File-ShareDir
 	dev-perl/GD
 	dev-perl/GDGraph
@@ -43,59 +74,41 @@ DEPEND="
 	dev-perl/GnuPG-Interface
 	dev-perl/GraphViz
 	dev-perl/HTML-Format
-	>=dev-perl/HTML-Mason-1.43
+	dev-perl/HTML-FormatText-WithLinks-AndTables
 	dev-perl/HTML-Mason-PSGIHandler
 	dev-perl/HTML-Parser
 	dev-perl/HTML-Quoted
 	dev-perl/HTML-RewriteAttributes
-	>=dev-perl/HTML-Scrubber-0.08
 	dev-perl/HTML-Tree
-	>=dev-perl/HTTP-Server-Simple-0.34
-	>=dev-perl/HTTP-Server-Simple-Mason-0.14
 	dev-perl/IPC-Run3
-	dev-perl/JavaScript-Minifier
 	dev-perl/JSON
-	dev-perl/libwww-perl
-	dev-perl/locale-maketext-fuzzy
-	>=dev-perl/locale-maketext-lexicon-0.32
-	>=dev-perl/log-dispatch-2.2.3
-	>=dev-perl/log-dispatch-2.23
-	>=dev-perl/MailTools-1.60
-	>=dev-perl/MIME-tools-5.425
+	dev-perl/JavaScript-Minifier
 	dev-perl/MIME-Types
 	dev-perl/Module-Refresh
-	>=dev-perl/Module-Versions-Report-1.05
+	dev-perl/Mozilla-CA
 	dev-perl/Net-CIDR
-	dev-perl/net-server
 	dev-perl/PerlIO-eol
 	dev-perl/Plack
-	dev-perl/regexp-common
 	dev-perl/Regexp-Common-net-CIDR
 	dev-perl/Regexp-IPv6
 	dev-perl/Starlet
 	dev-perl/TermReadKey
-	dev-perl/text-autoformat
 	dev-perl/Text-Password-Pronounceable
-	>=dev-perl/Text-Quoted-2.02
-	dev-perl/text-template
-	>=dev-perl/Text-WikiFormat-0.76
-	dev-perl/text-wrapper
 	dev-perl/Time-modules
 	dev-perl/TimeDate
-	>=dev-perl/Tree-Simple-1.04
 	dev-perl/UNIVERSAL-require
-	>=dev-perl/XML-RSS-1.05
-	>=virtual/perl-CGI-3.38
-	virtual/perl-digest-base
-	>=virtual/perl-Digest-MD5-2.27
-	>=virtual/perl-File-Spec-0.8
+	dev-perl/libwww-perl
+	dev-perl/locale-maketext-fuzzy
+	dev-perl/net-server
+	dev-perl/regexp-common
+	dev-perl/text-autoformat
+	dev-perl/text-template
+	dev-perl/text-wrapper
 	virtual/perl-File-Temp
-	>=virtual/perl-Getopt-Long-2.24
-	virtual/perl-libnet
-	>=virtual/perl-locale-maketext-1.06
 	virtual/perl-Scalar-List-Utils
-	>=virtual/perl-Storable-2.08
 	virtual/perl-Time-HiRes
+	virtual/perl-digest-base
+	virtual/perl-libnet
 
 	fastcgi? (
 		dev-perl/FCGI
@@ -182,35 +195,32 @@ src_prepare() {
 }
 
 src_configure() {
-	local web myconf depsconf
+	local web
+	local myconf
+	local depsconf
 
 	if use mysql ; then
-		myconf+=" --with-db-type=mysql --with-db-dba=root"
-		depsconf+=" --with-mysql"
-	fi
-	if use postgres ; then
-		myconf+=" --with-db-type=Pg --with-db-dba=postgres"
-		depsconf+=" --with-postgresql"
-	fi
-	if use postgres && use mysql ; then
-		ewarn "Both mysql and postgres USE flags enabled, default is mysql."
-		ewarn "You can set the default value in RT_SiteConfig before DB init."
-		myconf+=" --with-db-type=mysql --with-db-dba=root"
-		depsconf+=" --with-mysql"
+		myconf="--with-db-type=mysql --with-db-dba=root"
+		depsconf="--with-MYSQL"
+	elif use postgres ; then
+		myconf="--with-db-type=Pg --with-db-dba=postgres"
+		depsconf="--with-PG"
+	else
+		die "Pick a database backend"
 	fi
 
 	if use fastcgi ; then
 		myconf+=" --with-web-handler=fastcgi"
 		web="apache"
-		depsconf+=" --with-fastcgi"
+		depsconf+=" --with-FASTCGI"
 	elif use lighttpd ; then
 		myconf+=" --with-web-handler=fastcgi"
 		web="lighttpd"
-		depsconf+=" --with-fastcgi"
+		depsconf+=" --with-FASTCGI"
 	else
 		myconf+=" --with-web-handler=modperl2"
 		web="apache"
-		depsconf+=" --with-modperl2"
+		depsconf+=" --with-MODPERL2"
 	fi
 
 	./configure --enable-layout=Gentoo \
