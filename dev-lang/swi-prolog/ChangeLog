@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.437 2014/05/23 11:36:33 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.438 2014/05/29 12:51:51 keri Exp $
+
+*swi-prolog-6.6.6 (29 May 2014)
+
+  29 May 2014; <keri@gentoo.org> +swi-prolog-6.6.6.ebuild:
+  Version bump
 
 *swi-prolog-7.1.15 (23 May 2014)
 

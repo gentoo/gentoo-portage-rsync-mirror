@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-login
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-login/ChangeLog,v 1.13 2014/05/26 07:47:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-login/ChangeLog,v 1.14 2014/05/29 12:47:42 djc Exp $
+
+  29 May 2014; Dirkjan Ochtman <djc@gentoo.org> flask-login-0.2.11.ebuild:
+  Add 3.3 support for flask-login (bug 487898)
 
 *flask-login-0.2.11 (26 May 2014)
 
