@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.256 2014/05/29 01:11:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.257 2014/05/29 13:34:34 mgorny Exp $
+
+*systemd-213 (29 May 2014)
+
+  29 May 2014; Michał Górny <mgorny@gentoo.org> +systemd-213.ebuild:
+  Version bump.
 
   29 May 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Set MINKV to 3.10; <linux-headers-3.10 causes build failures.
