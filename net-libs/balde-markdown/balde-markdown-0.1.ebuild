@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/balde-markdown/balde-markdown-0.1.ebuild,v 1.1 2014/05/26 02:36:50 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/balde-markdown/balde-markdown-0.1.ebuild,v 1.2 2014/05/29 04:26:26 rafaelmartins Exp $
 
 EAPI=5
 
@@ -25,7 +25,8 @@ SLOT="0"
 IUSE="test"
 
 RDEPEND=">=dev-libs/glib-2.34
-	>=net-libs/balde-0.1"
+	>=net-libs/balde-0.1
+	app-text/discount"
 
 DEPEND="${RDEPEND}"
 

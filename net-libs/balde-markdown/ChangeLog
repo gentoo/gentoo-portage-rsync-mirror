@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/balde-markdown
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/balde-markdown/ChangeLog,v 1.1 2014/05/26 02:36:50 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/balde-markdown/ChangeLog,v 1.2 2014/05/29 04:26:26 rafaelmartins Exp $
+
+  29 May 2014; Rafael G. Martins <rafaelmartins@gentoo.org>
+  balde-markdown-0.1.ebuild:
+  Fixed dependencies. Thanks to Matthias Bethke, bug #511610.
 
 *balde-markdown-0.1 (26 May 2014)
 
