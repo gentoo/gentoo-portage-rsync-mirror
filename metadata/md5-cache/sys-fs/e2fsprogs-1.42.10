@@ -10,4 +10,4 @@ RDEPEND=~sys-libs/e2fsprogs-libs-1.42.10 >=sys-apps/util-linux-2.16 nls? ( virtu
 SLOT=0
 SRC_URI=mirror://sourceforge/e2fsprogs/e2fsprogs-1.42.10.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=00bdf3788fb1c32ee1cfb7a1b0445c70
+_md5_=a991cfe2d0b03274b276447f19c8cec6

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.1 2014/05/28 10:40:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.2 2014/05/29 02:38:52 patrick Exp $
 
 EAPI=4
 
@@ -42,6 +42,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.8-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
 	epatch "${FILESDIR}"/${PN}-1.41.12-darwin-makefile.patch
+	epatch "${FILESDIR}"/${P}-e2fsck-fix-makefile-dependency.patch
 	if [[ ${CHOST} == *-mint* ]] ; then
 		epatch "${FILESDIR}"/${PN}-1.41-mint.patch
 		epatch "${FILESDIR}"/${PN}-1.41.12-mint-blkid.patch

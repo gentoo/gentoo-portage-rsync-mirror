@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.275 2014/05/28 10:40:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.276 2014/05/29 02:38:52 patrick Exp $
+
+  29 May 2014; Patrick Lauer <patrick@gentoo.org>
+  +files/e2fsprogs-1.42.10-e2fsck-fix-makefile-dependency.patch,
+  e2fsprogs-1.42.10.ebuild:
+  Fix parallel build failure #511708
 
 *e2fsprogs-1.42.10 (28 May 2014)
 
