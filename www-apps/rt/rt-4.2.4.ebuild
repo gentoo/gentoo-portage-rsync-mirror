@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.4.ebuild,v 1.2 2014/05/29 02:28:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.4.ebuild,v 1.3 2014/05/29 09:32:14 titanofold Exp $
 
 EAPI=5
 
@@ -10,8 +10,7 @@ DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
 SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz"
 
-#KEYWORDS="~amd64"
-KEYWORDS=""
+KEYWORDS="~amd64"
 LICENSE="GPL-2"
 IUSE="mysql +postgres fastcgi lighttpd"
 REQUIRED_USE="^^ ( mysql postgres )"
