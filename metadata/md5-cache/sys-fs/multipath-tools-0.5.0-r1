@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=>=sys-fs/lvm2-2.02.45 >=virtual/udev-171 dev-libs/libaio sys-libs/readline systemd? ( sys-apps/systemd ) virtual/pkgconfig virtual/pkgconfig
+DEPEND=>=sys-fs/lvm2-2.02.45 >=virtual/udev-171 dev-libs/libaio sys-libs/readline systemd? ( sys-apps/systemd ) virtual/pkgconfig virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=Device mapper target autoconfig
 EAPI=4
 HOMEPAGE=http://christophe.varoqui.free.fr/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-fs/lvm2-2.02.45 >=virtual/udev-171 dev-libs/libaio sys-libs/readline systemd? ( sys-apps/systemd )
 SLOT=0
 SRC_URI=http://christophe.varoqui.free.fr/multipath-tools/multipath-tools-0.5.0.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
-_md5_=8b382b506ef0407acae33414d30a7c3d
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_md5_=700192d337bf27ab4dc052343d72f499
