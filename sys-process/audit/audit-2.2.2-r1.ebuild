@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.2.2-r1.ebuild,v 1.1 2014/03/30 14:06:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.2.2-r1.ebuild,v 1.2 2014/05/29 01:30:00 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
-inherit autotools multilib toolchain-funcs python linux-info eutils
+inherit autotools multilib toolchain-funcs python linux-info eutils systemd
 
 DESCRIPTION="Userspace utilities for storing and processing auditing records"
 HOMEPAGE="http://people.redhat.com/sgrubb/audit/"
@@ -130,7 +130,7 @@ src_install_python() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" initdir="$(systemd_get_unitdir)" install || die
 	use python && src_install_python
 
 	dodoc AUTHORS ChangeLog README* THANKS TODO
