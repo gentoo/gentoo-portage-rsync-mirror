@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.205 2014/05/04 16:11:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.206 2014/05/29 17:55:50 jauhien Exp $
+
+# Jauhien Piatlicki <jauhien@gentoo.org> (29 May 2014)
+# Unkeyworded deps
+lxqt-base/lxqt-meta lximage sddm
 
 # Markus Meier <maekke@gentoo.org> (04 May 2014)
 # Unkeyworded deps, bug #509082
