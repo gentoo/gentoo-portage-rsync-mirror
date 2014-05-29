@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.1 2014/05/27 18:20:21 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.2 2014/05/29 13:28:51 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org> lxqt-meta-0.7.0.ebuild:
+  Add ~arm keyword. This was tested on Radxa Rock (armv7).
 
 *lxqt-meta-0.7.0 (27 May 2014)
 

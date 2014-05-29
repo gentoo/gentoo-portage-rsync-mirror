@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/ChangeLog,v 1.1 2014/05/26 14:03:42 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/ChangeLog,v 1.2 2014/05/29 13:18:21 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org> lxqt-common-0.7.0.ebuild:
+  Add ~arm keyword.
 
 *lxqt-common-0.7.0 (26 May 2014)
 
