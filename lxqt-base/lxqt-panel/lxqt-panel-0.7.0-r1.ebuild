@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.7.0-r1.ebuild,v 1.2 2014/05/29 13:19:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.7.0-r1.ebuild,v 1.3 2014/05/29 18:01:43 jauhien Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -35,8 +35,6 @@ DEPEND="dev-qt/qtcore:4
 	razorqt-base/libqtxdg
 	x11-libs/libX11
 	cpuload? ( sys-libs/libstatgrab )
-	mainmenu? ( || ( sys-auth/consolekit[policykit(-)]
-		sys-apps/systemd[policykit(-)] ) )
 	networkmonitor? ( sys-libs/libstatgrab )
 	sensors? ( sys-apps/lm_sensors )
 	sysstat? ( lxqt-base/libsysstat )
