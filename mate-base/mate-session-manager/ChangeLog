@@ -1,6 +1,13 @@
 # ChangeLog for mate-base/mate-session-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.7 2014/05/04 14:54:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/ChangeLog,v 1.8 2014/05/29 18:48:21 pacho Exp $
+
+*mate-session-manager-1.8.1-r1 (29 May 2014)
+
+  29 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +mate-session-manager-1.8.1-r1.ebuild:
+  upower support relies on old upower, systemd setups are supposed to rely on
+  systemd to do all the stuff now (#508920#c15)
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org>
   mate-session-manager-1.6.1-r1.ebuild:

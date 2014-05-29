@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.122 2014/05/29 16:41:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.123 2014/05/29 18:49:48 mgorny Exp $
+
+  29 May 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-soundlibs-20140406-r1.ebuild:
+  Restore stable keyword from 20140406.
 
   29 May 2014; Michał Górny <mgorny@gentoo.org>
   -emul-linux-x86-soundlibs-20140406.ebuild, -files/remove-native-20140406:

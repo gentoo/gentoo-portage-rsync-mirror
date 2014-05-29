@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.128 2014/05/29 16:37:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.129 2014/05/29 18:47:40 mgorny Exp $
+
+  29 May 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-gtklibs-20140406-r1.ebuild:
+  Restore stable keyword from 20140406.
 
   29 May 2014; Michał Górny <mgorny@gentoo.org>
   -emul-linux-x86-gtklibs-20140406.ebuild,

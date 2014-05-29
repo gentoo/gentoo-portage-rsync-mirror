@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20140311-r3 (29 May 2014)
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20140311-r3.ebuild:
+  Bump to 2.20140311-r3
+
   19 Apr 2014; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20140311-r1.ebuild:
   Stabilize r1 policies
