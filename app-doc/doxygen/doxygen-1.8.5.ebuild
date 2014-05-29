@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.5.ebuild,v 1.2 2013/11/06 07:50:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.5.ebuild,v 1.3 2014/05/28 23:53:41 jer Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -43,7 +43,8 @@ DEPEND="sys-apps/sed
 	doc? ( ${PYTHON_DEPS} )
 	${RDEPEND}"
 
-RESTRICT="mirror"
+# src_test() defaults to make -C testing but there is no such directory (bug #504448)
+RESTRICT="mirror test"
 EPATCH_SUFFIX="patch"
 
 get_langs() {

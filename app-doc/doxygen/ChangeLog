@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.260 2014/05/27 07:28:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.261 2014/05/28 23:53:41 jer Exp $
+
+  28 May 2014; Jeroen Roovers <jer@gentoo.org> doxygen-1.8.5.ebuild:
+  RESTRICT=test (bug #504448).
 
   27 May 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop maintainership (http://article.gmane.org/gmane.linux.gentoo.devel/90674)
