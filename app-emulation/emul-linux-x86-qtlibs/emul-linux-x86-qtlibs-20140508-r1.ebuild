@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.1 2014/05/27 19:06:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.2 2014/05/28 23:25:26 floppym Exp $
 
 EAPI=5
 inherit eutils emul-linux-x86
@@ -59,7 +59,7 @@ src_install() {
 	emul-linux-x86_src_install
 
 	if ! use mng; then
-		rm "${D%/}"/usr/lib32/qt4/plugins/imageformats/libqmng.so || die
+		rm "${D%/}"/usr/"$(get_abi_LIBDIR x86)"/qt4/plugins/imageformats/libqmng.so || die
 	fi
 
 	# Set LDPATH for not needing dev-qt/qtcore
