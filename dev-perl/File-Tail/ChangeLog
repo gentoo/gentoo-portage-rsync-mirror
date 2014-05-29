@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Tail
-# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/ChangeLog,v 1.41 2013/08/25 15:15:52 idella4 Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/ChangeLog,v 1.42 2014/05/29 05:41:15 zlogene Exp $
+
+  29 May 2014; Mikle Kolyada <zlogene@gentoo.org> -File-Tail-0.99.3.ebuild,
+  File-Tail-0.99.3-r1.ebuild:
+  Merge stable keywords from -r0; Drop old.
 
 *File-Tail-0.99.3-r1 (25 Aug 2013)
 
