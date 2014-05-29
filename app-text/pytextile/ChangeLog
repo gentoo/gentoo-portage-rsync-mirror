@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pytextile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.30 2012/04/09 03:41:03 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.31 2014/05/29 15:32:47 idella4 Exp $
+
+*pytextile-2.1.8 (29 May 2014)
+
+  29 May 2014; Ian Delaney <idella4@gentoo.org> +pytextile-2.1.8.ebuild:
+  bump; add py3 pypy support, test phase
 
   09 Apr 2012; Mike Gilbert <floppym@gentoo.org> -pytextile-2.1.4.ebuild,
   pytextile-2.1.5.ebuild:
@@ -112,4 +117,3 @@
   +pytextile-2.0.10.ebuild:
   New ebuild, closes bug #92151.
   Thanks to Tyson Burghardt <tysonburghardt@sbcglobal.net> for initial input.
-

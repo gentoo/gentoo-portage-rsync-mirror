@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/oct2py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/ChangeLog,v 1.15 2014/02/25 17:24:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/ChangeLog,v 1.16 2014/05/29 15:42:10 bicatali Exp $
+
+*oct2py-1.3.0-r1 (29 May 2014)
+
+  29 May 2014; Sébastien Fabbro <bicatali@gentoo.org> -oct2py-1.0.0.ebuild,
+  +oct2py-1.3.0-r1.ebuild, +files/oct2py-1.3.0-test.patch:
+  Imported to main tree
+
+*oct2py-1.3.0-r1 (28 May 2014)
+
+  28 May 2014; cel <cel.gentoo@gmail.com> +files/oct2py-1.3.0-test.patch,
+  +metadata.xml, +oct2py-1.3.0-r1.ebuild:
+  updated oct2py ebuild to provide a working test suite.
 
   25 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> oct2py-1.3.0.ebuild:
   Fixed documentation building, bug #502310

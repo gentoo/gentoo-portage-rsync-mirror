@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-1.0.0.ebuild,v 1.1 2013/10/20 18:24:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-1.3.0-r1.ebuild,v 1.1 2014/05/29 15:42:10 bicatali Exp $
 
 EAPI=5
 
@@ -21,20 +21,34 @@ RDEPEND="
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	sci-mathematics/octave"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	doc? (
+		dev-python/sphinx-bootstrap-theme
+		dev-python/numpydoc
+	)
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/ipython[${PYTHON_USEDEP}]
-		)"
+	)"
+
+python_prepare_all() {
+	local PATCHES=(
+		"${FILESDIR}/${P}-test.patch"
+	)
+	distutils-r1_python_prepare_all
+}
 
 python_compile_all() {
 	if use doc; then
-		sphinx-build doc html || die
+		sphinx-build docs html || die
 	fi
 }
 
 python_test() {
-	nosetests oct2py --with-doctest || die "Tests fail with ${EPYTHON}"
+	unset DISPLAY
+	if [[ ${EPYTHON} == python2* ]]; then
+		local OPTIONS="--with-doctest"
+	fi
+	nosetests oct2py ${OPTIONS} || die "Tests fail with ${EPYTHON}"
 	iptest -v IPython.extensions.tests.test_octavemagic || die "Tests fail with ${EPYTHON}"
 }
 
@@ -43,7 +57,7 @@ python_install_all() {
 	distutils-r1_python_install_all
 
 	if use examples; then
-		insinto /usr/share/${PF}/
+		insinto /usr/share/doc/${PF}
 		doins -r example
 	fi
 }
