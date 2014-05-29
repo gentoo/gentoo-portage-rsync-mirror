@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.108 2014/05/03 17:35:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.109 2014/05/29 00:13:27 floppym Exp $
 
 EAPI=5
 
@@ -227,6 +227,8 @@ multilib_src_configure() {
 		--with-dbussessionservicedir="${EPREFIX}/usr/share/dbus-1/services"
 		--with-dbussystemservicedir="${EPREFIX}/usr/share/dbus-1/system-services"
 		--with-dbusinterfacedir="${EPREFIX}/usr/share/dbus-1/interfaces"
+
+		--with-ntp-servers="0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org 2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org"
 	)
 
 	if use firmware-loader; then
@@ -265,6 +267,7 @@ multilib_src_configure() {
 			--disable-qrencode
 			--disable-seccomp
 			--disable-selinux
+			--disable-timesyncd
 			--disable-tests
 			--disable-xattr
 			--disable-xz
@@ -431,6 +434,8 @@ migrate_net_name_slot() {
 
 pkg_postinst() {
 	enewgroup systemd-journal
+	enewgroup systemd-timesync
+	enewuser systemd-timesync -1 -1 -1 systemd-timesync
 	if use http; then
 		enewgroup systemd-journal-gateway
 		enewuser systemd-journal-gateway -1 -1 -1 systemd-journal-gateway
