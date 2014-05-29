@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/lxqt-openssh-askpass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lxqt-openssh-askpass/ChangeLog,v 1.2 2014/05/25 11:47:54 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lxqt-openssh-askpass/ChangeLog,v 1.3 2014/05/29 14:51:12 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org>
+  lxqt-openssh-askpass-0.7.0.ebuild:
+  Add ~arm keyword. This was tested on Radxa Rock (armv7).
 
   25 May 2014; Jauhien Piatlicki <jauhien@gentoo.org>
   lxqt-openssh-askpass-0.7.0.ebuild:
