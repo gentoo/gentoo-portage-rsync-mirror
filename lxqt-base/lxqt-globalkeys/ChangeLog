@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-globalkeys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-globalkeys/ChangeLog,v 1.1 2014/05/26 15:30:07 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-globalkeys/ChangeLog,v 1.2 2014/05/29 08:19:08 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org> lxqt-globalkeys-0.7.0.ebuild:
+  Add ~arm keyword.
 
 *lxqt-globalkeys-0.7.0 (26 May 2014)
 

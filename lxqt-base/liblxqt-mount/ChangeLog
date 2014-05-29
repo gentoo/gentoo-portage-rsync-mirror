@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/liblxqt-mount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt-mount/ChangeLog,v 1.1 2014/05/26 15:12:27 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/liblxqt-mount/ChangeLog,v 1.2 2014/05/29 08:07:00 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org> liblxqt-mount-0.7.0.ebuild:
+  Add ~arm keyword.
 
 *liblxqt-mount-0.7.0 (26 May 2014)
 

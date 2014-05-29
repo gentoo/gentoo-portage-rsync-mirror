@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-config-randr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config-randr/ChangeLog,v 1.1 2014/05/27 15:04:52 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-config-randr/ChangeLog,v 1.2 2014/05/29 08:15:27 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org> lxqt-config-randr-0.7.0.ebuild:
+  Add ~arm keyword.
 
 *lxqt-config-randr-0.7.0 (27 May 2014)
 

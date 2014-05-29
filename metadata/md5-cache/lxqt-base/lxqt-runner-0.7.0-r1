@@ -3,10 +3,10 @@ DEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtscript:4 lxqt-bas
 DESCRIPTION=LXQt quick launcher
 EAPI=5
 HOMEPAGE=http://www.lxqt.org/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2 LGPL-2.1+
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtscript:4 lxqt-base/liblxqt lxqt-base/lxqt-globalkeys >=lxde-base/menu-cache-0.5.1 razorqt-base/libqtxdg x11-libs/libX11
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/0.7.0/lxqt-runner-0.7.0.tar.xz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d9ef32d810d460b15b986eb25e0e2744
+_md5_=e61fbb92ac3e08f88bc486d42779c290
