@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.127 2014/05/14 13:37:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.128 2014/05/29 16:37:55 mgorny Exp $
+
+  29 May 2014; Michał Górny <mgorny@gentoo.org>
+  -emul-linux-x86-gtklibs-20140406.ebuild,
+  -emul-linux-x86-gtklibs-20140508.ebuild, -files/remove-native,
+  -files/remove-native-20140406, -files/remove-native-20140508:
+  Remove the old revisions.
 
 *emul-linux-x86-gtklibs-20140508-r1 (14 May 2014)
 
