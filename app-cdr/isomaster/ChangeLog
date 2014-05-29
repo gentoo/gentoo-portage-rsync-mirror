@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/isomaster
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.24 2012/05/03 07:51:48 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.25 2014/05/29 17:09:32 sping Exp $
+
+*isomaster-1.3.11 (29 May 2014)
+
+  29 May 2014; Sebastian Pipping <sping@gentoo.org> +isomaster-1.3.11.ebuild,
+  +files/isomaster-1.3.11-make-install.patch:
+  Bump to 1.3.11
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> isomaster-1.3.5.ebuild,
   isomaster-1.3.9-r1.ebuild:

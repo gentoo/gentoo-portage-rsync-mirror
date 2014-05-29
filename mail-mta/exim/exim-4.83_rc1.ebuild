@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.83_rc1.ebuild,v 1.1 2014/05/29 11:57:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.83_rc1.ebuild,v 1.2 2014/05/29 17:30:00 grobian Exp $
 
 EAPI="5"
 
@@ -161,11 +161,12 @@ src_configure() {
 	# lookup methods
 
 	# use the "native" interface to the DBM library, support passwd
-	# lookups by default
+	# and directory lookups by default
 	cat >> Makefile <<- EOC
 		USE_DB=yes
 		DBMLIB=-ldb
 		LOOKUP_PASSWD=yes
+		LOOKUP_DSEARCH=yes
 	EOC
 
 	if ! use dnsdb; then
