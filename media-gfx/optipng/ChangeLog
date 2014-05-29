@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.91 2014/03/09 04:41:56 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.92 2014/05/29 16:14:56 sping Exp $
+
+*optipng-0.7.5 (29 May 2014)
+
+  29 May 2014; Sebastian Pipping <sping@gentoo.org> +optipng-0.7.5.ebuild:
+  Bump to 0.7.5
 
   09 Mar 2014; Tristan Heaven <tristan@gentoo.org> optipng-0.7.4.ebuild:
   Fix building when LD is set, bug #503924

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.10.00.ebuild,v 1.1 2013/12/20 06:06:20 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.10.00.ebuild,v 1.2 2014/05/29 16:09:22 bicatali Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="~sci-physics/geant-${PV}:4"
+RDEPEND=">=sci-physics/geant-${PV}:4"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
