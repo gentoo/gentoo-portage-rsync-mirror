@@ -1,6 +1,9 @@
 # ChangeLog for razorqt-base/libqtxdg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/libqtxdg/ChangeLog,v 1.13 2014/05/25 10:51:30 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/libqtxdg/ChangeLog,v 1.14 2014/05/29 07:53:47 mrueg Exp $
+
+  29 May 2014; Manuel Rüger <mrueg@gentoo.org> libqtxdg-0.5.3.ebuild:
+  Add ~arm keyword.
 
   25 May 2014; Jauhien Piatlicki <jauhien@gentoo.org> libqtxdg-0.5.3.ebuild:
   fix dependencies as qt-5 is not in tree still

@@ -3,10 +3,10 @@ DEPEND=>=razorqt-base/libqtxdg-0.5.3 x11-libs/libX11 x11-libs/libXcomposite x11-
 DESCRIPTION=Common base library for the LXQt desktop environment
 EAPI=5
 HOMEPAGE=http://www.lxqt.org/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2 LGPL-2.1+
 RDEPEND=>=razorqt-base/libqtxdg-0.5.3 x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXrender dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/0.7.0/liblxqt-0.7.0.tar.xz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=29e775d4349263a80a9847d875ec9330
+_md5_=cfce7610353cb8af037bc4e31c0c5f9e
