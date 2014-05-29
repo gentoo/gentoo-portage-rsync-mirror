@@ -4,7 +4,7 @@ DESCRIPTION=NVIDIA Accelerated Graphics Driver
 EAPI=5
 HOMEPAGE=http://www.nvidia.com/
 IUSE=acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools +X uvm kernel_linux
-KEYWORDS=-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=-* amd64 x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=GPL-2 NVIDIA-r2
 RDEPEND=app-admin/eselect-opencl kernel_linux? ( >=sys-libs/glibc-2.6.1 ) X? ( >=app-admin/eselect-opengl-1.0.9 ) acpi? ( sys-power/acpid ) tools? ( dev-libs/atk dev-libs/glib x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXext x11-libs/pango[X] ) X? ( <x11-base/xorg-server-1.15.99 >=x11-libs/libvdpau-0.3-r1 multilib? ( || ( ( x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) ) kernel_linux? ( virtual/modutils )
 REQUIRED_USE=tools? ( X )
@@ -12,4 +12,4 @@ RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=amd64-fbsd? ( http://us.download.nvidia.com/XFree86/FreeBSD-x86_64/331.79/NVIDIA-FreeBSD-x86_64-331.79.tar.gz ) amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/331.79/NVIDIA-Linux-x86_64-331.79.run ) x86-fbsd? ( http://us.download.nvidia.com/XFree86/FreeBSD-x86/331.79/NVIDIA-FreeBSD-x86-331.79.tar.gz ) x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/331.79/NVIDIA-Linux-x86-331.79.run )
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	linux-info	90944ede7e9761bd7ef07602acdef9e3	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	fac675dcccf94392371a6abee62d909f	nvidia-driver	92e88a2e33d056779baa88f1061c662e	portability	2a81b62e5f2001061b009b5c5fc27e98	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=556979bedfe9c8430666575942b8f10a
+_md5_=f3bfd5bb06963fbdb90425265f78fa33

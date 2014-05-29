@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.207 2014/02/15 20:30:53 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.208 2014/05/29 03:51:28 radhermit Exp $
+
+*gpgme-1.5.0 (29 May 2014)
+
+  29 May 2014; Tim Harder <radhermit@gentoo.org> +gpgme-1.5.0.ebuild:
+  Version bump.
 
   15 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org> -gpgme-1.4.0.ebuild,
   -gpgme-1.4.1.ebuild, -gpgme-1.4.2.ebuild, gpgme-1.4.3.ebuild:
