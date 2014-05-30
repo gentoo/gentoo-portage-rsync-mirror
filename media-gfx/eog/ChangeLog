@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.313 2014/04/27 17:26:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.314 2014/05/30 18:59:36 pacho Exp $
+
+*eog-3.12.2 (30 May 2014)
+
+  30 May 2014; Pacho Ramos <pacho@gentoo.org> +eog-3.12.2.ebuild:
+  Version bump
 
 *eog-3.12.1 (27 Apr 2014)
 
