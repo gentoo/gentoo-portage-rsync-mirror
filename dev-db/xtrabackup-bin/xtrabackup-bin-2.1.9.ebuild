@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.1.9.ebuild,v 1.1 2014/05/22 21:03:28 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.1.9.ebuild,v 1.2 2014/05/30 19:09:56 idl0r Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-libs/libaio
-	dev-libs/libgcrypt:0=
+	|| ( dev-libs/libgcrypt:0/11 dev-libs/libgcrypt:11/11 )
 	dev-libs/libgpg-error
 	dev-perl/DBD-mysql"
 

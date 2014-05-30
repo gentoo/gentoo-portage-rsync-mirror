@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15744 2014/05/30 18:19:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15745 2014/05/30 19:15:42 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (30 May 2014)
+# Mask beta release
+=app-i18n/transifex-client-0.11_beta
 
 # Tom Wijsman <TomWij@gentoo.org> (30 May 2014)
 # CVE-2012-1721 - Remote Code Execution Vulnerability

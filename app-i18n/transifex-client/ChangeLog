@@ -1,6 +1,17 @@
 # ChangeLog for app-i18n/transifex-client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.29 2013/12/07 20:53:06 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.31 2014/05/30 19:19:22 hwoarang Exp $
+
+  30 May 2014; Markos Chandras <hwoarang@gentoo.org>
+  -transifex-client-0.8.0-r1.ebuild, -transifex-client-0.9.2.ebuild,
+  transifex-client-0.10.ebuild:
+  Stabilize 0.10 for amd64/x86 and drop old
+
+*transifex-client-0.11_beta (30 May 2014)
+
+  30 May 2014; Markos Chandras <hwoarang@gentoo.org>
+  +transifex-client-0.11_beta.ebuild:
+  Version bump
 
 *transifex-client-0.10 (07 Dec 2013)
 
