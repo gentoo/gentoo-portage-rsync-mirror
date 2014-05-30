@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.116 2014/03/29 02:44:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.117 2014/05/30 14:25:06 mgorny Exp $
+
+*flex-2.5.39-r1 (30 May 2014)
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> +flex-2.5.39-r1.ebuild:
+  Enable multilib support for libfl.a.
 
 *flex-2.5.39 (29 Mar 2014)
 

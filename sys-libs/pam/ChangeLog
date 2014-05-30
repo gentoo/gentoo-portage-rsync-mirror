@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.335 2014/05/08 23:07:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.336 2014/05/30 14:26:28 mgorny Exp $
+
+*pam-1.1.8-r2 (30 May 2014)
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> +pam-1.1.8-r2.ebuild:
+  Enable multilib support.
 
 *pam-1.1.8-r1 (08 May 2014)
 

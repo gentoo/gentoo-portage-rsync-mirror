@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.101 2014/05/17 02:23:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.102 2014/05/30 14:29:49 zerochaos Exp $
+
+  30 May 2014; Rick Farina <zerochaos@gentoo.org> powertop-9999.ebuild:
+  fix for bug 511740, tinfo patch merged upstream
 
 *powertop-2.6 (17 May 2014)
 
