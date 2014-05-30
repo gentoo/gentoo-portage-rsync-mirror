@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ustr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.13 2014/01/14 13:58:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.14 2014/05/30 13:59:12 swift Exp $
+
+*ustr-1.0.4-r4 (30 May 2014)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org> +ustr-1.0.4-r4.ebuild:
+  Add multilib support, needed for libsemanage (bug #506460) thanks to Sven Eden
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ustr-1.0.4-r3.ebuild:
   Stable for x86, wrt bug #495414

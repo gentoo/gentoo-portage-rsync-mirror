@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakechroot
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.21 2013/06/02 11:01:31 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.22 2014/05/30 13:35:56 swift Exp $
+
+*fakechroot-2.17.2 (30 May 2014)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org> +fakechroot-2.17.2.ebuild:
+  Bump fakechroot to 2.17.2, thanks to Anthoine Bourgeois (bug #506118)
 
   02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #328951
