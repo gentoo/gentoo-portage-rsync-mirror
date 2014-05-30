@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.125 2014/01/29 04:09:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.126 2014/05/30 15:15:31 eras Exp $
+
+*sendmail-8.14.9 (30 May 2014)
+
+  30 May 2014; Eray Aslan <eras@gentoo.org> +sendmail-8.14.9.ebuild:
+  Security bump - bug #511760
 
   29 Jan 2014; Tim Harder <radhermit@gentoo.org> -sendmail-8.14.4.ebuild,
   -sendmail-8.14.5.ebuild, -sendmail-8.14.5-r1.ebuild,
