@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conserver
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.81 2012/08/17 21:25:42 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.82 2014/05/30 13:05:18 swift Exp $
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org> conserver-8.1.16-r1.ebuild,
+  conserver-8.1.16.ebuild, conserver-8.1.18.ebuild:
+  Fix bug 425862 - Add GPL-2 as license to cover init script
 
   17 Aug 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from maintainers

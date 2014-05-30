@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.18.ebuild,v 1.5 2012/03/31 11:59:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.18.ebuild,v 1.6 2014/05/30 13:05:18 swift Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Serial Console Manager"
 HOMEPAGE="http://www.conserver.com/"
 SRC_URI="http://www.conserver.com/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="kerberos pam ssl tcpd debug"

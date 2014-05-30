@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.16-r1.ebuild,v 1.6 2009/02/23 14:57:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.16-r1.ebuild,v 1.7 2014/05/30 13:05:18 swift Exp $
 
 inherit ssl-cert eutils pam
 
@@ -8,7 +8,7 @@ DESCRIPTION="Serial Console Manager"
 HOMEPAGE="http://www.conserver.com/"
 SRC_URI="ftp://ftp.conserver.com/conserver/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam ssl tcpd debug"

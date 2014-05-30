@@ -4,9 +4,9 @@ DESCRIPTION=Serial Console Manager
 HOMEPAGE=http://www.conserver.com/
 IUSE=pam ssl tcpd debug ssl
 KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
-LICENSE=BSD
+LICENSE=BSD GPL-2
 RDEPEND=ssl? ( >=dev-libs/openssl-0.9.6g ) pam? ( virtual/pam ) tcpd? ( sys-apps/tcp-wrappers ) debug? ( dev-libs/dmalloc ) pam? ( >=sys-auth/pambase-20080219.1 )
 SLOT=0
 SRC_URI=ftp://ftp.conserver.com/conserver/conserver-8.1.16.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=696c954c905d0f52cb43f36849fc4ab0
+_md5_=993b5dc1dc4dafe2332fb492a72f96c9
