@@ -1,6 +1,12 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.61 2014/05/23 23:49:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.62 2014/05/30 11:20:17 tomwij Exp $
+
+  30 May 2014; Tom Wijsman <TomWij@gentoo.org> jdk-1.5.0-r1.ebuild,
+  jdk-1.6.0-r2.ebuild, jdk-1.7.0.ebuild, jdk-1.8.0.ebuild:
+  Remove CVE-2012-1721 vulnerable IBM JDK binaries dependency, as well as
+  lastrited jrockit JDK binaries dependency; dropped KEYWORDS; EAPI 5; removed
+  empty variables.
 
   23 May 2014; Manuel Rüger <mrueg@gentoo.org> jdk-1.7.0.ebuild:
   Add ~arm keyword.

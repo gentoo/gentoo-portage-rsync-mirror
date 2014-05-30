@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.190 2014/05/29 04:51:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.191 2014/05/30 11:08:56 ssuominen Exp $
+
+*libffi-3.1-r3 (30 May 2014)
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> +libffi-3.1-r3.ebuild,
+  +files/libffi-3.1-typing_error.patch:
+  Fix typing error in ffi.h.in (missing @@) wrt #511752 by Ryan Hill and
+  Patrick Lauer
 
   29 May 2014; Samuli Suominen <ssuominen@gentoo.org> -libffi-3.1-r1.ebuild,
   -libffi-3.1.ebuild:

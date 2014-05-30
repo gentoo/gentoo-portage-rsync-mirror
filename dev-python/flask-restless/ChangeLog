@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-restless
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/ChangeLog,v 1.11 2014/05/26 06:49:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/ChangeLog,v 1.12 2014/05/30 11:20:51 idella4 Exp $
+
+*flask-restless-0.13.1 (30 May 2014)
+
+  30 May 2014; Ian Delaney <idella4@gentoo.org> +flask-restless-0.13.1.ebuild:
+  bump; add py3 support
 
 *flask-restless-0.13.0 (26 May 2014)
 

@@ -1,6 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Java Runtime Environment (JRE)
+EAPI=5
 KEYWORDS=amd64 ~arm ~ia64 ppc ppc64 x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~hppa-hpux ~ia64-hpux ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
 RDEPEND=|| ( =virtual/jdk-1.6.0* =dev-java/ibm-jre-bin-1.6.0* =dev-java/diablo-jre-bin-1.6.0* )
 SLOT=1.6
-_md5_=b5faf2d0bc6b226b723d648a86a11978
+_md5_=078afbc912a55c39506da3ba0cd155ad

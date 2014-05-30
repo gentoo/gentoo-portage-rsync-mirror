@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.48 2014/05/23 23:50:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.49 2014/05/30 11:20:59 tomwij Exp $
+
+  30 May 2014; Tom Wijsman <TomWij@gentoo.org> jre-1.5.0-r2.ebuild,
+  jre-1.6.0-r1.ebuild, jre-1.7.0.ebuild, jre-1.8.0.ebuild:
+  Dropped KEYWORDS; EAPI 5; removed empty variables.
 
   23 May 2014; Manuel Rüger <mrueg@gentoo.org> jre-1.7.0.ebuild:
   Add ~arm keyword.

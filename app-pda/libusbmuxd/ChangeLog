@@ -1,0 +1,9 @@
+# ChangeLog for app-pda/libusbmuxd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libusbmuxd/ChangeLog,v 1.1 2014/05/30 11:30:51 ssuominen Exp $
+
+*libusbmuxd-1.0.9 (30 May 2014)
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> +libusbmuxd-1.0.9.ebuild:
+  Initial commit (upstream separated libusbmuxd from usbmuxd) wrt #505576
+

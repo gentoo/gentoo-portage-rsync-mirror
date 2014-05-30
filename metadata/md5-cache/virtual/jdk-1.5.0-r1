@@ -1,6 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Java Development Kit (JDK)
-KEYWORDS=amd64 ~arm ppc ppc64 x86 ~ppc-aix ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
-RDEPEND=|| ( =dev-java/ibm-jdk-bin-1.5.0* =dev-java/jrockit-jdk-bin-1.5.0* =dev-java/apple-jdk-bin-1.5.0* dev-java/gcj-jdk )
+EAPI=5
+KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+RDEPEND=|| ( =dev-java/apple-jdk-bin-1.5.0* dev-java/gcj-jdk )
 SLOT=1.5
-_md5_=58f8d54069fdc6c5fd1df6b3e24fe0e0
+_md5_=8358bce11f03d4ea60973898c5a73e93
