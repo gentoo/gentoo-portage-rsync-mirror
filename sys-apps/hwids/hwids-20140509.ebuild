@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20140509.ebuild,v 1.1 2014/05/09 10:16:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20140509.ebuild,v 1.2 2014/05/30 14:41:46 vapier Exp $
 
 EAPI=5
 inherit udev eutils
@@ -43,9 +43,6 @@ pkg_postinst() {
 	if use udev; then
 		udevadm hwdb --update --root="${ROOT%/}"
 		# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
-		if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
-			return 0
-		fi
-		udevadm control --reload
+		[ "${ROOT:-/}" = "/" ] && udevadm control --reload
 	fi
 }

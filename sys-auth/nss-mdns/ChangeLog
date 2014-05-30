@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/nss-mdns
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.36 2012/09/26 17:49:03 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.37 2014/05/30 14:31:51 mgorny Exp $
+
+*nss-mdns-0.10-r2 (30 May 2014)
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> +nss-mdns-0.10-r2.ebuild:
+  Enable multilib support.
 
   26 Sep 2012; Michael Palimaka <kensington@gentoo.org>
   -files/nss-mdns-0.8-avahi-socket.patch, -nss-mdns-0.10.ebuild:

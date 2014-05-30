@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.140 2014/05/09 10:16:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.142 2014/05/30 14:41:46 vapier Exp $
+
+  30 May 2014; Mike Frysinger <vapier@gentoo.org> hwids-20140509.ebuild,
+  hwids-99999999.ebuild:
+  Simplify the ROOT check in pkg_postinst.
+
+  30 May 2014; Mike Frysinger <vapier@gentoo.org> hwids-20140317.ebuild:
+  Stabilize for everyone else #506026.
 
 *hwids-20140509 (09 May 2014)
 

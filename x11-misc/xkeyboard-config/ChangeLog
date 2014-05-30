@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.201 2014/04/19 17:47:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.202 2014/05/30 14:44:08 chithanh Exp $
+
+*xkeyboard-config-2.12 (30 May 2014)
+
+  30 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xkeyboard-config-2.12.ebuild, -xkeyboard-config-2.10.1.ebuild,
+  -xkeyboard-config-2.6.ebuild, -xkeyboard-config-2.7.ebuild,
+  -xkeyboard-config-2.8.ebuild:
+  Version bump. Remove old.
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xkeyboard-config-2.11.ebuild:
   Stable for sparc, wrt bug #500368

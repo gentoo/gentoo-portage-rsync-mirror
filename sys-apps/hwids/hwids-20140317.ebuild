@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20140317.ebuild,v 1.3 2014/03/28 04:33:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20140317.ebuild,v 1.4 2014/05/30 14:38:10 vapier Exp $
 
 EAPI=5
 inherit udev eutils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/gentoo/hwids/archive/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD ) public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="+udev"
 
 DEPEND="udev? (

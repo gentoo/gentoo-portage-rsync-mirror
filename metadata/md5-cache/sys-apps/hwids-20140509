@@ -10,4 +10,4 @@ RDEPEND=!<sys-apps/pciutils-3.1.9-r2 !<sys-apps/usbutils-005-r1
 SLOT=0
 SRC_URI=https://github.com/gentoo/hwids/archive/hwids-20140509.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
-_md5_=65703d6e4e14d0ffd454972da251b80a
+_md5_=fd2aa846b7ea8a363fb7df079e61aea0
