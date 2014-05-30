@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.12.1-r1.ebuild,v 1.3 2014/05/21 12:17:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.12.1-r1.ebuild,v 1.4 2014/05/30 21:23:19 mgorny Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="!!app-crypt/heimdal
 		dev-libs/libverto[libevent,${MULTILIB_USEDEP}]
 		dev-libs/libverto[tevent,${MULTILIB_USEDEP}] )
 	keyutils? ( sys-apps/keyutils[${MULTILIB_USEDEP}] )
-	openldap? ( net-nds/openldap )
+	openldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
 	pkinit? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
 	selinux? ( sec-policy/selinux-kerberos )
 	xinetd? ( sys-apps/xinetd )
@@ -76,7 +76,7 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	WARN_CFLAGS="set" \
 	econf \
-		$(multilib_native_use_with openldap ldap) \
+		$(use_with openldap ldap) \
 		"$(multilib_native_use_with test tcl "${EPREFIX}/usr")" \
 		$(use_enable pkinit) \
 		$(use_enable threads thread-support) \

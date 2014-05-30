@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qwriter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/ChangeLog,v 1.6 2013/03/02 19:21:50 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/ChangeLog,v 1.7 2014/05/30 21:27:40 pesa Exp $
+
+  30 May 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Remove qt (and empty longdescription) from metadata.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qwriter-0.1.9.ebuild:
   Move Qt dependencies to the new category

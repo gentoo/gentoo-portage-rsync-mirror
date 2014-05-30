@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.1-r2.ebuild,v 1.1 2014/05/14 08:47:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.1-r2.ebuild,v 1.2 2014/05/30 21:26:30 mgorny Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ RDEPEND="
 	)
 	dbus? ( sys-apps/dbus[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.6 )
-	kerberos? ( virtual/krb5 )
+	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
 	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
@@ -189,7 +189,10 @@ multilib_src_configure() {
 		)
 	fi
 
+	# need to override KRB5CONFIG for proper flags
+	# https://www.cups.org/str.php?L4423
 	econf \
+		KRB5CONFIG="${EPREFIX}"/usr/bin/${CHOST}-krb5-config \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--localstatedir="${EPREFIX}"/var \
 		--with-rundir="${EPREFIX}"/run/cups \
@@ -203,7 +206,7 @@ multilib_src_configure() {
 		$(use_enable dbus) \
 		$(use_enable debug) \
 		$(use_enable debug debug-guards) \
-		$(multilib_native_use_enable kerberos gssapi) \
+		$(use_enable kerberos gssapi) \
 		$(multilib_native_use_enable pam) \
 		$(use_enable static-libs static) \
 		$(use_enable threads) \
