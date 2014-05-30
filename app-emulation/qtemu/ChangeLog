@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qtemu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qtemu/ChangeLog,v 1.8 2013/06/12 14:02:44 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qtemu/ChangeLog,v 1.9 2014/05/30 22:02:15 pesa Exp $
+
+  30 May 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Drop to maintainer-needed.
 
   12 Jun 2013; Michael Palimaka <kensington@gentoo.org> qtemu-1.0.5.ebuild:
   Migrate to EAPI 5. Add missing dependency. Drop unused inherit.

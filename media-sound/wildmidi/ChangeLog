@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.27 2014/05/21 20:33:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.28 2014/05/30 22:11:29 hwoarang Exp $
+
+*wildmidi-0.3.7 (30 May 2014)
+
+  30 May 2014; Markos Chandras <hwoarang@gentoo.org> +wildmidi-0.3.7.ebuild:
+  Version bump
 
 *wildmidi-0.3.6 (21 May 2014)
 

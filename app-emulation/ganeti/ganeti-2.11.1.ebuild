@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.10.2.ebuild,v 1.1 2014/04/04 01:05:03 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.11.1.ebuild,v 1.1 2014/05/30 22:07:23 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -48,7 +48,12 @@ HASKELL_DEPS=">=dev-lang/ghc-6.12:0=
 		dev-haskell/utf8-string:0=
 		dev-haskell/deepseq:0=
 		dev-haskell/attoparsec:0=
-		dev-haskell/crypto:0="
+		dev-haskell/crypto:0=
+		dev-haskell/vector:0=
+		dev-haskell/hinotify:0=
+		dev-haskell/regex-pcre-builtin:0=
+		dev-haskell/zlib:0=
+		dev-haskell/base64-bytestring:0="
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu )
@@ -59,9 +64,6 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	haskell-daemons? (
 		${HASKELL_DEPS}
 		dev-haskell/text:0=
-		dev-haskell/hinotify:0=
-		dev-haskell/regex-pcre-builtin:0=
-		dev-haskell/vector:0=
 	)
 	dev-libs/openssl
 	dev-python/paramiko[${PYTHON_USEDEP}]
@@ -102,7 +104,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.6-add-pgrep.patch"
 	"${FILESDIR}/${PN}-2.7-fix-tests.patch"
 	"${FILESDIR}/${PN}-2.9-disable-root-tests.patch"
-	"${FILESDIR}/${PN}-2.9-regex-builtin.patch"
+	"${FILESDIR}/${PN}-2.11-regex-builtin.patch"
 	"${FILESDIR}/${PN}-2.9-skip-cli-test.patch"
 	"${FILESDIR}/${PN}-2.10-rundir.patch"
 )
@@ -114,7 +116,6 @@ pkg_setup () {
 
 src_prepare() {
 	epatch "${PATCHES[@]}"
-	has_version ">=sys-devel/automake-1.13" && epatch "${FILESDIR}/${PN}-2.9-automake-1.13.patch"
 	[[ ${PV} == "9999" ]] && ./autogen.sh
 	rm autotools/missing
 	eautoreconf
@@ -127,7 +128,7 @@ src_configure () {
 		--docdir=/usr/share/doc/${P} \
 		--with-ssh-initscript=/etc/init.d/sshd \
 		--with-export-dir=/var/lib/ganeti-storage/export \
-		--with-os-search-path=/usr/share/ganeti/os \
+		--with-os-search-path=/usr/share/${PN}/os \
 		$(use_enable syslog) \
 		$(usex kvm '--with-kvm-path=' '' '/usr/bin/qemu-kvm' '') \
 		$(usex haskell-daemons "--enable-confd=haskell" '' '' '')
@@ -135,14 +136,16 @@ src_configure () {
 
 src_install () {
 	emake V=1 DESTDIR="${D}" install || die "emake install failed"
-	newinitd "${FILESDIR}"/ganeti-2.2.initd ganeti
-	newconfd "${FILESDIR}"/ganeti.confd ganeti
+
+	newinitd "${FILESDIR}"/ganeti.initd-r2 ${PN}
+	newconfd "${FILESDIR}"/ganeti.confd-r2 ${PN}
+
 	use kvm && newinitd "${FILESDIR}"/ganeti-kvm-poweroff.initd ganeti-kvm-poweroff
 	use kvm && newconfd "${FILESDIR}"/ganeti-kvm-poweroff.confd ganeti-kvm-poweroff
 	newbashcomp doc/examples/bash_completion ganeti
 	dodoc INSTALL UPGRADE NEWS README doc/*.rst
 	dohtml -r doc/html/*
-	rm -rf "${D}"/usr/share/doc/ganeti
+	rm -rf "${D}"/{usr/share/doc/${PN},run}
 
 	docinto examples
 	dodoc doc/examples/{ganeti.cron,gnt-config-backup} doc/examples/*.ocf
@@ -156,14 +159,14 @@ src_install () {
 	insinto /etc/logrotate.d
 	newins doc/examples/ganeti.logrotate ${PN}
 
-	python_fix_shebang "${D}"/usr/sbin/ "${D}"/usr/"$(get_libdir)"/ganeti/ensure-dirs
+	python_fix_shebang "${D}"/usr/"$(get_libdir)"/${PN}/${SERIES}
 
-	keepdir /var/{lib,log}/ganeti/
-	keepdir /usr/share/ganeti/${SERIES}/os/
+	keepdir /var/{lib,log}/${PN}/
+	keepdir /usr/share/${PN}/${SERIES}/os/
 	keepdir /var/lib/ganeti-storage/{export,file,shared}/
 
-	dosym ${SERIES} "/usr/share/ganeti/default"
-	dosym ${SERIES} "/usr/$(get_libdir)/ganeti/default"
+	dosym ${SERIES} "/usr/share/${PN}/default"
+	dosym ${SERIES} "/usr/$(get_libdir)/${PN}/default"
 
 	python_fix_shebang "${ED}"
 }
