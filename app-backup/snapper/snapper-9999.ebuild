@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-9999.ebuild,v 1.2 2014/05/22 09:56:05 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/snapper/snapper-9999.ebuild,v 1.3 2014/05/30 09:59:55 dlan Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/openSUSE/snapper.git"
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
-inherit eutils autotools-utils git-2
+inherit eutils autotools-utils git-r3
 
 DESCRIPTION="Command-line program for btrfs and ext4 snapshot management"
 HOMEPAGE="http://snapper.io/"
@@ -38,36 +38,32 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS README package/snapper.changes )
 
-src_prepare() {
-	epatch "${FILESDIR}"/cron-confd.patch
-	autotools-utils_src_prepare
-}
+PATCHES=( "${FILESDIR}"/cron-confd.patch )
 
 src_configure() {
-	econf  \
-	--with-conf="/etc/conf.d" \
-	--docdir="/usr/share/doc/${PF}" \
-	$(use_enable btrfs) \
-	$(use_enable ext4) \
-	$(use_enable lvm) \
-	$(use_enable pam) \
-	$(use_enable xattr xattrs) \
-	--disable-zypp
+	local myeconfargs=(
+		--with-conf="/etc/conf.d"
+		--docdir="/usr/share/doc/${PF}"
+		--disable-zypp
+		$(use_enable btrfs)
+		$(use_enable ext4)
+		$(use_enable lvm)
+		$(use_enable pam)
+		$(use_enable xattr xattrs)
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
 	# Existing configuration file required to function
 	newconfd data/sysconfig.snapper snapper
-	prune_libtool_files
 }
 
 pkg_postinst() {
-	elog "In order to use Snapper, you need to set up at least one config"
-	elog "manually, or else the tool will get confused. Typically you should"
-	elog "create a '/.snapshots' directory, then copy the file"
-	elog "'/etc/snapper/config-templates/default' into '/etc/snapper/configs/',"
-	elog "rename the file to 'root', and add its name into '/etc/conf.d/snapper'."
-	elog "That will instruct Snapper to snapshot the root of the filesystem by"
-	elog "default. For more information, see the snapper(8) manual page."
+	elog "In order to use Snapper, you need to set up"
+	elog "at least one config first. To do this, run:"
+	elog "snapper create-config <subvolume>"
+	elog "For more information, see man (8) snapper or"
+	elog "http://snapper.io/documentation.html"
 }
