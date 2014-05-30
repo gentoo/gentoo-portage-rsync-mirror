@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.10-r1.ebuild,v 1.5 2014/05/24 09:16:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.10-r1.ebuild,v 1.6 2014/05/30 19:40:53 hwoarang Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -26,7 +26,8 @@ ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
 REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
 	|| ( ${DECODER_PLUGINS} )
 	network? ( || ( ${ENCODER_PLUGINS} ) )
-	recorder? ( || ( ${ENCODER_PLUGINS} ) )"
+	recorder? ( || ( ${ENCODER_PLUGINS} ) )
+	opus? ( ogg )"
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	dev-libs/glib:2

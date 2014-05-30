@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.347 2014/05/24 09:16:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.348 2014/05/30 19:40:53 hwoarang Exp $
+
+  30 May 2014; Markos Chandras <hwoarang@gentoo.org> mpd-0.18.10-r1.ebuild:
+  opus actually needs ogg support as well. Bug #511586 by Nikoli
 
   24 May 2014; Markos Chandras <hwoarang@gentoo.org> mpd-0.18.10-r1.ebuild:
   Stable on amd64 wrt bug #509502
