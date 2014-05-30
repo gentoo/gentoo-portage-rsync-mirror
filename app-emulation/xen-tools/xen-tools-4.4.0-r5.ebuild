@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r5.ebuild,v 1.1 2014/05/23 11:00:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r5.ebuild,v 1.2 2014/05/30 10:34:46 dlan Exp $
 
 EAPI=5
 
@@ -122,13 +122,6 @@ pkg_setup() {
 		export "CONFIG_GCRYPT=y"
 	fi
 
-	if ! use x86 && ! has x86 $(get_all_abis) && use hvm; then
-		eerror "HVM (VT-x and AMD-v) cannot be built on this system. An x86 or"
-		eerror "an amd64 multilib profile is required. Remove the hvm use flag"
-		eerror "to build xen-tools on your current profile."
-		die "USE=hvm is unsupported on this system."
-	fi
-
 	if [[ -z ${XEN_TARGET_ARCH} ]] ; then
 		if use x86 && use amd64; then
 			die "Confusion! Both x86 and amd64 are set in your use flags!"
@@ -234,9 +227,13 @@ src_prepare() {
 		sed -e '/^SUBDIRS-y += python$/d' -i tools/Makefile || die
 	fi
 
-	# Disable hvm support on systems that don't support x86_32 binaries.
 	if ! use hvm; then
 		sed -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' -i tools/Makefile || die
+	# Bug 351648
+	elif ! use x86 && ! has x86 $(get_all_abis); then
+		mkdir -p "${WORKDIR}"/extra-headers/gnu || die
+		touch "${WORKDIR}"/extra-headers/gnu/stubs-32.h || die
+		export CPATH="${WORKDIR}"/extra-headers
 	fi
 
 	# Don't bother with qemu, only needed for fully virtualised guests
@@ -421,7 +418,7 @@ pkg_postinst() {
 		echo
 		elog "HVM (VT-x and AMD-V) support has been disabled. If you need hvm"
 		elog "support enable the hvm use flag."
-		elog "An x86 or amd64 multilib system is required to build HVM support."
+		elog "An x86 or amd64 system is required to build HVM support."
 	fi
 
 	if use qemu; then

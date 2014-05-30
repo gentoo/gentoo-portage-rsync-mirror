@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/demjson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.17 2014/05/03 07:48:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.18 2014/05/30 05:22:52 idella4 Exp $
+
+*demjson-2.0.1 (30 May 2014)
+
+  30 May 2014; Ian Delaney <idella4@gentoo.org> +demjson-2.0.1.ebuild:
+  bump
 
 *demjson-2.0 (03 May 2014)
 

@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/creole
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/creole/ChangeLog,v 1.1 2014/05/30 01:46:15 mrueg Exp $
+
+*creole-0.5.0 (30 May 2014)
+
+  30 May 2014; Manuel Rüger <mrueg@gentoo.org> +creole-0.5.0.ebuild,
+  +metadata.xml:
+  Initial ebuild imported from dev-zero's overlay.

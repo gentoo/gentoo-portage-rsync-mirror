@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.95 2014/05/29 01:30:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.96 2014/05/29 22:20:34 mgorny Exp $
+
+*audit-2.2.2-r2 (29 May 2014)
+
+  29 May 2014; Michał Górny <mgorny@gentoo.org> +audit-2.2.2-r2.ebuild:
+  Enable multilib support & switch to python-r1.
 
   29 May 2014; Mike Gilbert <floppym@gentoo.org> audit-2.2.2-r1.ebuild:
   Override hardcoded /usr/lib/systemd/system.

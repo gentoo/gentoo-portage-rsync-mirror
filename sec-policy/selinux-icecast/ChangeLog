@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-icecast
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-icecast/ChangeLog,v 1.38 2014/05/29 18:57:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-icecast/ChangeLog,v 1.39 2014/05/29 20:23:10 swift Exp $
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-icecast-2.20140311-r2.ebuild:
+  Stabilize 2.20140311-r2
 
 *selinux-icecast-2.20140311-r3 (29 May 2014)
 

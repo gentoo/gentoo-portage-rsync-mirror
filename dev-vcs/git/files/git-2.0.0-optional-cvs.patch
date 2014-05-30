@@ -85,11 +85,11 @@ diff -Nuar --exclude '*.orig' --exclude '*.rej' git-2.0.0.orig/Makefile git-2.0.
  	$(QUIET_GEN)$(RM) $@ $@+ && \
  	INSTLIBDIR=`MAKEFLAGS= $(MAKE) -C perl -s --no-print-directory instlibdir` && \
  	INSTLIBDIR_EXTRA='$(PERLLIB_EXTRA_SQ)' && \
-@@ -1826,15 +1840,17 @@
+@@ -1826,15 +1840,18 @@
  	$(QUIET_GEN)$(cmd_munge_script) && \
  	chmod +x $@+ && \
  	mv $@+ $@
--else # NO_PERL
+ else # NO_PERL
 -$(patsubst %.perl,%,$(SCRIPT_PERL)) git-instaweb: % : unimplemented.sh
 +_SCRIPT_PERL_NOBUILD += $(SCRIPT_PERL) $(SCRIPT_PERL_CVS) git-instaweb
 +endif # NO_PERL

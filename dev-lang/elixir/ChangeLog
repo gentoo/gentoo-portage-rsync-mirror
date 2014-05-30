@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/elixir
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.15 2014/05/10 22:28:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.17 2014/05/29 20:52:08 hasufell Exp $
+
+  29 May 2014; Julian Ospald <hasufell@gentoo.org>
+  -files/elixir-0.9.3-makefile.patch:
+  rm obsolete patch
+
+*elixir-0.13.3 (29 May 2014)
+
+  29 May 2014; Julian Ospald <hasufell@gentoo.org> +elixir-0.13.3.ebuild,
+  -elixir-0.10.0.ebuild, -elixir-0.10.1.ebuild, -elixir-0.10.2.ebuild,
+  -elixir-0.10.3.ebuild, -elixir-0.9.3.ebuild:
+  version bump, remove old
 
 *elixir-0.13.1 (10 May 2014)
 

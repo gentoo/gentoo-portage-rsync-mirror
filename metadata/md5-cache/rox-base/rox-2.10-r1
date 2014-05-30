@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=x11-libs/gtk+:2 dev-libs/glib:2 dev-libs/libxml2:2 >=x11-misc/shared-mime-info-0.14 svg? ( gnome-base/librsvg:2 ) >=rox-base/zeroinstall-injector-0.40 virtual/pkgconfig
+DESCRIPTION=ROX is a desktop environment and filer based on RISC OS
+EAPI=5
+HOMEPAGE=http://rox.sourceforge.net/
+IUSE=+svg +video
+KEYWORDS=~alpha ~amd64 ~ppc ~sparc ~x86
+LICENSE=GPL-2
+PDEPEND=rox-base/mime-editor rox-base/thumbs video? ( rox-extra/videothumbnail )
+RDEPEND=x11-libs/gtk+:2 dev-libs/glib:2 dev-libs/libxml2:2 >=x11-misc/shared-mime-info-0.14 svg? ( gnome-base/librsvg:2 ) >=rox-base/zeroinstall-injector-0.40
+SLOT=0
+SRC_URI=mirror://sourceforge/rox/rox-filer-2.10.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=19fc4fc3817523cdce6c77c6060b330e

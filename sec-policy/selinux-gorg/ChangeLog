@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-gorg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gorg/ChangeLog,v 1.41 2014/05/29 18:57:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gorg/ChangeLog,v 1.42 2014/05/29 20:23:30 swift Exp $
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-gorg-2.20140311-r2.ebuild:
+  Stabilize 2.20140311-r2
 
 *selinux-gorg-2.20140311-r3 (29 May 2014)
 

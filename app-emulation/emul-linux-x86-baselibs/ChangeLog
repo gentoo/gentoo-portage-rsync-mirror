@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.217 2014/05/29 18:46:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.218 2014/05/30 08:24:04 mgorny Exp $
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> files/remove-native-20140406-r4:
+  Fix openssl removal, bug #511822.
 
   29 May 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-baselibs-20140406-r4.ebuild:

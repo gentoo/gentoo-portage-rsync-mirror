@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-dpkg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dpkg/ChangeLog,v 1.36 2014/05/29 18:57:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dpkg/ChangeLog,v 1.37 2014/05/29 20:23:17 swift Exp $
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-dpkg-2.20140311-r2.ebuild:
+  Stabilize 2.20140311-r2
 
 *selinux-dpkg-2.20140311-r3 (29 May 2014)
 

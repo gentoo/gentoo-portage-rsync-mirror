@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508-r2.ebuild,v 1.1 2014/05/27 19:01:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508-r2.ebuild,v 1.2 2014/05/29 21:15:13 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
 
 LICENSE="APL-1.0 GPL-2 BSD BSD-2 public-domain LGPL-2 MPL-1.1 LGPL-2.1 !abi_x86_32? ( MPEG-4 )"
 KEYWORDS="-* ~amd64"
-IUSE="abi_x86_32"
+IUSE="abi_x86_32 +pulseaudio"
 
 DEPEND=""
 # required libs
@@ -26,12 +26,12 @@ RDEPEND="
 		media-libs/libpng[abi_x86_32(-)]
 		media-libs/libvorbis[abi_x86_32(-)]
 		media-sound/jack-audio-connection-kit[abi_x86_32(-)]
-		media-sound/pulseaudio[abi_x86_32(-)]
 		sci-libs/fftw[abi_x86_32(-)]
 		virtual/jpeg:62[abi_x86_32(-)]
 		x11-libs/libX11[abi_x86_32(-)]
 		x11-libs/libXext[abi_x86_32(-)]
 		x11-libs/libXfixes[abi_x86_32(-)]
+		pulseaudio? ( media-sound/pulseaudio[abi_x86_32(-)] )
 	)
 	!<=app-emulation/emul-linux-x86-sdl-20081109
 	!<=app-emulation/emul-linux-x86-soundlibs-20110101"
@@ -76,6 +76,13 @@ RDEPEND="${RDEPEND}
 	)
 	"
 PDEPEND="!abi_x86_32? ( ~app-emulation/emul-linux-x86-soundlibs-${PV} )"
+
+pkg_pretend() {
+	if use abi_x86_32 && ! use pulseaudio; then
+		ewarn "You have disabled USE=pulseaudio. This is known to break pre-built"
+		ewarn "libavfilter. If you need it, please turn USE=pulseaudio back on."
+	fi
+}
 
 src_prepare() {
 	# Include all libv4l libs, bug #348277

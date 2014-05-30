@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.286 2014/04/28 06:57:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.287 2014/05/29 19:25:18 pacho Exp $
+
+  29 May 2014; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.12.0.ebuild:
+  Drop old elog message as the transition was done long time ago (and it's
+  wrongly starting to be shown again due 3.1x number ordering)
 
 *gnome-terminal-3.12.0 (28 Apr 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.105 2014/05/08 21:27:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.106 2014/05/29 19:53:31 bicatali Exp $
+
+*pari-2.7.1 (29 May 2014)
+
+  29 May 2014; Sébastien Fabbro <bicatali@gentoo.org> +pari-2.7.1.ebuild:
+  Version bump
 
   08 May 2014; Sébastien Fabbro <bicatali@gentoo.org> +pari-2.7.0.ebuild,
   +files/pari-2.7.0-doc-make.patch, +files/pari-2.7.0-no-automagic.patch,

@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-abrt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-abrt/ChangeLog,v 1.14 2014/05/29 18:57:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-abrt/ChangeLog,v 1.15 2014/05/29 20:23:13 swift Exp $
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-abrt-2.20140311-r2.ebuild:
+  Stabilize 2.20140311-r2
 
 *selinux-abrt-2.20140311-r3 (29 May 2014)
 

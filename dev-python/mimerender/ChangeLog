@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimerender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimerender/ChangeLog,v 1.1 2014/05/26 06:46:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimerender/ChangeLog,v 1.2 2014/05/30 08:55:49 idella4 Exp $
+
+  30 May 2014; Ian Delaney <idella4@gentoo.org> mimerender-0.5.4.ebuild:
+  add py3.4 support
 
 *mimerender-0.5.4 (26 May 2014)
 

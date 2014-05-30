@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimerender/mimerender-0.5.4.ebuild,v 1.1 2014/05/26 06:46:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimerender/mimerender-0.5.4.ebuild,v 1.2 2014/05/30 08:55:49 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_7,3_3} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/roccat-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/ChangeLog,v 1.7 2014/03/03 20:10:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/ChangeLog,v 1.8 2014/05/30 10:24:30 swift Exp $
+
+*roccat-tools-1.6.0 (30 May 2014)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org> +roccat-tools-1.6.0.ebuild:
+  Add roccat-tools-1.6.0 thanks to Dmitry Pisklov (bug #511524)
 
 *roccat-tools-1.4.1 (03 Mar 2014)
 

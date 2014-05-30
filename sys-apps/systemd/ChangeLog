@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.257 2014/05/29 13:34:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.258 2014/05/30 02:29:14 floppym Exp $
+
+*systemd-212-r5 (30 May 2014)
+
+  30 May 2014; Mike Gilbert <floppym@gentoo.org> +systemd-212-r5.ebuild,
+  -systemd-212-r4.ebuild:
+  Add compatibility symlinks to prevent build failures do to broken usage of
+  libsystemd-*.
 
 *systemd-213 (29 May 2014)
 

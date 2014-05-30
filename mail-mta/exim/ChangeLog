@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.278 2014/05/29 17:30:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.280 2014/05/30 05:36:07 grobian Exp $
+
+  30 May 2014; Fabian Groffen <grobian@gentoo.org> exim-4.83_rc1.ebuild:
+  Workaround whitespace eaters
+
+  30 May 2014; Patrick Lauer <patrick@gentoo.org> exim-4.83_rc1.ebuild:
+  Whitespace
 
   29 May 2014; Fabian Groffen <grobian@gentoo.org> exim-4.83_rc1.ebuild:
   Add back dsearch, bug #511790

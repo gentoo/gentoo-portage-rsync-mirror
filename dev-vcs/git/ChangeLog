@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.262 2014/05/29 00:12:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.263 2014/05/29 20:08:27 swegener Exp $
+
+  29 May 2014; Sven Wegener <swegener@gentoo.org>
+  files/git-2.0.0-optional-cvs.patch:
+  Fix optional-cvs patch to not disable all perl scripts.
 
 *git-2.0.0 (29 May 2014)
 

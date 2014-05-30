@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-memcached
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-memcached/ChangeLog,v 1.38 2014/05/29 18:57:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-memcached/ChangeLog,v 1.39 2014/05/29 20:23:36 swift Exp $
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-memcached-2.20140311-r2.ebuild:
+  Stabilize 2.20140311-r2
 
 *selinux-memcached-2.20140311-r3 (29 May 2014)
 

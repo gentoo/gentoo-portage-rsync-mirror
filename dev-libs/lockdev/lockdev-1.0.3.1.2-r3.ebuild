@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r3.ebuild,v 1.1 2014/05/21 18:40:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r3.ebuild,v 1.2 2014/05/30 07:44:30 mgorny Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ PATCHES=(
 )
 
 S=${WORKDIR}/${PN}-${MY_PV}
-PERL_S=${S}/LockDev
+PERL_S=./LockDev
 
 pkg_setup() {
 	use perl && perl-module_pkg_setup

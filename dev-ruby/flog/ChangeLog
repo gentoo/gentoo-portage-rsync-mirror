@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/flog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/ChangeLog,v 1.13 2014/05/21 01:43:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/ChangeLog,v 1.14 2014/05/30 06:53:20 graaff Exp $
+
+*flog-4.2.1 (30 May 2014)
+
+  30 May 2014; Hans de Graaff <graaff@gentoo.org> +flog-4.2.1.ebuild:
+  Version bump.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> -flog-4.1.2.ebuild,
   flog-4.2.0.ebuild:

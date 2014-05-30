@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.12.0.ebuild,v 1.1 2014/04/28 06:57:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.12.0.ebuild,v 1.2 2014/05/29 19:25:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -77,13 +77,5 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	if [[ ${REPLACING_VERSIONS} < 3.6.1-r1 && ${REPLACING_VERSIONS} != 2.32.1-r1 &&
-		  ${REPLACING_VERSIONS} != 3.4.1.1-r1 ]]; then
-		elog
-		elog "Gnome Terminal no longer uses login shell by default, switching"
-		elog "to upstream default. Because of this, if you have some command you"
-		elog "want to be run, be sure to have it placed in your ~/.bashrc file."
-		elog
-	fi
 	readme.gentoo_print_elog
 }

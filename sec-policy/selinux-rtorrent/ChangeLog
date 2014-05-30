@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-rtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rtorrent/ChangeLog,v 1.23 2014/05/29 18:57:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rtorrent/ChangeLog,v 1.24 2014/05/29 20:22:59 swift Exp $
+
+  29 May 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-rtorrent-2.20140311-r2.ebuild:
+  Stabilize 2.20140311-r2
 
 *selinux-rtorrent-2.20140311-r3 (29 May 2014)
 
