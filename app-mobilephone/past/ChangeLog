@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/past
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/past/ChangeLog,v 1.4 2014/04/09 10:01:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/past/ChangeLog,v 1.5 2014/05/30 21:33:02 pesa Exp $
+
+  30 May 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Drop to maintainer-needed.
 
   09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty

@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>kde</herd>
-	<herd>qt</herd>
 	<use>
 		<flag name="devices">Enable suport for external devices</flag>
 		<flag name="dynamic">Enable support for dynamic playlists</flag>

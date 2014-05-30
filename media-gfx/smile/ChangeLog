@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/smile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/ChangeLog,v 1.12 2013/03/02 21:40:44 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/ChangeLog,v 1.13 2014/05/30 21:41:49 pesa Exp $
+
+  30 May 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Drop to maintainer-needed.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> smile-1.0.ebuild:
   Move Qt dependencies to the new category
