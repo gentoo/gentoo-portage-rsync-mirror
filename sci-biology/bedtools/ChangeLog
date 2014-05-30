@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/bedtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bedtools/ChangeLog,v 1.6 2014/03/24 13:15:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bedtools/ChangeLog,v 1.7 2014/05/30 20:16:25 swift Exp $
+
+*bedtools-2.20.1 (30 May 2014)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org> +bedtools-2.20.1.ebuild:
+  Add bedtools 2.20.1 thanks to Martin Mokrejs (bug #505538)
 
   24 Mar 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   New e-mail address.

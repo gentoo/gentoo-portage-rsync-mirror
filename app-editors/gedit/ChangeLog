@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.368 2014/04/27 15:30:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.369 2014/05/30 20:17:18 pacho Exp $
+
+*gedit-3.12.2 (30 May 2014)
+
+  30 May 2014; Pacho Ramos <pacho@gentoo.org> +gedit-3.12.2.ebuild:
+  Version bump
 
 *gedit-3.12.1 (27 Apr 2014)
 

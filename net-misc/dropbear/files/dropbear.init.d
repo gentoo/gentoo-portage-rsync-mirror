@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/files/dropbear.init.d,v 1.2 2004/07/14 23:57:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/files/dropbear.init.d,v 1.3 2014/05/30 20:04:55 vapier Exp $
 
 depend() {
 	use logger dns
@@ -9,23 +9,26 @@ depend() {
 }
 
 check_config() {
-	if [ ! -e /etc/dropbear/ ] ; then
-		mkdir /etc/dropbear/
-	fi
-	if [ ! -e /etc/dropbear/dropbear_dss_host_key ] ; then
-		einfo "Generating DSS-Hostkey..."
-		/usr/bin/dropbearkey -t dss -f /etc/dropbear/dropbear_dss_host_key
-	fi
-	if [ ! -e /etc/dropbear/dropbear_rsa_host_key ] ; then
-		einfo "Generating RSA-Hostkey..."
-		/usr/bin/dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key
-	fi
+	mkdir -p /etc/dropbear
+
+	local t k
+	for t in dss rsa ecdsa; do
+		k="/etc/dropbear/dropbear_${t}_host_key"
+		if [ ! -e ${k} ] ; then
+			# See if support is enabled for this key type.
+			if dropbearkey -h 2>&1 | grep -q "	${t}$" ; then
+				einfo "Generating ${k} ..."
+				dropbearkey -t ${t} -f ${k} >/dev/null
+			fi
+		fi &
+	done
+	wait
 }
 
 start() {
 	check_config || return 1
 	ebegin "Starting dropbear"
-	/usr/sbin/dropbear ${DROPBEAR_OPTS}
+	dropbear ${DROPBEAR_OPTS}
 	eend $?
 }
 
