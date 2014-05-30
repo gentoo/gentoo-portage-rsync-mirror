@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.0.0.ebuild,v 1.1 2014/05/29 00:12:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.0.0.ebuild,v 1.2 2014/05/30 11:37:28 polynomial-c Exp $
 
 EAPI=5
 
@@ -629,8 +629,8 @@ showpkgdeps() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	einfo "Please read /usr/share/bash-completion/git for Git bash command completion"
-	einfo "Please read /usr/share/bash-completion/git-prompt for Git bash prompt"
-	einfo "Note that the prompt bash code is now in the seperate script"
+	einfo "Please read /usr/share/git/git-prompt.sh for Git bash prompt"
+	einfo "Note that the prompt bash code is now in that separate script"
 	elog "These additional scripts need some dependencies:"
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"

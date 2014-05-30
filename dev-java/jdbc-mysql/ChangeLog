@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-mysql
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.85 2013/09/14 13:38:22 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.86 2014/05/30 11:46:09 tomwij Exp $
+
+  30 May 2014; Tom Wijsman <TomWij@gentoo.org> jdbc-mysql-5.1.14.ebuild,
+  jdbc-mysql-5.1.18.ebuild, jdbc-mysql-5.1.23.ebuild, jdbc-mysql-5.1.26.ebuild:
+  Change DEPEND to >=virtual/jdk-1.6 for version 5.1.23 and 5.1.26; fixes bug
+  #488268, reported by Dmitry Pak and a fix contributed by David Heidelberger
+  (okias).
 
 *jdbc-mysql-5.1.26 (14 Sep 2013)
 

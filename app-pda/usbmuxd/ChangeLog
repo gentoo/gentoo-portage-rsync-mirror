@@ -1,6 +1,20 @@
 # ChangeLog for app-pda/usbmuxd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.32 2014/04/06 08:34:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/ChangeLog,v 1.35 2014/05/30 11:52:33 ssuominen Exp $
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> usbmuxd-1.0.8-r1.ebuild:
+  Block libusbmuxd because this release contains it. Use get_udevdir instead of
+  the deprecated udev_get_udevdir.
+
+*usbmuxd-1.0.8_p20140530 (30 May 2014)
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +usbmuxd-1.0.8_p20140530.ebuild:
+  Snapshot from upstream git master wrt #505576
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> -usbmuxd-1.0.9.ebuild:
+  Move =app-pda/usbmuxd-1.0.9 to app-pda/libusbmuxd where it should have gone in
+  the first place.
 
 *usbmuxd-1.0.9 (06 Apr 2014)
 

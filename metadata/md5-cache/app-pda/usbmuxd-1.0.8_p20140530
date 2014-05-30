@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=>=app-pda/libimobiledevice-1.1.6 >=app-pda/libplist-1.11 virtual/libusb:1 virtual/os-headers virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=USB multiplex daemon for use with Apple iPhone/iPod Touch devices
+EAPI=5
+HOMEPAGE=http://www.libimobiledevice.org/
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
+LICENSE=GPL-2 GPL-3 LGPL-2.1+
+RDEPEND=>=app-pda/libimobiledevice-1.1.6 >=app-pda/libplist-1.11 virtual/libusb:1
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~ssuominen/usbmuxd-1.0.8_p20140530.tar.xz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b83b08ba8126c2a9f963e6f2380b495e

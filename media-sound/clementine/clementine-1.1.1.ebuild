@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.12 2013/10/29 20:12:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.13 2014/05/30 11:48:09 ssuominen Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ COMMON_DEPEND="
 		ios? (
 			app-pda/libplist:=
 			>=app-pda/libimobiledevice-1.0:=
-			app-pda/usbmuxd
+			|| ( app-pda/libusbmuxd <app-pda/usbmuxd-1.0.8_p1 )
 		)
 	)
 	lastfm? ( >=media-libs/liblastfm-1 )

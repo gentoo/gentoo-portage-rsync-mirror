@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare setup test
-DEPEND=virtual/jdk:1.6 dev-java/slf4j-api:0 log4j? ( dev-java/log4j:0 ) c3p0? ( dev-java/c3p0:0 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/gnu-classpath-0.98-r1:0.98 >=dev-java/ant-core-1.8.2 dev-java/ant-contrib >=dev-java/javatoolkit-0.3.0-r2
+DEPEND=>=virtual/jdk-1.6 dev-java/slf4j-api:0 log4j? ( dev-java/log4j:0 ) c3p0? ( dev-java/c3p0:0 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/gnu-classpath-0.98-r1:0.98 >=dev-java/ant-core-1.8.2 dev-java/ant-contrib >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=MySQL JDBC driver
 EAPI=5
 HOMEPAGE=http://www.mysql.com/products/connector/j/
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://mysql/Downloads/Connector-J/mysql-connector-java-5.1.26.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=47cdfd669678eb1730109782be9c377e
+_md5_=ffb5139a72b2d41ce55474b9f4a989b0
