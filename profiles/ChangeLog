@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9018 2014/05/30 11:27:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9019 2014/05/30 12:40:59 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  removed block media-plugins/ vdr-atscepg vdr-channelblocker vdr-iptv-0.3.2
 
   30 May 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Mask dev-java/ibm-jdk-bin:1.5 due to CVE-2012-1721.

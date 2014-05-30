@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ncdc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.48 2014/04/23 13:48:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.49 2014/05/30 12:53:02 xmw Exp $
+
+  30 May 2014; Michael Weber <xmw@gentoo.org> ncdc-1.19.1.ebuild,
+  ncdc-9999.ebuild:
+  add epatch_user and USE=geoip, as requested by carpet
 
 *ncdc-1.19.1 (23 Apr 2014)
 

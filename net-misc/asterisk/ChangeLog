@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.481 2014/05/08 09:41:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.482 2014/05/30 12:39:52 chainsaw Exp $
+
+*asterisk-11.10.0 (30 May 2014)
+*asterisk-1.8.28.0 (30 May 2014)
+
+  30 May 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.28.0.ebuild,
+  +asterisk-11.10.0.ebuild:
+  Bugfixes trickling down from Asterisk 12 development, particularly around
+  string handling and signedness mismatches (GCC 4.10 is clamping down on this
+  hard). T38 backport patch rediffed for 1.8 branch.
 
   08 May 2014; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.26.1.ebuild,
   asterisk-1.8.27.0.ebuild, asterisk-11.8.1.ebuild, asterisk-11.9.0.ebuild,

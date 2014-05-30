@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-iptv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.16 2014/02/23 20:02:50 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.17 2014/05/30 12:32:16 hd_brummy Exp $
+
+  30 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-iptv-0.3.2.ebuild:
+  removed useless version, depend on vdr-1.6; wrt bug 511506
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-iptv-0.3.0.ebuild,
   vdr-iptv-0.3.2.ebuild:

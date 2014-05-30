@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.19.1.ebuild,v 1.1 2014/04/23 13:48:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-1.19.1.ebuild,v 1.2 2014/05/30 12:53:02 xmw Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="ncurses directconnect client"
 HOMEPAGE="http://dev.yorhel.nl/ncdc"
@@ -26,8 +26,13 @@ DEPEND="${RDEPEND}
 	dev-util/makeheaders
 	virtual/pkgconfig"
 
+src_prepare() {
+	epatch_user && eautoreconf
+}
+
 src_configure() {
-	econf $(use_with geoip)
+	econf \
+		$(use_with geoip)
 }
 
 src_compile() {

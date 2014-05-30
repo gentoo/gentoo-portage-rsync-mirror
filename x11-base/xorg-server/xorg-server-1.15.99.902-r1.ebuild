@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.15.99.902.ebuild,v 1.1 2014/05/21 14:30:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.15.99.902-r1.ebuild,v 1.1 2014/05/30 12:56:16 chithanh Exp $
 
 EAPI=5
 
@@ -64,7 +64,10 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	)
 	>=x11-apps/xinit-1.3
 	selinux? ( sec-policy/selinux-xserver )
-	systemd? ( sys-apps/systemd )"
+	systemd? (
+		sys-apps/dbus
+		sys-apps/systemd
+	)"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -161,6 +164,7 @@ src_configure() {
 		$(use_with doc doxygen)
 		$(use_with doc xmlto)
 		$(use_with systemd systemd-daemon)
+		$(use_with systemd systemd-logind)
 		--enable-libdrm
 		--sysconfdir="${EPREFIX}"/etc/X11
 		--localstatedir="${EPREFIX}"/var
