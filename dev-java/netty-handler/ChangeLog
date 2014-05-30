@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/netty-handler
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-handler/ChangeLog,v 1.1 2014/05/30 12:10:59 tomwij Exp $
+
+*netty-handler-4.0.19 (30 May 2014)
+
+  30 May 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/netty-handler-4.0.19-build.xml, +metadata.xml,
+  +netty-handler-4.0.19.ebuild:
+  New ebuild for dev-java/netty-handler, async event-driven framework for rapid
+  development of high performance network applications; requested by Arfrever,
+  needed for new Jython versions.

@@ -1,6 +1,17 @@
 # ChangeLog for net-wireless/broadcom-sta
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.55 2013/10/16 01:07:10 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.57 2014/05/30 12:23:12 swift Exp $
+
+*broadcom-sta-6.30.223.141-r1 (30 May 2014)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org>
+  +broadcom-sta-6.30.223.141-r1.ebuild:
+  Check PREEMPT in recent kernels (bug #488772), updated by M.B. (bug #506708)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org>
+  -broadcom-sta-5.100.82.112-r3.ebuild:
+  Drop old ebuild (src not available anymore upstream) and fails building
+  against recent kernels. Thanks to M.B. (bug #506708)
 
 *broadcom-sta-6.30.223.141 (16 Oct 2013)
 

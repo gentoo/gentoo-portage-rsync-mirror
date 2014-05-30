@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.83_rc1.ebuild,v 1.4 2014/05/30 05:36:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.83_rc1.ebuild,v 1.5 2014/05/30 12:07:45 grobian Exp $
 
 EAPI="5"
 
@@ -499,7 +499,12 @@ pkg_postinst() {
 	fi
 	use tpda && einfo "TPDA support is experimental"
 	use proxy && einfo "proxy support is experimental"
-	use dsn && einfo "DSN support is experimental"
+	if use dsn ; then
+		einfo "Starting from Exim 4.83, DSN support comes from upstream."
+		einfo "DSN support is an experimental feature.  If you used DSN"
+		einfo "support prior to 4.83, make sure to remove all dsn_process"
+		einfo "switches from your routers, see http://bugs.gentoo.org/511818"
+	fi
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"
 	einfo "Please use the exim_tidydb tool as documented in the Exim manual:"

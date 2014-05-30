@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.280 2014/05/30 05:36:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.281 2014/05/30 12:07:45 grobian Exp $
+
+  30 May 2014; Fabian Groffen <grobian@gentoo.org> exim-4.83_rc1.ebuild:
+  Notify DSN users to remove dsn_process switches, by Marcin Mirosław, bug
+  #511818
 
   30 May 2014; Fabian Groffen <grobian@gentoo.org> exim-4.83_rc1.ebuild:
   Workaround whitespace eaters

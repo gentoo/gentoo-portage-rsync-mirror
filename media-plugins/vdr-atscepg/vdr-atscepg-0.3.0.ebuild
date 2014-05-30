@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/vdr-atscepg-0.3.0.ebuild,v 1.4 2014/01/08 11:40:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/vdr-atscepg-0.3.0.ebuild,v 1.5 2014/05/30 12:27:26 hd_brummy Exp $
 
 EAPI=5
 
@@ -15,8 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( >=media-video/vdr-1.6[atsc]
-		>=media-vdr/vdr-2 )"
+DEPEND=">=media-vdr/vdr-2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

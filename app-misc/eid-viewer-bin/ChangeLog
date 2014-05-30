@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/eid-viewer-bin
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/eid-viewer-bin/ChangeLog,v 1.1 2014/05/30 12:13:19 swift Exp $
+
+*eid-viewer-bin-4.0.4_p146 (30 May 2014)
+
+  30 May 2014; Sven Vermeulen <swift@gentoo.org>
+  +eid-viewer-bin-4.0.4_p146.ebuild, +metadata.xml:
+  Adding Belgian eID viewer software (java binary edition) to tree, thanks to
+  Vincent Hardy (bug #372187)

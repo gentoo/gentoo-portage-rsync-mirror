@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-atscepg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.6 2014/01/08 11:40:57 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.7 2014/05/30 12:27:26 hd_brummy Exp $
+
+  30 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-atscepg-0.3.0.ebuild:
+  removed useless depend/use-flag for vdr-1.6, wrt bug 511506
 
   08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-atscepg-0.1.1.ebuild, -files/vdr-atscepg-0.1.1-gcc-4.4.diff,

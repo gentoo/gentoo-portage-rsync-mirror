@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xvid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.138 2013/07/28 19:07:38 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.140 2014/05/30 12:23:21 ssuominen Exp $
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> xvid-1.3.3.ebuild:
+  Pull in sys-apps/grep as DEPEND
+
+*xvid-1.3.3 (30 May 2014)
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> +xvid-1.3.3.ebuild:
+  Version bump wrt #511780 by "Nikoli"
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> xvid-1.3.2-r1.ebuild:
   Force using nasm on FreeBSD as it doesnt build with yasm, bug
