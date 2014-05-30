@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1034 2014/05/28 12:22:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1036 2014/05/30 16:12:23 ssuominen Exp $
+
+  30 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-213.ebuild,
+  udev-9999.ebuild:
+  Raise kernel requirement to 2.6.39 for CONFIG_FHANDLE and remove compability
+  SUBSYSTEM=="mem" -line from 40-gentoo.rules with it, which was for Linux 2.6.32
+  compability. See #509570 which was filed against sys-fs/eudev.
 
   28 May 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Remove --disable-xattr because git is now using libc's xattr support instead

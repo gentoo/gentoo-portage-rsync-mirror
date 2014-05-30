@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.298 2014/05/28 12:22:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.299 2014/05/30 16:08:19 ssuominen Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	virtual/pkgconfig
 	>=sys-devel/make-3.82-r4
-	>=sys-kernel/linux-headers-2.6.32
+	>=sys-kernel/linux-headers-2.6.39
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 # Try with `emerge -C docbook-xml-dtd` to see the build failure without DTDs
 if [[ ${PV} = 9999* ]]; then
@@ -91,13 +91,8 @@ pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET"
 	linux-info_pkg_setup
 
-	# Based on README from tarball:
-	local MINKV=3.0
-	# These arch's have the mandatory accept4() function support in Linux 2.6.32*, see:
-	# $ grep -r define.*accept4 linux-2.6.32*/*
-	if use amd64 || use ia64 || use mips || use sparc || use x86; then
-		MINKV=2.6.32
-	fi
+	# CONFIG_FHANDLE was introduced by 2.6.39
+	local MINKV=2.6.39
 
 	if kernel_is -lt ${MINKV//./ }; then
 		eerror "Your running kernel is too old to run this version of ${P}"
@@ -122,9 +117,6 @@ src_prepare() {
 	cat <<-EOF > "${T}"/40-gentoo.rules
 	# Gentoo specific usb group
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
-	# Keep this for Linux 2.6.32 kernels with incomplete devtmpfs support because
-	# accept4() function is supported for some arch's wrt #457868
-	SUBSYSTEM=="mem", KERNEL=="null|zero|full|random|urandom", MODE="0666"
 	EOF
 
 	# Remove requirements for gettext and intltool wrt bug #443028
