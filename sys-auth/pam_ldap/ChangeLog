@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.44 2014/05/30 14:28:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.45 2014/05/30 20:55:48 mgorny Exp $
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> pam_ldap-186-r1.ebuild:
+  Enable multilib sasl support.
 
 *pam_ldap-186-r1 (30 May 2014)
 

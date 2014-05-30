@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1g-r1.ebuild,v 1.3 2014/05/20 06:41:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1g-r1.ebuild,v 1.4 2014/05/30 20:54:08 mgorny Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla 
 # the future.
 RDEPEND="gmp? ( dev-libs/gmp[static-libs(+)?,${MULTILIB_USEDEP}] )
 	zlib? ( sys-libs/zlib[static-libs(+)?,${MULTILIB_USEDEP}] )
-	kerberos? ( app-crypt/mit-krb5 )
+	kerberos? ( app-crypt/mit-krb5[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140406-r3
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
@@ -112,7 +112,6 @@ multilib_src_configure() {
 	# RC5:      5,724,428 03/03/2015    http://en.wikipedia.org/wiki/RC5
 
 	use_ssl() { usex $1 "enable-${2:-$1}" "no-${2:-$1}" " ${*:3}" ; }
-	multilib_native_use_ssl() { multilib_native_usex $1 "enable-${2:-$1}" "no-${2:-$1}" " ${*:3}" ; }
 	echoit() { echo "$@" ; "$@" ; }
 
 	local krb5=$(has_version app-crypt/mit-krb5 && echo "MIT" || echo "Heimdal")
@@ -145,7 +144,7 @@ multilib_src_configure() {
 		$(use_ssl !bindist rc5) \
 		enable-tlsext \
 		$(use_ssl gmp gmp -lgmp) \
-		$(multilib_native_use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
+		$(use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
 		$(use_ssl rfc3779) \
 		$(use_ssl tls-heartbeat heartbeats) \
 		$(use_ssl zlib) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-186-r1.ebuild,v 1.1 2014/05/30 14:28:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-186-r1.ebuild,v 1.2 2014/05/30 20:55:48 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal pam
@@ -17,7 +17,7 @@ IUSE="ssl sasl"
 DEPEND="|| ( >=sys-libs/glibc-2.1.3 >=sys-freebsd/freebsd-lib-9.1 )
 	virtual/pam[${MULTILIB_USEDEP}]
 	>=net-nds/openldap-2.1.30-r5[${MULTILIB_USEDEP}]
-	sasl? ( dev-libs/cyrus-sasl )"
+	sasl? ( dev-libs/cyrus-sasl[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r7
@@ -29,9 +29,7 @@ multilib_src_configure() {
 		--with-ldap-lib=openldap
 		$(use_enable ssl)
 	)
-	if ! multilib_is_native_abi || ! use sasl; then
-		myconf+=( ac_cv_header_sasl_sasl_h=no )
-	fi
+	use sasl || myconf+=( ac_cv_header_sasl_sasl_h=no )
 
 	ECONF_SOURCE=${S} \
 	econf "${myconf[@]}"

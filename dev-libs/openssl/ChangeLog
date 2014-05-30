@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.539 2014/05/23 23:13:54 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.540 2014/05/30 20:54:08 mgorny Exp $
+
+  30 May 2014; Michał Górny <mgorny@gentoo.org> openssl-0.9.8y-r1.ebuild,
+  openssl-1.0.1g-r1.ebuild, openssl-1.0.2_beta1-r3.ebuild:
+  Enable multilib krb5 support.
 
 *openssl-0.9.8y-r1 (23 May 2014)
 
