@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/atokx3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.21 2014/05/15 07:38:20 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.22 2014/05/31 07:53:10 mgorny Exp $
+
+  31 May 2014; Michał Górny <mgorny@gentoo.org> atokx3-3.0.0-r10.ebuild:
+  Fix baselibs dep, bug #510386. Add multilib deps for other packages.
 
   15 May 2014; Naohiro Aota <naota@gentoo.org> -atokx3-3.0.0-r6.ebuild,
   -atokx3-3.0.0-r7.ebuild, -atokx3-3.0.0-r8.ebuild, -atokx3-3.0.0-r9.ebuild:
