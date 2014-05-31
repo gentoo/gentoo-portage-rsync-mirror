@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Uniqid/Data-Uniqid-0.120.0.ebuild,v 1.1 2012/06/24 19:28:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Uniqid/Data-Uniqid-0.120.0.ebuild,v 1.2 2014/05/31 10:20:39 zlogene Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for simple generating of unique ids"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.8.1.ebuild,v 1.5 2014/02/22 22:21:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.8.1.ebuild,v 1.6 2014/05/31 10:26:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.25.10:2
-	gnome-base/libgtop:2
+	gnome-base/libgtop:2=
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.90.4:3

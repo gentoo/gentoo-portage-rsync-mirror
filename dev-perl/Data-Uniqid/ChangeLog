@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Uniqid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Uniqid/ChangeLog,v 1.4 2012/06/24 19:28:08 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Uniqid/ChangeLog,v 1.5 2014/05/31 10:20:39 zlogene Exp $
+
+  31 May 2014; Mikle Kolyada <zlogene@gentoo.org> Data-Uniqid-0.120.0.ebuild:
+  amd64/x86 stable
 
 *Data-Uniqid-0.120.0 (24 Jun 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.12.2.ebuild,v 1.1 2014/05/31 09:08:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.12.2.ebuild,v 1.2 2014/05/31 10:27:08 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="
 	>=dev-libs/glib-2.37.3:2
-	>=gnome-base/libgtop-2.28.2:2
+	>=gnome-base/libgtop-2.28.2:2=
 	>=x11-libs/gtk+-3.9.5:3[X(+)]
 	>=x11-themes/gnome-icon-theme-2.31
 	>=dev-cpp/gtkmm-3.3.18:3.0

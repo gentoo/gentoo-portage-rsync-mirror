@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.8.0-r1.ebuild,v 1.2 2014/05/18 14:06:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/mate-applets-1.8.0-r1.ebuild,v 1.3 2014/05/31 10:20:26 pacho Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ RDEPEND="${PYTHON_DEPS}
 	>=dev-libs/libmateweather-1.6.1:0
 	>=dev-libs/libxml2-2.5:2
 	dev-python/pygobject:3
-	>=gnome-base/libgtop-2.11.92:2
+	>=gnome-base/libgtop-2.11.92:2=
 	>=mate-base/mate-desktop-1.6:0
 	>=mate-base/mate-panel-1.8:0
 	>=mate-base/mate-settings-daemon-1.6:0

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/marco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/marco/ChangeLog,v 1.1 2014/04/28 23:34:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/marco/ChangeLog,v 1.2 2014/05/31 10:26:06 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> marco-1.8.0.ebuild:
+  Needs to be rebuilt with libgtop soname bumps
 
 *marco-1.8.0 (28 Apr 2014)
 

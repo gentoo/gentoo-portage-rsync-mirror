@@ -4,11 +4,11 @@ DESCRIPTION=High-level Python web framework
 EAPI=5
 HOMEPAGE=http://www.djangoproject.com/ http://pypi.python.org/pypi/Django
 IUSE=mysql postgres sqlite test python_targets_python2_7 vhosts
-KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=BSD
 RDEPEND=virtual/python-imaging[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] postgres? ( dev-python/psycopg:2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) mysql? ( >=dev-python/mysql-python-1.2.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite?] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=app-admin/webapp-config-1.50.15
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://www.djangoproject.com/m/releases/1.4/Django-1.4.13.tar.gz
 _eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=921286ea74ae0ff83e33b0c5daf9860f
+_md5_=ac3615ccea358ce39941933d46d68465

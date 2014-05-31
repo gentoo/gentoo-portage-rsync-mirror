@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.280 2014/02/22 22:54:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.281 2014/05/31 10:22:01 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> metacity-2.34.13.ebuild:
+  Needs to be rebuilt with libgtop soname bumps
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> metacity-2.34.13.ebuild:
   Fix wrong commit, bug 502160

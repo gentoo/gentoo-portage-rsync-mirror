@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-system-monitor/mate-system-monitor-1.8.0.ebuild,v 1.1 2014/04/25 15:13:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-system-monitor/mate-system-monitor-1.8.0.ebuild,v 1.2 2014/05/31 10:21:28 pacho Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ RDEPEND="app-text/rarian:0
 	>=dev-libs/glib-2.28:2
 	dev-libs/libsigc++:2
 	>=dev-libs/libxml2-2:2
-	>=gnome-base/libgtop-2.23.1:2
+	>=gnome-base/libgtop-2.23.1:2=
 	>=gnome-base/librsvg-2.12:2
 	>=sys-apps/dbus-0.7:0
 	x11-libs/cairo:0

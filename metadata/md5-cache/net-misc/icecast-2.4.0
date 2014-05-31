@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxslt dev-libs/libxml2 media-libs/libogg media-libs/libvorbis kate? ( media-libs/libkate ) logrotate? ( app-admin/logrotate ) speex? ( media-libs/speex ) theora? ( media-libs/libtheora ) yp? ( net-misc/curl ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://downloads.xiph.org/releases/icecast/icecast-2.4.0.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7dffdfd8df484965dd4d738c4747ea8e

@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/mate-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-utils/ChangeLog,v 1.3 2014/05/04 14:55:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-utils/ChangeLog,v 1.4 2014/05/31 10:27:28 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> mate-utils-1.8.0.ebuild:
+  Needs to be rebuilt with libgtop soname bumps
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> mate-utils-1.6.1.ebuild:
   Stable for amd64, wrt bug #509268

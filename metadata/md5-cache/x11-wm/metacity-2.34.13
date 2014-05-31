@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=>=x11-libs/gtk+-2.24:2 >=x11-libs/pango-1.2[X] >=dev-libs/glib-2.25.10:2 >=gnome-base/gsettings-desktop-schemas-3.3 >=x11-libs/startup-notification-0.7 >=x11-libs/libXcomposite-0.2 x11-libs/libXfixes x11-libs/libXrender x11-libs/libXdamage x11-libs/libXcursor x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libSM x11-libs/libICE media-libs/libcanberra[gtk] gnome-base/libgtop gnome-extra/zenity xinerama? ( x11-libs/libXinerama ) !x11-misc/expocity sys-devel/gettext >=dev-util/intltool-0.35 virtual/pkgconfig test? ( app-text/docbook-xml-dtd:4.5 ) xinerama? ( x11-proto/xineramaproto ) x11-proto/xextproto x11-proto/xproto app-arch/xz-utils >=sys-apps/sed-4
+DEPEND=>=x11-libs/gtk+-2.24:2 >=x11-libs/pango-1.2[X] >=dev-libs/glib-2.25.10:2 >=gnome-base/gsettings-desktop-schemas-3.3 >=x11-libs/startup-notification-0.7 >=x11-libs/libXcomposite-0.2 x11-libs/libXfixes x11-libs/libXrender x11-libs/libXdamage x11-libs/libXcursor x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libSM x11-libs/libICE media-libs/libcanberra[gtk] gnome-base/libgtop:2= gnome-extra/zenity xinerama? ( x11-libs/libXinerama ) !x11-misc/expocity sys-devel/gettext >=dev-util/intltool-0.35 virtual/pkgconfig test? ( app-text/docbook-xml-dtd:4.5 ) xinerama? ( x11-proto/xineramaproto ) x11-proto/xextproto x11-proto/xproto app-arch/xz-utils >=sys-apps/sed-4
 DESCRIPTION=GNOME default window manager
 EAPI=5
 HOMEPAGE=http://blogs.gnome.org/metacity/
 IUSE=test xinerama
 KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris
 LICENSE=GPL-2
-RDEPEND=>=x11-libs/gtk+-2.24:2 >=x11-libs/pango-1.2[X] >=dev-libs/glib-2.25.10:2 >=gnome-base/gsettings-desktop-schemas-3.3 >=x11-libs/startup-notification-0.7 >=x11-libs/libXcomposite-0.2 x11-libs/libXfixes x11-libs/libXrender x11-libs/libXdamage x11-libs/libXcursor x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libSM x11-libs/libICE media-libs/libcanberra[gtk] gnome-base/libgtop gnome-extra/zenity xinerama? ( x11-libs/libXinerama ) !x11-misc/expocity
+RDEPEND=>=x11-libs/gtk+-2.24:2 >=x11-libs/pango-1.2[X] >=dev-libs/glib-2.25.10:2 >=gnome-base/gsettings-desktop-schemas-3.3 >=x11-libs/startup-notification-0.7 >=x11-libs/libXcomposite-0.2 x11-libs/libXfixes x11-libs/libXrender x11-libs/libXdamage x11-libs/libXcursor x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libSM x11-libs/libICE media-libs/libcanberra[gtk] gnome-base/libgtop:2= gnome-extra/zenity xinerama? ( x11-libs/libXinerama ) !x11-misc/expocity
 SLOT=0
 SRC_URI=mirror://gnome/sources/metacity/2.34/metacity-2.34.13.tar.xz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=23b01e9ec6e3a64d0d44cf5a02db0410
+_md5_=ad94bd06dc0a33c85a31dcfdc59e94d3

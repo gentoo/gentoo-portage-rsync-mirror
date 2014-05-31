@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-lang/perl dev-perl/Crypt-OpenSSL-Random dev-perl/Getopt-GUI-Long dev-perl/GraphViz dev-perl/MailTools dev-perl/Net-DNS dev-perl/XML-Simple
 SLOT=0
 SRC_URI=http://www.dnssec-tools.org/download/dnssec-tools-2.0.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=1bd640443e4eb458300bbb52b6f337c9

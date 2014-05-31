@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.151 2014/05/01 02:40:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.152 2014/05/31 10:21:05 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org>
+  gnome-control-center-3.12.1.ebuild:
+  Needs to be rebuilt with libgtop soname bumps
 
   01 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-control-center-3.10.3.ebuild, gnome-control-center-3.12.1.ebuild:

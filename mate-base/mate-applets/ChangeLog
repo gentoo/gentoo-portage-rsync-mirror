@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-applets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/ChangeLog,v 1.6 2014/05/18 14:06:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/ChangeLog,v 1.7 2014/05/31 10:20:26 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> mate-applets-1.8.0-r1.ebuild:
+  Needs to be rebuilt with libgtop soname bumps
 
   18 May 2014; Tom Wijsman <TomWij@gentoo.org> mate-applets-1.6.2-r1.ebuild,
   mate-applets-1.8.0-r1.ebuild:
