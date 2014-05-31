@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9027 2014/05/31 15:29:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9028 2014/05/31 19:39:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Release Xfce 4.11 (pre-4.12) to ~arch which has better compability with
+  systemd and upower >= 0.99. Both 4.10 and 4.11 (pre-4.12) will still be
+  parallel maintained; 4.10 for stable and 4.11 (pre-4.12) for ~arch.
 
   31 May 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
   Update 3.12 mask
