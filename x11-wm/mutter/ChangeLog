@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.42 2014/04/27 22:02:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.43 2014/05/31 08:14:33 pacho Exp $
+
+*mutter-3.12.2 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +mutter-3.12.2.ebuild:
+  Version bump
 
 *mutter-3.12.1 (27 Apr 2014)
 
