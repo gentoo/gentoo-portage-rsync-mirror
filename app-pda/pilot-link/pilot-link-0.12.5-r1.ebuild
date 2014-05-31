@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5-r1.ebuild,v 1.1 2013/09/10 09:23:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5-r1.ebuild,v 1.2 2014/05/31 16:24:24 ssuominen Exp $
 
 EAPI=5
 
@@ -40,6 +40,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.12.3-distutils.patch \
 		"${FILESDIR}"/${PN}-0.12.3-libusb-compat-usb_open.patch \
 		"${FILESDIR}"/${PN}-0.12.5-perl514.patch
+
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #467600
 
 	AT_M4DIR="m4" eautoreconf
 }

@@ -1,6 +1,25 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.260 2014/05/25 17:34:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.263 2014/05/31 16:14:44 vapier Exp $
+
+  31 May 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0-r1.ebuild,
+  qemu-2.0.0.ebuild:
+  Update seabios dep to match what is included in the source #510680 by Pat
+  Erley.
+
+*qemu-2.0.0-r1 (31 May 2014)
+
+  31 May 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/qemu-2.0.0-CVE-2013-4541.patch, +files/qemu-2.0.0-CVE-2014-0222.patch,
+  +files/qemu-2.0.0-CVE-2014-0223.patch,
+  +files/qemu-2.0.0-qcow-check-max-sizes.patch,
+  +files/qemu-2.0.0-usb-post-load-checks.patch, +qemu-2.0.0-r1.ebuild:
+  Add fixes from upstream for various CVEs #510208 #510234.
+
+  31 May 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0.ebuild,
+  qemu-9999.ebuild:
+  Drop qemu-kvm wrapper entirely and tell people to use -enable-kvm instead.
+  #506566 by nobody.
 
   18 May 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0.ebuild,
   qemu-9999.ebuild:

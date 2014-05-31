@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.8 2014/05/31 16:14:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.2 2014/05/31 16:14:44 vapier Exp $
 
 EAPI=5
 
@@ -229,7 +229,12 @@ src_prepare() {
 		Makefile Makefile.target || die
 
 	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
-	epatch "${FILESDIR}"/qemu-9999-virtfs-proxy-helper-accept.patch
+	epatch "${FILESDIR}"/qemu-9999-virtfs-proxy-helper-accept.patch #486714
+	epatch "${FILESDIR}"/${P}-CVE-2013-4541.patch #510208
+	epatch "${FILESDIR}"/${P}-usb-post-load-checks.patch #510208
+	epatch "${FILESDIR}"/${P}-qcow-check-max-sizes.patch #510234
+	epatch "${FILESDIR}"/${P}-CVE-2014-0222.patch #510234
+	epatch "${FILESDIR}"/${P}-CVE-2014-0223.patch #510234
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch

@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.37 2014/05/27 19:08:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.38 2014/05/31 16:19:28 zerochaos Exp $
+
+# Rick Farina <zerochaos@gentoo.org> (31 May 2014)
+# wireshark 1.10.x has a mostly non-functional qt4 interface so keep
+# gtk3 the default until 1.11.x or higher is stabilized 
+<net-analyzer/wireshark-1.11.0 -qt4
 
 # Michał Górny <mgorny@gentoo.org> (27 May 2014)
 # Disable mng support by default since it is seldom used, and it

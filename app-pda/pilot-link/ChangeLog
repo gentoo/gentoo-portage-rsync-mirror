@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/pilot-link
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.75 2013/09/10 09:23:57 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.76 2014/05/31 16:24:24 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  pilot-link-0.12.5-r1.ebuild:
+  Use AC_CONFIG_HEADERS instead of the obsolete AM_CONFIG_HEADER wrt #467600 by
+  Ian Stakenvicius
 
 *pilot-link-0.12.5-r1 (10 Sep 2013)
 

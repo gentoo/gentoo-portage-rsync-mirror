@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.71 2014/05/25 17:34:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.72 2014/05/31 16:02:42 vapier Exp $
 
 EAPI=5
 
@@ -448,16 +448,6 @@ src_install() {
 			udev_dorules "${FILESDIR}"/65-kvm.rules
 		fi
 
-		if use qemu_softmmu_targets_x86_64 ; then
-			newbin "${FILESDIR}/qemu-kvm-1.4" qemu-kvm
-			ewarn "The deprecated '/usr/bin/kvm' symlink is no longer installed"
-			ewarn "You should use '/usr/bin/qemu-kvm', you may need to edit"
-			ewarn "your libvirt configs or other wrappers for ${PN}"
-		elif use x86 || use amd64; then
-			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
-			elog "of the /usr/bin/qemu-kvm script."
-		fi
-
 		if use python; then
 			python_foreach_impl qemu_python_install
 		fi
@@ -528,6 +518,13 @@ pkg_postinst() {
 		ewarn "any saved states with a newer qemu."
 		ewarn
 		ewarn "qemu-kvm was the primary qemu provider in Gentoo through 1.2.x"
+
+		if use x86 || use amd64; then
+			ewarn
+			ewarn "The /usr/bin/kvm and /usr/bin/qemu-kvm wrappers are no longer"
+			ewarn "installed.  In order to use kvm acceleration, pass the flag"
+			ewarn "-enable-kvm when running your system target."
+		fi
 	fi
 
 	virtfs_caps+="cap_chown,cap_dac_override,cap_fowner,cap_fsetid,"
