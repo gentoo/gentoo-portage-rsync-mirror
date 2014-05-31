@@ -1,6 +1,25 @@
 # ChangeLog for app-laptop/batti
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.18 2013/02/09 18:57:10 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.21 2014/05/31 18:22:41 pacho Exp $
+
+*batti-0.3.8-r2 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +batti-0.3.8-r2.ebuild,
+  +files/batti-0.3.8-upower-0.99.patch:
+  Add it back as I just got another mail from him telling it wasn't really
+  breaking it ;)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> -batti-0.3.8-r2.ebuild,
+  -files/batti-0.3.8-upower-0.99.patch, batti-0.3.8-r1.ebuild:
+  Revert as ssuominen reported breakage with upower-pm-utils. This is only
+  compatible with old upower then
+
+*batti-0.3.8-r2 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +batti-0.3.8-r2.ebuild,
+  +files/batti-0.3.8-upower-0.99.patch:
+  Use patch from ArchLinux to support upower-0.99 (x11-misc/cbatticon is another
+  alternative to this package that has dead upstream since 2011)
 
   09 Feb 2013; Christian Ruppert <idl0r@gentoo.org> batti-0.3.8-r1.ebuild:
   Fix Icon dependency
@@ -76,4 +95,3 @@
 
   12 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +batti-0.3.1.ebuild:
   Initial commit wrt #314797 by Arthur Spitzer.
-
