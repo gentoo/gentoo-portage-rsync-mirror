@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html2text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.14 2014/05/30 01:33:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.15 2014/05/31 01:51:49 patrick Exp $
+
+  31 May 2014; Patrick Lauer <patrick@gentoo.org> html2text-2014.4.5-r1.ebuild:
+  Whitespace
 
 *html2text-2014.4.5-r1 (30 May 2014)
 

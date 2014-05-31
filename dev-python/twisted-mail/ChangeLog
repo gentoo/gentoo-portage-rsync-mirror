@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.89 2014/05/29 03:26:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.90 2014/05/31 01:53:58 patrick Exp $
+
+  31 May 2014; Patrick Lauer <patrick@gentoo.org> twisted-mail-14.0.0.ebuild:
+  Whitespace
 
   29 May 2014; Ian Delaney <idella4@gentoo.org> twisted-mail-14.0.0.ebuild:
   re-keyword ~arm, tested on armv7, cubieboard2 wrt Bug #510832

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-atscepg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.7 2014/05/30 12:27:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.8 2014/05/31 01:49:51 patrick Exp $
+
+  31 May 2014; Patrick Lauer <patrick@gentoo.org> vdr-atscepg-0.3.0.ebuild:
+  Fix dependencies, media-vdr -> media-video category
 
   30 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-atscepg-0.3.0.ebuild:
@@ -35,4 +38,3 @@
   24 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
   +vdr-atscepg-0.1.1.ebuild:
   initial ebuild, moved from overlay vdr-1.5
-

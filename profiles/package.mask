@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15746 2014/05/30 19:45:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15747 2014/05/31 02:01:29 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (31 May 2014)
+# Broken dependencies #511676
+dev-python/rackspace-monitoring
+dev-python/rackspace-monitoring-cli
 
 # Markos Chandras <hwoarang@gentoo.org> (30 May 2014)
 # Mask beta release
