@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.214 2014/05/02 08:45:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.215 2014/05/31 06:04:50 pacho Exp $
+
+*glade-3.8.5 (31 May 2014)
+*glade-3.18.3 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +glade-3.18.3.ebuild,
+  +glade-3.8.5.ebuild:
+  Version bump
 
   02 May 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild,
   glade-3.18.2.ebuild, glade-3.8.4.ebuild:

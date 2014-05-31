@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/htmlentities
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.36 2014/05/21 02:28:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.37 2014/05/31 06:05:26 graaff Exp $
+
+*htmlentities-4.3.2 (31 May 2014)
+
+  31 May 2014; Hans de Graaff <graaff@gentoo.org> +htmlentities-4.3.2.ebuild:
+  Version bump. Add ruby21. Drop jruby since it is no longer compatible.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> htmlentities-4.3.1-r1.ebuild:
   Remove ruby18 target.
