@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.8 2014/02/22 15:42:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.9 2014/05/31 21:05:37 zlogene Exp $
+
+  31 May 2014; Mikle Kolyada <zlogene@gentoo.org> install-xattr-0.1.ebuild:
+  Add ~s390 keyword wrt bug #501534
 
   22 Feb 2014; Jeroen Roovers <jer@gentoo.org> install-xattr-0.1.ebuild:
   Marked ~hppa (bug #501534).
