@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.1.ebuild,v 1.1 2013/08/30 21:59:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.1-r1.ebuild,v 1.1 2014/05/31 11:58:01 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc system-renpy"
 
 # make system-renpy optional due to #459742 :(
-RDEPEND="system-renpy? ( games-engines/renpy )"
+RDEPEND="system-renpy? ( games-engines/renpy )
+	!system-renpy? (
+		amd64? ( sys-libs/zlib[abi_x86_32] )
+		x86? ( sys-libs/zlib )
+	)" #495270
 
 QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/lib/*"
 

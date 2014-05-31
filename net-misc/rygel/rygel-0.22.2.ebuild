@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.20.3.ebuild,v 1.5 2014/03/09 12:03:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.22.2.ebuild,v 1.1 2014/05/31 11:40:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,11 +8,11 @@ GCONF_DEBUG="no"
 inherit gnome2 virtualx
 
 DESCRIPTION="Rygel is an open source UPnP/DLNA MediaServer"
-HOMEPAGE="http://live.gnome.org/Rygel"
+HOMEPAGE="https://wiki.gnome.org/Projects/Rygel"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X nls +sqlite tracker test transcode"
 
 # The deps for tracker? and transcode? are just the earliest available
@@ -27,8 +27,8 @@ RDEPEND="
 	media-plugins/gst-plugins-soup:1.0
 	>=net-libs/gssdp-0.13
 	>=net-libs/gupnp-0.19
-	>=net-libs/gupnp-av-0.11.4
-	>=net-libs/libsoup-2.34:2.4
+	>=net-libs/gupnp-av-0.12.4
+	>=net-libs/libsoup-2.44:2.4
 	>=sys-apps/util-linux-2.20
 	x11-misc/shared-mime-info
 	sqlite? (
@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 # Maintainer only
-#	>=dev-lang/vala-0.20
+#	>=dev-lang/vala-0.22
 #   dev-libs/libxslt
 
 src_prepare() {
@@ -68,7 +68,6 @@ src_configure() {
 	# and we do not want to regenerate them automagically.
 	gnome2_src_configure \
 		XSLTPROC=$(type -P false) \
-		--disable-valadoc \
 		--enable-gst-launch-plugin \
 		--enable-mediathek-plugin \
 		--with-media-engine=gstreamer \

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.1.ebuild,v 1.6 2014/02/22 22:18:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.3.ebuild,v 1.1 2014/05/31 11:34:36 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -11,7 +11,7 @@ PYTHON_REQ_USE="xml"
 inherit eutils gnome2 python-single-r1 multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
-HOMEPAGE="http://www.rhythmbox.org/"
+HOMEPAGE="https://wiki.gnome.org/Apps/Rhythmbox"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +21,7 @@ test +udev upnp-av visualizer webkit zeitgeist"
 # Let people emerge this by default, bug #472932
 IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	ipod? ( udev )
@@ -41,8 +41,7 @@ COMMON_DEPEND="
 	>=dev-libs/gobject-introspection-0.10.0
 	>=dev-libs/libpeas-0.7.3[gtk,python?]
 	>=dev-libs/totem-pl-parser-3.2.0
-	>=net-libs/libsoup-2.26:2.4
-	>=net-libs/libsoup-gnome-2.26:2.4
+	>=net-libs/libsoup-2.34.0:2.4
 	media-libs/gst-plugins-base:1.0[introspection]
 	media-libs/gstreamer:1.0[introspection]
 	>=sys-libs/tdb-1.2.6
@@ -110,6 +109,7 @@ src_prepare() {
 		MAINTAINERS MAINTAINERS.old NEWS README THANKS"
 
 	rm -v lib/rb-marshal.{c,h} || die
+
 	gnome2_src_prepare
 }
 
