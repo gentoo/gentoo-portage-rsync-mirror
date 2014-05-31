@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.11.2.ebuild,v 1.3 2014/05/31 19:13:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.11.2-r1.ebuild,v 1.1 2014/05/31 19:13:04 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.100
 	>=xfce-base/xfconf-4.10
 	libcanberra? ( >=media-libs/libcanberra-0.25[sound] )
 	libnotify? ( >=x11-libs/libnotify-0.7 )
-	udev? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
+	udev? ( || ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils ) )
 	xklavier? ( >=x11-libs/libxklavier-5 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -39,6 +39,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-upower-0.99.patch )
+
 	XFCONF=(
 		$(use_enable udev upower-glib)
 		$(use_enable libnotify)

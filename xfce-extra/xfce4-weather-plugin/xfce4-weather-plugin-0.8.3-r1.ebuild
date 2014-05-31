@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/xfce4-weather-plugin-0.8.3.ebuild,v 1.5 2014/05/31 19:02:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/xfce4-weather-plugin-0.8.3-r1.ebuild,v 1.1 2014/05/31 19:02:31 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="debug udev"
 
 RDEPEND=">=dev-libs/glib-2.20
@@ -21,12 +21,14 @@ RDEPEND=">=dev-libs/glib-2.20
 	>=xfce-base/libxfce4ui-4.10
 	>=xfce-base/libxfce4util-4.10
 	>=xfce-base/xfce4-panel-4.10
-	udev? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )"
+	udev? ( || ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils ) )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-upower-0.99.patch )
+
 	# For GEONAMES_USERNAME, read README file and ask ssuominen@!
 	XFCONF=(
 		$(use_enable udev upower)

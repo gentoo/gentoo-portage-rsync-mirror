@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.10.ebuild,v 1.4 2014/05/04 08:30:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.10.ebuild,v 1.5 2014/05/31 19:02:27 pacho Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ IUSE="bluetooth +connman +libnotify ofono static-libs test-binaries +udev"
 RDEPEND=">=dev-libs/efl-1.8.4
 	sys-apps/dbus
 	connman? ( >=net-misc/connman-0.75 )
-	udev? ( sys-power/upower sys-fs/udisks:0 )
+	udev? ( || ( sys-power/upower sys-power/upower-pm-utils ) sys-fs/udisks:0 )
 "
 DEPEND="${RDEPEND}"
 

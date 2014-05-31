@@ -1,6 +1,14 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.206 2014/05/26 19:48:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.207 2014/05/31 19:19:58 ssuominen Exp $
+
+*xfce4-session-4.11.0-r1 (31 May 2014)
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/xfce4-session-4.11.0-upower-0.99.patch,
+  +xfce4-session-4.11.0-r1.ebuild, xfce4-session-4.11.0.ebuild:
+  Restrict 4.10 series and -r0 of 4.11.0 to old UPower and add -r1 for
+  compability with UPower >= 0.99
 
   26 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-session-4.10.1-r1.ebuild:
