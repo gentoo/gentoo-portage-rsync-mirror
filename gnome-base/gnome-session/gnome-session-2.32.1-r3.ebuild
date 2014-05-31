@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.11 2013/01/22 05:40:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.12 2014/05/31 22:36:12 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.76
 	>=gnome-base/gconf-2:2[gtk(+)]
 	<gnome-base/gconf-3.2.6
-	>=sys-power/upower-0.9.0
+	|| ( >=sys-power/upower-0.9.0 sys-power/upower-pm-utils )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
 	x11-libs/libSM

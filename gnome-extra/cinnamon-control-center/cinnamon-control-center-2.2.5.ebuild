@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.5.ebuild,v 1.1 2014/05/08 02:55:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.5.ebuild,v 1.2 2014/05/31 22:33:33 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	net-misc/modemmanager
 	>=net-misc/networkmanager-0.8.9[modemmanager]
 	>=sys-auth/polkit-0.103
-	>=sys-power/upower-0.9.1
+	|| ( >=sys-power/upower-0.9.1 sys-power/upower-pm-utils )
 	>=x11-libs/gdk-pixbuf-2.23.0:2
 	>=x11-libs/gtk+-3.4.1:3
 	>=x11-libs/libnotify-0.7.3:0=

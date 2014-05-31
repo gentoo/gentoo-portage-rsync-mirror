@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/cinnamon-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/ChangeLog,v 1.2 2014/05/16 01:54:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/ChangeLog,v 1.3 2014/05/31 22:33:33 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  cinnamon-control-center-2.2.5.ebuild, cinnamon-control-center-2.2.7.ebuild:
+  Allow falling back to sys-power/upower-pm-utils.
 
 *cinnamon-control-center-2.2.7 (16 May 2014)
 
@@ -15,4 +19,3 @@
   +files/cinnamon-control-center-2.2.5-nm-applet.patch,
   +files/cinnamon-control-center-2.2.5-optional.patch, +metadata.xml:
   Cinnamon-2.x has its own control center
-

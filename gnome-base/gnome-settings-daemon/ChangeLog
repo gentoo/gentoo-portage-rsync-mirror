@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.139 2014/05/31 07:44:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.140 2014/05/31 22:40:01 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-settings-daemon-3.10.2.ebuild:
+  Allow falling back to sys-power/upower-pm-utils.
 
 *gnome-settings-daemon-3.12.2 (31 May 2014)
 

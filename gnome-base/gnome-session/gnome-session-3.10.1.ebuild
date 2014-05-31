@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.10.1.ebuild,v 1.6 2014/03/29 21:00:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.10.1.ebuild,v 1.7 2014/05/31 22:36:12 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 	>=dev-libs/json-glib-0.10
 	>=dev-libs/dbus-glib-0.76
 	>=gnome-base/gnome-desktop-3.9.91:3=
-	>=sys-power/upower-0.9.0
+	|| ( >=sys-power/upower-0.9.0 sys-power/upower-pm-utils )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
 	virtual/opengl
