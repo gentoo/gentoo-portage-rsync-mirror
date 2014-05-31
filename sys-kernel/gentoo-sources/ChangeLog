@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1324 2014/05/24 13:59:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1326 2014/05/31 11:02:05 ago Exp $
+
+  31 May 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.10.40.ebuild,
+  gentoo-sources-3.12.20.ebuild:
+  Stable for ppc64, wrt bug #510488
+
+  31 May 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.10.40.ebuild,
+  gentoo-sources-3.12.20.ebuild:
+  Stable for ppc, wrt bug #510488
 
   24 May 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.10.40.ebuild,
   gentoo-sources-3.12.20.ebuild:

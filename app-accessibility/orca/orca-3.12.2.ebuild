@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.10.2.ebuild,v 1.4 2014/03/09 11:52:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.2.ebuild,v 1.1 2014/05/31 11:09:03 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,11 +11,11 @@ PYTHON_REQ_USE="threads"
 inherit gnome2 python-r1
 
 DESCRIPTION="Extensible screen reader that provides access to the desktop"
-HOMEPAGE="http://projects.gnome.org/orca/"
+HOMEPAGE="https://wiki.gnome.org/Projects/Orca"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
