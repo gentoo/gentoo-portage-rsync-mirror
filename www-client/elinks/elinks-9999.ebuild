@@ -1,20 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre6.ebuild,v 1.11 2014/05/31 04:14:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-9999.ebuild,v 1.1 2014/05/31 04:14:40 axs Exp $
 
-EAPI=4
-inherit eutils autotools flag-o-matic
+EAPI=5
+PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_REQ_USE="threads"
+inherit autotools eutils git-r3 flag-o-matic python-any-r1
+
+EGIT_REPO_URI="git://repo.or.cz/elinks.git"
 
 MY_P="${P/_/}"
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz/"
-SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2
-	http://dev.gentoo.org/~axs/distfiles/${PN}-0.12_pre5-js185-patches.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS=""
 IUSE="bittorrent bzip2 debug finger ftp gopher gpm guile idn ipv6 \
 	  javascript lua +mouse nls nntp perl ruby samba ssl unicode X zlib"
 RESTRICT="test"
@@ -32,63 +34,30 @@ DEPEND="dev-libs/boehm-gc
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby dev-ruby/rubygems )
 	samba? ( net-fs/samba )
-	javascript? ( dev-lang/spidermonkey:0 )"
+	javascript? ( >=dev-lang/spidermonkey-1.8.5:0= )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+src_unpack() {
+	default
+	git-r3_src_unpack
+}
 
 src_prepare() {
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}"/${PN}-0.10.4.conf-syscharset.diff
-	mv "${PN}-0.10.4.conf" "${PN}.conf"
+	mv "${WORKDIR}/${PN}-0.10.4.conf" "${WORKDIR}/${PN}.conf"
 	if ! use ftp ; then
-		sed -i -e 's/\(.*protocol.ftp.*\)/# \1/' ${PN}.conf
+		sed -i -e 's/\(.*protocol.ftp.*\)/# \1/' "${WORKDIR}"/${PN}.conf
 	fi
-	sed -i -e 's/\(.*set protocol.ftp.use_epsv.*\)/# \1/' ${PN}.conf
-	cd "${S}"
+	sed -i -e 's/\(.*set protocol.ftp.use_epsv.*\)/# \1/' "${WORKDIR}"/${PN}.conf
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
 
-	if use lua && has_version ">=dev-lang/lua-5.1"; then
-		epatch "${FILESDIR}"/${PN}-0.11.2-lua-5.1.patch
-	fi
+	epatch_user
 
-	epatch "${FILESDIR}"/${PN}-9999-parallel-make.patch
-	epatch "${FILESDIR}"/${PN}-0.12_pre5-compilation-fix.patch
-
-	if use javascript ; then
-		if has_version ">=dev-lang/spidermonkey-1.8"; then
-			if has_version ">=dev-lang/spidermonkey-1.8.5"; then
-				epatch "${WORKDIR}"/patches/${PN}-0.12_pre5-js185-1-heartbeat.patch
-				epatch "${WORKDIR}"/patches/${PN}-0.12_pre5-js185-2-up.patch
-				epatch "${WORKDIR}"/patches/${PN}-0.12_pre5-js185-3-histback.patch
-				epatch "${FILESDIR}"/${PN}-0.12_pre5-sm185-jsval-fixes.patch
-#				if has_version ">=dev-lang/spidermonkey-1.8.7"; then
-#					# fix lib order in configure check and add mozjs187
-#					# (these seds are necessary so that @preserved-libs copies are not used)
-#					sed -i -e 's:for spidermonkeylib in js .*$:for spidermonkeylib in mozjs187 mozjs185 mozjs js smjs; do:' \
-#						configure.in || die
-#				else
-					# fix lib order in configure check
-					# (these seds are necessary so that @preserved-libs copies are not used)
-					sed -i -e 's:for spidermonkeylib in js .*$:for spidermonkeylib in mozjs185 mozjs js smjs; do:' \
-						configure.in || die
-#				fi
-			else
-				# fix lib order in configure check
-				# (these seds are necessary so that @preserved-libs copies are not used)
-				epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
-				sed -i -e 's:for spidermonkeylib in js .*$:for spidermonkeylib in mozjs js smjs; do:' \
-					configure.in || die
-			fi
-		fi
-	fi
-	epatch "${FILESDIR}"/${PN}-0.12_pre5-ruby-1.9.patch
 	# Regenerate acinclude.m4 - based on autogen.sh.
 	cat > acinclude.m4 <<- _EOF
 		dnl Automatically generated from config/m4/ files.
 		dnl Do not modify!
 	_EOF
 	cat config/m4/*.m4 >> acinclude.m4
-
 	sed -i -e 's/-Werror//' configure*
 
 	eautoreconf

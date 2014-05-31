@@ -1,6 +1,13 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.168 2014/03/09 01:58:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.169 2014/05/31 04:14:40 axs Exp $
+
+*elinks-9999 (31 May 2014)
+
+  31 May 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +elinks-9999.ebuild,
+  +files/elinks-9999-parallel-make.patch, elinks-0.12_pre6.ebuild:
+  fixed parallel make issue (bug 461014); added live ebuild as upstream has been
+  fairly active since last release
 
   09 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -elinks-0.11.7.ebuild,
   -elinks-0.12_pre5-r2.ebuild, -files/elinks-0.10.1-utf_8_io-default.patch,
