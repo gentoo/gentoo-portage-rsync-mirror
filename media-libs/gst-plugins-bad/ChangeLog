@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.146 2014/04/21 10:29:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.147 2014/05/31 13:49:52 pacho Exp $
+
+*gst-plugins-bad-1.2.4 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gst-plugins-bad-1.2.4.ebuild,
+  -files/gst-plugins-bad-1.2.0-optional-egl.patch,
+  -gst-plugins-bad-1.0.10.ebuild, -gst-plugins-bad-1.0.5.ebuild,
+  -gst-plugins-bad-1.0.6.ebuild, -gst-plugins-bad-1.0.7.ebuild,
+  -gst-plugins-bad-1.0.8.ebuild, -gst-plugins-bad-1.2.0-r1.ebuild,
+  -gst-plugins-bad-1.2.0.ebuild:
+  Version bump, drop old
 
   21 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-bad-1.2.3.ebuild:
   Stable for arm, wrt bug #507568

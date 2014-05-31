@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.31 2014/05/29 15:32:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.32 2014/05/31 13:55:42 idella4 Exp $
+
+  31 May 2014; Ian Delaney <idella4@gentoo.org> pytextile-2.1.8.ebuild:
+  add fix to test failings noted by Arfrever, fix typo
 
 *pytextile-2.1.8 (29 May 2014)
 

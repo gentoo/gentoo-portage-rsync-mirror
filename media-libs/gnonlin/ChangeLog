@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gnonlin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.22 2014/04/06 11:49:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.23 2014/05/31 13:43:40 pacho Exp $
+
+*gnonlin-1.2.1 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gnonlin-1.2.1.ebuild:
+  Version bump
 
 *gnonlin-1.2.0 (06 Apr 2014)
 
@@ -106,4 +111,3 @@
   07 Apr 2006; Zaheer Abbas Merali <zaheerm@gentoo.org> +metadata.xml,
   +gnonlin-0.10.1.ebuild:
   Initial import
-

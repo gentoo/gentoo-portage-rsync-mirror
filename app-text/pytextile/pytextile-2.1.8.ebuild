@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.1.8.ebuild,v 1.1 2014/05/29 15:32:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.1.8.ebuild,v 1.2 2014/05/31 13:55:42 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -28,7 +28,9 @@ S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
 	# https://github.com/ikirudennis/python-textile/issues/6
-	sed -e s':testSanitize:_&:' -i textile/tests/__init__.py || die
+	sed -e 's:testSanitize:_&:' -i textile/tests/__init__.py || die
+	# This resolves a nasty race condition noted and observed by Arfrever
+	sed -e 's:with-id = 1::' -i setup.cfg || die
 	distutils-r1_python_prepare_all
 }
 

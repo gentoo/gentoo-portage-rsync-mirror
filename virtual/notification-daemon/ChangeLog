@@ -1,6 +1,10 @@
 # ChangeLog for virtual/notification-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.10 2014/03/24 15:24:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.11 2014/05/31 13:38:52 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
+  notification-daemon-0.ebuild:
+  Include razorqt-base/razorqt-notifications wrt #461366
 
   24 Mar 2014; Tom Wijsman <TomWij@gentoo.org> notification-daemon-0.ebuild:
   Added x11-misc/mate-notification-daemon to the end of !gnome in virtual

@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.2.0-r1.ebuild,v 1.1 2013/10/06 22:20:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.2.4.ebuild,v 1.1 2014/05/31 13:49:52 pacho Exp $
 
 EAPI="5"
-
-inherit autotools eutils flag-o-matic gst-plugins-bad gst-plugins10
+inherit eutils flag-o-matic gst-plugins-bad gst-plugins10
 
 DESCRIPTION="Less plugins for GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
@@ -29,17 +28,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
 "
-
-src_prepare() {
-	# Make dependency on mesa optional, only needed by eglglessink
-	epatch "${FILESDIR}"/${PN}-1.2.0-optional-egl.patch
-	eautoreconf
-
-	# gettextize removes this line making gst-plugins-bad install
-	# translation file .mo instead of gst-plugins-bad-1.0.mo
-	sed -e '/SHELL =.*/ a\GETTEXT_PACKAGE = @GETTEXT_PACKAGE@\' \
-		-i po/Makefile.in.in || die
-}
 
 src_configure() {
 	strip-flags
