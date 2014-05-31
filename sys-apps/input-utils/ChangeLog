@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/input-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.11 2012/06/29 12:34:38 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.12 2014/05/31 02:12:25 patrick Exp $
+
+  31 May 2014; Patrick Lauer <patrick@gentoo.org>
+  input-utils-0.0.1_pre20081014.ebuild:
+  Remove superfluous cd  statement
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org>
   input-utils-0.0.1_pre20081014.ebuild:
@@ -59,4 +63,3 @@
   22 Nov 2005; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +input-utils-0.0.1_pre20050727.ebuild:
   Initial import of ebuild written by me.
-

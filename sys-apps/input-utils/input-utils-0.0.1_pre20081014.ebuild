@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20081014.ebuild,v 1.4 2012/06/29 12:34:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20081014.ebuild,v 1.5 2014/05/31 02:12:25 patrick Exp $
 
 EAPI=4
 inherit eutils
@@ -22,7 +22,6 @@ RDEPEND=""
 S="${WORKDIR}/input"
 
 src_prepare() {
-	cd "${S}"
 	# Ported from Debian
 	epatch "${FILESDIR}"/input-utils-0.0.1_pre20081014.patch
 	# version check stuff

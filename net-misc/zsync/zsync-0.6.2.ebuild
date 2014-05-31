@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/zsync-0.6.2.ebuild,v 1.3 2013/05/25 09:43:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/zsync-0.6.2.ebuild,v 1.4 2014/05/31 02:14:13 patrick Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -23,7 +23,6 @@ ZLIB_S="${WORKDIR}/${ZLIB_P}"
 
 src_prepare() {
 	# Move old zlib-1.2.11 out the way
-	cd "${S}"
 	mv "${S}"/zlib zlib-1.2.11-modified
 
 	cd "${ZLIB_S}"

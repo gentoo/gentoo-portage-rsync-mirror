@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zsync
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/ChangeLog,v 1.8 2013/05/25 09:43:07 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/ChangeLog,v 1.9 2014/05/31 02:14:13 patrick Exp $
+
+  31 May 2014; Patrick Lauer <patrick@gentoo.org> zsync-0.6.2.ebuild:
+  Remove superfluous cd  statement
 
   25 May 2013; Sergey Popov <pinkbyte@gentoo.org> zsync-0.6.2.ebuild:
   Add ~arm keyword, wrt bug #470772
@@ -36,4 +39,3 @@
   23 Mar 2005; Karl Trygve Kalleberg <karltk@gentoo.org> :
   Initial import. Ebuild submitted by Ricardo Correia <gentoo-bugs@wizy.org>.
   Fixes #86406.
-
