@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnome-mahjongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.13 2014/04/27 16:36:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.14 2014/05/31 07:18:39 pacho Exp $
+
+*gnome-mahjongg-3.12.2 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gnome-mahjongg-3.12.2.ebuild:
+  Version bump
 
 *gnome-mahjongg-3.12.1 (27 Apr 2014)
 
