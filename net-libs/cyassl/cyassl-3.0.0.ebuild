@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.9.4.ebuild,v 1.2 2014/05/31 13:12:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-3.0.0.ebuild,v 1.1 2014/05/31 13:20:34 blueness Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~x86"
 
-CACHE_SIZE="small big huge"
+CACHE_SIZE="smallstack small big huge"
 CRYPTO_OPTS="aes-gcm aes-ccm aes-ni blake2 camellia dsa ecc hc128 hkdf md2 md4 nullcipher psk leanpsk pkcs7 rabbit ripemd scep sha512 supportedcurves"
 CERT_OPTS="ocsp crl crl-monitor savesession savecert sessioncerts testcert"
 EXTRAS="atomicuser pkcallbacks sep maxfragment truncatedhmac tlsx"
@@ -59,6 +59,7 @@ src_configure() {
 		$(usex threads --disable-singlethreaded --enable-singlethreaded) \
 		                                    \
 		--disable-silent-rules              \
+		--enable-keygen                     \
 		--enable-certgen                    \
 		--disable-stacksize                 \
 		--disable-ntru                      \
@@ -76,6 +77,7 @@ src_configure() {
 		--enable-dh                         \
 		--enable-coding                     \
 		                                    \
+		$(use_enable smallstack )           \
 		$(use_enable small smallcache)      \
 		$(use_enable big bigcache)          \
 		$(use_enable huge hugecache)        \

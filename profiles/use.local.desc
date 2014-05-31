@@ -5126,6 +5126,7 @@ net-libs/cyassl:sessioncerts - Store session certificates
 net-libs/cyassl:sha - Enable SHA cipher support
 net-libs/cyassl:sha512 - Enable SHA-160 support
 net-libs/cyassl:small - Choose small cache size (excludes big or huge)
+net-libs/cyassl:smallstack - Enable Small Stack Usage (excludes big or huge)
 net-libs/cyassl:sni - Enable server name indication
 net-libs/cyassl:sniffer - Allow collection/decryption of SSL traffic
 net-libs/cyassl:supportedcurves - Enable Supported Elliptic Curves

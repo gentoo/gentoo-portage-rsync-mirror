@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.49 2014/05/15 12:06:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.51 2014/05/31 13:20:34 blueness Exp $
+
+*cyassl-3.0.0 (31 May 2014)
+
+  31 May 2014; Anthony G. Basile <blueness@gentoo.org> +cyassl-3.0.0.ebuild:
+  Version bump
+
+  31 May 2014; Anthony G. Basile <blueness@gentoo.org> cyassl-2.9.4.ebuild,
+  metadata.xml:
+  Turn off keygen and fastmath on x86, bug #510580
 
   15 May 2014; Anthony G. Basile <blueness@gentoo.org> cyassl-2.8.0.ebuild:
   Starting stabilization of 2.9.4, bug #499398 and 495848

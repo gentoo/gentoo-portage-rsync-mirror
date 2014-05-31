@@ -6,6 +6,7 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
+		<flag name="smallstack">Enable Small Stack Usage (excludes big or huge)</flag>
 		<flag name="small">Choose small cache size (excludes big or huge)</flag>
 		<flag name="big">Choose big cache size (excludes small or huge)</flag>
 		<flag name="huge">Choose big cache size (excludes small or big)</flag>

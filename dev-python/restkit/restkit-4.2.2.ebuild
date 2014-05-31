@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.2.ebuild,v 1.1 2014/04/23 08:27:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.2.ebuild,v 1.2 2014/05/31 13:07:34 idella4 Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+cli doc examples test"
 
 PY27_USEDEP="$(python_gen_usedep 'python2*')"
-RDEPEND="cli? ( dev-python/ipython[${PY27_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}] )
+RDEPEND="cli? ( dev-python/ipython[${PY27_USEDEP}] )
 	dev-python/webob[${PYTHON_USEDEP}]
 	>=dev-python/socketpool-0.5.3[${PYTHON_USEDEP}]
 	>=dev-python/http-parser-0.8.3[${PYTHON_USEDEP}]"
