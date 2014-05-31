@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.12.ebuild,v 1.4 2014/04/26 08:16:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.16.ebuild,v 1.1 2014/05/31 09:41:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnumeric.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="+introspection libgda perl python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -29,13 +29,13 @@ RESTRICT="test"
 RDEPEND="
 	app-arch/bzip2
 	sys-libs/zlib
-	>=dev-libs/glib-2.28:2
+	>=dev-libs/glib-2.38.0:2
 	>=gnome-extra/libgsf-1.14.24:=
-	>=x11-libs/goffice-0.10.10:0.10
+	>=x11-libs/goffice-0.10.14:0.10
 	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.24.0:=
 
-	>=x11-libs/gtk+-3.2:3
+	>=x11-libs/gtk+-3.8.7:3
 	x11-libs/cairo:=[svg]
 
 	introspection? ( >=dev-libs/gobject-introspection-1:= )

@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.8 2014/02/14 22:30:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.9 2014/05/31 09:49:17 swegener Exp $
 
 EAPI="5"
 
 inherit eutils toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="svn://coreboot.org/flashrom/trunk"
+	ESVN_REPO_URI="svn://flashrom.org/flashrom/trunk"
 	inherit subversion
 else
 	SRC_URI="http://download.flashrom.org/releases/${P}.tar.bz2"
