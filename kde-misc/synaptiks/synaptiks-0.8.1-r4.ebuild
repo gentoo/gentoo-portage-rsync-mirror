@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1-r4.ebuild,v 1.3 2014/03/14 06:24:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1-r4.ebuild,v 1.4 2014/05/31 20:31:33 ssuominen Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	x11-libs/libXtst
 	upower? (
 		dev-python/dbus-python[${PYTHON_USEDEP}]
-		sys-power/upower
+		|| ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils )
 	)
 "
 DEPEND="${RDEPEND}

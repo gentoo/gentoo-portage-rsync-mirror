@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.206 2014/05/15 17:09:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.207 2014/05/31 20:53:36 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org> xbmc-11.0.ebuild,
+  xbmc-12.1-r1.ebuild, xbmc-12.2-r1.ebuild, xbmc-12.3.ebuild,
+  xbmc-13.0_p2.ebuild, xbmc-9999.ebuild:
+  Allow falling back to sys-power/upower-pm-utils.
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> xbmc-11.0.ebuild,
   xbmc-12.1-r1.ebuild, xbmc-12.2-r1.ebuild, xbmc-12.3.ebuild,

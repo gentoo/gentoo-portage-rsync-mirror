@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-audiorecorder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.20 2014/04/19 09:45:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.21 2014/05/31 20:38:09 hd_brummy Exp $
+
+*vdr-audiorecorder-2.0.0_rc3 (31 May 2014)
+
+  31 May 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-audiorecorder-2.0.0_rc3.ebuild:
+  bump
 
 *vdr-audiorecorder-0.1.0_pre14-r3 (19 Apr 2014)
 

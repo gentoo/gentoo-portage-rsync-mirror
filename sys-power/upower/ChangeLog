@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.148 2014/05/27 11:22:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.149 2014/05/31 20:34:55 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org> upower-0.99.0.ebuild:
+  Release 0.99 to ~arch because most of the tree has been adapted.
 
   27 May 2014; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.23.ebuild:
   old

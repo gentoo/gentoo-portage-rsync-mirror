@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.6.1-r1.ebuild,v 1.6 2014/05/04 14:54:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.6.1-r1.ebuild,v 1.7 2014/05/31 20:38:31 tomwij Exp $
 
 EAPI="5"
 
@@ -28,7 +28,10 @@ RDEPEND=">=dev-libs/dbus-glib-0.76:0
 	>=dev-libs/glib-2.25:2
 	dev-libs/libxslt:0
 	sys-apps/dbus:0
-	>=sys-power/upower-0.9.0:0
+	|| (
+		( >=sys-power/upower-0.9.0 <sys-power/upower-0.99 )
+		sys-power/upower-pm-utils
+	)
 	x11-apps/xdpyinfo:0
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.14:2

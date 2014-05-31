@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.8.1.ebuild,v 1.1 2014/04/17 15:11:08 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.8.1.ebuild,v 1.2 2014/05/31 20:38:31 tomwij Exp $
 
 EAPI="5"
 
@@ -45,7 +45,12 @@ RDEPEND=">=dev-libs/dbus-glib-0.76:0
 	virtual/libintl:0
 	elibc_FreeBSD? ( dev-libs/libexecinfo:0 )
 	gnome-keyring? ( gnome-base/gnome-keyring:0 )
-	upower? ( >=sys-power/upower-0.9.0:0 )"
+	upower? (
+		|| (
+			( >=sys-power/upower-0.9.0 <sys-power/upower-0.99 )
+			sys-power/upower-pm-utils
+		)
+	)"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40:*

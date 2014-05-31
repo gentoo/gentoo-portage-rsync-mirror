@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-autosuspend/razorqt-autosuspend-0.5.2.ebuild,v 1.3 2013/04/05 14:40:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-autosuspend/razorqt-autosuspend-0.5.2.ebuild,v 1.4 2014/05/31 20:45:50 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -27,7 +27,7 @@ DEPEND="razorqt-base/razorqt-libs"
 RDEPEND="${DEPEND}
 	razorqt-base/razorqt-data
 	razorqt-base/razorqt-power
-	sys-power/upower"
+	|| ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils )"
 
 src_configure() {
 	local mycmakeargs=(

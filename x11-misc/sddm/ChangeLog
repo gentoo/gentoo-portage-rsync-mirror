@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.5 2014/05/26 22:37:38 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.6 2014/05/31 20:47:45 ssuominen Exp $
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org> sddm-0.1.0-r1.ebuild:
+  Allow falling back to sys-power/upower-pm-utils.
 
   26 May 2014;  <jauhien@gentoo.org> -sddm-0.1.0.ebuild,
   files/sddm-0.1.0-consolekit.patch, sddm-0.1.0-r1.ebuild:

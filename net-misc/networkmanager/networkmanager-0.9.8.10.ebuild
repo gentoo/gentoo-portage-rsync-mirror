@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.10.ebuild,v 1.1 2014/04/27 18:04:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.10.ebuild,v 1.2 2014/05/31 20:39:59 ssuominen Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -51,7 +51,7 @@ COMMON_DEPEND="
 	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
 	resolvconf? ( net-dns/openresolv )
 	systemd? ( >=sys-apps/systemd-183:0= )
-	|| ( sys-power/upower >=sys-apps/systemd-183 )
+	|| ( sys-power/upower sys-power/upower-pm-utils >=sys-apps/systemd-183 )
 "
 RDEPEND="${COMMON_DEPEND}
 	consolekit? ( sys-auth/consolekit )
