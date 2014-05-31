@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/parslet-1.5.0-r1.ebuild,v 1.1 2013/12/13 02:12:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/parslet-1.5.0-r1.ebuild,v 1.2 2014/05/31 14:11:11 ercpe Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/kschiess/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 ruby_add_rdepend "dev-ruby/blankslate:2"
 
