@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gnome-tetravex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-tetravex/ChangeLog,v 1.12 2014/04/27 16:40:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-tetravex/ChangeLog,v 1.13 2014/05/31 09:30:23 pacho Exp $
+
+*gnome-tetravex-3.12.3 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gnome-tetravex-3.12.3.ebuild:
+  Version bump
 
 *gnome-tetravex-3.12.1 (27 Apr 2014)
 
