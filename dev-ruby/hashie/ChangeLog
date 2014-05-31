@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hashie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.22 2014/05/21 02:15:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.23 2014/05/31 05:49:58 graaff Exp $
+
+  31 May 2014; Hans de Graaff <graaff@gentoo.org> hashie-2.0.5-r1.ebuild:
+  Add ruby21.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> hashie-2.0.5-r1.ebuild:
   Remove ruby18 target.
