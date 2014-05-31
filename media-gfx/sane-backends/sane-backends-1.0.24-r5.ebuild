@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r4.ebuild,v 1.1 2014/05/21 19:00:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r5.ebuild,v 1.1 2014/05/31 08:41:43 mgorny Exp $
 
 EAPI="5"
 
@@ -247,7 +247,7 @@ multilib_src_configure() {
 		$(use_enable avahi) \
 		$(use_enable ipv6) \
 		$(use_enable threads pthread) \
-		${myconf}
+		"${myconf[@]}"
 }
 
 multilib_src_compile() {
