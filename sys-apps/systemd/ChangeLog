@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.258 2014/05/30 02:29:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.259 2014/05/31 16:48:06 floppym Exp $
+
+  31 May 2014; Mike Gilbert <floppym@gentoo.org> systemd-213.ebuild,
+  systemd-9999.ebuild:
+  Forcably enable kmod due to bug 511924.
 
 *systemd-212-r5 (30 May 2014)
 
