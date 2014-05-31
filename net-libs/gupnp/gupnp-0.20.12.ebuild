@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.11.ebuild,v 1.1 2014/05/31 10:05:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12.ebuild,v 1.1 2014/05/31 15:38:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -26,7 +26,7 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=net-libs/gssdp-0.13.0:0=[introspection?]
 	>=net-libs/libsoup-2.28.2:2.4[introspection?]
-	>=dev-libs/glib-2.24:2
+	>=dev-libs/glib-2.28.0:2
 	dev-libs/libxml2
 	|| (
 		>=sys-apps/util-linux-2.16

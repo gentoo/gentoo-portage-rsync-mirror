@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Format
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Format/ChangeLog,v 1.6 2014/05/31 14:14:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Format/ChangeLog,v 1.7 2014/05/31 15:33:33 zlogene Exp $
+
+  31 May 2014; Mikle Kolyada <zlogene@gentoo.org> Text-Format-0.590.0.ebuild:
+  Fix version in MODULE_VERSION
 
 *Text-Format-0.590.0 (31 May 2014)
 
