@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.219 2014/04/23 13:52:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.220 2014/05/31 14:45:22 tomwij Exp $
 
 EAPI="5"
 
@@ -209,12 +209,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Support for Qt5.
-	if use qt5 ; then
-		export UIC="/usr/lib64/qt5/bin/uic"
-		export MOC="/usr/lib64/qt5/bin/moc"
-	fi
-
 	# Remove unnecessary warnings about unimplemented pragmas on gcc for now.
 	# Need to recheck this with gcc 4.9 and every subsequent minor bump of gcc.
 	#

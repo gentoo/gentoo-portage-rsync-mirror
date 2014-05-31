@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lshw
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.115 2013/08/08 19:42:32 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.116 2014/05/31 14:45:01 ssuominen Exp $
+
+*lshw-02.17b-r1 (31 May 2014)
+
+  31 May 2014; Samuli Suominen <ssuominen@gentoo.org> +lshw-02.17b-r1.ebuild,
+  +files/lshw-02.17b-fat.patch:
+  Fix segmentation fault with `lshw --short` while accessing a block device with
+  corrupt partition wrt #485496. Thanks to Ben Kohler and Juergen Rose.
 
 *lshw-02.17b (08 Aug 2013)
 

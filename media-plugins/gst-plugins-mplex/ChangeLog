@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-mplex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mplex/ChangeLog,v 1.43 2014/04/18 13:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mplex/ChangeLog,v 1.44 2014/05/31 14:56:47 pacho Exp $
+
+*gst-plugins-mplex-1.2.4 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gst-plugins-mplex-1.2.4.ebuild,
+  -gst-plugins-mplex-1.0.10.ebuild, -gst-plugins-mplex-1.2.0.ebuild:
+  Version bump, drop old
 
   18 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-mplex-1.2.3.ebuild:
   Stable for alpha, wrt bug #507568

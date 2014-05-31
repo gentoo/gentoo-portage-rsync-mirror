@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-modplug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.64 2014/04/16 07:48:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.65 2014/05/31 14:53:00 pacho Exp $
+
+*gst-plugins-modplug-1.2.4 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gst-plugins-modplug-1.2.4.ebuild,
+  -gst-plugins-modplug-1.0.10.ebuild, -gst-plugins-modplug-1.2.0.ebuild:
+  Version bump, drop old
 
   16 Apr 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-modplug-1.2.3.ebuild:

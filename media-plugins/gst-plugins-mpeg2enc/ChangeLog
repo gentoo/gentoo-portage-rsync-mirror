@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-mpeg2enc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2enc/ChangeLog,v 1.24 2014/03/09 12:08:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2enc/ChangeLog,v 1.25 2014/05/31 14:55:47 pacho Exp $
+
+*gst-plugins-mpeg2enc-1.2.4 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +gst-plugins-mpeg2enc-1.2.4.ebuild, -gst-plugins-mpeg2enc-1.0.10.ebuild,
+  -gst-plugins-mpeg2enc-1.2.0.ebuild:
+  Version bump, drop old
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org> gst-plugins-mpeg2enc-1.2.3.ebuild:
   x86 stable, bug 499954
