@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.13.0.ebuild,v 1.2 2014/04/17 00:43:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.13.0.ebuild,v 1.3 2014/05/31 20:29:05 ssuominen Exp $
 
 EAPI=5
 
@@ -104,7 +104,7 @@ RDEPEND="${COMMONDEPEND}
 		x11-apps/iceauth
 		x11-apps/rgb
 		>=x11-misc/xdg-utils-1.0.2-r3
-		upower? ( sys-power/upower )
+		upower? ( || ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils ) )
 	)
 	udev? ( app-misc/media-player-info )
 "

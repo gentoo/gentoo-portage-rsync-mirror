@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/livecd-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.129 2013/03/18 21:25:44 williamh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.130 2014/05/31 20:19:28 zerochaos Exp $
+
+*livecd-tools-2.0.4 (31 May 2014)
+
+  31 May 2014; Rick Farina <zerochaos@gentoo.org> +livecd-tools-2.0.4.ebuild:
+  fixing bug #511040
 
   18 Mar 2013; William Hubbs <williamh@gentoo.org> -livecd-tools-2.0.2.ebuild,
   livecd-tools-2.0.3.ebuild:
