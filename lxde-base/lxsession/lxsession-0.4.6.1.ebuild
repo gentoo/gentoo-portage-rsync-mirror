@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.1.ebuild,v 1.8 2013/08/23 19:12:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.1.ebuild,v 1.9 2014/05/31 22:20:19 ssuominen Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ COMMON_DEPEND="dev-libs/glib:2
 	x11-libs/libX11
 	dbus? ( sys-apps/dbus )"
 RDEPEND="${COMMON_DEPEND}
-	upower? ( sys-power/upower )"
+	upower? ( || ( sys-power/upower sys-power/upower-pm-utils ) )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-devel/gettext

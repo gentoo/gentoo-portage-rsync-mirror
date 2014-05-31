@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.10.1.ebuild,v 1.1 2014/02/17 23:44:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.10.1.ebuild,v 1.2 2014/05/31 22:26:19 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -31,7 +31,7 @@ RDEPEND="
 	>=app-admin/packagekit-gtk-0.7.2
 	>=media-libs/libcanberra-0.10[gtk3]
 	>=sys-apps/dbus-1.1.2
-	>=sys-power/upower-0.9.0
+	|| ( >=sys-power/upower-0.9.0 sys-power/upower-pm-utils )
 
 	media-libs/fontconfig
 	x11-libs/libX11

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0-r3.ebuild,v 1.7 2012/07/15 17:41:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0-r3.ebuild,v 1.8 2014/05/31 22:24:48 ssuominen Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -29,7 +29,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.13.0:2
 	>=x11-libs/cairo-1
 	>=gnome-base/gconf-2.10:2[policykit?]
 	>=media-libs/libcanberra-0.10[gtk]
-	>=sys-power/upower-0.9.1
+	|| ( <sys-power/upower-0.99 sys-power/upower-pm-utils )
 	>=dev-libs/libunique-1.1:1
 	>=x11-apps/xrandr-1.3
 	>=x11-proto/xproto-7.0.15

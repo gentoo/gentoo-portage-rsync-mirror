@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-3.10.1.ebuild,v 1.5 2014/03/09 12:00:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-3.10.1.ebuild,v 1.6 2014/05/31 22:24:48 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.36:2
 	>=x11-libs/gtk+-3.3.8:3
 	>=x11-libs/cairo-1
-	>=sys-power/upower-0.9.1
+	|| ( <sys-power/upower-0.99 sys-power/upower-pm-utils )
 "
 RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
