@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-vpx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vpx/ChangeLog,v 1.29 2014/05/31 15:21:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vpx/ChangeLog,v 1.30 2014/05/31 17:26:59 pacho Exp $
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> gst-plugins-vpx-1.2.4.ebuild:
+  sparc keyword was silently dropped at some point without reference
 
 *gst-plugins-vpx-1.2.4 (31 May 2014)
 
