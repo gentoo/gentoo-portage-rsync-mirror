@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.9 2014/03/10 22:22:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.10 2014/05/31 10:59:56 swegener Exp $
 
 EAPI=5
 
@@ -24,7 +24,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/autoconf-2.58
 	dev-lang/perl
-	www-client/lynx"
+	|| (
+		www-client/lynx
+		www-client/elinks
+	)"
 RDEPEND="${RDEPEND}
 	perl? ( !net-im/silc-client )"
 

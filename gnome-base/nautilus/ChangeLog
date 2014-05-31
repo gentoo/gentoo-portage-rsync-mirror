@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.419 2014/04/27 17:04:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.420 2014/05/31 10:43:23 pacho Exp $
+
+*nautilus-3.12.2 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +nautilus-3.12.2.ebuild:
+  Version bump
 
 *nautilus-3.12.0 (27 Apr 2014)
 
