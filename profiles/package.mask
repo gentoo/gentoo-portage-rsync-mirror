@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15751 2014/05/31 10:16:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15752 2014/05/31 15:29:34 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -367,6 +367,7 @@ dev-python/python-gnutls
 >=x11-libs/libcryptui-3.12
 >=app-editors/latexila-2.12
 >=gnome-base/libgtop-2.30
+>=media-libs/clutter-gtk-1.5
 
 # Eray Aslan <eras@gentoo.org> (26 Apr 2014)
 # Non-functional and no longer needed - bug #450116

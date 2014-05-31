@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-speex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.155 2014/04/19 17:45:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.156 2014/05/31 15:13:38 pacho Exp $
+
+*gst-plugins-speex-1.2.4 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org> +gst-plugins-speex-1.2.4.ebuild,
+  -gst-plugins-speex-1.0.10.ebuild, -gst-plugins-speex-1.2.0.ebuild:
+  Version bump, drop old
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> gst-plugins-speex-1.2.3.ebuild:
   Stable for sparc, wrt bug #507568

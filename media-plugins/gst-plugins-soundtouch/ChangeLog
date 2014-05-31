@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-soundtouch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.23 2014/03/09 12:09:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.24 2014/05/31 15:10:54 pacho Exp $
+
+*gst-plugins-soundtouch-1.2.4 (31 May 2014)
+
+  31 May 2014; Pacho Ramos <pacho@gentoo.org>
+  +gst-plugins-soundtouch-1.2.4.ebuild, -gst-plugins-soundtouch-1.0.10.ebuild,
+  -gst-plugins-soundtouch-1.2.0.ebuild:
+  Version bump, drop old
 
   09 Mar 2014; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-soundtouch-1.2.3.ebuild:
