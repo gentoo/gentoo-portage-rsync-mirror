@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.2.ebuild,v 1.3 2014/05/24 15:16:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.2.ebuild,v 1.4 2014/05/31 12:04:25 hasufell Exp $
 
 # FIXME: gtk3 support breaks ggz support
 
 EAPI=5
-inherit autotools eutils gnome2-utils games-ggz games
+inherit eutils gnome2-utils games-ggz games
 
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
@@ -70,7 +70,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
-	eautoreconf
 
 	# install the .desktop in /usr/share/applications
 	# install the icons in /usr/share/pixmaps
