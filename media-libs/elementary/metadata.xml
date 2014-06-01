@@ -3,11 +3,7 @@
 <pkgmetadata>
 <herd>enlightenment</herd>
 <use>
- <flag name="dbus">Enable integration with <pkg>dev-libs/e_dbus</pkg>.</flag>
- <flag name='emotion'>Add support for <pkg>media-libs/emotion</pkg></flag>
- <flag name='ethumb'>Add support for <pkg>media-libs/ethumb</pkg></flag>
  <flag name="quicklaunch">Enable quick-launch support</flag>
- <flag name="xdg">Enable integration with <pkg>dev-libs/efreet</pkg> for cross-desktop standards (freedesktop.org).</flag>
 </use>
 <longdescription>
 Elementary is a widget set. It is a new-style of widget set much more

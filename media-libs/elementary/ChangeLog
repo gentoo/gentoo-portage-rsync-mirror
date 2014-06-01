@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/elementary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.17 2014/04/17 14:58:37 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.18 2014/06/01 14:46:46 tommy Exp $
+
+*elementary-1.9.4 (01 Jun 2014)
+
+  01 Jun 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +elementary-1.9.4.ebuild, -elementary-1.7.9.ebuild, -elementary-1.9.2.ebuild,
+  metadata.xml:
+  Version bump, disable build of examples for bug 510428, drop old
 
 *elementary-1.9.3 (17 Apr 2014)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.9.2.ebuild,v 1.1 2014/03/28 16:34:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.9.4.ebuild,v 1.1 2014/06/01 14:46:46 tommy Exp $
 
-EAPI=3
+EAPI=5
 
 MY_P=${P/_/-}
 
@@ -41,7 +41,6 @@ src_configure() {
 		--disable-elocation
 		--disable-emap
 		--disable-eweather
-		$(use_enable examples build-examples)
 		$(use_enable examples install-examples)
 		$(use_enable fbcon ecore-fb)
 		$(use_enable sdl ecore-sdl)
@@ -49,6 +48,8 @@ src_configure() {
 		$(use_enable X ecore-x)
 		$(use_enable quicklaunch quick-launch)
 	"
+#broken: make[4]: *** No rule to make target 'prefs_example_01.epb', needed by 'all-am'.  Stop
+#		$(use_enable examples build-examples)
 
 	enlightenment_src_configure
 }

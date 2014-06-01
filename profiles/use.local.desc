@@ -3387,11 +3387,7 @@ media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for dev-util/nvidia-texture-tools
 media-libs/edje:cache - Enable caching
-media-libs/elementary:dbus - Enable integration with dev-libs/e_dbus.
-media-libs/elementary:emotion - Add support for media-libs/emotion
-media-libs/elementary:ethumb - Add support for media-libs/ethumb
 media-libs/elementary:quicklaunch - Enable quick-launch support
-media-libs/elementary:xdg - Enable integration with dev-libs/efreet for cross-desktop standards (freedesktop.org).
 media-libs/emotion:vlc - Enable support for the media-video/vlc player backend
 media-libs/esdl:image - Enable image support
 media-libs/ethumb:emotion - Add support for media-libs/emotion
