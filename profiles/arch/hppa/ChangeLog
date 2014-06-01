@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.211 2014/05/20 10:23:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.212 2014/06/01 06:01:12 ssuominen Exp $
+
+  01 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="udev" for xfce-base/xfce4-settings right next to already masked
+  xfce-base/xfce4-session wrt #512002
 
   20 May 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask, use.mask:
   Mask USE=systemtap generally until proper kernel support is in place.
