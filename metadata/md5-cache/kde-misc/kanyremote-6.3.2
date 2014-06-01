@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=app-mobilephone/anyremote-6.0[bluetooth?] dev-python/PyQt4[X,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] kde-base/pykde4:4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] bluetooth? ( dev-python/pybluez[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=KDE frontend to Anyremote
+EAPI=5
+HOMEPAGE=http://anyremote.sourceforge.net/
+IUSE=bluetooth python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=app-mobilephone/anyremote-6.0[bluetooth?] dev-python/PyQt4[X,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] kde-base/pykde4:4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] bluetooth? ( dev-python/pybluez[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] )
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
+SLOT=4
+SRC_URI=mirror://sourceforge/anyremote/kanyremote-6.3.2.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=4194c3850d0bb0c3ec6807dc5a7ffbb3
