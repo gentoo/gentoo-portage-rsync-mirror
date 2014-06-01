@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-liznoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.13 2014/05/31 20:41:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-liznoo/ChangeLog,v 1.14 2014/06/01 10:36:10 pacho Exp $
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org> lc-liznoo-0.6.60.ebuild:
+  0.6.60 looks to also be compatible
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org> lc-liznoo-9999.ebuild:
   Remove duplicate sys-power/upower dependency.

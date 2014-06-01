@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare pretend test
-DEPEND=~app-leechcraft/lc-core-0.6.60 sys-power/upower x11-libs/qwt:6 dev-qt/qtdbus:4 virtual/leechcraft-trayarea sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
+DEPEND=~app-leechcraft/lc-core-0.6.60 || ( sys-power/upower sys-power/upower-pm-utils ) x11-libs/qwt:6 dev-qt/qtdbus:4 virtual/leechcraft-trayarea sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) app-arch/xz-utils
 DESCRIPTION=UPower-based power manager for LeechCraft
 EAPI=4
 HOMEPAGE=http://leechcraft.org/
 IUSE=debug
 KEYWORDS=amd64 x86
 LICENSE=Boost-1.0
-RDEPEND=~app-leechcraft/lc-core-0.6.60 sys-power/upower x11-libs/qwt:6 dev-qt/qtdbus:4 virtual/leechcraft-trayarea
+RDEPEND=~app-leechcraft/lc-core-0.6.60 || ( sys-power/upower sys-power/upower-pm-utils ) x11-libs/qwt:6 dev-qt/qtdbus:4 virtual/leechcraft-trayarea
 SLOT=0
 SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.6.60.tar.xz http://dist.leechcraft.org/LeechCraft/0.6.60/leechcraft-0.6.60.tar.xz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	leechcraft	e0ec4b74ef98adeb1a9696617a379c7f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=a5ef7af4f766141844f2afddf292ff81
+_md5_=e7be92d7d0ccc77f5a96116c06a0d0c4

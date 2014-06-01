@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.572 2014/05/22 16:18:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.573 2014/06/01 10:51:26 pacho Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Pacho Ramos <pacho@gentoo.org> (01 Jun 2014)
+# Needs hardmasked lua-5.2
+>=media-plugins/grilo-plugins-0.2.12 lua
 
 # Rick Farina <zerochaos@gentoo.org> (22 May 2014)
 # mask test use flag for metasploit since tests do not pass

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.42 2014/02/18 20:12:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.43 2014/06/01 10:39:50 ulm Exp $
+
+  01 Jun 2014; Ulrich Müller <ulm@gentoo.org> color-theme-6.6.0-r1.ebuild:
+  Drop ~sparc-fbsd keyword because its dependency tree is broken.
 
   18 Feb 2014; Ulrich Müller <ulm@gentoo.org> color-theme-6.6.0-r1.ebuild:
   Update ebuild to EAPI 5. Use readme.gentoo.eclass. Specify LICENSE more

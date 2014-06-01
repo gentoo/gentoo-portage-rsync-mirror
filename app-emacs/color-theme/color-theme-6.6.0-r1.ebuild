@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.6.0-r1.ebuild,v 1.8 2014/02/18 20:12:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.6.0-r1.ebuild,v 1.9 2014/06/01 10:39:50 ulm Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.gnu.org/releases-noredirect/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 
 ELISP_PATCHES="${P}-replace-in-string.patch"
 ELISP_REMOVE="color-theme-autoloads.*"
