@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9031 2014/06/01 12:19:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9032 2014/06/01 14:01:06 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org> arch/amd64-fbsd/package.use.mask:
+  use.mask due missing keywords
 
   01 Jun 2014; Sven Vermeulen <swift@gentoo.org> package.mask:
   Add libsemanage-2.3-r1 to p.mask (multilib depends on audit-2.2.2-r2)
