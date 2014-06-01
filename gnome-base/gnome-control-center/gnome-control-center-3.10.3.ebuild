@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.10.3.ebuild,v 1.6 2014/05/31 22:35:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.10.3.ebuild,v 1.7 2014/06/01 07:59:51 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -44,7 +44,7 @@ COMMON_DEPEND="
 	>=media-libs/libcanberra-0.13[gtk3]
 	>=media-sound/pulseaudio-2[glib]
 	>=sys-auth/polkit-0.97
-	|| ( >=sys-power/upower-0.9.1 sys-power/upower-pm-utils )
+	|| ( <sys-power/upower-0.99 sys-power/upower-pm-utils )
 	>=x11-libs/libnotify-0.7.3:0=
 
 	>=gnome-extra/nm-applet-0.9.7.995

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.111 2014/05/31 16:48:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.112 2014/06/01 07:33:11 mgorny Exp $
 
 EAPI=5
 
@@ -433,6 +433,8 @@ migrate_net_name_slot() {
 
 pkg_postinst() {
 	enewgroup systemd-journal
+	enewgroup systemd-network
+	enewuser systemd-network -1 -1 -1 systemd-network
 	enewgroup systemd-timesync
 	enewuser systemd-timesync -1 -1 -1 systemd-timesync
 	if use http; then

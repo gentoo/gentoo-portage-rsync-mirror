@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.492 2014/05/17 14:16:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.493 2014/06/01 07:59:10 radhermit Exp $
+
+*gnutls-3.3.4 (01 Jun 2014)
+*gnutls-3.2.15 (01 Jun 2014)
+
+  01 Jun 2014; Tim Harder <radhermit@gentoo.org> +gnutls-3.2.15.ebuild,
+  +gnutls-3.3.4.ebuild:
+  Security bumps (bug #511840).
 
   17 May 2014; Michał Górny <mgorny@gentoo.org> gnutls-3.3.2.ebuild:
   Symlink remaining tools necessary for tests for non-native ABIs.

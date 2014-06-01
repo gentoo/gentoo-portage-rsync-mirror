@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.3 2013/12/08 17:42:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.4 2014/06/01 07:55:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -64,7 +64,7 @@ RDEPEND="
 	iptc? ( media-libs/libiptcdata )
 	iso? ( >=sys-libs/libosinfo-0.0.2:= )
 	jpeg? ( virtual/jpeg:0 )
-	laptop? ( >=sys-power/upower-0.9 )
+	laptop? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
 	libsecret? ( >=app-crypt/libsecret-0.5 )
 	mp3? (
 		>=media-libs/taglib-1.6
