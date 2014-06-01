@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.2.ebuild,v 1.2 2014/05/15 18:06:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.9.4.ebuild,v 1.1 2014/06/01 13:03:12 tommy Exp $
 
 EAPI="5"
 
@@ -57,7 +57,7 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	!oldlua? ( >=dev-lang/luajit-2.0.0 )
 	oldlua? ( dev-lang/lua )
-	physics? ( sci-physics/bullet )
+	physics? ( >=sci-physics/bullet-2.80 )
 	pixman? ( x11-libs/pixman )
 	png? ( media-libs/libpng:0= )
 	pulseaudio? ( media-sound/pulseaudio )
