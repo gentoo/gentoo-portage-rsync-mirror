@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15754 2014/06/01 09:10:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15755 2014/06/01 12:19:37 swift Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -62,6 +62,7 @@ dev-java/ibm-jdk-bin:1.5
 >=sys-auth/pam_ldap-186-r1
 >=app-emulation/emul-linux-x86-baselibs-20140508-r8
 >=dev-libs/cyrus-sasl-2.1.26-r6
+>=sys-libs/libsemanage-2.3-r1
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage

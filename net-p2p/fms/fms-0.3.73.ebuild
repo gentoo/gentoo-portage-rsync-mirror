@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.70.ebuild,v 1.1 2012/11/04 16:48:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.73.ebuild,v 1.1 2014/06/01 12:26:28 tommy Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils cmake-utils user
 

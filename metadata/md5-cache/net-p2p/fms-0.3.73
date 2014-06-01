@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test
 DEPEND=virtual/libiconv frost? ( net-libs/polarssl ) >=dev-libs/poco-1.4.3_p1 >=dev-db/sqlite-3.6.15 app-arch/unzip sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A spam-resistant message board application for Freenet
-EAPI=2
+EAPI=5
 HOMEPAGE=http://freenetproject.org/tools.html
 IUSE=frost
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=virtual/libiconv frost? ( net-libs/polarssl ) >=dev-libs/poco-1.4.3_p1 >=dev-db/sqlite-3.6.15
 SLOT=0
-SRC_URI=mirror://gentoo/fms-src-0.3.70.zip
+SRC_URI=mirror://gentoo/fms-src-0.3.73.zip
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2d1555f4f09e95ec68e0b2bbcb951332
+_md5_=9851d94db30e3478fc91050b4f1e8823
