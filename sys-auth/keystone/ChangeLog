@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.70 2014/06/01 02:19:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.71 2014/06/01 03:51:29 prometheanfire Exp $
+
+  01 Jun 2014; Matthew Thode <prometheanfire@gentoo.org>
+  keystone-2014.1.9999.ebuild:
+  updated dep
 
 *keystone-2014.1-r2 (01 Jun 2014)
 
