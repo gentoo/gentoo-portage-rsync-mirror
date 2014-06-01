@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.40 2014/01/10 12:20:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.41 2014/06/01 18:11:37 pva Exp $
+
+  01 Jun 2014; Peter Volkov <pva@gentoo.org> -redmine-2.2.4.ebuild,
+  -redmine-2.3.2.ebuild, -redmine-2.3.4.ebuild, +redmine-2.4.5.ebuild:
+  Version bump #491758. openid is now not optional, fixes security bug #507052.
+  Drop vulnerable.
+
+*redmine-2.4.5 (01 Jun 2014)
+
+  01 Jun 2014; Peter Volkov <pva@gentoo.org> +redmine-2.4.5.ebuild:
+  Version bump #491758. openid is now not optional, fixes security bug #507052.
 
 *redmine-2.3.4 (10 Jan 2014)
 

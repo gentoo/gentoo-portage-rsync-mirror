@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.3.2.ebuild,v 1.2 2014/01/08 06:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.4.5.ebuild,v 1.1 2014/06/01 18:11:37 pva Exp $
 
-EAPI="4"
+EAPI="5"
 USE_RUBY="ruby18 ruby19"
 inherit eutils depend.apache ruby-ng user
 
 DESCRIPTION="Redmine is a flexible project management web application written using Ruby on Rails framework"
 HOMEPAGE="http://www.redmine.org/"
-SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
+SRC_URI="http://www.redmine.org/releases/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
@@ -16,7 +16,7 @@ SLOT="0"
 # All db-related USEs are ineffective since we depend on rails
 # which depends on activerecord which depends on all ruby's db bindings
 #IUSE="ldap openid imagemagick postgres sqlite mysql fastcgi passenger"
-IUSE="ldap openid imagemagick fastcgi passenger"
+IUSE="ldap imagemagick fastcgi passenger"
 
 #RDEPEND="$(ruby_implementation_depend jruby '>=' -1.6.7)[ssl]"
 RDEPEND="
@@ -33,10 +33,8 @@ ruby_add_rdepend "virtual/ruby-ssl
 	dev-ruby/builder:3
 	dev-ruby/rake
 	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
-	openid? (
-		>=dev-ruby/ruby-openid-2.1.4
-		>=dev-ruby/rack-openid-0.2.1
-	)
+	>=dev-ruby/ruby-openid-2.3.0
+	>=dev-ruby/rack-openid-0.2.1
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	fastcgi? ( dev-ruby/fcgi )
 	passenger? ( www-apache/passenger )"
@@ -86,9 +84,7 @@ all_ruby_prepare() {
 	echo "CONFIG_PROTECT=\"${EPREFIX}${REDMINE_DIR}/config\"" > "${T}/50${PN}"
 	echo "CONFIG_PROTECT_MASK=\"${EPREFIX}${REDMINE_DIR}/config/locales ${EPREFIX}${REDMINE_DIR}/config/settings.yml\"" >> "${T}/50${PN}"
 
-	# remove openid module in case openid is disabled
-	use openid || rm -r lib/plugins/open_id_authentication || die
-	# remove ldap staff module to avoid #413779
+	# remove ldap staff module if disabled to avoid #413779
 	use ldap || rm app/models/auth_source_ldap.rb || die
 }
 
@@ -201,8 +197,9 @@ pkg_config() {
 		${RUBY} -S rake generate_secret_token || die
 		einfo "Creating the database structure."
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake db:migrate || die
-		einfo "Populating database with default configuration dat."
+		einfo "Populating database with default configuration data."
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:load_default_data || die
+		chown redmine:redmine "${EPREFIX}${REDMINE_DIR}"/log/production.log
 		einfo
 		einfo "If you use sqlite3, please do not forget to change the ownership of the sqlite files."
 		einfo

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.51 2014/05/08 11:47:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.52 2014/06/01 18:29:22 blueness Exp $
 
 EAPI="5"
 
@@ -37,11 +37,10 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	)"
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
-	>=dev-util/intltool-0.40.0
 	virtual/os-headers
 	virtual/pkgconfig
-	!<sys-devel/make-3.82-r4
-	!<sys-kernel/linux-headers-${KV_min}
+	>=sys-devel/make-3.82-r4
+	>=sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xml-dtd:4.5
@@ -54,12 +53,11 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
 	!<sec-policy/selinux-base-2.20120725-r10
 	!sys-fs/udev
-	!sys-apps/systemd
-	!<sys-fs/udev-init-scripts-26"
+	!sys-apps/systemd"
 
 PDEPEND="hwdb? ( >=sys-apps/hwids-20140304[udev] )
 	keymap? ( >=sys-apps/hwids-20140304[udev] )
-	openrc? ( >=sys-fs/udev-init-scripts-18 )"
+	openrc? ( >=sys-fs/udev-init-scripts-26 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
 

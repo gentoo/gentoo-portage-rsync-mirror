@@ -1,0 +1,24 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sun Jun  1 17:57:40 UTC 2014
+Subject: fix install rules
+
+--- src/install.cmake
++++ src/install.cmake
+@@ -21,7 +21,7 @@
+ 
+ # This will copy the resources files to the proper directory
+ IF(IS_DIRECTORY "${CMAKE_SOURCE_DIR}/vfsroot")
+-	INSTALL(DIRECTORY vfsroot/ 
++	INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/vfsroot/ 
+ 		DESTINATION ${DATADIR})
+ ENDIF(IS_DIRECTORY "${CMAKE_SOURCE_DIR}/vfsroot")
+ 
+@@ -30,7 +30,7 @@
+ 	DESTINATION ${DOCDIR})
+ 
+ # This will copy the readme file. 
+-INSTALL(FILES changelog.txt 
++INSTALL(FILES ${CMAKE_SOURCE_DIR}/changelog.txt 
+ 	DESTINATION ${DOCDIR})
+ 
+ # Windows might not have those dlls so we ship them with the packages 

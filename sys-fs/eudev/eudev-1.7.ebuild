@@ -1,15 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.4-r1.ebuild,v 1.3 2014/04/28 17:53:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.7.ebuild,v 1.1 2014/06/01 18:29:22 blueness Exp $
 
 EAPI="5"
 
-KV_min=2.6.31
+KV_min=2.6.39
 
 inherit autotools eutils multilib linux-info multilib-minimal
 
-if [[ ${PV} = 9999* ]]
-then
+if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
@@ -24,44 +23,50 @@ LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
 IUSE="doc gudev +hwdb kmod introspection +keymap +modutils +openrc +rule-generator selinux static-libs test"
 
-COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
-	kmod? ( sys-apps/kmod )
+COMMON_DEPEND=">=sys-apps/util-linux-2.20
+	gudev? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	selinux? ( sys-libs/libselinux )
-	>=sys-apps/util-linux-2.20
+	kmod? ( >=sys-apps/kmod-16 )
+	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
+	!sys-apps/gentoo-systemd-integration
+	!sys-apps/systemd
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r7
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
-
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
-	>=dev-util/intltool-0.40.0
-	virtual/pkgconfig
 	virtual/os-headers
-	!<sys-kernel/linux-headers-${KV_min}
-	doc? ( dev-util/gtk-doc )
+	virtual/pkgconfig
+	>=sys-devel/make-3.82-r4
+	>=sys-kernel/linux-headers-${KV_min}
+	doc? ( >=dev-util/gtk-doc-1.18 )
+	app-text/docbook-xml-dtd:4.2
+	app-text/docbook-xml-dtd:4.5
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
+	>=dev-util/intltool-0.50
 	test? ( app-text/tree dev-lang/perl )"
 
 RDEPEND="${COMMON_DEPEND}
+	!<sys-fs/lvm2-2.02.103
+	!<sec-policy/selinux-base-2.20120725-r10
 	!sys-fs/udev
-	!sys-apps/coldplug
-	!sys-apps/systemd
-	!<sys-fs/lvm2-2.02.97
-	!sys-fs/device-mapper
-	!<sys-fs/udev-init-scripts-18"
+	!sys-apps/systemd"
 
-PDEPEND="hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
-	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )
-	openrc? ( >=sys-fs/udev-init-scripts-18 )"
+PDEPEND="hwdb? ( >=sys-apps/hwids-20140304[udev] )
+	keymap? ( >=sys-apps/hwids-20140304[udev] )
+	openrc? ( >=sys-fs/udev-init-scripts-26 )"
 
 REQUIRED_USE="keymap? ( hwdb )"
 
-pkg_pretend()
-{
+# The multilib-build.eclass doesn't handle situation where the installed headers
+# are different in ABIs. In this case, we install libgudev headers in native
+# ABI but not for non-native ABI.
+multilib_check_headers() { :; }
+
+pkg_pretend() {
 	if ! use rule-generator; then
 		ewarn
 		ewarn "As of 2013-01-29, ${P} provides the new interface renaming functionality,"
@@ -79,15 +84,13 @@ pkg_pretend()
 	fi
 }
 
-pkg_setup()
-{
+pkg_setup() {
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL ~FHANDLE ~NET"
 	linux-info_pkg_setup
 	get_running_version
 
 	# These are required kernel options, but we don't error out on them
 	# because you can build under one kernel and run under another.
-	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
-
 	if kernel_is lt ${KV_min//./ }; then
 		ewarn
 		ewarn "Your current running kernel version ${KV_FULL} is too old to run ${P}."
@@ -96,18 +99,15 @@ pkg_setup()
 	fi
 }
 
-src_prepare()
-{
+src_prepare() {
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' -i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
 	epatch_user
 
-	if [[ ! -e configure ]]
-	then
-		if use doc
-		then
+	if [[ ! -e configure ]]; then
+		if use doc; then
 			gtkdocize --docdir docs || die "gtkdocize failed"
 		else
 			echo 'EXTRA_DIST =' > docs/gtk-doc.make
@@ -118,10 +118,13 @@ src_prepare()
 	fi
 }
 
-multilib_src_configure()
-{
-	local econf_args
+multilib_src_configure() {
+	tc-export CC #463846
+	export cc_cv_CFLAGS__flto=no #502950
 
+	# Keep sorted by ./configure --help and only pass --disable flags
+	# when *required* to avoid external deps or unnecessary compile
+	local econf_args
 	econf_args=(
 		ac_cv_search_cap_init=
 		ac_cv_header_sys_capability_h=yes
@@ -134,47 +137,50 @@ multilib_src_configure()
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
 		--exec-prefix=/
+
+		$(use_enable gudev)
 	)
 
 	# Only build libudev for non-native_abi, and only install it to libdir,
 	# that means all options only apply to native_abi
-	if multilib_is_native_abi; then econf_args+=(
-		--with-rootlibdir=/$(get_libdir)
-		$(use_enable doc gtk-doc)
-		$(use_enable gudev)
-		$(use_enable introspection)
-		$(use_enable keymap)
-		$(use_enable kmod libkmod)
-		$(usex kmod --enable-modules $(use_enable modutils modules))
-		$(use_enable static-libs static)
-		$(use_enable selinux)
-		$(use_enable rule-generator)
+	if multilib_is_native_abi; then
+		econf_args+=(
+			--with-rootlibdir=/$(get_libdir)
+			$(use_enable doc gtk-doc)
+			$(use_enable introspection)
+			$(use_enable keymap)
+			$(use_enable kmod libkmod)
+			$(usex kmod --enable-modules $(use_enable modutils modules))
+			$(use_enable static-libs static)
+			$(use_enable selinux)
+			$(use_enable rule-generator)
 		)
 	else econf_args+=(
-		$(echo --disable-{gtk-doc,gudev,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
+		$(echo --disable-{gtk-doc,introspection,keymap,libkmod,modules,static,selinux,rule-generator})
 		)
 	fi
 	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
 }
 
-multilib_src_compile()
-{
-	if ! multilib_is_native_abi; then
-		cd src/libudev || die "Could not change directory"
+multilib_src_compile() {
+	if multilib_is_native_abi; then
+		emake
+	else
+		emake -C src/libudev
+		use gudev && emake -C src/gudev
 	fi
-	emake
 }
 
-multilib_src_install()
-{
-	if ! multilib_is_native_abi; then
-		cd src/libudev || die "Could not change directory"
+multilib_src_install() {
+	if multilib_is_native_abi; then
+		emake DESTDIR="${D}" install
+	else
+		emake -C src/libudev DESTDIR="${D}" install
+		use gudev && emake -C src/gudev DESTDIR="${D}" install
 	fi
-	emake DESTDIR="${D}" install
 }
 
-multilib_src_test()
-{
+multilib_src_test() {
 	# make sandbox get out of the way
 	# these are safe because there is a fake root filesystem put in place,
 	# but sandbox seems to evaluate the paths of the test i/o instead of the
@@ -188,14 +194,7 @@ multilib_src_test()
 	fi
 }
 
-# disable header checks because we only install libudev headers for non-native abi
-multilib_check_headers()
-{
-	:
-}
-
-multilib_src_install_all()
-{
+multilib_src_install_all() {
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
@@ -208,42 +207,28 @@ multilib_src_install_all()
 	doins "${FILESDIR}"/40-gentoo.rules
 }
 
-pkg_preinst()
-{
+pkg_preinst() {
 	local htmldir
 	for htmldir in gudev libudev; do
-		if [[ -d ${EROOT}usr/share/gtk-doc/html/${htmldir} ]]
-		then
+		if [[ -d ${EROOT}usr/share/gtk-doc/html/${htmldir} ]]; then
 			rm -rf "${EROOT}"usr/share/gtk-doc/html/${htmldir}
 		fi
-		if [[ -d ${ED}/usr/share/doc/${PF}/html/${htmldir} ]]
-		then
+		if [[ -d ${ED}/usr/share/doc/${PF}/html/${htmldir} ]]; then
 			dosym ../../doc/${PF}/html/${htmldir} \
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	mkdir -p "${EROOT}"run
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
 	rmdir "${EROOT}"dev/loop 2>/dev/null
-	if [[ -d ${EROOT}dev/loop ]]
-	then
-		ewarn "Please make sure you remove /dev/loop, else losetup"
-		ewarn "may be confused when looking for unused devices."
-	fi
-
-	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
-	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${EROOT}etc/udev/rules.d/64-device-mapper.rules ]] &&
-		! has_version sys-fs/device-mapper
-	then
-		rm -f "${EROOT}"etc/udev/rules.d/64-device-mapper.rules
-		einfo "Removed unneeded file 64-device-mapper.rules"
+	if [[ -d ${EROOT}dev/loop ]]; then
+		ewarn "Please make sure your remove /dev/loop,"
+		ewarn "else losetup may be confused when looking for unused devices."
 	fi
 
 	if use hwdb && has_version 'sys-apps/hwids[udev]'; then
@@ -263,7 +248,8 @@ pkg_postinst()
 	ewarn "upgrade go into effect:"
 	ewarn "\t/etc/init.d/udev --nodeps restart"
 
-	if use rule-generator && use openrc; then
+	if use rule-generator && use openrc && \
+	[[ -x $(type -P rc-update) ]] && rc-update show | grep udev-postmount | grep -qsv 'boot\|default\|sysinit'; then
 		ewarn
 		ewarn "Please add the udev-postmount init script to your default runlevel"
 		ewarn "to ensure the legacy rule-generator functionality works as reliably"

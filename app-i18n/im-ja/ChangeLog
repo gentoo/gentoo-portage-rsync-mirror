@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/im-ja
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.70 2013/10/09 02:04:16 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.71 2014/06/01 18:18:14 pacho Exp $
+
+*im-ja-1.5-r3 (01 Jun 2014)
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/im-ja-1.5-underlinking.patch, +im-ja-1.5-r3.ebuild,
+  -im-ja-1.5-r1.ebuild, -im-ja-1.5.ebuild:
+  Use gnome2.eclass, readme.gentoo, drop support for old gnome-panel and fix
+  underlinking (#510784, #510786, #510790, #510792), drop old
 
   09 Oct 2013; Naohiro Aota <naota@gentoo.org> im-ja-1.5-r2.ebuild:
   sed AM_CONFIG_HEADER with AC_CONFIG_HEADERS. #467568
