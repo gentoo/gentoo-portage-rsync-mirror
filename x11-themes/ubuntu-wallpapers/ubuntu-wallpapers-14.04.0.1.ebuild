@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ubuntu-wallpapers-14.04.0.1.ebuild,v 1.1 2014/05/02 07:54:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ubuntu-wallpapers-14.04.0.1.ebuild,v 1.2 2014/06/01 17:48:23 pacho Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://launchpad.net/ubuntu/+source/ubuntu-wallpapers"
 MY_P="${PN}_${PV}"
 SRC_URI="mirror://ubuntu/pool/main/u/${PN}/${MY_P}.orig.tar.gz"
 LICENSE="CC-BY-SA-3.0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE=""
 
 RDEPEND=""
