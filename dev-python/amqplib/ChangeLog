@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/amqplib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.7 2014/03/31 20:47:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.8 2014/06/01 11:33:29 idella4 Exp $
+
+  01 Jun 2014; Ian Delaney <idella4@gentoo.org> amqplib-1.0.2-r1.ebuild:
+  drop py2.6 pypy2_0 add py3.4 support
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> amqplib-1.0.2-r1.ebuild:
   Add support for the new PyPy slotting.
