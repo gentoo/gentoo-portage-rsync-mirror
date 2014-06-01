@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.0.ebuild,v 1.1 2014/04/27 16:17:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.0.ebuild,v 1.2 2014/06/01 15:15:59 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -128,10 +128,13 @@ src_prepare() {
 
 		# Test relies on /usr/bin/true, but we have /bin/true, upstream bug #698655
 		sed -i -e "s:/usr/bin/true:/bin/true:" gio/tests/desktop-app-info.c || die
-	fi
 
-	# thread test fails, upstream bug #679306
-	epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-thread4.patch"
+		# thread test fails, upstream bug #679306
+		epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-thread4.patch"
+	else
+		# Don't build tests, also prevents extra deps, bug #512022
+		sed -i -e 's/ tests//' {.,gio,glib}/Makefile.am || die
+	fi
 
 	# gdbus-codegen is a separate package
 	epatch "${FILESDIR}/${PN}-2.40.0-external-gdbus-codegen.patch"
