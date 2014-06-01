@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.336 2014/05/31 22:36:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.337 2014/06/01 08:03:47 pacho Exp $
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org> gnome-session-2.32.1-r3.ebuild,
+  gnome-session-3.10.1.ebuild:
+  Old upower needed for 3.10
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   gnome-session-2.32.1-r3.ebuild, gnome-session-3.10.1.ebuild:

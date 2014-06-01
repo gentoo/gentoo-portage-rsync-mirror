@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/cinnamon-settings-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/ChangeLog,v 1.4 2014/05/31 22:27:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/ChangeLog,v 1.5 2014/06/01 08:16:55 pacho Exp $
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  -cinnamon-settings-daemon-2.2.2-r1.ebuild:
+  Drop old
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   cinnamon-settings-daemon-2.2.2-r1.ebuild,

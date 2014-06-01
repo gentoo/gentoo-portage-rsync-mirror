@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r2.ebuild,v 1.7 2014/05/31 22:37:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r2.ebuild,v 1.8 2014/06/01 08:07:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -86,7 +86,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-accessibility/caribou-0.4.8
 	media-libs/cogl[introspection]
 	>=sys-apps/accountsservice-0.6.14[introspection]
-	|| ( sys-power/upower[introspection] sys-power/upower-pm-utils[introspection] )
+	|| ( <sys-power/upower-0.99[introspection] sys-power/upower-pm-utils[introspection] )
 
 	>=gnome-base/gnome-session-2.91.91
 	>=gnome-base/gnome-settings-daemon-3.8.3

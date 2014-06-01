@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.7.ebuild,v 1.2 2014/05/31 22:33:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.9.ebuild,v 1.1 2014/06/01 08:13:19 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
