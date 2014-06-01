@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=media-libs/phonon-4.7.0[qt4=,qt5=] >=media-video/vlc-2.0.1:=[dbus,ogg,vorbis] qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 )
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	0247fa26cde95080f65c2528bd1d4132	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b796fd7ffad1dd4c7bc8d6d0036f9119

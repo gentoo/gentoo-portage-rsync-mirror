@@ -7,5 +7,5 @@ IUSE=json redis +filecaps
 LICENSE=Apache-2.0
 RDEPEND=dev-libs/gmp net-libs/libpcap json? ( dev-libs/json-c ) redis? ( dev-libs/hiredis )
 SLOT=0
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	0247fa26cde95080f65c2528bd1d4132	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=acb3491e53348260bea1c9308c2a0087
