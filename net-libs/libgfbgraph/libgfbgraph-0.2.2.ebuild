@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgfbgraph/libgfbgraph-0.2.2.ebuild,v 1.1 2014/04/27 17:43:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgfbgraph/libgfbgraph-0.2.2.ebuild,v 1.2 2014/06/01 14:13:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://git.gnome.org/browse/libgfbgraph/"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+introspection"
 
 RDEPEND="

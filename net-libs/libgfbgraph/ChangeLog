@@ -1,10 +1,12 @@
 # ChangeLog for net-libs/libgfbgraph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgfbgraph/ChangeLog,v 1.1 2014/04/27 17:43:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgfbgraph/ChangeLog,v 1.2 2014/06/01 14:13:43 pacho Exp $
+
+  01 Jun 2014; Pacho Ramos <pacho@gentoo.org> libgfbgraph-0.2.2.ebuild:
+  x86 keyword
 
 *libgfbgraph-0.2.2 (27 Apr 2014)
 
   27 Apr 2014; Gilles Dartiguelongue <eva@gentoo.org>
   +libgfbgraph-0.2.2.ebuild, +metadata.xml:
   Initial ebuild required by gnome-photos and gnome-online-miners.
-
