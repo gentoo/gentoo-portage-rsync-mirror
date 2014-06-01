@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1-r1.ebuild,v 1.1 2014/05/11 11:17:14 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1-r2.ebuild,v 1.1 2014/06/01 02:19:16 prometheanfire Exp $
 
 EAPI=5
 
@@ -77,6 +77,7 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 
 PATCHES=(
+	"${FILESDIR}/2014.1-CVE-2014-0204.patch"
 )
 
 pkg_setup() {

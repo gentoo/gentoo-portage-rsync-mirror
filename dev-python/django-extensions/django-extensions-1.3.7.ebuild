@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/django-extensions-1.3.7.ebuild,v 1.1 2014/05/27 06:21:23 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/django-extensions-1.3.7.ebuild,v 1.2 2014/06/01 02:06:38 idella4 Exp $
 
 EAPI=5
 
@@ -30,8 +30,7 @@ RDEPEND=">=dev-python/django-1.5.4[${PYTHON_USEDEP},mysql?,postgres?,sqlite?]
 	s3? ( dev-python/boto[${PY2_USEDEP}] )
 	vcard? ( dev-python/vobject[${PY2_USEDEP}] )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/pygments[${PYTHON_USEDEP}] )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( ${RDEPEND}
 		dev-python/shortuuid[${PYTHON_USEDEP}] )"
 
