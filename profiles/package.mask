@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15755 2014/06/01 12:19:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15756 2014/06/01 20:43:48 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (1 Jun 2014)
+# Mask new rubinius version for testing
+=dev-lang/rubinius-2*
 
 # Patrick Lauer <patrick@gentoo.org> (31 May 2014)
 # Broken dependencies #511676
