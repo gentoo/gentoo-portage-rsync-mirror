@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/joblib-0.8.0.ebuild,v 1.1 2014/06/01 06:47:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/joblib-0.8.0.ebuild,v 1.2 2014/06/01 09:18:46 patrick Exp $
 
 EAPI=5
 
@@ -24,9 +24,9 @@ RDEPEND="${DEPEND}"
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_compile_all() {
-        if use doc; then
+	if use doc; then
 		sphinx-build -b html -c doc/ doc/ doc/html || die "docs failed installation"
-        fi
+	fi
 }
 
 python_test() {

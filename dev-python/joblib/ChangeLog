@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/joblib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/ChangeLog,v 1.10 2014/06/01 06:47:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/ChangeLog,v 1.11 2014/06/01 09:18:46 patrick Exp $
+
+  01 Jun 2014; Patrick Lauer <patrick@gentoo.org> joblib-0.8.0.ebuild:
+  Whitespace
 
 *joblib-0.8.0 (01 Jun 2014)
 

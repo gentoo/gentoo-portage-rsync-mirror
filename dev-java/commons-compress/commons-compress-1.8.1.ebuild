@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/commons-compress-1.1.ebuild,v 1.1 2011/07/31 14:21:09 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/commons-compress-1.8.1.ebuild,v 1.1 2014/06/01 09:20:08 tommy Exp $
 
 EAPI="4"
 
@@ -15,14 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/jre-1.4"
-DEPEND=">=virtual/jdk-1.4
-	test? (	dev-java/ant-junit:0 )"
+COMMON_DEPEND="dev-java/xz-java"
+
+RDEPEND=">=virtual/jre-1.5
+	${COMMON_DEPEND}"
+DEPEND=">=virtual/jdk-1.5
+	${COMMON_DEPEND}
+	test? (	dev-java/junit:4
+		dev-java/hamcrest-core
+		dev-java/ant-junit:0 )"
 
 S="${WORKDIR}/${P}-src"
 
 JAVA_ANT_BSFIX_EXTRA_ARGS="--maven-cleaning"
+EANT_GENTOO_CLASSPATH="xz-java"
 EANT_BUILD_TARGET="compile package"
+EANT_TEST_GENTOO_CLASSPATH="junit-4 hamcrest-core xz-java"
 
 java_prepare() {
 	cp "${FILESDIR}"/build.xml . || die "Failed to copy build.xml"
@@ -37,13 +45,12 @@ java_prepare() {
 }
 
 src_test() {
-	java-pkg_jarfrom junit
 	EANT_TEST_TARGET="compile-tests test"
 	java-pkg-2_src_test
 }
 
 src_install() {
-	java-pkg_newjar target/${P}.jar
+	java-pkg_newjar target/${PN}-1.1.jar
 	use doc && java-pkg_dojavadoc target/site/apidocs
 	use source && java-pkg_dosrc src/main/java/*
 }
