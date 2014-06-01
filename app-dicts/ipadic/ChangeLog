@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ipadic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.26 2012/06/09 19:09:20 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.27 2014/06/01 20:18:30 naota Exp $
+
+  01 Jun 2014; Naohiro Aota <naota@gentoo.org> -ipadic-2.7.0-r1.ebuild:
+  Drop old file
 
   09 Jun 2012; Raúl Porcel <armin76@gentoo.org> ipadic-2.7.0.ebuild,
   ipadic-2.7.0-r1.ebuild, ipadic-2.7.0-r2.ebuild:
@@ -97,4 +100,3 @@
   ChangeLog,Manifest,files/digest-ipadic-2.6.0:
 
   Initial import. Ebuild submitted by MATSUU Takuto <matsuu@7501.net>
-

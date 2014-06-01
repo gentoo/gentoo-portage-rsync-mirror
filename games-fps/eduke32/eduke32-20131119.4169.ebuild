@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20131119.4169.ebuild,v 1.2 2014/05/04 13:38:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20131119.4169.ebuild,v 1.3 2014/06/01 20:24:36 hasufell Exp $
 
 # TODO/FIXME:
 # lunatic broken
@@ -33,7 +33,7 @@ SRC_URI="http://dukeworld.duke4.net/eduke32/synthesis/${MY_PV}-${MY_BUILD}/${PN}
 
 LICENSE="GPL-2 BUILDLIC textures? ( hrp_art )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cdinstall debug demo gtk offensive +opengl opl-musicpack +png samples sc55-musicpack +server textures tools +vpx"
 REQUIRED_USE="?? ( opl-musicpack sc55-musicpack )"
 

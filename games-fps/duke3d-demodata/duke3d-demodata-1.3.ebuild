@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-demodata/duke3d-demodata-1.3.ebuild,v 1.1 2013/02/02 18:39:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-demodata/duke3d-demodata-1.3.ebuild,v 1.2 2014/06/01 20:21:54 hasufell Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.3drealms.com/share/3dduke13.zip"
 
 LICENSE="DUKE3D"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
