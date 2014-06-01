@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1456.ebuild,v 1.1 2013/09/18 12:49:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1462.ebuild,v 1.1 2014/06/01 10:29:19 tommy Exp $
 
-EAPI="2"
+EAPI="5"
 DATE=20130915
 JAVA_PKG_IUSE="doc source"
 
-inherit eutils java-pkg-2 java-ant-2 multilib user
+inherit eutils java-pkg-2 java-ant-2 multilib systemd user
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="https://freenetproject.org/"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-CDEPEND=">=dev-java/bcprov-1.45:0
+CDEPEND="dev-java/bcprov:1.49
 	dev-java/commons-compress:0
 	dev-db/db-je:3.3
 	dev-java/fec:0
@@ -50,7 +50,7 @@ JAVA_ANT_ENCODING="utf8"
 EANT_BUILD_TARGET="package"
 EANT_TEST_TARGET="unit"
 EANT_BUILD_XML="build-clean.xml"
-EANT_GENTOO_CLASSPATH="bcprov,commons-compress,db4o-jdk5,db4o-jdk12,db4o-jdk11,db-je-3.3,fec,java-service-wrapper,jbitcollider-core,lzma,lzmajio,mersennetwister"
+EANT_GENTOO_CLASSPATH="bcprov-1.49,commons-compress,db4o-jdk5,db4o-jdk12,db4o-jdk11,db-je-3.3,fec,java-service-wrapper,jbitcollider-core,lzma,lzmajio,mersennetwister"
 EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.bouncycastle.present=true -Dlib.junit.present=true -Dtest.skip=true"
 
 S=${WORKDIR}/fred-official-build0${PV#*p}
@@ -111,7 +111,9 @@ src_install() {
 	else
 		newinitd "${FILESDIR}"/freenet.old freenet
 	fi
-	dodoc AUTHORS README || die
+	systemd_dounit "${FILESDIR}"/freenet.service
+	dodoc AUTHORS || die
+	newdoc README.md README || die
 	insinto /etc
 	doins freenet-wrapper.conf || die
 	insinto /var/freenet

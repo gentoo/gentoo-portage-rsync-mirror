@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.181 2014/03/30 19:14:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.182 2014/06/01 10:29:19 tommy Exp $
+
+*freenet-0.7.5_p1462 (01 Jun 2014)
+
+  01 Jun 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -freenet-0.7.5_p1455.ebuild, -freenet-0.7.5_p1456.ebuild,
+  +freenet-0.7.5_p1462.ebuild:
+  Version bump, use --user instead of --chuid for init script, fixes bug
+  488958, drop old
 
 *freenet-0.7.5_p1459-r1 (30 Mar 2014)
 
