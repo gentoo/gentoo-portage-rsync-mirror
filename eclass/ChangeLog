@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1279 2014/06/01 22:07:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1280 2014/06/01 23:00:45 rhill Exp $
+
+  01 Jun 2014; Ryan Hill <rhill@gentoo.org> toolchain.eclass:
+  If we keep the flag list sorted by version there's no need for this function
+  to be recursive. This shaves a couple seconds off the worst-case runtime.
 
   01 Jun 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass,
   +tests/git-r3:subrepos.sh:

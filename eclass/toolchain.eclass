@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.631 2014/06/01 17:29:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.632 2014/06/01 23:00:45 rhill Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1233,8 +1233,8 @@ downgrade_arch_flags() {
 	[[ ${mytune} == x86-64 ]] && filter-flags '-mtune=*'
 	[[ ${bver} < 3.4 ]] && filter-flags '-mtune=*'
 
+	# "added" "arch" "replacement"
 	local archlist=(
-		# "added" "arch" "replacement"
 		4.9 bdver4 bdver3
 		4.9 bonnell atom
 		4.9 broadwell core-avx2
@@ -1271,10 +1271,10 @@ downgrade_arch_flags() {
 		3.4 pentium4m pentium4
 	)
 
-	myarch=$(get-flag march)
-	mytune=$(get-flag mtune)
-
 	for ((i = 0; i < ${#archlist[@]}; i += 3)) ; do
+		myarch=$(get-flag march)
+		mytune=$(get-flag mtune)
+
 		ver=${archlist[i]}
 		arch=${archlist[i + 1]}
 		rep=${archlist[i + 2]}
@@ -1285,15 +1285,14 @@ downgrade_arch_flags() {
 			einfo "Replacing ${myarch} (added in gcc ${ver}) with ${rep}..."
 			[[ ${myarch} == ${arch} ]] && replace-cpu-flags ${myarch} ${rep}
 			[[ ${mytune} == ${arch} ]] && replace-cpu-flags ${mytune} ${rep}
-			downgrade_arch_flags ${1:-${GCC_BRANCH_VER}}
-			break
+			continue
 		else
 			break
 		fi
 	done
 
+	# we only check -mno* here since -m* get removed by strip-flags later on
 	local isalist=(
-		# we only check -mno* here since -m* get removed by strip-flags later on
 		4.9 -mno-sha
 		4.9 -mno-avx512pf
 		4.9 -mno-avx512f
