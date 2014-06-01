@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.9 2014/05/31 21:05:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.10 2014/06/01 00:32:12 blueness Exp $
+
+*install-xattr-0.2 (01 Jun 2014)
+
+  01 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +install-xattr-0.2.ebuild:
+  Fix: http://git.overlays.gentoo.org/gitweb/?p=proj/elfix.git;a=commit;h=53a5c9
+  cababc4a681c026b7ce445e29da4666d6c
 
   31 May 2014; Mikle Kolyada <zlogene@gentoo.org> install-xattr-0.1.ebuild:
   Add ~s390 keyword wrt bug #501534
