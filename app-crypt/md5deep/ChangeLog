@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.78 2014/02/25 15:15:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.79 2014/06/01 12:57:02 tristan Exp $
+
+*md5deep-4.4 (01 Jun 2014)
+
+  01 Jun 2014; Tristan Heaven <tristan@gentoo.org> +md5deep-4.4.ebuild:
+  Version bump
 
   25 Feb 2014; Anthony G. Basile <blueness@gentoo.org> md5deep-4.3.ebuild:
   Keyword ~mips ~ppc64

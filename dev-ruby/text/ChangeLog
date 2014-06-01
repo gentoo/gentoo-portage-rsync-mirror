@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.8 2014/05/27 06:22:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.9 2014/06/01 12:53:48 maekke Exp $
+
+  01 Jun 2014; Markus Meier <maekke@gentoo.org> text-1.2.3-r1.ebuild:
+  arm stable, bug #505920
 
 *text-1.2.3-r2 (27 May 2014)
 

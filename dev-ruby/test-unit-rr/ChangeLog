@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit-rr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.22 2014/05/03 12:45:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.23 2014/06/01 12:56:01 maekke Exp $
+
+  01 Jun 2014; Markus Meier <maekke@gentoo.org> test-unit-rr-1.0.3.ebuild:
+  arm stable, bug #505920
 
 *test-unit-rr-1.0.3-r1 (03 May 2014)
 
