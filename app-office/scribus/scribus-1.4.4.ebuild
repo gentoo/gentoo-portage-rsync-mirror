@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r3.ebuild,v 1.4 2013/07/02 13:55:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.4.ebuild,v 1.1 2014/06/02 07:12:17 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
-PYTHON_REQ_USE=tk
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="tk?"
 
-inherit cmake-utils fdo-mime multilib python-single-r1
+inherit cmake-utils fdo-mime python-single-r1
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
@@ -16,20 +16,23 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="aspell cairo debug examples hunspell +minimal +pdf templates"
+IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
 IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
 IUSE+=" ${IUSE_LINGUAS// / linguas_}"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	tk? ( scripts )"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	virtual/python-imaging[tk,${PYTHON_USEDEP}]
 	dev-libs/boost
 	dev-libs/hyphen
 	dev-libs/libxml2
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
@@ -37,21 +40,21 @@ COMMON_DEPEND="
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
 	virtual/jpeg
 	cairo? ( x11-libs/cairo[X,svg] )
+	!cairo? ( media-libs/libart_lgpl )
+	hunspell? ( app-text/hunspell )
 	pdf? ( app-text/podofo )
-	aspell? ( app-text/aspell )
-	hunspell? ( app-text/hunspell )"
+	scripts? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
+	tk? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
+"
 RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-docs.patch
-	"${FILESDIR}"/${P}-imaging.patch
+	"${FILESDIR}"/${PN}-1.4.2-docs.patch
 	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
 	)
 
@@ -85,22 +88,21 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DHAVE_PYTHON=ON
-		-DPYTHON_INCLUDE_PATH=$(python_get_includedir)
-		-DPYTHON_LIBRARY="${EPREFIX}/usr/$(get_libdir)/lib${EPYTHON}.so"
+		-DPYTHON_INCLUDE_PATH="$(python_get_includedir)"
+		-DPYTHON_LIBRARY="$(python_get_library_path)"
 		-DWANT_NORPATH=ON
-		-DWANT_QTARTHUR=ON
 		-DWANT_QT3SUPPORT=OFF
 		-DGENTOOVERSION=${PVR}
 		-DWANT_GUI_LANG=${langs#,}
-		$(cmake-utils_use_with aspell ASPELL)
 		$(cmake-utils_use_with pdf PODOFO)
 		$(cmake-utils_use_want cairo)
+		$(cmake-utils_use_want !cairo QTARTHUR)
 		$(cmake-utils_use_want debug DEBUG)
 		$(cmake-utils_use_want minimal NOHEADERINSTALL)
 		$(cmake-utils_use_want hunspell HUNSPELL)
+		$(cmake-utils_use_want !examples NOEXAMPLES)
+		$(cmake-utils_use_want !templates NOTEMPLATES)
 		)
-	use examples || mycmakeargs+=( -DWANT_NOEXAMPLES=ON)
-	use templates || mycmakeargs+=( -DWANT_NOTEMPLATES=ON)
 	cmake-utils_src_configure
 }
 
@@ -114,6 +116,15 @@ src_install() {
 			rm "${file}" || die
 		fi
 	done
+
+	if ! use scripts; then
+		rm "${ED}"/usr/share/scribus/scripts/*.py || die
+	elif ! use tk; then
+		rm "${ED}"/usr/share/scribus/scripts/{FontSample,CalendarWizard}.py || die
+	fi
+
+	python_fix_shebang "${ED}"/usr/share/scribus/scripts
+	python_optimize "${ED}"/usr/share/scribus/scripts
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die

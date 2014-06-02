@@ -1,6 +1,12 @@
 # ChangeLog for app-office/scribus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.183 2013/09/17 15:58:17 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.184 2014/06/02 07:12:17 jlec Exp $
+
+*scribus-1.4.4 (02 Jun 2014)
+
+  02 Jun 2014; Justin Lecher <jlec@gentoo.org> -scribus-1.4.2-r2.ebuild,
+  -scribus-1.4.2-r3.ebuild, +scribus-1.4.4.ebuild:
+  Version Bump, #511798; drop old
 
   17 Sep 2013; Justin Lecher <jlec@gentoo.org> scribus-1.4.3.ebuild,
   scribus-1.4.9999.ebuild, scribus-9999.ebuild:
