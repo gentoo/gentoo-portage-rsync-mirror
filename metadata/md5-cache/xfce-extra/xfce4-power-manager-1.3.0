@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/dbus-glib-0.100.2 >=dev-libs/glib-2.30 >=sys-apps/dbus-1.6.18
 SLOT=0
 SRC_URI=mirror://xfce/src/apps/xfce4-power-manager/1.3/xfce4-power-manager-1.3.0.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	xfconf	20671cc91311ca7e3446047c1175cf16
-_md5_=370b900b38c602800eb064baf459a065
+_md5_=0871ea9812986c54b41b47eba146e501
