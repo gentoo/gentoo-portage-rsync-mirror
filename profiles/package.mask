@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15758 2014/06/02 18:34:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15759 2014/06/02 21:05:06 prometheanfire Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,11 +46,6 @@ games-util/rubygfe
 # Hans de Graaff <graaff@gentoo.org> (1 Jun 2014)
 # Mask new rubinius version for testing
 =dev-lang/rubinius-2*
-
-# Patrick Lauer <patrick@gentoo.org> (31 May 2014)
-# Broken dependencies #511676
-dev-python/rackspace-monitoring
-dev-python/rackspace-monitoring-cli
 
 # Markos Chandras <hwoarang@gentoo.org> (30 May 2014)
 # Mask beta release
