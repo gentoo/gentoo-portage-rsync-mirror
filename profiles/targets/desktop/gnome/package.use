@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.25 2014/04/20 19:45:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.26 2014/06/02 01:57:55 tetromino Exp $
 
 # For eautoreconf in =app-crypt/seahorse-3.10.2-r1
 app-crypt/gcr vala
@@ -39,6 +39,9 @@ media-libs/grilo playlist
 
 # Required for webkit-gtk-2
 media-libs/harfbuzz icu
+
+# Pulled in by tracker and grilo-plugins, has REQUIRED_USE="?? ( gtk qt4 qt5 )"
+media-libs/libmediaart gtk -qt4 -qt5
 
 # Pulled in by net-im/telepathy-connection-managers[msn] (via dev-python/papyon
 # and net-voip/telepathy-butterfly)
