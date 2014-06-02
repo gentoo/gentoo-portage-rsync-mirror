@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=x11-libs/gtk+:2 virtual/libintl:0 crypt? ( >=app-crypt/mhash-0.8:0 ) virtual/pkgconfig:*
-DESCRIPTION=Split files into smaller pieces and combine them back together.
+DESCRIPTION=Split files into smaller pieces and combine them back together
 EAPI=5
 HOMEPAGE=http://gtk-splitter.sourceforge.net
 IUSE=crypt
@@ -10,4 +10,4 @@ RDEPEND=x11-libs/gtk+:2 virtual/libintl:0 crypt? ( >=app-crypt/mhash-0.8:0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtk-splitter/gtk-splitter-2.2.1.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c961d0f68551ff8ce8c073079dbc8202
+_md5_=a71a2ff86d2b5fc7358760bfd647e802
