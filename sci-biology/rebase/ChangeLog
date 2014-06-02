@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.120 2014/03/06 11:25:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.121 2014/06/02 08:46:52 jlec Exp $
+
+*rebase-1404 (02 Jun 2014)
+
+  02 Jun 2014; Justin Lecher <jlec@gentoo.org> -rebase-1202.ebuild,
+  -rebase-1303.ebuild, -rebase-1310.ebuild, -rebase-1311.ebuild,
+  -rebase-1312.ebuild, +rebase-1404.ebuild:
+  Version BUmp; clean old
 
 *rebase-1403 (06 Mar 2014)
 

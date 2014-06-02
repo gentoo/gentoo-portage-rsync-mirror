@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1312.ebuild,v 1.1 2013/12/01 17:02:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1404.ebuild,v 1.1 2014/06/02 08:46:52 jlec Exp $
 
 EAPI=5
 

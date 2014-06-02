@@ -1,24 +1,24 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.12.20.ebuild,v 1.3 2014/06/02 08:57:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.41.ebuild,v 1.1 2014/06/02 08:57:49 jlec Exp $
 
 EAPI=5
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="21"
+K_GENPATCHES_VER="48"
 K_DEBLOB_AVAILABLE="1"
 UNIPATCH_STRICTORDER=1
 inherit kernel-2 eutils
 detect_version
 detect_arch
 
-AUFS_VERSION=3.12.x_p20140511
+AUFS_VERSION=3.10.x_p20140602
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
 # git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs${AUFS_VERSION/_p*} > aufs-sources-${AUFS_VERSION}.tar
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/"
 IUSE="deblob experimental module vanilla"
 
@@ -61,12 +61,20 @@ src_prepare() {
 	cp -rf "${WORKDIR}"/{Documentation,fs} . || die
 }
 
+src_install() {
+	kernel-2_src_install
+	dodoc "${WORKDIR}"/{aufs3-loopback,vfs-ino,tmpfs-ibitmap}.patch
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
-	has_version sys-fs/aufs-util && \
-		einfo "In order to use aufs FS you need to install sys-fs/aufs-util"
+	has_version sys-fs/aufs-util || \
+		elog "In order to use aufs FS you need to install sys-fs/aufs-util"
+
+	readme.gentoo_pkg_postinst
 }
 
 pkg_postrm() {
