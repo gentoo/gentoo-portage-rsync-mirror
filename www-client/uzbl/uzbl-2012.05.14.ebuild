@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2012.05.14.ebuild,v 1.4 2014/06/02 13:30:41 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2012.05.14.ebuild,v 1.5 2014/06/02 13:43:20 tomwij Exp $
 
 EAPI="4"
 

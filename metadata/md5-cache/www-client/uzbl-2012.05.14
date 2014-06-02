@@ -11,4 +11,4 @@ REQUIRED_USE=tabbed? ( browser )
 SLOT=0
 SRC_URI=http://github.com/Dieterbe/uzbl/tarball/2012.05.14 -> uzbl-2012.05.14.tar.gz
 _eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=7fb1749d5a2ef9647b4786cfedfc168a
+_md5_=2013a603a2beab4e2dc9253e5e7a6141

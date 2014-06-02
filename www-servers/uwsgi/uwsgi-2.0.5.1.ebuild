@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.3.ebuild,v 1.1 2014/03/17 11:50:36 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.5.1.ebuild,v 1.1 2014/06/02 13:52:35 ultrabug Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_{6,7} python3_{2,3} )
+PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
 
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -42,7 +42,7 @@ UWSGI_PLUGINS_OPT=( alarm_{curl,xmpp} clock_{monotonic,realtime} curl_cron
 	systemd_logger transformation_toupper tuntap webdav xattr xslt zabbix )
 
 LANG_SUPPORT_SIMPLE=( cgi mono perl ) # plugins which can be built in the main build process
-LANG_SUPPORT_EXTENDED=( lua php python python_gevent ruby )
+LANG_SUPPORT_EXTENDED=( lua php python python_asyncio python_gevent ruby )
 
 # plugins to be ignored (for now):
 # cheaper_backlog2: example plugin
@@ -69,6 +69,7 @@ REQUIRED_USE="|| ( ${LANG_SUPPORT_SIMPLE[@]} ${LANG_SUPPORT_EXTENDED[@]} )
 	uwsgi_plugins_router_xmldir? ( xml )
 	uwsgi_plugins_forkptyrouter? ( uwsgi_plugins_corerouter )
 	python? ( ${PYTHON_REQUIRED_USE} )
+	python_asyncio? ( python_targets_python3_4 python_gevent )
 	python_gevent? ( python )
 	expat? ( xml )"
 
@@ -233,6 +234,12 @@ python_compile_plugins() {
 
 	${PYTHON} uwsgiconfig.py --plugin plugins/python gentoo ${EPYV} || die "building plugin for ${EPYTHON} failed"
 
+	if use python_asyncio ; then
+		if [ "${PYV}" == "34" ] ; then
+			${PYTHON} uwsgiconfig.py --plugin plugins/asyncio gentoo asyncio${PYV} || die "building plugin for asyncio-support in ${EPYTHON} failed"
+		fi
+	fi
+
 	if use python_gevent ; then
 		${PYTHON} uwsgiconfig.py --plugin plugins/gevent gentoo gevent${PYV} || die "building plugin for gevent-support in ${EPYTHON} failed"
 	fi
@@ -335,12 +342,25 @@ pkg_postinst() {
 	fi
 
 	python_pkg_postinst() {
-		elog "  '--plugins ${EPYTHON}' for ${EPYTHON}"
+		local EPYV
+		local PYV
+		EPYV=${EPYTHON/.}
+		PYV=${EPYV/python}
+
+		elog " "
+		elog "  '--plugins ${EPYV}' for ${EPYTHON}"
+		if use python_asyncio ; then
+			if [[ ${EPYV} == python34 ]] ; then
+				elog "  '--plugins ${EPYV},asyncio${PYV}' for asyncio support in ${EPYTHON}"
+			else
+				elog "  (asyncio is only supported in python3.4)"
+			fi
+		fi
 		if use python_gevent ; then
 			if [[ ${EPYTHON} == python2* ]] ; then
-				elog "  '--plugins ${EPYTHON},gevent-${EPYTHON}' for gevent support in ${EPYTHON}"
+				elog "  '--plugins ${EPYV},gevent${PYV}' for gevent support in ${EPYTHON}"
 			else
-				elog "  (gevent is currently not support in ${EPYTHON})"
+				elog "  (gevent is currently not supported in ${EPYTHON})"
 			fi
 		fi
 	}

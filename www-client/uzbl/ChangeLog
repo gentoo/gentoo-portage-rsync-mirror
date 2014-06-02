@@ -1,6 +1,10 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.56 2014/06/02 13:30:41 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.57 2014/06/02 13:43:20 tomwij Exp $
+
+  02 Jun 2014; Tom Wijsman <TomWij@gentoo.org> uzbl-2012.05.14.ebuild,
+  uzbl-9999.ebuild:
+  Repoman didn't update the Gentoo Copyright header for some reason.
 
   02 Jun 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Added Kéwan Marconnet (tharvik) as proxy maintainer.

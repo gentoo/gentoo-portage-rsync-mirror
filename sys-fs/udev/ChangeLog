@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1041 2014/06/01 18:33:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1042 2014/06/02 13:32:26 ssuominen Exp $
+
+*udev-208-r1 (02 Jun 2014)
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +udev-208-r1.ebuild:
+  Backport building of multilib libgudev-1.0 to =208-r1 from >=212-r1 because
+  only 208 works with Linux 2.6.32.x series since CONFIG_FHANDLE=y was
+  introduced in Linux 2.6.39.
 
   01 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> udev-212-r1.ebuild:
   ia64 stable wrt big #505962

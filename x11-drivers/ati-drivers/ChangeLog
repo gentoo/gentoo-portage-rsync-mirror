@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.359 2014/05/27 15:55:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.360 2014/06/02 13:33:12 chithanh Exp $
+
+  02 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ati-drivers-14.4_p1.ebuild:
+  Stabilize latest.
 
 *ati-drivers-14.4_p1 (27 May 2014)
 

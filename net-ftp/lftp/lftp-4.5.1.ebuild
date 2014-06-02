@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.5.0-r1.ebuild,v 1.1 2014/05/23 16:06:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.5.1.ebuild,v 1.1 2014/06/02 13:37:25 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
@@ -58,8 +58,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-4.0.2.91-lafile.patch" \
 		"${FILESDIR}/${PN}-4.3.5-autopoint.patch" \
-		"${FILESDIR}/${PN}-4.3.8-gets.patch" \
-		"${FILESDIR}/${PN}-4.5.0-Torrent.patch"
+		"${FILESDIR}/${PN}-4.3.8-gets.patch"
 
 	sed -i configure.ac -e 's|^AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
 	eautoreconf
