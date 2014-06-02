@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare setup unpack
 DEPEND=virtual/pkgconfig dev-libs/glib:2 >=dev-libs/icu-4.0.1 >=net-libs/libsoup-2.24:2.4 !gtk3? ( >=net-libs/webkit-gtk-1.1.15:2 >=x11-libs/gtk+-2.14:2 ) gtk3? ( net-libs/webkit-gtk:3 x11-libs/gtk+:3 )
-DESCRIPTION=Web interface tools which adhere to the unix philosophy.
+DESCRIPTION=Web interface tools which adhere to the unix philosophy
 EAPI=4
 HOMEPAGE=http://www.uzbl.org
 IUSE=gtk3 +browser helpers +tabbed vim-syntax
@@ -11,4 +11,4 @@ REQUIRED_USE=tabbed? ( browser )
 SLOT=0
 SRC_URI=http://github.com/Dieterbe/uzbl/tarball/2012.05.14 -> uzbl-2012.05.14.tar.gz
 _eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=3706f386975174eeda6fecdf63450ff2
+_md5_=7fb1749d5a2ef9647b4786cfedfc168a
