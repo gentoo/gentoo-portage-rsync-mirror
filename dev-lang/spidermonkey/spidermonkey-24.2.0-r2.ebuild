@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-24.2.0-r2.ebuild,v 1.1 2014/05/23 21:13:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-24.2.0-r2.ebuild,v 1.2 2014/06/02 11:46:35 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -75,6 +75,7 @@ src_configure() {
 		--enable-threadsafe \
 		--with-system-nspr \
 		--enable-system-ffi \
+		--disable-optimize \
 		$(use_enable icu intl-api) \
 		$(use_enable debug) \
 		$(use_enable jit yarr-jit) \
@@ -89,10 +90,14 @@ src_compile() {
 		make CFLAGS="" CXXFLAGS="" \
 			CC=$(tc-getBUILD_CC) CXX=$(tc-getBUILD_CXX) \
 			AR=$(tc-getBUILD_AR) RANLIB=$(tc-getBUILD_RANLIB) \
+			MOZ_OPTIMIZE_FLAGS="" MOZ_DEBUG_FLAGS="" \
+			HOST_OPTIMIZE_FLAGS="" MODULE_OPTIMIZE_FLAGS="" \
+			MOZ_PGO_OPTIMIZE_FLAGS="" \
 			jscpucfg host_jsoplengen host_jskwgen || die
 		make CFLAGS="" CXXFLAGS="" \
 			CC=$(tc-getBUILD_CC) CXX=$(tc-getBUILD_CXX) \
 			AR=$(tc-getBUILD_AR) RANLIB=$(tc-getBUILD_RANLIB) \
+			MOZ_OPTIMIZE_FLAGS="" MOZ_DEBUG_FLAGS="" HOST_OPTIMIZE_FLAGS="" \
 			-C config nsinstall || die
 		mv {,native-}jscpucfg || die
 		mv {,native-}host_jskwgen || die
@@ -108,7 +113,10 @@ src_compile() {
 			host_jskwgen.o \
 			host_jsoplengen.o || die
 	fi
-	emake
+	emake \
+		MOZ_OPTIMIZE_FLAGS="" MOZ_DEBUG_FLAGS="" \
+		HOST_OPTIMIZE_FLAGS="" MODULE_OPTIMIZE_FLAGS="" \
+		MOZ_PGO_OPTIMIZE_FLAGS=""
 }
 
 src_test() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.150 2014/05/23 21:13:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.151 2014/06/02 11:46:35 axs Exp $
+
+  02 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  -spidermonkey-24.2.0-r1.ebuild, spidermonkey-24.2.0-r2.ebuild:
+  dropped optimizations so build system will respect cflags, bug 444126, thanks
+  to hasufell for patches; removed old :24 ebuild
 
 *spidermonkey-24.2.0-r2 (23 May 2014)
 
