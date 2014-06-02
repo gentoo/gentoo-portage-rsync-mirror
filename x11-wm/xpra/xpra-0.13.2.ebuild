@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.12.6.ebuild,v 1.1 2014/05/19 16:00:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.13.2.ebuild,v 1.1 2014/06/02 19:23:11 xmw Exp $
 
 EAPI=5
 
+# PyCObject_Check and PyCObject_AsVoidPtr vanished with python 3.3, and setup.py not python3.2 copmat
 PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1 eutils
 
@@ -62,7 +63,7 @@ DEPEND="${COMMON_DEPEND}
 
 python_prepare_all() {
 	epatch \
-		"${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch \
+		"${FILESDIR}"/${PN}-0.13.1-ignore-gentoo-no-compile.patch \
 		"${FILESDIR}"/${PN}-0.12.0-prefix.patch
 
 	#assuming ffmpeg and libav mutual exclusive installs

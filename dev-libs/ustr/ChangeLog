@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ustr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.14 2014/05/30 13:59:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.15 2014/06/02 19:17:53 swift Exp $
+
+*ustr-1.0.4-r5 (02 Jun 2014)
+
+  02 Jun 2014; Sven Vermeulen <swift@gentoo.org> +ustr-1.0.4-r5.ebuild:
+  Update multilib support in ustr with many thanks to Arfrever
 
 *ustr-1.0.4-r4 (30 May 2014)
 
