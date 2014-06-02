@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/sphinxcontrib-plantuml
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-plantuml/ChangeLog,v 1.1 2014/06/02 09:06:37 pva Exp $
+
+*sphinxcontrib-plantuml-0.4 (02 Jun 2014)
+
+  02 Jun 2014; Peter Volkov <pva@gentoo.org>
+  +sphinxcontrib-plantuml-0.4.ebuild, +metadata.xml:
+  Initial commit. Text tools forever!
+
