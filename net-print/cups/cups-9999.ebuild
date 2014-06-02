@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.56 2014/05/30 21:26:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.57 2014/06/02 15:03:36 mgorny Exp $
 
 EAPI=5
 
@@ -97,6 +97,10 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
+)
+
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/cups-config
 )
 
 pkg_setup() {
@@ -243,6 +247,7 @@ multilib_src_install() {
 		emake BUILDROOT="${D}" install
 	else
 		emake BUILDROOT="${D}" install-libs install-headers
+		dobin cups-config
 	fi
 }
 

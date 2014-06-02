@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.613 2014/05/30 21:26:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.614 2014/06/02 15:03:36 mgorny Exp $
+
+  02 Jun 2014; Michał Górny <mgorny@gentoo.org> cups-1.7.1-r2.ebuild,
+  cups-1.7.2-r1.ebuild, cups-9999.ebuild:
+  Install cups-config for all ABIs, and add it to MULTILIB_CHOST_TOOLS.
 
   30 May 2014; Michał Górny <mgorny@gentoo.org> cups-1.7.1-r2.ebuild,
   cups-1.7.2-r1.ebuild, cups-9999.ebuild:
