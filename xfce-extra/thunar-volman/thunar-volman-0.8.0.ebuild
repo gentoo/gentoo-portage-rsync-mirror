@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.8.0.ebuild,v 1.9 2012/12/02 22:14:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.8.0.ebuild,v 1.10 2014/06/02 20:12:39 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 IUSE="debug libnotify"
 
 COMMON_DEPEND=">=dev-libs/glib-2.20
-	virtual/udev[gudev]
+	virtual/libgudev:=
 	>=x11-libs/gtk+-2.24:2
 	>=xfce-base/exo-0.8
 	>=xfce-base/libxfce4ui-4.10
@@ -23,7 +23,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.20
 	>=xfce-base/xfconf-4.10
 	libnotify? ( >=x11-libs/libnotify-0.7 )"
 RDEPEND="${COMMON_DEPEND}
-	>=xfce-base/thunar-1.4[udev]"
+	virtual/udev
+	>=xfce-base/thunar-1.6[udev]"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-devel/gettext
