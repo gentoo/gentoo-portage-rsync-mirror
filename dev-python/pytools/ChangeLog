@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.22 2014/03/05 10:34:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.23 2014/06/02 06:30:51 jlec Exp $
+
+*pytools-2014.2.1 (02 Jun 2014)
+
+  02 Jun 2014; Justin Lecher <jlec@gentoo.org> +pytools-2014.2.1.ebuild:
+  Version BUmp
 
   05 Mar 2014; Michał Górny <mgorny@gentoo.org> pytools-9999.ebuild:
   Require EGIT_MIN_CLONE_TYPE=single due to transport limitations.
