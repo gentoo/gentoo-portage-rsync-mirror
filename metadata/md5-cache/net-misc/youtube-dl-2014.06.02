@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=dev-python/setuptools[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?,python_single_target_python3_3(+)?,python_single_target_python3_4(+)?] test? ( dev-python/nose[coverage(+)] ) python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_single_target_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?,python_single_target_python3_3(+)?,python_single_target_python3_4(+)?]
+DESCRIPTION=Download videos from YouTube.com (and mores sites...)
+EAPI=5
+HOMEPAGE=http://rg3.github.com/youtube-dl/
+IUSE=offensive test python_targets_python2_6 python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_single_target_python2_6 python_single_target_python2_7 python_single_target_python3_3 python_single_target_python3_4
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
+LICENSE=public-domain
+RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_single_target_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?,python_single_target_python3_3(+)?,python_single_target_python3_4(+)?]
+REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 python_single_target_python3_3 python_single_target_python3_4 )
+SLOT=0
+SRC_URI=http://youtube-dl.org/downloads/2014.06.02/youtube-dl-2014.06.02.tar.gz
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=8fa31cf3ce3b12cd98e124b39c48a96e

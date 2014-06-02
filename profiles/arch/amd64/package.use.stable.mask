@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.10 2014/05/24 12:05:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.11 2014/06/02 12:37:57 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -371,6 +371,8 @@ virtual/libiconv abi_x86_32
 virtual/libusb abi_x86_32
 virtual/opengl abi_x86_32
 virtual/udev abi_x86_32
+virtual/libudev abi_x86_32
+virtual/libgudev abi_x86_32
 x11-libs/cairo abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 x11-libs/gtk+ abi_x86_32

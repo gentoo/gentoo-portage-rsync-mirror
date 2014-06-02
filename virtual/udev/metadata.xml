@@ -9,6 +9,5 @@
 	</maintainer>
 	<use>
 		<flag name='gudev'>Build the gobject interface library</flag>
-		<flag name='kmod'>Enable kernel module loading/unloading support using <pkg>sys-apps/kmod</pkg></flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.23-r2.ebuild,v 1.4 2014/05/27 11:21:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.23-r2.ebuild,v 1.5 2014/06/02 12:47:33 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -21,7 +21,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	introspection? ( dev-libs/gobject-introspection )
 	kernel_linux? (
 		virtual/libusb:1
-		>=virtual/udev-200[gudev]
+		virtual/libgudev:=
+		virtual/udev
 		ios? (
 			>=app-pda/libimobiledevice-1:=
 			>=app-pda/libplist-1:=

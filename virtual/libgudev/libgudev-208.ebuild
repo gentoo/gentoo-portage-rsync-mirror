@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/libgudev-208.ebuild,v 1.3 2014/03/28 15:02:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/libgudev-208.ebuild,v 1.4 2014/06/02 12:40:20 ssuominen Exp $
 
 EAPI=5
 inherit multilib-build
@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0/0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="introspection static-libs"
 
 DEPEND=""
