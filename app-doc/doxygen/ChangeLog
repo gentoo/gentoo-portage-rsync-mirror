@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.261 2014/05/28 23:53:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.262 2014/06/02 10:30:53 zlogene Exp $
+
+  02 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.5.ebuild:
+  amd64 stable wrt bug #511450
 
   28 May 2014; Jeroen Roovers <jer@gentoo.org> doxygen-1.8.5.ebuild:
   RESTRICT=test (bug #504448).

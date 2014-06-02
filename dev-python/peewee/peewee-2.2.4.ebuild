@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/peewee-2.1.7.ebuild,v 1.1 2014/05/20 08:11:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/peewee-2.2.4.ebuild,v 1.1 2014/06/02 10:28:05 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/coleifer/${PN}/archive/${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples test"
+IUSE="doc examples test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -21,13 +21,21 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/apsw[${PYTHON_USEDEP}]
 		dev-python/psycopg[${PYTHON_USEDEP}]
+		dev-python/django[${PYTHON_USEDEP}]
 	)"
+# Req'd to ensure a unique tmp.db for each python impl running the testsuite.
+DISTUTILS_IN_SOURCE_BUILD=1
+
+python_compile_all() {
+	use doc && emake -C docs html
+}
 
 python_test() {
-	"${PYTHON}" ./runtests.py || die "tests failed"
+	"${PYTHON}" ./runtests.py || die "tests failed under ${EPYTHON}"
 }
 
 python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
 	use examples && local EXAMPLES=( example/. )
 	distutils-r1_python_install_all
 }
