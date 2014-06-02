@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdfgrep
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfgrep/ChangeLog,v 1.8 2013/06/26 14:00:59 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfgrep/ChangeLog,v 1.9 2014/06/02 11:05:57 slyfox Exp $
+
+  02 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Update flow's mail address by his request.
 
   26 Jun 2013; Justin Lecher <jlec@gentoo.org> -pdfgrep-1.2.ebuild,
   metadata.xml:

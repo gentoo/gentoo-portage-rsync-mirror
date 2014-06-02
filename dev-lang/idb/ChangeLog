@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/idb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.32 2014/03/24 18:18:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/ChangeLog,v 1.33 2014/06/02 11:29:35 jlec Exp $
+
+*idb-14.0.3.174 (02 Jun 2014)
+
+  02 Jun 2014; Justin Lecher <jlec@gentoo.org> +idb-14.0.3.174.ebuild:
+  Version Bump
 
 *idb-14.0.2.144 (24 Mar 2014)
 
