@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.11.0.ebuild,v 1.4 2014/05/31 19:19:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r2.ebuild,v 1.1 2014/06/02 16:39:34 ssuominen Exp $
 
 EAPI=5
+EAUTORECONF=1
 inherit xfconf
 
 DESCRIPTION="A session manager for the Xfce desktop environment"
@@ -19,15 +20,18 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	x11-libs/libSM
 	>=x11-libs/libwnck-2.30:1
 	x11-libs/libX11
-	>=xfce-base/libxfce4util-4.11
-	>=xfce-base/libxfce4ui-4.11
+	>=xfce-base/libxfce4util-4.10.1
+	>=xfce-base/libxfce4ui-4.10
 	>=xfce-base/xfconf-4.10
 	!xfce-base/xfce-utils
 	systemd? ( >=sys-auth/polkit-0.100 )"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xrdb
 	nls? ( x11-misc/xdg-user-dirs )
-	udev? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
+	udev? (
+		systemd? ( || ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils ) )
+		!systemd? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
+		)
 	xscreensaver? ( || (
 		>=x11-misc/xscreensaver-5.26
 		gnome-extra/gnome-screensaver
@@ -41,7 +45,10 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${PN}-4.10.1-alock_support_to_xflock4.patch )
+	PATCHES=(
+		"${FILESDIR}"/${P}-alock_support_to_xflock4.patch
+		"${FILESDIR}"/${P}-systemd.patch
+		)
 
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
