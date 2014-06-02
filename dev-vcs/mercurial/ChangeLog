@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.147 2014/06/02 06:59:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.148 2014/06/02 21:54:30 polynomial-c Exp $
+
+  02 Jun 2014; Lars Wendler <polynomial-c@gentoo.org> mercurial-3.0.1.ebuild,
+  +files/mercurial-3.0.1-po_fixes.patch:
+  Added po fixes for >=gettext-0.19.
 
 *mercurial-3.0.1 (02 Jun 2014)
 
