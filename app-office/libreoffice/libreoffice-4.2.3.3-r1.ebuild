@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.3.3-r1.ebuild,v 1.1 2014/05/02 16:07:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.3.3-r1.ebuild,v 1.2 2014/06/02 10:35:02 zlogene Exp $
 
 EAPI=5
 
@@ -89,7 +89,7 @@ unset lo_xt
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}

@@ -1,13 +1,14 @@
 # ChangeLog for dev-python/peewee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/ChangeLog,v 1.9 2014/06/02 10:28:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/ChangeLog,v 1.10 2014/06/02 10:34:10 idella4 Exp $
 
 *peewee-2.2.4 (02 Jun 2014)
 
   02 Jun 2014; Ian Delaney <idella4@gentoo.org> +peewee-2.2.4.ebuild,
   -peewee-2.1.4.ebuild, -peewee-2.1.5.ebuild, -peewee-2.1.6.ebuild,
   -peewee-2.1.7.ebuild, -peewee-2.2.1.ebuild:
-  bump; fix test phase, assisted with support testing by eroen
+  bump; fix test phase, assisted with support testing by eroen, remove
+  some oldies
 
 *peewee-2.2.1 (02 Jun 2014)
 
