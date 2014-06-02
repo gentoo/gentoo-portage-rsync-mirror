@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.5.ebuild,v 1.9 2014/03/24 14:34:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.5.ebuild,v 1.10 2014/06/02 17:31:03 ssuominen Exp $
 
 EAPI=5
 inherit eutils bash-completion-r1 linux-info udev systemd
@@ -22,7 +22,9 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=sys-apps/sg3_utils-1.27.20090411
 	>=sys-block/parted-3
 	>=sys-fs/lvm2-2.02.66
-	>=virtual/udev-208[gudev]
+	virtual/libgudev:=
+	virtual/libudev:=
+	virtual/udev
 	selinux? ( sec-policy/selinux-devicekit )"
 # util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}

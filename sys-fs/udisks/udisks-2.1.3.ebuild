@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.1.3.ebuild,v 1.9 2014/03/24 14:34:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.1.3.ebuild,v 1.10 2014/06/02 17:31:03 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils linux-info systemd udev
@@ -14,15 +14,15 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86"
 IUSE="debug cryptsetup +gptfdisk +introspection selinux systemd"
 
-UDEV_VERSION="208"
 COMMON_DEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/libatasmart-0.19
 	>=sys-auth/polkit-0.110
 	virtual/acl
-	>=virtual/udev-${UDEV_VERSION}[gudev]
+	virtual/libgudev:=
+	virtual/udev
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 	selinux? ( sec-policy/selinux-devicekit )
-	systemd? ( >=sys-apps/systemd-${UDEV_VERSION} )"
+	systemd? ( sys-apps/systemd )"
 # gptfdisk -> src/udiskslinuxpartition.c -> sgdisk (see also #412801#c1)
 # util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}
