@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.16.1.ebuild,v 1.2 2014/05/05 14:12:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.16.1.ebuild,v 1.3 2014/06/02 18:22:11 ssuominen Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,9 +25,10 @@ RDEPEND="
 	>=sys-apps/dbus-0.95
 	>=net-libs/telepathy-glib-0.20
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	!systemd? (
-		>=sys-power/upower-0.9.11
-		<sys-power/upower-0.99 )
+	!systemd? ( || (
+		( >=sys-power/upower-0.9.11 <sys-power/upower-0.99 )
+		sys-power/upower-pm-utils
+		) )
 "
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}

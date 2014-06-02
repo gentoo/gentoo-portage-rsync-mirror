@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.49 2014/05/17 20:58:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.50 2014/06/02 18:11:09 tomwij Exp $
 
 EAPI=5
 
@@ -21,9 +21,9 @@ LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd dvdnav +enca encode examples +iconv jack -joystick
+IUSE="+alsa bluray bs2b cdio -doc-pdf dvb +dvd dvdnav +enca encode examples +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl
-oss portaudio postproc pulseaudio pvr +quvi samba sdl selinux +shm v4l vaapi vcd vdpau
+oss portaudio postproc pulseaudio pvr +quvi samba sdl selinux +shm v4l vaapi vdpau
 vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -175,7 +175,6 @@ src_configure() {
 		$(use_enable encode encoding) \
 		$(use_enable joystick) \
 		$(use_enable bluray libbluray) \
-		$(use_enable vcd) \
 		$(use_enable quvi libquvi) \
 		$(use_enable samba libsmbclient) \
 		$(use_enable lirc) \

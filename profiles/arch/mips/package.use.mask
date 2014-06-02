@@ -1,6 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.60 2014/02/02 10:30:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.61 2014/06/02 18:22:22 pesa Exp $
+
+# Davide Pesavento <pesa@gentoo.org> (02 Jun 2014)
+# dev-qt/qtdeclarative:4 is not keyworded on mips
+dev-qt/designer:4 declarative
+
+# Davide Pesavento <pesa@gentoo.org> (02 Jun 2014)
+# connman and networkmanager are not keyworded on mips
+dev-qt/qtbearer:4 connman networkmanager
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Feb 2014)
 # media-gfx/nvidia-texture-tools is not keyworded on mips

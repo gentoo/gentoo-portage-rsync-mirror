@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.6.ebuild,v 1.6 2014/02/22 22:57:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.6.ebuild,v 1.7 2014/06/02 18:11:06 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit gnome.org
 
 DESCRIPTION="Notification daemon"
@@ -22,10 +22,9 @@ RDEPEND=">=dev-libs/glib-2.28
 	!x11-misc/notify-osd
 	!x11-misc/qtnotifydaemon"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
-	>=dev-util/intltool-0.40
-	virtual/pkgconfig
-	sys-devel/gettext"
+	dev-util/intltool
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS )
 

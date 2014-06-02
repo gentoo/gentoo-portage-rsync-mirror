@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.78 2014/05/28 08:26:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.79 2014/06/02 18:11:09 tomwij Exp $
+
+  02 Jun 2014; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Remove vcd USE flag, make cdio USE flag non-enabled by default due to upstream
+  default; fixes bug #512072, proxied commit for Nikoli.
 
   28 May 2014; Maxim Koltsov <maksbotan@gentoo.org> -mpv-0.3.5.ebuild,
   -mpv-0.3.6.ebuild, -mpv-0.3.7.ebuild, -mpv-0.3.8.ebuild, -mpv-0.3.9.ebuild:
