@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19_rc2.ebuild,v 1.1 2014/05/15 09:11:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19.ebuild,v 1.1 2014/06/02 22:04:45 polynomial-c Exp $
 
 EAPI="4"
 
@@ -44,6 +44,8 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-msgfmt-desktop-2_testfix.patch
+
 	java-pkg-opt-2_src_prepare
 	epunt_cxx
 	elibtoolize

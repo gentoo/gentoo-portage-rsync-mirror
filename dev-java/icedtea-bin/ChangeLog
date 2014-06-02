@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.59 2014/05/31 20:51:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.60 2014/06/02 22:28:44 caster Exp $
+
+*icedtea-bin-7.2.4.7 (02 Jun 2014)
+
+  02 Jun 2014; Vlastimil Babka <caster@gentoo.org> +icedtea-bin-7.2.4.7.ebuild,
+  metadata.xml:
+  Version bump, bug #508270. Add a webstart USE flag that enables creating a
+  javaws symlink to the respective binary from icedtea-web. Fixes bug #504678.
 
 *icedtea-bin-6.1.13.3 (31 May 2014)
 
