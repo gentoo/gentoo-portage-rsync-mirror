@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.307 2014/05/30 14:29:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.308 2014/06/02 14:08:48 vapier Exp $
+
+  02 Jun 2014; Mike Frysinger <vapier@gentoo.org> nano-2.3.3.ebuild:
+  Fix deletion of extraneous html pages #512142 by Justin Lecher.
 
 *nano-2.3.3 (30 May 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_bioapi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/ChangeLog,v 1.9 2012/11/04 06:35:21 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/ChangeLog,v 1.10 2014/06/02 14:16:26 vapier Exp $
+
+  02 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  files/pam_bioapi-0.4.0-headers.patch:
+  Fix building with newer glibc #512106 by Paweł Hajdan, Jr..
 
   04 Nov 2012; Mike Frysinger <vapier@gentoo.org> pam_bioapi-0.4.0-r1.ebuild:
   Stabilize #441520 by Paweł Hajdan, Jr.

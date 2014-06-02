@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">tiff</product>
   <announced>September 23, 2012</announced>
-  <revised>September 23, 2012: 5</revised>
+  <revised>June 02, 2014: 6</revised>
   <bug>307001</bug>
   <bug>324885</bug>
   <bug>357271</bug>
@@ -23,6 +23,7 @@
     <package name="media-libs/tiff" auto="yes" arch="*">
       <unaffected range="ge">4.0.2-r1</unaffected>
       <unaffected range="rge">3.9.5-r2</unaffected>
+      <unaffected range="rge">3.9.7-r1</unaffected>
       <vulnerable range="lt">4.0.2-r1</vulnerable>
     </package>
   </affected>
@@ -92,5 +93,5 @@
   <metadata tag="requester" timestamp="Fri, 07 Oct 2011 23:38:10 +0000">
     underling
   </metadata>
-  <metadata tag="submitter" timestamp="Sun, 23 Sep 2012 18:37:34 +0000">ackle</metadata>
+  <metadata tag="submitter" timestamp="Mon, 02 Jun 2014 14:06:53 +0000">ackle</metadata>
 </glsa>

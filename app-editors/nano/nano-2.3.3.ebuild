@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.3.ebuild,v 1.1 2014/05/30 14:29:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.3.ebuild,v 1.2 2014/06/02 14:08:48 vapier Exp $
 
 EAPI="4"
 
@@ -41,6 +41,7 @@ src_configure() {
 	esac
 	econf \
 		--bindir="${EPREFIX}"/bin \
+		--htmldir=/trash \
 		$(use_enable !minimal color) \
 		$(use_enable !minimal multibuffer) \
 		$(use_enable !minimal nanorc) \
@@ -57,7 +58,7 @@ src_configure() {
 
 src_install() {
 	default
-	rm -rf "${ED}"/usr/share/nano/man-html
+	rm -rf "${ED}"/trash
 
 	dodoc doc/nanorc.sample
 	dohtml doc/faq.html
