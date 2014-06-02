@@ -1,6 +1,10 @@
 # ChangeLog for virtual/notification-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.11 2014/05/31 13:38:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.12 2014/06/02 04:50:52 rafaelmartins Exp $
+
+  02 Jun 2014; Rafael G. Martins <rafaelmartins@gentoo.org>
+  notification-daemon-0.ebuild:
+  Added lxqt-base/lxqt-notificationd. bug #512102
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   notification-daemon-0.ebuild:

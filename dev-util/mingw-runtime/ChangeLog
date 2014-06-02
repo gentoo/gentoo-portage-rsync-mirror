@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mingw-runtime
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.28 2013/05/10 09:38:39 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.29 2014/06/02 04:36:03 vapier Exp $
+
+*mingw-runtime-4.0.3.1 (02 Jun 2014)
+
+  02 Jun 2014; Mike Frysinger <vapier@gentoo.org> +mingw-runtime-4.0.3.1.ebuild:
+  Version bump #511490 by Yevgeny Filatov.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> mingw-runtime-3.18.ebuild,
   mingw-runtime-3.20.2.ebuild, mingw-runtime-3.20.ebuild:
