@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.96 2014/05/20 23:20:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.97 2014/06/02 07:56:14 radhermit Exp $
+
+*boto-2.29.1 (02 Jun 2014)
+
+  02 Jun 2014; Tim Harder <radhermit@gentoo.org> +boto-2.29.1.ebuild:
+  Version bump.
 
   20 May 2014; Tim Harder <radhermit@gentoo.org> boto-2.27.0.ebuild:
   Keywording amd64/x86 (bug #508570).

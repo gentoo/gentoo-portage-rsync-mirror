@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup
+DEPEND=>=virtual/jdk-1.6 source? ( app-arch/zip ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
+DESCRIPTION=PlantUML is used to draw UML diagram, using a simple and human readable text description
+EAPI=5
+HOMEPAGE=http://plantuml.sourceforge.net
+IUSE=elibc_FreeBSD source elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=virtual/jre-1.6 >=media-gfx/graphviz-2.26.3 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+SLOT=0
+SRC_URI=mirror://sourceforge/plantuml/plantuml-7999.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=0de392801fa5776ad40d7db69e8d955b
