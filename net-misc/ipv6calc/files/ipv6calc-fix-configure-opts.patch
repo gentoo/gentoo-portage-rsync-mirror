@@ -1,0 +1,348 @@
+--- ipv6calc-0.97.2.orig/configure.in	2014-05-23 14:29:46.000000000 -0400
++++ ipv6calc-0.97.2/configure.in	2014-06-01 20:03:27.623149762 -0400
+@@ -44,12 +44,20 @@
+ 	AS_HELP_STRING([--enable-bundled-getopt],
+ 	               [Enable bundled getopt library (default: autoselected)]),
+ 	[
+-		AC_MSG_RESULT([*** use of bundled getopt library forced])
+-		ENABLE_BUNDLED_GETOPT=1
++		if test "$enable_bundled_getopt" = "yes"; then
++			AC_MSG_RESULT([*** use of bundled getopt library forced])
++			ENABLE_BUNDLED_GETOPT=1
++		else
++			AC_MSG_RESULT([*** use of system getopt library forced])
++		fi
+ 	],
+ 	[
+-		AC_CHECK_FUNC(getopt_long, [],
++		AC_CHECK_FUNC(getopt_long,
++			[
++				AC_MSG_RESULT([*** use of system getopt library autoselected])
++			],
+ 			[
++				AC_MSG_RESULT([*** use of bundled getopt library autoselected])
+ 				ENABLE_BUNDLED_GETOPT=1
+ 			])
+ 	])
+@@ -72,8 +80,12 @@
+ 	AS_HELP_STRING([--enable-bundled-md5],
+ 	               [Enable bundled MD5 library (default: autoselected)]),
+ 	[
+-		AC_MSG_RESULT([*** use of bundled MD5 library forced])
+-		ENABLE_BUNDLED_MD5=1
++		if test "$enable_bundled_md5" = "yes"; then
++			AC_MSG_RESULT([*** use of bundled MD5 library forced])
++			ENABLE_BUNDLED_MD5=1
++		else
++			AC_MSG_RESULT([*** use of system MD5 library forced])
++		fi
+ 	],
+ 	[
+ 		AC_CHECK_HEADER("openssl/md5.h", [
+@@ -83,11 +95,16 @@
+ 				LDFLAGS="-lcrypto $LDFLAGS"
+ 				AC_CHECK_FUNCS(MD5_Init MD5_Update MD5_Final,
+ 					[
++						md5_found="yes"
+ 					],
+ 					[
+ 						ENABLE_BUNDLED_MD5=1
+ 					])
+-
++				if test "$md5_found" = "yes"; then
++					AC_MSG_RESULT([*** use of system MD5 library autoselected])
++				else
++					AC_MSG_RESULT([*** use of bundled MD5 library autoselected])
++				fi
+ 			],
+ 			[
+ 				AC_MSG_WARN([crypto library header files were found but not supporting required MD5 functions (will us bundled MD5 function).])
+@@ -129,19 +146,19 @@
+ AC_ARG_ENABLE(
+ 	[shared],
+ 	AS_HELP_STRING([--enable-shared],
+-	               [Enable shared library build (default: disabled)]),
+-	[
+-		AC_MSG_RESULT([*** Shared library build enabled])
+-		SHARED_LIBRARY="yes"
+-		AC_DEFINE(SHARED_LIBRARY, 1, Define if you want ipv6calc binaries compiled with shared library libipv6calc)
+-		LDFLAGS_EXTRA="../lib/libipv6calc.so.$PACKAGE_VERSION ../databases/lib/libipv6calc_db_wrapper.so.$PACKAGE_VERSION $LDFLAGS_EXTRA"
+-		LD_LIBRARY_PATH=../lib:../databases/lib:$LD_LIBRARY_PATH
+-	],
+-	[
+-		SHARED_LIBRARY="no"
+-		IPV6CALC_LIB="-L../lib/ -L../databases/lib/ -lipv6calc -lipv6calc_db_wrapper"
+-	],[
+-	])
++	               [Enable shared library build (default: disabled)])
++	)
++
++if test "$enable_shared" = "yes"; then
++	AC_MSG_RESULT([*** Shared library build enabled])
++	SHARED_LIBRARY="yes"
++	AC_DEFINE(SHARED_LIBRARY, 1, Define if you want ipv6calc binaries compiled with shared library libipv6calc)
++	LDFLAGS_EXTRA="../lib/libipv6calc.so.$PACKAGE_VERSION ../databases/lib/libipv6calc_db_wrapper.so.$PACKAGE_VERSION $LDFLAGS_EXTRA"
++	LD_LIBRARY_PATH=../lib:../databases/lib:$LD_LIBRARY_PATH
++else
++	SHARED_LIBRARY="no"
++	IPV6CALC_LIB="-L../lib/ -L../databases/lib/ -lipv6calc -lipv6calc_db_wrapper"
++fi
+ 
+ AC_SUBST(SHARED_LIBRARY)
+ AC_SUBST(IPV6CALC_LIB)
+@@ -153,24 +170,24 @@
+ AC_CHECK_HEADER(dlfcn.h,
+ 	[
+ 		AC_MSG_RESULT([*** Dynamic loading of libraries is SUPPORTED])
+-        	DYNAMIC_LOAD_SUPPORT="yes"
++		DYNAMIC_LOAD_SUPPORT="yes"
+ 	],
+-        [
+-        	DYNAMIC_LOAD_SUPPORT="no"
++	[
++		DYNAMIC_LOAD_SUPPORT="no"
+ 		AC_MSG_WARN(["Dynamic loading of libraries is not supported, no header file found"])
+ 	])
+ 
+ AC_ARG_ENABLE(
+ 	[dynamic-load],
+ 	AS_HELP_STRING([--disable-dynamic-load],
+-	               [Disable dynamic load of libraries (default: enabled)]),
+-	[
+-        	DYNAMIC_LOAD="no"
+-	],
+-	[
+-        	DYNAMIC_LOAD="yes"
+-	],[
+-	])
++	               [Disable dynamic load of libraries (default: enabled)])
++	)
++
++if test "$enable_dynamic_load" = "yes"; then
++	DYNAMIC_LOAD="no"
++else
++	DYNAMIC_LOAD="yes"
++fi
+ 
+ if test "$DYNAMIC_LOAD_SUPPORT" = "yes"; then
+ 	if test "$DYNAMIC_LOAD" = "no"; then
+@@ -186,7 +203,7 @@
+ 	AS_HELP_STRING([--disable-db-ieee],
+ 	               [Disable built-in IEEE database (default: enabled)]),
+ 	[
+-       		DB_IEEE="$enableval"
++		DB_IEEE="$enable_db_ieee"
+ 	],[
+ 		DB_IEEE="yes"
+ 	])
+@@ -203,7 +220,7 @@
+ 	AS_HELP_STRING([--disable-db-ipv4],
+ 	               [Disable built-in IPv4 database (default: enabled)]),
+ 	[
+-		DB_IPV4="$enableval"
++		DB_IPV4="$enable_db_ipv6"
+ 	],[
+ 		DB_IPV4="yes"
+ 	])
+@@ -220,7 +237,7 @@
+ 	AS_HELP_STRING([--disable-db-ipv6],
+ 	               [Disable built-in IPv6 database (default: enabled)]),
+ 	[
+-		DB_IPV6="$enableval"
++		DB_IPV6="$enable_db_ipv6"
+ 	],
+ 	[
+ 		DB_IPV6="yes"
+@@ -238,7 +255,7 @@
+ 	AS_HELP_STRING([--enable-ip2location],
+ 		[Enable IP2Location support (default: disabled)]),
+ 	[
+-        IP2LOCATION="$enableval"
++		IP2LOCATION="$enable_ip2location"
+ 	],[
+ 		IP2LOCATION="no"
+ 	])
+@@ -247,21 +264,21 @@
+ 	AS_HELP_STRING([--with-ip2location-headers=DIR],
+ 		[IP2Location include files location]),
+ 	[
+-		IP2LOCATION_INCLUDE="-I$withval"
++		IP2LOCATION_INCLUDE="-I$with_ip2location_headers"
+ 	])
+ 
+ AC_ARG_WITH([ip2location-lib],
+ 	AS_HELP_STRING([--with-ip2location-lib=FILE],
+ 		[IP2Location library location]),
+ 	[
+-		IP2LOCATION_LIB="-L$withval $IP2LOCATION_LIB"
++		IP2LOCATION_LIB="-L$with_ip2location_lib $IP2LOCATION_LIB"
+ 	])
+ 
+ AC_ARG_WITH([ip2location-static],
+ 	AS_HELP_STRING([--with-ip2location-static],
+ 		[Explicitly link IP2Location statically (default=no)]),
+ 	[
+-		if test "$withval" != "no"; then 
++		if test "$with_ip2location_static" != "no"; then 
+ 			IP2LOCATION_LIB="-Wl,-Bstatic $IP2LOCATION_LIB -Wl,-Bdynamic"
+ 		fi
+ 	])
+@@ -270,8 +287,8 @@
+ 	AS_HELP_STRING([--with-ip2location-dynamic],
+                    [Enable use of dynamic loading of IP2Location library (default=no)]),
+ 	[
+-		if test "$enableval" != "no"; then
+-        		IP2LOCATION_DYN="$enableval"
++		if test "$enable_ip2location_dynamic" != "no"; then
++        		IP2LOCATION_DYN="$enable_ip2location_dynamic"
+ 		fi
+ 	],[
+ 		true
+@@ -282,7 +299,7 @@
+ 	AS_HELP_STRING([--with-ip2location-db=DIR],
+                [Use specified IP2Location database directory, default: /usr/share/IP2Location]),
+ 	[
+-		ip2location_db="$withval"
++		ip2location_db="$with_ip2location_db"
+ 	],
+ 	[
+ 		ip2location_db=$ip2location_db_default
+@@ -292,7 +309,7 @@
+ 	AS_HELP_STRING([--with-ip2location-dyn-lib=NAME],
+ 		[Use specified IP2Location dynamic library, default: libIP2Location.so]),
+ 	[
+-		ip2location_dyn_lib="$withval"
++		ip2location_dyn_lib="$with_ip2location_dyn_lib"
+ 	],
+ 	[
+ 		ip2location_dyn_lib=$ip2location_dyn_lib_default
+@@ -303,7 +320,7 @@
+ 	AC_MSG_RESULT([*** IP2Location support requested])
+ 
+ 	AC_CHECK_HEADER(IP2Location.h,,
+-	[	
++	[
+ 		AC_MSG_ERROR([IP2Location library header files not found])
+ 	])
+ 
+@@ -319,7 +336,7 @@
+ 			AC_MSG_ERROR([IP2Location library header files were found but the library was not found])
+ 		])
+ 
+-        	IP2LOCATION_LIB="-lIP2Location"
++		IP2LOCATION_LIB="-lIP2Location"
+ 		LDFLAGS="$LDFLAGS $IP2LOCATION_LIB"
+ 
+ 		if test "$IP2LOCATION_STATIC" = "yes"; then
+@@ -327,13 +344,13 @@
+ 		fi
+ 
+ 		AC_CHECK_LIB(IP2Location, IP2Location_open,
+-	    	[
++		[
+ 			AC_DEFINE(SUPPORT_IP2LOCATION, 1, Define if you want IP2Location support.)
+ 			AC_MSG_RESULT([*** IP2Location support enabled])
+-	    	],
+-	    	[
++		],
++		[
+ 			AC_MSG_ERROR([IP2Location library header files were found but the library was not found])
+-	    	])
++		])
+ 	else
+ 		# wrapper detects by itself the real support
+ 		AC_MSG_RESULT([*** IP2Location dyn lib: $ip2location_dyn_lib])
+@@ -358,8 +375,8 @@
+ 	AS_HELP_STRING([--enable-geoip],
+ 	               [Enable GeoIP support (default: disabled)]),
+ 	[
+-		if test "$enableval" != "no"; then
+-        		GEOIP="$enableval"
++		if test "$enable_geoip" != "no"; then
++			GEOIP="$enable_geoip"
+ 		fi
+ 	],[
+ 		GEOIP="no"
+@@ -369,22 +386,22 @@
+ 	AS_HELP_STRING([--with-geoip-headers=DIR],
+                    [GeoIP include files location]),
+ 	[
+-		GEOIP_INCLUDE="-I$withval"
++		GEOIP_INCLUDE="-I$with_geoip_headers"
+ 	])
+ 
+ AC_ARG_WITH([geoip-lib],
+ 	AS_HELP_STRING([--with-geoip-lib=DIR],
+                    [GeoIP library location]),
+ 	[
+-		GEOIP_LIB="-L$withval $GEOIP_LIB"
++		GEOIP_LIB="-L$with_geoip_lib $GEOIP_LIB"
+ 	])
+ 
+ AC_ARG_WITH([geoip-static],
+ 	AS_HELP_STRING([--with-geoip-static],
+                    [Explicitly link GeoIP statically (default=no)]),
+ 	[
+- 		if test "$withval" != "no"; then 
+-			GEOIP_STATIC="$enableval"
++		if test "$with_geoip_static" != "no"; then 
++			GEOIP_STATIC="$with_geoip_static"
+ 			GEOIP_LIB="-Wl,-Bstatic $GEOIP_LIB -Wl,-Bdynamic"
+ 		fi
+ 	],[
+@@ -395,8 +412,8 @@
+ 	AS_HELP_STRING([--with-geoip-dynamic],
+                    [Enable use of dynamic loading of GeoIP library (default=no)]),
+ 	[
+-		if test "$enableval" != "no"; then
+-        		GEOIP_DYN="$enableval"
++		if test "$with_geoip_dynamic" != "no"; then
++			GEOIP_DYN="$with_geoip_dynamic"
+ 		fi
+ 	],[
+ 		true
+@@ -406,7 +423,7 @@
+ 	AS_HELP_STRING([--with-geoip-db=DIR],
+ 		[Use specified GeoIP database directory, default: /usr/share/GeoIP]),
+ 	[
+-		geoip_db="$withval"
++		geoip_db="$with_geoip_db"
+ 	],
+ 	[
+ 		geoip_db=$geoip_db_default
+@@ -416,7 +433,7 @@
+ 	AS_HELP_STRING([--with-geoip-dyn-lib=NAME],
+ 		[Use specified GeoIP dynamic library, default: libGeoIP.so.1]),
+ 	[
+-		geoip_dyn_lib="$withval"
++		geoip_dyn_lib="$with_geoip_dyn_lib"
+ 	],
+ 	[
+ 		geoip_dyn_lib=$geoip_dyn_lib_default
+@@ -426,7 +443,7 @@
+ 	AS_HELP_STRING([--with-geoip-ipv6-compat],
+ 		[Use IPv6 interface of GeoIP in compatibility mode (supporting 1.4.5)]),
+ 	[
+-		if test "$withval" != "no"; then 
++		if test "$with_geoip_ipv6_compat" != "no"; then 
+ 			GEOIP_COMPAT="yes",
+ 		fi
+ 	],[
+@@ -493,7 +510,7 @@
+ 				AC_DEFINE(SUPPORT_GEOIP_LIB_VERSION, 1, Define if your GeoIP version supports GeoIP_lib_version.)
+ 			],
+ 			[
+-		    		AC_MSG_WARN([GeoIP library header files were found but not supporting GeoIP_lib_version (upgrade to newer version for support).])
++				AC_MSG_WARN([GeoIP library header files were found but not supporting GeoIP_lib_version (upgrade to newer version for support).])
+ 			])
+ 
+ 			AC_CHECK_LIB(GeoIP, GeoIP_country_code_by_addr_v6,
+@@ -545,7 +562,7 @@
+ dnl *************************************************
+ if test "$DYNAMIC_LOAD" = "yes"; then
+ 	if test "$GEOIP_DYN" = "yes" -o "$IP2LOCATION_DYN" = "yes"; then
+-       		DYNAMIC_LOAD="yes"
++		DYNAMIC_LOAD="yes"
+ 		AC_MSG_RESULT([*** Dynamic loading of libraries is ENABLED])
+ 		DYNLOAD_LIB="-rdynamic -ldl"
+ 	fi

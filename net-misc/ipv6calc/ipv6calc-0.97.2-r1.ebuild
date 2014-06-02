@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.97.2.ebuild,v 1.1 2014/05/23 21:39:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.97.2-r1.ebuild,v 1.1 2014/06/02 00:08:10 blueness Exp $
 
 EAPI="5"
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="IPv6 address calculator"
 HOMEPAGE="http://www.deepspace6.net/projects/ipv6calc.html"
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 
 #dev-perl/URI is needed for web interface, that is not installed now
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-fix-configure-opts.patch
+	eautoreconf
+}
+
 src_configure() {
 	if use geoip; then
 		myconf=$(use_enable geoip)
@@ -32,11 +37,11 @@ src_configure() {
 	econf \
 		--disable-bundled-getopt \
 		--disable-bundled-md5 \
-		--disable-shared \
+		--enable-shared \
 		--enable-dynamic-load \
 		--enable-db-ieee \
 		--enable-db-ipv4 \
-		--disable-db-ipv6 \
+		--enable-db-ipv6 \
 		--disable-ip2location \
 		${myconf}
 }
