@@ -1,6 +1,18 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.74 2014/05/27 11:34:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.76 2014/06/02 16:29:04 ssuominen Exp $
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-power-manager-1.2.0_p20140527.ebuild:
+  old
+
+*xfce4-power-manager-1.3.0 (02 Jun 2014)
+
+  02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/xfce4-power-manager-1.3.0-restore_brightness_level_after_sleep.patch,
+  +xfce4-power-manager-1.3.0.ebuild:
+  Version bump with a post-release patch for brightness level restore after
+  sleep.
 
   27 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-power-manager-1.2.0_p20140511.ebuild:

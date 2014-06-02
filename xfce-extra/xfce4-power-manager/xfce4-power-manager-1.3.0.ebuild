@@ -1,21 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0_p20140527.ebuild,v 1.1 2014/05/27 11:31:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.3.0.ebuild,v 1.1 2014/06/02 16:28:26 ssuominen Exp $
 
 EAPI=5
-[[ ${PV} == *_p* ]] && EAUTORECONF=1
 inherit flag-o-matic linux-info xfconf
 
 DESCRIPTION="Power manager for the Xfce desktop environment"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-power-manager"
-#SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-KEYWORDS=""
-IUSE="debug kernel_linux networkmanager policykit +udisks +xfce_plugins_brightness"
+IUSE="debug kernel_linux networkmanager policykit +udisks systemd +xfce_plugins_brightness"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100.2
 	>=dev-libs/glib-2.30
@@ -31,9 +28,11 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100.2
 	>=xfce-base/libxfce4util-4.10
 	policykit? ( >=sys-auth/polkit-0.112 )
 	xfce_plugins_brightness? ( >=xfce-base/xfce4-panel-4.10 )"
+# USE="systemd" is for ensuring hibernate/suspend works by enforcing correct runtime -only dependencies
 RDEPEND="${COMMON_DEPEND}
 	networkmanager? ( net-misc/networkmanager )
-	udisks? ( sys-fs/udisks:0 )"
+	udisks? ( sys-fs/udisks:0 )
+	!systemd? ( || ( sys-power/pm-utils sys-power/upower-pm-utils ) )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-devel/gettext
@@ -41,6 +40,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-restore_brightness_level_after_sleep.patch )
+
 	if use kernel_linux; then
 		CONFIG_CHECK="~TIMER_STATS"
 		linux-info_pkg_setup
@@ -54,17 +55,5 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	[[ ${PV} == *_p* ]] && XFCONF+=( --enable-maintainer-mode )
-
 	DOCS=( AUTHORS NEWS README TODO )
-}
-
-src_prepare() {
-	if [[ ${PV} == *_p* ]]; then
-		# run xdt-autogen from xfce4-dev-tools added as dependency by EAUTORECONF=1 to
-		# rename configure.ac.in to configure.ac while grabbing $LINGUAS and $REVISION values
-		NOCONFIGURE=1 xdt-autogen
-	fi
-
-	xfconf_src_prepare
 }
