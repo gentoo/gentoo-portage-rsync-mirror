@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9038 2014/06/02 13:36:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9040 2014/06/02 18:43:34 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jun 2014; Hans de Graaff <graaff@gentoo.org> thirdpartymirrors:
+  Update rubygems mirror to the new canonical address and remove old or broken
+  mirrors, bug 512132.
+
+  02 Jun 2014; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask old ruby package which only host source on rubyforge, bug 512132.
 
   02 Jun 2014; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
   Add hardened musl profiles for amd64 and x86 as exp

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.23-r2.ebuild,v 1.5 2014/06/02 12:47:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.23-r3.ebuild,v 1.1 2014/06/02 18:45:13 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -11,8 +11,8 @@ SRC_URI="http://${PN}.freedesktop.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc +introspection ios kernel_FreeBSD kernel_linux systemd"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
+IUSE="doc +introspection ios kernel_FreeBSD kernel_linux"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.22
@@ -30,12 +30,9 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 		)"
 RDEPEND="${COMMON_DEPEND}
 	kernel_linux? (
-		!systemd? ( >=sys-power/pm-utils-1.4.1 )
-		systemd? (
-			app-shells/bash
-			>=sys-apps/systemd-200
-			)
-		)"
+		app-shells/bash
+		>=sys-apps/systemd-200
+	)"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
@@ -64,7 +61,7 @@ src_configure() {
 
 	if use kernel_linux; then
 		backend=linux
-		myconf="$(use_enable !systemd deprecated)"
+		myconf="--disable-deprecated"
 	elif use kernel_FreeBSD; then
 		backend=freebsd
 	else
