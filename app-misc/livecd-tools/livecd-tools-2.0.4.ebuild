@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.4.ebuild,v 1.2 2014/06/03 00:09:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.4.ebuild,v 1.3 2014/06/03 01:10:02 zerochaos Exp $
 
 EAPI=5
 
@@ -21,7 +21,6 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="app-arch/xz-utils"
 RDEPEND="dev-util/dialog
 	net-dialup/mingetty
 	>=sys-apps/baselayout-2
