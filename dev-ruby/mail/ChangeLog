@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.32 2014/04/20 18:38:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.33 2014/06/03 05:30:59 graaff Exp $
+
+*mail-2.6.0 (03 Jun 2014)
+
+  03 Jun 2014; Hans de Graaff <graaff@gentoo.org> +mail-2.6.0.ebuild:
+  Version bump.
 
   20 Apr 2014; Hans de Graaff <graaff@gentoo.org> mail-2.5.4.ebuild:
   Add ruby20, ruby21.
