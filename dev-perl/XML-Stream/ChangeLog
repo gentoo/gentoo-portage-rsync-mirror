@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Stream
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.27 2014/05/28 20:15:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.28 2014/06/03 18:18:01 jer Exp $
+
+  03 Jun 2014; Jeroen Roovers <jer@gentoo.org> XML-Stream-1.230.0.ebuild:
+  Stable for HPPA (bug #511732).
 
   28 May 2014; Mikle Kolyada <zlogene@gentoo.org> XML-Stream-1.230.0.ebuild:
   Bump to EAPI=5

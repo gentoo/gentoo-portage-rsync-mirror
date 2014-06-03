@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.230.0.ebuild,v 1.4 2014/05/28 20:15:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.230.0.ebuild,v 1.5 2014/06/03 18:18:01 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Creates and XML Stream connection and parses return data"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl"
 
 RDEPEND="dev-perl/Authen-SASL
