@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.151 2014/06/02 11:46:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.152 2014/06/03 16:43:22 jer Exp $
+
+  03 Jun 2014; Jeroen Roovers <jer@gentoo.org> spidermonkey-24.2.0-r2.ebuild:
+  Stable for HPPA (bug #512026).
 
   02 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   -spidermonkey-24.2.0-r1.ebuild, spidermonkey-24.2.0-r2.ebuild:
