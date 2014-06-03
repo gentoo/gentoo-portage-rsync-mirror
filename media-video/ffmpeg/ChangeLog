@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.737 2014/05/20 18:30:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.739 2014/06/03 06:20:53 aballier Exp $
+
+  03 Jun 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  fix dodoc of renamed README
+
+*ffmpeg-2.2.3 (03 Jun 2014)
+
+  03 Jun 2014; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.2.3.ebuild:
+  verison bump
 
   20 May 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.2.ebuild:
   leverage x265 deps now that it works

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.60 2014/06/02 22:28:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.61 2014/06/03 06:30:12 caster Exp $
+
+*icedtea-bin-6.1.13.3-r1 (03 Jun 2014)
+
+  03 Jun 2014; Vlastimil Babka <caster@gentoo.org>
+  +icedtea-bin-6.1.13.3-r1.ebuild:
+  Revbump to use external dev-java/icedtea-web:0 for javaws and nsplugin,
+  instead of bundling vulnerable old version. Security bug #501472.
 
 *icedtea-bin-7.2.4.7 (02 Jun 2014)
 
