@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.68 2014/05/04 08:31:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.69 2014/06/03 20:36:22 tomka Exp $
+
+  03 Jun 2014; Thomas Kahle <tomka@gentoo.org> gimps-28.5.ebuild:
+  Fix distfile mess (bug #512182)
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> gimps-27.9-r2.ebuild:
   Stable for x86, wrt bug #506792

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.94 2014/05/29 08:24:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.95 2014/06/03 20:58:01 jer Exp $
+
+  03 Jun 2014; Jeroen Roovers <jer@gentoo.org> twisted-words-14.0.0.ebuild:
+  Marked ~hppa (bug #510832).
 
   29 May 2014; Ian Delaney <idella4@gentoo.org> twisted-words-14.0.0.ebuild:
   re-keyword ~arm, tested on armv7, cubieboard2 wrt Bug #510832
