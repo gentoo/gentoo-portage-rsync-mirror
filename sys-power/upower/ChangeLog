@@ -1,6 +1,6 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.152 2014/06/02 18:46:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.153 2014/06/02 23:09:30 ssuominen Exp $
 
   02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.23-r2.ebuild:
   old
@@ -8,8 +8,9 @@
 *upower-0.9.23-r3 (02 Jun 2014)
 
   02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.23-r3.ebuild:
-  Leave 0.9.23-r3 with --disable-deprecated for sys-apps/systemd users; non-
-  systemd users have been moved to sys-power/upower-pm-utils.
+  Leave 0.9.23-r3 with --disable-deprecated for sys-apps/systemd users.
+  Users who want UPower with sys-power/pm-utils support will want to emerge
+  >=sys-power/upower-pm-utils-0.9.23 instead.
 
   02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.23-r2.ebuild,
   upower-0.99.0.ebuild:
