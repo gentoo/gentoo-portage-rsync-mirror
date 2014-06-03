@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.261 2014/06/01 07:33:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.262 2014/06/03 00:46:36 floppym Exp $
+
+  03 Jun 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Make kmod optional again due to changes upstream.
 
   01 Jun 2014; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Create user&group for systemd-network.
