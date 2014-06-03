@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.184 2014/06/02 07:12:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.185 2014/06/03 02:17:30 patrick Exp $
+
+  03 Jun 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
 *scribus-1.4.4 (02 Jun 2014)
 

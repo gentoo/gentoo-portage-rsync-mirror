@@ -15,7 +15,6 @@
 <longdescription lang="en">
 </longdescription>
 <use>
-  <flag name='openid'>Enable support for OpenID</flag>
   <flag name='passenger'>Enable support for <pkg>www-apache/passenger</pkg></flag>
 </use>
 </pkgmetadata>
