@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.18.3.ebuild,v 1.1 2014/05/31 06:04:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.18.3.ebuild,v 1.2 2014/06/03 02:50:57 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -56,7 +56,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.14.1-doc-version.patch
 
 	# https://bugzilla.gnome.org/show_bug.cgi?id=724104
-	epatch"${FILESDIR}"/${PN}-3.16.1-underlinking.patch
+	epatch "${FILESDIR}"/${PN}-3.18.1-underlinking.patch
 
 	eautoreconf
 
