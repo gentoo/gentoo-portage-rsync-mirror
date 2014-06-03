@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/cinnamon-bluetooth/cinnamon-bluetooth-3.8.4.ebuild,v 1.1 2014/05/08 03:08:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cinnamon-bluetooth/cinnamon-bluetooth-3.8.4.ebuild,v 1.2 2014/06/03 03:13:36 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -17,10 +17,12 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
+# fails with gnome-bluetooth-3.12, https://github.com/linuxmint/cinnamon-bluetooth/issues/9
 COMMON_DEPEND="
 	>=dev-libs/glib-2.31:2
 	gnome-extra/cinnamon-control-center
 	>=net-wireless/gnome-bluetooth-3.4.1:2=
+	<net-wireless/gnome-bluetooth-3.11
 	>=x11-libs/gtk+-3.4.2:3
 	x11-libs/libX11
 "
