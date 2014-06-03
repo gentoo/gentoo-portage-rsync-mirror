@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.4 2014/05/16 10:31:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.10-r1.ebuild,v 1.5 2014/06/03 06:43:08 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
@@ -165,7 +165,7 @@ src_install() {
 
 	if use opencl; then
 		cat <<-EOF > "${T}"/99${PN}
-		SANDBOX_PREDICT="/dev/dri/card"
+		SANDBOX_PREDICT="/dev/ati/card:/dev/dri/card"
 		EOF
 
 		insinto /etc/sandbox.d

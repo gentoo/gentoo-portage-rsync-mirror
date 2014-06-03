@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.558 2014/05/16 10:31:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.559 2014/06/03 06:43:08 ssuominen Exp $
+
+  03 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  imagemagick-6.8.8.10-r1.ebuild:
+  Include /dev/ati/card in the SANDBOX_PREDICT line (user from Freenode proofed
+  it fails with ati-drivers too)
 
   16 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   imagemagick-6.8.8.10-r1.ebuild:
