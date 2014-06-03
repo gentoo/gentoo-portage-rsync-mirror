@@ -1,20 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.9999.ebuild,v 1.4 2014/06/03 08:08:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.4.ebuild,v 1.1 2014/06/03 08:08:37 pinkbyte Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://accel-ppp.git.sourceforge.net/gitroot/accel-ppp/accel-ppp"
-EGIT_BRANCH="1.7"
-inherit cmake-utils git-r3 linux-info
+inherit cmake-utils linux-info
 
 DESCRIPTION="High performance PPTP, PPPoE and L2TP server"
 HOMEPAGE="http://accel-ppp.sourceforge.net/"
-SRC_URI=""
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc postgres radius shaper snmp valgrind"
 
 RDEPEND="postgres? ( dev-db/postgresql-base )
@@ -32,6 +30,7 @@ src_prepare() {
 		-e "/echo/d" \
 		-e "s: RENAME accel-ppp.conf.dist::" accel-pppd/CMakeLists.txt || die 'sed on accel-pppd/CMakeLists.txt failed'
 
+	# TBF shaper is obsolete by upstream, so it's disabled
 	sed -i -e '/IF (SHAPER)/s/SHAPER/SHAPER_TBF/' \
 		accel-pppd/extra/CMakeLists.txt || die 'sed on accel-pppd/extra/CMakeLists.txt failed'
 

@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/accel-ppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.5 2014/06/03 07:49:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.6 2014/06/03 08:08:37 pinkbyte Exp $
+
+*accel-ppp-1.7.4 (03 Jun 2014)
+
+  03 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> +accel-ppp-1.7.4.ebuild,
+  accel-ppp-1.7.9999.ebuild:
+  Version bump, fix compilation with USE='shaper' in live ebuild
 
   03 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> accel-ppp-1.7.9999.ebuild:
   Switch live ebuild to git-r3 eclass
