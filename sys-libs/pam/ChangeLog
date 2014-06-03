@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.336 2014/05/30 14:26:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.337 2014/06/03 14:11:57 mgorny Exp $
+
+  03 Jun 2014; Michał Górny <mgorny@gentoo.org> pam-1.1.8-r2.ebuild:
+  Add missing MULTILIB_USEDEP on flex.
 
 *pam-1.1.8-r2 (30 May 2014)
 

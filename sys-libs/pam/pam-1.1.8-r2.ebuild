@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.8-r2.ebuild,v 1.1 2014/05/30 14:26:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.8-r2.ebuild,v 1.2 2014/06/03 14:11:57 mgorny Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RDEPEND="nls? ( virtual/libintl[${MULTILIB_USEDEP}] )
 	)"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2
-	sys-devel/flex
+	sys-devel/flex[${MULTILIB_USEDEP}]
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig[${MULTILIB_USEDEP}]"
 PDEPEND="sys-auth/pambase
