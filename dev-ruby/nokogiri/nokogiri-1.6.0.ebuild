@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.0.ebuild,v 1.4 2014/03/21 12:56:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.0.ebuild,v 1.5 2014/06/03 11:16:19 p8952 Exp $
 
 EAPI=5
 
@@ -30,11 +30,12 @@ DEPEND="${DEPEND}
 # The tests require _minitest_, not the virtual; what is shipped with
 # Ruby 1.9 is *not* enough, unfortunately
 ruby_add_bdepend "
+	dev-ruby/hoe
 	dev-ruby/rake-compiler
 	dev-ruby/rexical
 	dev-ruby/rdoc
 	dev-ruby/racc
-	test? ( dev-ruby/hoe dev-ruby/minitest )"
+	test? ( dev-ruby/minitest )"
 
 all_ruby_prepare() {
 	sed -i \

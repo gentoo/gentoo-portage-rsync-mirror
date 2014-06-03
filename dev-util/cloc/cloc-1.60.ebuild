@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cloc/cloc-1.60.ebuild,v 1.1 2013/08/18 23:37:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cloc/cloc-1.60.ebuild,v 1.2 2014/06/03 11:04:47 nimiux Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.pl mirror://sourceforge/${PN}/${PN}.1.p
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 DEPEND=">=dev-lang/perl-5.6"
 RDEPEND="${DEPEND}

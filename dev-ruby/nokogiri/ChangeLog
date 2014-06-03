@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.94 2014/06/01 12:49:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.95 2014/06/03 11:16:19 p8952 Exp $
+
+  03 Jun 2014; Peter Wilmott <p8952@gentoo.org> nokogiri-1.6.0.ebuild:
+  Always depend on dev-ruby/hoe to prevent compile failures
 
   01 Jun 2014; Markus Meier <maekke@gentoo.org> nokogiri-1.5.10.ebuild:
   arm stable, bug #505920
