@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9042 2014/06/03 02:11:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9043 2014/06/03 04:20:45 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +targets/desktop/package.use.force:
+  Force dev-libs/glib[mime] for desktop profiles, see bug #511894
 
   03 Jun 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   default/bsd/fbsd/packages.build, default/linux/packages.build:

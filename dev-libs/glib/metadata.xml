@@ -3,6 +3,9 @@
 <pkgmetadata>
   <herd>gnome</herd>
   <use>
+  	<flag name="mime">Pull in shared MIME database that many glib-based
+		applications require at runtime to detect or open files. Warning:
+		do not disable this flag unless installing on a headless server.</flag>
 	<flag name="systemtap">Build support for profiling and tracing using 
 		<pkg>dev-util/systemtap</pkg></flag>
 	<flag name="utils">Install gtester-report utility to generate test

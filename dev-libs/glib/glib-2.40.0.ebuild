@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.0.ebuild,v 1.2 2014/06/01 15:15:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.0.ebuild,v 1.3 2014/06/03 04:20:36 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2+"
 SLOT="2"
-IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
+IUSE="debug fam kernel_linux +mime selinux static-libs systemtap test utils xattr"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 # FIXME: want libselinux[${MULTILIB_USEDEP}] - bug #480960
@@ -56,8 +56,9 @@ DEPEND="${RDEPEND}
 # gobject-introspection blocker to ensure people don't mix
 # different g-i and glib major versions
 
-PDEPEND="x11-misc/shared-mime-info
-	!<gnome-base/gvfs-1.6.4-r990"
+PDEPEND="!<gnome-base/gvfs-1.6.4-r990
+	mime? ( x11-misc/shared-mime-info )
+"
 # shared-mime-info needed for gio/xdgmime, bug #409481
 # Earlier versions of gvfs do not work with glib
 

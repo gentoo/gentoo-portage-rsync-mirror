@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.609 2014/06/01 15:15:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.610 2014/06/03 04:20:36 tetromino Exp $
+
+  03 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-2.38.2-r1.ebuild, glib-2.40.0.ebuild, metadata.xml:
+  Make shared-mime-info an optional dependency for servers and embedded systems
+  (requested by vapier in bug #511894).
 
   01 Jun 2014; Pacho Ramos <pacho@gentoo.org> glib-2.40.0.ebuild:
   Don't build tests if we are not going to run them (#512022 by kulti)
