@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.37 2014/03/31 21:07:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.38 2014/06/03 08:57:35 idella4 Exp $
+
+*tempita-0.5.3 (03 Jun 2014)
+
+  03 Jun 2014; Ian Delaney <idella4@gentoo.org> +tempita-0.5.3.ebuild:
+  bump; clean python impls, add py3.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> tempita-0.5.1-r1.ebuild,
   tempita-0.5.2_pre20130828.ebuild:
