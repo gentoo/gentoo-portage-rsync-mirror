@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.61 2014/05/28 19:07:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.62 2014/06/03 00:11:07 mrueg Exp $
+
+  03 Jun 2014; Manuel Rüger <mrueg@gentoo.org> oracle-jdk-bin-1.7.0.60.ebuild:
+  Re-add ~arm keyword to Slot 1.7
 
 *oracle-jdk-bin-1.7.0.60 (28 May 2014)
 
