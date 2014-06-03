@@ -8,5 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name="shaper">Support for traffic shaping</flag>
+		<flag name="valgrind">Compile in valgrind hints</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/accel-ppp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.3 2013/02/28 16:42:58 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.5 2014/06/03 07:49:17 pinkbyte Exp $
+
+  03 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> accel-ppp-1.7.9999.ebuild:
+  Switch live ebuild to git-r3 eclass
+
+  03 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> accel-ppp-1.7.3.ebuild,
+  accel-ppp-1.7.9999.ebuild, metadata.xml:
+  Split valgrind integration to separate USE flag, fix CONFIG_CHECK, wrt bug
+  #486858. Thanks to SpiderX <spiderx AT spiderx.dp.ua> for discovering this
+  issue
 
   28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Add net-dialup herd to maintainers
