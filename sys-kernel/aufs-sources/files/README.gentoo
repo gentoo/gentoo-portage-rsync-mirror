@@ -1,6 +1,7 @@
-There several other patches in aufs3. They are all
-optional. When you meet some problems, they will help you. You can find them
-in the documentation directory.
+
+There several other patches in aufs3.
+They are all optional. When you meet some problems, they will help you. You 
+can find them in the documentation directory.
 
 	- aufs3-loopback.patch
 	  Supports a nested loopback mount in a branch-fs. This patch is

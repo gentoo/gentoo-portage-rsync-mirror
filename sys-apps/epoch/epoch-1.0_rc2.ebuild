@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/epoch-1.0_rc2.ebuild,v 1.1 2013/12/22 12:45:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/epoch-1.0_rc2.ebuild,v 1.2 2014/06/03 07:14:41 tomwij Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit eutils linux-info
 MY_PV="${PV/rc/RC}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="An init system, a /sbin/init replacement; designed for simplicity."
+DESCRIPTION="An init system, a /sbin/init replacement; designed for simplicity"
 HOMEPAGE="http://universe2.us/epoch.html"
 SRC_URI="https://github.com/Subsentient/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
