@@ -1,29 +1,29 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-1.0.7.ebuild,v 1.9 2014/04/27 09:20:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-1.3.4.ebuild,v 1.1 2014/06/03 09:56:18 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 MY_PN=${PN/g/G}
 
 DESCRIPTION="The default theme from Xubuntu"
 HOMEPAGE="http://shimmerproject.org/project/greybird/ http://github.com/shimmerproject/Greybird"
-SRC_URI="http://github.com/shimmerproject/${MY_PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/shimmerproject/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="CC-BY-NC-SA-3.0 || ( GPL-2 GPL-3 )"
+# README says "dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later"
+LICENSE="CC-BY-SA-3.0 GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="ayatana gnome"
 
-RDEPEND=">=x11-themes/gtk-engines-murrine-0.90
-	>=x11-themes/gtk-engines-unico-1.0.2"
+RDEPEND=">=x11-themes/gtk-engines-murrine-0.90"
 DEPEND=""
 
 RESTRICT="binchecks strip"
 
 src_unpack() {
 	unpack ${A}
-	mv *-${MY_PN}-* "${S}"
+	mv ${MY_PN}-* "${S}" || die
 }
 
 src_install() {
