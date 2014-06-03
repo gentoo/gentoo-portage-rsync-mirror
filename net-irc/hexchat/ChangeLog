@@ -1,6 +1,20 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.100 2014/06/02 18:09:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.103 2014/06/03 12:26:26 hasufell Exp $
+
+*hexchat-2.10.0-r1 (03 Jun 2014)
+
+  03 Jun 2014; Julian Ospald <hasufell@gentoo.org> -hexchat-2.10.0.ebuild,
+  +hexchat-2.10.0-r1.ebuild:
+  force revbump, because of missing tranlations
+
+  03 Jun 2014; Julian Ospald <hasufell@gentoo.org> hexchat-2.10.0.ebuild,
+  hexchat-9999.ebuild, +files/hexchat-2.10.0-pofiles.patch:
+  rather fix missing translation files than restricting tests
+
+  03 Jun 2014; Julian Ospald <hasufell@gentoo.org> hexchat-2.10.0.ebuild,
+  hexchat-9999.ebuild:
+  fix nls dependency wrt #512280, restrict tests wrt #512280
 
   02 Jun 2014; Julian Ospald <hasufell@gentoo.org> hexchat-2.10.0.ebuild,
   hexchat-9999.ebuild:

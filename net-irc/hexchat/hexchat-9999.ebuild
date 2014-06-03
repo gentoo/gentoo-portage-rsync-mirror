@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.14 2014/06/02 18:09:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.16 2014/06/03 12:25:22 hasufell Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )
+	nls? ( dev-util/intltool )
 	theme-manager? ( dev-util/monodevelop )"
 
 pkg_setup() {

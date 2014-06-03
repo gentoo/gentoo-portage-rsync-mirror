@@ -1,0 +1,33 @@
+From 0b492d32b3b55b60896f6d278ced06a235396a64 Mon Sep 17 00:00:00 2001
+From: TingPing <TingPing@users.noreply.github.com>
+Date: Sun, 1 Jun 2014 17:19:09 -0400
+Subject: [PATCH] Add missing files to POTFILES.in
+
+---
+ po/POTFILES.in | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index bc0877d..aa03fc6 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -2,9 +2,11 @@ data/misc/hexchat.appdata.xml.in
+ data/misc/hexchat.desktop.in
+ data/misc/htm.desktop.in
+ src/common/cfgfiles.c
++src/common/chanopt.c
+ src/common/dcc.c
+ src/common/hexchat.c
+ src/common/ignore.c
++src/common/inbound.c
+ src/common/notify.c
+ src/common/outbound.c
+ src/common/plugin.c
+@@ -37,3 +39,4 @@ src/fe-gtk/sexy-spell-entry.c
+ src/fe-gtk/textgui.c
+ src/fe-gtk/urlgrab.c
+ src/fe-gtk/userlistgui.c
++src/fe-text/fe-text.c
+-- 
+1.9.3
+
