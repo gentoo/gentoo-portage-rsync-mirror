@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-2.11.3-r1.ebuild,v 1.5 2014/04/24 20:22:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-2.11.3-r1.ebuild,v 1.6 2014/06/04 18:50:43 graaff Exp $
 
 EAPI=5
 
 USE_RUBY="ruby19 ruby20 jruby"
 
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CONTRIBUTION_GUIDELINES.rdoc README.rdoc"
 
