@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/monkeysphere
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.3 2014/05/25 15:34:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.4 2014/06/04 03:12:07 patrick Exp $
+
+  04 Jun 2014; Patrick Lauer <patrick@gentoo.org> -monkeysphere-0.36.ebuild:
+  Cleanup old
 
   25 May 2014; Manuel Rüger <mrueg@gentoo.org> monkeysphere-0.36-r1.ebuild:
   Add ~arm keyword. Change patches to a single epatch call.
