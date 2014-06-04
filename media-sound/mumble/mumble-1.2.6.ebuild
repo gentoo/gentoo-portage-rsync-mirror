@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.6.ebuild,v 1.1 2014/05/15 18:25:47 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.6.ebuild,v 1.3 2014/06/04 16:04:44 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
 
 RDEPEND=">=dev-libs/boost-1.41.0
