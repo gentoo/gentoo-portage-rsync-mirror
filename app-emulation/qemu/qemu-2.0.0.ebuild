@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.11 2014/06/04 16:04:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.12 2014/06/04 20:45:06 vapier Exp $
 
 EAPI=5
 
@@ -422,9 +422,11 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}/softmmu-build"
-	emake -j1 check
-	emake -j1 check-report.html
+	if [[ -n ${softmmu_targets} ]]; then
+		cd "${S}/softmmu-build"
+		emake -j1 check
+		emake -j1 check-report.html
+	fi
 }
 
 qemu_python_install() {
@@ -449,9 +451,8 @@ src_install() {
 		cd "${S}/softmmu-build"
 		emake DESTDIR="${ED}" install
 
-		if use test; then
-			dohtml check-report.html
-		fi
+		# This might not exist if the test failed. #512010
+		[[ -e check-report.html ]] && dohtml check-report.html
 
 		if use kernel_linux; then
 			udev_dorules "${FILESDIR}"/65-kvm.rules

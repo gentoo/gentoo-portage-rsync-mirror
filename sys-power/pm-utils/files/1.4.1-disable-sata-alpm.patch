@@ -2,10 +2,8 @@ Description: Disable SATA link power management by default, as it still causes d
 Author: Martin Pitt <martin.pitt@ubuntu.com>
 Bug-Ubuntu: https://launchpad.net/bugs/539467
 
-Index: pm-utils/pm/power.d/sata_alpm
-===================================================================
---- pm-utils.orig/pm/power.d/sata_alpm	2011-02-01 15:53:09.164867778 +0100
-+++ pm-utils/pm/power.d/sata_alpm	2011-02-01 15:53:28.954867786 +0100
+--- pm/power.d/sata_alpm
++++ pm/power.d/sata_alpm
 @@ -2,7 +2,7 @@
  
  . "${PM_FUNCTIONS}"

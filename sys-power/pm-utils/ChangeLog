@@ -1,6 +1,22 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.68 2014/06/04 20:02:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.70 2014/06/04 20:53:26 ssuominen Exp $
+
+*pm-utils-1.4.1-r5 (04 Jun 2014)
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +files/pm-utils.logrotate,
+  +pm-utils-1.4.1-r5.ebuild:
+  Install logrorate file wrt #408091 by Arthur D.
+
+*pm-utils-1.4.1-r4 (04 Jun 2014)
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +pm-utils-1.4.1-r4.ebuild, +files/1.4.1-fix-alpm-typo.patch,
+  +files/1.4.1-ignore-led-failure.patch, +files/1.4.1-run-hook-logging.patch,
+  +files/1.4.1-suspend-hybrid.patch, +files/1.4.1-uswsusp-hibernate-mode.patch,
+  +files/1.4.1-xfs_buffer_arguments.patch, +files/power.d/pci_devices,
+  +files/power.d/usb_bluetooth, +files/sleep.d/50unload_alx:
+  Selectively synchronize only bug fixes with Debian patchset version 1.4.1-14.
 
   04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> pm-utils-1.4.1-r3.ebuild:
   Remove $libdir/pm-utils/power.d/hal-cd-polling wrt #401257 by Nikoli
