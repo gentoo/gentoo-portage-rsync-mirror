@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.27.ebuild,v 1.1 2014/05/28 03:53:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.27.ebuild,v 1.2 2014/06/04 11:59:23 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
@@ -66,8 +66,6 @@ src_prepare() {
 			-e "/default_l.*1/s:gdmflexiserver -ls:${EPREFIX}/usr/libexec/lightdm/&:" \
 			configure{,.in} || die
 	fi
-
-	cp driver/screensaver-properties.desktop{.in,} || die
 
 	epatch \
 		"${FILESDIR}"/${PN}-5.21-gentoo.patch \
