@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1-r2.ebuild,v 1.1 2014/05/11 12:38:13 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1-r2.ebuild,v 1.2 2014/06/04 14:42:31 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -70,6 +70,7 @@ RDEPEND=">=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
 		net-misc/rabbitmq-server
 		sys-fs/sysfsutils
 		sys-fs/multipath-tools
+		sys-block/nbd
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )"
