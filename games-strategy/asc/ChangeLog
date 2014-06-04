@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/asc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.43 2012/10/30 15:07:24 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.44 2014/06/04 21:15:32 mr_bones_ Exp $
+
+*asc-2.6.0.0 (04 Jun 2014)
+
+  04 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> +asc-2.6.0.0.ebuild:
+  version bump (bug #512344)
 
   30 Oct 2012; Tupone Alfredo <tupone@gentoo.org> asc-2.5.0.0.ebuild,
   +files/asc-2.5.0.0-gcc47.patch:
@@ -203,4 +208,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

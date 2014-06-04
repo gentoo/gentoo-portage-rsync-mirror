@@ -4,7 +4,7 @@ DESCRIPTION=Amazon Web Services API
 EAPI=5
 HOMEPAGE=https://github.com/boto/boto http://pypi.python.org/pypi/boto
 IUSE=python_targets_python2_6 python_targets_python2_7
-KEYWORDS=amd64 ~arm ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=amd64 arm ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=MIT
 RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://pypi/b/boto/boto-2.27.0.tar.gz
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=68e46875684d1c8757b2af82261be93f
+_md5_=7abe3ceaabd16955206e236e9986b6db
