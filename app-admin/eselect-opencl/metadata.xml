@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>patrick@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Utility to switch OpenCL implementations between various providers.
