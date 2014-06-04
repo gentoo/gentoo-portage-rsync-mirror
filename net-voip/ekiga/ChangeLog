@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.57 2014/05/15 12:05:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.58 2014/06/04 17:30:57 neurogeek Exp $
+
+  04 Jun 2014; <neurogeek@gentoo.org> metadata.xml:
+  Dropped myself from maintainer.
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> ekiga-3.2.7.ebuild,
   ekiga-4.0.0-r1.ebuild, ekiga-4.0.1.ebuild:
