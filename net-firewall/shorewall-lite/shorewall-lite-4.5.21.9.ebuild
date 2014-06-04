@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.5.21.9.ebuild,v 1.1 2014/04/26 09:32:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.5.21.9.ebuild,v 1.2 2014/06/04 00:45:27 jer Exp $
 
 EAPI="5"
 
@@ -31,7 +31,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="=net-firewall/shorewall-core-${PVR}"
