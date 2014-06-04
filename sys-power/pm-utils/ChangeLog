@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/pm-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.65 2013/09/01 10:43:25 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.67 2014/06/04 19:54:30 ssuominen Exp $
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -pm-utils-1.4.1.ebuild:
+  old
+
+*pm-utils-1.4.1-r3 (04 Jun 2014)
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/1.4.1-inhibit-on-right-status.patch, +pm-utils-1.4.1-r3.ebuild:
+  Inhibit on right status wrt #360673 by Gerard Neil
 
   01 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> pm-utils-1.4.1-r2.ebuild:
   Do not install docs twice, bug #396351.
@@ -282,4 +291,3 @@
   23 Nov 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
   +pm-utils-0.99.4.ebuild:
   Initial commit of pm-utils for HAL 0.5.10
-
