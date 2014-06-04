@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.58 2014/05/24 00:28:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.59 2014/06/04 22:45:22 radhermit Exp $
+
+  04 Jun 2014; Tim Harder <radhermit@gentoo.org> libbluray-0.5.0-r1.ebuild:
+  Sync live ebuild changes (fixes bug #512368).
 
   24 May 2014; Manuel Rüger <mrueg@gentoo.org> libbluray-0.5.0-r1.ebuild:
   Add ~arm keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.5.0-r1.ebuild,v 1.3 2014/05/24 00:28:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.5.0-r1.ebuild,v 1.4 2014/06/04 22:45:22 radhermit Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ src_prepare() {
 
 multilib_src_configure() {
 	local myconf
-	if multilib_build_binaries && use java; then
+	if multilib_is_native_abi && use java; then
 		export JAVACFLAGS="$(java-pkg_javac-args)"
 		append-cflags "$(java-pkg_get-jni-cflags)"
 		myconf="--enable-bdjava"
@@ -70,7 +70,7 @@ multilib_src_configure() {
 multilib_src_install() {
 	emake DESTDIR="${D}" install
 
-	if multilib_build_binaries && use utils; then
+	if multilib_is_native_abi && use utils; then
 		cd src
 		dobin index_dump mobj_dump mpls_dump
 		cd .libs/
@@ -80,7 +80,7 @@ multilib_src_install() {
 		fi
 	fi
 
-	if multilib_build_binaries && use java; then
+	if multilib_is_native_abi && use java; then
 		java-pkg_dojar "${BUILD_DIR}"/src/.libs/${PN}.jar
 		doenvd "${FILESDIR}"/90${PN}
 	fi
