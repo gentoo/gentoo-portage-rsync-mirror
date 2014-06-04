@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.7 2014/05/08 05:41:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.8 2014/06/04 06:51:31 idella4 Exp $
 
 EAPI=5
 
@@ -24,10 +24,10 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 # egenix-mx-base tests are optional and supports python2 only.
 DEPEND="${RDEPEND}
 	test? (
-		$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' 'python2*')
+		$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' python2_7)
 		!dev-python/psycopg[-mxdatetime]
 	)
-	doc? ( dev-python/epydoc )"
+	doc? ( $(python_gen_cond_dep 'dev-python/epydoc[${PYTHON_USEDEP}]' python2_7) )"
 
 PATCHES=(
 	# Make sure setuptools does not create a zip file in python_test;
@@ -47,10 +47,12 @@ python_prepare_all() {
 
 python_compile_all() {
 	if use doc; then
-		# Simplest way to make makefile point to the right place.
-		ln -s "${BUILD_DIR}" build || die
-		emake -C doc epydoc
-		rm build || die
+		# Based on the doc build in Arfrever's ebuild. It works
+		pushd doc > /dev/null
+		mkdir -p apidoc || die
+		epydoc --parse-only -o apidoc --html -v --no-private --exclude=__pkginfo__ --exclude=setup --exclude=test \
+			-n "Logilab's common library" "$(ls -d ../build//lib/logilab/common/)" build \
+			|| die "Generation of documentation failed"
 	fi
 }
 

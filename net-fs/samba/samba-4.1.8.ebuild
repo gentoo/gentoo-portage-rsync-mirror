@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.6.ebuild,v 1.1 2014/03/14 09:30:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.8.ebuild,v 1.1 2014/06/04 06:51:23 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -35,6 +35,7 @@ CDEPEND="${PYTHON_DEPS}
 	dev-python/subunit
 	sys-apps/attr
 	sys-libs/libcap
+	>=sys-libs/ntdb-1.0[python]
 	>=sys-libs/ldb-1.1.16
 	>=sys-libs/tdb-1.2.11[python]
 	>=sys-libs/talloc-2.0.8[python]
@@ -68,7 +69,6 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.1.0-remove-dmapi-automagic.patch"
 	"${FILESDIR}/named.conf.dlz.patch"
-	"${FILESDIR}/${PN}-4.x-readline63_typedef_fix.patch"
 )
 
 WAF_BINARY="${S}/buildtools/bin/waf"
@@ -104,8 +104,8 @@ src_configure() {
 		--disable-rpath-install \
 		--nopyc \
 		--nopyo \
-		--bundled-libraries=ntdb \
-		--builtin-libraries=ntdb \
+		--bundled-libraries=NONE \
+		--builtin-libraries=NONE \
 		$(use_with addns dnsupdate) \
 		$(use_with acl acl-support) \
 		$(use_with ads) \
@@ -159,8 +159,6 @@ src_test() {
 }
 
 pkg_postinst() {
-	elog "This is is the first stable release of Samba 4.0"
-
 	ewarn "Be aware the this release contains the best of all of Samba's"
 	ewarn "technology parts, both a file server (that you can reasonably expect"
 	ewarn "to upgrade existing Samba 3.x releases to) and the AD domain"
