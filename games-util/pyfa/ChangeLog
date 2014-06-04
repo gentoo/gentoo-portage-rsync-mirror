@@ -1,6 +1,14 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.27 2014/03/17 01:08:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.28 2014/06/04 13:56:31 tetromino Exp $
+
+*pyfa-1.2.0 (04 Jun 2014)
+
+  04 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.21.ebuild,
+  -pyfa-1.1.22.ebuild, +pyfa-1.2.0.ebuild, pyfa-9999.ebuild:
+  Version bump for Kronos; lots of improvements, see
+  https://github.com/DarkFenX/Pyfa/releases/tag/v1.2.0 for the announcement.
+  Remove obsolete.
 
 *pyfa-1.1.22 (17 Mar 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-3.0.0.ebuild,v 1.1 2014/05/31 13:20:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-3.0.0.ebuild,v 1.2 2014/06/04 14:00:26 blueness Exp $
 
 EAPI="5"
 
@@ -45,6 +45,10 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	local myconf=()
 
+	if use debug; then
+		myconf+=( --enable-debug )
+	fi
+
 	if use x86; then
 		#not pie friendly, sorry x86, no fast math for you :(
 		myconf+=( --disable-keygen --disable-fastmath --disable-fasthugemath --disable-bump )
@@ -59,7 +63,6 @@ src_configure() {
 		$(usex threads --disable-singlethreaded --enable-singlethreaded) \
 		                                    \
 		--disable-silent-rules              \
-		--enable-keygen                     \
 		--enable-certgen                    \
 		--disable-stacksize                 \
 		--disable-ntru                      \
@@ -118,7 +121,6 @@ src_configure() {
 		$(use_enable truncatedhmac)         \
 		$(use_enable tlsx)                  \
                                             \
-		$(use_enable debug)                 \
 		$(use_enable errorstrings)          \
 		$(use_enable memory)                \
 		                                    \

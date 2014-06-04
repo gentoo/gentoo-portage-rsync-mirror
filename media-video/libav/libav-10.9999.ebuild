@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.9999.ebuild,v 1.2 2014/05/15 17:12:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.9999.ebuild,v 1.3 2014/06/04 13:34:15 lu_zero Exp $
 
 EAPI=5
 
@@ -33,11 +33,11 @@ IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
 	+network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
-	x264 xvid +zlib"
+	wavpack webp x264 xvid +zlib"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis"
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis avx2"
 for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
 done
@@ -66,6 +66,8 @@ RDEPEND="
 			media-libs/libogg
 		)
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
+		webp? ( media-libs/libwebp )
+		wavpack? ( media-sound/wavpack )
 		x264? ( >=media-libs/x264-0.0.20111017:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
@@ -123,6 +125,9 @@ REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	test? ( encode zlib )
 "
 
+# Test on live ebuild are not possible as they require trunk fate
+RESTRICT="test"
+
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version
 	if [[ ${PV%_p*} != ${PV} ]]; then
@@ -169,7 +174,7 @@ src_configure() {
 		use mp3 && myconf+=" --enable-libmp3lame"
 		use amr && myconf+=" --enable-libvo-amrwbenc"
 		use aac && myconf+=" --enable-libvo-aacenc"
-		uses="faac theora vorbis x264 xvid"
+		uses="faac theora vorbis wavpack webp x264 xvid"
 		for i in ${uses}; do
 			use ${i} && myconf+=" --enable-lib${i}"
 		done

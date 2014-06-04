@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.65 2014/05/15 17:12:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.66 2014/06/04 13:34:15 lu_zero Exp $
 
 EAPI=5
 
@@ -31,11 +31,11 @@ IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
 	+network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
-	x264 xvid +zlib"
+	wavpack webp x264 x265 xvid +zlib"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis"
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis avx2"
 for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
 done
@@ -64,7 +64,10 @@ RDEPEND="
 			media-libs/libogg
 		)
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
+		webp? ( media-libs/libwebp )
+		wavpack? ( media-sound/wavpack )
 		x264? ( >=media-libs/x264-0.0.20111017:= )
+		x265? ( >=media-libs/x265-1:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	frei0r? ( media-plugins/frei0r-plugins )
@@ -117,7 +120,7 @@ DEPEND="${RDEPEND}
 # x264 requires gpl2
 REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	rtmp? ( network )
-	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl )
+	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl ) x265? ( gpl )
 	test? ( encode zlib )
 "
 
@@ -170,7 +173,7 @@ src_configure() {
 		use mp3 && myconf+=" --enable-libmp3lame"
 		use amr && myconf+=" --enable-libvo-amrwbenc"
 		use aac && myconf+=" --enable-libvo-aacenc"
-		uses="faac theora vorbis x264 xvid"
+		uses="faac theora vorbis wavpack webp x264 x265 xvid"
 		for i in ${uses}; do
 			use ${i} && myconf+=" --enable-lib${i}"
 		done

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.9.4.ebuild,v 1.2 2014/05/31 13:12:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.9.4.ebuild,v 1.3 2014/06/04 14:00:26 blueness Exp $
 
 EAPI="5"
 
@@ -44,6 +44,10 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	local myconf=()
+
+	if use debug; then
+		myconf+=( --enable-debug )
+	fi
 
 	if use x86; then
 		#not pie friendly, sorry x86, no fast math for you :(
@@ -116,7 +120,6 @@ src_configure() {
 		$(use_enable truncatedhmac)         \
 		$(use_enable tlsx)                  \
                                             \
-		$(use_enable debug)                 \
 		$(use_enable errorstrings)          \
 		$(use_enable memory)                \
 		                                    \

@@ -4190,6 +4190,8 @@ media-video/libav:tools - Build and install small tools like aviocat, cws2fws, g
 media-video/libav:vaapi - Enable VAAPI (Video Acceleration API) for hardware decoding.
 media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/libav:vpx - Enable vp8 encoding support using libvpx.
+media-video/libav:webp - Enable WebP encoding with media-libs/libwebp.
+media-video/libav:x265 - Enable HEVC encoding with media-libs/x265.
 media-video/lives:libvisual - Enable libvisual support
 media-video/minitube:download - Enable support for downloading YouTube videos
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram

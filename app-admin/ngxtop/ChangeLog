@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ngxtop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ngxtop/ChangeLog,v 1.2 2014/06/04 13:08:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ngxtop/ChangeLog,v 1.3 2014/06/04 13:36:19 jlec Exp $
+
+  04 Jun 2014; Justin Lecher <jlec@gentoo.org> ngxtop-0.0.2-r1.ebuild:
+  Add missing sqlite support in python
 
 *ngxtop-0.0.2-r1 (04 Jun 2014)
 
