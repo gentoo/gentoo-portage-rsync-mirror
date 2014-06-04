@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.27.ebuild,v 1.2 2014/06/04 11:59:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.27.ebuild,v 1.4 2014/06/04 12:25:09 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
@@ -116,6 +116,14 @@ src_configure() {
 		--without-kerberos \
 		--x-includes="${EPREFIX}"/usr/include \
 		--x-libraries="${EPREFIX}"/usr/$(get_libdir)
+}
+
+src_compile() {
+	default
+
+	intltool-merge po/ -d -u \
+		driver/screensaver-properties.desktop.in \
+		driver/screensaver-properties.desktop || die
 }
 
 src_install() {
