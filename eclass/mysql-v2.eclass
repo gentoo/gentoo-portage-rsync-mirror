@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.29 2014/05/15 03:18:47 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.30 2014/06/04 01:17:11 grknight Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -264,7 +264,6 @@ fi
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	mysql_check_version_range "5.1.38 to 5.3.99" && DEPEND="${DEPEND} libevent? ( >=dev-libs/libevent-1.4 )"
 	mysql_version_is_at_least "5.2" && DEPEND="${DEPEND} oqgraph? ( >=dev-libs/boost-1.40.0 )"
-	mysql_version_is_at_least "5.2.5" && DEPEND="${DEPEND} sphinx? ( app-misc/sphinx )"
 	mysql_version_is_at_least "5.2.10" && DEPEND="${DEPEND} !minimal? ( pam? ( virtual/pam ) )"
 	# Bug 441700 MariaDB >=5.3 include custom mytop
 	mysql_version_is_at_least "5.3" && DEPEND="${DEPEND} perl? ( !dev-db/mytop )"
@@ -802,7 +801,7 @@ mysql-v2_pkg_config() {
 	#cmd="'${EROOT}/usr/share/mysql/scripts/mysql_install_db' '--basedir=${EPREFIX}/usr' ${options}"
 	cmd=${EROOT}usr/share/mysql/scripts/mysql_install_db
 	[[ -f ${cmd} ]] || cmd=${EROOT}usr/bin/mysql_install_db
-	cmd="'$cmd' '--basedir=${EPREFIX}/usr' ${options} '--datadir=${EROOT}/${MY_DATADIR}'"
+	cmd="'$cmd' '--basedir=${EPREFIX}/usr' ${options} '--datadir=${EROOT}/${MY_DATADIR}' '--tmpdir=${EROOT}/${MYSQL_TMPDIR}'"
 	einfo "Command: $cmd"
 	eval $cmd \
 		>"${TMPDIR}"/mysql_install_db.log 2>&1
@@ -831,12 +830,13 @@ mysql-v2_pkg_config() {
 		--user=mysql \
 		--log-warnings=0 \
 		--basedir=${EROOT}/usr \
-		--datadir=${ROOT}/${MY_DATADIR} \
+		--datadir=${EROOT}/${MY_DATADIR} \
 		--max_allowed_packet=8M \
 		--net_buffer_length=16K \
 		--default-storage-engine=MyISAM \
 		--socket=${socket} \
-		--pid-file=${pidfile}"
+		--pid-file=${pidfile}
+		--tmpdir=${EROOT}/${MYSQL_TMPDIR}"
 	#einfo "About to start mysqld: ${mysqld}"
 	ebegin "Starting mysqld"
 	einfo "Command ${mysqld}"

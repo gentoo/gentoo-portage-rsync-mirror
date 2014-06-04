@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tweepy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.6 2014/05/21 01:47:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.7 2014/06/04 01:15:21 idella4 Exp $
+
+*tweepy-2.2 (04 Jun 2014)
+
+  04 Jun 2014; Ian Delaney <idella4@gentoo.org> +tweepy-2.2.ebuild:
+  bump
 
 *tweepy-2.1 (21 May 2014)
 
