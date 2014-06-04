@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.4_p20131018.ebuild,v 1.6 2014/01/19 10:29:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.4_p20131018.ebuild,v 1.7 2014/06/04 13:26:29 lu_zero Exp $
 
 EAPI="4"
 
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs multilib-minimal
 
 DESCRIPTION="Open source command-line RTMP client intended to stream audio or video flash content"
 HOMEPAGE="http://rtmpdump.mplayerhq.hu/"
@@ -23,13 +23,18 @@ DEPEND="ssl? (
 	)
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
-S="${WORKDIR}"
 
 pkg_setup() {
-	if ! use ssl && ( use gnutls ||	use polarssl ) ; then
+	if ! use ssl && ( use gnutls || use polarssl ) ; then
 		ewarn "USE='gnutls polarssl' are ignored without USE='ssl'."
 		ewarn "Please review the local USE flags for this package."
 	fi
+}
+
+src_unpack() {
+	mkdir -p "${S}" || die "Can't create source directory"
+	cd "${S}"
+	unpack "${A}"
 }
 
 src_prepare() {
@@ -40,9 +45,10 @@ src_prepare() {
 		-e 's:OPT:OPTS:' \
 		-e 's:CFLAGS=.*:& $(OPT):' librtmp/Makefile \
 		|| die "failed to fix Makefile"
+	multilib_copy_sources
 }
 
-src_compile() {
+multilib_src_compile() {
 	if use ssl ; then
 		if use gnutls ;	then
 			crypto="GNUTLS"
@@ -54,13 +60,20 @@ src_compile() {
 	fi
 	#fix multilib-script support. Bug #327449
 	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
+	if ! multilib_build_binaries; then
+		cd librtmp
+	fi
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		OPT="${CFLAGS}" XLDFLAGS="${LDFLAGS}" CRYPTO="${crypto}" SYS=posix
 }
 
-src_install() {
+multilib_src_install() {
 	mkdir -p "${ED}"/${DESTTREE}/$(get_libdir)
+	if multilib_is_native_abi; then
+		dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html
+	else
+		cd librtmp
+	fi
 	emake DESTDIR="${ED}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" \
 	CRYPTO="${crypto}" install
-	dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html
 }

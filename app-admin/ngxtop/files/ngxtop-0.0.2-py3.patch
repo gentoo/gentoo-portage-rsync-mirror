@@ -1,0 +1,41 @@
+ ngxtop/config_parser.py | 4 ++--
+ ngxtop/ngxtop.py        | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/ngxtop/config_parser.py b/ngxtop/config_parser.py
+index b8e4804..40b23c9 100644
+--- a/ngxtop/config_parser.py
++++ b/ngxtop/config_parser.py
+@@ -8,7 +8,7 @@ import subprocess
+ from pyparsing import Literal, Word, ZeroOrMore, OneOrMore, Group, \
+     printables, quotedString, pythonStyleComment, removeQuotes
+ 
+-from utils import choose_one, error_exit
++from .utils import choose_one, error_exit
+ 
+ 
+ REGEX_SPECIAL_CHARS = r'([\.\*\+\?\|\(\)\{\}\[\]])'
+@@ -106,7 +106,7 @@ def detect_log_config(arguments):
+ 
+     log_formats = dict(get_log_formats(config_str))
+     if len(access_logs) == 1:
+-        log_path, format_name = access_logs.items()[0]
++        log_path, format_name = list(access_logs.items())[0]
+         if format_name == 'combined':
+             return log_path, LOG_FORMAT_COMBINED
+         if format_name not in log_formats:
+diff --git a/ngxtop/ngxtop.py b/ngxtop/ngxtop.py
+index afb5bc3..8667b8b 100755
+--- a/ngxtop/ngxtop.py
++++ b/ngxtop/ngxtop.py
+@@ -74,8 +74,8 @@ except ImportError:
+ from docopt import docopt
+ import tabulate
+ 
+-from config_parser import detect_log_config, detect_config_path, extract_variables, build_pattern
+-from utils import error_exit
++from .config_parser import detect_log_config, detect_config_path, extract_variables, build_pattern
++from .utils import error_exit
+ 
+ 
+ DEFAULT_QUERIES = [

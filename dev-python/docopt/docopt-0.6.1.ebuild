@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docopt/docopt-0.6.1.ebuild,v 1.1 2014/06/04 09:16:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docopt/docopt-0.6.1.ebuild,v 1.2 2014/06/04 13:29:11 jlec Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
 "
 

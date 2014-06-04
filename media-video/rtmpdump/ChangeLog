@@ -1,6 +1,10 @@
 # ChangeLog for media-video/rtmpdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.30 2014/01/19 10:29:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.31 2014/06/04 13:26:30 lu_zero Exp $
+
+  04 Jun 2014; Luca Barbato <lu_zero@gentoo.org> rtmpdump-2.4_p20131018.ebuild,
+  rtmpdump-9999.ebuild:
+  Multilib support thanks to Christian Schmidt, bug #501098
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rtmpdump-2.4_p20131018.ebuild:
   Stable for ppc64, wrt bug #496436
