@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.187 2014/03/19 00:06:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.188 2014/06/04 01:45:53 grknight Exp $
+
+  06 Jun 2014; Brian Evans <grknight@gentoo.org> package.use.mask:
+  Remove USE mask on jemalloc for mysql/mariadb since it was keyworded
 
   19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi:
   Increase EAPI to 5
