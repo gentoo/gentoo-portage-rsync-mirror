@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/duplicity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/ChangeLog,v 1.95 2014/05/10 13:40:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/ChangeLog,v 1.96 2014/06/04 19:29:04 radhermit Exp $
+
+*duplicity-0.6.24 (04 Jun 2014)
+
+  04 Jun 2014; Tim Harder <radhermit@gentoo.org> +duplicity-0.6.24.ebuild:
+  Version bump (bug #511196).
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> duplicity-0.6.23-r1.ebuild:
   Stable for ppc, wrt bug #508862

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1044 2014/06/02 23:25:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1045 2014/06/04 19:08:22 ssuominen Exp $
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-213.ebuild,
+  udev-9999.ebuild:
+  Raise gobject-introspection dependency from 1.31.1 to latest stable, which is
+  1.38, in attempt of solving bug #510864
 
   02 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Remove redudant --disable-networkd wrt http://cgit.freedesktop.org/systemd/sys
