@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.49 2014/05/26 06:22:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.50 2014/06/04 00:27:03 jer Exp $
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> soappy-0.12.5-r2.ebuild:
+  Stable for HPPA (bug #486506).
 
 *soappy-0.12.20 (26 May 2014)
 

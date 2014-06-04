@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wstools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.16 2014/03/31 20:53:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.17 2014/06/04 00:26:30 jer Exp $
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> wstools-0.4.3.ebuild:
+  Stable for HPPA (bug #486506).
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> wstools-0.4-r1.ebuild,
   wstools-0.4.3.ebuild:

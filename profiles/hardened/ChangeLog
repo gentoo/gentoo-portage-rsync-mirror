@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.47 2014/06/02 13:33:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.48 2014/06/04 00:08:18 blueness Exp $
+
+  04 Jun 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/packages:
+  Make sure sandbox is pulled in on all musl profiles
 
   01 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
   profiles/hardened/linux/musl: Enable sandbox on musl profiles
