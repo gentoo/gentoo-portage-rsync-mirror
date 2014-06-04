@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.1.ebuild,v 1.3 2014/06/04 13:34:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.1.ebuild,v 1.4 2014/06/04 21:56:29 lu_zero Exp $
 
 EAPI=5
 
@@ -124,9 +124,6 @@ REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl )
 	test? ( encode zlib )
 "
-
-# Test on live ebuild are not possible as they require trunk fate
-RESTRICT="test"
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version
