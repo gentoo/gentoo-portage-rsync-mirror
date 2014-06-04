@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyelftools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.18 2014/02/11 18:25:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.19 2014/06/04 22:06:49 vapier Exp $
+
+*pyelftools-0.22 (04 Jun 2014)
+
+  04 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/pyelftools-0.22-dyntable.patch,
+  +files/pyelftools-0.22-grace-string-dyn.patch, +pyelftools-0.22.ebuild:
+  Version bump #512214 by Ian Delaney.
 
   11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> pyelftools-0.21-r4.ebuild:
   Keyword amd64-linux and x86-linux
