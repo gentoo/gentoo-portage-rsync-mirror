@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.2 2014/05/31 16:14:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0-r1.ebuild,v 1.3 2014/06/04 15:36:23 vapier Exp $
 
 EAPI=5
 
@@ -215,6 +215,14 @@ pkg_pretend() {
 			# Now do the actual checks setup above
 			check_extra_config
 		fi
+	fi
+
+	if grep -qs '/usr/bin/qemu-kvm' "${EROOT}"/etc/libvirt/qemu/*.xml; then
+		eerror "The kvm/qemu-kvm wrappers no longer exist, but your libvirt"
+		eerror "instances are still pointing to it.  Please update your"
+		eerror "configs in /etc/libvirt/qemu/ to use the -enable-kvm flag"
+		eerror "and the right system binary (e.g. qemu-system-x86_64)."
+		die "update your virt configs to not use qemu-kvm"
 	fi
 }
 
