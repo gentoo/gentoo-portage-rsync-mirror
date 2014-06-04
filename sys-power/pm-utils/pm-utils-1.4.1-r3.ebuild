@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r3.ebuild,v 1.1 2014/06/04 19:51:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r3.ebuild,v 1.2 2014/06/04 20:02:07 ssuominen Exp $
 
 EAPI=5
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Suspend and hibernation utilities"
 HOMEPAGE="http://pm-utils.freedesktop.org/"
@@ -61,4 +61,7 @@ src_install() {
 
 	# NetworkManager 0.8.2 is handling suspend/resume on it's own with UPower
 	find "${D}" -type f -name 55NetworkManager -exec rm -f '{}' +
+
+	# Punt HAL related file wrt #401257 with `rm -f` copied from what Debian does
+	rm -f "${D}"/usr/$(get_libdir)/${PN}/power.d/hal-cd-polling
 }
