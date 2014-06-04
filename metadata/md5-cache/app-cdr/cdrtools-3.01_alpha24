@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=acl? ( virtual/acl ) nls? ( virtual/libintl ) !app-cdr/cdrkit x11-misc/makedepend nls? ( >=sys-devel/gettext-0.18.1.1 ) filecaps? ( sys-libs/libcap ) sys-devel/gnuconfig
+DESCRIPTION=A set of tools for CD/DVD reading and recording, including cdrecord
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/cdrtools/
+IUSE=acl nls unicode +filecaps
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+LICENSE=GPL-2 LGPL-2.1 CDDL-Schily
+RDEPEND=acl? ( virtual/acl ) nls? ( virtual/libintl ) !app-cdr/cdrkit
+SLOT=0
+SRC_URI=mirror://sourceforge/cdrtools/alpha/cdrtools-3.01a24.tar.bz2
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=d664868087d7a15a52eec9227e8e4a1c
