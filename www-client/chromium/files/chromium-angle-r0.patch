@@ -1,0 +1,11 @@
+--- third_party/angle/src/angle.gypi.orig	2014-06-03 15:21:44.892885543 +0000
++++ third_party/angle/src/angle.gypi	2014-06-03 15:22:07.833345520 +0000
+@@ -56,7 +56,7 @@
+                         {
+                             'action_name': 'Generate Commit ID Header',
+                             'message': 'Generating commit ID header...',
+-                            'inputs': [ '<(SHARED_INTERMEDIATE_DIR)/commit_id.py', '<(angle_path)/.git/index' ],
++                            'inputs': [ '<(SHARED_INTERMEDIATE_DIR)/commit_id.py' ],
+                             'outputs': [ '<(SHARED_INTERMEDIATE_DIR)/commit.h' ],
+                             'action': [ 'python', '<(SHARED_INTERMEDIATE_DIR)/commit_id.py', '<(SHARED_INTERMEDIATE_DIR)/commit.h' ],
+                         },

@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1086 2014/06/04 01:51:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1087 2014/06/04 07:16:59 phajdan.jr Exp $
+
+*chromium-37.0.2024.2 (04 Jun 2014)
+
+  04 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-37.0.2024.2.ebuild, +files/chromium-angle-r0.patch,
+  -chromium-37.0.2008.2.ebuild:
+  Dev channel bump. Remove old.
 
 *chromium-36.0.1985.32 (04 Jun 2014)
 
