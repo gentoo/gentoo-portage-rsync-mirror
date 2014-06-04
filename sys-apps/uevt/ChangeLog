@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/uevt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/ChangeLog,v 1.16 2014/05/26 19:54:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/ChangeLog,v 1.17 2014/06/04 09:04:18 ssuominen Exp $
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/uevt-2.3-vala-0.24.patch, uevt-2.3-r1.ebuild:
+  Support >=dev-lang/vala-0.24.0 wrt #509512 by Alexandre Rostovtsev. Prefer
+  sys-power/upower-pm-utils over sys-power/upower because that's the only way to
+  get Hibernate and Suspend support in this version of UEvt. However, don't
+  force it because the power management features are optional.
 
   26 May 2014; Samuli Suominen <ssuominen@gentoo.org> uevt-2.3-r1.ebuild:
   Fix dependencies to allow sys-power/upower-pm-utils.

@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libvdpau
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.30 2013/08/11 09:14:42 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.32 2014/06/04 09:26:04 ssuominen Exp $
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -libvdpau-0.4.1-r1.ebuild,
+  -libvdpau-0.5-r1.ebuild, -libvdpau-0.5.ebuild, -libvdpau-0.6.ebuild:
+  old
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libvdpau-0.7.ebuild:
+  amd64/x86 stable wrt #507146
 
 *libvdpau-0.7 (11 Aug 2013)
 

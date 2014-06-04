@@ -1,12 +1,12 @@
-DEFINED_PHASES=prepare setup
-DEPEND=>=dev-libs/glib-2.28 x11-libs/gtk+:2 >=x11-libs/libnotify-0.7 || ( dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
+DEFINED_PHASES=postinst prepare setup
+DEPEND=>=dev-libs/glib-2.28 x11-libs/gtk+:2 >=x11-libs/libnotify-0.7 || ( dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
 DESCRIPTION=UPower/UDisks Event, a lightweight desktop-independent power and disk manager
 EAPI=5
 HOMEPAGE=http://elentir.sleipnir.fr/ http://git.sleipnir.fr/uevt/
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
-RDEPEND=>=dev-libs/glib-2.28 x11-libs/gtk+:2 >=x11-libs/libnotify-0.7 >=sys-fs/udisks-1.0.4-r5:0 || ( >=sys-power/upower-0.9.21 sys-power/upower-pm-utils )
+RDEPEND=>=dev-libs/glib-2.28 x11-libs/gtk+:2 >=x11-libs/libnotify-0.7 >=sys-fs/udisks-1.0.5:0 || ( sys-power/upower-pm-utils >=sys-power/upower-0.9.23 )
 SLOT=0
 SRC_URI=http://ftp.sleipnir.fr/uevt/uevt-2.3.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	d8f392783fdc2395fc64af046f2ca961
-_md5_=8285031bde72365e910d9be6b59ec6d9
+_md5_=4edc84f959e98dc297124510ce8a196a
