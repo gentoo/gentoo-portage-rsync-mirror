@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/tabulate
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tabulate/ChangeLog,v 1.1 2014/06/04 09:50:55 jlec Exp $
+
+*tabulate-0.7.2 (04 Jun 2014)
+
+  04 Jun 2014; Justin Lecher <jlec@gentoo.org> +tabulate-0.7.2.ebuild,
+  +metadata.xml:
+  New addition written by me
+
