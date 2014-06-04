@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.19.ebuild,v 1.1 2014/05/23 07:53:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.20.ebuild,v 1.1 2014/06/04 05:15:09 ssuominen Exp $
 
 EAPI="4"
 

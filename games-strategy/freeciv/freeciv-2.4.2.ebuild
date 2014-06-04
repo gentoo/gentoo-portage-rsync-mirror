@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.2.ebuild,v 1.4 2014/05/31 12:04:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.2.ebuild,v 1.5 2014/06/04 05:03:42 mr_bones_ Exp $
 
 # FIXME: gtk3 support breaks ggz support
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/freeciv/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="auth aimodules dedicated ggz +gtk ipv6 mapimg modpack mysql nls postgres qt4 readline sdl +server +sound sqlite"
+IUSE="auth aimodules dedicated ggz +gtk ipv6 mapimg modpack mysql nls postgres readline sdl +server +sound sqlite"
 
 RDEPEND="app-arch/bzip2
 	app-arch/xz-utils
@@ -36,10 +36,6 @@ RDEPEND="app-arch/bzip2
 		mapimg? ( media-gfx/imagemagick )
 		modpack? ( x11-libs/gtk+:2 )
 		nls? ( virtual/libintl )
-		qt4? (
-			dev-qt/qtcore:4
-			dev-qt/qtgui:4
-		)
 		sdl? (
 			media-libs/libsdl[video]
 			media-libs/sdl-image[png]
@@ -50,7 +46,7 @@ RDEPEND="app-arch/bzip2
 			media-libs/libsdl[sound]
 			media-libs/sdl-mixer[vorbis]
 		)
-		!sdl? ( !gtk? ( !qt4? ( x11-libs/gtk+:2 ) ) )
+		!sdl? ( !gtk? ( x11-libs/gtk+:2 ) )
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -106,14 +102,13 @@ src_configure() {
 		myclient="no"
 		myopts="--enable-server"
 	else
-		if use !sdl && use !gtk && use !qt4 ; then
+		if use !sdl && use !gtk ; then
 			einfo "No client backend given, defaulting to"
 			einfo "gtk2 client!"
 			myclient="gtk2"
 		else
 			use sdl && myclient="${myclient} sdl"
 			use gtk && myclient="${myclient} gtk2"
-			use qt4 && myclient="${myclient} qt"
 		fi
 		myopts="$(use_enable server) $(use_with ggz ggz-client)"
 	fi
@@ -142,7 +137,7 @@ src_install() {
 
 	if use dedicated ; then
 		rm -rf "${D}/usr/share/pixmaps"
-		rm -f "${D}"/usr/share/man/man6/freeciv-{client,gtk2,gtk3,modpack,qt,sdl,xaw}*
+		rm -f "${D}"/usr/share/man/man6/freeciv-{client,gtk2,gtk3,modpack,sdl,xaw}*
 	else
 		if use server ; then
 			# Create and install the html manual. It can't be done for dedicated

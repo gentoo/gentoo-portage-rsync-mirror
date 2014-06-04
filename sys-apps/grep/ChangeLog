@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.145 2014/05/23 07:53:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.147 2014/06/04 05:16:30 ssuominen Exp $
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/grep-2.15-avoid_maintainer_mode.patch,
+  -files/grep-2.15-fix_pattern_matching.patch,
+  -files/grep-2.15-fix_pcre_abort_regression.patch, -grep-2.18.ebuild,
+  -grep-2.19.ebuild:
+  old
+
+*grep-2.20 (04 Jun 2014)
+
+  04 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +grep-2.20.ebuild:
+  Version bump; fixing regression introduced in 2.19.
 
 *grep-2.19 (23 May 2014)
 
