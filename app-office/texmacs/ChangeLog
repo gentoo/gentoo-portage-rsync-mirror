@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.112 2014/05/01 12:37:09 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.113 2014/06/05 07:04:21 jlec Exp $
+
+  05 Jun 2014; Justin Lecher <jlec@gentoo.org> -texmacs-1.0.7.20.ebuild,
+  texmacs-1.0.7.21.ebuild, metadata.xml:
+  Drop old and bump to EAPI=5
 
 *texmacs-1.99.1 (01 May 2014)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.21.ebuild,v 1.1 2014/01/09 07:34:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.21.ebuild,v 1.2 2014/06/05 07:04:21 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils fdo-mime gnome2-utils
 
@@ -17,18 +17,20 @@ SLOT="0"
 IUSE="imlib jpeg netpbm qt4 svg spell"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 
-RDEPEND="dev-scheme/guile[deprecated]
-	virtual/latex-base
+RDEPEND="
 	app-text/ghostscript-gpl
+	dev-scheme/guile[deprecated]
 	media-libs/freetype
-	x11-libs/libXext
 	x11-apps/xmodmap
-	qt4? ( dev-qt/qtgui:4 )
+	x11-libs/libXext
+	virtual/latex-base
 	imlib? ( media-libs/imlib2 )
 	jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) )
-	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
 	netpbm? ( media-libs/netpbm )
-	spell? ( app-text/aspell )"
+	qt4? ( dev-qt/qtgui:4 )
+	spell? ( app-text/aspell )
+	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
+"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
@@ -46,8 +48,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with imlib imlib2) \
 		--enable-optimize="${CXXFLAGS}" \
+		$(use_with imlib imlib2) \
 		$(use_enable qt4 qt)
 }
 
