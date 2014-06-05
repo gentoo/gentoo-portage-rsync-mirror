@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.108 2014/05/05 10:28:41 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.109 2014/06/05 14:50:33 grozin Exp $
+
+*asymptote-2.32 (05 Jun 2014)
+
+  05 Jun 2014; Andrey Grozin <grozin@gentoo.org> -asymptote-2.24.ebuild,
+  +asymptote-2.32.ebuild, -files/asymptote-2.24-configure-ac.patch,
+  -files/asymptote-2.24-info.patch, -files/asymptote-2.24-xdg-utils.patch,
+  +files/asymptote-2.32-configure-ac.patch, +files/asymptote-2.32-info.patch,
+  +files/asymptote-2.32-xdg-utils.patch:
+  Version bump. USE-dependent python support switched to python-single-r1.
 
 *asymptote-2.27 (05 May 2014)
 

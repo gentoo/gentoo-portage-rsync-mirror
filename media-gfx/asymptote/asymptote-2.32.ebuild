@@ -1,12 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.24.ebuild,v 1.2 2014/03/09 14:26:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.1 2014/06/05 14:50:33 grozin Exp $
 
-EAPI=4
-SUPPORT_PYTHON_ABIS=1
-PYTHON_DEPEND="python? 2"
-RESTRICT_PYTHON_ABIS="3.*"
-inherit eutils autotools elisp-common latex-package multilib python
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit eutils autotools elisp-common latex-package multilib python-single-r1
 
 DESCRIPTION="A vector graphics language that provides a framework for technical drawing"
 HOMEPAGE="http://asymptote.sourceforge.net/"
@@ -27,7 +25,8 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	boehm-gc? ( >=dev-libs/boehm-gc-7.0[cxx,threads] )
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	gsl? ( sci-libs/gsl )
-	X? ( x11-misc/xdg-utils dev-lang/python virtual/python-imaging[tk] )
+	python? ( ${PYTHON_DEPS} )
+	X? ( x11-misc/xdg-utils ${PYTHON_DEPS} virtual/python-imaging[tk,${PYTHON_USEDEP}] )
 	latex? ( virtual/latex-base >=dev-texlive/texlive-latexextra-2013 )
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
@@ -35,6 +34,10 @@ DEPEND="${RDEPEND}
 	doc? ( dev-lang/perl virtual/texi2dvi virtual/latex-base media-gfx/imagemagick[png] )"
 
 TEXMF=/usr/share/texmf-site
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	# Fixing sigsegv enabling
@@ -109,11 +112,10 @@ src_install() {
 
 	# X GUI
 	if use X; then
-		exeinto /usr/share/${PN}/GUI
-		doexe GUI/xasy.py
-		rm GUI/xasy.py
 		insinto /usr/share/${PN}/GUI
 		doins GUI/*.py
+		chmod 755 "${ED}"usr/share/${PN}/GUI/xasy.py
+		python_fix_shebang "${ED}"usr/share/${PN}/GUI
 		dosym /usr/share/${PN}/GUI/xasy.py /usr/bin/xasy
 		doman doc/xasy.1x
 	fi
@@ -148,11 +150,8 @@ src_install() {
 
 	# asymptote.py
 	if use python; then
-		python_install() {
-			insinto "$(python_get_sitedir)"
-			doins base/${PN}.py
-		}
-		python_execute_function python_install
+		python_moduleinto "$(python_get_sitedir)"
+		python_domodule base/${PN}.py
 	fi
 
 	# emacs mode
@@ -185,7 +184,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize ${PN}.py
 	use latex && latex-package_rehash
 	use emacs && elisp-site-regen
 
@@ -194,7 +192,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup ${PN}.py
 	use latex && latex-package_rehash
 	use emacs && elisp-site-regen
 }
