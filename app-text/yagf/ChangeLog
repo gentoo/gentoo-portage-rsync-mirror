@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yagf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.21 2014/05/08 10:01:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.22 2014/06/05 07:34:13 pinkbyte Exp $
+
+  05 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Fix maintainer's email, wrt bug #508786
 
 *yagf-0.9.3.2 (08 May 2014)
 

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DESCRIPTION=A concurrent garbage collected and typesafe programming language
+EAPI=5
+HOMEPAGE=http://www.golang.org
+IUSE=bash-completion emacs vim-syntax zsh-completion
+KEYWORDS=-* ~amd64 ~arm ~x86 ~amd64-fbsd ~x86-fbsd ~x64-macos
+LICENSE=BSD
+RDEPEND=bash-completion? ( app-shells/bash-completion ) emacs? ( virtual/emacs ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh-completion )
+SLOT=0
+SRC_URI=https://storage.googleapis.com/golang/go1.2.2.src.tar.gz
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=afc07062f91b94227015760822e9d2ce
