@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15760 2014/06/04 05:21:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15761 2014/06/05 08:37:00 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -365,11 +365,9 @@ lxde-base/lxpolkit
 
 # Eray Aslan <eras@gentoo.org> (17 Feb 2014)
 # Security mask - bug #492494 until
-# mail-filter/dovecot-antispam and
-# mail-filter/dovecot_deleted_to_trash are punted/fixed
+# mail-filter/dovecot-antispam is punted/fixed
 =net-mail/dovecot-2.0*
 =net-mail/dovecot-2.1*
-<mail-filter/dovecot_deleted_to_trash-0.5-r1
 
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Masked for testing

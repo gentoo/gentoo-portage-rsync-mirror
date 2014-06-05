@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dovecot_deleted_to_trash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.11 2014/02/21 11:28:39 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.12 2014/06/05 08:34:49 pinkbyte Exp $
+
+*dovecot_deleted_to_trash-0.6 (05 Jun 2014)
+
+  05 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -dovecot_deleted_to_trash-0.3.ebuild, -dovecot_deleted_to_trash-0.5.ebuild,
+  +dovecot_deleted_to_trash-0.6.ebuild, -files/fix_names_and_destdir.patch:
+  Version bump, wrt bug #507716. Drop old versions
 
   21 Feb 2014; Vladimir Smirnov -dovecot_deleted_to_trash-0.5-r1.ebuild:
   Remove dovecot_deleted_to_trash-0.5-r1, was early added by proxy maintainer's
