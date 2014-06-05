@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.12 2014/02/28 21:46:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.2.ebuild,v 1.13 2014/06/05 09:45:20 xmw Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.2-pkg-config.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
-		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
+		-e "/^prefix=/s:=.*:=${EROOT}/usr:" \
 		-i debian/mupdf.pc || die
 
 	use vanilla || epatch \

@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpitool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.19 2012/11/18 11:39:54 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.20 2014/06/05 09:57:01 ssuominen Exp $
+
+  05 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> acpitool-0.5.1-r1.ebuild:
+  Update from eapi4 to eapi5
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -acpitool-0.5.1.ebuild,
   metadata.xml:

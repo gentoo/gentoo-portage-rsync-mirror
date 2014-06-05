@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_p20140118.ebuild,v 1.6 2014/03/07 21:43:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_p20140118.ebuild,v 1.7 2014/06/05 09:45:20 xmw Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.3-sys_curl.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
-		-e "/^prefix=/s:=.*:=${EROOR}/usr:" \
+		-e "/^prefix=/s:=.*:=${EROOT}/usr:" \
 		-i platform/debian/${PN}.pc || die
 
 	use vanilla || epatch \

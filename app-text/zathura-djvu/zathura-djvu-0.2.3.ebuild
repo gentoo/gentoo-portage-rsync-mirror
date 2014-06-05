@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.2.3.ebuild,v 1.6 2014/04/04 21:08:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.2.3.ebuild,v 1.7 2014/06/05 09:42:08 ssuominen Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ EGIT_BRANCH="develop"
 LICENSE="ZLIB"
 SLOT="0"
 if ! [[ ${PV} == 9999* ]]; then
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 else
 KEYWORDS=""
 fi

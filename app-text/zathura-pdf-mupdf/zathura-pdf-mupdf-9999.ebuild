@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.9 2014/04/05 15:12:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-9999.ebuild,v 1.10 2014/06/05 09:31:19 xmw Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if ! [[ ${PV} == 9999* ]]; then
 SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
 fi
 EGIT_REPO_URI="git://git.pwmt.org/${PN}.git"
-EGIT_BRANCH="mupdf-git"
+EGIT_BRANCH="develop"
 
 LICENSE="ZLIB"
 SLOT="0"
