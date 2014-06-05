@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/upower-pm-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/ChangeLog,v 1.4 2014/06/02 21:39:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/ChangeLog,v 1.5 2014/06/05 03:33:54 ssuominen Exp $
+
+  05 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  upower-pm-utils-0.9.23-r1.ebuild:
+  Remove USE="doc" and dev-util/gtk-doc dependency and install prebuilt copies
+  wrt #487400 to avoid parallel build failure. Create a compability symlink for
+  dev-util/devhelp.
 
 *upower-pm-utils-0.9.23-r1 (02 Jun 2014)
 

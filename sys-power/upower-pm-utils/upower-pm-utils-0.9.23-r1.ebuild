@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/upower-pm-utils-0.9.23-r1.ebuild,v 1.1 2014/06/02 21:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/upower-pm-utils-0.9.23-r1.ebuild,v 1.2 2014/06/05 03:33:54 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -12,7 +12,7 @@ SRC_URI="http://upower.freedesktop.org/releases/upower-${PV}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc +introspection ios kernel_FreeBSD kernel_linux"
+IUSE="+introspection ios kernel_FreeBSD kernel_linux"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.22
@@ -35,11 +35,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	dev-util/intltool
-	virtual/pkgconfig
-	doc? (
-		dev-util/gtk-doc
-		app-text/docbook-xml-dtd:4.1.2
-		)"
+	virtual/pkgconfig"
 
 QA_MULTILIB_PATHS="usr/lib/upower/.*"
 
@@ -79,7 +75,6 @@ src_configure() {
 		--disable-static \
 		${myconf} \
 		--enable-man-pages \
-		$(use_enable doc gtk-doc) \
 		--disable-tests \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--with-backend=${backend} \
@@ -90,6 +85,12 @@ src_configure() {
 
 src_install() {
 	default
+
+	# http://bugs.gentoo.org/487400
+	insinto /usr/share/doc/${PF}/html/UPower
+	doins doc/html/*
+	dosym /usr/share/doc/${PF}/html/UPower /usr/share/gtk-doc/html/UPower
+
 	keepdir /var/lib/upower #383091
 	prune_libtool_files
 }
