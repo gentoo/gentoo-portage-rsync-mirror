@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/rogue/rogue-5.4.4.ebuild,v 1.3 2010/07/15 08:56:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/rogue/rogue-5.4.4.ebuild,v 1.4 2014/06/05 06:30:55 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 MY_P=${PN}${PV}
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
+DEPEND="sys-libs/ncurses[-tinfo]"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,6 +27,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	prepgamesdirs
 }

@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.371 2014/05/18 10:06:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.372 2014/06/05 06:30:18 polynomial-c Exp $
+
+*bash-4.3_p18-r1 (05 Jun 2014)
+
+  05 Jun 2014; Lars Wendler <polynomial-c@gentoo.org> +bash-4.3_p18-r1.ebuild,
+  +files/bash-4.3-here-doc-ps2-comsub.patch:
+  Added upstream fix.
 
 *bash-4.3_p18 (18 May 2014)
 
