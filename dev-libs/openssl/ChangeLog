@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.540 2014/05/30 20:54:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.541 2014/06/05 12:53:23 polynomial-c Exp $
+
+*openssl-1.0.1h (05 Jun 2014)
+*openssl-1.0.0m (05 Jun 2014)
+
+  05 Jun 2014; Lars Wendler <polynomial-c@gentoo.org> +openssl-1.0.0m.ebuild,
+  +openssl-1.0.1h.ebuild, +files/openssl-1.0.1h-ipv6.patch:
+  Security bump (bug #512506).
 
   30 May 2014; Michał Górny <mgorny@gentoo.org> openssl-0.9.8y-r1.ebuild,
   openssl-1.0.1g-r1.ebuild, openssl-1.0.2_beta1-r3.ebuild:
