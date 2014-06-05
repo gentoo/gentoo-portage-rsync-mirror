@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.57 2014/05/17 07:12:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.58 2014/06/05 11:27:37 grobian Exp $
+
+  05 Jun 2014; Fabian Groffen <grobian@gentoo.org> requests-2.3.0.ebuild:
+  Marked ~x64-macos
 
 *requests-2.3.0 (17 May 2014)
 

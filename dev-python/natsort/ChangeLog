@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/natsort
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/natsort/ChangeLog,v 1.1 2014/06/05 11:26:44 idella4 Exp $
+
+*natsort-3.2.0 (05 Jun 2014)
+
+  05 Jun 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +natsort-3.2.0.ebuild:
+  new ebuild, dep to nikola-7.0.0 wrt, and closes, Bug #512244 by D. Schridde

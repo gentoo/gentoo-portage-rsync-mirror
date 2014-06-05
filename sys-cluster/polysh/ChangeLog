@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/polysh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/polysh/ChangeLog,v 1.8 2014/03/24 16:21:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/polysh/ChangeLog,v 1.9 2014/06/05 11:28:17 grobian Exp $
+
+  05 Jun 2014; Fabian Groffen <grobian@gentoo.org> polysh-0.4-r1.ebuild:
+  Marked ~x64-macos
 
   24 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop maintainership
