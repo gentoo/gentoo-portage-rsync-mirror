@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/easystroke/easystroke-0.6.0-r1.ebuild,v 1.1 2014/06/04 17:37:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/easystroke/easystroke-0.6.0-r1.ebuild,v 1.2 2014/06/05 21:29:36 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -40,13 +40,15 @@ src_prepare() {
 
 	tc-export CC CXX PKG_CONFIG
 
-	strip-linguas -i po/
+	if ! [[ -z ${LINGUAS} ]]; then
+		strip-linguas -i po/
 
-	local es_lingua lang
-	for es_lingua in $( printf "%s\n" po/*.po ); do
-		lang=${es_lingua/po\/}
-		has ${lang/.po/} ${LINGUAS} || rm ${es_lingua}
-	done
+		local es_lingua lang
+		for es_lingua in $( printf "%s\n" po/*.po ); do
+			lang=${es_lingua/po\/}
+			has ${lang/.po/} ${LINGUAS} || rm ${es_lingua}
+		done
+	fi
 }
 
 src_compile() {

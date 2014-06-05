@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/easystroke
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/easystroke/ChangeLog,v 1.2 2014/06/04 17:37:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/easystroke/ChangeLog,v 1.3 2014/06/05 21:29:36 jer Exp $
+
+  05 Jun 2014; Jeroen Roovers <jer@gentoo.org> easystroke-0.6.0-r1.ebuild:
+  Install all linguas when LINGUAS is unset.
 
 *easystroke-0.6.0-r1 (04 Jun 2014)
 
