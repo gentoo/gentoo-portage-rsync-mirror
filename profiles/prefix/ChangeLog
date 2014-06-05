@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.418 2014/05/07 21:29:15 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.419 2014/06/05 18:03:27 grobian Exp $
+
+  05 Jun 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
+  autogen: extend mask to 5.18.2
 
   07 May 2014; redlizard <redlizard@gentoo.org> -bsd/freebsd/9.1/package.mask,
   -bsd/freebsd/package.mask:
