@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1056 2014/06/05 17:24:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1057 2014/06/05 17:58:55 prometheanfire Exp $
+
+*hardened-sources-3.2.59-r3 (05 Jun 2014)
+*hardened-sources-3.11.7-r2 (05 Jun 2014)
+*hardened-sources-3.2.55-r8 (05 Jun 2014)
+*hardened-sources-3.2.53-r7 (05 Jun 2014)
+*hardened-sources-3.2.54-r10 (05 Jun 2014)
+*hardened-sources-3.13.6-r4 (05 Jun 2014)
+
+  05 Jun 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +hardened-sources-3.11.7-r2.ebuild, +hardened-sources-3.13.6-r4.ebuild,
+  +hardened-sources-3.2.53-r7.ebuild, +hardened-sources-3.2.54-r10.ebuild,
+  +hardened-sources-3.2.55-r8.ebuild, +hardened-sources-3.2.59-r3.ebuild:
+  more fixes for CVE-2014-3153 bug 512526
 
 *hardened-sources-3.14.5-r1 (05 Jun 2014)
 

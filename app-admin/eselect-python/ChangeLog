@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.85 2014/02/02 16:32:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.86 2014/06/05 17:56:48 floppym Exp $
+
+  05 Jun 2014; Mike Gilbert <floppym@gentoo.org>
+  -eselect-python-20091230.ebuild, -eselect-python-20100321.ebuild:
+  Remove EAPI 1 ebuilds per QA request, bug 512124.
 
   02 Feb 2014; Fabian Groffen <grobian@gentoo.org>
   eselect-python-20140125.ebuild, eselect-python-99999999.ebuild:
