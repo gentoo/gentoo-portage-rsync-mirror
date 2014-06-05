@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti.initd-r2,v 1.1 2014/05/30 22:07:23 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti.initd-r3,v 1.1 2014/06/05 00:32:23 chutzpah Exp $
 
 depend() {
 	need localmount logger
@@ -32,7 +32,7 @@ start() {
 		optsvar="${daemon//-/_}"
 
 		case "${daemon#ganeti-}" in
-			masterd|rapid|luxid) is_master || continue;;
+			masterd|rapi|luxid) is_master || continue;;
 		esac
 
 		eval daemon_opts=\"\$\{${optsvar^^*}_OPTS\}\"
@@ -68,10 +68,8 @@ stop() {
 	local daemon
 
 	for daemon in $(${DAEMON_UTIL} list-stop-daemons) ; do \
-		case "${daemon}" in
-			ganeti-masterd|ganeti-rapi|ganeti-luxid)
-				is_master || continue
-			;;
+		case "${daemon#ganeti-}" in
+			masterd|rapi|luxid) is_master || continue;;
 		esac
 		${DAEMON_UTIL} stop ${daemon} ${GANETI_OPTS}
 	done

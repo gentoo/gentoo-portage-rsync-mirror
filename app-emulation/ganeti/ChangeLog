@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.87 2014/06/02 18:57:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.88 2014/06/05 00:32:21 chutzpah Exp $
+
+*ganeti-2.11.1-r1 (05 Jun 2014)
+*ganeti-2.10.5-r1 (05 Jun 2014)
+
+  05 Jun 2014; Patrick McLean <chutzpah@gentoo.org> -ganeti-2.10.4.ebuild,
+  -ganeti-2.10.5.ebuild, +ganeti-2.10.5-r1.ebuild, -ganeti-2.11.1.ebuild,
+  +ganeti-2.11.1-r1.ebuild, -files/ganeti.initd-r2, +files/ganeti.initd-r3:
+  Revision bump, fix ganeti-rapi reference in init script (bug #512444).
 
 *ganeti-2.10.5 (02 Jun 2014)
 
