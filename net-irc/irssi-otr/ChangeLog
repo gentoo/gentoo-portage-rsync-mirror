@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi-otr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.15 2014/03/01 22:37:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.16 2014/06/05 10:13:25 mrueg Exp $
+
+  05 Jun 2014; Manuel Rüger <mrueg@gentoo.org> irssi-otr-0.2.ebuild,
+  irssi-otr-0.3-r1.ebuild:
+  Restrict dependency to <net-libs/libotr-4
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> irssi-otr-0.2.ebuild,
   irssi-otr-0.3-r1.ebuild:

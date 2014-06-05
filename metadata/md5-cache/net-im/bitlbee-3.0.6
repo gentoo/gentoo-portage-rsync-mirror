@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >=dev-libs/glib-2.4 ) otr? ( net-libs/libotr ) gnutls? ( net-libs/gnutls ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( ssl? ( dev-libs/openssl ) ) ) selinux? ( sec-policy/selinux-bitlbee ) virtual/pkgconfig skype? ( app-text/asciidoc ) test? ( dev-libs/check ) skype? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
+DEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >=dev-libs/glib-2.4 ) otr? ( <net-libs/libotr-4 ) gnutls? ( net-libs/gnutls ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( ssl? ( dev-libs/openssl ) ) ) selinux? ( sec-policy/selinux-bitlbee ) virtual/pkgconfig skype? ( app-text/asciidoc ) test? ( dev-libs/check ) skype? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
 DESCRIPTION=irc to IM gateway that support multiple IM protocols
 EAPI=4
 HOMEPAGE=http://www.bitlbee.org/
 IUSE=debug gnutls ipv6 +jabber libevent msn nss +oscar otr +plugins purple selinux skype ssl test twitter +yahoo xinetd
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >=dev-libs/glib-2.4 ) otr? ( net-libs/libotr ) gnutls? ( net-libs/gnutls ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( ssl? ( dev-libs/openssl ) ) ) selinux? ( sec-policy/selinux-bitlbee ) virtual/logger skype? ( dev-python/skype4py net-im/skype ) xinetd? ( sys-apps/xinetd ) skype? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
+RDEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >=dev-libs/glib-2.4 ) otr? ( <net-libs/libotr-4 ) gnutls? ( net-libs/gnutls ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( ssl? ( dev-libs/openssl ) ) ) selinux? ( sec-policy/selinux-bitlbee ) virtual/logger skype? ( dev-python/skype4py net-im/skype ) xinetd? ( sys-apps/xinetd ) skype? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
 REQUIRED_USE=^^ ( purple || ( jabber msn oscar yahoo ) ) msn? ( || ( gnutls nss ssl ) ) jabber? ( !nss )
 SLOT=0
 SRC_URI=http://get.bitlbee.org/src/bitlbee-3.0.6.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=83acb2eb5397fdd69b21bef3da58d7ea
+_md5_=a50fe7312dc5ce996744c2023737796e

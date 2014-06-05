@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) net-libs/libotr dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) <net-libs/libotr-4 dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Off-The-Record messaging (OTR) for irssi
 EAPI=5
 HOMEPAGE=http://irssi-otr.tuxfamily.org
 IUSE=debug
 KEYWORDS=~amd64 ~hppa ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=net-libs/libotr dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi
+RDEPEND=<net-libs/libotr-4 dev-libs/glib:2 dev-libs/libgcrypt:0 dev-libs/libgpg-error net-irc/irssi
 SLOT=0
 SRC_URI=ftp://download.tuxfamily.org/irssiotr/irssi-otr-0.3.tar.gz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=24e92728ed533a6229a0c3e8caecc089
+_md5_=971b5c523dbfda9968b72fb365e395d9

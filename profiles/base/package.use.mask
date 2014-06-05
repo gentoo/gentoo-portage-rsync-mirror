@@ -1,10 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.573 2014/06/01 10:51:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.574 2014/06/05 10:09:38 mrueg Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Manuel Rüger <mrueg@gentoo.org> (05 Jun 2014)
+# Fails to build with net-libs/libotr-4.0.0
+net-im/climm otr
+
 
 # Pacho Ramos <pacho@gentoo.org> (01 Jun 2014)
 # Needs hardmasked lua-5.2

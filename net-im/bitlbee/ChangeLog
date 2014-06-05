@@ -1,6 +1,10 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.168 2014/05/26 09:10:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.169 2014/06/05 10:04:32 mrueg Exp $
+
+  05 Jun 2014; Manuel Rüger <mrueg@gentoo.org> bitlbee-3.0.5-r1.ebuild,
+  bitlbee-3.0.6.ebuild, bitlbee-3.2.1.ebuild, bitlbee-3.2.ebuild:
+  Restrict dependency to <net-libs/libotr-4
 
   26 May 2014; Sven Vermeulen <swift@gentoo.org> bitlbee-3.0.5-r1.ebuild,
   bitlbee-3.0.6.ebuild, bitlbee-3.2.1.ebuild, bitlbee-3.2.ebuild:

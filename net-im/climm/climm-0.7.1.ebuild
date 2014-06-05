@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.7.1.ebuild,v 1.5 2014/03/04 20:19:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.7.1.ebuild,v 1.6 2014/06/05 10:10:10 mrueg Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="jabber? ( || ( >=dev-libs/iksemel-1.4[ssl] >=dev-libs/iksemel-1.3[gnutl
 					dev-libs/libgcrypt:0 )
 			!gnutls? ( dev-libs/openssl ) )
 	tcl? ( dev-lang/tcl )
-	otr? ( >=net-libs/libotr-3.0.0 )"
+	otr? ( <net-libs/libotr-4 )"
 DEPEND="${RDEPEND}
 	ssl? ( gnutls? ( virtual/pkgconfig ) )"
 
