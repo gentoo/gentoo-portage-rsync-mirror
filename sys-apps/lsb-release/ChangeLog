@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lsb-release
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.20 2014/05/01 11:21:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.21 2014/06/04 23:25:53 jer Exp $
+
+*lsb-release-1.4-r1 (04 Jun 2014)
+
+  04 Jun 2014; Jeroen Roovers <jer@gentoo.org> +lsb-release-1.4-r1.ebuild,
+  +files/lsb-release-1.4-os-release.patch:
+  Apply patch by Melker Narikka to ignore /etc/os-release (bug #443116).
 
   01 May 2014; Jeroen Roovers <jer@gentoo.org> lsb-release-1.4.ebuild:
   Update HOMEPAGE by BT (bug #352779).
