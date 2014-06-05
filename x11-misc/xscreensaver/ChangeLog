@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.356 2014/06/04 12:25:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.357 2014/06/05 21:59:55 jer Exp $
+
+*xscreensaver-5.28 (05 Jun 2014)
+
+  05 Jun 2014; Jeroen Roovers <jer@gentoo.org> +xscreensaver-5.28.ebuild,
+  +files/xscreensaver-5.28-comment-style.patch:
+  Version bump.
 
   04 Jun 2014; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.27.ebuild:
   die().
