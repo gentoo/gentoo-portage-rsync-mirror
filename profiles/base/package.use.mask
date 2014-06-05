@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.575 2014/06/05 13:18:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.576 2014/06/05 13:35:15 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -12,6 +12,10 @@
 # See bugs #507808, #507810 and #507814
 sys-devel/autoconf	multislot
 sys-devel/gcc		multislot
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (05 Jun 2014)
+# Needs libepoxy keywording, bug #510940
+x11-base/xorg-server glamor
 
 # Manuel Rüger <mrueg@gentoo.org> (05 Jun 2014)
 # Fails to build with net-libs/libotr-4.0.0

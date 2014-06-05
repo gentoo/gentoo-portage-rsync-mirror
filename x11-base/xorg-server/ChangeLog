@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.794 2014/05/30 14:29:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.795 2014/06/05 13:35:58 chithanh Exp $
+
+*xorg-server-1.15.99.903 (05 Jun 2014)
+
+  05 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-server-1.15.99.903.ebuild, -xorg-server-1.15.99.902-r2.ebuild,
+  metadata.xml:
+  Bump to latest prerelease.
 
 *xorg-server-1.15.99.902-r2 (30 May 2014)
 

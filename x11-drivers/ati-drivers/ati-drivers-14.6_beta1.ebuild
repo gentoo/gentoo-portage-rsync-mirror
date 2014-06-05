@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.11_beta.ebuild,v 1.1 2013/10/10 15:57:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.6_beta1.ebuild,v 1.1 2014/06/05 13:49:43 chithanh Exp $
 
 EAPI=5
 
@@ -8,9 +8,11 @@ inherit eutils multilib linux-info linux-mod toolchain-funcs versionator pax-uti
 
 DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets"
 HOMEPAGE="http://www.amd.com"
-RUN="${WORKDIR}/amd-catalyst-13.11-beta1-linux-x86.x86_64.run"
+RUN="${WORKDIR}/fglrx-14.20/amd-driver-installer-14.20-x86.x86_64.run"
 SLOT="1"
-DRIVERS_URI="http://www2.ati.com/drivers/beta/amd-catalyst-13.11-betav1-linux-x86.x86_64.zip"
+# Uses javascript for download YESSSS
+#DRIVERS_URI="http://www2.ati.com/drivers/linux/amd-catalyst-13.12-linux-x86.x86_64.zip"
+DRIVERS_URI="mirror://gentoo/linux-amd-catalyst-14.6-beta-v1.0-may23.zip"
 XVBA_SDK_URI="http://developer.amd.com/wordpress/media/2012/10/xvba-sdk-0.74-404001.tar.gz"
 SRC_URI="${DRIVERS_URI} ${XVBA_SDK_URI}"
 FOLDER_PREFIX="common/"
@@ -22,7 +24,7 @@ KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="bindist test"
 
 RDEPEND="
-	<=x11-base/xorg-server-1.14.49[-minimal]
+	<=x11-base/xorg-server-1.15.49[-minimal]
 	>=app-admin/eselect-opengl-1.0.7
 	app-admin/eselect-opencl
 	sys-power/acpid
@@ -34,7 +36,10 @@ RDEPEND="
 	x11-libs/libXrender
 	virtual/glu
 	multilib? (
-			app-emulation/emul-linux-x86-opengl
+			|| (
+				virtual/glu[abi_x86_32]
+				app-emulation/emul-linux-x86-opengl
+			)
 			|| (
 				(
 					x11-libs/libX11[abi_x86_32]
@@ -108,6 +113,8 @@ QA_PRESTRIPPED="
 	usr/lib\(32\|64\)\?/libAMDXvBA.so.1.0
 	usr/lib\(32\|64\)\?/libaticaldd.so
 	usr/lib\(32\|64\)\?/dri/fglrx_dri.so
+	usr/lib\(32\|64\)\?/OpenCL/vendors/amd/libOpenCL.so.1
+	usr/lib\(32\|64\)\?/OpenCL/vendors/amd/libamdocl\(32\|64\).so
 "
 
 QA_SONAME="
@@ -147,6 +154,14 @@ QA_DT_HASH="
 	usr/lib\(32\|64\)\?/OpenCL/vendors/amd/libamdocl\(32\|64\)\?.so
 	usr/lib\(32\|64\)\?/OpenCL/vendors/amd/libOpenCL.so.1
 "
+
+pkg_nofetch() {
+	einfo "The driver packages"
+	einfo ${A}
+	einfo "need to be downloaded manually from"
+	einfo "http://support.amd.com/en-us/download/desktop?os=Linux%20x86_64"
+	einfo "and ${XVBA_SDK_URI}"
+}
 
 pkg_pretend() {
 	local CONFIG_CHECK="~MTRR ~!DRM ACPI PCI_MSI !LOCKDEP !PAX_KERNEXEC_PLUGIN_METHOD_OR"
@@ -239,7 +254,7 @@ src_unpack() {
 		else
 			RUN="${DISTDIR}/${DRIVERS_DISTFILE}"
 		fi
-		sh ${RUN} --extract "${S}" 2>&1 > /dev/null || die
+		sh "${RUN}" --extract "${S}" 2>&1 > /dev/null || die
 	fi
 
 	mkdir xvba_sdk
@@ -296,8 +311,6 @@ src_prepare() {
 	epatch "${FILESDIR}/typesafe-kuid.diff"
 
 	epatch "${FILESDIR}/ati-drivers-13.8-beta-include-seq_file.patch"
-
-	epatch "${FILESDIR}/check-for-iommu-only-if-iommu-is-supported.patch"
 
 	# Fix #483400
 	epatch "${FILESDIR}/fgl_glxgears-do-not-include-glATI.patch"
@@ -412,7 +425,7 @@ src_install() {
 	insinto /etc/ati
 	exeinto /etc/ati
 	# Everything except for the authatieventsd.sh script.
-	doins ${FOLDER_PREFIX}etc/ati/{logo*,control,atiogl.xml,signature,amdpcsdb.default}
+	doins ${FOLDER_PREFIX}etc/ati/{logo*,control,signature,amdpcsdb.default}
 	doexe ${FOLDER_PREFIX}etc/ati/authatieventsd.sh
 
 	# include.
