@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-337.25.ebuild,v 1.1 2014/06/02 12:29:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-337.25.ebuild,v 1.2 2014/06/05 18:47:48 jer Exp $
 
 EAPI=5
 
@@ -54,7 +54,7 @@ RDEPEND="
 		x11-libs/pango[X]
 	)
 	X? (
-		<x11-base/xorg-server-1.15.99
+		<x11-base/xorg-server-1.16.99
 		>=x11-libs/libvdpau-0.3-r1
 		multilib? (
 			|| (

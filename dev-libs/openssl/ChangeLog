@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.544 2014/06/05 18:22:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.545 2014/06/05 18:54:04 jmbsvicetto Exp $
+
+  05 Jun 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  openssl-1.0.1h-r1.ebuild:
+  Stable on x86 - bug #512506. Adding keyword per Jeff Horelic <jdhore> request
+  at #gentoo-dev.
 
   05 Jun 2014; Tobias Klausmann <klausman@gentoo.org> openssl-1.0.1h-r1.ebuild:
   Stable on alpha, bug #512506
