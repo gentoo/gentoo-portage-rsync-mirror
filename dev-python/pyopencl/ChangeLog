@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.24 2014/04/04 01:38:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.26 2014/06/05 08:19:49 patrick Exp $
+
+  05 Jun 2014; Patrick Lauer <patrick@gentoo.org> -pyopencl-2011.2-r1.ebuild,
+  -pyopencl-2012.1.ebuild, -pyopencl-2013.1.ebuild:
+  Remove old
+
+*pyopencl-2014.1 (05 Jun 2014)
+
+  05 Jun 2014; Patrick Lauer <patrick@gentoo.org> +pyopencl-2014.1.ebuild:
+  Bump
 
   04 Apr 2014; Ian Delaney <idella4@gentoo.org> pyopencl-2013.2-r1.ebuild:
   Rm doc build, fixes Bug #506688

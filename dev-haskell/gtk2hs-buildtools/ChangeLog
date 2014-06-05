@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/gtk2hs-buildtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.31 2014/05/20 13:27:52 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.32 2014/06/05 08:05:05 slyfox Exp $
+
+  05 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  -files/gtk2hs-buildtools-0.12.3-workaround-UName.patch,
+  -files/gtk2hs-buildtools-0.12.3.1-ghc-7.5.patch, -files/gtk2hs-buildtools-0.12
+  .3.1-remove-conditional-compilation-as-it-is-ignored-ghc-7.6.patch,
+  -files/gtk2hs-buildtools-0.12.4-hashtables.patch,
+  -gtk2hs-buildtools-0.12.0.ebuild, -gtk2hs-buildtools-0.12.3-r3.ebuild,
+  -gtk2hs-buildtools-0.12.3.1.ebuild, -gtk2hs-buildtools-0.12.4-r2.ebuild:
+  Removed ebuild installing nonstandard binary names.
 
 *gtk2hs-buildtools-0.12.5.2-r1 (20 May 2014)
 

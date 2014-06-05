@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.9999.ebuild,v 1.4 2014/06/03 08:08:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.9999.ebuild,v 1.5 2014/06/05 08:09:28 pinkbyte Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://accel-ppp.git.sourceforge.net/gitroot/accel-ppp/accel-ppp"
 EGIT_BRANCH="1.7"
-inherit cmake-utils git-r3 linux-info
+inherit cmake-utils git-r3 linux-info multilib
 
 DESCRIPTION="High performance PPTP, PPPoE and L2TP server"
 HOMEPAGE="http://accel-ppp.sourceforge.net/"
@@ -32,6 +32,7 @@ src_prepare() {
 		-e "/echo/d" \
 		-e "s: RENAME accel-ppp.conf.dist::" accel-pppd/CMakeLists.txt || die 'sed on accel-pppd/CMakeLists.txt failed'
 
+	# TBF shaper is obsolete by upstream, so it's disabled
 	sed -i -e '/IF (SHAPER)/s/SHAPER/SHAPER_TBF/' \
 		accel-pppd/extra/CMakeLists.txt || die 'sed on accel-pppd/extra/CMakeLists.txt failed'
 
@@ -39,8 +40,10 @@ src_prepare() {
 }
 
 src_configure() {
+	local libdir="$(get_libdir)"
 	# There must be also dev-libs/tomcrypt (TOMCRYPT) as crypto alternative to OpenSSL
 	local mycmakeargs=(
+		-DLIB_PATH_SUFFIX="${libdir#lib}"
 		-DBUILD_DRIVER=FALSE
 		-DCRYPTO=OPENSSL
 		$(cmake-utils_use debug MEMDEBUG)

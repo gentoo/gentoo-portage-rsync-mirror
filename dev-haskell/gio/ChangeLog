@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.22 2014/05/20 13:47:04 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.23 2014/06/05 08:11:30 slyfox Exp $
+
+  05 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> gio-0.12.4-r1.ebuild:
+  Use unmodified 'gtk2hsTypeGen' (bug #512474 by Paweł Hajdan, Jr.).
 
 *gio-0.12.5.3 (20 May 2014)
 

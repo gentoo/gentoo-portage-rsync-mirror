@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.93 2014/03/24 15:05:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.94 2014/06/05 08:10:53 djc Exp $
+
+*couchdb-1.5.1 (05 Jun 2014)
+
+  05 Jun 2014; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.5.1.ebuild:
+  Version bump couchdb to 1.5.1 (fixes bug 506354)
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> couchdb-1.5.0.ebuild:
   Stable for ppc, wrt bug #495362

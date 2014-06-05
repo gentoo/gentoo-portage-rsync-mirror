@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.4.ebuild,v 1.1 2014/06/03 08:08:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.4.ebuild,v 1.2 2014/06/05 08:09:28 pinkbyte Exp $
 
 EAPI=5
 
-inherit cmake-utils linux-info
+inherit cmake-utils linux-info multilib
 
 DESCRIPTION="High performance PPTP, PPPoE and L2TP server"
 HOMEPAGE="http://accel-ppp.sourceforge.net/"
@@ -38,8 +38,10 @@ src_prepare() {
 }
 
 src_configure() {
+	local libdir="$(get_libdir)"
 	# There must be also dev-libs/tomcrypt (TOMCRYPT) as crypto alternative to OpenSSL
 	local mycmakeargs=(
+		-DLIB_PATH_SUFFIX="${libdir#lib}"
 		-DBUILD_DRIVER=FALSE
 		-DCRYPTO=OPENSSL
 		$(cmake-utils_use debug MEMDEBUG)

@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst prepare prerm setup test
+DEFINED_PHASES=compile configure install postinst prerm setup test
 DEPEND=>=dev-haskell/cairo-0.12.0:0=[profile?] <dev-haskell/cairo-0.13:0=[profile?] >=dev-haskell/glib-0.12.0:0=[profile?] <dev-haskell/glib-0.13:0=[profile?] dev-haskell/mtl:=[profile?] >=dev-lang/ghc-6.10.4:= x11-libs/cairo x11-libs/pango >=dev-haskell/cabal-1.8 >=dev-haskell/gtk2hs-buildtools-0.12.4:0= virtual/pkgconfig doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour )
 DESCRIPTION=Binding to the Pango text rendering engine.
 EAPI=5
@@ -10,4 +10,4 @@ RDEPEND=>=dev-haskell/cairo-0.12.0:0=[profile?] <dev-haskell/cairo-0.13:0=[profi
 SLOT=0/0.12.4
 SRC_URI=mirror://hackage/packages/archive/pango/0.12.4/pango-0.12.4.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	6bfba0bf2b2988c44c7613fb7a0714b4	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=6e305549a26672c7117a119fa3531d80
+_md5_=f045b704e5565fff3b8e64dcee46c0e0

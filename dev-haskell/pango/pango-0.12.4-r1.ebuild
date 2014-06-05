@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.4-r1.ebuild,v 1.7 2014/02/02 11:13:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.4-r1.ebuild,v 1.8 2014/06/05 08:23:05 slyfox Exp $
 
 EAPI=5
 
@@ -33,16 +33,3 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.8
 		>=dev-haskell/gtk2hs-buildtools-0.12.4:0=
 		virtual/pkgconfig"
-
-src_prepare() {
-	sed -e "s@gtk2hsTypeGen@gtk2hsTypeGen${GTK_MAJ_VER}@" \
-		-e "s@gtk2hsHookGenerator@gtk2hsHookGenerator${GTK_MAJ_VER}@" \
-		-e "s@gtk2hsC2hs@gtk2hsC2hs${GTK_MAJ_VER}@" \
-		-i "${S}/Gtk2HsSetup.hs" \
-		|| die "Could not change Gtk2HsSetup.hs for GTK+ slot 0"
-	sed -e "s@gtk2hsC2hs@gtk2hsC2hs${GTK_MAJ_VER}@" \
-		-e "s@gtk2hsTypeGen@gtk2hsTypeGen${GTK_MAJ_VER}@" \
-		-e "s@gtk2hsHookGenerator@gtk2hsHookGenerator${GTK_MAJ_VER}@" \
-		-i "${S}/${PN}.cabal" \
-		|| die "Could not change ${PN}.cabal for GTK+ slot 0"
-}
