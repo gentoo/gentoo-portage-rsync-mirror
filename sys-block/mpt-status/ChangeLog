@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/mpt-status
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.9 2012/12/16 14:19:36 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.10 2014/06/05 13:10:13 pinkbyte Exp $
+
+*mpt-status-1.2.0-r1 (05 Jun 2014)
+
+  05 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> +mpt-status-1.2.0-r1.ebuild:
+  Revision bump: EAPI 5, epatch_user, respect compiler
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685

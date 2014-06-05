@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.686 2014/06/05 10:09:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.687 2014/06/05 13:18:39 pinkbyte Exp $
+
+  05 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask USE='multislot' wrt bugs #507808, #507810 and #507814
 
   05 Jun 2014; Manuel Rüger <mrueg@gentoo.org> package.use.mask:
   Mask otr on net-im/climm.

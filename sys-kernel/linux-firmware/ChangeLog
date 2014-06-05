@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.93 2014/04/06 14:45:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.94 2014/06/05 13:01:55 chithanh Exp $
+
+*linux-firmware-20140603 (05 Jun 2014)
+
+  05 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20140603.ebuild:
+  New snapshot.
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org>
   linux-firmware-20130728.ebuild, linux-firmware-20131230.ebuild,
