@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.2-r1.ebuild,v 1.3 2014/06/02 15:03:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.3.ebuild,v 1.1 2014/06/06 22:29:48 dilfridge Exp $
 
 EAPI=5
 
@@ -24,8 +24,7 @@ if [[ ${PV} == *9999 ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.cups.org/software/${MY_PV}/${MY_P}-source.tar.bz2"
-#	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint"
-	KEYWORDS=""
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint"
 fi
 
 DESCRIPTION="The Common Unix Printing System"
@@ -36,7 +35,7 @@ SLOT="0"
 IUSE="acl dbus debug gnutls java kerberos lprng-compat pam
 	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
-LANGS="ca es fr it ja ru"
+LANGS="ca es fr it ja pt_BR ru"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} +linguas_${X}"
 done
@@ -98,6 +97,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
 	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
+	"${FILESDIR}/${PN}-1.7.3-noavahi.patch"
 )
 
 MULTILIB_CHOST_TOOLS=(

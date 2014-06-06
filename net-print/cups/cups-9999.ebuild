@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.57 2014/06/02 15:03:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.58 2014/06/06 22:29:48 dilfridge Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ SLOT="0"
 IUSE="acl dbus debug gnutls java kerberos lprng-compat pam
 	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
-LANGS="ca es fr it ja ru"
+LANGS="ca es fr it ja pt_BR ru"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} +linguas_${X}"
 done
