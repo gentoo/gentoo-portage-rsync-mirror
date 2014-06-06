@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-rl/mwlib-rl-0.14.3.ebuild,v 1.2 2013/07/01 11:42:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib-rl/mwlib-rl-0.14.6.ebuild,v 1.1 2014/06/06 14:11:10 dev-zero Exp $
 
 EAPI="5"
 
@@ -13,8 +13,8 @@ MY_PN="${PN/-/.}"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Generate pdfs from mediawiki markup"
-HOMEPAGE="http://code.pediapress.com/wiki/wiki http://pypi.python.org/pypi/mwlib.rl"
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
+HOMEPAGE="http://code.pediapress.com/code/ http://pypi.python.org/pypi/mwlib.rl https://github.com/pediapress/mwlib.rl/"
+SRC_URI="https://github.com/pediapress/mwlib.rl/archive/${PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=( "${FILESDIR}/${PV}-use-system-fonts.patch" )
+PATCHES=( "${FILESDIR}/0.14.3-use-system-fonts.patch" )
 DOCS=( example-mwlib.config README.rst )
 
 python_prepare_all() {
@@ -45,7 +45,7 @@ python_prepare_all() {
 }
 
 python_test() {
-	py.test || die
+	py.test  || die "tests failed under ${EPYTHON}"
 }
 
 pkg_postinst() {
