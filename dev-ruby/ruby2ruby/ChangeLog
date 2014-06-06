@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.62 2014/05/18 20:00:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.63 2014/06/06 06:12:09 graaff Exp $
+
+  06 Jun 2014; Hans de Graaff <graaff@gentoo.org> ruby2ruby-2.1.0.ebuild:
+  Add ruby21.
 
 *ruby2ruby-2.1.0 (18 May 2014)
 

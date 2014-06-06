@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gmic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.48 2014/04/25 05:35:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.49 2014/06/06 06:16:39 radhermit Exp $
+
+*gmic-1.5.9.1 (06 Jun 2014)
+
+  06 Jun 2014; Tim Harder <radhermit@gentoo.org> +gmic-1.5.9.1.ebuild,
+  +files/gmic-1.5.9.1-makefile.patch:
+  Version bump.
 
 *gmic-1.5.8.6 (25 Apr 2014)
 

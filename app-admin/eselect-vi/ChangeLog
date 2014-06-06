@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-vi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.47 2012/04/26 16:43:32 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.48 2014/06/06 06:03:22 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> eselect-vi-1.1.7-r1.ebuild:
+  Add arm64 love.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> eselect-vi-1.1.7-r1.ebuild:
   keyword ~amd64-fbsd
@@ -173,5 +176,3 @@
   19 Sep 2006; Mike Kelly <pioto@gentoo.org> +metadata.xml,
   +eselect-vi-1.0.ebuild:
   Initial ebuild.
-
-
