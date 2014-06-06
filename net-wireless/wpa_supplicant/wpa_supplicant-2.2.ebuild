@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.1-r1.ebuild,v 1.2 2014/03/21 19:56:13 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.2.ebuild,v 1.1 2014/06/06 16:42:05 gurligebis Exp $
 
 EAPI=4
 
@@ -85,16 +85,8 @@ src_prepare() {
 		sed -e "s/\/usr\/lib/\/usr\/$(get_libdir)/" -i src/eap_peer/Makefile
 	fi
 
-	if use wps; then
-		# In version 2.1, there is a bug, what causes compile to fail.
-		epatch "${FILESDIR}/${P}-NFC-fix.patch"
-	fi
-
 	# bug (320097)
 	epatch "${FILESDIR}/${P}-do-not-call-dbus-functions-with-NULL-path.patch"
-
-	# bug (501828)
-	epatch "${FILESDIR}/${P}-WPA-fix.patch"
 
 	# TODO - NEED TESTING TO SEE IF STILL NEEDED, NOT COMPATIBLE WITH 1.0 OUT OF THE BOX,
 	# SO WOULD BE NICE TO JUST DROP IT, IF IT IS NOT NEEDED.

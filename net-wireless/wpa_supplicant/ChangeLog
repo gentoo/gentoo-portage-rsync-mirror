@@ -1,6 +1,21 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.212 2014/04/14 07:05:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.213 2014/06/06 16:42:05 gurligebis Exp $
+
+*wpa_supplicant-2.2 (06 Jun 2014)
+
+  06 Jun 2014; <gurligebis@gentoo.org> -wpa_supplicant-2.1-r1.ebuild,
+  +wpa_supplicant-2.2.ebuild, -files/wpa_supplicant-2.1-NFC-fix.patch,
+  -files/wpa_supplicant-2.1-WPA-fix.patch,
+  -files/wpa_supplicant-2.1-dbus-path-fix.patch,
+  -files/wpa_supplicant-2.1-do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-2.1-fix-undefined-reference-to-random_get_bytes.patch,
+  -files/wpa_supplicant-2.1-generate-libeap-peer.patch,
+  +files/wpa_supplicant-2.2-dbus-path-fix.patch,
+  +files/wpa_supplicant-2.2-do-not-call-dbus-functions-with-NULL-path.patch,
+  +files/wpa_supplicant-2.2-fix-undefined-reference-to-random_get_bytes.patch,
+  +files/wpa_supplicant-2.2-generate-libeap-peer.patch:
+  Bumping to 2.2, fixing #512574
 
   14 Apr 2014; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
   Drop me from maintainers
