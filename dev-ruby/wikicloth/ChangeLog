@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/wikicloth
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wikicloth/ChangeLog,v 1.1 2014/06/06 14:43:56 mrueg Exp $
+
+*wikicloth-0.8.1 (06 Jun 2014)
+
+  06 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +wikicloth-0.8.1.ebuild:
+  Initial import from dev-zero's overlay.
