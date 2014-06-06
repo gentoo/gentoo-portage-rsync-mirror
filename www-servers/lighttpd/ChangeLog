@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.333 2014/05/14 16:10:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.334 2014/06/06 12:26:20 zlogene Exp $
+
+  06 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -lighttpd-1.4.32-r3.ebuild,
+  -lighttpd-1.4.34.ebuild:
+  Drop insecure versions
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.35.ebuild:
   Stable for sparc, wrt bug #504330
