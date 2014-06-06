@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.689 2014/06/06 04:20:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.690 2014/06/06 16:24:21 zerochaos Exp $
+
+  06 Jun 2014; Rick Farina <zerochaos@gentoo.org> package.mask:
+  masking <upower-0.99.0 due to portage failure to negotiate the upgrade for openrc users
 
   06 Jun 2014; Zac Medico <zmedico@gentoo.org> package.use.mask:
   Mask lua for www-servers/mongoose.

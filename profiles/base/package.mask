@@ -1,9 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.64 2014/02/02 09:49:34 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.65 2014/06/06 16:24:21 zerochaos Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Jun 2013)
 # Make sure sys-libs/musl is only available for musl profiles or
 # where the user explicitly unmasks it as using it incorrectly
 # can break a system.  It is still available with crossdev.
 sys-libs/musl
+
+# Rick Farina <zerochaos@gentoo.org> (6 Jun 2013)
+# Pm-utils based hibernate and suspend support has discontinued.
+# For continued support, use the upower-pm-utils fork or systemd.
+# Systemd users can switch to a systemd profile or unmask <sys-power/upower-0.99.0
+# Openrc users can "emerge -C upower && emerge -1 upower-pm-utils"
+<sys-power/upower-0.99.0

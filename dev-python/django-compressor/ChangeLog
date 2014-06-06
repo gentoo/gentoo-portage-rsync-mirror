@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-compressor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/ChangeLog,v 1.6 2014/06/06 15:40:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/ChangeLog,v 1.7 2014/06/06 16:05:41 idella4 Exp $
+
+  06 Jun 2014; Ian Delaney <idella4@gentoo.org> django-compressor-1.4.ebuild:
+  add slot :4 to dep beautifulsoup, for now
 
 *django-compressor-1.4 (06 Jun 2014)
 

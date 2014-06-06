@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.1-r1.ebuild,v 1.3 2014/05/01 01:22:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.2.ebuild,v 1.1 2014/06/06 16:23:18 gurligebis Exp $
 
 EAPI="4"
 
@@ -28,7 +28,6 @@ RDEPEND="${DEPEND}"
 S="${S}/${PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Fix-nt_password_hash-build.patch
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf" || die
 }

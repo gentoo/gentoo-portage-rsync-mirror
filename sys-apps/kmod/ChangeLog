@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.155 2014/05/27 17:27:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.156 2014/06/06 16:11:47 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> kmod-17.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
 
   27 May 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-17.ebuild:
   Fix documentation install after botched conversion to multiple python install
