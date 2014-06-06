@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/obfsproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/ChangeLog,v 1.26 2014/05/02 13:39:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/ChangeLog,v 1.27 2014/06/06 15:53:53 blueness Exp $
+
+*obfsproxy-0.2.10 (06 Jun 2014)
+
+  06 Jun 2014; Anthony G. Basile <blueness@gentoo.org> +obfsproxy-0.2.10.ebuild:
+  Version bump
 
 *obfsproxy-0.2.9 (02 May 2014)
 
