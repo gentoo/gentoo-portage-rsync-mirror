@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.3.2-r1.ebuild,v 1.1 2011/10/03 15:36:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.3.2-r1.ebuild,v 1.2 2014/06/06 19:27:06 vapier Exp $
 
 # this ebuild is only for the libgmp.so.3 ABI SONAME
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-devel/m4"
