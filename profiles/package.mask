@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15763 2014/06/06 00:26:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15764 2014/06/06 20:10:40 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,8 +39,9 @@
 # in denial of service) or for privilege escalation.
 #
 # https://bugs.gentoo.org/show_bug.cgi?id=CVE-2014-3153
-#
-# More revision bumps and masks will occur as soon as possible.
+=sys-kernel/gentoo-sources-3.2.58-r2
+~sys-kernel/gentoo-sources-3.4.90
+=sys-kernel/gentoo-sources-3.4.91
 ~sys-kernel/gentoo-sources-3.10.40
 =sys-kernel/gentoo-sources-3.10.41
 ~sys-kernel/gentoo-sources-3.12.20

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1332 2014/06/06 00:26:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1334 2014/06/06 20:11:42 tomwij Exp $
+
+*gentoo-sources-3.4.91-r1 (06 Jun 2014)
+*gentoo-sources-3.2.58-r3 (06 Jun 2014)
+
+  06 Jun 2014; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.2.58-r3.ebuild,
+  +gentoo-sources-3.4.91-r1.ebuild:
+  Revision bump to branches 3.2 and 3.4; for CVE-2014-3153, bug #512526.
 
   06 Jun 2014; Tom Wijsman <TomWij@gentoo.org> -gentoo-sources-3.10.25.ebuild,
   -gentoo-sources-3.10.39.ebuild, -gentoo-sources-3.12.18.ebuild,
@@ -17,7 +24,7 @@
 
   06 Jun 2014; Tom Wijsman <TomWij@gentoo.org>
   +gentoo-sources-3.10.41-r1.ebuild, +gentoo-sources-3.14.5-r1.ebuild:
-  Revision bump to branches 3.10 and 3.14, 3.0 and 3.4 follow later due to
+  Revision bump to branches 3.10 and 3.14, 3.2 and 3.4 follow later due to
   backports; for CVE-2014-3153, bug #512526.
 
 *gentoo-sources-3.12.21-r1 (05 Jun 2014)

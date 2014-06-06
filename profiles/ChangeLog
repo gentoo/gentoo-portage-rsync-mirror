@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9046 2014/06/06 18:37:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9047 2014/06/06 20:10:40 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2014; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Extend gentoo-sources CVE-2014-3153 mask with 3.2 and 3.4 branches.
 
   06 Jun 2014; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
   Add hardened musl profiles for armv7a as exp
