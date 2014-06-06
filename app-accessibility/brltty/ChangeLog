@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.149 2014/04/07 18:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.150 2014/06/06 10:42:40 teiresias Exp $
+
+*brltty-5.0-r3 (06 Jun 2014)
+
+  06 Jun 2014; Christopher Brannon <teiresias@gentoo.org>
+  +brltty-5.0-r3.ebuild:
+  Use python-r1 eclass and support multiple versions of Python.
+
+  Closes bug #511950.
 
   07 Apr 2014; Mike Frysinger <vapier@gentoo.org> brltty-4.5-r3.ebuild,
   brltty-5.0-r2.ebuild:

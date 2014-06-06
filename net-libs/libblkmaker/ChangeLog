@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libblkmaker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libblkmaker/ChangeLog,v 1.7 2014/01/26 11:45:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libblkmaker/ChangeLog,v 1.8 2014/06/06 10:58:34 blueness Exp $
+
+*libblkmaker-0.4.0 (06 Jun 2014)
+*libblkmaker-0.3.3 (06 Jun 2014)
+
+  06 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +libblkmaker-0.3.3.ebuild, +libblkmaker-0.4.0.ebuild:
+  Version bumps
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libblkmaker-0.3.2.ebuild:
   Stable for x86, wrt bug #489300

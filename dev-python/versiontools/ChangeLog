@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/versiontools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.8 2014/03/31 20:32:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.9 2014/06/06 10:39:45 idella4 Exp $
+
+  06 Jun 2014; Ian Delaney <idella4@gentoo.org> versiontools-1.9.1-r1.ebuild:
+  exclude rogue test, drop py2.6 3.2 pypy2_0 add py3.4
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> versiontools-1.9.1-r1.ebuild:
   Add support for the new PyPy slotting.
