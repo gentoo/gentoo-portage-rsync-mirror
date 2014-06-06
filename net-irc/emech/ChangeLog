@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/emech
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.13 2014/01/14 06:58:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.15 2014/06/06 11:45:27 pinkbyte Exp $
+
+  06 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> emech-3.0.3-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #502880
+
+*emech-3.0.3-r1 (06 Jun 2014)
+
+  06 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> -emech-3.0.3.ebuild,
+  +emech-3.0.3-r1.ebuild:
+  Revision bump: EAPI 5, epatch_user, readme.gentoo eclass. Respect LDFLAGS.
+  Drop old revision
 
 *emech-3.0.3 (14 Jan 2014)
 
