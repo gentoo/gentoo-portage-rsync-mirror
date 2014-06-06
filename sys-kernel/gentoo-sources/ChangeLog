@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1329 2014/06/03 22:22:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1330 2014/06/05 23:38:43 tomwij Exp $
+
+*gentoo-sources-3.12.21-r1 (05 Jun 2014)
+
+  05 Jun 2014; Tom Wijsman <TomWij@gentoo.org>
+  +gentoo-sources-3.12.21-r1.ebuild:
+  Revision bump to branch 3.12, other branches follow soon; for CVE-2014-3153,
+  bug #512526.
 
 *gentoo-sources-3.12.21 (03 Jun 2014)
 
