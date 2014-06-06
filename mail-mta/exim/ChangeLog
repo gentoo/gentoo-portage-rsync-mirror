@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.282 2014/05/30 16:11:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.283 2014/06/06 18:00:35 grobian Exp $
+
+*exim-4.83_rc2 (06 Jun 2014)
+
+  06 Jun 2014; Fabian Groffen <grobian@gentoo.org> +exim-4.83_rc2.ebuild,
+  -exim-4.83_rc1.ebuild:
+  Version bump to 4.83 RC2
 
   30 May 2014; Fabian Groffen <grobian@gentoo.org> exim-4.83_rc1.ebuild:
   Don't deal with eximon twice, should fix bug #511836

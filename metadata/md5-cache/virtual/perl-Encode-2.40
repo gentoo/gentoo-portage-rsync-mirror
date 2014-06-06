@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Encode
-KEYWORDS=alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~x86-fbsd
-RDEPEND=~perl-core/Encode-2.40
-SLOT=0
-_md5_=bd263030dd7aec4b2adf523fb2b1ceeb
