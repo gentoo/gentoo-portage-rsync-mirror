@@ -8,4 +8,10 @@
 <maintainer>
   <email>gregkh@gentoo.org</email>
 </maintainer>
+<use>
+ <flag name='net'>Install the oui.txt and iab.txt databases</flag>
+ <flag name='pci'>Install the pci.ids database</flag>
+ <flag name='usb'>Install the usb.ids database</flag>
+ <flag name='udev'>Install hwdb.d rules for udev</flag>
+</use>
 </pkgmetadata>

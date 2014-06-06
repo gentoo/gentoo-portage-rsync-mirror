@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.143 2014/06/02 11:58:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.144 2014/06/06 18:20:05 vapier Exp $
+
+*hwids-20140602-r1 (06 Jun 2014)
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> +hwids-20140602-r1.ebuild,
+  hwids-99999999.ebuild, metadata.xml:
+  Add USE flags to control the install of the net/pci/usb databases. Unify the
+  live & release ebuilds.
 
 *hwids-20140602 (02 Jun 2014)
 

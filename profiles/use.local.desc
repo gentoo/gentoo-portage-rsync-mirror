@@ -6433,6 +6433,10 @@ sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools
 sys-apps/gnome-disk-utility:nautilus - Enable gnome-base/nautilus extension.
 sys-apps/gnome-disk-utility:remote-access - Enable access to remote udisks daemons.
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
+sys-apps/hwids:net - Install the oui.txt and iab.txt databases
+sys-apps/hwids:pci - Install the pci.ids database
+sys-apps/hwids:udev - Install hwdb.d rules for udev
+sys-apps/hwids:usb - Install the usb.ids database
 sys-apps/hwloc:cuda - Enable CUDA device discovery
 sys-apps/hwloc:gl - Enable GL display device discovery (NVCtrl)
 sys-apps/hwloc:numa - Add support for numa memory allocation
