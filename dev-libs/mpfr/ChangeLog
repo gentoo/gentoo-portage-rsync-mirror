@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.183 2014/03/26 05:45:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.184 2014/06/06 19:58:16 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> -mpfr-2.4.2_p3.ebuild,
+  mpfr-2.4.2_p3-r1.ebuild:
+  Move the ABI-only ebuild into stable.
 
 *mpfr-3.1.2_p5 (26 Mar 2014)
 

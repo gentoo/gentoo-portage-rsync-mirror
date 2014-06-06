@@ -2,11 +2,11 @@ DEFINED_PHASES=compile install postinst postrm test unpack
 DEPEND=sys-devel/gnuconfig >=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib ) test? ( dev-util/dejagnu ) nls? ( sys-devel/gettext ) sys-devel/flex virtual/yacc
 DESCRIPTION=Tools necessary to build programs
 HOMEPAGE=http://sourceware.org/binutils/
-IUSE=cxx nls multitarget multislot static-libs test vanilla zlib
+IUSE=cxx multislot multitarget nls static-libs test vanilla zlib
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -amd64-fbsd -sparc-fbsd ~x86-fbsd
 LICENSE=|| ( GPL-3 LGPL-3 )
 RDEPEND=>=sys-devel/binutils-config-1.9 zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=mirror://gnu/binutils/binutils-2.24.tar.bz2 mirror://gentoo/binutils-2.24-patches-1.4.tar.xz http://dev.gentoo.org/~vapier/dist/binutils-2.24-patches-1.4.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-binutils	78b0710908c44237d38f8aa0880f4de0	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-binutils	2a8cbe327e8aec398d6089c8fc0bcab7	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=01d2865cada220c561010d44d20399b2

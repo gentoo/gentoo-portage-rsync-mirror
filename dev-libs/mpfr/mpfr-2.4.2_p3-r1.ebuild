@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.4.2_p3-r1.ebuild,v 1.3 2013/08/25 02:37:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.4.2_p3-r1.ebuild,v 1.4 2014/06/06 19:58:16 vapier Exp $
 
 # this ebuild is only for the libmpfr.so.1 ABI SONAME
 
-EAPI="3"
+EAPI="4"
 
-inherit eutils libtool
+inherit eutils libtool flag-o-matic
 
 MY_PV=${PV/_p*}
 MY_P=${PN}-${MY_PV}
@@ -32,14 +32,16 @@ src_prepare() {
 }
 
 src_configure() {
+	# Newer gmp has deleted this define, so export it for older mpfr.
+	append-cppflags -D__gmp_const=const
 	econf --disable-static
 }
 
 src_compile() {
-	emake libmpfr.la || die
+	emake libmpfr.la
 }
 
 src_install() {
-	emake install-libLTLIBRARIES DESTDIR="${D}" || die
-	rm "${ED}"/usr/*/libmpfr.{la,so,dylib,a} || die
+	emake install-libLTLIBRARIES DESTDIR="${D}"
+	rm -f "${ED}"/usr/*/libmpfr.{la,so,dylib,a}
 }
