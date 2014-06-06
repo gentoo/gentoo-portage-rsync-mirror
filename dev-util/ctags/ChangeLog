@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.84 2012/04/26 16:49:19 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.85 2014/06/06 05:59:37 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> ctags-5.8.ebuild:
+  Add arm64 love.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ctags-5.8.ebuild:
   keyword ~amd64-fbsd
@@ -312,4 +315,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.91 2014/04/18 17:33:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.92 2014/06/06 05:42:09 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> Error-0.170.210.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   18 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -Error-0.170.160.ebuild,
   -Error-0.170.190.ebuild, -Error-0.170.200.ebuild:
