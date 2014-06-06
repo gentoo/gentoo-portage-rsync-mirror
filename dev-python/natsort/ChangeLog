@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/natsort
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/natsort/ChangeLog,v 1.1 2014/06/05 11:26:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/natsort/ChangeLog,v 1.2 2014/06/06 03:13:53 idella4 Exp $
+
+  06 Jun 2014; Ian Delaney <idella4@gentoo.org> natsort-3.2.0.ebuild:
+  add ia64 keyword, tested by D. Schridde, see Bug 512244
 
 *natsort-3.2.0 (05 Jun 2014)
 

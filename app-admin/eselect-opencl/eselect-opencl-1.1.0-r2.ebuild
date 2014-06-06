@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencl/eselect-opencl-1.1.0-r2.ebuild,v 1.1 2014/06/04 02:45:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencl/eselect-opencl-1.1.0-r2.ebuild,v 1.2 2014/06/06 03:23:03 patrick Exp $
 
 EAPI=4
 
@@ -26,8 +26,7 @@ SRC_URI="https://github.com/anyc/opencl-headers/archive/opencl-headers-1.2.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd ~x86-fbsd"
-KEYWORDS="" # for testing
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-arch/xz-utils"
