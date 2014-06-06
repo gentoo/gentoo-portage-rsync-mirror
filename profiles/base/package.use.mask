@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.576 2014/06/05 13:35:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.577 2014/06/06 04:20:17 zmedico Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Zac Medico <zmedico@gentoo.org> (06 Jun 2014)
+# Needs hardmasked lua-5.2
+www-servers/mongoose lua
 
 # Sergey Popov <pinkbyte@gentoo.org> (05 Jun 2014)
 # Mask multislot USE flag for packages, where it breaks

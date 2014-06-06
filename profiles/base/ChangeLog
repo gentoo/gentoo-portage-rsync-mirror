@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.688 2014/06/05 13:35:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.689 2014/06/06 04:20:17 zmedico Exp $
+
+  06 Jun 2014; Zac Medico <zmedico@gentoo.org> package.use.mask:
+  Mask lua for www-servers/mongoose.
 
   05 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
