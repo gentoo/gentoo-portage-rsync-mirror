@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/gtkada
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.32 2009/12/13 00:28:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gtkada/ChangeLog,v 1.33 2014/06/06 12:43:36 jer Exp $
 
   13 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   gtkada-2.10.0.ebuild:
@@ -66,7 +66,7 @@
 
   25 May 2006; George Shapovalov <george@gentoo.org>
   +files/gtkada-2.4.0.patch, +gtkada-2.4.0-r1.ebuild:
-  moved gtkada to new eclass, first release suppporting split compilers.
+  moved gtkada to new eclass, first release supporting split compilers.
 
   13 May 2006; George Shapovalov <george@gentoo.org> gtkada-2.2.0-r1.ebuild,
   gtkada-2.2.1.ebuild, gtkada-2.2.1-r1.ebuild, gtkada-2.4.0.ebuild:

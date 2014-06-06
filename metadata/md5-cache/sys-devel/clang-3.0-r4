@@ -10,4 +10,4 @@ RDEPEND=~sys-devel/llvm-3.0[debug=,multitarget=]
 SLOT=0
 SRC_URI=http://llvm.org/releases/3.0/llvm-3.0.tar.gz http://llvm.org/releases/3.0/clang-3.0.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c4812bf3efe0202dc6a0c3e108af2269
+_md5_=c8eb2922642fecccccfdd630d7b1a5e5

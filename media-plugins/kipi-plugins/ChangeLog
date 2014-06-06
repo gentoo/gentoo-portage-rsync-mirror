@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.162 2014/03/20 22:39:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.163 2014/06/06 12:38:46 jer Exp $
+
+  06 Jun 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Spelling (bug #512552).
 
   20 Mar 2014; Johannes Huber <johu@gentoo.org> -kipi-plugins-3.2.0.ebuild:
   Remove old.

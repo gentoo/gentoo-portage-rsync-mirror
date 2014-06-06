@@ -1,6 +1,6 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.155 2014/04/14 13:35:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.156 2014/06/06 12:44:44 jer Exp $
 
   14 Apr 2014; Eray Aslan <eras@gentoo.org> dspam-3.10.2-r1.ebuild:
   Add mailbase to DEPEND - bug #507594
@@ -697,7 +697,7 @@
   22 Aug 2004; Lim Swee Tat <st_lim@gentoo.org> +files/dspam.cron,
   files/logrotate.dspam, +dspam-3.1.1.ebuild:
   We waited some time before fixing bug #57838.  My fault.
-  Thanx to steveb <tp22a@softhome.net> for his kind suppport and help.
+  Thanx to steveb <tp22a@softhome.net> for his kind support and help.
   3.1.1 built without chi-square and robinson due to compilation errors.
 
   31 Jul 2004; Lim Swee Tat <st_lim@gentoo.org> +dspam-3.1.0.ebuild:

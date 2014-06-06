@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r4.ebuild,v 1.2 2013/01/03 23:36:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r4.ebuild,v 1.3 2014/06/06 12:41:45 jer Exp $
 
 EAPI=3
 
@@ -70,7 +70,7 @@ src_prepare() {
 	sed -e "/^registered_targets =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
 		-i tools/clang/test/lit.cfg  || die "test path sed failed"
 
-	# AMD K10 CPUs + SSE4a suppport, bug #398357
+	# AMD K10 CPUs + SSE4a support, bug #398357
 	epatch "${FILESDIR}"/${P}-recognize-amd-k10-enable-sse4a.patch
 
 	# Automatically select active system GCC's libraries, bug #406163
