@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.548 2014/06/05 21:19:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.549 2014/06/06 05:13:01 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1h-r1.ebuild:
+  Mark arm64/ia64/m68k/ppc/ppc64/s390/sh/sparc stable #512506.
 
   05 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> openssl-1.0.1h-r1.ebuild:
   arm stable wrt bug #512506
