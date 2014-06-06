@@ -8,4 +8,4 @@ LICENSE=Broadcom
 RESTRICT=mirror binchecks strip
 SLOT=b43
 SRC_URI=http://www.lwfinger.com/b43-firmware/broadcom-wl-6.30.163.46.tar.bz2
-_md5_=3c583743ff0c87bf85743db38fdc2a66
+_md5_=0a743708d33f0d3643b0fd18e24637e7

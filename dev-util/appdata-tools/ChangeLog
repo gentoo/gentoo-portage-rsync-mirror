@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/appdata-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.5 2014/06/03 12:41:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/ChangeLog,v 1.6 2014/06/06 15:27:33 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> appdata-tools-0.1.7.ebuild:
+  Add alpha/ia64/sparc love #508918.
 
   03 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
   appdata-tools-0.1.7.ebuild:

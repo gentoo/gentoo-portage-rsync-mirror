@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/b43-firmware/b43-firmware-6.30.163.46.ebuild,v 1.1 2014/06/05 20:49:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/b43-firmware/b43-firmware-6.30.163.46.ebuild,v 1.2 2014/06/06 15:11:26 zerochaos Exp $
 
 EAPI=5
 
-: ${B43_FIRMWARE_SRC_OBJ:=wl_apsta.o}
+: ${B43_FIRMWARE_SRC_OBJ:=*wl_apsta.o}
 
 MY_P="broadcom-wl-${PV}"
 DESCRIPTION="broadcom firmware for b43 LP PHY and >=linux-3.2"
@@ -20,7 +20,7 @@ RESTRICT="mirror binchecks strip"
 DEPEND=">=net-wireless/b43-fwcutter-015"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}"
 
 src_compile() {
 	mkdir ebuild-output
