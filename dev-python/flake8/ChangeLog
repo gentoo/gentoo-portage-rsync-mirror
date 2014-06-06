@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flake8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.11 2014/05/04 16:16:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.12 2014/06/06 08:58:41 idella4 Exp $
+
+  06 Jun 2014; Ian Delaney <idella4@gentoo.org> flake8-2.1.0.ebuild:
+  add missing keyword, exclude rogue test, drop py2.6 add py3.4
 
   04 May 2014; Markus Meier <maekke@gentoo.org> flake8-2.0.ebuild:
   add ~arm, bug #508282
