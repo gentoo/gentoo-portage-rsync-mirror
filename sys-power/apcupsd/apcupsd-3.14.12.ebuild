@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.8-r2.ebuild,v 1.5 2014/06/06 01:34:13 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.12.ebuild,v 1.1 2014/06/06 01:34:13 mattm Exp $
 
-EAPI=3
+EAPI=4
 
-inherit eutils linux-info flag-o-matic systemd
+inherit eutils linux-info flag-o-matic systemd udev
 
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 HOMEPAGE="http://www.apcupsd.org/"
@@ -12,17 +12,21 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="snmp +usb cgi nls gnome kernel_linux"
 
 DEPEND="
+	||	( >=sys-apps/util-linux-2.23[tty-helpers(-)]
+		  <=sys-apps/sysvinit-2.88-r4
+		)
 	cgi? ( >=media-libs/gd-1.8.4 )
 	nls? ( sys-devel/gettext )
-	snmp? ( net-analyzer/net-snmp )
+	snmp? ( >=net-analyzer/net-snmp-5.7.2 )
 	gnome? ( >=x11-libs/gtk+-2.4.0:2
 		dev-libs/glib:2
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
+	sys-apps/openrc
 	virtual/mailx"
 
 CONFIG_CHECK="~USB_HIDDEV ~HIDRAW"
@@ -35,6 +39,13 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-3.14.9-aliasing.patch"
+	if use snmp; then
+		epatch "${FILESDIR}/${PN}-snmp-5.7.2.patch"
+	fi
+}
+
 src_configure() {
 	local myconf
 	use cgi && myconf="${myconf} --enable-cgi --with-cgi-bin=/usr/libexec/${PN}/cgi-bin"
@@ -44,16 +55,14 @@ src_configure() {
 		myconf="${myconf} --with-upstype=apcsmart --with-upscable=smart --disable-usb"
 	fi
 
-	append-flags -fno-strict-aliasing
-
 	# We force the DISTNAME to gentoo so it will use gentoo's layout also
 	# when installed on non-linux systems.
 	econf \
 		--sbindir=/sbin \
 		--sysconfdir=/etc/apcupsd \
 		--with-pwrfail-dir=/etc/apcupsd \
-		--with-lock-dir=/var/lock \
-		--with-pid-dir=/var/run \
+		--with-lock-dir=/run/apcupsd \
+		--with-pid-dir=/run/apcupsd \
 		--with-log-dir=/var/log \
 		--with-nis-port=3551 \
 		--enable-net --enable-pcnet \
@@ -61,8 +70,7 @@ src_configure() {
 		$(use_enable snmp net-snmp) \
 		$(use_enable gnome gapcmon) \
 		${myconf} \
-		APCUPSD_MAIL=/bin/mail \
-		|| die "econf failed"
+		APCUPSD_MAIL=/bin/mail
 }
 
 src_compile() {
@@ -79,29 +87,28 @@ src_install() {
 
 	insinto /etc/apcupsd
 	newins examples/safe.apccontrol safe.apccontrol
+	doins "${FILESDIR}"/apcupsd.conf
 
 	dodoc ChangeLog* ReleaseNotes
-	doman doc/*.8 doc/*.5 || die "doman failed"
+	doman doc/*.8 doc/*.5
 
-	dohtml -r doc/manual/* || die "dodoc failed"
+	dohtml -r doc/manual/*
 
 	rm "${D}"/etc/init.d/apcupsd
-	newinitd "${FILESDIR}/${PN}.init.2a" "${PN}" || die "newinitd failed"
+	newinitd "${FILESDIR}/${PN}.init.4" "${PN}"
+	newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail
+
 	systemd_dounit "${FILESDIR}"/${PN}.service
 	systemd_dotmpfilesd "${FILESDIR}"/${PN}-tmpfiles.conf
-
-	if has_version sys-apps/openrc; then
-		newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
-	fi
 
 	# remove hal settings, we don't really want to have it around still.
 	rm -r "${D}"/usr/share/hal
 
-	# Without this it'll crash at startup. When merging in ROOT= this
-	# won't be created by default, so we want to make sure we got it!
-	keepdir /var/lock
-	fowners root:uucp /var/lock
-	fperms 0775 /var/lock
+	# replace it with our udev rules if we're in Linux
+	if use kernel_linux; then
+		udev_newrules "${FILESDIR}"/apcupsd-udev.rules 60-${PN}.rules
+	fi
+
 }
 
 pkg_postinst() {
@@ -112,19 +119,23 @@ pkg_postinst() {
 
 	elog ""
 	elog "Since version 3.14.0 you can use multiple apcupsd instances to"
-	elog "control more than one UPS in a single box."
+	elog "control more than one UPS in a single box with openRC."
 	elog "To do this, create a link between /etc/init.d/apcupsd to a new"
 	elog "/etc/init.d/apcupsd.something, and it will then load the"
 	elog "configuration file at /etc/apcupsd/something.conf."
 	elog ""
 
-	if [ -d "${ROOT}"/etc/runlevels/shutdown -a \
-			! -e "${ROOT}"/etc/runlevels/shutdown/"${PN}".powerfail ] ; then
-		elog 'If you want apcupsd to power off your UPS when it'
-		elog 'shuts down your system in a power failure, you must'
-		elog 'add apcupsd.powerfail to your shutdown runlevel:'
-		elog ''
-		elog ' \e[01m rc-update add apcupsd.powerfail shutdown \e[0m'
-		elog ''
+	elog 'If you want apcupsd to power off your UPS when it'
+	elog 'shuts down your system in a power failure, you must'
+	elog 'add apcupsd.powerfail to your shutdown runlevel:'
+	elog ''
+	elog ' \e[01m rc-update add apcupsd.powerfail shutdown \e[0m'
+	elog ''
+
+	if use kernel_linux; then
+		elog "Starting from version 3.14.9-r1, ${PN} installs udev rules"
+		elog "for persistent device naming. If you have multiple UPS"
+		elog "connected to the machine, you can point them to the devices"
+		elog "in /dev/apcups/by-id directory."
 	fi
 }

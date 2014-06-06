@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.267 2014/06/04 20:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.268 2014/06/06 01:42:41 vapier Exp $
+
+  06 Jun 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0-r1.ebuild,
+  qemu-2.0.0.ebuild, qemu-9999.ebuild:
+  Disable mprotect on qemu binaries #459348 by Alon Bar-Lev.
 
   04 Jun 2014; Mike Frysinger <vapier@gentoo.org> qemu-2.0.0-r1.ebuild,
   qemu-2.0.0.ebuild, qemu-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.12 2014/06/04 20:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.0.0.ebuild,v 1.13 2014/06/06 01:42:41 vapier Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="ncurses,readline"
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python-r1 \
-	user udev fcaps readme.gentoo
+	user udev fcaps readme.gentoo pax-utils
 
 BACKPORTS=
 
@@ -381,15 +381,21 @@ src_configure() {
 
 	python_export_best
 
-	softmmu_targets=
-	user_targets=
+	softmmu_targets= softmmu_bins=()
+	user_targets= user_bins=()
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
-		use "qemu_softmmu_targets_${target}" && softmmu_targets+=",${target}-softmmu"
+		if use "qemu_softmmu_targets_${target}"; then
+			softmmu_targets+=",${target}-softmmu"
+			softmmu_bins+=( "qemu-system-${target}" )
+		fi
 	done
 
 	for target in ${IUSE_USER_TARGETS} ; do
-		use "qemu_user_targets_${target}" && user_targets+=",${target}-linux-user"
+		if use "qemu_user_targets_${target}"; then
+			user_targets+=",${target}-linux-user"
+			user_bins+=( "qemu-${target}" )
+		fi
 	done
 
 	[[ -n ${softmmu_targets} ]] && \
@@ -462,6 +468,11 @@ src_install() {
 			python_foreach_impl qemu_python_install
 		fi
 	fi
+
+	# Disable mprotect on the qemu binaries as they use JITs to be fast #459348
+	pushd "${ED}"/usr/bin >/dev/null
+	pax-mark m "${softmmu_bins[@]}" "${user_bins[@]}"
+	popd >/dev/null
 
 	# Install config file example for qemu-bridge-helper
 	insinto "/etc/qemu"
