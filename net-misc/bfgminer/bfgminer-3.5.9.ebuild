@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.5.6.ebuild,v 1.3 2014/01/26 11:45:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.5.9.ebuild,v 1.2 2014/06/06 11:23:47 blueness Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils
 
@@ -12,15 +12,12 @@ SRC_URI="http://luke.dashjr.org/programs/bitcoin/files/${PN}/${PV}/${P}.tbz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
-
-# Waiting for dev-libs/hidapi to be keyworded
-#KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
 # TODO: knc (needs i2c-tools header)
 IUSE="+adl avalon bitforce bfsb bigpic bitfury cpumining examples hardened hashbuster icarus littlefury lm_sensors metabank modminer nanofury ncurses +opencl proxy proxy_getwork proxy_stratum scrypt +udev unicode x6500 ztex"
-REQUIRED_USE="
-	|| ( avalon bitforce cpumining icarus modminer opencl proxy x6500 ztex )
+REQUIRED_USE='
+	|| ( avalon bfsb bigpic bitforce bitfury cpumining hashbuster icarus littlefury metabank modminer nanofury opencl proxy x6500 ztex )
 	adl? ( opencl )
 	bfsb? ( bitfury )
 	bigpic? ( bitfury )
@@ -34,9 +31,9 @@ REQUIRED_USE="
 	proxy? ( || ( proxy_getwork proxy_stratum ) )
 	proxy_getwork? ( proxy )
 	proxy_stratum? ( proxy )
-"
+'
 
-DEPEND="
+DEPEND='
 	net-misc/curl
 	ncurses? (
 		sys-libs/ncurses[unicode?]
@@ -67,10 +64,20 @@ DEPEND="
 	ztex? (
 		virtual/libusb:1
 	)
-"
+'
 RDEPEND="${DEPEND}
 	opencl? (
-		virtual/opencl
+		|| (
+			virtual/opencl
+			virtual/opencl-sdk
+			dev-util/ati-stream-sdk
+			dev-util/ati-stream-sdk-bin
+			dev-util/amdstream
+			dev-util/amd-app-sdk
+			dev-util/amd-app-sdk-bin
+			dev-util/nvidia-cuda-sdk[opencl]
+			dev-util/intel-opencl-sdk
+		)
 	)
 "
 DEPEND="${DEPEND}
