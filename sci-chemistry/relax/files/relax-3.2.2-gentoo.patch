@@ -1,0 +1,28 @@
+ sconstruct | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/sconstruct b/sconstruct
+index 511a6dd..fc2d6de 100644
+--- a/sconstruct
++++ b/sconstruct
+@@ -25,7 +25,7 @@
+ 
+ 
+ # Import statements.
+-from os import F_OK, access, getcwd, path, remove, rmdir, sep, walk
++from os import F_OK, access, getcwd, path, remove, rmdir, sep, walk, environ
+ import platform
+ from re import search
+ from shutil import rmtree
+@@ -630,6 +630,11 @@ class Main:
+         for file in files:
+             nodes.append(env.SharedObject(dir + path.sep + file, CCFLAGS=cflags))
+ 
++        env.Append(LINKFLAGS = environ['LDFLAGS'])
++        env.Append(CFLAGS = environ['CFLAGS'])
++        env.Replace(CC = environ['CC'])
++
++
+         # Build the relaxation curve fitting module.
+         self.relax_fit_object = env.SharedLibrary(target=dir + path.sep + 'relax_fit', source=nodes, SHLIBPREFIX=prefix, SHLIBSUFFIX=suffix)
+ 
