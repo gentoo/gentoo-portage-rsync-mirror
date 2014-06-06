@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.307 2014/04/28 14:34:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.309 2014/06/06 00:25:23 jer Exp $
+
+  06 Jun 2014; Jeroen Roovers <jer@gentoo.org> -nmap-6.40.ebuild,
+  -nmap-6.40-r1.ebuild, -files/nmap-6.40-uninstaller.patch:
+  Old.
+
+  06 Jun 2014; Jeroen Roovers <jer@gentoo.org> nmap-6.46.ebuild,
+  -files/nmap-4.75-include.patch, -files/su-to-zenmap.sh.diff:
+  Add dev-libs/liblinear dependency (bug #253269).
 
 *nmap-6.46 (28 Apr 2014)
 
