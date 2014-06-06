@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/baikal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/baikal/ChangeLog,v 1.2 2013/04/20 15:23:34 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/baikal/ChangeLog,v 1.3 2014/06/06 18:37:10 grobian Exp $
+
+*baikal-0.2.7 (06 Jun 2014)
+
+  06 Jun 2014; Fabian Groffen <grobian@gentoo.org> +baikal-0.2.7.ebuild,
+  files/postinstall-en.txt:
+  Version bump (bug #511956) and fix possibly invalid chown, bug #468508
 
   20 Apr 2013; Fabian Groffen <grobian@gentoo.org> +files/postinstall-en.txt,
   baikal-0.2.4.ebuild:
