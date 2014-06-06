@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libepoxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/ChangeLog,v 1.4 2014/05/26 12:08:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/ChangeLog,v 1.5 2014/06/06 13:28:40 jer Exp $
+
+  06 Jun 2014; Jeroen Roovers <jer@gentoo.org> libepoxy-1.2.ebuild:
+  Marked ~hppa (bug #510940).
 
   26 May 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libepoxy-1.2.ebuild, libepoxy-9999.ebuild:
