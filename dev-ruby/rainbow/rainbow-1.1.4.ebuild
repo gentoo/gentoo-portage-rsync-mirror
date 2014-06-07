@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rainbow/rainbow-1.1.4.ebuild,v 1.7 2014/05/15 10:24:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rainbow/rainbow-1.1.4.ebuild,v 1.9 2014/06/07 19:19:25 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -18,5 +18,5 @@ SRC_URI="https://github.com/sickill/rainbow/archive/v${PV}.tar.gz -> ${PN}-git-$
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE=""

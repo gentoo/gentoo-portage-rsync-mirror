@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.48 2014/06/06 22:46:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.49 2014/06/07 19:12:16 dilfridge Exp $
 
 EAPI=5
 
@@ -113,10 +113,6 @@ src_install() {
 
 pkg_postinst() {
 	perl-module_pkg_postinst
-
-	elog "This version of cups-filters includes cups-browsed, a daemon that autodiscovers"
-	elog "remote queues via avahi or cups-1.5 browsing protocol and adds them to your cups"
-	elog "configuration. You may want to add it to your default runlevel."
 
 	if ! use foomatic ; then
 		ewarn "You are disabling the foomatic code in cups-filters. Please do that ONLY if absolutely."

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.0.0.ebuild,v 1.2 2014/05/09 10:48:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.0.0.ebuild,v 1.3 2014/06/07 19:24:28 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://flightgear/Source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dbus debug jpeg +jsbsim oldfdm test +udev +utils +yasim"
 
 COMMON_DEPEND="

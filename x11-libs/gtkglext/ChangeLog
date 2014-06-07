@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.83 2014/04/27 09:28:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.84 2014/06/07 19:17:21 mgorny Exp $
+
+*gtkglext-1.2.0-r2 (07 Jun 2014)
+
+  07 Jun 2014; Michał Górny <mgorny@gentoo.org> +gtkglext-1.2.0-r2.ebuild:
+  Enable multilib support, bug #512136.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gtkglext-1.2.0.ebuild:
   drop old

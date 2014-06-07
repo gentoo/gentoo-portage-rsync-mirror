@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.137 2014/05/28 22:16:07 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.138 2014/06/07 19:14:20 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> socat-1.7.2.4-r1.ebuild:
+  Stable for x86, wrt bug #508092
 
   28 May 2014; Chema Alonso <nimiux@gentoo.org> socat-1.7.2.4-r1.ebuild:
   Stable for amd64 wrt bug #508092

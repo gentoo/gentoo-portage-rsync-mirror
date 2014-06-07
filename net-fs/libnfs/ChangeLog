@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/libnfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.10 2014/05/26 08:45:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.11 2014/06/07 19:16:07 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libnfs-1.8.0.ebuild:
+  Stable for x86, wrt bug #502876
 
   26 May 2014; Chema Alonso <nimiux@gentoo.org> libnfs-1.8.0.ebuild:
   Stable for amd64 wrt bug #502876

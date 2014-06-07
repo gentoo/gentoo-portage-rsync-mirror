@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.35 2014/05/20 18:39:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.36 2014/06/07 19:19:41 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> rubyzip-0.9.9.ebuild:
+  Stable for ppc, wrt bug #505100
 
 *rubyzip-0.9.9-r1 (20 May 2014)
 

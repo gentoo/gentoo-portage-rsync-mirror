@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/libzdb-2.12.ebuild,v 1.2 2014/05/30 20:08:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/libzdb-2.12.ebuild,v 1.3 2014/06/07 19:13:40 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tildeslash.com/${PN}/dist/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc mysql postgres +sqlite ssl static-libs"
 REQUIRED_USE=" || ( postgres mysql sqlite )"
 

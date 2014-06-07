@@ -4,10 +4,10 @@ DESCRIPTION=Open Source Flight Simulator
 EAPI=5
 HOMEPAGE=http://www.flightgear.org/
 IUSE=dbus debug jpeg +jsbsim oldfdm test +udev +utils +yasim
-KEYWORDS=amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=dev-db/sqlite:3 >=dev-games/openscenegraph-3.0.1[png] ~dev-games/simgear-3.0.0[jpeg?] media-libs/openal sys-libs/zlib x11-libs/libX11 dbus? ( >=sys-apps/dbus-1.6.18-r1 ) udev? ( virtual/udev ) utils? ( media-libs/freeglut media-libs/libpng virtual/opengl ) ~games-simulation/flightgear-data-3.0.0 games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://flightgear/Source/flightgear-3.0.0.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=021dc2fb3adca9d13d44e7fa68f429fc
+_md5_=e850c5634eba6b2a0dc254a11d3708cc

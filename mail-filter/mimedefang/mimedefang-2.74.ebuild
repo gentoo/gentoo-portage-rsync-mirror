@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.74.ebuild,v 1.2 2014/05/28 18:59:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.74.ebuild,v 1.3 2014/06/07 19:15:53 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mimedefang.org/static/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="clamav +poll"
 
 DEPEND=">=dev-perl/MIME-tools-5.412

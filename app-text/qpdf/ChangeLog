@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.44 2014/06/03 10:54:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.45 2014/06/07 19:14:34 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> qpdf-5.1.1.ebuild:
+  Stable for x86, wrt bug #508134
 
   03 Jun 2014; Chema Alonso <nimiux@gentoo.org> qpdf-5.1.1.ebuild:
   Stable for amd64 wrt bug #508134

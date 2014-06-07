@@ -11,4 +11,8 @@
 		standard way for applications to manage certificates and keys on
 		smart cards or secure storage.
 	</longdescription>
+	<use>
+		<flag name="ssh-agent">Use GNOME Keyring to unlock SSH keys.
+			Recommended unless you are using ECDSA or Ed25519 keys.</flag>
+	</use>
 </pkgmetadata>
