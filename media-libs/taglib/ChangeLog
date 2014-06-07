@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/taglib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.147 2013/10/13 10:27:45 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.148 2014/06/07 11:55:08 mgorny Exp $
+
+*taglib-1.9.1-r1 (07 Jun 2014)
+
+  07 Jun 2014; Michał Górny <mgorny@gentoo.org> +taglib-1.9.1-r1.ebuild:
+  Enable multilib support, as a dependency of media-plugins/gst-plugins-taglib.
 
 *taglib-1.9.1 (13 Oct 2013)
 

@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-4.2.ebuild,v 1.4 2013/12/24 12:45:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-4.2.ebuild,v 1.5 2014/06/07 11:40:21 ulm Exp $
 
 EAPI=5
-NEED_EMACS=23
 
 inherit elisp
 
@@ -15,7 +14,6 @@ SRC_URI="http://proofgeneral.inf.ed.ac.uk/releases/${MY_PN}-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE=""
 
 DEPEND=">=app-emacs/mmm-mode-0.4.8-r2"
 RDEPEND="${DEPEND}"
@@ -37,7 +35,7 @@ src_compile() {
 
 src_install() {
 	emake -j1 install EMACS=emacs PREFIX="${D}"/usr
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${MY_PN} || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${MY_PN}
 
 	doinfo doc/*.info*
 	doman doc/proofgeneral.1

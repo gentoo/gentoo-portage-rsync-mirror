@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.2.1.ebuild,v 1.4 2014/02/24 01:25:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.2.1.ebuild,v 1.5 2014/06/07 11:33:14 ulm Exp $
 
 EAPI=5
-NEED_EMACS=23
 
 inherit elisp
 
@@ -20,7 +19,7 @@ RESTRICT="test"
 DEPEND="doc? ( virtual/texi2dvi )"
 
 S="${WORKDIR}/org-${PV}"
-SITEFILE="50${PN}-gentoo-8.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	emake datadir="${EPREFIX}${SITEETC}/${PN}"
@@ -36,7 +35,7 @@ src_install() {
 		infodir="${EPREFIX}/usr/share/info" \
 		install
 
-	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}"
+	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}" || die
 
 	if use contrib; then
 		elisp-install ${PN}/contrib contrib/lisp/{org,ob,ox}*.el

@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/popwin/popwin-0.6.2.ebuild,v 1.1 2014/02/27 18:00:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/popwin/popwin-0.6.2.ebuild,v 1.2 2014/06/07 11:34:58 ulm Exp $
 
 EAPI=5
-NEED_EMACS=22
 
 inherit elisp eutils
 

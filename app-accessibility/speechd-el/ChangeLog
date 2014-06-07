@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-el
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.23 2014/01/20 03:31:36 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.24 2014/06/07 11:57:06 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> speechd-el-2.5.ebuild:
+  Remove redundant NEED_EMACS assignment.
 
   20 Jan 2014; Christopher Brannon <teiresias@gentoo.org>
   -speechd-el-0.4.ebuild, -speechd-el-2.2.ebuild, -speechd-el-2.4.ebuild,

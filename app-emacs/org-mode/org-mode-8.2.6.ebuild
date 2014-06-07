@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.2.6.ebuild,v 1.1 2014/04/26 13:51:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-8.2.6.ebuild,v 1.2 2014/06/07 11:33:14 ulm Exp $
 
 EAPI=5
-NEED_EMACS=23
 
 inherit elisp
 
@@ -20,7 +19,7 @@ RESTRICT="test"
 DEPEND="doc? ( virtual/texi2dvi )"
 
 S="${WORKDIR}/org-${PV}"
-SITEFILE="50${PN}-gentoo-8.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	emake datadir="${EPREFIX}${SITEETC}/${PN}"
