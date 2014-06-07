@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9050 2014/06/07 11:56:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9051 2014/06/07 15:23:29 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jun 2014; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask multilib libofa & respective medialibs bump.
 
   07 Jun 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask new multilib cppunit & taglib.

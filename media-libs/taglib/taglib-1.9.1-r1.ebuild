@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.9.1-r1.ebuild,v 1.1 2014/06/07 11:55:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.9.1-r1.ebuild,v 1.2 2014/06/07 15:25:54 mgorny Exp $
 
 EAPI=5
 
@@ -20,6 +20,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig[${MULTILIB_USEDEP}]
 	test? ( dev-util/cppunit[${MULTILIB_USEDEP}] )
 "
+RDEPEND="${RDEPEND}
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r2
+		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.6.1-install-examples.patch

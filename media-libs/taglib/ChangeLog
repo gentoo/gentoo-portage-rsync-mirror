@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.148 2014/06/07 11:55:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.149 2014/06/07 15:25:54 mgorny Exp $
+
+  07 Jun 2014; Michał Górny <mgorny@gentoo.org> taglib-1.9.1-r1.ebuild:
+  Add proper blocker on emul-linux-x86-medialibs.
 
 *taglib-1.9.1-r1 (07 Jun 2014)
 
