@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.494 2014/06/07 17:48:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.495 2014/06/07 18:18:46 alonbl Exp $
+
+*gnutls-2.12.23-r6 (07 Jun 2014)
+
+  07 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnutls-2.12.23-CVE-2014-3466.patch,
+  +files/gnutls-2.12.23-CVE-2014-3467.patch,
+  +files/gnutls-2.12.23-CVE-2014-3468.patch,
+  +files/gnutls-2.12.23-CVE-2014-3469.patch, +gnutls-2.12.23-r6.ebuild:
+  Fix CVE-2014-3466, CVE-2014-3467, CVE-2014-3468, CVE-2014-3469 of 2.12 series
 
   07 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org>
   -files/gnutls-2.12.20-glibc-2.16.patch, -files/gnutls-3.3.1-guile.patch,
