@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15768 2014/06/07 21:30:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15769 2014/06/07 22:08:08 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -182,11 +182,6 @@ games-emulation/neopocott
 # Dead for ages, now in mjpegtools, bug #492886
 # Removal in a month.
 media-video/y4mscaler
-
-# Manuel Rüger <mrueg@gentoo.org> (07 May 2014)
-# Useful for removed ruby18, no-op in ruby19 and later.
-# Masked for removal in 30 days.
-dev-ruby/fastthread
 
 # Justin Lecher <jlec@gentoo.org> (07 May 2014)
 # Still doesn't work as expected

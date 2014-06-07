@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-279.2.ebuild,v 1.1 2014/04/19 10:10:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-279.2.ebuild,v 1.4 2014/06/07 22:25:33 dilfridge Exp $
 
 EAPI=5
 
@@ -80,6 +80,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV_MAJOR}-apic.patch"
 	kernel_is ge 3 7 0 && epatch "${FILESDIR}/${PV_MAJOR}-putname.patch"
 	kernel_is ge 3 10 0 && epatch "${FILESDIR}/${PV_MAJOR}-vmblock.patch"
+	kernel_is ge 3 10 25 && epatch "${FILESDIR}/${PV_MAJOR}-filldir.patch"
+	kernel_is ge 3 12 0 && epatch "${FILESDIR}/${PV_MAJOR}-vfsfollowlink.patch"
 
 	# Allow user patches so they can support RC kernels and whatever else
 	epatch_user
