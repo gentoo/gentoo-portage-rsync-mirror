@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.3-r1.ebuild,v 1.1 2014/04/16 11:33:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.6.0.ebuild,v 1.1 2014/06/07 20:06:23 voyageur Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}"/${P}-man-page-location-fix.patch )
+PATCHES=( "${FILESDIR}"/${PN}-1.5.3-man-page-location-fix.patch )
 
 src_configure() {
 	local mycmakeargs=(
@@ -62,4 +62,11 @@ src_test() {
 	mkdir "${T}"/.config
 	export HOME="${T}"
 	cmake-utils_src_test
+}
+
+pkg_postinst() {
+	if ! use doc ; then
+		elog "Documentation and man pages not installed"
+		elog "Enable doc USE-flag to generate them"
+	fi
 }
