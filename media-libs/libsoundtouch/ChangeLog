@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.78 2014/05/11 08:12:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.79 2014/06/07 16:03:34 mgorny Exp $
+
+*libsoundtouch-1.8.0-r1 (07 Jun 2014)
+
+  07 Jun 2014; Michał Górny <mgorny@gentoo.org> +libsoundtouch-1.8.0-r1.ebuild:
+  Enable multilib support, bug #510686.
 
   11 May 2014; Agostino Sarubbo <ago@gentoo.org> libsoundtouch-1.8.0.ebuild:
   Stable for ppc64, wrt bug #502842
