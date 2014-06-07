@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.13.ebuild,v 1.1 2014/06/01 08:25:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.13.ebuild,v 1.2 2014/06/07 17:38:04 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -103,6 +103,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/pypam[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]
 
+	x11-themes/gnome-themes-standard[gtk]
 	x11-themes/gnome-icon-theme-symbolic
 
 	gnome-extra/nemo

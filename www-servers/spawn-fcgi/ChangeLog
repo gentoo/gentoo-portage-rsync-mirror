@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.42 2014/05/12 06:57:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.43 2014/06/07 17:50:51 mrueg Exp $
+
+*spawn-fcgi-1.6.4 (07 Jun 2014)
+
+  07 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +spawn-fcgi-1.6.4.ebuild:
+  Version bump.
 
 *spawn-fcgi-1.6.3-r2 (12 May 2014)
 

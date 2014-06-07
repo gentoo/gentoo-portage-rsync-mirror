@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.493 2014/06/01 07:59:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.494 2014/06/07 17:48:35 alonbl Exp $
+
+  07 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/gnutls-2.12.20-glibc-2.16.patch, -files/gnutls-3.3.1-guile.patch,
+  -files/gnutls-3.3.2-build-out-of-tree.patch, -gnutls-3.2.11.ebuild,
+  -gnutls-3.2.12.1.ebuild, -gnutls-3.2.12.ebuild, -gnutls-3.2.13.ebuild,
+  -gnutls-3.2.14.ebuild, -gnutls-3.3.1-r1.ebuild, -gnutls-3.3.1.ebuild,
+  -gnutls-3.3.2.ebuild:
+  Cleanup old
 
 *gnutls-3.3.4 (01 Jun 2014)
 *gnutls-3.2.15 (01 Jun 2014)
