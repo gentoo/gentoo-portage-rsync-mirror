@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/naev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.20 2014/05/15 17:06:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.21 2014/06/07 04:02:33 mr_bones_ Exp $
+
+  07 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> naev-0.5.3.ebuild:
+  EAPI=5; build with --as-needed (bug #510458)
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> naev-0.5.3.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

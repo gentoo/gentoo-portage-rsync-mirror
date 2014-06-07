@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.8 2014/05/15 17:06:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.9 2014/06/07 04:02:33 mr_bones_ Exp $
 
-EAPI=2
-inherit gnome2-utils games
+EAPI=5
+inherit flag-o-matic gnome2-utils games
 
 DESCRIPTION="A 2D space trading and combat game, in a similar vein to Escape Velocity"
 HOMEPAGE="http://code.google.com/p/naev/"
@@ -33,9 +33,9 @@ src_unpack() {
 }
 
 src_configure() {
+	append-libs -lm -lvorbis
 	egamesconf \
 		--docdir=/usr/share/doc/${PF} \
-		--disable-dependency-tracking \
 		$(use_enable debug) \
 		$(use_with openal) \
 		$(use_with mixer sdlmixer)
@@ -50,18 +50,17 @@ src_install() {
 		DESTDIR="${D}" \
 		appicondir=/usr/share/pixmaps \
 		Graphicsdir=/usr/share/applications \
-		install || die
+		install
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	newins "${DISTDIR}"/ndata-${PV} ndata || die
+	newins "${DISTDIR}"/ndata-${PV} ndata
 
 	local res
 	for res in 16 32 64 128; do
-		newicon -s ${res} extras/logos/logo${res}.png naev.png || die
+		newicon -s ${res} extras/logos/logo${res}.png naev.png
 	done
 
 	rm -f "${D}"/usr/share/doc/${PF}/LICENSE
-	prepalldocs
 
 	prepgamesdirs
 }
