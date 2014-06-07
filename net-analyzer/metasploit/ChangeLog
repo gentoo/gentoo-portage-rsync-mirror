@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.94 2014/05/30 14:18:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.95 2014/06/07 21:32:00 zerochaos Exp $
+
+*metasploit-4.9.3 (07 Jun 2014)
+
+  07 Jun 2014; Rick Farina <zerochaos@gentoo.org> +metasploit-4.9.3.ebuild,
+  -metasploit-4.9.2-r2.ebuild:
+  4.9.3 bump, include openssl fixes for recent vuln
 
   30 May 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
   fix for bug 511690

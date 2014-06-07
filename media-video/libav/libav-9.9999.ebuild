@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.11 2014/05/15 17:12:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.12 2014/06/07 21:32:06 mgorny Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999 ]] ; then
 	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
 fi
 
-inherit eutils flag-o-matic multilib toolchain-funcs ${SCM}
+inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs ${SCM}
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video."
 HOMEPAGE="http://libav.org/"
@@ -44,75 +44,80 @@ for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
 done
 
-TOOLS="aviocat graph2dot ismindex pktdumper qt-faststart trasher"
-
 RDEPEND="
 	!media-video/ffmpeg:0
-	alsa? ( media-libs/alsa-lib )
-	amr? ( media-libs/opencore-amr )
-	bzip2? ( app-arch/bzip2 )
+	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
+	amr? ( media-libs/opencore-amr[${MULTILIB_USEDEP}] )
+	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
 	cdio? (
 		|| (
-			dev-libs/libcdio-paranoia
-			<dev-libs/libcdio-0.90[-minimal]
+			dev-libs/libcdio-paranoia[${MULTILIB_USEDEP}]
+			<dev-libs/libcdio-0.90[-minimal,${MULTILIB_USEDEP}]
 		)
 	)
 	encode? (
-		aac? ( media-libs/vo-aacenc )
-		amr? ( media-libs/vo-amrwbenc )
-		faac? ( media-libs/faac )
-		fdk? ( media-libs/fdk-aac )
-		mp3? ( >=media-sound/lame-3.98.3 )
+		aac? ( media-libs/vo-aacenc[${MULTILIB_USEDEP}] )
+		amr? ( media-libs/vo-amrwbenc[${MULTILIB_USEDEP}] )
+		faac? ( media-libs/faac[${MULTILIB_USEDEP}] )
+		fdk? ( media-libs/fdk-aac[${MULTILIB_USEDEP}] )
+		mp3? ( >=media-sound/lame-3.98.3[${MULTILIB_USEDEP}] )
 		theora? (
-			>=media-libs/libtheora-1.1.1[encode]
-			media-libs/libogg
+			>=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}]
+			media-libs/libogg[${MULTILIB_USEDEP}]
 		)
-		vorbis? ( media-libs/libvorbis media-libs/libogg )
-		x264? ( >=media-libs/x264-0.0.20111017:= )
-		xvid? ( >=media-libs/xvid-1.1.0 )
+		vorbis? (
+			media-libs/libvorbis[${MULTILIB_USEDEP}]
+			media-libs/libogg[${MULTILIB_USEDEP}]
+		)
+		x264? ( >=media-libs/x264-0.0.20111017:=[${MULTILIB_USEDEP}] )
+		xvid? ( >=media-libs/xvid-1.1.0[${MULTILIB_USEDEP}] )
 	)
 	frei0r? ( media-plugins/frei0r-plugins )
-	gsm? ( >=media-sound/gsm-1.0.12-r1 )
+	gsm? ( >=media-sound/gsm-1.0.12-r1[${MULTILIB_USEDEP}] )
 	ieee1394? (
-		media-libs/libdc1394
-		sys-libs/libraw1394
+		media-libs/libdc1394[${MULTILIB_USEDEP}]
+		sys-libs/libraw1394[${MULTILIB_USEDEP}]
 	)
-	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0 )
-	opus? ( media-libs/opus )
-	pulseaudio? ( media-sound/pulseaudio )
-	rtmp? ( >=media-video/rtmpdump-2.2f )
+	jack? ( media-sound/jack-audio-connection-kit[${MULTILIB_USEDEP}] )
+	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0[${MULTILIB_USEDEP}] )
+	opus? ( media-libs/opus[${MULTILIB_USEDEP}] )
+	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
+	rtmp? ( >=media-video/rtmpdump-2.2f[${MULTILIB_USEDEP}] )
 	ssl? (
-		openssl? ( dev-libs/openssl )
-		!openssl? ( net-libs/gnutls )
+		openssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
+		!openssl? ( net-libs/gnutls[${MULTILIB_USEDEP}] )
 	)
-	sdl? ( >=media-libs/libsdl-1.2.13-r1[sound,video] )
-	schroedinger? ( media-libs/schroedinger )
-	speex? ( >=media-libs/speex-1.2_beta3 )
-	truetype? ( media-libs/freetype:2 )
-	vaapi? ( x11-libs/libva )
-	vdpau? ( x11-libs/libvdpau )
-	vpx? ( >=media-libs/libvpx-0.9.6 )
+	sdl? ( >=media-libs/libsdl-1.2.13-r1[sound,video,${MULTILIB_USEDEP}] )
+	schroedinger? ( media-libs/schroedinger[${MULTILIB_USEDEP}] )
+	speex? ( >=media-libs/speex-1.2_beta3[${MULTILIB_USEDEP}] )
+	truetype? ( media-libs/freetype:2[${MULTILIB_USEDEP}] )
+	vaapi? ( x11-libs/libva[${MULTILIB_USEDEP}] )
+	vdpau? ( x11-libs/libvdpau[${MULTILIB_USEDEP}] )
+	vpx? ( >=media-libs/libvpx-0.9.6[${MULTILIB_USEDEP}] )
 	X? (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXfixes
+		x11-libs/libX11[${MULTILIB_USEDEP}]
+		x11-libs/libXext[${MULTILIB_USEDEP}]
+		x11-libs/libXfixes[${MULTILIB_USEDEP}]
 	)
-	zlib? ( sys-libs/zlib )
+	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
 "
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	doc? ( app-text/texi2html )
-	ieee1394? ( virtual/pkgconfig )
+	ieee1394? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
 	mmx? ( dev-lang/yasm )
-	rtmp? ( virtual/pkgconfig )
-	schroedinger? ( virtual/pkgconfig )
-	ssl? ( virtual/pkgconfig )
+	rtmp? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
+	schroedinger? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
+	ssl? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
 	test? ( sys-devel/bc )
-	truetype? ( virtual/pkgconfig )
+	truetype? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
 	v4l? ( sys-kernel/linux-headers )
 "
+
+RDEPEND="${RDEPEND}
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3
+		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
 # faac can't be binary distributed
 # openssl support marked as nonfree
@@ -130,125 +135,129 @@ src_prepare() {
 	if [[ ${PV%_p*} != ${PV} ]]; then
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
+
+	TOOLS=( aviocat graph2dot ismindex pktdumper qt-faststart trasher )
+	use zlib && TOOLS+=( cws2fws )
+
+	MAKEOPTS+=" V=1"
 }
 
-src_configure() {
-	local myconf="${EXTRA_LIBAV_CONF}"
+multilib_src_configure() {
+	local myconf=( ${EXTRA_LIBAV_CONF} )
 	local uses i
 
-	use zlib && TOOLS+=" cws2fws"
-
-	myconf+="
+	myconf+=(
 		$(use_enable gpl)
 		$(use_enable gpl version3)
 		--enable-avfilter
-	"
+	)
 
 	# enabled by default
 	uses="debug doc network zlib"
 	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
+		use ${i} || myconf+=( --disable-${i} )
 	done
-	use bzip2 || myconf+=" --disable-bzlib"
-	use sdl || myconf+=" --disable-avplay"
+	use bzip2 || myconf+=( --disable-bzlib )
+	use sdl || myconf+=( --disable-avplay )
 
 	if use ssl; then
-		use openssl && myconf+=" --enable-openssl --enable-nonfree" \
-			|| myconf+=" --enable-gnutls"
+		use openssl && myconf+=( --enable-openssl --enable-nonfree ) \
+			|| myconf+=( --enable-gnutls )
 	fi
 
-	use custom-cflags && myconf+=" --disable-optimizations"
-	use cpudetection && myconf+=" --enable-runtime-cpudetect"
+	use custom-cflags && myconf+=( --disable-optimizations )
+	use cpudetection && myconf+=( --enable-runtime-cpudetect )
 
-	use vdpau || myconf+=" --disable-vdpau"
+	use vdpau || myconf+=( --disable-vdpau )
 
-	use vaapi && myconf+=" --enable-vaapi"
+	use vaapi && myconf+=( --enable-vaapi )
 
 	# Encoders
 	if use encode; then
-		use faac && myconf+=" --enable-nonfree"
-		use fdk && myconf+=" --enable-nonfree --enable-libfdk-aac"
-		use mp3 && myconf+=" --enable-libmp3lame"
-		use amr && myconf+=" --enable-libvo-amrwbenc"
-		use aac && myconf+=" --enable-libvo-aacenc"
+		use faac && myconf+=( --enable-nonfree )
+		use fdk && myconf+=( --enable-nonfree --enable-libfdk-aac )
+		use mp3 && myconf+=( --enable-libmp3lame )
+		use amr && myconf+=( --enable-libvo-amrwbenc )
+		use aac && myconf+=( --enable-libvo-aacenc )
 		uses="faac theora vorbis x264 xvid"
 		for i in ${uses}; do
-			use ${i} && myconf+=" --enable-lib${i}"
+			use ${i} && myconf+=( --enable-lib${i} )
 		done
 	else
-		myconf+=" --disable-encoders"
+		myconf+=( --disable-encoders )
 	fi
 
 	# libavdevice options
-	use cdio && myconf+=" --enable-libcdio"
-	use ieee1394 && myconf+=" --enable-libdc1394"
-	use pulseaudio && myconf+=" --enable-libpulse"
+	use cdio && myconf+=( --enable-libcdio )
+	use ieee1394 && myconf+=( --enable-libdc1394 )
+	use pulseaudio && myconf+=( --enable-libpulse )
 
 	# Indevs
 	# v4l1 is gone since linux-headers-2.6.38
-	myconf+=" --disable-indev=v4l"
-	use v4l || myconf+=" --disable-indev=v4l2"
+	myconf+=( --disable-indev=v4l )
+	use v4l || myconf+=( --disable-indev=v4l2 )
 	for i in alsa oss jack; do
-		use ${i} || myconf+=" --disable-indev=${i}"
+		use ${i} || myconf+=( --disable-indev=${i} )
 	done
-	use X && myconf+=" --enable-x11grab"
+	use X && myconf+=( --enable-x11grab )
 	# Outdevs
 	for i in alsa oss ; do
-		use ${i} || myconf+=" --disable-outdev=${i}"
+		use ${i} || myconf+=( --disable-outdev=${i} )
 	done
 	# libavfilter options
-	use frei0r && myconf+=" --enable-frei0r"
-	use truetype &&  myconf+=" --enable-libfreetype"
+	multilib_is_native_abi && use frei0r && myconf+=( --enable-frei0r )
+	use truetype &&  myconf+=( --enable-libfreetype )
 
 	# Threads; we only support pthread for now
-	use threads && myconf+=" --enable-pthreads"
+	use threads && myconf+=( --enable-pthreads )
 
 	# Decoders
-	use amr && myconf+=" --enable-libopencore-amrwb --enable-libopencore-amrnb"
+	use amr && myconf+=( --enable-libopencore-amrwb --enable-libopencore-amrnb )
 	uses="gsm opus rtmp schroedinger speex vpx"
 	for i in ${uses}; do
-		use ${i} && myconf+=" --enable-lib${i}"
+		use ${i} && myconf+=( --enable-lib${i} )
 	done
-	use jpeg2k && myconf+=" --enable-libopenjpeg"
+	use jpeg2k && myconf+=( --enable-libopenjpeg )
 
 	# CPU features
 	for i in ${CPU_FEATURES}; do
-		use ${i%:*} || myconf+=" --disable-${i#*:}"
+		use ${i%:*} || myconf+=( --disable-${i#*:} )
 	done
 
 	# pass the right -mfpu as extra
-	use neon && myconf+=" --extra-cflags=-mfpu=neon"
+	use neon && myconf+=( --extra-cflags=-mfpu=neon )
 
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
-	if use pic && use x86 ; then
-		myconf+=" --disable-mmx --disable-mmxext"
+	if use pic && [[ ${ABI} == x86 ]] ; then
+		myconf+=( --disable-mmx --disable-mmxext )
 	fi
 
 	# Option to force building pic
-	use pic && myconf+=" --enable-pic"
+	use pic && myconf+=( --enable-pic )
 
 	# cross compile support
 	if tc-is-cross-compiler ; then
-		myconf+=" --enable-cross-compile --arch=$(tc-arch-kernel) --cross-prefix=${CHOST}-"
+		myconf+=( --enable-cross-compile --arch=$(tc-arch-kernel) --cross-prefix=${CHOST}- )
 		case ${CHOST} in
 			*freebsd*)
-				myconf+=" --target-os=freebsd"
+				myconf+=( --target-os=freebsd )
 				;;
 			mingw32*)
-				myconf+=" --target-os=mingw32"
+				myconf+=( --target-os=mingw32 )
 				;;
 			*linux*)
-				myconf+=" --target-os=linux"
+				myconf+=( --target-os=linux )
 				;;
 		esac
 	fi
 
 	# Misc stuff
-	use hardcoded-tables && myconf+=" --enable-hardcoded-tables"
+	use hardcoded-tables && myconf+=( --enable-hardcoded-tables )
 
 	# Specific workarounds for too-few-registers arch...
-	if [[ $(tc-arch) == "x86" ]]; then
+	if [[ ${ABI} == x86 ]]; then
+		local CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
 		filter-flags -fforce-addr -momit-leaf-frame-pointer
 		append-flags -fomit-frame-pointer
 		is-flag -O? || append-flags -O2
@@ -262,8 +271,7 @@ src_configure() {
 		fi
 	fi
 
-	cd "${S}"
-	./configure \
+	"${S}"/configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--shlibdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -274,43 +282,36 @@ src_configure() {
 		--optflags="${CFLAGS}" \
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable static-libs static) \
-		${myconf} || die
-
-	MAKEOPTS+=" V=1"
+		"${myconf[@]}" || die
 }
 
-src_compile() {
-	local i
-
+multilib_src_compile() {
 	emake
 
-	if use tools; then
+	if multilib_is_native_abi && use tools; then
 		tc-export CC
 
-		for i in ${TOOLS}; do
-			emake tools/${i}
-		done
+		emake ${TOOLS[@]/#/tools/}
 	fi
 }
 
-src_install() {
-	local i
-
+multilib_src_install() {
 	emake DESTDIR="${D}" install install-man
 
-	dodoc Changelog README INSTALL
-	dodoc doc/*.txt
 	use doc && dodoc doc/*.html
 
-	if use tools; then
-		for i in ${TOOLS}; do
-			dobin tools/${i}
-		done
+	if multilib_is_native_abi && use tools; then
+		dobin ${TOOLS[@]/#/tools/}
 	fi
 }
 
-src_test() {
+multilib_src_install_all() {
+	dodoc Changelog README INSTALL
+	dodoc doc/*.txt
+}
+
+multilib_src_test() {
 	echo ${WORKDIR}/fate
-	LD_LIBRARY_PATH="${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavresample:${S}/libavutil" \
+	LD_LIBRARY_PATH="${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavresample:${BUILD_DIR}/libavutil" \
 		emake -j1 fate SAMPLES="${WORKDIR}/fate"
 }

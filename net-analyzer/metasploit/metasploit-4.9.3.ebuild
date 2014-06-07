@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.2-r2.ebuild,v 1.1 2014/04/21 19:20:05 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.9.3.ebuild,v 1.1 2014/06/07 21:32:00 zerochaos Exp $
 
 EAPI="5"
 
@@ -31,6 +31,7 @@ IUSE="development +java lorcon oracle +pcap test"
 RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
+	=dev-ruby/rkelly-remix-0.0.6
 	dev-ruby/bcrypt-ruby
 	dev-ruby/activesupport:3.2
 	dev-ruby/activerecord:3.2
@@ -38,6 +39,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasploit_data_models-0.17.0
 	dev-ruby/msgpack
 	dev-ruby/nokogiri
+	dev-ruby/sqlite3
 	dev-ruby/builder:3
 	>=dev-ruby/pg-0.11
 	=dev-ruby/packetfu-1.1.9
@@ -50,17 +52,19 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	pcap? ( dev-ruby/pcaprub
 		dev-ruby/network_interface )
 	dev-ruby/bundler
-	development? ( dev-ruby/redcarpet
+	development? ( dev-ruby/fivemat
+			dev-ruby/redcarpet
 			dev-ruby/yard
-			dev-ruby/rake
+			>=dev-ruby/rake-10.0.0
 			>=dev-ruby/factory_girl-4.1.0 )"
 ruby_add_bdepend "${RUBY_COMMON_DEPEND}
 		test? ( >=dev-ruby/factory_girl-4.1.0
-		dev-ruby/database_cleaner
-		>=dev-ruby/rspec-2.12
-		dev-ruby/shoulda-matchers
-		dev-ruby/timecop )"
-		#>=dev-ruby/rake-10.0.0[ruby_targets_ruby19] re-add when in gentoo. I'm not allowed to add it :-(
+			dev-ruby/fivemat
+			dev-ruby/database_cleaner
+			>=dev-ruby/rspec-2.12
+			dev-ruby/shoulda-matchers
+			dev-ruby/timecop
+			>=dev-ruby/rake-10.0.0 )"
 ruby_add_rdepend "${RUBY_COMMON_DEPEND}"
 
 COMMON_DEPEND="dev-db/postgresql-server
@@ -68,7 +72,7 @@ COMMON_DEPEND="dev-db/postgresql-server
 	net-analyzer/nmap"
 DEPEND+=" ${COMMON_DEPEND}"
 RDEPEND+=" ${COMMON_DEPEND}
-	>=app-admin/eselect-metasploit-0.10"
+	>=app-admin/eselect-metasploit-0.13"
 
 RESTRICT="strip"
 
@@ -140,14 +144,11 @@ all_ruby_prepare() {
 	#The Gemfile contains real known deps
 	#add our dep on upstream rb-readline instead of bundled one
 	sed -i "/gem 'packetfu'/a #use upstream readline instead of bundled\ngem 'rb-readline'" Gemfile || die
+	sed -i "/gem 'fivemat'/s/, '1.2.1'//" Gemfile || die
 	#remove the bundled readline
 	#https://github.com/rapid7/metasploit-framework/pull/3105
+	#this PR was closed due to numerous changes to their local fork, almost entirely for non-linux
 	rm lib/rbreadline.rb
-	#fix for bug #507816 while waiting on upstream to actually set their own deps right
-	sed -i "s#gem 'activesupport', '>= 3.0.0'#gem 'activesupport', '~> 3.2'#" Gemfile || die
-	sed -i "s#gem 'activerecord'#gem 'activerecord', '~> 3.2'#" Gemfile || die
-	#backport of upstream fix for bcrypt gem changing name, bug #508014
-	sed -i "s#bcrypt-ruby#bcrypt#" Gemfile || die
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then
@@ -203,17 +204,26 @@ each_ruby_prepare() {
 }
 
 each_ruby_test() {
-	#rake --trace spec || die
+	#review dev-python/pymongo for ways to make the test compatible with FEATURES=network-sandbox
+
+	#we bogart msfupdate so no point in trying to test it
+	rm spec/msfupdate_spec.rb || die
+	#we don't really want to be uploading to virustotal during the tests
+	rm spec/tools/virustotal_spec.rb || die
+
 	# https://dev.metasploit.com/redmine/issues/8425
-	${RUBY} -S rake db:migrate || die
-	RAILS_ENV=test MSF_DATABASE_CONFIG=config/database.yml ${RUBY} -S rake spec || die
+	${RUBY} -S bundle exec rake db:create || die
+	${RUBY} -S bundle exec rake db:migrate || die
+
+	MSF_DATABASE_CONFIG=config/database.yml ${RUBY} -S bundle exec rake  || die
 	su postgres -c "dropuser msf_test_user" || die "failed to cleanup msf_test-user"
 }
 
 each_ruby_install() {
 	#Tests have already been run, we don't need this stuff
-	rm -rf spec
-	rm -rf test
+	rm -r spec || die
+	rm -r test || die
+	rm Gemfile.lock || die
 
 	#I'm 99% sure that this will only work for as long as we only support one ruby version.  Creativity will be needed if we wish to support multiple.
 	# should be as simple as copying everything into the target...
