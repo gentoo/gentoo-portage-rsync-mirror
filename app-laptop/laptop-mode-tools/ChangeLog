@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.88 2014/05/27 18:48:57 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.89 2014/06/07 17:13:16 alonbl Exp $
+
+  07 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  laptop-mode-tools-1.64-r1.ebuild:
+  Addd iproute2 dependency, bug#511808
 
   27 May 2014; Alon Bar-Lev <alonbl@gentoo.org>
   laptop-mode-tools-1.63-r2.ebuild, laptop-mode-tools-1.63-r3.ebuild,
