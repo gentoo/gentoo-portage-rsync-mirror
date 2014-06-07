@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-3.4.ebuild,v 1.5 2014/03/31 21:14:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-3.7.ebuild,v 1.1 2014/06/07 07:04:24 idella4 Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -20,11 +20,14 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="doc test"
 DOCS="README.rst"
 
-RDEPEND=">=dev-python/python-dateutil-1.5[${PYTHON_USEDEP}]
-	dev-python/pytz[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+	test? ( ${RDEPEND}
+		virtual/python-unittest2[${PYTHON_USEDEP}]
+		dev-python/python-dateutil:0[${PYTHON_USEDEP}]
+		dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/coverage[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
 	if use doc; then
@@ -36,5 +39,7 @@ python_compile_all() {
 }
 
 python_test() {
-	nosetests -v src/icalendar/tests || die "Tests failed under ${EPYTHON}"
+	# From tox.ini
+	coverage run --source=src/icalendar --omit=*/tests/* --module pytest src/icalendar \
+		|| die "test failed under ${EPYTHON}"
 }
