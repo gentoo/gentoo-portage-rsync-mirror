@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.5 2014/03/17 00:17:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.4.1.ebuild,v 1.6 2014/06/07 11:19:27 ulm Exp $
 
 EAPI=5
-NEED_EMACS=23
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 elisp eutils

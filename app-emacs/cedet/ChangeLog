@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/cedet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.78 2012/08/15 20:20:44 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.79 2014/06/07 11:03:10 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> cedet-1.0.1.ebuild,
+  cedet-1.1.ebuild:
+  Remove redundant NEED_EMACS assignment. Specify LICENSE more precisely.
 
   15 Aug 2012; Johannes Huber <johu@gentoo.org> cedet-1.1.ebuild:
   Stable for x86, wrt bug #431378

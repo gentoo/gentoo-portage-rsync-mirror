@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.1.ebuild,v 1.5 2012/08/15 20:20:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.1.ebuild,v 1.6 2014/06/07 11:03:10 ulm Exp $
 
 EAPI=4
-NEED_EMACS=22
 
 inherit elisp
 
@@ -12,10 +11,9 @@ DESCRIPTION="CEDET: Collection of Emacs Development Environment Tools"
 HOMEPAGE="http://cedet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cedet/${MY_P}.tar.gz"
 
-LICENSE="GPL-3 FDL-1.2"
+LICENSE="GPL-3+ FDL-1.2+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
-IUSE=""
 
 S="${WORKDIR}/${MY_P}"
 SITEFILE="50${PN}-gentoo.el"
@@ -76,5 +74,5 @@ src_install() {
 		doins "${target}"
 	done <"${T}/elc-list.txt"
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }

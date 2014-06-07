@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.23 2014/05/12 16:13:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.24 2014/06/07 11:25:01 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org>
+  nxml-gentoo-schemas-20111129.ebuild:
+  Remove redundant NEED_EMACS assignment.
 
   12 May 2014; Ulrich Müller <ulm@gentoo.org>
   nxml-gentoo-schemas-20111129.ebuild:

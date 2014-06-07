@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-3.0-r1.ebuild,v 1.2 2013/04/03 20:54:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/emms-3.0-r1.ebuild,v 1.3 2014/06/07 11:16:03 ulm Exp $
 
 EAPI=5
-NEED_EMACS=22
 
 inherit elisp toolchain-funcs
 

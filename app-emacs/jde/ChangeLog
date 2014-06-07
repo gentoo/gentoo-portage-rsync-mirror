@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.52 2014/03/17 00:17:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.53 2014/06/07 11:19:27 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> jde-2.4.1.ebuild:
+  Remove redundant NEED_EMACS assignment.
 
   17 Mar 2014; Ulrich Müller <ulm@gentoo.org> jde-2.4.1.ebuild:
   Drop dependency on virtual/emacs-cedet, as CEDET is included with Emacs 23.2

@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0-r1.ebuild,v 1.3 2014/02/16 16:50:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0-r1.ebuild,v 1.4 2014/06/07 11:07:02 ulm Exp $
 
 EAPI=5
-NEED_EMACS=22
 
 inherit elisp
 

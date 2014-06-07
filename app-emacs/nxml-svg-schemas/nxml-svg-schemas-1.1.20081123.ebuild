@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/nxml-svg-schemas-1.1.20081123.ebuild,v 1.4 2012/09/26 06:56:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/nxml-svg-schemas-1.1.20081123.ebuild,v 1.5 2014/06/07 11:27:51 ulm Exp $
 
 EAPI=4
 
-NEED_EMACS=23
 inherit elisp
 
 DESCRIPTION="Extension for nxml-mode with SVG 1.1 schemas"
@@ -40,5 +39,5 @@ src_compile() {
 src_install() {
 	insinto "${SITEETC}/${PN}"
 	doins "${FILESDIR}/schemas.xml" *.rnc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }

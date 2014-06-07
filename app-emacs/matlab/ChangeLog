@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/matlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.27 2014/03/24 18:56:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.28 2014/06/07 11:21:09 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> matlab-3.3.2_pre20130829.ebuild:
+  Remove redundant NEED_EMACS assignment.
 
   24 Mar 2014; Ulrich Müller <ulm@gentoo.org>
   -matlab-3.1.0_pre20070306.ebuild, -files/51matlab-gentoo.el:

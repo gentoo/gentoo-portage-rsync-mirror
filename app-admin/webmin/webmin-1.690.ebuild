@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.680.ebuild,v 1.1 2014/05/01 16:30:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.690.ebuild,v 1.1 2014/06/07 11:29:32 hwoarang Exp $
 
-EAPI="3"
+EAPI="5"
 
-inherit eutils pam ssl-cert
+inherit eutils pam ssl-cert systemd
 
 DESCRIPTION="A web-based Unix systems administration interface"
 HOMEPAGE="http://www.webmin.com/"
@@ -114,9 +114,21 @@ src_install() {
 		-e "s:%exe%:${EROOT}usr/libexec/webmin/miniserv.pl:" \
 		-e "s:%pid%:${EROOT}var/run/webmin.pid:" \
 		-e "s:%conf%:${EROOT}etc/webmin/miniserv.conf:" \
+		-e "s:%config%:${EROOT}etc/webmin/config:" \
 		-e "s:%perllib%:${EROOT}usr/libexec/webmin:" \
 		"${ED}etc/init.d/webmin" \
 		|| die "Failed to patch the webmin init file"
+
+	# Create the systemd service file and put the neccessary variables there
+	systemd_newunit "${FILESDIR}"/webmin.service webmin.service
+	sed -i \
+		-e "s:%exe%:${EROOT}usr/libexec/webmin/miniserv.pl:" \
+		-e "s:%pid%:${EROOT}var/run/webmin.pid:" \
+		-e "s:%conf%:${EROOT}etc/webmin/miniserv.conf:" \
+		-e "s:%config%:${EROOT}etc/webmin/config:" \
+		-e "s:%perllib%:${EROOT}usr/libexec/webmin:" \
+		"${ED}$(_systemd_get_unitdir)/webmin.service" \
+		|| die "Failed to patch the webmin systemd service file"
 
 	# Setup pam
 	pamd_mimic system-auth webmin auth account session
@@ -130,7 +142,11 @@ src_install() {
 pkg_preinst() {
 	# First stop service if running so Webmin to not messup our config
 	ebegin "Stopping any running Webmin instance prior merging"
-	rc-service --ifexists -- webmin --ifstarted stop
+	if systemd_is_booted ; then
+		systemctl stop webmin.service 2>/dev/null
+	else
+		rc-service --ifexists -- webmin --ifstarted stop
+	fi
 	eend $?
 }
 
@@ -147,7 +163,11 @@ pkg_postinst() {
 	ewarn "To avoid problems, please before using any module, look at its configuration options first."
 	ewarn "(Usually there is a link at top in the right pane of Webmin for configuring the module.)"
 	ewarn
-	elog "- To make Webmin start at boot time, run: 'rc-update add webmin default'"
+	if systemd_is_booted ; then
+		elog "- To make Webmin start at boot time, run: 'systemctl enable webmin.service'"
+	else
+		elog "- To make Webmin start at boot time, run: 'rc-update add webmin default'"
+	fi
 	elog "- The default URL to connect to Webmin is: https://localhost:10000"
 	elog "- The default user that can login is: root"
 	elog "- To reconfigure Webmin in case of problems run 'emerge --config app-admin/webmin'"
@@ -156,23 +176,34 @@ pkg_postinst() {
 pkg_prerm() {
 	# First stop service if running - we do not want Webmin to mess up config
 	ebegin "Stopping any running Webmin instance prior unmerging"
-	rc-service --ifexists -- webmin --ifstarted stop
+	if systemd_is_booted ; then
+		systemctl stop webmin.service 2>/dev/null
+	else
+		rc-service --ifexists -- webmin --ifstarted stop
+	fi
 	eend $?
 }
 
 pkg_postrm() {
-	ewarn
-	ewarn "You have uninstalled Webmin, so have in mind that all cron jobs scheduled"
-	ewarn "by Webmin for its own modules, are left active and they will fail when Webmin is missing."
-	ewarn "To fix this just disable them if you intend to use Webmin again,"
-	ewarn "OR delete them if not."
-	ewarn
+	# If removing webmin completely, remind the user for the Webmin's own cron jobs.
+	if [[ ! ${REPLACED_BY_VERSION} ]]; then
+		ewarn
+		ewarn "You have uninstalled Webmin, so have in mind that all cron jobs scheduled"
+		ewarn "by Webmin for its own modules, are left active and they will fail when Webmin is missing."
+		ewarn "To fix this just disable them if you intend to use Webmin again,"
+		ewarn "OR delete them if not."
+		ewarn
+	fi
 }
 
 pkg_config(){
 	# First stop service if running
 	ebegin "Stopping any running Webmin instance"
-	rc-service --ifexists -- webmin --ifstarted stop
+	if systemd_is_booted ; then
+		systemctl stop webmin.service 2>/dev/null
+	else
+		rc-service --ifexists -- webmin --ifstarted stop
+	fi
 	eend $?
 
 	# Next set the default reset variable to 'none'

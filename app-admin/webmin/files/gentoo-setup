@@ -1,7 +1,7 @@
 #!/bin/sh
 # gentoo-setup.sh
 #
-# Version 1.1
+# Version 1.2
 #
 # A modified original Webmin setup.sh script to comply with Gentoo specifics
 #
@@ -193,6 +193,7 @@ fi
 
 # Create start, stop, restart and reload Gentoo compliant Webmin scripts
 # We use sys-apps/openrc functions which is already pulled by sys-apps/baselayout
+# or systemctl if we run under systemd
 echo "Creating start and stop scripts.."
 rm -f $config_dir/{start,stop,restart,reload}
 
@@ -201,7 +202,11 @@ cat <<END >>"$config_dir/start"
 #!/bin/sh
 
 if [ ! -f "${pidfile}" ]; then
-	rc-service --ifexists -- webmin start
+	if [[ -d /run/systemd/system ]] ; then
+		systemctl start webmin.service
+	else
+		rc-service --ifexists -- webmin start
+	fi	
 fi
 END
 
@@ -209,21 +214,33 @@ END
 cat <<END >>"$config_dir/stop"
 #!/bin/sh
 
-rc-service --ifexists -- webmin --ifstarted stop
+if [[ -d /run/systemd/system ]] ; then
+	systemctl stop webmin.service
+else
+	rc-service --ifexists -- webmin --ifstarted stop
+fi
 END
 
 # The restart script in /etc/webmin (Gentoo compliant)
 cat <<END >>"$config_dir/restart"
 #!/bin/sh
 
-rc-service --ifexists -- webmin --ifstarted restart
+if [[ -d /run/systemd/system ]] ; then
+	systemctl try-restart webmin.service
+else
+	rc-service --ifexists -- webmin --ifstarted restart
+fi
 END
 
 # The reload script in /etc/webmin (Gentoo compliant)
 cat <<END >>"$config_dir/reload"
 #!/bin/sh
 
-rc-service --ifexists -- webmin --ifstarted reload
+if [[ -d /run/systemd/system ]] ; then
+	systemctl reload-or-try-restart webmin.service
+else
+	rc-service --ifexists -- webmin --ifstarted reload
+fi
 END
 
 chmod 755 $config_dir/{start,stop,restart,reload}

@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.8.92.ebuild,v 1.5 2014/05/14 14:21:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.8.92.ebuild,v 1.6 2014/06/07 11:09:56 ulm Exp $
 
 EAPI=5
-NEED_EMACS=22
 
 inherit elisp
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/doxymacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/ChangeLog,v 1.10 2014/02/18 00:07:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/ChangeLog,v 1.11 2014/06/07 11:08:58 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> doxymacs-1.8.0-r3.ebuild:
+  Remove redundant NEED_EMACS assignment.
 
   17 Feb 2014; Ulrich Müller <ulm@gentoo.org> doxymacs-1.8.0-r3.ebuild:
   Update ebuild to EAPI 5. Specify LICENSE more precisely.

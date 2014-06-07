@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.6.14.ebuild,v 1.3 2014/03/17 00:02:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.6.14.ebuild,v 1.4 2014/06/07 11:05:17 ulm Exp $
 
 EAPI=5
-NEED_EMACS=23
 
 inherit elisp
 

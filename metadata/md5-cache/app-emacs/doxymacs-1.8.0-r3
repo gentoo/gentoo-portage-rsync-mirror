@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=>=dev-libs/libxml2-2.6.13 >=virtual/emacs-22
+DEPEND=>=dev-libs/libxml2-2.6.13 >=virtual/emacs-23
 DESCRIPTION=Doxygen editing minor mode
 EAPI=5
 HOMEPAGE=http://doxymacs.sourceforge.net/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2+
-RDEPEND=>=dev-libs/libxml2-2.6.13 >=virtual/emacs-22
+RDEPEND=>=dev-libs/libxml2-2.6.13 >=virtual/emacs-23
 SLOT=0
 SRC_URI=mirror://sourceforge/doxymacs/doxymacs-1.8.0.tar.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2a5938987d610f0f6717f6449d80dd78
+_md5_=0db030acb540018b971157b456d8dfce

@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.11 2012/07/09 18:12:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/files/init.d.webmin,v 1.12 2014/06/07 11:29:32 hwoarang Exp $
 
 
 # We do not give a choice to user for configuring these 'cause it will mess up
@@ -9,6 +9,7 @@
 WEBMIN_EXE="%exe%"
 WEBMIN_PID="%pid%"
 WEBMIN_CONF="%conf%"
+WEBMIN_CONFIG="%config%"
 
 extra_started_commands="reload"
 
@@ -18,8 +19,8 @@ depend() {
 
 checkconfig() {
 	# Check if Webmin setup has been done
-	if [ ! -f /etc/webmin/config ]; then
-		eerror "Error in Webmin's configuration. The '/etc/webmin/config' is not present."
+	if [ ! -f ${WEBMIN_CONFIG} ]; then
+		eerror "Error in Webmin's configuration. The ${WEBMIN_CONFIG} is not present."
 		eerror "Please run 'emerge --config app-admin/webmin' to fix this."
 		return 1
 	fi

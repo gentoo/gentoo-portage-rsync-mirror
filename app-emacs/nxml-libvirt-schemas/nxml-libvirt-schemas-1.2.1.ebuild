@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/nxml-libvirt-schemas-1.2.1.ebuild,v 1.1 2014/02/13 19:50:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/nxml-libvirt-schemas-1.2.1.ebuild,v 1.2 2014/06/07 11:26:49 ulm Exp $
 
 EAPI=5
 
 #BACKPORTS=
-NEED_EMACS=23
 
 inherit elisp eutils
 

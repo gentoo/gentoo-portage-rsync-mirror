@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wiki
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.21 2012/12/01 19:46:12 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.22 2014/06/07 11:14:30 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> emacs-wiki-2.72-r1.ebuild:
+  Remove redundant NEED_EMACS assignment. Specify LICENSE more precisely.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> emacs-wiki-2.72-r1.ebuild:
   Drop sparc keywords

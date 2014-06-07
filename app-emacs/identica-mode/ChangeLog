@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/identica-mode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/ChangeLog,v 1.4 2011/08/15 11:22:53 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/ChangeLog,v 1.5 2014/06/07 11:18:04 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> identica-mode-1.1-r1.ebuild:
+  Remove redundant NEED_EMACS assignment. Specify LICENSE more precisely.
 
   15 Aug 2011; Ulrich Mueller <ulm@gentoo.org> identica-mode-1.1-r1.ebuild:
   Fix build failure caused by update of elisp.eclass, bug 379225.

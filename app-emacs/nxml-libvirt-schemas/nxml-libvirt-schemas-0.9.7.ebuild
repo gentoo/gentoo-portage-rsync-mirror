@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/nxml-libvirt-schemas-0.9.7.ebuild,v 1.2 2014/02/13 19:50:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/nxml-libvirt-schemas-0.9.7.ebuild,v 1.3 2014/06/07 11:26:49 ulm Exp $
 
 EAPI=4
 
 #BACKPORTS=
-NEED_EMACS=23
 
 inherit elisp eutils
 
@@ -52,5 +51,5 @@ src_test() {
 src_install() {
 	insinto ${SITEETC}/${PN}
 	doins "${FILESDIR}/schemas.xml" docs/schemas/*.rnc
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }

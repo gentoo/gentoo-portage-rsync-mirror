@@ -1,6 +1,3 @@
-
-;;; emacs-wiki site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'emacs-wiki-mode "emacs-wiki"
   "An Emacs mode for maintaining a local Wiki database." t)
