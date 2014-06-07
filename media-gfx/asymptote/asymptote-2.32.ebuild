@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.1 2014/06/05 14:50:33 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.2 2014/06/07 07:46:21 grozin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 TEXMF=/usr/share/texmf-site
 
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	(use python || use X) && python-single-r1_pkg_setup
 }
 
 src_prepare() {
