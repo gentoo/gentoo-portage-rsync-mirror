@@ -30,12 +30,10 @@
   <flag name='hesiod'>Enable support for <pkg>net-dns/hesiod</pkg></flag>
   <flag name='imagemagick'>Use <pkg>media-gfx/imagemagick</pkg> for image
     processing</flag>
-  <flag name='leim'>Add support for Emacs input methods</flag>
   <flag name='libxml2'>Use <pkg>dev-libs/libxml2</pkg> to parse XML instead
     of the internal Lisp implementations</flag>
   <flag name='pax_kernel'>Enable building under a PaX enabled kernel
     (<pkg>sys-apps/paxctl</pkg>)</flag>
-  <flag name='sendmail'>Build Emacs with MTA support</flag>
   <flag name='source'>Install C source files and make them available for
     find-function</flag>
   <flag name='toolkit-scroll-bars'>Use the selected toolkit's scrollbars in

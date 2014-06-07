@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.624 2014/06/04 17:16:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.625 2014/06/07 10:19:07 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> -emacs-21.4-r25.ebuild,
+  -emacs-22.3-r12.ebuild, metadata.xml:
+  Remove Emacs 21 and 22, bug 394589.
 
   04 Jun 2014; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r11.ebuild:
   Avoid gcc -Wformat-security warning, bug 512426.

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.28 2014/05/30 22:11:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.29 2014/06/07 10:29:51 hwoarang Exp $
+
+  07 Jun 2014; Markos Chandras <hwoarang@gentoo.org> wildmidi-0.3.7.ebuild:
+  Fix SRC_URI. Bug #512532 by O.Sezer
 
 *wildmidi-0.3.7 (30 May 2014)
 

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=doc? ( virtual/latex-base ) >=virtual/emacs-21
+DEPEND=doc? ( virtual/latex-base ) >=virtual/emacs-23
 DESCRIPTION=Gnuplot mode for Emacs
 EAPI=5
 HOMEPAGE=http://xafs.org/BruceRavel/GnuplotMode
 IUSE=doc
 KEYWORDS=amd64 arm hppa ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2+
-RDEPEND=sci-visualization/gnuplot[-emacs(-)] >=virtual/emacs-21
+RDEPEND=sci-visualization/gnuplot[-emacs(-)] >=virtual/emacs-23
 SLOT=0
 SRC_URI=https://github.com/bruceravel/gnuplot-mode/archive/0.7.0.tar.gz -> gnuplot-mode-0.7.0.tar.gz
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3ef80315b76a67fe202830c3aa52f6dc

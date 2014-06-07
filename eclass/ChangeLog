@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1281 2014/06/04 01:17:11 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1282 2014/06/07 10:28:16 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> elisp.eclass:
+  Increase minimum Emacs version to 23, versions 21 and 22 have been removed.
 
   03 Jun 2014; Brian Evans <grknight@gentoo.org> mysql-v2.eclass:
   Sync mysql-v2 eclass from the mysql overlay.

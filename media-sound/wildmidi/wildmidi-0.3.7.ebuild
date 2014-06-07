@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.3.7.ebuild,v 1.1 2014/05/30 22:11:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.3.7.ebuild,v 1.2 2014/06/07 10:29:51 hwoarang Exp $
 
 EAPI=5
 inherit cmake-utils readme.gentoo
 
 DESCRIPTION="Midi processing library and a midi player using the gus patch set"
 HOMEPAGE="http://www.mindwerks.net/projects/wildmidi/"
-SRC_URI="http://github.com/Mindwerks/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/Mindwerks/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"

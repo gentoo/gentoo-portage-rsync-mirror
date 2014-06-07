@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=>=virtual/emacs-21
+DEPEND=>=virtual/emacs-23
 DESCRIPTION=Emacs major mode for Twitter.
 EAPI=4
 HOMEPAGE=http://twmode.sourceforge.net/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=app-crypt/gnupg >=virtual/emacs-21
+RDEPEND=app-crypt/gnupg >=virtual/emacs-23
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/twmode/twittering-mode-2.0.0.tar.gz
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=dc550b62bd3abefbb4f5a92c0897f917

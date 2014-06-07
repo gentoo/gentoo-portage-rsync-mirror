@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15764 2014/06/06 20:10:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15765 2014/06/07 10:25:47 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -174,19 +174,6 @@ games-emulation/neopocott
 # Dead for ages, now in mjpegtools, bug #492886
 # Removal in a month.
 media-video/y4mscaler
-
-# Ulrich Müller <ulm@gentoo.org> (08 May 2014)
-# SLOTs 21 and 22 of app-editors/emacs, corresponding to
-# GNU Emacs versions 21.4 and 22.3. These versions were
-# released in February 2005 and September 2008, respectively.
-# Please upgrade to >=app-editors/emacs-23 and update your
-# Emacs Lisp packages with emacs-updater.
-# Multiple security issues with temporary files, bug 509830.
-# Masked since 13 Dec 2011, removal at 07 Jun 2014. Bug 394589.
-=app-editors/emacs-21*
-=app-editors/emacs-22*
-~virtual/emacs-21
-~virtual/emacs-22
 
 # Manuel Rüger <mrueg@gentoo.org> (07 May 2014)
 # Useful for removed ruby18, no-op in ruby19 and later.

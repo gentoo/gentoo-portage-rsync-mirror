@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=app-text/openjade >=virtual/emacs-21
+DEPEND=app-text/openjade >=virtual/emacs-23
 DESCRIPTION=A GNU Emacs Major Mode for editing SGML and XML coded documents
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/psgml/ http://www.emacswiki.org/emacs/PsgmlMode
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2+ Texinfo-manual
-RDEPEND=app-text/openjade >=virtual/emacs-21
+RDEPEND=app-text/openjade >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://www.fsavigny.de/gpled-software/psgml-1.4.0.tar.gz
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=0ee4713ad28ef53fe6c54cc00f0f3e88
