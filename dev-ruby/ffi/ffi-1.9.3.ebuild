@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.3.ebuild,v 1.6 2014/04/20 08:04:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.3.ebuild,v 1.7 2014/06/07 06:38:31 graaff Exp $
 
 EAPI=5
 
@@ -37,11 +37,20 @@ ruby_add_rdepend "virtual/ruby-threads"
 all_ruby_prepare() {
 	sed -i -e '/tasks/ s:^:#:' \
 		-e '/Gem::Tasks/,/end/ s:^:#:' Rakefile || die
+
+	# Fix Makefile for tests
+	sed -i -e '/CCACHE :=/ s:^:#:' \
+		-e 's/-O2//' \
+		-e 's/^CFLAGS =/CFLAGS +=/' libtest/GNUmakefile || die
 }
 
 each_ruby_compile() {
 	${RUBY} -S rake compile || die "compile failed"
 	${RUBY} -S rake -f gen/Rakefile || die "types.conf generation failed"
+}
+
+each_ruby_test() {
+	CC=$(tc-getCC) CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" ${RUBY} -S rake specs || die
 }
 
 all_ruby_install() {

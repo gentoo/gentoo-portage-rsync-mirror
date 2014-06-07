@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.17.ebuild,v 1.1 2014/05/03 09:33:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.3.17.ebuild,v 1.2 2014/06/07 06:40:25 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -24,7 +24,7 @@ RDEPEND=">=dev-python/django-1.5.6[${PYTHON_USEDEP}]
 	virtual/python-futures[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}] )"
