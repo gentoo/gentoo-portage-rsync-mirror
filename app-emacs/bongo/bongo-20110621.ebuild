@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20110621.ebuild,v 1.2 2014/03/07 07:32:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20110621.ebuild,v 1.3 2014/06/07 10:36:05 ulm Exp $
 
 EAPI=5
-NEED_EMACS=22
 
 inherit elisp eutils
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/calfw
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calfw/ChangeLog,v 1.6 2011/10/10 08:31:25 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calfw/ChangeLog,v 1.7 2014/06/07 10:53:15 ulm Exp $
+
+  07 Jun 2014; Ulrich Müller <ulm@gentoo.org> -calfw-1.1.ebuild,
+  -calfw-1.2.ebuild, calfw-1.3.ebuild, -files/calfw-1.1-calfwel.patch:
+  Remove redundant NEED_EMACS assignment. Update EAPI to 5. Remove old.
 
 *calfw-1.3 (10 Oct 2011)
 
