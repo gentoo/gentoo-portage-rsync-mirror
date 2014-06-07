@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.130 2014/02/09 12:38:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.132 2014/06/07 12:42:55 jer Exp $
+
+  07 Jun 2014; Jeroen Roovers <jer@gentoo.org> chrony-1.30_pre1.ebuild:
+  RESTRICT=test for compile failure/downloading.
+
+*chrony-1.30_pre1 (07 Jun 2014)
+
+  07 Jun 2014; Jeroen Roovers <jer@gentoo.org> +chrony-1.30_pre1.ebuild:
+  Version bump.
 
   09 Feb 2014; Jeroen Roovers <jer@gentoo.org> -chrony-1.29-r1.ebuild:
   Old.
