@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.84 2014/03/31 21:23:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.85 2014/06/07 14:33:54 blueness Exp $
+
+*pypax-0.8.5 (07 Jun 2014)
+
+  07 Jun 2014; Anthony G. Basile <blueness@gentoo.org> +pypax-0.8.5.ebuild:
+  Version bump
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pypax-0.8.1-r1.ebuild,
   pypax-0.8.3.ebuild, pypax-0.8.4.ebuild:

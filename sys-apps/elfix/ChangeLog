@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/elfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.82 2014/01/26 12:12:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.83 2014/06/07 14:36:12 blueness Exp $
+
+*elfix-0.8.5 (07 Jun 2014)
+
+  07 Jun 2014; Anthony G. Basile <blueness@gentoo.org> +elfix-0.8.5.ebuild:
+  Version bump, adds compat with BSD and musl
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.4.ebuild:
   Stable for sparc, wrt bug #495624

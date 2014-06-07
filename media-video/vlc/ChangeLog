@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.903 2014/05/31 14:45:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.904 2014/06/07 14:44:08 tomwij Exp $
+
+  07 Jun 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
+  Remove EGL / Mac OS X from ebuild as their configure options were removed; it
+  became automagic, can attempt to look into this when doing a version bump.
 
   31 May 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
   Remove Qt5 MOC/UIC export code from live version, as it is automatically

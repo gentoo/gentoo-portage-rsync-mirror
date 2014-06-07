@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.220 2014/05/31 14:45:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.221 2014/06/07 14:44:08 tomwij Exp $
 
 EAPI="5"
 
@@ -42,12 +42,12 @@ fi
 
 IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug
-	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
+	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
-	growl httpd ieee1394 ios-vout jack jpeg kate kde libass libcaca libnotify
-	libsamplerate libtiger linsys libtar lirc live lua +macosx
-	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
-	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
+	growl httpd ieee1394 jack jpeg kate kde libass libcaca libnotify
+	libsamplerate libtiger linsys libtar lirc live lua
+	macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtkit
+	matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
@@ -76,7 +76,6 @@ RDEPEND="
 		dts? ( >=media-libs/libdca-0.0.5:0 )
 		dvbpsi? ( >=media-libs/libdvbpsi-0.2.1:0 )
 		dvd? ( >=media-libs/libdvdread-4.9:0 >=media-libs/libdvdnav-4.2.1:0 )
-		egl? ( virtual/opengl:0 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8:2.2 )
 		faad? ( >=media-libs/faad2-2.6.1:0 )
 		fdk? ( media-libs/fdk-aac:0 )
@@ -88,7 +87,6 @@ RDEPEND="
 		gnome? ( gnome-base/gnome-vfs:2 dev-libs/glib:2 )
 		gnutls? ( >=net-libs/gnutls-3.0.20:0 )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1:0 >=sys-libs/libavc1394-0.5.3:0 )
-		ios-vout? ( virtual/opengl:0 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1:0 )
 		jpeg? ( virtual/jpeg:0 )
 		kate? ( >=media-libs/libkate-0.3:0 )
@@ -102,7 +100,6 @@ RDEPEND="
 		lirc? ( app-misc/lirc:0 )
 		live? ( >=media-plugins/live-2011.12.23:0 )
 		lua? ( >=dev-lang/lua-5.1:0 )
-		macosx-vout? ( virtual/opengl:0 )
 		matroska? (	>=dev-libs/libebml-1:0= >=media-libs/libmatroska-1:0= )
 		modplug? ( >=media-libs/libmodplug-0.8.4:0 !~media-libs/libmodplug-0.8.8 )
 		mp3? ( media-libs/libmad:0 )
@@ -173,7 +170,6 @@ REQUIRED_USE="
 	cddb? ( cdda )
 	dvb? ( dvbpsi )
 	dxva2? ( avcodec )
-	egl? ( X )
 	ffmpeg? ( avcodec avformat swscale postproc )
 	fontconfig? ( truetype )
 	gnutls? ( gcrypt )
@@ -310,7 +306,6 @@ src_configure() {
 		$(use_enable dvbpsi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable dxva2) \
-		$(use_enable egl) \
 		$(use_enable encode sout) \
 		$(use_enable faad) \
 		$(use_enable fdk fdkaac) \
@@ -324,7 +319,6 @@ src_configure() {
 		$(use_enable growl) \
 		$(use_enable httpd) \
 		$(use_enable ieee1394 dv1394) \
-		$(use_enable ios-vout ios-vout2) \
 		$(use_enable jack) \
 		$(use_enable jpeg) \
 		$(use_enable kate) \
@@ -339,12 +333,10 @@ src_configure() {
 		$(use_enable lirc) \
 		$(use_enable live live555) \
 		$(use_enable lua) \
-		$(use_enable macosx-audio) \
 		$(use_enable macosx-dialog-provider) \
 		$(use_enable macosx-eyetv) \
 		$(use_enable macosx-qtkit) \
 		$(use_enable macosx-quartztext) \
-		$(use_enable macosx-vout) \
 		$(use_enable matroska mkv) \
 		$(use_enable mmx) \
 		$(use_enable modplug mod) \
@@ -404,7 +396,6 @@ src_configure() {
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-asdcp \
-		--disable-coregraphicslayer-vout \
 		--disable-coverage \
 		--disable-cprof \
 		--disable-crystalhd \
@@ -412,7 +403,6 @@ src_configure() {
 		--disable-gles1 \
 		--disable-gles2 \
 		--disable-goom \
-		--disable-ios-audio \
 		--disable-kai \
 		--disable-kva \
 		--disable-maintainer-mode \
