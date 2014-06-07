@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.5.0.ebuild,v 1.6 2014/03/24 15:05:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.5.0.ebuild,v 1.7 2014/06/07 19:50:48 djc Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="selinux test"
 
 RDEPEND=">=dev-libs/icu-4.3.1:=
-		dev-lang/erlang[ssl]
+		<dev-lang/erlang-17[ssl]
 		>=dev-libs/openssl-0.9.8j:0
 		>=net-misc/curl-7.18.2
 		<dev-lang/spidermonkey-1.8.7

@@ -1,6 +1,13 @@
 # ChangeLog for net-print/splix
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.28 2013/08/16 09:30:33 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.29 2014/06/07 19:45:32 voyageur Exp $
+
+*splix-2.0.0_p20130826 (07 Jun 2014)
+
+  07 Jun 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +splix-2.0.0_p20130826.ebuild:
+  Bump to latest snapshot, adds some new models support and some fixes. Also
+  fetch cms tarball from my devspace
 
   16 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -splix-2.0.0_p20110219-r1.ebuild:
   Cleanup.

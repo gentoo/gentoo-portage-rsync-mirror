@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.73 2014/03/05 15:18:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.74 2014/06/07 19:52:33 jer Exp $
+
+  07 Jun 2014; Jeroen Roovers <jer@gentoo.org> -nut-18.10.ebuild,
+  -nut-18.8.ebuild, -nut-18.9.ebuild, -nut-19.0.ebuild:
+  Old.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nut-19.1.ebuild:
   Stable for ppc, wrt bug #491928
