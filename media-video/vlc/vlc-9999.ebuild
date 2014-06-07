@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.221 2014/06/07 14:44:08 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.222 2014/06/07 15:36:57 tomwij Exp $
 
 EAPI="5"
 
@@ -114,7 +114,7 @@ RDEPEND="
 		png? ( media-libs/libpng:0= sys-libs/zlib:0 )
 		postproc? ( || ( >=media-video/ffmpeg-1.2:0= media-libs/libpostproc:0 ) )
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
-		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
+		pulseaudio? ( >=media-sound/pulseaudio-1:0 )
 		qt4? ( >=dev-qt/qtgui-4.6:4 >=dev-qt/qtcore-4.6:4 )
 		qt5? ( >=dev-qt/qtgui-5.1:5 >=dev-qt/qtcore-5.1:5 dev-qt/qtwidgets:5 )
 		rdp? ( >=net-misc/freerdp-1.0.1:0= )
@@ -127,7 +127,7 @@ RDEPEND="
 		sid? ( media-libs/libsidplay:2 )
 		skins? ( x11-libs/libXext:0 x11-libs/libXpm:0 x11-libs/libXinerama:0 )
 		speex? ( media-libs/speex:0 )
-		svg? ( >=gnome-base/librsvg-2.9:2 )
+		svg? ( >=gnome-base/librsvg-2.9:2 >=x11-libs/cairo-1.13.1:0 )
 		swscale? ( virtual/ffmpeg:0 )
 		taglib? ( >=media-libs/taglib-1.9:0 sys-libs/zlib:0 )
 		theora? ( >=media-libs/libtheora-1.0_beta3:0 )
@@ -144,7 +144,13 @@ RDEPEND="
 # Temporarily block non-live FFMPEG versions as they break vdpau, 9999 works;
 # thus we'll have to wait for a new release there.
 RDEPEND="${RDEPEND}
-		vdpau? ( >=x11-libs/libvdpau-0.6:0 !<media-video/libav-10_beta1 !<media-video/ffmpeg-9999 )
+		vdpau? (
+			>=x11-libs/libvdpau-0.6:0
+			|| (
+				>=media-video/ffmpeg-1.2:0=
+				>=media-video/libav-10:0=
+			)
+		)
 		vnc? ( >=net-libs/libvncserver-0.9.9:0 )
 		vorbis? ( >=media-libs/libvorbis-1.1:0 )
 		vpx? ( media-libs/libvpx:0 )
@@ -372,6 +378,7 @@ src_configure() {
 		$(use_enable speex) \
 		$(use_enable sse) \
 		$(use_enable svg) \
+		$(use_enable svg svgdec) \
 		$(use_enable swscale) \
 		$(use_enable taglib) \
 		$(use_enable theora) \
@@ -408,6 +415,8 @@ src_configure() {
 		--disable-maintainer-mode \
 		--disable-merge-ffmpeg \
 		--disable-mfx \
+		--disable-mmal-codec \
+		--disable-mmal-vout \
 		--disable-opensles \
 		--disable-oss \
 		--disable-quicktime \

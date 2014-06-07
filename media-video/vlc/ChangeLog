@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.904 2014/06/07 14:44:08 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.905 2014/06/07 15:36:57 tomwij Exp $
+
+  07 Jun 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
+  Fix up more dependencies, a more thorough check follows later.
 
   07 Jun 2014; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
   Remove EGL / Mac OS X from ebuild as their configure options were removed; it
