@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/mate-dialogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-dialogs/ChangeLog,v 1.5 2014/05/04 14:54:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-dialogs/ChangeLog,v 1.6 2014/06/07 16:39:41 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mate-dialogs-1.8.0.ebuild:
+  Add ~x86, wrt bug #508072
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> mate-dialogs-1.6.2.ebuild:
   Stable for amd64, wrt bug #509268

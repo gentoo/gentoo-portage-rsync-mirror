@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-panel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.10 2014/05/04 22:20:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.11 2014/06/07 16:39:31 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mate-panel-1.8.0.ebuild:
+  Add ~x86, wrt bug #508072
 
   04 May 2014; Tom Wijsman <TomWij@gentoo.org> mate-panel-1.6.1.ebuild:
   Restrict upper limit for mate-desktop dependency of mate-panel due to

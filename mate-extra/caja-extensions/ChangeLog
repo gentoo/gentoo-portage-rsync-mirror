@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/caja-extensions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/caja-extensions/ChangeLog,v 1.1 2014/05/04 21:43:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/caja-extensions/ChangeLog,v 1.2 2014/06/07 16:39:37 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> caja-extensions-1.8.0.ebuild:
+  Add ~x86, wrt bug #508072
 
 *caja-extensions-1.8.0 (04 May 2014)
 

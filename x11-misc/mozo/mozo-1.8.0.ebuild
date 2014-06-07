@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mozo/mozo-1.8.0.ebuild,v 1.1 2014/05/04 22:40:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mozo/mozo-1.8.0.ebuild,v 1.2 2014/06/07 16:40:05 ago Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND=">=dev-python/pygobject-2.15.1:2[${PYTHON_USEDEP}]
 	>=dev-python/pygtk-2.13:2[${PYTHON_USEDEP}]

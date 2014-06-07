@@ -4,10 +4,10 @@ DESCRIPTION=Multimedia related programs for the MATE desktop
 EAPI=5
 HOMEPAGE=http://mate-desktop.org
 IUSE=aac flac mp3 pulseaudio speex twolame vorbis debug
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2 GPL-2 FDL-1.1
 RDEPEND=app-text/rarian:0 dev-libs/libxml2:2 >=dev-libs/glib-2.18.2:2 >=x11-libs/gtk+-2.24:2 >=mate-base/mate-panel-1.8:0 >=mate-base/mate-desktop-1.8:0 >=media-libs/gstreamer-0.10.23:0.10 >=media-libs/gst-plugins-base-0.10.23:0.10 >=media-libs/gst-plugins-good-0.10:0.10 >=media-libs/libcanberra-0.13:0[gtk] >=media-plugins/gst-plugins-meta-0.10-r2:0.10 >=media-plugins/gst-plugins-gconf-0.10.1:0.10 >=dev-libs/libunique-1:1 x11-libs/cairo:0 x11-libs/pango:0 virtual/libintl:0 pulseaudio? ( >=media-sound/pulseaudio-0.9.16:0[glib] ) >=media-plugins/gst-plugins-meta-0.10:0.10[flac?,vorbis?] aac? ( >=media-plugins/gst-plugins-faac-0.10.23:0.10 >=media-plugins/gst-plugins-ffmpeg-0.10:0.10 ) mp3? ( >=media-libs/gst-plugins-ugly-0.10:0.10 >=media-plugins/gst-plugins-taglib-0.10.23:0.10 >=media-plugins/gst-plugins-lame-0.10:0.10 ) speex? ( >=media-plugins/gst-plugins-ogg-0.10.23:0.10 >=media-plugins/gst-plugins-speex-0.10.23:0.10 ) twolame? ( >=media-plugins/gst-plugins-taglib-0.10.23:0.10 >=media-plugins/gst-plugins-twolame-0.10:0.10 )
 SLOT=0
 SRC_URI=http://pub.mate-desktop.org/releases/1.8/mate-media-1.8.0.tar.xz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=65c68a5e4dca5c5b0664249fee641b97
+_md5_=4efe7a2692d429c8ff197d1d6b0648d9

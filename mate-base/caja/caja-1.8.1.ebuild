@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/caja-1.8.1.ebuild,v 1.1 2014/05/09 11:54:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/caja-1.8.1.ebuild,v 1.2 2014/06/07 16:39:15 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="X +mate +introspection +unique xmp"
 

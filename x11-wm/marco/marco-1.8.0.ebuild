@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/marco/marco-1.8.0.ebuild,v 1.2 2014/05/31 10:26:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/marco/marco-1.8.0.ebuild,v 1.3 2014/06/07 16:40:17 ago Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://mate-desktop.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="startup-notification test xinerama"
 
 RDEPEND="

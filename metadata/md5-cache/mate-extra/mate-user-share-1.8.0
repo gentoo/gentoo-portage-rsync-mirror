@@ -4,10 +4,10 @@ DESCRIPTION=Personal file sharing for the MATE desktop
 EAPI=5
 HOMEPAGE=http://www.mate-desktop.org/
 IUSE=X bluetooth
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=app-mobilephone/obex-data-server-0.4:0 >=dev-libs/dbus-glib-0.70:0 >=dev-libs/glib-2.15.2:2 >=dev-libs/libunique-1:1 || ( >=mate-base/caja-1.8:0 >=mate-base/mate-file-manager-1.6:0 ) media-libs/libcanberra:0[gtk] >=sys-apps/dbus-1.1.1:0 >=x11-libs/gdk-pixbuf-2:2 >=x11-libs/gtk+-2.14:2 x11-libs/libX11:0 x11-libs/pango:0 >=x11-libs/libnotify-0.7:0 >=www-apache/mod_dnssd-0.6:0 =www-servers/apache-2.2*:2[apache2_modules_dav,apache2_modules_dav_fs,apache2_modules_authn_file,apache2_modules_auth_digest,apache2_modules_authz_groupfile] virtual/libintl:0 bluetooth? ( >=net-wireless/mate-bluetooth-1.6:0 >=net-wireless/bluez-4.18:0= )
 SLOT=0
 SRC_URI=http://pub.mate-desktop.org/releases/1.8/mate-user-share-1.8.0.tar.xz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=b76dfa9cf6b9e8ae0e26d03531de696b
+_md5_=63d21f70c861fe1bf1bbf3f819525304

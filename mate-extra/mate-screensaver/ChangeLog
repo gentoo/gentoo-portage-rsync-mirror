@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/mate-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.8 2014/05/16 14:53:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.9 2014/06/07 16:39:49 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mate-screensaver-1.8.0.ebuild:
+  Add ~x86, wrt bug #508072
 
   16 May 2014; Tom Wijsman <TomWij@gentoo.org> mate-screensaver-1.6.1-r2.ebuild:
   Add eautoreconf; fixes bug #510002, reported by Pacho.

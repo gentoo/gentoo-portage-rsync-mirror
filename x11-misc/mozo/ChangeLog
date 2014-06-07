@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/mozo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mozo/ChangeLog,v 1.1 2014/05/04 22:40:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mozo/ChangeLog,v 1.2 2014/06/07 16:40:05 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mozo-1.8.0.ebuild:
+  Add ~x86, wrt bug #508072
 
 *mozo-1.8.0 (04 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/marco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/marco/ChangeLog,v 1.2 2014/05/31 10:26:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/marco/ChangeLog,v 1.3 2014/06/07 16:40:17 ago Exp $
+
+  07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> marco-1.8.0.ebuild:
+  Add ~x86, wrt bug #508072
 
   31 May 2014; Pacho Ramos <pacho@gentoo.org> marco-1.8.0.ebuild:
   Needs to be rebuilt with libgtop soname bumps
