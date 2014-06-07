@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.0.0_beta3.ebuild,v 1.1 2014/03/19 23:17:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.0.0.ebuild,v 1.1 2014/06/07 13:57:37 dilfridge Exp $
 
 EAPI=5
 
@@ -21,16 +21,15 @@ MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Digital photo management application for KDE"
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://kde/unstable/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
+IUSE="addressbook debug doc gphoto2 mysql nepomuk themedesigner +thumbnails video"
 
 CDEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep kdebase-kioslaves)
 	kde-base/libkdcraw:4=
 	kde-base/libkexiv2:4=
@@ -51,9 +50,10 @@ CDEPEND="
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2:= )
 	mysql? ( virtual/mysql )
-	semantic-desktop? (
+	nepomuk? (
 		dev-libs/shared-desktop-ontologies
 		dev-libs/soprano
+		$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
 		$(add_kdebase_dep nepomuk-core)
 	)
 "
@@ -118,12 +118,12 @@ src_configure() {
 		-DWITH_MarbleWidget=ON
 		$(cmake-utils_use_enable gphoto2 GPHOTO2)
 		$(cmake-utils_use_with gphoto2)
-		$(cmake-utils_use_with semantic-desktop Soprano)
+		$(cmake-utils_use_with nepomuk Soprano)
 		$(cmake-utils_use_enable themedesigner)
 		$(cmake-utils_use_enable thumbnails THUMBS_DB)
 		$(cmake-utils_use_enable mysql INTERNALMYSQL)
 		$(cmake-utils_use_enable debug DEBUG_MESSAGES)
-		$(cmake-utils_use_enable semantic-desktop NEPOMUKSUPPORT)
+		$(cmake-utils_use_enable nepomuk NEPOMUKSUPPORT)
 	)
 
 	kde4-base_src_configure

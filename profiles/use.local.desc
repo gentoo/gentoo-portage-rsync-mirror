@@ -3258,6 +3258,7 @@ media-gfx/digikam:addressbook - Add support for kdepim
 media-gfx/digikam:linguas_ha - Hausa translation
 media-gfx/digikam:linguas_mi - Maori translation
 media-gfx/digikam:linguas_ven - Venda translation
+media-gfx/digikam:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 media-gfx/digikam:themedesigner - Build the digikam theme designer
 media-gfx/digikam:thumbnails - Enable thumbnails database support
 media-gfx/digikam:video - Pull in mplayerthumbs to enable video thumbnails

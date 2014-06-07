@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.2.ebuild,v 1.3 2014/05/03 21:30:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.3.ebuild,v 1.1 2014/06/07 13:49:23 jer Exp $
 
 EAPI=5
 
@@ -100,8 +100,27 @@ src_prepare() {
 	}
 
 	sed -i \
-		-e 's:/var/run/radiusd:/run/radiusd:' \
-		raddb/radiusd.conf || die
+		-e 's:/var/run/radiusd:/run/radiusd:g' \
+		-e '/^run_dir/s:${localstatedir}::g' \
+		raddb/radiusd.conf.in || die
+
+	# verbosity
+	# build shared libraries using jlibtool --shared
+	sed -i \
+		-e '/$(LIBTOOL)/s|--quiet ||g' \
+		-e 's:--mode=\(compile\|link\):& --shared:g' \
+		Make.inc.in || die
+
+	sed -i \
+		-e 's|--silent ||g' \
+		-e 's:--mode=\(compile\|link\):& --shared:g' \
+		scripts/libtool.mk || die
+
+	# crude measure to stop jlibtool from running ranlib and ar
+	sed -i \
+		-e '/LIBRARIAN/s|".*"|"true"|g' \
+		-e '/RANLIB/s|".*"|"true"|g' \
+		scripts/jlibtool.c || die
 
 	usesqldriver mysql
 	usesqldriver postgres postgresql
@@ -164,7 +183,11 @@ src_install() {
 	diropts
 
 	# verbose, do not install certificates
-	emake -j1 Q='' LOCAL_CERT_PRODUCTS='' R="${D}" install
+	emake -j1 \
+		Q='' ECHO=true \
+		LOCAL_CERT_PRODUCTS='' \
+		R="${D}" \
+		install
 
 	fowners -R root:radius /etc/raddb
 
