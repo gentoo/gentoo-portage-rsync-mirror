@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.9.4.ebuild,v 1.3 2014/06/04 14:00:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.9.4.ebuild,v 1.4 2014/06/08 14:18:58 blueness Exp $
 
 EAPI="5"
 
@@ -19,6 +19,9 @@ CRYPTO_OPTS="aes-gcm aes-ccm aes-ni blake2 camellia dsa ecc hc128 hkdf md2 md4 n
 CERT_OPTS="ocsp crl crl-monitor savesession savecert sessioncerts testcert"
 EXTRAS="atomicuser pkcallbacks sep maxfragment truncatedhmac tlsx"
 DEBUG="debug errorstrings memory test"
+
+# More trouble ahead, bug #512312
+RESTRICT="test"
 
 #Note: sniffer is broken at the configure.ac level.  Its not too important and we'll disable it for this release.
 #IUSE="-dtls examples extra fortress ipv6 httpd mcapi pwdbased sni sniffer static-libs threads zlib ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS} ${EXTRAS} ${DEBUG}"

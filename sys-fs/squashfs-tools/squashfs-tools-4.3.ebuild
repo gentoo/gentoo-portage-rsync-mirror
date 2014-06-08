@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.2_p20140119-r1.ebuild,v 1.6 2014/04/28 13:17:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.3.ebuild,v 1.1 2014/06/08 14:01:49 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"
 HOMEPAGE="http://squashfs.sourceforge.net"
-SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/squashfs/squashfs${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,7 +25,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${P}/squashfs-tools"
+S="${WORKDIR}/squashfs${PV}/${PN}"
 
 src_configure() {
 	# set up make command line variables in EMAKE_SQUASHFS_CONF

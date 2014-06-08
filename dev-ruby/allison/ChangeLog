@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.30 2014/04/24 17:34:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.31 2014/06/08 14:28:55 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> allison-2.0.3-r2.ebuild:
+  ia64 stable wrt bug #503564
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> allison-2.0.3-r1.ebuild,
   allison-2.0.3-r2.ebuild, allison-2.0.3-r3.ebuild:
