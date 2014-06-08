@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/plantuml/plantuml-7999.ebuild,v 1.1 2014/06/02 07:40:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/plantuml/plantuml-7999.ebuild,v 1.2 2014/06/08 17:37:55 pva Exp $
 
 EAPI="5"
 
 JAVA_PKG_IUSE="source"
-inherit eutils versionator java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="PlantUML is used to draw UML diagram, using a simple and human readable text description"
 HOMEPAGE="http://plantuml.sourceforge.net"
@@ -18,7 +18,6 @@ IUSE=""
 
 DEPEND="
 	>=virtual/jdk-1.6
-	source? ( app-arch/zip )
 "
 RDEPEND="
 	>=virtual/jre-1.6
@@ -33,8 +32,4 @@ src_install() {
 	java-pkg_dojar ${PN}.jar
 	java-pkg_dolauncher ${PN} --jar ${PN}.jar
 	use source && java-pkg_dosrc src/*
-}
-
-pkg_postinst() {
-	einfo "Goto http://plantuml.sourceforge.net/ for product info"
 }

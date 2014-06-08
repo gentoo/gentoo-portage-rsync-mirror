@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-35.0.1916.114_p1.ebuild,v 1.3 2014/06/08 17:31:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-35.0.1916.114_p1.ebuild,v 1.4 2014/06/08 17:34:44 floppym Exp $
 
 EAPI="5"
 
@@ -170,7 +170,7 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	if [[ -z ${REPLACED_BY} ]]; then
+	if [[ -z ${REPLACED_BY_VERSION} ]]; then
 		rm -f "${EROOT}${CHROME_HOME}/libudev.so.0"
 	fi
 }
