@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-3.6.ebuild,v 1.1 2014/06/07 18:40:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-3.6.ebuild,v 1.2 2014/06/08 02:11:24 alonbl Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-build.patch"
+	sed -i 's/AM_INIT_AUTOMAKE(\[\(.*\)\])/AM_INIT_AUTOMAKE([\1 -Wno-portability])/' configure.ac
 	eautoreconf
 }
 
