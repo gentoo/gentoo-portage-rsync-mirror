@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hgdistver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hgdistver/ChangeLog,v 1.10 2014/03/31 21:06:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hgdistver/ChangeLog,v 1.11 2014/06/08 11:08:24 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> hgdistver-0.16-r1.ebuild,
+  hgdistver-0.16.ebuild:
+  keyword ~ia64 wrt bug #503094
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> hgdistver-0.16-r1.ebuild:
   Add support for the new PyPy slotting.

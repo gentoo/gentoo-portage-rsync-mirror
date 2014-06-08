@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.63 2014/06/07 19:13:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.64 2014/06/08 11:07:13 ago Exp $
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> pokerth-1.1.1.ebuild:
+  Stable for ppc, wrt bug #507868
 
   07 Jun 2014; Agostino Sarubbo <ago@gentoo.org> pokerth-1.1.1.ebuild:
   Stable for x86, wrt bug #507868

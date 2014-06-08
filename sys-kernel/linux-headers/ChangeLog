@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.412 2014/05/25 18:32:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.413 2014/06/08 11:06:43 ago Exp $
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.13.ebuild:
+  Stable for ppc, wrt bug #507096
 
   25 May 2014; Mikle Kolyada <zlogene@gentoo.org> linux-headers-3.13.ebuild:
   amd64 stable wrt bug #507096

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-1.3.ebuild,v 1.3 2014/03/14 23:29:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-1.3.ebuild,v 1.4 2014/06/08 11:03:35 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://libexplain.sourceforge.net/"
 SRC_URI="http://libexplain.sourceforge.net/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3 LGPL-3"
 IUSE="doc static-libs"
 

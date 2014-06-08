@@ -1,34 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.632 2014/06/08 10:59:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.633 2014/06/08 11:30:24 ulm Exp $
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
   emacs-24.3-r6.ebuild:
-  Stable for x86, wrt bug #509830
-
-  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
-  emacs-24.3-r6.ebuild:
-  Stable for sparc, wrt bug #509830
-
-  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
-  emacs-24.3-r6.ebuild:
-  Stable for ppc, wrt bug #509830
-
-  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
-  emacs-24.3-r6.ebuild:
-  Stable for ppc64, wrt bug #509830
-
-  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
-  emacs-24.3-r6.ebuild:
-  Stable for ia64, wrt bug #509830
-
-  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
-  emacs-24.3-r6.ebuild:
-  Stable for alpha, wrt bug #509830
-
-  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
-  emacs-24.3-r6.ebuild:
-  Stable for amd64, wrt bug #509830
+  Stable for alpha, amd64, ia64, ppc, ppc64, sparc, and x86, wrt bug #509830
 
   07 Jun 2014; Ulrich Müller <ulm@gentoo.org> -emacs-21.4-r25.ebuild,
   -emacs-22.3-r12.ebuild, metadata.xml:
@@ -49,10 +25,8 @@
   Allow emul-linux-* as alternative dependency, since this is still stage I of
   the gx86-multilib roadmap. Stable on amd64 and x86, bug 510456. Remove old.
 
-  15 May 2014; Markus Meier <maekke@gentoo.org> emacs-24.3-r6.ebuild:
-  arm stable, bug #509830
-
-  15 May 2014; Markus Meier <maekke@gentoo.org> emacs-23.4-r10.ebuild:
+  15 May 2014; Markus Meier <maekke@gentoo.org> emacs-23.4-r10.ebuild,
+  emacs-24.3-r6.ebuild:
   arm stable, bug #509830
 
 *emacs-23.4-r11 (10 May 2014)
@@ -180,22 +154,10 @@
   Update dependency on virtual/jpeg.
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
-  Stable for arm, wrt bug #476702
-
-  14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
-  Stable for alpha, wrt bug #476702
+  Stable for alpha and arm, wrt bug #476702
 
   13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
-  Stable for x86, wrt bug #476702
-
-  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
-  Stable for amd64, wrt bug #476702
-
-  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
-  Stable for ppc64, wrt bug #476702
-
-  13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r2.ebuild:
-  Stable for ppc, wrt bug #476702
+  Stable for amd64, ppc, ppc64, and x86, wrt bug #476702
 
   13 Jul 2013; Jeroen Roovers <jer@gentoo.org> emacs-24.3-r2.ebuild:
   Stable for HPPA (bug #476702).
@@ -218,28 +180,16 @@
   Stable for s390, wrt bug #469874
 
   18 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for alpha, wrt bug #469874
-
-  18 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for ia64, wrt bug #469874
+  Stable for alpha and ia64, wrt bug #469874
 
   16 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for arm, wrt bug #469874
-
-  16 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for ppc64, wrt bug #469874
-
-  16 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for ppc, wrt bug #469874
+  Stable for arm, ppc, and ppc64, wrt bug #469874
 
   15 May 2013; Jeroen Roovers <jer@gentoo.org> emacs-24.3-r1.ebuild:
   Stable for HPPA (bug #469874).
 
   15 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for x86, wrt bug #469874
-
-  15 May 2013; Agostino Sarubbo <ago@gentoo.org> emacs-24.3-r1.ebuild:
-  Stable for amd64, wrt bug #469874
+  Stable for amd64 and x86, wrt bug #469874
 
 *emacs-23.4-r6 (06 Apr 2013)
 

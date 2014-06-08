@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pretend
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.9 2014/04/20 06:36:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.10 2014/06/08 11:06:05 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> pretend-1.0.7.ebuild,
+  pretend-1.0.8.ebuild:
+  keyword ~ia64 wrt bug #503094
 
   20 Apr 2014; Ian Delaney <idella4@gentoo.org> pretend-1.0.8.ebuild:
   remove unused IUSE test

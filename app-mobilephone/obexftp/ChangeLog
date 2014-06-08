@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.68 2014/05/28 19:25:04 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.69 2014/06/08 11:05:35 ago Exp $
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> obexftp-0.23-r2.ebuild:
+  Stable for ppc, wrt bug #505272
 
   28 May 2014; Chema Alonso <nimiux@gentoo.org> obexftp-0.23-r2.ebuild:
   Stable for amd64 wrt bug #505272
