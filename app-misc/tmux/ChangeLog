@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.104 2014/05/17 14:54:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.105 2014/06/08 12:21:33 jer Exp $
+
+  08 Jun 2014; Jeroen Roovers <jer@gentoo.org> tmux-1.9a.ebuild:
+  Stable for HPPA (bug #512640).
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> tmux-1.8.ebuild,
   tmux-1.9a.ebuild, tmux-9999.ebuild:

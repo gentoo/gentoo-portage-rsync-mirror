@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.181 2014/06/08 11:55:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.182 2014/06/08 12:07:28 jer Exp $
+
+  08 Jun 2014; Jeroen Roovers <jer@gentoo.org> tcpdump-4.5.1-r1.ebuild:
+  Clean up sed call, add die().
 
   08 Jun 2014; Chema Alonso <nimiux@gentoo.org> tcpdump-4.5.1-r1.ebuild:
   Stable for amd64 wrt bug #511502
