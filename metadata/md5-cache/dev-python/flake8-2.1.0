@@ -4,7 +4,7 @@ DESCRIPTION=A wrapper around PyFlakes, pep8 & mccabe
 EAPI=5
 HOMEPAGE=http://bitbucket.org/tarek/flake8
 IUSE=test python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 PDEPEND=>=dev-python/mccabe-0.2.1[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 RDEPEND=>=dev-python/pyflakes-0.7.3[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] >=dev-python/pep8-1.4.6[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
@@ -12,4 +12,4 @@ REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targe
 SLOT=0
 SRC_URI=mirror://pypi/f/flake8/flake8-2.1.0.tar.gz
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=4a4267449729bdf2bad225b6511648c2
+_md5_=59320deae3f08ff35df5803b57d596a8

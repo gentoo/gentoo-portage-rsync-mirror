@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16.ebuild,v 1.11 2014/04/20 08:31:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16.ebuild,v 1.12 2014/06/08 09:15:54 ago Exp $
 
 EAPI=5
 
@@ -10,10 +10,10 @@ if [[ ${PV} == *9999* ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://anongit.freedesktop.org/git/cairo"
 	SRC_URI=""
-	KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 else
 	SRC_URI="http://cairographics.org/releases/${P}.tar.xz"
-	KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
 DESCRIPTION="A vector graphics library with cross-device output support"
