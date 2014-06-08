@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.3 2014/04/25 04:51:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.5 2014/06/08 10:26:07 radhermit Exp $
 
 EAPI=4
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 if [[ ${PV} == *9999 ]] ; then
@@ -20,8 +20,8 @@ HOMEPAGE="http://www.pkgcore.org/"
 LICENSE="GPL-2"
 SLOT="0"
 
-RDEPEND="=sys-apps/pkgcore-9999
-	=dev-python/snakeoil-9999"
+RDEPEND="=sys-apps/pkgcore-9999[${PYTHON_USEDEP}]
+	=dev-python/snakeoil-9999[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
