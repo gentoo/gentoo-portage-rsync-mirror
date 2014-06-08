@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15770 2014/06/08 10:35:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15771 2014/06/08 12:53:55 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -87,6 +87,9 @@ dev-java/ibm-jdk-bin:1.5
 >=virtual/ffmpeg-9-r1
 >=media-libs/libpostproc-10.20140517-r1
 >=app-emulation/emul-linux-x86-medialibs-20140508-r4
+>=net-libs/libsoup-2.46.0-r1
+>=net-libs/neon-0.30.0-r1
+>=app-emulation/emul-linux-x86-baselibs-20140508-r9
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
