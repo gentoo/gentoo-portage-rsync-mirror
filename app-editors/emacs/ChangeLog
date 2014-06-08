@@ -1,6 +1,30 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.626 2014/06/08 09:42:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.632 2014/06/08 10:59:33 ago Exp $
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
+  emacs-24.3-r6.ebuild:
+  Stable for x86, wrt bug #509830
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
+  emacs-24.3-r6.ebuild:
+  Stable for sparc, wrt bug #509830
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
+  emacs-24.3-r6.ebuild:
+  Stable for ppc, wrt bug #509830
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
+  emacs-24.3-r6.ebuild:
+  Stable for ppc64, wrt bug #509830
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
+  emacs-24.3-r6.ebuild:
+  Stable for ia64, wrt bug #509830
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
+  emacs-24.3-r6.ebuild:
+  Stable for alpha, wrt bug #509830
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r11.ebuild,
   emacs-24.3-r6.ebuild:

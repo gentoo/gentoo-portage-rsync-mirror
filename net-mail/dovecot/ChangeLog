@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.481 2014/05/28 12:29:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.482 2014/06/08 10:41:12 ago Exp $
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> dovecot-2.2.13.ebuild:
+  Stable for ia64, wrt bug #509954
 
   28 May 2014; Sergey Popov <pinkbyte@gentoo.org> dovecot-2.2.13-r1.ebuild:
   Stable on amd64 and x86, wrt bug #509954
