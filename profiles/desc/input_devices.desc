@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/input_devices.desc,v 1.9 2014/05/29 17:58:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/input_devices.desc,v 1.10 2014/06/08 14:43:11 swift Exp $
 
 # This file contains descriptions of INPUT_DEVICES USE_EXPAND flags.
 
@@ -38,6 +38,7 @@ roccat_konepure - INPUT_DEVICES setting to build driver for Roccat Kone Pure inp
 roccat_konepuremilitary - INPUT_DEVICES setting to build driver for Roccat Kone Pure Military input devices
 roccat_konepureoptical - INPUT_DEVICES setting to build driver for Roccat Kone Pure Optical input devices
 roccat_konextd - INPUT_DEVICES setting to build driver for Roccat KoneXTD input devices
+roccat_konextdoptical - INPUT_DEVICES setting to build driver for Roccat KoneXTD Optical input devices
 roccat_kovaplus - INPUT_DEVICES setting to build driver for Roccat Kova[+] input devices
 roccat_lua - INPUT_DEVICES setting to build driver for Roccat Lua input devices
 roccat_pyra - INPUT_DEVICES setting to build driver for Roccat Pyra input devices
