@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/jingo
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jingo/ChangeLog,v 1.1 2014/06/08 00:34:48 idella4 Exp $
+
+*jingo-0.7 (08 Jun 2014)
+
+  08 Jun 2014; Ian Delaney <idella4@gentoo.org> +jingo-0.7.ebuild,
+  +metadata.xml:
+  new dep to testsuite of django-compressor
