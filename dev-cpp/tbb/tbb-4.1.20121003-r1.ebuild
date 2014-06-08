@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20121003-r1.ebuild,v 1.1 2013/05/02 15:58:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20121003-r1.ebuild,v 1.2 2014/06/08 08:14:26 jlec Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
@@ -83,7 +83,7 @@ src_prepare() {
 }
 
 src_compile() {
-	if [[ $(tc-getCXX) == *g++ ]]; then
+	if [[ $(tc-getCXX) == *g++* ]]; then
 		comp="gcc"
 	elif [[ $(tc-getCXX) == *ic*c ]]; then
 		comp="icc"
