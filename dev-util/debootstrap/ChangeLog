@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.259 2014/05/06 16:24:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.260 2014/06/08 15:57:14 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> debootstrap-1.0.59.ebuild:
+  ia64 stable wrt bug #506100
 
 *debootstrap-1.0.60 (06 May 2014)
 

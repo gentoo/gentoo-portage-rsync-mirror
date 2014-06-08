@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.236 2014/04/30 19:20:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.237 2014/06/08 15:57:11 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -74,8 +74,7 @@ EULA Adaptec-EULA AdobeFlash-10.3 AdobeFlash-11.x ArxFatalis-EULA-GOG ArxFatalis
 BINARY-REDISTRIBUTABLE @FREE atheros-hal Broadcom Dina hashcat intel-psb intel-ucode ipw2100-fw ipw2200-fw ipw3945 no-source-code NVIDIA-r1 qlogic-fibre-channel-firmware radeon-ucode shmux SmartLabs sun-concurrent-util sun-jlfgr
 
 # Deprecated license labels, used by repoman
-# as-is: see note in licenses/as-is and bug 436214
-DEPRECATED as-is
+#DEPRECATED as-is
 
 # Local Variables:
 # mode: conf-space

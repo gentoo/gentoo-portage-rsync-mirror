@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.71 2014/05/02 01:23:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.72 2014/06/08 16:00:08 nimiux Exp $
+
+  08 Jun 2014; Chema Alonso <nimiux@gentoo.org> pekwm-0.1.17.ebuild:
+  Stable for amd64 wrt bug #509342
 
   02 May 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Update e-mail address.
