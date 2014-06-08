@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/soxr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.18 2014/06/08 12:25:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/soxr/ChangeLog,v 1.19 2014/06/08 13:01:51 ago Exp $
+
+  08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> soxr-0.1.1.ebuild:
+  Stable for sparc, wrt bug #508372
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> soxr-0.1.1.ebuild:
   Stable for alpha, wrt bug #508372

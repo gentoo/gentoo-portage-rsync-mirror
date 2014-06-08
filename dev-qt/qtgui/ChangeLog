@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.32 2014/06/08 10:51:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.33 2014/06/08 13:29:42 pesa Exp $
+
+  08 Jun 2014; Davide Pesavento <pesa@gentoo.org> -qtgui-4.8.5-r1.ebuild:
+  Remove vulnerable version wrt bug #508984
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> qtgui-4.8.5-r2.ebuild:
   Stable for sparc, wrt bug #508984
