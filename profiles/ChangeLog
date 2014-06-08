@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9057 2014/06/08 15:57:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9058 2014/06/08 21:18:31 grknight Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jun 2014; Brian Evans <grknight@gentoo.org> thirdpartymirrors:
+  Update mysql mirror list to remove old or broken mirrors.
+  Thanks to Ben Kohler, bug 494854.
 
   08 Jun 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Comment DEPRECATED license group, its only member "as-is" is gone.
