@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.121 2014/06/06 07:17:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.122 2014/06/08 07:41:09 jlec Exp $
+
+*aufs-sources-3.14.6 (08 Jun 2014)
+
+  08 Jun 2014; Justin Lecher <jlec@gentoo.org> -aufs-sources-3.10.25.ebuild,
+  -aufs-sources-3.10.40.ebuild, -aufs-sources-3.10.41.ebuild,
+  -aufs-sources-3.12.21.ebuild, -aufs-sources-3.14.4.ebuild,
+  -aufs-sources-3.14.5.ebuild, -aufs-sources-3.14.5-r1.ebuild,
+  +aufs-sources-3.14.6.ebuild:
+  Bump to latest linux and genpatches release; drop old
 
 *aufs-sources-3.14.5-r1 (06 Jun 2014)
 *aufs-sources-3.12.21-r1 (06 Jun 2014)

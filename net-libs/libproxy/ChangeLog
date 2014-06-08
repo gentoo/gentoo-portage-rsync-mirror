@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.109 2014/02/22 22:57:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.110 2014/06/08 07:46:55 mgorny Exp $
+
+*libproxy-0.4.11-r2 (08 Jun 2014)
+
+  08 Jun 2014; Michał Górny <mgorny@gentoo.org> +libproxy-0.4.11-r2.ebuild:
+  Enable multilib support, as dependency of net-libs/glib-networking.
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libproxy-0.4.11-r1.ebuild:
   Fix wrong commit, bug 502160
