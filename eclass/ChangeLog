@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1282 2014/06/07 10:28:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1283 2014/06/08 13:57:02 mgorny Exp $
+
+  08 Jun 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Work around lack of arch defines in swig, bug #509792.
 
   07 Jun 2014; Ulrich Müller <ulm@gentoo.org> elisp.eclass:
   Increase minimum Emacs version to 23, versions 21 and 22 have been removed.

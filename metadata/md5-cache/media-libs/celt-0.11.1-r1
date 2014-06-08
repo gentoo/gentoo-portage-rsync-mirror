@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=ogg? ( media-libs/libogg )
 SLOT=0
 SRC_URI=http://downloads.us.xiph.org/releases/celt/celt-0.11.1.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	db7559a2635f4e50d9529a09ab5e01bf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=63027c2ddcba38bcfc5c08c9a30b604a
