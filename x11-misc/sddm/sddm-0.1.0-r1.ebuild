@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.3 2014/05/31 20:47:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/sddm-0.1.0-r1.ebuild,v 1.4 2014/06/08 11:32:01 mrueg Exp $
 
 EAPI=5
 inherit cmake-utils toolchain-funcs
@@ -8,7 +8,7 @@ inherit cmake-utils toolchain-funcs
 DESCRIPTION="Simple Desktop Display Manager"
 HOMEPAGE="https://github.com/sddm/sddm"
 SRC_URI="http://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 LICENSE="GPL-2+ MIT CC-BY-3.0 public-domain"
 SLOT="0"

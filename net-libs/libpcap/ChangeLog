@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.190 2014/05/29 12:33:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.191 2014/06/08 11:57:18 nimiux Exp $
+
+  08 Jun 2014; Chema Alonso <nimiux@gentoo.org> libpcap-1.5.3.ebuild:
+  Stable for amd64 wrt bug #511502
 
   29 May 2014; Jeroen Roovers <jer@gentoo.org> libpcap-1.5.3.ebuild:
   Stable for HPPA (bug #511502).

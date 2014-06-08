@@ -4,11 +4,11 @@ DESCRIPTION=Simple Desktop Display Manager
 EAPI=5
 HOMEPAGE=https://github.com/sddm/sddm
 IUSE=consolekit systemd +upower
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2+ MIT CC-BY-3.0 public-domain
 RDEPEND=sys-libs/pam x11-libs/libxcb[xkb(-)] dev-qt/qtdeclarative:4 dev-qt/qtdbus:4 consolekit? ( sys-auth/consolekit ) systemd? ( sys-apps/systemd:= ) upower? ( || ( sys-power/upower:= sys-power/upower-pm-utils ) )
 REQUIRED_USE=?? ( upower systemd )
 SLOT=0
 SRC_URI=http://github.com/sddm/sddm/archive/0.1.0.tar.gz -> sddm-0.1.0.tar.gz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=859ff4215e974e7c524f499027a48974
+_md5_=23cbeb22c1a3cbd75a046ec40b52f3a7

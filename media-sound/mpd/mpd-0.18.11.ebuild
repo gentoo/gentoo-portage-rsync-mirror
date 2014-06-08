@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.9.ebuild,v 1.2 2014/05/17 14:47:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.11.ebuild,v 1.1 2014/06/08 11:51:47 angelos Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -26,7 +26,8 @@ ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
 REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
 	|| ( ${DECODER_PLUGINS} )
 	network? ( || ( ${ENCODER_PLUGINS} ) )
-	recorder? ( || ( ${ENCODER_PLUGINS} ) )"
+	recorder? ( || ( ${ENCODER_PLUGINS} ) )
+	opus? ( ogg )"
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	dev-libs/glib:2
@@ -91,10 +92,10 @@ pkg_setup() {
 
 src_prepare() {
 	DOC_CONTENTS="If you will be starting mpd via /etc/init.d/mpd, please make
-		sure that MPD's pid_file is unset."
+		sure that MPD's pid_file is _set_."
 
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
-	epatch "${FILESDIR}"/${PN}-0.16.conf.patch
+	epatch "${FILESDIR}"/${PN}-0.18.conf.patch
 
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i \
@@ -176,7 +177,7 @@ src_install() {
 	insinto /etc
 	newins doc/mpdconf.dist mpd.conf
 
-	newinitd "${FILESDIR}"/mpd.init mpd
+	newinitd "${FILESDIR}"/${PN}2.init ${PN}
 
 	if use unicode; then
 		sed -i -e 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' \
