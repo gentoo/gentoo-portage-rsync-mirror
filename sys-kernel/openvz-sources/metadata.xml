@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
+	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
+	</maintainer>
+	<maintainer>
 		<email>andreis.vinogradovs@gmail.com</email>
 		<name>Andreis Vinogradovs</name>
 		<description>Proxy maintainer, CC him on bugs</description>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.228 2014/06/08 11:09:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.229 2014/06/08 16:35:44 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> setuptools-2.2.ebuild:
+  ia64 stable wrt bug #508416
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> setuptools-2.2.ebuild:
   Stable for ppc, wrt bug #508416
