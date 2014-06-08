@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.94 2014/05/10 08:58:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.95 2014/06/08 16:09:13 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> libjpeg-turbo-1.3.1.ebuild:
+  ia64 stable wrt bug #506904
 
   10 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   libjpeg-turbo-1.3.1.ebuild:

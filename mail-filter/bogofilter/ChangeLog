@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.156 2014/05/30 19:53:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.157 2014/06/08 16:03:58 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> bogofilter-1.2.4-r1.ebuild:
+  ia64 stable wrt bug #506822
 
   30 May 2014; Chema Alonso <nimiux@gentoo.org> bogofilter-1.2.4-r1.ebuild:
   Stable for amd64 wrt bug #506822
