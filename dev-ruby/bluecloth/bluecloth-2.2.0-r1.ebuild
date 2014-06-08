@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.2.0-r1.ebuild,v 1.5 2014/06/01 12:52:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.2.0-r1.ebuild,v 1.6 2014/06/08 15:13:53 hattya Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.deveiate.org/projects/BlueCloth"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
 DEPEND+=" doc? ( dev-lang/perl )"

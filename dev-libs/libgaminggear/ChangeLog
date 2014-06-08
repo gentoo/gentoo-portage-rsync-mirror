@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgaminggear
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgaminggear/ChangeLog,v 1.1 2014/05/30 10:20:05 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgaminggear/ChangeLog,v 1.2 2014/06/08 15:02:49 swift Exp $
+
+*libgaminggear-0.3.0 (08 Jun 2014)
+
+  08 Jun 2014; Sven Vermeulen <swift@gentoo.org> +libgaminggear-0.3.0.ebuild:
+  Bump to 0.3.0 (bug #512752) thanks to Dmitry Pisklov
 
 *libgaminggear-0.2.0 (30 May 2014)
 

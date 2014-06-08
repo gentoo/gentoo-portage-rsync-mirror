@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.76 2014/06/01 12:49:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.77 2014/06/08 15:23:31 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> rake-compiler-0.9.2.ebuild:
+  ia64 stable wrt bug #505920
 
   01 Jun 2014; Markus Meier <maekke@gentoo.org> rake-compiler-0.9.2.ebuild:
   arm stable, bug #505920
