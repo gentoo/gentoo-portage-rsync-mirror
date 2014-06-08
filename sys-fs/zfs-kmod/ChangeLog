@@ -1,6 +1,22 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.46 2014/05/22 21:39:35 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.47 2014/06/08 17:13:57 ryao Exp $
+
+  08 Jun 2014; Richard Yao <ryao@gentoo.org>
+  -files/zfs-kmod-0.6.0_rc11-fix-32-bit-integer-size-mismatch.patch,
+  -files/zfs-kmod-0.6.0_rc11-fix-i386-infinite-loop.patch,
+  -files/zfs-kmod-0.6.0_rc11-fix-rename-failure.patch,
+  -files/zfs-kmod-0.6.0_rc11-fix-zvol_probe-null.patch,
+  -files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-0-elevator-change.patch,
+  -files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-1.patch,
+  -files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-2.patch,
+  -files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-3.patch,
+  -files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-4.patch,
+  -files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-5.patch,
+  -files/zfs-kmod-0.6.0_rc11-return-positive-error.patch,
+  -zfs-kmod-0.6.0_rc10-r2.ebuild, -zfs-kmod-0.6.0_rc11-r3.ebuild,
+  -zfs-kmod-0.6.0_rc12-r3.ebuild:
+  Remove ancient ZFSOnLinux kernel module versions
 
   22 May 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
   CONFIG_DEBUG_INFO should be DEBUG_INFO

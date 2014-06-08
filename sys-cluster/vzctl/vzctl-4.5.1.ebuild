@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.5.1.ebuild,v 1.3 2014/03/03 23:39:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.5.1.ebuild,v 1.4 2014/06/08 17:20:20 pva Exp $
 
 EAPI="5"
 
@@ -83,7 +83,7 @@ pkg_postinst() {
 	einfo "please install "sys-process/criu" "
 	einfo "This is experimental and not stable ( in gentoo ) now"
 
-	einfo "if you have work with  .xz compressed template, please install app-arch/xz-utils"
-	einfo "if you have check signature donwloaded template - install gpg "
+	einfo "To work with .xz compressed template, please install app-arch/xz-utils"
+	einfo "To check signature donwloaded template - install gpg "
 
 }

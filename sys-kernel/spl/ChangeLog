@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.71 2014/05/14 17:38:06 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.72 2014/06/08 17:11:38 ryao Exp $
+
+  08 Jun 2014; Richard Yao <ryao@gentoo.org>
+  -files/spl-0.6.0_rc11-linux-3.6-compat.patch,
+  -files/spl-0.6.0_rc12-fix-3.6-compat-regression.patch,
+  -files/spl-0.6.0_rc12-fix-race-in-slabs.patch,
+  -files/spl-0.6.0_rc12-linux-3.7-compat.patch, -spl-0.6.0_rc10.ebuild,
+  -spl-0.6.0_rc11-r2.ebuild, -spl-0.6.0_rc12-r1.ebuild:
+  Remove ancient SPL versions
 
   14 May 2014; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
   Require CONFIG_DEBUG_INFO for USE=debug on =sys-kernel/spl-9999

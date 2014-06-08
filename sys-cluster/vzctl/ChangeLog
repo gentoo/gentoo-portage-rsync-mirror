@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.125 2014/05/08 07:55:12 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.126 2014/06/08 17:20:20 pva Exp $
+
+  08 Jun 2014; Peter Volkov <pva@gentoo.org> vzctl-4.5.1.ebuild,
+  vzctl-4.6.1.ebuild:
+  amd64 stable, bug #199738 and #5072765.
 
   08 May 2014; Vladimir Smirnov <civil@gentoo.org> vzctl-4.7.2.ebuild:
   Fix several typos in pkg_postinst, now messages should be displayed properly

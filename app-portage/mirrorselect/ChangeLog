@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.137 2014/05/29 16:23:13 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.138 2014/06/08 17:16:16 hattya Exp $
+
+  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> mirrorselect-2.2.2.ebuild:
+  keyword ~ia64 wrt bug #509628
 
 *mirrorselect-2.2.2 (29 May 2014)
 

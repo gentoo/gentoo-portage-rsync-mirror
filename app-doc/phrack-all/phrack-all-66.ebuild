@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/phrack-all-66.ebuild,v 1.4 2013/11/07 02:46:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/phrack-all-66.ebuild,v 1.5 2014/06/08 17:20:20 ulm Exp $
 
 MY_P=${PN}${PV}
 DESCRIPTION="Hacker magazine by the community, for the community (this will install *all* issues of phrack)"
 HOMEPAGE="http://www.phrack.org/"
 SRC_URI=""
 
-LICENSE="phrack"
+LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
