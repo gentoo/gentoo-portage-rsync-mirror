@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1-r2.ebuild,v 1.2 2014/06/04 14:42:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1-r2.ebuild,v 1.3 2014/06/09 04:56:40 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -23,11 +23,12 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		app-admin/sudo"
 
-RDEPEND=">=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
-		<dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
-		postgres? ( >=dev-python/psycopg-2[${PYTHON_USEDEP}] )
-		sqlite? ( dev-db/sqlite )
+RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
+		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
+	         <dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
+		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
 		>=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]
@@ -70,12 +71,13 @@ RDEPEND=">=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
 		net-misc/rabbitmq-server
 		sys-fs/sysfsutils
 		sys-fs/multipath-tools
-		sys-block/nbd
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )"
 
 PATCHES=(
+	"${FILESDIR}/2014.1-CVE-2014-2573-1.patch"
+	"${FILESDIR}/2014.1-CVE-2014-2573-2.patch"
 )
 
 pkg_setup() {
@@ -91,7 +93,7 @@ python_compile() {
 python_install() {
 	distutils-r1_python_install
 
-	for svc in api cert conductor consoleauth network scheduler spicehtml5proxy xvpvncproxy; do
+	for svc in api cert compute conductor consoleauth network scheduler spicehtml5proxy xvpvncproxy; do
 		newinitd "${FILESDIR}/nova.initd" "nova-${svc}"
 	done
 	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
@@ -102,7 +104,7 @@ python_install() {
 
 	insinto /etc/nova
 	insopts -m 0640 -o nova -g nova
-	#newins "etc/nova/nova.conf.sample" "nova.conf"
+	newins "etc/nova/nova.conf.sample" "nova.conf"
 	doins "etc/nova/api-paste.ini"
 	doins "etc/nova/logging_sample.conf"
 	doins "etc/nova/policy.json"
@@ -120,6 +122,6 @@ python_install() {
 
 	#add sudoers definitions for user nova
 	insinto /etc/sudoers.d/
-	insopts -m 0440 -o root -g root
-	newins "${FILESDIR}/nova.sudoersd" nova
+	insopts -m 0600 -o root -g root
+	doins "${FILESDIR}/nova-sudoers"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.64 2014/06/04 14:42:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.65 2014/06/09 04:56:40 prometheanfire Exp $
+
+  09 Jun 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/2014.1-CVE-2014-2573-1.patch, +files/2014.1-CVE-2014-2573-2.patch,
+  -nova-2014.1-r1.ebuild, nova-2014.1-r2.ebuild:
+  fix for 2014.1-r1 bug 512296 CVE-2014-2573
 
   04 Jun 2014; Ian Delaney <idella4@gentoo.org> nova-2014.1-r2.ebuild:
   add requ'd dep nbd, fixes Bug #509726
