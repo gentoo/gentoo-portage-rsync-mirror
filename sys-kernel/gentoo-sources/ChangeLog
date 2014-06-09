@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1335 2014/06/08 00:44:04 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1336 2014/06/09 01:07:13 mpagano Exp $
+
+*gentoo-sources-3.15.0 (09 Jun 2014)
+
+  09 Jun 2014; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.15.0.ebuild:
+  Linux patch 3.15.0. Patch to enable mic mute led in thinkpads. Zero copy for
+  infiniband psm userspace driver. ACPI: Disable Windows 8 compatibility for
+  some Lenovo ThinkPads. Patch to ensure that /dev/root doesn't appear in
+  /proc/mounts when bootint without an initramfs. Do not lock when UMH is
+  waiting on current thread spawned by linuxrc. Support for Pogoplug e02 (bug
+  #460350), adjusted to be opt-in by TomWij. Add Gentoo Linux support config
+  settings and defaults.
 
 *gentoo-sources-3.14.6 (08 Jun 2014)
 
