@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.76 2014/05/27 07:39:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.77 2014/06/09 07:33:17 graaff Exp $
+
+*rspec-rails-2.99.0 (09 Jun 2014)
+
+  09 Jun 2014; Hans de Graaff <graaff@gentoo.org> +rspec-rails-2.99.0.ebuild:
+  Version bump for rspec 2.99.
 
   27 May 2014; Hans de Graaff <graaff@gentoo.org> rspec-rails-2.14.2.ebuild:
   Add ruby20.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wsgiintercept
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/ChangeLog,v 1.6 2014/05/24 09:57:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/ChangeLog,v 1.7 2014/06/09 07:56:53 jlec Exp $
+
+*wsgiintercept-0.6.4 (09 Jun 2014)
+
+  09 Jun 2014; Justin Lecher <jlec@gentoo.org> +wsgiintercept-0.6.4.ebuild:
+  Version Bump
 
 *wsgiintercept-0.6.3 (24 May 2014)
 

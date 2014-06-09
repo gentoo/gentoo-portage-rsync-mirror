@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.187 2013/07/24 15:16:24 miska Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.188 2014/06/09 07:33:34 patrick Exp $
+
+*rpm-4.11.2 (09 Jun 2014)
+
+  09 Jun 2014; Patrick Lauer <patrick@gentoo.org> +rpm-4.11.2.ebuild:
+  Bump
 
 *rpm-4.11.1 (24 Jul 2013)
 

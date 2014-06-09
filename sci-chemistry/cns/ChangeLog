@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.55 2014/06/08 08:27:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.56 2014/06/09 07:32:35 jlec Exp $
+
+  09 Jun 2014; Justin Lecher <jlec@gentoo.org> cns-1.2.1-r8.ebuild:
+  Readd Stable keyowrds, #512792
 
   08 Jun 2014; Justin Lecher <jlec@gentoo.org> -cns-1.2.1-r7.ebuild,
   -cns-1.3_p7.ebuild, metadata.xml:
