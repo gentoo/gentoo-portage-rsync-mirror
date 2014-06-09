@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pinfo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.77 2013/04/13 16:42:27 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.78 2014/06/08 23:21:34 jer Exp $
+
+  08 Jun 2014; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.10-r4.ebuild,
+  +files/pinfo-0.6.10-gettext-0.19.patch:
+  Add gettext-0.19 compatibility patch by zimous (bug #512764).
 
   13 Apr 2013; Jeroen Roovers <jer@gentoo.org> -pinfo-0.6.10-r3.ebuild:
   Old.

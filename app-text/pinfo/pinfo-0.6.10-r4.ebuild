@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r4.ebuild,v 1.10 2013/04/13 07:34:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r4.ebuild,v 1.11 2014/06/08 23:21:34 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic
@@ -35,7 +35,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.6.10-version.patch \
 		"${FILESDIR}"/${PN}-0.6.10-info-suffix.patch \
 		"${FILESDIR}"/${PN}-0.6.10-dir-file.patch \
-		"${FILESDIR}"/${PN}-0.6.10-tinfo.patch
+		"${FILESDIR}"/${PN}-0.6.10-tinfo.patch \
+		"${FILESDIR}"/${PN}-0.6.10-gettext-0.19.patch
 
 	# autoconf does not work as expected
 	./autogen.sh || die
