@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.21 2014/06/03 00:24:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.22 2014/06/09 20:14:00 gregkh Exp $
+
+*docker-1.0.0 (09 Jun 2014)
+
+  09 Jun 2014; Greg Kroah-Hartman <gregkh@gentoo.org> +docker-1.0.0.ebuild:
+  1.0.0 release
 
   03 Jun 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add proxy-maint herd.

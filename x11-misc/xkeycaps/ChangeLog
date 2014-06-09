@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeycaps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.27 2012/12/23 20:23:24 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.28 2014/06/09 20:29:24 jer Exp $
+
+  09 Jun 2014; Jeroen Roovers <jer@gentoo.org> -xkeycaps-2.46.ebuild,
+  -files/Imakefile.patch:
+  Old.
 
   23 Dec 2012; Ulrich Müller <ulm@gentoo.org> xkeycaps-2.46.ebuild,
   xkeycaps-2.47-r1.ebuild:
