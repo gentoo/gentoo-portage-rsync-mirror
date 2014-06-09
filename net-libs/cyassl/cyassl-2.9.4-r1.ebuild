@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-3.0.0.ebuild,v 1.3 2014/06/08 14:18:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.9.4-r1.ebuild,v 1.1 2014/06/09 20:45:54 blueness Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Lightweight SSL/TLS library targeted at embedded and RTOS environments"
 HOMEPAGE="http://www.yassl.com/yaSSL/Home.html"
@@ -14,14 +14,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~x86"
 
-CACHE_SIZE="smallstack small big huge"
+CACHE_SIZE="small big huge"
 CRYPTO_OPTS="aes-gcm aes-ccm aes-ni blake2 camellia dsa ecc hc128 hkdf md2 md4 nullcipher psk leanpsk pkcs7 rabbit ripemd scep sha512 supportedcurves"
 CERT_OPTS="ocsp crl crl-monitor savesession savecert sessioncerts testcert"
 EXTRAS="atomicuser pkcallbacks sep maxfragment truncatedhmac tlsx"
 DEBUG="debug errorstrings memory test"
-
-# More trouble ahead, bug #512312
-RESTRICT="test"
 
 #Note: sniffer is broken at the configure.ac level.  Its not too important and we'll disable it for this release.
 #IUSE="-dtls examples extra fortress ipv6 httpd mcapi pwdbased sni sniffer static-libs threads zlib ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS} ${EXTRAS} ${DEBUG}"
@@ -41,9 +38,15 @@ DEPEND="app-arch/unzip
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
-#src_prepare() {
-#	epatch "${FILESDIR}"/${PN}-2.0.8-disable-testsuit-ifnothreads.patch
-#}
+# More trouble ahead, bug #512312
+RESTRICT="test"
+
+src_prepare() {
+	# More trouble ahead, bug #512312
+	#epatch "${FILESDIR}"/${PN}-2.0.8-disable-testsuit-ifnothreads.patch
+	epatch "${FILESDIR}"/${PN}-2.9.4-remove-hardened-flags.patch
+	eautoreconf
+}
 
 src_configure() {
 	local myconf=()
@@ -83,7 +86,6 @@ src_configure() {
 		--enable-dh                         \
 		--enable-coding                     \
 		                                    \
-		$(use_enable smallstack )           \
 		$(use_enable small smallcache)      \
 		$(use_enable big bigcache)          \
 		$(use_enable huge hugecache)        \
