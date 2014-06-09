@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/ceres-solver
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ChangeLog,v 1.7 2013/11/14 01:49:00 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ChangeLog,v 1.8 2014/06/09 02:29:13 bicatali Exp $
+
+*ceres-solver-1.9.0 (09 Jun 2014)
+
+  09 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +ceres-solver-1.9.0.ebuild, +files/ceres-solver-1.9.0-underlink.patch,
+  -ceres-solver-1.7.0.ebuild:
+  Version bump. Updated home page, doc building, added patch for underlinking
+  cholmod
 
 *ceres-solver-1.8.0 (14 Nov 2013)
 

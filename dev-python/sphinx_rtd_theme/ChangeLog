@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/sphinx_rtd_theme
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx_rtd_theme/ChangeLog,v 1.1 2014/06/09 02:27:45 bicatali Exp $
+
+*sphinx_rtd_theme-0.1.6 (09 Jun 2014)
+
+  09 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +sphinx_rtd_theme-0.1.6.ebuild:
+  Initial import
