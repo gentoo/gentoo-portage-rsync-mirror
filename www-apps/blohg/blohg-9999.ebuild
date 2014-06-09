@@ -1,13 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.18 2013/11/29 03:54:22 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.19 2014/06/09 03:33:49 rafaelmartins Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="2:2.7"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 2.6 3.*"
-DISTUTILS_SRC_TEST="setup.py"
+PYTHON_COMPAT=( python2_7 )
 
 GIT_ECLASS=""
 if [[ ${PV} = *9999* ]]; then
@@ -16,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 		https://github.com/rafaelmartins/blohg"
 fi
 
-inherit distutils ${GIT_ECLASS}
+inherit distutils-r1 ${GIT_ECLASS}
 
 DESCRIPTION="A Mercurial (or Git) based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
@@ -35,10 +32,11 @@ IUSE="doc git +mercurial test"
 REQUIRED_USE="|| ( git mercurial )
 	test? ( git mercurial )"
 
-RDEPEND="=dev-python/docutils-0.10*
+RDEPEND="
+	=dev-python/click-2.0
+	=dev-python/docutils-0.11*
 	>=dev-python/flask-0.10.1
 	>=dev-python/flask-babel-0.7
-	>=dev-python/flask-script-0.5.3
 	>=dev-python/frozen-flask-0.7
 	>=dev-python/jinja-2.5.2
 	dev-python/pyyaml
@@ -51,7 +49,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	test? ( dev-python/mock )"
 
-src_prepare() {
+python_prepare_all() {
 	if ! use git; then
 		rm -rf blohg/vcs_backends/git || die 'rm failed'
 	fi
@@ -60,30 +58,23 @@ src_prepare() {
 		rm -rf blohg/vcs_backends/hg || die 'rm failed'
 	fi
 
-	distutils_src_prepare
+	distutils-r1_python_prepare_all
 }
 
-src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		einfo 'building documentation'
-		emake -C docs html
-	fi
+python_compile_all() {
+	use doc && emake -C docs html
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
+	use doc && HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
+}
 
-	if use doc; then
-		einfo 'installing documentation'
-		dohtml -r docs/_build/html/*
-	fi
+python_test() {
+	esetup.py test
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
-
 	local ver="${PV}"
 	[[ ${PV} = *9999* ]] && ver="latest"
 

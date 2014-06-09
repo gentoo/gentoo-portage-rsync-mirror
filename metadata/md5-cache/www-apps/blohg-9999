@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm prepare setup test unpack
-DEPEND==dev-python/docutils-0.10* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/flask-script-0.5.3 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.20* ) mercurial? ( >=dev-vcs/mercurial-1.6 ) doc? ( dev-python/sphinx ) test? ( dev-python/mock ) =dev-lang/python-2.7* >=dev-vcs/git-1.8.2.1
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND==dev-python/click-2.0 =dev-python/docutils-0.11* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.20* ) mercurial? ( >=dev-vcs/mercurial-1.6 ) doc? ( dev-python/sphinx ) test? ( dev-python/mock ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-vcs/git-1.8.2.1
 DESCRIPTION=A Mercurial (or Git) based blogging engine.
 EAPI=5
 HOMEPAGE=http://blohg.org/ http://pypi.python.org/pypi/blohg
-IUSE=doc git +mercurial test
+IUSE=doc git +mercurial test python_targets_python2_7
 LICENSE=GPL-2
-RDEPEND==dev-python/docutils-0.10* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/flask-script-0.5.3 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.20* ) mercurial? ( >=dev-vcs/mercurial-1.6 ) =dev-lang/python-2.7*
-REQUIRED_USE=|| ( git mercurial ) test? ( git mercurial )
+RDEPEND==dev-python/click-2.0 =dev-python/docutils-0.11* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.20* ) mercurial? ( >=dev-vcs/mercurial-1.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( git mercurial ) test? ( git mercurial ) || ( python_targets_python2_7 )
 SLOT=0
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	025442f2eecab39ad0b4e541b6e142af	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1ba0a9213e302bdad5f8800b61c004e3
+_eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=48ecba1a2dc2716f995ff3e4342cc45b
