@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.10.1.ebuild,v 1.1 2013/07/27 14:59:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.10.1.ebuild,v 1.3 2014/06/09 09:56:12 tomka Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.mathematik.uni-osnabrueck.de/${PN}/${MYP}/${MYP}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="extras openmp"
 
 RDEPEND="dev-libs/gmp[cxx]"
@@ -30,7 +30,7 @@ src_prepare () {
 	epatch "${FILESDIR}/${PN}-${MYPV}-respect-flags.patch"
 
 	# Respect users AR tool (Bug 474532)
-	sed -e "s:ar -cr:$(tc-getAR) -cr:" -i source/libnormaliz/Makefile
+	sed -e "s:ar -cr:$(tc-getAR) -cr:" -i source/libnormaliz/Makefile || die
 
 	if use openmp && tc-has-openmp; then
 		export OPENMP=yes

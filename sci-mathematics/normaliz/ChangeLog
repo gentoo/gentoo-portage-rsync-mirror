@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.16 2014/05/09 13:36:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.18 2014/06/09 09:56:12 tomka Exp $
+
+  09 Jun 2014; Thomas Kahle <tomka@gentoo.org> normaliz-2.10.1.ebuild,
+  normaliz-2.11.ebuild:
+  Spread more death
+
+  09 Jun 2014; Chema Alonso <nimiux@gentoo.org> normaliz-2.10.1.ebuild:
+  Stable for amd64 wrt bug #509002
 
 *normaliz-2.11 (09 May 2014)
 
