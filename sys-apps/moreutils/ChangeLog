@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.64 2014/03/01 07:41:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.65 2014/06/09 09:01:51 klausman Exp $
+
+  09 Jun 2014; Tobias Klausmann <klausman@gentoo.org> moreutils-0.51.ebuild:
+  Keyword moreutils-0.51 on alpha
 
   01 Mar 2014; Tim Harder <radhermit@gentoo.org> -moreutils-0.47.ebuild,
   -moreutils-0.48.ebuild, -moreutils-0.49.ebuild,
