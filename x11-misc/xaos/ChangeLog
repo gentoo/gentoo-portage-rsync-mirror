@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/xaos
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.44 2013/06/25 17:27:41 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.45 2014/06/09 18:43:33 bicatali Exp $
+
+*xaos-3.6 (09 Jun 2014)
+
+  09 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/xaos-3.5-gettext.patch, +files/xaos-3.6-locale-dir.patch,
+  +files/xaos-3.6-no-auto-strip.patch, +xaos-3.6.ebuild, -xaos-3.5-r2.ebuild,
+  metadata.xml, xaos-3.5-r1.ebuild:
+  Version bump. Backport patch to stable 3.5-r1 version (bug #497852, thanks
+  Patrice Levesque) and for gettext-0.19 (bug #512748, thanks zimous), add
+  internationalization options, switch to autotools-utils, EAPI5
 
   25 Jun 2013; Alexis Ballier <aballier@gentoo.org> xaos-3.5-r1.ebuild,
   xaos-3.5-r2.ebuild:

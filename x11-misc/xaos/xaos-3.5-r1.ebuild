@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.10 2013/06/25 17:27:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.11 2014/06/09 18:43:33 bicatali Exp $
 
 EAPI=4
 
@@ -39,7 +39,9 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-3.4-png.patch \
 		"${FILESDIR}"/${PN}-3.4-include.patch \
-		"${FILESDIR}"/${PN}-3.5-libpng15.patch
+		"${FILESDIR}"/${PN}-3.5-libpng15.patch \
+		"${FILESDIR}"/${PN}-3.5-build-fix-i686.patch \
+		"${FILESDIR}"/${PN}-3.5-gettext.patch
 	sed -i -e 's/-s//' Makefile.in
 	eautoreconf
 }
