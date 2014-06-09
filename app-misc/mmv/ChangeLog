@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.28 2011/08/14 14:31:48 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.29 2014/06/09 09:00:13 klausman Exp $
+
+  09 Jun 2014; Tobias Klausmann <klausman@gentoo.org> mmv-1.01b_p15.ebuild:
+  Keyword mmv on alpha
 
   14 Aug 2011; Justin Lecher <jlec@gentoo.org> -mmv-1.01b_p14.ebuild:
   Cleaned old version
@@ -77,4 +80,3 @@
 
   04 Jan 2002; Martin Holzer <mholzer@gentoo.org> mmv-1.01b.ebuild files/digest-mmv-1.01b.ebuild ChangeLog :
   Initial Version submitted by tehirsch@web.de in #13254.
-
