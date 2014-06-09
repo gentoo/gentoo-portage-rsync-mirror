@@ -1,6 +1,12 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.64 2014/05/29 16:08:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.65 2014/06/09 13:43:20 sping Exp $
+
+*httrack-3.48.13 (09 Jun 2014)
+
+  09 Jun 2014; Sebastian Pipping <sping@gentoo.org> +httrack-3.48.13.ebuild,
+  +files/httrack-3.48.13-minizip.patch:
+  Bump to 3.48.13
 
 *httrack-3.48.9 (29 May 2014)
 
