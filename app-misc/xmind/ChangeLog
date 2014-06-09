@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/xmind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.9 2014/01/27 23:42:07 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.10 2014/06/09 21:51:51 nimiux Exp $
+
+  09 Jun 2014; Chema Alonso <nimiux@gentoo.org>
+  xmind-3.4.1.201401221918.ebuild:
+  Stable for amd64 wrt bug #509114
 
 *xmind-3.4.1.201401221918 (27 Jan 2014)
 
