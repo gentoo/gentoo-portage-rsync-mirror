@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ack
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.37 2013/12/10 21:13:24 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.38 2014/06/09 10:22:13 nimiux Exp $
+
+  09 Jun 2014; Chema Alonso <nimiux@gentoo.org> ack-2.12.ebuild:
+  Stable for amd64 wrt bug #509008
 
   10 Dec 2013; Tim Harder <radhermit@gentoo.org> -ack-2.04.ebuild,
   -ack-2.08.ebuild, -ack-2.10.ebuild:
