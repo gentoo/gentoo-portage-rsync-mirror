@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.36 2014/05/28 17:44:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.37 2014/06/09 22:09:14 bicatali Exp $
+
+  09 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/yacas-1.3.4-java-version.patch, yacas-1.3.4.ebuild:
+  Fixed missing include version file for java option and forced -j1 until proper
+  fix (bug #511856)
 
 *yacas-1.3.4 (28 May 2014)
 

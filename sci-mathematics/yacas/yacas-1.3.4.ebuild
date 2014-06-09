@@ -1,10 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.3.4.ebuild,v 1.1 2014/05/28 17:44:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.3.4.ebuild,v 1.2 2014/06/09 22:09:14 bicatali Exp $
 
 EAPI=5
 
-inherit autotools-utils java-pkg-opt-2
+AUTOTOOLS_AUTORECONF=1
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+inherit java-pkg-opt-2 autotools-utils
 
 DESCRIPTION="General purpose computer algebra system"
 HOMEPAGE="http://yacas.sourceforge.net/"
@@ -18,17 +21,21 @@ IUSE="doc java static-libs server"
 DEPEND="java? ( >=virtual/jdk-1.6 )"
 RDEPEND="java? ( >=virtual/jre-1.6 )"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.3.4-java-version.patch
+)
+
 src_configure() {
 	local myeconfargs=(
+		--with-html-dir="/usr/share/doc/${PF}/html"
 		$(use_enable doc html-doc)
 		$(use_enable server)
-		--with-html-dir="/usr/share/doc/${PF}/html"
 	)
 	autotools-utils_src_configure
 }
 
 src_compile() {
-	autotools-utils_src_compile
+	autotools-utils_src_compile -j1
 	if use java; then
 		cd "${BUILD_DIR}"/JavaYacas || die
 		# -j1 because of file generation dependence
