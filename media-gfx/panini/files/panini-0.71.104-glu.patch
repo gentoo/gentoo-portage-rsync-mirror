@@ -4,7 +4,7 @@
  TARGET = Panini
  CONFIG += debug_and_release
  QT = gui core opengl
-+LIBS += -lGLU
++LIBS += -lGLU -lz
  
  # # Directories ##
  OBJECTS_DIR = build

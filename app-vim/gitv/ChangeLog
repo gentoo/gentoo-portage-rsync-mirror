@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gitv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.6 2013/12/24 12:44:16 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.7 2014/06/09 18:09:28 radhermit Exp $
+
+*gitv-1.2 (09 Jun 2014)
+
+  09 Jun 2014; Tim Harder <radhermit@gentoo.org> +gitv-1.2.ebuild:
+  Version bump (bug #512812).
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gitv-1.1.ebuild:
   Stable for x86, wrt bug #481868
