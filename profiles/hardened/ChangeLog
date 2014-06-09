@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.50 2014/06/08 16:11:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.51 2014/06/09 15:19:08 blueness Exp $
+
+  09 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/make.defaults,
+  linux/musl/x86/make.defaults:
+  Remove redundant INSTALL_MASK in amd64 and x86
 
   08 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
   linux/musl/make.defaults:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/x86/make.defaults,v 1.4 2014/02/17 15:14:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/x86/make.defaults,v 1.5 2014/06/09 15:19:09 blueness Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -10,7 +10,3 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 FFLAGS="${CFLAGS}"
 FCFLAGS="${CFLAGS}"
-
-# TODO: fix so musl doesn't generate this for all packages
-# that use a charset, it causes package collisons.
-INSTALL_MASK="charset.alias"

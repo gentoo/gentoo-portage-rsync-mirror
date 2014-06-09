@@ -1,6 +1,15 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.28 2014/03/04 19:55:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.29 2014/06/09 15:10:10 hasufell Exp $
+
+*openra-20140608 (09 Jun 2014)
+
+  09 Jun 2014; Julian Ospald <hasufell@gentoo.org> +openra-20140608.ebuild,
+  metadata.xml:
+  version bump
+
+  08 Jun 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  remove proxy maintainer
 
   04 Mar 2014; Agostino Sarubbo <ago@gentoo.org> openra-20131223-r1.ebuild:
   Stable for x86, wrt bug #502360

@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<herd>games</herd>
 	<maintainer>
 		<email>hasufell@gentoo.org</email>
 		<name>Julian Ospald</name>
 		<description>Maintainer, assign bugs to him</description>
-	</maintainer>
-	<maintainer>
-		<email>diamond@hi-net.ru</email>
-		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<upstream>
 		<changelog>http://openra.res0l.net/news/</changelog>
