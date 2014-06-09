@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.21 2012/10/06 19:00:44 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.22 2014/06/09 03:18:36 jer Exp $
+
+  09 Jun 2014; Jeroen Roovers <jer@gentoo.org> nsat-1.5-r1.ebuild:
+  Clean up.
 
   06 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> nsat-1.5-r1.ebuild:
   Respect LDFLAGS wrt bug #335951

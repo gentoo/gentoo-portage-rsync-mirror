@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.4 2012/10/06 19:00:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.5 2014/06/09 03:18:36 jer Exp $
 
-EAPI=2
-
+EAPI=5
 inherit eutils autotools
 
 DESCRIPTION="Network Security Analysis Tool, an application-level network security scanner"
@@ -15,11 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X"
 
-RDEPEND="X? ( x11-libs/libX11
-		dev-lang/tk )
-	net-libs/libpcap"
-
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
+RDEPEND="
+	X? (
+		x11-libs/libX11
+		dev-lang/tk
+	)
+	net-libs/libpcap
+"
+DEPEND="$RDEPEND"
 
 S="${WORKDIR}/${PN}"
 
@@ -32,28 +34,28 @@ src_prepare() {
 	use amd64 && epatch "${FILESDIR}"/${P}-amd64-compat.patch
 
 	# Respect LDFLAGS
-	sed -i -e '/..\/nsat/,+1s/${CFLAGS}/${CFLAGS} ${LDFLAGS}/' \
-		src/Makefile.in  || die 'first sed for respecting LDFLAGS failed'
-	sed -i -e '/@$(CC)/s/$(CFLAGS)/$(CFLAGS) $(LDFLAGS)/' \
-		src/smb/Makefile.in || die 'second sed for respecting LDFLAGS failed'
+	sed -i \
+		-e '/..\/nsat/,+1s/${CFLAGS}/${CFLAGS} ${LDFLAGS}/' \
+		src/Makefile.in  || die
+	sed -i \
+		-e '/@$(CC)/s/$(CFLAGS)/$(CFLAGS) $(LDFLAGS)/' \
+		src/smb/Makefile.in || die
 
-	sed -i "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
+	sed -i \
+		-e "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
 		nsat.conf || die "sed on nsat.conf failed"
-	sed -i "s:/usr/local:/usr:g" Makefile.in || die "sed on Makefile.in failed"
-	sed -i "s:/usr/local:/usr:g" tools/xnsat || die "sed on tools/xnsat failed"
-	sed -i -e "s:/usr/local/share/nsat/nsat.conf:/etc/nsat/nsat.conf:g" \
+	sed -i -e "s:/usr/local:/usr:g" Makefile.in || die
+	sed -i -e "s:/usr/local:/usr:g" tools/xnsat || die
+	sed -i \
+		-e "s:/usr/local/share/nsat/nsat.conf:/etc/nsat/nsat.conf:g" \
 		-e "s:/usr/local/share/nsat/nsat.cgi:/usr/share/nsat/nsat.cgi:g" \
-		src/lang.h || die "sed on src/lang.h failed"
+		src/lang.h || die
 
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_with X x) || die "configuration failed"
-}
-
-src_compile() {
-	make|| die "compile problem"
+	econf $(use_with X x)
 }
 
 src_install () {
