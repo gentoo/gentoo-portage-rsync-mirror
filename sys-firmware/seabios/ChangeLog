@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.32 2014/06/04 16:04:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.33 2014/06/09 06:48:16 patrick Exp $
+
+*seabios-1.7.5 (09 Jun 2014)
+
+  09 Jun 2014; Patrick Lauer <patrick@gentoo.org> +seabios-1.7.5.ebuild:
+  Bump
 
   04 Jun 2014; Agostino Sarubbo <ago@gentoo.org> seabios-1.7.4.ebuild:
   Stable for x86, wrt bug #507796
