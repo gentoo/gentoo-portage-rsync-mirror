@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar6
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.5 2014/05/15 17:05:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.6 2014/06/09 15:40:46 hasufell Exp $
+
+  09 Jun 2014; Julian Ospald <hasufell@gentoo.org> liquidwar6-0.4.3681.ebuild,
+  +files/liquidwar6-0.4.3681-check-headers.patch:
+  fix build which was broken by multilib madness
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> liquidwar6-0.0.13_beta.ebuild,
   liquidwar6-0.2.3551.ebuild, liquidwar6-0.4.3681.ebuild:
