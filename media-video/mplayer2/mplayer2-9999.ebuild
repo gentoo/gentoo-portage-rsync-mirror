@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.66 2014/05/01 20:17:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.67 2014/06/09 19:27:56 maksbotan Exp $
 
 EAPI=5
 
@@ -16,12 +16,12 @@ NAMESUF="${PN/mplayer/}"
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayer2.org/"
 [[ ${PV} == *9999* ]] || \
-SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~maksbotan/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa aqua bluray bs2b cddb +cdio cpudetection debug directfb doc dvb +dvd
 +dvdnav +enca ftp gif +iconv ipv6 jack joystick jpeg ladspa lcms +libass libcaca
 lirc md5sum mng +mp3 +network +opengl oss png pnm portaudio +postproc pulseaudio
@@ -106,7 +106,10 @@ RDEPEND+="
 	quvi? ( >=media-libs/libquvi-0.4.1 <media-libs/libquvi-0.9 )
 	samba? ( net-fs/samba )
 	selinux? ( sec-policy/selinux-mplayer )
-	>=virtual/ffmpeg-9[threads?,vdpau?]
+	|| (
+		>=media-video/libav-9.12:=[threads?,vdpau?]
+		>=media-video/ffmpeg-1.2.6:0=[threads?,vdpau?]
+	)
 	symlink? ( !media-video/mplayer )
 "
 DEPEND="${RDEPEND}

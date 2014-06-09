@@ -1,13 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.2.ebuild,v 1.2 2014/02/04 16:52:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.2.ebuild,v 1.3 2014/06/09 19:21:47 maksbotan Exp $
 
 EAPI="5"
 
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 WX_GTK_VER="3.0"
-inherit autotools-utils wxwidgets
+PLOCALES="ar bg ca cs da de el es eu fa fi fr_FR gl hu id it ja ko nl pl pt_BR pt_PT ru sr_RS@latin sr_RS vi zh_CN zh_TW"
+inherit autotools-utils wxwidgets l10n fdo-mime gnome2-utils
 
 DESCRIPTION="Advanced SSA/ASS subtitle editor"
 HOMEPAGE="http://www.aegisub.org/"
@@ -52,7 +53,21 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}/${PN}
 
+src_prepare() {
+	my_rm_loc() {
+		sed -i -e "s:${1}\.po::" po/Makefile || die
+		rm "po/${1}.po" || die
+	}
+
+	l10n_find_plocales_changes 'po' '' '.po'
+	l10n_for_each_disabled_locale_do my_rm_loc
+
+	autotools-utils_src_prepare
+}
+
 src_configure() {
+	# testing openal does not work in sandbox, bug #508184
+	use openal && export agi_cv_with_openal="yes"
 	local myeconfargs=(
 		$(use_with alsa)
 		$(use_with oss)
@@ -65,4 +80,18 @@ src_configure() {
 		$(use_enable debug)
 	)
 	autotools-utils_src_configure
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }

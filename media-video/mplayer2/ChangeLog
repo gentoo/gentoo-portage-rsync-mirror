@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.120 2014/05/02 19:28:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.121 2014/06/09 19:27:56 maksbotan Exp $
+
+  09 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  mplayer2-2.0_p20131009.ebuild, mplayer2-9999.ebuild:
+  Fix ffmpeg/libav deps, bug #511046. Thanks to Nikoli.
 
 *mplayer2-2.0_p20131009 (02 May 2014)
 

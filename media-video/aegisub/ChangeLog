@@ -1,6 +1,11 @@
 # ChangeLog for media-video/aegisub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.14 2014/02/04 16:52:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.15 2014/06/09 19:21:47 maksbotan Exp $
+
+  09 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> aegisub-3.1.2.ebuild:
+  Update icon cache and desktop database, bug #508116. Respect LINGUAS, bug
+  #508118. Fix sandbox access violation with openal, bug #508184. Thanks to
+  Nikoli.
 
   04 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> aegisub-3.1.2.ebuild,
   aegisub-9999.ebuild:
