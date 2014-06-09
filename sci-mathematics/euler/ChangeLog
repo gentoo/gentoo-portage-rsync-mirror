@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/euler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.19 2012/05/04 07:46:51 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.20 2014/06/09 16:31:24 bicatali Exp $
+
+  09 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org> euler-1.61.0.ebuild,
+  files/configure-gentoo.patch:
+  Fixed for glibc underlinking, thanks to Ted Tanberry and Kobboi, bug #512472
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> euler-1.61.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
