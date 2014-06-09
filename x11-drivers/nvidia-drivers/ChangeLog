@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.554 2014/06/05 18:47:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.555 2014/06/09 14:48:56 jer Exp $
+
+*nvidia-drivers-340.17 (09 Jun 2014)
+
+  09 Jun 2014; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-340.17.ebuild:
+  Version bump.
 
   05 Jun 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-337.25.ebuild:
   Raise xorg-server compatibility (bug #512268).
