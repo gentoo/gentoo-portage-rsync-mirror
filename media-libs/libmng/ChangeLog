@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.90 2014/06/03 20:39:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.91 2014/06/09 10:57:59 maekke Exp $
+
+  09 Jun 2014; Markus Meier <maekke@gentoo.org> libmng-2.0.2-r1.ebuild:
+  arm stable, bug #511654
 
   03 Jun 2014; Jeroen Roovers <jer@gentoo.org> libmng-2.0.2-r1.ebuild:
   Stable for HPPA (bug #511654).

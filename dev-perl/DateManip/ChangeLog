@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.103 2014/06/03 18:16:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.104 2014/06/09 10:59:17 maekke Exp $
+
+  09 Jun 2014; Markus Meier <maekke@gentoo.org> DateManip-6.410.0.ebuild:
+  arm stable, bug #511730
 
   03 Jun 2014; Jeroen Roovers <jer@gentoo.org> DateManip-6.410.0.ebuild:
   Stable for HPPA (bug #511730).
