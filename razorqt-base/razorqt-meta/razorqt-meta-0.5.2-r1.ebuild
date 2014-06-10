@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-meta/razorqt-meta-0.5.2-r1.ebuild,v 1.1 2013/12/07 04:18:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-meta/razorqt-meta-0.5.2-r1.ebuild,v 1.2 2014/06/10 10:10:30 nimiux Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI=""
 if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc ~x86"
 fi
 
 LICENSE="GPL-2+ LGPL-2.1+"

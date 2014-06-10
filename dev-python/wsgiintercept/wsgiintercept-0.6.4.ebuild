@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/wsgiintercept-0.6.4.ebuild,v 1.1 2014/06/09 07:56:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/wsgiintercept-0.6.4.ebuild,v 1.2 2014/06/10 10:28:10 idella4 Exp $
 
 EAPI=5
 
@@ -26,13 +26,11 @@ DEPEND="
 	test? (
 		dev-python/httplib2[${PYTHON_USEDEP}]
 		>=dev-python/pytest-2.4[${PYTHON_USEDEP}]
-		>=dev-python/requests-2[${PYTHON_USEDEP}]
+		>=dev-python/requests-2.0.1[${PYTHON_USEDEP}]
 	)"
 
 S="${WORKDIR}/${MY_P}"
 
-_PATCHES=( "${FILESDIR}/0.6.0-fix-tests.patch" )
-
 python_test() {
-	py.test || die
+	py.test || die "Tests failed under ${EPYTHON}"
 }
