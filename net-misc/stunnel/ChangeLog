@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.162 2014/04/09 14:05:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.164 2014/06/10 11:18:53 blueness Exp $
+
+  10 Jun 2014; Anthony G. Basile <blueness@gentoo.org> stunnel-5.01.ebuild:
+  Stable arm, ppc, ppc64.  Bug #503506
+
+*stunnel-5.02 (10 Jun 2014)
+
+  10 Jun 2014; Anthony G. Basile <blueness@gentoo.org> +stunnel-5.02.ebuild:
+  Version bump
 
 *stunnel-5.01 (09 Apr 2014)
 

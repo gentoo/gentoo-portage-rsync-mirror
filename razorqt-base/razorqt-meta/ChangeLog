@@ -1,6 +1,9 @@
 # ChangeLog for razorqt-base/razorqt-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-meta/ChangeLog,v 1.12 2014/06/10 10:10:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-meta/ChangeLog,v 1.13 2014/06/10 11:15:04 zlogene Exp $
+
+  10 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> razorqt-meta-0.5.2-r1.ebuild:
+  x86 stable wrt bug #502914
 
   10 Jun 2014; Chema Alonso <nimiux@gentoo.org> razorqt-meta-0.5.2-r1.ebuild:
   Stable for amd64 wrt bug #502914

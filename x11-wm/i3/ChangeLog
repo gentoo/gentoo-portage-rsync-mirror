@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.51 2014/05/08 12:43:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.52 2014/06/10 11:28:09 zlogene Exp $
+
+  10 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> i3-4.7.2.ebuild:
+  x86 stable wrt bug #499098
 
   08 May 2014; Julian Ospald <hasufell@gentoo.org> i3-9999.ebuild:
   revert, no patches in live ebuilds
