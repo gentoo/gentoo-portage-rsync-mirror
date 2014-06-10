@@ -1,6 +1,13 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.61 2014/05/18 10:16:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.62 2014/06/10 07:14:06 slyfox Exp $
+
+  10 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> -files/buildxml.patch,
+  -files/openfire-3.7.1-buildxml-jdk7.patch, -openfire-3.6.1.ebuild,
+  -openfire-3.6.3.ebuild, -openfire-3.6.4.ebuild, -openfire-3.7.0.ebuild,
+  -openfire-3.7.1-r1.ebuild, -openfire-3.8.1.ebuild, -openfire-3.8.2-r1.ebuild,
+  -openfire-3.8.2.ebuild, -openfire-3.9.1.ebuild:
+  Drop old vulnerable version (security bug #507242).
 
   18 May 2014; Agostino Sarubbo <ago@gentoo.org> openfire-3.9.2-r1.ebuild:
   Stable for x86, wrt bug #507242
