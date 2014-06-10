@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/jimtcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.13 2014/05/09 21:18:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.14 2014/06/10 00:21:53 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> jimtcl-0.73.ebuild,
+  jimtcl-0.74-r1.ebuild, jimtcl-0.75.ebuild:
+  Add arm64/m68k/s390/sh love.
 
   09 May 2014; Markos Chandras <hwoarang@gentoo.org> jimtcl-0.75.ebuild:
   Add ~mips

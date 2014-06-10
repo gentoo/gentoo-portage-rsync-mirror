@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.279 2014/06/08 14:36:26 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.281 2014/06/10 00:26:03 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> cmake-2.8.10.2-r2.ebuild,
+  cmake-2.8.11.2.ebuild, cmake-2.8.12.1-r4.ebuild, cmake-2.8.12.2-r1.ebuild,
+  cmake-2.8.12.2.ebuild:
+  Mark s390/sh stable.
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> cmake-2.8.10.2-r2.ebuild,
+  cmake-2.8.11.2.ebuild, cmake-2.8.12.1-r4.ebuild, cmake-2.8.12.2.ebuild,
+  cmake-2.8.12.2-r1.ebuild:
+  Add arm64/m68k love.
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> cmake-2.8.12.2.ebuild:
   ia64 stable wrt bug #504794

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.142 2014/01/26 12:08:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.143 2014/06/10 00:27:11 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  desktop-file-utils-0.21.ebuild, desktop-file-utils-0.22.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> desktop-file-utils-0.22.ebuild:
   Stable for sparc, wrt bug #492242

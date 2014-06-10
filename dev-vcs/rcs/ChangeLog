@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rcs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.27 2013/07/02 11:45:23 titanofold Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.28 2014/06/10 00:01:43 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> rcs-5.8.2.ebuild:
+  Add arm64 love.
 
   02 Jul 2013; Aaron W. Swenson <titanofold@gentoo.org> -rcs-5.8.ebuild,
   -files/rcs-5.8-include.patch:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.64 2014/03/21 21:39:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.66 2014/06/10 00:05:24 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> libev-4.15.ebuild:
+  Mark arm64/m68k/s390/sh stable.
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> libev-4.15-r1.ebuild:
+  Add arm64/m68k love.
 
 *libev-4.15-r1 (21 Mar 2014)
 

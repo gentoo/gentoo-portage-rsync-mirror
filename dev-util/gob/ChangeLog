@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.102 2014/05/10 13:40:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.103 2014/06/10 00:27:48 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> gob-2.0.20.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   10 May 2014; Agostino Sarubbo <ago@gentoo.org> gob-2.0.20.ebuild:
   Stable for ppc, wrt bug #508862

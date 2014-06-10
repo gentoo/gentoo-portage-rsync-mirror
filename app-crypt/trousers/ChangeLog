@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.45 2014/05/24 09:55:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.46 2014/06/10 00:19:20 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> trousers-0.3.10-r1.ebuild,
+  trousers-0.3.10.ebuild:
+  Add arm64/m68k/s390/sh love.
 
 *trousers-0.3.10-r1 (24 May 2014)
 
