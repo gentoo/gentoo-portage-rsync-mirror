@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.2.ebuild,v 1.3 2014/06/09 19:21:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.2.ebuild,v 1.4 2014/06/10 20:19:39 maksbotan Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SRC_URI="http://ftp.aegisub.org/pub/releases/${P}.tar.xz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa debug +ffmpeg fftw openal oss portaudio pulseaudio spell"
+IUSE="alsa debug +ffmpeg +fftw openal oss portaudio pulseaudio spell"
 
 REQUIRED_USE="
 	|| ( alsa openal oss portaudio pulseaudio )

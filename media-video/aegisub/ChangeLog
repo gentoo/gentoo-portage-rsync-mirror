@@ -1,6 +1,14 @@
 # ChangeLog for media-video/aegisub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.15 2014/06/09 19:21:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.16 2014/06/10 20:19:39 maksbotan Exp $
+
+*aegisub-3.1.3 (10 Jun 2014)
+
+  10 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> +aegisub-3.1.3.ebuild,
+  -aegisub-3.0.3.ebuild, -aegisub-3.0.4.ebuild, -aegisub-3.1.0.ebuild,
+  aegisub-3.1.2.ebuild, aegisub-9999.ebuild:
+  Bump to 3.1.3, update live ebuild, clean old, enable fftw by default in 3.1.3,
+  bug #511896. Thanks to Nikoli.
 
   09 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> aegisub-3.1.2.ebuild:
   Update icon cache and desktop database, bug #508116. Respect LINGUAS, bug
