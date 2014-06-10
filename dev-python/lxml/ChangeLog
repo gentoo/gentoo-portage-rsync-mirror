@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.200 2014/05/17 13:50:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.201 2014/06/10 12:24:12 djc Exp $
+
+  10 Jun 2014; Dirkjan Ochtman <djc@gentoo.org>
+  -files/lxml-3.0.1-skip-failing-test.patch, -files/lxml-test-elementtree.patch,
+  -lxml-2.3.4.ebuild, -lxml-2.3.5.ebuild, -lxml-2.3.6.ebuild,
+  -lxml-3.0.1.ebuild, -lxml-3.1.0.ebuild, -lxml-3.1.1.ebuild,
+  -lxml-3.1.2.ebuild, -lxml-3.2.0.ebuild, -lxml-3.2.1.ebuild,
+  -lxml-3.2.4.ebuild, -lxml-3.2.5.ebuild, -lxml-3.3.0.ebuild,
+  -lxml-3.3.1.ebuild, -lxml-3.3.2.ebuild, -lxml-3.3.3.ebuild:
+  Remove old, vulnerable versions (bug 509134)
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> lxml-3.3.5.ebuild:
   Stable for alpha, wrt bug #509134
