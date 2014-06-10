@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15777 2014/06/10 18:30:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15778 2014/06/10 21:56:25 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -157,7 +157,7 @@ dev-java/ibm-jdk-bin:1.5
 >=media-plugins/gst-plugins-gdkpixbuf-0.10.31-r1:0.10
 >=media-plugins/gst-plugins-gdkpixbuf-1.2.4-r1:1.0
 >=media-plugins/gst-plugins-gio-0.10.36-r1:0.10
->=media-plugins/gst-plugins-gl-0.10.3-r1:0.10
+>=media-plugins/gst-plugins-gl-0.10.3-r1
 >=media-plugins/gst-plugins-gsm-0.10.23-r1:0.10
 >=media-plugins/gst-plugins-hls-1.2.4-r1:1.0
 >=media-plugins/gst-plugins-ivorbis-0.10.36-r1:0.10
