@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.6 2013/03/04 19:13:20 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.7 2014/06/10 19:48:42 billie Exp $
 
 EAPI=5
 
-inherit flag-o-matic versionator
+inherit eutils flag-o-matic versionator
 
 MY_PV=$(version_format_string '$1.$2-u$3-b$4')
 PATCH=s$(get_version_component_range 5)
@@ -51,5 +51,5 @@ src_install() {
 	dodoc ChangeLog.shntool src/*.txt
 	dohtml src/Readme.htm
 
-	find "${ED}"/usr -type f -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }

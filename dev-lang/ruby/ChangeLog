@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.652 2014/05/17 06:53:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.654 2014/06/10 19:34:13 graaff Exp $
+
+  10 Jun 2014; Hans de Graaff <graaff@gentoo.org> -ruby-2.0.0_p451.ebuild,
+  -ruby-2.1.1-r1.ebuild:
+  Cleanup.
+
+  10 Jun 2014; Hans de Graaff <graaff@gentoo.org> ruby-2.1.2.ebuild:
+  Depend on a version of eselect-ruby that supports ruby 2.1, fixing bug
+  512848.
 
 *ruby-1.9.3_p547 (17 May 2014)
 

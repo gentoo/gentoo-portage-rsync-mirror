@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.303 2014/06/10 19:13:25 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.304 2014/06/10 19:44:56 billie Exp $
+
+  10 Jun 2014; Daniel Pielmeier <billie@gentoo.org> hplip-3.14.6.ebuild:
+  Use prune_libtool_files from eutils.
 
 *hplip-3.14.6 (10 Jun 2014)
 
