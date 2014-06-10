@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.31 2014/06/09 03:33:49 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.32 2014/06/10 01:04:15 rafaelmartins Exp $
+
+*blohg-0.13 (10 Jun 2014)
+
+  10 Jun 2014; Rafael G. Martins <rafaelmartins@gentoo.org> +blohg-0.13.ebuild,
+  -blohg-0.12.ebuild:
+  version bump
 
   09 Jun 2014; Rafael G. Martins <rafaelmartins@gentoo.org> blohg-9999.ebuild:
   ported 9999 to distutils-r1, fixed deps

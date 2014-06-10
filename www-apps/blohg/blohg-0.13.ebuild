@@ -1,13 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.12.ebuild,v 1.2 2013/11/28 05:29:24 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.13.ebuild,v 1.1 2014/06/10 01:04:15 rafaelmartins Exp $
 
-EAPI="3"
+EAPI=5
 
-PYTHON_DEPEND="2:2.7"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 2.6 3.*"
-DISTUTILS_SRC_TEST="setup.py"
+PYTHON_COMPAT=( python2_7 )
 
 GIT_ECLASS=""
 if [[ ${PV} = *9999* ]]; then
@@ -16,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 		https://github.com/rafaelmartins/blohg"
 fi
 
-inherit distutils ${GIT_ECLASS}
+inherit distutils-r1 ${GIT_ECLASS}
 
 DESCRIPTION="A Mercurial (or Git) based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
@@ -30,47 +27,54 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc git test"
+IUSE="doc git +mercurial test"
 
-RDEPEND="=dev-python/docutils-0.10*
+REQUIRED_USE="|| ( git mercurial )
+	test? ( git mercurial )"
+
+RDEPEND="
+	=dev-python/click-2.0
+	=dev-python/docutils-0.11*
 	>=dev-python/flask-0.10.1
 	>=dev-python/flask-babel-0.7
-	>=dev-python/flask-script-0.5.3
 	>=dev-python/frozen-flask-0.7
 	>=dev-python/jinja-2.5.2
-	>=dev-vcs/mercurial-1.6
 	dev-python/pyyaml
 	dev-python/setuptools
 	dev-python/pygments
-	git? ( =dev-python/pygit2-0.19* )"
+	git? ( =dev-python/pygit2-0.20* )
+	mercurial? ( >=dev-vcs/mercurial-1.6 )"
 
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
-	test? (
-		dev-python/mock
-		=dev-python/pygit2-0.19* )"
+	test? ( dev-python/mock )"
 
-src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		einfo 'building documentation'
-		emake -C docs html
+python_prepare_all() {
+	if ! use git; then
+		rm -rf blohg/vcs_backends/git || die 'rm failed'
 	fi
+
+	if ! use mercurial; then
+		rm -rf blohg/vcs_backends/hg || die 'rm failed'
+	fi
+
+	distutils-r1_python_prepare_all
 }
 
-src_install() {
-	distutils_src_install
+python_compile_all() {
+	use doc && emake -C docs html
+}
 
-	if use doc; then
-		einfo 'installing documentation'
-		dohtml -r docs/_build/html/*
-	fi
+python_install_all() {
+	use doc && HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
+}
+
+python_test() {
+	esetup.py test
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
-
 	local ver="${PV}"
 	[[ ${PV} = *9999* ]] && ver="latest"
 

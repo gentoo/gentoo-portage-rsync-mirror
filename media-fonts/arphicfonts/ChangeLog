@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.57 2014/05/01 05:28:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.58 2014/06/10 01:04:05 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  arphicfonts-0.2.20080216.1-r1.ebuild, arphicfonts-0.2.20080216.1-r2.ebuild,
+  arphicfonts-0.2.20080216.1.ebuild:
+  Add arm64 love.
 
 *arphicfonts-0.2.20080216.1-r2 (01 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.3.ebuild,v 1.2 2014/06/02 14:08:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.3.ebuild,v 1.3 2014/06/10 01:09:53 vapier Exp $
 
 EAPI="4"
 
@@ -58,7 +58,7 @@ src_configure() {
 
 src_install() {
 	default
-	rm -rf "${ED}"/trash
+	rm -rf "${D}"/trash
 
 	dodoc doc/nanorc.sample
 	dohtml doc/faq.html

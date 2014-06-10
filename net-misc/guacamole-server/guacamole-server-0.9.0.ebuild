@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guacamole-server/guacamole-server-0.9.0.ebuild,v 1.2 2014/05/03 13:44:03 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guacamole-server/guacamole-server-0.9.0.ebuild,v 1.3 2014/06/10 01:24:37 floppym Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="AGPL-3"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="rdesktop vnc ssh pulseaudio vorbis"
 
