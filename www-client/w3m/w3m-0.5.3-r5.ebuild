@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r5.ebuild,v 1.2 2014/03/14 14:19:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r5.ebuild,v 1.3 2014/06/10 08:54:20 naota Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -37,7 +37,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-0.5.3-parallel-make.patch" \
 		"${FILESDIR}/${PN}-0.5.3-glibc214.patch" \
 		"${FILESDIR}/${PN}-0.5.3-underlinking.patch" \
-		"${FILESDIR}/${PN}-0.5.3-tinfo.patch"
+		"${FILESDIR}/${PN}-0.5.3-tinfo.patch" \
+		"${FILESDIR}/${PN}-0.5.3-gettext.patch"
 	use vanilla || \
 		epatch "${FILESDIR}"/${PN}-0.5.3-button.patch \
 			"${FILESDIR}"/${P}-gdk-pixbuf.patch \

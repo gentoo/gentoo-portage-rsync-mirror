@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.4.0.ebuild,v 1.2 2012/05/03 19:24:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.4.0.ebuild,v 1.3 2014/06/10 08:44:59 naota Exp $
 
 EAPI=4
 
@@ -23,7 +23,10 @@ IUSE="boost lua nls opencc"
 RDEPEND=">=app-i18n/ibus-1.4
 	sys-apps/util-linux
 	boost? ( >=dev-libs/boost-1.39 )
-	lua? ( >=dev-lang/lua-5.1 )
+	lua? (
+		>=dev-lang/lua-5.1
+		<dev-lang/lua-5.2.0
+	)
 	nls? ( virtual/libintl )
 	opencc? ( app-i18n/opencc )"
 DEPEND="${RDEPEND}

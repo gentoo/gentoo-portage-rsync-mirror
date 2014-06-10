@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-pinyin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.46 2014/01/17 07:10:12 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.47 2014/06/10 08:44:59 naota Exp $
+
+  10 Jun 2014; Naohiro Aota <naota@gentoo.org> ibus-pinyin-1.4.0.ebuild,
+  ibus-pinyin-1.5.0.ebuild:
+  Add upper limit of lua dependency. #407483
 
   17 Jan 2014; Yixun Lan <dlan@gentoo.org> -ibus-pinyin-1.3.99.20110706.ebuild,
   metadata.xml:
