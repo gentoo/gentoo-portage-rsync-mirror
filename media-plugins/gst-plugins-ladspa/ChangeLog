@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-ladspa
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.49 2013/03/04 23:33:04 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.50 2014/06/10 19:03:29 mgorny Exp $
+
+*gst-plugins-ladspa-0.10.23-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-ladspa-0.10.23-r1.ebuild:
+  Enable multilib support, bug #493176.
 
   04 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-ladspa-0.10.22.ebuild:

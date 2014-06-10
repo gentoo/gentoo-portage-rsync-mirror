@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-pango
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.183 2013/03/05 08:37:10 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.184 2014/06/10 19:14:35 mgorny Exp $
+
+*gst-plugins-pango-0.10.36-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-pango-0.10.36-r1.ebuild:
+  Enable multilib support, bug #493176.
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-pango-0.10.35.ebuild:

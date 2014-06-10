@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-xvid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.32 2013/08/27 19:29:44 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.33 2014/06/10 19:24:56 mgorny Exp $
+
+*gst-plugins-xvid-0.10.23-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-xvid-0.10.23-r1.ebuild:
+  Enable multilib support, bug #493176.
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   gst-plugins-xvid-0.10.23.ebuild:

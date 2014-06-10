@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.108 2014/04/27 07:41:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.109 2014/06/10 19:26:56 mgorny Exp $
+
+*gst-plugins-meta-0.10-r9 (10 Jun 2014)
+*gst-plugins-meta-1.0-r2 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-meta-0.10-r9.ebuild, +gst-plugins-meta-1.0-r2.ebuild:
+  Enable multilib support.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gst-plugins-meta-0.10-r7.ebuild:
   drop old

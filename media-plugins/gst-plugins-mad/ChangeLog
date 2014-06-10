@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.222 2014/05/31 14:50:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.223 2014/06/10 19:08:25 mgorny Exp $
+
+*gst-plugins-mad-1.2.4-r1 (10 Jun 2014)
+*gst-plugins-mad-0.10.19-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-mad-0.10.19-r1.ebuild, +gst-plugins-mad-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-mad-1.2.4 (31 May 2014)
 

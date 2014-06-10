@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-soundtouch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.24 2014/05/31 15:10:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.25 2014/06/10 19:16:32 mgorny Exp $
+
+*gst-plugins-soundtouch-1.2.4-r1 (10 Jun 2014)
+*gst-plugins-soundtouch-0.10.23-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-soundtouch-0.10.23-r1.ebuild,
+  +gst-plugins-soundtouch-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-soundtouch-1.2.4 (31 May 2014)
 

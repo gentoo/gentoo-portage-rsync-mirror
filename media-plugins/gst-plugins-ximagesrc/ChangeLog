@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.77 2014/05/31 15:24:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.78 2014/06/10 19:24:24 mgorny Exp $
+
+*gst-plugins-ximagesrc-0.10.31-r1 (10 Jun 2014)
+*gst-plugins-ximagesrc-1.2.4-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-ximagesrc-0.10.31-r1.ebuild,
+  +gst-plugins-ximagesrc-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-ximagesrc-1.2.4 (31 May 2014)
 

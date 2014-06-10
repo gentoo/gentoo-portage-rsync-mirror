@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-mpeg2dec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.179 2014/05/31 14:55:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.180 2014/06/10 19:09:51 mgorny Exp $
+
+*gst-plugins-mpeg2dec-1.2.4-r1 (10 Jun 2014)
+*gst-plugins-mpeg2dec-0.10.19-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-mpeg2dec-0.10.19-r1.ebuild,
+  +gst-plugins-mpeg2dec-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-mpeg2dec-1.2.4 (31 May 2014)
 
