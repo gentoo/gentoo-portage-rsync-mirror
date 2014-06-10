@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-vcs/mercurial[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ncurses? ( >=dev-python/urwid-1.0.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyinotify[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygments[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) qt4? ( dev-python/docutils[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/PyQt4[X,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/qscintilla-python[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) doc? ( app-text/asciidoc app-text/xmlto ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=A Mercurial interactive history viewer
+EAPI=5
+HOMEPAGE=http://www.logilab.org/project/hgview/ https://pypi.python.org/pypi/hgview/
+IUSE=doc ncurses +qt4 python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-vcs/mercurial[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ncurses? ( >=dev-python/urwid-1.0.0[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyinotify[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygments[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) qt4? ( dev-python/docutils[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/PyQt4[X,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/qscintilla-python[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( ncurses qt4 ) || ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://pypi/h/hgview/hgview-1.8.1.tar.gz
+_eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=ac85ed7cde3032bfad604b2f47a1ea8f
