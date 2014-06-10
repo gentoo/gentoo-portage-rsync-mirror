@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.59 2014/06/04 22:45:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.60 2014/06/10 09:16:51 nimiux Exp $
+
+  10 Jun 2014; Chema Alonso <nimiux@gentoo.org> libbluray-0.5.0.ebuild:
+  Stable for amd64 wrt bug #504788
 
   04 Jun 2014; Tim Harder <radhermit@gentoo.org> libbluray-0.5.0-r1.ebuild:
   Sync live ebuild changes (fixes bug #512368).
