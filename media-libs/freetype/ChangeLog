@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.395 2014/04/28 17:49:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.396 2014/06/10 00:43:48 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> freetype-2.4.11.ebuild,
+  freetype-2.5.0.1.ebuild, freetype-2.5.3-r1.ebuild, freetype-2.5.3.ebuild:
+  Add arm64 love.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> freetype-2.5.3-r1.ebuild,
   freetype-2.5.3.ebuild:

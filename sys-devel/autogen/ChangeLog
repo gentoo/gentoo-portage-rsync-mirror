@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.102 2014/06/08 16:53:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.104 2014/06/10 00:37:51 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> autogen-5.18.1.ebuild,
+  autogen-5.18.2.ebuild:
+  Mark m68k/s390/sh stable.
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> autogen-5.18.1.ebuild,
+  autogen-5.18.2.ebuild:
+  Add arm64 love.
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> autogen-5.18.1.ebuild:
   ia64 stable wrt bug #509056

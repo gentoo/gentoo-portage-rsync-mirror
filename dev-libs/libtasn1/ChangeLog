@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.201 2014/06/08 02:11:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.202 2014/06/10 00:31:18 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> libtasn1-2.13.ebuild,
+  libtasn1-2.14.ebuild, libtasn1-3.4-r1.ebuild, libtasn1-3.4.ebuild,
+  libtasn1-3.6.ebuild:
+  Add arm64 love.
 
   08 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> libtasn1-3.6.ebuild:
   Fix autoreconf issue with gtk-doc, bug#512694

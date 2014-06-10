@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/baekmuk-fonts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.44 2012/04/26 21:06:59 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/ChangeLog,v 1.45 2014/06/10 00:54:04 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> baekmuk-fonts-2.2-r2.ebuild:
+  Add arm64 love.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   baekmuk-fonts-2.2-r2.ebuild:

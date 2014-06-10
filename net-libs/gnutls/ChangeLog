@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.499 2014/06/09 20:49:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.501 2014/06/10 00:42:37 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> gnutls-2.12.23-r4.ebuild,
+  gnutls-2.12.23-r5.ebuild, gnutls-2.12.23-r6.ebuild, gnutls-3.2.15.ebuild,
+  gnutls-3.3.4.ebuild:
+  Mark m68k/s390/sh stable.
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> gnutls-2.12.23-r4.ebuild,
+  gnutls-2.12.23-r5.ebuild, gnutls-2.12.23-r6.ebuild, gnutls-3.2.15.ebuild,
+  gnutls-3.3.4.ebuild:
+  Add arm64 love.
 
   09 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> gnutls-2.12.23-r6.ebuild:
   arm stable wrt bug #511840

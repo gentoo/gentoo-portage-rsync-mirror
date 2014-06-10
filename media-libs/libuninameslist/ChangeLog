@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.41 2012/05/09 01:53:50 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.42 2014/06/10 00:56:14 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  libuninameslist-20091231.ebuild:
+  Add arm64 love.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   libuninameslist-20091231.ebuild:
@@ -166,4 +170,3 @@
   libuninameslist-20030713.ebuild:
   Initial import. Ebuild submitted by Martin Diers <martin@diers.us>.
   Bug #46686
-

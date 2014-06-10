@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/kochi-substitute
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.32 2012/04/26 21:08:25 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.33 2014/06/10 00:53:48 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  kochi-substitute-20030809-r3.ebuild:
+  Add arm64 love.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   kochi-substitute-20030809-r3.ebuild:

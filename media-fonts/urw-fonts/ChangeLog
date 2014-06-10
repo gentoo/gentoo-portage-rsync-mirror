@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.62 2012/04/26 20:50:41 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.63 2014/06/10 00:53:28 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> urw-fonts-2.4.9.ebuild:
+  Add arm64 love.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> urw-fonts-2.4.9.ebuild:
   keyword ~amd64-fbsd
@@ -223,4 +226,3 @@
 
   05 Apr 2003; Seth Chandler <sethbc@gentoo.org>; urw-fonts-2.0.ebuild:
   added urw-fonts to portage, try em out, they're nice specially for mozilla
-

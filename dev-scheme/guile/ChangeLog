@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.103 2013/04/24 22:53:08 pchrist Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.104 2014/06/10 00:34:15 vapier Exp $
+
+  10 Jun 2014; Mike Frysinger <vapier@gentoo.org> guile-1.8.8-r1.ebuild:
+  Add arm64/m68k love.
 
   24 Apr 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
   guile-1.8.8-r1.ebuild, +files/guile-1.8.8-makeinfo-5.patch:
