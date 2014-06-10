@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.02.ebuild,v 1.1 2014/06/10 11:09:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.02.ebuild,v 1.2 2014/06/10 11:39:33 blueness Exp $
 
 EAPI="5"
 
@@ -54,11 +54,11 @@ src_install() {
 		tools/importCA.html
 
 	insinto /etc/stunnel
-	doins "${FILESDIR}"/stunnel.conf
-	newinitd "${FILESDIR}"/stunnel.initd-start-stop-daemon stunnel
+	newins "${FILESDIR}"/stunnel.conf-r1 stunnel.conf
+	newinitd "${FILESDIR}"/stunnel.rc7 stunnel
 
 	systemd_dounit "${S}/tools/stunnel.service"
-	systemd_newtmpfilesd "${FILESDIR}"/stunnel.tmpfiles.conf stunnel.conf
+	systemd_newtmpfilesd "${FILESDIR}"/stunnel.tmpfiles.conf-r1 stunnel.conf
 }
 
 pkg_postinst() {
