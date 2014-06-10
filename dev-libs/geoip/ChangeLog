@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.210 2014/04/29 14:39:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.211 2014/06/09 23:52:57 vapier Exp $
+
+  09 Jun 2014; Mike Frysinger <vapier@gentoo.org> geoip-1.6.0-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   29 Apr 2014; Jeroen Roovers <jer@gentoo.org> -geoip-1.4.8-r3.ebuild,
   -geoip-1.5.0.ebuild, -geoip-1.5.1.ebuild, -geoip-1.5.2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.51 2013/12/10 19:58:44 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.52 2014/06/09 23:57:45 vapier Exp $
+
+  09 Jun 2014; Mike Frysinger <vapier@gentoo.org> eventlog-0.2.12.ebuild:
+  Add arm64/m68k love.
 
   10 Dec 2013; Fabian Groffen <grobian@gentoo.org> eventlog-0.2.12.ebuild:
   Marked ~m68k-mint, bug #493796
