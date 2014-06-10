@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.147 2014/05/31 13:49:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.148 2014/06/10 18:35:23 mgorny Exp $
+
+*gst-plugins-bad-0.10.23-r2 (10 Jun 2014)
+*gst-plugins-bad-1.2.4-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-bad-0.10.23-r2.ebuild, +gst-plugins-bad-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-bad-1.2.4 (31 May 2014)
 

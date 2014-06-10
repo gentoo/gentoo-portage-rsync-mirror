@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.151 2014/05/31 14:11:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.152 2014/06/10 18:38:01 mgorny Exp $
+
+*gst-plugins-ugly-0.10.19-r1 (10 Jun 2014)
+*gst-plugins-ugly-1.2.4-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-ugly-0.10.19-r1.ebuild, +gst-plugins-ugly-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-ugly-1.2.4 (31 May 2014)
 

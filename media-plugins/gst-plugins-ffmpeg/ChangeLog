@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.177 2013/10/22 07:20:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.178 2014/06/10 18:58:57 mgorny Exp $
+
+*gst-plugins-ffmpeg-0.10.13_p201211-r2 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-ffmpeg-0.10.13_p201211-r2.ebuild:
+  Enable multilib support, bug #493176.
 
   22 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-ffmpeg-0.10.13_p201211-r1.ebuild:

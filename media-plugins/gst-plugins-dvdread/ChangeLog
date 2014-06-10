@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-dvdread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.164 2014/05/31 14:30:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.165 2014/06/10 18:58:32 mgorny Exp $
+
+*gst-plugins-dvdread-0.10.19-r1 (10 Jun 2014)
+*gst-plugins-dvdread-1.2.4-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-dvdread-0.10.19-r1.ebuild, +gst-plugins-dvdread-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gst-plugins-dvdread-1.2.4 (31 May 2014)
 

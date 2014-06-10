@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.73 2014/05/25 20:49:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/ChangeLog,v 1.74 2014/06/10 18:35:58 blueness Exp $
+
+*cgminer-4.3.5 (10 Jun 2014)
+
+  10 Jun 2014; Anthony G. Basile <blueness@gentoo.org> +cgminer-4.3.5.ebuild,
+  +files/cgminer-4.3.5-system-jansson.patch, -cgminer-4.3.0.ebuild,
+  -cgminer-4.3.2.ebuild:
+  Version bump 4.3.5, use system libjansson.  Remove older 4.3.x
 
 *cgminer-4.3.4 (25 May 2014)
 

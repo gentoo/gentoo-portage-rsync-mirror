@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.367 2014/05/31 14:05:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.368 2014/06/10 18:32:44 mgorny Exp $
+
+*gstreamer-1.2.4-r1 (10 Jun 2014)
+*gstreamer-0.10.36-r1 (10 Jun 2014)
+
+  10 Jun 2014; Michał Górny <mgorny@gentoo.org> +gstreamer-0.10.36-r1.ebuild,
+  +gstreamer-1.2.4-r1.ebuild:
+  Enable multilib support, bug #493176.
 
 *gstreamer-1.2.4 (31 May 2014)
 
