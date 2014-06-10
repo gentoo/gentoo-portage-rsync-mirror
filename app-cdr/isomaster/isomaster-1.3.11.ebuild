@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.11.ebuild,v 1.1 2014/05/29 17:09:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.11.ebuild,v 1.2 2014/06/10 21:28:19 sping Exp $
 
 EAPI=4
 inherit eutils fdo-mime toolchain-funcs
@@ -58,7 +58,7 @@ src_install() {
 	emake "${myisoconf[@]}" DESTDIR="${D}" install
 	dodoc {CHANGELOG,CREDITS,README,TODO}.TXT *.txt
 
-	_apply_linguas  # bug 402679
+	use nls && _apply_linguas  # bug 402679, bug 512448
 }
 
 pkg_postinst() {

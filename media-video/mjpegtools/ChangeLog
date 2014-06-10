@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.217 2014/06/10 18:08:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.218 2014/06/10 21:06:49 billie Exp $
+
+  10 Jun 2014; Daniel Pielmeier <billie@gentoo.org> mjpegtools-2.1.0-r1.ebuild,
+  mjpegtools-2.1.0-r2.ebuild:
+  Whitespace.
 
 *mjpegtools-2.1.0-r2 (10 Jun 2014)
 

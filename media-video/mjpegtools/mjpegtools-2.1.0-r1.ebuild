@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r1.ebuild,v 1.9 2014/03/24 15:12:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r1.ebuild,v 1.10 2014/06/10 21:06:49 billie Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="virtual/jpeg
 		x11-libs/libX11
 		x11-libs/libXt
 		sdlgfx? ( media-libs/sdl-gfx )
-	 )"
+	)"
 
 DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )
