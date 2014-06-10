@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.267 2014/04/28 17:49:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.268 2014/06/09 23:29:37 vapier Exp $
+
+  09 Jun 2014; Mike Frysinger <vapier@gentoo.org> tiff-3.9.7-r1.ebuild,
+  tiff-4.0.3-r6.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> tiff-4.0.3-r6.ebuild:
   Replace multilib_build_binaries with multilib_is_native_abi, in order to put
