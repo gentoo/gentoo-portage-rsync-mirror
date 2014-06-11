@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.68 2014/04/01 09:19:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.69 2014/06/11 13:52:58 mgorny Exp $
+
+*eyeD3-0.7.4-r2 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> +eyeD3-0.7.4-r2.ebuild:
+  Wrap installed script properly. Add missing python-magic dep that causes auto-
+  download to happen during install.
 
 *eyeD3-0.7.4-r1 (01 Apr 2014)
 
