@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/hachoir-metadata
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/ChangeLog,v 1.8 2013/06/01 12:06:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/ChangeLog,v 1.9 2014/06/11 14:40:47 mgorny Exp $
+
+*hachoir-metadata-1.3.3-r1 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +hachoir-metadata-1.3.3-r1.ebuild:
+  Convert to distutils-r1. Handle USE=qt4 properly.
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #151880

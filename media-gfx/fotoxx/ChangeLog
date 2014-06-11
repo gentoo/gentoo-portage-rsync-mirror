@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.62 2014/05/05 11:17:23 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.63 2014/06/11 14:48:37 grozin Exp $
+
+*fotoxx-14.06.1 (11 Jun 2014)
+
+  11 Jun 2014; Andrey Grozin <grozin@gentoo.org> -fotoxx-14.04.ebuild,
+  +fotoxx-14.06.1.ebuild, -files/fotoxx-14.04.patch,
+  +files/fotoxx-14.06.1.patch:
+  Version bump
 
 *fotoxx-14.05 (05 May 2014)
 
