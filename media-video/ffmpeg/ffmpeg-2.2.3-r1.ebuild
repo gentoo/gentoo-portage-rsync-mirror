@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.155 2014/06/11 20:54:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.3-r1.ebuild,v 1.1 2014/06/11 20:54:53 mgorny Exp $
 
 EAPI="5"
 
@@ -37,7 +37,7 @@ FFMPEG_REVISION="${PV#*_p}"
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
 SLOT="0/${FFMPEG_SUBSLOT}"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~amd64 ~hppa ~mips ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
 	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
@@ -99,7 +99,7 @@ RDEPEND="
 		wavpack? ( media-sound/wavpack[${MULTILIB_USEDEP}] )
 		webp? ( media-libs/libwebp[${MULTILIB_USEDEP}] )
 		x264? ( >=media-libs/x264-0.0.20111017:=[${MULTILIB_USEDEP}] )
-		x265? ( >=media-libs/x265-0.9:=[${MULTILIB_USEDEP}] )
+		x265? ( media-libs/x265:=[${MULTILIB_USEDEP}] )
 		xvid? ( >=media-libs/xvid-1.1.0[${MULTILIB_USEDEP}] )
 	)
 	fdk? ( >=media-libs/fdk-aac-0.1.3[${MULTILIB_USEDEP}] )
@@ -183,6 +183,7 @@ src_prepare() {
 	if [[ "${PV%_p*}" != "${PV}" ]] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+	epatch "${FILESDIR}/ladspadl.patch"
 	epatch_user
 }
 
@@ -195,7 +196,7 @@ multilib_src_configure() {
 	local ffuse=(
 		bzip2:bzlib cpudetection:runtime-cpudetect debug doc
 		gnutls hardcoded-tables iconv network openssl sdl:ffplay vaapi
-		vdpau X:xlib zlib
+		vdpau zlib
 	)
 	use openssl && myconf+=( --enable-nonfree )
 
@@ -351,7 +352,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	dodoc Changelog README.md CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
+	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
 	use doc && dohtml -r doc/*
 	if use examples ; then
 		dodoc -r doc/examples
