@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.1 2014/06/11 16:31:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.2 2014/06/11 21:24:58 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -152,5 +152,3 @@ multilib_src_install_all() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 	einstalldocs
 }
-
-
