@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-213.ebuild,v 1.2 2014/05/31 16:48:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-213.ebuild,v 1.3 2014/06/11 15:13:06 floppym Exp $
 
 EAPI=5
 
@@ -93,7 +93,6 @@ pkg_pretend() {
 		~!GRKERNSEC_PROC"
 
 	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
-	use pam && CONFIG_CHECK+=" ~AUDITSYSCALL"
 	use xattr && CONFIG_CHECK+=" ~TMPFS_XATTR"
 	kernel_is -lt 3 7 && CONFIG_CHECK+=" ~HOTPLUG"
 	use firmware-loader || CONFIG_CHECK+=" ~!FW_LOADER_USER_HELPER"

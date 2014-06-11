@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pyrenamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/ChangeLog,v 1.4 2014/03/10 17:29:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/ChangeLog,v 1.5 2014/06/11 15:09:08 mgorny Exp $
+
+*pyrenamer-0.6.0-r2 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> +pyrenamer-0.6.0-r2.ebuild:
+  Convert to python-single-r1.
 
   10 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> pyrenamer-0.6.0-r1.ebuild:
   Pull in eyeD3 < 0.7 because the package doesn't support >= 0.7 yet. No eyeD3

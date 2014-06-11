@@ -1,0 +1,10 @@
+# ChangeLog for www-client/qtweb
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/ChangeLog,v 1.1 2014/06/11 15:29:23 jer Exp $
+
+*qtweb-3.8.5_p108 (11 Jun 2014)
+
+  11 Jun 2014; Jeroen Roovers <jer@gentoo.org> +qtweb-3.8.5_p108.ebuild,
+  +metadata.xml:
+  Initial commit (bug #374377 by Anton Kochkov).
+
