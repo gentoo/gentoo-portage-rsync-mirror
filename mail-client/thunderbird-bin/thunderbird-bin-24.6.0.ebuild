@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-24.4.0.ebuild,v 1.3 2014/03/22 20:17:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-24.6.0.ebuild,v 1.1 2014/06/11 19:27:19 axs Exp $
 
 EAPI="5"
 MOZ_ESR="0"
@@ -35,7 +35,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="+crashreporter"
@@ -50,8 +50,6 @@ RDEPEND="virtual/freedesktop-icon-theme
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
 	crashreporter? ( net-misc/curl )
-
-	!net-libs/libproxy[spidermonkey]
 "
 
 QA_PREBUILT="
