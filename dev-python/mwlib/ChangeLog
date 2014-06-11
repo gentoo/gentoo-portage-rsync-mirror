@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.32 2014/06/06 14:14:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.33 2014/06/11 12:05:38 dev-zero Exp $
+
+  11 Jun 2014; Tiziano Müller <dev-zero@gentoo.org> mwlib-0.15.15.ebuild:
+  Add missing build-time dependencies required now that we build from a github
+  tarball.
 
 *mwlib-0.15.15 (06 Jun 2014)
 
