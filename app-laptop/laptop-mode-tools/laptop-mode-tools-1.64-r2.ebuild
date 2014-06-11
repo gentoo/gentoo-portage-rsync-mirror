@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64-r1.ebuild,v 1.3 2014/06/07 17:13:16 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64-r2.ebuild,v 1.1 2014/06/11 22:29:13 alonbl Exp $
 
 EAPI=5
 inherit eutils multilib systemd udev
@@ -31,6 +31,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-ethernet-power.patch"
+	epatch "${FILESDIR}/${P}-wireless-sysfsattr.patch"
 
 	# This should avoid conflict with pm-powersave wrt #327443 and #396703
 	cat <<-EOF > "${T}"/${PN}
