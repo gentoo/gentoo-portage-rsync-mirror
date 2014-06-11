@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.105 2014/03/16 11:15:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.106 2014/06/11 19:53:45 mgorny Exp $
+
+*libssh-0.6.3-r1 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> +libssh-0.6.3-r1.ebuild:
+  Enable multilib support.
 
   16 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libssh-0.6.3.ebuild:
   Stable for ppc64, wrt bug #503504
