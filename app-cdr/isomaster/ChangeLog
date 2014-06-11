@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/isomaster
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.26 2014/06/10 21:28:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.27 2014/06/11 18:11:23 sping Exp $
+
+  11 Jun 2014; Sebastian Pipping <sping@gentoo.org> isomaster-1.3.11.ebuild:
+  Depend on gettext >=0.19.1 (bug #512448)
 
   10 Jun 2014; Sebastian Pipping <sping@gentoo.org> isomaster-1.3.11.ebuild:
   Fix installation for USE=-nls (bug #512448)
