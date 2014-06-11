@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/kdirstat-2.7.5.ebuild,v 1.3 2014/03/19 13:39:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/kdirstat-2.7.5.ebuild,v 1.4 2014/06/11 15:47:07 mrueg Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-base
 
 DESCRIPTION="Nice KDE replacement to the du command"
 HOMEPAGE="https://bitbucket.org/jeromerobert/k4dirstat/"
-SRC_URI="${HOMEPAGE}get/k4dirstat-${PV}.tar.bz2"
+SRC_URI="mirror://bitbucket.org/jeromerobert/k4dirstat/get/k4dirstat-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
