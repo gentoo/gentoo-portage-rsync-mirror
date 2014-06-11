@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-9999.ebuild,v 1.7 2014/04/28 17:31:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-9999.ebuild,v 1.8 2014/06/11 17:48:09 hasufell Exp $
 
 EAPI=5
 
@@ -67,11 +67,12 @@ multilib_src_configure() {
 
 multilib_src_compile() {
 	cmake-utils_src_compile
+	local abi_build_dir=${BUILD_DIR}
 
 	if multilib_is_native_abi ; then
 		if use python ; then
 			buildpybind() {
-				cp "${S}-${ABI}"/{libRocketCore*,libRocketControls*} "${python_BUILD_DIR}-${EPYTHON}"/ || die
+				cp "${abi_build_dir}"/{libRocketCore*,libRocketControls*} "${python_BUILD_DIR}-${EPYTHON}"/ || die
 				BUILD_DIR="${python_BUILD_DIR}-${EPYTHON}" cmake-utils_src_make _rocketcontrols/fast _rocketcore/fast
 			}
 			einfo "compiling python binding"

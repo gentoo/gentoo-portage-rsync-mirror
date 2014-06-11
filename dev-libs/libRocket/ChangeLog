@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libRocket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/ChangeLog,v 1.10 2014/04/28 17:31:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/ChangeLog,v 1.11 2014/06/11 17:48:08 hasufell Exp $
+
+  11 Jun 2014; Julian Ospald <hasufell@gentoo.org>
+  libRocket-1.2.1_p20130110-r1.ebuild, libRocket-9999.ebuild:
+  fix build wrt #512956
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org>
   libRocket-1.2.1_p20130110-r1.ebuild, libRocket-9999.ebuild:
