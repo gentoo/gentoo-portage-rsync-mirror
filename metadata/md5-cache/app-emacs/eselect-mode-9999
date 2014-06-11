@@ -6,5 +6,5 @@ HOMEPAGE=http://wiki.gentoo.org/wiki/Project:Eselect
 LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-23
 SLOT=0
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	025442f2eecab39ad0b4e541b6e142af	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=560602555e24aaa1203fa749066acf76

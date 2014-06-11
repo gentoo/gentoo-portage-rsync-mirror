@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2= dev-libs/gmp:0= dev-libs/libxml2:2= dev-libs/mpfr:0= sc
 REQUIRED_USE=emacs? ( gtk ) !curl? ( !gtk )
 SLOT=0/10
 SRC_URI=mirror://sourceforge/gretl/gretl-1.9.90.tar.xz
-_eclasses_=elisp-common	82c1a9cbf52051a9ac4894d151fac235	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=8ea563da208e45aa1ce00d7a21e9f07b
