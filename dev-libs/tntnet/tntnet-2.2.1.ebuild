@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.2.1.ebuild,v 1.3 2014/03/01 22:14:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.2.1.ebuild,v 1.4 2014/06/11 18:55:12 hd_brummy Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tntnet.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="doc gnutls server ssl examples"
 
 RDEPEND=">=dev-libs/cxxtools-2.2.1
@@ -32,6 +32,9 @@ src_prepare() {
 	# Both fixed in the next release
 	epatch "${FILESDIR}"/${PN}-2.0-zlib-minizip.patch
 	rm framework/common/{ioapi,unzip}.[ch] || die
+
+	# bug 423697
+	sed -e "s:unzip.h:minizip/unzip.h:" -i framework/defcomp/unzipcomp.cpp
 
 	eautoreconf
 
