@@ -2,13 +2,13 @@ DEFINED_PHASES=compile configure install prepare test
 DEPEND=gmp? ( dev-python/gmpy ) matplotlib? ( dev-python/matplotlib ) doc? ( dev-python/sphinx[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] ) test? ( dev-python/pytest[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 DESCRIPTION=Python library for arbitrary-precision floating-point arithmetic
 EAPI=5
-HOMEPAGE=http://code.google.com/p/mpmath/ http://pypi.python.org/pypi/mpmath/
+HOMEPAGE=http://mpmath.org/
 IUSE=doc examples gmp matplotlib test python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
-KEYWORDS=~amd64 ~x86 ~x86-linux ~ppc-macos
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-linux ~x86-macos
 LICENSE=BSD
 RDEPEND=gmp? ( dev-python/gmpy ) matplotlib? ( dev-python/matplotlib ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
-SRC_URI=http://mpmath.googlecode.com/files/mpmath-all-0.17.tar.gz
+SRC_URI=http://mpmath.org/files/mpmath-all-0.19.tar.gz
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=df14635edc98128ad5d8630e68b04b5a
+_md5_=dcd9a2f0fcf7a9dae67f4bb6c33b78ff
