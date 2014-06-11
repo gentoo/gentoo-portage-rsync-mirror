@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.69 2014/06/11 13:52:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.72 2014/06/11 14:21:34 mgorny Exp $
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> eyeD3-0.7.4-r2.ebuild:
+  Restore ~arm after dropping python-magic dep.
+
+*eyeD3-0.6.18-r2 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> +eyeD3-0.6.18-r2.ebuild:
+  Convert the :0 slot to distutils-r1. Clean up.
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> eyeD3-0.7.4-r2.ebuild:
+  Remove the python-magic dependency wrt bug #488270, and remove the pavement.py
+  line that tries to install it instead.
 
 *eyeD3-0.7.4-r2 (11 Jun 2014)
 

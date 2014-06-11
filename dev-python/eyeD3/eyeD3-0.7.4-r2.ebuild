@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.4-r2.ebuild,v 1.1 2014/06/11 13:52:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.4-r2.ebuild,v 1.3 2014/06/11 14:21:34 mgorny Exp $
 
 EAPI=5
 
@@ -16,17 +16,18 @@ SRC_URI="http://eyed3.nicfit.net/releases/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0.7"
-KEYWORDS="~amd64 ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-RDEPEND="!<${CATEGORY}/${PN}-0.6.18-r1:0
-	dev-python/python-magic[${PYTHON_USEDEP}]"
+RDEPEND="!<${CATEGORY}/${PN}-0.6.18-r1:0"
 DEPEND="${RDEPEND}
 	dev-python/paver[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	# prevent the build system from installing unwrapped bash script
-	sed -i -e '/scripts/d' pavement.py || die
+	# and prevent it from pulling optional python-magic
+	sed -i -e '/scripts/d' \
+		-e '/install_requires/d' pavement.py || die
 
 	distutils-r1_python_prepare_all
 }

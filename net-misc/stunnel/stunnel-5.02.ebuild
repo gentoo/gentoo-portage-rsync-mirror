@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.02.ebuild,v 1.3 2014/06/10 13:16:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.02.ebuild,v 1.4 2014/06/11 14:27:18 blueness Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.stunnel.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="ipv6 selinux tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )

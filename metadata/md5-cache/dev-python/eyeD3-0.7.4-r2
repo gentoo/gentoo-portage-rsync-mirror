@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=!<dev-python/eyeD3-0.6.18-r1:0 dev-python/python-magic[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/paver[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DEPEND=!<dev-python/eyeD3-0.6.18-r1:0 dev-python/paver[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 DESCRIPTION=Module for manipulating ID3 (v1 + v2) tags in Python
 EAPI=5
 HOMEPAGE=http://eyed3.nicfit.net/
 IUSE=python_targets_python2_7
-KEYWORDS=~amd64 ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris
+KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris
 LICENSE=GPL-2
-RDEPEND=!<dev-python/eyeD3-0.6.18-r1:0 dev-python/python-magic[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+RDEPEND=!<dev-python/eyeD3-0.6.18-r1:0 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0.7
 SRC_URI=http://eyed3.nicfit.net/releases/eyeD3-0.7.4.tgz
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=db11eddeeec22f662bd46e4f9574ac86
+_md5_=7a0e402b7051e985142cdec2098a3423
