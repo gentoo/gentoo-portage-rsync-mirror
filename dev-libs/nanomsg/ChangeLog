@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nanomsg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/ChangeLog,v 1.8 2014/03/30 20:14:10 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/ChangeLog,v 1.9 2014/06/11 05:54:32 djc Exp $
+
+*nanomsg-0.4 (11 Jun 2014)
+
+  11 Jun 2014; Dirkjan Ochtman <djc@gentoo.org> +nanomsg-0.4.ebuild:
+  Version bump nanomsg to 0.4
 
   30 Mar 2014; Dirkjan Ochtman <djc@gentoo.org> -nanomsg-0.1.ebuild:
   Remove old version.
