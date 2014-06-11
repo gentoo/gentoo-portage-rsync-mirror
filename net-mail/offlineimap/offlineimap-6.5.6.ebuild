@@ -1,44 +1,42 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.4-r1.ebuild,v 1.6 2013/02/14 22:11:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.6.ebuild,v 1.1 2014/06/11 12:52:01 tomka Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2:2.6"
-PYTHON_USE_WITH="threads sqlite? ssl?"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"  #see bug 394307
+EAPI=5
 
-inherit eutils distutils
+# Normally you need only one version of this.
+DISTUTILS_SINGLE_IMPL=1
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads,sqlite?,ssl?"
+
+inherit eutils distutils-r1
 
 DESCRIPTION="Powerful IMAP/Maildir synchronization and reader support"
 HOMEPAGE="http://offlineimap.org"
-#Why doesn't this work?
-#SRC_URI="mirror://github/spaetz/${PN}/tarball/v${PV} -> ${P}.tar.gz"
-SRC_URI="https://github.com/spaetz/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/OfflineIMAP/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc ssl sqlite"
 
-DEPEND="doc? ( dev-python/docutils )"
 RDEPEND=""
+DEPEND="doc? ( dev-python/docutils )"
 S="${WORKDIR}/${PN}"
 
-# github changed tarball internals again...
 src_unpack() {
 	unpack ${A}
 	mv *-${PN}-* "${S}/"
 }
 
 src_prepare() {
-	distutils_src_prepare
+	distutils-r1_src_prepare
 	# see http://pogma.com/2009/09/09/snow-leopard-and-offlineimap/ and bug 284925
 	epatch "${FILESDIR}"/"${PN}-6.5.3.1"-darwin10.patch
 }
 
 src_compile() {
-	distutils_src_compile
+	distutils-r1_src_compile
 	if use doc ; then
 		cd docs
 		rst2man.py MANUAL.rst offlineimap.1 || die "building manpage failed"
@@ -46,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	dodoc offlineimap.conf offlineimap.conf.minimal
 	if use doc ; then
 		cd docs
@@ -66,8 +64,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
-
 	elog ""
 	elog "You will need to configure offlineimap by creating ~/.offlineimaprc"
 	elog "Sample configurations are in /usr/share/doc/${PF}/"
