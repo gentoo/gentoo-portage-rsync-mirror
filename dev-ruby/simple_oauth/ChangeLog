@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simple_oauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.9 2014/04/24 16:40:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.10 2014/06/11 06:25:11 graaff Exp $
+
+  11 Jun 2014; Hans de Graaff <graaff@gentoo.org> simple_oauth-0.2.0-r1.ebuild:
+  Add ruby21.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> simple_oauth-0.2.0-r1.ebuild:
   Remove ruby18 support.
