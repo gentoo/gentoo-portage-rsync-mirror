@@ -1,0 +1,5 @@
+*delayer-0.0.2 (11 Jun 2014)
+
+  11 Jun 2014; Naohiro Aota <naota@gentoo.org> +delayer-0.0.2.ebuild,
+  +metadata.xml:
+  New package: dev-ruby/delayer

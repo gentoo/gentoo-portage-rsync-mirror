@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.10-r6.ebuild,v 1.1 2013/12/06 01:24:10 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.10-r6.ebuild,v 1.2 2014/06/11 07:50:39 pinkbyte Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE="snmp +usb cgi nls gnome kernel_linux systemd"
 DEPEND="
 	||	( >=sys-apps/util-linux-2.23[tty-helpers(-)]
 		  <=sys-apps/sysvinit-2.88-r4
+		  sys-freebsd/freebsd-ubin
 		)
 	cgi? ( >=media-libs/gd-1.8.4 )
 	nls? ( sys-devel/gettext )

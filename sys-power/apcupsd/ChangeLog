@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.99 2014/06/06 01:34:13 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.100 2014/06/11 07:50:39 pinkbyte Exp $
+
+  11 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> apcupsd-3.14.8-r2.ebuild,
+  apcupsd-3.14.10-r6.ebuild, apcupsd-3.14.12.ebuild:
+  Add missing dependency on sys-apps/util-linux or sys-freebsd/freebsd-ubin,
+  wrt bug #512514
 
 *apcupsd-3.14.12 (06 Jun 2014)
 

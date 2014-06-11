@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.2.1410.ebuild,v 1.2 2013/11/18 06:16:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-3.0.0.ebuild,v 1.1 2014/06/11 07:57:38 naota Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ if [ "${PV}" = "9999" ]; then
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64"
 	RUBY_S="${PN}"
 fi
 
@@ -33,12 +33,20 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 
 ruby_add_rdepend "dev-ruby/addressable
 	dev-ruby/bsearch
+	dev-ruby/delayer
 	dev-ruby/json
 	dev-ruby/memoize
 	>=dev-ruby/oauth-0.4.7
-	dev-ruby/ruby-gtk2
+	dev-ruby/rcairo
+	>=dev-ruby/ruby-gettext-3.0.1
+	>=dev-ruby/ruby-gtk2-2.2.0
+	dev-ruby/ruby-hmac
 	dev-ruby/typed-array
 	virtual/ruby-ssl"
+
+RUBY_PATCHES=(
+	"${FILESDIR}"/${PN}-0.2.2.1537-disable-bundler.patch
+)
 
 all_ruby_unpack() {
 	if [ "${PV}" = "9999" ];then
@@ -52,7 +60,7 @@ each_ruby_install() {
 	exeinto /usr/share/mikutter
 	doexe mikutter.rb
 	insinto /usr/share/mikutter
-	doins -r core plugin Gemfile
+	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
 	dodoc README

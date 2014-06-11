@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/mikutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.41 2014/03/22 08:29:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.42 2014/06/11 07:57:38 naota Exp $
+
+*mikutter-3.0.0 (11 Jun 2014)
+
+  11 Jun 2014; Naohiro Aota <naota@gentoo.org> +mikutter-3.0.0.ebuild,
+  -files/mikutter-0.2.2.1430-cairo.patch, -mikutter-0.2.1.1141.ebuild,
+  -mikutter-0.2.2.1328.ebuild, -mikutter-0.2.2.1410.ebuild,
+  -mikutter-0.2.2.1430.ebuild, -mikutter-0.2.2.1476.ebuild,
+  mikutter-0.2.2.1537.ebuild, mikutter-9999.ebuild:
+  version bump; clean up old ebuilds.
 
 *mikutter-0.2.2.1537 (22 Mar 2014)
 

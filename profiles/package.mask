@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15778 2014/06/10 21:56:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15779 2014/06/11 07:56:08 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -246,6 +246,7 @@ dev-java/ibm-jdk-bin:1.5
 >=media-plugins/gst-plugins-xvid-0.10.23-r1:0.10
 >=media-plugins/gst-plugins-xvideo-0.10.36-r1:0.10
 >=app-emulation/emul-linux-x86-gstplugins-20140508-r1
+=net-fs/samba-3.6.23-r1
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage

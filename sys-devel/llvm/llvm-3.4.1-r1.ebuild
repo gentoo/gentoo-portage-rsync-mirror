@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1-r1.ebuild,v 1.1 2014/05/10 22:32:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1-r1.ebuild,v 1.2 2014/06/11 07:49:45 mgorny Exp $
 
 EAPI=5
 
@@ -170,6 +170,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.4-gentoo-install.patch
 	# Hack cmake search path for Gentoo, bug #496480
 	epatch "${FILESDIR}"/${PN}-3.3-cmake-modulepath.patch
+	# Use built-in ConfigParser to avoid failures with configparser-3.2
+	# https://bugs.gentoo.org/show_bug.cgi?id=500856
+	epatch "${FILESDIR}"/${PN}-3.4-cmake-configparser.patch
 
 	if use clang; then
 		# Automatically select active system GCC's libraries, bugs #406163 and #417913

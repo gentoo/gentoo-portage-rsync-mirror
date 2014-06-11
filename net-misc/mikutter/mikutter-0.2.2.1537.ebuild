@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.2.1537.ebuild,v 1.1 2014/03/22 08:29:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.2.1537.ebuild,v 1.2 2014/06/11 07:57:38 naota Exp $
 
 EAPI=5
 
@@ -42,10 +42,9 @@ ruby_add_rdepend "dev-ruby/addressable
 	dev-ruby/ruby-hmac
 	dev-ruby/typed-array
 	virtual/ruby-ssl"
-ruby_add_bdepend "dev-ruby/bundler"
 
 RUBY_PATCHES=(
-	"${FILESDIR}"/${P}-disable-bundler.patch
+	"${FILESDIR}"/${PN}-0.2.2.1537-disable-bundler.patch
 )
 
 all_ruby_unpack() {
@@ -60,7 +59,7 @@ each_ruby_install() {
 	exeinto /usr/share/mikutter
 	doexe mikutter.rb
 	insinto /usr/share/mikutter
-	doins -r core plugin Gemfile
+	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
 	dodoc README
