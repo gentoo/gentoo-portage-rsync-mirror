@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.671 2014/06/04 06:51:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.672 2014/06/11 08:08:30 mgorny Exp $
+
+*samba-3.6.23-r1 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org> +samba-3.6.23-r1.ebuild:
+  Enable multilib support in samba-3.
 
 *samba-4.1.8 (04 Jun 2014)
 

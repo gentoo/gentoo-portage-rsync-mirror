@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r2.ebuild,v 1.8 2014/05/14 18:13:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r2.ebuild,v 1.9 2014/06/11 08:24:01 klausman Exp $
 
 EAPI="4"
 
@@ -62,6 +62,8 @@ src_prepare() {
 	fi
 	epatch "${FILESDIR}"/${PN}-2.24-skip-last-tests.patch #491742
 	epatch "${FILESDIR}"/${PN}-2.24-last-tests.patch #501408
+	# http://marc.info/?l=util-linux-ng&m=140223032032288&w=2
+	epatch "${FILESDIR}"/${PN}-2.24-fdisk-on-alpha.patch
 	find tests/ -name bigyear -delete #489794
 	elibtoolize
 }

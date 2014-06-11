@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.461 2014/05/28 18:01:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.462 2014/06/11 08:24:01 klausman Exp $
+
+  11 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
+  +files/util-linux-2.24-fix-fdisk-on-alpha.patch, util-linux-2.24.1-r2.ebuild,
+  util-linux-2.24.1-r3.ebuild, util-linux-2.24.2.ebuild:
+  Fix fdisk compile failure on Alpha
 
   28 May 2014; Markos Chandras <hwoarang@gentoo.org> util-linux-2.24.2.ebuild:
   Restore 2.24-last-tests.patch per bug #501408 thanks to eroen

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=aio? ( dev-libs/libaio ) gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 ) numa? ( sys-process/numactl ) zlib? ( sys-libs/zlib )
+DESCRIPTION=Jens Axboe's Flexible IO tester
+EAPI=5
+HOMEPAGE=http://brick.kernel.dk/snaps/
+IUSE=aio gnuplot gtk numa zlib python_targets_python2_7
+KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=aio? ( dev-libs/libaio ) gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 ) numa? ( sys-process/numactl ) zlib? ( sys-libs/zlib ) gnuplot? ( sci-visualization/gnuplot python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] )
+SLOT=0
+SRC_URI=http://brick.kernel.dk/snaps/fio-2.1.10.tar.bz2
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=692fa236c0f19b3b405029076373d67d
