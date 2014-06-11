@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-gconf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.118 2013/02/25 23:20:13 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.119 2014/06/11 16:32:58 mgorny Exp $
+
+*gst-plugins-gconf-0.10.31-r1 (11 Jun 2014)
+
+  11 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-gconf-0.10.31-r1.ebuild:
+  Enable multilib support.
 
   25 Feb 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-gconf-0.10.30.ebuild:
