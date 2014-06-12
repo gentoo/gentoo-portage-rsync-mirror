@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>A Tool for monitoring, capturing and storing TCP connections flows</longdescription>
+<use>
+<flag name='pcap'>Use <pkg>net-libs/libpcap</pkg> for packet capturing</flag>
+</use>
 </pkgmetadata>

@@ -1,0 +1,28 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -191,11 +191,6 @@
+ ################################################################
+ ##
+ 
+-
+-# sqlite3 is fun
+-AC_CHECK_HEADERS([sqlite3.h])
+-AC_CHECK_LIB([sqlite3],[sqlite3_open])
+-
+ #
+ # ZLIB is required for decompressing
+ #  Note you cannot put comments in the AC_MSG_ERROR for some reason
+@@ -286,13 +281,6 @@
+ # drawing support via cairo
+ #
+ 
+-# Cairo requires these to be explicitly included on mingw (and perhaps others):
+-AC_CHECK_LIB([expat],[XML_ParserCreate])
+-AC_CHECK_LIB([pixman-1],[pixman_region_init])
+-AC_CHECK_LIB([bz2],[BZ2_bzDecompress])
+-AC_CHECK_LIB([freetype],[FT_Init_FreeType]) # requires bz2
+-AC_CHECK_LIB([fontconfig],[FcBlanksCreate]) # requires freetype expat
+-
+ AC_CHECK_HEADERS([cairo/cairo.h cairo/cairo-pdf.h])
+ AC_CHECK_HEADERS([cairo.h cairo-pdf.h])
+ AC_CHECK_LIB([cairo],[cairo_create], , [
