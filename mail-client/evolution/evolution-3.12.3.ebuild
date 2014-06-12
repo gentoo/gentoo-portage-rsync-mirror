@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.1.ebuild,v 1.1 2014/04/27 17:25:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.3.ebuild,v 1.1 2014/06/12 18:38:01 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
