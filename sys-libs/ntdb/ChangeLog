@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ntdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.4 2014/04/18 21:04:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.5 2014/06/12 20:49:40 mgorny Exp $
+
+*ntdb-1.0-r1 (12 Jun 2014)
+
+  12 Jun 2014; Michał Górny <mgorny@gentoo.org> +ntdb-1.0-r1.ebuild:
+  Enable multilib support, required by samba-4.
 
   18 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> ntdb-1.0.ebuild:
   Hard block older samba versions again.
@@ -16,4 +21,3 @@
   17 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> +ntdb-1.0.ebuild,
   +metadata.xml:
   Initital commit.
-
