@@ -12,6 +12,5 @@
 	<herd>media-tv</herd>
 	<use>
 		<flag name="server">Enable tntnet server daemon</flag>
-		<flag name="sdk">Enable tntnet SDK</flag>
 	</use>
 </pkgmetadata>

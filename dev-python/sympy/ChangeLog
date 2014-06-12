@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.29 2014/02/06 21:14:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.30 2014/06/12 02:25:03 patrick Exp $
+
+  12 Jun 2014; Patrick Lauer <patrick@gentoo.org> -sympy-0.7.3.ebuild:
+  Dropping old version with unsatisfiable dependencies
 
   06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> sympy-0.7.4.1.ebuild:
   Reintroduce use flag system-mpmath to allow using bundled mpmath, bug #500284
