@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Term-ANSIColor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ANSIColor/ChangeLog,v 1.45 2013/03/03 08:37:54 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ANSIColor/ChangeLog,v 1.46 2014/06/12 07:00:36 kumba Exp $
+
+  12 Jun 2014; Joshua Kinard <kumba@gentoo.org>
+  perl-Term-ANSIColor-4.20.0.ebuild:
+  Added ~mips to KEYWORDS
 
   03 Mar 2013; Mike Frysinger <vapier@gentoo.org>
   perl-Term-ANSIColor-4.20.0.ebuild:

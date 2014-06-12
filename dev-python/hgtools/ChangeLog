@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/hgtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hgtools/ChangeLog,v 1.10 2014/03/31 21:08:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hgtools/ChangeLog,v 1.11 2014/06/12 06:44:54 patrick Exp $
+
+*hgtools-6.0 (12 Jun 2014)
+
+  12 Jun 2014; Patrick Lauer <patrick@gentoo.org> +hgtools-6.0.ebuild:
+  Bump, add py34
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> hgtools-2.0.2-r1.ebuild,
   hgtools-2.0.2.ebuild, hgtools-3.0.2.ebuild, hgtools-4.0.ebuild:
