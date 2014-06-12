@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.168 2014/05/07 05:42:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.169 2014/06/12 18:00:38 pacho Exp $
+
+  12 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/dia-0.97.2-disable-cairo.patch, -dia-0.97.2-r2.ebuild,
+  -files/dia-0.97.2-freetype251.patch, -files/dia-0.97.2-glib-2.31.patch,
+  -files/dia-0.97.2-glib2.36.patch,
+  -files/dia-0.97.2-implicit-declaration.patch, dia-0.97.3_pre20140417.ebuild:
+  Fix build without cairo (#509636 by Marcel Pennewib and gokturk), drop old.
 
   07 May 2014; Pacho Ramos <pacho@gentoo.org> dia-0.97.3_pre20140417.ebuild:
   Add bug references (thanks to Gilles for finding them)

@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.341 2014/05/17 15:31:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.342 2014/06/12 17:42:47 pacho Exp $
+
+*pulseaudio-5.0-r2 (12 Jun 2014)
+
+  12 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/pulseaudio-5.0-crash-udp.patch,
+  +files/pulseaudio-5.0-module-switch.patch, +pulseaudio-5.0-r2.ebuild:
+  Fix CVE-2014-3970 (#512516), bash-completion dir (#509486 by poncho) and apply
+  a patch from upstream used in Fedora to fix the profiles switching.
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> pulseaudio-5.0-r1.ebuild:
   Stable for alpha, wrt bug #508862

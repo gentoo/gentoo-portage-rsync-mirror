@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/qtweb-3.8.5_p108.ebuild,v 1.4 2014/06/12 12:11:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/qtweb-3.8.5_p108.ebuild,v 1.5 2014/06/12 18:01:33 jer Exp $
 
 EAPI=5
 inherit qt4-r2
@@ -22,7 +22,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-qt/designer
+	dev-qt/designer:4
 "
 
 S=${WORKDIR}/${MY_PN}-b${PV/*_p}
