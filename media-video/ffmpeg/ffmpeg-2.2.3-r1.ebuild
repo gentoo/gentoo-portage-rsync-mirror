@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.3-r1.ebuild,v 1.1 2014/06/11 20:54:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.3-r1.ebuild,v 1.2 2014/06/12 14:14:17 mgorny Exp $
 
 EAPI="5"
 
@@ -171,6 +171,11 @@ DEPEND="${RDEPEND}
 	truetype? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
 	v4l? ( sys-kernel/linux-headers )
 "
+
+RDEPEND="${RDEPEND}
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3
+		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
+
 # faac is license-incompatible with ffmpeg
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	libv4l? ( v4l )

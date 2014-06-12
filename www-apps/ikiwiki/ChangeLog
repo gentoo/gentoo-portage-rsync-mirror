@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ikiwiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.21 2014/02/14 00:53:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.22 2014/06/12 14:04:09 mrueg Exp $
+
+*ikiwiki-3.20140227 (12 Jun 2014)
+
+  12 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +ikiwiki-3.20140227.ebuild:
+  Version bump. Proxy commit for Alice Ferrazzi.
 
   14 Feb 2014; Manuel Rüger <mrueg@gentoo.org> -ikiwiki-3.20130904.1.ebuild:
   Cleanup old.

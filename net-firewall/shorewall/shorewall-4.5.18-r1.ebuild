@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.5.18-r1.ebuild,v 1.8 2014/03/23 18:01:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.5.18-r1.ebuild,v 1.9 2014/06/12 14:02:16 tomwij Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ MY_PV_BASE=$(get_version_component_range 1-3)
 MY_P="${PN}-${MY_PV_BASE}"
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
-DESCRIPTION="Shoreline Firewall is an iptables-based firewall for Linux."
+DESCRIPTION="Shoreline Firewall is an iptables-based firewall for Linux"
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="http://www1.shorewall.net/pub/${PN}/${MY_PV_TREE}/${MY_P}/${P}.tar.bz2
 	doc? ( http://www1.shorewall.net/pub/${PN}/${MY_PV_TREE}/${MY_P}/${MY_P_DOCS}.tar.bz2 )"

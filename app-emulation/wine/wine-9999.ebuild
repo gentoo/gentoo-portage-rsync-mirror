@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.168 2014/05/25 16:47:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.169 2014/06/12 14:30:41 mgorny Exp $
 
 EAPI="5"
 
@@ -125,8 +125,11 @@ COMMON_DEPEND="
 				media-libs/openal[abi_x86_32]
 			) )
 			gstreamer? (
-				app-emulation/emul-linux-x86-gstplugins
 				app-emulation/emul-linux-x86-medialibs[development]
+				(
+					media-libs/gstreamer:0.10[abi_x86_32]
+					media-libs/gst-plugins-base:0.10[abi_x86_32]
+				)
 			)
 			X? ( || (
 				app-emulation/emul-linux-x86-xlibs[development]

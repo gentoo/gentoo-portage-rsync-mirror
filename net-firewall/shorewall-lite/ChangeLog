@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.150 2014/06/04 00:45:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.151 2014/06/12 14:20:53 tomwij Exp $
+
+*shorewall-lite-4.5.21.10 (12 Jun 2014)
+
+  12 Jun 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/4.5.21.10/shorewall-lite.confd, +files/4.5.21.10/shorewall-lite.initd,
+  +files/4.5.21.10/shorewall-lite.systemd, +files/4.5.21.10/shorewallrc,
+  +shorewall-lite-4.5.21.10.ebuild, shorewall-lite-4.5.18-r1.ebuild,
+  shorewall-lite-4.5.21.7.ebuild, shorewall-lite-4.5.21.9.ebuild:
+  Version bump to 4.5.21.10; fixes bug #509258 and bug #509258, proxied commit
+  for Thomas D. (whissi).
 
   04 Jun 2014; Jeroen Roovers <jer@gentoo.org> shorewall-lite-4.5.21.9.ebuild:
   Stable for HPPA (bug #511620).

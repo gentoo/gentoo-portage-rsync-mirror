@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.5.18-r1.ebuild,v 1.8 2014/03/23 18:01:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.5.18-r1.ebuild,v 1.9 2014/06/12 14:26:06 tomwij Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ MY_PN="${PN/6/}"
 MY_P="${MY_PN}-${MY_PV_BASE}"
 MY_P_DOCS="${MY_PN}-docs-html-${PV}"
 
-DESCRIPTION="Shoreline Firewall with IPv6 support."
+DESCRIPTION="Shoreline Firewall with IPv6 support"
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_PV_TREE}/${MY_P}/${P}.tar.bz2
 	doc? ( http://www1.shorewall.net/pub/${PN}/${MY_PV_TREE}/${MY_P}/${MY_P_DOCS}.tar.bz2 )"
