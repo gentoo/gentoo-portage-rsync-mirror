@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jaraco-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaraco-utils/ChangeLog,v 1.1 2014/06/12 03:48:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaraco-utils/ChangeLog,v 1.2 2014/06/12 04:03:50 patrick Exp $
+
+  12 Jun 2014; Patrick Lauer <patrick@gentoo.org> jaraco-utils-10.0.2.ebuild:
+  Fix dependencies
 
 *jaraco-utils-10.0.2 (12 Jun 2014)
 

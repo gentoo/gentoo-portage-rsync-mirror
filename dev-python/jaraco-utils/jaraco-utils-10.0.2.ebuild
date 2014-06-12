@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaraco-utils/jaraco-utils-10.0.2.ebuild,v 1.1 2014/06/12 03:48:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaraco-utils/jaraco-utils-10.0.2.ebuild,v 1.2 2014/06/12 04:03:50 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -19,6 +19,7 @@ IUSE="test"
 
 DEPEND="dev-python/hgtools[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
+	dev-python/more-itertools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}] )
 	"
