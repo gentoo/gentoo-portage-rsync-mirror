@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.94 2014/03/14 10:03:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.96 2014/06/12 04:57:55 binki Exp $
+
+  12 Jun 2014; Nathan Phillip Brink <binki@gentoo.org> -check-0.9.10.ebuild,
+  -check-0.9.9.ebuild:
+  Drop some old unstable (check-0.9.9, check-0.9.10).
+
+*check-0.9.13 (12 Jun 2014)
+
+  12 Jun 2014; Nathan Phillip Brink <binki@gentoo.org> +check-0.9.13.ebuild:
+  Bump to dev-libs/check-0.9.13 for bug #512826 by jer.
 
   14 Mar 2014; Agostino Sarubbo <ago@gentoo.org> check-0.9.11.ebuild:
   Stable for ppc64, wrt bug #489366

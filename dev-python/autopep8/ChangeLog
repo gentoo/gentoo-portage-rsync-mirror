@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.48 2014/06/08 03:06:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.49 2014/06/12 04:57:30 idella4 Exp $
+
+*autopep8-1.0.3 (12 Jun 2014)
+
+  12 Jun 2014; Ian Delaney <idella4@gentoo.org> +autopep8-1.0.3.ebuild:
+  bump
 
   08 Jun 2014; Mike Gilbert <floppym@gentoo.org> autopep8-1.0.1.ebuild,
   autopep8-1.0.2.ebuild:
