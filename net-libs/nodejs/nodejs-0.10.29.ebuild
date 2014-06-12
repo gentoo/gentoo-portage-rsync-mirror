@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.11.11.ebuild,v 1.1 2014/02/26 06:22:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.10.29.ebuild,v 1.1 2014/06/12 09:36:25 patrick Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz"
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
-IUSE="+npm"
+IUSE="+npm +snapshot"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}"
@@ -40,23 +40,7 @@ src_prepare() {
 src_configure() {
 	local myconf=""
 	! use npm && myconf="--without-npm"
-
-	# Use target arch detection logic, see v8-3.18 ebuilds
-	case ${CHOST} in
-		i?86-*)
-			myarch="ia32"
-			myconf+=" -Dv8_target_arch=ia32" ;;
-		x86_64-*)
-			if [[ $ABI = x86 ]] ; then
-				myarch="ia32"
-			else
-				myarch="x64"
-			fi ;;
-		arm*-*)
-			myarch="arm"
-			;;
-		*) die "Unrecognized CHOST: ${CHOST}"
-	esac
+	! use snapshot && myconf="${myconf} --without-snapshot"
 
 	"${PYTHON}" configure --prefix="${EPREFIX}"/usr \
 		--openssl-use-sys --shared-zlib --without-dtrace ${myconf} || die
@@ -64,13 +48,13 @@ src_configure() {
 
 src_compile() {
 	emake out/Makefile
-	emake -C out "mksnapshot.${myarch}"
-	pax-mark m "out/Release/mksnapshot.${myarch}"
+	emake -C out mksnapshot
+	pax-mark m out/Release/mksnapshot
 	emake
 }
 
 src_install() {
-	"${PYTHON}" tools/install.py install "${D}" /usr
+	"${PYTHON}" tools/install.py install "${D}"
 
 	use npm && dohtml -r "${ED}"/usr/lib/node_modules/npm/html/*
 	rm -rf "${ED}"/usr/lib/node_modules/npm/doc "${ED}"/usr/lib/node_modules/npm/html
