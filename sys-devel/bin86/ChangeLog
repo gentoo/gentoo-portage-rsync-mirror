@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bin86
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.34 2014/05/28 09:52:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.35 2014/06/12 12:33:06 polynomial-c Exp $
+
+  12 Jun 2014; Lars Wendler <polynomial-c@gentoo.org> bin86-0.16.21.ebuild:
+  Removed unneeded patch from SRC_URI.
 
 *bin86-0.16.21 (28 May 2014)
 

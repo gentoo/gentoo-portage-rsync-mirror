@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.21.ebuild,v 1.1 2014/05/28 09:52:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.21.ebuild,v 1.2 2014/06/12 12:33:06 polynomial-c Exp $
 
 EAPI="5"
 
@@ -8,8 +8,7 @@ inherit toolchain-funcs eutils
 
 DESCRIPTION="Assembler and loader used to create kernel bootsector"
 HOMEPAGE="http://v3.sk/~lkundrak/dev86/"
-SRC_URI="http://v3.sk/~lkundrak/dev86/${P}.tar.gz
-	https://github.com/lkundrak/dev86/commit/2c95336f19eeff761ecb858c5a2a58484bb3ceeb.patch -> ${PN}-0.16.20-fix_lilo_build.patch"
+SRC_URI="http://v3.sk/~lkundrak/dev86/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
