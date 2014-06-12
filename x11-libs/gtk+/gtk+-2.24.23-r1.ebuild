@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r1.ebuild,v 1.1 2014/05/14 13:36:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r1.ebuild,v 1.2 2014/06/12 15:18:24 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -40,7 +40,7 @@ COMMON_DEPEND="
 	>=dev-libs/atk-1.29.2[introspection?,${MULTILIB_USEDEP}]
 	media-libs/fontconfig[${MULTILIB_USEDEP}]
 	x11-misc/shared-mime-info
-	cups? ( net-print/cups:=[${MULTILIB_USEDEP}] )
+	cups? ( >=net-print/cups-1.7.1-r2:=[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	!<gnome-base/gail-1000
 "
@@ -176,7 +176,8 @@ multilib_src_configure() {
 		$(use_enable cups cups auto) \
 		$(multilib_native_use_enable introspection) \
 		$(use_enable xinerama) \
-		--disable-papi
+		--disable-papi \
+		CUPS_CONFIG="${EPREFIX}/usr/bin/${CHOST}-cups-config"
 
 	# work-around gtk-doc out-of-source brokedness
 	if multilib_is_native_abi; then

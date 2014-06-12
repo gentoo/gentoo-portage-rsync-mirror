@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.2 2014/06/11 21:24:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.3 2014/06/12 15:12:42 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=gnome-base/gconf-2[${MULTILIB_USEDEP}]
 		sys-apps/acl[${MULTILIB_USEDEP}]
 		sys-apps/attr[${MULTILIB_USEDEP}] )
 	avahi? ( >=net-dns/avahi-0.6[${MULTILIB_USEDEP}] )
-	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
+	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
 	fam? ( virtual/fam[${MULTILIB_USEDEP}] )
 	samba? ( >=net-fs/samba-3[${MULTILIB_USEDEP}] )
 	ssl? (

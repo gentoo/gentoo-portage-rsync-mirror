@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.58 2014/06/06 22:29:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.59 2014/06/12 15:07:30 mgorny Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ RDEPEND="
 	)
 	dbus? ( sys-apps/dbus[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.6 )
-	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
+	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
 	!lprng-compat? ( !net-print/lprng )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )

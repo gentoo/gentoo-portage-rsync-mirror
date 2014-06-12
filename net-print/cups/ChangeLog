@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.615 2014/06/06 22:29:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.616 2014/06/12 15:07:30 mgorny Exp $
+
+  12 Jun 2014; Michał Górny <mgorny@gentoo.org> cups-1.7.1-r2.ebuild,
+  cups-1.7.3.ebuild, cups-9999.ebuild:
+  Require newer virtual/krb5 so that ${CHOST}-krb5-config is in place.
 
 *cups-1.7.3 (06 Jun 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pykota
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.30 2013/01/17 16:47:48 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.31 2014/06/12 15:26:13 mrueg Exp $
+
+  12 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -pykota-1.25_p2437-r1.ebuild:
+  Cleanup old.
 
   17 Jan 2013; Michał Górny <mgorny@gentoo.org> pykota-1.25_p2437-r1.ebuild,
   pykota-1.26.ebuild:
