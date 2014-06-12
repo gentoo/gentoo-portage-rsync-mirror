@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r5.ebuild,v 1.2 2014/01/28 04:24:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r7.ebuild,v 1.1 2014/06/12 01:30:04 floppym Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -17,7 +17,7 @@ SRC_URI="
 LICENSE="Spotify"
 SLOT="0"
 #amd64 and x86 keywords removed due to security concerns, see bug 474010
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="gnome pax_kernel pulseaudio"
 RESTRICT="mirror strip"
 
@@ -44,7 +44,7 @@ RDEPEND="${DEPEND}
 		media-libs/freetype
 		dev-libs/openssl:0
 		dev-libs/glib:2
-		dev-libs/libgcrypt:0/11
+		|| ( dev-libs/libgcrypt:11/11 dev-libs/libgcrypt:0/11 )
 		media-libs/libpng:1.2
 		dev-db/sqlite:3
 		sys-libs/zlib

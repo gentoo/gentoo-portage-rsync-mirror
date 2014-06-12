@@ -1,6 +1,20 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.30 2014/05/20 15:36:48 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.32 2014/06/12 01:30:04 floppym Exp $
+
+*spotify-0.9.4.183-r7 (12 Jun 2014)
+
+  12 Jun 2014; Mike Gilbert <floppym@gentoo.org> +spotify-0.9.4.183-r7.ebuild,
+  -spotify-0.9.4.183-r4.ebuild, -spotify-0.9.4.183-r5.ebuild,
+  -spotify-0.9.4.183-r6.ebuild:
+  Depend on either libgcrypt:11/11 or libgcrypt:0/11. Drop ~amd64 keyword.
+  Remove old.
+
+*spotify-0.9.10.17-r1 (12 Jun 2014)
+
+  12 Jun 2014; Mike Gilbert <floppym@gentoo.org> +spotify-0.9.10.17-r1.ebuild,
+  -spotify-0.9.10.17.ebuild:
+  Depend on either libgcrypt:11/11 or libgcrypt:0/11.
 
 *spotify-0.9.10.17 (20 May 2014)
 
