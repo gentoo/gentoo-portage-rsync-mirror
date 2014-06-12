@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/IP-Country-2.280.0.ebuild,v 1.3 2014/06/12 17:28:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/IP-Country-2.280.0.ebuild,v 1.4 2014/06/12 19:53:44 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="fast lookup of country codes from IP addresses"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="amd64 ~hppa ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 hppa ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="dev-perl/Geography-Countries"

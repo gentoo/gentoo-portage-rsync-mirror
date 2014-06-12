@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure install prepare unpack
+DEPEND=udev? ( virtual/libudev ) virtual/pkgconfig dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Cross platform serial port access library
+EAPI=4
+HOMEPAGE=http://sigrok.org/
+IUSE=static-libs udev
+LICENSE=GPL-3
+RDEPEND=udev? ( virtual/libudev )
+SLOT=0
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	git-2	2027b81a576527fa16bece425941e094	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=dc4229434d3720682091bcbbcb4b1fcf

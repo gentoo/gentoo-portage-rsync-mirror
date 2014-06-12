@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.7.6.ebuild,v 1.1 2014/05/18 03:20:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.7.8.ebuild,v 1.1 2014/06/12 20:00:14 jer Exp $
 
 EAPI=5
 inherit autotools eutils user
@@ -75,5 +75,5 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elog "Note, if you modify ARGUS_DAEMON value in argus.conf it's quite"
-	elog "possible that init script will fail to work."
+	elog "possible that the init script will fail to work."
 }
