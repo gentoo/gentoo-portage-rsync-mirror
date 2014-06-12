@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/irker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.14 2013/05/22 03:40:55 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.15 2014/06/12 03:16:00 patrick Exp $
+
+*irker-2.9 (12 Jun 2014)
+
+  12 Jun 2014; Patrick Lauer <patrick@gentoo.org>
+  +files/2.7-Register-author_name-as-author-instead-of-email-user.patch,
+  +files/2.7-irkerhook-Remove-file-listing.patch, +files/irkerd.confd,
+  +files/irkerd.initd, +irker-2.9.ebuild:
+  Bump, include most of the fixes from #491808
 
 *irker-1.20 (22 May 2013)
 
