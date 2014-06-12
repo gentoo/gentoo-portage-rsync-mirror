@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1341 2014/06/12 12:02:44 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1342 2014/06/12 13:22:31 mpagano Exp $
+
+*gentoo-sources-3.15.0-r1 (12 Jun 2014)
+
+  12 Jun 2014; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.15.0-r1.ebuild:
+  Linux BFQ patches v7r4. Patch to change inode_capable to
+  capable_wrt_inode_uidgid, fixes CVE-2014-4014. See bug #512980
 
 *gentoo-sources-3.12.22 (12 Jun 2014)
 
