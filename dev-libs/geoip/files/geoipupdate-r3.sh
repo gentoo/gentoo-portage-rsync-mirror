@@ -6,6 +6,10 @@ TMPDIR=
 
 DATABASES="GeoLiteCity GeoLiteCountry/GeoIP asnum/GeoIPASNum GeoIPv6 GeoLiteCityv6-beta/GeoLiteCityv6"
 
+if [ "${1}" = -f ] || [ "${1}" = --force ]; then
+	force=true
+fi
+
 if [ -d "${GEOIPDIR}" ]; then
 	cd $GEOIPDIR
 	if [ -n "${DATABASES}" ]; then
@@ -16,7 +20,7 @@ if [ -d "${GEOIPDIR}" ]; then
 		for db in $DATABASES; do
 			fname=$(basename $db)
 
-			if [ -f "${GEOIPDIR}/${fname}.dat" ]; then
+			if [ -f "${GEOIPDIR}/${fname}.dat" ] || [ ${force} ]; then
 				wget --no-verbose -t 3 -T 60 \
 					"${GEOIP_MIRROR}/${db}.dat.gz" \
 					-O "${TMPDIR}/${fname}.dat.gz"
@@ -30,4 +34,3 @@ if [ -d "${GEOIPDIR}" ]; then
 		[ -d "${TMPDIR}" ] && rm -rf $TMPDIR
 	fi
 fi
-

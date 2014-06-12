@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.102 2014/01/18 05:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.103 2014/06/12 19:22:43 mgorny Exp $
+
+*popt-1.16-r2 (12 Jun 2014)
+
+  12 Jun 2014; Michał Górny <mgorny@gentoo.org> +popt-1.16-r2.ebuild:
+  Enable multilib support, needed for samba-4.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> popt-1.16-r1.ebuild:
   Add arm64 love.

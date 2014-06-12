@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmapi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.78 2013/05/15 04:01:15 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.79 2014/06/12 19:28:24 mgorny Exp $
+
+*dmapi-2.2.12-r1 (12 Jun 2014)
+
+  12 Jun 2014; Michał Górny <mgorny@gentoo.org> +dmapi-2.2.12-r1.ebuild:
+  Enable multilib support, needed for samba-4.
 
   15 May 2013; Mike Frysinger <vapier@gentoo.org> dmapi-2.2.12.ebuild:
   Add arm back in #469906, as well as s390/sh #444688.
