@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-1.10.0.ebuild,v 1.1 2011/08/31 10:40:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-1.50.0.ebuild,v 1.1 2014/06/12 20:09:56 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=JRED
-MODULE_VERSION=1.01
+MODULE_VERSION=1.05
 inherit perl-module
 
 DESCRIPTION="Event based transparent Client/Server RPC framework"

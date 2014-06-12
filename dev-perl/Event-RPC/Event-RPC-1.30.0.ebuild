@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-1.30.0.ebuild,v 1.1 2013/02/03 19:40:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-1.30.0.ebuild,v 1.2 2014/06/12 20:12:27 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Event based transparent Client/Server RPC framework"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="|| ( dev-perl/Event dev-perl/glib-perl )

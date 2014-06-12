@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Kismet
-# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.11 2013/12/15 16:46:56 zlogene Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.12 2014/06/12 20:05:16 zlogene Exp $
+
+  12 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> Net-Kismet-0.04-r1.ebuild:
+  Fix ebuild header
 
   15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Net-Kismet-0.04.ebuild,
   Net-Kismet-0.04-r1.ebuild:

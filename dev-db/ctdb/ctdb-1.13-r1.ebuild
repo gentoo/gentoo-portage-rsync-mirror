@@ -1,35 +1,28 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.5 2014/06/12 20:14:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.13-r1.ebuild,v 1.1 2014/06/12 20:06:27 mgorny Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://git.samba.org/ctdb.git"
-inherit autotools eutils git-2 multilib-minimal
+inherit eutils multilib-minimal
 
 DESCRIPTION="A cluster implementation of the TDB database used to store temporary data."
 HOMEPAGE="http://ctdb.samba.org/"
+# upstream is too sexy for releases, grab tags from:
+#    http://git.samba.org/?p=ctdb.git;a=summary
+SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
+
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/popt[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	AT_M4DIR="-I libreplace -I lib/replace -I ../libreplace -I ../replace"
-	AT_M4DIR+=" -I lib/talloc -I talloc -I ../talloc"
-	AT_M4DIR+=" -I lib/tdb -I tdb -I ../tdb"
-	AT_M4DIR+=" -I lib/popt -I popt -I ../popt"
-	AT_M4DIR+=" -I lib/tevent"
-
-	rm -rf autom4te.cache
-	rm -f configure config.h.in
-
-	autotools_run_tool autoheader ${AT_M4DIR} || die "running autoheader failed"
-	eautoconf ${AT_M4DIR}
-}
+PATCHES=(
+	"${FILESDIR}/${P}-ldflags.patch"
+)
 
 src_prepare() {
 	epatch "${PATCHES[@]}"

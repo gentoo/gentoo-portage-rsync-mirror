@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lockfile-progs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.24 2014/03/12 10:17:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.25 2014/06/12 20:14:08 grobian Exp $
+
+  12 Jun 2014; Fabian Groffen <grobian@gentoo.org> lockfile-progs-0.1.17.ebuild:
+  Fix installation for Prefix, based on patch by Hugh Nowlan, bug #512838
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> lockfile-progs-0.1.17.ebuild:
   Stable for sparc, wrt bug #495342

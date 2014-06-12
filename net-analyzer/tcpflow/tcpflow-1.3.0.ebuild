@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.3.0.ebuild,v 1.3 2012/11/20 20:11:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.3.0.ebuild,v 1.4 2014/06/12 20:18:21 grobian Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/simsong/tcpflow"
 SRC_URI="mirror://github/simsong/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 SLOT="0"
 IUSE="test"
 

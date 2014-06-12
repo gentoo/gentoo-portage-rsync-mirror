@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile prepare
+DEFINED_PHASES=compile install prepare
 DEPEND=net-libs/liblockfile
 DESCRIPTION=Programs to safely lock/unlock files and mailboxes
 EAPI=5
@@ -9,4 +9,4 @@ RDEPEND=net-libs/liblockfile
 SLOT=0
 SRC_URI=mirror://debian/pool/main/l/lockfile-progs/lockfile-progs_0.1.17.tar.gz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2d3ba4d94d70bb3481fa99c189de4588
+_md5_=48e770925008f6b4336f6f7387b591dd

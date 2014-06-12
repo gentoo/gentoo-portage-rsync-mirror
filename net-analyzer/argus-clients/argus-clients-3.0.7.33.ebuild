@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.7.29.ebuild,v 1.1 2014/05/27 02:05:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.7.33.ebuild,v 1.1 2014/06/12 20:02:12 jer Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
