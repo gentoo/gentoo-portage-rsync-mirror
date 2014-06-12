@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=test? ( dev-python/nose[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)] >=dev-python/testtools-0.9.22[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)] dev-python/extras[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
+DESCRIPTION=Fixtures, reusable state for writing clean tests and more.
+EAPI=5
+HOMEPAGE=https://launchpad.net/python-fixtures https://pypi.python.org/pypi/fixtures
+IUSE=test python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy
+KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=|| ( Apache-2.0 BSD )
+RDEPEND=>=dev-python/testtools-0.9.22 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy )
+SLOT=0
+SRC_URI=mirror://pypi/f/fixtures/fixtures-0.3.14.tar.gz
+_eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=00d0d111c7b8d02cac0f331a6f8543c5
