@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.47 2014/03/13 01:13:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.48 2014/06/12 06:29:47 phajdan.jr Exp $
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (12 Jun 2014)
+# Chromium builds in PIC mode on most arches anyway,
+# i.e. this use flag has no effect on them.
+www-client/chromium pic
 
 # Michał Gorny <mgorny@gentoo.org> (26 Feb 2013)
 # Meta-packages which use multilib ebuilds always install development

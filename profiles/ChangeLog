@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9070 2014/06/11 21:24:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9071 2014/06/12 06:29:46 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +arch/x86/package.use.force, base/package.use.force:
+  Add profile entries for www-client/chromium's new pic USE flag.
 
   11 Jun 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask multilib tdb since it carries fix for bug #511846.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.13.ebuild,v 1.1 2014/06/12 04:50:37 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/check-0.9.13.ebuild,v 1.2 2014/06/12 06:05:39 binki Exp $
 
 EAPI=5
 
@@ -19,6 +19,12 @@ IUSE="static-libs subunit"
 
 DEPEND="subunit? ( dev-python/subunit )"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	# See multilib_src_test(), disable sleep()-based tests because they
+	# just take a long time doing pretty much nothing.
+	export CPPFLAGS="-DTIMEOUT_TESTS_ENABLED=0 ${CPPFLAGS}"
+}
 
 src_prepare() {
 	sed -i -e '/^docdir =/d' {.,doc}/Makefile.am || die
@@ -40,6 +46,13 @@ src_configure() {
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 	)
 	autotools-multilib_src_configure
+}
+
+multilib_src_test() {
+	elog "-DTIMEOUT_TESTS_ENABLED=0 has been prepended to CPPFLAGS. To run the"
+	elog "entire testsuite for dev-libs/check, ensure that"
+	elog "-DTIMEOUT_TESTS_ENABLED=1 is in your CPPFLAGS."
+	default_src_test
 }
 
 src_install() {

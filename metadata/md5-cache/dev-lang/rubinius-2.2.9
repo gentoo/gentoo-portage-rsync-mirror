@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=llvm? ( >=sys-devel/llvm-3.2 ) dev-libs/openssl sys-libs/ncurses sys-libs/readline dev-libs/libyaml virtual/libffi sys-libs/zlib =dev-ruby/rake-10* dev-ruby/bundler
+DESCRIPTION=A re-implementation of the Ruby VM designed for speed
+EAPI=5
+HOMEPAGE=http://rubini.us
+IUSE=+llvm
+KEYWORDS=~amd64
+LICENSE=BSD
+RDEPEND=llvm? ( >=sys-devel/llvm-3.2 ) dev-libs/openssl sys-libs/ncurses sys-libs/readline dev-libs/libyaml virtual/libffi sys-libs/zlib
+SLOT=0
+SRC_URI=http://releases.rubini.us/rubinius-2.2.9.tar.bz2
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=92e0d9a720ec8b2c0403cf92027d6ec1
