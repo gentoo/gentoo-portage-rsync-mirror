@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/docile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/docile/ChangeLog,v 1.7 2014/05/08 05:58:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/docile/ChangeLog,v 1.8 2014/06/12 05:55:50 graaff Exp $
+
+*docile-1.1.4 (12 Jun 2014)
+
+  12 Jun 2014; Hans de Graaff <graaff@gentoo.org> +docile-1.1.4.ebuild:
+  Version bump.
 
   08 May 2014; Hans de Graaff <graaff@gentoo.org> docile-1.1.3.ebuild:
   Add ruby21. Drop ruby18.
