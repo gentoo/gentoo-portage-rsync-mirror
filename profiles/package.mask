@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15785 2014/06/12 19:01:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15786 2014/06/12 21:47:11 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -395,7 +395,9 @@ dev-python/manifestdestiny
 # Masked slotted lua for testing
 app-admin/eselect-lua
 =dev-lang/lua-5.1.5-r2
+=dev-lang/lua-5.1.5-r100
 =dev-lang/lua-5.2.3
+=dev-lang/lua-5.2.3-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Apr 2014)
 # Dead upstream, unused in gentoo-x86.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.202 2014/06/10 00:31:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.203 2014/06/12 21:36:37 zlogene Exp $
+
+  12 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> libtasn1-3.6.ebuild:
+  amd64 stable wrt bug #511536
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> libtasn1-2.13.ebuild,
   libtasn1-2.14.ebuild, libtasn1-3.4-r1.ebuild, libtasn1-3.4.ebuild,
