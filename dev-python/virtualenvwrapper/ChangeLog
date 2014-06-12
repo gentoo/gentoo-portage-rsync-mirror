@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/virtualenvwrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/ChangeLog,v 1.14 2014/03/31 08:04:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/ChangeLog,v 1.15 2014/06/12 08:43:54 patrick Exp $
+
+*virtualenvwrapper-4.3 (12 Jun 2014)
+
+  12 Jun 2014; Patrick Lauer <patrick@gentoo.org> +virtualenvwrapper-4.3.ebuild:
+  Bump, add py34
 
 *virtualenvwrapper-4.2 (31 Mar 2014)
 
