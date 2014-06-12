@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.88 2014/05/04 05:33:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.89 2014/06/12 07:41:59 patrick Exp $
+
+  12 Jun 2014; Patrick Lauer <patrick@gentoo.org> testtools-0.9.35.ebuild:
+  Add py34
 
 *testtools-0.9.35 (04 May 2014)
 
