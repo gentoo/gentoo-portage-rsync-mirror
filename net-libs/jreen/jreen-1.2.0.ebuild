@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.2.0.ebuild,v 1.1 2014/05/22 17:05:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.2.0.ebuild,v 1.2 2014/06/12 15:00:52 kensington Exp $
 
 EAPI=5
 
@@ -21,6 +21,8 @@ HOMEPAGE="https://github.com/euroelessar/jreen"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug +qt4 qt5"
+
+REQUIRED_USE="|| ( qt4 qt5 )"
 
 DEPEND="
 	media-libs/speex

@@ -38,6 +38,7 @@
 		<flag name='proxy'>Enable support for virtual proxy device</flag>
 		<flag name='proxy_getwork'>Enable proxy support for getwork protocol (often used with Block Erupter Blades)</flag>
 		<flag name='proxy_stratum'>Enable proxy support for stratum protocol</flag>
+		<flag name='rockminer'>Enable support for mining with RockMiner devices</flag>
 		<flag name='scrypt'>Enable support for scrypt mining algorithm</flag>
 		<flag name='sse2_4way'>Enable support for CPU SSE2 4way mining algorithm</flag>
 		<flag name='sse4'>Enable support for CPU SSE4 mining algorithm</flag>

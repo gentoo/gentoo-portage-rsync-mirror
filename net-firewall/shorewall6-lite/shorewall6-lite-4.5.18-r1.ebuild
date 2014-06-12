@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/shorewall6-lite-4.5.18-r1.ebuild,v 1.6 2014/03/23 18:01:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/shorewall6-lite-4.5.18-r1.ebuild,v 1.7 2014/06/12 14:32:38 tomwij Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ MY_PN="${PN/6-lite/}"
 MY_P="${MY_PN}-${MY_PV_BASE}"
 MY_P_DOCS="${MY_PN}-docs-html-${PV}"
 
-DESCRIPTION="An iptables-based firewall whose config is handled by a normal Shorewall6."
+DESCRIPTION="An iptables-based firewall whose config is handled by a normal Shorewall6"
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_PV_TREE}/${MY_P}/${P}.tar.bz2
 	doc? ( http://www1.shorewall.net/pub/${MY_PN}/${MY_PV_TREE}/${MY_P}/${MY_P_DOCS}.tar.bz2 )"

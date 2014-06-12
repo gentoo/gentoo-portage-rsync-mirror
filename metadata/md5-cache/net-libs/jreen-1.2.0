@@ -7,7 +7,8 @@ IUSE=debug +qt4 qt5
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=media-libs/speex net-libs/libgsasl sys-libs/zlib qt4? ( >=dev-qt/qtcore-4.6.0:4 >=dev-qt/qtgui-4.6.0:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 )
+REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=https://github.com/euroelessar/jreen/archive/v1.2.0.tar.gz -> jreen-1.2.0.tar.gz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=462a547119967c8aed6619d30652e0f5
+_md5_=64b19cd64db38b7dcbe1cd65a25aac0d
