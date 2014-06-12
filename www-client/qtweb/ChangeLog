@@ -1,6 +1,12 @@
 # ChangeLog for www-client/qtweb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/ChangeLog,v 1.2 2014/06/11 15:31:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/ChangeLog,v 1.4 2014/06/12 12:11:38 jer Exp $
+
+  12 Jun 2014; Jeroen Roovers <jer@gentoo.org> qtweb-3.8.5_p108.ebuild:
+  Marked ~x86 too.
+
+  12 Jun 2014; Jeroen Roovers <jer@gentoo.org> qtweb-3.8.5_p108.ebuild:
+  Add DEPEND=dev-qt/designer.
 
   11 Jun 2014; Jeroen Roovers <jer@gentoo.org> qtweb-3.8.5_p108.ebuild:
   Reflect move to github in HOMEPAGE.
