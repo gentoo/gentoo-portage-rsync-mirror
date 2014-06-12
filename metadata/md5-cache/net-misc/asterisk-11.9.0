@@ -11,5 +11,5 @@ RDEPEND=dev-db/sqlite:3 dev-libs/popt dev-libs/libxml2 dev-libs/openssl sys-libs
 REQUIRED_USE=gtalk? ( jabber ) ^^ ( voicemail_storage_file voicemail_storage_odbc voicemail_storage_imap ) voicemail_storage_odbc? ( odbc )
 SLOT=0
 SRC_URI=http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-11.9.0.tar.gz mirror://gentoo/gentoo-asterisk-patchset-3.10.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=08793cec26e41da38e8ca71214554896

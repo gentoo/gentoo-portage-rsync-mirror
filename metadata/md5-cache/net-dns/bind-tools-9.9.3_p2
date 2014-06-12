@@ -9,5 +9,5 @@ LICENSE=ISC BSD BSD-2 HPND JNIC RSA openssl
 RDEPEND=ssl? ( dev-libs/openssl:0 ) xml? ( dev-libs/libxml2 ) idn? ( net-dns/idnkit ) gssapi? ( virtual/krb5 ) readline? ( sys-libs/readline )
 SLOT=0
 SRC_URI=ftp://ftp.isc.org/isc/bind9/9.9.3-P2/bind-9.9.3-P2.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=49b224da7dde84a223e813337ea83cf5

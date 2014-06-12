@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/keybinder:0 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 >=xfce-base/xfconf-4.8 libnotify? ( x11-libs/libnotify ) alsa? ( media-plugins/gst-plugins-alsa:0.10 ) oss? ( media-plugins/gst-plugins-oss:0.10 ) !alsa? ( !oss? ( media-plugins/gst-plugins-meta:0.10 ) )
 SLOT=0
 SRC_URI=mirror://xfce/src/apps/xfce4-volumed/0.1/xfce4-volumed-0.1.13.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	20671cc91311ca7e3446047c1175cf16
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	20671cc91311ca7e3446047c1175cf16
 _md5_=719f324e3b64d062a43f6783d61ae508

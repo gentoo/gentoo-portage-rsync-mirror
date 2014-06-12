@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/opengl media-libs/libsndfile dev-libs/libcdio media-libs/libsdl[sound,joystick,opengl,video] media-libs/sdl-net sys-libs/zlib[minizip] alsa? ( media-libs/alsa-lib ) jack? ( media-sound/jack-audio-connection-kit ) nls? ( virtual/libintl ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/mednafen/mednafen-0.9.28-wip.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=abb923fff1c76a26a81cbe1446c1a8d6

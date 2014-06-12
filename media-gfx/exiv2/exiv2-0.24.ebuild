@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.24.ebuild,v 1.1 2014/06/04 21:22:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.24.ebuild,v 1.2 2014/06/12 07:21:52 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -57,8 +57,6 @@ src_prepare() {
 	fi
 
 	if use contrib; then
-		epatch "${FILESDIR}/${PN}-0.23-boost-fs-contrib.patch"
-
 		# create build environment for contrib
 		ln -snf ../../src contrib/organize/exiv2
 		sed -i -e 's:/usr/local/include/.*:/usr/include:g' \

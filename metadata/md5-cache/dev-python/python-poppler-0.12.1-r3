@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/poppler-0.15.0[cairo] >=dev-python/pycairo-1.8.4 dev-python/pygobject:2 dev-python/pygtk:2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://launchpad.net/poppler-python/trunk/development/+download/pypoppler-0.12.1.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=053d2682d3a781f5153283f92572b0d5
