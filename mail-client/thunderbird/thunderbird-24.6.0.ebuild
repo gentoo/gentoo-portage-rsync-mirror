@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.6.0.ebuild,v 1.1 2014/06/11 21:03:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.6.0.ebuild,v 1.2 2014/06/12 00:28:33 floppym Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -47,8 +47,8 @@ SRC_URI="${SRC_URI}
 	${MOZ_HTTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
 	crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )
 	lightning? (
-		${MOZ_HTTP_URI/${PN}/calendar/lightning}/${MOZ_LIGHTNING_VER}/linux/lightning.xpi -> lightning-${MOZ_LIGHTNING_VER}.xpi
-		${MOZ_HTTP_URI/${PN}/calendar/lightning}/${MOZ_LIGHTNING_VER}/linux/gdata-provider.xpi -> gdata-provider-${MOZ_LIGHTNING_GDATA_VER}.xpi
+		${MOZ_HTTP_URI/${PN}/calendar/lightning}${MOZ_LIGHTNING_VER}/linux/lightning.xpi -> lightning-${MOZ_LIGHTNING_VER}.xpi
+		${MOZ_HTTP_URI/${PN}/calendar/lightning}${MOZ_LIGHTNING_GDATA_VER}/linux/gdata-provider.xpi -> gdata-provider-${MOZ_LIGHTNING_GDATA_VER}.xpi
 	)
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz

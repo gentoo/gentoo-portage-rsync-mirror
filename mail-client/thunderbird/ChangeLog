@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.282 2014/06/11 21:03:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.283 2014/06/12 00:28:33 floppym Exp $
+
+  12 Jun 2014; Mike Gilbert <floppym@gentoo.org> thunderbird-24.6.0.ebuild:
+  Resolve fetch failure for gdata-provider.xpi.
 
 *thunderbird-24.6.0 (11 Jun 2014)
 
