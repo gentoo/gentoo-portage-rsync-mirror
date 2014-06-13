@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.335 2014/04/04 11:03:44 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.336 2014/06/13 13:37:26 hattya Exp $
+
+*sylpheed-3.4.2 (13 Jun 2014)
+
+  13 Jun 2014; Akinori Hattori <hattya@gentoo.org> +sylpheed-3.4.2.ebuild:
+  new upstream release
 
 *sylpheed-3.4.1 (04 Apr 2014)
 

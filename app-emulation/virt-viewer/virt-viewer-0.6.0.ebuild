@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.6.0.ebuild,v 1.1 2014/06/13 13:29:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.6.0.ebuild,v 1.2 2014/06/13 13:51:41 dev-zero Exp $
 
 EAPI=5
-inherit eutils gnome2 autotools
+inherit eutils gnome2
 
 DESCRIPTION="Graphical console client for connecting to virtual machines"
 HOMEPAGE="http://virt-manager.org/"
@@ -33,9 +33,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-require-C99.patch"
+	epatch "${FILESDIR}/${P}-fix-c99-compat.patch"
 	epatch_user
-	eautoreconf
 }
 
 src_test() {

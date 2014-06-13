@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.506 2014/06/10 07:49:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.507 2014/06/13 13:35:52 alonbl Exp $
+
+  13 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> gnutls-2.12.23-r6.ebuild:
+  Remove libtasn-1 mask, since long time we could have done this, bug#492522
 
   10 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> -gnutls-2.12.23-r4.ebuild,
   -gnutls-2.12.23-r5.ebuild:
