@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.77 2014/06/08 15:17:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.78 2014/06/13 19:33:42 jer Exp $
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> yard-0.8.7.3.ebuild:
+  Stable for HPPA (bug #505920).
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> yard-0.8.7.3.ebuild:
   ia64 stable wrt bug #505920
