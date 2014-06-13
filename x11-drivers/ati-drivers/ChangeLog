@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.361 2014/06/05 13:49:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.362 2014/06/13 15:19:15 chithanh Exp $
+
+  13 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/ati-drivers-vm-reserverd.patch:
+  Restore previously dropped patch that was still needed for the legacy driver.
 
 *ati-drivers-14.6_beta1 (05 Jun 2014)
 

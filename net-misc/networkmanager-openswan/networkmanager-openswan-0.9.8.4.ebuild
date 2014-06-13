@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-0.9.8.4.ebuild,v 1.3 2013/12/08 19:30:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-0.9.8.4.ebuild,v 1.4 2014/06/13 15:09:35 floppym Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -17,7 +17,7 @@ IUSE="gtk"
 RDEPEND="
 	>=net-misc/networkmanager-0.9.8:=
 	>=dev-libs/dbus-glib-0.74
-	net-misc/openswan
+	|| ( net-misc/openswan net-misc/libreswan )
 	gtk? (
 		>=x11-libs/gtk+-3.0.0:3
 		gnome-base/gnome-keyring
