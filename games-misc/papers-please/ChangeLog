@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/papers-please
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/papers-please/ChangeLog,v 1.2 2014/03/05 02:16:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/papers-please/ChangeLog,v 1.3 2014/06/13 20:10:24 hasufell Exp $
+
+*papers-please-1.1.65 (13 Jun 2014)
+
+  13 Jun 2014; Julian Ospald <hasufell@gentoo.org>
+  -papers-please-1.1.62.ebuild, +papers-please-1.1.65.ebuild:
+  version bump, rm old
 
 *papers-please-1.1.62 (05 Mar 2014)
 

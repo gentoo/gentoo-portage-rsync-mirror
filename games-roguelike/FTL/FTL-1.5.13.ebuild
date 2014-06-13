@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.5.4.ebuild,v 1.3 2014/05/15 16:56:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.5.13.ebuild,v 1.1 2014/06/13 20:17:06 hasufell Exp $
 
 EAPI=5
 
