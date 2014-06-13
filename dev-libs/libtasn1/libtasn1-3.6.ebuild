@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-3.6.ebuild,v 1.4 2014/06/12 21:36:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-3.6.ebuild,v 1.5 2014/06/13 17:41:25 alonbl Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 IUSE="doc static-libs"
 
 DEPEND=">=dev-lang/perl-5.6
+	sys-apps/help2man
 	virtual/yacc"
 RDEPEND="
 	abi_x86_32? (

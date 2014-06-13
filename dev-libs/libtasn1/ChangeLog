@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.203 2014/06/12 21:36:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.204 2014/06/13 17:41:25 alonbl Exp $
+
+  13 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> libtasn1-3.6.ebuild:
+  Add help2man dependency, bug#513134, thanks to Vincent de Phily
 
   12 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> libtasn1-3.6.ebuild:
   amd64 stable wrt bug #511536
