@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.95 2014/01/05 00:59:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.96 2014/06/13 09:00:17 floppym Exp $
+
+  13 Jun 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   05 Jan 2014; Mike Gilbert <floppym@gentoo.org> openswan-2.6.38.ebuild,
   openswan-2.6.39-r1.ebuild:
