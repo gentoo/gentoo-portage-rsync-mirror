@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit-rr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.24 2014/06/08 15:01:59 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.25 2014/06/13 19:30:31 jer Exp $
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> test-unit-rr-1.0.3.ebuild:
+  Stable for HPPA (bug #505920).
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> test-unit-rr-1.0.3.ebuild:
   ia64 stable wrt bug #505920

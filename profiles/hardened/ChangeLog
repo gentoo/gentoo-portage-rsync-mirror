@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.51 2014/06/09 15:19:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.52 2014/06/13 19:15:57 blueness Exp $
+
+  13 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/mips/mipsel/make.defaults:
+  Disable sandbox on mipsel-musl because its currently broken
 
   09 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
   linux/musl/amd64/make.defaults, linux/musl/make.defaults,

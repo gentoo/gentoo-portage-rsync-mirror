@@ -1,5 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/mips/mipsel/make.defaults,v 1.1 2014/02/28 18:17:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/mips/mipsel/make.defaults,v 1.2 2014/06/13 19:15:57 blueness Exp $
 
 CHOST="mipsel-gentoo-linux-musl"
+
+# Disable sandbox because its currently broken on mipsel-musl
+FEATURES="-sandbox"
+
