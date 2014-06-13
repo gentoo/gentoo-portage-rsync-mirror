@@ -8,4 +8,7 @@
 	<upstream>
 		<remote-id type="cpe">cpe:/a:niels_provos:libevent</remote-id>
 	</upstream>
+	<use>
+		<flag name='debug'>Support runtime debug mode and malloc hooks (for programmers)</flag>
+	</use>
 </pkgmetadata>
