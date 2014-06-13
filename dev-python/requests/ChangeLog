@@ -1,13 +1,10 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.60 2014/06/08 17:12:08 hattya Exp $
-
-  08 Jun 2014; Akinori Hattori <hattya@gentoo.org> requests-2.2.0.ebuild,
-  requests-2.2.1.ebuild, requests-2.3.0.ebuild:
-  keyword ~ia64 wrt bug #509628
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.61 2014/06/13 14:19:43 hattya Exp $
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> requests-1.2.2.ebuild,
-  requests-1.2.3.ebuild, requests-2.0.0.ebuild, requests-2.1.0.ebuild:
+  requests-1.2.3.ebuild, requests-2.0.0.ebuild, requests-2.1.0.ebuild,
+  requests-2.2.0.ebuild, requests-2.2.1.ebuild, requests-2.3.0.ebuild:
   keyword ~ia64 wrt bug #509628
 
   05 Jun 2014; Fabian Groffen <grobian@gentoo.org> requests-2.3.0.ebuild:

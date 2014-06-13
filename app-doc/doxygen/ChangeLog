@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.268 2014/06/13 13:25:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.270 2014/06/13 14:21:55 zlogene Exp $
+
+  13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.5.ebuild:
+  sparc stable wrt bug #511450
+
+  13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.5.ebuild:
+  ia64 stable wrt bug #511450
 
   13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.5.ebuild:
   alpha stable wrt bug #511450

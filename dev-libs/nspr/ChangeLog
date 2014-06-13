@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.262 2014/03/24 14:33:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.263 2014/06/13 14:19:49 axs Exp $
+
+*nspr-4.10.6 (13 Jun 2014)
+*nspr-4.10.6-r1 (13 Jun 2014)
+
+  13 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/nspr-4.10.6-solaris.patch, +nspr-4.10.6-r1.ebuild, +nspr-4.10.6.ebuild,
+  -nspr-4.10.3.ebuild:
+  version bump, remove old; security bug 512896.  Also added a multilib-minimal
+  version for testing and eventual unmasking
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.4.ebuild:
   Stable for ppc64, wrt bug #505072

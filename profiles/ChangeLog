@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9078 2014/06/13 10:01:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9079 2014/06/13 14:16:21 axs Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> package.mask:
+  added multilib-converted nspr to package.mask for testing
 
   13 Jun 2014; Eray Aslan <eras@gentoo.org> package.mask:
   net-mail/fetchyahoo punted from the tree - bug #450116

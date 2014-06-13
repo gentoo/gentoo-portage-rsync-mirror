@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.3.ebuild,v 1.1 2014/02/05 07:43:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6.ebuild,v 1.1 2014/06/13 14:19:49 axs Exp $
 
-EAPI=3
-WANT_AUTOCONF="2.1"
+EAPI=5
+WANT_AUTOCONF="2.5"
 
 inherit autotools eutils multilib toolchain-funcs versionator
 
@@ -20,11 +20,11 @@ IUSE="debug"
 
 src_prepare() {
 	mkdir build inst
-	cd "${S}"/nspr/
-	epatch "${FILESDIR}"/${PN}-4.6.1-lang.patch
+
+	cd "${S}"/nspr
 	epatch "${FILESDIR}"/${PN}-4.7.0-prtime.patch
 	epatch "${FILESDIR}"/${PN}-4.7.1-solaris.patch
-	epatch "${FILESDIR}"/${PN}-4.7.4-solaris.patch
+	epatch "${FILESDIR}"/${PN}-4.10.6-solaris.patch
 	# epatch "${FILESDIR}"/${PN}-4.8.3-aix-gcc.patch
 	epatch "${FILESDIR}"/${PN}-4.8.4-darwin-install_name.patch
 	epatch "${FILESDIR}"/${PN}-4.8.9-link-flags.patch
@@ -54,6 +54,7 @@ src_configure() {
 		|| unset CROSS_COMPILE
 
 	local myconf
+	einfo "Running a short build test to determine 64bit'ness"
 	echo > "${T}"/test.c
 	${CC} ${CFLAGS} ${CPPFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
 	case $(file "${T}"/test.o) in
@@ -63,7 +64,7 @@ src_configure() {
 	esac
 
 	# Ancient autoconf needs help finding the right tools.
-	LC_ALL="C" ECONF_SOURCE="../nspr" \
+	LC_ALL="C" ECONF_SOURCE="${S}/nspr" \
 	ac_cv_path_AR="${AR}" \
 	econf \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -73,23 +74,22 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/build
-	emake || die "failed to build"
+	cd "${S}"/build || die
+	emake
 }
 
 src_install() {
+	cd "${S}"/build
 	# Their build system is royally confusing, as usual
 	MINOR_VERSION=${MIN_PV} # Used for .so version
-	cd "${S}"/build
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
-	cd "${ED}"/usr/$(get_libdir)
 	einfo "removing static libraries as upstream has requested!"
-	rm -f *.a || die "failed to remove static libraries."
+	rm -f "${ED}"/usr/$(get_libdir)/*.a || die "failed to remove static libraries."
 
 	# install nspr-config
-	dobin "${S}"/build/config/nspr-config || die "failed to install nspr-config"
+	dobin config/nspr-config
 
 	# Remove stupid files in /usr/bin
-	rm -f "${ED}"/usr/bin/prerr.properties || die "failed to cleanup unneeded files"
+	rm "${ED}"/usr/bin/prerr.properties || die "failed to cleanup unneeded files"
 }
