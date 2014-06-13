@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/asciinema/asciinema-0.9.8.ebuild,v 1.1 2014/02/18 06:36:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/asciinema/asciinema-0.9.8.ebuild,v 1.2 2014/06/13 22:20:44 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
