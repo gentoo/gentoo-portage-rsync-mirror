@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9076 2014/06/13 09:25:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9078 2014/06/13 10:01:05 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2014; Eray Aslan <eras@gentoo.org> package.mask:
+  net-mail/fetchyahoo punted from the tree - bug #450116
+
+  13 Jun 2014; Eray Aslan <eras@gentoo.org> package.mask:
+  net-mail/dovecot-2.{0,1} no longer in the tree
 
   13 Jun 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Restore mask on gst-plugins-{gconf,gnomevfs}.

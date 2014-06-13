@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15789 2014/06/13 09:25:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15791 2014/06/13 10:01:05 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -352,11 +352,6 @@ net-wireless/mate-bluetooth
 # static user helpers.  See #508098 for more info. Removal in a month
 app-emulation/qemu-user
 
-# Eray Aslan <eras@gentoo.org> (26 Apr 2014)
-# Non-functional and no longer needed - bug #450116
-# Removal in 30 days
-net-mail/fetchyahoo
-
 # Michał Górny <mgorny@gentoo.org> (26 Apr 2014)
 # (on behalf of Python team)
 # Python 2.6 is no longer supported upstream and security issue fixes
@@ -489,12 +484,6 @@ lxde-base/lxpolkit
 # me know such that we can continue to keep it around. Guess nobody even still
 # uses this package either, but that's for another day...
 =dev-java/jikes-1.22-r1
-
-# Eray Aslan <eras@gentoo.org> (17 Feb 2014)
-# Security mask - bug #492494 until
-# mail-filter/dovecot-antispam is punted/fixed
-=net-mail/dovecot-2.0*
-=net-mail/dovecot-2.1*
 
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Masked for testing

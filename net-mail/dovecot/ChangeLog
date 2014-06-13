@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.482 2014/06/08 10:41:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.483 2014/06/13 09:55:45 eras Exp $
+
+  13 Jun 2014; Eray Aslan <eras@gentoo.org> -dovecot-2.0.19.ebuild,
+  -dovecot-2.1.16.ebuild, -dovecot-2.1.17.ebuild,
+  -files/dovecot-2.1.9_managesieve_gold.patch,
+  -files/dovecot-2.2.8-mail-headers.patch, -files/dovecot-2.2.8-sieve.patch,
+  -files/dovecot.init-r3:
+  Remove old
 
   08 Jun 2014; Agostino Sarubbo <ago@gentoo.org> dovecot-2.2.13.ebuild:
   Stable for ia64, wrt bug #509954
