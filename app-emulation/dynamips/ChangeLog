@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/dynamips
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.12 2013/10/20 07:24:02 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.14 2014/06/13 18:12:46 pinkbyte Exp $
+
+  13 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> dynamips-0.2.10.ebuild,
+  dynamips-0.2.12.ebuild:
+  Set app-arch/unzip as build-time only dependency
+
+*dynamips-0.2.12 (13 Jun 2014)
+
+  13 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> -dynamips-0.2.8-r1.ebuild,
+  +dynamips-0.2.12.ebuild, -files/dynamips-0.2.8-makefile.patch,
+  +files/dynamips-0.2.12-makefile.patch:
+  Version bump, wrt bug #511914, thanks to Aaron Bauman <aaron AT
+  flappyport.com>. Drop old version
 
 *dynamips-0.2.10 (20 Oct 2013)
 

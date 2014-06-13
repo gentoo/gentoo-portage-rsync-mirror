@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.334 2014/06/13 16:15:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.335 2014/06/13 18:29:46 axs Exp $
+
+*firefox-30.0 (13 Jun 2014)
+
+  13 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +firefox-30.0.ebuild:
+  version bump; firefox-30 now depends on gstreamer:1.0
 
   13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> firefox-24.6.0.ebuild:
   amd64 stable wrt bug #512896

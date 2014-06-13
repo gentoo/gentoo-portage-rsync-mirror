@@ -1,16 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/dynamips-0.2.10.ebuild,v 1.2 2014/06/13 18:12:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/dynamips-0.2.12.ebuild,v 1.2 2014/06/13 18:12:46 pinkbyte Exp $
 
 EAPI=5
-
-MY_P="${P}-source"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Cisco 7200/3600 Simulator"
 HOMEPAGE="http://www.gns3.net/dynamips/"
-SRC_URI="mirror://sourceforge/project/gns-3/Dynamips/${PV}/${MY_P}.zip"
+SRC_URI="mirror://sourceforge/project/gns-3/Dynamips/${PV}/${P}-source.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,8 +18,6 @@ RDEPEND="dev-libs/elfutils
 	net-libs/libpcap"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
-
-S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
@@ -46,7 +42,7 @@ src_compile() {
 
 src_install () {
 	newbin dynamips.stable dynamips
-	dobin stable/nvram_export
+	newbin nvram_export.stable nvram_export
 	doman man/*
 	dodoc README README.hypervisor TODO
 }
