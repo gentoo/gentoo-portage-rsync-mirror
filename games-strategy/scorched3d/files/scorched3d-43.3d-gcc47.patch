@@ -7,8 +7,6 @@ Fix build failure against gcc-4.7 (missing <unistd.h> for close())
 ../client/SecureID.cpp:124:12: error: 'close' was not declared in this scope
 
 make[3]: *** [SecureID.o] Error 1
-diff --git a/src/client/client/SecureID.cpp b/src/client/client/SecureID.cpp
-index bc276c4..5eb2f13 100644
 --- a/src/client/client/SecureID.cpp
 +++ b/src/client/client/SecureID.cpp
 @@ -75,6 +75,7 @@ std::string SecureID::GetPrivateKey(void)

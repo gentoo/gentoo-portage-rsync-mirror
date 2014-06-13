@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/scorched3d
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.90 2013/01/20 01:18:42 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.91 2014/06/13 21:52:24 mr_bones_ Exp $
+
+  13 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/scorched3d-43.3d-freetype.patch, files/scorched3d-43.3d-fixups.patch,
+  files/scorched3d-43.3d-gcc43.patch, files/scorched3d-43.3d-gcc47.patch,
+  files/scorched3d-43.3d-odbc.patch, files/scorched3d-43.3d-png15.patch,
+  files/scorched3d-43.3d-win32.patch, scorched3d-43.3d.ebuild:
+  try to build with freetype 2.4 and 2.5
 
   20 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/scorched3d-43.2a-fixups.patch, -files/scorched3d-43.2a-gcc43.patch,
