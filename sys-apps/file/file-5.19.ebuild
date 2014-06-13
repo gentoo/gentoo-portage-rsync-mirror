@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.18.ebuild,v 1.1 2014/03/26 16:10:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.19.ebuild,v 1.1 2014/06/13 16:18:28 polynomial-c Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 DISTUTILS_OPTIONAL=1
 
-inherit eutils distutils-r1 libtool toolchain-funcs
+inherit eutils distutils-r1 libtool toolchain-funcs multilib-minimal
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://github.com/glensc/file.git"
@@ -25,7 +25,9 @@ SLOT="0"
 IUSE="python static-libs zlib"
 
 DEPEND="python? ( ${PYTHON_DEPS} )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20131008-r21
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 RDEPEND="${DEPEND}
 	python? ( !dev-python/python-magic )"
 
@@ -37,17 +39,12 @@ src_prepare() {
 	mv python/README{,.python}
 }
 
-wd() { echo "${WORKDIR}"/build-${CHOST}; }
-
-do_configure() {
-	ECONF_SOURCE=${S}
-
-	mkdir "$(wd)"
-	pushd "$(wd)" >/dev/null
-
-	econf "$@"
-
-	popd >/dev/null
+multilib_src_configure() {
+	ECONF_SOURCE=${S} \
+	ac_cv_header_zlib_h=$(usex zlib) \
+	ac_cv_lib_z_gzopen=$(usex zlib)
+	econf \
+		$(use_enable static-libs static)
 }
 
 src_configure() {
@@ -55,7 +52,10 @@ src_configure() {
 	# because people often don't keep matching host/target
 	# file versions #362941
 	if tc-is-cross-compiler && ! ROOT=/ has_version ~${CATEGORY}/${P} ; then
+		mkdir -p "${WORKDIR}"/build
+		cd "${WORKDIR}"/build
 		tc-export_build_env BUILD_C{C,XX}
+		ECONF_SOURCE=${S} \
 		ac_cv_header_zlib_h=no \
 		ac_cv_lib_z_gzopen=no \
 		CHOST=${CBUILD} \
@@ -65,29 +65,39 @@ src_configure() {
 		LDFLAGS="${BUILD_LDFLAGS} -static" \
 		CC=${BUILD_CC} \
 		CXX=${BUILD_CXX} \
-		do_configure --disable-shared
+		econf --disable-shared
 	fi
 
-	export ac_cv_header_zlib_h=$(usex zlib) ac_cv_lib_z_gzopen=$(usex zlib)
-	do_configure $(use_enable static-libs static)
+	multilib-minimal_src_configure
 }
 
-do_make() {
-	emake -C "$(wd)" "$@"
+multilib_src_compile() {
+	if multilib_is_native_abi ; then
+		emake
+	else
+		emake -C src libmagic.la
+	fi
 }
 
 src_compile() {
 	if tc-is-cross-compiler && ! ROOT=/ has_version ~${CATEGORY}/${P} ; then
-		CHOST=${CBUILD} do_make -C src file
-		PATH=$(CHOST=${CBUILD} wd)/src:${PATH}
+		emake -C "${WORKDIR}"/build/src file
+		PATH="${WORKDIR}/build/src:${PATH}"
 	fi
-	do_make
+	multilib-minimal_src_compile
 
 	use python && cd python && distutils-r1_src_compile
 }
 
-src_install() {
-	do_make DESTDIR="${D}" install
+multilib_src_install() {
+	if multilib_is_native_abi ; then
+		default
+	else
+		emake -C src install-{includeHEADERS,libLTLIBRARIES} DESTDIR="${D}"
+	fi
+}
+
+multilib_src_install_all() {
 	dodoc ChangeLog MAINT README
 
 	use python && cd python && distutils-r1_src_install
