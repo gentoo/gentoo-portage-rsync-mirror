@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.94 2014/06/02 18:28:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.95 2014/06/13 07:04:20 graaff Exp $
+
+*passenger-4.0.45 (13 Jun 2014)
+
+  13 Jun 2014; Hans de Graaff <graaff@gentoo.org> +passenger-4.0.45.ebuild:
+  Version bump.
 
   02 Jun 2014; Hans de Graaff <graaff@gentoo.org> passenger-4.0.41.ebuild:
   Drop ruby21 to create a stable candidate.
