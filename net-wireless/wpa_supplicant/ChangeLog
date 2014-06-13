@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.213 2014/06/06 16:42:05 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.214 2014/06/13 14:56:17 gurligebis Exp $
+
+*wpa_supplicant-2.2-r1 (13 Jun 2014)
+
+  13 Jun 2014; <gurligebis@gentoo.org> -wpa_supplicant-2.2.ebuild,
+  +wpa_supplicant-2.2-r1.ebuild:
+  Adding IBSS RSN support, fixing bug #512892
 
 *wpa_supplicant-2.2 (06 Jun 2014)
 

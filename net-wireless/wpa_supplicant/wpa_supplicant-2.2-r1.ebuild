@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.2.ebuild,v 1.1 2014/06/06 16:42:05 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.2-r1.ebuild,v 1.1 2014/06/13 14:56:17 gurligebis Exp $
 
 EAPI=4
 
@@ -101,6 +101,7 @@ src_configure() {
 	# Basic setup
 	echo "CONFIG_CTRL_IFACE=y" >> .config
 	echo "CONFIG_BACKEND=file" >> .config
+	echo "CONFIG_IBSS_RSN=y"   >> .config
 
 	# Basic authentication methods
 	# NOTE: we don't set GPSK or SAKE as they conflict
