@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.22 2014/06/13 01:21:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3.ebuild,v 1.1 2014/06/13 01:21:17 ryao Exp $
 
 EAPI="4"
 
@@ -74,6 +74,9 @@ pkg_setup() {
 src_prepare() {
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
 	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
+
+	# Set module revision number
+	sed -i "s/\(Release:\)\(.*\)1/\1\2${PR}-gentoo/" "${S}/META" || die
 
 	autotools-utils_src_prepare
 }

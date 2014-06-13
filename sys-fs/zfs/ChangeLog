@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.81 2014/06/08 17:15:19 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.82 2014/06/13 01:21:31 ryao Exp $
+
+*zfs-0.6.3 (13 Jun 2014)
+
+  13 Jun 2014; Richard Yao <ryao@gentoo.org> +zfs-0.6.3.ebuild:
+  Bump to 0.6.3
 
   08 Jun 2014; Richard Yao <ryao@gentoo.org> -zfs-0.6.0_rc10-r4.ebuild,
   -zfs-0.6.0_rc11-r3.ebuild, -zfs-0.6.0_rc12-r3.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.72 2014/06/08 17:11:38 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.73 2014/06/13 01:21:06 ryao Exp $
+
+*spl-0.6.3 (13 Jun 2014)
+
+  13 Jun 2014; Richard Yao <ryao@gentoo.org> +spl-0.6.3.ebuild:
+  Bump to 0.6.3
 
   08 Jun 2014; Richard Yao <ryao@gentoo.org>
   -files/spl-0.6.0_rc11-linux-3.6-compat.patch,
