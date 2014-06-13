@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.21 2014/05/15 17:10:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.22 2014/06/13 03:04:07 patrick Exp $
+
+  13 Jun 2014; Patrick Lauer <patrick@gentoo.org> ffdiaporama-2.1.ebuild:
+  Fix header
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> ffdiaporama-1.5.ebuild,
   ffdiaporama-1.6.ebuild, ffdiaporama-2.0.1.ebuild, ffdiaporama-2.1.ebuild:

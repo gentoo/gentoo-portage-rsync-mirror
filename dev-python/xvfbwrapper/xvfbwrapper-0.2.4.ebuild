@@ -1,7 +1,6 @@
-
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xvfbwrapper/xvfbwrapper-0.2.4.ebuild,v 1.1 2014/05/25 09:26:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xvfbwrapper/xvfbwrapper-0.2.4.ebuild,v 1.2 2014/06/13 03:01:39 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
