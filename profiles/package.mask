@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15786 2014/06/12 21:47:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15787 2014/06/13 06:57:18 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -97,24 +97,6 @@ dev-java/ibm-jdk-bin:1.5
 # Michał Górny <mgorny@gentoo.org> (29 May 2014)
 # New multilib conversions. Unmask along with corresponding
 # emul-linux-x86 packages, and make sure they're committed first :).
->=media-libs/taglib-1.9.1-r1
->=media-libs/libofa-0.9.3-r1
->=app-emulation/emul-linux-x86-medialibs-20140508-r3
->=media-video/libav-9.13-r1
->=media-video/ffmpeg-2.2.3-r1
->=virtual/ffmpeg-9-r1
->=media-libs/libpostproc-10.20140517-r1
->=app-emulation/emul-linux-x86-medialibs-20140508-r4
->=net-libs/libsoup-2.46.0-r1
->=net-libs/neon-0.30.0-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r9
->=net-libs/gssdp-0.14.8-r1
->=net-libs/gupnp-0.20.12-r1
->=net-libs/gupnp-igd-0.2.3-r1
->=net-libs/libnice-0.1.4-r1
->=media-libs/libquicktime-1.2.4-r1
->=media-video/mjpegtools-2.1.0-r2
->=app-emulation/emul-linux-x86-medialibs-20140508-r5
 >=media-libs/gstreamer-0.10.36-r1:0.10
 >=media-libs/gstreamer-1.2.4-r1:1.0
 >=media-libs/gst-plugins-base-0.10.36-r1:0.10
@@ -246,12 +228,6 @@ dev-java/ibm-jdk-bin:1.5
 >=media-plugins/gst-plugins-xvid-0.10.23-r1:0.10
 >=media-plugins/gst-plugins-xvideo-0.10.36-r1:0.10
 >=app-emulation/emul-linux-x86-gstplugins-20140508-r1
-=net-fs/samba-3.6.23-r1
->=gnome-base/gconf-3.2.6-r3
->=gnome-base/gnome-vfs-2.24.4-r2
->=media-plugins/gst-plugins-gconf-0.10.31-r1
->=media-plugins/gst-plugins-gnomevfs-0.10.36-r1
->=app-emulation/emul-linux-x86-gtklibs-20140508-r2
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
