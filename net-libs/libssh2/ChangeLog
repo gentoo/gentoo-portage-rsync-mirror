@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.84 2014/03/01 22:37:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.85 2014/06/13 08:30:06 mgorny Exp $
+
+*libssh2-1.4.3-r1 (13 Jun 2014)
+
+  13 Jun 2014; Michał Górny <mgorny@gentoo.org> +libssh2-1.4.3-r1.ebuild:
+  Enable multilib support, required for net-misc/curl.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> libssh2-1.4.2.ebuild,
   libssh2-1.4.3.ebuild:

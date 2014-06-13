@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install test
+DEPEND=expat? ( dev-libs/expat[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] ) xml? ( >=dev-libs/libxml2-2.6.24[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] ) test? ( dev-util/cunit[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] )
+DESCRIPTION=Library for handling Metalink files
+EAPI=5
+HOMEPAGE=http://launchpad.net/libmetalink
+IUSE=expat static-libs test xml abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+LICENSE=MIT
+RDEPEND=expat? ( dev-libs/expat[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] ) xml? ( >=dev-libs/libxml2-2.6.24[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] )
+REQUIRED_USE=^^ ( expat xml )
+SLOT=0
+SRC_URI=https://launchpad.net/libmetalink/trunk/libmetalink-0.1.1/+download/libmetalink-0.1.1.tar.bz2
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=25ac6d2b0ee311372a8f05a53ddb362b

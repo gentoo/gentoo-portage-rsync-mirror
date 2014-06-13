@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmetalink
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.19 2013/05/26 15:57:16 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.20 2014/06/13 08:21:37 mgorny Exp $
+
+*libmetalink-0.1.1-r1 (13 Jun 2014)
+
+  13 Jun 2014; Michał Górny <mgorny@gentoo.org> +libmetalink-0.1.1-r1.ebuild:
+  Enable multilib support, required for net-misc/curl.
 
   26 May 2013; Agostino Sarubbo <ago@gentoo.org> libmetalink-0.1.1.ebuild:
   Stable for x86, wrt bug #470510
