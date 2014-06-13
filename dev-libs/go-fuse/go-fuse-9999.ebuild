@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-9999.ebuild,v 1.3 2013/10/21 01:21:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-9999.ebuild,v 1.4 2014/06/13 17:17:59 zerochaos Exp $
 
 EAPI=5
 
@@ -46,6 +46,11 @@ done
 
 insinto /usr/lib/go/
 doins -r "${S}/pkg"
-insinto /usr/lib/go/src/pkg
-doins -r "${S}/src/."
+insinto "/usr/lib/go/src/pkg/${GO_PN}/"
+#for this ebuild, to fix bug #503324 I have limited what is installed
+#another possible solution would have been using adddeny to the
+#hide installed filed during build
+rm -r "${S}/src/${GO_PN}/.git"
+doins -r "${S}/src/${GO_PN}/fuse"
+doins -r "${S}/src/${GO_PN}/splice"
 }
