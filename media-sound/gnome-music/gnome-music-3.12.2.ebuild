@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.12.2.ebuild,v 1.1 2014/05/31 07:27:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.12.2.ebuild,v 1.2 2014/06/13 10:48:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -49,4 +49,9 @@ DEPEND="${COMMON_DEPEND}
 
 src_configure() {
 	gnome2_src_configure ITSTOOL="$(type -P true)"
+}
+
+src_install() {
+	gnome2_src_install
+	python_fix_shebang "${ED}"
 }

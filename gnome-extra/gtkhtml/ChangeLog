@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.289 2014/05/31 09:53:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.290 2014/06/13 10:42:49 pacho Exp $
+
+*gtkhtml-4.8.2 (13 Jun 2014)
+
+  13 Jun 2014; Pacho Ramos <pacho@gentoo.org> +gtkhtml-4.8.2.ebuild,
+  -gtkhtml-4.8.0.ebuild:
+  Version bump, drop old. Drop ELTCONF option as looks to not be needed any
+  longer.
 
 *gtkhtml-4.8.1 (31 May 2014)
 
