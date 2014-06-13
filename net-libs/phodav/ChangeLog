@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/phodav
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/phodav/ChangeLog,v 1.1 2014/06/13 12:05:09 dev-zero Exp $
+
+*phodav-0.4 (13 Jun 2014)
+
+  13 Jun 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/70-spice-webdavd.rules, +files/spice-webdavd.initd, +metadata.xml,
+  +phodav-0.4.ebuild:
+  Initial commit, required for spice-gtk, ebuild written by me.
