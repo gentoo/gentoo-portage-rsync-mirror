@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Const-Fast
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Const-Fast/ChangeLog,v 1.8 2013/04/16 17:58:20 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Const-Fast/ChangeLog,v 1.9 2014/06/13 09:26:53 zlogene Exp $
+
+  13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> Const-Fast-0.13.0.ebuild:
+  Bump to EAPI=5
 
   16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Const-Fast-0.13.0.ebuild:

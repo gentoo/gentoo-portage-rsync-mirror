@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15787 2014/06/13 06:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15789 2014/06/13 09:25:24 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (13 Jun 2013)
+# Masked due to security bug 499870.
+# Please migrate to net-misc/libreswan.
+# If you are a Gentoo developer, feel free to pick up maintenence of openswan
+# and remove this mask after resolving the security issue.
+net-misc/openswan
 
 # Mike Gilbert <floppym@gentoo.org> (10 Jun 2014)
 # Masked due to pending dev-python/imaging removal, bug 471488.
@@ -136,10 +143,12 @@ dev-java/ibm-jdk-bin:1.5
 >=media-plugins/gst-plugins-ffmpeg-0.10.13_p201211-r2:0.10
 >=media-plugins/gst-plugins-flac-0.10.31-r1:0.10
 >=media-plugins/gst-plugins-flac-1.2.4-r1:1.0
+>=media-plugins/gst-plugins-gconf-0.10.31-r1
 >=media-plugins/gst-plugins-gdkpixbuf-0.10.31-r1:0.10
 >=media-plugins/gst-plugins-gdkpixbuf-1.2.4-r1:1.0
 >=media-plugins/gst-plugins-gio-0.10.36-r1:0.10
 >=media-plugins/gst-plugins-gl-0.10.3-r1
+>=media-plugins/gst-plugins-gnomevfs-0.10.36-r1
 >=media-plugins/gst-plugins-gsm-0.10.23-r1:0.10
 >=media-plugins/gst-plugins-hls-1.2.4-r1:1.0
 >=media-plugins/gst-plugins-ivorbis-0.10.36-r1:0.10
