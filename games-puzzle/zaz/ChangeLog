@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/zaz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.18 2014/05/15 16:55:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.19 2014/06/13 15:50:01 mr_bones_ Exp $
+
+  13 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> zaz-1.0.0.ebuild:
+  EAPI=5; fix build (bug #510432)
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> zaz-1.0.0.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
@@ -76,4 +79,3 @@
   26 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> +zaz-0.2.8.ebuild,
   +files/zaz-0.2.8-build.patch, +metadata.xml:
   Initial commit (bug #282349)
-
