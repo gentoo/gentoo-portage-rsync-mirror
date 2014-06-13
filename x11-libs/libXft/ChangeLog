@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libXft
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.98 2013/12/23 17:49:46 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.99 2014/06/13 13:27:50 chithanh Exp $
+
+*libXft-2.3.2 (13 Jun 2014)
+
+  13 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXft-2.3.2.ebuild, -files/libXft-2.3.0-bold-fonts.patch,
+  -libXft-2.2.0.ebuild, -libXft-2.3.0-r1.ebuild, -libXft-2.3.0.ebuild,
+  -libXft-2.3.1.ebuild:
+  Version bump, remove old.
 
   23 Dec 2013; Jeroen Roovers <jer@gentoo.org> libXft-2.3.1-r1.ebuild:
   Stable for HPPA (bug #475480).

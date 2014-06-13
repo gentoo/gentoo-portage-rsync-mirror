@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.267 2014/06/10 11:41:01 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.268 2014/06/13 13:25:37 zlogene Exp $
+
+  13 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.5.ebuild:
+  alpha stable wrt bug #511450
 
   10 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> doxygen-1.8.5.ebuild:
   ppc64 stable wrt byg #511450

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.617 2014/06/13 12:46:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.618 2014/06/13 13:07:21 jer Exp $
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.15.ebuild:
+  Add mailing list announcement URL, too.
 
   13 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.15.ebuild:
   Add deprecation notice to the last 1.8 branch ebuild.

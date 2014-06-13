@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tabbed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tabbed/ChangeLog,v 1.8 2014/01/22 15:57:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tabbed/ChangeLog,v 1.9 2014/06/13 13:25:54 jer Exp $
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> -tabbed-0.5.ebuild:
+  Old.
 
 *tabbed-0.6 (22 Jan 2014)
 

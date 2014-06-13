@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.282 2014/06/08 11:17:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.283 2014/06/13 13:10:59 jer Exp $
+
+*dpkg-1.17.10-r1 (13 Jun 2014)
+
+  13 Jun 2014; Jeroen Roovers <jer@gentoo.org> +dpkg-1.17.10-r1.ebuild:
+  Remove dselect support (bug #513100).
 
   08 Jun 2014; Jeroen Roovers <jer@gentoo.org> -dpkg-1.17.9.ebuild:
   Old.

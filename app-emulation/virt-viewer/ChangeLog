@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virt-viewer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.26 2013/08/18 13:27:04 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.27 2014/06/13 13:29:48 dev-zero Exp $
+
+*virt-viewer-0.6.0 (13 Jun 2014)
+
+  13 Jun 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/virt-viewer-0.6.0-require-C99.patch, +virt-viewer-0.6.0.ebuild:
+  Version bump (bug #503834).
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> virt-viewer-0.5.6.ebuild:
   Stable for x86, wrt bug #479682
