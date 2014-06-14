@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/netpbm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.273 2013/08/27 15:32:10 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.274 2014/06/14 21:34:20 vapier Exp $
+
+*netpbm-10.66.00 (14 Jun 2014)
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.66-failing-tests.patch,
+  +files/netpbm-10.66-jasper-hack.patch, +files/netpbm-10.66-jbig-2.patch,
+  +files/netpbm-10.66-jpeg-dirs.patch, +files/netpbm-10.66-options-case.patch,
+  +files/netpbm-10.66-test.patch, +netpbm-10.66.00.ebuild,
+  files/make-tarball.sh:
+  Version bump.
 
   27 Aug 2013; Michael Palimaka <kensington@gentoo.org>
   netpbm-10.51.00-r2.ebuild, netpbm-10.61.00.ebuild:

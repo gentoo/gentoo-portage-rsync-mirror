@@ -1,27 +1,35 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.7.ebuild,v 1.2 2013/12/07 14:31:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.1 2014/06/14 21:44:07 dilfridge Exp $
 
 EAPI=5
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python2_{6,7} )
 
-inherit base toolchain-funcs cmake-utils python java-pkg-opt-2 java-ant-2
+inherit base toolchain-funcs cmake-utils python-single-r1 java-pkg-opt-2 java-ant-2
 
 DESCRIPTION="A collection of algorithms and sample code for various computer vision problems"
 HOMEPAGE="http://opencv.willowgarage.com"
-SRC_URI="mirror://sourceforge/opencvlibrary/${P}.tar.gz"
+
+SRC_URI="mirror://sourceforge/opencvlibrary/opencv-unix/${PV}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0/2.4"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd ~amd64-linux"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k opencl openexr opengl openmp pch png qt4 testprograms threads tiff v4l xine"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
+IUSE="cuda doc +eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k opencl openexr opengl openmp pch png +python qt4 testprograms threads tiff v4l vtk xine"
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+"
+
+# The following logic is intrinsic in the build system, but we do not enforce
+# it on the useflags since this just blocks emerging pointlessly:
+#	gtk? ( !qt4 )
+#	opengl? ( || ( gtk qt4 ) )
+#	openmp? ( !threads )
 
 RDEPEND="
 	app-arch/bzip2
-	dev-python/numpy
 	sys-libs/zlib
 	cuda? ( >=dev-util/nvidia-cuda-toolkit-5.5 )
-	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
 		media-libs/gstreamer:0.10
@@ -30,6 +38,7 @@ RDEPEND="
 	gtk? (
 		dev-libs/glib:2
 		x11-libs/gtk+:2
+		opengl? ( x11-libs/gtkglext )
 	)
 	java? ( >=virtual/jre-1.6 )
 	jpeg? ( virtual/jpeg )
@@ -41,8 +50,9 @@ RDEPEND="
 	ipp? ( sci-libs/ipp )
 	opencl? ( virtual/opencl )
 	openexr? ( media-libs/openexr )
-	opengl? ( virtual/glu )
+	opengl? ( virtual/opengl virtual/glu )
 	png? ( media-libs/libpng:0= )
+	python? ( ${PYTHON_DEPS} dev-python/numpy[${PYTHON_USEDEP}] )
 	qt4? (
 		dev-qt/qtgui:4
 		dev-qt/qttest:4
@@ -51,25 +61,24 @@ RDEPEND="
 	threads? ( dev-cpp/tbb )
 	tiff? ( media-libs/tiff )
 	v4l? ( >=media-libs/libv4l-0.8.3 )
+	vtk? ( sci-libs/vtk )
 	xine? ( media-libs/xine-lib )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
+	eigen? ( dev-cpp/eigen:3 )
 	java? ( >=virtual/jdk-1.6 )
 "
-
-# REQUIRED_USE="opengl? ( qt )"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.3.1a-libav-0.7.patch"
 	"${FILESDIR}/${PN}-2.4.3-gcc47.patch"
 	"${FILESDIR}/${PN}-2.4.2-cflags.patch"
-	"${FILESDIR}/${PN}-2.4.5-javamagic.patch"
+	"${FILESDIR}/${PN}-2.4.8-javamagic.patch"
 )
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	use python && python-single-r1_pkg_setup
 	java-pkg-opt-2_pkg_setup
 }
 
@@ -117,13 +126,14 @@ src_configure() {
 		$(cmake-utils_use_with openmp)
 		-DWITH_OPENNI=OFF					# not packaged
 		$(cmake-utils_use_with png)
+		$(cmake-utils_use_build python opencv_python)
 		-DWITH_PVAPI=OFF					# not packaged
-		$(cmake-utils_use_with qt4 QT)
 		-DWITH_QUICKTIME=OFF
 		$(cmake-utils_use_with threads TBB)
 		$(cmake-utils_use_with tiff)
 		-DWITH_UNICAP=OFF					# not packaged
 		$(cmake-utils_use_with v4l V4L)
+		$(cmake-utils_use_with vtk VTK)
 		-DWITH_LIBV4L=ON
 		-DWITH_VIDEOINPUT=OFF					# windows only
 		-DWITH_XIMEA=OFF					# windows only
@@ -135,8 +145,9 @@ src_configure() {
 		$(cmake-utils_use_build examples)
 		-DBUILD_PERF_TESTS=OFF
 		$(cmake-utils_use_build testprograms TESTS)
-	# install examples
+	# install examples, tests etc
 		$(cmake-utils_use examples INSTALL_C_EXAMPLES)
+		$(cmake-utils_use testprograms INSTALL_TESTS)
 	# build options
 		$(cmake-utils_use_enable pch PRECOMPILED_HEADERS)
 		-DENABLE_OMIT_FRAME_POINTER=OFF				#
@@ -149,6 +160,12 @@ src_configure() {
 		-DENABLE_SSE42=OFF
 		-DOPENCV_EXTRA_FLAGS_RELEASE=""				# black magic
 	)
+
+	if use qt4; then
+		mycmakeargs+=( "-DWITH_QT=4" )
+	else
+		mycmakeargs+=( "-DWITH_QT=OFF" )
+	fi
 
 	if use cuda; then
 		if [[ "$(gcc-version)" > "4.7" ]]; then
@@ -167,7 +184,7 @@ src_configure() {
 		mycmakeargs+=( "-DWITH_CUFFT=OFF" )
 	fi
 
-	if use examples; then
+	if use examples && use python; then
 		mycmakeargs+=( "-DINSTALL_PYTHON_EXAMPLES=ON" )
 	else
 		mycmakeargs+=( "-DINSTALL_PYTHON_EXAMPLES=OFF" )

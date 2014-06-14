@@ -2,15 +2,32 @@
 
 . /etc/init.d/functions.sh
 
-if [[ $# -eq 0 || $# -gt 2 ]] ; then
-	exec echo "Usage: $0 <version> [netpbm svn root]"
+PV=$1
+SVN_ROOT=${2:-/usr/local/src}
+
+if [[ $# -eq 0 ]] ; then
+	ebegin "Detecting latest version"
+	cd "${SVN_ROOT}/netpbm/release_number"
+	svn up -q || die
+	PV=$(svn ls | sort -V | tail -1) || die
+	[[ -z ${PV} ]] && die
+	PV=${PV%/}
+	eend
+	einfo "Using PV=${PV}"
+
+	if [[ ! -d ${PV} ]] ; then
+		ebegin "Checking out ${PV}"
+		svn up -q ${PV}
+		eend || die
+	fi
+fi
+
+if [[ $# -gt 2 ]] ; then
+	exec echo "Usage: $0 [version] [netpbm svn root]"
 fi
 
 PN=netpbm
-PV=$1
 P=${PN}-${PV}
-
-SVN_ROOT=${2:-/usr/local/src}
 
 T=/tmp
 

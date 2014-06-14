@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.266 2014/05/03 18:42:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.267 2014/06/14 21:41:35 dilfridge Exp $
+
+  14 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Use.mask vtk support of OpenCV
 
   03 May 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Mask app-emulation/lxc[seccomp] because it's not supported on powerpc

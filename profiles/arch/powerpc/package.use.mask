@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.196 2014/05/03 18:42:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.197 2014/06/14 21:41:35 dilfridge Exp $
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (14 Jun 2014)
+# dependency sci-libs/vtk not keyworded on ppc yet
+media-libs/opencv vtk
 
 # Markos Chandras <hwoarang@gentoo.org> (03 May 2014)
 # sys-libs/libseccomp suppors amd64, x86, ARM and MIPS.

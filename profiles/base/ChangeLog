@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.690 2014/06/06 16:24:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.691 2014/06/14 22:00:42 blueness Exp $
+
+  14 Jun 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  net-libs/cyassl is being tree cleaned, bug #495848
 
   06 Jun 2014; Rick Farina <zerochaos@gentoo.org> package.mask:
   masking <upower-0.99.0 due to portage failure to negotiate the upgrade for openrc users
