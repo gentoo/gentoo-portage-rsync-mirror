@@ -1,7 +1,7 @@
 #!/bin/sh
 
 GEOIP_MIRROR="https://geolite.maxmind.com/download/geoip/database"
-GEOIPDIR=/usr/share/GeoIP
+GEOIPDIR=@PREFIX@/usr/share/GeoIP
 TMPDIR=
 
 DATABASES="GeoLiteCity GeoLiteCountry/GeoIP asnum/GeoIPASNum GeoIPv6 GeoLiteCityv6-beta/GeoLiteCityv6"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.0-r2.ebuild,v 1.4 2014/06/14 00:54:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.0-r3.ebuild,v 1.1 2014/06/14 01:27:30 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -29,6 +29,7 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable static-libs static)
+	sed -e "s|@PREFIX@|${ROOT}|g" "${FILESDIR}"/geoipupdate-r3.sh > geoipupdate.sh || die
 }
 
 src_install() {
@@ -40,7 +41,7 @@ src_install() {
 
 	keepdir /usr/share/GeoIP
 
-	newsbin "${FILESDIR}"/geoipupdate-r3.sh geoipupdate.sh
+	dosbin geoipupdate.sh
 }
 
 pkg_postinst() {
