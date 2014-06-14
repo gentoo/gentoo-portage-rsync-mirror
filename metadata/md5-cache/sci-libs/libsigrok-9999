@@ -1,11 +1,11 @@
 DEFINED_PHASES=configure install prepare test unpack
-DEPEND=>=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) test? ( >=dev-libs/check-0.9.4 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+DEPEND=>=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) test? ( >=dev-libs/check-0.9.4 ) virtual/pkgconfig dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=provide basic hardware drivers for logic analyzers and input/output file format support
 EAPI=5
-HOMEPAGE=http://sigrok.org/
+HOMEPAGE=http://sigrok.org/wiki/Libsigrok
 IUSE=ftdi serial static-libs test usb
 LICENSE=GPL-3
 RDEPEND=!static-libs? ( >=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) ) static-libs? ( >=dev-libs/glib-2.32.0[static-libs(+)] >=dev-libs/libzip-0.8[static-libs(+)] ftdi? ( >=dev-embedded/libftdi-0.16[static-libs(+)] ) serial? ( dev-libs/libserialport[static-libs(+)] ) usb? ( virtual/libusb:1[static-libs(+)] ) )
 SLOT=0
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	git-2	2027b81a576527fa16bece425941e094	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=41484f8e4aa9d7d3fb5aa40e2ff26f70
+_md5_=468ed1f249b4b253487b7175f444bedd

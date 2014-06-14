@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/sigrok-cli
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/sigrok-cli/ChangeLog,v 1.2 2014/06/14 06:24:10 vapier Exp $
+
+*sigrok-cli-9999 (14 Jun 2014)
+*sigrok-cli-0.5.0 (14 Jun 2014)
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +sigrok-cli-0.5.0.ebuild, +sigrok-cli-9999.ebuild:
+  Initial ebuild based on work by Christopher Friedt & Cody Schafer #426586.

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libsigrokdecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrokdecode/ChangeLog,v 1.1 2014/06/14 05:59:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrokdecode/ChangeLog,v 1.3 2014/06/14 06:24:30 vapier Exp $
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org> libsigrokdecode-0.3.0.ebuild,
+  libsigrokdecode-9999.ebuild:
+  Use a better HOMEPAGE.
 
 *libsigrokdecode-0.3.0 (14 Jun 2014)
 *libsigrokdecode-9999 (14 Jun 2014)
@@ -9,4 +13,4 @@
   +files/libsigrokdecode-0.3.0-configure-test.patch,
   +files/libsigrokdecode-0.3.0-no-check-linkage.patch,
   +libsigrokdecode-0.3.0.ebuild, +libsigrokdecode-9999.ebuild, +metadata.xml:
-  Initial ebuild #426586.
+  Initial ebuild based on work by Christopher Friedt & Cody Schafer #426586.

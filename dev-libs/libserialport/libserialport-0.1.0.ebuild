@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libserialport/libserialport-0.1.0.ebuild,v 1.1 2014/06/12 19:56:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libserialport/libserialport-0.1.0.ebuild,v 1.2 2014/06/14 06:08:19 vapier Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ else
 fi
 
 DESCRIPTION="Cross platform serial port access library"
-HOMEPAGE="http://sigrok.org/"
+HOMEPAGE="http://sigrok.org/wiki/Libserialport"
 
 LICENSE="GPL-3"
 SLOT="0"

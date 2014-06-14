@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrok/libsigrok-0.3.0.ebuild,v 1.1 2014/06/14 02:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrok/libsigrok-0.3.0.ebuild,v 1.2 2014/06/14 06:08:52 vapier Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ else
 fi
 
 DESCRIPTION="provide basic hardware drivers for logic analyzers and input/output file format support"
-HOMEPAGE="http://sigrok.org/"
+HOMEPAGE="http://sigrok.org/wiki/Libsigrok"
 
 LICENSE="GPL-3"
 SLOT="0"

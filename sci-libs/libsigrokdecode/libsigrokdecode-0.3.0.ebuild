@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrokdecode/libsigrokdecode-0.3.0.ebuild,v 1.1 2014/06/14 05:59:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsigrokdecode/libsigrokdecode-0.3.0.ebuild,v 1.2 2014/06/14 06:09:26 vapier Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ else
 fi
 
 DESCRIPTION="provide (streaming) protocol decoding functionality"
-HOMEPAGE="http://sigrok.org/"
+HOMEPAGE="http://sigrok.org/wiki/Libsigrokdecode"
 
 LICENSE="GPL-3"
 SLOT="0"
