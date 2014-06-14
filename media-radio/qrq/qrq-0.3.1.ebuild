@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/qrq-0.3.1.ebuild,v 1.4 2013/07/30 14:25:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/qrq-0.3.1.ebuild,v 1.5 2014/06/14 12:45:48 tomjbe Exp $
 
 EAPI="5"
 
@@ -23,6 +23,7 @@ src_prepare() {
 	# avoid prestripping of 'qrq' binary
 	sed -i -e "s/install -s -m/install -m/" Makefile || die
 	sed -i -e "s/CC=gcc/CC=$(tc-getCC)/" Makefile || die
+	sed -i -e "s/-lpulse-simple/-lpthread -lpulse-simple/" Makefile || die
 }
 
 src_compile() {

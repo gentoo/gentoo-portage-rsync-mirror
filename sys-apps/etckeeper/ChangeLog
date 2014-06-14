@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.44 2014/05/24 20:43:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.45 2014/06/14 12:50:47 mrueg Exp $
+
+*etckeeper-1.12 (14 Jun 2014)
+
+  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +etckeeper-1.12.ebuild,
+  +files/etckeeper-1.12-gentoo.patch:
+  Version bump. Add paludis support by Taahir Ahmed. Fixes bug #503274.
 
   24 May 2014; Manuel Rüger <mrueg@gentoo.org> -etckeeper-1.10.ebuild,
   -files/etckeeper-1.7-gentoo.patch:

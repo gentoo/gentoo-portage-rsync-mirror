@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbgrab
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.29 2013/12/17 19:06:56 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.30 2014/06/14 12:48:33 zlogene Exp $
+
+  14 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> fbgrab-1.2.ebuild:
+  Add ~s390 keyword
 
 *fbgrab-1.2 (17 Dec 2013)
 
