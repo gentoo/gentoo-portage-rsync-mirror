@@ -14,6 +14,3 @@ index f7546d3..a32d9ed 100644
          )
  
      @patch('celery.backends.mongodb.MongoBackend._get_database')
-#diff -ur celery-3.1.10.orig/celery/tests/backends/test_mongodb.py celery-3.1.10/celery/tests/backends/test_mongodb.py
-#--- celery-3.1.10.orig/celery/tests/backends/test_mongodb.py	2014-02-28 21:43:26.000000000 +0800
-#+++ celery-3.1.10/celery/tests/backends/test_mongodb.py	2014-04-17 11:43:00.818430253 +0800
