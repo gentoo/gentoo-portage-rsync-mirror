@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.34 2014/04/25 08:52:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.35 2014/06/14 09:31:28 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> wmbiff-0.4.27-r1.ebuild:
+  x86 stable wrt bug #506914
 
   25 Apr 2014; Chema Alonso <nimiux@gentoo.org> wmbiff-0.4.27-r1.ebuild:
   Stable for amd64 wrt bug #506914

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140609.ebuild,v 1.1 2014/06/09 08:01:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140609.ebuild,v 1.2 2014/06/14 09:12:06 jlec Exp $
 
 EAPI=5
 
@@ -160,7 +160,7 @@ src_install() {
 
 	use kernel-patch || doins "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch
 
-	dodoc Documentation/filesystems/aufs/README "${T}"/${PN}-standalone/{aufs3-loopback,vfs-ino,tmpfs-ibitmap}.patch
+	dodoc Documentation/filesystems/aufs/README "${T}"/${PN}-standalone/{aufs3-loopback,vfs-ino,tmpfs-idr}.patch
 
 	readme.gentoo_create_doc
 }

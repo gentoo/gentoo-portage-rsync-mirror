@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.94 2014/06/09 08:01:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.95 2014/06/14 09:12:06 jlec Exp $
+
+  14 Jun 2014; Justin Lecher <jlec@gentoo.org> aufs3-3_p20140609.ebuild,
+  files/README.gentoo:
+  Fix broken patch installation due to upstream renaming, #513152
 
 *aufs3-3_p20140609 (09 Jun 2014)
 

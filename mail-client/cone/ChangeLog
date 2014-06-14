@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/cone
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.49 2013/05/06 06:05:14 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.50 2014/06/14 09:30:52 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> cone-0.90-r1.ebuild:
+  x86 stable wrt bug #506912
 
   06 May 2013; Patrick Lauer <patrick@gentoo.org> cone-0.90-r1.ebuild:
   Automake 1.13 fix

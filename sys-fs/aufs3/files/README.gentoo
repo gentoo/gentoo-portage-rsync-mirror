@@ -12,7 +12,7 @@ in the documentation directory.
 	  order to stop assigning 0 for an inode-number. Not directly related to
 	  aufs, but recommended generally.
 
-	- tmpfs-ibitmap.patch
+	- tmpfs-ibitmap.patch/tmpfs-idr.patch
 	  Keeps the tmpfs inode number as the lowest value. Effective to reduce
 	  the size of aufs XINO files for tmpfs branch. Also it prevents the
 	  duplication of inode number, which is important for backup

@@ -4,11 +4,11 @@ DESCRIPTION=BitTorrent client in Java, formerly called Azureus
 EAPI=5
 HOMEPAGE=http://www.vuze.com/
 IUSE=elibc_FreeBSD source elibc_FreeBSD
-KEYWORDS=amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ~ppc ~ppc64 x86
 LICENSE=GPL-2 BSD
 PDEPEND=~net-p2p/vuze-coreplugins-4.8.1.2
 RDEPEND=dev-java/json-simple:0 dev-java/bcprov:1.40 >=dev-java/commons-cli-1.0:1 >=dev-java/log4j-1.2.8:0 >=dev-java/swt-3.7.2-r1:3.7[cairo] >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=mirror://sourceforge/azureus/vuze/Vuze_4812/Vuze_4812_source.zip mirror://gentoo/vuze-4.5.0.2-gentoo-patches.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=d28def3789219dbf23759b9769971acb
+_md5_=e3cefb0b0b3df942e36b64102df8b507
