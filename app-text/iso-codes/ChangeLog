@@ -1,6 +1,14 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.162 2014/04/23 20:56:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.163 2014/06/14 19:32:06 tetromino Exp $
+
+*iso-codes-3.54 (14 Jun 2014)
+
+  14 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  iso-codes-3.51.ebuild, +iso-codes-3.54.ebuild:
+  Version bump, adds ISO 639-5 codes. Use l10n eclass (since we are explicitly
+  managing the list of translations in the ebuild, that list should be in IUSE)
+  and update license.
 
   23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -iso-codes-3.40.ebuild,
   -iso-codes-3.45.ebuild:
