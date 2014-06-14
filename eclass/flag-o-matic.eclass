@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.197 2014/02/02 22:26:13 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.198 2014/06/14 05:14:55 robbat2 Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -611,6 +611,10 @@ append-libs() {
 	[[ $# -eq 0 ]] && return 0
 	local flag
 	for flag in "$@"; do
+		if [[ -z "${flag// }" ]]; then
+			eqawarn "Appending an empty argument to LIBS is invalid! Skipping."
+			continue
+		fi
 		case $flag in
 			-[lL]*) 
 				export LIBS="${LIBS} ${flag}"

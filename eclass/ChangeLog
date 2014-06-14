@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1286 2014/06/12 07:14:25 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1287 2014/06/14 05:14:55 robbat2 Exp $
+
+  14 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
+  If you an empty argument to append-libs, you end up with a dangling -l
+  without a library. Catch this in QA. Caught infra with a broken ncurses in
+  net-dialup/xc with append-libs "$($(tc-getPKG_CONFIG) --libs ncurses)"
 
   12 Jun 2014; Michael Haubenwallner <haubi@gentoo.org>
   -ELT-patches/aix-noundef/1.4d, libtool.eclass:
