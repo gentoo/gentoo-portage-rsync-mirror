@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/audio-entropyd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/audio-entropyd/ChangeLog,v 1.3 2014/03/23 22:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/audio-entropyd/ChangeLog,v 1.4 2014/06/14 09:49:21 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  audio-entropyd-2.0.3-r1.ebuild:
+  x86 stable wrt bug #509368
 
   23 Mar 2014; Pacho Ramos <pacho@gentoo.org> files/audio-entropyd.service:
   Don't use forking running audio-entropyd with proper option.

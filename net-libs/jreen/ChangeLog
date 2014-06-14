@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/jreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.14 2014/06/12 15:00:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.15 2014/06/14 09:47:42 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jreen-1.2.0.ebuild:
+  x86 stable wrt bug #511050
 
   12 Jun 2014; Michael Palimaka <kensington@gentoo.org> jreen-1.2.0.ebuild:
   Library needs to be built against at least one version of Qt, wrt bug #512386.

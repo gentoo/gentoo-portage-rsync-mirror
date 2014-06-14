@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.384 2014/06/06 14:45:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.385 2014/06/14 09:32:08 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> genkernel-3.4.49.ebuild:
+  x86 stable wrt bug #506404
 
   06 Jun 2014; Jeroen Roovers <jer@gentoo.org> genkernel-3.4.49.2.ebuild:
   Stable for HPPA (bug #511992).

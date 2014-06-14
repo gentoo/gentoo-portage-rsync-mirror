@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.230 2014/06/08 16:44:56 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.231 2014/06/14 09:47:09 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> rubygems-2.0.14.ebuild:
+  x86 stable wrt bug #508996
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> rubygems-2.0.14.ebuild:
   ia64 stable wrt bug #508996

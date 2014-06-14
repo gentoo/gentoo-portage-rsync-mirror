@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.2.0.ebuild,v 1.2 2014/06/12 15:00:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.2.0.ebuild,v 1.3 2014/06/14 09:47:42 phajdan.jr Exp $
 
 EAPI=5
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="https://github.com/euroelessar/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="~amd64 ~ppc x86"
 else
 	GIT_ECLASS="git-r3"
 	EGIT_REPO_URI=( "git://github.com/euroelessar/${PN}" )

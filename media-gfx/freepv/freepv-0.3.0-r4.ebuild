@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r4.ebuild,v 1.3 2014/04/26 16:21:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/freepv-0.3.0-r4.ebuild,v 1.4 2014/06/14 10:00:34 phajdan.jr Exp $
 
 EAPI=5
 inherit cmake-utils eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/freepv/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.3.ebuild,v 1.2 2014/06/09 21:30:09 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.3.ebuild,v 1.3 2014/06/14 09:33:29 phajdan.jr Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xdxclusterclient/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2"

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/openclonk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.15 2014/05/15 16:23:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.16 2014/06/14 09:58:47 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  openclonk-5.3.3-r1.ebuild:
+  x86 stable wrt bug #503930
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> openclonk-5.3.3.ebuild,
   openclonk-5.3.3-r1.ebuild:

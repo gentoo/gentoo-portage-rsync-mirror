@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.151 2014/06/13 19:19:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.152 2014/06/14 09:46:43 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> minitest-4.7.5.ebuild:
+  x86 stable wrt bug #508996
 
   13 Jun 2014; Jeroen Roovers <jer@gentoo.org> minitest-5.3.3.ebuild:
   Stable for HPPA (bug #505920).

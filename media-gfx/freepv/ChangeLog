@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freepv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.17 2014/04/26 16:21:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.18 2014/06/14 10:00:34 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> freepv-0.3.0-r4.ebuild:
+  x86 stable wrt bug #504466
 
   26 Apr 2014; Chema Alonso <nimiux@gentoo.org> freepv-0.3.0-r4.ebuild:
   Stable for amd64 wrt bug #504466

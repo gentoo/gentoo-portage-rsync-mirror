@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-0.7.1.ebuild,v 1.3 2013/10/25 14:24:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-0.7.1.ebuild,v 1.4 2014/06/14 09:57:35 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/mongodb/${PN}/tarball/v${PV/_/} -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE="doc static-libs"
 
 # tests fails to build
