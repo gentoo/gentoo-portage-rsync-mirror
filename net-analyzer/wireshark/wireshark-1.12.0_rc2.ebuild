@@ -1,17 +1,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3.ebuild,v 1.1 2014/04/16 15:13:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2.ebuild,v 1.1 2014/06/14 00:43:19 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-SRC_URI="${HOMEPAGE}download/src/all-versions/${P}.tar.bz2"
+SRC_URI="${HOMEPAGE}download/src/all-versions/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos libadns lua
 	+netlink +pcap portaudio +qt4 selinux smi ssl zlib
@@ -69,6 +69,8 @@ DEPEND="
 	virtual/perl-Time-Local
 	virtual/pkgconfig
 "
+
+S=${WORKDIR}/${P/_/-}
 
 pkg_setup() {
 	enewgroup wireshark
@@ -148,7 +150,6 @@ src_configure() {
 		$(use_with smi libsmi) \
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
-		--disable-extra-gcc-checks \
 		--disable-profile-build \
 		--disable-usr-local \
 		--sysconfdir="${EPREFIX}"/etc/wireshark \

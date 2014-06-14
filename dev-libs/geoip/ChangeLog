@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.215 2014/06/14 00:14:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.216 2014/06/14 00:54:18 jer Exp $
+
+  14 Jun 2014; Jeroen Roovers <jer@gentoo.org> geoip-1.6.0-r2.ebuild:
+  Remove unused USE flags.
 
   14 Jun 2014; Jeroen Roovers <jer@gentoo.org> geoip-1.6.0-r2.ebuild:
   Remove pkg_postrm(), set keepdir /usr/share/GeoIP (bug #513158 by Alex

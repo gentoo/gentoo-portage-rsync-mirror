@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.335 2014/06/13 18:29:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.336 2014/06/14 00:31:49 axs Exp $
+
+  14 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-30.0.ebuild:
+  fixed sqlite dep on ff30, bug 512896 comment 8
 
 *firefox-30.0 (13 Jun 2014)
 
