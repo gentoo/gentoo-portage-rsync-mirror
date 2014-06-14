@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.220 2014/06/08 12:55:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.221 2014/06/14 08:49:48 mgorny Exp $
+
+*emul-linux-x86-baselibs-20140508-r10 (14 Jun 2014)
+
+  14 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-baselibs-20140508-r10.ebuild,
+  +files/remove-native-20140508-r10:
+  Add multilib nspr & nss.
 
 *emul-linux-x86-baselibs-20140508-r9 (08 Jun 2014)
 

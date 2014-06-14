@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1094 2014/06/12 14:14:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1095 2014/06/14 08:34:17 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  files/chromium-ffmpeg-r1.patch:
+  Fix build on amd64, reported as part of bug #513048 by mgorny and floppym.
 
   12 Jun 2014; Mike Gilbert <floppym@gentoo.org>
   -chromium-35.0.1916.114-r1.ebuild:
