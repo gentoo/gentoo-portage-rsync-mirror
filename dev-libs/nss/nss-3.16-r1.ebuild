@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16-r1.ebuild,v 1.1 2014/06/14 08:27:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16-r1.ebuild,v 1.2 2014/06/14 16:01:04 mgorny Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -23,8 +23,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE="+cacert +nss-pem utils"
 
 DEPEND="virtual/pkgconfig[${MULTILIB_USEDEP}]
-	>=dev-libs/nspr-${NSPR_VER}"
-RDEPEND=">=dev-libs/nspr-${NSPR_VER}
+	>=dev-libs/nspr-${NSPR_VER}[${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-libs/nspr-${NSPR_VER}[${MULTILIB_USEDEP}]
 	>=dev-db/sqlite-3.5[${MULTILIB_USEDEP}]
 	sys-libs/zlib[${MULTILIB_USEDEP}]
 	abi_x86_32? (
