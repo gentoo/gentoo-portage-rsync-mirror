@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xnots
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.12 2012/12/16 14:22:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.13 2014/06/14 02:03:45 jer Exp $
+
+*xnots-0.2.1-r1 (14 Jun 2014)
+
+  14 Jun 2014; Jeroen Roovers <jer@gentoo.org> +xnots-0.2.1-r1.ebuild:
+  Do not install LICENCE[sic], install docs in proper directory. Respect CC.
+  Remove pointless kernel config check/warning.
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685
