@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/ms-sys
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.14 2012/08/10 14:21:33 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.15 2014/06/14 16:50:38 mrueg Exp $
+
+*ms-sys-2.4.0 (14 Jun 2014)
+
+  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +ms-sys-2.4.0.ebuild:
+  Version bump.
 
   10 Aug 2012; Michael Palimaka <kensington@gentoo.org> -ms-sys-2.2.1.ebuild:
   Remove old.

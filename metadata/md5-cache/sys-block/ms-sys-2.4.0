@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=sys-devel/gettext
+DESCRIPTION=A command-line program for writing Microsoft compatible boot records.
+EAPI=5
+HOMEPAGE=http://ms-sys.sourceforge.net
+IUSE=linguas_sv
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=virtual/libintl
+SLOT=0
+SRC_URI=mirror://sourceforge/ms-sys/ms-sys-2.4.0.tar.gz
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=1881cbf478d3d51137dfc50e10331103

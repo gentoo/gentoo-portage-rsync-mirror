@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.54 2014/06/09 20:45:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.55 2014/06/14 16:39:11 ulm Exp $
+
+  14 Jun 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  QA: Remove duplicate flag description.
 
 *cyassl-3.0.0-r1 (09 Jun 2014)
 *cyassl-2.9.4-r1 (09 Jun 2014)

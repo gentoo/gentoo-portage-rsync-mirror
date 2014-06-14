@@ -62,7 +62,6 @@
 		<flag name="pwdbased">Enable PWDBASED (requires extra)</flag>
 		<flag name="sni">Enable server name indication</flag>
 		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
-		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
 		<flag name="cyassl-hardening">Add hardening flags to CFLAGS/LDFLAGS</flag>
 	</use>
 </pkgmetadata>

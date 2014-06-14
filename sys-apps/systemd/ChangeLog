@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.263 2014/06/11 15:13:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.264 2014/06/14 16:33:20 floppym Exp $
+
+*systemd-214 (14 Jun 2014)
+
+  14 Jun 2014; Mike Gilbert <floppym@gentoo.org> +systemd-214.ebuild,
+  systemd-9999.ebuild:
+  Version bump.
 
   11 Jun 2014; Mike Gilbert <floppym@gentoo.org> systemd-213.ebuild,
   systemd-9999.ebuild:
