@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.992 2014/04/05 16:05:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.993 2014/06/14 08:07:10 rhill Exp $
+
+  14 Jun 2014; Ryan Hill <rhill@gentoo.org> files/eblits/common.eblit:
+  Strip -fstack-protector*. These flags are now enabled by default so we can
+  consider them supported. And even on systems where gcc-specs-ssp is true,
+  having -fstack-protector in CFLAGS causes a failure because flags added
+  here end up getting /pre/pended to user flags.
 
   05 Apr 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild,
   glibc-2.18-r1.ebuild, glibc-2.19.ebuild, glibc-9999.ebuild:

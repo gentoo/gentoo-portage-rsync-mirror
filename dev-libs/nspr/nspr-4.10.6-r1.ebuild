@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6-r1.ebuild,v 1.2 2014/06/14 07:57:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6-r1.ebuild,v 1.3 2014/06/14 08:23:05 mgorny Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.5"
@@ -76,7 +76,8 @@ multilib_src_configure() {
 			echo > "${T}"/test.c || die
 			${CC} ${CFLAGS} ${CPPFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
 			case $(file "${T}"/test.o) in
-				*32-bit*x86-64*|*64-bit*|*ppc64*|*x86_64*) myconf+=( --enable-64bit );;
+				*32-bit*x86-64*) myconf+=( --enable-x32 );;
+				*64-bit*|*ppc64*|*x86_64*) myconf+=( --enable-64bit );;
 				*32-bit*|*ppc*|*i386*) ;;
 				*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
 			esac ;;
