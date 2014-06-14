@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">A fast and usable calculator for power users.</longdescription>
-	<upstream>
-		<remote-id type="google-code">speedcrunch</remote-id>
-	</upstream>
+  <herd>sci</herd>
+  <longdescription lang="en">A fast and usable calculator for power users.</longdescription>
+  <upstream>
+    <remote-id type="google-code">speedcrunch</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9084 2014/06/14 19:26:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9085 2014/06/14 20:03:56 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2014; Justin Lecher <jlec@gentoo.org> desc/linguas.desc:
+  Add some missing locales
 
   14 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> desc/linguas.desc:
   Add new translations in app-text/iso-codes-3.54 to linguas.desc

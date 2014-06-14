@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.80 2014/06/14 19:26:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.81 2014/06/14 20:03:56 jlec Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -12,6 +12,7 @@ ak - Akan locale
 am - Amharic locale
 an - Aragonese locale
 ar - Arabic locale
+ar_JO - Arabic locale for Jordan
 ar_SA - Arabic locale for Saudi-Arabia
 ar_SY - Arabic locale for Syria
 as - Assamese locale
@@ -240,6 +241,7 @@ tlh - Klingon locale
 tn - Tswana locale
 tpi - Tok Pisin locale
 tr - Turkish locale
+tr_TR - Turkish locale for Turkey
 ts - Tsonga locale
 tt - Tatar locale
 tt@iqtelif - Tatar (iqtelif) locale
@@ -250,6 +252,7 @@ ur - Urdu locale
 ur_IN - Urdu locale for India
 ur_PK - Urdu language locale for Pakistan
 uz - Uzbek locale
+uz_UZ - Uzbek locale for Uzbekistan
 uz@cyrillic - Uzbek (cyrillic) locale
 uz@Latn - Uzbek (latin) locale
 ve - Venda locale
