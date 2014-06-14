@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.174 2014/03/28 22:03:48 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.175 2014/06/14 07:48:09 dlan Exp $
+
+*autofs-5.1.0 (14 Jun 2014)
+
+  14 Jun 2014; Yixun Lan <dlan@gentoo.org> +autofs-5.1.0.ebuild:
+  bump 5.1.0, upstream add amd format map implementation
 
 *autofs-5.0.9 (28 Mar 2014)
 

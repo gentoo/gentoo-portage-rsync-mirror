@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.265 2014/06/14 01:34:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.266 2014/06/14 07:57:58 mgorny Exp $
+
+  14 Jun 2014; Michał Górny <mgorny@gentoo.org> nspr-4.10.6-r1.ebuild:
+  Add CHOST-prefixing to nspr-config. Clean up. Add 32-bit arches to the ${ABI}
+  check.
 
   14 Jun 2014; Jeroen Roovers <jer@gentoo.org> nspr-4.10.6.ebuild:
   Stable for HPPA (bug #512896).

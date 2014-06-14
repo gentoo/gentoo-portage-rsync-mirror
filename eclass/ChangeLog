@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1287 2014/06/14 05:14:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1289 2014/06/14 07:37:47 rhill Exp $
+
+  14 Jun 2014; Ryan Hill <rhill@gentoo.org> flag-o-matic.eclass:
+  Add -Og, -gdwarf-*, and -fabi-version=* to allowed flags (bug #512534,
+  #512754).  Use a glob for -fstack-protector and friends.
 
   14 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
   If you an empty argument to append-libs, you end up with a dangling -l

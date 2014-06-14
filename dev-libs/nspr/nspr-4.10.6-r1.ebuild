@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6-r1.ebuild,v 1.1 2014/06/13 14:19:49 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6-r1.ebuild,v 1.2 2014/06/14 07:57:58 mgorny Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.5"
@@ -18,13 +18,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug"
 
-RDEPEND="abi_x86_32? (
+RDEPEND="
+	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/nspr-config
+)
+
 src_prepare() {
-	cd "${S}"/nspr
+	cd "${S}"/nspr || die
 	epatch "${FILESDIR}"/${PN}-4.7.0-prtime.patch
 	epatch "${FILESDIR}"/${PN}-4.7.1-solaris.patch
 	epatch "${FILESDIR}"/${PN}-4.10.6-solaris.patch
@@ -53,17 +58,25 @@ multilib_src_configure() {
 		&& export CROSS_COMPILE=1 \
 		|| unset CROSS_COMPILE
 
-	local myconf
+	local myconf=()
+
+	# The configure has some fancy --enable-{{n,x}32,64bit} switches
+	# that trigger some code conditional to platform & arch. This really
+	# matters for the few common arches (x86, ppc) but we pass a little
+	# more of them to be future-proof.
+
 	# use ABI first, this will work for most cases
 	case "${ABI}" in
-		x32) myconf+=" --enable-x32";;
-		s390x|*64) myconf+=" --enable-64bit";;
+		alpha|arm|hppa|m68k|o32|ppc|s390|sh|sparc|x86) ;;
+		n32) myconf+=( --enable-n32 );;
+		x32) myconf+=( --enable-x32 );;
+		s390x|*64) myconf+=( --enable-64bit );;
 		default) # no abi actually set, fall back to old check
 			einfo "Running a short build test to determine 64bit'ness"
-			echo > "${T}"/test.c
+			echo > "${T}"/test.c || die
 			${CC} ${CFLAGS} ${CPPFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
 			case $(file "${T}"/test.o) in
-				*32-bit*x86-64*|*64-bit*|*ppc64*|*x86_64*) myconf+=" --enable-64bit";;
+				*32-bit*x86-64*|*64-bit*|*ppc64*|*x86_64*) myconf+=( --enable-64bit );;
 				*32-bit*|*ppc*|*i386*) ;;
 				*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
 			esac ;;
@@ -77,7 +90,7 @@ multilib_src_configure() {
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		$(use_enable debug) \
 		$(use_enable !debug optimize) \
-		${myconf}
+		"${myconf[@]}"
 }
 
 multilib_src_install() {
@@ -89,7 +102,6 @@ multilib_src_install() {
 	rm -f "${ED}"/usr/$(get_libdir)/*.a || die "failed to remove static libraries."
 
 	# install nspr-config
-	is_final_abi && \
 	dobin config/nspr-config
 
 	# Remove stupid files in /usr/bin
