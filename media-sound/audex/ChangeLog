@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audex
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.15 2013/09/17 18:04:36 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.16 2014/06/14 11:41:12 creffett Exp $
+
+*audex-0.78 (14 Jun 2014)
+
+  14 Jun 2014; Chris Reffett <creffett@gentoo.org> +audex-0.78.ebuild:
+  Bump wrt bug 513172
 
 *audex-0.77_beta1 (17 Sep 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.118 2014/04/09 07:14:31 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.119 2014/06/14 11:32:10 mrueg Exp $
+
+  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/gnokii-0.6.27-TP-PI.patch,
+  -files/gnokii-0.6.27-disable-database.patch, -files/gnokii-0.6.27-icon.patch,
+  -gnokii-0.6.27-r2.ebuild, -gnokii-0.6.27-r4.ebuild, -gnokii-0.6.28.1.ebuild:
+  Cleanup old.
 
   09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
