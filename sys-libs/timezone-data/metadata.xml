@@ -6,4 +6,10 @@
     <email>djc@gentoo.org</email>
     <name>Dirkjan Ochtman</name>
   </maintainer>
+  <use>
+    <flag name='right_timezone'>
+      Install the set of "right" timezones; these timezones include leap seconds
+      when counting seconds since the epoch (while posix does not)
+    </flag>
+  </use>
 </pkgmetadata>

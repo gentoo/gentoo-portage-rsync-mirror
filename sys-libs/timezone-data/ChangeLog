@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.302 2014/05/28 15:13:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.303 2014/06/14 02:40:31 vapier Exp $
+
+*timezone-data-2014e (14 Jun 2014)
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org> +timezone-data-2014e.ebuild,
+  metadata.xml:
+  Version bump.  Add USE=right_timezone to control install of the "right"
+  timezones.
 
 *timezone-data-2014d (28 May 2014)
 

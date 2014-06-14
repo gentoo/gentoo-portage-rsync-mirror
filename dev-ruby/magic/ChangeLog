@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/magic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/magic/ChangeLog,v 1.1 2014/03/06 23:42:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/magic/ChangeLog,v 1.2 2014/06/14 02:58:42 mrueg Exp $
+
+*magic-0.2.8 (14 Jun 2014)
+
+  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +magic-0.2.8.ebuild:
+  Version bump. Add ruby21.
 
 *magic-0.2.6_p20130813 (06 Mar 2014)
 

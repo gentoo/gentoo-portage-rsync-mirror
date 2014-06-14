@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/django-haystack
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-haystack/ChangeLog,v 1.1 2014/06/14 02:47:22 idella4 Exp $
+
+*django-haystack-2.1.0.ebuild (14 Jun 2014)
+
+  14 Jun 2014; Ian Delaney <idella4@gentoo.org>
+  +django-haystack-2.1.0.ebuild, +metadata.xml:
+  new ebuild, dep to reviewboard-2.0.1, wrt Bug #508088, closes Bug #281096
