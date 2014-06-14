@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.102 2014/06/08 15:54:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.103 2014/06/14 00:06:46 jer Exp $
+
+*debhelper-9.20140613 (14 Jun 2014)
+
+  14 Jun 2014; Jeroen Roovers <jer@gentoo.org> -debhelper-9.20130720.ebuild,
+  -debhelper-9.20130921.ebuild, -debhelper-9.20131105.ebuild,
+  -debhelper-9.20131110.ebuild, -debhelper-9.20131127.ebuild,
+  -debhelper-9.20131213.ebuild, -debhelper-9.20131227.ebuild,
+  +debhelper-9.20140613.ebuild:
+  Version bump.
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> debhelper-9.20140228.ebuild:
   ia64 stable wrt bug #506100
