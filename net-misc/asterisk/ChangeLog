@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.483 2014/06/02 16:19:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.484 2014/06/14 12:20:31 chainsaw Exp $
+
+*asterisk-11.10.1 (14 Jun 2014)
+*asterisk-1.8.28.1 (14 Jun 2014)
+
+  14 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.27.0.ebuild,
+  -asterisk-1.8.28.0.ebuild, +asterisk-1.8.28.1.ebuild,
+  -asterisk-11.9.0.ebuild, -asterisk-11.10.0.ebuild, +asterisk-11.10.1.ebuild:
+  MixMonitor AMI command allowed arbitrary shell commands to be executed
+  (AST-2014-006). Upstream replacement of plain broken SSL read implementation
+  as part of an HTTPS denial of service (AST-2014-007) finally fixes
+  ASTERISK-18345 after almost three years. Relevant downstream patch removed,
+  this means we were very likely not vulnerable.
 
 *asterisk-12.3.0 (02 Jun 2014)
 
