@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.324 2014/06/13 21:48:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.325 2014/06/14 07:01:17 zmedico Exp $
+
+  14 Jun 2014; Zac Medico <zmedico@gentoo.org> calibre-1.2.ebuild,
+  calibre-1.20.ebuild, calibre-1.25.ebuild, calibre-1.29.ebuild,
+  calibre-1.38.ebuild, calibre-1.39.ebuild, calibre-1.40.ebuild:
+  Adjust python-dateutil deps to require Python 2.7 support for bug #399511.
 
 *calibre-1.40 (13 Jun 2014)
 
