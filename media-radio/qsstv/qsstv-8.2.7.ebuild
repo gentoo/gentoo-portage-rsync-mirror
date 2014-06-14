@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-8.2.7.ebuild,v 1.1 2014/04/17 16:59:53 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-8.2.7.ebuild,v 1.2 2014/06/14 11:03:42 tomjbe Exp $
 
 EAPI=5
 
@@ -31,5 +31,6 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# fix docdirectory, install path and hamlib search path
 	sed -i -e "s:/doc/\$\$TARGET:/doc/${PF}:" \
-		-e "s:-lhamlib:-L/usr/$(get_libdir)/hamlib -lhamlib:g" qsstv_8.pro
+		-e "s:-lhamlib:-L/usr/$(get_libdir)/hamlib -lhamlib:g" \
+		qsstv_8.pro || die
 }

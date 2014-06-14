@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-7.1.7.ebuild,v 1.6 2013/03/02 21:51:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-7.1.7.ebuild,v 1.7 2014/06/14 11:03:42 tomjbe Exp $
 
 EAPI=4
 
@@ -31,8 +31,9 @@ src_prepare() {
 	sed -i -e "s:/doc/\$\$TARGET:/doc/${PF}:" \
 	    -e "s:local/bin:/bin:" \
 		-e "s:target.extra:#target.extra:" \
-		-e "s:-lhamlib:-L/usr/$(get_libdir)/hamlib -lhamlib:g" src/src.pro
-	sed -i -e "s:doc/qsstv:doc/${PF}:" src/configdialog.cpp
+		-e "s:-lhamlib:-L/usr/$(get_libdir)/hamlib -lhamlib:g" \
+		src/src.pro || die
+	sed -i -e "s:doc/qsstv:doc/${PF}:" src/configdialog.cpp || die
 	# add missing #includes for gcc-4.7 (bug # 427486)
 	epatch "${FILESDIR}"/${P}-gcc-47.patch
 }

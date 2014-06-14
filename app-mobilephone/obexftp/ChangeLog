@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.70 2014/06/14 10:50:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.71 2014/06/14 11:10:03 mrueg Exp $
+
+  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -obexftp-0.23-r1.ebuild:
+  Cleanup old.
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> obexftp-0.23-r2.ebuild:
   x86 stable wrt bug #505272

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.48 2014/06/13 21:42:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.49 2014/06/14 11:18:57 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> motif-2.3.4-r2.ebuild:
+  x86 stable wrt bug #510454
 
   13 Jun 2014; Chema Alonso <nimiux@gentoo.org> motif-2.3.4-r2.ebuild:
   Stable for amd64 wrt bug #510454
