@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-python/flask-0.9[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/itsdangerous-0.17[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/passlib-1.6.1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-login-0.1.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-mail-0.7.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-wtf-0.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-principal-0.3.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] test? ( dev-python/nose[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/flask-sqlalchemy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/flask-mongoengine[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/flask-peewee[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/bcrypt[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/simplejson[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Simple security for Flask apps
+EAPI=5
+HOMEPAGE=http://pythonhosted.org/Flask-Security/ https://pypi.python.org/pypi/Flask-Security
+IUSE=test python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=>=dev-python/flask-0.9[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/itsdangerous-0.17[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/passlib-1.6.1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-login-0.1.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-mail-0.7.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-wtf-0.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/flask-principal-0.3.3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://pypi/F/Flask-Security/Flask-Security-1.7.3.tar.gz
+_eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=64e5ea08fb52c99f87f1ad272bbe61c2
