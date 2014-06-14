@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wtforms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.38 2014/05/29 12:54:20 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.39 2014/06/14 10:24:39 idella4 Exp $
+
+  14 Jun 2014; Ian Delaney <idella4@gentoo.org> wtforms-2.0.ebuild:
+  clean old python impls add, py3.4 suport
 
   29 May 2014; Dirkjan Ochtman <djc@gentoo.org> wtforms-2.0.ebuild:
   Add python3 compat for wtforms-2.0 (bug 485018)

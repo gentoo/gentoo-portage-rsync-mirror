@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20140212.ebuild,v 1.2 2014/04/29 09:00:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20140212.ebuild,v 1.3 2014/06/14 10:31:35 phajdan.jr Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.tar.gz
 # CC-BY-SA-3.0 for conkeror.png
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 ) CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-23.0 )"
 

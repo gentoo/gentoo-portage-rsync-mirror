@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.2.4.ebuild,v 1.1 2014/03/10 12:03:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.2.4.ebuild,v 1.2 2014/06/14 10:27:49 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.rabbitmq.com/releases/rabbitmq-server/v${PV}/rabbitmq-server
 
 LICENSE="GPL-2 MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/erlang"

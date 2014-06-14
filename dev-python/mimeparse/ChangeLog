@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.26 2014/05/30 07:38:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.27 2014/06/14 10:21:21 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mimeparse-0.1.4-r1.ebuild:
+  x86 stable wrt bug #506620
 
   30 May 2014; Ian Delaney <idella4@gentoo.org> mimeparse-0.1.4-r1.ebuild:
   drop py2.6 pypy2_0 add py3.4 support

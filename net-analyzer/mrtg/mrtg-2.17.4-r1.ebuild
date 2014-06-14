@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.4 2014/05/12 15:13:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.5 2014/06/14 10:17:06 phajdan.jr Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://oss.oetiker.ch/mrtg/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="
 	>=dev-perl/SNMP_Session-1.13-r2

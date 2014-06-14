@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/prison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.14 2014/05/05 22:37:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.15 2014/06/14 10:12:59 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> prison-1.1.1.ebuild:
+  x86 stable wrt bug #509648
 
   05 May 2014; Johannes Huber <johu@gentoo.org> -prison-1.1.0.ebuild:
   Remove old.

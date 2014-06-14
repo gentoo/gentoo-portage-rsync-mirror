@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.206 2014/05/24 00:07:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.207 2014/06/14 10:09:51 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  inkscape-0.48.4-r1.ebuild:
+  x86 stable wrt bug #492244
 
   24 May 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   inkscape-0.48.4.ebuild, inkscape-0.48.4-r1.ebuild,

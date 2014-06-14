@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.224 2014/06/08 16:25:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.225 2014/06/14 10:24:48 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ncurses-5.9-r3.ebuild:
+  x86 stable wrt bug #507154
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> ncurses-5.9-r3.ebuild:
   ia64 stable wrt bug #507154

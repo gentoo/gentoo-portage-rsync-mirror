@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.91 2014/06/13 02:27:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.92 2014/06/14 10:20:05 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> testtools-0.9.34.ebuild:
+  x86 stable wrt bug #506620
 
   13 Jun 2014; Patrick Lauer <patrick@gentoo.org> testtools-0.9.35-r1.ebuild:
   Add py32 again for repoman happy

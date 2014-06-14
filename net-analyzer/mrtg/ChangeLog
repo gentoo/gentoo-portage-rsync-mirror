@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.119 2014/05/12 15:13:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.120 2014/06/14 10:17:06 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mrtg-2.17.4-r1.ebuild:
+  x86 stable wrt bug #509992
 
   12 May 2014; Jeroen Roovers <jer@gentoo.org> mrtg-2.17.4-r1.ebuild:
   Stable for HPPA (bug #509992).

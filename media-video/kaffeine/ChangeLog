@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.128 2014/03/21 20:03:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.129 2014/06/14 10:19:04 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kaffeine-1.2.2-r1.ebuild:
+  x86 stable wrt bug #509690
 
 *kaffeine-1.2.2-r1 (21 Mar 2014)
 

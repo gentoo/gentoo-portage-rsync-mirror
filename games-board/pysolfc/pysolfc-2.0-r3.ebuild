@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r3.ebuild,v 1.1 2014/04/07 20:11:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r3.ebuild,v 1.2 2014/06/14 10:15:29 phajdan.jr Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="${SOL_URI}/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="extra-cardsets minimal +sound"
 
 S=${WORKDIR}/${MY_PN}-${PV}

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.146 2014/05/07 05:31:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.147 2014/06/14 10:29:33 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> wicd-1.7.2.4-r3.ebuild:
+  x86 stable wrt bug #509752
 
   07 May 2014; Thomas Kahle <tomka@gentoo.org> wicd-1.7.2.4-r2.ebuild,
   wicd-1.7.2.4-r3.ebuild:

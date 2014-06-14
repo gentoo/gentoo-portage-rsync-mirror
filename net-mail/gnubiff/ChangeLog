@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.44 2014/05/18 18:37:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.45 2014/06/14 10:07:38 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnubiff-2.2.15-r1.ebuild:
+  x86 stable wrt bug #510664
 
 *gnubiff-2.2.15-r1 (18 May 2014)
 

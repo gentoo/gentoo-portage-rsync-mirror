@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.164 2014/06/08 16:20:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.165 2014/06/14 10:23:35 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libvorbis-1.3.4.ebuild:
+  x86 stable wrt bug #507150
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> libvorbis-1.3.4.ebuild:
   ia64 stable wrt bug #507150
