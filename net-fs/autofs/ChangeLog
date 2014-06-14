@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.175 2014/06/14 07:48:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.176 2014/06/14 15:29:00 dlan Exp $
+
+  14 Jun 2014; Yixun Lan <dlan@gentoo.org> autofs-5.1.0.ebuild,
+  +files/autofs-5.1.0-fix-missing-stdarg.patch:
+  fix missing stdarg.h, bug 513196
 
 *autofs-5.1.0 (14 Jun 2014)
 

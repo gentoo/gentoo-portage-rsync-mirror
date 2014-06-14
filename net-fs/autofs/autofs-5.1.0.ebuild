@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.1.0.ebuild,v 1.1 2014/06/14 07:48:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.1.0.ebuild,v 1.2 2014/06/14 15:29:00 dlan Exp $
 
 EAPI=5
 
@@ -46,6 +46,10 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 CONFIG_CHECK="~AUTOFS4_FS"
+
+PATCHES=(
+	"${FILESDIR}/${P}-fix-missing-stdarg.patch"
+)
 
 src_prepare() {
 	# Upstream's patchset
