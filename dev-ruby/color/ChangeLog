@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/color
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.25 2014/05/20 06:13:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.26 2014/06/14 01:46:29 mrueg Exp $
+
+*color-1.7 (14 Jun 2014)
+
+  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +color-1.7.ebuild,
+  -color-1.4.2-r1.ebuild, -color-1.5.1.ebuild:
+  Version bump. Cleanup old.
 
 *color-1.6 (20 May 2014)
 
