@@ -30,4 +30,7 @@
       Collector</flag>
     <flag name="regression-test">Run the testsuite and install the results (requires FEATURES=test)</flag>
   </use>
+  <upstream>
+    <remote-id type="cpe">cpe:/a:gnu:gcc</remote-id>
+  </upstream>
 </pkgmetadata>

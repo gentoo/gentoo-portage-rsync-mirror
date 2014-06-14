@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15796 2014/06/14 10:24:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15797 2014/06/14 22:09:47 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (14 Jun 2014)
+# Masked for removal in 30 days, bug #495848
+net-libs/cyassl
 
 # Markos Chandras <hwoarang@gentoo.org> (14 Jun 2014)
 # Masked for testing in production

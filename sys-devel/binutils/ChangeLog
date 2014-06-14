@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.514 2014/06/03 02:55:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.515 2014/06/14 22:26:00 vapier Exp $
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info).
 
 *binutils-2.24-r3 (03 Jun 2014)
 

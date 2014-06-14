@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1002 2014/05/20 08:00:39 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1003 2014/06/14 22:25:27 vapier Exp $
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add upstream CPE tag (security info).
 
   20 May 2014; Ryan Hill <rhill@gentoo.org> files/fix_libtool_files.sh:
   Stop using einfo/eerror in fix_libtool_files.sh to avoid a dependency on

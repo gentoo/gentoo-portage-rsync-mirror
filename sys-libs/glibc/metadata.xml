@@ -8,4 +8,7 @@
  <flag name='suid'>Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5</flag>
  <flag name='systemtap'>enable systemtap static probe points</flag>
 </use>
+<upstream>
+ <remote-id type="cpe">cpe:/a:gnu:glibc</remote-id>
+</upstream>
 </pkgmetadata>
