@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.79 2014/05/28 09:44:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.80 2014/06/14 19:26:31 tetromino Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -31,6 +31,7 @@ bo_CN - Tibetan locale for China
 br - Breton locale
 brx - Bodo locale for India
 bs - Bosnian locale
+byn - Bilin (Bilen, Blin) locale
 ca - Catalan locale
 ca_ES - Catalan locale for Spain
 ca_XV - Asturian and Catalan locale (Valencia)
@@ -86,10 +87,12 @@ fy_NL - Frisian language locale for the Netherlands
 ga - Irish locale
 ga_IE - Irish locale for Ireland
 gd - Gaelic locale
+gez - Ge'ez locale
 gl - Galician locale
 gl_ES - Galician locale for Spain
 gu - Gujarati locale
 gu_IN - Gujarati locale for India
+haw - Hawaiian locale
 he - Hebrew locale
 he_IL - Hebrew locale for Israel
 hi - Hindi locale
@@ -137,6 +140,7 @@ lv_LV - Latvian locale for Latvia
 mai - Maithili locale
 me - Montenegrin (Crnogorski) locale
 mg - Malagasy locale
+mi - Maori locale
 mk - Macedonian locale
 ml - Malayalam locale
 ml_IN - Malayalam locale for India
@@ -229,6 +233,7 @@ th - Thai locale
 th_TH - Thai locale Thailand
 ti - Tigrinya locale
 ti_ER - Tigrinya locale for Eritrea
+tig - Tigre locale
 tk - Turkmen locale
 tl - Tagalog locale
 tlh - Klingon locale
@@ -237,6 +242,7 @@ tpi - Tok Pisin locale
 tr - Turkish locale
 ts - Tsonga locale
 tt - Tatar locale
+tt@iqtelif - Tatar (iqtelif) locale
 ug - Uighur locale
 uk - Ukrainian locale
 uk_UA - Ukrainian locale for Ukraine
@@ -250,6 +256,8 @@ ve - Venda locale
 vi - Vietnamese locale
 vi_VN - Vietnamese locale
 wa - Walloon locale
+wal - Wolaytta (Walamo) locale
+wo - Wolof locale
 xh - Xhosa locale
 yi - Yiddish locale
 zh - Chinese locale
