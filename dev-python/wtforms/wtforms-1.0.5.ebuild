@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-1.0.5.ebuild,v 1.2 2014/03/31 20:54:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-1.0.5.ebuild,v 1.3 2014/06/14 10:46:19 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -22,21 +22,15 @@ IUSE="doc"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="app-arch/unzip
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( >=dev-python/sphinx-0.6[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
-DOCS="AUTHORS.txt CHANGES.txt README.txt"
-
 python_compile_all() {
-	if use doc; then
-		einfo "Generation of documentation"
-		cd docs
-		PYTHONPATH=".." emake html || die "Building of documentation failed"
-	fi
+	use doc && emake -C docs html
 }
 
 python_install_all() {
-	if use doc; then
-		dohtml -r docs/_build/html/* || die "Installation of documentation failed"
-	fi
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }

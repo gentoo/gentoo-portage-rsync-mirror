@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.4.ebuild,v 1.2 2014/05/21 05:50:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.4.ebuild,v 1.3 2014/06/14 10:49:32 phajdan.jr Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SRC_URI="http://${PN}-3.googlecode.com/files/${P}.tar.bz2
 
 LICENSE="CPL-1.0 GPL-3 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="espeak gnome gucharmap qqwry pronounce spell tools"
 
 RESTRICT="test"

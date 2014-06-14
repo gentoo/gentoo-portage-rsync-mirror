@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.35 2014/05/21 05:50:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.36 2014/06/14 10:49:32 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> stardict-3.0.4.ebuild:
+  x86 stable wrt bug #510900
 
   21 May 2014; Samuli Suominen <ssuominen@gentoo.org> stardict-3.0.4.ebuild:
   Leave a note about fixes committed to upstream repository for next person

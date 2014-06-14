@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.129 2014/02/10 21:46:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.130 2014/06/14 10:35:28 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> sawfish-1.9.1-r2.ebuild:
+  x86 stable wrt bug #507244
 
 *sawfish-1.9.1-r2 (10 Feb 2014)
 

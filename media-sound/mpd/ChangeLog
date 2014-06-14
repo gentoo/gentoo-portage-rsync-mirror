@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.350 2014/06/09 13:42:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.351 2014/06/14 10:36:25 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mpd-0.18.10-r1.ebuild:
+  x86 stable wrt bug #509502
 
   09 Jun 2014; Jeroen Roovers <jer@gentoo.org> files/mpd.logrotate:
   Use real spaces by Dimitri Semitsoglou-Tsiapos (bug #512804).

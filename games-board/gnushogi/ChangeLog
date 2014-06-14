@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnushogi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/ChangeLog,v 1.20 2014/04/02 19:17:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/ChangeLog,v 1.21 2014/06/14 10:38:16 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnushogi-1.4.1.ebuild:
+  x86 stable wrt bug #505214
 
   02 Apr 2014; Chema Alonso <nimiux@gentoo.org> gnushogi-1.4.1.ebuild:
   Stable for amd64 wrt bug #505214

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf_ext/unf_ext-0.0.6-r1.ebuild,v 1.3 2014/04/12 23:53:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf_ext/unf_ext-0.0.6-r1.ebuild,v 1.4 2014/06/14 10:44:44 phajdan.jr Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://sourceforge.jp/projects/unf/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc test"
 
 ruby_add_bdepend "

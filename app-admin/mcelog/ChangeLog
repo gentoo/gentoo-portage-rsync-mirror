@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mcelog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.38 2013/12/07 09:47:27 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.39 2014/06/14 10:53:05 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> mcelog-100.ebuild:
+  x86 stable wrt bug #502604
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   mcelog-1.0_pre3_p20130621-r1.ebuild:

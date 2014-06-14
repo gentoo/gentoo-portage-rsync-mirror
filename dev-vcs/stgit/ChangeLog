@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.22 2014/05/10 20:01:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.23 2014/06/14 10:51:24 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> stgit-0.16-r2.ebuild:
+  x86 stable wrt bug #505796
 
 *stgit-0.17.1-r1 (10 May 2014)
 

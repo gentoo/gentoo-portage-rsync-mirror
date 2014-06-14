@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.6-r1.ebuild,v 1.2 2014/05/21 14:35:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.6-r1.ebuild,v 1.3 2014/06/14 10:43:09 phajdan.jr Exp $
 
 EAPI="5"
 inherit autotools eutils multilib elisp-common gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 x86"
 IUSE="+anthy canna curl eb emacs expat libffi gtk gtk3 kde libedit libnotify m17n-lib ncurses nls qt4 skk sqlite ssl static-libs test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RESTRICT="test"

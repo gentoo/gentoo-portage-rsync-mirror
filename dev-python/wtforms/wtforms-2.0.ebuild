@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-2.0.ebuild,v 1.3 2014/06/14 10:24:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-2.0.ebuild,v 1.4 2014/06/14 10:46:19 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -26,14 +26,8 @@ DEPEND="app-arch/unzip
 	doc? ( >=dev-python/sphinx-0.6[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
-DOCS="AUTHORS.txt CHANGES.txt README.txt"
-
 python_compile_all() {
-	if use doc; then
-		einfo "Generation of documentation"
-		cd docs
-		PYTHONPATH=".." emake html
-	fi
+	use doc && emake -C docs html
 }
 
 python_test() {
@@ -41,7 +35,6 @@ python_test() {
 }
 
 python_install_all() {
-	if use doc; then
-		dohtml -r docs/_build/html/*
-	fi
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }

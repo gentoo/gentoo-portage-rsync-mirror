@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.493 2014/05/21 08:59:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.494 2014/06/14 10:48:11 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> bind-9.9.5-r3.ebuild:
+  x86 stable wrt bug #506796
 
   21 May 2014; Mikle Kolyada <zlogene@gentoo.org> -bind-9.9.3_p2.ebuild:
   Drop insecure version

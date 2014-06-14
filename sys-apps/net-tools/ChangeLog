@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.144 2014/05/25 17:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.145 2014/06/14 10:32:14 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  net-tools-1.60_p20130513023548.ebuild:
+  x86 stable wrt bug #506702
 
   25 May 2014; Mike Frysinger <vapier@gentoo.org>
   net-tools-1.60_p20130513023548.ebuild:

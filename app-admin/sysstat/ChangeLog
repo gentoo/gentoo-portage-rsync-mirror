@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.263 2014/06/10 00:16:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.264 2014/06/14 10:46:19 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  sysstat-10.2.1-r1.ebuild:
+  x86 stable wrt bug #509340
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> sysstat-10.2.1-r1.ebuild:
   Add arm64/m68k/s390/sh love.

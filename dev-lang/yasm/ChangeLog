@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.63 2014/05/09 22:44:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.64 2014/06/14 10:55:26 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> yasm-1.2.0-r1.ebuild:
+  x86 stable wrt bug #509944
 
   09 May 2014; Mike Frysinger <vapier@gentoo.org> yasm-1.2.0-r1.ebuild,
   yasm-9999.ebuild:

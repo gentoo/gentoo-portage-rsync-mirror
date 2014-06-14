@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.4.1.ebuild,v 1.2 2014/05/23 21:23:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.4.1.ebuild,v 1.3 2014/06/14 10:34:50 phajdan.jr Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-	KEYWORDS="amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc x86"
 	MY_LANGS="bs cs da de el es et fr ga gl hu ia it lt mr nb nl pl pt pt_BR ro sk sv tr ug uk zh_CN zh_TW"
 fi
 

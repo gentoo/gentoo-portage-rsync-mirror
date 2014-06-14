@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.11-r3.ebuild,v 1.2 2014/04/15 16:27:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.11-r3.ebuild,v 1.3 2014/06/14 10:32:57 phajdan.jr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 hppa ~ia64 ~mips ~ppc ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"

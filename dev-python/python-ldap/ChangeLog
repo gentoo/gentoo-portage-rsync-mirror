@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.132 2014/05/14 08:31:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.133 2014/06/14 10:38:54 phajdan.jr Exp $
+
+  14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  python-ldap-2.4.10-r1.ebuild:
+  x86 stable wrt bug #506258
 
 *python-ldap-2.4.15 (14 May 2014)
 
