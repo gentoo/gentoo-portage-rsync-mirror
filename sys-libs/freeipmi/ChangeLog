@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.82 2014/05/10 16:15:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.83 2014/06/14 18:36:25 flameeyes Exp $
+
+  14 Jun 2014; Diego E. Pettenò <flameeyes@gentoo.org> freeipmi-1.4.3.ebuild:
+  Mark stable on amd64, tested by me and robbat2@.
 
 *freeipmi-1.4.3 (10 May 2014)
 

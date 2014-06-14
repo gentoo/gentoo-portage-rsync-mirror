@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1289 2014/06/14 07:37:47 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1290 2014/06/14 18:33:59 kensington Exp $
+
+  14 Jun 2014; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass, kde4-functions.eclass:
+  Sync with KDE overlay. Adapt to live ebuild versioning change. Remove
+  reference to long-removed package. Explicitly specify a slot. Update SRC_URI
+  for kde-workspace 4.11.10. Add new function to comment add_subdirectory
+  calls. Remove obsolete add_blocker function.
 
   14 Jun 2014; Ryan Hill <rhill@gentoo.org> flag-o-matic.eclass:
   Add -Og, -gdwarf-*, and -fabi-version=* to allowed flags (bug #512534,

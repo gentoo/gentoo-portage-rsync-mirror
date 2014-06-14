@@ -1,10 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4-r2.ebuild,v 1.5 2014/06/11 07:49:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.1-r2.ebuild,v 1.1 2014/06/14 18:49:46 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
+# this causes some issues so make it optional for now.
+# 3.5 will have CMakeFiles support in autotools.
+WANT_CMAKE=cmake
 
 inherit cmake-utils eutils flag-o-matic multibuild multilib \
 	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs
@@ -12,13 +15,13 @@ inherit cmake-utils eutils flag-o-matic multibuild multilib \
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
 SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
-	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.gz
-		http://llvm.org/releases/${PV}/clang-${PV}.src.tar.gz
-		http://llvm.org/releases/${PV}/clang-tools-extra-${PV}.src.tar.gz )
-	!doc? ( http://dev.gentoo.org/~mgorny/dist/${P}-manpages.tar.bz2 )"
+	clang? ( http://llvm.org/releases/${PV}/compiler-rt-3.4.src.tar.gz
+		http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.gz
+		http://llvm.org/releases/${PV}/clang-tools-extra-3.4.src.tar.gz )
+	!doc? ( http://dev.gentoo.org/~mgorny/dist/${PN}-3.4-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
-SLOT="0/${PV}"
+SLOT="0/3.4"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
 	+static-analyzer test udis86 xml video_cards_radeon
@@ -57,12 +60,14 @@ RDEPEND="${COMMON_DEPEND}
 		!>=sys-devel/clang-9999 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
-PDEPEND="clang? ( =sys-devel/clang-3.4-r100 )"
+PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
 
 # pypy gives me around 1700 unresolved tests due to open file limit
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	test? ( || ( $(python_gen_useflags 'python*') ) )"
+
+S=${WORKDIR}/${P}.src
 
 # Some people actually override that in make.conf. That sucks since
 # we need to run install per-directory, and ninja can't do that...
@@ -151,18 +156,16 @@ src_unpack() {
 		|| die "symlinks removal failed"
 
 	if use clang; then
-		mv "${WORKDIR}"/clang-${PV} "${S}"/tools/clang \
+		mv "${WORKDIR}"/cfe-${PV}.src "${S}"/tools/clang \
 			|| die "clang source directory move failed"
-		mv "${WORKDIR}"/compiler-rt-${PV} "${S}"/projects/compiler-rt \
+		mv "${WORKDIR}"/compiler-rt-3.4 "${S}"/projects/compiler-rt \
 			|| die "compiler-rt source directory move failed"
-		mv "${WORKDIR}"/clang-tools-extra-${PV} "${S}"/tools/clang/tools/extra \
+		mv "${WORKDIR}"/clang-tools-extra-3.4 "${S}"/tools/clang/tools/extra \
 			|| die "clang-tools-extra source directory move failed"
 	fi
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix_varargs.patch
-
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.4-gentoo-install.patch
 	# Hack cmake search path for Gentoo, bug #496480
@@ -403,6 +406,10 @@ multilib_src_install() {
 	emake "${MAKEARGS[@]}" DESTDIR="${root}" install
 	multibuild_merge_root "${root}" "${D}"
 
+	# Fix broken alias.
+	ln -sf libLLVM-${PV}$(get_libname) \
+		"${ED%/}"/usr/$(get_libdir)/libLLVM-3.4$(get_libname) || die
+
 	if ! multilib_is_native_abi; then
 		# Backwards compat, will be happily removed someday.
 		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config.${ABI}
@@ -414,9 +421,9 @@ multilib_src_install() {
 			dohtml -r "${S}"/docs/_build/html/
 		else
 			if ! use clang; then
-				rm "${WORKDIR}"/${P}-manpages/clang.1 || die
+				rm "${WORKDIR}"/${PN}-3.4-manpages/clang.1 || die
 			fi
-			doman "${WORKDIR}"/${P}-manpages/*.1
+			doman "${WORKDIR}"/${PN}-3.4-manpages/*.1
 		fi
 
 		# Symlink the gold plugin.
@@ -427,7 +434,9 @@ multilib_src_install() {
 		fi
 
 		# install cmake modules
-		emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install
+		if use cmake; then
+			emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install
+		fi
 	fi
 
 	# Fix install_names on Darwin.  The build system is too complicated

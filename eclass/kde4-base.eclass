@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.135 2014/04/25 19:39:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.136 2014/06/14 18:33:59 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -82,15 +82,15 @@ case ${KDEBASE} in
 			# @DESCRIPTION:
 			# Specifies KDevelop version. Default is 4.0.0 for tagged packages and 9999 for live packages.
 			# Applies to KDEBASE=kdevelop only.
-			KDEVELOP_VERSION="${KDEVELOP_VERSION:-9999}"
+			KDEVELOP_VERSION="${KDEVELOP_VERSION:-4.9999}"
 			# @ECLASS-VARIABLE: KDEVPLATFORM_VERSION
 			# @DESCRIPTION:
 			# Specifies KDevplatform version. Default is 1.0.0 for tagged packages and 9999 for live packages.
 			# Applies to KDEBASE=kdevelop only.
-			KDEVPLATFORM_VERSION="${KDEVPLATFORM_VERSION:-9999}"
+			KDEVPLATFORM_VERSION="${KDEVPLATFORM_VERSION:-4.9999}"
 		else
 			case ${PN} in
-				kdevelop|quanta)
+				kdevelop)
 					KDEVELOP_VERSION=${PV}
 					KDEVPLATFORM_VERSION="$(($(get_major_version)-3)).$(get_after_major_version)"
 					;;
@@ -309,7 +309,7 @@ if [[ ${PN} != kdelibs ]]; then
 			case ${KDEVPLATFORM_REQUIRED} in
 				always)
 					kdecommondepend+="
-						>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}
+						>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}:4
 					"
 					;;
 				*) ;;
@@ -448,6 +448,9 @@ _calculate_src_uri() {
 				4.11.9)
 					# Part of 4.12 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/4.12.5/src/${_kmname_pv}.tar.xz" ;;
+				4.11.10)
+					# Part of 4.13 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/4.13.2/src/${_kmname_pv}.tar.xz" ;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.xz" ;;
@@ -471,7 +474,7 @@ _calculate_live_repo() {
 			# Determine branch URL based on live type
 			local branch_prefix
 			case ${PV} in
-				9999*)
+				4.9999*)
 					# trunk
 					branch_prefix="trunk/KDE"
 					;;
@@ -558,7 +561,7 @@ _calculate_live_repo() {
 			fi
 
 			# default branching
-			[[ ${PV} != 9999* && ${KDEBASE} == kde-base ]] && \
+			[[ ${PV} != 4.9999* && ${KDEBASE} == kde-base ]] && \
 				EGIT_BRANCH="KDE/$(get_kde_version)"
 
 			# default repo uri
