@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/twill-0.9-r1.ebuild,v 1.3 2014/03/31 21:18:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/twill-0.9-r1.ebuild,v 1.4 2014/06/14 13:51:51 idella4 Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
@@ -17,15 +17,25 @@ SRC_URI="http://darcs.idyll.org/~t/projects/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="test"
+IUSE="doc examples"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( $(python_gen_cond_dep 'dev-python/epydoc[${PYTHON_USEDEP}]' python2_7)
+		$(python_gen_cond_dep 'dev-python/dnspython[${PYTHON_USEDEP}]' python2_7) )"
 
 S="${WORKDIR}/${MY_P}"
 
+python_compile_all() {
+	if use doc; then
+		pushd doc > /dev/null
+		chmod +x make-epydoc.sh
+		./make-epydoc.sh
+		popd> /dev/null
+	fi
+}
+
 python_install_all() {
-	dodoc -r doc/.
-	insinto /usr/share/doc/${PF}/examples
-	doins -r examples/*
-	docompress -x /usr/share/doc/${PF}/examples
+	use doc && HTML_DOCS=( doc/epydoc-html/. )
+	use examples && local EXAMPLES=( examples/. )
+	distutils-r1_python_install_all
 }
