@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.133 2014/06/13 19:32:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.134 2014/06/14 06:52:21 graaff Exp $
+
+  14 Jun 2014; Hans de Graaff <graaff@gentoo.org> ruby-gettext-2.3.3.ebuild,
+  ruby-gettext-2.3.8.ebuild:
+  Change dev-ruby/locale dependencies to locale 2.0.5 since only that version
+  provides memoizable, fixing bug 512320.
 
   13 Jun 2014; Jeroen Roovers <jer@gentoo.org> ruby-gettext-3.1.1.ebuild:
   Stable for HPPA (bug #505920).
