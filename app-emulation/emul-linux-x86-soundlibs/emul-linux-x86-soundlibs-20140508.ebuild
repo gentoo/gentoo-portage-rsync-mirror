@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20140508.ebuild,v 1.4 2014/05/10 10:06:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20140508.ebuild,v 1.5 2014/06/15 15:56:58 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -9,9 +9,12 @@ LICENSE="!abi_x86_32? ( BSD FDL-1.2 GPL-2 LGPL-2.1 LGPL-2 MIT gsm public-domain 
 KEYWORDS="-* ~amd64"
 IUSE="abi_x86_32 alsa +pulseaudio"
 
-RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}[abi_x86_32=]
-	~app-emulation/emul-linux-x86-medialibs-${PV}[abi_x86_32=]
-	!abi_x86_32? ( !>=sci-libs/fftw-3.3.3-r1[abi_x86_32]
+RDEPEND="
+	!abi_x86_32? (
+		~app-emulation/emul-linux-x86-baselibs-${PV}[abi_x86_32=]
+		~app-emulation/emul-linux-x86-medialibs-${PV}[abi_x86_32=]
+
+		!>=sci-libs/fftw-3.3.3-r1[abi_x86_32]
 		!>=media-libs/libmikmod-3.2.0-r1[abi_x86_32] )
 	abi_x86_32? (
 		>=media-libs/libogg-1.3.1[abi_x86_32(-)]

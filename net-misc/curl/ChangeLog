@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.363 2014/06/15 12:18:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.364 2014/06/15 15:51:04 blueness Exp $
+
+  15 Jun 2014; Anthony G. Basile <blueness@gentoo.org> curl-7.37.0-r1.ebuild,
+  curl-7.37.0.ebuild:
+  USE=metalink fails with axtls, polarssl.  Bug #513340
 
 *curl-7.37.0-r1 (15 Jun 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-20140508.ebuild,v 1.1 2014/05/08 21:49:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-20140508.ebuild,v 1.2 2014/06/15 15:48:46 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -11,11 +11,12 @@ KEYWORDS="-* ~amd64"
 IUSE="abi_x86_32 opengl"
 
 DEPEND=""
-RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
-	x11-libs/libX11
-	opengl? ( app-emulation/emul-linux-x86-opengl )
-
+RDEPEND="
 	!abi_x86_32? (
+		~app-emulation/emul-linux-x86-baselibs-${PV}
+		x11-libs/libX11
+		opengl? ( app-emulation/emul-linux-x86-opengl )
+
 		!media-libs/fontconfig[abi_x86_32(-)]
 		!media-libs/freetype[abi_x86_32(-)]
 		!x11-libs/libICE[abi_x86_32(-)]

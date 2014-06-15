@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-20140508.ebuild,v 1.2 2014/05/09 19:08:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-20140508.ebuild,v 1.3 2014/06/15 15:52:07 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -10,10 +10,13 @@ KEYWORDS="-* ~amd64"
 IUSE="abi_x86_32"
 
 DEPEND=""
-RDEPEND="~app-emulation/emul-linux-x86-xlibs-${PV}
-	~app-emulation/emul-linux-x86-baselibs-${PV}
-	~app-emulation/emul-linux-x86-soundlibs-${PV}
-	~app-emulation/emul-linux-x86-medialibs-${PV}
+RDEPEND="
+	!abi_x86_32? (
+		~app-emulation/emul-linux-x86-xlibs-${PV}
+		~app-emulation/emul-linux-x86-baselibs-${PV}
+		~app-emulation/emul-linux-x86-soundlibs-${PV}
+		~app-emulation/emul-linux-x86-medialibs-${PV}
+	)
 	abi_x86_32? (
 		>=media-libs/openal-1.15.1-r1[abi_x86_32(-)]
 		>=media-libs/freealut-1.1.0-r3[abi_x86_32(-)]

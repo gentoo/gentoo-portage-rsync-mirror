@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.37.0-r1.ebuild,v 1.1 2014/06/15 12:18:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.37.0-r1.ebuild,v 1.2 2014/06/15 15:51:04 blueness Exp $
 
 EAPI="5"
 
@@ -91,6 +91,7 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="
 	curl_ssl_winssl? ( elibc_Winnt )
 	threads? ( !adns )
+	metalink? ( !curl_ssl_axtls !curl_ssl_polarssl )
 	ssl? (
 		^^ (
 			curl_ssl_axtls
