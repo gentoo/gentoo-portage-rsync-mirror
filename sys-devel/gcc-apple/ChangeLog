@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-apple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.25 2014/05/22 18:59:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.26 2014/06/15 18:00:07 grobian Exp $
+
+  15 Jun 2014; Fabian Groffen <grobian@gentoo.org>
+  +files/gcc-apple-4.2.1_p5666-perl-5.18.patch, gcc-apple-4.2.1_p5666-r1.ebuild:
+  Fix build with perl-5.18
 
   22 May 2014; Fabian Groffen <grobian@gentoo.org>
   gcc-apple-4.2.1_p5666-r1.ebuild:
