@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.90 2014/04/30 20:08:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.91 2014/06/15 07:48:12 radhermit Exp $
+
+*imapsync-1.592 (15 Jun 2014)
+
+  15 Jun 2014; Tim Harder <radhermit@gentoo.org> +imapsync-1.592.ebuild:
+  Version bump.
 
 *imapsync-1.584-r1 (30 Apr 2014)
 
