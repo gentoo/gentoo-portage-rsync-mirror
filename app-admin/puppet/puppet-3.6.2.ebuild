@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.6.0.ebuild,v 1.1 2014/05/18 19:47:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.6.2.ebuild,v 1.1 2014/06/15 03:10:35 prometheanfire Exp $
 
 EAPI="5"
 
