@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9088 2014/06/15 08:24:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9089 2014/06/15 10:37:08 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -13,7 +13,7 @@
   Unmask multilib gstreamer.
 
   14 Jun 2014; Anthony G. Basile <blueness@gentoo.org> package.mask:
-  Masked for removal in 30 days, bug #495848
+  Mask net-libs/cyassl for removal in 30 days, bug #495848
 
   14 Jun 2014; Justin Lecher <jlec@gentoo.org> desc/linguas.desc:
   Add some missing locales
