@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.64 2014/03/04 19:59:40 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.65 2014/06/15 11:50:15 maekke Exp $
+
+  15 Jun 2014; Markus Meier <maekke@gentoo.org> lensfun-0.2.7.ebuild,
+  lensfun-0.2.8.ebuild:
+  update HOMEPAGE and SRC_URI
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> lensfun-0.2.8.ebuild:
   Add ~mips keyword.

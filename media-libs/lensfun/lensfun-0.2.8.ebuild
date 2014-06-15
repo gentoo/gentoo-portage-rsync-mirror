@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.8.ebuild,v 1.4 2014/03/04 19:59:40 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.8.ebuild,v 1.5 2014/06/15 11:50:15 maekke Exp $
 
 EAPI=5
 
@@ -9,8 +9,8 @@ PYTHON_COMPAT=( python2_{6,7} )
 inherit multilib python-single-r1 cmake-utils
 
 DESCRIPTION="lensfun: A library for rectifying and simulating photographic lens distortions"
-HOMEPAGE="http://lensfun.berlios.de/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://lensfun.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-3 CC-BY-SA-3.0" # See README for reasoning.
 SLOT="0"
