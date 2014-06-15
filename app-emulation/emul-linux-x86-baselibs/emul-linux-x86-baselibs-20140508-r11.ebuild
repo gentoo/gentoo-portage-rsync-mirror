@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508-r11.ebuild,v 1.1 2014/06/15 12:26:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508-r11.ebuild,v 1.2 2014/06/15 18:48:06 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -11,7 +11,7 @@ LICENSE="Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT
 	openssl tcp_wrappers_license"
 
 KEYWORDS="-* ~amd64"
-IUSE="abi_x86_32 kerberos ldap pam"
+IUSE="abi_x86_32 +kerberos +ldap +pam"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
