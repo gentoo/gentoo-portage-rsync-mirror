@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8z_p1.ebuild,v 1.1 2014/06/15 08:27:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8z_p1-r1.ebuild,v 1.1 2014/06/15 08:52:48 chainsaw Exp $
 
 # this ebuild is only for the libcrypto.so.0.9.8 and libssl.so.0.9.8 SONAME for ABI compat
 
-EAPI="5"
+EAPI="2"
 
-inherit eutils flag-o-matic toolchain-funcs multilib multilib-minimal
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 PLEVEL=`echo ${PV##*_p} | tr [1-26] [a-z]`
 MY_PV=${PV/_p*/${PLEVEL}}
@@ -21,21 +21,14 @@ SLOT="0.9.8"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist gmp kerberos sse2 test zlib"
 
-RDEPEND="gmp? ( dev-libs/gmp[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
-	kerberos? ( app-crypt/mit-krb5[${MULTILIB_USEDEP}] )
-	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-baselibs-20140508-r4
-		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-	)
+RDEPEND="gmp? ( dev-libs/gmp )
+	zlib? ( sys-libs/zlib )
+	kerberos? ( app-crypt/mit-krb5 )
 	!=dev-libs/openssl-0.9.8*:0"
 DEPEND="${RDEPEND}
 	sys-apps/diffutils
 	>=dev-lang/perl-5
 	test? ( sys-devel/bc )"
-
-# Do not install any docs
-DOCS=()
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
@@ -73,11 +66,9 @@ src_prepare() {
 	sed -i '1s,^:$,#!/usr/bin/perl,' Configure #141906
 	sed -i '/^"debug-bodo/d' Configure # 0.9.8za shipped broken
 	./config --test-sanity || die "I AM NOT SANE"
-
-	multilib_copy_sources
 }
 
-multilib_src_configure() {
+src_configure() {
 	unset APPS #197996
 	unset SCRIPTS #312551
 
@@ -99,7 +90,6 @@ multilib_src_configure() {
 	einfo "Use configuration ${sslout:-(openssl knows best)}"
 	local config="Configure"
 	[[ -z ${sslout} ]] && config="config"
-
 	echoit \
 	./${config} \
 		${sslout} \
@@ -134,16 +124,16 @@ multilib_src_configure() {
 		Makefile || die
 }
 
-multilib_src_compile() {
+src_compile() {
 	# depend is needed to use $confopts
-	emake -j1 depend
-	emake -j1 build_libs
+	emake -j1 depend || die "depend failed"
+	emake -j1 build_libs || die "make build_libs failed"
 }
 
-multilib_src_test() {
-	emake -j1 test
+src_test() {
+	emake -j1 test || die "make test failed"
 }
 
-multilib_src_install() {
-	dolib.so lib{crypto,ssl}.so.0.9.8
+src_install() {
+	dolib.so lib{crypto,ssl}.so.0.9.8 || die
 }

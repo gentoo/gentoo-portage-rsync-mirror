@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.550 2014/06/15 08:27:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.552 2014/06/15 08:58:50 mgorny Exp $
+
+*openssl-0.9.8z_p1-r2 (15 Jun 2014)
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> +openssl-0.9.8z_p1-r2.ebuild:
+  Restore multilib at highest rev before systems are broken.
+
+*openssl-0.9.8z_p1-r1 (15 Jun 2014)
+
+  15 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -openssl-0.9.8z_p1.ebuild,
+  +openssl-0.9.8z_p1-r1.ebuild:
+  Decouple multilib experiment from security stabilisation yet again. Can we
+  stop leaving these landmines in the tree please. Some of us like our limbs.
 
 *openssl-0.9.8z_p1 (15 Jun 2014)
 

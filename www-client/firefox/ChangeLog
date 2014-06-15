@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.337 2014/06/14 01:35:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.338 2014/06/15 08:33:52 ago Exp $
+
+  15 Jun 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.6.0.ebuild:
+  Stable for x86, wrt bug #512896
 
   14 Jun 2014; Jeroen Roovers <jer@gentoo.org> firefox-24.6.0.ebuild:
   Stable for HPPA (bug #512896).

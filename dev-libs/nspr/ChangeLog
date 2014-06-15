@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.267 2014/06/14 08:23:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.268 2014/06/15 08:33:43 ago Exp $
+
+  15 Jun 2014; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.6.ebuild:
+  Stable for x86, wrt bug #512896
 
   14 Jun 2014; Michał Górny <mgorny@gentoo.org> nspr-4.10.6-r1.ebuild:
   Copy the x32 fallback check from dev-libs/nss::mozilla.
