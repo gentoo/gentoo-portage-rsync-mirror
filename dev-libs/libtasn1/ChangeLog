@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.205 2014/06/13 20:04:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.206 2014/06/15 10:18:31 maekke Exp $
+
+  15 Jun 2014; Markus Meier <maekke@gentoo.org> libtasn1-3.6.ebuild:
+  arm stable, bug #511536
 
   13 Jun 2014; Jeroen Roovers <jer@gentoo.org> libtasn1-3.6.ebuild:
   Stable for HPPA (bug #511536).

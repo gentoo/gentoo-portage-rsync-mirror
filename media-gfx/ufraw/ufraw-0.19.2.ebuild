@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.19.2.ebuild,v 1.14 2014/01/12 11:19:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.19.2.ebuild,v 1.15 2014/06/15 10:16:57 maekke Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs
@@ -32,7 +32,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.17-cfitsio-automagic.patch
+	epatch \
+		"${FILESDIR}"/${PN}-0.17-cfitsio-automagic.patch \
+		"${FILESDIR}"/${P}-clang.patch
 	eautoreconf
 }
 
