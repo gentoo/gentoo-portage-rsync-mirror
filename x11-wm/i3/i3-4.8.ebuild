@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.8.ebuild,v 1.1 2014/06/15 19:53:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.8.ebuild,v 1.2 2014/06/15 20:24:54 xarthisius Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="+pango"
 
 CDEPEND="dev-libs/libev
 	dev-libs/libpcre
-	dev-libs/yajl
+	>=dev-libs/yajl-2.0.3
 	x11-libs/libxcb
 	x11-libs/libX11
 	x11-libs/startup-notification

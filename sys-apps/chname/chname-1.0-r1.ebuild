@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/chname-1.0-r1.ebuild,v 1.1 2010/12/30 18:53:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chname/chname-1.0-r1.ebuild,v 1.2 2014/06/15 20:07:56 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://chname.googlecode.com/files/chname-1.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-kernel/linux-headers-2.6.16"

@@ -2,9 +2,9 @@ DEFINED_PHASES=compile install postinst
 DEPEND=>=sys-kernel/linux-headers-2.6.16
 DESCRIPTION=Run a command with a new system hostname.
 HOMEPAGE=http://code.google.com/p/chname
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://chname.googlecode.com/files/chname-1.0.tar.gz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=38bbaa2784e154b721cac64584d4f0bb
+_md5_=8e0cd1a52da61ca7432109476c64f1c6
