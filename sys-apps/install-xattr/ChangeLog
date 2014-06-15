@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.12 2014/06/01 01:35:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.13 2014/06/15 22:28:42 blueness Exp $
+
+*install-xattr-0.2 (15 Jun 2014)
+
+  15 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +install-xattr-0.2.ebuild, install-xattr-9999.ebuild:
+  Version bump 0.2, fixes PWD/OLDPWD when being wrapped by __PORTAGE_HELPER_PATH
 
   31 May 2014; Anthony G. Basile <blueness@gentoo.org>
   install-xattr-9999.ebuild:
