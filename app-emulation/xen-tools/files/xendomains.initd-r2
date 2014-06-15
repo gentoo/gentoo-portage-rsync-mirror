@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.8 2013/07/27 06:11:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.9 2014/06/15 19:55:21 robbat2 Exp $
 
 extra_commands="status"
 
@@ -77,7 +77,7 @@ stop() {
 	# Stop all domains with config files in AUTODIR.
 	DOMAINS="$(ls "${AUTODIR:=/etc/xen/auto}/"* 2>/dev/null | sort -r)"
 
-	if [[ "$PARALLEL_SHUTDOWN" == "yes" ]] ; then
+	if [ "$PARALLEL_SHUTDOWN" = "yes" ] ; then
 		for dom in $DOMAINS ; do
 			name=$(get_domname ${dom})
 			if is_running ${name} ; then
