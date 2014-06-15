@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.11 2014/06/02 12:37:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.12 2014/06/15 09:30:41 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -27,6 +27,7 @@ app-admin/fam abi_x86_32
 app-admin/gamin abi_x86_32
 app-arch/bzip2 abi_x86_32
 app-arch/xz-utils abi_x86_32
+app-crypt/heimdal abi_x86_32
 app-crypt/mit-krb5 abi_x86_32
 app-emulation/emul-linux-x86-baselibs abi_x86_32
 app-emulation/emul-linux-x86-compat abi_x86_32
@@ -82,6 +83,7 @@ dev-libs/libconfig abi_x86_32
 dev-libs/libcss abi_x86_32
 dev-libs/libedit abi_x86_32
 dev-libs/libelf abi_x86_32
+dev-libs/libevent abi_x86_32
 dev-libs/libffi abi_x86_32
 dev-libs/libgamin abi_x86_32
 dev-libs/libgcrypt abi_x86_32
@@ -99,6 +101,7 @@ dev-libs/libsigc++ abi_x86_32
 dev-libs/libtasn1 abi_x86_32
 dev-libs/libusb abi_x86_32
 dev-libs/libusb-compat abi_x86_32
+dev-libs/libverto abi_x86_32
 dev-libs/libwapcaplet abi_x86_32
 dev-libs/libxml2 abi_x86_32
 dev-libs/libxslt abi_x86_32
@@ -362,9 +365,11 @@ sys-libs/pwdb abi_x86_32
 sys-libs/readline abi_x86_32
 sys-libs/slang abi_x86_32
 sys-libs/talloc abi_x86_32
+sys-libs/tevent abi_x86_32
 sys-libs/zlib abi_x86_32
 virtual/fam abi_x86_32
 virtual/glu abi_x86_32
+virtual/krb5 abi_x86_32
 virtual/jpeg abi_x86_32
 virtual/libffi abi_x86_32
 virtual/libiconv abi_x86_32
