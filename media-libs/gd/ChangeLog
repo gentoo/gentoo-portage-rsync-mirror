@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.89 2014/05/21 18:39:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.91 2014/06/15 01:00:02 vapier Exp $
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org> gd-2.0.35-r3.ebuild,
+  gd-2.0.35-r4.ebuild:
+  Add arm64 love.
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org> gd-2.0.35-r4.ebuild:
+  Make sure @LIBICONV@ is replaced when nls is unavailable #512942 by Ulrich
+  Müller.
 
 *gd-2.0.35-r4 (21 May 2014)
 

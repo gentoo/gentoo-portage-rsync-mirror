@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.101 2014/06/13 13:28:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.102 2014/06/15 00:52:03 vapier Exp $
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libICE-1.0.8-r1.ebuild,
+  libICE-1.0.9.ebuild:
+  Add arm64 love.
 
 *libICE-1.0.9 (13 Jun 2014)
 

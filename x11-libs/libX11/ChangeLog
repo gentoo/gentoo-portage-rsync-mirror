@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.219 2014/04/30 13:58:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.220 2014/06/15 00:47:25 vapier Exp $
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libX11-1.6.2.ebuild:
+  Add arm64 love.
 
   30 Apr 2014; Michał Górny <mgorny@gentoo.org> libX11-1.6.2.ebuild:
   Use multilib_src_compile() rather than hackery on top of

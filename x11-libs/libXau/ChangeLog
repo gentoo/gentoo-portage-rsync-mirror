@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.105 2014/04/15 19:26:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.106 2014/06/15 00:41:28 vapier Exp $
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libXau-1.0.8.ebuild:
+  Add arm64 love.
 
   15 Apr 2014; Mike Frysinger <vapier@gentoo.org> libXau-1.0.6.ebuild,
   libXau-1.0.7-r1.ebuild, libXau-1.0.7.ebuild, libXau-1.0.8.ebuild:

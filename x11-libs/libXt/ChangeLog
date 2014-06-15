@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.125 2014/04/15 18:37:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.126 2014/06/15 00:54:38 vapier Exp $
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libXt-1.1.4.ebuild:
+  Add arm64 love.
 
   15 Apr 2014; Mike Frysinger <vapier@gentoo.org> libXt-1.1.4.ebuild:
   Better DESCRIPTION.

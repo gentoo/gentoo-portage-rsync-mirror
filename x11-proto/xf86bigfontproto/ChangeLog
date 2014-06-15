@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86bigfontproto
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.53 2013/10/08 05:09:57 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.54 2014/06/15 00:44:51 vapier Exp $
+
+  15 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  xf86bigfontproto-1.2.0-r1.ebuild:
+  Add arm64 love.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   xf86bigfontproto-1.2.0-r1.ebuild:
