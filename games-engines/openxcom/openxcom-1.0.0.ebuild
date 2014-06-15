@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.1 2014/06/14 19:33:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.2 2014/06/15 04:12:47 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils games
 
 DESCRIPTION="An open-source reimplementation of the popular UFO: Enemy Unknown"
 HOMEPAGE="http://openxcom.org/"
-SRC_URI="http://openxcom.org/wp-content/uploads/downloads/2014/06/${P}.tar.gz"
+SRC_URI="https://github.com/SupSuper/OpenXcom/archive/v1.0.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3 CC-BY-SA-4.0"
 SLOT="0"
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 DOCS=( README.txt )
+
+S=${WORKDIR}/OpenXcom-1.0
 
 src_configure() {
 	mycmakeargs=(
