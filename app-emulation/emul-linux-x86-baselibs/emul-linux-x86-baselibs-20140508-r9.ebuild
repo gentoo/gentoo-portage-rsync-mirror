@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508-r9.ebuild,v 1.1 2014/06/08 12:55:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140508-r9.ebuild,v 1.2 2014/06/15 07:11:40 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -11,7 +11,7 @@ LICENSE="Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT
 	openssl tcp_wrappers_license"
 
 KEYWORDS="-* ~amd64"
-IUSE="abi_x86_32"
+IUSE="abi_x86_32 kerberos ldap pam"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
@@ -80,15 +80,15 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=net-print/cups-1.7.1-r2[abi_x86_32(-)]
 		>=sys-libs/talloc-2.1.0-r1[abi_x86_32(-)]
 		>=sys-apps/keyutils-1.5.9-r1[abi_x86_32(-)]
-		>=virtual/krb5-0-r1[abi_x86_32(-)]
+		kerberos? ( >=virtual/krb5-0-r1[abi_x86_32(-)] )
 		>=sys-libs/db-4.8.30-r1:4.8[abi_x86_32(-)]
-		>=net-nds/openldap-2.4.38-r2[abi_x86_32(-)]
+		ldap? ( >=net-nds/openldap-2.4.38-r2[abi_x86_32(-)] )
 		>=net-dns/libidn-1.28-r1[abi_x86_32(-)]
 		>=dev-libs/libnl-3.2.24-r1[abi_x86_32(-)]
 		>=media-libs/libart_lgpl-2.3.21-r2[abi_x86_32(-)]
 		>=sys-libs/cracklib-2.9.1-r1[abi_x86_32(-)]
 		>=net-libs/libtirpc-0.2.4-r2[abi_x86_32(-)]
-		>=sys-libs/pam-1.1.8-r2[abi_x86_32(-)]
+		pam? ( >=virtual/pam-0-r1[abi_x86_32(-)] )
 		>=net-libs/libsoup-2.46.0-r1[abi_x86_32(-)]
 		>=net-libs/neon-0.30.0-r1[abi_x86_32(-)]
 	)
