@@ -1,6 +1,11 @@
 # ChangeLog for media-video/noad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.60 2013/05/14 09:38:01 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.61 2014/06/15 17:30:37 hd_brummy Exp $
+
+*noad-0.8.6 (15 Jun 2014)
+
+  15 Jun 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +noad-0.8.6.ebuild:
+  bump
 
   14 May 2013; Agostino Sarubbo <ago@gentoo.org> noad-0.7.3-r1.ebuild:
   Stable for x86, wrt bug #464564

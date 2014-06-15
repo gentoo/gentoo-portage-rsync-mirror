@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.124 2014/06/15 16:42:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.125 2014/06/15 17:29:15 jlec Exp $
+
+*aufs-sources-3.15.0 (15 Jun 2014)
+
+  15 Jun 2014; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.15.0.ebuild:
+  Bump to latest aufs3, genpatches and linux release
 
   15 Jun 2014; Justin Lecher <jlec@gentoo.org> aufs-sources-3.14.7.ebuild:
   Fix problem due to renamed tmpfs patch, #513332

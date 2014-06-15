@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.14_p1.ebuild,v 1.1 2014/04/12 15:51:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.15_p1.ebuild,v 1.1 2014/06/15 17:03:46 hwoarang Exp $
 
 EAPI="5"
 inherit readme.gentoo versionator

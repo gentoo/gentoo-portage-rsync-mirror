@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.6.0.ebuild,v 1.1 2014/06/03 05:31:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.6.1-r1.ebuild,v 1.1 2014/06/15 17:28:42 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -9,6 +9,8 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc README.md ROADMAP TODO.rdoc"
+
+RUBY_FAKEGEM_EXTRAINSTALL="VERSION"
 
 RUBY_FAKEGEM_GEMSPEC="mail.gemspec"
 
