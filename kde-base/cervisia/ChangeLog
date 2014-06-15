@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.307 2014/05/13 17:43:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.308 2014/06/15 16:56:41 kensington Exp $
+
+*cervisia-4.13.2 (15 Jun 2014)
+
+  15 Jun 2014; Michael Palimaka <kensington@gentoo.org> +cervisia-4.13.2.ebuild:
+  Version bump KDE SC 4.13.2
 
 *cervisia-4.13.1 (13 May 2014)
 

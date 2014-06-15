@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.351 2014/05/13 17:43:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.352 2014/06/15 16:56:20 kensington Exp $
+
+*kcontrol-4.13.2 (15 Jun 2014)
+
+  15 Jun 2014; Michael Palimaka <kensington@gentoo.org> +kcontrol-4.13.2.ebuild:
+  Version bump KDE SC 4.13.2
 
 *kcontrol-4.13.1 (13 May 2014)
 

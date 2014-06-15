@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/smokekde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.131 2014/05/13 17:43:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.132 2014/06/15 16:56:41 kensington Exp $
+
+*smokekde-4.13.2 (15 Jun 2014)
+
+  15 Jun 2014; Michael Palimaka <kensington@gentoo.org> +smokekde-4.13.2.ebuild:
+  Version bump KDE SC 4.13.2
 
 *smokekde-4.13.1 (13 May 2014)
 

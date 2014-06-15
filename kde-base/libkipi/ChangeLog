@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkipi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.211 2014/05/13 17:42:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.212 2014/06/15 16:56:57 kensington Exp $
+
+*libkipi-4.13.2 (15 Jun 2014)
+
+  15 Jun 2014; Michael Palimaka <kensington@gentoo.org> +libkipi-4.13.2.ebuild:
+  Version bump KDE SC 4.13.2
 
 *libkipi-4.13.1 (13 May 2014)
 
