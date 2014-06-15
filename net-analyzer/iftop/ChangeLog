@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.64 2014/06/05 11:34:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.65 2014/06/15 14:44:30 hattya Exp $
+
+  15 Jun 2014; Akinori Hattori <hattya@gentoo.org> iftop-1.0_pre4.ebuild:
+  ia64 stable wrt bug #511716
 
   05 Jun 2014; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre2.ebuild:
   Add DEPEND=virtual/pkgconfig by dE (bug #512466).

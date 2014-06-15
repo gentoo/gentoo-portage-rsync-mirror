@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.272 2014/06/09 23:29:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.273 2014/06/15 14:41:31 hattya Exp $
+
+  15 Jun 2014; Akinori Hattori <hattya@gentoo.org> icu-52.1.ebuild:
+  ia64 stable wrt bug #511146
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> icu-51.2-r1.ebuild,
   icu-51.2-r2.ebuild, icu-52.1.ebuild:

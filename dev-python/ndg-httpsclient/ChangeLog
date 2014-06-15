@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ndg-httpsclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ndg-httpsclient/ChangeLog,v 1.5 2014/06/08 17:00:06 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ndg-httpsclient/ChangeLog,v 1.6 2014/06/15 14:49:52 jer Exp $
+
+  15 Jun 2014; Jeroen Roovers <jer@gentoo.org> ndg-httpsclient-0.3.2.ebuild:
+  Stable for HPPA (bug #513278).
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> ndg-httpsclient-0.3.2.ebuild:
   keyword ~ia64 wrt bug #509628

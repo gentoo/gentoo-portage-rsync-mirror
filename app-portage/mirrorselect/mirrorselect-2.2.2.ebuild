@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-2.2.2.ebuild,v 1.2 2014/06/08 17:16:16 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-2.2.2.ebuild,v 1.3 2014/06/15 14:50:58 jer Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~x86"
+KEYWORDS="~amd64 ~arm hppa ~ia64 ~x86"
 
 RDEPEND="
 	dev-util/dialog

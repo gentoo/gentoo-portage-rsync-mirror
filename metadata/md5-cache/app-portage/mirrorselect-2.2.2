@@ -4,11 +4,11 @@ DESCRIPTION=Tool to help select distfiles mirrors for Gentoo
 EAPI=5
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Mirrorselect
 IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86
+KEYWORDS=~amd64 ~arm hppa ~ia64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-util/dialog net-analyzer/netselect >=dev-python/ssl-fetch-0.2[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[xml] ) python_targets_python3_4? ( dev-lang/python:3.4[xml] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~dolsen/releases/mirrorselect/mirrorselect-2.2.2.tar.gz http://dev.gentoo.org/~dolsen/releases/mirrorselect/mirrorselect-test
 _eclasses_=distutils-r1	0ffe72d093023ff4f69e4ceaf6f63e4e	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	python-r1	6f0183db47dc66fccb7a6899f7209b48	python-utils-r1	8ba35e0dacf49c6cae65901d183c971f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=07e3939fd83f3974915982bdb3c5f702
+_md5_=55cb98c2a6846988002aff8f080e5e9f
