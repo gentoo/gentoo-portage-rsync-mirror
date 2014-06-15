@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.12 2014/06/15 09:30:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.13 2014/06/15 09:49:38 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,7 +29,7 @@ app-arch/bzip2 abi_x86_32
 app-arch/xz-utils abi_x86_32
 app-crypt/heimdal abi_x86_32
 app-crypt/mit-krb5 abi_x86_32
-app-emulation/emul-linux-x86-baselibs abi_x86_32
+app-emulation/emul-linux-x86-baselibs abi_x86_32 kerberos ldap pam
 app-emulation/emul-linux-x86-compat abi_x86_32
 app-emulation/emul-linux-x86-cpplibs abi_x86_32
 app-emulation/emul-linux-x86-db abi_x86_32
@@ -39,12 +39,12 @@ app-emulation/emul-linux-x86-gtklibs abi_x86_32
 app-emulation/emul-linux-x86-gtkmmlibs abi_x86_32
 app-emulation/emul-linux-x86-java abi_x86_32
 app-emulation/emul-linux-x86-jna abi_x86_32
-app-emulation/emul-linux-x86-medialibs abi_x86_32
+app-emulation/emul-linux-x86-medialibs abi_x86_32 pulseaudio
 app-emulation/emul-linux-x86-motif abi_x86_32
 app-emulation/emul-linux-x86-opengl abi_x86_32
 app-emulation/emul-linux-x86-qtlibs abi_x86_32
 app-emulation/emul-linux-x86-sdl abi_x86_32
-app-emulation/emul-linux-x86-soundlibs abi_x86_32
+app-emulation/emul-linux-x86-soundlibs abi_x86_32 pulseaudio
 app-emulation/emul-linux-x86-xlibs abi_x86_32
 app-misc/lirc abi_x86_32
 app-text/libpaper abi_x86_32
