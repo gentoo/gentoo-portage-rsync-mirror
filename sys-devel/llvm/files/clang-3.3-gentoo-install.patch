@@ -18,7 +18,7 @@ index e014980..6e60513 100644
    // not supported by old linkers.
    std::string ProfileRT =
 -    std::string(TC.getDriver().Dir) + "/../lib/libprofile_rt.a";
-+    "-l:llvm/libprofile_rt.a";
++    "-l:libprofile_rt.a";
  
    CmdArgs.push_back(Args.MakeArgString(ProfileRT));
  }
@@ -27,7 +27,7 @@ index e014980..6e60513 100644
    if (D.IsUsingLTO(Args) || Args.hasArg(options::OPT_use_gold_plugin)) {
      CmdArgs.push_back("-plugin");
 -    std::string Plugin = ToolChain.getDriver().Dir + "/../lib/LLVMgold.so";
-+    std::string Plugin = ToolChain.getDriver().Dir + "/../@libdir@/llvm/LLVMgold.so";
++    std::string Plugin = ToolChain.getDriver().Dir + "/../@libdir@/LLVMgold.so";
      CmdArgs.push_back(Args.MakeArgString(Plugin));
  
      // Try to pass driver level flags relevant to LTO code generation down to

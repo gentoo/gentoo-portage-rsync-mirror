@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gstplugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gstplugins/ChangeLog,v 1.19 2014/06/10 19:31:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gstplugins/ChangeLog,v 1.20 2014/06/15 14:02:58 mgorny Exp $
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  -emul-linux-x86-gstplugins-20140508.ebuild:
+  Drop old.
 
 *emul-linux-x86-gstplugins-20140508-r1 (10 Jun 2014)
 

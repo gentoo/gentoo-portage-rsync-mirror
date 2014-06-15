@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.656 2014/06/11 11:54:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.657 2014/06/15 14:18:24 hattya Exp $
+
+  15 Jun 2014; Akinori Hattori <hattya@gentoo.org> ruby-1.9.3_p547.ebuild,
+  ruby-2.0.0_p481.ebuild:
+  ia64 stable wrt bug #512904
 
   11 Jun 2014; Jeroen Roovers <jer@gentoo.org> ruby-2.0.0_p481.ebuild:
   Stable for HPPA (bug #512904).

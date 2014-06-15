@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.6-r1.ebuild,v 1.1 2014/01/11 10:56:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.6-r1.ebuild,v 1.2 2014/06/15 14:29:33 hattya Exp $
 
 EAPI=5
 XORG_MULTILIB=yes
@@ -19,7 +19,7 @@ else
 fi
 
 RESTRICT="test" # Tests need to run as root.
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~x86"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}"

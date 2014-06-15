@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.36 2014/05/20 18:50:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.37 2014/06/15 14:12:34 hattya Exp $
+
+  15 Jun 2014; Akinori Hattori <hattya@gentoo.org> aruba-0.5.4-r1.ebuild:
+  keyword ~ia64 wrt bug #510876
 
 *aruba-0.5.4-r1 (20 May 2014)
 

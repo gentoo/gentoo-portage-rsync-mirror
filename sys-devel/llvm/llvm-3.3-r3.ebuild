@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r3.ebuild,v 1.10 2014/05/01 15:09:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r3.ebuild,v 1.11 2014/06/15 14:30:03 mgorny Exp $
 
 EAPI=5
 
@@ -165,7 +165,7 @@ src_prepare() {
 		# Automatically select active system GCC's libraries, bugs #406163 and #417913
 		epatch "${FILESDIR}"/clang-3.1-gentoo-runtime-gcc-detection-v3.patch
 
-		epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+		epatch "${FILESDIR}"/clang-3.3-gentoo-install.patch
 
 		# backport support for g++-X.Y header location
 		epatch "${FILESDIR}"/clang-3.3-gcc-header-path.patch

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.105 2014/06/13 20:31:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.106 2014/06/15 14:05:34 mgorny Exp $
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  -emul-linux-x86-medialibs-20140508-r2.ebuild,
+  -emul-linux-x86-medialibs-20140508-r3.ebuild,
+  -emul-linux-x86-medialibs-20140508-r4.ebuild,
+  -emul-linux-x86-medialibs-20140508-r5.ebuild:
+  Drop old.
 
   13 Jun 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-medialibs-20140508-r5.ebuild:

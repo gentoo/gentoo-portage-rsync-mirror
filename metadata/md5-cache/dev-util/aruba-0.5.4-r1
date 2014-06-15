@@ -4,11 +4,11 @@ DESCRIPTION=Cucumber steps for driving out command line applications.
 EAPI=5
 HOMEPAGE=https://github.com/cucumber/aruba
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 test test
-KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86
 LICENSE=MIT
 RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/childprocess-0.3.6[ruby_targets_ruby19] >=dev-ruby/rspec-expectations-2.7:2[ruby_targets_ruby19] >=dev-util/cucumber-1.1.1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/childprocess-0.3.6[ruby_targets_ruby20] >=dev-ruby/rspec-expectations-2.7:2[ruby_targets_ruby20] >=dev-util/cucumber-1.1.1[ruby_targets_ruby20] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
 SLOT=0
 SRC_URI=mirror://rubygems/aruba-0.5.4.gem
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=11c7c546a77955abe2b03302f6f76ec2
+_md5_=ccc394347e603c6b46da2c565759a515
