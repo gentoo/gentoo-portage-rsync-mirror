@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.94 2014/05/28 15:20:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.95 2014/06/15 15:22:12 mgorny Exp $
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> pycurl-7.19.0-r1.ebuild,
+  pycurl-7.19.0-r2.ebuild, pycurl-7.19.0-r3.ebuild, pycurl-7.19.3.1.ebuild:
+  Add defaults on CURL_SSL flags to support net-misc/curl with cyassl removed.
 
   28 May 2014; Mike Gilbert <floppym@gentoo.org> pycurl-7.19.0-r3.ebuild,
   pycurl-7.19.3.1.ebuild:

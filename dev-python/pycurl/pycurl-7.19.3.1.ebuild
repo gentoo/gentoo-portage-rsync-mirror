@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.3 2014/05/28 15:20:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.4 2014/06/15 15:22:12 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl"
 # explicitly link to libgcrypt.
 DEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
 	ssl? (
-		net-misc/curl[curl_ssl_gnutls=,curl_ssl_nss=,curl_ssl_openssl=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl]
+		net-misc/curl[curl_ssl_gnutls(-)=,curl_ssl_nss(-)=,curl_ssl_openssl(-)=,-curl_ssl_axtls(-),-curl_ssl_cyassl(-),-curl_ssl_polarssl(-)]
 		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 )
 	)"
 RDEPEND="${DEPEND}"
