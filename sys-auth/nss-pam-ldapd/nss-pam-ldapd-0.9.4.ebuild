@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.2.ebuild,v 1.2 2014/03/16 18:53:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.4.ebuild,v 1.1 2014/06/15 03:51:12 prometheanfire Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib user
 
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug kerberos sasl +pam"
 
-DEPEND="net-nds/openldap
-		sasl? ( dev-libs/cyrus-sasl )
-		kerberos? ( virtual/krb5 )
-		pam? ( virtual/pam )
-		!sys-auth/nss_ldap
-		!sys-auth/pam_ldap"
+DEPEND="
+	net-nds/openldap
+	sasl? ( dev-libs/cyrus-sasl )
+	kerberos? ( virtual/krb5 )
+	pam? ( virtual/pam )
+	!sys-auth/nss_ldap
+	!sys-auth/pam_ldap"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -35,17 +36,18 @@ src_prepare() {
 
 src_configure() {
 	# nss libraries always go in /lib on Gentoo
-	myconf="--enable-warnings
-	--with-ldap-lib=openldap
-	--with-ldap-conf-file=/etc/nslcd.conf
-	--with-nslcd-pidfile=/var/run/nslcd/nslcd.pid
-	--with-nslcd-socket=/var/run/nslcd/socket
-	--with-pam-seclib-dir=/$(get_libdir)/security
-	--libdir=/$(get_libdir)
-	$(use_enable debug)
-	$(use_enable kerberos)
-	$(use_enable pam)
-	$(use_enable sasl)"
+	myconf="
+		--enable-warnings
+		--with-ldap-lib=openldap
+		--with-ldap-conf-file=/etc/nslcd.conf
+		--with-nslcd-pidfile=/run/nslcd/nslcd.pid
+		--with-nslcd-socket=/run/nslcd/socket
+		--with-pam-seclib-dir=/$(get_libdir)/security
+		--libdir=/$(get_libdir)
+		$(use_enable debug)
+		$(use_enable kerberos)
+		$(use_enable pam)
+		$(use_enable sasl)"
 
 	if use x86-fbsd; then
 		myconf+=" --with-nss-flavour=freebsd"
@@ -57,15 +59,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	dodoc NEWS ChangeLog AUTHORS README
+	default
 
 	# for socket and pid file (not needed bug 452992)
-	#keepdir /var/run/nslcd
+	#keepdir /run/nslcd
 
 	# init script
-	newinitd "${FILESDIR}"/nslcd-init nslcd
+	newinitd "${FILESDIR}"/nslcd-init-r1 nslcd
 
 	# make an example copy
 	insinto /usr/share/nss-pam-ldapd
@@ -75,18 +75,18 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
+	echo
 	elog "For this to work you must configure /etc/nslcd.conf"
 	elog "This configuration is similar to pam_ldap's /etc/ldap.conf"
-	elog
+	echo
 	elog "In order to use nss-pam-ldapd, nslcd needs to be running. You can"
 	elog "start it like this:"
 	elog "  # /etc/init.d/nslcd start"
-	elog
+	echo
 	elog "You can add it to the default runlevel like so:"
 	elog " # rc-update add nslcd default"
 	elog
 	elog "If you are upgrading, keep in mind that /etc/nss-ldapd.conf"
 	elog " is now named /etc/nslcd.conf"
-	elog
+	echo
 }
