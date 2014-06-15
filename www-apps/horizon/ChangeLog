@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horizon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.27 2014/04/28 03:28:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/ChangeLog,v 1.28 2014/06/15 04:34:06 prometheanfire Exp $
+
+  15 Jun 2014; Matthew Thode <prometheanfire@gentoo.org>
+  -files/CVE-2014-0157-2013.2.3.patch, -horizon-2013.2.3-r1.ebuild,
+  -horizon-2013.2.9999.ebuild:
+  removing the old badness
 
 *horizon-2014.1 (28 Apr 2014)
 *horizon-2014.1.9999 (28 Apr 2014)
