@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-3.0.3.ebuild,v 1.4 2012/04/26 15:40:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-3.0.3.ebuild,v 1.5 2014/06/15 21:23:54 jauhien Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools-utils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://beagle.gel.ulaval.ca/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc static-libs"
 
 RDEPEND="
@@ -22,7 +22,7 @@ RDEPEND="
 DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.0.3-gcc43.patch )
+PATCHES=( "${FILESDIR}"/${PN}-3.0.3-gcc43.patch "${FILESDIR}"/${PN}-3.0.3-gcc47.patch )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
