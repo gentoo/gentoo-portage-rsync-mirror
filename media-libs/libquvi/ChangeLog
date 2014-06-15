@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libquvi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.34 2014/03/04 20:42:46 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.35 2014/06/15 13:51:02 mgorny Exp $
+
+*libquvi-0.4.1-r2 (15 Jun 2014)
+*libquvi-0.9.4-r1 (15 Jun 2014)
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> +libquvi-0.4.1-r2.ebuild,
+  +libquvi-0.9.4-r1.ebuild:
+  Enable multilib support, required for media-video/ffmpeg.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> libquvi-0.4.1.ebuild:
   Add ~mips keyword.

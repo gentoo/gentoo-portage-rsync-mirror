@@ -1,6 +1,11 @@
 # ChangeLog for dev-lua/luasocket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.17 2014/03/04 20:36:49 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.18 2014/06/15 13:39:54 mgorny Exp $
+
+*luasocket-3.0_rc1-r3 (15 Jun 2014)
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> +luasocket-3.0_rc1-r3.ebuild:
+  Enable multilib support, required by media-libs/libquvi-scripts.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   luasocket-3.0_rc1-r2.ebuild:

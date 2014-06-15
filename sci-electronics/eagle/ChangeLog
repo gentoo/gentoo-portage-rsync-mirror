@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/eagle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.58 2013/12/19 20:13:07 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.59 2014/06/15 13:52:54 mgorny Exp $
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> eagle-6.5.0.ebuild:
+  Update multilib dependencies. Support emul-linux-x86-free systems.
 
 *eagle-6.5.0 (19 Dec 2013)
 

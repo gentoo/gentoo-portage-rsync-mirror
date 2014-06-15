@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libquvi-scripts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.63 2014/03/04 20:41:24 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.64 2014/06/15 13:41:56 mgorny Exp $
+
+*libquvi-scripts-0.9.20131130-r1 (15 Jun 2014)
+*libquvi-scripts-0.4.21-r2 (15 Jun 2014)
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +libquvi-scripts-0.4.21-r2.ebuild, +libquvi-scripts-0.9.20131130-r1.ebuild:
+  Enable multilib support, required for media-libs/libquvi.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   libquvi-scripts-0.9.20131130.ebuild:

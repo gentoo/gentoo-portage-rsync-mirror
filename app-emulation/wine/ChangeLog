@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.512 2014/06/12 14:30:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.513 2014/06/15 13:59:29 mgorny Exp $
+
+  15 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild:
+  Disallow mixing of emul-linux-x86 with multilib dependencies, since all
+  dependencies are unmasked now.
 
   12 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild,
   wine-9999.ebuild:
