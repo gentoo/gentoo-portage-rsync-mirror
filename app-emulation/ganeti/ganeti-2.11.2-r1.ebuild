@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.10.5-r1.ebuild,v 1.1 2014/06/05 00:32:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.11.2-r1.ebuild,v 1.1 2014/06/14 23:25:41 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -48,7 +48,12 @@ HASKELL_DEPS=">=dev-lang/ghc-6.12:0=
 		dev-haskell/utf8-string:0=
 		dev-haskell/deepseq:0=
 		dev-haskell/attoparsec:0=
-		dev-haskell/crypto:0="
+		dev-haskell/crypto:0=
+		dev-haskell/vector:0=
+		dev-haskell/hinotify:0=
+		dev-haskell/regex-pcre-builtin:0=
+		dev-haskell/zlib:0=
+		dev-haskell/base64-bytestring:0="
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu )
@@ -59,9 +64,6 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	haskell-daemons? (
 		${HASKELL_DEPS}
 		dev-haskell/text:0=
-		dev-haskell/hinotify:0=
-		dev-haskell/regex-pcre-builtin:0=
-		dev-haskell/vector:0=
 	)
 	dev-libs/openssl
 	dev-python/paramiko[${PYTHON_USEDEP}]
@@ -102,10 +104,15 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.6-add-pgrep.patch"
 	"${FILESDIR}/${PN}-2.7-fix-tests.patch"
 	"${FILESDIR}/${PN}-2.9-disable-root-tests.patch"
-	"${FILESDIR}/${PN}-2.9-regex-builtin.patch"
+	"${FILESDIR}/${PN}-2.11-regex-builtin.patch"
 	"${FILESDIR}/${PN}-2.9-skip-cli-test.patch"
 	"${FILESDIR}/${PN}-2.10-rundir.patch"
+	"${FILESDIR}/${PN}-2.11-qemu-enable-kvm.patch"
+	"${FILESDIR}/${PN}-2.11-tests.patch"
+	"${FILESDIR}/${PN}-lockdir.patch"
 )
+
+REQUIRED_USE="kvm? ( || ( amd64 x86 ) )"
 
 pkg_setup () {
 	confutils_use_depend_all haskell-daemons htools
@@ -120,6 +127,17 @@ src_prepare() {
 }
 
 src_configure () {
+	# this is kind of a hack to work around the removal of the qemu-kvm wrapper
+	local kvm_arch
+
+	if use amd64; then
+		kvm_arch=x86_64
+	elif use x86; then
+		kvm_arch=i386
+	elif use kvm; then
+		die "Could not determine qemu system to use for kvm"
+	fi
+
 	econf --localstatedir=/var \
 		--sharedstatedir=/var \
 		--disable-symlinks \
@@ -128,7 +146,7 @@ src_configure () {
 		--with-export-dir=/var/lib/ganeti-storage/export \
 		--with-os-search-path=/usr/share/${PN}/os \
 		$(use_enable syslog) \
-		$(usex kvm '--with-kvm-path=' '' '/usr/bin/qemu-kvm' '') \
+		$(usex kvm '--with-kvm-path=' '' "/usr/bin/qemu-system-${kvm_arch}" '') \
 		$(usex haskell-daemons "--enable-confd=haskell" '' '' '')
 }
 

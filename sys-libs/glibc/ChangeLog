@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.995 2014/06/14 22:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.996 2014/06/14 23:29:04 vapier Exp $
+
+  14 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_preinst.eblit:
+  Do not die when the devpts check fails and we are on an old kernel #489520 by
+  William Throwe.
 
   14 Jun 2014; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info).
