@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/llvmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/ChangeLog,v 1.6 2014/05/03 07:24:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/ChangeLog,v 1.7 2014/06/16 08:58:07 idella4 Exp $
+
+*llvmpy-0.12.6 (16 Jun 2014)
+
+  16 Jun 2014; Ian Delaney <idella4@gentoo.org> +llvmpy-0.12.6.ebuild:
+  bump; drop py2.6 add py3.4 support
 
 *llvmpy-0.12.5 (03 May 2014)
 

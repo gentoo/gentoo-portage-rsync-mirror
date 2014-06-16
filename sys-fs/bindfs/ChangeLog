@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/bindfs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.14 2013/10/01 22:18:44 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.15 2014/06/16 08:35:19 radhermit Exp $
+
+*bindfs-1.12.5 (16 Jun 2014)
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> +bindfs-1.12.5.ebuild:
+  Version bump.
 
   01 Oct 2013; Tim Harder <radhermit@gentoo.org> -bindfs-1.11.ebuild,
   -bindfs-1.12.ebuild, -bindfs-1.12.1.ebuild:
