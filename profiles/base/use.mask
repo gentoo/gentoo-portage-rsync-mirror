@@ -1,6 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.198 2014/05/16 11:10:18 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.199 2014/06/16 15:08:31 blueness Exp $
+
+# CURL_SSL=winssl is for prefix/windows/winnt only
+curl_ssl_winssl
 
 # cuda only works on amd64/x86
 cuda

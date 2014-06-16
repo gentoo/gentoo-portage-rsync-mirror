@@ -1,13 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9093 2014/06/16 14:20:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9095 2014/06/16 15:10:11 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
+  16 Jun 2014; Anthony G. Basile <blueness@gentoo.org> base/use.mask,
+  prefix/windows/winnt/use.mask:
+  Mask CURL_SSL=winssl on all profiles, except prefix/windows/winnt
+
   16 Jun 2014; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
-  Add hardened musl profiles for mips
+  Add hardened musl profiles for mips to profiles.desc
 
   16 Jun 2014; Ryan Hill <rhill@gentoo.org> package.mask:
   Remove obsolete ver.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.4.ebuild,v 1.1 2014/05/15 02:27:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.5.ebuild,v 1.1 2014/06/16 15:28:59 dev-zero Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ RDEPEND="sys-libs/readline
 	caps? ( sys-libs/libcap-ng )
 	fuse? ( >=sys-fs/fuse-2.8.6 )
 	iscsi? ( sys-block/open-iscsi )
-	lxc? ( sys-power/pm-utils )
+	lxc? ( !systemd? ( sys-power/pm-utils ) )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	nfs? ( net-fs/nfs-utils )
 	numa? (
@@ -85,11 +85,12 @@ RDEPEND="sys-libs/readline
 	qemu? (
 		>=app-emulation/qemu-0.13.0
 		dev-libs/yajl
-		sys-power/pm-utils
+		!systemd? ( sys-power/pm-utils )
 	)
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
+	systemd? ( sys-apps/systemd )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( virtual/udev >=x11-libs/libpciaccess-0.10.9 )
@@ -127,7 +128,7 @@ LXC_CONFIG_CHECK="
 	~CGROUP_PERF
 	~BLK_CGROUP
 	~NET_CLS_CGROUP
-	~NETPRIO_CGROUP
+	~CGROUP_NET_PRIO
 	~CPUSETS
 	~RESOURCE_COUNTERS
 	~NAMESPACES
@@ -380,7 +381,9 @@ src_install() {
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
 	newinitd "${FILESDIR}/virtlockd.init" virtlockd || die
 
-	keepdir /var/lib/libvirt/images
+	keepdir /var/lib/libvirt/{boot,images,network}
+	use qemu && keepdir /var/{cache,lib,log}/libvirt/qemu
+	use lxc && keepdir /var/{cache,lib,log}/libvirt/lxc
 
 	readme.gentoo_create_doc
 }

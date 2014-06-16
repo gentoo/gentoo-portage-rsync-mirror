@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.55 2014/03/01 22:08:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.56 2014/06/16 15:28:59 dev-zero Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ RDEPEND="sys-libs/readline
 	caps? ( sys-libs/libcap-ng )
 	fuse? ( >=sys-fs/fuse-2.8.6 )
 	iscsi? ( sys-block/open-iscsi )
-	lxc? ( sys-power/pm-utils )
+	lxc? ( !systemd? ( sys-power/pm-utils ) )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	nfs? ( net-fs/nfs-utils )
 	numa? (
@@ -85,11 +85,12 @@ RDEPEND="sys-libs/readline
 	qemu? (
 		>=app-emulation/qemu-0.13.0
 		dev-libs/yajl
-		sys-power/pm-utils
+		!systemd? ( sys-power/pm-utils )
 	)
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
+	systemd? ( sys-apps/systemd )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( virtual/udev >=x11-libs/libpciaccess-0.10.9 )
@@ -127,7 +128,7 @@ LXC_CONFIG_CHECK="
 	~CGROUP_PERF
 	~BLK_CGROUP
 	~NET_CLS_CGROUP
-	~NETPRIO_CGROUP
+	~CGROUP_NET_PRIO
 	~CPUSETS
 	~RESOURCE_COUNTERS
 	~NAMESPACES
@@ -155,6 +156,16 @@ VIRTNET_CONFIG_CHECK="
 	~NETFILTER_XT_TARGET_CHECKSUM
 	~NETFILTER_XT_CONNMARK
 	~NETFILTER_XT_MARK
+"
+
+BWLMT_CONFIG_CHECK="
+	~BRIDGE_EBT_T_NAT
+	~NET_SCH_HTB
+	~NET_SCH_SFQ
+	~NET_SCH_INGRESS
+	~NET_CLS_FW
+	~NET_CLS_U32
+	~NET_ACT_POLICE
 "
 
 MACVTAP_CONFIG_CHECK=" ~MACVTAP"
@@ -185,6 +196,8 @@ pkg_setup() {
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
 	use macvtap && CONFIG_CHECK+="${MACVTAP_CONFIG_CHECK}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
+	# Bandwidth Limiting Support
+	use virt-network && CONFIG_CHECK+="${BWLMT_CONFIG_CHECK}"
 	if [[ -n ${CONFIG_CHECK} ]]; then
 		linux-info_pkg_setup
 	fi
@@ -368,7 +381,9 @@ src_install() {
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
 	newinitd "${FILESDIR}/virtlockd.init" virtlockd || die
 
-	keepdir /var/lib/libvirt/images
+	keepdir /var/lib/libvirt/{boot,images,network}
+	use qemu && keepdir /var/{cache,lib,log}/libvirt/qemu
+	use lxc && keepdir /var/{cache,lib,log}/libvirt/lxc
 
 	readme.gentoo_create_doc
 }
