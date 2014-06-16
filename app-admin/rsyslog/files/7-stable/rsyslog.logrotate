@@ -7,7 +7,7 @@
 	delaycompress
 	compress
 	postrotate
-		kill -HUP $(cat /run/rsyslogd.pid) &>/dev/null || true
+		kill -HUP $(cat /run/rsyslogd.pid) >/dev/null 2>&1 || true
 	endscript
 }
 
@@ -32,6 +32,6 @@
 	delaycompress
 	sharedscripts
 	postrotate
-		kill -HUP $(cat /run/rsyslogd.pid) &>/dev/null || true
+		kill -HUP $(cat /run/rsyslogd.pid) >/dev/null 2>&1 || true
 	endscript
 }

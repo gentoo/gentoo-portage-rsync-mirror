@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1-r2.ebuild,v 1.3 2014/06/09 04:56:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.1.1.ebuild,v 1.1 2014/06/16 03:35:39 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -76,8 +76,6 @@ RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 			   app-emulation/xen-tools )"
 
 PATCHES=(
-	"${FILESDIR}/2014.1-CVE-2014-2573-1.patch"
-	"${FILESDIR}/2014.1-CVE-2014-2573-2.patch"
 )
 
 pkg_setup() {

@@ -9,7 +9,7 @@
 #	delaycompress
 #	compress
 #	postrotate
-#		test -r /run/rsyslogd.pid && kill -HUP $(cat /run/rsyslogd.pid) &>/dev/null
+#		test -r /run/rsyslogd.pid && kill -HUP $(cat /run/rsyslogd.pid) >/dev/null 2>&1
 #	endscript
 #}
 
@@ -32,6 +32,6 @@
 	delaycompress
 	sharedscripts
 	postrotate
-		test -r /run/rsyslogd.pid && kill -HUP $(cat /run/rsyslogd.pid) &>/dev/null
+		test -r /run/rsyslogd.pid && kill -HUP $(cat /run/rsyslogd.pid) >/dev/null 2>&1
 	endscript
 }
