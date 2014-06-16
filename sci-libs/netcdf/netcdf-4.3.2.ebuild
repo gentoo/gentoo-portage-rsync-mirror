@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.2.ebuild,v 1.2 2014/04/29 23:29:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.2.ebuild,v 1.3 2014/06/16 20:06:02 jauhien Exp $
 
 EAPI=5
 
@@ -17,8 +17,8 @@ IUSE="+dap examples hdf +hdf5 mpi static-libs szip test tools"
 
 RDEPEND="
 	dap? ( net-misc/curl:0= )
-	hdf? ( sci-libs/hdf:0= sci-libs/hdf5:0= )
-	hdf5? ( sci-libs/hdf5:0=[mpi=,szip=,zlib] )"
+	hdf? ( sci-libs/hdf:0= <=sci-libs/hdf5-1.8.12:0= )
+	hdf5? ( <=sci-libs/hdf5-1.8.12:0=[mpi=,szip=,zlib] )"
 DEPEND="${RDEPEND}"
 # doc generation is missing many doxygen files in tar ball
 #	doc? ( app-doc/doxygen[dot] )"

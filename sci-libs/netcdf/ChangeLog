@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.113 2014/04/29 23:29:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.114 2014/06/16 20:06:02 jauhien Exp $
+
+  16 Jun 2014; Jauhien Piatlicki <jauhien@gentoo.org> netcdf-4.1.3.ebuild,
+  netcdf-4.2.1.1.ebuild, netcdf-4.3.0.ebuild, netcdf-4.3.1.1.ebuild,
+  netcdf-4.3.2.ebuild:
+  fix bug #512502: depend on <=sci-libs/hdf5-1.8.12, not touching stable version
 
   29 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> netcdf-4.3.2.ebuild:
   FDisable doc generation because of missing doxygen files, bug #509052

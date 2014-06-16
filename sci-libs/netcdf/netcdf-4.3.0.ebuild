@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.0.ebuild,v 1.1 2013/07/05 16:33:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.3.0.ebuild,v 1.2 2014/06/16 20:06:02 jauhien Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ IUSE="+dap doc examples hdf +hdf5 mpi static-libs szip test tools"
 
 RDEPEND="
 	dap? ( net-misc/curl )
-	hdf? ( sci-libs/hdf >=sci-libs/hdf5-1.8.8 )
-	hdf5? ( >=sci-libs/hdf5-1.8.8[mpi=,szip=,zlib] )"
+	hdf? ( sci-libs/hdf <=sci-libs/hdf5-1.8.12:0= )
+	hdf5? ( <=sci-libs/hdf5-1.8.12:0=[mpi=,szip=,zlib] )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"

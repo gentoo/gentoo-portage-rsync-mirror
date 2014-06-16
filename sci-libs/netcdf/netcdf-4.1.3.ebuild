@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.9 2013/08/21 17:51:56 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.10 2014/06/16 20:06:02 jauhien Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 FORTRAN_NEEDED=fortran
@@ -20,7 +20,7 @@ IUSE="cxx dap doc fortran hdf5 static-libs"
 
 RDEPEND="
 	dap? ( net-misc/curl )
-	hdf5? ( >=sci-libs/hdf5-1.8.6[zlib,szip,fortran?] )"
+	hdf5? ( <=sci-libs/hdf5-1.8.12:0=[zlib,szip,fortran?] )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.4

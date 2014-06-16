@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.0.37-r2.ebuild,v 1.1 2014/06/15 07:34:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.0.37-r3.ebuild,v 1.1 2014/06/16 20:30:02 jlec Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="debugger doc eclipse profiler"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	sys-devel/gcc:4.8[cxx]
+	<sys-devel/gcc-4.9[cxx]
 	>=x11-drivers/nvidia-drivers-334.16-r7[uvm]
 	debugger? (
 		sys-libs/libtermcap-compat
@@ -50,7 +50,7 @@ src_unpack() {
 src_prepare() {
 	local cuda_supported_gcc
 
-	cuda_supported_gcc="4.7"
+	cuda_supported_gcc="4.8"
 
 	sed \
 		-e "s:CUDA_SUPPORTED_GCC:${cuda_supported_gcc}:g" \

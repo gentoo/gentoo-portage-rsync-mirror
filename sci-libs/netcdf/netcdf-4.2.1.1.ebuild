@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.1.1.ebuild,v 1.3 2012/12/17 16:32:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.1.1.ebuild,v 1.4 2014/06/16 20:06:02 jauhien Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools-utils
 
@@ -17,8 +17,8 @@ IUSE="+dap doc examples hdf +hdf5 mpi static-libs szip test tools"
 
 RDEPEND="
 	dap? ( net-misc/curl )
-	hdf? ( sci-libs/hdf >=sci-libs/hdf5-1.8.8 )
-	hdf5? ( >=sci-libs/hdf5-1.8.8[mpi=,szip=,zlib] )"
+	hdf? ( sci-libs/hdf <=sci-libs/hdf5-1.8.12:0= )
+	hdf5? ( <=sci-libs/hdf5-1.8.12:0=[mpi=,szip=,zlib] )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
