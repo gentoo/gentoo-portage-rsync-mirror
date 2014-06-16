@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-icon-theme-symbolic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.52 2014/04/27 22:01:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.53 2014/06/16 14:54:21 blueness Exp $
+
+  16 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  gnome-icon-theme-symbolic-3.10.1.ebuild,
+  gnome-icon-theme-symbolic-3.12.0.ebuild:
+  Keyword ~mips
 
 *gnome-icon-theme-symbolic-3.12.0 (27 Apr 2014)
 
