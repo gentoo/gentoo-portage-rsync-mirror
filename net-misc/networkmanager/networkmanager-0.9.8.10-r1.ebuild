@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.10.ebuild,v 1.2 2014/05/31 20:39:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.10-r1.ebuild,v 1.1 2014/06/16 00:16:37 reavertm Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -106,6 +106,9 @@ src_prepare() {
 
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${PN}-0.9.8.4-pre-sleep.patch"
+
+	# https://www.mail-archive.com/networkmanager-list@gnome.org/msg24038.html
+	epatch "${FILESDIR}/${PN}-0.9.8.9-fix-crash-on-wifi-rescan.patch"
 
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \

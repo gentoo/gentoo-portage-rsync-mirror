@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.1 2014/06/14 21:34:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.2 2014/06/16 00:15:40 vapier Exp $
 
 EAPI="4"
 
@@ -179,7 +179,7 @@ src_install() {
 	rm "${ED}"/usr/bin/{doc.url,manweb} || die
 	rm -r "${ED}"/usr/man/web || die
 	rm -r "${ED}"/usr/link || die
-	rm "${ED}"/usr/{README,VERSION,config_template,pkginfo} || die
+	rm "${ED}"/usr/{README,VERSION,{pkgconfig,config}_template,pkginfo} || die
 	dodir /usr/share
 	mv "${ED}"/usr/man "${ED}"/usr/share/ || die
 	mv "${ED}"/usr/misc "${ED}"/usr/share/netpbm || die

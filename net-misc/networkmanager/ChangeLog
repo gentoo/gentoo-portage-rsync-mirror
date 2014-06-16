@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.196 2014/05/31 20:39:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.197 2014/06/16 00:16:37 reavertm Exp $
+
+*networkmanager-0.9.8.10-r1 (16 Jun 2014)
+
+  16 Jun 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/networkmanager-0.9.8.9-fix-crash-on-wifi-rescan.patch,
+  +networkmanager-0.9.8.10-r1.ebuild, -networkmanager-0.9.8.10.ebuild:
+  Apply upstream patch for crash on Wifi re-scan.
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   networkmanager-0.9.8.10.ebuild, networkmanager-0.9.8.8.ebuild:
