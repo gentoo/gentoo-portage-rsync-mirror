@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.513 2014/06/15 13:59:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.514 2014/06/16 12:08:06 tetromino Exp $
+
+*wine-1.7.20 (16 Jun 2014)
+
+  16 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.20.ebuild,
+  wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.20 for the announcement.
+  Use samba with ABI_X86="32 64" for win32 netapi support; note that there is
+  no emul-linux-x86-* alternative for netapi. Switch to multilib-minimal.eclass
+  (bugs #494394 and #511184, thanks to Michał Górny). Enable experimental
+  pthreads patch from winepulse patchset, otherwise gstreamer support is simply
+  broken with any version of dev-libs/glib we have in portage.
 
   15 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.7.19-r1.ebuild:
   Disallow mixing of emul-linux-x86 with multilib dependencies, since all

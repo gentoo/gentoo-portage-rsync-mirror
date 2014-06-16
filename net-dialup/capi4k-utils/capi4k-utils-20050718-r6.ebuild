@@ -1,34 +1,42 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r4.ebuild,v 1.2 2013/01/20 13:54:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r6.ebuild,v 1.2 2014/06/16 12:19:03 pinkbyte Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit eutils multilib linux-info
+inherit eutils linux-info multilib
 
 YEAR_PV="${PV:0:4}"
 MON_PV="${PV:4:2}"
 DAY_PV="${PV:6:2}"
 MY_P="${PN}-${YEAR_PV}-${MON_PV}-${DAY_PV}"
-PPPVERSIONS="2.4.4"  # versions in portage
+
+PATCHVER="5"
+TARBALL_FILES="capi4k-files-${PV}-r${PATCHVER}.tar.xz"
+TARBALL_PATCHES="capi4k-patches-${PV}-r${PATCHVER}.tar.xz"
 
 DESCRIPTION="CAPI4Linux Utils"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
 SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/${MY_P}.tar.gz
 	ftp://ftp.in-berlin.de/pub/capi4linux/OLD/${MY_P}.tar.gz
-	http://sbriesen.de/gentoo/distfiles/${PF/utils/files}.tar.xz
-	http://sbriesen.de/gentoo/distfiles/${PF/utils/patches}.tar.xz"
+	http://sbriesen.de/gentoo/distfiles/${TARBALL_FILES}
+	http://sbriesen.de/gentoo/distfiles/${TARBALL_PATCHES}"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/3.0.4"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="fax +pppd rcapid"
 
-DEPEND="virtual/linux-sources
+COMMON_DEP="pppd? ( net-dialup/ppp:= )"
+
+DEPEND="${COMMON_DEP}
+	virtual/linux-sources
 	virtual/os-headers
+	app-arch/xz-utils
 	>=sys-apps/sed-4"
 
-RDEPEND="dev-lang/perl"
+RDEPEND="${COMMON_DEP}
+	dev-lang/perl"
 
 S="${WORKDIR}/${PN}"
 
@@ -36,12 +44,24 @@ pkg_setup() {
 	# check kernel config
 	CONFIG_CHECK="~ISDN ~ISDN_CAPI ~ISDN_CAPI_CAPI20"
 	use pppd && CONFIG_CHECK="${CONFIG_CHECK} ~ISDN_CAPI_MIDDLEWARE ~ISDN_CAPI_CAPIFS_BOOL"
-	linux-info_pkg_setup
+	get_version  # config checked later in pkg_postinst
+
+	# find installed pppd version
+	if use pppd; then
+		local INSTALLED_PPP="$(best_version net-dialup/ppp)"
+		PPPVERSION="${INSTALLED_PPP#net-dialup/ppp-}"
+		if [ -z "${PPPVERSION}" ]; then
+			die "No pppd installation found"
+		fi
+	fi
 }
 
 src_prepare() {
 	# add ppp-2.4.4 support
 	epatch "${WORKDIR}/capi4k-patches/pppd244.diff"
+
+	# add ppp-2.4.5 support
+	epatch "${WORKDIR}/capi4k-patches/pppd245.diff"
 
 	# apply rcapid patches
 	epatch "${WORKDIR}/capi4k-patches/rcapid.diff"
@@ -59,7 +79,7 @@ src_prepare() {
 	# patch capi20/Makefile.* to use -fPIC for shared library
 	sed -i -e "s:^\(CFLAGS.*\):\1 -fPIC:g" capi20/Makefile.* || die "sed failed"
 	# patch pppdcapiplugin/Makefile to use only the ppp versions we want
-	sed -i -e "s:^\(PPPVERSIONS = \).*$:\1${PPPVERSIONS}:g" pppdcapiplugin/Makefile || die "sed failed"
+	sed -i -e "s:^\(PPPVERSIONS = \).*$:\1${PPPVERSION}:g" pppdcapiplugin/Makefile || die "sed failed"
 	# patch capiinit/capiinit.c to look also in /lib/firmware
 	sed -i -e "s:\(\"/lib/firmware/isdn\",\):\1 \"/lib/firmware\",:g" capiinit/capiinit.c || die "sed failed"
 	# no, we don't need any devices nodes
@@ -71,21 +91,44 @@ src_prepare() {
 		pppdcapiplugin/ppp-*/Makefile pppdcapiplugin/{README,*.8} || die "sed failed"
 	# respecting LDFLAGS (see bug #293209)
 	sed -i -e "s:^LDFLAGS\s\(\s*\)=:LDFLAGS+\1=:g" \
-		{capiinfo,capiinit,capifax,rcapid,avmb1}/Makefile* pppdcapiplugin/Rules.make
+		{capiinfo,capiinit,capifax,rcapid,avmb1}/Makefile* pppdcapiplugin/Rules.make || die
 	# build rcapid
-	use rcapid || sed -i -e "s:^\(CONFIG_RCAPID=.*\)$:# \1:g" .config
+	if ! use rcapid; then
+		sed -i -e "s:^\(CONFIG_RCAPID=.*\)$:# \1:g" .config || die
+	fi
 	# build pppdcapiplugin
-	use pppd || sed -i -e "s:^\(CONFIG_PPPDCAPIPLUGIN=.*\)$:# \1:g" .config
+	if use pppd; then
+		# workaround for bug #511800
+		if has_version \>=net-dialup/ppp-2.4.6; then
+			pushd pppdcapiplugin &>/dev/null || die
+			ln -s ppp-2.4.5 "ppp-${PPPVERSION}" || die
+			popd &>/dev/null
+		fi
+	else
+		sed -i -e "s:^\(CONFIG_PPPDCAPIPLUGIN=.*\)$:# \1:g" .config || die
+	fi
 	# build capifax
-	use fax || sed -i -e "s:^\(CONFIG_CAPIFAX=.*\)$:# \1:g" .config
+	if ! use fax; then
+		sed -i -e "s:^\(CONFIG_CAPIFAX=.*\)$:# \1:g" .config || die
+	fi
+
+	epatch_user
 }
 
 src_configure() {
-	emake subconfig || die "emake subconfig failed"
+	# bug 468662 - we NEED to redefine AR and CC both with tc-export and at compile phase
+	tc-export AR CC
+	emake subconfig
+}
+
+src_compile() {
+	# bug 468662 - we NEED to redefine AR and CC both with tc-export and at compile phase
+	emake AR="$(tc-getAR)" CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default_src_install
+	prune_libtool_files
 
 	# install base
 	dobin scripts/isdncause
@@ -130,5 +173,9 @@ pkg_postinst() {
 	ewarn "the other packages on your system that link with libcapi after the"
 	ewarn "upgrade completes. To perform this action, please run revdep-rebuild"
 	ewarn "in package app-portage/gentoolkit."
-	ewarn
+	elog
+	elog "If any of the following kernel configuration options is missing, you"
+	elog "should reconfigure and rebuild your kernel before using capi4k-utils."
+	linux-info_pkg_setup
+	elog
 }
