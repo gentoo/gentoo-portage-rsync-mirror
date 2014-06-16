@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.190 2014/06/07 21:32:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.191 2014/06/16 22:03:07 mgorny Exp $
+
+  16 Jun 2014; Michał Górny <mgorny@gentoo.org> libav-10.1-r1.ebuild,
+  libav-10.9999.ebuild, libav-9.13-r1.ebuild, libav-9.9999.ebuild,
+  libav-9999.ebuild:
+  Wrap libavutil/avconfig.h since in some cases it differs per-ABI, bug #513184.
 
 *libav-9.13-r1 (07 Jun 2014)
 *libav-10.1-r1 (07 Jun 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.1-r1.ebuild,v 1.1 2014/06/07 21:32:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.1-r1.ebuild,v 1.2 2014/06/16 22:03:07 mgorny Exp $
 
 EAPI=5
 
@@ -129,6 +129,10 @@ REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl )
 	test? ( encode zlib )
 "
+
+MULTILIB_WRAPPED_HEADERS=(
+	/usr/include/libavutil/avconfig.h
+)
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version

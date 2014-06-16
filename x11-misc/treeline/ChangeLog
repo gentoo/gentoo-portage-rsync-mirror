@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.59 2014/06/14 10:11:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.60 2014/06/16 22:06:39 nimiux Exp $
+
+  16 Jun 2014; Chema Alonso <nimiux@gentoo.org> treeline-1.4.1-r1.ebuild:
+  Stable for amd64 wrt bug #510170
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   treeline-1.4.1-r1.ebuild:
