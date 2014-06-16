@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/levenshtein
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/levenshtein/ChangeLog,v 1.10 2014/05/15 00:57:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/levenshtein/ChangeLog,v 1.11 2014/06/16 15:39:35 klausman Exp $
+
+  16 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
+  levenshtein-0.2.2-r2.ebuild:
+  Keyworded on alpha, bug #465948
 
 *levenshtein-0.2.2-r2 (15 May 2014)
 

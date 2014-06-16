@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.7.0-r1.ebuild,v 1.2 2014/05/29 13:18:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.7.0-r1.ebuild,v 1.3 2014/06/16 15:46:07 kensington Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SLOT="0"
 S=${WORKDIR}
 
 CDEPEND="dev-qt/qtcore:4
-	dev-qt/qtdbus
+	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	lxqt-base/liblxqt
 	razorqt-base/libqtxdg

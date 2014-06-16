@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/ChangeLog,v 1.3 2014/05/29 13:18:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/ChangeLog,v 1.4 2014/06/16 15:46:07 kensington Exp $
+
+  16 Jun 2014; Michael Palimaka <kensington@gentoo.org>
+  lxqt-session-0.7.0-r1.ebuild:
+  Pin dev-qt/qtdbus to SLOT 4.
 
   29 May 2014; Manuel Rüger <mrueg@gentoo.org> lxqt-session-0.7.0-r1.ebuild:
   Add ~arm keyword.

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.106 2014/06/16 05:37:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.108 2014/06/16 15:51:04 klausman Exp $
+
+  16 Jun 2014; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Keyword dev-ruby/mocha-{0.10.5-r2,0.11.4-r1,0.12.10,0.13.3-r1} on alpha for
+  bug 465948
+
+  16 Jun 2014; Tobias Klausmann <klausman@gentoo.org> mocha-0.13.3-r1.ebuild:
+  Keyworded on alpha, bug #465948
 
 *mocha-0.13.3-r2 (16 Jun 2014)
 *mocha-0.12.10-r1 (16 Jun 2014)

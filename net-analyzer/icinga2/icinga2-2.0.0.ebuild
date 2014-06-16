@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.0.0_beta2.ebuild,v 1.1 2014/06/15 19:49:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.0.0.ebuild,v 1.1 2014/06/16 15:35:03 prometheanfire Exp $
 
 EAPI=5
-inherit depend.apache eutils cmake-utils toolchain-funcs user versionator
+inherit depend.apache eutils cmake-utils toolchain-funcs user versionator systemd
 
-MY_PV=$(replace_version_separator 3 '-')
 DESCRIPTION="Nagios Fork - Check daemon, CGIs, docs, IDOutils. Reloaded"
 HOMEPAGE="http://icinga.org/icinga2"
-SRC_URI="http://github.com/Icinga/icinga2/archive/v${MY_PV}.tar.gz"
-S="${WORKDIR}/${PN}-${MY_PV}"
+#PV=$(replace_version_separator 3 '-')
+SRC_URI="http://github.com/Icinga/icinga2/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+#S="${WORKDIR}/${PN}-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,9 +40,18 @@ pkg_setup() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_VERBOSE_MAKEFILE=ON
+		-DCMAKE_BUILD_TYPE=None
+		-DCMAKE_INSTALL_PREFIX=/usr
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc
-		-DMAKE_INSTALL_LOCALSTATEDIR=/var
+		-DCMAKE_INSTALL_LOCALSTATEDIR=/var
+		-DICINGA2_SYSCONFIGFILE=/etc/conf.d/icinga2
+		-DICINGA2_USER=icinga
+		-DICINGA2_GROUP=icingacmd
+		-DICINGA2_COMMAND_USER=icinga
+		-DICINGA2_COMMAND_GROUP=icingacmd
 	)
+#		-DUSE_SYSTEMD=ON
 
 	cmake-utils_src_configure
 }
@@ -56,7 +65,7 @@ src_install() {
 		emake DESTDIR="${D}" install
 	#fi
 
-	cd "${WORKDIR}"/icinga2-${MY_PV}
+	cd "${WORKDIR}"/icinga2-${PV}
 	if ! declare -p DOCS >/dev/null 2>&1 ; then
 		local d
 		for d in README* ChangeLog AUTHORS NEWS TODO CHANGES THANKS BUGS \
@@ -71,16 +80,14 @@ src_install() {
 
 	if use mysql ; then
 		docinto schema
-		newdoc "${WORKDIR}"/icinga2-${MY_PV}/components/db_ido_mysql/schema/mysql.sql mysql.sql
+		newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_mysql/schema/mysql.sql mysql.sql
 		docinto schema/upgrade
-		#newdoc "${WORKDIR}"/icinga2-${MY_PV}/components/db_ido_mysql/schema/upgrade/${PV}.sql mysql-upgrade-1.12.0.sql
-		newdoc "${WORKDIR}"/icinga2-${MY_PV}/components/db_ido_mysql/schema/upgrade/0.0.11.sql mysql-upgrade-1.12.0.sql
+		#newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_mysql/schema/upgrade/0.0.11.sql mysql-upgrade-1.12.0.sql
 	elif use postgres ; then
 		docinto schema
-		newdoc "${WORKDIR}"/icinga2-${MY_PV}/components/db_ido_pgsql/schema/pgsql.sql pgsql.sql
+		newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_pgsql/schema/pgsql.sql pgsql.sql
 		docinto schema/upgrade
-		newdoc "${WORKDIR}"/icinga2-${MY_PV}/components/db_ido_pgsql/schema/upgrade/0.0.11.sql pgsql-upgrade-1.12.0.sql
-		#newdoc "${WORKDIR}"/icinga2-${MY_PV}/components/db_ido_pgsql/schema/upgrade/${PV}.sql pgsql-upgrade-1.12.0.sql
+		#newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_pgsql/schema/upgrade/0.0.11.sql pgsql-upgrade-1.12.0.sql
 	fi
 
 	keepdir /etc/icinga2

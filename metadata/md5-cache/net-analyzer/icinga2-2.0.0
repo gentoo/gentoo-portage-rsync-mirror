@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=dev-util/cmake dev-libs/openssl dev-libs/boost sys-devel/bison sys-devel/flex mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) apache2? ( =www-servers/apache-2* ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DESCRIPTION=Nagios Fork - Check daemon, CGIs, docs, IDOutils. Reloaded
+EAPI=5
+HOMEPAGE=http://icinga.org/icinga2
+IUSE=+mysql postgres classicui +plugins apache2
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-util/cmake dev-libs/openssl dev-libs/boost sys-devel/bison sys-devel/flex mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) plugins? ( net-analyzer/nagios-plugins ) classicui? ( net-analyzer/icinga[web] ) apache2? ( =www-servers/apache-2* )
+REQUIRED_USE=|| ( mysql postgres )
+SLOT=0
+SRC_URI=http://github.com/Icinga/icinga2/archive/v2.0.0.tar.gz -> icinga2-2.0.0.tar.gz
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=17b63839aec08a7530d587e16df3ea9a

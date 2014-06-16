@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lximage-qt/lximage-qt-0.2.0.ebuild,v 1.2 2014/05/27 16:50:56 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lximage-qt/lximage-qt-0.2.0.ebuild,v 1.3 2014/06/16 15:44:34 kensington Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -21,7 +21,7 @@ LICENSE="GPL-2 LGPL-2.1+"
 SLOT="0"
 
 RDEPEND="dev-qt/qtcore:4
-	dev-qt/qtdbus
+	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
 	dev-libs/glib:2
 	media-libs/libexif

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tidy-ext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.33 2014/06/13 19:22:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.34 2014/06/16 15:40:41 klausman Exp $
+
+  16 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
+  tidy-ext-0.1.14-r2.ebuild:
+  Keyworded on alpha, bug #465948
 
   13 Jun 2014; Jeroen Roovers <jer@gentoo.org> tidy-ext-0.1.14-r1.ebuild:
   Stable for HPPA (bug #505920).
