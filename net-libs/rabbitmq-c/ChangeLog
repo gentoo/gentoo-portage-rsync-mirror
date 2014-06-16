@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rabbitmq-c
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.3 2014/05/22 12:05:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.4 2014/06/16 02:26:32 vapier Exp $
+
+  16 Jun 2014; Mike Frysinger <vapier@gentoo.org> rabbitmq-c-0.5.0.ebuild:
+  Add arm love #511026.
 
   22 May 2014; Jeroen Roovers <jer@gentoo.org> rabbitmq-c-0.5.0.ebuild:
   Marked ~hppa (bug #511026).

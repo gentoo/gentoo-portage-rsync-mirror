@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15801 2014/06/15 13:36:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15802 2014/06/16 02:17:45 rhill Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -413,11 +413,6 @@ www-client/google-chrome:unstable
 # containing significant architectural changes.
 # This is not for your production kit quite yet.
 =net-misc/asterisk-12*
-
-# Magnus Granberg <zorry@gentoo.org>
-# Gcc 4.8.2-r1 has default ssp and need testing,
-# See #484714
-=sys-devel/gcc-4.8.2-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (09 Jan 2014)
 # Monolithic dev-dotnet/{gnome,gtk}-sharp introduction mask, see bug #382491.

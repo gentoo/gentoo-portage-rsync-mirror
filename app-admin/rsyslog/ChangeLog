@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.114 2014/06/02 11:55:36 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.115 2014/06/16 02:26:46 vapier Exp $
+
+  16 Jun 2014; Mike Frysinger <vapier@gentoo.org> rsyslog-7.6.3-r1.ebuild:
+  Add arm love #511026.
 
 *rsyslog-7.6.3-r1 (02 Jun 2014)
 
