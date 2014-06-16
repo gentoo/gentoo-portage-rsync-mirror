@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmygpo-qt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmygpo-qt/ChangeLog,v 1.3 2014/06/14 10:22:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmygpo-qt/ChangeLog,v 1.4 2014/06/16 13:11:01 nimiux Exp $
+
+  16 Jun 2014; Chema Alonso <nimiux@gentoo.org> libmygpo-qt-1.0.7.ebuild:
+  Stable for amd64 wrt bug #508100
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libmygpo-qt-1.0.7.ebuild:
