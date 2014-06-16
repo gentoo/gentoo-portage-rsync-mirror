@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.5-r1.ebuild,v 1.1 2012/10/29 16:44:23 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.5-r2.ebuild,v 1.1 2014/06/16 09:55:59 ultrabug Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ PATCHES=(
 	"${FILESDIR}/3.0.4-fix_configure.patch"
 	"${FILESDIR}/3.0.4-docs.patch"
 	"${FILESDIR}/3.0.4-python_tests.patch"
+	"${FILESDIR}/3.0.5-fix_ucast.patch"
 )
 
 pkg_setup() {

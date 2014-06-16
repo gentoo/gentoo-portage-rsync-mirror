@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.24 2014/06/10 00:13:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.26 2014/06/16 09:59:29 eras Exp $
+
+  16 Jun 2014; Eray Aslan <eras@gentoo.org> -libverto-0.2.4.ebuild:
+  Remove old
+
+*libverto-0.2.6 (16 Jun 2014)
+
+  16 Jun 2014; Eray Aslan <eras@gentoo.org> +libverto-0.2.6.ebuild:
+  Version bump
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> libverto-0.2.5-r1.ebuild,
   libverto-0.2.5.ebuild:

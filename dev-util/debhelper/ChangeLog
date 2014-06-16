@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.103 2014/06/14 00:06:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.104 2014/06/16 09:31:26 nimiux Exp $
+
+  16 Jun 2014; Chema Alonso <nimiux@gentoo.org> debhelper-9.20140228.ebuild:
+  Stable for amd64 wrt bug #506100
 
 *debhelper-9.20140613 (14 Jun 2014)
 
