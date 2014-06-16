@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.202 2014/04/28 19:48:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.203 2014/06/16 06:12:21 radhermit Exp $
+
+*mkvtoolnix-7.0.0 (16 Jun 2014)
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-7.0.0.ebuild:
+  Version bump.
 
   28 Apr 2014; Tim Harder <radhermit@gentoo.org> mkvtoolnix-6.9.1.ebuild:
   Add sys-devel/gettext to DEPEND (bug #508966) and drop ruby-ng eclass usage

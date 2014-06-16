@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/scramble
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.9 2007/02/08 21:19:10 wolf31o2 Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.10 2014/06/16 06:16:17 mr_bones_ Exp $
+
+  16 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> scramble-0.9.5.ebuild:
+  EAPI=5; fix build (bug #513412)
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
@@ -36,4 +39,3 @@
   05 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   scramble-0.7.ebuild:
   initial commit
-

@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
-DEPEND=>=media-libs/libsdl-1.2 >=media-libs/sdl-mixer-1.2 >=media-libs/sdl-image-1.2 media-libs/sdl-ttf
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=>=media-libs/libsdl-1.2[sound,video] >=media-libs/sdl-mixer-1.2[vorbis] >=media-libs/sdl-image-1.2[png] media-libs/sdl-ttf !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Create as many words as you can before the time runs out
+EAPI=5
 HOMEPAGE=http://www.shiftygames.com/scramble/scramble.html
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2
-RDEPEND=>=media-libs/libsdl-1.2 >=media-libs/sdl-mixer-1.2 >=media-libs/sdl-image-1.2 media-libs/sdl-ttf sys-apps/miscfiles games-misc/games-envd
+RDEPEND=>=media-libs/libsdl-1.2[sound,video] >=media-libs/sdl-mixer-1.2[vorbis] >=media-libs/sdl-image-1.2[png] media-libs/sdl-ttf sys-apps/miscfiles games-misc/games-envd
 SLOT=0
 SRC_URI=http://www.shiftygames.com/scramble/scramble-0.9.5.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=75207f0447a00b200905b004683b5345
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	games	016d5de1968de77e56a90938ed6e5aba	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=9fc16909cc7d39a4319485ab25a19458
