@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdeconnect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.3 2014/05/15 01:39:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.4 2014/06/16 10:52:52 kensington Exp $
+
+  16 Jun 2014; Michael Palimaka <kensington@gentoo.org> kdeconnect-0.5.1.ebuild,
+  kdeconnect-0.5.2.1.ebuild:
+  Add missing dependency wrt bug #513372.
 
 *kdeconnect-0.5.2.1 (15 May 2014)
 

@@ -1,6 +1,36 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.484 2014/06/14 12:20:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.486 2014/06/16 10:57:09 chainsaw Exp $
+
+*asterisk-12.3.2 (16 Jun 2014)
+
+  16 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-12.3.1.ebuild,
+  +asterisk-12.3.2.ebuild:
+  Upstream distributed a broken release that did not carry traffic for SIP over
+  TCP or SIP over TLS. This remains masked and is not recommended for
+  production deployments.
+
+*asterisk-11.10.2 (16 Jun 2014)
+*asterisk-1.8.28.2 (16 Jun 2014)
+
+  16 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.28.1.ebuild,
+  +asterisk-1.8.28.2.ebuild, -asterisk-11.10.1.ebuild,
+  +asterisk-11.10.2.ebuild:
+  Upstream distributed a broken release that did not carry traffic for SIP over
+  TCP or SIP over TLS.
+
+*asterisk-12.3.1 (14 Jun 2014)
+
+  14 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-12.1.1.ebuild,
+  -asterisk-12.2.0.ebuild, -asterisk-12.3.0.ebuild, +asterisk-12.3.1.ebuild:
+  And now for the 12 branch, which has additional vulnerabilities in the PJSIP
+  channel driver. MixMonitor AMI command allowed arbitrary shell commands to be
+  executed (AST-2014-006). Upstream replacement of plain broken SSL read
+  implementation as part of an HTTPS denial of service (AST-2014-007) finally
+  fixes ASTERISK-18345 after almost three years. Relevant downstream patch
+  removed, this means we were very likely not vulnerable. Resolves a remote
+  crash in publish/subscribe framework (AST-2014-005) due to deadlock on a
+  synchronously dispatched task.
 
 *asterisk-11.10.1 (14 Jun 2014)
 *asterisk-1.8.28.1 (14 Jun 2014)

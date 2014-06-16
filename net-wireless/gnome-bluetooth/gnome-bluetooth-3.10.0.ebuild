@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.10.0.ebuild,v 1.6 2014/03/30 08:40:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.10.0.ebuild,v 1.7 2014/06/16 10:39:25 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -38,6 +38,7 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto
 "
 # eautoreconf needs:
+#	app-text/yelp-tools
 #	gnome-base/gnome-common
 
 pkg_setup() {
