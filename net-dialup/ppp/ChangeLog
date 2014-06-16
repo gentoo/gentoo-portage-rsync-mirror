@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.290 2014/02/19 09:56:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.291 2014/06/16 14:18:56 pinkbyte Exp $
+
+*ppp-2.4.6-r1 (16 Jun 2014)
+
+  16 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> +ppp-2.4.6-r1.ebuild:
+  Revision bump: add missing 'die' to sed calls. Call OpenRC scripts only when
+  OpenRC is active init-system, wrt bug #490820. Fix issue with logwtmp not
+  working properly
 
 *ppp-2.4.6 (19 Feb 2014)
 

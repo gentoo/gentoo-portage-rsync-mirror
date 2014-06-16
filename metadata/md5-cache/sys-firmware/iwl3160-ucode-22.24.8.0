@@ -9,4 +9,4 @@ RDEPEND=bluetooth? ( sys-firmware/iwl3160-7260-bt-ucode ) !sys-kernel/linux-firm
 SLOT=1
 SRC_URI=http://wireless.kernel.org/en/users/Drivers/iwlwifi?action=AttachFile&do=get&target=iwlwifi-3160-ucode-22.24.8.0.tgz -> iwl3160-ucode-22.24.8.0.tgz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=968c742a9cdd5d300d4389069142b5f1
+_md5_=8290919761c0797582b5498b497441a7

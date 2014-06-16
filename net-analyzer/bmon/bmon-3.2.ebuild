@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.2.ebuild,v 1.1 2014/02/28 18:02:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.2.ebuild,v 1.2 2014/06/16 14:23:54 jer Exp $
 
 EAPI=5
-inherit autotools eutils toolchain-funcs
+inherit autotools eutils linux-info toolchain-funcs
 
 DESCRIPTION="interface bandwidth monitor"
 HOMEPAGE="http://www.infradead.org/~tgr/bmon/"
@@ -26,6 +26,8 @@ DEPEND="
 "
 
 DOCS=( ChangeLog )
+
+CONFIG_CHECK="~NET_SCHED"
 
 src_prepare() {
 	epatch_user
