@@ -1,6 +1,20 @@
 # ChangeLog for media-plugins/gimp-gmic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/ChangeLog,v 1.44 2014/06/16 06:38:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/ChangeLog,v 1.46 2014/06/16 07:53:07 radhermit Exp $
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> -gimp-gmic-1.5.8.0.ebuild,
+  -gimp-gmic-1.5.8.1.ebuild, -gimp-gmic-1.5.8.2.ebuild,
+  -gimp-gmic-1.5.8.3.ebuild, -gimp-gmic-1.5.8.4.ebuild,
+  -gimp-gmic-1.5.8.5.ebuild, -gimp-gmic-1.5.9.2.ebuild,
+  -files/gmic-1.5.8.0-makefile.patch, -files/gmic-1.5.8.3-makefile.patch:
+  Remove old.
+
+*gimp-gmic-1.5.9.2-r1 (16 Jun 2014)
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> +gimp-gmic-1.5.9.2-r1.ebuild,
+  +files/gmic-1.5.9.2-makefile.patch:
+  Fix build system to split LDFLAGS and LIBS so the --as-needed linker option
+  is fully respected for all linked libs.
 
 *gimp-gmic-1.5.9.2 (16 Jun 2014)
 

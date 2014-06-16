@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/gmic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.50 2014/06/16 06:37:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.53 2014/06/16 07:51:42 radhermit Exp $
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> -gmic-1.5.8.0.ebuild,
+  -gmic-1.5.8.1.ebuild, -gmic-1.5.8.2.ebuild, -gmic-1.5.8.3.ebuild,
+  -gmic-1.5.8.4.ebuild, -gmic-1.5.8.5.ebuild, -gmic-1.5.9.2.ebuild,
+  -files/gmic-1.5.2.2-ffmpeg.patch, -files/gmic-1.5.8.0-makefile.patch,
+  -files/gmic-1.5.8.3-makefile.patch:
+  Remove old.
+
+*gmic-1.5.9.2-r1 (16 Jun 2014)
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> +gmic-1.5.9.2-r1.ebuild,
+  +files/gmic-1.5.9.2-makefile.patch:
+  Fix build system to split LDFLAGS and LIBS so the --as-needed linker option
+  is fully respected for all linked libs.
 
 *gmic-1.5.9.2 (16 Jun 2014)
 

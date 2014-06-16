@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.8.3.ebuild,v 1.1 2014/02/11 05:30:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.9.2-r1.ebuild,v 1.1 2014/06/16 07:46:39 radhermit Exp $
 
 EAPI=5
 
@@ -41,14 +41,14 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.8.2-ffmpeg.patch
 
 	for i in ffmpeg fftw jpeg opencv png tiff zlib ; do
-		use $i || { sed -i -r "s/^(${i}_(C|LD)FLAGS =).*/\1/I" Makefile || die ; }
+		use $i || { sed -i -r "s/^(${i}_(CFLAGS|LIBS) =).*/\1/I" Makefile || die ; }
 	done
 
-	use graphicsmagick || { sed -i -r "s/^(MAGICK_(C|LD)FLAGS =).*/\1/" Makefile || die ; }
-	use openexr || { sed -i -r "s/^(EXR_(C|LD)FLAGS =).*/\1/" Makefile || die ; }
+	use graphicsmagick || { sed -i -r "s/^(MAGICK_(CFLAGS|LIBS) =).*/\1/" Makefile || die ; }
+	use openexr || { sed -i -r "s/^(EXR_(CFLAGS|LIBS) =).*/\1/" Makefile || die ; }
 
 	if ! use X ; then
-		sed -i -r "s/^((X11|XSHM)_(C|LD)FLAGS =).*/\1/" Makefile || die
+		sed -i -r "s/^((X11|XSHM)_(CFLAGS|LIBS) =).*/\1/" Makefile || die
 
 		# disable display capabilities when X support is disabled
 		append-cppflags -Dcimg_display=0
@@ -56,7 +56,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake AR="$(tc-getAR)" CC="$(tc-getCXX)" CFLAGS="${CXXFLAGS}" OPT_CFLAGS= DEBUG_CFLAGS= custom lib
+	emake AR="$(tc-getAR)" CC="$(tc-getCXX)" CFLAGS="${CXXFLAGS}" OPT_CFLAGS= DEBUG_CFLAGS= linux lib
 }
 
 src_install() {
@@ -69,5 +69,5 @@ src_install() {
 	doman ../man/gmic.1.gz
 	dodoc ../README
 
-	newbashcomp gmic_bashcompletion.sh ${PN}
+	newbashcomp ../resources/gmic_bashcompletion.sh ${PN}
 }

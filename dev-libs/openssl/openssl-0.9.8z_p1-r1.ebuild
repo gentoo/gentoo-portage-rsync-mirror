@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8z_p1-r1.ebuild,v 1.2 2014/06/15 11:50:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8z_p1-r1.ebuild,v 1.3 2014/06/16 07:59:28 chainsaw Exp $
 
 # this ebuild is only for the libcrypto.so.0.9.8 and libssl.so.0.9.8 SONAME for ABI compat
 
@@ -8,7 +8,7 @@ EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
-PLEVEL=`echo ${PV##*_p} | tr [1-26] [a-z]`
+PLEVEL=`echo ${PV##*_p} | tr [1-9] [a-i]`
 MY_PV=${PV/_p*/${PLEVEL}}
 MY_P=${PN}-${MY_PV}
 S="${WORKDIR}/${MY_P}"

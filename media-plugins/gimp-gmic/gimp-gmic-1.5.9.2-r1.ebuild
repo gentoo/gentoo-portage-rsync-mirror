@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/gimp-gmic-1.5.8.5.ebuild,v 1.1 2014/03/27 04:47:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/gimp-gmic-1.5.9.2-r1.ebuild,v 1.1 2014/06/16 07:52:20 radhermit Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/gmic-${PV}/src
 
 src_prepare() {
-	epatch "${FILESDIR}"/gmic-1.5.8.4-makefile.patch
+	epatch "${FILESDIR}"/gmic-${PV}-makefile.patch
 }
 
 src_compile() {
