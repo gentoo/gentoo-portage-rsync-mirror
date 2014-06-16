@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-lmp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.14 2014/05/20 17:01:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.15 2014/06/16 16:37:38 maksbotan Exp $
+
+  16 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> lc-lmp-9999.ebuild,
+  metadata.xml:
+  Add potorchu use flag for lmp-9999
 
   20 May 2014; Maxim Koltsov <maksbotan@gentoo.org> lc-lmp-9999.ebuild,
   metadata.xml:

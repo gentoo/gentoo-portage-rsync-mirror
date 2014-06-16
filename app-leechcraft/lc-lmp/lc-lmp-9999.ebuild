@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/lc-lmp-9999.ebuild,v 1.4 2014/05/20 17:01:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/lc-lmp-9999.ebuild,v 1.5 2014/06/16 16:37:38 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="LeechCraft Media Player, Phonon-based audio/video player."
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +fradj +graffiti +guess +mpris +mp3tunes"
+IUSE="debug +fradj +graffiti +guess +mpris +mp3tunes potorchu"
 
 # depend on gstreamer:0.10 to match current Qt deps
 DEPEND="~app-leechcraft/lc-core-${PV}
@@ -19,6 +19,7 @@ DEPEND="~app-leechcraft/lc-core-${PV}
 		media-libs/gstreamer:0.10
 		media-libs/taglib
 		mpris? ( dev-qt/qtdbus:4 )
+		potorchu? ( media-libs/libprojectm )
 		dev-qt/qtdeclarative:4"
 RDEPEND="${DEPEND}"
 
@@ -28,6 +29,7 @@ src_configure() {
 		$(cmake-utils_use_enable graffiti LMP_GRAFFITI)
 		$(cmake-utils_use_enable guess LMP_LIBGUESS)
 		$(cmake-utils_use_enable mpris LMP_MPRIS)
-		$(cmake-utils_use_enable mp3tunes LMP_MP3TUNES)"
+		$(cmake-utils_use_enable mp3tunes LMP_MP3TUNES)
+		$(cmake-utils_use_enable potorchu LMP_POTORCHU)"
 	cmake-utils_src_configure
 }
