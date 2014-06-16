@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.1.ebuild,v 1.1 2014/05/31 15:33:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.1.ebuild,v 1.2 2014/06/16 11:32:05 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -84,7 +84,14 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	virtual/pkgconfig
+
+	dev-libs/gobject-introspection-common
+	gnome-base/gnome-common
 "
+# eautoreconf needs:
+#	app-text/yelp-tools
+#	dev-libs/gobject-introspection-common
+#	gnome-base/gnome-common
 # docbook-xml-dtd is needed for user doc
 # Prevent dev-python/pylint dep, bug #482538
 pkg_setup() {

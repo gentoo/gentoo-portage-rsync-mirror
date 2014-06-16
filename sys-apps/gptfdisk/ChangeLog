@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.48 2014/06/14 10:07:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.49 2014/06/16 11:38:46 nimiux Exp $
+
+  16 Jun 2014; Chema Alonso <nimiux@gentoo.org> gptfdisk-0.8.10.ebuild:
+  Stable for amd64 wrt bug #510150
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gptfdisk-0.8.10.ebuild:
   x86 stable wrt bug #510150

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.374 2014/05/31 15:33:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.375 2014/06/16 11:32:05 tetromino Exp $
+
+  16 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.10.1.ebuild,
+  totem-3.12.0.ebuild, totem-3.12.1.ebuild:
+  Add missing dependencies for m4 macros for eautoreconf (bug #513460, thanks
+  to krantadan).
 
 *totem-3.12.1 (31 May 2014)
 
