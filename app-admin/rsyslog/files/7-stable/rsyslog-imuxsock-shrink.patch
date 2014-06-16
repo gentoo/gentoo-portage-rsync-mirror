@@ -1,0 +1,13 @@
+the symbols provided by RSRT_LIBS are in the main rsyslog binary already,
+and this plugin is only loaded by rsyslog, so no need to double link them.
+
+patch by Alex Deymo <deymo@chromium.org>
+
+--- a/plugins/imuxsock/Makefile.am
++++ b/plugins/imuxsock/Makefile.am
+@@ -3,4 +3,4 @@
+ imuxsock_la_SOURCES = imuxsock.c
+ imuxsock_la_CPPFLAGS = -DSD_EXPORT_SYMBOLS -I$(top_srcdir) $(PTHREADS_CFLAGS) $(RSRT_CFLAGS)
+ imuxsock_la_LDFLAGS = -module -avoid-version
+-imuxsock_la_LIBADD = $(RSRT_LIBS)
++imuxsock_la_LIBADD =

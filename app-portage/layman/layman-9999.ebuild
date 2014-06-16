@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.34 2014/04/06 17:22:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.35 2014/06/16 04:28:56 dolsen Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 PYTHON_REQ_USE="xml(+)"
 
 inherit eutils distutils-r1 git-2 prefix
@@ -38,10 +38,7 @@ RDEPEND="
 	gpg? ( =dev-python/pyGPG-9999 )
 	virtual/python-argparse[${PYTHON_USEDEP}]
 	sys-apps/portage[${PYTHON_USEDEP}]
-	>=dev-python/requests-1.2.1
-	dev-python/ndg-httpsclient
-	dev-python/pyasn1
-	>=dev-python/pyopenssl-0.13
+	>=dev-python/ssl-fetch-0.2[${PYTHON_USEDEP}]
 	"
 
 python_prepare_all()  {

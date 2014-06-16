@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile config configure install postinst prepare test
+DEPEND=>=dev-libs/json-c-0.11:= >=dev-libs/libestr-0.1.9 >=dev-libs/liblogging-1.0.1:=[stdlog] >=sys-libs/zlib-1.2.5 dbi? ( >=dev-db/libdbi-0.8.3 ) elasticsearch? ( >=net-misc/curl-7.35.0 ) gcrypt? ( >=dev-libs/libgcrypt-1.5.3:= ) kerberos? ( virtual/krb5 ) mongodb? ( >=dev-libs/libmongo-client-0.1.4 ) mysql? ( virtual/mysql ) normalize? ( >=dev-libs/libee-0.4.0 >=dev-libs/liblognorm-0.3.1:= !>=dev-libs/liblognorm-1.0.0 ) omudpspoof? ( >=net-libs/libnet-1.1.6 ) oracle? ( >=dev-db/oracle-instantclient-basic-10.2 ) postgres? ( >=dev-db/postgresql-base-8.4.20 ) rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 ) redis? ( >=dev-libs/hiredis-0.11.0 ) relp? ( >=dev-libs/librelp-1.2.5 ) rfc3195? ( >=dev-libs/liblogging-1.0.1:=[rfc3195] ) rfc5424hmac? ( >=dev-libs/openssl-0.9.8y ) snmp? ( >=net-analyzer/net-snmp-5.7.2 ) ssl? ( >=net-libs/gnutls-2.12.23 ) systemd? ( >=sys-apps/systemd-208 ) zeromq? ( >=net-libs/czmq-1.2.0 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=An enhanced multi-threaded syslogd with database support and more
+EAPI=5
+HOMEPAGE=http://www.rsyslog.com/
+IUSE=dbi debug doc elasticsearch +gcrypt kerberos mongodb mysql normalize omudpspoof oracle postgres rabbitmq redis relp rfc3195 rfc5424hmac snmp ssl systemd usertools zeromq
+KEYWORDS=~amd64 ~arm ~hppa ~x86
+LICENSE=GPL-3 LGPL-3 Apache-2.0
+RDEPEND=>=dev-libs/json-c-0.11:= >=dev-libs/libestr-0.1.9 >=dev-libs/liblogging-1.0.1:=[stdlog] >=sys-libs/zlib-1.2.5 dbi? ( >=dev-db/libdbi-0.8.3 ) elasticsearch? ( >=net-misc/curl-7.35.0 ) gcrypt? ( >=dev-libs/libgcrypt-1.5.3:= ) kerberos? ( virtual/krb5 ) mongodb? ( >=dev-libs/libmongo-client-0.1.4 ) mysql? ( virtual/mysql ) normalize? ( >=dev-libs/libee-0.4.0 >=dev-libs/liblognorm-0.3.1:= !>=dev-libs/liblognorm-1.0.0 ) omudpspoof? ( >=net-libs/libnet-1.1.6 ) oracle? ( >=dev-db/oracle-instantclient-basic-10.2 ) postgres? ( >=dev-db/postgresql-base-8.4.20 ) rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 ) redis? ( >=dev-libs/hiredis-0.11.0 ) relp? ( >=dev-libs/librelp-1.2.5 ) rfc3195? ( >=dev-libs/liblogging-1.0.1:=[rfc3195] ) rfc5424hmac? ( >=dev-libs/openssl-0.9.8y ) snmp? ( >=net-analyzer/net-snmp-5.7.2 ) ssl? ( >=net-libs/gnutls-2.12.23 ) systemd? ( >=sys-apps/systemd-208 ) zeromq? ( >=net-libs/czmq-1.2.0 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.rsyslog.com/files/download/rsyslog/rsyslog-7.6.3.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=1454d53cc3bcdc09bd7358289ab45082
