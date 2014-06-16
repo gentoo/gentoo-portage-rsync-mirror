@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/yajl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.37 2013/06/26 10:28:11 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.38 2014/06/16 18:30:53 hasufell Exp $
+
+*yajl-2.0.4-r3 (16 Jun 2014)
+
+  16 Jun 2014; Julian Ospald <hasufell@gentoo.org> +yajl-2.0.4-r3.ebuild,
+  +files/yajl-2.0.4-pkgconfig_multilib.patch:
+  fix .pc install destination wrt #480598
 
   26 Jun 2013; Michael Weber <xmw@gentoo.org>
   -files/yajl-2.0.4-remove_static_lib.patch, yajl-2.0.4-r2.ebuild:
