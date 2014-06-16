@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare test
-DEPEND=>=dev-lang/lua-5.1
+DEPEND=>=dev-lang/lua-5.1 virtual/pkgconfig
 DESCRIPTION=Parsing Expression Grammars for Lua
 EAPI=5
 HOMEPAGE=http://www.inf.puc-rio.br/~roberto/lpeg/
@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/lua-5.1
 SLOT=0
 SRC_URI=http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-0.12.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3a6e4c82169ec239c1a5b6736392a5cb
+_md5_=2f6dccbddcbf16ef64e4b133f1f51677

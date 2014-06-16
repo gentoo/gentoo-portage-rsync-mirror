@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/lpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/ChangeLog,v 1.5 2014/03/04 20:34:04 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/ChangeLog,v 1.6 2014/06/16 06:50:46 radhermit Exp $
+
+  16 Jun 2014; Tim Harder <radhermit@gentoo.org> lpeg-0.12.ebuild:
+  Use pkgconfig to determine lua C modules directory (bug #503990).
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> lpeg-0.12.ebuild:
   Add ~mips keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/lpeg-0.12.ebuild,v 1.5 2014/03/04 20:34:04 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/lpeg-0.12.ebuild,v 1.6 2014/06/16 06:50:46 radhermit Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 ~arm ~hppa ~mips x86"
 IUSE="debug doc"
 
 RDEPEND=">=dev-lang/lua-5.1"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
@@ -32,7 +33,7 @@ src_test() {
 }
 
 src_install() {
-	exeinto /usr/$(get_libdir)/lua/5.1
+	exeinto "$(pkg-config --variable INSTALL_CMOD lua)"
 	doexe lpeg.so
 
 	dodoc HISTORY
