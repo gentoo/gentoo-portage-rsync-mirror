@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.368 2014/06/10 18:32:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.369 2014/06/16 10:25:36 tetromino Exp $
+
+*gstreamer-1.2.4-r2 (16 Jun 2014)
+*gstreamer-0.10.36-r2 (16 Jun 2014)
+
+  16 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gstreamer-0.10.36-r1.ebuild, +gstreamer-0.10.36-r2.ebuild,
+  -gstreamer-1.2.4-r1.ebuild, +gstreamer-1.2.4-r2.ebuild:
+  Fix pax-marking of multilib gst-plugin-scanner
 
 *gstreamer-1.2.4-r1 (10 Jun 2014)
 *gstreamer-0.10.36-r1 (10 Jun 2014)
