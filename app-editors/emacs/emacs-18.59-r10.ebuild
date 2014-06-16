@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r10.ebuild,v 1.2 2014/05/16 06:47:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r10.ebuild,v 1.3 2014/06/16 21:28:47 mgorny Exp $
 
 EAPI=5
 
@@ -24,8 +24,8 @@ RDEPEND="sys-libs/ncurses
 		sys-libs/ncurses[abi_x86_x32(-)?]
 		!abi_x86_x32? (
 			|| (
-				sys-libs/ncurses[abi_x86_32(-)?]
-				app-emulation/emul-linux-x86-baselibs[development]
+				sys-libs/ncurses[abi_x86_32(-)]
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
 			)
 		)
 	)"

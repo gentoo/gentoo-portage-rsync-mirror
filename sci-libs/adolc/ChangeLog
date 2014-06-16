@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/adolc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.7 2014/05/29 15:47:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.8 2014/06/16 21:16:08 jauhien Exp $
+
+  16 Jun 2014; Jauhien Piatlicki <jauhien@gentoo.org> adolc-2.5.0.ebuild:
+  Add mpi USE, see bug #511456
 
   29 May 2014; Sébastien Fabbro <bicatali@gentoo.org> adolc-2.5.0.ebuild:
   Remove mpi flag until we have AMPI in portage, bug #511456 thanks Michelangelo

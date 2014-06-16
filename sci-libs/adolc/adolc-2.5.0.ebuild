@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/adolc-2.5.0.ebuild,v 1.2 2014/05/29 15:47:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/adolc-2.5.0.ebuild,v 1.3 2014/06/16 21:16:08 jauhien Exp $
 
 EAPI=5
 
@@ -18,9 +18,10 @@ SRC_URI="http://www.coin-or.org/download/source/${MYPN}/${MYPN}-${PV}.tgz"
 LICENSE="|| ( EPL-1.0 GPL-2 )"
 SLOT="0/1"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="sparse static-libs"
+IUSE="mpi sparse static-libs"
 
-RDEPEND="sparse? ( sci-libs/colpack:0= )"
+RDEPEND="mpi? ( sys-cluster/ampi:0= )
+	sparse? ( sci-libs/colpack:0= )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYPN}-${PV}"
@@ -32,6 +33,9 @@ PATCHES=(
 
 src_configure() {
 	 local myeconfargs=(
+		 $(use_enable mpi ampi)
+		 $(use_with mpi ampi "${EPREFIX}"/usr)
+		 $(use_with mpi mpi-root "${EPREFIX}"/usr)
 		 $(use_enable sparse)
 		 $(use_with sparse colpack "${EPREFIX}"/usr)
 	 )
