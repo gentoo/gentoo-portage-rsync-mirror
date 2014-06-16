@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.105 2014/05/18 05:53:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.106 2014/06/16 05:37:33 graaff Exp $
+
+*mocha-0.13.3-r2 (16 Jun 2014)
+*mocha-0.12.10-r1 (16 Jun 2014)
+
+  16 Jun 2014; Hans de Graaff <graaff@gentoo.org> mocha-0.12.10.ebuild,
+  +mocha-0.12.10-r1.ebuild, mocha-0.13.3-r1.ebuild, +mocha-0.13.3-r2.ebuild:
+  New revisions to create stable candidates for bug 513430.
 
 *mocha-1.1.0 (18 May 2014)
 

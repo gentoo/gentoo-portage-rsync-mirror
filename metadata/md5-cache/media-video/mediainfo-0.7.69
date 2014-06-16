@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=sys-libs/zlib media-libs/libzen ~media-libs/libmediainfo-0.7.69[curl=,mms=] wxwidgets? ( x11-libs/wxGTK:3.0[X] ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=MediaInfo supplies technical and tag information about media files
+EAPI=5
+HOMEPAGE=http://mediaarea.net/mediainfo/
+IUSE=curl mms wxwidgets
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=sys-libs/zlib media-libs/libzen ~media-libs/libmediainfo-0.7.69[curl=,mms=] wxwidgets? ( x11-libs/wxGTK:3.0[X] )
+SLOT=0
+SRC_URI=mirror://sourceforge/mediainfo/mediainfo_0.7.69.tar.bz2
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_md5_=bbf6c5afa1d6163245feacba8bc106f9

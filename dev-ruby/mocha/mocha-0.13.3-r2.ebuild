@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.12.10.ebuild,v 1.5 2014/06/16 05:37:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.13.3-r2.ebuild,v 1.1 2014/06/16 05:37:33 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 jruby ruby20"
+USE_RUBY="ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="test:units"
 
 RUBY_FAKEGEM_TASK_DOC="yardoc"
 RUBY_FAKEGEM_DOCDIR="doc"
-RUBY_FAKEGEM_EXTRADOC="README.rdoc RELEASE.rdoc"
+RUBY_FAKEGEM_EXTRADOC="README.md RELEASE.md"
 
 RUBY_FAKEGEM_EXTRAINSTALL="init.rb"
 
@@ -19,7 +19,7 @@ DESCRIPTION="A Ruby library for mocking and stubbing using a syntax like that of
 HOMEPAGE="http://gofreerange.com/mocha/docs/"
 
 LICENSE="MIT"
-SLOT="0.12"
+SLOT="0.13"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
@@ -33,21 +33,6 @@ all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/ s:^:#:' -e '1iload "lib/mocha/version.rb"' Rakefile || die
 }
 
-all_ruby_compile() {
-	all_fakegem_compile
-
-	if use doc; then
-		rake examples || die
-	fi
-}
-
 each_ruby_test() {
 	ruby-ng_testrb-2 test/unit/*
-}
-
-all_ruby_install() {
-	all_fakegem_install
-
-	docinto examples
-	dodoc examples/*.rb || die
 }
