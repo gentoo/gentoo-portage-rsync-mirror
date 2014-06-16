@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/hiera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.23 2014/06/15 03:39:23 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.24 2014/06/16 05:24:06 graaff Exp $
+
+*hiera-1.3.4-r1 (16 Jun 2014)
+
+  16 Jun 2014; Hans de Graaff <graaff@gentoo.org> hiera-1.3.4.ebuild,
+  +hiera-1.3.4-r1.ebuild:
+  Create a version without ruby21 for bug 513290.
 
 *hiera-1.3.4 (15 Jun 2014)
 
