@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.1-r1.ebuild,v 1.1 2014/05/11 11:51:25 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.1.1.ebuild,v 1.1 2014/06/16 03:21:26 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )

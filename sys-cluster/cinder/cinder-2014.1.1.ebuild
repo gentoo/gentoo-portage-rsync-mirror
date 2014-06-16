@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1-r1.ebuild,v 1.1 2014/05/11 12:22:00 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.1.1.ebuild,v 1.1 2014/06/16 03:24:34 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
