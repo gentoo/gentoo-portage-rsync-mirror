@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.8-r1.ebuild,v 1.2 2013/09/08 20:28:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.8-r1.ebuild,v 1.3 2014/06/16 21:38:01 mgorny Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -18,34 +18,26 @@ RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 	dumb? ( media-libs/dumb[${MULTILIB_USEDEP}] )
 	flac? ( media-libs/flac[${MULTILIB_USEDEP}] )
 	jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	openal? ( media-libs/openal )
+	openal? ( media-libs/openal[${MULTILIB_USEDEP}] )
 	physfs? ( dev-games/physfs[${MULTILIB_USEDEP}] )
 	png? ( >=media-libs/libpng-1.4[${MULTILIB_USEDEP}] )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.15[${MULTILIB_USEDEP}] )
 	truetype? ( >=media-libs/freetype-2[${MULTILIB_USEDEP}] )
 	vorbis? ( media-libs/libvorbis[${MULTILIB_USEDEP}] )
 	x11-libs/libXcursor[${MULTILIB_USEDEP}]
 	x11-libs/libXxf86vm[${MULTILIB_USEDEP}]
 	x11-libs/libXrandr[${MULTILIB_USEDEP}]
 	x11-libs/libX11[${MULTILIB_USEDEP}]
-	gtk? ( x11-libs/gtk+:2 )
-	virtual/opengl
-	virtual/glu
-	xinerama? ( x11-libs/libXinerama[${MULTILIB_USEDEP}] )
-	abi_x86_32? (
-		amd64? (
-			app-emulation/emul-linux-x86-opengl
-			gtk? ( app-emulation/emul-linux-x86-gtklibs )
-			openal? ( app-emulation/emul-linux-x86-sdl )
-			pulseaudio? ( app-emulation/emul-linux-x86-soundlibs )
-		)
-	)"
+	gtk? ( x11-libs/gtk+:2[${MULTILIB_USEDEP}] )
+	virtual/opengl[${MULTILIB_USEDEP}]
+	virtual/glu[${MULTILIB_USEDEP}]
+	xinerama? ( x11-libs/libXinerama[${MULTILIB_USEDEP}] )"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	x11-proto/xextproto
-	x11-proto/xf86vidmodeproto
-	x11-proto/xproto"
+	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	x11-proto/xextproto[${MULTILIB_USEDEP}]
+	x11-proto/xf86vidmodeproto[${MULTILIB_USEDEP}]
+	x11-proto/xproto[${MULTILIB_USEDEP}]"
 
 PATCHES=( "${FILESDIR}"/${PN}-5.0.4-underlink.patch )
 

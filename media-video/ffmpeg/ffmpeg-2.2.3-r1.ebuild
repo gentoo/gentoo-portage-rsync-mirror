@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.3-r1.ebuild,v 1.3 2014/06/14 02:46:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.3-r1.ebuild,v 1.4 2014/06/16 22:00:35 mgorny Exp $
 
 EAPI="5"
 
@@ -183,6 +183,10 @@ REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	test? ( encode )"
 
 S=${WORKDIR}/${P/_/-}
+
+MULTILIB_WRAPPED_HEADERS=(
+	/usr/include/libavutil/avconfig.h
+)
 
 src_prepare() {
 	if [[ "${PV%_p*}" != "${PV}" ]] ; then # Snapshot

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.751 2014/06/14 09:49:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.752 2014/06/16 22:00:35 mgorny Exp $
+
+  16 Jun 2014; Michał Górny <mgorny@gentoo.org> ffmpeg-1.2.6-r1.ebuild,
+  ffmpeg-2.2.3-r1.ebuild, ffmpeg-9999.ebuild:
+  Wrap libavutil/avconfig.h since in some cases it differs per-ABI, bug #513184.
 
 *ffmpeg-0.10.13 (14 Jun 2014)
 

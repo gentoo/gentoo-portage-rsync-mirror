@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.145 2014/02/02 11:49:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.146 2014/06/16 21:38:01 mgorny Exp $
+
+  16 Jun 2014; Michał Górny <mgorny@gentoo.org> allegro-5.0.8-r1.ebuild:
+  Add MULTILIB_USEDEPs on all packages and remove emul-linux-x86 dependencies.
+  All required packages are fully multilib now.
 
   02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> allegro-4.4.2-r1.ebuild:
   Add ~mips, wrt bug #499866
