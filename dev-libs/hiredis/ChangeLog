@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/hiredis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.9 2014/06/16 02:25:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.10 2014/06/16 02:35:46 vapier Exp $
+
+*hiredis-0.11.0-r1 (16 Jun 2014)
+
+  16 Jun 2014; Mike Frysinger <vapier@gentoo.org> +hiredis-0.11.0-r1.ebuild:
+  Drop USE=debug as it only controls -g flags.  Add USE=static-libs support.
+  Fix AR/CPPFLAGS handling.
 
   16 Jun 2014; Mike Frysinger <vapier@gentoo.org> hiredis-0.11.0.ebuild:
   Add arm love #511026.
