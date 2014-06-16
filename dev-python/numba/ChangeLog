@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/numba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.4 2014/04/14 17:12:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.5 2014/06/16 11:28:07 idella4 Exp $
+
+*numba-0.13.2 (16 Jun 2014)
+
+  16 Jun 2014; Ian Delaney <idella4@gentoo.org> +numba-0.13.2.ebuild:
+  bump; drop py2.6 py3.2 add py 3.4, drop redundant dep requ'd for py2.6, add
+  IUSE doc for install of pdf file
 
 *numba-0.13.0 (14 Apr 2014)
 

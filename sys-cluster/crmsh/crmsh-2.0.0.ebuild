@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.5-r3.ebuild,v 1.3 2013/10/24 12:32:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-2.0.0.ebuild,v 1.1 2014/06/16 11:14:43 ultrabug Exp $
 
 EAPI=5
 
@@ -8,17 +8,22 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils python-r1
+EGIT_REPO_URI="git://github.com/crmsh/crmsh"
+if [[ ${PV} == *9999 ]]; then
+	KEYWORDS=""
+else
+	EGIT_COMMIT="${PV}"
+	KEYWORDS="~amd64 ~hppa ~x86"
+fi
 
-MY_TREE="ef3f08547688"
+inherit autotools-utils git-2 python-r1
 
 DESCRIPTION="Pacemaker command line interface for management and configuration"
-HOMEPAGE="https://savannah.nongnu.org/projects/crmsh/"
-SRC_URI="http://hg.savannah.gnu.org/hgweb/crmsh/archive/${MY_TREE}.tar.bz2"
+HOMEPAGE="http://crmsh.github.io/"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
