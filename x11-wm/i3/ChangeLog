@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.54 2014/06/15 20:24:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.55 2014/06/16 13:49:01 hasufell Exp $
+
+  16 Jun 2014; Julian Ospald <hasufell@gentoo.org> i3-9999.ebuild:
+  Ensure proper version of yajl, use "next" branch
 
   15 Jun 2014; Kacper Kowalik <xarthisius@gentoo.org> i3-4.8.ebuild:
   Ensure proper version of yajl
