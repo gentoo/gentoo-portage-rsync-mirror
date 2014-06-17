@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/zemberek
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.16 2012/02/14 11:54:08 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.17 2014/06/17 10:39:33 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -zemberek-2.0.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   14 Feb 2012; Naohiro Aota <naota@gentoo.org> zemberek-2.1.1.ebuild:
   Add ~x86-fbsd
@@ -65,4 +68,3 @@
   04 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org> +metadata.xml,
   +zemberek-2.0.ebuild:
   Initial ebuild, submitted by Serkan Kaba <serkan_kaba@yahoo.com>, bug #170372.
-

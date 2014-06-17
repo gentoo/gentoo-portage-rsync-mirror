@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.13 2012/12/10 22:15:07 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.14 2014/06/17 10:50:10 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -fec-1.0.3-r1.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   10 Dec 2012; Ulrich Müller <ulm@gentoo.org> fec-1.0.3-r1.ebuild,
   fec-1.0.4-r1.ebuild:
@@ -59,4 +62,3 @@
   24 Jan 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +files/build.xml,
   +fec-1.0.3.ebuild:
   Initial commit. Fixes bug 238020
-

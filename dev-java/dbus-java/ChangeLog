@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dbus-java
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.16 2010/05/28 19:32:15 josejx Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.17 2014/06/17 10:48:37 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -dbus-java-2.5.1.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org> dbus-java-2.7-r1.ebuild:
   Marked ppc stable for bug #311745.
@@ -70,4 +73,3 @@
   18 Jul 2008; Serkan Kaba <serkan@gentoo.org>
   +files/dbus-java-2.4-jarfixes.patch, +metadata.xml, +dbus-java-2.5.ebuild:
   Initial ebuild. Fixes bug #157475.
-

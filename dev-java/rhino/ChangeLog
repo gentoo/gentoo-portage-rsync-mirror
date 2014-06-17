@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.74 2013/07/28 09:38:57 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.75 2014/06/17 10:34:38 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/rhino-1.6-gentoo.patch,
+  -rhino-1.7.2-r1.ebuild, -rhino-1.7.2.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   28 Jul 2013; Fabian Groffen <grobian@gentoo.org> rhino-1.7.2-r2.ebuild:
   Marked ~x64-macos, bug #435528

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsd2jibx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/ChangeLog,v 1.8 2012/10/19 08:34:29 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/ChangeLog,v 1.9 2014/06/17 10:40:48 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -xsd2jibx-0.2a_beta-r1.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   19 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
   xsd2jibx-0.2a_beta-r2.ebuild:

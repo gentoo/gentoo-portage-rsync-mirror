@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bytelist
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.21 2013/08/28 11:15:36 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.22 2014/06/17 10:46:10 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -bytelist-1.0.6.ebuild,
+  -bytelist-1.0.9.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> bytelist-1.0.10.ebuild:
   Stable for x86, wrt bug #481964

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/txw2-runtime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.14 2012/03/06 21:14:57 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/txw2-runtime/ChangeLog,v 1.15 2014/06/17 10:59:03 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -txw2-runtime-20070407-r1.ebuild,
+  -txw2-runtime-20070407.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> txw2-runtime-20070407-r2.ebuild:
   Marking txw2-runtime-20070407-r2 ppc for bug 396883
@@ -60,4 +64,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/build.xml-20070407, +metadata.xml, +txw2-runtime-20070407.ebuild:
   Initial commit of txw2-runtime.
-

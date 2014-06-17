@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tagsoup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.40 2012/12/09 17:39:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.41 2014/06/17 10:38:33 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -tagsoup-1.1.ebuild,
+  -tagsoup-1.2.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tagsoup-1.2.1.ebuild:
   Stable for ppc64, wrt bug #421733

@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.108 2014/02/09 18:04:43 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.109 2014/06/17 10:53:32 chithanh Exp $
+
+*syslinux-6.03_pre17 (17 Jun 2014)
+
+  17 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +syslinux-6.03_pre17.ebuild:
+  Bump to latest prerelease.
 
   09 Feb 2014; Rick Farina <zerochaos@gentoo.org>
   +files/syslinux-6.02-add-fno-stack-protector.patch,

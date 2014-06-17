@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xalan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.95 2013/06/14 19:38:27 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.96 2014/06/17 10:42:13 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -xalan-2.7.0-r4.ebuild,
+  -xalan-2.7.0-r5.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   14 Jun 2013; Alexis Ballier <aballier@gentoo.org> xalan-2.7.1.ebuild:
   keyword ~amd64-fbsd

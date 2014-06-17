@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/exolabcore
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.18 2008/12/21 10:47:49 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.19 2014/06/17 10:49:38 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
+  -exolabcore-0.3.7_p20050205-r1.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   21 Dec 2008; Markus Meier <maekke@gentoo.org>
   exolabcore-0.3.7_p20050205-r2.ebuild:
@@ -82,4 +86,3 @@
   06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +exolabcore-0.3.7_p20050205.ebuild:
   Initial import, direct dependency of openjms. see #63286
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jamvm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.51 2012/12/07 21:40:57 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.52 2014/06/17 10:53:06 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/jamvm-1.5.4-r1.env,
+  -jamvm-1.5.4-r1.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jamvm-1.5.4-r2.ebuild:
   Stable for ppc, wrt bug #425624

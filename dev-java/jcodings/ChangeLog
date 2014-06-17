@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcodings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.14 2014/05/03 20:39:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.15 2014/06/17 10:56:33 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jcodings-1.0.2.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
 *jcodings-1.0.11 (03 May 2014)
 
