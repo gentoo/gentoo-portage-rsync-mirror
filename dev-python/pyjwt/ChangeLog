@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pyjwt
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyjwt/ChangeLog,v 1.1 2014/06/17 04:23:30 idella4 Exp $
+
+*pyjwt-0.2.1 (17 Jun 2014)
+
+  17 Jun 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +pyjwt-0.2.1.ebuild:
+  new package, a dep of tests of oauthlib, ebuild prep'd by me
