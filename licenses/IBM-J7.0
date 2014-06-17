@@ -1,0 +1,215 @@
+International License Agreement for Non-Warranted Programs
+
+Part 1 - General Terms
+
+BY DOWNLOADING, INSTALLING, COPYING, ACCESSING, CLICKING ON AN "ACCEPT"
+BUTTON, OR OTHERWISE USING THE PROGRAM, LICENSEE AGREES TO THE TERMS OF THIS
+AGREEMENT. IF YOU ARE ACCEPTING THESE TERMS ON BEHALF OF LICENSEE, YOU
+REPRESENT AND WARRANT THAT YOU HAVE FULL AUTHORITY TO BIND LICENSEE TO THESE
+TERMS. IF YOU DO NOT AGREE TO THESE TERMS,
+
+* DO NOT DOWNLOAD, INSTALL, COPY, ACCESS, CLICK ON AN "ACCEPT" BUTTON, OR
+* USE THE PROGRAM; AND
+
+* PROMPTLY RETURN THE UNUSED MEDIA AND DOCUMENTATION TO THE PARTY FROM WHOM
+* IT WAS OBTAINED FOR A REFUND OF THE AMOUNT PAID. IF THE PROGRAM WAS
+* DOWNLOADED, DESTROY ALL COPIES OF THE PROGRAM.
+
+1. Definitions
+
+"Authorized Use" - the specified level at which Licensee is authorized to
+execute or run the Program. That level may be measured by number of users,
+millions of service units ("MSUs"), Processor Value Units ("PVUs"), or other
+level of use specified by IBM.
+
+"IBM" - International Business Machines Corporation or one of its
+subsidiaries.
+
+"License Information" ("LI") - a document that provides information and any
+additional terms specific to a Program. The Program's LI is available at
+www.ibm.com/software/sla. The LI can also be found in the Program's
+directory, by the use of a system command, or as a booklet included with the
+Program.
+
+"Program" - the following, including the original and all whole or partial
+copies: 1) machine-readable instructions and data, 2) components, files, and
+modules, 3) audio-visual content (such as images, text, recordings, or
+pictures), and 4) related licensed materials (such as keys and
+documentation).
+
+2. Agreement Structure
+
+This Agreement includes Part 1 - General Terms, Part 2 - Country-unique
+Terms (if any) and the LI and is the complete agreement between Licensee and
+IBM regarding the use of the Program. It replaces any prior oral or written
+communications between Licensee and IBM concerning Licensee's use of the
+Program. The terms of Part 2 may replace or modify those of Part 1. To the
+extent of any conflict, the LI prevails over both Parts.
+
+3. License Grant
+
+The Program is owned by IBM or an IBM supplier, and is copyrighted and
+licensed, not sold.
+
+IBM grants Licensee a nonexclusive license to 1) use the Program up to the
+Authorized Use specified in the invoice, 2) make and install copies to
+support such Authorized Use, and 3) make a backup copy, all provided that
+
+a. Licensee has lawfully obtained the Program and complies with the terms of
+this Agreement;
+
+b. the backup copy does not execute unless the backed-up Program cannot
+execute;
+
+c. Licensee reproduces all copyright notices and other legends of ownership
+on each copy, or partial copy, of the Program;
+
+d. Licensee ensures that anyone who uses the Program (accessed either
+locally or remotely) 1) does so only on Licensee's behalf and 2) complies
+with the terms of this Agreement;
+
+e. Licensee does not 1) use, copy, modify, or distribute the Program except
+as expressly permitted in this Agreement; 2) reverse assemble, reverse
+compile, otherwise translate, or reverse engineer the Program, except as
+expressly permitted by law without the possibility of contractual waiver; 3)
+use any of the Program's components, files, modules, audio-visual content,
+or related licensed materials separately from that Program; or 4)
+sublicense, rent, or lease the Program; and
+
+f. if Licensee obtains this Program as a Supporting Program, Licensee uses
+this Program only to support the Principal Program and subject to any
+limitations in the license to the Principal Program, or, if Licensee obtains
+this Program as a Principal Program, Licensee uses all Supporting Programs
+only to support this Program, and subject to any limitations in this
+Agreement. For purposes of this Item "f," a "Supporting Program" is a
+Program that is part of another IBM Program ("Principal Program") and
+identified as a Supporting Program in the Principal Program's LI. (To obtain
+a separate license to a Supporting Program without these restrictions,
+Licensee should contact the party from whom Licensee obtained the Supporting
+Program.)
+
+This license applies to each copy of the Program that Licensee makes.
+
+3.1 Trade-ups, Updates, Fixes, and Patches
+
+3.1.1 Trade-ups
+
+If the Program is replaced by a trade-up Program, the replaced Program's
+license is promptly terminated.
+
+3.1.2 Updates, Fixes, and Patches
+
+When Licensee obtains an update, fix, or patch to a Program, Licensee
+accepts any additional or different terms that are applicable to such
+update, fix, or patch that are specified in its LI. If no additional or
+different terms are provided, then the update, fix, or patch is subject
+solely to this Agreement. If the Program is replaced by an update, Licensee
+agrees to promptly discontinue use of the replaced Program.
+
+3.2 Fixed Term Licenses
+
+If IBM licenses the Program for a fixed term, Licensee's license is
+terminated at the end of the fixed term, unless Licensee and IBM agree to
+renew it.
+
+3.3 Term and Termination
+
+This Agreement is effective until terminated.
+
+IBM may terminate Licensee's license if Licensee fails to comply with the
+terms of this Agreement.
+
+If the license is terminated for any reason by either party, Licensee agrees
+to promptly discontinue use of and destroy all of Licensee's copies of the
+Program. Any terms of this Agreement that by their nature extend beyond
+termination of this Agreement remain in effect until fulfilled, and apply to
+both parties' respective successors and assignees.
+
+4. Charges
+
+Charges, if any, are based on Authorized Use obtained, which is specified in
+the invoice. IBM does not give credits or refunds for charges already due or
+paid, except as specified elsewhere in this Agreement.
+
+If Licensee wishes to increase its Authorized Use, Licensee must notify IBM
+or an authorized IBM reseller in advance and pay any applicable charges.
+
+5. Taxes
+
+If any authority imposes on the Program a duty, tax, levy, or fee, excluding
+tdistributables
+
+If the Program includes components that are Redistributable, they will be
+identified in the REDIST file that accompanies the Program. In addition to
+the license rights granted in the Agreement, Licensee may distribute the
+Redistributables subject to the following terms:
+
+1) Redistribution must be in object code form only and must conform to all
+directions, instruction and specifications in the Program's accompanying
+REDIST or documentation;
+
+2) If the Program's accompanying documentation expressly allows Licensee to
+modify the Redistributables, such modification must conform to all
+directions, instruction and specifications in that documentation and these
+modifications, if any, must be treated as Redistributables;
+
+3) Redistributables may be distributed only as part of Licensee's
+application that was developed using the Program ("Licensee's Application")
+and only to support Licensee's customers in connection with their use of
+Licensee's Application. Licensee's Application must constitute significant
+value add such that the Redistributables are not a substantial motivation
+for the acquisition by end users of Licensee's software product;
+
+4) If the Redistributables include a Java Runtime Environment, Licensee must
+also include other non-Java Redistributables with Licensee's Application,
+unless the Application is designed to run only on general computer devices
+(for example, laptops, desktops and servers) and not on handheld or other
+pervasive devices (i.e., devices that contain a microprocessor but do not
+have computing as their primary purpose);
+
+5) Licensee may not remove any copyright or notice files contained in the
+Redistributables;
+
+6) Licensee must hold IBM, its suppliers or distributors harmless from and
+against any claim arising out of the use or distribution of Licensee's
+Application;
+
+7) Licensee may not use the same path name as the original Redistributable
+files/modules;
+
+8) Licensee may not use IBM's, its suppliers or distributors names or
+trademarks in connection with the marketing of Licensee's Application
+without IBM's or that supplier's or distributor's prior written consent;
+
+9) IBM, its suppliers and distributors provide the Redistributables and
+related documentation without obligation of support and "AS IS", WITH NO
+WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING THE WARRANTY OF
+TITLE, NON-INFRINGEMENT OR NON-INTERFERENCE AND THE IMPLIED WARRANTIES AND
+CONDITIONS OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE;
+
+10) Licensee is responsible for all technical assistance for Licensee's
+Application and any modifications to the Redistributables; and
+
+11) Licensee's license agreement with the end user of Licensee's Application
+must notify the end user that the Redistributables or their modifications
+may not be i) used for any purpose other than to enable Licensee's
+Application, ii) copied (except for backup purposes), iii) further
+distributed or transferred without Licensee's Application or iv) reverse
+assembled, reverse compiled, or otherwise translated except as specifically
+permitted by law and without the possibility of a contractual waiver.
+Furthermore, Licensee's license agreement must be at least as protective of
+IBM as the terms of this Agreement.
+
+Program-unique Terms
+
+1. GENERAL
+
+a) Where the Program has been provided to Licensee separately by IBM, it is
+provided at no charge.
+
+b) The Program consists of binary code that executes on the operating
+system(s) specified in Readme files that accompany the Program.
+
+D/N: L-HKUR-8LEAPC
+
+P/N: L-HKUR-8LEAPC

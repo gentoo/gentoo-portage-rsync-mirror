@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/firewalld
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.13 2013/02/24 11:29:56 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.14 2014/06/17 12:50:57 dev-zero Exp $
+
+*firewalld-0.3.10 (17 Jun 2014)
+
+  17 Jun 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/firewalld-0.3.10-py3k-compat.patch, +firewalld-0.3.10.ebuild:
+  Version bump (bug #503376), which mostly solves py3k-compat (bug #459198).
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> firewalld-0.2.9-r1.ebuild:
   Stable for x86, wrt bug #458688
