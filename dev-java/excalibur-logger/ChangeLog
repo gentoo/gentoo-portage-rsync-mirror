@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/excalibur-logger
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.8 2009/07/05 20:01:44 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.9 2014/06/17 13:40:55 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -excalibur-logger-2.1-r1.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   05 Jul 2009; Markus Meier <maekke@gentoo.org>
   excalibur-logger-2.1-r2.ebuild:
@@ -38,4 +41,3 @@
   22 Dec 2006; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
   +excalibur-logger-2.1.ebuild:
   Initial ebuild for bug #158497. Ebuild written by me.
-

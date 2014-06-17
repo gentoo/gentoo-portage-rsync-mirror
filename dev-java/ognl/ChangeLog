@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ognl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.14 2014/01/02 15:14:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.15 2014/06/17 13:48:51 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -ognl-2.6.9-r1.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   02 Jan 2014; Tom Wijsman <TomWij@gentoo.org> ognl-2.6.9-r1.ebuild,
   ognl-2.6.9-r2.ebuild, ognl-3.0.8.ebuild:

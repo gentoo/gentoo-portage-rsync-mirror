@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.291 2014/06/16 14:18:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.292 2014/06/17 13:57:31 pinkbyte Exp $
+
+*ppp-2.4.6-r2 (17 Jun 2014)
+
+  17 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> -ppp-2.4.6.ebuild,
+  -ppp-2.4.6-r1.ebuild, +ppp-2.4.6-r2.ebuild:
+  Revision bump: fix missing semicolon in ip-up.d/50-initd.sh script, update
+  patchset, wrt bug #513512. Thanks to Daniel Kenzelmann <gentoo AT k8n.de> for
+  discovering this issue. Drop old revisions
 
 *ppp-2.4.6-r1 (16 Jun 2014)
 

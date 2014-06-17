@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/pdf-renderer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/ChangeLog,v 1.13 2014/04/13 16:17:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/ChangeLog,v 1.14 2014/06/17 13:49:37 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
+  -pdf-renderer-0_pre20090523.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   13 Apr 2014; Agostino Sarubbo <ago@gentoo.org> pdf-renderer-0.9.1.ebuild:
   Stable for ppc, wrt bug #496916

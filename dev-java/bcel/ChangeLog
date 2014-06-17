@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.65 2013/06/14 19:27:19 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.66 2014/06/17 13:39:28 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -bcel-5.2-r1.ebuild,
+  -bcel-5.2.ebuild, -files/bcel-5.1-gentoo-buildxml.diff,
+  -files/bcel-5.1-gentoo-src.diff:
+  NM: Cleanup superseded ebuilds.
 
   14 Jun 2013; Alexis Ballier <aballier@gentoo.org> bcel-5.2-r2.ebuild:
   keyword ~amd64-fbsd, bug #472010

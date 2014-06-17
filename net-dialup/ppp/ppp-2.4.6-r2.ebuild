@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.6.ebuild,v 1.1 2014/02/19 09:56:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.6-r2.ebuild,v 1.1 2014/06/17 13:57:31 pinkbyte Exp $
 
 EAPI=5
 
-inherit eutils multilib toolchain-funcs linux-info pam
+inherit eutils linux-info multilib pam toolchain-funcs
 
-PATCH_VER="1"
+PATCH_VER="3"
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	http://dev.gentoo.org/~polynomial-c/${P}-patches-${PATCH_VER}.tar.xz
+	http://dev.gentoo.org/~pinkbyte/distfiles/patches/${P}-patches-${PATCH_VER}.tar.xz
 	http://www.netservers.net.uk/gpl/ppp-dhcpc.tgz"
 
 LICENSE="BSD GPL-2"
@@ -65,20 +65,20 @@ src_prepare() {
 
 	# Set correct libdir
 	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
-		pppd/{pathnames.h,pppd.8}
+		pppd/{pathnames.h,pppd.8} || die
 
 	if use radius ; then
 		#set the right paths in radiusclient.conf
 		sed -i -e "s:/usr/local/etc:/etc:" \
 			-e "s:/usr/local/sbin:/usr/sbin:" \
-				pppd/plugins/radius/etc/radiusclient.conf
+				pppd/plugins/radius/etc/radiusclient.conf || die
 		#set config dir to /etc/ppp/radius
 		sed -i -e "s:/etc/radiusclient:/etc/ppp/radius:g" \
 			pppd/plugins/radius/{*.8,*.c,*.h} \
-			pppd/plugins/radius/etc/*
+			pppd/plugins/radius/etc/* || die
 	else
 		einfo "Disabling radius"
-		sed -i -e '/+= radius/s:^:#:' pppd/plugins/Makefile.linux
+		sed -i -e '/+= radius/s:^:#:' pppd/plugins/Makefile.linux || die
 	fi
 }
 
@@ -127,7 +127,7 @@ src_install() {
 
 	pamd_mimic_system ppp auth account session
 
-	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
+	local PLUGINS_DIR="/usr/$(get_libdir)/pppd/${PV}"
 	# closing " for syntax coloring
 	insinto "${PLUGINS_DIR}"
 	insopts -m0755
@@ -214,7 +214,7 @@ pkg_postinst() {
 		cp -pP "${ROOT}/etc/ppp/chap-secrets.example" "${ROOT}/etc/ppp/chap-secrets"
 
 	# lib name has changed
-	sed -i -e "s:^pppoe.so:rp-pppoe.so:" "${ROOT}/etc/ppp/options"
+	sed -i -e "s:^pppoe.so:rp-pppoe.so:" "${ROOT}/etc/ppp/options" || die
 
 	echo
 	elog "Pon, poff and plog scripts have been supplied for experienced users."
