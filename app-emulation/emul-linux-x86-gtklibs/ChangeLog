@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.131 2014/06/15 14:03:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.132 2014/06/17 06:16:30 mgorny Exp $
+
+*emul-linux-x86-gtklibs-20140508-r3 (17 Jun 2014)
+
+  17 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-gtklibs-20140508-r3.ebuild, +files/remove-native-20140508-r3,
+  -emul-linux-x86-gtklibs-20140508-r2.ebuild, -files/remove-native-20140508-r2:
+  Add multilib libglade.
 
   15 Jun 2014; Michał Górny <mgorny@gentoo.org>
   -emul-linux-x86-gtklibs-20140508-r1.ebuild:

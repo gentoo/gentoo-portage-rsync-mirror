@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140508-r2.ebuild,v 1.1 2014/06/11 16:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140508-r3.ebuild,v 1.1 2014/06/17 06:16:30 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -30,6 +30,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=x11-libs/gtk+-2.24.23-r1:2[abi_x86_32(-)]
 		>=gnome-base/gconf-3.2.6-r3[abi_x86_32(-)]
 		>=gnome-base/gnome-vfs-2.24.4-r2[abi_x86_32(-)]
+		>=gnome-base/libglade-2.6.4-r2[abi_x86_32(-)]
 	)"
 # RDEPEND on opengl stuff needed due cairo, bug #410213
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.116 2014/05/30 20:34:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.117 2014/06/17 06:11:45 patrick Exp $
+
+*boehm-gc-7.4.2 (17 Jun 2014)
+
+  17 Jun 2014; Patrick Lauer <patrick@gentoo.org> +boehm-gc-7.4.2.ebuild:
+  Bump
 
   30 May 2014; Anthony G. Basile <blueness@gentoo.org> boehm-gc-7.4.0.ebuild:
   Keyword ~mips

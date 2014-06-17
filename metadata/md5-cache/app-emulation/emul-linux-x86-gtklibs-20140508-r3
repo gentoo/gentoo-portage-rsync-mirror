@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst preinst prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=abi_x86_32 +development
+KEYWORDS=-* ~amd64
+LICENSE=GPL-2 LGPL-2 FTL LGPL-2.1 LGPL-3 MPL-1.1 MIT
+RDEPEND=~app-emulation/emul-linux-x86-baselibs-20140508 ~app-emulation/emul-linux-x86-xlibs-20140508 ~app-emulation/emul-linux-x86-opengl-20140508 !abi_x86_32? ( !>=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)] !>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)] ) abi_x86_32? ( >=x11-libs/pixman-0.30.2-r1[abi_x86_32(-)] >=x11-libs/cairo-1.12.16-r1[abi_x86_32(-)] >=x11-libs/gdk-pixbuf-2.30.5-r1[abi_x86_32(-)] >=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)] >=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)] >=x11-libs/pango-1.36.2-r1[abi_x86_32(-)] >=x11-libs/pangox-compat-0.0.2-r1[abi_x86_32(-)] >=media-libs/imlib-1.9.15-r4[abi_x86_32(-)] >=dev-libs/atk-2.10.0-r1[abi_x86_32(-)] >=x11-libs/gtk+-2.24.23-r1:2[abi_x86_32(-)] >=gnome-base/gconf-3.2.6-r3[abi_x86_32(-)] >=gnome-base/gnome-vfs-2.24.4-r2[abi_x86_32(-)] >=gnome-base/libglade-2.6.4-r2[abi_x86_32(-)] )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-gtklibs-20140508.tar.xz
+_eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=ede31a92dedbe03baaa5f7ce66548682

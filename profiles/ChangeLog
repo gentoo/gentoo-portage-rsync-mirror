@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9096 2014/06/16 19:26:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9098 2014/06/17 06:28:42 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove masks for games-emulation/{boycott-advance-sdl,neopocott}, packages
+  have been removed.
+
+  17 Jun 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove mask for app-emacs/redo, package has been removed.
 
   16 Jun 2014; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
   Drop hardened/linux/uclibc/amd64 and x86 to dev to avoid repoman warnings

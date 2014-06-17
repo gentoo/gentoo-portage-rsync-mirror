@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.113 2014/04/02 22:58:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.114 2014/06/17 06:04:32 radhermit Exp $
+
+*cython-0.20.2 (17 Jun 2014)
+
+  17 Jun 2014; Tim Harder <radhermit@gentoo.org> +cython-0.20.2.ebuild:
+  Version bump.
 
   02 Apr 2014; Mike Gilbert <floppym@gentoo.org> cython-0.20.1.ebuild:
   Add python3.4 to numpy usedep.

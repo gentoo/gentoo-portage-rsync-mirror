@@ -174,3 +174,7 @@ usr/lib32/libgnomevfs-2.so.0
 usr/lib32/libgnomevfs-2.so.0.2400.4
 usr/lib32/pkgconfig/gnome-vfs-2.0.pc
 usr/lib32/pkgconfig/gnome-vfs-module-2.0.pc
+usr/lib32/libglade-2.0.so
+usr/lib32/libglade-2.0.so.0
+usr/lib32/libglade-2.0.so.0.0.7
+usr/lib32/pkgconfig/libglade-2.0.pc

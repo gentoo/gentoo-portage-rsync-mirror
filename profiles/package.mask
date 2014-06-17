@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15802 2014/06/16 02:17:45 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15804 2014/06/17 06:28:42 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -166,25 +166,6 @@ dev-lisp/openmcl-build-tools
 # Masked for testing.
 # Tracker: https://bugs.gentoo.org/495124
 >=sys-devel/gcc-4.9.0
-
-# Ulrich Müller <ulm@gentoo.org> (17 May 2014)
-# Last upstream release in 1997, does not work reliably with
-# Emacs 22 and later. Use app-emacs/redo+ as replacement.
-# Masked for removal in 30 days, bug 510568.
-app-emacs/redo
-
-# Ulrich Müller <ulm@gentoo.org> (17 May 2014)
-# SRC_URI dead and no license permitting redistribution.
-# HOMEPAGE gone, attempts to contact main upstream author failed.
-# Second upstream author does not have access to sources any more.
-# Masked for removal in 30 days, bug 505620.
-games-emulation/boycott-advance-sdl
-
-# Ulrich Müller <ulm@gentoo.org> (17 May 2014)
-# SRC_URI dead and no license permitting redistribution.
-# HOMEPAGE gone, attempts to contact upstream authors failed.
-# Masked for removal in 30 days, bug 505628.
-games-emulation/neopocott
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (14 May 2014)
 # Depends on libevdev which still needs keywording, bug #487944
