@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.6.0.ebuild,v 1.1 2013/09/18 06:24:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.6.3.ebuild,v 1.1 2014/06/17 05:23:55 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		virtual/python-unittest2[${PYTHON_USEDEP}]
+		dev-python/pyjwt[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"
 

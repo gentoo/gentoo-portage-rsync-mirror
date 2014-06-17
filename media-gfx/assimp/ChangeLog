@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/assimp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/assimp/ChangeLog,v 1.1 2013/05/22 06:56:32 slis Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/assimp/ChangeLog,v 1.2 2014/06/17 05:23:44 slis Exp $
+
+*assimp-3.1.1 (17 Jun 2014)
+
+  17 Jun 2014; Sławek Lis <slis@gentoo.org> +assimp-3.1.1.ebuild:
+  Version bump
 
 *assimp-3.0.1270 (22 May 2013)
 
