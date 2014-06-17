@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.139 2014/06/14 10:03:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.140 2014/06/17 11:55:18 klausman Exp $
+
+  17 Jun 2014; Tobias Klausmann <klausman@gentoo.org> zentest-4.9.5.ebuild:
+  Stable on alpha, bug #490180
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> zentest-4.9.5.ebuild:
   x86 stable wrt bug #490180
