@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.6.0.ebuild,v 1.2 2014/05/15 16:43:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.6.0.ebuild,v 1.3 2014/06/17 06:36:03 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils toolchain-funcs games
@@ -12,12 +12,13 @@ SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="aac alsa debug flac fluidsynth mp3 opengl truetype vorbis"
+IUSE="aac alsa debug flac fluidsynth mp3 opengl theora truetype vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2[sound,joystick,video]
 	sys-libs/zlib
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
+	theora? ( media-libs/libtheora )
 	aac? ( media-libs/faad2 )
 	alsa? ( media-libs/alsa-lib )
 	mp3? ( media-libs/libmad )
@@ -67,6 +68,7 @@ src_configure() {
 		$(use_enable flac) \
 		$(use_enable opengl) \
 		$(use_enable vorbis) \
+		$(use_enable theora theoradec) \
 		$(use_enable truetype freetype2) \
 		$(use_enable x86 nasm) \
 		${myconf} || die

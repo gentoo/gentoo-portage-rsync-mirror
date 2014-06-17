@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.57 2014/05/30 06:28:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.58 2014/06/17 06:41:11 patrick Exp $
+
+*werkzeug-0.9.6 (17 Jun 2014)
+
+  17 Jun 2014; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.9.6.ebuild:
+  Bump
 
   30 May 2014; Ian Delaney <idella4@gentoo.org> werkzeug-0.9.4.ebuild:
   drop py2.6 pypy2_0 add py3.4 support
