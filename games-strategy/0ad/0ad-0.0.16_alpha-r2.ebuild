@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/0ad-0.0.16_alpha-r1.ebuild,v 1.1 2014/05/22 12:06:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/0ad/0ad-0.0.16_alpha-r2.ebuild,v 1.1 2014/06/17 20:44:55 hasufell Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit eutils wxwidgets toolchain-funcs gnome2-utils games
 
 MY_P=0ad-${PV/_/-}
 DESCRIPTION="A free, real-time strategy game"
-HOMEPAGE="http://wildfiregames.com/0ad/"
+HOMEPAGE="http://play0ad.com/"
 SRC_URI="http://releases.wildfiregames.com/${MY_P}-unix-build.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 MIT CC-BY-SA-3.0 ZLIB"
@@ -48,7 +48,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc-4.9.patch
 }
 
 src_configure() {
