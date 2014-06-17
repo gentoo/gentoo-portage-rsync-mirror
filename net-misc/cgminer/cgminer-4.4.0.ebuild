@@ -1,27 +1,27 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.3.4.ebuild,v 1.1 2014/05/25 20:49:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.4.0.ebuild,v 1.1 2014/06/17 15:14:31 blueness Exp $
 
 EAPI=5
 
-inherit autotools flag-o-matic
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
 SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/4.3/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/4.4/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 
-HARDWARE="ants1 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer spondoolies"
+HARDWARE="ants1 ants2 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer spondoolies"
 IUSE="doc examples udev hardened ncurses ${HARDWARE}"
 
 REQUIRED_USE="|| ( ${HARDWARE} )"
 
 RDEPEND="net-misc/curl
-	dev-libs/jansson
+	>=dev-libs/jansson-2.5
 	ncurses? ( sys-libs/ncurses )
 	avalon? ( virtual/libusb:1 )
 	bflsc? ( virtual/libusb:1 )
@@ -38,6 +38,7 @@ DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-4.3.5-system-jansson.patch
 	eautoreconf
 }
 
@@ -46,6 +47,7 @@ src_configure() {
 
 	econf $(use_with ncurses curses) \
 		$(use_enable ants1) \
+		$(use_enable ants2) \
 		$(use_enable avalon) \
 		$(use_enable avalon2) \
 		$(use_enable bab) \
@@ -61,26 +63,24 @@ src_configure() {
 		$(use_enable knc) \
 		$(use_enable minion) \
 		$(use_enable modminer) \
-		$(use_enable spondoolies)
+		$(use_enable spondoolies) \
+		--with-system-libusb
 	# sanitize directories (is this still needed?)
 	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/cgminer"'"~' config.h
 }
 
 src_install() { # How about using some make install?
 	dobin cgminer
+
 	insinto /lib/udev/rules.d
 	use udev && doins 01-cgminer.rules
+
 	if use doc; then
 		dodoc AUTHORS NEWS README API-README
 		use icarus || use bitforce || use modminer && dodoc FPGA-README
 		use avalon || use bflsc && dodoc ASIC-README
 	fi
 
-	if use modminer; then
-		insinto /usr/lib/cgminer/modminer
-		doins bitstreams/*.ncd
-		dodoc bitstreams/COPYING_fpgaminer
-	fi
 	if use examples; then
 		docinto examples
 		dodoc api-example.php miner.php API.java api-example.c example.conf

@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/libzpaq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.13 2014/02/19 17:32:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.14 2014/06/17 15:14:44 mgorny Exp $
+
+*libzpaq-6.53 (17 Jun 2014)
+
+  17 Jun 2014; Michał Górny <mgorny@gentoo.org> +libzpaq-6.53.ebuild:
+  Version bump, bug #513538.
 
 *libzpaq-6.49 (19 Feb 2014)
 

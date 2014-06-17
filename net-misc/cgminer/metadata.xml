@@ -13,6 +13,7 @@
 	<use>
 		<flag name='adl'>Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
 		<flag name="ants1">Enable support for Antminer S1 Bitmain</flag>
+		<flag name="ants2">Enable support for Antminer S2 Bitmain</flag>
 		<flag name="avalon">Enable support for Avalon ASICs</flag>
 		<flag name="avalon2">Enable support for Avalon2 ASICs</flag>
 		<flag name="bab">Enable support for BlackArrow Bitfury</flag>

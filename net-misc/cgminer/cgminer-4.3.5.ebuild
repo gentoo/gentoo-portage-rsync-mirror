@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.3.5.ebuild,v 1.1 2014/06/10 18:35:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.3.5.ebuild,v 1.2 2014/06/17 15:14:31 blueness Exp $
 
 EAPI=5
 
@@ -8,14 +8,14 @@ inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/4.3/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/4.3/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 
-HARDWARE="ants1 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer spondoolies"
+HARDWARE="ants1 ants2 avalon avalon2 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast icarus klondike knc minion modminer spondoolies"
 IUSE="doc examples udev hardened ncurses ${HARDWARE}"
 
 REQUIRED_USE="|| ( ${HARDWARE} )"
@@ -47,6 +47,7 @@ src_configure() {
 
 	econf $(use_with ncurses curses) \
 		$(use_enable ants1) \
+		$(use_enable ants2) \
 		$(use_enable avalon) \
 		$(use_enable avalon2) \
 		$(use_enable bab) \
