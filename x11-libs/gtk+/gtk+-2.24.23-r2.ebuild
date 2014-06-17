@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r1.ebuild,v 1.2 2014/06/12 15:18:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r2.ebuild,v 1.1 2014/06/17 18:19:33 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -181,7 +181,10 @@ multilib_src_configure() {
 
 	# work-around gtk-doc out-of-source brokedness
 	if multilib_is_native_abi; then
-		ln -s "${S}"/docs/html docs/html || die
+		local d
+		for d in gdk gtk libgail-util; do
+			ln -s "${S}"/docs/reference/${d}/html docs/reference/${d}/html || die
+		done
 	fi
 }
 

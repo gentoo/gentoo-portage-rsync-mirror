@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.50 2014/06/02 18:11:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.51 2014/06/17 18:13:46 maksbotan Exp $
 
 EAPI=5
 
@@ -55,7 +55,7 @@ RDEPEND+="
 		x11-libs/libXext
 		x11-libs/libXxf86vm
 		opengl? ( virtual/opengl )
-		lcms? ( media-libs/lcms:2 )
+		lcms? ( >=media-libs/lcms-2.6:2 )
 		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
 		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
