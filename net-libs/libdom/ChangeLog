@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libdom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/ChangeLog,v 1.5 2014/01/05 19:16:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/ChangeLog,v 1.6 2014/06/17 16:24:12 mgorny Exp $
+
+  17 Jun 2014; Michał Górny <mgorny@gentoo.org> libdom-0.0.1.ebuild:
+  Use multilib dependencies on expat & libxml.
 
   05 Jan 2014; Fabian Groffen <grobian@gentoo.org> libdom-0.0.1.ebuild:
   Marked ~m68k-mint, bug #494512
