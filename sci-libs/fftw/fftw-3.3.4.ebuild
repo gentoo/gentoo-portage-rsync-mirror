@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.4.ebuild,v 1.2 2014/05/24 22:14:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.4.ebuild,v 1.3 2014/06/17 15:52:04 mgorny Exp $
 
 EAPI=5
 
@@ -87,7 +87,7 @@ src_configure() {
 
 		#jlec reported USE=quad on abi_x86_32 has too less registers
 		#stub Makefiles
-		if use amd64 && ! multilib_is_native_abi && [[ $x = quad ]]; then
+		if [[ ${ABI} == x86 && ${x} == quad ]]; then
 			mkdir -p "${BUILD_DIR}/tests" || die
 			echo "all: ;" > "${BUILD_DIR}/Makefile" || die
 			echo "install: ;" >> "${BUILD_DIR}/Makefile" || die
