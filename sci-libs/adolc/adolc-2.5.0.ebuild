@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/adolc-2.5.0.ebuild,v 1.3 2014/06/16 21:16:08 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/adolc-2.5.0.ebuild,v 1.4 2014/06/17 19:57:50 jauhien Exp $
 
 EAPI=5
 
@@ -34,8 +34,6 @@ PATCHES=(
 src_configure() {
 	 local myeconfargs=(
 		 $(use_enable mpi ampi)
-		 $(use_with mpi ampi "${EPREFIX}"/usr)
-		 $(use_with mpi mpi-root "${EPREFIX}"/usr)
 		 $(use_enable sparse)
 		 $(use_with sparse colpack "${EPREFIX}"/usr)
 	 )

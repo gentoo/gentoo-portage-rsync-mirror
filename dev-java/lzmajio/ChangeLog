@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lzmajio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/ChangeLog,v 1.8 2012/06/04 08:22:51 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/ChangeLog,v 1.9 2014/06/17 19:35:13 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -lzmajio-0.94.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   04 Jun 2012; Johannes Huber <johu@gentoo.org> lzmajio-0.95.ebuild:
   Stable for x86, wrt bug #418721
@@ -38,4 +41,3 @@
   21 Jan 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +files/build.xml,
   +lzmajio-0.92.ebuild:
   Initial commit. Fixes bug 244924
-
