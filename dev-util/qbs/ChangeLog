@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qbs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/ChangeLog,v 1.1 2013/12/29 19:49:45 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/ChangeLog,v 1.2 2014/06/17 20:04:43 pesa Exp $
+
+*qbs-1.2.1 (17 Jun 2014)
+
+  17 Jun 2014; Davide Pesavento <pesa@gentoo.org> +qbs-1.2.1.ebuild:
+  Version bump.
 
 *qbs-1.1.1 (29 Dec 2013)
 

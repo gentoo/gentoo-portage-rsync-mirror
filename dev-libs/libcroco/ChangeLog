@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.95 2014/04/26 06:40:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.96 2014/06/17 20:08:10 mgorny Exp $
+
+*libcroco-0.6.8-r1 (17 Jun 2014)
+
+  17 Jun 2014; Michał Górny <mgorny@gentoo.org> +libcroco-0.6.8-r1.ebuild:
+  Enable multilib support, needed by gnome-base/librsvg.
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libcroco-0.6.5.ebuild:
   drop old
