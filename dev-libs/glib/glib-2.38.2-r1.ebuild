@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.38.2-r1.ebuild,v 1.12 2014/06/03 04:20:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.38.2-r1.ebuild,v 1.13 2014/06/17 17:49:16 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -216,6 +216,13 @@ multilib_src_configure() {
 		--enable-man \
 		--with-pcre=internal \
 		--with-xml-catalog="${EPREFIX}/etc/xml/catalog"
+
+	if multilib_is_native_abi; then
+		local d
+		for d in glib gio gobject; do
+			ln -s "${S}"/docs/reference/${d}/html docs/reference/${d}/html || die
+		done
+	fi
 }
 
 multilib_src_install_all() {
