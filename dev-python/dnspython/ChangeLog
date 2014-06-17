@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.82 2013/10/21 07:57:14 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.83 2014/06/17 14:48:27 jer Exp $
+
+  17 Jun 2014; Jeroen Roovers <jer@gentoo.org> dnspython-1.11.1.ebuild:
+  Stable for HPPA (bug #513558).
 
 *dnspython-1.11.1 (21 Oct 2013)
 
