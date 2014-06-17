@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/json-simple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/ChangeLog,v 1.15 2012/03/09 14:22:44 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/ChangeLog,v 1.16 2014/06/17 11:17:56 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/extra-constructors-from-azureus.patch,
+  -json-simple-1.0_pre20080420.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> json-simple-1.1.ebuild:
   Marking json-simple-1.1 ppc64 for bug 399999
@@ -60,4 +65,3 @@
   +json-simple-20080420.ebuild:
   Initial addition. Thanks to serkan for the original ebuild which was then
   improved by me.
-

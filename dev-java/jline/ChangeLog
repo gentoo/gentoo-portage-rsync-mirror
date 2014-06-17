@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jline
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.28 2013/08/17 09:35:01 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.29 2014/06/17 11:14:19 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jline-0.9.91.ebuild,
+  -jline-0.9.94.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
 *jline-2.11-r1 (17 Aug 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/easyneurons
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/ChangeLog,v 1.8 2012/12/16 14:51:08 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/ChangeLog,v 1.9 2014/06/17 11:07:39 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -easyneurons-2.2.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #169737

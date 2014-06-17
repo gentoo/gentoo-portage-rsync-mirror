@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jgrapht
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/ChangeLog,v 1.13 2014/03/03 23:37:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/ChangeLog,v 1.14 2014/06/17 11:12:39 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/DOTExporter-nullpointer.patch, -jgrapht-0.7.3.ebuild,
+  -jgrapht-0.8.2.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> jgrapht-0.8.3.ebuild:
   amd64 stable, bug #492016

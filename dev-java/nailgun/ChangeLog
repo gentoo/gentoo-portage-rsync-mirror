@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/nailgun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.12 2012/12/16 14:51:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.13 2014/06/17 11:24:08 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/0.7.1-Makefile.patch,
+  -nailgun-0.7.1.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #169737

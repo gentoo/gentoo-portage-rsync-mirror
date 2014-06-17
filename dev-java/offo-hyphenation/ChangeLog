@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/offo-hyphenation
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/offo-hyphenation/ChangeLog,v 1.8 2009/07/19 14:09:20 nixnut Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/offo-hyphenation/ChangeLog,v 1.9 2014/06/17 11:03:07 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -offo-hyphenation-1.0.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> offo-hyphenation-1.2.ebuild:
   ppc stable #274801
@@ -34,4 +37,3 @@
   16 May 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
   +offo-hyphenation-1.0.ebuild:
   Initial commit for bug #178353.
-

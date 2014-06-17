@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dsiutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.19 2012/12/16 13:59:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.20 2014/06/17 11:06:57 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -dsiutils-1.0.10-r1.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> dsiutils-1.0.10-r2.ebuild:
   Stable for x86, wrt bug #424337

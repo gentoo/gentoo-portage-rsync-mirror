@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qdox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.44 2013/10/20 16:32:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.45 2014/06/17 11:02:23 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -qdox-1.12.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> qdox-1.12-r1.ebuild:
   Stable for ppc64, wrt bug #476958

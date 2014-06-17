@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/japitools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.14 2012/03/05 20:32:24 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japitools/ChangeLog,v 1.15 2014/06/17 11:09:11 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -japitools-0.9.7.ebuild:
+  NM: Cleanup superseeded ebuilds.
 
   05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove betelgeuse
@@ -62,4 +65,3 @@
   13 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
   +japitools-0.9.5.ebuild:
   Initial import. Ebuild done by me.
-
