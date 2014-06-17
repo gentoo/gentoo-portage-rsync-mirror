@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.134 2014/06/14 06:52:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.135 2014/06/17 18:48:30 graaff Exp $
+
+  17 Jun 2014; Hans de Graaff <graaff@gentoo.org> ruby-gettext-2.3.8.ebuild:
+  Add dependency on a compatible version of dev-ruby/rake. Simplify running the
+  tests in an attempt to fix bug 513480.
 
   14 Jun 2014; Hans de Graaff <graaff@gentoo.org> ruby-gettext-2.3.3.ebuild,
   ruby-gettext-2.3.8.ebuild:

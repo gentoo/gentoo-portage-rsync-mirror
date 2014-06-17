@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.3.8.ebuild,v 1.9 2014/06/14 06:52:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.3.8.ebuild,v 1.10 2014/06/17 18:48:30 graaff Exp $
 
 EAPI=5
 
@@ -12,8 +12,6 @@ RUBY_FAKEGEM_VERSION="${PV%_*}"
 RUBY_FAKEGEM_TASK_DOC="yard"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
-
-RUBY_FAKEGEM_TASK_TEST="none"
 
 RUBY_FAKEGEM_EXTRAINSTALL="po"
 
@@ -30,6 +28,7 @@ LICENSE="Ruby"
 ruby_add_rdepend "~dev-ruby/locale-2.0.5 dev-ruby/levenshtein"
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )
+	<dev-ruby/rake-10
 	dev-ruby/racc"
 ruby_add_bdepend "test? ( dev-ruby/test-unit-rr )"
 
@@ -46,12 +45,6 @@ all_ruby_prepare() {
 
 	# Avoid dependency on developer-specific tools.
 	sed -i -e '/notify/ s:^:#:' test/run-test.rb || die
-}
-
-each_ruby_test() {
-	# Upstream tries to daisy-chain rake calls but they fail badly
-	# with our setup, so run it manually.
-	${RUBY} test/run-test.rb || die "tests failed"
 }
 
 all_ruby_install() {
