@@ -1,6 +1,9 @@
 # ChangeLog for www-client/qtweb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/ChangeLog,v 1.5 2014/06/12 18:01:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/ChangeLog,v 1.6 2014/06/17 17:03:17 jer Exp $
+
+  17 Jun 2014; Jeroen Roovers <jer@gentoo.org> qtweb-3.8.5_p108.ebuild:
+  Drop keywords until configuration storage problems have been fixed.
 
   12 Jun 2014; Jeroen Roovers <jer@gentoo.org> qtweb-3.8.5_p108.ebuild:
   And add a SLOT too.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/qtweb-3.8.5_p108.ebuild,v 1.5 2014/06/12 18:01:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qtweb/qtweb-3.8.5_p108.ebuild,v 1.6 2014/06/17 17:03:17 jer Exp $
 
 EAPI=5
 inherit qt4-r2
@@ -13,7 +13,7 @@ SRC_URI="https://codeload.github.com/magist3r/${MY_PN}/tar.gz/b${PV/*_p} -> ${P}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 RDEPEND="
 	dev-qt/qtcore:4
@@ -26,6 +26,10 @@ DEPEND="
 "
 
 S=${WORKDIR}/${MY_PN}-b${PV/*_p}
+
+PATCHES=(
+	"${FILESDIR}"/${P}-default-download-path.patch
+)
 
 src_install() {
 	dobin build/${MY_PN}
