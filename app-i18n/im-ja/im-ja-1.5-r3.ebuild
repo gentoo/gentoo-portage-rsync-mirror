@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r3.ebuild,v 1.1 2014/06/01 18:18:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r3.ebuild,v 1.2 2014/06/17 08:48:28 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -15,7 +15,7 @@ SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="canna freewnn skk anthy"
 # --enable-debug causes build failure with gtk+-2.4
 #IUSE="${IUSE} debug"
