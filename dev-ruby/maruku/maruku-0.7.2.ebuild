@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.2.ebuild,v 1.1 2014/05/27 04:56:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.2.ebuild,v 1.2 2014/06/17 09:58:39 mrueg Exp $
 
 EAPI=5
 
@@ -17,8 +17,8 @@ RUBY_FAKEGEM_EXTRAINSTALL="data"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A Markdown-superset interpreter written in Ruby."
-HOMEPAGE="http://maruku.rubyforge.org/"
+DESCRIPTION="A Markdown-superset interpreter written in Ruby"
+HOMEPAGE="https://github.com/bhollis/maruku"
 
 LICENSE="GPL-2"
 SLOT="0"

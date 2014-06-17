@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/metaid-1.0-r3.ebuild,v 1.2 2014/05/21 02:14:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaid/metaid-1.0-r3.ebuild,v 1.3 2014/06/17 09:54:53 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -13,7 +13,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="metaid.rb"
 inherit ruby-fakegem
 
 DESCRIPTION="An aid to Ruby metaprogramming"
-HOMEPAGE="http://rubyforge.org/projects/metaid/"
+HOMEPAGE="https://rubygems.org/gems/metaid"
 
 LICENSE="MIT"
 SLOT="0"

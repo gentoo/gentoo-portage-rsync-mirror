@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.106 2014/06/14 10:02:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.107 2014/06/17 10:00:03 mrueg Exp $
+
+  17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> rubyforge-2.0.4-r3.ebuild,
+  rubyforge-2.0.4-r4.ebuild:
+  Update hoe dependency.
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   rubyforge-2.0.4-r3.ebuild:

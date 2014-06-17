@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r3.ebuild,v 1.7 2014/06/14 10:02:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r3.ebuild,v 1.8 2014/06/17 10:00:03 mrueg Exp $
 
 EAPI=5
 
@@ -23,10 +23,10 @@ IUSE=""
 ruby_add_rdepend '>=dev-ruby/json-1.1.7'
 
 ruby_add_bdepend "
-	doc? ( dev-ruby/hoe )
+	doc? ( >=dev-ruby/hoe-2.13 )
 	test? (
 		virtual/ruby-ssl
-		dev-ruby/hoe
+		>=dev-ruby/hoe-2.13
 	)"
 
 all_ruby_prepare() {
