@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.1-r1.ebuild,v 1.1 2014/05/31 11:58:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.1-r1.ebuild,v 1.2 2014/06/18 19:20:22 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="doc system-renpy"
 # make system-renpy optional due to #459742 :(
 RDEPEND="system-renpy? ( games-engines/renpy )
 	!system-renpy? (
-		amd64? ( sys-libs/zlib[abi_x86_32] )
+		amd64? ( >=sys-libs/zlib-1.2.8-r1[abi_x86_32] )
 		x86? ( sys-libs/zlib )
 	)" #495270
 

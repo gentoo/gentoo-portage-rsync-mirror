@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-4.0.ebuild,v 1.2 2014/04/28 17:44:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-4.0.ebuild,v 1.3 2014/06/18 19:19:24 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+cli egl qt4"
 
 RDEPEND="${PYTHON_DEPS}
-	app-arch/snappy[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
-	media-libs/mesa[egl?,${MULTILIB_USEDEP}]
+	>=app-arch/snappy-1.1.1[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	>=media-libs/mesa-9.1.6[egl?,${MULTILIB_USEDEP}]
 	egl? ( || (
 		>=media-libs/mesa-8.0[gles1,gles2]
 		<media-libs/mesa-8.0[gles]

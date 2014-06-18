@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.18 2014/05/22 12:51:08 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.19 2014/06/18 19:10:40 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> isl-0.12.2.ebuild,
+  isl-0.13.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *isl-0.13 (22 May 2014)
 *isl-0.12.2 (22 May 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.3 2014/06/12 15:12:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.4 2014/06/18 19:23:38 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -17,33 +17,33 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="acl avahi doc fam gnutls ipv6 kerberos samba ssl"
 
-RDEPEND=">=gnome-base/gconf-2[${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.9.3[${MULTILIB_USEDEP}]
-	>=dev-libs/libxml2-2.6[${MULTILIB_USEDEP}]
-	app-arch/bzip2[${MULTILIB_USEDEP}]
+RDEPEND=">=gnome-base/gconf-2.32.4-r1[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}]
+	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
+	>=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}]
 	gnome-base/gnome-mime-data
 	>=x11-misc/shared-mime-info-0.14
-	>=dev-libs/dbus-glib-0.71[${MULTILIB_USEDEP}]
+	>=dev-libs/dbus-glib-0.100.2[${MULTILIB_USEDEP}]
 	acl? (
-		sys-apps/acl[${MULTILIB_USEDEP}]
-		sys-apps/attr[${MULTILIB_USEDEP}] )
-	avahi? ( >=net-dns/avahi-0.6[${MULTILIB_USEDEP}] )
+		>=sys-apps/acl-2.2.52-r1[${MULTILIB_USEDEP}]
+		>=sys-apps/attr-2.4.47-r1[${MULTILIB_USEDEP}] )
+	avahi? ( >=net-dns/avahi-0.6.31-r2[${MULTILIB_USEDEP}] )
 	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
-	fam? ( virtual/fam[${MULTILIB_USEDEP}] )
-	samba? ( >=net-fs/samba-3[${MULTILIB_USEDEP}] )
+	fam? ( >=virtual/fam-0-r1[${MULTILIB_USEDEP}] )
+	samba? ( >=net-fs/samba-3.6.23-r1[${MULTILIB_USEDEP}] )
 	ssl? (
 		gnutls?	(
-			net-libs/gnutls[${MULTILIB_USEDEP}]
+			>=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}]
 			!gnome-extra/gnome-vfs-sftp )
 		!gnutls? (
-			>=dev-libs/openssl-0.9.5[${MULTILIB_USEDEP}]
+			>=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}]
 			!gnome-extra/gnome-vfs-sftp ) )
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	gnome-base/gnome-common
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	>=dev-util/gtk-doc-am-1.13
 	doc? ( >=dev-util/gtk-doc-1 )"
 RDEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.18-r2.ebuild,v 1.1 2014/06/12 19:20:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.18-r2.ebuild,v 1.2 2014/06/18 19:21:33 mgorny Exp $
 
 EAPI=5
 
@@ -26,9 +26,9 @@ RDEPEND=">=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-lang/perl
-	dev-libs/check[${MULTILIB_USEDEP}]
-	dev-util/cppunit[${MULTILIB_USEDEP}]
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=dev-libs/check-0.9.11[${MULTILIB_USEDEP}]
+	>=dev-util/cppunit-1.13.2[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 #requires keywording first; Bug #506510
 RESTRICT="test"
 

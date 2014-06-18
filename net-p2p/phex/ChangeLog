@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/phex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.16 2010/07/10 15:18:22 sochotnicky Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.17 2014/06/18 19:22:46 mrueg Exp $
+
+  18 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -phex-3.2.0.102.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   10 Jul 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   files/0001-Remove-MacOS-GUI-references.patch, phex-3.2.0.102-r1.ebuild:
@@ -81,4 +84,3 @@
   22 Jul 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
   +phex-2.0.0.76.ebuild, +files/phex.sh:
   Initial commit.
-

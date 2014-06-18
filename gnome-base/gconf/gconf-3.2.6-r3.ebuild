@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.6-r3.ebuild,v 1.1 2014/06/11 16:31:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.6-r3.ebuild,v 1.2 2014/06/18 19:22:58 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -21,19 +21,19 @@ IUSE="debug +introspection ldap policykit"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-libs/glib-2.31:2[${MULTILIB_USEDEP}]
-	>=dev-libs/dbus-glib-0.74:=[${MULTILIB_USEDEP}]
-	>=sys-apps/dbus-1:=[${MULTILIB_USEDEP}]
-	>=dev-libs/libxml2-2:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/dbus-glib-0.100.2:=[${MULTILIB_USEDEP}]
+	>=sys-apps/dbus-1.6.18-r1:=[${MULTILIB_USEDEP}]
+	>=dev-libs/libxml2-2.9.1-r4:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5:= )
-	ldap? ( net-nds/openldap:=[${MULTILIB_USEDEP}] )
+	ldap? ( >=net-nds/openldap-2.4.38-r1:=[${MULTILIB_USEDEP}] )
 	policykit? ( sys-auth/polkit:= )
 "
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 RDEPEND="${RDEPEND}
 	abi_x86_32? (

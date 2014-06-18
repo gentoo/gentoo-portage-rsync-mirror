@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.2 2014/05/28 23:25:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.3 2014/06/18 19:02:14 mgorny Exp $
 
 EAPI=5
 inherit eutils emul-linux-x86
@@ -15,43 +15,43 @@ RDEPEND="
 	|| (
 		~app-emulation/emul-linux-x86-baselibs-${PV}
 		(
-			dev-db/sqlite:3[abi_x86_32(-)]
-			dev-libs/glib[abi_x86_32(-)]
-			dev-libs/openssl[abi_x86_32(-)]
+			>=dev-db/sqlite-3.8.2:3[abi_x86_32(-)]
+			>=dev-libs/glib-2.38.2-r1[abi_x86_32(-)]
+			>=dev-libs/openssl-1.0.1h-r2[abi_x86_32(-)]
 			mng? ( <media-libs/libmng-2[abi_x86_32(-)] )
-			media-libs/libpng:0/16[abi_x86_32(-)]
-			media-libs/tiff[abi_x86_32(-)]
-			sys-apps/dbus[abi_x86_32(-)]
-			sys-libs/zlib[abi_x86_32(-)]
-			virtual/jpeg:62[abi_x86_32(-)]
+			>=media-libs/libpng-1.6.10:0/16[abi_x86_32(-)]
+			>=media-libs/tiff-3.9.7-r1[abi_x86_32(-)]
+			>=sys-apps/dbus-1.6.18-r1[abi_x86_32(-)]
+			>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
+			>=virtual/jpeg-62:62[abi_x86_32(-)]
 		)
 	)
 	|| (
 		~app-emulation/emul-linux-x86-medialibs-${PV}
 		(
-			media-libs/gstreamer:0.10[abi_x86_32(-)]
-			media-libs/gst-plugins-base:0.10[abi_x86_32(-)]
+			>=media-libs/gstreamer-0.10.36-r2:0.10[abi_x86_32(-)]
+			>=media-libs/gst-plugins-base-0.10.36:0.10[abi_x86_32(-)]
 		)
 	)
 	|| (
 		~app-emulation/emul-linux-x86-opengl-${PV}
-		virtual/opengl[abi_x86_32(-)]
+		>=virtual/opengl-7.0-r1[abi_x86_32(-)]
 	)
 	|| (
 		~app-emulation/emul-linux-x86-xlibs-${PV}
 		(
-			media-libs/fontconfig[abi_x86_32(-)]
-			media-libs/freetype[abi_x86_32(-)]
-			x11-libs/libICE[abi_x86_32(-)]
-			x11-libs/libSM[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXcursor[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libXfixes[abi_x86_32(-)]
-			x11-libs/libXinerama[abi_x86_32(-)]
-			x11-libs/libXi[abi_x86_32(-)]
-			x11-libs/libXrandr[abi_x86_32(-)]
-			x11-libs/libXrender[abi_x86_32(-)]
+			>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+			>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+			>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+			>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+			>=x11-libs/libXfixes-5.0.1[abi_x86_32(-)]
+			>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
+			>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+			>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
+			>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
 		)
 	)"
 

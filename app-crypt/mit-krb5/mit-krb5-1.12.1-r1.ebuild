@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.12.1-r1.ebuild,v 1.4 2014/05/30 21:23:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.12.1-r1.ebuild,v 1.5 2014/06/18 19:01:12 mgorny Exp $
 
 EAPI=5
 
@@ -19,13 +19,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc +keyutils openldap +pkinit selinux +threads test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
-	>=sys-libs/e2fsprogs-libs-1.41.0[${MULTILIB_USEDEP}]
-	|| ( dev-libs/libverto[libev,${MULTILIB_USEDEP}]
-		dev-libs/libverto[libevent,${MULTILIB_USEDEP}]
-		dev-libs/libverto[tevent,${MULTILIB_USEDEP}] )
-	keyutils? ( sys-apps/keyutils[${MULTILIB_USEDEP}] )
-	openldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
-	pkinit? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
+	>=sys-libs/e2fsprogs-libs-1.42.9[${MULTILIB_USEDEP}]
+	|| ( >=dev-libs/libverto-0.2.5[libev,${MULTILIB_USEDEP}]
+		>=dev-libs/libverto-0.2.5[libevent,${MULTILIB_USEDEP}]
+		>=dev-libs/libverto-0.2.5[tevent,${MULTILIB_USEDEP}] )
+	keyutils? ( >=sys-apps/keyutils-1.5.8[${MULTILIB_USEDEP}] )
+	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
+	pkinit? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	selinux? ( sec-policy/selinux-kerberos )
 	xinetd? ( sys-apps/xinetd )
 	abi_x86_32? (

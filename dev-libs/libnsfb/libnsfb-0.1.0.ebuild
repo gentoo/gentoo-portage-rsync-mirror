@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.1.0.ebuild,v 1.3 2014/06/17 17:37:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.1.0.ebuild,v 1.4 2014/06/18 19:13:01 mgorny Exp $
 
 EAPI=5
 
@@ -14,13 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm"
 IUSE="sdl test vnc wayland xcb"
 
-RDEPEND="sdl? ( media-libs/libsdl[static-libs?,${MULTILIB_USEDEP}] )
-	vnc? ( net-libs/libvncserver[static-libs?,${MULTILIB_USEDEP}] )
-	wayland? ( dev-libs/wayland[static-libs?,${MULTILIB_USEDEP}] )
-	xcb? ( x11-libs/libxcb[static-libs?,${MULTILIB_USEDEP}]
-		x11-libs/xcb-util[static-libs?,${MULTILIB_USEDEP}]
-		x11-libs/xcb-util-image[static-libs?,${MULTILIB_USEDEP}]
-		x11-libs/xcb-util-keysyms[static-libs?,${MULTILIB_USEDEP}] )"
+RDEPEND="sdl? ( >=media-libs/libsdl-1.2.15-r4[static-libs?,${MULTILIB_USEDEP}] )
+	vnc? ( >=net-libs/libvncserver-0.9.9-r2[static-libs?,${MULTILIB_USEDEP}] )
+	wayland? ( >=dev-libs/wayland-1.0.6[static-libs?,${MULTILIB_USEDEP}] )
+	xcb? ( >=x11-libs/libxcb-1.9.1[static-libs?,${MULTILIB_USEDEP}]
+		>=x11-libs/xcb-util-0.3.9-r1[static-libs?,${MULTILIB_USEDEP}]
+		>=x11-libs/xcb-util-image-0.3.9-r1[static-libs?,${MULTILIB_USEDEP}]
+		>=x11-libs/xcb-util-keysyms-0.3.9-r1[static-libs?,${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${PN}-0.1.0-autodetect.patch )

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.190 2014/04/28 17:23:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.191 2014/06/18 19:07:16 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> tcl-8.5.15-r1.ebuild,
+  tcl-8.6.1-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> tcl-8.5.15-r1.ebuild,
   tcl-8.6.1-r1.ebuild:

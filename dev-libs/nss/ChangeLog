@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.363 2014/06/14 16:01:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.364 2014/06/18 19:18:12 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> nss-3.16-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   14 Jun 2014; Michał Górny <mgorny@gentoo.org> nss-3.16-r1.ebuild:
   Add missing MULTILIB_USEDEP on nspr, noticed by _AxS_.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/temporary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/temporary/ChangeLog,v 1.6 2014/03/09 07:48:12 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/temporary/ChangeLog,v 1.7 2014/06/18 19:06:59 slyfox Exp $
+
+*temporary-1.2.0.3 (18 Jun 2014)
+
+  18 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> +temporary-1.2.0.3.ebuild:
+  Version bump.
 
 *temporary-1.2.0.1 (09 Mar 2014)
 

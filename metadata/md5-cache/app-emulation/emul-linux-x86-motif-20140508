@@ -6,9 +6,9 @@ HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
 IUSE=abi_x86_32 +development
 KEYWORDS=-* ~amd64
 LICENSE=!abi_x86_32? ( LGPL-2+ MIT MOTIF ) abi_x86_32? ( metapackage )
-RDEPEND=!<app-emulation/emul-linux-x86-xlibs-20110129 !abi_x86_32? ( !x11-libs/motif[abi_x86_32(-)] ~app-emulation/emul-linux-x86-baselibs-20140508 ~app-emulation/emul-linux-x86-xlibs-20140508 ) abi_x86_32? ( x11-libs/motif:0[abi_x86_32(-)] x11-libs/motif:2.2[abi_x86_32(-)] )
+RDEPEND=!<app-emulation/emul-linux-x86-xlibs-20110129 !abi_x86_32? ( !x11-libs/motif[abi_x86_32(-)] ~app-emulation/emul-linux-x86-baselibs-20140508 ~app-emulation/emul-linux-x86-xlibs-20140508 ) abi_x86_32? ( >=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)] >=x11-libs/motif-2.2.3-r12:2.2[abi_x86_32(-)] )
 RESTRICT=strip
 SLOT=0
 SRC_URI=!abi_x86_32? ( http://dev.gentoo.org/~pacho/emul/emul-linux-x86-motif-20140508.tar.xz )
 _eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=69c7df10d95a1d0e6ace9632d8c79abf
+_md5_=5469ea5d80c5bd37d69a69438c1a0efb

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r5.ebuild,v 1.1 2014/05/31 08:41:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r5.ebuild,v 1.2 2014/06/18 19:24:59 mgorny Exp $
 
 EAPI="5"
 
@@ -125,20 +125,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
-	sane_backends_dc210? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	sane_backends_dc240? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	sane_backends_dell1600n_net? ( virtual/jpeg[${MULTILIB_USEDEP}]
-									media-libs/tiff[${MULTILIB_USEDEP}] )
-	avahi? ( >=net-dns/avahi-0.6.24[${MULTILIB_USEDEP}] )
-	sane_backends_canon_pp? ( sys-libs/libieee1284[${MULTILIB_USEDEP}] )
-	sane_backends_hpsj5s? ( sys-libs/libieee1284[${MULTILIB_USEDEP}] )
-	sane_backends_mustek_pp? ( sys-libs/libieee1284[${MULTILIB_USEDEP}] )
-	usb? ( virtual/libusb:1[${MULTILIB_USEDEP}] )
+	sane_backends_dc210? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
+	sane_backends_dc240? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
+	sane_backends_dell1600n_net? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
+									>=media-libs/tiff-3.9.7-r1[${MULTILIB_USEDEP}] )
+	avahi? ( >=net-dns/avahi-0.6.31-r2[${MULTILIB_USEDEP}] )
+	sane_backends_canon_pp? ( >=sys-libs/libieee1284-0.2.11-r3[${MULTILIB_USEDEP}] )
+	sane_backends_hpsj5s? ( >=sys-libs/libieee1284-0.2.11-r3[${MULTILIB_USEDEP}] )
+	sane_backends_mustek_pp? ( >=sys-libs/libieee1284-0.2.11-r3[${MULTILIB_USEDEP}] )
+	usb? ( >=virtual/libusb-1-r1:1[${MULTILIB_USEDEP}] )
 	gphoto2? (
-		media-libs/libgphoto2:=[${MULTILIB_USEDEP}]
-		virtual/jpeg[${MULTILIB_USEDEP}]
+		>=media-libs/libgphoto2-2.5.3.1:=[${MULTILIB_USEDEP}]
+		>=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
 	)
-	v4l? ( media-libs/libv4l[${MULTILIB_USEDEP}] )
+	v4l? ( >=media-libs/libv4l-0.9.5[${MULTILIB_USEDEP}] )
 	xinetd? ( sys-apps/xinetd )
 	snmp? ( net-analyzer/net-snmp )
 	systemd? ( sys-apps/systemd:0= )
@@ -152,7 +152,7 @@ DEPEND="${RDEPEND}
 	)
 	>=sys-apps/sed-4
 
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 # We now use new syntax construct (SUBSYSTEMS!="usb|usb_device)
 RDEPEND="${RDEPEND}

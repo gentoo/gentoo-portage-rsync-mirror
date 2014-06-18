@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/emul-linux-x86-motif-20131008.ebuild,v 1.2 2013/11/22 19:32:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/emul-linux-x86-motif-20131008.ebuild,v 1.3 2014/06/18 19:01:53 mgorny Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ RDEPEND="!<app-emulation/emul-linux-x86-xlibs-20110129
 		~app-emulation/emul-linux-x86-xlibs-${PV}
 	)
 	abi_x86_32? (
-		x11-libs/motif:0[abi_x86_32(-)]
-		x11-libs/motif:2.2[abi_x86_32(-)]
+		>=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)]
+		>=x11-libs/motif-2.2.3-r12:2.2[abi_x86_32(-)]
 	)"
 
 src_install() {

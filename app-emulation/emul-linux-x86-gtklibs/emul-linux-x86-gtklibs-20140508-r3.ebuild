@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140508-r3.ebuild,v 1.1 2014/06/17 06:16:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140508-r3.ebuild,v 1.2 2014/06/18 19:01:21 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -18,16 +18,16 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		!>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
 	)
 	abi_x86_32? (
-		>=x11-libs/pixman-0.30.2-r1[abi_x86_32(-)]
-		>=x11-libs/cairo-1.12.16-r1[abi_x86_32(-)]
-		>=x11-libs/gdk-pixbuf-2.30.5-r1[abi_x86_32(-)]
+		>=x11-libs/pixman-0.32.4[abi_x86_32(-)]
+		>=x11-libs/cairo-1.12.16-r2[abi_x86_32(-)]
+		>=x11-libs/gdk-pixbuf-2.30.7[abi_x86_32(-)]
 		>=media-gfx/graphite2-1.2.4-r1[abi_x86_32(-)]
 		>=media-libs/harfbuzz-0.9.26-r1[abi_x86_32(-)]
-		>=x11-libs/pango-1.36.2-r1[abi_x86_32(-)]
+		>=x11-libs/pango-1.36.3[abi_x86_32(-)]
 		>=x11-libs/pangox-compat-0.0.2-r1[abi_x86_32(-)]
 		>=media-libs/imlib-1.9.15-r4[abi_x86_32(-)]
 		>=dev-libs/atk-2.10.0-r1[abi_x86_32(-)]
-		>=x11-libs/gtk+-2.24.23-r1:2[abi_x86_32(-)]
+		>=x11-libs/gtk+-2.24.23-r2:2[abi_x86_32(-)]
 		>=gnome-base/gconf-3.2.6-r3[abi_x86_32(-)]
 		>=gnome-base/gnome-vfs-2.24.4-r2[abi_x86_32(-)]
 		>=gnome-base/libglade-2.6.4-r2[abi_x86_32(-)]

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.187 2014/03/23 17:17:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.188 2014/06/18 19:10:28 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> elfutils-0.155-r1.ebuild,
+  elfutils-0.156.ebuild, elfutils-0.157.ebuild, elfutils-0.158.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> elfutils-0.158.ebuild:
   Stable for sparc, wrt bug #500178

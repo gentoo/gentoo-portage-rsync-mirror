@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508-r6.ebuild,v 1.3 2014/06/12 14:21:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508-r6.ebuild,v 1.4 2014/06/18 19:02:15 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -18,11 +18,11 @@ RDEPEND="
 		~app-emulation/emul-linux-x86-db-${PV}
 	)
 	abi_x86_32? (
-		media-libs/freetype[abi_x86_32(-)]
-		media-libs/libpng[abi_x86_32(-)]
-		virtual/jpeg:62[abi_x86_32(-)]
-		x11-libs/libX11[abi_x86_32(-)]
-		x11-libs/libXext[abi_x86_32(-)]
+		>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+		>=media-libs/libpng-1.2.51[abi_x86_32(-)]
+		>=virtual/jpeg-62:62[abi_x86_32(-)]
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
 	)
 	!<=app-emulation/emul-linux-x86-sdl-20081109
 	!<=app-emulation/emul-linux-x86-soundlibs-20110101"
@@ -30,7 +30,7 @@ RDEPEND="
 # supplied libs
 RDEPEND="${RDEPEND}
 	abi_x86_32? (
-		>=media-libs/libvpx-1.2.0_pre[abi_x86_32(-)]
+		>=media-libs/libvpx-1.2.0_pre20130625[abi_x86_32(-)]
 		>=media-libs/xvid-1.3.2-r1[abi_x86_32(-)]
 		>=media-sound/lame-3.99.5-r1[abi_x86_32(-)]
 		>=media-libs/faac-1.28-r4[abi_x86_32(-)]
@@ -46,7 +46,7 @@ RDEPEND="${RDEPEND}
 		>=media-libs/libv4l-0.9.5-r1[abi_x86_32(-)]
 		>=media-libs/libid3tag-0.15.1b-r4[abi_x86_32(-)]
 		>=media-libs/libshout-2.3.1-r1[abi_x86_32(-)]
-		>=media-libs/libsidplay-2.1.1-r3:2[abi_x86_32(-)]
+		>=media-libs/libsidplay-2.1.1-r4:2[abi_x86_32(-)]
 		>=media-libs/libsidplay-1.36.59-r1:1[abi_x86_32(-)]
 		>=media-libs/x264-0.0.20130731[abi_x86_32(-)]
 		>=media-libs/libiec61883-1.2.0-r1[abi_x86_32(-)]
@@ -62,7 +62,7 @@ RDEPEND="${RDEPEND}
 		>=dev-libs/libcdio-paranoia-0.90_p1-r1[abi_x86_32(-)]
 		>=media-libs/libdv-1.0.0-r3[abi_x86_32(-)]
 		>=media-libs/libgphoto2-2.5.4-r1[abi_x86_32(-)]
-		>=media-gfx/sane-backends-1.0.24-r4[abi_x86_32(-)]
+		>=media-gfx/sane-backends-1.0.24-r5[abi_x86_32(-)]
 		>=media-libs/taglib-1.9.1-r1[abi_x86_32(-)]
 		>=media-libs/libofa-0.9.3-r1[abi_x86_32(-)]
 		|| (
@@ -73,7 +73,7 @@ RDEPEND="${RDEPEND}
 			>=media-video/ffmpeg-2.2.3-r1[abi_x86_32(-)]
 		)
 		>=media-video/mjpegtools-2.1.0-r2[abi_x86_32(-)]
-		>=media-libs/gstreamer-0.10.36-r1:0.10[abi_x86_32(-)]
+		>=media-libs/gstreamer-0.10.36-r2:0.10[abi_x86_32(-)]
 		>=media-libs/gst-plugins-base-0.10.36-r1:0.10[abi_x86_32(-)]
 	)
 	"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/brutal-legend-20130615.ebuild,v 1.1 2013/11/24 23:29:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/brutal-legend-20130615.ebuild,v 1.2 2014/06/18 19:19:48 mgorny Exp $
 
 # TODO: unbundle libsdl-2
 
@@ -32,14 +32,14 @@ RDEPEND="
 				app-emulation/emul-linux-x86-xlibs
 			)
 			(
-				sys-libs/zlib[abi_x86_32]
-				virtual/glu[abi_x86_32]
-				virtual/opengl[abi_x86_32]
-				x11-libs/libX11[abi_x86_32]
-				x11-libs/libXau[abi_x86_32]
-				x11-libs/libXdmcp[abi_x86_32]
-				x11-libs/libXext[abi_x86_32]
-				x11-libs/libxcb[abi_x86_32]
+				>=sys-libs/zlib-1.2.8-r1[abi_x86_32]
+				>=virtual/glu-9.0-r1[abi_x86_32]
+				>=virtual/opengl-7.0-r1[abi_x86_32]
+				>=x11-libs/libX11-1.6.2[abi_x86_32]
+				>=x11-libs/libXau-1.0.7-r1[abi_x86_32]
+				>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32]
+				>=x11-libs/libXext-1.3.2[abi_x86_32]
+				>=x11-libs/libxcb-1.9.1[abi_x86_32]
 			)
 		)
 	)

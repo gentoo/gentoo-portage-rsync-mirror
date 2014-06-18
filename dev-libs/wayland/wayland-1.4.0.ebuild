@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.4.0.ebuild,v 1.12 2014/06/08 09:15:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.4.0.ebuild,v 1.13 2014/06/18 19:18:47 mgorny Exp $
 
 EAPI=5
 
@@ -28,8 +28,8 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND="dev-libs/expat[${MULTILIB_USEDEP}]
-	virtual/libffi[${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
+	>=virtual/libffi-3.0.13-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"

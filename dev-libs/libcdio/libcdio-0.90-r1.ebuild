@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.90-r1.ebuild,v 1.13 2014/01/28 14:01:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.90-r1.ebuild,v 1.14 2014/06/18 19:12:07 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -19,7 +19,7 @@ RDEPEND="
 		>=sys-libs/ncurses-5.7-r7
 		cddb? ( >=media-libs/libcddb-1.3.2 )
 	)
-	virtual/libiconv[${MULTILIB_USEDEP}]
+	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r10
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}

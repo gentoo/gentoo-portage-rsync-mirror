@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio-paranoia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.23 2014/06/18 17:54:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.24 2014/06/18 19:12:09 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  libcdio-paranoia-0.90_p1-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org>
   libcdio-paranoia-0.90_p1-r1.ebuild:

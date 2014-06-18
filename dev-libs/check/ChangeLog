@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.98 2014/06/12 19:20:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.99 2014/06/18 19:07:59 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> check-0.9.13-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *check-0.9.13-r1 (12 Jun 2014)
 

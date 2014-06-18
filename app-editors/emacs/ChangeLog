@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.636 2014/06/16 21:28:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.637 2014/06/18 19:01:09 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> emacs-18.59-r10.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   16 Jun 2014; Michał Górny <mgorny@gentoo.org> emacs-18.59-r10.ebuild:
   Disallow emul-linux-x86-*[abi_x86_32] from satisfying the deps to help PM

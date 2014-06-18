@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/exceptions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/exceptions/ChangeLog,v 1.1 2014/03/09 07:40:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/exceptions/ChangeLog,v 1.2 2014/06/18 19:06:18 slyfox Exp $
+
+*exceptions-0.6.1 (18 Jun 2014)
+
+  18 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> +exceptions-0.6.1.ebuild:
+  Version bump.
 
 *exceptions-0.3.3 (09 Mar 2014)
 

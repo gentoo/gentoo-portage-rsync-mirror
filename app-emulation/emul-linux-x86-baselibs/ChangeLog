@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.225 2014/06/18 15:35:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.226 2014/06/18 19:01:17 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-baselibs-20131008-r6.ebuild,
+  emul-linux-x86-baselibs-20140406-r4.ebuild,
+  emul-linux-x86-baselibs-20140508-r10.ebuild,
+  emul-linux-x86-baselibs-20140508-r11.ebuild,
+  emul-linux-x86-baselibs-20140508-r9.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-baselibs-20131008-r6.ebuild,

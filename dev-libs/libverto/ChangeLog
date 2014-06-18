@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.26 2014/06/16 09:59:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.27 2014/06/18 19:16:05 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libverto-0.2.5-r1.ebuild,
+  libverto-0.2.6.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   16 Jun 2014; Eray Aslan <eras@gentoo.org> -libverto-0.2.4.ebuild:
   Remove old

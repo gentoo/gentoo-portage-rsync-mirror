@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r10.ebuild,v 1.2 2014/05/31 07:53:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r10.ebuild,v 1.3 2014/06/18 19:03:05 mgorny Exp $
 
 EAPI="3"
 
@@ -57,42 +57,42 @@ RDEPEND="!app-i18n/atokx2
 		|| (
 			app-emulation/emul-linux-x86-baselibs
 			(
-				dev-libs/glib:2[abi_x86_32]
-				dev-libs/libxml2:2[abi_x86_32]
-				media-libs/libpng[abi_x86_32]
-				sys-apps/tcp-wrappers[abi_x86_32]
-				virtual/pam[abi_x86_32]
+				>=dev-libs/glib-2.38.2-r1:2[abi_x86_32]
+				>=dev-libs/libxml2-2.9.1-r4:2[abi_x86_32]
+				>=media-libs/libpng-1.2.51[abi_x86_32]
+				>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32]
+				>=virtual/pam-0-r1[abi_x86_32]
 			)
 		)
 		|| (
 			app-emulation/emul-linux-x86-gtklibs
 			(
-				dev-libs/atk[abi_x86_32]
-				x11-libs/cairo[abi_x86_32]
-				>=x11-libs/gtk+-2.4.13:2[abi_x86_32]
-				x11-libs/pangox-compat[abi_x86_32]
+				>=dev-libs/atk-2.10.0[abi_x86_32]
+				>=x11-libs/cairo-1.12.14-r4[abi_x86_32]
+				>=x11-libs/gtk+-2.24.23:2[abi_x86_32]
+				>=x11-libs/pangox-compat-0.0.2[abi_x86_32]
 			)
 		)
 		|| (
 			app-emulation/emul-linux-x86-opengl
-			x11-libs/libdrm[abi_x86_32]
+			>=x11-libs/libdrm-2.4.46[abi_x86_32]
 		)
 		|| (
 			app-emulation/emul-linux-x86-xlibs
 			(
-				media-libs/fontconfig[abi_x86_32]
-				x11-libs/libICE[abi_x86_32]
-				x11-libs/libSM[abi_x86_32]
-				x11-libs/libXcomposite[abi_x86_32]
-				x11-libs/libXcursor[abi_x86_32]
-				x11-libs/libXdamage[abi_x86_32]
-				x11-libs/libXext[abi_x86_32]
-				x11-libs/libXfixes[abi_x86_32]
-				x11-libs/libXft[abi_x86_32]
-				x11-libs/libXi[abi_x86_32]
-				x11-libs/libXrandr[abi_x86_32]
-				x11-libs/libXrender[abi_x86_32]
-				x11-libs/libXxf86vm[abi_x86_32]
+				>=media-libs/fontconfig-2.10.92[abi_x86_32]
+				>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
+				>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
+				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32]
+				>=x11-libs/libXcursor-1.1.14[abi_x86_32]
+				>=x11-libs/libXdamage-1.1.4-r1[abi_x86_32]
+				>=x11-libs/libXext-1.3.2[abi_x86_32]
+				>=x11-libs/libXfixes-5.0.1[abi_x86_32]
+				>=x11-libs/libXft-2.3.1-r1[abi_x86_32]
+				>=x11-libs/libXi-1.7.2[abi_x86_32]
+				>=x11-libs/libXrandr-1.4.2[abi_x86_32]
+				>=x11-libs/libXrender-0.9.8[abi_x86_32]
+				>=x11-libs/libXxf86vm-1.1.3[abi_x86_32]
 			)
 		)
 	)"

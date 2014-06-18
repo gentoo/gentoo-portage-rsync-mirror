@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/msgpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.10 2014/02/12 02:22:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.11 2014/06/18 19:15:40 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> msgpack-0.5.8.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   12 Feb 2014; Tim Harder <radhermit@gentoo.org> msgpack-0.5.8.ebuild:
   Fix multilib test deps and respect CFLAGS.

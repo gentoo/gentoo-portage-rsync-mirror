@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.157.ebuild,v 1.2 2014/01/02 12:54:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.157.ebuild,v 1.3 2014/06/18 19:10:28 mgorny Exp $
 
 EAPI="4"
 
@@ -20,9 +20,9 @@ IUSE="bzip2 lzma nls static-libs test +threads +utils zlib"
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
 # gets pulled in as a dep since this package does not respect virtual/libc
-RDEPEND="zlib? ( >=sys-libs/zlib-1.2.2.3[${MULTILIB_USEDEP}] )
-	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
-	lzma? ( app-arch/xz-utils[${MULTILIB_USEDEP}] )
+RDEPEND="zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
+	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
+	lzma? ( >=app-arch/xz-utils-5.0.5-r1[${MULTILIB_USEDEP}] )
 	!dev-libs/libelf
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r11

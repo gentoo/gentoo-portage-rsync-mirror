@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16-r1.ebuild,v 1.2 2014/06/14 16:01:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16-r1.ebuild,v 1.3 2014/06/18 19:18:12 mgorny Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
 
-NSPR_VER="4.10"
+NSPR_VER="4.10.6-r1"
 RTM_NAME="NSS_${PV//./_}_RTM"
 # Rev of https://git.fedorahosted.org/cgit/nss-pem.git
 PEM_GIT_REV="3ade37c5c4ca5a6094e3f4b2e4591405db1867dd"
@@ -22,11 +22,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cacert +nss-pem utils"
 
-DEPEND="virtual/pkgconfig[${MULTILIB_USEDEP}]
+DEPEND=">=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	>=dev-libs/nspr-${NSPR_VER}[${MULTILIB_USEDEP}]"
 RDEPEND=">=dev-libs/nspr-${NSPR_VER}[${MULTILIB_USEDEP}]
-	>=dev-db/sqlite-3.5[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
+	>=dev-db/sqlite-3.8.2[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]

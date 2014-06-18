@@ -5,9 +5,9 @@ EAPI=5
 HOMEPAGE=https://www.ea.com/de/brutal-legend
 KEYWORDS=~amd64 ~x86
 LICENSE=all-rights-reserved
-RDEPEND=amd64? ( || ( ( app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-opengl app-emulation/emul-linux-x86-xlibs ) ( sys-libs/zlib[abi_x86_32] virtual/glu[abi_x86_32] virtual/opengl[abi_x86_32] x11-libs/libX11[abi_x86_32] x11-libs/libXau[abi_x86_32] x11-libs/libXdmcp[abi_x86_32] x11-libs/libXext[abi_x86_32] x11-libs/libxcb[abi_x86_32] ) ) ) x86? ( sys-libs/zlib virtual/glu virtual/opengl x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext x11-libs/libxcb ) games-misc/games-envd
+RDEPEND=amd64? ( || ( ( app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-opengl app-emulation/emul-linux-x86-xlibs ) ( >=sys-libs/zlib-1.2.8-r1[abi_x86_32] >=virtual/glu-9.0-r1[abi_x86_32] >=virtual/opengl-7.0-r1[abi_x86_32] >=x11-libs/libX11-1.6.2[abi_x86_32] >=x11-libs/libXau-1.0.7-r1[abi_x86_32] >=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32] >=x11-libs/libXext-1.3.2[abi_x86_32] >=x11-libs/libxcb-1.9.1[abi_x86_32] ) ) ) x86? ( sys-libs/zlib virtual/glu virtual/opengl x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext x11-libs/libxcb ) games-misc/games-envd
 RESTRICT=bindist fetch splitdebug
 SLOT=0
 SRC_URI=BrutalLegend-Linux-2013-06-15-setup.bin
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9acb795cd4f7e5327f06c7e0cdb51f50
+_md5_=cd5aa0fc87c50ce3ca2aaf8e80c956a8

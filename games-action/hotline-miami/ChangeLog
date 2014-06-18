@@ -1,6 +1,11 @@
 # ChangeLog for games-action/hotline-miami
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/ChangeLog,v 1.2 2014/03/12 23:42:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/ChangeLog,v 1.3 2014/06/18 19:19:54 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> hotline-miami-1.0.9a.ebuild,
+  hotline-miami-1.0.9a_p20140221.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *hotline-miami-1.0.9a_p20140221 (12 Mar 2014)
 

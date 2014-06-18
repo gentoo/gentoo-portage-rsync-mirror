@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.16-r2.ebuild,v 1.1 2014/06/12 19:22:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.16-r2.ebuild,v 1.2 2014/06/18 19:18:10 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="nls static-libs"
 
-RDEPEND="nls? ( virtual/libintl[${MULTILIB_USEDEP}] )"
+RDEPEND="nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )"
 DEPEND="nls? ( sys-devel/gettext )"
 
 src_prepare() {

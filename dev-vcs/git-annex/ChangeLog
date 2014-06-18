@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.25 2014/04/09 15:58:40 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.26 2014/06/18 19:08:24 slyfox Exp $
+
+*git-annex-5.20140613 (18 Jun 2014)
+
+  18 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +git-annex-5.20140613.ebuild:
+  Version bump (bug #510748 by Manuel Rüger).
 
 *git-annex-5.20140405 (09 Apr 2014)
 

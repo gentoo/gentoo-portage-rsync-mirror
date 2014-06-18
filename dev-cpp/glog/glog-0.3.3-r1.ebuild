@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.3-r1.ebuild,v 1.1 2014/03/27 02:37:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.3-r1.ebuild,v 1.2 2014/06/18 19:04:45 mgorny Exp $
 
 EAPI="4"
 inherit eutils multilib-minimal
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="gflags static-libs unwind test"
 
-RDEPEND="gflags? ( dev-cpp/gflags[${MULTILIB_USEDEP}] )
+RDEPEND="gflags? ( >=dev-cpp/gflags-2.0-r1[${MULTILIB_USEDEP}] )
 	unwind? ( sys-libs/libunwind )"
 DEPEND="${RDEPEND}
 	test? (
-		dev-cpp/gmock[${MULTILIB_USEDEP}]
-		dev-cpp/gtest[${MULTILIB_USEDEP}]
+		>=dev-cpp/gmock-1.7.0-r1[${MULTILIB_USEDEP}]
+		>=dev-cpp/gtest-1.6.0-r2[${MULTILIB_USEDEP}]
 	)"
 
 src_prepare() {

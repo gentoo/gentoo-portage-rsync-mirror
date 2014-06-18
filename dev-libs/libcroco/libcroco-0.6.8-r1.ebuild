@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.8-r1.ebuild,v 1.1 2014/06/17 20:08:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.8-r1.ebuild,v 1.2 2014/06/18 19:12:47 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,11 +16,11 @@ SLOT="0.6"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="test"
 
-RDEPEND="dev-libs/glib:2[${MULTILIB_USEDEP}]
-	>=dev-libs/libxml2-2.4.23[${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 src_prepare() {
 	if ! use test; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.2.1-r1.ebuild,v 1.2 2013/07/28 08:20:32 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-12.2.1-r1.ebuild,v 1.3 2014/06/18 19:01:31 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -39,17 +39,17 @@ MLIB_DEPS="amd64? (
 	app-emulation/emul-linux-x86-soundlibs
 	|| (
 		(
-			>=media-libs/freetype-2.0.0[abi_x86_32]
-			x11-libs/libICE[abi_x86_32]
-			x11-libs/libSM[abi_x86_32]
-			x11-libs/libX11[abi_x86_32]
-			x11-libs/libXau[abi_x86_32]
-			x11-libs/libXdmcp[abi_x86_32]
-			x11-libs/libXext[abi_x86_32]
-			x11-libs/libXi[abi_x86_32]
-			x11-libs/libXrandr[abi_x86_32]
-			x11-libs/libXxf86vm[abi_x86_32]
-			x11-libs/libxcb[abi_x86_32]
+			>=media-libs/freetype-2.5.0.1[abi_x86_32]
+			>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
+			>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
+			>=x11-libs/libX11-1.6.2[abi_x86_32]
+			>=x11-libs/libXau-1.0.7-r1[abi_x86_32]
+			>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32]
+			>=x11-libs/libXext-1.3.2[abi_x86_32]
+			>=x11-libs/libXi-1.7.2[abi_x86_32]
+			>=x11-libs/libXrandr-1.4.2[abi_x86_32]
+			>=x11-libs/libXxf86vm-1.1.3[abi_x86_32]
+			>=x11-libs/libxcb-1.9.1[abi_x86_32]
 		)
 		app-emulation/emul-linux-x86-xlibs
 	)

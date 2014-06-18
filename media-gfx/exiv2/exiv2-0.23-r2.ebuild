@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23-r2.ebuild,v 1.3 2014/04/30 14:28:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23-r2.ebuild,v 1.4 2014/06/18 19:24:27 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -19,10 +19,10 @@ IUSE_LINGUAS="de es fi fr pl ru sk"
 IUSE="contrib doc examples nls xmp zlib static-libs $(printf 'linguas_%s ' ${IUSE_LINGUAS})"
 
 RDEPEND="
-	virtual/libiconv[${MULTILIB_USEDEP}]
-	nls? ( virtual/libintl[${MULTILIB_USEDEP}] )
-	xmp? ( dev-libs/expat[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
+	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )
+	xmp? ( >=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 "
 
 DEPEND="${RDEPEND}

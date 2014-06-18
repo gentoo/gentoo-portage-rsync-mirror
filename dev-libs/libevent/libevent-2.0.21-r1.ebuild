@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.21-r1.ebuild,v 1.2 2014/06/13 17:36:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.21-r1.ebuild,v 1.3 2014/06/18 19:13:25 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+ssl static-libs test +threads"
 
-DEPEND="ssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )"
+DEPEND="ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )"
 RDEPEND="
 	${DEPEND}
 	!<=dev-libs/9libs-1.0

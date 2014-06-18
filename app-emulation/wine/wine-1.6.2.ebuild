@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.2.ebuild,v 1.4 2014/06/17 09:03:20 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.2.ebuild,v 1.5 2014/06/18 19:08:47 mgorny Exp $
 
 EAPI="5"
 
@@ -97,26 +97,26 @@ COMMON_DEPEND="
 		abi_x86_32? (
 			truetype? ( || (
 				>=app-emulation/emul-linux-x86-xlibs-2.1[development]
-				>=media-libs/freetype-2.0.0[abi_x86_32]
+				>=media-libs/freetype-2.5.0.1[abi_x86_32]
 			) )
 			ncurses? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
-				sys-libs/ncurses[abi_x86_32]
+				>=sys-libs/ncurses-5.9-r3[abi_x86_32]
 			) )
 			udisks? ( || (
 				>=app-emulation/emul-linux-x86-baselibs-20130224[development]
-				sys-apps/dbus[abi_x86_32]
+				>=sys-apps/dbus-1.6.18-r1[abi_x86_32]
 			) )
 			fontconfig? ( || (
 				app-emulation/emul-linux-x86-xlibs[development]
-				media-libs/fontconfig[abi_x86_32]
+				>=media-libs/fontconfig-2.10.92[abi_x86_32]
 			) )
 			gphoto2? (
 				app-emulation/emul-linux-x86-medialibs[development]
 			)
 			openal? ( || (
 				app-emulation/emul-linux-x86-sdl[development]
-				media-libs/openal[abi_x86_32]
+				>=media-libs/openal-1.15.1[abi_x86_32]
 			) )
 			gstreamer? (
 				app-emulation/emul-linux-x86-gstplugins
@@ -125,80 +125,80 @@ COMMON_DEPEND="
 			X? ( || (
 				app-emulation/emul-linux-x86-xlibs[development]
 				(
-					x11-libs/libXcursor[abi_x86_32]
-					x11-libs/libXext[abi_x86_32]
-					x11-libs/libXrandr[abi_x86_32]
-					x11-libs/libXi[abi_x86_32]
-					x11-libs/libXxf86vm[abi_x86_32]
+					>=x11-libs/libXcursor-1.1.14[abi_x86_32]
+					>=x11-libs/libXext-1.3.2[abi_x86_32]
+					>=x11-libs/libXrandr-1.4.2[abi_x86_32]
+					>=x11-libs/libXi-1.7.2[abi_x86_32]
+					>=x11-libs/libXxf86vm-1.1.3[abi_x86_32]
 				)
 			) )
 			xinerama? ( || (
 				app-emulation/emul-linux-x86-xlibs[development]
-				x11-libs/libXinerama[abi_x86_32]
+				>=x11-libs/libXinerama-1.1.3[abi_x86_32]
 			) )
 			alsa? ( || (
 				app-emulation/emul-linux-x86-soundlibs[alsa,development]
-				media-libs/alsa-lib[abi_x86_32]
+				>=media-libs/alsa-lib-1.0.27.2[abi_x86_32]
 			) )
 			cups? ( app-emulation/emul-linux-x86-baselibs )
-			opencl? ( virtual/opencl[abi_x86_32] )
+			opencl? ( >=virtual/opencl-0-r3[abi_x86_32] )
 			opengl? ( || (
 				app-emulation/emul-linux-x86-opengl[development]
 				(
-					virtual/glu[abi_x86_32]
-					virtual/opengl[abi_x86_32]
+					>=virtual/glu-9.0-r1[abi_x86_32]
+					>=virtual/opengl-7.0-r1[abi_x86_32]
 				)
 			) )
 			gsm? ( || (
 				app-emulation/emul-linux-x86-soundlibs[development]
-				media-sound/gsm[abi_x86_32]
+				>=media-sound/gsm-1.0.13-r1[abi_x86_32]
 			) )
 			jpeg? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
-				virtual/jpeg:0[abi_x86_32]
+				>=virtual/jpeg-0-r2:0[abi_x86_32]
 			) )
 			ldap? ( app-emulation/emul-linux-x86-baselibs[development] )
 			lcms? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
-				media-libs/lcms:2[abi_x86_32]
+				>=media-libs/lcms-2.5:2[abi_x86_32]
 			) )
 			mp3? ( || (
 				app-emulation/emul-linux-x86-soundlibs[development]
-				>=media-sound/mpg123-1.5.0[abi_x86_32]
+				>=media-sound/mpg123-1.15.4[abi_x86_32]
 			) )
 			nls? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
-				sys-devel/gettext[abi_x86_32]
+				>=sys-devel/gettext-0.18.3.2[abi_x86_32]
 			) )
 			odbc? ( app-emulation/emul-linux-x86-db[development] )
 			osmesa? ( || (
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
-				media-libs/mesa[osmesa,abi_x86_32]
+				>=media-libs/mesa-9.1.6[osmesa,abi_x86_32]
 			) )
 			pulseaudio? ( || (
 				app-emulation/emul-linux-x86-soundlibs[development]
-				>=media-sound/pulseaudio-4.0-r1[abi_x86_32]
+				>=media-sound/pulseaudio-5.0[abi_x86_32]
 			) )
 			xml? ( || (
 				>=app-emulation/emul-linux-x86-baselibs-20130224[development]
 				(
-					dev-libs/libxml2[abi_x86_32]
-					dev-libs/libxslt[abi_x86_32]
+					>=dev-libs/libxml2-2.9.1-r4[abi_x86_32]
+					>=dev-libs/libxslt-1.1.28-r1[abi_x86_32]
 				)
 			) )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
 			png? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
-				media-libs/libpng:0[abi_x86_32]
+				>=media-libs/libpng-1.6.10:0[abi_x86_32]
 			) )
 			v4l? ( || (
 				app-emulation/emul-linux-x86-medialibs[development]
-				media-libs/libv4l[abi_x86_32]
+				>=media-libs/libv4l-0.9.5[abi_x86_32]
 			) )
 			xcomposite? ( || (
 				app-emulation/emul-linux-x86-xlibs[development]
-				x11-libs/libXcomposite[abi_x86_32]
+				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32]
 			) )
 		)
 	)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.2-r1.ebuild,v 1.2 2014/06/18 08:05:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.2-r1.ebuild,v 1.3 2014/06/18 19:24:10 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,12 +22,12 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-libs/glib-2.24:2[${MULTILIB_USEDEP}]
-	>=x11-libs/cairo-1.2[${MULTILIB_USEDEP}]
-	>=x11-libs/pango-1.32.6[${MULTILIB_USEDEP}]
-	>=dev-libs/libxml2-2.7:2[${MULTILIB_USEDEP}]
-	>=dev-libs/libcroco-0.6.1[${MULTILIB_USEDEP}]
-	>=x11-libs/gdk-pixbuf-2.20:2[introspection?,${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=x11-libs/cairo-1.12.14-r4[${MULTILIB_USEDEP}]
+	>=x11-libs/pango-1.36.3[${MULTILIB_USEDEP}]
+	>=dev-libs/libxml2-2.9.1-r4:2[${MULTILIB_USEDEP}]
+	>=dev-libs/libcroco-0.6.8-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/gdk-pixbuf-2.30.7:2[introspection?,${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )
 	tools? ( >=x11-libs/gtk+-3.2.0:3 )
 "
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	dev-libs/gobject-introspection-common
 	dev-libs/vala-common
 	>=dev-util/gtk-doc-am-1.13
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	vala? ( $(vala_depend) )
 "
 # >=gtk-doc-am-1.13, gobject-introspection-common, vala-common needed by eautoreconf

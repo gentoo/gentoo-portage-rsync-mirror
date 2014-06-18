@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-9999.ebuild,v 1.8 2014/06/11 17:48:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-9999.ebuild,v 1.9 2014/06/18 19:13:55 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="python samples"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	media-libs/freetype[${MULTILIB_USEDEP}]
+	>=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}]
 	python? (
 		${PYTHON_DEPS}
 		dev-libs/boost[${PYTHON_USEDEP}]

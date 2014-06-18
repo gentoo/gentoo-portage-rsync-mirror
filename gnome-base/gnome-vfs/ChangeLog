@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.350 2014/06/12 15:12:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.351 2014/06/18 19:23:38 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gnome-vfs-2.24.4-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   12 Jun 2014; Michał Górny <mgorny@gentoo.org> gnome-vfs-2.24.4-r2.ebuild:
   Require newer virtual/krb5 so that ${CHOST}-krb5-config is in place.

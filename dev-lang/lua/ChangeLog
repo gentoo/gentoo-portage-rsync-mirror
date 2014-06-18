@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.188 2014/06/12 21:46:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.189 2014/06/18 19:06:06 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> lua-5.1.5-r100.ebuild,
+  lua-5.1.5-r3.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *lua-5.1.5-r100 (12 Jun 2014)
 *lua-5.1.5-r3 (12 Jun 2014)

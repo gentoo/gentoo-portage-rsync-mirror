@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0-r3.ebuild,v 1.1 2014/04/18 20:36:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0-r3.ebuild,v 1.2 2014/06/18 19:28:22 mgorny Exp $
 
 EAPI=5
 inherit eutils autotools multilib-minimal
@@ -19,7 +19,7 @@ RDEPEND="
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-sdl-20140406
 	)
-	media-libs/openal[${MULTILIB_USEDEP}]"
+	>=media-libs/openal-1.15.1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

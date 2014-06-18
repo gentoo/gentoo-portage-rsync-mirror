@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/atokx3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.22 2014/05/31 07:53:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.23 2014/06/18 19:03:05 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> atokx3-3.0.0-r10.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   31 May 2014; Michał Górny <mgorny@gentoo.org> atokx3-3.0.0-r10.ebuild:
   Fix baselibs dep, bug #510386. Add multilib deps for other packages.

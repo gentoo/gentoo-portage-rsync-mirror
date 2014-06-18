@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.1.4-r1.ebuild,v 1.3 2014/06/13 21:28:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.1.4-r1.ebuild,v 1.4 2014/06/18 19:13:25 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug +ssl static-libs test +threads"
 
-DEPEND="ssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )"
+DEPEND="ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )"
 RDEPEND="
 	${DEPEND}
 	!<=dev-libs/9libs-1.0

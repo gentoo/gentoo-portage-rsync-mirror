@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-2.12.0-r1.ebuild,v 1.1 2014/05/14 13:36:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-2.12.0-r1.ebuild,v 1.2 2014/06/18 19:07:25 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="+introspection nls test"
 
 RDEPEND="
-	>=dev-libs/glib-2.31.2:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20140508
@@ -26,7 +26,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	dev-util/gtk-doc-am
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	nls? ( sys-devel/gettext )
 "
 

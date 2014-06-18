@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20131008.ebuild,v 1.2 2013/11/22 19:33:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20131008.ebuild,v 1.3 2014/06/18 19:02:00 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -23,10 +23,10 @@ RDEPEND=">=app-emulation/emul-linux-x86-xlibs-20100611
 		!media-libs/mesa[abi_x86_32(-)]
 	)
 	abi_x86_32? (
-		media-libs/freeglut[abi_x86_32(-)]
-		media-libs/glew[abi_x86_32(-)]
-		media-libs/glu[abi_x86_32(-)]
-		media-libs/mesa[abi_x86_32(-)]
+		>=media-libs/freeglut-2.8.1[abi_x86_32(-)]
+		>=media-libs/glew-1.10.0-r1[abi_x86_32(-)]
+		>=media-libs/glu-9.0.0-r1[abi_x86_32(-)]
+		>=media-libs/mesa-9.1.6[abi_x86_32(-)]
 	)"
 
 src_prepare() {

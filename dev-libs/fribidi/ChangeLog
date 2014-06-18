@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.82 2014/05/03 10:11:56 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.83 2014/06/18 19:10:02 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> fribidi-0.19.5-r2.ebuild,
+  fribidi-0.19.6.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *fribidi-0.19.6 (03 May 2014)
 

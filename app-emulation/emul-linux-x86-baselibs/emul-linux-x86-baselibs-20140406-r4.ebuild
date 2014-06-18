@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r4.ebuild,v 1.4 2014/06/18 15:35:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20140406-r4.ebuild,v 1.5 2014/06/18 19:01:17 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -23,21 +23,21 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 	abi_x86_32? (
 		>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
 		>=app-arch/bzip2-1.0.6-r4[abi_x86_32(-)]
-		>=media-libs/libpng-1.5.16-r1:0[abi_x86_32(-)]
+		>=media-libs/libpng-1.6.10:0[abi_x86_32(-)]
 		>=dev-libs/udis86-1.7-r2[abi_x86_32(-)]
 		>=virtual/libffi-3.0.13-r1[abi_x86_32(-)]
-		>=sys-devel/llvm-3.3-r1[abi_x86_32(-)]
-		>=media-libs/libpng-1.2.50-r1:1.2[abi_x86_32(-)]
-		virtual/jpeg:62[abi_x86_32(-)]
+		>=sys-devel/llvm-3.3-r3[abi_x86_32(-)]
+		>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
+		>=virtual/jpeg-62:62[abi_x86_32(-)]
 		>=sys-libs/libraw1394-2.1.0-r1[abi_x86_32(-)]
 		>=sys-libs/libavc1394-0.5.4-r1[abi_x86_32(-)]
 		>=dev-libs/expat-2.1.0-r3[abi_x86_32(-)]
 		>=virtual/libusb-0-r1:0[abi_x86_32(-)]
 		>=virtual/libusb-1-r1:1[abi_x86_32(-)]
-		>=virtual/udev-206-r1[abi_x86_32(-)]
-		>=media-libs/tiff-4.0.3-r5:0[abi_x86_32(-)]
+		>=virtual/udev-208-r2[abi_x86_32(-)]
+		>=media-libs/tiff-4.0.3-r6:0[abi_x86_32(-)]
 		>=sys-apps/attr-2.4.47-r1[abi_x86_32(-)]
-		>=dev-libs/glib-2.36.3-r2:2[abi_x86_32(-)]
+		>=dev-libs/glib-2.38.2-r1:2[abi_x86_32(-)]
 		>=media-libs/lcms-2.5-r1:2[abi_x86_32(-)]
 		>=app-text/libpaper-1.1.24-r2[abi_x86_32(-)]
 		>=media-libs/tiff-3.9.7-r1:3[abi_x86_32(-)]
@@ -45,7 +45,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 			>=dev-libs/elfutils-0.155-r1[abi_x86_32(-)]
 			>=dev-libs/libelf-0.8.13-r2[abi_x86_32(-)]
 		)
-		>=sys-libs/e2fsprogs-libs-1.42.7-r1[abi_x86_32(-)]
+		>=sys-libs/e2fsprogs-libs-1.42.9[abi_x86_32(-)]
 		>=sys-libs/ncurses-5.9-r3[abi_x86_32(-)]
 		>=sys-libs/gpm-1.20.7-r2[abi_x86_32(-)]
 		>=dev-libs/gmp-5.1.3-r1[abi_x86_32(-)]
@@ -54,7 +54,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32(-)]
 		>=sys-libs/gdbm-1.10-r1[abi_x86_32(-)]
 		>=dev-libs/json-c-0.11-r1[abi_x86_32(-)]
-		>=dev-libs/libxml2-2.9.1-r2[abi_x86_32(-)]
+		>=dev-libs/libxml2-2.9.1-r4[abi_x86_32(-)]
 		>=dev-libs/dbus-glib-0.100.2-r1[abi_x86_32(-)]
 		>=sys-libs/readline-6.2_p5-r1:0[abi_x86_32(-)]
 		>=sys-devel/gettext-0.18.3.2[abi_x86_32(-)]
@@ -62,7 +62,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=dev-db/sqlite-3.8.3:3[abi_x86_32(-)]
 		>=dev-libs/nettle-2.7.1-r1[abi_x86_32(-)]
 		>=dev-libs/libtasn1-3.4-r1[abi_x86_32(-)]
-		dev-libs/libgcrypt:11[abi_x86_32(-)]
+		>=dev-libs/libgcrypt-1.5.3-r100:11[abi_x86_32(-)]
 		>=dev-libs/libgcrypt-1.6.1-r1:0[abi_x86_32(-)]
 		>=dev-libs/lzo-2.06-r1[abi_x86_32(-)]
 		>=dev-libs/libxslt-1.1.28-r2[abi_x86_32(-)]
@@ -74,7 +74,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/util-linux-2.24.1-r3[abi_x86_32(-)]
 		>=sys-devel/libtool-2.4.2-r1[abi_x86_32(-)]
 		>=virtual/acl-0-r2[abi_x86_32(-)]
-		>=dev-libs/openssl-1.0.1g-r1[abi_x86_32(-)]
+		>=dev-libs/openssl-1.0.1h-r2[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.16" # bug 340613
 
