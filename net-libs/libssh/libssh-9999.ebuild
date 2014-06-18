@@ -1,12 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.6 2013/12/20 14:33:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.7 2014/06/18 17:35:12 mgorny Exp $
 
-# Maintainer: check IUSE-defaults at DefineOptions.cmake
+EAPI=5
 
-EAPI=4
-
-inherit eutils cmake-utils git-2
+inherit eutils cmake-multilib multilib git-r3
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
@@ -15,44 +13,70 @@ EGIT_REPO_URI="git://git.libssh.org/projects/libssh.git"
 LICENSE="LGPL-2.1"
 KEYWORDS=""
 SLOT="0"
-IUSE="debug examples pcap +sftp ssh1 server static-libs zlib"
+IUSE="debug doc examples gcrypt gssapi pcap +sftp ssh1 server static-libs test zlib"
+# Maintainer: check IUSE-defaults at DefineOptions.cmake
 
-DEPEND="
-	zlib? ( >=sys-libs/zlib-1.2 )
-	>=dev-libs/openssl-0.9.8
+RDEPEND="
+	zlib? ( >=sys-libs/zlib-1.2[${MULTILIB_USEDEP}] )
+	!gcrypt? ( >=dev-libs/openssl-0.9.8[${MULTILIB_USEDEP}] )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5:0[${MULTILIB_USEDEP}] )
+	gssapi? ( virtual/krb5[${MULTILIB_USEDEP}] )
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
+	test? ( dev-util/cmocka[${MULTILIB_USEDEP}] )
+"
 
 DOCS=( AUTHORS README ChangeLog )
+
+EGIT_MIN_CLONE_TYPE=single
 
 src_prepare() {
 	# just install the examples do not compile them
 	sed -i \
 		-e '/add_subdirectory(examples)/s/^/#DONOTWANT/' \
 		CMakeLists.txt || die
+
+	cmake-utils_src_prepare
 }
 
-src_configure() {
+multilib_src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with debug DEBUG_CALLTRACE)
 		$(cmake-utils_use_with debug DEBUG_CRYPTO)
+		$(cmake-utils_use_with gcrypt)
+		$(cmake-utils_use_with gssapi)
 		$(cmake-utils_use_with pcap)
 		$(cmake-utils_use_with server)
 		$(cmake-utils_use_with sftp)
 		$(cmake-utils_use_with ssh1)
 		$(cmake-utils_use_with static-libs STATIC_LIB)
-		$(cmake-utils_use_with zlib LIBZ)
-		-DWITH_GCRYPT=OFF
+		$(cmake-utils_use_with test STATIC_LIB)
+		$(cmake-utils_use_with test TESTING)
+		$(cmake-utils_use_with zlib)
 	)
 
 	cmake-utils_src_configure
 }
 
-src_install() {
+multilib_src_compile() {
+	cmake-utils_src_compile
+	multilib_is_native_abi && use doc && cmake-utils_src_compile doc
+}
+
+multilib_src_install() {
 	cmake-utils_src_install
 
+	multilib_is_native_abi && use doc && dohtml -r doc/html/.
+
+	use static-libs || rm -f "${D}"/usr/$(get_libdir)/libssh{,_threads}.a
+}
+
+multilib_src_install_all() {
+	einstalldocs
+
 	if use examples; then
-		insinto /usr/share/doc/"${PF}"/examples
-		doins examples/*.{c,h,cpp}
+		docinto examples
+		dodoc examples/*.{c,h,cpp}
 	fi
 }

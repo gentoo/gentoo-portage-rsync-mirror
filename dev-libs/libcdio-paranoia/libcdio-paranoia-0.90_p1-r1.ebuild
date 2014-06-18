@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/libcdio-paranoia-0.90_p1-r1.ebuild,v 1.11 2014/01/28 14:01:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/libcdio-paranoia-0.90_p1-r1.ebuild,v 1.12 2014/06/18 17:54:24 mgorny Exp $
 
 EAPI=5
 MY_P=${PN}-10.2+${PV/_p/+}
@@ -22,8 +22,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~s
 IUSE="+cxx static-libs test"
 
 RDEPEND="app-admin/eselect-cdparanoia
-	>=${CATEGORY}/libcdio-0.90[${MULTILIB_USEDEP}]
-	virtual/libiconv[${MULTILIB_USEDEP}]
+	>=dev-libs/libcdio-0.90[${MULTILIB_USEDEP}]
+	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r10
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
