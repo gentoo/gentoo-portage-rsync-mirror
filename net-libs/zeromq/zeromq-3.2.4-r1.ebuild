@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.4.ebuild,v 1.1 2013/09/23 15:29:43 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.4-r1.ebuild,v 1.1 2014/06/18 08:21:16 qnikst Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="pgm test static-libs elibc_glibc"
 DEPEND="|| ( sys-devel/gcc sys-devel/gcc-apple )
 		pgm? (
 		  virtual/pkgconfig
-		  =net-libs/openpgm-5.1.118
+		  =net-libs/openpgm-5.2.122
 		)
 		elibc_glibc? ( sys-apps/util-linux )"
 RDEPEND=""

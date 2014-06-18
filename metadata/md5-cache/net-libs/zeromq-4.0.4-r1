@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-libs/libsodium pgm? ( =net-libs/openpgm-5.1.118 ) sys-apps/util-linux pgm? ( virtual/pkgconfig ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-libs/libsodium pgm? ( =net-libs/openpgm-5.2.122 ) sys-apps/util-linux pgm? ( virtual/pkgconfig ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A brokerless kernel
 EAPI=5
 HOMEPAGE=http://www.zeromq.org/
 IUSE=pgm static-libs test
 KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=LGPL-3
-RDEPEND=dev-libs/libsodium pgm? ( =net-libs/openpgm-5.1.118 )
+RDEPEND=dev-libs/libsodium pgm? ( =net-libs/openpgm-5.2.122 )
 SLOT=0
 SRC_URI=http://download.zeromq.org/zeromq-4.0.4.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=695f4806fc4d259e5f761d5d68359975
+_md5_=789f8ef9c6de314ee22cebbc7cae97b4

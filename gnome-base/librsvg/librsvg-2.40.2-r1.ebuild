@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.2-r1.ebuild,v 1.1 2014/06/17 20:09:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.2-r1.ebuild,v 1.2 2014/06/18 08:05:25 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -43,6 +43,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=712693
 	epatch "${FILESDIR}/${PN}-2.40.1-gtk-optional.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=731826
+	epatch "${FILESDIR}/${P}-vala-out-of-source.patch"
 	eautoreconf
 
 	use vala && vala_src_prepare

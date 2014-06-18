@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/openssl-blacklist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.13 2014/06/14 10:33:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.14 2014/06/18 08:26:06 nimiux Exp $
+
+  18 Jun 2014; Chema Alonso <nimiux@gentoo.org> openssl-blacklist-0.5.3.ebuild:
+  Stable for amd64 wrt bug #502614
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openssl-blacklist-0.5.3.ebuild:

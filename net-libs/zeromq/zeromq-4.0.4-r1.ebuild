@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.4.ebuild,v 1.1 2014/03/24 14:54:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.4-r1.ebuild,v 1.1 2014/06/18 08:21:16 qnikst Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="pgm static-libs test"
 
 RDEPEND="
 	dev-libs/libsodium
-	pgm? ( =net-libs/openpgm-5.1.118 )"
+	pgm? ( =net-libs/openpgm-5.2.122 )"
 DEPEND="${RDEPEND}
 	sys-apps/util-linux
 	pgm? ( virtual/pkgconfig )"
