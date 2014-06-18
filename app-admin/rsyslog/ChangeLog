@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.117 2014/06/16 04:17:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.118 2014/06/18 01:19:47 vapier Exp $
+
+  18 Jun 2014; Mike Frysinger <vapier@gentoo.org>
+  -files/7-stable/rsyslog-imuxsock-shrink.patch, -rsyslog-7.6.3-r2.ebuild:
+  Drop shrinkage patch as it is slightly broken, and to make it work requires
+  more hacks.  Will continue to try and sort out a way forward in upstream.
 
 *rsyslog-7.6.3-r2 (16 Jun 2014)
 
