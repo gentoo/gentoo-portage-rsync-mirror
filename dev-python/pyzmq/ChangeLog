@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.47 2014/05/09 04:49:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.48 2014/06/18 08:35:59 idella4 Exp $
+
+*pyzmq-14.3.1 (18 Jun 2014)
+
+  18 Jun 2014; Ian Delaney <idella4@gentoo.org> +pyzmq-14.3.1.ebuild:
+  drop py2.6 py3.2, add IUSE doc, doc build, update deps
 
 *pyzmq-14.3.0 (09 May 2014)
 
