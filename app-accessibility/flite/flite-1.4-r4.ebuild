@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r4.ebuild,v 1.1 2014/06/11 20:09:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r4.ebuild,v 1.2 2014/06/18 19:00:13 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS=" ~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa oss static-libs"
 
-DEPEND="alsa? ( >=media-libs/alsa-lib-1.0.24.1[${MULTILIB_USEDEP}] )"
+DEPEND="alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}-release

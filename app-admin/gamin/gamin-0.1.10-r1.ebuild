@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.10-r1.ebuild,v 1.10 2014/01/18 19:56:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/gamin-0.1.10-r1.ebuild,v 1.11 2014/06/18 19:00:16 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~a
 IUSE=""
 
 RDEPEND="!app-admin/fam
-	>=dev-libs/libgamin-0.1.10[${MULTILIB_USEDEP}]"
+	>=dev-libs/libgamin-0.1.10-r4[${MULTILIB_USEDEP}]"
 DEPEND=""
 
 PDEPEND=">=app-admin/gam-server-0.1.10"

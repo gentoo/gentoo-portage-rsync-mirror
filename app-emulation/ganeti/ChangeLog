@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.90 2014/06/14 23:25:41 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.91 2014/06/18 18:50:58 chutzpah Exp $
+
+*ganeti-2.11.2-r2 (18 Jun 2014)
+
+  18 Jun 2014; Patrick McLean <chutzpah@gentoo.org> +ganeti-2.11.2-r2.ebuild,
+  +files/ganeti-2.11-add-pgrep.patch, +files/ganeti-2.11-daemon-util.patch,
+  +files/ganeti-2.11-start-stop-daemon-args.patch:
+  Revision bump, some minor ebuild cleanups. Add a --wait to start-stop-daemon
+  arguments in daemon-util to make sure that the ganeti daemons actually start.
+  Add patch contributed by 'Zentoo' for daemon-util to make restart-all handle
+  master/node differences properly (bug #513600).
 
 *ganeti-2.11.2-r1 (14 Jun 2014)
 *ganeti-2.10.5-r2 (14 Jun 2014)

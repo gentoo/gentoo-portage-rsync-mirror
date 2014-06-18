@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.2-r1.ebuild,v 1.2 2014/03/09 00:41:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.2-r1.ebuild,v 1.3 2014/06/18 19:00:33 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="+asn1 debug +trust"
 REQUIRED_USE="trust? ( asn1 )"
 
-RDEPEND="asn1? ( >=dev-libs/libtasn1-2.14[${MULTILIB_USEDEP}] )"
+RDEPEND="asn1? ( >=dev-libs/libtasn1-3.4[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
