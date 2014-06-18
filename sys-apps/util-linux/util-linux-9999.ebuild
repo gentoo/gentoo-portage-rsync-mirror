@@ -1,12 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.54 2014/04/27 21:06:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.55 2014/06/18 16:28:54 mgorny Exp $
 
 EAPI="4"
 
 PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
 
-inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1 python-single-r1
+inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1 \
+	python-single-r1 multilib-minimal
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -38,9 +39,13 @@ RDEPEND="!sys-process/schedutils
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	pam? ( sys-libs/pam )
 	python? ( ${PYTHON_DEPS} )
-	selinux? ( sys-libs/libselinux )
+	selinux? ( sys-libs/libselinux[${MULTILIB_USEDEP}] )
 	slang? ( sys-libs/slang )
-	udev? ( virtual/udev )"
+	udev? ( virtual/udev )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140406-r2
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32]
+	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
@@ -65,65 +70,88 @@ src_prepare() {
 
 lfs_fallocate_test() {
 	# Make sure we can use fallocate with LFS #300307
-	cat <<-EOF > "${T}"/fallocate.c
+	cat <<-EOF > "${T}"/fallocate.${ABI}.c
 		#define _GNU_SOURCE
 		#include <fcntl.h>
 		main() { return fallocate(0, 0, 0, 0); }
 	EOF
 	append-lfs-flags
-	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} "${T}"/fallocate.c -o /dev/null >/dev/null 2>&1 \
+	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} "${T}"/fallocate.${ABI}.c -o /dev/null >/dev/null 2>&1 \
 		|| export ac_cv_func_fallocate=no
-	rm -f "${T}"/fallocate.c
+	rm -f "${T}"/fallocate.${ABI}.c
 }
 
-src_configure() {
+multilib_src_configure() {
 	lfs_fallocate_test
-	export ac_cv_header_security_pam_misc_h=$(usex pam) #485486
+	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
+	ECONF_SOURCE=${S} \
 	econf \
 		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
-		$(use_enable nls) \
+		$(multilib_native_use_enable nls) \
 		--enable-agetty \
 		--with-bashcompletiondir="$(get_bashcompdir)" \
-		$(use_enable bash-completion) \
-		$(use_enable caps setpriv) \
-		$(use_enable cramfs) \
-		$(use_enable cytune) \
-		$(use_enable fdformat) \
-		--with-ncurses=$(usex ncurses $(usex unicode auto yes) no) \
+		$(multilib_native_use_enable bash-completion) \
+		$(multilib_native_use_enable caps setpriv) \
+		$(multilib_native_use_enable cramfs) \
+		$(multilib_native_use_enable cytune) \
+		$(multilib_native_use_enable fdformat) \
+		--with-ncurses=$(multilib_native_usex ncurses $(usex unicode auto yes) no) \
 		--disable-kill \
 		--disable-login \
-		$(use_enable tty-helpers mesg) \
+		$(multilib_native_use_enable tty-helpers mesg) \
 		--disable-nologin \
 		--enable-partx \
-		$(use_with python) \
+		$(multilib_native_use_with python) \
 		--enable-raw \
 		--enable-rename \
 		--disable-reset \
 		--enable-schedutils \
 		--disable-su \
-		$(use_enable tty-helpers wall) \
-		$(use_enable tty-helpers write) \
-		$(use_enable suid makeinstall-chown) \
-		$(use_enable suid makeinstall-setuid) \
+		$(multilib_native_use_enable tty-helpers wall) \
+		$(multilib_native_use_enable tty-helpers write) \
+		$(multilib_native_use_enable suid makeinstall-chown) \
+		$(multilib_native_use_enable suid makeinstall-setuid) \
 		$(use_with selinux) \
-		$(use_with slang) \
+		$(multilib_native_use_with slang) \
 		$(use_enable static-libs static) \
-		$(use_with udev) \
+		$(multilib_native_use_with udev) \
 		$(tc-has-tls || echo --disable-tls)
 }
 
-src_test() {
-	emake check
+multilib_src_compile() {
+	if multilib_is_native_abi; then
+		default
+	else
+		# build libraries only
+		emake -f Makefile -f - mylibs \
+			<<< 'mylibs: $(usrlib_exec_LTLIBRARIES) $(pkgconfig_DATA)'
+	fi
 }
 
-src_install() {
-	default
+multilib_src_test() {
+	multilib_is_native_abi && emake check
+}
+
+multilib_src_install() {
+	if multilib_is_native_abi; then
+		default
+	else
+		emake DESTDIR="${D}" install-usrlib_execLTLIBRARIES \
+			install-pkgconfigDATA install-uuidincHEADERS \
+			install-nodist_blkidincHEADERS install-nodist_mountincHEADERS \
+			install-nodist_smartcolsincHEADERS
+	fi
+
+	if multilib_is_native_abi; then
+		# need the libs in /
+		gen_usr_ldscript -a blkid mount smartcols uuid
+
+		use python && python_optimize
+	fi
+}
+
+multilib_src_install_all() {
 	dodoc AUTHORS NEWS README* Documentation/{TODO,*.txt,releases/*}
-
-	use python && python_optimize
-
-	# need the libs in /
-	gen_usr_ldscript -a blkid mount uuid
 
 	# e2fsprogs-libs didnt install .la files, and .pc work fine
 	prune_libtool_files
