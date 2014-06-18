@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.299 2014/05/30 19:59:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.300 2014/06/18 14:12:24 mgorny Exp $
+
+*cyrus-sasl-2.1.26-r7 (18 Jun 2014)
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> +cyrus-sasl-2.1.26-r7.ebuild,
+  -cyrus-sasl-2.1.26-r6.ebuild:
+  Fix the reference to myconf array. Bug #513684.
 
 *cyrus-sasl-2.1.26-r6 (30 May 2014)
 

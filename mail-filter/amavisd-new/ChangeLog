@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.203 2014/05/16 19:07:41 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.204 2014/06/18 14:11:21 klausman Exp $
+
+  18 Jun 2014; Tobias Klausmann <klausman@gentoo.org> amavisd-new-2.7.2.ebuild:
+  Drop alpha keyword, see bug 442188
 
 *amavisd-new-2.9.0 (16 May 2014)
 

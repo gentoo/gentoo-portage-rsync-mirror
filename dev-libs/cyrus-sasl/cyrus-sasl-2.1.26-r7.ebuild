@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r6.ebuild,v 1.1 2014/05/30 19:59:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.1 2014/06/18 14:12:24 mgorny Exp $
 
 EAPI=5
 
@@ -152,7 +152,7 @@ multilib_src_configure() {
 		$(use_with sqlite sqlite3 /usr/$(get_libdir)) \
 		$(use_enable srp) \
 		$(use_enable static-libs static) \
-		${myconf}
+		"${myconf[@]}"
 }
 
 multilib_src_compile() {
