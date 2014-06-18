@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-amr/gst-plugins-amr-0.10.19-r1.ebuild,v 1.1 2014/06/10 18:52:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-amr/gst-plugins-amr-0.10.19-r1.ebuild,v 1.2 2014/06/18 20:00:16 mgorny Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/opencore-amr[${MULTILIB_USEDEP}]"
+RDEPEND=">=media-libs/opencore-amr-0.1.3-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 GST_PLUGINS_BUILD="amrnb amrwb"

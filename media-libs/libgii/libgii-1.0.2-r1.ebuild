@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2-r1.ebuild,v 1.10 2014/01/26 12:15:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2-r1.ebuild,v 1.11 2014/06/18 19:41:21 mgorny Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x
 IUSE="X"
 
 RDEPEND="X? (
-	x11-libs/libX11[${MULTILIB_USEDEP}]
-	x11-libs/libXxf86dga[${MULTILIB_USEDEP}]
+	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXxf86dga-1.1.4[${MULTILIB_USEDEP}]
 	)"
 DEPEND="${RDEPEND}
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.11 )"

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.258 2014/05/21 18:59:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.259 2014/06/18 19:42:33 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libgphoto2-2.5.4-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libgphoto2-2.5.4-r1 (21 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/libmetalink-0.1.1-r1.ebuild,v 1.1 2014/06/13 08:21:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/libmetalink-0.1.1-r1.ebuild,v 1.2 2014/06/18 19:43:17 mgorny Exp $
 
 EAPI="5"
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="expat static-libs test xml"
 
-RDEPEND="expat? ( dev-libs/expat[${MULTILIB_USEDEP}] )
-	 xml? ( >=dev-libs/libxml2-2.6.24[${MULTILIB_USEDEP}] )"
+RDEPEND="expat? ( >=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}] )
+	 xml? ( >=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	test? ( dev-util/cunit[${MULTILIB_USEDEP}] )"
+	test? ( >=dev-util/cunit-2.1_p2[${MULTILIB_USEDEP}] )"
 
 REQUIRED_USE="^^ ( expat xml )"
 

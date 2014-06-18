@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.2.4-r1.ebuild,v 1.1 2014/06/10 18:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.2.4-r1.ebuild,v 1.2 2014/06/18 19:33:18 mgorny Exp $
 
 EAPI="5"
 
@@ -21,28 +21,28 @@ REQUIRED_USE="
 
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.32:2[${MULTILIB_USEDEP}]
-	>=media-libs/gstreamer-1.2.0:1.0[introspection?,${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
-	alsa? ( >=media-libs/alsa-lib-0.9.1[${MULTILIB_USEDEP}] )
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=media-libs/gstreamer-1.2.3:1.0[introspection?,${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	ivorbis? ( media-libs/tremor[${MULTILIB_USEDEP}] )
-	ogg? ( >=media-libs/libogg-1[${MULTILIB_USEDEP}] )
+	ivorbis? ( >=media-libs/tremor-0_pre20130223[${MULTILIB_USEDEP}] )
+	ogg? ( >=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}] )
 	orc? ( >=dev-lang/orc-0.4.18[${MULTILIB_USEDEP}] )
-	pango? ( >=x11-libs/pango-1.22[${MULTILIB_USEDEP}] )
-	theora? ( >=media-libs/libtheora-1.1[encode,${MULTILIB_USEDEP}] )
-	vorbis? ( >=media-libs/libvorbis-1[${MULTILIB_USEDEP}] )
+	pango? ( >=x11-libs/pango-1.36.3[${MULTILIB_USEDEP}] )
+	theora? ( >=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}] )
+	vorbis? ( >=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}] )
 	X? (
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libXv[${MULTILIB_USEDEP}] )
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXv-1.0.10[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
 	X? (
-		x11-proto/videoproto[${MULTILIB_USEDEP}]
-		x11-proto/xextproto[${MULTILIB_USEDEP}]
-		x11-proto/xproto[${MULTILIB_USEDEP}] )
+		>=x11-proto/videoproto-2.3.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )
 "
 
 src_prepare() {

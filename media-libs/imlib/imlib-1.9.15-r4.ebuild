@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r4.ebuild,v 1.2 2014/04/18 14:58:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r4.ebuild,v 1.3 2014/06/18 19:35:05 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils multilib-minimal
@@ -16,13 +16,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc static-libs"
 
-RDEPEND=">=media-libs/tiff-3.5.5[${MULTILIB_USEDEP}]
-	>=media-libs/giflib-4.1.0[${MULTILIB_USEDEP}]
-	>=media-libs/libpng-1.2.1[${MULTILIB_USEDEP}]
-	virtual/jpeg[${MULTILIB_USEDEP}]
-	x11-libs/libICE[${MULTILIB_USEDEP}]
-	x11-libs/libSM[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]
+RDEPEND=">=media-libs/tiff-3.9.7-r1[${MULTILIB_USEDEP}]
+	>=media-libs/giflib-4.2.3[${MULTILIB_USEDEP}]
+	>=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}]
+	>=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
+	>=x11-libs/libICE-1.0.8-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libSM-1.2.1-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-gtklibs-20140406

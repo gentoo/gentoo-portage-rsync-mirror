@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.115 2014/04/28 17:43:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.116 2014/06/18 19:40:03 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
   Replace multilib_build_binaries with multilib_is_native_abi, in order to put

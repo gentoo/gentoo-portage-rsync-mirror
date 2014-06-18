@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27-r3.ebuild,v 1.1 2014/05/21 12:03:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27-r3.ebuild,v 1.2 2014/06/18 20:00:41 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib multilib-minimal
@@ -18,10 +18,10 @@ IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}:=[${MULTILIB_USEDEP}]
 	ffmpeg? ( virtual/ffmpeg )
-	jack? ( >=media-sound/jack-audio-connection-kit-0.98[${MULTILIB_USEDEP}] )
-	libsamplerate? ( media-libs/libsamplerate:=[${MULTILIB_USEDEP}] )
-	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
-	speex? ( media-libs/speex:=[${MULTILIB_USEDEP}] )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
+	libsamplerate? ( >=media-libs/libsamplerate-0.1.8-r1:=[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
+	speex? ( >=media-libs/speex-1.2_rc1-r1:=[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<app-emulation/emul-linux-x86-soundlibs-20140406-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32]

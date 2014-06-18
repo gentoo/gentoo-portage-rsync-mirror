@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.4.1-r2.ebuild,v 1.1 2014/06/15 13:51:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.4.1-r2.ebuild,v 1.2 2014/06/18 19:46:45 mgorny Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ SLOT="0.4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples static-libs"
 
-RDEPEND=">=net-misc/curl-7.18.2[${MULTILIB_USEDEP}]
+RDEPEND=">=net-misc/curl-7.36.0[${MULTILIB_USEDEP}]
 	!<media-libs/quvi-0.4.0
-	>=media-libs/libquvi-scripts-0.4.0:0.4[${MULTILIB_USEDEP}]
-	>=dev-lang/lua-5.1[deprecated,${MULTILIB_USEDEP}]
+	>=media-libs/libquvi-scripts-0.4.21-r1:0.4[${MULTILIB_USEDEP}]
+	>=dev-lang/lua-5.2.3[deprecated,${MULTILIB_USEDEP}]
 	!=media-libs/libquvi-0.4*:0"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.11 2014/03/31 21:10:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.12 2014/06/18 19:49:22 mgorny Exp $
 
 EAPI=5
 
@@ -25,9 +25,9 @@ KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbs
 IUSE="alsa minimal sqlite static-libs test"
 
 RDEPEND="
-	!minimal? ( >=media-libs/flac-1.2.1[${MULTILIB_USEDEP}]
-		>=media-libs/libogg-1.1.3[${MULTILIB_USEDEP}]
-		>=media-libs/libvorbis-1.2.3[${MULTILIB_USEDEP}] )
+	!minimal? ( >=media-libs/flac-1.2.1-r5[${MULTILIB_USEDEP}]
+		>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
+		>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}] )
 	alsa? ( media-libs/alsa-lib )
 	sqlite? ( >=dev-db/sqlite-3.2 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r6

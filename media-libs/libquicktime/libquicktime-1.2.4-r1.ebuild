@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4-r1.ebuild,v 1.1 2014/06/10 18:06:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4-r1.ebuild,v 1.2 2014/06/18 19:46:42 mgorny Exp $
 
 EAPI=5
 inherit libtool eutils multilib-minimal
@@ -14,23 +14,23 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="aac alsa doc dv encode ffmpeg gtk jpeg lame mmx opengl png schroedinger static-libs vorbis X x264"
 
-RDEPEND="virtual/libintl[${MULTILIB_USEDEP}]
+RDEPEND=">=virtual/libintl-0-r1[${MULTILIB_USEDEP}]
 	aac? (
-		media-libs/faad2[${MULTILIB_USEDEP}]
-		encode? ( media-libs/faac[${MULTILIB_USEDEP}] )
+		>=media-libs/faad2-2.7-r3[${MULTILIB_USEDEP}]
+		encode? ( >=media-libs/faac-1.28-r3[${MULTILIB_USEDEP}] )
 		)
 	alsa? ( >=media-libs/alsa-lib-1.0.20 )
-	dv? ( media-libs/libdv[${MULTILIB_USEDEP}] )
-	ffmpeg? ( virtual/ffmpeg[${MULTILIB_USEDEP}] )
+	dv? ( >=media-libs/libdv-1.0.0-r3[${MULTILIB_USEDEP}] )
+	ffmpeg? ( >=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}] )
 	gtk? ( x11-libs/gtk+:2 )
-	jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	lame? ( media-sound/lame[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
+	lame? ( >=media-sound/lame-3.99.5-r1[${MULTILIB_USEDEP}] )
 	opengl? ( virtual/opengl )
-	png? ( media-libs/libpng:0[${MULTILIB_USEDEP}] )
-	schroedinger? ( >=media-libs/schroedinger-1.0.10[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
+	schroedinger? ( >=media-libs/schroedinger-1.0.11-r1[${MULTILIB_USEDEP}] )
 	vorbis? (
-		media-libs/libogg[${MULTILIB_USEDEP}]
-		media-libs/libvorbis[${MULTILIB_USEDEP}]
+		>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
+		>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}]
 		)
 	X? (
 		x11-libs/libX11
@@ -39,12 +39,12 @@ RDEPEND="virtual/libintl[${MULTILIB_USEDEP}]
 		x11-libs/libXt
 		x11-libs/libXv
 		)
-	x264? ( media-libs/x264[${MULTILIB_USEDEP}] )"
+	x264? ( >=media-libs/x264-0.0.20130506[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )
-	X? ( x11-proto/videoproto[${MULTILIB_USEDEP}] )"
+	X? ( >=x11-proto/videoproto-2.3.1-r1[${MULTILIB_USEDEP}] )"
 
 REQUIRED_USE="opengl? ( X )"
 

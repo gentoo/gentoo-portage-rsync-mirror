@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.21-r2.ebuild,v 1.1 2014/05/29 18:42:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.21-r2.ebuild,v 1.2 2014/06/18 19:38:28 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ RDEPEND="
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r6
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
-DEPEND="virtual/pkgconfig[${MULTILIB_USEDEP}]"
+DEPEND=">=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 # The provided tests are interactive only
 RESTRICT="test"

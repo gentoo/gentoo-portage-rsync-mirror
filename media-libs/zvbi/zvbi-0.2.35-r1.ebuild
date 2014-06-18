@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.35-r1.ebuild,v 1.4 2014/05/17 16:44:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.35-r1.ebuild,v 1.5 2014/06/18 20:00:28 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc dvb nls static-libs v4l X"
 
-RDEPEND=">=media-libs/libpng-1.4[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
-	nls? ( virtual/libintl[${MULTILIB_USEDEP}] )
-	X? ( x11-libs/libX11[${MULTILIB_USEDEP}] )"
+RDEPEND=">=media-libs/libpng-1.5.18[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )
+	X? ( >=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/os-headers
 	doc? ( app-doc/doxygen )

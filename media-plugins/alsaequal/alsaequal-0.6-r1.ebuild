@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.6-r1.ebuild,v 1.1 2013/06/27 18:41:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.6-r1.ebuild,v 1.2 2014/06/18 19:59:11 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/alsa-lib[${MULTILIB_USEDEP}]
-	media-plugins/caps-plugins[${MULTILIB_USEDEP}]
+RDEPEND=">=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}]
+	>=media-plugins/caps-plugins-0.4.5-r2[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r3
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.5 2013/08/15 03:38:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r1.ebuild,v 1.6 2014/06/18 19:52:22 mgorny Exp $
 
 EAPI=5
 
@@ -16,14 +16,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X cairo cups doc exif fltk qt4 raw test"
 
 RDEPEND="=app-admin/elektra-0.7*[${MULTILIB_USEDEP}]
-	dev-libs/yajl[${MULTILIB_USEDEP}]
+	>=dev-libs/yajl-2.0.4-r1[${MULTILIB_USEDEP}]
 	media-libs/icc-profiles-basiccolor-printing2009
 	media-libs/icc-profiles-basiccolor-printing2009
-	>=media-libs/libXcm-0.5.2[${MULTILIB_USEDEP}]
-	X? ( x11-libs/libXfixes[${MULTILIB_USEDEP}]
-		x11-libs/libXrandr[${MULTILIB_USEDEP}]
-		x11-libs/libXxf86vm[${MULTILIB_USEDEP}]
-		x11-libs/libXinerama[${MULTILIB_USEDEP}] )
+	>=media-libs/libXcm-0.5.2-r1[${MULTILIB_USEDEP}]
+	X? ( >=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
+		>=x11-libs/libXrandr-1.4.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXxf86vm-1.1.3[${MULTILIB_USEDEP}]
+		>=x11-libs/libXinerama-1.1.3[${MULTILIB_USEDEP}] )
 	!amd64? (
 		dev-libs/libxml2
 		cairo? ( x11-libs/cairo )

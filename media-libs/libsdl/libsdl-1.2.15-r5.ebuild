@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r5.ebuild,v 1.4 2014/05/15 16:15:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r5.ebuild,v 1.5 2014/06/18 19:48:49 mgorny Exp $
 
 # TODO: convert media-libs/libggi to multilib
 
@@ -24,39 +24,39 @@ RDEPEND="
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-sdl-20140406
 	)
-	sound? ( >=media-libs/audiofile-0.1.9[${MULTILIB_USEDEP}] )
-	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
+	sound? ( >=media-libs/audiofile-0.3.5[${MULTILIB_USEDEP}] )
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	nas? (
-		media-libs/nas[${MULTILIB_USEDEP}]
-		x11-libs/libXt[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
+		>=media-libs/nas-1.9.4[${MULTILIB_USEDEP}]
+		>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	)
 	X? (
-		x11-libs/libXt[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXrandr[${MULTILIB_USEDEP}]
+		>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXrandr-1.4.2[${MULTILIB_USEDEP}]
 	)
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
-	aalib? ( media-libs/aalib[${MULTILIB_USEDEP}] )
-	libcaca? ( >=media-libs/libcaca-0.9-r1[${MULTILIB_USEDEP}] )
+	aalib? ( >=media-libs/aalib-1.4_rc5-r6[${MULTILIB_USEDEP}] )
+	libcaca? ( >=media-libs/libcaca-0.99_beta18-r1[${MULTILIB_USEDEP}] )
 	opengl? (
-		virtual/opengl[${MULTILIB_USEDEP}]
-		virtual/glu[${MULTILIB_USEDEP}]
+		>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
+		>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
 	)
 	ppc64? ( ps3? ( sys-libs/libspe2 ) )
-	tslib? ( x11-libs/tslib[${MULTILIB_USEDEP}] )
-	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )"
+	tslib? ( >=x11-libs/tslib-1.0-r3[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	nas? (
-		x11-proto/xextproto[${MULTILIB_USEDEP}]
-		x11-proto/xproto[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
 	)
 	X? (
-		x11-proto/xextproto[${MULTILIB_USEDEP}]
-		x11-proto/xproto[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
 	)
 	x86? ( || ( >=dev-lang/yasm-0.6.0 >=dev-lang/nasm-0.98.39-r3 ) )"
 

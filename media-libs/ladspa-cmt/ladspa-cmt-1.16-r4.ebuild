@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16-r4.ebuild,v 1.2 2014/05/03 10:11:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16-r4.ebuild,v 1.3 2014/06/18 19:35:46 mgorny Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
 
-DEPEND="media-libs/ladspa-sdk[${MULTILIB_USEDEP}]"
+DEPEND=">=media-libs/ladspa-sdk-1.13-r2[${MULTILIB_USEDEP}]"
 RDEPEND=""
 
 src_prepare() {

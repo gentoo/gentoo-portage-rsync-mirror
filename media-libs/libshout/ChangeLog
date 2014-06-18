@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libshout
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.50 2014/03/04 14:38:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.51 2014/06/18 19:49:08 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libshout-2.3.1-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   04 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/libshout-2.3.1-underlinking.patch, libshout-2.3.1-r1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.25 2014/06/07 21:31:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.26 2014/06/18 19:46:12 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  libpostproc-10.20140517-r1.ebuild, libpostproc-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libpostproc-10.20140517-r1 (07 Jun 2014)
 

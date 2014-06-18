@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.62 2014/04/18 19:21:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.63 2014/06/18 19:58:14 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> smpeg-0.4.4-r10.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *smpeg-0.4.4-r10 (18 Apr 2014)
 

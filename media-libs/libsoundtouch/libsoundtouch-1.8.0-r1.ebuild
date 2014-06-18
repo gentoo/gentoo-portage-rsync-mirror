@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.8.0-r1.ebuild,v 1.1 2014/06/07 16:03:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.8.0-r1.ebuild,v 1.2 2014/06/18 19:49:11 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="sse2 static-libs"
 
-DEPEND="virtual/pkgconfig[${MULTILIB_USEDEP}]"
+DEPEND=">=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 S=${WORKDIR}/${MY_PN}
 

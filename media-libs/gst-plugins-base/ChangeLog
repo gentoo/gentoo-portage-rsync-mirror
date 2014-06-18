@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.246 2014/06/10 18:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.247 2014/06/18 19:33:18 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  gst-plugins-base-0.10.36-r1.ebuild, gst-plugins-base-1.2.4-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-base-0.10.36-r1 (10 Jun 2014)
 *gst-plugins-base-1.2.4-r1 (10 Jun 2014)

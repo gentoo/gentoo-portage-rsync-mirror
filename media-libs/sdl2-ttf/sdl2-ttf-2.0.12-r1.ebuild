@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-ttf/sdl2-ttf-2.0.12-r1.ebuild,v 1.1 2014/04/18 21:17:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-ttf/sdl2-ttf-2.0.12-r1.ebuild,v 1.2 2014/06/18 19:54:10 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs X"
 
-RDEPEND="X? ( x11-libs/libXt[${MULTILIB_USEDEP}] )
-	media-libs/libsdl2[${MULTILIB_USEDEP}]
-	>=media-libs/freetype-2.3[${MULTILIB_USEDEP}]"
+RDEPEND="X? ( >=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}] )
+	>=media-libs/libsdl2-2.0.1-r1[${MULTILIB_USEDEP}]
+	>=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

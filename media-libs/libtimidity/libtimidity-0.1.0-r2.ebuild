@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/libtimidity-0.1.0-r2.ebuild,v 1.1 2013/12/30 07:59:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/libtimidity-0.1.0-r2.ebuild,v 1.2 2014/06/18 19:49:51 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ao debug"
 
-RDEPEND="ao? ( media-libs/libao[${MULTILIB_USEDEP}] )"
+RDEPEND="ao? ( >=media-libs/libao-1.1.0-r2[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

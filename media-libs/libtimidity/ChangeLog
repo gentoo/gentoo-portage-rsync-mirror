@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtimidity
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.21 2013/12/30 07:59:42 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.22 2014/06/18 19:49:51 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libtimidity-0.1.0-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libtimidity-0.1.0-r2 (30 Dec 2013)
 
@@ -79,4 +83,3 @@
   +files/libtimidity-0.1.0-automagic.patch, +libtimidity-0.1.0.ebuild:
   Initial commit for bug 169786, thanks to Hendrik Iben for reporting and
   original ebuild. This is a required dep of >=media-sound/moc-2.5.0_alpha2.
-

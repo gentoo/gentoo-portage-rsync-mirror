@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-1.2.4-r2.ebuild,v 1.1 2014/06/16 10:25:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-1.2.4-r2.ebuild,v 1.2 2014/06/18 19:33:45 mgorny Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="+introspection nls +orc test"
 
 RDEPEND="
-	>=dev-libs/glib-2.32:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 "
 DEPEND="${RDEPEND}
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
 	sys-devel/bison
 	sys-devel/flex
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	nls? ( sys-devel/gettext )
 "
 # gtk-doc-am to install API docs

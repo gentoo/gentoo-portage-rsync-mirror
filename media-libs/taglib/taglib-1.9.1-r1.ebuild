@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.9.1-r1.ebuild,v 1.2 2014/06/07 15:25:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.9.1-r1.ebuild,v 1.3 2014/06/18 19:58:34 mgorny Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 SLOT="0"
 IUSE="+asf debug examples +mp4 test"
 
-RDEPEND="sys-libs/zlib[${MULTILIB_USEDEP}]"
+RDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
-	test? ( dev-util/cppunit[${MULTILIB_USEDEP}] )
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+	test? ( >=dev-util/cppunit-1.13.2[${MULTILIB_USEDEP}] )
 "
 RDEPEND="${RDEPEND}
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r2

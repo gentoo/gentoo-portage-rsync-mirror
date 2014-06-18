@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.76 2014/05/04 17:09:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.77 2014/06/18 19:34:07 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-0.9.26-r1.ebuild,
+  harfbuzz-0.9.28.ebuild, harfbuzz-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *harfbuzz-0.9.28 (04 May 2014)
 

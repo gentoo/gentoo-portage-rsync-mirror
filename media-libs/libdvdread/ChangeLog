@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.99 2014/05/17 14:04:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.100 2014/06/18 19:41:16 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libdvdread-4.2.0-r1.ebuild,
+  libdvdread-4.2.1.ebuild, libdvdread-4.9.9.ebuild, libdvdread-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> libdvdread-4.2.1.ebuild:
   Stable for alpha, wrt bug #502838

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r2.ebuild,v 1.4 2014/04/28 17:43:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18-r2.ebuild,v 1.5 2014/06/18 19:40:03 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,19 +17,19 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="cxx doc imlib java mono ncurses opengl python ruby slang static-libs test truetype X"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-COMMON_DEPEND="imlib? ( media-libs/imlib2[${MULTILIB_USEDEP}] )
+COMMON_DEPEND="imlib? ( >=media-libs/imlib2-1.4.6-r2[${MULTILIB_USEDEP}] )
 	mono? ( dev-lang/mono )
-	ncurses? ( >=sys-libs/ncurses-5.3[${MULTILIB_USEDEP}] )
+	ncurses? ( >=sys-libs/ncurses-5.9-r3[${MULTILIB_USEDEP}] )
 	opengl? (
-		virtual/glu[${MULTILIB_USEDEP}]
-		virtual/opengl[${MULTILIB_USEDEP}]
-		media-libs/freeglut[${MULTILIB_USEDEP}]
+		>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
+		>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
+		>=media-libs/freeglut-2.8.1[${MULTILIB_USEDEP}]
 		truetype? ( >=media-libs/ftgl-2.1.3_rc5 )
 	)
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( =dev-lang/ruby-1.8* )
-	slang? ( >=sys-libs/slang-2[${MULTILIB_USEDEP}] )
-	X? ( x11-libs/libX11[${MULTILIB_USEDEP}] x11-libs/libXt[${MULTILIB_USEDEP}] )"
+	slang? ( >=sys-libs/slang-2.2.4-r1[${MULTILIB_USEDEP}] )
+	X? ( >=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}] >=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}] )"
 RDEPEND="${COMMON_DEPEND}
 	java? ( >=virtual/jre-1.5 )"
 DEPEND="${COMMON_DEPEND}

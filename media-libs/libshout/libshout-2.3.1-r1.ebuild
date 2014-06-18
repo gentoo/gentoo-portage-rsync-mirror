@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.3.1-r1.ebuild,v 1.3 2014/03/04 14:37:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.3.1-r1.ebuild,v 1.4 2014/06/18 19:49:08 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="speex static-libs theora"
 
-RDEPEND="media-libs/libogg[${MULTILIB_USEDEP}]
-	media-libs/libvorbis[${MULTILIB_USEDEP}]
-	speex? ( media-libs/speex[${MULTILIB_USEDEP}] )
-	theora? ( media-libs/libtheora[${MULTILIB_USEDEP}] )
+RDEPEND=">=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
+	>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}]
+	speex? ( >=media-libs/speex-1.2_rc1-r1[${MULTILIB_USEDEP}] )
+	theora? ( >=media-libs/libtheora-1.1.1[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r6
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}

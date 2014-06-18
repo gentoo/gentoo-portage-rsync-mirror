@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libquvi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.35 2014/06/15 13:51:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.36 2014/06/18 19:46:45 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libquvi-0.4.1-r2.ebuild,
+  libquvi-0.9.4-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libquvi-0.4.1-r2 (15 Jun 2014)
 *libquvi-0.9.4-r1 (15 Jun 2014)

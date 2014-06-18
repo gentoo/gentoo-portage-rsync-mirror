@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.2-r1.ebuild,v 1.4 2014/01/19 08:51:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.2-r1.ebuild,v 1.5 2014/06/18 19:50:34 mgorny Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE="X doc static-libs"
 
-RDEPEND="X? ( x11-libs/libXmu[${MULTILIB_USEDEP}]
-		x11-libs/libXfixes[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-proto/xproto[${MULTILIB_USEDEP}] )"
+RDEPEND="X? ( >=x11-libs/libXmu-1.1.1-r1[${MULTILIB_USEDEP}]
+		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 

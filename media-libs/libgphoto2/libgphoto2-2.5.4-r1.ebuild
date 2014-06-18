@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4-r1.ebuild,v 1.1 2014/05/21 18:59:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.4-r1.ebuild,v 1.2 2014/06/18 19:42:33 mgorny Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -50,16 +50,16 @@ done
 
 # libgphoto2 actually links to libtool
 RDEPEND="
-	dev-libs/libxml2:2[${MULTILIB_USEDEP}]
-	sys-devel/libtool[${MULTILIB_USEDEP}]
-	virtual/libusb:1[${MULTILIB_USEDEP}]
-	cameras_ax203? ( media-libs/gd:=[${MULTILIB_USEDEP}] )
-	cameras_st2205? ( media-libs/gd:=[${MULTILIB_USEDEP}] )
-	exif? ( >=media-libs/libexif-0.5.9:=[${MULTILIB_USEDEP}] )
-	gd? ( media-libs/gd[jpeg=,${MULTILIB_USEDEP}] )
-	jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
-	serial? ( dev-libs/lockdev[${MULTILIB_USEDEP}] )
-	zeroconf? ( net-dns/avahi[mdnsresponder-compat,${MULTILIB_USEDEP}] )
+	>=dev-libs/libxml2-2.9.1-r4:2[${MULTILIB_USEDEP}]
+	>=sys-devel/libtool-2.4.2-r1[${MULTILIB_USEDEP}]
+	>=virtual/libusb-1-r1:1[${MULTILIB_USEDEP}]
+	cameras_ax203? ( >=media-libs/gd-2.0.35-r4:=[${MULTILIB_USEDEP}] )
+	cameras_st2205? ( >=media-libs/gd-2.0.35-r4:=[${MULTILIB_USEDEP}] )
+	exif? ( >=media-libs/libexif-0.6.21-r1:=[${MULTILIB_USEDEP}] )
+	gd? ( >=media-libs/gd-2.0.35-r4[jpeg=,${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
+	serial? ( >=dev-libs/lockdev-1.0.3.1.2-r2[${MULTILIB_USEDEP}] )
+	zeroconf? ( >=net-dns/avahi-0.6.31-r2[mdnsresponder-compat,${MULTILIB_USEDEP}] )
 	!<sys-fs/udev-175
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-medialibs-20140508
@@ -69,7 +69,7 @@ DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	sys-devel/flex
 	>=sys-devel/gettext-0.14.1
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	doc? ( app-doc/doxygen )
 "
 

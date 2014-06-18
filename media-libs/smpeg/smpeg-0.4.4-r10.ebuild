@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r10.ebuild,v 1.1 2014/04/18 19:21:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r10.ebuild,v 1.2 2014/06/18 19:58:14 mgorny Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs autotools flag-o-matic multilib-minimal
@@ -20,15 +20,15 @@ RDEPEND="
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-sdl-20140406
 	)
-	>=media-libs/libsdl-1.2.0[${MULTILIB_USEDEP}]
+	>=media-libs/libsdl-1.2.15-r4[${MULTILIB_USEDEP}]
 	opengl? (
-		virtual/glu[${MULTILIB_USEDEP}]
-		virtual/opengl[${MULTILIB_USEDEP}]
+		>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
+		>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
 	)
 	X? (
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libXi[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXi-1.7.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	)"
 DEPEND="${RDEPEND}"
 

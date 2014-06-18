@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgii
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.52 2014/01/26 12:15:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.53 2014/06/18 19:41:22 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libgii-1.0.2-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libgii-1.0.2-r1.ebuild:
   Stable for sparc, wrt bug #495732

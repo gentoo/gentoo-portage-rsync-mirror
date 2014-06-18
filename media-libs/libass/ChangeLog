@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.69 2014/04/30 04:54:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.70 2014/06/18 19:38:44 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libass-0.11.1.ebuild,
+  libass-0.11.2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libass-0.11.2 (30 Apr 2014)
 

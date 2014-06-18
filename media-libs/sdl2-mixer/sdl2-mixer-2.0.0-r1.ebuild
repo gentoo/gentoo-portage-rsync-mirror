@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-mixer/sdl2-mixer-2.0.0-r1.ebuild,v 1.1 2014/05/03 10:25:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-mixer/sdl2-mixer-2.0.0-r1.ebuild,v 1.2 2014/06/18 19:53:54 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -27,25 +27,25 @@ REQUIRED_USE="
 	tremor? ( vorbis )
 	"
 
-RDEPEND="media-libs/libsdl2[${MULTILIB_USEDEP}]
-	flac? ( media-libs/flac[${MULTILIB_USEDEP}] )
+RDEPEND=">=media-libs/libsdl2-2.0.1-r1[${MULTILIB_USEDEP}]
+	flac? ( >=media-libs/flac-1.2.1-r5[${MULTILIB_USEDEP}] )
 	midi? (
-		fluidsynth? ( media-sound/fluidsynth[${MULTILIB_USEDEP}] )
+		fluidsynth? ( >=media-sound/fluidsynth-1.1.6-r1[${MULTILIB_USEDEP}] )
 		timidity? ( media-sound/timidity++ )
 	)
 	mp3? (
-		mad? ( media-libs/libmad[${MULTILIB_USEDEP}] )
-		smpeg? ( media-libs/smpeg2[${MULTILIB_USEDEP}] )
+		mad? ( >=media-libs/libmad-0.15.1b-r8[${MULTILIB_USEDEP}] )
+		smpeg? ( >=media-libs/smpeg2-2.0.0-r1[${MULTILIB_USEDEP}] )
 	)
 	mod? (
-		modplug? ( media-libs/libmodplug[${MULTILIB_USEDEP}] )
-		mikmod? ( media-libs/libmikmod[${MULTILIB_USEDEP}] )
+		modplug? ( >=media-libs/libmodplug-0.8.8.4-r1[${MULTILIB_USEDEP}] )
+		mikmod? ( >=media-libs/libmikmod-3.2.0[${MULTILIB_USEDEP}] )
 	)
 	vorbis? (
-		tremor? ( media-libs/tremor[${MULTILIB_USEDEP}] )
+		tremor? ( >=media-libs/tremor-0_pre20130223[${MULTILIB_USEDEP}] )
 		!tremor? (
-			media-libs/libvorbis[${MULTILIB_USEDEP}]
-			media-libs/libogg[${MULTILIB_USEDEP}] )
+			>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}]
+			>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}] )
 	)"
 DEPEND=${RDEPEND}
 

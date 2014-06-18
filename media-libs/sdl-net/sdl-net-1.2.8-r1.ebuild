@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.8-r1.ebuild,v 1.2 2014/04/18 20:25:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.8-r1.ebuild,v 1.3 2014/06/18 19:56:08 mgorny Exp $
 
 EAPI=5
 inherit multilib-minimal
@@ -20,7 +20,7 @@ RDEPEND="
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-sdl-20140406
 	)
-	>=media-libs/libsdl-1.2.14[${MULTILIB_USEDEP}]"
+	>=media-libs/libsdl-1.2.15-r4[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.46 2014/04/18 20:43:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.47 2014/06/18 19:56:09 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> sdl-sound-1.0.3-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *sdl-sound-1.0.3-r1 (18 Apr 2014)
 

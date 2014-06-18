@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.4.ebuild,v 1.10 2014/02/22 07:40:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.4.ebuild,v 1.11 2014/06/18 19:52:13 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -17,19 +17,19 @@ IUSE="doc static-libs"
 RDEPEND="x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
-	x11-libs/libXau[${MULTILIB_USEDEP}]
+	>=x11-libs/libXau-1.0.7-r1[${MULTILIB_USEDEP}]
 	x11-libs/libXaw
 	x11-libs/libXext
 	x11-libs/libXmu
 	x11-libs/libXpm
-	x11-libs/libXt[${MULTILIB_USEDEP}]"
+	>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	app-text/rman
 	sys-devel/bison
 	sys-devel/flex
 	x11-misc/gccmakedep
 	x11-misc/imake
-	x11-proto/xproto[${MULTILIB_USEDEP}]"
+	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]"
 
 DOCS=( BUILDNOTES FAQ HISTORY README RELEASE TODO )
 

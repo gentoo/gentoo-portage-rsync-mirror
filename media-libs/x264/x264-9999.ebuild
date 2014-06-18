@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.19 2014/03/09 09:56:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.20 2014/06/18 20:00:07 mgorny Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ ASM_DEP=">=dev-lang/yasm-1.2.0"
 DEPEND="abi_x86_32? ( ${ASM_DEP} )
 	abi_x86_64? ( ${ASM_DEP} )
 	opencl? ( dev-lang/perl )"
-RDEPEND="opencl? ( virtual/opencl[${MULTILIB_USEDEP}] )
+RDEPEND="opencl? ( >=virtual/opencl-0-r3[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r7
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 

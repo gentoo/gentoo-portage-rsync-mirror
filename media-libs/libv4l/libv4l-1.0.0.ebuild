@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-1.0.0.ebuild,v 1.1 2013/08/06 14:45:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-1.0.0.ebuild,v 1.2 2014/06/18 19:51:15 mgorny Exp $
 
 EAPI=5
 inherit eutils linux-info udev multilib-minimal
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x
 IUSE=""
 
 # The libraries only link to -ljpeg, therefore multilib depend only for virtual/jpeg.
-RDEPEND=">=virtual/jpeg-0-r1:0=[${MULTILIB_USEDEP}]
+RDEPEND=">=virtual/jpeg-0-r2:0=[${MULTILIB_USEDEP}]
 	virtual/glu
 	virtual/opengl
 	x11-libs/libX11:=

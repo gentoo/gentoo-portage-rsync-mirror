@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libofa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/ChangeLog,v 1.25 2014/06/07 15:27:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/ChangeLog,v 1.26 2014/06/18 19:45:34 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libofa-0.9.3-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libofa-0.9.3-r1 (07 Jun 2014)
 

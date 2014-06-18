@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.16.0_beta1-r1.ebuild,v 1.1 2013/12/23 14:11:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.16.0_beta1-r1.ebuild,v 1.2 2014/06/18 19:47:54 mgorny Exp $
 
 EAPI=5
 
@@ -26,9 +26,9 @@ SLOT="0/10" # subslot = libraw soname version
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="demosaic examples jpeg jpeg2k +lcms openmp"
 
-RDEPEND="jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
-	jpeg2k? ( media-libs/jasper[${MULTILIB_USEDEP}] )
-	lcms? ( media-libs/lcms:2[${MULTILIB_USEDEP}] )"
+RDEPEND="jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
+	jpeg2k? ( >=media-libs/jasper-1.900.1-r6[${MULTILIB_USEDEP}] )
+	lcms? ( >=media-libs/lcms-2.5:2[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

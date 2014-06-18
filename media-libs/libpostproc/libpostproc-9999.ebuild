@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.10 2014/06/07 21:31:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.11 2014/06/18 19:46:12 mgorny Exp $
 
 EAPI="5"
 
@@ -36,7 +36,7 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-DEPEND=">=virtual/ffmpeg-0.10.2-r2[${MULTILIB_USEDEP}]"
+DEPEND=">=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}
 	!<media-video/libav-0.8.2-r2
 	!media-video/ffmpeg:0

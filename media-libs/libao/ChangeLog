@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.117 2014/01/29 03:53:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.118 2014/06/18 19:38:18 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libao-1.1.0-r2.ebuild,
+  libao-1.2.0.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libao-1.2.0 (29 Jan 2014)
 

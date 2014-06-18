@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-2.0.1-r1.ebuild,v 1.1 2013/08/11 16:02:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-2.0.1-r1.ebuild,v 1.2 2014/06/18 19:52:56 mgorny Exp $
 
 EAPI=5
 inherit autotools-multilib
@@ -14,7 +14,7 @@ SLOT="0/2.0.1" # 2.0.1 for the namespace off -> on switch, caused library renami
 KEYWORDS="~alpha ~amd64 -arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="examples static-libs"
 
-RDEPEND="sys-libs/zlib:=[${MULTILIB_USEDEP}]
+RDEPEND=">=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}]
 	>=media-libs/ilmbase-${PV}:=[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

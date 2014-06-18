@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19-r2.ebuild,v 1.1 2014/06/18 17:09:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19-r2.ebuild,v 1.2 2014/06/18 19:36:59 mgorny Exp $
 
 EAPI="5"
 
@@ -21,9 +21,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE="jpeg python static-libs tiff zlib"
 
 RDEPEND="
-	tiff? ( media-libs/tiff:0[${MULTILIB_USEDEP}] )
-	jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	tiff? ( >=media-libs/tiff-4.0.3-r6:0[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	python? ( ${PYTHON_DEPS} )
 "
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.9.20131130-r1.ebuild,v 1.1 2014/06/15 13:41:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.9.20131130-r1.ebuild,v 1.2 2014/06/18 19:47:25 mgorny Exp $
 
 EAPI=5
 
@@ -17,12 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="offensive"
 
-RDEPEND=">=dev-lua/LuaBitOp-1.0.1[${MULTILIB_USEDEP}]
-	>=dev-lua/luaexpat-1.2.0[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-lua/LuaBitOp-1.0.1-r1[${MULTILIB_USEDEP}]
+	>=dev-lua/luaexpat-1.3.0-r1[${MULTILIB_USEDEP}]
 	>=dev-lua/luajson-1.1.1
-	>=dev-lua/luasocket-2.0.2[${MULTILIB_USEDEP}]"
+	>=dev-lua/luasocket-3.0_rc1-r2[${MULTILIB_USEDEP}]"
 DEPEND="app-arch/xz-utils
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 # tests fetch data from live websites
 RESTRICT="test"

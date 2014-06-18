@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/gst-plugins-a52dec-0.10.19-r1.ebuild,v 1.1 2014/06/10 18:38:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/gst-plugins-a52dec-0.10.19-r1.ebuild,v 1.2 2014/06/18 20:01:08 mgorny Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd
 IUSE="+orc"
 
 RDEPEND="
-	>=media-libs/a52dec-0.7.3[${MULTILIB_USEDEP}]
-	orc? ( >=dev-lang/orc-0.4.11[${MULTILIB_USEDEP}] )
+	>=media-libs/a52dec-0.7.4-r6[${MULTILIB_USEDEP}]
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}"

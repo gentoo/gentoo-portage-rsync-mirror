@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.5-r1.ebuild,v 1.4 2014/06/10 00:51:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.5-r1.ebuild,v 1.5 2014/06/18 19:36:59 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_PRUNE_LIBTOOL_FILES="modules"
@@ -15,9 +15,9 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc jpeg static-libs test tiff zlib"
 
-RDEPEND="jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
-	tiff? ( media-libs/tiff:0=[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib:=[${MULTILIB_USEDEP}] )
+RDEPEND="jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
+	tiff? ( >=media-libs/tiff-4.0.3-r6:0=[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r10
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]

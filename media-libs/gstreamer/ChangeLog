@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.369 2014/06/16 10:25:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.370 2014/06/18 19:33:45 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gstreamer-0.10.36-r2.ebuild,
+  gstreamer-1.2.4-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gstreamer-1.2.4-r2 (16 Jun 2014)
 *gstreamer-0.10.36-r2 (16 Jun 2014)

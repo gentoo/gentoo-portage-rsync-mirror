@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.31-r1.ebuild,v 1.1 2014/06/10 18:36:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.31-r1.ebuild,v 1.2 2014/06/18 19:32:54 mgorny Exp $
 
 EAPI="5"
 
@@ -15,12 +15,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="+orc"
 
 RDEPEND="
-	>=dev-libs/glib-2.24:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
 	>=media-libs/gstreamer-0.10.36:${SLOT}[${MULTILIB_USEDEP}]
 	>=media-libs/gst-plugins-base-0.10.36:${SLOT}[${MULTILIB_USEDEP}]
-	app-arch/bzip2[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
-	orc? ( >=dev-lang/orc-0.4.11[${MULTILIB_USEDEP}] )
+	>=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.23-r2.ebuild,v 1.1 2014/06/10 18:35:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.23-r2.ebuild,v 1.2 2014/06/18 19:32:16 mgorny Exp $
 
 EAPI="5"
 
@@ -16,10 +16,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x8
 IUSE="+orc"
 
 RDEPEND="
-	>=dev-libs/glib-2.24:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
 	>=media-libs/gst-plugins-base-0.10.36:${SLOT}[${MULTILIB_USEDEP}]
 	>=media-libs/gstreamer-0.10.36:${SLOT}[${MULTILIB_USEDEP}]
-	orc? ( >=dev-lang/orc-0.4.11[${MULTILIB_USEDEP}] )
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.3-r1.ebuild,v 1.1 2014/04/18 20:43:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.3-r1.ebuild,v 1.2 2014/06/18 19:56:09 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -20,14 +20,14 @@ RDEPEND="
 		!app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-sdl-20140406
 	)
-	>=media-libs/libsdl-1.2[${MULTILIB_USEDEP}]
-	flac? ( media-libs/flac[${MULTILIB_USEDEP}] )
-	mikmod? ( >=media-libs/libmikmod-3.1.9[${MULTILIB_USEDEP}] )
-	modplug? ( media-libs/libmodplug[${MULTILIB_USEDEP}] )
-	vorbis? ( >=media-libs/libvorbis-1.0_beta4[${MULTILIB_USEDEP}] )
-	speex? ( media-libs/speex[${MULTILIB_USEDEP}] media-libs/libogg[${MULTILIB_USEDEP}] )
-	physfs? ( dev-games/physfs[${MULTILIB_USEDEP}] )
-	mpeg? ( media-libs/smpeg[${MULTILIB_USEDEP}] )"
+	>=media-libs/libsdl-1.2.15-r4[${MULTILIB_USEDEP}]
+	flac? ( >=media-libs/flac-1.2.1-r5[${MULTILIB_USEDEP}] )
+	mikmod? ( >=media-libs/libmikmod-3.2.0[${MULTILIB_USEDEP}] )
+	modplug? ( >=media-libs/libmodplug-0.8.8.4-r1[${MULTILIB_USEDEP}] )
+	vorbis? ( >=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}] )
+	speex? ( >=media-libs/speex-1.2_rc1-r1[${MULTILIB_USEDEP}] >=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}] )
+	physfs? ( >=dev-games/physfs-2.0.3-r1[${MULTILIB_USEDEP}] )
+	mpeg? ( >=media-libs/smpeg-0.4.4-r10[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

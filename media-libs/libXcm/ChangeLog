@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libXcm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.16 2014/03/08 01:51:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.17 2014/06/18 19:50:34 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXcm-0.5.2-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   07 Mar 2014; Pacho Ramos <pacho@gentoo.org> libXcm-0.5.2-r1.ebuild:
   amd64 stable, bug 472532

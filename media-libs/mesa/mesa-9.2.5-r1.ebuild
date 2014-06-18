@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5-r1.ebuild,v 1.1 2014/02/24 19:42:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5-r1.ebuild,v 1.2 2014/06/18 19:55:05 mgorny Exp $
 
 EAPI=5
 
@@ -95,41 +95,41 @@ RDEPEND="
 	classic? ( app-admin/eselect-mesa )
 	gallium? ( app-admin/eselect-mesa )
 	>=app-admin/eselect-opengl-1.2.7
-	dev-libs/expat[${MULTILIB_USEDEP}]
-	gbm? ( virtual/udev[${MULTILIB_USEDEP}] )
-	>=x11-libs/libX11-1.3.99.901[${MULTILIB_USEDEP}]
-	x11-libs/libXdamage[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]
-	x11-libs/libXxf86vm[${MULTILIB_USEDEP}]
-	>=x11-libs/libxcb-1.8.1[${MULTILIB_USEDEP}]
+	>=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
+	gbm? ( >=virtual/udev-208-r2[${MULTILIB_USEDEP}] )
+	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXdamage-1.1.4-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXxf86vm-1.1.3[${MULTILIB_USEDEP}]
+	>=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
 	llvm? (
 		video_cards_radeonsi? ( || (
-			dev-libs/elfutils[${MULTILIB_USEDEP}]
-			dev-libs/libelf[${MULTILIB_USEDEP}]
+			>=dev-libs/elfutils-0.155-r1[${MULTILIB_USEDEP}]
+			>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
 		) )
 		video_cards_r600? ( || (
-			dev-libs/elfutils[${MULTILIB_USEDEP}]
-			dev-libs/libelf[${MULTILIB_USEDEP}]
+			>=dev-libs/elfutils-0.155-r1[${MULTILIB_USEDEP}]
+			>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
 		) )
 		!video_cards_r600? (
 			video_cards_radeon? ( || (
-				dev-libs/elfutils[${MULTILIB_USEDEP}]
-				dev-libs/libelf[${MULTILIB_USEDEP}]
+				>=dev-libs/elfutils-0.155-r1[${MULTILIB_USEDEP}]
+				>=dev-libs/libelf-0.8.13-r2[${MULTILIB_USEDEP}]
 			) )
 		)
-		llvm-shared-libs? ( >=sys-devel/llvm-2.9[${MULTILIB_USEDEP}] )
+		llvm-shared-libs? ( >=sys-devel/llvm-3.2[${MULTILIB_USEDEP}] )
 	)
 	opencl? (
 				app-admin/eselect-opencl
 				dev-libs/libclc
 			)
-	vdpau? ( >=x11-libs/libvdpau-0.4.1[${MULTILIB_USEDEP}] )
-	wayland? ( >=dev-libs/wayland-1.0.3[${MULTILIB_USEDEP}] )
+	vdpau? ( >=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}] )
+	wayland? ( >=dev-libs/wayland-1.0.6[${MULTILIB_USEDEP}] )
 	xorg? (
 		x11-base/xorg-server:=
 		x11-libs/libdrm[libkms]
 	)
-	xvmc? ( >=x11-libs/libXvMC-1.0.6[${MULTILIB_USEDEP}] )
+	xvmc? ( >=x11-libs/libXvMC-1.0.8[${MULTILIB_USEDEP}] )
 	${LIBDRM_DEPSTRING}[video_cards_freedreno?,video_cards_nouveau?,video_cards_vmware?,${MULTILIB_USEDEP}]
 "
 for card in ${INTEL_CARDS}; do
@@ -146,23 +146,23 @@ done
 
 DEPEND="${RDEPEND}
 	llvm? (
-		>=sys-devel/llvm-2.9[${MULTILIB_USEDEP}]
+		>=sys-devel/llvm-3.2[${MULTILIB_USEDEP}]
 		r600-llvm-compiler? ( sys-devel/llvm[video_cards_radeon] )
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
-		>=sys-devel/llvm-3.3-r1[video_cards_radeon,${MULTILIB_USEDEP}]
+		>=sys-devel/llvm-3.3-r3[video_cards_radeon,${MULTILIB_USEDEP}]
 		>=sys-devel/clang-3.3[${MULTILIB_USEDEP}]
 		>=sys-devel/gcc-4.6
 	)
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	>=x11-proto/dri2proto-2.6[${MULTILIB_USEDEP}]
-	>=x11-proto/glproto-1.4.15-r1[${MULTILIB_USEDEP}]
-	>=x11-proto/xextproto-7.0.99.1[${MULTILIB_USEDEP}]
-	x11-proto/xf86driproto[${MULTILIB_USEDEP}]
-	x11-proto/xf86vidmodeproto[${MULTILIB_USEDEP}]
+	>=x11-proto/dri2proto-2.8-r1[${MULTILIB_USEDEP}]
+	>=x11-proto/glproto-1.4.16-r1[${MULTILIB_USEDEP}]
+	>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+	>=x11-proto/xf86driproto-2.1.1-r1[${MULTILIB_USEDEP}]
+	>=x11-proto/xf86vidmodeproto-2.3.1-r1[${MULTILIB_USEDEP}]
 	$(python_gen_any_dep 'dev-libs/libxml2[python,${PYTHON_USEDEP}]')
 "
 

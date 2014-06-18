@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.18 2014/05/15 12:34:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.19 2014/06/18 19:47:29 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libsdl2-2.0.2-r1.ebuild,
+  libsdl2-2.0.3.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> libsdl2-2.0.1-r1.ebuild,
   libsdl2-2.0.2.ebuild, libsdl2-2.0.2-r1.ebuild, libsdl2-2.0.3.ebuild:

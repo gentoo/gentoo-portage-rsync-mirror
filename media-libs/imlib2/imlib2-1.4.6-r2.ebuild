@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.2 2014/05/17 07:46:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.3 2014/06/18 19:35:59 mgorny Exp $
 
 # NOTE!!!: to avoid masking of -9999 the
 # package.mask entry for multilib version
@@ -24,22 +24,22 @@ HOMEPAGE="http://www.enlightenment.org/"
 IUSE="bzip2 gif jpeg mmx mp3 png static-libs tiff X zlib"
 
 RDEPEND="=media-libs/freetype-2*[${MULTILIB_USEDEP}]
-	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
-	gif? ( >=media-libs/giflib-4.1.0[${MULTILIB_USEDEP}] )
-	png? ( media-libs/libpng:0[${MULTILIB_USEDEP}] )
-	jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
-	tiff? ( media-libs/tiff:0[${MULTILIB_USEDEP}] )
+	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
+	gif? ( >=media-libs/giflib-4.2.3[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
+	tiff? ( >=media-libs/tiff-4.0.3-r6:0[${MULTILIB_USEDEP}] )
 	X? (
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
 	)
-	mp3? ( media-libs/libid3tag[${MULTILIB_USEDEP}] )"
+	mp3? ( >=media-libs/libid3tag-0.15.1b-r3[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	png? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
+	png? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	X? (
-		x11-proto/xextproto[${MULTILIB_USEDEP}]
-		x11-proto/xproto[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
 	)"
 
 src_prepare() {

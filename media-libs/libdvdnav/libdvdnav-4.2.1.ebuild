@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.2.1.ebuild,v 1.10 2014/05/17 14:04:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.2.1.ebuild,v 1.11 2014/06/18 19:41:13 mgorny Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ else
 	KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 fi
 IUSE=""
-RDEPEND=">=media-libs/libdvdread-4.2[${MULTILIB_USEDEP}]
+RDEPEND=">=media-libs/libdvdread-4.2.0-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r4
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}

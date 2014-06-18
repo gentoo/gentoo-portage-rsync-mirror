@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-net/sdl2-net-2.0.0-r1.ebuild,v 1.1 2014/04/18 21:14:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-net/sdl2-net-2.0.0-r1.ebuild,v 1.2 2014/06/18 19:54:00 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-RDEPEND="media-libs/libsdl2[${MULTILIB_USEDEP}]"
+RDEPEND=">=media-libs/libsdl2-2.0.1-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

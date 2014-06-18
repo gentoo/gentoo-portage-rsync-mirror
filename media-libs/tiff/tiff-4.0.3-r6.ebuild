@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r6.ebuild,v 1.12 2014/06/09 23:29:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r6.ebuild,v 1.13 2014/06/18 19:58:32 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cxx jbig jpeg lzma static-libs test zlib"
 
-RDEPEND="jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
-	jbig? ( media-libs/jbigkit:=[${MULTILIB_USEDEP}] )
-	lzma? ( app-arch/xz-utils:=[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib:=[${MULTILIB_USEDEP}] )
+RDEPEND="jpeg? ( >=virtual/jpeg-0-r2:0=[${MULTILIB_USEDEP}] )
+	jbig? ( >=media-libs/jbigkit-2.1:=[${MULTILIB_USEDEP}] )
+	lzma? ( >=app-arch/xz-utils-5.0.5-r1:=[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]

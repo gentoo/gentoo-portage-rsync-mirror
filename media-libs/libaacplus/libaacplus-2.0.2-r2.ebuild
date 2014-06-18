@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2-r2.ebuild,v 1.2 2013/10/14 16:48:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2-r2.ebuild,v 1.3 2014/06/18 19:36:10 mgorny Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ REQUIRED_USE="!bindist"
 
 RDEPEND="
 	!media-sound/aacplusenc
-	fftw? ( sci-libs/fftw:3.0[${MULTILIB_USEDEP}] )"
+	fftw? ( >=sci-libs/fftw-3.3.3-r2:3.0[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	virtual/pkgconfig"

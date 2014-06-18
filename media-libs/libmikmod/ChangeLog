@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.121 2014/05/22 13:59:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.122 2014/06/18 19:44:04 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libmikmod-3.3.5.ebuild,
+  libmikmod-3.3.6.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   22 May 2014; Michał Górny <mgorny@gentoo.org> libmikmod-3.3.6.ebuild:
   Wrap libmikmod-config for multilib.

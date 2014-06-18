@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/libharu-2.3.0-r1.ebuild,v 1.1 2014/06/17 17:59:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/libharu-2.3.0-r1.ebuild,v 1.2 2014/06/18 19:41:30 mgorny Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="png static-libs zlib"
 
 DEPEND="
-	png? ( media-libs/libpng[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )"
+	png? ( >=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MYP}"
