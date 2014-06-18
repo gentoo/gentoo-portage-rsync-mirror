@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.4.ebuild,v 1.6 2013/07/01 18:15:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.4.ebuild,v 1.7 2014/06/18 20:58:25 mgorny Exp $
 
 EAPI=5
 
@@ -47,11 +47,11 @@ RDEPEND="
 			app-emulation/emul-linux-x86-opengl
 			|| (
 				(
-					x11-libs/libX11[abi_x86_32]
-					x11-libs/libXext[abi_x86_32]
-					x11-libs/libXinerama[abi_x86_32]
-					x11-libs/libXrandr[abi_x86_32]
-					x11-libs/libXrender[abi_x86_32]
+					>=x11-libs/libX11-1.6.2[abi_x86_32]
+					>=x11-libs/libXext-1.3.2[abi_x86_32]
+					>=x11-libs/libXinerama-1.1.3[abi_x86_32]
+					>=x11-libs/libXrandr-1.4.2[abi_x86_32]
+					>=x11-libs/libXrender-0.9.8[abi_x86_32]
 				)
 				app-emulation/emul-linux-x86-xlibs
 			)

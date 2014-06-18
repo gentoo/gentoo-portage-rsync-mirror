@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.30.0-r1.ebuild,v 1.1 2014/06/08 12:55:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.30.0-r1.ebuild,v 1.2 2014/06/18 20:41:06 mgorny Exp $
 
 EAPI="5"
 
@@ -21,23 +21,23 @@ done
 unset lingua
 RESTRICT="test"
 
-RDEPEND="expat? ( dev-libs/expat:0=[${MULTILIB_USEDEP}] )
-	!expat? ( dev-libs/libxml2:2=[${MULTILIB_USEDEP}] )
+RDEPEND="expat? ( >=dev-libs/expat-2.1.0-r3:0=[${MULTILIB_USEDEP}] )
+	!expat? ( >=dev-libs/libxml2-2.9.1-r4:2=[${MULTILIB_USEDEP}] )
 	gnutls? (
 		app-misc/ca-certificates
-		net-libs/gnutls:0=[${MULTILIB_USEDEP}]
-		pkcs11? ( dev-libs/pakchois:0=[${MULTILIB_USEDEP}] )
+		>=net-libs/gnutls-2.12.23-r6:0=[${MULTILIB_USEDEP}]
+		pkcs11? ( >=dev-libs/pakchois-0.4-r1:0=[${MULTILIB_USEDEP}] )
 	)
 	!gnutls? ( ssl? (
-		dev-libs/openssl:0=[${MULTILIB_USEDEP}]
-		pkcs11? ( dev-libs/pakchois:0=[${MULTILIB_USEDEP}] )
+		>=dev-libs/openssl-1.0.1h-r2:0=[${MULTILIB_USEDEP}]
+		pkcs11? ( >=dev-libs/pakchois-0.4-r1:0=[${MULTILIB_USEDEP}] )
 	) )
-	kerberos? ( virtual/krb5:0=[${MULTILIB_USEDEP}] )
-	libproxy? ( net-libs/libproxy:0=[${MULTILIB_USEDEP}] )
-	nls? ( virtual/libintl:0=[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib:0=[${MULTILIB_USEDEP}] )"
+	kerberos? ( >=virtual/krb5-0-r1:0=[${MULTILIB_USEDEP}] )
+	libproxy? ( >=net-libs/libproxy-0.4.11-r1:0=[${MULTILIB_USEDEP}] )
+	nls? ( >=virtual/libintl-0-r1:0=[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1:0=[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 RDEPEND="${RDEPEND}
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r8

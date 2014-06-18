@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-7.0.9377.ebuild,v 1.3 2013/04/21 20:37:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-7.0.9377.ebuild,v 1.4 2014/06/18 20:40:59 mgorny Exp $
 
 EAPI=5
 
@@ -28,13 +28,13 @@ RDEPEND="
 			app-emulation/emul-linux-x86-soundlibs
 			|| (
 				(
-					x11-libs/libSM[abi_x86_32]
-					x11-libs/libX11[abi_x86_32]
-					x11-libs/libXau[abi_x86_32]
-					x11-libs/libXdamage[abi_x86_32]
-					x11-libs/libXext[abi_x86_32]
-					x11-libs/libXfixes[abi_x86_32]
-					x11-libs/libXtst[abi_x86_32]
+					>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
+					>=x11-libs/libX11-1.6.2[abi_x86_32]
+					>=x11-libs/libXau-1.0.7-r1[abi_x86_32]
+					>=x11-libs/libXdamage-1.1.4-r1[abi_x86_32]
+					>=x11-libs/libXext-1.3.2[abi_x86_32]
+					>=x11-libs/libXfixes-5.0.1[abi_x86_32]
+					>=x11-libs/libXtst-1.2.1-r1[abi_x86_32]
 				)
 				app-emulation/emul-linux-x86-xlibs
 			)

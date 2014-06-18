@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.3-r1.ebuild,v 1.1 2014/06/10 18:02:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.3-r1.ebuild,v 1.2 2014/06/18 20:36:17 mgorny Exp $
 
 EAPI=5
 
@@ -18,9 +18,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+introspection python"
 
 RDEPEND="
-	>=dev-libs/glib-2.26:2[${MULTILIB_USEDEP}]
-	net-libs/gssdp[${MULTILIB_USEDEP}]
-	>=net-libs/gupnp-0.18[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=net-libs/gssdp-0.14.7[${MULTILIB_USEDEP}]
+	>=net-libs/gupnp-0.20.10[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-0.10 )
 	python? (
 		>=dev-libs/gobject-introspection-0.10
@@ -29,7 +29,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	sys-devel/gettext
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 # The only existing test is broken

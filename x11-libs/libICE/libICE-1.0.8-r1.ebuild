@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/libICE-1.0.8-r1.ebuild,v 1.12 2014/06/15 00:52:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/libICE-1.0.8-r1.ebuild,v 1.13 2014/06/18 21:01:10 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~p
 IUSE="ipv6"
 
 RDEPEND="x11-libs/xtrans
-	x11-proto/xproto[${MULTILIB_USEDEP}]"
+	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {

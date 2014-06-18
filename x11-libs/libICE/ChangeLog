@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.102 2014/06/15 00:52:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.103 2014/06/18 21:01:11 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libICE-1.0.8-r1.ebuild,
+  libICE-1.0.9.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libICE-1.0.8-r1.ebuild,
   libICE-1.0.9.ebuild:

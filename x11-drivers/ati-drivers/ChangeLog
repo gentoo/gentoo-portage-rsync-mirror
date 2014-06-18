@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.362 2014/06/13 15:19:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.363 2014/06/18 20:58:25 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> ati-drivers-13.12.ebuild,
+  ati-drivers-13.1_pre897.ebuild, ati-drivers-13.4.ebuild,
+  ati-drivers-13.9.ebuild, ati-drivers-14.4_p1.ebuild,
+  ati-drivers-14.6_beta1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   13 Jun 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/ati-drivers-vm-reserverd.patch:

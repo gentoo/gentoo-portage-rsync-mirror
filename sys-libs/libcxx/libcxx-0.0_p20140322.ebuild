@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20140322.ebuild,v 1.1 2014/03/22 12:39:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20140322.ebuild,v 1.2 2014/06/18 20:50:24 mgorny Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ else
 fi
 IUSE="elibc_glibc +libcxxrt static-libs test"
 
-RDEPEND="libcxxrt? ( >=sys-libs/libcxxrt-0.0_p20130530[static-libs?,${MULTILIB_USEDEP}] )
+RDEPEND="libcxxrt? ( >=sys-libs/libcxxrt-0.0_p20130725[static-libs?,${MULTILIB_USEDEP}] )
 	!libcxxrt? ( >=sys-devel/gcc-4.7[cxx] )"
 DEPEND="${RDEPEND}
 	test? ( sys-devel/clang )

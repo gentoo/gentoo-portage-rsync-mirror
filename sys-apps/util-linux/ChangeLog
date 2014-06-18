@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.464 2014/06/18 16:28:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.465 2014/06/18 20:46:09 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> util-linux-2.24.1-r3.ebuild,
+  util-linux-2.24.2.ebuild, util-linux-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> util-linux-9999.ebuild:
   Enable multilib on the live ebuild as well. Support new libsmartcols.

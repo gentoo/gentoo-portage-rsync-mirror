@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.7-r2.ebuild,v 1.2 2014/02/01 23:24:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.7-r2.ebuild,v 1.3 2014/06/18 20:50:00 mgorny Exp $
 
 # emacs support disabled due to #99533 #335900
 
@@ -17,13 +17,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux static-libs"
 
-RDEPEND="sys-libs/ncurses[${MULTILIB_USEDEP}]
+RDEPEND=">=sys-libs/ncurses-5.9-r3[${MULTILIB_USEDEP}]
 	selinux? ( sec-policy/selinux-gpm )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r12
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
-DEPEND="sys-libs/ncurses[${MULTILIB_USEDEP}]
+DEPEND=">=sys-libs/ncurses-5.9-r3[${MULTILIB_USEDEP}]
 	app-arch/xz-utils
 	virtual/yacc"
 

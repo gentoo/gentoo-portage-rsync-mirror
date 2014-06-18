@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.55 2014/06/18 16:28:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.56 2014/06/18 20:46:09 mgorny Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ RDEPEND="!sys-process/schedutils
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	pam? ( sys-libs/pam )
 	python? ( ${PYTHON_DEPS} )
-	selinux? ( sys-libs/libselinux[${MULTILIB_USEDEP}] )
+	selinux? ( >=sys-libs/libselinux-2.2.2-r4[${MULTILIB_USEDEP}] )
 	slang? ( sys-libs/slang )
 	udev? ( virtual/udev )
 	abi_x86_32? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-186-r1.ebuild,v 1.2 2014/05/30 20:55:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-186-r1.ebuild,v 1.3 2014/06/18 20:47:15 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal pam
@@ -15,9 +15,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 IUSE="ssl sasl"
 
 DEPEND="|| ( >=sys-libs/glibc-2.1.3 >=sys-freebsd/freebsd-lib-9.1 )
-	virtual/pam[${MULTILIB_USEDEP}]
-	>=net-nds/openldap-2.1.30-r5[${MULTILIB_USEDEP}]
-	sasl? ( dev-libs/cyrus-sasl[${MULTILIB_USEDEP}] )"
+	>=virtual/pam-0-r1[${MULTILIB_USEDEP}]
+	>=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}]
+	sasl? ( >=dev-libs/cyrus-sasl-2.1.26-r3[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r7

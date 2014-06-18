@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.18-r1.ebuild,v 1.3 2014/04/28 17:45:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.18-r1.ebuild,v 1.4 2014/06/18 20:44:57 mgorny Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -25,7 +25,7 @@ SLOT="0"
 IUSE="python static-libs zlib"
 
 DEPEND="python? ( ${PYTHON_DEPS} )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20131008-r21
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 RDEPEND="${DEPEND}

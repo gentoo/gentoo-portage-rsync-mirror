@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.1-r1.ebuild,v 1.3 2014/05/29 22:00:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.1-r1.ebuild,v 1.4 2014/06/18 20:49:24 mgorny Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint"
 IUSE="nls python static-libs test zlib"
 
-RDEPEND="zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )"
+RDEPEND="zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	python? (
 		dev-python/setuptools[${PYTHON_USEDEP}]

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r99.ebuild,v 1.11 2013/09/08 21:17:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r99.ebuild,v 1.12 2014/06/18 20:33:44 mgorny Exp $
 
 EAPI=4
 inherit eutils gnome2-utils qt4-r2 pax-utils
@@ -29,16 +29,16 @@ RDEPEND="
 		>=app-emulation/emul-linux-x86-soundlibs-${EMUL_VER}
 		|| (
 			(
-				x11-libs/libX11[abi_x86_32]
-				x11-libs/libXext[abi_x86_32]
-				x11-libs/libXScrnSaver[abi_x86_32]
-				x11-libs/libXv[abi_x86_32]
+				>=x11-libs/libX11-1.6.2[abi_x86_32]
+				>=x11-libs/libXext-1.3.2[abi_x86_32]
+				>=x11-libs/libXScrnSaver-1.2.2-r1[abi_x86_32]
+				>=x11-libs/libXv-1.0.10[abi_x86_32]
 				qt-static? (
-					media-libs/fontconfig[abi_x86_32]
-					>=media-libs/freetype-2[abi_x86_32]
-					x11-libs/libICE[abi_x86_32]
-					x11-libs/libSM[abi_x86_32]
-					x11-libs/libXrender[abi_x86_32]
+					>=media-libs/fontconfig-2.10.92[abi_x86_32]
+					>=media-libs/freetype-2.5.0.1[abi_x86_32]
+					>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
+					>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
+					>=x11-libs/libXrender-0.9.8[abi_x86_32]
 				)
 			)
 			>=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}

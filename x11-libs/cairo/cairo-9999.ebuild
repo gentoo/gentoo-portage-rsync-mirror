@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.45 2014/06/10 01:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.46 2014/06/18 21:00:27 mgorny Exp $
 
 EAPI=5
 
@@ -26,29 +26,29 @@ IUSE="X aqua debug directfb drm gallium gles2 +glib legacy-drivers lto opengl op
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
 RESTRICT="test"
 
-RDEPEND="dev-libs/lzo[${MULTILIB_USEDEP}]
-	media-libs/fontconfig[${MULTILIB_USEDEP}]
-	media-libs/freetype:2[${MULTILIB_USEDEP}]
-	media-libs/libpng:0=[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
-	>=x11-libs/pixman-0.30.0[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/lzo-2.06-r1[${MULTILIB_USEDEP}]
+	>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
+	>=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}]
+	>=media-libs/libpng-1.6.10:0=[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/pixman-0.32.4[${MULTILIB_USEDEP}]
 	directfb? ( dev-libs/DirectFB )
-	gles2? ( media-libs/mesa[gles2,${MULTILIB_USEDEP}] )
-	glib? ( >=dev-libs/glib-2.28.6:2[${MULTILIB_USEDEP}] )
-	opengl? ( || ( media-libs/mesa[egl,${MULTILIB_USEDEP}] media-libs/opengl-apple ) )
-	openvg? ( media-libs/mesa[openvg,${MULTILIB_USEDEP}] )
+	gles2? ( >=media-libs/mesa-9.1.6[gles2,${MULTILIB_USEDEP}] )
+	glib? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}] )
+	opengl? ( || ( >=media-libs/mesa-9.1.6[egl,${MULTILIB_USEDEP}] media-libs/opengl-apple ) )
+	openvg? ( >=media-libs/mesa-9.1.6[openvg,${MULTILIB_USEDEP}] )
 	qt4? ( >=dev-qt/qtgui-4.8:4 )
 	X? (
-		>=x11-libs/libXrender-0.6[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
+		>=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		drm? (
-			>=virtual/udev-136[${MULTILIB_USEDEP}]
-			gallium? ( media-libs/mesa[gallium,${MULTILIB_USEDEP}] )
+			>=virtual/udev-208-r2[${MULTILIB_USEDEP}]
+			gallium? ( >=media-libs/mesa-9.1.6[gallium,${MULTILIB_USEDEP}] )
 		)
 	)
 	xcb? (
-		x11-libs/libxcb[${MULTILIB_USEDEP}]
+		>=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
 	)
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20131008-r1
@@ -58,10 +58,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/libtool-2
 	X? (
-		x11-proto/renderproto[${MULTILIB_USEDEP}]
+		>=x11-proto/renderproto-0.11.1-r1[${MULTILIB_USEDEP}]
 		drm? (
-			x11-proto/xproto[${MULTILIB_USEDEP}]
-			>=x11-proto/xextproto-7.1[${MULTILIB_USEDEP}]
+			>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
+			>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
 		)
 	)"
 #[[ ${PV} == *9999* ]] && DEPEND="${DEPEND}

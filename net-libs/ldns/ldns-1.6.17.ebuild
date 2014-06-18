@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.17.ebuild,v 1.1 2014/06/16 06:19:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.17.ebuild,v 1.2 2014/06/18 20:37:50 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -20,10 +20,10 @@ IUSE="dane doc +ecdsa gost python +ssl static-libs vim-syntax"
 REQUIRED_USE="ecdsa? ( ssl )"
 
 RDEPEND="
-	dane? ( >=dev-libs/openssl-1:0[${MULTILIB_USEDEP}] )
-	ecdsa? ( >=dev-libs/openssl-1.0.1c:0[-bindist,${MULTILIB_USEDEP}] )
-	gost? ( >=dev-libs/openssl-1:0[${MULTILIB_USEDEP}] )
-	ssl? ( >=dev-libs/openssl-0.9.7:0[${MULTILIB_USEDEP}] )
+	dane? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
+	ecdsa? ( >=dev-libs/openssl-1.0.1h-r2:0[-bindist,${MULTILIB_USEDEP}] )
+	gost? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
+	ssl? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )

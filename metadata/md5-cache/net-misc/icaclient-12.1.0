@@ -6,9 +6,9 @@ HOMEPAGE=http://www.citrix.com/
 IUSE=nsplugin linguas_de linguas_ja
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=icaclient
-RDEPEND=x11-terms/xterm media-fonts/font-adobe-100dpi media-fonts/font-misc-misc media-fonts/font-cursor-misc media-fonts/font-xfree86-type1 media-fonts/font-misc-ethiopic x86? ( x11-libs/libXp x11-libs/libXaw x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXinerama >=x11-libs/motif-2.3.1:0 ) amd64? ( || ( ( x11-libs/libXp[abi_x86_32] x11-libs/libXaw[abi_x86_32] x11-libs/libX11[abi_x86_32] x11-libs/libSM[abi_x86_32] x11-libs/libICE[abi_x86_32] x11-libs/libXinerama[abi_x86_32] ) >=app-emulation/emul-linux-x86-xlibs-20110129 ) || ( >=x11-libs/motif-2.3.4:0[abi_x86_32] >=app-emulation/emul-linux-x86-motif-20110129 ) >=app-emulation/emul-linux-x86-soundlibs-20110928 >=app-emulation/emul-linux-x86-gtklibs-20110928 nsplugin? ( www-plugins/nspluginwrapper ) )
+RDEPEND=x11-terms/xterm media-fonts/font-adobe-100dpi media-fonts/font-misc-misc media-fonts/font-cursor-misc media-fonts/font-xfree86-type1 media-fonts/font-misc-ethiopic x86? ( x11-libs/libXp x11-libs/libXaw x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXinerama >=x11-libs/motif-2.3.1:0 ) amd64? ( || ( ( >=x11-libs/libXp-1.0.2[abi_x86_32] >=x11-libs/libXaw-1.0.11-r2[abi_x86_32] >=x11-libs/libX11-1.6.2[abi_x86_32] >=x11-libs/libSM-1.2.1-r1[abi_x86_32] >=x11-libs/libICE-1.0.8-r1[abi_x86_32] >=x11-libs/libXinerama-1.1.3[abi_x86_32] ) >=app-emulation/emul-linux-x86-xlibs-20110129 ) || ( >=x11-libs/motif-2.3.4-r1:0[abi_x86_32] >=app-emulation/emul-linux-x86-motif-20110129 ) >=app-emulation/emul-linux-x86-soundlibs-20110928 >=app-emulation/emul-linux-x86-gtklibs-20110928 nsplugin? ( www-plugins/nspluginwrapper ) )
 RESTRICT=mirror strip userpriv fetch
 SLOT=0
 SRC_URI=x86? ( ICAClient-12.1.0-0.i386.rpm ) amd64? ( ICAClient_12.1.0-0.x86_64.rpm )
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=0df5e92719635826d59e07aff7bb6c64
+_md5_=0a332fd6d0848a209b8d5a5a45c497c6

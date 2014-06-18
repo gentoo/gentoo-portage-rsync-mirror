@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.73 2014/06/08 12:55:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.74 2014/06/18 20:41:06 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> neon-0.30.0-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *neon-0.30.0-r1 (08 Jun 2014)
 

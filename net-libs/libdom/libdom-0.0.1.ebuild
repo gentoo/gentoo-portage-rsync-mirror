@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-0.0.1.ebuild,v 1.4 2014/06/17 16:24:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-0.0.1.ebuild,v 1.5 2014/06/18 20:36:13 mgorny Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ RDEPEND=">=dev-libs/libparserutils-0.1.2[static-libs?,${MULTILIB_USEDEP}]
 	>=dev-libs/libwapcaplet-0.2.0[static-libs?,${MULTILIB_USEDEP}]
 	>=net-libs/libhubbub-0.2.0[static-libs?,${MULTILIB_USEDEP}]
 	xml? (
-		expat? ( dev-libs/expat[static-libs?,${MULTILIB_USEDEP}] )
-		!expat? ( dev-libs/libxml2[static-libs?,${MULTILIB_USEDEP}] )
+		expat? ( >=dev-libs/expat-2.1.0-r3[static-libs?,${MULTILIB_USEDEP}] )
+		!expat? ( >=dev-libs/libxml2-2.9.1-r4[static-libs?,${MULTILIB_USEDEP}] )
 	)"
 DEPEND="${RDEPEND}
 	test? ( dev-lang/perl

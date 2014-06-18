@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.53.ebuild,v 1.1 2014/04/13 19:01:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.53.ebuild,v 1.2 2014/06/18 21:01:04 mgorny Exp $
 
 EAPI=5
 
@@ -27,8 +27,8 @@ IUSE="${IUSE_VIDEO_CARDS} libkms"
 REQUIRED_USE="video_cards_exynos? ( libkms )"
 RESTRICT="test" # see bug #236845
 
-RDEPEND="dev-libs/libpthread-stubs[${MULTILIB_USEDEP}]
-	video_cards_intel? ( >=x11-libs/libpciaccess-0.10[${MULTILIB_USEDEP}] )
+RDEPEND=">=dev-libs/libpthread-stubs-0.3-r1[${MULTILIB_USEDEP}]
+	video_cards_intel? ( >=x11-libs/libpciaccess-0.13.1-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}"
 

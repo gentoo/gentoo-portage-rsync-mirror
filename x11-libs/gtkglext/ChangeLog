@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.84 2014/06/07 19:17:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.85 2014/06/18 21:00:47 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gtkglext-1.2.0-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gtkglext-1.2.0-r2 (07 Jun 2014)
 

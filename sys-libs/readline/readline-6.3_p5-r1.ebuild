@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p5-r1.ebuild,v 1.2 2014/04/28 17:46:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p5-r1.ebuild,v 1.3 2014/06/18 20:52:45 mgorny Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static-libs"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2[${MULTILIB_USEDEP}]
+RDEPEND=">=sys-libs/ncurses-5.9-r3[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-baselibs-20131008-r7

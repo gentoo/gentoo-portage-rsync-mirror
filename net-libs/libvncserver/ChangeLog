@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.76 2014/06/17 17:11:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.77 2014/06/18 20:40:56 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libvncserver-0.9.9-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libvncserver-0.9.9-r2 (17 Jun 2014)
 

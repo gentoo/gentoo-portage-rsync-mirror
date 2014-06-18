@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.4.ebuild,v 1.7 2014/06/12 17:05:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.4.ebuild,v 1.8 2014/06/18 20:41:00 mgorny Exp $
 
 EAPI=5
 
@@ -22,12 +22,12 @@ RDEPEND="
 			!<=app-emulation/emul-linux-x86-baselibs-20131008-r6
 			!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 			|| (
-				dev-libs/openssl:0[abi_x86_32]
+				>=dev-libs/openssl-1.0.1h-r2:0[abi_x86_32]
 				app-emulation/emul-linux-x86-baselibs
 			)
 		) )
 	)
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )"
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}"
 
 enable_polarssl_option() {

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=sys-apps/attr-2.4[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20140406-r2 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) nls? ( sys-devel/gettext )
+DEPEND=>=sys-apps/attr-2.4.47-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20140406-r2 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] ) nls? ( sys-devel/gettext )
 DESCRIPTION=access control list utilities, libraries and headers
 EAPI=4
 HOMEPAGE=http://savannah.nongnu.org/projects/acl
 IUSE=nls static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux
 LICENSE=LGPL-2.1
-RDEPEND=>=sys-apps/attr-2.4[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20140406-r2 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
+RDEPEND=>=sys-apps/attr-2.4.47-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20140406-r2 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/acl/acl-2.2.52.src.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b9407dd79ad8e68938f1a9d3b95da467
+_md5_=a132b919a876a20b69776d9e245be49d

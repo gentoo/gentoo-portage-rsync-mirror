@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.37 2014/05/30 14:31:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.38 2014/06/18 20:45:39 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> nss-mdns-0.10-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *nss-mdns-0.10-r2 (30 May 2014)
 

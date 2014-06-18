@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.110 2014/06/08 07:46:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.111 2014/06/18 20:38:46 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libproxy-0.4.11-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libproxy-0.4.11-r2 (08 Jun 2014)
 

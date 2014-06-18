@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.7.ebuild,v 1.2 2014/06/16 21:51:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.7.ebuild,v 1.3 2014/06/18 20:41:00 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="doc havege programs sse2 static-libs test zlib"
 
 RDEPEND="
 	programs? ( dev-libs/openssl:0 )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )"
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-lang/perl )"

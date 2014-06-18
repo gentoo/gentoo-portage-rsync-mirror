@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.113 2014/06/01 18:30:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.114 2014/06/18 20:48:41 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> eudev-1.5.3-r1.ebuild,
+  eudev-1.7.ebuild, eudev-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   01 Jun 2014; Anthony G. Basile <blueness@gentoo.org> -eudev-1.4-r1.ebuild,
   -eudev-1.5.3.ebuild, -eudev-1.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3-r1.ebuild,v 1.1 2014/06/13 08:30:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.4.3-r1.ebuild,v 1.2 2014/06/18 20:38:50 mgorny Exp $
 
 EAPI="5"
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="gcrypt static-libs test zlib"
 
-DEPEND="!gcrypt? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
-	gcrypt? ( dev-libs/libgcrypt:0[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )"
+DEPEND="!gcrypt? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}"
 
 DOCS=( README )

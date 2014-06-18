@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-208-r2.ebuild,v 1.4 2014/06/09 23:15:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-208-r2.ebuild,v 1.5 2014/06/18 20:58:26 mgorny Exp $
 
 EAPI=5
 inherit multilib-build
@@ -17,8 +17,8 @@ IUSE="gudev introspection static-libs"
 
 DEPEND=""
 RDEPEND="
-	virtual/libudev:0/1[${MULTILIB_USEDEP},static-libs?]
-	gudev? ( virtual/libgudev:0/0[${MULTILIB_USEDEP},introspection?,static-libs?] )
+	>=virtual/libudev-208:0/1[${MULTILIB_USEDEP},static-libs?]
+	gudev? ( >=virtual/libgudev-208:0/0[${MULTILIB_USEDEP},introspection?,static-libs?] )
 
 	|| (
 		>=sys-fs/udev-208

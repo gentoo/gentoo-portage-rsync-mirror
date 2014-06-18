@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r4.ebuild,v 1.5 2014/04/06 10:10:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r4.ebuild,v 1.6 2014/06/18 20:56:25 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ DEPEND=""
 # intel-ocl-sdk is amd64-only
 RDEPEND="app-admin/eselect-opencl
 	|| (
-		media-libs/mesa[opencl,${MULTILIB_USEDEP}]
+		>=media-libs/mesa-9.1.6[opencl,${MULTILIB_USEDEP}]
 		video_cards_fglrx? (
 			>=x11-drivers/ati-drivers-12.1-r1 )
 		video_cards_nvidia? (

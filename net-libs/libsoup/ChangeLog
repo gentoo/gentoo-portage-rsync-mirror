@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.332 2014/06/08 12:55:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.333 2014/06/18 20:39:01 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libsoup-2.46.0-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libsoup-2.46.0-r1 (08 Jun 2014)
 

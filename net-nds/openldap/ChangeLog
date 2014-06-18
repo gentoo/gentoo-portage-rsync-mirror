@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.463 2014/05/24 05:03:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.464 2014/06/18 20:43:43 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> openldap-2.4.38-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   24 May 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   openldap-2.4.38-r1.ebuild, openldap-2.4.38-r2.ebuild:

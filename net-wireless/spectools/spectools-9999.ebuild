@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.7 2012/12/11 17:47:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.8 2014/06/18 20:42:56 zerochaos Exp $
 
-EAPI=4
+EAPI=5
 inherit udev toolchain-funcs
 
 MY_PN=${PN}
@@ -13,8 +13,7 @@ S=${WORKDIR}/${MY_P}
 
 if [[ ${PV} == "9999" ]] ; then
 		EGIT_REPO_URI="https://www.kismetwireless.net/${PN}.git"
-		SRC_URI=""
-		inherit git-2
+		inherit git-r3
 		KEYWORDS=""
 else
 		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
@@ -26,7 +25,7 @@ HOMEPAGE="http://www.kismetwireless.net/spectools/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug ncurses gtk"
+IUSE="debug +ncurses +gtk"
 
 RDEPEND="virtual/libusb:0
 	ncurses? ( sys-libs/ncurses )

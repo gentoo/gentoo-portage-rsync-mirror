@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r5.ebuild,v 1.2 2014/05/30 20:57:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r5.ebuild,v 1.3 2014/06/18 20:46:48 mgorny Exp $
 
 EAPI=5
 inherit fixheadtails eutils multilib multilib-minimal autotools prefix
@@ -15,10 +15,10 @@ SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 
-DEPEND=">=net-nds/openldap-2.1.30-r5[${MULTILIB_USEDEP}]
-		sasl? ( dev-libs/cyrus-sasl[${MULTILIB_USEDEP}] )
-		kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
-		ssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )"
+DEPEND=">=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}]
+		sasl? ( >=dev-libs/cyrus-sasl-2.1.26-r3[${MULTILIB_USEDEP}] )
+		kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
+		ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 		!<net-fs/autofs-4.1.3
 		abi_x86_32? (

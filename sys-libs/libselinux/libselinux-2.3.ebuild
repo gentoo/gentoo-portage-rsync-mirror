@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.3.ebuild,v 1.2 2014/06/07 19:41:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.3.ebuild,v 1.3 2014/06/18 20:50:32 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
@@ -27,7 +27,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="python ruby static-libs ruby_targets_ruby19 ruby_targets_ruby20"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}[${MULTILIB_USEDEP}]
-	>=dev-libs/libpcre-8.30-r2[static-libs?,${MULTILIB_USEDEP}]
+	>=dev-libs/libpcre-8.33-r1[static-libs?,${MULTILIB_USEDEP}]
 	python? ( ${PYTHON_DEPS} )
 	ruby? (
 		ruby_targets_ruby19? ( dev-lang/ruby:1.9 )

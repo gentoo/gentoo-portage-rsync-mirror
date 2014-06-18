@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208-r1.ebuild,v 1.2 2014/06/09 23:10:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208-r1.ebuild,v 1.3 2014/06/18 20:49:24 mgorny Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RESTRICT="test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
-	gudev? ( >=dev-libs/glib-2.22[${MULTILIB_USEDEP}] )
+	gudev? ( >=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	kmod? ( >=sys-apps/kmod-14 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libintl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.16 2014/01/26 18:41:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.17 2014/06/18 20:56:36 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libintl-0-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   26 Jan 2014; Anthony G. Basile <blueness@gentoo.org> libintl-0-r1.ebuild,
   libintl-0.ebuild:

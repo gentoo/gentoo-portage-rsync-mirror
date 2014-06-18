@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.3.ebuild,v 1.2 2014/06/12 15:07:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.3.ebuild,v 1.3 2014/06/18 20:44:03 mgorny Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ RDEPEND="
 			sys-apps/attr
 		)
 	)
-	dbus? ( sys-apps/dbus[${MULTILIB_USEDEP}] )
+	dbus? ( >=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.6 )
 	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
 	!lprng-compat? ( !net-print/lprng )
@@ -57,15 +57,15 @@ RDEPEND="
 	selinux? ( sec-policy/selinux-cups )
 	ssl? (
 		gnutls? (
-			dev-libs/libgcrypt:0[${MULTILIB_USEDEP}]
-			net-libs/gnutls[${MULTILIB_USEDEP}]
+			>=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]
+			>=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}]
 		)
-		!gnutls? ( >=dev-libs/openssl-0.9.8g[${MULTILIB_USEDEP}] )
+		!gnutls? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	)
 	usb? ( virtual/libusb:1 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
-	zeroconf? ( net-dns/avahi[${MULTILIB_USEDEP}] )
+	zeroconf? ( >=net-dns/avahi-0.6.31-r2[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
@@ -73,7 +73,7 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 PDEPEND="

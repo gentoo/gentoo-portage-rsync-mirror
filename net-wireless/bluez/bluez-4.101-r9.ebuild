@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r9.ebuild,v 1.1 2014/05/09 13:59:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r9.ebuild,v 1.2 2014/06/18 20:43:19 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -27,7 +27,7 @@ CDEPEND="
 	>=sys-apps/hwids-20121202.2
 	>=virtual/udev-171
 	alsa? (
-		media-libs/alsa-lib:=[${MULTILIB_USEDEP},alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
+		>=media-libs/alsa-lib-1.0.27.2:=[${MULTILIB_USEDEP},alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
 		media-libs/libsndfile:=
 	)
 	cups? ( net-print/cups:= )
@@ -41,7 +41,7 @@ CDEPEND="
 "
 DEPEND="${CDEPEND}
 	sys-devel/flex
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	test-programs? ( >=dev-libs/check-0.9.6 )
 "
 RDEPEND="${CDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4-r1.ebuild,v 1.2 2014/04/18 14:31:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4-r1.ebuild,v 1.3 2014/06/18 20:52:48 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -16,11 +16,11 @@ IUSE="cjk pcre png readline static-libs zlib"
 
 # ncurses for ncurses5-config to get terminfo directory
 RDEPEND="sys-libs/ncurses
-	pcre? ( dev-libs/libpcre[${MULTILIB_USEDEP}] )
-	png? ( >=media-libs/libpng-1.2:0[${MULTILIB_USEDEP}] )
-	cjk? ( dev-libs/oniguruma[${MULTILIB_USEDEP}] )
-	readline? ( sys-libs/readline:0[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	pcre? ( >=dev-libs/libpcre-8.33-r1[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
+	cjk? ( >=dev-libs/oniguruma-5.9.5[${MULTILIB_USEDEP}] )
+	readline? ( >=sys-libs/readline-6.2_p5-r1:0[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-baselibs-20140406-r1

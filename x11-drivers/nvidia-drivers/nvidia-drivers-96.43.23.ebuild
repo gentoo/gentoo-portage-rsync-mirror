@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.20 2014/03/31 19:03:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.21 2014/06/18 20:58:34 mgorny Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability unpacker user versionator
@@ -46,8 +46,8 @@ RDEPEND="${COMMON}
 	multilib? (
 		|| (
 			(
-				x11-libs/libX11[abi_x86_32]
-				x11-libs/libXext[abi_x86_32]
+				>=x11-libs/libX11-1.6.2[abi_x86_32]
+				>=x11-libs/libXext-1.3.2[abi_x86_32]
 			)
 			app-emulation/emul-linux-x86-opengl
 		)

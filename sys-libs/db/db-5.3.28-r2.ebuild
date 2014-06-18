@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.3.28-r2.ebuild,v 1.2 2014/05/20 13:19:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.3.28-r2.ebuild,v 1.3 2014/06/18 20:50:23 mgorny Exp $
 
 EAPI=5
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib multilib-minimal
@@ -34,11 +34,11 @@ IUSE="doc java cxx tcl test"
 REQUIRED_USE="test? ( tcl )"
 
 # the entire testsuite needs the TCL functionality
-DEPEND="tcl? ( >=dev-lang/tcl-8.4[${MULTILIB_USEDEP}] )
-	test? ( >=dev-lang/tcl-8.4[${MULTILIB_USEDEP}] )
+DEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
+	test? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.5 )
 	>=sys-devel/binutils-2.16.1"
-RDEPEND="tcl? ( dev-lang/tcl[${MULTILIB_USEDEP}] )
+RDEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.5 )"
 
 MULTILIB_WRAPPED_HEADERS=(

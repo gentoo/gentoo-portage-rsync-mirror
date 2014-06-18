@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/libgudev-208.ebuild,v 1.6 2014/06/09 23:15:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/libgudev-208.ebuild,v 1.7 2014/06/18 20:55:21 mgorny Exp $
 
 EAPI=5
 inherit multilib-build
@@ -18,8 +18,8 @@ DEPEND=""
 RDEPEND="
 	|| (
 		>=sys-fs/udev-208-r1:0/0[${MULTILIB_USEDEP},gudev,introspection?,static-libs?]
-		>=sys-apps/systemd-208:0/2[${MULTILIB_USEDEP},gudev,introspection?,static-libs(-)?]
-		>=sys-apps/systemd-208:0/1[${MULTILIB_USEDEP},gudev,introspection?,static-libs(-)?]
+		>=sys-apps/systemd-212-r5:0/2[${MULTILIB_USEDEP},gudev,introspection?,static-libs(-)?]
+		>=sys-apps/systemd-208-r3:0/1[${MULTILIB_USEDEP},gudev,introspection?,static-libs(-)?]
 		>=sys-apps/systemd-208:0/0[${MULTILIB_USEDEP},gudev,introspection?,static-libs(-)?]
 		>=sys-fs/eudev-1.5.3-r1:0/0[${MULTILIB_USEDEP},gudev,introspection?,static-libs?]
 	)"

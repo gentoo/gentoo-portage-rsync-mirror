@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.380 2014/06/10 01:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.381 2014/06/18 21:00:27 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> cairo-1.12.16-r2.ebuild,
+  cairo-1.12.16-r3.ebuild, cairo-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> cairo-1.12.16-r2.ebuild,
   cairo-1.12.16-r3.ebuild, cairo-1.12.16.ebuild, cairo-9999.ebuild:

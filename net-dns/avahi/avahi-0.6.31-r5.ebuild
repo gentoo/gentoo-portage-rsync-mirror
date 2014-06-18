@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r5.ebuild,v 1.2 2014/05/16 18:53:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r5.ebuild,v 1.3 2014/06/18 20:33:30 mgorny Exp $
 
 EAPI="5"
 
@@ -32,12 +32,12 @@ REQUIRED_USE="
 COMMON_DEPEND="
 	dev-libs/libdaemon
 	dev-libs/expat
-	dev-libs/glib:2[${MULTILIB_USEDEP}]
-	gdbm? ( sys-libs/gdbm[${MULTILIB_USEDEP}] )
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	gdbm? ( >=sys-libs/gdbm-1.10-r1[${MULTILIB_USEDEP}] )
 	qt4? ( dev-qt/qtcore:4 )
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )
-	dbus? ( sys-apps/dbus[${MULTILIB_USEDEP}] )
+	dbus? ( >=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}] )
 	kernel_linux? ( sys-libs/libcap )
 	introspection? ( dev-libs/gobject-introspection )
 	mono? (
@@ -59,7 +59,7 @@ COMMON_DEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	dev-util/intltool
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	doc? (
 		app-doc/doxygen
 	)

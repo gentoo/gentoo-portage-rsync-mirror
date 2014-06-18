@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.3-r1.ebuild,v 1.1 2014/06/11 19:53:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.3-r1.ebuild,v 1.2 2014/06/18 20:38:27 mgorny Exp $
 
 EAPI=5
 
@@ -18,14 +18,14 @@ IUSE="debug doc examples gcrypt gssapi pcap +sftp ssh1 server static-libs test z
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
 RDEPEND="
-	zlib? ( >=sys-libs/zlib-1.2[${MULTILIB_USEDEP}] )
-	!gcrypt? ( >=dev-libs/openssl-0.9.8[${MULTILIB_USEDEP}] )
-	gcrypt? ( >=dev-libs/libgcrypt-1.5:0[${MULTILIB_USEDEP}] )
-	gssapi? ( virtual/krb5[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
+	!gcrypt? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] )
+	gssapi? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	test? ( dev-util/cmocka[${MULTILIB_USEDEP}] )
+	test? ( >=dev-util/cmocka-0.3.1[${MULTILIB_USEDEP}] )
 "
 
 DOCS=( AUTHORS README ChangeLog )

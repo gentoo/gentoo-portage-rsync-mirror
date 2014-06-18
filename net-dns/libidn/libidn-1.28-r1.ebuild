@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.28-r1.ebuild,v 1.1 2014/05/25 11:08:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.28-r1.ebuild,v 1.2 2014/06/18 20:32:57 mgorny Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="${COMMON_DEPEND}
 	)
 "
 RDEPEND="${COMMON_DEPEND}
-	nls? ( virtual/libintl[${MULTILIB_USEDEP}] )
+	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.5 )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r5

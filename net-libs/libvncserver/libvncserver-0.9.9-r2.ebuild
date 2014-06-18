@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9-r2.ebuild,v 1.1 2014/06/17 17:11:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9-r2.ebuild,v 1.2 2014/06/18 20:40:56 mgorny Exp $
 
 EAPI="5"
 
@@ -19,17 +19,17 @@ IUSE="+24bpp gcrypt gnutls ipv6 +jpeg +png ssl static-libs test threads +zlib"
 REQUIRED_USE="png? ( zlib )"
 
 DEPEND="
-	gcrypt? ( dev-libs/libgcrypt:0[${MULTILIB_USEDEP}] )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] )
 	gnutls? (
-		net-libs/gnutls[${MULTILIB_USEDEP}]
-		dev-libs/libgcrypt:0[${MULTILIB_USEDEP}]
+		>=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}]
+		>=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]
 	)
 	!gnutls? (
-		ssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
+		ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	)
-	jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	png? ( media-libs/libpng:0[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 "
 RDEPEND="${DEPEND}"
 

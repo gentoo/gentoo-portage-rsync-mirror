@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-213.ebuild,v 1.4 2014/06/04 19:08:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-213.ebuild,v 1.5 2014/06/18 20:49:24 mgorny Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RESTRICT="test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
-	gudev? ( >=dev-libs/glib-2.22[${MULTILIB_USEDEP}] )
+	gudev? ( >=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.38 )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )

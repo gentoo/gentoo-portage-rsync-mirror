@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.2 2014/06/15 16:59:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.3 2014/06/18 20:36:27 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,24 +25,24 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=net-libs/gssdp-0.13.0:0=[introspection?,${MULTILIB_USEDEP}]
-	>=net-libs/libsoup-2.28.2:2.4[introspection?,${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.28.0:2[${MULTILIB_USEDEP}]
-	dev-libs/libxml2[${MULTILIB_USEDEP}]
+	>=net-libs/gssdp-0.14.7:0=[introspection?,${MULTILIB_USEDEP}]
+	>=net-libs/libsoup-2.44.2:2.4[introspection?,${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
 	|| (
-		>=sys-apps/util-linux-2.16[${MULTILIB_USEDEP}]
+		>=sys-apps/util-linux-2.24.1-r3[${MULTILIB_USEDEP}]
 		<sys-libs/e2fsprogs-libs-1.41.8[${MULTILIB_USEDEP}] )
 	introspection? (
 			>=dev-libs/gobject-introspection-0.6.4
 			$(vala_depend) )
-	connman? ( >=dev-libs/glib-2.28:2[${MULTILIB_USEDEP}] )
-	networkmanager? ( >=dev-libs/glib-2.26:2[${MULTILIB_USEDEP}] )
+	connman? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}] )
+	networkmanager? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}] )
 	!net-libs/gupnp-vala
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1
 	sys-devel/gettext
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 src_prepare() {

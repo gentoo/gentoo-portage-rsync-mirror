@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.85 2014/06/13 08:30:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.86 2014/06/18 20:38:50 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libssh2-1.4.3-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *libssh2-1.4.3-r1 (13 Jun 2014)
 

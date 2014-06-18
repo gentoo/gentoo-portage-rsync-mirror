@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.4.ebuild,v 1.3 2014/06/10 00:42:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.3.4.ebuild,v 1.4 2014/06/18 20:35:42 mgorny Exp $
 
 EAPI=5
 
@@ -21,23 +21,23 @@ IUSE="+cxx +crywrap dane doc examples guile nls pkcs11 static-libs test zlib ${I
 
 # NOTICE: sys-devel/autogen is required at runtime as we
 # use system libopts
-RDEPEND=">=dev-libs/libtasn1-2.14[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/libtasn1-3.4[${MULTILIB_USEDEP}]
 	>=dev-libs/nettle-2.7[gmp,${MULTILIB_USEDEP}]
-	dev-libs/gmp[${MULTILIB_USEDEP}]
+	>=dev-libs/gmp-5.1.3-r1[${MULTILIB_USEDEP}]
 	sys-devel/autogen
 	crywrap? ( net-dns/libidn )
-	dane? ( net-dns/unbound[${MULTILIB_USEDEP}] )
+	dane? ( >=net-dns/unbound-1.4.20[${MULTILIB_USEDEP}] )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
-	nls? ( virtual/libintl[${MULTILIB_USEDEP}] )
-	pkcs11? ( >=app-crypt/p11-kit-0.19.2[${MULTILIB_USEDEP}] )
-	zlib? ( >=sys-libs/zlib-1.2.3.1[${MULTILIB_USEDEP}] )
+	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )
+	pkcs11? ( >=app-crypt/p11-kit-0.19.3[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.11.6
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )
 	test? ( app-misc/datefudge )"

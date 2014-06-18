@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.264 2014/06/14 16:33:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.265 2014/06/18 20:46:26 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> systemd-208-r3.ebuild,
+  systemd-212-r5.ebuild, systemd-213.ebuild, systemd-214.ebuild,
+  systemd-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *systemd-214 (14 Jun 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r3.ebuild,v 1.6 2014/05/03 17:35:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r3.ebuild,v 1.7 2014/06/18 20:46:26 mgorny Exp $
 
 EAPI=5
 
@@ -31,11 +31,11 @@ COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6 )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0 )
-	gudev? ( >=dev-libs/glib-2[${MULTILIB_USEDEP}] )
+	gudev? ( >=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}] )
 	http? ( net-libs/libmicrohttpd )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	kmod? ( >=sys-apps/kmod-14-r1 )
-	lzma? ( app-arch/xz-utils[${MULTILIB_USEDEP}] )
+	lzma? ( >=app-arch/xz-utils-5.0.5-r1[${MULTILIB_USEDEP}] )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
 	qrcode? ( media-gfx/qrencode )

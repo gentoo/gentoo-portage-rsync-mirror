@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.86 2014/06/15 16:59:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.87 2014/06/18 20:36:27 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gupnp-0.20.12-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 Jun 2014; Mike Gilbert <floppym@gentoo.org> gupnp-0.20.12-r1.ebuild:
   Fix REQUIRED_USE problems.

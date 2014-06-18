@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.507 2014/06/13 13:35:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.508 2014/06/18 20:35:42 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gnutls-3.3.4.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   13 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> gnutls-2.12.23-r6.ebuild:
   Remove libtasn-1 mask, since long time we could have done this, bug#492522

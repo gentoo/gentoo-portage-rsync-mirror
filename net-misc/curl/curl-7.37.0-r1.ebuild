@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.37.0-r1.ebuild,v 1.2 2014/06/15 15:51:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.37.0-r1.ebuild,v 1.3 2014/06/18 20:42:17 mgorny Exp $
 
 EAPI="5"
 
@@ -20,48 +20,48 @@ IUSE="${IUSE} elibc_Winnt"
 #lead to lots of false negatives, bug #285669
 RESTRICT="test"
 
-RDEPEND="ldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
+RDEPEND="ldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	ssl? (
 		curl_ssl_axtls? (
-			net-libs/axtls[${MULTILIB_USEDEP}]
+			>=net-libs/axtls-1.4.9-r1[${MULTILIB_USEDEP}]
 			app-misc/ca-certificates
 		)
 		curl_ssl_gnutls? (
 			|| (
 				(
-					>=net-libs/gnutls-3[static-libs?,${MULTILIB_USEDEP}]
-					dev-libs/nettle[${MULTILIB_USEDEP}]
+					>=net-libs/gnutls-3.2.15[static-libs?,${MULTILIB_USEDEP}]
+					>=dev-libs/nettle-2.6[${MULTILIB_USEDEP}]
 				)
 				(
 					=net-libs/gnutls-2.12*[nettle,static-libs?,${MULTILIB_USEDEP}]
-					dev-libs/nettle[${MULTILIB_USEDEP}]
+					>=dev-libs/nettle-2.6[${MULTILIB_USEDEP}]
 				)
 				(
 					=net-libs/gnutls-2.12*[-nettle,static-libs?,${MULTILIB_USEDEP}]
-					dev-libs/libgcrypt[static-libs?,${MULTILIB_USEDEP}]
+					>=dev-libs/libgcrypt-1.5.3[static-libs?,${MULTILIB_USEDEP}]
 				)
 			)
 			app-misc/ca-certificates
 		)
 		curl_ssl_openssl? (
-			dev-libs/openssl[static-libs?,${MULTILIB_USEDEP}]
+			>=dev-libs/openssl-1.0.1h-r2[static-libs?,${MULTILIB_USEDEP}]
 		)
 		curl_ssl_nss? (
-			dev-libs/nss[${MULTILIB_USEDEP}]
+			>=dev-libs/nss-3.15.4[${MULTILIB_USEDEP}]
 			app-misc/ca-certificates
 		)
 		curl_ssl_polarssl? (
-			net-libs/polarssl:=[${MULTILIB_USEDEP}]
+			>=net-libs/polarssl-1.3.4:=[${MULTILIB_USEDEP}]
 			app-misc/ca-certificates
 		)
 	)
-	idn? ( net-dns/libidn[static-libs?,${MULTILIB_USEDEP}] )
-	adns? ( net-dns/c-ares[${MULTILIB_USEDEP}] )
-	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
-	metalink? ( >=media-libs/libmetalink-0.1.0[${MULTILIB_USEDEP}] )
-	rtmp? ( media-video/rtmpdump[${MULTILIB_USEDEP}] )
-	ssh? ( net-libs/libssh2[static-libs?,${MULTILIB_USEDEP}] )
-	sys-libs/zlib[${MULTILIB_USEDEP}]
+	idn? ( >=net-dns/libidn-1.28[static-libs?,${MULTILIB_USEDEP}] )
+	adns? ( >=net-dns/c-ares-1.10.0-r1[${MULTILIB_USEDEP}] )
+	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
+	metalink? ( >=media-libs/libmetalink-0.1.1[${MULTILIB_USEDEP}] )
+	rtmp? ( >=media-video/rtmpdump-2.4_p20131018[${MULTILIB_USEDEP}] )
+	ssh? ( >=net-libs/libssh2-1.4.3[static-libs?,${MULTILIB_USEDEP}] )
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20131008-r10
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
@@ -80,7 +80,7 @@ RDEPEND="ldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
 # krb4 http://web.mit.edu/kerberos/www/krb4-end-of-life.html
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	test? (
 		sys-apps/diffutils
 		dev-lang/perl
@@ -145,7 +145,7 @@ multilib_src_configure() {
 		fi
 		if use curl_ssl_gnutls; then
 			einfo "SSL provided by gnutls"
-			if has_version ">=net-libs/gnutls-3[${MULTILIB_USEDEP}]" || has_version "=net-libs/gnutls-2.12*[nettle,${MULTILIB_USEDEP}]"; then
+			if has_version ">=net-libs/gnutls-3.2.15[${MULTILIB_USEDEP}]" || has_version "=net-libs/gnutls-2.12*[nettle,${MULTILIB_USEDEP}]"; then
 				einfo "gnutls compiled with dev-libs/nettle"
 				myconf+=( --with-gnutls --with-nettle )
 			else

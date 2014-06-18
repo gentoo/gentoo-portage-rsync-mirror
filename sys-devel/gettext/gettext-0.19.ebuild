@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19.ebuild,v 1.1 2014/06/02 22:04:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19.ebuild,v 1.2 2014/06/18 20:47:33 mgorny Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ if [[ ${PV} =~ _rc ]] ; then
 fi
 
 # only runtime goes multilib
-DEPEND="virtual/libiconv[${MULTILIB_USEDEP}]
+DEPEND=">=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
 	dev-libs/libxml2
 	dev-libs/expat
 	acl? ( virtual/acl )

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.123 2014/06/07 19:41:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.124 2014/06/18 20:50:32 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libselinux-2.3.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   07 Jun 2014; Sven Vermeulen <swift@gentoo.org> libselinux-2.3.ebuild:
   Update libpcre and libsepol deps to include MULTILIB_USEDEP

@@ -6,9 +6,9 @@ HOMEPAGE=http://www.teamviewer.com
 IUSE=system-wine
 KEYWORDS=~amd64 ~x86
 LICENSE=TeamViewer !system-wine? ( LGPL-2.1 )
-RDEPEND=x11-misc/xdg-utils !system-wine? ( amd64? ( app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-soundlibs || ( ( x11-libs/libSM[abi_x86_32] x11-libs/libX11[abi_x86_32] x11-libs/libXau[abi_x86_32] x11-libs/libXdamage[abi_x86_32] x11-libs/libXext[abi_x86_32] x11-libs/libXfixes[abi_x86_32] x11-libs/libXtst[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) x86? ( sys-libs/zlib x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXtst ) ) system-wine? ( app-emulation/wine )
+RDEPEND=x11-misc/xdg-utils !system-wine? ( amd64? ( app-emulation/emul-linux-x86-baselibs app-emulation/emul-linux-x86-soundlibs || ( ( >=x11-libs/libSM-1.2.1-r1[abi_x86_32] >=x11-libs/libX11-1.6.2[abi_x86_32] >=x11-libs/libXau-1.0.7-r1[abi_x86_32] >=x11-libs/libXdamage-1.1.4-r1[abi_x86_32] >=x11-libs/libXext-1.3.2[abi_x86_32] >=x11-libs/libXfixes-5.0.1[abi_x86_32] >=x11-libs/libXtst-1.2.1-r1[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) x86? ( sys-libs/zlib x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXtst ) ) system-wine? ( app-emulation/wine )
 RESTRICT=mirror
 SLOT=7
 SRC_URI=https://www.teamviewer.com/download/version_7x/teamviewer_linux.tar.gz -> teamviewer-7.0.9377.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c7b88348525793521a2819c3fb6c81f5
+_md5_=05d9344e45431ce8bfbb0dfce71a2632

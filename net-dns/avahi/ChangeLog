@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.263 2014/05/16 18:53:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.264 2014/06/18 20:33:30 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> avahi-0.6.31-r5.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   16 May 2014; Sven Vermeulen <swift@gentoo.org> avahi-0.6.30-r3.ebuild,
   avahi-0.6.31-r2.ebuild, avahi-0.6.31-r3.ebuild, avahi-0.6.31-r4.ebuild,

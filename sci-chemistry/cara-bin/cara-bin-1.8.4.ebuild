@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/cara-bin-1.8.4.ebuild,v 1.6 2013/04/21 19:55:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/cara-bin-1.8.4.ebuild,v 1.7 2014/06/18 20:42:01 mgorny Exp $
 
 EAPI=4
 
@@ -22,16 +22,16 @@ RDEPEND="
 	amd64? (
 		|| (
 			(
-				media-libs/fontconfig[abi_x86_32]
-				media-libs/freetype[abi_x86_32]
-				x11-libs/libICE[abi_x86_32]
-				x11-libs/libSM[abi_x86_32]
-				x11-libs/libX11[abi_x86_32]
-				x11-libs/libXcursor[abi_x86_32]
-				x11-libs/libXext[abi_x86_32]
-				x11-libs/libXi[abi_x86_32]
-				x11-libs/libXrandr[abi_x86_32]
-				x11-libs/libXrender[abi_x86_32]
+				>=media-libs/fontconfig-2.10.92[abi_x86_32]
+				>=media-libs/freetype-2.5.0.1[abi_x86_32]
+				>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
+				>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
+				>=x11-libs/libX11-1.6.2[abi_x86_32]
+				>=x11-libs/libXcursor-1.1.14[abi_x86_32]
+				>=x11-libs/libXext-1.3.2[abi_x86_32]
+				>=x11-libs/libXi-1.7.2[abi_x86_32]
+				>=x11-libs/libXrandr-1.4.2[abi_x86_32]
+				>=x11-libs/libXrender-0.9.8[abi_x86_32]
 			)
 			app-emulation/emul-linux-x86-xlibs
 		)

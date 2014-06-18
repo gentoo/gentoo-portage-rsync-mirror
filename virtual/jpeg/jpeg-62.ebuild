@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-62.ebuild,v 1.13 2014/06/09 23:23:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-62.ebuild,v 1.14 2014/06/18 20:55:05 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
 IUSE=""
 
 RDEPEND="|| (
-		>=media-libs/libjpeg-turbo-1.3.0-r2:0[${MULTILIB_USEDEP}]
-		media-libs/jpeg:62[${MULTILIB_USEDEP}]
+		>=media-libs/libjpeg-turbo-1.3.0-r3:0[${MULTILIB_USEDEP}]
+		>=media-libs/jpeg-6b-r12:62[${MULTILIB_USEDEP}]
 		)"
 DEPEND=""

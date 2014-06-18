@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.203 2014/05/18 10:06:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.204 2014/06/18 20:52:45 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> readline-6.2_p5-r1.ebuild,
+  readline-6.3_p5-r1.ebuild, readline-6.3_p6.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *readline-6.3_p6 (18 May 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.57 2014/06/10 18:02:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.58 2014/06/18 20:36:17 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gupnp-igd-0.2.3-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gupnp-igd-0.2.3-r1 (10 Jun 2014)
 

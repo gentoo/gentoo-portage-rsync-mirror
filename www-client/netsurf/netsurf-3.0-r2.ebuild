@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0-r2.ebuild,v 1.1 2014/06/16 22:41:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0-r2.ebuild,v 1.2 2014/06/18 20:57:23 mgorny Exp $
 
 EAPI=5
 NETSURF_COMPONENT_TYPE=binary
@@ -33,19 +33,19 @@ RDEPEND="dev-libs/libxml2
 	bmp? ( >=media-libs/libnsbmp-0.1.0[${MULTILIB_USEDEP}] )
 	fbcon? ( >=dev-libs/libnsfb-0.1.0[${MULTILIB_USEDEP}]
 		truetype? ( media-fonts/dejavu
-			media-libs/freetype[${MULTILIB_USEDEP}] )
+			>=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}] )
 	)
 	gif? ( >=media-libs/libnsgif-0.1.0[${MULTILIB_USEDEP}] )
-	gtk? ( dev-libs/glib:2[${MULTILIB_USEDEP}]
+	gtk? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
 		gnome-base/libglade:2.0
-		media-libs/lcms:0[${MULTILIB_USEDEP}]
-		x11-libs/gtk+:2[${MULTILIB_USEDEP}] )
+		>=media-libs/lcms-1.19-r1:0[${MULTILIB_USEDEP}]
+		>=x11-libs/gtk+-2.24.23:2[${MULTILIB_USEDEP}] )
 	gstreamer? ( media-libs/gstreamer:0.10 )
 	javascript? ( dev-libs/nsgenbind )
-	jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	mng? ( media-libs/libmng[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
+	mng? ( >=media-libs/libmng-1.0.10-r2[${MULTILIB_USEDEP}] )
 	pdf-writer? ( media-libs/libharu )
-	png? ( media-libs/libpng[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}] )
 	svg? ( svgtiny? ( >=media-libs/libsvgtiny-0.1.0[${MULTILIB_USEDEP}] )
 		!svgtiny? ( gnome-base/librsvg:2 ) )
 	webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )"

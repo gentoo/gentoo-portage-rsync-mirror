@@ -1,6 +1,11 @@
 # ChangeLog for virtual/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.30 2014/06/09 23:23:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.31 2014/06/18 20:55:05 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> jpeg-0-r2.ebuild,
+  jpeg-62.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> jpeg-0-r2.ebuild,
   jpeg-62.ebuild:

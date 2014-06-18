@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.672 2014/06/11 08:08:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.673 2014/06/18 20:35:22 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> samba-3.6.23-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *samba-3.6.23-r1 (11 Jun 2014)
 

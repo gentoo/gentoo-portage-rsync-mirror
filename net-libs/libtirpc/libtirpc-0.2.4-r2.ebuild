@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.4-r2.ebuild,v 1.1 2014/05/30 14:22:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.4-r2.ebuild,v 1.2 2014/06/18 20:40:15 mgorny Exp $
 
 EAPI="4"
 
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ipv6 kerberos static-libs"
 
-RDEPEND="kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )"
+RDEPEND="kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 RDEPEND="${RDEPEND}
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r7

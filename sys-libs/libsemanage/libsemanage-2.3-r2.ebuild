@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.3-r2.ebuild,v 1.1 2014/06/02 19:24:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.3-r2.ebuild,v 1.2 2014/06/18 20:50:58 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
@@ -23,8 +23,8 @@ IUSE="python"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}[${MULTILIB_USEDEP}]
 	>=sys-libs/libselinux-${SELNX_VER}[${MULTILIB_USEDEP}]
-	sys-process/audit[${MULTILIB_USEDEP}]
-	dev-libs/ustr[${MULTILIB_USEDEP}]
+	>=sys-process/audit-2.2.2[${MULTILIB_USEDEP}]
+	>=dev-libs/ustr-1.0.4-r2[${MULTILIB_USEDEP}]
 	"
 DEPEND="${RDEPEND}
 	sys-devel/bison
