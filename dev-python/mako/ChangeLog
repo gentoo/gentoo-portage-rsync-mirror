@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.81 2014/05/01 03:26:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.82 2014/06/18 16:00:28 klausman Exp $
+
+  18 Jun 2014; Tobias Klausmann <klausman@gentoo.org> mako-0.7.3-r1.ebuild:
+  Stable on alpha, bug #450174
 
   01 May 2014; Ian Delaney <idella4@gentoo.org> mako-0.7.3-r2.ebuild:
   add py3.4 support

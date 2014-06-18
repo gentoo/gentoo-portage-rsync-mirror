@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.224 2014/06/15 18:48:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.225 2014/06/18 15:35:08 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-baselibs-20131008-r6.ebuild,
+  emul-linux-x86-baselibs-20140406-r4.ebuild,
+  emul-linux-x86-baselibs-20140508-r10.ebuild,
+  emul-linux-x86-baselibs-20140508-r11.ebuild,
+  emul-linux-x86-baselibs-20140508-r9.ebuild:
+  Remove stale ~virtual/udev-204 deps.
 
   15 Jun 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-baselibs-20140508-r10.ebuild,

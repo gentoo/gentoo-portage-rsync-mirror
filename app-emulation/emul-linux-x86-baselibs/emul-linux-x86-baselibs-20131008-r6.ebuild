@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r6.ebuild,v 1.2 2013/12/30 05:31:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r6.ebuild,v 1.3 2014/06/18 15:35:08 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -29,9 +29,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=dev-libs/expat-2.1.0-r3[abi_x86_32(-)]
 		>=virtual/libusb-0-r1:0[abi_x86_32(-)]
 		>=virtual/libusb-1-r1:1[abi_x86_32(-)]
-		|| (
-			>=virtual/udev-206-r1[abi_x86_32(-)]
-			~virtual/udev-204[abi_x86_32(-)] )
+		>=virtual/udev-206-r1[abi_x86_32(-)]
 		>=media-libs/tiff-4.0.3-r5:0[abi_x86_32(-)]
 		>=sys-apps/attr-2.4.47-r1[abi_x86_32(-)]
 		>=dev-libs/glib-2.36.3-r2:2[abi_x86_32(-)]
