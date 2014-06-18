@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2024.2.ebuild,v 1.1 2014/06/04 07:16:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2054.3.ebuild,v 1.1 2014/06/18 14:42:55 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
+IUSE="bindist cups gnome gnome-keyring kerberos neon pic pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -155,8 +155,8 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-system-harfbuzz-r0.patch"
 	epatch "${FILESDIR}/${PN}-angle-r0.patch"
+	epatch "${FILESDIR}/${PN}-ffmpeg-r1.patch"
 
 	epatch_user
 
@@ -185,6 +185,7 @@ src_prepare() {
 		'third_party/cros_system_api' \
 		'third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
+		'third_party/fips181' \
 		'third_party/flot' \
 		'third_party/hunspell' \
 		'third_party/iccjpeg' \
@@ -334,9 +335,6 @@ src_configure() {
 		-Dlinux_use_bundled_gold=0
 		-Dlinux_use_gold_flags=0"
 
-	# TODO: enable mojo after fixing compile failures.
-	myconf+=" -Duse_mojo=0"
-
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
@@ -424,12 +422,20 @@ src_configure() {
 	export TMPDIR="${WORKDIR}/temp"
 	mkdir -m 755 "${TMPDIR}" || die
 
+	local build_ffmpeg_args=""
+	if use pic && [[ "${ffmpeg_target_arch}" == "ia32" ]]; then
+		build_ffmpeg_args+=" --disable-asm"
+	fi
+
 	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
 	einfo "Configuring bundled ffmpeg..."
 	pushd third_party/ffmpeg > /dev/null || die
-	chromium/scripts/build_ffmpeg.py --config-only linux ${ffmpeg_target_arch} || die
+	chromium/scripts/build_ffmpeg.py linux ${ffmpeg_target_arch} -- ${build_ffmpeg_args} || die
 	chromium/scripts/copy_config.sh || die
+	chromium/scripts/generate_gyp.py || die
 	popd > /dev/null || die
+
+	third_party/libaddressinput/chromium/tools/update-strings.py || die
 
 	einfo "Configuring Chromium..."
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
