@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-1.2.4-r1.ebuild,v 1.1 2014/06/10 19:21:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-1.2.4-r1.ebuild,v 1.2 2014/06/18 20:22:48 mgorny Exp $
 
 EAPI="5"
 
@@ -12,9 +12,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="udev"
 
 RDEPEND="
-	media-libs/libv4l[${MULTILIB_USEDEP}]
-	media-libs/gst-plugins-base:1.0[X,${MULTILIB_USEDEP}]
-	udev? ( >=virtual/udev-143[gudev,${MULTILIB_USEDEP}] )
+	>=media-libs/libv4l-0.9.5[${MULTILIB_USEDEP}]
+	>=media-libs/gst-plugins-base-1.2.3:1.0[X,${MULTILIB_USEDEP}]
+	udev? ( >=virtual/udev-208-r2[gudev,${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	virtual/os-headers"

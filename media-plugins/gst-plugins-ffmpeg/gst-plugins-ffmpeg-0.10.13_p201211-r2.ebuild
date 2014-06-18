@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211-r2.ebuild,v 1.1 2014/06/10 18:58:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211-r2.ebuild,v 1.2 2014/06/18 20:05:27 mgorny Exp $
 
 EAPI=5
 
@@ -25,16 +25,16 @@ IUSE="+orc"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=media-libs/gstreamer-0.10.31:0.10[${MULTILIB_USEDEP}]
-	>=media-libs/gst-plugins-base-0.10.31:0.10[${MULTILIB_USEDEP}]
-	>=virtual/ffmpeg-0.10[${MULTILIB_USEDEP}]
+RDEPEND=">=media-libs/gstreamer-0.10.36-r2:0.10[${MULTILIB_USEDEP}]
+	>=media-libs/gst-plugins-base-0.10.36:0.10[${MULTILIB_USEDEP}]
+	>=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}]
 	|| (
-		media-video/ffmpeg:0[${MULTILIB_USEDEP}]
-		media-libs/libpostproc[${MULTILIB_USEDEP}]
+		>=media-video/ffmpeg-2.2.2:0[${MULTILIB_USEDEP}]
+		>=media-libs/libpostproc-10.20140517-r1[${MULTILIB_USEDEP}]
 	)
-	orc? ( >=dev-lang/orc-0.4.6[${MULTILIB_USEDEP}] )"
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 RDEPEND="${RDEPEND}
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-gstplugins[-abi_x86_32(-)]

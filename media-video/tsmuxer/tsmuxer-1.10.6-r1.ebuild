@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.11 2014/06/16 21:14:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.12 2014/06/18 20:30:35 mgorny Exp $
 
 EAPI=5
 
@@ -39,33 +39,33 @@ RDEPEND="
 	)
 	amd64? (
 		|| (
-			media-libs/freetype:2[abi_x86_32(-)]
+			>=media-libs/freetype-2.5.0.1:2[abi_x86_32(-)]
 			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 		)
 		qt4? (
 			|| (
 				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 				(
-					media-libs/fontconfig[abi_x86_32(-)]
-					x11-libs/libICE[abi_x86_32(-)]
-					x11-libs/libSM[abi_x86_32(-)]
-					x11-libs/libX11[abi_x86_32(-)]
-					x11-libs/libXext[abi_x86_32(-)]
-					x11-libs/libXrender[abi_x86_32(-)]
+					>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+					>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+					>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+					>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+					>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+					>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
 				)
 			)
 			|| (
 				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 				(
-					dev-libs/glib:2[abi_x86_32(-)]
-					media-libs/libpng:1.2[abi_x86_32(-)]
-					sys-libs/zlib[abi_x86_32(-)]
+					>=dev-libs/glib-2.38.2-r1:2[abi_x86_32(-)]
+					>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
+					>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
 				)
 			)
 			|| (
 				(
-					dev-qt/qtcore:4[abi_x86_32(-)]
-					dev-qt/qtgui:4[abi_x86_32(-)]
+					>=dev-qt/qtcore-4.8.5-r1:4[abi_x86_32(-)]
+					>=dev-qt/qtgui-4.8.5-r2:4[abi_x86_32(-)]
 				)
 				app-emulation/emul-linux-x86-qtlibs[-abi_x86_32(-)]
 			)

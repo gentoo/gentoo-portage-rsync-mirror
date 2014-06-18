@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.121.3-r1.ebuild,v 1.2 2013/10/14 18:10:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.121.3-r1.ebuild,v 1.3 2014/06/18 20:28:34 mgorny Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ IUSE="3dnow altivec alsa coreaudio doc debug examples mmx oss sse cpudetection p
 RDEPEND="
 	sys-libs/readline
 	>=media-libs/libsndfile-1.0.0
-	alsa? ( >=media-libs/alsa-lib-1.0.18[${MULTILIB_USEDEP}] )
-	media-libs/libsamplerate[${MULTILIB_USEDEP}]
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
+	>=media-libs/libsamplerate-0.1.8-r1[${MULTILIB_USEDEP}]
 	!media-sound/jack-cvs
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r7
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"

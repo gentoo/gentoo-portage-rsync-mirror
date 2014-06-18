@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ladspa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.50 2014/06/10 19:03:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.51 2014/06/18 20:09:18 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  gst-plugins-ladspa-0.10.23-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-ladspa-0.10.23-r1 (10 Jun 2014)
 

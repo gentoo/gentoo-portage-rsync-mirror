@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.4-r101.ebuild,v 1.1 2014/06/10 19:05:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.4-r101.ebuild,v 1.2 2014/06/18 20:11:48 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal toolchain-funcs
@@ -19,7 +19,7 @@ RDEPEND="~net-libs/libnice-${PV}[${MULTILIB_USEDEP}]
 	media-libs/gstreamer:${SLOT}[${MULTILIB_USEDEP}]
 	media-libs/gst-plugins-base:${SLOT}[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}
 

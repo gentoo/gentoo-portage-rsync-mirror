@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.184 2014/06/10 19:14:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.185 2014/06/18 20:17:49 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  gst-plugins-pango-0.10.36-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-pango-0.10.36-r1 (10 Jun 2014)
 

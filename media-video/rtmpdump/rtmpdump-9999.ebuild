@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-9999.ebuild,v 1.5 2014/06/04 13:26:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-9999.ebuild,v 1.6 2014/06/18 20:30:38 mgorny Exp $
 
 EAPI="4"
 
@@ -17,11 +17,11 @@ KEYWORDS=""
 IUSE="gnutls polarssl ssl"
 
 DEPEND="ssl? (
-		gnutls? ( net-libs/gnutls[${MULTILIB_USEDEP}] )
-		polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0[${MULTILIB_USEDEP}] ) )
-		!gnutls? ( !polarssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] ) )
+		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] )
+		polarssl? ( !gnutls? ( >=net-libs/polarssl-1.3.4[${MULTILIB_USEDEP}] ) )
+		!gnutls? ( !polarssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] ) )
 	)
-	sys-libs/zlib[${MULTILIB_USEDEP}]"
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {

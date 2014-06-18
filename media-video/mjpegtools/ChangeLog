@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.218 2014/06/10 21:06:49 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.219 2014/06/18 20:31:11 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> mjpegtools-2.1.0-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   10 Jun 2014; Daniel Pielmeier <billie@gentoo.org> mjpegtools-2.1.0-r1.ebuild,
   mjpegtools-2.1.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/gst-plugins-faad-0.10.23-r1.ebuild,v 1.1 2014/06/10 18:59:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/gst-plugins-faad-0.10.23-r1.ebuild,v 1.2 2014/06/18 20:05:32 mgorny Exp $
 
 EAPI="5"
 
@@ -10,5 +10,5 @@ inherit gstreamer
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/faad2[${MULTILIB_USEDEP}]"
+RDEPEND=">=media-libs/faad2-2.7-r3[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r3.ebuild,v 1.2 2013/06/27 20:25:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15-r3.ebuild,v 1.3 2014/06/18 20:26:22 mgorny Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="3dnow nls sse"
 
 RDEPEND="
-	media-sound/gsm[${MULTILIB_USEDEP}]
-	>=sci-libs/fftw-3[${MULTILIB_USEDEP}]
+	>=media-sound/gsm-1.0.13-r1[${MULTILIB_USEDEP}]
+	>=sci-libs/fftw-3.3.3-r2[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r2
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tsmuxer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.13 2014/06/16 21:14:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.14 2014/06/18 20:30:35 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   16 Jun 2014; Michał Górny <mgorny@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
   Add missing dependencies on multilib libpng:1.2 and zlib, bug #512174.

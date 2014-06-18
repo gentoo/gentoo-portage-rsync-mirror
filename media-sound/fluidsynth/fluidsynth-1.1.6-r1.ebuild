@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.1.6-r1.ebuild,v 1.1 2014/05/03 09:44:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.1.6-r1.ebuild,v 1.2 2014/06/18 20:27:44 mgorny Exp $
 
 EAPI=5
 inherit cmake-multilib flag-o-matic
@@ -14,19 +14,19 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa dbus debug examples jack ladspa lash portaudio pulseaudio readline sndfile"
 
-RDEPEND=">=dev-libs/glib-2.6.5:2[${MULTILIB_USEDEP}]
-	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}]
-		lash? ( >=media-sound/lash-0.5[${MULTILIB_USEDEP}] ) )
-	dbus? ( >=sys-apps/dbus-1.0.0[${MULTILIB_USEDEP}] )
-	jack? ( media-sound/jack-audio-connection-kit[${MULTILIB_USEDEP}] )
-	ladspa? ( >=media-libs/ladspa-sdk-1.12[${MULTILIB_USEDEP}]
-		>=media-libs/ladspa-cmt-1.15[${MULTILIB_USEDEP}] )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.8[${MULTILIB_USEDEP}] )
-	portaudio? ( >=media-libs/portaudio-19_pre[${MULTILIB_USEDEP}] )
-	readline? ( sys-libs/readline[${MULTILIB_USEDEP}] )
-	sndfile? ( >=media-libs/libsndfile-1.0.18[${MULTILIB_USEDEP}] )"
+RDEPEND=">=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}]
+		lash? ( >=media-sound/lash-0.5.4-r2[${MULTILIB_USEDEP}] ) )
+	dbus? ( >=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}] )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
+	ladspa? ( >=media-libs/ladspa-sdk-1.13-r2[${MULTILIB_USEDEP}]
+		>=media-libs/ladspa-cmt-1.16-r3[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
+	portaudio? ( >=media-libs/portaudio-19_pre20111121-r1[${MULTILIB_USEDEP}] )
+	readline? ( >=sys-libs/readline-6.2_p5-r1[${MULTILIB_USEDEP}] )
+	sndfile? ( >=media-libs/libsndfile-1.0.25[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 src_configure() {
 	# autotools based build system has AC_CHECK_LIB(pthread, pthread_create) wrt

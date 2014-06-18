@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/wavpack-4.60.1-r1.ebuild,v 1.12 2014/01/26 12:16:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/wavpack-4.60.1-r1.ebuild,v 1.13 2014/06/18 20:29:37 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="mmx static-libs"
 
-RDEPEND="virtual/libiconv[${MULTILIB_USEDEP}]
+RDEPEND=">=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r4
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
 

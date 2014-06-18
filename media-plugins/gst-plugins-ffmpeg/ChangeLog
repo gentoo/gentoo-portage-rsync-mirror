@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.178 2014/06/10 18:58:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.179 2014/06/18 20:05:27 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  gst-plugins-ffmpeg-0.10.13_p201211-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-ffmpeg-0.10.13_p201211-r2 (10 Jun 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.10.36-r1.ebuild,v 1.1 2014/06/10 19:25:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.10.36-r1.ebuild,v 1.2 2014/06/18 20:27:17 mgorny Exp $
 
 EAPI="5"
 
@@ -10,12 +10,12 @@ inherit gstreamer
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
-RDEPEND="x11-libs/libXv[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]"
+RDEPEND=">=x11-libs/libXv-1.0.10[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	x11-proto/videoproto[${MULTILIB_USEDEP}]
-	x11-proto/xproto[${MULTILIB_USEDEP}]
-	x11-proto/xextproto[${MULTILIB_USEDEP}]"
+	>=x11-proto/videoproto-2.3.1-r1[${MULTILIB_USEDEP}]
+	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
+	>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]"
 
 # xshm is a compile time option of xvideo
 # x is needed to build any X plugins, but we build/install only xv anyway

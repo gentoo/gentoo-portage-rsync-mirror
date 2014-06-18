@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.2 2014/06/10 21:06:49 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.3 2014/06/18 20:31:11 mgorny Exp $
 
 EAPI=5
 
@@ -16,13 +16,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 IUSE="dv gtk mmx png quicktime sdl sdlgfx static-libs v4l"
 REQUIRED_USE="sdlgfx? ( sdl )"
 
-RDEPEND="virtual/jpeg[${MULTILIB_USEDEP}]
-	quicktime? ( media-libs/libquicktime[${MULTILIB_USEDEP}] )
-	dv? ( >=media-libs/libdv-0.99[${MULTILIB_USEDEP}] )
+RDEPEND=">=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
+	quicktime? ( >=media-libs/libquicktime-1.2.4-r1[${MULTILIB_USEDEP}] )
+	dv? ( >=media-libs/libdv-1.0.0-r3[${MULTILIB_USEDEP}] )
 	png? ( media-libs/libpng:0= )
 	gtk? ( x11-libs/gtk+:2 )
-	sdl? ( >=media-libs/libsdl-1.2.7-r3[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
+	sdl? ( >=media-libs/libsdl-1.2.15-r4[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		sdlgfx? ( media-libs/sdl-gfx )
 	)"
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )
 	>=sys-apps/sed-4
 	virtual/awk
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 RDEPEND="${RDEPEND}
 	abi_x86_32? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r3.ebuild,v 1.1 2014/06/07 21:45:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r3.ebuild,v 1.2 2014/06/18 20:27:23 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -18,21 +18,21 @@ SLOT="0.4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="alsa debug gtk jack mplayer opengl"
 
-RDEPEND="media-libs/fontconfig[${MULTILIB_USEDEP}]
+RDEPEND=">=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
 	~media-libs/libvisual-${PV}[${MULTILIB_USEDEP}]
-	x11-libs/libX11[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]
-	x11-libs/libXrender[${MULTILIB_USEDEP}]
-	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	gtk? ( x11-libs/gtk+:2[${MULTILIB_USEDEP}] )
-	jack? ( >=media-sound/jack-audio-connection-kit-0.109[${MULTILIB_USEDEP}] )
+	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
+	gtk? ( >=x11-libs/gtk+-2.24.23:2[${MULTILIB_USEDEP}] )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
 	opengl? (
-		virtual/glu[${MULTILIB_USEDEP}]
-		virtual/opengl[${MULTILIB_USEDEP}]
+		>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
+		>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
 	)"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
-	x11-libs/libXt[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-vp8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.24 2014/06/10 19:22:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.25 2014/06/18 20:24:15 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  gst-plugins-vp8-0.10.23-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-vp8-0.10.23-r2 (10 Jun 2014)
 

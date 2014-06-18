@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.109 2014/06/10 19:26:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.110 2014/06/18 20:15:05 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gst-plugins-meta-0.10-r9.ebuild,
+  gst-plugins-meta-1.0-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-meta-0.10-r9 (10 Jun 2014)
 *gst-plugins-meta-1.0-r2 (10 Jun 2014)

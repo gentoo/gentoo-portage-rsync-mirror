@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gl/ChangeLog,v 1.10 2014/06/10 19:00:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gl/ChangeLog,v 1.11 2014/06/18 20:06:28 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> gst-plugins-gl-0.10.3-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *gst-plugins-gl-0.10.3-r1 (10 Jun 2014)
 

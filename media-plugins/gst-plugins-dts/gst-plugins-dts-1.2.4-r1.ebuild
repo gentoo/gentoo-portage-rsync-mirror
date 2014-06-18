@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/gst-plugins-dts-1.2.4-r1.ebuild,v 1.1 2014/06/10 18:56:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/gst-plugins-dts-1.2.4-r1.ebuild,v 1.2 2014/06/18 20:02:57 mgorny Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd"
 IUSE="+orc"
 
 RDEPEND="
-	media-libs/libdca[${MULTILIB_USEDEP}]
-	orc? ( >=dev-lang/orc-0.4.16[${MULTILIB_USEDEP}] )
+	>=media-libs/libdca-0.0.5-r3[${MULTILIB_USEDEP}]
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}"

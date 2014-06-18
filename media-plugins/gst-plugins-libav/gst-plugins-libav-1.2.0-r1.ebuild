@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.0-r1.ebuild,v 1.1 2014/06/10 19:05:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.0-r1.ebuild,v 1.2 2014/06/18 20:10:16 mgorny Exp $
 
 EAPI="5"
 
@@ -17,14 +17,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fb
 IUSE="+orc"
 
 RDEPEND="
-	>=media-libs/gstreamer-1.2:1.0[${MULTILIB_USEDEP}]
-	>=media-libs/gst-plugins-base-1.2:1.0[${MULTILIB_USEDEP}]
-	>=virtual/ffmpeg-9[${MULTILIB_USEDEP}]
-	orc? ( >=dev-lang/orc-0.4.16[${MULTILIB_USEDEP}] )
+	>=media-libs/gstreamer-1.2.3:1.0[${MULTILIB_USEDEP}]
+	>=media-libs/gst-plugins-base-1.2.3:1.0[${MULTILIB_USEDEP}]
+	>=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}]
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 S="${WORKDIR}/${MY_PN}-${PV}"
