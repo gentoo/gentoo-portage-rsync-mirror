@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.172 2014/06/10 00:51:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.173 2014/06/18 17:09:35 mgorny Exp $
+
+*lcms-1.19-r2 (18 Jun 2014)
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> +lcms-1.19-r2.ebuild:
+  Backport multilib support to lcms:0, as required by older versions of wine.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> lcms-1.19-r1.ebuild,
   lcms-1.19.ebuild, lcms-2.3.ebuild, lcms-2.4.ebuild, lcms-2.5-r1.ebuild,

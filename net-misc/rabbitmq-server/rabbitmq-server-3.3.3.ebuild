@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.3.0.ebuild,v 1.1 2014/04/14 08:37:33 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.3.3.ebuild,v 1.1 2014/06/18 17:05:07 ultrabug Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
