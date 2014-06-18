@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15804 2014/06/17 06:28:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15805 2014/06/18 21:32:24 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -332,10 +332,6 @@ www-plugins/chrome-binary-plugins:unstable
 # until rest of the year.
 lxde-base/lxpolkit
 
-# Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
-# Beta ebuild, unmask to test the tree.
-~media-video/libav-10_beta1
-
 # Tom Wijsman <TomWij@gentoo.org> (19 Feb 2014)
 # Masked for removal in 30 days, as this is an old revision that stuck behind;
 # however we are not sure if it is kept for a reason, if it is then please let
@@ -413,10 +409,6 @@ www-client/google-chrome:unstable
 # breaks every consumer
 =dev-games/ogre-1.9.0
 
-# Luca Barbato <lu_zero@gentoo.org> (18 Dec 2013)
-# Alpha ebuild, unmask to test the tree.
-~media-video/libav-10_alpha1
-
 # Michał Górny <mgorny@gentoo.org> (15 Dec 2013)
 # Masked for testing due to almost complete redesign. It is now
 # completely split and no longer has an integrated GUI. Currently,
@@ -442,12 +434,6 @@ games-emulation/m64py
 # Mask older roboto versions to give users a regular upgrade path
 # now that we've switched to upstream versioning
 >media-fonts/roboto-9999
-
-# Luca Barbato <lu_zero@gentoo.org> (03 Nov 2013)
-# Multilib ready ebuild, some deps missing.
-=media-video/libav-0.8.9-r1
-=media-video/libav-9.10-r1
-=media-video/libav-10_alpha1-r1
 
 # Lars Wendler <polynomial-c@gentoo.org> (28 Oct 2013)
 # Masked alpha releases for testing.
