@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.13.2.ebuild,v 1.1 2014/06/15 16:57:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r1.ebuild,v 1.1 2014/06/18 22:18:22 reavertm Exp $
 
 EAPI=5
 
@@ -10,15 +10,15 @@ OPENGL_REQUIRED="optional"
 KDE_HANDBOOK="optional"
 inherit kde4-base fdo-mime multilib toolchain-funcs flag-o-matic
 
-EGIT_BRANCH="KDE/4.13"
+EGIT_BRANCH="KDE/4.12"
 
 DESCRIPTION="KDE libraries needed by all KDE programs."
 
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
-IUSE="3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma mmx
-nepomuk nls openexr +policykit spell sse sse2 ssl +udev +udisks +upower
-zeroconf"
+IUSE="3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma
+mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev +udisks
++upower zeroconf"
 
 REQUIRED_USE="
 	udisks? ( udev )
@@ -73,15 +73,15 @@ COMMONDEPEND="
 	fam? ( virtual/fam )
 	jpeg2k? ( media-libs/jasper )
 	kerberos? ( virtual/krb5 )
-	nepomuk? (
-		>=dev-libs/shared-desktop-ontologies-0.11.0
-		>=dev-libs/soprano-2.9.0[dbus,raptor,redland]
-	)
 	openexr? (
 		media-libs/openexr:=
 		media-libs/ilmbase:=
 	)
 	policykit? ( >=sys-auth/polkit-qt-0.103.0 )
+	semantic-desktop? (
+		>=dev-libs/shared-desktop-ontologies-0.11.0
+		>=dev-libs/soprano-2.9.0[dbus,raptor,redland]
+	)
 	spell? ( app-text/enchant )
 	ssl? ( dev-libs/openssl )
 	udev? ( virtual/udev )
@@ -115,12 +115,12 @@ PDEPEND="
 		x11-misc/xdg-utils
 	)
 	handbook? ( $(add_kdebase_dep khelpcenter) )
-	nepomuk? (
-		$(add_kdebase_dep nepomuk-core)
-		$(add_kdebase_dep nepomuk-widgets)
-	)
 	policykit? (
 		>=sys-auth/polkit-kde-agent-0.99
+	)
+	semantic-desktop? (
+		$(add_kdebase_dep nepomuk-core)
+		$(add_kdebase_dep nepomuk-widgets)
 	)
 "
 
@@ -134,6 +134,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.1-norpath.patch"
 	"${FILESDIR}/${PN}-4.9.3-werror.patch"
 	"${FILESDIR}/${PN}-4.10.0-udisks.patch"
+	"${FILESDIR}/${PN}-4.13.2-CVE-2014-3494.patch" # Bug 513726
 )
 
 pkg_pretend() {
@@ -203,12 +204,12 @@ src_configure() {
 		$(cmake-utils_use_with jpeg2k Jasper)
 		$(cmake-utils_use_with kerberos GSSAPI)
 		$(cmake-utils_use_with lzma LibLZMA)
-		$(cmake-utils_use_with nepomuk Soprano)
-		$(cmake-utils_use_with nepomuk SharedDesktopOntologies)
 		$(cmake-utils_use_with nls Libintl)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with policykit PolkitQt-1)
+		$(cmake-utils_use_with semantic-desktop Soprano)
+		$(cmake-utils_use_with semantic-desktop SharedDesktopOntologies)
 		$(cmake-utils_use_with spell ENCHANT)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with udev UDev)

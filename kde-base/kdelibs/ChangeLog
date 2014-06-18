@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1008 2014/06/15 18:03:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1009 2014/06/18 22:18:22 reavertm Exp $
+
+*kdelibs-4.12.5-r1 (18 Jun 2014)
+*kdelibs-4.13.2-r1 (18 Jun 2014)
+
+  18 Jun 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/kdelibs-4.13.2-CVE-2014-3494.patch, +kdelibs-4.12.5-r1.ebuild,
+  +kdelibs-4.13.2-r1.ebuild, -kdelibs-4.13.2.ebuild:
+  Bug 513726, CVE-2014-3494
 
 *kdelibs-4.13.2 (15 Jun 2014)
 
