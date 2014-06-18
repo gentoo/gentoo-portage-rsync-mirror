@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.43 2014/05/21 14:19:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.44 2014/06/18 12:30:35 jer Exp $
+
+  18 Jun 2014; Jeroen Roovers <jer@gentoo.org>
+  avant-window-navigator-0.4.2.ebuild:
+  Remove block on gnome-extra/avant-window-navigator-extras (bug #513572).
 
   21 May 2014; Jeroen Roovers <jer@gentoo.org>
   files/avant-window-navigator-0.4.2-Timeout.patch:
