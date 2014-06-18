@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.116 2014/06/15 00:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.117 2014/06/18 21:02:55 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libSM-1.2.1-r1.ebuild,
+  libSM-1.2.2-r1.ebuild, libSM-1.2.2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libSM-1.2.2-r1.ebuild,
   libSM-1.2.2.ebuild:

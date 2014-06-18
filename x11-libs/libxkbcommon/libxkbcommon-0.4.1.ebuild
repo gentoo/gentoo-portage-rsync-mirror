@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.4.1.ebuild,v 1.1 2014/05/08 12:56:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.4.1.ebuild,v 1.2 2014/06/18 21:07:59 mgorny Exp $
 
 EAPI=5
 XORG_EAUTORECONF="yes"
@@ -24,8 +24,8 @@ IUSE="X doc"
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	X? ( >=x11-libs/libxcb-1.10[${MULTILIB_USEDEP},xkb] )
-	x11-proto/xproto[${MULTILIB_USEDEP}]
-	>=x11-proto/kbproto-1.0.5[${MULTILIB_USEDEP}]
+	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
+	>=x11-proto/kbproto-1.0.6-r1[${MULTILIB_USEDEP}]
 	doc? ( app-doc/doxygen )"
 RDEPEND=""
 

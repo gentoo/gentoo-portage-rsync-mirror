@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXmu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.91 2013/10/08 05:08:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.92 2014/06/18 21:09:35 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXmu-1.1.1-r1.ebuild,
+  libXmu-1.1.2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libXmu-1.1.2.ebuild:
   Stable for x86, wrt bug #475480

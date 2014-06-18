@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xvba-video
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.18 2014/03/03 18:05:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.19 2014/06/18 21:16:07 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> xvba-video-0.8.0-r2.ebuild,
+  xvba-video-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   03 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/xvba-video-0.8.0-VAEncH264VUIBufferType.patch,

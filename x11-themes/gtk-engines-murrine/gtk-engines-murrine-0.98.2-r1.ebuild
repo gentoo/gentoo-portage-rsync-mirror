@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.98.2-r1.ebuild,v 1.1 2014/05/14 13:39:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.98.2-r1.ebuild,v 1.2 2014/06/18 21:17:46 mgorny Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="murrine"
@@ -16,12 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="+themes animation-rtl"
 
-RDEPEND=">=x11-libs/gtk+-2.18:2[${MULTILIB_USEDEP}]
-	dev-libs/glib:2[${MULTILIB_USEDEP}]
-	x11-libs/gdk-pixbuf:2[${MULTILIB_USEDEP}]
-	x11-libs/cairo[${MULTILIB_USEDEP}]
-	x11-libs/pango[${MULTILIB_USEDEP}]
-	x11-libs/pixman[${MULTILIB_USEDEP}]
+RDEPEND=">=x11-libs/gtk+-2.24.23:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=x11-libs/gdk-pixbuf-2.30.7:2[${MULTILIB_USEDEP}]
+	>=x11-libs/cairo-1.12.14-r4[${MULTILIB_USEDEP}]
+	>=x11-libs/pango-1.36.3[${MULTILIB_USEDEP}]
+	>=x11-libs/pixman-0.32.4[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20140508
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
@@ -30,7 +30,7 @@ PDEPEND="themes? ( x11-themes/murrine-themes )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.37.1
 	sys-devel/gettext
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 DOCS="AUTHORS ChangeLog NEWS TODO"
 

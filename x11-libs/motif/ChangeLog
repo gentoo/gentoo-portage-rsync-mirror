@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.50 2014/06/16 19:56:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.51 2014/06/18 21:14:36 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> motif-2.2.3-r12.ebuild,
+  motif-2.3.4-r1.ebuild, motif-2.3.4-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   16 Jun 2014; Ulrich Müller <ulm@gentoo.org> motif-2.3.4-r2.ebuild:
   Enable workaround for wmluiltok on non-native ABIs only, bug 513370.

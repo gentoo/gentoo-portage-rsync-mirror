@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.13.2.ebuild,v 1.12 2014/04/30 18:30:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.13.2.ebuild,v 1.13 2014/06/18 21:02:10 mgorny Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-f
 IUSE="minimal zlib"
 
 DEPEND="!<x11-base/xorg-server-1.5
-	zlib? (	sys-libs/zlib[${MULTILIB_USEDEP}] )"
+	zlib? (	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 	sys-apps/hwids"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXxf86vm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.83 2014/03/26 13:27:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.84 2014/06/18 21:13:52 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXxf86vm-1.1.3.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -libXxf86vm-1.1.1.ebuild, -libXxf86vm-1.1.2-r1.ebuild,

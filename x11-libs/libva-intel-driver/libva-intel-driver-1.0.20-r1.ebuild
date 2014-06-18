@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.0.20-r1.ebuild,v 1.1 2014/02/01 15:24:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.0.20-r1.ebuild,v 1.2 2014/06/18 21:02:16 mgorny Exp $
 
 EAPI=5
 
@@ -32,10 +32,10 @@ else
 fi
 IUSE="+drm wayland X"
 
-RDEPEND=">=x11-libs/libva-1.1.0[X?,wayland?,drm?,${MULTILIB_USEDEP}]
+RDEPEND=">=x11-libs/libva-1.2.1-r1[X?,wayland?,drm?,${MULTILIB_USEDEP}]
 	!<x11-libs/libva-1.0.15[video_cards_intel]
-	>=x11-libs/libdrm-2.4.23[video_cards_intel,${MULTILIB_USEDEP}]
-	wayland? ( media-libs/mesa[egl,${MULTILIB_USEDEP}] >=dev-libs/wayland-1[${MULTILIB_USEDEP}] )"
+	>=x11-libs/libdrm-2.4.46[video_cards_intel,${MULTILIB_USEDEP}]
+	wayland? ( >=media-libs/mesa-9.1.6[egl,${MULTILIB_USEDEP}] >=dev-libs/wayland-1.0.6[${MULTILIB_USEDEP}] )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

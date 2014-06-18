@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util-cursor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-cursor/ChangeLog,v 1.12 2014/06/17 17:35:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-cursor/ChangeLog,v 1.13 2014/06/18 21:15:06 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> xcb-util-cursor-0.1.1-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *xcb-util-cursor-0.1.1-r1 (17 Jun 2014)
 

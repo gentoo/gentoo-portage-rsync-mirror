@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.1-r1.ebuild,v 1.1 2013/11/23 11:50:01 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.1-r1.ebuild,v 1.2 2014/06/18 21:05:38 mgorny Exp $
 
 EAPI=5
 
@@ -22,9 +22,9 @@ IUSE="selinux xkb"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="dev-libs/libpthread-stubs[${MULTILIB_USEDEP}]
-	x11-libs/libXau[${MULTILIB_USEDEP}]
-	x11-libs/libXdmcp[${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-libs/libpthread-stubs-0.3-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXau-1.0.7-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXdmcp-1.1.1-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-lang/python[xml]
 	dev-libs/libxslt

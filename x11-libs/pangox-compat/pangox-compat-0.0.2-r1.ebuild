@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/pangox-compat-0.0.2-r1.ebuild,v 1.1 2014/03/04 03:22:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/pangox-compat-0.0.2-r1.ebuild,v 1.2 2014/06/18 21:14:42 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,9 +15,9 @@ LICENSE="LGPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
-RDEPEND=">=dev-libs/glib-2.31:2[${MULTILIB_USEDEP}]
-	>=x11-libs/pango-1.32[${MULTILIB_USEDEP}]
-	x11-libs/libX11[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=x11-libs/pango-1.36.3[${MULTILIB_USEDEP}]
+	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20131008-r3
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]

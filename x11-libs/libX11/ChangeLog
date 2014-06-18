@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.220 2014/06/15 00:47:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.221 2014/06/18 21:04:40 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libX11-1.6.2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libX11-1.6.2.ebuild:
   Add arm64 love.

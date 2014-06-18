@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-3.0.1-r201.ebuild,v 1.1 2014/05/14 13:39:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-3.0.1-r201.ebuild,v 1.2 2014/06/18 21:18:17 mgorny Exp $
 
 EAPI=5
 MY_PN=gtk-xfce-engine
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug"
 
-RDEPEND=">=dev-libs/glib-2.24[${MULTILIB_USEDEP}]
-	>=x11-libs/gtk+-2.20:2[${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/gtk+-2.24.23:2[${MULTILIB_USEDEP}]
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20140508
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]

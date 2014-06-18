@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.3 2014/05/26 05:57:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.4 2014/06/18 21:14:56 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,16 +18,16 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="X +introspection"
 
 RDEPEND="
-	>=media-libs/harfbuzz-0.9.9:=[glib(+),truetype(+),${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.33.12:2[${MULTILIB_USEDEP}]
-	>=media-libs/fontconfig-2.10.91:1.0=[${MULTILIB_USEDEP}]
-	media-libs/freetype:2=[${MULTILIB_USEDEP}]
-	>=x11-libs/cairo-1.12.10:=[X?,${MULTILIB_USEDEP}]
+	>=media-libs/harfbuzz-0.9.12:=[glib(+),truetype(+),${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=media-libs/fontconfig-2.10.92:1.0=[${MULTILIB_USEDEP}]
+	>=media-libs/freetype-2.5.0.1:2=[${MULTILIB_USEDEP}]
+	>=x11-libs/cairo-1.12.14-r4:=[X?,${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	X? (
-		x11-libs/libXrender[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		>=x11-libs/libXft-2.0.0[${MULTILIB_USEDEP}]
+		>=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXft-2.3.1-r1[${MULTILIB_USEDEP}]
 	)
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20131008-r3
@@ -37,7 +37,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.15
 	virtual/pkgconfig
-	X? ( x11-proto/xproto[${MULTILIB_USEDEP}] )
+	X? ( >=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )
 	!<=sys-devel/autoconf-2.63:2.5
 "
 

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.92 2014/04/15 18:39:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.93 2014/06/18 21:12:32 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXtst-1.2.1-r1.ebuild,
+  libXtst-1.2.2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 Apr 2014; Mike Frysinger <vapier@gentoo.org> libXtst-1.2.0.ebuild,
   libXtst-1.2.1-r1.ebuild, libXtst-1.2.1.ebuild, libXtst-1.2.2.ebuild:

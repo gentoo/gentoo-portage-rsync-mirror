@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r2.ebuild,v 1.7 2014/06/16 19:56:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r2.ebuild,v 1.8 2014/06/18 21:14:36 mgorny Exp $
 
 EAPI=5
 
@@ -18,17 +18,17 @@ KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~ppc-aix 
 IUSE="examples jpeg +motif22-compatibility png static-libs unicode xft"
 
 RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-motif[-abi_x86_32(-)] )
-	x11-libs/libX11[${MULTILIB_USEDEP}]
-	x11-libs/libXext[${MULTILIB_USEDEP}]
-	x11-libs/libXmu[${MULTILIB_USEDEP}]
-	x11-libs/libXp[${MULTILIB_USEDEP}]
-	x11-libs/libXt[${MULTILIB_USEDEP}]
-	jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
-	png? ( >=media-libs/libpng-1.4:0=[${MULTILIB_USEDEP}] )
-	unicode? ( virtual/libiconv[${MULTILIB_USEDEP}] )
+	>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXmu-1.1.1-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXp-1.0.2[${MULTILIB_USEDEP}]
+	>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]
+	jpeg? ( >=virtual/jpeg-0-r2:0=[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.6.10:0=[${MULTILIB_USEDEP}] )
+	unicode? ( >=virtual/libiconv-0-r1[${MULTILIB_USEDEP}] )
 	xft? (
-		media-libs/fontconfig[${MULTILIB_USEDEP}]
-		x11-libs/libXft[${MULTILIB_USEDEP}]
+		>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
+		>=x11-libs/libXft-2.3.1-r1[${MULTILIB_USEDEP}]
 	)"
 
 DEPEND="${RDEPEND}

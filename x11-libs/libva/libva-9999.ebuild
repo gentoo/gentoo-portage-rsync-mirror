@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.20 2014/02/06 15:59:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.21 2014/06/18 21:02:06 mgorny Exp $
 
 EAPI=5
 
@@ -38,22 +38,22 @@ for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
 
-RDEPEND=">=x11-libs/libdrm-2.4[${MULTILIB_USEDEP}]
+RDEPEND=">=x11-libs/libdrm-2.4.46[${MULTILIB_USEDEP}]
 	X? (
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libXfixes[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
 	)
-	egl? ( media-libs/mesa[egl,${MULTILIB_USEDEP}] )
-	opengl? ( virtual/opengl[${MULTILIB_USEDEP}] )
-	wayland? ( >=dev-libs/wayland-1[${MULTILIB_USEDEP}] )"
+	egl? ( >=media-libs/mesa-9.1.6[egl,${MULTILIB_USEDEP}] )
+	opengl? ( >=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}] )
+	wayland? ( >=dev-libs/wayland-1.0.6[${MULTILIB_USEDEP}] )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-PDEPEND="video_cards_nvidia? ( x11-libs/libva-vdpau-driver[${MULTILIB_USEDEP}] )
-	vdpau? ( x11-libs/libva-vdpau-driver[${MULTILIB_USEDEP}] )
-	video_cards_fglrx? ( x11-libs/xvba-video[${MULTILIB_USEDEP}] )
-	video_cards_intel? ( >=x11-libs/libva-intel-driver-1.0.18[${MULTILIB_USEDEP}] )
+PDEPEND="video_cards_nvidia? ( >=x11-libs/libva-vdpau-driver-0.7.4-r1[${MULTILIB_USEDEP}] )
+	vdpau? ( >=x11-libs/libva-vdpau-driver-0.7.4-r1[${MULTILIB_USEDEP}] )
+	video_cards_fglrx? ( >=x11-libs/xvba-video-0.8.0-r1[${MULTILIB_USEDEP}] )
+	video_cards_intel? ( >=x11-libs/libva-intel-driver-1.2.2-r1[${MULTILIB_USEDEP}] )
 	"
 
 REQUIRED_USE="opengl? ( X )"

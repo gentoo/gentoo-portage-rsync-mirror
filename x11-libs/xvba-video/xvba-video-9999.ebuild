@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.9 2014/02/10 21:35:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.10 2014/06/18 21:16:07 mgorny Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
-RDEPEND="x11-libs/libva[X(+),opengl?,${MULTILIB_USEDEP}]
-	x11-libs/libvdpau[${MULTILIB_USEDEP}]
+RDEPEND=">=x11-libs/libva-1.2.1-r1[X(+),opengl?,${MULTILIB_USEDEP}]
+	>=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}]
 	x11-drivers/ati-drivers"
 DEPEND="${DEPEND}
 	${PYTHON_DEPS}

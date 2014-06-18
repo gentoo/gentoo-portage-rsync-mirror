@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.89 2014/03/26 12:52:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.90 2014/06/18 21:07:16 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXfixes-5.0.1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -libXfixes-5.0-r1.ebuild, -libXfixes-5.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.3-r1.ebuild,v 1.1 2014/01/11 11:15:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9.3-r1.ebuild,v 1.2 2014/06/18 21:05:38 mgorny Exp $
 
 EAPI=5
 
@@ -20,9 +20,9 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/libxcb"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="selinux xkb"
 
-RDEPEND="dev-libs/libpthread-stubs[${MULTILIB_USEDEP}]
-	x11-libs/libXau[${MULTILIB_USEDEP}]
-	x11-libs/libXdmcp[${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-libs/libpthread-stubs-0.3-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXau-1.0.7-r1[${MULTILIB_USEDEP}]
+	>=x11-libs/libXdmcp-1.1.1-r1[${MULTILIB_USEDEP}]"
 # Note: ${PYTHON_USEDEP} needs to go verbatim
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 		">=x11-proto/xcb-proto-1.9-r1[${MULTILIB_USEDEP},\${PYTHON_USEDEP}]")"
 
 python_check_deps() {
-	has_version ">=x11-proto/xcb-proto-1.9[${MULTILIB_USEDEP},${PYTHON_USEDEP}]"
+	has_version ">=x11-proto/xcb-proto-1.9-r1[${MULTILIB_USEDEP},${PYTHON_USEDEP}]"
 }
 
 pkg_setup() {

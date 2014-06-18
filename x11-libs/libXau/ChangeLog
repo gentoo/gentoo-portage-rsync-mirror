@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.106 2014/06/15 00:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.107 2014/06/18 21:04:42 mgorny Exp $
+
+  18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXau-1.0.7-r1.ebuild,
+  libXau-1.0.8.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org> libXau-1.0.8.ebuild:
   Add arm64 love.

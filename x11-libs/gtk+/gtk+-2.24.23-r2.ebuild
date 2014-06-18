@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r2.ebuild,v 1.1 2014/06/17 18:19:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r2.ebuild,v 1.2 2014/06/18 21:01:40 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,27 +18,27 @@ IUSE="aqua cups debug examples +introspection test vim-syntax xinerama"
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 COMMON_DEPEND="
 	!aqua? (
-		x11-libs/libXrender[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXi[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		>=x11-libs/libXrandr-1.3[${MULTILIB_USEDEP}]
-		x11-libs/libXcursor[${MULTILIB_USEDEP}]
-		x11-libs/libXfixes[${MULTILIB_USEDEP}]
-		x11-libs/libXcomposite[${MULTILIB_USEDEP}]
-		x11-libs/libXdamage[${MULTILIB_USEDEP}]
-		>=x11-libs/cairo-1.6:=[X,svg,${MULTILIB_USEDEP}]
-		x11-libs/gdk-pixbuf:2[X,introspection?,${MULTILIB_USEDEP}]
+		>=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXi-1.7.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXrandr-1.4.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXcursor-1.1.14[${MULTILIB_USEDEP}]
+		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
+		>=x11-libs/libXcomposite-0.4.4-r1[${MULTILIB_USEDEP}]
+		>=x11-libs/libXdamage-1.1.4-r1[${MULTILIB_USEDEP}]
+		>=x11-libs/cairo-1.12.14-r4:=[X,svg,${MULTILIB_USEDEP}]
+		>=x11-libs/gdk-pixbuf-2.30.7:2[X,introspection?,${MULTILIB_USEDEP}]
 	)
 	aqua? (
 		>=x11-libs/cairo-1.6:=[aqua,svg]
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
-	xinerama? ( x11-libs/libXinerama[${MULTILIB_USEDEP}] )
-	>=dev-libs/glib-2.34:2[${MULTILIB_USEDEP}]
-	>=x11-libs/pango-1.20[introspection?,${MULTILIB_USEDEP}]
-	>=dev-libs/atk-1.29.2[introspection?,${MULTILIB_USEDEP}]
-	media-libs/fontconfig[${MULTILIB_USEDEP}]
+	xinerama? ( >=x11-libs/libXinerama-1.1.3[${MULTILIB_USEDEP}] )
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=x11-libs/pango-1.36.3[introspection?,${MULTILIB_USEDEP}]
+	>=dev-libs/atk-2.10.0[introspection?,${MULTILIB_USEDEP}]
+	>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
 	x11-misc/shared-mime-info
 	cups? ( >=net-print/cups-1.7.1-r2:=[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
@@ -46,14 +46,14 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 	!aqua? (
-		x11-proto/xextproto[${MULTILIB_USEDEP}]
-		x11-proto/xproto[${MULTILIB_USEDEP}]
-		x11-proto/inputproto[${MULTILIB_USEDEP}]
-		x11-proto/damageproto[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
+		>=x11-proto/inputproto-2.3[${MULTILIB_USEDEP}]
+		>=x11-proto/damageproto-1.2.1-r1[${MULTILIB_USEDEP}]
 	)
-	xinerama? ( x11-proto/xineramaproto[${MULTILIB_USEDEP}] )
+	xinerama? ( >=x11-proto/xineramaproto-1.2.1-r1[${MULTILIB_USEDEP}] )
 	>=dev-util/gtk-doc-am-1.20
 	test? (
 		x11-themes/hicolor-icon-theme
