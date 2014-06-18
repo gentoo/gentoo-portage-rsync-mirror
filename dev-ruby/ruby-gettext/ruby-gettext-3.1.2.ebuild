@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-3.1.2.ebuild,v 1.1 2014/05/03 13:02:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-3.1.2.ebuild,v 1.2 2014/06/18 11:06:59 klausman Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ inherit ruby-fakegem
 DESCRIPTION="Ruby GetText Package is Native Language Support Library and Tools modeled after GNU gettext package"
 HOMEPAGE="http://www.yotabanana.com/hiki/ruby-gettext.html"
 
-KEYWORDS="~amd64 ~arm ~hppa ~ia64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64"
 IUSE="doc test"
 SLOT="0"
 LICENSE="Ruby"
