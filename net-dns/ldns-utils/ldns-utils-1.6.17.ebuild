@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.17.ebuild,v 1.1 2014/06/16 06:25:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.17.ebuild,v 1.2 2014/06/18 13:42:57 klausman Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/ldns/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="dane ecdsa examples gost ssl"
 
 DEPEND=">=net-libs/ldns-${PV}[dane?,ecdsa?,gost?,ssl?]

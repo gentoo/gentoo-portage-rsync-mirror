@@ -1,6 +1,13 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.52 2014/06/09 23:26:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.53 2014/06/18 13:52:43 axs Exp $
+
+*libusb-0-r2 (18 Jun 2014)
+
+  18 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +libusb-0-r2.ebuild,
+  -libusb-0-r1.ebuild:
+  fixed freebsd-lib dependency so the pre-EAPI5 ebuild cannot erroneously
+  satisfy gx86-multilib
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> libusb-0-r1.ebuild,
   libusb-1-r1.ebuild:

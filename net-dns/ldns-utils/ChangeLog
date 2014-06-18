@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ldns-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.27 2014/06/16 06:25:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.28 2014/06/18 13:42:57 klausman Exp $
+
+  18 Jun 2014; Tobias Klausmann <klausman@gentoo.org> ldns-utils-1.6.17.ebuild:
+  Keyworded on alpha, bug #441688
 
 *ldns-utils-1.6.17 (16 Jun 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/splint-3.1.2-r1.ebuild,v 1.1 2014/03/10 14:09:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/splint-3.1.2-r1.ebuild,v 1.2 2014/06/18 13:43:06 klausman Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.splint.org/downloads/${P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="
 	sys-devel/flex

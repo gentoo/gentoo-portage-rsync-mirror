@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.44 2014/06/18 12:30:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.45 2014/06/18 13:47:31 jer Exp $
+
+  18 Jun 2014; Jeroen Roovers <jer@gentoo.org>
+  avant-window-navigator-0.4.2.ebuild:
+  dev-util/gtk-doc is needed in src_prepare regardless of USE=doc (bug
+  #513572).
 
   18 Jun 2014; Jeroen Roovers <jer@gentoo.org>
   avant-window-navigator-0.4.2.ebuild:
