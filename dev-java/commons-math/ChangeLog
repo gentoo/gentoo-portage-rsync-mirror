@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-math
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.13 2014/05/24 07:34:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.14 2014/06/18 18:17:48 mrueg Exp $
+
+  18 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -commons-math-2.0.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #199047
