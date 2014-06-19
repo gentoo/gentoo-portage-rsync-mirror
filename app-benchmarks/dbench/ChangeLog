@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/dbench
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.39 2010/11/10 19:03:35 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.40 2014/06/19 14:14:16 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org> -dbench-2.0.ebuild,
+  -dbench-3.04.ebuild, dbench-4.0.ebuild:
+  Respect LDFLAGS wrt bug 335243, drop old.
 
   10 Nov 2010; Patrick Lauer <patrick@gentoo.org> dbench-2.0.ebuild:
   Make repoman happy

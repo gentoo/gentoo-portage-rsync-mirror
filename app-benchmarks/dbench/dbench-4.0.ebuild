@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-4.0.ebuild,v 1.9 2009/05/01 23:03:29 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-4.0.ebuild,v 1.10 2014/06/19 14:14:16 creffett Exp $
+EAPI=5
 
 inherit eutils autotools
 
@@ -15,12 +16,18 @@ IUSE=""
 DEPEND="dev-libs/popt"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${WORKDIR}/${P}"
+src_prepare() {
 	eautoheader
 	eautoconf
-	}
+	sed -i -e \
+		"s:\$(CC) -o:\$(CC) \$(LDFLAGS) -o:" \
+		Makefile.in || die
+	eautoreconf
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}"
+}
 
 src_install() {
 	dobin dbench tbench tbench_srv

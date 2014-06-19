@@ -1,6 +1,7 @@
-DEFINED_PHASES=install postinst unpack
-DEPEND=dev-libs/popt !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=dev-libs/popt !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Popular filesystem benchmark
+EAPI=5
 HOMEPAGE=http://samba.org/ftp/tridge/dbench/
 KEYWORDS=amd64 hppa ppc ppc64 sparc x86
 LICENSE=GPL-2
@@ -8,4 +9,4 @@ RDEPEND=dev-libs/popt
 SLOT=0
 SRC_URI=ftp://ftp.samba.org/pub/tridge/dbench/dbench-4.0.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1e1bd4b5c2d099321600e458cc9b4df4
+_md5_=1250cb370681ca8041a21e70f020e29c
