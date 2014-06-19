@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.38 2014/03/31 20:32:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.39 2014/06/19 11:24:20 klausman Exp $
+
+  19 Jun 2014; Tobias Klausmann <klausman@gentoo.org> paver-1.2.2.ebuild:
+  Keyworded on alpha, bug #454638
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> paver-1.1.1-r1.ebuild,
   paver-1.2.0.ebuild, paver-1.2.1.ebuild, paver-1.2.2.ebuild:
