@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5_beta24.ebuild,v 1.1 2014/04/26 16:26:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.0.ebuild,v 1.1 2014/06/19 21:47:34 idl0r Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_beta/-dev}"
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://haproxy.1wt.eu"
-SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/devel/${MY_P}.tar.gz"
+SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -88,7 +88,7 @@ src_install() {
 	# Don't install useless files
 #	rm examples/build.cfg doc/*gpl.txt
 
-	dodoc CHANGELOG ROADMAP TODO doc/{configuration,haproxy-en}.txt
+	dodoc CHANGELOG ROADMAP doc/{configuration,haproxy-en}.txt
 	doman doc/haproxy.1
 
 	dosbin haproxy-systemd-wrapper

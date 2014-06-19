@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15806 2014/06/19 03:12:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15807 2014/06/19 21:48:41 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -623,10 +623,6 @@ media-gfx/yafaray
 # Masked for testing. Is not compatible with cvsps-2 (bug #450424).
 # But can be used on it's own! Try 'cvsps --fast-export'.
 >=dev-vcs/cvsps-3
-
-# Christian Ruppert <idl0r@gentoo.org> (22 Dec 2012)
-# Experimental
-=net-proxy/haproxy-1.5*
 
 # Sven Wegener <swegener@gentoo.org> (21 Dec 2012)
 # temporary mask for socket location change
