@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.3.0-r1.ebuild,v 1.1 2014/06/15 13:38:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.3.0-r1.ebuild,v 1.2 2014/06/19 08:16:35 mgorny Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/lua-5.1[deprecated,${MULTILIB_USEDEP}]
-	dev-libs/expat[${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-lang/lua-5.1.5-r2[deprecated,${MULTILIB_USEDEP}]
+	>=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 src_prepare() {
 	multilib_copy_sources

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.56 2014/05/26 16:13:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.57 2014/06/19 08:08:10 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -670,8 +670,7 @@ python_newexe() {
 
 	# don't use this at home, just call python_doscript() instead
 	if [[ ${_PYTHON_REWRITE_SHEBANG} ]]; then
-		local _PYTHON_FIX_SHEBANG_QUIET=1
-		python_fix_shebang "${ED%/}/${d}/${newfn}"
+		python_fix_shebang -q "${ED%/}/${d}/${newfn}"
 	fi
 }
 
@@ -935,7 +934,7 @@ python_is_python3() {
 }
 
 # @FUNCTION: python_fix_shebang
-# @USAGE: <path>...
+# @USAGE: [-f|--force] [-q|--quiet] <path>...
 # @DESCRIPTION:
 # Replace the shebang in Python scripts with the current Python
 # implementation (EPYTHON). If a directory is passed, works recursively
@@ -947,12 +946,27 @@ python_is_python3() {
 #
 # Shebangs matching explicitly current Python version will be left
 # unmodified. Shebangs requesting another Python version will be treated
-# as fatal error.
+# as fatal error, unless --force is given.
+#
+# --force causes the function to replace even shebangs that require
+# incompatible Python version. --quiet causes the function not to list
+# modified files verbosely.
 python_fix_shebang() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	[[ ${1} ]] || die "${FUNCNAME}: no paths given"
 	[[ ${EPYTHON} ]] || die "${FUNCNAME}: EPYTHON unset (pkg_setup not called?)"
+
+	local force quiet
+	while [[ ${@} ]]; do
+		case "${1}" in
+			-f|--force) force=1; shift;;
+			-q|--quiet) quiet=1; shift;;
+			--) shift; break;;
+			*) break;;
+		esac
+	done
+
+	[[ ${1} ]] || die "${FUNCNAME}: no paths given"
 
 	local path f
 	for path; do
@@ -961,54 +975,88 @@ python_fix_shebang() {
 		[[ -d ${path} ]] && is_recursive=1
 
 		while IFS= read -r -d '' f; do
-			local shebang=$(head -n 1 "${f}")
-			local error
+			local shebang i
+			local error from
 
-			case "${shebang} " in
-				'#!'*"${EPYTHON} "*)
-					debug-print "${FUNCNAME}: in file ${f#${D}}"
-					debug-print "${FUNCNAME}: shebang matches EPYTHON: ${shebang}"
+			read shebang <"${f}"
 
-					# Nothing to do, move along.
-					any_correct=1
-					;;
-				'#!'*python" "*|'#!'*python[23]" "*)
-					debug-print "${FUNCNAME}: in file ${f#${D}}"
-					debug-print "${FUNCNAME}: rewriting shebang: ${shebang}"
+			# First, check if it's shebang at all...
+			if [[ ${shebang} == '#!'* ]]; then
+				# Match left-to-right in a loop, to avoid matching random
+				# repetitions like 'python2.7 python2'.
+				for i in ${shebang}; do
+					case "${i}" in
+						*"${EPYTHON}")
+							debug-print "${FUNCNAME}: in file ${f#${D}}"
+							debug-print "${FUNCNAME}: shebang matches EPYTHON: ${shebang}"
 
-					# Note: for internal use.
-					if [[ ! ${_PYTHON_FIX_SHEBANG_QUIET} ]]; then
-						einfo "Fixing shebang in ${f#${D}}."
-					fi
+							# Nothing to do, move along.
+							any_correct=1
+							from=${EPYTHON}
+							break
+							;;
+						*python|*python[23])
+							debug-print "${FUNCNAME}: in file ${f#${D}}"
+							debug-print "${FUNCNAME}: rewriting shebang: ${shebang}"
 
-					local from
-					if [[ "${shebang} " == *'python2 '* ]]; then
-						from=python2
-						python_is_python3 "${EPYTHON}" && error=1
-					elif [[ "${shebang} " == *'python3 '* ]]; then
-						from=python3
-						python_is_python3 "${EPYTHON}" || error=1
-					else
-						from=python
-					fi
+							if [[ ${i} == *python2 ]]; then
+								from=python2
+								if [[ ! ${force} ]]; then
+									python_is_python3 "${EPYTHON}" && error=1
+								fi
+							elif [[ ${i} == *python3 ]]; then
+								from=python3
+								if [[ ! ${force} ]]; then
+									python_is_python3 "${EPYTHON}" || error=1
+								fi
+							else
+								from=python
+							fi
+							break
+							;;
+						*python[23].[0123456789]|*pypy|*jython[23].[0123456789])
+							# Explicit mismatch.
+							if [[ ! ${force} ]]; then
+								error=1
+							else
+								case "${i}" in
+									*python[23].[0123456789])
+										from="python[23].[0123456789]";;
+									*pypy)
+										from="pypy";;
+									*jython[23].[0123456789])
+										from="jython[23].[0123456789]";;
+									*)
+										die "${FUNCNAME}: internal error in 2nd pattern match";;
+								esac
+							fi
+							break
+							;;
+					esac
+				done
+			fi
 
-					if [[ ! ${error} ]]; then
-						sed -i -e "1s:${from}:${EPYTHON}:" "${f}" || die
-						any_fixed=1
-					fi
-					;;
-				'#!'*python[23].[0123456789]" "*|'#!'*pypy" "*|'#!'*jython[23].[0123456789]" "*)
-					# Explicit mismatch.
-					error=1
-					;;
-				*)
-					# Non-Python shebang. Allowed in recursive mode,
-					# disallowed when specifying file explicitly.
-					[[ ${is_recursive} ]] || error=1
-					;;
-			esac
+			if [[ ! ${error} && ! ${from} ]]; then
+				# Non-Python shebang. Allowed in recursive mode,
+				# disallowed when specifying file explicitly.
+				[[ ${is_recursive} ]] && continue
+				error=1
+			fi
 
-			if [[ ${error} ]]; then
+			if [[ ! ${quiet} ]]; then
+				einfo "Fixing shebang in ${f#${D}}."
+			fi
+
+			if [[ ! ${error} ]]; then
+				# We either want to match ${from} followed by space
+				# or at end-of-string.
+				if [[ ${shebang} == *${from}" "* ]]; then
+					sed -i -e "1s:${from} :${EPYTHON} :" "${f}" || die
+				else
+					sed -i -e "1s:${from}$:${EPYTHON}:" "${f}" || die
+				fi
+				any_fixed=1
+			else
 				eerror "The file has incompatible shebang:"
 				eerror "  file: ${f#${D}}"
 				eerror "  current shebang: ${shebang}"

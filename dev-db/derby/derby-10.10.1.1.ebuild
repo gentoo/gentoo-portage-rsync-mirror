@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/derby/derby-10.10.1.1.ebuild,v 1.1 2014/03/01 18:57:12 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/derby/derby-10.10.1.1.ebuild,v 1.2 2014/06/19 08:07:14 ercpe Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ LANGS="de es fr hu it ja ko pl pt ru zh"
 
 # see https://issues.apache.org/jira/browse/DERBY-5125
 DEPEND=">=virtual/jdk-1.6
-	<dev-java/javacc-5.0
+	<dev-java/javacc-4.2:0
 	test? ( dev-java/jakarta-oro:2.0 )
 	"
 RDEPEND=">=virtual/jre-1.6

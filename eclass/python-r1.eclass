@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.73 2014/05/26 16:13:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.74 2014/06/19 08:08:10 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -794,7 +794,7 @@ python_replicate_script() {
 				doexe "${files[@]}"
 			)
 
-			python_fix_shebang \
+			python_fix_shebang -q \
 				"${files[@]/*\//${D%/}/${PYTHON_SCRIPTDIR}/}"
 		else
 			local f
@@ -802,7 +802,7 @@ python_replicate_script() {
 				cp -p "${f}" "${f}-${EPYTHON}" || die
 			done
 
-			python_fix_shebang \
+			python_fix_shebang -q \
 				"${files[@]/%/-${EPYTHON}}"
 		fi
 	}

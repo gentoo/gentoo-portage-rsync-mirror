@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1-r3.ebuild,v 1.1 2014/06/15 13:39:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1-r3.ebuild,v 1.2 2014/06/19 08:16:35 mgorny Exp $
 
 EAPI=5
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="debug"
 
-RDEPEND=">=dev-lang/lua-5.1[deprecated,${MULTILIB_USEDEP}]"
+RDEPEND=">=dev-lang/lua-5.1.5-r2[deprecated,${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 S=${WORKDIR}/${PN}-${PV/_/-}
 

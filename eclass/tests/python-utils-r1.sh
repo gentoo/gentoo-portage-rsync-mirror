@@ -30,6 +30,33 @@ test_is() {
 	tend ${?}
 }
 
+test_fix_shebang() {
+	local from=${1}
+	local to=${2}
+	local expect=${3}
+	local args=( "${@:4}" )
+
+	tbegin "python_fix_shebang${args[@]+ ${args[*]}} from ${from} to ${to} (exp: ${expect})"
+
+	echo "${from}" > "${tmpfile}"
+	output=$( EPYTHON=${to} python_fix_shebang "${args[@]}" -q "${tmpfile}" 2>&1 )
+
+	if [[ ${?} != 0 ]]; then
+		if [[ ${expect} != FAIL ]]; then
+			echo "${output}"
+			tend 1
+		else
+			tend 0
+		fi
+	else
+		[[ $(<"${tmpfile}") == ${expect} ]] \
+			|| eerror "${from} -> ${to}: $(<"${tmpfile}") != ${expect}"
+		tend ${?}
+	fi
+}
+
+tmpfile=$(mktemp)
+
 inherit python-utils-r1
 
 test_var EPYTHON python2_7 python2.7
@@ -65,5 +92,49 @@ test_is python_is_python3 python2.7 1
 test_is python_is_python3 python3.2 0
 test_is python_is_python3 jython2.7 1
 test_is python_is_python3 pypy 1
+
+# generic shebangs
+test_fix_shebang '#!/usr/bin/python' python2.7 '#!/usr/bin/python2.7'
+test_fix_shebang '#!/usr/bin/python' python3.4 '#!/usr/bin/python3.4'
+test_fix_shebang '#!/usr/bin/python' pypy '#!/usr/bin/pypy'
+test_fix_shebang '#!/usr/bin/python' jython2.7 '#!/usr/bin/jython2.7'
+
+# python2/python3 matching
+test_fix_shebang '#!/usr/bin/python2' python2.7 '#!/usr/bin/python2.7'
+test_fix_shebang '#!/usr/bin/python3' python2.7 FAIL
+test_fix_shebang '#!/usr/bin/python3' python2.7 '#!/usr/bin/python2.7' --force
+test_fix_shebang '#!/usr/bin/python3' python3.4 '#!/usr/bin/python3.4'
+test_fix_shebang '#!/usr/bin/python2' python3.4 FAIL
+test_fix_shebang '#!/usr/bin/python2' python3.4 '#!/usr/bin/python3.4' --force
+
+# pythonX.Y matching (those mostly test the patterns)
+test_fix_shebang '#!/usr/bin/python2.7' python2.7 '#!/usr/bin/python2.7'
+test_fix_shebang '#!/usr/bin/python2.7' python3.2 FAIL
+test_fix_shebang '#!/usr/bin/python2.7' python3.2 '#!/usr/bin/python3.2' --force
+test_fix_shebang '#!/usr/bin/python3.2' python3.2 '#!/usr/bin/python3.2'
+test_fix_shebang '#!/usr/bin/python3.2' python2.7 FAIL
+test_fix_shebang '#!/usr/bin/python3.2' python2.7 '#!/usr/bin/python2.7' --force
+test_fix_shebang '#!/usr/bin/pypy' pypy '#!/usr/bin/pypy'
+test_fix_shebang '#!/usr/bin/pypy' python2.7 FAIL
+test_fix_shebang '#!/usr/bin/pypy' python2.7 '#!/usr/bin/python2.7' --force
+test_fix_shebang '#!/usr/bin/jython2.7' jython2.7 '#!/usr/bin/jython2.7'
+test_fix_shebang '#!/usr/bin/jython2.7' jython3.2 FAIL
+test_fix_shebang '#!/usr/bin/jython2.7' jython3.2 '#!/usr/bin/jython3.2' --force
+
+# fancy path handling
+test_fix_shebang '#!/mnt/python2/usr/bin/python' python3.4 \
+	'#!/mnt/python2/usr/bin/python3.4'
+test_fix_shebang '#!/mnt/python2/usr/bin/python2' python2.7 \
+	'#!/mnt/python2/usr/bin/python2.7'
+test_fix_shebang '#!/mnt/python2/usr/bin/env python' python2.7 \
+	'#!/mnt/python2/usr/bin/env python2.7'
+test_fix_shebang '#!/mnt/python2/usr/bin/python2 python2' python2.7 \
+	'#!/mnt/python2/usr/bin/python2.7 python2'
+test_fix_shebang '#!/mnt/python2/usr/bin/python3 python2' python2.7 FAIL
+test_fix_shebang '#!/mnt/python2/usr/bin/python3 python2' python2.7 \
+	'#!/mnt/python2/usr/bin/python2.7 python2' --force
+test_fix_shebang '#!/usr/bin/foo' python2.7 FAIL
+
+rm "${tmpfile}"
 
 texit
