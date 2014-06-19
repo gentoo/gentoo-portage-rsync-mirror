@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lchown
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/ChangeLog,v 1.7 2013/07/11 20:46:46 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/ChangeLog,v 1.8 2014/06/19 12:24:01 klausman Exp $
+
+  19 Jun 2014; Tobias Klausmann <klausman@gentoo.org> Lchown-1.10.0.ebuild:
+  Keyworded on alpha, bug #467160
 
   11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> Lchown-1.10.0.ebuild:
   ppc, ppc64 keywords added, bug 467160
