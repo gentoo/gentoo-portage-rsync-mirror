@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.625 2014/06/17 14:14:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.626 2014/06/19 19:24:06 jer Exp $
+
+  19 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.0_rc2.ebuild,
+  +files/wireshark-1.12.0_rc2-va_list.patch:
+  Add va_list patch by Steev Klimaszewski (bug #513860).
 
   17 Jun 2014; Tobias Klausmann <klausman@gentoo.org> wireshark-1.8.15.ebuild:
   Stable on alpha, bug #513094

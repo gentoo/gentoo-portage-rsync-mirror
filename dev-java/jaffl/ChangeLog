@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaffl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.9 2013/07/23 17:23:34 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.10 2014/06/19 19:21:36 mrueg Exp $
+
+  19 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jaffl-0.3.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   23 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> jaffl-0.3.ebuild,
   jaffl-0.5.1.ebuild, jaffl-0.5.11.ebuild:

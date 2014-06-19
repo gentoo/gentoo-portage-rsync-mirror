@@ -1,0 +1,47 @@
+From 2cec3c824fdea93efd74c7f5fd85d04f60fe9863 Mon Sep 17 00:00:00 2001
+From: Steev Klimaszewski <steev@gentoo.org>
+Date: Thu, 19 Jun 2014 09:08:22 -0500
+Subject: [PATCH] va_list can't be NULL on ARM.
+
+Signed-off-by: Steev Klimaszewski <steev@gentoo.org>
+---
+ epan/expert.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/epan/expert.c b/epan/expert.c
+index 46be838..2adf01f 100644
+--- a/epan/expert.c
++++ b/epan/expert.c
+@@ -384,12 +384,13 @@ expert_set_info_vformat(packet_info *pinfo, proto_item *pi, int group, int sever
+ void
+ expert_add_info(packet_info *pinfo, proto_item *pi, expert_field *expindex)
+ {
++	va_list unused;
+ 	expert_field_info* eiinfo;
+ 
+ 	/* Look up the item */
+ 	EXPERT_REGISTRAR_GET_NTH(expindex->ei, eiinfo);
+ 
+-	expert_set_info_vformat(pinfo, pi, eiinfo->group, eiinfo->severity, *eiinfo->hf_info.p_id, FALSE, eiinfo->summary, NULL);
++	expert_set_info_vformat(pinfo, pi, eiinfo->group, eiinfo->severity, *eiinfo->hf_info.p_id, FALSE, eiinfo->summary, unused);
+ }
+ 
+ void
+@@ -412,12 +413,13 @@ proto_tree_add_expert(proto_tree *tree, packet_info *pinfo, expert_field* expind
+ {
+ 	expert_field_info* eiinfo;
+ 	proto_item *ti;
++	va_list unused;
+ 
+ 	/* Look up the item */
+ 	EXPERT_REGISTRAR_GET_NTH(expindex->ei, eiinfo);
+ 
+ 	ti = proto_tree_add_text(tree, tvb, start, length, "%s", eiinfo->summary);
+-	expert_set_info_vformat(pinfo, ti, eiinfo->group, eiinfo->severity, *eiinfo->hf_info.p_id, FALSE, eiinfo->summary, NULL);
++	expert_set_info_vformat(pinfo, ti, eiinfo->group, eiinfo->severity, *eiinfo->hf_info.p_id, FALSE, eiinfo->summary, unused);
+ 	return ti;
+ }
+ 
+-- 
+1.8.5.5
+

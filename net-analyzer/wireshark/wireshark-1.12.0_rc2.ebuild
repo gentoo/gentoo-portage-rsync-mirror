@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2.ebuild,v 1.1 2014/06/14 00:43:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2.ebuild,v 1.2 2014/06/19 19:24:06 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -80,7 +80,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
-		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch
+		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
+		"${FILESDIR}"/${PN}-1.12.0_rc2-va_list.patch
 
 	# Qt5 support is broken since the build system does not determine
 	# properly which `moc' it ought to use

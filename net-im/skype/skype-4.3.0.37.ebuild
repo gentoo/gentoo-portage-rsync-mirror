@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.1 2014/06/18 20:58:03 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37.ebuild,v 1.2 2014/06/19 19:20:13 jauhien Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.${PN}.com/linux/${P}.tar.bz2"
 LICENSE="${PN}-4.0.0.7-copyright ${PN}-4.0.0.7-third-party_attributions.txt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pax_kernel selinux"
+IUSE="pax_kernel +pulseaudio selinux"
 
 QA_PREBUILT=opt/bin/${PN}
 RESTRICT="mirror strip" #299368
@@ -57,6 +57,7 @@ RDEPEND="
 		dev-qt/qtgui:4[accessibility]
 		dev-qt/qtwebkit:4
 	)
+	pulseaudio? ( media-sound/pulseaudio )
 	selinux? ( sec-policy/selinux-skype )"
 
 src_prepare() {
@@ -118,6 +119,12 @@ pkg_postinst() {
 	if use amd64; then
 		elog "You can install app-emulation/emul-linux-x86-medialibs package for the 32bit"
 		elog "libraries from the media-libs/libv4l package."
+	fi
+
+	if ! use pulseaudio; then
+		ewarn "ALSA support was removed from Skype"
+		ewarn "consider installing media-sound/pulseaudio"
+		ewarn "otherwise sound will not work for you."
 	fi
 }
 

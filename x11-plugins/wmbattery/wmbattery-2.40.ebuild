@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.40.ebuild,v 1.4 2012/07/08 15:24:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.40.ebuild,v 1.5 2014/06/19 19:18:31 ssuominen Exp $
 
-EAPI=3
+EAPI=5
 inherit autotools
 
 DESCRIPTION="A dockable app to report APM, ACPI, or SPIC battery status"
@@ -21,6 +21,8 @@ DEPEND="sys-apps/apmd
 
 S=${WORKDIR}/${PN}
 
+DOCS=( README TODO )
+
 src_prepare() {
 	sed -i \
 		-e '/^icondir/s:icons:pixmaps:' \
@@ -28,9 +30,4 @@ src_prepare() {
 		autoconf/makeinfo.in || die
 
 	eautoconf
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README TODO
 }
