@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.657 2014/06/15 14:18:24 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.659 2014/06/19 18:11:22 maekke Exp $
+
+  19 Jun 2014; Markus Meier <maekke@gentoo.org> ruby-2.0.0_p481.ebuild:
+  arm stable, bug #512904
+
+  19 Jun 2014; Markus Meier <maekke@gentoo.org> ruby-1.9.3_p547.ebuild:
+  arm stable, bug #512904
 
   15 Jun 2014; Akinori Hattori <hattya@gentoo.org> ruby-1.9.3_p547.ebuild,
   ruby-2.0.0_p481.ebuild:

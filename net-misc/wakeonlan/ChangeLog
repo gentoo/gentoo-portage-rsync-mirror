@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.27 2014/05/26 15:05:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.28 2014/06/19 18:06:30 maekke Exp $
+
+  19 Jun 2014; Markus Meier <maekke@gentoo.org> wakeonlan-0.41-r2.ebuild:
+  arm stable, bug #511544
 
 *wakeonlan-0.41-r2 (26 May 2014)
 
