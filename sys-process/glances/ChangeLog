@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.17 2014/05/26 03:49:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.18 2014/06/19 02:56:19 idella4 Exp $
+
+*glances-2.0 (19 Jun 2014)
+
+  19 Jun 2014; Ian Delaney <idella4@gentoo.org> +glances-2.0.ebuild,
+  glances-1.7.7.ebuild, metadata.xml:
+  bump; add IUSE flags for optional extras, upgrade deps accordingly
 
 *glances-1.7.7 (26 May 2014)
 
