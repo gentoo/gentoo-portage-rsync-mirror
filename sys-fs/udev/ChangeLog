@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1049 2014/06/18 20:49:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1050 2014/06/19 21:11:53 ssuominen Exp $
+
+  19 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -udev-213.ebuild:
+  old
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> udev-208-r1.ebuild,
   udev-212-r1.ebuild, udev-213.ebuild, udev-214.ebuild, udev-9999.ebuild:
