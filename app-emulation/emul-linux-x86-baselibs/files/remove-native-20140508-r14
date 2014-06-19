@@ -105,6 +105,10 @@ usr/lib32/pkgconfig/gthread-2.0.pc
 usr/lib32/pkgconfig/gio-unix-2.0.pc
 usr/lib32/pkgconfig/gmodule-export-2.0.pc
 usr/lib32/pkgconfig/gmodule-no-export-2.0.pc
+usr/lib32/liblcms.so
+usr/lib32/liblcms.so.1
+usr/lib32/liblcms.so.1.0.19
+usr/lib32/pkgconfig/lcms.pc
 usr/lib32/liblcms2.so
 usr/lib32/liblcms2.so.2
 usr/lib32/liblcms2.so.2.0.5

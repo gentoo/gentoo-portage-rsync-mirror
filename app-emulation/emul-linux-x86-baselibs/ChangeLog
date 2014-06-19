@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.226 2014/06/18 19:01:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.227 2014/06/19 03:12:30 tetromino Exp $
+
+*emul-linux-x86-baselibs-20140508-r14 (19 Jun 2014)
+*emul-linux-x86-baselibs-20140508-r13 (19 Jun 2014)
+*emul-linux-x86-baselibs-20140508-r12 (19 Jun 2014)
+
+  19 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -emul-linux-x86-baselibs-20140508-r10.ebuild,
+  -emul-linux-x86-baselibs-20140508-r11.ebuild,
+  +emul-linux-x86-baselibs-20140508-r12.ebuild,
+  +emul-linux-x86-baselibs-20140508-r13.ebuild,
+  +emul-linux-x86-baselibs-20140508-r14.ebuild,
+  -files/remove-native-20140508-r6, -files/remove-native-20140508-r7,
+  -files/remove-native-20140508-r8, -files/remove-native-20140508-r10,
+  -files/remove-native-20140508-r11, +files/remove-native-20140508-r12,
+  +files/remove-native-20140508-r13, +files/remove-native-20140508-r14:
+  Fix file collision with multilib lcms:0; this requires moving masked -r10 and
+  -r11 to -r13 and -r14 respectively.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-baselibs-20131008-r6.ebuild,

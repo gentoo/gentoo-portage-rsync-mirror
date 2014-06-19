@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6-r1.ebuild,v 1.3 2014/06/14 08:23:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.6-r1.ebuild,v 1.4 2014/06/19 03:15:41 tetromino Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.5"
@@ -20,7 +20,7 @@ IUSE="debug"
 
 RDEPEND="
 	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-baselibs-20140508-r9
+		!<=app-emulation/emul-linux-x86-baselibs-20140508-r12
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 

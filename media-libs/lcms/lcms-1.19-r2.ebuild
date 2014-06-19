@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19-r2.ebuild,v 1.2 2014/06/18 19:36:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19-r2.ebuild,v 1.3 2014/06/19 03:13:12 tetromino Exp $
 
 EAPI="5"
 
@@ -25,6 +25,10 @@ RDEPEND="
 	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	python? ( ${PYTHON_DEPS} )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140508-r11
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)
 "
 DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-1.3.31 )

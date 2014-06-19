@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.364 2014/06/18 19:18:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.365 2014/06/19 03:17:50 tetromino Exp $
+
+  19 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> nss-3.16-r1.ebuild:
+  Update emul-linux-x86-baselibs blocker revision.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> nss-3.16-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
