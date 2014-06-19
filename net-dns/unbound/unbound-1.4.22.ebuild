@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.22.ebuild,v 1.1 2014/06/09 08:04:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.22.ebuild,v 1.2 2014/06/19 08:46:05 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -22,10 +22,10 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 # the executables. MULTILIB_USEDEP may be dropped once build system
 # is fixed.
 
-RDEPEND="dev-libs/expat[${MULTILIB_USEDEP}]
-	dev-libs/libevent[${MULTILIB_USEDEP}]
-	>=dev-libs/openssl-0.9.8[${MULTILIB_USEDEP}]
-	>=net-libs/ldns-1.6.13[ecdsa,ssl,gost?,${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
+	>=dev-libs/libevent-2.0.21[${MULTILIB_USEDEP}]
+	>=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}]
+	>=net-libs/ldns-1.6.16-r1[ecdsa,ssl,gost?,${MULTILIB_USEDEP}]
 	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-bind )"
 

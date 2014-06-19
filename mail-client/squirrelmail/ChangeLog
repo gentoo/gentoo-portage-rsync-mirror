@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.171 2014/04/26 12:04:48 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.172 2014/06/19 08:50:27 patrick Exp $
+
+  19 Jun 2014; Patrick Lauer <patrick@gentoo.org> squirrelmail-1.4.22.ebuild:
+  Drop alpha keyword to follow mail-filter/amavisd-new
 
 *squirrelmail-1.4.23_pre20140426 (26 Apr 2014)
 

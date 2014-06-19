@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.54 2014/06/07 21:32:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.55 2014/06/19 08:54:02 mgorny Exp $
+
+  19 Jun 2014; Michał Górny <mgorny@gentoo.org> ffmpeg-9-r1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
 *ffmpeg-9-r1 (07 Jun 2014)
 
