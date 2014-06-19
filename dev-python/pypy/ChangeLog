@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.66 2014/05/18 14:24:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.67 2014/06/18 23:37:41 idella4 Exp $
+
+*pypy-2.3.1 (18 Jun 2014)
+
+  18 Jun 2014; Ian Delaney <idella4@gentoo.org> +pypy-2.3.1.ebuild:
+  bump; add shared lib libpypy-c, prompt and initial patch by Y. Taraday in bug
+  #513014, closes said bug
 
   18 May 2014; Mike Gilbert <floppym@gentoo.org> pypy-2.3.ebuild:
   Remove cffi temporary files during installation.
