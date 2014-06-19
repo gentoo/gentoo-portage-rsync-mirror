@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1291 2014/06/19 08:08:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1292 2014/06/19 09:28:09 mgorny Exp $
+
+  19 Jun 2014; Michał Górny <mgorny@gentoo.org> gstreamer.eclass:
+  Bump gstreamer deps to satisfy multilib.
 
   19 Jun 2014; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
   python-utils-r1.eclass, tests/python-utils-r1.sh:

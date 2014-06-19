@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gstreamer.eclass,v 1.1 2014/06/10 18:37:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gstreamer.eclass,v 1.2 2014/06/19 09:28:09 mgorny Exp $
 
 # @ECLASS: gstreamer.eclass
 # @MAINTAINER:
@@ -82,20 +82,20 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${GST_ORG_MODULE}/${GST_ORG_MODULE
 
 LICENSE="GPL-2"
 case ${GST_ORG_PVP} in
-	0.10) SLOT="0.10" ;;
-	1.*) SLOT="1.0" ;;
+	0.10) SLOT="0.10"; GST_MIN_PV="0.10.36-r2" ;;
+	1.*) SLOT="1.0"; GST_MIN_PV="1.2.4-r1" ;;
 	*) die "Unkown gstreamer release."
 esac
 
 S="${WORKDIR}/${GST_ORG_MODULE}-${PV}"
 
 RDEPEND="
-	dev-libs/glib:2[${MULTILIB_USEDEP}]
-	media-libs/gstreamer:${SLOT}[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=media-libs/gstreamer-${GST_MIN_PV}:${SLOT}[${MULTILIB_USEDEP}]
 "
 DEPEND="
 	>=sys-apps/sed-4
-	virtual/pkgconfig[${MULTILIB_USEDEP}]
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 # Export common multilib phases.

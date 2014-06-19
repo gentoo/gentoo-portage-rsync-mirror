@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508-r6.ebuild,v 1.4 2014/06/18 19:02:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20140508-r6.ebuild,v 1.5 2014/06/19 09:03:03 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -70,7 +70,7 @@ RDEPEND="${RDEPEND}
 				>=media-video/libav-9.13-r1[abi_x86_32(-)]
 				>=media-libs/libpostproc-10.20140517-r1[abi_x86_32(-)]
 			)
-			>=media-video/ffmpeg-2.2.3-r1[abi_x86_32(-)]
+			>=media-video/ffmpeg-1.2.6-r1[abi_x86_32(-)]
 		)
 		>=media-video/mjpegtools-2.1.0-r2[abi_x86_32(-)]
 		>=media-libs/gstreamer-0.10.36-r2:0.10[abi_x86_32(-)]
