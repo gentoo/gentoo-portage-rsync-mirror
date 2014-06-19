@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.7 2014/06/19 12:54:43 creffett Exp $
-EAPI=5
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.8 2014/06/19 17:14:01 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils games
 
-DESCRIPTION="Micropolis - free version of the well known city building simulation"
+DESCRIPTION="Free version of the well-known city building simulation"
 HOMEPAGE="http://www.donhopkins.com/home/micropolis/"
 SRC_URI="http://www.donhopkins.com/home/micropolis/${PN}-activity-source.tgz
 	http://rmdir.de/~michael/${PN}_git.patch"
@@ -22,9 +22,7 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	sys-devel/bison"
 
-S="${WORKDIR}/${PN}-activity/"
-
-dir="${GAMES_DATADIR}/${PN}"
+S=${WORKDIR}/${PN}-activity/
 
 src_unpack() {
 	unpack ${PN}-activity-source.tgz
@@ -39,14 +37,16 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C src LDFLAGS="${LDFLAGS}" || die
+	emake -C src LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
+	local dir=${GAMES_DATADIR}/${PN}
+
 	exeinto "${dir}/res"
-	doexe src/sim/sim || die
+	doexe src/sim/sim
 	insinto "${dir}"
-	doins -r activity cities images manual res || die
+	doins -r activity cities images manual res
 
 	games_make_wrapper micropolis res/sim "${dir}"
 	doicon Micropolis.png

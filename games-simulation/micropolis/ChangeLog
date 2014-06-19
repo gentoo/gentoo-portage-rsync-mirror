@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/micropolis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.5 2014/06/19 12:54:43 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.6 2014/06/19 17:14:01 mr_bones_ Exp $
+
+  19 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> micropolis-1.0.ebuild:
+  tidy
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> micropolis-1.0.ebuild:
   [QA] Respect LDFLAGS wrt bug 335095, credit to Christophe Lefebvre
