@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.417 2014/06/14 09:55:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.419 2014/06/19 13:39:37 blueness Exp $
+
+  19 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  -files/tor-0.2.5.4_alpha-fix-disable-buf-freelist.patch,
+  -tor-0.2.5.4_alpha-r1.ebuild:
+  Remove older alpha
+
+*tor-0.2.5.5_alpha (19 Jun 2014)
+
+  19 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.5.5_alpha.ebuild:
+  Version bump alpha
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> tor-0.2.4.22.ebuild:
   x86 stable wrt bug #510564

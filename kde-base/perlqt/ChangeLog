@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.149 2014/06/19 13:01:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.150 2014/06/19 13:32:51 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org> -perlqt-4.13.1.ebuild:
+  Remove KDE SC 4.13.1
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -perlqt-4.13.0.ebuild:
   Remove KDE SC 4.13.0

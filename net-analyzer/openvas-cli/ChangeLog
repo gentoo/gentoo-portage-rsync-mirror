@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/openvas-cli
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/ChangeLog,v 1.4 2013/09/15 09:37:36 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/ChangeLog,v 1.5 2014/06/19 13:38:59 hanno Exp $
+
+*openvas-cli-1.3.0 (19 Jun 2014)
+
+  19 Jun 2014; Hanno Boeck <hanno@gentoo.org> +openvas-cli-1.3.0.ebuild:
+  Bump.
 
   15 Sep 2013; Markus Meier <maekke@gentoo.org> openvas-cli-1.2.0.ebuild:
   add ~arm, bug #389453

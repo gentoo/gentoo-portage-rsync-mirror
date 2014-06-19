@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dolphin-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.158 2014/06/19 13:00:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.159 2014/06/19 13:32:01 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org>
+  -dolphin-plugins-4.13.1.ebuild:
+  Remove KDE SC 4.13.1
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org>
   -dolphin-plugins-4.13.0.ebuild:

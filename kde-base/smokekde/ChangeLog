@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokekde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.133 2014/06/19 13:02:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.134 2014/06/19 13:32:53 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org> -smokekde-4.13.1.ebuild:
+  Remove KDE SC 4.13.1
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -smokekde-4.13.0.ebuild:
   Remove KDE SC 4.13.0
