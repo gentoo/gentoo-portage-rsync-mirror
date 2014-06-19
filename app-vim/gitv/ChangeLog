@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gitv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.7 2014/06/09 18:09:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.8 2014/06/19 05:43:03 radhermit Exp $
+
+*gitv-9999 (19 Jun 2014)
+
+  19 Jun 2014; Tim Harder <radhermit@gentoo.org> +gitv-9999.ebuild:
+  Add live ebuild.
 
 *gitv-1.2 (09 Jun 2014)
 
