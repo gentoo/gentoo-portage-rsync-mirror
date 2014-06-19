@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/nepomuk-widgets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-widgets/ChangeLog,v 1.77 2014/06/15 16:56:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-widgets/ChangeLog,v 1.78 2014/06/19 13:01:57 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org>
+  -nepomuk-widgets-4.13.0.ebuild:
+  Remove KDE SC 4.13.0
 
 *nepomuk-widgets-4.13.2 (15 Jun 2014)
 

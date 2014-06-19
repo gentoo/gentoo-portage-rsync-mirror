@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.313 2014/06/15 16:56:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.314 2014/06/19 13:01:26 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org> -kjots-4.13.0.ebuild:
+  Remove KDE SC 4.13.0
 
 *kjots-4.13.2 (15 Jun 2014)
 

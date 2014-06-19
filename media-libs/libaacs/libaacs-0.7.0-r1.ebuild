@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/libaacs-0.7.0-r1.ebuild,v 1.3 2014/06/18 19:37:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/libaacs-0.7.0-r1.ebuild,v 1.4 2014/06/19 13:05:44 mgorny Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.videolan.org/pub/videolan/libaacs/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd"
+KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}]

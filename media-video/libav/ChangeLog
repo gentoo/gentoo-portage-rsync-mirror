@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.193 2014/06/18 21:32:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.194 2014/06/19 13:14:57 mgorny Exp $
+
+  19 Jun 2014; Michał Górny <mgorny@gentoo.org> libav-10.1-r1.ebuild,
+  libav-10.9999.ebuild, libav-9.13-r1.ebuild, libav-9.9999.ebuild,
+  libav-9999.ebuild:
+  Fix multilib dependencies to use safe versions, bug #513718.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> -libav-0.8.9-r1.ebuild,
   -libav-9.10-r1.ebuild:

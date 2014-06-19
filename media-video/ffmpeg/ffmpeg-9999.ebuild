@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.157 2014/06/16 22:00:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.158 2014/06/19 13:14:49 mgorny Exp $
 
 EAPI="5"
 
@@ -74,84 +74,84 @@ for i in ${FFTOOLS}; do
 done
 
 RDEPEND="
-	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	amr? ( media-libs/opencore-amr[${MULTILIB_USEDEP}] )
-	bluray? ( media-libs/libbluray[${MULTILIB_USEDEP}] )
-	bzip2? ( app-arch/bzip2[${MULTILIB_USEDEP}] )
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
+	amr? ( >=media-libs/opencore-amr-0.1.3-r1[${MULTILIB_USEDEP}] )
+	bluray? ( >=media-libs/libbluray-0.3.0-r1[${MULTILIB_USEDEP}] )
+	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
 	cdio? (
 		|| (
-			dev-libs/libcdio-paranoia[${MULTILIB_USEDEP}]
+			>=dev-libs/libcdio-paranoia-0.90_p1-r1[${MULTILIB_USEDEP}]
 			<dev-libs/libcdio-0.90[-minimal,${MULTILIB_USEDEP}]
 		)
 	)
-	celt? ( >=media-libs/celt-0.11.1[${MULTILIB_USEDEP}] )
+	celt? ( >=media-libs/celt-0.11.1-r1[${MULTILIB_USEDEP}] )
 	encode? (
-		aac? ( media-libs/vo-aacenc[${MULTILIB_USEDEP}] )
-		aacplus? ( media-libs/libaacplus[${MULTILIB_USEDEP}] )
-		amrenc? ( media-libs/vo-amrwbenc[${MULTILIB_USEDEP}] )
-		faac? ( media-libs/faac[${MULTILIB_USEDEP}] )
-		mp3? ( >=media-sound/lame-3.98.3[${MULTILIB_USEDEP}] )
+		aac? ( >=media-libs/vo-aacenc-0.1.3[${MULTILIB_USEDEP}] )
+		aacplus? ( >=media-libs/libaacplus-2.0.2-r1[${MULTILIB_USEDEP}] )
+		amrenc? ( >=media-libs/vo-amrwbenc-0.1.2-r1[${MULTILIB_USEDEP}] )
+		faac? ( >=media-libs/faac-1.28-r3[${MULTILIB_USEDEP}] )
+		mp3? ( >=media-sound/lame-3.99.5-r1[${MULTILIB_USEDEP}] )
 		theora? (
 			>=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}]
-			media-libs/libogg[${MULTILIB_USEDEP}]
+			>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
 		)
-		twolame? ( media-sound/twolame[${MULTILIB_USEDEP}] )
-		wavpack? ( media-sound/wavpack[${MULTILIB_USEDEP}] )
-		webp? ( media-libs/libwebp[${MULTILIB_USEDEP}] )
-		x264? ( >=media-libs/x264-0.0.20111017:=[${MULTILIB_USEDEP}] )
-		x265? ( >=media-libs/x265-0.9:=[${MULTILIB_USEDEP}] )
-		xvid? ( >=media-libs/xvid-1.1.0[${MULTILIB_USEDEP}] )
+		twolame? ( >=media-sound/twolame-0.3.13-r1[${MULTILIB_USEDEP}] )
+		wavpack? ( >=media-sound/wavpack-4.60.1-r1[${MULTILIB_USEDEP}] )
+		webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )
+		x264? ( >=media-libs/x264-0.0.20130506:=[${MULTILIB_USEDEP}] )
+		x265? ( >=media-libs/x265-1.0:=[${MULTILIB_USEDEP}] )
+		xvid? ( >=media-libs/xvid-1.3.2-r1[${MULTILIB_USEDEP}] )
 	)
 	fdk? ( >=media-libs/fdk-aac-0.1.3[${MULTILIB_USEDEP}] )
-	flite? ( app-accessibility/flite[${MULTILIB_USEDEP}] )
-	fontconfig? ( media-libs/fontconfig[${MULTILIB_USEDEP}] )
+	flite? ( >=app-accessibility/flite-1.4-r4[${MULTILIB_USEDEP}] )
+	fontconfig? ( >=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}] )
 	frei0r? ( media-plugins/frei0r-plugins )
-	gme? ( media-libs/game-music-emu[${MULTILIB_USEDEP}] )
-	gnutls? ( >=net-libs/gnutls-2.12.16[${MULTILIB_USEDEP}] )
-	gsm? ( >=media-sound/gsm-1.0.12-r1[${MULTILIB_USEDEP}] )
-	iconv? ( virtual/libiconv[${MULTILIB_USEDEP}] )
+	gme? ( >=media-libs/game-music-emu-0.6.0[${MULTILIB_USEDEP}] )
+	gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] )
+	gsm? ( >=media-sound/gsm-1.0.13-r1[${MULTILIB_USEDEP}] )
+	iconv? ( >=virtual/libiconv-0-r1[${MULTILIB_USEDEP}] )
 	iec61883? (
-		media-libs/libiec61883[${MULTILIB_USEDEP}]
-		sys-libs/libraw1394[${MULTILIB_USEDEP}]
-		sys-libs/libavc1394[${MULTILIB_USEDEP}]
+		>=media-libs/libiec61883-1.2.0-r1[${MULTILIB_USEDEP}]
+		>=sys-libs/libraw1394-2.1.0-r1[${MULTILIB_USEDEP}]
+		>=sys-libs/libavc1394-0.5.4-r1[${MULTILIB_USEDEP}]
 	)
 	ieee1394? (
-		media-libs/libdc1394[${MULTILIB_USEDEP}]
-		sys-libs/libraw1394[${MULTILIB_USEDEP}]
+		>=media-libs/libdc1394-2.2.1[${MULTILIB_USEDEP}]
+		>=sys-libs/libraw1394-2.1.0-r1[${MULTILIB_USEDEP}]
 	)
-	jack? ( media-sound/jack-audio-connection-kit[${MULTILIB_USEDEP}] )
-	jpeg2k? ( >=media-libs/openjpeg-1.3-r2:0[${MULTILIB_USEDEP}] )
-	libass? ( media-libs/libass[${MULTILIB_USEDEP}] )
-	libcaca? ( media-libs/libcaca[${MULTILIB_USEDEP}] )
-	libsoxr? ( media-libs/soxr[${MULTILIB_USEDEP}] )
-	libv4l? ( media-libs/libv4l[${MULTILIB_USEDEP}] )
-	modplug? ( media-libs/libmodplug[${MULTILIB_USEDEP}] )
-	openal? ( >=media-libs/openal-1.1[${MULTILIB_USEDEP}] )
-	opengl? ( virtual/opengl[${MULTILIB_USEDEP}] )
-	openssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
-	opus? ( media-libs/opus[${MULTILIB_USEDEP}] )
-	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
+	jpeg2k? ( >=media-libs/openjpeg-1.5.0:0[${MULTILIB_USEDEP}] )
+	libass? ( >=media-libs/libass-0.10.2[${MULTILIB_USEDEP}] )
+	libcaca? ( >=media-libs/libcaca-0.99_beta18-r1[${MULTILIB_USEDEP}] )
+	libsoxr? ( >=media-libs/soxr-0.1.0[${MULTILIB_USEDEP}] )
+	libv4l? ( >=media-libs/libv4l-0.9.5[${MULTILIB_USEDEP}] )
+	modplug? ( >=media-libs/libmodplug-0.8.8.4-r1[${MULTILIB_USEDEP}] )
+	openal? ( >=media-libs/openal-1.15.1[${MULTILIB_USEDEP}] )
+	opengl? ( >=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}] )
+	openssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
+	opus? ( >=media-libs/opus-1.0.2-r2[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
 	quvi? ( media-libs/libquvi:0.4 )
-	rtmp? ( >=media-video/rtmpdump-2.2f[${MULTILIB_USEDEP}] )
-	sdl? ( >=media-libs/libsdl-1.2.13-r1[sound,video,${MULTILIB_USEDEP}] )
-	schroedinger? ( media-libs/schroedinger[${MULTILIB_USEDEP}] )
-	speex? ( >=media-libs/speex-1.2_beta3[${MULTILIB_USEDEP}] )
-	ssh? ( net-libs/libssh[${MULTILIB_USEDEP}] )
-	truetype? ( media-libs/freetype:2[${MULTILIB_USEDEP}] )
-	vaapi? ( >=x11-libs/libva-0.32[${MULTILIB_USEDEP}] )
-	vdpau? ( x11-libs/libvdpau[${MULTILIB_USEDEP}] )
+	rtmp? ( >=media-video/rtmpdump-2.4_p20131018[${MULTILIB_USEDEP}] )
+	sdl? ( >=media-libs/libsdl-1.2.15-r4[sound,video,${MULTILIB_USEDEP}] )
+	schroedinger? ( >=media-libs/schroedinger-1.0.11-r1[${MULTILIB_USEDEP}] )
+	speex? ( >=media-libs/speex-1.2_rc1-r1[${MULTILIB_USEDEP}] )
+	ssh? ( >=net-libs/libssh-0.5.5[${MULTILIB_USEDEP}] )
+	truetype? ( >=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}] )
+	vaapi? ( >=x11-libs/libva-1.2.1-r1[${MULTILIB_USEDEP}] )
+	vdpau? ( >=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}] )
 	vorbis? (
-		media-libs/libvorbis[${MULTILIB_USEDEP}]
-		media-libs/libogg[${MULTILIB_USEDEP}]
+		>=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}]
+		>=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}]
 	)
-	vpx? ( >=media-libs/libvpx-0.9.6[${MULTILIB_USEDEP}] )
+	vpx? ( >=media-libs/libvpx-1.2.0_pre20130625[${MULTILIB_USEDEP}] )
 	X? (
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libXfixes[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXfixes-5.0.1[${MULTILIB_USEDEP}]
 	)
-	zlib? ( sys-libs/zlib[${MULTILIB_USEDEP}] )
-	zvbi? ( media-libs/zvbi[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
+	zvbi? ( >=media-libs/zvbi-0.2.35[${MULTILIB_USEDEP}] )
 	!media-video/qt-faststart
 	!media-libs/libpostproc
 "
@@ -159,16 +159,16 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	doc? ( app-text/texi2html )
-	fontconfig? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
-	gnutls? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
-	ieee1394? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
-	ladspa? ( media-libs/ladspa-sdk[${MULTILIB_USEDEP}] )
-	libv4l? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
+	fontconfig? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
+	gnutls? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
+	ieee1394? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
+	ladspa? ( >=media-libs/ladspa-sdk-1.13-r2[${MULTILIB_USEDEP}] )
+	libv4l? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	mmx? ( >=dev-lang/yasm-1.2 )
-	rtmp? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
-	schroedinger? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
+	rtmp? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
+	schroedinger? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	test? ( net-misc/wget )
-	truetype? ( virtual/pkgconfig[${MULTILIB_USEDEP}] )
+	truetype? ( >=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}] )
 	v4l? ( sys-kernel/linux-headers )
 "
 

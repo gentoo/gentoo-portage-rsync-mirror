@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ntl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.24 2014/06/16 21:54:20 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ntl/ChangeLog,v 1.25 2014/06/19 13:08:44 jauhien Exp $
+
+  19 Jun 2014; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/ntl-5.5.2-shared-r1.patch:
+  fix bug #513660
 
 *ntl-6.1.0 (16 Jun 2014)
 

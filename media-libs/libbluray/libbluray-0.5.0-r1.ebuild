@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.5.0-r1.ebuild,v 1.4 2014/06/04 22:45:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.5.0-r1.ebuild,v 1.5 2014/06/19 13:08:37 mgorny Exp $
 
 EAPI=5
 
@@ -16,12 +16,12 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="aacs java static-libs +truetype utils +xml"
 
 COMMON_DEPEND="
-	xml? ( dev-libs/libxml2[${MULTILIB_USEDEP}] )
-	truetype? ( media-libs/freetype:2[${MULTILIB_USEDEP}] )
+	xml? ( >=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}] )
+	truetype? ( >=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}] )
 "
 RDEPEND="
 	${COMMON_DEPEND}
-	aacs? ( media-libs/libaacs[${MULTILIB_USEDEP}] )
+	aacs? ( >=media-libs/libaacs-0.6.0[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.6 )
 "
 DEPEND="
