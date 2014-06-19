@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.166 2014/06/18 19:15:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.167 2014/06/19 10:51:43 ssuominen Exp $
+
+*libusb-1.0.19 (19 Jun 2014)
+
+  19 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +libusb-1.0.19.ebuild:
+  Version bump.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libusb-1.0.18.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
