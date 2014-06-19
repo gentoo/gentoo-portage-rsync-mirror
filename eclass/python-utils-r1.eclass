@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.57 2014/06/19 08:08:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.58 2014/06/19 15:10:55 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -976,7 +976,7 @@ python_fix_shebang() {
 
 		while IFS= read -r -d '' f; do
 			local shebang i
-			local error from
+			local error= from=
 
 			read shebang <"${f}"
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.1 2014/03/01 13:33:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.2 2014/06/19 15:12:13 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 GENTOO_DEPEND_ON_PERL="no"
-inherit eutils cmake-multilib perl-module python-any-r1
+inherit eutils perl-module python-any-r1 cmake-multilib
 
 DESCRIPTION="Library providing rendering capabilities for complex non-Roman writing systems"
 HOMEPAGE="http://graphite.sil.org/"
@@ -46,14 +46,6 @@ pkg_setup() {
 src_prepare() {
 	cmake-utils_src_prepare
 
-	# fix perl linking
-	if use perl; then
-		_check_build_dir init
-		sed -i \
-			-e "s:@BUILD_DIR@:\"${CMAKE_BUILD_DIR}/src\":" \
-			contrib/perl/Build.PL || die
-	fi
-
 	# make tests optional
 	if ! use test; then
 		sed -i \
@@ -62,7 +54,7 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
+multilib_src_configure() {
 	local mycmakeargs=(
 		"-DVM_MACHINE_TYPE=direct"
 		# http://sourceforge.net/p/silgraphite/bugs/49/
@@ -70,7 +62,15 @@ src_configure() {
 			echo "-DGRAPHITE2_NSEGCACHE:BOOL=ON")
 	)
 
-	cmake-multilib_src_configure
+	cmake-utils_src_configure
+
+	# fix perl linking
+	if multilib_is_native_abi && use perl; then
+		_check_build_dir init
+		sed -i \
+			-e "s:@BUILD_DIR@:\"${BUILD_DIR}/src\":" \
+			"${S}"/contrib/perl/Build.PL || die
+	fi
 }
 
 src_compile() {

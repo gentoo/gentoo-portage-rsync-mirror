@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure postinst postrm prepare setup
+DEPEND=>=app-i18n/ibus-1.4 dev-python/pygtk app-i18n/pyzy boost? ( >=dev-libs/boost-1.39 ) lua? ( >=dev-lang/lua-5.1 <dev-lang/lua-5.2 ) nls? ( virtual/libintl ) sys-apps/sed virtual/pkgconfig nls? ( >=sys-devel/gettext-0.16.1 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] =dev-lang/python-2.5*[sqlite] )
+DESCRIPTION=Chinese PinYin IMEngine for IBus Framework
+EAPI=5
+HOMEPAGE=http://code.google.com/p/ibus/
+IUSE=boost lua nls
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=app-i18n/ibus-1.4 dev-python/pygtk app-i18n/pyzy boost? ( >=dev-libs/boost-1.39 ) lua? ( >=dev-lang/lua-5.1 <dev-lang/lua-5.2 ) nls? ( virtual/libintl ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] =dev-lang/python-2.5*[sqlite] )
+SLOT=0
+SRC_URI=http://ibus.googlecode.com/files/ibus-pinyin-1.5.0.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=128d1e3935012c345e0a02b32e0d200c

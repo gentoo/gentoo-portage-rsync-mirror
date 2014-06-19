@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2.ebuild,v 1.2 2014/02/13 09:13:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2.ebuild,v 1.3 2014/06/19 15:06:50 klausman Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://launchpad.net/${PN/lib}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 LGPL-3"
 SLOT="3"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="debug gtk +introspection"
 
 RDEPEND="

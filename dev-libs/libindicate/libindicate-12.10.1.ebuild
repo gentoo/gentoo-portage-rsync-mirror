@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-12.10.1.ebuild,v 1.6 2013/05/17 14:30:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-12.10.1.ebuild,v 1.7 2014/06/19 15:06:45 klausman Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 LGPL-3"
 SLOT="3"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="gtk +introspection"
 
 RESTRICT="test" # consequence of the -no-mono.patch

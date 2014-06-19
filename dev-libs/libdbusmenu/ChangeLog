@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.29 2014/02/13 09:13:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.30 2014/06/19 15:06:50 klausman Exp $
+
+  19 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
+  libdbusmenu-12.10.2.ebuild:
+  Keyworded on alpha, bug #468984
 
   13 Feb 2014; Justin Lecher <jlec@gentoo.org> libdbusmenu-12.10.2.ebuild,
   metadata.xml:
