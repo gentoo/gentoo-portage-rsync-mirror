@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.337 2014/06/03 14:11:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.338 2014/06/19 07:20:24 mgorny Exp $
+
+  19 Jun 2014; Michał Górny <mgorny@gentoo.org> pam-1.1.8-r2.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  #513718.
 
   03 Jun 2014; Michał Górny <mgorny@gentoo.org> pam-1.1.8-r2.ebuild:
   Add missing MULTILIB_USEDEP on flex.

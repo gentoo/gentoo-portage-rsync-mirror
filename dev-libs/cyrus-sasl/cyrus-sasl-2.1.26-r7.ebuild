@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.1 2014/06/18 14:12:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.2 2014/06/19 07:20:35 mgorny Exp $
 
 EAPI=5
 
@@ -20,15 +20,15 @@ srp ssl static-libs urandom"
 
 DEPEND="net-mail/mailbase
 	authdaemond? ( || ( net-mail/courier-imap mail-mta/courier ) )
-	berkdb? ( >=sys-libs/db-3.2[${MULTILIB_USEDEP}] )
-	gdbm? ( >=sys-libs/gdbm-1.8.0[${MULTILIB_USEDEP}] )
-	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
-	openldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
+	berkdb? ( >=sys-libs/db-4.8.30-r1[${MULTILIB_USEDEP}] )
+	gdbm? ( >=sys-libs/gdbm-1.10-r1[${MULTILIB_USEDEP}] )
+	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
+	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	mysql? ( virtual/mysql )
-	pam? ( virtual/pam[${MULTILIB_USEDEP}] )
+	pam? ( >=virtual/pam-0-r1[${MULTILIB_USEDEP}] )
 	postgres? ( dev-db/postgresql-base )
-	sqlite? ( dev-db/sqlite:3[${MULTILIB_USEDEP}] )
-	ssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
+	sqlite? ( >=dev-db/sqlite-3.8.2:3[${MULTILIB_USEDEP}] )
+	ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.4 )"
 RDEPEND="${DEPEND}"
 
