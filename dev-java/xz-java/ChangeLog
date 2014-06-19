@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xz-java
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.8 2014/03/12 05:12:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.9 2014/06/19 00:27:19 mrueg Exp $
+
+  19 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -xz-java-1.0.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xz-java-1.4.ebuild:
   x86 stable wrt bug #502712

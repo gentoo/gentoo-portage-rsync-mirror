@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.22 2012/09/02 00:53:04 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.23 2014/06/19 00:30:13 mrueg Exp $
+
+  19 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -xmlc-2.3.1.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   02 Sep 2012; Michael Weber <xmw@gentoo.org> xmlc-2.3.1-r1.ebuild:
   ppc stable (bug 424293).

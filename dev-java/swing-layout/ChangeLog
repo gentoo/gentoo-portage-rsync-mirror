@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swing-layout
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.20 2012/03/10 17:13:05 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.21 2014/06/19 00:31:04 mrueg Exp $
+
+  19 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -swing-layout-1.0.1-r1.ebuild,
+  -swing-layout-1.0.3.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> swing-layout-1.0.4.ebuild:
   Marking swing-layout-1.0.4 ppc for bug 356929
@@ -79,4 +83,3 @@
   04 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org> +metadata.xml,
   +swing-layout-1.0.1.ebuild:
   Initial ebuild for swing-layout. Contributed by ali_bush, ty :)
-

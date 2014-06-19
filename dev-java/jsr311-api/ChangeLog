@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsr311-api
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/ChangeLog,v 1.5 2009/12/29 05:19:46 josejx Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/ChangeLog,v 1.6 2014/06/19 00:25:49 mrueg Exp $
+
+  19 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jsr311-api-1.0-r1.ebuild,
+  -jsr311-api-1.0.ebuild:
+  NM: Cleanup superseded ebuilds.
 
   29 Dec 2009; Joseph Jezak <josejx@gentoo.org> jsr311-api-1.1.ebuild:
   Marked ppc stable for bug #284323.
@@ -29,4 +33,3 @@
   +files/jsr311-api-1.0-maven-build.xml, +metadata.xml,
   +jsr311-api-1.0.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
