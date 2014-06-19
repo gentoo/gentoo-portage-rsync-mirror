@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile config configure install postinst preinst prepare setup test
+DEPEND=sys-libs/ncurses sys-libs/readline munge? ( sys-auth/munge ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat sys-apps/ed !sys-cluster/slurm
+DESCRIPTION=Resource manager and queuing system based on OpenPBS
+EAPI=4
+HOMEPAGE=http://www.adaptivecomputing.com/products/open-source/torque
+IUSE=cpusets +crypt doc drmaa kernel_linux munge server static-libs +syslog threads tk xml
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+LICENSE=torque-2.5
+RDEPEND=sys-libs/ncurses sys-libs/readline munge? ( sys-auth/munge ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat crypt? ( net-misc/openssh ) !crypt? ( net-misc/netkit-rsh )
+SLOT=0
+SRC_URI=http://www.adaptivecomputing.com/index.php?wpfb_dl=1643 -> torque-2.5.13.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	libtool	2964b38e7ad7f6998406386ad1c6dbcf	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=f79989610f7d4d09f5696fdfea582f6f
