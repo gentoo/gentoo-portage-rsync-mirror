@@ -1,6 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.6 2010/03/09 12:23:23 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.7 2014/06/19 12:54:43 creffett Exp $
+EAPI=5
 
 inherit eutils games
 
@@ -26,16 +27,19 @@ S="${WORKDIR}/${PN}-activity/"
 dir="${GAMES_DATADIR}/${PN}"
 
 src_unpack() {
-	unpack "${PN}-activity-source.tgz"
-	cd "${S}"
+	unpack ${PN}-activity-source.tgz
+}
 
+src_prepare() {
 	epatch "${DISTDIR}"/${PN}_git.patch
 	sed -i -e "s:-O3:${CFLAGS}:" \
 		src/tclx/config.mk src/{sim,tcl,tk}/makefile || die
+	sed -i -e "s:XLDFLAGS=:&${LDFLAGS}:" \
+		src/tclx/config.mk || die
 }
 
 src_compile() {
-	emake -C src || die
+	emake -C src LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {

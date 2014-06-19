@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-mobipocket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.114 2014/06/15 16:56:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.115 2014/06/19 13:01:12 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org>
+  -kdegraphics-mobipocket-4.13.0.ebuild:
+  Remove KDE SC 4.13.0
 
 *kdegraphics-mobipocket-4.13.2 (15 Jun 2014)
 

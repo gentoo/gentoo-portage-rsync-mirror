@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/micropolis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.4 2010/03/09 12:23:23 abcd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/ChangeLog,v 1.5 2014/06/19 12:54:43 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org> micropolis-1.0.ebuild:
+  [QA] Respect LDFLAGS wrt bug 335095, credit to Christophe Lefebvre
+  <chtof62@gmail.com> for the fix.
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> micropolis-1.0.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension
@@ -16,4 +20,3 @@
 
   11 Jun 2008; Hanno Boeck <hanno@gentoo.org> +micropolis-1.0.ebuild:
   Initial commit, based on the ebuilds from matsuu and Mike Gualtieri.
-

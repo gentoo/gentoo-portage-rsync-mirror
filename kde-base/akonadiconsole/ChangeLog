@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadiconsole
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.137 2014/06/15 16:56:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.138 2014/06/19 13:00:54 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org>
+  -akonadiconsole-4.13.0.ebuild:
+  Remove KDE SC 4.13.0
 
 *akonadiconsole-4.13.2 (15 Jun 2014)
 

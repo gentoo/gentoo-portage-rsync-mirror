@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-weatherwallpapers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.191 2014/06/15 16:56:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.192 2014/06/19 13:01:09 creffett Exp $
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org>
+  -kdeartwork-weatherwallpapers-4.13.0.ebuild:
+  Remove KDE SC 4.13.0
 
 *kdeartwork-weatherwallpapers-4.13.2 (15 Jun 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.96 2014/05/19 05:00:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.97 2014/06/19 12:54:47 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -79,7 +79,7 @@ esac
 
 if [[ ! ${_DISTUTILS_R1} ]]; then
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 	inherit multiprocessing python-r1
@@ -595,6 +595,13 @@ distutils-r1_run_phase() {
 
 		mkdir -p "${TMPDIR}" "${HOME}" || die
 	fi
+
+	# Set up build environment, bug #513664.
+	local -x AR=${AR} CC=${CC} CPP=${CPP} CXX=${CXX}
+	tc-export AR CC CPP CXX
+
+	# XXX: portability for -shared?
+	local -x LDSHARED="${CC} -shared" LDCXXSHARED="${CXX} -shared"
 
 	"${@}"
 

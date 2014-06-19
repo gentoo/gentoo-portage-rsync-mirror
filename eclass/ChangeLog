@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1292 2014/06/19 09:28:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1293 2014/06/19 12:54:47 mgorny Exp $
+
+  19 Jun 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Always set up CC, CXX and friends for distutils builds, bug #513664. Thanks
+  to Arfrever for the explanation.
 
   19 Jun 2014; Michał Górny <mgorny@gentoo.org> gstreamer.eclass:
   Bump gstreamer deps to satisfy multilib.
