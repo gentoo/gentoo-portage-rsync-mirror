@@ -1,0 +1,13 @@
+DEFINED_PHASES=config configure install postinst preinst prepare setup
+DEPEND=sys-libs/ncurses sys-libs/readline cpusets? ( sys-apps/hwloc ) munge? ( sys-auth/munge ) nvidia? ( >=x11-drivers/nvidia-drivers-275 ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat !sys-cluster/slurm
+DESCRIPTION=Resource manager and queuing system based on OpenPBS
+EAPI=4
+HOMEPAGE=http://www.adaptivecomputing.com/products/open-source/torque
+IUSE=cpusets +crypt doc drmaa kernel_linux munge nvidia server +syslog tk
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+LICENSE=torque-2.5
+RDEPEND=sys-libs/ncurses sys-libs/readline cpusets? ( sys-apps/hwloc ) munge? ( sys-auth/munge ) nvidia? ( >=x11-drivers/nvidia-drivers-275 ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat crypt? ( net-misc/openssh ) !crypt? ( net-misc/netkit-rsh )
+SLOT=0
+SRC_URI=http://www.adaptivecomputing.com/index.php?wpfb_dl=1690 -> torque-4.1.7.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=daab46e07a18b8c4b953e29c857450f5
