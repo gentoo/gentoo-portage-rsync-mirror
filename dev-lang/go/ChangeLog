@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.34 2014/06/05 07:43:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.35 2014/06/19 10:18:30 patrick Exp $
+
+*go-1.3 (19 Jun 2014)
+
+  19 Jun 2014; Patrick Lauer <patrick@gentoo.org> +go-1.3.ebuild:
+  Bump
 
 *go-1.2.2 (05 Jun 2014)
 

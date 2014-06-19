@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kmymoney
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.51 2013/12/24 14:32:08 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.52 2014/06/19 10:24:46 mrueg Exp $
+
+*kmymoney-4.6.5 (19 Jun 2014)
+
+  19 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +kmymoney-4.6.5.ebuild:
+  Version bump.
 
   24 Dec 2013; Manuel Rüger <mrueg@gentoo.org>
   -files/kmymoney-4.6.2-gcc-4.7.patch, -files/kmymoney-4.6.3-gmp-5.1.0.patch,
