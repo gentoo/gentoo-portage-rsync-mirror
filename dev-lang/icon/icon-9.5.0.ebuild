@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.5.0.ebuild,v 1.12 2014/03/12 09:55:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.5.0.ebuild,v 1.13 2014/06/19 16:19:18 klausman Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="very high level language"
 
 LICENSE="public-domain HPND"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X iplsrc"
 
 S="${WORKDIR}/icon-v${MY_PV}src"
