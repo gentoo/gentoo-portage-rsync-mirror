@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.8 2012/09/05 07:16:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r2.ebuild,v 1.1 2014/06/19 16:53:51 creffett Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2:2.5"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils eutils fdo-mime multilib
+inherit distutils-r1 eutils fdo-mime multilib
 
 DESCRIPTION="Program to view and manipulate data on LG VX4400/VX6000 and many Sanyo Sprint mobile phones"
 HOMEPAGE="http://www.bitpim.org/"
@@ -18,13 +18,13 @@ KEYWORDS="~amd64 ~x86"
 #KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="crypt evo usb"
 
-COMMON_DEPEND="dev-python/apsw
-	dev-python/pyserial
+COMMON_DEPEND="dev-python/apsw[${PYTHON_USEDEP}]
+	dev-python/pyserial[${PYTHON_USEDEP}]
 	dev-python/python-dsv
-	dev-python/wxpython:2.8
+	dev-python/wxpython:2.8[${PYTHON_USEDEP}]
 	crypt? (
-		>=dev-python/paramiko-1.7.1
-		dev-python/pycrypto
+		>=dev-python/paramiko-1.7.1[${PYTHON_USEDEP}]
+		dev-python/pycrypto[${PYTHON_USEDEP}]
 	)
 	usb? ( virtual/libusb:0 )"
 DEPEND="${COMMON_DEPEND}
@@ -33,16 +33,15 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/netpbm
 	virtual/ffmpeg"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+PATCHES=( "${FILESDIR}/${P}-gentoo.patch" "${FILESDIR}/${P}-ffmpeg_quality.patch" "${FILESDIR}/${P}-gcc43.patch" )
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
-	sed -i "s/^PYTHONVER=.*/PYTHONVER=$(PYTHON)/" src/native/usb/build.sh
+	distutils-r1_src_prepare
+	python_setup
+	sed -i -e "s/^PYTHONVER=.*/PYTHONVER=\$PYTHON/" \
+		src/native/usb/build.sh || die "sed failed"
+	sed -i "s/\$(EXTRADEFINES)\ -O2/\$(CXXFLAGS) \$(LDFLAGS)/" \
+		src/native/av/bmp2avi/Makefile || die "sed failed"
 }
 
 src_compile() {
@@ -54,11 +53,11 @@ src_compile() {
 
 	# strings
 	cd "${S}/src/native/strings"
-	distutils_src_compile
+	distutils-r1_src_compile
 
 	# bmp2avi
 	cd "${S}/src/native/av/bmp2avi"
-	PLATFORM=linux make || die "compilation of native/bmp2avi failed"
+	PLATFORM=linux emake CXX="$(tc-getCXX)"
 }
 
 src_install() {
@@ -95,7 +94,7 @@ src_install() {
 
 	# strings
 	cd "${S}/src/native/strings"
-	distutils_src_install
+	distutils-r1_src_install
 
 	cd "${S}"
 	insinto $RLOC/native/strings
@@ -124,27 +123,28 @@ src_install() {
 
 	# Creating scripts
 	echo '#!/bin/sh' > "${T}/bitpim"
-	echo "exec $(PYTHON) ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
+	echo "exec $PYTHON ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
 	dobin "${T}/bitpim"
 	if use crypt; then
 		echo '#!/bin/sh' > "${T}/bitfling"
-		echo "exec $(PYTHON) ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
+		echo "exec $PYTHON ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
 		dobin "${T}/bitfling"
 	fi
 
 	# Desktop file
-	sed -i -e "s|%%INSTALLBINDIR%%|/usr/bin|" -e "s|%%INSTALLLIBDIR%%|${RLOC}|" \
-		packaging/bitpim.desktop
+	sed -i \
+		-e "s|%%INSTALLBINDIR%%|/usr/bin|" \
+		-e "s|%%INSTALLLIBDIR%%|${RLOC}|" \
+		-e "s|Terminal=0|Terminal=true|" \
+		-e "s|Application;Calendar;ContactManagement;Utility;|Calendar;ContactManagement;Utility;|" \
+		packaging/bitpim.desktop || die "sed failed"
 	domenu packaging/bitpim.desktop
 }
 
 pkg_postinst() {
-	# Optimize in installed directory
-	python_mod_optimize /usr/$(get_libdir)/${P}
 	fdo-mime_desktop_database_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/${P}
 	fdo-mime_desktop_database_update
 }

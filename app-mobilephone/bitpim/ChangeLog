@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/bitpim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.36 2014/04/09 07:14:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.37 2014/06/19 16:53:51 creffett Exp $
+
+*bitpim-1.0.6-r2 (19 Jun 2014)
+
+  19 Jun 2014; Chris Reffett <creffett@gentoo.org> +bitpim-1.0.6-r2.ebuild,
+  -bitpim-1.0.6-r1.ebuild:
+  [QA] Revision bump. EAPI bump. Convert to distutils-r1. Respect CFLAGS, bug
+  443240. Respect LDFLAGS, bug 336233. Fix QA errors with .desktop files. Credit
+  to iamnr3 for the latter three fixes.
 
   09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty
