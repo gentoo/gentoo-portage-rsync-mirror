@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/acts_as_list-0.4.0.ebuild,v 1.1 2014/02/24 06:48:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/acts_as_list-0.4.0.ebuild,v 1.2 2014/06/20 06:03:07 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
-RUBY_FAKEGEM_RECIPE_TEST="none"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 inherit ruby-fakegem
@@ -28,7 +27,7 @@ ruby_add_rdepend ">=dev-ruby/activerecord-3"
 ruby_add_bdepend "
 	test? (
 		dev-ruby/test-unit:2
-		dev-ruby/activerecord[sqlite3]
+		dev-ruby/activerecord:3.2[sqlite3]
 	)"
 
 all_ruby_prepare() {
@@ -36,8 +35,7 @@ all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/d' Rakefile || die
 	sed -i -e '1,9 s:^:#:' test/helper.rb || die
 	sed -i -e '/git ls/d' ${RUBY_FAKEGEM_GEMSPEC} || die
-}
 
-each_ruby_test() {
-	ruby-ng_testrb-2 -Ilib test/test_*.rb
+	# Tests currently only pass on rails 3.
+	sed -e '1igem "activerecord", "~>3.2.0"' -i test/helper.rb || die
 }
