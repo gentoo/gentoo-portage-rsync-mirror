@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.303 2014/06/18 20:49:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.304 2014/06/20 09:40:15 ssuominen Exp $
 
 EAPI=5
 
@@ -115,7 +115,8 @@ src_prepare() {
 	fi
 
 	cat <<-EOF > "${T}"/40-gentoo.rules
-	# Gentoo specific usb group
+	# Gentoo specific floppy and usb groups
+	SUBSYSTEM=="block", KERNEL=="fd[0-9]", GROUP="floppy"
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
 	EOF
 

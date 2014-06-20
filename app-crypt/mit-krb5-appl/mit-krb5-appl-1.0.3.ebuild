@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.3.ebuild,v 1.10 2013/02/28 13:43:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.3.ebuild,v 1.11 2014/06/20 09:51:39 eras Exp $
 
 EAPI=4
 
@@ -32,12 +32,13 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-tinfo.patch"
+	epatch "${FILESDIR}/${PN}-sig_t.patch"
 	sed -i -e "s/-lncurses/$($(tc-getPKG_CONFIG) --libs ncurses)/" configure.ac
 	eautoreconf
 }
 
 src_configure() {
-	append-flags "-I/usr/include/et"
+	append-cppflags "-I/usr/include/et"
 	append-cppflags -fno-strict-aliasing
 	append-cppflags -fno-strict-overflow
 	econf
