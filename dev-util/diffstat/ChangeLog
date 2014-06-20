@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.168 2014/01/27 07:14:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.169 2014/06/20 07:16:34 radhermit Exp $
+
+*diffstat-1.59 (20 Jun 2014)
+
+  20 Jun 2014; Tim Harder <radhermit@gentoo.org> +diffstat-1.59.ebuild:
+  Version bump.
 
   27 Jan 2014; Justin Lecher <jlec@gentoo.org> -diffstat-1.57.ebuild:
   Drop old

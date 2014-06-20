@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.51 2014/05/25 15:19:38 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.52 2014/06/20 07:30:52 dlan Exp $
+
+  20 Jun 2014; Yixun Lan <dlan@gentoo.org> ceph-0.67.7.ebuild,
+  ceph-0.72.2-r3.ebuild, ceph-0.80.1.ebuild:
+  fix python shebang, bug 512148, thanks Stefan Junker
 
   25 May 2014; Yixun Lan <dlan@gentoo.org> ceph-0.80.1.ebuild:
   fix bug #511124, thanks @reivzy

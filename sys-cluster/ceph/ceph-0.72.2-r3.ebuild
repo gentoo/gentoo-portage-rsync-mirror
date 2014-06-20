@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.72.2-r3.ebuild,v 1.1 2014/02/20 10:18:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.72.2-r3.ebuild,v 1.2 2014/06/20 07:30:52 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -124,7 +124,7 @@ src_install() {
 	newinitd "${T}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
-	_python_rewrite_shebang \
+	python_fix_shebang \
 		"${ED}"/usr/sbin/{ceph-disk,ceph-create-keys} \
 		"${ED}"/usr/bin/{ceph,ceph-rest-api}
 
