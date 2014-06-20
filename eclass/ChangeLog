@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1294 2014/06/19 15:10:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1295 2014/06/20 00:03:33 grknight Exp $
+
+  19 Jun 2014; Brian Evans <grknight@gentoo.org> mysql-v2.eclass, mysql-cmake.eclass:
+  Sync with mysql overlay.
 
   19 Jun 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   python_fix_shebang: properly unset local variables in loop iterations.

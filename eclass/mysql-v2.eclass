@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.30 2014/06/04 01:17:11 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.31 2014/06/20 00:03:33 grknight Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -209,6 +209,11 @@ esac
 # Common IUSE
 IUSE="${IUSE} latin1 extraengine cluster max-idx-128 +community profiling"
 
+if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
+	mysql_version_is_at_least "5.5" || mysql_check_version_range "5.5.37 to 5.6.11.99" ; then
+	IUSE="bindist ${IUSE}"
+fi
+
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	mysql_check_version_range "5.1.38 to 5.3.99" && IUSE="${IUSE} libevent"
 	mysql_version_is_at_least "5.2" && IUSE="${IUSE} oqgraph" && \
@@ -258,7 +263,11 @@ DEPEND="
 if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && mysql_version_is_at_least "5.6.12" ; then
 	DEPEND="${DEPEND} dev-libs/libedit"
 else
-	DEPEND="${DEPEND} >=sys-libs/readline-4.1"
+	if mysql_version_is_at_least "5.5" ; then
+		DEPEND="${DEPEND} !bindist? ( >=sys-libs/readline-4.1 )"
+	else
+		DEPEND="${DEPEND} >=sys-libs/readline-4.1"
+	fi
 fi
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then

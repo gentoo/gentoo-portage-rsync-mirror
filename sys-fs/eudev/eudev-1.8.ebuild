@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.54 2014/06/20 00:21:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.8.ebuild,v 1.1 2014/06/20 00:21:06 blueness Exp $
 
 EAPI="5"
 

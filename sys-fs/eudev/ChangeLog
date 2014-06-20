@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.114 2014/06/18 20:48:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.116 2014/06/20 00:22:15 blueness Exp $
+
+*eudev-1.8 (20 Jun 2014)
+
+  20 Jun 2014; Anthony G. Basile <blueness@gentoo.org> +eudev-1.8.ebuild,
+  eudev-9999.ebuild:
+  Version bump to 1.8 = upstream 214
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> eudev-1.5.3-r1.ebuild,
   eudev-1.7.ebuild, eudev-9999.ebuild:

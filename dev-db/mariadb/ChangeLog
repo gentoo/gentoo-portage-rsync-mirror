@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.38 2014/06/09 01:10:26 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.39 2014/06/20 00:06:40 grknight Exp $
+
+*mariadb-5.5.38 (20 Jun 2014)
+
+  20 Jun 2014; Brian Evans <grknight@gentoo.org> +mariadb-5.5.38.ebuild:
+  Version bump
 
   09 Jun 2014; Brian Evans <grknight@gentoo.org> -files/my.cnf-4.1:
   Remove extraneous my.cnf-4.1 from FILESDIR

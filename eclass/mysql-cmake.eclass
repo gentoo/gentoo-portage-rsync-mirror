@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.20 2014/05/15 03:18:47 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.21 2014/06/20 00:03:33 grknight Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -251,7 +251,7 @@ mysql-cmake_src_prepare() {
 
 	rm -f "scripts/mysqlbug"
 	if use jemalloc && ! ( [[ ${PN} == "mariadb" ]] && mysql_version_is_at_least "5.5.33" ); then
-		echo "TARGET_LINK_LIBRARIES(mysqld jemalloc)" >> "${S}/sql/CMakeLists.txt"
+		echo "TARGET_LINK_LIBRARIES(mysqld jemalloc)" >> "${S}/sql/CMakeLists.txt" || die
 	fi
 
 	if use tcmalloc; then
@@ -301,7 +301,6 @@ mysql-cmake_src_configure() {
 		-DINSTALL_SUPPORTFILESDIR=${EPREFIX}/usr/share/mysql
 		-DWITH_COMMENT="Gentoo Linux ${PF}"
 		$(cmake-utils_use_with test UNIT_TESTS)
-		-DWITH_READLINE=0
 		-DWITH_LIBEDIT=0
 		-DWITH_ZLIB=system
 		-DWITHOUT_LIBWRAP=1
@@ -312,14 +311,16 @@ mysql-cmake_src_configure() {
 
 	if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && mysql_version_is_at_least "5.6.12" ; then
 		mycmakeargs+=( -DWITH_EDITLINE=system )
+	else
+		mycmakeargs+=(
+			-DWITH_READLINE=$(usex bindist 1 0)
+			-DNOT_FOR_DISTRIBUTION=$(usex bindist 0 1)
+			$(usex bindist -DHAVE_BFD_H=0 '')
+		)
 	fi
 
-	# Bug 412851
-	# MariaDB requires NOT_FOR_DISTRIBUTION set to compile with GPLv3 readline linked
-	# Adds a warning about redistribution to configure
 	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		mycmakeargs+=(
-			-DNOT_FOR_DISTRIBUTION=1
 			-DWITH_JEMALLOC=$(usex jemalloc system)
 		)
 		mysql_version_is_at_least "10.0.9" && mycmakeargs+=( -DWITH_PCRE=system )
@@ -409,11 +410,11 @@ mysql-cmake_src_install() {
 	mycnf_src="my.cnf-${mysql_mycnf_version}"
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
 		"${FILESDIR}/${mycnf_src}" \
-		> "${TMPDIR}/my.cnf.ok"
+		> "${TMPDIR}/my.cnf.ok" || die
 	if use latin1 ; then
 		sed -i \
 			-e "/character-set/s|utf8|latin1|g" \
-			"${TMPDIR}/my.cnf.ok"
+			"${TMPDIR}/my.cnf.ok" || die
 	fi
 	eprefixify "${TMPDIR}/my.cnf.ok"
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
@@ -458,4 +459,15 @@ mysql-cmake_src_install() {
 	#Remove mytop if perl is not selected
 	[[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && ! use perl \
 	&& rm -f "${ED}/usr/bin/mytop"
+
+	# Percona has decided to rename libmysqlclient to libperconaserverclient
+	# Use a symlink to preserve linkages for those who don't use mysql_config
+	if [[ ${PN} == "percona-server" ]] && mysql_version_is_at_least "5.5.36" ; then
+		dosym libperconaserverclient.so /usr/$(get_libdir)/libmysqlclient.so
+		dosym libperconaserverclient.so /usr/$(get_libdir)/libmysqlclient_r.so
+		if use static-libs ; then
+			dosym libperconaserverclient.a /usr/$(get_libdir)/libmysqlclient.a
+			dosym libperconaserverclient.a /usr/$(get_libdir)/libmysqlclient_r.a
+		fi
+	fi
 }
