@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.244 2014/05/21 15:58:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.245 2014/06/20 04:33:57 vapier Exp $
+
+  20 Jun 2014; Mike Frysinger <vapier@gentoo.org> files/rpc.pipefs.initd:
+  Unmount rpc.pipefs on stop as it is in /var #491714 by Jan Lam.
 
   21 May 2014; Justin Lecher <jlec@gentoo.org> nfs-utils-1.2.9-r3.ebuild,
   metadata.xml:
