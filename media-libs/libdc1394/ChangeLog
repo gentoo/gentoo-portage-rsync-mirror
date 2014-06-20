@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.73 2014/06/18 19:40:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.74 2014/06/20 11:53:31 ssuominen Exp $
+
+  20 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libdc1394-2.2.1.ebuild:
+  Download and extract sdl.m4 and point AT_M4DIR for eautoreconf to it wrt
+  #494312 by Andrej Gelenberg
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libdc1394-2.2.1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.4 2014/06/18 19:40:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.5 2014/06/20 11:53:31 ssuominen Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit autotools eutils multilib-minimal
 
 DESCRIPTION="Library to interface with IEEE 1394 cameras following the IIDC specification"
 HOMEPAGE="http://sourceforge.net/projects/libdc1394/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	http://dev.gentoo.org/~ssuominen/sdl.m4-20140620.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
@@ -22,8 +23,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-includes.patch"
-	eautoreconf
+	epatch "${FILESDIR}"/${P}-includes.patch
+	AT_M4DIR=${WORKDIR}/aclocal eautoreconf
 }
 
 multilib_src_configure() {

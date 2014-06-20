@@ -7,5 +7,5 @@ IUSE=+lua +pbf
 LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 dev-db/postgresql-base dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib lua? ( dev-lang/lua ) pbf? ( dev-libs/protobuf-c )
 SLOT=0
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	git-2	2027b81a576527fa16bece425941e094	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	git-2	2027b81a576527fa16bece425941e094	git-r3	da25af7340478afdca16e1e4568b014a	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=17439025c246df6b4074506017aa4e86

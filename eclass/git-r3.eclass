@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.43 2014/06/01 22:07:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.44 2014/06/20 11:40:28 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -825,7 +825,7 @@ git-r3_checkout() {
 			local subrepos
 			_git-r3_set_subrepos "${url}" "${repos[@]}"
 
-			git-r3_checkout "${url}" "${out_dir}/${path}" \
+			git-r3_checkout "${subrepos[*]}" "${out_dir}/${path}" \
 				"${local_id}/${subname}"
 
 			submodules=( "${submodules[@]:3}" ) # shift

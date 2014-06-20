@@ -8,5 +8,5 @@ LICENSE=Boost-1.0
 RDEPEND=>=dev-libs/boost-1.46 dev-qt/qtcore:4 dev-qt/qtdeclarative:4 dev-qt/qtgui:4 dev-qt/qtscript:4 dev-qt/qtsql:4[postgres?,sqlite?] dev-qt/qtwebkit:4 qwt? ( x11-libs/qwt:6 ) dev-qt/qtsvg:4 || ( kde-base/oxygen-icons x11-themes/kfaenza )
 REQUIRED_USE=|| ( postgres sqlite )
 SLOT=0
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	git-2	2027b81a576527fa16bece425941e094	git-r3	9e723d78cbd8ea74fd0eba5a1521d7f6	leechcraft	e0ec4b74ef98adeb1a9696617a379c7f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	git-2	2027b81a576527fa16bece425941e094	git-r3	da25af7340478afdca16e1e4568b014a	leechcraft	e0ec4b74ef98adeb1a9696617a379c7f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=408e2796b62489420dbf96daca1dbb50
