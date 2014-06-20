@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ipset
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.74 2013/12/01 19:16:16 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.76 2014/06/20 20:58:03 robbat2 Exp $
+
+  20 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> ipset-6.20.1.ebuild:
+  Stable on amd64 per bug #502870, works for infra.
+
+*ipset-6.21.1 (20 Jun 2014)
+
+  20 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> +ipset-6.21.1.ebuild:
+  Bump per bug #509804.
 
 *ipset-6.20.1 (01 Dec 2013)
 

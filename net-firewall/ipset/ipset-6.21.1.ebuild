@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.20.1.ebuild,v 1.2 2014/06/20 20:58:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.21.1.ebuild,v 1.1 2014/06/20 20:57:10 robbat2 Exp $
 
 EAPI="5"
 MODULES_OPTIONAL_USE=modules
