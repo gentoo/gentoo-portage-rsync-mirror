@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
+DEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 DESCRIPTION=Python extension module generator for C and C++ libraries
 EAPI=5
 HOMEPAGE=http://www.riverbankcomputing.co.uk/software/sip/intro http://pypi.python.org/pypi/SIP
-IUSE=debug doc python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
+IUSE=debug doc python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=|| ( GPL-2 GPL-3 sip )
-RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
-REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
+RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0/10
 SRC_URI=mirror://sourceforge/pyqt/sip-4.15.4.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c34b96d30a361994029fc514865f1267
+_md5_=3b1b0bdfc4f34c8af277404d6919dfcb
