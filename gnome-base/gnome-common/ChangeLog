@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.131 2014/05/17 15:31:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.132 2014/06/20 14:45:04 ago Exp $
+
+  20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> gnome-common-3.10.0.ebuild:
+  Stable for arm, wrt bug #508862
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> gnome-common-3.10.0.ebuild:
   Stable for alpha, wrt bug #508862

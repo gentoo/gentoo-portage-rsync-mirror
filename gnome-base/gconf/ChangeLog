@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.297 2014/06/18 19:22:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.298 2014/06/20 14:45:02 ago Exp $
+
+  20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> gconf-3.2.6-r2.ebuild:
+  Stable for arm, wrt bug #508862
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> gconf-3.2.6-r3.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.10.2.ebuild,v 1.2 2014/04/22 13:14:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.9.10.2.ebuild,v 1.3 2014/06/20 14:31:41 hasufell Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.9.9.4-{QA1,submake,parallel-make}.patch \
-		"${FILESDIR}"/${PN}-2.9.10.2-QA2.patch
+		"${FILESDIR}"/${PN}-2.9.10.2-{QA2,tiff}.patch
 	eautoreconf
 }
 

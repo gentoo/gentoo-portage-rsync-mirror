@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.350 2014/06/18 19:24:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.351 2014/06/20 14:45:14 ago Exp $
+
+  20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> librsvg-2.40.2.ebuild:
+  Stable for arm, wrt bug #508862
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> librsvg-2.40.2-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

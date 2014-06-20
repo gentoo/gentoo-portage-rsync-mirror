@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.148 2014/05/17 15:31:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.149 2014/06/20 14:45:20 ago Exp $
+
+  20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> audiofile-0.3.6-r1.ebuild:
+  Stable for arm, wrt bug #508862
 
   17 May 2014; Agostino Sarubbo <ago@gentoo.org> audiofile-0.3.6-r1.ebuild:
   Stable for alpha, wrt bug #508862
