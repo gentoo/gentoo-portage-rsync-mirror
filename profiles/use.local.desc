@@ -6482,7 +6482,7 @@ sys-apps/pyrenamer:music - Enable support for renaming music
 sys-apps/qingy:consolekit - Enable native consolekit support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
-sys-apps/razercfg:qt4 - Installs a qt UI. Requires dev-python/pygtk
+sys-apps/razercfg:qt4 - Installs a qt UI. Requires dev-python/pyside
 sys-apps/rsbac-admin:rklogd - Enabled deprecated RSBAC kernel logger
 sys-apps/s390-tools:fuse - build cmsfs-fuse to read files stored on a z/VM CMS disk
 sys-apps/s390-tools:zfcpdump - build the kernel disk dumping utility

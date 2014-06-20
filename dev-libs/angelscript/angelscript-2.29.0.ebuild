@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.29.0.ebuild,v 1.1 2014/06/11 18:43:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.29.0.ebuild,v 1.2 2014/06/20 13:38:52 hasufell Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ src_prepare() {
 	if use static-libs ; then
 		cp -pR "${WORKDIR}"/sdk "${S2}"/ || die
 	fi
-	epatch "${FILESDIR}"/${PN}-2.28.2-execstack.patch
+	epatch "${FILESDIR}"/${P}-execstack.patch
 	multilib_copy_sources
 }
 

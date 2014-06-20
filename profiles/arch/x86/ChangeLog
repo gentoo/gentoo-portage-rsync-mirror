@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.165 2014/04/23 09:19:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.166 2014/06/20 13:48:19 mgorny Exp $
+
+  20 Jun 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Set amd64-compatible values for ABI and related variables.
 
   23 Apr 2014; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
   media-sound/lmms[vst] works on 32bit x86
