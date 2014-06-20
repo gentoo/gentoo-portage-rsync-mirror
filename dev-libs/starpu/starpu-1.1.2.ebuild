@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.1.0.ebuild,v 1.1 2014/01/07 23:03:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.1.2.ebuild,v 1.1 2014/06/20 18:33:04 bicatali Exp $
 
 EAPI=5
 
@@ -19,13 +19,13 @@ IUSE="blas cuda debug doc examples fftw gcc-plugin mpi opencl opengl qt4
 	static-libs test"
 
 RDEPEND="
-	sys-apps/hwloc
-	sci-mathematics/glpk
+	sys-apps/hwloc:0=
+	sci-mathematics/glpk:0=
 	blas? ( virtual/blas )
 	cuda? ( dev-util/nvidia-cuda-toolkit
 			x11-drivers/nvidia-drivers
 			blas? ( sci-libs/magma ) )
-	fftw? ( sci-libs/fftw:3.0 )
+	fftw? ( sci-libs/fftw:3.0= )
 	mpi? ( virtual/mpi )
 	opencl? ( virtual/opencl )
 	opengl? ( virtual/opengl )
@@ -51,6 +51,7 @@ src_configure() {
 	use blas && export BLAS_LIBS="$($(tc-getPKG_CONFIG) --libs blas)"
 
 	local myeconfargs=(
+		--disable-build-examples
 		$(use_enable cuda)
 		$(use_enable debug)
 		$(use_enable doc build-doc)
