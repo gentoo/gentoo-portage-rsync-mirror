@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/bubble-chains
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.8 2014/05/15 16:49:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.9 2014/06/20 07:57:20 mr_bones_ Exp $
+
+  20 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  bubble-chains-0.1.1.ebuild:
+  EAPI=5; correct building against libsdl (bug #513940)
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> bubble-chains-0.1.1.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
