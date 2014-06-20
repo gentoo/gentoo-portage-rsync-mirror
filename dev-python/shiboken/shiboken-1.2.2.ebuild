@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.2.ebuild,v 1.1 2014/05/07 07:21:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.2.2.ebuild,v 1.2 2014/06/20 15:03:52 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
 inherit multilib cmake-utils python-r1
 
