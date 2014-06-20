@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.78 2014/03/31 21:16:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.79 2014/06/20 02:58:05 idella4 Exp $
+
+*dulwich-0.9.7 (20 Jun 2014)
+
+  20 Jun 2014; Ian Delaney <idella4@gentoo.org> +dulwich-0.9.7.ebuild:
+  drop py2.6 pypy2_0, add IUSE examples, dep for tests, updrade test phase,
+  closes Bug #513392
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> dulwich-0.9.4.ebuild,
   dulwich-0.9.5.ebuild:
