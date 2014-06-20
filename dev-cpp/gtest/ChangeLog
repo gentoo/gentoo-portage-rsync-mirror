@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.36 2014/04/30 14:36:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.37 2014/06/20 19:16:46 jer Exp $
+
+  20 Jun 2014; Jeroen Roovers <jer@gentoo.org> gtest-1.7.0.ebuild:
+  Stable for HPPA (bug #513804).
 
   30 Apr 2014; Michał Górny <mgorny@gentoo.org> gtest-1.7.0.ebuild:
   Simplify multilib code. Set proper flags for autotools-multilib.

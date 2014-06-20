@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.69 2014/06/19 08:46:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.70 2014/06/20 19:27:34 grobian Exp $
+
+  20 Jun 2014; Fabian Groffen <grobian@gentoo.org> unbound-1.4.22.ebuild:
+  Fix for Prefix, based on patch by Matthias Maier, bug #501172
 
   19 Jun 2014; Michał Górny <mgorny@gentoo.org> unbound-1.4.21-r2.ebuild,
   unbound-1.4.22.ebuild:

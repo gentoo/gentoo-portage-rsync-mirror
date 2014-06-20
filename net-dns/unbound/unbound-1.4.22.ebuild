@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.22.ebuild,v 1.2 2014/06/19 08:46:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.22.ebuild,v 1.3 2014/06/20 19:27:34 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -60,7 +60,7 @@ src_prepare() {
 }
 
 src_configure() {
-	append-ldflags -Wl,-z,noexecstack
+	[[ ${CHOST} == *-darwin* ]] || append-ldflags -Wl,-z,noexecstack
 	multilib-minimal_src_configure
 }
 
@@ -77,7 +77,9 @@ multilib_src_configure() {
 		--with-ldns="${EPREFIX}"/usr \
 		--with-libevent="${EPREFIX}"/usr \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
-		--with-rootkey-file="${EPREFIX}"/etc/dnssec/root-anchors.txt
+		--with-rootkey-file="${EPREFIX}"/etc/dnssec/root-anchors.txt \
+		--with-ssl="${EPREFIX}"/usr \
+		--with-libexpat="${EPREFIX}"/usr
 
 		# http://unbound.nlnetlabs.nl/pipermail/unbound-users/2011-April/001801.html
 		# $(use_enable debug lock-checks) \

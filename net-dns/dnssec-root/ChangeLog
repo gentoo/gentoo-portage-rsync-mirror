@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnssec-root
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.13 2014/06/18 13:42:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.14 2014/06/20 19:17:48 grobian Exp $
+
+  20 Jun 2014; Fabian Groffen <grobian@gentoo.org> dnssec-root-20110630.ebuild:
+  Marked  ~x64-macos
 
   18 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
   dnssec-root-20110630.ebuild:
