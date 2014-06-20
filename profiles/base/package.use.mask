@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.578 2014/06/14 22:00:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.579 2014/06/20 14:11:03 jer Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Jeroen Roovers <jer@gentoo.org> (20 Jun 2014)
+# net-libs/adns is going away (bug #513982)
+net-analyzer/wireshark libadns
 
 # Anthony G. Basile <blueness@gentoo.org> (14 Jun 2014)
 # net-libs/cyassl is being tree cleaned, bug #495848

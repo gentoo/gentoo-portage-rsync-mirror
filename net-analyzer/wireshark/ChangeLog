@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.627 2014/06/20 13:51:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.628 2014/06/20 14:14:31 jer Exp $
+
+*wireshark-1.10.8-r1 (20 Jun 2014)
+*wireshark-1.8.15-r1 (20 Jun 2014)
+
+  20 Jun 2014; Jeroen Roovers <jer@gentoo.org> +wireshark-1.8.15-r1.ebuild,
+  +wireshark-1.10.8-r1.ebuild:
+  Remove net-libs/adns support (bug #513982).
 
   20 Jun 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.0_rc2.ebuild:
   Remove net-libs/adns support (bug #513982).

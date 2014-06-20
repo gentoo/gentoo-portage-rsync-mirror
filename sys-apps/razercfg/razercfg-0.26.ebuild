@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.26.ebuild,v 1.1 2014/06/20 13:43:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.26.ebuild,v 1.2 2014/06/20 14:13:34 joker Exp $
 
 EAPI=5
 
@@ -38,12 +38,11 @@ src_prepare() {
 		-e "s:DESTINATION lib:DESTINATION $(get_libdir):" \
 		librazer/CMakeLists.txt \
 		|| die "sed failed"
+}
 
-	# setup.py creates a totaly wrong interperter path for python_fix_shebang
-	sed -i \
-		-e 's:build -b:build -e /usr/bin/python3 -b:' \
-		ui/CMakeLists.txt \
-		|| die "sed failed"
+src_configure() {
+	mycmakeargs="${mycmakeargs}	-DPYTHON='${PYTHON}'"
+	cmake-utils_src_configure
 }
 
 src_install() {
@@ -58,8 +57,6 @@ src_install() {
 	fi
 
 	use pm-utils || rm "${D}"/usr/$(get_libdir)/pm-utils/sleep.d/80razer
-
-	python_fix_shebang "${ED}"usr/bin
 }
 
 pkg_postinst() {

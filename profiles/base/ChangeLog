@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.691 2014/06/14 22:00:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.692 2014/06/20 14:11:03 jer Exp $
+
+  20 Jun 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=libadns (bug #513982).
 
   14 Jun 2014; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   net-libs/cyassl is being tree cleaned, bug #495848
