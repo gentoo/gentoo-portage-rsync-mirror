@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.42 2014/02/04 05:14:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.43 2014/06/20 08:37:41 radhermit Exp $
+
+*pqiv-2.2 (20 Jun 2014)
+
+  20 Jun 2014; Tim Harder <radhermit@gentoo.org> +pqiv-2.2.ebuild:
+  Version bump.
 
 *pqiv-2.1.1 (04 Feb 2014)
 
