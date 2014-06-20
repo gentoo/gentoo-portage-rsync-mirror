@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.5 2014/06/20 11:53:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.2.1.ebuild,v 1.6 2014/06/20 12:54:23 ssuominen Exp $
 
 EAPI=5
 
@@ -23,7 +23,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-includes.patch
+	epatch \
+		"${FILESDIR}"/${P}-includes.patch \
+		"${FILESDIR}"/${P}-pthread.patch
+
 	AT_M4DIR=${WORKDIR}/aclocal eautoreconf
 }
 

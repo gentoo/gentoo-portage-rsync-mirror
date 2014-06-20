@@ -1,0 +1,12 @@
+diff -Naur tor-0.2.5.5-alpha.orig/configure.ac tor-0.2.5.5-alpha/configure.ac
+--- tor-0.2.5.5-alpha.orig/configure.ac	2014-06-16 15:44:02.000000000 -0400
++++ tor-0.2.5.5-alpha/configure.ac	2014-06-20 08:33:39.178082858 -0400
+@@ -454,7 +454,7 @@
+ [#include <event.h>
+ ])
+ 
+-AC_CHECK_HEADERS(event2/event.h event2/dns.h)
++AC_CHECK_HEADERS(event2/event.h event2/dns.h event2/bufferevent_ssl.h)
+ 
+ LIBS="$save_LIBS"
+ LDFLAGS="$save_LDFLAGS"

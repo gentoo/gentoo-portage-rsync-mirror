@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.5_alpha.ebuild,v 1.1 2014/06/19 13:37:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.5_alpha.ebuild,v 1.2 2014/06/20 12:57:16 blueness Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator user
+inherit autotools eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator user
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -35,6 +35,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
+	epatch "${FILESDIR}"/${P}-fix-bufferevent-build.patch
+	eautoreconf
 }
 
 src_configure() {

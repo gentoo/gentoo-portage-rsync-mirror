@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.74 2014/06/20 11:53:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.75 2014/06/20 12:54:23 ssuominen Exp $
+
+  20 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libdc1394-2.2.1-pthread.patch, libdc1394-2.2.1.ebuild:
+  Since capture.c in dc1394/usb/ directory is using pthread_join and
+  pthread_create functions, link to -lpthread accordingly wrt #514008
 
   20 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libdc1394-2.2.1.ebuild:
   Download and extract sdl.m4 and point AT_M4DIR for eautoreconf to it wrt
