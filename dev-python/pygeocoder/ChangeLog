@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygeocoder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygeocoder/ChangeLog,v 1.5 2014/05/03 08:57:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygeocoder/ChangeLog,v 1.6 2014/06/20 05:31:03 idella4 Exp $
+
+*pygeocoder-1.2.5 (20 Jun 2014)
+
+  20 Jun 2014; Ian Delaney <idella4@gentoo.org> +pygeocoder-1.2.5.ebuild,
+  -pygeocoder-1.1.4.ebuild, -pygeocoder-1.2.1.ebuild, -pygeocoder-1.2.4.ebuild:
+  bump, add py3 pypy support, req'd RDEP, rm old
 
 *pygeocoder-1.2.4 (03 May 2014)
 
