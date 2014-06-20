@@ -293,6 +293,7 @@ usr/lib32/liblzma.so
 usr/lib32/pkgconfig/liblzma.pc
 usr/lib32/libgif.so
 usr/lib32/libgif.so.4
+usr/lib32/libgif.so.4.1.6
 usr/lib32/libslang.so
 usr/lib32/libslang.so.2
 usr/lib32/libslang.so.2.2.4
