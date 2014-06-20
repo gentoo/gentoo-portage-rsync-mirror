@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/south
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/ChangeLog,v 1.13 2014/03/13 15:01:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/ChangeLog,v 1.15 2014/06/20 01:57:47 idella4 Exp $
+
+*south-0.8.4 (20 Jun 2014)
+
+  20 Jun 2014; Ian Delaney <idella4@gentoo.org> +south-0.8.4.ebuild,
+  -south-0.7.2.ebuild, -south-0.7.3.ebuild, -south-0.7.4.ebuild,
+  -south-0.7.6.ebuild, -south-0.8.1.ebuild:
+  bump; add py3 pypy support, fix test phase, closes Bug #513540, rm old
 
 *south-0.8.1-r1 (13 Mar 2014)
 
