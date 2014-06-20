@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.80 2014/06/19 21:05:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.81 2014/06/20 06:00:08 floppym Exp $
+
+  20 Jun 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/btrfs-progs-3.14.2-install-man.patch, btrfs-progs-3.14.2.ebuild:
+  Fix installation of btrfs-check manpage.
 
 *btrfs-progs-3.14.2 (19 Jun 2014)
 

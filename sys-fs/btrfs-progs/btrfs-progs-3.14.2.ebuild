@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-3.14.2.ebuild,v 1.1 2014/06/19 21:05:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-3.14.2.ebuild,v 1.2 2014/06/20 06:00:08 floppym Exp $
 
 EAPI=5
 
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-3.14.2-install-man.patch"
 	epatch_user
 }
 
