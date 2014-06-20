@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-3.0.2.ebuild,v 1.3 2014/01/26 10:53:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-3.0.2.ebuild,v 1.4 2014/06/20 17:29:22 kensington Exp $
 
 EAPI=5
 
@@ -25,6 +25,8 @@ RDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
+	media-libs/phonon
+	sys-libs/readline:0
 	acoustid? (
 		media-libs/chromaprint
 		virtual/ffmpeg
