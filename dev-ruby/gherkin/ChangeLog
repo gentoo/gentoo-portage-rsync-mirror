@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.64 2014/06/15 14:13:07 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.65 2014/06/20 16:11:31 maekke Exp $
+
+  20 Jun 2014; Markus Meier <maekke@gentoo.org> gherkin-2.12.0-r2.ebuild:
+  add ~arm, bug #510876
 
   15 Jun 2014; Akinori Hattori <hattya@gentoo.org> gherkin-2.12.0-r2.ebuild:
   keyword ~ia64 wrt bug #510876

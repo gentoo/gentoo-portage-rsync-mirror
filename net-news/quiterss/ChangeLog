@@ -1,6 +1,11 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.43 2014/04/26 19:13:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.44 2014/06/20 16:08:13 pinkbyte Exp $
+
+  20 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> quiterss-0.14.3.ebuild,
+  quiterss-0.15.3.ebuild, quiterss-0.15.4.ebuild, quiterss-9999.ebuild:
+  Add missing USE="X" to dev-qt/qtsingleapplication dependency, wrt bug
+  #513948. Thanks to Patrick Lauer for discovering this issue
 
 *quiterss-0.15.4 (26 Apr 2014)
 

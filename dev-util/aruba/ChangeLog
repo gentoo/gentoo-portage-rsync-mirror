@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.37 2014/06/15 14:12:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.38 2014/06/20 16:12:22 maekke Exp $
+
+  20 Jun 2014; Markus Meier <maekke@gentoo.org> aruba-0.5.4-r1.ebuild:
+  add ~arm, bug #510876
 
   15 Jun 2014; Akinori Hattori <hattya@gentoo.org> aruba-0.5.4-r1.ebuild:
   keyword ~ia64 wrt bug #510876
