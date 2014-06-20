@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.48 2014/06/13 01:21:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.49 2014/06/20 16:44:37 ryao Exp $
+
+  20 Jun 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  Disallow CONFIG_DEBUG_INFO_REDUCED when USE=debug is set
 
 *zfs-kmod-0.6.3 (13 Jun 2014)
 

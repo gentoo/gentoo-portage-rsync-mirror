@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.106.ebuild,v 1.3 2014/05/13 10:07:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.106.ebuild,v 1.5 2014/06/20 16:55:47 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="ftp://sources.redhat.com/pub/lvm2/${PN/lvm/LVM}.${PV}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="readline static static-libs clvm cman lvm1 lvm2create_initrd selinux +udev +thin device-mapper-only"
+IUSE="readline static static-libs systemd clvm cman lvm1 lvm2create_initrd selinux +udev +thin device-mapper-only"
 REQUIRED_USE="device-mapper-only? ( !clvm !cman !lvm1 !lvm2create_initrd !thin )"
 
 DEPEND_COMMON="clvm? ( cman? ( =sys-cluster/cman-3* ) =sys-cluster/libdlm-3* )
@@ -104,6 +104,7 @@ src_configure() {
 	myconf="${myconf} $(use_enable !device-mapper-only applib)"
 	myconf="${myconf} $(use_enable !device-mapper-only fsadm)"
 	myconf="${myconf} $(use_enable !device-mapper-only lvmetad)"
+	use device-mapper-only && myconf="${myconf} --disable-udev-systemd-background-jobs"
 
 	# Most of this package does weird stuff.
 	# The build options are tristate, and --without is NOT supported
@@ -180,6 +181,7 @@ src_configure() {
 		$(use_enable udev udev_rules) \
 		$(use_enable udev udev_sync) \
 		$(use_with udev udevdir "$(get_udevdir)"/rules.d) \
+		$(use_enable systemd udev-systemd-background-jobs) \
 		"$(systemd_with_unitdir)" \
 		${myconf} \
 		CLDFLAGS="${LDFLAGS}"
