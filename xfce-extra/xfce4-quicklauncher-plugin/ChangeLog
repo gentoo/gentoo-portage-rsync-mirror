@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-quicklauncher-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/ChangeLog,v 1.14 2012/11/28 12:22:24 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/ChangeLog,v 1.15 2014/06/20 13:25:46 ssuominen Exp $
+
+  20 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-quicklauncher-plugin-1.9.4-r1.ebuild:
+  Use AC_CONFIG_HEADERS instead of the deprecated AM_CONFIG_HEADER wrt #472522
+  by "Matt"
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-quicklauncher-plugin-1.9.4-r1.ebuild:
@@ -65,4 +70,3 @@
   25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-quicklauncher-plugin-1.9.4.ebuild:
   Rename xfce4-quicklauncher to xfce4-quicklauncher-plugin.
-
