@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.3.ebuild,v 1.1 2014/05/30 05:03:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.3.ebuild,v 1.2 2014/06/21 20:00:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -244,6 +244,11 @@ src_configure() {
 		${myconf}
 }
 
+src_compile() {
+	# Try to avoid issues like bug #463960
+	unset DISPLAY
+	gnome2_src_compile
+}
 src_test() {
 	# Tests expect an out-of-source build in WebKitBuild
 	ln -s . WebKitBuild || die "ln failed"
