@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/mcollective
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.23 2014/06/15 03:48:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.25 2014/06/21 11:00:01 ago Exp $
+
+  21 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mcollective-2.5.2.ebuild:
+  Stable for x86, wrt bug #513292
+
+  21 Jun 2014; Agostino Sarubbo <ago@gentoo.org> mcollective-2.5.2.ebuild:
+  Stable for amd64, wrt bug #513292
 
 *mcollective-2.5.2 (15 Jun 2014)
 
