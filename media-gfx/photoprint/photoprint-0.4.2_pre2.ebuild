@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoprint/photoprint-0.4.2_pre2.ebuild,v 1.4 2012/06/11 17:23:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoprint/photoprint-0.4.2_pre2.ebuild,v 1.5 2014/06/21 06:56:00 radhermit Exp $
 
 EAPI=4
 
@@ -38,9 +38,11 @@ src_prepare() {
 		"${FILESDIR}"/${P}-underlinking.patch \
 		"${FILESDIR}"/${P}-glib-2.32.patch
 
-	# Ships with po/Makefile.in.in from gettext-0.17
-	# which fails with >=gettext-0.18
-	sed -i -e "/AM_GNU_GETTEXT_VERSION/s/17/18/" configure.ac || die
+	# don't specify a gettext version
+	sed -i "/^AM_GNU_GETTEXT_VERSION/d" configure.ac || die
+
+	# avoid gettext version mismatches (bug #514082)
+	sed -i "/^GETTEXT_MACRO_VERSION/s/=.*/= @GETTEXT_MACRO_VERSION@/" po/Makefile.in.in || die
 
 	eautoreconf
 }

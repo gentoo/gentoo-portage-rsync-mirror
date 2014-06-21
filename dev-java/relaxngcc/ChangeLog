@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/relaxngcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.14 2014/06/17 11:29:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.15 2014/06/21 06:51:25 ercpe Exp $
+
+*relaxngcc-1.12-r2 (21 Jun 2014)
+
+  21 Jun 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/1.12-fix-jdk-1.7-enum.patch, +relaxngcc-1.12-r2.ebuild:
+  Bump to EAPI=5; fixed bug #514072: renamed variable named "enum" which cause
+  compile errors with jdk 1.7
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -relaxngcc-1.12.ebuild:
   NM: Cleanup superseded ebuilds.

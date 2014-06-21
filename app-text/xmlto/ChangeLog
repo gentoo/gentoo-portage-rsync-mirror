@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.90 2014/03/19 15:17:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.91 2014/06/21 06:59:51 ssuominen Exp $
+
+*xmlto-0.0.26 (21 Jun 2014)
+
+  21 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +xmlto-0.0.26.ebuild:
+  Version bump; fixing the --noextensions parameter which is required for
+  disabling fop java extensions as per
+  http://forums.gentoo.org/viewtopic-p-7571834.html
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> xmlto-0.0.25.ebuild:
   Stable for alpha, wrt bug #502630
