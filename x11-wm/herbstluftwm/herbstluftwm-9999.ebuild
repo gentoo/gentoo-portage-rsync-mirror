@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.10 2014/01/01 22:54:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.11 2014/06/21 06:26:05 radhermit Exp $
 
 EAPI=5
 inherit toolchain-funcs bash-completion-r1
@@ -24,6 +24,7 @@ IUSE="examples xinerama zsh-completion"
 
 CDEPEND=">=dev-libs/glib-2.24:2
 	x11-libs/libX11
+	x11-libs/libXext
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${CDEPEND}
 	app-shells/bash
