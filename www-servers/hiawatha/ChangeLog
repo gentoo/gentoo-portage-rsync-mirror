@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/hiawatha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.3 2014/05/23 17:17:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.4 2014/06/21 10:26:59 hasufell Exp $
+
+*hiawatha-9.6 (21 Jun 2014)
+
+  21 Jun 2014; Julian Ospald <hasufell@gentoo.org> +hiawatha-9.6.ebuild:
+  version bump
 
   23 May 2014; Julian Ospald <hasufell@gentoo.org>
   +files/hiawatha-9.5-cflags.patch, hiawatha-9.5.ebuild:

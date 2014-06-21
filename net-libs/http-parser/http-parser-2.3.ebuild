@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/http-parser-2.3.ebuild,v 1.1 2014/06/21 09:54:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/http-parser-2.3.ebuild,v 1.2 2014/06/21 10:05:49 hasufell Exp $
 
 EAPI=5
 
@@ -16,22 +16,24 @@ SRC_URI="https://github.com/joyent/http-parser/archive/v${PV}.tar.gz -> ${P}.tar
 LICENSE="MIT"
 SLOT="0/${SONAMEVER}"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="static-libs"
 
 src_prepare() {
-	tc-export CC
+	tc-export CC AR
 	epatch "${FILESDIR}"/${P}-flags.patch
 	multilib_copy_sources
 }
 
 multilib_src_compile() {
 	emake library
+	use static-libs && emake package
 }
 
 multilib_src_install() {
 	doheader http_parser.h
 	dolib.so ${SONAME}
 	dosym ${SONAME} /usr/$(get_libdir)/libhttp_parser.so
+	use static-libs && dolib.a libhttp_parser.a
 }
 
 multilib_src_install_all() {

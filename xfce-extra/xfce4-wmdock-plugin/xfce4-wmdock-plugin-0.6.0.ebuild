@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.6.0.ebuild,v 1.3 2014/04/20 08:50:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.6.0.ebuild,v 1.4 2014/06/21 10:20:26 ssuominen Exp $
 
 EAPI=5
 inherit multilib xfconf
@@ -15,17 +15,19 @@ KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND="x11-libs/gtk+:2
-	>=xfce-base/libxfce4util-4.8
-	>=xfce-base/libxfcegui4-4.8
-	>=xfce-base/xfce4-panel-4.8
+	>=xfce-base/libxfce4util-4.10
+	>=xfce-base/libxfcegui4-4.10
+	>=xfce-base/xfce4-panel-4.10
 	>=x11-libs/libwnck-2.8.1:1
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-LINGUAS.patch )
+
 	XFCONF=(
 		--libexecdir="${EPREFIX}"/usr/$(get_libdir)
 		$(xfconf_use_debug)

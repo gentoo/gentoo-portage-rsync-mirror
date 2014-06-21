@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/bacula
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.165 2014/04/10 16:13:10 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.166 2014/06/21 10:01:19 tomjbe Exp $
+
+*bacula-7.0.4 (21 Jun 2014)
+
+  21 Jun 2014; Thomas Beierlein <tomjbe@gentoo.org> +bacula-7.0.4.ebuild:
+  Bugfix release
 
 *bacula-7.0.2 (10 Apr 2014)
 
