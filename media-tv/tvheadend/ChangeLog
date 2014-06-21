@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/tvheadend
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/ChangeLog,v 1.4 2012/10/27 06:09:17 yngwin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/ChangeLog,v 1.5 2014/06/21 21:15:09 prometheanfire Exp $
+
+*tvheadend-3.4.27 (21 Jun 2014)
+*tvheadend-9999 (21 Jun 2014)
+
+  21 Jun 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/tvheadend.service, +tvheadend-3.4.27.ebuild, +tvheadend-9999.ebuild,
+  metadata.xml, tvheadend-3.2.ebuild:
+  bup  fixing bug 442418 fixing bug 499204
 
 *tvheadend-3.2 (27 Oct 2012)
 
