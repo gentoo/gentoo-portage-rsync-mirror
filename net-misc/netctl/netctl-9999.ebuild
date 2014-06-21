@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-9999.ebuild,v 1.11 2013/10/19 19:26:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-9999.ebuild,v 1.12 2014/06/21 17:55:44 floppym Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND="
 	>=net-dns/openresolv-3.5.4-r1
 	sys-apps/iproute2
 	sys-apps/systemd
-	!<net-misc/dhcpcd-5.6.7
+	!<net-misc/dhcpcd-6.4.0
 "
 
 src_prepare() {

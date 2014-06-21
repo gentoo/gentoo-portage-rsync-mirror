@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.6.ebuild,v 1.3 2014/06/14 10:43:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.6.ebuild,v 1.4 2014/06/21 17:55:44 floppym Exp $
 
 EAPI=5
 
@@ -34,6 +34,7 @@ RDEPEND="
 	sys-apps/iproute2
 	sys-apps/systemd
 	!<net-misc/dhcpcd-5.6.7
+	!>=net-misc/dhcpcd-6.4.0
 "
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.6.0.ebuild,v 1.2 2014/02/16 19:05:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.6.0.ebuild,v 1.3 2014/06/21 17:35:12 ottxor Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	virtual/mpi
+	sci-libs/fftw:3.0
 	system-boost? ( dev-libs/boost[python,mpi,${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}"
 
