@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.556 2014/06/18 19:18:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.558 2014/06/21 11:08:13 ago Exp $
+
+  21 Jun 2014; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p1-r1.ebuild,
+  openssl-1.0.0m.ebuild, openssl-1.0.1h-r1.ebuild:
+  Stable for x86, wrt bug #512506
+
+  21 Jun 2014; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p1-r1.ebuild,
+  openssl-1.0.0m.ebuild:
+  Stable for amd64, wrt bug #512506
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> openssl-0.9.8y-r1.ebuild,
   openssl-0.9.8z_p1-r2.ebuild, openssl-1.0.1g-r1.ebuild,
