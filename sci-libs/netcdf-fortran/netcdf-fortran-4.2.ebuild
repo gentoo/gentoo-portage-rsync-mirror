@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-fortran/netcdf-fortran-4.2.ebuild,v 1.5 2014/02/27 18:33:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-fortran/netcdf-fortran-4.2.ebuild,v 1.6 2014/06/21 22:55:59 jauhien Exp $
 
 EAPI=5
 
@@ -18,9 +18,10 @@ SLOT="0/5"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
-RDEPEND=""
+RDEPEND="sci-libs/netcdf"
 DEPEND="${RDEPEND}
-	dev-lang/cfortran"
+	dev-lang/cfortran
+"
 
 src_prepare() {
 	# use system cfortran

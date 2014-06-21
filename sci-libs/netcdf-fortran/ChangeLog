@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf-fortran
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-fortran/ChangeLog,v 1.5 2014/02/27 18:33:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-fortran/ChangeLog,v 1.6 2014/06/21 22:55:59 jauhien Exp $
+
+  21 Jun 2014; Jauhien Piatlicki <jauhien@gentoo.org> netcdf-fortran-4.2.ebuild:
+  fix dependencies: add sci-libs/netcdf-cxx wrt bug #514252, thanks to Patrick
+  Lauer
 
   27 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   netcdf-fortran-4.2.ebuild:
