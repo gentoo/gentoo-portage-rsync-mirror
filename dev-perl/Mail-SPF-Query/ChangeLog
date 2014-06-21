@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-SPF-Query
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF-Query/ChangeLog,v 1.38 2013/08/26 13:14:18 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF-Query/ChangeLog,v 1.39 2014/06/21 18:41:42 zlogene Exp $
+
+  21 Jun 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Mail-SPF-Query-1.999.1.ebuild, Mail-SPF-Query-1.999.1-r1.ebuild:
+  Merge stable keywords from -r0; Drop old.
 
 *Mail-SPF-Query-1.999.1-r1 (26 Aug 2013)
 
