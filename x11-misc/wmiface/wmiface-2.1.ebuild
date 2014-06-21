@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmiface/wmiface-2.1.ebuild,v 1.4 2013/03/02 23:54:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmiface/wmiface-2.1.ebuild,v 1.5 2014/06/21 17:03:21 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils
 
@@ -15,8 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="
+RDEPEND="
 	dev-qt/qtcore:4
 	x11-libs/libX11
 "
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	dev-qt/qtgui:4
+"
