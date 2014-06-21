@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-wapd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/ChangeLog,v 1.5 2014/02/23 21:03:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wapd/ChangeLog,v 1.6 2014/06/21 22:08:34 hd_brummy Exp $
+
+*vdr-wapd-0.9_p1-r1 (21 Jun 2014)
+
+  21 Jun 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-wapd-0.9_p1-r1.ebuild, +files/wapd.mk:
+  compile fix for obsoleted i18n issues, wrt bug 513414; new Makefile
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-wapd-0.9.ebuild,
   vdr-wapd-0.9_p1.ebuild:
