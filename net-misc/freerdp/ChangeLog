@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.63 2014/06/20 13:53:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.64 2014/06/21 01:55:09 floppym Exp $
+
+*freerdp-1.1.0_beta1_p20130710-r1 (21 Jun 2014)
+
+  21 Jun 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/freerdp-1.1-CVE-2014-0250.patch,
+  +freerdp-1.1.0_beta1_p20130710-r1.ebuild:
+  Add fix for CVE-2014-0250, bug 511688.
 
   20 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
   -freerdp-1.1.0_alpha20121004-r1.ebuild,
