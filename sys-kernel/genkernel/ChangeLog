@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.388 2014/06/21 05:13:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.389 2014/06/21 15:32:58 ryao Exp $
+
+  21 Jun 2014; Richard Yao <ryao@gentoo.org> genkernel-3.4.45.1.ebuild,
+  genkernel-3.4.48.ebuild, genkernel-3.4.49.1.ebuild, genkernel-3.4.49.2.ebuild,
+  genkernel-3.4.49.ebuild, genkernel-9999.ebuild:
+  Fix epatch_user, bug #514112
 
   21 Jun 2014; Patrick Lauer <patrick@gentoo.org> genkernel-3.4.49.2.ebuild:
   Comment out random failing epatch_user call
