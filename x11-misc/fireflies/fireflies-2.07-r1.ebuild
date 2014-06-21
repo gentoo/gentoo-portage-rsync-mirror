@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07-r1.ebuild,v 1.7 2013/11/25 10:24:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07-r1.ebuild,v 1.8 2014/06/21 19:27:12 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib
@@ -15,8 +15,9 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
-	x11-libs/libX11
-	virtual/opengl"
+	virtual/glu
+	virtual/opengl
+	x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 DOCS=( ChangeLog debian/README.Debian README )

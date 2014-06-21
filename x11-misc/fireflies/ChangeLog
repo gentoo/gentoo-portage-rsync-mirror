@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/fireflies
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.29 2013/11/25 10:24:34 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.31 2014/06/21 19:27:50 ssuominen Exp $
+
+  21 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -fireflies-2.07.ebuild:
+  old
+
+  21 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> fireflies-2.07-r1.ebuild:
+  Missing virtual/glu dependency for GL/glu.h header wrt #514126
 
   25 Nov 2013; Samuli Suominen <ssuominen@gentoo.org>
   +files/fireflies-2.07-libgfx-libpng16.patch, fireflies-2.07-r1.ebuild:
