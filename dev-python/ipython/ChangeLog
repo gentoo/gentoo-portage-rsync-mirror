@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.136 2014/03/16 02:42:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.137 2014/06/21 08:10:07 idella4 Exp $
+
+  21 Jun 2014; Ian Delaney <idella4@gentoo.org> ipython-1.2.1.ebuild:
+  drop py2.6 add py3.4, update test phase
 
   16 Mar 2014; Mike Frysinger <vapier@gentoo.org> ipython-1.2.1.ebuild:
   Add ia64 love.
