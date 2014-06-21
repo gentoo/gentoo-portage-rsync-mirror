@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.60 2014/05/23 12:36:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.61 2014/06/21 01:09:01 idella4 Exp $
+
+  21 Jun 2014; Ian Delaney <idella4@gentoo.org> pyside-1.2.2.ebuild:
+  add py3.4 support
 
 *pyside-1.2.2 (23 May 2014)
 
