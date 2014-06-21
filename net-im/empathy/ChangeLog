@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.148 2014/06/12 18:16:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.149 2014/06/21 20:02:54 pacho Exp $
+
+  21 Jun 2014; Pacho Ramos <pacho@gentoo.org> empathy-3.12.3.ebuild:
+  Fix tests failing due dbus issues (#504516 by Emeric Maschino)
 
 *empathy-3.12.3 (12 Jun 2014)
 

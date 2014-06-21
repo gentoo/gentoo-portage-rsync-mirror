@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.20.1.ebuild,v 1.2 2014/06/20 20:58:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.20.1.ebuild,v 1.3 2014/06/21 20:25:57 robbat2 Exp $
 
 EAPI="5"
 MODULES_OPTIONAL_USE=modules
@@ -12,7 +12,7 @@ SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 RDEPEND=">=net-firewall/iptables-1.4.7
 	net-libs/libmnl"
