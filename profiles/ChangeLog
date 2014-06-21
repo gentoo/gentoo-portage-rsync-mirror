@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9100 2014/06/19 03:12:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9101 2014/06/21 09:47:13 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jun 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  unmask latest sssd
 
   19 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Moved emul-linux-x86-baselibs-20140508-r{10,11} to -r{13,14} to allow
