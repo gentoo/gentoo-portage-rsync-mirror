@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/kodkod-1.5.2.ebuild,v 1.3 2014/02/11 14:29:54 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/kodkod-1.5.2.ebuild,v 1.4 2014/06/22 13:52:20 gienah Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ inherit java-pkg-2 waf-utils
 DESCRIPTION="a constraint solver for relational logic"
 HOMEPAGE="http://alloy.mit.edu/kodkod/index.html"
 SRC_URI="http://alloy.mit.edu/kodkod/${PV}/${P}.zip
-	http://waf.googlecode.com/files/waf-1.7.6"
+	http://waf.googlecode.com/files/waf-1.7.16"
 LICENSE="MIT"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
@@ -85,7 +85,14 @@ src_compile() {
 	waf-utils_src_compile
 	if has doc ${JAVA_PKG_IUSE} && use doc; then
 		pushd src/kodkod || die "Could not cd to src/kodkod"
-		javadoc $(find . -name \*.java -print) \
+		local doclint="-Xdoclint:none"
+		local jv="$(javac -version 2>&1 | cut -d' ' -f 2)"
+		if [[ "${jv}" == 1.6* ]] || [[ "${jv}" == 1.7* ]]; then
+			doclint=""
+		fi
+		javadoc ${doclint} -sourcepath "${S}"/src/kodkod:"${S}"/build/src/kodkod \
+			-classpath $(find "${PWD}" -name \*.jar -print | xargs | sed -e 's@ @:@g') \
+			$(find . -name \*.java -print) \
 			|| die "javadoc failed"
 		popd
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lockdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.15 2014/05/30 07:44:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.16 2014/06/22 13:49:08 hattya Exp $
+
+  22 Jun 2014; Akinori Hattori <hattya@gentoo.org> lockdev-1.0.3.1.2-r1.ebuild,
+  lockdev-1.0.3.1.2-r2.ebuild, lockdev-1.0.3.1.2-r3.ebuild:
+  keyword ~ia64 wrt bug #493156
 
   30 May 2014; Michał Górny <mgorny@gentoo.org> lockdev-1.0.3.1.2-r3.ebuild:
   Fix Perl module build to use relative ${PERL_S}.
