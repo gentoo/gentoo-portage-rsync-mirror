@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1011 2014/06/19 13:32:19 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1013 2014/06/22 21:54:56 zlogene Exp $
+
+  22 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> kdelibs-4.12.5-r1.ebuild:
+  x86 stable wrt bug #513726
+
+  22 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> kdelibs-4.12.5-r1.ebuild:
+  amd64 stable wrt bug #513726
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -kdelibs-4.13.1-r1.ebuild:
   Remove KDE SC 4.13.1

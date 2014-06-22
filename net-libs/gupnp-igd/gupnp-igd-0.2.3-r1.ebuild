@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.3-r1.ebuild,v 1.2 2014/06/18 20:36:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.3-r1.ebuild,v 1.3 2014/06/22 21:36:57 mgorny Exp $
 
 EAPI=5
 
@@ -39,13 +39,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-0.1.11-disable_static_modules.patch
 )
 
-src_prepare() {
-	# Python bindings are built/installed manually.
-	if use python; then
-		sed -e "/PYTHON_SUBDIR =/s/ python//" -i Makefile.am Makefile.in || die
-	fi
-}
-
 multilib_src_configure() {
 	local myconf=(
 		--disable-static
@@ -70,7 +63,7 @@ multilib_src_configure() {
 				--enable-python
 		}
 
-		python_parallel_foreach_impl python_configure
+		use python && python_parallel_foreach_impl python_configure
 	fi
 }
 
