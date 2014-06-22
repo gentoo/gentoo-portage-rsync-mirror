@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/XenAPI/XenAPI-1.2.ebuild,v 1.2 2013/12/05 05:20:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/XenAPI/XenAPI-1.2.ebuild,v 1.3 2014/06/22 01:19:17 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,3 +14,5 @@ SRC_URI="mirror://pypi/X/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
+
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

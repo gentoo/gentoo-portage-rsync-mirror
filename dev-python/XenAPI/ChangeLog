@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/XenAPI
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/XenAPI/ChangeLog,v 1.2 2013/12/05 05:20:19 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/XenAPI/ChangeLog,v 1.3 2014/06/22 01:19:17 idella4 Exp $
+
+  22 Jun 2014; Ian Delaney <idella4@gentoo.org> XenAPI-1.2.ebuild:
+  add setuptools dep, fixes Bug #514272 by our Patrick
 
   05 Dec 2013; Ian Delaney <idella4@gentoo.org> XenAPI-1.2.ebuild:
   woops, syntax corrections by jer
