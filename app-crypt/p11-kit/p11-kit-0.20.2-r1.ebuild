@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.2-r1.ebuild,v 1.3 2014/06/18 19:00:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/p11-kit-0.20.2-r1.ebuild,v 1.4 2014/06/22 17:32:20 mgorny Exp $
 
 EAPI=5
 
@@ -30,6 +30,11 @@ multilib_src_configure() {
 		$(use_enable trust trust-module) \
 		$(use_enable debug) \
 		$(use_with asn1 libtasn1)
+
+	if multilib_is_native_abi; then
+		# re-use provided documentation
+		ln -s "${S}"/doc/manual/html doc/manual/html || die
+	fi
 }
 
 multilib_src_install_all() {
