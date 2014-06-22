@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-3.4.27.ebuild,v 1.1 2014/06/21 21:15:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-3.4.27.ebuild,v 1.2 2014/06/22 20:05:06 prometheanfire Exp $
 
 EAPI=5
 
@@ -16,23 +16,20 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="avahi ccache curl +dvb +dvbscan ffmpeg imagecache inotify uriparser xmltv zlib"
+IUSE="avahi +dvb +dvbscan ffmpeg imagecache inotify xmltv zlib"
 
-REQUIRED_USE="
-	dvbscan? ( dvb )
-	imagecache? ( curl )"
+REQUIRED_USE="dvbscan? ( dvb )"
 
 DEPEND="dev-libs/openssl
 	avahi? ( net-dns/avahi )
-	ccache? ( dev-util/ccache )
-	curl? ( net-misc/curl )
 	dvb? ( virtual/linuxtv-dvb-headers )
 	ffmpeg? ( virtual/ffmpeg )
-	uriparser? ( dev-libs/uriparser )
-	zlib? ( sys-libs/zlib )"
+	imagecache? ( net-misc/curl )
+	zlib? ( sys-libs/zlib )
+	virtual/pkgconfig"
 
 RDEPEND="${DEPEND}
-	dvb? ( media-tv/linuxtv-dvb-apps )
+	dvbscan? ( media-tv/linuxtv-dvb-apps )
 	xmltv? ( media-tv/xmltv )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -59,14 +56,11 @@ src_configure() {
 		--datadir="${EPREFIX}"/usr/share \
 		--mandir="${EPREFIX}"/usr/share/man/man1 \
 		$(use_enable avahi) \
-		$(use_enable ccache) \
-		$(use_enable curl) \
 		--disable-dvbscan \
 		$(use_enable dvb linuxdvb) \
 		$(use_enable ffmpeg libav) \
-		$(use_enable imagecache) \
+		$(use_enable curl imagecache) \
 		$(use_enable inotify) \
-		$(use_enable uriparser) \
 		$(use_enable zlib)
 }
 

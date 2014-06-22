@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/389-admin-console
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.8 2011/11/27 19:25:07 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.9 2014/06/22 20:30:30 lxnay Exp $
+
+  22 Jun 2014; Fabio Erculiani <lxnay@gentoo.org> metadata.xml:
+  reset to maintainer-needed@
 
   27 Nov 2011; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Removed trailing whitespace.
@@ -44,4 +47,3 @@
   +389-admin-console-1.1.4.ebuild, +metadata.xml:
   new ebuild, part of 389 Directory Server (http://port389.org), closes bug
   #309549
-
