@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.19 2014/06/18 19:10:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.20 2014/06/22 14:44:25 hattya Exp $
+
+  22 Jun 2014; Akinori Hattori <hattya@gentoo.org> isl-0.11.1.ebuild,
+  isl-0.12.2.ebuild, isl-0.13.ebuild:
+  keyword ~ia64 wrt bug #487266
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> isl-0.12.2.ebuild,
   isl-0.13.ebuild:
