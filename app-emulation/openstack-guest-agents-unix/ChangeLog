@@ -1,0 +1,15 @@
+# ChangeLog for app-emulation/openstack-guest-agents-unix
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.1 2014/06/22 02:06:59 robbat2 Exp $
+
+*openstack-guest-agents-unix-1.39.0 (22 Jun 2014)
+*openstack-guest-agents-unix-1.39.0-r1 (22 Jun 2014)
+
+  22 Jun 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openstack-guest-agents-unix-1.39.0-python2.patch,
+  +files/patches-1.39.0-20140621.patch, +metadata.xml,
+  +openstack-guest-agents-unix-1.39.0-r1.ebuild,
+  +openstack-guest-agents-unix-1.39.0.ebuild:
+  New packages for infra use, in package.mask because not fully baked yet,
+  upstream does QA-horrible things like copy parts of system /lib to a subdir.
+  Initial ebuild from alunduil's overlay

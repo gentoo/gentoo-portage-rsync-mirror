@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15808 2014/06/21 09:47:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15809 2014/06/22 02:04:50 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (21 Jun 2014)
+# Needs work, but infra needs it for new VM boxes
+app-emulation/openstack-guest-agents-unix
+app-emulation/xe-guest-utilities
 
 # Anthony G. Basile <blueness@gentoo.org> (14 Jun 2014)
 # Masked for removal in 30 days, bug #495848
