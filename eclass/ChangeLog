@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1296 2014/06/20 11:40:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1297 2014/06/22 07:01:37 mgorny Exp $
+
+  22 Jun 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Set LD{,CXX}SHARED properly for Darwin, reported by Fabian Groffen on bug
+  #513664.
 
   20 Jun 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Fix typo in submodule fetching, reported by Hans Vercammen.
