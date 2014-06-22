@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.46 2014/06/17 08:45:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.47 2014/06/22 16:08:25 pacho Exp $
+
+*gnubiff-2.2.15-r2 (22 Jun 2014)
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org> +gnubiff-2.2.15-r2.ebuild:
+  Looks like, for some reason, panel wasn't finally disabled
 
   17 Jun 2014; Pacho Ramos <pacho@gentoo.org> gnubiff-2.2.15-r1.ebuild:
   amd64 stable, bug #510664

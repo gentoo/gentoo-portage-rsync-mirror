@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmfishtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.29 2014/04/07 19:41:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.30 2014/06/22 16:25:10 voyageur Exp $
+
+  22 Jun 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  files/wmfishtime-1.24-gtk.patch:
+  Link with libm, spotted by patrick in bug #513908
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmfishtime-1.24-r1.ebuild,
   wmfishtime-1.24-r2.ebuild:
