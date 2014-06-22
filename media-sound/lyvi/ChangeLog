@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/lyvi
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lyvi/ChangeLog,v 1.1 2014/06/22 13:13:31 idella4 Exp $
+
+*lyvi-2.0.0 (22 Jun 2014)
+
+  22 Jun 2014; Ian Delaney <idella4@gentoo.org> +lyvi-2.0.0.ebuild,
+  +metadata.xml:
+  New ebuild written by Witold Pilat who is assigned proxy maintainer. Closes
+  Bug #431842

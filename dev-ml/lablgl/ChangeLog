@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.79 2014/01/26 12:11:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.80 2014/06/22 13:17:05 ago Exp $
+
+  22 Jun 2014; Agostino Sarubbo <ago@gentoo.org> lablgl-1.05.ebuild:
+  Stable for ppc64, wrt bug #510670
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lablgl-1.05.ebuild:
   Stable for sparc, wrt bug #495416

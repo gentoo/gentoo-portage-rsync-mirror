@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/pianobar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.33 2014/03/01 22:16:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.35 2014/06/22 13:08:28 radhermit Exp $
+
+  22 Jun 2014; Tim Harder <radhermit@gentoo.org>
+  -pianobar-2012.12.01-r1.ebuild, -pianobar-2013.05.19.ebuild,
+  -files/pianobar-2011.12.11-tests.patch,
+  -files/pianobar-2012.12.01-json-c-0.11.patch,
+  -files/pianobar-2013.05.19-tests.patch:
+  Remove old.
+
+*pianobar-2014.06.08 (22 Jun 2014)
+
+  22 Jun 2014; Tim Harder <radhermit@gentoo.org> +pianobar-2014.06.08.ebuild,
+  pianobar-9999.ebuild:
+  Version bump and update live ebuild.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> pianobar-2012.12.01-r1.ebuild,
   pianobar-2013.05.19.ebuild, pianobar-2013.09.15.ebuild, pianobar-9999.ebuild:
