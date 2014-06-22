@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/github-pages-publish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/github-pages-publish/ChangeLog,v 1.3 2014/01/12 00:27:56 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/github-pages-publish/ChangeLog,v 1.4 2014/06/22 00:08:22 rafaelmartins Exp $
+
+  22 Jun 2014; Rafael G. Martins <rafaelmartins@gentoo.org>
+  github-pages-publish-0.1.2.ebuild:
+  fixed deps. bug #514274
 
 *github-pages-publish-0.1.2 (12 Jan 2014)
 

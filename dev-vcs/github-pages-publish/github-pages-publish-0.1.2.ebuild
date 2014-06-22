@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/github-pages-publish/github-pages-publish-0.1.2.ebuild,v 1.1 2014/01/12 00:27:56 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/github-pages-publish/github-pages-publish-0.1.2.ebuild,v 1.2 2014/06/22 00:08:22 rafaelmartins Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-python/pygit2-0.20.0
+DEPEND="dev-python/setuptools
+	>=dev-python/pygit2-0.20.0
 	virtual/python-argparse"
 RDEPEND="${DEPEND}"
