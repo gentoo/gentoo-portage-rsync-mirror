@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-7260-bt-ucode/iwl3160-7260-bt-ucode-37.10.10-r1.ebuild,v 1.1 2014/01/31 13:05:34 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-7260-bt-ucode/iwl3160-7260-bt-ucode-37.10.10-r1.ebuild,v 1.2 2014/06/22 14:09:36 gienah Exp $
 
 EAPI=5
 inherit linux-info
@@ -21,7 +21,7 @@ RDEPEND="!sys-kernel/linux-firmware[-savedconfig]"
 
 S="${WORKDIR}"
 
-CONFIG_CHECK="IWLMVM"
+CONFIG_CHECK="~IWLMVM"
 ERROR_IWLMVM="CONFIG_IWLMVM is required to be enabled in /usr/src/linux/.config for the kernel to be able to load the 7260 firmware"
 
 pkg_pretend() {

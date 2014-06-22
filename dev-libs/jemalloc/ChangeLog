@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.39 2014/06/19 01:35:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.40 2014/06/22 14:10:48 hattya Exp $
+
+  22 Jun 2014; Akinori Hattori <hattya@gentoo.org> jemalloc-3.6.0.ebuild:
+  ia64 stable wrt bug #512330
 
   19 Jun 2014; Jeroen Roovers <jer@gentoo.org> jemalloc-3.6.0.ebuild:
   Stable for HPPA (bug #512330).

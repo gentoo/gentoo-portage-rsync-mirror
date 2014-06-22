@@ -8,4 +8,4 @@ RDEPEND=!sys-kernel/linux-firmware[-savedconfig]
 SLOT=0
 SRC_URI=mirror://gentoo/iwl3160-7260-bt-ucode-37.10.10.tgz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=8e205a2f8adb367427cfd1cbf7a93a3a
+_md5_=53e97fcd9229fedf936ed5c5646cd07f
