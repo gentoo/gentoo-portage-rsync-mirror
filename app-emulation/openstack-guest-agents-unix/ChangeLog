@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/openstack-guest-agents-unix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.1 2014/06/22 02:06:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.2 2014/06/22 04:16:14 robbat2 Exp $
+
+*openstack-guest-agents-unix-1.39.0-r2 (22 Jun 2014)
+
+  22 Jun 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +openstack-guest-agents-unix-1.39.0-r2.ebuild:
+  Cleanup idea from floppym: just toss all entire install-exec-local deps; it
+  does seem to work still. Still have some some libs and bins built into
+  /usr/share/nova-agent, but much better.
 
 *openstack-guest-agents-unix-1.39.0 (22 Jun 2014)
 *openstack-guest-agents-unix-1.39.0-r1 (22 Jun 2014)
