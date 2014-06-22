@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mount-gtk/mount-gtk-1.4.2.ebuild,v 1.1 2013/06/04 19:22:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mount-gtk/mount-gtk-1.4.2.ebuild,v 1.2 2014/06/22 10:13:14 ssuominen Exp $
 
 EAPI=5
-inherit autotools flag-o-matic
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="GTK+ based UDisks2 frontend"
 HOMEPAGE="http://mount-gtk.sourceforge.net/"
@@ -25,12 +25,13 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS BUGS ChangeLog )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-c++11.patch
 	sed -i -e 's:AC_CONFIG_HEADER:&S:' configure.ac || die
 	eautoreconf
 }
 
 src_configure() {
-	append-cxxflags -fexceptions -frtti -fsigned-char -fno-check-new -pthread -std=c++11
-#	unset CXXFLAGS
+	# acinclude.m4 is broken and environment flags override these:
+	append-cxxflags -fexceptions -frtti -fsigned-char -fno-check-new -pthread
 	econf --docdir=/usr/share/doc/${PF}
 }

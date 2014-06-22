@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/elektra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.16 2013/04/22 14:17:35 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.17 2014/06/22 10:01:43 mgorny Exp $
+
+*elektra-0.8.3-r3 (22 Jun 2014)
+
+  22 Jun 2014; Michał Górny <mgorny@gentoo.org> +elektra-0.8.3-r3.ebuild:
+  Fix dependencies. Clean up. Restrict tests since they try to write to home
+  directory without respecting ${HOME}.
 
 *elektra-0.8.3-r2 (22 Apr 2013)
 *elektra-0.7.1-r4 (22 Apr 2013)

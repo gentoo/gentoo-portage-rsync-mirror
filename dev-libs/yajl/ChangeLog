@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.38 2014/06/16 18:30:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.39 2014/06/22 10:01:32 mgorny Exp $
+
+*yajl-1.0.11-r1 (22 Jun 2014)
+
+  22 Jun 2014; Michał Górny <mgorny@gentoo.org> +yajl-1.0.11-r1.ebuild:
+  Enable multilib support on yajl-1, needed by app-admin/elektra.
 
 *yajl-2.0.4-r3 (16 Jun 2014)
 
