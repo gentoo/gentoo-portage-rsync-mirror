@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-0.4.0.ebuild,v 1.1 2014/04/27 17:33:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-0.4.0.ebuild,v 1.2 2014/06/22 21:20:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -56,5 +56,5 @@ src_configure() {
 }
 
 src_test() {
-	Xemake check
+	dbus-launch Xemake check #513502
 }

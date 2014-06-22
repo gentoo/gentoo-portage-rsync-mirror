@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15809 2014/06/22 02:04:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15811 2014/06/22 21:27:38 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (22 Jun 2014)
+# Underlinking issues, upstream dead for ages, still relies
+# on gnome2 stuff, bug #371839. Removal in a month.
+x11-misc/keytouch
+x11-misc/keytouch-editor
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jun 2014)
+# Breaks gitg-0.3.2 (most recent released version), bug #514468
+>=dev-libs/libgit2-glib-0.0.14
 
 # Robin H. Johnson <robbat2@gentoo.org> (21 Jun 2014)
 # Needs work, but infra needs it for new VM boxes

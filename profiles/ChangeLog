@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9104 2014/06/22 15:17:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9106 2014/06/22 21:27:38 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask keytouch* for removal (#371839)
+
+  22 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Mask >=dev-libs/libgit2-glib-0.0.14 until a compatible gitg version is
+  released (bug #514468).
 
   22 Jun 2014; Pacho Ramos <pacho@gentoo.org>
   targets/desktop/gnome/package.use:
