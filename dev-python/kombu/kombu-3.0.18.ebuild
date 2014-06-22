@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-3.0.18.ebuild,v 1.1 2014/06/07 12:27:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-3.0.18.ebuild,v 1.2 2014/06/22 08:32:46 idella4 Exp $
 
 EAPI=5
 
@@ -47,6 +47,7 @@ DISTUTILS_IN_SOURCE_BUILD=1
 PY27_REQUSE="$(python_gen_useflags 'python2.7')"
 REQUIRED_USE="sqs? ( ${PY27_REQUSE} )
 		doc? ( ${PY27_REQUSE} amqplib sqs )"	# 2 deps in doc build are only py2 capable
+PATCHES=( "${FILESDIR}"/${PN}-NA-tests-fix.patch )
 
 python_prepare_all() {
 	https://github.com/celery/kombu/issues/246
@@ -64,16 +65,14 @@ python_compile_all() {
 
 python_test() {
 	export DJANGO_SETTINGS_MODULE="django.conf"
-	# https://github.com/celery/kombu/issues/364. Cleaner for now to ignore the whole test_ file
 	if python_is_python3; then
 		2to3 --no-diffs -w build/lib/kombu/transport/
-		nosetests --py3where=build/lib kombu/tests -I test_amqplib.py || die "Tests failed under ${EPYTHON}"
+		nosetests --py3where=build/lib kombu/tests || die "Tests failed under ${EPYTHON}"
 	else
 		# funtests appears to be coded only for py2, a kind of 2nd tier.
-		nosetests "${S}"/kombu/tests -I test_amqplib.py || die "Tests failed under ${EPYTHON}"
+		nosetests "${S}"/kombu/tests || die "Tests failed under ${EPYTHON}"
 		pushd funtests > /dev/null
-		# For now, use nosetests manually, return to esetup.py on fixing of issues/364
-		nosetests -I test_amqplib.py || die "Tests failed under ${EPYTHON}"
+		esetup.py test
 		popd > /dev/null
 	fi
 }
