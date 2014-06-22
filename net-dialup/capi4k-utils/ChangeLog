@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.79 2014/06/22 18:32:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.80 2014/06/22 20:50:59 zlogene Exp $
+
+  22 Jun 2014; Mikle Kolyada <zlogene@gentoo.org>
+  capi4k-utils-20050718-r6.ebuild:
+  ppc stable wrt bug #511800
 
   22 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
   capi4k-utils-20050718-r6.ebuild:

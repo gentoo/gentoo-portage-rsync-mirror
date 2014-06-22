@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/389-ds-console
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.9 2013/03/14 17:51:08 lxnay Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.10 2014/06/22 20:33:10 lxnay Exp $
+
+  22 Jun 2014; Fabio Erculiani <lxnay@gentoo.org> metadata.xml:
+  reset to maintainer-needed@
 
   14 Mar 2013; Fabio Erculiani <lxnay@gentoo.org>
   -389-ds-console-1.2.3-r1.ebuild:
@@ -42,4 +45,3 @@
   +389-ds-console-1.2.3.ebuild, +metadata.xml:
   new ebuild, thanks to Andreis_Vinogradovs ( slepnoga )
   <spamslepnoga@inbox.ru> for reporting, close bug #309553
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/389-adminutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/389-adminutil/ChangeLog,v 1.7 2014/03/02 21:37:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/389-adminutil/ChangeLog,v 1.8 2014/06/22 20:34:24 lxnay Exp $
+
+  22 Jun 2014; Fabio Erculiani <lxnay@gentoo.org> metadata.xml:
+  reset to maintainer-needed@
 
   02 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   389-adminutil-1.1.15.ebuild:
@@ -36,4 +39,3 @@
   +389-adminutil-1.1.10.ebuild, +metadata.xml:
   new ebuild, thanks to Andreis_Vinogradovs ( slepnoga )
   <spamslepnoga@inbox.ru>, closing bug #309557
-

@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/389-admin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.12 2014/03/04 21:46:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/ChangeLog,v 1.13 2014/06/22 20:35:46 lxnay Exp $
+
+  22 Jun 2014; Fabio Erculiani <lxnay@gentoo.org> metadata.xml:
+  reset to maintainer-needed@
 
   04 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   389-admin-1.1.31.ebuild:

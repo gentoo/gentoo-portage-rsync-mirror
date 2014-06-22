@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>lxnay@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>The enterprise-class Open Source LDAP server for Linux</longdescription> 
 <use>

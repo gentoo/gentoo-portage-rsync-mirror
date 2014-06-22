@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r2.ebuild,v 1.1 2014/06/22 12:38:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r2.ebuild,v 1.2 2014/06/22 20:51:53 mgorny Exp $
 
 EAPI=5
 
@@ -105,9 +105,11 @@ multilib_src_configure() {
 }
 
 multilib_src_install_all() {
-	dodoc AUTHORS ChangeLog README
-	if use doc ; then
-		mv "${ED}/usr/share/doc/${PN}/*" "${ED}/usr/share/doc/${P}" || die
+	if use doc; then
+		mv "${ED%/}"/usr/share/doc/{${PN},${PF}} || die
+	else
+		rm -rf "${ED%/}"/usr/share/doc/${PN} || die
 	fi
-	rm -rf "${ED}/usr/share/doc/${PN}" || die
+
+	dodoc AUTHORS ChangeLog README
 }

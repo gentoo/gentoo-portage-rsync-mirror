@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>lxnay@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 	<longdescription>A Java Management Console framework used for remote server
 	management.</longdescription> 
