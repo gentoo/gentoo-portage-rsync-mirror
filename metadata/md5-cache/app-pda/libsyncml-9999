@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile configure install preinst prepare setup test unpack
-DEPEND=>=dev-libs/glib-2.12 >=dev-libs/libwbxml-0.10 dev-libs/libxml2 http? ( net-libs/libsoup:2.4 ) obex? ( net-wireless/bluez >=dev-libs/openobex-1.1[bluetooth] ) virtual/pkgconfig doc? ( app-doc/doxygen ) test? ( >=dev-libs/check-0.9.7 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEFINED_PHASES=compile configure install preinst prepare test unpack
+DEPEND=>=dev-libs/glib-2.12 >=dev-libs/libwbxml-0.11.0 dev-libs/libxml2 http? ( net-libs/libsoup:2.4 ) obex? ( net-wireless/bluez >=dev-libs/openobex-1.1[bluetooth] ) virtual/pkgconfig doc? ( app-doc/doxygen ) test? ( >=dev-libs/check-0.9.7 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Implementation of the SyncML protocol
-EAPI=2
+EAPI=5
 HOMEPAGE=http://libsyncml.opensync.org/
 IUSE=+debug doc http +obex test
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=LGPL-2.1
-RDEPEND=>=dev-libs/glib-2.12 >=dev-libs/libwbxml-0.10 dev-libs/libxml2 http? ( net-libs/libsoup:2.4 ) obex? ( net-wireless/bluez >=dev-libs/openobex-1.1[bluetooth] )
+RDEPEND=>=dev-libs/glib-2.12 >=dev-libs/libwbxml-0.11.0 dev-libs/libxml2 http? ( net-libs/libsoup:2.4 ) obex? ( net-wireless/bluez >=dev-libs/openobex-1.1[bluetooth] )
+REQUIRED_USE=|| ( http obex )
 SLOT=0
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a46bf23b213bced67aa5037686d367ae
+_md5_=e45a420179006f305f3677a1d00d220e

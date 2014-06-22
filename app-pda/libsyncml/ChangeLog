@@ -1,6 +1,16 @@
 # ChangeLog for app-pda/libsyncml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.20 2012/05/03 20:20:59 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.22 2014/06/22 11:44:58 ssuominen Exp $
+
+  22 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libsyncml-0.5.4.ebuild,
+  libsyncml-9999.ebuild:
+  Raise libwbxml dependency to ensure everyone has the headers in the same
+  place.
+
+  22 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> libsyncml-0.5.4.ebuild,
+  libsyncml-9999.ebuild:
+  Fix building with >=dev-libs/libwbxml-0.11.0 by using #include <wbxml/wbxml.h>
+  instead of #include <wbxml.h> wrt #425738 by Diego Elio Pettenò
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> libsyncml-0.5.4.ebuild,
   libsyncml-9999.ebuild:
@@ -109,4 +119,3 @@
   13 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
   +libsyncml-0.4.2.ebuild:
   New package.
-

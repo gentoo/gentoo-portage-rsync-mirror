@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/namecoind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/namecoind/ChangeLog,v 1.2 2014/01/08 06:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/namecoind/ChangeLog,v 1.3 2014/06/22 11:44:15 blueness Exp $
+
+  22 Jun 2014; Anthony G. Basile <blueness@gentoo.org> namecoind-0.3.72.ebuild:
+  Add dependency on dev-libs/glib:2, bug #514362
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> namecoind-0.3.72.ebuild:
   Inherit the user eclass for enewuser/etc...
