@@ -81,7 +81,7 @@ This patch has been mailed to upstream. No reply at this time. Status unknown.
  
  # Options for the compiler: A high optimization level is suggested
 -CFLAGS = -O2 -W -Wno-unused-result
-+CFLAGS += -W -Wno-unused-result
++CFLAGS += -W
  # CFLAGS = -O -g -W -Wall -Wno-unused-result -ansi -pedantic # -DDEBUG
  
  export CC CFLAGS
