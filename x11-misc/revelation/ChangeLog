@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/revelation
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.30 2012/11/25 11:32:26 tristan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.31 2014/06/22 19:46:07 pacho Exp $
+
+*revelation-0.4.14-r1 (22 Jun 2014)
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org> +revelation-0.4.14-r1.ebuild,
+  revelation-0.4.14.ebuild:
+  Disable applet support as it is for gnome2, port to new python eclasses.
 
   25 Nov 2012; Tristan Heaven <tristan@gentoo.org> revelation-0.4.14.ebuild:
   Depend on dbus-python, bug #444592
@@ -119,4 +125,3 @@
   29 Dec 2006; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
   +revelation-0.4.7.ebuild:
   Initial commit, bug #38809
-
