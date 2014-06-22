@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.18 2014/05/20 09:42:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.19 2014/06/22 18:07:15 williamh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
@@ -26,8 +26,6 @@ IUSE="zsh-completion"
 
 RDEPEND="${DEPEND}
 	zsh-completion? ( app-shells/zsh )"
-
-PATCHES=( "${FILESDIR}"/${P}-bugzilla-4.4.1.patch )
 
 python_install_all() {
 	distutils-r1_python_install_all

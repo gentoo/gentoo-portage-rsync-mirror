@@ -1,6 +1,10 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.117 2014/05/21 09:16:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.118 2014/06/22 18:07:15 williamh Exp $
+
+  22 Jun 2014; William Hubbs <william@gentoo.org>
+  -files/pybugz-9999-bugzilla-4.4.1.patch, pybugz-9999.ebuild:
+  Move the token support upstream
 
 *pybugz-0.10.1-r2 (21 May 2014)
 
