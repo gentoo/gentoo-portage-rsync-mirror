@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/DFBPoint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.17 2012/05/05 07:00:26 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.18 2014/06/22 09:40:13 pacho Exp $
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org> DFBPoint-0.7.2.ebuild:
+  Fix building due DEPRECATED warnings (#514050)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> DFBPoint-0.7.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
