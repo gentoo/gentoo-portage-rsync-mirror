@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.77 2014/06/16 12:19:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.78 2014/06/22 15:34:04 pinkbyte Exp $
+
+  22 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
+  capi4k-utils-20050718-r6.ebuild:
+  Improve fix for bug #511800 by utilizing versionator eclass
 
   16 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
   capi4k-utils-20050718-r6.ebuild:

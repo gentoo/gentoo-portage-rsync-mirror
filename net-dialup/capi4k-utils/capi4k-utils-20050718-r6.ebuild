@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r6.ebuild,v 1.2 2014/06/16 12:19:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r6.ebuild,v 1.3 2014/06/22 15:34:04 pinkbyte Exp $
 
 EAPI=5
 
-inherit eutils linux-info multilib
+inherit eutils linux-info multilib versionator
 
 YEAR_PV="${PV:0:4}"
 MON_PV="${PV:4:2}"
@@ -50,6 +50,7 @@ pkg_setup() {
 	if use pppd; then
 		local INSTALLED_PPP="$(best_version net-dialup/ppp)"
 		PPPVERSION="${INSTALLED_PPP#net-dialup/ppp-}"
+		PPPVERSION="$(version_format_string '$1.$2.$3' ${PPPVERSION})"
 		if [ -z "${PPPVERSION}" ]; then
 			die "No pppd installation found"
 		fi
@@ -101,7 +102,7 @@ src_prepare() {
 		# workaround for bug #511800
 		if has_version \>=net-dialup/ppp-2.4.6; then
 			pushd pppdcapiplugin &>/dev/null || die
-			ln -s ppp-2.4.5 "ppp-${PPPVERSION}" || die
+			mv ppp-2.4.5 "ppp-${PPPVERSION}" || die
 			popd &>/dev/null
 		fi
 	else

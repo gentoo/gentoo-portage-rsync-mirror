@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.2.ebuild,v 1.6 2013/07/12 13:11:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.2.ebuild,v 1.7 2014/06/22 15:46:01 pacho Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde libsamplerate melt
-mmx qt4 quicktime rtaudio sdl sse sse2 swfdec vorbis xine xml lua python ruby vdpau" # java perl php tcl
+mmx qt4 quicktime rtaudio sdl sse sse2 vorbis xine xml lua python ruby vdpau" # java perl php tcl
 IUSE="${IUSE} kernel_linux"
 
 #rtaudio will use OSS on non linux OSes
@@ -34,7 +34,6 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 		x11-libs/pango )
 	quicktime? ( media-libs/libquicktime )
 	rtaudio? ( kernel_linux? ( media-libs/alsa-lib ) )
-	swfdec? ( media-libs/swfdec )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
 	qt4? ( dev-qt/qtgui:4 dev-qt/qtsvg:4 media-libs/libexif )
 	!media-libs/mlt++
@@ -80,11 +79,11 @@ src_configure() {
 
 	local myconf="--enable-gpl
 		--enable-motion-est
+		--disable-swfdec
 		$(use_enable debug)
 		$(use_enable dv)
 		$(use_enable sse)
 		$(use_enable sse2)
-		$(use_enable swfdec)
 		$(use_enable gtk gtk2)
 		$(use_enable vorbis)
 		$(use_enable sdl)

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/gxine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.128 2013/09/13 16:57:04 axs Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.129 2014/06/22 15:59:08 pacho Exp $
+
+*gxine-0.5.907-r1 (22 Jun 2014)
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gxine-0.5.907-underlinking.patch, +gxine-0.5.907-r1.ebuild:
+  Drop support for old gnome-screensaver, fix underlinking and spidermonkey
+  detection (#481442)
 
   13 Sep 2013; Ian Stakenvicius <axs@gentoo.org> gxine-0.5.907.ebuild:
   adjusted has-version on spidermonkey to be sure the correct slot-0 lib will be
