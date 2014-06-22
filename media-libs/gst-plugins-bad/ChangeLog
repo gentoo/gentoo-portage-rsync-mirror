@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.149 2014/06/18 19:32:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.150 2014/06/22 09:17:32 mgorny Exp $
+
+  22 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  gst-plugins-bad-0.10.23-r2.ebuild:
+  Disable static library build, reported by galtgendo.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org>
   gst-plugins-bad-0.10.23-r2.ebuild, gst-plugins-bad-1.2.4-r1.ebuild:
