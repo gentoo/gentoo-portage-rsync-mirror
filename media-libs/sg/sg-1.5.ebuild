@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.7 2013/05/04 14:27:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.8 2014/06/22 15:30:13 jlec Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE="doc static-libs"
 
 RDEPEND="
 	dev-libs/maloc
+	virtual/glu
 	x11-libs/libXaw
 	x11-libs/motif
 	|| (

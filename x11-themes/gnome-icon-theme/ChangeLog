@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.247 2014/04/27 21:58:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.248 2014/06/22 15:23:24 pacho Exp $
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org> gnome-icon-theme-3.10.0.ebuild:
+  Stable on remaining arches as this is only an icon set and it's still needed
+  by many stable packages on this arches
 
 *gnome-icon-theme-3.12.0 (27 Apr 2014)
 

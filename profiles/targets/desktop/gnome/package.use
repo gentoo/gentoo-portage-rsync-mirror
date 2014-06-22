@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.26 2014/06/02 01:57:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.27 2014/06/22 15:17:46 pacho Exp $
 
 # For eautoreconf in =app-crypt/seahorse-3.10.2-r1
 app-crypt/gcr vala
@@ -32,7 +32,7 @@ app-dicts/verbiste -gnome
 dev-ml/lablgtk -gnome
 
 # incompatible with >=evolution-data-server-3.6, bug #449138
-dev-vcs/giggle -eds
+<dev-vcs/giggle-0.7-r1 -eds
 
 # Pulled in by grilo-plugins which is needed for gnome-music
 media-libs/grilo playlist

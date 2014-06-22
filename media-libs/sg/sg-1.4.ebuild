@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.4.ebuild,v 1.6 2012/10/24 19:14:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.4.ebuild,v 1.7 2014/06/22 15:30:13 jlec Exp $
 
 EAPI="3"
 
@@ -24,6 +24,7 @@ RDEPEND="
 			<media-libs/mesa-8[motif]
 			( media-libs/mesa x11-libs/libGLw )
 			media-libs/opengl-apple )
+		virtual/glu
 	)"
 DEPEND="
 	${RDEPEND}

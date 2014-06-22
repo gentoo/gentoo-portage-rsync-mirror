@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/giggle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.21 2013/10/12 14:35:34 ikelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.22 2014/06/22 15:19:10 pacho Exp $
+
+*giggle-0.7-r1 (22 Jun 2014)
+
+  22 Jun 2014; Pacho Ramos <pacho@gentoo.org> +giggle-0.7-r1.ebuild,
+  -giggle-0.6.1.ebuild:
+  0.7 is compatible with latest eds, all .la files can be dropped, debug USE
+  flag is not honoured, pass options at src_configure phase.
 
 *giggle-0.7 (12 Oct 2013)
 

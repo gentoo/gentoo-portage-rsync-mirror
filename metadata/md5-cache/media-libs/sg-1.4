@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-libs/maloc x11-libs/libXaw x11-libs/motif opengl? ( || ( <media-libs/mesa-8[motif] ( media-libs/mesa x11-libs/libGLw ) media-libs/opengl-apple ) ) doc? ( media-gfx/graphviz app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-libs/maloc x11-libs/libXaw x11-libs/motif opengl? ( || ( <media-libs/mesa-8[motif] ( media-libs/mesa x11-libs/libGLw ) media-libs/opengl-apple ) virtual/glu ) doc? ( media-gfx/graphviz app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Socket Graphics tool for displaying polygons
 EAPI=3
 HOMEPAGE=http://fetk.org/codes/sg/index.html
 IUSE=doc opengl
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
-RDEPEND=dev-libs/maloc x11-libs/libXaw x11-libs/motif opengl? ( || ( <media-libs/mesa-8[motif] ( media-libs/mesa x11-libs/libGLw ) media-libs/opengl-apple ) )
+RDEPEND=dev-libs/maloc x11-libs/libXaw x11-libs/motif opengl? ( || ( <media-libs/mesa-8[motif] ( media-libs/mesa x11-libs/libGLw ) media-libs/opengl-apple ) virtual/glu )
 SLOT=0
 SRC_URI=http://www.fetk.org/codes/download/sg-1.4.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=95a223f5a3b0f2c855cdb51320c5c02b
+_md5_=65e789320309da1a0e2f5d9248de93b4
