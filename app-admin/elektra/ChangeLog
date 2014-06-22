@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/elektra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.17 2014/06/22 10:01:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.18 2014/06/22 12:38:39 mgorny Exp $
+
+*elektra-0.7.1-r5 (22 Jun 2014)
+
+  22 Jun 2014; Michał Górny <mgorny@gentoo.org> +elektra-0.7.1-r5.ebuild:
+  Backport multilib support as =0.7* is needed by media-libs/oyranos.
 
 *elektra-0.8.3-r3 (22 Jun 2014)
 

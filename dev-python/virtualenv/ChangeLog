@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.121 2014/06/08 12:21:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.122 2014/06/22 12:40:59 klausman Exp $
+
+  22 Jun 2014; Tobias Klausmann <klausman@gentoo.org> virtualenv-1.11.6.ebuild:
+  Keyworded on alpha, bug #503094
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> virtualenv-1.10-r1.ebuild,
   virtualenv-1.10.1.ebuild, virtualenv-1.11.3.ebuild, virtualenv-1.11.4.ebuild,

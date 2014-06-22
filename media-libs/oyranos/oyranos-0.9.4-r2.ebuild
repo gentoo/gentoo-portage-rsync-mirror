@@ -1,18 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.5 2014/06/22 12:38:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.4-r2.ebuild,v 1.1 2014/06/22 12:38:50 mgorny Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic cmake-utils cmake-multilib git-r3
+inherit eutils flag-o-matic cmake-utils cmake-multilib
 
 DESCRIPTION="colour management system allowing to share various settings across applications and services"
 HOMEPAGE="http://www.oyranos.org/"
-EGIT_REPO_URI="git://www.${PN}.org/git/${PN}"
+SRC_URI="mirror://sourceforge/oyranos/Oyranos/Oyranos%200.4/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="X cairo cups doc exif fltk qt4 raw test"
 
 RDEPEND="=app-admin/elektra-0.7*:0[${MULTILIB_USEDEP}]
@@ -50,13 +50,31 @@ MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/oyranos/oyranos_version.h
 )
 
-CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindCUPS"
+CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST} FindFltk FindXcm FindCUPS"
 
 src_prepare() {
 	einfo remove bundled libs
 	rm -rf elektra* yajl || die
 
-	epatch "${FILESDIR}/${PN}"-9999-buildsystem.patch
+	epatch "${FILESDIR}/${P}"-buildsystem-r1.patch
+
+	#upstream(ed) fixes, be more verbose, better xrandr handling
+	epatch "${FILESDIR}/${P}"-fix-array-access.patch \
+		"${FILESDIR}/${P}"-fix-oyRankMap-helper-functions-crashes.patch \
+		"${FILESDIR}/${P}"-fix-oyStringSegment-crash.patch \
+		"${FILESDIR}/${P}"-be-more-verbose.patch \
+		"${FILESDIR}/${P}"-use-more-internal-xrandr-info.patch \
+		"${FILESDIR}/${P}"-set-xcalib-to-screen-if-ge-xrandr-12.patch \
+		"${FILESDIR}/${P}"-fix-double-object-release.patch \
+		"${FILESDIR}/${P}"-omit-profile-with-error.patch \
+		"${FILESDIR}/${P}"-fix-typos-and-grammar.patch
+
+	#upstream fix for QA notice, gentoo bug 464254
+	epatch "${FILESDIR}/${P}"-fix-runpaths.patch
+
+	#fix really ugly and prominently visible typo (solved in 0.9.5)
+	sed -e 's/Promt/Prompt/' \
+		-i src/liboyranos_config/oyranos_texts.c po/*.{po,pot} settings/*xml || die
 
 	if use fltk ; then
 		#src/examples does not include fltk flags
