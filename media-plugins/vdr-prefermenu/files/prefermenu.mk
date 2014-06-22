@@ -1,7 +1,7 @@
 #
 # Makefile for a Video Disk Recorder plugin
 #
-# $Id: prefermenu.mk,v 1.1 2013/11/26 20:56:23 hd_brummy Exp $
+# $Id: prefermenu.mk,v 1.2 2014/06/22 11:31:09 hd_brummy Exp $
 
 # The official name of this plugin.
 # This name will be used in the '-P...' option of VDR to load the plugin.
@@ -57,7 +57,8 @@ OBJS = $(PLUGIN).o preferosd.o prefersetup.o preferchannel.o
 
 ### The main target:
 
-all: $(SOFILE) i18n
+all: $(SOFILE) 
+#i18n
 
 ### Implicit rules:
 
@@ -107,7 +108,8 @@ $(SOFILE): $(OBJS)
 install-lib: $(SOFILE)
 	install -D $^ $(DESTDIR)$(LIBDIR)/$^.$(APIVERSION)
 
-install: install-lib install-i18n
+install: install-lib 
+#install-i18n
 
 dist: $(I18Npo) clean
 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
@@ -118,5 +120,5 @@ dist: $(I18Npo) clean
 	@echo Distribution package created as $(PACKAGE).tgz
 
 clean:
-	@-rm -f $(PODIR)/*.mo $(PODIR)/*.pot
+#	@-rm -f $(PODIR)/*.mo $(PODIR)/*.pot
 	@-rm -f $(OBJS) $(DEPFILE) *.so *.tgz core* *~

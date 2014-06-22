@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-vodcatcher
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/ChangeLog,v 1.6 2012/05/01 12:30:14 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/ChangeLog,v 1.8 2014/06/22 11:09:24 hd_brummy Exp $
+
+  22 Jun 2014; Joerg Bornkessel <hd_brummy@gentoo.org> ChangeLog, Manifest:
+  compilefix gcc-4.7, wrt bug 514128; eapi=5; fixed QA Notice on install
 
   01 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-vodcatcher-0.1.1.ebuild, -vdr-vodcatcher-0.2.1.ebuild,

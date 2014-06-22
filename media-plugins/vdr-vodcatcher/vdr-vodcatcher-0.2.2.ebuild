@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/vdr-vodcatcher-0.2.2.ebuild,v 1.3 2012/05/01 12:30:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/vdr-vodcatcher-0.2.2.ebuild,v 1.4 2014/06/22 11:05:31 hd_brummy Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit vdr-plugin-2
 
@@ -16,12 +16,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="net-misc/curl
-		>=dev-libs/tinyxml-2.6.1
+		>=dev-libs/tinyxml-2.6.1[stl]
 		media-video/vdr"
 RDEPEND="${DEPEND}
 		|| ( media-plugins/vdr-mplayer media-plugins/vdr-xineliboutput )"
 
-PATCHES=( "${FILESDIR}/${P}_unbundle-tinyxml2.diff" )
+PATCHES=( "${FILESDIR}/${P}_unbundle-tinyxml2.diff"
+		 "${FILESDIR}/${P}_gcc-4.7.patch" )
 
 src_prepare() {
 	vdr-plugin-2_src_prepare
@@ -34,9 +35,6 @@ src_install() {
 
 	insinto /etc/vdr/plugins/vodcatcher/
 	doins   examples/vodcatchersources.conf
-
-	diropts -gvdr -ovdr
-	keepdir /var/cache/vdr-plugin-vodcatcher
 }
 
 pkg_postinst() {

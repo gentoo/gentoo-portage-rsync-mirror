@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/vdr-prefermenu-0.6.6-r2.ebuild,v 1.1 2013/11/26 20:56:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/vdr-prefermenu-0.6.6-r2.ebuild,v 1.2 2014/06/22 11:31:09 hd_brummy Exp $
 
 EAPI="5"
 
@@ -17,13 +17,14 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-2.0"
 
-PATCHES=("${FILESDIR}/${P}-no-static-getfont.diff"
-		"${FILESDIR}/${P}_vdr_1.7.27.diff")
+PATCHES=("${FILESDIR}/${P}-no-static-getfont.diff")
 
 src_prepare() {
 	cp "${FILESDIR}/${VDRPLUGIN}.mk" Makefile
 
 	vdr-plugin-2_src_prepare
+
+	sed -e "s:RegisterI18n://RegisterI18n:" -i prefermenu.c
 }
 
 src_install() {
