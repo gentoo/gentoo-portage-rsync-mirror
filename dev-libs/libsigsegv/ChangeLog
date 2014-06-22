@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigsegv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.47 2014/06/03 20:38:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.48 2014/06/22 18:41:23 maekke Exp $
+
+  22 Jun 2014; Markus Meier <maekke@gentoo.org> libsigsegv-2.10.ebuild:
+  arm stable, bug #511170
 
   03 Jun 2014; Jeroen Roovers <jer@gentoo.org> libsigsegv-2.10.ebuild:
   Stable for HPPA (bug #511170).

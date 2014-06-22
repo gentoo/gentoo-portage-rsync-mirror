@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.95 2014/06/15 03:29:57 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.96 2014/06/22 18:59:29 prometheanfire Exp $
+
+*facter-1.7.6 (22 Jun 2014)
+
+  22 Jun 2014; Matthew Thode <prometheanfire@gentoo.org> +facter-1.7.6.ebuild:
+  needs to be stablized for bug 514476 CVE-2014-32[48,50]
 
 *facter-2.0.2 (15 Jun 2014)
 
