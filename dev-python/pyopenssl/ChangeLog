@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.124 2014/06/23 04:24:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.125 2014/06/23 13:44:13 floppym Exp $
+
+  23 Jun 2014; Mike Gilbert <floppym@gentoo.org> pyopenssl-0.14.ebuild:
+  Drop openssl dep: pyopenssl uses dev-python/cryptography, which is what
+  interfaces with openssl.
 
   23 Jun 2014; Ian Delaney <idella4@gentoo.org> pyopenssl-0.14.ebuild:
   drop py2.6 pypy2_0, add missed key dep set to upper boarder wrt Bug #514418
