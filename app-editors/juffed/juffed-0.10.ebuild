@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.2 2014/05/23 06:39:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.3 2014/06/23 08:15:48 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="debug"
 RDEPEND="app-i18n/enca
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsingleapplication
+	dev-qt/qtsingleapplication[X]
 	x11-libs/qscintilla:="
 DEPEND="${RDEPEND}"
 
