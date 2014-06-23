@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.59 2014/02/22 08:07:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.60 2014/06/23 10:21:11 chainsaw Exp $
+
+  23 Jun 2014; Tony Vroon <chainsaw@gentoo.org> dahdi-2.6.2.ebuild,
+  dahdi-2.7.0.1.ebuild, dahdi-2.8.0.1.ebuild, dahdi-2.9.0.ebuild:
+  Non-fatal kernel configuration checks as requested by Patrick "bonsaikitten"
+  Lauer in bug #513984.
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> dahdi-2.8.0.1.ebuild:
   Stable for x86, wrt bug #499128

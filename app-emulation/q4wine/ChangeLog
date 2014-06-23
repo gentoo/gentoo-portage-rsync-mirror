@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.50 2014/01/02 20:13:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.51 2014/06/23 10:02:57 pinkbyte Exp $
+
+  23 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> q4wine-1.1_p2-r1.ebuild:
+  Fix locale handling by using full locale names, wrt bug #496508. Minor QA
+  fixes. Thanks to Kjell Claesson <kjell.claesson AT epost.tidanet.se> for
+  discovering this issue
 
   02 Jan 2014; Markos Chandras <hwoarang@gentoo.org> q4wine-1.1_p2-r1.ebuild:
   Depend on qtsingleapplication[X] to fix configure failure

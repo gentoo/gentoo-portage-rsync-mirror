@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.8.0.1.ebuild,v 1.3 2014/02/22 08:07:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.8.0.1.ebuild,v 1.4 2014/06/23 10:21:11 chainsaw Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ RDEPEND=""
 EPATCH_SUFFIX="diff"
 PATCHES=( "${WORKDIR}/dahdi-patchset" )
 
-CONFIG_CHECK="MODULES CRC_CCITT"
+CONFIG_CHECK="MODULES ~CRC_CCITT"
 
 src_unpack() {
 	unpack ${A}
