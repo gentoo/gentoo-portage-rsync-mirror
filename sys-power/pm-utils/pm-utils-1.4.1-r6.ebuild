@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r5.ebuild,v 1.1 2014/06/04 20:53:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r6.ebuild,v 1.1 2014/06/23 14:03:11 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -59,7 +59,7 @@ src_install() {
 	doman man/*.{1,8}
 
 	# Remove duplicate documentation install
-	rm -r "${D}"/usr/share/doc/${PN}
+	rm -r "${ED}"/usr/share/doc/${PN}
 
 	insinto /etc/pm/config.d
 	doins "${T}"/gentoo
@@ -67,18 +67,28 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotate ${PN} #408091
 
-	insinto /usr/$(get_libdir)/pm-utils/sleep.d
-	doins "${FILESDIR}"/sleep.d/50unload_alx
+	exeinto /usr/$(get_libdir)/${PN}/sleep.d
+	doexe "${FILESDIR}"/sleep.d/50unload_alx
 
-	insinto /usr/$(get_libdir)/pm-utils/power.d
-	doins "${FILESDIR}"/power.d/{pci_devices,usb_bluetooth}
+	exeinto /usr/$(get_libdir)/${PN}/power.d
+	doexe "${FILESDIR}"/power.d/{pci_devices,usb_bluetooth}
 
 	# No longer required with current networkmanager (rm -f from debian/rules)
-	rm -f "${D}"/usr/$(get_libdir)/${PN}/sleep.d/55NetworkManager
+	rm -f "${ED}"/usr/$(get_libdir)/${PN}/sleep.d/55NetworkManager
 
 	# No longer required with current kernels (rm -f from debian/rules)
-	rm -f "${D}"/usr/$(get_libdir)/${PN}/sleep.d/49bluetooth
+	rm -f "${ED}"/usr/$(get_libdir)/${PN}/sleep.d/49bluetooth
 
 	# Punt HAL related file wrt #401257 (rm -f from debian/rules)
-	rm -f "${D}"/usr/$(get_libdir)/${PN}/power.d/hal-cd-polling
+	rm -f "${ED}"/usr/$(get_libdir)/${PN}/power.d/hal-cd-polling
+
+	# Punt hooks which have shown to not reduce, or even increase power usage
+	# (rm -f from debian rules)
+	rm -f "${ED}"/usr/$(get_libdir)/${PN}/power.d/{journal-commit,readahead}
+
+	# Remove hooks which are not stable enough yet (rm -f from debian/rules)
+	rm -f "${ED}"/usr/$(get_libdir)/${PN}/power.d/harddrive
+
+	# Change to executable (chmod +x from debian/rules)
+	fperms +x /usr/$(get_libdir)/${PN}/defaults
 }

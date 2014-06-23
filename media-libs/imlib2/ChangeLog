@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.124 2014/06/18 19:35:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.125 2014/06/23 14:11:50 mgorny Exp $
+
+  23 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +files/imlib2-1.4.6-out-of-source-build.patch, imlib2-1.4.6-r2.ebuild:
+  Fix out-of-source builds, bug #510522.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> imlib2-1.4.6-r2.ebuild,
   imlib2-9999.ebuild:

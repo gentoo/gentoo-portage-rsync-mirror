@@ -1,6 +1,20 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.70 2014/06/04 20:53:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.72 2014/06/23 14:11:07 ssuominen Exp $
+
+  23 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> -pm-utils-1.4.1-r3.ebuild,
+  -pm-utils-1.4.1-r4.ebuild, -pm-utils-1.4.1-r5.ebuild:
+  old
+
+*pm-utils-1.4.1-r6 (23 Jun 2014)
+
+  23 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +pm-utils-1.4.1-r6.ebuild:
+  Use doexe instead of doins for power.d/pci_devices, power.d/usb_bluetooth and
+  sleep.d/50unload_alx. Mark defaults file executable as per debian/rules.
+  Remove unstable power.d/harddrive wrt #452362 (also removed by debian/rules).
+  Remove power.d/journal-commit and power.d/readahead as they have been shown to
+  increase power usage instead of reduce it as per debian/rules. These should be
+  last stolen bits from Debian patchset 1.4.1-14.
 
 *pm-utils-1.4.1-r5 (04 Jun 2014)
 

@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare setup unpack
+DEPEND=app-arch/rpm2targz >=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=XenServer Virtual Machine Tools
+EAPI=5
+HOMEPAGE=http://www.citrix.com/
+IUSE=xenstore
+KEYWORDS=~amd64
+LICENSE=LGPL-3 LGPL-2.1
+RDEPEND=!xenstore? ( app-emulation/xen-tools ) xenstore? ( !app-emulation/xen-tools )
+SLOT=0
+SRC_URI=http://updates.vmd.citrix.com/XenServer/5.6.0/rhel4x/SRPMS/xe-guest-utilities-5.6.0-595.src.rpm
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=3db3bfb516458dbf95d397200db382a4

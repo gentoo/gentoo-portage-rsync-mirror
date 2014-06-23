@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.3 2014/06/18 19:35:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r2.ebuild,v 1.4 2014/06/23 14:11:50 mgorny Exp $
 
 # NOTE!!!: to avoid masking of -9999 the
 # package.mask entry for multilib version
@@ -16,7 +16,7 @@ if [[ ${PV} != "9999" ]] ; then
 	EKEY_STATE="snap"
 fi
 
-inherit enlightenment toolchain-funcs multilib-minimal
+inherit autotools enlightenment toolchain-funcs multilib-minimal
 
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -45,6 +45,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.5-no-my-libs.patch #497894
 	epatch "${FILESDIR}"/${PN}-1.4.5-giflib-5.patch #457634
+	epatch "${FILESDIR}"/${P}-out-of-source-build.patch #510522
+
+	eautomake
 }
 
 multilib_src_configure() {

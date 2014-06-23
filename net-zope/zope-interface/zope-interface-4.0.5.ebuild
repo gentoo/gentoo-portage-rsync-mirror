@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/zope-interface-4.0.5.ebuild,v 1.7 2014/03/31 21:16:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/zope-interface-4.0.5.ebuild,v 1.8 2014/06/23 14:26:00 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -21,8 +21,7 @@ IUSE=""
 
 # net-zope/zope-fixers is required for building with Python 3.
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	app-arch/unzip
-	net-zope/zope-fixers[$(python_gen_usedep 'python3*')]"
+	app-arch/unzip"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"

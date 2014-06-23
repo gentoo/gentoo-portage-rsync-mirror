@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-imaging
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-imaging/ChangeLog,v 1.13 2014/06/03 19:08:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-imaging/ChangeLog,v 1.14 2014/06/23 14:07:54 klausman Exp $
+
+  23 Jun 2014; Tobias Klausmann <klausman@gentoo.org> python-imaging-2.ebuild:
+  Stable on alpha, bug #486326
 
   03 Jun 2014; Jeroen Roovers <jer@gentoo.org> python-imaging-2.ebuild:
   Stable for HPPA (bug #486326).
