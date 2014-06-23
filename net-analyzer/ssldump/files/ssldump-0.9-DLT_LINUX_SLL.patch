@@ -1,5 +1,5 @@
---- base/pcap-snoop.c	2007-11-06 14:22:53.000000000 +0100
-+++ base/pcap-snoop_new.c	2007-11-06 14:24:05.000000000 +0100
+--- a/base/pcap-snoop.c
++++ b/base/pcap-snoop.c
 @@ -157,6 +157,10 @@
            return;
          

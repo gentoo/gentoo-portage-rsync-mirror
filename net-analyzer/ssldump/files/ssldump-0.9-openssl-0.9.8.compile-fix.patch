@@ -1,6 +1,5 @@
-diff -Naur ssldump-0.9b3.orig/ssl/ssldecode.c ssldump-0.9b3/ssl/ssldecode.c
---- ssldump-0.9b3.orig/ssl/ssldecode.c	2002-08-17 05:33:17.000000000 +0400
-+++ ssldump-0.9b3/ssl/ssldecode.c	2006-09-24 11:30:58.000000000 +0400
+--- a/ssl/ssldecode.c
++++ b/ssl/ssldecode.c
 @@ -51,6 +51,7 @@
  #include <openssl/ssl.h>
  #include <openssl/hmac.h>

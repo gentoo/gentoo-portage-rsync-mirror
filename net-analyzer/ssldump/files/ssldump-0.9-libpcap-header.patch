@@ -1,5 +1,5 @@
---- base/pcap-snoop.c	2002-09-09 21:02:58.000000000 +0000
-+++ base/pcap-snoop.c	2004-02-06 14:59:37.278455352 +0000
+--- a/base/pcap-snoop.c
++++ b/base/pcap-snoop.c
 @@ -49,7 +49,6 @@
  
  #include <pcap.h>

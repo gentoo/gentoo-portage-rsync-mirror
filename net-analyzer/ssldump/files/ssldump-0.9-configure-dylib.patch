@@ -1,5 +1,5 @@
---- configure
-+++ configure
+--- a/configure
++++ b/configure
 @@ -1103,7 +1103,7 @@
  echo "configure:1104: checking for PCAP library" >&5
  ac_found_pcap_lib_dir="no"

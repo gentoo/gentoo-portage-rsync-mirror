@@ -1,6 +1,7 @@
 eliminates unused variable ROOT, which disturbs ld from Prefix. Bug #414335
---- Makefile.in	2001-11-27 07:38:13.000000000 +0900
-+++ Makefile.in.new	2012-05-02 16:13:10.000000000 +0900
+
+--- a/Makefile.in
++++ b/Makefile.in
 @@ -46,13 +46,12 @@ BINDIR=@sbindir@
  MANDIR=@mandir@
  RM=rm -f
