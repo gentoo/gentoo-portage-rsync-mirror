@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.29 2013/12/21 20:11:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.30 2014/06/23 08:53:48 pinkbyte Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -15,7 +15,7 @@ case ${EAPI} in
 	*)	 die "qt4-r2.eclass: unsupported EAPI=${EAPI:-0}" ;;
 esac
 
-inherit base qmake-utils
+inherit base eutils qmake-utils
 
 export XDG_CONFIG_HOME="${T}"
 
@@ -132,14 +132,7 @@ qt4-r2_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
 	base_src_install INSTALL_ROOT="${D}" "$@"
-
-	# backward compatibility for non-array variables
-	if [[ -n ${DOCS} ]] && [[ "$(declare -p DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
-		dodoc ${DOCS} || die "dodoc failed"
-	fi
-	if [[ -n ${HTML_DOCS} ]] && [[ "$(declare -p HTML_DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
-		dohtml -r ${HTML_DOCS} || die "dohtml failed"
-	fi
+	einstalldocs
 }
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install

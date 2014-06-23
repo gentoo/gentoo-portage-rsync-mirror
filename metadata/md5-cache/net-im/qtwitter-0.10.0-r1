@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libX11 >=dev-qt/qtcore-4.5:4 >=dev-qt/qtgui-4.5:4 >=dev-qt/qtdbus-4.5:4 >=dev-libs/qoauth-1.0
 SLOT=0
 SRC_URI=http://files.ayoy.net/qtwitter/release/0.10.0/src/qtwitter-0.10.0-src.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=818f030e154bd8471c258203f5c2c6d8
