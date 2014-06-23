@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.9.1-r2.ebuild,v 1.2 2014/06/14 10:35:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.9.1-r2.ebuild,v 1.3 2014/06/23 13:17:46 nimiux Exp $
 
 EAPI=5
 inherit eutils elisp-common
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="emacs nls xinerama"
 
-RDEPEND="emacs? ( !app-emacs/sawfish )
+RDEPEND="emacs? ( virtual/emacs !app-emacs/sawfish )
 	>=dev-libs/librep-0.92.1
 	>=x11-libs/rep-gtk-0.90.7
 	|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
