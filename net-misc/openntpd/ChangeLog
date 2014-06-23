@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.116 2014/06/22 14:21:17 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.117 2014/06/23 11:00:41 pinkbyte Exp $
+
+  23 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> openntpd-20080406-r8.ebuild:
+  Stable on x86, wrt bug #507846
 
   22 Jun 2014; Akinori Hattori <hattya@gentoo.org> openntpd-20080406-r8.ebuild:
   ia64 stable wrt bug #507846

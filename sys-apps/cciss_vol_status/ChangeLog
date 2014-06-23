@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/cciss_vol_status
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.16 2014/03/08 22:26:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.17 2014/06/23 10:35:51 chainsaw Exp $
+
+*cciss_vol_status-1.11 (23 Jun 2014)
+
+  23 Jun 2014; Tony Vroon <chainsaw@gentoo.org> +cciss_vol_status-1.11.ebuild:
+  Version bump, as requested by Lars "Polynomial-C" Wendler in bug #511696. Now
+  avoids spinning up sleeping spares, reports non-volatile cache status and
+  adds support for new controllers.
 
   08 Mar 2014; Mike Frysinger <vapier@gentoo.org> cciss_vol_status-1.10.ebuild:
   Add ia64 love.
