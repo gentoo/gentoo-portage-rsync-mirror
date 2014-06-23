@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.391 2014/04/28 17:46:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.392 2014/06/23 21:24:11 ssuominen Exp $
+
+*alsa-lib-1.0.28 (23 Jun 2014)
+
+  23 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +alsa-lib-1.0.28.ebuild,
+  alsa-lib-1.0.27.2.ebuild:
+  Version bump wrt #513670 by "PG". Use PYTHON_REQUIRED_USE wrt #509308 by
+  Maciej Piechotka.
 
   28 Apr 2014; Michał Górny <mgorny@gentoo.org> alsa-lib-1.0.27.2.ebuild:
   Replace multilib_build_binaries with multilib_is_native_abi. The two are
