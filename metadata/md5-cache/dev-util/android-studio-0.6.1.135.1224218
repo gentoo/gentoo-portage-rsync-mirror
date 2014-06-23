@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/zip
+DESCRIPTION=A new Android development environment based on IntelliJ IDEA
+EAPI=5
+HOMEPAGE=http://developer.android.com/sdk/installing/studio.html
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jdk-1.6
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dl.google.com/dl/android/studio/ide-zips/0.6.1/android-studio-ide-135.1224218-linux.zip
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=9140877955f3df59ec145a39b90da501
