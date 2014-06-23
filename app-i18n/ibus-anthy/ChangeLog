@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-anthy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.46 2013/12/24 14:48:24 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.47 2014/06/23 03:31:19 naota Exp $
+
+  23 Jun 2014; Naohiro Aota <naota@gentoo.org> -ibus-anthy-1.5.0.ebuild:
+  Drop old version
 
 *ibus-anthy-1.5.4 (24 Dec 2013)
 
