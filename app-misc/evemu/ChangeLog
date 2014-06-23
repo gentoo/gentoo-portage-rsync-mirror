@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/evemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evemu/ChangeLog,v 1.4 2014/05/18 07:48:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evemu/ChangeLog,v 1.5 2014/06/23 20:58:16 radhermit Exp $
+
+*evemu-1.99.1 (23 Jun 2014)
+
+  23 Jun 2014; Tim Harder <radhermit@gentoo.org> +evemu-1.99.1.ebuild:
+  Version bump.
 
 *evemu-1.2.0-r1 (18 May 2014)
 
