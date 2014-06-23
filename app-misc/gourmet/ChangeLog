@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.45 2014/06/22 20:01:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.46 2014/06/23 15:01:19 pacho Exp $
+
+  23 Jun 2014; Pacho Ramos <pacho@gentoo.org> gourmet-0.17.2.ebuild:
+  x86 stable, bug #512696
 
   22 Jun 2014; Pacho Ramos <pacho@gentoo.org> gourmet-0.17.2.ebuild:
   amd64 stable, bug #512696

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.125 2014/06/23 13:44:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.126 2014/06/23 15:26:18 idella4 Exp $
+
+  23 Jun 2014; Ian Delaney <idella4@gentoo.org> pyopenssl-0.14.ebuild:
+  update dep to cryptography-0.2.1-r2, fixes Bug #514418 by klausman
 
   23 Jun 2014; Mike Gilbert <floppym@gentoo.org> pyopenssl-0.14.ebuild:
   Drop openssl dep: pyopenssl uses dev-python/cryptography, which is what
