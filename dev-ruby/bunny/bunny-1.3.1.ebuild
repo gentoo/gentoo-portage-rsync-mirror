@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bunny/bunny-1.1.9.ebuild,v 1.1 2014/05/02 14:54:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bunny/bunny-1.3.1.ebuild,v 1.1 2014/06/23 05:45:06 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 

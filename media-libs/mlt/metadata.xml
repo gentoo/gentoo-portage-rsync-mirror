@@ -14,8 +14,8 @@
 	<flag name="python">Build SWIG bindings for Python</flag>
 	<flag name="rtaudio">Builds rtaudio consumer for native audio support on multiple platforms.</flag>
 	<flag name="ruby">Build SWIG bindings for Ruby</flag>
-	<flag name="swfdec">Use <pkg>media-libs/swfdec</pkg> for reading .swf files (Macromedia Flash) instead of libavformat.</flag>
 	<!--
+	<flag name="swfdec">Use <pkg>media-libs/swfdec</pkg> for reading .swf files (Macromedia Flash) instead of libavformat.</flag>
 	<flag name="java">Build SWIG bindings for Java</flag>
 	<flag name="perl">Build SWIG bindings for Perl</flag>
 	<flag name="php">Build SWIG bindings for PHP</flag>

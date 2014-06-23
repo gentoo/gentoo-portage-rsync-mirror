@@ -3541,7 +3541,6 @@ media-libs/mlt:melt - Build the melt commandline tool
 media-libs/mlt:python - Build SWIG bindings for Python
 media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on multiple platforms.
 media-libs/mlt:ruby - Build SWIG bindings for Ruby
-media-libs/mlt:swfdec - Use media-libs/swfdec for reading .swf files (Macromedia Flash) instead of libavformat.
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/openal:alstream - Build and install the FFmpeg based alstream example utility
 media-libs/opencolorio:pdf - Install extra documentation in PDF format
