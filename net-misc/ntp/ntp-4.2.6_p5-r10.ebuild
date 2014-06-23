@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r10.ebuild,v 1.12 2014/04/06 15:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r10.ebuild,v 1.13 2014/06/23 12:55:57 pacho Exp $
 
 EAPI="4"
 
@@ -112,7 +112,7 @@ src_install() {
 
 	systemd_dounit "${FILESDIR}"/ntpdate.service
 	systemd_install_serviced "${FILESDIR}"/ntpdate.service.conf
-	systemd_dounit "${FILESDIR}"/sntp.service
+	systemd_newunit "${FILESDIR}"/sntp.service-r1 sntp.service
 	systemd_install_serviced "${FILESDIR}"/sntp.service.conf
 }
 

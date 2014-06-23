@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.217 2014/04/06 15:05:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.218 2014/06/23 12:55:57 pacho Exp $
+
+  23 Jun 2014; Pacho Ramos <pacho@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
+  Old unit file was still being installed by error (#514660 by Matthias Maier)
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
   Add arm64 love.
