@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.2.8.ebuild,v 1.1 2013/10/17 12:29:43 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.2.13.ebuild,v 1.1 2014/06/23 11:45:01 ultrabug Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="debug ipv6 snmp"
 
 RDEPEND="dev-libs/popt
 	sys-apps/iproute2
-	dev-libs/libnl:1.1
+	dev-libs/libnl
 	dev-libs/openssl
 	snmp? ( net-analyzer/net-snmp )"
 DEPEND="${RDEPEND}
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.2.2-libipvs-fix-backup-daemon.patch
-	"${FILESDIR}"/${PN}-1.2.2-libipvs-fix-ipv6.patch
 )
 
 DOCS=( README CONTRIBUTORS INSTALL VERSION ChangeLog AUTHOR TODO

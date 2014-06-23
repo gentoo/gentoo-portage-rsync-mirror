@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.108 2014/06/22 14:34:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.109 2014/06/23 11:45:01 ultrabug Exp $
+
+*keepalived-1.2.13 (23 Jun 2014)
+
+  23 Jun 2014; Ultrabug <ultrabug@gentoo.org> -keepalived-1.2.2-r3.ebuild,
+  -keepalived-1.2.7-r1.ebuild, -keepalived-1.2.8.ebuild,
+  +keepalived-1.2.13.ebuild:
+  version bump fix #514488 thx to Tomas Mozes, drop old
 
   22 Jun 2014; Akinori Hattori <hattya@gentoo.org> keepalived-1.2.9.ebuild:
   ia64 stable wrt bug #507872
