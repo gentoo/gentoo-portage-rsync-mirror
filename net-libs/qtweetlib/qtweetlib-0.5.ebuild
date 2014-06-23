@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qtweetlib/qtweetlib-0.5.ebuild,v 1.3 2013/03/02 22:57:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qtweetlib/qtweetlib-0.5.ebuild,v 1.4 2014/06/23 05:21:32 kensington Exp $
 
 EAPI=4
 
@@ -27,6 +27,7 @@ IUSE="debug"
 DEPEND="
 	>=dev-libs/qjson-0.7.1
 	>=dev-qt/qtcore-4.6.0:4[ssl]
+	>=dev-qt/qtgui-4.6.0:4
 "
 RDEPEND="${DEPEND}"
 
