@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.371 2014/04/05 19:21:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.372 2014/06/23 21:34:42 ssuominen Exp $
+
+*alsa-utils-1.0.28 (23 Jun 2014)
+
+  23 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +alsa-utils-1.0.28.ebuild,
+  +files/alsasound.initd-r6:
+  Version bump wrt #513670 by "PG". Don't save pulseaudio state files to
+  filesystem root directory / wrt #438844 by Alexander Tsoy.
 
   05 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove unused USE="minimal" description from metadata.xml
