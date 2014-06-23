@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.16 2014/05/03 07:57:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.17 2014/06/23 17:43:08 radhermit Exp $
+
+  23 Jun 2014; Tim Harder <radhermit@gentoo.org> -tox-1.6.1.ebuild,
+  -tox-1.7.0.ebuild:
+  Remove old.
 
 *tox-1.7.1 (03 May 2014)
 

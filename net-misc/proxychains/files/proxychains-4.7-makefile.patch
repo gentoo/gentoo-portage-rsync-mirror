@@ -1,0 +1,46 @@
+--- proxychains-ng-4.7/Makefile
++++ proxychains-ng-4.7/Makefile
+@@ -20,10 +20,8 @@
+         src/allocator_thread.o src/ip_type.o src/stringdump.o \
+         src/hostentdb.o src/hash.o src/debug.o
+ 
+-CFLAGS  += -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe
+-NO_AS_NEEDED = -Wl,--no-as-needed
+-LIBDL   = -ldl
+-LDFLAGS = -shared -fPIC $(NO_AS_NEEDED) $(LIBDL) -lpthread
++CFLAGS  = -Wall -std=c99 -D_GNU_SOURCE
++LIBS    = -ldl -lpthread
+ INC     = 
+ PIC     = -fPIC
+ AR      = $(CROSS_COMPILE)ar
+@@ -33,11 +31,11 @@
+ LD_SET_SONAME = -Wl,-soname=
+ INSTALL_FLAGS = -D -m
+ 
+-LDSO_PATHNAME = libproxychains4.$(LDSO_SUFFIX)
++LDSO_PATHNAME = libproxychains.$(LDSO_SUFFIX)
+ 
+ SHARED_LIBS = $(LDSO_PATHNAME)
+ ALL_LIBS = $(SHARED_LIBS)
+-PXCHAINS = proxychains4
++PXCHAINS = proxychains
+ ALL_TOOLS = $(PXCHAINS)
+ 
+ -include config.mak
+@@ -63,13 +61,13 @@
+ 	rm -f $(OBJS)
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) $(CFLAGS_MAIN) $(INC) $(PIC) -c -o $@ $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(CFLAGS_MAIN) $(INC) $(PIC) -c -o $@ $<
+ 
+ $(LDSO_PATHNAME): $(LOBJS)
+-	$(CC) $(LDFLAGS) $(LD_SET_SONAME)$(LDSO_PATHNAME) -o $@ $(LOBJS)
++	$(CC) $(LDFLAGS) -shared $(PIC) $(LD_SET_SONAME)$(LDSO_PATHNAME) -o $@ $(LOBJS) $(LIBS)
+ 
+ $(ALL_TOOLS): $(OBJS)
+-	$(CC) src/main.o src/common.o -o $(PXCHAINS)
++	$(CC) $(LDFLAGS) src/main.o src/common.o -o $(PXCHAINS) $(LIBS)
+ 
+ 
+ .PHONY: all clean install install-config

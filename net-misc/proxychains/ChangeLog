@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/proxychains
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.26 2013/02/14 22:13:41 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.29 2014/06/23 17:40:15 radhermit Exp $
+
+  23 Jun 2014; Tim Harder <radhermit@gentoo.org>
+  -proxychains-3.1_p20110225-r1.ebuild,
+  -files/proxychains-3.1_p20110225-glibc214.patch,
+  -files/proxychains-3.1_p20110225-sysconf.patch:
+  Remove old.
+
+  23 Jun 2014; Tim Harder <radhermit@gentoo.org> proxychains-4.7.ebuild:
+  Remove unused flag-o-matic eclass.
+
+*proxychains-4.7 (23 Jun 2014)
+
+  23 Jun 2014; Tim Harder <radhermit@gentoo.org> +proxychains-4.7.ebuild,
+  +files/proxychains-4.7-makefile.patch:
+  Version bump to latest proxychains-ng release.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> proxychains-4.2.0.ebuild:
   Stable for ppc, wrt bug #457456

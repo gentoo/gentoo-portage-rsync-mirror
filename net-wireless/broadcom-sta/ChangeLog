@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.58 2014/06/02 19:55:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.59 2014/06/23 17:49:08 swift Exp $
+
+*broadcom-sta-6.30.223.141-r2 (23 Jun 2014)
+
+  23 Jun 2014; Sven Vermeulen <swift@gentoo.org>
+  +broadcom-sta-6.30.223.141-r2.ebuild,
+  +files/broadcom-sta-6.30.223.141-linux-3.15.patch:
+  Fix bug #513156 - Add kernel 3.15 patch, thanks to tomboy64
 
   02 Jun 2014; Sven Vermeulen <swift@gentoo.org>
   +files/broadcom-sta-6.30.223.141-linux-3.10.0.patch:

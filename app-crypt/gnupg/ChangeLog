@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.517 2014/06/06 05:57:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.518 2014/06/23 17:50:24 alonbl Exp $
+
+*gnupg-1.4.17 (23 Jun 2014)
+
+  23 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> +gnupg-1.4.17.ebuild:
+  Version bump, bug#514718
 
 *gnupg-2.0.23 (06 Jun 2014)
 
