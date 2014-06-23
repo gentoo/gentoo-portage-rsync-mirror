@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.27 2014/04/26 22:14:48 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.28 2014/06/23 04:34:57 phajdan.jr Exp $
+
+  23 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> sk1libs-0.9.1-r3.ebuild:
+  x86 stable wrt bug #504214
 
   26 Apr 2014; Chema Alonso <nimiux@gentoo.org> sk1libs-0.9.1-r3.ebuild:
   Stable for amd64 wrt bug #504214

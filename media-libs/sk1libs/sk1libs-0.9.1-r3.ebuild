@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1-r3.ebuild,v 1.7 2014/04/26 22:14:48 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1-r3.ebuild,v 1.8 2014/06/23 04:34:57 phajdan.jr Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://uniconvertor.googlecode.com/files/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="

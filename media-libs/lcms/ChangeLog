@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.175 2014/06/19 03:13:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.176 2014/06/23 04:32:42 phajdan.jr Exp $
+
+  23 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> lcms-1.19-r2.ebuild:
+  x86 stable wrt bug #504214
 
   19 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> lcms-1.19-r2.ebuild:
   Fix file collision with emul-linux-x86-baselibs
