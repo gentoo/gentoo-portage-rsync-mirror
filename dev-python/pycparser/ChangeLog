@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.22 2014/06/22 12:41:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.23 2014/06/23 11:09:50 klausman Exp $
+
+  23 Jun 2014; Tobias Klausmann <klausman@gentoo.org> pycparser-2.10.ebuild:
+  Dekeywording on alpha due to ply being broken (bug 514446)
 
   22 Jun 2014; Tobias Klausmann <klausman@gentoo.org> pycparser-2.10.ebuild:
   Keyworded on alpha, bug #503094
