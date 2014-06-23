@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/abi-compliance-checker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/abi-compliance-checker/ChangeLog,v 1.6 2013/10/14 21:05:29 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/abi-compliance-checker/ChangeLog,v 1.7 2014/06/23 16:30:58 mgorny Exp $
+
+*abi-compliance-checker-1.99.9 (23 Jun 2014)
+
+  23 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +abi-compliance-checker-1.99.9.ebuild, abi-compliance-checker-9999.ebuild:
+  Version bump, requested by hasufell.
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org>
   abi-compliance-checker-9999.ebuild:
