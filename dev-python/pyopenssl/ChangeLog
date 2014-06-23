@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.123 2014/06/08 12:37:00 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.124 2014/06/23 04:24:05 idella4 Exp $
+
+  23 Jun 2014; Ian Delaney <idella4@gentoo.org> pyopenssl-0.14.ebuild:
+  drop py2.6 pypy2_0, add missed key dep set to upper boarder wrt Bug #514418
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> pyopenssl-0.14.ebuild:
   keyword ~ia64 wrt bug #503094

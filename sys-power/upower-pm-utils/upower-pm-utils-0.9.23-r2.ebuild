@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/upower-pm-utils-0.9.23.ebuild,v 1.4 2014/06/02 12:48:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower-pm-utils/upower-pm-utils-0.9.23-r2.ebuild,v 1.2 2014/06/23 04:07:23 ssuominen Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -12,7 +12,7 @@ SRC_URI="http://upower.freedesktop.org/releases/upower-${PV}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc +introspection ios kernel_FreeBSD kernel_linux"
+IUSE="+introspection ios kernel_FreeBSD kernel_linux"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.22
@@ -30,16 +30,12 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 		)
 	!sys-power/upower"
 RDEPEND="${COMMON_DEPEND}
-	kernel_linux? ( >=sys-power/pm-utils-1.4.1 )"
+	kernel_linux? ( >=sys-power/pm-utils-1.4.1-r2 )"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	dev-util/intltool
-	virtual/pkgconfig
-	doc? (
-		dev-util/gtk-doc
-		app-text/docbook-xml-dtd:4.1.2
-		)"
+	virtual/pkgconfig"
 
 QA_MULTILIB_PATHS="usr/lib/upower/.*"
 
@@ -50,10 +46,19 @@ S=${WORKDIR}/upower-${PV}
 src_prepare() {
 	sed -i -e '/DISABLE_DEPRECATED/d' configure || die
 
+	# http://bugs.freedesktop.org/show_bug.cgi?id=79565
+	# http://bugzilla.xfce.org/show_bug.cgi?id=10931
+	# Same effect as Debian -no_deprecation_define.patch, they patch .h, we patch .pc
+	sed -i -e 's|Cflags: |&-DUPOWER_ENABLE_DEPRECATED |' upower-glib.pc.in || die
+
+	# From upstream 0.9 git branch:
 	epatch \
 		"${FILESDIR}"/${P}-create-dir-runtime.patch \
 		"${FILESDIR}"/${P}-fix-segfault.patch \
 		"${FILESDIR}"/${P}-clamp_percentage_for_overfull_batt.patch
+
+	# From Debian:
+	epatch "${FILESDIR}"/${P}-always_use_pm-utils_backend.patch
 }
 
 src_configure() {
@@ -75,7 +80,6 @@ src_configure() {
 		--disable-static \
 		${myconf} \
 		--enable-man-pages \
-		$(use_enable doc gtk-doc) \
 		--disable-tests \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--with-backend=${backend} \
@@ -86,6 +90,12 @@ src_configure() {
 
 src_install() {
 	default
+
+	# http://bugs.gentoo.org/487400
+	insinto /usr/share/doc/${PF}/html/UPower
+	doins doc/html/*
+	dosym /usr/share/doc/${PF}/html/UPower /usr/share/gtk-doc/html/UPower
+
 	keepdir /var/lib/upower #383091
 	prune_libtool_files
 }

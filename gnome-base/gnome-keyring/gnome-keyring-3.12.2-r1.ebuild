@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.12.0.ebuild,v 1.2 2014/06/23 04:06:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.12.2-r1.ebuild,v 1.1 2014/06/23 04:06:56 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -10,11 +10,11 @@ PYTHON_COMPAT=( python2_7 )
 inherit fcaps gnome2 pam python-any-r1 versionator virtualx
 
 DESCRIPTION="Password and keyring managing daemon"
-HOMEPAGE="http://live.gnome.org/GnomeKeyring"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeKeyring"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
-IUSE="+caps debug pam selinux"
+IUSE="+caps debug pam selinux +ssh-agent"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 RDEPEND="
@@ -53,8 +53,7 @@ src_prepare() {
 		-i "${S}"/pkcs11/gkm/test-timer.c || die
 	# For some reason all pam tests make the testsuite retun 77
 	# which is considered an error but the test framework,
-	# but all tests are successful
-	# FIXME: this is only for overlay, report upstream, make a patch !!!
+	# but all tests are successful, upstream bug #731030
 	sed -e '558,595 d' -i "${S}"/pam/test-pam.c || die
 
 	gnome2_src_prepare
@@ -66,8 +65,8 @@ src_configure() {
 		$(use_enable pam) \
 		$(use_with pam pam-dir $(getpam_mod_dir)) \
 		$(use_enable selinux) \
+		$(use_enable ssh-agent) \
 		--enable-doc \
-		--enable-ssh-agent \
 		--enable-gpg-agent
 }
 
@@ -80,6 +79,8 @@ src_test() {
 }
 
 pkg_postinst() {
-	fcaps cap_ipc_lock usr/bin/gnome-keyring-daemon
+	# cap_ipc_lock only needed if building --with-libcap-ng
+	# Never install as suid root, this breaks dbus activation, see bug #513870
+	use caps && fcaps -m 755 cap_ipc_lock usr/bin/gnome-keyring-daemon
 	gnome2_pkg_postinst
 }

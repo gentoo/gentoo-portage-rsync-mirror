@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.3.0.ebuild,v 1.4 2014/06/22 03:50:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.3.0.ebuild,v 1.6 2014/06/23 04:19:25 ssuominen Exp $
 
 EAPI=5
-inherit flag-o-matic linux-info multilib xfconf
+inherit linux-info multilib xfconf
 
 DESCRIPTION="Power manager for the Xfce desktop environment"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-power-manager"
@@ -17,7 +17,7 @@ IUSE="debug kernel_linux networkmanager policykit +udisks systemd +xfce_plugins_
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100.2
 	>=dev-libs/glib-2.30
 	>=sys-apps/dbus-1.6.18
-	|| ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils )
+	|| ( >=sys-power/upower-0.9.23 >=sys-power/upower-pm-utils-0.9.23-r2 )
 	>=x11-libs/gtk+-2.24:2
 	>=x11-libs/libnotify-0.7
 	x11-libs/libX11
@@ -55,17 +55,12 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
+	# TODO: Split --disable-panel-plugins to two separate AC_ARG_ENABLEs
 	if ! use xfce_plugins_battery && ! use xfce_plugins_brightness; then
 		XFCONF+=( --disable-panel-plugins )
 	fi
 
 	DOCS=( AUTHORS NEWS README TODO )
-}
-
-src_configure() {
-	# http://bugzilla.xfce.org/show_bug.cgi?id=10931
-	has_version 'sys-power/upower-pm-utils' && append-cppflags -DUPOWER_ENABLE_DEPRECATED
-	xfconf_src_configure
 }
 
 src_install() {
