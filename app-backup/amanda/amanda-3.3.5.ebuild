@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.11 2014/06/23 15:49:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.5.ebuild,v 1.1 2014/06/23 15:49:43 robbat2 Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
 LICENSE="HPND BSD BSD-2 GPL-2+ GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="sys-libs/readline
 	virtual/awk
 	app-arch/tar
@@ -284,6 +284,9 @@ src_configure() {
 	# build manpages
 	myconf="${myconf} --enable-manpage-build"
 
+	# bug #483120
+	tc-export AR
+
 	econf \
 		$(use_with readline) \
 		${myconf}
@@ -335,7 +338,7 @@ src_install() {
 
 	einfo "Installing systemd service and socket files for Amanda"
 	systemd_dounit "${FILESDIR}"/amanda.socket || die
-	systemd_newunit "${FILESDIR}"/amanda.service 'amanda@.service' || die
+	systemd_newunit "${FILESDIR}"/amanda.service-r1 'amanda@.service' || die
 
 	insinto /etc/amanda
 	einfo "Installing .amandahosts File for ${AMANDA_USER_NAME} user"

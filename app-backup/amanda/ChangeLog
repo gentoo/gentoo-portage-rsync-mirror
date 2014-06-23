@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/amanda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.111 2014/05/21 12:07:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.112 2014/06/23 15:49:43 robbat2 Exp $
+
+*amanda-3.3.5 (23 Jun 2014)
+
+  23 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> +amanda-3.3.5.ebuild,
+  amanda-3.3.3-r1.ebuild, amanda-3.3.3.ebuild:
+  Bump per bug #510936. Drop virtual/inetd dep per bug #506028.
 
   21 May 2014; Sergey Popov <pinkbyte@gentoo.org> amanda-3.3.3.ebuild,
   amanda-3.3.3-r1.ebuild:
