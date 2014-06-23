@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.5.10-r1.ebuild,v 1.4 2014/06/14 09:30:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.5.10-r1.ebuild,v 1.5 2014/06/23 09:46:24 nimiux Exp $
 
 EAPI="5"
 inherit apache-module autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=net-libs/gnutls-2.10.0:="

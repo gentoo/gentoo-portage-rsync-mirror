@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.163 2014/06/14 09:19:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.165 2014/06/23 09:43:43 kensington Exp $
+
+  23 Jun 2014; Michael Palimaka <kensington@gentoo.org>
+  -kmplayer-0.11.3d-r1.ebuild:
+  Remove old.
+
+  23 Jun 2014; Chema Alonso <nimiux@gentoo.org> kmplayer-0.11.3d-r3.ebuild:
+  Stable for amd64 wrt bug #505356
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   kmplayer-0.11.3d-r3.ebuild:
