@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/aqbanking
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.106 2012/12/16 13:54:28 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.107 2014/06/23 12:03:48 hanno Exp $
+
+*aqbanking-5.4.3_beta (23 Jun 2014)
+
+  23 Jun 2014; Hanno Boeck <hanno@gentoo.org> +aqbanking-5.4.3_beta.ebuild:
+  Bump.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> aqbanking-5.0.25.ebuild:
   Stable for x86, wrt bug #441448
