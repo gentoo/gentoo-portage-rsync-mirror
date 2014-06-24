@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r2.ebuild,v 1.2 2014/06/18 21:01:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.23-r2.ebuild,v 1.3 2014/06/24 22:19:57 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( >=x11-libs/libXinerama-1.1.3[${MULTILIB_USEDEP}] )
-	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 	>=x11-libs/pango-1.36.3[introspection?,${MULTILIB_USEDEP}]
 	>=dev-libs/atk-2.10.0[introspection?,${MULTILIB_USEDEP}]
 	>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]

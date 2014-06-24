@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.79 2014/06/18 20:27:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.80 2014/06/24 22:16:06 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> fluidsynth-1.1.6-r1.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> fluidsynth-1.1.6-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

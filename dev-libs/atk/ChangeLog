@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.287 2014/06/18 19:07:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.288 2014/06/24 22:07:18 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> atk-2.10.0-r1.ebuild,
+  atk-2.12.0-r1.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> atk-2.10.0-r1.ebuild,
   atk-2.12.0-r1.ebuild:

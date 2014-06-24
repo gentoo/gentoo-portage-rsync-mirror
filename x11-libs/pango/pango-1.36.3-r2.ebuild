@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.4 2014/06/18 21:14:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.36.3-r2.ebuild,v 1.5 2014/06/24 22:19:40 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ IUSE="X +introspection"
 
 RDEPEND="
 	>=media-libs/harfbuzz-0.9.12:=[glib(+),truetype(+),${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 	>=media-libs/fontconfig-2.10.92:1.0=[${MULTILIB_USEDEP}]
 	>=media-libs/freetype-2.5.0.1:2=[${MULTILIB_USEDEP}]
 	>=x11-libs/cairo-1.12.14-r4:=[X?,${MULTILIB_USEDEP}]

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.351 2014/06/20 14:45:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.352 2014/06/24 22:12:20 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> librsvg-2.40.2-r1.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> librsvg-2.40.2.ebuild:
   Stable for arm, wrt bug #508862

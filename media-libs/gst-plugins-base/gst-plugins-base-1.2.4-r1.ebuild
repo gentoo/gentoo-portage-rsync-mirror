@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.2.4-r1.ebuild,v 1.2 2014/06/18 19:33:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.2.4-r1.ebuild,v 1.3 2014/06/24 22:12:45 mgorny Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 	>=media-libs/gstreamer-1.2.3:1.0[introspection?,${MULTILIB_USEDEP}]
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )

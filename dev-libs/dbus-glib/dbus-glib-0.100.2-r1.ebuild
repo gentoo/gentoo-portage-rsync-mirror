@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.100.2-r1.ebuild,v 1.11 2014/06/18 19:09:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.100.2-r1.ebuild,v 1.12 2014/06/24 22:07:15 mgorny Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib-minimal
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-f
 IUSE="debug doc static-libs test"
 
 CDEPEND=">=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 	>=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}]"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.116 2014/06/18 20:46:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.117 2014/06/24 22:17:59 mgorny Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	audit? ( >=sys-process/audit-2:0= )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0= )
-	gudev? ( >=dev-libs/glib-2.38.2-r1:2=[${MULTILIB_USEDEP}] )
+	gudev? ( >=dev-libs/glib-2.34.3:2=[${MULTILIB_USEDEP}] )
 	http? (
 		>=net-libs/libmicrohttpd-0.9.33:0=
 		ssl? ( >=net-libs/gnutls-3.1.4:0= )

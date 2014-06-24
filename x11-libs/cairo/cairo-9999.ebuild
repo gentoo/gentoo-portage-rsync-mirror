@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.46 2014/06/18 21:00:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.47 2014/06/24 22:19:45 mgorny Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/lzo-2.06-r1[${MULTILIB_USEDEP}]
 	>=x11-libs/pixman-0.32.4[${MULTILIB_USEDEP}]
 	directfb? ( dev-libs/DirectFB )
 	gles2? ( >=media-libs/mesa-9.1.6[gles2,${MULTILIB_USEDEP}] )
-	glib? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}] )
+	glib? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	opengl? ( || ( >=media-libs/mesa-9.1.6[egl,${MULTILIB_USEDEP}] media-libs/opengl-apple ) )
 	openvg? ( >=media-libs/mesa-9.1.6[openvg,${MULTILIB_USEDEP}] )
 	qt4? ( >=dev-qt/qtgui-4.8:4 )

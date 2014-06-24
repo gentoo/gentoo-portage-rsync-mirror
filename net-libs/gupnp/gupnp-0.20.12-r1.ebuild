@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.3 2014/06/18 20:36:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.4 2014/06/24 22:17:02 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=net-libs/gssdp-0.14.7:0=[introspection?,${MULTILIB_USEDEP}]
 	>=net-libs/libsoup-2.44.2:2.4[introspection?,${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
 	|| (
 		>=sys-apps/util-linux-2.24.1-r3[${MULTILIB_USEDEP}]
@@ -35,8 +35,8 @@ RDEPEND="
 	introspection? (
 			>=dev-libs/gobject-introspection-0.6.4
 			$(vala_depend) )
-	connman? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}] )
-	networkmanager? ( >=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}] )
+	connman? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
+	networkmanager? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	!net-libs/gupnp-vala
 "
 DEPEND="${RDEPEND}

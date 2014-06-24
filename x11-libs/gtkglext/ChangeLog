@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.85 2014/06/18 21:00:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.86 2014/06/24 22:19:32 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> gtkglext-1.2.0-r2.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> gtkglext-1.2.0-r2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

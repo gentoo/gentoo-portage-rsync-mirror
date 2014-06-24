@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.14.8-r1.ebuild,v 1.2 2014/06/18 20:36:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.14.8-r1.ebuild,v 1.3 2014/06/24 22:16:33 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+introspection +gtk"
 
 RDEPEND="
-	>=dev-libs/glib-2.38.2-r1:2[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 	>=net-libs/libsoup-2.44.2:2.4[${MULTILIB_USEDEP},introspection?]
 	gtk? ( >=x11-libs/gtk+-3.0:3 )
 	introspection? (

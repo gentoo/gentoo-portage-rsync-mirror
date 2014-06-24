@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.266 2014/06/19 18:05:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.267 2014/06/24 22:17:59 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> systemd-208-r3.ebuild,
+  systemd-212-r5.ebuild, systemd-213.ebuild, systemd-214.ebuild,
+  systemd-9999.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   19 Jun 2014; Markus Meier <maekke@gentoo.org> systemd-212-r5.ebuild:
   arm stable, bug #509076

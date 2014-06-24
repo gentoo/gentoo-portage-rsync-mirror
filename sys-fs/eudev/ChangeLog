@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.118 2014/06/24 19:50:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.119 2014/06/24 22:17:02 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> eudev-1.5.3-r1.ebuild,
+  eudev-1.7.ebuild, eudev-1.8.ebuild, eudev-9999.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   24 Jun 2014; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
   Make use of the new rootlibexecdir option

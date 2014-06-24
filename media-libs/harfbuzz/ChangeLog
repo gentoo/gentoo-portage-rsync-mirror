@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.78 2014/06/24 12:33:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.79 2014/06/24 22:12:09 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> harfbuzz-0.9.26-r1.ebuild,
+  harfbuzz-0.9.28.ebuild, harfbuzz-9999.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   24 Jun 2014; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.28.ebuild:
   Stable for HPPA (bug #509584).
