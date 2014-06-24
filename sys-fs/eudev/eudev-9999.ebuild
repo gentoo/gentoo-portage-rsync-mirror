@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.54 2014/06/20 00:21:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.55 2014/06/24 19:50:37 blueness Exp $
 
 EAPI="5"
 
@@ -133,6 +133,7 @@ multilib_src_configure() {
 		--with-rootprefix=
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
+		--with-rootlibexecdir=/lib/udev
 		--with-firmware-path="${EPREFIX}usr/lib/firmware/updates:${EPREFIX}usr/lib/firmware:${EPREFIX}lib/firmware/updates:${EPREFIX}lib/firmware"
 		--with-html-dir="/usr/share/doc/${PF}/html"
 		--enable-split-usr
