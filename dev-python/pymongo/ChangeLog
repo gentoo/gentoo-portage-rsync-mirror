@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.40 2014/06/01 13:58:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.41 2014/06/24 00:55:42 idella4 Exp $
+
+  24 Jun 2014; Ian Delaney <idella4@gentoo.org> pymongo-2.7.1.ebuild:
+  update PYTHON_COMPAT to match 2.7, noted by Arfrever
 
   01 Jun 2014; Ian Delaney <idella4@gentoo.org> pymongo-2.7-r1.ebuild:
   drop py2.6 pypy2_0 add py3.4 support

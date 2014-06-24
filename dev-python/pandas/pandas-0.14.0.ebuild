@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.13.1.ebuild,v 1.2 2014/06/24 00:37:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.0.ebuild,v 1.1 2014/06/24 00:37:17 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit distutils-r1 virtualx
 
@@ -20,12 +20,11 @@ IUSE="doc examples excel html test R"
 REQUIRED_USE="
 	excel? ( !python_targets_python3_2 )
 	doc? ( !python_targets_python3_2 )
-	R? ( !python_targets_python3_2 )
-"
+	R? ( !python_targets_python3_2 )"
 
 CDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/python-dateutil[${PYTHON_USEDEP}]"
+	>=dev-python/python-dateutil-2.0[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}
 	doc? (
 		dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
@@ -67,10 +66,6 @@ RDEPEND="${CDEPEND}
 	)
 	R? ( dev-python/rpy[$(python_gen_usedep 'python2_7')] )"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-backport-test-fix.patch
-)
-
 python_prepare_all() {
 	if use doc; then
 		# Prevent un-needed download during build
@@ -93,15 +88,17 @@ python_compile_all() {
 	fi
 }
 
+src_test() {
+	local DISTUTILS_NO_PARALLEL_BUILD=1 
+	distutils-r1_src_test
+}
+
 python_test() {
-	# test can't survive py2.6, alternately patch to skip under unittest2
-	if [[ ${EPYTHON} == "python2.6" ]]; then
-		rm $(find "${BUILD_DIR}" -name test_array.py) || die
-	fi
-	cd "${BUILD_DIR}"/lib || die
+	pushd  "${BUILD_DIR}"/lib > /dev/null
 	PYTHONPATH=. MPLCONFIGDIR=. HOME=. \
 		VIRTUALX_COMMAND="nosetests --verbosity=3 pandas" \
 		virtualmake || die
+	popd > /dev/null
 }
 
 python_install_all() {
@@ -112,11 +109,6 @@ python_install_all() {
 		einfo "statsmodels next and re-emerge pandas with USE doc"
 	fi
 
-	if use examples; then
-		# example python modules not to be compressed
-		docompress -x /usr/share/doc/${PF}/examples
-		insinto /usr/share/doc/${PF}
-		doins -r "${S}"/examples
-	fi
+	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
 }
