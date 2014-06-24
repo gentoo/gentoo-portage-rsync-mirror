@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/apt-cacher-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.40 2014/06/20 14:59:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.41 2014/06/24 13:20:47 jer Exp $
+
+*apt-cacher-ng-0.7.26-r1 (24 Jun 2014)
+
+  24 Jun 2014; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.26.ebuild,
+  +apt-cacher-ng-0.7.26-r1.ebuild,
+  +files/apt-cacher-ng-0.7.26-CVE-2014-4510.patch:
+  Add patch for CVE-2014-4510 (bug #514184).
 
   20 Jun 2014; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.25.ebuild:
   Old.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.26.ebuild,v 1.1 2014/03/24 14:20:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.26-r1.ebuild,v 1.1 2014/06/24 13:20:47 jer Exp $
 
 EAPI=5
 inherit cmake-utils eutils user
@@ -32,6 +32,10 @@ RDEPEND="
 	fuse? ( sys-fs/fuse )
 	tcpd? ( sys-apps/tcp-wrappers )
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-CVE-2014-4510.patch
+)
 
 pkg_setup() {
 	# add new user & group for daemon

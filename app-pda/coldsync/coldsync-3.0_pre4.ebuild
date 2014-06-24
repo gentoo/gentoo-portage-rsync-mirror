@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.7 2011/04/09 13:52:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.8 2014/06/24 13:20:49 ssuominen Exp $
 
-EAPI=2
-inherit flag-o-matic perl-module toolchain-funcs
+EAPI=5
+inherit flag-o-matic eutils perl-module toolchain-funcs
 
 MY_P=${PN}-${PV/_/-}
 
@@ -20,11 +20,14 @@ RDEPEND="caps? ( sys-libs/libcap )
 	perl? ( dev-lang/perl )
 	usb? ( virtual/libusb:0 )"
 DEPEND="${RDEPEND}
+	sys-apps/texinfo
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-texinfo-5.patch
+
 	if use perl; then
 		pushd perl/ColdSync
 		perl-module_src_prepare
@@ -52,7 +55,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die #279292
+	emake -j1 #279292
 
 	if use perl; then
 		pushd perl/ColdSync
@@ -72,7 +75,7 @@ src_install() {
 		INSTALLSITEMAN3DIR="${D}"/usr/share/man/man3 \
 		INSTALLVENDORMAN3DIR="${D}"/usr/share/man/man3 \
 		EXTRA_INFOFILES="" \
-		install || die
+		install
 
 	if use perl; then
 		pushd perl/ColdSync

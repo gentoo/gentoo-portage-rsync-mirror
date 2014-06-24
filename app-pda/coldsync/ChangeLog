@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/coldsync
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.13 2011/04/09 13:45:06 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.14 2014/06/24 13:20:49 ssuominen Exp $
+
+  24 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/coldsync-3.0_pre4-texinfo-5.patch, coldsync-3.0_pre4.ebuild:
+  Fix building against >=sys-apps/texinfo-5.0 wrt #514772 by Patrick Lauer
 
   09 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> coldsync-3.0_pre4.ebuild:
   Synchronize with 2.2.5-r1 ebuild. Install to perl vendor-dir instead of perl
