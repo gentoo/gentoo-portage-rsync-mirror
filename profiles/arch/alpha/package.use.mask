@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.151 2014/06/04 01:45:53 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.152 2014/06/24 14:27:03 tetromino Exp $
 
 # Julian Ospald <hasufell@gentoo.org> (20 Apr 2014)
 # Missing keywords, bug #508226
@@ -137,10 +137,6 @@ net-libs/webkit-gtk webkit2
 # arch/alpha/package.mask:>=sys-fs/udev-167
 # Soon as that mask entry is gone, this can be removed too.
 sys-auth/consolekit acl
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
-# UDisks2 untested wrt http://bugs.gentoo.org/412801
-gnome-base/gvfs udisks
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # mask use numa for openmpi

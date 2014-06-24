@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.188 2014/06/04 01:45:53 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.189 2014/06/24 14:27:03 tetromino Exp $
+
+  24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Remove obsolete gvfs[udisks] mask (bug #412801 and #440866).
 
   06 Jun 2014; Brian Evans <grknight@gentoo.org> package.use.mask:
   Remove USE mask on jemalloc for mysql/mariadb since it was keyworded

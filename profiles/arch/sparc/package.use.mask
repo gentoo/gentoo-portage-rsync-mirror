@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.162 2014/04/20 12:37:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.163 2014/06/24 14:27:17 tetromino Exp $
 
 # Julian Ospald <hasufell@gentoo.org> (20 Apr 2014)
 # Missing keywords, bug #508226
@@ -129,10 +129,6 @@ x11-misc/xscreensaver new-login
 # Remove mask entry when app-misc/geoclue and app-accessibility/at-spi2-core
 # are keyworded here, bug #411761
 net-libs/webkit-gtk webkit2
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
-# UDisks2 untested wrt http://bugs.gentoo.org/412801
-gnome-base/gvfs udisks
 
 # Pacho Ramos <pacho@gentoo.org> (07 May 2012)
 # libhid is not keyworded
