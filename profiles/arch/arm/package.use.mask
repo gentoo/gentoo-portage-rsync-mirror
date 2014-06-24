@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.207 2014/06/08 11:38:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.208 2014/06/24 19:29:00 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (24 Jun 2014)
+# Unkeyworded deps, bug #513108
+>=net-misc/spice-gtk-0.25 smartcard
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (29 May 2014)
 # Unkeyworded deps

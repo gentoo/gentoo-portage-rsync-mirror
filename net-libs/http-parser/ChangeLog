@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/http-parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.5 2014/06/21 10:05:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.6 2014/06/24 19:23:29 maekke Exp $
+
+  24 Jun 2014; Markus Meier <maekke@gentoo.org> http-parser-2.3.ebuild:
+  add ~arm, bug #513078
 
   21 Jun 2014; Julian Ospald <hasufell@gentoo.org> http-parser-2.3.ebuild:
   add static-libs USE flag

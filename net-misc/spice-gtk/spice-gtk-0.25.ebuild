@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25.ebuild,v 1.1 2014/06/13 12:24:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25.ebuild,v 1.2 2014/06/24 19:29:29 maekke Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
 LICENSE="LGPL-2.1"
 SLOT="0"
 SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="dbus doc gstreamer gtk3 +introspection policykit pulseaudio
 python sasl smartcard static-libs usbredir vala webdav"
 

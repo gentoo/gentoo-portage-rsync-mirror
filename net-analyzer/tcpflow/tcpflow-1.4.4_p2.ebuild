@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.4.4_p2.ebuild,v 1.1 2014/06/12 22:06:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.4.4_p2.ebuild,v 1.2 2014/06/24 19:24:15 maekke Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -13,7 +13,7 @@ SRC_URI="
 "
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 SLOT="0"
 IUSE="+pcap test"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/phodav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/phodav/ChangeLog,v 1.1 2014/06/13 12:05:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/phodav/ChangeLog,v 1.2 2014/06/24 19:24:37 maekke Exp $
+
+  24 Jun 2014; Markus Meier <maekke@gentoo.org> phodav-0.4.ebuild:
+  add ~arm, bug #513108
 
 *phodav-0.4 (13 Jun 2014)
 

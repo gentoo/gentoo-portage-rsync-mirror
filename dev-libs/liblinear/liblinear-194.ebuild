@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/liblinear-194.ebuild,v 1.4 2014/06/07 11:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/liblinear-194.ebuild,v 1.5 2014/06/24 19:21:59 maekke Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/cjlin1/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 
 # /usr/bin/predict collision
 RDEPEND="!sci-astronomy/predict"
