@@ -1,6 +1,5 @@
-diff -ru dhcpdump-1.8/dhcpdump.c dhcpdump-1.8-modified/dhcpdump.c
---- dhcpdump-1.8/dhcpdump.c	2008-06-24 05:26:52.000000000 +0200
-+++ dhcpdump-1.8-modified/dhcpdump.c	2013-07-01 15:31:04.260609883 +0200
+--- a/dhcpdump.c
++++ b/dhcpdump.c
 @@ -130,7 +130,7 @@
  	offset += ETHER_HDR_LEN;
  

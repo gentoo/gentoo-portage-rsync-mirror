@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/audio-entropyd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/audio-entropyd/ChangeLog,v 1.4 2014/06/14 09:49:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/audio-entropyd/ChangeLog,v 1.5 2014/06/24 18:56:59 nimiux Exp $
+
+  24 Jun 2014; Chema Alonso <nimiux@gentoo.org> audio-entropyd-2.0.3-r1.ebuild:
+  Stable for amd64 wrt bug #509368
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   audio-entropyd-2.0.3-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1298 2014/06/23 08:53:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1299 2014/06/24 18:36:54 pacho Exp $
+
+  24 Jun 2014; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
+  Allow to handle more README.gentoo files (#513190 by Justin Lecher)
 
   23 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> qt4-r2.eclass:
   Simplify documentation files handling by utilizing einstalldocs from eutils

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.8 2014/03/17 08:17:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.9 2014/06/24 18:36:54 pacho Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -48,6 +48,11 @@ EXPORT_FUNCTIONS src_install pkg_postinst
 # @DESCRIPTION:
 # If non-empty this variable forces elog messages to be printed.
 
+# @ECLASS-VARIABLE: FILE_SUFFIX
+# @DESCRIPTION:
+# If you want to specify a suffix for README.gentoo file please export it.
+: ${FILE_SUFFIX:=""}
+
 # @FUNCTION: readme.gentoo_create_doc
 # @DESCRIPTION:
 # Create doc file with ${DOC_CONTENTS} variable (preferred) and, if not set,
@@ -68,9 +73,9 @@ readme.gentoo_create_doc() {
 		fi
 		eshopts_pop
 	elif [[ -f "${FILESDIR}/README.gentoo-${SLOT%/*}" ]]; then
-		cp "${FILESDIR}/README.gentoo-${SLOT%/*}" "${T}"/README.gentoo
+		cp "${FILESDIR}/README.gentoo-${SLOT%/*}" "${T}"/README.gentoo || die
 	elif [[ -f "${FILESDIR}/README.gentoo" ]]; then
-		cp "${FILESDIR}/README.gentoo" "${T}"/README.gentoo
+		cp "${FILESDIR}/README.gentoo${FILE_SUFFIX}" "${T}"/README.gentoo || die
 	else
 		die "You are not specifying README.gentoo contents!"
 	fi

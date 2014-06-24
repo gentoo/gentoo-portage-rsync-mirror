@@ -1,5 +1,5 @@
---- Makefile.orig	2008-06-24 05:26:52.000000000 +0200
-+++ Makefile	2008-10-26 01:22:32.000000000 +0200
+--- a/Makefile
++++ b/Makefile
 @@ -1,6 +1,6 @@
 -CFLAGS=	 -Wall -g
 -LDFLAGS= -g

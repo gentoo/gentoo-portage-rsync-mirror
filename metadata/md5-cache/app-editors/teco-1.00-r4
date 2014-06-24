@@ -9,5 +9,5 @@ LICENSE=freedist
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=http://www.ibiblio.org/pub/linux/apps/editors/tty/teco.tar.gz doc? ( mirror://gentoo/tecolore.txt.gz mirror://gentoo/tech.txt.gz mirror://gentoo/teco.doc.gz mirror://gentoo/tecoprog.doc.gz )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	be2652cdd5c20f4689ccb4769072ea99	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	58123385d2bddba78a7aee5bfb7da252	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=0b354f45cdaa6245b3ff84b993d74559

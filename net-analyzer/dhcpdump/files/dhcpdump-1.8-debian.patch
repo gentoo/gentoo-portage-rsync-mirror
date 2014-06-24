@@ -1,5 +1,5 @@
---- dhcpdump-1.8.orig/dhcpdump.c
-+++ dhcpdump-1.8/dhcpdump.c
+--- a/dhcpdump.c
++++ b/dhcpdump.c
 @@ -16,11 +16,13 @@
  #include <netinet/in.h>
  #include <netinet/ip.h>
