@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qof
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.37 2012/06/16 12:03:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.38 2014/06/24 10:32:07 pacho Exp $
+
+*qof-0.8.7 (24 Jun 2014)
+
+  24 Jun 2014; Pacho Ramos <pacho@gentoo.org> +qof-0.8.7.ebuild:
+  Version bump, also fixes (#514864 by Patrick Lauer)
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org>
   -files/qof-0.7.4-remove_spurious_CFLAGS.patch, -qof-0.7.5-r1.ebuild:
@@ -149,4 +154,3 @@
   15 Oct 2007; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
   +qof-0.7.2.ebuild:
   initial commit for bug 118517; taken from Sunrise
-
