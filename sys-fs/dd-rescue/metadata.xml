@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
- <flag name='sse4_2'>Use the SSE4.1 instruction set</flag>
+ <flag name='sse4_2'>Use the SSE4.2 instruction set</flag>
 </use>
 </pkgmetadata>

@@ -6787,7 +6787,7 @@ sys-fs/cryptsetup:nettle - Use dev-libs/nettle crypto backend
 sys-fs/cryptsetup:openssl - Use dev-libs/openssl crypto backend
 sys-fs/cryptsetup:reencrypt - Build cryptsetup-reencrypt
 sys-fs/cryptsetup:urandom - Use /dev/urandom instead of /dev/random
-sys-fs/dd-rescue:sse4_2 - Use the SSE4.1 instruction set
+sys-fs/dd-rescue:sse4_2 - Use the SSE4.2 instruction set
 sys-fs/dmraid:dietlibc - Compile against dev-libs/dietlibc
 sys-fs/dmraid:intel_led - Enable Intel LED support
 sys-fs/dmraid:klibc - Compile against dev-libs/klibc
