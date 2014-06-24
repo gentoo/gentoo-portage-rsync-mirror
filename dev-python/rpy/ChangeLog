@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.79 2014/06/03 05:42:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.80 2014/06/24 01:58:44 idella4 Exp $
+
+*rpy-2.4.2 (24 Jun 2014)
+
+  24 Jun 2014; Ian Delaney <idella4@gentoo.org> +rpy-2.4.2.ebuild:
+  add py3.4 support
 
 *rpy-2.4.0 (03 Jun 2014)
 
