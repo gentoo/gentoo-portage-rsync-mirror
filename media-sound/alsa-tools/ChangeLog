@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.224 2014/03/26 15:38:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.226 2014/06/23 23:10:04 ssuominen Exp $
+
+  23 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> alsa-tools-1.0.28.ebuild:
+  Pull in x11-fonts/font-misc-misc with USE="gtk" for echomixer wrt #456114 by
+  Yu Yuwei
+
+*alsa-tools-1.0.28 (23 Jun 2014)
+
+  23 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> +alsa-tools-1.0.28.ebuild:
+  Version bump wrt #513670 by "PG"
 
   26 Mar 2014; Samuli Suominen <ssuominen@gentoo.org> -alsa-tools-1.0.26.ebuild:
   old
