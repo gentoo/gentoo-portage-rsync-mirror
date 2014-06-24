@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/libxfcegui4
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.184 2012/11/28 12:27:29 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.185 2014/06/24 13:37:07 ssuominen Exp $
+
+*libxfcegui4-4.10.0-r1 (24 Jun 2014)
+
+  24 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libxfcegui4-4.10.0-no-xfce_setenv.patch, +libxfcegui4-4.10.0-r1.ebuild,
+  libxfcegui4-4.10.0.ebuild:
+  Use g_setenv() instead of obsolete xfce_setenv() wrt #513568 by Patrick Lauer
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   libxfcegui4-4.10.0.ebuild:
@@ -36,4 +43,3 @@
   05 May 2012; Michał Górny <mgorny@gentoo.org> libxfcegui4-4.8.1.ebuild,
   libxfcegui4-4.10.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
-

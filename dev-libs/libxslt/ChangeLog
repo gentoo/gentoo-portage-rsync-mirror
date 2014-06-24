@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.280 2014/06/24 13:14:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.281 2014/06/24 13:31:36 haubi Exp $
+
+  24 Jun 2014; Michael Haubenwallner <haubi@gentoo.org>
+  libxslt-1.1.28-r3.ebuild:
+  add more prefix keywords
 
 *libxslt-1.1.28-r3 (24 Jun 2014)
 
