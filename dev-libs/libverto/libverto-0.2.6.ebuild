@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.6.ebuild,v 1.2 2014/06/18 19:16:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.6.ebuild,v 1.3 2014/06/24 21:54:27 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="glib +libev libevent tevent +threads static-libs"
 DEPEND="!=app-crypt/mit-krb5-1.10.1-r0
 	!=app-crypt/mit-krb5-1.10.1-r1
 	!=app-crypt/mit-krb5-1.10.1-r2
-	glib? ( >=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}] )
+	glib? ( >=dev-libs/glib-2.34.3[${MULTILIB_USEDEP}] )
 	libev? ( >=dev-libs/libev-4.15[${MULTILIB_USEDEP}] )
 	libevent? ( >=dev-libs/libevent-2.0.21[${MULTILIB_USEDEP}] )
 	tevent? ( >=sys-libs/tevent-0.9.19[${MULTILIB_USEDEP}] )"

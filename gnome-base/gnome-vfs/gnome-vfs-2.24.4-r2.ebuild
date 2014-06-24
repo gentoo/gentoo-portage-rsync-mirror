@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.4 2014/06/18 19:23:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.24.4-r2.ebuild,v 1.5 2014/06/24 21:56:40 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd
 IUSE="acl avahi doc fam gnutls ipv6 kerberos samba ssl"
 
 RDEPEND=">=gnome-base/gconf-2.32.4-r1[${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3[${MULTILIB_USEDEP}]
 	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
 	>=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}]
 	gnome-base/gnome-mime-data

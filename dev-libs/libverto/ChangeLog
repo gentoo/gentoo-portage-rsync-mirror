@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.27 2014/06/18 19:16:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.28 2014/06/24 21:54:27 mgorny Exp $
+
+  24 Jun 2014; Michał Górny <mgorny@gentoo.org> libverto-0.2.5-r1.ebuild,
+  libverto-0.2.6.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libverto-0.2.5-r1.ebuild,
   libverto-0.2.6.ebuild:

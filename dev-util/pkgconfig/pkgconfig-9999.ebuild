@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.12 2014/06/18 19:21:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.13 2014/06/24 21:56:52 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="elibc_FreeBSD elibc_glibc hardened internal-glib"
 
-RDEPEND="!internal-glib? ( >=dev-libs/glib-2.38.2-r1[${MULTILIB_USEDEP}] )
+RDEPEND="!internal-glib? ( >=dev-libs/glib-2.34.3[${MULTILIB_USEDEP}] )
 	!dev-util/pkgconf[pkg-config]
 	!dev-util/pkg-config-lite
 	!dev-util/pkgconfig-openbsd[pkg-config]"
