@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.31 2014/06/04 18:50:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.32 2014/06/24 06:04:18 graaff Exp $
+
+  24 Jun 2014; Hans de Graaff <graaff@gentoo.org> shoulda-3.5.0-r1.ebuild:
+  Avoid build-time dependency on git, fixing bug 514840. Add ruby20.
 
   04 Jun 2014; Hans de Graaff <graaff@gentoo.org> shoulda-2.11.3-r1.ebuild:
   Use our own documentation recipe instead of the Rakefile with deprecated code

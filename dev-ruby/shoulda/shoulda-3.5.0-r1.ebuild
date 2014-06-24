@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-3.5.0-r1.ebuild,v 1.2 2014/03/05 21:20:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-3.5.0-r1.ebuild,v 1.3 2014/06/24 06:04:18 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
@@ -28,3 +28,7 @@ RESTRICT=test
 
 ruby_add_rdepend ">=dev-ruby/shoulda-context-1.0.1
 	>=dev-ruby/shoulda-matchers-1.4.1"
+
+all_ruby_prepare() {
+	sed -e '/git ls-files/d' -i ${RUBY_FAKEGEM_GEMSPEC} || die
+}

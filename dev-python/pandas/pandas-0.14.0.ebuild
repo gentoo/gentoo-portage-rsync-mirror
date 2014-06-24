@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.0.ebuild,v 1.1 2014/06/24 00:37:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.14.0.ebuild,v 1.2 2014/06/24 06:03:56 patrick Exp $
 
 EAPI=5
 
@@ -89,7 +89,7 @@ python_compile_all() {
 }
 
 src_test() {
-	local DISTUTILS_NO_PARALLEL_BUILD=1 
+	local DISTUTILS_NO_PARALLEL_BUILD=1
 	distutils-r1_src_test
 }
 
