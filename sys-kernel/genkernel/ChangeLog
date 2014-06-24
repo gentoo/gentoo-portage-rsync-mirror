@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.389 2014/06/21 15:32:58 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.390 2014/06/23 23:56:51 robbat2 Exp $
+
+*genkernel-9999-r1 (23 Jun 2014)
+*genkernel-3.4.50 (23 Jun 2014)
+
+  23 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> +genkernel-3.4.50.ebuild,
+  +genkernel-9999-r1.ebuild, genkernel-9999.ebuild:
+  Move distfiles to $GK_SHARE/distfiles instead of /var/cache; make naming of
+  files from --{minkern,modules}package match kernel naming from --install, and
+  also fix the paths used with them. 9999-r1 contains EAPI4/5 proposed cleanups.
 
   21 Jun 2014; Richard Yao <ryao@gentoo.org> genkernel-3.4.45.1.ebuild,
   genkernel-3.4.48.ebuild, genkernel-3.4.49.1.ebuild, genkernel-3.4.49.2.ebuild,
