@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.86.ebuild,v 1.1 2013/02/20 13:38:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.86-r1.ebuild,v 1.1 2014/06/24 01:31:06 jer Exp $
 
 EAPI=5
 

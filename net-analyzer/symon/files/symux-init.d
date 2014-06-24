@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the 2-clause BSD license
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/files/symux-init.d,v 1.3 2012/09/13 07:07:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/files/symux-init.d,v 1.4 2014/06/24 01:31:06 jer Exp $
 
-opts="${opts} reload"
+extra_started_commands="reload"
 
 depend() {
 	after bootmisc
@@ -13,8 +13,10 @@ depend() {
 
 reload() {
 	ebegin "Reloading symux"
-	start-stop-daemon --stop --pidfile /var/run/symux.pid \
-		--exec /usr/sbin/symux --oknodo --signal HUP
+	start-stop-daemon \
+		--pidfile /run/symux.pid \
+		--exec /usr/sbin/symux \
+		--signal HUP
 	eend $?
 }
 
@@ -26,6 +28,6 @@ start() {
 
 stop() {
 	ebegin "Stopping symux"
-	start-stop-daemon --stop --pidfile /var/run/symux.pid
+	start-stop-daemon --stop --pidfile /run/symux.pid
 	eend $?
 }

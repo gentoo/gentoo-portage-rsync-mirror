@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.11 2012/05/29 16:28:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.12 2014/06/24 01:12:25 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,18 +16,25 @@ KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbs
 IUSE="doc test"
 
 # gtk+-2.14 dep instead of 2.12 ensures system doesn't loose VFS capabilities in GtkFilechooser
-RDEPEND=">=dev-libs/libxml2-2.4.20:2
+RDEPEND="dev-libs/atk
+	>=dev-libs/glib-2.16:2
+	>=dev-libs/libxml2-2.4.20:2
+	>=dev-libs/popt-1.5
+	>=gnome-base/gconf-2:2
+	>=gnome-base/gnome-keyring-0.4
+	>=gnome-base/gnome-vfs-2.7.3:2
 	>=gnome-base/libgnome-2.13.7
 	>=gnome-base/libgnomecanvas-2
+	gnome-base/libgnome-keyring
 	>=gnome-base/libbonoboui-2.13.1
-	>=gnome-base/gconf-2:2
-	>=x11-libs/pango-1.1.2
-	>=dev-libs/glib-2.16:2
-	>=x11-libs/gtk+-2.14:2
-	>=gnome-base/gnome-vfs-2.7.3:2
 	>=gnome-base/libglade-2:2.0
-	>=gnome-base/gnome-keyring-0.4
-	>=dev-libs/popt-1.5"
+	media-libs/libart_lgpl
+	x11-libs/gdk-pixbuf:2
+	>=x11-libs/gtk+-2.14:2
+	>=x11-libs/pango-1.1.2
+	x11-libs/libICE
+	x11-libs/libSM
+"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig

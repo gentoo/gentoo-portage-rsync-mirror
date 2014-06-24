@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=>=dev-libs/libxml2-2.4.20:2 >=gnome-base/libgnome-2.13.7 >=gnome-base/libgnomecanvas-2 >=gnome-base/libbonoboui-2.13.1 >=gnome-base/gconf-2:2 >=x11-libs/pango-1.1.2 >=dev-libs/glib-2.16:2 >=x11-libs/gtk+-2.14:2 >=gnome-base/gnome-vfs-2.7.3:2 >=gnome-base/libglade-2:2.0 >=gnome-base/gnome-keyring-0.4 >=dev-libs/popt-1.5 sys-devel/gettext virtual/pkgconfig >=dev-util/intltool-0.40 doc? ( >=dev-util/gtk-doc-1 ) >=sys-apps/sed-4
+DEPEND=dev-libs/atk >=dev-libs/glib-2.16:2 >=dev-libs/libxml2-2.4.20:2 >=dev-libs/popt-1.5 >=gnome-base/gconf-2:2 >=gnome-base/gnome-keyring-0.4 >=gnome-base/gnome-vfs-2.7.3:2 >=gnome-base/libgnome-2.13.7 >=gnome-base/libgnomecanvas-2 gnome-base/libgnome-keyring >=gnome-base/libbonoboui-2.13.1 >=gnome-base/libglade-2:2.0 media-libs/libart_lgpl x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.14:2 >=x11-libs/pango-1.1.2 x11-libs/libICE x11-libs/libSM sys-devel/gettext virtual/pkgconfig >=dev-util/intltool-0.40 doc? ( >=dev-util/gtk-doc-1 ) >=sys-apps/sed-4
 DESCRIPTION=User Interface routines for Gnome
 EAPI=3
 HOMEPAGE=http://library.gnome.org/devel/libgnomeui/stable/
@@ -7,8 +7,8 @@ IUSE=doc test
 KEYWORDS=alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=LGPL-2
 PDEPEND=x11-themes/gnome-icon-theme
-RDEPEND=>=dev-libs/libxml2-2.4.20:2 >=gnome-base/libgnome-2.13.7 >=gnome-base/libgnomecanvas-2 >=gnome-base/libbonoboui-2.13.1 >=gnome-base/gconf-2:2 >=x11-libs/pango-1.1.2 >=dev-libs/glib-2.16:2 >=x11-libs/gtk+-2.14:2 >=gnome-base/gnome-vfs-2.7.3:2 >=gnome-base/libglade-2:2.0 >=gnome-base/gnome-keyring-0.4 >=dev-libs/popt-1.5
+RDEPEND=dev-libs/atk >=dev-libs/glib-2.16:2 >=dev-libs/libxml2-2.4.20:2 >=dev-libs/popt-1.5 >=gnome-base/gconf-2:2 >=gnome-base/gnome-keyring-0.4 >=gnome-base/gnome-vfs-2.7.3:2 >=gnome-base/libgnome-2.13.7 >=gnome-base/libgnomecanvas-2 gnome-base/libgnome-keyring >=gnome-base/libbonoboui-2.13.1 >=gnome-base/libglade-2:2.0 media-libs/libart_lgpl x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.14:2 >=x11-libs/pango-1.1.2 x11-libs/libICE x11-libs/libSM
 SLOT=0
 SRC_URI=mirror://gnome/sources/libgnomeui/2.24/libgnomeui-2.24.5.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=536819e95bad9c082e3b07b78dc02247
+_md5_=5100529cc44a7bc2b610ea8e3e5c9eee

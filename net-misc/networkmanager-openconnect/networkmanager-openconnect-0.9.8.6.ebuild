@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/networkmanager-openconnect-0.9.8.6.ebuild,v 1.3 2014/05/04 12:12:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/networkmanager-openconnect-0.9.8.6.ebuild,v 1.4 2014/06/24 01:29:57 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,6 +25,7 @@ RDEPEND="
 	gtk? (
 		>=x11-libs/gtk+-2.91.4:3
 		gnome-base/gnome-keyring
+		gnome-base/libgnome-keyring
 	)"
 
 DEPEND="${RDEPEND}

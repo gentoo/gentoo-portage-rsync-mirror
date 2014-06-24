@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/symon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.14 2013/02/20 13:38:59 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.15 2014/06/24 01:31:06 jer Exp $
+
+*symon-2.86-r1 (24 Jun 2014)
+
+  24 Jun 2014; Jeroen Roovers <jer@gentoo.org> -symon-2.85.ebuild,
+  -symon-2.86.ebuild, +symon-2.86-r1.ebuild, files/symon-init.d,
+  files/symux-init.d:
+  Fix init scripts (opts / --oknodo / /var/run) by Torbjörn Lönnemark (bug
+  #514452).
 
 *symon-2.86 (20 Feb 2013)
 

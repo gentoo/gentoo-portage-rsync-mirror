@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeui
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.212 2013/03/29 19:41:15 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.213 2014/06/24 01:12:25 tetromino Exp $
+
+  24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgnomeui-2.24.5.ebuild:
+  Lots of missing dependencies (bug #514734, thanks to Todd Goodman).
 
   29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -libgnomeui-2.24.3.ebuild:

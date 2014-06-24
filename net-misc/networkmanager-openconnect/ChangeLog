@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager-openconnect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.27 2014/05/04 12:12:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.28 2014/06/24 01:29:57 tetromino Exp $
+
+  24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -networkmanager-openconnect-0.9.8.4.ebuild,
+  networkmanager-openconnect-0.9.8.6.ebuild,
+  -files/networkmanager-openconnect-0.9.8.4-auth-dialog-formchoice.patch,
+  -files/networkmanager-openconnect-0.9.8.4-auth-dialog-ignore.patch,
+  -files/networkmanager-openconnect-0.9.8.4-auth-dialog-newgroup.patch:
+  Missing libgnome-keyring dependency. Clean up old.
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org>
   networkmanager-openconnect-0.9.8.6.ebuild:

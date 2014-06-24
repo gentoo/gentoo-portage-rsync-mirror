@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.37 2014/04/27 08:59:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.38 2014/06/24 01:18:19 tetromino Exp $
+
+  24 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-vpnc-0.9.8.6.ebuild:
+  Missing libgnome-keyring dependency (bug #514712, thanks to tka).
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -networkmanager-vpnc-0.9.6.0.ebuild, -networkmanager-vpnc-0.9.8.2.ebuild:
