@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.13.0.ebuild,v 1.1 2014/04/06 05:30:17 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.13.0-r1.ebuild,v 1.1 2014/06/24 09:49:27 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -49,7 +49,7 @@ CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 ~TMPFS_XATTR ~UBIFS_FS_XATTR ~EXT2_FS_XATTR ~REISERFS_FS_XATTR ~EXT4_FS_XATTR
 ~ZFS"
 
-#PATCHES=( "${FILESDIR}/CVE-2014-0006-master.diff" )
+PATCHES=( "${FILESDIR}/"CVE-2014-3497-1.13.patch )
 
 pkg_setup() {
 	enewuser swift

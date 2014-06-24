@@ -1,6 +1,17 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.28 2014/06/06 12:40:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.30 2014/06/24 09:56:43 idella4 Exp $
+
+  24 Jun 2014; Ian Delaney <idella4@gentoo.org> -swift-1.13.0.ebuild,
+  -swift-1.13.1.ebuild:
+  rm these vulnerable versions wrt Bug #513864
+
+*swift-1.13.0-r1 (24 Jun 2014)
+*swift-1.13.1-r1 (24 Jun 2014)
+
+  24 Jun 2014; Ian Delaney <idella4@gentoo.org> +files/CVE-2014-3497-1.13.patch,
+  +swift-1.13.0-r1.ebuild, +swift-1.13.1-r1.ebuild:
+  revbump; add sec. patch wrt Bug #513864
 
   06 Jun 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Spelling (bug #512552).
