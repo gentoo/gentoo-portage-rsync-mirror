@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.92 2014/06/14 10:32:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.93 2014/06/24 08:53:57 nimiux Exp $
+
+  24 Jun 2014; Chema Alonso <nimiux@gentoo.org> linux-logo-5.11-r3.ebuild:
+  Stable for amd64 wrt bug #507732
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   linux-logo-5.11-r3.ebuild:
