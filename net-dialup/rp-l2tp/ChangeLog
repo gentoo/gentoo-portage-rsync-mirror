@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/rp-l2tp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.19 2012/02/16 19:01:28 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.21 2014/06/24 12:15:50 pinkbyte Exp $
+
+  24 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
+  +files/rp-l2tp-0.4-build.patch:
+  Add patch for latest revision, that is accidantly missing
+
+*rp-l2tp-0.4-r3 (24 Jun 2014)
+
+  24 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> +rp-l2tp-0.4-r3.ebuild:
+  Revision bump: EAPI 5, epatch_user, respect CC, AR and RANLIB, wrt bug
+  #514866
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rp-l2tp-0.4-r2.ebuild:
   x86 stable wrt bug #397141
