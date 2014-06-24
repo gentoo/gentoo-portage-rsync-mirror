@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.3.0.ebuild,v 1.1 2014/06/20 06:24:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.3.0.ebuild,v 1.2 2014/06/24 22:54:16 vapier Exp $
 
 EAPI="4"
 
@@ -134,8 +134,11 @@ src_install() {
 	if ! use nfsv4 || ! use kerberos ; then
 		rm "${D}$(systemd_get_unitdir)"/rpc-{gssd,svcgssd}.service || die
 	fi
-	sed -i \
+	rm "${D}$(systemd_get_unitdir)"/nfs-config.service || die
+	sed -i -r \
 		-e "/^EnvironmentFile=/s:=.*:=${EPREFIX}/etc/conf.d/nfs:" \
+		-e '/^(After|Wants)=nfs-config.service$/d' \
+		-e 's:/usr/sbin/rpc.statd:/sbin/rpc.statd:' \
 		"${D}$(systemd_get_unitdir)"/* || die
 }
 
