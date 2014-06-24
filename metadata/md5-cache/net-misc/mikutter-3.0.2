@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( dev-ruby/addressable[ruby_targets_ruby19] dev-ruby/bsearch[ruby_targets_ruby19] dev-ruby/delayer[ruby_targets_ruby19] dev-ruby/json[ruby_targets_ruby19] dev-ruby/memoize[ruby_targets_ruby19] >=dev-ruby/oauth-0.4.7[ruby_targets_ruby19] dev-ruby/rcairo[ruby_targets_ruby19] >=dev-ruby/ruby-gettext-3.0.1[ruby_targets_ruby19] >=dev-ruby/ruby-gtk2-2.2.0[ruby_targets_ruby19] dev-ruby/ruby-hmac[ruby_targets_ruby19] dev-ruby/typed-array[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+DESCRIPTION=mikutter is simple, powerful and moeful twitter client
+EAPI=5
+HOMEPAGE=http://mikutter.hachune.net/
+IUSE=+libnotify sound test elibc_FreeBSD ruby_targets_ruby19
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=libnotify? ( x11-libs/libnotify ) sound? ( media-sound/alsa-utils ) ruby_targets_ruby19? ( dev-ruby/addressable[ruby_targets_ruby19] dev-ruby/bsearch[ruby_targets_ruby19] dev-ruby/delayer[ruby_targets_ruby19] dev-ruby/json[ruby_targets_ruby19] dev-ruby/memoize[ruby_targets_ruby19] >=dev-ruby/oauth-0.4.7[ruby_targets_ruby19] dev-ruby/rcairo[ruby_targets_ruby19] >=dev-ruby/ruby-gettext-3.0.1[ruby_targets_ruby19] >=dev-ruby/ruby-gtk2-2.2.0[ruby_targets_ruby19] dev-ruby/ruby-hmac[ruby_targets_ruby19] dev-ruby/typed-array[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+SLOT=0
+SRC_URI=http://mikutter.hachune.net/bin/mikutter.3.0.2.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=24ec2a7c98c3cac54b5fe487c4b81a2d

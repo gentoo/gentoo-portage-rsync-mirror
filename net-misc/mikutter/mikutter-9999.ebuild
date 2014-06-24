@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.5 2014/06/11 07:57:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.6 2014/06/24 07:54:38 naota Exp $
 
 EAPI=5
 
@@ -43,10 +43,6 @@ ruby_add_rdepend "dev-ruby/addressable
 	dev-ruby/ruby-hmac
 	dev-ruby/typed-array
 	virtual/ruby-ssl"
-
-RUBY_PATCHES=(
-	"${FILESDIR}"/${PN}-0.2.2.1537-disable-bundler.patch
-)
 
 all_ruby_unpack() {
 	if [ "${PV}" = "9999" ];then

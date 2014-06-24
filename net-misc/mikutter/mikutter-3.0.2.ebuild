@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.2.1537.ebuild,v 1.2 2014/06/11 07:57:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-3.0.2.ebuild,v 1.1 2014/06/24 07:54:38 naota Exp $
 
 EAPI=5
 
@@ -33,19 +33,16 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 
 ruby_add_rdepend "dev-ruby/addressable
 	dev-ruby/bsearch
+	dev-ruby/delayer
 	dev-ruby/json
-	dev-ruby/json_pure
 	dev-ruby/memoize
 	>=dev-ruby/oauth-0.4.7
 	dev-ruby/rcairo
+	>=dev-ruby/ruby-gettext-3.0.1
 	>=dev-ruby/ruby-gtk2-2.2.0
 	dev-ruby/ruby-hmac
 	dev-ruby/typed-array
 	virtual/ruby-ssl"
-
-RUBY_PATCHES=(
-	"${FILESDIR}"/${PN}-0.2.2.1537-disable-bundler.patch
-)
 
 all_ruby_unpack() {
 	if [ "${PV}" = "9999" ];then
