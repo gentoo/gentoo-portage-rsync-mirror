@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.4.ebuild,v 1.15 2013/02/02 22:49:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.4.ebuild,v 1.16 2014/06/24 03:46:01 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -75,11 +75,4 @@ src_install () {
 	fi
 
 	find "${D}" -name '*.la' -delete || die "failed to remove *.la files"
-}
-
-pkg_postinst() {
-	elog "This version of ${PN} has stopped installing .la files. This may"
-	elog "cause compilation failures in other packages. To fix this problem,"
-	elog "install dev-util/lafilefixer and run:"
-	elog "  lafilefixer --justfixit"
 }

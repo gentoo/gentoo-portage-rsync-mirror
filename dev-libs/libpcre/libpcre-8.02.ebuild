@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.02.ebuild,v 1.11 2012/05/25 16:39:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.02.ebuild,v 1.12 2014/06/24 03:50:06 patrick Exp $
 
 EAPI=2
 
@@ -51,11 +51,4 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	gen_usr_ldscript -a pcre
 	find "${D}" -type f -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
-}
-
-pkg_postinst() {
-	elog "This version of ${PN} has stopped installing .la files. This may"
-	elog "cause compilation failures in other packages. To fix this problem,"
-	elog "install dev-util/lafilefixer and run:"
-	elog "lafilefixer --justfixit"
 }

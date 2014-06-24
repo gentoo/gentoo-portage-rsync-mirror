@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install postinst prepare
+DEFINED_PHASES=configure install prepare
 DEPEND=bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) virtual/pkgconfig userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Perl-compatible regular expression library
 EAPI=2
@@ -10,4 +10,4 @@ RDEPEND=bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib )
 SLOT=3
 SRC_URI=ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.02.tar.bz2
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1676ee2af313b8586d05c13b4dd78d9a
+_md5_=4e3264866fc74a89c6b01fda942b2736
