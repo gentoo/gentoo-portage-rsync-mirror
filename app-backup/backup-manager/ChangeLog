@@ -1,6 +1,14 @@
 # ChangeLog for app-backup/backup-manager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backup-manager/ChangeLog,v 1.21 2012/06/07 23:54:52 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backup-manager/ChangeLog,v 1.22 2014/06/24 12:42:49 voyageur Exp $
+
+*backup-manager-0.7.10.1-r2 (24 Jun 2014)
+
+  24 Jun 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  -backup-manager-0.7.9.ebuild, +backup-manager-0.7.10.1-r2.ebuild,
+  +files/backup-manager-0.7.10-Fix-POD-syntax.patch:
+  EAPI bump and fix POD syntax (for perl 5.18), patch from Fedora. Spotted by
+  patrick in bug #513402
 
   07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
   backup-manager-0.7.10.1-r1.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.59 2014/05/04 14:10:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.61 2014/06/24 12:59:53 jer Exp $
+
+  24 Jun 2014; Jeroen Roovers <jer@gentoo.org> -darkstat-3.0.715.ebuild,
+  darkstat-3.0.717.ebuild, darkstat-3.0.718.ebuild, +files/darkstat-confd,
+  -files/darkstat-confd.new, -files/darkstat-init.new, +files/darkstat-initd:
+  Rename initd/confd scripts. Remove -flto from CFLAGS.
+
+  24 Jun 2014; Jeroen Roovers <jer@gentoo.org> files/darkstat-init.new:
+  Use /run not /var/run.
 
 *darkstat-3.0.718 (04 May 2014)
 

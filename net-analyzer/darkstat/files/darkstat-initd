@@ -1,14 +1,14 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-init.new,v 1.1 2007/11/03 17:33:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/files/darkstat-initd,v 1.1 2014/06/24 12:59:53 jer Exp $
 
 IF=${SVCNAME##*.}
 
 if [ -n "${IF}" -a "${SVCNAME}" != "darkstat" ] ; then
-	PIDFILE=/var/run/darkstat.${IF}.pid
+	PIDFILE=/run/darkstat.${IF}.pid
 else
-	PIDFILE=/var/run/darkstat.pid
+	PIDFILE=/run/darkstat.pid
 fi
 
 depend() {

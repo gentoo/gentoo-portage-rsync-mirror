@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.717.ebuild,v 1.4 2014/01/20 15:53:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.717.ebuild,v 1.5 2014/06/24 12:59:53 jer Exp $
 
 EAPI=5
 
@@ -33,8 +33,8 @@ src_configure() {
 src_install() {
 	default
 
-	newinitd "${FILESDIR}"/darkstat-init.new darkstat
-	newconfd "${FILESDIR}"/darkstat-confd.new darkstat
+	newinitd "${FILESDIR}"/darkstat-initd darkstat
+	newconfd "${FILESDIR}"/darkstat-confd darkstat
 
 	sed -i -e "s:__CHROOT__:${DARKSTAT_CHROOT_DIR}:g" "${D}"/etc/conf.d/darkstat
 	sed -i -e "s:__CHROOT__:${DARKSTAT_CHROOT_DIR}:g" "${D}"/etc/init.d/darkstat
