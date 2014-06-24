@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.9.0.ebuild,v 1.1 2014/06/12 09:13:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.9.0.ebuild,v 1.2 2014/06/24 10:03:58 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="<dev-python/paramiko-1.13[${PYTHON_USEDEP}]"
+# since 'paramiko>=1.10' is what we have in portage, paramiko can be set unversioned
+RDEPEND="dev-python/paramiko[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )

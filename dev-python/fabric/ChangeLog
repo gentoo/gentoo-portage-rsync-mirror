@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.44 2014/06/12 09:13:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.45 2014/06/24 10:03:58 idella4 Exp $
+
+  24 Jun 2014; Ian Delaney <idella4@gentoo.org> fabric-1.9.0.ebuild:
+  re-set paramiko in RDEPEND, noted by Arfrever
 
 *fabric-1.9.0 (12 Jun 2014)
 
