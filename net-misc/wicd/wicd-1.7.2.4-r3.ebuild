@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.8 2014/06/14 10:29:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.9 2014/06/24 09:30:17 nimiux Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://launchpad.net/wicd/1.7/${PV}/+download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 x86"
 IUSE="doc X ambiance +gtk ioctl libnotify mac4lin ncurses nls +pm-utils"
 
 DEPEND="nls? ( dev-python/Babel )"
