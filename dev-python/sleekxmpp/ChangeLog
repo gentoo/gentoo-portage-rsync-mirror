@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sleekxmpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sleekxmpp/ChangeLog,v 1.5 2014/06/19 00:02:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sleekxmpp/ChangeLog,v 1.6 2014/06/25 07:43:06 idella4 Exp $
+
+  25 Jun 2014; Ian Delaney <idella4@gentoo.org> sleekxmpp-1.3.0.ebuild:
+  bump; add py3.4 pypy
 
 *sleekxmpp-1.3.0 (19 Jun 2014)
 
