@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.12 2014/06/18 20:30:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.13 2014/06/25 06:32:41 mgorny Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ RDEPEND="
 			|| (
 				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 				(
-					>=dev-libs/glib-2.38.2-r1:2[abi_x86_32(-)]
+					>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
 					>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
 					>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
 				)

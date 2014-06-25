@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-9999.ebuild,v 1.5 2013/12/03 17:23:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-9999.ebuild,v 1.6 2014/06/25 06:36:31 patrick Exp $
 
 EAPI="5"
 
@@ -22,6 +22,7 @@ COMMON_DEPEND=">=dev-libs/boost-1.46
 	dev-qt/qtscript:4
 	dev-qt/qtsql:4[postgres?,sqlite?]
 	dev-qt/qtwebkit:4
+	dev-qt/qtdbus:4
 	qwt? ( x11-libs/qwt:6 )"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )"

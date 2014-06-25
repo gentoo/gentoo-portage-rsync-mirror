@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/ossp-uuid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.44 2013/03/11 08:09:11 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.45 2014/06/25 06:48:01 dev-zero Exp $
+
+*ossp-uuid-1.6.2-r3 (25 Jun 2014)
+
+  25 Jun 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/ossp-uuid-1.6.2-fix-data-uuid-from-string.patch,
+  +files/ossp-uuid-1.6.2-fix-whatis-entries.patch,
+  +files/ossp-uuid-1.6.2-hwaddr.patch, +files/ossp-uuid-1.6.2-manfix.patch, +fil
+  es/ossp-uuid-1.6.2-uuid-preserve-m-option-status-in-v-option-handling.patch,
+  +ossp-uuid-1.6.2-r3.ebuild, -files/ossp-uuid-1.6.2-gentoo.patch:
+  Also build for php-5.5 (bug #491852), add various bug-fixes from Fedora and
+  Ubuntu/Debian, fix Perl-bindings installation.
 
   11 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
   -ossp-uuid-1.6.2-r1.ebuild:

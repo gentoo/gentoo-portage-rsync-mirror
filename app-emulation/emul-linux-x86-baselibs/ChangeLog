@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.229 2014/06/20 01:01:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.230 2014/06/25 06:34:35 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-baselibs-20131008-r6.ebuild,
+  emul-linux-x86-baselibs-20140406-r4.ebuild,
+  emul-linux-x86-baselibs-20140508-r12.ebuild,
+  emul-linux-x86-baselibs-20140508-r13.ebuild,
+  emul-linux-x86-baselibs-20140508-r14.ebuild,
+  emul-linux-x86-baselibs-20140508-r9.ebuild:
+  Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for
+  GNOME 3.6.
 
   20 Jun 2014; Mike Gilbert <floppym@gentoo.org>
   files/remove-native-20140508-r13, files/remove-native-20140508-r14:

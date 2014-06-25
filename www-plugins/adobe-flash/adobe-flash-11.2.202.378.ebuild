@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.378.ebuild,v 1.3 2014/06/18 20:58:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.378.ebuild,v 1.4 2014/06/25 06:32:41 mgorny Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
@@ -89,7 +89,7 @@ RDEPEND="
 			)
 			|| (
 				(
-					>=dev-libs/glib-2.38.2-r1:2[abi_x86_32(-)]
+					>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
 					>=dev-libs/nspr-4.10.4[abi_x86_32(-)]
 					>=dev-libs/nss-3.15.4[abi_x86_32(-)]
 				)

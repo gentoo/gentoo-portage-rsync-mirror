@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.3 2014/06/18 19:02:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20140508-r1.ebuild,v 1.4 2014/06/25 06:34:52 mgorny Exp $
 
 EAPI=5
 inherit eutils emul-linux-x86
@@ -16,7 +16,7 @@ RDEPEND="
 		~app-emulation/emul-linux-x86-baselibs-${PV}
 		(
 			>=dev-db/sqlite-3.8.2:3[abi_x86_32(-)]
-			>=dev-libs/glib-2.38.2-r1[abi_x86_32(-)]
+			>=dev-libs/glib-2.34.3[abi_x86_32(-)]
 			>=dev-libs/openssl-1.0.1h-r2[abi_x86_32(-)]
 			mng? ( <media-libs/libmng-2[abi_x86_32(-)] )
 			>=media-libs/libpng-1.6.10:0/16[abi_x86_32(-)]

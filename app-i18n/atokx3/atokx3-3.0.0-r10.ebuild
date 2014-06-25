@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r10.ebuild,v 1.3 2014/06/18 19:03:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r10.ebuild,v 1.4 2014/06/25 06:34:14 mgorny Exp $
 
 EAPI="3"
 
@@ -57,7 +57,7 @@ RDEPEND="!app-i18n/atokx2
 		|| (
 			app-emulation/emul-linux-x86-baselibs
 			(
-				>=dev-libs/glib-2.38.2-r1:2[abi_x86_32]
+				>=dev-libs/glib-2.34.3:2[abi_x86_32]
 				>=dev-libs/libxml2-2.9.1-r4:2[abi_x86_32]
 				>=media-libs/libpng-1.2.51[abi_x86_32]
 				>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32]

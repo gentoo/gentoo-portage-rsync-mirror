@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.4-r1.ebuild,v 1.3 2014/06/24 22:12:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.4-r1.ebuild,v 1.4 2014/06/25 06:38:26 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -22,7 +22,7 @@ RDEPEND="!<media-libs/quvi-0.4.0
 	>=media-libs/libquvi-scripts-0.9.20130903[${MULTILIB_USEDEP}]
 	>=net-libs/libproxy-0.4.11-r1[${MULTILIB_USEDEP}]
 	>=net-misc/curl-7.36.0[${MULTILIB_USEDEP}]
-	>=dev-lang/lua-5.2.3[deprecated,${MULTILIB_USEDEP}]
+	>=dev-lang/lua-5.1.5-r3[deprecated,${MULTILIB_USEDEP}]
 	nls? ( >=virtual/libintl-0-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
