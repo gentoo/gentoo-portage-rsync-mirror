@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.78 2014/05/22 20:51:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.79 2014/06/25 12:46:50 blueness Exp $
+
+*varnish-4.0.1 (25 Jun 2014)
+
+  25 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/varnish-4.0.1-fix-doc-Makefile_am.patch,
+  +files/varnish-4.0.1-fix-man-Makefile_am.patch,
+  +files/varnish-4.0.1-fix-warning.patch, +varnish-4.0.1.ebuild:
+  Version bump
 
   22 May 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Add myself as secondary maintainer

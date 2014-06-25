@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.54 2014/06/17 13:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.55 2014/06/25 12:37:55 jer Exp $
+
+  25 Jun 2014; Jeroen Roovers <jer@gentoo.org> kgcc64-4.7.4.ebuild:
+  Drop patches that do not make sense (or fail to apply).
 
 *kgcc64-4.8.3 (17 Jun 2014)
 *kgcc64-4.7.4 (17 Jun 2014)

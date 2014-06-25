@@ -1,6 +1,9 @@
 # ChangeLog for games-action/beathazardultra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/ChangeLog,v 1.4 2013/08/18 00:48:51 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/ChangeLog,v 1.5 2014/06/25 12:53:53 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> beathazardultra-20130308.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
   18 Aug 2013; Julian Ospald <hasufell@gentoo.org>
   beathazardultra-20130308.ebuild:

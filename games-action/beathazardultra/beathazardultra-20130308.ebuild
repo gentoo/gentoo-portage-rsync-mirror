@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.5 2013/08/18 00:48:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/beathazardultra/beathazardultra-20130308.ebuild,v 1.6 2014/06/25 12:53:53 mgorny Exp $
 
 # TODO: unbundle allegro[gtk...] (no multilib on amd64 and 5.0.9 soname)
 
@@ -26,9 +26,32 @@ DEPEND="app-arch/unzip"
 RDEPEND="
 	virtual/opengl
 	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-xlibs
+		!bundled-libs? (
+			|| (
+				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+				(
+					media-libs/libpng:1.2[abi_x86_32(-)]
+					virtual/jpeg[abi_x86_32(-)]
+				)
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+			x11-libs/gtk+:2[abi_x86_32(-)]
+		)
+		|| (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		|| (
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			(
+				x11-libs/libX11[abi_x86_32(-)]
+				x11-libs/libXcursor[abi_x86_32(-)]
+				x11-libs/libXinerama[abi_x86_32(-)]
+				x11-libs/libXrandr[abi_x86_32(-)]
+			)
+		)
 	)
 	x86? (
 		x11-libs/gtk+:2

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.60 2014/03/19 17:25:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.61 2014/06/25 12:47:50 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  android-sdk-update-manager-22.6.1.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
 *android-sdk-update-manager-22.6.1 (19 Mar 2014)
 

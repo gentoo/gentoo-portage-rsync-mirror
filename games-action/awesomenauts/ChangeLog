@@ -1,10 +1,12 @@
 # ChangeLog for games-action/awesomenauts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.1 2013/07/16 19:31:44 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.2 2014/06/25 12:50:41 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> awesomenauts-2013.5.21.3.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
 *awesomenauts-2013.5.21.3 (16 Jul 2013)
 
   16 Jul 2013; Julian Ospald <hasufell@gentoo.org>
   +awesomenauts-2013.5.21.3.ebuild:
   initial import
-

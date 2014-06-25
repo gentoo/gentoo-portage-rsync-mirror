@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.7.4.ebuild,v 1.1 2014/06/17 13:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.7.4.ebuild,v 1.2 2014/06/25 12:37:55 jer Exp $
 
 EAPI=2
 
@@ -40,6 +40,13 @@ DEPEND="${RDEPEND}
 	!sys-devel/gcc-sparc64
 	>=sys-apps/texinfo-4.8
 	>=sys-devel/bison-1.875"
+
+src_prepare() {
+	EPATCH_EXCLUDE+=" 10_all_default-fortify-source.patch"
+	EPATCH_EXCLUDE+=" 90_all_gcc-4.7-x32.patch"
+
+	toolchain_src_prepare
+}
 
 pkg_postinst() {
 	toolchain_pkg_postinst
