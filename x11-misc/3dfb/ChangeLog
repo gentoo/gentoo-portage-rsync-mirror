@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/3dfb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.13 2014/03/13 09:04:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/ChangeLog,v 1.14 2014/06/25 06:18:45 pinkbyte Exp $
+
+  25 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> 3dfb-0.6.1-r1.ebuild:
+  Add missing dependency on x11-libs/libXmu, wrt bug #514998. Thanks to Patrick
+  Lauer for discovering this issue
 
   13 Mar 2014; Sergey Popov <pinkbyte@gentoo.org> -3dfb-0.6.1.ebuild,
   3dfb-0.6.1-r1.ebuild:

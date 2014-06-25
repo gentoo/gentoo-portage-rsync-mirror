@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.7 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.8 2014/06/25 06:04:59 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils gnome2
+inherit eutils flag-o-matic gnome2
 
 DESCRIPTION="GNOME client for the classic PBEM strategy game VGA Planets 3"
 HOMEPAGE="http://gwp.lunix.com.ar/"
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	append-libs -lm
 	gnome2_src_prepare
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
@@ -34,8 +35,7 @@ src_prepare() {
 	sed -i \
 		-e '/ -O1/d' \
 		-e '/ -g$/d' \
-		src/Makefile.in \
-		|| die "sed failed"
+		src/Makefile.in || die
 }
 
 src_configure() {
