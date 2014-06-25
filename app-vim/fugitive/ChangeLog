@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/fugitive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/ChangeLog,v 1.7 2014/06/19 05:32:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/ChangeLog,v 1.9 2014/06/25 00:34:47 radhermit Exp $
+
+  25 Jun 2014; Tim Harder <radhermit@gentoo.org> -fugitive-2.0_beta.ebuild:
+  Remove old.
+
+*fugitive-2.1 (25 Jun 2014)
+
+  25 Jun 2014; Tim Harder <radhermit@gentoo.org> +fugitive-2.1.ebuild,
+  fugitive-9999.ebuild:
+  Version bump.
 
 *fugitive-9999 (19 Jun 2014)
 *fugitive-2.0_beta (19 Jun 2014)
