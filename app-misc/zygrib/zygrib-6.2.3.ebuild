@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.2.3.ebuild,v 1.1 2014/02/02 23:42:54 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.2.3.ebuild,v 1.2 2014/06/25 16:43:25 mschiff Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+maps"
 
 DEPEND="app-arch/bzip2
+dev-qt/qtsvg
 sci-libs/libnova
 sci-libs/proj
 sys-libs/zlib
