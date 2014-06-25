@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.100 2014/06/11 07:50:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.101 2014/06/25 21:44:21 mattm Exp $
+
+  25 Jun 2014; Matthew Marlowe <mattm@gentoo.org> apcupsd-3.14.12.ebuild:
+  Unmask apcupsd-3.14.12 for general testing, several weeks w/o bug reports -
+  other users reporting it fixes bugs, pushing slowly towards replacing 3.14.8
+  as stable.
 
   11 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> apcupsd-3.14.8-r2.ebuild,
   apcupsd-3.14.10-r6.ebuild, apcupsd-3.14.12.ebuild:
