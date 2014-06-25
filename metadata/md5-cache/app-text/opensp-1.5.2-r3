@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=nls? ( sys-devel/gettext ) doc? ( app-text/xmlto app-text/docbook-xml-dtd:4.1.2 ) test? ( app-text/openjade app-text/sgml-common )
+DEPEND=nls? ( sys-devel/gettext ) doc? ( app-text/xmlto app-text/docbook-xml-dtd:4.1.2 ) test? ( app-text/docbook-xml-dtd:4.5 app-text/openjade app-text/sgml-common )
 DESCRIPTION=A free, object-oriented toolkit for SGML parsing and entity management
 EAPI=5
 HOMEPAGE=http://openjade.sourceforge.net/
@@ -9,4 +9,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=mirror://sourceforge/openjade/OpenSP-1.5.2.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=560347fe1888b91e777678154df4eff2
+_md5_=c141c047388914340370846cf84f28cb

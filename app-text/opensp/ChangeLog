@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.71 2014/04/06 15:16:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.72 2014/06/25 19:55:40 pacho Exp $
+
+  25 Jun 2014; Pacho Ramos <pacho@gentoo.org> opensp-1.5.2-r3.ebuild:
+  Add missing DEPEND, bug #515086 by Paolo Pedroni
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> opensp-1.5.2-r3.ebuild:
   Add arm64 love.
