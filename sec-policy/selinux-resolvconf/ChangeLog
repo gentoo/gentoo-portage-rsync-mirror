@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-resolvconf
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-resolvconf/ChangeLog,v 1.1 2014/06/25 20:02:19 swift Exp $
+
+*selinux-resolvconf-9999 (25 Jun 2014)
+
+  25 Jun 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-resolvconf-9999.ebuild, +metadata.xml:
+  Fix bug #509728 - Add support for openresolv (resolvconf implementation)
+
