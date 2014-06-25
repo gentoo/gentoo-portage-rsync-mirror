@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.10.ebuild,v 1.2 2014/06/25 17:48:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.10-r1.ebuild,v 1.1 2014/06/25 17:53:59 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -35,6 +35,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	sed -i '/^DEBUGFLAGS/s, -D_FORTIFY_SOURCE=2,,g' Makefile || die
+	epatch "${FILESDIR}"/${P}-json.patch
 	epatch_user
 
 	# Many checks don't have configure flags.

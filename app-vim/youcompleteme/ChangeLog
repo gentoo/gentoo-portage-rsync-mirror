@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/youcompleteme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.3 2014/06/10 19:52:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.4 2014/06/25 17:52:17 maksbotan Exp $
+
+  25 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  youcompleteme-99999999.ebuild:
+  Fix test disabling in live ebuild
 
   10 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
   youcompleteme-99999999.ebuild:

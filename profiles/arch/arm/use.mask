@@ -241,3 +241,5 @@ opencl
 # sys-devel/llvm is keyworded
 -llvm
 
+# Missing sys-process/numactl keywords.
+numa

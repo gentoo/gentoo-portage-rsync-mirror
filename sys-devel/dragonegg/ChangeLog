@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/dragonegg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.18 2014/05/11 08:17:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.19 2014/06/25 17:41:10 voyageur Exp $
+
+  25 Jun 2014; Bernard Cafarelli <voyageur@gentoo.org> -dragonegg-3.0.ebuild,
+  -dragonegg-3.1.ebuild, -dragonegg-3.2.ebuild, dragonegg-3.3.ebuild,
+  dragonegg-3.4.ebuild, +files/dragonegg-gcc-4.8.patch:
+  Fix compilation with gcc 4.8, bug #514992 by patrick
 
   11 May 2014; Bernard Cafarelli <voyageur@gentoo.org> dragonegg-3.4.ebuild:
   Relax dependency on llvm for 3.4.1

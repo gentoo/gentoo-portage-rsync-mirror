@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-99999999.ebuild,v 1.3 2014/06/10 19:52:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-99999999.ebuild,v 1.4 2014/06/25 17:52:17 maksbotan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -55,7 +55,7 @@ VIM_PLUGIN_HELPFILES="${PN}"
 
 src_prepare() {
 	if ! use test ; then
-		sed -i '/^add_subdirectory( tests )/d' third_party/ycmd/cpp/CMakeLists.txt || die
+		sed -i '/^add_subdirectory( tests )/d' third_party/ycmd/cpp/ycm/CMakeLists.txt || die
 	fi
 	for third_party_module in requests pythonfutures; do
 		rm -r "${S}"/third_party/${third_party_module} || die "Failed to remove third party module ${third_party_module}"

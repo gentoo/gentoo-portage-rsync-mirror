@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.9.ebuild,v 1.6 2014/04/12 16:55:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.9.ebuild,v 1.7 2014/06/25 17:46:25 vapier Exp $
 
 EAPI="4"
 
@@ -12,7 +12,8 @@ SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~amd64-linux"
+# ARM lacks the __NR_migrate_pages syscall.
+KEYWORDS="-arm amd64 ~ia64 ppc ppc64 x86 ~amd64-linux"
 IUSE="static-libs"
 
 src_prepare() {
