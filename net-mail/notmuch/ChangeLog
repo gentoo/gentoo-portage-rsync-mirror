@@ -1,6 +1,46 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.93 2014/05/20 13:03:35 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.94 2014/06/25 11:36:09 aidecoe Exp $
+
+*notmuch-0.18.1 (25 Jun 2014)
+
+  25 Jun 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.18.1.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  This is a bug fix and portability release.
+
+  Build System
+  ------------
+
+  Make emacs install robust against the non-existence of emacs
+  Put notmuch lib directory first in RPATH
+  Fix handling of html_static_path in sphinx
+
+  Test Suite
+  ----------
+
+  Use --quick when starting emacs (avoids a hang in the T160-json tests)
+  Allow pending break points in atomicity script
+
+  Command-Line Interface
+  ----------------------
+
+  To improve portability use fsync instead of fdatasync in
+  `notmuch-dump`. There should be no functional difference.
+
+  Library changes
+  ---------------
+
+  Resurrect support for single-message mbox files
+  Fix for phrase indexing
+
+  Emacs Interface
+  ---------------
+
+  Make sure tagging on an empty query is harmless
 
   20 May 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.18.ebuild:
   Removed old revision of 0.18.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-2.2.1.ebuild,v 1.1 2014/05/14 09:28:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-2.2.1-r1.ebuild,v 1.1 2014/06/25 11:36:21 jlec Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ src_install() {
 	dodoc README.txt changelog
 
 	cat >> "${T}"/30-${PN} <<- EOF
-	DSSP="${EPRFIX}"/usr/bin/${PN}
+	DSSP="${EPREFIX}"/usr/bin/${PN}
 	EOF
 	doenvd "${T}"/30-${PN}
 }
