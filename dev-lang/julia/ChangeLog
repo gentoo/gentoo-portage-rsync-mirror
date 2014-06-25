@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/julia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.9 2014/06/25 02:16:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.11 2014/06/25 08:13:58 patrick Exp $
+
+  25 Jun 2014; Patrick Lauer <patrick@gentoo.org> julia-0.2.1-r1.ebuild:
+  Add missing camd dependency
+
+*julia-0.2.1-r1 (25 Jun 2014)
+
+  25 Jun 2014; Patrick Lauer <patrick@gentoo.org>
+  +files/julia-0.2.1-patchelf.patch, +julia-0.2.1-r1.ebuild:
+  Fix patchelf detection #515058
 
   25 Jun 2014; Patrick Lauer <patrick@gentoo.org> julia-0.2.1.ebuild:
   Restrict parallel building #514882

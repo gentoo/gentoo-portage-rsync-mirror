@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/make.defaults,v 1.13 2014/06/20 13:48:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/make.defaults,v 1.14 2014/06/25 08:18:50 mgorny Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -30,3 +30,8 @@ VIDEO_CARDS="fbdev glint intel mach64 mga nouveau nv r128 radeon savage sis tdfx
 # 2006/12/21 - Andrej Kacian <ticho@gentoo.org>
 # Defaults for audio drivers
 ALSA_CARDS="ali5451 als4000 atiixp atiixp-modem bt87x ca0106 cmipci emu10k1 emu10k1x ens1370 ens1371 es1938 es1968 fm801 hda-intel intel8x0 intel8x0m maestro3 trident usb-audio via82xx via82xx-modem ymfpci"
+
+# Michał Górny <mgorny@gentoo.org> (25 Jun 2014)
+# Make the native ABI implicit so that MULTILIB_USEDEP can be satisfied
+# by non-multilib ebuilds when non-native ABIs are disabled.
+IMPLICIT_IUSE="abi_x86_32"

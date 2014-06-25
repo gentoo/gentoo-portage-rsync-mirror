@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.262 2014/06/15 09:49:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.263 2014/06/25 08:18:42 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> make.defaults,
+  x32/make.defaults:
+  Experimentally mark native ABI USE flag implicit for better
+  user-friendliness.
 
   15 Jun 2014; Michał Górny <mgorny@gentoo.org> package.use.stable.mask:
   Stable-mask emul-linux-x86 flags that are used only to control abi_x86_32
