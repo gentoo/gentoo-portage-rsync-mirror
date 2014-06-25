@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.25 2014/06/24 06:03:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.26 2014/06/25 11:27:26 idella4 Exp $
+
+  25 Jun 2014; Ian Delaney <idella4@gentoo.org> pandas-0.14.0.ebuild:
+  set no-strict-aliasing under py2.7, revise sed statement, correct doc location
+  for dohtml, fixes Bug #514870
 
   24 Jun 2014; Patrick Lauer <patrick@gentoo.org> pandas-0.14.0.ebuild:
   Whitespace
