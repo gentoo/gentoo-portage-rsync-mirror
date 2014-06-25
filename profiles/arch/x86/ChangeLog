@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.167 2014/06/25 08:18:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.168 2014/06/25 12:05:16 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Fix typo.
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
   Experimentally mark native ABI USE flag implicit for better

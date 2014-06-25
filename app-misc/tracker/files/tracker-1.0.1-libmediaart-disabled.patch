@@ -1,0 +1,40 @@
+From 3a360934d4520db279490e1c5c929aa61916ac90 Mon Sep 17 00:00:00 2001
+From: Martyn Russell <martyn@lanedo.com>
+Date: Thu, 5 Jun 2014 10:08:30 +0100
+Subject: tracker-extract: Fix build with libav when libmediaaart is disabled
+
+https://bugzilla.gnome.org/show_bug.cgi?id=728370
+
+diff --git a/src/tracker-extract/tracker-extract-libav.c b/src/tracker-extract/tracker-extract-libav.c
+index fea30a3..c14998b 100644
+--- a/src/tracker-extract/tracker-extract-libav.c
++++ b/src/tracker-extract/tracker-extract-libav.c
+@@ -26,7 +26,9 @@
+ 
+ #include <libtracker-extract/tracker-extract.h>
+ 
++#ifdef HAVE_LIBMEDIAART
+ #include <tracker-media-art.h>
++#endif
+ 
+ #include <libavcodec/avcodec.h>
+ #include <libavformat/avformat.h>
+@@ -327,6 +329,7 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
+ 			g_free (album_uri);
+ 		}
+ 
++#ifdef HAVE_LIBMEDIAART
+ 		media_art_process (NULL,
+ 		                   0,
+ 		                   NULL,
+@@ -334,6 +337,7 @@ tracker_extract_get_metadata (TrackerExtractInfo *info)
+ 		                   album_artist,
+ 		                   album_title,
+ 		                   uri);
++#endif
+ 
+ 		g_free(performer_uri);
+ 	}
+-- 
+cgit v0.10.1
+

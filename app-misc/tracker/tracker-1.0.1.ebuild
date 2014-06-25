@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.1.ebuild,v 1.2 2014/05/31 18:43:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.1.ebuild,v 1.3 2014/06/25 12:15:03 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,14 +8,17 @@ GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 VALA_MIN_API_VERSION="0.14"
 
-inherit autotools gnome2 linux-info multilib python-any-r1 vala versionator virtualx
+inherit autotools eutils gnome2 linux-info multilib python-any-r1 vala versionator virtualx
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="https://wiki.gnome.org/Projects/Tracker"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/100"
-IUSE="cue eds elibc_glibc exif ffmpeg firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis +xml xmp xps"
+IUSE="cue eds elibc_glibc exif ffmpeg firefox-bookmarks flac gif gsf
+gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 nautilus networkmanager
+pdf playlist rss test thunderbird +tiff upnp-av +vorbis +xml xmp xps"
+
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
@@ -138,6 +141,9 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=699413
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+3 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
+
+	# Fix building with libmediaart disabled, bug #509048
+	epatch "${FILESDIR}/${PN}-1.0.1-libmediaart-disabled.patch"
 
 	eautoreconf # See bug #367975
 	gnome2_src_prepare
