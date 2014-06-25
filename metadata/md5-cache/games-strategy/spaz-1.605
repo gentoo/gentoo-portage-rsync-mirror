@@ -6,9 +6,9 @@ HOMEPAGE=http://spacepiratesandzombies.com
 IUSE=alsa pulseaudio
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=LOKI-EULA
-RDEPEND=amd64? ( app-emulation/emul-linux-x86-sdl ) x86? ( media-libs/openal[alsa?,pulseaudio?] media-libs/libsdl ) games-misc/games-envd
+RDEPEND=|| ( ( >=media-libs/openal-1.15.1[alsa?,pulseaudio?,abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) ) games-misc/games-envd
 RESTRICT=fetch strip
 SLOT=0
 SRC_URI=spaz-linux-humblebundle-09182012-bin
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2747db6070ef44384f7dca042743dc7c
+_md5_=ba97758745745315d1de906acb42c1ad

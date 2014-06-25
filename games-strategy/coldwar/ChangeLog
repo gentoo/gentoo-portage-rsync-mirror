@@ -1,6 +1,15 @@
 # ChangeLog for games-strategy/coldwar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/ChangeLog,v 1.5 2014/04/16 17:11:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/ChangeLog,v 1.7 2014/06/25 17:28:08 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> coldwar-1.0.1-r1.ebuild:
+  Update multilib dependencies to use the lowest known EAPI 5 or multilib
+  versions.
+
+*coldwar-1.0.1-r1 (25 Jun 2014)
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> +coldwar-1.0.1-r1.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
   16 Apr 2014; Ulrich Müller <ulm@gentoo.org> coldwar-1.0.1.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, bug 505754.
@@ -19,4 +28,3 @@
   06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
   +coldwar-1.0.1.ebuild:
   Initial import.  Ebuild by Paul Bredbury <brebs@sent.com> and edited by me.
-

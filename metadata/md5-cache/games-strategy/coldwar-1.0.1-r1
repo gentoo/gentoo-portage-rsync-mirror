@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DESCRIPTION=Third-person sneaker like Splinter Cell
+EAPI=5
+HOMEPAGE=http://linuxgamepublishing.com/info.php?id=coldwar
+IUSE=linguas_de linguas_fr linguas_ru
+KEYWORDS=~amd64 ~x86
+LICENSE=all-rights-reserved
+PROPERTIES=interactive
+RDEPEND=|| ( ( >=dev-libs/glib-2.34.3[abi_x86_32(-)] >=media-libs/libogg-1.3.0[abi_x86_32(-)] >=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)] >=media-libs/openal-1.15.1[abi_x86_32(-)] >=media-libs/smpeg-0.4.4-r10[abi_x86_32(-)] >=virtual/opengl-7.0-r1[abi_x86_32(-)] >=x11-libs/libX11-1.6.2[abi_x86_32(-)] >=x11-libs/libXext-1.3.2[abi_x86_32(-)] ) amd64? ( ( app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) ) ) games-misc/games-envd
+RESTRICT=mirror bindist strip
+SLOT=0
+SRC_URI=http://updatefiles.linuxgamepublishing.com/coldwar/coldwar-1.0-1.0.1-x86.run
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cdrom	415b847346ef9001a89e5c7da6711215	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=0fc6a1262fba4a978f1bfc5b8f7d54b7

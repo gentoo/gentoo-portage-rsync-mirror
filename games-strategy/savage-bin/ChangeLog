@@ -1,6 +1,15 @@
 # ChangeLog for games-strategy/savage-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.17 2014/04/26 09:48:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.19 2014/06/25 17:28:07 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> savage-bin-2.00e-r1.ebuild:
+  Update multilib dependencies to use the lowest known EAPI 5 or multilib
+  versions.
+
+*savage-bin-2.00e-r1 (25 Jun 2014)
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> +savage-bin-2.00e-r1.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
   26 Apr 2014; Ulrich Müller <ulm@gentoo.org> savage-bin-2.00e.ebuild:
   Fix LICENSE, add bindist restriction, bug 505778.
