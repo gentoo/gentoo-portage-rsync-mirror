@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2041.4.ebuild,v 1.1 2014/06/12 06:36:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2062.0.ebuild,v 1.1 2014/06/25 03:35:36 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -156,7 +156,7 @@ src_prepare() {
 	# fi
 
 	epatch "${FILESDIR}/${PN}-angle-r0.patch"
-	epatch "${FILESDIR}/${PN}-ffmpeg-r1.patch"
+	epatch "${FILESDIR}/${PN}-ffmpeg-r2.patch"
 
 	epatch_user
 
@@ -185,6 +185,7 @@ src_prepare() {
 		'third_party/cros_system_api' \
 		'third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
+		'third_party/fips181' \
 		'third_party/flot' \
 		'third_party/hunspell' \
 		'third_party/iccjpeg' \
@@ -334,9 +335,6 @@ src_configure() {
 		-Dlinux_use_bundled_gold=0
 		-Dlinux_use_gold_flags=0"
 
-	# TODO: enable mojo after fixing compile failures.
-	myconf+=" -Duse_mojo=0"
-
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
@@ -436,6 +434,8 @@ src_configure() {
 	chromium/scripts/copy_config.sh || die
 	chromium/scripts/generate_gyp.py || die
 	popd > /dev/null || die
+
+	third_party/libaddressinput/chromium/tools/update-strings.py || die
 
 	einfo "Configuring Chromium..."
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
