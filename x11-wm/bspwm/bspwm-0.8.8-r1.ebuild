@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/bspwm/bspwm-0.8.8.ebuild,v 1.1 2014/01/24 08:20:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/bspwm/bspwm-0.8.8-r1.ebuild,v 1.1 2014/06/25 05:40:38 radhermit Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -24,6 +24,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch "${FILESDIR}"/${P}-desktop.patch
 }
 
 src_compile() {

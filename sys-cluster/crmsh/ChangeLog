@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/crmsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/ChangeLog,v 1.11 2014/06/16 11:14:43 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/ChangeLog,v 1.12 2014/06/25 05:56:40 patrick Exp $
+
+  25 Jun 2014; Patrick Lauer <patrick@gentoo.org> crmsh-2.0.0.ebuild:
+  Remove keywords from live ebuild
 
 *crmsh-2.0.0 (16 Jun 2014)
 
