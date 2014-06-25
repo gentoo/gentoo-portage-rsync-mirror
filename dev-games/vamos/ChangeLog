@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/vamos
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.25 2013/03/11 08:55:40 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.26 2014/06/25 18:18:51 mr_bones_ Exp $
+
+  25 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> vamos-0.7.1.ebuild:
+  add boost dep (bug #514266)
 
   11 Mar 2013; Alfredo Tupone <tupone@gentoo.org> -vamos-0.7.0.ebuild,
   -files/vamos-0.7.0-as-needed.patch:
