@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1.ebuild,v 1.1 2014/04/02 23:03:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1.ebuild,v 1.2 2014/06/25 02:16:06 patrick Exp $
 
 EAPI=5
 
@@ -113,12 +113,13 @@ src_configure() {
 }
 
 src_compile() {
-	emake cleanall
+	# Not parallel-safe, #514882
+	emake -j1 cleanall
 	if [[ $(get_libdir) != lib ]]; then
 		mkdir -p usr/$(get_libdir) || die
 		ln -s $(get_libdir) usr/lib || die
 	fi
-	emake julia-release
+	emake -j1 julia-release
 	pax-mark m $(file usr/bin/julia-* | awk -F : '/ELF/ {print $1}')
 	emake
 	use emacs && elisp-compile contrib/julia-mode.el

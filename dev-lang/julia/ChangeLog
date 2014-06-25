@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/julia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.8 2014/04/02 23:03:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.9 2014/06/25 02:16:06 patrick Exp $
+
+  25 Jun 2014; Patrick Lauer <patrick@gentoo.org> julia-0.2.1.ebuild:
+  Restrict parallel building #514882
 
 *julia-0.2.1 (02 Apr 2014)
 
