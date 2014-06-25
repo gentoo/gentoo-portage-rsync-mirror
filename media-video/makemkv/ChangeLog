@@ -1,6 +1,14 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.40 2014/04/25 15:42:28 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.41 2014/06/25 19:14:18 mattm Exp $
+
+*makemkv-1.8.11 (25 Jun 2014)
+
+  25 Jun 2014; Matthew Marlowe <mattm@gentoo.org>
+  +files/makemkv-1.8.11-makefile.linux.patch, +makemkv-1.8.11.ebuild,
+  makemkv-1.8.10.ebuild:
+  Upstream version bump, bug 513676, should hopefully address some
+  incompatibilities with newer glibc versions.
 
   25 Apr 2014; Steve Dibb <beandog@gentoo.org>
   -files/makemkv-1.6.16-makefile.linux.patch,
