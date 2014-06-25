@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.6 2013/05/09 14:15:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/trine2-1.16.ebuild,v 1.8 2014/06/25 13:46:18 mgorny Exp $
 
 EAPI=5
 inherit eutils unpacker gnome2-utils games
@@ -22,13 +22,56 @@ QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/${PN}*
 # TODO: bundled-libs: no libsdl-1.3, no physx
 RDEPEND="
 	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-opengl
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-soundlibs
-		app-emulation/emul-linux-x86-xlibs
-		launcher? ( app-emulation/emul-linux-x86-gtklibs )
-		!bundled-libs? ( media-gfx/nvidia-cg-toolkit[multilib] )
+		|| (
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			(
+				>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
+				>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
+				launcher? (
+					>=media-libs/libpng-1.5.18:1.5[abi_x86_32(-)]
+				)
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			(
+				>=virtual/glu-9.0-r1[abi_x86_32(-)]
+				>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			>=media-libs/openal-1.15.1[abi_x86_32(-)]
+		)
+		|| (
+			app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+			(
+				>=media-libs/libogg-1.3.0[abi_x86_32(-)]
+				>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			(
+				>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+				launcher? (
+					>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+					>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+					>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+					>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
+					>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
+				)
+			)
+		)
+		launcher? (
+			|| (
+				app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+				>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+			)
+		)
+		!bundled-libs? (
+			media-gfx/nvidia-cg-toolkit[multilib]
+		)
 	)
 	x86? (
 		dev-libs/glib:2

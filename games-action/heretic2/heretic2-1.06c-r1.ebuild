@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c-r1.ebuild,v 1.1 2014/06/25 13:01:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c-r1.ebuild,v 1.2 2014/06/25 13:46:13 mgorny Exp $
 
 EAPI=5
 
@@ -25,13 +25,13 @@ RDEPEND="virtual/opengl
 	amd64? (
 		|| (
 			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
+			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
 		)
 		|| (
 			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 			(
-				x11-libs/libX11[abi_x86_32(-)]
-				x11-libs/libXext[abi_x86_32(-)]
+				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
 			)
 		)
 	)

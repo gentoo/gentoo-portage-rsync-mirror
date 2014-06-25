@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/shadowgrounds-survivor-bin-0_beta11-r1.ebuild,v 1.1 2014/06/25 13:18:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/shadowgrounds-survivor-bin-0_beta11-r1.ebuild,v 1.2 2014/06/25 13:46:13 mgorny Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND=">=sys-libs/glibc-2.4
 	amd64? (
 		|| (
 			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-			gnome-base/libglade[abi_x86_32(-)]
+			>=gnome-base/libglade-2.6.4-r1[abi_x86_32(-)]
 		)
 	)"
 

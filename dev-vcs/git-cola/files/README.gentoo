@@ -1,0 +1,10 @@
+	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" nosetests \
+		--verbose --with-doctest --with-id --exclude=jsonpickle --exclude=json \
+		|| die "running nosetests failed"
+}
+
+pkg_postinst() {
+	elog "Please make sure you have either a SSH key management installed and activated or"
+	elog "installed a SSH askpass app like net-misc/x11-ssh-askpass."
+	elog "Otherwise git-cole may hang when pushing/pulling from remote git repositories via SSH. "
+}

@@ -1,6 +1,11 @@
 # ChangeLog for games-action/shadowgrounds-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.4 2014/06/25 13:14:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.5 2014/06/25 13:46:12 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  shadowgrounds-bin-0_beta12-r1.ebuild:
+  Update multilib dependencies to use the lowest known EAPI 5 or multilib
+  versions.
 
 *shadowgrounds-bin-0_beta12-r1 (25 Jun 2014)
 
