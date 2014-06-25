@@ -54,7 +54,6 @@ dmi
 
 # Stuff we don't want
 chicken
-clisp
 fuse
 R
 octave

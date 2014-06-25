@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.59 2014/01/27 07:06:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.61 2014/06/25 14:31:17 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  files/nvidia-cg-toolkit-gl.pc.in:
+  Remove redundant -lCg from nvidia-cg-toolkit-gl.pc since it is implied by
+  Requires:.
+
+*nvidia-cg-toolkit-3.1.0013-r3 (25 Jun 2014)
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +nvidia-cg-toolkit-3.1.0013-r3.ebuild:
+  Convert to multilib-minimal, for proper flags & simpler install. Install pkg-
+  config file to proper 32-bit libdir instead of playing with filename.
 
   27 Jan 2014; Justin Lecher <jlec@gentoo.org>
   -nvidia-cg-toolkit-2.1.0012.ebuild, -nvidia-cg-toolkit-2.1.0017.ebuild,

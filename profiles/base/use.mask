@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.199 2014/06/16 15:08:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.200 2014/06/25 14:22:30 grozin Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -350,11 +350,14 @@ abi_ppc_64
 abi_s390_32
 abi_s390_64
 
-# Andrey Grozin <grozin@gentoo.org> (1 May 2013)
-# gcl, cmucl, clozurecl are available only on some arches
-gcl
-cmucl
+# Andrey Grozin <grozin@gentoo.org> (25 Jun 2014)
+# These lisps are available only on some arches
+clisp
 clozurecl
+cmucl
+ecls
+gcl
+sbcl
 
 # Michał Górny <mgorny@gentoo.org> (4 May 2013)
 # Mask systemd flag globally, unmasked on arches on which systemd

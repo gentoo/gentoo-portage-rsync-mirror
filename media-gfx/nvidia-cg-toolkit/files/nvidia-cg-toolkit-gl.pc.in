@@ -5,6 +5,6 @@ Name: nvidia-cg-toolkit
 Description: DESCRIPTION
 Version: VERSION
 URL: HOMEPAGE
-Libs: -L${libdir} -lCg -lCgGL
+Libs: -L${libdir} -lCgGL
 Cflags: -I${includedir}/
 Requires: nvidia-cg-toolkitSUFFIX

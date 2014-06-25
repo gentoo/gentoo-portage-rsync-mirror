@@ -1,9 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.stable.mask,v 1.5 2014/04/26 07:22:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.stable.mask,v 1.6 2014/06/25 14:22:29 grozin Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in use.mask
+
+# Andrey Grozin <grozin@gentoo.org> (25 Jun 2014)
+# no stable version on sparc
+ecls
+sbcl
 
 # Pacho Ramos <pacho@gentoo.org> (17 Apr 2014)
 # Dropped stable keywords after the discussion caused by

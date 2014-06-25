@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.62 2014/04/08 23:41:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.63 2014/06/25 14:22:30 grozin Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -18,11 +18,14 @@
 # Unmask systemd since it is keyworded here.
 -systemd
 
-# Andrey Grozin <grozin@gentoo.org> (1 May 2013)
-# available on x86
--cmucl
+# Andrey Grozin <grozin@gentoo.org> (25 Jun 2014)
+# keyworded on x86
+-clisp
 -clozurecl
+-cmucl
+-ecls
 -gcl
+-sbcl
 
 # Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
 # Unmask the flag corresponding to the only ABI. This allows x86 binary

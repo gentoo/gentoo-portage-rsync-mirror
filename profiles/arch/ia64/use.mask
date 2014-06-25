@@ -97,7 +97,6 @@ clang
 
 # Stuff that doesn't compile on ia64
 chicken
-clisp
 diet
 emf
 fusion

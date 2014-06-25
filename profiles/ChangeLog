@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9107 2014/06/24 18:52:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9108 2014/06/25 14:22:27 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jun 2014; Andrey Grozin <grozin@gentoo.org>
+  arch/alpha/use.mask, arch/amd64/use.mask, arch/amd64/use.stable.mask,
+  arch/arm/use.mask, arch/arm64/use.mask, arch/ia64/use.mask, arch/m68k/use.mask,
+  arch/powerpc/ppc32/use.mask, arch/powerpc/ppc32/use.stable.mask, arch/s390/use.mask, arch/sh/use.mask,
+  arch/sparc/use.mask, arch/sparc/use.stable.mask, arch/x86/use.mask, arch/x86/use.stable.mask,
+  base/use.mask:
+  USE flags clisp, clozurecl, cmucl, ecls, gcl, sbcl masked in base
+  and unmasked only on the relevant arches (stable.masked whenever necessary)
 
   24 Jun 2014; Mike Gilbert <floppym@gentoo.org> thirdpartymirrors:
   Add ftp://ftp.gnupg.org/gcrypt/ to gnupg mirrors.
