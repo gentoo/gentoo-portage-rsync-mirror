@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=>=dev-libs/glib-2:2 dev-libs/libxml2 dev-libs/libxslt dev-libs/popt >=media-libs/freetype-2 >=media-libs/libart_lgpl-2 media-libs/libpng:0 sys-libs/zlib x11-libs/gtk+:2 x11-libs/pango cairo? ( x11-libs/cairo ) doc? ( app-text/docbook-xml-dtd:4.5 app-text/docbook-xsl-stylesheets ) python? ( >=dev-python/pygtk-2 python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) dev-util/intltool sys-apps/sed virtual/pkgconfig doc? ( dev-libs/libxslt ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Diagram/flowchart creation program
+EAPI=5
+HOMEPAGE=https://wiki.gnome.org/Apps/Dia
+IUSE=+cairo doc python debug python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2:2 dev-libs/libxml2 dev-libs/libxslt dev-libs/popt >=media-libs/freetype-2 >=media-libs/libart_lgpl-2 media-libs/libpng:0 sys-libs/zlib x11-libs/gtk+:2 x11-libs/pango cairo? ( x11-libs/cairo ) doc? ( app-text/docbook-xml-dtd:4.5 app-text/docbook-xsl-stylesheets ) python? ( >=dev-python/pygtk-2 python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/gnome/dia-0.97.3_pre20140417.tar.xz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=71c74bb2878a23fb4df9e4b83e5e23f7

@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.0.ebuild,v 1.3 2014/01/21 21:56:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.1 2014/06/25 09:32:27 pacho Exp $
 
 EAPI="5"
-
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib-minimal
 
 MY_PN="gst-libav"
 DESCRIPTION="FFmpeg based gstreamer plugin"
@@ -17,21 +16,20 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fb
 IUSE="+orc"
 
 RDEPEND="
-	>=media-libs/gstreamer-1.2:1.0
-	>=media-libs/gst-plugins-base-1.2:1.0
-	>=virtual/ffmpeg-9
-	orc? ( >=dev-lang/orc-0.4.16 )
+	>=media-libs/gstreamer-1.2.3:1.0[${MULTILIB_USEDEP}]
+	>=media-libs/gst-plugins-base-1.2.3:1.0[${MULTILIB_USEDEP}]
+	>=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}]
+	!!<media-video/libav-10
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
-	virtual/pkgconfig
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
-	sed -e 's/sleep 15//' -i configure.ac configure || die
-
 	# compatibility with recent releases 
 	# TODO: likely apply them with libav-10 when it's out but there will
 	# probably be an upstream gst-libav release compatible at that time.
@@ -39,13 +37,15 @@ src_prepare() {
 		sed -i -e 's/ CODEC_ID/ AV_CODEC_ID/g' \
 			   -e 's/ CodecID/ AVCodecID/g' \
 			   ext/libav/*.{c,h} || die
-		epatch "${FILESDIR}/${P}-ffmpeg2.patch"
+		epatch "${FILESDIR}/${PN}-1.2.4-ffmpeg2.patch"
+		epatch "${FILESDIR}/${PN}-1.2.4-fix-memory-leak.patch" #494282
 	fi
 }
 
-src_configure() {
+multilib_src_configure() {
 	GST_PLUGINS_BUILD=""
 	# always use system ffmpeg/libav if possible
+	ECONF_SOURCE=${S} \
 	econf \
 		--disable-maintainer-mode \
 		--with-package-name="Gentoo GStreamer ebuild" \
@@ -55,14 +55,13 @@ src_configure() {
 		$(use_enable orc)
 }
 
-src_compile() {
+multilib_src_compile() {
 	# Don't build with -Werror
 	emake ERROR_CFLAGS=
 }
 
-src_install() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	default
+multilib_src_install_all() {
+	einstalldocs
 	prune_libtool_files --modules
 }
 

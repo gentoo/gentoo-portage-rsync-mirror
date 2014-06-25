@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.169 2014/06/12 18:00:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.170 2014/06/25 09:53:46 pacho Exp $
+
+*dia-0.97.3_pre20140417-r1 (25 Jun 2014)
+
+  25 Jun 2014; Pacho Ramos <pacho@gentoo.org> +dia-0.97.3_pre20140417-r1.ebuild,
+  +files/dia-0.97.2-png-crash.patch:
+  Fix crash and test failure (#508566 by Kolan Sh. and Drunkard Zhang; #458460
+  by flameeyes and eroen)
 
   12 Jun 2014; Pacho Ramos <pacho@gentoo.org>
   +files/dia-0.97.2-disable-cairo.patch, -dia-0.97.2-r2.ebuild,
