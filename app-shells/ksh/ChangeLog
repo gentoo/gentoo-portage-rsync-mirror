@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.63 2013/03/17 15:36:08 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.64 2014/06/25 04:12:43 floppym Exp $
+
+*ksh-93.20140606 (25 Jun 2014)
+
+  25 Jun 2014; Mike Gilbert <floppym@gentoo.org> +ksh-93.20140606.ebuild:
+  Version bump.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

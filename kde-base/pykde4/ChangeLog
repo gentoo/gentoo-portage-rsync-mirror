@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.291 2014/06/19 13:32:52 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.292 2014/06/25 04:12:13 jcallen Exp $
+
+  25 Jun 2014; Jonathan Callen <jcallen@gentoo.org> pykde4-4.13.2.ebuild:
+  Add python3_4 to PYTHON_COMPAT
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -pykde4-4.13.1.ebuild:
   Remove KDE SC 4.13.1

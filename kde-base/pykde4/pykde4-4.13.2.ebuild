@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.13.2.ebuild,v 1.1 2014/06/15 16:56:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.13.2.ebuild,v 1.2 2014/06/25 04:12:13 jcallen Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 PYTHON_REQ_USE="threads"
 OPENGL_REQUIRED="always"
 
