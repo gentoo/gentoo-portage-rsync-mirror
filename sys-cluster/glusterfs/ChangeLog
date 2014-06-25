@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/glusterfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.56 2014/06/25 09:54:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.57 2014/06/25 15:48:20 dev-zero Exp $
+
+*glusterfs-3.4.4-r2 (25 Jun 2014)
+
+  25 Jun 2014; Tiziano Müller <dev-zero@gentoo.org> +files/glusterfs-3.4.4-clust
+  er-dht-Don-t-do-extra-unref-in-dht-migration-ch.patch,
+  +glusterfs-3.4.4-r2.ebuild, -glusterfs-3.4.4-r1.ebuild:
+  Revision bump to pull in yet another important fix for 3.4.4 (client crash
+  after rebalance, upstream bug #961615).
 
 *glusterfs-3.4.4-r1 (25 Jun 2014)
 

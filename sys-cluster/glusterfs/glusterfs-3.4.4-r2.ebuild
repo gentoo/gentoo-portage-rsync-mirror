@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.4.4-r1.ebuild,v 1.1 2014/06/25 09:54:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.4.4-r2.ebuild,v 1.1 2014/06/25 15:48:20 dev-zero Exp $
 
 EAPI=5
 
@@ -42,6 +42,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.4.0-silent_rules.patch"
 	"${FILESDIR}/${PN}-3.4.0-build-shared-only.patch"
 	"${FILESDIR}/${PN}-3.4.4-fuse-fix-memory-leak-in-fuse_getxattr.patch"
+	"${FILESDIR}/${PN}-3.4.4-cluster-dht-Don-t-do-extra-unref-in-dht-migration-ch.patch"
 )
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS )
