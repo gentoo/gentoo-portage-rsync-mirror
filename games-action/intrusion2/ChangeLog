@@ -1,10 +1,12 @@
 # ChangeLog for games-action/intrusion2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/ChangeLog,v 1.1 2013/07/16 19:35:52 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/ChangeLog,v 1.2 2014/06/25 13:07:42 mgorny Exp $
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> intrusion2-1.024.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
 *intrusion2-1.024 (16 Jul 2013)
 
   16 Jul 2013; Julian Ospald <hasufell@gentoo.org> +intrusion2-1.024.ebuild,
   +metadata.xml:
   initial import
-

@@ -1,6 +1,11 @@
 # ChangeLog for games-action/heretic2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.11 2012/02/05 05:00:48 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.12 2014/06/25 13:01:57 mgorny Exp $
+
+*heretic2-1.06c-r1 (25 Jun 2014)
+
+  25 Jun 2014; Michał Górny <mgorny@gentoo.org> +heretic2-1.06c-r1.ebuild:
+  Support multilib dependencies aside to emul-linux-x86.
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> heretic2-1.06c.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -39,4 +44,3 @@
   03 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
   +heretic2-1.06c.ebuild:
   Initial commit. Modified ebuild from bug #136869 by Anton Romanov.
-

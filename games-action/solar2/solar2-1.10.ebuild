@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/solar2-1.10.ebuild,v 1.6 2014/05/15 16:24:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/solar2/solar2-1.10.ebuild,v 1.7 2014/06/25 13:22:30 mgorny Exp $
 
 # TODO: - unbundle libmono for 64bit
 #       - unbundling libSDL_mixer breaks the game
@@ -30,9 +30,36 @@ QA_PREBUILT="${MYGAMEDIR#/}/lib/*
 RDEPEND="
 	virtual/opengl
 	amd64? (
-		app-emulation/emul-linux-x86-medialibs
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-soundlibs
+		!bundled-libs? (
+			|| (
+				app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)]
+				media-libs/libmad[abi_x86_32(-)]
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			virtual/opengl[abi_x86_32(-)]
+		)
+		|| (
+			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+			(
+				media-libs/libsdl[X,sound,video,joystick,abi_x86_32(-)]
+				!bundled-libs? (
+					media-libs/openal[abi_x86_32(-)]
+					media-libs/sdl-mixer[flac,mikmod,mad,mp3,vorbis,abi_x86_32(-)]
+				)
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
+			(
+				media-libs/flac[abi_x86_32(-)]
+				media-libs/libvorbis[abi_x86_32(-)]
+				!bundled-libs? (
+					media-libs/libmikmod[abi_x86_32(-)]
+				)
+			)
+		)
 	)
 	x86? (
 		media-libs/flac

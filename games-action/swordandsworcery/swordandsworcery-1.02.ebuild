@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/swordandsworcery/swordandsworcery-1.02.ebuild,v 1.4 2014/05/15 16:25:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/swordandsworcery/swordandsworcery-1.02.ebuild,v 1.5 2014/06/25 13:28:11 mgorny Exp $
 
 # TODO: unbundle liblua-5.1 when available for multilib
 
@@ -26,11 +26,54 @@ QA_PREBUILT="${MYGAMEDIR#/}/bin/*
 RDEPEND="
 	virtual/opengl
 	amd64? (
-		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-opengl
-		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-soundlibs[alsa]
-		app-emulation/emul-linux-x86-xlibs
+		|| (
+			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			(
+				dev-libs/openssl[abi_x86_32(-)]
+				sys-libs/zlib[abi_x86_32(-)]
+				!bundled-libs? (
+					net-misc/curl[abi_x86_32(-)]
+				)
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+			(
+				virtual/glu[abi_x86_32(-)]
+				virtual/opengl[abi_x86_32(-)]
+			)
+		)
+		!bundled-libs? (
+			|| (
+				app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
+				media-libs/libsdl[X,sound,video,opengl,joystick,abi_x86_32(-)]
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-soundlibs[alsa,-abi_x86_32(-)]
+			(
+				media-libs/alsa-lib[abi_x86_32(-)]
+				media-libs/flac[abi_x86_32(-)]
+				media-libs/libogg[abi_x86_32(-)]
+				media-libs/libsndfile[abi_x86_32(-)]
+				media-libs/libvorbis[abi_x86_32(-)]
+				media-sound/pulseaudio[abi_x86_32(-)]
+			)
+		)
+		|| (
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			(
+				x11-libs/libICE[abi_x86_32(-)]
+				x11-libs/libSM[abi_x86_32(-)]
+				x11-libs/libX11[abi_x86_32(-)]
+				x11-libs/libXau[abi_x86_32(-)]
+				x11-libs/libxcb[abi_x86_32(-)]
+				x11-libs/libXdmcp[abi_x86_32(-)]
+				x11-libs/libXext[abi_x86_32(-)]
+				x11-libs/libXi[abi_x86_32(-)]
+				x11-libs/libXtst[abi_x86_32(-)]
+			)
+		)
 	)
 	x86? (
 		dev-libs/openssl
