@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.22 2014/06/09 20:14:00 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.23 2014/06/25 04:34:23 patrick Exp $
+
+  25 Jun 2014; Patrick Lauer <patrick@gentoo.org> -docker-0.7.0.ebuild:
+  Remove ebuild that fetches from live git
 
 *docker-1.0.0 (09 Jun 2014)
 
