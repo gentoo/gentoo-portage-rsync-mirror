@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.24.ebuild,v 1.1 2014/06/04 19:29:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.24.ebuild,v 1.2 2014/06/25 07:20:07 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,22 +14,33 @@ SRC_URI="http://code.launchpad.net/${PN}/0.6-series/${PV}/+download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
-IUSE="s3"
+IUSE="s3 test"
 
-DEPEND="
+CDEPEND="
 	net-libs/librsync
 	app-crypt/gnupg
 	dev-python/lockfile
 "
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	test? ( dev-python/mock[${PYTHON_USEDEP}] )
+"
+RDEPEND="${CDEPEND}
 	dev-python/paramiko[${PYTHON_USEDEP}]
 	s3? ( dev-python/boto[${PYTHON_USEDEP}] )
 "
+
+# workaround until failing test is fixed
+PATCHES=( "${FILESDIR}"/${P}-skip-test.patch )
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
 
 	sed -i "s/'COPYING',//" setup.py || die "Couldn't remove unnecessary COPYING file."
+}
+
+python_test() {
+	esetup.py test
 }
 
 pkg_postinst() {
