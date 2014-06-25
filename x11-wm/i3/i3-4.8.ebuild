@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.8.ebuild,v 1.2 2014/06/15 20:24:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.8.ebuild,v 1.3 2014/06/25 08:41:42 xarthisius Exp $
 
 EAPI=5
 
@@ -31,7 +31,10 @@ CDEPEND="dev-libs/libev
 	)"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
-RDEPEND="${CDEPEND}"
+RDEPEND="${CDEPEND}
+	dev-lang/perl
+	dev-perl/AnyEvent-I3
+	dev-perl/JSON-XS"
 
 DOCS=( RELEASE-NOTES-${PV} )
 

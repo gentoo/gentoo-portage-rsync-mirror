@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tweepy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.7 2014/06/04 01:15:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.8 2014/06/25 08:55:44 idella4 Exp $
+
+  25 Jun 2014; Ian Delaney <idella4@gentoo.org> tweepy-2.2.ebuild:
+  fix DEPEND, Bug #514042
 
 *tweepy-2.2 (04 Jun 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1-r1.ebuild,v 1.2 2014/06/25 08:13:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1-r1.ebuild,v 1.3 2014/06/25 08:34:58 patrick Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="${CDEPEND}
 	sci-libs/spqr:0=
 	sci-libs/umfpack:0=
 	sci-mathematics/glpk:0=
-	>=sys-devel/llvm-3.3
+	=sys-devel/llvm-3.3*
 	>=sys-libs/libunwind-1.1:7=
 	sys-libs/readline:0=
 	sys-libs/zlib:0=

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/tweepy-2.2.ebuild,v 1.1 2014/06/04 01:15:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/tweepy-2.2.ebuild,v 1.2 2014/06/25 08:55:44 idella4 Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
 RESTRICT="test" #fails all
+
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	# Required to avoid file collisions at install
