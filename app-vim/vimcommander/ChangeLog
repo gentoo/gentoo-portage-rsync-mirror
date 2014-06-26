@@ -1,6 +1,17 @@
 # ChangeLog for app-vim/vimcommander
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.31 2011/01/07 23:15:30 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.33 2014/06/26 06:23:17 radhermit Exp $
+
+*vimcommander-0.81 (26 Jun 2014)
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> +vimcommander-0.81.ebuild:
+  Version bump (bug #515082).
+
+*vimcommander-0.80 (26 Jun 2014)
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> +vimcommander-0.80.ebuild,
+  -vimcommander-80.ebuild:
+  Update to upstream's new versioning scheme.
 
   07 Jan 2011; Tim Harder <radhermit@gentoo.org> -vimcommander-1.54.2.9.ebuild,
   -vimcommander-75.ebuild:
@@ -117,4 +128,3 @@
   20 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> metadata.xml,
   vimcommander-1.52.ebuild:
   Initial Version
-

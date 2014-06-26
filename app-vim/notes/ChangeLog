@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/notes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/ChangeLog,v 1.14 2013/12/24 12:55:14 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/ChangeLog,v 1.16 2014/06/26 06:11:11 radhermit Exp $
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> -notes-0.12.10.ebuild,
+  -notes-0.16.17.ebuild, -notes-0.23.2.ebuild:
+  Remove old.
+
+*notes-0.23.10 (26 Jun 2014)
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> +notes-0.23.10.ebuild:
+  Version bump.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> notes-0.23.4.ebuild:
   Stable for x86, wrt bug #481860

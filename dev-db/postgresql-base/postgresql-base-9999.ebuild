@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.11 2014/04/27 21:02:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.12 2014/06/26 06:29:10 patrick Exp $
 
 EAPI="5"
 
@@ -12,10 +12,10 @@ inherit autotools eutils flag-o-matic multilib prefix python-single-r1 versionat
 KEYWORDS=""
 
 # Fix if needed
-SLOT="9.4"
+SLOT="9.5"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-patches-9.3-r1.tbz2"
+SRC_URI="http://dev.gentoo.org/~patrick/postgresql-patches-9.5.tbz2"
 
 LICENSE="POSTGRESQL"
 DESCRIPTION="PostgreSQL libraries and clients"
