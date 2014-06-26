@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/openpyxl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/ChangeLog,v 1.5 2014/06/21 15:27:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/ChangeLog,v 1.6 2014/06/26 11:40:10 idella4 Exp $
+
+*openpyxl-2.0.2 (26 Jun 2014)
+
+  26 Jun 2014; Ian Delaney <idella4@gentoo.org> +openpyxl-2.0.2.ebuild,
+  openpyxl-1.6.2.ebuild:
+  major version bump; add pypy support, virtual re-write
 
   21 Jun 2014; Ian Delaney <idella4@gentoo.org> openpyxl-1.6.2.ebuild:
   drop py2.6 add py3.4 support, unrestrict test
