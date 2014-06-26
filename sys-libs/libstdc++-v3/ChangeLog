@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.75 2014/02/16 19:29:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.76 2014/06/26 08:24:44 mgorny Exp $
+
+  26 Jun 2014; Michał Górny <mgorny@gentoo.org> libstdc++-v3-3.3.6-r1.ebuild:
+  Filter out -frecord-gcc-switches. Require <bison-3 until the underlying issue
+  is fixed properly, bug #509572.
 
   16 Feb 2014; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6-r1.ebuild:
   Depend on bison since we used it to build #500660 by dwfreed.
