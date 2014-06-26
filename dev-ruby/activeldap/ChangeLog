@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.10 2014/05/26 05:22:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.11 2014/06/26 08:51:21 graaff Exp $
+
+  26 Jun 2014; Hans de Graaff <graaff@gentoo.org> -activeldap-4.0.1.ebuild,
+  -activeldap-4.0.2.ebuild:
+  Cleanup.
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> activeldap-3.2.2.ebuild:
   Remove ruby18 target.
