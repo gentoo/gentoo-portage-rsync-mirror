@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.41 2014/06/14 09:55:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.42 2014/06/26 09:37:18 nimiux Exp $
+
+  26 Jun 2014; Chema Alonso <nimiux@gentoo.org> sflowtool-3.30.ebuild:
+  Stable for amd64 wrt bug #509542
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> sflowtool-3.30.ebuild:
   x86 stable wrt bug #509542

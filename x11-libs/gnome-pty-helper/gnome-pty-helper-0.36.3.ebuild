@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/gnome-pty-helper-0.36.0.ebuild,v 1.1 2014/04/27 21:48:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/gnome-pty-helper-0.36.3.ebuild,v 1.1 2014/06/26 09:39:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ GNOME_ORG_MODULE="vte"
 inherit gnome2
 
 DESCRIPTION="GNOME Setuid helper for opening ptys"
-HOMEPAGE="http://git.gnome.org/browse/vte/"
+HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Terminal/VTE"
 # gnome-pty-helper is inside vte
 
 LICENSE="LGPL-2"

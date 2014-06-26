@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.36.0.ebuild,v 1.1 2014/04/27 21:51:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.36.3.ebuild,v 1.1 2014/06/26 09:41:25 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SLOT="2.90"
 IUSE="debug glade +introspection"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
 
-PDEPEND="=x11-libs/gnome-pty-helper-${PV}"
+PDEPEND="~x11-libs/gnome-pty-helper-${PV}"
 RDEPEND="
 	>=dev-libs/glib-2.31.13:2
 	>=x11-libs/gtk+-3.1.9:3[introspection?]
