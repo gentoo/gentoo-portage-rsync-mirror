@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/four-in-a-row/four-in-a-row-3.12.1.ebuild,v 1.1 2014/04/27 16:32:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/four-in-a-row/four-in-a-row-3.12.3.ebuild,v 1.1 2014/06/26 10:44:12 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome-games
 
 DESCRIPTION="Make lines of the same color to win"
-HOMEPAGE="https://wiki.gnome.org/Four-in-a-row"
+HOMEPAGE="https://wiki.gnome.org/Apps/Four-in-a-row"
 
 LICENSE="GPL-2+"
 SLOT="0"

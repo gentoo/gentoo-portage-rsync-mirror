@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9-r2.ebuild,v 1.5 2013/04/05 21:49:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9-r2.ebuild,v 1.6 2014/06/26 10:36:51 jer Exp $
 
 EAPI=5
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils eutils
+inherit autotools-utils eutils toolchain-funcs
 
 MY_P="${PN}-0.9b3"
 
@@ -51,6 +51,8 @@ src_configure() {
 	else
 		myeconfargs+=( "--without-openssl" )
 	fi
+
+	tc-export CC
 
 	autotools-utils_src_configure
 }
