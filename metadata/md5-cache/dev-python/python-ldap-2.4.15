@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>net-nds/openldap-2.4.11 dev-python/pyasn1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] sasl? ( >=dev-libs/cyrus-sasl-2.1 ) dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DEPEND=>net-nds/openldap-2.4.11 dev-python/pyasn1[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)] sasl? ( >=dev-libs/cyrus-sasl-2.1 ) dev-python/setuptools[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)]
 DESCRIPTION=Various LDAP-related Python modules
 EAPI=5
 HOMEPAGE=http://www.python-ldap.org http://pypi.python.org/pypi/python-ldap
-IUSE=examples sasl ssl python_targets_python2_7
+IUSE=examples sasl ssl python_targets_python2_7 python_targets_pypy
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-solaris
 LICENSE=PSF-2
-RDEPEND=>net-nds/openldap-2.4.11 dev-python/pyasn1[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] sasl? ( >=dev-libs/cyrus-sasl-2.1 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
-REQUIRED_USE=|| ( python_targets_python2_7 )
+RDEPEND=>net-nds/openldap-2.4.11 dev-python/pyasn1[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)] sasl? ( >=dev-libs/cyrus-sasl-2.1 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy? ( virtual/pypy:0= ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy )
 SLOT=0
 SRC_URI=mirror://pypi/p/python-ldap/python-ldap-2.4.15.tar.gz
 _eclasses_=distutils-r1	051beafa534d831ab1129e71788b681a	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c79c74379b79f11b0757a64b5508400d
+_md5_=a73280dccffdc32b0663ab0947f292b2
