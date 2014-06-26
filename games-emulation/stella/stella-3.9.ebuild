@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.9.ebuild,v 1.1 2013/07/02 18:59:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.9.ebuild,v 1.2 2014/06/26 22:01:40 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="joystick opengl"
 
-DEPEND="media-libs/libsdl[joystick?,opengl?,video]
+DEPEND="media-libs/libsdl[joystick?,opengl?,X,video]
 	x11-libs/libX11
 	media-libs/libpng:0
 	sys-libs/zlib
