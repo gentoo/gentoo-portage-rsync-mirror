@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.724 2014/06/24 22:19:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.725 2014/06/26 11:20:22 pacho Exp $
+
+*gtk+-2.24.24 (26 Jun 2014)
+
+  26 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gtk+-2.24.24-out-of-source.patch, +gtk+-2.24.24.ebuild:
+  Version bump, fix tests when compiling out of sources directory (#510596 by
+  mgorny)
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> gtk+-2.24.23-r2.ebuild:
   Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for

@@ -1,16 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.12.1.ebuild,v 1.1 2014/04/27 17:11:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.12.3.ebuild,v 1.1 2014/06/26 11:03:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 VALA_USE_DEPEND="vapigen"
 VALA_MIN_API_VERSION="0.24"
 
-inherit linux-info gnome2 vala
+inherit linux-info gnome2 readme.gentoo vala
 
 DESCRIPTION="Simple GNOME 3 application to access remote or virtual systems"
-HOMEPAGE="https://wiki.gnome.org/Design/Apps/Boxes"
+HOMEPAGE="https://wiki.gnome.org/Apps/Boxes"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -53,6 +53,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="Before running gnome-boxes, you will need to load the KVM modules.
+If you have an Intel Processor, run:
+# modprobe kvm-intel
+
+If you have an AMD Processor, run:
+# modprobe kvm-amd"
+
 pkg_pretend() {
 	linux_config_exists
 
@@ -72,7 +80,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# debug needed for splitdebug proper behavior (cardoe)
+	# debug needed for splitdebug proper behavior (cardoe), bug #????
 	gnome2_src_configure \
 		--enable-debug \
 		--disable-strict-cc \
@@ -81,12 +89,12 @@ src_configure() {
 		--enable-ovirt=no
 }
 
+src_install() {
+	gnome2_src_install
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	gnome2_pkg_postinst
-	elog "Before running gnome-boxes, you will need to load the KVM modules"
-	elog "If you have an Intel Processor, run:"
-	elog "	modprobe kvm-intel"
-	einfo
-	elog "If you have an AMD Processor, run:"
-	elog "	modprobe kvm-amd"
+	readme.gentoo_print_elog
 }
