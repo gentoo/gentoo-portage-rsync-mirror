@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-shells/bash-4 media-libs/flac sys-apps/coreutils
 SLOT=0
 SRC_URI=https://github.com/sirjaren/redoflacs/tarball/v0.19 -> redoflacs-0.19.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	58123385d2bddba78a7aee5bfb7da252	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	dd566be921cea0d8287de7039747b719	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=751ab9d09dbf49c05c01a0c15c583d66

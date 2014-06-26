@@ -1,22 +1,24 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.13 2014/04/27 21:03:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.14 2014/06/26 06:50:21 patrick Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
 WANT_AUTOMAKE="none"
 
+RESTRICT="test" # too lazy to patch ;)
+
 inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user versionator base git-2
 
 KEYWORDS=""
 
-SLOT="9.4"
+SLOT="9.5"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
 
 SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.4.tbz2
-	http://dev.gentoo.org/~titanofold/postgresql-patches-9.3-r1.tbz2"
+	http://dev.gentoo.org/~patrick/postgresql-patches-9.5.tbz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
@@ -82,7 +84,6 @@ src_prepare() {
 	fi
 
 	if use test ; then
-		epatch "${WORKDIR}/regress.patch"
 		sed -e "s|@SOCKETDIR@|${T}|g" -i src/test/regress/pg_regress{,_main}.c
 	else
 		echo "all install:" > "${S}/src/test/regress/GNUmakefile"

@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/wayland-1.1.90 media-libs/mesa[egl?,wayland] media-libs/lcms:
 REQUIRED_USE=drm? ( egl ) editor? ( examples ) egl? ( || ( gles2 opengl ) ) fbdev? ( drm ) gles2? ( !opengl ) test? ( X ) view? ( examples ) wayland-compositor? ( egl )
 SLOT=0
 SRC_URI=http://wayland.freedesktop.org/releases/weston-1.2.0.tar.xz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	readme.gentoo	58123385d2bddba78a7aee5bfb7da252	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	readme.gentoo	dd566be921cea0d8287de7039747b719	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=7191a3e0ec2403a442a4bcc080c988f5

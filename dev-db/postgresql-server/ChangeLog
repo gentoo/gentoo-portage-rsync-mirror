@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.294 2014/04/28 00:18:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.295 2014/06/26 06:50:21 patrick Exp $
+
+  26 Jun 2014; Patrick Lauer <patrick@gentoo.org> postgresql-server-9999.ebuild:
+  Bump -9999 ebuild to slot 9.5, fix patches. Tests are currently disabled for
+  -9999
 
 *postgresql-server-9.3.4-r1 (28 Apr 2014)
 
