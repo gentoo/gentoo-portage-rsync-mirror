@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/django-auth-ldap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.9 2013/05/31 02:43:35 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.11 2014/06/26 15:55:27 idella4 Exp $
+
+*django-auth-ldap-1.2.0 (26 Jun 2014)
+
+  26 Jun 2014; Ian Delaney <idella4@gentoo.org> +django-auth-ldap-1.2.0.ebuild,
+  -django-auth-ldap-1.0.19.ebuild, -django-auth-ldap-1.1.ebuild:
+  major version bump; add pypy support, virtual re-write, rm old.
+  Closes bug Bug #514938
 
   31 May 2013; Mike Gilbert <floppym@gentoo.org> -django-auth-ldap-1.1.4.ebuild,
   django-auth-ldap-1.1.4-r1.ebuild:

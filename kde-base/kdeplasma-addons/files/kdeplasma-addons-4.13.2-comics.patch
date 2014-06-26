@@ -1,0 +1,28 @@
+From 250ad26b897ad15259dc9dc96481c5396b501c86 Mon Sep 17 00:00:00 2001
+From: "David E. Narvaez" <david.narvaez@computer.org>
+Date: Fri, 6 Jun 2014 07:51:13 -0400
+Subject: [PATCH] Fix Comic Strip Installation
+
+Use the plasmapkg option to install instead of the one to upgrade.
+
+BUG: 325028
+REVIEW: 118583
+---
+ applets/comic/comic.knsrc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/applets/comic/comic.knsrc b/applets/comic/comic.knsrc
+index e7a78b9..e9ddbf7 100644
+--- a/applets/comic/comic.knsrc
++++ b/applets/comic/comic.knsrc
+@@ -3,6 +3,6 @@ ProvidersUrl=http://download.kde.org/ocs/providers.xml
+ Categories=Plasma Comic
+ TargetDir=plasma/comics
+ Uncompress=never
+-InstallationCommand=plasmapkg -t comic -u %f
++InstallationCommand=plasmapkg -t comic -i %f
+ UninstallCommand=plasmapkg -t comic -r %f
+ 
+-- 
+1.8.5.5
+
