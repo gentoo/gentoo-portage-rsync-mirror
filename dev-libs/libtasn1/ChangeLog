@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.208 2014/06/23 15:23:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.209 2014/06/26 18:51:44 alonbl Exp $
+
+*libtasn1-4.0 (26 Jun 2014)
+
+  26 Jun 2014; Alon Bar-Lev <alonbl@gentoo.org> +libtasn1-4.0.ebuild:
+  Version bump
 
   23 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libtasn1-3.6.ebuild:
   x86 stable wrt security bug #511536

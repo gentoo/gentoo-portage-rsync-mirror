@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15811 2014/06/22 21:27:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15812 2014/06/26 18:46:24 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (26 Jun 2014)
+# Development has halted (see <http://www.perihel.at/sec/mz/index.html>)
+# See net-analyzer/netsniff-ng for a replacement (bug #515210)
+net-analyzer/mausezahn
 
 # Pacho Ramos <pacho@gentoo.org> (22 Jun 2014)
 # Underlinking issues, upstream dead for ages, still relies
