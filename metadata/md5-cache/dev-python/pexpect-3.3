@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=doc? ( dev-python/sphinx[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) test? ( dev-python/pytest[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+DESCRIPTION=Python module for spawning child applications and responding to expected patterns
+EAPI=5
+HOMEPAGE=http://pexpect.sourceforge.net/ http://pypi.python.org/pypi/pexpect/ https://github.com/pexpect/pexpect/
+IUSE=doc examples test python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4
+KEYWORDS=~alpha ~amd64 ~amd64-fbsd ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=MIT
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 python_targets_python3_4 )
+SLOT=0
+SRC_URI=mirror://pypi/p/pexpect/pexpect-3.3.tar.gz
+_eclasses_=distutils-r1	051beafa534d831ab1129e71788b681a	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=baf8d57dfb1869c5c3170974873721fb

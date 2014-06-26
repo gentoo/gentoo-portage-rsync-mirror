@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.68 2014/04/15 04:58:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.69 2014/06/26 07:11:15 radhermit Exp $
+
+*pexpect-3.3 (26 Jun 2014)
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> +pexpect-3.3.ebuild:
+  Version bump.
 
 *pexpect-3.2 (15 Apr 2014)
 
