@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.4.0-r1.ebuild,v 1.1 2014/06/21 08:49:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.4.0-r1.ebuild,v 1.2 2014/06/26 17:19:34 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -30,6 +30,7 @@ DOCS="AUTHORS CHANGES README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-underlinking.patch
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die #515220
 	eautoreconf
 }
 

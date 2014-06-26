@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=>=dev-libs/glib-2.28:2 >=sys-apps/dbus-1.6:= >=sys-apps/hwids-20121202.2 cups? ( net-print/cups:= ) obex? ( dev-libs/libical ) readline? ( sys-libs/readline:= ) selinux? ( sec-policy/selinux-bluetooth ) systemd? ( sys-apps/systemd ) udev? ( >=virtual/udev-172 ) abi_x86_32? ( !<app-emulation/emul-linux-x86-soundlibs-20140406-r1 !app-emulation/emul-linux-x86-soundlibs[-abi_x86_32] ) virtual/pkgconfig test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) >=dev-python/dbus-python-1 dev-python/pygobject:2 dev-python/pygobject:3 ) virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=Bluetooth Tools and System Daemons for Linux
+EAPI=5
+HOMEPAGE=http://www.bluez.org
+IUSE=cups debug +obex +readline selinux systemd test +udev abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+LICENSE=GPL-2+ LGPL-2.1+
+RDEPEND=>=dev-libs/glib-2.28:2 >=sys-apps/dbus-1.6:= >=sys-apps/hwids-20121202.2 cups? ( net-print/cups:= ) obex? ( dev-libs/libical ) readline? ( sys-libs/readline:= ) selinux? ( sec-policy/selinux-bluetooth ) systemd? ( sys-apps/systemd ) udev? ( >=virtual/udev-172 ) abi_x86_32? ( !<app-emulation/emul-linux-x86-soundlibs-20140406-r1 !app-emulation/emul-linux-x86-soundlibs[-abi_x86_32] )
+REQUIRED_USE=test? ( )
+SLOT=0/3
+SRC_URI=mirror://kernel/linux/bluetooth/bluez-5.20.tar.xz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	6164ef644981c5dffdf4cf891caed613	readme.gentoo	dd566be921cea0d8287de7039747b719	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=cc7f87c1d820d0c22e6d3de5ad4c76f4

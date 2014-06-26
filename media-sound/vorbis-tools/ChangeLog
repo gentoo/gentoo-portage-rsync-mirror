@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.103 2014/06/21 08:49:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.104 2014/06/26 17:19:34 ssuominen Exp $
+
+  26 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
+  vorbis-tools-1.4.0-r1.ebuild:
+  Use AC_CONFIG_HEADERS instead of the deprecated AM_CONFIG_HEADER wrt #515220
 
 *vorbis-tools-1.4.0-r1 (21 Jun 2014)
 
