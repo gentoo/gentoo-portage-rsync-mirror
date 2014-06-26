@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.1.ebuild,v 1.2 2014/05/31 22:33:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.1.ebuild,v 1.3 2014/06/26 02:40:15 tetromino Exp $
 
 EAPI="5"
 
@@ -45,7 +45,10 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.6
 	virtual/pkgconfig
 	doc? ( app-text/xmlto )
+
+	gnome-base/gnome-common
 "
+#	gnome-base/gnome-common for eautoreconf
 
 src_prepare() {
 	# make upower check non-automagic

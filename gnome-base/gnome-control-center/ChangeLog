@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.154 2014/06/01 07:59:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.155 2014/06/26 02:45:21 tetromino Exp $
+
+*gnome-control-center-3.12.1-r1 (26 Jun 2014)
+
+  26 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-control-center-3.12.1-r1.ebuild,
+  +files/gnome-control-center-3.12.1-optional-r1.patch:
+  Really don't use gnome-online-accounts when USE=-gnome-online-accounts (bug
+  #509514, thanks to poncho and Émeric Maschino).
 
   01 Jun 2014; Pacho Ramos <pacho@gentoo.org>
   gnome-control-center-3.10.3.ebuild:
