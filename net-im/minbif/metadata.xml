@@ -4,11 +4,5 @@
 	<maintainer>
 		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
-	<use>
-		<flag name="video">Add video support</flag>
-	</use>
-	<longdescription lang="en">
-		an IRC gateway to IM networks
-	</longdescription>
 </pkgmetadata>
 

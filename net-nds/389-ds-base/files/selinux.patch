@@ -1,8 +1,0 @@
---- 389-ds-base-1.2.8.3.orig/selinux/Makefile
-+++ 389-ds-base-1.2.8.3/selinux/Makefile
-@@ -1,4 +1,4 @@
--POLICY_MAKEFILE = /usr/share/selinux/devel/Makefile
-+POLICY_MAKEFILE = /usr/share/selinux/targeted/include/Makefile
- POLICY_DIR = $(DESTDIR)/usr/share/selinux/targeted
- 
- all:
