@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/json
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/json/ChangeLog,v 1.1 2013/08/30 18:06:06 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/json/ChangeLog,v 1.2 2014/06/26 06:00:45 radhermit Exp $
+
+*json-20140625 (26 Jun 2014)
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> +json-20140625.ebuild:
+  Version bump.
 
 *json-20130830 (30 Aug 2013)
 

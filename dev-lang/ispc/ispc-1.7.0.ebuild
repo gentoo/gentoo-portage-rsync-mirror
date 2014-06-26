@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.7.0.ebuild,v 1.1 2014/05/12 02:16:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.7.0.ebuild,v 1.2 2014/06/26 05:53:00 ottxor Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit toolchain-funcs python-any-r1
+inherit eutils toolchain-funcs python-any-r1
 
 DESCRIPTION="Intel SPMD Program Compiler"
 HOMEPAGE="http://ispc.github.com/"
@@ -34,6 +34,10 @@ DEPEND="
 	sys-devel/bison
 	sys-devel/flex
 	"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-llvm-version.patch"
+}
 
 src_compile() {
 	emake LDFLAGS="${LDFLAGS}" OPT="${CXXFLAGS}" CXX="$(tc-getCXX)" CPP="$(tc-getCPP)"
