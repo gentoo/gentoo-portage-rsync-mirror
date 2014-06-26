@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install prepare unpack
-DEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1
+DEPEND=>=net-libs/libsoup-2.38:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 ) libsecret? ( app-crypt/libsecret ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Dynamic web browser based on WebKit and GTK+
 EAPI=5
 HOMEPAGE=http://portix.bitbucket.org/dwb/
-IUSE=examples gtk3
+IUSE=examples gtk3 libsecret
 LICENSE=GPL-3
-RDEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 )
+RDEPEND=>=net-libs/libsoup-2.38:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 ) libsecret? ( app-crypt/libsecret )
 SLOT=0
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	git-r3	da25af7340478afdca16e1e4568b014a	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=7212235926a7924188c1423e3f4c19cd
+_md5_=38f69f56b33b9dfe55d1eaece71e5a9e

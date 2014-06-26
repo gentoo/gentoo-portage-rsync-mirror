@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dwb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.21 2014/03/17 03:44:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.22 2014/06/26 04:41:55 radhermit Exp $
+
+  26 Jun 2014; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild, metadata.xml:
+  Add libsecret use flag and update libsoup dep.
 
 *dwb-2014.03.07 (17 Mar 2014)
 
