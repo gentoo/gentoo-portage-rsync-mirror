@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.462 2014/06/24 19:14:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.463 2014/06/26 18:09:29 zlogene Exp $
+
+  26 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> vim-7.4.273.ebuild:
+  amd64 stable wrt bug #511190
 
   24 Jun 2014; Markus Meier <maekke@gentoo.org> vim-7.4.273.ebuild:
   arm stable, bug #511190
