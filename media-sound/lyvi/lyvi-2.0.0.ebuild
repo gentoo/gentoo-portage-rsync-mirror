@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lyvi/lyvi-2.0.0.ebuild,v 1.1 2014/06/22 13:13:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lyvi/lyvi-2.0.0.ebuild,v 1.2 2014/06/26 01:28:00 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python3_3 )
@@ -24,5 +24,10 @@ RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]
 			dev-python/dbus-python[${PYTHON_USEDEP}]
 			dev-python/pygobject:3[${PYTHON_USEDEP}]
 		)"
-DEPEND="${RDEPEND}
-		dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+
+python_prepare_all() {
+	# Remove pip dependency
+	sed -e '/require/d' --in-place setup.py || die
+	distutils-r1_python_prepare_all
+}

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-python/pillow[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] dev-python/plyr[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] dev-python/psutil[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] dev-python/urwid[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] mpris? ( dev-python/dbus-python[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] dev-python/pygobject:3[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] ) dev-python/setuptools[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,-python_single_target_python3_3(-)]
+DEPEND=dev-python/setuptools[python_targets_python3_3(-)?,-python_single_target_python3_3(-)] python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,-python_single_target_python3_3(-)]
 DESCRIPTION=A simple command-line lyrics viewer
 EAPI=5
 HOMEPAGE=http://ok100.github.io/lyvi/
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( python_targets_python3_3 )
 SLOT=0
 SRC_URI=https://github.com/ok100/lyvi/archive/v2.0.0.tar.gz -> lyvi-2.0.0.tar.gz
 _eclasses_=distutils-r1	051beafa534d831ab1129e71788b681a	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d1fa251e2b30171f482ccf6f846a4a23
+_md5_=e3d76c768715b824a57979a845e8f3e6
