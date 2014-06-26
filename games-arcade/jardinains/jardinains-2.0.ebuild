@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.10 2012/12/28 16:43:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0.ebuild,v 1.11 2014/06/26 19:09:40 axs Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/JN2_1_FREE_LIN.tar.gz"
 
 LICENSE="jardinains"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/jardinains/jardinains"
