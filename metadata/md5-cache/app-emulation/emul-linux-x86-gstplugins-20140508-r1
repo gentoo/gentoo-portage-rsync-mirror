@@ -4,11 +4,11 @@ DESCRIPTION=Provides precompiled 32bit libraries
 EAPI=5
 HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
 IUSE=abi_x86_32 +development
-KEYWORDS=-* ~amd64
+KEYWORDS=-* amd64
 LICENSE=!abi_x86_32? ( GPL-2 LGPL-2 LGPL-2.1 ) abi_x86_32? ( metapackage )
 RDEPEND=!abi_x86_32? ( ~app-emulation/emul-linux-x86-baselibs-20140508 ~app-emulation/emul-linux-x86-db-20140508 ~app-emulation/emul-linux-x86-gtklibs-20140508 ~app-emulation/emul-linux-x86-medialibs-20140508 ~app-emulation/emul-linux-x86-soundlibs-20140508 ) abi_x86_32? ( >=media-plugins/gst-plugins-meta-0.10-r9:0.10[abi_x86_32(-)] )
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-gstplugins-20140508.tar.xz
 _eclasses_=emul-linux-x86	21b03579b81acf650f0077bfd9fc2586	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=0acc1c0cd462c1c60d34d3c3bd0424ce
+_md5_=7a936b92a993643e9d4329b7e7260b66

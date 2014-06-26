@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-jna
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-jna/ChangeLog,v 1.15 2014/05/08 21:45:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-jna/ChangeLog,v 1.16 2014/06/26 09:23:02 pacho Exp $
+
+  26 Jun 2014; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-jna-20140508.ebuild:
+  amd64 stable
 
 *emul-linux-x86-jna-20140508 (08 May 2014)
 

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=virtual/python-imaging[tk,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] virtual/pmw[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] sci-libs/fftw:3.0 media-libs/hamlib media-libs/portaudio media-libs/libsamplerate !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[tk] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+DESCRIPTION=Weak Signal Propagation Reporter
+EAPI=5
+HOMEPAGE=http://www.physics.princeton.edu/pulsar/K1JT/wspr.html
+IUSE=python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=virtual/python-imaging[tk,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] virtual/pmw[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] sci-libs/fftw:3.0 media-libs/hamlib media-libs/portaudio media-libs/libsamplerate virtual/fortran python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[tk] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[tk] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~tomjbe/distfiles/wspr-3.01.r2792.tgz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	distutils-r1	051beafa534d831ab1129e71788b681a	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=2610b3baf956114273da810f21989dbf

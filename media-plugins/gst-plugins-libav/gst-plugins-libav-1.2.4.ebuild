@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.1 2014/06/25 09:32:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.2 2014/06/26 09:03:32 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic multilib-minimal
@@ -19,7 +19,7 @@ RDEPEND="
 	>=media-libs/gstreamer-1.2.3:1.0[${MULTILIB_USEDEP}]
 	>=media-libs/gst-plugins-base-1.2.3:1.0[${MULTILIB_USEDEP}]
 	>=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}]
-	!!<media-video/libav-10
+	!!>=media-video/libav-10
 	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
