@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0-r1.ebuild,v 1.1 2014/03/06 22:21:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0-r1.ebuild,v 1.2 2014/06/26 05:20:53 patrick Exp $
 
 EAPI=5
 
@@ -11,7 +11,9 @@ HOMEPAGE="http://code.google.com/p/casacore/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+#KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+# de-keyworded until casa-data catches up
+KEYWORDS=""
 SLOT="0"
 IUSE="+data doc fftw hdf5 openmp threads test"
 
