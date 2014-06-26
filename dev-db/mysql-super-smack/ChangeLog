@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-super-smack
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/ChangeLog,v 1.19 2013/11/07 03:25:47 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/ChangeLog,v 1.20 2014/06/25 23:08:37 grknight Exp $
+
+*mysql-super-smack-1.3-r3 (25 Jun 2014)
+
+  25 Jun 2014; Brian Evans <grknight@gentoo.org>
+  +files/mysql-super-smack-1.3-automake-1.13.patch,
+  +mysql-super-smack-1.3-r3.ebuild, -mysql-super-smack-1.2.ebuild:
+  Revision bump to fix autotools and use EAPI5. Cleanup old
 
   07 Nov 2013; Patrick Lauer <patrick@gentoo.org> mysql-super-smack-1.2.ebuild,
   mysql-super-smack-1.3-r2.ebuild:
