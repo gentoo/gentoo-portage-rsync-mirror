@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.15.ebuild,v 1.4 2014/03/28 02:31:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.20.ebuild,v 1.1 2014/06/26 14:44:33 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils multilib python-any-r1 readme.gentoo systemd udev user
+inherit eutils multilib python-any-r1 readme.gentoo systemd \
+	udev user multilib-minimal
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org"
@@ -13,20 +14,24 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/3"
-KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 x86"
-IUSE="cups debug +obex readline selinux systemd test"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+IUSE="cups debug +obex +readline selinux systemd test +udev"
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	>=dev-libs/glib-2.28:2
 	>=sys-apps/dbus-1.6:=
 	>=sys-apps/hwids-20121202.2
-	>=virtual/udev-171
 	cups? ( net-print/cups:= )
 	obex? ( dev-libs/libical )
 	readline? ( sys-libs/readline:= )
 	selinux? ( sec-policy/selinux-bluetooth )
 	systemd? ( sys-apps/systemd )
+	udev? ( >=virtual/udev-172 )
+	abi_x86_32? (
+		!<app-emulation/emul-linux-x86-soundlibs-20140406-r1
+		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32]
+	)
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -46,6 +51,14 @@ DOC_CONTENTS="
 pkg_setup() {
 	enewgroup plugdev
 	use test && python-any-r1_pkg_setup
+
+	if ! use udev; then
+		ewarn
+		ewarn "You are installing ${PN} with USE=-udev. This means various bluetooth"
+		ewarn "devices and adapters from Apple, Dell, Logitech etc. will not work,"
+		ewarn "and hid2hci will not be available."
+		ewarn
+	fi
 }
 
 src_prepare() {
@@ -70,14 +83,26 @@ src_prepare() {
 
 	if use cups; then
 		sed -i \
-			-e "s:cupsdir = \$(libdir)/cups:cupsdir = `cups-config --serverbin`:" \
+			-e "s:cupsdir = \$(libdir)/cups:cupsdir = $(cups-config --serverbin):" \
 			Makefile.{in,tools} || die
 	fi
+
+	multilib_copy_sources
 }
 
-src_configure() {
-	# readline is automagic when client is enabled
-	export ac_cv_header_readline_readline_h=$(usex readline)
+multilib_src_configure() {
+	local myconf=(
+		# readline is automagic when client is enabled
+		# --enable-client always needs readline, bug #504038
+		ac_cv_header_readline_readline_h=$(multilib_native_usex readline)
+	)
+
+	if ! multilib_is_native_abi; then
+		myconf+=(
+			# deps not used for the library
+			{DBUS,GLIB}_{CFLAGS,LIBS}=' '
+		)
+	fi
 
 	# Missing flags: experimental (sap, nfc, ...)
 	econf \
@@ -89,28 +114,51 @@ src_configure() {
 		--enable-pie \
 		--enable-threads \
 		--enable-library \
-		$(use_enable test) \
+		$(multilib_native_use_enable test) \
 		--enable-tools \
 		--enable-monitor \
-		--enable-udev \
-		$(use_enable cups) \
-		$(use_enable obex) \
-		--enable-client \
-		$(use_enable systemd) \
+		$(multilib_native_use_enable cups) \
+		$(multilib_native_use_enable obex) \
+		$(multilib_native_use_enable readline client) \
+		$(multilib_native_use_enable systemd) \
 		$(systemd_with_unitdir) \
-		--enable-sixaxis
+		$(multilib_native_use_enable udev) \
+		$(multilib_native_use_enable udev sixaxis)
 }
 
-src_install() {
-	default
+multilib_src_compile() {
+	if multilib_is_native_abi; then
+		default
+	else
+		emake -f Makefile -f - libs \
+			<<<'libs: $(lib_LTLIBRARIES)'
+	fi
+}
+
+multilib_src_test() {
+	multilib_is_native_abi && default
+}
+
+multilib_src_install() {
+	if multilib_is_native_abi; then
+		emake DESTDIR="${D}" install
+
+		# Unittests are not that useful once installed
+		if use test ; then
+			rm -r "${ED}"/usr/$(get_libdir)/bluez/test || die
+		fi
+	else
+		emake DESTDIR="${D}" \
+			install-includeHEADERS \
+			install-libLTLIBRARIES \
+			install-pkgconfigDATA
+	fi
+}
+
+multilib_src_install_all() {
 	prune_libtool_files --modules
 
 	keepdir /var/lib/bluetooth
-
-	# Unittests are not that useful once installed
-	if use test ; then
-		rm -r "${ED}"/usr/$(get_libdir)/bluez/test || die
-	fi
 
 	insinto /etc/bluetooth
 	local d
@@ -125,8 +173,6 @@ src_install() {
 	doins src/org.bluez.service
 
 	newinitd "${FILESDIR}"/bluetooth-init.d-r3 bluetooth
-	newinitd "${FILESDIR}"/rfcomm-init.d rfcomm
-	newconfd "${FILESDIR}"/rfcomm-conf.d rfcomm
 
 	readme.gentoo_create_doc
 }
@@ -134,7 +180,7 @@ src_install() {
 pkg_postinst() {
 	readme.gentoo_print_elog
 
-	udev_reload
+	use udev && udev_reload
 
 	has_version net-dialup/ppp || elog "To use dial up networking you must install net-dialup/ppp."
 

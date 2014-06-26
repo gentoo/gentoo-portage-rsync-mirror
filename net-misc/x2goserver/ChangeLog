@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.43 2014/04/07 22:15:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.44 2014/06/26 14:49:16 voyageur Exp $
+
+  26 Jun 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goserver-4.0.1.12.ebuild, x2goserver-4.0.1.13.ebuild,
+  x2goserver-4.0.1.15.ebuild:
+  Add xhost to RDEPEND, bug #512970 by Stefan Radermacher <gentoo@zaister.de>
 
   07 Apr 2014; Bernard Cafarelli <voyageur@gentoo.org>
   x2goserver-4.0.1.15.ebuild:
