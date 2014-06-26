@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libaosd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.8 2014/06/20 12:33:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.9 2014/06/26 10:05:05 pacho Exp $
+
+  26 Jun 2014; Pacho Ramos <pacho@gentoo.org> libaosd-0.2.7.ebuild:
+  Needs cairo[X], bug #515170
 
   20 Jun 2014; Tobias Klausmann <klausman@gentoo.org> libaosd-0.2.7.ebuild:
   Keyworded on alpha, bug #473920

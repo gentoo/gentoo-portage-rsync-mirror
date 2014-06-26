@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/libaosd-0.2.7.ebuild,v 1.7 2014/06/20 12:33:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/libaosd-0.2.7.ebuild,v 1.8 2014/06/26 10:05:05 pacho Exp $
 
 EAPI=5
 inherit autotools-utils
@@ -14,12 +14,14 @@ SLOT="0"
 KEYWORDS="~alpha amd64 x86"
 IUSE="pango +tools xcomposite"
 
-RDEPEND="x11-libs/cairo
+RDEPEND="
+	x11-libs/cairo[X]
 	x11-libs/libX11
 	x11-libs/libXrender
 	pango? ( x11-libs/pango )
 	tools? ( dev-libs/glib:2 )
-	xcomposite? ( x11-libs/libXcomposite )"
+	xcomposite? ( x11-libs/libXcomposite )
+"
 DEPEND="${RDEPEND}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1

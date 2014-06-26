@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/gnome-robots-3.12.1.ebuild,v 1.1 2014/04/27 16:31:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/gnome-robots-3.12.3.ebuild,v 1.1 2014/06/26 10:17:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome-games
 
 DESCRIPTION="Avoid the robots and make them crash into each other"
-HOMEPAGE="https://wiki.gnome.org/Robots"
+HOMEPAGE="https://wiki.gnome.org/Apps/Robots"
 
 LICENSE="GPL-2+"
 SLOT="0"

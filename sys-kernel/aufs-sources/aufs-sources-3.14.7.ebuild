@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.14.7.ebuild,v 1.2 2014/06/15 16:42:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.14.7.ebuild,v 1.3 2014/06/26 10:31:27 jlec Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ K_WANT_GENPATCHES="base extras experimental"
 K_GENPATCHES_VER="11"
 K_DEBLOB_AVAILABLE="1"
 UNIPATCH_STRICTORDER=1
-inherit kernel-2 eutils
+inherit kernel-2 eutils readme.gentoo
 detect_version
 detect_arch
 
@@ -31,6 +31,8 @@ SRC_URI="
 	"
 
 PDEPEND=">=sys-fs/aufs-util-3.9"
+
+README_GENTOO_SUFFIX="-r1"
 
 src_unpack() {
 	if use vanilla; then
@@ -64,6 +66,7 @@ src_prepare() {
 src_install() {
 	kernel-2_src_install
 	dodoc "${WORKDIR}"/{aufs3-loopback,vfs-ino,tmpfs-idr}.patch
+	docompress -x /usr/share/doc/${PF}/{aufs3-loopback,vfs-ino,tmpfs-idr}.patch
 	readme.gentoo_create_doc
 }
 pkg_postinst() {
