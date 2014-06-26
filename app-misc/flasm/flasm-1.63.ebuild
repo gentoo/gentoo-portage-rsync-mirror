@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.63.ebuild,v 1.3 2014/01/17 18:02:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.63.ebuild,v 1.4 2014/06/26 12:29:43 kensington Exp $
 
 EAPI=5
 
@@ -19,9 +19,9 @@ IUSE=""
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	dev-util/gperf
 	sys-devel/flex
 	virtual/yacc
-	dev-util/gperf
 "
 
 S=${WORKDIR}
@@ -32,11 +32,11 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	emake || die
+	emake
 }
 
 src_install() {
-	dobin flasm || die
-	dodoc CHANGES.TXT || die
-	dohtml flasm.html classic.css || die
+	dobin flasm
+	dodoc CHANGES.TXT
+	dohtml flasm.html classic.css
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pybloomfiltermmap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.16 2014/05/07 05:46:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.17 2014/06/26 12:25:20 pinkbyte Exp $
+
+  26 Jun 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -pybloomfiltermmap-0.2.0.ebuild, -pybloomfiltermmap-0.3.2.ebuild,
+  -pybloomfiltermmap-0.3.10.ebuild, -pybloomfiltermmap-0.3.11.ebuild:
+  Drop old versions
 
 *pybloomfiltermmap-0.3.14 (07 May 2014)
 

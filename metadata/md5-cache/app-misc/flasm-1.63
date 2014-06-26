@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=sys-libs/zlib app-arch/unzip sys-devel/flex virtual/yacc dev-util/gperf
+DEPEND=sys-libs/zlib app-arch/unzip dev-util/gperf sys-devel/flex virtual/yacc
 DESCRIPTION=Command line assembler/disassembler of Flash ActionScript bytecode
 EAPI=5
 HOMEPAGE=http://www.nowrap.de/flasm.html
@@ -9,4 +9,4 @@ RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=http://www.nowrap.de/download/flasm163src.zip -> flasm-1.63.zip
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=d1bb8eacd7a3612b054af9708d2f96e4
+_md5_=4003ce096585691103b0bb00f20a586a
