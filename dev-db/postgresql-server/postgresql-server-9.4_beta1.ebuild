@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.4_beta1.ebuild,v 1.1 2014/06/26 07:21:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.4_beta1.ebuild,v 1.2 2014/06/27 03:37:11 patrick Exp $
 
 EAPI="5"
 
@@ -19,8 +19,6 @@ S="${WORKDIR}/postgresql-${MY_PV}"
 SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_PV}.tar.bz2
 		 http://dev.gentoo.org/~patrick/postgresql-patches-${SLOT}.tbz2
 		 http://dev.gentoo.org/~floppym/dist/postgresql-initscript-2.7.tbz2"
-
-
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
