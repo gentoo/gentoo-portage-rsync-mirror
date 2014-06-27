@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.4 2009/08/08 08:58:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.5 2014/06/27 07:20:27 pinkbyte Exp $
 
 EAPI="2"
 
+AT_M4DIR="m4"
 inherit autotools eutils
 
 DESCRIPTION="User level application for IBM Mwave modem"

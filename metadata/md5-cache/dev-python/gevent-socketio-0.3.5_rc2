@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=dev-python/gevent-websocket dev-python/gevent dev-python/setuptools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DEPEND=dev-python/gevent-websocket dev-python/gevent dev-python/setuptools dev-python/versiontools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 DESCRIPTION=SocketIO server based on the Gevent pywsgi server
 EAPI=4
 HOMEPAGE=http://pypi.python.org/pypi/gevent-socketio/
@@ -9,4 +9,4 @@ RDEPEND=dev-python/gevent-websocket || ( =dev-lang/python-2.7* =dev-lang/python-
 SLOT=0
 SRC_URI=mirror://pypi/g/gevent-socketio/gevent-socketio-0.3.5-rc2.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3ec5fff4651ae3ddf08b628165d14178
+_md5_=a3c477b637a31bb21a1dc7f9c3c75fd0

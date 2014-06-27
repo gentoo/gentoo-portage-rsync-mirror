@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.0.0.ebuild,v 1.1 2014/06/23 07:46:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.0.0.ebuild,v 1.2 2014/06/27 07:02:25 mgorny Exp $
 
 EAPI=4
 
@@ -106,7 +106,6 @@ src_configure() {
 		$(use_enable search-index)
 		$(use_enable xml)
 
-		--enable-prebuilt-documentation
 		--enable-vim
 		--enable-visibility
 		--with-config-framework=eselect

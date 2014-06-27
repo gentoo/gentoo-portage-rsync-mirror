@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-socketio/gevent-socketio-0.3.5_rc2.ebuild,v 1.1 2012/08/27 13:52:49 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-socketio/gevent-socketio-0.3.5_rc2.ebuild,v 1.2 2014/06/27 07:03:59 jlec Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -25,6 +25,7 @@ IUSE=""
 RDEPEND="dev-python/gevent-websocket"
 DEPEND="${RDEPEND}
 	dev-python/gevent
-	dev-python/setuptools"
+	dev-python/setuptools
+	dev-python/versiontools"
 
 S="${WORKDIR}/${MY_P}"

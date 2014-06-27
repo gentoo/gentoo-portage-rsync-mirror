@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.242 2014/06/23 07:46:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.243 2014/06/27 07:02:25 mgorny Exp $
+
+  27 Jun 2014; Michał Górny <mgorny@gentoo.org> paludis-2.0.0.ebuild:
+  Remove obsolete --enable-prebuilt-documentation. Upstream requires you to
+  rebuild all the docs nowadays for the sake of building.
 
 *paludis-2.0.0 (23 Jun 2014)
 

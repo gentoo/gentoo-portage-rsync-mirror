@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1300 2014/06/26 07:01:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1302 2014/06/27 07:26:18 slyfox Exp $
+
+  27 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  Disable QA warning on '--with-compiler' passed by 'dev-haskell/cabal' (bug
+  #515360 by Patrick Lauer).
+
+  27 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  Disable QA warning on '--with-hc --with-hc-pkg --with-gcc' flags passed by
+  'dev-haskell/cabal' to every configure-based haskell package. Don't unset
+  LANG/LC_ALL/LC_MESSAGES anymore.
 
   26 Jun 2014; Justin Lecher <jlec@gentoo.org> readme.gentoo.eclass,
   waf-utils.eclass:

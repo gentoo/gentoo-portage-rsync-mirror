@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.44 2014/05/22 16:35:11 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.46 2014/06/27 07:26:18 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -62,6 +62,11 @@ inherit eutils ghc-package multilib multiprocessing
 : ${CABAL_DEBUG_LOOSENING:=}
 
 HASKELL_CABAL_EXPF="pkg_setup src_compile src_test src_install"
+
+# 'dev-haskell/cabal' passes those options with ./configure-based
+# configuration, but most packages don't need/don't accept it:
+# #515362, #515362
+QA_CONFIGURE_OPTIONS+=" --with-compiler --with-hc --with-hc-pkg --with-gcc"
 
 case "${EAPI:-0}" in
 	2|3|4|5) HASKELL_CABAL_EXPF+=" src_configure" ;;
@@ -382,7 +387,6 @@ cabal-configure() {
 }
 
 cabal-build() {
-	unset LANG LC_ALL LC_MESSAGES
 	set --  build ${CABAL_EXTRA_BUILD_FLAGS} "$@"
 	echo ./setup "$@"
 	./setup "$@" \
