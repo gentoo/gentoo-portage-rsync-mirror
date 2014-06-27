@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.119 2014/06/24 22:17:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.120 2014/06/27 20:39:40 blueness Exp $
+
+  27 Jun 2014; Anthony G. Basile <blueness@gentoo.org> eudev-1.8.ebuild,
+  eudev-9999.ebuild:
+  Promote kmod to +kmod, see bug #509624
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> eudev-1.5.3-r1.ebuild,
   eudev-1.7.ebuild, eudev-1.8.ebuild, eudev-9999.ebuild:
