@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gmult
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.18 2013/12/24 12:43:40 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.19 2014/06/27 05:53:15 mr_bones_ Exp $
+
+  27 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/gmult-5.3-gcc43.patch, -gmult-5.3.ebuild, gmult-8.0.ebuild:
+  fix underlinking (bug #515318); clean old
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gmult-8.0.ebuild:
   Stable for x86, wrt bug #491062

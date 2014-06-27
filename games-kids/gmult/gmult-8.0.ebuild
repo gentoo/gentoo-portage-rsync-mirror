@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/gmult-8.0.ebuild,v 1.4 2013/12/24 12:43:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/gmult-8.0.ebuild,v 1.5 2014/06/27 05:53:15 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils gnome2-utils games
+inherit eutils gnome2-utils flag-o-matic games
 
 DESCRIPTION="Multiplication Puzzle is a simple GTK+ 2 game that emulates the multiplication game found in Emacs"
 HOMEPAGE="http://www.mterry.name/gmult/"
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_configure() {
+	append-libs -lm
 	econf \
 		--bindir="${GAMES_BINDIR}"
 }
