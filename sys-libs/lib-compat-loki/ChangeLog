@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/lib-compat-loki
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/ChangeLog,v 1.6 2007/08/21 23:34:28 wolf31o2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/ChangeLog,v 1.7 2014/06/27 10:52:11 mgorny Exp $
+
+*lib-compat-loki-0.2-r1 (27 Jun 2014)
+
+  27 Jun 2014; Michał Górny <mgorny@gentoo.org> +lib-compat-loki-0.2-r1.ebuild:
+  Fix installing to wrong libdir on amd64. Support multilib deps.
 
   21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   lib-compat-loki-0.2.ebuild:
@@ -33,4 +38,3 @@
   +lib-compat-loki-0.1.ebuild:
   Initial import. Ebuild by Alex Linke <incubation.11@freenet.de> and
   submitted to bug #71044.
-
