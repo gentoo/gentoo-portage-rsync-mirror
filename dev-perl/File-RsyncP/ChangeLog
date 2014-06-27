@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-RsyncP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.28 2012/06/24 12:58:45 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.30 2014/06/27 17:20:27 zlogene Exp $
+
+  27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -File-RsyncP-0.68.ebuild,
+  File-RsyncP-0.700.0.ebuild:
+  Mark amd64/ia64/sparc/x86 stable; Drop old.
+
+  27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> File-RsyncP-0.700.0.ebuild:
+  Bump to EAPI=5
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

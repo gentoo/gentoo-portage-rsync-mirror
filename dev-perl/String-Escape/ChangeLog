@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/String-Escape
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Escape/ChangeLog,v 1.1 2013/09/06 03:51:01 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Escape/ChangeLog,v 1.2 2014/06/27 17:16:01 zlogene Exp $
+
+  27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> String-Escape-2010.002.ebuild:
+  QA fixes: MODULE_VERSION; EAPI=5
 
 *String-Escape-2010.002 (06 Sep 2013)
 
