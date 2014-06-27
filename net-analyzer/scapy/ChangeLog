@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scapy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.36 2012/06/06 00:09:40 ikelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.37 2014/06/27 14:50:03 jer Exp $
+
+*scapy-2.2.0-r2 (27 Jun 2014)
+
+  27 Jun 2014; Jeroen Roovers <jer@gentoo.org> +scapy-2.2.0-r2.ebuild:
+  Migrate to distutils-r1.
 
   06 Jun 2012; Mike Auty <ikelos@gentoo.org> -scapy-1.1.1-r1.ebuild,
   -files/scapy-1.1.1-config-file.patch, -scapy-2.0.1.ebuild, -files/ethertypes:
