@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnuplot-py
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.43 2012/02/23 09:15:51 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.44 2014/06/27 15:12:20 jer Exp $
+
+*gnuplot-py-1.8-r1 (27 Jun 2014)
+
+  27 Jun 2014; Jeroen Roovers <jer@gentoo.org> +gnuplot-py-1.8-r1.ebuild:
+  Migrate to distutils-r1.
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> gnuplot-py-1.8.ebuild:
   Restricting python

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-2.2.0-r2.ebuild,v 1.1 2014/06/27 14:50:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-2.2.0-r2.ebuild,v 1.2 2014/06/27 15:14:09 jer Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ IUSE="gnuplot pyx crypt graphviz imagemagick visual tcpreplay"
 
 RDEPEND="
 	net-analyzer/tcpdump
-	gnuplot? ( dev-python/gnuplot-py )
+	gnuplot? ( dev-python/gnuplot-py[${PYTHON_USEDEP}] )
 	pyx? ( dev-python/pyx[${PYTHON_USEDEP}] )
 	crypt? ( dev-python/pycrypto[${PYTHON_USEDEP}] )
 	graphviz? ( media-gfx/graphviz )
