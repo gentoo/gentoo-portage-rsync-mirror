@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fcpci
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.26 2013/07/24 15:13:41 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.27 2014/06/27 06:38:56 pinkbyte Exp $
+
+  27 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> fcpci-0.1-r3.ebuild:
+  Enable verbose build
 
 *fcpci-0.1-r3 (24 Jul 2013)
 

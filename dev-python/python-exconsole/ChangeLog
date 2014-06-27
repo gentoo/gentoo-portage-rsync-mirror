@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/python-exconsole
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exconsole/ChangeLog,v 1.2 2014/06/27 06:57:58 jlec Exp $
+
+  27 Jun 2014; Justin Lecher <jlec@gentoo.org> python-exconsole-0.1.5.ebuild:
+  Fix QA problems
+
+*python-exconsole-0.1.5 (27 Jun 2014)
+
+  27 Jun 2014; Justin Lecher <jlec@gentoo.org> +python-exconsole-0.1.5.ebuild,
+  +metadata.xml:
+  New package written by me
+

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-0.1-r3.ebuild,v 1.1 2013/07/24 15:13:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/fcpci-0.1-r3.ebuild,v 1.2 2014/06/27 06:38:56 pinkbyte Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ pkg_setup() {
 	fi
 
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${S}/src"
+	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${S}/src V=1"
 	MODULE_NAMES="${PN}(net:${S}/src)"
 }
 

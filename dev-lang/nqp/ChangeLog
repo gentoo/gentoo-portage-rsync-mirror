@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.47 2014/05/26 05:25:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.48 2014/06/27 07:00:03 patrick Exp $
+
+*nqp-2014.06 (27 Jun 2014)
+
+  27 Jun 2014; Patrick Lauer <patrick@gentoo.org> +nqp-2014.06.ebuild:
+  Bump, temporarily disable nqp-parrot as it fails to build
 
   26 May 2014; Patrick Lauer <patrick@gentoo.org> nqp-2014.05.ebuild:
   Whitespace
