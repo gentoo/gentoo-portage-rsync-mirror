@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.1 2014/04/07 17:07:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.2 2014/06/27 19:26:10 bicatali Exp $
 
 EAPI=5
 
@@ -26,8 +26,8 @@ IUSE="ada cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
 RDEPEND="
 	ada? ( virtual/gnat )
 	cairo? ( x11-libs/cairo:0=[svg?,X?] )
-	java? ( >=virtual/jre-1.5 )
 	gd? ( media-libs/gd:2=[jpeg?,png?] )
+	java? ( >=virtual/jre-1.5 )
 	latex? (
 		app-text/ghostscript-gpl
 		virtual/latex-base
@@ -48,7 +48,7 @@ RDEPEND="
 		dev-python/numpy[${PYTHON_USEDEP}]
 		qt4? ( dev-python/PyQt4[${PYTHON_USEDEP}] )
 	)
-	qhull? ( media-libs/qhull )
+	qhull? ( media-libs/qhull:0= )
 	qt4? (
 		dev-qt/qtgui:4=
 		dev-qt/qtsvg:4=
@@ -91,7 +91,7 @@ DEPEND="${RDEPEND}
 		media-fonts/font-cursor-misc
 	)"
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) qt4? ( dynamic ) test? ( latex )"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) qt4? ( dynamic ) test? ( latex ) tk? ( tcl )"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-5.9.6-python.patch
@@ -137,6 +137,7 @@ src_configure() {
 		-DBUILD_DVI=OFF
 		-DDOX_DOC=OFF
 		-DBUILD_DOC=OFF
+		-DUSE_RPATH=OFF
 		$(cmake-utils_use doc PREBUILT_DOC)
 		$(cmake-utils_use_build test)
 		$(cmake-utils_use_has python NUMPY)
