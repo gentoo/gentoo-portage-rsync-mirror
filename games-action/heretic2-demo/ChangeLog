@@ -1,6 +1,10 @@
 # ChangeLog for games-action/heretic2-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/ChangeLog,v 1.10 2012/12/27 08:51:42 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/ChangeLog,v 1.11 2014/06/27 11:42:54 mgorny Exp $
+
+  27 Jun 2014; Michał Górny <mgorny@gentoo.org> heretic2-demo-1.06a.ebuild:
+  Support multilib packages in dependencies. Update/fix dependencies. Use
+  ABI=x86 to obtain proper libGL path for config.
 
   27 Dec 2012; Tupone Alfredo <tupone@gentoo.org> heretic2-demo-1.06a.ebuild:
   Use QA_PREBUILT. Bug #431230 by Diego Elio Pettenò
@@ -41,4 +45,3 @@
   +heretic2-demo-1.06a.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
   #120358.
-
