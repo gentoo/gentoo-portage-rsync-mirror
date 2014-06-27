@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ccaudio2/ccaudio2-2.0.5.ebuild,v 1.2 2012/06/21 18:36:57 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ccaudio2/ccaudio2-2.1.3.ebuild,v 1.1 2014/06/27 09:00:05 maksbotan Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF="1"
 
@@ -17,10 +17,14 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug static-libs +speex gsm"
 
-DEPEND="dev-libs/ucommon
+RDEPEND="dev-libs/ucommon
 	gsm? ( media-sound/gsm )
-	speex? ( media-libs/speex )"
-RDEPEND="${DEPEND}"
+	speex? ( media-libs/speex )
+	"
+
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+	"
 
 PATCHES=("${FILESDIR}"/disable_gsm_automagic.patch)
 DOCS=(AUTHORS ChangeLog INSTALL NEWS README SUPPORT THANKS TODO)

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.19 2014/03/01 22:19:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.20 2014/06/27 08:46:59 maksbotan Exp $
+
+*ucommon-6.1.8 (27 Jun 2014)
+
+  27 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/6.1/disable_rtf_gen_doxy.patch, +files/6.1/gcrypt_autotools.patch,
+  +files/6.1/install_gcrypt.m4_file.patch, +ucommon-6.1.8.ebuild:
+  Bump to 6.1.8, thanks to slepnoga
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> ucommon-5.2.2-r3.ebuild,
   ucommon-6.0.3.ebuild:

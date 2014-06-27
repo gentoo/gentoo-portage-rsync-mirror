@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.750.0.ebuild,v 1.3 2014/06/22 12:43:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.750.0.ebuild,v 1.4 2014/06/27 08:49:17 zlogene Exp $
 
 EAPI=5
 MODULE_AUTHOR=CLKAO
@@ -10,7 +10,7 @@ inherit perl-module eutils
 DESCRIPTION="SVN::Mirror - Mirror remote repositories to local subversion repository"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=">=dev-vcs/subversion-1.1.3[perl]

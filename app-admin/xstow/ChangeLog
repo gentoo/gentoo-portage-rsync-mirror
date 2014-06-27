@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xstow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.17 2014/03/26 16:01:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.18 2014/06/27 08:39:09 maksbotan Exp $
+
+  27 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> xstow-1.0.1.ebuild:
+  Move econf to src_configure, drop static use flag. Bug #515396.
 
 *xstow-1.0.1 (26 Mar 2014)
 
