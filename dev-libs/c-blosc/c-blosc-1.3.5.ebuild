@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/c-blosc/c-blosc-1.3.5.ebuild,v 1.1 2014/04/14 16:54:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/c-blosc/c-blosc-1.3.5.ebuild,v 1.2 2014/06/27 18:07:30 bicatali Exp $
 
 EAPI=5
 
@@ -18,10 +18,10 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="hdf5 +lz4 +snappy static-libs test zlib"
 
 RDEPEND="
-	hdf5? ( sci-libs/hdf5 )
-	lz4? ( app-arch/lz4 )
-	snappy? ( app-arch/snappy )
-	zlib? ( sys-libs/zlib )"
+	hdf5? ( sci-libs/hdf5:0= )
+	lz4? ( app-arch/lz4:0= )
+	snappy? ( app-arch/snappy:0= )
+	zlib? ( sys-libs/zlib:0= )"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${PN}-1.3.2-shared-libs.patch )
