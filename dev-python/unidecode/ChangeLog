@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.16 2014/05/15 20:01:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.17 2014/06/27 12:36:45 jer Exp $
+
+  27 Jun 2014; Jeroen Roovers <jer@gentoo.org> unidecode-0.04.16.ebuild:
+  Marked ~arm too.
 
   15 May 2014; Markus Meier <maekke@gentoo.org> unidecode-0.04.14.ebuild:
   add ~arm, bug #505998
