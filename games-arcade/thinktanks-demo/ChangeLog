@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/thinktanks-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.10 2012/12/27 21:34:19 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.11 2014/06/27 14:29:45 axs Exp $
+
+*thinktanks-demo-1.1-r2 (27 Jun 2014)
+
+  27 Jun 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thinktanks-demo-1.1-r2.ebuild:
+  Updated EAPI to 5, fixed dependencies, ensured gx86-multilib support
 
   27 Dec 2012; Tupone Alfredo <tupone@gentoo.org>
   thinktanks-demo-1.1-r1.ebuild:

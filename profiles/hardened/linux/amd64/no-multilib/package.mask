@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.33 2014/05/31 11:56:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.34 2014/06/27 14:28:04 axs Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
@@ -85,6 +85,7 @@ games-arcade/aquaria
 games-arcade/barbarian-bin
 games-arcade/jardinains
 games-arcade/gish-demo
+games-arcade/thinktanks-demo
 games-emulation/caps
 games-emulation/nestra
 games-emulation/zinc

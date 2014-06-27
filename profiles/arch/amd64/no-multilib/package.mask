@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.133 2014/05/28 19:02:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.134 2014/06/27 14:24:55 axs Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -65,6 +65,7 @@ games-arcade/aquaria
 games-arcade/barbarian-bin
 games-arcade/jardinains
 games-arcade/gish-demo
+games-arcade/thinktanks-demo
 games-emulation/caps
 games-emulation/nestra
 games-emulation/zinc

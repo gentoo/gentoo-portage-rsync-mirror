@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/java-wakeonlan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.17 2011/12/04 11:45:11 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.18 2014/06/27 14:02:00 mrueg Exp $
+
+  27 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -java-wakeonlan-1.0.0.ebuild:
+  NM: Cleanup old.
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
   java-wakeonlan-1.0.0-r1.ebuild:
@@ -67,4 +70,3 @@
   15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> java-wakeonlan-0.3.0.ebuild:
   Initial Import.
   Thanks Steffen Moldaner <s.moldaner@gmx.net> for the initial ebuild. Bug #27056
-
