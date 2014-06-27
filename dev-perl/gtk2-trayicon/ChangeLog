@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gtk2-trayicon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/ChangeLog,v 1.23 2012/06/24 12:59:14 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/ChangeLog,v 1.24 2014/06/27 10:08:34 zlogene Exp $
+
+*gtk2-trayicon-0.60.0-r1 (27 Jun 2014)
+
+  27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org>
+  +gtk2-trayicon-0.60.0-r1.ebuild:
+  Revision bump: EAPI=5
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

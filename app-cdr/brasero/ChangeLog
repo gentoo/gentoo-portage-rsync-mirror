@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.161 2014/04/27 15:22:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.162 2014/06/27 10:03:30 pacho Exp $
+
+  27 Jun 2014; Pacho Ramos <pacho@gentoo.org> brasero-3.11.3.ebuild,
+  metadata.xml:
+  Call configure at proper phase (#515426 by Patrick Lauer), fix homepage
 
 *brasero-3.11.3 (27 Apr 2014)
 
