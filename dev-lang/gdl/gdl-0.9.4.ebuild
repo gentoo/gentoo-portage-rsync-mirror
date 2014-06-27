@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.4.ebuild,v 1.1 2013/11/20 22:35:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.4.ebuild,v 1.2 2014/06/27 17:41:30 bicatali Exp $
 
 EAPI=5
 
@@ -20,17 +20,17 @@ IUSE="+eigen fftw grib gshhs hdf hdf5 imagemagick netcdf openmp
 	proj postscript	python static-libs udunits wxwidgets"
 
 RDEPEND="
-	sci-libs/gsl
-	sci-libs/plplot:=
-	sys-libs/ncurses
-	sys-libs/readline
-	sys-libs/zlib
-	x11-libs/libX11
-	fftw? ( >=sci-libs/fftw-3 )
-	grib? ( sci-libs/grib_api )
-	gshhs? ( sci-geosciences/gshhs-data sci-geosciences/gshhs )
-	hdf? ( sci-libs/hdf )
-	hdf5? ( sci-libs/hdf5 )
+	sci-libs/gsl:0=
+	sci-libs/plplot:0=
+	sys-libs/ncurses:5=
+	sys-libs/readline:0=
+	sys-libs/zlib:0=
+	x11-libs/libX11:0=
+	fftw? ( sci-libs/fftw:3.0= )
+	grib? ( sci-libs/grib_api:0= )
+	gshhs? ( sci-geosciences/gshhs-data sci-geosciences/gshhs:0= )
+	hdf? ( sci-libs/hdf:0= )
+	hdf5? ( sci-libs/hdf5:0= )
 	imagemagick? ( || (
 			media-gfx/graphicsmagick[cxx]
 			media-gfx/imagemagick[cxx] ) )
@@ -94,7 +94,6 @@ src_configure() {
 	# MPI is still very buggy
 	# x11=off does not compile
 	local mycmakeargs=(
-		-Wno-dev
 		-DMPICH=OFF
 		-DBUNDLED_ANTLR=OFF
 		-DX11=ON
