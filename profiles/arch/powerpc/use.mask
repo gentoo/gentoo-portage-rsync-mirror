@@ -9,10 +9,6 @@ klibc
 # Unmask the Altivec instruction set
 -altivec
 
-# Unmask ABI flags for this arch.
--abi_ppc_32
--abi_ppc_64
-
 # Incompatible Use Flags
 #
 # These use-flags are x86/amd64 only, please feel free to make a bug report if
