@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sonata
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.57 2012/05/05 08:51:03 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.58 2014/06/27 16:43:23 angelos Exp $
+
+*sonata-1.6.2.1-r1 (27 Jun 2014)
+
+  27 Jun 2014; Christoph Mende <angelos@gentoo.org>
+  +files/sonata-1.6.2.1-mpd18-compat.patch, +sonata-1.6.2.1-r1.ebuild:
+  Fix compatibility with mpd-0.18 (bug #512756), thanks to Israel G. Lugo
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> sonata-1.6.2.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -227,4 +233,3 @@
   22 Sep 2006; <ticho@gentoo.org> +metadata.xml, +sonata-0.6.ebuild:
   Initial import. Closes bug #148590. reported by Fabio Bonfante <blue_fox81
   at yahoo.it>.
-

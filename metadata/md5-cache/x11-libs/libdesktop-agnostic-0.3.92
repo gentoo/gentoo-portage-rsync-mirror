@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/glib-2 dev-python/pygobject:2 dev-python/pygtk:2 x11-libs/gtk
 SLOT=0
 SRC_URI=http://launchpad.net/libdesktop-agnostic/0.4/0.3.92/+download/libdesktop-agnostic-0.3.92.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	d8f392783fdc2395fc64af046f2ca961	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
-_md5_=c945c233784d9785216837cbb653fc4b
+_md5_=86a2864e8853d3797d81bcf7db432cfb

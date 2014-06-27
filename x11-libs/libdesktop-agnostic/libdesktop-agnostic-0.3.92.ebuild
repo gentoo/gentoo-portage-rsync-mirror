@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/libdesktop-agnostic-0.3.92.ebuild,v 1.7 2013/04/09 18:25:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/libdesktop-agnostic-0.3.92.ebuild,v 1.8 2014/06/27 16:41:55 angelos Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7"
@@ -40,7 +40,7 @@ src_configure() {
 	use gconf && cfg="gconf,${cfg}"
 	use gnome && fdo="${fdo},gnome"
 	use debug && myconf="${myconf} --enable-debug"
-	use glade && myconf="${myconf} --enable-glade"
+	use glade && myconf="${myconf} --with-glade"
 	use introspection || myconf="${myconf} --disable-gi"
 
 	waf-utils_src_configure \
