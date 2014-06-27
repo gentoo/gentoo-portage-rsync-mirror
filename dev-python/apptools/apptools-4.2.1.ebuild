@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.2.1.ebuild,v 1.1 2014/05/02 04:22:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.2.1.ebuild,v 1.2 2014/06/27 02:17:24 floppym Exp $
 
 EAPI=5
 
@@ -37,7 +37,6 @@ python_compile_all() {
 }
 
 python_test() {
-	export TMPDIR="${T}"
 	# Ignore test file that imports a long deprecated module of traits
 	VIRTUALX_COMMAND="nosetests -I test_state_pickler.py" virtualmake
 }
