@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/psych
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/psych/ChangeLog,v 1.1 2014/06/27 13:28:52 mrueg Exp $
+
+*psych-2.0.5 (27 Jun 2014)
+
+  27 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +psych-2.0.5.ebuild:
+  Initial ebuild.

@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libcrafter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcrafter/ChangeLog,v 1.2 2014/06/26 23:06:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcrafter/ChangeLog,v 1.4 2014/06/27 13:10:08 jer Exp $
+
+  27 Jun 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Refer to the "Scapy" package by atom.
+
+  27 Jun 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add <longdescription> based on the README.
 
   26 Jun 2014; Jeroen Roovers <jer@gentoo.org> libcrafter-0.2_p20140626.ebuild:
   Marked ~x86 too.
