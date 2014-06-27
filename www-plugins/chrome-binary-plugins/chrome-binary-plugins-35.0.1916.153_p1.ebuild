@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-35.0.1916.153_p1.ebuild,v 1.1 2014/06/11 22:56:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-35.0.1916.153_p1.ebuild,v 1.2 2014/06/26 23:22:20 floppym Exp $
 
 EAPI=4
 
@@ -43,8 +43,6 @@ LICENSE="google-chrome"
 KEYWORDS="~amd64 ~x86"
 IUSE="+flash +pdf"
 RESTRICT="bindist mirror strip"
-
-RDEPEND="=www-client/chromium-${PV%%.*}*"
 
 for x in 0 beta stable unstable; do
 	if [[ ${SLOT} != ${x} ]]; then

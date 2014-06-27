@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.11 2013/12/04 03:58:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.12 2014/06/26 23:22:20 floppym Exp $
 
 EAPI=4
 
@@ -17,8 +17,6 @@ LICENSE="google-chrome"
 KEYWORDS="" # KEYWORDS is also left blank on live ebuild
 IUSE="+flash +pdf"
 RESTRICT="bindist mirror strip"
-
-RDEPEND="www-client/chromium"
 
 for x in 0 beta stable unstable; do
 	if [[ ${SLOT} != ${x} ]]; then

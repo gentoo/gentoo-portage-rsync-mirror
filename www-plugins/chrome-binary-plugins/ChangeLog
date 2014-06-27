@@ -1,6 +1,20 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.150 2014/06/26 00:20:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.152 2014/06/26 23:23:46 floppym Exp $
+
+*chrome-binary-plugins-37.0.2062.3_alpha1 (26 Jun 2014)
+
+  26 Jun 2014; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-37.0.2062.3_alpha1.ebuild,
+  -chrome-binary-plugins-37.0.2062.0_alpha1.ebuild:
+  Automated update.
+
+  26 Jun 2014; Mike Gilbert <floppym@gentoo.org>
+  chrome-binary-plugins-35.0.1916.153_p1.ebuild,
+  chrome-binary-plugins-36.0.1985.97_beta1.ebuild,
+  chrome-binary-plugins-37.0.2062.0_alpha1.ebuild,
+  chrome-binary-plugins-9999.ebuild:
+  Drop RDEPEND on chromium, bug 515244.
 
 *chrome-binary-plugins-36.0.1985.97_beta1 (26 Jun 2014)
 
