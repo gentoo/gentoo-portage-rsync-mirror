@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.4_beta1.ebuild,v 1.1 2014/06/26 07:20:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.4_beta1.ebuild,v 1.2 2014/06/27 04:21:03 patrick Exp $
 
 EAPI="5"
 
@@ -112,7 +112,6 @@ src_configure() {
 		--without-tcl \
 		--without-perl \
 		$(use_with readline) \
-		$(use_with kerberos krb5) \
 		$(use_with kerberos gssapi) \
 		"$(use_enable nls nls "$(wanted_languages)")" \
 		$(use_with pam) \
