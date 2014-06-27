@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usbredir
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.38 2014/01/15 12:54:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.39 2014/06/27 16:27:34 dev-zero Exp $
+
+*usbredir-0.7 (27 Jun 2014)
+
+  27 Jun 2014; Tiziano Müller <dev-zero@gentoo.org> +usbredir-0.7.ebuild:
+  Version bump, install usbredirtestclient instead of libtool wrapper, directly
+  depend on dev-libs/libusb >=1.0.19 to get consistent builds (version-dependant
+  features).
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
   Stable for arm, wrt bug #488800

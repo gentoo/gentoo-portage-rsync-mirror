@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtaginfo/libtaginfo-0.1.6.ebuild,v 1.1 2013/04/20 06:49:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtaginfo/libtaginfo-0.1.6.ebuild,v 1.2 2014/06/27 16:10:52 angelos Exp $
 
 EAPI=4
 
 DESCRIPTION="a library for reading media metadata"
 HOMEPAGE="https://bitbucket.org/shuerhaaken/libtaginfo"
-SRC_URI="https://bitbucket.org/shuerhaaken/${PN}/downloads/${P}.tar.gz"
+SRC_URI="mirror://bitbucket/shuerhaaken/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/gmpc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.90 2013/05/11 17:56:43 angelos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.91 2014/06/27 16:16:01 angelos Exp $
+
+*gmpc-11.8.16-r1 (27 Jun 2014)
+
+  27 Jun 2014; Christoph Mende <angelos@gentoo.org>
+  +files/gmpc-11.8.16-icons.patch, +gmpc-11.8.16-r1.ebuild:
+  Fix missing playback icons (bug #509798), thanks to Philip L.
 
   11 May 2013; Christoph Mende <angelos@gentoo.org> gmpc-11.8.16.ebuild:
   Add gnome-doc-utils dependency (bug #469278), fix AM_CONFIG_HEADER failure
