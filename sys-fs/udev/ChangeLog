@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1053 2014/06/24 22:17:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1054 2014/06/27 11:17:57 ssuominen Exp $
+
+  27 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Remove unfunctional sed -line for restoring support for older compilers wrt
+  #510524. Completely remove dev-util/intltool dependency and pass --disable-nls
+  wrt http://cgit.freedesktop.org/systemd/systemd/commit/?id=2f96919bcdd0978164c
+  801b21e053fb3b31e8bac and http://cgit.freedesktop.org/systemd/systemd/commit/?
+  id=f15515b5e6a9ebe95c938cc670df6e576fcf9176
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> udev-208-r1.ebuild,
   udev-212-r1.ebuild, udev-214.ebuild, udev-9999.ebuild:

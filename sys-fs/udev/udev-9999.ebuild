@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.306 2014/06/24 22:17:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.307 2014/06/27 11:17:57 ssuominen Exp $
 
 EAPI=5
 
@@ -58,8 +58,7 @@ if [[ ${PV} = 9999* ]]; then
 		app-text/docbook-xml-dtd:4.2
 		app-text/docbook-xml-dtd:4.5
 		app-text/docbook-xsl-stylesheets
-		dev-libs/libxslt
-		>=dev-util/intltool-0.50"
+		dev-libs/libxslt"
 fi
 RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
@@ -125,20 +124,6 @@ src_prepare() {
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
 	EOF
 
-	# Remove requirements for gettext and intltool wrt bug #443028
-	if ! has_version dev-util/intltool && ! [[ ${PV} = 9999* ]]; then
-		sed -i \
-			-e '/INTLTOOL_APPLIED_VERSION=/s:=.*:=0.40.0:' \
-			-e '/XML::Parser perl module is required for intltool/s|^|:|' \
-			configure || die
-		eval export INTLTOOL_{EXTRACT,MERGE,UPDATE}=/bin/true
-		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
-	fi
-
-	# compile with older versions of gcc #451110
-	version_is_at_least 4.6 $(gcc-version) || \
-		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
-
 	# change rules back to group uucp instead of dialout for now wrt #454556
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
@@ -195,6 +180,7 @@ multilib_src_configure() {
 		--disable-quotacheck
 		--disable-logind
 		--disable-polkit
+		--disable-nls
 		--disable-myhostname
 		$(use_enable gudev)
 		--enable-split-usr

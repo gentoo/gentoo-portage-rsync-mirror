@@ -1,6 +1,11 @@
 # ChangeLog for games-action/descent3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.31 2013/08/14 11:27:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.32 2014/06/27 11:29:22 mgorny Exp $
+
+*descent3-1.4.0b-r2 (27 Jun 2014)
+
+  27 Jun 2014; Michał Górny <mgorny@gentoo.org> +descent3-1.4.0b-r2.ebuild:
+  Support multilib packages in dependencies. Update/fix dependencies.
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> descent3-1.4.0b-r1.ebuild:
   Whitespace / syntax fix

@@ -1,6 +1,9 @@
 # ChangeLog for games-action/descent3-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/ChangeLog,v 1.12 2014/04/15 11:41:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/ChangeLog,v 1.13 2014/06/27 11:11:36 mgorny Exp $
+
+  27 Jun 2014; Michał Górny <mgorny@gentoo.org> descent3-demo-1.4.0a.ebuild:
+  Support multilib packages in dependencies. Remove unnecessary dependencies.
 
   15 Apr 2014; Ulrich Müller <ulm@gentoo.org> descent3-demo-1.4.0a.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, bug 506810.
@@ -50,4 +53,3 @@
   +descent3-demo-1.4.0a.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
   #120371.
-
