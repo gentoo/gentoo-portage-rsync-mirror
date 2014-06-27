@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.255 2014/04/22 14:09:47 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.256 2014/06/27 09:54:02 slyfox Exp $
+
+  27 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
+  Ignore flags '--with-compiler/--with-gcc' passed by cabal with
+  'QA_CONFIGURE_OPTIONS'. Bug #515354 by Patrick Lauer, bug #469618 by Roman
+  Žilka.
 
   22 Apr 2014; Michael Orlitzky <mjo@gentoo.org> metadata.xml:
   Fix typo in llvm USE flag description, fixes bug #508398.

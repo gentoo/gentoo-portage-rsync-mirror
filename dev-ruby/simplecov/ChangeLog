@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simplecov
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/ChangeLog,v 1.7 2014/01/23 08:02:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/ChangeLog,v 1.8 2014/06/27 09:43:12 graaff Exp $
+
+  27 Jun 2014; Hans de Graaff <graaff@gentoo.org> simplecov-0.8.2.ebuild:
+  Add ruby20.
 
 *simplecov-0.8.2 (23 Jan 2014)
 

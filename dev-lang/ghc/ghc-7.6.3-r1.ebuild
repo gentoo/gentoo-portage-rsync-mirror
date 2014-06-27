@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3-r1.ebuild,v 1.10 2014/04/03 20:05:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3-r1.ebuild,v 1.11 2014/06/27 09:54:02 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -124,6 +124,9 @@ PDEPEND="
 REQUIRED_USE="ia64? ( !gmp )"
 
 use binary && QA_PREBUILT="*"
+
+# haskell libraries built with cabal in configure mode, #515354
+QA_CONFIGURE_OPTIONS+=" --with-compiler --with-gcc"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
