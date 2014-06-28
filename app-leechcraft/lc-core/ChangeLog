@@ -1,6 +1,13 @@
 # ChangeLog for app-leechcraft/lc-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.18 2014/06/25 06:36:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.19 2014/06/28 13:42:52 maksbotan Exp $
+
+  28 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/lc-core-0.6.65-dbus-optional.patch,
+  +files/lc-core-0.6.65-gcc-4.9.patch, lc-core-0.6.65.ebuild:
+  Add upstream patches for making dbus optional (and disabling it by default)
+  and fixes for gcc-4.9, bug #513904 and bug #513404. Thanks to patrick for the
+  report and to 0xd34df00d for the fixes.
 
   25 Jun 2014; Patrick Lauer <patrick@gentoo.org> lc-core-0.6.65.ebuild,
   lc-core-9999.ebuild:
