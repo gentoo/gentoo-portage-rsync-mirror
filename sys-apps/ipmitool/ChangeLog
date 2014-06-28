@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ipmitool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.24 2014/01/29 13:37:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ChangeLog,v 1.25 2014/06/28 00:43:01 robbat2 Exp $
+
+*ipmitool-1.8.14 (28 Jun 2014)
+
+  28 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> +ipmitool-1.8.14.ebuild:
+  Bump, now with IPv6.
 
   29 Jan 2014; Jeroen Roovers <jer@gentoo.org> ipmitool-1.8.11-r1.ebuild:
   Stable for HPPA too.

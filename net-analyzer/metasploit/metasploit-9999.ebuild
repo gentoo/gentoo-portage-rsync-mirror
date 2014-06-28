@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.25 2014/05/30 14:18:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.26 2014/06/28 00:49:34 zerochaos Exp $
 
 EAPI="5"
 
@@ -191,8 +191,8 @@ all_ruby_prepare() {
 }
 
 each_ruby_prepare() {
-	${RUBY} -S bundle install --local || die
-	${RUBY} -S bundle check || die
+	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle install --local || die
+	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle check || die
 
 	#force all metasploit executables to ruby19, ruby18 is not supported anymore and ruby20 is not supported yet
 	#https://dev.metasploit.com/redmine/issues/8357
@@ -212,10 +212,10 @@ each_ruby_test() {
 	rm spec/tools/virustotal_spec.rb || die
 
 	# https://dev.metasploit.com/redmine/issues/8425
-	${RUBY} -S bundle exec rake db:create || die
-	${RUBY} -S bundle exec rake db:migrate || die
+	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle exec rake db:create || die
+	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle exec rake db:migrate || die
 
-	MSF_DATABASE_CONFIG=config/database.yml ${RUBY} -S bundle exec rake  || die
+	MSF_DATABASE_CONFIG=config/database.yml BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle exec rake  || die
 	su postgres -c "dropuser msf_test_user" || die "failed to cleanup msf_test-user"
 }
 
