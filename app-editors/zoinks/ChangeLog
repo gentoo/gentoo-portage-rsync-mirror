@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zoinks
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.27 2009/07/23 22:42:10 vostorga Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.28 2014/06/28 20:55:00 jer Exp $
+
+  28 Jun 2014; Jeroen Roovers <jer@gentoo.org> zoinks-0.4.1.ebuild:
+  Bump EAPI (bug #515622 by Jonas Stein).
 
   23 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> zoinks-0.4.1.ebuild:
   Fixing CXX variable, closes bug #243574

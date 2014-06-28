@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.7 2009/07/23 22:42:10 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.8 2014/06/28 20:55:00 jer Exp $
 
-inherit eutils
+EAPI=5
+inherit eutils toolchain-funcs
 
 DESCRIPTION="programmer's text editor and development environment"
 HOMEPAGE="http://zoinks.mikelockwood.com"
@@ -20,18 +21,17 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	sed -i -e 's:-g -Werror::g' "${S}"/configure*
+src_prepare() {
+	sed -i -e 's:-g -Werror::g' configure* || die
+	tc-export CXX
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable nls)	--disable-imlib
-	emake CXX=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	default
 	dodoc AUTHORS ChangeLog NEWS README
 	doicon ide/Pixmaps/${PN}.xpm
 	make_desktop_entry ${PN} "Zoinks!" ${PN} "Utility;TextEditor"
