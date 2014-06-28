@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/plyr/plyr-1.0.6.ebuild,v 1.1 2014/06/24 15:02:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/plyr/plyr-1.0.6.ebuild,v 1.2 2014/06/28 02:07:49 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -16,7 +16,7 @@ HOMEPAGE="http://sahib.github.com/python-glyr/intro.html
 SRC_URI="https://github.com/sahib/${MY_PN}/archive/${PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-3+"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc"
 
@@ -31,6 +31,7 @@ S="${WORKDIR}/${MY_P}"
 python_prepare_all() {
 	# Disable test requiring internet connection
 	sed -e 's:test_download:_&:' -i tests/test_misc.py || die
+	distutils-r1_python_prepare_all
 }
 
 python_compile() {
