@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.2.ebuild,v 1.1 2014/05/30 05:33:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.3-r1.ebuild,v 1.1 2014/06/28 18:46:16 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -131,7 +131,15 @@ src_configure() {
 
 src_install() {
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
+
 	gnome2_src_install
+
+	# Problems with prelink:
+	# https://bugzilla.gnome.org/show_bug.cgi?id=731680
+	# https://bugzilla.gnome.org/show_bug.cgi?id=732148
+	echo PRELINK_PATH_MASK=/usr/bin/evolution > ${T}/99${PN}
+	doenvd "${T}"/99${PN}
+
 	readme.gentoo_create_doc
 }
 
