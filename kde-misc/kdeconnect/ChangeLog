@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kdeconnect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.4 2014/06/16 10:52:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.5 2014/06/28 21:33:21 mrueg Exp $
+
+*kdeconnect-0.7 (28 Jun 2014)
+
+  28 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +kdeconnect-0.7.ebuild:
+  Version bump. Fixes bug #515592
 
   16 Jun 2014; Michael Palimaka <kensington@gentoo.org> kdeconnect-0.5.1.ebuild,
   kdeconnect-0.5.2.1.ebuild:

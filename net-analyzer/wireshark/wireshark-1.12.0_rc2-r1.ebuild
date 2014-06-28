@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2.ebuild,v 1.3 2014/06/20 13:51:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2-r1.ebuild,v 1.1 2014/06/28 21:46:41 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -165,7 +165,19 @@ src_install() {
 
 	# install headers
 	local wsheader
-	for wsheader in $( echo $(< debian/wireshark-dev.header-files ) ); do
+	for wsheader in \
+		color.h \
+		config.h \
+		epan/*.h \
+		epan/crypt/*.h \
+		epan/dfilter/*.h \
+		epan/dissectors/*.h \
+		epan/ftypes/*.h \
+		epan/wmem/*.h \
+		register.h \
+		wiretap/*.h \
+		ws_symbol_export.h
+	do
 		insinto /usr/include/wireshark/$( dirname ${wsheader} )
 		doins ${wsheader}
 	done
