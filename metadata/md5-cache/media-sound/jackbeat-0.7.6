@@ -1,7 +1,7 @@
 DEFINED_PHASES=configure prepare
 DEPEND=dev-libs/glib:2 >=dev-libs/libxml2-2.6:2 gnome-base/libglade:2.0 >=media-libs/liblo-0.22 >=media-libs/libsamplerate-0.1.2 >=media-libs/libsndfile-1.0.15 media-libs/alsa-lib media-libs/portaudio jack? ( >=media-sound/jack-audio-connection-kit-0.101 ) pulseaudio? ( >=media-sound/pulseaudio-0.9.10 ) x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.12:2 x11-libs/pango virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=An audio sequencer for Linux
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.samalyse.com/jackbeat/
 IUSE=jack pulseaudio
 KEYWORDS=~amd64 ~x86
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/glib:2 >=dev-libs/libxml2-2.6:2 gnome-base/libglade:2.0 >=media
 SLOT=0
 SRC_URI=http://www.samalyse.com/jackbeat/files/jackbeat-0.7.6.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d7d0e2c9a8e68597fbeb21f509df9387
+_md5_=a38dea81e084214ebb832f7e1e7ebb1f
