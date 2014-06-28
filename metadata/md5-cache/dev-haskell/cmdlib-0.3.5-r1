@@ -4,10 +4,10 @@ DESCRIPTION=a library for command line parsing & online help
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/cmdlib
 IUSE=doc hscolour profile
-KEYWORDS=~alpha amd64 ia64 ppc ppc64 sparc x86
+KEYWORDS=alpha amd64 ia64 ppc ppc64 sparc x86
 LICENSE=BSD
 RDEPEND=>=dev-haskell/mtl-2:=[profile?] >=dev-haskell/transformers-0.2.2:=[profile?] dev-haskell/split:=[profile?] dev-haskell/syb:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/0.3.5
 SRC_URI=mirror://hackage/packages/archive/cmdlib/0.3.5/cmdlib-0.3.5.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=7e4d6117c2bfe46fe324c5b798e994f0
+_md5_=310284094fc4c91fd37dbd5e06f15fc5

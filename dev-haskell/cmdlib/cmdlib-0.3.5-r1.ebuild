@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/cmdlib-0.3.5-r1.ebuild,v 1.7 2014/03/23 17:17:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/cmdlib-0.3.5-r1.ebuild,v 1.8 2014/06/28 20:29:26 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/mtl-2:=[profile?]

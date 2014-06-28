@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cmdlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.16 2014/03/23 17:17:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.17 2014/06/28 20:29:26 slyfox Exp $
+
+  28 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> cmdlib-0.3.5-r1.ebuild:
+  alpha stable, bug #495376
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cmdlib-0.3.5-r1.ebuild:
   Stable for sparc, wrt bug #495376

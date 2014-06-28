@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.9 2014/01/08 15:25:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.10 2014/06/28 20:15:08 hd_brummy Exp $
 
 EAPI=5
 
@@ -21,6 +21,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	vdr-plugin-2_src_prepare
+
+	sed -e "s:RegisterI18n://RegisterI18n:" -i pcd.c
 
 	epatch "${FILESDIR}/${P}-ffmpeg-1.patch"
 
