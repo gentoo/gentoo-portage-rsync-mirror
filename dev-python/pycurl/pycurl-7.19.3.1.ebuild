@@ -1,7 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.4 2014/06/15 15:22:12 mgorny Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.5 2014/06/28 10:51:59 idella4 Exp $
 EAPI=5
 
 # The selftests fail with pypy, and urlgrabber segfaults for me.
@@ -15,8 +14,8 @@ SRC_URI="http://pycurl.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~s390 ~sh ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE="curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl test"
 
 # Depend on a curl with curl_ssl_* USE flags.
 # libcurl must not be using an ssl backend we do not support.
@@ -24,14 +23,17 @@ IUSE="curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl"
 # If curl uses gnutls, depend on at least gnutls 2.11.0 so that pycurl
 # does not need to initialize gcrypt threading and we do not need to
 # explicitly link to libgcrypt.
-DEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
+RDEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
 	ssl? (
 		net-misc/curl[curl_ssl_gnutls(-)=,curl_ssl_nss(-)=,curl_ssl_openssl(-)=,-curl_ssl_axtls(-),-curl_ssl_cyassl(-),-curl_ssl_polarssl(-)]
-		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 )
-	)"
-RDEPEND="${DEPEND}"
-# Tests have new deps that can never be keyworded, for now
-RESTRICT="test"
+		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) )"
+DEPEND="${RDEPEND}
+	test? ( dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/bottle[${PYTHON_USEDEP}] )"
+# Needed for individual runs of testsuite by python impls.
+DISTUTILS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}"/${P}-ssl-test.patch )
 
 python_prepare_all() {
 	sed -e "/data_files=/d" -i setup.py || die
@@ -56,11 +58,7 @@ src_test() {
 
 python_test() {
 	# https://github.com/pycurl/pycurl/issues/180
-	if [[ "${EPYTHON}" == python2.7 ]]; then
-		sed -e 's:test_request_with_certinfo:_&:' \
-			-e 's:test_request_without_certinfo:_&:' \
-			-i tests/certinfo_test.py || die
-	elif [[ "${EPYTHON}" == python3.4 ]]; then
+	if [[ "${EPYTHON}" == python3.4 ]]; then
 		sed -e 's:test_post_buffer:_&:' \
 			-e 's:test_post_file:_&:' \
 			-i tests/post_test.py || die

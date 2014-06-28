@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.95 2014/06/15 15:22:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.96 2014/06/28 10:51:59 idella4 Exp $
+
+  28 Jun 2014; Ian Delaney <idella4@gentoo.org>
+  +files/pycurl-7.19.3.1-ssl-test.patch, pycurl-7.19.3.1.ebuild:
+  add test deps, upstream patch, drop amd64-fbsd hppa x86-fbsd keywords to
+  include test dep (for re-keywording), unrestrict and update test phase
 
   15 Jun 2014; Michał Górny <mgorny@gentoo.org> pycurl-7.19.0-r1.ebuild,
   pycurl-7.19.0-r2.ebuild, pycurl-7.19.0-r3.ebuild, pycurl-7.19.3.1.ebuild:
