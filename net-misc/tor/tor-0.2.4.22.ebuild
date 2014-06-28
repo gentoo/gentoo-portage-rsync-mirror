@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.22.ebuild,v 1.4 2014/06/14 09:55:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.22.ebuild,v 1.6 2014/06/28 19:19:36 zlogene Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PF}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads upnp web"
 
 DEPEND="dev-libs/openssl
