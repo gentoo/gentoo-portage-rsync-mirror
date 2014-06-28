@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/fudge-1.0.3-r2.ebuild,v 1.4 2014/03/31 20:53:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/fudge-1.0.3-r2.ebuild,v 1.5 2014/06/28 15:12:11 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND=""
-DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
