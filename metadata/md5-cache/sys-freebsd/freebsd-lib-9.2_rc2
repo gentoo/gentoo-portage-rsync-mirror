@@ -3,11 +3,11 @@ DEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( app-cryp
 DESCRIPTION=FreeBSD's base system libraries
 EAPI=5
 HOMEPAGE=http://www.freebsd.org/
-IUSE=atm bluetooth ssl hesiod ipv6 kerberos usb netware build crosscompile_opts_headers-only zfs userland_GNU userland_BSD profile abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+IUSE=atm bluetooth ssl hesiod ipv6 kerberos usb netware build crosscompile_opts_headers-only zfs userland_GNU userland_BSD profile abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64
 KEYWORDS=~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 LICENSE=BSD
 RDEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( app-crypt/heimdal ) usb? ( !dev-libs/libusb ) zfs? ( =sys-freebsd/freebsd-cddl-9.2* ) >=dev-libs/expat-2.0.1 !sys-libs/libutempter !dev-libs/libelf !sys-freebsd/freebsd-headers
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-lib-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-contrib-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-crypto-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-libexec-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-etc-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-include-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-usbin-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-gnu-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-secure-9.2_rc2.tar.bz2 build? ( mirror://gentoo/freebsd-sys-9.2_rc2.tar.bz2 ) zfs? ( mirror://gentoo/freebsd-cddl-9.2_rc2.tar.bz2 )
-_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	freebsd	9df2a927373191607071d802c1058c96	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	freebsd	9df2a927373191607071d802c1058c96	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	1f69ae15c55529c2008cf6f8680d547c	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=305c6d514471dc9451c356d5b87f5ccf

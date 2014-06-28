@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install test unpack
-DEPEND=>=virtual/ffmpeg-9-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] dev-vcs/git
+DEPEND=>=virtual/ffmpeg-9-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?] dev-vcs/git
 DESCRIPTION=Video post processing library
 EAPI=5
 HOMEPAGE=https://github.com/lu-zero/postproc
-IUSE=pic static-libs 3dnow altivec mmx mmxext abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
+IUSE=pic static-libs 3dnow altivec mmx mmxext abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64
 LICENSE=GPL-2
-RDEPEND=>=virtual/ffmpeg-9-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] !<media-video/libav-0.8.2-r2 !media-video/ffmpeg:0 abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
+RDEPEND=>=virtual/ffmpeg-9-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?] !<media-video/libav-0.8.2-r2 !media-video/ffmpeg:0 abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 SLOT=0
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	git-2	2027b81a576527fa16bece425941e094	git-r3	da25af7340478afdca16e1e4568b014a	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	git-2	2027b81a576527fa16bece425941e094	git-r3	da25af7340478afdca16e1e4568b014a	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	1f69ae15c55529c2008cf6f8680d547c	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=bbdcf04feab57499a2bc2d71105e6bae

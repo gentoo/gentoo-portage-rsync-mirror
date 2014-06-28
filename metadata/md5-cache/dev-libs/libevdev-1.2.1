@@ -3,12 +3,12 @@ DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) !<sy
 DESCRIPTION=Handler library for evdev events
 EAPI=5
 HOMEPAGE=http://xorg.freedesktop.org/
-IUSE=abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 static-libs
+IUSE=abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 static-libs
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~x86
 LICENSE=MIT
 RDEPEND=abi_x86_32? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/libevdev/libevdev-1.2.1.tar.xz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	037c4046d25f29e78dd44dccabd5d66b	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	02e68fc95064bb486c12ad2de16b8c82	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xorg-2	69479ff7a35a30e863a475568d29b9be
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-multilib	037c4046d25f29e78dd44dccabd5d66b	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	1f69ae15c55529c2008cf6f8680d547c	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xorg-2	69479ff7a35a30e863a475568d29b9be
 _md5_=1449bd0695ca2972ebdf5f7c4185eec5
