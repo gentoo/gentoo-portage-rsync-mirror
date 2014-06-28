@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.36 2014/06/25 14:11:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.37 2014/06/28 08:00:01 pinkbyte Exp $
+
+  28 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> libtirpc-0.2.4-r1.ebuild:
+  amd64/arm/x86 stable, wrt bug #514912
 
   25 Jun 2014; Jeroen Roovers <jer@gentoo.org> libtirpc-0.2.4-r1.ebuild:
   Stable for HPPA (bug #514912).

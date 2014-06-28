@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-libs/libmnl-1.0.0 xml? ( >=dev-libs/mini-xml-2.6 ) json? ( >=dev-libs/jansson-2.3 )
 SLOT=0
 SRC_URI=http://netfilter.org/projects/libnftnl/files/libnftnl-1.0.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	linux-info	90944ede7e9761bd7ef07602acdef9e3	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=c5110dd9916b54e4ae962c095d0df8a4
