@@ -1,9 +1,9 @@
 # ChangeLog for dev-perl/CPAN-Changes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Changes/ChangeLog,v 1.5 2014/06/28 17:25:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Changes/ChangeLog,v 1.6 2014/06/28 18:10:38 zlogene Exp $
 
   28 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> CPAN-Changes-0.270.0.ebuild:
-  amd64/x86 stable wrt byg #515594
+  amd64/x86 stable wrt bug #515594
 
 *CPAN-Changes-0.270.0 (06 Jan 2014)
 

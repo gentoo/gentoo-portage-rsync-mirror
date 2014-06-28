@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.26 2014/06/06 15:49:11 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.27 2014/06/28 18:04:52 jer Exp $
+
+  28 Jun 2014; Jeroen Roovers <jer@gentoo.org> bottle-0.12.6.ebuild:
+  Marked ~hppa (bug #515610).
 
   06 Jun 2014; Dirkjan Ochtman <djc@gentoo.org> -bottle-0.10.9.ebuild,
   -bottle-0.11.3.ebuild, -bottle-0.11.6.ebuild:

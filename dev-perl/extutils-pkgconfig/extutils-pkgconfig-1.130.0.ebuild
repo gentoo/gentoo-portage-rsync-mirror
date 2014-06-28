@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/extutils-pkgconfig-1.130.0.ebuild,v 1.10 2012/09/02 18:10:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/extutils-pkgconfig-1.130.0.ebuild,v 1.11 2014/06/28 18:02:04 zlogene Exp $
 
 EAPI=4
 
@@ -16,6 +16,5 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x8
 IUSE=""
 
 DEPEND="virtual/pkgconfig"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
