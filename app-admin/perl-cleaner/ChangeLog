@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.85 2014/06/28 15:08:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.87 2014/06/28 19:49:37 zlogene Exp $
+
+  28 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> perl-cleaner-2.14.ebuild:
+  arm stable wrt bug #512616
+
+  28 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> perl-cleaner-2.14.ebuild:
+  amd64 stable wrt bug #512616
 
   28 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-cleaner-2.12.ebuild, -perl-cleaner-2.13.ebuild:
