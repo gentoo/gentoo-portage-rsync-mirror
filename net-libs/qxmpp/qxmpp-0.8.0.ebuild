@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.8.0.ebuild,v 1.1 2014/03/27 14:02:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.8.0.ebuild,v 1.2 2014/06/28 12:58:19 maksbotan Exp $
 
 EAPI=5
 
@@ -33,6 +33,9 @@ src_prepare(){
 		sed -i -e '/SUBDIRS/s/tests//' \
 			qxmpp.pro || die "sed for removing tests failed"
 	fi
+	# There is no point in building examples. Also, they require dev-qt/qtgui
+	sed -i -e '/SUBDIRS/s/examples//' \
+			qxmpp.pro || die "sed for removing examples failed"
 	qt4-r2_src_prepare
 }
 
