@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.20.ebuild,v 1.10 2014/05/18 10:16:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.20.ebuild,v 1.11 2014/06/28 13:18:13 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -67,12 +67,12 @@ src_prepare() {
 		use buffer-on-clear && epatch "${FILESDIR}"/${PN}-9.14-clear.patch
 
 		use alt-font-width && epatch "${FILESDIR}"/${PN}-9.06-font-width.patch
-	else
-		epatch_user
 	fi
 
 	# kill the rxvt-unicode terminfo file - #192083
 	sed -i -e "/rxvt-unicode.terminfo/d" doc/Makefile.in || die "sed failed"
+
+	epatch_user
 
 	eautoreconf
 }
