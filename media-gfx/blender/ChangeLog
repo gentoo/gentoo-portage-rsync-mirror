@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.268 2014/05/15 17:08:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.269 2014/06/28 12:05:30 hasufell Exp $
+
+*blender-2.71 (28 Jun 2014)
+
+  28 Jun 2014; Julian Ospald <hasufell@gentoo.org> +blender-2.71.ebuild,
+  +files/02-blender-2.71-unbundle-colamd.patch,
+  +files/04-blender-2.71-unbundle-glog.patch:
+  version bump wrt #515390
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> blender-2.66-r1.ebuild,
   blender-2.67b-r1.ebuild, blender-2.68.ebuild, blender-2.68a.ebuild,
