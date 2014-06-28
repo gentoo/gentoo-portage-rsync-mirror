@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.249 2014/06/25 14:11:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.250 2014/06/28 08:17:11 pinkbyte Exp $
+
+  28 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> nfs-utils-1.2.9-r3.ebuild:
+  amd64/arm/x86 stable, wrt bug #504714
 
   25 Jun 2014; Jeroen Roovers <jer@gentoo.org> nfs-utils-1.2.9-r3.ebuild:
   Stable for HPPA (bug #504714).
