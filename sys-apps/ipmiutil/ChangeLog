@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ipmiutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.24 2014/06/28 01:05:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.25 2014/06/28 14:20:18 jer Exp $
+
+  28 Jun 2014; Jeroen Roovers <jer@gentoo.org> ipmiutil-2.9.3.ebuild,
+  +files/ipmiutil-2.9.3-flags.patch, +files/ipmiutil-2.9.3-tmpdir.patch:
+  Fix building with FEATURES=distcc (chokes on TMPDIR being set, respect
+  CFLAGS.
 
 *ipmiutil-2.9.3 (28 Jun 2014)
 
