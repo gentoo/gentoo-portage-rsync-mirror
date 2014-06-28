@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.28 2014/06/28 01:15:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.29 2014/06/28 17:44:30 zerochaos Exp $
 
 EAPI="5"
 
@@ -256,6 +256,7 @@ all_ruby_install() {
 		#These dirs contain prebuilt binaries for running on the TARGET not the HOST
 		SEARCH_DIRS_MASK="/usr/lib*/${PN}${SLOT}/data/meterpreter"
 		SEARCH_DIRS_MASK="/usr/lib*/${PN}${SLOT}/data/exploits"
+		SEARCH_DIRS_MASK="/usr/lib*/${PN}${SLOT}/data/android/libs"
 	EOF
 }
 

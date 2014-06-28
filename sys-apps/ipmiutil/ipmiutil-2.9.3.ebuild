@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.9.3.ebuild,v 1.2 2014/06/28 14:20:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.9.3.ebuild,v 1.3 2014/06/28 17:59:02 jer Exp $
 
 EAPI=4
 inherit autotools eutils systemd
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-flags.patch
 	epatch "${FILESDIR}"/${P}-tmpdir.patch
-	
+
 	sed -i -e 's|-O2 -g|$(CFLAGS)|g;s|-g -O2|$(CFLAGS)|g' util/Makefile.am* || die
 
 	eautoreconf

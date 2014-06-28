@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ipmiutil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.25 2014/06/28 14:20:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.26 2014/06/28 17:59:02 jer Exp $
+
+  28 Jun 2014; Jeroen Roovers <jer@gentoo.org> ipmiutil-2.9.3.ebuild:
+  Whitespace.
 
   28 Jun 2014; Jeroen Roovers <jer@gentoo.org> ipmiutil-2.9.3.ebuild,
   +files/ipmiutil-2.9.3-flags.patch, +files/ipmiutil-2.9.3-tmpdir.patch:

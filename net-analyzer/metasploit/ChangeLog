@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.98 2014/06/28 01:15:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.99 2014/06/28 17:44:30 zerochaos Exp $
+
+  28 Jun 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
+  stop revdep-rebuild from rebuilding for no reason
 
   28 Jun 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
   improve msfupdate workflow

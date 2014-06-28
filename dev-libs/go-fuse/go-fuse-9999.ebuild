@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-9999.ebuild,v 1.4 2014/06/13 17:17:59 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-9999.ebuild,v 1.5 2014/06/28 17:53:37 zerochaos Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/go"
+DEPEND=">=dev-lang/go-1.3"
 RDEPEND=""
 
 GO_PN="github.com/hanwen/${PN}"
