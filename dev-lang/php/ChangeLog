@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.848 2014/06/28 16:26:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.849 2014/06/28 21:28:44 jer Exp $
+
+  28 Jun 2014; Jeroen Roovers <jer@gentoo.org> php-5.4.30.ebuild:
+  Stable for HPPA (bug #512492).
 
   28 Jun 2014; Jeroen Roovers <jer@gentoo.org> php-5.5.14.ebuild:
   Stable for HPPA (bug #512492).
