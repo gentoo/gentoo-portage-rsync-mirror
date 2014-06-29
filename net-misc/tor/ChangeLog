@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.423 2014/06/28 19:19:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.424 2014/06/29 12:14:28 blueness Exp $
+
+  29 Jun 2014; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.4.20.ebuild:
+  Remove 0.2.4.20, sparc is up to date
 
   28 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> tor-0.2.4.22.ebuild:
   sparc stable wrt bug #510564

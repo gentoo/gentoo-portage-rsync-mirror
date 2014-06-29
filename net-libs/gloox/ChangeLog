@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.23 2014/06/29 11:15:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.24 2014/06/29 12:08:23 pinkbyte Exp $
+
+*gloox-1.0.10-r1 (29 Jun 2014)
+
+  29 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> -gloox-1.0.10.ebuild,
+  +gloox-1.0.10-r1.ebuild:
+  Revision bump: add support for user patches, do not build examples, prune
+  unneeded libtool files, conditionally build static library, set proper
+  condition on debug builds, build tests only when it's needed. Drop old
+  revision
 
   29 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> gloox-1.0.9.ebuild:
   Stable on x86, wrt bug #495850

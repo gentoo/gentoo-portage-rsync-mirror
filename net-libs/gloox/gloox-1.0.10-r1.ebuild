@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.10.ebuild,v 1.2 2014/06/20 12:33:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0.10-r1.ebuild,v 1.1 2014/06/29 12:08:23 pinkbyte Exp $
 
 EAPI=5
 
-MY_P=${P/_/-}
+inherit eutils
+
+MY_P="${P/_/-}"
 DESCRIPTION="A portable high-level Jabber/XMPP library for C++"
 HOMEPAGE="http://camaya.net/gloox"
 SRC_URI="http://camaya.net/download/${MY_P}.tar.bz2"
@@ -12,7 +14,7 @@ SRC_URI="http://camaya.net/download/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~x86"
-IUSE="debug gnutls idn ssl zlib"
+IUSE="debug gnutls idn ssl static-libs test zlib"
 
 DEPEND="idn? ( net-dns/libidn )
 	gnutls? ( net-libs/gnutls )
@@ -21,17 +23,26 @@ DEPEND="idn? ( net-dns/libidn )
 
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch_user
+}
 
 src_configure() {
+	# Examples are not installed anyway, so - why should we build them?
 	econf \
-		$(use_enable debug debug) \
+		--without-examples \
+		$(use debug && echo "--enable-debug") \
+		$(use_enable static-libs static) \
 		$(use_with idn libidn) \
-		$(use_with gnutls gnutls) \
+		$(use_with gnutls) \
 		$(use_with ssl openssl) \
-		$(use_with zlib zlib)
+		$(use_with test tests) \
+		$(use_with zlib)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
+	prune_libtool_files
 }
