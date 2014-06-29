@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/SpeedyCGI-2.22-r3.ebuild,v 1.1 2013/09/08 14:51:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/SpeedyCGI-2.22-r3.ebuild,v 1.2 2014/06/29 08:13:56 zlogene Exp $
 
 EAPI=5
 inherit perl-module
@@ -12,7 +12,7 @@ SRC_URI="http://daemoninc.com/SpeedyCGI/CGI-${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="amd64 ~hppa sparc x86"
 IUSE=""
 
 DEPEND=""

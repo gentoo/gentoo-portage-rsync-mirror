@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=avahi? ( net-dns/avahi ) cgi? ( >=media-libs/gd-2[png] ) snmp? ( net-analyzer/net-snmp ) usb? ( virtual/libusb:0 ) ssl? ( >=dev-libs/openssl-1 ) tcpd? ( sys-apps/tcp-wrappers ) xml? ( >=net-libs/neon-0.25.0 ) virtual/udev >=sys-apps/sed-4 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
+DEPEND=avahi? ( net-dns/avahi ) cgi? ( >=media-libs/gd-2[png] ) snmp? ( net-analyzer/net-snmp ) usb? ( virtual/libusb:0 ) selinux? ( sec-policy/selinux-nut ) ssl? ( >=dev-libs/openssl-1 ) tcpd? ( sys-apps/tcp-wrappers ) xml? ( >=net-libs/neon-0.25.0 ) virtual/udev >=sys-apps/sed-4 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 DESCRIPTION=Network-UPS Tools
 EAPI=2
 HOMEPAGE=http://www.networkupstools.org/
-IUSE=avahi cgi snmp usb ssl tcpd xml bash-completion
+IUSE=avahi cgi snmp usb selinux ssl tcpd xml bash-completion
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x86-fbsd
 LICENSE=GPL-2
 PDEPEND=bash-completion? ( app-shells/bash-completion )
-RDEPEND=avahi? ( net-dns/avahi ) cgi? ( >=media-libs/gd-2[png] ) snmp? ( net-analyzer/net-snmp ) usb? ( virtual/libusb:0 ) ssl? ( >=dev-libs/openssl-1 ) tcpd? ( sys-apps/tcp-wrappers ) xml? ( >=net-libs/neon-0.25.0 ) virtual/udev bash-completion? ( app-admin/eselect )
+RDEPEND=avahi? ( net-dns/avahi ) cgi? ( >=media-libs/gd-2[png] ) snmp? ( net-analyzer/net-snmp ) usb? ( virtual/libusb:0 ) selinux? ( sec-policy/selinux-nut ) ssl? ( >=dev-libs/openssl-1 ) tcpd? ( sys-apps/tcp-wrappers ) xml? ( >=net-libs/neon-0.25.0 ) virtual/udev bash-completion? ( app-admin/eselect )
 SLOT=0
 SRC_URI=http://random.networkupstools.org/source/2.6/nut-2.6.3.tar.gz http://www.networkupstools.org/source/2.6/nut-2.6.3.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	025442f2eecab39ad0b4e541b6e142af	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=26f9be21c4caec5c1320cfbbf7a56dd1
+_md5_=2920a28d74ce61b6a045ecfac1ad33de

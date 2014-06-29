@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.1.ebuild,v 1.1 2014/01/05 20:37:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.7.1.ebuild,v 1.2 2014/06/29 08:28:45 swift Exp $
 
 EAPI=5
 inherit autotools bash-completion-r1 eutils fixheadtails multilib user systemd flag-o-matic toolchain-funcs
@@ -17,11 +17,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
-IUSE="avahi cgi ipmi snmp +usb ssl tcpd xml"
+IUSE="avahi cgi ipmi snmp +usb selinux ssl tcpd xml"
 RDEPEND="avahi? ( net-dns/avahi )
 	cgi? ( >=media-libs/gd-2[png] )
 	snmp? ( net-analyzer/net-snmp )
 	usb? ( virtual/libusb:0 )
+	selinux? ( sec-policy/selinux-nut )
 	ssl? ( >=dev-libs/openssl-1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xml? ( >=net-libs/neon-0.25.0 )

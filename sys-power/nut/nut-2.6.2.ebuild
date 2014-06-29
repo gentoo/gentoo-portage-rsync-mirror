@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.2.ebuild,v 1.5 2012/12/03 02:05:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.2.ebuild,v 1.6 2014/06/29 08:28:45 swift Exp $
 
 EAPI=2
 inherit autotools bash-completion eutils fixheadtails multilib user
@@ -16,11 +16,12 @@ SRC_URI="http://random.networkupstools.org/source/${PV%.*}/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="cgi snmp usb ssl tcpd xml"
+IUSE="cgi snmp usb selinux ssl tcpd xml"
 
 RDEPEND="cgi? ( >=media-libs/gd-2[png] )
 	snmp? ( net-analyzer/net-snmp )
 	usb? ( virtual/libusb:0 )
+	selinux? ( sec-policy/selinux-nut )
 	ssl? ( >=dev-libs/openssl-1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xml? ( >=net-libs/neon-0.25.0 )

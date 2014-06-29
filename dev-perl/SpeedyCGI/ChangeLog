@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SpeedyCGI
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.18 2013/09/08 14:51:37 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.19 2014/06/29 08:13:56 zlogene Exp $
+
+  29 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -SpeedyCGI-2.22-r2.ebuild,
+  SpeedyCGI-2.22-r3.ebuild:
+  Merge stable keywords from -r2; Drop old.
 
 *SpeedyCGI-2.22-r3 (08 Sep 2013)
 
