@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15819 2014/06/29 15:42:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15820 2014/06/29 18:48:33 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
+# Severe security issue (bug 460780), unhandled for over a year.
+# Masked for removal in 30 days.
+dev-db/firebird
+dev-db/flamerobin
+dev-libs/ibpp
+dev-python/kinterbasdb
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Mask perl-5.12 and related package versions prior to removal

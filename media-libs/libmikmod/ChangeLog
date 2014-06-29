@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.122 2014/06/18 19:44:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.123 2014/06/29 18:58:20 maekke Exp $
+
+  29 Jun 2014; Markus Meier <maekke@gentoo.org> libmikmod-3.3.5.ebuild:
+  arm stable, bug #495798
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libmikmod-3.3.5.ebuild,
   libmikmod-3.3.6.ebuild:

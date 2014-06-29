@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.87 2014/06/22 14:17:06 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.88 2014/06/29 18:49:54 maekke Exp $
+
+  29 Jun 2014; Markus Meier <maekke@gentoo.org> redcloth-4.2.9-r1.ebuild:
+  arm stable, bug #513430
 
   22 Jun 2014; Akinori Hattori <hattya@gentoo.org> redcloth-4.2.9-r1.ebuild:
   ia64 stable wrt bug #513430

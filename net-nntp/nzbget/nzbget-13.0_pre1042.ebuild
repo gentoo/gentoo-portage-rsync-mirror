@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-13.0_pre1042.ebuild,v 1.1 2014/06/20 08:11:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-13.0_pre1042.ebuild,v 1.2 2014/06/29 18:37:15 swegener Exp $
 
 EAPI=5
 
-inherit autotools user
+inherit autotools user eutils
 
 MY_P=${P/_pre/-testing-r}
 
@@ -48,6 +48,8 @@ src_prepare() {
 		"${S}"/nzbget.conf > "${S}"/nzbgetd.conf || die
 
 	sed -i "/^dist_doc_DATA/d" Makefile.am || die
+
+	epatch "${FILESDIR}"/${P}-gzip-endif.patch
 
 	eautoreconf
 }

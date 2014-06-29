@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.579 2014/06/20 14:11:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.580 2014/06/29 18:43:56 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
+# Mask use-flag firebird and package dev-db/firebird for bug 460780
+net-misc/stargazer module_store_firebird
 
 # Jeroen Roovers <jer@gentoo.org> (20 Jun 2014)
 # net-libs/adns is going away (bug #513982)

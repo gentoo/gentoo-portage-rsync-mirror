@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.693 2014/06/29 16:14:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.694 2014/06/29 18:43:56 dilfridge Exp $
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask,
+  use.mask:
+  Mask use-flag firebird and package dev-db/firebird for bug 460780
 
   29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   package.use.stable.mask:

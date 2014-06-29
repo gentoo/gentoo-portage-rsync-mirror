@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.103 2014/06/04 00:27:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.104 2014/06/29 18:53:09 maekke Exp $
+
+  29 Jun 2014; Markus Meier <maekke@gentoo.org> twisted-web-13.0.0-r1.ebuild:
+  arm stable, bug #486506
 
   04 Jun 2014; Jeroen Roovers <jer@gentoo.org> twisted-web-13.0.0-r1.ebuild:
   Stable for HPPA (bug #486506).

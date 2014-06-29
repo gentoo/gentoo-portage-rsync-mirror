@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.45 2014/04/11 18:19:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.46 2014/06/29 18:54:11 maekke Exp $
+
+  29 Jun 2014; Markus Meier <maekke@gentoo.org> qrencode-3.4.3.ebuild:
+  arm stable, bug #500420
 
   11 Apr 2014; Jeroen Roovers <jer@gentoo.org> qrencode-3.4.3.ebuild:
   Stable for HPPA (bug #507432).

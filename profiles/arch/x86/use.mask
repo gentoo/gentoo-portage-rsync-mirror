@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.63 2014/06/25 14:22:30 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.64 2014/06/29 18:33:58 dilfridge Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -177,7 +177,6 @@ video_cards_newport
 # Shared with amd64
 -oci8
 -oracle7
--firebird
 -db2
 
 # Robert Buchholz <rbu@gentoo.org> (03 Jun 2007)
