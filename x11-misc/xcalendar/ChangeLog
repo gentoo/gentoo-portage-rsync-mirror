@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.31 2012/12/23 20:21:39 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.32 2014/06/29 22:50:12 dilfridge Exp $
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org> -xcalendar-4.0.ebuild:
+  Remove old
 
   23 Dec 2012; Ulrich Müller <ulm@gentoo.org> xcalendar-4.0.ebuild,
   xcalendar-4.0-r1.ebuild:
