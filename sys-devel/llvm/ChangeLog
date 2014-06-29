@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.201 2014/06/23 23:00:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.202 2014/06/29 09:59:33 mgorny Exp $
+
+  29 Jun 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Rename clang to ${CHOST}-clang-${PV}. Add multilib wrappers.
 
 *llvm-3.4.2 (23 Jun 2014)
 

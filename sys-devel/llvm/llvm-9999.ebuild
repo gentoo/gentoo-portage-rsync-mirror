@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.87 2014/05/01 15:09:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.88 2014/06/29 09:59:32 mgorny Exp $
 
 EAPI=5
 
@@ -64,10 +64,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 # we need to run install per-directory, and ninja can't do that...
 # so why did it call itself ninja in the first place?
 CMAKE_MAKEFILE_GENERATOR=emake
-
-MULTILIB_CHOST_TOOLS=(
-	/usr/bin/llvm-config
-)
 
 pkg_pretend() {
 	# in megs
@@ -344,14 +340,28 @@ multilib_src_test() {
 }
 
 src_install() {
+	local MULTILIB_CHOST_TOOLS=(
+		/usr/bin/llvm-config
+	)
+
 	local MULTILIB_WRAPPED_HEADERS=(
 		/usr/include/llvm/Config/config.h
 		/usr/include/llvm/Config/llvm-config.h
 	)
 
-	use clang && MULTILIB_WRAPPED_HEADERS+=(
-		/usr/include/clang/Config/config.h
-	)
+	if use clang; then
+		# note: magic applied below
+		MULTILIB_CHOST_TOOLS+=(
+			/usr/bin/clang
+			/usr/bin/clang++
+			/usr/bin/clang-${PV}
+			/usr/bin/clang++-${PV}
+		)
+
+		MULTILIB_WRAPPED_HEADERS+=(
+			/usr/include/clang/Config/config.h
+		)
+	fi
 
 	multilib-minimal_src_install
 }
@@ -379,6 +389,34 @@ multilib_src_install() {
 			dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
 			dosym ../../../../$(get_libdir)/LLVMgold.so \
 				/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
+		fi
+	fi
+
+	# apply CHOST and PV to clang executables
+	# they're statically linked so we don't have to worry about the lib
+	if use clang; then
+		local clang_tools=( clang clang++ )
+		local i
+
+		# append ${PV} and symlink back
+		# TODO: use alternatives.eclass? does that make any sense?
+		# maybe with USE=-clang on :0 and USE=clang on older
+		for i in "${clang_tools[@]}"; do
+			mv "${ED%/}/usr/bin/${i}"{,-${PV}} || die
+			dosym "${i}"-${PV} /usr/bin/${i}
+		done
+
+		# now prepend ${CHOST} and let the multilib-build.eclass symlink it
+		if ! multilib_is_native_abi; then
+			# non-native? let's replace it with a simple wrapper
+			for i in "${clang_tools[@]}"; do
+				rm "${ED%/}/usr/bin/${i}-${PV}" || die
+				cat > "${T}"/wrapper.tmp <<-_EOF_
+					#!${EPREFIX}/bin/sh
+					exec "${i}-${PV}" $(get_abi_CFLAGS) "\${@}"
+				_EOF_
+				newbin "${T}"/wrapper.tmp "${i}-${PV}"
+			done
 		fi
 	fi
 

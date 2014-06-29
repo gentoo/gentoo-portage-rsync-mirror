@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.93 2014/06/29 08:53:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.96 2014/06/29 09:54:45 zlogene Exp $
+
+  29 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -perl-cleaner-2.7.ebuild:
+  Drop old.
+
+  29 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> perl-cleaner-2.14.ebuild:
+  Mark s390 stable
+
+  29 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> perl-cleaner-2.14.ebuild:
+  x86 stable wrt bug #512616
 
   29 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> perl-cleaner-2.14.ebuild:
   sparc stable wrt bug #512616

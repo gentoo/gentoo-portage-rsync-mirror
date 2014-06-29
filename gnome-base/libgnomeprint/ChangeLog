@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.197 2014/04/29 11:47:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.198 2014/06/29 09:45:10 mgorny Exp $
+
+*libgnomeprint-2.18.8-r1 (29 Jun 2014)
+
+  29 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +files/libgnomeprint-2.18.8-cups-config.patch,
+  +libgnomeprint-2.18.8-r1.ebuild:
+  Enable multilib support, required for gnome-base/libgnomeprintui. Bug #515652.
 
   29 Apr 2014; Lars Wendler <polynomial-c@gentoo.org>
   libgnomeprint-2.18.8.ebuild, +files/libgnomeprint-2.18.8-bison3.patch:

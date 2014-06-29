@@ -1,6 +1,12 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.98 2014/01/01 21:12:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.99 2014/06/29 09:43:48 mgorny Exp $
+
+*libgnomecups-0.2.3-r4 (29 Jun 2014)
+
+  29 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  +files/libgnomecups-0.2.3-cups-config.patch, +libgnomecups-0.2.3-r4.ebuild:
+  Enable multilib support, required for gnome-base/libgnomeprint.
 
   01 Jan 2014; Pacho Ramos <pacho@gentoo.org> libgnomecups-0.2.3-r3.ebuild:
   Add missing dependency on gnome-common, bug #496648 by Jan Hrabe
