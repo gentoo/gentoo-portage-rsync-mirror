@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15817 2014/06/29 03:54:33 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15818 2014/06/29 14:50:07 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -795,10 +795,6 @@ dev-tex/pdftex
 # Only avalable version isn't in the tree.
 # Mask until it is bumped
 sci-chemistry/webmo
-
-# Torsten Veller <tove@gentoo.org> (18 Jun 2011)
-# Mask perl-5.14. See tracker bug #356171
-=dev-lang/perl-5.14*
 
 # Marijn Schouten <hkBst@gentoo.org> (07 April 2011)
 # Masked for number of issues, but can be used to
