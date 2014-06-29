@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.3.4.ebuild,v 1.2 2014/06/09 22:09:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.3.4.ebuild,v 1.3 2014/06/29 13:20:50 jer Exp $
 
 EAPI=5
 
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
 	autotools-utils_src_install
 	if use java; then
-		cd "${BUILD_DIR}}"/JavaYacas || die
+		cd "${BUILD_DIR}"/JavaYacas || die
 		java-pkg_dojar yacas.jar
 		java-pkg_dolauncher jyacas --main net.sf.yacas.YacasConsole
 		insinto /usr/share/${PN}

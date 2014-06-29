@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.37 2014/06/09 22:09:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.38 2014/06/29 13:20:50 jer Exp $
+
+  29 Jun 2014; Jeroen Roovers <jer@gentoo.org> yacas-1.3.4.ebuild:
+  Fix typo (bug #515670 by Juergen Rose).
 
   09 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org>
   +files/yacas-1.3.4-java-version.patch, yacas-1.3.4.ebuild:

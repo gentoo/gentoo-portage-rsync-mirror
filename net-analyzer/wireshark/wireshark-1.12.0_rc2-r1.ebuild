@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2-r1.ebuild,v 1.1 2014/06/28 21:46:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.0_rc2-r1.ebuild,v 1.2 2014/06/29 13:29:56 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -176,7 +176,8 @@ src_install() {
 		epan/wmem/*.h \
 		register.h \
 		wiretap/*.h \
-		ws_symbol_export.h
+		ws_symbol_export.h \
+		wsutil/*.h
 	do
 		insinto /usr/include/wireshark/$( dirname ${wsheader} )
 		doins ${wsheader}

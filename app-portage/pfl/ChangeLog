@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.67 2014/03/13 19:31:53 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.68 2014/06/29 13:05:49 jer Exp $
+
+*pfl-2.4-r2 (29 Jun 2014)
+
+  29 Jun 2014; Jeroen Roovers <jer@gentoo.org> -pfl-2.4-r1.ebuild,
+  +pfl-2.4-r2.ebuild:
+  Revision bump so everyone enjoys the bug fix.
 
   13 Mar 2014; Daniel Pielmeier <billie@gentoo.org>
   files/e-file-20110906-portageq.patch:

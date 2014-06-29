@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.20 2014/04/25 19:23:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.21 2014/06/29 13:18:11 tomka Exp $
+
+*mu-0.9.9.6 (29 Jun 2014)
+
+  29 Jun 2014; Thomas Kahle <tomka@gentoo.org> +mu-0.9.9.6.ebuild:
+  bump to 0.9.9.6
 
   25 Apr 2014; Pacho Ramos <pacho@gentoo.org> -mu-0.9.6.ebuild:
   Drop old

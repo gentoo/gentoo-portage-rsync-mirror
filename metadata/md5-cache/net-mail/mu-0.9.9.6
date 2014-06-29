@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
+DEPEND=dev-libs/gmime:2.6 dev-libs/xapian dev-libs/glib:2 gui? ( x11-libs/gtk+:3 net-libs/webkit-gtk:3 ) emacs? ( >=virtual/emacs-23 ) !net-mail/mailutils
+DESCRIPTION=Set of tools to deal with Maildirs, in particular, searching and indexing
+EAPI=5
+HOMEPAGE=http://www.djcbsoftware.nl/code/mu/
+IUSE=doc emacs gui
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/gmime:2.6 dev-libs/xapian dev-libs/glib:2 gui? ( x11-libs/gtk+:3 net-libs/webkit-gtk:3 ) emacs? ( >=virtual/emacs-23 ) !net-mail/mailutils
+SLOT=0
+SRC_URI=https://github.com/djcb/mu/archive/v0.9.9.6.tar.gz -> mu-0.9.9.6.tar.gz doc? ( http://mu0.googlecode.com/files/mu4e-manual-0.9.9.5.pdf )
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=58530736b51e2aec9a5ebda6202bc109
