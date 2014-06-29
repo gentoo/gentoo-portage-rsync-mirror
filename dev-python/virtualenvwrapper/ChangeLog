@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenvwrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/ChangeLog,v 1.16 2014/06/29 04:31:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/ChangeLog,v 1.17 2014/06/29 09:26:43 idella4 Exp $
+
+  29 Jun 2014; Ian Delaney <idella4@gentoo.org> virtualenvwrapper-4.3.ebuild:
+  set req'd version for stevedore, fixes Bug #515580 by R. Fleschenberg
 
   29 Jun 2014; Ian Delaney <idella4@gentoo.org> -virtualenvwrapper-3.7.1.ebuild,
   -virtualenvwrapper-4.0.ebuild, -virtualenvwrapper-4.1.1.ebuild,
