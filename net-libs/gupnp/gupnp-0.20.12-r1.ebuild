@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.4 2014/06/24 22:17:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.5 2014/06/29 12:40:46 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -57,7 +57,7 @@ multilib_src_configure() {
 	use networkmanager && backend=network-manager
 
 	# fake connman.pc to avoid pulling it in unnecessarily (only dbus
-	# interface is used) and fix multilib.
+	# interface is used) and fix multilib. [fixed in vcs]
 	# https://bugzilla.gnome.org/show_bug.cgi?id=731457
 
 	ECONF_SOURCE=${S} \
