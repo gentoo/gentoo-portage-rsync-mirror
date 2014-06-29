@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.8 2014/06/28 20:55:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.9 2014/06/28 23:06:36 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -35,4 +35,12 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 	doicon ide/Pixmaps/${PN}.xpm
 	make_desktop_entry ${PN} "Zoinks!" ${PN} "Utility;TextEditor"
+}
+
+pkg_postinst() {
+	if ! [[ ${REPLACING_VERSIONS} ]]; then
+		elog "If you see this message when starting zoinks:"
+		elog "zoinks: TFont.cpp:40: TFont::TFont(const char*): Assertion \`fFontSet' failed."
+		elog "You need to install media-fonts/font-adobe-{75,100dpi}"
+	fi
 }
