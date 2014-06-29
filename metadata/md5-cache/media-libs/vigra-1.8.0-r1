@@ -10,5 +10,5 @@ RDEPEND=dev-lang/python:2.7 >=dev-libs/boost-1.52.0-r6[python?,python_targets_py
 REQUIRED_USE=doc? ( hdf5 fftw ) python? ( hdf5 ) test? ( hdf5 python fftw )
 SLOT=0
 SRC_URI=http://hci.iwr.uni-heidelberg.de/vigra/vigra-1.8.0-src.tar.gz
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e103679e1ddc8f7ad1f7dfd04c346e2d

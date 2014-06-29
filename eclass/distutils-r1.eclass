@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.99 2014/06/22 07:01:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.100 2014/06/29 14:24:22 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -690,6 +690,8 @@ distutils-r1_src_prepare() {
 }
 
 distutils-r1_src_configure() {
+	python_export_utf8_locale
+
 	if declare -f python_configure >/dev/null; then
 		_distutils-r1_run_foreach_impl python_configure
 	fi

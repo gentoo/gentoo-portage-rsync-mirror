@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.58 2014/06/19 15:10:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.59 2014/06/29 14:24:22 floppym Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -1108,6 +1108,41 @@ _python_get_wrapper_path() {
 	else
 		echo /usr/bin/python-exec
 	fi
+}
+
+# @FUNCTION: python_export_utf8_locale
+# @RETURN: 0 on success, 1 on failure.
+# @DESCRIPTION:
+# Attempts to export a usable UTF-8 locale in the LC_CTYPE variable. Does
+# nothing if LC_ALL is defined, or if the current locale uses a UTF-8 charmap.
+# This may be used to work around the quirky open() behavior of python3.
+python_export_utf8_locale() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	if [[ $(locale charmap) != UTF-8 ]]; then
+		if [[ -n ${LC_ALL} ]]; then
+			ewarn "LC_ALL is set to a locale with a charmap other than UTF-8."
+			ewarn "This may trigger build failures in some python packages."
+			return 1
+		fi
+
+		# Try English first, then everything else.
+		local lang locales="en_US.UTF-8 $(locale -a)"
+
+		for lang in ${locales}; do
+			if [[ $(LC_CTYPE=${lang} locale charmap 2>/dev/null) == UTF-8 ]]; then
+				export LC_CTYPE=${lang}
+				return 0
+			fi  
+		done
+
+		ewarn "Could not find a UTF-8 locale. This may trigger build failures in"
+		ewarn "some python packages. Please ensure that a UTF-8 locale is listed in"
+		ewarn "/etc/locale.gen and run locale-gen."
+		return 1
+	fi  
+
+	return 0
 }
 
 _PYTHON_UTILS_R1=1

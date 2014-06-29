@@ -10,5 +10,5 @@ RDEPEND=zsh-completion? ( app-shells/zsh ) python_targets_python2_7? ( >=dev-lan
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy )
 SLOT=0
 SRC_URI=https://github.com/williamh/pybugz/archive/0.10.1.tar.gz -> pybugz-0.10.1.tar.gz
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	051beafa534d831ab1129e71788b681a	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils-r1	2efee63b5a249714ce5d8cef3068dd16	eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=831364ecf7bfb747bf9fbe3ef93d7a4e

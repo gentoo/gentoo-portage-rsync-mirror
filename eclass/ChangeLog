@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1305 2014/06/29 08:32:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1306 2014/06/29 14:24:22 floppym Exp $
+
+  29 Jun 2014; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass,
+  python-utils-r1.eclass:
+  Attempt to use a UTF-8 locale if one is available to avoid errors when
+  setup.py calls open() with no encoding.
 
   29 Jun 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Fix handling empty MULTILIB_COMPAT.

@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=2.6.16.26
 SRC_URI=mirror://kernel/linux/kernel/v2.6/patch-2.6.16.26.xz mirror://kernel/linux/kernel/v2.6/linux-2.6.16.tar.xz mirror://sourceforge/xbox-linux/linux-2.6.16-xbox.patch.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	6164ef644981c5dffdf4cf891caed613	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b65eab898b45b22ff548684b94a6c882
