@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.14.ebuild,v 1.2 2014/04/08 11:11:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.14.ebuild,v 1.3 2014/06/29 22:10:19 steev Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/kernel/v3.x/linux-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="cpufreq_bench debug nls"
 
 # File collision w/ headers of the deprecated cpufrequtils

@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/cpupower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.17 2014/04/08 11:11:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.18 2014/06/29 22:10:19 steev Exp $
+
+  29 Jun 2014; Steev Klimaszewski <steev@gentoo.org> cpupower-3.14.ebuild:
+  Add ~arm keyword wrt bug #512044
+
+  I still have some misgivings about this package. Downloading 75MB of kernel
+  source, just to build a roughly 75K application and library seems a bit much.
+  It also will not work across all ARM devices. If anyone 
+  opens a bug about this not working on their ARM device, please do not close
+  the bug as resolved:wontfix with a message to update to a newer kernel.
 
   08 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> cpupower-3.13.ebuild,
   cpupower-3.14.ebuild:

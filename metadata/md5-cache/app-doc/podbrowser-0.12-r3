@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=dev-perl/gtk2-gladexml dev-perl/gtk2-perl dev-perl/HTML-Parser dev-perl/Locale-gettext virtual/perl-Pod-Simple dev-perl/URI dev-perl/Gtk2-Ex-PodViewer dev-perl/Gtk2-Ex-PrintDialog dev-perl/Gtk2-Ex-Simple-List || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) >=x11-libs/gtk+-2.6.0:2 >=x11-themes/gnome-icon-theme-2.10.0 >=gnome-base/libglade-2:2.0 sys-devel/gettext
 DESCRIPTION=PodBrowser is a documentation browser for Perl
-EAPI=3
+EAPI=5
 HOMEPAGE=http://jodrell.net/projects/podbrowser
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=dev-perl/gtk2-gladexml dev-perl/gtk2-perl dev-perl/HTML-Parser dev-perl/
 SLOT=0
 SRC_URI=http://jodrell.net/files/podbrowser/podbrowser-0.12.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=622969d14ed6324f0c088a2325c0170d
+_md5_=d2d2a5394f6e0c7c772f8f7a809df3c9

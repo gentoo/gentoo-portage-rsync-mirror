@@ -1,6 +1,16 @@
 # ChangeLog for app-doc/podbrowser
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.12 2013/08/10 02:02:38 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.14 2014/06/29 22:23:38 dilfridge Exp $
+
+*podbrowser-0.12-r3 (29 Jun 2014)
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -podbrowser-0.12-r2.ebuild, +podbrowser-0.12-r3.ebuild:
+  Revision bump with EAPI=5
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -podbrowser-0.12-r1.ebuild:
+  Remove old
 
 *podbrowser-0.12-r2 (10 Aug 2013)
 

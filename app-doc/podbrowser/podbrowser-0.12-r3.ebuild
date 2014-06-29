@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.12-r1.ebuild,v 1.1 2011/03/23 08:51:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.12-r3.ebuild,v 1.1 2014/06/29 22:23:38 dilfridge Exp $
 
-EAPI=3
+EAPI=5
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="dev-perl/gtk2-gladexml
 	dev-perl/Gtk2-Ex-PodViewer
 	dev-perl/Gtk2-Ex-PrintDialog
 	dev-perl/Gtk2-Ex-Simple-List
-	>=dev-lang/perl-5.8.0[-build]
+	|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 	>=x11-libs/gtk+-2.6.0:2
 	>=x11-themes/gnome-icon-theme-2.10.0
 	>=gnome-base/libglade-2:2.0"
@@ -35,13 +35,13 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/missing_icon.patch
-	cp "${FILESDIR}"/Makefile.new "${S}"/Makefile
+	cp "${FILESDIR}"/Makefile.new "${S}"/Makefile || die
 }
 
 src_compile() {
-	emake DESTDIR="${D}" PREFIX=/usr  || die "emake failed"
+	emake DESTDIR="${D}" PREFIX=/usr
 }
 
 src_install() {
-	emake PREFIX=/usr DESTDIR="${D}" install || die
+	emake PREFIX=/usr DESTDIR="${D}" install
 }
