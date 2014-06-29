@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare test unpack
-DEPEND=dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml sci-visualization/gnuplot virtual/perl-Class-ISA virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Switch virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) virtual/perl-Module-Build dev-lang/perl:=[-build(-)]
+DEPEND=dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml perl-core/Switch sci-visualization/gnuplot virtual/perl-Class-ISA virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) virtual/perl-Module-Build dev-lang/perl:=[-build(-)]
 DESCRIPTION=Measurement control and automation with Perl
 EAPI=5
 HOMEPAGE=http://www.labmeasurement.de/
 IUSE=debug +xpression
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-2 )
-RDEPEND=dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml sci-visualization/gnuplot virtual/perl-Class-ISA virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Switch virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) dev-lang/perl:=[-build(-)]
+RDEPEND=dev-perl/Clone dev-perl/Exception-Class dev-perl/Hook-LexWrap dev-perl/List-MoreUtils dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings dev-perl/yaml perl-core/Switch sci-visualization/gnuplot virtual/perl-Class-ISA virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools debug? ( dev-lang/perl[ithreads] dev-perl/wxperl ) xpression? ( dev-perl/wxperl ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AK/AKHUETTEL/Lab-Measurement-3.31.tar.gz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=a5f051bad6901981d4a19d69704efbc1
+_md5_=d268a8bb79c2ac622ec1f616495a5bbe

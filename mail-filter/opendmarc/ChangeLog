@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/opendmarc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.7 2014/04/17 07:56:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.8 2014/06/29 15:21:36 dilfridge Exp $
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  opendmarc-1.1.3.ebuild, opendmarc-1.2.0.ebuild:
+  perl-core/Switch is the only Switch provider since perl-5.14
 
 *opendmarc-1.2.0 (17 Apr 2014)
 

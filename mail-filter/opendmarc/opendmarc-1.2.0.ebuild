@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.2.0.ebuild,v 1.1 2014/04/17 07:56:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.2.0.ebuild,v 1.2 2014/06/29 15:21:36 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="dev-perl/DBI
 	|| ( mail-filter/libmilter mail-mta/sendmail )"
 RDEPEND="${DEPEND}
-	virtual/perl-Switch"
+	perl-core/Switch"
 
 pkg_setup() {
 	enewgroup milter
