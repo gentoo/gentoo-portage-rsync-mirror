@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.13.ebuild,v 1.1 2014/05/03 08:07:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.13.ebuild,v 1.2 2014/06/29 11:26:00 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python3_3 )
@@ -20,11 +20,10 @@ IUSE="doc"
 
 RDEPEND="virtual/tex-base"
 DEPEND="${RDEPEND}
-	doc? ( virtual/latex-base )"
+	doc? ( virtual/latex-base
+	dev-python/sphinx[latex,${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
-
-DOCS=( AUTHORS CHANGES )
 
 src_prepare() {
 	distutils-r1_src_prepare
@@ -36,11 +35,11 @@ src_prepare() {
 
 python_compile_all() {
 	if use doc; then
-		cd "${S}/faq"
-		VARTEXFONTS="${T}"/fonts make latexpdf
+		VARTEXFONTS="${T}"/fonts emake -C "${S}"/faq latexpdf
 	fi
 }
 
 python_install_all() {
 	use doc && dodoc faq/_build/latex/pyxfaq.pdf
+	distutils-r1_python_install_all
 }
