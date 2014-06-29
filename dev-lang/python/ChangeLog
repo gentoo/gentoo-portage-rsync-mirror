@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.761 2014/06/15 14:33:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.762 2014/06/28 23:39:33 floppym Exp $
+
+*python-2.7.7 (28 Jun 2014)
+*python-3.4.1 (28 Jun 2014)
+
+  28 Jun 2014; Mike Gilbert <floppym@gentoo.org> +python-2.7.7.ebuild,
+  +python-3.4.1.ebuild:
+  Version bumps.
 
   15 Jun 2014; Akinori Hattori <hattya@gentoo.org> python-2.7.6.ebuild:
   ia64 stable wrt bug #504742
