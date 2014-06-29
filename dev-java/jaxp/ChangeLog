@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.19 2012/10/19 08:24:29 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.20 2014/06/29 00:13:06 mrueg Exp $
+
+  29 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jaxp-1.4.ebuild:
+  NM: Cleanup old.
 
   19 Oct 2012; Christoph Junghans <ottxor@gentoo.org> jaxp-1.4-r1.ebuild:
   added prefix support (bug #435572)
