@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.558 2014/06/29 12:29:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.559 2014/06/29 13:55:28 dilfridge Exp $
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libreoffice-4.1.5.3.ebuild, -libreoffice-4.1.9999.ebuild,
+  -libreoffice-4.2.3.3.ebuild, -libreoffice-4.2.3.3-r1.ebuild,
+  -libreoffice-4.2.4.2.ebuild:
+  Remove old
 
   29 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.2.5.2.ebuild:
   Stable for amd64, wrt bug #514886
