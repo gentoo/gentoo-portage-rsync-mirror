@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.10.3.ebuild,v 1.2 2014/05/25 11:54:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.10.3.ebuild,v 1.3 2014/06/29 16:43:28 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://kohei.us/files/${PN}/src/${P/-/_}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-libs/boost"

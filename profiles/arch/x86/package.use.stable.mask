@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.stable.mask,v 1.3 2014/04/08 23:41:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.stable.mask,v 1.4 2014/06/29 16:32:35 dilfridge Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,11 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
+# Not yet stabilized dependencies blocking sec bug 514886
+# we need to repeat this here likely because of the use.mask entry
+app-office/libreoffice firebird
 
 # Michał Górny <mgorny@gentoo.org> (30 Mar 2014)
 # Don't apply stable masks to python-exec since we're forcing every

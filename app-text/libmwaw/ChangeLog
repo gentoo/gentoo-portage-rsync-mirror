@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libmwaw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.11 2014/05/25 11:59:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.12 2014/06/29 16:43:43 ago Exp $
+
+  29 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libmwaw-0.2.0.ebuild:
+  Stable for x86, wrt bug #514886
 
   25 May 2014; Mikle Kolyada <zlogene@gentoo.org> libmwaw-0.2.0.ebuild:
   amd64 stable wrt bug #511144

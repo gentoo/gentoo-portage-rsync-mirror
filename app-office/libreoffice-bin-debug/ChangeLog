@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin-debug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.57 2014/06/29 13:58:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.58 2014/06/29 16:43:16 ago Exp $
+
+  29 Jun 2014; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-4.2.5.2.ebuild:
+  Stable for x86, wrt bug #514886
 
   29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-bin-debug-4.2.3.3-r1.ebuild:

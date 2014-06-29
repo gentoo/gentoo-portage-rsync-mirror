@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvnamer/tvnamer-2.2.1.ebuild,v 1.1 2012/10/23 19:57:58 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvnamer/tvnamer-2.3.ebuild,v 1.1 2014/06/29 16:50:26 thev00d00 Exp $
 
-EAPI=4
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT="python2_7"
+inherit distutils-r1
 
 SRC_URI="mirror://pypi/t/${PN}/${P}.tar.gz"
 DESCRIPTION="Automatic TV episode file renamer, data from thetvdb.com"

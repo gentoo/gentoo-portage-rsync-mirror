@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libetonyek
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/ChangeLog,v 1.5 2014/05/25 11:55:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/ChangeLog,v 1.6 2014/06/29 16:43:31 ago Exp $
+
+  29 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libetonyek-0.0.3.ebuild:
+  Stable for x86, wrt bug #514886
 
   25 May 2014; Mikle Kolyada <zlogene@gentoo.org> libetonyek-0.0.3.ebuild:
   amd64 stable wrt bug #511144

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libebook
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libebook/ChangeLog,v 1.5 2014/05/25 11:58:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libebook/ChangeLog,v 1.6 2014/06/29 16:43:40 ago Exp $
+
+  29 Jun 2014; Agostino Sarubbo <ago@gentoo.org> libebook-0.0.2.ebuild:
+  Stable for x86, wrt bug #514886
 
   25 May 2014; Mikle Kolyada <zlogene@gentoo.org> libebook-0.0.2.ebuild:
   amd64 stable wrt bug #511144
