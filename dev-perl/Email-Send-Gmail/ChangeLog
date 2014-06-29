@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Send-Gmail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send-Gmail/ChangeLog,v 1.6 2013/06/06 06:49:07 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send-Gmail/ChangeLog,v 1.7 2014/06/29 20:42:05 zlogene Exp $
+
+  29 Jun 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Email-Send-Gmail-0.330.0.ebuild:
+  Add ~mips keyword
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers

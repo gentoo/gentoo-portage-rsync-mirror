@@ -1,6 +1,18 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.134 2014/06/02 18:22:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.135 2014/06/29 20:48:40 blueness Exp $
+
+  29 Jun 2014; Anthony G. Basile <blueness@gentoo.org>
+  +mips64/multilib/n32-n64/deprecated, +mips64/multilib/n32-o32/deprecated,
+  +mips64/multilib/n64-n32/deprecated, +mips64/multilib/n64-o32/deprecated,
+  +mips64/multilib/o32-n32/deprecated, +mips64/multilib/o32-n64/deprecated,
+  +mipsel/mips64el/multilib/n32-n64/deprecated,
+  +mipsel/mips64el/multilib/n32-o32/deprecated,
+  +mipsel/mips64el/multilib/n64-n32/deprecated,
+  +mipsel/mips64el/multilib/n64-o32/deprecated,
+  +mipsel/mips64el/multilib/o32-n32/deprecated,
+  +mipsel/mips64el/multilib/o32-n64/deprecated:
+  Deprecate the two-abi multilib profiles
 
   02 Jun 2014; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Mask USE=declarative for dev-qt/designer. Mask USE="connman networkmanager"
