@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.52 2014/03/05 18:29:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.53 2014/06/29 12:00:47 hd_brummy Exp $
+
+  29 Jun 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -linuxtv-dvb-apps-1.1.1.20060917.ebuild,
+  -linuxtv-dvb-apps-1.1.1.20070114.ebuild,
+  -linuxtv-dvb-apps-1.1.1.20080317.ebuild,
+  -linuxtv-dvb-apps-1.1.1.20100223.ebuild,
+  -files/linuxtv-dvb-apps-20070114-linux-headers-2.6.22.diff:
+  cleanup for wrt bug 515636
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org>
   linuxtv-dvb-apps-1.1.1.20100223-r1.ebuild:
