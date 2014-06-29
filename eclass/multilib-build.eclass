@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.58 2014/06/29 07:53:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.59 2014/06/29 08:32:46 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -154,7 +154,7 @@ multilib_get_enabled_abi_pairs() {
 			# for the split is more complex than cheating like this
 			for m_abi in ${m_abis//,/ }; do
 				if [[ ${m_abi} == ${abi} ]] \
-					&& has "${m_flag}" "${MULTILIB_COMPAT[@]}" \
+					&& { [[ ! "${MULTILIB_COMPAT[@]}" ]] || has "${m_flag}" "${MULTILIB_COMPAT[@]}"; } \
 					&& use "${m_flag}"
 				then
 					echo "${m_flag}.${abi}"

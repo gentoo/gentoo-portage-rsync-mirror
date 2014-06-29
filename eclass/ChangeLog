@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1304 2014/06/29 07:53:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1305 2014/06/29 08:32:46 mgorny Exp $
+
+  29 Jun 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Fix handling empty MULTILIB_COMPAT.
 
   29 Jun 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Check MULTILIB_COMPAT before querying USE flags. Bug #515642, thanks to Greg
