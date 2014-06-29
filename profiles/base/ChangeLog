@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.692 2014/06/20 14:11:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.693 2014/06/29 16:14:15 dilfridge Exp $
+
+  29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  package.use.stable.mask:
+  Stablemask firebird useflag on libreoffice until dependencies are stabilized
 
   20 Jun 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=libadns (bug #513982).

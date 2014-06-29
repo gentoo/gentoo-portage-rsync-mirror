@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.184 2014/05/18 19:58:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.185 2014/06/29 16:06:24 vostorga Exp $
+
+*rtorrent-0.9.4 (29 Jun 2014)
+
+  29 Jun 2014; Victor Ostorga <vostorga@gentoo.org>
+  -files/rtorrent-0.8.2-gcc34.patch, -rtorrent-0.8.6-r1.ebuild,
+  -rtorrent-0.8.6-r4.ebuild, -files/rtorrent-0.8.6-canvas-fix.patch,
+  -files/rtorrent-0.8.6-ncurses.patch, -rtorrent-0.8.7-r4.ebuild,
+  +rtorrent-0.9.4.ebuild:
+  Cleaning up old ebuild, version bump for bug #509932
 
   18 May 2014; Sven Vermeulen <swift@gentoo.org> rtorrent-0.8.6-r1.ebuild,
   rtorrent-0.8.6-r4.ebuild, rtorrent-0.8.7-r4.ebuild, rtorrent-0.8.9.ebuild,
