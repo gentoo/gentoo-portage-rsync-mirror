@@ -1,6 +1,30 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.516 2014/06/18 19:08:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.518 2014/06/29 00:49:41 tetromino Exp $
+
+  29 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> -wine-1.4.ebuild,
+  -wine-1.5.0.ebuild, -wine-1.5.1.ebuild, -wine-1.5.2.ebuild,
+  -wine-1.5.3.ebuild, -wine-1.5.4.ebuild, -wine-1.5.5.ebuild,
+  -wine-1.5.6.ebuild, -wine-1.5.7.ebuild, -wine-1.5.8.ebuild,
+  -wine-1.5.9.ebuild, -wine-1.5.10-r1.ebuild, -wine-1.5.11-r1.ebuild,
+  -wine-1.5.12-r1.ebuild, -wine-1.5.13-r1.ebuild, -wine-1.5.14-r1.ebuild,
+  -wine-1.5.15-r2.ebuild, -wine-1.5.16-r1.ebuild, -wine-1.5.17.ebuild,
+  -wine-1.5.18.ebuild, -wine-1.5.19.ebuild, -wine-1.5.20.ebuild,
+  -wine-1.5.21.ebuild, -wine-1.5.22.ebuild, -wine-1.5.23-r1.ebuild,
+  -wine-1.5.24.ebuild, -wine-1.5.25.ebuild, -wine-1.5.26.ebuild,
+  -wine-1.5.27.ebuild, -wine-1.5.28.ebuild, -wine-1.5.29.ebuild,
+  -wine-1.5.30.ebuild, -wine-1.5.31.ebuild, -wine-1.6.ebuild,
+  -files/wine-1.5.11-osmesa-check.patch, -files/wine-1.5.30-libwine.patch,
+  -files/wine-1.5.31-gnutls-3.2.0.patch:
+  Clean up obsolete ebuilds.
+
+*wine-1.7.21 (29 Jun 2014)
+
+  29 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.21.ebuild,
+  wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.21 for the announcement.
+  Apply experimental gstreamer fix only when USE=gstreamer because it has been
+  reported to cause crashes in Bioshock (thanks to David Heidelberger).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> wine-1.6.1.ebuild,
   wine-1.6.2.ebuild, wine-1.6.ebuild, wine-1.7.0.ebuild, wine-1.7.10.ebuild,

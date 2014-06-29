@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.171 2014/06/18 19:08:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.172 2014/06/29 00:42:47 tetromino Exp $
 
 EAPI="5"
 
@@ -24,8 +24,8 @@ fi
 
 GV="2.24"
 MV="4.5.2"
-PULSE_PATCHES="winepulse-patches-1.7.20"
-COMPHOLIOV="1.7.20"
+PULSE_PATCHES="winepulse-patches-1.7.21"
+COMPHOLIOV="1.7.21"
 COMPHOLIO_PATCHES="wine-compholio-daily-${COMPHOLIOV}"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
@@ -320,7 +320,18 @@ src_prepare() {
 	use pulseaudio && PATCHES+=(
 		"../${PULSE_PATCHES}"/*.patch #421365
 	)
+	if use gstreamer; then
+		# See http://bugs.winehq.org/show_bug.cgi?id=30557
+		ewarn "Applying experimental patch to fix GStreamer support. Note that"
+		ewarn "this patch has been reported to cause crashes in certain games."
+
+		PATCHES+=( "../${PULSE_PATCHES}"/gstreamer/*.patch )
+	fi
 	if use pipelight; then
+		ewarn "Applying the unofficial Compholio patchset for Pipelight support,"
+		ewarn "which is unsupported by Wine developers. Please don't report bugs"
+		ewarn "to Wine bugzilla unless you can reproduce them with USE=-pipelight"
+
 		PATCHES+=(
 			"../${COMPHOLIO_PATCHES}/patches"/*/*.patch #507950
 			"../${COMPHOLIO_PATCHES}/patches/patch-list.patch"
@@ -479,12 +490,6 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
-
-	if use pipelight; then
-		ewarn "You installed Wine with the unofficial Compholio patchset for Pipelight"
-		ewarn "support, which is unsupported by Wine developers. Please don't report"
-		ewarn "bugs to Wine bugzilla unless you can reproduce them with USE=-pipelight"
-	fi
 }
 
 pkg_postrm() {

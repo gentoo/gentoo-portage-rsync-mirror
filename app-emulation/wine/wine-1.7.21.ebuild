@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.ebuild,v 1.13 2014/06/18 19:08:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.21.ebuild,v 1.1 2014/06/29 00:42:47 tetromino Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTORECONF=1
 PLOCALES="ar bg ca cs da de el en en_US eo es fa fi fr he hi hr hu it ja ko lt ml nb_NO nl or pa pl pt_BR pt_PT rm ro ru sk sl sr_RS@cyrillic sr_RS@latin sv te th tr uk wa zh_CN zh_TW"
 PLOCALE_BACKUP="en"
 
-inherit autotools-multilib eutils fdo-mime flag-o-matic gnome2-utils l10n multilib pax-utils toolchain-funcs virtualx
+inherit autotools-utils eutils fdo-mime flag-o-matic gnome2-utils l10n multilib multilib-minimal pax-utils toolchain-funcs virtualx
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
@@ -18,13 +18,15 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P="${PN}-${PV/_/-}"
 	SRC_URI="mirror://sourceforge/${PN}/Source/${MY_P}.tar.bz2"
-	KEYWORDS="-* amd64 x86 ~x86-fbsd"
+	KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 	S=${WORKDIR}/${MY_P}
 fi
 
-GV="2.21"
-MV="0.0.8"
-PULSE_PATCHES="winepulse-patches-1.6-rc1"
+GV="2.24"
+MV="4.5.2"
+PULSE_PATCHES="winepulse-patches-1.7.21"
+COMPHOLIOV="1.7.21"
+COMPHOLIO_PATCHES="wine-compholio-daily-${COMPHOLIOV}"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
@@ -34,17 +36,20 @@ SRC_URI="${SRC_URI}
 		abi_x86_64? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}-x86_64.msi )
 	)
 	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
-	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2
+	pipelight? ( https://github.com/compholio/wine-compholio-daily/archive/v${COMPHOLIOV}.tar.gz -> ${COMPHOLIO_PATCHES}.tar.gz )
+	pulseaudio? ( http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2 )
 	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink pulseaudio +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
+IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses netapi nls odbc openal opencl +opengl osmesa oss +perl pipelight +png +prelink pulseaudio +realtime +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
 REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	test? ( abi_x86_32 )
 	elibc_glibc? ( threads )
+	gstreamer? ( pulseaudio )
 	mono? ( abi_x86_32 )
 	osmesa? ( opengl )" #286560
+# winepulse patches needed for gstreamer due to http://bugs.winehq.org/show_bug.cgi?id=30557
 
 # FIXME: the test suite is unsuitable for us; many tests require net access
 # or fail due to Xvfb's opengl limitations.
@@ -60,8 +65,6 @@ NATIVE_DEPEND="
 	openal? ( media-libs/openal:= )
 	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	X? (
-		x11-libs/libICE
-		x11-libs/libSM
 		x11-libs/libXcursor
 		x11-libs/libXext
 		x11-libs/libXrandr
@@ -79,11 +82,13 @@ NATIVE_DEPEND="
 	gsm? ( media-sound/gsm:= )
 	jpeg? ( virtual/jpeg:0= )
 	ldap? ( net-nds/openldap:= )
-	lcms? ( media-libs/lcms:0= )
+	lcms? ( media-libs/lcms:2= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
+	netapi? ( net-fs/samba[netapi(+)] )
 	nls? ( sys-devel/gettext )
 	odbc? ( dev-db/unixODBC:= )
 	osmesa? ( media-libs/mesa[osmesa] )
+	pipelight? ( sys-apps/attr )
 	pulseaudio? ( media-sound/pulseaudio )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends:= )
@@ -98,111 +103,133 @@ COMMON_DEPEND="
 		abi_x86_64? ( ${NATIVE_DEPEND} )
 		abi_x86_32? (
 			truetype? ( || (
-				>=app-emulation/emul-linux-x86-xlibs-2.1[development]
-				>=media-libs/freetype-2.5.0.1[abi_x86_32]
+				>=app-emulation/emul-linux-x86-xlibs-2.1[development,-abi_x86_32(-)]
+				>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
 			) )
 			ncurses? ( || (
-				app-emulation/emul-linux-x86-baselibs[development]
-				>=sys-libs/ncurses-5.9-r3[abi_x86_32]
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=sys-libs/ncurses-5.9-r3[abi_x86_32(-)]
 			) )
 			udisks? ( || (
-				>=app-emulation/emul-linux-x86-baselibs-20130224[development]
-				>=sys-apps/dbus-1.6.18-r1[abi_x86_32]
+				>=app-emulation/emul-linux-x86-baselibs-20130224[development,-abi_x86_32(-)]
+				>=sys-apps/dbus-1.6.18-r1[abi_x86_32(-)]
 			) )
 			fontconfig? ( || (
-				app-emulation/emul-linux-x86-xlibs[development]
-				>=media-libs/fontconfig-2.10.92[abi_x86_32]
+				app-emulation/emul-linux-x86-xlibs[development,-abi_x86_32(-)]
+				>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
 			) )
-			gphoto2? (
-				app-emulation/emul-linux-x86-medialibs[development]
-			)
+			gphoto2? ( || (
+				app-emulation/emul-linux-x86-medialibs[development,-abi_x86_32(-)]
+				>=media-libs/libgphoto2-2.5.3.1[abi_x86_32(-)]
+			) )
 			openal? ( || (
-				app-emulation/emul-linux-x86-sdl[development]
-				>=media-libs/openal-1.15.1[abi_x86_32]
+				app-emulation/emul-linux-x86-sdl[development,-abi_x86_32(-)]
+				>=media-libs/openal-1.15.1[abi_x86_32(-)]
 			) )
-			gstreamer? (
-				app-emulation/emul-linux-x86-gstplugins
-				app-emulation/emul-linux-x86-medialibs[development]
-			)
-			X? ( || (
-				app-emulation/emul-linux-x86-xlibs[development]
+			gstreamer? ( || (
+				app-emulation/emul-linux-x86-medialibs[development,-abi_x86_32(-)]
 				(
-					>=x11-libs/libICE-1.0.8-r1[abi_x86_32]
-					>=x11-libs/libSM-1.2.1-r1[abi_x86_32]
-					>=x11-libs/libXcursor-1.1.14[abi_x86_32]
-					>=x11-libs/libXext-1.3.2[abi_x86_32]
-					>=x11-libs/libXrandr-1.4.2[abi_x86_32]
-					>=x11-libs/libXi-1.7.2[abi_x86_32]
-					>=x11-libs/libXxf86vm-1.1.3[abi_x86_32]
+					>=media-libs/gstreamer-0.10.36-r2:0.10[abi_x86_32(-)]
+					>=media-libs/gst-plugins-base-0.10.36:0.10[abi_x86_32(-)]
+				)
+			) )
+			X? ( || (
+				app-emulation/emul-linux-x86-xlibs[development,-abi_x86_32(-)]
+				(
+					>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+					>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+					>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
+					>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+					>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
 				)
 			) )
 			xinerama? ( || (
-				app-emulation/emul-linux-x86-xlibs[development]
-				>=x11-libs/libXinerama-1.1.3[abi_x86_32]
+				app-emulation/emul-linux-x86-xlibs[development,-abi_x86_32(-)]
+				>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
 			) )
 			alsa? ( || (
-				app-emulation/emul-linux-x86-soundlibs[alsa,development]
-				>=media-libs/alsa-lib-1.0.27.2[abi_x86_32]
+				app-emulation/emul-linux-x86-soundlibs[alsa,development,-abi_x86_32(-)]
+				>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)]
 			) )
-			cups? ( app-emulation/emul-linux-x86-baselibs )
-			opencl? ( >=virtual/opencl-0-r3[abi_x86_32(+)] )
+			cups? ( || (
+				app-emulation/emul-linux-x86-baselibs
+				>=net-print/cups-1.7.1-r1[abi_x86_32(-)]
+			) )
+			opencl? ( >=virtual/opencl-0-r3[abi_x86_32(-)] )
 			opengl? ( || (
-				app-emulation/emul-linux-x86-opengl[development]
+				app-emulation/emul-linux-x86-opengl[development,-abi_x86_32(-)]
 				(
-					>=virtual/glu-9.0-r1[abi_x86_32]
-					>=virtual/opengl-7.0-r1[abi_x86_32]
+					>=virtual/glu-9.0-r1[abi_x86_32(-)]
+					>=virtual/opengl-7.0-r1[abi_x86_32(-)]
 				)
 			) )
 			gsm? ( || (
-				app-emulation/emul-linux-x86-soundlibs[development]
-				>=media-sound/gsm-1.0.13-r1[abi_x86_32]
+				app-emulation/emul-linux-x86-soundlibs[development,-abi_x86_32(-)]
+				>=media-sound/gsm-1.0.13-r1[abi_x86_32(-)]
 			) )
 			jpeg? ( || (
-				app-emulation/emul-linux-x86-baselibs[development]
-				>=virtual/jpeg-0-r2:0[abi_x86_32]
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=virtual/jpeg-0-r2:0[abi_x86_32(-)]
 			) )
-			ldap? ( app-emulation/emul-linux-x86-baselibs[development] )
+			ldap? ( || (
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=net-nds/openldap-2.4.38-r1:=[abi_x86_32(-)]
+			) )
 			lcms? ( || (
-				app-emulation/emul-linux-x86-baselibs[development]
-				>=media-libs/lcms-1.19-r1:0[abi_x86_32]
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=media-libs/lcms-2.5:2[abi_x86_32(-)]
 			) )
 			mp3? ( || (
-				app-emulation/emul-linux-x86-soundlibs[development]
-				>=media-sound/mpg123-1.15.4[abi_x86_32]
+				app-emulation/emul-linux-x86-soundlibs[development,-abi_x86_32(-)]
+				>=media-sound/mpg123-1.15.4[abi_x86_32(-)]
 			) )
+			netapi? ( >=net-fs/samba-3.6.23-r1[netapi(+),abi_x86_32(-)] )
 			nls? ( || (
-				app-emulation/emul-linux-x86-baselibs[development]
-				>=sys-devel/gettext-0.18.3.2[abi_x86_32]
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=sys-devel/gettext-0.18.3.2[abi_x86_32(-)]
 			) )
-			odbc? ( app-emulation/emul-linux-x86-db[development] )
+			odbc? ( || (
+				app-emulation/emul-linux-x86-db[development,-abi_x86_32(-)]
+				>=dev-db/unixODBC-2.3.2:=[abi_x86_32(-)]
+			) )
 			osmesa? ( || (
-				>=app-emulation/emul-linux-x86-opengl-20121028[development]
-				>=media-libs/mesa-9.1.6[osmesa,abi_x86_32]
+				>=app-emulation/emul-linux-x86-opengl-20121028[development,-abi_x86_32(-)]
+				>=media-libs/mesa-9.1.6[osmesa,abi_x86_32(-)]
+			) )
+			pipelight? ( || (
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=sys-apps/attr-2.4.47-r1[abi_x86_32(-)]
 			) )
 			pulseaudio? ( || (
-				app-emulation/emul-linux-x86-soundlibs[development]
-				>=media-sound/pulseaudio-5.0[abi_x86_32]
+				app-emulation/emul-linux-x86-soundlibs[development,-abi_x86_32(-)]
+				>=media-sound/pulseaudio-5.0[abi_x86_32(-)]
 			) )
 			xml? ( || (
-				>=app-emulation/emul-linux-x86-baselibs-20130224[development]
+				>=app-emulation/emul-linux-x86-baselibs-20131008[development,-abi_x86_32(-)]
 				(
-					>=dev-libs/libxml2-2.9.1-r4[abi_x86_32]
-					>=dev-libs/libxslt-1.1.28-r1[abi_x86_32]
+					>=dev-libs/libxml2-2.9.1-r4[abi_x86_32(-)]
+					>=dev-libs/libxslt-1.1.28-r1[abi_x86_32(-)]
 				)
 			) )
-			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
-			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
+			scanner? ( || (
+				app-emulation/emul-linux-x86-medialibs[development,-abi_x86_32(-)]
+				>=media-gfx/sane-backends-1.0.23:=[abi_x86_32(-)]
+			) )
+			ssl? ( || (
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=net-libs/gnutls-2.12.23-r6:=[abi_x86_32(-)]
+			) )
 			png? ( || (
-				app-emulation/emul-linux-x86-baselibs[development]
-				>=media-libs/libpng-1.6.10:0[abi_x86_32]
+				app-emulation/emul-linux-x86-baselibs[development,-abi_x86_32(-)]
+				>=media-libs/libpng-1.6.10:0[abi_x86_32(-)]
 			) )
 			v4l? ( || (
-				app-emulation/emul-linux-x86-medialibs[development]
-				>=media-libs/libv4l-0.9.5[abi_x86_32]
+				app-emulation/emul-linux-x86-medialibs[development,-abi_x86_32(-)]
+				>=media-libs/libv4l-0.9.5[abi_x86_32(-)]
 			) )
 			xcomposite? ( || (
-				app-emulation/emul-linux-x86-xlibs[development]
-				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32]
+				app-emulation/emul-linux-x86-xlibs[development,-abi_x86_32(-)]
+				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32(-)]
 			) )
 		)
 	)"
@@ -213,7 +240,7 @@ RDEPEND="${COMMON_DEPEND}
 	samba? ( >=net-fs/samba-3.0.25 )
 	selinux? ( sec-policy/selinux-wine )
 	udisks? ( sys-fs/udisks:2 )
-	pulseaudio? ( sys-auth/rtkit )"
+	pulseaudio? ( realtime? ( sys-auth/rtkit ) )"
 
 DEPEND="${COMMON_DEPEND}
 	amd64? ( abi_x86_32? ( !abi_x86_64? ( ${NATIVE_DEPEND} ) ) )
@@ -268,7 +295,14 @@ src_unpack() {
 		unpack ${MY_P}.tar.bz2
 	fi
 
-	unpack "${PULSE_PATCHES}.tar.bz2"
+	use pulseaudio && unpack "${PULSE_PATCHES}.tar.bz2"
+	if use pipelight; then
+		unpack "${COMPHOLIO_PATCHES}.tar.gz"
+		# we use a separate pulseaudio patchset
+		rm -r "${COMPHOLIO_PATCHES}/patches/06-winepulse" || die
+		# ... and need special tools for binary patches
+		mv "${COMPHOLIO_PATCHES}/patches/10-Missing_Fonts" "${T}" || die
+	fi
 	unpack "${WINE_GENTOO}.tar.bz2"
 
 	l10n_find_plocales_changes "${S}/po" "" ".po"
@@ -276,14 +310,39 @@ src_unpack() {
 
 src_prepare() {
 	local md5="$(md5sum server/protocol.def)"
+	local f
 	local PATCHES=(
 		"${FILESDIR}"/${PN}-1.5.26-winegcc.patch #260726
 		"${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
-		"${FILESDIR}"/${PN}-1.5.17-osmesa-check.patch #429386
+		"${FILESDIR}"/${PN}-1.7.12-osmesa-check.patch #429386
 		"${FILESDIR}"/${PN}-1.6-memset-O3.patch #480508
+	)
+	use pulseaudio && PATCHES+=(
 		"../${PULSE_PATCHES}"/*.patch #421365
 	)
+	if use gstreamer; then
+		# See http://bugs.winehq.org/show_bug.cgi?id=30557
+		ewarn "Applying experimental patch to fix GStreamer support. Note that"
+		ewarn "this patch has been reported to cause crashes in certain games."
 
+		PATCHES+=( "../${PULSE_PATCHES}"/gstreamer/*.patch )
+	fi
+	if use pipelight; then
+		ewarn "Applying the unofficial Compholio patchset for Pipelight support,"
+		ewarn "which is unsupported by Wine developers. Please don't report bugs"
+		ewarn "to Wine bugzilla unless you can reproduce them with USE=-pipelight"
+
+		PATCHES+=(
+			"../${COMPHOLIO_PATCHES}/patches"/*/*.patch #507950
+			"../${COMPHOLIO_PATCHES}/patches/patch-list.patch"
+		)
+		# epatch doesn't support binary patches
+		ebegin "Applying Compholio font patches"
+		for f in "${T}/10-Missing_Fonts"/*.patch; do
+			"../${COMPHOLIO_PATCHES}/debian/tools/gitapply.sh" < "${f}" || die "Failed to apply Compholio font patches"
+		done
+		eend
+	fi
 	autotools-utils_src_prepare
 
 	if [[ "$(md5sum server/protocol.def)" != "${md5}" ]]; then
@@ -301,28 +360,15 @@ src_prepare() {
 	l10n_get_locales > po/LINGUAS # otherwise wine doesn't respect LINGUAS
 }
 
-do_configure() {
-	local myeconfargs=( "${myeconfargs[@]}" )
-
-	if use amd64; then
-		if [[ ${ABI} == amd64 ]]; then
-			myeconfargs+=( --enable-win64 )
-		else
-			myeconfargs+=( --disable-win64 )
-		fi
-
-		# Note: using --with-wine64 results in problems with multilib.eclass
-		# CC/LD hackery. We're using separate tools instead.
-	fi
-
-	autotools-utils_src_configure
-}
-
 src_configure() {
 	export LDCONFIG=/bin/true
 	use custom-cflags || strip-flags
 
-	local myeconfargs=( # common
+	multilib-minimal_src_configure
+}
+
+multilib_src_configure() {
+	local myconf=(
 		--sysconfdir=/etc/wine
 		$(use_with alsa)
 		$(use_with capi)
@@ -339,6 +385,7 @@ src_configure() {
 		$(use_with jpeg)
 		$(use_with ldap)
 		$(use_with mp3 mpg123)
+		$(use_with netapi)
 		$(use_with nls gettext)
 		$(use_with openal)
 		$(use_with opencl)
@@ -346,7 +393,6 @@ src_configure() {
 		$(use_with osmesa)
 		$(use_with oss)
 		$(use_with png)
-		$(use_with pulseaudio pulse)
 		$(use_with threads pthread)
 		$(use_with scanner sane)
 		$(use_enable test tests)
@@ -359,42 +405,55 @@ src_configure() {
 		$(use_with xml xslt)
 	)
 
-	if use amd64 && use abi_x86_32; then
-		# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
-		# set AR and RANLIB to make QA scripts happy; #483342
-		tc-export PKG_CONFIG AR RANLIB
+	use pulseaudio && myconf+=( --with-pulse )
+	use pipelight && myconf+=( --with-xattr )
+
+	local PKG_CONFIG AR RANLIB
+	# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
+	# set AR and RANLIB to make QA scripts happy; #483342
+	tc-export PKG_CONFIG AR RANLIB
+
+	if use amd64; then
+		if [[ ${ABI} == amd64 ]]; then
+			myconf+=( --enable-win64 )
+		else
+			myconf+=( --disable-win64 )
+		fi
+
+		# Note: using --with-wine64 results in problems with multilib.eclass
+		# CC/LD hackery. We're using separate tools instead.
 	fi
 
-	multilib_parallel_foreach_abi do_configure
+	ECONF_SOURCE=${S} \
+	econf "${myconf[@]}"
+	emake depend
 }
 
-src_compile() {
-	autotools-multilib_src_compile depend
-	autotools-multilib_src_compile all
-}
-
-src_test() {
-	if [[ $(id -u) == 0 ]]; then
-		ewarn "Skipping tests since they cannot be run under the root user."
-		ewarn "To run the test ${PN} suite, add userpriv to FEATURES in make.conf"
-		return
-	fi
-
+multilib_src_test() {
 	# FIXME: win32-only; wine64 tests fail with "could not find the Wine loader"
-	multilib_toolchain_setup x86
-	local BUILD_DIR="${S}-${ABI}"
-	cd "${BUILD_DIR}" || die
-	WINEPREFIX="${T}/.wine-${ABI}" Xemake test
+	if [[ ${ABI} == x86 ]]; then
+		if [[ $(id -u) == 0 ]]; then
+			ewarn "Skipping tests since they cannot be run under the root user."
+			ewarn "To run the test ${PN} suite, add userpriv to FEATURES in make.conf"
+			return
+		fi
+
+		WINEPREFIX="${T}/.wine-${ABI}" \
+		Xemake test
+	fi
 }
 
-src_install() {
+multilib_src_install_all() {
 	local DOCS=( ANNOUNCE AUTHORS README )
+	local l
 	add_locale_docs() {
 		local locale_doc="documentation/README.$1"
-		[[ ! -e ${locale_doc} ]] || DOCS=( "${DOCS[@]}" ${locale_doc} )
+		[[ ! -e ${locale_doc} ]] || DOCS+=( ${locale_doc} )
 	}
 	l10n_for_each_locale_do add_locale_docs
-	autotools-multilib_src_install
+
+	einstalldocs
+	prune_libtool_files --all
 
 	emake -C "../${WINE_GENTOO}" install DESTDIR="${D}" EPREFIX="${EPREFIX}"
 	if use gecko ; then
