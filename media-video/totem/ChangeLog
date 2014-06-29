@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.375 2014/06/16 11:32:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.376 2014/06/29 17:03:50 eva Exp $
+
+  29 Jun 2014; Gilles Dartiguelongue <eva@gentoo.org> -totem-3.12.0.ebuild,
+  totem-3.12.1.ebuild:
+  Add gtk USE flag on clutter, otherwise builds fails with undefined symbols in
+  while linking to clutter-gtk. Drop old revision.
 
   16 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.10.1.ebuild,
   totem-3.12.0.ebuild, totem-3.12.1.ebuild:

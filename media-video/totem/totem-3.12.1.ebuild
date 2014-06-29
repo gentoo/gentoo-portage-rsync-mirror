@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.1.ebuild,v 1.2 2014/06/16 11:32:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.1.ebuild,v 1.3 2014/06/29 17:03:50 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -39,7 +39,7 @@ RDEPEND="
 	>=dev-libs/libpeas-1.1.0[gtk]
 	x11-libs/cairo
 	>=dev-libs/libxml2-2.6:2
-	>=media-libs/clutter-1.17.3:1.0
+	>=media-libs/clutter-1.17.3:1.0[gtk]
 	>=media-libs/clutter-gst-1.5.5:2.0
 	>=media-libs/clutter-gtk-1.5.2:1.0
 	x11-libs/mx:1.0
