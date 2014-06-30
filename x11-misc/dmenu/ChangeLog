@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.112 2014/06/30 13:31:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.113 2014/06/30 13:53:58 jer Exp $
+
+  30 Jun 2014; Jeroen Roovers <jer@gentoo.org> dmenu-9999.ebuild:
+  Remove USE=xft.
 
 *dmenu-9999 (30 Jun 2014)
 

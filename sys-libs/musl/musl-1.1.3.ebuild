@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.3.ebuild,v 1.1 2014/06/26 12:03:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.3.ebuild,v 1.2 2014/06/30 13:45:27 blueness Exp $
 
 EAPI=5
 
@@ -50,6 +50,10 @@ pkg_setup() {
 		*) die "Use sys-devel/crossdev to build a musl toolchain" ;;
 		esac
 	fi
+}
+
+src_prepare() {
+	use mips && epatch "${FILESDIR}"/${PN}-fix-mips-dynlink.patch
 }
 
 src_configure() {

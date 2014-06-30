@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-9999.ebuild,v 1.1 2014/06/30 13:31:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-9999.ebuild,v 1.2 2014/06/30 13:53:58 jer Exp $
 
 EAPI=5
 inherit eutils git-r3 savedconfig toolchain-funcs
@@ -12,15 +12,13 @@ EGIT_REPO_URI="git://git.suckless.org/dmenu"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="xft xinerama"
+IUSE="xinerama"
 
 RDEPEND="
 	x11-libs/libX11
-	xft? ( x11-libs/libXft )
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${RDEPEND}
-	xft? ( virtual/pkgconfig )
 	xinerama? ( virtual/pkgconfig )
 "
 
@@ -40,17 +38,22 @@ src_prepare() {
 	epatch_user
 }
 
+src_configure() {
+	tc-export PKG_CONFIG
+}
+
 src_compile() {
-	emake CC=$(tc-getCC) \
-		"XFTINC=$( $(tc-getPKG_CONFIG) --cflags xft 2>/dev/null )" \
-		"XFTLIBS=$( $(tc-getPKG_CONFIG) --libs xft 2>/dev/null )" \
+	emake \
+		CC=$(tc-getCC) \
 		"XINERAMAFLAGS=$(
 			usex xinerama "-DXINERAMA $(
-				$(tc-getPKG_CONFIG) --cflags xinerama 2>/dev/null
+				${PKG_CONFIG} --cflags xinerama 2>/dev/null
 			)" ''
 		)" \
 		"XINERAMALIBS=$(
-			usex xinerama "$( $(tc-getPKG_CONFIG) --libs xinerama 2>/dev/null)" ''
+			usex xinerama "$(
+				${PKG_CONFIG} --libs xinerama 2>/dev/null
+			)" ''
 		)"
 }
 
