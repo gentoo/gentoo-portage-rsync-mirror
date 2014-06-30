@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stsci-distutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/ChangeLog,v 1.17 2014/04/03 10:58:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-distutils/ChangeLog,v 1.18 2014/06/30 01:09:27 idella4 Exp $
+
+  30 Jun 2014; Ian Delaney <idella4@gentoo.org> stsci-distutils-0.3.7.ebuild:
+  drop py2.6 pypy2_0 add py3.4
 
   03 Apr 2014; Ian Delaney <idella4@gentoo.org> stsci-distutils-0.3.4.ebuild:
   Add missing app-arch/unzip to DEPEND, thx to report by M. Greter in Bug

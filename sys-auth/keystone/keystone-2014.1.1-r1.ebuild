@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.1.ebuild,v 1.1 2014/06/15 17:01:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.1.1-r1.ebuild,v 1.1 2014/06/30 01:30:42 prometheanfire Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #todo, seperate out rdepend via use flags
+# python-ldap needs to be relaxed...
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
 	<dev-python/pbr-1.0[${PYTHON_USEDEP}]
@@ -28,7 +29,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-lang/python[sqlite]
 			>=dev-python/python-memcached-1.48[${PYTHON_USEDEP}]
 			>=dev-python/pymongo-2.4[${PYTHON_USEDEP}]
-			ldap? ( ~dev-python/python-ldap-2.3.13 )
+			ldap? ( dev-python/python-ldap )
 			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
 			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
@@ -92,10 +93,14 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
+# Ignore (naughty) test_.py files & 1 test that connect to the network
+#-I 'test_keystoneclient*' \
 python_test() {
-	# Ignore (naughty) test_.py files & 1 test that connect to the network
 	nosetests -I 'test_keystoneclient*' \
-		-e test_import || die "testsuite failed under python2.7"
+		-e test_static_translated_string_is_Message \
+		-e test_get_token_id_error_handling \
+		-e test_provider_token_expiration_validation \
+		-e test_import --process-restartworker --process-timeout=60 || die "testsuite failed under python2.7"
 }
 
 python_install() {

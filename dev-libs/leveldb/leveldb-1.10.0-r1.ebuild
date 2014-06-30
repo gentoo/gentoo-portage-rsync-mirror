@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.13.0.ebuild,v 1.1 2013/08/29 01:25:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.10.0-r1.ebuild,v 1.1 2014/06/30 01:08:11 blueness Exp $
 
 EAPI=4
 
@@ -21,6 +21,10 @@ DEPEND="tcmalloc? ( dev-util/google-perftools )
 		static-libs? ( app-arch/snappy[static-libs] )
 	)"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.9.0-forwardcompat.patch
+}
 
 src_configure() {
 	# These vars all get picked up by build_detect_platform

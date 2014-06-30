@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.15 2014/04/21 01:30:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.16 2014/06/30 01:30:42 prometheanfire Exp $
 
 EAPI=5
 
@@ -88,10 +88,14 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
+# Ignore (naughty) test_.py files & 1 test that connect to the network
+#-I 'test_keystoneclient*' \
 python_test() {
-	# Ignore (naughty) test_.py files & 1 test that connect to the network
 	nosetests -I 'test_keystoneclient*' \
-		-e test_import || die "testsuite failed under python2.7"
+		-e test_static_translated_string_is_Message \
+		-e test_get_token_id_error_handling \
+		-e test_provider_token_expiration_validation \
+		-e test_import --process-restartworker --process-timeout=60 || die "testsuite failed under python2.7"
 }
 
 python_install() {

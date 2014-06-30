@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.10.0.ebuild,v 1.2 2013/06/11 19:09:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.9.0-r6.ebuild,v 1.1 2014/06/30 01:08:11 blueness Exp $
 
 EAPI=4
 
@@ -12,15 +12,20 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
-IUSE="+snappy static-libs +tcmalloc"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="+snappy static-libs"
 
-DEPEND="tcmalloc? ( dev-util/google-perftools )
+DEPEND="
 	snappy? (
 		app-arch/snappy
 		static-libs? ( app-arch/snappy[static-libs] )
 	)"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.9.0-configure.patch
+	epatch "${FILESDIR}"/${PN}-1.9.0-forwardcompat.patch
+}
 
 src_configure() {
 	# These vars all get picked up by build_detect_platform

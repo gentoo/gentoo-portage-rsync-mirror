@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elib-intl/elib-intl-0_pre20110711.ebuild,v 1.3 2014/06/07 19:13:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elib-intl/elib-intl-0_pre20110711.ebuild,v 1.4 2014/06/30 01:09:26 nixphoeni Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,4 +17,5 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=""
-DEPEND="${RDEPEND}"
+DEPEND="dev-python/setuptools
+	${RDEPEND}"

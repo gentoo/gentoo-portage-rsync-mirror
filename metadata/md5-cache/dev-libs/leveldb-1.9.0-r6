@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=snappy? ( app-arch/snappy static-libs? ( app-arch/snappy[static-libs] ) )
+DESCRIPTION=a fast key-value storage library written at Google
+EAPI=4
+HOMEPAGE=http://code.google.com/p/leveldb/
+IUSE=+snappy static-libs
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=BSD
+RDEPEND=snappy? ( app-arch/snappy static-libs? ( app-arch/snappy[static-libs] ) )
+SLOT=0
+SRC_URI=http://leveldb.googlecode.com/files/leveldb-1.9.0.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=d7b0f03978d9516a5e857b160b33271e
