@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/python-magic-0.4.6-r1.ebuild,v 1.3 2014/02/15 11:24:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/python-magic-0.4.6-r1.ebuild,v 1.4 2014/06/30 04:38:55 floppym Exp $
 
 EAPI=5
 
@@ -16,5 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~x86"
 IUSE=""
 
-DEPEND="sys-apps/file[-python]"
+DEPEND="sys-apps/file[-python]
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"

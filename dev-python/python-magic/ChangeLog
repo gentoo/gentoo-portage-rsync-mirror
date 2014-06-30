@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-magic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.7 2014/02/15 11:24:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.8 2014/06/30 04:38:56 floppym Exp $
+
+  30 Jun 2014; Mike Gilbert <floppym@gentoo.org> python-magic-0.4.6-r1.ebuild:
+  Depend on setuptools.
 
   15 Feb 2014; Jeroen Roovers <jer@gentoo.org> python-magic-0.4.6-r1.ebuild:
   Marked ~hppa (bug #454638).

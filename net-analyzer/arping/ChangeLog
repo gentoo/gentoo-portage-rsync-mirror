@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.79 2013/03/01 15:53:50 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.80 2014/06/30 04:37:50 jer Exp $
+
+*arping-2.14 (30 Jun 2014)
+
+  30 Jun 2014; Jeroen Roovers <jer@gentoo.org> +arping-2.14.ebuild:
+  Version bump.
 
   01 Mar 2013; Jeroen Roovers <jer@gentoo.org> -arping-2.12.ebuild:
   Old.

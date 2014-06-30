@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.40 2014/01/04 06:02:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.41 2014/06/30 04:32:46 jer Exp $
+
+*sakura-3.1.4 (30 Jun 2014)
+
+  30 Jun 2014; Jeroen Roovers <jer@gentoo.org> +sakura-3.1.4.ebuild:
+  Version bump.
 
 *sakura-3.1.3 (04 Jan 2014)
 
