@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.13.3-r3.ebuild,v 1.1 2014/06/27 14:34:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.13.3-r3.ebuild,v 1.2 2014/06/30 22:34:34 caster Exp $
 
 EAPI="5"
 
@@ -70,7 +70,7 @@ RDEPEND="${COMMON_DEP}
 	cups? ( ${CUPS_COMMON_DEP} )"
 
 PDEPEND="webstart? ( dev-java/icedtea-web:0 )
-	nsplugin? ( dev-java/icedtea-web:0[icedtea7] )"
+	nsplugin? ( dev-java/icedtea-web:0[nsplugin] )"
 
 src_install() {
 	local dest="/opt/${P}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.6.ebuild,v 1.1 2013/01/18 10:06:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.7.ebuild,v 1.1 2014/06/30 22:59:34 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -12,15 +12,14 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa debug fbcon ncurses oss sdl slang static svga truetype"
+IUSE="alsa debug fbcon ncurses oss sdl slang static truetype"
 
 RDEPEND="dev-libs/expat
 	alsa? ( media-libs/alsa-lib )
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( media-libs/libsdl )
 	slang? ( >=sys-libs/slang-1.4 )
-	svga? ( >=media-libs/svgalib-1.9 )
-	!sdl? ( !svga? ( !fbcon? ( media-libs/libsdl ) ) )
+	!sdl? ( ( !fbcon? ( media-libs/libsdl ) ) )
 	truetype? ( >=media-libs/freetype-2 )"
 DEPEND="${RDEPEND}
 	x86? ( >=dev-lang/nasm-0.98 )
@@ -35,7 +34,7 @@ src_prepare() {
 
 	use x86 && ln -s $(type -P nasm) "${T}/${CHOST}-nasm"
 	use sdl && ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
-	use !sdl && use !svga && use !fbcon && ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
+	use !sdl && use !fbcon && ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
 	use truetype && ln -s $(type -P freetype-config) "${T}/${CHOST}-freetype-config"
 	eautoreconf
 }
@@ -45,6 +44,7 @@ src_configure() {
 	egamesconf \
 		--enable-expat \
 		--enable-zlib \
+		--disable-svgalib \
 		$(use_enable alsa) \
 		$(use_enable debug) \
 		$(use_enable fbcon fb) \
@@ -54,8 +54,7 @@ src_configure() {
 		$(use_enable sdl) \
 		$(use_enable slang) \
 		$(use_enable static) \
-		$(use_enable svga svgalib) \
-		$(use !sdl && use !svga && use !fbcon && echo --enable-sdl) \
+		$(use !sdl && use !fbcon && echo --enable-sdl) \
 		$(use_enable x86 asm)
 }
 

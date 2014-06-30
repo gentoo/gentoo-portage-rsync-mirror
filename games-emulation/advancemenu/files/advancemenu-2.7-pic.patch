@@ -1,5 +1,5 @@
---- ./advance/blit/blit.c.orig	2004-12-19 01:01:46.039956536 -0500
-+++ ./advance/blit/blit.c	2004-12-19 01:01:19.566981040 -0500
+--- ./advance/blit/blit.c.orig
++++ ./advance/blit/blit.c
 @@ -28,6 +28,10 @@
   * do so, delete this exception statement from your version.
   */
