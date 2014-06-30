@@ -1,8 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r6.ebuild,v 1.1 2014/06/22 13:39:57 hasufell Exp $
-
-# TODO: convert media-libs/libggi to multilib
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r7.ebuild,v 1.1 2014/06/30 20:27:40 hasufell Exp $
 
 EAPI=5
 inherit autotools flag-o-matic multilib toolchain-funcs eutils multilib-minimal
@@ -17,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 # WARNING:
 # If you turn on the custom-cflags use flag in USE and something breaks,
 # you pick up the pieces.  Be prepared for bug reports to be marked INVALID.
-IUSE="oss alsa nas X dga xv xinerama fbcon ggi svga tslib aalib opengl libcaca +sound +video +joystick custom-cflags pulseaudio ps3 static-libs"
+IUSE="oss alsa nas X dga xv xinerama fbcon tslib aalib opengl libcaca +sound +video +joystick custom-cflags pulseaudio static-libs"
 
 RDEPEND="
 	abi_x86_32? (
@@ -38,15 +36,12 @@ RDEPEND="
 		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		>=x11-libs/libXrandr-1.4.2[${MULTILIB_USEDEP}]
 	)
-	ggi? ( >=media-libs/libggi-2.0_beta3 )
-	svga? ( >=media-libs/svgalib-1.4.2 )
 	aalib? ( >=media-libs/aalib-1.4_rc5-r6[${MULTILIB_USEDEP}] )
 	libcaca? ( >=media-libs/libcaca-0.99_beta18-r1[${MULTILIB_USEDEP}] )
 	opengl? (
 		>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
 		>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
 	)
-	ppc64? ( ps3? ( sys-libs/libspe2 ) )
 	tslib? ( >=x11-libs/tslib-1.0-r3[${MULTILIB_USEDEP}] )
 	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
@@ -76,7 +71,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-resizing.patch \
 		"${FILESDIR}"/${P}-joystick.patch \
 		"${FILESDIR}"/${P}-gamma.patch \
-		"${FILESDIR}"/${P}-const-xdata32.patch
+		"${FILESDIR}"/${P}-const-xdata32.patch \
+		"${FILESDIR}"/${P}-caca.patch
 	AT_M4DIR="/usr/share/aclocal acinclude" eautoreconf
 }
 
@@ -121,12 +117,12 @@ multilib_src_configure() {
 		$(use_enable X video-x11-xrandr) \
 		$(use_enable dga video-dga) \
 		$(use_enable fbcon video-fbcon) \
-		$(multilib_native_use_enable ggi video-ggi) \
-		$(multilib_native_use_enable svga video-svga) \
+		--disable-video-ggi \
+		--disable-video-svga \
 		$(use_enable aalib video-aalib) \
 		$(use_enable libcaca video-caca) \
 		$(use_enable opengl video-opengl) \
-		$(multilib_native_use_enable ps3 video-ps3) \
+		--disable-video-ps3 \
 		$(use_enable tslib input-tslib) \
 		$(use_with X x) \
 		$(use_enable static-libs static) \

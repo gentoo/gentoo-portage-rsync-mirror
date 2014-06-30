@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Wrappers for gcc tools to be used on non-native CHOSTs
+EAPI=5
+HOMEPAGE=http://www.gentoo.org
+KEYWORDS=~amd64
+LICENSE=public-domain
+RDEPEND=sys-devel/gcc:=
+SLOT=0
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=85e2be2693d7516bf96c85539494b2e8
