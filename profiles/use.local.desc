@@ -6019,13 +6019,19 @@ sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversi
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
 sci-chemistry/gromacs:avx128fma - Enable 128bit avx with fma (e.g. AMD BullDozer)
 sci-chemistry/gromacs:avx256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
+sci-chemistry/gromacs:avx2_256 - Enable 256bit avx2 (e.g. Intel Haswell)
+sci-chemistry/gromacs:avx_128_fma - Enable 128bit avx with fma (e.g. AMD BullDozer)
+sci-chemistry/gromacs:avx_256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
+sci-chemistry/gromacs:boost - Enable external boost library
 sci-chemistry/gromacs:cuda - Enable cuda non-bonded kernels
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
+sci-chemistry/gromacs:make-symlinks - Create symbolic links for pre-5.0 binary names
 sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
 sci-chemistry/gromacs:sse4_1 - Enable sse4.1 acceleration
+sci-chemistry/gromacs:tng - Enable new trajectory format - tng
 sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/icm:32bit - Automatically generated description for 32bit
 sci-chemistry/icm:64bit - Automatically generated description for 64bit
