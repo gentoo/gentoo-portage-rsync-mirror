@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/python-stdnum-0.9.ebuild,v 1.1 2014/03/31 21:16:47 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/python-stdnum-0.9.ebuild,v 1.2 2014/06/30 08:45:21 cedk Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="vies"
 
-RDEPEND="dev-python/setuptools
+DEPEND="dev-python/setuptools
 	vies? ( dev-python/suds )"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-stdnum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/ChangeLog,v 1.1 2014/03/31 21:16:47 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-stdnum/ChangeLog,v 1.2 2014/06/30 08:45:22 cedk Exp $
+
+  30 Jun 2014; Cédric Krier <cedk@gentoo.org> python-stdnum-0.9.ebuild:
+  Fix typo in DEPEND bug #515764
 
 *python-stdnum-0.9 (31 Mar 2014)
 
