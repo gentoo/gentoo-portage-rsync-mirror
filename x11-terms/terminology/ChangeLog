@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminology
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/ChangeLog,v 1.8 2014/05/10 14:32:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/ChangeLog,v 1.9 2014/06/30 16:42:58 sera Exp $
+
+*terminology-0.5.1 (30 Jun 2014)
+
+  30 Jun 2014; Ralph Sennhauser <sera@gentoo.org> +terminology-0.5.1.ebuild:
+  Version bump
 
   10 May 2014; Ralph Sennhauser <sera@gentoo.org> -terminology-0.2.0.ebuild,
   -terminology-0.3.0.ebuild, -terminology-0.4.0_alpha1.ebuild:
