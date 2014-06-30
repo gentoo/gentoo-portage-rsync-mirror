@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.59 2014/05/26 01:22:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.60 2014/06/30 19:17:49 swift Exp $
+
+  30 Jun 2014; Sven Vermeulen <swift@gentoo.org> collectd-5.2.2.ebuild,
+  collectd-5.3.0.ebuild, collectd-5.4.0.ebuild, collectd-5.4.1.ebuild:
+  Add USE=selinux dependency to sec-policy/selinux-collectd
 
 *collectd-5.4.1 (26 May 2014)
 
