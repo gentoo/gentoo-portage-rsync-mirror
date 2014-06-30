@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.100 2014/06/29 17:38:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.101 2014/06/30 14:21:44 zerochaos Exp $
+
+*rkhunter-1.4.0 (30 Jun 2014)
+
+  30 Jun 2014; Rick Farina <zerochaos@gentoo.org> +rkhunter-1.4.0.ebuild:
+  readding inappropriately dropped stable
 
   29 Jun 2014; Rick Farina <zerochaos@gentoo.org> -rkhunter-1.4.0.ebuild:
   remove old version

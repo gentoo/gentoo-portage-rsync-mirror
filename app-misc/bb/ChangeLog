@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/bb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bb/ChangeLog,v 1.6 2012/03/18 18:20:26 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bb/ChangeLog,v 1.7 2014/06/30 14:18:42 slyfox Exp $
+
+*bb-1.3.0_rc1-r3 (30 Jun 2014)
+
+  30 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> +bb-1.3.0_rc1-r3.ebuild:
+  Unbundle minilzo (bug #515286).
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug 118003.
@@ -32,4 +37,3 @@
   05 Jan 2008; Markus Ullmann <jokey@gentoo.org>
   +files/bb-1.3.0_rc1-noattr.patch, +metadata.xml, +bb-1.3.0_rc1.ebuild:
   Initial import wrt bug #201908 thanks to Gokdeniz Karadag for the ebuild
-
