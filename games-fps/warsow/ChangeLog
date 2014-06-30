@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.60 2014/06/30 05:59:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.61 2014/06/30 06:22:30 mr_bones_ Exp $
+
+  30 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/warsow-1.5.1-pic.patch, -files/warsow-1.03-pic.patch,
+  warsow-1.5.1.ebuild:
+  clean up patch layout; fix missing dep x11-libs/libXi (bug #515748)
 
   30 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/01-warsow-1.03-clang.patch, -files/02-warsow-1.03-clang.patch,

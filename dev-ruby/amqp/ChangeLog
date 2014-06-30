@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.14 2014/05/26 05:42:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.15 2014/06/30 06:09:01 graaff Exp $
+
+*amqp-1.4.0 (30 Jun 2014)
+
+  30 Jun 2014; Hans de Graaff <graaff@gentoo.org> +amqp-1.4.0.ebuild:
+  Version bump.
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> amqp-0.6.7-r1.ebuild,
   amqp-1.0.2.ebuild, amqp-1.1.8.ebuild:

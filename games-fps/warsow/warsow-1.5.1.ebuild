@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1.ebuild,v 1.2 2014/06/22 16:28:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1.ebuild,v 1.3 2014/06/30 06:22:30 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils check-reqs gnome2-utils flag-o-matic games
@@ -34,6 +34,7 @@ RDEPEND=">=dev-libs/libRocket-1.2.1_p20130110
 		media-libs/libtheora
 		media-libs/libvorbis
 		x11-libs/libX11
+		x11-libs/libXi
 		x11-libs/libXinerama
 		x11-libs/libXrandr
 		x11-libs/libXxf86dga
@@ -75,8 +76,8 @@ src_prepare() {
 	find . -type f -exec sed -i 's/\r$//' '{}' + || die
 
 	cd "${S}"/.. || die
-	epatch "${FILESDIR}"/${PN}-1.5.1-build.patch \
-		"${FILESDIR}"/${PN}-1.03-pic.patch
+	epatch "${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-pic.patch
 	epatch_user
 }
 
