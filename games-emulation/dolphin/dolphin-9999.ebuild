@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.12 2014/03/19 03:06:38 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.13 2014/06/30 05:39:48 twitch153 Exp $
 
 EAPI=5
 
-WX_GTK_VER="2.9"
+WX_GTK_VER="3.0"
 
 inherit cmake-utils eutils pax-utils toolchain-funcs versionator wxwidgets games
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 	media-libs/freetype
 	media-libs/libsoundtouch
 	>=sys-devel/gcc-4.6.0
-	x11-libs/wxGTK:2.9
+	x11-libs/wxGTK:${WX_GTK_VER}
 	"
 
 pkg_pretend() {
