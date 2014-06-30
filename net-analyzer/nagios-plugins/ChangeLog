@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.164 2014/01/26 03:39:11 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.165 2014/06/30 15:48:44 mrueg Exp $
+
+  30 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
+  -files/nagios-plugins-1.4.10-contrib.patch,
+  -files/nagios-plugins-1.4.10-noradius.patch,
+  -files/nagios-plugins-1.4.12-pgsqlconfigure.patch,
+  -files/nagios-plugins-1.4.14-implicit-pointer-conversion.patch,
+  -files/nagios-plugins-1.4.14-vserver.patch,
+  -files/nagios-plugins-1.4.15-openldap.patch, -nagios-plugins-1.4.14-r2.ebuild:
+  NM: Cleanup superseded EAPI=1 ebuild.
 
   26 Jan 2014; Chris Reffett <creffett@gentoo.org> metadata.xml:
   Update maintainers (add ahamilto as maintainer, me as proxy, proxy-maint herd

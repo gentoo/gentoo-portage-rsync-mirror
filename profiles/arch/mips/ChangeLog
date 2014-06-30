@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.139 2014/06/30 15:16:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.140 2014/06/30 15:34:54 mgorny Exp $
+
+  30 Jun 2014; Michał Górny <mgorny@gentoo.org> make.defaults,
+  mips64/make.defaults, +mips64/use.force, +mips64/use.mask,
+  mipsel/mips64el/make.defaults, +mipsel/mips64el/use.force,
+  +mipsel/mips64el/use.mask, use.force, use.mask:
+  Set all ABI-related variables in the generic o32 profile, and revert them
+  properly for n{32,64} profiles.
 
   30 Jun 2014; Michał Górny <mgorny@gentoo.org> mips64/n32/make.defaults,
   +mips64/n32/use.force, +mips64/n32/use.mask, mips64/n64/make.defaults,
