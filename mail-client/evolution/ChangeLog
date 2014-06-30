@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.424 2014/06/28 18:46:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.425 2014/06/30 09:50:57 pacho Exp $
+
+  30 Jun 2014; Pacho Ramos <pacho@gentoo.org> -evolution-3.12.3.ebuild,
+  evolution-3.12.3-r1.ebuild:
+  One more reference, drop old
 
 *evolution-3.12.3-r1 (28 Jun 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libgnomeuimm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.82 2012/05/04 03:44:58 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.83 2014/06/30 09:42:39 pacho Exp $
+
+*libgnomeuimm-2.28.0-r1 (30 Jun 2014)
+
+  30 Jun 2014; Pacho Ramos <pacho@gentoo.org> +libgnomeuimm-2.28.0-r1.ebuild:
+  Add missing dependency (#515784 by Patrick Lauer), drop .la files, bump to
+  latest eapi
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libgnomeuimm-2.28.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -332,4 +338,3 @@
   gnome2.eclass version of foser <foser@sesmar.eu.org> gnome-c++
   bindings.
   initial release
-

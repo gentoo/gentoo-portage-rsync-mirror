@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.24 2014/05/07 06:43:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.25 2014/06/30 09:59:15 idella4 Exp $
+
+  30 Jun 2014; Ian Delaney <idella4@gentoo.org> xlrd-0.9.3.ebuild:
+  drop py2.6 pypy2.0 add py3.4, update homepage, remove redundant IUSE flags due
+  to missing source content, add test phase, patch by fau, fixes bug #509824
 
 *xlrd-0.9.3 (07 May 2014)
 
