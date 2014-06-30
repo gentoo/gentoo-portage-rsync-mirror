@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.6.1.ebuild,v 1.1 2014/06/27 14:55:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.6.1.ebuild,v 1.2 2014/06/30 21:19:31 voyageur Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc samba +sftp test +qt4 qt5"
 
-REQUIRED_USE="|| ( qt4 qt5 )"
+REQUIRED_USE="^^ ( qt4 qt5 )"
 
 RDEPEND=">=dev-db/sqlite-3.4:3
 	qt4? (
