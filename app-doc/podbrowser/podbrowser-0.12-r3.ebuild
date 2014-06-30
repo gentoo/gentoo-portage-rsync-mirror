@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.12-r3.ebuild,v 1.1 2014/06/29 22:23:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.12-r3.ebuild,v 1.2 2014/06/30 06:37:49 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://jodrell.net/files/podbrowser/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 SRC_TEST="do"
 

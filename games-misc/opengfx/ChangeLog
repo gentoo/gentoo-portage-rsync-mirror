@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/opengfx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.36 2014/06/13 08:57:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.37 2014/06/30 06:39:35 mr_bones_ Exp $
+
+  30 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> opengfx-0.5.1.ebuild:
+  optionally work with newer unix2dos (bug #514742)
 
 *opengfx-0.5.1 (13 Jun 2014)
 
