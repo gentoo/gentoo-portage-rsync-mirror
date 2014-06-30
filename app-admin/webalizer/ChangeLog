@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.103 2014/02/18 10:30:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.104 2014/06/30 00:46:02 blueness Exp $
+
+  30 Jun 2014; Anthony G. Basile <blueness@gentoo.org> webalizer-2.21.02.ebuild,
+  webalizer-2.23.05.ebuild, webalizer-2.23.08.ebuild:
+  Remove ancient confutils, bug #515184
 
 *webalizer-2.23.08 (01 Feb 2014)
 

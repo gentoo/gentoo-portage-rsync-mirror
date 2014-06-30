@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.05.ebuild,v 1.10 2013/07/20 05:37:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.05.ebuild,v 1.11 2014/06/30 00:46:02 blueness Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
 
 EAPI="2"
 
-inherit versionator confutils eutils webapp db-use
+inherit versionator eutils webapp db-use
 
 WEBAPP_MANUAL_SLOT="yes"
 XTENDED_VER="RB29"
@@ -31,7 +31,7 @@ SLOT="0"
 DEPEND=">=sys-libs/db-4.2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
-	>=media-libs/gd-1.8.3
+	>=media-libs/gd-1.8.3[png]
 	dev-libs/geoip"
 RDEPEND="${DEPEND}"
 
@@ -39,7 +39,6 @@ S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
 	webapp_pkg_setup
-	confutils_require_built_with_all media-libs/gd png
 
 	# USE=nls has no real meaning if LINGUAS isn't set
 	if use nls && [[ -z "${LINGUAS}" ]]; then

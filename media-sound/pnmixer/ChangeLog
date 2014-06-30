@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pnmixer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/ChangeLog,v 1.8 2013/04/27 14:33:15 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/ChangeLog,v 1.9 2014/06/30 00:34:26 hasufell Exp $
+
+  30 Jun 2014; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild:
+  fix dependencies
 
   27 Apr 2013; Julian Ospald <hasufell@gentoo.org>
   files/pnmixer-0.6_pre20111213-build.patch:
