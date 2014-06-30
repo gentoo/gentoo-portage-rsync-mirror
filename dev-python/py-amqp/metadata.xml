@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<herd>openstack</herd>
 	<use>
 		<flag name="extras">Install extra tools to generate initial Python mod
 		from an AMQP XML file</flag>

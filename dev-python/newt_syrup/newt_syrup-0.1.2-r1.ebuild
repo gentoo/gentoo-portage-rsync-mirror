@@ -1,12 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/newt_syrup/newt_syrup-0.1.2.ebuild,v 1.2 2011/07/22 15:59:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/newt_syrup/newt_syrup-0.1.2-r1.ebuild,v 1.1 2014/06/30 04:30:58 floppym Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS=1
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="A Python framework for creating text-based applications"
 HOMEPAGE="http://fedorahosted.org/newt-syrup/"
@@ -17,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=">=dev-libs/newt-0.52.11"
 
-RESTRICT_PYTHON_ABIS="3.*"
 DOCS="COLORS"
