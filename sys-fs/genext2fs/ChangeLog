@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/genext2fs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.12 2012/01/21 16:33:38 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.13 2014/06/30 15:11:55 jer Exp $
+
+  30 Jun 2014; Jeroen Roovers <jer@gentoo.org> genext2fs-1.4.1.ebuild:
+  Stable for HPPA (bug #397225).
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> genext2fs-1.4.1.ebuild:
   x86 stable wrt bug #397225

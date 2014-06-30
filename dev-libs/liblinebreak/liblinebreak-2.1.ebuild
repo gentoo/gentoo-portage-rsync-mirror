@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/liblinebreak-2.1.ebuild,v 1.3 2012/12/02 10:39:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/liblinebreak-2.1.ebuild,v 1.4 2014/06/30 15:11:44 jer Exp $
 
-EAPI=4
+EAPI=5
+inherit eutils
 
 DESCRIPTION="Line breaking library"
 HOMEPAGE="http://vimgadgets.sourceforge.net/liblinebreak/"
@@ -20,5 +21,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -exec rm -vf {} +
+	prune_libtool_files
 }

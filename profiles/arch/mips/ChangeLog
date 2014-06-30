@@ -1,6 +1,23 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.137 2014/06/30 12:13:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.139 2014/06/30 15:16:16 mgorny Exp $
+
+  30 Jun 2014; Michał Górny <mgorny@gentoo.org> mips64/n32/make.defaults,
+  +mips64/n32/use.force, +mips64/n32/use.mask, mips64/n64/make.defaults,
+  +mips64/n64/use.force, +mips64/n64/use.mask,
+  mipsel/mips64el/n32/make.defaults, +mipsel/mips64el/n32/use.force,
+  +mipsel/mips64el/n32/use.mask, mipsel/mips64el/n64/make.defaults,
+  +mipsel/mips64el/n64/use.force, +mipsel/mips64el/n64/use.mask:
+  Add IUSE_IMPLICIT, default ABI_MIPS and proper USE unmask & force to
+  non-multilib n32 & n64 profiles.
+
+  30 Jun 2014; Michał Górny <mgorny@gentoo.org>
+  mips64/multilib/n32/make.defaults, mips64/multilib/n64/make.defaults,
+  mips64/multilib/o32/make.defaults,
+  mipsel/mips64el/multilib/n32/make.defaults,
+  mipsel/mips64el/multilib/n64/make.defaults,
+  mipsel/mips64el/multilib/o32/make.defaults:
+  Add IUSE_IMPLICIT & default ABI_MIPS values to supported multilib profiles.
 
   30 Jun 2014; Michał Górny <mgorny@gentoo.org>
   mips64/multilib/n32/make.defaults, mips64/multilib/n64/make.defaults,

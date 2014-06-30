@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.1.ebuild,v 1.3 2014/06/29 17:03:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.12.1.ebuild,v 1.4 2014/06/30 15:18:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -132,7 +132,6 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-run-in-source-tree \
 		--disable-static \
-		--with-smclient=auto \
 		--enable-easy-codec-installation \
 		--enable-vala \
 		$(use_enable flash vegas-plugin) \
