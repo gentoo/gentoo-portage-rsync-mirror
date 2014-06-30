@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/s3cmd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.22 2013/03/19 11:05:31 titanofold Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.23 2014/06/30 18:21:08 robbat2 Exp $
+
+*s3cmd-1.5.0_beta1 (30 Jun 2014)
+
+  30 Jun 2014; Robin H. Johnson <robbat2@gentoo.org> +s3cmd-1.5.0_beta1.ebuild:
+  bump.
 
   19 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org> -s3cmd-0.9.9.91.ebuild,
   -s3cmd-1.0.0.ebuild:
