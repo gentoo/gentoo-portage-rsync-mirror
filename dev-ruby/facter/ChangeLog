@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.96 2014/06/22 18:59:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.97 2014/06/30 03:42:16 prometheanfire Exp $
+
+*facter-2.1.0 (30 Jun 2014)
+
+  30 Jun 2014; Matthew Thode <prometheanfire@gentoo.org> +facter-2.1.0.ebuild:
+  bup
 
 *facter-1.7.6 (22 Jun 2014)
 

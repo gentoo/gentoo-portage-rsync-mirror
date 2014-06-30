@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.67 2014/06/16 03:35:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.68 2014/06/30 03:59:01 prometheanfire Exp $
+
+  30 Jun 2014; Matthew Thode <prometheanfire@gentoo.org> metadata.xml,
+  nova-9999.ebuild:
+  fixed, all ebuilds use the correct initd bug 507628
 
 *nova-2014.1.1 (16 Jun 2014)
 

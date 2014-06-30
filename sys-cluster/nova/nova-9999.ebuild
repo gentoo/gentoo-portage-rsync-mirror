@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.13 2014/01/08 06:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.14 2014/06/30 03:59:01 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,60 +14,61 @@ EGIT_REPO_URI="https://github.com/openstack/nova.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
+IUSE="+compute +kvm +network +novncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
-			  || ( kvm xen )"
+			  compute? ( || ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		app-admin/sudo"
 
-RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
-		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
-		dev-python/boto[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}] )
 		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+	         <dev-python/sqlalchemy-0.9.99[mysql,${PYTHON_USEDEP}] )
 		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
-		>=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
-		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
-		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
-		>=dev-python/jinja-2.0[${PYTHON_USEDEP}]
-		<dev-python/jinja-3[${PYTHON_USEDEP}]
-		>=dev-python/jsonschema-1.3.0[${PYTHON_USEDEP}]
-		!~dev-python/jsonschema-1.4.0[${PYTHON_USEDEP}]
-		>=dev-python/kombu-1.0.4-r1[${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.9.99[postgres,${PYTHON_USEDEP}] )
+		>=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
+		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
+		virtual/python-argparse[${PYTHON_USEDEP}]
+		>=dev-python/boto-2.12.0[${PYTHON_USEDEP}]
+		!~dev-python/boto-2.13.0[${PYTHON_USEDEP}]
+		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
+		dev-python/jinja[${PYTHON_USEDEP}]
+		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
 		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
-		>=dev-python/pbr-0.5.16[${PYTHON_USEDEP}]
-		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3-r1[${PYTHON_USEDEP}]
-		dev-python/six[${PYTHON_USEDEP}]
-		~dev-python/webob-1.2.3[${PYTHON_USEDEP}]
-		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
+		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
+		>=dev-python/sqlalchemy-migrate-0.8.2[${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-migrate-0.8.4[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
-		dev-python/paramiko[${PYTHON_USEDEP}]
+		>=dev-python/paramiko-1.9.0[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
-		>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		>=dev-python/python-cinderclient-1.0.1[${PYTHON_USEDEP}]
-		>=dev-python/python-glanceclient-0.9.0[${PYTHON_USEDEP}]
-		>=dev-python/python-neutronclient-2.3.0[${PYTHON_USEDEP}]
+		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
+		>=dev-python/python-cinderclient-1.0.6[${PYTHON_USEDEP}]
+		>=dev-python/python-neutronclient-2.3.4[${PYTHON_USEDEP}]
 		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.2.0[${PYTHON_USEDEP}]
-		>=dev-python/stevedore-0.10[${PYTHON_USEDEP}]
+		>=dev-python/python-glanceclient-0.9.0[${PYTHON_USEDEP}]
+		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
+		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
+		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/websockify-0.5.1[${PYTHON_USEDEP}]
 		<dev-python/websockify-0.6[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
-		app-emulation/libvirt[${PYTHON_USEDEP}]
+		dev-python/oslo-rootwrap[${PYTHON_USEDEP}]
+		>=dev-python/pycadf-0.4.1[${PYTHON_USEDEP}]
+		>=dev-python/oslo-messaging-1.3.0[${PYTHON_USEDEP}]
+		dev-python/libvirt-python[${PYTHON_USEDEP}]
 		novncproxy? ( www-apps/novnc )
 		sys-apps/iproute2
 		net-misc/openvswitch
+		net-misc/rabbitmq-server
 		sys-fs/sysfsutils
 		sys-fs/multipath-tools
 		kvm? ( app-emulation/qemu )
@@ -82,49 +83,43 @@ pkg_setup() {
 	enewuser nova -1 -1 /var/lib/nova nova
 }
 
+python_compile() {
+	distutils-r1_python_compile
+	./tools/config/generate_sample.sh -b ./ -p nova -o etc/nova
+}
+
 python_install() {
 	distutils-r1_python_install
-	newconfd "${FILESDIR}/nova-confd" "nova"
-	newinitd "${FILESDIR}/nova-initd" "nova"
-	use api && dosym /etc/init.d/nova /etc/init.d/nova-api
-	use cert && dosym /etc/init.d/nova /etc/init.d/nova-cert
-	use compute && dosym /etc/init.d/nova /etc/init.d/nova-compute
-	use conductor && dosym /etc/init.d/nova /etc/init.d/nova-conductor
-	use consoleauth && dosym /etc/init.d/nova /etc/init.d/nova-consoleauth
-	use network &&  dosym /etc/init.d/nova /etc/init.d/nova-network
-	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-novncproxy
-	use scheduler && dosym /etc/init.d/nova /etc/init.d/nova-scheduler
-	use spicehtml5proxy && dosym /etc/init.d/nova /etc/init.d/nova-spicehtml5proxy
-	use xvpvncproxy && dosym /etc/init.d/nova /etc/init.d/nova-xvpncproxy
 
-	diropts -m 0750
-	dodir /var/run/nova /var/log/nova /var/lock/nova
-	fowners nova:nova /var/log/nova /var/lock/nova /var/run/nova
+	for svc in api cert compute conductor consoleauth network scheduler spicehtml5proxy xvpvncproxy; do
+		newinitd "${FILESDIR}/nova.initd" "nova-${svc}"
+	done
+	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
+	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
-	diropts -m 0755
-	dodir /var/lib/nova/instances
-	fowners nova:nova /var/lib/nova/instances
+	diropts -m 0750 -o nova -g nova
+	dodir /var/log/nova /var/lib/nova/instances
 
-	keepdir /etc/nova
 	insinto /etc/nova
+	insopts -m 0640 -o nova -g nova
 	newins "etc/nova/nova.conf.sample" "nova.conf"
 	doins "etc/nova/api-paste.ini"
 	doins "etc/nova/logging_sample.conf"
 	doins "etc/nova/policy.json"
 	doins "etc/nova/rootwrap.conf"
+	#rootwrap filters
 	insinto /etc/nova/rootwrap.d
 	doins "etc/nova/rootwrap.d/api-metadata.filters"
 	doins "etc/nova/rootwrap.d/compute.filters"
 	doins "etc/nova/rootwrap.d/network.filters"
-
 	#copy migration conf file (not coppied on install via setup.py script)
 	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
 	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
-
 	#copy the CA cert dir (not coppied on install via setup.py script)
-	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "isntalling CA files failed"
+	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "installing CA files failed"
 
 	#add sudoers definitions for user nova
 	insinto /etc/sudoers.d/
+	insopts -m 0600 -o root -g root
 	doins "${FILESDIR}/nova-sudoers"
 }
