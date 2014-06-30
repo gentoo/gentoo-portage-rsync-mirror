@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140623.ebuild,v 1.2 2014/06/30 07:04:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20140630.ebuild,v 1.1 2014/06/30 07:04:00 jlec Exp $
 
 EAPI=5
 
