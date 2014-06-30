@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.580 2014/06/29 18:43:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.581 2014/06/30 18:57:43 tommy Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Thomas Sachau <tommy@gentoo.org> (30 Jun 2014)
+# Mask pixman USE flag of dev-libs/efl for future removal, bug 501074
+dev-libs/efl pixman
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Mask use-flag firebird and package dev-db/firebird for bug 460780
