@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.25 2014/03/31 19:50:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.26 2014/06/30 12:16:36 maksbotan Exp $
+
+*liblognorm-0.3.7 (30 Jun 2014)
+
+  30 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> +liblognorm-0.3.7.ebuild:
+  Bump to 0.3.7, thanks to slepnoga
 
   31 Mar 2014; Jeroen Roovers <jer@gentoo.org> +liblognorm-0.3.6.ebuild,
   files/respect_CFLAGS.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.12.1.ebuild,v 1.1 2014/04/27 15:35:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.12.1.ebuild,v 1.2 2014/06/30 12:29:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -64,8 +64,10 @@ src_install() {
 	gnome2_src_install
 
 	# FIXME: crazy !!!
-	find "${ED}"/usr/share/gedit -name "*.py*" -delete || die
-	find "${ED}"/usr/share/gedit -type d -empty -delete || die
+	if use python; then
+		find "${ED}"/usr/share/gedit -name "*.py*" -delete || die
+		find "${ED}"/usr/share/gedit -type d -empty -delete || die
+	fi
 
 	# FIXME: upstream made this automagic...
 	clean_plugin charmap

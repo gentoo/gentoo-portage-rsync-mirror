@@ -3,7 +3,7 @@ DEPEND=~app-leechcraft/lc-core-0.6.65[postgres?,sqlite?] dev-qt/qtwebkit:4 idn? 
 DESCRIPTION=Poshuku, the full-featured web browser plugin for LeechCraft.
 EAPI=4
 HOMEPAGE=http://leechcraft.org/
-IUSE=debug +cleanweb +fatape +filescheme +fua +idn +keywords +onlinebookmarks +pcre postgres +sqlite wyfv
+IUSE=+autosearch debug +cleanweb +fatape +filescheme +fua +idn +keywords +onlinebookmarks +pcre postgres +sqlite wyfv
 KEYWORDS=~amd64 ~x86
 LICENSE=Boost-1.0
 RDEPEND=~app-leechcraft/lc-core-0.6.65[postgres?,sqlite?] dev-qt/qtwebkit:4 idn? ( net-dns/libidn ) onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) pcre? ( >=dev-libs/libpcre-8.12 ) virtual/leechcraft-downloader-http
@@ -11,4 +11,4 @@ REQUIRED_USE=pcre? ( cleanweb )
 SLOT=0
 SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.6.65.tar.xz http://dist.leechcraft.org/LeechCraft/0.6.65/leechcraft-0.6.65.tar.xz
 _eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	leechcraft	e0ec4b74ef98adeb1a9696617a379c7f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=401fe2c2c2176def23252e3f574a3722
+_md5_=e11f211be97d0e66efa59ddf45da6f21

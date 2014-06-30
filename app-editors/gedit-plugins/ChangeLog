@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.46 2014/04/27 15:35:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.47 2014/06/30 12:29:54 pacho Exp $
+
+  30 Jun 2014; Pacho Ramos <pacho@gentoo.org> gedit-plugins-3.12.1.ebuild:
+  Offending files are only installed with USE python (#515842 by Ilya Gordeev)
 
 *gedit-plugins-3.12.1 (27 Apr 2014)
 
