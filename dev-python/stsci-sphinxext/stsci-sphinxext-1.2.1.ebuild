@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-sphinxext/stsci-sphinxext-1.2.1.ebuild,v 1.1 2014/02/05 23:22:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stsci-sphinxext/stsci-sphinxext-1.2.1.ebuild,v 1.2 2014/06/30 01:44:25 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 MY_PN=${PN/-/.}
 MY_P=${MY_PN}-${PV}
 
@@ -21,8 +21,10 @@ IUSE=""
 
 RDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}]
-	dev-python/numpydoc[python_targets_python2_6?,python_targets_python2_7?]"
+	dev-python/numpydoc[$(python_gen_usedep python2_7)]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	>=dev-python/d2to1-0.2.9[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/stsci-distutils-0.3.2[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
