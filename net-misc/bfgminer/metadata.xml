@@ -44,6 +44,7 @@
 		<flag name='sse4'>Enable support for CPU SSE4 mining algorithm</flag>
 		<flag name='twinfury'>Enable support for mining with Twinfury USB sticks</flag>
 		<flag name='x6500'>Enable support for mining with X6500 FPGAs</flag>
+		<flag name='zeusminer'>Enable support for mining with ZeusMiner units</flag>
 		<flag name='ztex'>Enable support for mining with Ztex FPGAs</flag>
 	</use>
 </pkgmetadata>
