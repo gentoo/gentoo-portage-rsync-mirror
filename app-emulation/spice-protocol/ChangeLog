@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/spice-protocol
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.39 2013/12/31 17:10:31 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.40 2014/07/01 15:25:04 dev-zero Exp $
+
+*spice-protocol-0.12.7 (01 Jul 2014)
+
+  01 Jul 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +spice-protocol-0.12.7.ebuild:
+  Version bump.
 
   31 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
   -files/2ffbca210033be262fc75e6a73742e0f0e6d5242.patch:
