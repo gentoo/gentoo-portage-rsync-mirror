@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/ntlmaps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.19 2014/01/08 06:24:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.20 2014/07/01 17:06:26 pacho Exp $
+
+*ntlmaps-0.9.9.6-r3 (01 Jul 2014)
+
+  01 Jul 2014; Pacho Ramos <pacho@gentoo.org> +files/ntlmaps.service,
+  +ntlmaps-0.9.9.6-r3.ebuild:
+  Add unit file, bug #513618 by StalkerNOVA
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ntlmaps-0.9.9-r2.ebuild,
   ntlmaps-0.9.9.6-r2.ebuild:
