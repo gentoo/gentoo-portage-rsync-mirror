@@ -3,6 +3,10 @@
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"
 
+MULTILIB_ABIS="arm"
+DEFAULT_ABI="arm"
+ABI=${DEFAULT_ABI}
+
 CHOST="arm-unknown-linux-gnu"
 CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"
