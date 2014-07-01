@@ -1,18 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.12-r1.ebuild,v 1.7 2013/05/29 15:39:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.14-r1.ebuild,v 1.1 2014/07/01 06:46:16 jlec Exp $
 
 EAPI=5
 
+AUTOTOOLS_AUTORECONF=true
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-AUTOTOOLS_AUTORECONF=true
-VALA_MIN_API_VERSION=0.18
+VALA_MIN_API_VERSION=0.20
 
 inherit autotools-utils bash-completion-r1 eutils python-r1 versionator vala
 
 DIR_PV=$(get_version_component_range 1-2)
-EXT_VER=0.0.13
 
 DESCRIPTION="Service to log activities and present to other apps"
 HOMEPAGE="http://launchpad.net/zeitgeist/"
@@ -20,8 +19,8 @@ SRC_URI="http://launchpad.net/zeitgeist/${DIR_PV}/${PV}/+download/${P}.tar.xz"
 
 LICENSE="LGPL-2+ LGPL-3+ GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+datahub +dbus downloads-monitor extensions +fts icu introspection nls plugins sql-debug telepathy"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+IUSE="+datahub downloads-monitor extensions +fts icu introspection nls plugins sql-debug telepathy"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
@@ -38,6 +37,7 @@ RDEPEND="
 	media-libs/raptor:2
 	>=dev-libs/glib-2.26.0:2
 	>=dev-db/sqlite-3.7.11:3
+	sys-apps/dbus
 	datahub? ( x11-libs/gtk+:3 )
 	extensions? ( gnome-extra/zeitgeist-extensions  )
 	fts? ( dev-libs/xapian[inmemory] )
@@ -49,8 +49,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	virtual/pkgconfig"
-
-PATCHES=( "${FILESDIR}"/${P}-download_monitor.patch )
 
 src_prepare() {
 	local PYTHON
@@ -64,20 +62,23 @@ src_prepare() {
 		-e "/import/s: python : ${PYTHON} :g" \
 		-i configure.ac || die
 
+	epatch "${FILESDIR}"/${P}-gio-backport.patch
+
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	local myeconfargs=(
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"
+		--with-session-bus-services-dir="${EPREFIX}/usr/share/dbus-1/services"
 		$(use_enable sql-debug explain-queries)
 		$(use_enable datahub)
 		$(use_enable downloads-monitor)
 		$(use_enable telepathy)
 		$(use_enable introspection)
 		$(use_with icu dee-icu)
-		$(use_with dbus session-bus-services-dir /usr/share/dbus-1/services)
 	)
+
 	use nls || myeconfargs+=( --disable-nls )
 	use fts && myeconfargs+=( --enable-fts )
 	autotools-utils_src_configure

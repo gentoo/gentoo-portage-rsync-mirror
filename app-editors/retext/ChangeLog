@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/retext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.10 2014/02/19 11:01:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.11 2014/07/01 06:37:36 jlec Exp $
+
+  01 Jul 2014; Justin Lecher <jlec@gentoo.org> retext-4.1.1.ebuild:
+  Drop incompatibility workaround for USE=spell + python3_3
 
   19 Feb 2014; Justin Lecher <jlec@gentoo.org> retext-4.1.1.ebuild,
   metadata.xml:

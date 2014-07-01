@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/protobuf virtual/pkgconfig
+DESCRIPTION=code generator and runtime libraries to use Protocol Buffers (protobuf) from pure C
+EAPI=5
+HOMEPAGE=https://github.com/protobuf-c/protobuf-c/
+IUSE=static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=dev-libs/protobuf
+SLOT=0
+SRC_URI=https://github.com/protobuf-c/protobuf-c/releases/download/v1.0.0-rc2/protobuf-c-1.0.0-rc2.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=8f63431f1e5b899938e979345874c864

@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/zeitgeist
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.41 2013/12/08 19:59:31 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.42 2014/07/01 06:46:16 jlec Exp $
+
+*zeitgeist-0.9.14-r1 (01 Jul 2014)
+
+  01 Jul 2014; Justin Lecher <jlec@gentoo.org> -zeitgeist-0.9.5-r1.ebuild,
+  -zeitgeist-0.9.12.ebuild, -zeitgeist-0.9.12-r1.ebuild,
+  +zeitgeist-0.9.14-r1.ebuild, -files/zeitgeist-0.9.0-doc.patch,
+  -files/zeitgeist-0.9.12-download_monitor.patch,
+  +files/zeitgeist-0.9.14-gio-backport.patch:
+  Drop old; backport patch for missing gio in vala bindings
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> zeitgeist-0.9.14.ebuild:
   x86 stable, bug #478252
