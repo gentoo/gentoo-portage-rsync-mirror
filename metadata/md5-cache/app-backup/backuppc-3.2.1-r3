@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare prerm setup test unpack
+DEPEND=dev-lang/perl app-admin/apache-tools app-admin/makepasswd virtual/pkgconfig >=app-admin/webapp-config-1.50.15
+DESCRIPTION=A high-performance system for backing up computers to a server's disk.
+EAPI=5
+HOMEPAGE=http://backuppc.sourceforge.net/
+IUSE=rss samba vhosts
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl app-admin/apache-tools app-admin/makepasswd perl-core/IO-Compress dev-perl/Archive-Zip dev-perl/libwww-perl >=app-arch/tar-1.13.20 app-arch/par2cmdline app-arch/gzip app-arch/bzip2 virtual/mta www-apache/mod_perl www-servers/apache net-misc/rsync >=dev-perl/File-RsyncP-0.68 rss? ( dev-perl/XML-RSS ) samba? ( net-fs/samba ) >=app-admin/webapp-config-1.50.15
+SLOT=0
+SRC_URI=mirror://sourceforge/backuppc/BackupPC-3.2.1.tar.gz http://dev.gentooexperimental.org/~dreeevil/02-fix-config.pl-formatting.patch
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_md5_=121a59a34fd166c3fa732405e2ddb1ad

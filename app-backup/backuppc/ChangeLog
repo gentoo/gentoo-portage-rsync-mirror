@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/backuppc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/ChangeLog,v 1.17 2013/11/07 02:33:23 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/ChangeLog,v 1.18 2014/07/01 19:15:17 pacho Exp $
+
+*backuppc-3.2.1-r3 (01 Jul 2014)
+
+  01 Jul 2014; Pacho Ramos <pacho@gentoo.org> +backuppc-3.2.1-r3.ebuild,
+  +files/backuppc.service:
+  Add unit file (#513850 by thorus90)
 
   07 Nov 2013; Patrick Lauer <patrick@gentoo.org> backuppc-2.1.2-r1.ebuild:
   Harmonize description, make repoman happier
