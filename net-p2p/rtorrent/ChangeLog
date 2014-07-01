@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.185 2014/06/29 16:06:24 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.186 2014/07/01 19:31:42 pacho Exp $
+
+*rtorrent-0.9.4-r1 (01 Jul 2014)
+
+  01 Jul 2014; Pacho Ramos <pacho@gentoo.org> +files/rtorrentd_at.service,
+  +rtorrent-0.9.4-r1.ebuild:
+  Add unit file (#513296 by Michael Cook)
 
 *rtorrent-0.9.4 (29 Jun 2014)
 
