@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wepdecrypt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.18 2012/12/21 23:25:01 alonbl Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.19 2014/07/01 18:30:55 alonbl Exp $
+
+  01 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> -wepdecrypt-0.8-r1.ebuild,
+  -wepdecrypt-0.8.ebuild, files/wepdecrypt-0.8-dyn.patch:
+  Fix bug#515814, cleanup
 
 *wepdecrypt-0.8-r2 (21 Dec 2012)
 

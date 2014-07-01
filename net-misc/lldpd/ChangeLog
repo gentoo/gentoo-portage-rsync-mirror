@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.13 2014/03/03 23:50:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.14 2014/07/01 18:01:53 chutzpah Exp $
+
+*lldpd-0.7.9 (01 Jul 2014)
+
+  01 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +lldpd-0.7.9.ebuild,
+  +files/lldpd.service:
+  Version bump. Add systemd unit (bug #515644).
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> lldpd-0.7.6.ebuild:
   amd64 stable, bug #495876
