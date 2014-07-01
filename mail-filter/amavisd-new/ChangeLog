@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.206 2014/06/24 02:08:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.207 2014/07/01 05:27:10 eras Exp $
+
+*amavisd-new-2.9.1 (01 Jul 2014)
+
+  01 Jul 2014; Eray Aslan <eras@gentoo.org> +amavisd-new-2.9.1.ebuild:
+  Version bump
 
   24 Jun 2014; Jeroen Roovers <jer@gentoo.org> amavisd-new-2.8.1-r1.ebuild:
   Stable for HPPA (bug #473794).
