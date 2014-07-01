@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/pass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.25 2014/06/29 09:35:10 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.26 2014/07/01 08:52:02 zx2c4 Exp $
+
+*pass-1.6.3 (01 Jul 2014)
+
+  01 Jul 2014; Jason A. Donenfeld <zx2c4@gentoo.org> +pass-1.6.3.ebuild,
+  -pass-1.6.2.ebuild:
+  Version bump.
 
   29 Jun 2014; Jason A. Donenfeld <zx2c4@gentoo.org> pass-9999.ebuild:
   The latest passmenu now uses xdotool.

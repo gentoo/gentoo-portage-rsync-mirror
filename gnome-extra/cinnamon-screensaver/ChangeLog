@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/cinnamon-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/ChangeLog,v 1.2 2014/05/11 02:30:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/ChangeLog,v 1.3 2014/07/01 08:46:09 pacho Exp $
+
+  01 Jul 2014; Pacho Ramos <pacho@gentoo.org> cinnamon-screensaver-2.2.3.ebuild:
+  Add missing DEPEND on gnome-common (#515918 by Patrick Lauer)
 
   11 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   cinnamon-screensaver-2.2.3.ebuild:
@@ -11,4 +14,3 @@
   10 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   +cinnamon-screensaver-2.2.3.ebuild, +metadata.xml:
   New package for Cinnamon 2.x
-

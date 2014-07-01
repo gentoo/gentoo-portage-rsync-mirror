@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.2.ebuild,v 1.1 2014/05/14 07:49:03 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.3.ebuild,v 1.1 2014/07/01 08:52:02 zx2c4 Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	elibc_Darwin? ( app-misc/getopt )
 	zsh-completion? ( app-shells/zsh-completion )
 	fish-completion? ( app-shells/fish )
-	dmenu? ( x11-misc/dmenu )
+	dmenu? ( x11-misc/dmenu x11-misc/xdotool )
 	emacs? ( virtual/emacs )
 "
 

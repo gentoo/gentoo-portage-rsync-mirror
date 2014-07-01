@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/make.defaults,v 1.9 2014/01/18 01:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/make.defaults,v 1.11 2014/07/01 08:35:55 mgorny Exp $
 
 ARCH="hppa"
 ACCEPT_KEYWORDS="hppa"
@@ -12,6 +12,13 @@ CXXFLAGS="-O1 -pipe"
 FEATURES="sandbox sfperms strict"
 
 USE="cups foomaticdb fortran gdbm gpm imlib libwww spell xml2 firefox"
+
+# Michał Górny <mgorny@gentoo.org> (01 Jul 2014)
+# Set ABI & DEFAULT_ABI consistently with ${ARCH}, to make ebuild
+# checks simpler.
+ABI="hppa"
+DEFAULT_ABI="hppa"
+MULTILIB_ABIS="hppa"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

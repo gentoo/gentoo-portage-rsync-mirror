@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.94 2014/06/04 02:09:49 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.96 2014/07/01 08:35:57 mgorny Exp $
+
+  01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Set MULTILIB_ABIS as well, just in case.
+
+  01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Set ABI & DEFAULT_ABI on remaining profiles for easy consistent checks in
+  ebuilds.
 
   03 Jun 2014; Brian Evans <grknight@gentoo.org> package.use.mask:
   Mask jemalloc on dev-db/mysql and dev-db/mariadb bug #429708

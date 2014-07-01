@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.202 2014/04/26 11:35:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.204 2014/07/01 08:35:56 mgorny Exp $
+
+  01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Set MULTILIB_ABIS as well, just in case.
+
+  01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Set ABI & DEFAULT_ABI on remaining profiles for easy consistent checks in
+  ebuilds.
 
   26 Apr 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Mask json use flag on app-admin/ulogd. Bug #507428
