@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-2.13.ebuild,v 1.11 2014/07/01 13:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-2.13-r1.ebuild,v 1.1 2014/07/01 13:20:12 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="killproc and assorted tools for boot scripts"
@@ -12,22 +11,17 @@ SRC_URI="ftp://ftp.suse.com/pub/projects/init/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ppc x86"
-IUSE=""
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~x86"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
-}
-
-src_compile() {
 	tc-export CC
 	export COPTS=${CFLAGS}
-	emake || die "emake failed"
 }
 
 src_install() {
 	into /
-	dosbin checkproc fsync killproc startproc usleep || die "dosbin failed"
+	dosbin checkproc fsync killproc startproc usleep
 	into /usr
 	doman *.8 *.1
 	dodoc README *.lsm

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/elixir
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.18 2014/06/20 17:27:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/elixir/ChangeLog,v 1.19 2014/07/01 13:25:10 hasufell Exp $
+
+*elixir-0.14.2 (01 Jul 2014)
+
+  01 Jul 2014; Julian Ospald <hasufell@gentoo.org> +elixir-0.14.2.ebuild:
+  version bump
 
 *elixir-0.14.1 (20 Jun 2014)
 

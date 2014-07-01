@@ -1,5 +1,5 @@
---- killproc-2.13/Makefile.orig	2007-11-30 14:01:09.000000000 +0100
-+++ killproc-2.13/Makefile	2009-09-04 17:21:26.000000000 +0200
+--- a/Makefile
++++ b/Makefile
 @@ -27,9 +27,7 @@
  #
  # egcs used with -O2 includes -fno-force-mem which is/was buggy (1998/10/08)

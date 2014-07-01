@@ -1,6 +1,22 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.25 2014/01/27 13:06:32 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.29 2014/07/01 13:29:43 jer Exp $
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org>
+  files/killproc-2.13-makefile.patch:
+  Clean up patch.
+
+*killproc-2.13-r1 (01 Jul 2014)
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org> killproc-2.13.ebuild,
+  +killproc-2.13-r1.ebuild, metadata.xml:
+  EAPI bump. Simplify.
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org> killproc-2.13.ebuild:
+  Drop testing cruft.
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org> killproc-2.13.ebuild:
+  Marked ~hppa (bug #467210).
 
   27 Jan 2014; Akinori Hattori <hattya@gentoo.org> killproc-2.13.ebuild:
   keyword ~ia64 wrt bug #494254
