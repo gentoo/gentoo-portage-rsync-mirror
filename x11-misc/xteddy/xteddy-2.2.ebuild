@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/xteddy-2.2.ebuild,v 1.7 2012/10/13 08:05:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/xteddy-2.2.ebuild,v 1.8 2014/07/01 12:57:22 jer Exp $
 
-EAPI="4"
-
-inherit autotools
+EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="A cuddly teddy bear (or other image) for your X desktop"
 HOMEPAGE="http://webstaff.itn.liu.se/~stegu/xteddy/"
@@ -24,8 +23,8 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS README ChangeLog NEWS xteddy.README )
 
 src_prepare() {
-	# Fix linking order for --as-needed
-	sed -i -e "s/AM_LDFLAGS/xteddy_LDADD/" Makefile.am || die
+	epatch "${FILESDIR}"/${P}-linking.patch
+
 	# Fix paths in xtoys script wrt bug #404899
 	sed -i -e "s:/usr/games:/usr/bin:" xtoys || die
 	eautoreconf

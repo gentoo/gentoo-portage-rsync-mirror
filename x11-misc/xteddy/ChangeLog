@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xteddy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.14 2012/10/13 08:05:54 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.15 2014/07/01 12:57:22 jer Exp $
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org> xteddy-2.2.ebuild,
+  +files/xteddy-2.2-linking.patch:
+  Link against libXext (bug #515910).
 
   13 Oct 2012; Agostino Sarubbo <ago@gentoo.org> xteddy-2.2.ebuild:
   Stable for amd64, wrt bug #404899

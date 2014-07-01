@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.53 2014/07/01 12:23:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.54 2014/07/01 12:37:35 blueness Exp $
+
+  01 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/amd64/use.force,
+  linux/musl/amd64/use.mask, linux/musl/mips/make.defaults,
+  linux/musl/mips/use.force, linux/musl/mips/use.mask,
+  linux/musl/x86/make.defaults, linux/musl/x86/use.force,
+  linux/musl/x86/use.mask:
+  Make linux/musl multilib aware, bug #515130
 
   01 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
   linux/uclibc/amd64/make.defaults, linux/uclibc/amd64/use.force,
