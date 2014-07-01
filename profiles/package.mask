@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15823 2014/07/01 05:40:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15824 2014/07/01 07:02:54 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -251,7 +251,7 @@ dev-python/argparse
 dev-python/ordereddict
 
 # Tim Harder <radhermit@gentoo.org> (25 Apr 2014)
-# Masked for testing
+# Mask development releases
 =dev-libs/protobuf-c-1.0.0*
 
 # Mike Gilbert <floppym@gentoo.org> (23 Apr 2014)
@@ -370,7 +370,7 @@ lxde-base/lxpolkit
 =dev-java/jikes-1.22-r1
 
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
-# Masked for testing
+# Mask development releases
 =media-sound/lilypond-2.19*
 
 # Ole Markus With <olemarkus@gentoo.org> (28 Jan 2014)
@@ -662,7 +662,8 @@ media-gfx/yafaray
 net-wireless/madwifi-ng
 
 # Tim Harder <radhermit@gentoo.org> (27 Nov 2012)
-# Masked for testing
+# Masked for testing, all revdeps currently in the tree
+# don't work with it.
 =media-libs/libsfml-2*
 
 # Robin H. Johnson <robbat2@gentoo.org> (18 Nov 2012)

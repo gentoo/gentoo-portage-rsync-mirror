@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.168 2014/03/03 09:28:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.169 2014/07/01 07:27:44 robbat2 Exp $
+
+*cryptsetup-1.6.5 (01 Jul 2014)
+
+  01 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> +cryptsetup-1.6.5.ebuild:
+  Bump per bug #515838.
 
 *cryptsetup-1.6.4 (03 Mar 2014)
 
