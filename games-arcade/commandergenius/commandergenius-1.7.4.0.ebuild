@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.7.4.0.ebuild,v 1.1 2014/06/01 18:10:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/commandergenius-1.7.4.0.ebuild,v 1.2 2014/07/01 22:30:23 hasufell Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install.patch
+	epatch "${FILESDIR}"/${P}-{install,build}.patch
 
 	rm -rf vfsroot || die
 
