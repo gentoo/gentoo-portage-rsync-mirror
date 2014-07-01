@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-discover-runner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-discover-runner/ChangeLog,v 1.3 2014/06/06 06:48:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-discover-runner/ChangeLog,v 1.4 2014/07/01 06:10:14 idella4 Exp $
+
+  01 Jul 2014; Ian Delaney <idella4@gentoo.org>
+  django-discover-runner-1.0.ebuild:
+  add missing dep, fixes Bug #515004
 
   06 Jun 2014; Ian Delaney <idella4@gentoo.org>
   django-discover-runner-0.4.ebuild, django-discover-runner-1.0.ebuild:
