@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/make.defaults,v 1.6 2014/07/01 08:35:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/make.defaults,v 1.7 2014/07/01 14:13:01 mgorny Exp $
 
 # Main SuperH profile
 
@@ -19,6 +19,8 @@ FCFLAGS="${CFLAGS}"
 ABI="sh"
 DEFAULT_ABI="sh"
 MULTILIB_ABIS="sh"
+CHOST_sh="${CHOST}"
+LIBDIR_sh="lib"
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (16 Nov 2011)
 # Rename STAGE1_USE to BOOTSTRAP_USE and stack it to the parent value

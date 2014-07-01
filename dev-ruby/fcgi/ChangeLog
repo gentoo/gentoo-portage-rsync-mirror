@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fcgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fcgi/ChangeLog,v 1.16 2014/06/19 18:10:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fcgi/ChangeLog,v 1.17 2014/07/01 14:08:02 klausman Exp $
+
+  01 Jul 2014; Tobias Klausmann <klausman@gentoo.org> fcgi-0.9.2.1.ebuild:
+  Stable on alpha, bug #497490
 
   19 Jun 2014; Markus Meier <maekke@gentoo.org> fcgi-0.9.2.1.ebuild:
   arm stable, bug #513052

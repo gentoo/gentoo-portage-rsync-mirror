@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/make.defaults,v 1.7 2014/07/01 08:35:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/make.defaults,v 1.8 2014/07/01 14:13:01 mgorny Exp $
 
 ARCH="ia64"
 ACCEPT_KEYWORDS="ia64"
@@ -17,6 +17,8 @@ FCFLAGS="${CFLAGS}"
 ABI="ia64"
 DEFAULT_ABI="ia64"
 MULTILIB_ABIS="ia64"
+LIBDIR_ia64="lib"
+CHOST_ia64="${CHOST}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

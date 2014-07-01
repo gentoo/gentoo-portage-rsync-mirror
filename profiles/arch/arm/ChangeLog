@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.307 2014/07/01 08:19:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.308 2014/07/01 14:13:01 mgorny Exp $
+
+  01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Add missing LIBDIR_${ABI} and CHOST_${ABI} on non-multilib arches to avoid
+  issues.
 
   01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults:
   Set ABI, DEFAULT_ABI and MULTILIB_ABIS for consistence with arm64 multilib.

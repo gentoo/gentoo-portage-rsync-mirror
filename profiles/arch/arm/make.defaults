@@ -3,15 +3,17 @@
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"
 
-MULTILIB_ABIS="arm"
-DEFAULT_ABI="arm"
-ABI=${DEFAULT_ABI}
-
 CHOST="arm-unknown-linux-gnu"
 CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"
 FFLAGS="${CFLAGS}"
 FCFLAGS="${CFLAGS}"
+
+MULTILIB_ABIS="arm"
+DEFAULT_ABI="arm"
+ABI=${DEFAULT_ABI}
+LIBDIR_arm="lib"
+CHOST_arm="${CHOST}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
