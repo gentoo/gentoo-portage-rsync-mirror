@@ -4,6 +4,7 @@ LDFLAGS := $(LDFLAGS) -L.
 
 PREFIX ?= /usr/
 BINDIR ?= $(PREFIX)/bin
+INCLUDEDIR ?= $(PREFIX)/include
 LIBDIR ?= $(PREFIX)/lib
 
 libsparse_src_files := \
@@ -54,6 +55,7 @@ clean:
 	rm -rf *.o *.so $(executables)
 
 install: all
-	install -d $(DESTDIR)/$(BINDIR) $(DESTDIR)/$(LIBDIR)
+	install -d $(DESTDIR)/$(BINDIR) $(DESTDIR)/$(LIBDIR) $(DESTDIR)/$(INCLUDEDIR)/sparse
 	install $(executables) $(DESTDIR)/$(BINDIR)
 	install libsparse.so $(DESTDIR)/$(LIBDIR)
+	install --mode=644 include/sparse/sparse.h $(DESTDIR)/$(INCLUDEDIR)/sparse
