@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quakeforge
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.34 2013/02/02 00:07:44 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.35 2014/07/01 16:00:06 mr_bones_ Exp $
+
+  01 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/quakeforge-0.7.0-gentoo.patch, -quakeforge-0.7.0.ebuild:
+  old
 
 *quakeforge-0.7.2 (02 Feb 2013)
 
@@ -160,4 +164,3 @@
 
   21 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> quakeforge-0.5.0.ebuild :
   First Relase.
-

@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ezquake-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.13 2013/02/05 08:58:54 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ChangeLog,v 1.14 2014/07/01 15:56:38 mr_bones_ Exp $
+
+*ezquake-bin-2.2 (01 Jul 2014)
+
+  01 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> +ezquake-bin-2.2.ebuild,
+  -ezquake-bin-1.9.ebuild:
+  version bump; clean old
 
   05 Feb 2013; Tupone Alfredo <tupone@gentoo.org> ezquake-bin-1.9.3.ebuild:
   Use QA_PREBUILT. Bug #454986 by Diego
@@ -58,4 +64,3 @@
   +ezquake-bin-1517.ebuild:
   Initial import. Ebuild by Patryk Rzadzinski <rzadzins@wit.edu.pl> and
   modified by me. Closing bug #130823.
-
