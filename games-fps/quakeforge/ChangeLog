@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.35 2014/07/01 16:00:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.36 2014/07/01 16:02:18 mr_bones_ Exp $
+
+  01 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> quakeforge-0.7.2.ebuild:
+  punt svga support
 
   01 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/quakeforge-0.7.0-gentoo.patch, -quakeforge-0.7.0.ebuild:

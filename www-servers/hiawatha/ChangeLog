@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/hiawatha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.4 2014/06/21 10:26:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/ChangeLog,v 1.5 2014/07/01 16:28:33 pacho Exp $
+
+*hiawatha-9.6-r1 (01 Jul 2014)
+
+  01 Jul 2014; Pacho Ramos <pacho@gentoo.org> +files/hiawatha.service,
+  +hiawatha-9.6-r1.ebuild:
+  Add unit file (#515568 by Tim Mohlmann)
 
 *hiawatha-9.6 (21 Jun 2014)
 

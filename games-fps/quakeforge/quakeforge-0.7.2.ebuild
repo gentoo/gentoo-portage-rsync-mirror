@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.7.2.ebuild,v 1.1 2013/02/02 00:07:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.7.2.ebuild,v 1.2 2014/07/01 16:02:18 mr_bones_ Exp $
 
 EAPI=5
 inherit base eutils autotools games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cdinstall debug fbcon flac sdl svga X ncurses png vorbis zlib ipv6 xv dga alsa oss xdg wildmidi"
+IUSE="cdinstall debug fbcon flac sdl X ncurses png vorbis zlib ipv6 xv dga alsa oss xdg wildmidi"
 RESTRICT="userpriv"
 
 RDEPEND="
@@ -22,7 +22,6 @@ RDEPEND="
 	png? ( media-libs/libpng:0 )
 	flac? ( media-libs/flac )
 	sdl? ( media-libs/libsdl )
-	svga? ( media-libs/svgalib )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXext
@@ -59,18 +58,12 @@ src_configure() {
 	local clients=${QF_CLIENTS}
 	use fbcon && clients="${clients},fbdev"
 	use sdl && clients="${clients},sdl"
-	use svga && clients="${clients},svga"
 	use X && clients="${clients},x11"
 	[ "${clients:0:1}" == "," ] && clients=${clients:1}
 
 	local servers=${QF_SERVERS:-master,nq,qw,qtv}
 
 	local tools=${QF_TOOLS:-all}
-
-	local svgaconf	# use old school way for broken conf opts
-	use svga \
-		&& svgaconf="--with-svga=/usr" \
-		|| svgaconf="--without-svga"
 
 	addpredict "$(games_get_libdir)"
 	egamesconf \
@@ -81,7 +74,6 @@ src_configure() {
 		$(use_enable zlib) \
 		$(use_with ipv6) \
 		$(use_with fbcon fbdev) \
-		${svgaconf} \
 		$(use_with X x) \
 		$(use_enable xv vidmode) \
 		$(use_enable dga) \
@@ -95,6 +87,7 @@ src_configure() {
 		--enable-sound \
 		--disable-optimize \
 		--disable-Werror \
+		--without-svga \
 		${debugopts} \
 		--with-global-cfg="${GAMES_SYSCONFDIR}"/quakeforge.conf \
 		--with-sharepath="${GAMES_DATADIR}"/quake1 \

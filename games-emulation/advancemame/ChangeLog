@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/advancemame
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.49 2013/02/17 03:51:09 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.50 2014/07/01 16:09:08 mr_bones_ Exp $
+
+  01 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> advancemame-1.2.ebuild:
+  punt svga support
 
 *advancemame-1.2 (17 Feb 2013)
 
@@ -280,4 +283,3 @@
   24 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
 
   Initial version contributed by myself.
-
