@@ -1,6 +1,13 @@
 # ChangeLog for perl-core/Switch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Switch/ChangeLog,v 1.8 2014/02/03 13:33:11 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Switch/ChangeLog,v 1.9 2014/07/01 11:51:12 dilfridge Exp $
+
+*Switch-2.160.0-r1 (01 Jul 2014)
+
+  01 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Switch-2.160.0-r1.ebuild, -Switch-2.160.0.ebuild:
+  Revision bump for EAPI=5; mark stable on amd64, ppc, x86 based on testing by
+  zlogene, bug 511874
 
   03 Feb 2014; Akinori Hattori <hattya@gentoo.org> Switch-2.160.0.ebuild:
   keyword ~ia64 wrt bug #489676

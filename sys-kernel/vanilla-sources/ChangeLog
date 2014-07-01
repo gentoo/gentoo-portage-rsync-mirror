@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1300 2014/06/27 17:39:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1301 2014/07/01 11:47:29 mpagano Exp $
+
+*vanilla-sources-3.15.3 (01 Jul 2014)
+*vanilla-sources-3.14.10 (01 Jul 2014)
+*vanilla-sources-3.10.46 (01 Jul 2014)
+*vanilla-sources-3.4.96 (01 Jul 2014)
+
+  01 Jul 2014; Mike Pagano <mpagano@gentoo.org> -vanilla-sources-3.4.95.ebuild,
+  +vanilla-sources-3.4.96.ebuild, -vanilla-sources-3.10.45.ebuild,
+  +vanilla-sources-3.10.46.ebuild, -vanilla-sources-3.14.9.ebuild,
+  +vanilla-sources-3.14.10.ebuild, -vanilla-sources-3.15.2.ebuild,
+  +vanilla-sources-3.15.3.ebuild:
+  Version bumps for 3.4.96, 3.10.46, 3.14.10 and 3.15.3
 
   27 Jun 2014; Mike Pagano <mpagano@gentoo.org>
   -vanilla-sources-3.10.44.ebuild:
