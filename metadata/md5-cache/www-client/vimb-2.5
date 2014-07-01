@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=net-libs/libsoup-2.38:2.4 !gtk3? ( >=net-libs/webkit-gtk-1.5.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.5.0:3 x11-libs/gtk+:3 ) virtual/pkgconfig
+DESCRIPTION=a fast, lightweight, vim-like browser based on webkit
+EAPI=5
+HOMEPAGE=http://fanglingsu.github.io/vimb/
+IUSE=gtk3
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=net-libs/libsoup-2.38:2.4 !gtk3? ( >=net-libs/webkit-gtk-1.5.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.5.0:3 x11-libs/gtk+:3 )
+SLOT=0
+SRC_URI=https://github.com/fanglingsu/vimb/archive/2.5.tar.gz -> vimb-2.5.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=beb26d5da9f4e5b66b5b420ec804b814
