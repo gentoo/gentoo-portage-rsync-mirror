@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.4.ebuild,v 1.1 2014/05/05 16:47:50 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.6.ebuild,v 1.1 2014/07/01 10:34:50 ultrabug Exp $
 
 EAPI="5"
 
