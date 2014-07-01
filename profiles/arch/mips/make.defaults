@@ -1,6 +1,6 @@
 # Copyright 2008-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/make.defaults,v 1.12 2014/06/30 15:34:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/make.defaults,v 1.13 2014/07/01 14:34:52 mgorny Exp $
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
@@ -14,6 +14,7 @@ PROFILE_ARCH="mips"
 USE="-fortran -openmp"
 
 CHOST="mips-unknown-linux-gnu"
+CHOST_o32="mips-unknown-linux-gnu"
 
 LIBDIR_o32="lib"
 LIBDIR_n32="lib32"
