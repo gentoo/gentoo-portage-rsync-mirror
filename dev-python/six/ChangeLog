@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.43 2014/06/10 03:28:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.44 2014/07/01 04:10:59 radhermit Exp $
+
+*six-1.7.3 (01 Jul 2014)
+
+  01 Jul 2014; Tim Harder <radhermit@gentoo.org> +six-1.7.3.ebuild:
+  Version bump.
 
 *six-1.7.2 (10 Jun 2014)
 

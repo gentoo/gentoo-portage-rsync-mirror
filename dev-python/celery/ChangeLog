@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.34 2014/06/14 05:49:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.35 2014/07/01 04:07:46 patrick Exp $
+
+  01 Jul 2014; Patrick Lauer <patrick@gentoo.org> -celery-3.0.14-r1.ebuild,
+  -celery-3.0.21.ebuild:
+  Remove old versions with unsatisfied dependencies
 
 *celery-3.1.12 (14 Jun 2014)
 
