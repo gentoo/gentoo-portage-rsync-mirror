@@ -6,7 +6,6 @@
 		<remote-id type="pypi">celery</remote-id>
 	</upstream>
 	<use>
-		<flag name='sql'>Adds SQL support</flag>
 		<flag name='redis'>Enables redis support</flag>
 	</use>
 </pkgmetadata>

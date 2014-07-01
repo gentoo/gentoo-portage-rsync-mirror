@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9122 2014/06/30 08:05:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9123 2014/07/01 05:40:26 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jul 2014; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Remove silly lxc mask that interferes with docker
 
   30 Jun 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Cleanup p.mask

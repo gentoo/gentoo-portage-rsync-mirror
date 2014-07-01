@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15822 2014/06/30 08:05:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15823 2014/07/01 05:40:26 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -219,10 +219,6 @@ media-video/y4mscaler
 # Brian Evans <grknight@gentoo.org> (05 May 2014)
 # Mask erroenous slot for removal in 30 days
 dev-db/mysql++:3
-
-# Markos Chandras <hwoarang@gentoo.org> (03 May 2014)
-# Masked for further testing
->=app-emulation/lxc-1.0.0
 
 # Tom Wijsman <TomWij@gentoo.org> (03 May 2014)
 # Needs to be further tested and revised by both Java and Ruby herds.

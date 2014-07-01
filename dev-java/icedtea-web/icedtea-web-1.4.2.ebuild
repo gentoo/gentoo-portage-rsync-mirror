@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.2.ebuild,v 1.2 2014/06/27 14:39:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.2.ebuild,v 1.4 2014/07/01 05:36:48 ago Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -13,7 +13,7 @@ SRC_URI="http://icedtea.classpath.org/download/source/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="doc javascript +nsplugin test"
 

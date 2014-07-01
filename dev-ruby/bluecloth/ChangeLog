@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.80 2014/06/16 15:40:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.81 2014/07/01 05:59:50 graaff Exp $
+
+  01 Jul 2014; Hans de Graaff <graaff@gentoo.org> bluecloth-2.2.0-r2.ebuild:
+  dev-ruby/hoe is always a build-time dependency, not just for FEATURES=test.
+  Fixes bug 515728.
 
   16 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
   bluecloth-2.2.0-r2.ebuild:
