@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1.ebuild,v 1.11 2014/07/01 07:54:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1-r1.ebuild,v 1.1 2014/07/01 07:54:17 patrick Exp $
 
-EAPI=5
+EAPI=2
 WANT_AUTOMAKE=1.9
 inherit autotools eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.coyotegulch.com/distfiles/lib${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/libcoyotl-3.1.0
@@ -26,7 +26,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-free-fix.patch \
 		"${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-glibc-212.patch
+		"${FILESDIR}"/${P}-glibc-212.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
 
 	if has_version ">=dev-libs/libevocosm-3.3.0"; then
 		epatch ${FILESDIR}"/${P}-libevocosm.patch"

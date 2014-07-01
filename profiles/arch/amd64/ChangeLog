@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.266 2014/06/29 18:35:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.267 2014/07/01 07:47:50 mgorny Exp $
+
+  01 Jul 2014; Michał Górny <mgorny@gentoo.org> x32/make.defaults:
+  Update default ABI_X86 in x32 profile.
 
   29 Jun 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   Mask use-flag firebird and package dev-db/firebird for bug 460780
