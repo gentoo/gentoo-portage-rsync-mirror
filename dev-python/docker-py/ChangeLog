@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/docker-py
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.1 2014/07/01 21:40:15 chutzpah Exp $
+
+*docker-py-0.3.2 (01 Jul 2014)
+
+  01 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +docker-py-0.3.2.ebuild,
+  +files/docker-py-0.3.2-no-version-lock.patch, +metadata.xml:
+  Initial commit.
+
