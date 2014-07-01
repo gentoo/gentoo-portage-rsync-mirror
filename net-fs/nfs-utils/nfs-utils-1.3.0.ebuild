@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.3.0.ebuild,v 1.2 2014/06/24 22:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.3.0.ebuild,v 1.3 2014/07/01 16:41:57 pacho Exp $
 
 EAPI="4"
 
@@ -153,4 +153,13 @@ pkg_postinst() {
 		einfo "Copying default ${f##*/} from ${EPREFIX}/usr/$(get_libdir)/nfs to ${EPREFIX}/var/lib/nfs"
 		cp -pPR "${f}" "${EROOT}"/var/lib/nfs/
 	done
+
+	if systemd_is_booted; then
+		if [[ ${REPLACING_VERSIONS} < 1.3.0 ]]; then
+			ewarn "We have switched to upstream systemd unit files. Since"
+			ewarn "they got renamed, you should probably enable the new ones."
+			ewarn "You can run 'equery files nfs-utils | grep systemd'"
+			ewarn "to know what services you need to enable now."
+		fi
+	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r10.ebuild,v 1.13 2014/06/23 12:55:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r10.ebuild,v 1.14 2014/07/01 16:54:26 pacho Exp $
 
 EAPI="4"
 
@@ -107,6 +107,7 @@ src_install() {
 		rm usr/share/man/*/ntpd.8 || die
 	else
 		systemd_newunit "${FILESDIR}"/ntpd.service-r1 ntpd.service
+		use caps && sed -i '/ExecStart/ s|$| -u ntp:ntp|' "${ED}"/usr/lib/systemd/system/ntpd.service
 		systemd_enable_ntpunit 60-ntpd ntpd.service
 	fi
 

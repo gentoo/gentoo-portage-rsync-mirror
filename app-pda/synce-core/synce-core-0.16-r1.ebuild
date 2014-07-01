@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16-r1.ebuild,v 1.2 2012/11/28 16:58:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16-r1.ebuild,v 1.3 2014/07/01 16:46:46 ssuominen Exp $
 
 EAPI=4
 
@@ -26,7 +26,8 @@ RDEPEND="!app-pda/synce-connector
 	!dev-libs/libsynce
 	net-dialup/ppp
 	sys-apps/net-tools
-	virtual/udev[gudev]
+	virtual/libgudev
+	virtual/udev
 	python? (
 		>=dev-python/pyrex-0.9.6
 		dev-python/python-gudev

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.5.2.ebuild,v 1.2 2014/05/11 17:13:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.5.2.ebuild,v 1.3 2014/07/01 16:43:28 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.32
 	>=xfce-base/exo-0.6
 	>=xfce-base/libxfce4ui-4.10
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.20:0.10 )
-	udev? ( virtual/udev[gudev] )"
+	udev? ( virtual/libgudev:= )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.58 2014/03/31 20:29:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.59 2014/07/01 16:42:02 dev-zero Exp $
+
+*spice-0.12.5 (01 Jul 2014)
+
+  01 Jul 2014; Tiziano Müller <dev-zero@gentoo.org> +files/spice-0.12.5-fix-asse
+  rt-in-mjpeg_encoder_adjust_params_to_bit_rate.patch, +spice-0.12.5.ebuild:
+  Version bump (bug #510844), also make sure that required static-libs are
+  pulled in (bug #476268), do not run auto* anymore (bugs #493112, #514034).
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> spice-0.12.3-r1.ebuild,
   spice-0.12.4-r1.ebuild:

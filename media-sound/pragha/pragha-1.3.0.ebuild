@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.0.ebuild,v 1.3 2014/03/18 21:33:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.0.ebuild,v 1.4 2014/07/01 16:45:22 ssuominen Exp $
 
 EAPI=5
 inherit autotools xfconf
@@ -31,7 +31,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.4:3
 	mtp? ( >=media-libs/libmtp-1.1.0 )
 	peas? ( >=dev-libs/libpeas-1.0.0[gtk] )
 	playlist? ( >=dev-libs/totem-pl-parser-2.26 )
-	udev? ( >=virtual/udev-171[gudev] )"
+	udev? ( virtual/libgudev:= )"
 RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-meta:1.0"
 DEPEND="${COMMON_DEPEND}
