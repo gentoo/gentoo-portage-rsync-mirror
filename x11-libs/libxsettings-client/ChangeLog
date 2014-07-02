@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libxsettings-client
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.23 2013/01/05 12:31:09 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.24 2014/07/01 23:38:10 jer Exp $
+
+*libxsettings-client-0.17-r1 (01 Jul 2014)
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org>
+  -libxsettings-client-0.10.ebuild, +libxsettings-client-0.17-r1.ebuild,
+  -files/0.10-as-needed.patch:
+  Override gpe_src_configure (bug #515340). Add USE=static-libs (and
+  prune_libtool_files). Clean up sed scripts.
 
   05 Jan 2013; Raúl Porcel <armin76@gentoo.org>
   libxsettings-client-0.17.ebuild:

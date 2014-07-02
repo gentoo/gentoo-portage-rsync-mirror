@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.6.ebuild,v 1.2 2013/03/02 23:48:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.6.ebuild,v 1.3 2014/07/01 23:53:09 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils gnome2-utils qt4-r2
 
 DESCRIPTION="an open source, multi-platform generator of the Mandelbrot family fractals"
@@ -18,6 +18,7 @@ DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtopengl:4
+	virtual/glu
 "
 RDEPEND="${DEPEND}"
 

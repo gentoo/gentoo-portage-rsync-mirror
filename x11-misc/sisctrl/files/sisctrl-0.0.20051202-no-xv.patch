@@ -1,5 +1,5 @@
---- src/sisctrl.c.orig	2006-01-07 01:44:13.000000000 -0500
-+++ src/sisctrl.c	2006-01-07 01:44:29.000000000 -0500
+--- a/src/sisctrl.c
++++ b/src/sisctrl.c
 @@ -4067,7 +4067,9 @@
  			 ( (!(sc.sdflags & SiS_SD_SUPPORT2OVL)) || (sc.sd2flags & SiS_SD2_SUPPORT760OO) ) ) ?
  			 	1 : 0;

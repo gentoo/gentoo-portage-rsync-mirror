@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20051202.ebuild,v 1.5 2012/05/15 16:10:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20051202.ebuild,v 1.6 2014/07/01 23:59:38 jer Exp $
 
-EAPI=4
-inherit eutils
+EAPI=5
+inherit eutils flag-o-matic
 
 DESCRIPTION="tool that allows you to tune SiS drivers from X"
 HOMEPAGE="http://www.winischhofer.net/linuxsispart1.shtml#sisctrl"
@@ -28,4 +28,5 @@ DOCS="AUTHORS ChangeLog NEWS README"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-xv.patch
 	sed -i -e 's,/X11R6,,g' configure || die
+	append-flags -lm
 }
