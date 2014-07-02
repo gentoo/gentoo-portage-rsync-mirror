@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/dns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dns/ChangeLog,v 1.2 2014/02/26 20:19:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dns/ChangeLog,v 1.3 2014/07/02 06:03:12 gienah Exp $
+
+*dns-1.4.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +dns-1.4.0.ebuild:
+  Bump dns to 1.4.0
 
   26 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> dns-0.3.8.ebuild:
   Disabled tests as they use external DNS database (bug #502534 by eroen).

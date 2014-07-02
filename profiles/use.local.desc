@@ -1346,6 +1346,7 @@ dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/dataenc:tests - Build unit and quickcheck tests.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
+dev-haskell/entropy:halvm - Build for the HaLVM.
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
 dev-haskell/glib:closure_signals - Use the the GClosure-based signals implementation.
 dev-haskell/glut:usenativewindowslibraries - When compiling under Windows, use the native libraries instead of e.g. the ones coming with Cygwin.
