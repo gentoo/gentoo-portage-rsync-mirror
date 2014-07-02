@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/base-compat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-compat/ChangeLog,v 1.4 2014/03/09 07:57:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-compat/ChangeLog,v 1.5 2014/07/02 00:51:41 gienah Exp $
+
+*base-compat-0.5.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +base-compat-0.5.0.ebuild:
+  Bump base-compat to 0.5.0
 
 *base-compat-0.4.2 (09 Mar 2014)
 
