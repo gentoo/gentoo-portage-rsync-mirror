@@ -2,19 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-misc</herd>
-<!--
-he doesn't seem to be actively maintaining it, so smithj removed him as
-maintainer:
-
-<maintainer><email>liquidx@gentoo.org</email></maintainer>
--->
 <use>
-	<flag name='audacious'>Install <pkg>media-sound/audacious</pkg> theme</flag>
-	<flag name='cursors'>Install Bluecurve cursors</flag>
-	<flag name='gdm'>Install Bluecurve <pkg>gnome-base/gdm</pkg> theme</flag>
-	<flag name='icons'>Install Bluecurve icons</flag>
-	<flag name='kdm'>Install Bluecurve <pkg>kde-base/kdm</pkg> theme</flag>
-	<flag name='nautilus'>Install Bluecurve <pkg>gnome-base/nautilus</pkg>
-		icons</flag>
+<flag name='audacious'>Install <pkg>media-sound/audacious</pkg> theme</flag>
+<flag name='cursors'>Install Bluecurve cursors</flag>
+<flag name='gdm'>Install Bluecurve <pkg>gnome-base/gdm</pkg> theme</flag>
+<flag name='icons'>Install Bluecurve icons</flag>
+<flag name='kdm'>Install Bluecurve <pkg>kde-base/kdm</pkg> theme</flag>
+<flag name='nautilus'>Install Bluecurve <pkg>gnome-base/nautilus</pkg> icons</flag>
 </use>
 </pkgmetadata>

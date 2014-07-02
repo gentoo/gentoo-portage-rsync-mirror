@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/redhat-artwork
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.105 2013/12/26 18:51:41 creffett Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.106 2014/07/01 23:16:57 jer Exp $
+
+  01 Jul 2014; Jeroen Roovers <jer@gentoo.org> redhat-artwork-5.0.8-r4.ebuild,
+  metadata.xml:
+  Fix whitespace. sed must die(). Replace rm -rf with rm -r || die. Remove
+  pointless pkg_postinst() (bug #515424). Fix quoting in sed scripts. Combine
+  sed scripts that touch the same files. I could go on.
 
   26 Dec 2013; Chris Reffett <creffett@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:
