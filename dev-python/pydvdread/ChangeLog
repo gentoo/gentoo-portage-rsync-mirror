@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pydvdread
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydvdread/ChangeLog,v 1.1 2012/12/31 08:30:05 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydvdread/ChangeLog,v 1.2 2014/07/02 03:02:40 idella4 Exp $
+
+*pydvdread-1.0-r1 (02 Jul 2014)
+
+  02 Jul 2014; Ian Delaney <idella4@gentoo.org> +pydvdread-1.0-r1.ebuild,
+  -pydvdread-1.0.ebuild:
+  revbump, drop old, add missing dep, conversion -> distutils-r1, rm code re
+  tests since test restricted (see comment), fixes Bug #514354
 
 *pydvdread-1.0 (31 Dec 2012)
 
