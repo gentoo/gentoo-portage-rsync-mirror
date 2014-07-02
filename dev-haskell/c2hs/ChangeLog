@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/c2hs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.65 2013/12/24 12:57:06 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.66 2014/07/02 03:52:30 gienah Exp $
+
+*c2hs-0.17.2 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +c2hs-0.17.2.ebuild:
+  Bump c2hs to 0.17.2
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> c2hs-0.16.5.ebuild:
   Stable for x86, wrt bug #491982

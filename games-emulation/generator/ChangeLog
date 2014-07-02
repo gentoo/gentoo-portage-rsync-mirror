@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.27 2014/05/15 16:36:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.28 2014/07/02 03:48:43 mr_bones_ Exp $
+
+*generator-0.35_p4 (02 Jul 2014)
+
+  02 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/generator-0.35_p4-configure.patch,
+  +files/generator-0.35_p4-execstacks.patch,
+  +files/generator-0.35_p4-underlink.patch, +generator-0.35_p4.ebuild:
+  patch version bump
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> generator-0.35_p3.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

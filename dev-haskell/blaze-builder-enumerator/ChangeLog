@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/blaze-builder-enumerator
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder-enumerator/ChangeLog,v 1.1 2013/11/14 09:41:01 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder-enumerator/ChangeLog,v 1.2 2014/07/02 03:53:33 gienah Exp $
+
+*blaze-builder-enumerator-0.2.0.6 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org>
+  +blaze-builder-enumerator-0.2.0.6.ebuild:
+  Bump blaze-builder-enumerator to 0.2.0.6
 
 *blaze-builder-enumerator-0.2.0.5-r1 (14 Nov 2013)
 

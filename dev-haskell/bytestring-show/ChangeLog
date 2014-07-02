@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/bytestring-show
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bytestring-show/ChangeLog,v 1.6 2013/05/11 18:45:01 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bytestring-show/ChangeLog,v 1.7 2014/07/02 03:54:44 gienah Exp $
+
+*bytestring-show-0.3.5.6 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +bytestring-show-0.3.5.6.ebuild:
+  Bump bytestring-show to 0.3.5.6
 
 *bytestring-show-0.3.5.5 (11 May 2013)
 

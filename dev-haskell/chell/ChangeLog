@@ -1,0 +1,8 @@
+# ChangeLog for dev-haskell/chell
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chell/ChangeLog,v 1.1 2014/07/02 03:59:05 gienah Exp $
+
+*chell-0.4 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +chell-0.4.ebuild, +metadata.xml:
+  Bump chell to 0.4
