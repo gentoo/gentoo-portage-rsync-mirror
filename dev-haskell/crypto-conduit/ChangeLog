@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/crypto-conduit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-conduit/ChangeLog,v 1.3 2014/03/09 12:37:26 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-conduit/ChangeLog,v 1.4 2014/07/02 04:13:54 gienah Exp $
+
+*crypto-conduit-0.5.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +crypto-conduit-0.5.3.ebuild,
+  metadata.xml:
+  Bump crypto-conduit to 0.5.3
 
 *crypto-conduit-0.5.2.2 (09 Mar 2014)
 

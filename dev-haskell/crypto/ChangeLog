@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/crypto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.7 2012/12/22 21:23:34 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.8 2014/07/02 04:12:41 gienah Exp $
+
+*crypto-4.2.5.1-r1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +crypto-4.2.5.1-r1.ebuild:
+  Specify the quickcheck slot 2 in crypto-4.2.5.1-r1
 
 *crypto-4.2.5.1 (22 Dec 2012)
 

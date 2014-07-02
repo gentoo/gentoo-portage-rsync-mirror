@@ -1341,8 +1341,10 @@ dev-haskell/comonad:test-doctests - Run the doctests test suite
 dev-haskell/conduit:nohandles - experimental code to use raw system calls in place of handles. Not recommended for general use
 dev-haskell/cpu:executable - build 'cpuid' tool
 dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
+dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
+dev-haskell/dataenc:tests - Build unit and quickcheck tests.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
 dev-haskell/glib:closure_signals - Use the the GClosure-based signals implementation.

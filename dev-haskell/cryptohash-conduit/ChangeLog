@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/cryptohash-conduit
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptohash-conduit/ChangeLog,v 1.1 2014/07/02 04:17:06 gienah Exp $
+
+*cryptohash-conduit-0.1.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +cryptohash-conduit-0.1.1.ebuild,
+  +metadata.xml:
+  Add cryptohash-conduit 0.1.1

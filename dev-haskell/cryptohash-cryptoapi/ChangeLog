@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/cryptohash-cryptoapi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptohash-cryptoapi/ChangeLog,v 1.1 2013/08/26 12:24:30 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptohash-cryptoapi/ChangeLog,v 1.2 2014/07/02 04:18:40 gienah Exp $
+
+*cryptohash-cryptoapi-0.1.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org>
+  +cryptohash-cryptoapi-0.1.3.ebuild:
+  Bump cryptohash-cryptoapi to 0.1.3
 
 *cryptohash-cryptoapi-0.1.0 (26 Aug 2013)
 

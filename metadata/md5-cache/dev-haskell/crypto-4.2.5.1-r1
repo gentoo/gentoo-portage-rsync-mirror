@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prerm setup test
+DEPEND=dev-haskell/hunit:=[profile?] >=dev-haskell/quickcheck-2.4.0.1:2=[profile?] dev-haskell/random:=[profile?] >=dev-lang/ghc-6.10.4:= >=dev-haskell/cabal-1.2 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=Collects together existing Haskell cryptographic functions into a package
+EAPI=5
+HOMEPAGE=http://hackage.haskell.org/package/Crypto
+IUSE=doc hscolour profile
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD GPL-2
+RDEPEND=dev-haskell/hunit:=[profile?] >=dev-haskell/quickcheck-2.4.0.1:2=[profile?] dev-haskell/random:=[profile?] >=dev-lang/ghc-6.10.4:=
+SLOT=0/4.2.5.1
+SRC_URI=mirror://hackage/packages/archive/Crypto/4.2.5.1/Crypto-4.2.5.1.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=cf4f51637c154dc2cd4ff1a8967e720c
