@@ -1,6 +1,15 @@
 # ChangeLog for games-action/d2x-rebirth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.7 2014/05/15 16:22:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.9 2014/07/02 05:49:11 mr_bones_ Exp $
+
+  02 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -d2x-rebirth-0.50.ebuild:
+  old
+
+*d2x-rebirth-0.58.1 (02 Jul 2014)
+
+  02 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +d2x-rebirth-0.58.1.ebuild, +files/d2x-rebirth-0.58.1-flags.patch:
+  version bump
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> d2x-rebirth-0.57.3.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
@@ -31,4 +40,3 @@
   +d2x-rebirth-0.50.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
   #137309.
-
