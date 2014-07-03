@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.54 2014/02/22 07:56:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.55 2014/07/03 13:11:09 gienah Exp $
+
+*darcs-2.8.4-r6 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +darcs-2.8.4-r6.ebuild,
+  +files/darcs-2.8.4-fix-nonatomic-global.patch,
+  +files/darcs-2.8.4-ghc-7.8-part-2.patch,
+  +files/darcs-2.8.4-issue2364-part-2.patch, +files/darcs-2.8.4-issue2364.patch:
+  Update darcs-2.8.4-r6 from the gentoo-haskell overlay so it will build with
+  recent haskell packages and ghc 7.8
 
   22 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> -darcs-2.8.0.ebuild,
   -files/darcs-2.8.0-mtl-2.1.patch:
