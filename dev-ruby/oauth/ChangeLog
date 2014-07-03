@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.24 2014/05/21 02:24:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.25 2014/07/03 10:15:23 graaff Exp $
+
+*oauth-0.4.7-r2 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org> +oauth-0.4.7-r2.ebuild:
+  Add ruby20. Drop x86, bug 511176.
 
 *oauth-0.4.7-r1 (21 May 2014)
 
