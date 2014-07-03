@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r4.ebuild,v 1.3 2014/06/18 19:35:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r4.ebuild,v 1.4 2014/07/03 20:27:10 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils multilib-minimal
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="doc static-libs"
 
 RDEPEND=">=media-libs/tiff-3.9.7-r1[${MULTILIB_USEDEP}]
-	>=media-libs/giflib-4.2.3[${MULTILIB_USEDEP}]
+	>=media-libs/giflib-4.1.6-r3[${MULTILIB_USEDEP}]
 	>=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}]
 	>=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
 	>=x11-libs/libICE-1.0.8-r1[${MULTILIB_USEDEP}]

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=|| ( ( >=media-libs/openal-1.15.1[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r4[video,joystick,opengl,abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) ) virtual/pkgconfig
+DESCRIPTION=Linux port of Aliens vs Predator
+EAPI=5
+HOMEPAGE=http://www.icculus.org/avp/
+KEYWORDS=~amd64 ~x86
+LICENSE=AvP
+RDEPEND=|| ( ( >=media-libs/openal-1.15.1[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r4[video,joystick,opengl,abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) ) games-misc/games-envd
+SLOT=0
+SRC_URI=mirror://gentoo/avp-20070130.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=3bf8976c96b870f405d9bac027772ec5

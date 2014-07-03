@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.20 2014/06/18 19:35:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.21 2014/07/03 20:26:03 mgorny Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ IUSE="bzip2 gif jpeg mmx mp3 png static-libs tiff X zlib"
 RDEPEND="=media-libs/freetype-2*[${MULTILIB_USEDEP}]
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
-	gif? ( >=media-libs/giflib-4.2.3[${MULTILIB_USEDEP}] )
+	gif? ( >=media-libs/giflib-4.1.6-r3[${MULTILIB_USEDEP}] )
 	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
 	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
 	tiff? ( >=media-libs/tiff-4.0.3-r6:0[${MULTILIB_USEDEP}] )

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.125 2014/06/23 14:11:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.126 2014/07/03 20:26:03 mgorny Exp $
+
+  03 Jul 2014; Michał Górny <mgorny@gentoo.org> imlib2-1.4.6-r2.ebuild,
+  imlib2-9999.ebuild:
+  Lower the media-libs/giflib dependency since multilib support was backported.
 
   23 Jun 2014; Michał Górny <mgorny@gentoo.org>
   +files/imlib2-1.4.6-out-of-source-build.patch, imlib2-1.4.6-r2.ebuild:
