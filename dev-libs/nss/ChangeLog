@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.365 2014/06/19 03:17:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.366 2014/07/03 19:43:09 axs Exp $
+
+*nss-3.16.1 (03 Jul 2014)
+
+  03 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +nss-3.16.1.ebuild,
+  -nss-3.16-r1.ebuild:
+  version bump, compatibility improvements on gx86-multilib port, dropped old
 
   19 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org> nss-3.16-r1.ebuild:
   Update emul-linux-x86-baselibs blocker revision.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16-r1.ebuild,v 1.4 2014/06/19 03:17:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16.1.ebuild,v 1.1 2014/07/03 19:43:09 axs Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -108,41 +108,45 @@ nssarch() {
 }
 
 nssbits() {
-	# use ABI first, this will work for most cases
-	case "${ABI}" in
-		alpha|arm|hppa|m68k|o32|ppc|s390|sh|sparc|x86) ;;
-		n32) echo USE_N32=1;;
-		x32) echo USE_X32=1;;
-		s390x|*64) echo USE_64=1;;
-		default) # no abi actually set, fall back to old check
-			einfo "Running a short build test to determine 64bit'ness"
-			echo > "${T}"/test.c || die
-			${CC} ${CFLAGS} ${CPPFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
-			case $(file "${T}"/test.o) in
-				*32-bit*x86-64*) echo USE_X32=1;;
-				*64-bit*|*ppc64*|*x86_64*) echo USE_64=1;;
-				*32-bit*|*ppc*|*i386*) ;;
-				*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
-			esac ;;
-		*) ;;
+	local cc="${1}CC" cppflags="${1}CPPFLAGS" cflags="${1}CFLAGS"
+	echo > "${T}"/test.c || die
+	${!cc} ${!cppflags} ${!cflags} -c "${T}"/test.c -o "${T}"/${cc}-test.o || die
+	case $(file "${T}"/${cc}-test.o) in
+		*32-bit*x86-64*) echo USE_X32=1;;
+		*64-bit*|*ppc64*|*x86_64*) echo USE_64=1;;
+		*32-bit*|*ppc*|*i386*) ;;
+		*) die "Failed to detect whether ${cc} is 64bits or 32bits, disable distcc if you're using it, please";;
 	esac
 }
 
 multilib_src_compile() {
 	tc-export AR RANLIB {BUILD_,}{CC,PKG_CONFIG}
+
+	# use ABI to determine bit'ness, or fallback if unset
+	local buildbits mybits
+	case "${ABI}" in
+		n32) mybits="USE_N32=1";;
+		x32) mybits="USE_X32=1";;
+		s390x|*64) mybits="USE_64=1";;
+		default) mybits=$(nssbits);;
+	esac
+	# bitness of host may differ from target
+	if tc-is-cross-compiler; then
+		buildbits=$(nssbits BUILD_)
+	fi
+
 	local makeargs=(
 		CC="${CC}"
 		AR="${AR} rc \$@"
 		RANLIB="${RANLIB}"
 		OPTIMIZER=
-		$(nssbits)
+		${mybits}
 	)
 
 	# Take care of nspr settings #436216
 	local myCPPFLAGS="${CPPFLAGS} $(${PKG_CONFIG} nspr --cflags)"
 	local myLDFLAGS="${LDFLAGS} $(${PKG_CONFIG} nspr --libs-only-L)"
 	unset NSPR_INCLUDE_DIR
-	#export NSPR_LIB_DIR=${T}/fake-dir-${ABI} - do this further down now
 
 	# Do not let `uname` be used.
 	if use kernel_linux ; then
@@ -165,10 +169,10 @@ multilib_src_compile() {
 	# Build the host tools first.
 	LDFLAGS="${BUILD_LDFLAGS}" \
 	XCFLAGS="${BUILD_CFLAGS}" \
-	NSPR_LIB_DIR="${T}/${ABI}-fake-dir" \
+	NSPR_LIB_DIR="${T}/fake-dir" \
 	emake -j1 -C coreconf \
 		CC="${BUILD_CC}" \
-		$(nssbits BUILD_)
+		${buildbits:-${mybits}}
 	makeargs+=( NSINSTALL="${PWD}/$(find -type f -name nsinstall)" )
 
 	# Then build the target tools.
