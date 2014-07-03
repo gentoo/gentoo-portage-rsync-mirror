@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.295 2014/06/26 20:07:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.297 2014/07/03 05:58:21 graaff Exp $
+
+*rails-4.0.8 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org> +rails-4.0.8.ebuild:
+  Version bump to Rails 4.0.8 for security bug 516084.
+
+*rails-3.2.19 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org> +rails-3.2.19.ebuild:
+  Version bump to Rails 3.2.19 for security bug 516084.
 
 *rails-4.1.2 (26 Jun 2014)
 

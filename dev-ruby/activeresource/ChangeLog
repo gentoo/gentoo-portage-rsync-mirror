@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.172 2014/05/12 19:02:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.173 2014/07/03 05:38:23 graaff Exp $
+
+*activeresource-3.2.19 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org>
+  +activeresource-3.2.19.ebuild:
+  Version bump to Rails 3.2.19 for security bug 516084.
 
   12 May 2014; Hans de Graaff <graaff@gentoo.org>
   -activeresource-3.2.17.ebuild:
