@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.272 2014/07/03 05:57:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.273 2014/07/03 06:20:28 graaff Exp $
+
+*activerecord-4.1.4 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org> +activerecord-4.1.4.ebuild:
+  Version bump to Rails 4.1.4 for security bug 516084.
 
 *activerecord-4.0.8 (03 Jul 2014)
 

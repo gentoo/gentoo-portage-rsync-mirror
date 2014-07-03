@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.82 2014/07/03 05:58:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.83 2014/07/03 06:20:39 graaff Exp $
+
+*railties-4.1.4 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org> +railties-4.1.4.ebuild:
+  Version bump to Rails 4.1.4 for security bug 516084.
 
 *railties-4.0.8 (03 Jul 2014)
 

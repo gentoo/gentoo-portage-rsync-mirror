@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/openal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/openal/ChangeLog,v 1.17 2014/02/24 02:13:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/openal/ChangeLog,v 1.18 2014/07/03 06:08:04 gienah Exp $
+
+*openal-1.6.0.0 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +openal-1.6.0.0.ebuild:
+  Bump openal to 1.6.0.0
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> openal-1.4.0.2.ebuild:
   x86 stable wrt bug #484762
