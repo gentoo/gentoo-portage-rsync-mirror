@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/arch/x64/make.defaults,v 1.1 2014/07/03 17:31:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/arch/x64/make.defaults,v 1.2 2014/07/03 18:51:10 grobian Exp $
 
 # multilib build stuff, single ABI (no multilib)
 MULTILIB_ABIS="amd64"
 DEFAULT_ABI="amd64"
 ABI="amd64"
-
+IUSE_IMPLICIT="abi_x86_64"
