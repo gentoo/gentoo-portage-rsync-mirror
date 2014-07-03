@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1-r1.ebuild,v 1.3 2014/06/25 08:34:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1-r1.ebuild,v 1.4 2014/07/03 16:29:52 bicatali Exp $
 
 EAPI=5
 
@@ -132,7 +132,7 @@ src_test() {
 }
 
 src_install() {
-	emake install PREFIX="${D}/usr"
+	emake install PREFIX="${ED}/usr"
 	cat > 99julia <<-EOF
 		LDPATH=${EROOT%/}/usr/$(get_libdir)/julia
 	EOF
