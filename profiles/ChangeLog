@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9128 2014/07/03 09:20:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9129 2014/07/03 16:45:24 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/alpha/package.use.stable.mask, arch/arm/package.use.stable.mask,
+  arch/ia64/package.use.stable.mask, arch/powerpc/ppc32/package.use.mask,
+  +arch/powerpc/ppc32/package.use.stable.mask,
+  arch/powerpc/ppc64/package.use.mask,
+  +arch/powerpc/ppc64/package.use.stable.mask, arch/sparc/package.use.mask,
+  +arch/sparc/package.use.stable.mask:
+  Update masks for gnome3
 
   03 Jul 2014; Pacho Ramos <pacho@gentoo.org> arch/arm/package.use.mask:
   Update due bug #516130

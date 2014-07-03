@@ -1,12 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.36 2014/07/02 14:55:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.37 2014/07/03 16:45:25 pacho Exp $
 
 # This file requires >=portage-2.1.1
-
-# Pacho Ramos <pacho@gentoo.org> (02 Jul 2014)
-# Mask due Gnome3 not going to be stabilized on this arch
->=gnome-base/gnome-desktop-2.32.1-r2 license-docs
 
 # Julian Ospald <hasufell@gentoo.org> (23 Nov 2013)
 # FIXME: app-arch/innoextract not available under ppc yet

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.27 2014/07/03 16:30:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.32 2014/07/03 16:52:31 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -317,9 +317,11 @@ net-fs/samba abi_x86_32
 net-libs/glib-networking abi_x86_32
 net-libs/gnutls abi_x86_32
 net-libs/gssdp abi_x86_32
+net-libs/gupnp abi_x86_32
 net-libs/libdom abi_x86_32
 net-libs/libgssglue abi_x86_32
 net-libs/libhubbub abi_x86_32
+net-libs/libnice abi_x86_32
 net-libs/libproxy abi_x86_32
 net-libs/libsoup abi_x86_32
 net-libs/libtirpc abi_x86_32
@@ -329,6 +331,7 @@ net-libs/polarssl abi_x86_32
 net-misc/curl abi_x86_32
 net-nds/openldap abi_x86_32
 net-print/cups abi_x86_32
+net-print/libgnomecups abi_x86_32
 net-wireless/bluez abi_x86_32
 sci-libs/djbfft abi_x86_32
 sci-libs/fftw abi_x86_32
@@ -395,6 +398,7 @@ virtual/pkgconfig abi_x86_32
 x11-libs/cairo abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 x11-libs/gtk+ abi_x86_32
+x11-libs/gtkglext abi_x86_32
 x11-libs/libdrm abi_x86_32
 x11-libs/libICE abi_x86_32
 x11-libs/libnotify abi_x86_32
@@ -430,6 +434,7 @@ x11-libs/libXxf86dga abi_x86_32
 x11-libs/libXxf86vm abi_x86_32
 x11-libs/motif abi_x86_32
 x11-libs/pango abi_x86_32
+x11-libs/pangox-compat abi_x86_32
 x11-libs/pixman abi_x86_32
 x11-proto/compositeproto abi_x86_32
 x11-proto/damageproto abi_x86_32
