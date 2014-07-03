@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/stream
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.13 2012/11/19 12:12:40 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.14 2014/07/02 13:47:31 gienah Exp $
+
+*stream-0.4.7.1-r1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +stream-0.4.7.1-r1.ebuild:
+  Bump stream to 0.4.7.1-r1
 
 *stream-0.4.6.1 (19 Nov 2012)
 

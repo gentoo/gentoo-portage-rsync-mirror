@@ -1,0 +1,8 @@
+# ChangeLog for dev-haskell/hastache
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hastache/ChangeLog,v 1.1 2014/07/02 10:04:31 gienah Exp $
+
+*hastache-0.6.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +hastache-0.6.0.ebuild:
+  Bump hastache to 0.6.0

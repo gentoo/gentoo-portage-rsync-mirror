@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.54 2014/07/01 12:37:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.55 2014/07/02 10:57:53 mgorny Exp $
+
+  02 Jul 2014; Michał Górny <mgorny@gentoo.org>
+  linux/musl/mips/mipsel/make.defaults, linux/uclibc/mips/mipsel/make.defaults:
+  Fix wrongly inherited CHOST_o32 in {musl,uclibc/mips/mipsel profiles.
 
   01 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
   linux/musl/amd64/make.defaults, linux/musl/amd64/use.force,

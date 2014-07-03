@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/parallel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.19 2013/03/31 10:23:47 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.20 2014/07/02 11:59:41 gienah Exp $
+
+*parallel-3.2.0.4 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +parallel-3.2.0.4.ebuild:
+  Bump parallel to 3.2.0.4
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> parallel-3.2.0.3.ebuild:
   Stable for sparc, wrt bug #456508

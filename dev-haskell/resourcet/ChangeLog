@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/resourcet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resourcet/ChangeLog,v 1.6 2014/03/09 12:56:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resourcet/ChangeLog,v 1.7 2014/07/02 14:43:22 gienah Exp $
+
+*resourcet-1.1.2.2 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +resourcet-1.1.2.2.ebuild:
+  Bump resourcet to 1.1.2.2
 
 *resourcet-0.4.10 (09 Mar 2014)
 

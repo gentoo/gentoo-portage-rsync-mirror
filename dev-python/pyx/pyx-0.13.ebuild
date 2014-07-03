@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.13.ebuild,v 1.2 2014/06/29 11:26:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/pyx-0.13.ebuild,v 1.3 2014/07/02 13:48:27 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python3_3 )
@@ -18,10 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
-RDEPEND="virtual/tex-base"
+RDEPEND="virtual/tex-base
+		dev-texlive/texlive-basic"
+
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base
-	dev-python/sphinx[latex,${PYTHON_USEDEP}] )"
+		dev-python/sphinx[latex,${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 

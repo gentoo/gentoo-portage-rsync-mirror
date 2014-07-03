@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare prerm setup test
+DEPEND=>=dev-haskell/binary-0.4:=[profile?] <dev-haskell/binary-0.8:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/parallel:=[profile?] dev-haskell/parsec:=[profile?] >=dev-haskell/quickcheck-2:2=[profile?] dev-haskell/random:=[profile?] >=dev-haskell/tagsoup-0.8:=[profile?] >=dev-lang/ghc-6.10.4:= >=dev-haskell/cabal-1.6 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=A bioinformatics library
+EAPI=5
+HOMEPAGE=http://biohaskell.org/Libraries/Bio
+IUSE=+examples test doc hscolour profile
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=>=dev-haskell/binary-0.4:=[profile?] <dev-haskell/binary-0.8:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/parallel:=[profile?] dev-haskell/parsec:=[profile?] >=dev-haskell/quickcheck-2:2=[profile?] dev-haskell/random:=[profile?] >=dev-haskell/tagsoup-0.8:=[profile?] >=dev-lang/ghc-6.10.4:=
+SLOT=0/0.5.3
+SRC_URI=mirror://hackage/packages/archive/bio/0.5.3/bio-0.5.3.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=b7d1f62b9eeccd87b7947321bbaa0f98

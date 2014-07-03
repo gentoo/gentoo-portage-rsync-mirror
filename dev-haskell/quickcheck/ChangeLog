@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/quickcheck
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.68 2013/07/21 17:44:15 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.69 2014/07/02 12:32:06 gienah Exp $
+
+*quickcheck-2.7.5 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +quickcheck-2.7.5.ebuild:
+  Bump quickcheck to 2.7.5
 
   21 Jul 2013; Christoph Junghans <ottxor@gentoo.org> quickcheck-2.6.ebuild:
   added ~amd64-linux (tested by me)

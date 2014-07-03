@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=amd64? ( http://developer.download.nvidia.com/compute/cuda/6_0/rel/installers/cuda_6.0.37_linux_64.run ) x86? ( http://developer.download.nvidia.com/compute/cuda/6_0/rel/installers/cuda_6.0.37_linux_32.run )
 _eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=69345e019955c60c6955ac931f49fca4
+_md5_=515f6b2649049af4ab6cda7811a3fd65

@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.91 2014/06/18 18:50:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.92 2014/07/02 23:57:25 chutzpah Exp $
+
+*ganeti-2.11.2-r3 (02 Jul 2014)
+*ganeti-2.10.5-r3 (02 Jul 2014)
+
+  02 Jul 2014; Patrick McLean <chutzpah@gentoo.org> -ganeti-1.2.9.ebuild,
+  -ganeti-2.0.6.ebuild, -ganeti-2.1.8.ebuild, -ganeti-2.2.2.ebuild,
+  -ganeti-2.3.1.ebuild, -ganeti-2.5.2-r2.ebuild, -ganeti-2.6.2.ebuild,
+  -ganeti-2.10.5-r2.ebuild, +ganeti-2.10.5-r3.ebuild, -ganeti-2.11.2-r1.ebuild,
+  -ganeti-2.11.2-r2.ebuild, +ganeti-2.11.2-r3.ebuild, files/ganeti.initd-r3:
+  Revision bump, make failure to start ganeti-kvmd not fatal since it fails if
+  user shutdowns are disabled. Clean out older versions.
 
 *ganeti-2.11.2-r2 (18 Jun 2014)
 

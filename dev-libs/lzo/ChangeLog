@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.80 2014/06/30 14:44:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.81 2014/07/02 14:09:50 ssuominen Exp $
+
+*lzo-2.08-r1 (02 Jul 2014)
+
+  02 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +lzo-2.08-r1.ebuild:
+  Move native liblzo2 to / wrt #471640 by Mike Gilbert
 
   30 Jun 2014; Jeroen Roovers <jer@gentoo.org> lzo-2.08.ebuild:
   Stable for HPPA (bug #515238).

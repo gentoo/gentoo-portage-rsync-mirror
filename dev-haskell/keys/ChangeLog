@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/keys
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/keys/ChangeLog,v 1.1 2013/12/11 06:09:33 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/keys/ChangeLog,v 1.2 2014/07/02 11:14:01 gienah Exp $
+
+*keys-3.10.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +keys-3.10.1.ebuild:
+  Bump keys to 3.10.1
 
 *keys-3.10 (11 Dec 2013)
 

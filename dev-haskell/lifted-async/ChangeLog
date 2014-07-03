@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/lifted-async
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-async/ChangeLog,v 1.1 2014/07/02 15:28:37 gienah Exp $
+
+*lifted-async-0.2.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +lifted-async-0.2.0.ebuild,
+  +metadata.xml:
+  Add lifted-async

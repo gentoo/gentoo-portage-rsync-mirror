@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/dlist-instances
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist-instances/ChangeLog,v 1.1 2014/07/02 14:45:37 gienah Exp $
+
+*dlist-instances-0.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +dlist-instances-0.1.ebuild,
+  +metadata.xml:
+  Add dlist-instances

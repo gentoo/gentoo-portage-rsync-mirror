@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tasty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty/ChangeLog,v 1.5 2014/03/12 20:55:33 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty/ChangeLog,v 1.6 2014/07/02 14:01:45 gienah Exp $
+
+*tasty-0.8.1.2 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +tasty-0.8.1.2.ebuild:
+  Bump tasty to 0.8.1.2
 
 *tasty-0.8 (12 Mar 2014)
 *tasty-0.7 (12 Mar 2014)

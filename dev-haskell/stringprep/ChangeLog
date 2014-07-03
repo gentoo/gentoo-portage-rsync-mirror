@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/stringprep
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stringprep/ChangeLog,v 1.3 2013/11/24 19:38:36 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stringprep/ChangeLog,v 1.4 2014/07/02 13:50:50 gienah Exp $
+
+*stringprep-1.0.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +stringprep-1.0.0.ebuild:
+  Bump stringprep to 1.0.0
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> stringprep-0.1.5.ebuild:
   Stable for x86, wrt bug #488750

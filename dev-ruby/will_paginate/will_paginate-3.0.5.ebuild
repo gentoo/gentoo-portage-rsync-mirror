@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/will_paginate-3.0.5.ebuild,v 1.2 2014/04/19 03:23:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/will_paginate-3.0.5.ebuild,v 1.3 2014/07/02 08:13:33 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -25,3 +25,7 @@ ruby_add_bdepend "
 		=dev-ruby/rails-3*
 		dev-ruby/mocha
 	)"
+
+all_ruby_prepare() {
+	sed -e '1igem "rails", "~> 3.2.0"' -i spec/spec_helper.rb || die
+}

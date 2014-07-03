@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hslogger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.25 2014/03/03 23:36:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.26 2014/07/02 10:09:08 gienah Exp $
+
+*hslogger-1.2.4 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +hslogger-1.2.4.ebuild:
+  Bump hslogger to 1.2.4
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> hslogger-1.2.1-r2.ebuild:
   amd64 stable, bug #491990

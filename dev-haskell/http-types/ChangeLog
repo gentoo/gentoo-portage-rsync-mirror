@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/http-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-types/ChangeLog,v 1.9 2014/03/05 09:08:58 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-types/ChangeLog,v 1.10 2014/07/02 10:52:14 gienah Exp $
+
+*http-types-0.8.5 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +http-types-0.8.5.ebuild:
+  Bump http-types to 0.8.5
 
   05 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> -http-types-0.8.0.ebuild,
   -http-types-0.8.1.ebuild:

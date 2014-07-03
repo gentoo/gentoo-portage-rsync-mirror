@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/xml-hamlet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-hamlet/ChangeLog,v 1.3 2013/12/11 06:53:55 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-hamlet/ChangeLog,v 1.4 2014/07/02 14:26:27 gienah Exp $
+
+*xml-hamlet-0.4.0.8 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +xml-hamlet-0.4.0.8.ebuild:
+  Bump xml-hamlet to 0.4.0.8
 
 *xml-hamlet-0.4.0.6 (11 Dec 2013)
 

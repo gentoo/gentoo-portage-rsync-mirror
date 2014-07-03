@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/ekg-core
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg-core/ChangeLog,v 1.1 2014/07/02 07:58:32 gienah Exp $
+
+*ekg-core-0.1.0.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +ekg-core-0.1.0.1.ebuild,
+  +metadata.xml:
+  Bump ekg-core to 0.1.0.1

@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/equivalence
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/equivalence/ChangeLog,v 1.1 2014/07/02 08:03:07 gienah Exp $
+
+*equivalence-0.2.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +equivalence-0.2.3.ebuild,
+  +metadata.xml:
+  Add equivalence

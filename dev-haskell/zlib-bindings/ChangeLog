@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/zlib-bindings
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.3 2013/11/24 19:39:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.4 2014/07/02 14:35:28 gienah Exp $
+
+*zlib-bindings-0.1.1.5 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +zlib-bindings-0.1.1.5.ebuild:
+  Bump zlib-bindings to 0.1.1.5
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> zlib-bindings-0.1.1.3.ebuild:
   Stable for x86, wrt bug #488750

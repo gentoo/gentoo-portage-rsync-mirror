@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/ekg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg/ChangeLog,v 1.1 2014/03/12 21:03:58 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg/ChangeLog,v 1.2 2014/07/02 07:57:51 gienah Exp $
+
+*ekg-0.4.0.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +ekg-0.4.0.0.ebuild:
+  Bump ekg to 0.4.0.0
 
 *ekg-0.3.1.4 (12 Mar 2014)
 

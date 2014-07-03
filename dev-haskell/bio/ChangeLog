@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/bio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bio/ChangeLog,v 1.1 2013/09/12 20:19:20 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bio/ChangeLog,v 1.2 2014/07/02 15:12:12 gienah Exp $
+
+*bio-0.5.3-r1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +bio-0.5.3-r1.ebuild:
+  Specify slot 2 for quickcheck 2 in bio
 
 *bio-0.5.3 (12 Sep 2013)
 

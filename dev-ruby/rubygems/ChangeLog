@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.231 2014/06/14 09:47:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.234 2014/07/02 10:33:11 mrueg Exp $
+
+  02 Jul 2014; Manuel Rüger <mrueg@gentoo.org> rubygems-2.0.14-r1.ebuild,
+  rubygems-2.0.14.ebuild, rubygems-2.0.3.ebuild:
+  Stable on amd64. Bug #508996. Remove ruby18 references.
+
+  02 Jul 2014; Manuel Rüger <mrueg@gentoo.org> -rubygems-2.0.10.ebuild,
+  -rubygems-2.0.8.ebuild, rubygems-2.0.14-r1.ebuild, rubygems-2.0.14.ebuild:
+  Cleanup old. Update elog about eselect.
+
+  02 Jul 2014; Tobias Klausmann <klausman@gentoo.org> rubygems-2.0.14.ebuild:
+  Stable on alpha, bug #508996
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> rubygems-2.0.14.ebuild:
   x86 stable wrt bug #508996

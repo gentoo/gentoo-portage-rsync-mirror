@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.43 2014/02/21 19:50:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.44 2014/07/02 08:03:56 gienah Exp $
+
+*fgl-5.5.0.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +fgl-5.5.0.1.ebuild:
+  Bump fgl to 5.5.0.1
 
 *fgl-5.4.2.4-r1 (21 Feb 2014)
 

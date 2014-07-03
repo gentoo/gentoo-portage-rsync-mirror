@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/prelude-extras
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/prelude-extras/ChangeLog,v 1.1 2014/07/02 12:20:43 gienah Exp $
+
+*prelude-extras-0.4 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +prelude-extras-0.4.ebuild:
+  Add prelude-extras

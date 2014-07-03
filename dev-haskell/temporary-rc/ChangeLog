@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/temporary-rc
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/temporary-rc/ChangeLog,v 1.1 2014/07/02 14:52:01 gienah Exp $
+
+*temporary-rc-1.2.0.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +temporary-rc-1.2.0.3.ebuild:
+  Add temporary-rc

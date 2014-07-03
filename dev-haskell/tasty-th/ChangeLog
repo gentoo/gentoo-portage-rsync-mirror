@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/tasty-th
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-th/ChangeLog,v 1.1 2014/07/02 14:44:15 gienah Exp $
+
+*tasty-th-0.1.2 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +tasty-th-0.1.2.ebuild:
+  Add tasty-th

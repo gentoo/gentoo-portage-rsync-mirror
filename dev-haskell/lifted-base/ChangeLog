@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/lifted-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.18 2014/03/24 07:24:40 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.19 2014/07/02 14:41:42 gienah Exp $
+
+*lifted-base-0.2.3.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +lifted-base-0.2.3.0.ebuild:
+  Bump lifted-base to 0.2.3.0
 
 *lifted-base-0.2.2.1 (24 Mar 2014)
 

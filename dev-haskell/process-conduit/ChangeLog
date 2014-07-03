@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/process-conduit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/process-conduit/ChangeLog,v 1.1 2013/12/11 06:17:43 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/process-conduit/ChangeLog,v 1.2 2014/07/02 12:23:07 gienah Exp $
+
+*process-conduit-1.1.0.0-r1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org>
+  +files/process-conduit-1.1.0.0-conduit-1.1.patch,
+  +process-conduit-1.1.0.0-r1.ebuild:
+  Bump process-conduit to 1.1.0.0-r1
 
 *process-conduit-1.0.0.1 (11 Dec 2013)
 

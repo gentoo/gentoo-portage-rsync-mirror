@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.8.1-r1.ebuild,v 1.3 2014/06/07 16:39:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-session-manager/mate-session-manager-1.8.1-r1.ebuild,v 1.5 2014/07/02 09:46:58 pacho Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://mate-desktop.org/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="ipv6 elibc_FreeBSD gnome-keyring systemd upower"
 

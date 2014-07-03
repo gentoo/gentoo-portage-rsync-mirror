@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.40 2014/06/29 11:26:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.41 2014/07/02 13:48:27 idella4 Exp $
+
+  02 Jul 2014; Ian Delaney <idella4@gentoo.org> pyx-0.12.1-r1.ebuild,
+  pyx-0.13.ebuild:
+  add missing rdep texlive-basic, patch by fau, fixes Bug #516004 also by fau
 
   29 Jun 2014; Ian Delaney <idella4@gentoo.org> pyx-0.12.1-r1.ebuild,
   pyx-0.13.ebuild:

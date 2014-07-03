@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/warp-tls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp-tls/ChangeLog,v 1.2 2014/03/09 13:12:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp-tls/ChangeLog,v 1.3 2014/07/02 14:39:59 gienah Exp $
+
+*warp-tls-3.0.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +warp-tls-3.0.0.ebuild:
+  Bump warp-tls to 3.0.0
 
 *warp-tls-2.0.3.1 (09 Mar 2014)
 

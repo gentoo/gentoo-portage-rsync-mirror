@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prerm setup test
+DEPEND=>=dev-haskell/blaze-builder-0.3.3:=[profile?] <dev-haskell/blaze-builder-0.4:=[profile?] >=dev-haskell/case-insensitive-0.2:=[profile?] dev-haskell/http-date:=[profile?] >=dev-haskell/http-types-0.8.5:=[profile?] >=dev-haskell/network-2.3:=[profile?] >=dev-haskell/simple-sendfile-0.2.7:=[profile?] <dev-haskell/simple-sendfile-0.3:=[profile?] >=dev-haskell/streaming-commons-0.1.2:=[profile?] dev-haskell/text:=[profile?] >=dev-haskell/unix-compat-0.2:=[profile?] dev-haskell/void:=[profile?] >=dev-haskell/wai-3.0:=[profile?] <dev-haskell/wai-3.1:=[profile?] >=dev-lang/ghc-7.4.1:= allow-sendfilefd? ( dev-haskell/hashable:=[profile?] ) >=dev-haskell/cabal-1.8 test? ( dev-haskell/async >=dev-haskell/doctest-0.9.3 >=dev-haskell/hspec-1.3 dev-haskell/http dev-haskell/hunit >=dev-haskell/lifted-base-0.1 dev-haskell/quickcheck >=dev-haskell/transformers-0.2.2 ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=A fast, light-weight web server for WAI applications.
+EAPI=5
+HOMEPAGE=http://github.com/yesodweb/wai
+IUSE=+allow-sendfilefd warp-debug doc hscolour profile test
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=>=dev-haskell/blaze-builder-0.3.3:=[profile?] <dev-haskell/blaze-builder-0.4:=[profile?] >=dev-haskell/case-insensitive-0.2:=[profile?] dev-haskell/http-date:=[profile?] >=dev-haskell/http-types-0.8.5:=[profile?] >=dev-haskell/network-2.3:=[profile?] >=dev-haskell/simple-sendfile-0.2.7:=[profile?] <dev-haskell/simple-sendfile-0.3:=[profile?] >=dev-haskell/streaming-commons-0.1.2:=[profile?] dev-haskell/text:=[profile?] >=dev-haskell/unix-compat-0.2:=[profile?] dev-haskell/void:=[profile?] >=dev-haskell/wai-3.0:=[profile?] <dev-haskell/wai-3.1:=[profile?] >=dev-lang/ghc-7.4.1:= allow-sendfilefd? ( dev-haskell/hashable:=[profile?] )
+SLOT=0/3.0.0.3
+SRC_URI=mirror://hackage/packages/archive/warp/3.0.0.3/warp-3.0.0.3.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=27b5e83cb1b3d2913c36686e32eb3144

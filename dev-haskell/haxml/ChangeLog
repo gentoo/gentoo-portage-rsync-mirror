@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.37 2014/06/27 10:20:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.38 2014/07/02 10:05:36 gienah Exp $
+
+*haxml-1.24.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +haxml-1.24.1.ebuild:
+  Bump haxml to 1.24.1
 
   27 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org>
   -files/haxml-1.23-fix-build.patch, -files/haxml-1.23-haddock.patch,

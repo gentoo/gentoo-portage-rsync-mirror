@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/mmorph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmorph/ChangeLog,v 1.4 2014/03/09 12:50:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmorph/ChangeLog,v 1.5 2014/07/02 11:33:26 gienah Exp $
+
+*mmorph-1.0.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +mmorph-1.0.3.ebuild:
+  Bump mmorph to 1.0.3
 
 *mmorph-1.0.2 (09 Mar 2014)
 

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-misc/xdg-user-dirs-0.14 >=x11-libs/gtk+-3.5.1:3
 SLOT=0
 SRC_URI=mirror://gnome/sources/xdg-user-dirs-gtk/0.10/xdg-user-dirs-gtk-0.10.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	dd566be921cea0d8287de7039747b719	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=f9468742d9b75ceadc9dcd12e6371bbd

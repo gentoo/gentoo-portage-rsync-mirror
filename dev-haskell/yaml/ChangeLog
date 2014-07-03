@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yaml/ChangeLog,v 1.8 2014/05/10 12:06:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yaml/ChangeLog,v 1.9 2014/07/02 14:27:24 gienah Exp $
+
+*yaml-0.8.8.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +yaml-0.8.8.3.ebuild:
+  Bump yaml to 0.8.8.3
 
 *yaml-0.8.8.2 (10 May 2014)
 

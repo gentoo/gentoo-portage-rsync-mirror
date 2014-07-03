@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/http-conduit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-conduit/ChangeLog,v 1.8 2014/03/09 12:47:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-conduit/ChangeLog,v 1.9 2014/07/02 10:50:27 gienah Exp $
+
+*http-conduit-2.1.2.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +http-conduit-2.1.2.3.ebuild:
+  Bump http-conduit to 2.1.2.3
 
 *http-conduit-2.0.0.8 (09 Mar 2014)
 

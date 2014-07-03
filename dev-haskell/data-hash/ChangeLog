@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/data-hash
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-hash/ChangeLog,v 1.1 2014/07/02 15:13:25 gienah Exp $
+
+*data-hash-0.2.0.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +data-hash-0.2.0.0.ebuild,
+  +metadata.xml:
+  Add data-hash

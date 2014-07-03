@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti.initd-r3,v 1.1 2014/06/05 00:32:23 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti.initd-r3,v 1.2 2014/07/02 23:57:25 chutzpah Exp $
 
 depend() {
 	need localmount logger
@@ -42,17 +42,22 @@ start() {
 		${DAEMON_UTIL} start ${daemon} ${GANETI_OPTS} ${daemon_opts} || retval=${?}
 
 		if [ ${retval} != 0  ] && [ -n "${started_daemons}" ]; then
-			eerror "Stopping already started daemons"
-			eindent
-			eend ${code} "$(${DAEMON_UTIL} check-exitcode ${code})"
+			case ${daemon} in
+				*-kvmd) retval=0; ewarn "Failed to start kvmd, continuing anyway";;
+				*)
+					eerror "Stopping already started daemons"
+					eindent
+					eend ${code} "$(${DAEMON_UTIL} check-exitcode ${code})"
 
-			for daemon in ${started_daemons}; do
-				ebegin "Stopping ${daemon}"
-				${DAEMON_UTIL} stop ${daemon} ${GANETI_OPTS}
-				eend ${?}
-			done
-			eoutdent; eoutdent
-			return ${retval}
+					for daemon in ${started_daemons}; do
+						ebegin "Stopping ${daemon}"
+						${DAEMON_UTIL} stop ${daemon} ${GANETI_OPTS}
+						eend ${?}
+					done
+					eoutdent; eoutdent
+					return ${retval}
+				;;
+			esac
 		fi
 		eoutdent
 		started_daemons="${started_daemons} ${daemon}"

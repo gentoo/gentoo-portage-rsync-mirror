@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.0.37.ebuild,v 1.1 2014/05/28 09:50:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-6.0.37.ebuild,v 1.2 2014/07/02 13:27:02 jlec Exp $
 
 EAPI=5
 
@@ -76,10 +76,6 @@ src_prepare() {
 #		-e "/ALL_LDFLAGS/s|:=|:= ${RAWLDFLAGS} |g" \
 	find common/inc/GL -delete || die
 	find . -type f -name "*\.a" -delete || die
-
-	# sed corrupts the simpleMPI Makefile, resulting in a failed libstdc++ detection.
-	# Therefore we need this patch, if we don't wont to touch the sed command above.
-	epatch "${FILESDIR}"/${P}-simpleMPI.patch
 }
 
 src_compile() {
@@ -90,6 +86,7 @@ src_compile() {
 	emake \
 		cuda-install="${EPREFIX}/opt/cuda" \
 		CUDA_PATH="${EPREFIX}/opt/cuda/" \
+		MPI_GCC=10 \
 		${myopts} ${verbose}
 }
 

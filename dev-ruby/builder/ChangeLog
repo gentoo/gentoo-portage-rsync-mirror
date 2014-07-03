@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.99 2014/06/15 12:37:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.101 2014/07/02 13:28:21 mrueg Exp $
+
+*builder-2.1.2-r5 (02 Jul 2014)
+
+  02 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +builder-2.1.2-r5.ebuild,
+  builder-2.1.2-r4.ebuild:
+  Move ruby21 target to new revision.
+
+  02 Jul 2014; Tobias Klausmann <klausman@gentoo.org> builder-3.0.4.ebuild:
+  Stable on alpha, bug #490912
 
   15 Jun 2014; Markus Meier <maekke@gentoo.org> builder-3.0.4.ebuild:
   arm stable, bug #490912

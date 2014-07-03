@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/glob
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glob/ChangeLog,v 1.2 2013/12/11 06:00:39 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glob/ChangeLog,v 1.3 2014/07/02 09:04:34 gienah Exp $
+
+*glob-0.7.5 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +glob-0.7.5.ebuild:
+  Bump glob to 0.7.5
 
 *glob-0.7.3 (11 Dec 2013)
 

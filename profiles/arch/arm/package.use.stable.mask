@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.1 2014/04/05 21:57:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.2 2014/07/02 14:55:58 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (02 Jul 2014)
+# Mask due Gnome3 not going to be stabilized on this arch
+>=gnome-base/gnome-desktop-2.32.1-r2 license-docs
 
 # Tom Wijsman <TomWij@gentoo.org (16 Mar 2014)
 # Mask unstable USE flags on media-video/vlc, see security bug #499806.

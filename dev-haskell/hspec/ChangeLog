@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hspec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec/ChangeLog,v 1.6 2014/03/09 12:44:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec/ChangeLog,v 1.7 2014/07/02 10:16:01 gienah Exp $
+
+*hspec-1.10.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +hspec-1.10.0.ebuild:
+  Bump hspec to 1.10.0
 
 *hspec-1.8.3 (09 Mar 2014)
 

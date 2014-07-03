@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls/ChangeLog,v 1.6 2014/05/10 11:45:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls/ChangeLog,v 1.7 2014/07/02 14:09:45 gienah Exp $
+
+*tls-1.2.8 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +tls-1.2.8.ebuild:
+  Bump tls to 1.2.8
 
 *tls-1.2.7 (10 May 2014)
 

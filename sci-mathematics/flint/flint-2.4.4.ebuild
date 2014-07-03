@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.4.ebuild,v 1.1 2014/06/20 20:57:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.4.ebuild,v 1.2 2014/07/02 11:10:57 hasufell Exp $
 
 EAPI="5"
 
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.3-libdir.patch \
 		"${FILESDIR}"/${PN}-2.4.3-whitespaces.patch \
-		"${FILESDIR}"/${PN}-2.4.3-cflags-ldflags.patch
+		"${FILESDIR}"/${PN}-2.4.3-cflags-ldflags.patch \
+		"${FILESDIR}"/${PN}-2.4.4-test.patch
 }
 
 src_configure() {

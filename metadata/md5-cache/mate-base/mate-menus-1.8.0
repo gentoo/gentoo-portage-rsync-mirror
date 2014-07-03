@@ -4,11 +4,11 @@ DESCRIPTION=MATE menu system, implementing the F.D.O cross-desktop spec
 EAPI=5
 HOMEPAGE=http://mate-desktop.org
 IUSE=debug +introspection python python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2 LGPL-2
 RDEPEND=>=dev-libs/glib-2.15.2:2 virtual/libintl:0 introspection? ( >=dev-libs/gobject-introspection-0.6.7:0 ) python? ( dev-python/pygtk:2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] )
 REQUIRED_USE=python? ( || ( python_targets_python2_6 python_targets_python2_7 ) )
 SLOT=0
 SRC_URI=http://pub.mate-desktop.org/releases/1.8/mate-menus-1.8.0.tar.xz
 _eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=377fb8fd81da9a50468888239dc69d5d
+_md5_=b82f8d6662eba82d38b5f8d2fe1c59bf

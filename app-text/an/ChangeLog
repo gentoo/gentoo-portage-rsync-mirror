@@ -1,6 +1,11 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.44 2014/03/02 17:28:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.45 2014/07/02 10:37:26 jer Exp $
+
+*an-1.2 (02 Jul 2014)
+
+  02 Jul 2014; Jeroen Roovers <jer@gentoo.org> +an-1.2.ebuild:
+  Version bump.
 
   02 Mar 2014; Jeroen Roovers <jer@gentoo.org> an-1.1.ebuild:
   Add dev-libs/icu sub-SLOT dependency (bug #455900).

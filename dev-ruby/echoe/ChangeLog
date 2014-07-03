@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/echoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.55 2014/06/08 14:26:09 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.56 2014/07/02 09:35:31 klausman Exp $
+
+  02 Jul 2014; Tobias Klausmann <klausman@gentoo.org> echoe-4.6.5.ebuild:
+  Stable on alpha, bug #503564
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> echoe-4.6.5.ebuild:
   ia64 stable wrt bug #503564

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wai-test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-test/ChangeLog,v 1.3 2014/03/09 13:11:27 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-test/ChangeLog,v 1.4 2014/07/02 14:22:28 gienah Exp $
+
+*wai-test-3.0.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +wai-test-3.0.0.ebuild:
+  Bump wai-test to 3.0.0
 
 *wai-test-2.0.0.2 (09 Mar 2014)
 

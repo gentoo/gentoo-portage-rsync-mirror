@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/mime-types
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mime-types/ChangeLog,v 1.3 2013/11/24 19:37:58 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mime-types/ChangeLog,v 1.4 2014/07/02 14:48:41 gienah Exp $
+
+*mime-types-0.1.0.4 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +mime-types-0.1.0.4.ebuild:
+  Bump mime-types to 0.1.0.4
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> mime-types-0.1.0.3.ebuild:
   Stable for x86, wrt bug #488750

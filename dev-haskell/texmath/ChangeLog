@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/texmath
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/texmath/ChangeLog,v 1.15 2014/05/10 12:04:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/texmath/ChangeLog,v 1.16 2014/07/02 14:05:17 gienah Exp $
+
+*texmath-0.6.6.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +texmath-0.6.6.3.ebuild:
+  Bump texmath to 0.6.6.3
 
 *texmath-0.6.6.1 (10 May 2014)
 

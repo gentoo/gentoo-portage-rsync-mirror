@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haskell-src
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.53 2013/03/31 10:37:07 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.54 2014/07/02 09:19:43 gienah Exp $
+
+*haskell-src-1.0.1.6 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +haskell-src-1.0.1.6.ebuild:
+  Bump haskell-src to 1.0.1.6
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> haskell-src-1.0.1.5-r1.ebuild:
   Stable for sparc, wrt bug #457276

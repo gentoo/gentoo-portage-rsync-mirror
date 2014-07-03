@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/options
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/ChangeLog,v 1.1 2014/07/02 11:57:55 gienah Exp $
+
+*options-1.2-r1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +options-1.2-r1.ebuild:
+  Add options

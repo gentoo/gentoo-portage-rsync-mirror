@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/http-reverse-proxy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-reverse-proxy/ChangeLog,v 1.1 2013/08/26 12:38:42 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-reverse-proxy/ChangeLog,v 1.2 2014/07/02 10:51:34 gienah Exp $
+
+*http-reverse-proxy-0.4.0.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org>
+  +http-reverse-proxy-0.4.0.1.ebuild:
+  Bump http-reverse-proxy to 0.4.0.1
 
 *http-reverse-proxy-0.2.0 (26 Aug 2013)
 *http-reverse-proxy-0.1.1.6 (26 Aug 2013)

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yesod-persistent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-persistent/ChangeLog,v 1.3 2014/03/09 13:21:01 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-persistent/ChangeLog,v 1.4 2014/07/02 14:31:31 gienah Exp $
+
+*yesod-persistent-1.2.3 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +yesod-persistent-1.2.3.ebuild:
+  Bump yesod-persistent to 1.2.3
 
 *yesod-persistent-1.2.2.1 (09 Mar 2014)
 

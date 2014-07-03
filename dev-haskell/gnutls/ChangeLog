@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gnutls
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gnutls/ChangeLog,v 1.1 2013/08/26 11:32:43 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gnutls/ChangeLog,v 1.2 2014/07/02 09:06:46 gienah Exp $
+
+*gnutls-0.1.5 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +gnutls-0.1.5.ebuild:
+  Bump gnutls to 0.1.5
 
 *gnutls-0.1.4 (26 Aug 2013)
 

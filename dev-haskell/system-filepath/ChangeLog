@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/system-filepath
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-filepath/ChangeLog,v 1.5 2014/03/09 05:17:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-filepath/ChangeLog,v 1.6 2014/07/02 13:58:50 gienah Exp $
+
+*system-filepath-0.4.12 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +system-filepath-0.4.12.ebuild:
+  Bump system-filepath to 0.4.12
 
 *system-filepath-0.4.9 (09 Mar 2014)
 

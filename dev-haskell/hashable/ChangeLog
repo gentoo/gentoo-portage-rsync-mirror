@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hashable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.22 2014/02/24 01:38:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.23 2014/07/02 15:27:27 gienah Exp $
+
+*hashable-1.2.2.0 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +hashable-1.2.2.0.ebuild:
+  Bump hashable to 1.2.2.0
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> hashable-1.2.1.0.ebuild:
   x86 stable wrt bug #495380

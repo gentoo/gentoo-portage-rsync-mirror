@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/metaclass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.30 2014/04/19 03:27:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.31 2014/07/02 09:21:31 klausman Exp $
+
+  02 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  metaclass-0.0.1-r1.ebuild:
+  Stable on alpha, bug #497488
 
   19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> metaclass-0.0.1-r1.ebuild,
   metaclass-0.0.1.ebuild, metaclass-0.0.4.ebuild:

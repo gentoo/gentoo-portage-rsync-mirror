@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/quickcheck-instances
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck-instances/ChangeLog,v 1.1 2014/07/02 12:33:28 gienah Exp $
+
+*quickcheck-instances-0.3.8 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +quickcheck-instances-0.3.8.ebuild:
+  Add quickcheck-instances

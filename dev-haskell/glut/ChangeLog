@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/glut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.23 2014/01/26 11:39:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.24 2014/07/02 09:58:40 gienah Exp $
+
+*glut-2.5.1.1 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org> +glut-2.5.1.1.ebuild:
+  Bump glut to 2.5.1.1
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> glut-2.4.0.0.ebuild:
   Stable for x86, wrt bug #480572

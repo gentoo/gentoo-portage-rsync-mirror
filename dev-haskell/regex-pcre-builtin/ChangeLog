@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/regex-pcre-builtin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-pcre-builtin/ChangeLog,v 1.10 2013/11/24 19:33:13 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-pcre-builtin/ChangeLog,v 1.11 2014/07/02 12:45:19 gienah Exp $
+
+*regex-pcre-builtin-0.94.4.8.8.35 (02 Jul 2014)
+
+  02 Jul 2014; Mark Wright <gienah@gentoo.org>
+  +regex-pcre-builtin-0.94.4.8.8.35.ebuild:
+  Bump regex-pcre-builtin to 0.94.4.8.8.35
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org>
   regex-pcre-builtin-0.94.4.7.8.31.ebuild:
