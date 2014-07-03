@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.32 2014/07/03 16:52:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.33 2014/07/03 17:01:37 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -236,6 +236,7 @@ media-libs/soxr abi_x86_32
 media-libs/speex abi_x86_32
 media-libs/taglib abi_x86_32
 media-libs/tiff abi_x86_32
+media-libs/tremor abi_x86_32
 media-libs/vo-aacenc abi_x86_32
 media-libs/vo-amrwbenc abi_x86_32
 media-libs/webrtc-audio-processing abi_x86_32

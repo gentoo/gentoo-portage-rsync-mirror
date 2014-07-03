@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ircstats
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ChangeLog,v 1.5 2014/01/14 06:52:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ChangeLog,v 1.6 2014/07/03 17:03:53 creffett Exp $
+
+*ircstats-1.1-r1 (03 Jul 2014)
+
+  03 Jul 2014; Chris Reffett <creffett@gentoo.org> +ircstats-1.1-r1.ebuild,
+  -ircstats-1.0.ebuild, -ircstats-1.1.ebuild:
+  [QA] EAPI bump, remove old wrt bug 334597
 
 *ircstats-1.1 (14 Jan 2014)
 
