@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.16 2014/06/23 15:06:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.17 2014/07/03 13:42:57 klausman Exp $
+
+  03 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  cryptography-0.4-r1.ebuild, cryptography-0.4-r2.ebuild:
+  Ensure usage of new-enough pytest version (see bug 514442)
 
 *cryptography-0.4-r2 (23 Jun 2014)
 

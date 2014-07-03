@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.4-r2.ebuild,v 1.1 2014/06/23 15:06:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.4-r2.ebuild,v 1.2 2014/07/03 13:42:57 klausman Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 		dev-python/iso8601[${PYTHON_USEDEP}]
 		dev-python/pretend[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
-		dev-python/pytest[${PYTHON_USEDEP}]
+		>=dev-python/pytest-2.4.2[${PYTHON_USEDEP}]
 	)"
 
 DOCS=( AUTHORS.rst CONTRIBUTING.rst README.rst )
