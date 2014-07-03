@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/alut
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.16 2012/09/12 14:51:57 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.17 2014/07/03 07:26:08 gienah Exp $
+
+*alut-2.3.0.1 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +alut-2.3.0.1.ebuild:
+  Bump alut to 2.3.0.1
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> alut-2.1.0.0.ebuild,
   alut-2.2.0.0.ebuild:
