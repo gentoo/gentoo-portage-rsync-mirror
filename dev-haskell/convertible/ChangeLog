@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/convertible
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/convertible/ChangeLog,v 1.5 2012/12/06 22:54:58 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/convertible/ChangeLog,v 1.6 2014/07/03 11:23:57 gienah Exp $
+
+*convertible-1.1.0.0-r1 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +convertible-1.1.0.0-r1.ebuild:
+  Bump convertible to 1.1.0.0-r1
 
   06 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
   convertible-1.0.10.0.ebuild, convertible-1.0.11.1.ebuild:

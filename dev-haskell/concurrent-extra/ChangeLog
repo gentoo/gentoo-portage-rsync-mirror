@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/concurrent-extra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/concurrent-extra/ChangeLog,v 1.1 2013/06/20 05:14:47 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/concurrent-extra/ChangeLog,v 1.2 2014/07/03 11:26:46 gienah Exp $
+
+*concurrent-extra-0.7.0.8 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +concurrent-extra-0.7.0.8.ebuild:
+  Bump concurrent-extra to 0.7.0.8
 
 *concurrent-extra-0.7.0.6 (20 Jun 2013)
 
