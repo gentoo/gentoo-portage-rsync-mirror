@@ -1,6 +1,18 @@
 # ChangeLog for media-video/mjpg-streamer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.7 2013/03/17 16:05:48 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.9 2014/07/03 07:50:59 aidecoe Exp $
+
+  03 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -files/0_pre20110522-make-var-instead-of-cmd.patch:
+  Removed some orphaned patch.
+
+*mjpg-streamer-0_pre20120621 (03 Jul 2014)
+
+  03 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +mjpg-streamer-0_pre20120621.ebuild,
+  +files/0_pre20120621-make-var-instead-of-cmd.patch:
+  Version bump. Fixed bug #515406 on behalf of
+  ChaosEngine <andrzej.pauli@gmail.com>.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

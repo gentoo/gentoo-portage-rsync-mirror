@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.59 2014/06/29 08:32:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.60 2014/07/03 07:48:49 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -46,6 +46,8 @@ _MULTILIB_FLAGS=(
 	abi_mips_o32:o32
 	abi_ppc_32:ppc
 	abi_ppc_64:ppc64
+	abi_s390_32:s390
+	abi_s390_64:s390x
 )
 
 # @ECLASS-VARIABLE: MULTILIB_COMPAT

@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/tasty-ant-xml
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-ant-xml/ChangeLog,v 1.1 2014/07/03 07:31:11 gienah Exp $
+
+*tasty-ant-xml-1.0.0.8 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +tasty-ant-xml-1.0.0.8.ebuild:
+  Add tasty-ant-xml
