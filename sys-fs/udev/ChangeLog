@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1055 2014/07/03 14:53:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1056 2014/07/03 18:17:01 ssuominen Exp $
+
+  03 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Revert last commit for -9999 because upstream src/shared/missing.h has
+  fallback for missing IFLA_VLAN_PROTOCOL wrt http://cgit.freedesktop.org/system
+  d/systemd/commit/src/shared/missing.h?id=81577dc22887debaf9b19bf1034a2887fb906
+  9c7
 
   03 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-214.ebuild,
   udev-9999.ebuild:
