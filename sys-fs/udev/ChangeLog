@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1054 2014/06/27 11:17:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1055 2014/07/03 14:53:45 ssuominen Exp $
+
+  03 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-214.ebuild,
+  udev-9999.ebuild:
+  Raise minimum linux-headers dependency to >= 3.10 wrt #516086 because it's the
+  first version with IFLA_VLAN_PROTOCOL in include/uapi/linux/if_link.h. Thanks
+  to Maciej Szmigiero for reporting.
 
   27 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Remove unfunctional sed -line for restoring support for older compilers wrt
