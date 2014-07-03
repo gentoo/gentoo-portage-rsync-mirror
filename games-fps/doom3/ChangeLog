@@ -1,6 +1,19 @@
 # ChangeLog for games-fps/doom3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.39 2012/02/05 06:02:13 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/ChangeLog,v 1.41 2014/07/03 21:53:21 axs Exp $
+
+  03 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  doom3-1.3.1304-r1.ebuild:
+  a bit more EAPI5 ebuild cleanup
+
+*doom3-1.3.1304-r1 (03 Jul 2014)
+
+  03 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +doom3-1.3.1304-r1.ebuild:
+  bumped EAPI to 5, adjusted deps for gx86-mulitlib, dropped bundled glibc libs,
+  dropped hardware-accellerated x11-driver deps for amd64.  Could not confirm
+  everything is as it should be because I don't have access to the missing PAK
+  files.
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> doom3-1.3.1304.ebuild:
   Move to new unpacker eclass for unpack_makeself.

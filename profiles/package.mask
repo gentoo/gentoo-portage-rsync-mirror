@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15827 2014/07/02 06:17:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15828 2014/07/03 21:52:42 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -162,19 +162,6 @@ games-util/rubygfe
 # Vulnerable: IBM Java SE 5.0 SR12-FP5
 # URL:        http://www.securityfocus.com/bid/53959/
 dev-java/ibm-jdk-bin:1.5
-
-# Michał Górny <mgorny@gentoo.org> (29 May 2014)
-# New multilib conversions. Unmask along with corresponding
-# emul-linux-x86 packages, and make sure they're committed first :).
->=dev-libs/nspr-4.10.6-r1
->=dev-libs/nss-3.16-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r13
->=net-misc/curl-7.37.0-r1
->=app-emulation/emul-linux-x86-baselibs-20140508-r14
->=media-libs/libquvi-0.9.4-r1:0
->=media-libs/libquvi-0.4.1-r2:0.4
->=media-libs/libquvi-scripts-0.9.20131130-r1:0
->=media-libs/libquvi-scripts-0.4.21-r2:0.4
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
