@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hsql-mysql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-mysql/ChangeLog,v 1.14 2012/09/12 14:59:04 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-mysql/ChangeLog,v 1.15 2014/07/03 11:41:07 gienah Exp $
+
+*hsql-mysql-1.8.3 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org> +hsql-mysql-1.8.3.ebuild:
+  Bump hsql-mysql to 1.8.3
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> hsql-mysql-1.8.1.ebuild,
   hsql-mysql-1.8.2.ebuild:
