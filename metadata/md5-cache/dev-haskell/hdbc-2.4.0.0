@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prerm setup test
+DEPEND=>=dev-haskell/convertible-1.1.0.0:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/text:=[profile?] dev-haskell/utf8-string:=[profile?] >=dev-lang/ghc-6.12.1:= >=dev-haskell/cabal-1.8.0.2 test? ( dev-haskell/hunit >=dev-haskell/quickcheck-2.0 >=dev-haskell/testpack-2.0 ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=Haskell Database Connectivity
+EAPI=5
+HOMEPAGE=https://github.com/hdbc/hdbc
+IUSE=test doc hscolour profile
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/convertible-1.1.0.0:=[profile?] dev-haskell/mtl:=[profile?] dev-haskell/text:=[profile?] dev-haskell/utf8-string:=[profile?] >=dev-lang/ghc-6.12.1:=
+SLOT=2/2.4.0.0
+SRC_URI=mirror://hackage/packages/archive/HDBC/2.4.0.0/HDBC-2.4.0.0.tar.gz
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=ae40e9c5173f1e0ed467659823e133a0
