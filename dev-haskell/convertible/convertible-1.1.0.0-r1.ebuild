@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/convertible/convertible-1.1.0.0-r1.ebuild,v 1.1 2014/07/03 11:23:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/convertible/convertible-1.1.0.0-r1.ebuild,v 1.2 2014/07/03 14:03:47 gienah Exp $
 
 EAPI=5
 
@@ -21,12 +21,12 @@ IUSE="test"
 RDEPEND="dev-haskell/mtl:=[profile?]
 	>=dev-haskell/text-0.7:=[profile?]
 	>=dev-lang/ghc-6.12.1:=
-	test? ( dev-haskell/hunit:=[profile?]
-			>=dev-haskell/quickcheck-2.0:2=[profile?]
-			>=dev-haskell/testpack-2.0:=[profile?] )
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8.0.2
+	test? ( dev-haskell/hunit:=[profile?]
+			>=dev-haskell/quickcheck-2.0:2=[profile?]
+			>=dev-haskell/testpack-2.0:=[profile?] )
 "
 
 src_configure() {
