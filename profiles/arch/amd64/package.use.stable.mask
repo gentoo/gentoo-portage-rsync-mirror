@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.13 2014/06/15 09:49:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.14 2014/07/03 08:29:33 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -81,6 +81,7 @@ dev-libs/libcdio abi_x86_32
 dev-libs/libcdio-paranoia abi_x86_32
 dev-libs/libconfig abi_x86_32
 dev-libs/libcss abi_x86_32
+dev-libs/libcroco abi_x86_32
 dev-libs/libedit abi_x86_32
 dev-libs/libelf abi_x86_32
 dev-libs/libevent abi_x86_32

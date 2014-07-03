@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1307 2014/07/03 07:48:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1308 2014/07/03 08:27:01 mgorny Exp $
+
+  03 Jul 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Explain MULTILIB_COMPAT a bit more verbosely, and add a REQUIRED_USE for it.
 
   03 Jul 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Re-enable multilib flags for s390.

@@ -7,8 +7,9 @@ IUSE=offensive abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_m
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-3
 RDEPEND=!=media-libs/libquvi-scripts-0.4*:0
+REQUIRED_USE=|| ( abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64 )
 RESTRICT=test
 SLOT=0.4
 SRC_URI=mirror://sourceforge/quvi/0.4/libquvi-scripts-0.4.21.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	0b9eae57e85e3a1742ac2a29d4b33f5d	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	0cfe04d8c68e8c35d556886e05a59c67	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=18818132f9768addef2ed73816f7d4ef
