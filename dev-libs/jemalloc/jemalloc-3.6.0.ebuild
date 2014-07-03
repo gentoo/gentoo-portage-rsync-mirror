@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-3.6.0.ebuild,v 1.4 2014/06/24 19:17:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-3.6.0.ebuild,v 1.5 2014/07/03 15:53:28 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.canonware.com/download/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 ~s390 ~x86 ~x64-macos"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 ~s390 ~x86 ~amd64-linux ~x64-macos ~x86-linux"
 IUSE="debug static-libs stats"
 HTML_DOCS=( doc/jemalloc.html )
 PATCHES=( "${FILESDIR}/${PN}-3.5.1-strip-optimization.patch"
