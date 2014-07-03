@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/doom3-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.30 2012/02/05 06:02:06 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.31 2014/07/03 22:07:43 axs Exp $
+
+*doom3-demo-1.1.1286-r1 (03 Jul 2014)
+
+  03 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +doom3-demo-1.1.1286-r1.ebuild:
+  Bumped EAPI to 5, converted deps to gx86-multilib, dropped bundled
+  glibc/libstdc++, dropped x11-drivers specific deps.  Seems odd that there is
+  no requirement for alsa/emul-*-soundlibs like there is in games-fps/doom3
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> doom3-demo-1.1.1286.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -121,4 +129,3 @@
   07 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
   +doom3-demo-1.1.1282.ebuild:
   Initial import.  Ebuild by vapier.  Closing bug #66352.
-
