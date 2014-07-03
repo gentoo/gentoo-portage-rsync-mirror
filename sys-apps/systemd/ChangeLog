@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.267 2014/06/24 22:17:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.268 2014/07/03 20:46:43 floppym Exp $
+
+  03 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  MINKV=3.8
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> systemd-208-r3.ebuild,
   systemd-212-r5.ebuild, systemd-213.ebuild, systemd-214.ebuild,

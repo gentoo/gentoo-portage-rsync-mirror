@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.117 2014/06/24 22:17:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.118 2014/07/03 20:46:43 floppym Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
 	kdbus +kmod lzma pam policykit python qrcode +seccomp selinux ssl
 	test vanilla"
 
-MINKV="3.10"
+MINKV="3.8"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	sys-libs/libcap:0=
