@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/hdbc-mysql
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-mysql/ChangeLog,v 1.5 2013/03/17 16:10:53 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-mysql/ChangeLog,v 1.6 2014/07/03 12:37:30 gienah Exp $
+
+*hdbc-mysql-0.6.6.1-r2 (03 Jul 2014)
+
+  03 Jul 2014; Mark Wright <gienah@gentoo.org>
+  +files/hdbc-mysql-0.6.6.1-cabal-1.18.patch, +hdbc-mysql-0.6.6.1-r2.ebuild:
+  Fix Bug 514342 - dev-haskell/hdbc-mysql-0.6.6.1-r1 fails to build, based on
+  the hdbc-postgresql patch by gracjan. Add virtual/mysql as suggested by
+  grknight.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

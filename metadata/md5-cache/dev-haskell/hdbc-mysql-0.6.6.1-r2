@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare prerm setup test unpack
+DEPEND=>=dev-haskell/hdbc-2.1.0:=[profile?] dev-haskell/utf8-string:=[profile?] >=dev-lang/ghc-6.12.1:= virtual/mysql >=dev-haskell/cabal-1.6 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=MySQL driver for HDBC
+EAPI=5
+HOMEPAGE=http://github.com/bos/hdbc-mysql
+IUSE=doc hscolour profile
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=>=dev-haskell/hdbc-2.1.0:=[profile?] dev-haskell/utf8-string:=[profile?] >=dev-lang/ghc-6.12.1:= virtual/mysql
+SLOT=0/0.6.6.1
+SRC_URI=mirror://hackage/packages/archive/HDBC-mysql/0.6.6.1/HDBC-mysql-0.6.6.1.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=152175c436603e7ad32056c5463623ef
