@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/gettext_i18n_rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/ChangeLog,v 1.26 2014/05/02 14:48:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/ChangeLog,v 1.27 2014/07/03 09:35:57 graaff Exp $
+
+*gettext_i18n_rails-1.0.5 (03 Jul 2014)
+
+  03 Jul 2014; Hans de Graaff <graaff@gentoo.org>
+  +gettext_i18n_rails-1.0.5.ebuild:
+  Version bump. Add ruby20. Drop x86 keyword, bug 508836.
 
   02 May 2014; Hans de Graaff <graaff@gentoo.org>
   -gettext_i18n_rails-0.9.2.ebuild, -gettext_i18n_rails-0.9.4.ebuild:
