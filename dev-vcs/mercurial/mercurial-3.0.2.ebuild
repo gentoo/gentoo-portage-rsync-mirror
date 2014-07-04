@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-3.0.ebuild,v 1.1 2014/05/02 06:57:00 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-3.0.2.ebuild,v 1.1 2014/07/04 11:25:41 polynomial-c Exp $
 
 EAPI=5
 
@@ -27,6 +27,8 @@ DEPEND="emacs? ( virtual/emacs )
 		dev-python/pygments[${PYTHON_USEDEP}] )"
 
 SITEFILE="70${PN}-gentoo.el"
+
+PATCHES=( "${FILESDIR}/${PN}-3.0.1-po_fixes.patch" )
 
 python_prepare_all() {
 	# fix up logic that won't work in Gentoo Prefix (also won't outside in
