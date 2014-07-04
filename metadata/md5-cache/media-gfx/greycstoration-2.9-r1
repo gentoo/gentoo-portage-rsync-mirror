@@ -9,5 +9,5 @@ LICENSE=CeCILL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr fftw? ( >=sci-libs/fftw-3 ) imagemagick? ( media-gfx/imagemagick ) jpeg? ( virtual/jpeg ) lapack? ( virtual/lapack ) png? ( >=media-libs/libpng-1.4 ) tiff? ( media-libs/tiff )
 SLOT=0
 SRC_URI=mirror://sourceforge/cimg/GREYCstoration-2.9.zip
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=564bb56441a4bfdb0529ea0d4f1c0088

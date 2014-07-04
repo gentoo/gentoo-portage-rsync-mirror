@@ -9,5 +9,5 @@ LICENSE=QPL-1.0
 RDEPEND=bzip2? ( app-arch/bzip2 ) sys-libs/zlib
 SLOT=0
 SRC_URI=http://downloads.hercules-390.eu/hercules-3.09.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c5d7a7ec265fb7cf6c1262b0b980ad73

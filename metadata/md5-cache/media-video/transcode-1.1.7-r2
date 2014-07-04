@@ -10,5 +10,5 @@ RDEPEND=>=virtual/ffmpeg-0.10 a52? ( media-libs/a52dec ) aac? ( media-libs/faac 
 REQUIRED_USE=sse? ( mmx ) sse2? ( mmx sse ) 3dnow? ( mmx ) nuv? ( lzo )
 SLOT=0
 SRC_URI=mirror://bitbucket/france/transcode-tcforge/downloads/transcode-1.1.7.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=72d9b9a2e0fc3683c5577a08d8c84411

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/blassic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.31 2012/11/03 13:25:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.32 2014/07/04 08:29:33 mr_bones_ Exp $
+
+  04 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> blassic-0.10.2.ebuild:
+  EAPI=5; simplify
 
   03 Nov 2012; Agostino Sarubbo <ago@gentoo.org> blassic-0.10.2.ebuild:
   Add ~amd64, wrt bug #440676

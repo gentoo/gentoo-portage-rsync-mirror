@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.28 2014/05/15 16:44:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.29 2014/07/04 08:19:46 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 MY_P="quake2-r${PV}"
@@ -16,12 +16,11 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
-IUSE="aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix"
+IUSE="aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl X xatrix"
 
 UIDEPEND="aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl )
-	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl[sound,joystick?,video] )
 	X? (
 		x11-libs/libXxf86dga
@@ -62,16 +61,12 @@ src_prepare() {
 		mkdir -p src/${g}
 		pushd src/${g}
 		local shar=../../../${g}src320.shar
-		sed -i \
-			-e 's:^read ans:ans=yes :' ${shar} \
-			|| die "sed ${shar} failed"
+		sed -i -e 's:^read ans:ans=yes :' ${shar} || die
 		echo ">>> Unpacking ${shar} to ${PWD}"
-		env PATH="${T}:${PATH}" unshar ${shar} || die "unpacking ${shar} failed"
+		env PATH="${T}:${PATH}" unshar ${shar} || die
 		popd
 	done
-	sed -i \
-		-e 's:jpeg_mem_src:_&:' \
-		src/ref_candygl/gl_image.c || die
+	sed -i -e 's:jpeg_mem_src:_&:' src/ref_candygl/gl_image.c || die
 
 	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile || die
 	# -amd64.patch # make sure this is still needed in future versions
@@ -116,10 +111,10 @@ src_compile() {
 		[[ ${BUILD_QMAX} == "YES" ]] \
 			&& libsuffix=-qmax \
 			|| libsuffix=
-		make clean || die "cleaning failed"
+		emake -j1 clean
 		emake -j1 build_release \
 			BUILD_SDLQUAKE2=$(yesno sdl) \
-			BUILD_SVGA=$(yesno svga) \
+			BUILD_SVGA=NO \
 			BUILD_X11=$(yesno X) \
 			BUILD_GLX=$(yesno opengl) \
 			BUILD_SDL=$(yesno sdl) \
@@ -138,8 +133,7 @@ src_compile() {
 			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2" \
 			DEFAULT_LIBDIR="$(games_get_libdir)/${PN}${libsuffix}" \
 			OPT_CFLAGS="${CFLAGS}" \
-			CC="$(tc-getCC)" \
-			|| die "make failed"
+			CC="$(tc-getCC)"
 		# now we save the build dir ... except for the object files ...
 		rm release*/*/*.o
 		mv release* my-rel-${BUILD_QMAX}
@@ -176,7 +170,7 @@ src_install() {
 	if use qmax ; then
 		dodir "${q2maxdir}"
 		cp -rf my-rel-YES/* "${D}/${q2maxdir}"/ || die
-		newgamesbin "${D}/${q2maxdir}"/quake2 quake2-qmax || die
+		newgamesbin "${D}/${q2maxdir}"/quake2 quake2-qmax
 		rm "${D}/${q2maxdir}"/quake2
 		use dedicated \
 			&& newgamesbin "${D}/${q2maxdir}"/q2ded q2ded-qmax \
@@ -186,7 +180,7 @@ src_install() {
 			&& rm "${D}/${q2maxdir}"/sdlquake2
 
 		insinto "${q2maxdir}"/baseq2
-		doins "${DISTDIR}"/maxpak.pak || die
+		doins "${DISTDIR}"/maxpak.pak
 
 		make_desktop_entry quake2-qmax Quake2-qmax quake2
 	fi

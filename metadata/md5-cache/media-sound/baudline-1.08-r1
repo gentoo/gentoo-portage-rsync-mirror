@@ -9,5 +9,5 @@ RDEPEND=media-fonts/font-adobe-75dpi media-fonts/font-misc-misc x11-libs/libX11 
 RESTRICT=binchecks fetch
 SLOT=0
 SRC_URI=amd64? ( http://www.baudline.com/baudline_1.08_linux_x86_64.tar.gz ) ppc? ( http://www.baudline.com/baudline_1.08_linux_ppc.tar.gz ) s390? ( http://www.baudline.com/baudline_1.08_linux_s390.tar.gz ) x86? ( http://www.baudline.com/baudline_1.08_linux_i686.tar.gz )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=866088e04bef4ff5deec4b2f9e6f768f

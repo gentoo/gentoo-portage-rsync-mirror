@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=sys-libs/db-4.8.30 || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2* )
 SLOT=0
 SRC_URI=mirror://pypi/b/bsddb3/bsddb3-5.3.0.tar.gz
-_eclasses_=db-use	1c719875d6599536f956fafea9e1f404	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=db-use	1c719875d6599536f956fafea9e1f404	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6fc5e3c85d68e2aadef6de9e58bc465b

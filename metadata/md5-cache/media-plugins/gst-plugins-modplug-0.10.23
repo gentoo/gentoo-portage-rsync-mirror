@@ -9,5 +9,5 @@ RDEPEND=media-libs/libmodplug >=dev-libs/glib-2.6:2 media-libs/gstreamer:0.10 >=
 RESTRICT=test
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-0.10.23.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gst-plugins-bad	c250fc5cfd38c387759418ebf5aee12b	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	gst-plugins-bad	c250fc5cfd38c387759418ebf5aee12b	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=723a4a8aaf56af9b4e5732bba8cedd6c

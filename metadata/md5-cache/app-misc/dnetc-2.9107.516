@@ -8,5 +8,5 @@ RDEPEND=net-dns/bind-tools
 RESTRICT=mirror
 SLOT=0
 SRC_URI=sparc? ( http://http.distributed.net/pub/dcti/v2.9107/dnetc516-linux-sparc-v7.tar.gz )
-_eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=user	1a9ecf501027961855b0320e8915a79c
 _md5_=4b2ad0f224aa3eb685cd916f372f8228

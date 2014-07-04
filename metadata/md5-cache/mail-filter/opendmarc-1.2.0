@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=dev-perl/DBI || ( mail-filter/libmilter mail-mta/sendmail ) perl-core/Switch
 SLOT=0
 SRC_URI=mirror://sourceforge/opendmarc/opendmarc-1.2.0.tar.gz
-_eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=user	1a9ecf501027961855b0320e8915a79c
 _md5_=cf3b8b8a56324c09ab4426abab8b6528

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 hddtemp? ( app-admin/hddtemp ) gnutls? ( net-libs/gnutls ) !gnutls? ( ssl? ( dev-libs/openssl ) ) lm_sensors? ( sys-apps/lm_sensors ) nls? ( virtual/libintl ) ntlm? ( net-libs/libntlm ) X? ( x11-libs/gtk+:2 )
 SLOT=2
 SRC_URI=http://members.dslextreme.com/users/billw/gkrellm/gkrellm-2.3.5.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=1e5c9508f71e991cb0491d7ba3510b82

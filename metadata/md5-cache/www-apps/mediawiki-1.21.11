@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/php-5.3.2[mysql?,postgres?,session,xml,xmlreader] imagemagick
 RESTRICT=test
 SLOT=1.21.11
 SRC_URI=http://releases.wikimedia.org/mediawiki/1.21/mediawiki-1.21.11.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=bf001d1ea94dad58e238488e42698966

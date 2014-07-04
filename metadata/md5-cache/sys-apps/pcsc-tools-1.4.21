@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/pcsc-lite-1.4.14 dev-perl/pcsc-perl gtk? ( dev-perl/gtk2-perl )
 SLOT=0
 SRC_URI=http://ludovic.rousseau.free.fr/softwares/pcsc-tools/pcsc-tools-1.4.21.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3f7e935cbaf5ca1d3cf8a5e6ab3d843d

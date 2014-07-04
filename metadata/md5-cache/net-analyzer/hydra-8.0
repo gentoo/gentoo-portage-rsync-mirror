@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/openssl sys-libs/ncurses firebird? ( dev-db/firebird ) gtk? ( dev-libs/atk dev-libs/glib:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) idn? ( net-dns/libidn ) mysql? ( virtual/mysql ) ncp? ( net-fs/ncpfs ) oracle? ( dev-db/oracle-instantclient-basic ) pcre? ( dev-libs/libpcre ) postgres? ( dev-db/postgresql-base ) ssl? ( >=net-libs/libssh-0.4.0 ) subversion? ( dev-vcs/subversion )
 SLOT=0
 SRC_URI=http://freeworld.thc.org/releases/hydra-8.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=aaba8d61365143abbfb0db7b6f588c4b

@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=dev-lang/tcl dev-qt/qtcore:4 dev-qt/qtgui:4 media-libs/alsa-lib media-sound/gsm dev-libs/libgcrypt:0 media-libs/speex media-libs/opus dev-libs/libsigc++:2 dev-libs/popt
 SLOT=0
 SRC_URI=mirror://sourceforge/svxlink/svxlink-13.12.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=cfd41c7f59e44909240657241422abce

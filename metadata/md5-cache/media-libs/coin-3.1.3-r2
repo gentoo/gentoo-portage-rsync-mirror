@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 PEL )
 RDEPEND=dev-libs/expat media-libs/fontconfig media-libs/freetype:2 virtual/opengl virtual/glu x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext bzip2? ( app-arch/bzip2 ) javascript? ( dev-lang/spidermonkey:0 ) openal? ( media-libs/openal ) simage? ( media-libs/simage ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=ftp://ftp.coin3d.org/pub/coin/src/all/Coin-3.1.3.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b3d071e86cf3defef9edf5d28eb9dcad

@@ -8,5 +8,5 @@ LICENSE=MPL-1.1
 RDEPEND=kernel_AIX? ( app-arch/deb2targz ) !<sys-apps/portage-2.1.10.41 dev-libs/openssl sys-apps/debianutils
 SLOT=0
 SRC_URI=mirror://debian/pool/main/c/ca-certificates/ca-certificates_20130119_all.deb
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
 _md5_=799ca39be261943f953dc2c7f5a596f4

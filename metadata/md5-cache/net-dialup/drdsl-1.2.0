@@ -9,5 +9,5 @@ RDEPEND=net-dialup/capi4k-utils
 RESTRICT=mirror strip test
 SLOT=0
 SRC_URI=x86? ( http://opensuse.foehr-it.de/rpms/10_3/2.6.22.13_0.3/32bit/drdsl-1.0-1.i586.rpm ) amd64? ( http://opensuse.foehr-it.de/rpms/10_3/2.6.22.13_0.3/64bit/drdsl-1.0-1.x86_64.rpm )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=10ab6683f6a1e0ce0b0c21663a7ac106

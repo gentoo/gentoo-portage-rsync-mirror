@@ -6,5 +6,5 @@ HOMEPAGE=http://confix.sourceforge.net
 LICENSE=GPL-2
 RDEPEND=dev-util/confix-wrapper sys-devel/autoconf-archive sys-devel/automake sys-devel/libtool =dev-lang/python-2*
 SLOT=2
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=f4675d4a644a3c3123c849c734c7b531

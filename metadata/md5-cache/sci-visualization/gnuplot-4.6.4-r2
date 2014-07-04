@@ -9,5 +9,5 @@ LICENSE=gnuplot bitmap? ( free-noncomm )
 RDEPEND=cairo? ( x11-libs/cairo x11-libs/pango ) gd? ( >=media-libs/gd-2.0.35-r3[png] ) ggi? ( media-libs/libggi ) latex? ( virtual/latex-base lua? ( dev-tex/pgf >=dev-texlive/texlive-latexrecommended-2008-r2 ) ) lua? ( dev-lang/lua ) plotutils? ( media-libs/plotutils ) qt4? ( >=dev-qt/qtcore-4.5:4 >=dev-qt/qtgui-4.5:4 >=dev-qt/qtsvg-4.5:4 ) readline? ( sys-libs/readline ) svga? ( media-libs/svgalib ) wxwidgets? ( x11-libs/wxGTK:2.8[X] x11-libs/cairo x11-libs/pango x11-libs/gtk+:2 ) X? ( x11-libs/libXaw )
 SLOT=0
 SRC_URI=mirror://sourceforge/gnuplot/gnuplot-4.6.4.tar.gz mirror://gentoo/gnuplot.info-4.6.2.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=6794fd0fedfc2a61172672c934774107

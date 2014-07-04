@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=sys-apps/openrc
 SLOT=0
 SRC_URI=http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par.tar.gz
-_eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=user	1a9ecf501027961855b0320e8915a79c
 _md5_=5727d68e0550d15e8775dfe9324d804a

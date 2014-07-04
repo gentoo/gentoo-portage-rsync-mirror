@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=ssl? ( dev-libs/openssl ) hesiod? ( net-dns/hesiod ) kerberos? ( virtual/krb5 ) usb? ( !dev-libs/libusb ) userland_GNU? ( sys-apps/mtree ) >=dev-libs/expat-2.0.1 !sys-freebsd/freebsd-headers
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-lib-8.2.tar.bz2 mirror://gentoo/freebsd-contrib-8.2.tar.bz2 mirror://gentoo/freebsd-crypto-8.2.tar.bz2 mirror://gentoo/freebsd-libexec-8.2.tar.bz2 mirror://gentoo/freebsd-etc-8.2.tar.bz2 mirror://gentoo/freebsd-include-8.2.tar.bz2 mirror://gentoo/freebsd-usbin-8.2.tar.bz2 mirror://gentoo/freebsd-gnu-8.2.tar.bz2 build? ( mirror://gentoo/freebsd-sys-8.2.tar.bz2 )
-_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	freebsd	9df2a927373191607071d802c1058c96	multilib	fac675dcccf94392371a6abee62d909f	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	freebsd	9df2a927373191607071d802c1058c96	multilib	fac675dcccf94392371a6abee62d909f	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a6e8d041902491b02ff9b49383fc9ef6

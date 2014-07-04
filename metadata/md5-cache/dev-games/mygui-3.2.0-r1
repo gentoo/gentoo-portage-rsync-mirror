@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=dev-games/ogre:=[freeimage,opengl] media-libs/freetype:2 samples? ( dev-games/ois ) tools? ( dev-games/ois )
 SLOT=0
 SRC_URI=mirror://sourceforge/my-gui/MyGUI/MyGUI_3.2.0/MyGUI_3.2.0.zip
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=6b0fdbe4c054518a0588d461145919a4

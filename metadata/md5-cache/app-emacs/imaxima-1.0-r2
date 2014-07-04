@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=virtual/latex-base app-text/ghostscript-gpl dev-tex/mh <sci-mathematics/maxima-5.29 >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://members3.jcom.home.ne.jp/imaxima/Site/Download_and_Install_files/imaxima-imath-1.0.tar.gz
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=d16ad64fba3698ed88c45fcd82321d9d

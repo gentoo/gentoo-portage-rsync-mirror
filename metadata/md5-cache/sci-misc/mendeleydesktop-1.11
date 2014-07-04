@@ -8,5 +8,5 @@ RDEPEND=>=dev-qt/qtcore-4.6:4 >=dev-qt/qtgui-4.6:4 >=dev-qt/qtsvg-4.6:4 >=dev-qt
 RESTRICT=fetch
 SLOT=0
 SRC_URI=amd64? ( mendeleydesktop-1.11-linux-x86_64.tar.bz2 ) x86? ( mendeleydesktop-1.11-linux-i486.tar.bz2 ) amd64-linux? ( mendeleydesktop-1.11-linux-x86_64.tar.bz2 ) x86-linux? ( mendeleydesktop-1.11-linux-i486.tar.bz2 )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4ba5b4f28b79b2f59d628ebb24a9562c

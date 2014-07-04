@@ -10,5 +10,5 @@ RDEPEND=libusb? ( virtual/libusb:1 ) selinux? ( sec-policy/selinux-pcscd ) udev?
 REQUIRED_USE=^^ ( udev libusb )
 SLOT=0
 SRC_URI=http://alioth.debian.org/download.php/file/3963/pcsc-lite-1.8.10.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	1a9ecf501027961855b0320e8915a79c
 _md5_=fd50184fcabeac2c79126ce43a3a45d8

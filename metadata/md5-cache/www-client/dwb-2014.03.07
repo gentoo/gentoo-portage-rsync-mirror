@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=net-libs/libsoup-2.32:2.4 dev-libs/json-c net-libs/gnutls !gtk3? ( >=net-libs/webkit-gtk-1.8.0:2 x11-libs/gtk+:2 ) gtk3? ( >=net-libs/webkit-gtk-1.8.0:3 x11-libs/gtk+:3 )
 SLOT=0
 SRC_URI=mirror://bitbucket/portix/dwb/downloads/dwb-2014.03.07.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ffefcfca0c1d30ae7363f3d87047b720

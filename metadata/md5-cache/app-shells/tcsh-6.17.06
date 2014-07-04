@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/ncurses-5.1 virtual/libiconv
 RESTRICT=test
 SLOT=0
 SRC_URI=ftp://ftp.astron.com/pub/tcsh/beta/tcsh-6.17.06.tar.gz http://www.gentoo.org/~grobian/distfiles/tcsh-gentoo-patches-r1.9.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c00a0abcd05c8b0b190e5f99339c2646

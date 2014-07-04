@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/ocaml-3.10:= sci-libs/gsl
 SLOT=0/0.6.0
 SRC_URI=http://oandrieu.nerim.net/ocaml/gsl/ocamlgsl-0.6.0.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=05c73ee3b1d78536dde49c2a7dac9c3e

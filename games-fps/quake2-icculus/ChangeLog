@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.47 2014/05/15 16:44:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.48 2014/07/04 08:19:46 mr_bones_ Exp $
+
+  04 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild:
+  EAPI=5; punt svga support
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> quake2-icculus-0.16.1-r1.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

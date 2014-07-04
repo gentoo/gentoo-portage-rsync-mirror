@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ulm/emacs/ebuild-mode-1.26.tar.xz
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3fa831ccd9aafd2cddeb4d596a140636

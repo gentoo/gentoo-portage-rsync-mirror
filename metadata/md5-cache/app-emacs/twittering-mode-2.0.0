@@ -9,5 +9,5 @@ RDEPEND=app-crypt/gnupg >=virtual/emacs-23
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/twmode/twittering-mode-2.0.0.tar.gz
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=dc550b62bd3abefbb4f5a92c0897f917

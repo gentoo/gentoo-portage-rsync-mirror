@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 dev-libs/libxml2:2 >=sci-libs/cln-1.2 sys-libs/zlib readline? ( sys-libs/readline ) net-misc/wget gnuplot? ( >=sci-visualization/gnuplot-3.7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/qalculate-0.9.7/libqalculate-0.9.7.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=43853737868966c6504c4f7c87d7695f

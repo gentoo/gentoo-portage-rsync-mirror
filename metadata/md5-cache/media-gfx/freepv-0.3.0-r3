@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/libxml2 media-libs/libpng media-libs/freeglut sys-libs/zlib virtual/jpeg x11-libs/libXmu x11-libs/libXt x11-libs/libXxf86vm
 SLOT=0
 SRC_URI=mirror://sourceforge/freepv/freepv-0.3.0.tar.gz
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c196e904aaef73450e513e8efe3c8827

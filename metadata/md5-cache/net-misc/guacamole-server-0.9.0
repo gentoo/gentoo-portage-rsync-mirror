@@ -9,5 +9,5 @@ LICENSE=AGPL-3
 RDEPEND=x11-libs/cairo ssh? ( x11-libs/pango net-libs/libssh2 ) rdesktop? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) vnc? ( net-libs/libvncserver pulseaudio? ( media-sound/pulseaudio ) ) vorbis? ( media-libs/libvorbis )
 SLOT=0
 SRC_URI=mirror://sourceforge/guacamole/guacamole-server-0.9.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a5fb9ac185f04abdb1b2ffab4a924016

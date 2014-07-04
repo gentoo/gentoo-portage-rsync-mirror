@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.434 2014/04/27 19:01:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.435 2014/07/04 08:01:51 ulm Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -951,7 +951,7 @@ make_desktop_entry() {
 # @FUNCTION: _eutils_eprefix_init
 # @INTERNAL
 # @DESCRIPTION:
-# Initialized prefix variables for EAPI<3. 
+# Initialized prefix variables for EAPI<3.
 _eutils_eprefix_init() {
 	has "${EAPI:-0}" 0 1 2 && : ${ED:=${D}} ${EPREFIX:=} ${EROOT:=${ROOT}}
 }
@@ -1169,7 +1169,7 @@ doicon() {
 # results in: insinto /usr/share/pixmaps
 #             newins foobar.png NEWNAME.png
 #
-# example 2: newicon -s 48 foobar.png NEWNAME.png 
+# example 2: newicon -s 48 foobar.png NEWNAME.png
 # results in: insinto /usr/share/icons/hicolor/48x48/apps
 #             newins foobar.png NEWNAME.png
 # @CODE
@@ -1270,7 +1270,7 @@ preserve_old_lib_notify() {
 	has preserve-libs ${FEATURES} && return 0
 
 	_eutils_eprefix_init
-	
+
 	local lib notice=0
 	for lib in "$@" ; do
 		[[ -e ${EROOT}/${lib} ]] || continue

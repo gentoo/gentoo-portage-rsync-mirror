@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-haskell/contravariant-0.2.0.1:=[profile?] <dev-haskell/contravariant-1:=[profile?] >=dev-haskell/distributive-0.2.2:=[profile?] <dev-haskell/distributive-1:=[profile?] >=dev-haskell/mtl-2.0:=[profile?] <dev-haskell/mtl-2.2:=[profile?] >=dev-haskell/semigroups-0.8.3.1:=[profile?] <dev-haskell/semigroups-1:=[profile?] >=dev-haskell/tagged-0.1:=[profile?] <dev-haskell/tagged-1:=[profile?] >=dev-haskell/transformers-0.2:=[profile?] <dev-haskell/transformers-0.4:=[profile?] >=dev-lang/ghc-6.12.1:=
 SLOT=0/4.0
 SRC_URI=mirror://hackage/packages/archive/comonad/4.0/comonad-4.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b3b57cc131b4f8aed848f92935e67c49

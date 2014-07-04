@@ -9,5 +9,5 @@ LICENSE=Artistic-2
 RDEPEND=>=dev-lang/parrot-5.9.0:=[unicode] >=dev-lang/nqp-24.04[parrot?,java?]
 SLOT=0
 SRC_URI=http://rakudo.org/downloads/rakudo/rakudo-2014.04.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=1a97bcfb5d5db6cf15c290d0b6885c37

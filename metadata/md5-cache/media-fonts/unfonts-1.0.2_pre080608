@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=http://kldp.net/frs/download.php/4696/un-fonts-core-1.0.2-080608.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=0a5e90983ae46f2c4ec2c78328d47c9a

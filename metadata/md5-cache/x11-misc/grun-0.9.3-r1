@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib x11-libs/gtk+:2 x11-libs/gdk-pixbuf
 SLOT=0
 SRC_URI=http://grun.googlecode.com/files/grun-0.9.3.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=063944a369590f0f2f743fe73362b3e3

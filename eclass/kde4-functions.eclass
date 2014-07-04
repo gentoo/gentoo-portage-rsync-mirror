@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.68 2014/06/14 18:33:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.69 2014/07/04 08:01:51 ulm Exp $
 
 inherit versionator
 
@@ -131,7 +131,7 @@ comment_add_subdirectory() {
 	fi
 
 	if [[ -a "CMakeLists.txt" ]]; then
-	        sed -e "/add_subdirectory[[:space:]]*([[:space:]]*${1}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
+		sed -e "/add_subdirectory[[:space:]]*([[:space:]]*${1}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
 			-i CMakeLists.txt || die "failed to comment add_subdirectory(${1})"
 	fi
 }

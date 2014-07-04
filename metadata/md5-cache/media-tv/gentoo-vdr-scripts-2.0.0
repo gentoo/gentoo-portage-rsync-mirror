@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=nvram? ( sys-power/nvram-wakeup ) app-admin/sudo sys-process/wait_on_pid
 SLOT=0
 SRC_URI=mirror://gentoo/gentoo-vdr-scripts-2.0.0.tar.bz2 http://dev.gentoo.org/~hd_brummy/distfiles/gentoo-vdr-scripts-2.0.0.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=d462ea3ccd57e02fc24e223c7de89155

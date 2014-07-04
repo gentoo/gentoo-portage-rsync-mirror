@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/libpcre-3.4 dev-lang/perl berkdb? ( >=sys-libs/db-3.2 ) cdb? 
 REQUIRED_USE=ldap-bind? ( ldap sasl )
 SLOT=0
 SRC_URI=ftp://ftp.porcupine.org/mirrors/postfix-release/official/postfix-2.11.0.tar.gz vda? ( http://vda.sourceforge.net/VDA/postfix-vda-v13-2.10.0.patch )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	b53367370fde96e19beca78050a47c61	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	b53367370fde96e19beca78050a47c61	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=c765a5e7b2d4e5013f3bfbe166401433

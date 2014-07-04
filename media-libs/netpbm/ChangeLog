@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.275 2014/06/16 00:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.276 2014/07/04 08:25:11 mr_bones_ Exp $
+
+  04 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/netpbm-10.61-test.patch, -netpbm-10.61.00.ebuild:
+  old
 
   16 Jun 2014; Mike Frysinger <vapier@gentoo.org> netpbm-10.66.00.ebuild:
   Delete /usr/pkgconfig_template install #513356 by Viktor Yu. Kovalskii.

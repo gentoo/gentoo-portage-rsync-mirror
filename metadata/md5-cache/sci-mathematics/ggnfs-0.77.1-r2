@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/gmp-4.3:0 app-arch/unzip !sci-mathematics/cado-nfs
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~dreeevil/ggnfs-0.77.1.zip http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-par.txt http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-nm-params.txt http://gentooexperimental.org/~patrick/ggnfs-doc.pdf
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=879ba4472b1db39e96377a265617da73

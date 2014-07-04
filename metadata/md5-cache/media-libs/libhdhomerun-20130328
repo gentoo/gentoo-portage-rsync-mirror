@@ -6,5 +6,5 @@ KEYWORDS=~amd64
 LICENSE=LGPL-3+
 SLOT=0
 SRC_URI=http://download.silicondust.com/hdhomerun/libhdhomerun_20130328.tgz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b95cb69602d8b394a62f1855a9a18c21

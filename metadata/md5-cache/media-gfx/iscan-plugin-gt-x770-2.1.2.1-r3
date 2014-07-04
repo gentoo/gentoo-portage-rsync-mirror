@@ -8,5 +8,5 @@ LICENSE=AVASYS
 RDEPEND=>=media-gfx/iscan-2.21.0 !!<media-gfx/iscan-plugin-gt-x770-2.1.2.1-r2
 SLOT=0
 SRC_URI=x86? ( http://dev.gentoo.org/~flameeyes/avasys/iscan-plugin-gt-x770/2.1.2/iscan-plugin-gt-x770-2.1.2-1.i386.rpm ) amd64? ( http://dev.gentoo.org/~flameeyes/avasys/iscan-plugin-gt-x770/2.1.2/iscan-plugin-gt-x770-2.1.2-1.x86_64.rpm )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b6c8f209c2c766bad8d8b4f23f16ecfa

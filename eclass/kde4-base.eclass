@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.136 2014/06/14 18:33:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.137 2014/07/04 08:01:51 ulm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -782,7 +782,7 @@ kde4-base_src_test() {
 		fi
 
 		cmake-utils_src_test
-	}		
+	}
 
 	# When run as normal user during ebuild development with the ebuild command, the
 	# kde tests tend to access the session DBUS. This however is not possible in a real

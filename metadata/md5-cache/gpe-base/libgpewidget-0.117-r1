@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=x11-libs/gtk+:2 media-libs/libpng cairo? ( x11-libs/cairo[X] x11-libs/pango[X] )
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/libgpewidget-0.117.tar.bz2
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	025442f2eecab39ad0b4e541b6e142af	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a7bcd7fe763c72d44137b31c40307b77

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sec-policy/selinux-xserver >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20130424-r3
 SLOT=0
 SRC_URI=http://oss.tresys.com/files/refpolicy/refpolicy-2.20130424.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20130424-r3.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	selinux-policy-2	c7f9b10f09f95fb796c6d3d24b3c9975	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	selinux-policy-2	c7f9b10f09f95fb796c6d3d24b3c9975	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=cf8cc4ef6421dbde302d68514a4ae70b

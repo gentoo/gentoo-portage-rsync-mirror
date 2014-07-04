@@ -10,5 +10,5 @@ RDEPEND=!media-video/ffmpeg:0 alsa? ( media-libs/alsa-lib ) amr? ( media-libs/op
 REQUIRED_USE=bindist? ( !faac !openssl !fdk ) rtmp? ( network ) amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl ) test? ( encode zlib )
 SLOT=0/9
 SRC_URI=http://libav.org/releases/libav-9.13.tar.xz test? ( http://dev.gentoo.org/~lu_zero/libav/fate-9.tar.xz )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c1ea64de89fb94e6e0991a7532db6ac8

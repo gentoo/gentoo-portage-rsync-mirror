@@ -10,5 +10,5 @@ RDEPEND=app-crypt/gnupg app-misc/lockfile-progs dev-perl/Crypt-OpenSSL-RSA dev-p
 RESTRICT=test
 SLOT=0
 SRC_URI=http://archive.monkeysphere.info/debian/pool/monkeysphere/m/monkeysphere/monkeysphere_0.36.orig.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=b0ad40b4ea6b3003c6117df2e590fdd9

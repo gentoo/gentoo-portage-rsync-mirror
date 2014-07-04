@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ppc x86
 LICENSE=mmix
 SLOT=0
 SRC_URI=http://www-cs-faculty.stanford.edu/~knuth/programs/mmix-20110605.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4e3b45c10f894cfde8e7cf40fab35b53

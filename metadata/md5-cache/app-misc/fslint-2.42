@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/pygtk:2 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://www.pixelbeat.org/fslint/fslint-2.42.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=8bdbb4c157a275f7c33a6e2838685de3

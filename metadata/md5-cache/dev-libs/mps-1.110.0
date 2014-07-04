@@ -6,5 +6,5 @@ KEYWORDS=~x86
 LICENSE=Sleepycat
 SLOT=0
 SRC_URI=http://www.ravenbrook.com/project/mps/release/1.110.0/mps-kit-1.110.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2a222978f09f28c34cc23f95cb77ed61

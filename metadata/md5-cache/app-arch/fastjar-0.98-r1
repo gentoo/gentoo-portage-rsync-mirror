@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=!<=dev-java/kaffe-1.1.7-r5
 SLOT=0
 SRC_URI=http://download.savannah.nongnu.org/releases/fastjar/fastjar-0.98.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=068ced14392a19e687a2f30b3f326f69

@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=media-libs/libsdl[opengl] media-libs/sdl-image media-libs/sdl-mixer virtual/opengl virtual/glu media-libs/freeglut =dev-lang/python-2* games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/kiki/kiki-1.0.2-src.tgz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=4ebb2f502f5a04d47d14274bd62ecd44

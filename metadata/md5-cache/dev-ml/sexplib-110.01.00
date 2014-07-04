@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-ml/type-conv-109.60.01:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/110.01.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/110.01.00/individual/sexplib-110.01.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/sexplib-110.01.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=5830acaa5896b660997612ab042db298

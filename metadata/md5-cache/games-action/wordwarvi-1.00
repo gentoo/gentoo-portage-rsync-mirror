@@ -9,5 +9,5 @@ LICENSE=GPL-2 CC-BY-2.0 CC-BY-SA-3.0
 RDEPEND=x11-libs/gtk+:2 portaudio? ( media-libs/libvorbis >=media-libs/portaudio-19_pre1 ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/wordwarvi/wordwarvi-1.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=9f172d2c930393d4284d0fb04dc92de1

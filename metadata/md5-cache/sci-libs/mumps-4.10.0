@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=virtual/blas metis? ( || ( sci-libs/metis <sci-libs/parmetis-4 ) mpi? ( <sci-libs/parmetis-4 ) ) scotch? ( sci-libs/scotch[mpi=] ) mpi? ( sci-libs/scalapack ) virtual/fortran
 SLOT=0
 SRC_URI=http://mumps.enseeiht.fr/MUMPS_4.10.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=96e385624f316f92774da9f5ddbcc492

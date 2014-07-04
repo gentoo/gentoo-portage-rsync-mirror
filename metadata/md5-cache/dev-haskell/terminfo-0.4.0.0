@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/ghc-7.0.1:= sys-libs/ncurses
 SLOT=0/0.4.0.0
 SRC_URI=mirror://hackage/packages/archive/terminfo/0.4.0.0/terminfo-0.4.0.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a95f5e62417f65a8f05deb10d5c811b3

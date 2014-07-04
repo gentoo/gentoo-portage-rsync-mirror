@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 BSD ) public-domain
 RDEPEND=!<sys-apps/pciutils-3.1.9-r2 !<sys-apps/usbutils-005-r1
 SLOT=0
 SRC_URI=https://github.com/gentoo/hwids/archive/hwids-20140602.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
 _md5_=810cef03745ea23920274743229ebfa6

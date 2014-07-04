@@ -9,5 +9,5 @@ RDEPEND=app-arch/cabextract app-arch/p7zip app-arch/unzip app-emulation/wine net
 RESTRICT=test
 SLOT=0
 SRC_URI=gtk? ( http://dev.gentoo.org/~tetromino/distfiles/wine/winetricks-gentoo-2012.11.24.tar.bz2 ) kde? ( http://dev.gentoo.org/~tetromino/distfiles/wine/winetricks-gentoo-2012.11.24.tar.bz2 )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=46485610ea3be95c73de7554c5c30adc

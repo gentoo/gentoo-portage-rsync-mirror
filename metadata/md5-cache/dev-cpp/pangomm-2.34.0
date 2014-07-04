@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=x11-libs/pango-1.23.0 >=dev-cpp/glibmm-2.36.0:2 >=dev-cpp/cairomm-1.2.2 dev-libs/libsigc++:2 !<dev-cpp/gtkmm-2.13:2.4
 SLOT=1.4
 SRC_URI=mirror://gnome/sources/pangomm/2.34/pangomm-2.34.0.tar.xz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=e4d1bad37da6c2696ef488a31aeaf636

@@ -9,5 +9,5 @@ PROPERTIES=interactive
 RDEPEND=dev-libs/lzo dev-libs/openssl sys-apps/tcp-wrappers sys-libs/zlib virtual/jpeg dev-qt/qtcore:4 dev-qt/qtxmlpatterns:4 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXtst x11-apps/xinput dev-qt/qtgui:4
 SLOT=0
 SRC_URI=mirror://sourceforge/italc/italc-2.0.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=c2e3f45c33a24a1c4d46a3a8348661cd

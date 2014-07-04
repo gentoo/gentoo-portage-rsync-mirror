@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.87.ebuild,v 1.2 2014/05/01 04:13:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.87.ebuild,v 1.3 2014/07/04 08:20:39 naota Exp $
 
 EAPI=5
 inherit eutils flag-o-matic elisp-common toolchain-funcs multilib
@@ -15,6 +15,7 @@ LICENSE="GPL-2"
 IUSE="motif neXt Xaw3d emacs"
 
 RDEPEND="media-libs/freetype:2
+	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXp
 	x11-libs/libXpm

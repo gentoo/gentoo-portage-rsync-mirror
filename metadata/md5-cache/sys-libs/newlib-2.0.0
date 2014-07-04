@@ -8,5 +8,5 @@ LICENSE=NEWLIB LIBGLOSS GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=ftp://sourceware.org/pub/newlib/newlib-2.0.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3193564c63358bd2e8663267a3dd400c

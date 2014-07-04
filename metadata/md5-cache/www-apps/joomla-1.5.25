@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/php[mysql,zlib,xml] >=app-admin/webapp-config-1.50.15
 SLOT=1.5.25
 SRC_URI=http://joomlacode.org/gf/download/frsrelease/16026/69665/Joomla_1.5.25-Stable-Full_Package.zip
-_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=747a1bcda9b253ef3f75936b6be9c400

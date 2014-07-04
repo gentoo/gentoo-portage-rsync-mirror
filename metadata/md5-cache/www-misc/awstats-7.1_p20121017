@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.6.1 virtual/perl-Time-Local dev-perl/URI geoip? ( dev-perl/Geo-IP ) ipv6? ( dev-perl/Net-IP dev-perl/Net-DNS )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~flameeyes/awstats/awstats-7.1_p20121017.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a943bf104adc4df335a855c6d76ab08b

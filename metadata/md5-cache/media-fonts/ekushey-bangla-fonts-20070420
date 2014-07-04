@@ -7,5 +7,5 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2 OFL-1.1
 SLOT=0
 SRC_URI=mirror://sourceforge/ekushey/Lohit_14-04-2007.ttf mirror://sourceforge/ekushey/Mohua_07-09-05.ttf mirror://sourceforge/ekushey/Godhuli_03-09-2005.ttf mirror://sourceforge/ekushey/Puja-17-06-2006.ttf mirror://sourceforge/ekushey/Durga_03-09-2005.ttf mirror://sourceforge/ekushey/Saraswatii_03-09-2005.ttf mirror://sourceforge/ekushey/Sharifa_03-09-2005.ttf mirror://sourceforge/ekushey/Sumit_03-09-2005.ttf mirror://sourceforge/ekushey/Punarbhaba_27-02-2006.ttf mirror://sourceforge/ekushey/SolaimanLipi_20-04-07.ttf mirror://sourceforge/ekushey/Rupali_01-02-2007.ttf
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=ea1836a34801a6982a386431ac00c153

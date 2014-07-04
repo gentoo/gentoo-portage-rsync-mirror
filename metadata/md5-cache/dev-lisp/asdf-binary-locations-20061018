@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=dev-lisp/asdf
 SLOT=0
 SRC_URI=http://common-lisp.net/project/portage-overlay/distfiles/asdf-binary-locations_20061018.tar.gz
-_eclasses_=common-lisp	c0762703d46ef354d2354f7d73b80008	common-lisp-common	cc88c2e76410141434593a63f108303b	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=common-lisp	c0762703d46ef354d2354f7d73b80008	common-lisp-common	cc88c2e76410141434593a63f108303b	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=7539c7f79f170fb73fb0aa3297f6f52a

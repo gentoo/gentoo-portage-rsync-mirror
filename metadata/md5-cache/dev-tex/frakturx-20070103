@@ -8,5 +8,5 @@ LICENSE=LPPL-1.2 free-noncomm
 RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gentoo/frakturx-20070103-base.zip mirror://gentoo/frakturx-20070103-tfrak.zip mirror://gentoo/frakturx-20070103-obibel.zip mirror://gentoo/frakturx-20070103-odedruck.zip mirror://gentoo/frakturx-20070103-odeschmk.zip mirror://gentoo/frakturx-20070103-oweissfr.zip mirror://gentoo/frakturx-20070103-oweissgo.zip mirror://gentoo/frakturx-20070103-talteswab.zip mirror://gentoo/frakturx-20070103-tbrtkpf.zip mirror://gentoo/frakturx-20070103-tkngsbg.zip mirror://gentoo/frakturx-20070103-twieynk.zip mirror://gentoo/frakturx-20070103-twieyvig.zip mirror://gentoo/frakturx-20070103-tzentenar.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=74a2faefe91bd6195bab9e70f5a9dbae

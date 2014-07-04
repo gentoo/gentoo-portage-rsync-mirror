@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc x86
 LICENSE=BSD
 SLOT=4
 SRC_URI=mirror://sourceforge/premake/premake-4.3-src.zip
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a4e2d2fb688e67b81eac7c656336b5d2

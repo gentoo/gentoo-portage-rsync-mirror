@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.107 2014/05/01 04:13:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.108 2014/07/04 08:20:39 naota Exp $
+
+  04 Jul 2014; Naohiro Aota <naota@gentoo.org> xdvik-22.87.ebuild:
+  Add missing dependency. x11-libs/libXi. #513936
 
   01 May 2014; Naohiro Aota <naota@gentoo.org> +files/xdvik-22.87-xaw3d.patch,
   xdvik-22.87.ebuild:

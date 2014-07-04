@@ -9,5 +9,5 @@ LICENSE=GPL-2 GPL-2+ GPL-3 CC-BY-SA-3.0 CC-BY-3.0 CC0-1.0 OFL-1.1
 RDEPEND=dev-cpp/luabind dev-lang/lua media-libs/libpng:0= media-libs/libsdl[X,joystick,opengl,video] media-libs/libvorbis media-libs/openal media-libs/sdl-image[png] media-libs/sdl-ttf virtual/glu virtual/opengl x11-libs/libX11 editor? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 ) nls? ( virtual/libintl ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/valyriatear/ValyriaTear-0.6.0.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=1ae333441e2b7600cf5e837b55f4b722

@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/glib-2.2 sys-fs/e2fsprogs sys-fs/sysfsutils >=sys-libs/openipmi-1.4.20 snmp? ( >=net-analyzer/net-snmp-5.07 )
 SLOT=0
 SRC_URI=mirror://sourceforge/openhpi/openhpi-2.12.0.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3b368c49630bfc5d3c20a2788a086a3e

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/mono-2.0
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/nant/nant-0.93_pre20130131.tar.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=21c7c961c1e5b293e69efab9b24bf38f

@@ -10,5 +10,5 @@ RDEPEND=X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) blas? ( virtual/bl
 REQUIRED_USE=|| ( single-precision double-precision ) cuda? ( single-precision ) mkl? ( !blas !fftw !lapack )
 SLOT=0/5.0
 SRC_URI=ftp://ftp.gromacs.org/pub/gromacs/gromacs-5.0.tar.gz test? ( http://gerrit.gromacs.org/download/regressiontests-5.0.tar.gz )
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=f13a0b4dcfe3ebf3f2e52e9462038a62

@@ -10,5 +10,5 @@ PDEPEND=>=app-admin/eselect-wxwidgets-20131230
 RDEPEND=dev-libs/expat sdl? ( media-libs/libsdl ) X? ( >=dev-libs/glib-2.22:2 media-libs/libpng:0= sys-libs/zlib virtual/jpeg >=x11-libs/gtk+-2.18:2 x11-libs/gdk-pixbuf x11-libs/libSM x11-libs/libXxf86vm x11-libs/pango[X] gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) libnotify? ( x11-libs/libnotify ) opengl? ( virtual/opengl ) tiff? ( media-libs/tiff:0 ) webkit? ( net-libs/webkit-gtk:2 ) ) aqua? ( >=x11-libs/gtk+-2.4[aqua=] virtual/jpeg tiff? ( media-libs/tiff:0 ) )
 SLOT=3.0
 SRC_URI=mirror://sourceforge/wxpython/wxPython-src-3.0.0.0.tar.bz2 doc? ( mirror://sourceforge/wxpython/wxPython-docs-3.0.0.0.tar.bz2 )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2d0a32c28d0333f767aa24bdf2f3e87e

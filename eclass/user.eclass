@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.22 2012/06/22 19:18:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.23 2014/07/04 08:01:51 ulm Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -392,7 +392,7 @@ egetshell() {
 # @DESCRIPTION:
 # Update the home directory in a platform-agnostic way.
 # Required parameters is the username and the new home directory.
-# Specify -1 if you want to set home to the enewuser default 
+# Specify -1 if you want to set home to the enewuser default
 # of /dev/null.
 # If the new home directory does not exist, it is created.
 # Any previously existing home directory is NOT moved.

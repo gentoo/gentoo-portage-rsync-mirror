@@ -9,5 +9,5 @@ PDEPEND=!build? ( less? ( sys-apps/less ) >=net-misc/rsync-2.6.4 userland_GNU? (
 RDEPEND=>=dev-lang/python-2.4 <dev-lang/python-3 !build? ( >=sys-apps/sed-4.0.5 >=app-shells/bash-3.2_p17 >=app-admin/eselect-1.2 ) elibc_FreeBSD? ( sys-freebsd/freebsd-bin ) elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) ) elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) ) >=app-misc/pax-utils-0.1.17 !>=dev-util/debugedit-4.4.6-r2
 SLOT=0
 SRC_URI=mirror://gentoo/portage-2.1.6.tar.bz2 http://dev.gentoo.org/~zmedico/portage/archives/portage-2.1.6.tar.bz2 linguas_pl? ( mirror://gentoo/portage-man-pl-2.1.2.tar.bz2 http://dev.gentoo.org/~zmedico/portage/archives/portage-man-pl-2.1.2.tar.bz2 ) mirror://gentoo/portage-2.1.6.7.patch.bz2 http://dev.gentoo.org/~zmedico/portage/archives/portage-2.1.6.7.patch.bz2 mirror://gentoo/portage-2.1.6.7_p1.patch.bz2 http://dev.gentoo.org/~zmedico/portage/archives/portage-2.1.6.7_p1.patch.bz2
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=8ef99dca43eb7403b3da2a77c3bc4b03

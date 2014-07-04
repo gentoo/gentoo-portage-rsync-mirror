@@ -7,5 +7,5 @@ LICENSE=XAnim
 RDEPEND=virtual/jpeg media-libs/libpng x11-libs/libXext x11-libs/libXt
 SLOT=0
 SRC_URI=http://heroine.linuxave.net/xanim_exporting_edition.tar.gz sparc? ( ftp://xanim.va.pubnix.com/modules/xa1.0_cyuv_sparcELF.o.Z ftp://xanim.va.pubnix.com/modules/xa2.0_cvid_sparcELF.o.Z ftp://xanim.va.pubnix.com/modules/xa2.0_iv32_sparcELF.o.Z ) ppc? ( ftp://xanim.va.pubnix.com/modules/xa1.0_cyuv_linuxPPC.o.Z ftp://xanim.va.pubnix.com/modules/xa2.0_cvid_linuxPPC.o.Z ftp://xanim.va.pubnix.com/modules/xa2.0_iv32_linuxPPC.o.Z ) x86? ( ftp://xanim.va.pubnix.com/modules/xa1.0_cyuv_linuxELFg21.o.gz ftp://xanim.va.pubnix.com/modules/xa2.0_cvid_linuxELFg21.o.gz ftp://xanim.va.pubnix.com/modules/xa2.1_iv32_linuxELFg21.o.gz )
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=09a7b5c95a9ce8d0621a0675bf9d1cd2

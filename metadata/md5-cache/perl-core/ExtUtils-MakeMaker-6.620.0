@@ -9,5 +9,5 @@ PDEPEND=>=virtual/perl-CPAN-Meta-2.110.930 >=virtual/perl-Parse-CPAN-Meta-1.440.
 RDEPEND=>=virtual/perl-ExtUtils-Command-1.16 >=virtual/perl-ExtUtils-Install-1.52 >=virtual/perl-ExtUtils-Manifest-1.58 >=virtual/perl-File-Spec-0.8 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSCHWERN/ExtUtils-MakeMaker-6.62.tar.gz
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
 _md5_=30aa31d66d510f9cdd0cb682d2edf1c8

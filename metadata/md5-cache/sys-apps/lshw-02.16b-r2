@@ -10,5 +10,5 @@ RDEPEND=gtk? ( x11-libs/gtk+:2 ) sqlite? ( dev-db/sqlite:3 ) sys-apps/hwids
 REQUIRED_USE=static? ( !gtk )
 SLOT=0
 SRC_URI=http://ezix.org/software/files/lshw-B.02.16.tar.gz
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=777aed0daf22ad7b804d33c17f87335d
