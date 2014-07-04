@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.21 2014/04/02 21:06:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.22 2014/07/04 12:00:12 klausman Exp $
+
+  04 Jul 2014; Tobias Klausmann <klausman@gentoo.org> ecdsa-0.10.ebuild:
+  Keyworded on alpha, bug #490374
 
   02 Apr 2014; Tim Harder <radhermit@gentoo.org> ecdsa-0.11.ebuild:
   Add python3_4 support.

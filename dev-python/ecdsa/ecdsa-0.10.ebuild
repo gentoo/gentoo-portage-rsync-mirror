@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ecdsa-0.10.ebuild,v 1.12 2014/03/17 09:21:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ecdsa-0.10.ebuild,v 1.13 2014/07/04 12:00:12 klausman Exp $
 
 EAPI=5
 
@@ -15,5 +15,5 @@ SRC_URI="https://github.com/warner/python-${PN}/tarball/python-${P} -> ${P}.tar.
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 ~s390 x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~s390 x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint"
 IUSE=""

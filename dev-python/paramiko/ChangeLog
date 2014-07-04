@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.113 2014/03/22 01:25:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.114 2014/07/04 11:59:57 klausman Exp $
+
+  04 Jul 2014; Tobias Klausmann <klausman@gentoo.org> paramiko-1.12.2.ebuild:
+  Keyworded on alpha, bug #490374
 
   22 Mar 2014; Ian Delaney <idella4@gentoo.org> paramiko-1.13.0.ebuild:
   add PYTHON_USEDEP to ecdsa, wrt Bugs 501952
