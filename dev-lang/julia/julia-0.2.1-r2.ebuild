@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1-r1.ebuild,v 1.4 2014/07/03 16:29:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.1-r2.ebuild,v 1.1 2014/07/04 03:22:41 patrick Exp $
 
 EAPI=5
 
@@ -88,8 +88,6 @@ src_prepare() {
 src_configure() {
 	# libuv is an incompatible fork from upstream, so don't use system one
 	cat <<-EOF > Make.user
-		LIBBLAS=$($(tc-getPKG_CONFIG) --libs blas)
-		LIBBLASNAME=$($(tc-getPKG_CONFIG) --libs blas | sed -e "s/-l\([a-z0-9]*\).*/lib\1/")
 		LIBLAPACK=$($(tc-getPKG_CONFIG) --libs lapack)
 		LIBLAPACKNAME=$($(tc-getPKG_CONFIG) --libs lapack | sed -e "s/-l\([a-z0-9]*\).*/lib\1/")
 		USE_LLVM_SHLIB=1
