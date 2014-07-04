@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.209 2014/07/03 09:20:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.210 2014/07/04 07:29:31 pacho Exp $
 
 # Markus Meier <maekke@gentoo.org> (24 Jun 2014)
 # Unkeyworded deps, bug #513108
@@ -213,6 +213,7 @@ dev-vcs/subversion java
 =media-gfx/graphviz-2.26.3-r3 java
 =media-gfx/graphviz-2.26.3-r4 java
 =media-libs/libcaca-0.99_beta17 java
+=media-libs/libcaca-0.99_beta18-r2 java
 media-libs/libjpeg-turbo java
 net-dns/libidn java
 net-misc/tigervnc java
