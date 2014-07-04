@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>games</herd>
-  <use>
-    <flag name="security">install the security module needed for some servers</flag>
-  </use>
 </pkgmetadata>

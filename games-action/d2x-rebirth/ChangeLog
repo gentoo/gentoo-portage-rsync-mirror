@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d2x-rebirth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.9 2014/07/02 05:49:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.10 2014/07/04 02:16:04 patrick Exp $
+
+  04 Jul 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   02 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -d2x-rebirth-0.50.ebuild:
   old

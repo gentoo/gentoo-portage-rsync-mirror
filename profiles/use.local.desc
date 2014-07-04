@@ -2465,10 +2465,8 @@ games-action/d1x-rebirth:mpu401 - Enable MPU401 music support
 games-action/d1x-rebirth:music - Support for ingame music
 games-action/d1x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d1x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
-games-action/d2x-rebirth:awe32 - Enable AWE32 support
 games-action/d2x-rebirth:demo - Install games-action/descent2-demodata as well
 games-action/d2x-rebirth:linguas_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
-games-action/d2x-rebirth:mpu401 - Enable MPU401 music support
 games-action/d2x-rebirth:music - Support for ingame music
 games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
@@ -2579,7 +2577,6 @@ games-fps/eduke32:server - Compile with server support
 games-fps/eduke32:textures - Include optional high-resolution textures (needs USE 'opengl')
 games-fps/eduke32:tools - Build several tools for modding and development
 games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs (needs USE 'opengl')
-games-fps/ezquake-bin:security - install the security module needed for some servers
 games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
 games-fps/lsdldoom:net - Enables network game support
 games-fps/lsdldoom:shareware - Install games-fps/doom-data for shareware wad file
@@ -2830,7 +2827,6 @@ gnome-extra/zeitgeist:datahub - Use build datahub for passive event injection
 gnome-extra/zeitgeist:downloads-monitor - Monitor the XDG_DOWNLOAD_DIRECTORY
 gnome-extra/zeitgeist:extensions - Use gnome-extra/zeitgeist-extentions to enhance the internal routines
 gnome-extra/zeitgeist:fts - Enable the full text search extension
-gnome-extra/zeitgeist:passiv - Use gnome-extra/zeitgeist-datahub to passively inject events
 gnome-extra/zeitgeist:plugins - Use gnome-extra/zeitgeist-datasources to enable numerous packages to inject events
 gnome-extra/zeitgeist:sql-debug - Enable SQL debugging
 gnome-extra/zeitgeist:telepathy - Enable telepathy framework as data source

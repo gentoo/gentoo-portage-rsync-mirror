@@ -3,8 +3,6 @@
 <pkgmetadata>
   <herd>games</herd>
   <use>
-    <flag name="awe32">Enable AWE32 support</flag>
-	<flag name="mpu401">Enable MPU401 music support</flag>
 	<flag name="demo">Install <pkg>games-action/descent2-demodata</pkg> as well</flag>
 	<flag name="music">Support for ingame music</flag>
     <flag name="linguas_de">Provides German translations for the game's
