@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.43 2014/06/17 19:39:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.44 2014/07/04 14:21:13 haubi Exp $
+
+  04 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> xjavac-20110814.ebuild:
+  add ~ppc-aix keyword
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/xjavac-ibm-1_5.patch,
   -files/xjavac-more-vendors.patch, -xjavac-20041208-r5.ebuild:

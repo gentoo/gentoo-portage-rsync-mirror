@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.37 2014/06/15 00:38:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.38 2014/07/04 14:13:27 haubi Exp $
+
+  04 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
+  libpthread-stubs-0.3-r1.ebuild:
+  add ~ppc-aix keyword
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org>
   libpthread-stubs-0.3-r1.ebuild:
