@@ -1,6 +1,14 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.33 2014/06/08 13:29:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.34 2014/07/03 23:20:26 pesa Exp $
+
+*qtgui-4.8.5-r3 (03 Jul 2014)
+
+  03 Jul 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtgui-4.8.5-cleanlooks-floating-point-exception.patch,
+  +files/qtgui-4.8.5-disable-gtk-theme-check.patch,
+  +files/qtgui-4.8.5-qclipboard-delay.patch, +qtgui-4.8.5-r3.ebuild:
+  Apply various patches wrt bugs #491226, #503880, #507124, and #514968.
 
   08 Jun 2014; Davide Pesavento <pesa@gentoo.org> -qtgui-4.8.5-r1.ebuild:
   Remove vulnerable version wrt bug #508984
