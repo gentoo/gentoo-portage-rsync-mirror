@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.37.0-r1.ebuild,v 1.4 2014/06/19 03:20:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.37.0-r1.ebuild,v 1.5 2014/07/04 18:03:11 axs Exp $
 
 EAPI="5"
 
@@ -63,7 +63,7 @@ RDEPEND="ldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	ssh? ( >=net-libs/libssh2-1.4.3[static-libs?,${MULTILIB_USEDEP}] )
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-baselibs-20131008-r13
+		!<=app-emulation/emul-linux-x86-baselibs-20140508-r13
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 

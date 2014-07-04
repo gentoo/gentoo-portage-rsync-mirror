@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.366 2014/06/19 03:20:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.367 2014/07/04 18:03:11 axs Exp $
+
+  04 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> curl-7.37.0-r1.ebuild:
+  adjusted exclusion dep on emul-linux-x86-baselibs as it was way too old
 
   19 Jun 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   curl-7.37.0-r1.ebuild:
