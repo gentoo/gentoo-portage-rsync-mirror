@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/imediff2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.8 2014/02/11 18:30:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.9 2014/07/04 15:23:21 dev-zero Exp $
+
+*imediff2-1.1.2-r3 (04 Jul 2014)
+
+  04 Jul 2014; Tiziano Müller <dev-zero@gentoo.org> +imediff2-1.1.2-r3.ebuild,
+  -imediff2-1.1.2-r2.ebuild:
+  Convert to python-single-r1 (bug #515522, thanks to grknight), EAPI bump.
 
   11 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -imediff2-1.1.2-r1.ebuild:

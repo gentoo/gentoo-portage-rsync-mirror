@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.46 2014/06/10 00:19:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.47 2014/07/04 15:05:39 swift Exp $
+
+  04 Jul 2014; Sven Vermeulen <swift@gentoo.org> trousers-0.3.10-r1.ebuild,
+  trousers-0.3.10.ebuild, trousers-0.3.6-r1.ebuild, trousers-0.3.6.ebuild:
+  Adding USE=selinux dependency to selinux-tcsd on trousers package
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> trousers-0.3.10-r1.ebuild,
   trousers-0.3.10.ebuild:

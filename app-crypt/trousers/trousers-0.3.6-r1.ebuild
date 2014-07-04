@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6-r1.ebuild,v 1.4 2012/12/11 15:57:04 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6-r1.ebuild,v 1.5 2014/07/04 15:05:39 swift Exp $
 
 EAPI="3"
 
@@ -14,13 +14,14 @@ SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="doc" # gtk
+IUSE="doc selinux" # gtk
 
 # gtk support presently does NOT compile.
 #	gtk? ( >=x11-libs/gtk+-2 )
 
 RDEPEND=">=dev-libs/glib-2
-	>=dev-libs/openssl-0.9.7:0"
+	>=dev-libs/openssl-0.9.7:0
+	selinux? ( sec-policy/selinux-tcsd )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

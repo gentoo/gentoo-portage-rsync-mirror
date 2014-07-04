@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=>=dev-libs/glib-2 >=dev-libs/openssl-0.9.7:0 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DEPEND=>=dev-libs/glib-2 >=dev-libs/openssl-0.9.7:0 selinux? ( sec-policy/selinux-tcsd ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=An open-source TCG Software Stack (TSS) v1.1 implementation
 EAPI=4
 HOMEPAGE=http://trousers.sf.net
-IUSE=doc
+IUSE=doc selinux
 KEYWORDS=amd64 arm arm64 m68k s390 sh x86
 LICENSE=CPL-1.0
-RDEPEND=>=dev-libs/glib-2 >=dev-libs/openssl-0.9.7:0
+RDEPEND=>=dev-libs/glib-2 >=dev-libs/openssl-0.9.7:0 selinux? ( sec-policy/selinux-tcsd )
 SLOT=0
 SRC_URI=mirror://sourceforge/trousers/trousers-0.3.10.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	1a9ecf501027961855b0320e8915a79c	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=42195743c4752a775c4ed26de13a6de0
+_md5_=f60a45b21adf6d6bf1bcc846aeaed24a
