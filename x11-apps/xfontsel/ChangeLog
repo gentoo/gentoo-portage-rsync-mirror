@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfontsel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfontsel/ChangeLog,v 1.62 2013/10/21 13:37:37 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfontsel/ChangeLog,v 1.63 2014/07/04 13:27:59 haubi Exp $
+
+  04 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> xfontsel-1.0.5.ebuild:
+  add ~ppc-aix keyword
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> xfontsel-1.0.5.ebuild:
   Marked ~x64-macos, bug #486818

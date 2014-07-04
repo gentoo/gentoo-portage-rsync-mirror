@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.62 2014/07/03 17:45:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.63 2014/07/04 13:02:21 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -116,13 +116,13 @@ _multilib_build_set_globals() {
 		done
 
 		flags=( "${MULTILIB_COMPAT[@]}" )
+
+		REQUIRED_USE="|| ( ${flags[*]} )"
 	fi
 
 	local usedeps=${flags[@]/%/(-)?}
 
 	IUSE=${flags[*]}
-	REQUIRED_USE="|| ( ${flags[*]} )"
-
 	MULTILIB_USEDEP=${usedeps// /,}
 }
 _multilib_build_set_globals
