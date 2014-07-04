@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.5.ebuild,v 1.7 2012/05/28 12:23:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.5.ebuild,v 1.8 2014/07/04 06:51:01 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_PV=${PV//./}
@@ -32,15 +32,12 @@ src_prepare() {
 	mv makefile.std makefile
 	epatch "${FILESDIR}/${PV}-gentoo-paths.patch" \
 		"${FILESDIR}"/${P}-noX.patch
-	sed -i \
-		-e "s:xx:x:" \
-		../lib/edit/p_info.txt
-	sed -i \
-		-e "s:GENTOO_DIR:${GAMES_STATEDIR}:" files.c init2.c \
-		|| die "sed failed"
+	sed -i -e '/^CC =/d' makefile || die
+	sed -i -e "s:xx:x:" ../lib/edit/p_info.txt || die
+	sed -i -e "s:GENTOO_DIR:${GAMES_STATEDIR}:" files.c init2.c || die
 
-	find .. -name .cvsignore -exec rm -f \{\} \;
-	find ../lib/edit -type f -exec chmod a-x \{\} \;
+	find .. -name .cvsignore -exec rm -f \{\} +
+	find ../lib/edit -type f -exec chmod a-x \{\} +
 }
 
 src_compile() {
@@ -82,30 +79,28 @@ src_compile() {
 	fi
 	GENTOO_INCLUDES="${GENTOO_INCLUDES} -Ilua -I."
 	GENTOO_DEFINES="${GENTOO_DEFINES} -DUSE_LUA"
-	make \
+	emake -j1 \
 		INCLUDES="${GENTOO_INCLUDES}" \
 		DEFINES="${GENTOO_DEFINES}" \
-		depend || die "make depend failed"
-	emake ./tolua || die "emake ./tolua failed"
+		depend
+	emake ./tolua
 	emake \
 		COPTS="${CFLAGS}" \
 		INCLUDES="${GENTOO_INCLUDES}" \
 		DEFINES="${GENTOO_DEFINES}" \
-		LIBS="${GENTOO_LIBS}" \
+		LIBS="${GENTOO_LIBS} -lm" \
 		BINDIR="${GAMES_BINDIR}" \
 		LIBDIR="${GAMES_DATADIR}/${PN}" \
 		GTK_SRC_FILE="${GTK_SRC_FILE}" \
-		GTK_OBJ_FILE="${GTK_OBJ_FILE}" \
-		|| die "emake failed"
+		GTK_OBJ_FILE="${GTK_OBJ_FILE}"
 }
 
 src_install() {
-	make \
+	emake -j1 \
 		DESTDIR="${D}" \
 		OWNER="${GAMES_USER}" \
 		BINDIR="${GAMES_BINDIR}" \
-		LIBDIR="${GAMES_DATADIR}/${PN}" install \
-		|| die "make install failed"
+		LIBDIR="${GAMES_DATADIR}/${PN}" install
 	cd ..
 	dodoc *.txt
 
