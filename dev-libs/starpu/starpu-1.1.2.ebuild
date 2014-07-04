@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.1.2.ebuild,v 1.1 2014/06/20 18:33:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.1.2.ebuild,v 1.2 2014/07/04 14:36:27 bicatali Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="
 	fftw? ( sci-libs/fftw:3.0= )
 	mpi? ( virtual/mpi )
 	opencl? ( virtual/opencl )
-	opengl? ( virtual/opengl )
+	opengl? ( media-libs/freeglut:0= )
 	qt4? (  >=dev-qt/qtgui-4.7:4
 			>=dev-qt/qtopengl-4.7:4
 			>=dev-qt/qtsql-4.7:4

@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/MediaWiki-API
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MediaWiki-API/ChangeLog,v 1.6 2014/05/04 15:14:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MediaWiki-API/ChangeLog,v 1.8 2014/07/04 14:51:54 klausman Exp $
+
+  04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  MediaWiki-API-0.390.0.ebuild:
+  Keyworded on alpha, bug #497068
+
+  04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  MediaWiki-API-0.390.0.ebuild:
+  Stable on alpha, bug #497068
 
   04 May 2014; Mikle Kolyada <zlogene@gentoo.org> MediaWiki-API-0.390.0.ebuild:
   amd64 stable wrt bug #501662

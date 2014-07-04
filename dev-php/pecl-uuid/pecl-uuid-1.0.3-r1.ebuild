@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uuid/pecl-uuid-1.0.3.ebuild,v 1.1 2012/08/24 09:01:07 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uuid/pecl-uuid-1.0.3-r1.ebuild,v 1.1 2014/07/04 14:59:33 dev-zero Exp $
 
-EAPI="4"
+EAPI="5"
 
 PHP_EXT_NAME="uuid"
 PHP_EXT_INIT="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="CREDITS"
 
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-3 php5-4 php5-5"
 
 inherit php-ext-pecl-r2
 

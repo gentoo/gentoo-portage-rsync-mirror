@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-5.30.0.ebuild,v 1.3 2013/02/19 02:36:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-5.30.0.ebuild,v 1.5 2014/07/04 14:52:03 klausman Exp $
 
 EAPI=4
 
