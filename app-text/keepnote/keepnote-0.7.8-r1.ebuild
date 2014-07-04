@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.4 2013/12/03 19:56:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.5 2014/07/04 22:18:11 hasufell Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/pygobject:2
-	dev-python/pygtk:2
+RDEPEND="dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/pygtk:2[${PYTHON_USEDEP}]
 	x11-misc/xdg-utils"
 
 PATCHES=( "${FILESDIR}"/${P}-desktopfile.patch )

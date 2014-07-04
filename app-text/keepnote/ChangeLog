@@ -1,6 +1,17 @@
 # ChangeLog for app-text/keepnote
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.10 2013/12/03 19:56:55 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.13 2014/07/04 22:18:11 hasufell Exp $
+
+  04 Jul 2014; Julian Ospald <hasufell@gentoo.org> keepnote-0.7.8-r1.ebuild,
+  keepnote-0.7.9-r2.ebuild:
+  add PYTHON_USEDEP
+
+  04 Jul 2014; Julian Ospald <hasufell@gentoo.org> -keepnote-0.7.8.ebuild,
+  -keepnote-0.7.9.ebuild:
+  rm old
+
+  04 Jul 2014; Julian Ospald <hasufell@gentoo.org> keepnote-0.7.9-r2.ebuild:
+  stable
 
   03 Dec 2013; Mike Gilbert <floppym@gentoo.org> keepnote-0.7.8-r1.ebuild,
   keepnote-0.7.9-r2.ebuild:
