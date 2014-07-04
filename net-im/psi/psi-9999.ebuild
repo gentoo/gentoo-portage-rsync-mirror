@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.20 2013/09/10 07:14:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.21 2014/07/04 20:10:36 hasufell Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ LANGS_REPO_URI="git://github.com/psi-plus/psi-plus-l10n.git"
 PSI_PLUS_URI="git://github.com/psi-plus/main.git"
 PSI_PLUS_RESOURCES_URI="git://github.com/psi-plus/resources.git"
 
-inherit eutils qt4-r2 multilib git-2 subversion
+inherit eutils gnome2-utils qt4-r2 multilib git-2 subversion
 
 DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
@@ -33,6 +33,7 @@ REQUIRED_USE="
 RDEPEND="
 	>=dev-qt/qtgui-4.7:4
 	>=app-crypt/qca-2.0.2:2
+	x11-libs/libX11
 	dbus? ( >=dev-qt/qtdbus-4.7:4 )
 	whiteboarding? ( dev-qt/qtsvg:4 )
 	spell? (
@@ -200,5 +201,14 @@ src_install() {
 }
 
 pkg_preinst() {
-	true # suppress subversion warnings
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	readme.gentoo_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.15.ebuild,v 1.3 2013/09/10 07:14:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.15.ebuild,v 1.4 2014/07/04 20:10:36 hasufell Exp $
 
 EAPI=5
 
 PLOCALES="be cs de fr it ja pl pt_BR ru sl sv ur_PK zh_TW"
-inherit eutils l10n multilib qt4-r2 readme.gentoo
+inherit eutils l10n multilib gnome2-utils qt4-r2 readme.gentoo
 
 DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
@@ -26,6 +26,7 @@ RDEPEND="app-arch/unzip
 	>=dev-qt/qtgui-4.7:4[qt3support]
 	>=dev-qt/qt3support-4.7:4
 	>=app-crypt/qca-2.0.2:2
+	x11-libs/libX11
 	dbus? ( >=dev-qt/qtdbus-4.7:4 )
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )
@@ -107,4 +108,17 @@ src_install() {
 	# install translations
 	insinto /usr/share/${PN}
 	l10n_for_each_locale_do install_locale
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	readme.gentoo_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
