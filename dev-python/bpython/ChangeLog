@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.38 2014/06/05 08:35:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.39 2014/07/04 15:55:26 idella4 Exp $
+
+  04 Jul 2014; Ian Delaney <idella4@gentoo.org> bpython-0.13.ebuild:
+  tidy
 
 *bpython-0.13 (05 Jun 2014)
 

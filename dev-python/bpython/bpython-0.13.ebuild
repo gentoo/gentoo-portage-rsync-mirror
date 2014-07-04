@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.13.ebuild,v 1.1 2014/06/05 08:35:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.13.ebuild,v 1.2 2014/07/04 15:55:26 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3} )
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS  CHANGELOG  TODO sample-config sample.theme light.theme )
 
 PATCHES=( "${FILESDIR}"/${PN}-desktop.patch )
+
 # Req'd for clean build by each impl
 DISTUTILS_IN_SOURCE_BUILD=1
 
@@ -56,7 +57,7 @@ python_test() {
 		sed -e s':test_fuzzy_global_complete:_&:' \
 			-i bpython/test/test_repl.py || die
 	fi
-	"${PYTHON}" -m unittest discover || die "dud"
+	"${PYTHON}" -m unittest discover ||
 	popd > /dev/null
 }
 

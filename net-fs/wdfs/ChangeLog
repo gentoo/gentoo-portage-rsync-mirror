@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/wdfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/wdfs/ChangeLog,v 1.8 2010/06/22 20:05:53 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/wdfs/ChangeLog,v 1.9 2014/07/04 15:32:37 dev-zero Exp $
+
+*wdfs-1.4.2-r1 (04 Jul 2014)
+
+  04 Jul 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/wdfs-1.4.2-fix-Waddress.patch, +wdfs-1.4.2-r1.ebuild:
+  Add missing glib-2 dependency (bug #514332), EAPI bump and fix -Waddress
+  warnings.
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   wdfs-1.4.2.ebuild:
@@ -29,4 +36,3 @@
   30 Jun 2007; Josh Glover <jmglov@gentoo.org> +metadata.xml,
   +wdfs-1.4.2.ebuild:
   This package was submitted by Tiziano Müller in bug #110716
-
