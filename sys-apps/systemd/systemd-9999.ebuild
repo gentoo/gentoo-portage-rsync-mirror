@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.120 2014/07/04 15:00:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.121 2014/07/04 17:51:02 floppym Exp $
 
 EAPI=5
 
@@ -176,6 +176,9 @@ multilib_src_configure() {
 		# disable -flto since it is an optimization flag
 		# and makes distcc less effective
 		cc_cv_CFLAGS__flto=no
+
+		# Workaround for bug 516346
+		--enable-dependency-tracking
 
 		--disable-maintainer-mode
 		--localstatedir=/var
