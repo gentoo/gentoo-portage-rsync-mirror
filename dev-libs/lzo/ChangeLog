@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.81 2014/07/02 14:09:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.82 2014/07/04 19:32:28 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> lzo-2.08.ebuild:
+  Stable for amd64, wrt bug #515238
 
 *lzo-2.08-r1 (02 Jul 2014)
 

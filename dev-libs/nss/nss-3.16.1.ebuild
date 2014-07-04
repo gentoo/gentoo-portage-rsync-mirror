@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16.1.ebuild,v 1.1 2014/07/03 19:43:09 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16.1.ebuild,v 1.2 2014/07/04 19:51:37 axs Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -108,20 +108,23 @@ nssarch() {
 }
 
 nssbits() {
-	local cc="${1}CC" cppflags="${1}CPPFLAGS" cflags="${1}CFLAGS"
+	local cc cppflags="${1}CPPFLAGS" cflags="${1}CFLAGS"
+	if [[ ${1} == BUILD_ ]]; then
+		cc=$(tc-getBUILD_CC)
+	else
+		cc=$(tc-getCC)
+	fi
 	echo > "${T}"/test.c || die
-	${!cc} ${!cppflags} ${!cflags} -c "${T}"/test.c -o "${T}"/${cc}-test.o || die
-	case $(file "${T}"/${cc}-test.o) in
+	${cc} ${!cppflags} ${!cflags} -c "${T}"/test.c -o "${T}/${1}test.o" || die
+	case $(file "${T}/${1}test.o") in
 		*32-bit*x86-64*) echo USE_X32=1;;
 		*64-bit*|*ppc64*|*x86_64*) echo USE_64=1;;
 		*32-bit*|*ppc*|*i386*) ;;
-		*) die "Failed to detect whether ${cc} is 64bits or 32bits, disable distcc if you're using it, please";;
+		*) die "Failed to detect whether ${cc} builds 64bits or 32bits, disable distcc if you're using it, please";;
 	esac
 }
 
 multilib_src_compile() {
-	tc-export AR RANLIB {BUILD_,}{CC,PKG_CONFIG}
-
 	# use ABI to determine bit'ness, or fallback if unset
 	local buildbits mybits
 	case "${ABI}" in
@@ -136,16 +139,16 @@ multilib_src_compile() {
 	fi
 
 	local makeargs=(
-		CC="${CC}"
-		AR="${AR} rc \$@"
-		RANLIB="${RANLIB}"
+		CC="$(tc-getCC)"
+		AR="$(tc-getAR) rc \$@"
+		RANLIB="$(tc-getRANLIB)"
 		OPTIMIZER=
 		${mybits}
 	)
 
 	# Take care of nspr settings #436216
-	local myCPPFLAGS="${CPPFLAGS} $(${PKG_CONFIG} nspr --cflags)"
-	local myLDFLAGS="${LDFLAGS} $(${PKG_CONFIG} nspr --libs-only-L)"
+	local myCPPFLAGS="${CPPFLAGS} $($(tc-getPKG_CONFIG) nspr --cflags)"
+	local myLDFLAGS="${LDFLAGS} $($(tc-getPKG_CONFIG) nspr --libs-only-L)"
 	unset NSPR_INCLUDE_DIR
 
 	# Do not let `uname` be used.
@@ -171,7 +174,7 @@ multilib_src_compile() {
 	XCFLAGS="${BUILD_CFLAGS}" \
 	NSPR_LIB_DIR="${T}/fake-dir" \
 	emake -j1 -C coreconf \
-		CC="${BUILD_CC}" \
+		CC="$(tc-getBUILD_CC)" \
 		${buildbits:-${mybits}}
 	makeargs+=( NSINSTALL="${PWD}/$(find -type f -name nsinstall)" )
 

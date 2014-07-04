@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.5 2012/12/31 08:04:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.6 2014/07/04 19:36:27 hasufell Exp $
 
 EAPI="4"
 
@@ -33,6 +33,9 @@ RDEPEND="${DEPEND}"
 DOCS=( README.rst )
 
 src_prepare() {
+	sed -e "s/-Werror//" \
+		-i configure.ac || die "sed failed"
+
 	sed -e '/man8dir = $(DESTDIR)/s/@prefix@//' \
 		-i Makefile.in || die "sed failed"
 

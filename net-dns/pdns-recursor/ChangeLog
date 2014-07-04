@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdns-recursor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.45 2014/06/29 18:51:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.46 2014/07/04 19:32:18 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> pdns-recursor-3.5.3-r1.ebuild:
+  Stable for amd64, wrt bug #514946
 
 *pdns-recursor-3.5.3-r1 (29 Jun 2014)
 
@@ -221,4 +224,3 @@
   30 Apr 2006; Sven Wegener <swegener@gentoo.org> +files/precursor,
   +files/recursor.conf, +metadata.xml, +pdns-recursor-3.0.1.ebuild:
   Initial commit, ebuild written by me.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/reviewboard
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.7 2013/09/30 02:44:06 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/ChangeLog,v 1.8 2014/07/04 19:46:36 hasufell Exp $
+
+  04 Jul 2014; Julian Ospald <hasufell@gentoo.org>
+  reviewboard-1.7.7.1-r1.ebuild, reviewboard-1.7.12.ebuild:
+  fix deps wrt #508078
 
   30 Sep 2013; Patrick Lauer <patrick@gentoo.org> reviewboard-1.7.7.1-r1.ebuild:
   Whitespace

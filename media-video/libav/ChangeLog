@@ -1,6 +1,15 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.199 2014/06/27 13:39:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.202 2014/07/04 19:42:58 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libav-0.8.11.ebuild:
+  Stable for sparc, wrt bug #504584
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libav-0.8.11.ebuild:
+  Stable for ppc64, wrt bug #504584
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libav-0.8.11.ebuild:
+  Stable for ppc, wrt bug #504584
 
 *libav-10.2 (27 Jun 2014)
 *libav-9.14 (27 Jun 2014)

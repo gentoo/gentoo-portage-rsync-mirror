@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.62 2014/06/19 13:08:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.65 2014/07/04 19:44:24 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libbluray-0.5.0.ebuild:
+  Stable for sparc, wrt bug #504788
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libbluray-0.5.0.ebuild:
+  Stable for ppc64, wrt bug #504788
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libbluray-0.5.0.ebuild:
+  Stable for ppc, wrt bug #504788
 
   19 Jun 2014; Michał Górny <mgorny@gentoo.org> libbluray-0.5.0-r1.ebuild,
   libbluray-9999.ebuild:

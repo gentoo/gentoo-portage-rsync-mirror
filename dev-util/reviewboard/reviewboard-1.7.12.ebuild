@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.12.ebuild,v 1.3 2013/09/12 11:14:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.12.ebuild,v 1.4 2014/07/04 19:46:36 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1
 
@@ -18,8 +19,8 @@ LICENSE="MIT"
 SLOT="0"
 S=${WORKDIR}/${MY_PN}-${PV}
 
-RDEPEND=">=dev-python/django-1.4.5[${PYTHON_USEDEP}]
-	<dev-python/django-1.5[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/django-1.4.5[${PYTHON_USEDEP},sqlite]
+	<dev-python/django-1.5[${PYTHON_USEDEP},sqlite]
 	>=dev-python/django-evolution-0.6.9[${PYTHON_USEDEP}]
 	>=dev-python/django-pipeline-1.2.24[${PYTHON_USEDEP}]
 	<dev-python/Djblets-0.7.17[${PYTHON_USEDEP}]

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.27 2014/06/28 18:04:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.28 2014/07/04 19:32:32 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> bottle-0.11.7.ebuild:
+  Stable for amd64, wrt bug #509350
 
   28 Jun 2014; Jeroen Roovers <jer@gentoo.org> bottle-0.12.6.ebuild:
   Marked ~hppa (bug #515610).

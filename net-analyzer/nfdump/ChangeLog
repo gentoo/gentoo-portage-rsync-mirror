@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.37 2014/06/27 03:25:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.38 2014/07/04 19:32:23 ago Exp $
+
+  04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> nfdump-1.6.12.ebuild:
+  Stable for amd64, wrt bug #515278
 
   27 Jun 2014; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.12.ebuild,
   +files/nfdump-1.6.12-test-dep.patch:
