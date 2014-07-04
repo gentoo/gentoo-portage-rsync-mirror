@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.5-r3.ebuild,v 1.1 2014/07/03 23:20:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.5-r3.ebuild,v 1.2 2014/07/04 00:04:15 pesa Exp $
 
 EAPI=5
 
@@ -74,6 +74,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.5-disable-gtk-theme-check.patch" # bug 491226
 	"${FILESDIR}/${PN}-4.8.5-dont-crash-on-broken-GIF-images.patch" # bug 508984
 	"${FILESDIR}/${PN}-4.8.5-keyboard-shortcuts.patch" # bug 477796
+	"${FILESDIR}/${PN}-4.8.5-libjpeg-9.patch" # bug 480182
 	"${FILESDIR}/${PN}-4.8.5-qclipboard-delay.patch" # bug 514968
 )
 

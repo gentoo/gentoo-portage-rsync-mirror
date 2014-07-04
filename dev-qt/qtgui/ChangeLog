@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.34 2014/07/03 23:20:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.35 2014/07/04 00:04:15 pesa Exp $
+
+  04 Jul 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtgui-4.8.5-libjpeg-9.patch, qtgui-4.8.5-r3.ebuild:
+  Backport patch to fix build with media-libs/jpeg-9 (bug 480182).
 
 *qtgui-4.8.5-r3 (03 Jul 2014)
 
