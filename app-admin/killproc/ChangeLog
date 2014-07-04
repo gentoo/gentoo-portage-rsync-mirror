@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.29 2014/07/01 13:29:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.30 2014/07/04 12:59:00 klausman Exp $
+
+  04 Jul 2014; Tobias Klausmann <klausman@gentoo.org> killproc-2.13-r1.ebuild:
+  Keyworded on alpha, bug #494254
 
   01 Jul 2014; Jeroen Roovers <jer@gentoo.org>
   files/killproc-2.13-makefile.patch:
