@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/shutterbug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.36 2014/01/10 18:28:48 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.38 2014/07/04 20:40:50 mabi Exp $
+
+  04 Jul 2014; Matti Bickel <mabi@gentoo.org> -shutterbug-1.7.44.ebuild:
+  remove old
+
+*shutterbug-1.7.47 (04 Jul 2014)
+
+  04 Jul 2014; Matti Bickel <mabi@gentoo.org> +shutterbug-1.7.47.ebuild:
+  need libICE and libSM for proper linking (fixes #515310)
 
 *shutterbug-1.7.45 (10 Jan 2014)
 

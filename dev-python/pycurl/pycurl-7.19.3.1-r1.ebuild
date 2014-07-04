@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1.ebuild,v 1.6 2014/06/28 18:04:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r1.ebuild,v 1.1 2014/07/04 20:42:33 floppym Exp $
 EAPI=5
 
 # The selftests fail with pypy, and urlgrabber segfaults for me.

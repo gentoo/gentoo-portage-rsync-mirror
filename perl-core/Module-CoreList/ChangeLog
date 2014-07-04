@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.84 2014/05/28 12:00:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.85 2014/07/04 20:37:55 dilfridge Exp $
+
+  04 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Module-CoreList-2.800.0.ebuild:
+  Remove old
 
 *Module-CoreList-3.110.0 (28 May 2014)
 

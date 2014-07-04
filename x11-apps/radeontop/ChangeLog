@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/radeontop
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/radeontop/ChangeLog,v 1.1 2013/12/19 21:40:21 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/radeontop/ChangeLog,v 1.2 2014/07/04 20:43:46 hasufell Exp $
+
+*radeontop-0.7-r1 (04 Jul 2014)
+
+  04 Jul 2014; Julian Ospald <hasufell@gentoo.org> +radeontop-0.7-r1.ebuild:
+  don't recompile at src_install, report correct version
 
 *radeontop-0.7 (19 Dec 2013)
 *radeontop-9999 (19 Dec 2013)

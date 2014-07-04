@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/calculator-1.7.44.ebuild,v 1.1 2013/12/13 21:08:05 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/calculator-1.7.47.ebuild,v 1.1 2014/07/04 20:46:07 mabi Exp $
 
-EAPI=4
+EAPI="5"
 
 inherit fox
 
@@ -13,5 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="~x11-libs/fox-${PV}"
+RDEPEND="~x11-libs/fox-${PV}
+	x11-libs/libICE
+	x11-libs/libSM"
 DEPEND="${RDEPEND}"

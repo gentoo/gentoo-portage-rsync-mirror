@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=~x11-libs/fox-1.7.44 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-util/reswrap >=sys-apps/sed-4
+DEPEND=~x11-libs/fox-1.7.47 x11-libs/libICE x11-libs/libSM !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-util/reswrap >=sys-apps/sed-4
 DESCRIPTION=Scientific calculator based on the FOX Toolkit
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.fox-toolkit.org/
 IUSE=debug doc profile
 KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=~x11-libs/fox-1.7.44
+RDEPEND=~x11-libs/fox-1.7.47 x11-libs/libICE x11-libs/libSM
 SLOT=0
-SRC_URI=ftp://ftp.fox-toolkit.org/pub/fox-1.7.44.tar.gz
+SRC_URI=ftp://ftp.fox-toolkit.org/pub/fox-1.7.47.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	fox	26650ced206327e4fca3dec6cd441381	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ec6cf55bedb5a45dd7728d3f7680af01
+_md5_=644536a1f6ad7066e2c14c173db5fd4c

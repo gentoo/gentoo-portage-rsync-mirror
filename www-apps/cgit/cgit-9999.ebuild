@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.10 2014/05/21 11:24:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.11 2014/07/04 20:32:57 hasufell Exp $
 
 EAPI="4"
 
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit webapp eutils multilib user git-2
+inherit webapp eutils multilib user toolchain-funcs git-2
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
@@ -62,14 +62,14 @@ src_prepare() {
 }
 
 src_compile() {
-	emake
-	use doc && emake doc-man
+	emake V=1 AR="$(tc-getAR)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+	use doc && emake V=1 doc-man
 }
 
 src_install() {
 	webapp_src_preinst
 
-	emake install
+	emake V=1 AR="$(tc-getAR)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" install
 
 	insinto /etc
 	doins "${FILESDIR}"/cgitrc

@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/pathfinder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.38 2014/01/10 18:27:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.40 2014/07/04 20:44:07 mabi Exp $
+
+  04 Jul 2014; Matti Bickel <mabi@gentoo.org> -pathfinder-1.7.43.ebuild:
+  remove old
+
+*pathfinder-1.7.47 (04 Jul 2014)
+
+  04 Jul 2014; Matti Bickel <mabi@gentoo.org> +pathfinder-1.7.47.ebuild:
+  need libICE and libSM for proper linking (fixes #515172)
 
 *pathfinder-1.7.45 (10 Jan 2014)
 
