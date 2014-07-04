@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.273 2014/07/04 17:51:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.274 2014/07/04 19:04:15 floppym Exp $
+
+  04 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215.ebuild:
+  Force regeneration of org.freedesktop.systemd1.policy.
 
   04 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215.ebuild,
   systemd-9999.ebuild:

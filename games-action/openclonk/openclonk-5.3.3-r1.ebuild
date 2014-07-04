@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.3.3-r1.ebuild,v 1.3 2014/06/14 09:58:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.3.3-r1.ebuild,v 1.4 2014/07/04 19:29:48 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
 
 LICENSE="BSD ISC CLONK-trademark LGPL-2.1 POSTGRESQL"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated doc mp3 sound upnp"
 
 RDEPEND="
