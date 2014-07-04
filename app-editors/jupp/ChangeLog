@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jupp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jupp/ChangeLog,v 1.4 2013/11/08 06:21:37 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jupp/ChangeLog,v 1.5 2014/07/04 02:36:11 patrick Exp $
+
+*jupp-3.1_p27 (04 Jul 2014)
+
+  04 Jul 2014; Patrick Lauer <patrick@gentoo.org> +jupp-3.1_p27.ebuild:
+  Bump
 
 *jupp-3.1_p26 (08 Nov 2013)
 
