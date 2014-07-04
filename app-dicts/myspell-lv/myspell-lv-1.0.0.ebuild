@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/myspell-lv-0.9.6.ebuild,v 1.1 2014/07/04 01:17:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/myspell-lv-1.0.0.ebuild,v 1.1 2014/07/04 01:34:13 mrueg Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ MYSPELL_THES=(
 inherit myspell-r2
 
 DESCRIPTION="Latvian dictionaries for myspell/hunspell"
-HOMEPAGE="http://extensions.libreoffice.org/extension-center/latviesu-valodas-pareizrakstibas-parbaudes-modulis"
+HOMEPAGE="http://dict.dv.lv/home.php?prj=lv http://extensions.libreoffice.org/extension-center/latviesu-valodas-pareizrakstibas-parbaudes-modulis"
 SRC_URI="http://dict.dv.lv/download/lv_LV-${PV}.zip"
 
 LICENSE="LGPL-2.1"

@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-lv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.24 2014/07/04 01:17:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.25 2014/07/04 01:34:13 mrueg Exp $
+
+*myspell-lv-1.0.0 (04 Jul 2014)
+
+  04 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +myspell-lv-1.0.0.ebuild,
+  -myspell-lv-0.9.6.ebuild:
+  Bump to latest release.
 
 *myspell-lv-0.9.6 (04 Jul 2014)
 
