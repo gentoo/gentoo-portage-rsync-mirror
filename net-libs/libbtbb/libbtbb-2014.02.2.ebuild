@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-2014.02.2.ebuild,v 1.1 2014/04/04 19:51:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-2014.02.2.ebuild,v 1.2 2014/07/04 21:30:36 zerochaos Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ src_prepare(){
 	if use wireshark-plugins; then
 		for i in btbb btle btsm
 		do
+			sed -i 's#column_info#packet#' wireshark/plugins/${i}/cmake/FindWireshark.cmake || die
 			CMAKE_USE_DIR="${S}"/wireshark/plugins/${i}
 			BUILD_DIR="${WORKDIR}"/${i}_build
 			cmake-utils_src_prepare

@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.46 2014/01/10 18:24:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.47 2014/07/04 21:03:25 mabi Exp $
+
+*adie-1.7.47 (04 Jul 2014)
+
+  04 Jul 2014; Matti Bickel <mabi@gentoo.org> +adie-1.7.47.ebuild,
+  -adie-1.7.44.ebuild:
+  need libICE and libSM for proper linking (fixes #514756)
 
 *adie-1.7.45 (10 Jan 2014)
 
