@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.22 2014/06/09 03:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.23 2014/07/05 15:27:58 jer Exp $
+
+  05 Jul 2014; Jeroen Roovers <jer@gentoo.org> nsat-1.5-r1.ebuild:
+  Export CC. Make CC calls verbose. Drop -O3.
 
   09 Jun 2014; Jeroen Roovers <jer@gentoo.org> nsat-1.5-r1.ebuild:
   Clean up.

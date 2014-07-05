@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/tsm-7.1.0.0.ebuild,v 1.1 2014/02/17 21:15:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/tsm-7.1.0.0-r1.ebuild,v 1.1 2014/07/05 15:03:29 pacho Exp $
 
 EAPI=5
 
@@ -176,8 +176,7 @@ src_install() {
 	dosym libvixDiskLibVim.so.5.5.0 $CLIENTDIR/ba/bin/libvixDiskLibVim.so.5
 	dosym libvixDiskLib.so.5.5.0 $CLIENTDIR/ba/bin/libvixDiskLib.so.5
 
-	fowners -R :tsm /opt/tivoli
-	fperms -R g+rX,o-rx /opt/tivoli # Allow only tsm group users to access TSM tools
+	fowners :tsm /opt/tivoli/tsm/client/ba/bin/dsmtca
 	fperms 4710 /opt/tivoli/tsm/client/ba/bin/dsmtca
 
 	keepdir /var/log/tsm
@@ -218,7 +217,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	local i
+	local i dirs
 	for i in /var/log/tsm/dsm{error,sched,j,webcl}.log; do
 		if [[ ! -e $i ]]; then
 			touch $i || die
@@ -231,6 +230,11 @@ pkg_postinst() {
 	# Have to do this in postinst due to bug #141619
 	chown root:tsm /var/log/tsm || die
 	chmod 0750 /var/log/tsm || die
+
+	# Bug 508052: directories used to be too restrictive, have to widen perms.
+	dirs=( /opt/tivoli $(find /opt/tivoli/tsm -type d) )
+	chown root:root "${dirs[@]}" || die
+	chmod 0755 "${dirs[@]}" || die
 
 	readme.gentoo_print_elog
 }

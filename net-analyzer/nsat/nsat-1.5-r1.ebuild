@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.5 2014/06/09 03:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.6 2014/07/05 15:27:58 jer Exp $
 
 EAPI=5
-inherit eutils autotools
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Network Security Analysis Tool, an application-level network security scanner"
 HOMEPAGE="http://nsat.sourceforge.net/"
@@ -38,7 +38,8 @@ src_prepare() {
 		-e '/..\/nsat/,+1s/${CFLAGS}/${CFLAGS} ${LDFLAGS}/' \
 		src/Makefile.in  || die
 	sed -i \
-		-e '/@$(CC)/s/$(CFLAGS)/$(CFLAGS) $(LDFLAGS)/' \
+		-e '/@$(CC)/{s|$(CFLAGS)|$(CFLAGS) $(LDFLAGS)|;s|@||g}' \
+		-e '/^FLAGS1/d' \
 		src/smb/Makefile.in || die
 
 	sed -i \
@@ -55,6 +56,7 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export CC
 	econf $(use_with X x)
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/tsm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.21 2014/02/17 21:15:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.22 2014/07/05 15:03:29 pacho Exp $
+
+*tsm-7.1.0.0-r1 (05 Jul 2014)
+
+  05 Jul 2014; Pacho Ramos <pacho@gentoo.org> +tsm-7.1.0.0-r1.ebuild,
+  -tsm-7.1.0.0.ebuild:
+  Bug 508052: directories used to be too restrictive, have to widen perms
+  (thanks to Martin von Gagern)
 
 *tsm-7.1.0.0 (17 Feb 2014)
 
