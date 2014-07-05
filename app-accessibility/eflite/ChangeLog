@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.35 2014/07/05 07:26:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.36 2014/07/05 14:42:07 teiresias Exp $
+
+*eflite-0.4.1-r2 (05 Jul 2014)
+
+  05 Jul 2014; Christopher Brannon <teiresias@gentoo.org>
+  -eflite-0.4.1-r1.ebuild, +eflite-0.4.1-r2.ebuild,
+  files/eflite-0.4.1-flite14.patch:
+  Fix truncation of speech with flite 1.4.
 
 *eflite-0.4.1-r1 (05 Jul 2014)
 

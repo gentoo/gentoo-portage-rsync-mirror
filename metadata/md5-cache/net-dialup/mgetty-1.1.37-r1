@@ -4,10 +4,10 @@ DESCRIPTION=fax and voice modem programs
 EAPI=5
 HOMEPAGE=http://mgetty.greenie.net/
 IUSE=doc +fax fidonet
-KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=doc? ( virtual/latex-base virtual/texi2dvi ) >=sys-apps/sed-4 sys-apps/groff dev-lang/perl sys-apps/texinfo virtual/awk fax? ( !net-misc/efax !net-misc/hylafax ) fax? ( media-libs/netpbm app-text/ghostscript-gpl )
 SLOT=0
 SRC_URI=ftp://mgetty.greenie.net/pub/mgetty/source/1.1/mgetty1.1.37-Jun05.tar.gz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
-_md5_=ae7f38b4e509d26bb517ce352d5578b7
+_md5_=289bc6ddca932f5b594ca166f19f6ec7

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.102 2014/06/08 14:01:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.103 2014/07/05 14:40:49 klausman Exp $
+
+  05 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  squashfs-tools-4.3.ebuild:
+  Keyworded on alpha, bug #499468
 
 *squashfs-tools-4.3 (08 Jun 2014)
 

@@ -4,7 +4,7 @@ DESCRIPTION=Open Source Jabber Server
 EAPI=5
 HOMEPAGE=http://jabberd2.org
 IUSE=berkdb debug experimental ldap memdebug mysql pam postgres sqlite ssl test zlib
-KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~x86-fbsd
+KEYWORDS=amd64 ~ppc ~sparc x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=dev-libs/expat net-libs/udns net-dns/libidn virtual/gsasl berkdb? ( >=sys-libs/db-4.1.25 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( >=dev-libs/openssl-1.0.1:0 ) sqlite? ( dev-db/sqlite:3 ) zlib? ( sys-libs/zlib ) >=net-im/jabber-base-0.01
 REQUIRED_USE=memdebug? ( debug )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/jabberd2/jabberd2/releases/download/jabberd-2.3.2/jabberd-2.3.2.tar.xz
 _eclasses_=db-use	1c719875d6599536f956fafea9e1f404	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=febdcb3384be07035bf019030fd68776
+_md5_=2f2b5a02da6cecaf72205c8b583a23ab

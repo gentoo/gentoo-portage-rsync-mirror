@@ -5,10 +5,6 @@
 		<email>idella4@gentoo.org</email>
 		<name>Ian Delaney</name>
 	</maintainer>
-	<maintainer>
-		<email>kensington@gentoo.org</email>
-		<name>Michael Palimaka</name>
-	</maintainer>
 	<use>
 		<flag name='codebase'>Enables a build of the docs/codebase folder</flag>
 		<flag name='manual'>Enables a build of the docs/manual folder</flag>

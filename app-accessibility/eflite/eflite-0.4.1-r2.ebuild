@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.4.1-r1.ebuild,v 1.1 2014/07/05 07:26:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.4.1-r2.ebuild,v 1.1 2014/07/05 14:42:07 teiresias Exp $
 
 EAPI="5"
 inherit autotools eutils user

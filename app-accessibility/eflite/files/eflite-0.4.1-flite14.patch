@@ -10,3 +10,15 @@ diff -Naur eflite-0.4.1/Makefile.in eflite-0.4.1-new/Makefile.in
  
  tone.o: tone.c
  	$(CC) $(CFLAGS) -I$(flite_include_dir) -DEFLITE -c -o $@ $<
+diff -Naur eflite-0.4.1/fs.c eflite-0.4.1.new/fs.c
+--- eflite-0.4.1/fs.c	2007-01-18 16:01:09.000000000 -0800
++++ eflite-0.4.1.new/fs.c	2013-09-08 09:31:57.417262688 -0700
+@@ -523,7 +523,7 @@
+   int playlen, skip;
+   if (type == SPEECH)
+   {
+-	skip = (187 * wptr->sample_rate) / speed;
++	skip = 0;
+ 	playlen = wptr->num_samples - (skip * 2);
+ 	if (playlen > 0 && playlen < 500) playlen += (skip * 2) / 3;
+   }

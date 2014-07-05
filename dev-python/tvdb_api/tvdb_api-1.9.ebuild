@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tvdb_api/tvdb_api-1.8.2.ebuild,v 1.1 2013/01/10 18:10:16 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tvdb_api/tvdb_api-1.9.ebuild,v 1.1 2014/07/05 14:59:47 thev00d00 Exp $
 
-EAPI=4
+EAPI=5
 
-inherit distutils vcs-snapshot
+PYTHON_COMPAT="python2_7"
+inherit distutils-r1 vcs-snapshot
 
 SRC_URI="https://github.com/dbr/${PN}/tarball/${PV} -> ${P}.tar.gz"
 DESCRIPTION="Python interface to thetvdb.com API"
