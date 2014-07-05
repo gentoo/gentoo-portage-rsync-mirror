@@ -1,6 +1,5 @@
-diff -Naur nsat.old/src/smb/ADMsmb.c nsat/src/smb/ADMsmb.c
---- nsat.old/src/smb/ADMsmb.c	2006-03-31 01:51:26.000000000 -0500
-+++ nsat/src/smb/ADMsmb.c	2006-03-31 01:52:27.000000000 -0500
+--- a/src/smb/ADMsmb.c
++++ b/src/smb/ADMsmb.c
 @@ -123,7 +123,7 @@
      {
        usleep (100000);

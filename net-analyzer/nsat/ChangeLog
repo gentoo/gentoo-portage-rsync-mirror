@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.23 2014/07/05 15:27:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.24 2014/07/05 17:19:54 jer Exp $
+
+*nsat-1.5-r2 (05 Jul 2014)
+
+  05 Jul 2014; Jeroen Roovers <jer@gentoo.org> +nsat-1.5-r2.ebuild,
+  files/nsat-1.5-amd64-compat.patch, files/nsat-1.5-configure.patch,
+  files/nsat-1.5-lvalue-gcc4.patch, +files/nsat-1.5-misc.patch,
+  files/nsat-1.5-strip.patch:
+  Use dev-libs/libmix instead of bundled libmix++. Fix parallel make issues.
+  Combine sed scripts into patch. Clean up patches.
 
   05 Jul 2014; Jeroen Roovers <jer@gentoo.org> nsat-1.5-r1.ebuild:
   Export CC. Make CC calls verbose. Drop -O3.

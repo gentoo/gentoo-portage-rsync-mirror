@@ -1,5 +1,5 @@
---- nsat/src/Makefile.in.orig	2002-04-26 08:45:38.000000000 +0200
-+++ nsat/src/Makefile.in	2009-01-15 07:44:11.000000000 +0100
+--- a/src/Makefile.in
++++ b/src/Makefile.in
 @@ -37,7 +37,6 @@
  
  ../nsat:

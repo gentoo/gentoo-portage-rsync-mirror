@@ -1,5 +1,5 @@
---- nsat/configure.in.orig	2003-01-05 22:47:13.000000000 +0100
-+++ nsat/configure.in	2009-01-15 07:56:35.000000000 +0100
+--- a/configure.in
++++ b/configure.in
 @@ -15,7 +15,6 @@
  else
      AC_MSG_RESULT(crappy :P)
