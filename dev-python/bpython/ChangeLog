@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.39 2014/07/04 15:55:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.40 2014/07/05 06:28:05 idella4 Exp $
+
+  05 Jul 2014; Ian Delaney <idella4@gentoo.org>
+  +files/bpython-0.13-test_repl.patch, bpython-0.13.ebuild:
+  update test phase
 
   04 Jul 2014; Ian Delaney <idella4@gentoo.org> bpython-0.13.ebuild:
   tidy
