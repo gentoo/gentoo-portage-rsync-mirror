@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/lmdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.5 2014/01/31 16:24:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.6 2014/07/05 13:22:13 klausman Exp $
+
+  05 Jul 2014; Tobias Klausmann <klausman@gentoo.org> lmdb-0.9.11.ebuild:
+  Keyworded on alpha, bug #498466
 
   31 Jan 2014; Markus Meier <maekke@gentoo.org> lmdb-0.9.11.ebuild:
   add ~arm, bug #498466

@@ -1,6 +1,14 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.421 2014/07/03 17:31:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.422 2014/07/05 13:08:33 grobian Exp $
+
+  05 Jul 2014; Fabian Groffen <grobian@gentoo.org> aix/make.defaults,
+  bsd/freebsd/arch/x64/make.defaults, bsd/freebsd/arch/x86/make.defaults,
+  darwin/macos/arch/ppc/make.defaults, darwin/macos/arch/x64/make.defaults,
+  darwin/macos/arch/x86/make.defaults, linux/amd64/make.defaults,
+  linux/x86/make.defaults, sunos/solaris/arch/x64/make.defaults,
+  sunos/solaris/arch/x86/make.defaults:
+  Add libdirs for ABIs to make get_libdir work again
 
   03 Jul 2014; Fabian Groffen <grobian@gentoo.org> aix/make.defaults,
   +bsd/freebsd/arch/x64/make.defaults, +bsd/freebsd/arch/x86/make.defaults,

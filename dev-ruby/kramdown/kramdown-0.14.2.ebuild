@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.14.2.ebuild,v 1.4 2014/04/09 14:21:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.14.2.ebuild,v 1.5 2014/07/05 13:30:05 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby19 jruby"
 
 RUBY_FAKEGEM_DOCDIR="htmldoc/rdoc"
 RUBY_FAKEGEM_EXTRADOC="README.md AUTHORS ChangeLog CONTRIBUTERS"

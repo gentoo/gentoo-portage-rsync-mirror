@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.509 2014/07/02 06:56:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.510 2014/07/05 13:22:23 klausman Exp $
+
+  05 Jul 2014; Tobias Klausmann <klausman@gentoo.org> postfix-2.11.1.ebuild:
+  Keyworded on alpha, bug #498466
 
 *postfix-2.12_pre20140701 (02 Jul 2014)
 
