@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Data-Dumper
-KEYWORDS=~amd64 ~arm ~hppa ~ppc ~x86
-RDEPEND=~perl-core/Data-Dumper-2.136.0
-SLOT=0
-_md5_=2a0f6376753dea86455c92f8d948cdda
