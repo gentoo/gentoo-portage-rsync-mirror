@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=>=sys-libs/db-4.1 >=sys-apps/sed-4
+DEPEND=>=sys-libs/db-4.1 x11-libs/libX11 x11-libs/libXt >=sys-apps/sed-4
 DESCRIPTION=A simple and fast GB and BIG5 Chinese XIM server
-EAPI=2
+EAPI=5
 HOMEPAGE=http://developer.berlios.de/projects/xsim/
 IUSE=debug
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1
-RDEPEND=>=sys-libs/db-4.1
+RDEPEND=>=sys-libs/db-4.1 x11-libs/libX11 x11-libs/libXt
 SLOT=0
 SRC_URI=mirror://berlios/xsim/xsim-0.3.9.4.tar.gz
 _eclasses_=db-use	1c719875d6599536f956fafea9e1f404	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=a8e156188cd302c8a4b94fec5a8f046f
+_md5_=564782cf5cb12ad177201b245fe312fa

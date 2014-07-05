@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.4 2013/05/04 03:47:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.5 2014/07/05 03:01:46 naota Exp $
 
-EAPI=2
+EAPI=5
 inherit db-use eutils flag-o-matic multilib
 
 DESCRIPTION="A simple and fast GB and BIG5 Chinese XIM server"
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-RDEPEND=">=sys-libs/db-4.1"
+RDEPEND=">=sys-libs/db-4.1
+	x11-libs/libX11
+	x11-libs/libXt"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
@@ -61,7 +63,7 @@ src_install() {
 		xsim_libp="${D}"usr/$(get_libdir)/xsim/plugins \
 		xsim_binp="${D}"/usr/bin \
 		xsim_etcp="${D}"/etc \
-		install install-data || die
+		install install-data
 
 	dodoc ChangeLog KNOWNBUG README* TODO
 }

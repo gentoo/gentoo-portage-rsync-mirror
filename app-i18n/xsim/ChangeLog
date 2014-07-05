@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/xsim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.24 2013/05/04 03:47:12 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.25 2014/07/05 03:01:46 naota Exp $
+
+  05 Jul 2014; Naohiro Aota <naota@gentoo.org> xsim-0.3.9.4-r5.ebuild:
+  Add missing deps. #514270
 
   04 May 2013; Naohiro Aota <naota@gentoo.org> +files/xsim-0.3.9.4-eof.patch,
   +files/xsim-0.3.9.4-makefile.patch, xsim-0.3.9.4-r5.ebuild:
