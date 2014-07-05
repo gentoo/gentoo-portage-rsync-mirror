@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-CPAN-Meta-YAML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.40 2014/05/28 15:56:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.41 2014/07/05 12:17:30 dilfridge Exp $
+
+*perl-CPAN-Meta-YAML-0.12.0 (05 Jul 2014)
+
+  05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-CPAN-Meta-YAML-0.4.0.ebuild, -perl-CPAN-Meta-YAML-0.5.0.ebuild,
+  -perl-CPAN-Meta-YAML-0.6.0.ebuild, perl-CPAN-Meta-YAML-0.8.0.ebuild,
+  +perl-CPAN-Meta-YAML-0.12.0.ebuild:
+  Add perl-5.20 version and remove old
 
   28 May 2014; Mikle Kolyada <zlogene@gentoo.org>
   -perl-CPAN-Meta-YAML-0.3.0-r1.ebuild:

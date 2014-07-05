@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-monocle/lc-monocle-9999.ebuild,v 1.3 2013/10/02 09:49:30 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-monocle/lc-monocle-9999.ebuild,v 1.4 2014/07/05 12:29:17 maksbotan Exp $
 
 EAPI="5"
 
@@ -10,19 +10,18 @@ DESCRIPTION="Monocle, the modular document viewer for LeechCraft"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +djvu doc +fb2 +pdf +spectre"
+IUSE="debug +djvu doc +fb2 +mobi +pdf +postscript"
 
-RDEPEND="~app-leechcraft/lc-core-${PV}
+REQUIRED_USE="postscript? ( pdf )"
+
+CDEPEND="~app-leechcraft/lc-core-${PV}
 	pdf? ( app-text/poppler[qt4] )
-	djvu? ( app-text/djvu )
-	spectre? (
-		app-text/libspectre
-		|| (
-			app-text/poppler[-lcms]
-			<app-text/ghostscript-gpl-9.07
-		)
-	)"
-DEPEND="${RDEPEND}
+	djvu? ( app-text/djvu )"
+
+RDEPEND="${CDEPEND}
+	postscript? ( app-text/ghostscript-gpl )"
+
+DEPEND="${CDEPEND}
 	doc? ( app-doc/doxygen[dot] )"
 
 src_configure() {
@@ -30,8 +29,9 @@ src_configure() {
 		$(cmake-utils_use_enable djvu MONOCLE_SEEN)
 		$(cmake-utils_use_with doc DOCS)
 		$(cmake-utils_use_enable fb2 MONOCLE_FXB)
+		$(cmake-utils_use_enable mobi MONOCLE_DIK)
 		$(cmake-utils_use_enable pdf MONOCLE_PDF)
-		$(cmake-utils_use_enable spectre MONOCLE_POSTRUS)
+		$(cmake-utils_use_enable postscript MONOCLE_POSTRUS)
 	)
 	cmake-utils_src_configure
 }

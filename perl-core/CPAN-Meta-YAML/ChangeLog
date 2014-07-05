@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.40 2014/05/28 15:57:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.41 2014/07/05 12:17:42 dilfridge Exp $
+
+  05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -CPAN-Meta-YAML-0.4.0.ebuild, -CPAN-Meta-YAML-0.5.0.ebuild,
+  -CPAN-Meta-YAML-0.6.0.ebuild:
+  Remove old
 
   28 May 2014; Mikle Kolyada <zlogene@gentoo.org> -CPAN-Meta-YAML-0.3.0.ebuild:
   Drop old

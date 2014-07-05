@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-monocle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-monocle/ChangeLog,v 1.13 2014/04/10 17:58:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-monocle/ChangeLog,v 1.14 2014/07/05 12:29:17 maksbotan Exp $
+
+  05 Jul 2014; Maxim Koltsov <maksbotan@gentoo.org> lc-monocle-9999.ebuild,
+  metadata.xml:
+  Fix dependencies, rename spectre use flag. Thanks to 0xd34df00d.
 
 *lc-monocle-0.6.65 (10 Apr 2014)
 

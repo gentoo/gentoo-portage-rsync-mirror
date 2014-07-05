@@ -777,6 +777,7 @@ app-leechcraft/lc-lmp:mp3tunes - Build plugin for supporting the mp3tunes.com mu
 app-leechcraft/lc-lmp:mpris - Enable MPRIS support
 app-leechcraft/lc-lmp:potorchu - Enable the projectM-based visualization effects module for LMP
 app-leechcraft/lc-monocle:fb2 - Enable support for FictionBook format
+app-leechcraft/lc-monocle:mobi - Enable support for MOBI format
 app-leechcraft/lc-monocle:spectre - Enable PostScript backend for Monocle using the app-text/libspectre
 app-leechcraft/lc-musiczombie:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 app-leechcraft/lc-netstoremanager:googledrive - Support Google Drive storage backend
