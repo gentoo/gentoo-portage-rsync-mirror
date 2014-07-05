@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/android-studio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.3 2014/06/23 18:54:41 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.4 2014/07/05 08:40:37 swift Exp $
+
+*android-studio-0.8.1.135.1248636 (05 Jul 2014)
+
+  05 Jul 2014; Sven Vermeulen <swift@gentoo.org>
+  +android-studio-0.8.1.135.1248636.ebuild:
+  Fix bug #515552 - Bump android studio to 0.8.1.135.1248636, thanks to C.J.
+  Wijtmans and Jason Zaman
 
 *android-studio-0.6.1.135.1224218 (23 Jun 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/pgxnclient
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgxnclient/ChangeLog,v 1.1 2013/01/17 07:36:31 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgxnclient/ChangeLog,v 1.2 2014/07/05 08:41:51 idella4 Exp $
+
+*pgxnclient-1.2-r1 (05 Jul 2014)
+
+  05 Jul 2014; Ian Delaney <idella4@gentoo.org> +pgxnclient-1.2-r1.ebuild,
+  -pgxnclient-1.2.ebuild:
+  revbump; conversion -> distutils-r1, add missing dep setuptools, add test
+  phase, remove old, fixes Bug 515020
 
 *pgxnclient-1.2 (17 Jan 2013)
 
