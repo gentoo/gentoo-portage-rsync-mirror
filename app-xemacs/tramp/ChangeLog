@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/tramp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.24 2011/07/22 11:25:04 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.25 2014/07/05 14:16:41 matsl Exp $
+
+*tramp-1.52 (05 Jul 2014)
+
+  05 Jul 2014; Mats Lidell <matsl@gentoo.org> +tramp-1.52.ebuild:
+  Version bump. Pre release package due to securify fix.
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> tramp-1.40.ebuild:
   ppc64 stable wrt #369897

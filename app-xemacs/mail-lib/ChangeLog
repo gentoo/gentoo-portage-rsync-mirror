@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/mail-lib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.28 2011/07/22 11:24:57 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.29 2014/07/05 14:09:22 matsl Exp $
+
+*mail-lib-1.83 (05 Jul 2014)
+
+  05 Jul 2014; Mats Lidell <matsl@gentoo.org> +mail-lib-1.83.ebuild:
+  Version bump - use prerelease package due to security fix in browse-url
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mail-lib-1.80.ebuild:
   ppc64 stable wrt #369897

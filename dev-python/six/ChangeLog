@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.44 2014/07/01 04:10:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.45 2014/07/05 14:08:47 jer Exp $
+
+  05 Jul 2014; Jeroen Roovers <jer@gentoo.org> six-1.6.1.ebuild:
+  Stable for HPPA (bug #516408).
 
 *six-1.7.3 (01 Jul 2014)
 

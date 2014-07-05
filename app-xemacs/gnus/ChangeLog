@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/gnus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.34 2011/07/22 11:25:04 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.35 2014/07/05 14:30:34 matsl Exp $
+
+*gnus-1.99 (05 Jul 2014)
+
+  05 Jul 2014; Mats Lidell <matsl@gentoo.org> +gnus-1.99.ebuild:
+  Version bump. Use pre prelase package due to security fix.
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> gnus-1.94.ebuild:
   ppc64 stable wrt #369897
