@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/librelp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.26 2014/05/04 14:17:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.27 2014/07/05 08:02:24 dev-zero Exp $
+
+*librelp-1.2.7-r1 (05 Jul 2014)
+
+  05 Jul 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/librelp-1.2.7-prevent-segfault-with-keepalive.patch,
+  +librelp-1.2.7-r1.ebuild:
+  Always DEPEND on gnutls for the headers (bug #513754), only RDEPEND for gnutls
+  depends now on the flag. Add a patch from upstream to prevent segfaults with
+  keepalive. Use autotools-utils eclass for src_install (solves bug #475012
+  properly).
 
 *librelp-1.2.7 (04 May 2014)
 

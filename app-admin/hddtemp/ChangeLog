@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.156 2014/05/17 17:02:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.157 2014/07/05 08:21:00 swift Exp $
+
+  05 Jul 2014; Sven Vermeulen <swift@gentoo.org> hddtemp-0.3_beta15-r24.ebuild,
+  hddtemp-0.3_beta15-r25.ebuild, hddtemp-0.3_beta15-r7.ebuild:
+  Adding USE=selinux dependency to sec-policy/selinux-hddtemp
 
   17 May 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added new drive to hddgentoo.db. Rels bug #510562.

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.2-r1.ebuild,v 1.1 2014/02/08 20:53:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-17.1.ebuild,v 1.1 2014/07/05 08:10:52 djc Exp $
 
-EAPI=3
+EAPI=4
 WX_GTK_VER="2.8"
 
 inherit autotools elisp-common eutils java-pkg-opt-2 multilib systemd versionator wxwidgets
@@ -10,22 +10,16 @@ inherit autotools elisp-common eutils java-pkg-opt-2 multilib systemd versionato
 # NOTE: If you need symlinks for binaries please tell maintainers or
 # open up a bug to let it be created.
 
-MY_VER=($(get_version_components))
-MY_MAJ="${MY_VER[0]}"
-MY_MIN="${MY_VER[1]:+0}${MY_VER[1]}"
-MY_MIC="${MY_VER[2]:+-}${MY_VER[2]}"
-MY_PV="R${MY_MAJ}B${MY_MIN}${MY_MIC}"
-
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"
 HOMEPAGE="http://www.erlang.org/"
-SRC_URI="http://www.erlang.org/download/otp_src_${MY_PV}.tar.gz
-	http://erlang.org/download/otp_doc_man_${MY_PV}.tar.gz
-	doc? ( http://erlang.org/download/otp_doc_html_${MY_PV}.tar.gz )"
+SRC_URI="http://www.erlang.org/download/otp_src_${PV}.tar.gz
+	http://erlang.org/download/otp_doc_man_${PV}.tar.gz
+	doc? ( http://erlang.org/download/otp_doc_html_${PV}.tar.gz )"
 
 LICENSE="ErlPL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
-IUSE="compat-ethread doc emacs halfword hipe java kpoll odbc smp sctp ssl tk wxwidgets"
+IUSE="compat-ethread doc emacs halfword hipe java kpoll odbc smp sctp ssl systemd tk wxwidgets"
 
 RDEPEND=">=dev-lang/perl-5.6.1
 	ssl? ( >=dev-libs/openssl-0.9.7d )
@@ -37,7 +31,7 @@ DEPEND="${RDEPEND}
 	sctp? ( net-misc/lksctp-tools )
 	tk? ( dev-lang/tk )"
 
-S="${WORKDIR}/otp_src_${MY_PV}"
+S="${WORKDIR}/otp_src_${PV}"
 
 SITEFILE=50${PN}-gentoo.el
 
@@ -51,10 +45,10 @@ src_prepare() {
 	use odbc || sed -i 's: odbc : :' lib/Makefile
 
 	# bug 263129, don't ignore LDFLAGS, reported upstream
-	sed -e 's:LDFLAGS = \$(DED_LDFLAGS):LDFLAGS += \$(DED_LDFLAGS):' -i "${S}"/lib/megaco/src/flex/Makefile.in || die
+	sed -e 's:LDFLAGS = \$(DED_LDFLAGS):LDFLAGS += \$(DED_LDFLAGS):' -i "${S}"/lib/megaco/src/flex/Makefile.in
 
 	# don't ignore LDFLAGS, reported upstream
-	sed -e 's:LDFLAGS =  \$(ODBC_LIB) \$(EI_LDFLAGS):LDFLAGS += \$(ODBC_LIB) \$(EI_LDFLAGS):' -i "${S}"/lib/odbc/c_src/Makefile.in || die
+	sed -e 's:LDFLAGS =  \$(ODBC_LIB) \$(EI_LDFLAGS):LDFLAGS += \$(ODBC_LIB) \$(EI_LDFLAGS):' -i "${S}"/lib/odbc/c_src/Makefile.in
 
 	if ! use wxwidgets; then
 		sed -i 's: wx : :' lib/Makefile
@@ -62,12 +56,11 @@ src_prepare() {
 	fi
 
 	# Nasty workaround, reported upstream
-	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in || die
+	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in
 
 	# bug 383697
-	sed -i '1i#define OF(x) x' erts/emulator/drivers/common/gzio.c || die
-	epatch "${FILESDIR}/${PV}-tinfo.patch" || die
-	cd erts && eautoreconf || die
+	sed -i '1i#define OF(x) x' erts/emulator/drivers/common/gzio.c
+	cd erts && eautoreconf
 }
 
 src_configure() {
@@ -75,8 +68,8 @@ src_configure() {
 
 	econf \
 		--enable-threads \
-		--enable-shared-zlib \ \
 		$(use_enable sctp) \
+		$(use_enable systemd) \
 		$(use_enable halfword halfword-emulator) \
 		$(use_enable hipe) \
 		$(use_with ssl ssl "${EPREFIX}"/usr) \
@@ -84,17 +77,16 @@ src_configure() {
 		$(use_enable kpoll kernel-poll) \
 		$(use_enable smp smp-support) \
 		$(use compat-ethread && echo "--enable-ethread-pre-pentium4-compatibility") \
-		$(use x64-macos && echo "--enable-darwin-64bit") \
-		|| die
+		$(use x64-macos && echo "--enable-darwin-64bit")
 }
 
 src_compile() {
 	use java || export JAVAC=false
-	emake || die
+	emake
 
 	if use emacs ; then
 		pushd lib/tools/emacs
-		elisp-compile *.el || die
+		elisp-compile *.el
 		popd
 	fi
 }
@@ -108,7 +100,7 @@ src_install() {
 	local ERL_INTERFACE_VER=$(extract_version lib/erl_interface EI_VSN)
 	local ERL_ERTS_VER=$(extract_version erts VSN)
 
-	emake INSTALL_PREFIX="${D}" install || die
+	emake INSTALL_PREFIX="${D}" install
 	dodoc AUTHORS README.md
 
 	dosym "${ERL_LIBDIR}/bin/erl" /usr/bin/erl
@@ -121,12 +113,12 @@ src_install() {
 	use smp && dosym "${ERL_LIBDIR}/erts-${ERL_ERTS_VER}/bin/beam.smp" /usr/bin/beam.smp
 
 	## Remove ${D} from the following files
-	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/erl" || die
-	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/start" || die
+	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/erl"
+	sed -e "s:${D}::g" -i "${ED}${ERL_LIBDIR}/bin/start"
 	grep -rle "${D}" "${ED}/${ERL_LIBDIR}/erts-${ERL_ERTS_VER}" | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
-	rm "${ED}/${ERL_LIBDIR}/Install"||die
+	rm "${ED}/${ERL_LIBDIR}/Install"
 
 	for i in "${WORKDIR}"/man/man* ; do
 		dodir "${ERL_LIBDIR}/${i##${WORKDIR}}"
@@ -154,18 +146,12 @@ src_install() {
 		popd
 	fi
 
-	newinitd "${FILESDIR}"/epmd.init epmd || die
-	systemd_dounit "${FILESDIR}"/epmd.service ||die
+	newinitd "${FILESDIR}"/epmd.init epmd
+	systemd_dounit "${FILESDIR}"/epmd.service
 }
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	elog
-	elog "If you need a symlink to one of Erlang's binaries,"
-	elog "please open a bug on http://bugs.gentoo.org/"
-	elog
-	elog "Gentoo's versioning scheme differs from the author's, so please refer to this version as ${MY_PV}"
-	elog
 }
 
 pkg_postrm() {
