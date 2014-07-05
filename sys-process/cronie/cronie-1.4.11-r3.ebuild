@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.11-r3.ebuild,v 1.1 2014/04/18 13:24:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.11-r3.ebuild,v 1.2 2014/07/05 20:37:07 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="https://fedorahosted.org/releases/c/r/cronie/${P}.tar.gz"
 HOMEPAGE="https://fedorahosted.org/cronie/wiki"
 
 LICENSE="ISC BSD BSD-2 GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="anacron +inotify pam selinux"
 
 DEPEND="pam? ( virtual/pam )
