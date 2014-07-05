@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.31 2014/05/15 07:56:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.32 2014/07/05 03:33:23 naota Exp $
+
+  05 Jul 2014; Naohiro Aota <naota@gentoo.org> gwaei-3.6.2.ebuild, metadata.xml:
+  Drop automagick dependency. #514284
 
   15 May 2014; Naohiro Aota <naota@gentoo.org> -gwaei-1.0.ebuild,
   -gwaei-1.1.ebuild:

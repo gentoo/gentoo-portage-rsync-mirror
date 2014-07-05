@@ -19,4 +19,9 @@
 	  Enable <pkg>app-text/mecab</pkg> support
 	</flag>
   </use>
+  <use>
+  	<flag name='hunspell'>
+	  Enable <pkg>app-text/hunspell</pkg> spellchecking and morphological analysis
+	</flag>
+  </use>
 </pkgmetadata>
