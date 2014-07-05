@@ -1,6 +1,15 @@
 # ChangeLog for dev-dotnet/libgdiplus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.147 2013/12/16 13:40:00 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.149 2014/07/05 11:00:02 pacho Exp $
+
+  05 Jul 2014; Pacho Ramos <pacho@gentoo.org> libgdiplus-2.10.9-r1.ebuild:
+  amd64 stable, bug #504796
+
+*libgdiplus-2.10.9-r2 (05 Jul 2014)
+
+  05 Jul 2014; Pacho Ramos <pacho@gentoo.org> +libgdiplus-2.10.9-r2.ebuild,
+  -libgdiplus-2.10.ebuild, libgdiplus-2.10.9-r1.ebuild:
+  We cannot stabilize giflib 4.2.x yet (#512540)
 
   16 Dec 2013; Lars Wendler <polynomial-c@gentoo.org>
   libgdiplus-2.10.9-r1.ebuild, +files/libgdiplus-2.10.9-freetype251.patch:

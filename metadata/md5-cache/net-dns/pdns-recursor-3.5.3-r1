@@ -4,10 +4,10 @@ DESCRIPTION=The PowerDNS Recursor
 EAPI=4
 HOMEPAGE=http://www.powerdns.com/
 IUSE=lua
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=lua? ( >=dev-lang/lua-5.1 ) !<net-dns/pdns-2.9.20-r1
 SLOT=0
 SRC_URI=http://downloads.powerdns.com/releases/pdns-recursor-3.5.3.tar.bz2
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=e6fdd51c4a83732e0fbf612515c73634
+_md5_=45c26e46ce03edf794add515ff41d3ad

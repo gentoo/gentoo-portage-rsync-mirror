@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.12.ebuild,v 1.3 2014/07/04 19:32:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.12.ebuild,v 1.4 2014/07/05 10:51:40 ago Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="compat15 debug ftconv nfprofile nftrack readpcap sflow"
 
 CDEPEND="
