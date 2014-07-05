@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.256 2014/06/27 09:54:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.257 2014/07/05 15:40:40 slyfox Exp $
+
+  05 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
+  pax-mark ghc-stage2 before it's used first time. Fixes bootstrap failure on
+  hardened (bug #516430 by Markus Oehme).
 
   27 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
   Ignore flags '--with-compiler/--with-gcc' passed by cabal with
