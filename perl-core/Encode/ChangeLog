@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Encode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.57 2014/06/06 17:35:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.58 2014/07/05 22:15:12 dilfridge Exp $
+
+  05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Encode-2.510.0.ebuild, -Encode-2.520.0.ebuild, -Encode-2.540.0.ebuild:
+  Remove old
 
   06 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -Encode-2.40-r1.ebuild,
   -Encode-2.420.0.ebuild, -Encode-2.430.0.ebuild, -Encode-2.440.0.ebuild,

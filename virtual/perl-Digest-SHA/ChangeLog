@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.64 2014/01/20 20:45:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.65 2014/07/05 22:07:30 dilfridge Exp $
+
+*perl-Digest-SHA-5.880.0 (05 Jul 2014)
+
+  05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-Digest-SHA-5.880.0.ebuild:
+  Add perl-5.20 version
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-Digest-SHA-5.820.0.ebuild, perl-Digest-SHA-5.850.0.ebuild:
