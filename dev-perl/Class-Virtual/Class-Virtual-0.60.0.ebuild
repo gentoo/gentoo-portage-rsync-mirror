@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/Class-Virtual-0.60.0.ebuild,v 1.2 2011/09/03 21:04:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/Class-Virtual-0.60.0.ebuild,v 1.3 2014/07/05 12:35:07 dilfridge Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="dev-perl/Class-Data-Inheritable
 	dev-perl/Carp-Assert
-	perl-core/Class-ISA"
+	dev-perl/Class-ISA"
 DEPEND="${RDEPEND}"
 
 SRC_TEST="do"

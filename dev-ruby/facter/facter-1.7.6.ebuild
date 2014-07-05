@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.7.6.ebuild,v 1.1 2014/06/22 18:59:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.7.6.ebuild,v 1.3 2014/07/05 12:59:23 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.puppetlabs.com/puppet/related-projects/facter/"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="+dmi +pciutils"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 
 CDEPEND="
 	sys-apps/net-tools

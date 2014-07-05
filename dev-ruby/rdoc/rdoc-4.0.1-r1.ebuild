@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-4.0.1-r1.ebuild,v 1.10 2014/01/26 13:06:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-4.0.1-r1.ebuild,v 1.11 2014/07/05 12:57:48 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -34,9 +34,6 @@ ruby_add_rdepend "=dev-ruby/json-1* >=dev-ruby/json-1.4"
 RDEPEND="${RDEPEND}
 	ruby_targets_ruby19? (
 		>=dev-lang/ruby-1.9.2:1.9
-	)
-	ruby_targets_ruby18? (
-		>=dev-lang/ruby-1.8.7:1.8
 	)"
 
 all_ruby_prepare() {

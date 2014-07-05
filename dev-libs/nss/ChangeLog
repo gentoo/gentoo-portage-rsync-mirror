@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.367 2014/07/04 19:51:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.369 2014/07/05 12:57:51 ago Exp $
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> nss-3.16.ebuild:
+  Stable for sparc, wrt bug #505072
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> nss-3.16.ebuild:
+  Stable for ia64, wrt bug #505072
 
   04 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> nss-3.16.1.ebuild:
   fixed whatever strange environment issue it was that caused bug 516244

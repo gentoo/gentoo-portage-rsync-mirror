@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/httpd-shed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.15 2014/07/02 11:04:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.16 2014/07/05 12:48:57 klausman Exp $
+
+  05 Jul 2014; Tobias Klausmann <klausman@gentoo.org> httpd-shed-0.4-r1.ebuild:
+  Stable on alpha, bug #495382
 
 *httpd-shed-0.4.0.2 (02 Jul 2014)
 

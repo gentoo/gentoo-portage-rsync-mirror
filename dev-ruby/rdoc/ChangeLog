@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.127 2014/01/26 13:06:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.128 2014/07/05 12:57:48 mrueg Exp $
+
+  05 Jul 2014; Manuel Rüger <mrueg@gentoo.org> rdoc-3.12.2.ebuild,
+  rdoc-4.0.1-r1.ebuild, rdoc-4.0.1-r2.ebuild:
+  Drop ruby18 support.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdoc-4.0.1-r1.ebuild:
   Stable for alpha, wrt bug #483254

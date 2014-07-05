@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Class-ISA/perl-Class-ISA-0.36.ebuild,v 1.9 2010/10/22 18:17:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Class-ISA/perl-Class-ISA-0.36.ebuild,v 1.10 2014/07/05 12:33:13 dilfridge Exp $
 
 DESCRIPTION="Report the search path thru an ISA tree"
 HOMEPAGE=""
@@ -11,4 +11,4 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="~perl-core/Class-ISA-${PV}"
+RDEPEND="~dev-perl/Class-ISA-${PV}"
