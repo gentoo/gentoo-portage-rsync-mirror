@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.6.ebuild,v 1.10 2014/07/05 11:29:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.8.6.ebuild,v 1.11 2014/07/05 17:46:20 ssuominen Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -211,9 +211,8 @@ pkg_postinst() {
 	elog
 
 	if [ "$(rc-status | grep dbus | grep started)" ] ; then
-		ewarn "You must restart D-Bus \`/etc/init.d/dbus restart\` to run"
-		ewarn "the new version of the daemon."
-		ewarn "Don't do this while X is running because it will restart your X as well."
+		elog "You can restart D-Bus \`/etc/init.d/dbus restart\` to run"
+		elog "the new version of the daemon."
 	fi
 
 	# Ensure unique id is generated and put it in /etc wrt #370451 but symlink
