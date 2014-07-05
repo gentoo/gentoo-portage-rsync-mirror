@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.14-r1.ebuild,v 1.3 2014/07/02 10:33:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.0.14-r1.ebuild,v 1.4 2014/07/05 09:11:46 mrueg Exp $
 
 EAPI=5
 
@@ -58,11 +58,6 @@ all_ruby_prepare() {
 
 each_ruby_prepare() {
 	case ${RUBY} in
-		*ruby18)
-			# Remove test failing on ruby18. According to travis.yml
-			# upstream no longer cares.
-			sed -i -e '/test_install_location_extra_slash/,/^  end/ s:^:#:' test/rubygems/test_gem_package.rb || die
-			;;
 		*jruby)
 			sed -i -e '/test_install_location_extra_slash/,/^  end/ s:^:#:' test/rubygems/test_gem_package.rb || die
 			# Remove failing tests. Before we did not run any tests at

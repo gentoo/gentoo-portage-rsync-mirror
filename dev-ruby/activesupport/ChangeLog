@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.262 2014/07/03 06:19:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.263 2014/07/05 09:10:23 mrueg Exp $
+
+  05 Jul 2014; Manuel Rüger <mrueg@gentoo.org> activesupport-3.2.18.ebuild,
+  activesupport-3.2.19.ebuild:
+  Remove ruby18 cases.
 
 *activesupport-4.1.4 (03 Jul 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.2.19.ebuild,v 1.1 2014/07/03 05:37:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.2.19.ebuild,v 1.2 2014/07/05 09:10:23 mrueg Exp $
 
 EAPI=5
 
@@ -58,10 +58,6 @@ all_ruby_prepare() {
 
 each_ruby_prepare() {
 	case ${RUBY} in
-		*ruby18)
-			# Skip failing ruby18 tests related to JSON serialization
-			rm test/message_encryptor_test.rb test/message_verifier_test.rb || die
-			;;
 		*jruby)
 			# Ignore failing tests on jruby in the interest of a security update
 			sed -i -e '/test_not_allowed_to_expand_parameter_entities_to_files/,/^    end/ s:^:#:' \
