@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/B-Debug
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/B-Debug/ChangeLog,v 1.1 2013/09/05 05:16:24 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/B-Debug/ChangeLog,v 1.2 2014/07/04 23:30:08 dilfridge Exp $
+
+*B-Debug-1.190.0 (04 Jul 2014)
+
+  04 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +B-Debug-1.190.0.ebuild:
+  Version bump for perl-5.20
 
 *B-Debug-1.180.0 (05 Sep 2013)
 

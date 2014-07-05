@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15830 2014/07/04 11:33:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15831 2014/07/04 23:28:09 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -165,7 +165,10 @@ dev-java/ibm-jdk-bin:1.5
 
 # Vladimir Smirnov <civil@gentoo.org> (27 May 2014)
 # Masked for testing, will defenitely cause major breakage
+# Single modules with 5.20 versions added here too -dilfridge
 =dev-lang/perl-5.20*
+=virtual/perl-B-Debug-1.190.0
+=perl-core/B-Debug-1.190.0
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
 # Dev channel releases are only for people who are developers or want more

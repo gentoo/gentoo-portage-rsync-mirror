@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
+DEPEND=virtual/perl-ExtUtils-MakeMaker virtual/perl-Test-Simple dev-lang/perl:=[-build(-)]
+DESCRIPTION=print debug info about ops
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/B-Debug/
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-2 )
+RDEPEND=virtual/perl-Test-Simple dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/R/RU/RURBAN/B-Debug-1.19.tar.gz
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
+_md5_=6f26a2988fcbb5d811e33f60a4612e80
