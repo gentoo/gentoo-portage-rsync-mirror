@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Attribute-Handlers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.47 2014/07/04 23:11:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.48 2014/07/05 11:21:54 dilfridge Exp $
+
+*perl-Attribute-Handlers-0.960.0 (05 Jul 2014)
+
+  05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-Attribute-Handlers-0.960.0.ebuild:
+  Add perl-5.20 version
 
   04 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-Attribute-Handlers-0.88.ebuild,

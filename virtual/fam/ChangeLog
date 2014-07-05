@@ -1,6 +1,9 @@
 # ChangeLog for virtual/fam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fam/ChangeLog,v 1.4 2014/06/18 20:54:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fam/ChangeLog,v 1.5 2014/07/05 11:14:50 pacho Exp $
+
+  05 Jul 2014; Pacho Ramos <pacho@gentoo.org> fam-0-r1.ebuild:
+  stable, bug #516118
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> fam-0-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

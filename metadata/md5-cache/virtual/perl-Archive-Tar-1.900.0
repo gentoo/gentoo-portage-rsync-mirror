@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Archive-Tar
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
-RDEPEND=~perl-core/Archive-Tar-1.900.0
+RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Archive-Tar-1.900.0 )
 SLOT=0
-_md5_=a1bc67acde68ade37e0ab2314665f08f
+_md5_=a4d74d38b7a1da32ff5333e4d910f863

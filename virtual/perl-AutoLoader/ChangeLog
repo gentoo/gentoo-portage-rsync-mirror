@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-AutoLoader
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-AutoLoader/ChangeLog,v 1.21 2014/05/28 15:49:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-AutoLoader/ChangeLog,v 1.22 2014/07/05 11:27:05 dilfridge Exp $
+
+*perl-AutoLoader-5.740.0 (05 Jul 2014)
+
+  05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  perl-AutoLoader-5.730.0.ebuild, +perl-AutoLoader-5.740.0.ebuild:
+  Add perl-5.20 version
 
   28 May 2014; Mikle Kolyada <zlogene@gentoo.org>
   -perl-AutoLoader-5.710.0-r1.ebuild:
