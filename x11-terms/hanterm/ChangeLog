@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/hanterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.29 2012/12/19 14:25:19 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.30 2014/07/05 00:25:41 naota Exp $
+
+  05 Jul 2014; Naohiro Aota <naota@gentoo.org> +files/hanterm-3.1.6-utmp.patch,
+  hanterm-3.1.6-r4.ebuild:
+  Add a patch to build with USE=-utempter. #513892
 
   19 Dec 2012;  <naota@gentoo.org> hanterm-3.1.6-r2.ebuild,
   hanterm-3.1.6-r4.ebuild:
