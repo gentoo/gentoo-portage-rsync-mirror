@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.274 2014/07/04 19:04:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.280 2014/07/05 13:56:23 ago Exp $
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> systemd-212-r5.ebuild:
+  Stable for x86, wrt bug #509076
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> systemd-212-r5.ebuild:
+  Stable for sparc, wrt bug #509076
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> systemd-212-r5.ebuild:
+  Stable for ppc64, wrt bug #509076
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> systemd-212-r5.ebuild:
+  Stable for ppc, wrt bug #509076
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> systemd-212-r5.ebuild:
+  Stable for ia64, wrt bug #509076
+
+  05 Jul 2014; Agostino Sarubbo <ago@gentoo.org> systemd-212-r5.ebuild:
+  Stable for alpha, wrt bug #509076
 
   04 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215.ebuild:
   Force regeneration of org.freedesktop.systemd1.policy.

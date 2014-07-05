@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.756 2014/07/05 13:27:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.757 2014/07/05 13:40:21 aballier Exp $
+
+  05 Jul 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  stop intalling release notes
 
 *ffmpeg-0.10.14 (05 Jul 2014)
 

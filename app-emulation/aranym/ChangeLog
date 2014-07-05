@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/aranym
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.23 2014/01/25 01:38:27 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.25 2014/07/05 13:50:27 zlogene Exp $
+
+  05 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> aranym-0.9.14.ebuild:
+  Mark amd64 stable
+
+*aranym-0.9.16 (05 Jul 2014)
+
+  05 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> +aranym-0.9.16.ebuild:
+  Version bump
 
   25 Jan 2014; Chris Reffett <creffett@gentoo.org> -aranym-0.9.10.ebuild,
   -aranym-0.9.11.ebuild, aranym-0.9.14.ebuild:

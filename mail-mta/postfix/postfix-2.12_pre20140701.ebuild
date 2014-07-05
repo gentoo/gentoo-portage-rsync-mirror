@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.12_pre20140701.ebuild,v 1.1 2014/07/02 06:56:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.12_pre20140701.ebuild,v 1.2 2014/07/05 13:35:56 klausman Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -19,7 +19,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86"
 IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind lmdb memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
