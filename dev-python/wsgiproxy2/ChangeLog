@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wsgiproxy2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.8 2014/07/04 15:11:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.9 2014/07/05 02:48:00 idella4 Exp $
+
+  05 Jul 2014; Ian Delaney <idella4@gentoo.org> wsgiproxy2-0.4.1.ebuild:
+  whitespace
 
   04 Jul 2014; Ian Delaney <idella4@gentoo.org> wsgiproxy2-0.4.1.ebuild:
   add missing dep setuptools, fixes Bug #515744
