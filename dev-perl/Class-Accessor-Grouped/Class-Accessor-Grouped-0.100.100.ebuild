@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/Class-Accessor-Grouped-0.100.90.ebuild,v 1.1 2012/11/17 20:12:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/Class-Accessor-Grouped-0.100.100.ebuild,v 1.1 2014/07/06 19:17:12 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=RIBASUSHI
-MODULE_VERSION=0.10009
+MODULE_VERSION=0.10010
 inherit perl-module
 
 DESCRIPTION="Lets you build groups of accessors"
