@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.42 2014/06/16 03:21:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.43 2014/07/06 12:30:08 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> glance-2014.1.1.ebuild,
+  glance-2014.1.9999.ebuild, glance-9999.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *glance-2014.1.1 (16 Jun 2014)
 

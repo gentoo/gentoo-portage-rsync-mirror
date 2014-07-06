@@ -1,6 +1,13 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.57 2014/06/02 13:43:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.58 2014/07/06 12:18:50 swift Exp $
+
+*uzbl-2012.05.14-r1 (06 Jul 2014)
+
+  06 Jul 2014; Sven Vermeulen <swift@gentoo.org> +uzbl-2012.05.14-r1.ebuild,
+  uzbl-9999.ebuild:
+  Fix bug #513466 (incl. #506006, #456310, #486012, #453208) thanks to Kéwan
+  "tharvik" Marconnet
 
   02 Jun 2014; Tom Wijsman <TomWij@gentoo.org> uzbl-2012.05.14.ebuild,
   uzbl-9999.ebuild:

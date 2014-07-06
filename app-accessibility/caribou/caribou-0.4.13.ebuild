@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.13.ebuild,v 1.4 2014/02/23 12:06:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.13.ebuild,v 1.5 2014/07/06 12:29:21 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,7 +41,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gsettings-desktop-schemas-3
 	gnome-base/librsvg:2
 	sys-apps/dbus
-	virtual/python-argparse[${PYTHON_USEDEP}]
 "
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt

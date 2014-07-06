@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/GridDataFormats
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/GridDataFormats/ChangeLog,v 1.1 2013/07/04 15:53:21 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/GridDataFormats/ChangeLog,v 1.2 2014/07/06 12:07:38 jlec Exp $
+
+  06 Jul 2014; Justin Lecher <jlec@gentoo.org> GridDataFormats-0.2.2.ebuild:
+  Add patch for missing deps, #514752; thanks idella4 for writing the patch
 
 *GridDataFormats-0.2.2 (04 Jul 2013)
 

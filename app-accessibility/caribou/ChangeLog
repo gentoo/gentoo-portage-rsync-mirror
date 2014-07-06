@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/caribou
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.30 2014/02/23 12:06:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.31 2014/07/06 12:29:21 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> caribou-0.4.13.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   23 Feb 2014; Pacho Ramos <pacho@gentoo.org> caribou-0.4.13.ebuild:
   Drop python-2.6 support as pygobject-3.10 did, drop old
