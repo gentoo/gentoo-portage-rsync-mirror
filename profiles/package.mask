@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15854 2014/07/06 11:50:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15855 2014/07/06 15:27:06 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -199,6 +199,7 @@ dev-java/ibm-jdk-bin:1.5
 =virtual/perl-ExtUtils-Install-1.670.0
 =virtual/perl-ExtUtils-MakeMaker-6.980.0
 =virtual/perl-ExtUtils-Manifest-1.630.0-r1
+=virtual/perl-ExtUtils-ParseXS-3.240.0
 =perl-core/B-Debug-1.190.0
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
