@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9162 2014/07/06 13:22:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9163 2014/07/06 13:51:00 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jul 2014; Ulrich Müller <ulm@gentoo.org> updates/2Q-2014,
+  +updates/3Q-2014:
+  Move latest entry to correct quarter file.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> thirdpartymirrors:
   Use a little different FQDN for mirror://bitbucket to silence out the repoman
