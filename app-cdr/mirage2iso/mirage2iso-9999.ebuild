@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-9999.ebuild,v 1.3 2013/10/14 20:48:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-9999.ebuild,v 1.4 2014/07/06 13:15:14 mgorny Exp $
 
 EAPI=5
 
@@ -17,8 +17,8 @@ TESTS_PV=0.3
 
 DESCRIPTION="CD/DVD image converter using libmirage"
 HOMEPAGE="https://bitbucket.org/mgorny/mirage2iso/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2
-	test? ( mirror://bitbucket/mgorny/${PN}/downloads/${PN}-${TESTS_PV}-tests.tar.xz )"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2
+	test? ( https://www.bitbucket.org/mgorny/${PN}/downloads/${PN}-${TESTS_PV}-tests.tar.xz )"
 
 LICENSE="BSD"
 SLOT="0"

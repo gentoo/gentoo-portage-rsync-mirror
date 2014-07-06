@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/pms-test-suite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/ChangeLog,v 1.11 2012/12/15 12:40:08 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/ChangeLog,v 1.12 2014/07/06 13:16:14 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pms-test-suite-0.2.ebuild,
+  pms-test-suite-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
 *pms-test-suite-9999 (15 Dec 2012)
 

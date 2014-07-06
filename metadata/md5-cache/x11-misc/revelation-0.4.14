@@ -9,6 +9,6 @@ LICENSE=GPL-2
 RDEPEND=dev-python/pygtk dev-python/pycrypto dev-python/gconf-python dev-python/libgnome-python dev-python/dbus-python sys-libs/cracklib[python] applet? ( dev-python/gnome-applets-python dev-python/libbonobo-python ) =dev-lang/python-2*
 RESTRICT=test
 SLOT=0
-SRC_URI=mirror://bitbucket/erikg/revelation/downloads/revelation-0.4.14.tar.xz
+SRC_URI=https://www.bitbucket.org/erikg/revelation/downloads/revelation-0.4.14.tar.xz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=617e24c39375bf4181d2e91f239dc38b
+_md5_=91fe6dc9eda90bb4928db3c64f842adf

@@ -7,6 +7,6 @@ KEYWORDS=alpha amd64 arm ia64 ppc ppc64 sparc x86
 LICENSE=BSD
 RDEPEND=>=sys-apps/systemd-207
 SLOT=0
-SRC_URI=mirror://bitbucket/mgorny/gentoo-systemd-integration/downloads/gentoo-systemd-integration-2.tar.bz2
+SRC_URI=https://www.bitbucket.org/mgorny/gentoo-systemd-integration/downloads/gentoo-systemd-integration-2.tar.bz2
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=80a38e27a84cf80f14f1f4929eb2af4b
+_md5_=b5b5ada624dbb9b3a1acf98743d9fd94

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libh2o
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.7 2013/10/16 13:11:17 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.8 2014/07/06 13:21:24 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> libh2o-0.2.1.ebuild,
+  libh2o-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   16 Oct 2013; Michał Górny <mgorny@gentoo.org> libh2o-9999.ebuild:
   Switch to git-r3.

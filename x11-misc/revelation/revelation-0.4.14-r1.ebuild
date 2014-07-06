@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.14-r1.ebuild,v 1.1 2014/06/22 19:46:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.14-r1.ebuild,v 1.2 2014/07/06 13:24:20 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -10,7 +10,7 @@ inherit python-single-r1 gnome2
 
 DESCRIPTION="A password manager for GNOME"
 HOMEPAGE="http://revelation.olasagasti.info/"
-SRC_URI="mirror://bitbucket/erikg/revelation/downloads/${P}.tar.xz"
+SRC_URI="https://www.bitbucket.org/erikg/revelation/downloads/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"

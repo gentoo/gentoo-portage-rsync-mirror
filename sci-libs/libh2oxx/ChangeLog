@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libh2oxx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2oxx/ChangeLog,v 1.5 2013/10/16 13:13:05 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2oxx/ChangeLog,v 1.6 2014/07/06 13:21:28 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> libh2oxx-0.2.ebuild,
+  libh2oxx-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   16 Oct 2013; Michał Górny <mgorny@gentoo.org> libh2oxx-9999.ebuild:
   Switch to git-r3. Add SLOT operators to dependencies.

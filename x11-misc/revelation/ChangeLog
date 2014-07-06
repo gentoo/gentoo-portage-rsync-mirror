@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.31 2014/06/22 19:46:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.32 2014/07/06 13:24:20 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> revelation-0.4.14-r1.ebuild,
+  revelation-0.4.14.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
 *revelation-0.4.14-r1 (22 Jun 2014)
 

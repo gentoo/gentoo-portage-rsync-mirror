@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eclean-kernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.16 2014/03/31 20:28:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.17 2014/07/06 13:15:16 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> eclean-kernel-0.4.1.ebuild,
+  eclean-kernel-0.4.ebuild, eclean-kernel-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> eclean-kernel-0.4.1.ebuild,
   eclean-kernel-0.4.ebuild, eclean-kernel-9999.ebuild:

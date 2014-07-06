@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.321 2014/05/27 10:09:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.322 2014/07/06 13:21:58 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> transcode-1.1.7-r1.ebuild,
+  transcode-1.1.7-r2.ebuild, transcode-1.1.7-r3.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   27 May 2014; Mikle Kolyada <zlogene@gentoo.org> transcode-1.1.7-r3.ebuild:
   ppc stable wrt bug #504790

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/pymountboot-9999.ebuild,v 1.8 2014/03/31 21:18:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/pymountboot-9999.ebuild,v 1.9 2014/07/06 13:18:35 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
@@ -14,7 +14,7 @@ inherit git-r3
 
 DESCRIPTION="Python extension module to (re)mount /boot"
 HOMEPAGE="https://bitbucket.org/mgorny/pymountboot/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

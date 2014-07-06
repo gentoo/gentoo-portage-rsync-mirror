@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-2.0.6.ebuild,v 1.1 2014/06/27 14:30:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-2.0.6.ebuild,v 1.2 2014/07/06 13:18:13 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python package to handle polygonal shapes in 2D"
 HOMEPAGE="http://www.j-raedler.de/projects/polygon/"
-SRC_URI="mirror://bitbucket/jraedler/${PN}2/downloads/Polygon2-${PV}.zip"
+SRC_URI="https://www.bitbucket.org/jraedler/${PN}2/downloads/Polygon2-${PV}.zip"
 
 LICENSE="LGPL-2"
 SLOT="2"

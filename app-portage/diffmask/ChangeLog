@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.23 2014/04/28 19:43:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.24 2014/07/06 13:15:15 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3-r2.ebuild,
+  diffmask-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   28 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> diffmask-0.3.3-r2.ebuild:
   Keyword ~amd64-linux ~x86-linux

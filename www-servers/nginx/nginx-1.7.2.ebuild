@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.2.ebuild,v 1.1 2014/06/19 09:52:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.2.ebuild,v 1.2 2014/07/06 13:23:46 mgorny Exp $
 
 EAPI="5"
 
@@ -117,7 +117,7 @@ HTTP_PUSH_STREAM_MODULE_WD="${WORKDIR}/nginx-push-stream-module-${HTTP_PUSH_STRE
 # sticky-module (https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng, BSD-2)
 HTTP_STICKY_MODULE_PV="1.2.4"
 HTTP_STICKY_MODULE_P="nginx_http_sticky_module_ng-${HTTP_STICKY_MODULE_PV}"
-HTTP_STICKY_MODULE_URI="mirror://bitbucket/nginx-goodies/nginx-sticky-module-ng/get/${HTTP_STICKY_MODULE_PV}.tar.bz2"
+HTTP_STICKY_MODULE_URI="https://www.bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/${HTTP_STICKY_MODULE_PV}.tar.bz2"
 HTTP_STICKY_MODULE_WD="${WORKDIR}/nginx-goodies-nginx-sticky-module-ng-c825ea7c5c91"
 
 # ajp-module (https://github.com/yaoweibin/nginx_ajp_module, BSD-2)

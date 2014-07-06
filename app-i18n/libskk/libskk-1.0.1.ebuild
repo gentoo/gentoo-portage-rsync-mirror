@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/libskk-1.0.1.ebuild,v 1.1 2013/08/03 14:06:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/libskk-1.0.1.ebuild,v 1.2 2014/07/06 13:15:18 mgorny Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ inherit virtualx vala
 
 DESCRIPTION="GObject-based library to deal with Japanese kana-to-kanji conversion method"
 HOMEPAGE="https://github.com/ueno/libskk"
-SRC_URI="mirror://bitbucket/${PN}/${PN}/downloads/${P}.tar.gz"
+SRC_URI="https://www.bitbucket.org/${PN}/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.382 2014/06/19 09:52:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.383 2014/07/06 13:23:46 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> nginx-1.7.2.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
 *nginx-1.7.2 (19 Jun 2014)
 

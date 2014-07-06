@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.63 2014/03/29 03:22:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.64 2014/07/06 13:17:27 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> smart-live-rebuild-1.3.3.ebuild,
+  smart-live-rebuild-1.3.4.ebuild, smart-live-rebuild-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   29 Mar 2014; Mike Gilbert <floppym@gentoo.org> smart-live-rebuild-9999.ebuild:
   Add python3.4.

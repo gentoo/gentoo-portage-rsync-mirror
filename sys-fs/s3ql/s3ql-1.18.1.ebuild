@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.18.1.ebuild,v 1.3 2014/07/06 12:57:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.18.1.ebuild,v 1.4 2014/07/06 13:23:11 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="A full-featured file system for online data storage"
 HOMEPAGE="https://bitbucket.org/nikratio/s3ql/"
-SRC_URI="mirror://bitbucket/nikratio/s3ql/downloads/${P}.tar.bz2"
+SRC_URI="https://www.bitbucket.org/nikratio/s3ql/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"

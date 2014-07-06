@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.2.1.ebuild,v 1.1 2014/05/06 04:34:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.2.1.ebuild,v 1.2 2014/07/06 13:02:10 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -24,10 +24,6 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/mock[${PYTHON_USEDEP}]
-		python_targets_python2_6? (
-			dev-python/twisted-names[python_targets_python2_6]
-			virtual/python-unittest2[python_targets_python2_6]
-		)
 		python_targets_python2_7? ( dev-python/twisted-names[python_targets_python2_7] )
 	)
 "

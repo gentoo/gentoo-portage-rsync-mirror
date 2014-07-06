@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3-r1.ebuild,v 1.13 2014/06/18 16:00:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3-r1.ebuild,v 1.14 2014/07/06 13:04:55 mgorny Exp $
 
 EAPI=5
 
@@ -27,8 +27,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/pyquery[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}] )"
+		dev-python/pyquery[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 PATCHES=( "${FILESDIR}/webtest-1.4.3-doctest.patch" )

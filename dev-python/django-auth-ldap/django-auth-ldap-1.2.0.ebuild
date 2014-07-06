@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.2.0.ebuild,v 1.2 2014/07/01 04:52:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.2.0.ebuild,v 1.3 2014/07/06 13:17:39 mgorny Exp $
 
 EAPI=5
 # Although setup.py claims to support py3, python-ldap does not
@@ -10,8 +10,8 @@ inherit distutils-r1
 
 DESCRIPTION="Django LDAP authentication backend"
 HOMEPAGE="http://pypi.python.org/pypi/django-auth-ldap http://bitbucket.org/psagers/django-auth-ldap/"
-SRC_URI="hmirror://bitbucket.org/psagers/django-auth-ldap/get/80379ce59e6b.zip -> ${P}.zip"
-#mirror://bitbucket/psagers/django-auth-ldap/get/80379ce59e6b.zip
+SRC_URI="hhttps://www.bitbucket.org.org/psagers/django-auth-ldap/get/80379ce59e6b.zip -> ${P}.zip"
+#https://www.bitbucket.org/psagers/django-auth-ldap/get/80379ce59e6b.zip
 
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyh2o
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyh2o/ChangeLog,v 1.7 2014/03/31 21:13:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyh2o/ChangeLog,v 1.8 2014/07/06 13:17:59 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pyh2o-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pyh2o-9999.ebuild:
   Add support for the new PyPy slotting.

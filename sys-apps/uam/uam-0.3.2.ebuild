@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.3.2.ebuild,v 1.3 2014/01/14 13:58:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.3.2.ebuild,v 1.4 2014/07/06 13:22:22 mgorny Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools-utils udev user
 
 DESCRIPTION="Simple udev-based automounter for removable USB media"
 HOMEPAGE="https://bitbucket.org/mgorny/uam/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

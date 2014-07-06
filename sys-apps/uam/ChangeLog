@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.35 2014/01/14 13:58:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.36 2014/07/06 13:22:22 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> uam-0.3.1.ebuild,
+  uam-0.3.2.ebuild, uam-0.3.ebuild, uam-9999.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> uam-0.3.2.ebuild:
   Stable for x86, wrt bug #495936

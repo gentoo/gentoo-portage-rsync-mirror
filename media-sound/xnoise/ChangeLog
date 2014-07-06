@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xnoise
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.37 2014/03/22 20:39:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.38 2014/07/06 13:20:31 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> xnoise-0.2.20.ebuild,
+  xnoise-0.2.21.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   22 Mar 2014; Christoph Mende <angelos@gentoo.org> xnoise-0.2.21.ebuild:
   Fix QA warnings in xnoise.desktop

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/git-bz-9999.ebuild,v 1.9 2014/03/31 21:02:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/git-bz-9999.ebuild,v 1.10 2014/07/06 13:19:32 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
@@ -15,7 +15,7 @@ inherit git-r3
 
 DESCRIPTION="Bugzilla subcommand for git"
 HOMEPAGE="http://www.fishsoup.net/software/git-bz/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

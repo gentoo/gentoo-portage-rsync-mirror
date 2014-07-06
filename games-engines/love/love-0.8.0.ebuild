@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.9 2013/07/30 14:26:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.10 2014/07/06 13:20:24 mgorny Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ if [[ ${PV} == 9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="mirror://bitbucket/rude/${PN}/downloads/${P}-linux-src.tar.gz"
+	SRC_URI="https://www.bitbucket.org/rude/${PN}/downloads/${P}-linux-src.tar.gz"
 	KEYWORDS="amd64 ~arm ~ppc x86"
 fi
 

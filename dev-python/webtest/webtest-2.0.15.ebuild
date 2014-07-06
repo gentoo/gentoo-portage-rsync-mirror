@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.15.ebuild,v 1.1 2014/05/23 10:51:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.15.ebuild,v 1.2 2014/07/06 13:04:55 mgorny Exp $
 
 EAPI=5
 
@@ -36,7 +36,6 @@ DEPEND="${RDEPEND}
 		dev-python/wsgiproxy2[${PYTHON_USEDEP}]
 		dev-python/coverage[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 	)"
 
 S="${WORKDIR}/${MY_P}"

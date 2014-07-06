@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.46 2014/05/24 02:22:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.47 2014/07/06 13:02:10 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> tornado-3.1.1-r1.ebuild,
+  tornado-3.2.1.ebuild, tornado-3.2.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   24 May 2014; Ian Delaney <idella4@gentoo.org> tornado-3.2.ebuild:
   re-keyword ~arm to -3.2, tested on armv7, cubieboard2, qa correction to deps.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.11 2014/06/27 14:30:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.12 2014/07/06 13:18:13 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> polygon-2.0.6.ebuild,
+  polygon-3.0.6.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
 *polygon-3.0.6 (27 Jun 2014)
 *polygon-2.0.6 (27 Jun 2014)

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/libh2o-0.2.1.ebuild,v 1.2 2012/08/24 18:48:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/libh2o-0.2.1.ebuild,v 1.3 2014/07/06 13:21:24 mgorny Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools-utils
 
 DESCRIPTION="Library of routines for IF97 water & steam properties"
 HOMEPAGE="https://bitbucket.org/mgorny/libh2o/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

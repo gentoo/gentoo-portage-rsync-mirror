@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2-r1.ebuild,v 1.5 2013/07/04 09:13:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2-r1.ebuild,v 1.6 2014/07/06 13:20:24 mgorny Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit base games
 
 DESCRIPTION="A framework for 2D games in Lua"
 HOMEPAGE="http://love2d.org/"
-SRC_URI="mirror://bitbucket/rude/${PN}/downloads/${P}-linux-src.tar.gz"
+SRC_URI="https://www.bitbucket.org/rude/${PN}/downloads/${P}-linux-src.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0.7"

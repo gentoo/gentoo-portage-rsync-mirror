@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/connect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.14 2014/02/15 12:14:27 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.15 2014/07/06 13:20:53 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> connect-1.100.ebuild,
+  connect-1.103.ebuild:
+  Replace obsolete mirror://bitbucket with the real URI.
 
   15 Feb 2014; Wolfram Schlich <wschlich@gentoo.org> -connect-100.ebuild:
   removed -100 as -1.100 is the replacement

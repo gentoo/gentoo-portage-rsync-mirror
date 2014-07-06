@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/squashdelta-0.1.ebuild,v 1.1 2014/03/29 11:57:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/squashdelta-0.1.ebuild,v 1.2 2014/07/06 13:19:03 mgorny Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools-utils
 
 DESCRIPTION="Efficient (partially uncompressed) SquashFS binary delta tool"
 HOMEPAGE="https://bitbucket.org/mgorny/squashdelta/"
-SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
+SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 # uses public-domain murmurhash3
 LICENSE="BSD public-domain"
