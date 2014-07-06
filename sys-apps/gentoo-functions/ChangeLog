@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.14 2014/06/14 12:17:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.15 2014/07/06 20:40:27 williamh Exp $
+
+  06 Jul 2014; William Hubbs <williamh@gentoo.org> metadata.xml:
+  convert metadata indentations back to tabs as shown in skel.metadata.xml.
 
 *gentoo-functions-0.6 (14 Jun 2014)
 

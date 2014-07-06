@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r1.ebuild,v 1.1 2014/07/06 15:49:17 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r2.ebuild,v 1.1 2014/07/06 20:43:31 grknight Exp $
 
 EAPI=5
 
@@ -30,18 +30,18 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Fix build system that assumes that modules are installed to the live system
-	epatch "${FILESDIR}/${P}-fix-build.patch"
+	epatch "${FILESDIR}/${P}-fix-build.patch" "${FILESDIR}/${P}-cflags.patch"
 }
 
 src_compile() {
 	# Package has a home grown Makefile system. Make it work for Gentoo
-	emake INCDIR="${S}" WARNFLAGS="-Wall" OPTLEVEL="" DEBUG="" CC=$(tc-getCC) \
-		AR=$(tc-getAR) LOCALBASE="/usr" LIB.LINKSTATIC="" LIB.LINKDYNAMIC=""
+	emake INCDIR="${S}" WARNFLAGS="-Wall" OPTLEVEL="" DEBUG="" CC="$(tc-getCC)" \
+		AR="$(tc-getAR)" LOCALBASE="/usr" LIB.LINKSTATIC="" LIB.LINKDYNAMIC=""
 }
 
 src_install() {
 	# Only the main executable needs to be installed
-	emake -C cyphertite/cyphertite DESTDIR="${D}" LOCALBASE=usr LIBDIR=usr/$(get_libdir) LNFORCE=-s install
+	emake -C cyphertite/cyphertite DESTDIR="${D}" LOCALBASE="usr" LIBDIR="usr/$(get_libdir)" LNFORCE="-s" install
 
 	# Fix up broken man symlinks
 	rm "${D}"usr/share/man/man1/ct*.1 || die
