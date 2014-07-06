@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.92 2014/06/07 11:53:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.94 2014/07/06 21:21:23 pinkbyte Exp $
+
+  06 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> cppunit-1.13.2-r2.ebuild:
+  Stable on amd64 and x86, wrt bug #516344
+
+*cppunit-1.13.2-r2 (06 Jul 2014)
+
+  06 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> -cppunit-1.13.2.ebuild,
+  -cppunit-1.13.2-r1.ebuild, +cppunit-1.13.2-r2.ebuild, cppunit-9999.ebuild:
+  Install docs, accidentally dropped during multilib conversion, drop old
+  revisions
 
 *cppunit-1.13.2-r1 (07 Jun 2014)
 

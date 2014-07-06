@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-9999.ebuild,v 1.14 2014/07/06 21:25:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/gr-osmosdr-0.1.1.ebuild,v 1.1 2014/07/06 21:25:41 zerochaos Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -22,14 +22,26 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0/${PV}"
-IUSE="fcd hackrf iqbalance mirisdr python rtlsdr uhd"
+IUSE="fcd hackrf iqbalance python rtlsdr uhd"
 #IUSE="fcd hackrf iqbalance mirisdr osmosdr python rtlsdr uhd"
 
 #	osmosdr? ( net-libs/libosmosdr:= )
+
+#from "git show v0.1.1"
+#gnuradio 3.7.3
+#uhd 003.007.000-1-ga8caec5f
+#librtlsdr v0.5.3-5-g6ee5
+#libosmosdr v0.1-43-gb697
+#libmirisdr 3174
+#libhackrf 0.3
+#gr-iqbal v0.37.1-5-gd4fd4dd4
+#libairspy 9350af1a
+#libbladeRF 0.14.0-git-d9db543
+#gr-fcdproplus 1edbe523
+
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[fcd?]
 	hackrf? ( net-libs/libhackrf:= )
 	iqbalance? ( net-wireless/gr-iqbal:= )
-	mirisdr? ( net-libs/libmirisdr:= )
 	rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= )
 	uhd? ( net-wireless/uhd:= )"
 DEPEND="${RDEPEND}
@@ -50,7 +62,6 @@ src_configure() {
 		$(cmake-utils_use_enable fcd)
 		$(cmake-utils_use_enable hackrf)
 		$(cmake-utils_use_enable iqbalance)
-		$(cmake-utils_use_enable mirisdr MIRI)
 		$(cmake-utils_use_enable python)
 		$(cmake-utils_use_enable rtlsdr RTL)
 		$(cmake-utils_use_enable rtlsdr RTL_TCP)

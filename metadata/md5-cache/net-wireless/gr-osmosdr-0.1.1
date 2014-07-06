@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=>=net-wireless/gnuradio-3.7_rc:0=[fcd?] hackrf? ( net-libs/libhackrf:= ) iqbalance? ( net-wireless/gr-iqbal:= ) rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= ) uhd? ( net-wireless/uhd:= ) dev-python/cheetah sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2* )
+DESCRIPTION=GNU Radio source block for OsmoSDR and rtlsdr and hackrf
+EAPI=5
+HOMEPAGE=http://sdr.osmocom.org/trac/wiki/GrOsmoSDR
+IUSE=fcd hackrf iqbalance python rtlsdr uhd
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-3
+RDEPEND=>=net-wireless/gnuradio-3.7_rc:0=[fcd?] hackrf? ( net-libs/libhackrf:= ) iqbalance? ( net-wireless/gr-iqbal:= ) rtlsdr? ( >=net-wireless/rtl-sdr-0.5.3:= ) uhd? ( net-wireless/uhd:= ) python? ( =dev-lang/python-2* )
+SLOT=0/0.1.1
+SRC_URI=https://dev.gentoo.org/~zerochaos/distfiles/gr-osmosdr-0.1.1.tar.xz
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=5d7fe218109ebcb79eedff7f3c61d689
