@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.159 2014/07/05 13:40:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.160 2014/07/06 10:09:30 mgorny Exp $
 
 EAPI="5"
 
@@ -319,7 +319,7 @@ multilib_src_configure() {
 		esac
 	fi
 
-	"${S}/configure" \
+	set -- "${S}/configure" \
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		--shlibdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -332,7 +332,9 @@ multilib_src_configure() {
 		--extra-cflags="${CFLAGS}" \
 		--extra-cxxflags="${CXXFLAGS}" \
 		$(use_enable static-libs static) \
-		"${myconf[@]}" || die
+		"${myconf[@]}"
+	echo "${@}"
+	"${@}" || die
 }
 
 multilib_src_compile() {

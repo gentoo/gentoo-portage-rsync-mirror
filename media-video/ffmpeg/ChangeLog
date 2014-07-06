@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.757 2014/07/05 13:40:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.758 2014/07/06 10:09:30 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> ffmpeg-1.2.6-r1.ebuild,
+  ffmpeg-1.2.7.ebuild, ffmpeg-2.2.3-r1.ebuild, ffmpeg-2.2.4.ebuild,
+  ffmpeg-9999.ebuild:
+  Output configure command-line verbosely to make debugging easier.
 
   05 Jul 2014; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   stop intalling release notes

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.202 2014/07/04 19:42:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.203 2014/07/06 10:13:37 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> libav-10.1-r1.ebuild,
+  libav-10.2.ebuild, libav-10.9999.ebuild, libav-9.13-r1.ebuild,
+  libav-9.14.ebuild, libav-9.9999.ebuild, libav-9999.ebuild:
+  Output configure command-line verbosely to make debugging easier.
 
   04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libav-0.8.11.ebuild:
   Stable for sparc, wrt bug #504584

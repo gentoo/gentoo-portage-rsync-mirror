@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.13-r1.ebuild,v 1.3 2014/06/19 13:14:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.13-r1.ebuild,v 1.4 2014/07/06 10:13:37 mgorny Exp $
 
 EAPI=5
 
@@ -275,7 +275,7 @@ multilib_src_configure() {
 		fi
 	fi
 
-	"${S}"/configure \
+	set -- "${S}"/configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--shlibdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -286,7 +286,9 @@ multilib_src_configure() {
 		--optflags="${CFLAGS}" \
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable static-libs static) \
-		"${myconf[@]}" || die
+		"${myconf[@]}"
+	echo "${@}"
+	"${@}" || die
 }
 
 multilib_src_compile() {
