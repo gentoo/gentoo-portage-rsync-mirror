@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.78 2014/07/06 19:42:57 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.79 2014/07/06 20:29:22 alonbl Exp $
+
+  06 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> truecrypt-7.2.ebuild:
+  Mask truecrypt-7.2, bug#508084
 
 *truecrypt-7.2 (06 Jul 2014)
 
