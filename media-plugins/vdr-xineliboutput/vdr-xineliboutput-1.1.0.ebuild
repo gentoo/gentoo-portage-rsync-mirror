@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.3 2014/02/05 19:17:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.4 2014/07/06 10:32:51 hd_brummy Exp $
 
 EAPI=5
 
@@ -97,6 +97,9 @@ src_configure() {
 		$(use_enable opengl) \
 		${myconf} \
 		|| die
+
+	# UINT64_C is needed by ffmpeg headers
+	append-cppflags -D__STDC_CONSTANT_MACROS
 }
 
 src_install() {

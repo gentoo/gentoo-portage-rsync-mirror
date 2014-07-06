@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.35 2014/02/12 13:46:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.36 2014/07/06 10:39:35 gienah Exp $
+
+*scala-2.10.4 (06 Jul 2014)
+
+  06 Jul 2014; Mark Wright <gienah@gentoo.org> +files/scala-2.10.4-no-git.patch,
+  +scala-2.10.4.ebuild:
+  Bump scala to 2.10.4 as requested in Bug 505582 - dev-lang/scala-2.10.4
+  version bump, thanks to Joel for reporting.
 
 *scala-2.10.3 (12 Feb 2014)
 

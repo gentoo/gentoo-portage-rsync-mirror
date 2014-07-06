@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for ExtUtils-Manifest
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
-RDEPEND=~perl-core/ExtUtils-Manifest-1.590.0
-SLOT=0
-_md5_=73f86e41734c70f78b0d80b5001f4742
