@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-File-Path
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Path/ChangeLog,v 1.10 2013/09/08 13:34:02 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Path/ChangeLog,v 1.11 2014/07/06 15:35:50 dilfridge Exp $
+
+*perl-File-Path-2.90.0-r1 (06 Jul 2014)
+
+  06 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-File-Path-2.08.ebuild, -perl-File-Path-2.90.0.ebuild,
+  +perl-File-Path-2.90.0-r1.ebuild:
+  Improve dependencies; remove old
 
   08 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> perl-File-Path-2.90.0.ebuild:
   Add ~arm keyword, wrt bug #449762

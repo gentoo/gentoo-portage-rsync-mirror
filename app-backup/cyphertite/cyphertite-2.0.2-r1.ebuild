@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2.ebuild,v 1.1 2014/06/26 00:56:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/cyphertite-2.0.2-r1.ebuild,v 1.1 2014/07/06 15:49:17 grknight Exp $
 
 EAPI=5
 
@@ -12,17 +12,19 @@ SRC_URI="https://www.cyphertite.com/snapshots/source/${PV}/${PN}-full-${PV}.tar.
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE=""
 
 DEPEND="
-	>=dev-libs/openssl-1.0.1g
-	dev-libs/expat
-	>=dev-libs/lzo-2.0
-	sys-libs/zlib
-	dev-db/sqlite:3
-	dev-libs/libedit
-	>=net-misc/curl-7.15.1
-	dev-libs/libbsd
+	app-arch/xz-utils:0=
+	dev-db/sqlite:3=
+	>=dev-libs/openssl-1.0.1g:0=
+	dev-libs/expat:0=
+	dev-libs/libbsd:0=
+	dev-libs/libedit:0=
+	dev-libs/libevent:0=
+	>=dev-libs/lzo-2.0:2=
+	>=net-misc/curl-7.15.1:0=
+	sys-libs/zlib:0=
 "
 RDEPEND="${DEPEND}"
 
@@ -33,7 +35,7 @@ src_prepare() {
 
 src_compile() {
 	# Package has a home grown Makefile system. Make it work for Gentoo
-	emake INCDIR="${S}" WARNFLAGS="-Wall" DEBUG=$(usex debug -g '') CC=$(tc-getCC) \
+	emake INCDIR="${S}" WARNFLAGS="-Wall" OPTLEVEL="" DEBUG="" CC=$(tc-getCC) \
 		AR=$(tc-getAR) LOCALBASE="/usr" LIB.LINKSTATIC="" LIB.LINKDYNAMIC=""
 }
 

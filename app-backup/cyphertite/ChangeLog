@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/cyphertite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.1 2014/06/26 00:56:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.2 2014/07/06 15:49:17 grknight Exp $
+
+*cyphertite-2.0.2-r1 (06 Jul 2014)
+
+  06 Jul 2014; Brian Evans <grknight@gentoo.org> +cyphertite-2.0.2-r1.ebuild,
+  -cyphertite-2.0.2.ebuild, files/cyphertite-2.0.2-fix-build.patch:
+  Revision bump to fix CFLAGS and deps as per bug 516498 and bug 516500
 
 *cyphertite-2.0.2 (26 Jun 2014)
 

@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for File-Path
-KEYWORDS=amd64 ~ia64 ~ppc ~sparc x86 ~ppc-aix
-RDEPEND=~perl-core/File-Path-2.08
-SLOT=0
-_md5_=e48392830eac7bc3e0d6be1ae3709c2a
