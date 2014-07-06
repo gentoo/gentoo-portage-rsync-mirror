@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.2 2014/05/29 02:38:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.3 2014/07/06 17:08:35 grobian Exp $
 
 EAPI=4
 
@@ -13,11 +13,12 @@ inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Standard EXT2/EXT3/EXT4 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
-SRC_URI="mirror://sourceforge/e2fsprogs/${PN}-${UP_PV}.tar.gz"
+SRC_URI="mirror://sourceforge/e2fsprogs/${PN}-${UP_PV}.tar.gz
+	https://498412.bugs.gentoo.org/attachment.cgi?id=368058 -> ${PN}-1.42.9-mint-r1.patch"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~m68k-mint"
 IUSE="nls static-libs elibc_FreeBSD"
 
 RDEPEND="~sys-libs/${PN}-libs-${PV}
@@ -41,11 +42,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.41.8-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.40-fbsd.patch
-	epatch "${FILESDIR}"/${PN}-1.41.12-darwin-makefile.patch
 	epatch "${FILESDIR}"/${P}-e2fsck-fix-makefile-dependency.patch
 	if [[ ${CHOST} == *-mint* ]] ; then
-		epatch "${FILESDIR}"/${PN}-1.41-mint.patch
-		epatch "${FILESDIR}"/${PN}-1.41.12-mint-blkid.patch
+		epatch "${DISTDIR}"/${PN}-1.42.9-mint-r1.patch
 	fi
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
 	rm -rf doc
@@ -69,20 +68,11 @@ src_configure() {
 	# needs open64() prototypes and friends
 	append-cppflags -D_GNU_SOURCE
 
-	# We want to use the "bsd" libraries while building on Darwin, but while
-	# building on other Gentoo/*BSD we prefer elf-naming scheme.
-	local libtype
-	case ${CHOST} in
-		*-darwin*) libtype=--enable-bsd-shlibs  ;;
-		*-mint*)   libtype=                     ;;
-		*)         libtype=--enable-elf-shlibs  ;;
-	esac
-
 	ac_cv_path_LDCONFIG=: \
 	econf \
 		--with-root-prefix="${EPREFIX}/" \
 		--enable-symlink-install \
-		${libtype} \
+		$(tc-is-static-only || echo --enable-elf-shlibs) \
 		$(tc-has-tls || echo --disable-tls) \
 		--without-included-gettext \
 		$(use_enable nls) \

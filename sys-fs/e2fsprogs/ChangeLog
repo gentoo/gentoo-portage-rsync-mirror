@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.276 2014/05/29 02:38:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.277 2014/07/06 17:08:35 grobian Exp $
+
+  06 Jul 2014; Fabian Groffen <grobian@gentoo.org> e2fsprogs-1.42.10.ebuild,
+  e2fsprogs-1.42.9.ebuild:
+  Update patch for FreeMiNT by Alan Hourihane, bug #498412, drop darwin keywords
+  since this is broken now, drop old stuff to cleanup
 
   29 May 2014; Patrick Lauer <patrick@gentoo.org>
   +files/e2fsprogs-1.42.10-e2fsck-fix-makefile-dependency.patch,
