@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.77 2014/07/06 10:32:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.78 2014/07/06 16:40:25 hd_brummy Exp $
+
+  06 Jul 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-xineliboutput-1.1.0.ebuild, vdr-xineliboutput-9999.ebuild:
+  changed from append-cppflags to append-cxxflags
 
   06 Jul 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-xineliboutput-1.1.0.ebuild, vdr-xineliboutput-9999.ebuild:

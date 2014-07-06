@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/mint/make.defaults,v 1.6 2014/01/21 04:30:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/mint/make.defaults,v 1.7 2014/07/06 16:54:16 grobian Exp $
 
 # System-wide defaults for all MiNT profiles
 # This file should rarely need to be changed
@@ -9,4 +9,5 @@
 ELIBC="mintlib"
 KERNEL="freemint"
 
-USE="fortran static-libs"
+# openmp: bug #515616
+USE="fortran static-libs -openmp"
