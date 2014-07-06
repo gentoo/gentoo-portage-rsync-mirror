@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/pyrax-1.4.3.ebuild,v 1.2 2013/08/11 05:12:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/pyrax-1.4.3.ebuild,v 1.3 2014/07/06 12:46:50 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,8 +19,7 @@ IUSE="test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		test? (	dev-python/mock[${PYTHON_USEDEP}]
 				>=dev-python/python-novaclient-2.13.0[${PYTHON_USEDEP}]
-				dev-python/python-swiftclient[${PYTHON_USEDEP}]
-				virtual/python-unittest2[${PYTHON_USEDEP}] )"
+				dev-python/python-swiftclient[${PYTHON_USEDEP}] )"
 RDEPEND="
 		dev-python/httplib2[${PYTHON_USEDEP}]
 		dev-python/keyring[${PYTHON_USEDEP}]

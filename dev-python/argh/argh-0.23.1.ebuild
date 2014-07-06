@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/argh-0.23.1.ebuild,v 1.3 2014/03/31 20:55:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/argh-0.23.1.ebuild,v 1.4 2014/07/06 12:36:21 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="LGPL-3"
 IUSE="test"
 
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]"
+RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/pytest[${PYTHON_USEDEP}]

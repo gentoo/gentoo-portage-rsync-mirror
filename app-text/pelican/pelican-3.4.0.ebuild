@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/pelican-3.4.0.ebuild,v 1.1 2014/07/05 08:01:40 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/pelican-3.4.0.ebuild,v 1.2 2014/07/06 12:36:29 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3} )
@@ -25,8 +25,7 @@ DEPEND="dev-python/feedgenerator[${PYTHON_USEDEP}]
 	dev-python/blinker[${PYTHON_USEDEP}]
 	>=dev-python/six-1.4[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	markdown? ( dev-python/markdown[${PYTHON_USEDEP}] )
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	markdown? ( dev-python/markdown[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 DOCS=( README.rst )

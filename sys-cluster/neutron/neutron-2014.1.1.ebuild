@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.1 2014/06/16 03:30:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.2 2014/07/06 12:56:57 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -41,7 +41,6 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
 		>=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]

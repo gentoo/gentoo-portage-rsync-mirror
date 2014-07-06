@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.495 2014/06/22 14:24:05 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.496 2014/07/06 12:56:15 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> bind-9.9.4_p2.ebuild,
+  bind-9.9.5-r2.ebuild, bind-9.9.5-r3.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   22 Jun 2014; Akinori Hattori <hattya@gentoo.org> bind-9.9.5-r3.ebuild:
   ia64 stable wrt bug #506796

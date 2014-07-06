@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.38 2014/06/14 09:50:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.39 2014/07/06 12:49:07 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> python-mpd-0.5.1.ebuild,
+  python-mpd-0.5.3.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> python-mpd-0.5.3.ebuild:
   x86 stable wrt bug #509526

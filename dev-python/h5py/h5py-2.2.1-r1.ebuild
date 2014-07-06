@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.1-r1.ebuild,v 1.2 2014/06/10 01:16:26 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.1-r1.ebuild,v 1.3 2014/07/06 12:41:32 mgorny Exp $
 
 EAPI=5
 
@@ -23,8 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/cython[${PYTHON_USEDEP}]
-	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )"
 DISTUTILS_NO_PARALLEL_BUILD=1
 
 # Testsuite is written for a non mpi build

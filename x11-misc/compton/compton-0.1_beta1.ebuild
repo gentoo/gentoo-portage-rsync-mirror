@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0.1_beta1.ebuild,v 1.1 2013/08/12 20:47:00 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0.1_beta1.ebuild,v 1.2 2014/07/06 12:57:44 mgorny Exp $
 
 EAPI=5
 
@@ -31,8 +31,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	pcre? ( dev-libs/libpcre:3 )"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xprop
-	x11-apps/xwininfo
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	x11-apps/xwininfo"
 DEPEND="${COMMON_DEPEND}
 	app-text/asciidoc
 	virtual/pkgconfig

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.24 2014/06/10 01:16:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.25 2014/07/06 12:41:32 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> h5py-2.2.1-r1.ebuild,
+  h5py-2.2.1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   10 Jun 2014; Ian Delaney <idella4@gentoo.org> h5py-2.2.1-r1.ebuild:
   adjust version of dep hdf5, fixes Bug #512660

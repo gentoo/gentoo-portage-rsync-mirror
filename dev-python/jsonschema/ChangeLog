@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jsonschema
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.12 2014/04/03 03:25:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.13 2014/07/06 12:42:33 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> jsonschema-2.3.0.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *jsonschema-0.8.0 (03 Apr 2014)
 

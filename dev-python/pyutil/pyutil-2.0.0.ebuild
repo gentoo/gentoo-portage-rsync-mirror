@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyutil/pyutil-2.0.0.ebuild,v 1.1 2014/03/18 23:52:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyutil/pyutil-2.0.0.ebuild,v 1.2 2014/07/06 12:49:09 mgorny Exp $
 
 EAPI=5
 
@@ -17,8 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
-	dev-python/twisted-core[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	dev-python/twisted-core[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 src_install() {

@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup unpack
-DEPEND=virtual/python-argparse dev-python/feedparser doc? ( dev-python/docutils ) =dev-lang/python-2.7* dev-vcs/mercurial
+DEPEND=dev-python/feedparser doc? ( dev-python/docutils ) =dev-lang/python-2.7* dev-vcs/mercurial
 DESCRIPTION=A simple podcast client that runs on the Command Line Interface
 EAPI=4
 HOMEPAGE=http://projects.rafaelmartins.eng.br/marrie/
 IUSE=doc
 LICENSE=BSD
-RDEPEND=virtual/python-argparse dev-python/feedparser =dev-lang/python-2.7*
+RDEPEND=dev-python/feedparser =dev-lang/python-2.7*
 SLOT=0
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	76fc3c462065bb4ca959f939e6793f94	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1e2f01dbae8d3078c2788ff7f9d47149
+_md5_=df525ed65bf01313c8de258ca573db35

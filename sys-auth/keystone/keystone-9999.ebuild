@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.16 2014/06/30 01:30:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.17 2014/07/06 12:56:23 mgorny Exp $
 
 EAPI=5
 
@@ -70,7 +70,6 @@ RDEPEND=">=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
 	dev-python/oauth2[${PYTHON_USEDEP}]
 	>=dev-python/dogpile-cache-0.5.0[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 	<dev-python/pbr-1.0[${PYTHON_USEDEP}]"

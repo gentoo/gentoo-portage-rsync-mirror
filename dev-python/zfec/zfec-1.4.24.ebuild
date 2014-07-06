@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/zfec-1.4.24.ebuild,v 1.2 2013/08/11 13:06:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/zfec-1.4.24.ebuild,v 1.3 2014/07/06 12:51:08 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND="virtual/python-argparse[${PYTHON_USEDEP}]"
+COMMON_DEPEND=""
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyutil[${PYTHON_USEDEP}]
 	dev-python/zbase32[${PYTHON_USEDEP}]"

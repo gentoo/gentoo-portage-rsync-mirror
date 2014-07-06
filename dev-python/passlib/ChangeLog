@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/passlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/passlib/ChangeLog,v 1.10 2014/05/12 15:45:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/passlib/ChangeLog,v 1.11 2014/07/06 12:45:26 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> passlib-1.6.2.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   12 May 2014; Ian Delaney <idella4@gentoo.org> passlib-1.6.2.ebuild:
   drop py2.6 pypy2_0 add py3.4 support

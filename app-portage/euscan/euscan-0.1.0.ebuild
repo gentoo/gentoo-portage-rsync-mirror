@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/euscan-0.1.0.ebuild,v 1.3 2012/10/29 16:27:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/euscan-0.1.0.ebuild,v 1.4 2014/07/06 12:34:51 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,8 +24,7 @@ DEPEND="sys-apps/portage"
 RDEPEND="${DEPEND}
 	>=app-portage/gentoolkit-0.2.8
 	dev-python/setuptools
-	dev-python/beautifulsoup:python-2
-	virtual/python-argparse"
+	dev-python/beautifulsoup:python-2"
 
 distutils_src_compile_pre_hook() {
 	echo VERSION="${PV}" "$(PYTHON)" setup.py set_version

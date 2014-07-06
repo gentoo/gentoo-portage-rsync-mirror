@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.9 2014/05/17 15:36:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.10 2014/07/06 12:57:44 mgorny Exp $
 
 EAPI=5
 
@@ -34,8 +34,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xprop
-	x11-apps/xwininfo
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	x11-apps/xwininfo"
 DEPEND="${COMMON_DEPEND}
 	app-text/asciidoc
 	virtual/pkgconfig

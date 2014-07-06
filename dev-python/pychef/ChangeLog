@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pychef
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychef/ChangeLog,v 1.1 2013/05/14 19:28:15 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychef/ChangeLog,v 1.2 2014/07/06 12:45:33 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pychef-0.2.1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *pychef-0.2.1 (14 May 2013)
 

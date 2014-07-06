@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.6 2014/01/08 06:02:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.7 2014/07/06 12:56:38 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -55,7 +55,6 @@ RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.5[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
 		<dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
 		>=sys-block/iscsitarget-1.4.20.2_p20130821
 		sys-fs/lvm2
 		sys-block/open-iscsi"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/warlock-1.0.1.ebuild,v 1.2 2014/03/19 18:22:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/warlock-1.0.1.ebuild,v 1.3 2014/07/06 12:50:33 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,8 +17,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( virtual/python-unittest2[${PYTHON_USEDEP}]
-				dev-python/six[${PYTHON_USEDEP}]
+		test? ( dev-python/six[${PYTHON_USEDEP}]
 				>=dev-python/jsonpatch-0.10[${PYTHON_USEDEP}]
 				<dev-python/jsonpatch-2[${PYTHON_USEDEP}]
 				>=dev-python/jsonschema-0.7[${PYTHON_USEDEP}]

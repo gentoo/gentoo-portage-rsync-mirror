@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.17.0-r1.ebuild,v 1.1 2014/05/12 03:15:32 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.17.0-r1.ebuild,v 1.2 2014/07/06 12:48:54 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -29,8 +29,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.8[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/iso8601-0.1.8[${PYTHON_USEDEP}]
 		>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 		>=dev-python/requests-1.1[${PYTHON_USEDEP}]

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-heatclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/ChangeLog,v 1.12 2014/06/13 02:53:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/ChangeLog,v 1.13 2014/07/06 12:47:58 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> python-heatclient-0.2.9.ebuild,
+  python-heatclient-9999.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   13 Jun 2014; Patrick Lauer <patrick@gentoo.org> python-heatclient-9999.ebuild:
   Remove keywords from live ebuild

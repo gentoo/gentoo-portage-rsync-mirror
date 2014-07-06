@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-cinderclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cinderclient/ChangeLog,v 1.10 2014/04/27 05:48:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cinderclient/ChangeLog,v 1.11 2014/07/06 12:47:04 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org>
+  python-cinderclient-1.0.7.ebuild, python-cinderclient-1.0.9.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *python-cinderclient-1.0.9 (27 Apr 2014)
 

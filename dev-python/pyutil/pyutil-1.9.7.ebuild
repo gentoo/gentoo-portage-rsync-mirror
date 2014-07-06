@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyutil/pyutil-1.9.7.ebuild,v 1.4 2013/11/24 13:48:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyutil/pyutil-1.9.7.ebuild,v 1.5 2014/07/06 12:49:09 mgorny Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ IUSE=""
 
 # dev-python/twisted-core[${PYTHON_USEDEP}]
 RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
-	dev-python/twisted-core
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	dev-python/twisted-core"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 src_install() {

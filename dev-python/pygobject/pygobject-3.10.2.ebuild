@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.10.2.ebuild,v 1.14 2014/06/20 14:36:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.10.2.ebuild,v 1.15 2014/07/06 12:48:44 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,7 +38,6 @@ DEPEND="${COMMON_DEPEND}
 		dev-libs/atk[introspection]
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 		x11-libs/cairo[glib]
 		x11-libs/gdk-pixbuf:2[introspection]
 		x11-libs/gtk+:3[introspection]

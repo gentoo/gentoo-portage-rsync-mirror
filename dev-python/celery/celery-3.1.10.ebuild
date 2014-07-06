@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.10.ebuild,v 1.3 2014/04/26 15:21:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.10.ebuild,v 1.4 2014/07/06 12:40:49 mgorny Exp $
 
 EAPI=5
 
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/gevent[${PY2_USEDEP}]
 		>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 		dev-python/pyopenssl[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
 		dev-python/sqlalchemy[${PYTHON_USEDEP}]

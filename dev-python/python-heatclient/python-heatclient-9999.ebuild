@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-9999.ebuild,v 1.5 2014/06/13 02:53:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-9999.ebuild,v 1.6 2014/07/06 12:47:58 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -32,8 +32,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
 		>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]

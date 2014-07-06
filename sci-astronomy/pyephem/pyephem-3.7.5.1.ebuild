@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.5.1.ebuild,v 1.6 2013/09/05 19:44:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.5.1.ebuild,v 1.7 2014/07/06 12:56:15 mgorny Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 DEPEND="
-	doc? ( dev-python/sphinx )
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+	doc? ( dev-python/sphinx )"
 RDEPEND=""
 
 src_prepare() {

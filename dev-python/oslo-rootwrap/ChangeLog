@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/oslo-rootwrap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-rootwrap/ChangeLog,v 1.1 2014/04/20 22:51:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-rootwrap/ChangeLog,v 1.2 2014/07/06 12:44:42 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> oslo-rootwrap-1.2.0.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *oslo-rootwrap-1.2.0 (20 Apr 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.46 2014/05/31 20:31:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.47 2014/07/06 12:53:30 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> synaptiks-0.8.1-r2.ebuild,
+  synaptiks-0.8.1-r4.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org> synaptiks-0.8.1-r2.ebuild,
   synaptiks-0.8.1-r4.ebuild:

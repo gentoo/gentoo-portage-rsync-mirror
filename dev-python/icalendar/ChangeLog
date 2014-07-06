@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.38 2014/06/07 07:06:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.39 2014/07/06 12:42:36 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> icalendar-3.5.ebuild,
+  icalendar-3.6.1.ebuild, icalendar-3.6.2.ebuild, icalendar-3.7.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *icalendar-3.7 (07 Jun 2014)
 

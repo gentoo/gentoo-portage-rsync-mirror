@@ -6,9 +6,9 @@ HOMEPAGE=http://home.regit.org/software/coccigrep/
 IUSE=doc emacs vim python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=dev-util/coccinelle[python] virtual/python-argparse[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] emacs? ( virtual/emacs ) vim? ( || ( app-editors/vim app-editors/gvim ) ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+RDEPEND=dev-util/coccinelle[python] emacs? ( virtual/emacs ) vim? ( || ( app-editors/vim app-editors/gvim ) ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/regit/coccigrep/archive/v1.13.tar.gz -> coccigrep-1.13.tar.gz
 _eclasses_=distutils-r1	2efee63b5a249714ce5d8cef3068dd16	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	76fc3c462065bb4ca959f939e6793f94	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=394f2d432f37b910e59b1915e8517b02
+_md5_=1421052b1688d4e6fc2979206298ead0

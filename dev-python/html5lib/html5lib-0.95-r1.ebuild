@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.95-r1.ebuild,v 1.9 2014/06/19 11:34:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.95-r1.ebuild,v 1.10 2014/07/06 12:43:28 mgorny Exp $
 
 EAPI=5
 
@@ -21,8 +21,7 @@ IUSE="test"
 # unittest2 used by our python_test()
 
 RDEPEND=""
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
 	cd "${BUILD_DIR}"/lib/html5lib/tests || die

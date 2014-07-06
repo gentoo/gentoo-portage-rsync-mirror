@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-rootwrap/oslo-rootwrap-1.2.0.ebuild,v 1.1 2014/04/20 22:51:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-rootwrap/oslo-rootwrap-1.2.0.ebuild,v 1.2 2014/07/06 12:44:42 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -30,8 +30,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 		>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/six-1.4.1[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/six-1.4.1[${PYTHON_USEDEP}]"
 
 # This time half the doc files are missing; Do you want them?
 

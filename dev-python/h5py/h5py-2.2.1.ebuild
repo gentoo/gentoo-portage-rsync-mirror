@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.1.ebuild,v 1.1 2013/12/11 12:48:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.1.ebuild,v 1.2 2014/07/06 12:41:32 mgorny Exp $
 
 EAPI=5
 
@@ -22,8 +22,7 @@ RDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/cython[${PYTHON_USEDEP}]
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+	dev-python/cython[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	append-cflags -fno-strict-aliasing

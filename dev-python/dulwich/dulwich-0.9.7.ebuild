@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.7.ebuild,v 1.1 2014/06/20 02:58:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.7.ebuild,v 1.2 2014/07/06 12:41:50 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -18,7 +18,6 @@ IUSE="doc examples test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/gevent[$(python_gen_usedep python2_7)]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 	)"
 RDEPEND=""
 DISTUTILS_IN_SOURCE_BUILD=1

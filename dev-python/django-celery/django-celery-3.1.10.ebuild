@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.1.10.ebuild,v 1.1 2014/04/11 06:29:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.1.10.ebuild,v 1.2 2014/07/06 12:41:16 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3} )
@@ -23,7 +23,6 @@ RDEPEND=">=dev-python/celery-3.1.10[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 		dev-python/django-nose[${PYTHON_USEDEP}]
 		>=dev-python/coverage-3.0[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_openvpn-simple/nagios-check_openvpn-simple-0.0.1.ebuild,v 1.1 2014/04/20 01:19:03 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_openvpn-simple/nagios-check_openvpn-simple-0.0.1.ebuild,v 1.2 2014/07/06 12:53:45 mgorny Exp $
 
 EAPI=5
 
@@ -13,8 +13,6 @@ DESCRIPTION="A Nagios plugin to check whether an OpenVPN server is alive"
 HOMEPAGE="http://michael.orlitzky.com/code/${MY_PN}.php"
 SRC_URI="http://michael.orlitzky.com/code/releases/${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}"
-
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]"
 
 LICENSE="GPL-3"
 SLOT="0"

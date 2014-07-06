@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-check_openvpn-simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_openvpn-simple/ChangeLog,v 1.1 2014/04/20 01:19:03 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_openvpn-simple/ChangeLog,v 1.2 2014/07/06 12:53:45 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org>
+  nagios-check_openvpn-simple-0.0.1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *nagios-check_openvpn-simple-0.0.1 (20 Apr 2014)
 

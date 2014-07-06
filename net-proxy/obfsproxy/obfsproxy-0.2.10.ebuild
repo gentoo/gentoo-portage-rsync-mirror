@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.2.10.ebuild,v 1.1 2014/06/06 15:53:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.2.10.ebuild,v 1.2 2014/07/06 12:55:23 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -22,7 +22,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=">=dev-python/pyptlib-0.0.6[${PYTHON_USEDEP}]
 	>=dev-python/pycrypto-2.6-r2[${PYTHON_USEDEP}]
 	dev-python/twisted-core[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	dev-python/pyyaml[${PYTHON_USEDEP}]"
 
 PATCHES=( "${FILESDIR}"/${PN}-0.2.9-remove-argparse.patch )

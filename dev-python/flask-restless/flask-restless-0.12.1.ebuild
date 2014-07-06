@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.12.1.ebuild,v 1.1 2014/05/06 10:13:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.12.1.ebuild,v 1.2 2014/07/06 12:41:46 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -24,8 +24,7 @@ RDEPEND=">=dev-python/flask-0.7[${PYTHON_USEDEP}]
 	dev-python/python-dateutil:0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}] )
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
 		>=dev-python/sphinxcontrib-httpdomain-1.1.7[${PYTHON_USEDEP}]
 		>=dev-python/sphinxcontrib-issuetracker-0.11[${PYTHON_USEDEP}]

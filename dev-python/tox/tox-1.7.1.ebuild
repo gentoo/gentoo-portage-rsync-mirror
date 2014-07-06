@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.7.1.ebuild,v 1.1 2014/05/03 07:57:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.7.1.ebuild,v 1.2 2014/07/06 12:50:50 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
@@ -21,8 +21,7 @@ RDEPEND="
 	>=dev-python/virtualenv-1.11.2[${PYTHON_USEDEP}]
 	dev-python/pip[${PYTHON_USEDEP}]
 	dev-python/pytest[${PYTHON_USEDEP}]
-	>=dev-python/py-1.4.17[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	>=dev-python/py-1.4.17[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 

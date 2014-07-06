@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pysrt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/ChangeLog,v 1.3 2014/02/14 11:59:31 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/ChangeLog,v 1.4 2014/07/06 12:46:44 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pysrt-0.5.1.ebuild,
+  pysrt-1.0.0.ebuild, pysrt-1.0.1.ebuild, pysrt-9999.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *pysrt-1.0.1 (14 Feb 2014)
 

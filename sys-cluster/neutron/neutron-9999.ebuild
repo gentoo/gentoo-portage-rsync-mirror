@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.9 2014/01/08 05:57:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.10 2014/07/06 12:56:57 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -33,8 +33,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
 				~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-				~dev-python/webtest-1.3.3[${PYTHON_USEDEP}]
-				virtual/python-unittest2[${PYTHON_USEDEP}] )"
+				~dev-python/webtest-1.3.3[${PYTHON_USEDEP}] )"
 RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/alembic-0.4.1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
@@ -61,7 +60,6 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/webob-1.2[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
 		<dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
 		net-misc/bridge-utils
 		net-misc/openvswitch
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"

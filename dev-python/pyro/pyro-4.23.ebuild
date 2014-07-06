@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.23.ebuild,v 1.5 2014/03/31 21:25:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.23.ebuild,v 1.6 2014/07/06 12:47:30 mgorny Exp $
 
 EAPI=5
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/coverage[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 	)"
 
 S="${WORKDIR}/${MY_P}"

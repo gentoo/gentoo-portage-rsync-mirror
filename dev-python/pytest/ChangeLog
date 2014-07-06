@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.89 2014/04/02 20:25:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.90 2014/07/06 12:49:18 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pytest-2.4.2.ebuild,
+  pytest-2.5.2.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   02 Apr 2014; Tim Harder <radhermit@gentoo.org> pytest-2.5.2.ebuild:
   Add python3_4 support.

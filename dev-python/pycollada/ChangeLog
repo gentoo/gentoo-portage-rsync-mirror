@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycollada
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycollada/ChangeLog,v 1.1 2014/04/23 23:59:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycollada/ChangeLog,v 1.2 2014/07/06 12:45:47 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pycollada-0.4.ebuild,
+  pycollada-9999.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *pycollada-0.4 (23 Apr 2014)
 *pycollada-9999 (23 Apr 2014)

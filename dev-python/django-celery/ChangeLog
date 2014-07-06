@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.17 2014/04/11 06:29:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.18 2014/07/06 12:41:16 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> django-celery-3.1.10.ebuild,
+  django-celery-3.1.9.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *django-celery-3.1.10 (11 Apr 2014)
 

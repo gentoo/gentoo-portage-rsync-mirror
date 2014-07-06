@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cliff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliff/ChangeLog,v 1.9 2014/03/19 18:22:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliff/ChangeLog,v 1.10 2014/07/06 12:40:19 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> cliff-1.4.5.ebuild,
+  cliff-1.4.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   19 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> cliff-1.4.5.ebuild:
   Keyword amd64-linux and x86-linux

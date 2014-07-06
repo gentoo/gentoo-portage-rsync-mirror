@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/euscan-9999.ebuild,v 1.5 2013/10/15 11:10:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/euscan-9999.ebuild,v 1.6 2014/07/06 12:34:51 mgorny Exp $
 
 EAPI=5
 
@@ -24,8 +24,7 @@ DEPEND="sys-apps/portage[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	>=app-portage/gentoolkit-0.2.8[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/beautifulsoup[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	dev-python/beautifulsoup[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	python_export_best

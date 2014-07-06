@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychef/pychef-0.2.1.ebuild,v 1.1 2013/05/14 19:28:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychef/pychef-0.2.1.ebuild,v 1.2 2014/07/06 12:45:33 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,8 +19,7 @@ IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/versiontools[${PYTHON_USEDEP}]
-		test? (	dev-python/mock[${PYTHON_USEDEP}]
-				virtual/python-unittest2[${PYTHON_USEDEP}] )"
+		test? ( dev-python/mock[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 python_test() {

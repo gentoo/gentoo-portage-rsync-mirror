@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/coccigrep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/ChangeLog,v 1.16 2014/02/11 04:30:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/ChangeLog,v 1.17 2014/07/06 12:52:01 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> coccigrep-1.10.ebuild,
+  coccigrep-1.11.ebuild, coccigrep-1.12.ebuild, coccigrep-1.13.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *coccigrep-1.13 (11 Feb 2014)
 

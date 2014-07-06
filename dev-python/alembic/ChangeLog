@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/alembic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.12 2014/05/01 09:02:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.13 2014/07/06 12:36:26 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> alembic-0.6.0.ebuild,
+  alembic-0.6.3.ebuild, alembic-0.6.4.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *alembic-0.6.4 (01 May 2014)
 

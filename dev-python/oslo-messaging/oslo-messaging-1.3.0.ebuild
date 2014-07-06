@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-messaging/oslo-messaging-1.3.0.ebuild,v 1.2 2014/04/29 02:11:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-messaging/oslo-messaging-1.3.0.ebuild,v 1.3 2014/07/06 12:44:11 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -35,8 +35,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
 		dev-python/oslo-sphinx[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
 		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]

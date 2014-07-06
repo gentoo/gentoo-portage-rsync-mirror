@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-9999.ebuild,v 1.10 2014/05/21 07:43:23 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-9999.ebuild,v 1.11 2014/07/06 12:56:17 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -54,7 +54,6 @@ CDEPEND="
 	)
 	tcmalloc? ( dev-util/google-perftools )
 	$(python_gen_any_dep '
-	virtual/python-argparse[${PYTHON_USEDEP}]
 	' )
 	${PYTHON_DEPS}
 	"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.8-r2.ebuild,v 1.9 2014/01/19 02:10:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.8-r2.ebuild,v 1.10 2014/07/06 12:35:20 mgorny Exp $
 
 EAPI="5"
 
@@ -24,8 +24,7 @@ RDEPEND="${DEPEND}
 	!<=app-portage/gentoolkit-dev-0.2.7
 	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
-	sys-apps/grep
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	sys-apps/grep"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-revdep-rebuild-484340.patch

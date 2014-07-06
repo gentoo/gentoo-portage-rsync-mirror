@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.4.1.ebuild,v 1.2 2014/02/13 20:43:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.4.1.ebuild,v 1.3 2014/07/06 12:40:22 mgorny Exp $
 
 EAPI=5
 
@@ -25,8 +25,7 @@ RDEPEND="
 	dev-python/dynd-python[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]
 	dev-python/numba[${PYTHON_USEDEP}]
-	dev-python/pykit[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	dev-python/pykit[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	>=dev-python/cython-0.18[${PYTHON_USEDEP}]
 	test? (

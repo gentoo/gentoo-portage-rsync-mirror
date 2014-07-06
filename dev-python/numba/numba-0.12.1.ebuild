@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/numba-0.12.1.ebuild,v 1.1 2014/02/23 00:06:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/numba-0.12.1.ebuild,v 1.2 2014/07/06 12:43:52 mgorny Exp $
 
 EAPI=5
 
@@ -20,8 +20,7 @@ IUSE="examples"
 
 RDEPEND="
 	dev-python/llvmpy[${PYTHON_USEDEP}]
-	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 python_test() {

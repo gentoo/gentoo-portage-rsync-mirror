@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/python-troveclient-1.0.5.ebuild,v 1.1 2014/04/27 06:24:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/python-troveclient-1.0.5.ebuild,v 1.2 2014/07/06 12:49:03 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -27,8 +27,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
 				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 				dev-python/httplib2[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 		>=dev-python/requests-1.1[${PYTHON_USEDEP}]
 		>=dev-python/simplejson-2.0.9[${PYTHON_USEDEP}]

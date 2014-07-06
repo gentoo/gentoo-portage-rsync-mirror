@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.36 2014/07/01 05:36:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.37 2014/07/06 12:40:49 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> celery-3.1.10.ebuild,
+  celery-3.1.11.ebuild, celery-3.1.12.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   01 Jul 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

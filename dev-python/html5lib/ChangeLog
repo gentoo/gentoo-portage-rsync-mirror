@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.27 2014/06/19 11:34:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.28 2014/07/06 12:43:28 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> html5lib-0.95-r1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   19 Jun 2014; Tobias Klausmann <klausman@gentoo.org> html5lib-0.95-r1.ebuild:
   Keyworded on alpha, bug #461346

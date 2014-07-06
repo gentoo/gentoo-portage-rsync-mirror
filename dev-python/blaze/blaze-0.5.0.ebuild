@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.5.0.ebuild,v 1.1 2014/07/03 21:53:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.5.0.ebuild,v 1.2 2014/07/06 12:40:21 mgorny Exp $
 
 EAPI=5
 
@@ -26,8 +26,7 @@ RDEPEND="
 	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]
 	dev-python/numba[${PYTHON_USEDEP}]
 	dev-python/pykit[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	dev-python/pyparsing[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	>=dev-python/cython-0.18[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx )

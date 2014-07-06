@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/pysrt-1.0.0.ebuild,v 1.1 2014/01/16 12:00:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/pysrt-1.0.0.ebuild,v 1.2 2014/07/06 12:46:44 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -18,7 +18,6 @@ IUSE="test"
 
 RDEPEND="
 	dev-python/charade[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]

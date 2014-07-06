@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/tahoe-lafs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.6 2013/08/26 00:49:51 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.7 2014/07/06 12:54:38 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> tahoe-lafs-1.10.0-r2.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   26 Aug 2013; Julian Ospald <hasufell@gentoo.org> tahoe-lafs-1.10.0-r2.ebuild:
   update deps for eclass conversion

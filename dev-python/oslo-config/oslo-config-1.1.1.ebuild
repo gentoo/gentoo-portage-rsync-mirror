@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.1.1.ebuild,v 1.1 2013/07/28 15:37:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.1.1.ebuild,v 1.2 2014/07/06 12:44:18 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -25,7 +25,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mox[${PYTHON_USEDEP}]
 		>=dev-python/testtools-0.9.22[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]"
+RDEPEND=""
 
 # This time half the doc files are missing; Do you want them?
 

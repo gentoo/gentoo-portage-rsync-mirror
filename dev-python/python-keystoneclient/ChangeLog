@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.31 2014/04/27 05:29:18 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.32 2014/07/06 12:48:20 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org>
+  python-keystoneclient-0.7.1.ebuild, python-keystoneclient-0.8.0.ebuild,
+  python-keystoneclient-9999.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *python-keystoneclient-0.8.0 (27 Apr 2014)
 

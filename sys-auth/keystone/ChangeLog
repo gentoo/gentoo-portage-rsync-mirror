@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.74 2014/07/02 17:12:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.75 2014/07/06 12:56:23 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> keystone-9999.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *keystone-2014.1.1-r2 (02 Jul 2014)
 

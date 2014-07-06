@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.23 2014/06/30 18:36:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.24 2014/07/06 12:56:15 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> pyephem-3.7.5.1.ebuild,
+  pyephem-3.7.5.2.ebuild, pyephem-3.7.5.3.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *pyephem-3.7.5.3 (30 Jun 2014)
 

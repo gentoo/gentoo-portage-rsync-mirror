@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/argh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.16 2014/03/31 20:55:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.17 2014/07/06 12:36:21 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> argh-0.23.0-r1.ebuild,
+  argh-0.23.1.ebuild, argh-0.23.2.ebuild, argh-0.23.3.ebuild,
+  argh-0.24.1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> argh-0.23.0-r1.ebuild,
   argh-0.23.1.ebuild, argh-0.23.2.ebuild, argh-0.23.3.ebuild,

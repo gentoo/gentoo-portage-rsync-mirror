@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/funcparserlib/funcparserlib-0.3.6.ebuild,v 1.3 2014/05/12 14:49:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/funcparserlib/funcparserlib-0.3.6.ebuild,v 1.4 2014/07/06 12:41:28 mgorny Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=""
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
 	local m=unittest

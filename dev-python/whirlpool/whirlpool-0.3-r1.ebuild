@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whirlpool/whirlpool-0.3-r1.ebuild,v 1.2 2014/07/02 02:41:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whirlpool/whirlpool-0.3-r1.ebuild,v 1.3 2014/07/06 12:51:04 mgorny Exp $
 
 EAPI=5
 
@@ -22,8 +22,7 @@ IUSE="test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}"/${MY_P}
 

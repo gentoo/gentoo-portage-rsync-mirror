@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/py-amqp-1.4.5.ebuild,v 1.2 2014/06/30 04:16:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/py-amqp-1.4.5.ebuild,v 1.3 2014/07/06 12:45:25 mgorny Exp $
 
 EAPI=5
 
@@ -30,7 +30,6 @@ DEPEND="
 		>=dev-python/sphinxcontrib-issuetracker-0.9[${PYTHON_USEDEP}]
 	)
 	test? (
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
 		>=dev-python/coverage-3.0[${PYTHON_USEDEP}]

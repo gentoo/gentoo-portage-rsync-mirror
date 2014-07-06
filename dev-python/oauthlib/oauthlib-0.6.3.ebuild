@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.6.3.ebuild,v 1.1 2014/06/17 05:23:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.6.3.ebuild,v 1.2 2014/07/06 12:44:08 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 		dev-python/pyjwt[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"

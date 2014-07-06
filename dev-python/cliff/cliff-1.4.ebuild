@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliff/cliff-1.4.ebuild,v 1.5 2014/03/19 18:20:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliff/cliff-1.4.ebuild,v 1.6 2014/07/06 12:40:19 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-	<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
+RDEPEND="<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 	>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]
 	>=dev-python/cmd2-0.6.4[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}

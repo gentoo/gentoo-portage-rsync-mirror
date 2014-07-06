@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel-next
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.42 2014/06/22 20:12:18 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.43 2014/07/06 12:59:19 ssuominen Exp $
+
+  06 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> genkernel-next-55.ebuild,
+  genkernel-next-58.ebuild:
+  Block sys-fs/eudev with USE="-kmod modutils" wrt #509624
 
 *genkernel-next-58 (22 Jun 2014)
 

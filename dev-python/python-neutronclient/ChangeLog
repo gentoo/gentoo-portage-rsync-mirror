@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-neutronclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/ChangeLog,v 1.10 2014/04/27 05:50:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/ChangeLog,v 1.11 2014/07/06 12:48:29 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org>
+  python-neutronclient-2.3.4.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   27 Apr 2014; Matthew Thode <prometheanfire@gentoo.org>
   -python-neutronclient-2.2.3.ebuild, -python-neutronclient-2.2.6-r2.ebuild,

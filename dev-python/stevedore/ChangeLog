@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.18 2014/06/12 08:35:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.19 2014/07/06 12:50:02 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> stevedore-0.14.1.ebuild,
+  stevedore-0.15-r1.ebuild, stevedore-0.15.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *stevedore-0.15-r1 (12 Jun 2014)
 

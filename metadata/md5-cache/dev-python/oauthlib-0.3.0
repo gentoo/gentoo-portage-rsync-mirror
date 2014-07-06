@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/pycrypto dev-python/setuptools test? ( virtual/python-unittest2 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) test? ( dev-python/nose )
+DEPEND=dev-python/pycrypto dev-python/setuptools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) test? ( dev-python/nose )
 DESCRIPTION=A generic, spec-compliant, thorough implementation of the OAuth request-signing logic
 EAPI=4
 HOMEPAGE=https://github.com/idan/oauthlib http://pypi.python.org/pypi/oauthlib
@@ -10,4 +10,4 @@ RDEPEND=dev-python/pycrypto || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=mirror://pypi/o/oauthlib/oauthlib-0.3.0.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=f0d6cd0fc3de809a7d1bc8242973184b
+_md5_=af45d0d459b48b64cc5e93579dc8b387

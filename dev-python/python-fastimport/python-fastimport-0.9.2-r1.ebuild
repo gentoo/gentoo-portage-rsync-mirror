@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastimport/python-fastimport-0.9.2-r1.ebuild,v 1.1 2014/04/16 08:52:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fastimport/python-fastimport-0.9.2-r1.ebuild,v 1.2 2014/07/06 12:47:19 mgorny Exp $
 
 EAPI=5
 
@@ -21,7 +21,6 @@ RDEPEND=""
 DEPEND="
 	test? (
 		dev-python/testtools[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}]
 	)"
 
 python_test() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.1.0-r1.ebuild,v 1.1 2013/11/17 10:24:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.1.0-r1.ebuild,v 1.2 2014/07/06 12:44:54 mgorny Exp $
 
 EAPI=5
 
@@ -35,7 +35,6 @@ CDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/simplegeneric[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]
 	emacs? ( app-emacs/python-mode virtual/emacs )
 	matplotlib? ( dev-python/matplotlib[${PYTHON_USEDEP}] )
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )

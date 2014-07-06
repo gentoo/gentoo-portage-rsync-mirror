@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycollada/pycollada-9999.ebuild,v 1.1 2014/04/23 23:59:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycollada/pycollada-9999.ebuild,v 1.2 2014/07/06 12:45:47 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3} )
@@ -21,8 +21,7 @@ DEPEND="doc? ( dev-python/sphinx )
 	test? ( dev-python/python-dateutil )"
 RDEPEND="dev-python/numpy
 	dev-python/lxml
-	>=dev-python/python-dateutil-2.0
-	virtual/python-unittest2"
+	>=dev-python/python-dateutil-2.0"
 
 src_compile() {
 	distutils-r1_src_compile

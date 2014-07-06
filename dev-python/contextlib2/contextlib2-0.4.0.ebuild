@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/contextlib2/contextlib2-0.4.0.ebuild,v 1.3 2014/03/31 20:55:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/contextlib2/contextlib2-0.4.0.ebuild,v 1.4 2014/07/06 12:40:12 mgorny Exp $
 
 EAPI=5
 
@@ -16,8 +16,6 @@ LICENSE="PSF-2.4"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-
-DEPEND="test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
 
 python_test() {
 	"${PYTHON}" test_contextlib2.py || die "Tests fail for ${EPYTHON}"

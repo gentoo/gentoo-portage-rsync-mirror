@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.76 2014/04/21 11:27:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.77 2014/07/06 12:45:23 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> mock-0.7.1.ebuild,
+  mock-0.7.2.ebuild, mock-0.8.0.ebuild, mock-1.0.0.ebuild, mock-1.0.1-r1.ebuild,
+  mock-1.0.1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   21 Apr 2014; Michał Górny <mgorny@gentoo.org> mock-1.0.1-r2.ebuild:
   Require unittest2 for Python 2.7 as well, bug #482488.

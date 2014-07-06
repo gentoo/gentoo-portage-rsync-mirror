@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-9999.ebuild,v 1.4 2012/12/26 23:20:34 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-9999.ebuild,v 1.5 2014/07/06 12:53:19 mgorny Exp $
 
 EAPI=4
 
@@ -30,8 +30,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND="virtual/python-argparse
-	dev-python/feedparser"
+RDEPEND="dev-python/feedparser"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
 

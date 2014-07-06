@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/httpie-0.8.0.ebuild,v 1.1 2014/01/31 19:43:33 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/httpie-0.8.0.ebuild,v 1.2 2014/07/06 12:54:51 mgorny Exp $
 
 EAPI=5
 
@@ -20,5 +20,4 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 	>=dev-python/requests-2.0.0[${PYTHON_USEDEP}]
-	>=dev-python/pygments-1.5[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	>=dev-python/pygments-1.5[${PYTHON_USEDEP}]"

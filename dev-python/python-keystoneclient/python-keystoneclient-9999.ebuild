@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.8 2013/11/09 08:52:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.9 2014/07/06 12:48:20 mgorny Exp $
 
 EAPI=5
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8
@@ -45,8 +45,7 @@ RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
 		<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 		>=dev-python/requests-0.8.8[${PYTHON_USEDEP}]
 		dev-python/simplejson[${PYTHON_USEDEP}]
-		dev-python/six[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]"
+		dev-python/six[${PYTHON_USEDEP}]"
 
 PATCHES=(
 )

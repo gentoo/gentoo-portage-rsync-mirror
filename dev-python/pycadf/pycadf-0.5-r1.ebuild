@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycadf/pycadf-0.5-r1.ebuild,v 1.1 2014/06/27 10:53:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycadf/pycadf-0.5-r1.ebuild,v 1.2 2014/07/06 12:45:32 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -37,8 +37,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/oslo-sphinx[${PYTHON_USEDEP}]
 		dev-python/sphinx[${PYTHON_USEDEP}] )"
 
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]

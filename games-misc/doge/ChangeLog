@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/doge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/ChangeLog,v 1.9 2014/06/02 18:14:21 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/ChangeLog,v 1.10 2014/07/06 12:53:09 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> doge-3.5.0.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *doge-3.5.0 (02 Jun 2014)
 

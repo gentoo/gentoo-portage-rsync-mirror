@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.7.1.ebuild,v 1.1 2014/03/27 21:51:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.7.1.ebuild,v 1.2 2014/07/06 12:48:20 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -37,8 +37,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 			) "
 
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.8[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]

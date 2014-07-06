@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netcdf4-python/netcdf4-python-1.0.4.ebuild,v 1.2 2013/07/04 16:06:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netcdf4-python/netcdf4-python-1.0.4.ebuild,v 1.3 2014/07/06 12:42:57 mgorny Exp $
 
 EAPI=5
 
@@ -23,8 +23,7 @@ IUSE="test"
 RDEPEND="
 	sci-libs/hdf5
 	sci-libs/netcdf[hdf]"
-DEPEND="${RDEPEND}
-	test? ( virtual/python-unittest2 )"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 

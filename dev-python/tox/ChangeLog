@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.17 2014/06/23 17:43:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.18 2014/07/06 12:50:50 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> tox-1.4.3-r1.ebuild,
+  tox-1.4.3.ebuild, tox-1.7.1.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
   23 Jun 2014; Tim Harder <radhermit@gentoo.org> -tox-1.6.1.ebuild,
   -tox-1.7.0.ebuild:

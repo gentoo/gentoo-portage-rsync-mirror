@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.5 2014/06/16 11:28:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.6 2014/07/06 12:43:52 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> numba-0.12.1.ebuild,
+  numba-0.12.2.ebuild, numba-0.13.0.ebuild:
+  Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
+  unittest2 (those packages were only required for <=python-2.6).
 
 *numba-0.13.2 (16 Jun 2014)
 

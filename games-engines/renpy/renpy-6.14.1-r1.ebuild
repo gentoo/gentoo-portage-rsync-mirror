@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.14.1-r1.ebuild,v 1.7 2014/04/28 22:36:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.14.1-r1.ebuild,v 1.8 2014/07/06 12:53:35 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -28,8 +28,7 @@ RDEPEND="
 	media-libs/libsdl[X,video]
 	media-libs/freetype:2
 	sys-libs/zlib
-	virtual/ffmpeg
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	virtual/ffmpeg"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/python-neutronclient-2.3.4.ebuild,v 1.1 2014/04/06 06:21:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/python-neutronclient-2.3.4.ebuild,v 1.2 2014/07/06 12:48:29 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -30,8 +30,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}] )
 	doc? (	>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			<dev-python/sphinx-1.2[${PYTHON_USEDEP}] )"
-RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
-		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		>=dev-python/cliff-1.4.3[${PYTHON_USEDEP}]
 		>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
