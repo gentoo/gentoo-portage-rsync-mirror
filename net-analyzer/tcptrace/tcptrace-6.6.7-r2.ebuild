@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7-r2.ebuild,v 1.1 2013/12/30 00:31:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7-r2.ebuild,v 1.2 2014/07/06 22:52:30 jer Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap"
