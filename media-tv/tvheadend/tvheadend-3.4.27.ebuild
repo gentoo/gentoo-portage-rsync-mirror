@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-3.4.27.ebuild,v 1.2 2014/06/22 20:05:06 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-3.4.27.ebuild,v 1.3 2014/07/06 00:58:47 twitch153 Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_configure() {
 		--disable-dvbscan \
 		$(use_enable dvb linuxdvb) \
 		$(use_enable ffmpeg libav) \
-		$(use_enable curl imagecache) \
+		$(use_enable imagecache) \
 		$(use_enable inotify) \
 		$(use_enable zlib)
 }

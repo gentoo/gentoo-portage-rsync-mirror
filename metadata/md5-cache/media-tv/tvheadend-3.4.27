@@ -11,4 +11,4 @@ REQUIRED_USE=dvbscan? ( dvb )
 SLOT=0
 SRC_URI=https://github.com/tvheadend/tvheadend/archive/3.4patch1.tar.gz -> tvheadend-3.4.27.tar.gz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	fac675dcccf94392371a6abee62d909f	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=fe17798e46f07ef0756511e795b3c49e
+_md5_=4824e7d40186b3b8d9888ee86fb9b170
