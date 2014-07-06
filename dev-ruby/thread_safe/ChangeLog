@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/thread_safe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/ChangeLog,v 1.15 2014/05/29 06:35:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thread_safe/ChangeLog,v 1.16 2014/07/06 08:47:18 graaff Exp $
+
+  06 Jul 2014; Hans de Graaff <graaff@gentoo.org> -thread_safe-0.3.1.ebuild,
+  -thread_safe-0.3.3.ebuild:
+  Cleanup.
 
 *thread_safe-0.3.4 (29 May 2014)
 

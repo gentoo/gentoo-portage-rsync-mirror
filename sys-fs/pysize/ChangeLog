@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/pysize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.10 2014/03/12 07:09:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.11 2014/07/06 08:47:18 jlec Exp $
+
+  06 Jul 2014; Justin Lecher <jlec@gentoo.org> pysize-0.2-r1.ebuild:
+  Fix incomplete deps, thanks to idella4 for the patch, #515022
 
   12 Mar 2014; Justin Lecher <jlec@gentoo.org> -pysize-0.2.ebuild:
   Drop old
