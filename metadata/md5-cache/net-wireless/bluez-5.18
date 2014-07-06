@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=>=dev-libs/glib-2.28:2 >=sys-apps/dbus-1.6:= >=sys-apps/hwids-20121202.2 cups? ( net-print/cups:= ) obex? ( dev-libs/libical ) readline? ( sys-libs/readline:= ) selinux? ( sec-policy/selinux-bluetooth ) systemd? ( sys-apps/systemd ) udev? ( >=virtual/udev-171 ) virtual/pkgconfig test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) >=dev-python/dbus-python-1 dev-python/pygobject:2 dev-python/pygobject:3 ) virtual/pkgconfig virtual/pkgconfig
+DEPEND=>=dev-libs/glib-2.28:2 >=sys-apps/dbus-1.6:= >=sys-apps/hwids-20121202.2 cups? ( net-print/cups:= ) obex? ( dev-libs/libical ) readline? ( sys-libs/readline:= ) selinux? ( sec-policy/selinux-bluetooth ) systemd? ( sys-apps/systemd ) udev? ( >=virtual/udev-171 ) virtual/pkgconfig test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-3.3.2-r2:3.3 >=dev-lang/python-3.2.5-r2:3.2 ) >=dev-python/dbus-python-1 dev-python/pygobject:2 dev-python/pygobject:3 ) virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=Bluetooth Tools and System Daemons for Linux
 EAPI=5
 HOMEPAGE=http://www.bluez.org
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.28:2 >=sys-apps/dbus-1.6:= >=sys-apps/hwids-20121202.2
 REQUIRED_USE=test? ( )
 SLOT=0/3
 SRC_URI=mirror://kernel/linux/bluetooth/bluez-5.18.tar.xz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	555f707a94c14486f51cba70cc55b62c	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	1a9ecf501027961855b0320e8915a79c
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	1a9ecf501027961855b0320e8915a79c
 _md5_=a791b4330be3dec464b9088ee25011a9

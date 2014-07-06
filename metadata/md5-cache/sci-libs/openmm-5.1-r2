@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) opencl? ( virtual/opencl ) doc? ( app-doc/doxygen ) wrappers? ( dev-cpp/gccxml virtual/jre || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) opencl? ( virtual/opencl ) doc? ( app-doc/doxygen ) wrappers? ( dev-cpp/gccxml virtual/jre || ( >=dev-lang/python-2.7.5-r2:2.7 ) app-doc/doxygen ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=provides tools for modern molecular modeling simulation
 EAPI=5
 HOMEPAGE=https://simtk.org/home/openmm
@@ -9,5 +9,5 @@ LICENSE=MIT LGPL-2.1+ BSD RU-BSD
 RDEPEND=cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) opencl? ( virtual/opencl )
 SLOT=0
 SRC_URI=mirror://gentoo/OpenMM5.1-Source.zip
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=4163e99e797d217152d634a327874913

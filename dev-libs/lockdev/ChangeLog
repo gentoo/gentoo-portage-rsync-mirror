@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lockdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.18 2014/07/04 12:50:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.19 2014/07/06 11:39:48 jer Exp $
+
+  06 Jul 2014; Jeroen Roovers <jer@gentoo.org> lockdev-1.0.3.1.2-r3.ebuild:
+  Stable for HPPA (bug #516186).
 
   04 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   lockdev-1.0.3.1.2-r2.ebuild:

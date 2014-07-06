@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.59 2014/06/29 14:24:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.60 2014/07/06 11:45:20 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -43,7 +43,7 @@ _PYTHON_ALL_IMPLS=(
 	jython2_5 jython2_7
 	pypy
 	python3_2 python3_3 python3_4
-	python2_6 python2_7
+	python2_7
 )
 
 # @FUNCTION: _python_impl_supported
@@ -66,10 +66,10 @@ _python_impl_supported() {
 	# keep in sync with _PYTHON_ALL_IMPLS!
 	# (not using that list because inline patterns shall be faster)
 	case "${impl}" in
-		python2_[67]|python3_[234]|jython2_[57])
+		python2_7|python3_[234]|jython2_[57])
 			return 0
 			;;
-		pypy1_[89]|pypy2_0|python2_5|python3_1)
+		pypy1_[89]|pypy2_0|python2_[56]|python3_1)
 			return 1
 			;;
 		pypy)
@@ -98,7 +98,7 @@ _python_impl_supported() {
 #
 # Example value:
 # @CODE
-# /usr/bin/python2.6
+# /usr/bin/python2.7
 # @CODE
 
 # @ECLASS-VARIABLE: EPYTHON
@@ -117,7 +117,7 @@ _python_impl_supported() {
 #
 # Example value:
 # @CODE
-# python2.6
+# python2.7
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_SITEDIR
@@ -129,7 +129,7 @@ _python_impl_supported() {
 #
 # Example value:
 # @CODE
-# /usr/lib64/python2.6/site-packages
+# /usr/lib64/python2.7/site-packages
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_INCLUDEDIR
@@ -141,7 +141,7 @@ _python_impl_supported() {
 #
 # Example value:
 # @CODE
-# /usr/include/python2.6
+# /usr/include/python2.7
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_LIBPATH
@@ -154,7 +154,7 @@ _python_impl_supported() {
 #
 # Example value:
 # @CODE
-# /usr/lib64/libpython2.6.so
+# /usr/lib64/libpython2.7.so
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_CFLAGS
@@ -307,10 +307,6 @@ python_export() {
 				local val
 
 				case "${impl}" in
-					python2.5|python2.6)
-						# old versions support python-config only
-						val=$("${impl}-config" --includes)
-						;;
 					python*)
 						# python-2.7, python-3.2, etc.
 						val=$($(tc-getPKG_CONFIG) --cflags ${impl/n/n-})
@@ -327,10 +323,6 @@ python_export() {
 				local val
 
 				case "${impl}" in
-					python2.5|python2.6)
-						# old versions support python-config only
-						val=$("${impl}-config" --libs)
-						;;
 					python*)
 						# python-2.7, python-3.2, etc.
 						val=$($(tc-getPKG_CONFIG) --libs ${impl/n/n-})
@@ -346,8 +338,6 @@ python_export() {
 			PYTHON_PKG_DEP)
 				local d
 				case ${impl} in
-					python2.6)
-						PYTHON_PKG_DEP='>=dev-lang/python-2.6.8-r3:2.6';;
 					python2.7)
 						PYTHON_PKG_DEP='>=dev-lang/python-2.7.5-r2:2.7';;
 					python3.2)
@@ -542,6 +532,7 @@ python_optimize() {
 	[[ ${PYTHON} ]] || python_export PYTHON
 
 	# Note: python2.6 can't handle passing files to compileall...
+	# TODO: we do not support 2.6 any longer
 
 	# default to sys.path
 	if [[ ${#} -eq 0 ]]; then
@@ -877,20 +868,11 @@ python_wrapper_setup() {
 			ln -s "${PYTHON}-config" "${workdir}"/bin/python-config || die
 
 			# Python 2.6+.
-			if [[ ${EPYTHON} != python2.5 ]]; then
-				ln -s "${PYTHON/python/2to3-}" "${workdir}"/bin/2to3 || die
-			else
-				nonsupp+=( 2to3 )
-			fi
+			ln -s "${PYTHON/python/2to3-}" "${workdir}"/bin/2to3 || die
 
 			# Python 2.7+.
-			if [[ ${EPYTHON} != python2.[56] ]]; then
-				ln -s "${EPREFIX}"/usr/$(get_libdir)/pkgconfig/${EPYTHON/n/n-}.pc \
-					"${workdir}"/pkgconfig/python.pc || die
-			else
-				# XXX?
-				ln -s /dev/null "${workdir}"/pkgconfig/python.pc || die
-			fi
+			ln -s "${EPREFIX}"/usr/$(get_libdir)/pkgconfig/${EPYTHON/n/n-}.pc \
+				"${workdir}"/pkgconfig/python.pc || die
 			ln -s python.pc "${workdir}"/pkgconfig/python${pyver}.pc || die
 		else
 			nonsupp+=( 2to3 python-config )

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=cairo? ( x11-libs/cairo:= ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2:= ) icu? ( dev-libs/icu:= ) introspection? ( >=dev-libs/gobject-introspection-1.34 ) truetype? ( media-libs/freetype:2= ) dev-util/gtk-doc-am virtual/pkgconfig test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
+DEPEND=cairo? ( x11-libs/cairo:= ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2:= ) icu? ( dev-libs/icu:= ) introspection? ( >=dev-libs/gobject-introspection-1.34 ) truetype? ( media-libs/freetype:2= ) dev-util/gtk-doc-am virtual/pkgconfig test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) )
 DESCRIPTION=An OpenType text shaping engine
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/HarfBuzz
@@ -10,5 +10,5 @@ RDEPEND=cairo? ( x11-libs/cairo:= ) glib? ( dev-libs/glib:2 ) graphite? ( media-
 REQUIRED_USE=introspection? ( glib )
 SLOT=0/0.9.18
 SRC_URI=http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.26.tar.bz2
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=57c65b62f1db669a5cf04aaca10b991d

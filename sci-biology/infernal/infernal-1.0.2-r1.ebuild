@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/infernal-1.0.2-r1.ebuild,v 1.4 2012/06/25 07:08:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/infernal-1.0.2-r1.ebuild,v 1.5 2014/07/06 11:34:46 jlec Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-parallel-build.patch \
 		"${FILESDIR}"/${P}-overflows.patch \
-		"${FILESDIR}"/${P}-perl-5.16.patch \
+		"${FILESDIR}"/${P}-perl-5.16-2.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 }
 

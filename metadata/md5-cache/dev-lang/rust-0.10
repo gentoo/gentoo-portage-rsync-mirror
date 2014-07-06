@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm setup
-DEPEND=emacs? ( virtual/emacs ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh ) || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) >=dev-lang/perl-5.0 clang? ( sys-devel/clang )
+DEPEND=emacs? ( virtual/emacs ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh ) || ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/perl-5.0 clang? ( sys-devel/clang )
 DESCRIPTION=Systems programming language from Mozilla
 EAPI=5
 HOMEPAGE=http://www.rust-lang.org/
@@ -9,5 +9,5 @@ LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
 RDEPEND=emacs? ( virtual/emacs ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) ) zsh-completion? ( app-shells/zsh )
 SLOT=0
 SRC_URI=http://static.rust-lang.org/dist/rust-0.10.tar.gz binary-bootstrap? ( amd64? ( mirror://gentoo/rust-bin-amd64-0.10.tbz2 ) x86? ( mirror://gentoo/rust-bin-x86-0.10.tbz2 ) )
-_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=22e5275b992359f0d06df6e7da41fa7b

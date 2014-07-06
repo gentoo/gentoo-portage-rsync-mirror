@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1310 2014/07/04 13:02:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1311 2014/07/06 11:45:20 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Disable python2.6 support and clean up the related code.
 
   04 Jul 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Declare REQUIRED_USE inside MULTILIB_COMPAT conditional, reported by steev.

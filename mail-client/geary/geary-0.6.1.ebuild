@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.5.2.ebuild,v 1.1 2014/02/15 20:42:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.6.1.ebuild,v 1.1 2014/07/06 11:48:41 hasufell Exp $
 
 EAPI=5
 
@@ -33,6 +33,8 @@ RDEPEND="${DEPEND}
 	gnome-base/gsettings-desktop-schemas
 	nls? ( virtual/libintl )"
 DEPEND="${DEPEND}
+	app-text/gnome-doc-utils
+	dev-util/desktop-file-utils
 	nls? ( sys-devel/gettext )
 	$(vala_depend)
 	virtual/pkgconfig"
@@ -42,7 +44,8 @@ DOCS=( AUTHORS MAINTAINERS README NEWS THANKS )
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{unity,cflags,vapigen}.patch
+	epatch "${FILESDIR}"/${PN}-0.5.3-{unity,cflags,vapigen}.patch \
+		"${FILESDIR}"/${PN}-0.6.0-desktopfile.patch
 
 	local i
 	if use nls ; then

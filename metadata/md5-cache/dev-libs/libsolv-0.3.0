@@ -3,11 +3,11 @@ DEPEND=sys-devel/gettext dev-lang/perl:=[-build(-)] sys-devel/make >=dev-util/cm
 DESCRIPTION=Library for solving packages and reading repositories
 EAPI=5
 HOMEPAGE=http://doc.opensuse.org/projects/libzypp/HEAD/
-IUSE=bzip2 lzma perl python ruby python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7 elibc_FreeBSD ruby_targets_ruby19
+IUSE=bzip2 lzma perl python ruby python_targets_python2_7 python_single_target_python2_7 elibc_FreeBSD ruby_targets_ruby19
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
-RDEPEND=app-arch/rpm dev-libs/expat sys-libs/db sys-libs/zlib virtual/udev bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/swig:0 ) perl? ( dev-lang/perl dev-lang/swig:0 ) ruby? ( ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) dev-lang/swig:0 ) dev-lang/perl:=[-build(-)]
+RDEPEND=app-arch/rpm dev-libs/expat sys-libs/db sys-libs/zlib virtual/udev bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) python? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-lang/swig:0 ) perl? ( dev-lang/perl dev-lang/swig:0 ) ruby? ( ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) dev-lang/swig:0 ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=https://build.opensuse.org/package/rawsourcefile/openSUSE:Factory/libsolv/libsolv-0.3.0.tar.bz2
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	555f707a94c14486f51cba70cc55b62c	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=568a21934f6f8ccf76ae2e821073f2cd

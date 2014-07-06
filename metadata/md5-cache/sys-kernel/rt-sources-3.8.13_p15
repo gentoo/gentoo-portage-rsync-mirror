@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
-DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) )
 DESCRIPTION=Full Linux 3.8 kernel sources with the CONFIG_PREEMPT_RT patch
 EAPI=5
 HOMEPAGE=http://www.kernel.org/ http://www.gentoo.org/ http://www.kernel.org/pub/linux/kernel/projects/rt/ http://www.fsfla.org/svnwiki/selibre/linux-libre/
@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.8.13_p15
 SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.8.13.xz mirror://kernel/linux/kernel/v3.x/linux-3.8.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.8.N/deblob-3.8 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.8.N/deblob-check -> deblob-check-3.8 ) mirror://kernel/linux/kernel/projects/rt/3.8/patch-3.8.13-rt15.patch.xz mirror://kernel/linux/kernel/projects/rt/3.8/older/patch-3.8.13-rt15.patch.xz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	555f707a94c14486f51cba70cc55b62c	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	kernel-2	6fb31411472936acc8287129d3df7f43	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=e0c9e88f5c560d202a3678c1e59b5d0d

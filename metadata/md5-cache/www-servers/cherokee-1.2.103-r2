@@ -3,12 +3,12 @@ DEPEND=dev-libs/libpcre >=sys-libs/zlib-1.1.4-r1 ffmpeg? ( virtual/ffmpeg ) geoi
 DESCRIPTION=An extremely fast and tiny web server.
 EAPI=5
 HOMEPAGE=http://www.cherokee-project.com/
-IUSE=admin ffmpeg debug geoip ipv6 kernel_linux ldap mysql nls pam php rrdtool ssl static static-libs python_targets_python2_6 python_targets_python2_7
+IUSE=admin ffmpeg debug geoip ipv6 kernel_linux ldap mysql nls pam php rrdtool ssl static static-libs python_targets_python2_7
 KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/libpcre >=sys-libs/zlib-1.1.4-r1 ffmpeg? ( virtual/ffmpeg ) geoip? ( dev-libs/geoip ) ldap? ( net-nds/openldap ) mysql? ( >=virtual/mysql-5 ) nls? ( virtual/libintl ) pam? ( virtual/pam ) php? ( || ( dev-lang/php[fpm] dev-lang/php[cgi] ) ) ssl? ( dev-libs/openssl ) rrdtool? ( net-analyzer/rrdtool )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/cherokee/webserver/archive/v1.2.103.zip -> cherokee-1.2.103.zip https://github.com/cherokee/CTK/archive/master.zip -> cherokee-ctk-master.zip
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	555f707a94c14486f51cba70cc55b62c	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	python-r1	36d89a1c51cb1e624d5cdbea26adb9ad	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
 _md5_=4e058ea15aa5729ba3cd07eedb0b2b45
