@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/togl-2.0-r2.ebuild,v 1.10 2012/05/29 14:40:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/togl-2.0-r2.ebuild,v 1.11 2014/07/06 11:27:10 jlec Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ IUSE="debug +threads"
 
 RDEPEND="
 	dev-lang/tk
-	virtual/opengl"
+	virtual/opengl
+	x11-libs/libXmu"
 DEPEND="${RDEPEND}"
 
 # tests directory is missing

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.3.6.ebuild,v 1.1 2013/08/11 14:55:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.3.6.ebuild,v 1.2 2014/07/06 11:12:45 jlec Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	dev-cpp/sparsehash
+	dev-libs/boost
 	mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 

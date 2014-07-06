@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/togl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.29 2012/05/29 14:40:02 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.30 2014/07/06 11:27:10 jlec Exp $
+
+  06 Jul 2014; Justin Lecher <jlec@gentoo.org> togl-2.0-r2.ebuild,
+  metadata.xml:
+  Add missing dep on x11-libs/libXmu, #514650
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> togl-2.0-r2.ebuild:
   keyword ~amd64-fbsd
