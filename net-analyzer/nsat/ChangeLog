@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.24 2014/07/05 17:19:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.26 2014/07/06 02:14:37 jer Exp $
+
+  06 Jul 2014; Jeroen Roovers <jer@gentoo.org> files/nsat-1.5-va_list.patch:
+  Improve efficiency somewhat.
+
+*nsat-1.5-r3 (06 Jul 2014)
+
+  06 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nsat-1.5-r1.ebuild,
+  -nsat-1.5-r2.ebuild, +nsat-1.5-r3.ebuild, +files/nsat-1.5-va_list.patch:
+  Fix a segmentation fault with the -n option.
 
 *nsat-1.5-r2 (05 Jul 2014)
 
