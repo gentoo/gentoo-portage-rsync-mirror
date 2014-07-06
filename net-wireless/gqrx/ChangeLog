@@ -1,0 +1,13 @@
+# ChangeLog for net-wireless/gqrx
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/ChangeLog,v 1.1 2014/07/06 21:35:52 zerochaos Exp $
+
+*gqrx-2.1_p20130708 (06 Jul 2014)
+*gqrx-9999 (06 Jul 2014)
+*gqrx-2.2.0_p20140706 (06 Jul 2014)
+*gqrx-2.1_p20130705 (06 Jul 2014)
+
+  06 Jul 2014; Rick Farina <zerochaos@gentoo.org> +gqrx-2.1_p20130705.ebuild,
+  +gqrx-2.1_p20130708.ebuild, +gqrx-2.2.0_p20140706.ebuild, +gqrx-9999.ebuild,
+  +metadata.xml:
+  initial import of gqrx from the pentoo overlay
