@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/openssl-tpm-engine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/ChangeLog,v 1.7 2012/09/08 02:07:53 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/ChangeLog,v 1.8 2014/07/06 17:44:29 alonbl Exp $
+
+  06 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> openssl-tpm-engine-0.4.1.ebuild:
+  Build failure, fixes bug#514310
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -37,4 +40,3 @@
   +files/openssl-tpm-engine-0.3-openssl.patch, +metadata.xml,
   +openssl-tpm-engine-0.3.ebuild:
   initial import by Daniel Black.
-

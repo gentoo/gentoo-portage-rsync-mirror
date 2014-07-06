@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/openssl-tpm-engine-0.4.1.ebuild,v 1.2 2009/05/10 23:13:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-tpm-engine/openssl-tpm-engine-0.4.1.ebuild,v 1.3 2014/07/06 17:44:29 alonbl Exp $
+
+EAPI=4
 
 MY_P="${P/-tpm-/_tpm_}"
 
@@ -17,12 +19,16 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	econf --with-openssl=/usr || die
-	emake || die
+src_prepare() {
+	# autotools way too old to fix it properly
+	sed -i 's/^\(create_tpm_key_LDADD.*\)/\1 -L@OPENSSL_LIB_DIR@ -lcrypto/' Makefile.in
+}
+
+src_configure() {
+	econf --with-openssl=/usr
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc openssl.cnf.sample README
 }

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_pkcs11
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.22 2012/08/02 15:24:33 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.23 2014/07/06 17:49:35 alonbl Exp $
+
+  06 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> pam_pkcs11-0.6.8.ebuild:
+  Fix silent build disable, bug#515344
 
 *pam_pkcs11-0.6.8 (02 Aug 2012)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.3.1-r1.ebuild,v 1.2 2013/09/05 13:54:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.3.1-r1.ebuild,v 1.3 2014/07/06 17:41:18 floppym Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
@@ -18,10 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
 # PYTHON_REQ_USE does not support X? ( tk ) syntax yet
-DEPEND="X? (
-		python_targets_python2_6? ( dev-lang/python:2.6[tk] )
-		python_targets_python2_7? ( dev-lang/python:2.7[tk] )
-	)"
+DEPEND="X? ( $(python_gen_cond_dep dev-lang/python:2.7[tk] python2_7) )"
 RDEPEND="${DEPEND}
 	>=dev-python/dnspython-1.8.0[${PYTHON_USEDEP}]
 	>=dev-python/httplib2-0.6[${PYTHON_USEDEP}]

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.4.1.ebuild,v 1.2 2014/02/06 21:14:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.4.1.ebuild,v 1.3 2014/07/06 17:33:56 floppym Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit distutils-r1 eutils virtualx
 
@@ -21,7 +21,7 @@ IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png pyglet +syste
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
-	>=dev-python/pexpect-2.0[python_targets_python2_6?,python_targets_python2_7?]
+	$(python_gen_cond_dep '>=dev-python/pexpect-2.0[${PYTHON_USEDEP}]' python2_7)
 	imaging? ( virtual/python-imaging[${PYTHON_USEDEP}] )
 	ipython? ( dev-python/ipython[${PYTHON_USEDEP}] )
 	latex? (
@@ -32,14 +32,14 @@ RDEPEND="
 	)
 	mathml? (
 		dev-libs/libxml2:2[${PYTHON_USEDEP}]
-		dev-libs/libxslt[python_targets_python2_6?,python_targets_python2_7?]
+		$(python_gen_cond_dep 'dev-libs/libxslt[${PYTHON_USEDEP}]' python2_7)
 		gtk? ( x11-libs/gtkmathview[gtk] )
 	)
 	opengl? ( dev-python/pyopengl[${PYTHON_USEDEP}] )
-	pyglet? ( dev-python/pyglet[python_targets_python2_6?,python_targets_python2_7?] )
+	pyglet? ( $(python_gen_cond_dep 'dev-python/pyglet[${PYTHON_USEDEP}]' python2_7) )
 	system-mpmath? ( >=dev-python/mpmath-0.18[${PYTHON_USEDEP}] )
 	texmacs? ( app-office/texmacs )
-	theano? ( dev-python/theano[python_targets_python2_6?,python_targets_python2_7?] )
+	theano? ( $(python_gen_cond_dep 'dev-python/theano[${PYTHON_USEDEP}]' python2_7) )
 "
 
 DEPEND="${RDEPEND}
