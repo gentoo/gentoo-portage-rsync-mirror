@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=>=media-libs/libpng-1.2.16 gtk? ( dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/cairo ) libkms? ( x11-libs/libdrm[libkms] ) pango? ( >=x11-libs/pango-1.21 ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=Graphical boot animation (splash) and logger
+EAPI=5
+HOMEPAGE=http://cgit.freedesktop.org/plymouth/
+IUSE=debug gdm +gtk +libkms +pango static-libs
+LICENSE=GPL-2
+RDEPEND=>=media-libs/libpng-1.2.16 gtk? ( dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/cairo ) libkms? ( x11-libs/libdrm[libkms] ) pango? ( >=x11-libs/pango-1.21 ) virtual/udev !<sys-kernel/dracut-0.37-r3
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~aidecoe/distfiles/sys-boot/plymouth/gentoo-logo.png
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	autotools-utils	fb74970befc9b65ceec689d2ccff3022	eutils	76fc3c462065bb4ca959f939e6793f94	git-r3	da25af7340478afdca16e1e4568b014a	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=af56b86ff94ac1ec9608e7dc0dd508d5

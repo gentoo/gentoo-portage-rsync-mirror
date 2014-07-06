@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.51 2014/03/01 19:21:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.52 2014/07/06 18:16:51 maksbotan Exp $
+
+*plymouth-0.9.0 (06 Jul 2014)
+*plymouth-9999 (06 Jul 2014)
+
+  06 Jul 2014; Maxim Koltsov <maksbotan@gentoo.org> +plymouth-0.9.0.ebuild,
+  +plymouth-9999.ebuild:
+  Bump to 0.9.0, add live ebuild, bug #513338. Thanks to Enrico Tagliavini.
 
 *plymouth-0.8.8-r5 (01 Mar 2014)
 
