@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.83.ebuild,v 1.3 2014/06/13 16:43:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.83.ebuild,v 1.4 2014/07/06 09:38:46 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 systemd user
@@ -65,6 +65,7 @@ src_prepare() {
 	# http://trac.transmissionbt.com/ticket/5700
 	sed -i -e '1iQMAKE_CXXFLAGS += -std=c++11' qt/qtr.pro || die
 
+	epatch_user
 	eautoreconf
 }
 

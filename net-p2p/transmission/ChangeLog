@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.253 2014/06/13 16:43:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.254 2014/07/06 09:38:46 ssuominen Exp $
+
+  06 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> transmission-2.83.ebuild:
+  Include epatch_user wrt #516486 by Hristo Venev
 
   13 Jun 2014; Ulrich Müller <ulm@gentoo.org> transmission-2.83.ebuild:
   Rename OpenSSL linking license exception, and move it into the || group.

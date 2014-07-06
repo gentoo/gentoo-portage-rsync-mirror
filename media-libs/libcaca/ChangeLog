@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.116 2014/06/18 19:40:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.117 2014/07/06 09:58:21 mgorny Exp $
+
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
+  Fix the -I sed for java Makefile, bug #515812.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libcaca-0.99_beta18-r2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

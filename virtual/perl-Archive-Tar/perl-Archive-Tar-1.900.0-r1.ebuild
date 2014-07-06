@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/perl-CPAN-Meta-YAML-0.8.0.ebuild,v 1.17 2014/07/05 12:17:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/perl-Archive-Tar-1.900.0-r1.ebuild,v 1.1 2014/07/06 09:34:17 dilfridge Exp $
+
+EAPI=5
 
 DESCRIPTION="Virtual for ${PN#perl-}"
 HOMEPAGE=""

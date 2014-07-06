@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-Digest-MD5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.69 2014/07/05 22:02:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.70 2014/07/06 09:57:44 dilfridge Exp $
+
+*perl-Digest-MD5-2.530.0-r1 (06 Jul 2014)
+*perl-Digest-MD5-2.520.0-r1 (06 Jul 2014)
+
+  06 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Digest-MD5-2.520.0.ebuild, +perl-Digest-MD5-2.520.0-r1.ebuild,
+  -perl-Digest-MD5-2.530.0.ebuild, +perl-Digest-MD5-2.530.0-r1.ebuild:
+  Revision bump for added provider
 
   05 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   perl-Digest-MD5-2.520.0.ebuild, perl-Digest-MD5-2.530.0.ebuild:

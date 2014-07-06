@@ -1,6 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Zlib/perl-Compress-Raw-Zlib-2.60.0.ebuild,v 1.16 2014/07/05 16:01:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Zlib/perl-Compress-Raw-Zlib-2.60.0-r1.ebuild,v 1.1 2014/07/06 09:53:43 dilfridge Exp $
+
+EAPI=5
 
 DESCRIPTION="Virtual for ${PN#perl-}"
 HOMEPAGE=""
