@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.58 2014/03/01 22:19:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.59 2014/07/06 00:31:26 patrick Exp $
+
+  06 Jul 2014; Patrick Lauer <patrick@gentoo.org>
+  -remmina-1.0.0_p20130625.ebuild:
+  Remove old version with unsatisfied dependencies
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> remmina-1.0.0_p20130625.ebuild,
   remmina-1.0.0_p20130723.ebuild, remmina-9999.ebuild:
