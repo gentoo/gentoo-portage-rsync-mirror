@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.67 2014/07/06 19:41:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.68 2014/07/07 12:15:58 zlogene Exp $
+
+  07 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  perl-File-Temp-0.230.100-r1.ebuild, perl-File-Temp-0.230.400-r1.ebuild:
+  Add ~arm keyword
 
 *perl-File-Temp-0.230.400-r1 (06 Jul 2014)
 *perl-File-Temp-0.230.100-r1 (06 Jul 2014)

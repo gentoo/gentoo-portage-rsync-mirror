@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ogg2mp3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.15 2013/03/17 17:51:25 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.17 2014/07/07 12:23:59 pinkbyte Exp $
+
+  07 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> ogg2mp3-0.6.1.ebuild:
+  Set new HOMEPAGE, wrt bug #274123
+
+  07 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> -ogg2mp3-0.6.ebuild:
+  Drop old
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

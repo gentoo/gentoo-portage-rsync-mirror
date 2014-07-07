@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.132 2014/06/02 05:39:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.133 2014/07/07 12:04:01 klausman Exp $
+
+  07 Jul 2014; Tobias Klausmann <klausman@gentoo.org> tzinfo-1.2.1.ebuild:
+  Keyworded on alpha, bug #487178
 
 *tzinfo-1.2.1 (02 Jun 2014)
 
