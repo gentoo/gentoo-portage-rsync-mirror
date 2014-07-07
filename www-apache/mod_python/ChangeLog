@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.23 2013/01/04 09:18:52 djc Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.24 2014/07/07 07:27:38 djc Exp $
+
+  07 Jul 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Drop mod_python to maintainer-wanted
 
   04 Jan 2013; Dirkjan Ochtman <djc@gentoo.org> mod_python-3.3.1-r1.ebuild:
   Restrict tests (bug 343663).

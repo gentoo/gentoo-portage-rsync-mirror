@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.161 2014/06/27 16:43:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.162 2014/07/07 07:09:38 ulm Exp $
+
+*emacs-vcs-24.4.50_pre20140630 (05 Jul 2014)
+
+  05 Jul 2014; Ulrich Müller <ulm@gentoo.org>
+  -emacs-vcs-24.4.50_pre20140512.ebuild, +emacs-vcs-24.4.50_pre20140630.ebuild:
+  New snapshot of trunk. Remove old.
 
 *emacs-vcs-24.3.92 (27 Jun 2014)
 
