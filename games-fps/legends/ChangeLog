@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/legends
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.28 2013/04/21 10:10:53 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.29 2014/07/07 19:40:32 axs Exp $
+
+*legends-0.4.1.43-r1 (07 Jul 2014)
+
+  07 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +legends-0.4.1.43-r1.ebuild:
+  Bumped EAPi to 5, re-keyworded for amd64, adjusted deps for gx86-multilib,
+  added missing deps and dropped indirect deps
 
   21 Apr 2013; Ulrich Müller <ulm@gentoo.org> legends-0.4.1.43.ebuild:
   Fix LICENSE, see ReadMe_legals.txt, bug 466066.

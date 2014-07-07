@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.39 2014/01/19 21:05:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.40 2014/07/07 19:40:40 dilfridge Exp $
+
+*perl-IO-1.310.0 (07 Jul 2014)
+*perl-IO-1.280.0-r1 (07 Jul 2014)
+
+  07 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-IO-1.280.0.ebuild, +perl-IO-1.280.0-r1.ebuild, +perl-IO-1.310.0.ebuild:
+  Add perl-5.20 version; improve dependencies
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-IO-1.25.ebuild,
   perl-IO-1.280.0.ebuild:
