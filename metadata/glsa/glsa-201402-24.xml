@@ -10,7 +10,7 @@
   </synopsis>
   <product type="ebuild">gnupg libgcrypt</product>
   <announced>February 21, 2014</announced>
-  <revised>February 21, 2014: 1</revised>
+  <revised>July 07, 2014: 2</revised>
   <bug>449546</bug>
   <bug>478184</bug>
   <bug>484836</bug>
@@ -21,6 +21,10 @@
     <package name="app-crypt/gnupg" auto="yes" arch="*">
       <unaffected range="ge">2.0.22</unaffected>
       <unaffected range="rge">1.4.16</unaffected>
+      <unaffected range="rge">1.4.17</unaffected>
+      <unaffected range="rge">1.4.18</unaffected>
+      <unaffected range="rge">1.4.19</unaffected>
+      <unaffected range="rge">1.4.20</unaffected>
       <vulnerable range="lt">2.0.22</vulnerable>
     </package>
     <package name="dev-libs/libgcrypt" auto="yes" arch="*">
@@ -84,5 +88,5 @@
     </uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 15 Jan 2013 21:37:26 +0000">ackle</metadata>
-  <metadata tag="submitter" timestamp="Fri, 21 Feb 2014 15:33:59 +0000">ackle</metadata>
+  <metadata tag="submitter" timestamp="Mon, 07 Jul 2014 12:54:35 +0000">ackle</metadata>
 </glsa>

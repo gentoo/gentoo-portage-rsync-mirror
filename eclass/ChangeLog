@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1315 2014/07/07 08:45:14 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1316 2014/07/07 12:43:35 haubi Exp $
+
+  07 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
+  ELT-patches/aixrtl/1.5.0-cmds-c, ELT-patches/aixrtl/1.5.0-cmds-cxx,
+  ELT-patches/aixrtl/1.5.22-cmds-c, ELT-patches/aixrtl/1.5.22-cmds-cxx,
+  ELT-patches/aixrtl/2.2.0-cmds-c, ELT-patches/aixrtl/2.2.0-cmds-cxx,
+  ELT-patches/aixrtl/2.2.8-cmds-c, ELT-patches/aixrtl/2.2.8-cmds-cxx,
+  ELT-patches/aixrtl/2.4.2.418-cmds-c, ELT-patches/aixrtl/2.4.2.418-cmds-cxx:
+  need semicolon after noop command to get subsequent variable set
 
   07 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
   -ELT-patches/aixrtl/2.4.2.418-cmds.c, -ELT-patches/aixrtl/2.4.2.418-cmds.cxx,

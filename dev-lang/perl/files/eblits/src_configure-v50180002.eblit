@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50180002.eblit,v 1.1 2014/03/11 17:01:14 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50180002.eblit,v 1.2 2014/07/07 12:44:12 pinkbyte Exp $
 
 myconf() {
 	# the myconf array is declared in src_configure
@@ -93,7 +93,14 @@ eblit-perl-src_configure() {
 	fi
 
 	# don't try building ODBM, bug #354453
-	myconf -Dnoextensions=ODBM_File
+	disabled_extensions="ODBM_File"
+
+	if ! use gdbm ; then
+		# workaround for bug #157774: don't try building GDBM related stuff with USE="-gdbm"
+		disabled_extensions="${disabled_extensions} GDBM_File NDBM_File"
+	fi
+
+	myconf -Dnoextensions="${disabled_extensions}"
 
 	sh Configure \
 		-des \

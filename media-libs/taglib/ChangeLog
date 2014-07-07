@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.150 2014/06/18 19:58:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.151 2014/07/07 12:43:45 pacho Exp $
+
+*taglib-1.9.1-r2 (07 Jul 2014)
+
+  07 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/taglib-1.9.1-abi-breakage.patch,
+  +files/taglib-1.9.1-bytevector-simpler.patch,
+  +files/taglib-1.9.1-missing-deletes.patch,
+  +files/taglib-1.9.1-order-big-endian.patch, +taglib-1.9.1-r2.ebuild:
+  Apply some upstream patches fixing important bugs like an accidental ABI
+  breakage (#516342#c1 by CT)
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> taglib-1.9.1-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
