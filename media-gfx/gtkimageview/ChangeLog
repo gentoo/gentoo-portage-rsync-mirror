@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtkimageview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.25 2012/08/21 04:39:21 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.26 2014/07/07 06:59:12 mgorny Exp $
+
+  07 Jul 2014; Michał Górny <mgorny@gentoo.org> gtkimageview-1.6.4.ebuild:
+  Force RESTRICT=userpriv only with USE=test, bug #446628. Update HOMEPAGE. Set
+  SRC_URI to our mirrors since the original host is dead and the new homepage
+  does not carry distfiles.
 
   21 Aug 2012; Christoph Junghans <ottxor@gentoo.org> gtkimageview-1.6.4.ebuild:
   added prefix keywords

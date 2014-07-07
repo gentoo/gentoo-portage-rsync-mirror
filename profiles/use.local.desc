@@ -2010,6 +2010,7 @@ dev-python/PyQtMobility:versit - Build bindings for the QtVersit module
 dev-python/amqplib:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/anyvc:bazaar - Add support for Bazaar
 dev-python/anyvc:mercurial - Add support for Mercurial
+dev-python/bokeh:chaco - Enable interface for implementing qplot and ggplot like functionality using chaco
 dev-python/bpython:urwid - Backend based on dev-python/urwid
 dev-python/celery:redis - Enables redis support
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models

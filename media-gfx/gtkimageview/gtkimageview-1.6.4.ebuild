@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.26 2012/08/21 04:39:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.27 2014/07/07 06:59:12 mgorny Exp $
 
 EAPI=4
 
@@ -10,8 +10,8 @@ VIRTUALX_REQUIRED=test
 inherit autotools gnome2 virtualx
 
 DESCRIPTION="A simple image viewer widget for GTK"
-HOMEPAGE="http://trac.bjourne.webfactional.com/wiki/"
-SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar.gz?format=raw -> ${P}.tar.gz"
+HOMEPAGE="https://projects.gnome.org/gtkimageview/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd
 IUSE="doc examples static-libs"
 
 # tests do not work with userpriv
-RESTRICT="userpriv"
+RESTRICT="test? ( userpriv )"
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
