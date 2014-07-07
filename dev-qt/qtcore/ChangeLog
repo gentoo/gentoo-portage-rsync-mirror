@@ -1,6 +1,15 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.44 2014/04/23 10:29:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.45 2014/07/07 20:03:53 pesa Exp $
+
+*qtcore-4.8.5-r2 (07 Jul 2014)
+
+  07 Jul 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qtcore-4.8.5-honor-ExcludeSocketNotifiers-in-glib-event-loop.patch,
+  +files/qtcore-4.8.5-moc-boost-lexical-cast.patch,
+  +files/qtcore-4.8.5-qeventdispatcher-recursive.patch, +qtcore-4.8.5-r2.ebuild,
+  -files/moc-boost-lexical-cast.patch, qtcore-4.8.5-r1.ebuild:
+  Add fixes for libreoffice, bug 514968.
 
   23 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> -qtcore-5.2.1.ebuild:
   Drop qt5 ebuild.

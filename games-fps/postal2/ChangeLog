@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/postal2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/ChangeLog,v 1.12 2012/02/05 06:04:07 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/ChangeLog,v 1.13 2014/07/07 20:19:50 axs Exp $
+
+*postal2-1409.2-r2 (07 Jul 2014)
+
+  07 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +postal2-1409.2-r2.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-multilib; could not test due to not
+  having the CD, so assumed that deps were previously accurate
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> postal2-1409.2-r1.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -45,4 +52,3 @@
   +postal2-1409.2.ebuild:
   Initial commit. Modified ebuild from bug #97533 by Kjartan Kvamme, Alexander
   Nicolaysen Sørnes and Paul Bredbury.
-
