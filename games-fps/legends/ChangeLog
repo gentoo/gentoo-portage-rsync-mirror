@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/legends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.29 2014/07/07 19:40:32 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.30 2014/07/07 20:42:53 mr_bones_ Exp $
+
+  07 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  legends-0.4.1.43-r1.ebuild:
+  add QA_FLAGS_IGNORED
 
 *legends-0.4.1.43-r1 (07 Jul 2014)
 

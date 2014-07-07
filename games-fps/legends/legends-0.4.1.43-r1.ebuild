@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43-r1.ebuild,v 1.1 2014/07/07 19:40:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43-r1.ebuild,v 1.2 2014/07/07 20:42:53 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -20,6 +20,7 @@ IUSE="+dedicated"
 RESTRICT="strip"
 
 QA_TEXTRELS="${dir:1}/libSDL-1.3.so.0"
+QA_FLAGS_IGNORED="${dir:1}/libSDL-1.3.so.0 ${dir:1}/LinLegends ${dir:1}/lindedicated"
 
 DEPEND=""
 RDEPEND="sys-libs/glibc
