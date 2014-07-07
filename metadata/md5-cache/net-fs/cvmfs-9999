@@ -7,5 +7,5 @@ IUSE=+client debug doc test server
 LICENSE=BSD
 RDEPEND=dev-cpp/gtest dev-db/sqlite:3 dev-libs/openssl net-libs/pacparser net-misc/curl[adns] sys-apps/attr sys-libs/zlib client? ( dev-cpp/sparsehash dev-libs/leveldb sys-fs/fuse ) server? ( >=dev-cpp/tbb-4.2 ) client? ( net-fs/autofs ) server? ( www-servers/apache[ssl] )
 SLOT=0
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	git-r3	da25af7340478afdca16e1e4568b014a	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=430317399851210ffd0a6119e4dfbb91

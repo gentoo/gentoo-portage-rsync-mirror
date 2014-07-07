@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.44 2014/06/20 11:40:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.45 2014/07/07 14:41:56 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -302,7 +302,7 @@ _git-r3_set_gitdir() {
 	if [[ ! -d ${EGIT3_STORE_DIR} ]]; then
 		(
 			addwrite /
-			mkdir -m0755 -p "${EGIT3_STORE_DIR}" || die
+			mkdir -p "${EGIT3_STORE_DIR}" || die
 		) || die "Unable to create ${EGIT3_STORE_DIR}"
 	fi
 

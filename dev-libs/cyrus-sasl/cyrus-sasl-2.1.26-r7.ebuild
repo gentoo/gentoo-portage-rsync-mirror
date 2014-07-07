@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.2 2014/06/19 07:20:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.3 2014/07/07 14:31:18 mgorny Exp $
 
 EAPI=5
 
@@ -99,7 +99,7 @@ multilib_src_configure() {
 		myconf+=( --without-des )
 	fi
 
-	if use mysql || use postgres || use sqlite ; then
+	if use sqlite || { multilib_is_native_abi && { use mysql || use postgres; }; } ; then
 		myconf+=( --enable-sql )
 	else
 		myconf+=( --disable-sql )

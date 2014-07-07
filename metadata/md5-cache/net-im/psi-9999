@@ -10,5 +10,5 @@ RDEPEND=>=dev-qt/qtgui-4.7:4 >=app-crypt/qca-2.0.2:2 x11-libs/libX11 dbus? ( >=d
 REQUIRED_USE=iconsets? ( extras ) plugins? ( extras ) powersave? ( extras ) webkit? ( extras )
 RESTRICT=test
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	git-2	2027b81a576527fa16bece425941e094	git-r3	da25af7340478afdca16e1e4568b014a	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	git-2	2027b81a576527fa16bece425941e094	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=31a7e70dd17ff2d8ca1a653baf5b088c

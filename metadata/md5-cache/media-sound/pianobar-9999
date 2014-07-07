@@ -7,5 +7,5 @@ IUSE=static-libs
 LICENSE=MIT
 RDEPEND=media-libs/libao net-libs/gnutls dev-libs/libgcrypt:0= dev-libs/json-c >=virtual/ffmpeg-9
 SLOT=0
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	git-r3	da25af7340478afdca16e1e4568b014a	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=4a4689595ca8ba2cebfbccf322e414f6
