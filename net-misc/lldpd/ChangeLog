@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.14 2014/07/01 18:01:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.15 2014/07/07 22:08:35 chutzpah Exp $
+
+*lldpd-0.7.9-r1 (07 Jul 2014)
+
+  07 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +lldpd-0.7.9-r1.ebuild,
+  +files/lldpd-0.7.9-dont-fork-after-making-pidfile.patch,
+  +files/lldpd-initd-2:
+  Revision bump, add patch to make pidfile creation work properly with
+  privilege separation. Rework init script to be much more robust.
 
 *lldpd-0.7.9 (01 Jul 2014)
 

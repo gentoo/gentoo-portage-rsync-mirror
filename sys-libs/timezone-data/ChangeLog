@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.303 2014/06/14 02:40:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.304 2014/07/07 22:05:08 ottxor Exp $
+
+  07 Jul 2014; Christoph Junghans <ottxor@gentoo.org>
+  timezone-data-2014e.ebuild:
+  fix double prefix (bug #516398)
 
 *timezone-data-2014e (14 Jun 2014)
 
