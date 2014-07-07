@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.254 2014/05/27 07:32:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.255 2014/07/07 07:51:31 polynomial-c Exp $
+
+*rsync-3.1.1 (07 Jul 2014)
+
+  07 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -rsync-3.1.1_pre2.ebuild,
+  +rsync-3.1.1.ebuild:
+  Version bump. Removed old.
 
   27 May 2014; Lars Wendler <polynomial-c@gentoo.org> rsync-3.1.1_pre2.ebuild:
   rsync-3.1.1_pre2 no longer needs the patch from 3.1.0.

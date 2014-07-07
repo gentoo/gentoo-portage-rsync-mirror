@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/bokeh-0.4.4.ebuild,v 1.1 2014/07/07 06:52:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/bokeh-0.4.4.ebuild,v 1.2 2014/07/07 07:56:48 jlec Exp $
 
 EAPI=5
 
@@ -56,6 +56,8 @@ DEPEND="
 	)
 "
 DOCS=( CHANGELOG QUICKSTART.md README.md )
+
+DISTUTILS_NO_PARALLEL_BUILD=1
 
 python_prepare_all() {
 	# Fix test_references_by_ref_by_value from test_object.py
