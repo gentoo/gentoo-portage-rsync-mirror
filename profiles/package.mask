@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15857 2014/07/06 18:21:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15858 2014/07/07 11:59:17 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (7 Jul 2014)
+# Depends on really ancient libc, that have some nasty
+# vulnerabilities and QA issues. See bugs #515926 and #510960
+sys-block/afacli
 
 # Michał Górny <mgorny@gentoo.org> (6 Jul 2014)
 # (on behalf of python@gentoo.org)
