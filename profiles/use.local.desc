@@ -5416,6 +5416,7 @@ net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano bo
 net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
 net-misc/bfgminer:hashfast - Enable support for mining with HashFast devices
 net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
+net-misc/bfgminer:jingtian - Enable support for mining on JingTian boards via SPI/GPIO
 net-misc/bfgminer:klondike - Enable support for mining with Klondike USB miners
 net-misc/bfgminer:libusb - Use libusb
 net-misc/bfgminer:littlefury - Enable support for mining with LittleFury USB sticks
