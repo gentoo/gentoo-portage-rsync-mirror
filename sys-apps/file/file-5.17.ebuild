@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.17.ebuild,v 1.11 2014/03/02 02:54:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.17.ebuild,v 1.12 2014/07/06 23:25:06 kumba Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
 		ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz"
-	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"

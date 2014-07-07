@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.221 2014/06/16 06:46:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.222 2014/07/06 23:19:59 kumba Exp $
+
+  06 Jul 2014; Joshua Kinard <kumba@gentoo.org> man-pages-3.63.ebuild,
+  man-pages-3.67.ebuild:
+  Changed mips -> ~mips: we don't have a stable keyword anymore.
 
 *man-pages-3.69 (16 Jun 2014)
 
