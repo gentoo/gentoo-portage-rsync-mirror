@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.20 2013/04/16 18:23:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.21 2014/07/07 18:53:29 dilfridge Exp $
 
 inherit perl-module eutils multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 arm ppc x86"
 IUSE="opengl badval gsl"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	virtual/perl-Filter
+	dev-perl/Filter
 	virtual/perl-File-Spec
 	dev-perl/Inline
 	dev-perl/Astro-FITS-Header

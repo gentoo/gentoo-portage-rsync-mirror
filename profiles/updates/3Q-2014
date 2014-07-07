@@ -1,1 +1,2 @@
 move perl-core/Class-ISA dev-perl/Class-ISA
+move perl-core/Filter dev-perl/Filter

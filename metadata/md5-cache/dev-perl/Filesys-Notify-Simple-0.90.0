@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=test? ( virtual/perl-Filter dev-perl/Test-SharedFork ) dev-lang/perl:=[-build(-)]
+DEPEND=test? ( dev-perl/Filter dev-perl/Test-SharedFork ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Simple and dumb file system watcher
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Filesys-Notify-Simple/
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=virtual/perl-Filter dev-lang/perl:=[-build(-)]
+RDEPEND=dev-perl/Filter dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.09.tar.gz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=93d8e4ea1384a2e734496da578332383
+_md5_=bfc8af435e320b4e906e7c774e2693db

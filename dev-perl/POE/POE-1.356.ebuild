@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.356.ebuild,v 1.1 2013/09/18 06:02:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.356.ebuild,v 1.2 2014/07/07 18:54:38 dilfridge Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="
 	>=virtual/perl-IO-Compress-1.33
 	>=virtual/perl-Storable-2.12
 	>=dev-perl/IO-Tty-1.08
-	virtual/perl-Filter
+	dev-perl/Filter
 	dev-perl/FreezeThaw
 	dev-perl/yaml
 	>=dev-perl/TermReadKey-2.21

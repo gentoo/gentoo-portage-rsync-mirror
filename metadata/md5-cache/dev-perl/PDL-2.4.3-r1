@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm preinst prerm setup test unpack
-DEPEND=>=sys-libs/ncurses-5.2 virtual/perl-Filter virtual/perl-File-Spec dev-perl/Inline dev-perl/Astro-FITS-Header >=dev-perl/ExtUtils-F77-1.13 virtual/perl-Text-Balanced opengl? ( virtual/opengl virtual/glu ) dev-perl/Term-ReadLine-Perl gsl? ( sci-libs/gsl ) >=sys-apps/sed-4
+DEPEND=>=sys-libs/ncurses-5.2 dev-perl/Filter virtual/perl-File-Spec dev-perl/Inline dev-perl/Astro-FITS-Header >=dev-perl/ExtUtils-F77-1.13 virtual/perl-Text-Balanced opengl? ( virtual/opengl virtual/glu ) dev-perl/Term-ReadLine-Perl gsl? ( sci-libs/gsl ) >=sys-apps/sed-4
 DESCRIPTION=PDL Perl Module
 HOMEPAGE=http://search.cpan.org/~csoe/
 IUSE=opengl badval gsl
 KEYWORDS=amd64 arm ppc x86
 LICENSE=|| ( Artistic GPL-1+ ) public-domain PerlDL
-RDEPEND=>=sys-libs/ncurses-5.2 virtual/perl-Filter virtual/perl-File-Spec dev-perl/Inline dev-perl/Astro-FITS-Header >=dev-perl/ExtUtils-F77-1.13 virtual/perl-Text-Balanced opengl? ( virtual/opengl virtual/glu ) dev-perl/Term-ReadLine-Perl gsl? ( sci-libs/gsl ) >=sys-apps/sed-4
+RDEPEND=>=sys-libs/ncurses-5.2 dev-perl/Filter virtual/perl-File-Spec dev-perl/Inline dev-perl/Astro-FITS-Header >=dev-perl/ExtUtils-F77-1.13 virtual/perl-Text-Balanced opengl? ( virtual/opengl virtual/glu ) dev-perl/Term-ReadLine-Perl gsl? ( sci-libs/gsl ) >=sys-apps/sed-4
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CS/CSOE/PDL-2.4.3.tar.gz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=b2dc29a9e225b20b5e7e4eaf629debc8
+_md5_=46ad7ff892fa13ab5f67731663101137

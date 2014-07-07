@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/Event-1.09 >=virtual/perl-File-Spec-0.87 >=virtual/perl-IO-1.23.01 >=virtual/perl-IO-Compress-1.33 >=virtual/perl-Storable-2.12 >=dev-perl/IO-Tty-1.08 virtual/perl-Filter dev-perl/FreezeThaw dev-perl/yaml >=dev-perl/TermReadKey-2.21 >=virtual/perl-Time-HiRes-1.59 ipv6? ( >=dev-perl/Socket6-0.14 ) tk? ( >=dev-perl/perl-tk-800.027 ) libwww? ( >=dev-perl/libwww-perl-5.79 >=dev-perl/URI-1.30 ) ncurses? ( >=dev-perl/Curses-1.08 ) test? ( >=dev-perl/POE-Test-Loops-1.351.0 >=virtual/perl-Test-Harness-2.26 >=virtual/perl-Test-Simple-0.54 dev-perl/Test-Pod dev-perl/Test-Pod-Coverage dev-perl/IO-Pipely ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DEPEND=>=dev-perl/Event-1.09 >=virtual/perl-File-Spec-0.87 >=virtual/perl-IO-1.23.01 >=virtual/perl-IO-Compress-1.33 >=virtual/perl-Storable-2.12 >=dev-perl/IO-Tty-1.08 dev-perl/Filter dev-perl/FreezeThaw dev-perl/yaml >=dev-perl/TermReadKey-2.21 >=virtual/perl-Time-HiRes-1.59 ipv6? ( >=dev-perl/Socket6-0.14 ) tk? ( >=dev-perl/perl-tk-800.027 ) libwww? ( >=dev-perl/libwww-perl-5.79 >=dev-perl/URI-1.30 ) ncurses? ( >=dev-perl/Curses-1.08 ) test? ( >=dev-perl/POE-Test-Loops-1.351.0 >=virtual/perl-Test-Harness-2.26 >=virtual/perl-Test-Simple-0.54 dev-perl/Test-Pod dev-perl/Test-Pod-Coverage dev-perl/IO-Pipely ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=A framework for creating multitasking programs in Perl
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/POE/
 IUSE=ipv6 libwww ncurses tk test
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
-RDEPEND=>=dev-perl/Event-1.09 >=virtual/perl-File-Spec-0.87 >=virtual/perl-IO-1.23.01 >=virtual/perl-IO-Compress-1.33 >=virtual/perl-Storable-2.12 >=dev-perl/IO-Tty-1.08 virtual/perl-Filter dev-perl/FreezeThaw dev-perl/yaml >=dev-perl/TermReadKey-2.21 >=virtual/perl-Time-HiRes-1.59 ipv6? ( >=dev-perl/Socket6-0.14 ) tk? ( >=dev-perl/perl-tk-800.027 ) libwww? ( >=dev-perl/libwww-perl-5.79 >=dev-perl/URI-1.30 ) ncurses? ( >=dev-perl/Curses-1.08 ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+RDEPEND=>=dev-perl/Event-1.09 >=virtual/perl-File-Spec-0.87 >=virtual/perl-IO-1.23.01 >=virtual/perl-IO-Compress-1.33 >=virtual/perl-Storable-2.12 >=dev-perl/IO-Tty-1.08 dev-perl/Filter dev-perl/FreezeThaw dev-perl/yaml >=dev-perl/TermReadKey-2.21 >=virtual/perl-Time-HiRes-1.59 ipv6? ( >=dev-perl/Socket6-0.14 ) tk? ( >=dev-perl/perl-tk-800.027 ) libwww? ( >=dev-perl/libwww-perl-5.79 >=dev-perl/URI-1.30 ) ncurses? ( >=dev-perl/Curses-1.08 ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RC/RCAPUTO/POE-1.356.tar.gz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=d738e051cfd94cbf2c9634ad7a4b4bd9
+_md5_=e063fadbafa3b90cde7b4aa11c743033

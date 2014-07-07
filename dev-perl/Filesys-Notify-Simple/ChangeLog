@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Filesys-Notify-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-Notify-Simple/ChangeLog,v 1.5 2013/08/16 07:49:43 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-Notify-Simple/ChangeLog,v 1.6 2014/07/07 18:51:11 dilfridge Exp $
+
+  07 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Filesys-Notify-Simple-0.80.0.ebuild, Filesys-Notify-Simple-0.90.0.ebuild,
+  Filesys-Notify-Simple-0.100.0.ebuild, Filesys-Notify-Simple-0.120.0.ebuild:
+  Depend on dev-perl/Filter instead of virtual/perl-Filter
 
 *Filesys-Notify-Simple-0.120.0 (16 Aug 2013)
 
