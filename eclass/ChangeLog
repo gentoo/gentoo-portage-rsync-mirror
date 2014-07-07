@@ -1,6 +1,19 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1313 2014/07/06 17:13:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1315 2014/07/07 08:45:14 haubi Exp $
+
+  07 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
+  -ELT-patches/aixrtl/2.4.2.418-cmds.c, -ELT-patches/aixrtl/2.4.2.418-cmds.cxx,
+  +ELT-patches/aixrtl/2.4.2.418-cmds-c, +ELT-patches/aixrtl/2.4.2.418-cmds-cxx:
+  use similar filename even for 2.4.2.418 diffs
+
+  07 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
+  ELT-patches/aixrtl/1.5.0-cmds-c, ELT-patches/aixrtl/1.5.0-cmds-cxx,
+  ELT-patches/aixrtl/1.5.22-cmds-c, ELT-patches/aixrtl/1.5.22-cmds-cxx,
+  ELT-patches/aixrtl/2.2.0-cmds-c, ELT-patches/aixrtl/2.2.0-cmds-cxx,
+  ELT-patches/aixrtl/2.2.8-cmds-c, ELT-patches/aixrtl/2.2.8-cmds-cxx,
+  ELT-patches/aixrtl/2.4.2.418-cmds.c, ELT-patches/aixrtl/2.4.2.418-cmds.cxx:
+  Use $lib for the real filename, to support soname hackery in libXaw.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
   Add tests for _python_impl_supported.
