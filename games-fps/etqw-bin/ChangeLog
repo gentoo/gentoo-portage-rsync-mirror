@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/etqw-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/ChangeLog,v 1.6 2013/02/01 01:38:32 tristan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/ChangeLog,v 1.7 2014/07/07 18:03:58 axs Exp $
+
+*etqw-bin-1.5-r1 (07 Jul 2014)
+
+  07 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +etqw-bin-1.5-r1.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-multilib, added missing deps, dropped
+  bundled libs.  Note, could not fully runtime-test as I don't have the PAKs
 
   01 Feb 2013; Tristan Heaven <tristan@gentoo.org> etqw-bin-1.5.ebuild:
   Use QA_PREBUILT, bug #430534
@@ -22,4 +29,3 @@
   06 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
   +etqw-bin-1.5.ebuild:
   Initial commit, bug #196452
-
