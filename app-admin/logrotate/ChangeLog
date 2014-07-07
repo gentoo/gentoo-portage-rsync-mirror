@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.177 2014/06/10 00:06:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.178 2014/07/07 09:55:32 nimiux Exp $
+
+  07 Jul 2014; Chema Alonso <nimiux@gentoo.org> files/logrotate.conf:
+  Fix tabs and enhance comments. Thanks to Consus via email.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> logrotate-3.8.7.ebuild:
   Mark m68k/s390/sh stable.

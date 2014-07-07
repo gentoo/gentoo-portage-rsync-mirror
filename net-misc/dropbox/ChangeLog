@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.53 2014/05/12 02:51:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.54 2014/07/07 09:36:55 pacho Exp $
+
+  07 Jul 2014; Pacho Ramos <pacho@gentoo.org> dropbox-2.6.33.ebuild:
+  amd64 stable, bug #515572
 
   12 May 2014; Naohiro Aota <naota@gentoo.org> -dropbox-1.6.16.ebuild,
   -dropbox-2.0.8.ebuild, -dropbox-2.2.13.ebuild, -dropbox-2.2.8.ebuild,
