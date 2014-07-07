@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/appdata-tools-0.1.7.ebuild,v 1.6 2014/06/06 15:27:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/appdata-tools/appdata-tools-0.1.7.ebuild,v 1.7 2014/07/07 13:08:04 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/hughsie/${PN}/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/glib-2.14

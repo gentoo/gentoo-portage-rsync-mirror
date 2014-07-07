@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/gqrx-2.2.0_p20140706.ebuild,v 1.1 2014/07/06 21:35:52 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gqrx/gqrx-2.2.0_p20140706.ebuild,v 1.2 2014/07/07 13:06:58 zerochaos Exp $
 
 EAPI=5
 
 inherit qt4-r2
 
 DESCRIPTION="Software defined radio receiver powered by GNU Radio and Qt"
-HOMEPAGE="http://www.oz9aec.net/index.php/gnu-radio/gqrx-sdr"
+HOMEPAGE="http://gqrx.dk/"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/csete/gqrx.git"

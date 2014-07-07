@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.3-r2.ebuild,v 1.1 2014/07/04 11:06:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.3-r2.ebuild,v 1.2 2014/07/07 13:14:59 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="debug farstream test"
 
 RDEPEND="
