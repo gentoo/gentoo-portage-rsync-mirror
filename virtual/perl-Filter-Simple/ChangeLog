@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-Filter-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/ChangeLog,v 1.1 2013/08/14 04:46:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter-Simple/ChangeLog,v 1.2 2014/07/07 19:09:30 dilfridge Exp $
+
+*perl-Filter-Simple-0.910.0 (07 Jul 2014)
+*perl-Filter-Simple-0.890.0-r1 (07 Jul 2014)
+
+  07 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Filter-Simple-0.890.0.ebuild, +perl-Filter-Simple-0.890.0-r1.ebuild,
+  +perl-Filter-Simple-0.910.0.ebuild:
+  Add perl-5.20 version, improve dependencies
 
 *perl-Filter-Simple-0.890.0 (14 Aug 2013)
 
