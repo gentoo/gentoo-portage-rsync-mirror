@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/sleepyhead-0.9.3.ebuild,v 1.1 2013/05/18 17:58:19 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/sleepyhead-0.9.3.ebuild,v 1.2 2014/07/07 16:32:46 rich0 Exp $
 
 EAPI=4
 inherit eutils qt4-r2
@@ -22,7 +22,8 @@ DEPEND="virtual/opengl
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
 		dev-qt/qtopengl:4
-		dev-qt/qtwebkit:4"
+		dev-qt/qtwebkit:4
+		virtual/glu"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/rich0-rich0-sleepyhead-34e0b92"

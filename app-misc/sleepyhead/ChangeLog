@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sleepyhead
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/ChangeLog,v 1.10 2013/11/11 17:16:54 rich0 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sleepyhead/ChangeLog,v 1.11 2014/07/07 16:32:46 rich0 Exp $
+
+  07 Jul 2014; Richard Freeman <rich0@gentoo.org> sleepyhead-0.9.3.ebuild:
+  Added missing glu dep - 514414.
 
   11 Nov 2013; Richard Freeman <rich0@gentoo.org> sleepyhead-9999.ebuild:
   Update due to upstream changes.
