@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.69 2014/06/16 15:41:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.70 2014/07/07 06:27:10 graaff Exp $
+
+*rspec-core-2.99.1 (07 Jul 2014)
+
+  07 Jul 2014; Hans de Graaff <graaff@gentoo.org> +rspec-core-2.99.1.ebuild:
+  Version bump.
 
   16 Jun 2014; Tobias Klausmann <klausman@gentoo.org>
   rspec-core-2.14.8-r1.ebuild:
