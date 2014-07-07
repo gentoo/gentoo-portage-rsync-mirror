@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.164 2014/03/19 22:05:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.165 2014/07/07 01:44:52 naota Exp $
+
+  07 Jul 2014; Naohiro Aota <naota@gentoo.org> fbsd/package.use.mask:
+  Add use mask on USE=xattr for sys-apps/portage
 
   19 Mar 2014; Andreas K. Huettel <dilfridge@gentoo.org> +eapi,
   +fbsd/amd64/9.1/eapi, +fbsd/amd64/9.2/eapi, +fbsd/amd64/eapi, +fbsd/eapi,

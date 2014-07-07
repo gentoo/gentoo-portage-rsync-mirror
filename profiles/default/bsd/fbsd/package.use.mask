@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.38 2014/04/30 17:38:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.39 2014/07/07 01:44:52 naota Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -102,3 +102,7 @@ sys-apps/hwloc numa
 # Matt Turner <mattst88@gentoo.org> (07 Mar 2014)
 # media-libs/libomxil-bellagio keyworded on amd64/x86
 media-libs/mesa openmax
+
+# Naohiro Aota <naota@gentoo.org> (07 Jul 2014)
+# xattr support is not available on BSD #501534
+sys-apps/portage xattr

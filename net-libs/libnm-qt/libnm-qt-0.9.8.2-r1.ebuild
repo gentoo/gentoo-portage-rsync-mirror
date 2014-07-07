@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.8.2.ebuild,v 1.1 2014/07/06 16:18:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.8.2-r1.ebuild,v 1.1 2014/07/07 01:55:11 mrueg Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ DESCRIPTION="NetworkManager bindings for Qt"
 HOMEPAGE="https://projects.kde.org/projects/extragear/libs/libnm-qt"
 
 LICENSE="LGPL-2"
-SLOT="0/${PV}"
+SLOT="0/1"
 IUSE="debug doc modemmanager test"
 
 RDEPEND="
