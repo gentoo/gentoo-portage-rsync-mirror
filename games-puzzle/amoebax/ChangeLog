@@ -1,6 +1,14 @@
 # ChangeLog for games-puzzle/amoebax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/ChangeLog,v 1.9 2014/05/15 16:48:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/ChangeLog,v 1.10 2014/07/07 17:58:32 mr_bones_ Exp $
+
+*amoebax-0.2.1 (07 Jul 2014)
+
+  07 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> +amoebax-0.2.1.ebuild,
+  +files/amoebax-0.2.1-aclocal.patch, +files/amoebax-0.2.1-compile.patch,
+  files/amoebax-0.2.0-aclocal.patch, files/amoebax-0.2.0-gcc43.patch,
+  files/amoebax-0.2.0-glibc2.10.patch:
+  version bump
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> amoebax-0.2.0.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
@@ -35,4 +43,3 @@
   15 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +amoebax-0.2.0.ebuild:
   initial commit
-

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Filter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Filter/ChangeLog,v 1.48 2013/08/14 07:39:49 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Filter/ChangeLog,v 1.49 2014/07/07 17:39:11 dilfridge Exp $
+
+  07 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> -Filter-1.37.ebuild,
+  -Filter-1.380.0.ebuild, -Filter-1.390.0.ebuild, -Filter-1.410.0.ebuild:
+  Remove old
 
 *Filter-1.490.0 (14 Aug 2013)
 
