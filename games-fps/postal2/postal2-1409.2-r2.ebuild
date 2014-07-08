@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2-r2.ebuild,v 1.1 2014/07/07 20:19:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2-r2.ebuild,v 1.2 2014/07/08 17:33:22 axs Exp $
 
 EAPI=5
 inherit eutils unpacker cdrom multilib games
@@ -22,9 +22,9 @@ RDEPEND="sys-libs/glibc
 	amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] )
 	|| (
 		(
-			virtual/opengl[abi_x86_32(-)]
-			media-libs/libsdl[X,opengl,abi_x86_32(-)]
-			media-libs/openal[abi_x86_32(-)]
+			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+			>=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)]
+			>=media-libs/openal-1.15.1[abi_x86_32(-)]
 		)
 		(
 			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]

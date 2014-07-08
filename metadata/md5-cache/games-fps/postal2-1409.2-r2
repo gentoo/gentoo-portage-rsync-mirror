@@ -6,9 +6,9 @@ HOMEPAGE=http://www.linuxgamepublishing.com/info.php?id=postal2
 KEYWORDS=~amd64 ~x86
 LICENSE=postal2
 PROPERTIES=interactive
-RDEPEND=sys-libs/glibc sys-libs/libstdc++-v3:5 amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] ) || ( ( virtual/opengl[abi_x86_32(-)] media-libs/libsdl[X,opengl,abi_x86_32(-)] media-libs/openal[abi_x86_32(-)] ) ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) games-misc/games-envd
+RDEPEND=sys-libs/glibc sys-libs/libstdc++-v3:5 amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] ) || ( ( >=virtual/opengl-7.0-r1[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)] >=media-libs/openal-1.15.1[abi_x86_32(-)] ) ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) games-misc/games-envd
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://updatefiles.linuxgamepublishing.com/postal2/postal2-1409.1.run http://updatefiles.linuxgamepublishing.com/postal2/postal2-1409.2.run
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cdrom	415b847346ef9001a89e5c7da6711215	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	portability	2a81b62e5f2001061b009b5c5fc27e98	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	1a9ecf501027961855b0320e8915a79c
-_md5_=2dcf9ae88199859034a1533aac42e230
+_md5_=f0916c2d3330d901e7b1f6a7baad78ea

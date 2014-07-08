@@ -4,9 +4,9 @@ EAPI=5
 HOMEPAGE=http://icculus.org/news/news.php?id=4419
 KEYWORDS=~amd64 ~x86
 LICENSE=postal2
-RDEPEND=sys-libs/glibc sys-libs/libstdc++-v3:5 amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] ) || ( ( media-libs/libsdl[X,opengl,abi_x86_32(-)] media-libs/openal[abi_x86_32(-)] ) ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) games-misc/games-envd
+RDEPEND=sys-libs/glibc sys-libs/libstdc++-v3:5 amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] ) || ( ( >=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)] >=media-libs/openal-1.15.1[abi_x86_32(-)] ) ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) games-misc/games-envd
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://treefort.icculus.org/postal2/Postal2STP-FreeMP-linux.tar.bz2 http://0day.icculus.org/postal2/Postal2STP-FreeMP-linux.tar.bz2 http://cyberstalker.dk/sponsored-by-dkchan.org/Postal2STP-FreeMP-linux.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	1a9ecf501027961855b0320e8915a79c
-_md5_=f9ae4f8e3979de8bfb17236e8f7daa7e
+_md5_=5363c21447cbc83e2dc804da90e5fc26
