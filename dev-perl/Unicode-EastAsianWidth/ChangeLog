@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-EastAsianWidth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.38 2014/02/01 23:22:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.39 2014/07/08 10:33:03 haubi Exp $
+
+  08 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
+  Unicode-EastAsianWidth-1.330.0.ebuild:
+  add ~ppc-aix keyword
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org>
   Unicode-EastAsianWidth-1.330.0.ebuild:

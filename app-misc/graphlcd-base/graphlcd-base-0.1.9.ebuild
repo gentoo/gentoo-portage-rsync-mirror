@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.9.ebuild,v 1.3 2012/02/20 01:21:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.9.ebuild,v 1.4 2014/07/08 10:38:31 hd_brummy Exp $
 
 EAPI=4
 
@@ -17,8 +17,9 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="g15"
 
-DEPEND=""
-RDEPEND="g15? ( app-misc/g15daemon )"
+DEPEND="media-libs/freetype"
+RDEPEND="g15? ( app-misc/g15daemon )
+		media-libs/freetype"
 
 src_prepare() {
 	sed -i Make.config -e "s:usr\/local:usr:" -e "s:FLAGS *=:FLAGS ?=:"

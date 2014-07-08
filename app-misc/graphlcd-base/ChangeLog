@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/graphlcd-base
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.29 2012/02/20 01:21:04 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.30 2014/07/08 10:38:31 hd_brummy Exp $
+
+  08 Jul 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  graphlcd-base-0.1.9.ebuild:
+  missing depend fixed, wrt bug 514224
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> graphlcd-base-0.1.5-r1.ebuild,
   graphlcd-base-0.1.9.ebuild:

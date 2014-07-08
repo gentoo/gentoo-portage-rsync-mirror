@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.56 2014/01/19 20:28:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.57 2014/07/08 10:31:45 haubi Exp $
+
+  08 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
+  libintl-perl-1.230.0.ebuild:
+  add ~ppc-aix keyword
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org> libintl-perl-1.200.0.ebuild,
   libintl-perl-1.230.0.ebuild:
