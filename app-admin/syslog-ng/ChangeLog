@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.390 2014/06/10 00:00:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.391 2014/07/08 16:19:45 mr_bones_ Exp $
+
+  08 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  syslog-ng-3.4.8.ebuild, syslog-ng-3.5.4.1.ebuild:
+  add support for reading Process Accounting files (EXPERIMENTAL, Linux only)
+  (bug #498884)
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> syslog-ng-3.4.7.ebuild:
   Mark s390/sh stable.

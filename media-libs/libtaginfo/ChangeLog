@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtaginfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtaginfo/ChangeLog,v 1.9 2014/07/06 13:19:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtaginfo/ChangeLog,v 1.10 2014/07/08 16:11:32 nimiux Exp $
+
+  08 Jul 2014; Chema Alonso <nimiux@gentoo.org> libtaginfo-0.2.1.ebuild:
+  Stable for amd64 wrt bug #509524
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> libtaginfo-0.1.6.ebuild,
   libtaginfo-0.2.0.ebuild, libtaginfo-0.2.1.ebuild:

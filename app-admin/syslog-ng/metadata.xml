@@ -11,5 +11,6 @@
 	<flag name='spoof-source'>Enable support for spoofed source addresses</flag>
 	<flag name='json'>Enable support for JSON template formatting via <pkg>dev-libs/json-glib</pkg></flag>
 	<flag name='mongodb'>Enable support for mongodb destinations</flag>
+	<flag name='pacct'>Enable support for reading Process Accounting files (EXPERIMENTAL, Linux only)</flag>
 </use>
 </pkgmetadata>
