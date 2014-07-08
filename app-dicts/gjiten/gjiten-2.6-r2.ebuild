@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r2.ebuild,v 1.1 2012/10/12 23:55:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r2.ebuild,v 1.2 2014/07/08 00:41:15 naota Exp $
 
 EAPI=2
 inherit autotools eutils gnome2
@@ -30,7 +30,8 @@ DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 
 src_prepare() {
 	gnome2_src_prepare
-	epatch "${FILESDIR}"/${P}-pref.patch
+	epatch "${FILESDIR}"/${P}-pref.patch \
+		"${FILESDIR}"/${P}-drop-gnome.patch
 	# bug #124631
 	intltoolize --copy --automake --force || die "intltoolize failed"
 	AM_OPTS="--foreign" eautoreconf

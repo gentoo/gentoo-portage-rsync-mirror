@@ -24,16 +24,3 @@ index 9d5b873..5b1bf23 100644
  
  lintlib:: llib-ljd.ln
  
-diff --git a/Wnn/jlib/Makefile.in b/Wnn/jlib/Makefile.in
-index 234dea2..6cc5739 100644
---- a/Wnn/jlib/Makefile.in
-+++ b/Wnn/jlib/Makefile.in
-@@ -101,7 +101,7 @@ clean::
- all:: libwnn.la
- 
- libwnn.la: $(OBJS) $(EXTRALIBRARYDEPS)
--	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS:.o=.lo) @LIBS@ -rpath $(WNNLIBDIR) -version-info $(WNNJLIBVERSION)
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS:.o=.lo) $(LDOPTIONS) @LIBS@ -rpath $(WNNLIBDIR) -version-info $(WNNJLIBVERSION)
- 
- lintlib:: llib-lwnn.ln
- 

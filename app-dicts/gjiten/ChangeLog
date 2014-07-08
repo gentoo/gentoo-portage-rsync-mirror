@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gjiten
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.23 2012/10/12 23:55:24 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.24 2014/07/08 00:41:15 naota Exp $
+
+  08 Jul 2014; Naohiro Aota <naota@gentoo.org>
+  +files/gjiten-2.6-drop-gnome.patch, gjiten-2.6-r2.ebuild:
+  Add a patch to punt out obsolete gnome macro
 
 *gjiten-2.6-r2 (12 Oct 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.14 2012/06/03 23:24:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.15 2014/07/08 00:52:07 naota Exp $
 
 inherit java-pkg-opt-2 multilib
 
@@ -86,7 +86,7 @@ src_install() {
 
 	emake DESTDIR="${D}" MYDOCS= install || die
 	dodoc ChangeLog README* THANKS
-	dohtml doc/*
+	dohtml doc/{*.html,*.png}
 
 	local u d
 

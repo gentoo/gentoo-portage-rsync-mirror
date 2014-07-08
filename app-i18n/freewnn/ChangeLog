@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.48 2014/07/07 05:20:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.49 2014/07/08 00:43:02 naota Exp $
+
+  08 Jul 2014; Naohiro Aota <naota@gentoo.org>
+  files/freewnn-1.1.1_alpha21-ldflags.patch:
+  Modify a patch to apply cleanly
 
   07 Jul 2014; Naohiro Aota <naota@gentoo.org> freewnn-1.1.1_alpha22.ebuild:
   sed to ignore already sysmlink existence error. #515164

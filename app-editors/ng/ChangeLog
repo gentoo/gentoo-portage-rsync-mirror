@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ng
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.13 2011/07/10 16:40:38 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.14 2014/07/08 00:46:30 naota Exp $
+
+  08 Jul 2014; Naohiro Aota <naota@gentoo.org> ng-1.5_beta1-r1.ebuild:
+  Use eautoconf #515410. Updated to EAPI=5
 
   10 Jul 2011; Naohiro Aota <naota@gentoo.org> ng-1.5_beta1-r1.ebuild,
   +files/ng-1.5beta1-configure.patch:
