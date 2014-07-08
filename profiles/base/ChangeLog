@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.695 2014/06/30 18:57:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.696 2014/07/08 18:12:25 zlogene Exp $
+
+  08 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.stable.mask:
+  Stablemask libcaca and sdl use flags due to bug #514906
 
   30 Jun 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> package.use.mask:
   Mask pixman USE flag of dev-libs/efl for future removal, bug 501074

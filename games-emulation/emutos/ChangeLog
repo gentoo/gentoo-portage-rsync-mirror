@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/emutos
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.19 2013/02/04 18:44:38 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.20 2014/07/08 18:21:39 mr_bones_ Exp $
+
+*emutos-0.9.3 (08 Jul 2014)
+
+  08 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> +emutos-0.9.3.ebuild:
+  version bump
 
   04 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> -emutos-0.8.3.ebuild:
   old

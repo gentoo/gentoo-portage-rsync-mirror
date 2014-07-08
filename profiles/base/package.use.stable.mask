@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.15 2014/06/29 16:14:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.17 2014/07/08 18:15:58 zlogene Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Mikle Kolyada <zlogene@gentoo.org>
+# Not yet stabilized dependency (bug #514906)
+media-video/mpv libcaca sdl
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Jun 2014)
 # Not yet stabilized dependencies blocking sec bug 514886
