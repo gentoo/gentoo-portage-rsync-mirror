@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.24.1.ebuild,v 1.1 2014/07/08 08:54:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.24.1.ebuild,v 1.2 2014/07/08 14:28:03 idella4 Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-python/six-1.5.2[${PYTHON_USEDEP}]
 	>=dev-python/twisted-conch-10.0.0[${PYTHON_USEDEP}]
 	>=dev-python/twisted-mail-10.0.0[${PYTHON_USEDEP}]
 	>=dev-python/twisted-web-10.0.0[${PYTHON_USEDEP}]
-	>=dev-python/w3lib-1.2[${PYTHON_USEDEP}]
+	>=dev-python/w3lib-1.6[${PYTHON_USEDEP}]
 	dev-python/queuelib[${PYTHON_USEDEP}]
 	>=dev-python/cssselect-0.9[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -42,17 +42,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 		>=net-proxy/mitmproxy-0.10[${PYTHON_USEDEP}]
 		net-ftp/vsftpd )"
-# pytest-twisted listed as a test dep but not in portage
+# pytest-twisted listed as a test dep but not in portage. 
+# Testsuite currently survives without it, so appears optional
 
 REQUIRED_USE="test? ( ssl boto )"
-
-python_prepare_all() {
-	# Skip failing tests; https://github.com/scrapy/scrapy/issues/788
-	# There's 1 doctest failure that remains on being run.
-	sed -e s':test_ajax_url:_&:' -i scrapy/tests/test_http_request.py || die
-
-	distutils-r1_python_prepare_all
-}
 
 python_compile_all() {
 	if use doc; then
@@ -61,7 +54,7 @@ python_compile_all() {
 }
 
 python_test() {
-	py.test --twisted ${PN} || die "tests failed"
+	py.test ${PN} || die "tests failed"
 }
 
 python_install_all() {
