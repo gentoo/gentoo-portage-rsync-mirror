@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmocka
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.13 2014/06/11 19:54:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.14 2014/07/07 23:35:31 jer Exp $
+
+  07 Jul 2014; Jeroen Roovers <jer@gentoo.org> cmocka-0.3.1-r1.ebuild:
+  Marked ~sparc (bug #488696).
 
 *cmocka-0.3.1-r1 (11 Jun 2014)
 

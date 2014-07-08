@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/caja
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/ChangeLog,v 1.6 2014/07/02 09:46:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/caja/ChangeLog,v 1.7 2014/07/07 23:45:03 tomwij Exp $
+
+  07 Jul 2014; Tom Wijsman <TomWij@gentoo.org> caja-1.8.1.ebuild:
+  Add missing dconf dependency; fixes bug #515148, reported by Patrick Lauer.
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org> caja-1.8.1.ebuild:
   x86 stable, bug 513714

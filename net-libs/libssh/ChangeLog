@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.108 2014/06/18 20:38:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.110 2014/07/07 23:41:34 jer Exp $
+
+  07 Jul 2014; Jeroen Roovers <jer@gentoo.org> -libssh-0.5.5.ebuild,
+  -libssh-0.6.1.ebuild, -files/libssh-0.5.0-no-pdf-doc.patch,
+  -files/libssh-0.6.0-libgcrypt-1.6.0.patch:
+  Old.
+
+  07 Jul 2014; Jeroen Roovers <jer@gentoo.org> libssh-0.6.1.ebuild,
+  libssh-0.6.3.ebuild, libssh-0.6.3-r1.ebuild:
+  Marked ~sparc (bug #488696).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libssh-0.6.3-r1.ebuild,
   libssh-9999.ebuild:

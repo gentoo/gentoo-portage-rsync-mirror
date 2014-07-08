@@ -1,6 +1,10 @@
 # ChangeLog for mate-extra/mate-character-map
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.5 2014/05/04 14:54:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-character-map/ChangeLog,v 1.6 2014/07/07 23:47:13 tomwij Exp $
+
+  07 Jul 2014; Tom Wijsman <TomWij@gentoo.org> mate-character-map-1.6.0.ebuild:
+  Add missing mate-common dependency; fixes bug #515070, reported by Patrick
+  Lauer.
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org>
   mate-character-map-1.6.0.ebuild:
