@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/annogen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/ChangeLog,v 1.1 2013/09/17 16:13:20 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/ChangeLog,v 1.2 2014/07/08 08:21:21 ercpe Exp $
+
+  08 Jul 2014; Johann Schmitz <ercpe@gentoo.org> annogen-0.1.0.ebuild:
+  Fixed dependency to qdox (bug #515972); minor qa things
 
 *annogen-0.1.0 (17 Sep 2013)
 

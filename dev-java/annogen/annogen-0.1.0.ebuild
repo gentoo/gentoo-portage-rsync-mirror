@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/annogen-0.1.0.ebuild,v 1.1 2013/09/17 16:13:20 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/annogen-0.1.0.ebuild,v 1.2 2014/07/08 08:21:21 ercpe Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 CDEPEND="java-virtuals/stax-api:0
 	dev-java/ant-core:0
 	java-virtuals/jdk-with-com-sun:0
-	>=dev-java/qdox-1.6"
+	>=dev-java/qdox-1.6:1.6"
 
 RDEPEND=">=virtual/jdk-1.5
 		${CDEPEND}"
@@ -33,23 +33,23 @@ S="${WORKDIR}"
 src_unpack() {
 	default
 
-	unzip -o -q "${S}/${PN}-src-${PV}.zip"
+	unzip -o -q "${S}/${PN}-src-${PV}.zip" || die
 }
 
 java_prepare() {
-	find -name '*.jar' -exec rm -v {} +
+	find -name '*.jar' -exec rm -v {} + || die
 
 	mkdir "${S}"/classes || die
 }
 
 src_compile() {
-	find org -name "*.java" > "${T}/src.list"
+	find org -name "*.java" > "${T}/src.list" || die
 
 	ejavac -d "${S}"/classes \
 		-classpath $(java-pkg_getjars stax-api,qdox-1.6,ant-core):$(java-config --tools) \
 		"@${T}/src.list"
 
-	cd "${S}"/classes
+	cd "${S}"/classes || die
 	jar -cf "${S}/${PN}.jar" * || die "failed to create jar"
 }
 
