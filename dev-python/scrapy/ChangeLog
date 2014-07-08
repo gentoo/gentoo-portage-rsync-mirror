@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.22 2014/06/25 04:57:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.23 2014/07/08 08:54:41 idella4 Exp $
+
+*scrapy-0.24.1 (08 Jul 2014)
+
+  08 Jul 2014; Ian Delaney <idella4@gentoo.org> +scrapy-0.24.1.ebuild:
+  bump; update deps, test phase
 
 *scrapy-0.20.0 (25 Jun 2014)
 

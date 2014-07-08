@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.13-r1.ebuild,v 1.1 2014/06/22 19:08:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.13.1.ebuild,v 1.1 2014/07/08 08:59:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,26 +41,19 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	# In next release
-	epatch "${FILESDIR}/${P}-exception-after-quit.patch"
-
 	# Don't check for nautilus-python if we aren't installing the nautilus-2 extension
 	sed -e 's:nautilus-python >= 0.6.1::' -i configure || die
-
 	gnome2_src_prepare
 }
 
 src_configure() {
 	gnome2_src_configure \
-		--with-nautilus-extension-dir=${EPREFIX}/usr/share/nautilus-python/extensions
+		--with-nautilus-extension-dir="${EPREFIX}"/usr/share/nautilus-python/extensions
 }
 
 src_install() {
 	gnome2_src_install
 	python_fix_shebang "${ED}"
-
-	# In next release, https://bugzilla.gnome.org/show_bug.cgi?id=685454
-	mv "${ED}usr/share/postr/postr.glade" "${ED}$(python_get_sitedir)/postr/" || die
 
 	rm -r "${ED}usr/share/nautilus-python" || die
 }

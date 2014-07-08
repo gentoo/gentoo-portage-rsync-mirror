@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1317 2014/07/07 14:41:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1318 2014/07/08 08:49:10 mgorny Exp $
+
+  08 Jul 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support linking Python modules on aix, thanks to haubi.
 
   07 Jul 2014; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Stop forcing -m0755 on EGIT3_STORE_DIR and parents, bug #516508.

@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.20.ebuild,v 1.1 2014/06/26 14:44:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.21.ebuild,v 1.1 2014/07/08 08:49:51 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils multilib python-any-r1 readme.gentoo systemd \
-	udev user multilib-minimal
+inherit eutils multilib python-any-r1 readme.gentoo systemd udev user multilib-minimal
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org"
@@ -173,6 +172,7 @@ multilib_src_install_all() {
 	doins src/org.bluez.service
 
 	newinitd "${FILESDIR}"/bluetooth-init.d-r3 bluetooth
+	newinitd "${FILESDIR}"/rfcomm-init.d-r2 rfcomm
 
 	readme.gentoo_create_doc
 }
@@ -186,8 +186,7 @@ pkg_postinst() {
 
 	if ! has_version sys-auth/consolekit && ! has_version sys-apps/systemd; then
 		elog "Since you don't have sys-auth/consolekit neither sys-apps/systemd, you will only"
-		elog "be able to run bluetooth clients as root. If you want to be able to run bluetooth clientes as"
-		elog "a regular user, you need to enable the consolekit use flag for this package or"
-		elog "to add the user to the plugdev group."
+		elog "be able to run bluetooth clients as root. If you want to be able to run bluetooth clients as"
+		elog "a regular user, you need to add the user to the plugdev group."
 	fi
 }

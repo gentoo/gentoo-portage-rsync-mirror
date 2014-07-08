@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.100 2014/06/29 14:24:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.101 2014/07/08 08:49:10 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -603,6 +603,9 @@ distutils-r1_run_phase() {
 	# How to build Python modules in different worlds...
 	local ldopts
 	case "${CHOST}" in
+		# provided by haubi, 2014-07-08
+		*-aix*) ldopts='-shared -Wl,-berok';; # good enough
+		# provided by grobian, 2014-06-22, bug #513664 c7
 		*-darwin*) ldopts='-bundle -undefined dynamic_lookup';;
 		*) ldopts='-shared';;
 	esac

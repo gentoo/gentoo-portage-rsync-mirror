@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.373 2014/06/17 03:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.374 2014/07/08 08:54:50 polynomial-c Exp $
+
+*bash-4.3_p18-r3 (08 Jul 2014)
+
+  08 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p18.ebuild,
+  -bash-4.3_p18-r1.ebuild, +bash-4.3_p18-r3.ebuild,
+  +files/bash-4.3-lastpipe-nested-pipe-segfault.patch:
+  Revbump to fix a segfault in lastpipe mode. Removed old.
 
 *bash-4.3_p18-r2 (17 Jun 2014)
 

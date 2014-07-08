@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p18.ebuild,v 1.1 2014/05/18 10:06:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p18-r3.ebuild,v 1.1 2014/07/08 08:54:50 polynomial-c Exp $
 
 EAPI="4"
 
@@ -83,6 +83,11 @@ src_prepare() {
 	sed -i -r '/^(HS|RL)USER/s:=.*:=:' doc/Makefile.in || die
 	touch -r . doc/*
 
+	epatch "${FILESDIR}"/${PN}-4.3-here-doc-ps2-comsub.patch
+	epatch "${FILESDIR}"/${PN}-4.3-compat-lvl.patch
+	epatch "${FILESDIR}"/${PN}-4.3-parse-time-keyword.patch
+	epatch "${FILESDIR}"/${PN}-4.3-lastpipe-nested-pipe-segfault.patch
+
 	epatch_user
 }
 
@@ -125,7 +130,17 @@ src_configure() {
 		myconf+=( --with-installed-readline=. )
 	fi
 
-	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
+	if use plugins; then
+		append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
+	else
+		# Disable the plugins logic by hand since bash doesn't
+		# provide a way of doing it.
+		export ac_cv_func_dl{close,open,sym}=no \
+			ac_cv_lib_dl_dlopen=no ac_cv_header_dlfcn_h=no
+		sed -i \
+			-e '/LOCAL_LDFLAGS=/s:-rdynamic::' \
+			configure || die
+	fi
 	tc-export AR #444070
 	econf \
 		--docdir='$(datarootdir)'/doc/${PF} \
@@ -185,8 +200,7 @@ src_install() {
 		exeinto /usr/$(get_libdir)/bash
 		doexe $(echo examples/loadables/*.o | sed 's:\.o::g')
 		insinto /usr/include/bash-plugins
-		doins *.h builtins/*.h examples/loadables/*.h include/*.h \
-			lib/{glob/glob.h,tilde/tilde.h}
+		doins *.h builtins/*.h include/*.h lib/{glob/glob.h,tilde/tilde.h}
 	fi
 
 	if use examples ; then
