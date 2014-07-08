@@ -1,6 +1,19 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.214 2014/06/29 18:58:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.216 2014/07/08 13:59:22 ssuominen Exp $
+
+  08 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xfce4-session-4.11.0-upower-0.99.patch,
+  -xfce4-session-4.11.0-r1.ebuild:
+  old
+
+*xfce4-session-4.11.0-r2 (08 Jul 2014)
+
+  08 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/xfce4-session-4.11.0-upower-0.99.0.patch,
+  +xfce4-session-4.11.0-r2.ebuild:
+  Use updated UPower 0.99.0 patch from
+  http://bugzilla.xfce.org/show_bug.cgi?id=9952#c20
 
   29 Jun 2014; Markus Meier <maekke@gentoo.org> xfce4-session-4.10.1-r2.ebuild:
   arm stable, bug #513930

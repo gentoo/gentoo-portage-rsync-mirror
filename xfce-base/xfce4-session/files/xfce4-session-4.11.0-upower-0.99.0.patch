@@ -1,38 +1,42 @@
 Patch from http://bugzilla.xfce.org/show_bug.cgi?id=9952 with modification
 to edit configure.ac (release tarball) instead of configure.ac.in (git)
 
-From ee2228c756e40a4289476f40a6d0045d17418bce Mon Sep 17 00:00:00 2001
+From 38afe446cdc889266f1e553952397cc4a876ecf8 Mon Sep 17 00:00:00 2001
 From: Eric Koegel <eric.koegel@gmail.com>
-Date: Thu, 29 May 2014 19:17:26 +0300
+Date: Mon, 7 Jul 2014 11:30:06 +0300
 Subject: [PATCH] Add suspend/hibernate to shutdown-helper
 
 Upower 0.99 dropped support for suspend/hibernate as an obsolete
 feature in this commit:
 http://cgit.freedesktop.org/upower/commit/?id=1ee642e705a63f5ad56a6b55e4bf5c4a64c959b8
 Add that functionality into the shutdown-helper so these features
-will work again.
+will work again. Additionally Upower is an optional build dependency
+and the minimum required is 0.9.7 to support FreeBSD 9 and 10.
 ---
- configure.ac.in               |  27 +++++++++
+ configure.ac.in               |  30 ++++++++
  xfce4-session/Makefile.am     |   4 +-
- xfce4-session/xfsm-shutdown.c | 126 ++++++++++++++++++++++++++++++++++++++++--
- xfce4-session/xfsm-upower.c   |   5 +-
- xfce4-session/xfsm-upower.h   |   4 ++
- xfsm-shutdown-helper/main.c   |  26 +++++++++
- 6 files changed, 186 insertions(+), 6 deletions(-)
+ xfce4-session/xfsm-shutdown.c | 167 +++++++++++++++++++++++++++++++++++++++++-
+ xfce4-session/xfsm-upower.c   |   8 +-
+ xfce4-session/xfsm-upower.h   |   4 +
+ xfsm-shutdown-helper/main.c   |  26 +++++++
+ 6 files changed, 234 insertions(+), 5 deletions(-)
 
 diff --git a/configure.ac b/configure.ac
-index 910fd35..d4557a4 100644
+index 910fd35..b9c9a90 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -95,6 +95,7 @@ XDT_CHECK_PACKAGE([LIBWNCK], [libwnck-1.0], [2.30])
- XDT_CHECK_PACKAGE([DBUS], [dbus-1], [1.1.0])
+@@ -96,6 +96,10 @@ XDT_CHECK_PACKAGE([DBUS], [dbus-1], [1.1.0])
  XDT_CHECK_PACKAGE([DBUS_GLIB], [dbus-glib-1], [0.84])
  XDT_CHECK_PACKAGE([XFCONF], [libxfconf-0], [4.9.0])
-+XDT_CHECK_PACKAGE([UPOWER],[upower-glib], [0.9.8])
  
++dnl Check for Upower
++XDT_CHECK_OPTIONAL_PACKAGE([UPOWER],[upower-glib], [0.9.7],
++			   [upower],[Upower support])
++
  dnl Check for polkit / systemd integration
  XDT_CHECK_OPTIONAL_PACKAGE([SYSTEMD], [polkit-gobject-1], [0.100],
-@@ -157,6 +158,31 @@ if test "x$linux_ioprio_works" = "xyes"; then
+                            [systemd], [Systemd support (through polit)])
+@@ -157,6 +161,31 @@ if test "x$linux_ioprio_works" = "xyes"; then
              [Defined if linux/ioprio.h not only exists, but works properly])
  fi
  
@@ -64,7 +68,7 @@ index 910fd35..d4557a4 100644
  dnl check for location Xfce glade files were installed to
  XFCE_GLADE_CATALOG_PATH="`pkg-config --variable glade_catalogdir libxfce4ui-1`"
  XFCE_GLADE_PIXMAP_PATH="`pkg-config --variable glade_pixmapdir libxfce4ui-1`"
-@@ -207,5 +233,6 @@ echo " * Gnome Keyring support:          yes"
+@@ -207,5 +236,6 @@ echo " * Gnome Keyring support:          yes"
  else
  echo " * Gnome Keyring support:          no"
  fi
@@ -94,18 +98,20 @@ index 5472b33..6b5968e 100644
  
  xfce4_session_DEPENDENCIES =						\
 diff --git a/xfce4-session/xfsm-shutdown.c b/xfce4-session/xfsm-shutdown.c
-index 4c483a7..cba08b8 100644
+index 4c483a7..24b548e 100644
 --- a/xfce4-session/xfsm-shutdown.c
 +++ b/xfce4-session/xfsm-shutdown.c
-@@ -57,6 +57,7 @@
+@@ -57,6 +57,9 @@
  #include <dbus/dbus-glib-lowlevel.h>
  #include <libxfce4util/libxfce4util.h>
  #include <gtk/gtk.h>
++#ifdef HAVE_UPOWER
 +#include <upower.h>
++#endif
  
  #include <libxfsm/xfsm-util.h>
  
-@@ -76,6 +77,8 @@
+@@ -76,6 +79,8 @@
  
  static void xfsm_shutdown_finalize  (GObject      *object);
  static void xfsm_shutdown_sudo_free (XfsmShutdown *shutdown);
@@ -114,7 +120,7 @@ index 4c483a7..cba08b8 100644
  
  
  
-@@ -403,14 +406,16 @@ xfsm_shutdown_sudo_try_action (XfsmShutdown      *shutdown,
+@@ -403,14 +408,16 @@ xfsm_shutdown_sudo_try_action (XfsmShutdown      *shutdown,
    g_return_val_if_fail (shutdown->helper_state == SUDO_AVAILABLE, FALSE);
    g_return_val_if_fail (shutdown->helper_outfile != NULL, FALSE);
    g_return_val_if_fail (shutdown->helper_infile != NULL, FALSE);
@@ -133,12 +139,16 @@ index 4c483a7..cba08b8 100644
    else
      return FALSE;
  
-@@ -692,7 +697,17 @@ xfsm_shutdown_try_suspend (XfsmShutdown  *shutdown,
+@@ -692,7 +699,19 @@ xfsm_shutdown_try_suspend (XfsmShutdown  *shutdown,
  {
    g_return_val_if_fail (XFSM_IS_SHUTDOWN (shutdown), FALSE);
  
--  return xfsm_upower_try_suspend (shutdown->upower, error);
-+#if UP_CHECK_VERSION(0, 99, 0)
++#ifdef HAVE_UPOWER
++#if !UP_CHECK_VERSION(0, 99, 0)
+   return xfsm_upower_try_suspend (shutdown->upower, error);
++#endif /* UP_CHECK_VERSION */
++#endif /* HAVE_UPOWER */
++
 +  if (shutdown->helper_state == SUDO_AVAILABLE)
 +    {
 +      xfsm_upower_lock_screen (shutdown->upower, "Suspend", error);
@@ -146,18 +156,19 @@ index 4c483a7..cba08b8 100644
 +    }
 +  else
 +    return FALSE;
-+#else
-+    return xfsm_upower_try_suspend (shutdown->upower, error);
-+#endif
  }
  
  
-@@ -703,7 +718,17 @@ xfsm_shutdown_try_hibernate (XfsmShutdown  *shutdown,
+@@ -703,7 +722,19 @@ xfsm_shutdown_try_hibernate (XfsmShutdown  *shutdown,
  {
    g_return_val_if_fail (XFSM_IS_SHUTDOWN (shutdown), FALSE);
  
--  return xfsm_upower_try_hibernate (shutdown->upower, error);
-+#if UP_CHECK_VERSION(0, 99, 0)
++#ifdef HAVE_UPOWER
++#if !UP_CHECK_VERSION(0, 99, 0)
+   return xfsm_upower_try_hibernate (shutdown->upower, error);
++#endif /* UP_CHECK_VERSION */
++#endif /* HAVE_UPOWER */
++
 +  if (shutdown->helper_state == SUDO_AVAILABLE)
 +    {
 +      xfsm_upower_lock_screen (shutdown->upower, "Hibernate", error);
@@ -165,41 +176,42 @@ index 4c483a7..cba08b8 100644
 +    }
 +  else
 +    return FALSE;
-+#else
-+    return xfsm_upower_try_hibernate (shutdown->upower, error);
-+#endif
  }
  
  
-@@ -784,8 +809,13 @@ xfsm_shutdown_can_suspend (XfsmShutdown  *shutdown,
+@@ -784,8 +815,15 @@ xfsm_shutdown_can_suspend (XfsmShutdown  *shutdown,
        return TRUE;
      }
  
-+#if UP_CHECK_VERSION(0, 99, 0)
-+  *can_suspend = xfsm_shutdown_fallback_can_suspend ();
-+  return TRUE;
-+#else
++#ifdef HAVE_UPOWER
++#if !UP_CHECK_VERSION(0, 99, 0)
    return xfsm_upower_can_suspend (shutdown->upower, can_suspend, 
                                    auth_suspend, error);
-+#endif
++#endif /* UP_CHECK_VERSION */
++#endif /* HAVE_UPOWER */
++
++  *can_suspend = xfsm_shutdown_fallback_can_suspend ();
++  return TRUE;
  }
  
  
-@@ -804,8 +834,13 @@ xfsm_shutdown_can_hibernate (XfsmShutdown  *shutdown,
+@@ -804,8 +842,15 @@ xfsm_shutdown_can_hibernate (XfsmShutdown  *shutdown,
        return TRUE;
      }
  
-+#if UP_CHECK_VERSION(0, 99, 0)
-+  *can_hibernate = xfsm_shutdown_fallback_can_hibernate ();
-+  return TRUE;
-+#else
++#ifdef HAVE_UPOWER
++#if !UP_CHECK_VERSION(0, 99, 0)
    return xfsm_upower_can_hibernate (shutdown->upower, can_hibernate,
                                      auth_hibernate, error);
-+#endif
++#endif /* UP_CHECK_VERSION */
++#endif /* HAVE_UPOWER */
++
++  *can_hibernate = xfsm_shutdown_fallback_can_hibernate ();
++  return TRUE;
  }
  
  
-@@ -816,3 +851,86 @@ xfsm_shutdown_can_save_session (XfsmShutdown *shutdown)
+@@ -816,3 +861,121 @@ xfsm_shutdown_can_save_session (XfsmShutdown *shutdown)
    g_return_val_if_fail (XFSM_IS_SHUTDOWN (shutdown), FALSE);
    return shutdown->kiosk_can_save_session;
  }
@@ -207,13 +219,46 @@ index 4c483a7..cba08b8 100644
 +
 +
 +#ifdef BACKEND_TYPE_FREEBSD
++static gchar *
++get_string_sysctl (GError **err, const gchar *format, ...)
++{
++        va_list args;
++        gchar *name;
++        size_t value_len;
++        gchar *str = NULL;
++
++        g_return_val_if_fail(format != NULL, FALSE);
++
++        va_start (args, format);
++        name = g_strdup_vprintf (format, args);
++        va_end (args);
++
++        if (sysctlbyname (name, NULL, &value_len, NULL, 0) == 0) {
++                str = g_new (char, value_len + 1);
++                if (sysctlbyname (name, str, &value_len, NULL, 0) == 0)
++                        str[value_len] = 0;
++                else {
++                        g_free (str);
++                        str = NULL;
++                }
++        }
++
++        if (!str)
++                g_set_error (err, 0, 0, "%s", g_strerror(errno));
++
++        g_free(name);
++        return str;
++}
++
++
++
 +static gboolean
 +freebsd_supports_sleep_state (const gchar *state)
 +{
 +  gboolean ret = FALSE;
 +  gchar *sleep_states;
 +
-+  sleep_states = up_get_string_sysctl (NULL, "hw.acpi.supported_sleep_state");
++  sleep_states = get_string_sysctl (NULL, "hw.acpi.supported_sleep_state");
 +  if (sleep_states != NULL)
 +    {
 +      if (strstr (sleep_states, state) != NULL)
@@ -224,7 +269,9 @@ index 4c483a7..cba08b8 100644
 +
 +  return ret;
 +}
-+#endif
++#endif /* BACKEND_TYPE_FREEBSD */
++
++
 +
 +#ifdef BACKEND_TYPE_LINUX
 +static gboolean
@@ -252,7 +299,7 @@ index 4c483a7..cba08b8 100644
 +
 +  return ret;
 +}
-+#endif
++#endif /* BACKEND_TYPE_LINUX */
 +
 +
 +static gboolean
@@ -287,7 +334,7 @@ index 4c483a7..cba08b8 100644
 +  return FALSE;
 +}
 diff --git a/xfce4-session/xfsm-upower.c b/xfce4-session/xfsm-upower.c
-index 57402ec..8112829 100644
+index 57402ec..2960943 100644
 --- a/xfce4-session/xfsm-upower.c
 +++ b/xfce4-session/xfsm-upower.c
 @@ -21,6 +21,7 @@
@@ -298,7 +345,7 @@ index 57402ec..8112829 100644
  
  #include <libxfsm/xfsm-util.h>
  #include <xfce4-session/xfsm-upower.h>
-@@ -283,7 +284,7 @@ xfsm_upower_try_method (XfsmUPower   *upower,
+@@ -283,14 +284,13 @@ xfsm_upower_try_method (XfsmUPower   *upower,
  
  
  
@@ -307,15 +354,24 @@ index 57402ec..8112829 100644
  xfsm_upower_lock_screen (XfsmUPower   *upower,
                           const gchar  *sleep_kind,
                           GError      **error)
-@@ -299,6 +300,7 @@ xfsm_upower_lock_screen (XfsmUPower   *upower,
+ {
+   XfconfChannel *channel;
+   gboolean       ret = TRUE;
+-  GError        *err = NULL;
+ 
+   g_return_val_if_fail (sleep_kind != NULL, FALSE);
+ 
+@@ -299,6 +299,9 @@ xfsm_upower_lock_screen (XfsmUPower   *upower,
      {
        if (xfsm_upower_proxy_ensure (upower, error))
          {
 +#if !UP_CHECK_VERSION(0, 99, 0)
++          GError        *err = NULL;
++
            /* tell upower we're going to sleep, this saves some
             * time while we sleep 1 second if xflock4 is spawned */
            ret = dbus_g_proxy_call (upower->upower_proxy,
-@@ -312,6 +314,7 @@ xfsm_upower_lock_screen (XfsmUPower   *upower,
+@@ -312,6 +315,7 @@ xfsm_upower_lock_screen (XfsmUPower   *upower,
                g_warning ("Couldn't sent that we were about to sleep: %s", err->message);
                g_error_free (err);
              }
@@ -388,5 +444,5 @@ index 667f288..60c621b 100644
    if (succeed)
      {
 -- 
-1.9.3
+2.0.0
 
