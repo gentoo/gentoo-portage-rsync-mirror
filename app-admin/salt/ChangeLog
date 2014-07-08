@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.39 2014/06/19 01:34:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.40 2014/07/08 21:45:21 chutzpah Exp $
+
+*salt-2014.1.6 (08 Jul 2014)
+
+  08 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +salt-2014.1.6.ebuild,
+  salt-9999.ebuild:
+  Version bump. Add requests dep to 9999 ebuild (bug #516708).
 
 *salt-2014.1.5-r1 (19 Jun 2014)
 
