@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11.13.3_beta8-r1.ebuild,v 1.1 2014/01/28 09:22:49 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11.13.3_beta8-r2.ebuild,v 1.1 2014/07/08 15:54:44 pacho Exp $
 
 EAPI="5"
-
-inherit eutils user versionator
+inherit eutils readme.gentoo systemd user versionator
 
 MY_BETA="$(get_version_component_range 6)"
 MY_PATCH="$(get_version_component_range 4-5)"
@@ -24,6 +23,27 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="
+Please create one or more config files in
+/etc/ez-ipupdate/. A bunch of samples can
+be found in the doc directory.
+
+All config files must have a '.conf' extension.
+
+If you are using openRC you need to:
+- Please do not use the 'run-as-user', 'run-as-euser',
+'cache-file' and 'pidfile' options, since these are
+handled internally by the init-script.
+
+-If you want to use ez-ipupdate in daemon mode,
+please add 'daemon' to the config file(s) and
+add the ez-ipupdate init-script to the default runlevel.
+Without the 'daemon' option, you can run the
+init-script with the 'update' parameter inside
+your PPP ip-up script.
+"
 
 src_prepare() {
 	# apply debian patches
@@ -61,8 +81,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	newinitd "${FILESDIR}/ez-ipupdate.initd" ez-ipupdate
+	systemd_dounit "${FILESDIR}/${PN}.service"
 	keepdir /etc/ez-ipupdate
 
 	# install docs
@@ -75,6 +96,8 @@ src_install() {
 	# install example configs
 	docinto examples
 	dodoc ex*conf
+
+	readme.gentoo_create_doc
 }
 
 pkg_preinst() {
@@ -86,26 +109,7 @@ pkg_postinst() {
 	chmod 750 /etc/ez-ipupdate /var/cache/ez-ipupdate
 	chown ez-ipupd:ez-ipupd /etc/ez-ipupdate /var/cache/ez-ipupdate
 
-	elog
-	elog "Please create one or more config files in"
-	elog "/etc/ez-ipupdate/. A bunch of samples can"
-	elog "be found in the doc directory."
-	elog
-	elog "All config files must have a '.conf' extension."
-	elog
-	elog "Please do not use the 'run-as-user', 'run-as-euser',"
-	elog "'cache-file' and 'pidfile' options, since these are"
-	elog "handled internally by the init-script!"
-	elog
-	elog "If you want to use ez-ipupdate in daemon mode,"
-	elog "please add 'daemon' to the config file(s) and"
-	elog "add the ez-ipupdate init-script to the default"
-	elog "runlevel."
-	elog
-	elog "Without the 'daemon' option, you can run the"
-	elog "init-script with the 'update' parameter inside"
-	elog "your PPP ip-up script."
-	elog
+	readme.gentoo_print_elog
 
 	if [ -f /etc/ez-ipupdate.conf ]; then
 		elog "!!! IMPORTANT UPDATE NOTICE !!!"

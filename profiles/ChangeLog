@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9173 2014/07/07 20:50:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9174 2014/07/08 15:47:11 axs Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> package.mask:
+  removed last-rites on postal2mp-demo
 
   07 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> package.mask:
   masked games-fps/postal2mp-demo for treecleaning

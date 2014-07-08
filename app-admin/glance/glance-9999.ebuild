@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-9999.ebuild,v 1.9 2014/07/06 12:30:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-9999.ebuild,v 1.10 2014/07/08 15:55:55 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -44,7 +44,6 @@ RDEPEND="${DEPEND}
 	>=dev-python/webob-1.2[${PYTHON_USEDEP}]
 	swift? (
 		>=dev-python/python-swiftclient-1.2[${PYTHON_USEDEP}]
-		<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
 	)
 	sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )

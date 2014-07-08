@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.49 2014/03/22 19:27:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.50 2014/07/08 15:44:33 pacho Exp $
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> files/noip.service:
+  Needs network-online (#512056 by Martin Vath)
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -noip-updater-2.1.9.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nrpe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/ChangeLog,v 1.32 2014/06/27 08:22:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/ChangeLog,v 1.33 2014/07/08 15:59:26 pacho Exp $
+
+*nrpe-2.15-r1 (08 Jul 2014)
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> +files/nrpe.service,
+  +nrpe-2.15-r1.ebuild:
+  Add unit file (#505764 by Markos Chandras and Stefan G. Weichinger)
 
   27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -nrpe-2.13-r4.ebuild,
   -nrpe-2.14.ebuild:

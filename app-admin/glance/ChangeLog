@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.43 2014/07/06 12:30:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.44 2014/07/08 15:55:55 prometheanfire Exp $
+
+  08 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> glance-9999.ebuild:
+  relaxing dep, more is needed
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> glance-2014.1.1.ebuild,
   glance-2014.1.9999.ebuild, glance-9999.ebuild:
