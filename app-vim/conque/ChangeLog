@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/conque
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conque/ChangeLog,v 1.9 2012/10/07 10:23:14 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conque/ChangeLog,v 1.10 2014/07/08 11:32:14 nimiux Exp $
+
+  08 Jul 2014; Chema Alonso <nimiux@gentoo.org> conque-2.3.ebuild:
+  Stable for amd64 wrt bug #513734
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #274113

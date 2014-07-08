@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.26 2012/05/05 08:58:53 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.27 2014/07/08 12:00:43 pacho Exp $
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> -camorama-0.19-r1.ebuild:
+  Drop old
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> camorama-0.19-r1.ebuild,
   camorama-0.19-r2.ebuild:
@@ -103,4 +106,3 @@
   13 Apr 2003; Alastair Tse <liquidx@gentoo.org> Manifest,
   camorama-0.16.ebuild:
   initial ebuild. solves #18712
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.52 2014/04/02 10:00:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.53 2014/07/08 11:52:04 pacho Exp $
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> graveman-0.3.12_p5-r2.ebuild:
+  Improve gnome2.eclass, prevent building of all translations (#402673)
 
 *graveman-0.3.12_p5-r2 (02 Apr 2014)
 

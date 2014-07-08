@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ansiesc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ansiesc/ChangeLog,v 1.1 2011/03/11 09:39:17 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ansiesc/ChangeLog,v 1.2 2014/07/08 11:39:40 nimiux Exp $
+
+  08 Jul 2014; Chema Alonso <nimiux@gentoo.org> ansiesc-12.ebuild:
+  Stable for amd64 wrt bug #513732
 
 *ansiesc-12 (11 Mar 2011)
 

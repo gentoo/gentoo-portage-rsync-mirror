@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5-r2.ebuild,v 1.1 2014/04/02 10:00:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5-r2.ebuild,v 1.2 2014/07/08 11:52:04 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Graphical frontend for cdrecord, mkisofs, readcd and sox using GTK+2"
 HOMEPAGE="http://graveman.tuxfamily.org/"
@@ -15,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug dvdr flac mp3 nls vorbis"
 
-RDEPEND="app-cdr/cdrdao
+RDEPEND="
+	app-cdr/cdrdao
 	>=dev-libs/glib-2.4:2
 	>=gnome-base/libglade-2.4:2.0
 	media-libs/libmng
@@ -24,14 +26,15 @@ RDEPEND="app-cdr/cdrdao
 	>=x11-libs/gtk+-2.4:2
 	dvdr? ( app-cdr/dvd+rw-tools )
 	flac? ( media-libs/flac )
-	mp3? ( media-libs/libid3tag
+	mp3? ( 	media-libs/libid3tag
 		media-libs/libmad
 		media-sound/sox )
 	nls? ( virtual/libintl )
 	vorbis? (
 		media-libs/libogg
 		media-libs/libvorbis
-		media-sound/sox )"
+		media-sound/sox )
+"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
@@ -39,16 +42,23 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P/_p/-}
 
-DOCS="AUTHORS ChangeLog NEWS README* THANKS"
-
 src_prepare() {
-	epatch "${FILESDIR}"/joliet-long.patch \
+	epatch \
+		"${FILESDIR}"/joliet-long.patch \
 		"${FILESDIR}"/rename.patch \
 		"${FILESDIR}"/desktop-entry.patch
 
 	if use mp3 || use vorbis; then
 		epatch "${FILESDIR}"/sox.patch
 	fi
+
+	# Fix tests
+	echo glade/dialog_media.glade >> po/POTFILES.in
+	echo glade/window_welcome.glade >> po/POTFILES.in
+	echo src/flac.c >> po/POTFILES.in
+
+	eautoreconf # Needed for build only the needed translations
+	gnome2_src_prepare
 }
 
 src_configure() {
