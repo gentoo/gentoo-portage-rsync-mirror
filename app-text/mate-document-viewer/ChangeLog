@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mate-document-viewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mate-document-viewer/ChangeLog,v 1.3 2014/05/04 14:53:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mate-document-viewer/ChangeLog,v 1.4 2014/07/07 23:22:56 tomwij Exp $
+
+  07 Jul 2014; Tom Wijsman <TomWij@gentoo.org>
+  mate-document-viewer-1.6.2-r1.ebuild:
+  Add missing gnome-doc-utils dependency for xml2po; fixes bug #515782, reported
+  by Patrick Lauer.
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org>
   mate-document-viewer-1.6.2-r1.ebuild:
