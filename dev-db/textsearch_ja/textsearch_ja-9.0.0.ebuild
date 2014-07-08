@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/textsearch_ja/textsearch_ja-8.4.2.ebuild,v 1.1 2012/07/06 22:45:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/textsearch_ja/textsearch_ja-9.0.0.ebuild,v 1.1 2014/07/08 00:11:04 naota Exp $
 
 EAPI=4
 
 DESCRIPTION="Integrated Full-Text-Search for Japanese language using morphological analyze."
 HOMEPAGE="http://textsearch-ja.projects.postgresql.org/index.html"
-SRC_URI="http://pgfoundry.org/frs/download.php/2287/textsearch_ja-${PV}.tar.gz"
+SRC_URI="http://pgfoundry.org/frs/download.php/2943/textsearch_ja-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
