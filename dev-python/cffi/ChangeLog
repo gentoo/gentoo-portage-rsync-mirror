@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.35 2014/06/23 11:12:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.36 2014/07/08 03:20:58 radhermit Exp $
+
+*cffi-0.8.6 (08 Jul 2014)
+
+  08 Jul 2014; Tim Harder <radhermit@gentoo.org> +cffi-0.8.6.ebuild:
+  Version bump.
 
   23 Jun 2014; Tobias Klausmann <klausman@gentoo.org> cffi-0.8.2.ebuild:
   Dekeywording on alpha due to ply being broken (bug 514446) which dekeywords

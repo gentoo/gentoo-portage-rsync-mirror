@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/figlet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.39 2013/07/28 12:03:22 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.40 2014/07/08 03:30:39 mr_bones_ Exp $
+
+*figlet-2.2.5 (08 Jul 2014)
+
+  08 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> +figlet-2.2.5.ebuild:
+  version bump (version numbering change per upstream) with ebuild submitted by
+  Matthias Maier via bug #427700
 
   28 Jul 2013; Fabian Groffen <grobian@gentoo.org> figlet-222.ebuild:
   Marked ~x64-macos, bug #416949
