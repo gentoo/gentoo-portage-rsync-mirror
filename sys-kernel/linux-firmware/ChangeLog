@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.97 2014/07/07 18:17:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.98 2014/07/08 06:51:17 zlogene Exp $
+
+  08 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  linux-firmware-20131230.ebuild:
+  Drop live keywords
 
   07 Jul 2014; Chema Alonso <nimiux@gentoo.org> linux-firmware-20131230.ebuild:
   Stable for amd64 wrt bug #508982

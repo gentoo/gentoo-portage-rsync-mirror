@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20131230.ebuild,v 1.7 2014/07/07 18:17:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20131230.ebuild,v 1.8 2014/07/08 06:51:17 zlogene Exp $
 
 EAPI=5
 inherit savedconfig
@@ -9,7 +9,7 @@ if [[ ${PV} == 99999999* ]]; then
 	inherit git-2
 	SRC_URI=""
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/firmware/${PN}.git"
-	KEYWORDS="arm hppa"
+	KEYWORDS=""
 else
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
 	KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
