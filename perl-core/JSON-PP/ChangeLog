@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/JSON-PP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.25 2014/02/02 00:04:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.26 2014/07/08 22:21:17 dilfridge Exp $
+
+  08 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -JSON-PP-2.271.40.ebuild, -JSON-PP-2.271.50.ebuild:
+  Remove old
 
   02 Feb 2014; Mike Frysinger <vapier@gentoo.org> JSON-PP-2.272.0.ebuild,
   JSON-PP-2.272.20.ebuild:

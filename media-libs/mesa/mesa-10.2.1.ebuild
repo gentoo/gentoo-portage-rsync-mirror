@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.2.1.ebuild,v 1.2 2014/06/18 19:55:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.2.1.ebuild,v 1.3 2014/07/08 22:15:06 zorry Exp $
 
 EAPI=5
 
@@ -300,6 +300,11 @@ multilib_src_configure() {
 		"
 	fi
 
+	# on abi_x86_32 hardened we need to have asm disable  
+	if [[ ${ABI} == x86* ]] && use pic; then
+		myconf+=" --disable-asm"
+	fi
+
 	# build fails with BSD indent, bug #428112
 	use userland_GNU || export INDENT=cat
 
@@ -316,7 +321,6 @@ multilib_src_configure() {
 		$(use_enable gles2) \
 		$(use_enable nptl glx-tls) \
 		$(use_enable osmesa) \
-		$(use_enable !pic asm) \
 		--enable-llvm-shared-libs \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \

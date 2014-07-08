@@ -1,6 +1,16 @@
 # ChangeLog for virtual/perl-IPC-Cmd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.50 2014/01/20 20:53:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.51 2014/07/08 22:12:06 dilfridge Exp $
+
+*perl-IPC-Cmd-0.920.0 (08 Jul 2014)
+*perl-IPC-Cmd-0.800.0-r1 (08 Jul 2014)
+
+  08 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-IPC-Cmd-0.680.ebuild, -perl-IPC-Cmd-0.700.0-r1.ebuild,
+  -perl-IPC-Cmd-0.720.0.ebuild, -perl-IPC-Cmd-0.760.0-r1.ebuild,
+  -perl-IPC-Cmd-0.800.0.ebuild, +perl-IPC-Cmd-0.800.0-r1.ebuild,
+  +perl-IPC-Cmd-0.920.0.ebuild:
+  Add perl-5.20 version; improve dependencies; remove old
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-IPC-Cmd-0.680.ebuild,
   perl-IPC-Cmd-0.720.0.ebuild, perl-IPC-Cmd-0.760.0-r1.ebuild,

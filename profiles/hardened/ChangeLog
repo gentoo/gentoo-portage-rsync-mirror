@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.55 2014/07/02 10:57:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.56 2014/07/08 22:25:25 zorry Exp $
+
+  08 Jul 2014; Magnus Granberg <zorry@gentoo.org>
+  linux/amd64/package.use:
+  Add pic to package that need it when use of the new multilib
 
   02 Jul 2014; Michał Górny <mgorny@gentoo.org>
   linux/musl/mips/mipsel/make.defaults, linux/uclibc/mips/mipsel/make.defaults:
