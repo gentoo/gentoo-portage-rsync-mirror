@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.31 2014/07/03 22:07:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.32 2014/07/08 20:47:13 axs Exp $
+
+  08 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  doom3-demo-1.1.1286-r1.ebuild:
+  adjusted for erroneous gx86-multilib dependency versions; dropped use flags as
+  opengl is required and there is no dedicated server
 
 *doom3-demo-1.1.1286-r1 (03 Jul 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286-r1.ebuild,v 1.1 2014/07/03 22:07:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/doom3-demo-1.1.1286-r1.ebuild,v 1.2 2014/07/08 20:47:13 axs Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -14,7 +14,7 @@ SRC_URI="mirror://3dgamers/doom3/doom3-linux-${PV}-demo.x86.run
 LICENSE="DOOM3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="opengl dedicated"
+IUSE=""
 RESTRICT="strip mirror"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/*"
 
@@ -25,16 +25,15 @@ RDEPEND="sys-libs/glibc
 	amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] )
 	|| (
 		(
+			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
 			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
 			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
 		)
-		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-	)
-	opengl? ( || (
-		virtual/opengl[abi_x86_32(-)]
-		app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-	) )
-	dedicated? ( app-misc/screen )"
+		(
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+		)
+	)"
 
 S=${WORKDIR}
 
@@ -46,16 +45,14 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "${dir}"
-
 	insinto "${dir}"
 	doins License.txt README version.info
-	exeinto "${dir}"
-	#doexe gamex86.so libgcc_s.so.1 libstdc++.so.5 || die "doexe libs"
-	doexe gamex86.so bin/Linux/x86/doom.x86
 
 	insinto "${dir}"/demo
 	doins demo/* || die "doins base"
+
+	exeinto "${dir}"
+	doexe gamex86.so bin/Linux/x86/doom.x86
 
 	newicon "${DISTDIR}"/doom3.png ${PN}.png
 
