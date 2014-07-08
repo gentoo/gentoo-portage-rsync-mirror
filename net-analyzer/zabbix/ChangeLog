@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.163 2014/06/25 20:44:16 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.164 2014/07/08 12:32:11 pacho Exp $
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> files/zabbix-agentd.service:
+  Fix zabbix-agentd.service (#515618 by Christian Roessner)
 
 *zabbix-2.0.12-r1 (25 Jun 2014)
 *zabbix-2.2.4 (25 Jun 2014)
