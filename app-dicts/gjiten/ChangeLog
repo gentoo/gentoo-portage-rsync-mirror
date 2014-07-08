@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.24 2014/07/08 00:41:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.25 2014/07/08 11:10:52 pacho Exp $
+
+*gjiten-2.6-r3 (08 Jul 2014)
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> +files/gjiten-2.6-desktop.patch,
+  +gjiten-2.6-r3.ebuild:
+  Use eapi5 and readme.gentoo.eclass
 
   08 Jul 2014; Naohiro Aota <naota@gentoo.org>
   +files/gjiten-2.6-drop-gnome.patch, gjiten-2.6-r2.ebuild:

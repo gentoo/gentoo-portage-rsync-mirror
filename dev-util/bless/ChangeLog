@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bless
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.21 2012/05/04 17:51:45 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.22 2014/07/08 11:22:29 pacho Exp $
+
+  08 Jul 2014; Pacho Ramos <pacho@gentoo.org> -bless-0.5.2.ebuild:
+  Drop old version as it's one of the last eapi0 consumers of gnome2.eclass
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> bless-0.5.2.ebuild,
   bless-0.6.0-r1.ebuild:
@@ -97,4 +100,3 @@
   15 Feb 2006; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
   +bless-0.4.0.ebuild:
   Initial import of bless
-

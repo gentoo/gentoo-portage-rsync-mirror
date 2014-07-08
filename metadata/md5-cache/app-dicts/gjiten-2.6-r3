@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=gnome-base/libgnome-2.2 >=gnome-base/libgnomeui-2.2 >=gnome-base/libglade-2 app-text/rarian dev-util/intltool app-text/xmlto app-text/docbook-xml-dtd:4.1.2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=A Japanese dictionary program for Gnome
+EAPI=5
+HOMEPAGE=http://gjiten.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=>=gnome-base/libgnome-2.2 >=gnome-base/libgnomeui-2.2 >=gnome-base/libglade-2
+RESTRICT=test
+SLOT=0
+SRC_URI=http://gjiten.sourceforge.net/gjiten-2.6.tar.gz
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	readme.gentoo	141a79c68c8b9a1ec273628ee0711c72	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=25c055b482b67f881b803b3e44572509
