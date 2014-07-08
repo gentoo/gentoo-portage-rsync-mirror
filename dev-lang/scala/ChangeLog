@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.36 2014/07/06 10:39:35 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.37 2014/07/08 15:17:10 gienah Exp $
+
+*scala-2.11.1 (08 Jul 2014)
+
+  08 Jul 2014; Mark Wright <gienah@gentoo.org> +files/scala-2.11.1-no-git.patch,
+  +scala-2.11.1.ebuild:
+  Bump scala to 2.11.1, fixes Bug 508328 - dev-lang/scala-2.11.1 version bump,
+  thanks to Joel for reporting.
 
 *scala-2.10.4 (06 Jul 2014)
 
