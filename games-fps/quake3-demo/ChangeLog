@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/quake3-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.25 2012/12/25 19:07:03 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/ChangeLog,v 1.26 2014/07/08 21:21:11 axs Exp $
+
+*quake3-demo-1.11-r1 (08 Jul 2014)
+
+  08 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +quake3-demo-1.11-r1.ebuild, metadata.xml:
+  bumped EAPI to 5, adjustd deps for gx86-multilib, dropped useless use flags,
+  made USE=dedicated install only the dedicated server, as it should
 
   25 Dec 2012; Tupone Alfredo <tupone@gentoo.org> quake3-demo-1.11.ebuild:
   Use QA_PREBUILT. Bug #430374 by Diego Elio Pettenò

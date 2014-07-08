@@ -2559,6 +2559,7 @@ games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doom-data:doomsday - Add wrapper to run it within doomsday
+games-fps/doom3:dedicated - install only as a dedicated game server
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
 games-fps/doomsday:doom - Install launcher for jdoom game
@@ -2594,6 +2595,7 @@ games-fps/quake3:mumble - Adds player-location (positional audio) support to VoI
 games-fps/quake3:teamarena - Adds support for Team Arena expansion pack
 games-fps/quake3:voice - Adds VoIP support
 games-fps/quake3-bin:teamarena - Adds support for Team Arena expansion pack
+games-fps/quake3-demo:dedicated - install only as a dedicated game serer
 games-fps/quakeforge:wildmidi - enable libWildMidi support
 games-fps/quakeforge:xdg - enable XDG support
 games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure for use
