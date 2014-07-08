@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=dev-util/ragel test? ( ruby_targets_ruby19? ( >=dev-ruby/daemons-1.0.9[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] >=dev-ruby/eventmachine-1.0.0[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( >=dev-ruby/daemons-1.0.9[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] >=dev-ruby/eventmachine-1.0.0[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] dev-ruby/rake-compiler[ruby_targets_ruby19] test? ( dev-ruby/rspec:0[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=A fast and very simple Ruby web server
+EAPI=5
+HOMEPAGE=http://code.macournoyer.com/thin/
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 doc test test
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+LICENSE=Ruby
+RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/daemons-1.0.9[ruby_targets_ruby19] >=dev-ruby/rack-1.0.0[ruby_targets_ruby19] >=dev-ruby/eventmachine-1.0.0[ruby_targets_ruby19] virtual/ruby-ssl[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+SLOT=0
+SRC_URI=https://github.com/macournoyer/thin/archive/v1.6.2.tar.gz -> thin-1.6.2.tar.gz
+_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	738ee4b7f8b16d4a734b4d37717db89b	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=f4f89cf12398d1dbf5b8949fa4e0e943
