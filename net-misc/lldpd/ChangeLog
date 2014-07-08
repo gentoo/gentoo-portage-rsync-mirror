@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.15 2014/07/07 22:08:35 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.16 2014/07/08 18:34:25 chutzpah Exp $
+
+*lldpd-0.7.9-r2 (08 Jul 2014)
+
+  08 Jul 2014; Patrick McLean <chutzpah@gentoo.org> -lldpd-0.7.9.ebuild,
+  -lldpd-0.7.9-r1.ebuild, +lldpd-0.7.9-r2.ebuild,
+  +files/lldpd-0.7.9-seccomp-add-syscalls.patch:
+  Revision bump, add a patch to whitelist some more syscalls in seccomp and
+  remove the pidfile patch.
 
 *lldpd-0.7.9-r1 (07 Jul 2014)
 

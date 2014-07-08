@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1361 2014/07/08 18:22:10 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1362 2014/07/08 18:53:11 mpagano Exp $
+
+*gentoo-sources-3.15.4 (08 Jul 2014)
+
+  08 Jul 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.15.4.ebuild:
+  Patch to fix frequency reported on G-PHY with /new/ firmware. See bug
+  #516392. Linux patch 3.15.4
 
 *gentoo-sources-3.14.11 (08 Jul 2014)
 

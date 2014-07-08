@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.9-r1.ebuild,v 1.1 2014/07/07 22:08:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.9-r2.ebuild,v 1.1 2014/07/08 18:34:25 chutzpah Exp $
 
 EAPI=5
 
@@ -37,15 +37,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# remove the bundled libevent
-	rm -rf libevent
-
-	epatch "${FILESDIR}"/${P}-dont-fork-after-making-pidfile.patch
+	epatch "${FILESDIR}"/${P}-seccomp-add-syscalls.patch
 	epatch_user
 }
 
 src_configure() {
 	econf \
+		--without-embedded-libevent \
 		--with-privsep-user=${PN} \
 		--with-privsep-group=${PN} \
 		--with-privsep-chroot=/run/${PN} \
@@ -85,7 +83,7 @@ src_install() {
 
 	use doc && dohtml -r doxygen/html/*
 
-	keepdir /var/lib/${PN}
+	keepdir /etc/${PN}.d
 
 	systemd_dounit "${FILESDIR}"/${PN}.service
 }
