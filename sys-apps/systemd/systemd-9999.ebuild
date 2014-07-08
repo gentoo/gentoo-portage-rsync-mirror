@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.121 2014/07/04 17:51:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.122 2014/07/08 17:01:13 floppym Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	audit? ( >=sys-process/audit-2:0= )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
 	elfutils? ( >=dev-libs/elfutils-0.158:0= )
-	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0= )
+	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0=[${MULTILIB_USEDEP}] )
 	gudev? ( >=dev-libs/glib-2.34.3:2=[${MULTILIB_USEDEP}] )
 	http? (
 		>=net-libs/libmicrohttpd-0.9.33:0=
@@ -279,7 +279,6 @@ multilib_src_configure() {
 			--disable-acl
 			--disable-audit
 			--disable-elfutils
-			--disable-gcrypt
 			--disable-gnutls
 			--disable-gtk-doc
 			--disable-introspection
@@ -293,7 +292,6 @@ multilib_src_configure() {
 			--disable-seccomp
 			--disable-selinux
 			--disable-tests
-			--disable-xz
 		)
 	fi
 
