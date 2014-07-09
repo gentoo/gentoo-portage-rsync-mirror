@@ -5,7 +5,7 @@
  TryExec=grdesktop
  Exec=grdesktop
 -Icon=grdesktop.png
-+Icon=grdesktop
++Icon=/usr/share/pixmaps/grdesktop/icon.png
  Terminal=false
  Type=Application
  Version=1.0

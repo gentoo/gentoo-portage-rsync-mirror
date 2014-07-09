@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.204 2014/02/03 08:27:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.205 2014/07/09 08:12:43 patrick Exp $
+
+*snort-2.9.6.1 (09 Jul 2014)
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> +snort-2.9.6.1.ebuild:
+  Bump
 
 *snort-2.9.6.0 (03 Feb 2014)
 *snort-2.9.5.6 (03 Feb 2014)
