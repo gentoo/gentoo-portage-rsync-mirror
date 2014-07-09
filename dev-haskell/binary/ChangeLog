@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.44 2014/07/02 00:50:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.45 2014/07/09 03:07:29 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> binary-0.7.2.1.ebuild:
+  Temporarily drop keywords until dependencies catch up
 
 *binary-0.7.2.1 (02 Jul 2014)
 

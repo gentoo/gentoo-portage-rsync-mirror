@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/dataenc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.40 2014/07/02 04:21:26 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.41 2014/07/09 03:04:29 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> dataenc-0.14.0.7.ebuild:
+  Temporarily drop keywords until dependencies catch up
 
 *dataenc-0.14.0.7 (02 Jul 2014)
 

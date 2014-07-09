@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.66 2014/07/02 03:52:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.67 2014/07/09 03:06:36 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> c2hs-0.17.2.ebuild:
+  Temporarily drop keywords until dependencies catch up
 
 *c2hs-0.17.2 (02 Jul 2014)
 
