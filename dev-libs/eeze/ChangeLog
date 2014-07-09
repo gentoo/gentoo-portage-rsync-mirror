@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/eeze
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.15 2013/11/12 18:30:19 tommy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.16 2014/07/09 03:52:10 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> eeze-1.7.8.ebuild,
+  eeze-1.7.9.ebuild:
+  Beat things into a shape where at least all ebuild phases are run
 
 *eeze-1.7.9 (12 Nov 2013)
 

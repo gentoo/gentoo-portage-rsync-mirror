@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/freshmeat-submit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.12 2011/01/07 18:21:18 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.13 2014/07/09 03:47:41 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> freshmeat-submit-1.6.ebuild,
+  freshmeat-submit-2.2.ebuild:
+  Fix ebuilds to run all phase functions and not fail
 
   07 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   freshmeat-submit-1.6.ebuild:
@@ -47,4 +51,3 @@
   12 Jun 2004; Josh Glover <jmglov@gentoo.org> freshmeat-submit-1.4.ebuild,
   metadata.xml:
   This package was submitted by Lukasz Strzygowski in bug #35943
-

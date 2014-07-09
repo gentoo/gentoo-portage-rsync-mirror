@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9-r1.ebuild,v 1.2 2013/05/10 07:47:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.9-r1.ebuild,v 1.3 2014/07/09 03:39:48 patrick Exp $
+
+EAPI=5
 
 inherit eutils
 

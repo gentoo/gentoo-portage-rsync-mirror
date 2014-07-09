@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.1-r1.ebuild,v 1.20 2012/10/16 20:39:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.1-r1.ebuild,v 1.21 2014/07/09 03:33:02 patrick Exp $
+
+EAPI=5
 
 inherit autotools eutils fortran-2
 
@@ -21,9 +23,7 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${MYP}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-autotools.patch \
 		"${FILESDIR}"/${P}-gcc44.patch

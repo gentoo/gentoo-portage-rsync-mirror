@@ -1,6 +1,7 @@
-DEFINED_PHASES=install setup unpack
-DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran
+DEFINED_PHASES=configure install prepare setup
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/fortran
 DESCRIPTION=A package for unstructured serial graph partitioning
+EAPI=5
 HOMEPAGE=http://www-users.cs.umn.edu/~karypis/metis/metis/index.html
 IUSE=doc static-libs
 KEYWORDS=alpha amd64 hppa ppc ppc64 sparc x86
@@ -9,4 +10,4 @@ RDEPEND=!sci-libs/parmetis virtual/fortran
 SLOT=0
 SRC_URI=http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/OLD/metis-4.0.1.tar.gz
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=cdca0fba641af4b645ac9827645b2d35
+_md5_=5dae3f66fac9c9311a4511abe06f2e26

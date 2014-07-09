@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/freshmeat-submit-1.6.ebuild,v 1.7 2011/01/07 18:21:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/freshmeat-submit-1.6.ebuild,v 1.8 2014/07/09 03:47:41 patrick Exp $
+
+EAPI=5
 
 PYTHON_DEPEND="2"
 
@@ -16,6 +18,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 pkg_setup() {
+	python_pkg_setup
 	python_set_active_version 2
 }
 

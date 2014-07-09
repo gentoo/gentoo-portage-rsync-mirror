@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.35 2014/03/04 19:42:55 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.36 2014/07/09 03:33:02 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> metis-4.0.1-r1.ebuild:
+  Fix 4.0.1-r1 to run all phases
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> metis-4.0.3.ebuild:
   Add ~mips keyword.
