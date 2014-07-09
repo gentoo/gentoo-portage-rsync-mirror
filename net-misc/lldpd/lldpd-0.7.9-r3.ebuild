@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.9-r2.ebuild,v 1.1 2014/07/08 18:34:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.9-r3.ebuild,v 1.1 2014/07/08 23:17:39 chutzpah Exp $
 
 EAPI=5
 
@@ -78,7 +78,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 	prune_libtool_files
 
-	newinitd "${FILESDIR}"/${PN}-initd-2 ${PN}
+	newinitd "${FILESDIR}"/${PN}-initd-3 ${PN}
 	newconfd "${FILESDIR}"/${PN}-confd-1 ${PN}
 
 	use doc && dohtml -r doxygen/html/*
