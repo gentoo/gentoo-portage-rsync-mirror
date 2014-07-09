@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.17.ebuild,v 1.2 2014/06/18 20:37:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.17.ebuild,v 1.3 2014/07/09 17:03:04 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -17,12 +17,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="dane doc +ecdsa gost python +ssl static-libs vim-syntax"
 
 # configure will die if ecdsa is enabled and ssl is not
-REQUIRED_USE="ecdsa? ( ssl )"
+REQUIRED_USE="ecdsa? ( ssl )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	dane? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
 	ecdsa? ( >=dev-libs/openssl-1.0.1h-r2:0[-bindist,${MULTILIB_USEDEP}] )
 	gost? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
+	python? ( ${PYTHON_DEPS} )
 	ssl? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
