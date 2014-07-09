@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.17.ebuild,v 1.1 2013/05/03 08:09:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.20.ebuild,v 1.1 2014/07/09 13:32:44 jer Exp $
 
 EAPI=5
 
-inherit eutils autotools
+inherit autotools eutils
 
 DESCRIPTION="A library and tools for trace processing"
 HOMEPAGE="http://research.wand.net.nz/software/libtrace.php"
@@ -23,14 +23,14 @@ RDEPEND=">=net-libs/libpcap-0.8
 DEPEND="${RDEPEND}
 	app-doc/doxygen
 	sys-devel/flex
-	virtual/yacc"
+	virtual/yacc
+	virtual/pkgconfig"
 
 src_prepare() {
-	# don't build examples
-	sed -i "/^SUBDIRS/s/examples//" Makefile.am || die
-
-	# fix autoreconf with automake-1.13
-	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.in || die
+	epatch "${FILESDIR}"/${P}-autoconf-1.13.patch
+	epatch "${FILESDIR}"/${P}-libwandio-linking.patch
+	epatch "${FILESDIR}"/${P}-no-examples.patch
+	epatch "${FILESDIR}"/${P}-tinfo.patch
 
 	eautoreconf
 }
