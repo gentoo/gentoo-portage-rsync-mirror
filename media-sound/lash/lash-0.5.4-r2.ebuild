@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r2.ebuild,v 1.1 2014/05/03 08:27:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r2.ebuild,v 1.2 2014/07/09 18:25:49 ssuominen Exp $
 
 EAPI=5
 
@@ -45,9 +45,11 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-glibc2.8.patch \
 		"${FILESDIR}"/${P}-swig_version_comparison.patch \
-		"${FILESDIR}"/${P}-gcc47.patch
+		"${FILESDIR}"/${P}-gcc47.patch \
+		"${FILESDIR}"/${P}-underlinking.patch \
+		"${FILESDIR}"/${P}-strcmp.patch
 
-	AT_M4DIR="m4" eautoreconf
+	AT_M4DIR=m4 eautoreconf
 }
 
 multilib_src_configure() {

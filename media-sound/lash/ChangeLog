@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.40 2014/05/03 08:27:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.41 2014/07/09 18:25:49 ssuominen Exp $
+
+  09 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/lash-0.5.4-strcmp.patch, +files/lash-0.5.4-underlinking.patch,
+  lash-0.5.4-r2.ebuild:
+  Fix underlinking bugs #367589 (missing -luuid) and #514748 (missing -lm).
+  Thanks to Diego Elio Pettenò, Christian Compagnon and Ted Tanberry. Fix
+  missing include of string.h for strcmp() while at it.
 
 *lash-0.5.4-r2 (03 May 2014)
 
