@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-color-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.48 2014/05/31 06:41:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.49 2014/07/09 09:42:36 pacho Exp $
+
+*gnome-color-manager-3.12.3 (09 Jul 2014)
+
+  09 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +gnome-color-manager-3.12.3.ebuild, -gnome-color-manager-3.12.1.ebuild,
+  -gnome-color-manager-3.12.2.ebuild:
+  Version bump, drop old
 
 *gnome-color-manager-3.12.2 (31 May 2014)
 
