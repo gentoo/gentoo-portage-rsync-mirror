@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/bashmount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bashmount/ChangeLog,v 1.13 2014/06/19 12:29:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bashmount/ChangeLog,v 1.15 2014/07/09 15:26:28 ssuominen Exp $
+
+  09 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -bashmount-1.6.2.ebuild:
+  old
+
+  09 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> bashmount-3.2.0.ebuild:
+  amd64/x86 stable
 
 *bashmount-3.2.0 (19 Jun 2014)
 
