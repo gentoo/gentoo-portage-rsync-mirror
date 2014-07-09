@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.40 2014/06/20 16:44:03 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.41 2014/07/09 01:27:27 prometheanfire Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -9,7 +9,7 @@ inherit flag-o-matic linux-info linux-mod autotools-utils
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
-	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
+	EGIT_REPO_URI="https://github.com/zfsonlinux/${PN}.git"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')

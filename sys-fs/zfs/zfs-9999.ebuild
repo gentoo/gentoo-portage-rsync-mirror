@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.52 2014/06/14 16:02:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.53 2014/07/09 01:31:30 prometheanfire Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
@@ -13,7 +13,7 @@ AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2 linux-mod
-	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
+	EGIT_REPO_URI="https://github.com/zfsonlinux/${PN}.git"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')

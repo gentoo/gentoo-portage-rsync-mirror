@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.49 2014/06/20 16:44:37 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.50 2014/07/09 01:29:39 prometheanfire Exp $
+
+  09 Jul 2014; Matthew Thode <prometheanfire@gentoo.org> zfs-kmod-9999.ebuild:
+  swiching to https for git ebuild
 
   20 Jun 2014; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
   Disallow CONFIG_DEBUG_INFO_REDUCED when USE=debug is set
