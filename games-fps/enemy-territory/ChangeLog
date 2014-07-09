@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.51 2014/07/07 19:05:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.52 2014/07/09 20:17:14 axs Exp $
+
+  09 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  enemy-territory-2.60b-r1.ebuild:
+  more EAPI5 ebuild cleanups, dropped useless opengl flag, ensured USE=dedicated
+  only installed dedicated server
 
 *enemy-territory-2.60b-r1 (07 Jul 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Memoize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.24 2013/08/27 17:25:53 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.25 2014/07/09 20:10:48 dilfridge Exp $
+
+*perl-Memoize-1.30.0-r1 (09 Jul 2014)
+
+  09 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Memoize-1.30.0.ebuild, +perl-Memoize-1.30.0-r1.ebuild:
+  Improve dependencies
 
   27 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -perl-Memoize-1.01.ebuild,
   -perl-Memoize-1.20.0-r2.ebuild:

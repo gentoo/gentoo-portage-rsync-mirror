@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b-r1.ebuild,v 1.1 2014/07/07 19:05:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b-r1.ebuild,v 1.2 2014/07/09 20:17:14 axs Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -19,22 +19,23 @@ SRC_URI="mirror://3dgamers/wolfensteinet/et-linux-2.60.x86.run
 LICENSE="RTCW-ETEULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="dedicated opengl"
+IUSE="dedicated"
 RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="sys-libs/glibc
 	amd64? ( sys-libs/glibc[multilib] )
 	dedicated? ( app-misc/screen )
-	opengl? ( || ( virtual/opengl[abi_x86_32(-)]
-		app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-	) )
 	!dedicated? ( || (
 		(
+			virtual/opengl[abi_x86_32(-)]
 			x11-libs/libX11[abi_x86_32(-)]
 			x11-libs/libXext[abi_x86_32(-)]
 		)
-		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		(
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+		)
 	) )"
 
 S=${WORKDIR}
@@ -54,31 +55,31 @@ QA_EXECSTACK="${dir:1}/et.x86
 QA_FLAGS_IGNORED="${QA_TEXTRELS}
 	${QA_EXECSTACK}
 	${dir:1}/pb/pbweb.x86"
-QA_EXECSTACK_x86=${QA_EXECSTACK}
-QA_EXECSTACK_amd64=${QA_EXECSTACK}
 
 src_unpack() {
 	unpack_makeself et-linux-2.60.x86.run
 	if use dedicated; then
-		unpack ${PN}-all-0.1.tar.bz2 || die
+		unpack ${PN}-all-0.1.tar.bz2
 	fi
 	unpack ET-${PV}.zip
 }
 
 src_install() {
 	exeinto "${dir}"
-	doexe openurl.sh || die "doexe failed"
-	doexe "Enemy Territory 2.60b"/linux/et.x86 || die "doexe et"
+	doexe openurl.sh
+
 	insinto "${dir}"
-	dodoc CHANGES README || die "doins failed"
-	doicon ET.xpm
+	dodoc CHANGES README
 
 	cp -r Docs pb etmain "${Ddir}" || die "cp failed"
 	chmod og+x "${Ddir}"/pb/pbweb.x86 || die "chmod failed"
 
-	games_make_wrapper et ./et.x86 "${dir}" "${dir}"
-
-	if use dedicated ; then
+	if ! use dedicated ; then
+		doicon ET.xpm
+		doexe "Enemy Territory 2.60b"/linux/et.x86 || die "doexe et"
+		games_make_wrapper et ./et.x86 "${dir}" "${dir}"
+		make_desktop_entry et "Enemy Territory" ET
+	else
 		doexe "Enemy Territory 2.60b"/linux/etded.x86 || die "doexe failed"
 		games_make_wrapper et-ded ./etded.x86 "${dir}"
 		newinitd "${S}"/et-ded.rc et-ded || die "newinitd failed"
@@ -94,8 +95,6 @@ src_install() {
 		dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
 	fi
 
-	make_desktop_entry et "Enemy Territory" ET
-
 	prepgamesdirs
 	chmod g+rw "${Ddir}" "${Ddir}/etmain"
 }
@@ -107,10 +106,11 @@ pkg_postinst() {
 	ewarn "other when running as a client."
 	ewarn "For more information, see bug #82149."
 	echo
-	elog "To play the game run:"
-	elog " et"
-	echo
-	if use dedicated; then
+	if ! use dedicated; then
+		elog "To play the game run:"
+		elog " et"
+		echo
+	else
 		elog "To start a dedicated server run:"
 		elog " /etc/init.d/et-ded start"
 		echo
@@ -122,11 +122,6 @@ pkg_postinst() {
 		ewarn "Store your configurations under ${dir}/etwolf-homedir or they"
 		ewarn "will be erased on the next upgrade."
 		ewarn "See bug #132795 for more info."
-		echo
-	fi
-	if use amd64; then
-		elog "If you are running an amd64 system and using ALSA, you must have"
-		elog "ALSA 32-bit emulation enabled in your kernel for this to function properly."
 		echo
 	fi
 }

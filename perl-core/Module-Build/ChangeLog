@@ -1,6 +1,13 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.82 2014/03/10 12:55:04 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.83 2014/07/09 20:19:50 dilfridge Exp $
+
+  09 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Module-Build-0.36.07.ebuild, -Module-Build-0.362.400.ebuild,
+  -Module-Build-0.380.0.ebuild, -Module-Build-0.400.0.ebuild,
+  -Module-Build-0.400.100.ebuild, -Module-Build-0.400.200.ebuild,
+  -Module-Build-0.400.700.ebuild:
+  Remove old
 
 *Module-Build-0.420.0 (10 Mar 2014)
 
