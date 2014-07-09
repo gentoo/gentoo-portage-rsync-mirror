@@ -1,9 +1,0 @@
-DEFINED_PHASES=install unpack
-DESCRIPTION=OpenMCL is a Common Lisp implementation, derived from Digitool's MCL product
-HOMEPAGE=http://packages.debian.org/unstable/devel/openmcl-build-tools
-KEYWORDS=~ppc
-LICENSE=LGPL-2.1
-SLOT=0
-SRC_URI=mirror://gentoo/openmcl-build-tools_20040505-2.tar.gz
-_eclasses_=common-lisp-common-2	fc84d1c8b8f834395bffa96a494aabe4	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=401676d441aa35f0bf50165593c51619
