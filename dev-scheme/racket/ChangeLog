@@ -1,6 +1,14 @@
 # ChangeLog for dev-scheme/racket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/ChangeLog,v 1.12 2014/06/26 18:07:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/ChangeLog,v 1.13 2014/07/09 11:02:29 gienah Exp $
+
+*racket-6.0.1 (09 Jul 2014)
+
+  09 Jul 2014; Mark Wright <gienah@gentoo.org> +racket-6.0.1.ebuild:
+  Thanks to Marijn Schouten (hkBst) for the racket-6.0.ebuild. Bump racket to
+  6.0.1 as requested in Bug 508274 - dev-scheme/racket-6.0 version bump, thanks
+  to Maks Verver for reporting. jit support on hardened by me, thanks to
+  SamanthaD for testing.
 
   26 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> racket-5.3.6.ebuild:
   amd64 stable wrt bug #511190
