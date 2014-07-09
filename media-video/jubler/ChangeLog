@@ -1,6 +1,11 @@
 # ChangeLog for media-video/jubler
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.48 2013/01/23 12:05:37 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.49 2014/07/09 07:40:33 ercpe Exp $
+
+  09 Jul 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/jubler-4.6.1-ffmpeg-2.patch, jubler-4.6.1-r3.ebuild:
+  Added #ifndef for deprecated AVCODEC_MAX_AUDIO_FRAME_SIZE to make it compile
+  with ffmpeg > 2.something (bug #515480)
 
   23 Jan 2013; Alexis Ballier <aballier@gentoo.org> jubler-4.6.1-r3.ebuild,
   +files/jubler-4.6.1-ffmpeg-1.patch:
@@ -206,4 +211,3 @@
   04 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org>
   +files/jubler-3.3.0.patch, +metadata.xml, +jubler-3.3.0.ebuild:
   Initial ebuild, submitted by Serkan Kaba <serkan_kaba@yahoo.com>, bug #153992.
-

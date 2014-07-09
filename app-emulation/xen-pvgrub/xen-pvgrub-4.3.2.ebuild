@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.2.ebuild,v 1.2 2014/05/17 13:32:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.2.ebuild,v 1.3 2014/07/09 07:46:17 dlan Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ IUSE="custom-cflags"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="sys-devel/gettext
+	sys-devel/bin86
 	sys-apps/texinfo"
 
 RDEPEND=">=app-emulation/xen-4.2.1"

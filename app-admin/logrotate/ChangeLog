@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.178 2014/07/07 09:55:32 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.179 2014/07/09 07:35:03 nimiux Exp $
+
+  09 Jul 2014; Chema Alonso <nimiux@gentoo.org> -logrotate-3.8.4.ebuild,
+  -logrotate-3.8.6.ebuild, -files/logrotate-3.8.4-atomic-create.patch,
+  -files/logrotate-3.8.4-datehack.patch, -files/logrotate-3.8.4-fbsd.patch,
+  -files/logrotate-3.8.4-ignore-hidden.patch,
+  -files/logrotate-3.8.4-noasprintf.patch,
+  -files/logrotate-3.8.6-atomic-create.patch,
+  -files/logrotate-3.8.6-datehack.patch, -files/logrotate-3.8.6-fbsd.patch,
+  -files/logrotate-3.8.6-ignore-hidden.patch,
+  -files/logrotate-3.8.6-noasprintf.patch:
+  Drop old
 
   07 Jul 2014; Chema Alonso <nimiux@gentoo.org> files/logrotate.conf:
   Fix tabs and enhance comments. Thanks to Consus via email.

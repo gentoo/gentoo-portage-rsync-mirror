@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.10 2013/01/23 12:05:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.11 2014/07/09 07:40:33 ercpe Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -41,6 +41,7 @@ src_unpack() {
 java_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-ffmpeg-1.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg-2.patch
 	chmod +x resources/installers/linux/iconinstall
 	#cd resources/libs || die
 	java-pkg_jarfrom --build-only --into resources/libs jupidator
