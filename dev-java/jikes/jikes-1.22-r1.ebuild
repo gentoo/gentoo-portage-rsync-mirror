@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.22-r1.ebuild,v 1.19 2011/01/23 14:33:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.22-r1.ebuild,v 1.20 2014/07/09 04:08:36 patrick Exp $
 
 inherit base flag-o-matic eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 DEPEND=""
 
-PATCHES="${FILESDIR}/deprecated.patch"
+PATCHES=( ${FILESDIR}/deprecated.patch )
 
 src_compile() {
 	filter-flags "-fno-rtti"
@@ -22,6 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 	dodoc ChangeLog AUTHORS README TODO NEWS
 }

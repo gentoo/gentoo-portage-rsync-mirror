@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-osdserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdserver/ChangeLog,v 1.4 2014/02/23 21:21:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdserver/ChangeLog,v 1.5 2014/07/09 04:10:26 patrick Exp $
+
+  09 Jul 2014; Patrick Lauer <patrick@gentoo.org> vdr-osdserver-0.1.2.ebuild:
+  Add repoman happy
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-osdserver-0.1.1.ebuild:
@@ -23,4 +26,3 @@
   +files/osdserverhosts.conf, +files/rc-addon.sh, +metadata.xml,
   +vdr-osdserver-0.1.1.ebuild:
   initial ebuild, tanks to Guido Zuliani on bug 200903
-
