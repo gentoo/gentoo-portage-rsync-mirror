@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.98 2014/07/08 06:51:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.99 2014/07/09 09:31:18 zlogene Exp $
+
+  09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  linux-firmware-20131230.ebuild:
+  x86 stable wrt bug #508982
 
   08 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   linux-firmware-20131230.ebuild:

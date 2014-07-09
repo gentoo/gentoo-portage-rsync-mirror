@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.36 2014/05/30 19:21:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.37 2014/07/09 09:29:39 pacho Exp $
+
+  09 Jul 2014; Pacho Ramos <pacho@gentoo.org> -gcr-3.12.0.ebuild,
+  gcr-3.12.2.ebuild:
+  Fix instrospection dependency (#516700 by darkdimius), drop old
 
 *gcr-3.12.2 (30 May 2014)
 

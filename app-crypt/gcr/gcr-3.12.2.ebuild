@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.12.2.ebuild,v 1.1 2014/05/30 19:21:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.12.2.ebuild,v 1.2 2014/07/09 09:29:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 	>=dev-libs/libgcrypt-1.2.2:0=
 	>=dev-libs/libtasn1-1:=
 	>=sys-apps/dbus-1
-	gtk? ( >=x11-libs/gtk+-3:3 )
+	gtk? ( >=x11-libs/gtk+-3:3[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-1.34 )
 "
 RDEPEND="${COMMON_DEPEND}
