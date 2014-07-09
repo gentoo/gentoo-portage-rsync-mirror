@@ -19,6 +19,7 @@
 		using <pkg>app-i18n/enca</pkg></flag>
 	<flag name="libguess">Enables support for charset discovery and
 		conversion using <pkg>app-i18n/libguess</pkg></flag>
+	<flag name="libmpv">Build libmpv shared library</flag>
 	<flag name="luajit">Use <pkg>dev-lang/luajit</pkg> instead of
 		<pkg>dev-lang/lua</pkg></flag>
 	<flag name="mpg123">Enable support for mp3 decoding over

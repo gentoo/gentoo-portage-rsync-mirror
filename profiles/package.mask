@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15867 2014/07/09 05:58:07 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15868 2014/07/09 16:20:47 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Maxim Koltsov <maksbotan@gentoo.org> (9 Jul 2014)
+# Requires >=libav-10, which is masked, or >=ffmpeg-2.1.4
+# If you use ffmpeg instead of libav, sorry!
+>=media-video/mpv-0.4.0
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (7 Jul 2014)
 # Filter never was part of core Perl, no idea why we have a virtual.

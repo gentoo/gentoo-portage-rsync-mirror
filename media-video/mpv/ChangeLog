@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.82 2014/07/08 18:16:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.83 2014/07/09 16:27:38 maksbotan Exp $
+
+*mpv-0.4.0 (09 Jul 2014)
+*mpv-0.3.11 (09 Jul 2014)
+
+  09 Jul 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/mpv-0.3.11-libav-9.patch, +mpv-0.3.11.ebuild, +mpv-0.4.0.ebuild,
+  metadata.xml, mpv-9999.ebuild:
+  Bump to 0.4.0, bug #516458, add libmpv use flag, bug #516742. Thanks to
+  Nikoli.
 
   08 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> mpv-0.3.10.ebuild:
   amd64 stable wrt bug #514906
