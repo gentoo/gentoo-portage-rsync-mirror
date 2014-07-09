@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.105 2014/06/18 20:50:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.106 2014/07/09 12:58:27 zlogene Exp $
+
+  09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gpm-1.20.7-r2.ebuild:
+  amd64 stable wrt bug #513728
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> gpm-1.20.7-r2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
