@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/tls-extra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.9 2014/03/12 08:22:46 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.10 2014/07/09 05:15:25 gienah Exp $
+
+  09 Jul 2014; Mark Wright <gienah@gentoo.org> tls-extra-0.6.5-r1.ebuild:
+  QA: fix dev-haskell/tls-extra/tls-extra-0.6.5-r1.ebuild: 'test?' USE
+  conditional in RDEPEND
 
   12 Mar 2014; Alexander Vershilov <qnikst@gentoo.org> -tls-extra-0.6.1.ebuild,
   -tls-extra-0.6.3.ebuild, -tls-extra-0.6.4.ebuild, -tls-extra-0.6.5.ebuild:
