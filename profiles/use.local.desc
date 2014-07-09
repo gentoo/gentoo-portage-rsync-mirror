@@ -4330,6 +4330,7 @@ media-video/mpv:vaapi - Enable VAAPI (Video Acceleration API) for hardware decod
 media-video/mpv:vf-dlopen - Install additional video filters for using with -vf dlopen
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
+media-video/parole:clutter - Compile in Clutter GTK+ support
 media-video/pgcedit:video - Add support for video preview
 media-video/plasma-mediacenter:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 media-video/qgifer:imagemagick - Use imagemagick for image operations
