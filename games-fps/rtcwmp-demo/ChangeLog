@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/rtcwmp-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/ChangeLog,v 1.13 2012/12/21 21:30:29 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/ChangeLog,v 1.14 2014/07/09 22:23:25 axs Exp $
+
+*rtcwmp-demo-1.1-r1 (09 Jul 2014)
+
+  09 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +rtcwmp-demo-1.1-r1.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-mulitlib, dropped opengl use flag and
+  made USE=dedicated only install dedicated server as it should; tested fine as-
+  is but did not have any maps to load to test gameplay itself.
 
   21 Dec 2012; Tupone Alfredo <tupone@gentoo.org> rtcwmp-demo-1.1.ebuild:
   Use QA_PREBUILT. Bug #429150 by Diego Elio Pettenò
@@ -50,4 +58,3 @@
   +files/rtcwmp-demo-ded.rc, +metadata.xml, +rtcwmp-demo-1.1.ebuild:
   Initial import. Ebuild by Alexander Nicolaysen Sornes
   <alex@thehandofagony.com>. Closing bug #115712.
-
