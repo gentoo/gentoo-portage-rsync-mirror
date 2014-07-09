@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.148 2014/07/06 17:47:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.149 2014/07/09 10:22:25 zlogene Exp $
+
+  09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> pkgconfig-0.28-r1.ebuild:
+  x86 stable wrt bug #516106
 
   06 Jul 2014; Markus Meier <maekke@gentoo.org> pkgconfig-0.28-r1.ebuild:
   arm stable, bug #516106
