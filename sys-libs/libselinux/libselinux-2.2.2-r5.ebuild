@@ -1,12 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.2-r5.ebuild,v 1.2 2014/04/30 17:11:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.2-r5.ebuild,v 1.3 2014/07/09 19:29:44 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
-USE_RUBY="ruby18 ruby19 ruby20"
 
-# No, I am not calling ruby-ng
 inherit multilib python-r1 toolchain-funcs eutils multilib-minimal
 
 SEPOL_VER="2.2"
@@ -14,12 +12,12 @@ SEPOL_VER="2.2"
 DESCRIPTION="SELinux userland library"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20131030/${P}.tar.gz
-	http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${P}-r4.tar.gz"
+	http://dev.gentoo.org/~swift/patches/${PN}/patchbundle-${P}-r5.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="python ruby static-libs ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20"
+KEYWORDS="~amd64 ~x86"
+IUSE="python static-libs"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	>=dev-libs/libpcre-8.30-r2[static-libs?]
@@ -67,25 +65,6 @@ multilib_src_compile() {
 		}
 		python_foreach_impl building
 	fi
-
-	if multilib_is_native_abi && use ruby; then
-		building() {
-			einfo "Calling rubywrap for ${1}"
-			# Clean up .lo file to force rebuild
-			test -f src/selinuxswig_ruby_wrap.lo && rm src/selinuxswig_ruby_wrap.lo
-			emake \
-				CC="$(tc-getCC)" \
-				RUBY=${1} \
-				RUBYINSTALL=$(${1} -e 'print RbConfig::CONFIG["vendorarchdir"]') \
-				LDFLAGS="-fPIC ${LDFLAGS} -lpthread" \
-				rubywrap
-		}
-		for RUBYTARGET in ${USE_RUBY}; do
-			use ruby_targets_${RUBYTARGET} || continue
-
-			building ${RUBYTARGET}
-		done
-	fi
 }
 
 multilib_src_install() {
@@ -99,23 +78,6 @@ multilib_src_install() {
 		python_foreach_impl installation
 	fi
 
-	if multilib_is_native_abi && use ruby; then
-		installation() {
-			einfo "Calling install-rubywrap for ${1}"
-			# Forcing (re)build here as otherwise the resulting SO file is used for all ruby versions
-			rm src/selinuxswig_ruby_wrap.lo
-			LIBDIR="\$(PREFIX)/$(get_libdir)" emake DESTDIR="${D}" \
-				RUBY=${1} \
-				RUBYINSTALL="${D}/$(${1} -e 'print RbConfig::CONFIG["vendorarchdir"]')" \
-				install-rubywrap
-		}
-		for RUBYTARGET in ${USE_RUBY}; do
-			use ruby_targets_${RUBYTARGET} || continue
-
-			installation ${RUBYTARGET}
-		done
-	fi
-
 	use static-libs || rm "${D}"/usr/lib*/*.a
 }
 
@@ -125,5 +87,9 @@ pkg_postinst() {
 	do
 		mkdir -p /etc/selinux/${POLTYPE}/contexts/files
 		touch /etc/selinux/${POLTYPE}/contexts/files/file_contexts.local
+		# Fix bug 516608
+		for EXPRFILE in file_contexts file_contexts.homedirs file_contexts.local ; do
+			sefcontext_compile /etc/selinux/${POLTYPE}/contexts/files/${EXPRFILE};
+		done
 	done
 }

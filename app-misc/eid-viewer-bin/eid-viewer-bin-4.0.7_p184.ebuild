@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/eid-viewer-bin/eid-viewer-bin-4.0.4_p146.ebuild,v 1.1 2014/05/30 12:13:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/eid-viewer-bin/eid-viewer-bin-4.0.7_p184.ebuild,v 1.1 2014/07/09 19:18:04 swift Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Graphical interface to the Belgian Electronic Identity Card."
 
-SRC_URI="http://eid.belgium.be/en/binaries/eid-viewer-4%2E0%2E4-146%2Esrc_tcm406-178483.tgz"
+SRC_URI="http://eid.belgium.be/en/binaries/eid-viewer-4%2E0%2E7-184%2Esrc%2Etar_tcm406-250014.gz -> eid-viewer-4.0.7_p184.tar.gz"
 HOMEPAGE="http://eid.belgium.be"
 
 RDEPEND="

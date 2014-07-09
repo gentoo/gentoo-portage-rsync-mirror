@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/eid-viewer-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/eid-viewer-bin/ChangeLog,v 1.1 2014/05/30 12:13:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/eid-viewer-bin/ChangeLog,v 1.2 2014/07/09 19:18:04 swift Exp $
+
+*eid-viewer-bin-4.0.7_p184 (09 Jul 2014)
+
+  09 Jul 2014; Sven Vermeulen <swift@gentoo.org>
+  +eid-viewer-bin-4.0.7_p184.ebuild, -eid-viewer-bin-4.0.4_p146.ebuild:
+  Fix bug #515614 - Bump eid-viewer-bin, old version no longer available, thanks
+  to Vincent Hardy for bump and Bastiaan Wakkie for reporting
 
 *eid-viewer-bin-4.0.4_p146 (30 May 2014)
 
