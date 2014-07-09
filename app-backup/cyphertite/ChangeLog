@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/cyphertite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.3 2014/07/06 20:43:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.4 2014/07/09 00:23:30 grknight Exp $
+
+  09 Jul 2014; Brian Evans <grknight@gentoo.org>
+  files/cyphertite-2.0.2-cflags.patch:
+  Fix LDFLAGS ordering on internal modules. No revbump as the installed binary
+  uses the static versions
 
 *cyphertite-2.0.2-r2 (06 Jul 2014)
 

@@ -9,7 +9,7 @@ Subject: respect CFLAGS in linking commands
  
  $(OBJPREFIX)$(LIB.SHARED): $(LIB.SOBJS)
 -	$(CC) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
-+	$(CC) $(CFLAGS) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS.SO) $(LIB.LDFLAGS) $^ -o $@
  
  $(OBJPREFIX)$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) $(ARFLAGS) $@ $^
@@ -20,7 +20,7 @@ Subject: respect CFLAGS in linking commands
  
  $(OBJPREFIX)$(LIB.SHARED): $(LIB.SOBJS)
 -	$(CC) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
-+	$(CC) $(CFLAGS) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS.SO) $(LIB.LDFLAGS) $^ -o $@
  
  $(OBJPREFIX)$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) $(ARFLAGS) $@ $^
@@ -42,7 +42,7 @@ Subject: respect CFLAGS in linking commands
  
  $(OBJPREFIX)$(LIB.SHARED): $(LIB.SOBJS)
 -	$(CC) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
-+	$(CC) $(CFLAGS) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS.SO) $(LIB.LDFLAGS) $^ -o $@
  
  $(OBJPREFIX)$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) $(ARFLAGS) $@ $^
@@ -53,7 +53,7 @@ Subject: respect CFLAGS in linking commands
  
  $(OBJPREFIX)$(LIB.SHARED): $(LIB.SOBJS)
 -	$(CC) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
-+	$(CC) $(CFLAGS) $(LDFLAGS.SO) $^ $(LIB.LDFLAGS) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS.SO) $(LIB.LDFLAGS) $^ -o $@
  
  $(OBJPREFIX)$(LIB.STATIC): $(LIB.OBJS)
  	$(AR) $(ARFLAGS) $@ $^
