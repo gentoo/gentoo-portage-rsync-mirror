@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r6.ebuild,v 1.1 2014/06/14 07:32:50 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.0-r7.ebuild,v 1.1 2014/07/09 06:35:44 dlan Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=3
+	UPSTREAM_VER=4
 	GENTOO_VER=
 	SEABIOS_VER=1.7.3.1
 
@@ -144,6 +144,7 @@ src_prepare() {
 	if [[ -n ${UPSTREAM_VER} ]]; then
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
+		EPATCH_OPTS="-p1" \
 			epatch "${WORKDIR}"/patches-upstream
 	fi
 

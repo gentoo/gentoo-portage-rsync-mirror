@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/django-ldapdb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.9 2013/09/21 08:56:18 tampakrap Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.10 2014/07/09 06:36:26 idella4 Exp $
+
+*django-ldapdb-0.3.2 (09 Jul 2014)
+
+  09 Jul 2014; Ian Delaney <idella4@gentoo.org> +django-ldapdb-0.3.2.ebuild,
+  -django-ldapdb-0.1.0_p20120424-r1.ebuild,
+  -django-ldapdb-0.1.0_p20120424.ebuild, -django-ldapdb-0.1.0_p20130712.ebuild:
+  drop py2.6, switch SRC_URI to pypi, drop IUSE examples, doc due to absence of
+  content in tarball's source, based on patch by D. Bogomolov from Bug #516688,
+  fixes said bug, rm most old snapshots
 
 *django-ldapdb-0.1.0_p20130921 (21 Sep 2013)
 

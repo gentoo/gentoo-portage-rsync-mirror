@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.11.0-r2.ebuild,v 1.1 2014/07/08 13:58:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.11.0-r2.ebuild,v 1.2 2014/07/09 06:56:14 ssuominen Exp $
 
 EAPI=5
 EAUTORECONF=1
@@ -43,18 +43,18 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	PATCHES=(
-		"${FILESDIR}"/${PN}-4.10.1-alock_support_to_xflock4.patch
-		"${FILESDIR}"/${P}-upower-0.99.0.patch
-		)
+	PATCHES=( "${FILESDIR}"/${PN}-4.10.1-alock_support_to_xflock4.patch )
+
+	use udev && PATCHES+=( "${FILESDIR}"/${P}-upower-0.99.0.patch )
 
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
-		$(use_enable udev upower)
 		$(use_enable systemd)
 		--with-xsession-prefix="${EPREFIX}"/usr
 		$(xfconf_use_debug)
 		)
+
+	use udev && XFCONF+=( --enable-upower )
 
 	DOCS=( AUTHORS BUGS ChangeLog NEWS README TODO )
 }

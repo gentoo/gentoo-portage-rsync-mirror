@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.4.0-r4.ebuild,v 1.1 2014/06/14 07:14:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.4.0-r5.ebuild,v 1.1 2014/07/09 06:31:29 dlan Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="git-2"
 else
 	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=3
+	UPSTREAM_VER=4
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -81,6 +81,7 @@ src_prepare() {
 	if [[ -n ${UPSTREAM_VER} ]]; then
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
+		EPATCH_OPTS="-p1" \
 			epatch "${WORKDIR}"/patches-upstream
 	fi
 
