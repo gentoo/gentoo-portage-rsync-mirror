@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/quake4-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.16 2012/02/08 23:18:01 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.17 2014/07/09 19:57:50 axs Exp $
+
+*quake4-demo-1.0-r1 (09 Jul 2014)
+
+  09 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +quake4-demo-1.0-r1.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-multilib, added s3tc support message
+  and dep, made USE=dedicated install only the server as it should, ensured
+  dedicated server does not collide with that from quake4-bin, dropped embedded
+  libstdc++
 
   08 Feb 2012; Mike Frysinger <vapier@gentoo.org> quake4-demo-1.0.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -64,4 +73,3 @@
   01 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
   +quake4-demo-1.0.ebuild:
   Initial import.  Ebuild by me.
-

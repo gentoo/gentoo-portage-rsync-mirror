@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DESCRIPTION=Sequel to Quake 2, an Id 3D first-person shooter
+EAPI=5
+HOMEPAGE=http://www.quake4game.com/
+IUSE=dedicated
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=QUAKE4
+RDEPEND=sys-libs/glibc sys-libs/libstdc++-v3:5 amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] ) dedicated? ( app-misc/screen ) !dedicated? ( || ( >=media-libs/libtxc_dxtn-1.0.1-r1[abi_x86_32(-)] x11-drivers/nvidia-drivers >=x11-drivers/ati-drivers-8.8.25-r1 ) || ( ( >=x11-libs/libX11-1.6.2[abi_x86_32(-)] >=x11-libs/libXext-1.3.2[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r4[X,opengl,sound,abi_x86_32(-)] ) ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] ) ) ) games-misc/games-envd
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://idsoftware/quake4/demo/quake4-linux-1.0-demo.x86.run http://www.3ddownloads.com/Action/Quake%204/Demos/quake4-linux-1.0-demo.x86.run mirror://3dgamers/quake4/quake4-linux-1.0-demo.x86.run http://filebase.gmpf.de/quake4/quake4-linux-1.0-demo.x86.run http://www.holarse.de/mirror/quake4-linux-1.0-demo.x86.run http://sonic-lux.net/data/mirror/quake4/quake4-linux-1.0-demo.x86.run
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	1a9ecf501027961855b0320e8915a79c
+_md5_=6eb103f1fdf333cd22829f948549ceb8
