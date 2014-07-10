@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Module-Loaded
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Loaded/ChangeLog,v 1.11 2013/08/14 05:05:12 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Loaded/ChangeLog,v 1.12 2014/07/10 22:44:59 dilfridge Exp $
+
+*perl-Module-Loaded-0.80.0-r3 (10 Jul 2014)
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Module-Loaded-0.60.0-r1.ebuild, -perl-Module-Loaded-0.80.0-r1.ebuild,
+  -perl-Module-Loaded-0.80.0-r2.ebuild, +perl-Module-Loaded-0.80.0-r3.ebuild:
+  Improve dependencies; remove old
 
 *perl-Module-Loaded-0.80.0-r2 (14 Aug 2013)
 

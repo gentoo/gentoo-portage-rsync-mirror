@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-Module-Load
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.38 2014/01/20 21:01:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.39 2014/07/10 22:34:36 dilfridge Exp $
+
+*perl-Module-Load-0.320.0 (10 Jul 2014)
+*perl-Module-Load-0.240.0-r1 (10 Jul 2014)
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Module-Load-0.180.0-r1.ebuild, -perl-Module-Load-0.200.0.ebuild,
+  -perl-Module-Load-0.220.0-r1.ebuild, -perl-Module-Load-0.240.0.ebuild,
+  +perl-Module-Load-0.240.0-r1.ebuild, +perl-Module-Load-0.320.0.ebuild:
+  Add perl-5.20 version; improve dependencies; remove old
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-Module-Load-0.200.0.ebuild, perl-Module-Load-0.220.0-r1.ebuild,
