@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/eid-mw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.8 2014/03/07 15:24:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.9 2014/07/10 14:53:53 swift Exp $
+
+*eid-mw-9999 (10 Jul 2014)
+*eid-mw-4.0.6_p1480 (10 Jul 2014)
+
+  10 Jul 2014; Sven Vermeulen <swift@gentoo.org> +eid-mw-4.0.6_p1480.ebuild,
+  +eid-mw-9999.ebuild, +files/fix-nodialog-bug.patch:
+  Fix bug #515680 - Bump eid-mw, also commit live ebuild. Thanks to Vincent
+  Hardy
 
 *eid-mw-4.0.4_p1253 (07 Mar 2014)
 
