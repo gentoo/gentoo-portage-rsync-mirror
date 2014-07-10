@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Email-Address
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.88 2013/08/25 07:48:21 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.89 2014/07/10 08:48:05 zlogene Exp $
+
+*Email-Address-1.905.0 (10 Jul 2014)
+
+  10 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> +Email-Address-1.905.0.ebuild:
+  Security bump (bug #513810)
 
 *Email-Address-1.900.0 (25 Aug 2013)
 
