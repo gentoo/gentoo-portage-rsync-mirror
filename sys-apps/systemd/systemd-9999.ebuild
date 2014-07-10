@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.124 2014/07/10 00:20:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.125 2014/07/10 17:12:06 floppym Exp $
 
 EAPI=5
 
@@ -195,6 +195,9 @@ multilib_src_configure() {
 		--with-bashcompletiondir="$(get_bashcompdir)"
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
+		# For testing.
+		--with-rootprefix="${ROOTPREFIX-/usr}"
+		--with-rootlibdir="${ROOTPREFIX-/usr}/$(get_libdir)"
 		# disable sysv compatibility
 		--with-sysvinit-path=
 		--with-sysvrcnd-path=
@@ -267,14 +270,6 @@ multilib_src_configure() {
 	if use firmware-loader; then
 		myeconfargs+=(
 			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
-		)
-	fi
-
-	# Added for testing; this is UNSUPPORTED by the Gentoo systemd team!
-	if [[ -n ${ROOTPREFIX+set} ]]; then
-		myeconfargs+=(
-			--with-rootprefix="${ROOTPREFIX}"
-			--with-rootlibdir="${ROOTPREFIX}/$(get_libdir)"
 		)
 	fi
 
