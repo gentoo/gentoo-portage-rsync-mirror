@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.320.0.ebuild,v 1.1 2013/03/13 07:59:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.320.0.ebuild,v 1.2 2014/07/10 14:20:17 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~ppc-a
 IUSE=""
 
 RDEPEND="
-	>=perl-core/Math-BigInt-1.880.0
+	>=virtual/perl-Math-BigInt-1.880.0
 	>=perl-core/Math-BigRat-0.210.0
 "
 DEPEND="${RDEPEND}"

@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm preinst prerm setup test unpack
-DEPEND=>=perl-core/Math-BigInt-1.88 >=perl-core/Math-BigRat-0.21 dev-lang/perl test? ( >=dev-perl/Test-Pod-Coverage-1.08 )
+DEPEND=>=virtual/perl-Math-BigInt-1.88 >=perl-core/Math-BigRat-0.21 dev-lang/perl test? ( >=dev-perl/Test-Pod-Coverage-1.08 )
 DESCRIPTION=Transparent BigNumber/BigRational support for Perl
 HOMEPAGE=http://search.cpan.org/dist/bignum/
 IUSE=test
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc s390 sh sparc x86
 LICENSE=|| ( Artistic GPL-2 )
-RDEPEND=>=perl-core/Math-BigInt-1.88 >=perl-core/Math-BigRat-0.21 dev-lang/perl
+RDEPEND=>=virtual/perl-Math-BigInt-1.88 >=perl-core/Math-BigRat-0.21 dev-lang/perl
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TE/TELS/math/bignum-0.23.tar.gz
 _eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641
-_md5_=eba7c4225586e688d2eb0cb8e6b03c62
+_md5_=9c9a3be0ad808b0445e3902d4921a8f6
