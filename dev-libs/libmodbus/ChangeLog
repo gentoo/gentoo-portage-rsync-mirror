@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libmodbus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/ChangeLog,v 1.8 2012/07/02 07:12:33 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/ChangeLog,v 1.10 2014/07/10 15:59:24 xmw Exp $
+
+*libmodbus-3.1.1 (10 Jul 2014)
+
+  10 Jul 2014; Michael Weber <xmw@gentoo.org> +libmodbus-3.1.1.ebuild,
+  libmodbus-3.0.6.ebuild:
+  Version bump (bug 510314). Update HOMEPAGE
+
+*libmodbus-3.0.6 (10 Jul 2014)
+
+  10 Jul 2014; Michael Weber <xmw@gentoo.org> +libmodbus-3.0.6.ebuild:
+  Add bugfix release of 3.0 series
 
 *libmodbus-3.1.0 (02 Jul 2012)
 

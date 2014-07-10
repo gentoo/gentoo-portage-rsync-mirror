@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/abduco
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abduco/ChangeLog,v 1.1 2014/07/10 15:44:13 xmw Exp $
+
+*abduco-0.1 (10 Jul 2014)
+
+  10 Jul 2014; Michael Weber <xmw@gentoo.org> +abduco-0.1.ebuild, +metadata.xml:
+  Initial import, ebuild by lorem_ipsum, respect CC, fail on test-error.
