@@ -1,6 +1,21 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.707 2014/06/22 17:51:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.710 2014/07/10 13:25:09 ssuominen Exp $
+
+  10 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -xine-lib-1.2.5.ebuild,
+  metadata.xml:
+  old
+
+*xine-lib-1.2.6 (10 Jul 2014)
+
+  10 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +xine-lib-1.2.6.ebuild,
+  xine-lib-1.2.9999.ebuild:
+  Version bump; based on 1.2.9999 wrt #514474
+
+  10 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> xine-lib-1.2.5.ebuild,
+  xine-lib-1.2.9999.ebuild:
+  Set :0 to virtual/jpeg dependency to ensure headers and .so symlink are
+  installed.
 
   22 Jun 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/xine-lib-1.2.1-ffmpeg-git.patch,

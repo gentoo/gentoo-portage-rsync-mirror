@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.5.ebuild,v 1.3 2014/04/13 09:14:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.6.ebuild,v 1.1 2014/07/10 13:23:48 ssuominen Exp $
 
 EAPI=5
 
@@ -25,16 +25,13 @@ HOMEPAGE="http://xine.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="1"
-IUSE="a52 aac aalib +alsa altivec avformat bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack jpeg libcaca mad +mmap mng modplug musepack opengl oss pulseaudio samba sdl speex theora truetype v4l vaapi vcd vdpau vdr vidix +vis vorbis vpx wavpack +X +xcb xinerama +xv xvmc ${NLS_IUSE}"
+IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac fusion gtk imagemagick ipv6 jack jpeg libcaca mad +mmap mng modplug musepack opengl oss pulseaudio samba sdl speex theora truetype v4l vaapi vcd vdpau vdr vidix +vis vorbis vpx wavpack +X +xcb xinerama +xv xvmc ${NLS_IUSE}"
 
-# At the time of this version bump only >=ffmpeg-2.2 provides the required 
-# .so library version for avformat support (>=55.19.0) (bug #507474).
 RDEPEND="${NLS_RDEPEND}
 	dev-libs/libxdg-basedir
 	media-libs/libdvdnav
 	sys-libs/zlib
-	avformat? ( >=media-video/ffmpeg-2.2:0 )
-	!avformat? ( || ( media-video/ffmpeg:0 media-libs/libpostproc ) )
+	|| ( media-video/ffmpeg:0 media-libs/libpostproc <media-video/libav-0.8.2-r1 )
 	virtual/ffmpeg
 	virtual/libiconv
 	a52? ( media-libs/a52dec )
@@ -51,7 +48,7 @@ RDEPEND="${NLS_RDEPEND}
 	gtk? ( x11-libs/gdk-pixbuf:2 )
 	imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick ) )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	libcaca? ( media-libs/libcaca )
 	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
@@ -142,8 +139,12 @@ src_configure() {
 		win32dir=/usr/$(get_libdir)/win32
 	fi
 
-	local myconf
-	[[ ${PV} == *9999* ]] || myconf="$(use_enable nls)"
+	local myconf=()
+	[[ ${PV} == *9999* ]] || myconf=( $(use_enable nls) )
+
+	if has_version '>=media-video/ffmpeg-2.2:0'; then
+		myconf+=( --enable-avformat ) #507474
+	fi
 
 	econf \
 		$(use_enable ipv6) \
@@ -180,7 +181,6 @@ src_configure() {
 		$(use_enable mng) \
 		--disable-real-codecs \
 		--disable-w32dll \
-		$(use_enable avformat) \
 		$(use_enable vpx) \
 		$(use_with truetype freetype) $(use_with truetype fontconfig) \
 		$(use_with X x) \
@@ -202,7 +202,7 @@ src_configure() {
 		--with-real-codecs-path=/usr/$(get_libdir)/codecs \
 		--with-w32-path=${win32dir} \
 		$(use_with wavpack) \
-		${myconf}
+		${myconf[@]}
 }
 
 src_compile() {

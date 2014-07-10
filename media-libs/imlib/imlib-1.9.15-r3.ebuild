@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r3.ebuild,v 1.7 2011/10/11 20:19:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r3.ebuild,v 1.8 2014/07/10 13:25:35 kensington Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -19,7 +19,7 @@ IUSE="doc static-libs"
 RDEPEND=">=media-libs/tiff-3.5.5
 	>=media-libs/giflib-4.1.0
 	>=media-libs/libpng-1.2.1
-	virtual/jpeg
+	virtual/jpeg:0
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXext"

@@ -7,10 +7,6 @@
 	</maintainer>
 	<longdescription>An open source library for media applications</longdescription>
 	<use>
-		<flag name="avformat">
-			Enables libformat support for reading and writing various media containers.
-			libavformat is part of FFmpeg.
-		</flag>
 		<flag name="bluray">
 			Enable playback of Blu-ray filesystems using <pkg>media-libs/libbluray</pkg>
 		</flag>
