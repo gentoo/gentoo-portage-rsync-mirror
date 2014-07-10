@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9183 2014/07/09 20:31:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9184 2014/07/10 16:03:04 xmw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jul 2014; Michael Weber <xmw@gentoo.org> package.mask:
+  Mask buggy versions of dev-libs/libmodbus
 
   09 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add 5.20 version of Module::CoreList to perl-5.20 mask
