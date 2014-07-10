@@ -1,9 +1,10 @@
 # ChangeLog for net-analyzer/calamaris
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/calamaris/ChangeLog,v 1.16 2014/07/10 19:59:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/calamaris/ChangeLog,v 1.18 2014/07/10 20:03:00 jer Exp $
 
-  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> calamaris-2.99.4.0.ebuild:
-  EAPI bump.
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> calamaris-2.59.ebuild
+  calamaris-2.99.4.0.ebuild:
+  EAPI bump. Fix HOMEPAGE/SRC_URI.
 
   03 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   calamaris-2.99.4.0.ebuild:
