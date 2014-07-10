@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.22.1.ebuild,v 1.2 2014/02/02 08:17:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.22.1.ebuild,v 1.3 2014/07/10 13:33:27 zlogene Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P=${PN}-${PV/_/-}
 	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 fi
 
 LICENSE="GPL-2"

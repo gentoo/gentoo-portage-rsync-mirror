@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.15.ebuild,v 1.1 2014/05/12 17:21:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.15.ebuild,v 1.2 2014/07/10 13:32:20 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 IUSE=""
 
 COMMON_DEPEND="
-	media-libs/libpng
-	virtual/jpeg
+	media-libs/libpng:0
+	virtual/jpeg:0
 	x11-libs/libX11
 	x11-libs/libXft
 	x11-libs/libXpm

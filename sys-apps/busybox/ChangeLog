@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.367 2014/02/02 08:17:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.368 2014/07/10 13:33:27 zlogene Exp $
+
+  10 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> busybox-1.22.1.ebuild:
+  Add ~arm64 keyword
 
   02 Feb 2014; Mike Frysinger <vapier@gentoo.org>
   +files/busybox-1.22.1-ash.patch, +files/busybox-1.22.1-date.patch,

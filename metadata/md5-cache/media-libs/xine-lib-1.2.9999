@@ -9,4 +9,4 @@ RDEPEND=virtual/libintl dev-libs/libxdg-basedir media-libs/libdvdnav sys-libs/zl
 REQUIRED_USE=vidix? ( || ( X fbcon ) ) xv? ( X ) xinerama? ( X )
 SLOT=1
 _eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	libtool	2964b38e7ad7f6998406386ad1c6dbcf	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=20aabae299200c5abc5d0e800104b5ff
+_md5_=8a3ba9be40e5115864f0a807ce3f9127
