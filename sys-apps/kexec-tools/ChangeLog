@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kexec-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.61 2013/12/28 20:27:31 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.62 2014/07/10 06:11:15 jlec Exp $
+
+*kexec-tools-2.0.7 (10 Jul 2014)
+
+  10 Jul 2014; Justin Lecher <jlec@gentoo.org> +kexec-tools-2.0.7.ebuild:
+  Version Bump, #516778
 
   28 Dec 2013; Justin Lecher <jlec@gentoo.org> kexec-tools-9999.ebuild,
   files/kexec.init-9999:
