@@ -1,6 +1,45 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.141 2014/07/01 14:34:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.142 2014/07/10 19:23:46 blueness Exp $
+
+  10 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  -mips64/multilib/n32-n64/deprecated, -mips64/multilib/n32-n64/eapi,
+  -mips64/multilib/n32-n64/make.defaults, -mips64/multilib/n32-n64/parent,
+  -mips64/multilib/n32-o32/deprecated, -mips64/multilib/n32-o32/eapi,
+  -mips64/multilib/n32-o32/make.defaults, -mips64/multilib/n32-o32/parent,
+  -mips64/multilib/n64-n32/deprecated, -mips64/multilib/n64-n32/eapi,
+  -mips64/multilib/n64-n32/make.defaults, -mips64/multilib/n64-n32/parent,
+  -mips64/multilib/n64-o32/deprecated, -mips64/multilib/n64-o32/eapi,
+  -mips64/multilib/n64-o32/make.defaults, -mips64/multilib/n64-o32/parent,
+  -mips64/multilib/o32-n32/deprecated, -mips64/multilib/o32-n32/eapi,
+  -mips64/multilib/o32-n32/make.defaults, -mips64/multilib/o32-n32/parent,
+  -mips64/multilib/o32-n64/deprecated, -mips64/multilib/o32-n64/eapi,
+  -mips64/multilib/o32-n64/make.defaults, -mips64/multilib/o32-n64/parent,
+  -mipsel/mips64el/multilib/n32-n64/deprecated,
+  -mipsel/mips64el/multilib/n32-n64/eapi,
+  -mipsel/mips64el/multilib/n32-n64/make.defaults,
+  -mipsel/mips64el/multilib/n32-n64/parent,
+  -mipsel/mips64el/multilib/n32-o32/deprecated,
+  -mipsel/mips64el/multilib/n32-o32/eapi,
+  -mipsel/mips64el/multilib/n32-o32/make.defaults,
+  -mipsel/mips64el/multilib/n32-o32/parent,
+  -mipsel/mips64el/multilib/n64-n32/deprecated,
+  -mipsel/mips64el/multilib/n64-n32/eapi,
+  -mipsel/mips64el/multilib/n64-n32/make.defaults,
+  -mipsel/mips64el/multilib/n64-n32/parent,
+  -mipsel/mips64el/multilib/n64-o32/deprecated,
+  -mipsel/mips64el/multilib/n64-o32/eapi,
+  -mipsel/mips64el/multilib/n64-o32/make.defaults,
+  -mipsel/mips64el/multilib/n64-o32/parent,
+  -mipsel/mips64el/multilib/o32-n32/deprecated,
+  -mipsel/mips64el/multilib/o32-n32/eapi,
+  -mipsel/mips64el/multilib/o32-n32/make.defaults,
+  -mipsel/mips64el/multilib/o32-n32/parent,
+  -mipsel/mips64el/multilib/o32-n64/deprecated,
+  -mipsel/mips64el/multilib/o32-n64/eapi,
+  -mipsel/mips64el/multilib/o32-n64/make.defaults,
+  -mipsel/mips64el/multilib/o32-n64/parent:
+  Remove the two-abi multilib profiles
 
   01 Jul 2014; Michał Górny <mgorny@gentoo.org> make.defaults,
   mipsel/make.defaults:

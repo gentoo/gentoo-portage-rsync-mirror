@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=>=net-libs/libnet-1.1.0 >=sys-apps/sed-4
+DEPEND=net-libs/libnet:1.1
 DESCRIPTION=A utility to poison ARP caches
 EAPI=5
 HOMEPAGE=http://arpoison.sourceforge.net/
 KEYWORDS=amd64 ~arm ppc x86
 LICENSE=GPL-2
-RDEPEND=>=net-libs/libnet-1.1.0
+RDEPEND=net-libs/libnet:1.1
 SLOT=0
 SRC_URI=mirror://sourceforge/arpoison/arpoison-0.6.tar.gz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=8e8100977464b9bcd18551ed4d98ca7f
+_md5_=2b8acdc9dfaf0f4dffd2366644d28f09

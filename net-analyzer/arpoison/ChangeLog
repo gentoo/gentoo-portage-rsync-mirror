@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/arpoison
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.17 2012/12/28 16:19:09 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.18 2014/07/10 19:13:35 jer Exp $
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> arpoison-0.6-r2.ebuild:
+  Clean up unused vars. Remove die() message. Set SLOT dependency on
+  net-libs/libnet.
 
   28 Dec 2012; Jeroen Roovers <jer@gentoo.org> -arpoison-0.6.ebuild,
   -arpoison-0.6-r1.ebuild:
