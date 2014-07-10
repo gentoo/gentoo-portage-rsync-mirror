@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.2-r1.ebuild,v 1.1 2014/07/10 09:53:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.2-r1.ebuild,v 1.2 2014/07/10 10:06:55 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -36,13 +36,13 @@ RDEPEND="!<dev-ruby/rspec-rails-${PV}"
 # We should add nokogiri here to make sure that we test as much as
 # possible, but since it's yet unported to 1.9 and the nokogiri-due
 # tests fail for sure, we'll be waiting on it.
-USE_RUBY="ruby19" \
+USE_RUBY="ruby19 ruby20 ruby21" \
 	ruby_add_bdepend "test? (
 		>=dev-ruby/hoe-2.0.0
 		dev-ruby/zentest
 		>=dev-ruby/syntax-1.0
 		>=dev-ruby/fakefs-0.2.1 )"
-USE_RUBY="ruby19" ruby_add_bdepend "test? ( =dev-ruby/test-unit-1.2.3 )"
+USE_RUBY="ruby19 ruby20 ruby21" ruby_add_bdepend "test? ( ~dev-ruby/test-unit-1.2.3 )"
 
 all_ruby_prepare() {
 	# Avoid dependency on git.

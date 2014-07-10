@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.167 2014/07/10 09:53:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.168 2014/07/10 10:06:55 graaff Exp $
+
+  10 Jul 2014; Hans de Graaff <graaff@gentoo.org> rspec-1.3.2-r1.ebuild:
+  Fix dependencies for ruby20 and ruby21.
 
 *rspec-1.3.2-r1 (10 Jul 2014)
 
