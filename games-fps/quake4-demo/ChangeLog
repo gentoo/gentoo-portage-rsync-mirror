@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake4-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.19 2014/07/10 02:52:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.20 2014/07/10 05:44:25 mr_bones_ Exp $
+
+  10 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  quake4-demo-1.0-r1.ebuild:
+  use QA_PREBUILT instead
 
   10 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
   quake4-demo-1.0-r1.ebuild:

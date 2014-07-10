@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0-r1.ebuild,v 1.3 2014/07/10 02:52:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0-r1.ebuild,v 1.4 2014/07/10 05:44:25 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -54,9 +54,8 @@ S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
-QA_EXECSTACK="${dir:1}/quake4.x86
+QA_PREBUILT="${dir:1}/quake4.x86
 	${dir:1}/q4ded.x86"
-QA_FLAGS_IGNORED=${QA_EXECSTACK}
 
 src_install() {
 	insinto "${dir}"
