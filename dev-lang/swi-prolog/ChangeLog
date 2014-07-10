@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.441 2014/07/03 13:23:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.442 2014/07/10 11:05:14 nimiux Exp $
+
+  10 Jul 2014; Chema Alonso <nimiux@gentoo.org> swi-prolog-6.6.4.ebuild:
+  Stable for amd64 wrt bug #509252
 
 *swi-prolog-7.1.17 (03 Jul 2014)
 
