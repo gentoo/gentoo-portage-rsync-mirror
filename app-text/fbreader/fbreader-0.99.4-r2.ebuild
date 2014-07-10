@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4.ebuild,v 1.3 2013/03/02 19:42:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4-r2.ebuild,v 1.1 2014/07/10 10:46:29 grozin Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fbreader.org/files/desktop/${PN}-sources-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="debug"
 
 RDEPEND="
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-db/sqlite
 	net-misc/curl
 	sys-libs/zlib
-	dev-qt/qtcore:4
+	dev-qt/qtcore:4[ssl]
 	dev-qt/qtgui:4
 "
 DEPEND="${RDEPEND}
@@ -65,6 +65,18 @@ src_prepare() {
 	else
 		echo "TARGET_STATUS = release" >> makefiles/target.mk
 	fi
+
+	# bug #452636
+	epatch "${FILESDIR}"/${P}.patch
+	# bug #515698
+	epatch "${FILESDIR}"/${P}-qreal-cast.patch
+	# bug #516794
+	epatch "${FILESDIR}"/${P}-mimetypes.patch
+}
+
+src_compile() {
+	# bug #484516
+	emake -j1
 }
 
 src_install() {

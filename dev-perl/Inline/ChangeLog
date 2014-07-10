@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.63 2014/06/09 23:42:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.64 2014/07/10 10:36:02 zlogene Exp $
+
+  10 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -Inline-0.44-r1.ebuild,
+  -Inline-0.470.0.ebuild, Inline-0.500.0.ebuild:
+  Mark ppc64 stable; Drop old.
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> Inline-0.44-r1.ebuild,
   Inline-0.470.0.ebuild, Inline-0.500.0.ebuild, Inline-0.510.0.ebuild,

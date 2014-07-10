@@ -1,6 +1,15 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.39 2014/04/14 09:03:36 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.40 2014/07/10 10:46:29 grozin Exp $
+
+*fbreader-0.99.4-r2 (10 Jul 2014)
+
+  10 Jul 2014; Andrey Grozin <grozin@gentoo.org> -fbreader-0.99.4.ebuild,
+  +fbreader-0.99.4-r2.ebuild, +files/fbreader-0.99.4-mimetypes.patch,
+  +files/fbreader-0.99.4-qreal-cast.patch:
+  Added casts to qreal (bug #515698), thanks to William Throwe
+  <wtt6@cornell.edu>; added mimetypes to .desktop (bug #516794); depend on
+  qtcore[ssl] (bug #462044); added -j1 (bug #484516)
 
   14 Apr 2014; Andrey Grozin <grozin@gentoo.org> metadata.xml:
   Set maintainer to grozin
