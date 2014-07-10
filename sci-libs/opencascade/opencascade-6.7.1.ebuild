@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.0.ebuild,v 1.3 2013/04/27 18:15:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.7.1.ebuild,v 1.1 2014/07/10 21:59:48 xmw Exp $
 
 EAPI=5
 
@@ -8,12 +8,12 @@ inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Software development platform for CAD/CAE, 3D surface/solid modeling and data exchange"
 HOMEPAGE="http://www.opencascade.org/"
-SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/OpenCASCADE${PV//\./}.tar.gz"
+SRC_URI="http://files.opencascade.com/OCCT/OCC_${PV}_release/opencascade-${PV}.tgz"
 
-LICENSE="Open-CASCADE-Technology-Public-License-6.5"
+LICENSE="Open-CASCADE-LGPL-2.1-Exception-1.0 LGPL-2.1"
 SLOT="${PV}"
-KEYWORDS=""
-IUSE="debug doc examples freeimage gl2ps java +tbb"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug doc examples freeimage gl2ps java qt4 +tbb"
 
 DEPEND="app-admin/eselect-opencascade
 	dev-lang/tcl
@@ -31,8 +31,6 @@ DEPEND="app-admin/eselect-opencascade
 	tbb? ( dev-cpp/tbb )"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/ros
-
 # http://bugs.gentoo.org/show_bug.cgi?id=352435
 # http://www.gentoo.org/foundation/en/minutes/2011/20110220_trustees.meeting_log.txt
 RESTRICT="bindist mirror"
@@ -49,9 +47,7 @@ src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	epatch \
-		"${FILESDIR}"/${PN}-6.5-ftgl.patch \
-		"${FILESDIR}"/${PN}-6.5-fixed-DESTDIR.patch \
-		"${FILESDIR}"/${PN}-6.5-tcl8.6.patch \
+		"${FILESDIR}"/${PN}-6.7.0-fixed-DESTDIR.patch \
 		"${FILESDIR}"/${PN}-6.5.4-fixed-tbb-VERSION.patch
 
 	# Feed environment variables used by Opencascade compilation
@@ -111,7 +107,9 @@ TCL_LIBRARY=${my_sys_lib}/tcl$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*
 
 	sed -e "/^AM_C_PROTOTYPES$/d" \
 		-e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" \
-		-i configure.* || die
+		-e "s:\$qt/include:\$qt/include/qt4:g"\
+		-e "s:\$qt/lib:\$qt/$(get_libdir)/qt4:g"\
+		-i configure.ac || die
 	eautoreconf
 }
 
@@ -123,12 +121,12 @@ src_configure() {
 		--with-ftgl="${EROOT}usr" \
 		$(usex freeimage "--with-freeimage=${EROOT}usr" "") \
 		$(usex gl2ps "--with-gl2ps=${EROOT}usr" "") \
+		$(usex qt4 "--with-qt=${EROOT}usr" "") \
 		$(usex tbb "--with-tbb-include=${EROOT}usr" "") \
 		$(usex tbb "--with-tbb-library=${EROOT}usr" "") \
 		$(use java && echo "--with-java-include=$(java-config -O)/include" || echo "--without-java-include") \
 		$(use_enable debug) \
 		$(use_enable !debug production)
-	#$(use_with freeimage) \
 }
 
 src_install() {
@@ -145,16 +143,15 @@ src_install() {
 	insinto /etc/env.d/${PN}
 	newins 50${PN} ${PV}
 
-	cd "${WORKDIR}"
+	#cd "${S}"
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r data
 		doins -r samples
 	fi
-	dodoc doc/*.pdf
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r doc/{overview,ReferenceDocumentation}
+		doins -r doc/{overview,pdf,refman}
 	fi
 }
 
