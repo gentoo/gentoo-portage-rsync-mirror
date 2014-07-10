@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/cgilib-0.7.ebuild,v 1.8 2012/03/02 21:22:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/cgilib-0.7.ebuild,v 1.9 2014/07/10 18:45:35 jer Exp $
 
 EAPI="4"
 
 inherit autotools autotools-utils
 
-DESCRIPTION="A programmers library for the CGI interface"
+DESCRIPTION="a simple and lightweight interface to the Common Gateway Interface (CGI) for C and C++ programs"
 HOMEPAGE="http://www.infodrom.org/projects/cgilib/"
 SRC_URI="http://www.infodrom.org/projects/${PN}/download/${P}.tar.gz"
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b-r2.ebuild,v 1.4 2012/10/24 11:49:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b-r2.ebuild,v 1.5 2014/07/10 18:55:58 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,6 @@ SRC_URI="http://angst.sourceforge.net/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE=""
 
 DEPEND="net-libs/libpcap
 	net-libs/libnet:1.0"
@@ -25,7 +24,7 @@ src_prepare() {
 	sed -i Makefile.linux \
 		-e 's|^CC =|CC ?=|g' \
 		-e '/ -o angst /s|$(OBJS)|$(LDFLAGS) &|g' \
-		|| die "sed Makefile.linux"
+		|| die
 }
 
 src_compile() {

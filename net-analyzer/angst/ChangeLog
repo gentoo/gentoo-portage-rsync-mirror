@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/angst
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.14 2012/10/24 11:49:14 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/ChangeLog,v 1.15 2014/07/10 18:55:58 jer Exp $
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> angst-0.4b-r2.ebuild:
+  EAPI bump.
 
   24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> angst-0.4b-r2.ebuild:
   Add ~amd64, wrt bug #439452

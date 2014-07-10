@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.4.ebuild,v 1.7 2014/01/20 23:21:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.4.ebuild,v 1.8 2014/07/10 18:54:14 jer Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -25,48 +25,48 @@ RDEPEND="
 "
 
 src_prepare() {
-	rm -rf pcre-3.9
-	sed -i -e "s:etc/:share/amap/:g" amap-lib.c || die "sed amap-lib.c failed"
+	rm -r pcre-3.9 || die
+	sed -i -e "s:etc/:share/amap/:g" amap-lib.c || die
 	# Above change requires below change. See sources...
-	sed -i '/strlen(AMAP_PREFIX/s: 5 : 12 :' amap-lib.c || die "sed amap-lib.c failed"
-	sed -i 's:/usr/local:/usr:' amap.h || die "sed amap.h failed"
+	sed -i '/strlen(AMAP_PREFIX/s: 5 : 12 :' amap-lib.c || die
+	sed -i 's:/usr/local:/usr:' amap.h || die
 	# Files to be updated are at different location, bug 207839.
-	sed -i '/AMAP_RESOURCE/s:www:freeworld:' amap.h || die "sed amap.h failed"
+	sed -i '/AMAP_RESOURCE/s:www:freeworld:' amap.h || die
 
-	sed -i '/DATADIR/s:/etc:/share/amap:' Makefile.am || die "sed Makefile.am failed"
+	sed -i '/DATADIR/s:/etc:/share/amap:' Makefile.am || die
 
 	epatch "${FILESDIR}"/4.8-system-pcre.patch
 }
 
 src_configure() {
-	# has it's own stupid custom configure script
-	./configure || die "configure failed"
+	# non-autotools configure script
+	./configure || die
 	sed -i \
 		-e '/^XDEFINES=/s:=.*:=:' \
 		-e '/^XLIBS=/s:=.*:=:' \
 		-e '/^XLIBPATHS/s:=.*:=:' \
 		-e '/^XIPATHS=/s:=.*:=:' \
 		-e "/^CC=/d" \
-		Makefile || die "pruning vars"
+		Makefile || die
 	if use ssl ; then
 		sed -i \
 			-e '/^XDEFINES=/s:=:=-DOPENSSL:' \
 			-e '/^XLIBS=/s:=:=-lcrypto -lssl:' \
-			Makefile || die "adding ssl"
+			Makefile || die
 	fi
 	sed -i Makefile \
 		-e '/-o amap/{s|(OPT) |(OPT) $(LDFLAGS) |g}' \
-		|| die "respecting LDFLAGS failed"
+		|| die
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) OPT="${CFLAGS}" || die "emake failed"
+	emake CC=$(tc-getCC) OPT="${CFLAGS}"
 }
 
 src_install() {
-	dobin amap amapcrap || die "dobin failed"
+	dobin amap amapcrap
 	insinto /usr/share/amap
-	doins appdefs.* || die "doins failed"
+	doins appdefs.*
 
 	doman ${PN}.1
 	dodoc README TODO CHANGES

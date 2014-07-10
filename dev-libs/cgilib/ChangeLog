@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cgilib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.34 2012/03/02 21:22:01 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.35 2014/07/10 18:45:35 jer Exp $
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> -cgilib-0.5.ebuild,
+  -cgilib-0.6.ebuild, cgilib-0.7.ebuild, -files/cgilib-0.5-cgitest.diff:
+  Old.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> cgilib-0.7.ebuild:
   Marking cgilib-0.7 ppc64 for bug 400007

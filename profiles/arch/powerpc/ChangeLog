@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.268 2014/06/27 22:17:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.269 2014/07/10 18:54:27 blueness Exp $
+
+  10 Jul 2014; Anthony G. Basile <blueness@gentoo.org> use.mask:
+  x264 works on pcc, bug #516856
 
   27 Jun 2014; Michał Górny <mgorny@gentoo.org> make.defaults,
   ppc32/make.defaults, ppc32/use.mask, ppc64/32ul/make.defaults,
