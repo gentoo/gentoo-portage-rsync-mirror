@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.122 2014/07/08 17:01:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.124 2014/07/10 00:20:25 floppym Exp $
 
 EAPI=5
 
@@ -171,6 +171,14 @@ src_configure() {
 	multilib-minimal_src_configure
 }
 
+multilib_native_enable() {
+	if multilib_is_native_abi; then
+		echo "--enable-${1}"
+	else
+		echo "--disable-${1}"
+	fi
+}
+
 multilib_src_configure() {
 	local myeconfargs=(
 		# disable -flto since it is an optimization flag
@@ -193,28 +201,51 @@ multilib_src_configure() {
 		# no deps
 		--enable-efi
 		--enable-ima
-		# optional components/dependencies
-		$(use_enable acl)
-		$(use_enable audit)
-		$(use_enable cryptsetup libcryptsetup)
-		$(use_enable doc gtk-doc)
-		$(use_enable elfutils)
+
+		# Optional components/dependencies
+		$(multilib_native_use_enable acl)
+		$(multilib_native_use_enable audit)
+		$(multilib_native_use_enable cryptsetup libcryptsetup)
+		$(multilib_native_use_enable doc gtk-doc)
+		$(multilib_native_use_enable elfutils)
 		$(use_enable gcrypt)
 		$(use_enable gudev)
-		$(use_enable http microhttpd)
-		$(usex http $(use_enable ssl gnutls) --disable-gnutls)
-		$(use_enable introspection)
+		$(multilib_native_use_enable http microhttpd)
+		$(usex http $(multilib_native_use_enable ssl gnutls) --disable-gnutls)
+		$(multilib_native_use_enable introspection)
 		$(use_enable kdbus)
-		$(use_enable kmod)
+		$(multilib_native_use_enable kmod)
 		$(use_enable lzma xz)
-		$(use_enable pam)
-		$(use_enable policykit polkit)
-		$(use_with python)
-		$(use_enable python python-devel)
-		$(use_enable qrcode qrencode)
-		$(use_enable seccomp)
-		$(use_enable selinux)
-		$(use_enable test tests)
+		$(multilib_native_use_enable pam)
+		$(multilib_native_use_enable policykit polkit)
+		$(multilib_native_use_with python)
+		$(multilib_native_use_enable python python-devel)
+		$(multilib_native_use_enable qrcode qrencode)
+		$(multilib_native_use_enable seccomp)
+		$(multilib_native_use_enable selinux)
+		$(multilib_native_use_enable test tests)
+		$(multilib_native_use_enable test dbus)
+
+		# Disable optional binaries for non-native abis
+		$(multilib_native_enable backlight)
+		$(multilib_native_enable binfmt)
+		$(multilib_native_enable bootchart)
+		$(multilib_native_enable coredump)
+		$(multilib_native_enable hostnamed)
+		$(multilib_native_enable localed)
+		$(multilib_native_enable logind)
+		$(multilib_native_enable machined)
+		$(multilib_native_enable networkd)
+		$(multilib_native_enable quotacheck)
+		$(multilib_native_enable randomseed)
+		$(multilib_native_enable readahead)
+		$(multilib_native_enable resolved)
+		$(multilib_native_enable rfkill)
+		$(multilib_native_enable sysusers)
+		$(multilib_native_enable timedated)
+		$(multilib_native_enable timesyncd)
+		$(multilib_native_enable tmpfiles)
+		$(multilib_native_enable vconsole)
 
 		# not supported (avoid automagic deps in the future)
 		--disable-apparmor
@@ -251,47 +282,6 @@ multilib_src_configure() {
 		myeconfargs+=(
 			ac_cv_search_cap_init=
 			ac_cv_header_sys_capability_h=yes
-			DBUS_CFLAGS=' '
-			DBUS_LIBS=' '
-
-			# Binaries
-			--disable-backlight
-			--disable-binfmt
-			--disable-bootchart
-			--disable-coredump
-			--disable-hostnamed
-			--disable-localed
-			--disable-logind
-			--disable-machined
-			--disable-networkd
-			--disable-quotacheck
-			--disable-randomseed
-			--disable-readahead
-			--disable-resolved
-			--disable-rfkill
-			--disable-sysusers
-			--disable-timedated
-			--disable-timesyncd
-			--disable-tmpfiles
-			--disable-vconsole
-
-			# Libraries
-			--disable-acl
-			--disable-audit
-			--disable-elfutils
-			--disable-gnutls
-			--disable-gtk-doc
-			--disable-introspection
-			--disable-kmod
-			--disable-libcryptsetup
-			--disable-microhttpd
-			--disable-pam
-			--disable-polkit
-			--disable-python-devel
-			--disable-qrencode
-			--disable-seccomp
-			--disable-selinux
-			--disable-tests
 		)
 	fi
 
@@ -341,6 +331,8 @@ multilib_src_install() {
 		# Even with --enable-networkd, it's not right to have this running by default
 		# when it's unconfigured.
 		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
+		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
+		rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service
 	else
 		mymakeopts+=(
 			install-libLTLIBRARIES
