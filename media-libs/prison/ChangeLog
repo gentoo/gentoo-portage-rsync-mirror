@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/prison
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.15 2014/06/14 10:12:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/prison/ChangeLog,v 1.16 2014/07/10 21:11:57 nimiux Exp $
+
+  10 Jul 2014; Chema Alonso <nimiux@gentoo.org> prison-1.1.1.ebuild:
+  Stable for amd64 wrt bug #509648
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> prison-1.1.1.ebuild:
   x86 stable wrt bug #509648
