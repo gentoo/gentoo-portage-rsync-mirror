@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.143 2014/05/10 15:22:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.144 2014/07/10 08:16:13 gurligebis Exp $
+
+*strongswan-5.2.0 (10 Jul 2014)
+
+  10 Jul 2014; <gurligebis@gentoo.org> +strongswan-5.2.0.ebuild:
+  Bumping to 5.2.0
 
   10 May 2014; <gurligebis@gentoo.org> -strongswan-5.1.1.ebuild:
   Removing old version, with known issues, fixing bug #507722 and #509832
