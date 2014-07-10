@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.6.2.ebuild,v 1.1 2014/07/08 05:32:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.6.2.ebuild,v 1.2 2014/07/10 11:53:22 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="spec:main spec:group:0 spec:group:1 spec:group:2"
 

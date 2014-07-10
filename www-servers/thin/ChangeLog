@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.30 2014/07/08 05:32:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.31 2014/07/10 11:53:22 graaff Exp $
+
+  10 Jul 2014; Hans de Graaff <graaff@gentoo.org> thin-1.6.2.ebuild:
+  Add ruby20, ruby21.
 
 *thin-1.6.2 (08 Jul 2014)
 
