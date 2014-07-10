@@ -12,6 +12,5 @@ visualization tools are currently available.
 <use>
   <flag name='openbabel'>Use <pkg>sci-chemistry/openbabel</pkg> for file
     conversions</flag>
-  <flag name='toolbar'>Build the shortcuts toolbar</flag>
 </use>
 </pkgmetadata>
