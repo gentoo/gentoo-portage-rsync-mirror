@@ -1,25 +1,22 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0_p20130508-r1.ebuild,v 1.2 2013/11/06 18:43:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0_p20140623.ebuild,v 1.1 2014/07/10 02:30:54 dlan Exp $
 
 EAPI="5"
 
-inherit toolchain-funcs
-
-COMMIT="c54dc204ef4278f949a965dc90e693799b6aae41"
-SONAME="1"
+inherit eutils toolchain-funcs vcs-snapshot
 
 DESCRIPTION="Compression library programmed in C to perform very good, but slow, deflate or zlib compression."
 HOMEPAGE="https://code.google.com/p/zopfli/"
-SRC_URI="https://dev.gentoo.org/~tomwij/files/dist/${P}.zip"
+SRC_URI="https://zopfli.googlecode.com/archive/b831d9813d44d85b4f1497be9cb877e4d5c4bbd7.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="0/${SONAME}"
+SLOT="0/1"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="app-arch/unzip"
-
-S="${WORKDIR}/${PN}-${COMMIT:0:12}"
+src_prepare() {
+	epatch_user
+}
 
 src_compile() {
 	local target
@@ -40,7 +37,7 @@ src_install() {
 
 	dolib lib${PN}.so.*
 	dosym lib${PN}.so.* /usr/$(get_libdir)/lib${PN}.so
-	dosym lib${PN}.so.* /usr/$(get_libdir)/lib${PN}.so.${SONAME}
+	dosym lib${PN}.so.* /usr/$(get_libdir)/lib${PN}.so.1
 
 	insinto /usr/include/${PN}/
 	doins src/${PN}/*.h
