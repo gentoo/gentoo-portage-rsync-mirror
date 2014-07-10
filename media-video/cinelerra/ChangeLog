@@ -1,6 +1,14 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.68 2014/02/10 16:56:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.69 2014/07/10 17:59:35 ssuominen Exp $
+
+*cinelerra-20140710 (10 Jul 2014)
+
+  10 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +cinelerra-20140710.ebuild, +files/cinelerra-20140710-ffmpeg-0.11.patch,
+  +files/cinelerra-20140710-underlinking.patch,
+  +files/cinelerra-20140710-validate_desktop_entry.patch:
+  Create a new Cinelerra CV snapshot from git wrt #516850 by Michał Górny
 
   10 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> cinelerra-20120707.ebuild:
   Missing virtual/glu dependency for USE="opengl" wrt #500904 by Michal Feix

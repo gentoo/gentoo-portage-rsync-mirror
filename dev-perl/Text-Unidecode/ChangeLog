@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Unidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.23 2014/07/08 10:44:44 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.24 2014/07/10 17:52:42 grobian Exp $
+
+  10 Jul 2014; Fabian Groffen <grobian@gentoo.org> Text-Unidecode-0.40.0.ebuild:
+  Marked ~m68k-mint, bug #516634
 
   08 Jul 2014; Michael Haubenwallner <haubi@gentoo.org>
   Text-Unidecode-0.40.0.ebuild:

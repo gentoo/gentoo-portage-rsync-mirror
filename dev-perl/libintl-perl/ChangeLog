@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.58 2014/07/10 17:15:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.59 2014/07/10 17:53:18 grobian Exp $
+
+  10 Jul 2014; Fabian Groffen <grobian@gentoo.org> libintl-perl-1.230.0.ebuild:
+  Marked ~m68k-mint, bug #516634
 
   10 Jul 2014; Fabian Groffen <grobian@gentoo.org> libintl-perl-1.230.0.ebuild:
   Add virtual/libintl dependency, bug #516760
