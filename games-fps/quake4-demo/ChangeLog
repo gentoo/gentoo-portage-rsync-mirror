@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake4-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.18 2014/07/10 01:28:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/ChangeLog,v 1.19 2014/07/10 02:52:28 mr_bones_ Exp $
+
+  10 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  quake4-demo-1.0-r1.ebuild:
+  add QA_FLAGS_IGNORED; tidy
 
   10 Jul 2014; Patrick Lauer <patrick@gentoo.org> quake4-demo-1.0-r1.ebuild:
   Whitespace

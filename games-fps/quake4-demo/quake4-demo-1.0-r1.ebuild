@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0-r1.ebuild,v 1.2 2014/07/10 01:28:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-demo/quake4-demo-1.0-r1.ebuild,v 1.3 2014/07/10 02:52:28 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -56,10 +56,11 @@ Ddir=${D}/${dir}
 
 QA_EXECSTACK="${dir:1}/quake4.x86
 	${dir:1}/q4ded.x86"
+QA_FLAGS_IGNORED=${QA_EXECSTACK}
 
 src_install() {
 	insinto "${dir}"
-	doins License.txt q4icon.bmp version.info # CHANGES
+	doins License.txt q4icon.bmp version.info
 	dodoc README
 
 	exeinto "${dir}"
@@ -68,12 +69,11 @@ src_install() {
 
 	insinto "${dir}"/q4base
 	doins q4base/*
-#	doins us/q4base/* || die "installing us/q4base/*"
 
 	if ! use dedicated ; then
 		doexe bin/Linux/x86/quake4.x86
 		games_make_wrapper ${PN} ./quake4.x86 "${dir}" "${dir}"
-		newicon q4icon.bmp ${PN}.bmp || die "copying icon"
+		newicon q4icon.bmp ${PN}.bmp || die
 		make_desktop_entry ${PN} "Quake IV (Demo)" /usr/share/applications/${PN}.bmp
 	fi
 
