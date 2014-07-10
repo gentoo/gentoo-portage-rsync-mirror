@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r6.ebuild,v 1.10 2013/02/16 17:47:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r6.ebuild,v 1.11 2014/07/10 19:33:03 jer Exp $
 
-EAPI="2"
+EAPI=5
 inherit eutils user versionator
 
 PATCH_VER="0.5"
@@ -31,34 +31,27 @@ pkg_preinst() {
 }
 
 src_prepare() {
-	EPATCH_SOURCE="${WORKDIR}"/arpwatch-patchset/
-	EPATCH_SUFFIX="patch"
-	epatch
-	cp "${WORKDIR}"/arpwatch-patchset/*.8 . || die "Failed to get man-pages from arpwatch-patchset."
+	EPATCH_SOURCE="${WORKDIR}"/arpwatch-patchset/ EPATCH_SUFFIX="patch" epatch
+	cp "${WORKDIR}"/arpwatch-patchset/*.8 . || die
 }
 
 src_install () {
-	dosbin arpwatch arpsnmp arp2ethers massagevendor arpfetch bihourly.sh || die
-	doman arpwatch.8 arpsnmp.8 arp2ethers.8 massagevendor.8 arpfetch.8 bihourly.8 || die
+	dosbin arpwatch arpsnmp arp2ethers massagevendor arpfetch bihourly.sh
+	doman arpwatch.8 arpsnmp.8 arp2ethers.8 massagevendor.8 arpfetch.8 bihourly.8
 
 	insinto /usr/share/arpwatch
-	doins ethercodes.dat || die
+	doins ethercodes.dat
 
 	insinto /usr/share/arpwatch/awk
-	doins duplicates.awk euppertolower.awk p.awk e.awk d.awk || die
+	doins duplicates.awk euppertolower.awk p.awk e.awk d.awk
 
 	keepdir /var/lib/arpwatch
-	dodoc README CHANGES || die
+	dodoc README CHANGES
 
-	newinitd "${FILESDIR}"/arpwatch.initd arpwatch || die
-	newconfd "${FILESDIR}"/arpwatch.confd arpwatch || die
+	newinitd "${FILESDIR}"/arpwatch.initd arpwatch
+	newconfd "${FILESDIR}"/arpwatch.confd arpwatch
 }
 
 pkg_postinst() {
-	# Workaround bug #141619 put this in src_install when bug'll be fixed.
-	chown arpwatch:0 "${ROOT}var/lib/arpwatch"
-
-	elog "For security reasons arpwatch by default runs as an unprivileged user."
-	elog
-	elog "Note: some scripts require snmpwalk utility from net-analyzer/net-snmp"
+	fowners arpwatch:0 "${ROOT}"/var/lib/arpwatch
 }

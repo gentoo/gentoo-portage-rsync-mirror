@@ -1,5 +1,5 @@
---- bwbar.c
-+++ bwbar.c
+--- a/bwbar.c
++++ b/bwbar.c
 @@ -30,6 +30,7 @@
  #include <alloca.h>
  #include <getopt.h>

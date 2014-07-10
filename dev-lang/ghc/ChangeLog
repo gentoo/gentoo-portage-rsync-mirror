@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.257 2014/07/05 15:40:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.258 2014/07/10 19:31:41 slyfox Exp $
+
+*ghc-7.8.3 (10 Jul 2014)
+
+  10 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.8.1_rc1-libbfd.patch, +files/ghc-7.8.2-cgen-constify.patch,
+  +files/ghc-7.8.2-ia64-no-shared.patch, +ghc-7.8.3.ebuild:
+  Version bump.
 
   05 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
   pax-mark ghc-stage2 before it's used first time. Fixes bootstrap failure on

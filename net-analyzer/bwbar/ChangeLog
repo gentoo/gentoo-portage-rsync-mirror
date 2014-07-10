@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/bwbar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwbar/ChangeLog,v 1.8 2011/08/07 23:12:32 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwbar/ChangeLog,v 1.10 2014/07/10 19:47:09 jer Exp $
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> bwbar-1.2.3.ebuild:
+  Stable for AMD64 too.
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> bwbar-1.2.3.ebuild,
+  files/bwbar-1.2.3-libpng15.patch:
+  EAPI bump. Clean up patch.
 
   07 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> bwbar-1.2.3.ebuild,
   +files/bwbar-1.2.3-libpng15.patch:

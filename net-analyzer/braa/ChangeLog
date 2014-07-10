@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/braa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.18 2012/02/05 18:31:17 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.19 2014/07/10 19:42:35 jer Exp $
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> -braa-0.8-r2.ebuild,
+  braa-0.82.ebuild, files/braa-0.8-gentoo.diff:
+  EAPI bump. Clean up patch.
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> braa-0.8-r2.ebuild,
   braa-0.82.ebuild:

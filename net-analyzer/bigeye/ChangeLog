@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bigeye
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.22 2012/10/09 18:54:12 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.23 2014/07/10 19:36:29 jer Exp $
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> bigeye-0.3-r3.ebuild:
+  EAPI bump. Unset unused vars.
 
   09 Oct 2012; Agostino Sarubbo <ago@gentoo.org> bigeye-0.3-r3.ebuild:
   Stable for amd64, wrt bug #342309

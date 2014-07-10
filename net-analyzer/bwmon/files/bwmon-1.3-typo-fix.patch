@@ -1,9 +1,8 @@
-diff -u bwmon-1.3/src/bwmon.c.orig bwmon-1.3/src/bwmon.c      
---- bwmon-1.3/src/bwmon.c.orig	2009-03-22 00:51:12.000000000 +0100
-+++ bwmon-1.3/src/bwmon.c	2009-03-22 00:54:13.000000000 +0100
+--- a/src/bwmon.c
++++ b/src/bwmon.c
 @@ -36,7 +36,7 @@
  			"by Kimmo Nupponen (kimmoon@users.sourceforge.net)\n"
- 			"$Date: 2012/09/30 08:13:07 $\n\n"
+ 			"$Date: 2014/07/10 19:51:24 $\n\n"
  			"usage: %s [-b] [-h] [-a] [-m] [-u seconds]\n"
 -			"\t-a Print bandwidth utiliasation in Kbytes rather than Kbits. The default\n"
 +			"\t-b Print bandwidth utilisation in KBytes rather than Kbits. The default\n"

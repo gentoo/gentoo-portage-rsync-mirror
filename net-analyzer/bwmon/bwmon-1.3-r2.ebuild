@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3-r2.ebuild,v 1.6 2012/11/21 11:16:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3-r2.ebuild,v 1.7 2014/07/10 19:51:24 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,6 @@ RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
 KEYWORDS="amd64 hppa ppc sparc x86"
-IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch

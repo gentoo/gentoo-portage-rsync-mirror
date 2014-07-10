@@ -1,5 +1,5 @@
---- configure.in.orig	2012-10-11 14:32:29.000000000 +0400
-+++ configure.in	2013-07-17 00:12:52.569550315 +0400
+--- a/configure.in
++++ b/configure.in
 @@ -32,8 +32,29 @@
  if test $ac_cv_func_getaddrinfo = no; then
      AC_SEARCH_LIBS(getaddrinfo, [nsl socket], [], [ echo "getaddrinfo() is required for build"; exit -1 ])

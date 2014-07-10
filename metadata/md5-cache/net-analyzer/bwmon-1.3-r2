@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=sys-libs/ncurses
 DESCRIPTION=Simple ncurses bandwidth monitor
-EAPI=4
+EAPI=5
 HOMEPAGE=http://bwmon.sourceforge.net/
 KEYWORDS=amd64 hppa ppc sparc x86
 LICENSE=GPL-2 public-domain
@@ -9,4 +9,4 @@ RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/bwmon/bwmon-1.3.tar.gz
 _eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=406ff4b52ea2082e9ede44aca059cfae
+_md5_=d1a5786b1bbe7d74610308cf022986ce

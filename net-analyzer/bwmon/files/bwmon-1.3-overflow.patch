@@ -1,7 +1,5 @@
-Index: bwmon-1.3/src/bwmon.c
-===================================================================
---- bwmon-1.3.orig/src/bwmon.c
-+++ bwmon-1.3/src/bwmon.c
+--- a/src/bwmon.c
++++ b/src/bwmon.c
 @@ -408,7 +408,7 @@ bool_t
  print_uptime(float * uptime) 
  {

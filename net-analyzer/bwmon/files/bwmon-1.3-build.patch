@@ -1,7 +1,5 @@
-Index: bwmon-1.3/src/Makefile
-===================================================================
---- bwmon-1.3.orig/src/Makefile
-+++ bwmon-1.3/src/Makefile
+--- a/src/Makefile
++++ b/src/Makefile
 @@ -10,8 +10,8 @@ CC = gcc
  RM = /bin/rm
  INSTALL = install
