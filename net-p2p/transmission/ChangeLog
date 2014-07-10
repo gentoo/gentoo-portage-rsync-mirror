@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.254 2014/07/06 09:38:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.255 2014/07/10 05:03:35 ssuominen Exp $
+
+*transmission-2.84 (10 Jul 2014)
+
+  10 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +transmission-2.84.ebuild:
+  Version bump wrt security #516822
 
   06 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> transmission-2.83.ebuild:
   Include epatch_user wrt #516486 by Hristo Venev
