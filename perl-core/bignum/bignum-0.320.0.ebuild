@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.320.0.ebuild,v 1.2 2014/07/10 14:20:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/bignum-0.320.0.ebuild,v 1.3 2014/07/10 22:11:02 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="
 	>=virtual/perl-Math-BigInt-1.880.0
-	>=perl-core/Math-BigRat-0.210.0
+	>=virtual/perl-Math-BigRat-0.210.0
 "
 DEPEND="${RDEPEND}"
 #	test? (

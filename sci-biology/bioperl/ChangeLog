@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.52 2012/10/28 14:58:15 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.53 2014/07/10 22:15:26 dilfridge Exp $
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> bioperl-1.6.9.ebuild:
+  Depend on virtual/perl-x instead of perl-core/x
 
   28 Oct 2012; Justin Lecher <jlec@gentoo.org> -bioperl-1.5.1-r1.ebuild,
   -bioperl-1.6.1.ebuild:

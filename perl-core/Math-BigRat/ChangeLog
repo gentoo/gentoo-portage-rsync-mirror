@@ -1,6 +1,16 @@
 # ChangeLog for perl-core/Math-BigRat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.44 2013/03/02 16:18:55 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.46 2014/07/10 22:06:28 dilfridge Exp $
+
+*Math-BigRat-0.260.200-r1 (10 Jul 2014)
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Math-BigRat-0.260.200.ebuild, +Math-BigRat-0.260.200-r1.ebuild:
+  Improve dependencies
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Math-BigRat-0.22.ebuild, -Math-BigRat-0.26.ebuild:
+  Remove old
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Math-BigRat-0.260.200.ebuild:
   Stable for sh, wrt bug #458122

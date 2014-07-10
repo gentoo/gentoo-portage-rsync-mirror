@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/soldieroffortune-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/ChangeLog,v 1.11 2012/12/28 20:28:30 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/ChangeLog,v 1.12 2014/07/10 22:14:04 axs Exp $
+
+*soldieroffortune-demo-0.57-r1 (10 Jul 2014)
+
+  10 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +soldieroffortune-demo-0.57-r1.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-multilib, added some vars to the
+  wrapper so that it won't segfault with newer mesa or nvidia GL, added postinst
+  reminder about /dev/dsp
 
   28 Dec 2012; Tupone Alfredo <tupone@gentoo.org>
   soldieroffortune-demo-0.57.ebuild:
@@ -44,4 +52,3 @@
   +soldieroffortune-demo-0.57.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
   #120422.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.997.0.ebuild,v 1.13 2014/01/25 20:20:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.997.0.ebuild,v 1.14 2014/07/10 22:08:47 dilfridge Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}"
 
 PDEPEND=">=virtual/perl-Math-BigInt-FastCalc-0.270.0
 	>=perl-core/bignum-0.220.0
-	>=perl-core/Math-BigRat-0.260.200"
+	>=virtual/perl-Math-BigRat-0.260.200"
 
 PATCHES=( "${FILESDIR}/${P}-overload.patch" )
 

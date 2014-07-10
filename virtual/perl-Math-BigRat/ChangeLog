@@ -1,0 +1,13 @@
+# ChangeLog for virtual/perl-Math-BigRat
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigRat/ChangeLog,v 1.1 2014/07/10 22:02:14 dilfridge Exp $
+
+*perl-Math-BigRat-0.260.600 (10 Jul 2014)
+*perl-Math-BigRat-0.260.400 (10 Jul 2014)
+*perl-Math-BigRat-0.260.300 (10 Jul 2014)
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perl-Math-BigRat-0.260.300.ebuild, +perl-Math-BigRat-0.260.400.ebuild,
+  +perl-Math-BigRat-0.260.600.ebuild, +metadata.xml:
+  Add missing virtual
+

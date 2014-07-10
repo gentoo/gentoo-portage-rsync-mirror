@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=games-util/loki_patch
+DESCRIPTION=First-person shooter based on the mercenary trade
+EAPI=5
+HOMEPAGE=http://www.lokigames.com/products/sof/
+KEYWORDS=~amd64 ~x86
+LICENSE=LOKI-EULA
+RDEPEND=|| ( ( virtual/opengl[abi_x86_32(-)] media-libs/libsdl[X,opengl,sound,abi_x86_32(-)] x11-libs/libXrender[abi_x86_32(-)] x11-libs/libXrandr[abi_x86_32(-)] x11-libs/libXcursor[abi_x86_32(-)] media-libs/smpeg[abi_x86_32(-)] ) ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] ) ) games-misc/games-envd
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://lokigames/loki_demos/sof-demo.run
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	4495f6885ab72b2cc94467e9a89fa641	user	1a9ecf501027961855b0320e8915a79c
+_md5_=47586d1da63d9c6691d1e4e1beb3bd2f

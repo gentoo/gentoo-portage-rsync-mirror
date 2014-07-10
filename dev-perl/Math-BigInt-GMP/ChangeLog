@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Math-BigInt-GMP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.21 2014/05/01 17:50:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-BigInt-GMP/ChangeLog,v 1.22 2014/07/10 22:16:52 dilfridge Exp $
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Math-BigInt-GMP-1.24.ebuild:
+  Depend on virtual/perl-x instead of perl-core/x
 
 *Math-BigInt-GMP-1.380.0 (01 May 2014)
 

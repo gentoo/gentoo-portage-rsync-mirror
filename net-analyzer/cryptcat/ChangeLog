@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/cryptcat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.22 2012/07/29 23:37:59 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.23 2014/07/10 22:14:41 jer Exp $
+
+*cryptcat-1.2.1-r2 (10 Jul 2014)
+
+  10 Jul 2014; Jeroen Roovers <jer@gentoo.org> +cryptcat-1.2.1-r2.ebuild,
+  files/cryptcat-1.2.1-build.patch, +files/cryptcat-1.2.1-misc.patch:
+  EAPI bump. Convert sed scripts etcetera to patch. Catch a few more missing
+  includes.
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -cryptcat-1.2.1.ebuild:
   Old.

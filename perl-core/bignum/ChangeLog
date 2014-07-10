@@ -1,6 +1,16 @@
 # ChangeLog for perl-core/bignum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.52 2014/07/10 14:20:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/bignum/ChangeLog,v 1.54 2014/07/10 22:26:50 dilfridge Exp $
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> -bignum-0.23.ebuild,
+  -bignum-0.24.ebuild, -bignum-0.25.ebuild, -bignum-0.280.0.ebuild,
+  -bignum-0.290.0.ebuild:
+  Remove old
+
+  10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> bignum-0.23.ebuild,
+  bignum-0.24.ebuild, bignum-0.25.ebuild, bignum-0.280.0.ebuild,
+  bignum-0.290.0.ebuild, bignum-0.300.0.ebuild, bignum-0.320.0.ebuild:
+  Improve dependencies
 
   10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> bignum-0.23.ebuild,
   bignum-0.24.ebuild, bignum-0.25.ebuild, bignum-0.280.0.ebuild,
