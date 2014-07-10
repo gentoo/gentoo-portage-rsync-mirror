@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/getopt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/ChangeLog,v 1.10 2013/01/01 16:34:49 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/ChangeLog,v 1.11 2014/07/10 12:18:05 haubi Exp $
+
+  10 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> getopt-1.1.5.ebuild:
+  add ~ppc-aix keyword
 
   01 Jan 2013; Fabian Groffen <grobian@gentoo.org> getopt-1.1.5.ebuild:
   Marked ~x64-freebsd
