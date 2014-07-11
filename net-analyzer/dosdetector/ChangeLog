@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/dosdetector
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dosdetector/ChangeLog,v 1.4 2007/03/17 19:40:39 vanquirius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dosdetector/ChangeLog,v 1.5 2014/07/11 10:26:23 jer Exp $
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> dosdetector-20060621.ebuild,
+  +files/dosdetector-20060621-isdigit.patch:
+  EAPI bump. New HOMEPAGE/SRC_URI. Add missing include for isdigit(). Set
+  RDEPEND.
 
   17 Mar 2007; Marcelo Goes <vanquirius@gentoo.org>
   dosdetector-20060621.ebuild:

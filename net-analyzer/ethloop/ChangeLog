@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethloop
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.10 2013/05/20 10:15:53 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.11 2014/07/11 10:28:42 jer Exp $
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> ethloop-10-r3.ebuild:
+  EAPI bump.
 
   20 May 2013; Ulrich Müller <ulm@gentoo.org> ethloop-10-r3.ebuild:
   Fix LICENSE and add mirror restriction, bug 446052.

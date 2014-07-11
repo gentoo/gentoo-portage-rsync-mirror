@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-slip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.15 2014/06/17 12:46:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.16 2014/07/11 10:17:21 tetromino Exp $
+
+  11 Jul 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  python-slip-0.4.0.ebuild, python-slip-0.6.0.ebuild:
+  Add missing dependencies (bug #516858, thanks to Miroslaw Mieszczak).
 
 *python-slip-0.6.0 (17 Jun 2014)
 

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DESCRIPTION=Local simulator for testing Linux QoS disciplines
-EAPI=4
+EAPI=5
 HOMEPAGE=http://luxik.cdi.cz/~devik/qos/ethloop/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=all-rights-reserved
@@ -8,4 +8,4 @@ RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://luxik.cdi.cz/~devik/qos/ethloop/ethloop10.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=184e15a7c9cda0cd1ea9e51217360a7e
+_md5_=fe4dd299e67c32b1652ff4bfd45d751f
