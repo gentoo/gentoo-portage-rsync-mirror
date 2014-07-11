@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.10.ebuild,v 1.3 2014/05/15 20:03:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.10.ebuild,v 1.4 2014/07/11 08:50:33 patrick Exp $
 
 EAPI=5
 inherit elisp-common eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz http://dev.gentoo.org/~grozin/${P
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="+ansi athena emacs +readline tk X"
 
 # See bug #205803

@@ -10,5 +10,5 @@ RDEPEND=>=app-text/djvu-3.5.21:= >=app-text/poppler-0.16.7:= dev-libs/libxml2:= 
 REQUIRED_USE=test? ( graphicsmagick )
 SLOT=0
 SRC_URI=http://pdf2djvu.googlecode.com/files/pdf2djvu_0.7.16.tar.gz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=425cb9b96b3d1e39858c3c314e025c39

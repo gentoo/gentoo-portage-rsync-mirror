@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/uiop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.9 2014/03/09 14:17:09 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.10 2014/07/11 08:52:31 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> uiop-3.0.3.ebuild:
+  Stable on amd64 #511170
 
 *uiop-3.0.3 (09 Mar 2014)
 
@@ -39,4 +42,3 @@
   20 Apr 2013; Andrey Grozin <grozin@gentoo.org> +uiop-2.33-r1.ebuild,
   +metadata.xml:
   Initial import from the lisp overlay (pmasked)
-

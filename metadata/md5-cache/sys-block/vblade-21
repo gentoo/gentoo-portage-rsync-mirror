@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/util-linux
 SLOT=0
 SRC_URI=mirror://sourceforge/aoetools/vblade-21.tgz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=09e80fd9de1b0a0a37eeefe369aa4cfa

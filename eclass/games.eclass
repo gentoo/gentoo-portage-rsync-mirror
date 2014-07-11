@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.157 2014/03/12 18:54:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.158 2014/07/11 08:21:58 ulm Exp $
 
 # devlist: games@gentoo.org
 #
@@ -8,8 +8,8 @@
 # you better have a *good* reason why you're *not* using games.eclass
 # in a games-* ebuild
 
-if [[ ${___ECLASS_ONCE_GAMES} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_GAMES="recur -_+^+_- spank"
+if [[ -z ${_GAMES_ECLASS} ]]; then
+_GAMES_ECLASS=1
 
 inherit base multilib toolchain-funcs eutils user
 

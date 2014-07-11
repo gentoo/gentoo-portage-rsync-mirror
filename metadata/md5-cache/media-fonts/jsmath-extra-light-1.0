@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=media-fonts/jsmath !media-fonts/jsmath-extra-dark
 SLOT=0
 SRC_URI=mirror://gentoo/jsmath-extra-light-1.0.tar.bz2
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	font	37271e0911f39dd15a28adcaf94f6956	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=61da363954394cd49b9483ab0517a303

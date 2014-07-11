@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.48 2014/01/11 14:03:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.49 2014/07/11 08:49:58 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> ecls-13.5.1-r1.ebuild:
+  Stable on amd64 #511170
 
 *ecls-13.5.1-r1 (11 Jan 2014)
 

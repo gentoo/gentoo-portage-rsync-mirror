@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.0.3.ebuild,v 1.1 2014/03/09 14:16:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.0.3.ebuild,v 1.2 2014/07/11 08:46:18 patrick Exp $
 
 EAPI=5
 inherit eutils
@@ -11,8 +11,8 @@ SRC_URI="http://common-lisp.net/project/${PN}/archives/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="doc"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
+IUSE="doc test"
 
 SLOT="0/${PVR}"
 
@@ -20,7 +20,8 @@ DEPEND="!dev-lisp/cl-${PN}
 		!dev-lisp/asdf-binary-locations
 		!dev-lisp/gentoo-init
 		!<dev-lisp/asdf-2.33-r3
-		doc? ( virtual/texi2dvi )"
+		doc? ( virtual/texi2dvi )
+		test? ( dev-lisp/sbcl )"
 RDEPEND=""
 PDEPEND="~dev-lisp/uiop-${PV}"
 

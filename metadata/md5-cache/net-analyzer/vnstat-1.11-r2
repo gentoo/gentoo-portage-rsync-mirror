@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=gd? ( media-libs/gd[png] )
 SLOT=0
 SRC_URI=http://humdi.net/vnstat/vnstat-1.11.tar.gz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=c02955e6ee50de62efcc3c0626264b31

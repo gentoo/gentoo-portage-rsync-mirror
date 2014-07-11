@@ -8,5 +8,5 @@ LICENSE=BSD GPL-2
 RDEPEND=dev-db/sqlite media-libs/flac media-libs/libexif media-libs/libid3tag media-libs/libogg media-libs/libvorbis virtual/ffmpeg virtual/jpeg
 SLOT=0
 SRC_URI=mirror://sourceforge/minidlna/minidlna_1.0.24_src.tar.gz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=be25d20e97d8b54250873456d528f1ee

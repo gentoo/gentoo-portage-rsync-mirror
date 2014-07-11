@@ -10,5 +10,5 @@ PDEPEND=php? ( dev-php/pecl-syck !=dev-libs/syck-0.55-r1 )
 RDEPEND=python? ( !dev-python/pysyck ) python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=http://rubyforge.org/frs/download.php/4492/syck-0.55.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=253130f3388413ed7cc9184474cadc20

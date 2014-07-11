@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils !<sys-apps/linux-misc-apps-3.6-r2 !sys-power/cpufrequtils
 SLOT=0
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.14.tar.xz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=bb3d2f807710c8aa49b807db48e221a4

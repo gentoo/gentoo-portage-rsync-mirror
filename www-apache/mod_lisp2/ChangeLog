@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_lisp2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/ChangeLog,v 1.9 2012/11/27 19:22:08 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/ChangeLog,v 1.10 2014/07/11 08:53:01 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> mod_lisp2-1.3.2.ebuild:
+  Stable on amd64 #511170
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

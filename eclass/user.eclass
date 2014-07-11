@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.23 2014/07/04 08:01:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.24 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -13,8 +13,8 @@
 # The user eclass contains a suite of functions that allow ebuilds
 # to quickly make sure users in the installed system are sane.
 
-if [[ ${___ECLASS_ONCE_USER} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_USER="recur -_+^+_- spank"
+if [[ -z ${_USER_ECLASS} ]]; then
+_USER_ECLASS=1
 
 # @FUNCTION: _assert_pkg_ebuild_phase
 # @INTERNAL

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.107 2014/05/06 15:29:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.108 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -17,8 +17,8 @@
 # builds (default), in-source builds and an implementation of the well-known use_enable
 # and use_with functions for CMake.
 
-if [[ ${___ECLASS_ONCE_CMAKE_UTILS} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_CMAKE_UTILS="recur -_+^+_- spank"
+if [[ -z ${_CMAKE_UTILS_ECLASS} ]]; then
+_CMAKE_UTILS_ECLASS=1
 
 # @ECLASS-VARIABLE: WANT_CMAKE
 # @DESCRIPTION:

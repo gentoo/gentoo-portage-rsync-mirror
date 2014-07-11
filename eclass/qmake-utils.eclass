@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.1 2013/12/02 09:42:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.2 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -11,8 +11,8 @@
 # @DESCRIPTION:
 # Utility eclass providing wrapper functions for Qt4 and Qt5 qmake.
 
-if [[ ${___ECLASS_ONCE_QMAKE_UTILS} != "recur -_+^+_- spank" ]]; then
-___ECLASS_ONCE_QMAKE_UTILS="recur -_+^+_- spank"
+if [[ -z ${_QMAKE_UTILS_ECLASS} ]]; then
+_QMAKE_UTILS_ECLASS=1
 
 inherit eutils multilib toolchain-funcs
 

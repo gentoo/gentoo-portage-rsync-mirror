@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.69 2014/07/04 08:01:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.70 2014/07/11 08:21:58 ulm Exp $
 
 inherit versionator
 
@@ -12,8 +12,8 @@ inherit versionator
 # This eclass contains all functions shared by the different eclasses,
 # for KDE 4 ebuilds.
 
-if [[ ${___ECLASS_ONCE_KDE4_FUNCTIONS} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_KDE4_FUNCTIONS="recur -_+^+_- spank"
+if [[ -z ${_KDE4_FUNCTIONS_ECLASS} ]]; then
+_KDE4_FUNCTIONS_ECLASS=1
 
 # @ECLASS-VARIABLE: EAPI
 # @DESCRIPTION:

@@ -10,5 +10,5 @@ RDEPEND=!media-gfx/fbi >=media-libs/fontconfig-2.2 >=media-libs/freetype-2.0 med
 REQUIRED_USE=pdf? ( tiff )
 SLOT=0
 SRC_URI=http://www.kraxel.org/releases/fbida/fbida-2.09.tar.gz http://dev.gentoo.org/~jer/fbida-2.09-jpeg-9a.patch.bz2 mirror://gentoo/ida.png.bz2
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=ce0793c8bfd6fbf8ba47ae3a7a8c1127

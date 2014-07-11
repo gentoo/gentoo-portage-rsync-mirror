@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ppcre
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.49 2010/01/07 15:14:46 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.50 2014/07/11 08:47:28 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> cl-ppcre-1.2.16.ebuild:
+  Stable on amd64 #511170
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   cl-ppcre-1.2.16.ebuild:

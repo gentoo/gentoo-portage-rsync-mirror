@@ -10,5 +10,5 @@ PDEPEND=firebird? ( >=dev-php/PEAR-MDB2_Driver_ibase-1.5.0_beta4 ) mssql? ( >=de
 RDEPEND=>=dev-php/pear-1.9.1 dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/MDB2-2.5.0b5.tgz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=8b4325f1d33002be0790be4c4a1132d1

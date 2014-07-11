@@ -10,5 +10,5 @@ PDEPEND=>=app-admin/eselect-wxwidgets-0.7
 RDEPEND=dev-libs/expat odbc? ( dev-db/unixODBC ) sdl? ( media-libs/libsdl ) X? ( dev-libs/glib:2 media-libs/libpng:0= sys-libs/zlib virtual/jpeg x11-libs/gtk+:2 x11-libs/libSM x11-libs/libXinerama x11-libs/libXxf86vm x11-libs/pango[X] gnome? ( gnome-base/libgnomeprintui:2.2 ) gstreamer? ( gnome-base/gconf:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) opengl? ( virtual/opengl ) tiff? ( media-libs/tiff:0 ) ) aqua? ( >=x11-libs/gtk+-2.4[aqua=] virtual/jpeg tiff? ( media-libs/tiff:0 ) )
 SLOT=2.8
 SRC_URI=mirror://sourceforge/wxpython/wxPython-src-2.8.12.1.tar.bz2
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7a88984d9ab323b94f7cf82e5eff4e3c

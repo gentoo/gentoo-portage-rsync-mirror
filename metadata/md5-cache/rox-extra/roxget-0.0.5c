@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=dev-python/urlgrabber =dev-lang/python-2* >=rox-base/rox-2.1.0 >=rox-base/rox-lib-1.9.16
 SLOT=0
 SRC_URI=http://nipul.digitillogic.net/ROXget-005c.tgz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	rox	673b6c35a38ec70fa57c5e8f0c13127e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	be9965681d83c3980660a2660ac95e95	rox	673b6c35a38ec70fa57c5e8f0c13127e	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=45a975e46c7a7d41b032a0fe29c35a6b

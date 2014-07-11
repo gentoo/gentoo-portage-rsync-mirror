@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.8 2013/12/21 09:40:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.9 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: multiprocessing.eclass
 # @MAINTAINER:
@@ -33,8 +33,8 @@
 # multijob_finish
 # @CODE
 
-if [[ ${___ECLASS_ONCE_MULTIPROCESSING} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_MULTIPROCESSING="recur -_+^+_- spank"
+if [[ -z ${_MULTIPROCESSING_ECLASS} ]]; then
+_MULTIPROCESSING_ECLASS=1
 
 # @FUNCTION: bashpid
 # @DESCRIPTION:

@@ -8,5 +8,5 @@ RDEPEND=sys-libs/glibc x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu x11-lib
 RESTRICT=fetch strip
 SLOT=0
 SRC_URI=install-crossover-pro-8.0.0.sh
-_eclasses_=unpacker	4495f6885ab72b2cc94467e9a89fa641
+_eclasses_=unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=0064c0cb63783e9e416613af4e91a196

@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=>=dev-php/pear-1.9.4 dev-lang/php >=dev-php/pear-1.9.0
 SLOT=0
 SRC_URI=http://pear.phpunit.de/get/PHP_TokenStream-1.1.0.tgz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	php-pear-lib-r1	683c04445ce44b20b5df954b5050e387	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-lib-r1	683c04445ce44b20b5df954b5050e387	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c4cddb5b3871bcc7e700b9eb1c5b5355

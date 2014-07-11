@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.10.ebuild,v 1.4 2014/06/22 18:41:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.10.ebuild,v 1.5 2014/07/11 08:45:08 patrick Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/libsigsegv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_configure () {
@@ -20,8 +20,8 @@ src_configure () {
 src_test () {
 	if [[ ${FEATURES} = *sandbox* ]]
 	then
-		ewarn "It is known that the stackoverflow"
-		ewarn "tests will fail with sandbox enabled."
+		# skip tests as they will fail
+		return 0
 	fi
 	emake check ||  die "Tests failed"
 }

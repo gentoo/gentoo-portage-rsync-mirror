@@ -10,5 +10,5 @@ RDEPEND=!media-plugins/mytharchive !media-plugins/mythbrowser !media-plugins/myt
 REQUIRED_USE=cdda? ( mythmusic ) cdr? ( mythmusic cdda ) exif? ( mythgallery ) fftw? ( mythmusic ) mythnews? ( mythbrowser ) raw? ( mythgallery )
 SLOT=0
 SRC_URI=ftp://ftp.osuosl.org/pub/mythtv/mythplugins-0.26.0.tar.bz2 http://dev.gentoo.org/~rich0/distfiles/mythplugins-0.26.0-7150d64b6cf4d16ca0a0fd31d872ad2ba8dd0589.tar.xz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=71851fc20f3e12920952b23917ecc2d2

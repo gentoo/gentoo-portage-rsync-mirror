@@ -9,5 +9,5 @@ LICENSE=|| ( FTL GPL-2+ )
 RDEPEND=sys-libs/zlib bzip2? ( app-arch/bzip2 ) X? ( x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp ) infinality? ( media-libs/fontconfig-infinality )
 SLOT=2
 SRC_URI=mirror://sourceforge/freetype/freetype-2.4.11.tar.bz2 utils? ( mirror://sourceforge/freetype/ft2demos-2.4.11.tar.bz2 ) doc? ( mirror://sourceforge/freetype/freetype-doc-2.4.11.tar.bz2 ) infinality? ( http://dev.gentoo.org/~polynomial-c/freetype-2.4.11-infinality-patches.tar.xz )
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=1d5155daba6a63dd50c0e119609ce2b8

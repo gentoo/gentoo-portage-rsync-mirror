@@ -9,5 +9,5 @@ RDEPEND=sys-apps/pcsc-lite
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=x86? ( http://www.scmmicro.com/npa/files/scl011_2.06_linux_32bit.tar.gz ) amd64? ( http://www.scmmicro.com/npa/files/scl011_2.06_linux_64bit.tar.gz )
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	a9a8d051efb42bfe884c1db82ce161de
 _md5_=4fa29d5f9cfa95a72ce2356817352a9a

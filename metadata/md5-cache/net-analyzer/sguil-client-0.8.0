@@ -8,5 +8,5 @@ LICENSE=QPL
 RDEPEND=>=dev-lang/tcl-8.3[-threads] >=dev-lang/tk-8.3 >=dev-tcltk/itcl-3.2 >=dev-tcltk/tclx-8.3 dev-tcltk/itk dev-tcltk/iwidgets dev-tcltk/tcllib ssl? ( >=dev-tcltk/tls-1.4.1 ) net-analyzer/wireshark
 SLOT=0
 SRC_URI=mirror://sourceforge/sguil/sguil-client-0.8.0.tar.gz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=5b87e3eae00f8e91f01cf2a5d2b0558e

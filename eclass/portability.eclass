@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.25 2014/05/28 09:48:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.26 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: portability.eclass
 # @MAINTAINER:
@@ -9,8 +9,8 @@
 # Diego Pettenò <flameeyes@gentoo.org>
 # @BLURB: This eclass is created to avoid using non-portable GNUisms inside ebuilds
 
-if [[ ${___ECLASS_ONCE_PORTABILITY} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_PORTABILITY="recur -_+^+_- spank"
+if [[ -z ${_PORTABILITY_ECLASS} ]]; then
+_PORTABILITY_ECLASS=1
 
 # @FUNCTION: treecopy
 # @USAGE: <orig1> [orig2 orig3 ....] <dest>

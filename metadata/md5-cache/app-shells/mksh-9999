@@ -6,5 +6,5 @@ HOMEPAGE=http://mirbsd.de/mksh
 IUSE=static
 LICENSE=BSD
 SLOT=0
-_eclasses_=cvs	638266995fbb0c9c6b1eabbb8582c3f3	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cvs	a4cb8da1bb586b224ade5b54f1d2fda0	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=346abfb69114912e3962c1af4da977ee

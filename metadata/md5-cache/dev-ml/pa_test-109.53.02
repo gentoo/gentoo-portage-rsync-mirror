@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=>=dev-ml/type-conv-109.53.02:= dev-ml/sexplib:= >=dev-ml/core_kernel-109.60.00:= dev-ml/comparelib:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/109.53.02
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.53.00/individual/pa_test-109.53.02.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=463b6ec59d09e4bb53eceb9681826ff9

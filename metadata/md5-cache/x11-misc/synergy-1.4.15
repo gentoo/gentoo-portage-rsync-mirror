@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/crypto++-5.6.2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXtst qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) qt4? ( !x11-misc/qsynergy )
 SLOT=0
 SRC_URI=http://synergy.googlecode.com/files/synergy-1.4.15-Source.tar.gz http://dev.gentoo.org/~hasufell/distfiles/synergy.png
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	dd0375da11f79aa416ff97913c59d01c	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=264241008ec84c92eee45d66d88a6d84

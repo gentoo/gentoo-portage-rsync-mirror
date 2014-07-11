@@ -10,5 +10,5 @@ PDEPEND=app-misc/ca-certificates
 RDEPEND=static-libs? ( gmp? ( dev-libs/gmp[static-libs(+)] ) zlib? ( sys-libs/zlib[static-libs(+)] ) kerberos? ( app-crypt/mit-krb5 ) ) !static-libs? ( gmp? ( dev-libs/gmp ) zlib? ( sys-libs/zlib ) kerberos? ( app-crypt/mit-krb5 ) )
 SLOT=0
 SRC_URI=mirror://openssl/source/openssl-1.0.0j.tar.gz http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/openssl/openssl-c_rehash.sh?rev=1.7 -> openssl-c_rehash.sh.1.7
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=7dd2374160d12599071a6f7000716fee

@@ -10,5 +10,5 @@ RDEPEND=>=dev-db/sqlite-3.7.9:3 device-mapper? ( sys-fs/lvm2[thin] ) !app-emulat
 RESTRICT=installsources strip
 SLOT=0
 SRC_URI=https://github.com/dotcloud/docker/archive/v1.0.0.zip -> docker-1.0.0.zip
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	76fc3c462065bb4ca959f939e6793f94	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	fac675dcccf94392371a6abee62d909f	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	1a9ecf501027961855b0320e8915a79c	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	06133990e861be0fe60c2b428fd025d9	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	a9a8d051efb42bfe884c1db82ce161de	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=562953a96193c4742e6cbc0bdf090338

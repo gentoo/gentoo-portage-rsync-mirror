@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.4
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~scarabeus//glext.h.75.xz http://dev.gentooexperimental.org/~scarabeus//glxext.h.33.xz http://dev.gentoo.org/~lu_zero/distfiles/eselect-opengl-1.2.5.tar.xz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=0ce1199a07b153f0bee6e3c22a861233

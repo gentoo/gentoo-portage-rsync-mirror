@@ -10,5 +10,5 @@ RDEPEND=!net-libs/c-client >=sys-libs/pam-0.72 >=net-mail/mailbase-0.00-r8[pam] 
 REQUIRED_USE=!clearpasswd? ( ssl )
 SLOT=0
 SRC_URI=ftp://ftp.cac.washington.edu/imap/imap-2007f.tar.Z
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=71fdf7741f571d47d99315754f862c56

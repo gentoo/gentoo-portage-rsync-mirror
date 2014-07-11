@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/abcl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl/ChangeLog,v 1.8 2010/05/29 16:57:36 chiiph Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/abcl/ChangeLog,v 1.9 2014/07/11 08:45:40 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> abcl-0.20.0.ebuild:
+  Stable on amd64 #511170
 
 *abcl-0.20.0 (29 May 2010)
 
@@ -35,4 +38,3 @@
   11 Jan 2006; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
   +abcl-0.0.9.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-

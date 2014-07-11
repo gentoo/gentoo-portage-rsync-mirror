@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.137 2014/07/04 08:01:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.138 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -13,8 +13,8 @@
 # NOTE: KDE 4 ebuilds currently support EAPIs 4 and 5.  This will be
 # reviewed over time as new EAPI versions are approved.
 
-if [[ ${___ECLASS_ONCE_KDE4_BASE} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_KDE4_BASE="recur -_+^+_- spank"
+if [[ -z ${_KDE4_BASE_ECLASS} ]]; then
+_KDE4_BASE_ECLASS=1
 
 # @ECLASS-VARIABLE: KDE_SELINUX_MODULE
 # @DESCRIPTION:

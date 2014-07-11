@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.200 2014/07/04 08:01:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.201 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -10,8 +10,8 @@
 # This eclass contains a suite of functions to help developers sanely
 # and safely manage toolchain flags in their builds.
 
-if [[ ${___ECLASS_ONCE_FLAG_O_MATIC} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_FLAG_O_MATIC="recur -_+^+_- spank"
+if [[ -z ${_FLAG_O_MATIC_ECLASS} ]]; then
+_FLAG_O_MATIC_ECLASS=1
 
 inherit eutils toolchain-funcs multilib
 

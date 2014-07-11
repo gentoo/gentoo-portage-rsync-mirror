@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.161 2014/03/01 11:51:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.162 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -13,8 +13,8 @@
 # Note: We require GNU m4, as does autoconf.  So feel free to use any features
 # from the GNU version of m4 without worrying about other variants (i.e. BSD).
 
-if [[ ${___ECLASS_ONCE_AUTOTOOLS} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_AUTOTOOLS="recur -_+^+_- spank"
+if [[ -z ${_AUTOTOOLS_ECLASS} ]]; then
+_AUTOTOOLS_ECLASS=1
 
 inherit libtool multiprocessing
 

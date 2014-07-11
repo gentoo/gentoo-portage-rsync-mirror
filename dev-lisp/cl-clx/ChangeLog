@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-clx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.16 2012/09/29 16:56:32 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/ChangeLog,v 1.17 2014/07/11 08:46:53 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> cl-clx-0.7.3.ebuild:
+  Stable on amd64 #511170
 
   29 Sep 2012; Ulrich Müller <ulm@gentoo.org> cl-clx-0.7.1.ebuild,
   cl-clx-0.7.2.ebuild, cl-clx-0.7.3.ebuild:
@@ -66,4 +69,3 @@
   14 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
   +files/0.6-gentoo.patch, +cl-clx-0.6.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
-

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/popt sys-apps/iproute2 dev-libs/libnl dev-libs/openssl snmp? ( net-analyzer/net-snmp )
 SLOT=0
 SRC_URI=http://www.keepalived.org/software/keepalived-1.2.12.tar.gz
-_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	libtool	2964b38e7ad7f6998406386ad1c6dbcf	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=3b62cef90bb58a07ccb562469707c2c8

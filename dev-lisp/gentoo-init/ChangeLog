@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gentoo-init
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gentoo-init/ChangeLog,v 1.13 2012/12/14 12:36:03 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gentoo-init/ChangeLog,v 1.14 2014/07/11 08:51:19 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> gentoo-init-1.0.ebuild:
+  Stable on amd64 #511170
 
 *gentoo-init-1.0 (14 Dec 2012)
 
@@ -47,4 +50,3 @@
   09 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
   +files/gentoo-init.lisp, +gentoo-init-0.1.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-

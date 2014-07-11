@@ -10,5 +10,5 @@ RDEPEND=games-misc/games-envd dedicated? ( || ( games-fps/quake3[dedicated] game
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=mirror://gentoo/ruin_hunters_v10.zip mirror://gentoo/ruin_hunters_v10a_patch.zip http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/distfiles/ruin_hunters_v10a_patch.zip http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/distfiles/ruin_hunters_v10.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	games	016d5de1968de77e56a90938ed6e5aba	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	1a9ecf501027961855b0320e8915a79c
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=1bac68b83406b76fa6668b1d3a211fe8

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.8 2013/06/27 01:18:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.9 2014/07/11 08:21:58 ulm Exp $
 
 # @ECLASS: fcaps.eclass
 # @MAINTAINER:
@@ -28,8 +28,8 @@
 # )
 # @CODE
 
-if [[ ${___ECLASS_ONCE_FCAPS} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_FCAPS="recur -_+^+_- spank"
+if [[ -z ${_FCAPS_ECLASS} ]]; then
+_FCAPS_ECLASS=1
 
 IUSE="+filecaps"
 
@@ -182,8 +182,8 @@ fcaps() {
 					continue 2
 				fi
 			done
-			if [[ ${notfound} -eq 2 ]] && [[ -z ${__FCAPS_WARNED} ]] ; then
-				__FCAPS_WARNED="true"
+			if [[ ${notfound} -eq 2 ]] && [[ -z ${_FCAPS_WARNED} ]] ; then
+				_FCAPS_WARNED="true"
 				ewarn "Could not find cap utils; make sure libcap or libcap-ng is available."
 			fi
 		fi

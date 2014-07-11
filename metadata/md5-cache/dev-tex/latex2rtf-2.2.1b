@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/latex-base media-gfx/imagemagick
 SLOT=0
 SRC_URI=mirror://sourceforge/latex2rtf/latex2rtf-2.2.1b.tar.gz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=37af2c6604b0210db7c6c2914700f1a9

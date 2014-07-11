@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.65 2014/05/16 11:05:06 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.66 2014/07/11 08:50:33 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> gcl-2.6.10.ebuild:
+  Stable on amd64 #511170
 
   16 May 2014; Andrey Grozin <grozin@gentoo.org> -gcl-2.6.7-r3.ebuild,
   -files/flex-configure-LANG.patch:

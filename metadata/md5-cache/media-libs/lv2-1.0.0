@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=plugins? ( x11-libs/gtk+:2 media-libs/libsndfile ) !<media-libs/slv2-0.4.2 !media-libs/lv2core !media-libs/lv2-ui
 SLOT=0
 SRC_URI=http://lv2plug.in/spec/lv2-1.0.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
 _md5_=41f1ae87398a8e458f25b2742723de64

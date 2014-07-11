@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dbus? ( >=dev-libs/dbus-glib-0.98 ) fastscroll? ( x11-li
 REQUIRED_USE=gtkspell? ( spell ) plugin-checksum? ( plugins ) plugin-doat? ( plugins ) plugin-fishlim? ( plugins ) plugin-sysinfo? ( plugins ) python? ( python_single_target_python2_7? ( python_targets_python2_7 ) python_single_target_python3_3? ( python_targets_python3_3 ) ^^ ( python_single_target_python2_7 python_single_target_python3_3 ) ) sexy? ( spell ) ?? ( gtkspell sexy )
 SLOT=0
 SRC_URI=http://dl.hexchat.org/hexchat/hexchat-2.9.6.1.tar.xz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=d59d3a065bfa56a978fdbc2f702b0827

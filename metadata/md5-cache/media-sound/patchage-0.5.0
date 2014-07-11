@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/raul-0.7.0 >=x11-libs/flowcanvas-0.7.1 >=dev-cpp/gtkmm-2.11.12:2.4 >=dev-cpp/glibmm-2.14:2 >=dev-cpp/libglademm-2.6.0:2.4 dev-cpp/libgnomecanvasmm:2.6 dev-libs/boost >=media-sound/jack-audio-connection-kit-0.107 alsa? ( media-libs/alsa-lib ) lash? ( dev-libs/dbus-glib )
 SLOT=0
 SRC_URI=http://download.drobilla.net/patchage-0.5.0.tar.bz2
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=453d0b7105a35323b2aa0f300e53e9eb

@@ -7,5 +7,5 @@ LICENSE=CFS BSD SSLeay GPL-2
 RDEPEND=net-fs/nfs-utils
 SLOT=0
 SRC_URI=mirror://debian/pool/main/c/cfs/cfs_1.4.1.orig.tar.gz mirror://debian/pool/main/c/cfs/cfs_1.4.1-17.diff.gz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f8f8d74b6c133ed0cbdd8b972592c9e2

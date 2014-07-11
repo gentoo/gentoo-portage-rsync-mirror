@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils
 SLOT=0
 SRC_URI=http://linux.dell.com/efibootmgr/efibootmgr-0.6.0/efibootmgr-0.6.0.tar.gz
-_eclasses_=eutils	76fc3c462065bb4ca959f939e6793f94	flag-o-matic	c7bef10bac37ea4947ad688fd0d29b25	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
 _md5_=c8d3aa6a08f7406b03bb3de8a7370d60
