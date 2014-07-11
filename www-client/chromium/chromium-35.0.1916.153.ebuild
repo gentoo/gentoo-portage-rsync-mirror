@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1916.153.ebuild,v 1.4 2014/07/09 02:35:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-35.0.1916.153.ebuild,v 1.5 2014/07/11 18:34:02 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -47,7 +47,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	>=dev-libs/nss-3.14.3:=
 	dev-libs/re2:=
 	gnome? ( >=gnome-base/gconf-2.24.0:= )
-	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2:= )
+	gnome-keyring? ( gnome-base/libgnome-keyring:= )
 	>=media-libs/alsa-lib-1.0.19:=
 	media-libs/flac:=
 	media-libs/harfbuzz:=[icu(+)]
