@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jgoodies-forms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.31 2014/06/17 11:11:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.32 2014/07/11 17:43:05 ercpe Exp $
+
+*jgoodies-forms-1.8.0 (11 Jul 2014)
+
+  11 Jul 2014; Johann Schmitz <ercpe@gentoo.org> +jgoodies-forms-1.8.0.ebuild:
+  Version bump of jgoodies-forms (bugs #504628, #504444, etc.)
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jgoodies-forms-1.1.0.ebuild:
   NM: Cleanup superseeded ebuilds.

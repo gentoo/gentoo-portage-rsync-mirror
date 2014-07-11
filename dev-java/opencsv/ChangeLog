@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/opencsv
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/opencsv/ChangeLog,v 1.1 2014/07/11 17:49:16 ercpe Exp $
+
+*opencsv-2.3 (11 Jul 2014)
+
+  11 Jul 2014; Johann Schmitz <ercpe@gentoo.org> +metadata.xml,
+  +opencsv-2.3.ebuild:
+  New ebuild for opencsv (dependency of tvbrowser)

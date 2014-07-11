@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/htmlparser-org
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/htmlparser-org/ChangeLog,v 1.1 2014/07/11 17:54:09 ercpe Exp $
+
+*htmlparser-org-1.6 (11 Jul 2014)
+
+  11 Jul 2014; Johann Schmitz <ercpe@gentoo.org> +htmlparser-org-1.6.ebuild,
+  +metadata.xml:
+  New ebuild for htmlparser.  Note: this is a different one as dev-
+  java/htmlparser! (the one from htmlparser.org)
