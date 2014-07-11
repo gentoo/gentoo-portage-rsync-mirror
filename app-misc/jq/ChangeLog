@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/jq
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/ChangeLog,v 1.12 2013/12/10 00:56:14 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/ChangeLog,v 1.13 2014/07/11 22:32:11 chutzpah Exp $
+
+*jq-1.4 (11 Jul 2014)
+
+  11 Jul 2014; Patrick McLean <chutzpah@gentoo.org> +jq-1.4.ebuild:
+  Version bump (bug #516018).
 
   10 Dec 2013; Tim Harder <radhermit@gentoo.org> -jq-1.2.ebuild,
   -files/jq-1.2-makefile.patch:

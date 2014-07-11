@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.104 2014/07/11 22:01:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.105 2014/07/11 22:51:51 zlogene Exp $
+
+  11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> squashfs-tools-4.3.ebuild:
+  Add ~s390 keyword
 
   11 Jul 2014;  <tgall@gentoo.org> squashfs-tools-4.3.ebuild:
   Keyworded on arm64, bug #499468
