@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/soldieroffortune
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.29 2012/09/19 15:16:06 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.30 2014/07/11 14:04:00 axs Exp $
+
+*soldieroffortune-1.06a-r1 (11 Jul 2014)
+
+  11 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +soldieroffortune-1.06a-r1.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-multilib; synchronized changes here
+  with those made on soldieroffortune-demo as the original ebuilds matched --
+  however, this ebuild needs the CD for eveyrthing so there is no way for me to
+  confirm accuracy of changes
 
   19 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
   soldieroffortune-1.06a.ebuild:
