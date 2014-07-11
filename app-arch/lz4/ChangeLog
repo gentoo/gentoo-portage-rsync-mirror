@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.21 2014/07/05 14:41:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.22 2014/07/11 22:12:12 tgall Exp $
+
+  11 Jul 2014;  <tgall@gentoo.org> lz4-0_p106-r1.ebuild:
+  Keyworded on arm64, bug #499468
 
   05 Jul 2014; Tobias Klausmann <klausman@gentoo.org> lz4-0_p106-r1.ebuild:
   Keyworded on alpha, bug #499468

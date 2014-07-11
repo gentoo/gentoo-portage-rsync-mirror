@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.4.ebuild,v 1.9 2012/09/17 03:41:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.4.ebuild,v 1.10 2014/07/11 22:25:43 blueness Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,7 +21,8 @@ RDEPEND="png? ( media-libs/libpng )
 	jpeg? ( virtual/jpeg )
 	truetype? ( x11-libs/libXft
 		media-libs/fontconfig
-		media-libs/freetype )
+		media-libs/freetype
+		elibc_uclibc? ( dev-libs/libiconv ) )
 	x11-libs/libX11
 	x11-libs/libXt
 	xpm? ( x11-libs/libXpm )
@@ -35,6 +36,11 @@ src_prepare() {
 		"${FILESDIR}"/${P}-libpng14.patch
 
 	eautoreconf
+
+	if use elibc_uclibc && use truetype; then
+		# It is stated in the README "Multichar support under XFT requires GNU iconv"
+		sed -i -e 's/LIBS = @LIBS@/LIBS = @LIBS@ -liconv/' "${S}/src/Makefile.in"
+	fi
 }
 
 src_configure() {
