@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.9-r2.ebuild,v 1.1 2014/05/11 18:36:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.9-r3.ebuild,v 1.1 2014/07/11 07:27:36 hd_brummy Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://andreas.vdr-developer.org/vdradmin-am/download/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ipv6 ssl +vdr"
+IUSE="ipv6 ssl"
 
 DEPEND="dev-lang/perl
 	dev-perl/Template-Toolkit
@@ -23,7 +23,6 @@ DEPEND="dev-lang/perl
 	virtual/perl-IO-Compress
 	ipv6? ( dev-perl/IO-Socket-INET6 )
 	ssl? ( dev-perl/IO-Socket-SSL )
-	vdr? ( media-video/vdr )
 	perl-core/libnet
 	dev-perl/Authen-SASL
 	dev-perl/Digest-HMAC"

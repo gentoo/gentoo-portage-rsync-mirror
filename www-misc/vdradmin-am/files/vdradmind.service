@@ -2,7 +2,6 @@
 Description=WWW interface daemon for VDR
 Documentation=man:vdradmind(8)
 Documentation=file:///usr/share/doc/vdradmin-am/INSTALL
-After=vdr.service
 
 [Service]
 ExecStart=/usr/bin/vdradmind --nofork

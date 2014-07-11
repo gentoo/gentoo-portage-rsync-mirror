@@ -1,6 +1,14 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.33 2014/05/11 18:36:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.34 2014/07/11 07:27:36 hd_brummy Exp $
+
+*vdradmin-am-3.6.9-r3 (11 Jul 2014)
+
+  11 Jul 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdradmin-am-3.6.9-r2.ebuild, +vdradmin-am-3.6.9-r3.ebuild,
+  files/vdradmind.service:
+  droped vdr use-flag, droped media-video/vdr from depend, droped useless
+  service line 'After=vdr.service'
 
 *vdradmin-am-3.6.9-r2 (11 May 2014)
 
