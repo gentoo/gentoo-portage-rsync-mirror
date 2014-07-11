@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.17.ebuild,v 1.1 2014/04/15 11:37:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.9.ebuild,v 1.1 2014/07/11 13:07:20 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -10,14 +10,8 @@ inherit python-r1 waf-utils multilib linux-info systemd
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
-if [ "${PV}" = "4.9999" ]; then
-	EGIT_REPO_URI="git://git.samba.org/samba.git"
-	KEYWORDS=""
-	inherit git-2
-else
-	SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~hppa ~x86"
-fi
+SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
+KEYWORDS="~amd64 ~hppa ~x86"
 
 DESCRIPTION="Samba Suite Version 4"
 HOMEPAGE="http://www.samba.org/"
@@ -26,7 +20,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="acl addns ads aio avahi client cluster cups dmapi fam gnutls iprint
-ldap quota selinux swat syslog test winbind"
+ldap quota selinux syslog test winbind"
 
 # sys-apps/attr is an automagic dependency (see bug #489748)
 # dev-libs/libaio is an automagic dependency (see bug #489764)
@@ -34,13 +28,13 @@ ldap quota selinux swat syslog test winbind"
 CDEPEND="${PYTHON_DEPS}
 	>=app-crypt/heimdal-1.5[-ssl]
 	dev-libs/iniparser
-	dev-libs/libaio
 	dev-libs/popt
 	sys-libs/readline
 	virtual/libiconv
 	dev-python/subunit
 	sys-apps/attr
 	sys-libs/libcap
+	>=sys-libs/ntdb-1.0[python]
 	>=sys-libs/ldb-1.1.16
 	>=sys-libs/tdb-1.2.11[python]
 	>=sys-libs/talloc-2.0.8[python]
@@ -49,6 +43,7 @@ CDEPEND="${PYTHON_DEPS}
 	virtual/pam
 	acl? ( virtual/acl )
 	addns? ( net-dns/bind-tools[gssapi] )
+	aio? ( dev-libs/libaio )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	cups? ( net-print/cups )
 	dmapi? ( sys-apps/dmapi )
@@ -74,6 +69,7 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.1.0-remove-dmapi-automagic.patch"
 	"${FILESDIR}/named.conf.dlz.patch"
+	"${FILESDIR}/${PN}-4.0.19-automagic_aio_fix.patch"
 )
 
 WAF_BINARY="${S}/buildtools/bin/waf"
@@ -109,7 +105,6 @@ src_configure() {
 		--disable-rpath-install \
 		--nopyc \
 		--nopyo \
-		--disable-ntdb \
 		--bundled-libraries=NONE \
 		--builtin-libraries=NONE \
 		$(use_with addns dnsupdate) \
@@ -128,7 +123,6 @@ src_configure() {
 		--with-pam_smbpass \
 		$(use_with quota quotas) \
 		$(use_with syslog) \
-		$(use_with swat) \
 		$(use_with winbind)
 		"
 	use "ads" && myconf+=" --with-shared-modules=idmap_ad"
@@ -158,6 +152,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}"/smbd.{service,socket}
 	systemd_newunit "${FILESDIR}"/smbd_at.service 'smbd@.service'
 	systemd_dounit "${FILESDIR}"/winbindd.service
+	systemd_dounit "${FILESDIR}"/samba.service
 }
 
 src_test() {
@@ -165,8 +160,6 @@ src_test() {
 }
 
 pkg_postinst() {
-	elog "This is is the first stable release of Samba 4.0"
-
 	ewarn "Be aware the this release contains the best of all of Samba's"
 	ewarn "technology parts, both a file server (that you can reasonably expect"
 	ewarn "to upgrade existing Samba 3.x releases to) and the AD domain"

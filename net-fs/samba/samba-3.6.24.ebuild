@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.22.ebuild,v 1.10 2014/01/12 13:14:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.24.ebuild,v 1.1 2014/07/11 13:07:20 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
-inherit pam versionator multilib eutils flag-o-matic systemd
+inherit pam versionator multilib multilib-minimal eutils flag-o-matic systemd
 
 MY_PV=${PV/_/}
 MY_P="${PN}-${MY_PV}"
@@ -14,31 +14,31 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
 	swat syslog +winbind"
 
 DEPEND="dev-libs/popt
-	>=sys-libs/talloc-2.0.5
-	>=sys-libs/tdb-1.2.9
-	>=sys-libs/tevent-0.9.18
-	virtual/libiconv
-	ads? ( virtual/krb5 sys-fs/e2fsprogs
+	>=sys-libs/talloc-2.0.8-r1[${MULTILIB_USEDEP}]
+	>=sys-libs/tdb-1.2.13[${MULTILIB_USEDEP}]
+	>=sys-libs/tevent-0.9.19[${MULTILIB_USEDEP}]
+	>=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
+	ads? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] sys-fs/e2fsprogs
 		client? ( sys-apps/keyutils ) )
 	avahi? ( net-dns/avahi[dbus] )
-	caps? ( sys-libs/libcap )
+	caps? ( >=sys-libs/libcap-2.22-r2[${MULTILIB_USEDEP}] )
 	client? ( !net-fs/mount-cifs
-		dev-libs/iniparser )
+		>=dev-libs/iniparser-3.1-r1[${MULTILIB_USEDEP}] )
 	cluster? ( >=dev-db/ctdb-1.13 )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
 	dmapi? ( sys-apps/dmapi )
-	fam? ( virtual/fam )
-	ldap? ( net-nds/openldap )
+	fam? ( >=virtual/fam-0-r1[${MULTILIB_USEDEP}] )
+	ldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	ldb? ( sys-libs/ldb )
-	pam? ( virtual/pam
-		winbind? ( dev-libs/iniparser )
+	pam? ( >=virtual/pam-0-r1[${MULTILIB_USEDEP}]
+		winbind? ( >=dev-libs/iniparser-3.1-r1[${MULTILIB_USEDEP}] )
 	)
 	readline? ( >=sys-libs/readline-5.2 )
 	selinux? ( sec-policy/selinux-samba )
@@ -57,7 +57,7 @@ KRBPLUGIN=""
 PLUGINEXT=".so"
 SHAREDMODS=""
 
-S="${WORKDIR}/${MY_P}/source3"
+S=${WORKDIR}/${MY_P}
 
 # TODO:
 # - enable iPrint on Prefix/OSX and Darwin?
@@ -117,56 +117,63 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cp "${FILESDIR}/samba-3.4.2-lib.tevent.python.mk" "../lib/tevent/python.mk"
+	cp "${FILESDIR}/samba-3.4.2-lib.tevent.python.mk" "lib/tevent/python.mk"
 
 	# ensure that winbind has correct ldflags (QA notice)
 	sed -i \
 		-e 's|LDSHFLAGS="|LDSHFLAGS="\\${LDFLAGS} |g' \
-		configure || die "sed failed"
-	cd "${WORKDIR}/${MY_P}" && epatch "${CONFDIR}"/smb.conf.default.patch
+		source3/configure || die "sed failed"
+	epatch "${CONFDIR}"/smb.conf.default.patch
+
+	#bug #399141 wrap newer iniparser version
+	has_version ">=dev-libs/iniparser-3.0.0" && \
+		append-cppflags "-Diniparser_getstr\(d,i\)=iniparser_getstring\(d,i,NULL\)"
+
+	multilib_copy_sources
 }
 
-src_configure() {
-	local myconf
+multilib_src_configure() {
+	local myconf=()
+
+	# we can't alter S since build system writes to '../' and therefore
+	# we need to duplicate the whole structure
+	cd source3 || die
 
 	# Filter out -fPIE
-	[[ ${CHOST} == *-*bsd* ]] && myconf+=" --disable-pie"
+	[[ ${CHOST} == *-*bsd* ]] && myconf+=( --disable-pie )
 
 	#Allowing alpha/s390/sh to build
-	if use alpha || use s390 || use sh ; then
+	if use alpha || [[ ${ABI} == s390 ]] || use sh ; then
+		local CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
 		replace-flags -O? -O1
 	fi
 
 	# http://wiki.samba.org/index.php/CTDB_Setup
-	use cluster && myconf+=" --disable-pie"
+	use cluster && myconf+=( --disable-pie )
 
 	# Upstream refuses to make this configurable
-	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
-
-	#bug #399141 wrap newer iniparser version
-	has_version ">=dev-libs/iniparser-3.0.0" && \
-		export CPPFLAGS+=" -Diniparser_getstr\(d,i\)=iniparser_getstring\(d,i,NULL\)"
+	myconf+=( ac_cv_header_sys_capability_h=$(usex caps) )
 
 	# Notes:
 	# - automount is only needed in conjunction with NIS and we don't have that
 	# anymore => LDAP?
 	# - --without-dce-dfs and --without-nisplus-home can't be passed to configure but are disabled by default
-	econf ${myconf} \
+	econf "${myconf[@]}" \
 		--with-piddir="${EPREFIX}"/var/run/samba \
 		--sysconfdir="${EPREFIX}"/etc/samba \
 		--localstatedir="${EPREFIX}"/var \
-		$(use_enable debug developer) \
+		$(multilib_native_use_enable debug developer) \
 		--enable-largefile \
 		--enable-socket-wrapper \
 		--enable-nss-wrapper \
-		$(use_enable swat) \
-		$(use_enable debug dmalloc) \
-		$(use_enable cups) \
+		$(multilib_native_use_enable swat) \
+		$(multilib_native_use_enable debug dmalloc) \
+		$(multilib_native_use_enable cups) \
 		--disable-iprint \
 		$(use_enable fam) \
 		--enable-shared-libs \
 		--disable-dnssd \
-		$(use_enable avahi) \
+		$(multilib_native_use_enable avahi) \
 		--with-fhs \
 		--with-privatedir="${EPREFIX}"/var/lib/samba/private \
 		--with-rootsbindir="${EPREFIX}"/var/cache/samba \
@@ -175,7 +182,7 @@ src_configure() {
 		--with-configdir="${EPREFIX}"/etc/samba \
 		--with-logfilebase="${EPREFIX}"/var/log/samba \
 		--with-pammodulesdir=$(getpam_mod_dir) \
-		$(use_with dmapi) \
+		$(multilib_native_use_with dmapi) \
 		--without-afs \
 		--without-fake-kaserver \
 		--without-vfs-afsacl \
@@ -197,7 +204,7 @@ src_configure() {
 		$(use_with addns libaddns) \
 		$(use_with cluster ctdb "${EPREFIX}"/usr) \
 		$(use_with cluster cluster-support) \
-		$(use_with acl acl-support) \
+		$(multilib_native_use_with acl acl-support) \
 		$(use_with aio aio-support) \
 		--with-sendfile-support \
 		$(use_with winbind) \
@@ -206,7 +213,9 @@ src_configure() {
 		--without-included-iniparser
 }
 
-src_compile() {
+multilib_src_compile() {
+	cd source3 || die
+
 	# compile libs
 	if use addns ; then
 		einfo "make addns library"
@@ -241,23 +250,26 @@ src_compile() {
 	fi
 
 	# compile utilities
-	if [ -n "${BINPROGS}" ] ; then
-		einfo "make binprogs"
-		emake ${BINPROGS}
-	fi
-	if [ -n "${SBINPROGS}" ] ; then
-		einfo "make sbinprogs"
-		emake ${SBINPROGS}
+	if multilib_is_native_abi; then
+		if [ -n "${BINPROGS}" ] ; then
+			einfo "make binprogs"
+			emake ${BINPROGS}
+		fi
+		if [ -n "${SBINPROGS}" ] ; then
+			einfo "make sbinprogs"
+			emake ${SBINPROGS}
+		fi
 	fi
 
 	if [ -n "${KRBPLUGIN}" ] ; then
 		einfo "make krbplugin"
 		emake ${KRBPLUGIN}${PLUGINEXT}
 	fi
-
 }
 
-src_install() {
+multilib_src_install() {
+	cd source3 || die
+
 	# pkgconfig files installation needed, bug #464818
 	local pkgconfigdir=/usr/$(get_libdir)/pkgconfig
 
@@ -327,21 +339,23 @@ src_install() {
 	fi
 
 	# install binaries
-	insinto /usr
-	for prog in ${SBINPROGS} ; do
-		dosbin ${prog}
-		doman ../docs/manpages/${prog/bin\/}*
-	done
+	if multilib_is_native_abi; then
+		insinto /usr
+		for prog in ${SBINPROGS} ; do
+			dosbin ${prog}
+			doman ../docs/manpages/${prog/bin\/}*
+		done
 
-	for prog in ${BINPROGS} ; do
-		dobin ${prog}
-		doman ../docs/manpages/${prog/bin\/}*
-	done
+		for prog in ${BINPROGS} ; do
+			dobin ${prog}
+			doman ../docs/manpages/${prog/bin\/}*
+		done
 
-	# install scripts
-	if use client ; then
-		dobin script/findsmb
-		doman ../docs/manpages/findsmb.1
+		# install scripts
+		if use client ; then
+			dobin script/findsmb
+			doman ../docs/manpages/findsmb.1
+		fi
 	fi
 
 	# install krbplugin
@@ -358,10 +372,12 @@ src_install() {
 			doman ../docs/manpages/${prog/bin\/}*
 		done
 	fi
+}
 
+multilib_src_install_all() {
 	# install server components
 	if use server ; then
-		doman ../docs/manpages/vfs* ../docs/manpages/samba.7
+		doman docs/manpages/vfs* docs/manpages/samba.7
 
 		diropts -m0700
 		keepdir /var/lib/samba/private
@@ -383,7 +399,7 @@ src_install() {
 
 		if use ldap ; then
 			insinto /etc/openldap/schema
-			doins ../examples/LDAP/samba.schema
+			doins examples/LDAP/samba.schema
 		fi
 
 		if use swat ; then
@@ -392,7 +408,7 @@ src_install() {
 			script/installswat.sh "${ED}" "${EROOT}/usr/share/doc/${PF}/swat" "${S}"
 		fi
 
-		dodoc ../MAINTAINERS.txt ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
+		dodoc MAINTAINERS.txt README* Roadmap WHATSNEW.txt docs/THANKS
 	fi
 
 	# install the spooler to cups
@@ -402,16 +418,16 @@ src_install() {
 
 	# install misc files
 	insinto /etc/samba
-	doins ../examples/smb.conf.default
-	doman  ../docs/manpages/smb.conf.5
+	doins examples/smb.conf.default
+	doman docs/manpages/smb.conf.5
 
 	insinto /usr/"$(get_libdir)"/samba
-	doins ../codepages/{valid.dat,upcase.dat,lowcase.dat}
+	doins codepages/{valid.dat,upcase.dat,lowcase.dat}
 
 	# install docs
 	if use doc ; then
-		dohtml -r ../docs/htmldocs/*
-		dodoc ../docs/*.pdf
+		dohtml -r docs/htmldocs/.
+		dodoc docs/*.pdf
 	fi
 
 	# install examples
@@ -419,18 +435,18 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 
 		if use smbclient ; then
-			doins -r ../examples/libsmbclient
+			doins -r examples/libsmbclient
 		fi
 
 		if use winbind ; then
-			doins -r ../examples/pam_winbind ../examples/nss
+			doins -r examples/pam_winbind examples/nss
 		fi
 
 		if use server ; then
-			cd ../examples
+			cd examples || die
 			doins -r auth autofs dce-dfs LDAP logon misc pdb \
-			perfcounter printer-accounting printing scripts tridge \
-			validchars VFS
+				perfcounter printer-accounting printing scripts tridge \
+				validchars VFS
 		fi
 	fi
 

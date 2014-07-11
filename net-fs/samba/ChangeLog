@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.673 2014/06/18 20:35:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.674 2014/07/11 13:07:20 polynomial-c Exp $
+
+*samba-4.1.9 (11 Jul 2014)
+*samba-4.0.19 (11 Jul 2014)
+*samba-3.6.24 (11 Jul 2014)
+
+  11 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -samba-3.6.22.ebuild,
+  +samba-3.6.24.ebuild, -samba-4.0.17.ebuild, +samba-4.0.19.ebuild,
+  -samba-4.1.7.ebuild, +samba-4.1.9.ebuild,
+  +files/samba-4.0.19-automagic_aio_fix.patch:
+  Version bump. Removed old. Fixed automagic dependency on libaio (bug
+  #489764).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> samba-3.6.23-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
