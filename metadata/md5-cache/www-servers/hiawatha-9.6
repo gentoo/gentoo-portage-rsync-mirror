@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=>=net-libs/polarssl-1.3 xslt? ( dev-libs/libxslt dev-libs/libxml2 ) sys-devel/make >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=net-libs/polarssl-1.3[threads] xslt? ( dev-libs/libxslt dev-libs/libxml2 ) sys-devel/make >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Advanced and secure webserver
 EAPI=5
 HOMEPAGE=http://www.hiawatha-webserver.org
@@ -7,8 +7,8 @@ IUSE=debug +cache ipv6 monitor +rewrite rproxy tomahawk +xslt
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 PDEPEND=monitor? ( www-apps/hiawatha-monitor )
-RDEPEND=>=net-libs/polarssl-1.3 xslt? ( dev-libs/libxslt dev-libs/libxml2 )
+RDEPEND=>=net-libs/polarssl-1.3[threads] xslt? ( dev-libs/libxslt dev-libs/libxml2 )
 SLOT=0
 SRC_URI=http://www.hiawatha-webserver.org/files/hiawatha-9.6.tar.gz
 _eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=3559c72c2078ae461e7686b1570680a3
+_md5_=35c0caf79dee8174ead1c0b4bafdc7b1

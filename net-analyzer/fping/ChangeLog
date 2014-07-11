@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.62 2014/06/27 16:41:07 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.63 2014/07/11 12:47:07 jer Exp $
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> -fping-2.4_beta2_p161-r1.ebuild,
+  -fping-3.1.ebuild, -fping-3.2.ebuild, -fping-3.4.ebuild, -fping-3.5.ebuild,
+  -fping-3.6.ebuild, -fping-3.8.ebuild,
+  -files/fping-2.4_beta2_p161-min-time.patch:
+  Old.
 
   27 Jun 2014; Chema Alonso <nimiux@gentoo.org> fping-3.9.ebuild:
   Stable for amd64 wrt bug #507966

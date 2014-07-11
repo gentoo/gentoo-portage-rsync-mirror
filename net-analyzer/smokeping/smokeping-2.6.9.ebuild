@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.8 2014/04/02 12:59:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.9 2014/07/11 12:41:59 jer Exp $
 
 EAPI=5
 inherit eutils user systemd
@@ -34,7 +34,7 @@ DEPEND="
 	telnet? ( dev-perl/Net-Telnet )
 	>=dev-lang/perl-5.8.8-r8
 	>=dev-perl/SNMP_Session-1.13
-	>=net-analyzer/fping-2.4_beta2-r2
+	>=net-analyzer/fping-2.4_beta2-r2[suid]
 	>=net-analyzer/rrdtool-1.2[perl]
 	dev-perl/CGI-Session
 	dev-perl/Config-Grammar
@@ -141,26 +141,4 @@ src_install() {
 pkg_postinst() {
 	chown smokeping:smokeping "${ROOT}/var/lib/${PN}"
 	chmod 755 "${ROOT}/var/lib/${PN}"
-	elog
-	elog "Additional steps are needed to get ${PN} up & running:"
-	elog
-	elog "First you need to edit /etc/${PN}/config. After that"
-	elog "you can start ${PN} with '/etc/init.d/${PN} start'."
-	elog
-	if use apache2 ; then
-		elog "For web interface make sure to add -D PERL to APACHE2_OPTS in"
-		elog "/etc/conf.d/apache2 and to restart apache2. To access site from"
-		elog "other places check permissions at /etc/apache2/modules.d/79_${PN}.conf"
-		elog
-	else
-		elog "For web interface configure your web server to serve perl cgi"
-		elog "script at /var/www/localhost/perl/"
-	fi
-	elog "To make cropper working you just need to copy /var/www/localhost/smokeping/cropper"
-	elog "into your htdocs (or create symlink and allow webserver to follow symlinks)."
-	elog
-	elog "We install all files required for smoketrace, but you have to"
-	elog "configure it manually. Just read 'man smoketrace'. Also you need to"
-	elog "'emerge traceroute'."
-	elog
 }

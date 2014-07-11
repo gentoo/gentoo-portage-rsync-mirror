@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fprobe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.15 2008/08/04 19:28:41 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fprobe/ChangeLog,v 1.16 2014/07/11 12:55:05 jer Exp $
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> -fprobe-1.1-r1.ebuild,
+  fprobe-1.1-r2.ebuild, files/fprobe-1.1-pidfile-sanity.patch,
+  files/fprobe-1.1-setgroups.patch:
+  EAPI bump. Clean up patches.
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.

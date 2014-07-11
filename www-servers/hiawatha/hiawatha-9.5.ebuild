@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.5.ebuild,v 1.3 2014/05/23 17:17:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.5.ebuild,v 1.4 2014/07/11 13:01:10 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +cache ipv6 monitor +rewrite rproxy ssl tomahawk +xslt"
 
 RDEPEND="
-	ssl? ( >=net-libs/polarssl-1.3 )
+	ssl? ( >=net-libs/polarssl-1.3[threads] )
 	xslt? ( dev-libs/libxml2
 			dev-libs/libxslt )"
 

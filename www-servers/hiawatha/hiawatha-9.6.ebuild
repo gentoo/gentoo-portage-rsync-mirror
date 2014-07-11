@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.6.ebuild,v 1.1 2014/06/21 10:26:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.6.ebuild,v 1.2 2014/07/11 13:01:10 hasufell Exp $
 
 # ssl USE flag currently broken
 # https://github.com/hsleisink/hiawatha/issues/15
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +cache ipv6 monitor +rewrite rproxy tomahawk +xslt"
 
 RDEPEND="
-	>=net-libs/polarssl-1.3
+	>=net-libs/polarssl-1.3[threads]
 	xslt? (	dev-libs/libxslt
 			dev-libs/libxml2 )"
 DEPEND="${RDEPEND}"

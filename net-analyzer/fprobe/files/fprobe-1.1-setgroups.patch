@@ -2,9 +2,8 @@ This seems to fail after the chroot(), so just squelch the exit for now.
 
 Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
 
-diff -Nuar fprobe-1.1/src/fprobe.c fprobe-1.1.new/src/fprobe.c
---- fprobe-1.1/src/fprobe.c	2008-03-17 00:06:43.000000000 +0000
-+++ fprobe-1.1.new/src/fprobe.c	2008-03-17 00:07:30.000000000 +0000
+--- a/src/fprobe.c
++++ b/src/fprobe.c
 @@ -1541,10 +1541,10 @@
  	}
  
