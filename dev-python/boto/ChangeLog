@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.98 2014/06/04 21:02:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.99 2014/07/10 23:52:54 radhermit Exp $
+
+*boto-2.31.1 (10 Jul 2014)
+
+  10 Jul 2014; Tim Harder <radhermit@gentoo.org> +boto-2.31.1.ebuild:
+  Version bump.
 
   04 Jun 2014; Mike Frysinger <vapier@gentoo.org> boto-2.27.0.ebuild:
   Mark arm/ppc/sparc stable #508570 by Tim Harder.
