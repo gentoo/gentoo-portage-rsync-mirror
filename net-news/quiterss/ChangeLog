@@ -1,6 +1,12 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.44 2014/06/20 16:08:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.45 2014/07/11 11:31:00 maksbotan Exp $
+
+*quiterss-0.16.1 (11 Jul 2014)
+
+  11 Jul 2014; Maxim Koltsov <maksbotan@gentoo.org> +quiterss-0.16.1.ebuild,
+  quiterss-9999.ebuild:
+  Bump to 0.16.1, update 9999 ebuild, bug #516210.
 
   20 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> quiterss-0.14.3.ebuild,
   quiterss-0.15.3.ebuild, quiterss-0.15.4.ebuild, quiterss-9999.ebuild:

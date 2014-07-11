@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication[X] dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 dev-db/sqlite:3 phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) ) virtual/pkgconfig >=sys-apps/sed-4
+DESCRIPTION=A Qt4-based RSS/Atom feed reader
+EAPI=5
+HOMEPAGE=https://quiterss.org
+IUSE=debug phonon linguas_ar linguas_cs linguas_de linguas_el_GR linguas_es linguas_fa linguas_fi linguas_fr linguas_gl linguas_hu linguas_it linguas_ja linguas_ko linguas_lt linguas_nl linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_sk linguas_sr linguas_sv linguas_tg_TJ linguas_tr linguas_uk linguas_vi linguas_zh_CN linguas_zh_TW
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication[X] dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 dev-db/sqlite:3 phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
+SLOT=0
+SRC_URI=https://quiterss.org/files/0.16.1/QuiteRSS-0.16.1-src.tar.bz2
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	dd0375da11f79aa416ff97913c59d01c	qt4-r2	b40473dafd07d7c5fe4aef1c1b902f39	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=7c030931ca4bf268a35bb38f2e0dcc18
