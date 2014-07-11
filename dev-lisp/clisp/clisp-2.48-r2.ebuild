@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.48-r2.ebuild,v 1.5 2012/12/04 00:00:48 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.48-r2.ebuild,v 1.6 2014/07/11 03:22:37 patrick Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc -sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc -sparc x86"
 IUSE="berkdb hyperspec X new-clx dbus fastcgi gdbm gtk pari +pcre postgres +readline svm -threads +unicode +zlib"
 
 RDEPEND="virtual/libiconv

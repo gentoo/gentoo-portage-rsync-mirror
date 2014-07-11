@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.109 2013/08/12 15:11:30 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.110 2014/07/11 03:22:37 patrick Exp $
+
+  11 Jul 2014; Patrick Lauer <patrick@gentoo.org> clisp-2.48-r2.ebuild:
+  Stable for amd64 and x86 to fix compilation #425748
 
 *clisp-2.49-r8 (12 Aug 2013)
 
