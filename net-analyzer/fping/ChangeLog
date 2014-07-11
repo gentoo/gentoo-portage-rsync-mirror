@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.63 2014/07/11 12:47:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.64 2014/07/11 18:11:23 jer Exp $
+
+*fping-2.4_beta2_p161-r2 (11 Jul 2014)
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> +fping-2.4_beta2_p161-r1.ebuild,
+  +fping-2.4_beta2_p161-r2.ebuild, +files/fping-2.4_beta2_p161-err.h.patch,
+  +files/fping-2.4_beta2_p161-min-time.patch:
+  Restore 2.4_beta2_p161-r1 as net-analyzer/zabbix still requires it. Fix a
+  missing include and do an EAPI bump in -r2.
 
   11 Jul 2014; Jeroen Roovers <jer@gentoo.org> -fping-2.4_beta2_p161-r1.ebuild,
   -fping-3.1.ebuild, -fping-3.2.ebuild, -fping-3.4.ebuild, -fping-3.5.ebuild,
