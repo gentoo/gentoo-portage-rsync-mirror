@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Roman/Roman-1.230.0.ebuild,v 1.6 2014/05/03 18:48:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Roman/Roman-1.230.0.ebuild,v 1.7 2014/07/11 10:33:37 zlogene Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit perl-module
 DESCRIPTION="Perl module for conversion between Roman and Arabic numerals"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ~s390 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~arm64 ~mips ~s390 x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 DEPEND="test? (
