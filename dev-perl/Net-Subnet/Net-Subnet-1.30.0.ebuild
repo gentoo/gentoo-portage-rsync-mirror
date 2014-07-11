@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Subnet/Net-Subnet-1.03.ebuild,v 1.1 2014/07/11 09:36:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Subnet/Net-Subnet-1.30.0.ebuild,v 1.1 2014/07/11 17:17:30 zlogene Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=JUERD
+MODULE_VERSION=1.03
 inherit perl-module
 
 DESCRIPTION="Fast IP-in-subnet matcher for IPv4 and IPv6, CIDR or mask"

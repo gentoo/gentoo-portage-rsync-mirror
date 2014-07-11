@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-TCP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/ChangeLog,v 1.13 2014/02/16 13:56:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/ChangeLog,v 1.14 2014/07/11 17:14:58 zlogene Exp $
+
+*Test-TCP-2.60.0 (11 Jul 2014)
+
+  11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> +Test-TCP-2.60.0.ebuild:
+  Version bump wrt bug #515270
 
   16 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> -Test-TCP-1.180.0.ebuild,
   Test-TCP-1.210.0.ebuild:
