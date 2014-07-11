@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.285 2014/07/10 17:12:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.286 2014/07/11 20:51:55 floppym Exp $
+
+  11 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215-r1.ebuild:
+  Make sure we regenerate emergency.service.
 
   10 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Move rootprefix logic into the main configure block.

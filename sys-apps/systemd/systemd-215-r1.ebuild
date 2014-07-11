@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-215-r1.ebuild,v 1.1 2014/07/10 00:33:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-215-r1.ebuild,v 1.2 2014/07/11 20:51:55 floppym Exp $
 
 EAPI=5
 
@@ -82,8 +82,11 @@ src_prepare() {
 	# Bug 463376
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
-	# Make sure we regenerate this policy file.
+	# http://thread.gmane.org/gmane.comp.sysutils.systemd.devel/20815
 	touch src/core/org.freedesktop.systemd1.policy.in.in || die
+
+	# http://thread.gmane.org/gmane.comp.sysutils.systemd.devel/21074
+	touch units/emergency.service.in || die
 
 	autotools-utils_src_prepare
 }
