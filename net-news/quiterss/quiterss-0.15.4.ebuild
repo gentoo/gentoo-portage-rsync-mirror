@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.15.4.ebuild,v 1.2 2014/06/20 16:08:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.15.4.ebuild,v 1.3 2014/07/11 21:24:39 zlogene Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="https://quiterss.org/files/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug phonon"
 
 RDEPEND="
