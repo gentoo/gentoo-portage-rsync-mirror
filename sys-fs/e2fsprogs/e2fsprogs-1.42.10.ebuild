@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.4 2014/07/09 11:15:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.5 2014/07/11 13:57:01 axs Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ case ${PV} in
 *)      UP_PV=${PV} ;;
 esac
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Standard EXT2/EXT3/EXT4 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -46,6 +46,7 @@ src_prepare() {
 	if [[ ${CHOST} == *-mint* ]] ; then
 		epatch "${DISTDIR}"/${PN}-1.42.9-mint-r1.patch
 	fi
+	epatch "${FILESDIR}"/${P}-fix-build-cflags.patch
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
 	rm -rf doc
 	sed -i -r \
@@ -59,6 +60,7 @@ src_prepare() {
 
 	# Avoid rebuild
 	touch lib/ss/ss_err.h
+	eautoreconf
 }
 
 src_configure() {
@@ -90,12 +92,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake COMPILE_ET=compile_et MK_CMDS=mk_cmds
+	emake V=1 COMPILE_ET=compile_et MK_CMDS=mk_cmds
 
 	# Build the FreeBSD helper
 	if use elibc_FreeBSD ; then
 		cp "${FILESDIR}"/fsck_ext2fs.c .
-		emake fsck_ext2fs
+		emake V=1 fsck_ext2fs
 	fi
 }
 

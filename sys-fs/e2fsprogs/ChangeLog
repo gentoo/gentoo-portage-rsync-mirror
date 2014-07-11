@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.278 2014/07/09 11:15:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.279 2014/07/11 13:57:01 axs Exp $
+
+  11 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/e2fsprogs-1.42.10-fix-build-cflags.patch, e2fsprogs-1.42.10.ebuild:
+  fixed cross-compile build system error, bug 516894
 
   09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> e2fsprogs-1.42.10.ebuild:
   amd64 stable wrt bug #516114
