@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ffp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ffp/ChangeLog,v 1.4 2012/12/05 16:21:26 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ffp/ChangeLog,v 1.5 2014/07/11 12:12:34 jer Exp $
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> ffp-0.0.8-r1.ebuild:
+  EAPI bump.
 
 *ffp-0.0.8-r1 (05 Dec 2012)
 

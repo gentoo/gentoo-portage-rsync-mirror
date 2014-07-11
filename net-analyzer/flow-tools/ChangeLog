@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.69 2014/04/13 14:34:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.70 2014/07/11 12:24:50 jer Exp $
+
+*flow-tools-0.68.5.1-r3 (11 Jul 2014)
+
+  11 Jul 2014; Jeroen Roovers <jer@gentoo.org> +flow-tools-0.68.5.1-r3.ebuild:
+  EAPI bump. Convert myconf to usex.
 
   13 Apr 2014; Jeroen Roovers <jer@gentoo.org> flow-tools-0.68.5.1-r2.ebuild:
   Set keepdir /var/lib/flows/ft (bug #483590). Use prune_libtool_files. Set up
