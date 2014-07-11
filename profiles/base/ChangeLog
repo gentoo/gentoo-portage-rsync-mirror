@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.696 2014/07/08 18:12:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.698 2014/07/11 19:36:18 zerochaos Exp $
+
+  11 Jul 2014; Rick Farina <zerochaos@gentoo.org> package.use.mask:
+  Mask ogdi for sci-libs/gdal due to repoman errors, please fix and remove mask
 
   08 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.stable.mask:
   Stablemask libcaca and sdl use flags due to bug #514906

@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.582 2014/07/05 13:48:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.584 2014/07/11 19:36:18 zerochaos Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Rick Farina <zerochaos@gentoo.org> (11 July 2014)
+# Mask ogdi use flag for sci-libs/gdal due to broken visibility rules
+sci-libs/gdal ogdi
 
 # Thomas Sachau <tommy@gentoo.org> (30 Jun 2014)
 # Mask pixman USE flag of dev-libs/efl for future removal, bug 501074

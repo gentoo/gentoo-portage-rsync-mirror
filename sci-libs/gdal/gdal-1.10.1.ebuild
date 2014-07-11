@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.7 2014/07/09 03:18:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.8 2014/07/11 19:38:23 zerochaos Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 SLOT="0"
 LICENSE="MIT"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="armadillo +aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
+IUSE="armadillo +aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc ogdi opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
 
 RDEPEND="
 	dev-libs/expat
@@ -42,6 +42,7 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	netcdf? ( sci-libs/netcdf )
 	odbc?   ( dev-db/unixODBC )
+	ogdi? ( sci-libs/ogdi )
 	opencl? ( virtual/opencl )
 	pdf? ( >=app-text/poppler-0.24.3:= )
 	perl? ( dev-lang/perl:= )
@@ -212,6 +213,7 @@ gdal_src_configure() {
 		$(use_with mysql mysql "${EPREFIX}"/usr/bin/mysql_config) \
 		$(use_with netcdf) \
 		$(use_with odbc) \
+		$(use_with ogdi ogdi "${EPREFIX}"/usr) \
 		$(use_with opencl) \
 		$(use_with pdf poppler) \
 		$(use_with perl) \

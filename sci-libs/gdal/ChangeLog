@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.148 2014/07/09 03:25:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.149 2014/07/11 19:38:23 zerochaos Exp $
+
+  11 Jul 2014; Rick Farina <zerochaos@gentoo.org> gdal-1.10.1.ebuild,
+  metadata.xml:
+  restore use flag, masked instead
 
   09 Jul 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml
