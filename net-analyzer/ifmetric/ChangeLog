@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/ifmetric
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.8 2013/11/06 04:05:13 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.9 2014/07/12 17:00:00 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> +ifmetric-0.3-r1.ebuild,
+  +files/ifmetric-0.3-ul.patch:
+  EAPI bump. Fix fprintf format warning.
+
+*ifmetric-0.3-r1 (12 Jul 2014)
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> +ifmetric-0.3-r1.ebuild,
+  +files/ifmetric-0.3-ul.patch:
+  EAPI bump. Fix fprintf format warning.
 
   06 Nov 2013; Patrick Lauer <patrick@gentoo.org> ifmetric-0.3.ebuild:
   Shorten description, make repoman happier
