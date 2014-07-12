@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/knocker
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.23 2012/12/01 19:35:47 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.24 2014/07/12 19:06:20 jer Exp $
+
+*knocker-0.7.1-r3 (12 Jul 2014)
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> -knocker-0.7.1-r1.ebuild,
+  +knocker-0.7.1-r3.ebuild, +files/knocker-0.7.1-fency.patch,
+  files/knocker-0.7.1-free.patch,
+  +files/knocker-0.7.1-knocker_user_is_root.patch:
+  fency -> fancy. Call knocker_user_is_root() properly.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> knocker-0.7.1-r1.ebuild,
   knocker-0.7.1-r2.ebuild:

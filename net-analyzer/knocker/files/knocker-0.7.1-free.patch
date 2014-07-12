@@ -1,6 +1,5 @@
-diff -ur knocker-0.7.1/src/knocker_conf.c knocker-0.7.1.new/src/knocker_conf.c
---- knocker-0.7.1/src/knocker_conf.c	2002-05-24 01:58:45.000000000 +0200
-+++ knocker-0.7.1.new/src/knocker_conf.c	2007-07-15 02:14:17.000000000 +0200
+--- a/src/knocker_conf.c
++++ b/src/knocker_conf.c
 @@ -223,6 +223,8 @@
  {
    char *tmpp = malloc (strlen (line));
