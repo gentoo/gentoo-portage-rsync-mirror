@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.78 2014/03/12 05:13:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.79 2014/07/12 15:02:32 zlogene Exp $
+
+  12 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> lilo-24.0.ebuild:
+  amd64 stable wrt bug #503058
 
   09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> lilo-24.0.ebuild:
   x86 stable wrt bug #503058
