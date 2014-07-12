@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.4-r6.ebuild,v 1.1 2014/07/03 13:11:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.4-r6.ebuild,v 1.2 2014/07/12 06:08:02 slyfox Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ RDEPEND="=dev-haskell/extensible-exceptions-0.1*:=[profile?]
 		<dev-haskell/tar-0.5:=[profile?]
 		>=dev-haskell/terminfo-0.3:=[profile?] <dev-haskell/terminfo-0.5:=[profile?]
 		>=dev-haskell/text-0.11.0.6:=[profile?]
+		>=dev-haskell/utf8-string-0.3.6:=[profile?] <dev-haskell/utf8-string-0.4:=[profile?]
 		>=dev-haskell/vector-0.7:=[profile?]
 		>=dev-haskell/zlib-0.5.1.0:=[profile?]
 		<dev-haskell/zlib-0.6.0.0:=[profile?]

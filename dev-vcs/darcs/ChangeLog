@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.55 2014/07/03 13:11:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.56 2014/07/12 06:08:02 slyfox Exp $
+
+  12 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.8.4-r6.ebuild:
+  Add missing utf8-string depend (by tman, bug #516928).
 
 *darcs-2.8.4-r6 (03 Jul 2014)
 
