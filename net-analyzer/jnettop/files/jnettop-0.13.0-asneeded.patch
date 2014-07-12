@@ -1,8 +1,7 @@
-diff -ur a/Makefile.am b/Makefile.am
---- a/Makefile.am	2006-04-14 11:32:14.000000000 -0500
-+++ b/Makefile.am	2009-02-12 22:44:49.000000000 -0600
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -1,8 +1,7 @@
- # $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/files/jnettop-0.13.0-asneeded.patch,v 1.1 2009/06/02 11:55:37 flameeyes Exp $
+
  
  INCLUDES = -I$(top_srcdir)/include @GLIB_CFLAGS@
 -AM_LDFLAGS = @GLIB_LIBS@ @NSL_LIBS@ @SOCKET_LIBS@

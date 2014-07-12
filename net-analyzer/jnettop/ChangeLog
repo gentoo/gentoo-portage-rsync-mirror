@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/jnettop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.27 2012/10/30 17:04:06 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.28 2014/07/12 18:42:15 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> jnettop-0.13.0-r1.ebuild,
+  files/jnettop-0.13.0-asneeded.patch, +files/jnettop-0.13.0-tinfo.patch:
+  Remove CVS header from patch. Fix building against sys-libs/ncurses[tinfo].
 
   30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> jnettop-0.13.0-r1.ebuild:
   Stable for amd64, wrt bug #439748
