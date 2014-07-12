@@ -1,7 +1,7 @@
---- main.c
-+++ main.c
+--- a/main.c
++++ b/main.c
 @@ -26,6 +26,8 @@
-  * $Id: ipcad-3.7.3-signal_h.patch,v 1.2 2011/03/31 17:28:14 ssuominen Exp $
+  * $Id: ipcad-3.7.3-signal_h.patch,v 1.3 2014/07/12 17:45:38 jer Exp $
   */
  
 +#include <signal.h> /* signal */
@@ -9,20 +9,20 @@
  #include "ipcad.h"
  #include "cfgvar.h"
  #include "servers.h"
---- pps.c
-+++ pps.c
+--- a/pps.c
++++ b/pps.c
 @@ -26,6 +26,7 @@
-  * $Id: ipcad-3.7.3-signal_h.patch,v 1.2 2011/03/31 17:28:14 ssuominen Exp $
+  * $Id: ipcad-3.7.3-signal_h.patch,v 1.3 2014/07/12 17:45:38 jer Exp $
   */
  
 +#include <signal.h> /* sigprocmask */
  
  #include "ipcad.h"
  #include "opt.h"
---- servers.c
-+++ servers.c
+--- a/servers.c
++++ b/servers.c
 @@ -26,6 +26,8 @@
-  * $Id: ipcad-3.7.3-signal_h.patch,v 1.2 2011/03/31 17:28:14 ssuominen Exp $
+  * $Id: ipcad-3.7.3-signal_h.patch,v 1.3 2014/07/12 17:45:38 jer Exp $
   */
  
 +#include <signal.h> /* pthread_kill and sigprocmask */

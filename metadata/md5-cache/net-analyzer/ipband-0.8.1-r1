@@ -1,7 +1,7 @@
-DEFINED_PHASES=compile install postinst prepare
+DEFINED_PHASES=install prepare
 DEPEND=>=net-libs/libpcap-0.4
 DESCRIPTION=A pcap based IP traffic and bandwidth monitor with configurable reporting and alarm abilities
-EAPI=2
+EAPI=5
 HOMEPAGE=http://ipband.sourceforge.net/
 KEYWORDS=~amd64 x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=>=net-libs/libpcap-0.4
 SLOT=0
 SRC_URI=http://ipband.sourceforge.net/ipband-0.8.1.tgz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8e66a7f6ee06b5f77a1d0c67171658b5
+_md5_=5d6da09fb7d5e4f4216fd1e272c8363e

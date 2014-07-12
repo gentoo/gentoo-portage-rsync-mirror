@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iplog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.20 2012/07/24 00:14:17 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.21 2014/07/12 17:52:32 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> iplog-2.2.3-r2.ebuild,
+  files/2.2.3-DLT_LINUX_SSL.patch:
+  EAPI bump. Clean up patch.
 
   24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> iplog-2.2.3-r2.ebuild:
   Keyword ~mips

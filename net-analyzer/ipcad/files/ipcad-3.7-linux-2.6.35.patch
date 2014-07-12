@@ -6,8 +6,8 @@ In file included from ipcad.h:33:0,
                  from disp.c:29:
 		 psrc.h:93:23: error: field ‘peer’ has incomplete type
 
---- configure.in	2011-01-20 09:03:05 +0000
-+++ configure.in	2011-01-20 09:03:14 +0000
+--- a/configure.in
++++ b/configure.in
 @@ -155,17 +155,29 @@
  #endif
  ])

@@ -1,6 +1,5 @@
-=== modified file 'configure.in'
---- configure.in	2008-11-09 18:27:08 +0000
-+++ configure.in	2008-11-09 18:28:02 +0000
+--- a/configure.in
++++ b/configure.in
 @@ -156,6 +156,7 @@
  ])
  

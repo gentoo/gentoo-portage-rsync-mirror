@@ -1,6 +1,5 @@
-diff -ruN iplog-2.2.3.orig/src/iplog_options.c iplog-2.2.3/src/iplog_options.c
---- iplog-2.2.3.orig/src/iplog_options.c	2001-01-01 17:02:14.000000000 +0100
-+++ iplog-2.2.3/src/iplog_options.c	2003-09-04 16:03:41.000000000 +0200
+--- a/src/iplog_options.c
++++ b/src/iplog_options.c
 @@ -440,58 +440,58 @@
  
  static void print_help(void) {
@@ -112,9 +111,8 @@ diff -ruN iplog-2.2.3.orig/src/iplog_options.c iplog-2.2.3/src/iplog_options.c
  IS_DEFAULT(LOG_IP),		IS_DEFAULT(LOG_DEST),	IS_DEFAULT(DNS_CACHE),
  IS_DEFAULT(GET_IDENT),	IS_DEFAULT(TCP_RES),	IS_DEFAULT(UDP_RES),
  IS_DEFAULT(ICMP_RES),	IS_DEFAULT(NO_RESOLV),	IS_DEFAULT(VERBOSE),
-diff -ruN iplog-2.2.3.orig/src/iplog_pcap.c iplog-2.2.3/src/iplog_pcap.c
---- iplog-2.2.3.orig/src/iplog_pcap.c	2001-01-01 17:02:14.000000000 +0100
-+++ iplog-2.2.3/src/iplog_pcap.c	2003-09-04 16:03:41.000000000 +0200
+--- a/src/iplog_pcap.c
++++ b/src/iplog_pcap.c
 @@ -189,8 +189,16 @@
  		case DLT_PPP_BSDOS:
  			dlt = 24;

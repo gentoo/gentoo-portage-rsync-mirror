@@ -1,21 +1,22 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.3.ebuild,v 1.6 2012/12/05 16:23:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.3.ebuild,v 1.7 2014/07/12 17:45:38 jer Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="IP Cisco Accounting Daemon"
-HOMEPAGE="http://ipcad.sourceforge.net/"
+HOMEPAGE="http://sourceforge.net/projects/ipcad/ http://lionet.info/ipcad/"
 SRC_URI="mirror://sourceforge/ipcad/${P}.tar.gz"
 
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE=""
 
-RDEPEND="net-libs/libpcap
-	net-firewall/iptables"
+RDEPEND="
+	net-libs/libpcap
+	net-firewall/iptables
+"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -24,18 +25,20 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3.7-linux-2.6.35.patch \
 		"${FILESDIR}"/${P}-signal_h.patch
 
+	sed -i \
+		-e "s|^chroot = /adm/tmp;|chroot = /var/ipcad;|" \
+		-e "s|^interface|#&|" \
+		-e "s|^aggregate|#&|" \
+		-e "s|^pidfile = ipcad.pid;|pidfile = /run/ipcad.pid;|" \
+		ipcad.conf.default || die
+
 	eautoreconf
 }
 
 src_install() {
-	sed -i -e "s/^chroot = \/adm\/tmp;/chroot = \/var\/ipcad;/" ipcad.conf.default
-	sed -i -e "s/^interface/#interface/" ipcad.conf.default
-	sed -i -e "s/^aggregate/#aggregate/" ipcad.conf.default
-	sed -i -e "s/^pidfile = ipcad.pid;/pidfile = \/run\/ipcad.pid;/" ipcad.conf.default
-
 	dodoc AUTHORS ChangeLog README BUGS FAQ ipcad.conf.simple ipcad.conf.default
 
-	dosbin ipcad || die
+	dosbin ipcad
 
 	insinto /etc
 	insopts -m0600

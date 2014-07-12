@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipband
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ChangeLog,v 1.10 2012/01/17 18:21:16 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ChangeLog,v 1.11 2014/07/12 17:34:14 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> ipband-0.8.1-r1.ebuild,
+  files/ipband-0.8.1-gentoo.patch, +files/ipband-0.8.1-postfix.patch:
+  EAPI bump. Remove readme from pkg_postinst(). Convert sed script into patch.
 
   17 Jan 2012; Jeroen Roovers <jer@gentoo.org> -ipband-0.8.ebuild:
   Old.
