@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/Unicode-Map8-0.130.0.ebuild,v 1.2 2014/06/12 11:46:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/Unicode-Map8-0.130.0.ebuild,v 1.3 2014/07/12 09:52:14 zlogene Exp $
 
 EAPI=5
 
@@ -17,4 +17,4 @@ IUSE=""
 RDEPEND=">=dev-perl/Unicode-String-2.06"
 DEPEND="${RDEPEND}"
 
-SRC_TEST=do
+#SRC_TEST=do
