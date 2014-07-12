@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.30 2014/07/01 14:03:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.31 2014/07/12 14:43:47 phajdan.jr Exp $
+
+  12 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> fast_xs-0.8.0-r1.ebuild:
+  x86 stable wrt bug #497490
 
   01 Jul 2014; Tobias Klausmann <klausman@gentoo.org> fast_xs-0.8.0-r1.ebuild:
   Stable on alpha, bug #497490
