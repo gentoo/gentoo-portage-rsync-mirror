@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15884 2014/07/11 23:05:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15885 2014/07/12 13:10:49 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (12 Jul 2014)
+# Masked for production testing
+=sys-auth/sssd-1.12.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (10 Jul 2014)
 # Masked as experimental major ghc release.

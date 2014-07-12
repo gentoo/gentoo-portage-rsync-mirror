@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ftester
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.21 2012/10/09 18:54:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.22 2014/07/12 13:14:05 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> ftester-1.0.ebuild:
+  EAPI bump. Remove unused variables.
 
   09 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ftester-1.0.ebuild:
   Stable for amd64, wrt bug #437702

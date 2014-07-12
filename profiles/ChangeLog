@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9196 2014/07/12 07:11:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9197 2014/07/12 13:10:49 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jul 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask new sssd-1.12.0 for production testing
 
   12 Jul 2014; Mike Gilbert <floppym@gentoo.org> thirdpartymirrors:
   Drop bitbucket. Sorry overlays, you're on your own.

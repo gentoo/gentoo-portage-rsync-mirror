@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile configure install prepare unpack
 DESCRIPTION=A simple TCP benchmark suite
-EAPI=4
+EAPI=5
 HOMEPAGE=http://jes.home.cern.ch/jes/gensink/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://jes.home.cern.ch/jes/gensink/gensink-4.1.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=79f0590b8a4bbb9ad97f2f1cc276982d
+_md5_=4c5d04fd76ce987ab507690ee468809a

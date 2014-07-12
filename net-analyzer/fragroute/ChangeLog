@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.29 2014/06/14 11:01:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.30 2014/07/12 13:11:35 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> fragroute-1.2.6.ebuild:
+  Remove die() messages, unused IUSE.
 
   14 Jun 2014; Jeroen Roovers <jer@gentoo.org> -fragroute-1.2-r3.ebuild,
   -fragroute-1.2-r4.ebuild, -fragroute-1.2.5.ebuild, -files/1.2-libevent.patch,

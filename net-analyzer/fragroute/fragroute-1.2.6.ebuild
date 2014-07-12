@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2.6.ebuild,v 1.2 2014/06/14 09:48:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2.6.ebuild,v 1.3 2014/07/12 13:11:35 jer Exp $
 
-EAPI="5"
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -17,7 +17,6 @@ SRC_URI="http://fragroute-ipv6.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 x86"
-IUSE=""
 
 RDEPEND="
 	dev-libs/libevent
@@ -33,9 +32,9 @@ DOCS=( INSTALL README TODO )
 
 src_prepare() {
 	# Remove broken and old files, autotools will regen needed files
-	rm *.m4 acconfig.h missing Makefile.in || die 'removing of old stuff failed'
+	rm *.m4 acconfig.h missing Makefile.in || die
 	# Add missing includes
-	sed -i -e "/#define IPUTIL_H/a#include <stdio.h>\n#include <stdint.h>" iputil.h || die 'sed on iputil.h failed'
+	sed -i -e "/#define IPUTIL_H/a#include <stdio.h>\n#include <stdint.h>" iputil.h || die
 	autotools-utils_src_prepare
 }
 
