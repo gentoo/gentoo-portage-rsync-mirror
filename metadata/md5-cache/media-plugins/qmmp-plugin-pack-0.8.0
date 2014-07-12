@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=media-libs/taglib-1.7.0 >=media-sound/mpg123-1.13.0 >=media-sound/qmmp-0.8.0 dev-qt/qtgui:4 dev-lang/yasm sys-devel/make >=dev-util/cmake-2.8 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=A set of extra plugins for Qmmp
+EAPI=5
+HOMEPAGE=http://qmmp.ylsoftware.com/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=media-libs/taglib-1.7.0 >=media-sound/mpg123-1.13.0 >=media-sound/qmmp-0.8.0 dev-qt/qtgui:4
+SLOT=0
+SRC_URI=http://qmmp.ylsoftware.com/files/plugins/qmmp-plugin-pack-0.8.0.tar.bz2
+_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=ee3c888da03ddb7e3b4cea347fb8506c
