@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/jmeter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.37 2011/12/19 13:06:31 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.38 2014/07/12 11:08:48 ercpe Exp $
+
+*jmeter-2.0.1-r5 (12 Jul 2014)
+
+  12 Jul 2014; Johann Schmitz <ercpe@gentoo.org> +jmeter-2.0.1-r5.ebuild:
+  Bumped to EAPI=5, fixed compilation issues with 1.7 (bug #514662), fixed
+  installation of documentation (#282219), add /opt/jmeter/bin to PATH via env.d
+  (bug #238564)
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> jmeter-2.0.1-r2.ebuild,
   jmeter-2.0.1-r3.ebuild, jmeter-2.0.1-r4.ebuild:
@@ -150,4 +157,3 @@
   
   NOTE: This application requires Sun's JDK, and will not work correctly if you
   currently have your user environment set to use IBM's JDK, or another.
-
