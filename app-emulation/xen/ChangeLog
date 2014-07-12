@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.165 2014/07/09 06:31:29 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.166 2014/07/12 11:01:01 ago Exp $
+
+  12 Jul 2014; Agostino Sarubbo <ago@gentoo.org> xen-4.2.4-r4.ebuild:
+  Stable for amd64, wrt bug #513824
 
 *xen-4.4.0-r5 (09 Jul 2014)
 *xen-4.3.2-r4 (09 Jul 2014)

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.255 2014/07/10 05:03:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.257 2014/07/12 10:55:36 ago Exp $
+
+  12 Jul 2014; Agostino Sarubbo <ago@gentoo.org> transmission-2.84.ebuild:
+  Stable for x86, wrt bug #516822
+
+  12 Jul 2014; Agostino Sarubbo <ago@gentoo.org> transmission-2.84.ebuild:
+  Stable for amd64, wrt bug #516822
 
 *transmission-2.84 (10 Jul 2014)
 

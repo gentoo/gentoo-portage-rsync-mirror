@@ -3,10 +3,10 @@ DEPEND=>=sys-apps/sed-4
 DESCRIPTION=a tool that builds a chroot and configures all the required files, directories and libraries
 EAPI=5
 HOMEPAGE=https://github.com/spiculator/jail
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-util/strace
 SLOT=0
 SRC_URI=https://github.com/spiculator/jail/archive/v2.0.tar.gz -> jail-2.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=7a01165d894bae35f3f8c1d9fc735429
+_md5_=e530b6aa409f0e8f6220b8b81bea1a0d
