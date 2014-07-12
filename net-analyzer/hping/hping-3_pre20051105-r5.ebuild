@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r5.ebuild,v 1.2 2013/11/12 00:16:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r5.ebuild,v 1.3 2014/07/12 13:48:06 jer Exp $
 
 EAPI=5
 
@@ -39,20 +39,20 @@ src_prepare() {
 		-e '/^RANLIB=/d' \
 		-e 's:/usr/local/lib:/usr/$(LIBDIR):g' \
 		-e 's:-O2:$(CFLAGS):' \
-		|| die "sed Makefile.in failed"
+		|| die
 
 	# Change name from hping2 to hping3
 	sed -i docs/hping3.8 \
 		-e 's|HPING2|HPING|g' \
 		-e 's|hping2|hping|g' \
-		|| die "sed hping3.8 failed"
+		|| die
 }
 
 src_configure() {
 	tc-export CC
 
 	# Not an autotools type configure:
-	sh configure $(usex tcl '' --no-tcl) || die "configure failed"
+	sh configure $(usex tcl '' --no-tcl) || die
 }
 
 src_compile() {

@@ -1,5 +1,5 @@
---- bad/netcat-0.7.1/src/flagset.c	2003-12-10 17:18:07.000000000 +0100
-+++ good/netcat-0.7.1/src/flagset.c	2007-03-04 17:38:10.000000000 +0100
+--- a/src/flagset.c
++++ b/src/flagset.c
 @@ -134,7 +134,7 @@
  
  int netcat_flag_count(void)

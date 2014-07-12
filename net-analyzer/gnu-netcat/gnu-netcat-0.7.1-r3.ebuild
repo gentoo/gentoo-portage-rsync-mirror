@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1-r3.ebuild,v 1.8 2013/02/17 23:20:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1-r3.ebuild,v 1.9 2014/07/12 13:40:55 jer Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-flagcount.patch \
 		"${FILESDIR}"/${PN}-close.patch \
 		"${FILESDIR}"/${PN}-LC_CTYPE.patch
-
 }
 
 src_configure() {
@@ -30,8 +29,9 @@ src_configure() {
 	econf $(use_enable nls)
 }
 
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	rm "${ED}"usr/bin/nc
-	dodoc AUTHORS ChangeLog NEWS README TODO
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.140 2014/06/22 18:42:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.141 2014/07/12 13:59:47 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> fail2ban-0.9.0-r1.ebuild:
+  Set USE=sqlite dependency on dev-lang/python (bug #507306).
 
   22 Jun 2014; Markus Meier <maekke@gentoo.org> fail2ban-0.9.0-r1.ebuild:
   add ~arm, bug #511564

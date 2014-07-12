@@ -1,5 +1,5 @@
---- netcat-0.7.1.org/doc/netcat.1	2004-01-11 21:48:18.000000000 +0100
-+++ netcat-0.7.1/doc/netcat.1	2010-02-12 17:03:02.000000000 +0100
+--- a/doc/netcat.1
++++ b/doc/netcat.1
 @@ -256,6 +256,13 @@
  source address for the connecting socket.
  .Sh "Advanced Options"
