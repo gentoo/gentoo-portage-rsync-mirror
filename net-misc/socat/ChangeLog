@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.140 2014/06/22 14:22:32 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.141 2014/07/12 12:02:47 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> socat-1.7.2.4-r1.ebuild:
+  Stable for SPARC (bug #508092).
 
   22 Jun 2014; Akinori Hattori <hattya@gentoo.org> socat-1.7.2.4-r1.ebuild:
   ia64 stable wrt bug #508092

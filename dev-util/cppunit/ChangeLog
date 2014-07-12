@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.94 2014/07/06 21:21:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.95 2014/07/12 12:24:28 jer Exp $
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> cppunit-1.13.2-r2.ebuild:
+  Stable for HPPA (bug #516344).
 
   06 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> cppunit-1.13.2-r2.ebuild:
   Stable on amd64 and x86, wrt bug #516344
