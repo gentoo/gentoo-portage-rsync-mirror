@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.6-r1.ebuild,v 1.2 2014/07/11 13:01:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/hiawatha/hiawatha-9.6-r1.ebuild,v 1.3 2014/07/12 00:19:54 hasufell Exp $
 
 # ssl USE flag currently broken
 # https://github.com/hsleisink/hiawatha/issues/15
@@ -8,7 +8,6 @@
 EAPI=5
 
 CMAKE_MIN_VERSION="2.8.4"
-CMAKE_BUILD_TYPE="RelWithDebInfo"
 
 inherit cmake-utils systemd user
 
