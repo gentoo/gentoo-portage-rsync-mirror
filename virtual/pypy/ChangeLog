@@ -1,6 +1,12 @@
 # ChangeLog for virtual/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/ChangeLog,v 1.10 2014/05/16 21:50:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/ChangeLog,v 1.11 2014/07/12 21:29:10 mgorny Exp $
+
+*pypy-2.3.1 (12 Jul 2014)
+
+  12 Jul 2014; Michał Górny <mgorny@gentoo.org> +pypy-2.3.1.ebuild,
+  -pypy-2.3.ebuild:
+  Version bump for pypy{,-bin}-2.3.1.
 
   16 May 2014; Michał Górny <mgorny@gentoo.org> -pypy-2.0.2.ebuild,
   -pypy-2.0.ebuild:
