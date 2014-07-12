@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.5 2014/07/11 13:57:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.10.ebuild,v 1.6 2014/07/12 17:23:38 ssuominen Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ inherit autotools eutils flag-o-matic multilib toolchain-funcs
 DESCRIPTION="Standard EXT2/EXT3/EXT4 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/e2fsprogs/${PN}-${UP_PV}.tar.gz
-	https://498412.bugs.gentoo.org/attachment.cgi?id=368058 -> ${PN}-1.42.9-mint-r1.patch"
+	elibc_mintlib? ( https://498412.bugs.gentoo.org/attachment.cgi?id=368058 -> ${PN}-1.42.9-mint-r1.patch )"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
