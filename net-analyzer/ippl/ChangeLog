@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ippl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.25 2013/02/24 14:09:39 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.26 2014/07/12 18:04:05 jer Exp $
+
+*ippl-1.4.14-r4 (12 Jul 2014)
+
+  12 Jul 2014; Jeroen Roovers <jer@gentoo.org> +ippl-1.4.14-r4.ebuild,
+  files/ippl-1.4.14-includes.patch, files/ippl-1.4.14-manpage.patch,
+  files/ippl-1.4.14-noportresolve.patch,
+  files/ippl-1.4.14-privilege-drop.patch, files/ippl.rc:
+  Clean up sed scripts. Use /run not /var/run in init script. Clean up patches.
 
   24 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> -ippl-1.4.14-r1.ebuild:
   Drop old revision

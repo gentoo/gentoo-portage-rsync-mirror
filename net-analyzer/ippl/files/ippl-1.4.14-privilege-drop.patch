@@ -1,7 +1,7 @@
 privilege-drop by Marc Haber <mh+debian-packages@zugschlus.de>
 
---- trunk~/Source/icmp.c	2001-09-28 20:47:58.000000000 +0200
-+++ trunk/Source/icmp.c	2007-05-20 12:05:24.000000000 +0200
+--- a/Source/icmp.c
++++ b/Source/icmp.c
 @@ -39,6 +39,8 @@
  #include "log.h"
  #include "filter.h"
@@ -31,8 +31,8 @@ privilege-drop by Marc Haber <mh+debian-packages@zugschlus.de>
  
    for(;;) {
      if (read(icmp_socket, (__u8 *) &pkt, ICMP_CAPTURE_LENGTH) == -1) {
---- trunk~/Source/main.c	2000-04-21 21:37:49.000000000 +0200
-+++ trunk/Source/main.c	2007-05-20 12:05:24.000000000 +0200
+--- a/Source/main.c
++++ b/Source/main.c
 @@ -153,6 +153,17 @@
      run_thread(&udp_t, log_udp, (void *)account);
    }
@@ -76,8 +76,8 @@ privilege-drop by Marc Haber <mh+debian-packages@zugschlus.de>
    signal(SIGHUP, sighup);
  }
  
---- trunk~/Source/tcp.c	2001-09-29 15:27:01.000000000 +0200
-+++ trunk/Source/tcp.c	2007-05-20 12:05:24.000000000 +0200
+--- a/Source/tcp.c
++++ b/Source/tcp.c
 @@ -44,6 +44,8 @@
  #include "filter.h"
  #include "configuration.h"
@@ -107,8 +107,8 @@ privilege-drop by Marc Haber <mh+debian-packages@zugschlus.de>
  
    for(;;) {
      if (read(tcp_socket, (__u8 *) &pkt, TCP_CAPTURE_LENGTH) == -1) {
---- trunk~/Source/udp.c	2001-09-28 20:47:35.000000000 +0200
-+++ trunk/Source/udp.c	2007-05-20 12:05:24.000000000 +0200
+--- a/Source/udp.c
++++ b/Source/udp.c
 @@ -39,6 +39,8 @@
  #include "filter.h"
  #include "configuration.h"

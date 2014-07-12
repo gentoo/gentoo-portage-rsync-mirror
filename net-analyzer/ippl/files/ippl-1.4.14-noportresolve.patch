@@ -1,7 +1,7 @@
 patch by Marc Haber <mh+debian-packages@zugschlus.de>
 
---- Docs/ippl.conf.man	2008-06-05 12:39:24 +0000
-+++ Docs/ippl.conf.man	2008-06-05 12:46:02 +0000
+--- a/Docs/ippl.conf.man
++++ b/Docs/ippl.conf.man
 @@ -92,6 +92,13 @@
  .PP
  By default, IP address resolution is disabled for all the protocols.
@@ -30,8 +30,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
  use ident logging (only for TCP).
  .PP
 
---- Source/configuration.c	2008-06-05 12:39:24 +0000
-+++ Source/configuration.c	2008-06-05 12:46:02 +0000
+--- a/Source/configuration.c
++++ b/Source/configuration.c
 @@ -60,6 +60,7 @@
    extern unsigned int dns_expire;
    extern unsigned short log_protocols;
@@ -49,8 +49,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
    tcp_format = LOGFORMAT_NORMAL;
    udp_format = LOGFORMAT_NORMAL;
 
---- Source/filter.c	2008-06-05 12:39:24 +0000
-+++ Source/filter.c	2008-06-05 12:46:02 +0000
+--- a/Source/filter.c
++++ b/Source/filter.c
 @@ -46,6 +46,7 @@
  
  extern unsigned short use_ident;
@@ -114,8 +114,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
  
  #ifdef FILTER_DEBUG
 
---- Source/filter.h	2008-06-05 12:39:24 +0000
-+++ Source/filter.h	2008-06-05 12:46:02 +0000
+--- a/Source/filter.h
++++ b/Source/filter.h
 @@ -53,6 +53,7 @@
  struct filter_entry {
    short log;		/* TRUE for "log", FALSE for "ignore" */
@@ -133,8 +133,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
    short logformat;
  };
 
---- Source/ippl.l	2008-06-05 12:39:24 +0000
-+++ Source/ippl.l	2008-06-05 12:46:02 +0000
+--- a/Source/ippl.l
++++ b/Source/ippl.l
 @@ -75,6 +75,9 @@
  [lL][oO][gG][cC][lL][oO][sS][iI][nN][gG] return LOGCLOSING;
  [nN][oO][lL][oO][gG][cC][lL][oO][sS][iI][nN][gG] return NOLOGCLOSING;
@@ -146,8 +146,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
  [rR][eE][sS][oO][lL][vV][eE] return RESOLVE;
  
 
---- Source/ippl.y	2008-06-05 12:39:24 +0000
-+++ Source/ippl.y	2008-06-05 12:46:02 +0000
+--- a/Source/ippl.y
++++ b/Source/ippl.y
 @@ -61,6 +61,7 @@
  
  /* Should name resolving be done? */
@@ -203,8 +203,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
          | NORMAL     { switches.logformat = LOGFORMAT_NORMAL; }
          | DETAILED   { switches.logformat = LOGFORMAT_DETAILED; }
 
---- Source/main.c	2008-06-05 12:39:24 +0000
-+++ Source/main.c	2008-06-05 12:46:02 +0000
+--- a/Source/main.c
++++ b/Source/main.c
 @@ -48,6 +48,10 @@
  #include "filter.h"
  #include "pidfile.h"
@@ -217,8 +217,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
  struct loginfo log;
  
 
---- Source/netutils.c	2008-06-05 12:39:24 +0000
-+++ Source/netutils.c	2008-06-05 12:46:02 +0000
+--- a/Source/netutils.c
++++ b/Source/netutils.c
 @@ -237,15 +237,21 @@
   * Get a service name for a specified protocol
   */
@@ -247,8 +247,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
    pthread_mutex_unlock(&service_mutex);
  }
 
---- Source/netutils.h	2008-06-05 12:39:24 +0000
-+++ Source/netutils.h	2008-06-05 12:46:02 +0000
+--- a/Source/netutils.h
++++ b/Source/netutils.h
 @@ -53,6 +53,6 @@
                   const __u32 src_addr, const __u16 src_port,
                   const __u32 dst_addr, const __u16 dst_port);
@@ -258,8 +258,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
  
  #endif
 
---- Source/tcp.c	2008-06-05 12:39:24 +0000
-+++ Source/tcp.c	2008-06-05 12:46:02 +0000
+--- a/Source/tcp.c
++++ b/Source/tcp.c
 @@ -51,6 +51,7 @@
  struct loginfo tcp_log;
  extern struct loginfo log;
@@ -287,8 +287,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
        get_details(details,
                    IPHDR.saddr,
 
---- Source/udp.c	2008-06-05 12:39:24 +0000
-+++ Source/udp.c	2008-06-05 12:46:02 +0000
+--- a/Source/udp.c
++++ b/Source/udp.c
 @@ -81,7 +81,7 @@
      *details ='\0';
      host_print(remote_host, IPHDR.saddr,
@@ -299,8 +299,8 @@ patch by Marc Haber <mh+debian-packages@zugschlus.de>
        get_details(details,
                    IPHDR.saddr,
 
---- ippl.conf	2008-06-05 12:39:24 +0000
-+++ ippl.conf	2008-06-05 12:48:36 +0000
+--- a/ippl.conf
++++ b/ippl.conf
 @@ -4,13 +4,15 @@
  # User used
  # ---------

@@ -1,5 +1,5 @@
---- a/Source/filter.c	2010-09-15 02:17:55.000000000 +0200
-+++ b/Source/filter.c	2010-09-15 02:23:46.000000000 +0200
+--- a/Source/filter.c
++++ b/Source/filter.c
 @@ -22,6 +22,7 @@
  
  #include <stdlib.h>
@@ -8,8 +8,8 @@
  
  #include <fnmatch.h>
  
---- a/Source/main.c	2010-09-15 02:17:56.000000000 +0200
-+++ b/Source/main.c	2010-09-15 02:24:00.000000000 +0200
+--- a/Source/main.c
++++ b/Source/main.c
 @@ -37,6 +37,7 @@
  #include <pwd.h>
  #include <stdlib.h>
