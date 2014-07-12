@@ -1,8 +1,8 @@
---- labrea-2.5-stable-1/src/Makefile.am.orig	2003-01-09 21:13:19.000000000 +0300
-+++ labrea-2.5-stable-1/src/Makefile.am	2009-12-11 21:52:38.334383268 +0300
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -2,7 +2,7 @@
- ##
- ## $Id: labrea-2.5-stable-1-incdir.patch,v 1.1 2010/04/21 13:48:44 fauli Exp $
+ 
+ 
  
 -AM_CPPFLAGS = -I../inc -I- @DNETINC@ @PCAPINC@
 +AM_CPPFLAGS = -iquote../inc @DNETINC@ @PCAPINC@ -idirafter/usr/include/asm
