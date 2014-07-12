@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.9 2014/05/09 05:17:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.10 2014/07/12 10:24:23 wired Exp $
 
 EAPI=5
 
@@ -29,16 +29,18 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	perl? ( >=dev-lang/perl-5.10 )
+	python? ( ${PYTHON_DEPS} )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	tcl? ( dev-lang/tcl )
 "
 DEPEND="
 	virtual/pkgconfig
-	perl? ( dev-lang/swig )
+	perl? (
+		>=dev-lang/swig-2.0.12
+	)
 	python? (
-		>=dev-lang/swig-2.0.8
-		>=dev-lang/perl-5.10
+		>=dev-lang/swig-2.0.12
 	)
 	${RDEPEND}
 "
