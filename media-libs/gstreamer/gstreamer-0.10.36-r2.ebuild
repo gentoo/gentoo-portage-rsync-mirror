@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36-r2.ebuild,v 1.3 2014/06/24 22:11:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36-r2.ebuild,v 1.4 2014/07/12 11:48:49 mgorny Exp $
 
 EAPI=5
 
@@ -71,7 +71,7 @@ multilib_src_configure() {
 	# Disable debug, as it only affects -g passing (debugging symbols), this must done through make.conf in gentoo
 	ECONF_SOURCE=${S} \
 	econf \
-		--libexecdir=/usr/$(get_libdir) \
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir) \
 		--disable-static \
 		$(use_enable nls) \
 		--disable-valgrind \

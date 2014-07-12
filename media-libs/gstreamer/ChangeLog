@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.371 2014/06/24 22:11:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.372 2014/07/12 11:48:49 mgorny Exp $
+
+  12 Jul 2014; Michał Górny <mgorny@gentoo.org> gstreamer-0.10.36-r2.ebuild,
+  gstreamer-1.2.4-r2.ebuild:
+  Fix Prefix install, bug #516932. Thanks to Steven Trogdon for the fix.
 
   24 Jun 2014; Michał Górny <mgorny@gentoo.org> gstreamer-0.10.36-r2.ebuild,
   gstreamer-1.2.4-r2.ebuild:
