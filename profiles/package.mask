@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15886 2014/07/12 16:58:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15887 2014/07/12 21:32:38 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -408,12 +408,6 @@ sys-fs/rdiff-backup-fs
 # Do NOT remove this mask or the affected packages without speaking to
 # bonsaikitten first! You have been warned!
 <net-fs/samba-3.6
-
-# Michał Górny <mgorny@gentoo.org> (12 Mar 2014)
-# Masked for testing and binary package built.
->=dev-python/pypy-2.3
->=dev-python/pypy-bin-2.3
->=virtual/pypy-2.3
 
 # Mike Gilbert <floppym@gentoo.org> (04 Mar 2014)
 # Dev channel releases are only for people who are developers or want more
