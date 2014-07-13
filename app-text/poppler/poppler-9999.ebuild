@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.1 2014/06/22 18:57:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.2 2014/07/13 10:39:44 johu Exp $
 
 EAPI=5
 
@@ -63,14 +63,7 @@ DOCS=(AUTHORS NEWS README README-XPDF TODO)
 PATCHES=( "${FILESDIR}/${PN}-0.26.0-qt5-dependencies.patch" )
 
 src_configure() {
-	# this is needed for multilib, see bug 459394
-	local ft_libdir ft_includedir
-	ft_libdir="$($(tc-getPKG_CONFIG) freetype2 --variable=libdir)"
-	ft_includedir="$($(tc-getPKG_CONFIG) freetype2 --variable=includedir)"
-	export FREETYPE_DIR="${ft_libdir}:${ft_includedir%/include}"
-	einfo "Detected FreeType at ${FREETYPE_DIR}"
-
-	mycmakeargs=(
+	local mycmakeargs=(
 		-DBUILD_GTK_TESTS=OFF
 		-DBUILD_QT4_TESTS=OFF
 		-DBUILD_QT5_TESTS=OFF

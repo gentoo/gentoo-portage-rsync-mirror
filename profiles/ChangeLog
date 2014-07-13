@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9202 2014/07/13 10:27:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9203 2014/07/13 10:34:34 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add 5.20 version of Storable to perl-5.20 mask
 
   13 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add 5.20 version of Socket to perl-5.20 mask
