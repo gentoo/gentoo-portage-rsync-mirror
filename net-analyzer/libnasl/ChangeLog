@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/libnasl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.93 2013/07/04 21:29:33 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.94 2014/07/13 13:10:04 jer Exp $
+
+  13 Jul 2014; Jeroen Roovers <jer@gentoo.org> libnasl-2.2.9-r1.ebuild,
+  files/libnasl-2.2.9-gentoo.patch, files/libnasl-2.2.9-openssl-1.patch:
+  sed must die(). Clean up patch.
 
   04 Jul 2013; Christoph Junghans <ottxor@gentoo.org> libnasl-2.2.9-r1.ebuild:
   added ~amd64-linux (tested by me)

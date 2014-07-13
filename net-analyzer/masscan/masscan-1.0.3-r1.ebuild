@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/masscan/masscan-1.0.3-r1.ebuild,v 1.1 2014/03/02 15:30:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/masscan/masscan-1.0.3-r1.ebuild,v 1.2 2014/07/13 13:31:10 jer Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -19,7 +19,8 @@ DEPEND="${RDEPEND}"
 src_prepare(){
 	sed -i \
 		-e '/$(CC)/s!$(CFLAGS)!$(LDFLAGS) $(CFLAGS)!g' \
-		-e "/^GITVER :=/s!= .(.*!=!g" \
+		-e '/^GITVER :=/s!= .(.*!=!g' \
+		-e '/^SYS/s|gcc|$(CC)|g' \
 		-e '/$(CC)/s!-DGIT=\"$(GITVER)\"!!g' \
 		-e '/^CFLAGS =/{s,=,+=,;s,-g -ggdb,,;s,-O3,,;}' \
 		Makefile || die
@@ -30,13 +31,13 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" PREFIX=/usr
+	emake CC="$(tc-getCC)" DESTDIR="${D}" PREFIX=/usr install
 
 	insinto /etc/masscan
 	doins data/exclude.conf
 	doins "${FILESDIR}"/masscan.conf
 
-	[ -f doc/bot.hml ] && mv doc/bot.{hml,html}
+	mv doc/bot.{hml,html} || die
 	dohtml doc/bot.html
 	doman doc/masscan.8
 	dodoc *.md
