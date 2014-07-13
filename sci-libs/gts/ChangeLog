@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.32 2013/08/27 21:27:39 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.33 2014/07/13 09:09:02 jlec Exp $
+
+  13 Jul 2014; Justin Lecher <jlec@gentoo.org> -gts-20100321-r3.ebuild,
+  -gts-20111025-r1.ebuild, -gts-20120706.ebuild, gts-20121130.ebuild:
+  Drop old, #478610; drop dependency on fortran
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> gts-20121130.ebuild:
   keyword ~amd64-fbsd

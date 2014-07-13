@@ -1,13 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20121130.ebuild,v 1.2 2013/08/27 21:27:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20121130.ebuild,v 1.3 2014/07/13 09:09:02 jlec Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit autotools-utils fortran-2
+inherit autotools-utils
 
 MYP=${P/-20/-snapshot-}
 
@@ -31,12 +30,14 @@ RESTRICT=test
 
 S="${WORKDIR}/${MYP}"
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
 PATCHES=( "${FILESDIR}"/${PN}-20111025-autotools.patch )
 
 src_compile() {
 	autotools-utils_src_compile
 	use doc && autotools-utils_src_compile -C doc html
-	chmod +x test/*/*.sh
+	chmod +x test/*/*.sh || die
 }
 
 src_install() {
