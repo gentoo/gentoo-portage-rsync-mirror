@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.13.ebuild,v 1.1 2014/07/12 09:06:58 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.13.ebuild,v 1.2 2014/07/13 06:01:16 alonbl Exp $
 
 EAPI=5
 
@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 
 MULTILIB_CHOST_TOOLS=(
 	/usr/bin/gpg-error-config
+)
+MULTILIB_WRAPPED_HEADERS=(
+	/usr/include/gpg-error.h
 )
 
 src_prepare() {
