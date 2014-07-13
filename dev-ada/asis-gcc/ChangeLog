@@ -1,6 +1,12 @@
 # ChangeLog for dev-ada/asis-gcc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.20 2012/06/14 13:08:30 george Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.21 2014/07/13 16:23:26 ulm Exp $
+
+  13 Jul 2014; Ulrich Müller <ulm@gentoo.org> asis-gcc-3.4.6.ebuild,
+  asis-gcc-4.1.2.ebuild, asis-gcc-4.1.2-r1.ebuild, asis-gcc-4.2.2.ebuild,
+  asis-gcc-4.3.0_pre132166.ebuild, asis-gcc-4.3.1.ebuild,
+  asis-gcc-4.3.1-r1.ebuild, asis-gcc-4.4.ebuild:
+  Don't call eselect with obsolete/removed --no-color option.
 
   14 Jun 2012; George Shapovalov <george@gentoo.org> asis-gcc-4.4.ebuild:
   the 4.4 needs this catch too.

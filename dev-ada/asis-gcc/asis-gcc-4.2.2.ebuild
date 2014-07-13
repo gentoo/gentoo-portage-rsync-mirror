@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.2.2.ebuild,v 1.5 2012/04/10 12:44:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.2.2.ebuild,v 1.6 2014/07/13 16:23:26 ulm Exp $
 
 inherit eutils flag-o-matic gnatbuild multilib
 
@@ -40,7 +40,7 @@ My_BINPATH=${BINPATH/${PN}/${Gnat_Name}}
 My_DATAPATH=${DATAPATH/${PN}/${Gnat_Name}}
 
 pkg_setup() {
-	local currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
+	local currGnat=$(eselect gnat show | grep "gnat-" | awk '{ print $1 }')
 	if [[ "${currGnat}" != "${CTARGET}-${Gnat_Name}-${SLOT}" ]]; then
 		echo
 		eerror "The active gnat profile does not correspond to the selected"

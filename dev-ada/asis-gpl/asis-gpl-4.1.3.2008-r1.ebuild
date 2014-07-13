@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2008-r1.ebuild,v 1.1 2008/08/19 11:56:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gpl/asis-gpl-4.1.3.2008-r1.ebuild,v 1.2 2014/07/13 16:26:07 ulm Exp $
 
 # NOTE: gnat-gpl-2007 and 2008 have "incompatible bugs"
 # so, we separate asis following the separation of gnat
@@ -39,7 +39,7 @@ QA_EXECSTACK="${BINPATH:1}/*
 	${LIBPATH:1}/adalib/libasis-${ACT_Ver}.so"
 
 pkg_setup() {
-	currGnat=$(eselect --no-color gnat show | grep "gnat-" | awk '{ print $1 }')
+	currGnat=$(eselect gnat show | grep "gnat-" | awk '{ print $1 }')
 	if [[ "${currGnat}" != "${CTARGET}-${Gnat_Name}-${SLOT}" ]]; then
 		echo
 		eerror "The active gnat profile does not correspond to the selected"

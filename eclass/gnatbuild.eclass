@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.60 2013/11/25 07:06:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.61 2014/07/13 16:19:33 ulm Exp $
 #
 # Authors: George Shapovalov <george@gentoo.org>
 #          Steve Arnold <nerdboy@gentoo.org>
@@ -213,7 +213,7 @@ should_we_eselect_gnat() {
 	# if the current config is invalid, we definitely want a new one
 	# Note: due to bash quirkiness, the following must not be 1 line
 	local curr_config
-	curr_config=$(eselect --no-color gnat show | grep ${CTARGET} | awk '{ print $1 }') || return 0
+	curr_config=$(eselect gnat show | grep ${CTARGET} | awk '{ print $1 }') || return 0
 	[[ -z ${curr_config} ]] && return 0
 
 	# The logic is basically "try to keep the same profile if possible"
