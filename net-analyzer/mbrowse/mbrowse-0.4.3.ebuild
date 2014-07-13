@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.4.3.ebuild,v 1.4 2012/09/28 06:43:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.4.3.ebuild,v 1.5 2014/07/13 13:38:51 jer Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit autotools eutils
+inherit autotools
 
 DESCRIPTION="MBrowse is a graphical MIB browser"
 HOMEPAGE="http://sourceforge.net/projects/mbrowse/"
@@ -13,7 +13,6 @@ SRC_URI="mirror://sourceforge/${PN}/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE=""
 
 DEPEND="
 	dev-libs/glib
@@ -23,15 +22,11 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+DOCS=( AUTHORS README ChangeLog )
+
 src_prepare() {
-	sed -i acinclude.m4 \
+	sed -i \
 		-e '/LDFLAGS=/d' \
-		|| die
+		acinclude.m4 || die
 	eautoreconf
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-
-	dodoc AUTHORS README ChangeLog
 }

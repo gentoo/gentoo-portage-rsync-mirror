@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mbrowse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.17 2012/09/28 06:43:42 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.18 2014/07/13 13:38:51 jer Exp $
+
+  13 Jul 2014; Jeroen Roovers <jer@gentoo.org> mbrowse-0.4.3.ebuild:
+  EAPI bump.
 
   28 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> mbrowse-0.4.3.ebuild:
   amd64 stable, wrt bug #436446
