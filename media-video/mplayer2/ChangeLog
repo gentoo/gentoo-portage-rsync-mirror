@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.121 2014/06/09 19:27:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.122 2014/07/13 19:56:14 tomwij Exp $
+
+  13 Jul 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/mplayer2-2.0_p20131009_support_libav10.patch,
+  mplayer2-2.0_p20131009.ebuild:
+  Added patch from Debian by Reinhard Tartler (siretart) to support Libav 10;
+  fixes bug #509298, proxied commit for Nikoli.
 
   09 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
   mplayer2-2.0_p20131009.ebuild, mplayer2-9999.ebuild:

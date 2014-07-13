@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-fs/lvm2-2.02.45 >=virtual/udev-171 dev-libs/libaio sys-libs/readline !<sys-apps/baselayout-2
 SLOT=0
 SRC_URI=http://christophe.varoqui.free.fr/multipath-tools/multipath-tools-0.4.9.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	a9a8d051efb42bfe884c1db82ce161de
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	8cd692457c1524c7be9af69831698a78
 _md5_=32bf894a7a0770e8af12db1b71b5a60b

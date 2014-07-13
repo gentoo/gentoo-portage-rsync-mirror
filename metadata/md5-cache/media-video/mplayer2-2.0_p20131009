@@ -11,4 +11,4 @@ REQUIRED_USE=cddb? ( cdio network ) dvdnav? ( dvd ) enca? ( iconv ) lcms? ( open
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~maksbotan/mplayer2-2.0_p20131009.tar.xz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	4560effd96d3d2a82e50af7cf87166da	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=4314d1b3589c4153fdd854e25f078c2f
+_md5_=6f2e9d91b46044518bcd862cb9974578

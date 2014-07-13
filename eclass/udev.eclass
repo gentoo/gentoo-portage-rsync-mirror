@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.11 2013/03/24 15:52:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.12 2014/07/13 19:33:09 ssuominen Exp $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -13,9 +13,8 @@
 # @CODE
 # inherit udev
 #
-# # In this example 196 is the first version with udev.bin hwdb database,
-# # and we also link against libgudev
-# RDEPEND=">=virtual/udev-196[hwdb,gudev]"
+# # Example of the eclass usage:
+# RDEPEND="virtual/udev"
 # DEPEND="${RDEPEND}"
 #
 # src_configure() {

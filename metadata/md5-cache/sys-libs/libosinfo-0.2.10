@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2:2 >=dev-libs/libxslt-1.0.0:= dev-libs/libxml2:= net-li
 REQUIRED_USE=vala? ( introspection )
 SLOT=0
 SRC_URI=http://fedorahosted.org/releases/l/i/libosinfo/libosinfo-0.2.10.tar.gz
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	a9a8d051efb42bfe884c1db82ce161de	vala	d8f392783fdc2395fc64af046f2ca961
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	8cd692457c1524c7be9af69831698a78	vala	d8f392783fdc2395fc64af046f2ca961
 _md5_=ca5b31b70b9fb84dfab5843c0b1d0e12

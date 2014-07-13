@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.109 2014/07/13 17:07:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.110 2014/07/13 19:32:58 zlogene Exp $
+
+  13 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gpm-1.20.7-r2.ebuild:
+  alpha/arm/ia64/ppc64/ppc/sparc/s390 stable wrt bug #513728
 
   13 Jul 2014;  <tgall@gentoo.org> gpm-1.20.7-r2.ebuild:
   stable on arm64 bug #513728
