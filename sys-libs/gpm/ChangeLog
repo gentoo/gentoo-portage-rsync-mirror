@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.108 2014/07/12 14:17:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.109 2014/07/13 17:07:40 tgall Exp $
+
+  13 Jul 2014;  <tgall@gentoo.org> gpm-1.20.7-r2.ebuild:
+  stable on arm64 bug #513728
 
   12 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gpm-1.20.7-r2.ebuild:
   x86 stable wrt bug #513728
