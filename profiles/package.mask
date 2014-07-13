@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15887 2014/07/12 21:32:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15890 2014/07/13 10:27:53 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (13 Jul 2014)
+# Development of stand-alone package stopped in 2004.
+# sawfish.el is now provided by x11-wm/sawfish with USE=emacs.
+# Masked for removal in 30 days, bug #493114.
+app-emacs/sawfish
 
 # Markos Chandras <hwoarang@gentoo.org> (12 Jul 2014)
 # Masked for production testing
@@ -257,6 +263,8 @@ dev-java/ibm-jdk-bin:1.5
 =virtual/perl-Perl-OSType-1.7.0
 =virtual/perl-Pod-Escapes-1.60.0
 =virtual/perl-Safe-2.370.0
+=virtual/perl-Scalar-List-Utils-1.380.0
+=virtual/perl-Socket-2.13.0
 =virtual/perl-bignum-0.370.0
 =perl-core/B-Debug-1.190.0
 

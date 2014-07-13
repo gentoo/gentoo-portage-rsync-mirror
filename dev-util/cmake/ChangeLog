@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.285 2014/07/04 19:49:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.286 2014/07/13 10:19:06 johu Exp $
+
+  13 Jul 2014; Johannes Huber <johu@gentoo.org> -cmake-2.8.10.2-r2.ebuild,
+  -cmake-2.8.11.2.ebuild, -cmake-2.8.12.1-r4.ebuild,
+  -files/cmake-2.8.0-darwin-default-install_name.patch,
+  -files/cmake-2.8.10-more-no_host_paths.patch,
+  -files/cmake-2.8.10.2-FindImageMagick.patch,
+  -files/cmake-2.8.10.2-implicit-include.patch,
+  -files/cmake-2.8.11-FindImageMagick.patch,
+  -files/cmake-2.8.11.2-hppa-bootstrap.patch, -files/cmake-2.8.7-FindBLAS.patch,
+  -files/cmake-2.8.7-FindBoost-python.patch:
+  Remove old.
 
   04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.12.2.ebuild:
   Stable for sparc, wrt bug #504794

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/tnef-1.4.10.ebuild,v 1.5 2014/06/14 10:13:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/tnef-1.4.10.ebuild,v 1.6 2014/07/13 10:06:46 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tnef/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 hppa ppc ~ppc64 x86"
 
 src_test() {
 	emake -j1 check

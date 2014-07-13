@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.99 2014/07/09 09:31:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.100 2014/07/13 10:01:36 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> linux-firmware-20131230.ebuild:
+  Stable for ppc, wrt bug #508982
 
   09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   linux-firmware-20131230.ebuild:
