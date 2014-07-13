@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.27 2014/01/20 20:46:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test/ChangeLog,v 1.28 2014/07/13 15:04:20 dilfridge Exp $
+
+  13 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> -Test-1.25.ebuild,
+  -Test-1.250.200_rc.ebuild:
+  Remove old
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Test-1.25.ebuild,
   Test-1.250.200_rc.ebuild, Test-1.260.0.ebuild:
