@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-package-manager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.15 2012/08/07 20:32:44 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.16 2014/07/13 18:49:59 ulm Exp $
+
+  13 Jul 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Add package to eselect herd.
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org>
   eselect-package-manager-20110108.ebuild:

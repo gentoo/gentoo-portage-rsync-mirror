@@ -1,6 +1,20 @@
 # ChangeLog for virtual/perl-Text-ParseWords
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-ParseWords/ChangeLog,v 1.4 2013/08/24 04:08:04 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-ParseWords/ChangeLog,v 1.5 2014/07/13 18:33:33 dilfridge Exp $
+
+*perl-Text-ParseWords-3.290.0-r1 (13 Jul 2014)
+*perl-Text-ParseWords-3.280.0-r2 (13 Jul 2014)
+*perl-Text-ParseWords-3.270.0-r1 (13 Jul 2014)
+
+  13 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Text-ParseWords-3.270.0.ebuild,
+  +perl-Text-ParseWords-3.270.0-r1.ebuild,
+  -perl-Text-ParseWords-3.280.0.ebuild,
+  -perl-Text-ParseWords-3.280.0-r1.ebuild,
+  +perl-Text-ParseWords-3.280.0-r2.ebuild,
+  -perl-Text-ParseWords-3.290.0.ebuild,
+  +perl-Text-ParseWords-3.290.0-r1.ebuild:
+  Improve dependencies; remove old
 
 *perl-Text-ParseWords-3.290.0 (24 Aug 2013)
 

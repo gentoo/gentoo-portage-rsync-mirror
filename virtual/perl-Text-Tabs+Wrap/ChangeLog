@@ -1,6 +1,16 @@
 # ChangeLog for virtual/perl-Text-Tabs+Wrap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Tabs+Wrap/ChangeLog,v 1.27 2013/12/30 14:15:24 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Tabs+Wrap/ChangeLog,v 1.28 2014/07/13 18:42:52 dilfridge Exp $
+
+*perl-Text-Tabs+Wrap-2013.52.300-r1 (13 Jul 2014)
+*perl-Text-Tabs+Wrap-2012.81.800-r1 (13 Jul 2014)
+
+  13 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Text-Tabs+Wrap-2012.81.800.ebuild,
+  +perl-Text-Tabs+Wrap-2012.81.800-r1.ebuild,
+  -perl-Text-Tabs+Wrap-2013.52.300.ebuild,
+  +perl-Text-Tabs+Wrap-2013.52.300-r1.ebuild:
+  Improve dependencies
 
   30 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
   -perl-Text-Tabs+Wrap-2009.30.500-r2.ebuild:
