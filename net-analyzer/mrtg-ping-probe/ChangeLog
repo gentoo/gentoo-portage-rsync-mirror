@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg-ping-probe
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg-ping-probe/ChangeLog,v 1.6 2011/08/20 20:27:48 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg-ping-probe/ChangeLog,v 1.7 2014/07/13 14:12:47 jer Exp $
+
+  13 Jul 2014; Jeroen Roovers <jer@gentoo.org> mrtg-ping-probe-2.2.0.ebuild:
+  EAPI bump.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> mrtg-ping-probe-2.2.0.ebuild:
   Set proper DEPEND/RDEPEND. Make sed die(). Remove default src_compile().

@@ -2,8 +2,8 @@ http://www.ietf.org/rfc/rfc3542.txt
 
 http://bugs.gentoo.org/153252
 
---- mping-2.01/src/mping.c
-+++ mping-2.01/src/mping.c
+--- a/src/mping.c
++++ b/src/mping.c
 @@ -1688,6 +1688,20 @@
          }
  }

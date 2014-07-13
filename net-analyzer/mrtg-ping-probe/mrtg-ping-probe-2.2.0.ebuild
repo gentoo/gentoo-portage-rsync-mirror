@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg-ping-probe/mrtg-ping-probe-2.2.0.ebuild,v 1.5 2011/08/20 20:27:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg-ping-probe/mrtg-ping-probe-2.2.0.ebuild,v 1.6 2014/07/13 14:12:47 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 DESCRIPTION="Addon mrtg contrib for stats ping/loss packets"
 SRC_URI="ftp://ftp.pwo.de/pub/pwo/mrtg/${PN}/${P}.tar.gz"
@@ -11,7 +11,6 @@ HOMEPAGE="http://pwo.de/projects/mrtg/"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 
 DEPEND="dev-lang/perl"
 RDEPEND="

@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpupower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.18 2014/06/29 22:10:19 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.19 2014/07/13 14:04:14 ssuominen Exp $
+
+*cpupower-3.15 (13 Jul 2014)
+
+  13 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +cpupower-3.15.ebuild:
+  Version bump wrt #517022 by "holgersson"
 
   29 Jun 2014; Steev Klimaszewski <steev@gentoo.org> cpupower-3.14.ebuild:
   Add ~arm keyword wrt bug #512044

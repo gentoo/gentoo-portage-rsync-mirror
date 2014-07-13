@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nast
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.12 2012/02/24 14:54:59 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.13 2014/07/13 14:28:50 jer Exp $
+
+  13 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nast-0.2.0.ebuild,
+  nast-0.2.0-r1.ebuild, +files/nast-0.2.0-gentoo.patch:
+  Fix building against sys-libs/ncurses[tinfo]. Convert sed script to patch.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nast-0.2.0-r1.ebuild:
   x86 stable wrt bug #404811
