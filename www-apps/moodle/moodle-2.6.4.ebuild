@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.4.10.ebuild,v 1.1 2014/05/11 11:14:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.6.4.ebuild,v 1.1 2014/07/13 11:36:33 blueness Exp $
 
 EAPI="5"
 
@@ -39,7 +39,7 @@ REQUIRED_USE="|| ( ${DB_TYPES} )"
 # which may live on another server
 DEPEND=""
 RDEPEND="
-	=dev-lang/php-5.3*[${DB_FLAGS},${AUTHENTICATION_FLAGS},${PHP_FLAGS}]
+	>=dev-lang/php-5.3.3[${DB_FLAGS},${AUTHENTICATION_FLAGS},${PHP_FLAGS}]
 	virtual/httpd-php
 	virtual/cron"
 
