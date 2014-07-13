@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.188 2014/06/24 17:06:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.189 2014/07/13 09:50:21 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> scribus-1.4.3.ebuild:
+  Stable for ppc, wrt bug #512108
 
   24 Jun 2014; Agostino Sarubbo <ago@gentoo.org> scribus-1.4.3.ebuild:
   Stable for x86, wrt bug #512108

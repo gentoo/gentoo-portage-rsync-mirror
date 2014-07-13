@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.16-r2.ebuild,v 1.4 2014/06/16 09:55:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.16-r2.ebuild,v 1.5 2014/07/13 09:58:03 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 RDEPEND=">=dev-vcs/git-1.6.3.3"

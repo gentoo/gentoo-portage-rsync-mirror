@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.76 2014/06/22 21:32:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.77 2014/07/13 09:58:21 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> dante-1.4.0-r1.ebuild:
+  Stable for ppc, wrt bug #506794
 
   22 Jun 2014; Chema Alonso <nimiux@gentoo.org> dante-1.4.0-r1.ebuild:
   Stable for amd64 wrt bug #506794

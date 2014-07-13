@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1-r1.ebuild,v 1.6 2014/06/16 08:42:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1-r1.ebuild,v 1.7 2014/07/13 09:57:47 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/pywebsvcs/${MY_P}.tar.gz"
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples twisted"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

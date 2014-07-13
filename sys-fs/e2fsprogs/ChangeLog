@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.280 2014/07/12 17:23:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.281 2014/07/13 09:54:04 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-1.42.10.ebuild:
+  Stable for ppc, wrt bug #516114
 
   12 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> e2fsprogs-1.42.10.ebuild:
   Download mintlib specific patch only when required by Arfrever

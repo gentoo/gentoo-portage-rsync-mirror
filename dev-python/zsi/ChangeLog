@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zsi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.27 2014/06/16 08:42:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.28 2014/07/13 09:57:47 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> zsi-2.1_alpha1-r1.ebuild:
+  Stable for ppc, wrt bug #505370
 
   16 Jun 2014; Chema Alonso <nimiux@gentoo.org> zsi-2.1_alpha1-r1.ebuild:
   Stable for amd64 wrt bug #505370
@@ -94,4 +97,3 @@
 
   19 Jan 2008; Christoph Mende <angelos@gentoo.org> +zsi-2.0.ebuild:
   Initial import
-

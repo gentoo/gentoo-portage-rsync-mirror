@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.116 2014/07/10 19:05:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.117 2014/07/13 09:54:00 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-libs-1.42.10.ebuild:
+  Stable for ppc, wrt bug #516114
 
   10 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/e2fsprogs-libs-1.42.10-fix-build-cflags.patch,

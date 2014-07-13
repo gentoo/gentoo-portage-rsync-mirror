@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.121 2014/07/08 14:50:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.122 2014/07/13 09:52:51 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> auctex-11.87-r1.ebuild:
+  Stable for ppc, wrt bug #515540
 
   08 Jul 2014; Chema Alonso <nimiux@gentoo.org> auctex-11.87-r1.ebuild:
   Stable for amd64 wrt bug #515540

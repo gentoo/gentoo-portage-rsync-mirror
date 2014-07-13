@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.150 2014/07/07 12:25:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.151 2014/07/13 09:57:30 ago Exp $
+
+  13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libgdiplus-2.10.9-r1.ebuild:
+  Stable for ppc, wrt bug #504796
 
   07 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> libgdiplus-2.10.9-r1.ebuild:
   x86 stable wrt bug #504796
