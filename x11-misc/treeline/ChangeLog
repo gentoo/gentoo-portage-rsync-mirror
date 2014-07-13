@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.61 2014/07/13 10:06:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.62 2014/07/13 12:41:54 jer Exp $
+
+  13 Jul 2014; Jeroen Roovers <jer@gentoo.org> -treeline-1.4.1.ebuild,
+  files/treeline-1.2.3-nocompile.patch:
+  Clean up patch.
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> treeline-1.4.1-r1.ebuild:
   Stable for ppc, wrt bug #510170

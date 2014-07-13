@@ -1,5 +1,5 @@
---- install.py.orig	2009-06-06 19:21:00.000000000 +0200
-+++ install.py	2009-06-06 19:26:28.000000000 +0200
+--- a/install.py
++++ b/install.py
 @@ -230,7 +230,8 @@
      pythonBuildDir = os.path.join(buildRoot, pythonPrefixDir[1:])
  

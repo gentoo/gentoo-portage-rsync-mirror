@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.9 2014/07/11 12:41:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.9.ebuild,v 1.10 2014/07/13 12:49:46 jer Exp $
 
 EAPI=5
 inherit eutils user systemd
@@ -35,7 +35,7 @@ DEPEND="
 	>=dev-lang/perl-5.8.8-r8
 	>=dev-perl/SNMP_Session-1.13
 	>=net-analyzer/fping-2.4_beta2-r2[suid]
-	>=net-analyzer/rrdtool-1.2[perl]
+	>=net-analyzer/rrdtool-1.2[graph,perl]
 	dev-perl/CGI-Session
 	dev-perl/Config-Grammar
 	dev-perl/Digest-HMAC
