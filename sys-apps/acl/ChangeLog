@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.128 2014/07/13 09:53:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.129 2014/07/13 20:36:17 tgall Exp $
+
+  13 Jul 2014;  <tgall@gentoo.org> acl-2.2.52-r1.ebuild:
+  arm64 stable, bug #516110
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> acl-2.2.52-r1.ebuild:
   Stable for ppc, wrt bug #516110
