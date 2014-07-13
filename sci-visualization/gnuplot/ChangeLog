@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.245 2014/05/19 13:41:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.246 2014/07/13 20:19:08 ottxor Exp $
+
+*gnuplot-5.0_rc1 (13 Jul 2014)
+
+  13 Jul 2014; Christoph Junghans <ottxor@gentoo.org> +gnuplot-5.0_rc1.ebuild:
+  version bump
 
   19 May 2014; Chema Alonso <nimiux@gentoo.org> gnuplot-4.6.4-r2.ebuild:
   Stable for amd64 wrt bug #508218
