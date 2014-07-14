@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/absolutelayout
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/absolutelayout/ChangeLog,v 1.5 2012/12/16 14:50:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/absolutelayout/ChangeLog,v 1.6 2014/07/14 07:47:49 ercpe Exp $
+
+*absolutelayout-6.7_beta-r1 (14 Jul 2014)
+
+  14 Jul 2014; Johann Schmitz <ercpe@gentoo.org>
+  +absolutelayout-6.7_beta-r1.ebuild:
+  Bumped to EAPI=5, use java-pkg-simple instead of manually compiling the
+  sources
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #169737

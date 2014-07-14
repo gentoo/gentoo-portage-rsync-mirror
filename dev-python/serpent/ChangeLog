@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/serpent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.10 2014/05/03 09:25:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.11 2014/07/14 07:40:16 patrick Exp $
+
+*serpent-1.6 (14 Jul 2014)
+
+  14 Jul 2014; Patrick Lauer <patrick@gentoo.org> +serpent-1.6.ebuild:
+  Bump
 
 *serpent-1.5 (03 May 2014)
 
