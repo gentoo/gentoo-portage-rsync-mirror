@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/temple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.16 2014/05/16 18:18:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.17 2014/07/14 06:19:39 graaff Exp $
+
+*temple-0.6.8 (14 Jul 2014)
+
+  14 Jul 2014; Hans de Graaff <graaff@gentoo.org> +temple-0.6.8.ebuild:
+  Version bump.
 
   16 May 2014; Hans de Graaff <graaff@gentoo.org> temple-0.6.7-r1.ebuild:
   Add ruby21.
