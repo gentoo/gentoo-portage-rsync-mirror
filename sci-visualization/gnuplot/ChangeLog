@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.246 2014/07/13 20:19:08 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.247 2014/07/14 19:35:11 ottxor Exp $
+
+  14 Jul 2014; Christoph Junghans <ottxor@gentoo.org> gnuplot-5.0_rc1.ebuild:
+  make manual build without picins.sty (bug #517058)
 
 *gnuplot-5.0_rc1 (13 Jul 2014)
 

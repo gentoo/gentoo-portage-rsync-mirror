@@ -10,4 +10,4 @@ RDEPEND=cairo? ( x11-libs/cairo x11-libs/pango ) gd? ( >=media-libs/gd-2.0.35-r3
 SLOT=0
 SRC_URI=mirror://sourceforge/gnuplot/gnuplot-5.0.rc1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=8f1c4a168647355ae665cffe2f863d77
+_md5_=da610bcbd670e1b00377d5815a6de1d1

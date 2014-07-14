@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc1.ebuild,v 1.1 2014/07/13 20:19:08 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc1.ebuild,v 1.2 2014/07/14 19:35:11 ottxor Exp $
 
 EAPI=5
 
@@ -143,7 +143,7 @@ src_compile() {
 	if use doc; then
 		# Avoid sandbox violation in epstopdf/ghostscript
 		addpredict /var/cache/fontconfig
-		emake -C docs pdf
+		emake -C docs gnuplot.pdf
 		emake -C tutorial pdf
 	fi
 }
