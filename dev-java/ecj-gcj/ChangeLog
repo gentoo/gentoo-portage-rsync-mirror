@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ecj-gcj
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ChangeLog,v 1.6 2012/12/14 13:08:17 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ChangeLog,v 1.7 2014/07/14 18:10:59 sera Exp $
+
+*ecj-gcj-4.2.1-r2 (14 Jul 2014)
+
+  14 Jul 2014; Ralph Sennhauser <sera@gentoo.org> -ecj-gcj-3.5.2-r2.ebuild,
+  -ecj-gcj-3.6.ebuild, +ecj-gcj-4.2.1-r2.ebuild, -files/ecj-gcj-3.5,
+  -files/ecj-gcj-3.6:
+  Version bump
+  Remove old
 
 *ecj-gcj-3.6-r1 (14 Dec 2012)
 *ecj-gcj-3.5.2-r3 (14 Dec 2012)
