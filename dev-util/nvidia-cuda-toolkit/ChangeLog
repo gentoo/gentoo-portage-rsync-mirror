@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.86 2014/06/16 20:30:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.87 2014/07/14 08:53:09 jlec Exp $
+
+*nvidia-cuda-toolkit-6.0.37-r4 (14 Jul 2014)
+
+  14 Jul 2014; Justin Lecher <jlec@gentoo.org>
+  +nvidia-cuda-toolkit-6.0.37-r4.ebuild:
+  Add profiler specific paths only with USE=profiler, #512160
 
 *nvidia-cuda-toolkit-6.0.37-r3 (16 Jun 2014)
 
