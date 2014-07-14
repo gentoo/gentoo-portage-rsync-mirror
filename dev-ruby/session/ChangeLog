@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.42 2014/06/13 19:29:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.43 2014/07/14 14:10:55 phajdan.jr Exp $
+
+  14 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> session-3.1.2.ebuild:
+  x86 stable wrt bug #505920
 
   13 Jun 2014; Jeroen Roovers <jer@gentoo.org> session-3.1.2.ebuild:
   Stable for HPPA (bug #505920).

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.1.0-r1.ebuild,v 1.9 2014/06/16 15:39:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.1.0-r1.ebuild,v 1.10 2014/07/14 14:08:07 phajdan.jr Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/ruby-gettext/locale"
 LICENSE="|| ( Ruby GPL-2 )"
 SRC_URI="https://github.com/ruby-gettext/locale/archive/${PV}.tar.gz -> ${P}-git.tgz"
 
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 ~x86 ~x86-macos"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
