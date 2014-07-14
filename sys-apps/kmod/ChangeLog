@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.159 2014/07/11 12:28:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.161 2014/07/14 19:25:22 ago Exp $
+
+  14 Jul 2014; Agostino Sarubbo <ago@gentoo.org> kmod-18-r1.ebuild:
+  Stable for x86, wrt bug #517106
+
+  14 Jul 2014; Agostino Sarubbo <ago@gentoo.org> kmod-18-r1.ebuild:
+  Stable for amd64, wrt bug #517106
 
 *kmod-18-r1 (11 Jul 2014)
 

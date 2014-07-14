@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.41 2014/05/14 23:01:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.42 2014/07/14 19:30:10 tgall Exp $
+
+  14 Jul 2014;  <tgall@gentoo.org> keyutils-1.5.9-r1.ebuild:
+  arm64 stable, bug #516116
 
 *keyutils-1.5.9-r1 (14 May 2014)
 

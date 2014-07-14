@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1059 2014/07/04 12:20:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1061 2014/07/14 19:25:18 ago Exp $
+
+  14 Jul 2014; Agostino Sarubbo <ago@gentoo.org> udev-215.ebuild:
+  Stable for x86, wrt bug #517106
+
+  14 Jul 2014; Agostino Sarubbo <ago@gentoo.org> udev-215.ebuild:
+  Stable for amd64, wrt bug #517106
 
 *udev-215 (04 Jul 2014)
 

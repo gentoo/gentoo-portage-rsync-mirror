@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r9.ebuild,v 1.11 2014/01/18 12:07:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r9.ebuild,v 1.12 2014/07/14 19:30:19 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic
 
