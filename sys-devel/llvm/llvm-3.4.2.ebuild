@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.1 2014/06/23 23:00:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.2 2014/07/14 14:53:52 axs Exp $
 
 EAPI=5
 
@@ -38,10 +38,10 @@ COMMON_DEPEND="
 		xml? ( dev-libs/libxml2:2= )
 	)
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
-	libffi? ( virtual/libffi:0=[${MULTILIB_USEDEP}] )
-	ncurses? ( sys-libs/ncurses:5=[${MULTILIB_USEDEP}] )
+	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
+	ncurses? ( >=sys-libs/ncurses-5.9-r3:5=[${MULTILIB_USEDEP}] )
 	ocaml? ( dev-lang/ocaml:0= )
-	udis86? ( dev-libs/udis86:0=[pic(+),${MULTILIB_USEDEP}] )"
+	udis86? ( >=dev-libs/udis86-1.7-r2:0=[pic(+),${MULTILIB_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	>=sys-devel/make-3.81

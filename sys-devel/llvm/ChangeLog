@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.202 2014/06/29 09:59:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.203 2014/07/14 14:53:52 axs Exp $
+
+  14 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> llvm-3.3-r3.ebuild,
+  llvm-3.4.1-r2.ebuild, llvm-3.4.2.ebuild, llvm-9999.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  513718
 
   29 Jun 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Rename clang to ${CHOST}-clang-${PV}. Add multilib wrappers.

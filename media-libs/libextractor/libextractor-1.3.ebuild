@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-1.3.ebuild,v 1.3 2014/06/05 00:55:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-1.3.ebuild,v 1.4 2014/07/14 14:52:01 ssuominen Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="+archive +bzip2 ffmpeg flac gif gsf gtk jpeg mp4 +magic midi mpeg qt4 tidy tiff vorbis +zlib" # test
+IUSE="+archive +bzip2 ffmpeg flac gif gsf gtk jpeg mp4 +magic midi mpeg tidy tiff vorbis +zlib" # test
 
 RESTRICT="test"
 
@@ -37,10 +37,6 @@ RDEPEND="app-text/iso-codes
 	magic? ( sys-apps/file )
 	midi? ( media-libs/libsmf )
 	mpeg? ( media-libs/libmpeg2 )
-	qt4? (
-		dev-qt/qtgui:4
-		dev-qt/qtsvg:4
-		)
 	tidy? ( app-text/htmltidy )
 	tiff? ( media-libs/tiff:0 )
 	vorbis? (
@@ -96,15 +92,6 @@ src_configure() {
 	e_ac_cv lib_mp4v2_MP4ReadProvider=$(usex mp4)
 	e_ac_cv lib_smf_smf_load_from_memory=$(usex midi)
 
-	local myconf
-
-	if use qt4; then
-		append-cppflags "$($(tc-getPKG_CONFIG) --cflags-only-I QtGui QtSvg)"
-		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-L QtGui QtSvg)"
-	else
-		myconf='--without-qt'
-	fi
-
 	# gstreamer support is for 1.0, no 0.10 support
 	econf \
 		--disable-static \
@@ -114,8 +101,7 @@ src_configure() {
 		--disable-gsf-gnome \
 		$(use_enable ffmpeg) \
 		--with-gtk_version=$(usex gtk 3.0.0 false) \
-		--without-gstreamer \
-		${myconf}
+		--without-gstreamer
 }
 
 src_compile() {

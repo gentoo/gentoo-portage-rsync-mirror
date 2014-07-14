@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=app-text/iso-codes >=dev-libs/glib-2 media-gfx/exiv2 sys-devel/libtool virtual/libiconv virtual/libintl archive? ( app-arch/libarchive ) bzip2? ( app-arch/bzip2 ) ffmpeg? ( virtual/ffmpeg ) flac? ( media-libs/flac media-libs/libogg ) gif? ( media-libs/giflib ) gsf? ( gnome-extra/libgsf ) gtk? ( x11-libs/gtk+:3 ) jpeg? ( virtual/jpeg ) mp4? ( media-libs/libmp4v2:0 ) magic? ( sys-apps/file ) midi? ( media-libs/libsmf ) mpeg? ( media-libs/libmpeg2 ) qt4? ( dev-qt/qtgui:4 dev-qt/qtsvg:4 ) tidy? ( app-text/htmltidy ) tiff? ( media-libs/tiff:0 ) vorbis? ( media-libs/libogg media-libs/libvorbis ) zlib? ( sys-libs/zlib ) !<app-crypt/pkcrack-1.2.2-r1 !sci-biology/glimmer !sci-chemistry/pdb-extract sys-devel/gettext virtual/pkgconfig
+DEPEND=app-text/iso-codes >=dev-libs/glib-2 media-gfx/exiv2 sys-devel/libtool virtual/libiconv virtual/libintl archive? ( app-arch/libarchive ) bzip2? ( app-arch/bzip2 ) ffmpeg? ( virtual/ffmpeg ) flac? ( media-libs/flac media-libs/libogg ) gif? ( media-libs/giflib ) gsf? ( gnome-extra/libgsf ) gtk? ( x11-libs/gtk+:3 ) jpeg? ( virtual/jpeg ) mp4? ( media-libs/libmp4v2:0 ) magic? ( sys-apps/file ) midi? ( media-libs/libsmf ) mpeg? ( media-libs/libmpeg2 ) tidy? ( app-text/htmltidy ) tiff? ( media-libs/tiff:0 ) vorbis? ( media-libs/libogg media-libs/libvorbis ) zlib? ( sys-libs/zlib ) !<app-crypt/pkcrack-1.2.2-r1 !sci-biology/glimmer !sci-chemistry/pdb-extract sys-devel/gettext virtual/pkgconfig
 DESCRIPTION=A library used to extract metadata from files of arbitrary type
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/libextractor/
-IUSE=+archive +bzip2 ffmpeg flac gif gsf gtk jpeg mp4 +magic midi mpeg qt4 tidy tiff vorbis +zlib
+IUSE=+archive +bzip2 ffmpeg flac gif gsf gtk jpeg mp4 +magic midi mpeg tidy tiff vorbis +zlib
 KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
 LICENSE=GPL-3
-RDEPEND=app-text/iso-codes >=dev-libs/glib-2 media-gfx/exiv2 sys-devel/libtool virtual/libiconv virtual/libintl archive? ( app-arch/libarchive ) bzip2? ( app-arch/bzip2 ) ffmpeg? ( virtual/ffmpeg ) flac? ( media-libs/flac media-libs/libogg ) gif? ( media-libs/giflib ) gsf? ( gnome-extra/libgsf ) gtk? ( x11-libs/gtk+:3 ) jpeg? ( virtual/jpeg ) mp4? ( media-libs/libmp4v2:0 ) magic? ( sys-apps/file ) midi? ( media-libs/libsmf ) mpeg? ( media-libs/libmpeg2 ) qt4? ( dev-qt/qtgui:4 dev-qt/qtsvg:4 ) tidy? ( app-text/htmltidy ) tiff? ( media-libs/tiff:0 ) vorbis? ( media-libs/libogg media-libs/libvorbis ) zlib? ( sys-libs/zlib ) !<app-crypt/pkcrack-1.2.2-r1 !sci-biology/glimmer !sci-chemistry/pdb-extract
+RDEPEND=app-text/iso-codes >=dev-libs/glib-2 media-gfx/exiv2 sys-devel/libtool virtual/libiconv virtual/libintl archive? ( app-arch/libarchive ) bzip2? ( app-arch/bzip2 ) ffmpeg? ( virtual/ffmpeg ) flac? ( media-libs/flac media-libs/libogg ) gif? ( media-libs/giflib ) gsf? ( gnome-extra/libgsf ) gtk? ( x11-libs/gtk+:3 ) jpeg? ( virtual/jpeg ) mp4? ( media-libs/libmp4v2:0 ) magic? ( sys-apps/file ) midi? ( media-libs/libsmf ) mpeg? ( media-libs/libmpeg2 ) tidy? ( app-text/htmltidy ) tiff? ( media-libs/tiff:0 ) vorbis? ( media-libs/libogg media-libs/libvorbis ) zlib? ( sys-libs/zlib ) !<app-crypt/pkcrack-1.2.2-r1 !sci-biology/glimmer !sci-chemistry/pdb-extract
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnu/libextractor/libextractor-1.3.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=66e5d933b01bc6355aff28e309b25d2a
+_md5_=c2705aec56128fee1f2ac33739fb91bf

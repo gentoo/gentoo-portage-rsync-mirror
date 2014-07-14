@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ical4j
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ChangeLog,v 1.10 2014/07/08 08:12:42 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ChangeLog,v 1.11 2014/07/14 14:37:55 ercpe Exp $
+
+  14 Jul 2014; Johann Schmitz <ercpe@gentoo.org> ical4j-1.0.5.ebuild,
+  ical4j-1.0_beta2-r1.ebuild:
+  Removed needless die's; added :0 to emma dependency
 
 *ical4j-1.0_beta2-r1 (08 Jul 2014)
 *ical4j-1.0.5 (08 Jul 2014)

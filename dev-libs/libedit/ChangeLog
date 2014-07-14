@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.91 2014/03/14 06:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.92 2014/07/14 14:54:02 axs Exp $
+
+  14 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  libedit-20130611.3.1-r1.ebuild, libedit-20130712.3.1.ebuild:
+  Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
+  513718
 
   14 Mar 2014; Mike Frysinger <vapier@gentoo.org> libedit-20130712.3.1.ebuild:
   Mark arm64/m68k/s390/sh stable.

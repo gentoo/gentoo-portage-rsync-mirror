@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0.5.ebuild,v 1.1 2014/07/08 08:12:42 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ical4j/ical4j-1.0.5.ebuild,v 1.2 2014/07/14 14:37:55 ercpe Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ COMMON_DEP="
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/emma
+	dev-java/emma:0
 	${COMMON_DEP}"
 
 S=${WORKDIR}/${MY_P}
@@ -51,7 +51,7 @@ RESTRICT="test"
 src_install() {
 	java-pkg_dojar build/*.jar
 	dodoc README AUTHORS CHANGELOG etc/FAQ \
-		etc/TODO etc/standard_deviations.txt || die "dodoc failed"
+		etc/TODO etc/standard_deviations.txt
 	use doc && java-pkg_dojavadoc docs/api
 	use source && java-pkg_dosrc src/main/java/net
 	use examples && java-pkg_doexamples etc/samples
