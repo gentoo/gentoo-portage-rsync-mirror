@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.7.0-r1.ebuild,v 1.2 2013/02/07 22:06:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.7.0-r1.ebuild,v 1.3 2014/07/14 12:54:24 tupone Exp $
 
 EAPI=5
 
 CMAKE_REMOVE_MODULES="yes"
-CMAKE_REMOVE_MODULES_LIST="FindALSA FindBoost FindGettext FindJpeg FindPng FindTiff FindZ"
+CMAKE_REMOVE_MODULES_LIST="FindALSA FindBoost FindFreetype FindGettext FindJpeg FindPng FindTiff FindZ"
 inherit eutils base cmake-utils games
 
 MY_PN=Performous
@@ -63,6 +63,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-linguas.patch
 	"${FILESDIR}"/${P}-desktop.patch
 	"${FILESDIR}"/${P}-cmake.patch
+	"${FILESDIR}"/${P}-freetype.patch
 )
 
 src_prepare() {

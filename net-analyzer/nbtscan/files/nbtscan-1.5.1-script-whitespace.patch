@@ -1,8 +1,5 @@
-Only in nbtscan-1.5.1a: config.log
-Only in nbtscan-1.5.1a: config.status
-diff -u nbtscan-1.5.1a/nbtscan.c nbtscan-1.5.1a-work/nbtscan.c
---- nbtscan-1.5.1a/nbtscan.c	2003-06-06 08:14:00.000000000 -0400
-+++ nbtscan-1.5.1a-work/nbtscan.c	2003-06-30 13:20:22.000000000 -0400
+--- a/nbtscan.c
++++ b/nbtscan.c
 @@ -86,7 +86,7 @@
  int d_print_hostinfo(struct in_addr addr, const struct nb_host_info* hostinfo) {
    int i;
@@ -20,7 +17,7 @@ diff -u nbtscan-1.5.1a/nbtscan.c nbtscan-1.5.1a-work/nbtscan.c
 -      name[16]=0; 
 -      printf("%-17s Service: 0x%02x Flags: 0x%04x\n", name, service, hostinfo->names[i].rr_flags);
 +      strncpy(comp_name, hostinfo->names[i].ascii_name, 15);
-+      comp_name[16]=0; 
++      comp_name[15]=0; 
 +      printf("%-17s Service: 0x%02x Flags: 0x%04x\n", comp_name, service, hostinfo->names[i].rr_flags);
      }
    };

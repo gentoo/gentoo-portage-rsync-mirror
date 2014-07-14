@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/performous
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.16 2013/02/07 22:06:19 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.17 2014/07/14 12:54:24 tupone Exp $
+
+  14 Jul 2014; Alfredo Tupone <tupone@gentoo.org> performous-0.7.0-r1.ebuild,
+  +files/performous-0.7.0-freetype.patch:
+  freetype is not directly needed. Fix bug #515768 by Patrick Lauer
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> performous-0.7.0.ebuild,
   performous-0.7.0-r1.ebuild:
