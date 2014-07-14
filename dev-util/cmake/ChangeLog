@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.288 2014/07/13 19:10:28 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.289 2014/07/14 00:00:19 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> cmake-2.8.12.2-r1.ebuild:
+  Stable for HPPA (bug #517016).
 
   13 Jul 2014;  <tgall@gentoo.org> cmake-2.8.12.2-r1.ebuild:
   arm64 stable, bug #517016
