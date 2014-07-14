@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qrosspython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosspython/ChangeLog,v 1.3 2014/07/14 05:00:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosspython/ChangeLog,v 1.4 2014/07/14 05:16:31 pinkbyte Exp $
+
+  14 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> qrosspython-9999.ebuild:
+  Migrate to git-r3 eclass
 
   14 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> qrosspython-0.3.1.ebuild,
   qrosspython-9999.ebuild:

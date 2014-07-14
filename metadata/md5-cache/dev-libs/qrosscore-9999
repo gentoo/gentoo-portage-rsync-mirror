@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/designer:4 dev-qt/qtscript:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/designer:4 dev-qt/qtscript:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-vcs/git-1.8.2.1
 DESCRIPTION=KDE-free version of Kross (core libraries and Qt Script backend).
-EAPI=3
+EAPI=5
 HOMEPAGE=http://github.com/0xd34df00d/Qross
 IUSE=debug
 LICENSE=GPL-2
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/designer:4 dev-qt/qtscript:4
 SLOT=0
-_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	git-2	2027b81a576527fa16bece425941e094	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=57dd67ff14e93d494d884954e4ca3ae5
+_eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=3f63e1003ef8fdb0f764dd5f2be5a4cd
