@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/aopalliance
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/ChangeLog,v 1.12 2007/11/10 19:00:40 nelchael Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/ChangeLog,v 1.13 2014/07/14 08:03:08 ercpe Exp $
+
+*aopalliance-1.0-r2 (14 Jul 2014)
+
+  14 Jul 2014; Johann Schmitz <ercpe@gentoo.org> +aopalliance-1.0-r2.ebuild:
+  Bumped to EAPI=5; use java-pkg-simple
 
   10 Nov 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   aopalliance-1.0-r1.ebuild:
@@ -47,4 +52,3 @@
 
   18 Jan 2006; Joshua Nichols <nichoj@gentoo.org> +aopalliance-1.0.ebuild:
   Initial import (bug #97720).
-
