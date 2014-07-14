@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/dhcpcd-dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/dhcpcd-dbus/ChangeLog,v 1.5 2014/03/22 19:28:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dhcpcd-dbus/ChangeLog,v 1.6 2014/07/14 21:34:21 williamh Exp $
+
+*dhcpcd-dbus-0.6.1 (14 Jul 2014)
+
+  14 Jul 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-dbus-0.6.1.ebuild:
+  version bump
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -dhcpcd-dbus-0.5.0.ebuild:

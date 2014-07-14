@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netcat6
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.33 2013/12/04 03:21:59 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.34 2014/07/14 21:39:15 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> netcat6-1.0-r2.ebuild,
+  files/netcat6-1.0-automake-1.14.patch, files/netcat6-1.0-unix-sockets.patch:
+  Set RDEPEND (not DEPEND) blocker. Clean up patches.
 
   04 Dec 2013; Tim Harder <radhermit@gentoo.org> netcat6-1.0-r2.ebuild,
   +files/netcat6-1.0-automake-1.14.patch:

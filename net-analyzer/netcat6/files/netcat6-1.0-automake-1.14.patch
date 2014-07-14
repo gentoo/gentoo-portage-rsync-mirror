@@ -1,5 +1,5 @@
---- nc6-1.0/configure.ac
-+++ nc6-1.0/configure.ac
+--- a/configure.ac
++++ b/configure.ac
 @@ -2,9 +2,9 @@
  AC_INIT(nc6, 1.0, [ds6-devel@deepspace6.net])
  AC_CONFIG_AUX_DIR(config)

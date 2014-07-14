@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xmobar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.27 2014/05/10 11:57:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.28 2014/07/14 21:36:06 slyfox Exp $
+
+*xmobar-0.20.1-r1 (14 Jul 2014)
+
+  14 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> +xmobar-0.20.1-r1.ebuild:
+  Allow mtl-2.2 (bug #517068 by Adam Stylinski).
 
   10 May 2014; Sergei Trofimovich <slyfox@gentoo.org> xmobar-0.20.1.ebuild:
   Drop needless mpd depend.

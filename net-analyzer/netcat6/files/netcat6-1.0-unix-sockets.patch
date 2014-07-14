@@ -1,6 +1,5 @@
-=== modified file 'docs/nc6.1.in'
---- docs/nc6.1.in	2008-10-25 14:16:55 +0000
-+++ docs/nc6.1.in	2008-10-25 14:17:11 +0000
+--- a/docs/nc6.1.in
++++ b/docs/nc6.1.in
 @@ -160,6 +160,10 @@
  With this option set, netcat6 will use UDP as the transport protocol (TCP is
  the default).
@@ -13,9 +12,8 @@
  Enable verbose mode.  This gives some basic information about what netcat6
  is doing.  Use it twice for extra verbosity.
 
-=== modified file 'src/Makefile.am'
---- src/Makefile.am	2008-10-25 14:16:55 +0000
-+++ src/Makefile.am	2008-10-25 14:17:09 +0000
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -6,6 +6,7 @@
    network.h \
    afindep.h \
@@ -33,9 +31,8 @@
    io_stream.c \
    connection.c
 
-=== modified file 'src/connection.c'
---- src/connection.c	2008-10-25 14:16:55 +0000
-+++ src/connection.c	2008-10-25 14:17:09 +0000
+--- a/src/connection.c
++++ b/src/connection.c
 @@ -109,6 +109,9 @@
  		fatal_internal("unavailable bluez support required");
  #endif
@@ -58,9 +55,8 @@
  		fatal_internal("unknown socket type");
  	}
 
-=== modified file 'src/connection.h'
---- src/connection.h	2008-10-25 14:16:55 +0000
-+++ src/connection.h	2008-10-25 14:17:09 +0000
+--- a/src/connection.h
++++ b/src/connection.h	2008-10-25 14:17:09 +0000
 @@ -31,12 +31,14 @@
  	PROTO_UNSPECIFIED,
  	PROTO_IPv6,
@@ -77,9 +73,8 @@
  	L2CAP_PROTOCOL
  } sock_protocol_t;
 
-=== modified file 'src/network.c'
---- src/network.c	2008-10-25 14:16:55 +0000
-+++ src/network.c	2008-10-25 14:17:09 +0000
+--- a/src/network.c
++++ b/src/network.c
 @@ -23,6 +23,7 @@
  #include "network.h"
  #include "connection.h"
@@ -101,9 +96,8 @@
  	case PROTO_BLUEZ:
  		fd = bluez_connect(&hints,
 
-=== modified file 'src/parser.c'
---- src/parser.c	2008-10-25 14:16:55 +0000
-+++ src/parser.c	2008-10-25 14:17:09 +0000
+--- a/src/parser.c
++++ b/src/parser.c
 @@ -109,7 +109,9 @@
  	{"bluetooth",           no_argument,        NULL, 'b'},
  #define OPT_SCO			24
@@ -209,9 +203,8 @@
  	fprintf(fp, " --continuous           %s\n",
  	              _("Continuously accept connections\n"
 
-=== added file 'src/unixsocket.c'
---- src/unixsocket.c	1970-01-01 00:00:00 +0000
-+++ src/unixsocket.c	2008-10-25 14:17:09 +0000
+--- a/src/unixsocket.c
++++ b/src/unixsocket.c
 @@ -0,0 +1,78 @@
 +/*
 + *  unixsocket.c - address family independant networking functions
@@ -232,7 +225,7 @@
 +#include <unistd.h>
 +#include <limits.h>
 +
-+RCSID("@(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/files/netcat6-1.0-unix-sockets.patch,v 1.1 2008/10/25 15:33:22 pva Exp $");
++RCSID("@(#) $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/files/netcat6-1.0-unix-sockets.patch,v 1.2 2014/07/14 21:39:15 jer Exp $");
 +
 +
 +int unixsocket_connect(const struct addrinfo *hints,
@@ -292,9 +285,8 @@
 +}
 +
 
-=== added file 'src/unixsocket.h'
---- src/unixsocket.h	1970-01-01 00:00:00 +0000
-+++ src/unixsocket.h	2008-10-25 14:17:09 +0000
+--- a/src/unixsocket.h
++++ b/src/unixsocket.h
 @@ -0,0 +1,12 @@
 +#ifndef UNIXSOCKET_H
 +#define UNIXSOCKET_H

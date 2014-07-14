@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.13 2013/12/04 03:21:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.14 2014/07/14 21:39:15 jer Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -15,17 +15,22 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~amd
 IUSE="ipv6 nls bluetooth"
 
 # need to block netcat as we provide the "nc" file now too
-DEPEND="bluetooth? ( net-wireless/bluez )
-	!net-analyzer/netcat"
-RDEPEND="${DEPEND}"
+DEPEND="
+	bluetooth? ( net-wireless/bluez )
+"
+RDEPEND="
+	${DEPEND}
+	!net-analyzer/netcat
+"
 
 S=${WORKDIR}/nc6-${PV}
 
 DOCS=( AUTHORS BUGS README NEWS TODO CREDITS ChangeLog )
 
 src_prepare() {
-	epatch "${FILESDIR}"/netcat6-1.0-unix-sockets.patch
-	epatch "${FILESDIR}"/${P}-automake-1.14.patch
+	epatch \
+		"${FILESDIR}"/${P}-unix-sockets.patch \
+		"${FILESDIR}"/${P}-automake-1.14.patch
 	AM_OPTS="--force-missing" eautoreconf
 }
 
