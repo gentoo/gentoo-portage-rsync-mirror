@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-4.8.2.ebuild,v 1.1 2014/06/13 10:42:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-4.8.3.ebuild,v 1.1 2014/07/14 12:14:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -31,14 +31,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig
 "
-
-src_prepare() {
-	# Regenerate marshallers for <glib-2.31 compatibility, upstream bug #731611
-	rm -v components/editor/gtkhtml-spell-marshal.{c,h} \
-		components/editor/gtkhtml-editor-marshal.{c,h} || die
-
-	gnome2_src_prepare
-}
 
 src_configure() {
 	gnome2_src_configure --disable-static
