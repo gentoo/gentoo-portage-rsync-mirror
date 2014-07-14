@@ -1,6 +1,11 @@
 # ChangeLog for java-virtuals/saaj-api
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/saaj-api/ChangeLog,v 1.14 2012/10/04 17:38:45 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/saaj-api/ChangeLog,v 1.15 2014/07/14 21:05:05 sera Exp $
+
+*saaj-api-1.3-r3 (14 Jul 2014)
+
+  14 Jul 2014; Ralph Sennhauser <sera@gentoo.org> +saaj-api-1.3-r3.ebuild:
+  EAPI bump
 
   04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> saaj-api-1.3-r1.ebuild,
   saaj-api-1.3-r2.ebuild:
