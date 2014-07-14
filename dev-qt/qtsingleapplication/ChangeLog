@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtsingleapplication
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.7 2014/07/11 21:18:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.8 2014/07/14 11:53:59 pesa Exp $
+
+  14 Jul 2014; Davide Pesavento <pesa@gentoo.org>
+  qtsingleapplication-2.6.1_p20130904-r1.ebuild:
+  x86 stable wrt bug #514896
 
   11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   qtsingleapplication-2.6.1_p20130904-r1.ebuild:

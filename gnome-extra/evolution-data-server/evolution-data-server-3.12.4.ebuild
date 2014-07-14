@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.2.ebuild,v 1.1 2014/05/30 05:32:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.4.ebuild,v 1.1 2014/07/14 11:36:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,6 +62,7 @@ DEPEND="${RDEPEND}
 #	>=gnome-base/gnome-common-2
 
 # Some tests fail due to missings locales.
+# Also, dbus tests are flacky, bugs #397975 #501834
 # It looks like a nightmare to disable those for now.
 RESTRICT="test"
 
