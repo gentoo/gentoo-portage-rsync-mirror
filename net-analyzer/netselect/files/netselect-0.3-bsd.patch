@@ -1,5 +1,5 @@
---- a/netselect.c	2006-07-14 22:59:18.000000000 +0200
-+++ b/netselect.c	2006-07-14 22:57:22.000000000 +0200
+--- a/netselect.c
++++ b/netselect.c
 @@ -39,14 +39,13 @@
   * hey, great!  Let me know. -- apenwarr
   */

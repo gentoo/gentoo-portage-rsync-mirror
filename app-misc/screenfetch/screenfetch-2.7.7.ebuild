@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenfetch/screenfetch-2.7.7.ebuild,v 1.3 2014/07/12 13:24:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenfetch/screenfetch-2.7.7.ebuild,v 1.4 2014/07/14 16:43:15 hwoarang Exp $
 
 EAPI=4
 
@@ -15,8 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE="X"
 
 DEPEND="app-arch/unzip"
-RDEPEND="X? ( media-gfx/scrot )
-	x11-apps/xdpyinfo"
+RDEPEND="X? ( media-gfx/scrot x11-apps/xdpyinfo )"
 
 GIT_HASH="4881270"
 S="${WORKDIR}"/KittyKatt-${MY_PN}-${GIT_HASH}

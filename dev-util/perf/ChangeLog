@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.29 2014/03/22 08:05:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.30 2014/07/14 16:49:19 hwoarang Exp $
+
+  14 Jul 2014; Markos Chandras <hwoarang@gentoo.org> perf-3.8-r1.ebuild:
+  Add ~mips per #517046
 
 *perf-3.13.1-r1 (22 Mar 2014)
 

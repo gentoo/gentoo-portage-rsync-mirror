@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/roadnav-0.19.ebuild,v 1.4 2012/09/05 07:15:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/roadnav-0.19-r1.ebuild,v 1.1 2014/07/14 16:46:10 pacho Exp $
 
-EAPI=2
+EAPI=5
 WX_GTK_VER=2.8
 
 inherit eutils wxwidgets
@@ -13,15 +13,15 @@ SRC_URI="mirror://sourceforge/roadnav/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="gps festival flite openstreetmap scripting"
+KEYWORDS="~amd64 ~x86"
+IUSE="gps festival openstreetmap scripting" #flite, see bug #516426
 
-DEPEND="x11-libs/wxGTK:2.8[X]
+DEPEND="
+	x11-libs/wxGTK:2.8[X]
 	~dev-libs/libroadnav-${PV}
-	festival?	( app-accessibility/festival )
-	flite?		( app-accessibility/flite )
-	gps?		( sci-geosciences/gpsd )"
-
+	festival? ( app-accessibility/festival )
+	gps? ( sci-geosciences/gpsd )
+"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -31,16 +31,15 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable festival) \
-		$(use_enable flite) \
 		$(use_enable gps gpsd) \
 		$(use_enable openstreetmap) \
 		$(use_enable scripting) \
-		--with-wx-config=${WX_CONFIG} \
-		|| die "econf failed"
+		--disable-flite \
+		--with-wx-config=${WX_CONFIG}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	default
 
 	# generic or empty
 	for f in NEWS COPYING INSTALL; do

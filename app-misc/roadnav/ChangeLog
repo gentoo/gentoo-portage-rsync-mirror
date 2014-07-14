@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/roadnav
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.14 2013/03/17 15:01:59 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.15 2014/07/14 16:46:10 pacho Exp $
+
+*roadnav-0.19-r1 (14 Jul 2014)
+
+  14 Jul 2014; Pacho Ramos <pacho@gentoo.org> +roadnav-0.19-r1.ebuild,
+  -roadnav-0.19.ebuild:
+  Disable flite support as it only works with old flite (#516426)
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.55 2014/01/31 19:22:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.56 2014/07/14 16:36:56 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> netselect-0.3-r3.ebuild,
+  files/netselect-0.3-bsd.patch:
+  Update HOMEPAGE/SRC_URI (bug #517112 by Thomas Fischer). Clean up patch.
 
   31 Jan 2014; Jeroen Roovers <jer@gentoo.org> -netselect-0.3-r2.ebuild:
   Old.

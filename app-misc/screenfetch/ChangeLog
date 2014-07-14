@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screenfetch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenfetch/ChangeLog,v 1.11 2014/07/12 13:24:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenfetch/ChangeLog,v 1.12 2014/07/14 16:43:15 hwoarang Exp $
+
+  14 Jul 2014; Markos Chandras <hwoarang@gentoo.org> screenfetch-2.7.7.ebuild,
+  screenfetch-3.2.2.ebuild, screenfetch-9999.ebuild:
+  Add x11-apps/xdpyinfo to optional X deps. bug #515538
 
   12 Jul 2014; Markos Chandras <hwoarang@gentoo.org> -screenfetch-2.9.0.ebuild,
   -screenfetch-3.0.5.ebuild, metadata.xml, screenfetch-2.7.7.ebuild,

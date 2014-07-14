@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=x11-libs/wxGTK:2.8[X] ~dev-libs/libroadnav-0.19 festival? ( app-accessibility/festival ) gps? ( sci-geosciences/gpsd )
+DESCRIPTION=Roadnav is a street map application with routing and GPS support
+EAPI=5
+HOMEPAGE=http://roadnav.sourceforge.net
+IUSE=gps festival openstreetmap scripting
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/wxGTK:2.8[X] ~dev-libs/libroadnav-0.19 festival? ( app-accessibility/festival ) gps? ( sci-geosciences/gpsd )
+SLOT=0
+SRC_URI=mirror://sourceforge/roadnav/roadnav-0.19.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_md5_=068995ac921e2f6dc2089be3cabb4392

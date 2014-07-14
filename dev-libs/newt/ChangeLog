@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.88 2014/03/04 21:43:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.89 2014/07/14 16:48:08 hwoarang Exp $
+
+  14 Jul 2014; Markos Chandras <hwoarang@gentoo.org> newt-0.52.15.ebuild:
+  Add ~mips per #517046
 
   04 Mar 2014; Naohiro Aota <naota@gentoo.org> newt-0.52.15.ebuild:
   Update to use python-r1 properly #502960
