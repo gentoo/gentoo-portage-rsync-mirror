@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND==dev-libs/qrosscore-0.3.1 dev-qt/qtcore:4 dev-qt/qtgui:4 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=~dev-libs/qrosscore-0.3.1 dev-python/sip dev-qt/qtcore:4 dev-qt/qtgui:4 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-qt/qttest:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Python scripting backend for Qross.
 EAPI=5
 HOMEPAGE=http://github.com/0xd34df00d/Qross
 IUSE=debug python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND==dev-libs/qrosscore-0.3.1 dev-qt/qtcore:4 dev-qt/qtgui:4 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
+RDEPEND=~dev-libs/qrosscore-0.3.1 dev-python/sip dev-qt/qtcore:4 dev-qt/qtgui:4 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/0xd34df00d/Qross/archive/0.3.1.tar.gz -> qrosscore-0.3.1.tar.gz
 _eclasses_=cmake-utils	10b6a99f9058ac1b830d00b3421f04e4	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0d5ff31d26ac6ce5146bebb579be0fd0
+_md5_=956a8d2c31b27d0ca55f931e7bf08929

@@ -1,23 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.11.26.ebuild,v 1.1 2014/07/03 16:58:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r8.ebuild,v 1.1 2014/07/14 04:44:35 prometheanfire Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
-MY_PV="${PV}.g995ec04.78-1"
+MY_PV="${PV}.g644e24e.428-1"
 MY_P="${PN}-client_${MY_PV}"
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
 SRC_URI="
+	x86?   ( ${SRC_BASE}${MY_P}_i386.deb )
 	amd64? ( ${SRC_BASE}${MY_P}_amd64.deb )
 	"
-#	x86?   ( ${SRC_BASE}${MY_P}_i386.deb )
 LICENSE="Spotify"
 SLOT="0"
 #amd64 and x86 keywords removed due to security concerns, see bug 474010
-KEYWORDS="~amd64"
+KEYWORDS="~x86"
 IUSE="gnome pax_kernel pulseaudio"
 RESTRICT="mirror strip"
 
@@ -49,7 +49,8 @@ RDEPEND="${DEPEND}
 		dev-db/sqlite:3
 		sys-libs/zlib
 		app-arch/bzip2
-		sys-apps/dbus
+		sys-apps/dbus[X]
+		x11-libs/pango[X]
 		sys-apps/util-linux
 		dev-libs/expat
 		>=dev-libs/nspr-4.9
@@ -69,14 +70,21 @@ QA_PREBUILT="/opt/spotify/spotify-client/spotify
 			/opt/spotify/spotify-client/Data/libcef.so"
 
 src_prepare() {
-#	# different NSPR / NSS library names for some reason
-#	sed -i \
-#		-e 's/\(lib\(plc4\|nspr4\).so\).9\(.\)/\1.0d\3\3/g' \
-#		opt/spotify/spotify-client/Data/SpotifyHelper || die "sed failed"
-#	sed -i \
-#		-e 's/\(lib\(nss3\|nssutil3\|smime3\).so\).1d/\1\x00\x00\x00/g' \
-#		-e 's/\(lib\(plc4\|nspr4\).so\).0d\(.\)/\1\x00\x00\3\3/g' \
-#		opt/spotify/spotify-client/Data/libcef.so || die "sed failed"
+	# link against openssl-1.0.0 as it crashes with 0.9.8
+	sed -i \
+		-e 's/\(lib\(ssl\|crypto\).so\).0.9.8/\1.1.0.0/g' \
+		opt/spotify/spotify-client/spotify || die "sed failed"
+	sed -i \
+		-e 's/\(lib\(ssl\|crypto\).so\).0.9.8/\1.1.0.0/g' \
+		opt/spotify/spotify-client/Data/SpotifyHelper || die "sed failed"
+	# different NSPR / NSS library names for some reason
+	sed -i \
+		-e 's/\(lib\(plc4\|nspr4\).so\).9\(.\)/\1.0d\3\3/g' \
+		opt/spotify/spotify-client/Data/SpotifyHelper || die "sed failed"
+	sed -i \
+		-e 's/\(lib\(nss3\|nssutil3\|smime3\).so\).1d/\1\x00\x00\x00/g' \
+		-e 's/\(lib\(plc4\|nspr4\).so\).0d\(.\)/\1\x00\x00\3\3/g' \
+		opt/spotify/spotify-client/Data/libcef.so || die "sed failed"
 	# Fix desktop entry to launch spotify-dbus.py for GNOME integration
 	if use gnome ; then
 	sed -i \
@@ -106,12 +114,12 @@ src_install() {
 	fperms +x ${SPOTIFY_HOME}/Data/SpotifyHelper
 
 	dodir /usr/bin
-#		LD_PRELOAD="\${LD_PRELOAD} ${SPOTIFY_HOME}/libnspr4.so.9 ${SPOTIFY_HOME}/libplc4.so.9"
-#		LD_LIBRARY_PATH="${SPOTIFY_HOME}/Data/"
-#		export LD_PRELOAD
-#		export LD_LIBRARY_PATH
 	cat <<-EOF >"${D}"/usr/bin/spotify
 		#! /bin/sh
+		LD_PRELOAD="\${LD_PRELOAD} ${SPOTIFY_HOME}/libnspr4.so.9 ${SPOTIFY_HOME}/libplc4.so.9"
+		LD_LIBRARY_PATH="${SPOTIFY_HOME}/Data/"
+		export LD_PRELOAD
+		export LD_LIBRARY_PATH
 		exec ${SPOTIFY_HOME}/spotify "\$@"
 	EOF
 	fperms +x /usr/bin/spotify
@@ -143,9 +151,9 @@ src_install() {
 		eqawarn "please open a bug."
 	fi
 
-#	#hack to fix the nspr linking in spotify
-#	dosym /usr/lib/libnspr4.so "${SPOTIFY_HOME}/libnspr4.so.9"
-#	dosym /usr/lib/libplc4.so "${SPOTIFY_HOME}/libplc4.so.9"
+	#hack to fix the nspr linking in spotify
+	dosym /usr/lib/libnspr4.so "${SPOTIFY_HOME}/libnspr4.so.9"
+	dosym /usr/lib/libplc4.so "${SPOTIFY_HOME}/libplc4.so.9"
 	#TODO fix for x86
 	dosym /usr/lib/libudev.so "${SPOTIFY_HOME}/Data/libudev.so.0"
 }
