@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.114 2014/07/07 18:53:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.115 2014/07/14 13:45:09 zlogene Exp $
+
+  14 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> PDL-2.4.11.ebuild:
+  Bump to EAPI=5
 
   07 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> PDL-2.4.3-r1.ebuild,
   PDL-2.4.7.ebuild, PDL-2.4.11.ebuild:

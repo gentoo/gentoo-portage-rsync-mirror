@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.12 2014/07/07 18:53:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.13 2014/07/14 13:45:09 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=CHM
 FORTRAN_NEEDED=fortran
