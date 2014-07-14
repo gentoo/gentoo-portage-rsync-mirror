@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.57 2014/06/27 20:39:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.58 2014/07/14 17:43:02 blueness Exp $
 
 EAPI="5"
 
 KV_min=2.6.39
 
-inherit autotools eutils multilib linux-info multilib-minimal
+inherit autotools eutils linux-info multilib multilib-minimal user
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
@@ -271,4 +271,22 @@ pkg_postinst() {
 	elog "fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 	elog
+
+	# http://cgit.freedesktop.org/systemd/systemd/commit/rules/50-udev-default.rules?id=3dff3e00e044e2d53c76fa842b9a4759d4a50e69
+	# http://bugs.gentoo.org/246847
+	# http://bugs.gentoo.org/514174
+	enewgroup input
+
+	# Update hwdb database in case the format is changed by udev version.
+	if has_version 'sys-apps/hwids[udev]'; then
+		udevadm hwdb --update --root="${ROOT%/}"
+		# Only reload when we are not upgrading to avoid potential race w/ incompatible hwdb.bin and the running udevd
+		if [[ -z ${REPLACING_VERSIONS} ]]; then
+			# http://cgit.freedesktop.org/systemd/systemd/commit/?id=1fab57c209035f7e66198343074e9cee06718bda
+			if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+				return 0
+			fi
+			udevadm control --reload
+		fi
+	fi
 }
