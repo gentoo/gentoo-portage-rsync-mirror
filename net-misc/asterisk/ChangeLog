@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.489 2014/06/23 10:15:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.490 2014/07/14 20:13:36 chainsaw Exp $
+
+*asterisk-12.4.0 (14 Jul 2014)
+*asterisk-11.11.0 (14 Jul 2014)
+*asterisk-1.8.29.0 (14 Jul 2014)
+
+  14 Jul 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.29.0.ebuild,
+  +asterisk-11.11.0.ebuild, +asterisk-12.4.0.ebuild:
+  New development on the 12 branch adds persistent connection support on the
+  built-in HTTP server. Fixes trickling down to stable branches include making
+  ast_careful_fwrite careful enough to avoid infinite loops and avoiding
+  unnecessary MOH restarts. Downstream patchset unchanged.
 
   23 Jun 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.26.1.ebuild,
   -asterisk-11.8.1.ebuild, -asterisk-12.1.1.ebuild, -asterisk-12.2.0.ebuild:

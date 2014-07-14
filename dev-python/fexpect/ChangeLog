@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/fexpect
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fexpect/ChangeLog,v 1.1 2014/07/14 20:27:20 jlec Exp $
+
+*fexpect-0.2 (14 Jul 2014)
+
+  14 Jul 2014; Justin Lecher <jlec@gentoo.org> +fexpect-0.2.ebuild,
+  +metadata.xml:
+  New addition written by me
+
