@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.126 2014/07/09 19:29:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.127 2014/07/14 15:35:53 swift Exp $
+
+  14 Jul 2014; Sven Vermeulen <swift@gentoo.org> libselinux-2.2.2-r5.ebuild:
+  Stabilize (fix segfault with setfiles)
 
   09 Jul 2014; Sven Vermeulen <swift@gentoo.org> libselinux-2.2.2-r5.ebuild:
   Fix bug #516608 - Backport pcre version fix from libselinux-2.3
