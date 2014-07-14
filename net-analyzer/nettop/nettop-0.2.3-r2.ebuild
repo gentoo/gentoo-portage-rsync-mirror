@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r2.ebuild,v 1.5 2012/07/29 17:21:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r2.ebuild,v 1.6 2014/07/14 22:52:20 jer Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -13,16 +13,12 @@ HOMEPAGE="http://srparish.net/software/"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="amd64 ~arm ppc x86"
-IUSE=""
 
 DEPEND="
 	sys-libs/slang
-	net-libs/libpcap"
+	net-libs/libpcap
+"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	ewarn "This is known to break with distcc, see bug #169245 for details"
-}
 
 src_prepare() {
 	epatch \
@@ -31,13 +27,7 @@ src_prepare() {
 	tc-export CC
 }
 
-src_configure() {
-	local myconf
-	myconf="--prefix=/usr"
-	./configure ${myconf} || die "configure failed"
-}
-
 src_install() {
-	dosbin nettop || die
-	dodoc ChangeLog README THANKS || die
+	dosbin nettop
+	dodoc ChangeLog README THANKS
 }

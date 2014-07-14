@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nettop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.26 2012/07/29 23:36:15 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.27 2014/07/14 22:52:20 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> nettop-0.2.3-r2.ebuild,
+  files/nettop-0.2.3-gcc411.patch, files/nettop-0.2.3-offbyone.patch:
+  EAPI bump. Clean up patches. Remove weird ewarn about vague distcc breakage.
+  Use econf.
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -nettop-0.2.3-r1.ebuild:
   Old.

@@ -1,5 +1,5 @@
---- nettop.c.orig	2006-07-08 23:20:56.000000000 +1000
-+++ nettop.c	2006-07-08 23:25:09.000000000 +1000
+--- a/nettop.c
++++ b/nettop.c
 @@ -70,6 +70,7 @@
  #include <time.h>
  #include <stdlib.h>

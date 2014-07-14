@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netperf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.59 2012/09/27 15:52:23 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.60 2014/07/14 22:40:46 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> -netperf-2.6.0.ebuild,
+  netperf-2.6.0-r1.ebuild, +files/netperf-2.6.0-log-dir.patch,
+  files/netperf-fix-scripts.patch:
+  EAPI bump. Whitespace. cp must die(). Change sed script into patch.
 
   27 Sep 2012; Jeroen Roovers <jer@gentoo.org> netperf-2.6.0-r1.ebuild,
   metadata.xml:

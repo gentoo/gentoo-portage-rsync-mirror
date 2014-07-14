@@ -1,7 +1,7 @@
-DEFINED_PHASES=configure install prepare setup
+DEFINED_PHASES=install prepare
 DEPEND=sys-libs/slang net-libs/libpcap
 DESCRIPTION=top like program for network activity
-EAPI=3
+EAPI=5
 HOMEPAGE=http://srparish.net/software/
 KEYWORDS=amd64 ~arm ppc x86
 LICENSE=BSD
@@ -9,4 +9,4 @@ RDEPEND=sys-libs/slang net-libs/libpcap
 SLOT=0
 SRC_URI=http://srparish.net/scripts/nettop-0.2.3.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=addb9834a8ed0539988f93480289cdad
+_md5_=8475e779c86f7b2e00ee65fa3a73c284
