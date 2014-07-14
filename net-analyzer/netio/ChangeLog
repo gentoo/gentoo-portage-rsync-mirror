@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.28 2013/01/21 12:20:44 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.29 2014/07/14 22:30:35 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> netio-1.32.ebuild:
+  EAPI bump.
 
   21 Jan 2013; Jeroen Roovers <jer@gentoo.org> -netio-1.26.ebuild,
   -netio-1.26-r1.ebuild:

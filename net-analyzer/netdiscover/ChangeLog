@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/netdiscover
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.14 2013/07/04 21:25:20 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.15 2014/07/14 22:12:55 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> netdiscover-0.3_beta6-r3.ebuild,
+  +files/netdiscover-0.3_beta6-gentoo.patch,
+  +files/netdiscover-0.3_beta6-misc.patch:
+  Change sed scripts into patches. Split out logic from OUI database patch.
+  Clean up OUI database patch.
 
   04 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
   netdiscover-0.3_beta6-r3.ebuild:

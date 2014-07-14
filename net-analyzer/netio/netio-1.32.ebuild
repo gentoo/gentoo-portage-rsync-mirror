@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.32.ebuild,v 1.1 2013/01/21 12:18:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.32.ebuild,v 1.2 2014/07/14 22:30:35 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="a network benchmarking tool that measures net throughput with NetBIOS and TCP/IP protocols."
@@ -17,18 +17,17 @@ RESTRICT="mirror" # bug #391789 comment #1
 
 DEPEND="app-arch/unzip
 	>=sys-apps/sed-4"
-RDEPEND=""
 
 S="${WORKDIR}"
 
 src_prepare() {
 	edos2unix *.c *.h
 
-	sed -i Makefile \
-		-e 's|\(CFLAGS\)=|\1+=|g' \
-		-e 's|\(CC\)=|\1?=|g' \
+	sed -i \
 		-e "s|LFLAGS=\"\"|LFLAGS?=\"${LDFLAGS}\"|g" \
-		|| die "sed Makefile failed"
+		-e 's|\(CC\)=|\1?=|g' \
+		-e 's|\(CFLAGS\)=|\1+=|g' \
+		Makefile || die
 	epatch "${FILESDIR}"/${PN}-1.26-linux-include.patch
 }
 
