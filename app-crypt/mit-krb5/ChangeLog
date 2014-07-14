@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.403 2014/06/18 19:01:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.404 2014/07/14 18:51:41 tgall Exp $
+
+  14 Jul 2014;  <tgall@gentoo.org> mit-krb5-1.11.4.ebuild,
+  mit-krb5-1.12.1-r1.ebuild:
+  arm64 love
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> mit-krb5-1.12.1-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

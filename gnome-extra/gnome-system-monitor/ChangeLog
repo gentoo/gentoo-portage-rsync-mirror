@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.249 2014/05/31 10:27:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.250 2014/07/14 18:33:50 pacho Exp $
+
+  14 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-system-monitor-3.12.2-configure-wnck.patch,
+  -gnome-system-monitor-3.12.1.ebuild, gnome-system-monitor-3.12.2.ebuild:
+  Fix configure switch, bug #516716 by tux_mind; drop old
 
   31 May 2014; Pacho Ramos <pacho@gentoo.org>
   gnome-system-monitor-3.12.2.ebuild:

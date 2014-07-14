@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.5.4.ebuild,v 1.2 2013/12/24 02:08:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.7.3-r1.ebuild,v 1.1 2014/07/14 18:45:53 sera Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit java-vm-2 multilib
 
@@ -11,15 +11,19 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-linux"
 SLOT="0"
-IUSE=""
+IUSE="X"
 
-ECJ_GCJ_SLOT="3.5"
+ECJ_GCJ_SLOT="3.6"
+API_DIFF_PV="4.8.2"
 
+# perl is needed for javac wrapper
 RDEPEND="
-	~sys-devel/gcc-${PV}[gcj,awt]
-	dev-java/ecj-gcj:${ECJ_GCJ_SLOT}"
+	dev-java/ecj-gcj:${ECJ_GCJ_SLOT}
+	dev-lang/perl
+	~sys-devel/gcc-${PV}[gcj]
+	X? ( ~sys-devel/gcc-${PV}[awt] )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
@@ -66,16 +70,24 @@ src_install() {
 	dodir ${gcjhome}/jre/lib/${libarch}/server
 	dosym ${gcjlibdir}/libjvm.so ${gcjhome}/jre/lib/${libarch}/client/libjvm.so
 	dosym ${gcjlibdir}/libjvm.so ${gcjhome}/jre/lib/${libarch}/server/libjvm.so
-	dosym ${gcjlibdir}/libjawt.so ${gcjhome}/jre/lib/${libarch}/libjawt.so
+	use X && dosym ${gcjlibdir}/libjawt.so ${gcjhome}/jre/lib/${libarch}/libjawt.so
 
 	dosym /usr/share/gcc-data/${gccchost}/${gcc_version}/java/libgcj-${gcc_version/_/-}.jar \
 		${gcjhome}/jre/lib/rt.jar
 	dodir ${gcjhome}/lib
 	dosym /usr/share/gcc-data/${gccchost}/${gcc_version}/java/libgcj-tools-${gcc_version/_/-}.jar \
 		${gcjhome}/lib/tools.jar
-	dosym ${gcclib}/include ${gcjhome}
+	dosym ${gcclib}/include ${gcjhome}/include
 
-	dosym /usr/bin/ecj-gcj-${ECJ_GCJ_SLOT} ${gcjhome}/bin/javac
+	local ecj_jar="$(readlink "${EPREFIX}"/usr/share/eclipse-ecj/ecj.jar)"
+	exeinto ${gcjhome}/bin
+	sed -e "s#@JAVA@#${gcjhome}/bin/java#" \
+		-e "s#@ECJ_JAR@#${ecj_jar}#" \
+		-e "s#@RT_JAR@#${gcjhome}/jre/lib/rt.jar#" \
+		-e "s#@TOOLS_JAR@#${gcjhome}/lib/tools.jar#" \
+		"${FILESDIR}"/javac.in \
+	| newexe - javac
+	assert
 
 	set_java_env
 }
@@ -84,8 +96,9 @@ pkg_postinst() {
 	# Do not set as system VM (see below)
 	# java-vm-2_pkg_postinst
 
-	ewarn "gcj does not currently provide all the 1.5 APIs."
-	ewarn "See http://builder.classpath.org/japi/libgcj-jdk15.html"
+	ewarn "gcj does not currently provide all the 1.5 or 1.6 APIs."
+	ewarn "See http://fuseyism.com/japi/ibmjdk15-libgcj-${API_DIFF_PV}.html"
+	ewarn "and http://fuseyism.com/japi/icedtea6-libgcj-${API_DIFF_PV}.html"
 	ewarn "Check for existing bugs relating to missing APIs and file"
 	ewarn "new ones at http://gcc.gnu.org/bugzilla/"
 	ewarn

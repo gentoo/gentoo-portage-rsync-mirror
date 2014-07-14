@@ -1,6 +1,25 @@
 # ChangeLog for dev-java/gcj-jdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.15 2014/01/18 09:30:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.16 2014/07/14 18:45:53 sera Exp $
+
+*gcj-jdk-4.8.3 (14 Jul 2014)
+*gcj-jdk-4.8.2 (14 Jul 2014)
+*gcj-jdk-4.7.4 (14 Jul 2014)
+*gcj-jdk-4.7.3-r1 (14 Jul 2014)
+
+  14 Jul 2014; Ralph Sennhauser <sera@gentoo.org> -gcj-jdk-4.5.1-r1.ebuild,
+  -gcj-jdk-4.5.2-r1.ebuild, -gcj-jdk-4.5.3.ebuild, -gcj-jdk-4.5.4.ebuild,
+  -gcj-jdk-4.5.4-r1.ebuild, -gcj-jdk-4.6.0.ebuild, -gcj-jdk-4.6.1.ebuild,
+  -gcj-jdk-4.6.2-r1.ebuild, -gcj-jdk-4.6.3.ebuild, -gcj-jdk-4.6.3-r1.ebuild,
+  -gcj-jdk-4.6.3-r2.ebuild, -gcj-jdk-4.6.3-r3.ebuild, -gcj-jdk-4.7.2.ebuild,
+  +gcj-jdk-4.7.3-r1.ebuild, +gcj-jdk-4.7.4.ebuild, +gcj-jdk-4.8.2.ebuild,
+  +gcj-jdk-4.8.3.ebuild, +files/javac.in:
+  Add missing versions for 4.7 and 4.8
+  Fix 4.7.3 to be able to build ant-core-1.9 #489266
+  Thanks to Andrew John Hughes <gnu_andrew@member.fsf.org> for the javac
+  wrapper und for providing new API diffs
+  Drop 4.5 and 4.6 as they are to old to build current icedtea:7
+  Drop ia64 ppc ppc64 on 4.8 as the correspondig gcc is missing those keywords
 
   18 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -gcj-jdk-4.4.4-r1.ebuild,
   -gcj-jdk-4.4.5-r1.ebuild, -gcj-jdk-4.4.6.ebuild:

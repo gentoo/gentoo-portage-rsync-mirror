@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.5.4-r1.ebuild,v 1.2 2013/12/24 02:08:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.8.2.ebuild,v 1.1 2014/07/14 18:45:53 sera Exp $
 
 EAPI="5"
 
@@ -11,16 +11,19 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-linux"
 SLOT="0"
 IUSE="X"
 
-ECJ_GCJ_SLOT="3.5"
+ECJ_GCJ_SLOT="4.2"
+API_DIFF_PV="${PV}"
 
+# perl is needed for javac wrapper
 RDEPEND="
+	dev-java/ecj-gcj:${ECJ_GCJ_SLOT}
+	dev-lang/perl
 	~sys-devel/gcc-${PV}[gcj]
-	X? ( ~sys-devel/gcc-${PV}[awt] )
-	dev-java/ecj-gcj:${ECJ_GCJ_SLOT}"
+	X? ( ~sys-devel/gcc-${PV}[awt] )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
@@ -74,9 +77,17 @@ src_install() {
 	dodir ${gcjhome}/lib
 	dosym /usr/share/gcc-data/${gccchost}/${gcc_version}/java/libgcj-tools-${gcc_version/_/-}.jar \
 		${gcjhome}/lib/tools.jar
-	dosym ${gcclib}/include ${gcjhome}
+	dosym ${gcclib}/include ${gcjhome}/include
 
-	dosym /usr/bin/ecj-gcj-${ECJ_GCJ_SLOT} ${gcjhome}/bin/javac
+	local ecj_jar="$(readlink "${EPREFIX}"/usr/share/eclipse-ecj/ecj.jar)"
+	exeinto ${gcjhome}/bin
+	sed -e "s#@JAVA@#${gcjhome}/bin/java#" \
+		-e "s#@ECJ_JAR@#${ecj_jar}#" \
+		-e "s#@RT_JAR@#${gcjhome}/jre/lib/rt.jar#" \
+		-e "s#@TOOLS_JAR@#${gcjhome}/lib/tools.jar#" \
+		"${FILESDIR}"/javac.in \
+	| newexe - javac
+	assert
 
 	set_java_env
 }
@@ -85,8 +96,9 @@ pkg_postinst() {
 	# Do not set as system VM (see below)
 	# java-vm-2_pkg_postinst
 
-	ewarn "gcj does not currently provide all the 1.5 APIs."
-	ewarn "See http://builder.classpath.org/japi/libgcj-jdk15.html"
+	ewarn "gcj does not currently provide all the 1.5 or 1.6 APIs."
+	ewarn "See http://fuseyism.com/japi/ibmjdk15-libgcj-${API_DIFF_PV}.html"
+	ewarn "and http://fuseyism.com/japi/icedtea6-libgcj-${API_DIFF_PV}.html"
 	ewarn "Check for existing bugs relating to missing APIs and file"
 	ewarn "new ones at http://gcc.gnu.org/bugzilla/"
 	ewarn
