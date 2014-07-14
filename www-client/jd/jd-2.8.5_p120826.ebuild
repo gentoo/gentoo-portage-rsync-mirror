@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.8.5_p120826.ebuild,v 1.1 2013/04/06 02:13:44 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.8.5_p120826.ebuild,v 1.2 2014/07/14 00:15:14 hasufell Exp $
 
 EAPI=5
 inherit eutils autotools autotools-utils
@@ -39,7 +39,7 @@ AUTOTOOLS_AUTORECONF=1
 
 src_configure() {
 	# use gnomeui sm instead of Xorg SM/ICE
-	local econfargs=(
+	local myeconfargs=(
 		--with-xdgopen
 		$(use_with gnome sessionlib gnomeui)
 		$(use_with !gnome sessionlib xsmp)

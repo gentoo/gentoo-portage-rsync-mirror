@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.25 2014/03/24 16:19:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.26 2014/07/14 00:42:57 robbat2 Exp $
+
+  14 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Adopt a package.
 
   24 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop maintainership
