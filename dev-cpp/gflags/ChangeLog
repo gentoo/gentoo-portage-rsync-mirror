@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.24 2014/02/25 00:44:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.25 2014/07/14 03:34:01 patrick Exp $
+
+*gflags-2.1.1 (14 Jul 2014)
+
+  14 Jul 2014; Patrick Lauer <patrick@gentoo.org> +gflags-2.1.1.ebuild:
+  Bump, needed as dependency of sys-apps/lmctfy
 
 *gflags-2.0-r1 (25 Feb 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libapparmor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libapparmor/ChangeLog,v 1.3 2014/04/17 17:38:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libapparmor/ChangeLog,v 1.4 2014/07/14 03:49:09 patrick Exp $
+
+  14 Jul 2014; Patrick Lauer <patrick@gentoo.org> libapparmor-2.8.3.ebuild:
+  Add ~x86 keyword
 
 *libapparmor-2.8.3 (17 Apr 2014)
 
