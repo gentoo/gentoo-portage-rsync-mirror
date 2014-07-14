@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2_p161-r2.ebuild,v 1.1 2014/07/11 18:11:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2_p161-r2.ebuild,v 1.2 2014/07/14 05:45:56 patrick Exp $
 
 EAPI=5
 
@@ -53,8 +53,9 @@ src_install () {
 	dosbin "${S}"/${PN}
 	if use ipv6; then
 		newsbin "${S}"-6/fping fping6
+		fperms 4555 /usr/sbin/fping6 #241930
 	fi
-	fperms 4555 /usr/sbin/fping /usr/sbin/fping6 #241930
+	fperms 4555 /usr/sbin/fping  #241930
 	doman fping.8
 	dodoc ChangeLog README
 }
