@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.6.ebuild,v 1.10 2014/05/17 14:47:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.6.ebuild,v 1.11 2014/07/14 15:22:28 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -36,7 +36,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	cdio? ( dev-libs/libcdio-paranoia )
 	curl? ( net-misc/curl )
 	faad? ( media-libs/faad2 )
 	ffmpeg? ( virtual/ffmpeg )

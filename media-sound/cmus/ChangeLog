@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cmus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.67 2013/10/07 21:01:38 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.68 2014/07/14 15:19:40 ssuominen Exp $
+
+  14 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> cmus-2.5.0-r1.ebuild:
+  Simplify libcdio dependency string.
 
   07 Oct 2013; Christian Faulhammer <fauli@gentoo.org> cmus-2.5.0-r1.ebuild:
   make USE=mad enabled by default for people outside of desktop profiles,

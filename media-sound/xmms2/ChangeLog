@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.35 2013/11/22 13:10:47 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.36 2014/07/14 15:21:19 ssuominen Exp $
+
+  14 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> xmms2-0.8-r1.ebuild,
+  xmms2-0.8-r2.ebuild:
+  Simplify libcdio dependency string.
 
   22 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org>
   +files/xmms2-0.8-memset.patch, xmms2-0.8-r1.ebuild, xmms2-0.8-r2.ebuild:

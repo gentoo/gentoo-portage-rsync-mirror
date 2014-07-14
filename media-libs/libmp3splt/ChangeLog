@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.40 2014/07/14 14:45:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.41 2014/07/14 15:26:56 sping Exp $
+
+  14 Jul 2014; Sebastian Pipping <sping@gentoo.org> -libmp3splt-0.7.ebuild,
+  -libmp3splt-0.7.0.920.ebuild, -libmp3splt-0.7.1.ebuild,
+  -libmp3splt-0.8.1a.ebuild, -libmp3splt-0.8.2.ebuild:
+  Clean up
 
 *libmp3splt-0.9.1 (14 Jul 2014)
 

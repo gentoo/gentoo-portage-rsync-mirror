@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.14 2014/03/24 04:43:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.15 2014/07/14 15:03:54 williamh Exp $
 
 EAPI=5
 
@@ -94,19 +94,21 @@ pkg_postinst()
 		cp -p "${old_duid}" "${new_duid}"
 	fi
 
-	elog
-	elog "dhcpcd has zeroconf support active by default."
-	elog "This means it will always obtain an IP address even if no"
-	elog "DHCP server can be contacted, which will break any existing"
-	elog "failover support you may have configured in your net configuration."
-	elog "This behaviour can be controlled with the noipv4ll configuration"
-	elog "file option or the -L command line switch."
-	elog "See the dhcpcd and dhcpcd.conf man pages for more details."
+	if [ -z "$REPLACING_VERSIONS" ]; then
+		elog
+	 elog "dhcpcd has zeroconf support active by default."
+		elog "This means it will always obtain an IP address even if no"
+		elog "DHCP server can be contacted, which will break any existing"
+		elog "failover support you may have configured in your net configuration."
+		elog "This behaviour can be controlled with the noipv4ll configuration"
+		elog "file option or the -L command line switch."
+		elog "See the dhcpcd and dhcpcd.conf man pages for more details."
 
-	elog
-	elog "Dhcpcd has duid enabled by default, and this may cause issues"
-	elog "with some dhcp servers. For more information, see"
-	elog "https://bugs.gentoo.org/show_bug.cgi?id=477356"
+		elog
+		elog "Dhcpcd has duid enabled by default, and this may cause issues"
+		elog "with some dhcp servers. For more information, see"
+		elog "https://bugs.gentoo.org/show_bug.cgi?id=477356"
+	fi
 
 	if ! has_version net-dns/bind-tools; then
 		elog

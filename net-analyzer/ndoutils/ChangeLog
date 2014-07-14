@@ -1,6 +1,21 @@
 # ChangeLog for net-analyzer/ndoutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.13 2012/06/12 02:48:43 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.15 2014/07/14 15:23:40 jer Exp $
+
+*ndoutils-1.5.2 (14 Jul 2014)
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> -ndoutils-1.4_beta9-r1.ebuild,
+  +ndoutils-1.5.2.ebuild:
+  Version bump.
+
+*ndoutils-2.0.0 (14 Jul 2014)
+*ndoutils-1.4_beta9-r1 (14 Jul 2014)
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> -ndoutils-1.4_beta9.ebuild,
+  +ndoutils-1.4_beta9-r1.ebuild, +ndoutils-2.0.0.ebuild,
+  +files/ndoutils-1.4_beta9-asprintf.patch,
+  +files/ndoutils-2.0.0-asprintf.patch, +files/ndoutils-2.0.0-sleep.patch:
+  EAPI bump. Version bump. Fix missing includes/defines.
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> ndoutils-1.4_beta9.ebuild:
   inherit user for enewgroup and enewuser

@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta9.ebuild,v 1.2 2012/06/12 02:48:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-2.0.0.ebuild,v 1.1 2014/07/14 15:17:25 jer Exp $
 
-inherit user
+EAPI=5
+inherit eutils user
 
 MY_P=${P/_beta/b}
 
@@ -13,13 +14,16 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE=""
 
-DEPEND="dev-perl/DBI
-		dev-perl/DBD-mysql
-		virtual/mysql"
-RDEPEND="${DEPEND}
-	>=net-analyzer/nagios-core-3.0"
+DEPEND="
+	dev-perl/DBD-mysql
+	dev-perl/DBI
+	virtual/mysql
+"
+RDEPEND="
+	${DEPEND}
+	>=net-analyzer/nagios-core-3.0
+"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,20 +32,31 @@ pkg_setup() {
 	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
 
-src_compile() {
-	econf \
-		--sysconfdir=/etc/nagios \
-		--enable-mysql \
-		--disable-pgsql || die "econf failed"
-
-	emake || die "emake failed"
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-asprintf.patch \
+		"${FILESDIR}"/${P}-sleep.patch
 }
 
-src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	emake install-config DESTDIR="${D}" || die "emake install-config failed"
+src_configure() {
+	econf \
+		--sysconfdir=/etc/nagios \
+		--enable-mysql
+}
 
-	dodoc README REQUIREMENTS TODO UPGRADING Changelog "docs/NDOUTILS DB Model.pdf" "docs/NDOUtils Documentation.pdf"
+DOCS=(
+	'docs/NDOUTILS DB Model.pdf'
+	'docs/NDOUtils Documentation.pdf'
+	Changelog
+	README
+	REQUIREMENTS
+	TODO
+	UPGRADING
+)
+
+src_install() {
+	default
+	emake DESTDIR="${D}" install-config
 
 	newinitd "${FILESDIR}"/ndo2db.init-nagios3 ndo2db
 }
