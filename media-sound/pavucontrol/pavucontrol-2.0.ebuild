@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-2.0.ebuild,v 1.1 2013/04/05 08:37:06 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-2.0.ebuild,v 1.2 2014/07/15 15:14:17 pacho Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Pulseaudio Volume Control, GTK based mixer for Pulseaudio"
 HOMEPAGE="http://freedesktop.org/software/pulseaudio/pavucontrol/"
@@ -13,17 +13,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND=">=dev-cpp/gtkmm-3.0:3.0
+RDEPEND="
+	>=dev-cpp/gtkmm-3.0:3.0
 	>=dev-libs/libsigc++-2.2:2
 	>=media-libs/libcanberra-0.16[gtk3]
-	>=media-sound/pulseaudio-0.9.16[glib]
-	virtual/freedesktop-icon-theme"
+	>=media-sound/pulseaudio-3[glib]
+	virtual/freedesktop-icon-theme
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? (
 		dev-util/intltool
 		sys-devel/gettext
-		)"
+		)
+"
 
 src_configure() {
 	econf \
