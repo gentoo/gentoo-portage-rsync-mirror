@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.4-r1.ebuild,v 1.6 2014/06/14 10:51:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.4-r1.ebuild,v 1.7 2014/07/15 21:45:21 johu Exp $
 
 EAPI=5
 inherit autotools db-use eutils flag-o-matic toolchain-funcs
@@ -120,6 +120,6 @@ src_install() {
 	dohtml doc/*.html
 
 	dodir /usr/share/doc/${PF}/samples
-	mv "${D}"/etc/bogofilter.cf.example "${D}"/usr/share/doc/${PF}/samples/
-	rmdir "${D}"/etc
+	mv "${D}"/etc/bogofilter.cf.example "${D}"/usr/share/doc/${PF}/samples/ || die
+	rmdir "${D}"/etc || die
 }

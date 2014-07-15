@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.158 2014/06/14 10:51:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.159 2014/07/15 21:45:21 johu Exp $
+
+  15 Jul 2014; Johannes Huber <johu@gentoo.org> bogofilter-1.2.4-r1.ebuild:
+  Add missing die's by Chema Alonso <nimiux@gentoo.org>.
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   bogofilter-1.2.4-r1.ebuild:
