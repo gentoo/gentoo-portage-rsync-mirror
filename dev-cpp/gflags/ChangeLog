@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.25 2014/07/14 03:34:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.26 2014/07/15 01:19:44 floppym Exp $
+
+  15 Jul 2014; Mike Gilbert <floppym@gentoo.org> +files/gflags-2.1.1-libs.patch,
+  gflags-2.1.1.ebuild:
+  Enable shared libs, make static libs optional. Backport libdir and soname
+  changes from upstream.
 
 *gflags-2.1.1 (14 Jul 2014)
 
