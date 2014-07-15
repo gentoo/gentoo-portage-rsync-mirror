@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/autodie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/autodie/ChangeLog,v 1.4 2013/10/28 05:39:15 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/autodie/ChangeLog,v 1.5 2014/07/15 19:20:47 dilfridge Exp $
+
+  15 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -autodie-2.160.0.ebuild, -autodie-2.200.0.ebuild, -autodie-2.210.0.ebuild:
+  Remove old
 
 *autodie-2.220.0 (28 Oct 2013)
 

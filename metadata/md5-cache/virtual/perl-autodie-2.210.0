@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for autodie
-KEYWORDS=~amd64 ~x86
-RDEPEND=~perl-core/autodie-2.210.0
-SLOT=0
-_md5_=df48c26d4f4c8bd202b1dc430d29afb7

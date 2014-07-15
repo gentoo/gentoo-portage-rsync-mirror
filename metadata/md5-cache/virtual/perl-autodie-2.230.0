@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for autodie
+EAPI=5
+KEYWORDS=~amd64 ~x86
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/autodie-2.230.0 ) !<perl-core/autodie-2.230.0 !>perl-core/autodie-2.230.0-r999
+SLOT=0
+_md5_=a2d9e6558238fdb398f2cf76eacc91ce
