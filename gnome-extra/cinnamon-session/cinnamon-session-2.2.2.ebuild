@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.1.ebuild,v 1.3 2014/06/26 02:40:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-session/cinnamon-session-2.2.2.ebuild,v 1.1 2014/07/15 10:37:49 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2
 
@@ -63,8 +64,6 @@ src_configure() {
 	DOCS="AUTHORS README README.md"
 
 	gnome2_src_configure \
-		--disable-deprecation-flags \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-static \
 		$(use_enable doc docbook-docs) \
 		$(use_enable gconf) \

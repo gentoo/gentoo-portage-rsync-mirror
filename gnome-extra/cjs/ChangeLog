@@ -1,10 +1,15 @@
 # ChangeLog for gnome-extra/cjs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/ChangeLog,v 1.1 2014/05/07 03:44:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/ChangeLog,v 1.2 2014/07/15 10:47:12 pacho Exp $
+
+*cjs-2.2.1 (15 Jul 2014)
+
+  15 Jul 2014; Pacho Ramos <pacho@gentoo.org> +cjs-2.2.1.ebuild,
+  -cjs-2.2.0.ebuild:
+  Version bump, drop old
 
 *cjs-2.2.0 (07 May 2014)
 
   07 May 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +cjs-2.2.0.ebuild,
   +metadata.xml:
   New prerequisite for Cinnamon - Linux Mint decided to fork gjs too.
-

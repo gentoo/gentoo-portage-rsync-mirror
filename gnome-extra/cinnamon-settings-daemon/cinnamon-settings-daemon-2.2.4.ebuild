@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.3.ebuild,v 1.2 2014/05/31 22:27:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.2.4.ebuild,v 1.1 2014/07/15 10:41:33 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils gnome2

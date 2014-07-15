@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-translations/cinnamon-translations-2.2.2.ebuild,v 1.1 2014/05/16 01:32:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-translations/cinnamon-translations-2.2.3.ebuild,v 1.1 2014/07/15 10:45:20 pacho Exp $
 
 EAPI=5
 

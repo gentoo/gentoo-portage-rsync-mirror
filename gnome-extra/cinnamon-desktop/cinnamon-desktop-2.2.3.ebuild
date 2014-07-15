@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-desktop/cinnamon-desktop-2.2.1.ebuild,v 1.1 2014/05/06 03:07:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-desktop/cinnamon-desktop-2.2.3.ebuild,v 1.1 2014/07/15 10:33:19 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2
 
