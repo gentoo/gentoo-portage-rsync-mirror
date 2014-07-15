@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1061 2014/07/14 19:25:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1062 2014/07/15 11:52:44 ssuominen Exp $
+
+  15 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-215.ebuild:
+  Fix installation of gudev and libudev gtk-doc html documentation.
 
   14 Jul 2014; Agostino Sarubbo <ago@gentoo.org> udev-215.ebuild:
   Stable for x86, wrt bug #517106

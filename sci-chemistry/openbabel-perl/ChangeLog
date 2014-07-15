@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel-perl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/ChangeLog,v 1.10 2013/02/20 19:42:53 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/ChangeLog,v 1.11 2014/07/15 11:51:35 zlogene Exp $
+
+  15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -openbabel-perl-2.3.0.ebuild:
+  Cleanup due to old EAPI
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> openbabel-perl-2.3.2.ebuild:
   Add ~arm, wrt bug #455960

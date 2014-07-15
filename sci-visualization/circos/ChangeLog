@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/circos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/circos/ChangeLog,v 1.4 2014/05/24 07:44:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/circos/ChangeLog,v 1.5 2014/07/15 11:49:12 zlogene Exp $
+
+  15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -circos-0.52.ebuild:
+  Cleanup due to old EAPI
 
   24 May 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #199047

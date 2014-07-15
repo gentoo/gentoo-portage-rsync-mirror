@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-215.ebuild,v 1.3 2014/07/14 19:25:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-215.ebuild,v 1.4 2014/07/15 11:52:44 ssuominen Exp $
 
 EAPI=5
 
@@ -362,6 +362,12 @@ multilib_src_install_all() {
 	# maintainer note: by not letting the upstream build-sys create the .so
 	# link, you also avoid a parallel make problem
 	mv "${D}"/usr/share/man/man8/systemd-udevd{.service,}.8
+
+	insinto /usr/share/doc/${PF}/html/gudev
+	doins "${S}"/docs/gudev/html/*
+
+	insinto /usr/share/doc/${PF}/html/libudev
+	doins "${S}"/docs/libudev/html/*
 }
 
 pkg_preinst() {
