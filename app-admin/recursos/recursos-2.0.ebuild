@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.8 2012/10/20 09:41:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.9 2014/07/15 14:26:44 jer Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	app-shells/bash
-	net-analyzer/rrdtool"
+	net-analyzer/rrdtool[graph]"
 
 S=${WORKDIR}/r2
 

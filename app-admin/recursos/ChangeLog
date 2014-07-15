@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/recursos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.8 2012/10/20 09:41:09 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.9 2014/07/15 14:26:44 jer Exp $
+
+  15 Jul 2014; Jeroen Roovers <jer@gentoo.org> recursos-2.0.ebuild:
+  Set USE=graph dependency on net-analyzer/rrdtool (bug #509682).
 
   20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> recursos-2.0.ebuild:
   Add ~amd64, wrt bug #438982

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1007 2014/07/08 11:35:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1008 2014/07/15 14:07:23 phajdan.jr Exp $
+
+  15 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.6.4.ebuild:
+  x86 stable wrt bug #504798
 
   08 Jul 2014; Jeroen Roovers <jer@gentoo.org> gcc-4.6.4.ebuild:
   Stable for HPPA (bug #504798).
