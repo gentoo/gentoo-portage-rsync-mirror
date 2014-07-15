@@ -1,6 +1,5 @@
-diff -Nru ntop-4.1.0.orig//configure.in ntop-4.1.0/configure.in
---- ntop-4.1.0.orig//configure.in	2011-08-15 10:34:28.000000000 +0200
-+++ ntop-4.1.0/configure.in	2011-11-08 23:22:13.000000000 +0100
+--- a/configure.in
++++ b/configure.in
 @@ -469,11 +469,6 @@
      LOCALEDIR="/usr/lib/locale"
  fi
@@ -54,9 +53,8 @@ diff -Nru ntop-4.1.0.orig//configure.in ntop-4.1.0/configure.in
  AC_SUBST(GETOPT_H)
  AC_SUBST(GETOPT_C)
  
-diff -Nru ntop-4.1.0.orig//globals-core.c ntop-4.1.0/globals-core.c
---- ntop-4.1.0.orig//globals-core.c	2011-03-03 22:00:04.000000000 +0100
-+++ ntop-4.1.0/globals-core.c	2011-11-08 23:22:13.000000000 +0100
+--- a/globals-core.c
++++ b/globals-core.c
 @@ -367,7 +367,7 @@
    _mtuSize[DLT_ATM_RFC1483] = 9180                             /* LLC/SNAP encapsulated atm */;
    _headerSize[DLT_ATM_RFC1483] = 0;
@@ -111,9 +109,8 @@ diff -Nru ntop-4.1.0.orig//globals-core.c ntop-4.1.0/globals-core.c
        }
      }
    }
-diff -Nru ntop-4.1.0.orig//Makefile.am ntop-4.1.0/Makefile.am
---- ntop-4.1.0.orig//Makefile.am	2011-03-03 14:44:59.000000000 +0100
-+++ ntop-4.1.0/Makefile.am	2011-11-08 23:22:42.000000000 +0100
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -36,7 +36,6 @@
  
  #AM_CFLAGS =
@@ -230,9 +227,8 @@ diff -Nru ntop-4.1.0.orig//Makefile.am ntop-4.1.0/Makefile.am
  
  # ntop census
  census-fail:
-diff -Nru ntop-4.1.0.orig//report.c ntop-4.1.0/report.c
---- ntop-4.1.0.orig//report.c	2011-06-29 18:29:46.000000000 +0200
-+++ ntop-4.1.0/report.c	2011-11-08 23:22:13.000000000 +0100
+--- a/report.c
++++ b/report.c
 @@ -2091,7 +2091,7 @@
    if(fetchPrefsValue("dot.path", buf, sizeof(buf)) != -1) {
      snprintf(dotPath, sizeof(dotPath), "%s", buf);

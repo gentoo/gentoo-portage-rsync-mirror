@@ -1,5 +1,5 @@
---- ntop-4.0.3.orig/configure.in
-+++ ntop-4.0.3/configure.in
+--- a/configure.in
++++ b/configure.in
 @@ -57,6 +57,7 @@
  dnl>
  umask 002
@@ -63,8 +63,8 @@
  AC_SUBST(GETOPT_H)
  AC_SUBST(GETOPT_C)
  
---- ntop-4.0.3.orig/globals-core.c
-+++ ntop-4.0.3/globals-core.c
+--- a/globals-core.c
++++ b/globals-core.c
 @@ -372,7 +372,7 @@
    _mtuSize[DLT_ATM_RFC1483] = 9180                             /* LLC/SNAP encapsulated atm */;
    _headerSize[DLT_ATM_RFC1483] = 0;
@@ -119,8 +119,8 @@
        }
      }
    }
---- ntop-4.0.3.orig/Makefile.am
-+++ ntop-4.0.3/Makefile.am
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -43,7 +43,6 @@
  
  #AM_CFLAGS =
@@ -219,8 +219,8 @@
  
  # ntop census
  census-fail:
---- ntop-4.0.3.orig/report.c
-+++ ntop-4.0.3/report.c
+--- a/report.c
++++ b/report.c
 @@ -2353,7 +2353,7 @@
    if(fetchPrefsValue("dot.path", buf, sizeof(buf)) != -1) {
      snprintf(dotPath, sizeof(dotPath), "%s", buf);

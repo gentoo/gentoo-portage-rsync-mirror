@@ -1,5 +1,5 @@
---- ntop-5.0.1/configure.in
-+++ ntop-5.0.1/configure.in
+--- a/configure.in
++++ b/configure.in
 @@ -469,11 +469,6 @@
      LOCALEDIR="/usr/lib/locale"
  fi
@@ -53,8 +53,8 @@
  AC_SUBST(GETOPT_H)
  AC_SUBST(GETOPT_C)
  AC_SUBST(NDPI_LIB)
---- ntop-5.0.1/globals-core.c
-+++ ntop-5.0.1/globals-core.c
+--- a/globals-core.c
++++ b/globals-core.c
 @@ -369,7 +369,7 @@
    _mtuSize[DLT_ATM_RFC1483] = 9180                             /* LLC/SNAP encapsulated atm */;
    _headerSize[DLT_ATM_RFC1483] = 0;
@@ -109,8 +109,8 @@
        }
      }
    }
---- ntop-5.0.1/Makefile.am
-+++ ntop-5.0.1/Makefile.am
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -36,7 +36,6 @@
  
  #AM_CFLAGS =
@@ -227,8 +227,8 @@
  
  # ntop census
  census-fail:
---- ntop-5.0.1/report.c
-+++ ntop-5.0.1/report.c
+--- a/report.c
++++ b/report.c
 @@ -2299,7 +2299,7 @@
    if(fetchPrefsValue("dot.path", buf, sizeof(buf)) != -1) {
      snprintf(dotPath, sizeof(dotPath), "%s", buf);
