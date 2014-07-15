@@ -52,7 +52,7 @@ Environment=MYTHCONFDIR=/etc/mythtv
 # Default setting assumes a system wide install. Otherwise it should be set to 
 # the folder containing the .mythtv subfolder containing the config.xml file 
 # Such as
-Environment=HOME=/usr/share/mythtv
+#Environment=HOME=/usr/share/mythtv
 # or
 Environment=HOME=/~/.mythtv
 
@@ -76,7 +76,7 @@ StandardOutput=null
 ExecStart=/usr/bin/mythbackend --logpath /var/log/mythtv --loglevel crit
 
 # Whether systemd will continue over-watch and restart on any halt
-#Restart=Restart-always
+#Restart=always
 
 [Install]
 WantedBy=multi-user.target

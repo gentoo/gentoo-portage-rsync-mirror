@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.19.ebuild,v 1.4 2013/12/23 13:26:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.19.ebuild,v 1.5 2014/07/15 16:45:14 jer Exp $
 
 EAPI=5
 
@@ -65,7 +65,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 				dev-perl/HTML-Template
 				dev-perl/IO-Socket-INET6
 				dev-perl/URI
-				>=net-analyzer/rrdtool-1.3[perl]
+				>=net-analyzer/rrdtool-1.3[graph,perl]
 				virtual/ssh
 			)"
 
