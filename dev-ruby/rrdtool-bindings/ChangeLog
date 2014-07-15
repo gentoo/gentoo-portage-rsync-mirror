@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rrdtool-bindings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.3 2014/05/20 09:05:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/ChangeLog,v 1.4 2014/07/15 13:55:26 jer Exp $
+
+  15 Jul 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-bindings-1.4.8.ebuild:
+  Set USE=graph dependency on net-analyzer/rrdtool (bug #509682).
 
   20 May 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-bindings-1.4.8.ebuild:
   Spelling.
