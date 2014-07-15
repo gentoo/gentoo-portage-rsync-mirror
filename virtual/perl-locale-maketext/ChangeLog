@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-locale-maketext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/ChangeLog,v 1.43 2014/01/17 05:58:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/ChangeLog,v 1.44 2014/07/15 21:26:33 dilfridge Exp $
+
+*perl-locale-maketext-1.250.0 (15 Jul 2014)
+*perl-locale-maketext-1.230.0-r1 (15 Jul 2014)
+
+  15 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-locale-maketext-1.230.0.ebuild,
+  +perl-locale-maketext-1.230.0-r1.ebuild,
+  +perl-locale-maketext-1.250.0.ebuild:
+  Add perl-5.20 version; improve dependencies
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-locale-maketext-1.230.0.ebuild:

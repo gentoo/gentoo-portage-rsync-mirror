@@ -1,6 +1,16 @@
 # ChangeLog for virtual/perl-libnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.48 2014/02/15 08:56:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.49 2014/07/15 21:20:09 dilfridge Exp $
+
+*perl-libnet-1.270.0 (15 Jul 2014)
+*perl-libnet-1.230.0-r1 (15 Jul 2014)
+
+  15 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-libnet-1.220.0-r1.ebuild, +perl-libnet-1.220.0-r2.ebuild,
+  -perl-libnet-1.230.0.ebuild, +perl-libnet-1.230.0-r1.ebuild,
+  +perl-libnet-1.270.0.ebuild:
+  Improve dependencies; add new version; drop 1.230.0 to ~arch since there is
+  no stable provider
 
   15 Feb 2014;  <zlogene@gentoo.org> -files/maintainer_notes.txt,
   perl-libnet-1.220.0-r1.ebuild, perl-libnet-1.230.0.ebuild:
