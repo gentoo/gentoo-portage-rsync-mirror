@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.1.0.ebuild,v 1.5 2013/03/10 01:38:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.1.0.ebuild,v 1.6 2014/07/15 17:45:44 jer Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	net-libs/libpcap
 	media-libs/gd
 	media-libs/libpng
-	net-analyzer/rrdtool
+	net-analyzer/rrdtool[graph]
 	ssl? ( dev-libs/openssl )
 	sys-libs/zlib
 	dev-libs/geoip

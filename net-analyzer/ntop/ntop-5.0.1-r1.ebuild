@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.1 2013/08/06 06:28:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.2 2014/07/15 17:45:44 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -24,7 +24,7 @@ COMMON_DEPEND="
 	net-libs/libpcap
 	media-libs/gd
 	media-libs/libpng
-	net-analyzer/rrdtool
+	net-analyzer/rrdtool[graph]
 	ssl? ( dev-libs/openssl )
 	sys-libs/zlib
 	dev-libs/geoip

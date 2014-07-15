@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/rrdcollect-0.2.9.ebuild,v 1.2 2011/06/09 17:46:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/rrdcollect-0.2.9.ebuild,v 1.3 2014/07/15 17:57:14 jer Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils
 
@@ -27,15 +27,15 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with pcre libpcre) \
-		$(use_with librrd) \
 		$(use_enable exec) \
-		|| die "econf failed"
+		$(use_with librrd) \
+		$(use_with pcre libpcre)
 }
 
+DOCS=( AUTHORS ChangeLog NEWS TODO )
+
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS TODO || die
+	default
 	docinto examples
-	dodoc doc/examples/* || die
+	dodoc doc/examples/*
 }

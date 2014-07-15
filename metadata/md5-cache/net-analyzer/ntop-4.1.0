@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=virtual/awk dev-lang/perl sys-libs/gdbm dev-libs/libevent net-libs/libpcap media-libs/gd media-libs/libpng net-analyzer/rrdtool ssl? ( dev-libs/openssl ) sys-libs/zlib dev-libs/geoip dev-lang/lua snmp? ( net-analyzer/net-snmp[ipv6] ) >=sys-devel/libtool-1.5.26 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=virtual/awk dev-lang/perl sys-libs/gdbm dev-libs/libevent net-libs/libpcap media-libs/gd media-libs/libpng net-analyzer/rrdtool[graph] ssl? ( dev-libs/openssl ) sys-libs/zlib dev-libs/geoip dev-lang/lua snmp? ( net-analyzer/net-snmp[ipv6] ) >=sys-devel/libtool-1.5.26 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Network traffic analyzer with web interface
 EAPI=2
 HOMEPAGE=http://www.ntop.org/products/ntop/
 IUSE=snmp ssl
 KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=virtual/awk dev-lang/perl sys-libs/gdbm dev-libs/libevent net-libs/libpcap media-libs/gd media-libs/libpng net-analyzer/rrdtool ssl? ( dev-libs/openssl ) sys-libs/zlib dev-libs/geoip dev-lang/lua snmp? ( net-analyzer/net-snmp[ipv6] ) media-fonts/corefonts media-gfx/graphviz net-misc/wget app-arch/gzip dev-libs/glib:2 dev-python/mako
+RDEPEND=virtual/awk dev-lang/perl sys-libs/gdbm dev-libs/libevent net-libs/libpcap media-libs/gd media-libs/libpng net-analyzer/rrdtool[graph] ssl? ( dev-libs/openssl ) sys-libs/zlib dev-libs/geoip dev-lang/lua snmp? ( net-analyzer/net-snmp[ipv6] ) media-fonts/corefonts media-gfx/graphviz net-misc/wget app-arch/gzip dev-libs/glib:2 dev-python/mako
 SLOT=0
 SRC_URI=mirror://sourceforge/ntop/ntop/Stable/ntop-4.1.0.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=95f40ab177ce6c4c246b8c58379fae40
+_md5_=6d7208d2bcc1640aacea4518a48512d8

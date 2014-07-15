@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.45 2014/07/14 15:58:20 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.46 2014/07/15 17:32:33 klausman Exp $
+
+*lib_users-0.9 (15 Jul 2014)
+
+  15 Jul 2014; Tobias Klausmann <klausman@gentoo.org> +lib_users-0.9.ebuild,
+  -lib_users-0.8.ebuild:
+  Quick-bump to v0.9 since v0.8 was broken (see bug 517168)
 
 *lib_users-0.8 (14 Jul 2014)
 
