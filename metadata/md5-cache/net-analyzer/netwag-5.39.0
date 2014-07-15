@@ -1,7 +1,7 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=~net-analyzer/netwox-5.39.0 >=dev-lang/tk-8 || ( x11-terms/xterm kde-base/konsole x11-terms/eterm x11-terms/gnome-terminal x11-terms/rxvt )
 DESCRIPTION=Tcl/tk interface to netwox (Toolbox of 222 utilities for testing Ethernet/IP networks)
-EAPI=4
+EAPI=5
 HOMEPAGE=http://ntwag.sourceforge.net/ http://www.laurentconstantin.com/en/netw/netwag/
 IUSE=doc
 KEYWORDS=~amd64 ~hppa ~ppc x86
@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RDEPEND=~net-analyzer/netwox-5.39.0 >=dev-lang/tk-8 || ( x11-terms/xterm kde-base/konsole x11-terms/eterm x11-terms/gnome-terminal x11-terms/rxvt )
 SLOT=0
 SRC_URI=mirror://sourceforge/ntwag/netwag-5.39.0-src.tgz doc? ( mirror://sourceforge/ntwag/netwag-5.39.0-doc_html.tgz )
-_md5_=e09fd92d3c521723b5d44cdb3d1ba45f
+_md5_=1b75eaf4407835b635db27dc4d5be33f

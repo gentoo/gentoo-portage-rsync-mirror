@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.39.0.ebuild,v 1.3 2013/01/03 15:00:45 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.39.0.ebuild,v 1.4 2014/07/14 23:16:34 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
-EAPI=4
-inherit toolchain-funcs multilib
+EAPI=5
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Toolbox of 217 utilities for testing Ethernet/IP networks"
 HOMEPAGE="
@@ -20,13 +20,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE="doc"
 
-RDEPEND=">=net-libs/libnet-1.1.1"
-
 DEPEND="
-	${RDEPEND}
+	net-libs/libnet:1.1
 	net-libs/libpcap
 	~net-libs/netwib-${PV}
 "
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}-src/src
 
@@ -39,25 +38,25 @@ src_prepare() {
 		-e "s:=ranlib:=$(tc-getRANLIB):" \
 		-e "s:=gcc:=$(tc-getCC):" \
 		-e "s:-O2:${CFLAGS}:" \
-		config.dat || die "patching config.dat failed"
+		config.dat || die
 	sed -i \
 		-e "s:-o netwox:& \${LDFLAGS}:g" \
 		-e 's: ; make: ; \\$(MAKE):g' \
-		genemake || die "patching genemake failed"
+		genemake || die
 }
 
 src_configure() {
-	sh genemake || die "problem creating Makefile"
+	sh genemake || die
 }
+
+DOCS=(
+	"${WORKDIR}"/${P}-src/README.TXT
+	"${WORKDIR}"/${P}-src/doc/{changelog.txt,credits.txt}
+	"${WORKDIR}"/${P}-src/doc/{problemreport.txt,problemusageunix.txt,todo.txt}
+)
 
 src_install() {
 	default
-	dodoc ../README.TXT
-	if use doc;
-	then
-		mv "${WORKDIR}"/${P}-doc_html "${D}"/usr/share/doc/${PF}/html
-	fi
 
-	dodoc "${S}"/../doc/{changelog.txt,credits.txt} \
-		"${S}"/../doc/{problemreport.txt,problemusageunix.txt,todo.txt}
+	use doc && dohtml -r "${WORKDIR}"/${P}-doc_html/*
 }

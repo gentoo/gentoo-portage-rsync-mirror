@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.39.0.ebuild,v 1.5 2013/02/01 15:43:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.39.0.ebuild,v 1.6 2014/07/14 23:08:43 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Tcl/tk interface to netwox (Toolbox of 222 utilities for testing Ethernet/IP networks)"
 HOMEPAGE="
@@ -48,15 +48,14 @@ src_configure() {
 	sh genemake || die "problem creating Makefile"
 }
 
+DOCS=(
+	"${WORKDIR}"/${P}-src/README.TXT
+	"${WORKDIR}"/${P}-src/doc/{changelog.txt,credits.txt}
+	"${WORKDIR}"/${P}-src/doc/{problemreport.txt,problemusage.txt,todo.txt}
+)
+
 src_install() {
 	default
-	dodoc ../README.TXT
-	if use doc;
-	then
-		mv "${WORKDIR}"/${P}-doc_html \
-			"${D}"/usr/share/doc/${PF}/html
-	fi
 
-	dodoc "${S}"/../doc/{changelog.txt,credits.txt} \
-		"${S}"/../doc/{problemreport.txt,problemusage.txt,todo.txt}
+	use doc && dohtml -r "${WORKDIR}"/${P}-doc_html/*
 }
