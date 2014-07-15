@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1063 2014/07/15 15:04:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1064 2014/07/15 15:52:06 ssuominen Exp $
+
+  15 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> udev-215.ebuild:
+  Backport upstream commits http://cgit.freedesktop.org/systemd/systemd/commit/?
+  id=4f4b92ba7ae9c56cb0f181d5f95d709e085b8bd5 and http://cgit.freedesktop.org/sy
+  stemd/systemd/commit/?id=6017365a1d0c1c78fc34a7da63768ee5df5da511 wrt #517162.
+  Thanks to Anthony Basile for testing and reporting.
 
   15 Jul 2014; Anthony G. Basile <blueness@gentoo.org> udev-215.ebuild:
   Stable on arm, bug #517106
