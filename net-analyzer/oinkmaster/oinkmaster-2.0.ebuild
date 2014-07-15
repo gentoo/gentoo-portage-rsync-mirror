@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-2.0.ebuild,v 1.7 2010/04/17 16:51:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-2.0.ebuild,v 1.8 2014/07/15 00:57:51 jer Exp $
 
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Rule management for SNORT"
@@ -13,19 +14,26 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ppc sparc x86"
 IUSE="X"
 
-DEPEND=""
-RDEPEND=">=dev-lang/perl-5.6.1
+RDEPEND="
+	>=dev-lang/perl-5.6.1
 	X? ( dev-perl/perl-tk )
 	net-misc/wget
 	app-arch/tar
-	app-arch/gzip"
+	app-arch/gzip
+"
 
 src_install() {
-	dobin oinkmaster.pl contrib/create-sidmap.pl contrib/addsid.pl \
-		contrib/makesidex.pl contrib/addmsg.pl
+	dobin \
+		contrib/addmsg.pl \
+		contrib/addsid.pl \
+		contrib/create-sidmap.pl \
+		contrib/makesidex.pl \
+		oinkmaster.pl
+
 	use X && dobin contrib/oinkgui.pl
 
-	dodoc FAQ UPGRADING README README.win32 README.gui contrib/README.contrib
+	dodoc FAQ README README.gui README.win32 UPGRADING contrib/README.contrib
+
 	doman oinkmaster.1
 
 	insinto /etc

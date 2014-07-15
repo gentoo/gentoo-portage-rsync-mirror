@@ -1,10 +1,10 @@
 DEFINED_PHASES=install prepare
 DESCRIPTION=Open DHCP Locator
-EAPI=4
+EAPI=5
 HOMEPAGE=http://odhcploc.sourceforge.net/
 KEYWORDS=~amd64
 LICENSE=ISC
 SLOT=0
 SRC_URI=mirror://sourceforge/project/odhcploc/20111021/odhcploc-20111021.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e8c49871f8eb69e481953da98f3f321e
+_md5_=048b74560dd562468ba6ae1a7375411a

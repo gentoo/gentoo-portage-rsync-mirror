@@ -1,0 +1,11 @@
+--- a/nttcp.c
++++ b/nttcp.c
+@@ -372,7 +372,7 @@
+ #define Message(x)	fMessage(stdout, x)
+ 
+ void Exit(char *s, int ret) {
+-    syslog(LOG_DEBUG, s);
++    syslog(LOG_DEBUG, "%s", s);
+     fMessage(stderr,s);
+     exit(ret);
+ }

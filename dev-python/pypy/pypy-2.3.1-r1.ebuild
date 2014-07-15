@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1.ebuild,v 1.2 2014/07/12 21:31:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1-r1.ebuild,v 1.1 2014/07/15 00:34:44 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 inherit check-reqs eutils multilib multiprocessing pax-utils \
 	python-any-r1 toolchain-funcs vcs-snapshot versionator
 
@@ -49,8 +49,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/1.9-scripts-location.patch"
-	epatch "${FILESDIR}/1.9-distutils.unixccompiler.UnixCCompiler.runtime_library_dir_option.patch"
+	epatch "${FILESDIR}/1.9-scripts-location.patch" \
+		"${FILESDIR}/1.9-distutils.unixccompiler.UnixCCompiler.runtime_library_dir_option.patch" \
+		"${FILESDIR}"/${PV}-shared-lib.patch	# 517002
 
 	pushd lib-python/2.7 > /dev/null || die
 	epatch "${FILESDIR}/2.3-21_all_distutils_c++.patch"
@@ -132,7 +133,6 @@ src_install() {
 	fperms a+x ${INSDESTTREE}/pypy-c ${INSDESTTREE}/libpypy-c.so
 	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c" "${ED%/}${INSDESTTREE}/libpypy-c.so"
 	dosym ../$(get_libdir)/pypy/pypy-c /usr/bin/pypy
-	dosym ../$(get_libdir)/pypy/libpypy-c.so /usr/$(get_libdir)/libpypy-c.so
 	dodoc README.rst
 
 	if ! use sqlite; then

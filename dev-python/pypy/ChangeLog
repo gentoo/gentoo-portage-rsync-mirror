@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.69 2014/07/12 21:31:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.70 2014/07/15 00:34:44 idella4 Exp $
+
+*pypy-2.3.1-r1 (15 Jul 2014)
+
+  15 Jul 2014; Ian Delaney <idella4@gentoo.org> +files/2.3.1-shared-lib.patch,
+  +pypy-2.3.1-r1.ebuild, -pypy-2.3.1.ebuild:
+  revbump; patch to fix shared lib issue of libpypy-c.so wrt Bug #517002, thanks
+  to Arfrever for the patch which is submitted upstream
 
   12 Jul 2014; Michał Górny <mgorny@gentoo.org> -pypy-2.3.ebuild,
   pypy-2.3.1.ebuild:

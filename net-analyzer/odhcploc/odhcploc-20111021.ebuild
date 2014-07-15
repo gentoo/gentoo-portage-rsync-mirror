@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/odhcploc/odhcploc-20111021.ebuild,v 1.2 2012/12/05 14:24:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/odhcploc/odhcploc-20111021.ebuild,v 1.3 2014/07/15 00:52:27 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="Open DHCP Locator"
@@ -12,7 +12,6 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PV}/${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 src_prepare() {
 	tc-export CC
