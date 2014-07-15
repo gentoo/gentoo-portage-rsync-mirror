@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/curl_ssl.desc,v 1.3 2014/04/29 13:25:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/curl_ssl.desc,v 1.4 2014/07/15 10:20:33 blueness Exp $
 
 # This file contains descriptions of CURL_SSL USE_EXPAND flags for net-misc/curl
 #spnego - Use SPNEGO fbopenssl - to be added
 
 axtls - Use axTLS
-cyassl - Use CyaSSL
 gnutls - Use GnuTLS
 nss - Use Mozilla's Network Security Services 
 openssl - Use OpenSSL

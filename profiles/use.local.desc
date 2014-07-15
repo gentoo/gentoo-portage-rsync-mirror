@@ -5089,63 +5089,6 @@ net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/c-client:topal - Enable support for net-mail/topal for use with mail-client/alpine
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/cvm:vpopmail - Enable vpopmail support
-net-libs/cyassl:aes - Enable AES cipher support
-net-libs/cyassl:aes-ccm - Eanble AES Counter with CBC-MAC mode
-net-libs/cyassl:aes-gcm - Enable AES Galois/Counter mode
-net-libs/cyassl:aes-ni - Enable Intel AES instruction support
-net-libs/cyassl:arc4 - Enable ARC4 cipher support
-net-libs/cyassl:asn - Enable ASN cipher support
-net-libs/cyassl:atomicuser - Enable Atomic User Record Layer
-net-libs/cyassl:big - Choose big cache size (excludes small or huge)
-net-libs/cyassl:blake2 - Enable CyaSSL BLAKE2 support
-net-libs/cyassl:camellia - Enable Camellia-CBC cipher support
-net-libs/cyassl:coding - Enable Coding base 16/64
-net-libs/cyassl:crl - Enable Certificate Revocation List
-net-libs/cyassl:crl-monitor - Enable Certificate Revocation List Directory Monitoring
-net-libs/cyassl:cyassl-hardening - Add hardening flags to CFLAGS/LDFLAGS
-net-libs/cyassl:des3 - Enable triple DES support
-net-libs/cyassl:dh - Enable DH cipher support
-net-libs/cyassl:dsa - Enable DSA cipher support
-net-libs/cyassl:dtls - Enable datagram TLS (must be disabled for tests)
-net-libs/cyassl:ecc - Enable Elliptic Curve support
-net-libs/cyassl:errorstrings - Enable error strings table
-net-libs/cyassl:extra - Enable extra OpenSSL API
-net-libs/cyassl:fortress - Enable fortress SSL build (requires extra and SHA512)
-net-libs/cyassl:hc128 - Enable HC-128 support
-net-libs/cyassl:hkdf - Enable HKDF (HMAC-KDF) support
-net-libs/cyassl:httpd - Enable features for yaSSL web server
-net-libs/cyassl:huge - Choose big cache size (excludes small or big)
-net-libs/cyassl:leanpsk - Enable lean PSK support (requires psk)
-net-libs/cyassl:maxfragment - Enable Maximum Fragment Length
-net-libs/cyassl:mcapi - Enable Microchip API
-net-libs/cyassl:md2 - Enable MD2 support
-net-libs/cyassl:md4 - Enable MD4 support
-net-libs/cyassl:md5 - Enable MD5 support
-net-libs/cyassl:memory - Enable memory callbacks
-net-libs/cyassl:nullcipher - Enable nullcipher support
-net-libs/cyassl:ocsp - Enable Online Certificate Status Protocol
-net-libs/cyassl:pkcallbacks - Enable Public Key Callbacks
-net-libs/cyassl:pkcs7 - Enable PKCS7 standard
-net-libs/cyassl:psk - Enable Pre-Shared Key support
-net-libs/cyassl:pwdbased - Enable PWDBASED (requires extra)
-net-libs/cyassl:rabbit - Enable RABBIT cipher support
-net-libs/cyassl:ripemd - Enable RIPEMD-160 support
-net-libs/cyassl:rsa - Enable RSA cihper support
-net-libs/cyassl:savecert - Support certificate saving
-net-libs/cyassl:savesession - Support session saving
-net-libs/cyassl:scep - Enable wolfSCEP
-net-libs/cyassl:sep - Enable sep extensions
-net-libs/cyassl:sessioncerts - Store session certificates
-net-libs/cyassl:sha - Enable SHA cipher support
-net-libs/cyassl:sha512 - Enable SHA-160 support
-net-libs/cyassl:small - Choose small cache size (excludes big or huge)
-net-libs/cyassl:smallstack - Enable Small Stack Usage (excludes big or huge)
-net-libs/cyassl:sni - Enable server name indication
-net-libs/cyassl:sniffer - Allow collection/decryption of SSL traffic
-net-libs/cyassl:supportedcurves - Enable Supported Elliptic Curves
-net-libs/cyassl:testcert - Enable certificate testing
-net-libs/cyassl:tlsx - Enable all TLS Extensions
-net-libs/cyassl:truncatedhmac - Enable Truncated HMAC
 net-libs/daq:afpacket - Build the AFPacket data acquisition module. Functions similar to the PCAP module but with better performance. Snort can run unprivileged when using this module. AFpacket supports both inline and passive modes.
 net-libs/daq:dump - Build the Dump data acquisition module. The dump DAQ allows you to test the various inline mode features available in 2.9 Snort like injection and normalization.
 net-libs/daq:ipq - Build the IPQ data acquisition module. IPQ is the old way to process iptables packets for inline deployments. Snort can not run unprivileged when using this module.

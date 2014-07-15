@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.135 2014/05/21 07:39:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.136 2014/07/15 10:20:31 blueness Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -52,10 +52,6 @@ sys-apps/hwloc -cuda -gl -opencl
 # Keywords missing, bug #478104
 >=app-editors/gedit-plugins-3.8.3 git
 
-# Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
-# Works on x86
-net-libs/cyassl -aes-ni
-
 # Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
 # cuda only works on x86 and amd64
 sci-libs/cholmod -cuda
@@ -84,10 +80,6 @@ media-libs/phonon zeitgeist
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # dependency keyworded here, masked in base
 media-libs/freetype -infinality
-
-# Anthony G. Basile <blueness@gentoo.org> (12 Jul 2012)
-# sha512 support in cyassl is broken on x86
-net-libs/cyassl sha512
 
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # masked in base, unmask x86/amd64 only

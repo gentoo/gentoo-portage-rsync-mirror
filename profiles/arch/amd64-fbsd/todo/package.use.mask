@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.336 2013/11/17 14:13:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.337 2014/07/15 10:20:31 blueness Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -38,9 +38,6 @@ net-misc/curl curl_ssl_axtls
 # media-libs/libmetalink -> undefined references on TEMP_FAILURE_RETRY (macro
 # provided by glibc)
 net-misc/curl metalink
-
-# net-libs/cyassl (fails to build)
-net-misc/curl curl_ssl_cyassl
 
 # sys-process/numactl
 sys-apps/hwloc numa

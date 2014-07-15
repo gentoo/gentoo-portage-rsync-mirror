@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9207 2014/07/14 19:56:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9208 2014/07/15 10:20:30 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  arch/amd64-fbsd/todo/package.use.mask, arch/amd64/package.use.mask,
+  arch/x86/package.use.mask, base/package.use.mask,
+  default/bsd/fbsd/amd64/9.1/clang/package.use.mask,
+  default/bsd/fbsd/amd64/9.2/clang/package.use.mask,
+  default/linux/alpha/13.0/use.mask, default/linux/ia64/13.0/use.mask,
+  default/linux/sparc/13.0/use.mask, desc/curl_ssl.desc, package.mask:
+  Remove cyassl package and use flag, bug #495848
 
   14 Jul 2014; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Update mpv mask to 0.4.1

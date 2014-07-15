@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.584 2014/07/11 19:36:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.585 2014/07/15 10:20:32 blueness Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -21,10 +21,6 @@ net-misc/stargazer module_store_firebird
 # Jeroen Roovers <jer@gentoo.org> (20 Jun 2014)
 # net-libs/adns is going away (bug #513982)
 net-analyzer/wireshark libadns
-
-# Anthony G. Basile <blueness@gentoo.org> (14 Jun 2014)
-# net-libs/cyassl is being tree cleaned, bug #495848
-net-misc/curl curl_ssl_cyassl
 
 # Zac Medico <zmedico@gentoo.org> (06 Jun 2014)
 # Needs hardmasked lua-5.2
@@ -280,10 +276,6 @@ sys-libs/libcxxrt libunwind
 # Michael Weber <xmw@gentoo.org>  (19 Jun 2013)
 # Not fit for production
 =www-client/netsurf-3.0* fbcon pdf-writer gstreamer
-
-# Anthony G. Basile <blueness@gentoo.org> (18 Jun 2013)
-# Only work on amd64/x86
-net-libs/cyassl aes-ni
 
 # Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2013)
 # mask because requires unstable depends not ready for the stabilization

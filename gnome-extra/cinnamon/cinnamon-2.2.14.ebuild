@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.9.ebuild,v 1.4 2014/06/07 17:38:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.14.ebuild,v 1.1 2014/07/15 10:26:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,12 +16,12 @@ HOMEPAGE="http://cinnamon.linuxmint.com/"
 MY_PV="${PV/_p/-UP}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="https://github.com/linuxmint/Cinnamon/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz
-	http://dev.gentoo.org/~pacho/gnome/cinnamon-1.8/gnome-3.8.patch"
+SRC_URI="https://github.com/linuxmint/Cinnamon/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+bluetooth +l10n +networkmanager"
+# bluetooth support dropped due bug #511648
+IUSE="+l10n +networkmanager" #+bluetooth
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 KEYWORDS="~amd64 ~x86"
@@ -56,11 +56,12 @@ COMMON_DEPEND="
 	>=x11-libs/libXfixes-5.0
 	>=x11-wm/muffin-1.9.1[introspection]
 	${PYTHON_DEPS}
-	bluetooth? ( >=net-wireless/gnome-bluetooth-3.1:=[introspection] )
 	networkmanager? (
 		gnome-base/libgnome-keyring
 		>=net-misc/networkmanager-0.8.999[introspection] )
 "
+#bluetooth? ( >=net-wireless/gnome-bluetooth-3.1:=[introspection] )
+
 # Runtime-only deps are probably incomplete and approximate.
 # Each block:
 # 2. Introspection stuff + dconf needed via imports.gi.*
@@ -109,13 +110,13 @@ RDEPEND="${COMMON_DEPEND}
 	gnome-extra/cinnamon-control-center
 	gnome-extra/cinnamon-screensaver
 
-	bluetooth? ( net-wireless/cinnamon-bluetooth )
 	l10n? ( >=gnome-extra/cinnamon-translations-2.2 )
 	networkmanager? (
 		gnome-extra/nm-applet
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
 "
+#bluetooth? ( net-wireless/cinnamon-bluetooth )
 
 DEPEND="${COMMON_DEPEND}
 	dev-python/polib[${PYTHON_USEDEP}]
@@ -173,10 +174,11 @@ src_configure() {
 	# Don't error out on warnings
 	gnome2_src_configure \
 		--disable-jhbuild-wrapper-script \
-		$(use_with bluetooth) \
 		$(use_enable networkmanager) \
 		--with-ca-certificates="${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
-		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins"
+		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins" \
+		--without-bluetooth
+		#$(use_with bluetooth)
 }
 
 src_install() {

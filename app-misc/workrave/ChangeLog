@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.94 2014/04/18 08:26:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.95 2014/07/15 10:03:34 pacho Exp $
+
+*workrave-1.10.1 (15 Jul 2014)
+
+  15 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/workrave-1.10.1-desktop.patch, +workrave-1.10.1.ebuild:
+  Version bump, add missing dep and fix desktop file (#512602 by Dries Kimpe)
 
   18 Apr 2014; Pacho Ramos <pacho@gentoo.org>
   -files/workrave-1.9.1-gtkmm_api.patch,
