@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwhisker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.14 2010/02/20 09:02:59 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.15 2014/07/15 13:05:56 zlogene Exp $
+
+  15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> libwhisker-2.5.ebuild:
+  Bump to EAPI=5
 
 *libwhisker-2.5 (20 Feb 2010)
 
@@ -70,4 +73,3 @@
   libwhisker-1.8.ebuild, metadata.xml:
   Finally closing bug 12116. Version bumped, but the original ebuild was by
   Marlon Jabbur <mjabbur@terra.com.br>
-

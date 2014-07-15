@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-2.5.ebuild,v 1.1 2010/02/20 09:02:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/libwhisker-2.5.ebuild,v 1.2 2014/07/15 13:05:55 zlogene Exp $
 
-EAPI=2
+EAPI=5
 
 inherit perl-module
 MY_P=${PN}2-${PV}
@@ -29,6 +29,6 @@ src_compile() {
 src_install() {
 	perlinfo
 	insinto "${VENDOR_LIB}"
-	doins LW2.pm || die
-	dodoc CHANGES KNOWNBUGS README || die
+	doins LW2.pm
+	dodoc CHANGES KNOWNBUGS README
 }
