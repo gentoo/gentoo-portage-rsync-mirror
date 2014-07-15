@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/netty-common-4.0.19.ebuild,v 1.2 2014/07/15 07:50:55 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/netty-common-4.0.21.ebuild,v 1.1 2014/07/15 07:50:55 ercpe Exp $
 
 EAPI="5"
 
@@ -40,6 +40,7 @@ EANT_GENTOO_CLASSPATH="commons-logging,log4j,javassist-3,slf4j-api"
 RESTRICT="test"
 
 java_prepare() {
+	#EANT_EXTRA_ARGS="-Dgentoo.classpath=$(java-pkg_getjars --build-only commons-logging,log4j,javassist-3,slf4j-api)"
 	cp "${FILESDIR}"/${P}-build.xml build.xml || die
 }
 

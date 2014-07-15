@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/netty-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/ChangeLog,v 1.1 2014/05/19 12:35:12 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/ChangeLog,v 1.2 2014/07/15 07:50:55 ercpe Exp $
+
+*netty-common-4.0.21 (15 Jul 2014)
+
+  15 Jul 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/netty-common-4.0.21-build.xml, +netty-common-4.0.21.ebuild,
+  files/netty-common-4.0.19-build.xml, netty-common-4.0.19.ebuild:
+  Version bump (bug #515854), dropped code for the failing tests, cleaned things
+  up (in 4.0.19 too)
 
 *netty-common-4.0.19 (19 May 2014)
 
