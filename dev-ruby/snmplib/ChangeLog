@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.50 2014/04/24 16:51:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.51 2014/07/15 05:48:01 graaff Exp $
+
+*snmplib-1.2.0 (15 Jul 2014)
+
+  15 Jul 2014; Hans de Graaff <graaff@gentoo.org> +snmplib-1.2.0.ebuild:
+  Version bump. Add ruby20, ruby21.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> snmplib-1.1.1.ebuild:
   Remove ruby18 support.
