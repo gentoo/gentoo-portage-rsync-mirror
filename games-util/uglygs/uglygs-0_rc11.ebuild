@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.12 2010/05/28 08:18:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.13 2014/07/15 14:55:11 jer Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha hppa ppc sparc x86"
 IUSE=""
 
-RDEPEND="net-analyzer/rrdtool
+RDEPEND="net-analyzer/rrdtool[graph]
 	dev-lang/perl"
 
 S=${WORKDIR}/${MY_P}

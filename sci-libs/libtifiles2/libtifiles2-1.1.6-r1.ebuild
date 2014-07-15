@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.6-r1.ebuild,v 1.1 2013/07/10 21:45:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.6-r1.ebuild,v 1.2 2014/07/15 14:37:09 jlec Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc nls static-libs"
 
 RDEPEND="
+	app-arch/libarchive
 	dev-libs/glib:2
 	>=sci-libs/libticables2-1.3.3
 	>=sci-libs/libticonv-1.1.3

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.58 2014/07/12 18:33:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.59 2014/07/15 14:36:41 blueness Exp $
+
+  15 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  +linux/uclibc/ppc/package.mask:
+  Mask openssh on hardened/linux/uclibc/ppc, bug #517160
 
   12 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
   linux/uclibc/package.mask:

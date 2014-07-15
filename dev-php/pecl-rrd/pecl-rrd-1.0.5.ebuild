@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-rrd/pecl-rrd-1.0.5.ebuild,v 1.2 2013/07/19 14:13:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-rrd/pecl-rrd-1.0.5.ebuild,v 1.3 2014/07/15 14:49:41 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,6 @@ DESCRIPTION="RRDtool bindings for PHP"
 LICENSE="BSD"
 
 SLOT="0"
-IUSE=""
 
-DEPEND=">=net-analyzer/rrdtool-1.4.5-r1"
+DEPEND=">=net-analyzer/rrdtool-1.4.5-r1[graph]"
 RDEPEND="${DEPEND}"
