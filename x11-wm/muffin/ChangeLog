@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/muffin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.19 2014/05/16 02:03:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.20 2014/07/15 12:33:09 pacho Exp $
+
+*muffin-2.2.6 (15 Jul 2014)
+
+  15 Jul 2014; Pacho Ramos <pacho@gentoo.org> +muffin-2.2.6.ebuild,
+  -muffin-2.2.2.ebuild, -muffin-2.2.3.ebuild:
+  Version bump, drop old
 
 *muffin-2.2.3 (16 May 2014)
 

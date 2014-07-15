@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-2.2.3.ebuild,v 1.1 2014/05/16 02:03:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-2.2.6.ebuild,v 1.1 2014/07/15 12:33:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,7 +10,6 @@ inherit autotools eutils gnome2 python-any-r1
 
 DESCRIPTION="Compositing window manager forked from Mutter for use with Cinnamon"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
-
 SRC_URI="https://github.com/linuxmint/muffin/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"

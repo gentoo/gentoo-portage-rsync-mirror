@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/diya/diya-1.0_rc4.ebuild,v 1.1 2009/09/28 00:16:02 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/diya/diya-1.0_rc4.ebuild,v 1.2 2014/07/15 12:59:44 zlogene Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit perl-module
 
@@ -39,5 +39,5 @@ src_install() {
 	mydoc="INSTALL README docs/diya.html"
 	perl-module_src_install
 	insinto /usr/share/${PN}
-	doins -r diya.conf docs examples scripts || die
+	doins -r diya.conf docs examples scripts
 }

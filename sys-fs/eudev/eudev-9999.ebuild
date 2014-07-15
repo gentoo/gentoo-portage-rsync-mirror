@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.58 2014/07/14 17:43:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.59 2014/07/15 12:53:53 blueness Exp $
 
 EAPI="5"
 
@@ -214,6 +214,12 @@ multilib_src_install_all() {
 
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
+
+	insinto /usr/share/doc/${PF}/html/gudev
+	doins "${S}"/docs/gudev/html/*
+
+	insinto /usr/share/doc/${PF}/html/libudev
+	doins "${S}"/docs/libudev/html/*
 }
 
 pkg_preinst() {
