@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.6 2014/07/15 15:59:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.7 2014/07/15 16:23:26 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -31,7 +31,7 @@ src_install () {
 
 	default
 
-	mv "${ED}/usr/share/doc/"{mrtg2,${PF}}
+	mv "${ED}"/usr/share/doc/{mrtg2,${PF}} || die
 
 	newinitd "${FILESDIR}/mrtg.rc" ${PN}
 	newconfd "${FILESDIR}/mrtg.confd" ${PN}
