@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/farstream
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.36 2014/05/15 08:06:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.37 2014/07/15 11:16:53 pacho Exp $
+
+*farstream-0.2.4 (15 Jul 2014)
+
+  15 Jul 2014; Pacho Ramos <pacho@gentoo.org> +farstream-0.2.4.ebuild:
+  Version bump
 
   15 May 2014; Pacho Ramos <pacho@gentoo.org> farstream-0.1.2-r1.ebuild:
   Parallel build/installing is completely broken for old slot (#434618)
