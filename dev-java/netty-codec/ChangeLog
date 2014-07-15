@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netty-codec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-codec/ChangeLog,v 1.1 2014/05/28 17:28:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-codec/ChangeLog,v 1.2 2014/07/15 08:24:05 ercpe Exp $
+
+*netty-codec-4.0.21 (15 Jul 2014)
+
+  15 Jul 2014; Johann Schmitz <ercpe@gentoo.org>
+  +files/netty-codec-4.0.21-build.xml, +netty-codec-4.0.21.ebuild:
+  Version bump (bug #515854); dropped code for failing tests
 
 *netty-codec-4.0.19 (28 May 2014)
 
