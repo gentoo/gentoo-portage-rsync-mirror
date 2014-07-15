@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=sys-libs/db:4.8[cxx,java?] >=dev-libs/xerces-c-3 =dev-libs/xqilla-2.2* sys-libs/zlib perl? ( dev-lang/perl ) python? ( >=dev-python/bsddb3-4.8.0 ) tcl? ( dev-lang/tcl ) java? ( >=virtual/jre-1.5 ) sys-devel/libtool java? ( >=virtual/jdk-1.5 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DEPEND=sys-libs/db:4.8[cxx,java?] >=dev-libs/xerces-c-3 =dev-libs/xqilla-2.2* sys-libs/zlib perl? ( dev-lang/perl ) python? ( >=dev-python/bsddb3-4.8.0 ) tcl? ( dev-lang/tcl ) java? ( >=virtual/jre-1.5 ) sys-devel/libtool java? ( >=virtual/jdk-1.5 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool python? ( =dev-lang/python-2* ) dev-lang/perl[-build(-)] java? ( >=dev-java/java-config-2.1.9-r1 )
 DESCRIPTION=BerkeleyDB XML, a native XML database from the BerkeleyDB team
-EAPI=3
+EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/database/berkeleydb/index-083851.html http://download.oracle.com/otndocs/products/berkeleydb/html/2.5.html
 IUSE=doc examples java perl python tcl elibc_FreeBSD java
 KEYWORDS=~amd64 ~x86
 LICENSE=Sleepycat Apache-1.1 BSD
-RDEPEND=sys-libs/db:4.8[cxx,java?] >=dev-libs/xerces-c-3 =dev-libs/xqilla-2.2* sys-libs/zlib perl? ( dev-lang/perl ) python? ( >=dev-python/bsddb3-4.8.0 ) tcl? ( dev-lang/tcl ) java? ( >=virtual/jre-1.5 ) python? ( =dev-lang/python-2* ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) java? ( >=dev-java/java-config-2.1.9-r1 )
+RDEPEND=sys-libs/db:4.8[cxx,java?] >=dev-libs/xerces-c-3 =dev-libs/xqilla-2.2* sys-libs/zlib perl? ( dev-lang/perl ) python? ( >=dev-python/bsddb3-4.8.0 ) tcl? ( dev-lang/tcl ) java? ( >=virtual/jre-1.5 ) python? ( =dev-lang/python-2* ) dev-lang/perl[-build(-)] java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=http://download-east.oracle.com/berkeley-db/dbxml-2.5.16.tar.gz http://download-west.oracle.com/berkeley-db/dbxml-2.5.16.tar.gz http://download-uk.oracle.com/berkeley-db/dbxml-2.5.16.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-app	4c2027b6530baeab97482b706149e640	perl-module	a6a2d5c77bdaeba2794b167689cafb7a	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a6133ee3ca7811ed7d446d602ecac51b
+_md5_=889215df18f3e12cbae2c8532c9ab62f

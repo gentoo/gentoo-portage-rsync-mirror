@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.76 2014/05/31 16:24:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.77 2014/07/15 09:07:45 zlogene Exp $
+
+  15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -pilot-link-0.12.5.ebuild,
+  pilot-link-0.12.5-r1.ebuild:
+  Stable for all. Drop old.
 
   31 May 2014; Samuli Suominen <ssuominen@gentoo.org>
   pilot-link-0.12.5-r1.ebuild:
