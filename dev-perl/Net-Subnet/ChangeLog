@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Subnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Subnet/ChangeLog,v 1.2 2014/07/11 17:17:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Subnet/ChangeLog,v 1.3 2014/07/15 09:42:18 chainsaw Exp $
+
+  15 Jul 2014; Tony Vroon <chainsaw@gentoo.org> -files/1.03-pod-spelling.patch,
+  +files/1.30.0-pod-spelling.patch:
+  Properly complete renaming exercise.
 
 *Net-Subnet-1.30.0 (11 Jul 2014)
 

@@ -1,8 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.5.ebuild,v 1.2 2013/06/19 13:25:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.5.ebuild,v 1.3 2014/07/15 09:42:05 nimiux Exp $
 
 EAPI=5
+
 inherit base vim-doc
 
 DESCRIPTION="Console file manager with vi(m)-like keybindings"
@@ -26,7 +27,7 @@ RDEPEND="
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
-DOCS=( AUTHORS TODO README )
+DOCS=( AUTHORS FAQ NEWS README TODO )
 
 src_configure() {
 	econf \

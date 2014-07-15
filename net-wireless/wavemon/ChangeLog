@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.57 2014/05/16 13:42:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.58 2014/07/15 09:45:13 pinkbyte Exp $
+
+  15 Jul 2014; Sergey Popov <pinkbyte@gentoo.org> wavemon-0.7.6.ebuild:
+  Stable on amd64/arm/x86, wrt bug #516690
 
 *wavemon-0.7.6 (16 May 2014)
 

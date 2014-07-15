@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.287 2014/07/15 01:57:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.288 2014/07/15 10:01:25 pacho Exp $
+
+  15 Jul 2014; Pacho Ramos <pacho@gentoo.org> -systemd-213.ebuild,
+  -systemd-215.ebuild, systemd-215-r1.ebuild, systemd-9999.ebuild:
+  revert bogus stabilization, drop old
 
   15 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-215-r1.ebuild,
   systemd-9999.ebuild:
