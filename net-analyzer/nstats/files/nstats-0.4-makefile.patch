@@ -2,8 +2,8 @@
 # net-analyzer/bmon, sys-cluster/ceph and sys-process/nmon
 # bug #364685
 
---- a/nstats-0.4/Makefile
-+++ b/nstats-0.4/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -53,7 +53,7 @@
  	mkdir -p $(DESTDIR)$(prefix)/bin/
  	mkdir -p $(DESTDIR)$(mandir)/man8/

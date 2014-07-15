@@ -1,0 +1,10 @@
+# ChangeLog for mail-filter/postfwd
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postfwd/ChangeLog,v 1.1 2014/07/15 00:19:41 mschiff Exp $
+
+*postfwd-1.35 (15 Jul 2014)
+
+  15 Jul 2014; Marc Schiffbauer <mschiff@gentoo.org> +files/postfwd.conf,
+  +files/postfwd.init, +files/postfwd2.example.cf, +metadata.xml,
+  +postfwd-1.35.ebuild:
+  Added postfwd to the tree (again?).

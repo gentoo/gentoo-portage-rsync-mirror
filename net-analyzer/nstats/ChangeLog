@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nstats
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.21 2012/03/19 12:01:09 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nstats/ChangeLog,v 1.22 2014/07/15 00:14:28 jer Exp $
+
+  15 Jul 2014; Jeroen Roovers <jer@gentoo.org> nstats-0.4-r2.ebuild,
+  files/nstats-0.4-glibc24.patch, files/nstats-0.4-makefile.patch,
+  +files/nstats-0.4-tinfo.patch, metadata.xml:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo]. Drop
+  <sys-libs/glibc-2.4 condition. Clean up patches.
 
   19 Mar 2012; Jeroen Roovers <jer@gentoo.org> -nstats-0.4-r1.ebuild:
   Old.

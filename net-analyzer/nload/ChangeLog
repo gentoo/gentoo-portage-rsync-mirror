@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nload
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.47 2013/08/08 17:02:55 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.48 2014/07/15 00:01:32 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> nload-0.7.4.ebuild,
+  +files/nload-0.7.4-tinfo.patch:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo].
 
   08 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> nload-0.7.4.ebuild:
   Add ~mips keyword

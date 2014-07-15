@@ -1,5 +1,5 @@
---- ./nstats-0.4.orig/src/packet.c	2002-05-02 17:34:25.000000000 +0200
-+++ ./nstats-0.4/src/packet.c	2006-03-27 02:15:47.000000000 +0200
+--- a/src/packet.c
++++ b/src/packet.c
 @@ -148,9 +148,9 @@
                      stats.ip.ipv6.icmp.dst_unreach.s_admin += hdr->len;
                      break;
@@ -35,8 +35,8 @@
          case ND_ROUTER_SOLICIT:
              stats.ip.ipv6.icmp.nd_router_solicit++;
              stats.ip.ipv6.icmp.s_nd_router_solicit += hdr->len;
---- ./nstats-0.4.orig/src/stats.c	2002-05-02 17:34:25.000000000 +0200
-+++ ./nstats-0.4/src/stats.c	2006-03-27 02:18:41.000000000 +0200
+--- a/src/stats.c
++++ b/src/stats.c
 @@ -316,15 +316,6 @@
      print_line("Echo Reply:", ICMP6.echo_reply, ICMP6.cnt,
              ICMP6.s_echo_reply, ICMP6.bs, .0);
@@ -53,8 +53,8 @@
      print_line("ND Rtr Solicit:", ICMP6.nd_router_solicit, ICMP6.cnt,
              ICMP6.s_nd_router_solicit, ICMP6.bs, .0);
      NEXT_ROW;
---- ./nstats-0.4.orig/src/stats.h	2002-05-02 17:34:25.000000000 +0200
-+++ ./nstats-0.4/src/stats.h	2006-03-27 02:16:25.000000000 +0200
+--- a/src/stats.h
++++ b/src/stats.h
 @@ -233,7 +233,7 @@
  
                      cnt_t noroute;     cnt_t s_noroute;
@@ -74,8 +74,8 @@
                  cnt_t nd_router_solicit;   cnt_t s_nd_router_solicit;
                  cnt_t nd_router_advert;    cnt_t s_nd_router_advert;
                  cnt_t nd_neighbor_solicit; cnt_t s_nd_neighbor_solicit;
---- ./nstats-0.4.orig/src/nstats.c	2002-05-02 17:34:25.000000000 +0200
-+++ ./nstats-0.4/src/nstats.c	2006-03-27 02:25:42.000000000 +0200
+--- a/src/nstats.c
++++ b/src/nstats.c
 @@ -528,12 +528,6 @@
                  ICMP6.s_echo_request, ICMP6.bs);
          print_line("Echo Reply:", ICMP6.echo_reply, ICMP6.cnt,
