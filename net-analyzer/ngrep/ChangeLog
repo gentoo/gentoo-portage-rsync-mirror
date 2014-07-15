@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ngrep
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.73 2013/03/17 16:07:17 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.75 2014/07/14 23:44:08 jer Exp $
+
+  14 Jul 2014; Jeroen Roovers <jer@gentoo.org> ngrep-1.45-r3.ebuild,
+  -files/ngrep-1.45-Makefile.in.patch, files/ngrep-1.45-build-fixes.patch,
+  files/ngrep-1.45-prefix.patch, files/ngrep-1.45-setlocale.patch,
+  -files/ngrep-1.45.patch:
+  EAPI bump. Set --disable-pcap-restart to avoid more rude e-mails from libpcap
+  upstream. Force --enable-pcre instead of long obsolete shipped GNU regex.
+  Clean up patches.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

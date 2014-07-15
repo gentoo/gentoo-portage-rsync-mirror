@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ddd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.76 2014/04/08 00:48:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.77 2014/07/14 23:52:55 reavertm Exp $
+
+  14 Jul 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  files/ddd-3.3.12-man.patch:
+  Use libiconv-compatible charsets, bug 516370.
 
 *ddd-3.3.12-r4 (08 Apr 2014)
 

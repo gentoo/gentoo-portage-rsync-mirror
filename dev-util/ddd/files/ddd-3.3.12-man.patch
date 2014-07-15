@@ -10,7 +10,7 @@ diff -ruN ddd-3.3.12/ddd/Makefile.am ddd-my/ddd/Makefile.am
 -	    && $(MV) $@~ $@
 -
 +ddd.1:   ddd.man
-+	iconv -f ISO8859-15 -t UTF8 ddd.man > ddd.1
++	iconv -f ISO8859-15 -t UTF-8 ddd.man > ddd.1
  
  
  # -----------------------------------------------------------------------------

@@ -1,8 +1,8 @@
 Call setlocale to make isprint() decide what's printable depending
 on the current locale.  See bugs.debian.org/307496 .
 
---- ngrep-1.45.ds1.orig/ngrep.c
-+++ ngrep-1.45.ds1/ngrep.c
+--- a/ngrep.c
++++ b/ngrep.c
 @@ -97,6 +97,8 @@
  #include "regex-0.12/regex.h"
  #endif
