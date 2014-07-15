@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.72 2014/06/14 10:39:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.73 2014/07/15 18:04:57 nimiux Exp $
+
+  15 Jul 2014; Chema Alonso <nimiux@gentoo.org> scim-tables-0.5.13.ebuild:
+  Stable for amd64 wrt bug #509846
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   scim-tables-0.5.13.ebuild:

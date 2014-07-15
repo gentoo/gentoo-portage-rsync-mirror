@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.288 2014/07/15 10:01:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.289 2014/07/15 18:30:40 pacho Exp $
+
+  15 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/215-0001-always-check-for-__BYTE_ORDER-__BIG_ENDIAN-when-chec.patch,
+  +files/215-0002-endian-explicitly-include-endian.h-wherever-we-want-.patch,
+  -systemd-208-r3.ebuild, -systemd-214.ebuild, -systemd-214_p57.ebuild,
+  systemd-215-r1.ebuild:
+  Fix building in ppc* (#517174 by Mike Gilbert), drop old
 
   15 Jul 2014; Pacho Ramos <pacho@gentoo.org> -systemd-213.ebuild,
   -systemd-215.ebuild, systemd-215-r1.ebuild, systemd-9999.ebuild:

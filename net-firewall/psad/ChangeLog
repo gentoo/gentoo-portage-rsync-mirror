@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/psad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.77 2014/06/14 09:58:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.78 2014/07/15 18:31:24 nimiux Exp $
+
+  15 Jul 2014; Chema Alonso <nimiux@gentoo.org> psad-2.2.3.ebuild:
+  Stable for amd64 wrt bug #510584
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> psad-2.2.3.ebuild:
   x86 stable wrt bug #510584

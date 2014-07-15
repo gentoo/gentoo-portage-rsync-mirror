@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Tie-RefHash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Tie-RefHash/ChangeLog,v 1.1 2013/08/14 05:30:46 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Tie-RefHash/ChangeLog,v 1.2 2014/07/15 18:04:59 dilfridge Exp $
+
+*perl-Tie-RefHash-1.390.0-r2 (15 Jul 2014)
+
+  15 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Tie-RefHash-1.390.0-r1.ebuild, +perl-Tie-RefHash-1.390.0-r2.ebuild:
+  Improve dependencies
 
 *perl-Tie-RefHash-1.390.0-r1 (14 Aug 2013)
 
