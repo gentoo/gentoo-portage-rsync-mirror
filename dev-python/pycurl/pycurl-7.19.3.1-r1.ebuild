@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r1.ebuild,v 1.3 2014/07/16 03:03:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r1.ebuild,v 1.5 2014/07/16 03:59:55 floppym Exp $
 EAPI=5
 
 # The selftests fail with pypy, and urlgrabber segfaults for me.
@@ -27,9 +27,12 @@ RDEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
 	ssl? (
 		net-misc/curl[curl_ssl_gnutls(-)=,curl_ssl_nss(-)=,curl_ssl_openssl(-)=,-curl_ssl_axtls(-),-curl_ssl_cyassl(-),-curl_ssl_polarssl(-)]
 		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 ) )"
+
+# bottle-0.12.7: https://github.com/pycurl/pycurl/issues/180
+# bottle-0.12.7: https://github.com/defnull/bottle/commit/f35197e2a18de1672831a70a163fcfd38327a802
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/bottle[${PYTHON_USEDEP}] )"
+		>=dev-python/bottle-0.12.7[${PYTHON_USEDEP}] )"
 # Needed for individual runs of testsuite by python impls.
 DISTUTILS_IN_SOURCE_BUILD=1
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.100 2014/07/16 03:03:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.101 2014/07/16 03:51:45 floppym Exp $
+
+  16 Jul 2014; Mike Gilbert <floppym@gentoo.org> pycurl-7.19.3.1-r1.ebuild:
+  Update dependency on dev-python/bottle to resolve test failures on python3.4.
+  Thanks to jbergstroem for the help.
 
   16 Jul 2014; Mike Gilbert <floppym@gentoo.org> pycurl-7.19.3.1-r1.ebuild:
   Don't disable failing tests.
