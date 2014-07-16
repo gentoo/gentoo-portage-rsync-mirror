@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astor/ChangeLog,v 1.2 2014/06/29 03:40:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astor/ChangeLog,v 1.3 2014/07/16 08:06:00 idella4 Exp $
+
+*astor-0.4 (16 Jul 2014)
+
+  16 Jul 2014; Ian Delaney <idella4@gentoo.org> +astor-0.4.ebuild:
+  bump; add test phase and fix to avoid file collisions
 
   29 Jun 2014; Ian Delaney <idella4@gentoo.org> astor-0.3.ebuild:
   add py3.4 pypy, add missing dep, tidy, fixes bug #513900 by Patrick
