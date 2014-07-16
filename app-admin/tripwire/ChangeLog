@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.54 2014/06/14 10:30:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.55 2014/07/16 10:31:15 nimiux Exp $
+
+  16 Jul 2014; Chema Alonso <nimiux@gentoo.org> tripwire-2.4.2.2-r2.ebuild:
+  Stable for amd64 wrt bug #509764
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   tripwire-2.4.2.2-r2.ebuild:
