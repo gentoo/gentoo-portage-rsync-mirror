@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.112 2014/06/14 10:24:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.113 2014/07/16 12:20:06 nimiux Exp $
+
+  16 Jul 2014; Chema Alonso <nimiux@gentoo.org> synergy-1.4.16_p1969.ebuild:
+  Stable for amd64 wrt bug #509656
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   synergy-1.4.16_p1969.ebuild:
