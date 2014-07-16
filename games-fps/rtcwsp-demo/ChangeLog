@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/rtcwsp-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/ChangeLog,v 1.10 2012/02/08 21:24:43 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/ChangeLog,v 1.11 2014/07/16 19:45:18 axs Exp $
+
+*rtcwsp-demo-1.1b-r1 (16 Jul 2014)
+
+  16 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +rtcwsp-demo-1.1b-r1.ebuild:
+  Bumped EAPI to 5, adjusted deps for gx86-multilib, added buffer overflow
+  workaround.  AFAICT, game will not run ever anywhere, but this commit at least
+  makes the ebuild up to date
 
   08 Feb 2012; Mike Frysinger <vapier@gentoo.org> rtcwsp-demo-1.1b.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -42,4 +50,3 @@
   +rtcwsp-demo-1.1b.ebuild:
   Initial import. Ebuild by Alexander Nicolaysen Sornes
   <alex@thehandofagony.com>. Closing bug #115778.
-
