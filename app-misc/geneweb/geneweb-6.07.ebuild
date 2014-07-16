@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.4 2014/06/14 09:26:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.5 2014/07/16 06:04:46 tupone Exp $
 
 EAPI=4
 inherit eutils user
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 x86"
 IUSE="+ocamlopt"
 
 RDEPEND="dev-lang/ocaml[ocamlopt?]
-	dev-ml/camlp5"
+	dev-ml/camlp5[ocamlopt?]"
 DEPEND="${RDEPEND}
 	!net-p2p/ghostwhitecrab"
 
