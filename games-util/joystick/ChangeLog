@@ -1,6 +1,13 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.24 2014/07/16 00:45:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.25 2014/07/16 01:19:15 mr_bones_ Exp $
+
+*joystick-1.4.7 (16 Jul 2014)
+
+  16 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/joystick-1.4.7-build.patch, +joystick-1.4.7.ebuild,
+  files/joystick-1.4.4-build.patch:
+  version bump
 
   16 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/joystick-1.4.2-build.patch, -files/joystick-20060731-asneeded.patch,
