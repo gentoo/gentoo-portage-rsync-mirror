@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.12 2014/03/11 19:52:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.13 2014/07/16 22:49:06 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sbd-1.37-r1.ebuild:
+  Remove unused variables, die() message. Whitespace.
 
   11 Mar 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #53266

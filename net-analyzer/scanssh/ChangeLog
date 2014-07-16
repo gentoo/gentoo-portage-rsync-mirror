@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scanssh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.24 2012/07/20 01:32:11 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.25 2014/07/16 22:58:19 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> scanssh-2.1.ebuild,
+  files/scanssh-2.0-fix-warnings.diff:
+  EAPI bump. Clean up patch.
 
   20 Jul 2012; Anthony G. Basile <blueness@gentoo.org> scanssh-2.1.ebuild:
   Keyword ~ppc64

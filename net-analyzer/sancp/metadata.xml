@@ -2,6 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>Network security tool information collector</longdescription>
 <use><flag name='sguil'>Enable sguil (The Analyst Console for Network Security Monitoring) support</flag></use>
 </pkgmetadata>

@@ -1,6 +1,5 @@
-diff --exclude='*~' -urN scanssh-2.1.orig/arc4random.c scanssh-2.1/arc4random.c
---- scanssh-2.1.orig/arc4random.c	2005-03-08 21:20:11.117873024 -0500
-+++ scanssh-2.1/arc4random.c	2005-03-08 21:26:22.265450016 -0500
+--- a/arc4random.c
++++ b/arc4random.c
 @@ -1,5 +1,6 @@
  #include <sys/types.h>
  #include <stdlib.h>
@@ -8,9 +7,8 @@ diff --exclude='*~' -urN scanssh-2.1.orig/arc4random.c scanssh-2.1/arc4random.c
  
  #include "config.h"
  
-diff --exclude='*~' -urN scanssh-2.1.orig/interface.c scanssh-2.1/interface.c
---- scanssh-2.1.orig/interface.c	2005-03-08 21:20:11.116873176 -0500
-+++ scanssh-2.1/interface.c	2005-03-08 21:33:50.532303096 -0500
+--- a/interface.c
++++ b/interface.c
 @@ -56,6 +56,13 @@
  
  #include "interface.h"
@@ -25,9 +23,8 @@ diff --exclude='*~' -urN scanssh-2.1.orig/interface.c scanssh-2.1/interface.c
  /* Prototypes */
  static int pcap_dloff(pcap_t *);
  
-diff --exclude='*~' -urN scanssh-2.1.orig/md5.c scanssh-2.1/md5.c
---- scanssh-2.1.orig/md5.c	2005-03-08 21:20:11.117873024 -0500
-+++ scanssh-2.1/md5.c	2005-03-08 21:26:53.747663992 -0500
+--- a/md5.c
++++ b/md5.c
 @@ -23,6 +23,7 @@
     copyright in any changes I have made; this code remains in the
     public domain.  */
@@ -36,9 +33,8 @@ diff --exclude='*~' -urN scanssh-2.1.orig/md5.c scanssh-2.1/md5.c
  #include <sys/types.h>
  
  #ifdef HAVE_CONFIG_H
-diff --exclude='*~' -urN scanssh-2.1.orig/scanssh.c scanssh-2.1/scanssh.c
---- scanssh-2.1.orig/scanssh.c	2005-03-08 21:20:11.124871960 -0500
-+++ scanssh-2.1/scanssh.c	2005-03-08 21:34:08.508570288 -0500
+--- a/scanssh.c
++++ b/scanssh.c
 @@ -78,6 +78,10 @@
  #define DNFPRINTF(y, x)
  #endif
@@ -50,9 +46,8 @@ diff --exclude='*~' -urN scanssh-2.1.orig/scanssh.c scanssh-2.1/scanssh.c
  struct address_node {
  	TAILQ_ENTRY (address_node) an_next;
  
-diff --exclude='*~' -urN scanssh-2.1.orig/xmalloc.c scanssh-2.1/xmalloc.c
---- scanssh-2.1.orig/xmalloc.c	2005-03-08 21:20:11.120872568 -0500
-+++ scanssh-2.1/xmalloc.c	2005-03-08 21:34:26.479838240 -0500
+--- a/xmalloc.c
++++ b/xmalloc.c
 @@ -20,6 +20,10 @@
  
  #include "config.h"

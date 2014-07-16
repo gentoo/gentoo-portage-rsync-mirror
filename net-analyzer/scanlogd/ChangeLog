@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanlogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.34 2014/06/14 09:48:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.35 2014/07/16 22:50:58 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> scanlogd-2.2.7.ebuild:
   x86 stable wrt bug #502864

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sancp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.16 2012/11/21 04:30:56 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.17 2014/07/16 22:35:10 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sancp-1.6.1-r4.ebuild,
+  metadata.xml:
+  EAPI bump. Remove short <longdescription>.
 
   21 Nov 2012; Jeroen Roovers <jer@gentoo.org> files/sancp.confd:
   Whitespace.
