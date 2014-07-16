@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1320 2014/07/13 16:19:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1321 2014/07/16 17:18:32 johu Exp $
+
+  16 Jul 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
+  Add kde-workspace 4.11.11 SRC_URI, remove obsolete.
 
   13 Jul 2014; Ulrich Müller <ulm@gentoo.org> gnatbuild.eclass:
   Don't call eselect with obsolete --no-color option.
