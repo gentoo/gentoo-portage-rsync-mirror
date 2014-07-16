@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r1.ebuild,v 1.2 2014/07/08 00:22:00 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.3.1-r1.ebuild,v 1.3 2014/07/16 03:03:40 floppym Exp $
 EAPI=5
 
 # The selftests fail with pypy, and urlgrabber segfaults for me.
@@ -57,12 +57,6 @@ src_test() {
 }
 
 python_test() {
-	# https://github.com/pycurl/pycurl/issues/180
-	if [[ "${EPYTHON}" == python3.4 ]]; then
-		sed -e 's:test_post_buffer:_&:' \
-			-e 's:test_post_file:_&:' \
-			-i tests/post_test.py || die
-	fi
 	emake test
 }
 
