@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.2 2014/07/15 17:45:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.3 2014/07/16 14:15:44 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -51,9 +51,17 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-includes.patch
 	cp /usr/share/aclocal/libtool.m4 libtool.m4.in
 	cat acinclude.m4.in libtool.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
+
+	# The build system is a complete mess, so apply a configure patch here
+	# instead of patching configure.in above
+	epatch "${FILESDIR}"/${P}-INCS.patch
+
+	# Stop make from doing autotools stuff
+	sed -i -e '/missing --run echo/s|=.*|= true|g' Makefile.in || die
 }
 
 src_configure() {
