@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for net-ping
-KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos
-RDEPEND=|| ( ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~perl-core/net-ping-2.36 )
-SLOT=0
-_md5_=f54d30132e48a26801592f35c41fb3f5

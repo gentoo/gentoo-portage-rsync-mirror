@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/Version-Requirements-0.101.22.ebuild,v 1.1 2014/07/15 18:26:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/Version-Requirements-0.101.22-r1.ebuild,v 1.1 2014/07/16 18:31:56 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=RJBS
-MODULE_VERSION=0.101021
+MODULE_VERSION=0.101022
 inherit perl-module
 
 DESCRIPTION="A set of version requirements for a CPAN dist"

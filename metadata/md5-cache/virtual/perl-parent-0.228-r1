@@ -1,6 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for parent
+EAPI=5
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86 ~x86-freebsd ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
-RDEPEND=|| ( =dev-lang/perl-5.18* =dev-lang/perl-5.16* =dev-lang/perl-5.14* ~perl-core/parent-0.228 )
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/parent-0.228 ) !<perl-core/parent-0.228 !>perl-core/parent-0.228-r999
 SLOT=0
-_md5_=1421a8217c9dd84be291a456334adf40
+_md5_=a289624ba48969d2ec0d7c00dfa7d2bd
