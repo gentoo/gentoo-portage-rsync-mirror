@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.354 2014/06/20 16:55:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.355 2014/07/16 00:28:28 robbat2 Exp $
+
+*lvm2-2.02.107 (16 Jul 2014)
+
+  16 Jul 2014; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-2.02.107-static-pkgconfig-libs.patch, +lvm2-2.02.107.ebuild:
+  Bump per bug #516604.
 
   20 Jun 2014; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.106.ebuild:
   Always pass --disable-udev-systemd-background-jobs with USE="device-mapper-
