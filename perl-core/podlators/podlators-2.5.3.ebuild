@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/podlators-2.500.300.ebuild,v 1.1 2013/10/28 05:55:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/podlators-2.5.3.ebuild,v 1.1 2014/07/16 19:10:18 dilfridge Exp $
 
 EAPI=5
 

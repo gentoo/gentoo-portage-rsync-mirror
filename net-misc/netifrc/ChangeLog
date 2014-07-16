@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.32 2014/07/14 18:36:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.33 2014/07/16 19:21:58 robbat2 Exp $
+
+*netifrc-0.2.4 (16 Jul 2014)
+
+  16 Jul 2014; Robin H. Johnson <robbat2@gentoo.org> +netifrc-0.2.4.ebuild:
+  Bump, includes fixes for bugs #516920 (ip6gre functionality) and #506966
+  (useful if you have a bad system clock).
 
   14 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> netifrc-0.2.2.ebuild:
   ia64 stable wrt bug #507070
