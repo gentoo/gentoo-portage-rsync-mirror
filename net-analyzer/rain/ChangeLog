@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rain
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/ChangeLog,v 1.9 2010/09/15 16:29:47 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rain/ChangeLog,v 1.10 2014/07/16 22:14:11 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> rain-1.2.9_beta1.ebuild,
+  +files/rain-1.2.9_beta1-gentoo.patch, metadata.xml:
+  EAPI bump. Convert sed scripts to patch.
 
   15 Sep 2010; Jeroen Roovers <jer@gentoo.org> rain-1.2.9_beta1.ebuild:
   Remove useless DEPEND. Fix prefix.
