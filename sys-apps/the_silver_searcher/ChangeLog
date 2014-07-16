@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/the_silver_searcher
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.39 2014/07/01 06:39:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.40 2014/07/16 07:58:07 zlogene Exp $
+
+  16 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  the_silver_searcher-0.23.0.ebuild:
+  Add ~mips keyword wrt bug #517150
 
 *the_silver_searcher-0.23.0 (01 Jul 2014)
 
