@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.211 2014/06/25 23:35:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.212 2014/07/16 11:52:57 jer Exp $
+
+*libnl-3.2.25 (16 Jul 2014)
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.25_rc1.ebuild,
+  +libnl-3.2.25.ebuild:
+  Version bump.
 
   25 Jun 2014; Jeroen Roovers <jer@gentoo.org> libnl-3.2.25_rc1.ebuild:
   Remove keywording until reverse dependencies have been updated (bug #515132).

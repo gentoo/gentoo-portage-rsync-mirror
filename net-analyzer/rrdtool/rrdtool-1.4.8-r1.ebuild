@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.1 2014/05/20 06:01:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.2 2014/07/16 11:51:40 jer Exp $
 
 EAPI="5"
 
@@ -16,11 +16,7 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="dbi doc +graph lua perl python ruby rrdcgi static-libs tcl tcpd"
-
-PDEPEND="
-	ruby? ( ~dev-ruby/rrdtool-bindings-${PV} )
-"
+IUSE="dbi doc +graph lua perl python rrdcgi static-libs tcl tcpd"
 
 RDEPEND="
 	>=dev-libs/glib-2.28.7[static-libs(+)?]
