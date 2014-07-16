@@ -1,6 +1,12 @@
 # ChangeLog for games-util/joystick
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.23 2013/06/30 21:09:53 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.24 2014/07/16 00:45:41 mr_bones_ Exp $
+
+  16 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/joystick-1.4.2-build.patch, -files/joystick-20060731-asneeded.patch,
+  -files/joystick-MCS-defines.patch, -files/joystick-jstest-segv.patch,
+  -joystick-0_pre20060731.ebuild, -joystick-1.4.2.ebuild:
+  old
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> joystick-1.4.4.ebuild:
   Stable for ppc, wrt bug #475238

@@ -1,5 +1,6 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DESCRIPTION=Control a robot as it races across Europa
+EAPI=5
 HOMEPAGE=http://www.linuxgamepublishing.com/info.php?id=9
 KEYWORDS=x86
 LICENSE=all-rights-reserved GPL-2+
@@ -8,4 +9,4 @@ RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=http://demos.linuxgamepublishing.com/mindrover/mindrover_demo.run
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=290521c49a820ae490df9c3249ddc83b
+_md5_=39275c6f49d3ac56aa9b4bea52e45eab

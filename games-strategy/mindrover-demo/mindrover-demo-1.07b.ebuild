@@ -1,7 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.7 2014/05/06 16:06:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.8 2014/07/16 00:36:31 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils unpacker games
 
 MY_P="mindrover_demo.run"
@@ -26,18 +27,18 @@ src_install() {
 
 	dodir "${dir}"
 
-	tar -zxf data.tar.gz -C "${Ddir}"/ || die "untar failed"
-	tar -zxf music.tar.gz -C "${Ddir}"/ || die "untar failed"
+	tar -zxf data.tar.gz -C "${Ddir}"/ || die
+	tar -zxf music.tar.gz -C "${Ddir}"/ || die
 
 	dodoc README
-	newicon icon.xpm ${PN}.xpm || die "doins failed"
+	newicon icon.xpm ${PN}.xpm || die
 	exeinto "${dir}"
 	doexe bin/Linux/x86/glibc-2.1/mindrover_demo \
-		bin/Linux/x86/glibc-2.1/lib/libopenal.so.0.0.6 || die "doexe failed"
+		bin/Linux/x86/glibc-2.1/lib/libopenal.so.0.0.6 || die
 	dosym "${dir}"/libopenal.so.0.0.6 "${dir}"/libopenal.so.0
 
 	games_make_wrapper ${PN} ./mindrover_demo "${dir}" "${dir}"
+	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)"
 
 	prepgamesdirs
-	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)"
 }

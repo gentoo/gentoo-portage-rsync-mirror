@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/mindrover-demo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/ChangeLog,v 1.7 2014/05/06 16:06:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/ChangeLog,v 1.8 2014/07/16 00:36:31 mr_bones_ Exp $
+
+  16 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  mindrover-demo-1.07b.ebuild:
+  EAPI=5; tidy
 
   06 May 2014; Ulrich Müller <ulm@gentoo.org> mindrover-demo-1.07b.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, bug 505772.
@@ -28,4 +32,3 @@
   17 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
   +mindrover-demo-1.07b.ebuild:
   Initial import.  Ebuild by me.  Closing bug #70915.
-
