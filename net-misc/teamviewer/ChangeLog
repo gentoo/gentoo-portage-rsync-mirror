@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/teamviewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.10 2014/06/18 20:40:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.11 2014/07/16 16:14:55 hasufell Exp $
+
+*teamviewer-9.0.30203 (16 Jul 2014)
+
+  16 Jul 2014; Julian Ospald <hasufell@gentoo.org>
+  -teamviewer-9.0.27891.ebuild, +teamviewer-9.0.30203.ebuild,
+  -files/teamviewer-9.0.27891-gentoo.patch,
+  +files/teamviewer-9.0.30203-gentoo.patch:
+  version bump wrt #517204
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> teamviewer-7.0.9377.ebuild,
   teamviewer-8.0.20931.ebuild, teamviewer-9.0.27891.ebuild:

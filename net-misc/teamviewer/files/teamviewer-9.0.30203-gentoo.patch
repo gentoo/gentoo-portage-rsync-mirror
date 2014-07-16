@@ -2,7 +2,7 @@ diff --git a/opt/teamviewer9/tv_bin/script/tvw_extra b/opt/teamviewer9/tv_bin/sc
 index 71164aa..848cd25 100644
 --- a/opt/teamviewer9/tv_bin/script/tvw_extra
 +++ b/opt/teamviewer9/tv_bin/script/tvw_extra
-@@ -16,13 +16,6 @@ function PrintHelp()
+@@ -16,13 +16,6 @@
    isInstalledTV || return
    ABecho "teamviewer --passwd [PASSWD]"	"set a password (useful when installing remote (ssh)"
    echo
@@ -16,10 +16,12 @@ index 71164aa..848cd25 100644
  }
  
  function PrintVersion()
-@@ -39,19 +32,6 @@ function PrintInfo()
+@@ -37,19 +30,6 @@
+   PrintDaemonStatus
+   echo
    PrintTeamViewerID
- }
- 
+-}
+-
 -function PrintDaemonStatus()
 -{
 -  local cmd="$(daemonCtl 'status')"
@@ -31,12 +33,10 @@ index 71164aa..848cd25 100644
 -  fi
 -  
 -  ABecho "teamviewerd status" "$txt"
--}
--
+ }
+ 
  function PrintTeamViewerID()
- {
-   local config="$TV_BASE_DIR/config/global.conf"
-@@ -64,16 +44,17 @@ function PrintTeamViewerID()
+@@ -64,20 +44,21 @@
    ABecho "TeamViewer ID:" "$tvid"
  
    if [ -z "$tvid" ] && isInstalledTV; then
@@ -52,16 +52,20 @@ index 71164aa..848cd25 100644
 +
    local pwd="$1"
    [ -n "$pwd" ] || die 'no password specified'
--
+ 
+   installedTVorDie
+   isSuperUser || die 'You need root permissions for this operation'
+ 
 -  Run_Daemon 'stop' > /dev/null
-   
-   $TV_BIN_DIR/teamviewerd --passwd "$pwd"
+-  
+   "$TV_BIN_DIR/teamviewerd" --passwd "$pwd"
    case $? in
-@@ -84,19 +65,19 @@ function SetPasswd()
+     0  ) echo 'ok'	;;
+@@ -88,12 +69,14 @@
      *  ) echo 'unknown response'	;;
     esac
    
--  Run_Daemon 'start' || die 'failed to restart the daemon'
+-  Run_Daemon 'start' > /dev/null || die 'failed to restart the daemon'
 -  echo
 +  echo "You may start your teamviewer daemon again."
  }
@@ -74,19 +78,20 @@ index 71164aa..848cd25 100644
    local license="$1"
    local path='/tmp/tv_global.conf'
  
-   [ -n "$license" ] || die 'no license specified'
--
+@@ -101,8 +84,6 @@
+ 
+   isSuperUser || die 'You need root permissions for this operation'
+ 
 -  Run_Daemon 'stop' > /dev/null
 -  
-+ 
-   $TV_BIN_DIR/teamviewerd --export-license "$license" "$path"
+   "$TV_BIN_DIR/teamviewerd" --export-license "$license" "$path"
    case $? in
      0  ) echo "ok - license exported to '$path'"		;;
-@@ -104,8 +85,7 @@ function ExportLicense()
+@@ -110,8 +91,7 @@
      *  ) echo 'unknown response'	;;
     esac
    
--  Run_Daemon 'start' || die 'failed to restart the daemon'
+-  Run_Daemon 'start' > /dev/null || die 'failed to restart the daemon'
 -  echo
 +  echo "You may start your teamviewer daemon again."
  }
@@ -96,15 +101,15 @@ diff --git a/opt/teamviewer9/tv_bin/script/tvw_main b/opt/teamviewer9/tv_bin/scr
 index 8984db0..c6dff8d 100644
 --- a/opt/teamviewer9/tv_bin/script/tvw_main
 +++ b/opt/teamviewer9/tv_bin/script/tvw_main
-@@ -4,7 +4,6 @@ source "$TV_SCRIPT_DIR/tvw_aux"
+@@ -4,7 +4,6 @@
  source "$TV_SCRIPT_DIR/tvw_config"
  source "$TV_SCRIPT_DIR/tvw_exec"
  source "$TV_SCRIPT_DIR/tvw_extra"
 -source "$TV_SCRIPT_DIR/tvw_daemon"
  source "$TV_SCRIPT_DIR/tvw_profile"
  
- 
-@@ -19,7 +18,6 @@ function Main()
+ function Main()
+@@ -18,7 +17,6 @@
      --help )			PrintHelp				;;
      --version )			PrintVersion			;;
      --info )			PrintInfo				;;
@@ -112,7 +117,7 @@ index 8984db0..c6dff8d 100644
      --winecfg )	shift;	Run_WineCfg "$@"		;;
      --regedit )	shift;	Run_RegEdit "$@"		;;
      --kill )			Run_KillTeamViewer		;;
-@@ -166,18 +164,3 @@ function Run_RegEdit()
+@@ -170,18 +168,3 @@
    Init
    wine regedit "$@"
  }
