@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.10 2014/05/12 00:36:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.11 2014/07/16 12:35:45 kensington Exp $
+
+  16 Jul 2014; Michael Palimaka <kensington@gentoo.org> kscreen-1.0.2.1.ebuild,
+  kscreen-1.0.71.ebuild:
+  Pin x11-libs/libkscreen dependency to SLOT 4.
 
   12 May 2014; Johannes Huber <johu@gentoo.org> kscreen-1.0.71.ebuild:
   Unrestrict tests.
