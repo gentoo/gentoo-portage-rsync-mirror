@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14-r2.ebuild,v 1.6 2014/01/08 06:41:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14-r2.ebuild,v 1.7 2014/07/16 02:06:16 jer Exp $
 
 EAPI=4
 inherit eutils user
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/File-Tail
-	>=net-analyzer/rrdtool-1.2.2[perl]"
+	>=net-analyzer/rrdtool-1.2.2[graph,perl]"
 DEPEND=">=sys-apps/sed-4"
 
 pkg_setup() {

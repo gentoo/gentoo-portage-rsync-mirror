@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.264 2014/07/15 14:04:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.265 2014/07/16 02:14:38 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.8-r2.ebuild:
+  Make USE=graph no longer a default.
 
 *rrdtool-1.4.8-r2 (15 Jul 2014)
 

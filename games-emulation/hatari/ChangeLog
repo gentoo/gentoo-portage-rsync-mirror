@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/hatari
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.45 2014/05/15 16:37:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.46 2014/07/16 02:21:35 mr_bones_ Exp $
+
+  16 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/hatari-1.5.0-gentoo.patch, -files/hatari-1.6.1-gentoo-docdir.patch,
+  -files/hatari-1.6.1-gentoo.patch, -hatari-1.5.0.ebuild,
+  -hatari-1.6.1-r1.ebuild, -hatari-1.6.1.ebuild,
+  files/hatari-1.6.2-gentoo-docdir.patch, files/hatari-1.6.2-gentoo.patch:
+  old
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> hatari-1.5.0.ebuild,
   hatari-1.6.1.ebuild, hatari-1.6.1-r1.ebuild, hatari-1.6.2.ebuild:
