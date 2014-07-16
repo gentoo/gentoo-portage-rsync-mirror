@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.305 2014/06/19 13:32:11 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.306 2014/07/16 17:41:06 johu Exp $
+
+*kcachegrind-4.13.3 (16 Jul 2014)
+
+  16 Jul 2014; Johannes Huber <johu@gentoo.org> +kcachegrind-4.13.3.ebuild:
+  Version bump KDE SC 4.13.3
 
   19 Jun 2014; Chris Reffett <creffett@gentoo.org> -kcachegrind-4.13.1.ebuild:
   Remove KDE SC 4.13.1

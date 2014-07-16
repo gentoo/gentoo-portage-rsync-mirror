@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.313 2014/06/15 17:24:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.314 2014/07/16 17:40:15 johu Exp $
+
+*ksmserver-4.11.11 (16 Jul 2014)
+
+  16 Jul 2014; Johannes Huber <johu@gentoo.org> +ksmserver-4.11.11.ebuild:
+  Version bump KDE Workspace 4.11.11
 
 *ksmserver-4.11.10 (15 Jun 2014)
 
