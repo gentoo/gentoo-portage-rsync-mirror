@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/posix-spawn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/ChangeLog,v 1.7 2014/07/16 05:24:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/ChangeLog,v 1.8 2014/07/16 13:04:42 mrueg Exp $
+
+*posix-spawn-0.3.8_p20140630-r1 (16 Jul 2014)
+
+  16 Jul 2014; Manuel Rüger <mrueg@gentoo.org>
+  +posix-spawn-0.3.8_p20140630-r1.ebuild, -posix-spawn-0.3.8.ebuild:
+  Add version with ruby21 support. Cleanup old.
 
   16 Jul 2014; Hans de Graaff <graaff@gentoo.org>
   posix-spawn-0.3.8_p20140630.ebuild:

@@ -5,6 +5,7 @@
 	<use>
 		<flag name='dovecot-sasl'>Enable <pkg>net-mail/dovecot</pkg> protocol
 			version 1 (server only) SASL implementation</flag>
+		<flag name='eai'>Adds support for SMTPUTF8</flag>
 		<flag name='ldap-bind'>Adds support for binding to LDAP backend
 			using <pkg>dev-libs/cyrus-sasl</pkg></flag>
 		<flag name='memcached'>Adds support for using <pkg>net-misc/memcached</pkg>

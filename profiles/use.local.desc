@@ -3197,6 +3197,7 @@ mail-mta/netqmail:highvolume - Prepare netqmail for high volume servers
 mail-mta/netqmail:noauthcram - If you do NOT want AUTHCRAM to be available
 mail-mta/opensmtpd:mta - Enable this to install as system-wide MTA
 mail-mta/postfix:dovecot-sasl - Enable net-mail/dovecot protocol version 1 (server only) SASL implementation
+mail-mta/postfix:eai - Adds support for SMTPUTF8
 mail-mta/postfix:ldap-bind - Adds support for binding to LDAP backend using dev-libs/cyrus-sasl
 mail-mta/postfix:lmdb - Adds support for using dev-db/lmdb for lookup tables
 mail-mta/postfix:memcached - Adds support for using net-misc/memcached for lookup tables
