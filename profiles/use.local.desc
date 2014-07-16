@@ -876,7 +876,6 @@ app-misc/recoll:tex - Index TeX files
 app-misc/recoll:wordperfect - Index WordPerfect documents
 app-misc/recoll:xml - Index several XML-based formats (Abiword, FictionBook, Kword, Office OpenXML, OpenDocument, SVG)
 app-misc/roadnav:festival - Enable support for app-accessibility/festival
-app-misc/roadnav:flite - Enable support for app-accessibility/flite (festival-lite)
 app-misc/roadnav:openstreetmap - Enable openstreetmap support
 app-misc/roadnav:scripting - Enable scripting support
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)

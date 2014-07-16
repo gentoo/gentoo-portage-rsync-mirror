@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/posix-spawn-0.3.8_p20140630.ebuild,v 1.1 2014/07/16 02:11:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/posix-spawn-0.3.8_p20140630.ebuild,v 1.2 2014/07/16 05:24:53 graaff Exp $
 
 EAPI=5
 
@@ -24,7 +24,6 @@ SLOT="0"
 IUSE="test"
 
 RUBY_S="${PN}-${COMMIT_ID}"
-
 
 each_ruby_configure() {
 	${RUBY} -Cext extconf.rb || die

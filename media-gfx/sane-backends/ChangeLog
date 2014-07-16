@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.257 2014/06/18 19:24:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.258 2014/07/16 05:20:46 patrick Exp $
+
+  16 Jul 2014; Patrick Lauer <patrick@gentoo.org>
+  -sane-backends-1.0.24-r1.ebuild:
+  Drop version with unsatisfiable deps
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> sane-backends-1.0.24-r5.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/roadnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.15 2014/07/14 16:46:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/ChangeLog,v 1.16 2014/07/16 05:25:07 patrick Exp $
+
+  16 Jul 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneded useflag descriptions from metadata.xml
 
 *roadnav-0.19-r1 (14 Jul 2014)
 

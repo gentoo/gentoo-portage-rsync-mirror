@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-0.9.3.ebuild,v 1.1 2014/01/22 06:59:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-1.0.0.ebuild,v 1.1 2014/07/16 05:16:53 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
@@ -23,9 +23,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/faraday-0.8
-	>=dev-ruby/jwt-0.1.8
-	>=dev-ruby/multi_json-1.0.3
-	>=dev-ruby/multi_xml-0.5
+	>=dev-ruby/jwt-1.0 =dev-ruby/jwt-1*
+	>=dev-ruby/multi_json-1.3 =dev-ruby/multi_json-1*
+	>=dev-ruby/multi_xml-0.5:0
 	>=dev-ruby/rack-1.2"
 ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.5.0:2 )"
 
