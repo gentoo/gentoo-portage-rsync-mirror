@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.269 2014/06/28 12:05:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.270 2014/07/16 15:31:42 hasufell Exp $
+
+*blender-2.71-r1 (16 Jul 2014)
+
+  16 Jul 2014; Julian Ospald <hasufell@gentoo.org> +blender-2.71-r1.ebuild,
+  +files/08-blender-2.71-gflags.patch:
+  fix opencolorio dep wrt #515606, fix building with gflags-2.1.1 and adjust
+  dep wrt #517134, add epatch_user
 
 *blender-2.71 (28 Jun 2014)
 

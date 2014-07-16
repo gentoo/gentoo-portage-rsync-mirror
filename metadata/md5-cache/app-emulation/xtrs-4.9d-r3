@@ -4,11 +4,11 @@ DESCRIPTION=Radio Shack TRS-80 emulator
 EAPI=5
 HOMEPAGE=http://www.tim-mann.org/xtrs.html
 IUSE=ls-dos
-KEYWORDS=~amd64 ~ppc x86 ~x86-fbsd
+KEYWORDS=amd64 ~ppc x86 ~x86-fbsd
 LICENSE=xtrs ls-dos? ( freedist )
 RDEPEND=sys-libs/ncurses sys-libs/readline >=x11-libs/libX11-1.0.0
 RESTRICT=ls-dos? ( bindist )
 SLOT=0
 SRC_URI=http://www.tim-mann.org/trs80/xtrs-4.9d.tar.gz ls-dos? ( http://www.tim-mann.org/trs80/ld4-631.zip http://dev.gentoo.org/~ulm/distfiles/ld4-631l.xd3 )
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=86f97e727baca1eac64023ec22d234ae
+_md5_=7580c2c5843badfe15c555edd6b15a73

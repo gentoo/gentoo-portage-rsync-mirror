@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.54 2014/06/14 10:10:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.55 2014/07/16 15:32:35 nimiux Exp $
+
+  16 Jul 2014; Chema Alonso <nimiux@gentoo.org> xtrs-4.9d-r3.ebuild:
+  Stable for amd64 wrt bug #510678
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> xtrs-4.9d-r3.ebuild:
   x86 stable wrt bug #510678

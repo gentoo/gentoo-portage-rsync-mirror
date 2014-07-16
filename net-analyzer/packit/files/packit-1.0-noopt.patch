@@ -1,6 +1,5 @@
-diff -uNr packit-1.0.orig/src/main.c packit-1.0/src/main.c
---- packit-1.0.orig/src/main.c	2003-11-29 17:55:20.000000000 +0100
-+++ packit-1.0/src/main.c	2006-09-22 02:02:21.000000000 +0200
+--- a/src/main.c
++++ b/src/main.c
 @@ -201,6 +201,7 @@
  #ifdef DEBUG
      fprintf(stdout, "DEBUG: parse_inject\n");

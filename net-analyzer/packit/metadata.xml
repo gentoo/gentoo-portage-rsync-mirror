@@ -2,5 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>network auditing tool that allows you to monitor, manipulate, and inject customized IPv4 traffic</longdescription>
 </pkgmetadata>

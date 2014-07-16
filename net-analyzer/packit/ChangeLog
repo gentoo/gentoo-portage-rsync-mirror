@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/packit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.29 2012/06/13 15:59:55 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.30 2014/07/16 15:43:37 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> packit-1.0-r2.ebuild,
+  files/packit-1.0-format.patch, files/packit-1.0-noopt.patch,
+  files/packit-1.0-nostrip.patch, +files/packit-1.0-pcap-header.patch,
+  metadata.xml:
+  EAPI bump. Change sed script into patch. Clean up patches. Set SLOT Depend on
+  net-libs/libnet.
 
   13 Jun 2012; Jeroen Roovers <jer@gentoo.org> -packit-1.0-r1.ebuild:
   Old.

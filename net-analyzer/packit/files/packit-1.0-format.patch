@@ -21,7 +21,7 @@ is not done at all: instead, set a precision. -JeR
          r_neaddr[0], r_neaddr[1], r_neaddr[2], r_neaddr[3], r_neaddr[4], r_neaddr[5]);
  
      if(libnet_build_arp(
---- a/src/shape_ethernet_hdr.c.org
+--- a/src/shape_ethernet_hdr.c
 +++ b/src/shape_ethernet_hdr.c
 @@ -56,7 +56,7 @@
          if(format_ethernet_addr(ehdr_o.s_addr, us_addr) == 0)
