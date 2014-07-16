@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-lv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.25 2014/07/04 01:34:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.26 2014/07/15 23:17:49 mrueg Exp $
+
+  15 Jul 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add Maris Nartiss as proxied maintainer.
 
 *myspell-lv-1.0.0 (04 Jul 2014)
 

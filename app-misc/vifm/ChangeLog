@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vifm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.40 2014/07/15 11:25:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.41 2014/07/15 23:10:35 zlogene Exp $
+
+  15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> vifm-0.7.6.ebuild:
+  x86 stable wrt bug #510728
 
   15 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> vifm-0.7.6.ebuild:
   amd64 stable wrt bug #510728
