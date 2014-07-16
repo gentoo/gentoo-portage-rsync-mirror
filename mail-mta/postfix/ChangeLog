@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.514 2014/07/16 13:05:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.515 2014/07/16 14:00:01 eras Exp $
+
+  16 Jul 2014; Eray Aslan <eras@gentoo.org> metadata.xml:
+  Beutify wording
 
   16 Jul 2014; Eray Aslan <eras@gentoo.org> metadata.xml,
   postfix-2.12_pre20140715.ebuild:

@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.0.ebuild,v 1.1 2014/06/28 23:14:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.0.ebuild,v 1.2 2014/07/16 13:35:19 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
-PYTHON_COMPAT=( python{2_6,2_7} )
+USE_RUBY="ruby19 ruby20"
+PYTHON_COMPAT=( python2_7 )
 
 RUBY_FAKEGEM_NAME="pygments.rb"
 MY_P="${RUBY_FAKEGEM_NAME}-${PV}"

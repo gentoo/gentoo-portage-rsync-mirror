@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gmm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.31 2012/12/23 19:34:01 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.32 2014/07/16 13:56:23 kensington Exp $
+
+  16 Jul 2014; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Drop to maintainer needed.
 
   23 Dec 2012; Markus Meier <maekke@gentoo.org> gmm-4.2.ebuild:
   add ~arm

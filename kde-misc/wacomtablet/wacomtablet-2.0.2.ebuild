@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/wacomtablet-2.0.2.ebuild,v 1.1 2014/07/16 13:28:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/wacomtablet-2.0.2.ebuild,v 1.2 2014/07/16 13:38:58 kensington Exp $
 
 EAPI=5
 
 KDE_LINGUAS="ar bg bs ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hu ja kk km ko lt mai mr nb nds nl pa pl
 pt pt_BR ro ru sk sl sv tr ug uk zh_CN zh_TW"
+KDE_DOC_DIRS="doc/user"
 KDE_HANDBOOK="optional"
 VIRTUALX_REQUIRED="test"
 inherit kde4-base
