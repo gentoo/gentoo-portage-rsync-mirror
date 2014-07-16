@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/aiccu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.50 2013/09/06 18:35:35 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.51 2014/07/16 18:04:53 pacho Exp $
+
+  16 Jul 2014; Pacho Ramos <pacho@gentoo.org> -aiccu-2007.01.15-r2.ebuild,
+  aiccu-2007.01.15-r4.ebuild, files/aiccu-2007.01.15-systemd.patch:
+  Fix systemd linking (#502448 by Jonathan Callen), drop old
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r4.ebuild:
   Stable for sparc, wrt bug #480088

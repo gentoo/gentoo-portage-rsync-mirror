@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.300 2014/03/06 02:19:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.301 2014/07/16 18:21:13 williamh Exp $
+
+  16 Jul 2014; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  add sys-libs/libselinux to dependencies for bug #516956
 
   06 Mar 2014; William Hubbs <williamh@gentoo.org> -openrc-0.11.8.ebuild:
   remove old version

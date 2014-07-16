@@ -21,7 +21,7 @@
  OBJS	+= ../common/aiccu_linux.o
  LIBS	+= -lpthread -lresolv
 +ifeq (1,$(HAVE_SYSTEMD))
-+LIBS	+= -lsystemd-daemon
++LIBS	+= $(shell pkg-config --libs libsystemd 2>/dev/null || pkg-config --libs libsystemd-daemon)
 +CFLAGS += -DHAVE_SYSTEMD
 +endif
  endif
