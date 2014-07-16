@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/portmon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.14 2009/09/23 18:23:33 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.15 2014/07/16 16:44:51 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> portmon-2.0.ebuild,
+  metadata.xml:
+  EAPI bump. Remove short <longdescription>.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> portmon-2.0.ebuild:
   Remove virtual/libc

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/portsentry
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.27 2012/02/06 18:46:18 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/ChangeLog,v 1.28 2014/07/16 16:54:07 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> -portsentry-1.2.ebuild,
+  portsentry-1.2-r1.ebuild, +files/portsentry-1.2-conf.patch,
+  +files/portsentry-1.2-config.h.patch, +files/portsentry-1.2-gcc.patch,
+  +files/portsentry-1.2-ignore.csh.patch, -files/gcc.patch, metadata.xml:
+  EAPI bump. Remove short <longdescription>. Convert sed scripts to patches.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> portsentry-1.2-r1.ebuild:
   Marking portsentry-1.2-r1 ppc for bug 397137

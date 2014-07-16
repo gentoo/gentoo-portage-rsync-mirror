@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pktstat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.26 2012/06/14 14:24:34 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.27 2014/07/16 16:37:47 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> pktstat-1.8.5.ebuild,
+  +files/pktstat-1.8.5-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo].
 
   14 Jun 2012; Jeroen Roovers <jer@gentoo.org> -pktstat-1.8.4.ebuild:
   Old.

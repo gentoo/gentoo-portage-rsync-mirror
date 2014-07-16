@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2-r1.ebuild,v 1.5 2012/02/06 18:46:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2-r1.ebuild,v 1.6 2014/07/16 16:54:07 jer Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Automated port scan detector and response tool"
@@ -12,36 +13,18 @@ SRC_URI="mirror://sourceforge/sentrytools/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc x86"
-IUSE=""
-
-DEPEND=">=sys-apps/sed-4"
-RDEPEND=""
 
 S="${WORKDIR}"/${PN}_beta
 
-src_unpack() {
-	unpack ${A} ; cd "${S}"
-
-	# Setting the portsentry.conf file location
-	sed -i \
-		-e 's:/usr/local/psionic/portsentry/portsentry.conf:/etc/portsentry/portsentry.conf:' \
-		portsentry_config.h || die "sed portsentry_config.h failed"
-
-	# presetting the other file locations in portsentry.conf
-	sed -i \
-		-e 's:\(^IGNORE_FILE\).*:\1="/etc/portsentry/portsentry.ignore":g' \
-	    -e 's:^\(HISTORY_FILE\).*:\1="/etc/portsentry/portsentry.history":g' \
-	    -e 's:^\(BLOCKED_FILE\).*:\1="/etc/portsentry/portsentry.blocked":g' \
-		portsentry.conf || die "sed portsentry.conf failed"
-
-	sed -i \
-		-e "s:^set SENTRYDIR.*:set SENTRYDIR=/etc/portsentry:g" \
-		ignore.csh || die "sed ignore.csh failed"
-	epatch "${FILESDIR}"/gcc.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-conf.patch
+	epatch "${FILESDIR}"/${P}-config.h.patch
+	epatch "${FILESDIR}"/${P}-gcc.patch
+	epatch "${FILESDIR}"/${P}-ignore.csh.patch
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CFLAGS="${CFLAGS} ${LDFLAGS}" linux || die
+	emake CC=$(tc-getCC) CFLAGS="${CFLAGS} ${LDFLAGS}" linux
 }
 
 src_install() {
