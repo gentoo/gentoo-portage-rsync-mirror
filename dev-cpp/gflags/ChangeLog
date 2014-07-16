@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.27 2014/07/15 01:32:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.28 2014/07/16 14:53:36 hasufell Exp $
+
+*gflags-2.1.1-r1 (16 Jul 2014)
+
+  16 Jul 2014; Julian Ospald <hasufell@gentoo.org> -gflags-2.1.1.ebuild,
+  +gflags-2.1.1-r1.ebuild:
+  build shared libs wrt #517244, add static-libs USE flag
 
   15 Jul 2014; Mike Gilbert <floppym@gentoo.org> gflags-2.1.1.ebuild:
   Drop shared libs again; ABI is not stable.
