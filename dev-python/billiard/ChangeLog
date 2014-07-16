@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.23 2014/05/02 07:01:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.24 2014/07/16 08:54:17 idella4 Exp $
+
+*billiard-3.3.0.18 (16 Jul 2014)
+
+  16 Jul 2014; Ian Delaney <idella4@gentoo.org> +billiard-3.3.0.18.ebuild,
+  -billiard-2.7.3.20-r1.ebuild, -billiard-2.7.3.31.ebuild,
+  -billiard-2.7.3.32.ebuild, -billiard-3.3.0.14.ebuild,
+  -billiard-3.3.0.16.ebuild:
+  bump, remove old
 
 *billiard-3.3.0.17 (02 May 2014)
 
