@@ -8,7 +8,7 @@
 	</upstream>
 	<use>
 		<flag name="amqplib">Enable amqplib support</flag>
-		<flag name="sqs">enables Amazon SQS transport module for Kombu</flag>
-		<flag name="msgpack">enables MessagePack (de)serializer for Python</flag>
+		<flag name="sqs">Enables Amazon SQS transport module for Kombu</flag>
+		<flag name="msgpack">Enables MessagePack (de)serializer for Python</flag>
 	</use>
 </pkgmetadata>
