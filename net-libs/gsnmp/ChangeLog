@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gsnmp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.9 2013/04/24 17:23:26 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.10 2014/07/16 23:08:47 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> gsnmp-0.3.0.ebuild:
+  EAPI bump. New HOMEPAGE.
 
   24 Apr 2013; Jeroen Roovers <jer@gentoo.org>
   +files/gsnmp-0.3.0-underquoting.patch, gsnmp-0.3.0.ebuild:

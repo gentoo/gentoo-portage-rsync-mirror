@@ -1,0 +1,10 @@
+--- a/configure.in
++++ b/configure.in
+@@ -41,6 +41,7 @@
+ PKG_CHECK_MODULES(GSNMP, gsnmp, have_gsnmp=true, have_gsnmp=false)
+ AC_SUBST(GSNMP_CFLAGS)
+ AC_SUBST(GSNMP_LIBS)
++PKG_CHECK_MODULES(ncurses,ncurses,LIBS="$LIBS $ncurses_LIBS",AC_MSG_ERROR([ncurses is required]))
+ AC_CHECK_LIB(ncurses, initscr, [],
+   AC_CHECK_LIB(curses, initscr, [],
+     AC_MSG_ERROR([scli requires curses functions; install curses first])

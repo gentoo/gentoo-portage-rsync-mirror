@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/scli
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.20 2012/11/20 20:11:09 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.21 2014/07/16 23:21:17 jer Exp $
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> -scli-0.4.0.ebuild,
+  scli-0.4.0-r1.ebuild, +files/scli-0.4.0-tinfo.patch:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo]. New HOMEPAGE. Remove
+  AR hack now that we run eautoreconf. Remove USE=debug as nothing uses
+  HAVE_DMALLOC_H anyway.
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> scli-0.4.0-r1.ebuild:
   Stable for x86, wrt bug #441432

@@ -1,13 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/gsnmp-0.3.0.ebuild,v 1.9 2013/04/24 17:23:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/gsnmp-0.3.0.ebuild,v 1.10 2014/07/16 23:08:47 jer Exp $
 
-EAPI=4
-
+EAPI=5
 inherit autotools-utils
 
 DESCRIPTION="An SNMP library based on glib and gnet"
-HOMEPAGE="ftp://ftp.ibr.cs.tu-bs.de/pub/local/gsnmp/"
+HOMEPAGE="http://cnds.eecs.jacobs-university.de/users/schoenw/articles/software/index.html"
 SRC_URI="ftp://ftp.ibr.cs.tu-bs.de/pub/local/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
