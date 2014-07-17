@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.24 2013/02/06 19:50:40 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.25 2014/07/17 02:15:28 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -sniffit-0.3.7-r1.ebuild,
+  -sniffit-0.3.7-r3.ebuild, sniffit-0.3.7-r4.ebuild,
+  -files/sniffit-0.3.7-flags.patch, -files/sniffit-0.3.7-gcc33.patch,
+  files/sniffit-0.3.7-gentoo.patch, files/sniffit-0.3.7-misc.patch,
+  +files/sniffit-0.3.7-tinfo.patch, metadata.xml:
+  EAPI bump. Clean up patches. Fix building against sys-libs/ncurses[tinfo].
+  Remove short <longdescription>. Make sure nothing is done in libpcap/.
 
   06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sniffit-0.3.7-r4.ebuild:
   Stable for sparc, wrt bug #454014

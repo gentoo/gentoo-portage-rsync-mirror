@@ -1,12 +1,12 @@
---- a/sn_cfgfile.h	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_cfgfile.h	2010-09-16 18:14:53.000000000 +0200
+--- a/sn_cfgfile.h
++++ b/sn_cfgfile.h
 @@ -10,3 +10,4 @@
  void make_nr_dot (char *);
  void interprete_line (char *);
  void read_cfg_file (char *);    
 +char *strlower (char *);
---- a/sn_structs.h	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_structs.h	2010-09-16 18:14:53.000000000 +0200
+--- a/sn_structs.h
++++ b/sn_structs.h
 @@ -67,7 +67,7 @@
  struct snif_mask                                         /* struct for mask */
    {
@@ -16,8 +16,8 @@
    };
  
  /* (packet generation) */
---- a/sn_analyse.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_analyse.c	2010-09-16 18:14:53.000000000 +0200
+--- a/sn_analyse.c
++++ b/sn_analyse.c
 @@ -1,6 +1,9 @@
  /* Analyse traffic for logging mode                                      */
  /*   - by: Brecht Claerhout                                              */
@@ -28,8 +28,8 @@
  const unsigned char *data;
  memcpy(&tcphead,header,sizeof(struct TCP_header));
  	  	
---- a/sn_cfgfile.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_cfgfile.c	2010-09-16 18:14:53.000000000 +0200
+--- a/sn_cfgfile.c
++++ b/sn_cfgfile.c
 @@ -3,6 +3,11 @@
  /*   - improvements: Shudoh Kazuyuki                                      */
  
@@ -42,8 +42,8 @@
  #include <netdb.h>	                           /* for getservbyname() */
  
  #include "sn_config.h"
---- a/sn_conn_desc.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_conn_desc.c	2010-09-16 18:14:53.000000000 +0200
+--- a/sn_conn_desc.c
++++ b/sn_conn_desc.c
 @@ -1,6 +1,8 @@
  /* Connection description detection file                                 */
  /*   - by: Brecht Claerhout                                              */
@@ -53,8 +53,8 @@
  
  /* Simple PORT BASED detection */
  
---- a/sn_generation.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_generation.c	2010-09-16 18:18:31.000000000 +0200
+--- a/sn_generation.c
++++ b/sn_generation.c
 @@ -6,12 +6,16 @@
  #ifdef INCLUDE_INTERFACE
  #ifdef GENERATION
@@ -72,8 +72,8 @@
  
  extern volatile int screen_busy;
  
---- a/sniffit.0.3.7.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sniffit.0.3.7.c	2010-09-16 18:14:53.000000000 +0200
+--- a/sniffit.0.3.7.c
++++ b/sniffit.0.3.7.c
 @@ -4,6 +4,9 @@
  #include "sn_config.h"		/* Config header file */
  
@@ -84,8 +84,8 @@
  #include <signal.h>
  #include <stdio.h>
  #include <fcntl.h>
---- a/sn_interface.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_interface.c	2010-09-16 18:15:59.000000000 +0200
+--- a/sn_interface.c
++++ b/sn_interface.c
 @@ -6,6 +6,9 @@
  #ifdef INCLUDE_INTERFACE
  #include <signal.h>
@@ -96,8 +96,8 @@
  #include <sys/ipc.h>
  #include <sys/shm.h>       
  #include "sn_curses.h" 
---- a/sn_logfile.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_logfile.c	2010-09-16 18:16:44.000000000 +0200
+--- a/sn_logfile.c
++++ b/sn_logfile.c
 @@ -4,6 +4,9 @@
  #include "sn_config.h"
  
@@ -108,8 +108,8 @@
  #include <sys/stat.h>
  #include <sys/time.h>
  #include "sn_defines.h"
---- a/sn_packets.c	1998-07-16 18:17:10.000000000 +0200
-+++ b/sn_packets.c	2010-09-16 18:14:53.000000000 +0200
+--- a/sn_packets.c
++++ b/sn_packets.c
 @@ -5,6 +5,7 @@
  #include "sn_defines.h"
  #include "sn_structs.h"
