@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.14 2012/10/08 20:21:44 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.15 2014/07/17 00:46:51 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> sinfo-0.0.47.ebuild,
+  +files/sinfo-0.0.47-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo].
 
   08 Oct 2012; Tim Harder <radhermit@gentoo.org> sinfo-0.0.47.ebuild:
   Add blocker against sys-cluster/slurm (bug #437476 by Diego Elio Pettenò).

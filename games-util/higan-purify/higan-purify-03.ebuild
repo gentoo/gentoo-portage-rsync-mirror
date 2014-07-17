@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/higan-purify/higan-purify-03.ebuild,v 1.2 2013/08/13 15:41:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/higan-purify/higan-purify-03.ebuild,v 1.3 2014/07/17 00:47:06 hasufell Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE="qt4"
 
 RDEPEND="
 	dev-games/higan-ananke
+	x11-libs/libX11
 	!qt4? ( x11-libs/gtk+:2 )
 	qt4? ( >=dev-qt/qtgui-4.5:4 )"
 DEPEND="${RDEPEND}
