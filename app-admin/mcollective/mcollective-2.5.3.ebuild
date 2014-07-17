@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/mcollective-2.3.2.ebuild,v 1.3 2014/03/02 08:07:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/mcollective-2.5.3.ebuild,v 1.1 2014/07/17 06:43:42 prometheanfire Exp $
 
 EAPI="4"
 
@@ -12,11 +12,11 @@ inherit ruby-ng
 DESCRIPTION="Framework to build server orchestration or parallel job execution
 systems"
 HOMEPAGE="http://marionette-collective.org/"
-SRC_URI="http://puppetlabs.com/downloads/mcollective/${P}.tgz"
+SRC_URI="http://puppetlabs.com/downloads/mcollective/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc +client"
 
 DEPEND=""
@@ -30,7 +30,7 @@ each_ruby_install() {
 	doruby -r lib/*
 	insinto /usr/share/mcollective
 	doins -r plugins
-	use client && dosbin bin/mc-* bin/mco
+	use client && dosbin bin/mco
 	dosbin bin/mcollectived
 	if use doc ; then
 		dohtml -r doc/*
