@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.8.0.ebuild,v 1.5 2014/07/16 23:44:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.9.0.ebuild,v 1.1 2014/07/17 00:00:21 jer Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit multilib ssl-cert user
 MY_PV="${PV/_p/p}"
 DESCRIPTION="Daemon for Sguil Network Security Monitoring"
 HOMEPAGE="http://sguil.sourceforge.net"
-SRC_URI="mirror://sourceforge/sguil/sguil-server-${MY_PV}.tar.gz"
+SRC_URI="https://github.com/bammv/${PN/-server}/archive/v${PV}.tar.gz -> ${P/-server}.tar.gz"
 LICENSE="GPL-2 QPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"

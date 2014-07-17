@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.8.0.ebuild,v 1.1 2012/04/30 15:21:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.8.0.ebuild,v 1.2 2014/07/16 23:36:48 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib
 
 MY_PV="${PV/_p/p}"
@@ -22,18 +22,20 @@ RDEPEND="
 	dev-tcltk/itk
 	dev-tcltk/iwidgets
 	dev-tcltk/tcllib
+	net-analyzer/wireshark
 	ssl? ( >=dev-tcltk/tls-1.4.1 )
-	net-analyzer/wireshark"
+"
 
-S="${WORKDIR}/sguil-${MY_PV}"
+S=${WORKDIR}/sguil-${MY_PV}
 
 src_prepare() {
-	sed -i client/sguil.conf \
+	sed -i \
 		-e "/^set SGUILLIB /s:./lib:/usr/$(get_libdir)/sguil:" \
 		-e '/^set ETHEREAL_PATH /s:/usr/sbin/ethereal:/usr/bin/wireshark:' \
 		-e '/^set SERVERHOST /s:demo.sguil.net:localhost:' \
 		-e '/^set MAILSERVER /s:mail.example.com:localhost:' \
-		-e '/^set GPG_PATH /s:/usr/local/bin/gpg:/usr/bin/gpg:' || die
+		-e '/^set GPG_PATH /s:/usr/local/bin/gpg:/usr/bin/gpg:' \
+		client/sguil.conf || die
 }
 
 src_install() {

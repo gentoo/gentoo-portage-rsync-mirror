@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/sguil-sensor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.17 2012/11/21 04:31:46 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.19 2014/07/16 23:56:11 jer Exp $
+
+*sguil-sensor-0.9.0 (16 Jul 2014)
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sguil-sensor-0.8.0.ebuild,
+  +sguil-sensor-0.9.0.ebuild, files/log_packets.confd, files/log_packets.initd,
+  files/sensor_agent.initd:
+  Version bump. Use /run not /var/run/sguil. Remove obsolete sed scripts.
+
+  16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sguil-sensor-0.8.0.ebuild:
+  EAPI bump.
 
   21 Nov 2012; Jeroen Roovers <jer@gentoo.org> sguil-sensor-0.8.0.ebuild,
   files/log_packets.confd:
