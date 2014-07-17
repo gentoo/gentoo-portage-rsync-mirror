@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sguil-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/ChangeLog,v 1.13 2014/07/16 23:36:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/ChangeLog,v 1.14 2014/07/17 00:04:22 jer Exp $
+
+*sguil-client-0.9.0 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> +sguil-client-0.9.0.ebuild:
+  Version bump.
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> sguil-client-0.8.0.ebuild:
   EAPI bump.
