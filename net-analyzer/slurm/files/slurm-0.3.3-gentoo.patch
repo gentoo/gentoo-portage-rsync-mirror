@@ -1,6 +1,6 @@
 --- a/configure.in
 +++ b/configure.in
-@@ -40,41 +40,15 @@
+@@ -40,31 +40,6 @@
  fi
  AC_DEFINE(OSTYPE, ["${OSTYPE}"], [The operating system to build for])
  
@@ -32,14 +32,17 @@
  # add Slowlaris -R and libraries to LDFLAGS
  if test ${OSTYPE} = "solaris" ; then
  	LDFLAGS="${LDFLAGS} ${SOLLDFLAGS} -lnsl -lsocket -lkstat"
- fi
- 
--AC_CHECK_LIB(fridge, vanilla_coke, echo "WTF?!", echo "Warning: No vanilla coke found in fridge.";echo "We highly suggest that you rectify this situation immediatly.")
+@@ -74,7 +49,12 @@
  ncurses_support="no"
  curses_support="no"
  color_support="no"
 -AC_CHECK_LIB(ncurses, use_default_colors, LDFLAGS="$LDFLAGS -lncurses"; CFLAGS="$CFLAGS -D_HAVE_NCURSES -D_HAVE_NCURSES_COLOR"; color_support="yes"; ncurses_support="yes", AC_CHECK_LIB(ncurses, use_default_colors, LDFLAGS="$LDFLAGS -lncurses"; CFLAGS="$CFLAGS -D_HAVE_NCURSES"; ncurses_support="yes"; echo "NO TRANSPARENCY SUPPORT in this ncurses lib", AC_CHECK_LIB(curses, initscr, LDFLAGS="$LDFLAGS -lcurses"; CFLAGS="$CFLAGS -D_HAVE_CURSES"; curses_support="yes"; echo "NO TRANSPARENCY SUPPORT in curses lib"))) 
-+AC_CHECK_LIB(ncurses, use_default_colors, LIBS="-lncurses $LIBS"; CFLAGS="$CFLAGS -D_HAVE_NCURSES -D_HAVE_NCURSES_COLOR"; color_support="yes"; ncurses_support="yes")
++PKG_CHECK_MODULES(ncurses,ncurses,
++	LIBS="$LIBS $ncurses_LIBS"
++	AC_DEFINE(HAVE_NCURSES, 1, [Define if we have ncurses])
++	AC_DEFINE(HAVE_NCURSES_COLOR, 1, [We want color])
++	color_support="yes"; ncurses_support="yes"
++	,AC_MSG_ERROR([ncurses not found]))
  
  # disable color support on Solaris for now
  if test ${OSTYPE} = "solaris" ; then

@@ -2,5 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>Realtime network interface monitor based on FreeBSD's pppstatus</longdescription>
 </pkgmetadata>

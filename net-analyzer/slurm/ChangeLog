@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/slurm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.21 2012/06/09 06:37:35 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.22 2014/07/17 01:44:55 jer Exp $
+
+*slurm-0.3.3-r2 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -slurm-0.3.3.ebuild,
+  +slurm-0.3.3-r2.ebuild, -files/slurm-0.3.3-asneeded.patch,
+  +files/slurm-0.3.3-gentoo.patch, +files/slurm-0.3.3-theme.patch,
+  metadata.xml:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo]. Fix theme support.
+  Remove short <longdescription>. Reinstate joke.
 
   09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> slurm-0.3.3-r1.ebuild:
   marked x86 per bug 419233
