@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.38 2014/07/18 16:18:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.39 2014/07/18 17:04:39 williamh Exp $
+
+  18 Jul 2014; William Hubbs <williamh@gentoo.org> go-1.3.ebuild:
+  stable on amd64 for bug #517432
 
   18 Jul 2014; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
   install editors document to point people to the go wiki page about editor and

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/synscan/synscan-5.01.ebuild,v 1.1 2010/06/13 21:46:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/synscan/synscan-5.01.ebuild,v 1.2 2014/07/18 17:16:07 ssuominen Exp $
 
-EAPI=3
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="A fast asynchronous half-open TCP portscanner"
@@ -11,10 +11,11 @@ SRC_URI="http://www.digit-labs.org/files/tools/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="kernel_FreeBSD kernel_linux"
 
-DEPEND="net-libs/libpcap"
+RDEPEND="net-libs/libpcap"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
@@ -26,10 +27,10 @@ src_compile() {
 	use kernel_FreeBSD && _target=freebsd
 	use kernel_linux && _target=linux
 
-	emake ${_target} || die
+	emake ${_target}
 }
 
 src_install() {
-	dobin synscan sslog || die
+	dobin synscan sslog
 	dodoc AUTHORS README
 }

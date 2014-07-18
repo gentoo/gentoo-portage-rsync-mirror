@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=net-libs/libpcap !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A fast asynchronous half-open TCP portscanner
-EAPI=3
+EAPI=5
 HOMEPAGE=http://www.digit-labs.org/files/tools/synscan/
 IUSE=kernel_FreeBSD kernel_linux
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=net-libs/libpcap
 SLOT=0
 SRC_URI=http://www.digit-labs.org/files/tools/synscan/releases/synscan-5.01.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=3ba5a675a7e3cd34dada2734f9cc1288
+_md5_=8acdbee1893eeb4e1632faefa69ec77c
