@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9220 2014/07/16 21:31:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9223 2014/07/17 15:28:31 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add 5.20 version of threads::shared to perl-5.20 mask
+
+  17 Jul 2014; Michael Palimaka <kensington@gentoo.org> package.mask:
+  Unmask dev-python/sip and dev-python/PyQt4 wrt bug #506452.
+
+  17 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  arch/amd64/package.use.stable.mask:
+  Update stable mask for multilib
 
   16 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> license_groups:
   added FAH-EULA-2014 license to EULA group

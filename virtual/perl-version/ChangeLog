@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.79 2014/07/06 08:28:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.80 2014/07/17 15:37:44 dilfridge Exp $
+
+*perl-version-0.990.800-r1 (17 Jul 2014)
+*perl-version-0.990.200-r1 (17 Jul 2014)
+
+  17 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-version-0.990.200.ebuild, +perl-version-0.990.200-r1.ebuild,
+  -perl-version-0.990.300.ebuild, -perl-version-0.990.400.ebuild,
+  -perl-version-0.990.800.ebuild, +perl-version-0.990.800-r1.ebuild:
+  Improve dependencies; remove old
 
   06 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -perl-version-0.82.ebuild,
   -perl-version-0.880.0-r1.ebuild, -perl-version-0.890.0.ebuild,

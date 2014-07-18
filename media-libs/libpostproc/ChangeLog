@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.26 2014/06/18 19:46:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.27 2014/07/17 14:07:42 klausman Exp $
+
+  17 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  libpostproc-0.8.0.20121125.ebuild:
+  Stable on alpha, bug #500888
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org>
   libpostproc-10.20140517-r1.ebuild, libpostproc-9999.ebuild:

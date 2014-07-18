@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/thcrut
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.12 2013/01/15 20:17:20 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.13 2014/07/17 20:50:36 jer Exp $
+
+*thcrut-1.2.5-r1 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -thcrut-1.2.5.ebuild,
+  +thcrut-1.2.5-r1.ebuild, -files/1.2.5-libnet.patch,
+  +files/thcrut-1.2.5-configure.patch, +files/thcrut-1.2.5-libnet.patch,
+  metadata.xml:
+  EAPI bump. Do not build against shipped pcre-3.9. Remove short
+  <longdescription>.
 
   15 Jan 2013; Ulrich Müller <ulm@gentoo.org> thcrut-1.2.5.ebuild:
   Fix LICENSE, bug 449954.

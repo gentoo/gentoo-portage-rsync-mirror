@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/softflowd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/softflowd/ChangeLog,v 1.5 2012/11/21 04:36:12 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/softflowd/ChangeLog,v 1.6 2014/07/17 15:01:44 jer Exp $
+
+*softflowd-0.9.9-r1 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -softflowd-0.9.9.ebuild,
+  +softflowd-0.9.9-r1.ebuild, +files/softflowd-0.9.9-_GNU_SOURCE.patch,
+  files/softflowd-0.9.9-no-strip.patch, metadata.xml:
+  EAPI bump. Fix implicit declarations of setresgid, setresuid.
 
   21 Nov 2012; Jeroen Roovers <jer@gentoo.org> softflowd-0.9.9.ebuild,
   files/softflowd.confd:

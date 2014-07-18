@@ -6,4 +6,4 @@ LICENSE=BSD-2
 SLOT=0
 SRC_URI=http://www.snortsam.net/files/snortsam/snortsam-src-2.50.tar.gz mirror://gentoo/snortsam-2.50-ciscoacl.diff.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=0bfd259bf32b1407da95f57f023d41dc
+_md5_=ce580c69a00e20cd469ffc5a17dd83b5

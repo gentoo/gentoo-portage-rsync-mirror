@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta7-r2.ebuild,v 1.1 2014/03/08 17:34:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta7-r2.ebuild,v 1.2 2014/07/17 19:46:58 jer Exp $
 
 EAPI=5
+inherit autotools eutils
 
 MY_P=${P/_beta/beta}
 
@@ -24,6 +25,11 @@ RDEPEND="${DEPEND}"
 RESTRICT="test"
 
 S=${WORKDIR}/${PN}-${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cross-compile-checks.patch
+	eautoreconf
+}
 
 src_install() {
 	dosbin tcptraceroute

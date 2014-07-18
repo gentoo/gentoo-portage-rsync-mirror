@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/syweb-0.65.ebuild,v 1.1 2013/08/26 11:41:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/syweb-0.65.ebuild,v 1.2 2014/07/17 16:02:41 jer Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/httpd-php
 
 need_httpd_cgi
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_install() {
 	webapp_src_preinst

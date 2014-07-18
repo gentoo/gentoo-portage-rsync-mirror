@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/snortalog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.24 2010/07/19 21:51:23 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.26 2014/07/17 13:24:15 jer Exp $
+
+*snortalog-2.4.3 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -snortalog-2.4.0.ebuild,
+  +snortalog-2.4.3.ebuild, -files/snortalog-2.4.0-limit-args.diff,
+  -files/snortalog-2.4.0-notcltk.diff:
+  Version bump.
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> snortalog-2.4.0.ebuild,
+  files/snortalog-2.4.0-limit-args.diff, files/snortalog-2.4.0-notcltk.diff,
+  metadata.xml:
+  EAPI bump. Clean up patches.
 
   19 Jul 2010; Markus Meier <maekke@gentoo.org> snortalog-2.4.0.ebuild:
   add ~arm, bug #301084

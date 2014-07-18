@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.82 2014/04/18 01:30:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.83 2014/07/18 03:41:02 zerochaos Exp $
+
+*aircrack-ng-1.2_beta3-r2 (18 Jul 2014)
+
+  18 Jul 2014; Rick Farina <zerochaos@gentoo.org>
+  +aircrack-ng-1.2_beta3-r2.ebuild, -aircrack-ng-1.2_beta3-r1.ebuild,
+  -aircrack-ng-1.2_beta3.ebuild, aircrack-ng-9999.ebuild:
+  work-around for http://trac.aircrack-ng.org/ticket/1144
 
 *aircrack-ng-1.2_beta3-r1 (18 Apr 2014)
 

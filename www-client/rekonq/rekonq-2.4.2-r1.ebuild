@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.1 2014/05/13 18:22:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.2 2014/07/17 13:19:34 kensington Exp $
 
 EAPI=5
 
@@ -36,15 +36,6 @@ RDEPEND="
 	${DEPEND}
 	$(add_kdebase_dep keditbookmarks)
 "
-
-src_prepare() {
-	# KDE_LINGUAS is also used to install appropriate handbooks
-	# since there is no en_US 'translation', it cannot be added
-	# hence making this impossible to install
-	mv doc/en_US doc/en || die "doc move failed"
-	sed -i -e 's/en_US/en/' doc/CMakeLists.txt || die "sed failed"
-	kde4-base_src_prepare
-}
 
 src_configure() {
 	local mycmakeargs=(

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.37 2014/07/15 14:26:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.38 2014/07/17 12:37:30 jlec Exp $
+
+*quazip-0.6.2-r1 (17 Jul 2014)
+
+  17 Jul 2014; Justin Lecher <jlec@gentoo.org> -quazip-0.6.2.ebuild,
+  +quazip-0.6.2-r1.ebuild:
+  Fix installation prefix, #517280
 
 *quazip-0.6.2 (15 Jul 2014)
 

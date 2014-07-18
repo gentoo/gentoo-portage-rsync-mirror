@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install unpack
-DESCRIPTION=A tool that parses Squid access log file and generates a report of the most visited sites.
-HOMEPAGE=http://www.stefanopassiglia.com/misc.htm
-KEYWORDS=~amd64 ppc x86
-LICENSE=GPL-2
-SLOT=1
-SRC_URI=http://www.stefanopassiglia.com/downloads/squidsites-1.01.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=20740301dcfd241c760d80a46eebf3a0

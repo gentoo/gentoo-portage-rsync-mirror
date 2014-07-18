@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/xnetload
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.16 2009/10/16 16:35:12 tcunha Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.17 2014/07/18 03:39:56 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> xnetload-1.11.3-r1.ebuild,
+  metadata.xml:
+  EAPI bump. Remove short <longdescription>. Install XNetload config. Do not
+  inject CC/CFLAGS/LDFLAGS into Makefile.
 
   16 Oct 2009; Tiago Cunha <tcunha@gentoo.org> xnetload-1.11.3-r1.ebuild:
   stable amd64/sparc, bug 288947

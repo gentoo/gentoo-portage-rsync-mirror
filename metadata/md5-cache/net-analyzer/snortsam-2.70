@@ -1,10 +1,11 @@
-DEFINED_PHASES=compile install postinst prepare
+DEFINED_PHASES=compile configure install postinst prepare
 DESCRIPTION=Snort plugin that allows automated blocking of IP addresses on several firewalls
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.snortsam.net/
+IUSE=debug
 KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD-2
 SLOT=0
-SRC_URI=http://www.snortsam.net/files/snortsam/snortsam-src-2.70.tar.gz mirror://gentoo/snortsam-2.50-ciscoacl.diff.bz2
-_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=8286eb990f16e374de4cccd05965924e
+SRC_URI=http://www.snortsam.net/files/snortsam/snortsam-src-2.70.tar.gz
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=71a9b24b05d1c6154ed5721dfbf4730d

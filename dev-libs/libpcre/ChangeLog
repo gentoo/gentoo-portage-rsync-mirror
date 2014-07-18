@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.239 2014/07/13 09:55:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.240 2014/07/18 02:28:26 mattst88 Exp $
+
+  18 Jul 2014; Matt Turner <mattst88@gentoo.org> libpcre-8.35.ebuild:
+  alpha stable, bug 516310.
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> libpcre-8.35.ebuild:
   Stable for ppc, wrt bug #516310

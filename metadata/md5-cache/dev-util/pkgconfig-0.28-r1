@@ -4,10 +4,10 @@ DESCRIPTION=Package config system that manages compile/link flags
 EAPI=5
 HOMEPAGE=http://pkgconfig.freedesktop.org/wiki/
 IUSE=elibc_FreeBSD elibc_glibc hardened internal-glib abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=!internal-glib? ( >=dev-libs/glib-2.34.3[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
 SLOT=0
 SRC_URI=http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	fbb9baa0b4039304643e36e9820fdecf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=264c36ab95e31751f3df43f381d07c8d
+_md5_=05fd54c47529d7838b9efadb150dd02a

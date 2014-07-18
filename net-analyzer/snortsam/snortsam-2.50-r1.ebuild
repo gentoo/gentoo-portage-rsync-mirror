@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.50-r1.ebuild,v 1.12 2012/12/05 16:35:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.50-r1.ebuild,v 1.13 2014/07/17 14:28:47 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,6 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.29-no-ugly----lines.diff
 	# bug 155955, ciscoacl segfaults with gcc-4.1.1
 	epatch "${DISTDIR}"/${PN}-2.50-ciscoacl.diff.bz2
 	sed -i -e "s:sbin/functions.sh:etc/init.d/functions.sh:" \

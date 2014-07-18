@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.3-r4.ebuild,v 1.1 2014/07/12 20:27:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.3-r4.ebuild,v 1.2 2014/07/17 07:55:29 ssuominen Exp $
 
 EAPI="4"
 inherit multilib flag-o-matic systemd toolchain-funcs
@@ -49,7 +49,11 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		SYSTEMD_DIR=$(systemd_get_unitdir) \
-		install install-systemd
+		install
+	emake \
+		DESTDIR="${D}" \
+		SYSTEMD_DIR=$(systemd_get_unitdir) \
+		install-systemd
 	into /
 	dosbin mdassemble
 	dodoc ChangeLog INSTALL TODO README* ANNOUNCE-${PV}

@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.178 2014/07/14 18:08:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.182 2014/07/17 07:55:29 ssuominen Exp $
+
+  17 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> mdadm-3.3-r4.ebuild:
+  Backport parallel make fix from 3.3.1-r1 wrt #516768
+
+  17 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -mdadm-3.3-r2.ebuild,
+  -mdadm-3.3-r3.ebuild, -mdadm-3.3.1.ebuild:
+  old
+
+*mdadm-3.3.1-r1 (17 Jul 2014)
+
+  17 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +mdadm-3.3.1-r1.ebuild:
+  Fix possible corruption of udev rules and/or systemd services because parallel
+  make can get confused by running "install" and "install-systemd" targets
+  in the same line wrt #517218 by Mark R. Pariente
 
 *mdadm-3.3.1 (14 Jul 2014)
 

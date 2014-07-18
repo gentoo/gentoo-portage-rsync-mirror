@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.797 2014/06/13 13:23:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.798 2014/07/17 17:12:50 mattst88 Exp $
+
+*xorg-server-1.16.0 (17 Jul 2014)
+
+  17 Jul 2014; Matt Turner <mattst88@gentoo.org> +xorg-server-1.16.0.ebuild:
+  Version bump to 1.16.0.
 
 *xorg-server-1.14.7 (13 Jun 2014)
 

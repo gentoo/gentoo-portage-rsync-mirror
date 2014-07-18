@@ -1,6 +1,5 @@
-=== modified file 'src/common/cidr.c'
---- src/common/cidr.c	2010-10-29 13:00:54 +0000
-+++ src/common/cidr.c	2010-10-29 13:09:01 +0000
+--- a/src/common/cidr.c
++++ b/src/common/cidr.c
 @@ -85,11 +85,12 @@
  destroy_cidr(tcpr_cidr_t * cidr)
  {

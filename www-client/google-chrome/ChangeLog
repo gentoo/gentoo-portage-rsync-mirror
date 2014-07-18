@@ -1,6 +1,10 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.383 2014/07/17 01:08:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.384 2014/07/18 04:49:57 floppym Exp $
+
+  18 Jul 2014; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-36.0.1985.125_p1.ebuild:
+  Update deps.
 
 *google-chrome-36.0.1985.125_p1 (17 Jul 2014)
 

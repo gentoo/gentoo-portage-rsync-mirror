@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/tcpslice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.18 2010/06/24 05:33:29 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.19 2014/07/17 16:52:46 jer Exp $
+
+*tcpslice-1.2a_p3-r1 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> tcpslice-1.2_alpha2.ebuild,
+  -tcpslice-1.2a_p3.ebuild, +tcpslice-1.2a_p3-r1.ebuild,
+  +files/tcpslice-1.2a_p3-exit.patch, metadata.xml:
+  EAPI bump. Fix DESCRIPTION. Remove <description>. Add missing include for
+  exit(). Actually apply the Debian patches.
 
 *tcpslice-1.2a_p3 (24 Jun 2010)
 

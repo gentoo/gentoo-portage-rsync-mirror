@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/plasma-mediacenter/plasma-mediacenter-1.3.0.ebuild,v 1.1 2014/07/07 13:34:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/plasma-mediacenter/plasma-mediacenter-1.3.0.ebuild,v 1.2 2014/07/17 14:54:40 kensington Exp $
 
 EAPI=5
 
@@ -22,6 +22,9 @@ KEYWORDS="~amd64"
 IUSE="debug nepomuk semantic-desktop"
 
 REQUIRED_USE="?? ( nepomuk semantic-desktop )"
+
+# bug 516686
+RESTRICT="test"
 
 RDEPEND="
 	dev-qt/qt-mobility[multimedia,qml]

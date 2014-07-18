@@ -1,5 +1,5 @@
---- trafshow-5.2.3/Makefile.in.orig	2004-06-15 10:29:14.000000000 +0200
-+++ trafshow-5.2.3/Makefile.in	2009-01-15 06:49:41.000000000 +0100
+--- a/Makefile.in
++++ b/Makefile.in
 @@ -73,9 +73,9 @@
  	@echo 'char compiled[] = "$(CC) $(CFLAGS) $(LIBS)";' >> $@
  

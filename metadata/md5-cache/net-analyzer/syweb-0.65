@@ -10,4 +10,4 @@ RDEPEND=virtual/httpd-php net-analyzer/rrdtool >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=http://www.xs4all.nl/~wpd/symon/philes/syweb-0.65.tar.gz
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=dd9cd4cbf0f575d79ca3b0a6d0108a7c
+_md5_=4a4cbd43f6561048b670164b0ce8928d

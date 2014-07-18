@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.30 2014/07/09 20:15:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.32 2014/07/17 19:28:14 zerochaos Exp $
 
 EAPI="5"
 
@@ -31,27 +31,28 @@ IUSE="development +java lorcon oracle +pcap test"
 RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
-	=dev-ruby/rkelly-remix-0.0.6
-	dev-ruby/bcrypt-ruby
 	dev-ruby/activesupport:3.2
 	dev-ruby/activerecord:3.2
+	dev-ruby/bcrypt-ruby
+	dev-ruby/builder:3
+	dev-ruby/bundler
 	dev-ruby/json
+	dev-ruby/kissfft
 	=dev-ruby/metasploit_data_models-0.17.0
+	=dev-ruby/meterpreter_bins-0.0.6
 	dev-ruby/msgpack
 	dev-ruby/nokogiri
+	=dev-ruby/rkelly-remix-0.0.6
 	dev-ruby/sqlite3
-	dev-ruby/builder:3
 	>=dev-ruby/pg-0.11
 	=dev-ruby/packetfu-1.1.9
 	dev-ruby/rb-readline
 	dev-ruby/robots
-	dev-ruby/kissfft
 	java? ( dev-ruby/rjb )
 	lorcon? ( net-wireless/lorcon[ruby] )
 	oracle? ( dev-ruby/ruby-oci8 )
 	pcap? ( dev-ruby/pcaprub
 		dev-ruby/network_interface )
-	dev-ruby/bundler
 	development? ( dev-ruby/fivemat
 			dev-ruby/redcarpet
 			dev-ruby/yard
@@ -84,15 +85,6 @@ QA_PREBUILT="
 	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_x86_bsd.bin
 	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_mipsbe_linux.bin
 	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_mipsle_linux.bin
-	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/msflinker_linux_x86.bin
-	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/ext_server_sniffer.lso
-	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/ext_server_networkpug.lso
-	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/ext_server_stdapi.lso
-	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_x86_linux.bin
-	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_armle_linux.bin
-	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_x86_solaris.bin
-	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_x64_linux.bin
-	usr/$(get_libdir)/${PN}${SLOT}/data/templates/template_x86_bsd.bin
 	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/msflinker_linux_x86.bin
 	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/ext_server_sniffer.lso
 	usr/$(get_libdir)/${PN}${SLOT}/data/meterpreter/ext_server_networkpug.lso

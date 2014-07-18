@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.150 2014/07/08 10:26:59 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.151 2014/07/17 13:24:30 klausman Exp $
+
+  17 Jul 2014; Tobias Klausmann <klausman@gentoo.org> mercurial-2.8.2.ebuild:
+  Stable on alpha, bug #500346
 
   08 Jul 2014; Michael Haubenwallner <haubi@gentoo.org> mercurial-3.0.2.ebuild:
   add ~ppc-aix keyword

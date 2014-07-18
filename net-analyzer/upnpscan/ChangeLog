@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/upnpscan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.16 2013/01/30 18:06:09 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.17 2014/07/18 03:21:42 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -upnpscan-0.4-r2.ebuild,
+  upnpscan-0.4-r3.ebuild:
+  EAPI bump.
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> upnpscan-0.4-r3.ebuild:
   Stable for x86, wrt bug #454018

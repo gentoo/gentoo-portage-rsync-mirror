@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.58 2014/07/04 08:40:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.59 2014/07/17 09:24:38 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -336,6 +336,7 @@ media-sound/twolame abi_x86_32
 media-sound/wavpack abi_x86_32
 media-video/dirac abi_x86_32
 media-video/ffmpeg abi_x86_32
+media-video/libav abi_x86_32
 media-video/mjpegtools abi_x86_32
 media-video/vcdimager abi_x86_32
 net-dialup/capi4k-utils abi_x86_32

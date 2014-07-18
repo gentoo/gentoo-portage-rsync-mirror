@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traceroute-nanog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.23 2012/04/13 16:29:35 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.24 2014/07/17 22:44:16 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org>
+  traceroute-nanog-6.4.2-r1.ebuild, metadata.xml:
+  EAPI bump. Remove short <longdescription>.
 
   13 Apr 2012; Jeroen Roovers <jer@gentoo.org>
   -traceroute-nanog-6.3.10-r1.ebuild, traceroute-nanog-6.4.2-r1.ebuild:

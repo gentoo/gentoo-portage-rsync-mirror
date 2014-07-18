@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tleds
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.20 2010/09/19 00:12:14 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.21 2014/07/17 21:07:04 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> tleds-1.05_beta11-r2.ebuild,
+  files/tleds-1.05_beta11-gentoo.patch, metadata.xml:
+  EAPI bump. Remove short <longdescription>. Convert sed scripts to patch.
 
 *tleds-1.05_beta11-r2 (19 Sep 2010)
 

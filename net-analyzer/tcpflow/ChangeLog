@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.50 2014/06/24 19:24:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.51 2014/07/17 16:15:14 jer Exp $
+
+*tcpflow-1.4.4_p3 (17 Jul 2014)
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -tcpflow-1.4.4_p2.ebuild,
+  +tcpflow-1.4.4_p3.ebuild:
+  Patch version bump.
 
   24 Jun 2014; Markus Meier <maekke@gentoo.org> tcpflow-1.4.4_p2.ebuild:
   add ~arm, bug #513078

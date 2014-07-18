@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.4.2-r1.ebuild,v 1.5 2012/04/13 16:29:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.4.2-r1.ebuild,v 1.6 2014/07/17 22:44:16 jer Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -19,23 +19,22 @@ RESTRICT="mirror"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE=""
 
 S="${S}.orig"
 
 src_prepare() {
-	EPATCH_SUFFIX="dpatch" epatch "${WORKDIR}/${MY_P}-${DEB_PL}.diff" \
+	EPATCH_SUFFIX="dpatch" epatch \
+		"${WORKDIR}/${MY_P}-${DEB_PL}.diff" \
 		"${WORKDIR}/${P}.orig/${P}/debian/patches/"
 }
 
 src_compile() {
 	$(tc-getCC) traceroute.c -o ${PN} ${CFLAGS} -DSTRING ${LDFLAGS} -lresolv -lm \
-		|| die "Compile failed"
+		|| die
 }
 
 src_install() {
-	dosbin traceroute-nanog || die "dosbin failed"
+	dosbin traceroute-nanog
 	dodoc 0_readme.txt faq.txt
-	newman ${P}/debian/traceroute-nanog.genuine.8 traceroute-nanog.8 \
-		|| die "newman failed"
+	newman ${P}/debian/traceroute-nanog.genuine.8 traceroute-nanog.8
 }

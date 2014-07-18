@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.25 2014/06/05 08:15:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.26 2014/07/17 12:14:00 nimiux Exp $
+
+  17 Jul 2014; Chema Alonso <nimiux@gentoo.org> cairo-0.12.5.0-r1.ebuild:
+  Stable for amd64 wrt bug #507390
 
   05 Jun 2014; Sergei Trofimovich <slyfox@gentoo.org> cairo-0.12.4-r1.ebuild:
   Use unmodified 'gtk2hsTypeGen' (bug #512474 by Paweł Hajdan, Jr.).

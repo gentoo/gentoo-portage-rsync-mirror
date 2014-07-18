@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/cairo-0.12.5.0-r1.ebuild,v 1.1 2013/12/12 05:59:00 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/cairo-0.12.5.0-r1.ebuild,v 1.2 2014/07/17 12:14:00 nimiux Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+pdf +postscript +svg"
 
 RDEPEND="dev-haskell/mtl:=[profile?]

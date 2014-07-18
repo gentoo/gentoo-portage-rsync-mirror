@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install
+DEFINED_PHASES=compile configure
 DEPEND=nls? ( sys-devel/gettext )
 DESCRIPTION=TCP network re-engineering tool
-HOMEPAGE=http://www.simphalempin.com/dev/tcpreen/
+EAPI=5
+HOMEPAGE=http://www.remlab.net/tcpreen/
 IUSE=nls
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2
-RDEPEND=nls? ( sys-devel/gettext )
 SLOT=0
-SRC_URI=mirror://sourceforge/tcpreen/tcpreen-1.4.4.tar.bz2 http://www.remlab.net/files/tcpreen/stable/tcpreen-1.4.4.tar.bz2
-_md5_=00cc7386f45b988a0d00f1cc732607af
+SRC_URI=http://www.remlab.net/files/tcpreen/stable/tcpreen-1.4.4.tar.bz2
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
+_md5_=0ff9d4497fad3b31c802120223c92f4f

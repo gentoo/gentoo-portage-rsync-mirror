@@ -1,11 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/tcpreen-1.4.4.ebuild,v 1.2 2007/12/26 10:19:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreen/tcpreen-1.4.4.ebuild,v 1.3 2014/07/17 16:33:28 jer Exp $
+
+EAPI=5
+inherit toolchain-funcs
 
 DESCRIPTION="TCP network re-engineering tool"
-HOMEPAGE="http://www.simphalempin.com/dev/tcpreen/"
-SRC_URI="mirror://sourceforge/tcpreen/${P}.tar.bz2
-		http://www.remlab.net/files/tcpreen/stable/${P}.tar.bz2"
+HOMEPAGE="http://www.remlab.net/tcpreen/"
+SRC_URI="http://www.remlab.net/files/${PN}/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,12 +16,12 @@ IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
 
-src_compile() {
-	econf `use_enable nls` || die
-	emake || die
+src_configure() {
+	econf $(use_enable nls)
 }
 
-src_install() {
-	emake install DESTDIR="${D}" || die
-	dodoc AUTHORS NEWS THANKS TODO README
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
+
+DOCS=( AUTHORS NEWS README THANKS TODO )

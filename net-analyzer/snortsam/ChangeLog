@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/snortsam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.34 2012/12/05 16:35:58 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.36 2014/07/17 14:31:53 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> snortsam-2.70.ebuild:
+  Set CC in src_configure().
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> snortsam-2.50-r1.ebuild,
+  snortsam-2.70.ebuild, -files/snortsam-2.29-no-ugly----lines.diff,
+  +files/snortsam-2.70-gentoo.patch, metadata.xml:
+  EAPI bump. Make src_compile verbose and die. Convert sed scripts to patch.
+  Add USE=debug instead of compiling snortsam twice. Drop beauty patch.
 
   05 Dec 2012; Jeroen Roovers <jer@gentoo.org> snortsam-2.50-r1.ebuild,
   snortsam-2.70.ebuild:

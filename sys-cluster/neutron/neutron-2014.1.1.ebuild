@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.3 2014/07/13 03:40:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.1.1.ebuild,v 1.4 2014/07/17 09:17:53 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -54,7 +54,8 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/python-neutronclient-2.3.4[${PYTHON_USEDEP}]
 		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
 		>=dev-python/sqlalchemy-0.7.8[${PYTHON_USEDEP}]
-		<=dev-python/sqlalchemy-0.7.99[${PYTHON_USEDEP}]
+		!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
 		postgres? ( >=dev-python/psycopg-2[${PYTHON_USEDEP}] )
 		sqlite? ( dev-db/sqlite )
@@ -73,7 +74,7 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 
 PATCHES=(
 	"${FILESDIR}/sphinx_mapping.patch"
-	"${FILESDIR}/"2014.1-CVE-2014-4167.patch
+	"${FILESDIR}/neutron-2014.1.1-CVE-2014-3555.patch"
 )
 
 pkg_setup() {

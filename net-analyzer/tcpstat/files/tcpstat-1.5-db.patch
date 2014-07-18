@@ -1,6 +1,5 @@
-diff -NrU5 tcpstat-1.5.orig/configure.in tcpstat-1.5/configure.in
---- tcpstat-1.5.orig/configure.in	2002-07-27 02:50:46.000000000 +0200
-+++ tcpstat-1.5/configure.in	2008-05-12 13:01:52.000000000 +0200
+--- a/configure.in
++++ b/configure.in
 @@ -84,15 +84,26 @@
  dnl #######################
  dnl Checks for header files
@@ -64,9 +63,8 @@ diff -NrU5 tcpstat-1.5.orig/configure.in tcpstat-1.5/configure.in
  AC_CONFIG_FILES([
  Makefile
  doc/Makefile
-diff -NrU5 tcpstat-1.5.orig/lib/process.c tcpstat-1.5/lib/process.c
---- tcpstat-1.5.orig/lib/process.c	2002-06-01 08:42:09.000000000 +0200
-+++ tcpstat-1.5/lib/process.c	2008-05-12 12:09:21.000000000 +0200
+--- a/lib/process.c
++++ b/lib/process.c
 @@ -230,12 +230,12 @@
   *   calls a user function pointing to the data
   *
@@ -82,9 +80,8 @@ diff -NrU5 tcpstat-1.5.orig/lib/process.c tcpstat-1.5/lib/process.c
  	u_char *packet;
  	int fd, len, blen, ret = 0;
  	struct snoop_file_header	fh;
-diff -NrU5 tcpstat-1.5.orig/lib/tcpseq.c tcpstat-1.5/lib/tcpseq.c
---- tcpstat-1.5.orig/lib/tcpseq.c	2002-01-02 22:05:55.000000000 +0100
-+++ tcpstat-1.5/lib/tcpseq.c	2008-05-12 12:19:40.000000000 +0200
+--- a/lib/tcpseq.c
++++ b/lib/tcpseq.c
 @@ -54,11 +54,10 @@
  	u_char	flags;
  	struct tcpseq_ha test_ha;
@@ -97,9 +94,8 @@ diff -NrU5 tcpstat-1.5.orig/lib/tcpseq.c tcpstat-1.5/lib/tcpseq.c
  	ip6 = (struct ip6_hdr *) &pd->data.ip6.hdr;
  	if (is_ip6_packet(pd))
  		tp= &(pd->data.ip6.body.tcphdr);
-diff -NrU5 tcpstat-1.5.orig/src/catpcap.c tcpstat-1.5/src/catpcap.c
---- tcpstat-1.5.orig/src/catpcap.c	2002-09-18 23:00:29.000000000 +0200
-+++ tcpstat-1.5/src/catpcap.c	2008-05-12 12:15:33.000000000 +0200
+--- a/src/catpcap.c
++++ b/src/catpcap.c
 @@ -50,11 +50,11 @@
  	if (c == ' ') return c;
  	if ((u_char)c > 0xa1 && SHOW_HIGH_BIT) return c;
@@ -126,9 +122,8 @@ diff -NrU5 tcpstat-1.5.orig/src/catpcap.c tcpstat-1.5/src/catpcap.c
  	char	ebuf[PCAP_ERRBUF_SIZE];
  	struct bpf_program	bpf_prog;
  
-diff -NrU5 tcpstat-1.5.orig/src/dump.c tcpstat-1.5/src/dump.c
---- tcpstat-1.5.orig/src/dump.c	2002-09-18 23:00:29.000000000 +0200
-+++ tcpstat-1.5/src/dump.c	2008-05-12 12:13:53.000000000 +0200
+--- a/src/dump.c
++++ b/src/dump.c
 @@ -37,21 +37,21 @@
  char filterexpr[BUF_SIZ]	= "";
  int	get_tcp_flags		= 0;
@@ -153,9 +148,8 @@ diff -NrU5 tcpstat-1.5.orig/src/dump.c tcpstat-1.5/src/dump.c
  }
  
  int parse_show_types(char *in) {
-diff -NrU5 tcpstat-1.5.orig/src/tcpstat.c tcpstat-1.5/src/tcpstat.c
---- tcpstat-1.5.orig/src/tcpstat.c	2002-07-27 02:42:05.000000000 +0200
-+++ tcpstat-1.5/src/tcpstat.c	2008-05-12 12:16:00.000000000 +0200
+--- a/src/tcpstat.c
++++ b/src/tcpstat.c
 @@ -421,11 +421,11 @@
  }
  

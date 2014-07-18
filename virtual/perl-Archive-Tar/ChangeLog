@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Archive-Tar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.71 2014/07/06 09:34:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Archive-Tar/ChangeLog,v 1.72 2014/07/17 15:47:48 dilfridge Exp $
+
+*perl-Archive-Tar-1.900.0-r2 (17 Jul 2014)
+
+  17 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Archive-Tar-1.820.0-r1.ebuild, -perl-Archive-Tar-1.900.0-r1.ebuild,
+  +perl-Archive-Tar-1.900.0-r2.ebuild, perl-Archive-Tar-1.960.0.ebuild:
+  Improve dependencies; remove old
 
 *perl-Archive-Tar-1.900.0-r1 (06 Jul 2014)
 

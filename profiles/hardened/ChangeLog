@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.59 2014/07/15 14:36:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.60 2014/07/17 21:22:55 zorry Exp $
+
+  17 Jul 2014; Magnus Granberg <zorry@gentoo.org>
+  linux/amd64/no-multilib/make.defaults,
+  +linux/amd64/no-multilib/package.use:
+  Set -pic as we don't need it as we don't use x86
 
   15 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
   +linux/uclibc/ppc/package.mask:

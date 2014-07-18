@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.12.5.ebuild,v 1.5 2014/05/08 07:32:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.12.5.ebuild,v 1.6 2014/07/17 10:59:25 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -19,7 +19,9 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE} test? ( semantic-desktop )"
 RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/PyQt4-4.9.5[${PYTHON_USEDEP},dbus,declarative,script(+),sql,svg,webkit,X]
+	<dev-python/PyQt4-4.11
 	>=dev-python/sip-4.14:=[${PYTHON_USEDEP}]
+	<dev-python/sip-4.16
 	$(add_kdebase_dep kdelibs 'opengl,semantic-desktop?')
 	semantic-desktop? (
 		$(add_kdebase_dep kdepimlibs)

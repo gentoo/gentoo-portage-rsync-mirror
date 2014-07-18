@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.16 2014/03/28 14:08:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.17 2014/07/17 20:48:05 williamh Exp $
 
 EAPI=5
 
 export CTARGET=${CTARGET:-${CHOST}}
 
-inherit bash-completion-r1 elisp-common eutils
+inherit eutils
 
 if [[ ${PV} = 9999 ]]; then
 	EHG_REPO_URI="https://go.googlecode.com/hg"
@@ -22,13 +22,10 @@ HOMEPAGE="http://www.golang.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="bash-completion emacs vim-syntax zsh-completion"
+IUSE=""
 
 DEPEND=""
-RDEPEND="bash-completion? ( app-shells/bash-completion )
-	emacs? ( virtual/emacs )
-	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
-	zsh-completion? ( app-shells/zsh-completion )"
+RDEPEND=""
 
 # The tools in /usr/lib/go should not cause the multilib-strict check to fail.
 QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"
@@ -61,11 +58,6 @@ src_compile()
 
 	cd src
 	./make.bash || die "build failed"
-	cd ..
-
-	if use emacs; then
-		elisp-compile misc/emacs/*.el
-	fi
 }
 
 src_test()
@@ -88,38 +80,11 @@ src_install()
 	# installing the doc and src directories.
 	# [1] http://code.google.com/p/go/issues/detail?id=2775
 	doins -r doc include lib pkg src
-
-	if use bash-completion; then
-		dobashcomp misc/bash/go
-	fi
-
-	if use emacs; then
-		elisp-install ${PN} misc/emacs/*.el misc/emacs/*.elc
-	fi
-
-	if use vim-syntax; then
-		insinto /usr/share/vim/vimfiles
-		doins -r misc/vim/ftdetect
-		doins -r misc/vim/ftplugin
-		doins -r misc/vim/syntax
-		doins -r misc/vim/plugin
-		doins -r misc/vim/indent
-	fi
-
-	if use zsh-completion; then
-		insinto /usr/share/zsh/site-functions
-		doins misc/zsh/go
-	fi
-
 	fperms -R +x /usr/lib/go/pkg/tool
 }
 
 pkg_postinst()
 {
-	if use emacs; then
-		elisp-site-regen
-	fi
-
 	# If the go tool sees a package file timestamped older than a dependancy it
 	# will rebuild that file.  So, in order to stop go from rebuilding lots of
 	# packages for every build we need to fix the timestamps.  The compiler and
@@ -133,12 +98,5 @@ pkg_postinst()
 	if [[ ${PV} != 9999 && -n ${REPLACING_VERSIONS} &&
 		${REPLACING_VERSIONS} != ${PV} ]]; then
 		elog "Release notes are located at http://golang.org/doc/go${PV}"
-	fi
-}
-
-pkg_postrm()
-{
-	if use emacs; then
-		elisp-site-regen
 	fi
 }

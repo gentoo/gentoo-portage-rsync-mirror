@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.69 2014/07/06 12:57:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.70 2014/07/17 07:06:48 prometheanfire Exp $
+
+*nova-2014.1.1-r1 (17 Jul 2014)
+
+  17 Jul 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/nova-2014.1.1-CVE-2014-3517.patch, +nova-2014.1.1-r1.ebuild,
+  -nova-2014.1.1.ebuild:
+  fix for nova 2014.1.1 CVE-2014-3517, we good yo
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> nova-2014.1.1.ebuild,
   nova-2014.1.9999.ebuild, nova-9999.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/simpleparse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.32 2012/12/02 06:04:13 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.33 2014/07/17 23:44:40 chutzpah Exp $
+
+*simpleparse-2.1.1-r1 (17 Jul 2014)
+
+  17 Jul 2014; Patrick McLean <chutzpah@gentoo.org>
+  +simpleparse-2.1.1-r1.ebuild:
+  Revision bump, port to distutils-r1 and EAPI=5. Add RESTRICT=test due to
+  tests segfaulting (bug #454680).
 
   02 Dec 2012; Tim Harder <radhermit@gentoo.org> simpleparse-2.1.1.ebuild:
   Fix LICENSE (bug #445428 by ulm).

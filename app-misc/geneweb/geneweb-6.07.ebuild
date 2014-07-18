@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.5 2014/07/16 06:04:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-6.07.ebuild,v 1.6 2014/07/17 08:49:46 nimiux Exp $
 
 EAPI=4
 inherit eutils user
@@ -16,7 +16,7 @@ SRC_URI="http://opensource.geneanet.org/attachments/download/240/${MY_P}-src.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+ocamlopt"
 
 RDEPEND="dev-lang/ocaml[ocamlopt?]

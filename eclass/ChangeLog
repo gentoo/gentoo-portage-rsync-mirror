@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1321 2014/07/16 17:18:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1322 2014/07/17 13:02:11 kensington Exp $
+
+  17 Jul 2014; Michael Palimaka <kensington@gentoo.org> kde4-functions.eclass:
+  Fix missing handbooks when the default handbook language is en_US instead of
+  the usual en.
 
   16 Jul 2014; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
   Add kde-workspace 4.11.11 SRC_URI, remove obsolete.

@@ -1,7 +1,6 @@
 DEFINED_PHASES=install
-DEPEND=dev-perl/GD[png]
 DESCRIPTION=Squid logfile analyzer and traffic grapher
-EAPI=2
+EAPI=5
 HOMEPAGE=http://squid-graph.sourceforge.net/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
@@ -9,4 +8,4 @@ RDEPEND=dev-perl/GD[png]
 SLOT=0
 SRC_URI=mirror://sourceforge/squid-graph/squid-graph-3.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c503d4ea07a213b3bc76e8f19adeda06
+_md5_=319ce2a97e98e679608bd9de78188bbc

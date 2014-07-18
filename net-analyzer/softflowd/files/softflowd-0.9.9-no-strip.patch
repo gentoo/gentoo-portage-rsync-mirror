@@ -1,5 +1,5 @@
---- softflowd-0.9.9/Makefile.in
-+++ softflowd-0.9.9/Makefile.in
+--- a/Makefile.in
++++ b/Makefile.in
 @@ -52,7 +52,7 @@
  	    $(srcdir)/mkinstalldirs $(DESTDIR)$(sbindir)
  	[ -d $(DESTDIR)$(mandir)/man8 ] || \

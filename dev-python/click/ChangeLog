@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/click
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/click/ChangeLog,v 1.1 2014/06/08 00:36:37 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/click/ChangeLog,v 1.2 2014/07/17 09:51:11 idella4 Exp $
+
+*click-2.4 (17 Jul 2014)
+
+  17 Jul 2014; Ian Delaney <idella4@gentoo.org> +click-2.4.ebuild:
+  bump; add IUSE doc examples test, missing dep and corresponding phases
 
 *click-2.0 (08 Jun 2014)
 

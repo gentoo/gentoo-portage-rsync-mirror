@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-36.0.1985.125_p1.ebuild,v 1.1 2014/07/17 01:08:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-36.0.1985.125_p1.ebuild,v 1.2 2014/07/18 04:49:57 floppym Exp $
 
 EAPI="5"
 
@@ -39,7 +39,6 @@ RESTRICT="bindist mirror strip"
 RDEPEND="
 	app-arch/bzip2
 	app-misc/ca-certificates
-	dev-libs/atk
 	dev-libs/expat
 	dev-libs/glib:2
 	|| ( dev-libs/libgcrypt:11 dev-libs/libgcrypt:0/11 )
@@ -48,16 +47,16 @@ RDEPEND="
 	gnome-base/gconf:2
 	media-libs/alsa-lib
 	media-libs/fontconfig
-	media-libs/freetype
+	media-libs/freetype:2
 	net-print/cups
 	sys-apps/dbus
-	>=sys-devel/gcc-4.4.0[cxx]
 	sys-libs/libcap
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf
+	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
 	>=x11-libs/libX11-1.5.0
 	x11-libs/libXcomposite
+	x11-libs/libXcursor
 	x11-libs/libXdamage
 	x11-libs/libXext
 	x11-libs/libXfixes

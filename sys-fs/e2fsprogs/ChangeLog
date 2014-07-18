@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.282 2014/07/15 18:42:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.284 2014/07/18 02:11:00 mattst88 Exp $
+
+  18 Jul 2014; Matt Turner <mattst88@gentoo.org> e2fsprogs-1.42.10.ebuild:
+  alpha stable, bug 516114.
+
+  17 Jul 2014;  <tgall@gentoo.org> e2fsprogs-1.42.10.ebuild:
+  arm64 stable, bug #516114
 
   15 Jul 2014; Markus Meier <maekke@gentoo.org> e2fsprogs-1.42.10.ebuild:
   arm stable, bug #516114

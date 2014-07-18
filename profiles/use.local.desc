@@ -4469,6 +4469,17 @@ net-analyzer/bmon:rrdtool - Enables net-analyzer/rrdtool support
 net-analyzer/bwm-ng:csv - Enable csv output
 net-analyzer/bwm-ng:html - Enable html output
 net-analyzer/cacti:doc - install html documentation
+net-analyzer/check_mk:agent-only - Install only the check_mk agent.
+net-analyzer/check_mk:apache_status - Install check_mk-agent apache-status plugin.
+net-analyzer/check_mk:dmi_sysinfo - Install check_mk-agent dmi_sysinfo plugin.
+net-analyzer/check_mk:livestatus - Enable livestatus.
+net-analyzer/check_mk:logwatch - Install check_mk-agent logwatch plugin.
+net-analyzer/check_mk:mysql - Install check_mk-agent mysql plugin.
+net-analyzer/check_mk:nfsexports - Install check_mk-agent nfsexports plugin.
+net-analyzer/check_mk:postgres - Install check_mk-agent postgres plugin.
+net-analyzer/check_mk:smart - Install check_mk-agent S.M.A.R.T plugin.
+net-analyzer/check_mk:wato - Enable check_mk WATO - check_mk's Web Administration Tool.
+net-analyzer/check_mk:zypper - Install check_mk-agent zypper plugin.
 net-analyzer/echoping:http - enable support for http protocol.
 net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
 net-analyzer/echoping:priority - enable socket priority support.

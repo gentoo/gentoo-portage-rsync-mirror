@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<longdescription>Softflowd is flow-based network traffic analyser capable of Cisco NetFlow data export.</longdescription>
-	<upstream>
-		<remote-id type="google-code">softflowd</remote-id>
-	</upstream>
+<herd>netmon</herd>
+<upstream>
+<remote-id type="google-code">softflowd</remote-id>
+</upstream>
 </pkgmetadata>

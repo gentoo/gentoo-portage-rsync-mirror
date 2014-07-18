@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.9.ebuild,v 1.1 2014/06/25 17:24:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.9.ebuild,v 1.2 2014/07/17 13:11:58 kensington Exp $
 
 EAPI=5
 
@@ -43,16 +43,6 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 DOCS=( AUTHORS ChangeLog README )
-
-src_prepare() {
-	# KDE_LINGUAS is also used to install appropriate handbooks
-	# since there is no en_US 'translation', it cannot be added
-	# hence making this impossible to install
-	mv doc/en_US doc/en || die "doc move failed"
-	sed -i -e 's/en_US/en/' doc/CMakeLists.txt || die "sed failed"
-
-	kde4-base_src_prepare
-}
 
 src_configure() {
 	local mycmakeargs=(

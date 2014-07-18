@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.13.2.ebuild,v 1.2 2014/06/25 04:12:13 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.13.2.ebuild,v 1.3 2014/07/17 10:59:25 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -19,7 +19,9 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE} test? ( nepomuk )"
 RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/PyQt4-4.9.5[${PYTHON_USEDEP},dbus,declarative,script(+),sql,svg,webkit,X]
+	<dev-python/PyQt4-4.11
 	>=dev-python/sip-4.14:=[${PYTHON_USEDEP}]
+	<dev-python/sip-4.16
 	$(add_kdebase_dep kdelibs 'nepomuk?,opengl')
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
 	nepomuk? ( >=dev-libs/soprano-2.9.0 )

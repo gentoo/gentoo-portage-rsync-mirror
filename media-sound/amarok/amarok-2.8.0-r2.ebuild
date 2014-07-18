@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r2.ebuild,v 1.1 2014/05/13 18:15:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r2.ebuild,v 1.2 2014/07/17 13:22:57 kensington Exp $
 
 EAPI=5
 
@@ -79,15 +79,6 @@ RDEPEND="${COMMONDEPEND}
 "
 
 PATCHES=( "${FILESDIR}/${P}-gmock-1.7.patch" )
-
-src_prepare() {
-	if [[ ${KDE_BUILD_TYPE} != live ]]; then
-		mv doc/en_US doc/en || die
-		sed -e "s/en_US/en/" -i doc/CMakeLists.txt || die
-	fi
-
-	kde4-base_src_prepare
-}
 
 src_configure() {
 	# Append minimal-toc cflag for ppc64, see bug 280552 and 292707

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.53 2014/04/16 15:31:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.54 2014/07/17 16:36:48 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> -tcpreplay-4.0.3.ebuild,
+  files/tcpreplay-3.4.4-crash.patch:
+  Clean up patch.
 
 *tcpreplay-4.0.4 (16 Apr 2014)
 

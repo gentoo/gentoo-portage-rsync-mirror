@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.101 2014/07/09 20:59:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.103 2014/07/17 19:28:14 zerochaos Exp $
+
+  17 Jul 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
+  update for meterpreter being split out into a gem (recommit to fix manifest
+  signing)
+
+  17 Jul 2014; Rick Farina <zerochaos@gentoo.org> metasploit-9999.ebuild:
+  update for meterpreter being split out into a gem
 
   09 Jul 2014; Rick Farina <zerochaos@gentoo.org> metasploit-4.9.3.ebuild:
   https://github.com/rapid7/metasploit-framework/pull/3495 this affects stable

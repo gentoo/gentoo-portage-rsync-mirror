@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/traceproto-1.1.2_beta1.ebuild,v 1.3 2008/10/09 20:40:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/traceproto-1.1.2_beta1.ebuild,v 1.5 2014/07/17 22:43:34 jer Exp $
 
+EAPI=5
 inherit eutils autotools
 
 MY_PV=${PV/_/}
@@ -13,32 +14,29 @@ SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="debug ncurses"
+IUSE="debug"
 
-RDEPEND=">=net-libs/libnet-1.1.0
+RDEPEND="
+	net-libs/libnet:1.1
 	net-libs/libpcap
-	ncurses? ( sys-libs/ncurses )
-	debug? ( dev-libs/dmalloc )"
-DEPEND="${RDEPEND}"
+	sys-libs/ncurses
+	debug? ( dev-libs/dmalloc )
+"
+DEPEND="
+	${RDEPEND}
+	app-doc/doxygen[dot]
+	virtual/pkgconfig
+"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}.patch
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tinfo.patch
 	eautoreconf
 }
 
-src_compile() {
-	econf \
-		$(use_enable debug dmalloc) \
-		$(use_enable ncurses) \
-		|| die "econf failed"
-	emake || die "emake failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+src_configure() {
+	econf $(use_enable debug dmalloc)
 }

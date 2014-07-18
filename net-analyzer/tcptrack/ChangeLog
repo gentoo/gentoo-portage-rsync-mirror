@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptrack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.25 2011/08/06 03:55:30 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.26 2014/07/17 20:11:22 jer Exp $
+
+  17 Jul 2014; Jeroen Roovers <jer@gentoo.org> tcptrack-1.4.2.ebuild,
+  +files/tcptrack-1.4.2-tinfo.patch, metadata.xml:
+  EAPI bump. Fix building against sys-libs/ncurses[tinfo].
 
   06 Aug 2011; Jeroen Roovers <jer@gentoo.org>
   -files/tcptrack-1.2.0-string_h.patch, -tcptrack-1.3.0.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.75 2014/07/06 08:33:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.76 2014/07/17 15:36:44 dilfridge Exp $
+
+  17 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -version-0.990.300.ebuild, -version-0.990.400.ebuild:
+  Remove old
 
   06 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -version-0.82.ebuild,
   -version-0.880.0.ebuild, -version-0.890.0.ebuild, -version-0.900.0.ebuild,

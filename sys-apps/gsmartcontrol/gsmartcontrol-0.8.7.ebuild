@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.3 2012/08/12 12:42:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.4 2014/07/17 12:08:30 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
 
 DESCRIPTION="Hard disk drive health inspection tool"
-HOMEPAGE="http://gsmartcontrol.berlios.de/"
+HOMEPAGE="http://gsmartcontrol.sourceforge.net/home/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2
 	http://artificialtime.com/${PN}/${P}.tar.bz2"
 

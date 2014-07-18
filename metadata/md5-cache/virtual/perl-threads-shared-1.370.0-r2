@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for threads-shared
-KEYWORDS=~amd64 ~x86
-RDEPEND=|| ( =dev-lang/perl-5.14* ~perl-core/threads-shared-1.370.0 )
-SLOT=0
-_md5_=8ac5ba55e6e0a22f56ea4d5f57d62a5a

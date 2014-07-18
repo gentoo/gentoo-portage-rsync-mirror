@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.91 2014/05/14 21:58:08 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.92 2014/07/17 13:15:53 kensington Exp $
+
+  17 Jul 2014; Michael Palimaka <kensington@gentoo.org>
+  -kdenlive-0.9.6-r1.ebuild, -kdenlive-0.9.6.ebuild:
+  Remove old.
 
 *kdenlive-0.9.8 (14 May 2014)
 
