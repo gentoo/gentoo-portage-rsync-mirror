@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/uuidtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.34 2014/06/02 17:58:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.36 2014/07/18 08:25:10 graaff Exp $
+
+  18 Jul 2014; Hans de Graaff <graaff@gentoo.org> -uuidtools-2.1.4.ebuild,
+  -uuidtools-2.1.4-r2.ebuild:
+  Cleanup.
+
+  18 Jul 2014; Hans de Graaff <graaff@gentoo.org> uuidtools-2.1.4-r1.ebuild:
+  Use default gem SRC_URI since rubyforge is going away, bug 512132.
 
 *uuidtools-2.1.4-r3 (02 Jun 2014)
 
