@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.483 2014/06/13 09:55:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.484 2014/07/18 10:55:19 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> dovecot-2.2.13-r1.ebuild:
+  Keyworded on alpha, bug #501600
 
   13 Jun 2014; Eray Aslan <eras@gentoo.org> -dovecot-2.0.19.ebuild,
   -dovecot-2.1.16.ebuild, -dovecot-2.1.17.ebuild,
