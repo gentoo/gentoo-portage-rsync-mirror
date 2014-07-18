@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.31 2014/05/21 01:34:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.32 2014/07/18 07:43:53 graaff Exp $
+
+  18 Jul 2014; Hans de Graaff <graaff@gentoo.org> -deprecated-2.0.1-r2.ebuild,
+  -deprecated-2.0.1-r4.ebuild:
+  Remove masked slot.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> deprecated-2.0.1-r2.ebuild,
   deprecated-2.0.1-r4.ebuild, deprecated-3.0.0.ebuild,

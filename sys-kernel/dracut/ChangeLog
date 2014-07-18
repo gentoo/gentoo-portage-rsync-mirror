@@ -1,6 +1,47 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.168 2014/06/12 18:47:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.170 2014/07/18 07:56:01 aidecoe Exp $
+
+  18 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-037.ebuild,
+  -dracut-037-r1.ebuild, -dracut-037-r2.ebuild:
+  Removed old revisions of 037.
+
+*dracut-038 (18 Jul 2014)
+
+  18 Jul 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-038.ebuild,
+  +files/038-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/038-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/038-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/038-0004-Install-dracut-install-into-libexec-di.patch,
+  +files/038-0005-modsign-do-not-hardcode-path-to-keyctl.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - "rd.cmdline=ask" will ask the user on the console to enter additional
+    kernel command line parameters
+  - "rd.hostonly=0" removes all "hostonly" added custom files, which is useful
+    in combination with "rd.auto" or other specific parameters, if you want to
+    boot on the same hardware, but the compiled in configuration does not match
+    your setup anymore
+  - inst* functions and dracut-install now accept the "-H" flag, which logs all
+    installed files to /lib/dracut/hostonly-files. This is used to remove those
+    files, if rd.hostonly is given on the kernel command line
+  - strstr now only does literal string match, please use strglob and strglobin
+    for globs
+  - fixed unpacking of the microcode image on shutdown
+  - added systemd-gpt-auto-generator
+  - fcoe: wait for lldpad to be ready
+  - network: handle "ip=dhcp6"
+  - network: DCHPv6: set valid_lft and preferred_lft
+  - dm: support dm-cache
+  - fstab: do not mount and fsck from fstab if using systemd
+  - break at switch_root only for bare rd.break and not for any rd.break=...
+  - nbd: make use of "--systemd-mark", otherwise it gets killed on switch_root
+  - fcoe-uefi: fixed cmdline parameter generation
+  - iscsi: deprecate "ip=ibft", use "rd.iscsi.ibft[=1]" from now on
+  - "lsinitrd -m" now only lists the dracut modules of the image
+  - a lot of small bugfixes
 
 *dracut-037-r3 (12 Jun 2014)
 

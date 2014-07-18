@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-037-r1.ebuild,v 1.1 2014/05/14 07:09:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-038.ebuild,v 1.1 2014/07/18 07:54:18 aidecoe Exp $
 
 EAPI=4
 
