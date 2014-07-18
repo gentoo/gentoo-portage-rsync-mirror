@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Carp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.3 2014/07/05 12:23:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.4 2014/07/18 18:11:14 dilfridge Exp $
+
+*perl-Carp-1.290.0-r1 (18 Jul 2014)
+
+  18 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Carp-1.290.0.ebuild, +perl-Carp-1.290.0-r1.ebuild,
+  perl-Carp-1.330.100.ebuild:
+  Improve dependencies
 
 *perl-Carp-1.330.100 (05 Jul 2014)
 
