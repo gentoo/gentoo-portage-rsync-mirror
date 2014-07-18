@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ipt_netflow-1.8-r4.ebuild,v 1.2 2014/02/28 11:24:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ipt_netflow-1.8-r4.ebuild,v 1.3 2014/07/18 12:41:29 jer Exp $
 
-EAPI="5"
-
+EAPI=5
 inherit eutils linux-info linux-mod multilib toolchain-funcs
 
 DESCRIPTION="Netflow iptables module"
@@ -19,7 +18,8 @@ IUSE="pax_kernel"
 RDEPEND="net-firewall/iptables"
 DEPEND="${RDEPEND}
 	virtual/linux-sources
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 BUILD_TARGETS="all"
 CONFIG_CHECK="~IP_NF_IPTABLES"
@@ -28,10 +28,13 @@ MODULE_NAMES="ipt_NETFLOW(ipt_netflow:${S})"
 IPT_LIB="/usr/$(get_libdir)/xtables"
 
 src_prepare() {
-	sed -i -e 's:-I$(KDIR)/include::' \
+	sed -i \
+		-e 's:-I$(KDIR)/include::' \
+		-e 's:make -C:$(MAKE) -C:g' \
 		-e 's:gcc -O2:$(CC) $(CFLAGS) $(LDFLAGS):' \
-		-e 's:gcc:$(CC) $(CFLAGS) $(LDFLAGS):' Makefile.in || die 'sed on Makefile.in failed'
-	sed -i -e '/IPT_NETFLOW_VERSION/s/1.7.2/1.8/' ipt_NETFLOW.c || die 'sed on ipt_NETFLOW.c failed'
+		-e 's:gcc:$(CC) $(CFLAGS) $(LDFLAGS):' \
+		Makefile.in || die
+	sed -i -e '/IPT_NETFLOW_VERSION/s/1.7.2/1.8/' ipt_NETFLOW.c || die
 
 	# bug #455984
 	epatch "${FILESDIR}"/${PN}-1.8-configure.patch
@@ -64,8 +67,7 @@ src_configure() {
 }
 
 src_compile() {
-	local ARCH="$(tc-arch-kernel)"
-	emake CC="$(tc-getCC)" all
+	emake ARCH="$(tc-arch-kernel)" CC="$(tc-getCC)" all
 }
 
 src_install() {

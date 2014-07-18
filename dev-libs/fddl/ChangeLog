@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fddl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/ChangeLog,v 1.4 2013/06/06 06:40:05 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/ChangeLog,v 1.5 2014/07/18 12:54:00 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> fddl-20111124.ebuild:
+  Install into proper libdir.
 
   06 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Reassigning due to Zlogene became Gentoo developer, remove proxy maintainers

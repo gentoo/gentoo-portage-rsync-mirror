@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipt_netflow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.13 2014/02/28 11:24:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.14 2014/07/18 12:41:29 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -ipt_netflow-1.8-r3.ebuild,
+  ipt_netflow-1.8-r4.ebuild, files/ipt_netflow-1.8-pax-const.patch,
+  files/ipt_netflow-1.8-procfs-fix.patch:
+  make -> $(MAKE). Clean up patches.
 
   28 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> ipt_netflow-1.8-r4.ebuild:
   Stable on amd64 and x86, wrt bug #502872

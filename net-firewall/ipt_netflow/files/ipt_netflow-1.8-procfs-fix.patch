@@ -1,7 +1,7 @@
 Patch from http://sourceforge.net/p/ipt-netflow/bugs-requests-patches/71/
 
---- ipt_NETFLOW.c.orig	2013-08-21 13:20:25.606323000 +0400
-+++ ipt_NETFLOW.c	2013-08-21 13:23:04.249323000 +0400
+--- a/ipt_NETFLOW.c
++++ b/ipt_NETFLOW.c
 @@ -854,9 +854,15 @@
  ipt_netflow_find(const struct ipt_netflow_tuple *tuple, unsigned int hash)
  {

@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/itval
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/ChangeLog,v 1.6 2012/12/25 04:14:53 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/ChangeLog,v 1.7 2014/07/18 12:55:43 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -itval-1.1.ebuild,
+  itval-1.2_p20121104.ebuild, files/itval-1.1-gcc44.patch:
+  EAPI bump. Clean up patch.
 
   25 Dec 2012; Jeff Horelick <jdhore@gentoo.org> itval-1.2_p20121104.ebuild:
   marked x86 per bug 447332

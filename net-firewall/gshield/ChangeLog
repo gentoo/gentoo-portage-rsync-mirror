@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/gshield
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.12 2012/12/09 18:16:55 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/ChangeLog,v 1.13 2014/07/18 12:33:32 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> gshield-2.8-r3.ebuild:
+  EAPI bump.
 
   09 Dec 2012; Jeroen Roovers <jer@gentoo.org> -gshield-2.8-r2.ebuild:
   Old.

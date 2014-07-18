@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r3.ebuild,v 1.2 2012/01/28 14:49:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r3.ebuild,v 1.3 2014/07/18 12:33:32 jer Exp $
 
-EAPI="4"
+EAPI=5
 
 DESCRIPTION="iptables firewall configuration system"
 HOMEPAGE="http://muse.linuxmafia.org/gshield.html"
@@ -11,17 +11,14 @@ SRC_URI="ftp://muse.linuxmafia.org/pub/gShield/v2/gShield-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE=""
 
-RDEPEND="net-firewall/iptables
+RDEPEND="
 	net-dns/bind-tools
-	virtual/logger"
+	net-firewall/iptables
+	virtual/logger
+"
 
-src_unpack() {
-	# set S=${P}
-	unpack ${A}
-	mv * ${P} || die
-}
+S=${WORKDIR}/gShield-${PV}
 
 src_install() {
 	# install config files
