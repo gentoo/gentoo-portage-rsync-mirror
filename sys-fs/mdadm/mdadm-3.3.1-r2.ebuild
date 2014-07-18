@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.3.1-r1.ebuild,v 1.1 2014/07/17 07:03:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.3.1-r2.ebuild,v 1.2 2014/07/18 14:30:45 ssuominen Exp $
 
-EAPI="4"
-inherit multilib flag-o-matic systemd toolchain-funcs udev
+EAPI=4
+inherit eutils flag-o-matic  multilib systemd toolchain-funcs udev
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools"
 HOMEPAGE="http://neil.brown.name/blog/mdadm"
@@ -34,6 +34,20 @@ mdadm_emake() {
 		UDEVDIR="$(get_udevdir)" \
 		SYSTEMD_DIR="$(systemd_get_unitdir)" \
 		"$@"
+}
+
+src_prepare() {
+	# These are important bugfixes from upstream git after 3.3.1 release,
+	# and before and including 17 Jul 2014:
+	epatch \
+		"${FILESDIR}"/${P}-Makefile-install-mdadm-grow-continue-.service.patch \
+		"${FILESDIR}"/${P}-Grow-fix-removal-of-line-in-wrong-case.patch \
+		"${FILESDIR}"/${P}-IMSM-use-strcpy-rather-than-pointless-strncpy.patch \
+		"${FILESDIR}"/${P}-mdmon-ensure-Unix-domain-socket-is-created-with-safe.patch \
+		"${FILESDIR}"/${P}-mdmon-allow-prepare_update-to-report-failure.patch \
+		"${FILESDIR}"/${P}-DDF-validate-metadata_update-size-before-using-it.patch \
+		"${FILESDIR}"/${P}-IMSM-validate-metadata_update-size-before-using-it.patch \
+		"${FILESDIR}"/${P}-Grow-Do-not-try-to-restart-if-reshape-is-running.patch
 }
 
 src_compile() {

@@ -1,6 +1,26 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.182 2014/07/17 07:55:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.184 2014/07/18 14:16:32 ssuominen Exp $
+
+  18 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -mdadm-3.3-r4.ebuild,
+  -mdadm-3.3.1-r1.ebuild, -files/mdadm.service-r1:
+  old
+
+*mdadm-3.3.1-r2 (18 Jul 2014)
+
+  18 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/mdadm-3.3.1-DDF-validate-metadata_update-size-before-using-it.patch,
+  +files/mdadm-3.3.1-Grow-Do-not-try-to-restart-if-reshape-is-running.patch,
+  +files/mdadm-3.3.1-Grow-fix-removal-of-line-in-wrong-case.patch,
+  +files/mdadm-3.3.1-IMSM-use-strcpy-rather-than-pointless-strncpy.patch,
+  +files/mdadm-3.3.1-IMSM-validate-metadata_update-size-before-using-it.patch,
+  +files/mdadm-3.3.1-Makefile-install-mdadm-grow-continue-.service.patch,
+  +files/mdadm-3.3.1-mdmon-allow-prepare_update-to-report-failure.patch,
+  +files/mdadm-3.3.1-mdmon-ensure-Unix-domain-socket-is-created-with-safe.patch,
+  +mdadm-3.3.1-r2.ebuild:
+  The purpose of this commit is to fix installation of mdadm-grow-
+  continue@.service which was missing from Makefile. While at it, grab other
+  important bugfixes from upstream git as well.
 
   17 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> mdadm-3.3-r4.ebuild:
   Backport parallel make fix from 3.3.1-r1 wrt #516768

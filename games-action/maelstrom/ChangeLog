@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.25 2014/05/15 16:23:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.26 2014/07/18 14:23:05 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  maelstrom-3.0.6-r2.ebuild:
+  Stable on alpha, bug #505002
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> maelstrom-3.0.6-r1.ebuild,
   maelstrom-3.0.6-r2.ebuild:

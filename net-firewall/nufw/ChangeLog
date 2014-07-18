@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.41 2014/03/01 22:49:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.42 2014/07/18 14:06:38 jer Exp $
+
+*nufw-2.2.22-r1 (18 Jul 2014)
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nufw-2.2.22.ebuild,
+  +nufw-2.2.22-r1.ebuild, files/nufw-2.2.21-fix-gnutls.patch,
+  +files/nufw-2.2.22-var-run.patch, files/nuauth-conf.d, files/nuauth-init.d,
+  files/nufw-conf.d, files/nufw-init.d, metadata.xml:
+  Marked ~amd64 too. Use /run not /var/run. USE=pam_nuauth requires
+  USE=plaintext.
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> nufw-2.2.21.ebuild,
   nufw-2.2.22.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r2.ebuild,v 1.5 2014/05/15 16:23:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r2.ebuild,v 1.6 2014/07/18 14:23:05 klausman Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -10,7 +10,7 @@ DESCRIPTION="An asteroids battle game"
 HOMEPAGE="http://www.libsdl.org/projects/Maelstrom/"
 SRC_URI="http://www.libsdl.org/projects/Maelstrom/src/${MY_P}.tar.gz"
 
-KEYWORDS="~alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

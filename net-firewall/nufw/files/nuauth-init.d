@@ -13,6 +13,7 @@ checkconfig() {
 }
 
 start() {
+	checkpath -d /run/nuauth
 	checkconfig || return 1
 	ebegin "Starting nuauth"
 		start-stop-daemon --start --quiet --exec /usr/sbin/nuauth -- -D ${NUAUTH_OPTIONS}
@@ -21,6 +22,6 @@ start() {
 
 stop() {
 	ebegin "Stopping nuauth"
-		start-stop-daemon --stop --quiet --pidfile /var/run/nuauth/nuauth.pid
+		start-stop-daemon --stop --quiet --pidfile /run/nuauth/nuauth.pid
 	eend $?
 }

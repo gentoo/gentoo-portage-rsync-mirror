@@ -7,9 +7,6 @@
 <name>Jeroen Roovers</name>
 </maintainer>
 <use>
-<flag name="fuse">
-	Install the <pkg>sys-fs/fuse</pkg> based acngfs, to use a userspace
-	filesystem for the apt cache.
-</flag>
+<flag name="fuse">Install the <pkg>sys-fs/fuse</pkg> based acngfs, to use a userspace filesystem for the apt cache.</flag>
 </use>
 </pkgmetadata>

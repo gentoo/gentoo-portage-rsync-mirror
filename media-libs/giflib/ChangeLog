@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.84 2014/07/18 12:58:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.85 2014/07/18 14:25:48 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> giflib-4.1.6-r3.ebuild:
+  Stable for HPPA (bug #516304).
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> giflib-4.1.6-r3.ebuild:
   Stable on alpha, bug #516304

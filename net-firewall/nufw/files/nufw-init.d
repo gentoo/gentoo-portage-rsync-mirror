@@ -12,6 +12,6 @@ start() {
 
 stop() {
 	ebegin "Stopping nufw"
-	start-stop-daemon --stop --quiet --pidfile /var/run/nufw.pid
+	start-stop-daemon --stop --quiet --pidfile /run/nufw.pid
 	eend $?
 }

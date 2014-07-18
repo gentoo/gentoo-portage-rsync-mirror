@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.92 2014/06/14 10:12:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.93 2014/07/18 14:08:17 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  wanderlust-2.15.9_p20130619.ebuild:
+  Stable on alpha, bug #505056
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   wanderlust-2.15.9_p20130619.ebuild:
