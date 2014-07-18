@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/4ti2-1.6.2.ebuild,v 1.1 2014/04/23 14:44:02 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/4ti2-1.6.2.ebuild,v 1.2 2014/07/18 12:27:10 nimiux Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://4ti2.de/version_${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-macos"
+KEYWORDS="amd64 ~x86 ~x86-macos"
 IUSE="static-libs"
 
 DEPEND="

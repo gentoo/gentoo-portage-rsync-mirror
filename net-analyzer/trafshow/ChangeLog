@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/trafshow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.41 2014/07/18 03:11:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.42 2014/07/18 12:05:04 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> trafshow-5.2.3.ebuild:
+  sys-libs/slang is optional.
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> trafshow-5.2.3.ebuild,
   files/trafshow-5.2.3-gcc44.patch, files/trafshow-5.2.3-gentoo.patch,

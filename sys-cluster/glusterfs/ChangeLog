@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/glusterfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.57 2014/06/25 15:48:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.58 2014/07/18 12:18:20 dev-zero Exp $
+
+*glusterfs-3.5.1 (18 Jul 2014)
+
+  18 Jul 2014; Tiziano Müller <dev-zero@gentoo.org>
+  +files/glusterfs-3.5.1-Add-libraries-using-LIBADD-instead-of-LDFLAGS.patch,
+  +files/glusterfs-3.5.1-build-shared-only.patch, +glusterfs-3.5.1.ebuild,
+  metadata.xml:
+  Version bump.
 
 *glusterfs-3.4.4-r2 (25 Jun 2014)
 

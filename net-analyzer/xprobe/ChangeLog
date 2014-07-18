@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/xprobe
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.24 2008/05/03 12:04:37 drac Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.25 2014/07/18 12:12:20 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> xprobe-0.3.ebuild,
+  files/xprobe-0.3-gcc43.patch, metadata.xml:
+  EAPI bump. Clean up patch.
 
   03 May 2008; Samuli Suominen <drac@gentoo.org>
   +files/xprobe-0.3-gcc43.patch, xprobe-0.3.ebuild:

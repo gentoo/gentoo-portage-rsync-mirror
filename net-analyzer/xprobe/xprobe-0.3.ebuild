@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.3.ebuild,v 1.6 2008/05/03 12:04:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.3.ebuild,v 1.7 2014/07/18 12:12:20 jer Exp $
 
+EAPI=5
 inherit eutils
 
 MY_P=${PN}2-${PV}
@@ -13,20 +14,18 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
-IUSE=""
 
 DEPEND="net-libs/libpcap"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
-	sed -i -e 's:strip:true:' src/Makefile.in || die "sed failed."
+	sed -i -e 's:strip:true:' src/Makefile.in || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	default
 	dodoc AUTHORS CHANGELOG CREDITS README TODO docs/*.{txt,pdf}
 }
