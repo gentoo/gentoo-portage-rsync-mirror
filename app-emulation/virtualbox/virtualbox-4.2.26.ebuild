@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.10-r2.ebuild,v 1.1 2014/04/10 20:49:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.26.ebuild,v 1.1 2014/07/18 13:51:47 polynomial-c Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ MY_PV="${PV/beta/BETA}"
 MY_PV="${MY_PV/rc/RC}"
 MY_P=VirtualBox-${MY_PV}
 SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/${PN}/patchsets/${PN}-4.3.10-patches-01.tar.xz"
+	http://dev.gentoo.org/~polynomial-c/${PN}/patchsets/${PN}-4.2.26-patches-01.tar.xz"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
@@ -30,7 +30,6 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/openssl
 	dev-libs/libxml2
 	media-libs/libpng
-	media-libs/libvpx
 	sys-libs/zlib
 	>=virtual/udev-171
 	!headless? (
@@ -51,7 +50,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	vnc? ( >=net-libs/libvncserver-0.9.9 )
 	java? ( || ( virtual/jre:1.7 virtual/jre:1.6 ) )"
 DEPEND="${RDEPEND}
-	>=dev-util/kbuild-0.1.9998_pre20131130
+	>=dev-util/kbuild-0.1.9998_pre20120806
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-power/iasl
@@ -70,7 +69,7 @@ DEPEND="${RDEPEND}
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
-	vboxwebsrv? ( net-libs/gsoap[-gnutls] )
+	vboxwebsrv? ( <net-libs/gsoap-2.8.13 )
 	${PYTHON_DEPS}"
 PDEPEND="additions? ( ~app-emulation/virtualbox-additions-${PV} )
 	extensions? ( =app-emulation/virtualbox-extpack-oracle-${PV}* )"
@@ -107,8 +106,7 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox/VBoxPython2_7.so
 	usr/lib/virtualbox/VBoxXPCOMC.so
 	usr/lib/virtualbox/VBoxOGLhostcrutil.so
-	usr/lib/virtualbox/VBoxNetDHCP.so
-	usr/lib/virtualbox/VBoxNetNAT.so"
+	usr/lib/virtualbox/VBoxNetDHCP.so"
 
 REQUIRED_USE="
 	java? ( sdk )
@@ -168,7 +166,7 @@ src_prepare() {
 	fi
 
 	if ! gcc-specs-pie ; then
-		EPATCH_EXCLUDE="050_${PN}-4.3.4-nopie.patch"
+		EPATCH_EXCLUDE="050_${PN}-4.2.0-nopie.patch"
 	fi
 
 	EPATCH_SUFFIX="patch" \
@@ -176,25 +174,30 @@ src_prepare() {
 	epatch "${WORKDIR}/patches"
 
 	epatch_user
+
+	# fix location of ifconfig binary (bug #455902)
+	local ifcfg="$(type -p ifconfig)"
+	if [ "${ifcfg}" != "/sbin/ifconfig" ] ; then
+		sed "/VBOXADPCTL_IFCONFIG_PATH/s@/sbin/ifconfig@${ifcfg}@" \
+			-i "${S}"/src/apps/adpctl/VBoxNetAdpCtl.cpp \
+			|| die
+	fi
 }
 
 src_configure() {
 	local myconf
 	use alsa       || myconf+=" --disable-alsa"
-	use doc        || myconf+=" --disable-docs"
-	use java       || myconf+=" --disable-java"
 	use opengl     || myconf+=" --disable-opengl"
 	use pulseaudio || myconf+=" --disable-pulse"
 	use python     || myconf+=" --disable-python"
+	use java       || myconf+=" --disable-java"
 	use vboxwebsrv && myconf+=" --enable-webservice"
 	use vnc        && myconf+=" --enable-vnc"
+	use doc        || myconf+=" --disable-docs"
 	if ! use headless ; then
 		use qt4 || myconf+=" --disable-qt4"
 	else
 		myconf+=" --build-headless --disable-opengl"
-	fi
-	if use amd64 && ! has_multilib_profile ; then
-		myconf+=" --disable-vmmraw"
 	fi
 	# not an autoconf script
 	./configure \
@@ -266,20 +269,14 @@ src_install() {
 		newconfd "${FILESDIR}"/vboxwebsrv-confd vboxwebsrv
 	fi
 
-	local gcfiles="*gc"
-	if use amd64 && ! has_multilib_profile ; then
-		gcfiles=""
-	fi
-
-	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,NetNAT,ExtPackHelperApp} *so *r0 ${gcfiles} ; do
-		doins ${each}
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,ExtPackHelperApp} *so *r0 *gc ; do
+		doins $each
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/${each}
 		fperms 0750 /usr/$(get_libdir)/${PN}/${each}
 	done
 	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetAdpCtl
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetDHCP
-	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetNAT
 
 	# VBoxSVC needs to be pax-marked (bug #403453)
 	pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxSVC || die
@@ -288,7 +285,7 @@ src_install() {
 
 	if ! use headless ; then
 		for each in VBox{SDL,Headless} ; do
-			doins ${each}
+			doins $each
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/${each}
 			fperms 4750 /usr/$(get_libdir)/${PN}/${each}
 			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/${each}
@@ -306,8 +303,7 @@ src_install() {
 			doins VirtualBox
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/VirtualBox
 			fperms 4750 /usr/$(get_libdir)/${PN}/VirtualBox
-			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VirtualBox \
-				|| die
+			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VirtualBox
 
 			dosym /usr/$(get_libdir)/${PN}/VBox /usr/bin/VirtualBox
 
@@ -324,7 +320,7 @@ src_install() {
 		doins VBoxHeadless
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxHeadless
 		fperms 4750 /usr/$(get_libdir)/${PN}/VBoxHeadless
-		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless || die
+		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless
 	fi
 
 	insinto /usr/$(get_libdir)/${PN}

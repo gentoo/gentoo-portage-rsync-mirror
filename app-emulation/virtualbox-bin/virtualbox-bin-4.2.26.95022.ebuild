@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.10.93012.ebuild,v 1.2 2014/03/27 12:14:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.26.95022.ebuild,v 1.1 2014/07/18 13:49:00 polynomial-c Exp $
 
 EAPI=5
 
@@ -279,7 +279,7 @@ src_install() {
 	dosym /opt/VirtualBox/VBoxXPCOM.so /opt/VirtualBox/components/VBoxXPCOM.so
 
 	local each
-	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,NetNAT,TestOGL,ExtPackHelperApp}; do
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,TestOGL,ExtPackHelperApp}; do
 		fowners root:vboxusers /opt/VirtualBox/${each}
 		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
@@ -287,7 +287,6 @@ src_install() {
 	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /opt/VirtualBox/VBoxNetAdpCtl
 	fperms 4750 /opt/VirtualBox/VBoxNetDHCP
-	fperms 4750 /opt/VirtualBox/VBoxNetNAT
 
 	if ! use headless ; then
 		# Hardened build: Mark selected binaries set-user-ID-on-execution

@@ -7,6 +7,6 @@ LICENSE=GPL-2+ LGPL-2.1+ MIT SGI-B-2.0 CDDL
 RDEPEND=!app-emulation/virtualbox-bin !=app-emulation/virtualbox-9999
 RESTRICT=mirror
 SLOT=0
-SRC_URI=http://download.virtualbox.org/virtualbox/4.3.10/VBoxGuestAdditions_4.3.10.iso
+SRC_URI=http://download.virtualbox.org/virtualbox/4.3.14/VBoxGuestAdditions_4.3.14.iso
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c4437e91b91e80381c4ce1454d46af89
+_md5_=bec517490bc24a162219a64b542be4d9

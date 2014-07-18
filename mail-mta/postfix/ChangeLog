@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.517 2014/07/17 06:49:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.518 2014/07/18 13:35:40 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> postfix-2.10.3.ebuild:
+  Stable on alpha, bug #505014
 
 *postfix-2.12_pre20140716 (17 Jul 2014)
 

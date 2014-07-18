@@ -1,37 +1,53 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.22.ebuild,v 1.3 2014/01/16 20:28:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.14.95030.ebuild,v 1.1 2014/07/18 13:49:00 polynomial-c Exp $
 
 EAPI=5
 
-inherit eutils unpacker fdo-mime gnome2 pax-utils udev
+inherit eutils fdo-mime gnome2 pax-utils udev unpacker versionator
 
-MY_PV=${PV/beta/BETA}
-MY_PV=${MY_PV/rc/RC}
-VBOX_PV=${MY_PV}-91556
-SDK_PV=${VBOX_PV}
-EXTP_PV=${SDK_PV}
-MY_P=VirtualBox-${VBOX_PV}-Linux
-EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
+MAIN_PV="$(get_version_component_range 1-3)"
+if [[ ${PV} = *_beta* ]] || [[ ${PV} = *_rc* ]] ; then
+	MY_PV="${MAIN_PV}_$(get_version_component_range 5)"
+	MY_PV="${MY_PV/beta/BETA}"
+	MY_PV="${MY_PV/rc/RC}"
+else
+	MY_PV="${MAIN_PV}"
+fi
+VBOX_BUILD_ID="$(get_version_component_range 4)"
+VBOX_PV="${MY_PV}-${VBOX_BUILD_ID}"
+MY_P="VirtualBox-${VBOX_PV}-Linux"
+# needed as sometimes the extpack gets another build ID
+EXTP_PV="${VBOX_PV}"
+EXTP_PN="Oracle_VM_VirtualBox_Extension_Pack"
+EXTP_P="${EXTP_PN}-${EXTP_PV}"
+# needed as sometimes the SDK gets another build ID
+SDK_PV="${VBOX_PV}"
+SDK_P="VirtualBoxSDK-${SDK_PV}"
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_x86.run )
-	sdk? ( http://download.virtualbox.org/virtualbox/${MY_PV}/VirtualBoxSDK-${SDK_PV}.zip )
-	http://download.virtualbox.org/virtualbox/${MY_PV}/${EXTP_PN}-${EXTP_PV}.vbox-extpack -> ${EXTP_PN}-${EXTP_PV}.tar.gz"
+	http://download.virtualbox.org/virtualbox/${MY_PV}/${EXTP_P}.vbox-extpack -> ${EXTP_P}.tar.gz"
 
 LICENSE="GPL-2 PUEL"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
+KEYWORDS="~amd64 ~x86"
+IUSE="+additions +chm headless python vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
+
+if [[ "${PV}" != *beta* ]] ; then
+	SRC_URI+="
+		sdk? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${SDK_P}.zip )"
+	IUSE+=" sdk"
+fi
 
 DEPEND="app-arch/unzip"
 
 RDEPEND="!!app-emulation/virtualbox
 	!app-emulation/virtualbox-additions
-	~app-emulation/virtualbox-modules-${PV}
+	~app-emulation/virtualbox-modules-${MAIN_PV}
 	!headless? (
 		x11-libs/libXcursor
 		media-libs/libsdl[X]
@@ -154,10 +170,10 @@ src_unpack() {
 
 	mkdir "${S}"/${EXTP_PN} || die
 	pushd "${S}"/${EXTP_PN} &>/dev/null || die
-	unpack ${EXTP_PN}-${EXTP_PV}.tar.gz
+	unpack ${EXTP_P}.tar.gz
 	popd &>/dev/null || die
 
-	if use sdk; then
+	if [[ "${PV}" != *beta* ]] && use sdk ; then
 		unpack VirtualBoxSDK-${SDK_PV}.zip
 	fi
 }
@@ -203,7 +219,7 @@ src_install() {
 
 	doins UserManual.pdf
 
-	if use sdk ; then
+	if [[ "${PV}" != *beta* ]] && use sdk ; then
 		doins -r sdk
 	fi
 
@@ -263,7 +279,7 @@ src_install() {
 	dosym /opt/VirtualBox/VBoxXPCOM.so /opt/VirtualBox/components/VBoxXPCOM.so
 
 	local each
-	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,TestOGL,ExtPackHelperApp}; do
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,NetNAT,TestOGL,ExtPackHelperApp}; do
 		fowners root:vboxusers /opt/VirtualBox/${each}
 		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
@@ -271,6 +287,7 @@ src_install() {
 	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /opt/VirtualBox/VBoxNetAdpCtl
 	fperms 4750 /opt/VirtualBox/VBoxNetDHCP
+	fperms 4750 /opt/VirtualBox/VBoxNetNAT
 
 	if ! use headless ; then
 		# Hardened build: Mark selected binaries set-user-ID-on-execution

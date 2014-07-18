@@ -1,16 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.2.22.ebuild,v 1.3 2014/01/16 20:28:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.2.26.95022.ebuild,v 1.1 2014/07/18 13:49:43 polynomial-c Exp $
 
 EAPI=5
 
-inherit eutils multilib
+inherit eutils multilib versionator
 
-MY_BUILD="91556"
+MAIN_PV="$(get_version_component_range 1-3)"
+if [[ ${PV} = *_beta* ]] || [[ ${PV} = *_rc* ]] ; then
+	MY_PV="${MAIN_PV}_$(get_version_componen_range 5)"
+	MY_PV="${MY_PV/beta/BETA}"
+	MY_PV="${MY_PV/rc/RC}"
+else
+	MY_PV="${MAIN_PV}"
+fi
+VBOX_BUILD_ID="$(get_version_component_range 4)"
 MY_PN="Oracle_VM_VirtualBox_Extension_Pack"
-MY_PV="${PV/beta/BETA}"
-MY_PV="${MY_PV/rc/RC}"
-MY_P="${MY_PN}-${MY_PV}-${MY_BUILD}"
+MY_P="${MY_PN}-${MY_PV}-${VBOX_BUILD_ID}"
 
 DESCRIPTION="PUEL extensions for VirtualBox"
 HOMEPAGE="http://www.virtualbox.org/"
@@ -18,11 +24,11 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.vbox-extpack
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror strip"
 
-RDEPEND="~app-emulation/virtualbox-${PV}"
+RDEPEND="~app-emulation/virtualbox-${MAIN_PV}"
 
 S="${WORKDIR}"
 

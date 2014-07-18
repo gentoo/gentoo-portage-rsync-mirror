@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=app-arch/unzip app-arch/xz-utils >=sys-apps/sed-4 virtual/pkgconfig
+DESCRIPTION=Family of powerful x86 virtualization products for enterprise as well as home use
+EAPI=5
+HOMEPAGE=http://www.virtualbox.org/
+IUSE=+additions +chm headless python vboxwebsrv rdesktop-vrdp sdk debug
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 PUEL
+RDEPEND=!!app-emulation/virtualbox !app-emulation/virtualbox-additions ~app-emulation/virtualbox-modules-4.2.26 !headless? ( x11-libs/libXcursor media-libs/libsdl[X] x11-libs/libXrender x11-libs/libXfixes media-libs/libpng x11-libs/libXi x11-libs/libXrandr x11-libs/libXinerama x11-libs/libXft media-libs/freetype media-libs/fontconfig x11-libs/libXext dev-libs/glib chm? ( dev-libs/expat ) ) x11-libs/libXt dev-libs/libxml2 x11-libs/libXau x11-libs/libX11 x11-libs/libXmu x11-libs/libSM x11-libs/libICE x11-libs/libXdmcp python? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( http://download.virtualbox.org/virtualbox/4.2.26/VirtualBox-4.2.26-95022-Linux_amd64.run ) x86? ( http://download.virtualbox.org/virtualbox/4.2.26/VirtualBox-4.2.26-95022-Linux_x86.run ) http://download.virtualbox.org/virtualbox/4.2.26/Oracle_VM_VirtualBox_Extension_Pack-4.2.26-95022.vbox-extpack -> Oracle_VM_VirtualBox_Extension_Pack-4.2.26-95022.tar.gz sdk? ( http://download.virtualbox.org/virtualbox/4.2.26/VirtualBoxSDK-4.2.26-95022.zip )
+_eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	toolchain-funcs	0f1760274637a138b99bb649202ea402	udev	8cd692457c1524c7be9af69831698a78	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=b0d46aecba8de4198d56245d59d1d2f9

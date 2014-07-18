@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.763 2014/07/06 11:49:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.764 2014/07/18 13:48:30 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> python-2.7.6.ebuild:
+  Stable on alpha, bug #504742
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> -files/CVE-2013-4238_py26.patch,
   -files/python-2.5-tcl86.patch, -python-2.6.8-r3.ebuild, -python-2.6.9.ebuild:
