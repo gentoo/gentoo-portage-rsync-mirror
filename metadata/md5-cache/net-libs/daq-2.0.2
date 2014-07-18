@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=pcap? ( >=net-libs/libpcap-1.0.0 ) dump? ( >=net-libs/libpcap-1.0.0 ) nfq? ( dev-libs/libdnet >=net-firewall/iptables-1.4.10 net-libs/libnetfilter_queue ) ipq? ( dev-libs/libdnet >=net-firewall/iptables-1.4.10 net-libs/libnetfilter_queue ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dump? ( >=net-libs/libpcap-1.0.0 ) ipq? ( >=net-firewall/iptables-1.4.10 dev-libs/libdnet net-libs/libnetfilter_queue ) nfq? ( >=net-firewall/iptables-1.4.10 dev-libs/libdnet net-libs/libnetfilter_queue ) pcap? ( >=net-libs/libpcap-1.0.0 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Data Acquisition library, for packet I/O
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.snort.org/
 IUSE=ipv6 +afpacket +dump +pcap nfq ipq static-libs
 KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=pcap? ( >=net-libs/libpcap-1.0.0 ) dump? ( >=net-libs/libpcap-1.0.0 ) nfq? ( dev-libs/libdnet >=net-firewall/iptables-1.4.10 net-libs/libnetfilter_queue ) ipq? ( dev-libs/libdnet >=net-firewall/iptables-1.4.10 net-libs/libnetfilter_queue )
+RDEPEND=dump? ( >=net-libs/libpcap-1.0.0 ) ipq? ( >=net-firewall/iptables-1.4.10 dev-libs/libdnet net-libs/libnetfilter_queue ) nfq? ( >=net-firewall/iptables-1.4.10 dev-libs/libdnet net-libs/libnetfilter_queue ) pcap? ( >=net-libs/libpcap-1.0.0 )
 SLOT=0
 SRC_URI=http://www.snort.org/downloads/2778 -> daq-2.0.2.tar.gz
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=e302bb6900b90ae6edd8f5d8c71b6b3c
+_md5_=08379ae8b65ec6b65c0c7b58fa77bec2

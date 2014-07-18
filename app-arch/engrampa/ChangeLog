@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/engrampa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/engrampa/ChangeLog,v 1.5 2014/07/07 23:42:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/engrampa/ChangeLog,v 1.6 2014/07/18 14:40:15 tomwij Exp $
+
+  18 Jul 2014; Tom Wijsman <TomWij@gentoo.org> engrampa-1.8.0.ebuild,
+  metadata.xml:
+  USE=-caja fails to build without Caja, temporarily adjust the dependencies to
+  unbreak that. Corrected the metadata.xml description. Bug #517018, reported by
+  Dmitry (sema19689).
 
   07 Jul 2014; Tom Wijsman <TomWij@gentoo.org> engrampa-1.8.0.ebuild:
   Add missing itstool dependency; fixes bug #515770, reported by Patrick Lauer.

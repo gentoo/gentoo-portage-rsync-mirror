@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2.3.ebuild,v 1.3 2014/07/15 18:31:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2.3.ebuild,v 1.4 2014/07/18 14:32:10 jer Exp $
 
-EAPI=4
+EAPI=5
 #PERL_EXPORT_PHASE_FUNCTIONS=no
 inherit eutils perl-module toolchain-funcs
 
@@ -13,7 +13,6 @@ HOMEPAGE="http://www.cipherdyne.org/psad"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
-IUSE=""
 
 DEPEND="virtual/perl-ExtUtils-MakeMaker"
 RDEPEND="

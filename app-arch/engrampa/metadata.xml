@@ -7,7 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="caja">Enable engrampa to integrate with
-			<pkg>mate-base/mate-file-manager</pkg> by providing entries in its 
-			context menu</flag>
+			<pkg>mate-base/caja</pkg> by providing entries in its context 
+			menu</flag>
 	</use>
 </pkgmetadata>

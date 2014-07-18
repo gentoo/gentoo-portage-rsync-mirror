@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.65 2014/04/08 18:37:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.66 2014/07/18 14:59:59 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -libnids-1.24-r4.ebuild:
+  Old.
 
   08 Apr 2014; Jeroen Roovers <jer@gentoo.org> -libnids-1.18-r2.ebuild,
   -libnids-1.18-r3.ebuild, -libnids-1.18-r4.ebuild,

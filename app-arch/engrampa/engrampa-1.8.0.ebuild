@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/engrampa/engrampa-1.8.0.ebuild,v 1.5 2014/07/07 23:42:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/engrampa/engrampa-1.8.0.ebuild,v 1.6 2014/07/18 14:40:15 tomwij Exp $
 
 EAPI="5"
 
@@ -21,13 +21,16 @@ KEYWORDS="amd64 x86"
 
 IUSE="caja"
 
+# GLib-GIO-ERROR **: Settings schema 'org.mate.caja.preferences' is not installed
+#
+# ... thus we depend on Caja regardless of the Caja USE flag. Patches welcome.
 RDEPEND=">=x11-libs/gtk+-2.21.4:2
 	>=dev-libs/glib-2.25.5:2
 	>=dev-libs/json-glib-0.14:0
 	x11-libs/gdk-pixbuf:2
 	x11-libs/pango:0
 	virtual/libintl:0
-	caja? ( || ( >=mate-base/caja-1.8:0 >=mate-base/mate-file-manager-1.6:0 ) )
+	|| ( >=mate-base/caja-1.8:0 >=mate-base/mate-file-manager-1.6:0 )
 	!!app-arch/mate-file-archiver"
 
 DEPEND="${RDEPEND}
