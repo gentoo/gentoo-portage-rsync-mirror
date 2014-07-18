@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/uuidtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.36 2014/07/18 08:25:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.37 2014/07/18 13:06:49 mrueg Exp $
+
+  18 Jul 2014; Manuel Rüger <mrueg@gentoo.org> uuidtools-2.1.3.ebuild,
+  uuidtools-2.1.4-r1.ebuild, uuidtools-2.1.4-r3.ebuild:
+  Add missing doc dependency on dev-ruby/yard
 
   18 Jul 2014; Hans de Graaff <graaff@gentoo.org> -uuidtools-2.1.4.ebuild,
   -uuidtools-2.1.4-r2.ebuild:

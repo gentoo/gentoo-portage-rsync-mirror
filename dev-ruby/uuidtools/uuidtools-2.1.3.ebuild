@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.3.ebuild,v 1.4 2014/04/05 14:09:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.3.ebuild,v 1.5 2014/07/18 13:06:49 mrueg Exp $
 
 EAPI=2
 
@@ -21,6 +21,8 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-macos"
-IUSE=""
+IUSE="doc"
 
 RUBY_PATCHES=( ${PN}-2.1.2-macaddress.patch )
+
+ruby_add_bdepend "doc? ( dev-ruby/yard )"

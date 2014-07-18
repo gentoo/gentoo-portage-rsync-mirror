@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<longdescription lang="en">libnetfilter_acct is the userspace library that provides a programming interface (API) to the extended accounting infrastructure. This information can be grabbed, first of all, by <pkg>nfacct</pkg> utility</longdescription>
+<herd>netmon</herd>
+<longdescription lang="en">
+libnetfilter_acct is the userspace library that provides a programming
+interface (API) to the extended accounting infrastructure. This information can
+then be used by <pkg>net-firewall/nfacct</pkg>
+</longdescription>
 </pkgmetadata>

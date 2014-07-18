@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.104 2014/05/31 09:19:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.105 2014/07/18 13:15:02 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> vinagre-3.12.1.ebuild,
+  vinagre-3.12.2.ebuild:
+  Alpha is dropping keywords on >=net-misc/vinagre-3.12. There are plenty of
+  alternative VNC clients and servers. If a user wants to use vinagre on Alpha,
+  they can always open a bug and we'll re-evaluate.
 
 *vinagre-3.12.2 (31 May 2014)
 

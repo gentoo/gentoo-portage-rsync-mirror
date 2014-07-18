@@ -1,23 +1,29 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/lutelwall-0.99.ebuild,v 1.5 2007/05/06 09:57:47 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/lutelwall-0.99.ebuild,v 1.6 2014/07/18 13:03:37 jer Exp $
 
-DESCRIPTION="High-level tool for firewall configuration"
-HOMEPAGE="http://firewall.lutel.pl"
-SRC_URI="http://firewall.lutel.pl/download/${PV}/${P}.tar.gz"
+EAPI=5
+
+DESCRIPTION="IPTables firewall setup script"
 LICENSE="GPL-2"
+HOMEPAGE="http://www.lutel.pl/lutelwall/"
+SRC_URI="http://www.lutel.pl/wp-content/uploads/${PV}/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
-IUSE=""
 
-DEPEND=">=net-firewall/iptables-1.2.6
+RDEPEND="
+	>=net-firewall/iptables-1.2.6
+	>=sys-apps/gawk-3.1
 	sys-apps/iproute2
-	>=sys-apps/gawk-3.1"
+"
 
 src_install() {
-	insinto /etc ; doins lutelwall.conf
+	insinto /etc
+	doins lutelwall.conf
+
 	dosbin lutelwall
 	doinitd "${FILESDIR}"/lutelwall
+
 	dodoc FEATURES ChangeLog
 }
 

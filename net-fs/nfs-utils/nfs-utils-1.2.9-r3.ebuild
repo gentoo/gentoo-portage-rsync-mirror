@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.9-r3.ebuild,v 1.5 2014/06/28 08:17:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.9-r3.ebuild,v 1.6 2014/07/18 13:26:48 klausman Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="caps ipv6 kerberos +libmount nfsdcld +nfsidmap +nfsv4 nfsv41 selinux tcpd +uuid"
 REQUIRED_USE="kerberos? ( nfsv4 )"
 RESTRICT="test" #315573

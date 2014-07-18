@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/lutelwall
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.18 2013/03/17 16:01:22 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.19 2014/07/18 13:03:37 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> lutelwall-0.99.ebuild:
+  EAPI bump. Update HOMEPAGE/SRC_URI.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

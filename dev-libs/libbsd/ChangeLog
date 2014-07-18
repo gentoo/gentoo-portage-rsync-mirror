@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.25 2014/06/20 14:04:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.26 2014/07/18 13:04:14 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> libbsd-0.6.0.ebuild:
+  Keyworded on alpha, bug #503166
 
   20 Jun 2014; Tobias Klausmann <klausman@gentoo.org> libbsd-0.6.0.ebuild:
   Stable on alpha, bug #480692

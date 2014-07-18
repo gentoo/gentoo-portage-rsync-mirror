@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.80 2014/06/13 17:08:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.81 2014/07/18 13:04:08 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> mg-20140414.ebuild:
+  Keyworded on alpha, bug #503166
 
   13 Jun 2014; Ulrich Müller <ulm@gentoo.org> -mg-20140306.ebuild,
   mg-20140414.ebuild:
