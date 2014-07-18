@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/transaction-simple-1.4.0.2.ebuild,v 1.6 2014/04/19 03:16:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/transaction-simple-1.4.0.2.ebuild,v 1.7 2014/07/18 09:44:46 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc"
 inherit ruby-fakegem
 
 DESCRIPTION="Provides transaction support at the object level"
-HOMEPAGE="http://rubyforge.org/projects/trans-simple/"
+HOMEPAGE="https://github.com/halostatue/transaction-simple"
 
 LICENSE="MIT"
 SLOT="0"
