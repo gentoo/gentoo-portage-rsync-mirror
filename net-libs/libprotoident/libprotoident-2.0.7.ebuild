@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libprotoident/libprotoident-2.0.7.ebuild,v 1.1 2013/11/06 06:09:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libprotoident/libprotoident-2.0.7.ebuild,v 1.2 2014/07/18 15:24:36 jer Exp $
 
 EAPI=5
-
 inherit autotools-utils
 
 DESCRIPTION="A library that performs application layer protocol identification for flows"

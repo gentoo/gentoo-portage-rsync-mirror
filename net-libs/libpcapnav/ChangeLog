@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcapnav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.9 2014/03/12 03:53:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.10 2014/07/18 15:19:46 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> libpcapnav-0.8.ebuild,
+  +files/libpcapnav-0.8-includes.patch:
+  EAPI bump. Do not build test programs and set RESTRICT=test since they fail
+  anyway. Fix missing includes. Add USE=static-libs.
 
   12 Mar 2014; Patrick Lauer <patrick@gentoo.org> libpcapnav-0.7.ebuild,
   libpcapnav-0.8.ebuild:
