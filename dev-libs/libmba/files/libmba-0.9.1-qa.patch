@@ -10,8 +10,8 @@ http://bugs.gentoo.org/show_bug.cgi?id=313673
 
 Patch written by Kacper Kowalik <xarthisius.kk@gmail.com>
 
---- Makefile
-+++ Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -1,13 +1,13 @@
  # Makefile for libmba
  # Supported flags: -DVARRAY_INIT_SIZE=N -DUSE_WCHAR
@@ -23,8 +23,9 @@ Patch written by Kacper Kowalik <xarthisius.kk@gmail.com>
 -prefix     = /usr/local
 +prefix     = $(DESTDIR)/usr
  includedir = $(prefix)/include
- libdir     = $(prefix)/lib
+-libdir     = $(prefix)/lib
 -mandir     = $(prefix)/man
++libdir     = $(prefix)/$(LIBDIR)
 +mandir     = $(prefix)/share/man
  LIBNAME    = mba
  LIBVERS    = 0.9.1

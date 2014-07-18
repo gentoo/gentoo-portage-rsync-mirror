@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udpcast
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.28 2013/07/20 11:11:35 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.29 2014/07/18 21:39:32 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -udpcast-20110710.ebuild,
+  udpcast-20120424.ebuild:
+  EAPI bump.
 
   20 Jul 2013; Agostino Sarubbo <ago@gentoo.org> udpcast-20120424.ebuild:
   Stable for x86, wrt bug #476978

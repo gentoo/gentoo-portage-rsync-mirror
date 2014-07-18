@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/airtraf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.18 2011/08/20 21:05:36 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.19 2014/07/18 21:54:58 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> airtraf-1.1-r1.ebuild,
+  metadata.xml:
+  EAPI bump. List sys-libs/ncurses dependency and fix building against
+  sys-libs/ncurses[tinfo].
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove useless maintainer tag.

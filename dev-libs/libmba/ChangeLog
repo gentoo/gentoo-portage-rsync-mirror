@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmba
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/ChangeLog,v 1.7 2012/03/18 18:26:14 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/ChangeLog,v 1.8 2014/07/18 21:36:23 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> libmba-0.9.1-r1.ebuild,
+  files/libmba-0.9.1-qa.patch:
+  EAPI bump. Merge sed script result into patch.
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> -libmba-0.9.1.ebuild,
   metadata.xml:

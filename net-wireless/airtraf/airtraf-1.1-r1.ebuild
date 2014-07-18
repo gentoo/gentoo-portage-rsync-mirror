@@ -1,26 +1,36 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1-r1.ebuild,v 1.2 2010/09/17 03:28:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1-r1.ebuild,v 1.3 2014/07/18 21:54:58 jer Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="AirTraf 802.11b Wireless traffic sniffer"
-HOMEPAGE="http://www.elixar.com/"
-SRC_URI="http://www.elixar.com/${P}.tar.gz"
-
-IUSE=""
-
-SLOT="0"
 LICENSE="GPL-2"
+HOMEPAGE="http://www.elixar.com/"
+SRC_URI="${HOMEPAGE}${P}.tar.gz"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="net-libs/libpcap"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	net-libs/libpcap
+	sys-libs/ncurses
+"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}.patch
+	sed -i \
+		-e '/^LIBS/s|=.*|= $(shell $(PKG_CONFIG) --libs panel)|' \
+		src/libncurses/Makefile || die
+	sed -i \
+		-e 's|-lpanel -lncurses|$(shell $(PKG_CONFIG) --libs panel)|' \
+		src/sniffd/Makefile || die
+	tc-export PKG_CONFIG
 }
 
 src_compile() {
@@ -35,6 +45,6 @@ src_compile() {
 }
 
 src_install () {
-	dobin src/airtraf || die
-	newdoc docs/airtraf_doc.html airtraf_documentation.html
+	dobin src/airtraf
+	dodoc Authors COMPATIBILITY docs/airtraf_doc.html
 }

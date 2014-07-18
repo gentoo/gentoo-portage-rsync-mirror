@@ -1,6 +1,6 @@
-DEFINED_PHASES=install prepare setup
-DESCRIPTION=A library of generic C modules.
-EAPI=2
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=A library of generic C modules
+EAPI=5
 HOMEPAGE=http://www.ioplex.com/~miallen/libmba/
 IUSE=static-libs
 KEYWORDS=amd64 x86
@@ -8,4 +8,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=http://www.ioplex.com/~miallen/libmba/dl/libmba-0.9.1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ac582912c810b8295cf60a9efc29c82e
+_md5_=f2e3a995db6ea5c6967ac3f645ab205f
