@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.37 2014/07/17 20:48:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.38 2014/07/18 16:18:51 williamh Exp $
+
+  18 Jul 2014; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  install editors document to point people to the go wiki page about editor and
+  shell support
 
   17 Jul 2014; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
   remove editor and shell support use flags for bug #516070

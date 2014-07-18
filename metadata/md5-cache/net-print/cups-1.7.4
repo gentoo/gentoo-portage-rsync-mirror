@@ -3,7 +3,7 @@ DEPEND=app-text/libpaper acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) ) d
 DESCRIPTION=The Common Unix Printing System
 EAPI=5
 HOMEPAGE=http://www.cups.org/
-IUSE=acl dbus debug gnutls java kerberos lprng-compat pam python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf +linguas_ca +linguas_es +linguas_fr +linguas_it +linguas_ja +linguas_ru abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64 python_targets_python2_7 python_single_target_python2_7 elibc_FreeBSD java
+IUSE=acl dbus debug gnutls java kerberos lprng-compat pam python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf +linguas_ca +linguas_es +linguas_fr +linguas_it +linguas_ja +linguas_pt_BR +linguas_ru abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64 python_targets_python2_7 python_single_target_python2_7 elibc_FreeBSD java
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~m68k-mint
 LICENSE=GPL-2
 PDEPEND=app-text/ghostscript-gpl[cups] app-text/poppler[utils] >=net-print/cups-filters-1.0.43
@@ -11,6 +11,6 @@ RDEPEND=app-text/libpaper acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) ) 
 REQUIRED_USE=gnutls? ( ssl ) python? ( python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 ) ) usb? ( threads )
 RESTRICT=test
 SLOT=0
-SRC_URI=http://www.cups.org/software/1.7.1/cups-1.7.1-source.tar.bz2
+SRC_URI=http://www.cups.org/software/1.7.4/cups-1.7.4-source.tar.bz2
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9836bc51856bcaffac53c9cd4b59a8be	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multibuild	46527a4656956da3d58acff72c9b59b1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	fbb9baa0b4039304643e36e9820fdecf	multilib-minimal	5bbdc77877c1aa3c6bd89ca3f9196d11	multiprocessing	d7f2985a2c76c365ee20269db5261414	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	python-single-r1	a71a169a881e0a11d04a7fe12dc39f6e	python-utils-r1	8c66c6dabd0295878b68b40dbd0b087b	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0f1760274637a138b99bb649202ea402	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5bd321af96a3b781c68e537d76496190
+_md5_=772fc5f52d4f9355e8d496a597a84357

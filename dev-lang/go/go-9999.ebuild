@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.17 2014/07/17 20:48:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.18 2014/07/18 16:18:51 williamh Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ src_test()
 src_install()
 {
 	dobin bin/*
-	dodoc AUTHORS CONTRIBUTORS PATENTS README
+	dodoc AUTHORS CONTRIBUTORS PATENTS README misc/editors
 
 	dodir /usr/lib/go
 	insinto /usr/lib/go

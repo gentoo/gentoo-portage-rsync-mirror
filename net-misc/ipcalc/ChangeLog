@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipcalc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipcalc/ChangeLog,v 1.18 2012/12/09 00:13:26 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipcalc/ChangeLog,v 1.19 2014/07/18 16:09:03 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> ipcalc-0.41.ebuild:
+  EAPI bump. Install contributors.
 
   09 Dec 2012; Rick Farina <zerochaos@gentoo.org> ipcalc-0.41.ebuild:
   fixing license per bug #446538

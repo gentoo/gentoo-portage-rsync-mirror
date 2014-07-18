@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst prepare unpack
+DEFINED_PHASES=compile configure install prepare unpack
 DESCRIPTION=Tool to measure IP bandwidth using UDP or TCP
 EAPI=5
 HOMEPAGE=http://iperf.sourceforge.net/
@@ -8,4 +8,4 @@ LICENSE=HPND
 SLOT=0
 SRC_URI=mirror://sourceforge/iperf/iperf-2.0.5.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=be447c3a46ed4fb4c07c26480e53fde5
+_md5_=7010ad27bcec16b92553fc023e8021f5

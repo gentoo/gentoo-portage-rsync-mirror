@@ -5,10 +5,8 @@
 low bandwidth limit was specified.
 
 
-Index: compat/delay.cpp
-===================================================================
---- compat/delay.cpp	(revision 81)
-+++ compat/delay.cpp	(working copy)
+--- a/compat/delay.cpp
++++ b/compat/delay.cpp
 @@ -63,8 +63,9 @@ void delay_loop(unsigned long usec)
  {
      struct timespec requested, remaining;

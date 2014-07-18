@@ -3,9 +3,8 @@ Description: iperf format string FTBFS with -Werror=format-security
 Author: Simon Paillard <spaillard@debian.org>
 Bug-Debian: http://bugs.debian.org/643408
 
-diff -Nur iperf-2.0.5/compat/Thread.c iperf-2.0.5-nmu/compat/Thread.c
---- iperf-2.0.5/compat/Thread.c	2010-03-31 01:08:24.000000000 +0200
-+++ iperf-2.0.5-nmu/compat/Thread.c	2011-11-15 09:13:32.000000000 +0100
+--- a/compat/Thread.c
++++ b/compat/Thread.c
 @@ -381,7 +381,7 @@
      Condition_Lock( thread_sNum_cond );
      thread_sNum -= nonterminating_num;
@@ -15,9 +14,8 @@ diff -Nur iperf-2.0.5/compat/Thread.c iperf-2.0.5-nmu/compat/Thread.c
      }
      nonterminating_num = 0;
      Condition_Signal( &thread_sNum_cond );
-diff -Nur iperf-2.0.5/src/ReportDefault.c iperf-2.0.5-nmu/src/ReportDefault.c
---- iperf-2.0.5/src/ReportDefault.c	2010-03-31 00:57:17.000000000 +0200
-+++ iperf-2.0.5-nmu/src/ReportDefault.c	2011-11-15 09:16:52.000000000 +0100
+--- a/src/ReportDefault.c
++++ b/src/ReportDefault.c
 @@ -78,7 +78,7 @@
      if ( stats->mUDP != (char)kMode_Server ) {
          // TCP Reporting
@@ -63,9 +61,8 @@ diff -Nur iperf-2.0.5/src/ReportDefault.c iperf-2.0.5-nmu/src/ReportDefault.c
          } else {
              mtu = inMSS + 40;
              net = "unknown interface";
-diff -Nur iperf-2.0.5/src/Reporter.c iperf-2.0.5-nmu/src/Reporter.c
---- iperf-2.0.5/src/Reporter.c	2011-11-15 19:44:41.000000000 +0100
-+++ iperf-2.0.5-nmu/src/Reporter.c	2011-11-15 09:17:14.000000000 +0100
+--- a/src/Reporter.c
++++ b/src/Reporter.c
 @@ -896,7 +896,7 @@
          } else if ( checkMSS_MTU( inMSS, 576 ) ) {
              net = "minimum";
@@ -75,9 +72,8 @@ diff -Nur iperf-2.0.5/src/Reporter.c iperf-2.0.5-nmu/src/Reporter.c
          } else {
              mtu = inMSS + 40;
              net = "unknown interface";
-diff -Nur iperf-2.0.5/src/Settings.cpp iperf-2.0.5-nmu/src/Settings.cpp
---- iperf-2.0.5/src/Settings.cpp	2011-11-15 19:44:41.000000000 +0100
-+++ iperf-2.0.5-nmu/src/Settings.cpp	2011-11-15 09:18:46.000000000 +0100
+--- a/src/Settings.cpp
++++ b/src/Settings.cpp
 @@ -375,8 +375,8 @@
              break;
  

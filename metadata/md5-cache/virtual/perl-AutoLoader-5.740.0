@@ -2,6 +2,6 @@ DEFINED_PHASES=-
 DESCRIPTION=Virtual for AutoLoader
 EAPI=5
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-solaris
-RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/AutoLoader-5.740.0 )
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/AutoLoader-5.740.0 ) !<perl-core/AutoLoader-5.740.0 !>perl-core/AutoLoader-5.740.0-r999
 SLOT=0
-_md5_=e0bdb2c1b611b904eb635359c6200d14
+_md5_=636d26331b46878456a93dfe8ba83ac6

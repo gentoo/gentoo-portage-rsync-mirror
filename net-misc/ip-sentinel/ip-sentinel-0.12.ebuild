@@ -1,24 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.7 2014/03/12 03:44:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.8 2014/07/18 16:02:43 jer Exp $
 
+EAPI=5
 inherit eutils user
 
 DESCRIPTION="Prevent unauthorized usage of IPs in the local ethernet broadcastdomain by answering ARP-requests"
 HOMEPAGE="http://www.nongnu.org/ip-sentinel/"
-SRC_URI="http://savannah.nongnu.org/download/ip-sentinel/${P}.tar.bz2"
 LICENSE="GPL-2"
-
+SRC_URI="http://savannah.nongnu.org/download/ip-sentinel/${P}.tar.bz2"
 SLOT="0"
-
 KEYWORDS="x86"
 
-IUSE=""
-DEPEND=""
+DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS
+	default
 
 	newinitd "${FILESDIR}"/ip-sentinel.init ip-sentinel
 	newconfd "${FILESDIR}"/ip-sentinel.conf.d ip-sentinel

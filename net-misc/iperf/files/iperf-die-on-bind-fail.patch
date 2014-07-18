@@ -6,8 +6,8 @@ Author: Deny IP Any Any <denyipanyany@gmail.com>
 Bug-Debian: http://bugs.debian.org/517239
 Forwarded: https://sourceforge.net/tracker/?func=detail&aid=3140400&group_id=128336&atid=711371
 
---- iperf-2.0.4/src/Listener.cpp	2009-02-23 16:20:31.000000000 -0500
-+++ iperf-2.0.4-fixed/src/Listener.cpp	2009-02-23 16:20:40.000000000 -0500
+--- a/src/Listener.cpp
++++ b/src/Listener.cpp
 @@ -333,7 +333,7 @@
  #endif
      {
