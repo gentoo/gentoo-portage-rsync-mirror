@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docopt/docopt-0.6.2.ebuild,v 1.1 2014/07/14 07:05:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docopt/docopt-0.6.2.ebuild,v 1.2 2014/07/18 11:47:25 jlec Exp $
 
 EAPI=5
 
@@ -24,6 +24,9 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
 "
+
+# not implemented in this version, git already has it
+RESTRICT=test
 
 python_test() {
 	esetup.py test

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/jreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.15 2014/06/14 09:47:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.16 2014/07/18 11:42:25 nimiux Exp $
+
+  18 Jul 2014; Chema Alonso <nimiux@gentoo.org> jreen-1.2.0.ebuild:
+  Stable for amd64 wrt bug #511050
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> jreen-1.2.0.ebuild:
   x86 stable wrt bug #511050
