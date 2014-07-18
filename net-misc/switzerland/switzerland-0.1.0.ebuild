@@ -1,28 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/switzerland/switzerland-0.1.0.ebuild,v 1.1 2011/05/08 20:31:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/switzerland/switzerland-0.1.0.ebuild,v 1.2 2014/07/18 21:14:42 jer Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils toolchain-funcs
+inherit distutils-r1 toolchain-funcs
 
-DESCRIPTION="Switzerland Network Testing Tool"
+DESCRIPTION="Network Testing Tool"
 HOMEPAGE="http://www.eff.org/testyourisp/switzerland/"
 SRC_URI="mirror://sourceforge/switzerland/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
 
 DEPEND="net-libs/libpcap"
 RDEPEND=${DEPEND}
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	cp "${FILESDIR}"/Makefile switzerland/client
@@ -30,18 +24,19 @@ src_prepare() {
 	sed -i \
 		-e "s/= find_binary()/= dest/" \
 		setup.py
+	distutils-r1_src_prepare
 }
 
 src_compile() {
 	cd switzerland/client
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake CC=$(tc-getCC)
 
 	cd "${S}"
-	distutils_src_compile
+	distutils-r1_src_compile
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
 	dodoc BUGS.txt CREDITS
 

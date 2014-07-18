@@ -1,5 +1,5 @@
---- Makefile.org	2005-09-05 09:26:34.000000000 +0200
-+++ Makefile	2010-04-09 06:42:41.000000000 +0200
+--- a/Makefile
++++ b/Makefile
 @@ -1,32 +1,35 @@
  # Makefile for tcpsound
  

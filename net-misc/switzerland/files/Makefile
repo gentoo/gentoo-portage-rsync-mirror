@@ -1,18 +1,12 @@
 SRC = FastCollector.c
 OBJ = ${SRC:.c=.o}
 
-LIBS = -L/usr/lib -lpcap
-
-CFLAGS ?=
-LDFLAGS ?=
-
-CC = gcc
-LD = ${CC}
+LIBS = -lpcap
 
 all: FastCollector
 
 .c.o:
-	${CC} -c ${CFLAGS} $<
+	$(CC) -c $(CFLAGS) $<
 
-FastCollector: ${OBJ}
-	${LD} -o $@ ${CFLAGS} ${LDFLAGS} ${OBJ} ${LIBS}
+FastCollector: $(OBJ)
+	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBS)
