@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.2.ebuild,v 1.4 2014/06/10 20:19:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.2.ebuild,v 1.5 2014/07/18 08:50:30 maksbotan Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ RDEPEND="
 	>=media-libs/libass-0.10.0[fontconfig]
 	virtual/libiconv
 	>=dev-lang/lua-5.1.1
-	>=dev-libs/boost-1.52.0:=[icu,nls]
+	>=dev-libs/boost-1.52.0:=[icu,nls,threads]
 	>=dev-libs/icu-4.8.1.1:=
 	>=media-libs/fontconfig-2.4.2
 	>=media-libs/freetype-2.3.5:2
@@ -60,7 +60,11 @@ src_prepare() {
 	}
 
 	l10n_find_plocales_changes 'po' '' '.po'
-	l10n_for_each_disabled_locale_do my_rm_loc
+	if [ -z "$(l10n_get_locales)" ]; then
+		sed -e 's/^\s*po\s*$//' -i Makefile || die
+	else
+		l10n_for_each_disabled_locale_do my_rm_loc
+	fi
 
 	autotools-utils_src_prepare
 }

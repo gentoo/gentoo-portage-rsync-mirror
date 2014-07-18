@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.3.ebuild,v 1.1 2014/06/10 20:19:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.3.ebuild,v 1.2 2014/07/18 08:50:30 maksbotan Exp $
 
 EAPI="5"
 
@@ -57,7 +57,11 @@ src_prepare() {
 	}
 
 	l10n_find_plocales_changes 'po' '' '.po'
-	l10n_for_each_disabled_locale_do my_rm_loc
+	if [ -z "$(l10n_get_locales)" ]; then
+		sed -e 's/^\s*po\s*$//' -i Makefile || die
+	else
+		l10n_for_each_disabled_locale_do my_rm_loc
+	fi
 
 	autotools-utils_src_prepare
 }
