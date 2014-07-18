@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/twitter-4.8.1.ebuild,v 1.2 2014/03/16 00:25:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/twitter-4.8.1.ebuild,v 1.3 2014/07/18 09:18:32 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="Ruby wrapper around the Twitter API"
-HOMEPAGE="http://twitter.rubyforge.org/"
+HOMEPAGE="http://sferik.github.com/twitter/"
 
 LICENSE="MIT"
 SLOT="4"

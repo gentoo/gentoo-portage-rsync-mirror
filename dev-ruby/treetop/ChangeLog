@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/treetop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.47 2014/05/24 06:05:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.49 2014/07/18 09:30:16 graaff Exp $
+
+  18 Jul 2014; Hans de Graaff <graaff@gentoo.org> treetop-1.5.3.ebuild:
+  Update HOMEPAGE.
+
+  18 Jul 2014; Hans de Graaff <graaff@gentoo.org> -treetop-1.4.15.ebuild,
+  -treetop-1.4.15-r1.ebuild:
+  Cleanup.
 
 *treetop-1.5.3 (24 May 2014)
 
