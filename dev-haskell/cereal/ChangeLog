@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cereal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.17 2014/03/23 17:15:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.18 2014/07/18 11:17:00 klausman Exp $
+
+  18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> cereal-0.4.0.1.ebuild:
+  Stable on alpha, bug #502656
 
   23 Mar 2014; Agostino Sarubbo <ago@gentoo.org> cereal-0.4.0.1.ebuild:
   Stable for sparc, wrt bug #502656
