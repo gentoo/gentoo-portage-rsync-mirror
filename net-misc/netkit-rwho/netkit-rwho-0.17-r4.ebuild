@@ -1,45 +1,41 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r4.ebuild,v 1.6 2012/02/06 18:28:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/netkit-rwho-0.17-r4.ebuild,v 1.7 2014/07/18 19:45:52 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Netkit - ruptime/rwho/rwhod"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
-	mirror://gentoo/${PN}-0.17-patches.tar.gz"
+SRC_URI="
+	ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz
+	https://dev.gentoo.org/~jer/${P}-patches.tar.bz2
+"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ~mips ppc s390 sh sparc x86"
-IUSE=""
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-tiny-packet-dos.patch
-	epatch "${WORKDIR}"/${P}-gentoo.diff
-	epatch "${WORKDIR}"/${P}-debian.patch
-	sed -i configure \
-		-e '/^LDFLAGS=/d' \
-		|| die "sed configure"
+	epatch "${WORKDIR}"/000{1,2,3,4}-*.patch
 }
 
 src_configure() {
 	# Not an autotools build system
-	./configure --with-c-compiler=$(tc-getCC) || die "configure failed"
-	sed -i MCONFIG \
+	./configure --with-c-compiler=$(tc-getCC) || die
+	sed -i \
 		-e "s:-O2::" \
 		-e "s:-Wpointer-arith::" \
-		|| die "sed MCONFIG"
+		MCONFIG || die
 }
 
 src_install() {
 	keepdir /var/spool/rwho
 
 	into /usr
-	dobin ruptime/ruptime rwho/rwho || die "dobin failed"
-	dosbin rwhod/rwhod || die "dosbin failed"
+	dobin ruptime/ruptime rwho/rwho
+	dosbin rwhod/rwhod
+
 	doman ruptime/ruptime.1 rwho/rwho.1 rwhod/rwhod.8
 	dodoc README ChangeLog
 

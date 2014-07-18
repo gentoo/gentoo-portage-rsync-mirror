@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netstat-nat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.40 2012/05/21 19:14:33 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.41 2014/07/18 19:58:26 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -netstat-nat-1.4.9.ebuild,
+  netstat-nat-1.4.10.ebuild, files/netstat-nat-1.4.10-install.patch,
+  metadata.xml:
+  EAPI bump. Clean up patch. Remove short <longdescription>.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> netstat-nat-1.4.9.ebuild:
   Add missing inheritance of eutils.eclass

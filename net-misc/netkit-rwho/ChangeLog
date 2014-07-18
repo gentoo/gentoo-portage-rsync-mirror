@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.29 2012/02/06 18:28:19 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.30 2014/07/18 19:45:52 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -netkit-rwho-0.17-r3.ebuild,
+  netkit-rwho-0.17-r4.ebuild:
+  EAPI bump. Clean up and repackage patches.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> netkit-rwho-0.17-r4.ebuild:
   Marking netkit-rwho-0.17-r4 ppc for bug 393691

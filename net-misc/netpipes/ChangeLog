@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netpipes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.13 2014/05/04 08:27:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.14 2014/07/18 19:53:46 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -netpipes-4.2-r1.ebuild,
+  netpipes-4.2-r2.ebuild, metadata.xml:
+  Use dodir instead of mkdir.
 
   04 May 2014; Agostino Sarubbo <ago@gentoo.org> netpipes-4.2-r2.ebuild:
   Stable for x86, wrt bug #502898

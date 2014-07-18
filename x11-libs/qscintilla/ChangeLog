@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.100 2014/04/15 19:44:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.101 2014/07/18 19:50:08 pesa Exp $
+
+*qscintilla-2.8.3 (18 Jul 2014)
+
+  18 Jul 2014; Davide Pesavento <pesa@gentoo.org>
+  +files/qscintilla-2.8.3-designer.patch, +qscintilla-2.8.3.ebuild,
+  -qscintilla-2.8-r1.ebuild, metadata.xml:
+  Version bump.
 
   15 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> qscintilla-2.8-r1.ebuild:
   Keyword arm

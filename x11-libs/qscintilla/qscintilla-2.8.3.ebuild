@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8-r1.ebuild,v 1.3 2014/04/15 19:44:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.8.3.ebuild,v 1.1 2014/07/18 19:50:08 pesa Exp $
 
 EAPI=5
 
-inherit qt4-r2
+inherit eutils qmake-utils
 
 MY_P=QScintilla-gpl-${PV}
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0/11"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 DEPEND="
@@ -27,11 +27,11 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2.7.1-designer.patch"
+	"${FILESDIR}/${PN}-2.8.3-designer.patch"
 )
 
 src_unpack() {
-	qt4-r2_src_unpack
+	default
 
 	# Sub-slot sanity check
 	local subslot=${SLOT#*/}
@@ -45,6 +45,10 @@ src_unpack() {
 		eerror
 		die "sub-slot sanity check failed"
 	fi
+}
+
+src_prepare() {
+	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
 }
 
 src_configure() {
