@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-B-Debug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-B-Debug/ChangeLog,v 1.4 2014/07/06 09:37:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-B-Debug/ChangeLog,v 1.5 2014/07/18 17:50:09 dilfridge Exp $
+
+*perl-B-Debug-1.180.0-r2 (18 Jul 2014)
+
+  18 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-B-Debug-1.180.0-r1.ebuild, +perl-B-Debug-1.180.0-r2.ebuild,
+  perl-B-Debug-1.190.0.ebuild:
+  Improve dependencies
 
 *perl-B-Debug-1.180.0-r1 (06 Jul 2014)
 
