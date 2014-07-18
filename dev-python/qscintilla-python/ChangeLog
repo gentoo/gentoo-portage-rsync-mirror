@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/qscintilla-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.108 2013/12/24 19:24:56 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.109 2014/07/18 22:15:47 pesa Exp $
+
+*qscintilla-python-2.8.3 (18 Jul 2014)
+
+  18 Jul 2014; Davide Pesavento <pesa@gentoo.org>
+  +qscintilla-python-2.8.3.ebuild, -qscintilla-python-2.8.ebuild:
+  Version bump.
 
   24 Dec 2013; Davide Pesavento <pesa@gentoo.org>
   -files/qscintilla-python-2.5.1-disable_stripping.patch,

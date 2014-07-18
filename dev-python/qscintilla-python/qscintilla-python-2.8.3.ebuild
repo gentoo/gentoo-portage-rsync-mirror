@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.8.ebuild,v 1.1 2013/11/14 01:33:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.8.3.ebuild,v 1.1 2014/07/18 22:15:47 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils multilib python-r1 toolchain-funcs
+inherit python-r1 qmake-utils
 
 MY_P=QScintilla-gpl-${PV}
 
@@ -20,8 +20,8 @@ IUSE="debug"
 
 DEPEND="
 	${PYTHON_DEPS}
-	>=dev-python/sip-4.12:=[${PYTHON_USEDEP}]
-	>=dev-python/PyQt4-4.8[X,${PYTHON_USEDEP}]
+	>=dev-python/sip-4.16:=[${PYTHON_USEDEP}]
+	>=dev-python/PyQt4-4.11[X,${PYTHON_USEDEP}]
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	~x11-libs/qscintilla-${PV}:=
@@ -39,29 +39,32 @@ src_prepare() {
 src_configure() {
 	configuration() {
 		local myconf=(
-			"${PYTHON}" configure-old.py
-			--apidir="${EPREFIX}"/usr/share/qt4/qsci
+			"${PYTHON}" configure.py
 			--destdir="$(python_get_sitedir)"/PyQt4
-			--sipdir="${EPREFIX}"/usr/share/sip
-			-n "${EPREFIX}"/usr/include/qt4
-			-o "${EPREFIX}"/usr/$(get_libdir)/qt4
-			-p 4
-			--no-timestamp
+			--pyqt=PyQt4
+			--sip-incdir="$(python_get_includedir)"
+			--pyqt-sipdir="${EPREFIX}"/usr/share/sip
+			--qsci-sipdir="${EPREFIX}"/usr/share/sip
 			$(use debug && echo --debug)
+			--no-timestamp
 		)
 		echo "${myconf[@]}"
 		"${myconf[@]}" || die
+
+		# Run eqmake4 to respect toolchain, build flags, and prevent stripping
+		eqmake4
 	}
 	python_parallel_foreach_impl run_in_build_dir configuration
 }
 
 src_compile() {
-	compilation() {
-		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)"
-	}
-	python_foreach_impl run_in_build_dir compilation
+	python_foreach_impl run_in_build_dir default
 }
 
 src_install() {
-	python_foreach_impl run_in_build_dir default
+	installation() {
+		emake INSTALL_ROOT="${D}" install
+		python_optimize
+	}
+	python_foreach_impl run_in_build_dir installation
 }
