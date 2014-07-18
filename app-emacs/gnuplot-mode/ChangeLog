@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/gnuplot-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.21 2014/07/18 15:23:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.23 2014/07/18 20:34:24 zlogene Exp $
+
+  18 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gnuplot-mode-0.7.0.ebuild:
+  Add ~sparc keyword wrt bug #505378
+
+  18 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gnuplot-mode-0.7.0.ebuild:
+  Add ~ppc64 keyword wrt bug #505378
 
   18 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> gnuplot-mode-0.7.0.ebuild:
   Add ~ia64 keyword wrt bug #505378

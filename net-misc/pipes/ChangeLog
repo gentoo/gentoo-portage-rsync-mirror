@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pipes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.14 2011/12/15 16:23:31 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.15 2014/07/18 20:58:24 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> pipes-1.16.1.ebuild:
+  EAPI bump.
 
   15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> pipes-1.16.1.ebuild:
   Add ~amd64, wrt bug #393483
