@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.13.1-r1.ebuild,v 1.2 2014/07/18 02:23:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.13.1-r1.ebuild,v 1.3 2014/07/18 20:20:17 hwoarang Exp $
 
 EAPI="5"
 
@@ -38,7 +38,7 @@ SRC_URI+=" mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
 IUSE="audit +demangle +doc gtk perl python slang unwind"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 

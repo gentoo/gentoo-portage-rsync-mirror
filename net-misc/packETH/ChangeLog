@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/packETH
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.21 2012/11/20 20:37:35 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.22 2014/07/18 20:17:37 jer Exp $
+
+*packETH-1.7.3 (18 Jul 2014)
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -packETH-1.7.1.ebuild,
+  +packETH-1.7.3.ebuild, -files/packETH-1.6.5-forced-as-needed.patch,
+  -files/packETH-1.7.1-gdk-pixbuf.patch,
+  +files/packETH-1.7.3-libs-and-flags.patch:
+  Version bump.
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> packETH-1.7.2.ebuild:
   Stable for x86, wrt bug #441478

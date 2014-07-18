@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r2.ebuild,v 1.9 2014/07/18 19:56:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.1-r2.ebuild,v 1.10 2014/07/18 20:28:02 ssuominen Exp $
 
 EAPI=5
 EAUTORECONF=1
@@ -30,7 +30,7 @@ RDEPEND="${COMMON_DEPEND}
 	nls? ( x11-misc/xdg-user-dirs )
 	udev? (
 		systemd? ( || ( >=sys-power/upower-0.9.23 sys-power/upower-pm-utils ) )
-		!systemd? ( || ( <sys-power/upower-0.99 sys-power/upower-pm-utils ) )
+		!systemd? ( sys-power/upower-pm-utils )
 		)
 	xscreensaver? ( || (
 		>=x11-misc/xscreensaver-5.26

@@ -1,6 +1,14 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.222 2014/07/18 19:56:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.224 2014/07/18 20:28:02 ssuominen Exp $
+
+  18 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-session-4.10.1-r2.ebuild:
+  Fix UPower dependency for non-systemd users.
+
+  18 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-session-4.10.1-r1.ebuild:
+  old
 
   18 Jul 2014; Agostino Sarubbo <ago@gentoo.org> xfce4-session-4.10.1-r2.ebuild:
   Stable for sparc, wrt bug #513930
