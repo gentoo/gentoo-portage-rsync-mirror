@@ -1,5 +1,5 @@
---- qmrtg-2.1.org/examples/mrtg.cfg	2006-06-18 09:23:40.000000000 +0200
-+++ qmrtg-2.1/examples/mrtg.cfg	2006-06-18 09:54:30.653950445 +0200
+--- a/examples/mrtg.cfg
++++ b/examples/mrtg.cfg
 @@ -52,7 +52,7 @@
  Directory[qmail.deliveries]: qmail.deliveries
  MaxBytes[qmail.deliveries]: 10000

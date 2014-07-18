@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <herd>kde</herd>
-<longdescription>access a working SSH implementation by means of a library</longdescription>
 <use>
   <flag name='gcrypt'>Prefer <pkg>dev-libs/libgcrypt</pkg> over
     <pkg>dev-libs/openssl</pkg> for encryption</flag>

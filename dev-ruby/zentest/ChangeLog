@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.144 2014/07/18 08:09:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.145 2014/07/18 15:55:29 graaff Exp $
+
+  18 Jul 2014; Hans de Graaff <graaff@gentoo.org> zentest-4.10.1.ebuild:
+  Update minitest dependency to a version that works, thanks to mrueg for
+  noticing.
 
   18 Jul 2014; Hans de Graaff <graaff@gentoo.org> zentest-4.7.0.ebuild,
   zentest-4.9.5.ebuild, zentest-4.10.0.ebuild:

@@ -1,5 +1,5 @@
---- qmrtg-2.1.org/examples/qmrtg.conf.sample	2006-06-18 09:23:40.000000000 +0200
-+++ qmrtg-2.1/examples/qmrtg.conf.sample	2006-06-18 10:06:13.150506247 +0200
+--- a/examples/qmrtg.conf.sample
++++ b/examples/qmrtg.conf.sample
 @@ -6,7 +6,7 @@
   # this it where qmrtg keeps its dbfiles
   # dbfiles are a few little files used

@@ -1,5 +1,5 @@
---- libssh2-1.4.2/libssh2.pc.in
-+++ libssh2-1.4.2/libssh2.pc.in
+--- a/libssh2.pc.in
++++ b/libssh2.pc.in
 @@ -12,6 +12,6 @@
  Description: Library for SSH-based communication
  Version: @LIBSSH2VER@

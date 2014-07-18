@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15912 2014/07/18 07:49:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15913 2014/07/18 15:56:57 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -22,13 +22,18 @@
 #
 ## Example:
 ##
-## # Dev E. Loper <developer@gentoo.org> (25 Jan 2013)
+## # Dev E. Loper <developer@gentoo.org> (25 Jul 2014)
 ## # Masked for removal in 30 days.  Doesn't work
 ## # with new libfoo. Upstream dead, gtk-1, smells
 ## # funny. (bug #987654)
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Weber <xmw@gentoo.org> (18 Jul 2014)
+# Masked for removal of affected versions in 30 days.
+# Security issue bug 513560
+<net-misc/iodine-0.7.0
 
 # Hans de Graaff <graaff@gentoo.org> (18 Jul 2014)
 # Mask for removal in 30 days for bug 380711.

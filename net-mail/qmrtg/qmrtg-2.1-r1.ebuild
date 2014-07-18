@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1-r1.ebuild,v 1.2 2010/02/12 16:53:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1-r1.ebuild,v 1.3 2014/07/18 15:56:36 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils
 
-DESCRIPTION="A tool to analyze qmail's activity with the goal to graph everything through MRTG."
+DESCRIPTION="A tool to analyze qmail activity with the goal to graph everything through MRTG"
 HOMEPAGE="http://dev.publicshout.org/qmrtg"
 SRC_URI="${HOMEPAGE}/download/${P}.tar.gz"
 
@@ -15,21 +14,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=""
 RDEPEND="net-analyzer/mrtg"
 
 src_prepare() {
-	sed -i analyzers/Makefile.in filters/Makefile.in \
-		-e 's|^CFLAGS =|CFLAGS ?=|g' || die "sed failed"
+	sed -i \
+		-e 's|^CFLAGS =|CFLAGS ?=|g' \
+		analyzers/Makefile.in filters/Makefile.in || die
 
-	epatch "${FILESDIR}/mrtg.cfg.patch"
-	epatch "${FILESDIR}/qmrtg.conf.sample.patch"
+	epatch "${FILESDIR}"/mrtg.cfg.patch
+	epatch "${FILESDIR}"/qmrtg.conf.sample.patch
+	epatch "${FILESDIR}"/${P}-TAI_STR_LEN.patch
 }
 
+DOCS=( INSTALL.txt )
+
 src_install () {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	default
 	keepdir /var/lib/qmrtg
-	dodoc INSTALL.txt
 	if use doc ; then
 		docinto txt
 		dodoc doc/*.txt

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.39.0.ebuild,v 1.3 2013/01/03 14:58:49 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.39.0.ebuild,v 1.4 2014/07/18 15:39:22 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
-EAPI=4
+EAPI=5
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE="doc"
 
 DEPEND="
-	>=net-libs/libnet-1.1.1
+	net-libs/libnet:1.1
 	net-libs/libpcap
 "
 RDEPEND="${DEPEND}"
@@ -41,7 +41,7 @@ src_prepare() {
 }
 
 src_configure() {
-	sh genemake || die "problem creating Makefile"
+	sh genemake || die
 }
 
 src_install() {
@@ -54,6 +54,7 @@ src_install() {
 	fi
 
 	cd "${S}"/..
-	dodoc doc/{changelog.txt,credits.txt,integration.txt} \
+	dodoc \
+		doc/{changelog.txt,credits.txt,integration.txt} \
 		doc/{problemreport.txt,problemusageunix.txt,todo.txt}
 }

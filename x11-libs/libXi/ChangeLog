@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.167 2014/06/18 21:07:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.168 2014/07/18 15:47:38 mattst88 Exp $
+
+*libXi-1.7.4 (18 Jul 2014)
+
+  18 Jul 2014; Matt Turner <mattst88@gentoo.org> +libXi-1.7.4.ebuild:
+  Version bump to 1.7.4.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXi-1.7.2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
