@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.45 2014/07/18 16:15:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.46 2014/07/18 16:33:50 jer Exp $
+
+*iperf-3.0.5 (18 Jul 2014)
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> +iperf-3.0.5.ebuild:
+  Version bump (bug #466508 by Bryan Duff).
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> iperf-2.0.5-r2.ebuild,
   files/iperf-bidirectional-tcp-server.patch,

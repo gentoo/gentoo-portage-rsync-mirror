@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/libfaketime-0.9.6.ebuild,v 1.1 2014/06/18 23:31:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/libfaketime-0.9.6-r1.ebuild,v 1.1 2014/07/18 16:35:46 radhermit Exp $
 
 EAPI=5
 
@@ -18,12 +18,16 @@ src_prepare() {
 	tc-export CC
 }
 
+src_compile() {
+	emake CC="$(tc-getCC)" LIBDIRNAME="/$(get_libdir)" PREFIX=/usr
+}
+
 src_install() {
 	dobin src/faketime
 	doman man/faketime.1
-	exeinto /usr/$(get_libdir)/faketime
+	exeinto /usr/$(get_libdir)
 	doexe src/${PN}*.so.*
-	dosym ${PN}.so.1 /usr/$(get_libdir)/faketime/${PN}.so
-	dosym ${PN}MT.so.1 /usr/$(get_libdir)/faketime/${PN}MT.so
+	dosym ${PN}.so.1 /usr/$(get_libdir)/${PN}.so
+	dosym ${PN}MT.so.1 /usr/$(get_libdir)/${PN}MT.so
 	dodoc NEWS README TODO
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/lanmap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.7 2013/09/26 01:29:27 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.8 2014/07/18 17:01:09 jer Exp $
+
+  18 Jul 2014; Jeroen Roovers <jer@gentoo.org> lanmap-81-r1.ebuild,
+  +files/lanmap-81-make.patch, -files/makefile.patch:
+  Rename patch. Regenerate configure. Convert sed script into (same) patch. Set
+  proper dependencies.
 
   26 Sep 2013; Rick Farina <zerochaos@gentoo.org> lanmap-81-r1.ebuild:
   fix bug 485878 and bump eapi

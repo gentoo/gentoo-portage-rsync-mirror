@@ -1,4 +1,4 @@
-DEFINED_PHASES=install prepare
+DEFINED_PHASES=compile install prepare
 DESCRIPTION=Report faked system time to programs
 EAPI=5
 HOMEPAGE=http://www.code-wizards.com/projects/libfaketime/ https://github.com/wolfcw/libfaketime/
@@ -7,4 +7,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.code-wizards.com/projects/libfaketime/libfaketime-0.9.6.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=ceaf87b2eca5abad0a0a5976af0ead6f
+_md5_=764caaa21eb2b9a85b1e7e99de2e42cd
