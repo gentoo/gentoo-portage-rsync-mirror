@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.194 2014/05/11 12:36:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.195 2014/07/19 17:27:06 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> easytag-2.2.2.ebuild:
+  Keyworded on alpha, bug #503608
 
   11 May 2014; Ben de Groot <yngwin@gentoo.org> easytag-2.2.2.ebuild:
   Fix required use

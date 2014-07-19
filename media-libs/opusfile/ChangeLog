@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opusfile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.9 2014/05/03 14:21:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.10 2014/07/19 17:27:13 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> opusfile-0.5.ebuild:
+  Keyworded on alpha, bug #507650
 
   03 May 2014; Markus Meier <maekke@gentoo.org> opusfile-0.5.ebuild:
   add ~arm, bug #507650
