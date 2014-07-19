@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.156 2014/07/18 04:12:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.157 2014/07/19 21:56:14 floppym Exp $
+
+  19 Jul 2014; Mike Gilbert <floppym@gentoo.org>
+  chrome-binary-plugins-37.0.2062.20_beta1.ebuild:
+  Drop pdf plugin in the beta channel.
 
 *chrome-binary-plugins-38.0.2096.0_alpha1 (18 Jul 2014)
 *chrome-binary-plugins-37.0.2062.20_beta1 (18 Jul 2014)
