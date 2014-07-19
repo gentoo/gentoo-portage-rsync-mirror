@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.178 2014/01/08 06:20:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.179 2014/07/19 10:18:41 grobian Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -458,7 +458,7 @@ configure_common() {
 	myconf="${myconf} $(use_with big-tables)"
 	myconf="${myconf} --enable-local-infile"
 	myconf="${myconf} --with-extra-charsets=all"
-	myconf="${myconf} --with-mysqld-user=mysql"
+	use prefix || myconf="${myconf} --with-mysqld-user=mysql"
 	myconf="${myconf} --with-server"
 	myconf="${myconf} --with-unix-socket-path=${EPREFIX}/var/run/mysqld/mysqld.sock"
 	myconf="${myconf} --without-libwrap"
@@ -1366,17 +1366,17 @@ mysql_pkg_config() {
 	MYSQL_LOG_BIN="$(mysql_getoptval mysqld log-bin)"
 	MYSQL_LOG_BIN=${MYSQL_LOG_BIN%/*}
 
-	if [[ ! -d "${EROOT}"/$MYSQL_TMPDIR ]]; then
+	if [[ ! -d "${ROOT}"/$MYSQL_TMPDIR ]]; then
 		einfo "Creating MySQL tmpdir $MYSQL_TMPDIR"
-		install -d -m 770 -o mysql -g mysql "${EROOT}"/$MYSQL_TMPDIR
+		install -d -m 770 -o mysql -g mysql "${ROOT}"/$MYSQL_TMPDIR
 	fi
-	if [[ ! -d "${EROOT}"/$MYSQL_LOG_BIN ]]; then
+	if [[ ! -d "${ROOT}"/$MYSQL_LOG_BIN ]]; then
 		einfo "Creating MySQL log-bin directory $MYSQL_LOG_BIN"
-		install -d -m 770 -o mysql -g mysql "${EROOT}"/$MYSQL_LOG_BIN
+		install -d -m 770 -o mysql -g mysql "${ROOT}"/$MYSQL_LOG_BIN
 	fi
-	if [[ ! -d "${EROOT}"/$MYSQL_RELAY_LOG ]]; then
+	if [[ ! -d "${ROOT}"/$MYSQL_RELAY_LOG ]]; then
 		einfo "Creating MySQL relay-log directory $MYSQL_RELAY_LOG"
-		install -d -m 770 -o mysql -g mysql "${EROOT}"/$MYSQL_RELAY_LOG
+		install -d -m 770 -o mysql -g mysql "${ROOT}"/$MYSQL_RELAY_LOG
 	fi
 
 	if [[ -d "${ROOT}/${MY_DATADIR}/mysql" ]] ; then
@@ -1467,7 +1467,7 @@ mysql_pkg_config() {
 	local pidfile="${EROOT}/var/run/mysqld/mysqld${RANDOM}.pid"
 	local mysqld="${EROOT}/usr/sbin/mysqld \
 		${options} \
-		--user=mysql \
+		$(use prefix || echo --user=mysql) \
 		--log-warnings=0 \
 		--basedir=${EROOT}/usr \
 		--datadir=${ROOT}/${MY_DATADIR} \
