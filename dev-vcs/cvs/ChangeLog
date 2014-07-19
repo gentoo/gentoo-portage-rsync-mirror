@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.22 2014/06/08 15:49:05 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.23 2014/07/19 17:36:57 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> cvs-1.12.12-r10.ebuild:
+  Stable on alpha, bug #506080
 
   08 Jun 2014; Akinori Hattori <hattya@gentoo.org> cvs-1.12.12-r10.ebuild:
   ia64 stable wrt bug #506080
