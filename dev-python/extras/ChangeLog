@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.19 2014/06/14 10:20:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.20 2014/07/19 19:47:49 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> extras-0.0.3.ebuild:
+  Stable on alpha, bug #506620
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> extras-0.0.3.ebuild:
   x86 stable wrt bug #506620

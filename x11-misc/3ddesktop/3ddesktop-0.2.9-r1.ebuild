@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9-r1.ebuild,v 1.6 2012/06/19 09:58:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9-r1.ebuild,v 1.7 2014/07/19 19:36:03 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="OpenGL virtual desktop switching"
@@ -12,22 +12,25 @@ SRC_URI="mirror://sourceforge/desk3d/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE=""
 
-RDEPEND="media-libs/freeglut
+RDEPEND="
 	>=media-libs/freetype-2
+	media-libs/freeglut
 	media-libs/imlib2[X]
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXt
-	x11-libs/libXxf86vm"
-DEPEND="${RDEPEND}
+	x11-libs/libXxf86vm
+"
+DEPEND="
+	${RDEPEND}
 	x11-proto/xf86vidmodeproto
-	x11-proto/xproto"
+	x11-proto/xproto
+"
 
-DOCS="AUTHORS TODO ChangeLog README README.windowmanagers"
+DOCS=( AUTHORS TODO ChangeLog README README.windowmanagers )
 
 src_prepare() {
 	epatch \

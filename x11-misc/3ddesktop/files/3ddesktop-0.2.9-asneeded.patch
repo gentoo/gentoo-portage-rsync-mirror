@@ -1,7 +1,7 @@
 http://bugs.gentoo.org/206817
 
---- Makefile.am
-+++ Makefile.am
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -37,7 +37,7 @@
         camera.cpp \
         config.cpp

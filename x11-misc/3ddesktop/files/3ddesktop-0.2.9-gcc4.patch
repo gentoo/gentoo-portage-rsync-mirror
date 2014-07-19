@@ -1,7 +1,7 @@
 http://bugs.gentoo.org/118458
 
---- event.hpp
-+++ event.hpp
+--- a/event.hpp
++++ b/event.hpp
 @@ -74,7 +74,7 @@
          list<Event *>::iterator k;
          for (k = events.begin(); k != events.end(); ++k) {

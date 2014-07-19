@@ -1,7 +1,7 @@
 http://bugs.gentoo.org/123762
 
---- 3ddeskd.cpp
-+++ 3ddeskd.cpp
+--- a/3ddeskd.cpp
++++ b/3ddeskd.cpp
 @@ -2411,15 +2411,15 @@
  
      // initialize opengl

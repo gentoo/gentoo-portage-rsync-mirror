@@ -1,7 +1,7 @@
 http://bugs.gentoo.org/228217
 
---- config.hpp
-+++ config.hpp
+--- a/config.hpp
++++ b/config.hpp
 @@ -24,6 +24,7 @@
  
  #include <stdio.h>
