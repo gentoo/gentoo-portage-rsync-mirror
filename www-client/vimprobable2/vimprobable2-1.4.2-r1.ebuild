@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/vimprobable2-9999.ebuild,v 1.4 2014/07/19 04:53:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/vimprobable2-1.4.2-r1.ebuild,v 1.1 2014/07/19 04:53:56 radhermit Exp $
 
 EAPI=5
 inherit toolchain-funcs savedconfig
@@ -8,6 +8,7 @@ inherit toolchain-funcs savedconfig
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="git://git.code.sf.net/p/vimprobable/code"
+	EGIT_PROJECT="vimprobable"
 else
 	SRC_URI="mirror://sourceforge/vimprobable/${PN}_${PV}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"

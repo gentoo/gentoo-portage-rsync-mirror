@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-20140501.ebuild,v 1.1 2014/05/02 04:57:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/urxvt-font-size/urxvt-font-size-20140501-r1.ebuild,v 1.1 2014/07/19 04:59:56 radhermit Exp $
 
 EAPI=5
 inherit multilib
@@ -19,7 +19,10 @@ HOMEPAGE="https://github.com/majutsushi/urxvt-font-size/"
 LICENSE="MIT"
 SLOT="0"
 
-RDEPEND="x11-terms/rxvt-unicode[perl]"
+RDEPEND="
+	x11-apps/xlsfonts
+	x11-terms/rxvt-unicode[perl]
+"
 
 src_install() {
 	insinto /usr/$(get_libdir)/urxvt/perl

@@ -1,6 +1,12 @@
 # ChangeLog for www-client/vimprobable2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/ChangeLog,v 1.8 2014/01/23 00:53:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/ChangeLog,v 1.9 2014/07/19 04:53:56 radhermit Exp $
+
+*vimprobable2-1.4.2-r1 (19 Jul 2014)
+
+  19 Jul 2014; Tim Harder <radhermit@gentoo.org> +vimprobable2-1.4.2-r1.ebuild,
+  vimprobable2-9999.ebuild:
+  Add savedconfig support (bug #515722).
 
   23 Jan 2014; Tim Harder <radhermit@gentoo.org> -vimprobable2-1.1.0.ebuild,
   -vimprobable2-1.2.0.ebuild, -vimprobable2-1.2.1.ebuild,
