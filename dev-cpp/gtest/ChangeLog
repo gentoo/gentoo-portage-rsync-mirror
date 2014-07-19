@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.38 2014/06/29 18:56:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.39 2014/07/19 07:27:53 pacho Exp $
+
+  19 Jul 2014; Pacho Ramos <pacho@gentoo.org> gtest-1.7.0.ebuild:
+  amd64/x86 stable, bug #513804
 
   29 Jun 2014; Markus Meier <maekke@gentoo.org> gtest-1.7.0.ebuild:
   arm stable, bug #513804

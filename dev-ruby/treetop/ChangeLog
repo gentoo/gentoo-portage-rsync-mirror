@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/treetop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.49 2014/07/18 09:30:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.50 2014/07/19 07:23:35 graaff Exp $
+
+  19 Jul 2014; Hans de Graaff <graaff@gentoo.org> +treetop-1.4.15-r1.ebuild:
+  Add back old treetop version for app-admin/chef.
 
   18 Jul 2014; Hans de Graaff <graaff@gentoo.org> treetop-1.5.3.ebuild:
   Update HOMEPAGE.
