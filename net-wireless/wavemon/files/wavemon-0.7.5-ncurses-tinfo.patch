@@ -1,5 +1,5 @@
---- a/configure.ac	2014-03-05 11:05:12.319043741 +0100
-+++ b/configure.ac	2014-03-05 11:15:00.866849013 +0100
+--- a/configure.ac
++++ b/configure.ac
 @@ -21,6 +21,7 @@ esac
  AC_PROG_CC
  AC_PROG_CPP
