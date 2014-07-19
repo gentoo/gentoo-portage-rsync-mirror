@@ -1,6 +1,6 @@
---- logitech_applet-0.4test1/logitech_applet.c	2004-09-21 13:18:55.000000000 +0100
-+++ logitech_applet.c	2006-02-03 14:30:35.000000000 +0000
-@@ -40,6 +40,42 @@
+--- a/logitech_applet.c
++++ b/logitech_applet.c
+@@ -40,6 +40,44 @@
  #endif
  
  #define VENDOR_LOGITECH 0x046D
@@ -25,9 +25,11 @@
 +    { VENDOR_LOGITECH, 0xC01B, "M-BP86", "MX310 Optical Mouse", HAS_RES },
 +    { VENDOR_LOGITECH, 0xC01D, "M-BS81A", "MX510 Optical Mouse", HAS_RES | HAS_SS | HAS_SSR },
 +    { VENDOR_LOGITECH, 0xC01E, "M-BS81A", "MX518 Optical Mouse", HAS_RES },
++    { VENDOR_LOGITECH, 0xC01F, "M-BS82", "MX300 Optical Mouse", HAS_RES },
 +    { VENDOR_LOGITECH, 0xC024, "M-BP82", "MX300 Optical Mouse", HAS_RES },
 +    { VENDOR_LOGITECH, 0xC025, "M-BP81A", "MX500 Optical Mouse", HAS_RES | HAS_SS | HAS_SSR },
 +    { VENDOR_LOGITECH, 0xC031, "M-UT58A", "iFeel Mouse (silver)", HAS_RES },
++    { VENDOR_LOGITECH, 0xC051, "M-BS81A", "MX518 Optical Mouse", HAS_RES },
 +    { VENDOR_LOGITECH, 0xC501, "C-BA4-MSE", "Mouse Receiver", HAS_CSR },
 +    { VENDOR_LOGITECH, 0xC502, "C-UA3-DUAL", "Dual Receiver", HAS_CSR | USE_CH2},
 +    { VENDOR_LOGITECH, 0xC504, "C-BD9-DUAL", "Cordless Freedom Optical", HAS_CSR | USE_CH2 },
@@ -43,7 +45,7 @@
  
  int get_resolution(struct usb_device *dev)
  {
-@@ -141,7 +177,12 @@
+@@ -141,7 +179,12 @@
      return cruise;
  }
  
@@ -52,12 +54,12 @@
 + *  - 0x03 for 400cpi
 + *  - 0x04 for 800cpi
 + *  - 0x05 for 1200cpi
-+ *  - 0x06 for 1600cpi
++ *  - 0x06 for 1600cpi (actually 1800cpi on newer MX518)
 + */
  int set_resolution(struct usb_device *dev, int resolution)
  {
      usb_dev_handle *usb_h;
-@@ -233,39 +274,6 @@
+@@ -233,39 +276,6 @@
      printf("Logitech Mouse Applet, Version %s\n", VERSION);
  }
  
@@ -97,7 +99,7 @@
  int main(int argc, char **argv)
  {
      struct usb_bus *bus;
-@@ -318,8 +326,12 @@
+@@ -318,8 +328,12 @@
  		resolution = 400;
  	    else if (!strcmp("800", optarg))
  		resolution = 800;
@@ -111,7 +113,7 @@
              break;
          case 'v':
  	    version();
-@@ -363,14 +375,22 @@
+@@ -363,14 +377,22 @@
  				    break;
  				case 4: printf("800cpi\n");
  				    break;
