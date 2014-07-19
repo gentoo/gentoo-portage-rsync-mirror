@@ -9,4 +9,4 @@ RDEPEND=app-arch/xz-utils:0= dev-db/sqlite:3= >=dev-libs/openssl-1.0.1g:0= dev-l
 SLOT=0
 SRC_URI=https://www.cyphertite.com/snapshots/source/2.0.2/cyphertite-full-2.0.2.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=1da9664e543e58d430ab365f910cd98d
+_md5_=4e32cea5e97157041234c25e1728c93f

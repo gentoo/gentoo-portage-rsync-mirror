@@ -1,6 +1,14 @@
 # ChangeLog for app-backup/cyphertite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.4 2014/07/09 00:23:30 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cyphertite/ChangeLog,v 1.5 2014/07/19 13:09:15 grknight Exp $
+
+*cyphertite-2.0.2-r3 (19 Jul 2014)
+
+  19 Jul 2014; Brian Evans <grknight@gentoo.org> +cyphertite-2.0.2-r3.ebuild,
+  -cyphertite-2.0.2-r2.ebuild, files/cyphertite-2.0.2-fix-build.patch:
+  Fix build system which wrongly filtered using s/-lssl//g to use s/-lssl //g .
+  This breaks curl linked with non-OpenSSL such as nss and is bad  practice
+  anyway
 
   09 Jul 2014; Brian Evans <grknight@gentoo.org>
   files/cyphertite-2.0.2-cflags.patch:

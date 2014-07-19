@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.46 2014/07/18 16:33:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.47 2014/07/19 13:29:42 jer Exp $
+
+  19 Jul 2014; Jeroen Roovers <jer@gentoo.org> iperf-3.0.5.ebuild,
+  +files/iperf-3.0.5-flags.patch:
+  Do not inject -g into CFLAGS/LDFLAGS, do not create an additional profiled
+  build (bug #517488 by Ronny Boesger).
 
 *iperf-3.0.5 (18 Jul 2014)
 
