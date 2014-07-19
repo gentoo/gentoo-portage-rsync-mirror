@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.4.ebuild,v 1.3 2013/01/30 18:06:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.4.ebuild,v 1.4 2014/07/19 13:55:10 tupone Exp $
 
 EAPI=5
 inherit autotools eutils multilib games
@@ -24,8 +24,7 @@ RDEPEND="media-libs/freealut
 	virtual/opengl
 	virtual/glu
 	x11-libs/libX11
-	x11-libs/libXrandr
-	x11-libs/libXt"
+	x11-libs/libXrandr"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto"
 
@@ -33,7 +32,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-no-automake.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-flags.patch
+		"${FILESDIR}"/${P}-flags.patch \
+		"${FILESDIR}"/${P}-noXmuXt.patch
 	eautoreconf
 	ecvs_clean
 }

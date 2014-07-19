@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/files/iperf.initd-r1,v 1.1 2013/09/05 16:04:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/files/iperf.initd-r1,v 1.2 2014/07/19 13:45:42 jer Exp $
 
 description="IP bandwidth measurement server"
 command="/usr/bin/iperf"
@@ -10,10 +10,6 @@ command_background="yes"
 pidfile="/run/${SVCNAME}.pid"
 command_args="-s ${IPERF_OPTS}"
 
-# note: iperf has a daemon flag but we seem to hit a bug
+# note: iperf has a -D/--daemon flag but we seem to hit a bug
 #       where it starts to eat all CPU after client disconnect,
 #       see bug #344875
-
-depend() {
-	need net
-}

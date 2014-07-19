@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/torcs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.39 2013/01/30 18:32:18 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.40 2014/07/19 13:55:10 tupone Exp $
+
+  19 Jul 2014; Tupone Alfredo <tupone@gentoo.org> torcs-1.3.4.ebuild,
+  +files/torcs-1.3.4-noXmuXt.patch:
+  remove libXt and libXmu dependency. Fix bug #515750 by Patrick Lauer
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/torcs-1.3.1-as-needed.patch, -files/torcs-1.3.1-libpng15.patch,
@@ -28,7 +32,7 @@
   +files/torcs-1.3.1-libpng15.patch:
   add patch for building with libpng from wrstwssr@yahoo.com via bug #369231
 
-  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> torcs-1.3.1.ebuild:
+  16 Sep 2010; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> torcs-1.3.1.ebuild:
   virtual/glut -> media-libs/glut
 
   02 May 2010; Michael Sterrett <mr_bones_@gentoo.org> torcs-1.3.1.ebuild:
@@ -123,7 +127,7 @@
 *torcs-1.2.3 (17 Jul 2005)
 
   17 Jul 2005; Mike Frysinger <vapier@gentoo.org> +torcs-1.2.3.ebuild:
-  Version bump #80983 by Kåre Baastrup et al.
+  Version bump #80983 by KÃ¥re Baastrup et al.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
