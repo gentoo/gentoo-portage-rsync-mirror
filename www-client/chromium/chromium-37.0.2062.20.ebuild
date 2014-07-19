@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2062.20.ebuild,v 1.1 2014/07/19 01:12:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-37.0.2062.20.ebuild,v 1.2 2014/07/19 08:56:48 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -37,6 +37,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	)
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
+	dev-libs/glib:=
 	dev-libs/icu:=
 	>=dev-libs/jsoncpp-0.5.0-r1:=
 	>=dev-libs/libevent-1.4.13:=
@@ -49,6 +50,8 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	gnome-keyring? ( gnome-base/libgnome-keyring:= )
 	>=media-libs/alsa-lib-1.0.19:=
 	media-libs/flac:=
+	media-libs/fontconfig:=
+	media-libs/freetype:=
 	media-libs/harfbuzz:=[icu(+)]
 	media-libs/libexif:=
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
@@ -61,12 +64,23 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	>=sys-libs/libcap-2.22:=
 	sys-libs/zlib:=[minizip]
 	virtual/udev
-	x11-libs/libdrm
+	x11-libs/cairo:=
+	x11-libs/gdk-pixbuf:=
 	x11-libs/gtk+:2=
+	x11-libs/libdrm
+	x11-libs/libX11:=
+	x11-libs/libXcomposite:=
+	x11-libs/libXcursor:=
+	x11-libs/libXdamage:=
+	x11-libs/libXext:=
+	x11-libs/libXfixes:=
 	>=x11-libs/libXi-1.6.0:=
 	x11-libs/libXinerama:=
+	x11-libs/libXrandr:=
+	x11-libs/libXrender:=
 	x11-libs/libXScrnSaver:=
 	x11-libs/libXtst:=
+	x11-libs/pango:=
 	kerberos? ( virtual/krb5 )
 	selinux? ( sec-policy/selinux-chromium )"
 DEPEND="${RDEPEND}

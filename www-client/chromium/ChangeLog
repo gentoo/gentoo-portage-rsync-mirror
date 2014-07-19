@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1106 2014/07/19 01:12:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1107 2014/07/19 08:56:48 phajdan.jr Exp $
+
+  19 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-37.0.2062.20.ebuild:
+  Add more used libraries to RDEPEND, bug #512806 by ago.
 
 *chromium-37.0.2062.20 (19 Jul 2014)
 
