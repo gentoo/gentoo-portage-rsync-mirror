@@ -1,6 +1,5 @@
-diff -U 3 -r /src/config.h src/config.h
---- src/config.h	2002-10-24 15:16:34.000000000 +0200
-+++ src/config.h	2004-04-07 00:39:51.000000000 +0200
+--- a/src/config.h
++++ b/src/config.h
 @@ -37,7 +37,7 @@
  #define WEPKEYSTORE     	(WEPKEYSIZE * WEPKEYS)
  
@@ -10,9 +9,8 @@ diff -U 3 -r /src/config.h src/config.h
  
  
  #endif
-diff -U 3 -r /src/log.c src/log.c
---- src/log.c	2002-10-24 15:15:55.000000000 +0200
-+++ src/log.c	2004-04-07 00:39:51.000000000 +0200
+--- a/src/log.c
++++ b/src/log.c
 @@ -73,7 +73,7 @@
  	fprintf(fp, "Cracking started: %s", ctime(&start_time));
  	fprintf(fp, "%s\t%s\n", word, in);
@@ -31,9 +29,8 @@ diff -U 3 -r /src/log.c src/log.c
  				(int)difftime(now, start_time));
  		}
  		list = list->next;
-diff -U 3 -r /src/misc.c src/misc.c
---- src/misc.c	2002-10-24 15:15:42.000000000 +0200
-+++ src/misc.c	2004-04-07 00:39:51.000000000 +0200
+--- a/src/misc.c
++++ b/src/misc.c
 @@ -40,10 +40,11 @@
  	fprintf(stdout,"WEPATTACK by Dominik Blunk and Alain ");
  	fprintf(stdout,"Girardet - Version %s\n", VERSION);
@@ -47,9 +44,8 @@ diff -U 3 -r /src/misc.c src/misc.c
  	fprintf(stdout,"-m mode \trun wepattack in diffente modes (default: all)\n");
  	fprintf(stdout,"\t\tvalues: 64, 128, n64, n128\n");
  	fprintf(stdout,"-n network \tnetwork number to attack\n");
-diff -U 3 -r /src/wepattack.c src/wepattack.c
---- src/wepattack.c	2002-10-24 15:14:29.000000000 +0200
-+++ src/wepattack.c	2004-04-07 00:43:56.000000000 +0200
+--- a/src/wepattack.c
++++ b/src/wepattack.c
 @@ -4,6 +4,8 @@
  * Author: 		Alain Girardet/Dominik Blunk
  * Last Modified:	2002-10-24
@@ -168,9 +164,8 @@ diff -U 3 -r /src/wepattack.c src/wepattack.c
                  // arg for packet file to read from
  		case 'f':
                          packet_file = optarg;
-diff -U 3 -r /src/wepattack.h src/wepattack.h
---- src/wepattack.h	2002-10-24 15:14:22.000000000 +0200
-+++ src/wepattack.h	2004-04-07 00:39:51.000000000 +0200
+--- a/src/wepattack.h
++++ b/src/wepattack.h
 @@ -38,6 +38,7 @@
  	unsigned char iv[3];
  	unsigned char key;
@@ -179,9 +174,8 @@ diff -U 3 -r /src/wepattack.h src/wepattack.h
  };
  
  /*
-diff -U 3 -r /src/wepfilter.c src/wepfilter.c
---- src/wepfilter.c	2002-10-24 15:14:13.000000000 +0200
-+++ src/wepfilter.c	2004-04-07 00:39:51.000000000 +0200
+--- a/src/wepfilter.c
++++ b/src/wepfilter.c
 @@ -104,6 +103,7 @@
  	memcpy(&newframe->frame.key, data+limits.key, 1);
  	newframe->frame.key = newframe->frame.key >> 6;
