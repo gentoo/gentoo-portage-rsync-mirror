@@ -1,5 +1,5 @@
---- org/de.po	2008-09-03 23:41:02.000000000 +0200
-+++ po/de.po	2008-09-04 01:51:15.000000000 +0200
+--- a/po/de.po
++++ b/po/de.po
 @@ -4,7 +4,7 @@
  "Project-Id-Version: Rubrica 2.0rc1\n"
  "Report-Msgid-Bugs-To: \n"
@@ -680,8 +680,8 @@
  
  #: ../rubrica2.schemas.in.h:10
  msgid "Rubrica will make a backup of addressbooks before overwrite them"
---- org/fr.po	2008-09-03 23:41:02.000000000 +0200
-+++ po/fr.po	2008-09-04 12:32:32.000000000 +0200
+--- a/po/fr.po
++++ b/po/fr.po
 @@ -4,7 +4,7 @@
  "Project-Id-Version: Rubrica 2.0.1\n"
  "Report-Msgid-Bugs-To: \n"

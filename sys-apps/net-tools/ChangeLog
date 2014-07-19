@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.146 2014/07/11 17:37:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.149 2014/07/19 16:24:44 zlogene Exp $
+
+  19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  net-tools-1.60_p20130513023548.ebuild:
+  sparc stable wrt bug #506702
+
+  19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  net-tools-1.60_p20130513023548.ebuild:
+  ppc64 stable wrt bug #506702
+
+  19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
+  net-tools-1.60_p20130513023548.ebuild:
+  ppc stable wrt bug #506702
 
   11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   net-tools-1.60_p20130513023548.ebuild:

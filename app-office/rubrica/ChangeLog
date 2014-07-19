@@ -1,6 +1,20 @@
 # ChangeLog for app-office/rubrica
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.17 2012/05/03 20:00:41 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.18 2014/07/19 16:31:03 jer Exp $
+
+  19 Jul 2014; Jeroen Roovers <jer@gentoo.org> rubrica-2.1.6-r1.ebuild,
+  +files/rubrica-2.1.6-fix-menu-language.patch,
+  +files/rubrica-2.1.6-gthread.patch, +files/rubrica-2.1.6-libm.patch,
+  files/rubrica-2.1.6-libnotify-0.7.patch,
+  +files/rubrica-2.1.6-linguas_hu.patch,
+  +files/rubrica-2.1.6-missing-icons.patch, +files/rubrica-2.1.6-schema.patch,
+  +files/rubrica-2.1.6-url-crash.patch,
+  -files/rubrica-2.1.6_fix-menu-language.patch,
+  -files/rubrica-2.1.6_missing-icons.patch,
+  -files/rubrica-2.1.6_url-crash.patch:
+  EAPI bump. Integrate linguas_hu support better. Link properly against libm
+  and libgthread. Fix GCONF schema (bug #353332). Clean up patches. Use a
+  uniform patch filename format. Marked ~amd64 too.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> rubrica-2.1.6-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

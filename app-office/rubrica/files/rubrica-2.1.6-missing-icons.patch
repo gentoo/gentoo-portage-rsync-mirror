@@ -1,5 +1,5 @@
---- org/app.c	2008-09-04 19:43:43.000000000 +0200
-+++ src/app.c	2008-09-04 19:51:38.000000000 +0200
+--- a/src/app.c
++++ b/src/app.c
 @@ -59,13 +59,13 @@
    {"all",                      "all groups",    N_("all groups")   },
  
@@ -16,8 +16,8 @@
    {"applications-multimedia",  "hobbies",       N_("hobbies")      },
    {"sport",                    "sport",         N_("sport")        },
  
---- org/callbacks.c	2008-09-06 15:02:19.000000000 +0200
-+++ src/callbacks.c	2008-09-06 15:04:36.000000000 +0200
+--- a/src/callbacks.c
++++ b/src/callbacks.c
 @@ -597,7 +597,8 @@
      "Ukrainian Iryna Rtveliashvili <irina.rtv@mail.ru>\n"
      "Deutsch Christian Faulhammer <christian@faulhammer.org>\n"

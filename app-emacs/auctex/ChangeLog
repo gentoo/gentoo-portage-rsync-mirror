@@ -1,12 +1,12 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.124 2014/07/19 13:57:39 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.125 2014/07/19 16:23:28 ulm Exp $
+
+  19 Jul 2014; Ulrich Müller <ulm@gentoo.org> -auctex-11.87.ebuild:
+  Remove old.
 
   19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> auctex-11.87-r1.ebuild:
-  x86 stable wrt bug #515540
-
-  19 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> auctex-11.87-r1.ebuild:
-  ppc64 stable wrt bug #515540
+  ppc64 and x86 stable wrt bug #515540
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> auctex-11.87-r1.ebuild:
   Stable for ppc, wrt bug #515540
@@ -28,10 +28,7 @@
   Stable for x86, wrt bug #451930
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> auctex-11.87.ebuild:
-  Stable for ppc64, wrt bug #451930
-
-  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> auctex-11.87.ebuild:
-  Stable for ppc, wrt bug #451930
+  Stable for ppc and ppc64, wrt bug #451930
 
   14 Jan 2013; Agostino Sarubbo <ago@gentoo.org> auctex-11.87.ebuild:
   Stable for amd64, wrt bug #451930

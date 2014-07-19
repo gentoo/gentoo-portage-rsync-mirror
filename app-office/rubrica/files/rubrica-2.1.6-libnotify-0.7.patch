@@ -1,5 +1,5 @@
---- src/app.c
-+++ src/app.c
+--- a/src/app.c
++++ b/src/app.c
 @@ -1338,8 +1338,15 @@
    self->priv->statusbar      = rubrica_statusbar_new();
    
