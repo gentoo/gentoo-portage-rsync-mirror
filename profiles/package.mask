@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15914 2014/07/18 17:49:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15915 2014/07/19 09:04:15 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (19 Jul 2014)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-38
 
 # Michael Weber <xmw@gentoo.org> (18 Jul 2014)
 # Masked for removal of affected versions in 30 days.
@@ -293,11 +298,6 @@ dev-java/ibm-jdk-bin:1.5
 =virtual/perl-net-ping-2.430.0
 =virtual/perl-threads-1.930.0
 =virtual/perl-threads-shared-1.460.0
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 May 2014)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-37
 
 # Ryan Hill <rhill@gentoo.org> (22 May 2014)
 # Big API break.  Masked until something needs it.
