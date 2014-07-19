@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.25 2014/05/07 17:36:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.26 2014/07/19 11:40:34 johu Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ else
 	KEYWORDS=""
 fi
 
-DESCRIPTION="Qt playdar social music player"
+DESCRIPTION="Multi-source social music player"
 HOMEPAGE="http://tomahawk-player.org/"
 
 LICENSE="GPL-3 BSD"
