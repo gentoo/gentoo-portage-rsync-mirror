@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.26 2014/07/01 08:52:02 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.27 2014/07/19 07:39:30 grobian Exp $
+
+  19 Jul 2014; Fabian Groffen <grobian@gentoo.org> pass-1.6.3.ebuild,
+  pass-9999.ebuild:
+  Fix out of Prefix errors, by Hugh Nowlan in bug #513614
 
 *pass-1.6.3 (01 Jul 2014)
 
