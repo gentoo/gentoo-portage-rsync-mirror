@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.391 2014/07/15 07:36:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.392 2014/07/19 19:23:25 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> genkernel-3.4.49.ebuild:
+  Stable on alpha, bug #506404
 
 *genkernel-3.4.51 (15 Jul 2014)
 
