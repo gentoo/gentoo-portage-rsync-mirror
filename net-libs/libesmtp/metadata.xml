@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <use>
-  <flag name="ssl">
-    Enable support for advanced SMTP authentication methods, like NTML
-    and STARTTLS. Also use OpenSSL's MD5 implementation over internal
-    version.
-  </flag>
+  <flag name="ntlm">Enable support for NTLM authentication</flag>
 </use>
 </pkgmetadata>

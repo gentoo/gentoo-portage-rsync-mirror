@@ -5128,7 +5128,7 @@ net-libs/libbtbb:pcap - Add support for network packet capture via net-libs/libp
 net-libs/libbtbb:wireshark-plugins - Build the wireshark plugins for bluetooth baseband sniffing
 net-libs/libcrafter:pcap - Use net-libs/libpcap for packet capturing
 net-libs/libeXosip:srv - enable support for SRV records DNS queries
-net-libs/libesmtp:ssl - Enable support for advanced SMTP authentication methods, like NTML and STARTTLS. Also use OpenSSL's MD5 implementation over internal version.
+net-libs/libesmtp:ntlm - Enable support for NTLM authentication
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
 net-libs/libgsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-libs/libgsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
