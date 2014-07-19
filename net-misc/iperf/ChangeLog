@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.48 2014/07/19 13:45:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.49 2014/07/19 18:08:04 jer Exp $
+
+  19 Jul 2014; Jeroen Roovers <jer@gentoo.org> iperf-2.0.5.ebuild,
+  iperf-2.0.5-r1.ebuild, iperf-2.0.5-r2.ebuild, iperf-3.0.5.ebuild:
+  Move iperf3 to a new SLOT (bug #517488).
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> files/iperf.initd-r1:
   Drop "need net" in init script (bug #439654 by Matthew Schultz).

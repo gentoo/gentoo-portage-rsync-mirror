@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.255 2014/07/05 08:12:08 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.256 2014/07/19 18:18:09 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> erlang-16.3.1.ebuild:
+  Stable on alpha, bug #506274
 
   05 Jul 2014; Dirkjan Ochtman <djc@gentoo.org> -erlang-16.2-r1.ebuild,
   -erlang-17.0.ebuild:

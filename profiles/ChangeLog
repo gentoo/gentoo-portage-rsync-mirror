@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9228 2014/07/19 16:18:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9229 2014/07/19 18:07:12 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jul 2014; Jeroen Roovers <jer@gentoo.org> updates/3Q-2014:
+  Move iperf3 to a new SLOT (bug #517488).
 
   19 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove unneeded mask for ExtUtils-Manifest-1.630.0-r1

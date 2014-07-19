@@ -1,2 +1,4 @@
 move perl-core/Class-ISA dev-perl/Class-ISA
 move perl-core/Filter dev-perl/Filter
+slotmove =net-misc/iperf-2* 0 2
+slotmove =net-misc/iperf-3* 0 3

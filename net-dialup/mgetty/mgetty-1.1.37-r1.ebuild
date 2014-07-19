@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.37-r1.ebuild,v 1.2 2014/07/05 14:46:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.37-r1.ebuild,v 1.3 2014/07/19 18:23:33 klausman Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs user
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc +fax fidonet"
 
 pkg_setup() {
