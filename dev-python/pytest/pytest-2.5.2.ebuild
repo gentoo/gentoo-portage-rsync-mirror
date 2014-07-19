@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.5.2.ebuild,v 1.5 2014/07/06 12:49:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.5.2.ebuild,v 1.6 2014/07/19 18:59:11 floppym Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		dev-python/pexpect[$(python_gen_usedep python{2_6,2_7,3_2,3_3,3_4})]
+		$(python_gen_cond_dep 'dev-python/pexpect[${PYTHON_USEDEP}]' 'python*')
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 	)
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
