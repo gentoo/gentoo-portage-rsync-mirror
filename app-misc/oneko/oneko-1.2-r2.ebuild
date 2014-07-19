@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r2.ebuild,v 1.5 2012/11/16 14:41:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2-r2.ebuild,v 1.6 2014/07/19 14:15:17 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A cat, dog and others which chase the mouse or windows around the screen"
@@ -16,26 +15,29 @@ SRC_URI="http://www.daidouji.com/oneko/distfiles/${P}.sakura.5.tar.gz
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE=""
 
-RDEPEND="x11-libs/libX11
-	x11-libs/libXext"
-DEPEND="${RDEPEND}
+RDEPEND="
+	x11-libs/libX11
+	x11-libs/libXext
+"
+DEPEND="
+	${RDEPEND}
 	x11-misc/gccmakedep
 	x11-misc/imake
 	app-text/rman
-	x11-proto/xextproto"
+	x11-proto/xextproto
+"
 
-S="${WORKDIR}/oneko-${PV}.sakura.5"
+S=${WORKDIR}/oneko-${PV}.sakura.5
 
 src_prepare() {
 	epatch \
-		"${WORKDIR}/${P}-sakura-nobsd.patch" \
-		"${FILESDIR}/${P}-include.patch"
+		"${WORKDIR}"/${P}-sakura-nobsd.patch \
+		"${FILESDIR}"/${P}-include.patch
 }
 
 src_configure() {
-	xmkmf -a || die "running xmkmf failed!"
+	xmkmf -a || die
 }
 
 src_compile() {
@@ -43,7 +45,7 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		CCOPTIONS="${CFLAGS}" \
 		EXTRA_LDOPTIONS="${LDFLAGS}" \
-		|| die "make failed!"
+		|| die
 }
 
 src_install() {

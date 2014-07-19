@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/remind
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.13 2013/12/23 15:37:56 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.14 2014/07/19 14:20:29 jer Exp $
+
+  19 Jul 2014; Jeroen Roovers <jer@gentoo.org> -remind-03.01.12.ebuild,
+  -files/03.01.12-test.patch:
+  Old.
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #65652
