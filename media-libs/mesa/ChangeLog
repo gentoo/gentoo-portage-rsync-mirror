@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.567 2014/07/08 22:15:06 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.568 2014/07/19 00:06:41 mattst88 Exp $
 
-  08 Jul 2014; Magnus Granberg zorry@gentoo.org mesa-9.2.5-r1.ebuild,
+  08 Jul 2014; Magnus Granberg <zorry@gentoo.org> mesa-9.2.5-r1.ebuild,
   mesa-10.1.6.ebuild, mesa-10.2.1.ebuild, mesa-10.2.2.ebuild:
   Disable asm on x86 only if use pic #512208
 
