@@ -1,5 +1,5 @@
---- a/airtraf-1.1/src/sniffd/autoconfig.c	2003-01-24 10:11:36.000000000 +0930
-+++ b/airtraf-1.1/src/sniffd/autoconfig.c	2005-01-12 19:23:16.481439336 +0930
+--- a/src/sniffd/autoconfig.c
++++ b/src/sniffd/autoconfig.c
 @@ -360,7 +360,7 @@
  int check_drv_compat(char * drvname, int * id)
  {
@@ -26,8 +26,8 @@
  	
      }
      /* update flag take off PROMISC */
---- a/airtraf-1.1/src/sniffd/gui_channel_scan.c	2003-01-22 13:05:01.000000000 +0930
-+++ b/airtraf-1.1/src/sniffd/gui_channel_scan.c	2005-01-12 19:21:33.135876552 +0930
+--- a/src/sniffd/gui_channel_scan.c
++++ b/src/sniffd/gui_channel_scan.c
 @@ -384,7 +384,7 @@
  	    if (!beep()) flash();
  	    wattrset(statuswin, STDATTR);
@@ -37,8 +37,8 @@
  		     hexdump((__u8*)&ap->bssid,6), ap->channel);
  	    print_status_msg(statuswin, location, message);
  	    ap->status = AP_STATUS_ACTIVE;
---- a/airtraf-1.1/src/sniffd/server.c	2003-01-22 13:05:01.000000000 +0930
-+++ b/airtraf-1.1/src/sniffd/server.c	2005-01-12 19:21:33.135876552 +0930
+--- a/src/sniffd/server.c
++++ b/src/sniffd/server.c
 @@ -57,7 +57,7 @@
  
  int process_command(int, char *);
