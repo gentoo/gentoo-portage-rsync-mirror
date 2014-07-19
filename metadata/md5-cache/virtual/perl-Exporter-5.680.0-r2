@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Exporter
+EAPI=5
+KEYWORDS=~amd64 ~arm ~x86
+RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Exporter-5.680.0 ) !<perl-core/Exporter-5.680.0 !>perl-core/Exporter-5.680.0-r999
+SLOT=0
+_md5_=6faffead3163620c1da7d5f42d711080
