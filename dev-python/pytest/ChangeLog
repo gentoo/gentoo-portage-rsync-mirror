@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.91 2014/07/19 18:59:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.92 2014/07/19 21:22:19 klausman Exp $
+
+  19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> pytest-2.4.2.ebuild:
+  Stable on alpha, bug #506042
 
   19 Jul 2014; Mike Gilbert <floppym@gentoo.org> pytest-2.4.2.ebuild,
   pytest-2.5.2.ebuild:
