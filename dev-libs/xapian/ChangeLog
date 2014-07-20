@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.118 2014/06/23 10:30:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.119 2014/07/20 10:02:37 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> xapian-1.2.17.ebuild:
+  Stable on alpha, bug #506974
 
 *xapian-1.2.18 (23 Jun 2014)
 

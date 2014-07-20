@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xapian-omega
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.42 2014/06/23 11:42:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.43 2014/07/20 10:02:57 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  xapian-omega-1.2.17.ebuild:
+  Stable on alpha, bug #506974
 
 *xapian-omega-1.2.18 (23 Jun 2014)
 
