@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubytest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytest/ChangeLog,v 1.1 2014/05/15 18:12:11 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytest/ChangeLog,v 1.2 2014/07/20 17:26:26 mrueg Exp $
+
+*rubytest-0.8.1 (20 Jul 2014)
+
+  20 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +rubytest-0.8.1.ebuild:
+  Version bump.
 
 *rubytest-0.7.0 (15 May 2014)
 
