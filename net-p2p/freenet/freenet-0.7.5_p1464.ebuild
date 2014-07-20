@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1459.ebuild,v 1.2 2014/03/02 14:47:05 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1464.ebuild,v 1.1 2014/07/20 09:47:16 tommy Exp $
 
-EAPI="3"
+EAPI="5"
 DATE=20130915
 JAVA_PKG_IUSE="doc source"
 
-inherit eutils java-pkg-2 java-ant-2 multilib user
+inherit eutils java-pkg-2 java-ant-2 multilib systemd user
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="https://freenetproject.org/"
@@ -111,6 +111,7 @@ src_install() {
 	else
 		newinitd "${FILESDIR}"/freenet.old freenet
 	fi
+	systemd_dounit "${FILESDIR}"/freenet.service
 	dodoc AUTHORS || die
 	newdoc README.md README || die
 	insinto /etc

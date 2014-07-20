@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.42 2014/07/15 15:14:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.44 2014/07/20 09:33:10 pacho Exp $
+
+  20 Jul 2014; Pacho Ramos <pacho@gentoo.org> pavucontrol-2.0.ebuild:
+  x86 stable, bug #501702
+
+  20 Jul 2014; Pacho Ramos <pacho@gentoo.org> pavucontrol-2.0.ebuild:
+  amd64 stable, bug #501702
 
   15 Jul 2014; Pacho Ramos <pacho@gentoo.org> -pavucontrol-0.9.10.ebuild,
   pavucontrol-2.0.ebuild:
