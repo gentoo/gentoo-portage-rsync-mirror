@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.90 2014/06/25 14:22:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.91 2014/07/20 14:08:12 klausman Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -230,3 +230,8 @@ unwind
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2014)
 # Unmask systemd since it is keyworded here.
 -systemd
+
+# Tobias Klausmann <klausman@gentoo.org> (20 Jul 2014)
+# Mask redis USE flag everywhere since redis depends on google-perftools,
+# which are not supported on Alpha at all (assembly).
+redis
