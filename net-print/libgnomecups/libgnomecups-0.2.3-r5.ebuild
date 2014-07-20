@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r4.ebuild,v 1.1 2014/06/29 09:43:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r5.ebuild,v 1.1 2014/07/20 19:42:37 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -44,6 +44,12 @@ src_prepare() {
 	# so it looks for cups-config... how about using $CUPS_CONFIG then?
 	# and also use AC_PATH_TOOL to respect $CHOST
 	epatch "${FILESDIR}/${P}-cups-config.patch"
+
+	# Fix building with -Werror=format-security, bug #517612
+	epatch "${FILESDIR}/${P}-format-string.patch"
+
+	# Look for lpoptions in the right spot, upstream bug #520449
+	epatch "${FILESDIR}/${P}-lpoptions.patch"
 
 	eautoreconf # To fix intltool files making LINGUAS to be honored
 	gnome2_src_prepare

@@ -1,6 +1,15 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.99 2014/06/29 09:43:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.100 2014/07/20 19:42:37 pacho Exp $
+
+*libgnomecups-0.2.3-r5 (20 Jul 2014)
+
+  20 Jul 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/libgnomecups-0.2.3-format-string.patch,
+  +files/libgnomecups-0.2.3-lpoptions.patch, +libgnomecups-0.2.3-r5.ebuild,
+  -libgnomecups-0.2.3-r4.ebuild:
+  Fix building with -Werror=format-security (#517612 by ago) and look for
+  lpoptions in proper place (from Fedora)
 
 *libgnomecups-0.2.3-r4 (29 Jun 2014)
 

@@ -1,55 +1,55 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.5.ebuild,v 1.3 2014/07/20 19:53:16 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.65.ebuild,v 1.1 2014/07/20 19:53:16 sera Exp $
 
 EAPI="5"
 
 inherit eutils java-vm-2 prefix versionator
 
 # This URIs need to be updated when bumping!
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
-JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html"
-
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html"
+JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 # This is a list of archs supported by this update.
 # Currently arm comes and goes.
-AT_AVAILABLE=( amd64 x86 x64-solaris sparc64-solaris x86-macos x64-macos )
-
+AT_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris x86-macos x64-macos )
 # Sometimes some or all of the demos are missing, this is to not have to rewrite half
 # the ebuild when it happens.
-DEMOS_AVAILABLE=( amd64 x86 x64-solaris sparc64-solaris x86-macos x64-macos )
+DEMOS_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris x86-macos x64-macos )
+FX_VERSION="2_2_65"
 
-if [[ "$(get_version_component_range 4)" == 0 ]] ; then
-	S_PV="$(get_version_component_range 1-3)"
-else
-	MY_PV_EXT="u$(get_version_component_range 4)"
-	S_PV="$(get_version_component_range 1-4)"
-fi
+MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
+S_PV="$(replace_version_separator 3 '_')"
 
-MY_PV="$(get_version_component_range 2)${MY_PV_EXT}"
-
-AT_amd64="jdk-${MY_PV}-linux-x64.tar.gz"
-AT_arm="jdk-${MY_PV}-linux-arm-vfp-hflt.tar.gz"
 AT_x86="jdk-${MY_PV}-linux-i586.tar.gz"
-AT_x64_solaris="jdk-${MY_PV}-solaris-x64.tar.gz"
+AT_amd64="jdk-${MY_PV}-linux-x64.tar.gz"
+AT_arm="jdk-${MY_PV}-linux-arm-vfp-sflt.tar.gz jdk-${MY_PV}-linux-arm-vfp-hflt.tar.gz"
+AT_x86_solaris="jdk-${MY_PV}-solaris-i586.tar.gz"
+AT_x64_solaris="${AT_x86_solaris} jdk-${MY_PV}-solaris-x64.tar.gz"
+AT_sparc_solaris="jdk-${MY_PV}-solaris-sparc.tar.gz"
 AT_sparc64_solaris="${AT_sparc_solaris} jdk-${MY_PV}-solaris-sparcv9.tar.gz"
 AT_x86_macos="jdk-${MY_PV}-macosx-x64.dmg"
 AT_x64_macos="jdk-${MY_PV}-macosx-x64.dmg"
 
-DEMOS_amd64="jdk-${MY_PV}-linux-x64-demos.tar.gz"
-DEMOS_arm="jdk-${MY_PV}-linux-arm-vfp-hflt-demos.tar.gz"
-DEMOS_x86="jdk-${MY_PV}-linux-i586-demos.tar.gz"
-DEMOS_x64_solaris="jdk-${MY_PV}-solaris-x64-demos.tar.gz"
-DEMOS_sparc64_solaris="jdk-${MY_PV}-solaris-sparcv9-demos.tar.gz"
-DEMOS_x86_macos="jdk-${MY_PV}-macosx-x86_64-demos.zip"
-DEMOS_x64_macos="jdk-${MY_PV}-macosx-x86_64-demos.zip"
+FXDEMOS_linux="javafx_samples-${FX_VERSION}-linux.zip"
 
-JCE_DIR="UnlimitedJCEPolicyJDK8"
-JCE_FILE="jce_policy-8.zip"
+DEMOS_x86="${FXDEMOS_linux} jdk-${MY_PV}-linux-i586-demos.tar.gz"
+DEMOS_amd64="${FXDEMOS_linux} jdk-${MY_PV}-linux-x64-demos.tar.gz"
+DEMOS_arm="${FXDEMOS_linux} jdk-${MY_PV}-linux-arm-vfp-sflt-demos.tar.gz jdk-${MY_PV}-linux-arm-vfp-hflt-demos.tar.gz"
+DEMOS_x86_solaris="jdk-${MY_PV}-solaris-i586-demos.tar.gz"
+DEMOS_x64_solaris="${DEMOS_x86_solaris} jdk-${MY_PV}-solaris-x64-demos.tar.gz"
+DEMOS_sparc_solaris="jdk-${MY_PV}-solaris-sparc-demos.tar.gz"
+DEMOS_sparc64_solaris="${DEMOS_sparc_solaris} jdk-${MY_PV}-solaris-sparcv9-demos.tar.gz"
+DEMOS_x86_macos="jdk-${MY_PV}-macosx-x86_64-demos.tar.gz"
+DEMOS_x64_macos="jdk-${MY_PV}-macosx-x86_64-demos.tar.gz"
+
+JCE_DIR="UnlimitedJCEPolicy"
+JCE_FILE="${JCE_DIR}JDK7.zip"
 
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
 for d in "${AT_AVAILABLE[@]}"; do
-	SRC_URI+=" ${d}? ( $(eval "echo \${$(echo AT_${d/-/_})}")"
+	SRC_URI+=" ${d}? ("
+	SRC_URI+=" $(eval "echo \${$(echo AT_${d/-/_})}")"
 	if has ${d} "${DEMOS_AVAILABLE[@]}"; then
 		SRC_URI+=" examples? ( $(eval "echo \${$(echo DEMOS_${d/-/_})}") )"
 	fi
@@ -59,8 +59,8 @@ unset d
 SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
-SLOT="1.8"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc64-solaris ~x64-solaris"
+SLOT="1.7"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"
@@ -68,37 +68,34 @@ QA_PREBUILT="*"
 
 RDEPEND="
 	X? ( !aqua? (
-		x11-libs/libX11:0
-		x11-libs/libXext:0
-		x11-libs/libXi:0
-		x11-libs/libXrender:0
-		x11-libs/libXtst:0
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libXrender
+		x11-libs/libXtst
 	) )
-	alsa? ( media-libs/alsa-lib:0 )
-	doc? ( dev-java/java-sdk-docs:${SLOT} )
-	fontconfig? ( media-libs/fontconfig:1.0 )
-	!prefix? ( sys-libs/glibc:* )"
-
+	alsa? ( media-libs/alsa-lib )
+	doc? ( dev-java/java-sdk-docs:1.7 )
+	fontconfig? ( media-libs/fontconfig )
+	!prefix? ( sys-libs/glibc )"
+# scanelf won't create a PaX header, so depend on paxctl to avoid fallback
+# marking. #427642
 DEPEND="
-	jce? ( app-arch/unzip:0 )
-	examples? ( kernel_linux? ( app-arch/unzip:0 ) )"
+	jce? ( app-arch/unzip )
+	examples? ( kernel_linux? ( app-arch/unzip ) )
+	pax_kernel? ( sys-apps/paxctl )"
 
-# A PaX header isn't created by scanelf, so depend on paxctl to avoid fallback
-# marking. See bug #427642.
-DEPEND="${DEPEND}
-	pax_kernel? ( sys-apps/paxctl:0 )"
-
-S="${WORKDIR}/jdk"
+S="${WORKDIR}"/jdk${S_PV}
 
 check_tarballs_available() {
 	local uri=$1; shift
 	local dl= unavailable=
-	for dl in "${@}" ; do
+	for dl in "${@}"; do
 		[[ ! -f "${DISTDIR}/${dl}" ]] && unavailable+=" ${dl}"
 	done
 
-	if [[ -n "${unavailable}" ]] ; then
-		if [[ -z ${_check_tarballs_available_once} ]] ; then
+	if [[ -n "${unavailable}" ]]; then
+		if [[ -z ${_check_tarballs_available_once} ]]; then
 			einfo
 			einfo "Oracle requires you to download the needed files manually after"
 			einfo "accepting their license through a javascript capable web browser."
@@ -126,40 +123,34 @@ pkg_nofetch() {
 }
 
 src_unpack() {
+	# Special case for ARM soft VS hard float.
 	if use arm ; then
-		# Special case for ARM soft VS hard float.
-		#if [[ ${CHOST} == *-hardfloat-* ]] ; then
+		if [[ ${CHOST} == *-hardfloat-* ]] ; then
 			unpack jdk-${MY_PV}-linux-arm-vfp-hflt.tar.gz
 			use examples && unpack jdk-${MY_PV}-linux-arm-vfp-hflt-demos.tar.gz
-		#else
-		#	unpack jdk-${MY_PV}-linux-arm-vfp-sflt.tar.gz
-		#	use examples && unpack jdk-${MY_PV}-linux-arm-vfp-sflt-demos.tar.gz
-		#fi
+		else
+			unpack jdk-${MY_PV}-linux-arm-vfp-sflt.tar.gz
+			use examples && unpack jdk-${MY_PV}-linux-arm-vfp-sflt-demos.tar.gz
+		fi
+		use examples && unpack javafx_samples-${FX_VERSION}-linux.zip
 		use jce && unpack ${JCE_FILE}
 	elif use x86-macos || use x64-macos ; then
 		pushd "${T}" > /dev/null
 		mkdir dmgmount
 		hdiutil attach "${DISTDIR}"/jdk-${MY_PV}-macosx-x64.dmg \
 			-mountpoint "${T}"/dmgmount
-		local update=$(get_version_component_range 4)
-		[[ ${#update} == 1 ]] && update="0${update}"
-		xar -xf dmgmount/JDK\ $(get_version_component_range 2)\ Update\ ${update}.pkg
+		xar -xf dmgmount/JDK\ $(get_version_component_range 2)\ Update\ $(get_version_component_range 4).pkg
 		hdiutil detach "${T}"/dmgmount
-		zcat jdk1${MY_PV%u*}0${update}.pkg/Payload | cpio -idv
-		mv Contents/Home "${WORKDIR}"/jdk${MY_PV}
+		zcat jdk1${MY_PV/u/0}.pkg/Payload | cpio -idv
+		mv Contents/Home "${S}"
 		popd > /dev/null
 	else
 		default
 	fi
-
-	# Upstream is changing their versioning scheme every release around 1.8.0.*;
-	# to stop having to change it over and over again, just wildcard match and
-	# live a happy life instead of trying to get this new jdk1.8.0_05 to work.
-	mv "${WORKDIR}"/jdk* "${S}" || die
 }
 
 src_prepare() {
-	if use jce ; then
+	if use jce; then
 		mv "${WORKDIR}"/${JCE_DIR} "${S}"/jre/lib/security/ || die
 	fi
 }
@@ -197,16 +188,15 @@ src_install() {
 
 	# We should not need the ancient plugin for Firefox 2 anymore, plus it has
 	# writable executable segments
-	if use x86 ; then
+	if use x86; then
 		rm -vf {,jre/}lib/i386/libjavaplugin_oji.so \
 			{,jre/}lib/i386/libjavaplugin_nscp*.so
 		rm -vrf jre/plugin/i386
 	fi
-
 	# Without nsplugin flag, also remove the new plugin
 	local arch=${ARCH};
 	use x86 && arch=i386;
-	if ! use nsplugin ; then
+	if ! use nsplugin; then
 		rm -vf {,jre/}lib/${arch}/libnpjp2.so \
 			{,jre/}lib/${arch}/libjavaplugin_jni.so
 	fi
@@ -218,17 +208,22 @@ src_install() {
 	cp -R --preserve=links,mode,ownership,timestamps,xattr \
 		bin include jre lib man "${ddest}" || die
 
-	if use derby ; then
+	if use derby; then
 		cp -R --preserve=links,mode,ownership,timestamps,xattr \
 			db "${ddest}" || die
 	fi
 
-	if use examples && has ${ARCH} "${DEMOS_AVAILABLE[@]}" ; then
+	if use examples && has ${ARCH} "${DEMOS_AVAILABLE[@]}"; then
 		cp -R --preserve=links,mode,ownership,timestamps,xattr \
 			demo sample "${ddest}" || die
+		if use kernel_linux; then
+			cp -R --preserve=links,mode,ownership,timestamps,xattr \
+				"${WORKDIR}"/javafx-samples-${FX_VERSION//_/.} \
+				"${ddest}"/javafx-samples || die
+		fi
 	fi
 
-	if use jce ; then
+	if use jce; then
 		dodir "${dest}"/jre/lib/security/strong-jce
 		mv "${ddest}"/jre/lib/security/US_export_policy.jar \
 			"${ddest}"/jre/lib/security/strong-jce || die
@@ -240,15 +235,15 @@ src_install() {
 			"${dest}"/jre/lib/security/local_policy.jar
 	fi
 
-	if use nsplugin ; then
+	if use nsplugin; then
 		install_mozilla_plugin "${dest}"/jre/lib/${arch}/libnpjp2.so
 	fi
 
-	if use source ; then
+	if use source; then
 		cp src.zip "${ddest}" || die
 	fi
 
-	if use !x86-macos && use !x64-macos ; then
+	if use !arm && use !x86-macos && use !x64-macos ; then
 		# Install desktop file for the Java Control Panel.
 		# Using ${PN}-${SLOT} to prevent file collision with jre and or
 		# other slots.  make_desktop_entry can't be used as ${P} would
@@ -267,35 +262,33 @@ src_install() {
 
 	# Prune all fontconfig files so libfontconfig will be used and only install
 	# a Gentoo specific one if fontconfig is disabled.
-	# http://docs.oracle.com/javase/8/docs/technotes/guides/intl/fontconfig.html
+	# http://docs.oracle.com/javase/7/docs/technotes/guides/intl/fontconfig.html
 	rm "${ddest}"/jre/lib/fontconfig.*
-	if ! use fontconfig ; then
+	if ! use fontconfig; then
 		cp "${FILESDIR}"/fontconfig.Gentoo.properties "${T}"/fontconfig.properties || die
 		eprefixify "${T}"/fontconfig.properties
 		insinto "${dest}"/jre/lib/
 		doins "${T}"/fontconfig.properties
 	fi
 
-	# Remove empty dirs we might have copied.
+	# Remove empty dirs we might have copied
 	find "${D}" -type d -empty -exec rmdir -v {} + || die
 
 	if use x86-macos || use x64-macos ; then
-		# Fix miscellaneous install_name issues.
+		# fix misc install_name issues
 		pushd "${ddest}"/jre/lib > /dev/null || die
 		local lib needed nlib npath
 		for lib in \
-			decora_sse glass jfx{media,webkit} \
-			javafx_{font,font_t2k,iio} prism_{common,es2,sw} \
-		; do
-			lib=lib${lib}.dylib
+				libJObjC libdecora-sse libglass libjavafx-{font,iio} \
+				libjfxmedia libjfxwebkit libprism-es2 ;
+		do
+			lib=${lib}.dylib
 			einfo "Fixing self-reference of ${lib}"
 			install_name_tool \
 				-id "${EPREFIX}${dest}/jre/lib/${lib}" \
 				"${lib}"
 		done
 		popd > /dev/null
-
-		# TODO: This reads "jdk1{5,6}", what about "jdk1{7,8}"?
 		for nlib in jdk1{5,6} ; do
 			install_name_tool -change \
 				/usr/lib/libgcc_s_ppc64.1.dylib \
