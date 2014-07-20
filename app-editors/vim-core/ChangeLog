@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.442 2014/06/24 19:13:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.443 2014/07/20 15:06:27 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> vim-core-7.4.273.ebuild:
+  Stable on alpha, bug #511190
 
   24 Jun 2014; Markus Meier <maekke@gentoo.org> vim-core-7.4.273.ebuild:
   arm stable, bug #511190

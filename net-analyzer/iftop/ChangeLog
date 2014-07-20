@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.66 2014/07/15 18:54:17 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.67 2014/07/20 15:30:26 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> iftop-1.0_pre4.ebuild:
+  Stable on alpha, bug #511716
 
   15 Jul 2014; Chema Alonso <nimiux@gentoo.org> iftop-1.0_pre4.ebuild:
   Stable for amd64 wrt bug #511716
