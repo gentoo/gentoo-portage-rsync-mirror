@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.207 2014/07/01 05:27:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.209 2014/07/20 09:20:10 pacho Exp $
+
+  20 Jul 2014; Pacho Ramos <pacho@gentoo.org> amavisd-new-2.8.1-r1.ebuild:
+  x86 stable, bug #473794
+
+  20 Jul 2014; Pacho Ramos <pacho@gentoo.org> amavisd-new-2.8.1-r1.ebuild:
+  amd64 stable, bug #473794
 
 *amavisd-new-2.9.1 (01 Jul 2014)
 
