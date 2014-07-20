@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9232 2014/07/20 12:43:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9233 2014/07/20 13:55:54 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> updates/3Q-2014:
+  Rename perl-core/PodParser to perl-core/Pod-Parser to follow upstream
 
   20 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add 5.20 version of IO::Compress to perl-5.20 mask

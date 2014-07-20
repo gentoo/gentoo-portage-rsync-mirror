@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/2ping/2ping-1.2.3.ebuild,v 1.1 2012/03/18 12:55:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/2ping/2ping-1.2.3.ebuild,v 1.2 2014/07/20 13:39:43 dilfridge Exp $
 
 EAPI="4"
 
@@ -16,13 +16,13 @@ IUSE="crc ipv6 md5 sha server"
 # The 2ping script itself checks if these optional deps are available.
 DEPEND="
 	dev-lang/perl
-	perl-core/Getopt-Long
-	perl-core/PodParser
-	perl-core/IO
-	perl-core/Time-HiRes
+	virtual/perl-Getopt-Long
+	virtual/perl-PodParser
+	virtual/perl-IO
+	virtual/perl-Time-HiRes
 	ipv6? ( dev-perl/IO-Socket-INET6 )
-	md5? ( perl-core/Digest-MD5 )
-	sha? ( perl-core/Digest-SHA )
+	md5? ( virtual/perl-Digest-MD5 )
+	sha? ( virtual/perl-Digest-SHA )
 	crc? ( dev-perl/Digest-CRC )
 "
 RDEPEND="${DEPEND}"

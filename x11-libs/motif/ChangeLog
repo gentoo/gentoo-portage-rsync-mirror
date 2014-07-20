@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.51 2014/06/18 21:14:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.52 2014/07/20 13:56:50 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> motif-2.3.4-r2.ebuild:
+  Stable on alpha, bug #510454
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> motif-2.2.3-r12.ebuild,
   motif-2.3.4-r1.ebuild, motif-2.3.4-r2.ebuild:

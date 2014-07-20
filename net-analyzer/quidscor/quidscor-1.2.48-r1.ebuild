@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.10 2014/07/20 13:29:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48-r1.ebuild,v 1.1 2014/07/20 13:54:45 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -23,8 +23,9 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-curl-types.h.patch \
+		"${FILESDIR}"/${P}-paths.patch \
 		"${FILESDIR}"/${P}-strip.patch
-	sed -i '/^CFLAGS=/s: -g : :' Makefile || die
+
 	#yes, the fix below is as pathetic as it seems
 	echo "#define FALSE 0" >> libqg/libqg.h || die
 	echo "#define TRUE 1" >> libqg/libqg.h || die

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.119 2014/07/09 11:09:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.120 2014/07/20 13:46:02 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  libtheora-1.1.1-r1.ebuild:
+  Stable on alpha, bug #510476
 
   09 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> libtheora-1.1.1-r1.ebuild:
   amd64 stable wrt bug #510476
