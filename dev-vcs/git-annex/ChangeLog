@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.28 2014/07/19 06:27:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.29 2014/07/20 07:35:01 slyfox Exp $
+
+  20 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/git-annex-5.20140717-old-feed.patch, git-annex-5.20140717.ebuild:
+  Fix build failure against older feed from upstream (bug #517350 by Fabian
+  Köster).
 
 *git-annex-5.20140717 (19 Jul 2014)
 
