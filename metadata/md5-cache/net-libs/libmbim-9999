@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=>=dev-libs/glib-2.32 doc? ( dev-util/gtk-doc ) virtual/pkgconfig dev-util/gtk-doc >=dev-vcs/git-1.8.2.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/glib-2.32 virtual/libgudev doc? ( dev-util/gtk-doc ) virtual/pkgconfig dev-util/gtk-doc >=dev-vcs/git-1.8.2.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=MBIM modem protocol helper library
 EAPI=5
 HOMEPAGE=http://cgit.freedesktop.org/libmbim/
@@ -8,4 +8,4 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.32
 SLOT=0
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	eutils	06133990e861be0fe60c2b428fd025d9	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=32671a6e16d08208779ba90c9f95c35a
+_md5_=c63860ce31d0f84d8541076589eb6ede

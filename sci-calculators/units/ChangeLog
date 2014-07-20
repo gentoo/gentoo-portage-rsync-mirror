@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.74 2014/07/19 17:24:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.75 2014/07/20 12:20:14 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> units-2.11.ebuild:
+  Stable on alpha, bug #509790
 
   19 Jul 2014; Tobias Klausmann <klausman@gentoo.org> units-2.11.ebuild:
   Keyworded on alpha, bug #505998
