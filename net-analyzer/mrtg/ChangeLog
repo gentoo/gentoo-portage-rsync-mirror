@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.122 2014/07/15 16:23:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.123 2014/07/20 12:51:24 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> mrtg-2.17.4-r1.ebuild:
+  Stable on alpha, bug #509992
 
   15 Jul 2014; Jeroen Roovers <jer@gentoo.org> mrtg-2.17.4-r1.ebuild:
   mv must die() by Chema Alonso (bug #509992).

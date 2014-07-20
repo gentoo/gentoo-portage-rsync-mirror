@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse-exfat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.18 2013/10/19 03:47:28 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.19 2014/07/20 12:46:02 ssuominen Exp $
+
+*fuse-exfat-1.1.0 (20 Jul 2014)
+
+  20 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +fuse-exfat-1.1.0.ebuild:
+  Version bump.
 
   19 Oct 2013; Mike Frysinger <vapier@gentoo.org> fuse-exfat-1.0.1.ebuild:
   Add keyword love for all.

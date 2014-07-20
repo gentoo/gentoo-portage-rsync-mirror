@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/gnus-1.99.ebuild,v 1.2 2014/07/05 15:55:49 matsl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/gnus-1.99.ebuild,v 1.3 2014/07/20 12:46:41 klausman Exp $
 
 SLOT="0"
 IUSE=""
@@ -25,6 +25,6 @@ app-xemacs/mailcrypt
 app-xemacs/ecrypto
 app-xemacs/sasl
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 inherit xemacs-packages

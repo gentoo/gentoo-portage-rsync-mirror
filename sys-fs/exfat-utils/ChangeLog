@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/exfat-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/ChangeLog,v 1.14 2013/10/25 13:53:28 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/ChangeLog,v 1.15 2014/07/20 12:41:51 ssuominen Exp $
+
+*exfat-utils-1.1.0 (20 Jul 2014)
+
+  20 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> +exfat-utils-1.1.0.ebuild:
+  Version bump.
 
   25 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> exfat-utils-1.0.1.ebuild:
   Synchronize KEYWORDS with sys-fs/fuse-exfat since you really need both in

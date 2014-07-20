@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.37 2014/07/15 15:53:04 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.38 2014/07/20 12:51:33 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  SNMP_Session-1.13-r2.ebuild:
+  Stable on alpha, bug #509992
 
   15 Jul 2014; Chema Alonso <nimiux@gentoo.org> SNMP_Session-1.13-r2.ebuild:
   Stable for amd64 wrt bug #509992
