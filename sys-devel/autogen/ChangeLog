@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.107 2014/07/13 10:02:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.108 2014/07/20 11:27:45 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> autogen-5.18.1.ebuild:
+  Stable on alpha, bug #509056
 
   13 Jul 2014; Agostino Sarubbo <ago@gentoo.org> autogen-5.18.1.ebuild:
   Stable for ppc, wrt bug #509056

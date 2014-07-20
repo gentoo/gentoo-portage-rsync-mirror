@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testresources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testresources/ChangeLog,v 1.9 2014/07/06 12:50:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testresources/ChangeLog,v 1.10 2014/07/20 11:05:30 klausman Exp $
+
+  20 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  testresources-0.2.7-r2.ebuild:
+  Keyworded on alpha, bug #508282
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> testresources-0.2.7-r1.ebuild,
   testresources-0.2.7-r2.ebuild, testresources-0.2.7.ebuild:
