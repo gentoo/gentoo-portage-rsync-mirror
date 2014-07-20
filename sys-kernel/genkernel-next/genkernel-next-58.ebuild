@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-58.ebuild,v 1.2 2014/07/06 12:59:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-58.ebuild,v 1.3 2014/07/20 08:35:44 klausman Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ inherit bash-completion-r1 eutils
 if [[ "${PV}" == "9999" ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~x86"
 fi
 
 DESCRIPTION="Gentoo automatic kernel building scripts, reloaded"
