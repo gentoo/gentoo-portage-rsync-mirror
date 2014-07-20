@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.25 2014/07/08 07:25:51 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.26 2014/07/20 16:45:58 mrueg Exp $
+
+  20 Jul 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Fix typo in metadata.xml.
 
   08 Jul 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   mod_python should be maintainer-needed, not maintainer-wanted
