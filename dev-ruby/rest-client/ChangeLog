@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rest-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.20 2014/05/15 00:59:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.21 2014/07/20 06:34:48 graaff Exp $
+
+*rest-client-1.7.2 (20 Jul 2014)
+
+  20 Jul 2014; Hans de Graaff <graaff@gentoo.org> +rest-client-1.7.2.ebuild:
+  Version bump. Drop x86 keyword due to new netrc dependency, bug 517542.
 
   15 May 2014; Manuel Rüger <mrueg@gentoo.org> rest-client-1.6.7-r1.ebuild:
   Remove ruby18.
