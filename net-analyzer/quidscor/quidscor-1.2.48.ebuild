@@ -1,40 +1,44 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.8 2011/01/15 23:59:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.10 2014/07/20 13:29:14 jer Exp $
 
-inherit eutils
+EAPI=5
+inherit eutils toolchain-funcs
 
-DESCRIPTION="IDS/VA Correlation engine"
+DESCRIPTION="Qualys IDS Correlation Daemon"
 HOMEPAGE="http://quidscor.sourceforge.net/"
 SRC_URI="mirror://sourceforge/quidscor/${P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE=""
 
-DEPEND=">=dev-libs/libxml2-2.4
+DEPEND="
+	>=dev-libs/libxml2-2.4
 	>=net-misc/curl-7.10
-	>=net-analyzer/snort-2.0"
+	>=net-analyzer/snort-2.0
+"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	sed -i '/^CFLAGS=/s: -g : :' ${S}/Makefile || die
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-curl-types.h.patch \
+		"${FILESDIR}"/${P}-strip.patch
+	sed -i '/^CFLAGS=/s: -g : :' Makefile || die
 	#yes, the fix below is as pathetic as it seems
-	echo "#define FALSE 0" >> ${S}/libqg/libqg.h
-	echo "#define TRUE 1" >> ${S}/libqg/libqg.h
-	epatch "${FILESDIR}"/${P}-strip.patch
+	echo "#define FALSE 0" >> libqg/libqg.h || die
+	echo "#define TRUE 1" >> libqg/libqg.h || die
 }
 
 src_compile() {
-	emake EXTRA_CFLAGS="${CFLAGS}" || die
+	emake EXTRA_CFLAGS="${CFLAGS}" CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake PREFIX=/usr STAGING_PREFIX=${D} install || die
+	emake PREFIX=/usr STAGING_PREFIX="${D}" install
 	dodoc ChangeLog FAQ MANIFEST README TODO
 	# fix ugly install
-	cd ${D}/usr
-	mv etc ..
-	rm -rf doc
+	cd "${D}"/usr || die
+	mv etc .. || die
+	rm -r doc || die
 }

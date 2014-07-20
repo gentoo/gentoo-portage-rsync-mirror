@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/quidscor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.8 2011/01/15 23:59:27 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.10 2014/07/20 13:29:14 jer Exp $
+
+  20 Jul 2014; Jeroen Roovers <jer@gentoo.org> quidscor-1.2.48.ebuild:
+  Update DESCRIPTION.
+
+  20 Jul 2014; Jeroen Roovers <jer@gentoo.org> quidscor-1.2.48.ebuild,
+  +files/quidscor-1.2.48-curl-types.h.patch, files/quidscor-1.2.48-strip.patch,
+  metadata.xml:
+  EAPI bump. Build fixes.
 
   15 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
   quidscor-1.2.48.ebuild:

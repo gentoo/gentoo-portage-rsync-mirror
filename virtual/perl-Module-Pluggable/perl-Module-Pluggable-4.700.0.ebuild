@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/perl-Module-Pluggable-4.700.0.ebuild,v 1.3 2014/01/20 20:54:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/perl-Module-Pluggable-4.700.0.ebuild,v 1.4 2014/07/20 13:06:04 dilfridge Exp $
 
 DESCRIPTION="Virtual for ${PN#perl-}"
 HOMEPAGE=""
@@ -12,3 +12,5 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~spa
 IUSE=""
 
 RDEPEND="~perl-core/${PN#perl-}-${PV}"
+# this is the =dev-lang/perl-5.18* version, but we dont depend on it since
+# it may contain deprecation warnings (removed in 5.19)

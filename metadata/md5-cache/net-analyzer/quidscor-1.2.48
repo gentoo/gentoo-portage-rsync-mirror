@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare
 DEPEND=>=dev-libs/libxml2-2.4 >=net-misc/curl-7.10 >=net-analyzer/snort-2.0
-DESCRIPTION=IDS/VA Correlation engine
+DESCRIPTION=Qualys IDS Correlation Daemon
+EAPI=5
 HOMEPAGE=http://quidscor.sourceforge.net/
 KEYWORDS=~ppc ~x86
 LICENSE=BSD
@@ -8,4 +9,4 @@ RDEPEND=>=dev-libs/libxml2-2.4 >=net-misc/curl-7.10 >=net-analyzer/snort-2.0
 SLOT=0
 SRC_URI=mirror://sourceforge/quidscor/quidscor-1.2.48-src.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=607de89c0e03056a95539ecb61aacfd7
+_md5_=1083d9ef5a68b5269a4b76ed58116c8a
