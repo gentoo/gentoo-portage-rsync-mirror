@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1.ebuild,v 1.3 2014/06/30 06:22:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.1 2014/07/20 17:45:24 hasufell Exp $
 
 EAPI=5
 inherit eutils check-reqs gnome2-utils flag-o-matic games
@@ -25,6 +25,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug dedicated irc openal server"
 
 RDEPEND=">=dev-libs/libRocket-1.2.1_p20130110
+	<dev-libs/libRocket-1.3.0.0
 	media-libs/freetype
 	net-misc/curl
 	sys-libs/zlib

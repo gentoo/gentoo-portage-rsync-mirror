@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ferm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ChangeLog,v 1.12 2013/06/13 09:10:46 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ChangeLog,v 1.13 2014/07/20 17:49:33 dev-zero Exp $
+
+*ferm-2.2 (20 Jul 2014)
+
+  20 Jul 2014; Tiziano Müller <dev-zero@gentoo.org> +ferm-2.2.ebuild:
+  Version bump (bug #504216).
 
   13 Jun 2013; Tiziano Müller <dev-zero@gentoo.org> -ferm-2.1.1.ebuild:
   Remove old.
