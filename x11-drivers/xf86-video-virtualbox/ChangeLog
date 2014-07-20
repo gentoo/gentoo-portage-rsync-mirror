@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.140 2014/07/18 13:52:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.141 2014/07/20 02:03:17 polynomial-c Exp $
+
+  20 Jul 2014; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.3.14.ebuild:
+  Removed compilefix patch (bug #517424).
 
 *xf86-video-virtualbox-4.3.14 (18 Jul 2014)
 *xf86-video-virtualbox-4.2.26 (18 Jul 2014)
