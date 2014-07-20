@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.3.2.ebuild,v 1.10 2008/11/29 10:58:21 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.3.2.ebuild,v 1.11 2014/07/20 02:21:13 grknight Exp $
+
+EAPI=5
 
 inherit eutils
 
@@ -17,9 +19,7 @@ RDEPEND=">=virtual/mysql-4.0"
 DEPEND="${RDEPEND}
 		>=sys-devel/gcc-3"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
 
@@ -31,7 +31,7 @@ src_unpack() {
 	done
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	# we want C++ exceptions turned on
 	myconf="--enable-exceptions"
@@ -43,16 +43,14 @@ src_compile() {
 	# force the cflags into place otherwise they get totally ignored by
 	# configure
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
-	econf ${myconf} || die "econf failed"
-
-	emake || die "unable to make"
+	econf ${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	# install the docs and HTML pages
 	dodoc README* CREDITS ChangeLog HACKERS Wishlist
-	dodoc doc/*
-	cp -ra doc/html "${D}"/usr/share/doc/${PF}/html
-	prepalldocs
+	dohtml -r doc/html/*
+	rm -r doc/html || die
+	dodoc -r doc/*
 }

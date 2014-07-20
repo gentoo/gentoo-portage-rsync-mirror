@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.72 2014/06/07 01:54:35 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.73 2014/07/20 02:21:13 grknight Exp $
+
+  20 Jul 2014; Brian Evans <grknight@gentoo.org> mysql++-2.3.2.ebuild:
+  Update EAPI and fix QA warnings on old stable. This is only kept on the off
+  chance a  user depends on this old API as nothing depends on it.  No code
+  changes or file differences
 
   07 Jun 2014; Brian Evans <grknight@gentoo.org> -mysql++-3.0.5.ebuild,
   -mysql++-3.0.9.ebuild:
