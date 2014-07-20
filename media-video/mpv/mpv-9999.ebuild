@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.54 2014/07/10 08:57:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.55 2014/07/20 19:24:30 zlogene Exp $
 
 EAPI=5
 
@@ -164,6 +164,7 @@ src_configure() {
 	# vapoursynth is not packaged
 	waf-utils_src_configure \
 		--disable-build-date \
+		--disable-optimize \
 		--disable-debug-build \
 		--disable-sdl1 \
 		$(use_enable sdl sdl2) \

@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.8.ebuild,v 1.1 2014/07/20 15:31:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.8.ebuild,v 1.2 2014/07/20 19:26:04 ssuominen Exp $
 
 EAPI=5
-inherit autotools-multilib
+VIRTUALX_REQUIRED="test"
+inherit autotools-multilib virtualx
 
 DESCRIPTION="VDPAU wrapper and trace libraries"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/VDPAU"
@@ -37,6 +38,10 @@ src_configure() {
 	)
 
 	autotools-multilib_src_configure
+}
+
+multilib_src_test() {
+	Xemake check
 }
 
 src_install() {
