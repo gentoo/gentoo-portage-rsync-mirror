@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9229 2014/07/19 18:07:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9231 2014/07/20 10:40:13 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Masked latest e2fsprogs as it fails to build.
+
+  20 Jul 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  sssd-1.12 works in my ldap based systems so unmask it
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> updates/3Q-2014:
   Move iperf3 to a new SLOT (bug #517488).

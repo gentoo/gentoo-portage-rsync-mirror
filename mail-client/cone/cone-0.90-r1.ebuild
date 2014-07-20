@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.90-r1.ebuild,v 1.3 2014/06/14 09:30:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.90-r1.ebuild,v 1.4 2014/07/20 10:59:21 eras Exp $
 
 EAPI=4
 
@@ -40,6 +40,8 @@ src_prepare() {
 	sed -i -e '/^SUBDIRS/i ACLOCAL_AMFLAGS = -I m4' "${S}"/Makefile.am || die
 	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in */configure.in || die
 	eautoreconf
+	# TODO: Find and fix the bug - #514048
+	cd cone && eautoreconf
 }
 
 src_configure() {

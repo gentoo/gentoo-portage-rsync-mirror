@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.9.ebuild,v 1.3 2014/01/18 02:37:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.11.ebuild,v 1.1 2014/07/20 10:42:56 polynomial-c Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ case ${PV} in
 *)      UP_PV=${PV} ;;
 esac
 
-inherit toolchain-funcs eutils multilib-minimal
+inherit autotools toolchain-funcs eutils multilib-minimal
 
 DESCRIPTION="e2fsprogs libraries (common error and subsystem)"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -35,6 +35,8 @@ S=${WORKDIR}/${P%_pre*}
 src_prepare() {
 	printf 'all:\n%%:;@:\n' > doc/Makefile.in # don't bother with docs #305613
 	epatch "${FILESDIR}"/${PN}-1.42.9-no-quota.patch
+	epatch "${FILESDIR}"/${PN}-1.42.10-fix-build-cflags.patch
+	eautoreconf
 }
 
 multilib_src_configure() {
@@ -43,6 +45,9 @@ multilib_src_configure() {
 	ac_cv_lib_blkid_blkid_get_cache=yes \
 	ac_cv_path_LDCONFIG=: \
 	ECONF_SOURCE="${S}" \
+	CC="$(tc-getCC)" \
+	BUILD_CC="$(tc-getBUILD_CC)" \
+	BUILD_LD="$(tc-getBUILD_LD)" \
 	econf \
 		--disable-lib{blkid,uuid} \
 		--disable-quota \
@@ -51,8 +56,12 @@ multilib_src_configure() {
 		$(use_enable nls)
 }
 
+multilib_src_compile() {
+	emake V=1
+}
+
 multilib_src_install() {
-	emake STRIP=: DESTDIR="${D}" install || die
+	emake V=1 STRIP=: DESTDIR="${D}" install || die
 	multilib_is_native_abi && gen_usr_ldscript -a com_err ss
 	# configure doesn't have an option to disable static libs :/
 	use static-libs || find "${ED}" -name '*.a' -delete

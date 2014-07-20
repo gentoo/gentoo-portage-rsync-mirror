@@ -5,6 +5,10 @@
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau</name>
 	</maintainer>
+	<maintainer restrict="&gt;=dev-vcs/subversion-1.8.0">
+		<email>polynomial-c@gentoo.org</email>
+		<name>Lars Wendler</name>
+	</maintainer>
 	<use>
 		<flag name="ctypes-python">Build and install Ctypes Python bindings</flag>
 		<flag name="dso">Enable runtime module search</flag>

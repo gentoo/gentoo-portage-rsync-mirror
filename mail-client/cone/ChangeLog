@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.50 2014/06/14 09:30:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.51 2014/07/20 10:59:21 eras Exp $
+
+  20 Jul 2014; Eray Aslan <eras@gentoo.org> cone-0.90-r1.ebuild:
+  Work around the build failure - bug #514048
 
   14 Jun 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> cone-0.90-r1.ebuild:
   x86 stable wrt bug #506912
