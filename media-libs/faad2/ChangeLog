@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.144 2013/10/13 20:51:01 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.145 2014/07/20 18:21:00 maekke Exp $
+
+  20 Jul 2014; Markus Meier <maekke@gentoo.org> faad2-2.7-r3.ebuild:
+  arm stable, bug #512012
 
   13 Oct 2013; Michał Górny <mgorny@gentoo.org> faad2-2.7-r3.ebuild:
   Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug

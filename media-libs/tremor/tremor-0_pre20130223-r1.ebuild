@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20130223-r1.ebuild,v 1.2 2014/06/18 19:58:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20130223-r1.ebuild,v 1.3 2014/07/20 18:20:38 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
+KEYWORDS="~amd64 arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 IUSE="low-accuracy static-libs"
 
 RDEPEND=">=media-libs/libogg-1.3.0:=[${MULTILIB_USEDEP}]"
