@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.21 2014/05/09 20:45:27 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.22 2014/07/21 13:56:55 klausman Exp $
+
+  21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> bcat-0.6.2.ebuild:
+  Stable on alpha, bug #493780
 
 *bcat-0.6.2-r2 (09 May 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/logitech-applet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.16 2014/07/19 03:47:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.17 2014/07/21 13:54:37 ssuominen Exp $
+
+  21 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  logitech-applet-0.4_pre1-r3.ebuild:
+  Use template no-homepage wiki page at gentoo.org for HOMEPAGE
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org>
   -logitech-applet-0.4_pre1-r2.ebuild:
@@ -77,4 +81,3 @@
   12 Apr 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
   +logitech-applet-0.4_pre1.ebuild:
   Initial import thanks to Martti Rannanjärvi in bug #44813
-

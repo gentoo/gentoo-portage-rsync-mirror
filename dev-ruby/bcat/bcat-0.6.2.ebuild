@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.16 2014/04/05 13:50:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.17 2014/07/21 13:56:55 klausman Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -15,7 +15,7 @@ HOMEPAGE="http://github.com/rtomayko/bcat"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 # Collides on /usr/bin/bcat, bug 418301

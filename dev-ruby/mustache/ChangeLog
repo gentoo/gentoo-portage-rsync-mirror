@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.31 2014/04/20 07:03:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.32 2014/07/21 13:57:25 klausman Exp $
+
+  21 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
+  mustache-0.99.4-r1.ebuild:
+  Stable on alpha, bug #493780
 
 *mustache-0.99.5-r1 (20 Apr 2014)
 

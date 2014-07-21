@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ronn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.26 2014/05/26 05:49:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.27 2014/07/21 13:57:05 klausman Exp $
+
+  21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> ronn-0.7.3-r1.ebuild:
+  Stable on alpha, bug #493780
 
   26 May 2014; Manuel Rüger <mrueg@gentoo.org> ronn-0.7.3-r1.ebuild:
   Remove ruby18 target.
