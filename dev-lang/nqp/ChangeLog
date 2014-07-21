@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.48 2014/06/27 07:00:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.49 2014/07/21 06:14:20 patrick Exp $
+
+*nqp-2014.07 (21 Jul 2014)
+
+  21 Jul 2014; Patrick Lauer <patrick@gentoo.org> +nqp-2014.07.ebuild:
+  Bump, hackfix for 3rdparty/dyncall compilation
 
 *nqp-2014.06 (27 Jun 2014)
 
