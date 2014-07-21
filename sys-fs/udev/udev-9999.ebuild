@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.311 2014/07/04 12:19:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.312 2014/07/21 16:51:14 ssuominen Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 # Force new make >= -r4 to skip some parallel build issues
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
+	>=sys-apps/coreutils-8.16
 	sys-libs/libcap
 	virtual/os-headers
 	virtual/pkgconfig

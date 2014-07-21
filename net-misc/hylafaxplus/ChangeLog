@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafaxplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/ChangeLog,v 1.10 2014/06/06 01:51:43 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/ChangeLog,v 1.11 2014/07/21 16:36:17 nimiux Exp $
+
+  21 Jul 2014; Chema Alonso <nimiux@gentoo.org> hylafaxplus-5.5.4-r1.ebuild:
+  Stable for amd64 wrt bug #512564
 
 *hylafaxplus-5.5.5 (06 Jun 2014)
 
