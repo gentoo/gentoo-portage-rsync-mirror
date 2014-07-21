@@ -1,6 +1,18 @@
 # ChangeLog for dev-perl/HTML-Mason
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.108 2013/08/17 13:17:03 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.111 2014/07/21 15:24:33 zlogene Exp $
+
+*HTML-Mason-1.540.0 (21 Jul 2014)
+
+  21 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> +HTML-Mason-1.540.0.ebuild:
+  Version bump
+
+  21 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -HTML-Mason-1.42.ebuild,
+  -HTML-Mason-1.500.0.ebuild, HTML-Mason-1.510.0.ebuild:
+  Mark stable for all; Drop old.
+
+  21 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> HTML-Mason-1.510.0.ebuild:
+  Bump to EA[I=5
 
 *HTML-Mason-1.510.0 (17 Aug 2013)
 

@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.500.0.ebuild,v 1.2 2012/10/08 15:35:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.540.0.ebuild,v 1.1 2014/07/21 15:24:33 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=JSWARTZ
-MODULE_VERSION=1.50
+MODULE_VERSION=1.54
 inherit depend.apache perl-module
 
 DESCRIPTION="A HTML development and delivery Perl Module"

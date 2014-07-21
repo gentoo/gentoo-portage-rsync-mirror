@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.156 2014/05/17 14:52:06 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.158 2014/07/21 15:23:36 ssuominen Exp $
 
 EAPI=5
 
@@ -101,7 +101,7 @@ RDEPEND+="
 	live? ( media-plugins/live )
 	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
-	mng? ( media-libs/libmng )
+	mng? ( media-libs/libmng:= )
 	mp3? ( media-sound/mpg123 )
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
@@ -268,6 +268,7 @@ src_configure() {
 
 	# set LINGUAS
 	[[ -n $LINGUAS ]] && LINGUAS="${LINGUAS/da/dk}"
+	[[ -n $LINGUAS ]] && LINGUAS="${LINGUAS/zh/zh_CN}" #482968
 
 	# mplayer ebuild uses "use foo || --disable-foo" to forcibly disable
 	# compilation in almost every situation. The reason for this is

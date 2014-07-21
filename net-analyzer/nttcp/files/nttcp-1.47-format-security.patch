@@ -5,7 +5,7 @@
  
  void Exit(char *s, int ret) {
 -    syslog(LOG_DEBUG, s);
-+    syslog(LOG_DEBUG, "%s", s);
++    syslog(LOG_DEBUG, "%s\n", s);
      fMessage(stderr,s);
      exit(ret);
  }

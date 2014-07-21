@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.913 2014/05/17 14:52:06 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.916 2014/07/21 15:23:36 ssuominen Exp $
+
+  21 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:
+  Fix building with LINGUAS="zh" by replacing it with LINGUAS="zh_CN" which is
+  the only "zh" language supported by mplayer wrt #482968 by "Hamlet"
+
+  21 Jul 2014; Rick Farina <zerochaos@gentoo.org>
+  mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:
+  adding := to libmng with permissions from ssuominen
 
   17 May 2014; Sven Vermeulen <swift@gentoo.org> mplayer-1.1.1-r1.ebuild,
   mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:
