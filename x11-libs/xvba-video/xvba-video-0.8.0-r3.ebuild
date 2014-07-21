@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.11 2014/07/21 09:04:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r3.ebuild,v 1.1 2014/07/21 09:04:41 chithanh Exp $
 
 EAPI=5
 
@@ -12,8 +12,9 @@ inherit eutils autotools-multilib python-any-r1
 
 DESCRIPTION="XVBA Backend for Video Acceleration (VA) API"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/vaapi"
+SRC_URI="http://dev.gentooexperimental.org/~scarabeus/xvba-driver-${PV}.tar.bz2"
 # No source release yet, the src_uri is theoretical at best right now
-[[ ${PV} = 9999 ]] || SRC_URI="http://www.freedesktop.org/software/vaapi/releases/${PN}/${P}.tar.bz2"
+#[[ ${PV} = 9999 ]] || SRC_URI="http://www.freedesktop.org/software/vaapi/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2+ MIT"
 SLOT="0"
@@ -23,11 +24,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
 RDEPEND=">=x11-libs/libva-1.2.1-r1[X(+),opengl?,${MULTILIB_USEDEP}]
-	>=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}]
-	x11-drivers/ati-drivers"
+	>=x11-libs/libvdpau-0.7[${MULTILIB_USEDEP}]"
 DEPEND="${DEPEND}
 	${PYTHON_DEPS}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	x11-drivers/ati-drivers"
 
 DOCS=( NEWS README AUTHORS )
 PATCHES=(
@@ -36,6 +37,8 @@ PATCHES=(
 	"${FILESDIR}"/${P}-VAEncH264VUIBufferType.patch
 	"${FILESDIR}"/${P}-assert-hw_image_hooks_glx.patch
 )
+
+S="${WORKDIR}/xvba-driver-${PV}"
 
 pkg_setup() {
 	python-any-r1_pkg_setup

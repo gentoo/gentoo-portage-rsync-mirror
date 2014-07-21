@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.3.ebuild,v 1.5 2014/07/20 15:27:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.3.ebuild,v 1.6 2014/07/21 09:29:28 djc Exp $
 
 EAPI=4
 
@@ -17,6 +17,7 @@ IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins +polarssl sel
 
 REQUIRED_USE="static? ( !plugins !pkcs11 )
 			polarssl? ( ssl )
+			pkcs11? ( ssl )
 			!plugins? ( !pam !down-root )"
 
 DEPEND="

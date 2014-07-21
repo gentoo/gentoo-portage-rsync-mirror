@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r1.ebuild,v 1.7 2013/09/05 19:44:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r1.ebuild,v 1.8 2014/07/21 09:04:41 chithanh Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ KEYWORDS="amd64 x86"
 IUSE="debug opengl"
 
 RDEPEND="
-	x11-libs/libva[X(+),opengl?]
+	<x11-libs/libva-1.2[X(+),opengl?]
 	x11-libs/libvdpau
 	x11-drivers/ati-drivers
 "

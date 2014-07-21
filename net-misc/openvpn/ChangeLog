@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.292 2014/07/20 15:27:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.293 2014/07/21 09:29:28 djc Exp $
+
+  21 Jul 2014; Dirkjan Ochtman <djc@gentoo.org> openvpn-2.3.3.ebuild,
+  openvpn-2.3.4-r1.ebuild, openvpn-2.3.4.ebuild:
+  Make pkcs11 USE depend on ssl flag (fixes bug 517660)
 
   20 Jul 2014; Tobias Klausmann <klausman@gentoo.org> openvpn-2.3.3.ebuild:
   Stable on alpha, bug #511668

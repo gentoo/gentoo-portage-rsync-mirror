@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/xvba-video
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.19 2014/06/18 21:16:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.20 2014/07/21 09:04:41 chithanh Exp $
+
+*xvba-video-0.8.0-r3 (21 Jul 2014)
+
+  21 Jul 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xvba-video-0.8.0-assert-hw_image_hooks_glx.patch,
+  +xvba-video-0.8.0-r3.ebuild, xvba-video-0.8.0-r1.ebuild,
+  xvba-video-9999.ebuild:
+  Adjust libva dependencies in the stable ebuild, bug #517394. Apply patch to
+  avoid triggering an assert in xvba_image.c, bug #499290.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> xvba-video-0.8.0-r2.ebuild,
   xvba-video-9999.ebuild:
