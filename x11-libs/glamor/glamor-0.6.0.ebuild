@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0.ebuild,v 1.10 2014/04/19 17:47:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0.ebuild,v 1.11 2014/07/21 08:41:25 chithanh Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="gles xv"
 
 RDEPEND=">=x11-base/xorg-server-1.10
-	media-libs/mesa[egl,gbm]
+	>=media-libs/mesa-10[egl,gbm]
 	gles? (
 		|| ( media-libs/mesa[gles2] media-libs/mesa[gles] )
 	)

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.6 2014/07/06 12:43:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.7 2014/07/21 08:45:48 patrick Exp $
+
+*numba-0.13.3 (21 Jul 2014)
+
+  21 Jul 2014; Patrick Lauer <patrick@gentoo.org> +numba-0.13.3.ebuild:
+  Bump
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> numba-0.12.1.ebuild,
   numba-0.12.2.ebuild, numba-0.13.0.ebuild:
