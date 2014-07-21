@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.6 2014/07/20 15:07:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.7 2014/07/21 17:39:57 mrueg Exp $
 
 EAPI=5
 inherit autotools eutils multilib libtool systemd
@@ -210,8 +210,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Authdaemond is no longer provided by this package."
-	elog "Authentication libraries are now in courier-authlib."
+	elog "Please read http://www.courier-mta.org/imap/INSTALL.html#upgrading"
+	elog "and remove TLS_DHPARAMS from configuration files or run mkdhparams"
+
 	elog "For a quick-start howto please refer to"
 	elog "${PN}-gentoo.readme in /usr/share/doc/${PF}"
 	# Some users have been reporting that permissions on this directory were

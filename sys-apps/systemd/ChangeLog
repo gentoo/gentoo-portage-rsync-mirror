@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.289 2014/07/15 18:30:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.290 2014/07/21 17:52:42 floppym Exp $
+
+  21 Jul 2014; Mike Gilbert <floppym@gentoo.org> systemd-212-r5.ebuild,
+  systemd-215-r1.ebuild, systemd-9999.ebuild:
+  Depend on >=sys-apps/coreutils-8.16 for ln --relative.
 
   15 Jul 2014; Pacho Ramos <pacho@gentoo.org>
   +files/215-0001-always-check-for-__BYTE_ORDER-__BIG_ENDIAN-when-chec.patch,
