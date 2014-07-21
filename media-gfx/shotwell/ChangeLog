@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.69 2014/04/24 12:37:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.70 2014/07/21 06:33:54 jlec Exp $
+
+*shotwell-0.18.1 (21 Jul 2014)
+
+  21 Jul 2014; Justin Lecher <jlec@gentoo.org> shotwell-0.15.1.ebuild,
+  +shotwell-0.18.1.ebuild, +files/shotwell-0.15.1-format-security.patch:
+  Backport fir for format-security, #517622; Version Bump
 
 *shotwell-0.18.0 (24 Apr 2014)
 

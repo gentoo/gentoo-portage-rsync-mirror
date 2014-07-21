@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.9.ebuild,v 1.1 2014/03/31 06:34:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.9-r1.ebuild,v 1.1 2014/07/21 06:42:27 patrick Exp $
 
 EAPI=5
 
-inherit eutils systemd user
+inherit eutils systemd toolchain-funcs user
 
 DESCRIPTION="A simple, fast work queue"
 HOMEPAGE="http://kr.github.io/beanstalkd/"
@@ -32,7 +32,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" LD="$(tc-getLD)"
 }
 
 src_install() {

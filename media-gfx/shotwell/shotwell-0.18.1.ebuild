@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.15.1.ebuild,v 1.4 2014/07/21 06:33:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.18.1.ebuild,v 1.1 2014/07/21 06:33:54 jlec Exp $
 
 EAPI=5
 
@@ -13,28 +13,24 @@ inherit eutils gnome2 multilib toolchain-funcs vala versionator
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Open source photo manager for GNOME"
 HOMEPAGE="http://yorba.org/shotwell/"
-SRC_URI="http://www.yorba.org/download/${PN}/stable/${P}.tar.xz"
+SRC_URI="mirror://gnome/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 CORE_SUPPORTED_LANGUAGES="
-	ia hi te fr de it es pl et sv sk lv pt bg bn nl da zh_CN
-	el ru pa hu en_GB uk ja fi zh_TW cs nb id th sl hr ar ast ro sr lt gl tr ca ko kk pt_BR
-	eu he mk ta vi or km af as gu kn ml mr af_ZA bn_IN id_ID ky nn_NO ta_IN te_IN "
+	af ar as ast bg bn bn_IN ca cs da de el en_GB eo es et eu fi fr gl gu he hi
+	hr hu ia id it ja kk km kn ko ky lt lv mk ml mr nb nl nn or pa pl pt pt_BR
+	ro ru sk sl sr sv ta te th tr uk vi zh_CN zh_HK zh_TW"
 
-EXTRAS_SUPPORTED_LANGUAGES="
-	fr de it es pl et sv sk lv pt bg bn nl da zh_CN el ru pa hu en_GB uk
-	ja fi zh_TW cs nb id th sl hr ar ast ro sr lt gl tr ca ko kk pt_BR eu he mk te ta eo or hi
-	as kn ml mr bn_IN gu id_ID nn_NO vi"
-
-for x in ${CORE_SUPPORTED_LANGUAGES} ${EXTRAS_SUPPORTED_LANGUAGES}; do
+for x in ${CORE_SUPPORTED_LANGUAGES}; do
 	IUSE+="linguas_${x} "
 done
 
 RDEPEND="
+	app-text/gnome-doc-utils
 	>=dev-db/sqlite-3.5.9:3
 	>=dev-libs/dbus-glib-0.80
 	>=dev-libs/glib-2.30.0:2
@@ -83,8 +79,7 @@ src_prepare() {
 		-e 's|CFLAGS :|CFLAGS +|g' \
 		-i plugins/Makefile.plugin.mk || die
 	epatch \
-		"${FILESDIR}"/${PN}-0.13.1-ldflags.patch \
-		"${FILESDIR}"/${P}-format-security.patch
+		"${FILESDIR}"/${PN}-0.13.1-ldflags.patch
 }
 
 src_configure() {
