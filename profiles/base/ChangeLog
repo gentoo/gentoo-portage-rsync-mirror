@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.701 2014/07/21 19:10:32 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.702 2014/07/21 22:34:56 blueness Exp $
+
+  21 Jul 2014; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  It is safe to unmask sys-lib/musl now
 
   21 Jul 2014; Alon Bar-Lev <alonbl@gentoo.org> package.use.stable.mask:
   Add 'app-crypt/tpm-tools pkcs11' per bug#510204
