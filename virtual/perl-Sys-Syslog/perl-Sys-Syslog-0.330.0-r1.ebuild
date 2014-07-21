@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/perl-Sys-Syslog-0.330.0-r1.ebuild,v 1.1 2014/07/13 10:41:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/perl-Sys-Syslog-0.330.0-r1.ebuild,v 1.2 2014/07/21 19:34:33 dilfridge Exp $
 
 EAPI=5
 
@@ -16,4 +16,5 @@ IUSE=""
 RDEPEND="
 	|| ( =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
 	!<perl-core/${PN#perl-}-${PV}
+	!>perl-core/${PN#perl-}-${PV}-r999
 "

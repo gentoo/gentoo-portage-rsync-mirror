@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.90 2014/07/13 15:20:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.91 2014/07/21 19:41:05 dilfridge Exp $
+
+*perl-Test-Simple-0.980.0-r5 (21 Jul 2014)
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Test-Simple-0.980.0-r4.ebuild, +perl-Test-Simple-0.980.0-r5.ebuild,
+  perl-Test-Simple-1.1.2.ebuild:
+  Improve dependencies
 
 *perl-Test-Simple-1.1.2 (13 Jul 2014)
 *perl-Test-Simple-0.980.0-r4 (13 Jul 2014)

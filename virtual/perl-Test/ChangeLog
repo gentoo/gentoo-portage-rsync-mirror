@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.23 2014/07/13 15:04:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.24 2014/07/21 19:37:38 dilfridge Exp $
+
+*perl-Test-1.260.0-r2 (21 Jul 2014)
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Test-1.260.0-r1.ebuild, +perl-Test-1.260.0-r2.ebuild:
+  Improve dependencies
 
 *perl-Test-1.260.0-r1 (13 Jul 2014)
 
