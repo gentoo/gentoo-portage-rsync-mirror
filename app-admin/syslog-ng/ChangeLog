@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.392 2014/07/08 17:06:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.393 2014/07/21 15:51:50 mr_bones_ Exp $
+
+*syslog-ng-3.5.5 (21 Jul 2014)
+
+  21 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> +syslog-ng-3.5.5.ebuild:
+  3.5 branch version bump
 
   08 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.4.8.ebuild:
   add amqp use flag (bug #516704)
