@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.68 2014/07/20 18:17:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.69 2014/07/21 18:09:08 nimiux Exp $
+
+  21 Jul 2014; Chema Alonso <nimiux@gentoo.org> lensfun-0.2.8.ebuild:
+  Stable for amd64 wrt bug #513336
 
 *lensfun-0.2.8-r1 (20 Jul 2014)
 
