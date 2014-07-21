@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.50.ebuild,v 1.11 2013/05/11 12:04:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.50.ebuild,v 1.12 2014/07/21 18:55:08 dilfridge Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~sparc-fbsd ~amd64-li
 IUSE="debug doc hsieh +libevent sasl static-libs tcmalloc"
 
 DEPEND="net-misc/memcached
-		virtual/perl-PodParser
+		virtual/perl-Pod-Parser
 		doc? ( dev-python/sphinx )
 		libevent? ( dev-libs/libevent )
 		tcmalloc? ( dev-util/google-perftools )

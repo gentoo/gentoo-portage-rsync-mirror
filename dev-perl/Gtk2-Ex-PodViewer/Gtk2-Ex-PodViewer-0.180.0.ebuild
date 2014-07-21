@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.180.0.ebuild,v 1.4 2012/03/25 15:13:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/Gtk2-Ex-PodViewer-0.180.0.ebuild,v 1.5 2014/07/21 18:55:55 dilfridge Exp $
 
 EAPI=4
 MODULE_AUTHOR=GBROWN
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	dev-perl/gtk2-perl
 	dev-perl/IO-stringy
-	virtual/perl-PodParser
+	virtual/perl-Pod-Parser
 	virtual/perl-Pod-Simple
 	dev-perl/Gtk2-Ex-Simple-List
 	dev-perl/Locale-gettext"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-Ex-PodViewer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/ChangeLog,v 1.35 2012/06/24 12:58:28 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-PodViewer/ChangeLog,v 1.36 2014/07/21 18:55:55 dilfridge Exp $
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Gtk2-Ex-PodViewer-0.180.0.ebuild:
+  PodParser becomes Pod-Parser
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
