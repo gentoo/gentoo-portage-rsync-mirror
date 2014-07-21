@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postfwd/postfwd-1.35.ebuild,v 1.1 2014/07/15 00:19:41 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postfwd/postfwd-1.35.ebuild,v 1.2 2014/07/21 05:22:11 mschiff Exp $
 
 EAPI=4
 
@@ -38,8 +38,7 @@ src_install() {
 
 	# example configuration(s)
 	insinto /usr/share/doc/${PF}/examples
-	newins "${S}"/etc/postfwd.cf.sample ${BIN}.cf.dist
-	newins "${FILESDIR}"/${BIN}.example.cf ${BIN}.cf.realworld
+	newins "${S}"/etc/${PN}.cf.sample ${PN}.cf.dist
 
 	# plugins
 	dodoc -r "${S}"/plugins
