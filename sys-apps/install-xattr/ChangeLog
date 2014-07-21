@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.13 2014/06/15 22:28:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.14 2014/07/21 21:29:32 blueness Exp $
+
+*install-xattr-0.3 (21 Jul 2014)
+
+  21 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
+  +install-xattr-0.3.ebuild, -install-xattr-0.1.ebuild,
+  -install-xattr-0.2.ebuild:
+  Version bump, fixes dst path if src is in a dir
 
 *install-xattr-0.2 (15 Jun 2014)
 
