@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plack/Plack-1.1.400.ebuild,v 1.1 2012/12/08 11:00:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plack/Plack-1.1.400.ebuild,v 1.2 2014/07/21 19:03:09 dilfridge Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="test"
 RDEPEND="
 	>=dev-perl/libwww-perl-5.814.0
 	>=dev-perl/URI-1.590.0
-	virtual/perl-PodParser
+	virtual/perl-Pod-Parser
 	>=dev-perl/File-ShareDir-1.0.0
 	dev-perl/Try-Tiny
 	virtual/perl-parent

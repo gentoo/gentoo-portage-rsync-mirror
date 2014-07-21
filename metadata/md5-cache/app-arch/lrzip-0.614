@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-libs/lzo app-arch/bzip2 sys-libs/zlib x86? ( dev-lang/nasm ) virtual/perl-PodParser
+DEPEND=dev-libs/lzo app-arch/bzip2 sys-libs/zlib x86? ( dev-lang/nasm ) virtual/perl-Pod-Parser
 DESCRIPTION=Long Range ZIP or Lzma RZIP optimized for compressing large files
 EAPI=4
 HOMEPAGE=http://ck.kolivas.org/apps/lrzip/README
@@ -9,4 +9,4 @@ RDEPEND=dev-libs/lzo app-arch/bzip2 sys-libs/zlib
 SLOT=0
 SRC_URI=http://ck.kolivas.org/apps/lrzip/lrzip-0.614.tar.bz2
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=390b52f1c517d8f7a82d9e8e6e98f8c3
+_md5_=58ccc2ad6b7d408148030f729cd21fc6

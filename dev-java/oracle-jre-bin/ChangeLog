@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.62 2014/07/21 12:32:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.63 2014/07/21 19:08:39 sera Exp $
+
+  21 Jul 2014; Ralph Sennhauser <sera@gentoo.org>
+  -oracle-jre-bin-1.7.0.55.ebuild, -oracle-jre-bin-1.7.0.60.ebuild,
+  -oracle-jre-bin-1.8.0.5.ebuild:
+  Remove vulnarable #517220
 
   21 Jul 2014; Agostino Sarubbo <ago@gentoo.org> oracle-jre-bin-1.7.0.65.ebuild:
   Stable for x86, wrt bug #517220

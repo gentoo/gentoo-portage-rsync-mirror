@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.6-r1.ebuild,v 1.2 2014/03/08 20:26:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.6-r1.ebuild,v 1.3 2014/07/21 19:07:58 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="debug emacs +history sloppy +xft"
 RDEPEND="
 	emacs? ( virtual/emacs )
 	history? ( sys-libs/readline )
-	virtual/perl-PodParser
+	virtual/perl-Pod-Parser
 	x11-libs/libXinerama
 	x11-libs/libXtst
 	xft? ( x11-libs/libXft )

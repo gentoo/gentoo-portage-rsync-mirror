@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lrzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.36 2014/07/11 18:29:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.37 2014/07/21 19:08:46 dilfridge Exp $
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> lrzip-0.611.ebuild,
+  lrzip-0.614.ebuild, lrzip-0.616.ebuild:
+  PodParser becomes Pod-Parser
 
   11 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> lrzip-0.614.ebuild:
   ppc stable wrt bug #458184

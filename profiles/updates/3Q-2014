@@ -3,3 +3,4 @@ move perl-core/Filter dev-perl/Filter
 slotmove =net-misc/iperf-2* 0 2
 slotmove =net-misc/iperf-3* 0 3
 move perl-core/PodParser perl-core/Pod-Parser
+move virtual/perl-PodParser virtual/perl-Pod-Parser

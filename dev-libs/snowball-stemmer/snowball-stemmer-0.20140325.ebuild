@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/snowball-stemmer-0.20140325.ebuild,v 1.1 2014/05/06 05:51:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/snowball-stemmer-0.20140325.ebuild,v 1.2 2014/07/21 19:23:27 nimiux Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/libstemmer_c"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 
 # This could be used to package both libstemmer_c and libstemmer_java together.
 IUSE="static-libs"

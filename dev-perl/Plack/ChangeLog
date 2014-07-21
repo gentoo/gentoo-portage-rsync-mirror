@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Plack
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plack/ChangeLog,v 1.18 2013/03/17 17:44:00 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plack/ChangeLog,v 1.19 2014/07/21 19:03:09 dilfridge Exp $
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> Plack-1.1.400.ebuild,
+  Plack-1.1.500.ebuild, Plack-1.1.600.ebuild, Plack-1.1.800.ebuild:
+  PodParser becomes Pod-Parser
 
 *Plack-1.1.800 (17 Mar 2013)
 

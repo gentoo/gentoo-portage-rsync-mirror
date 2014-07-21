@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/2ping/2ping-1.2.3.ebuild,v 1.2 2014/07/20 13:39:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/2ping/2ping-1.2.3.ebuild,v 1.3 2014/07/21 19:05:53 dilfridge Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="crc ipv6 md5 sha server"
 DEPEND="
 	dev-lang/perl
 	virtual/perl-Getopt-Long
-	virtual/perl-PodParser
+	virtual/perl-Pod-Parser
 	virtual/perl-IO
 	virtual/perl-Time-HiRes
 	ipv6? ( dev-perl/IO-Socket-INET6 )

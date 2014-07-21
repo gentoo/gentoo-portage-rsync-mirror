@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.616.ebuild,v 1.4 2014/01/26 13:12:49 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.616.ebuild,v 1.5 2014/07/21 19:08:46 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/lzo
 	 sys-libs/zlib"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
-	virtual/perl-PodParser"
+	virtual/perl-Pod-Parser"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-missing-stdarg_h.patch

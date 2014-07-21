@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r1.ebuild,v 1.13 2013/09/29 07:11:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r1.ebuild,v 1.14 2014/07/21 19:04:56 dilfridge Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite ipv6"
 
 DEPEND=">=dev-lang/perl-5.8.8-r8
 	virtual/perl-MIME-Base64
-	>=virtual/perl-PodParser-1.32
+	>=virtual/perl-Pod-Parser-1.32
 	virtual/perl-Storable
 	virtual/perl-Time-HiRes
 	>=dev-perl/HTML-Parser-3.43

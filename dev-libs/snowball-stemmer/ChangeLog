@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/snowball-stemmer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.3 2014/05/06 05:51:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.4 2014/07/21 19:23:27 nimiux Exp $
+
+  21 Jul 2014; Chema Alonso <nimiux@gentoo.org>
+  snowball-stemmer-0.20140325.ebuild:
+  Stable for amd64 wrt bug #516302
 
 *snowball-stemmer-0.20140325 (06 May 2014)
 

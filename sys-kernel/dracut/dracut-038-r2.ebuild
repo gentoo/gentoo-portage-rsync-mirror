@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-038-r1.ebuild,v 1.1 2014/07/21 08:00:22 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-038-r2.ebuild,v 1.1 2014/07/21 19:13:50 aidecoe Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ PATCHES=(
 	"${FILESDIR}/${PV}-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch"
 	"${FILESDIR}/${PV}-0004-Install-dracut-install-into-libexec-di.patch"
 	"${FILESDIR}/${PV}-0005-modsign-do-not-hardcode-path-to-keyctl.patch"
-	"${FILESDIR}/${PV}-0006-inst_simple-doesn-t-take-H-parameter.patch"
+	"${FILESDIR}/${PV}-0008-dracut-functions.sh-fix-inst-functions.patch"
 	)
 
 #

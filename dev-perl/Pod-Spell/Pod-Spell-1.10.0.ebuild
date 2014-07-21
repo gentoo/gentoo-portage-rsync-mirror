@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/Pod-Spell-1.10.0.ebuild,v 1.5 2012/05/22 08:59:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/Pod-Spell-1.10.0.ebuild,v 1.6 2014/07/21 19:04:09 dilfridge Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~s
 IUSE=""
 
 RDEPEND="virtual/perl-Pod-Escapes
-	virtual/perl-PodParser"
+	virtual/perl-Pod-Parser"
 DEPEND="${RDEPEND}"
 
 SRC_TEST="do"

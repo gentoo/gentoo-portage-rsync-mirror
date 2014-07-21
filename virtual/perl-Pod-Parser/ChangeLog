@@ -1,6 +1,17 @@
 # ChangeLog for virtual/perl-Pod-Parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Parser/ChangeLog,v 1.1 2014/07/21 18:52:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Parser/ChangeLog,v 1.2 2014/07/21 19:21:20 dilfridge Exp $
+
+*perl-Pod-Parser-1.620.0 (21 Jul 2014)
+*perl-Pod-Parser-1.610.0-r1 (21 Jul 2014)
+*perl-Pod-Parser-1.600.0 (21 Jul 2014)
+*perl-Pod-Parser-1.510.0-r2 (21 Jul 2014)
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Pod-Parser-1.510.0-r1.ebuild, +perl-Pod-Parser-1.510.0-r2.ebuild,
+  +perl-Pod-Parser-1.600.0.ebuild, -perl-Pod-Parser-1.610.0.ebuild,
+  +perl-Pod-Parser-1.610.0-r1.ebuild, +perl-Pod-Parser-1.620.0.ebuild:
+  Add perl-5.20 version; improve dependencies
 
 *perl-Pod-Parser-1.610.0 (21 Jul 2014)
 *perl-Pod-Parser-1.510.0-r1 (21 Jul 2014)

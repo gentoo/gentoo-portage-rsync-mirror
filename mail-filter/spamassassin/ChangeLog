@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.232 2014/02/01 19:06:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.233 2014/07/21 19:04:56 dilfridge Exp $
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  spamassassin-3.3.2-r1.ebuild, spamassassin-3.3.2-r2.ebuild,
+  spamassassin-3.3.2-r3.ebuild, spamassassin-3.3.2-r4.ebuild:
+  PodParser becomes Pod-Parser
 
   01 Feb 2014; Pacho Ramos <pacho@gentoo.org> files/spamassassin.service-r1:
   Add an option for reloading and move to /run instead of /var/run (#498716 by

@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare unpack
-DEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-PodParser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft ) app-arch/xz-utils virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/git-1.8.2.1
+DEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-Pod-Parser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft ) app-arch/xz-utils virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Ratpoison is an extremely light-weight and barebones wm modelled after screen
 EAPI=5
 HOMEPAGE=http://www.nongnu.org/ratpoison/
 IUSE=debug emacs +history sloppy +xft
 LICENSE=GPL-2
-RDEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-PodParser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft )
+RDEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline ) virtual/perl-Pod-Parser x11-libs/libXinerama x11-libs/libXtst xft? ( x11-libs/libXft )
 SLOT=0
 _eclasses_=autotools	82621aada74cb2a492bd8e73d49e9f54	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	06133990e861be0fe60c2b428fd025d9	git-r3	49fc3d60d7bcd6f8913ad6ec0cb4c67b	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=f86f38a22227df061eed0c56f03b21f0
+_md5_=fe3a907db8795c491bbe8b49c98d498d

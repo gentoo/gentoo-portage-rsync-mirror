@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.220.0.ebuild,v 1.10 2014/01/20 20:40:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.220.0.ebuild,v 1.11 2014/07/21 19:03:45 dilfridge Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd
 IUSE="test"
 
 RDEPEND="
-	>=virtual/perl-PodParser-1.13
+	>=virtual/perl-Pod-Parser-1.13
 	>=dev-perl/Devel-Symdump-2.01
 "
 DEPEND="${RDEPEND}

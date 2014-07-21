@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Spell
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.9 2012/05/22 08:59:16 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.10 2014/07/21 19:04:09 dilfridge Exp $
+
+  21 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Pod-Spell-1.10.0.ebuild:
+  PodParser becomes Pod-Parser
 
   22 May 2012; Johannes Huber <johu@gentoo.org> Pod-Spell-1.10.0.ebuild:
   Stable for x86, wrt bug #412963

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.7 2014/07/07 18:53:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.8 2014/07/21 19:02:06 dilfridge Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="badval fftw gsl"
 DEPEND=">=sys-libs/ncurses-5.2
 	dev-perl/Filter
 	virtual/perl-File-Spec
-	virtual/perl-PodParser
+	virtual/perl-Pod-Parser
 	dev-perl/Inline
 	dev-perl/Astro-FITS-Header
 	>=dev-perl/ExtUtils-F77-1.13

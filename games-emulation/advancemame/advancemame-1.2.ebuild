@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-1.2.ebuild,v 1.2 2014/07/01 16:09:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-1.2.ebuild,v 1.3 2014/07/21 19:13:56 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils flag-o-matic games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 LICENSE="GPL-2 XMAME"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa fbcon oss static truetype"
+IUSE="alsa fbcon oss truetype"
 
 # sdl is required (bug #158417)
 RDEPEND="app-arch/unzip
@@ -54,10 +54,10 @@ src_configure() {
 		--enable-zlib \
 		--disable-slang \
 		--disable-svgalib \
+		--disable-static \
 		$(use_enable alsa) \
 		$(use_enable fbcon fb) \
 		$(use_enable oss) \
-		$(use_enable static) \
 		$(use_enable truetype freetype) \
 		$(use_enable x86 asm) \
 		--with-emu=${PN/advance}

@@ -9,4 +9,4 @@ RDEPEND=net-libs/libpcap sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/nethogs/nethogs-0.8.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=cfc839f6dd4faab2157d6df659bcc76c
+_md5_=a1447ae50a6d38f6807c8ad51bab87c1
