@@ -1,17 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/Term-ProgressBar-2.100.0.ebuild,v 1.4 2012/02/02 19:47:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/Term-ProgressBar-2.150.0.ebuild,v 1.1 2014/07/21 14:51:13 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=SZABGAB
-MODULE_VERSION=2.10
+MODULE_VERSION=2.15
 inherit perl-module
 
 DESCRIPTION="Perl module for Term-ProgressBar"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND="
@@ -26,8 +26,3 @@ DEPEND="${RDEPEND}
 "
 
 SRC_TEST="do"
-
-src_test() {
-	rm "${S}"/t/0-signature.t || die
-	perl-module_src_test
-}

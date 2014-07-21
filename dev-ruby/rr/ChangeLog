@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.43 2014/07/14 14:09:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.44 2014/07/21 14:56:13 klausman Exp $
+
+  21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> rr-1.1.2.ebuild:
+  Stable on alpha, bug #505920
 
   14 Jul 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> rr-1.1.2.ebuild:
   x86 stable wrt bug #505920

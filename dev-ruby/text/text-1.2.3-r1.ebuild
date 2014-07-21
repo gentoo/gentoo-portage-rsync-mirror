@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/text-1.2.3-r1.ebuild,v 1.11 2014/07/18 17:04:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/text-1.2.3-r1.ebuild,v 1.12 2014/07/21 14:56:29 klausman Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 jruby"
@@ -16,5 +16,5 @@ HOMEPAGE="https://github.com/threedaymonk/text"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 x86"
+KEYWORDS="alpha amd64 arm hppa ia64 x86"
 IUSE=""

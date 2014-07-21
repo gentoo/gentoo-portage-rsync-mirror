@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.158 2014/07/18 17:52:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.159 2014/07/21 14:54:56 klausman Exp $
+
+  21 Jul 2014; Tobias Klausmann <klausman@gentoo.org> minitest-5.3.3.ebuild:
+  Stable on alpha, bug #505920
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org> minitest-5.3.3.ebuild:
   Stabilize minitest-5.3.3 on alpha
