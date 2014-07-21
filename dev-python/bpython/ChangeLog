@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.41 2014/07/18 13:25:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.42 2014/07/21 08:05:53 patrick Exp $
+
+*bpython-0.13.1 (21 Jul 2014)
+
+  21 Jul 2014; Patrick Lauer <patrick@gentoo.org> +bpython-0.13.1.ebuild:
+  Bump, fix test phase
 
   18 Jul 2014; Ian Delaney <idella4@gentoo.org> bpython-0.13.ebuild:
   remove unrequired dep pygobject:3, noted by Afrever
