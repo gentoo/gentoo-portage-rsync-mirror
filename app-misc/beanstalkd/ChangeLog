@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beanstalkd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.34 2014/07/21 06:42:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.35 2014/07/21 07:31:30 nimiux Exp $
+
+  21 Jul 2014; Chema Alonso <nimiux@gentoo.org> beanstalkd-1.9-r1.ebuild:
+  Stable for amd64 wrt bug #512332
 
 *beanstalkd-1.9-r1 (21 Jul 2014)
 
