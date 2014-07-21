@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.66 2014/07/20 21:20:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.67 2014/07/21 00:04:54 sera Exp $
+
+  21 Jul 2014; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jdk-bin-1.7.0.65.ebuild, oracle-jdk-bin-1.8.0.11.ebuild:
+  Fix install with missing xattr support #517626
+  Fix selinux support #515582
 
 *oracle-jdk-bin-1.8.0.11 (20 Jul 2014)
 

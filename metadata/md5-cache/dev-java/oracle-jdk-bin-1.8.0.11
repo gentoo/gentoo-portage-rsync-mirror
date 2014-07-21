@@ -1,14 +1,14 @@
-DEFINED_PHASES=compile install nofetch postinst postrm prepare prerm setup unpack
-DEPEND=jce? ( app-arch/unzip:0 ) examples? ( kernel_linux? ( app-arch/unzip:0 ) ) pax_kernel? ( sys-apps/paxctl:0 ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+DEFINED_PHASES=install nofetch postinst postrm prepare prerm setup unpack
+DEPEND=selinux? ( sec-policy/selinux-java ) jce? ( app-arch/unzip:0 ) examples? ( kernel_linux? ( app-arch/unzip:0 ) ) pax_kernel? ( sys-apps/paxctl:0 ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 DESCRIPTION=Oracle's Java SE Development Kit
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
-IUSE=+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source
+IUSE=+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel selinux source
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc64-solaris ~x64-solaris
 LICENSE=Oracle-BCLA-JavaSE examples? ( BSD )
-RDEPEND=X? ( !aqua? ( x11-libs/libX11:0 x11-libs/libXext:0 x11-libs/libXi:0 x11-libs/libXrender:0 x11-libs/libXtst:0 ) ) alsa? ( media-libs/alsa-lib:0 ) doc? ( dev-java/java-sdk-docs:1.8 ) fontconfig? ( media-libs/fontconfig:1.0 ) !prefix? ( sys-libs/glibc:* ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+RDEPEND=selinux? ( sec-policy/selinux-java ) X? ( !aqua? ( x11-libs/libX11:0 x11-libs/libXext:0 x11-libs/libXi:0 x11-libs/libXrender:0 x11-libs/libXtst:0 ) ) alsa? ( media-libs/alsa-lib:0 ) doc? ( dev-java/java-sdk-docs:1.8 ) fontconfig? ( media-libs/fontconfig:1.0 ) !prefix? ( sys-libs/glibc:* ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.8
 SRC_URI=amd64? ( jdk-8u11-linux-x64.tar.gz examples? ( jdk-8u11-linux-x64-demos.tar.gz ) ) x86? ( jdk-8u11-linux-i586.tar.gz examples? ( jdk-8u11-linux-i586-demos.tar.gz ) ) x64-solaris? ( jdk-8u11-solaris-x64.tar.gz examples? ( jdk-8u11-solaris-x64-demos.tar.gz ) ) sparc64-solaris? ( jdk-8u11-solaris-sparcv9.tar.gz examples? ( jdk-8u11-solaris-sparcv9-demos.tar.gz ) ) x86-macos? ( jdk-8u11-macosx-x64.dmg examples? ( jdk-8u11-macosx-x86_64-demos.zip ) ) x64-macos? ( jdk-8u11-macosx-x64.dmg examples? ( jdk-8u11-macosx-x86_64-demos.zip ) ) jce? ( jce_policy-8.zip )
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	51ad5130f4a69b1a118ca5296de276ae	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0f1760274637a138b99bb649202ea402	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a391de4d8e95a4870d1ff94e56f9d6bd
+_md5_=d8c636cf687563b35a6d977b21e4ab6f

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.8.0.11.ebuild,v 1.1 2014/07/20 20:36:57 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.8.0.11.ebuild,v 1.2 2014/07/21 00:07:03 sera Exp $
 
 EAPI="5"
 
@@ -35,12 +35,14 @@ SRC_URI="
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.8"
 KEYWORDS="~amd64 ~x86"
-IUSE="X alsa fontconfig jce nsplugin pax_kernel"
+IUSE="X alsa fontconfig jce nsplugin pax_kernel selinux"
 
 RESTRICT="fetch strip"
 QA_PREBUILT="*"
 
-RDEPEND="
+COMMON_DEP="
+	selinux? ( sec-policy/selinux-java )"
+RDEPEND="${COMMON_DEP}
 	X? (
 		x11-libs/libXext
 		x11-libs/libXi
@@ -53,7 +55,7 @@ RDEPEND="
 	!prefix? ( sys-libs/glibc )"
 # scanelf won't create a PaX header, so depend on paxctl to avoid fallback
 # marking. #427642
-DEPEND="
+DEPEND="${COMMON_DEP}
 	jce? ( app-arch/unzip )
 	pax_kernel? ( sys-apps/paxctl )"
 
@@ -92,36 +94,14 @@ src_prepare() {
 	fi
 }
 
-src_compile() {
-	# This needs to be done before CDS - #215225
-	java-vm_set-pax-markings "${S}"
-
-	# see bug #207282
-	einfo "Creating the Class Data Sharing archives"
-	case ${ARCH} in
-		arm|ia64)
-			bin/java -client -Xshare:dump || die
-			;;
-		x86)
-			bin/java -client -Xshare:dump || die
-			# limit heap size for large memory on x86 #467518
-			# this is a workaround and shouldn't be needed.
-			bin/java -server -Xms64m -Xmx64m -Xshare:dump || die
-			;;
-		*)
-			bin/java -server -Xshare:dump || die
-			;;
-	esac
+src_install() {
+	local dest="/opt/${P}"
+	local ddest="${ED}${dest}"
 
 	# Create files used as storage for system preferences.
 	mkdir .systemPrefs || die
 	touch .systemPrefs/.system.lock || die
 	touch .systemPrefs/.systemRootModFile || die
-}
-
-src_install() {
-	local dest="/opt/${P}"
-	local ddest="${ED}${dest}"
 
 	# We should not need the ancient plugin for Firefox 2 anymore, plus it has
 	# writable executable segments
@@ -139,9 +119,27 @@ src_install() {
 	fi
 
 	dodir "${dest}"
-	cp -R --preserve=links,mode,ownership,timestamps,xattr \
-		bin lib man "${ddest}" || die
+	cp -pPR	bin lib man "${ddest}" || die
 
+	# This needs to be done before CDS - #215225
+	java-vm_set-pax-markings "${ddest}"
+
+	# see bug #207282
+	einfo "Creating the Class Data Sharing archives"
+	case ${ARCH} in
+		arm|ia64)
+			${ddest}/bin/java -client -Xshare:dump || die
+			;;
+		x86)
+			${ddest}/bin/java -client -Xshare:dump || die
+			# limit heap size for large memory on x86 #467518
+			# this is a workaround and shouldn't be needed.
+			${ddest}/bin/java -server -Xms64m -Xmx64m -Xshare:dump || die
+			;;
+		*)
+			${ddest}/bin/java -server -Xshare:dump || die
+			;;
+	esac
 	# Remove empty dirs we might have copied
 	find "${D}" -type d -empty -exec rmdir -v {} + || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.11.ebuild,v 1.1 2014/07/20 21:20:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.11.ebuild,v 1.2 2014/07/21 00:04:54 sera Exp $
 
 EAPI="5"
 
@@ -61,12 +61,14 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.8"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc64-solaris ~x64-solaris"
-IUSE="+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source"
+IUSE="+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel selinux source"
 
 RESTRICT="fetch strip"
 QA_PREBUILT="*"
 
-RDEPEND="
+COMMON_DEP="
+	selinux? ( sec-policy/selinux-java )"
+RDEPEND="${COMMON_DEP}
 	X? ( !aqua? (
 		x11-libs/libX11:0
 		x11-libs/libXext:0
@@ -78,14 +80,11 @@ RDEPEND="
 	doc? ( dev-java/java-sdk-docs:${SLOT} )
 	fontconfig? ( media-libs/fontconfig:1.0 )
 	!prefix? ( sys-libs/glibc:* )"
-
-DEPEND="
-	jce? ( app-arch/unzip:0 )
-	examples? ( kernel_linux? ( app-arch/unzip:0 ) )"
-
 # A PaX header isn't created by scanelf, so depend on paxctl to avoid fallback
 # marking. See bug #427642.
-DEPEND="${DEPEND}
+DEPEND="${COMMON_DEP}
+	jce? ( app-arch/unzip:0 )
+	examples? ( kernel_linux? ( app-arch/unzip:0 ) )
 	pax_kernel? ( sys-apps/paxctl:0 )"
 
 S="${WORKDIR}/jdk"
@@ -164,36 +163,14 @@ src_prepare() {
 	fi
 }
 
-src_compile() {
-	# This needs to be done before CDS - #215225
-	java-vm_set-pax-markings "${S}"
-
-	# see bug #207282
-	einfo "Creating the Class Data Sharing archives"
-	case ${ARCH} in
-		arm|ia64)
-			bin/java -client -Xshare:dump || die
-			;;
-		x86)
-			bin/java -client -Xshare:dump || die
-			# limit heap size for large memory on x86 #467518
-			# this is a workaround and shouldn't be needed.
-			bin/java -server -Xms64m -Xmx64m -Xshare:dump || die
-			;;
-		*)
-			bin/java -server -Xshare:dump || die
-			;;
-	esac
+src_install() {
+	local dest="/opt/${P}"
+	local ddest="${ED}${dest}"
 
 	# Create files used as storage for system preferences.
 	mkdir jre/.systemPrefs || die
 	touch jre/.systemPrefs/.system.lock || die
 	touch jre/.systemPrefs/.systemRootModFile || die
-}
-
-src_install() {
-	local dest="/opt/${P}"
-	local ddest="${ED}${dest}"
 
 	# We should not need the ancient plugin for Firefox 2 anymore, plus it has
 	# writable executable segments
@@ -215,17 +192,14 @@ src_install() {
 	dohtml README.html
 
 	dodir "${dest}"
-	cp -R --preserve=links,mode,ownership,timestamps,xattr \
-		bin include jre lib man "${ddest}" || die
+	cp -pPR bin include jre lib man "${ddest}" || die
 
 	if use derby ; then
-		cp -R --preserve=links,mode,ownership,timestamps,xattr \
-			db "${ddest}" || die
+		cp -pPR	db "${ddest}" || die
 	fi
 
 	if use examples && has ${ARCH} "${DEMOS_AVAILABLE[@]}" ; then
-		cp -R --preserve=links,mode,ownership,timestamps,xattr \
-			demo sample "${ddest}" || die
+		cp -pPR demo sample "${ddest}" || die
 	fi
 
 	if use jce ; then
@@ -245,7 +219,7 @@ src_install() {
 	fi
 
 	if use source ; then
-		cp src.zip "${ddest}" || die
+		cp -p src.zip "${ddest}" || die
 	fi
 
 	if use !x86-macos && use !x64-macos ; then
@@ -275,6 +249,26 @@ src_install() {
 		insinto "${dest}"/jre/lib/
 		doins "${T}"/fontconfig.properties
 	fi
+
+	# This needs to be done before CDS - #215225
+	java-vm_set-pax-markings "${ddest}"
+
+	# see bug #207282
+	einfo "Creating the Class Data Sharing archives"
+	case ${ARCH} in
+		arm|ia64)
+			${ddest}/bin/java -client -Xshare:dump || die
+			;;
+		x86)
+			${ddest}/bin/java -client -Xshare:dump || die
+			# limit heap size for large memory on x86 #467518
+			# this is a workaround and shouldn't be needed.
+			${ddest}/bin/java -server -Xms64m -Xmx64m -Xshare:dump || die
+			;;
+		*)
+			${ddest}/bin/java -server -Xshare:dump || die
+			;;
+	esac
 
 	# Remove empty dirs we might have copied.
 	find "${D}" -type d -empty -exec rmdir -v {} + || die
