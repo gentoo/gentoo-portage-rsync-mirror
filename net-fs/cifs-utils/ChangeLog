@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.79 2014/06/22 21:28:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.80 2014/07/21 12:18:44 polynomial-c Exp $
+
+*cifs-utils-6.4 (21 Jul 2014)
+
+  21 Jul 2014; Lars Wendler <polynomial-c@gentoo.org> -cifs-utils-6.2.ebuild,
+  +cifs-utils-6.4.ebuild:
+  Version bump. Removed old.
 
   22 Jun 2014; Tobias Klausmann <klausman@gentoo.org> cifs-utils-6.1-r1.ebuild:
   Stable on alpha, bug #486312
