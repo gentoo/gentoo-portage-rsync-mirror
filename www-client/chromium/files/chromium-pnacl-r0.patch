@@ -1,0 +1,15 @@
+--- chrome/browser/component_updater/pnacl/pnacl_component_installer.cc.orig	2014-07-21 10:19:23.550094151 +0000
++++ chrome/browser/component_updater/pnacl/pnacl_component_installer.cc	2014-07-21 10:20:23.419299929 +0000
+@@ -372,8 +372,12 @@
+ void PnaclComponentInstaller::RegisterPnaclComponent(
+     ComponentUpdateService* cus,
+     const CommandLine& command_line) {
++#if defined(DISABLE_NACL)
++  updates_disabled_ = true;
++#else
+   // Register PNaCl by default (can be disabled).
+   updates_disabled_ = command_line.HasSwitch(switches::kDisablePnaclInstall);
++#endif
+   cus_ = cus;
+   BrowserThread::PostTask(BrowserThread::FILE,
+                           FROM_HERE,
