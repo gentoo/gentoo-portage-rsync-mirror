@@ -1,20 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.47 2014/07/21 22:00:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.4-r1.ebuild,v 1.1 2014/07/21 22:00:02 xmw Exp $
 
 EAPI=5
 
-inherit eutils git-2 multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs vcs-snapshot
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
-#EGIT_HAS_SUBMODULES=1
+SRC_URI="http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=eebc3385ebfa60574d78cf41badd6622987c1121;sf=tgz -> ${P}.tar.gz"
 
 LICENSE="AGPL-3"
-SLOT="0/1.5"
-KEYWORDS=""
-IUSE="X vanilla curl openssl static static-libs"
+SLOT="0/1.4"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE="X vanilla static static-libs"
 
 LIB_DEPEND="dev-libs/openssl[static-libs?]
 	media-libs/freetype:2[static-libs?]
@@ -39,32 +38,33 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${PN}-1.3-CFLAGS.patch \
-		"${FILESDIR}"/${PN}-1.4-old-debian-files.patch \
+		"${FILESDIR}"/${PN}-1.3-openjpeg2.patch \
 		"${FILESDIR}"/${PN}-1.3-pkg-config.patch \
-		"${FILESDIR}"/${PN}-1.5-Makerules-openssl-curl.patch
+		"${FILESDIR}"/${PN}-1.3-sys_curl.patch
 
 	sed -e "/^libdir=/s:/lib:/$(get_libdir):" \
 		-e "/^prefix=/s:=.*:=${EROOT}/usr:" \
 		-i platform/debian/${PN}.pc || die
 
 	use vanilla || epatch \
-		"${FILESDIR}"/${PN}-1.3-zoom-2.patch
+		"${FILESDIR}"/${PN}-1.3-zoom-2.patch \
+		"${FILESDIR}"/${PN}-1.3-forward_back.patch
 
 	#http://bugs.ghostscript.com/show_bug.cgi?id=693467
 	sed -e '/^\(Actions\|MimeType\)=/s:\(.*\):\1;:' \
 		-i platform/debian/${PN}.desktop || die
 
-	sed -e "1iOS = Linux" \
-		-e "1iCC = $(tc-getCC)" \
-		-e "1iLD = $(tc-getCC)" \
-		-e "1iAR = $(tc-getAR)" \
-		-e "1iverbose = yes" \
-		-e "1ibuild = debug" \
-		-e "1iprefix = ${ED}usr" \
-		-e "1ilibdir = ${ED}usr/$(get_libdir)" \
-	    -e "1iHAVE_X11 = $(usex X)" \
-		-e "1iWANT_OPENSSL = $(usex openssl)" \
-		-e "1iWANT_CURL = $(usex curl)" \
+	sed -e "\$aOS = Linux" \
+		-e "\$aCC = $(tc-getCC)" \
+		-e "\$aLD = $(tc-getCC)" \
+		-e "\$aAR = $(tc-getAR)" \
+		-e "\$averbose = yes" \
+		-e "\$abuild = debug" \
+		-e "\$aprefix = ${ED}usr" \
+		-e "\$alibdir = ${ED}usr/$(get_libdir)" \
+		-i Makerules || die
+
+	sed -e "\$aHAVE_X11 = $(usex X yes no)" \
 		-i Makerules || die
 
 	if use static-libs || use static ; then
@@ -76,8 +76,8 @@ src_prepare() {
 			-i "${S}"-static/Makerules || die
 	fi
 
-	my_soname=libmupdf.so.1.5
-	my_soname_js_none=libmupdf-js-none.so.1.5
+	my_soname=libmupdf.so.1.4
+	my_soname_js_none=libmupdf-js-none.so.1.4
 	sed -e "\$a\$(MUPDF_LIB): \$(MUPDF_JS_NONE_LIB)" \
 		-e "\$a\\\t\$(QUIET_LINK) \$(CC) \$(LDFLAGS) --shared -Wl,-soname -Wl,${my_soname} -Wl,--no-undefined -o \$@ \$^ \$(MUPDF_JS_NONE_LIB) \$(LIBS)" \
 		-e "/^MUPDF_LIB :=/s:=.*:= \$(OUT)/${my_soname}:" \
@@ -99,6 +99,7 @@ src_install() {
 	if use X ; then
 		domenu platform/debian/${PN}.desktop
 		doicon platform/debian/${PN}.xpm
+		dobin platform/debian/${PN}-select-file
 	else
 		rm docs/man/${PN}.1
 	fi

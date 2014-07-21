@@ -1,6 +1,15 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.105 2014/06/05 11:04:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.106 2014/07/21 22:00:02 xmw Exp $
+
+*mupdf-1.4-r1 (21 Jul 2014)
+*mupdf-1.5 (21 Jul 2014)
+
+  21 Jul 2014; Michael Weber <xmw@gentoo.org>
+  +files/mupdf-1.5-Makerules-openssl-curl.patch, +mupdf-1.4-r1.ebuild,
+  +mupdf-1.5.ebuild, -mupdf-1.4.ebuild, metadata.xml, mupdf-9999.ebuild:
+  Fix USE=-X for >1.4 (bug 514202, thanks patrick) and .so names, Version bump
+  to 1.5, USE=openssl and curl for >=1.5.
 
   05 Jun 2014; Michael Weber <xmw@gentoo.org>
   +files/mupdf-1.4-old-debian-files.patch, mupdf-9999.ebuild:
