@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.8-r2.ebuild,v 1.7 2013/07/26 01:33:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.8-r2.ebuild,v 1.8 2014/07/22 20:26:16 mrueg Exp $
 
 EAPI=5
 inherit eutils flag-o-matic autotools
 
-DESCRIPTION="Library of assorted C utility functions."
-HOMEPAGE="None available" # was "http://zekiller.skytech.org/coders_en.html"
+DESCRIPTION="Library of assorted C utility functions"
+HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage" # was "http://zekiller.skytech.org/coders_en.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
