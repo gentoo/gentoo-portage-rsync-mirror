@@ -4,3 +4,5 @@ slotmove =net-misc/iperf-2* 0 2
 slotmove =net-misc/iperf-3* 0 3
 move perl-core/PodParser perl-core/Pod-Parser
 move virtual/perl-PodParser virtual/perl-Pod-Parser
+move perl-core/digest-base perl-core/Digest
+move virtual/perl-digest-base virtual/perl-Digest

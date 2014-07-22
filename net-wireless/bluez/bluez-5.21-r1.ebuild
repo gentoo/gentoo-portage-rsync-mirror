@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.21.ebuild,v 1.2 2014/07/22 10:53:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.21-r1.ebuild,v 1.1 2014/07/22 19:54:32 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit eutils multilib python-any-r1 readme.gentoo systemd udev user multilib-minimal
+inherit autotools eutils multilib python-any-r1 readme.gentoo systemd udev user multilib-minimal
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org"
@@ -85,6 +85,8 @@ src_prepare() {
 			-e "s:cupsdir = \$(libdir)/cups:cupsdir = $(cups-config --serverbin):" \
 			Makefile.{in,tools} || die
 	fi
+
+	eautoreconf
 
 	multilib_copy_sources
 }
