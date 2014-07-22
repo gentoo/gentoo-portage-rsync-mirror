@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grsync
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.33 2013/07/11 13:24:09 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.34 2014/07/22 19:27:22 pacho Exp $
+
+  22 Jul 2014; Pacho Ramos <pacho@gentoo.org> grsync-1.2.4.ebuild:
+  amd64/x86 stable, bug #511968
 
 *grsync-1.2.4 (11 Jul 2013)
 
@@ -159,4 +162,3 @@
   +files/grsync-0.3.2-destdir.patch, +metadata.xml, +grsync-0.3.2.ebuild:
   Initial import.
   Ebuild provided by Luca Marturana in bug #129624.
-

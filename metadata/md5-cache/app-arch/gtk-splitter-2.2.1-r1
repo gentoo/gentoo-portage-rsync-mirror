@@ -4,10 +4,10 @@ DESCRIPTION=Split files into smaller pieces and combine them back together
 EAPI=5
 HOMEPAGE=http://gtk-splitter.sourceforge.net
 IUSE=crypt
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 virtual/libintl:0 crypt? ( >=app-crypt/mhash-0.8:0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtk-splitter/gtk-splitter-2.2.1.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=a71a2ff86d2b5fc7358760bfd647e802
+_md5_=2b8afc5668284c280ba94fb86096d67a

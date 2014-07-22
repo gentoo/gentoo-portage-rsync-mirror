@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/gtk-splitter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.18 2014/06/02 08:07:41 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.19 2014/07/22 19:21:36 pacho Exp $
+
+  22 Jul 2014; Pacho Ramos <pacho@gentoo.org> gtk-splitter-2.2.1-r1.ebuild:
+  amd64/x86 stable, bug #512126
 
   02 Jun 2014; Tom Wijsman <TomWij@gentoo.org> gtk-splitter-2.2.1-r1.ebuild:
   [QA] Remove dot at end of DESCRIPTION.
