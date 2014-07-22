@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.284 2014/07/09 11:49:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.285 2014/07/22 18:23:17 grobian Exp $
+
+*exim-4.83 (22 Jul 2014)
+
+  22 Jul 2014; Fabian Groffen <grobian@gentoo.org> +exim-4.83.ebuild,
+  -exim-4.83_rc3.ebuild:
+  Version bump, addresses CVE-2014-2972, feature release, see
+  http://git.exim.org/exim.git/blob/exim-4_83:/doc/doc-txt/ChangeLog
 
 *exim-4.83_rc3 (09 Jul 2014)
 

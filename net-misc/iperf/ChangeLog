@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.49 2014/07/19 18:08:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.50 2014/07/22 18:18:04 hwoarang Exp $
+
+  22 Jul 2014; Markos Chandras <hwoarang@gentoo.org> iperf-3.0.5.ebuild:
+  Add ~mips. Bug #517754
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> iperf-2.0.5.ebuild,
   iperf-2.0.5-r1.ebuild, iperf-2.0.5-r2.ebuild, iperf-3.0.5.ebuild:

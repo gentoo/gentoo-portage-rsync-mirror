@@ -1,6 +1,15 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.142 2014/07/10 19:23:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.144 2014/07/22 18:16:50 ssuominen Exp $
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="consolekit" for sys-auth/pambase to match
+  arch/alpha/package.use.mask because USE="pam" is masked for
+  sys-auth/consolekit here due to missing CONFIG_AUDITSYSCALL support in kernel
+  for this arch.
+
+  22 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove USE="pam" mask for sys-apps/systemd wrt #506418#c3
 
   10 Jul 2014; Anthony G. Basile <blueness@gentoo.org>
   -mips64/multilib/n32-n64/deprecated, -mips64/multilib/n32-n64/eapi,

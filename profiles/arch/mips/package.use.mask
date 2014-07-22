@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.61 2014/06/02 18:22:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.63 2014/07/22 18:16:50 ssuominen Exp $
 
 # Davide Pesavento <pesa@gentoo.org> (02 Jun 2014)
 # dev-qt/qtdeclarative:4 is not keyworded on mips
@@ -29,8 +29,8 @@ app-text/tesseract	webp
 
 # Pacho Ramos <pacho@gentoo.org> (01 Sep 2013)
 # CONFIG_AUDITSYSCALL=y is not implemented, bug #438368
-sys-apps/systemd pam
 sys-auth/consolekit pam
+sys-auth/pambase consolekit
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
 # depends on sys-devel/llvm[video_cards_radeon]
