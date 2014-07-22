@@ -1,6 +1,12 @@
 # ChangeLog for virtual/cblas
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.10 2013/10/21 13:33:55 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.12 2014/07/22 16:46:36 zerochaos Exp $
+
+  22 Jul 2014; Rick Farina <zerochaos@gentoo.org> cblas-1.0.ebuild:
+  stabilize on arm
+
+  22 Jul 2014; Rick Farina <zerochaos@gentoo.org> cblas-1.0.ebuild:
+  adding ~arm keyword
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> cblas-1.0.ebuild:
   Marked ~x64-macos, bug #486818

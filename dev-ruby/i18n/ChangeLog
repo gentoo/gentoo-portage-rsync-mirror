@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.65 2014/07/10 06:17:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.66 2014/07/22 16:52:20 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> i18n-0.6.11.ebuild:
+  Keyworded on alpha, bug #501152
 
 *i18n-0.6.11 (10 Jul 2014)
 

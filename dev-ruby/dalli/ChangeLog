@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dalli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.9 2014/05/04 13:49:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.10 2014/07/22 16:52:01 klausman Exp $
+
+  22 Jul 2014; Tobias Klausmann <klausman@gentoo.org> dalli-2.6.4.ebuild:
+  Keyworded on alpha, bug #501152
 
   04 May 2014; Jeroen Roovers <jer@gentoo.org> dalli-2.6.4.ebuild:
   Marked ~hppa (bug #487206).
