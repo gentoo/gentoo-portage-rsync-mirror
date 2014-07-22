@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/stem
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/stem/ChangeLog,v 1.1 2014/07/22 20:56:10 mrueg Exp $
+
+*stem-1.2.2 (22 Jul 2014)
+
+  22 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +stem-1.2.2.ebuild:
+  Initial version.

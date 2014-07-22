@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/roadrunner-0.9.1.ebuild,v 1.9 2012/11/25 21:57:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/roadrunner/roadrunner-0.9.1.ebuild,v 1.10 2014/07/22 20:31:47 mrueg Exp $
 
 # EBuild details
 DESCRIPTION="RoadRunner library provides API for using Blocks Extensible Exchange Protocol"
-HOMEPAGE="None available was http://rr.codefactory.se"
+HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage" #was http://rr.codefactory.se
 # upstream Died
 SRC_URI="mirror://gentoo/roadrunner-${PV}.tar.gz"
 

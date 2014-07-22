@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpg-ringmgr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.13 2009/10/14 00:53:35 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.14 2014/07/22 20:33:24 mrueg Exp $
+
+  22 Jul 2014; Manuel Rüger <mrueg@gentoo.org> gpg-ringmgr-1.12.ebuild:
+  Update HOMEPAGE
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> gpg-ringmgr-1.12.ebuild:
   QA fixes; unquoted variables

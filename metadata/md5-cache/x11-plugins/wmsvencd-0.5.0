@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-wm/windowmaker x11-libs/libXpm
 DESCRIPTION=Window Maker Dockable CD-Player with CDDB
-HOMEPAGE=file:///dev/null
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2
 RDEPEND=x11-wm/windowmaker x11-libs/libXpm
 SLOT=0
 SRC_URI=mirror://gentoo/wmsvencd-0.5.0.tar.gz
 _eclasses_=eutils	06133990e861be0fe60c2b428fd025d9	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0f1760274637a138b99bb649202ea402
-_md5_=c6a50c5bc032119a9effe552b573cb78
+_md5_=969195661b4ace3b10a1e4a9afa7a609

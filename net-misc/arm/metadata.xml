@@ -10,4 +10,8 @@
     <email>jesse@boldandbusted.com</email>
     <name>Jesse Adelman</name>
   </maintainer>
+  <maintainer>
+    <email>mrueg@gentoo.org</email>
+	<name>Manuel Rüger</name>
+  </maintainer>
 </pkgmetadata>
