@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/perl-libnet-1.270.0.ebuild,v 1.1 2014/07/15 21:20:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/perl-libnet-1.270.0.ebuild,v 1.2 2014/07/22 22:58:22 dilfridge Exp $
 
 # Some important notes about detecting libnet version 
 # http://dev.gentoo.org/~zlogene/perl-libnet-mantainer-notes   
 
 # perl-5.20 probably was 1.260 (which is not on cpan anymore)
+# lets stabilize this one day together with dev-lang/perl-5.20
 
 EAPI=5
 

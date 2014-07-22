@@ -6,3 +6,5 @@ move perl-core/PodParser perl-core/Pod-Parser
 move virtual/perl-PodParser virtual/perl-Pod-Parser
 move perl-core/digest-base perl-core/Digest
 move virtual/perl-digest-base virtual/perl-Digest
+move perl-core/i18n-langtags perl-core/I18N-LangTags
+move virtual/perl-i18n-langtags virtual/perl-I18N-LangTags

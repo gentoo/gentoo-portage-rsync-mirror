@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-i18n-langtags/perl-i18n-langtags-0.400.0.ebuild,v 1.1 2014/07/15 19:43:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-I18N-LangTags/perl-I18N-LangTags-0.390.0.ebuild,v 1.1 2014/07/22 22:40:46 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd6
 IUSE=""
 
 RDEPEND="
-	|| ( =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
-	!<perl-core/${PN#perl-}-${PV}
-	!>perl-core/${PN#perl-}-${PV}-r999
+	|| ( =dev-lang/perl-5.18* ~perl-core/I18N-LangTags-${PV} )
+	!<perl-core/I18N-LangTags-${PV}
+	!>perl-core/I18N-LangTags-${PV}-r999
 "
